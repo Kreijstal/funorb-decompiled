@@ -12,25 +12,19 @@ final class uc {
     private qk[] field_c;
 
     final static int a(int param0, ih param1) {
-        RuntimeException var2 = null;
-        ih var3 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            var3 = (ih) null;
+            ih var3 = (ih) null;
             uc.a(88, (ih) null);
           }
-          stackIn_3_0 = param1.field_r;
+          int stackIn_3_0 = param1.field_r;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("uc.H(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("uc.H(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -48,19 +42,15 @@ final class uc {
     }
 
     private final void a(int param0, mf param1, int param2, String param3, String param4, String param5) {
-        qk[] var9 = null;
-        qk var8 = null;
-        qk var10 = null;
-        int fieldTemp$0 = 0;
         try {
           if (this.field_c.length <= this.field_f) {
-            var9 = new qk[2 * this.field_f];
+            qk[] var9 = new qk[2 * this.field_f];
             qk[] var7 = var9;
             qg.a(this.field_c, 0, var9, 0, this.field_f);
             this.field_c = var9;
           }
-          var8 = new qk();
-          var10 = var8;
+          qk var8 = new qk();
+          qk var10 = var8;
           qk var7_ref = var10;
           if (param2 != 1) {
             this.a(20);
@@ -70,7 +60,7 @@ final class uc {
           var10.field_h = param1;
           var10.field_c = param3;
           var10.field_b = param0;
-          fieldTemp$0 = this.field_f;
+          int fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
           this.field_c[fieldTemp$0] = var8;
         } catch (RuntimeException runtimeException) {
@@ -87,28 +77,21 @@ final class uc {
     }
 
     final static boolean a(mf param0, int param1, int param2, int param3) {
-        byte[] var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        byte[] var6 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param0.a(param2, (byte) -97, param3);
-          var4 = var6;
-          var5 = -6 / ((param1 - 6) / 55);
+          byte[] var6 = param0.a(param2, (byte) -97, param3);
+          byte[] var4 = var6;
+          int var5 = -6 / ((param1 - 6) / 55);
           if (var6 == null) {
             return false;
           }
           eb.a(var6, true);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_7_0 = var4_ref;
-          stackIn_7_1 = new StringBuilder().append("uc.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var4_ref;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("uc.A(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -119,14 +102,12 @@ final class uc {
     }
 
     final boolean a(int param0) {
-        int var3;
-        qk var4;
-        var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         if (param0 != 7020) {
           return true;
         }
         while (this.field_f > this.field_e) {
-          var4 = this.field_c[this.field_e];
+          qk var4 = this.field_c[this.field_e];
           if (!var4.field_h.b(0)) {
             this.a(0, -33, var4);
             return false;
@@ -165,9 +146,8 @@ final class uc {
     }
 
     private final void a(int param0, int param1, qk param2) {
-        float var4_float = 0.0f;
         try {
-          var4_float = (float)(this.field_e + 1) + (float)param0 / 100.0f;
+          float var4_float = (float)(this.field_e + 1) + (float)param0 / 100.0f;
           if (0 != param0) {
             this.field_b = param2.field_d + " - " + param0 + "%";
           } else {

@@ -43,24 +43,20 @@ final class di {
     }
 
     final static void a(int param0, int param1) {
-        int var3 = 0;
-        ll var4 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         try {
           if (param0 >= -75) {
             field_c = (String) null;
           }
-          var4 = (ll) (jl.field_n.a(false));
+          ll var4 = (ll) (jl.field_n.first(false));
           while (var4 != null) {
-            ma.a(-109, param1, var4);
-            var4 = (ll) (jl.field_n.b((byte) 70));
+            BoundedRandomAccessFile.a(-109, param1, var4);
+            var4 = (ll) (jl.field_n.next((byte) 70));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2), "di.A(" + param0 + ',' + param1 + ')');
         }
     }
@@ -80,10 +76,10 @@ final class di {
         field_b = null;
     }
 
-    final static void a(ed[] param0, int param1, int param2, int param3, int param4, int param5, wl param6, int param7, ed[] param8, boolean param9, int param10, int param11, wl param12, byte param13, int param14) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5, wl param6, int param7, Sprite[] param8, boolean param9, int param10, int param11, wl param12, byte param13, int param14) {
         try {
-          ed[] var16 = (ed[]) null;
-          ti.a(param8, param10, param1, param5, param11, 480, 0, param4, param3, lh.field_e, param12, pc.field_d, param2, param7, (ed[]) null, 2, param14, 0, gd.field_X, param6, param0);
+          Sprite[] var16 = (Sprite[]) null;
+          ti.a(param8, param10, param1, param5, param11, 480, 0, param4, param3, lh.field_e, param12, pc.field_d, param2, param7, (Sprite[]) null, 2, param14, 0, gd.field_X, param6, param0);
           sm.a(false, param9);
           if (param13 > -5) {
             field_g = (d) null;

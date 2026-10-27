@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rl extends hg {
+final class rl extends IntrusiveNode {
     int field_g;
     static String field_l;
     static te field_k;
@@ -21,12 +21,12 @@ final class rl extends hg {
         if (mj.field_d == 0) {
           sj.a(8192, (byte) 51);
         }
-        de.field_j = true;
+        IntValueNode.field_j = true;
         if (param0 != -46) {
           rl.e(-10);
         }
         if (20 <= mj.field_d) {
-          de.field_j = false;
+          IntValueNode.field_j = false;
         }
         if (mj.field_d < 1000) {
           mj.field_d = mj.field_d + 1;
@@ -35,37 +35,24 @@ final class rl extends hg {
     }
 
     final static boolean a(int param0, byte param1, boolean param2, CharSequence param3) {
-        int var8 = 0;
-        int stackIn_45_0 = 0;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         try {
           if (param0 >= 2 &&
             param0 <= 36) {
-            var4_int = 0;
-            var5 = 0;
-            var6 = 0;
-            var7 = param3.length();
-            for (var8 = 0; var7 > var8; var8++) {
+            boolean var4_int = false;
+            boolean var5 = false;
+            int var6 = 0;
+            int var7 = param3.length();
+            for (int var8 = 0; var7 > var8; var8++) {
               boolean decompiledFrameRemainder0 = true;
-              var9 = param3.charAt(var8);
-              if ((var8 == 0) &&
-                (var9 == 45)) {
-                var4_int = 1;
+              int var9 = param3.charAt(var8);
+              if (var8 == 0 &&
+                var9 == 45) {
+                var4_int = true;
                 decompiledFrameRemainder0 = false;
               }
-              if ((decompiledFrameRemainder0) && (var8 != 0 || (var9 != 43 ||
+              if (decompiledFrameRemainder0 && (var8 != 0 || (var9 != 43 ||
                 !param2))) {
                 if (var9 >= 48 &&
                   var9 <= 57) {
@@ -82,29 +69,29 @@ final class rl extends hg {
                 if (var9 >= param0) {
                   return false;
                 }
-                if (var4_int != 0) {
+                if (var4_int) {
                   var9 = -var9;
                 }
-                var10 = var6 * param0 + var9;
+                int var10 = var6 * param0 + var9;
                 if (var10 / param0 != var6) {
                   return false;
                 }
-                var5 = 1;
+                var5 = true;
                 var6 = var10;
               }
             }
             if (param1 > 20) {
-              stackIn_45_0 = var5;
-              return stackIn_45_0 != 0;
+              boolean stackIn_45_0 = var5;
+              return (stackIn_45_0);
             }
             return false;
           }
           throw new IllegalArgumentException("" + param0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_48_0 = var4;
-          stackIn_48_1 = new StringBuilder().append("rl.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_48_0 = var4;
+          StringBuilder stackIn_48_1 = new StringBuilder().append("rl.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_49_2 = "null";
           } else {

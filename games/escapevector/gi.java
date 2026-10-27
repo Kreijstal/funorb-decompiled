@@ -36,74 +36,50 @@ final class gi {
     }
 
     final static void a(int param0) {
-        int var2 = 0;
-        int var1_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        jk var6 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
         try {
-          var1_int = jb.field_u.length;
+          int var1_int = jb.field_u.length;
           jb.field_k = new jk[var1_int];
-          for (var2 = param0; var2 < var1_int; var2++) {
-            var3 = jb.field_u[var2];
-            var4 = jb.field_h[var2];
-            var5 = jb.field_v[var2];
-            var6 = new jk(var3, var4, var5);
+          for (int var2 = param0; var2 < var1_int; var2++) {
+            int var3 = jb.field_u[var2];
+            int var4 = jb.field_h[var2];
+            int var5 = jb.field_v[var2];
+            jk var6 = new jk(var3, var4, var5);
             jb.field_k[var2] = var6;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "gi.A(" + param0 + ')');
         }
     }
 
     final static void a(int param0, int[] param1, int param2, int param3, int[] param4) {
-        int var10 = 0;
-        int stackIn_7_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int[] var14 = null;
-        var13 = EscapeVector.field_A;
+        int var13 = EscapeVector.obfuscationControl;
         try {
           if (param2 != 1) {
-            var14 = (int[]) null;
+            int[] var14 = (int[]) null;
             gi.a(-43, (int[]) null, -42, 84, (int[]) null);
           }
           if (param3 < param0) {
-            var5_int = (param0 + param3) / 2;
-            var6 = param3;
-            var7 = param4[var5_int];
+            int var5_int = (param0 + param3) / 2;
+            int var6 = param3;
+            int var7 = param4[var5_int];
             param4[var5_int] = param4[param0];
             param4[param0] = var7;
-            var8 = param1[var5_int];
+            int var8 = param1[var5_int];
             param1[var5_int] = param1[param0];
             param1[param0] = var8;
-            stackIn_7_0 = (var7 != 2147483647) ? 1 : 0;
-            var9 = stackIn_7_0;
-            for (var10 = param3; var10 < param0; var10++) {
+            int stackIn_7_0 = (var7 != 2147483647) ? 1 : 0;
+            int var9 = stackIn_7_0;
+            for (int var10 = param3; var10 < param0; var10++) {
               if (param4[var10] < (var7 + (var9 & var10))) {
-                var11 = param4[var10];
+                int var11 = param4[var10];
                 param4[var10] = param4[var6];
                 param4[var6] = var11;
-                var12 = param1[var10];
+                int var12 = param1[var10];
                 param1[var10] = param1[var6];
                 param1[var6++] = var12;
               }
@@ -118,16 +94,16 @@ final class gi {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_18_0 = var5;
-          stackIn_18_1 = new StringBuilder().append("gi.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var5;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("gi.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',');
+          StringBuilder stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_22_2 = "null";
           } else {
@@ -138,29 +114,21 @@ final class gi {
     }
 
     final static int a(byte param0, ih param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        String var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = co.a(param1, (byte) -127);
-          var3 = mn.a(param0 ^ 16, (char) var2_int, 20);
+          int var2_int = co.a(param1, (byte) -127);
+          String var3 = mn.a(param0 ^ 16, (char) var2_int, 20);
           if (param0 == -96) {
-            stackIn_4_0 = param1.b(var3);
+            int stackIn_4_0 = param1.b(var3);
             return stackIn_4_0;
           }
-          stackIn_2_0 = 21;
+          int stackIn_2_0 = 21;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("gi.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var2;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("gi.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -180,22 +148,18 @@ final class gi {
     }
 
     final static void a(byte param0) {
-        int var1_int = 0;
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var2 = EscapeVector.field_A;
+        int var2 = EscapeVector.obfuscationControl;
         try {
           if (param0 >= -49) {
             return;
           }
-          for (var1_int = 0; var1_int < mh.field_a.length; var1_int++) {
+          for (int var1_int = 0; var1_int < mh.field_a.length; var1_int++) {
             mh.field_a[var1_int] = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "gi.E(" + param0 + ')');
         }
     }
@@ -207,7 +171,7 @@ final class gi {
         this.field_f = jn.field_d;
         this.field_m = ve.field_g;
         this.field_n = od.field_d;
-        this.field_a = fl.field_o;
+        this.field_a = DualLinkNode.field_o;
         this.field_b = ah.field_e;
         if (param0) {
           this.field_k = bo.field_H;
@@ -217,10 +181,9 @@ final class gi {
     }
 
     static {
-        int var0 = 0;
         field_d = 398339;
         field_c = new te(1, 1, 256);
-        for (var0 = 0; var0 < 256; var0++) {
+        for (int var0 = 0; var0 < 256; var0++) {
           field_c.field_l[var0] = field_d;
         }
         field_c.field_l[0] = 0;

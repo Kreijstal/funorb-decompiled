@@ -9,7 +9,7 @@ abstract class kb {
     int field_b;
     static String field_g;
     static int field_d;
-    static ed field_c;
+    static Sprite field_c;
     String field_a;
 
     public static void a(boolean param0) {

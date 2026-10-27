@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends hg {
-    private ed[] field_l;
+final class tc extends IntrusiveNode {
+    private Sprite[] field_l;
     private int field_q;
     static hf field_p;
     static dh field_g;
@@ -27,10 +27,7 @@ final class tc extends hg {
     }
 
     private final void a(byte param0) {
-        int var2 = 0;
-        ed var3;
-        int var4;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         this.field_m = 0;
         if (null == this.field_l) {
           return;
@@ -41,20 +38,17 @@ final class tc extends hg {
         if (param0 <= 84) {
           tc.e(-24);
         }
-        for (var2 = 0; this.field_l.length > var2; var2++) {
-          var3 = this.field_l[var2];
+        for (int var2 = 0; this.field_l.length > var2; var2++) {
+          Sprite var3 = this.field_l[var2];
           if (var3 != null) {
-            this.field_m = this.field_m + var3.field_A;
+            this.field_m = this.field_m + var3.fullWidth;
             this.field_m = this.field_m + this.field_q;
           }
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        ed var5;
-        int var6;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         if (param0 != 103) {
           field_n = (char[]) null;
         }
@@ -64,11 +58,11 @@ final class tc extends hg {
         if (this.field_l.length == 0) {
           return;
         }
-        for (var4 = 0; var4 < this.field_l.length; var4++) {
-          var5 = this.field_l[var4];
+        for (int var4 = 0; var4 < this.field_l.length; var4++) {
+          Sprite var5 = this.field_l[var4];
           if (var5 != null) {
             var5.e(param1, param2);
-            param1 = param1 + var5.field_A;
+            param1 = param1 + var5.fullWidth;
             param1 = param1 + this.field_q;
           }
         }
@@ -81,7 +75,7 @@ final class tc extends hg {
         return this.field_m;
     }
 
-    tc(ed[] param0, int param1) {
+    tc(Sprite[] param0, int param1) {
         try {
           this.field_q = param1;
           this.field_l = param0;

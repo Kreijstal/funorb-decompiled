@@ -8,7 +8,7 @@ final class da {
     static String field_a;
 
     final static void a(byte param0) {
-        if (!nf.field_u) {
+        if (!SpriteState.field_u) {
           throw new IllegalStateException();
         }
         c.field_u = true;
@@ -49,23 +49,18 @@ final class da {
     }
 
     final static boolean a(c param0, byte param1) {
-        RuntimeException var2 = null;
-        boolean stackIn_5_0 = false;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -96) {
             field_b = (ta) null;
           }
-          stackIn_5_0 = (param0.j(1, 8) == 1);
+          boolean stackIn_5_0 = (param0.j(1, 8) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("da.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var2;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("da.B(");
           if (param0 == null) {
             stackIn_9_2 = "null";
           } else {

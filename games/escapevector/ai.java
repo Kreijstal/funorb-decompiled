@@ -25,14 +25,11 @@ public class ai {
     }
 
     public static void a(String param0, int param1, int param2) {
-        Exception var3 = null;
-        String var4 = null;
-        Throwable decompiledCaughtException = null;
         field_c = param1;
         field_a = param0;
         try {
           if (param2 > -12) {
-            var4 = (String) null;
+            String var4 = (String) null;
             ai.a((String) null, 107, 50, (String) null);
           }
           field_b = System.getProperty("user.home");
@@ -45,8 +42,8 @@ public class ai {
           }
           field_b = field_b + "/";
         } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (Exception) (Object) decompiledCaughtException;
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          Exception var3 = (Exception) (Object) decompiledCaughtException;
           if (null == field_b) {
             field_b = "~/";
           }

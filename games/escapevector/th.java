@@ -52,14 +52,9 @@ final class th {
 
     final static void a(boolean param0, boolean param1, java.applet.Applet param2, String param3) {
         try {
-          RuntimeException var4 = null;
-          RuntimeException stackIn_13_0 = null;
-          StringBuilder stackIn_13_1 = null;
           String stackIn_14_2 = null;
-          StringBuilder stackIn_16_1 = null;
           String stackIn_17_2 = null;
           Throwable decompiledCaughtException = null;
-          java.net.MalformedURLException var4_ref = null;
           try {
             if (lk.field_e.startsWith("win") &&
               dl.a((byte) 38, param3)) {
@@ -69,7 +64,7 @@ final class th {
               param2.getAppletContext().showDocument(new java.net.URL(param3), "_blank");
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+              java.net.MalformedURLException var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
               pf.a(false, "MGR1: " + param3, (Throwable) null);
             }
             if (param0) {
@@ -79,15 +74,15 @@ final class th {
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var4 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_13_0 = var4;
-            stackIn_13_1 = new StringBuilder().append("th.B(").append(param0).append(',').append(param1).append(',');
+            RuntimeException var4 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_13_0 = var4;
+            StringBuilder stackIn_13_1 = new StringBuilder().append("th.B(").append(param0).append(',').append(param1).append(',');
             if (param2 == null) {
               stackIn_14_2 = "null";
             } else {
               stackIn_14_2 = "{...}";
             }
-            stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+            StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
             if (param3 == null) {
               stackIn_17_2 = "null";
             } else {

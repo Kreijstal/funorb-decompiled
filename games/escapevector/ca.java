@@ -22,7 +22,7 @@ abstract class ca {
 
     final static void a(int param0, int param1, bd param2) {
         try {
-          rd.field_b.a(-12328, param2);
+          rd.field_b.addLast(-12328, param2);
           r.a(-110, param2, param1);
           if (param0 != 1) {
             field_a = (String) null;
@@ -48,34 +48,16 @@ abstract class ca {
     }
 
     final static String a(int param0, char param1, String param2, String param3) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8_int = 0;
-        int var11 = 0;
-        String stackIn_12_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        StringBuilder var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         try {
-          var4_int = param2.length();
-          var5 = param3.length();
-          var6 = var4_int;
-          var7 = param0 + var5;
+          int var4_int = param2.length();
+          int var5 = param3.length();
+          int var6 = var4_int;
+          int var7 = param0 + var5;
           if (var7 != 0) {
-            var8_int = 0;
+            int var8_int = 0;
             while (true) {
               var8_int = param2.indexOf((int) param1, var8_int);
               if (var8_int < 0) {
@@ -85,30 +67,30 @@ abstract class ca {
               var8_int++;
             }
           }
-          var8 = new StringBuilder(var6);
-          var9 = 0;
+          StringBuilder var8 = new StringBuilder(var6);
+          int var9 = 0;
           while (true) {
-            var10 = param2.indexOf((int) param1, var9);
+            int var10 = param2.indexOf((int) param1, var9);
             if (var10 < 0) {
-              discarded$2 = var8.append(param2.substring(var9));
-              stackIn_12_0 = var8.toString();
+              StringBuilder discarded$2 = var8.append(param2.substring(var9));
+              String stackIn_12_0 = var8.toString();
               return stackIn_12_0;
             }
-            discarded$0 = var8.append(param2.substring(var9, var10));
+            StringBuilder discarded$0 = var8.append(param2.substring(var9, var10));
             var9 = 1 + var10;
-            discarded$1 = var8.append(param3);
+            StringBuilder discarded$1 = var8.append(param3);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_15_0 = var4;
-          stackIn_15_1 = new StringBuilder().append("ca.D(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var4;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("ca.D(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+          StringBuilder stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
           if (param3 == null) {
             stackIn_19_2 = "null";
           } else {

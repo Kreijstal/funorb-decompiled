@@ -87,11 +87,9 @@ final class wc {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
         if (param0 == 0) {
-          var6 = this.a((byte) 113, param2, dh.field_d, param3, param4, bj.field_y, param1);
-          var7 = this.a((byte) 124, param2, sf.field_c, param3, param4, ng.field_ob, param1);
+          int var6 = this.a((byte) 113, param2, dh.field_d, param3, param4, bj.field_y, param1);
+          int var7 = this.a((byte) 124, param2, sf.field_c, param3, param4, ng.field_ob, param1);
           this.a(var7, (byte) 118, var6);
           return;
         }
@@ -126,48 +124,44 @@ final class wc {
           if (0 == this.field_a) {
             this.field_c = nk.field_n;
           }
-        } else {
-          if (nk.field_n != 98) {
-            if (0 != this.field_a) {
-              if (0 == this.field_a &&
-                nk.field_n == 99) {
-                this.field_h = this.field_h + 1;
-                this.field_j = false;
-                this.field_e = true;
-                if (this.field_h >= this.field_k) {
-                  this.field_h = 0;
-                }
+        } else if (nk.field_n != 98) {
+          if (0 != this.field_a) {
+            if (0 == this.field_a &&
+              nk.field_n == 99) {
+              this.field_h = this.field_h + 1;
+              this.field_j = false;
+              this.field_e = true;
+              if (this.field_h >= this.field_k) {
+                this.field_h = 0;
               }
-              return;
             }
+            return;
+          }
+          this.field_c = nk.field_n;
+        } else if (this.field_h > 0) {
+          this.field_e = true;
+          this.field_j = false;
+          this.field_h = this.field_h - 1;
+          if (0 == this.field_a) {
             this.field_c = nk.field_n;
-          } else {
-            if (this.field_h > 0) {
-              this.field_e = true;
+            if (0 == this.field_a &&
+              nk.field_n == 99) {
+              this.field_h = this.field_h + 1;
               this.field_j = false;
-              this.field_h = this.field_h - 1;
-              if (0 == this.field_a) {
-                this.field_c = nk.field_n;
-                if (0 == this.field_a &&
-                  nk.field_n == 99) {
-                  this.field_h = this.field_h + 1;
-                  this.field_j = false;
-                  this.field_e = true;
-                  if (this.field_h >= this.field_k) {
-                    this.field_h = 0;
-                  }
-                }
-                return;
-              }
-            } else {
-              this.field_h = this.field_k;
               this.field_e = true;
-              this.field_j = false;
-              this.field_h = this.field_h - 1;
-              if (0 == this.field_a) {
-                this.field_c = nk.field_n;
+              if (this.field_h >= this.field_k) {
+                this.field_h = 0;
               }
             }
+            return;
+          }
+        } else {
+          this.field_h = this.field_k;
+          this.field_e = true;
+          this.field_j = false;
+          this.field_h = this.field_h - 1;
+          if (0 == this.field_a) {
+            this.field_c = nk.field_n;
           }
         }
         if (0 != this.field_a) {
@@ -199,14 +193,8 @@ final class wc {
     }
 
     final static void a(int param0, mf param1, mf param2, mf param3) {
-        te[] var14 = null;
-        int var11_int = 0;
-        ed var11 = null;
-        ed var12 = null;
-        int var8 = 0;
         int var9 = 0;
-        int var13 = EscapeVector.field_A;
-        int var8Lifetime1;
+        int var13 = EscapeVector.obfuscationControl;
         nn.field_a = kh.a(param2, (byte) 126, "commonui", "frame_top");
         bn.field_d = kh.a(param2, (byte) -114, "commonui", "frame_bottom");
         cc.field_j = fe.a("commonui", param2, "jagex_logo_grey", true);
@@ -215,8 +203,8 @@ final class wc {
         ke.field_c = (wl) ((Object) ac.a("arezzo12", -110, param2, "commonui", param3));
         sb.field_a = (wl) ((Object) ac.a("arezzo14", -124, param2, "commonui", param3));
         dl.field_b = (wl) ((Object) ac.a("arezzo14bold", -93, param2, "commonui", param3));
-        ed var17 = new ed(param1.a(-4, "", "button.gif"), (java.awt.Component) ((Object) of.field_d));
-        bf.a(param2, 50, "dropdown", "commonui");
+        Sprite var17 = new Sprite(param1.a(-4, "", "button.gif"), (java.awt.Component) ((Object) of.field_d));
+        AccountRegistrationPanel.a(param2, 50, "dropdown", "commonui");
         te[] var5 = ae.a("commonui", "screen_options", (byte) -65, param2);
         ec.field_f = new te[4];
         hk.field_w = new te[4];
@@ -226,40 +214,40 @@ final class wc {
         int[][] var16 = var19;
         int[][] var7 = var16;
         var7[0] = var5[0].field_l;
-        for (var8 = 1; var19.length > var8; var8++) {
+        for (int var8 = 1; var19.length > var8; var8++) {
           var7[var8] = (int[]) ((Object) var19[0].clone());
         }
-        var8Lifetime1 = var5[0].field_k[0];
+        int var8Lifetime1 = var5[0].field_k[0];
         var19[2][var8Lifetime1] = 16777215;
         var19[1][var8Lifetime1] = 2394342;
         var19[3][var8Lifetime1] = 4767999;
         for (var9 = 0; 3 > var9; var9++) {
-          var14 = var6[var9];
+          te[] var14 = var6[var9];
           te[] var10 = var14;
-          for (var11_int = 0; var14.length > var11_int; var11_int++) {
+          for (int var11_int = 0; var14.length > var11_int; var11_int++) {
             var14[var11_int] = rf.a(-50, var5[var9], var19[var11_int]);
           }
         }
-        var9 = var17.field_x;
+        var9 = var17.height;
         hf.a(-123);
         var17.g();
-        em.c(0, 0, em.field_l, em.field_d);
-        ed var15 = new ed(var9, var9);
-        ed var18 = var15;
+        SoftwareRasterizer.c(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
+        Sprite var15 = new Sprite(var9, var9);
+        Sprite var18 = var15;
         var18.g();
         var17.d(0, 0);
         if (param0 != 83) {
           return;
         }
         try {
-          var11 = new ed(var9, var9);
+          Sprite var11 = new Sprite(var9, var9);
           var11.g();
-          var17.d(-var17.field_s + var9, 0);
-          var12 = new ed(-(var9 * 2) + var17.field_s, var9);
+          var17.d(-var17.width + var9, 0);
+          Sprite var12 = new Sprite(-(var9 * 2) + var17.width, var9);
           var12.g();
           var17.d(-var9, 0);
           dl.a((byte) -109);
-          fk.field_f = new ed[]{var15, var12, var11};
+          fk.field_f = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "wc.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -283,12 +271,12 @@ final class wc {
         var4.field_h = new int[param2];
         var4.field_j = param0;
         if (param3 == -51) {
-          en.field_i.a(-12328, var4);
+          en.field_i.addLast(-12328, var4);
           oa.a(param1, var4, -755);
           return var4;
         }
         field_d = (ce) null;
-        en.field_i.a(-12328, var4);
+        en.field_i.addLast(-12328, var4);
         oa.a(param1, var4, -755);
         return var4;
     }
@@ -343,23 +331,19 @@ final class wc {
             }
             this.field_a = 0;
           }
-        } else {
-          if (eb.field_K == 0) {
-            if (qi.field_N == 0 &&
-              eb.field_K == 0) {
-              this.field_a = 0;
-            }
-          } else {
-            if (0 >= this.field_f) {
-              this.field_f = l.field_H;
-              this.field_g = this.field_a;
-            }
-            this.field_f = this.field_f - 1;
-            if (qi.field_N == 0 &&
-              eb.field_K == 0) {
-              this.field_a = 0;
-            }
+        } else if (eb.field_K != 0) {
+          if (0 >= this.field_f) {
+            this.field_f = l.field_H;
+            this.field_g = this.field_a;
           }
+          this.field_f = this.field_f - 1;
+          if (qi.field_N == 0 &&
+            eb.field_K == 0) {
+            this.field_a = 0;
+          }
+        } else if (qi.field_N == 0 &&
+          eb.field_K == 0) {
+          this.field_a = 0;
         }
         if (param1 < 116) {
           return;
@@ -385,7 +369,7 @@ final class wc {
         this.field_j = true;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, n param4) {
+    final static void a(int param0, int param1, boolean param2, int param3, PacketBuffer param4) {
         try {
           param4.f(12, -123);
           param4.h(-119, 17);
@@ -416,7 +400,7 @@ final class wc {
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (param2) {
-          em.a(0, 0, em.field_l, em.field_d, 0, 192);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           if (param1 != 1983) {
             wc.a(97, 35, -50, (byte) 98);
             se.a(param2, param1 + 15130);
@@ -425,7 +409,7 @@ final class wc {
           se.a(param2, param1 + 15130);
           return;
         }
-        em.d();
+        SoftwareRasterizer.d();
         if (param1 != 1983) {
           wc.a(97, 35, -50, (byte) 98);
           se.a(param2, param1 + 15130);

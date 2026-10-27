@@ -53,42 +53,34 @@ abstract class eo {
     abstract long c(byte param0);
 
     final static void a(int param0, boolean param1) {
-        ed[] var3;
-        ed[] var4;
-        ed[] var5;
-        ed[] var6;
-        ed[] var3Lifetime1;
-        ed[] var4Lifetime1;
-        ed[] var5Lifetime1;
-        ed[] var6Lifetime1;
         if (param0 != 24) {
           eo.a((byte) 53);
-          if (null != ma.field_a) {
+          if (null != BoundedRandomAccessFile.activeSession) {
             pc.field_d = 16777215;
             gd.field_X = 7899280;
             lh.field_e = 12110032;
-            var6 = (ed[]) null;
-            var5 = (ed[]) null;
-            sa.a(0, 0, false, (ed[]) null, 0, 24, (ed[]) null, 320, 22, fh.field_g, 240, param1);
+            Sprite[] var6 = (Sprite[]) null;
+            Sprite[] var5 = (Sprite[]) null;
+            LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, fh.field_g, 240, param1);
           } else {
             gd.field_X = 6340704;
             lh.field_e = 10551200;
             pc.field_d = 16777215;
-            var4 = (ed[]) null;
-            var3 = (ed[]) null;
-            sa.a(0, 0, false, (ed[]) null, 0, 24, (ed[]) null, 320, 22, fh.field_g, 300, param1);
+            Sprite[] var4 = (Sprite[]) null;
+            Sprite[] var3 = (Sprite[]) null;
+            LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, fh.field_g, 300, param1);
           }
           mj.field_d = 0;
           gi.a((byte) -71);
           return;
         }
-        if (null != ma.field_a) {
+        if (null != BoundedRandomAccessFile.activeSession) {
           pc.field_d = 16777215;
           gd.field_X = 7899280;
           lh.field_e = 12110032;
-          var6Lifetime1 = (ed[]) null;
-          var5Lifetime1 = (ed[]) null;
-          sa.a(0, 0, false, (ed[]) null, 0, 24, (ed[]) null, 320, 22, fh.field_g, 240, param1);
+          Sprite[] var6Lifetime1 = (Sprite[]) null;
+          Sprite[] var5Lifetime1 = (Sprite[]) null;
+          LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, fh.field_g, 240, param1);
           mj.field_d = 0;
           gi.a((byte) -71);
           return;
@@ -96,22 +88,22 @@ abstract class eo {
         gd.field_X = 6340704;
         lh.field_e = 10551200;
         pc.field_d = 16777215;
-        var4Lifetime1 = (ed[]) null;
-        var3Lifetime1 = (ed[]) null;
-        sa.a(0, 0, false, (ed[]) null, 0, 24, (ed[]) null, 320, 22, fh.field_g, 300, param1);
+        Sprite[] var4Lifetime1 = (Sprite[]) null;
+        Sprite[] var3Lifetime1 = (Sprite[]) null;
+        LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, fh.field_g, 300, param1);
         mj.field_d = 0;
         gi.a((byte) -71);
         return;
     }
 
-    final static void a(ed param0, byte param1) {
+    final static void a(Sprite param0, byte param1) {
         try {
           hf.a(-123);
           if (param1 >= -3) {
-            ed var3 = (ed) null;
-            eo.a((ed) null, (byte) -40);
+            Sprite var3 = (Sprite) null;
+            eo.a((Sprite) null, (byte) -40);
           }
-          em.a(param0.field_B, param0.field_A, param0.field_z);
+          SoftwareRasterizer.a(param0.pixels, param0.fullWidth, param0.fullHeight);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "eo.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -128,17 +120,15 @@ abstract class eo {
     }
 
     final int a(long param0, int param1) {
-        long var4 = 0L;
-        long var4Lifetime1;
         if (param1 >= 34) {
-          var4 = this.c((byte) 96);
+          long var4 = this.c((byte) 96);
           if (var4 > 0L) {
             en.a((byte) -86, var4);
           }
           return this.a((byte) -95, param0);
         }
         field_a = (String) null;
-        var4Lifetime1 = this.c((byte) 96);
+        long var4Lifetime1 = this.c((byte) 96);
         if (var4Lifetime1 > 0L) {
           en.a((byte) -86, var4Lifetime1);
         }
@@ -146,12 +136,9 @@ abstract class eo {
     }
 
     final static char a(int param0, char param1) {
-        int var2;
-        int var3;
-        int var2Lifetime1;
-        var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         if (param0 == 227) {
-          var2 = param1;
+          int var2 = param1;
           if (var2 == 32) {
             return '_';
           }
@@ -253,7 +240,7 @@ abstract class eo {
           return '_';
         }
         eo.b((byte) -68);
-        var2Lifetime1 = param1;
+        int var2Lifetime1 = param1;
         if (var2Lifetime1 == 32) {
           return '_';
         }

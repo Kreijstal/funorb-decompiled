@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qi extends bj implements qb {
-    static ed[][] field_M;
+    static Sprite[][] field_M;
     static hh field_J;
     private int field_H;
     static om field_P;
@@ -15,7 +15,7 @@ final class qi extends bj implements qb {
 
     final static void a(int param0, boolean param1) {
         if (!param1) {
-          field_M = (ed[][]) null;
+          field_M = (Sprite[][]) null;
         }
         sn.field_d = 1000000000L / (long)param0;
     }
@@ -26,16 +26,15 @@ final class qi extends bj implements qb {
         if (param0 != 8) {
           return;
         }
-        field_M = (ed[][]) null;
+        field_M = (Sprite[][]) null;
     }
 
     final void a(boolean param0, String param1, int param2) {
-        int var4_int = 0;
         if (param0) {
           return;
         }
         try {
-          var4_int = this.field_H;
+          int var4_int = this.field_H;
           this.a(1 + var4_int, 106);
           this.field_I[var4_int] = this.a((wn) (this), (byte) -67, param1);
           this.field_O[var4_int] = param2;
@@ -45,15 +44,14 @@ final class qi extends bj implements qb {
     }
 
     private final void a(int param0, int param1) {
-        int var5 = 0;
-        int var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         if (param0 <= this.field_H) {
           return;
         }
         hc[] var7 = new hc[param0];
         hc[] var3 = var7;
         int[] var4 = new int[param0];
-        for (var5 = 0; this.field_H > var5; var5++) {
+        for (int var5 = 0; this.field_H > var5; var5++) {
           var7[var5] = this.field_I[var5];
           var4[var5] = this.field_O[var5];
         }
@@ -66,41 +64,32 @@ final class qi extends bj implements qb {
     }
 
     final hc a(wn param0, byte param1, String param2) {
-        hc var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        byte[] var6 = null;
-        hc stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hc(param2, param0);
+          hc var4 = new hc(param2, param0);
           var4.field_s = (db) ((Object) new ck());
-          var5 = this.field_x - 2;
+          int var5 = this.field_x - 2;
           if (param1 != -67) {
-            var6 = (byte[]) null;
+            byte[] var6 = (byte[]) null;
             qi.a(114, 51, (byte[]) null, (byte) 116);
           }
           this.a(this.field_g, 0, 0, true, this.field_x + 34);
           var4.a(this.field_g - 14, var5, 7, true, 30);
           this.b(var4, false);
-          stackIn_3_0 = var4;
+          hc stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_6_0 = var4_ref;
-          stackIn_6_1 = new StringBuilder().append("qi.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var4_ref;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("qi.B(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -112,13 +101,12 @@ final class qi extends bj implements qb {
 
     qi(pn param0, wl param1, String param2) {
         super(0, 0, 288, 0, (db) null);
-        int var4_int = 0;
         this.field_H = 0;
         try {
           this.field_G = param2;
           this.field_L = param1;
           this.field_K = param0;
-          var4_int = this.field_G == null ? 0 : this.field_L.b(this.field_G, 260, this.field_L.field_r);
+          int var4_int = this.field_G == null ? 0 : this.field_L.b(this.field_G, 260, this.field_L.field_r);
           this.a(288, 0, 0, true, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -126,17 +114,10 @@ final class qi extends bj implements qb {
     }
 
     public final void a(hc param0, int param1, int param2, int param3, int param4) {
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
-          var6_int = 0;
+          int var6_int = 0;
           if (param3 != 1) {
             return;
           }
@@ -145,7 +126,7 @@ final class qi extends bj implements qb {
               var6_int++;
               continue;
             }
-            var7 = this.field_O[var6_int];
+            int var7 = this.field_O[var6_int];
             if (var7 != -1) {
               lj.a(this.field_O[var6_int], 57);
             } else {
@@ -155,10 +136,10 @@ final class qi extends bj implements qb {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_12_0 = var6;
-          stackIn_12_1 = new StringBuilder().append("qi.K(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var6;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("qi.K(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -204,19 +185,19 @@ final class qi extends bj implements qb {
           var14 = 3 + var13;
           var12 = 4 + var11;
         }
-        em.e(-(param8 * 16) - var9 + param6, param4, var10 + (param1 - param6), param0);
-        em.e(16 * param8 + (-var9 + param6), param4, var10 + (param1 - param6), param0);
+        SoftwareRasterizer.e(-(param8 * 16) - var9 + param6, param4, var10 + (param1 - param6), param0);
+        SoftwareRasterizer.e(16 * param8 + (-var9 + param6), param4, var10 + (param1 - param6), param0);
         int var17 = -30 % ((param5 - 20) / 45);
-        em.e(-(16 * param8) - var11 + param6, -1 + param7, -param6 + (param1 + var12), param0);
-        em.e(-var11 + param6 + param8 * 16, param7 - 1, var12 + (-param6 + param1), param0);
-        em.g(param6, -(12 * param8) + (-var13 + param4), param7 + (-param4 + var14), param0);
-        em.g(param6, -var13 + (param4 + 12 * param8), var14 - param4 + param7, param0);
-        em.g(-1 + param1, -(12 * param8) + (param4 - var15), param7 + (-param4 + var16), param0);
-        em.g(param1 - 1, 12 * param8 + (-var15 + param4), -param4 + (param7 + var16), param0);
-        em.e(-var9 + param6 + param8 * 16, param4, -param6 + (param1 + var10) - param8 * 32, param2);
-        em.e(-var11 + param6 + param8 * 16, param7 - 1, -(32 * param8) + (var12 - param6) + param1, param2);
-        em.g(param6, param8 * 12 + (param4 - var13), -(24 * param8) - param4 + (param7 + var14), param2);
-        em.g(-1 + param1, 12 * param8 + (param4 - var15), var16 + (-param4 + (param7 - param8 * 24)), param2);
+        SoftwareRasterizer.e(-(16 * param8) - var11 + param6, -1 + param7, -param6 + (param1 + var12), param0);
+        SoftwareRasterizer.e(-var11 + param6 + param8 * 16, param7 - 1, var12 + (-param6 + param1), param0);
+        SoftwareRasterizer.g(param6, -(12 * param8) + (-var13 + param4), param7 + (-param4 + var14), param0);
+        SoftwareRasterizer.g(param6, -var13 + (param4 + 12 * param8), var14 - param4 + param7, param0);
+        SoftwareRasterizer.g(-1 + param1, -(12 * param8) + (param4 - var15), param7 + (-param4 + var16), param0);
+        SoftwareRasterizer.g(param1 - 1, 12 * param8 + (-var15 + param4), -param4 + (param7 + var16), param0);
+        SoftwareRasterizer.e(-var9 + param6 + param8 * 16, param4, -param6 + (param1 + var10) - param8 * 32, param2);
+        SoftwareRasterizer.e(-var11 + param6 + param8 * 16, param7 - 1, -(32 * param8) + (var12 - param6) + param1, param2);
+        SoftwareRasterizer.g(param6, param8 * 12 + (param4 - var13), -(24 * param8) - param4 + (param7 + var14), param2);
+        SoftwareRasterizer.g(-1 + param1, 12 * param8 + (param4 - var15), var16 + (-param4 + (param7 - param8 * 24)), param2);
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
@@ -228,52 +209,37 @@ final class qi extends bj implements qb {
     }
 
     final static String a(int param0, int param1, byte[] param2, byte param3) {
-        int var6 = 0;
-        int incrementValue$1 = 0;
-        char[] var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        char[] var11 = null;
-        char[] var12 = null;
-        String stackIn_14_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var10 = EscapeVector.field_A;
+        int var10 = EscapeVector.obfuscationControl;
         try {
-          var12 = new char[param0];
-          var11 = var12;
-          var4 = var11;
-          var5 = 0;
-          var7 = -38 / ((61 - param3) / 36);
-          for (var6 = 0; var6 < param0; var6++) {
-            var8 = param2[param1 + var6] & 255;
+          char[] var12 = new char[param0];
+          char[] var11 = var12;
+          char[] var4 = var11;
+          int var5 = 0;
+          int var7 = -38 / ((61 - param3) / 36);
+          for (int var6 = 0; var6 < param0; var6++) {
+            int var8 = param2[param1 + var6] & 255;
             if (var8 != 0) {
               if (var8 >= 128 &&
                 var8 < 160) {
-                var9 = cn.field_c[var8 - 128];
+                int var9 = IntrusiveDeque.field_c[var8 - 128];
                 if (var9 == 0) {
                   var9 = 63;
                 }
                 var8 = var9;
               }
-              incrementValue$1 = var5;
+              int incrementValue$1 = var5;
               var5++;
               var4[incrementValue$1] = (char)var8;
             }
           }
-          stackIn_14_0 = new String(var12, 0, var5);
+          String stackIn_14_0 = new String(var12, 0, var5);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_17_0 = var4_ref;
-          stackIn_17_1 = new StringBuilder().append("qi.C(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_17_0 = var4_ref;
+          StringBuilder stackIn_17_1 = new StringBuilder().append("qi.C(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_18_2 = "null";
           } else {

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class va {
-    private fl field_c;
+    private DualLinkNode field_c;
     static long field_b;
-    private fl field_a;
+    private DualLinkNode field_a;
 
     final boolean b(int param0) {
         if (param0 != -182442704) {
-          this.field_a = (fl) null;
+          this.field_a = (DualLinkNode) null;
         }
-        return this.field_c.field_j == this.field_c ? true : false;
+        return this.field_c.secondaryNext == this.field_c ? true : false;
     }
 
     final static void d(int param0) {
@@ -19,69 +19,61 @@ final class va {
     }
 
     final int c(int param0) {
-        int var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         int var2 = param0;
-        fl var3 = this.field_c.field_j;
+        DualLinkNode var3 = this.field_c.secondaryNext;
         while (this.field_c != var3) {
-          var3 = var3.field_j;
+          var3 = var3.secondaryNext;
           var2++;
         }
         return var2;
     }
 
-    final fl b(byte param0) {
-        fl var2 = this.field_c.field_j;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = this.field_c.secondaryNext;
         if (this.field_c != var2) {
           if (param0 != -75) {
-            this.field_a = (fl) null;
+            this.field_a = (DualLinkNode) null;
           }
-          var2.d(110);
+          var2.unlinkSecondary(110);
           return var2;
         }
         return null;
     }
 
-    final void a(int param0, fl param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
-          if (null != param1.field_i) {
-            param1.d(109);
+          if (null != param1.secondaryPrevious) {
+            param1.unlinkSecondary(109);
           }
           if (param0 != -1) {
             field_b = 29L;
           }
-          param1.field_j = this.field_c;
-          param1.field_i = this.field_c.field_i;
-          param1.field_i.field_j = param1;
-          param1.field_j.field_i = param1;
+          param1.secondaryNext = this.field_c;
+          param1.secondaryPrevious = this.field_c.secondaryPrevious;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "va.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(n param0, boolean param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
+    final static boolean a(PacketBuffer param0, boolean param1) {
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.e(0);
+          int var2_int = param0.readUnsignedByte(0);
           if (!param1) {
             return true;
           }
-          stackIn_6_0 = (var2_int != 1) ? 0 : 1;
-          var3 = stackIn_6_0;
-          stackIn_7_0 = var3;
-          return stackIn_7_0 != 0;
+          boolean stackIn_6_0 = !(var2_int != 1);
+          boolean var3 = stackIn_6_0;
+          boolean stackIn_7_0 = var3;
+          return (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_10_0 = var2;
-          stackIn_10_1 = new StringBuilder().append("va.H(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var2;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("va.H(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -92,12 +84,8 @@ final class va {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, boolean param11, int param12, int param13, int param14, int param15, int param16) {
-        RuntimeException stackIn_81_0 = null;
-        StringBuilder stackIn_81_1 = null;
         String stackIn_82_2 = null;
-        RuntimeException decompiledCaughtException = null;
         int var17_int = 0;
-        RuntimeException var17 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
@@ -113,29 +101,9 @@ final class va {
         int var30 = 0;
         int var31 = 0;
         int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
+        boolean var33 = false;
         int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var42 = 0;
-        int var35Lifetime1;
-        int var36Lifetime1;
-        int var37Lifetime1;
-        int var38Lifetime1;
-        int var39Lifetime1;
-        int var40Lifetime1;
-        int var36Lifetime2;
-        int var36Lifetime3;
-        int var37Lifetime2;
-        int var38Lifetime2;
-        int var39Lifetime2;
-        int var40Lifetime2;
-        var42 = EscapeVector.field_A;
+        int var42 = EscapeVector.obfuscationControl;
         try {
           if (param10 >= 0 &&
             param8 < bi.field_f) {
@@ -152,7 +120,7 @@ final class va {
             if (!param11) {
               va.d(-74);
             }
-            var34 = param10 - param8;
+            int var34 = param10 - param8;
             if (param9 == param8) {
               if (param10 != param8) {
                 var35 = param10 - param9;
@@ -221,7 +189,7 @@ final class va {
                 var18 = var18 + param8 * var20;
                 param8 = 0;
               }
-              var33 = 0;
+              var33 = false;
             } else {
               var22 = param12 << 16;
               var21 = param12 << 16;
@@ -238,8 +206,8 @@ final class va {
                 var23 = (-param12 + param0 << 16) / var34;
                 var27 = (-param14 + param15 << 16) / var34;
                 var24 = (param1 - param12 << 16) / var35;
-                var33 = 1;
-                var36 = var19;
+                var33 = true;
+                int var36 = var19;
                 var19 = var20;
                 var20 = var36;
                 var32 = (param3 - param2 << 16) / var35;
@@ -251,7 +219,7 @@ final class va {
                 var32 = (-param2 + param16 << 16) / var34;
                 var27 = (-param14 + param6 << 16) / var35;
                 var31 = (-param2 + param3 << 16) / var35;
-                var33 = 0;
+                var33 = false;
                 var28 = (-param14 + param15 << 16) / var34;
               }
               boolean decompiledFrameRemainder0 = true;
@@ -283,15 +251,15 @@ final class va {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = bi.field_a[param8];
+                int var36Lifetime2 = bi.field_a[param8];
                 while (param8 < param9) {
-                  var37 = var17_int >> 16;
+                  int var37 = var17_int >> 16;
                   if (bi.field_c > var37) {
-                    var38 = -(var17_int >> 16) + (var18 >> 16);
+                    int var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 != 0) {
-                      var39 = (-var21 + var22) / var38;
-                      var40 = (var26 - var25) / var38;
-                      var41 = (var30 - var29) / var38;
+                      int var39 = (-var21 + var22) / var38;
+                      int var40 = (var26 - var25) / var38;
+                      int var41 = (var30 - var29) / var38;
                       if (bi.field_c <= var37 + var38) {
                         var38 = -1 + bi.field_c - var37;
                       }
@@ -300,11 +268,9 @@ final class va {
                       } else {
                         ha.a(var25, var37 + var36Lifetime2, var41, (byte) -121, var29, var39, var40, var38, param4, var21);
                       }
-                    } else {
-                      if (var37 >= 0 &&
-                        bi.field_c > var37) {
-                        ha.a(var25, var37 + var36Lifetime2, 0, (byte) -116, var29, 0, 0, var38, param4, var21);
-                      }
+                    } else if (var37 >= 0 &&
+                      bi.field_c > var37) {
+                      ha.a(var25, var37 + var36Lifetime2, 0, (byte) -116, var29, 0, 0, var38, param4, var21);
                     }
                   }
                   param8++;
@@ -317,12 +283,12 @@ final class va {
                   var29 = var29 + var31;
                   var18 = var18 + var20;
                   var17_int = var17_int + var19;
-                  var36Lifetime2 = var36Lifetime2 + em.field_l;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.width;
                   var30 = var30 + var32;
                   var22 = var22 + var24;
                 }
               }
-              var36Lifetime3 = -param9 + param10;
+              int var36Lifetime3 = -param9 + param10;
               if (var36Lifetime3 == 0) {
                 var20 = 0;
                 var27 = 0;
@@ -333,11 +299,11 @@ final class va {
                 var28 = 0;
                 var24 = 0;
               } else {
-                var37Lifetime2 = param13 << 16;
-                var38Lifetime2 = param0 << 16;
-                var39Lifetime2 = param15 << 16;
-                var40Lifetime2 = param16 << 16;
-                if (var33 != 0) {
+                int var37Lifetime2 = param13 << 16;
+                int var38Lifetime2 = param0 << 16;
+                int var39Lifetime2 = param15 << 16;
+                int var40Lifetime2 = param16 << 16;
+                if (var33) {
                   var18 = param5 << 16;
                   var26 = param6 << 16;
                   var22 = param1 << 16;
@@ -370,15 +336,15 @@ final class va {
               var22 = var22 + var24 * param8;
               param8 = 0;
             }
-            var35Lifetime1 = bi.field_a[param8];
+            int var35Lifetime1 = bi.field_a[param8];
             while (param8 < param10) {
-              var36Lifetime1 = var17_int >> 16;
+              int var36Lifetime1 = var17_int >> 16;
               if (bi.field_c > var36Lifetime1) {
-                var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
+                int var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (var37Lifetime1 != 0) {
-                  var38Lifetime1 = (var22 - var21) / var37Lifetime1;
-                  var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
-                  var40Lifetime1 = (var30 - var29) / var37Lifetime1;
+                  int var38Lifetime1 = (var22 - var21) / var37Lifetime1;
+                  int var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
+                  int var40Lifetime1 = (var30 - var29) / var37Lifetime1;
                   if (bi.field_c <= var37Lifetime1 + var36Lifetime1) {
                     var37Lifetime1 = -1 + (bi.field_c - var36Lifetime1);
                   }
@@ -387,18 +353,16 @@ final class va {
                   } else {
                     ha.a(var25 - var39Lifetime1 * var36Lifetime1, var35Lifetime1, var40Lifetime1, (byte) -103, -(var40Lifetime1 * var36Lifetime1) + var29, var38Lifetime1, var39Lifetime1, var36Lifetime1 + var37Lifetime1, param4, -(var38Lifetime1 * var36Lifetime1) + var21);
                   }
-                } else {
-                  if (0 <= var36Lifetime1 &&
-                    var36Lifetime1 < bi.field_c) {
-                    ha.a(var25, var35Lifetime1 + var36Lifetime1, 0, (byte) -114, var29, 0, 0, var37Lifetime1, param4, var21);
-                  }
+                } else if (0 <= var36Lifetime1 &&
+                  var36Lifetime1 < bi.field_c) {
+                  ha.a(var25, var35Lifetime1 + var36Lifetime1, 0, (byte) -114, var29, 0, 0, var37Lifetime1, param4, var21);
                 }
               }
               param8++;
               if (param8 >= bi.field_f) {
                 return;
               }
-              var35Lifetime1 = var35Lifetime1 + em.field_l;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.width;
               var17_int = var17_int + var19;
               var22 = var22 + var24;
               var30 = var30 + var32;
@@ -412,10 +376,10 @@ final class va {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var17 = decompiledCaughtException;
-          stackIn_81_0 = var17;
-          stackIn_81_1 = new StringBuilder().append("va.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var17 = decompiledCaughtException;
+          RuntimeException stackIn_81_0 = var17;
+          StringBuilder stackIn_81_1 = new StringBuilder().append("va.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_82_2 = "null";
           } else {
@@ -427,18 +391,15 @@ final class va {
 
     final static void a(String param0, int param1, java.applet.Applet param2) {
         try {
-          String var3 = null;
-          String var4 = null;
-          String var5 = null;
           try {
             wi.field_i = param0;
             try {
               if (param1 > -110) {
                 field_b = 2L;
               }
-              var3 = param2.getParameter("cookieprefix");
-              var4 = param2.getParameter("cookiehost");
-              var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
+              String var3 = param2.getParameter("cookieprefix");
+              String var4 = param2.getParameter("cookiehost");
+              String var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
               if (0 == param0.length()) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
@@ -456,11 +417,11 @@ final class va {
         }
     }
 
-    final fl a(byte param0) {
+    final DualLinkNode a(byte param0) {
         int var2 = -2 / ((param0 - 48) / 32);
-        fl var3 = this.field_a;
+        DualLinkNode var3 = this.field_a;
         if (var3 != this.field_c) {
-          this.field_a = var3.field_j;
+          this.field_a = var3.secondaryNext;
           return var3;
         }
         this.field_a = null;
@@ -468,18 +429,18 @@ final class va {
     }
 
     public va() {
-        this.field_c = new fl();
-        this.field_c.field_i = this.field_c;
-        this.field_c.field_j = this.field_c;
+        this.field_c = new DualLinkNode();
+        this.field_c.secondaryPrevious = this.field_c;
+        this.field_c.secondaryNext = this.field_c;
     }
 
-    final fl a(int param0) {
-        fl var2 = this.field_c.field_j;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_c.secondaryNext;
         if (var2 == this.field_c) {
           this.field_a = null;
           return null;
         }
-        this.field_a = var2.field_j;
+        this.field_a = var2.secondaryNext;
         if (param0 != 0) {
           field_b = 88L;
         }

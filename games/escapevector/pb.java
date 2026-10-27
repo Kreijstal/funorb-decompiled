@@ -9,46 +9,33 @@ final class pb {
     static wl field_e;
 
     final static int a(byte param0, dk[] param1) {
-        int var4 = 0;
-        int var2_int = 0;
-        dk[] var3 = null;
-        dk var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_17_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         try {
           if (param0 != 2) {
-            stackIn_3_0 = 20;
+            int stackIn_3_0 = 20;
             return stackIn_3_0;
           }
-          var2_int = -2147483648;
-          var3 = param1;
-          for (var4 = 0; var3.length > var4; var4++) {
-            var5 = var3[var4];
-            var6 = var5.field_i + var5.field_l;
+          int var2_int = -2147483648;
+          dk[] var3 = param1;
+          for (int var4 = 0; var3.length > var4; var4++) {
+            dk var5 = var3[var4];
+            int var6 = var5.field_i + var5.field_l;
             if (var2_int < var6) {
               var2_int = var6;
             }
           }
           if (var2_int == -2147483648) {
-            stackIn_15_0 = 0;
+            int stackIn_15_0 = 0;
             return stackIn_15_0;
           }
-          stackIn_17_0 = var2_int;
+          int stackIn_17_0 = var2_int;
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_20_0 = var2;
-          stackIn_20_1 = new StringBuilder().append("pb.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_20_0 = var2;
+          StringBuilder stackIn_20_1 = new StringBuilder().append("pb.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_21_2 = "null";
           } else {
@@ -71,14 +58,14 @@ final class pb {
         ll.a(70, 8, param0 ^ 12, am.field_k);
         if (am.field_k >= 95) {
           if (am.field_k < 110) {
-            mf.a(fg.field_b, (-dg.field_t.field_A + 640) / 2, -(am.field_k * 4) + 440, dg.field_t, -122);
+            mf.a(fg.field_b, (-dg.field_t.fullWidth + 640) / 2, -(am.field_k * 4) + 440, dg.field_t, -122);
             if (param0 != 4) {
               field_b = -65;
               return;
             }
             return;
           }
-          dg.field_t.e((640 - dg.field_t.field_A) / 2, fg.field_b);
+          dg.field_t.e((640 - dg.field_t.fullWidth) / 2, fg.field_b);
           if (param0 != 4) {
             field_b = -65;
             return;

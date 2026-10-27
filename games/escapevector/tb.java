@@ -3,20 +3,17 @@
  */
 final class tb extends r {
     static String[] field_G;
-    private cn field_H;
+    private IntrusiveDeque field_H;
     static String field_E;
     static boolean field_D;
 
     final bb n(int param0) {
-        wf var2;
-        bb var3;
-        int var4;
-        var4 = EscapeVector.field_A;
-        var2 = new wf(this.field_H);
+        int var4 = EscapeVector.obfuscationControl;
+        wf var2 = new wf(this.field_H);
         if (param0 != 0) {
           field_E = (String) null;
         }
-        var3 = (bb) (var2.c(param0 ^ 15));
+        bb var3 = (bb) (var2.c(param0 ^ 15));
         while (var3 != null) {
           if (var3.field_G) {
             return var3;
@@ -27,7 +24,7 @@ final class tb extends r {
     }
 
     final void p(int param0) {
-        int var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         wf var2 = new wf(this.field_H);
         if (param0 != 0) {
           return;
@@ -35,14 +32,14 @@ final class tb extends r {
         bb var3 = (bb) (var2.c(15));
         while (var3 != null) {
           if (var3.a((byte) -60)) {
-            var3.c((byte) -47);
+            var3.unlink((byte) -47);
           }
           var3 = (bb) (var2.a(30));
         }
     }
 
     final void l(int param0) {
-        int var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         wf var2 = new wf(this.field_H);
         bb var3 = (bb) (var2.c(15));
         while (var3 != null) {
@@ -56,12 +53,9 @@ final class tb extends r {
     }
 
     final hm j(int param0) {
-        wf var2;
-        bb var3;
-        int var4;
-        var4 = EscapeVector.field_A;
-        var2 = new wf(this.field_H);
-        var3 = (bb) (var2.c(param0 ^ 15));
+        int var4 = EscapeVector.obfuscationControl;
+        wf var2 = new wf(this.field_H);
+        bb var3 = (bb) (var2.c(param0 ^ 15));
         if (param0 != 0) {
           field_G = (String[]) null;
         }
@@ -75,13 +69,12 @@ final class tb extends r {
     }
 
     final void b(hm param0, int param1) {
-        bb var3 = null;
         try {
           if (!(param0 instanceof bb)) {
             throw new IllegalArgumentException();
           }
-          var3 = (bb) (param0);
-          this.field_H.a(var3, 8364);
+          bb var3 = (bb) (param0);
+          this.field_H.addFirst(var3, 8364);
           if (param1 < 36) {
             this.a(-45, (byte) -105, -25, -82);
           }
@@ -93,11 +86,10 @@ final class tb extends r {
     }
 
     final static boolean a(boolean param0) {
-        boolean stackIn_6_0 = false;
         if (param0) {
           return false;
         }
-        stackIn_6_0 = (km.field_n != null) && (km.field_n.c(124));
+        boolean stackIn_6_0 = (km.field_n != null) && (km.field_n.c(124));
         return stackIn_6_0;
     }
 
@@ -110,14 +102,14 @@ final class tb extends r {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        int var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         if (this.field_s != null) {
           this.field_s.a(param3, param0, -43, (hm) (this), true);
         }
         wf var5 = new wf(this.field_H);
         hm var6 = (hm) (var5.b(-31616));
         if (param1 < 85) {
-          this.field_H = (cn) null;
+          this.field_H = (IntrusiveDeque) null;
         }
         while (var6 != null) {
           var6.a(this.field_j + param0, (byte) 124, param2, this.field_k + param3);
@@ -126,12 +118,12 @@ final class tb extends r {
     }
 
     final void m(int param0) {
-        int var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         wf var2 = new wf(this.field_H);
         bb var3 = (bb) (var2.c(15));
         while (var3 != null) {
           if (var3.j(-13907)) {
-            var3.c((byte) -126);
+            var3.unlink((byte) -126);
           }
           var3 = (bb) (var2.a(param0 ^ 91));
         }
@@ -140,7 +132,7 @@ final class tb extends r {
 
     public tb() {
         super(0, 0, dm.field_h, r.field_B, (db) null, (wn) null);
-        this.field_H = new cn();
+        this.field_H = new IntrusiveDeque();
     }
 
     static {

@@ -16,25 +16,19 @@ final class un extends re {
     }
 
     final String b(byte param0, hm param1) {
-        RuntimeException var3 = null;
-        CharSequence var4 = null;
-        String stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 39) {
-            var4 = (CharSequence) null;
+            CharSequence var4 = (CharSequence) null;
             un.a((CharSequence) null, 116, 'ﾤ');
           }
-          stackIn_3_0 = kh.a(param1.field_l.length(), '*', (byte) 53);
+          String stackIn_3_0 = kh.a(param1.field_l.length(), '*', (byte) 53);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("un.N(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("un.N(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -45,91 +39,69 @@ final class un extends re {
     }
 
     final static int a(String[] args, int param1, wl param2, int param3, String param4) {
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$0 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_24_0 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
-        StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
-        StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var6Lifetime1;
-        int var9Lifetime1;
-        var13 = EscapeVector.field_A;
+        int var13 = EscapeVector.obfuscationControl;
         try {
-          var5_int = param2.b(param4);
+          int var5_int = param2.b(param4);
           if (param3 >= var5_int &&
             -1 == param4.indexOf("<br>")) {
             args[0] = param4;
-            stackIn_4_0 = 1;
+            int stackIn_4_0 = 1;
             return stackIn_4_0;
           }
-          var6 = (param3 + (var5_int - 1)) / param3;
+          int var6 = (param3 + (var5_int - 1)) / param3;
           param3 = var5_int / var6;
-          var6Lifetime1 = 0;
-          var7 = 0;
-          var8 = param4.length();
-          for (var9 = 0; var8 > var9; var9++) {
-            var10 = param4.charAt(var9);
+          int var6Lifetime1 = 0;
+          int var7 = 0;
+          int var8 = param4.length();
+          for (int var9 = 0; var8 > var9; var9++) {
+            int var10 = param4.charAt(var9);
             if (var10 == 32 ||
               var10 == 45) {
-              var11 = param4.substring(var7, 1 + var9).trim();
-              var12 = param2.b(var11);
+              String var11 = param4.substring(var7, 1 + var9).trim();
+              int var12 = param2.b(var11);
               if (var12 >= param3) {
                 var7 = 1 + var9;
-                incrementValue$1 = var6Lifetime1;
+                int incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;
                 args[incrementValue$1] = var11;
               }
             }
             if (var10 == 62 &&
               param4.regionMatches(-3 + var9, "<br>", 0, 4)) {
-              incrementValue$2 = var6Lifetime1;
+              int incrementValue$2 = var6Lifetime1;
               var6Lifetime1++;
               args[incrementValue$2] = param4.substring(var7, -3 + var9).trim();
               var7 = var9 + 1;
             }
           }
           if (var8 > var7) {
-            incrementValue$0 = var6Lifetime1;
+            int incrementValue$0 = var6Lifetime1;
             var6Lifetime1++;
             args[incrementValue$0] = param4.substring(var7, var8).trim();
           }
-          var9Lifetime1 = -120 % ((-41 - param1) / 59);
-          stackIn_24_0 = var6Lifetime1;
+          int var9Lifetime1 = -120 % ((-41 - param1) / 59);
+          int stackIn_24_0 = var6Lifetime1;
           return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_27_0 = var5;
-          stackIn_27_1 = new StringBuilder().append("un.R(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_27_0 = var5;
+          StringBuilder stackIn_27_1 = new StringBuilder().append("un.R(");
           if (args == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
-          stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
-          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',');
+          StringBuilder stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_34_2 = "null";
           } else {
@@ -156,23 +128,18 @@ final class un extends re {
     }
 
     final static int a(ih param0, int param1) {
-        RuntimeException var2 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 31512) {
             field_u = false;
           }
-          stackIn_3_0 = param0.field_r + param0.field_x;
+          int stackIn_3_0 = param0.field_r + param0.field_x;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("un.L(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("un.L(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -184,15 +151,6 @@ final class un extends re {
 
     final static int f(int param0) {
         try {
-          int stackIn_15_0 = 0;
-          int stackIn_27_0 = 0;
-          int stackIn_32_0 = 0;
-          int stackIn_35_0 = 0;
-          int stackIn_37_0 = 0;
-          Throwable decompiledCaughtException = null;
-          int var1_int = 0;
-          IOException var1 = null;
-          n var2 = null;
           if (4 <= od.field_j.field_g) {
             if (-1 == od.field_j.field_d) {
               return 3;
@@ -207,12 +165,12 @@ final class un extends re {
           }
           try {
             if (ke.field_b == 0) {
-              qk.field_g = ga.field_d.a(kl.field_n, 4, kh.field_c);
+              qk.field_g = IntPoint.field_d.a(kl.field_n, 4, kh.field_c);
               ke.field_b = ke.field_b + 1;
             }
             if (ke.field_b == 1) {
               if (2 == qk.field_g.field_f) {
-                stackIn_15_0 = gf.a((byte) -78, -1);
+                int stackIn_15_0 = gf.a((byte) -78, -1);
                 return stackIn_15_0;
               }
               if (1 == qk.field_g.field_f) {
@@ -220,43 +178,41 @@ final class un extends re {
               }
             }
             if (ke.field_b == 2) {
-              rh.field_I = new pj((java.net.Socket) (qk.field_g.field_b), ga.field_d);
-              var2 = new n(13);
+              rh.field_I = new pj((java.net.Socket) (qk.field_g.field_b), IntPoint.field_d);
+              PacketBuffer var2 = new PacketBuffer(13);
               wc.a(ce.field_j, he.field_y, true, rh.field_N, var2);
               var2.f(15, -123);
               var2.a((byte) 123, mn.field_n);
-              rh.field_I.a(13, 0, var2.field_g, 5000);
+              rh.field_I.a(13, 0, var2.payload, 5000);
               ke.field_b = ke.field_b + 1;
-              ma.field_g = 30000L + td.b(128);
+              BoundedRandomAccessFile.field_g = 30000L + td.b(128);
             }
             if (ke.field_b == 3) {
-              if (rh.field_I.b(-117) <= 0) {
-                if (td.b(128) > ma.field_g) {
-                  stackIn_32_0 = gf.a((byte) -78, -2);
-                  return stackIn_32_0;
-                }
-              } else {
-                var1_int = rh.field_I.a(-16650);
+              if (!(rh.field_I.b(-117) <= 0)) {
+                int var1_int = rh.field_I.a(-16650);
                 if (var1_int != 0) {
-                  stackIn_27_0 = gf.a((byte) -78, var1_int);
+                  int stackIn_27_0 = gf.a((byte) -78, var1_int);
                   return stackIn_27_0;
                 }
                 ke.field_b = ke.field_b + 1;
+              } else if (td.b(128) > BoundedRandomAccessFile.field_g) {
+                int stackIn_32_0 = gf.a((byte) -78, -2);
+                return stackIn_32_0;
               }
             }
             if (4 != ke.field_b) {
-              stackIn_37_0 = -1;
+              int stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            od.field_j.a(rh.field_I, oc.field_t, (byte) -99);
+            od.field_j.a(rh.field_I, PointCloudEffect.field_t, (byte) -99);
             qk.field_g = null;
             ke.field_b = 0;
             rh.field_I = null;
-            stackIn_35_0 = 0;
+            int stackIn_35_0 = 0;
             return stackIn_35_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var1 = (IOException) (Object) decompiledCaughtException;
+            Throwable decompiledCaughtException = decompiledCaughtParameter0;
+            IOException var1 = (IOException) (Object) decompiledCaughtException;
             return gf.a((byte) -78, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -267,21 +223,12 @@ final class un extends re {
     }
 
     final static int a(CharSequence param0, int param1, char param2) {
-        int var5 = 0;
-        int var3_int = 0;
-        int var4 = 0;
-        int var6 = 0;
-        int stackIn_12_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         try {
-          var3_int = 0;
-          var4 = param0.length();
-          for (var5 = 0; var4 > var5; var5++) {
+          int var3_int = 0;
+          int var4 = param0.length();
+          for (int var5 = 0; var4 > var5; var5++) {
             if (~param2 == ~param0.charAt(var5)) {
               var3_int++;
             }
@@ -289,13 +236,13 @@ final class un extends re {
           if (param1 != 4277) {
             field_t = (int[]) null;
           }
-          stackIn_12_0 = var3_int;
+          int stackIn_12_0 = var3_int;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("un.P(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var3;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("un.P(");
           if (param0 == null) {
             stackIn_16_2 = "null";
           } else {

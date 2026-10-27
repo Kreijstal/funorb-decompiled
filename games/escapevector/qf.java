@@ -16,19 +16,14 @@ final class qf extends eo {
     static int field_l;
     static String field_o;
     static String field_n;
-    static ed field_d;
+    static Sprite field_d;
     static int field_j;
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, lk param5, int param6, boolean param7, byte param8, int param9, long param10, String param11, int param12, int param13) {
         try {
-          RuntimeException stackIn_15_0 = null;
-          StringBuilder stackIn_15_1 = null;
           String stackIn_16_2 = null;
-          StringBuilder stackIn_18_1 = null;
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
-          IOException var15 = null;
-          RuntimeException var15_ref = null;
           try {
             om.field_g = new c(param1);
             om.field_c = new c(param0);
@@ -37,7 +32,7 @@ final class qf extends eo {
             }
             ca.field_c = param5;
             jc.field_b = param7;
-            cn.field_h = param11;
+            IntrusiveDeque.field_h = param11;
             sj.field_i = param13;
             jm.field_L = param6;
             ej.field_d = param3;
@@ -54,20 +49,20 @@ final class qf extends eo {
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var15 = (IOException) (Object) decompiledCaughtException;
+              IOException var15 = (IOException) (Object) decompiledCaughtException;
               throw new RuntimeException(var15.toString());
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var15_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_15_0 = var15_ref;
-            stackIn_15_1 = new StringBuilder().append("qf.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+            RuntimeException var15_ref = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_15_0 = var15_ref;
+            StringBuilder stackIn_15_1 = new StringBuilder().append("qf.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             if (param5 == null) {
               stackIn_16_2 = "null";
             } else {
               stackIn_16_2 = "{...}";
             }
-            stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
+            StringBuilder stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
             if (param11 == null) {
               stackIn_19_2 = "null";
             } else {
@@ -106,31 +101,20 @@ final class qf extends eo {
     }
 
     private final long c(int param0) {
-        long var2;
-        long var4;
-        long var6;
-        int var8;
-        int var9;
-        long var6Lifetime1;
-        long var6Lifetime2;
-        long var6Lifetime3;
-        int var8Lifetime1;
-        int var8Lifetime2;
-        int var8Lifetime3;
-        var9 = EscapeVector.field_A;
-        var2 = System.nanoTime();
-        var4 = -this.field_e + var2;
+        int var9 = EscapeVector.obfuscationControl;
+        long var2 = System.nanoTime();
+        long var4 = -this.field_e + var2;
         this.field_e = var2;
         if (-5000000000L >= var4) {
-          var6 = 0L;
-          for (var8 = param0; this.field_k >= var8; var8++) {
+          long var6 = 0L;
+          for (int var8 = param0; this.field_k >= var8; var8++) {
             var6 = var6 + this.field_f[(this.field_i - var8 + 10) % 10];
           }
           return var6 / (long)this.field_k;
         }
         if (5000000000L <= var4) {
-          var6Lifetime1 = 0L;
-          for (var8Lifetime1 = param0; this.field_k >= var8Lifetime1; var8Lifetime1++) {
+          long var6Lifetime1 = 0L;
+          for (int var8Lifetime1 = param0; this.field_k >= var8Lifetime1; var8Lifetime1++) {
             var6Lifetime1 = var6Lifetime1 + this.field_f[(this.field_i - var8Lifetime1 + 10) % 10];
           }
           return var6Lifetime1 / (long)this.field_k;
@@ -138,16 +122,16 @@ final class qf extends eo {
         this.field_f[this.field_i] = var4;
         if (this.field_k >= 1) {
           this.field_i = (1 + this.field_i) % 10;
-          var6Lifetime2 = 0L;
-          for (var8Lifetime2 = param0; this.field_k >= var8Lifetime2; var8Lifetime2++) {
+          long var6Lifetime2 = 0L;
+          for (int var8Lifetime2 = param0; this.field_k >= var8Lifetime2; var8Lifetime2++) {
             var6Lifetime2 = var6Lifetime2 + this.field_f[(this.field_i - var8Lifetime2 + 10) % 10];
           }
           return var6Lifetime2 / (long)this.field_k;
         }
         this.field_k = this.field_k + 1;
         this.field_i = (1 + this.field_i) % 10;
-        var6Lifetime3 = 0L;
-        for (var8Lifetime3 = param0; this.field_k >= var8Lifetime3; var8Lifetime3++) {
+        long var6Lifetime3 = 0L;
+        for (int var8Lifetime3 = param0; this.field_k >= var8Lifetime3; var8Lifetime3++) {
           var6Lifetime3 = var6Lifetime3 + this.field_f[(this.field_i - var8Lifetime3 + 10) % 10];
         }
         return var6Lifetime3 / (long)this.field_k;
@@ -165,18 +149,15 @@ final class qf extends eo {
     }
 
     final int a(byte param0, long param1) {
-        int var4;
-        int var5;
-        int var6;
-        var6 = EscapeVector.field_A;
-        var4 = 21 % ((param0 + 29) / 51);
+        int var6 = EscapeVector.obfuscationControl;
+        int var4 = 21 % ((param0 + 29) / 51);
         if (this.field_c < this.field_g) {
           this.field_e = this.field_e + (-this.field_c + this.field_g);
           this.field_c = this.field_c + (this.field_g - this.field_c);
           this.field_g = this.field_g + param1;
           return 1;
         }
-        var5 = 0;
+        int var5 = 0;
         do {
           this.field_g = this.field_g + param1;
           var5++;

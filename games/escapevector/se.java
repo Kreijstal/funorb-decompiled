@@ -34,30 +34,23 @@ final class se {
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
-        String var2 = null;
-        RuntimeException var2_ref = null;
-        String var3 = null;
-        long var4 = 0L;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           an.field_a = true;
-          var2 = "tuhstatbut";
-          var3 = "rvnadlm";
-          var4 = -1L;
-          tj.a((byte) 71, param1, var2, var3, var4);
+          String var2 = "tuhstatbut";
+          String var3 = "rvnadlm";
+          long var4 = -1L;
+          DialogueScreen.a((byte) 71, param1, var2, var3, var4);
           if (param0 > 1) {
             return;
           }
           field_a = (String[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_5_0 = var2_ref;
-          stackIn_5_1 = new StringBuilder().append("se.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_5_0 = var2_ref;
+          StringBuilder stackIn_5_1 = new StringBuilder().append("se.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_6_2 = "null";
           } else {

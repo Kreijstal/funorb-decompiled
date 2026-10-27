@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ml {
-    static ed field_c;
+    static Sprite field_c;
     static nn field_a;
     static String field_b;
 
@@ -25,40 +25,31 @@ final class ml {
     }
 
     final static ce a(int param0, mf param1, ec param2, int param3, int param4) {
-        byte[] var5 = null;
-        RuntimeException var5_ref = null;
-        byte[] var6 = null;
-        ce stackIn_5_0 = null;
-        ce stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param1.a(param4, (byte) -97, param3);
-          var5 = var6;
+          byte[] var6 = param1.a(param4, (byte) -97, param3);
+          byte[] var5 = var6;
           if (var6 == null) {
             return null;
           }
           if (param0 == -15618) {
-            stackIn_7_0 = new ce(new n(var6), param2);
+            ce stackIn_7_0 = new ce(new PacketBuffer(var6), param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ce) null;
+          ce stackIn_5_0 = (ce) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = decompiledCaughtException;
-          stackIn_10_0 = var5_ref;
-          stackIn_10_1 = new StringBuilder().append("ml.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var5_ref;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("ml.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -70,7 +61,7 @@ final class ml {
 
     final static void a(ik param0, int param1, byte param2) {
         try {
-          vj.field_d.a(-12328, param0);
+          vj.field_d.addLast(-12328, param0);
           ig.a(-75, param1, param0);
           if (param2 != 101) {
             ml.a(-42);

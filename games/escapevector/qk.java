@@ -30,17 +30,11 @@ final class qk {
     }
 
     final static void a(int[] param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_intLifetime1;
         try {
           if (nk.field_n == 97 ||
             nk.field_n == 99) {
-            var2_int = di.field_d.field_h;
+            int var2_int = di.field_d.field_h;
             var2_int++;
             if (var2_int >= param0.length) {
               var2_int = 0;
@@ -54,7 +48,7 @@ final class qk {
             98 != nk.field_n) {
             return;
           }
-          var2_intLifetime1 = di.field_d.field_h;
+          int var2_intLifetime1 = di.field_d.field_h;
           var2_intLifetime1--;
           if (0 > var2_intLifetime1) {
             var2_intLifetime1 = -1 + param0.length;
@@ -62,10 +56,10 @@ final class qk {
           di.field_d.a(false, var2_intLifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_18_0 = var2;
-          stackIn_18_1 = new StringBuilder().append("qk.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var2;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("qk.C(");
           if (param0 == null) {
             stackIn_19_2 = "null";
           } else {

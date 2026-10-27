@@ -42,7 +42,7 @@ final class ce {
     int field_B;
 
     final static void d(int param0) {
-        pl.field_n.a(!(0.5 <= Math.random()) ? ka.field_e : ri.field_b, 100, 6144 * qm.field_c / 64, param0);
+        pl.field_n.a(!(0.5 <= Math.random()) ? TerrainMaskSupport.field_e : ri.field_b, 100, 6144 * qm.field_c / 64, param0);
     }
 
     final static String c(int param0) {
@@ -69,19 +69,16 @@ final class ce {
     }
 
     private final void a(int param0) {
-        int var3 = 0;
-        int var2;
-        int var5;
         hh var4;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         if (this.field_o == null) {
           return;
         }
-        var2 = 1;
+        boolean var2 = true;
         if (param0 != 260404420) {
           this.field_H = (int[]) null;
         }
-        for (var3 = 0; var3 < this.field_s.length; var3++) {
+        for (int var3 = 0; var3 < this.field_s.length; var3++) {
           if (this.field_s[var3] == null) {
             if (this.field_E[var3] >> 4 != 0) {
               var4 = this.field_o.a(this.field_e[var3], (byte) -128, this.field_c[var3]);
@@ -89,14 +86,14 @@ final class ce {
               var4 = this.field_o.a((byte) 55, this.field_c[var3], this.field_e[var3]);
             }
             if (var4 == null) {
-              var2 = 0;
+              var2 = false;
             } else {
               this.field_E[var3] = ae.a(this.field_E[var3], 15);
               this.field_s[var3] = var4;
             }
           }
         }
-        if (var2 != 0) {
+        if (var2) {
           this.field_o = null;
           this.field_e = null;
           this.field_c = null;
@@ -124,73 +121,35 @@ final class ce {
         return ge.field_b[param1][param2];
     }
 
-    ce(n param0, ec param1) {
-        int var3_int = 0;
-        int var4 = 0;
-        int dupTemp$0 = 0;
-        byte[] var16 = null;
-        int var7 = 0;
-        int dupTemp$1 = 0;
-        int var9 = 0;
-        int[] array$2 = null;
-        int var10 = 0;
-        int dupTemp$3 = 0;
-        int localTemp$4 = 0;
-        int[] array$5 = null;
-        int dupTemp$6 = 0;
-        int[] array$7 = null;
-        int dupTemp$8 = 0;
-        int localTemp$9 = 0;
-        int[] array$10 = null;
-        int dupTemp$11 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var8 = 0;
-        int var11 = 0;
-        int var4Lifetime1;
-        int var10Lifetime1;
-        int var11Lifetime1;
-        int var11Lifetime2;
-        int var11Lifetime3;
-        int var11Lifetime4;
-        int var5Lifetime1;
-        int var5Lifetime2;
-        int var5Lifetime3;
-        int var5Lifetime4;
-        int var6Lifetime1;
-        int var8Lifetime1;
-        int var4Lifetime1Lifetime1;
-        int var4Lifetime1Lifetime2;
-        int var4Lifetime1Lifetime3;
-        int var4Lifetime1Lifetime4;
+    ce(PacketBuffer param0, ec param1) {
         try {
           this.field_o = param1;
-          this.field_w = param0.e(0) + 1;
-          param0.e(0);
-          this.field_B = 1 + param0.e(0);
-          this.field_p = param0.e(0) + 1;
-          this.field_F = param0.e(0) + 1;
-          var3_int = param0.e(0);
+          this.field_w = param0.readUnsignedByte(0) + 1;
+          param0.readUnsignedByte(0);
+          this.field_B = 1 + param0.readUnsignedByte(0);
+          this.field_p = param0.readUnsignedByte(0) + 1;
+          this.field_F = param0.readUnsignedByte(0) + 1;
+          int var3_int = param0.readUnsignedByte(0);
           this.field_D = var3_int & 1;
-          this.field_L = param0.e(0);
-          this.field_i = param0.e(0);
+          this.field_L = param0.readUnsignedByte(0);
+          this.field_i = param0.readUnsignedByte(0);
           this.field_x = new int[this.field_w];
-          var4 = 0;
-          for (var5 = 0; var5 < this.field_w; var5++) {
-            dupTemp$0 = var4 + param0.e(0);
+          int var4 = 0;
+          for (int var5 = 0; var5 < this.field_w; var5++) {
+            int dupTemp$0 = var4 + param0.readUnsignedByte(0);
             var4 = dupTemp$0;
             this.field_x[var5] = ae.a(255, dupTemp$0);
           }
           this.field_C = new byte[256][];
           this.field_l = new int[256];
           qg.a(this.field_l, 0, 256, 64);
-          for (var5Lifetime1 = 0; 256 > var5Lifetime1; var5Lifetime1++) {
+          for (int var5Lifetime1 = 0; 256 > var5Lifetime1; var5Lifetime1++) {
             this.field_C[var5Lifetime1] = um.field_b;
           }
-          for (var5Lifetime2 = 0; var5Lifetime2 < this.field_p; var5Lifetime2++) {
-            this.field_l[var5Lifetime2] = param0.e(0) + 1;
-            var6 = param0.f(1952);
-            var16 = new byte[var6];
+          for (int var5Lifetime2 = 0; var5Lifetime2 < this.field_p; var5Lifetime2++) {
+            this.field_l[var5Lifetime2] = param0.readUnsignedByte(0) + 1;
+            int var6 = param0.readUnsignedShort(1952);
+            byte[] var16 = new byte[var6];
             if (0 < var6) {
               param0.a(var16, (byte) -96, 0, var6);
               this.field_C[var5Lifetime2] = var16;
@@ -210,7 +169,7 @@ final class ce {
           this.field_g = new int[this.field_F][];
           this.field_q = new int[this.field_F];
           this.field_v = new int[this.field_F][];
-          var5Lifetime3 = param0.f(1952);
+          int var5Lifetime3 = param0.readUnsignedShort(1952);
           this.field_y = new int[var5Lifetime3];
           this.field_n = new int[var5Lifetime3];
           this.field_E = new int[var5Lifetime3];
@@ -222,76 +181,76 @@ final class ce {
           this.field_h = new int[var5Lifetime3];
           this.field_z = new int[var5Lifetime3];
           this.field_A = new int[var5Lifetime3];
-          var5Lifetime4 = 0;
-          for (var6Lifetime1 = 0; var6Lifetime1 < this.field_F; var6Lifetime1++) {
-            var7 = param0.e(0);
+          int var5Lifetime4 = 0;
+          for (int var6Lifetime1 = 0; var6Lifetime1 < this.field_F; var6Lifetime1++) {
+            int var7 = param0.readUnsignedByte(0);
             if (var7 > 0) {
-              var4Lifetime1 = 0;
-              for (var8 = 0; var8 < 96; var8++) {
-                dupTemp$1 = var4Lifetime1 + param0.e(0);
+              int var4Lifetime1 = 0;
+              for (int var8 = 0; var8 < 96; var8++) {
+                int dupTemp$1 = var4Lifetime1 + param0.readUnsignedByte(0);
                 var4Lifetime1 = dupTemp$1;
                 this.field_d[var6Lifetime1][var8] = var5Lifetime4 + ae.a(255, dupTemp$1);
               }
-              this.field_u[var6Lifetime1] = param0.e(0);
-              var8Lifetime1 = param0.e(0);
-              this.field_J[var6Lifetime1] = param0.e(0);
-              this.field_r[var6Lifetime1] = param0.e(0);
-              this.field_G[var6Lifetime1] = this.field_r[var6Lifetime1] + param0.e(0);
-              this.field_m[var6Lifetime1] = param0.e(0);
-              var9 = param0.e(0);
-              this.field_q[var6Lifetime1] = param0.e(0);
-              this.field_k[var6Lifetime1] = param0.e(0);
-              this.field_K[var6Lifetime1] = this.field_k[var6Lifetime1] + param0.e(0);
-              var4Lifetime1Lifetime1 = 0;
-              array$2 = new int[var8Lifetime1];
+              this.field_u[var6Lifetime1] = param0.readUnsignedByte(0);
+              int var8Lifetime1 = param0.readUnsignedByte(0);
+              this.field_J[var6Lifetime1] = param0.readUnsignedByte(0);
+              this.field_r[var6Lifetime1] = param0.readUnsignedByte(0);
+              this.field_G[var6Lifetime1] = this.field_r[var6Lifetime1] + param0.readUnsignedByte(0);
+              this.field_m[var6Lifetime1] = param0.readUnsignedByte(0);
+              int var9 = param0.readUnsignedByte(0);
+              this.field_q[var6Lifetime1] = param0.readUnsignedByte(0);
+              this.field_k[var6Lifetime1] = param0.readUnsignedByte(0);
+              this.field_K[var6Lifetime1] = this.field_k[var6Lifetime1] + param0.readUnsignedByte(0);
+              int var4Lifetime1Lifetime1 = 0;
+              int[] array$2 = new int[var8Lifetime1];
               this.field_v[var6Lifetime1] = array$2;
-              var10 = 0;
-              for (var11 = 0; var8Lifetime1 > var11; var11++) {
-                dupTemp$3 = var10 + param0.e((byte) 32);
+              int var10 = 0;
+              for (int var11 = 0; var8Lifetime1 > var11; var11++) {
+                int dupTemp$3 = var10 + param0.e((byte) 32);
                 var10 = dupTemp$3;
-                localTemp$4 = var4Lifetime1Lifetime1 + dupTemp$3;
+                int localTemp$4 = var4Lifetime1Lifetime1 + dupTemp$3;
                 var4Lifetime1Lifetime1 = localTemp$4;
                 this.field_v[var6Lifetime1][var11] = localTemp$4;
               }
-              array$5 = new int[var8Lifetime1];
+              int[] array$5 = new int[var8Lifetime1];
               this.field_g[var6Lifetime1] = array$5;
-              var4Lifetime1Lifetime2 = 0;
-              for (var11Lifetime1 = 0; var11Lifetime1 < var8Lifetime1; var11Lifetime1++) {
-                dupTemp$6 = var4Lifetime1Lifetime2 + param0.e(0);
+              int var4Lifetime1Lifetime2 = 0;
+              for (int var11Lifetime1 = 0; var11Lifetime1 < var8Lifetime1; var11Lifetime1++) {
+                int dupTemp$6 = var4Lifetime1Lifetime2 + param0.readUnsignedByte(0);
                 var4Lifetime1Lifetime2 = dupTemp$6;
                 this.field_g[var6Lifetime1][var11Lifetime1] = ae.a(255, dupTemp$6);
               }
-              array$7 = new int[var9];
+              int[] array$7 = new int[var9];
               this.field_I[var6Lifetime1] = array$7;
-              var4Lifetime1Lifetime3 = 0;
-              var10Lifetime1 = 0;
-              for (var11Lifetime2 = 0; var9 > var11Lifetime2; var11Lifetime2++) {
-                dupTemp$8 = var10Lifetime1 + param0.e((byte) 114);
+              int var4Lifetime1Lifetime3 = 0;
+              int var10Lifetime1 = 0;
+              for (int var11Lifetime2 = 0; var9 > var11Lifetime2; var11Lifetime2++) {
+                int dupTemp$8 = var10Lifetime1 + param0.e((byte) 114);
                 var10Lifetime1 = dupTemp$8;
-                localTemp$9 = var4Lifetime1Lifetime3 + dupTemp$8;
+                int localTemp$9 = var4Lifetime1Lifetime3 + dupTemp$8;
                 var4Lifetime1Lifetime3 = localTemp$9;
                 this.field_I[var6Lifetime1][var11Lifetime2] = localTemp$9;
               }
-              var4Lifetime1Lifetime4 = 0;
-              array$10 = new int[var9];
+              int var4Lifetime1Lifetime4 = 0;
+              int[] array$10 = new int[var9];
               this.field_t[var6Lifetime1] = array$10;
-              for (var11Lifetime3 = 0; var9 > var11Lifetime3; var11Lifetime3++) {
-                dupTemp$11 = var4Lifetime1Lifetime4 + param0.e(0);
+              for (int var11Lifetime3 = 0; var9 > var11Lifetime3; var11Lifetime3++) {
+                int dupTemp$11 = var4Lifetime1Lifetime4 + param0.readUnsignedByte(0);
                 var4Lifetime1Lifetime4 = dupTemp$11;
                 this.field_t[var6Lifetime1][var11Lifetime3] = ae.a(255, dupTemp$11);
               }
-              this.field_H[var6Lifetime1] = param0.f(1952);
-              for (var11Lifetime4 = 0; var11Lifetime4 < var7; var11Lifetime4++) {
-                this.field_n[var5Lifetime4] = param0.d((byte) -112);
-                this.field_h[var5Lifetime4] = param0.d((byte) -126);
-                this.field_A[var5Lifetime4] = this.field_h[var5Lifetime4] + param0.d((byte) -107);
-                this.field_a[var5Lifetime4] = param0.e(0);
+              this.field_H[var6Lifetime1] = param0.readUnsignedShort(1952);
+              for (int var11Lifetime4 = 0; var11Lifetime4 < var7; var11Lifetime4++) {
+                this.field_n[var5Lifetime4] = param0.readUnsignedMedium((byte) -112);
+                this.field_h[var5Lifetime4] = param0.readUnsignedMedium((byte) -126);
+                this.field_A[var5Lifetime4] = this.field_h[var5Lifetime4] + param0.readUnsignedMedium((byte) -107);
+                this.field_a[var5Lifetime4] = param0.readUnsignedByte(0);
                 this.field_z[var5Lifetime4] = param0.a(false);
-                this.field_E[var5Lifetime4] = param0.e(0);
-                this.field_y[var5Lifetime4] = param0.e(0);
+                this.field_E[var5Lifetime4] = param0.readUnsignedByte(0);
+                this.field_y[var5Lifetime4] = param0.readUnsignedByte(0);
                 this.field_b[var5Lifetime4] = param0.a(false) - 1;
-                this.field_e[var5Lifetime4] = param0.f(1952);
-                this.field_c[var5Lifetime4] = param0.f(1952);
+                this.field_e[var5Lifetime4] = param0.readUnsignedShort(1952);
+                this.field_c[var5Lifetime4] = param0.readUnsignedShort(1952);
                 var5Lifetime4++;
               }
             }

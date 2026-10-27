@@ -8,32 +8,22 @@ final class jk {
     private int field_c;
 
     final static void a(String[] args, String param1, int param2, int param3) {
-        int var5 = 0;
-        boolean stackIn_5_0 = false;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        String[] var4 = null;
-        RuntimeException var4_ref = null;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         try {
           ui.field_b = ia.field_y;
-          if (param3 != 255) {
-            if (param3 >= 100 &&
-              param3 <= 105) {
-              var4 = args;
-              mb.a(var4, 4);
-              co.field_a = rg.a(args, (byte) -63);
-            } else {
-              co.field_a = bm.a(param1, param3, param2 ^ -97);
-            }
-          } else {
-            stackIn_5_0 = !(gf.field_a >= 13);
+          if (param3 == 255) {
+            boolean stackIn_5_0 = !(gf.field_a >= 13);
             co.field_a = fc.a(stackIn_5_0, (byte) -79);
             mb.a((String[]) null, param2 + 105);
+          } else if (param3 >= 100 &&
+            param3 <= 105) {
+            String[] var4 = args;
+            mb.a(var4, 4);
+            co.field_a = rg.a(args, (byte) -63);
+          } else {
+            co.field_a = bm.a(param1, param3, param2 ^ -97);
           }
           if (param2 == -101) {
             return;
@@ -41,16 +31,16 @@ final class jk {
           field_b = 26;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_16_0 = var4_ref;
-          stackIn_16_1 = new StringBuilder().append("jk.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var4_ref;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("jk.A(");
           if (args == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
+          StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";
           } else {
@@ -74,7 +64,7 @@ final class jk {
         if (param1 != this.field_d) {
           return;
         }
-        oe var5 = ma.field_a;
+        GameplaySession var5 = BoundedRandomAccessFile.activeSession;
         int var6 = -69 / ((19 - param0) / 47);
         if (var5 == null) {
           return;

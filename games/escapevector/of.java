@@ -7,28 +7,26 @@ final class of {
     static int field_c;
     static rf field_f;
     static boolean field_b;
-    static ed field_a;
+    static Sprite field_a;
     static fd field_g;
     static hh field_h;
 
-    final static ed a(int param0, byte param1, int param2) {
-        int var5 = 0;
-        int var6 = EscapeVector.field_A;
-        ed var7 = new ed(param2, param2);
-        ed var3 = var7;
+    final static Sprite a(int param0, byte param1, int param2) {
+        int var6 = EscapeVector.obfuscationControl;
+        Sprite var7 = new Sprite(param2, param2);
+        Sprite var3 = var7;
         int var4 = 92 % ((param1 - 15) / 58);
-        for (var5 = 0; var5 < var3.field_B.length; var5++) {
-          var7.field_B[var5] = param0;
+        for (int var5 = 0; var5 < var3.pixels.length; var5++) {
+          var7.pixels[var5] = param0;
         }
         return var3;
     }
 
     final static boolean a(char param0, byte param1) {
-        boolean stackIn_10_0 = false;
         if (param1 < 28) {
           of.a('ﾱ', (byte) 49);
         }
-        stackIn_10_0 = ((!(65 > param0) &&
+        boolean stackIn_10_0 = ((!(65 > param0) &&
           !(90 < param0)) ||
           (!(param0 < 97) &&
           !(122 < param0)));
@@ -36,15 +34,9 @@ final class of {
     }
 
     final static boolean a(mf param0, mf param1, mf param2, byte param3) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!param0.b(0)) {
             return false;
@@ -65,22 +57,22 @@ final class of {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_21_0 = var4;
-          stackIn_21_1 = new StringBuilder().append("of.F(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_21_0 = var4;
+          StringBuilder stackIn_21_1 = new StringBuilder().append("of.F(");
           if (param0 == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
+          StringBuilder stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
           if (param1 == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',');
+          StringBuilder stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',');
           if (param2 == null) {
             stackIn_28_2 = "null";
           } else {
@@ -91,13 +83,7 @@ final class of {
     }
 
     final static lm a(int param0, String param1) {
-        RuntimeException var2 = null;
-        lm stackIn_8_0 = null;
-        Object stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 122) {
             of.a('o', (byte) -83);
@@ -108,19 +94,19 @@ final class of {
           if (ia.field_y == ui.field_b &&
             param1.equals(tc.field_j)) {
             ui.field_b = vn.field_g;
-            stackIn_8_0 = co.field_a;
+            lm stackIn_8_0 = co.field_a;
             return stackIn_8_0;
           }
           tc.field_j = param1;
           co.field_a = null;
           ui.field_b = dg.field_o;
-          stackIn_10_0 = null;
+          Object stackIn_10_0 = null;
           return (lm) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_13_0 = var2;
-          stackIn_13_1 = new StringBuilder().append("of.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var2;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("of.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {

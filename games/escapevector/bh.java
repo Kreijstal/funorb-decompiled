@@ -22,7 +22,7 @@ final class bh extends vj {
         }
     }
 
-    final void a(n param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           if (param1 >= -15) {
             bh.a(29, -33L);
@@ -50,22 +50,15 @@ final class bh extends vj {
     }
 
     final static String a(int param0, long param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         if (param0 < -73) {
           he.field_s.setTime(new Date(param1));
-          var3 = he.field_s.get(7);
-          var4 = he.field_s.get(5);
-          var5 = he.field_s.get(2);
-          var6 = he.field_s.get(1);
-          var7 = he.field_s.get(11);
-          var8 = he.field_s.get(12);
-          var9 = he.field_s.get(13);
+          int var3 = he.field_s.get(7);
+          int var4 = he.field_s.get(5);
+          int var5 = he.field_s.get(2);
+          int var6 = he.field_s.get(1);
+          int var7 = he.field_s.get(11);
+          int var8 = he.field_s.get(12);
+          int var9 = he.field_s.get(13);
           return r.field_A[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + bg.field_g[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;

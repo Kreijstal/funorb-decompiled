@@ -18,33 +18,26 @@ final class hn implements db {
     private int field_d;
     private int field_i;
     static int field_s;
-    static ed field_c;
+    static Sprite field_c;
     private int field_r;
     private int field_t;
     static byte[][] field_b;
 
     final static int a(ih param0, int param1) {
-        String var2 = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
             field_b = (byte[][]) null;
           }
-          var2 = " ";
-          var3 = param0.b(var2);
-          stackIn_3_0 = var3;
+          String var2 = " ";
+          int var3 = param0.b(var2);
+          int stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_6_0 = var2_ref;
-          stackIn_6_1 = new StringBuilder().append("hn.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2_ref;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("hn.A(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -56,52 +49,43 @@ final class hn implements db {
 
     public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
         hm stackIn_3_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        bo var11 = null;
         try {
           if (!(param3 instanceof bo)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (hm) (param3);
           }
-          var11 = (bo) (stackIn_3_0);
+          bo var11 = (bo) (stackIn_3_0);
           if (var11 != null) {
             param4 = param4 & var11.field_y;
           }
-          var7 = 5592405;
-          em.a(param0 + param3.field_k, param1 + param3.field_j, param3.field_g, param3.field_x, this.field_t);
+          int var7 = 5592405;
+          SoftwareRasterizer.a(param0 + param3.field_k, param1 + param3.field_j, param3.field_g, param3.field_x, this.field_t);
           if (param4) {
             var7 = 16777215;
           }
-          var8 = param3.field_k + param0 + this.field_e;
+          int var8 = param3.field_k + param0 + this.field_e;
           if (param2 > -14) {
             return;
           }
-          var9 = this.field_r + (param3.field_j + param1);
-          em.e(var8, var9, this.field_a, this.field_k, 5592405);
-          em.a(var8, var9, this.field_a, this.field_k, var7);
+          int var9 = this.field_r + (param3.field_j + param1);
+          SoftwareRasterizer.e(var8, var9, this.field_a, this.field_k, 5592405);
+          SoftwareRasterizer.a(var8, var9, this.field_a, this.field_k, var7);
           if (var11.field_z) {
-            em.d(var8, var9, var8 + this.field_a, this.field_k + var9, 1);
-            em.d(var8 + this.field_a, var9, var8, this.field_k + var9, 1);
+            SoftwareRasterizer.d(var8, var9, var8 + this.field_a, this.field_k + var9, 1);
+            SoftwareRasterizer.d(var8 + this.field_a, var9, var8, this.field_k + var9, 1);
           }
           if (this.field_o != null) {
-            var10 = this.field_e + (this.field_a + this.field_g);
+            int var10 = this.field_e + (this.field_a + this.field_g);
             this.field_o.a(param3.field_l, var10 + param0 + param3.field_k, this.field_m + param3.field_j + param1, param3.field_g - (var10 + this.field_g), -(this.field_g << 1) + param3.field_x, this.field_i, this.field_d, this.field_p, this.field_j, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_19_0 = var6;
-          stackIn_19_1 = new StringBuilder().append("hn.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_19_0 = var6;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("hn.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_20_2 = "null";
           } else {

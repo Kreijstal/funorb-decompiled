@@ -3,15 +3,15 @@
  */
 final class uk {
     static kk field_b;
-    ga field_g;
+    IntPoint field_g;
     static String field_a;
     static hh field_j;
-    ga field_e;
-    ga field_k;
-    ga field_c;
-    ga field_d;
-    ga field_i;
-    ga field_f;
+    IntPoint field_e;
+    IntPoint field_k;
+    IntPoint field_c;
+    IntPoint field_d;
+    IntPoint field_i;
+    IntPoint field_f;
     static boolean field_h;
 
     final static void b(int param0) {
@@ -47,7 +47,6 @@ final class uk {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, ia param5, int param6, int param7) {
         int stackIn_17_0 = 0;
-        int[] stackIn_19_0 = null;
         int stackIn_20_1 = 0;
         int stackIn_26_0 = 0;
         int stackIn_29_0 = 0;
@@ -55,141 +54,94 @@ final class uk {
         ui stackIn_40_0 = null;
         int stackIn_46_0 = 0;
         int stackIn_50_0 = 0;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
         String stackIn_56_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] var8 = null;
-        RuntimeException var8_ref = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        ui var21 = null;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
         int var28 = 0;
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
         int var32 = 0;
         int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int[] var41 = null;
-        ia var44 = null;
-        int[] var49 = null;
-        int[] var54 = null;
-        byte[] var60 = null;
-        int[] var61 = null;
-        int[] var62 = null;
-        int[] var63 = null;
-        int[] var64 = null;
-        int var13Lifetime1;
-        int var14Lifetime1;
-        int var15Lifetime1;
-        int var14Lifetime2;
-        int var15Lifetime2;
-        var40 = EscapeVector.field_A;
+        int var40 = EscapeVector.obfuscationControl;
         try {
           if (param1 != -16711760) {
             return;
           }
-          var44 = param5;
+          ia var44 = param5;
           if (var44.field_n != null &&
             var44.field_I > 1) {
-            var60 = var44.field_n;
-            g.a(var60, 0, ul.field_I, 114, 0);
+            byte[] var60 = var44.field_n;
+            NetworkGameClient.a(var60, 0, ul.field_I, 114, 0);
           } else {
             od.f(46);
           }
-          var54 = new int[param5.field_M];
-          var49 = var54;
-          var41 = var49;
-          var8 = var41;
-          var64 = new int[param5.field_M];
-          var62 = oi.field_L;
-          var63 = df.field_f;
-          var61 = oe.field_xb;
-          for (var13 = 0; param5.field_M > var13; var13++) {
-            var14 = param6 * var61[var13] + param2 * var62[var13] + param7 * var63[var13] >> 8;
+          int[] var54 = new int[param5.field_M];
+          int[] var49 = var54;
+          int[] var41 = var49;
+          int[] var8 = var41;
+          int[] var64 = new int[param5.field_M];
+          int[] var62 = oi.field_L;
+          int[] var63 = df.field_f;
+          int[] var61 = GameplaySession.field_xb;
+          for (int var13 = 0; param5.field_M > var13; var13++) {
+            int var14 = param6 * var61[var13] + param2 * var62[var13] + param7 * var63[var13] >> 8;
             if (0 > var14) {
               var14 = -var14;
             }
             if (var14 < 0) {
               stackIn_17_0 = 128;
+            } else if (128 <= var14) {
+              stackIn_17_0 = 256;
             } else {
-              if (128 <= var14) {
-                stackIn_17_0 = 256;
-              } else {
-                stackIn_17_0 = 128 + var14;
-              }
+              stackIn_17_0 = 128 + var14;
             }
-            var14Lifetime2 = stackIn_17_0;
-            var15 = param4 * var61[var13] + var62[var13] * param3 + param0 * var63[var13] >> 8;
-            stackIn_19_0 = pb.field_c;
-            if (var15 < 0) {
-              stackIn_20_1 = -var15;
-            } else {
-              stackIn_20_1 = var15;
-            }
-            var15Lifetime2 = stackIn_19_0[stackIn_20_1];
+            int var14Lifetime2 = stackIn_17_0;
+            int var15 = param4 * var61[var13] + var62[var13] * param3 + param0 * var63[var13] >> 8;
+            int[] stackIn_19_0 = pb.field_c;
+            stackIn_20_1 = (var15 < 0) ? (-var15) : (var15);
+            int var15Lifetime2 = stackIn_19_0[stackIn_20_1];
             var14Lifetime2 = (256 - var15Lifetime2) * var14Lifetime2 >>> 8;
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (var13Lifetime1 = 0; var13Lifetime1 < aj.field_d; var13Lifetime1++) {
-            var14Lifetime1 = bc.field_f[var13Lifetime1];
-            var15Lifetime1 = param5.field_e[var14Lifetime1];
-            var16 = param5.field_o[var14Lifetime1];
-            var17 = param5.field_f[var14Lifetime1];
+          for (int var13Lifetime1 = 0; var13Lifetime1 < aj.field_d; var13Lifetime1++) {
+            int var14Lifetime1 = bc.field_f[var13Lifetime1];
+            int var15Lifetime1 = param5.field_e[var14Lifetime1];
+            int var16 = param5.field_o[var14Lifetime1];
+            int var17 = param5.field_f[var14Lifetime1];
             if (param5.field_h[var14Lifetime1] >= oi.field_L.length) {
               stackIn_26_0 = -1;
             } else {
               stackIn_26_0 = param5.field_h[var14Lifetime1];
             }
-            var18 = stackIn_26_0;
+            int var18 = stackIn_26_0;
             if (param5.field_u[var14Lifetime1] >= oi.field_L.length) {
               stackIn_29_0 = -1;
             } else {
               stackIn_29_0 = param5.field_u[var14Lifetime1];
             }
-            var19 = stackIn_29_0;
+            int var19 = stackIn_29_0;
             if (param5.field_j[var14Lifetime1] < oi.field_L.length) {
               stackIn_32_0 = param5.field_j[var14Lifetime1];
             } else {
               stackIn_32_0 = -1;
             }
-            var20 = stackIn_32_0;
-            if (tj.field_y != null &&
+            int var20 = stackIn_32_0;
+            if (DialogueScreen.field_y != null &&
               param5.field_m != null &&
               var14Lifetime1 < param5.field_m.length &&
               param5.field_m[var14Lifetime1] != -1 &&
-              param5.field_m[var14Lifetime1] < tj.field_y.length) {
-              stackIn_40_0 = tj.field_y[param5.field_m[var14Lifetime1]];
+              param5.field_m[var14Lifetime1] < DialogueScreen.field_y.length) {
+              stackIn_40_0 = DialogueScreen.field_y[param5.field_m[var14Lifetime1]];
             } else {
               stackIn_40_0 = null;
             }
-            var21 = stackIn_40_0;
-            var22 = on.field_g[var15Lifetime1];
-            var23 = ni.field_D[var15Lifetime1];
-            var24 = on.field_g[var16];
-            var25 = ni.field_D[var16];
-            var26 = on.field_g[var17];
-            var27 = ni.field_D[var17];
+            ui var21 = stackIn_40_0;
+            int var22 = on.field_g[var15Lifetime1];
+            int var23 = ni.field_D[var15Lifetime1];
+            int var24 = on.field_g[var16];
+            int var25 = ni.field_D[var16];
+            int var26 = on.field_g[var17];
+            int var27 = ni.field_D[var17];
             if (var19 == var18 &&
               var20 == var19) {
               var28 = var54[var18];
@@ -217,13 +169,13 @@ final class uk {
               } else {
                 stackIn_46_0 = var21.field_c;
               }
-              var34 = stackIn_46_0;
-              var35 = var34 & 16711935;
-              var36 = var34 & 65280;
-              var37 = (var28 * var36 & 16711908) >>> 8 | var28 * var35 >>> 8 & 1090453759;
-              var38 = (16711930 & var29 * var36) >>> 8 | -1778450177 & var35 * var29 >>> 8;
+              int var34 = stackIn_46_0;
+              int var35 = var34 & 16711935;
+              int var36 = var34 & 65280;
+              int var37 = (var28 * var36 & 16711908) >>> 8 | var28 * var35 >>> 8 & 1090453759;
+              int var38 = (16711930 & var29 * var36) >>> 8 | -1778450177 & var35 * var29 >>> 8;
               var37 = var37 + 65793 * var31;
-              var39 = (16711870 & var30 * var36) >>> 8 | (var35 * var30 & -16711760) >>> 8;
+              int var39 = (16711870 & var30 * var36) >>> 8 | (var35 * var30 & -16711760) >>> 8;
               var38 = var38 + 65793 * var32;
               var39 = var39 + 65793 * var33;
               ei.a(var24, var23, var22, 255 & var39 >> 8, var38 >> 16, var27, var39 >> 16, var26, var25, -15733, 255 & var39, 255 & var37, var37 >> 16, var38 & 255, (var37 & 65293) >> 8, 255 & var38 >> 8);
@@ -231,10 +183,10 @@ final class uk {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8_ref = decompiledCaughtException;
-          stackIn_55_0 = var8_ref;
-          stackIn_55_1 = new StringBuilder().append("uk.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8_ref = decompiledCaughtException;
+          RuntimeException stackIn_55_0 = var8_ref;
+          StringBuilder stackIn_55_1 = new StringBuilder().append("uk.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_56_2 = "null";
           } else {
@@ -245,13 +197,13 @@ final class uk {
     }
 
     uk() {
-        this.field_e = new ga(0, 0);
-        this.field_g = new ga(0, 0);
-        this.field_c = new ga(0, 0);
-        this.field_d = new ga(0, 0);
-        this.field_k = new ga(0, 0);
-        this.field_f = new ga(0, 0);
-        this.field_i = new ga(0, 0);
+        this.field_e = new IntPoint(0, 0);
+        this.field_g = new IntPoint(0, 0);
+        this.field_c = new IntPoint(0, 0);
+        this.field_d = new IntPoint(0, 0);
+        this.field_k = new IntPoint(0, 0);
+        this.field_f = new IntPoint(0, 0);
+        this.field_i = new IntPoint(0, 0);
     }
 
     static {

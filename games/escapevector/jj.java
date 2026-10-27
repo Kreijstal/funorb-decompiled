@@ -32,22 +32,14 @@ final class jj {
     }
 
     final static void a(boolean param0) {
-        int var2 = 0;
-        int var1_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        mb var6 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
         try {
-          var1_int = jb.field_j.length;
+          int var1_int = jb.field_j.length;
           jb.field_i = new mb[var1_int];
-          for (var2 = 0; var2 < var1_int; var2++) {
-            var3 = jb.field_j[var2];
-            var4 = jb.field_y[var2];
-            var5 = jb.field_x[var2];
-            var6 = new mb(var3, var4, var5);
+          for (int var2 = 0; var2 < var1_int; var2++) {
+            int var3 = jb.field_j[var2];
+            int var4 = jb.field_y[var2];
+            int var5 = jb.field_x[var2];
+            mb var6 = new mb(var3, var4, var5);
             jb.field_i[var2] = var6;
           }
           if (param0) {
@@ -55,18 +47,18 @@ final class jj {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "jj.B(" + param0 + ')');
         }
     }
 
-    final static ed[] a(int param0, int param1) {
-        ed[] var3 = new ed[9];
-        ed[] var2 = var3;
+    final static Sprite[] a(int param0, int param1) {
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         var3[4] = of.a(param0, (byte) 104, 64);
         if (param1 <= 33) {
-          return (ed[]) null;
+          return (Sprite[]) null;
         }
         return var2;
     }

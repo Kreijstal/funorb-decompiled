@@ -18,35 +18,25 @@ final class ve implements db {
     static int field_k;
 
     public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
-        int var10 = 0;
         hm stackIn_4_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var11 = 0;
-        q var12 = null;
-        var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         try {
           if (!(param3 instanceof q)) {
             stackIn_4_0 = null;
           } else {
             stackIn_4_0 = (hm) (param3);
           }
-          var12 = (q) (stackIn_4_0);
+          q var12 = (q) (stackIn_4_0);
           if (var12 != null) {
           }
-          em.a(param3.field_k + param0, param1 + param3.field_j, param3.field_g, param3.field_x, this.field_b);
-          var7 = param3.field_g - 2 * var12.field_M;
-          var8 = param0 - (-param3.field_k - var12.field_M);
-          var9 = var12.field_J + (param1 + param3.field_j);
-          em.d(var8, var9, var8 + var7, var9, this.field_m);
-          for (var10 = -1 + var12.e((byte) 98); var10 >= 0; var10--) {
-            em.d(var8 + var7 * var12.b(var10, (byte) 97) / var12.k(-1), var9, this.field_j, this.field_c);
+          SoftwareRasterizer.a(param3.field_k + param0, param1 + param3.field_j, param3.field_g, param3.field_x, this.field_b);
+          int var7 = param3.field_g - 2 * var12.field_M;
+          int var8 = param0 - (-param3.field_k - var12.field_M);
+          int var9 = var12.field_J + (param1 + param3.field_j);
+          SoftwareRasterizer.d(var8, var9, var8 + var7, var9, this.field_m);
+          for (int var10 = -1 + var12.e((byte) 98); var10 >= 0; var10--) {
+            SoftwareRasterizer.d(var8 + var7 * var12.b(var10, (byte) 97) / var12.k(-1), var9, this.field_j, this.field_c);
           }
           if (param2 > -14) {
             this.field_j = -58;
@@ -57,10 +47,10 @@ final class ve implements db {
           this.field_e.c(var12.field_l, var8 + var7 / 2, var12.field_J + this.field_e.field_y + var9, this.field_i, this.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_15_0 = var6;
-          stackIn_15_1 = new StringBuilder().append("ve.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var6;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("ve.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -71,55 +61,45 @@ final class ve implements db {
     }
 
     final static p a(int param0, mf param1, mf param2, int[] param3) {
-        RuntimeException var4 = null;
-        String var5 = null;
-        int[] var6 = null;
-        Object stackIn_3_0 = null;
-        p stackIn_9_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (null == om.field_e) {
             kc.field_c = dn.a(0, vl.field_f, ej.field_g, param1, 1, param3, dn.field_C);
-            var6 = (int[]) null;
+            int[] var6 = (int[]) null;
             rb.field_k = dn.a(0, ok.field_b, c.field_q, param2, 0, (int[]) null, q.field_L);
             tk.field_b = new qh(param1, bm.field_e, sb.field_i, 1, od.field_n, param3);
             om.field_e = new p();
-            stackIn_3_0 = null;
+            Object stackIn_3_0 = null;
             return (p) (stackIn_3_0);
           }
           if (param0 != 1) {
-            var5 = (String) null;
+            String var5 = (String) null;
             ve.a((byte) 82, (String) null);
           }
           if (!om.field_e.a(23389)) {
             return null;
           }
-          stackIn_9_0 = om.field_e;
+          p stackIn_9_0 = om.field_e;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_13_0 = var4;
-          stackIn_13_1 = new StringBuilder().append("ve.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var4;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("ve.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
           if (param2 == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
+          StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
           if (param3 == null) {
             stackIn_20_2 = "null";
           } else {
@@ -143,15 +123,9 @@ final class ve implements db {
     }
 
     final static void a(byte param0, String param1) {
-        int stackIn_17_0 = 0;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
+        boolean stackIn_17_0 = false;
         String stackIn_44_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         try {
           if (-1 == bg.field_f &&
             oj.field_M == -1) {
@@ -166,37 +140,29 @@ final class ve implements db {
             decompiledFrameRemainder0 = (on.field_b == null);
           }
           if (decompiledFrameRemainder0) {
-            if (!un.field_u) {
-              if (ei.field_j >= ef.field_d) {
-                stackIn_17_0 = (ei.field_j < ef.field_d + qf.field_l) ? 1 : 0;
-              } else {
-                stackIn_17_0 = 0;
-              }
+            if (un.field_u) {
+              stackIn_17_0 = false;
+            } else if (ei.field_j >= ef.field_d) {
+              stackIn_17_0 = (ei.field_j < ef.field_d + qf.field_l);
             } else {
-              stackIn_17_0 = 0;
+              stackIn_17_0 = false;
             }
-            var2_int = stackIn_17_0;
+            boolean var2_int = stackIn_17_0;
             if (param1 == null) {
               ei.field_j = 0;
+            } else if (un.field_u) {
+              ei.field_j = ef.field_d;
+            } else if (!var2_int) {
+              ei.field_j = 0;
             } else {
-              if (un.field_u) {
-                ei.field_j = ef.field_d;
-              } else {
-                if (var2_int == 0) {
-                  ei.field_j = 0;
-                } else {
-                  ei.field_j = ef.field_d;
-                }
-              }
+              ei.field_j = ef.field_d;
             }
             ni.field_O = bg.field_f;
             ci.field_g = oj.field_M;
             if (param1 != null) {
               un.field_u = false;
-            } else {
-              if (var2_int != 0) {
-                un.field_u = true;
-              }
+            } else if (var2_int) {
+              un.field_u = true;
             }
           }
           on.field_b = param1;
@@ -219,10 +185,10 @@ final class ve implements db {
           oj.field_M = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_43_0 = var2;
-          stackIn_43_1 = new StringBuilder().append("ve.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_43_0 = var2;
+          StringBuilder stackIn_43_1 = new StringBuilder().append("ve.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_44_2 = "null";
           } else {

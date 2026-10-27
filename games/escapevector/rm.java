@@ -4,13 +4,13 @@
 import java.util.*;
 
 final class rm implements Iterator {
-    private fl field_b;
+    private DualLinkNode field_b;
     static boolean field_c;
     static String field_g;
-    static ed field_e;
+    static Sprite field_e;
     static String field_a;
     private vb field_f;
-    private fl field_d;
+    private DualLinkNode field_d;
 
     final static void a(java.awt.Component param0, byte param1) {
         if (param1 != 38) {
@@ -45,7 +45,7 @@ final class rm implements Iterator {
         if (null == this.field_d) {
           throw new IllegalStateException();
         }
-        this.field_d.d(103);
+        this.field_d.unlinkSecondary(103);
         this.field_d = null;
     }
 
@@ -53,7 +53,7 @@ final class rm implements Iterator {
         this.field_d = null;
         try {
           this.field_f = param0;
-          this.field_b = this.field_f.field_c.field_j;
+          this.field_b = this.field_f.field_c.secondaryNext;
           this.field_d = null;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -63,12 +63,12 @@ final class rm implements Iterator {
     public final Object next() {
         Object var1 = this.field_b;
         if (this.field_f.field_c != var1) {
-          this.field_b = ((fl) (var1)).field_j;
+          this.field_b = ((DualLinkNode) (var1)).secondaryNext;
         } else {
           this.field_b = null;
           var1 = null;
         }
-        this.field_d = (fl) (var1);
+        this.field_d = (DualLinkNode) (var1);
         return var1;
     }
 

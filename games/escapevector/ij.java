@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends hg {
+final class ij extends IntrusiveNode {
     boolean field_l;
     String[][] field_m;
     int field_h;
@@ -10,7 +10,7 @@ final class ij extends hg {
     int[][] field_o;
     int field_j;
     long[][] field_k;
-    static ed field_g;
+    static Sprite field_g;
     private static String field_z;
 
     ij() {

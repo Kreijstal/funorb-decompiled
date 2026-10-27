@@ -3,77 +3,60 @@
  */
 final class je {
     static int field_b;
-    static cn field_a;
+    static IntrusiveDeque field_a;
 
     public static void a(int param0) {
         int var1 = 86 / ((-10 - param0) / 57);
         field_a = null;
     }
 
-    final static ed b(int param0) {
-        byte[] var21 = null;
-        byte[] var20 = null;
-        byte[] var18 = null;
-        int var1 = 0;
-        int[] var13 = null;
-        int[] var11 = null;
-        int[] var5_ref_int__ = null;
-        int var6 = 0;
+    final static Sprite b(int param0) {
         Object var3 = null;
-        int[] var9 = null;
-        int var5 = 0;
-        int var7 = EscapeVector.field_A;
-        int[] var13Lifetime1;
-        int[] var11Lifetime1;
-        int[] var5_ref_int__Lifetime1;
+        int var7 = EscapeVector.obfuscationControl;
         Object var3Lifetime1;
-        int[] var9Lifetime1;
-        int var6Lifetime1;
-        int var5Lifetime1;
-        int var1Lifetime1;
         if (param0 > 44) {
-          var1 = qh.field_k[0] * bc.field_a[0];
-          var21 = qe.field_a[0];
+          int var1 = qh.field_k[0] * bc.field_a[0];
+          byte[] var21 = qe.field_a[0];
           if (bj.field_E[0]) {
-            var20 = hn.field_b[0];
-            var13 = new int[var1];
-            var11 = var13;
-            var5_ref_int__ = var11;
-            for (var6 = 0; var1 > var6; var6++) {
+            byte[] var20 = hn.field_b[0];
+            int[] var13 = new int[var1];
+            int[] var11 = var13;
+            int[] var5_ref_int__ = var11;
+            for (int var6 = 0; var1 > var6; var6++) {
               var5_ref_int__[var6] = lb.a(ae.a(var20[var6] << 24, -16777216), qk.field_f[ae.a((int) var21[var6], 255)]);
             }
             var3 = new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var13);
           } else {
-            var9 = new int[var1];
-            for (var5 = 0; var1 > var5; var5++) {
+            int[] var9 = new int[var1];
+            for (int var5 = 0; var1 > var5; var5++) {
               var9[var5] = qk.field_f[ae.a((int) var21[var5], 255)];
             }
-            var3 = new ed(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var9);
+            var3 = new Sprite(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var9);
           }
           of.a(false);
-          return (ed) (var3);
+          return (Sprite) (var3);
         }
         je.a(24);
-        var1Lifetime1 = qh.field_k[0] * bc.field_a[0];
+        int var1Lifetime1 = qh.field_k[0] * bc.field_a[0];
         byte[] var19 = qe.field_a[0];
         if (bj.field_E[0]) {
-          var18 = hn.field_b[0];
-          var13Lifetime1 = new int[var1Lifetime1];
-          var11Lifetime1 = var13Lifetime1;
-          var5_ref_int__Lifetime1 = var11Lifetime1;
-          for (var6Lifetime1 = 0; var1Lifetime1 > var6Lifetime1; var6Lifetime1++) {
+          byte[] var18 = hn.field_b[0];
+          int[] var13Lifetime1 = new int[var1Lifetime1];
+          int[] var11Lifetime1 = var13Lifetime1;
+          int[] var5_ref_int__Lifetime1 = var11Lifetime1;
+          for (int var6Lifetime1 = 0; var1Lifetime1 > var6Lifetime1; var6Lifetime1++) {
             var5_ref_int__Lifetime1[var6Lifetime1] = lb.a(ae.a(var18[var6Lifetime1] << 24, -16777216), qk.field_f[ae.a((int) var19[var6Lifetime1], 255)]);
           }
           var3Lifetime1 = new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var13Lifetime1);
         } else {
-          var9Lifetime1 = new int[var1Lifetime1];
-          for (var5Lifetime1 = 0; var1Lifetime1 > var5Lifetime1; var5Lifetime1++) {
+          int[] var9Lifetime1 = new int[var1Lifetime1];
+          for (int var5Lifetime1 = 0; var1Lifetime1 > var5Lifetime1; var5Lifetime1++) {
             var9Lifetime1[var5Lifetime1] = qk.field_f[ae.a((int) var19[var5Lifetime1], 255)];
           }
-          var3Lifetime1 = new ed(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var9Lifetime1);
+          var3Lifetime1 = new Sprite(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var9Lifetime1);
         }
         of.a(false);
-        return (ed) (var3Lifetime1);
+        return (Sprite) (var3Lifetime1);
     }
 
     final static int a(boolean param0, int param1) {
@@ -117,6 +100,6 @@ final class je {
     }
 
     static {
-        field_a = new cn();
+        field_a = new IntrusiveDeque();
     }
 }

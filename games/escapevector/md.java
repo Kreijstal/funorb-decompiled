@@ -33,23 +33,17 @@ final class md extends r {
 
     final static void a(java.applet.Applet param0, byte param1, String param2) {
         try {
-          java.net.URL var3 = null;
-          RuntimeException var3_ref = null;
-          RuntimeException stackIn_8_0 = null;
-          StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
-          StringBuilder stackIn_11_1 = null;
           String stackIn_12_2 = null;
           Throwable decompiledCaughtException = null;
-          Exception var3_ref2 = null;
           try {
             try {
-              var3 = new java.net.URL(param0.getCodeBase(), param2);
+              java.net.URL var3 = new java.net.URL(param0.getCodeBase(), param2);
               var3 = sh.a((byte) 95, param0, var3);
               th.a(true, true, param0, var3.toString());
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var3_ref2 = (Exception) (Object) decompiledCaughtException;
+              Exception var3_ref2 = (Exception) (Object) decompiledCaughtException;
               var3_ref2.printStackTrace();
             }
             if (param1 < -91) {
@@ -59,15 +53,15 @@ final class md extends r {
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = var3_ref;
-            stackIn_8_1 = new StringBuilder().append("md.B(");
+            RuntimeException var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_8_0 = var3_ref;
+            StringBuilder stackIn_8_1 = new StringBuilder().append("md.B(");
             if (param0 == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";
             }
-            stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',');
+            StringBuilder stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',');
             if (param2 == null) {
               stackIn_12_2 = "null";
             } else {
@@ -114,7 +108,7 @@ final class md extends r {
           this.field_C.a(this.field_j + param0, (byte) 95, param2, this.field_k + param3);
           return;
         }
-        ed var6 = new ed(this.field_C.field_g, this.field_C.field_x);
+        Sprite var6 = new Sprite(this.field_C.field_g, this.field_C.field_x);
         eo.a(var6, (byte) -105);
         this.field_C.a(0, (byte) 91, param2, 0);
         if (param1 >= 85) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class v {
-    static ed[] field_a;
+    static Sprite[] field_a;
     static int[] field_b;
 
     final static void a(int param0, int param1) {
@@ -17,11 +17,6 @@ final class v {
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
-          java.net.URL var2 = null;
-          Exception var2_ref = null;
-          RuntimeException var2_ref2 = null;
-          RuntimeException stackIn_8_0 = null;
-          StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
@@ -29,20 +24,20 @@ final class v {
               if (param1 >= -29) {
                 v.a(-34, 33);
               }
-              var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
+              java.net.URL var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
               param0.getAppletContext().showDocument(sh.a((byte) 29, param0, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
+              Exception var2_ref = (Exception) (Object) decompiledCaughtException;
               var2_ref.printStackTrace();
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = var2_ref2;
-            stackIn_8_1 = new StringBuilder().append("v.C(");
+            RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_8_0 = var2_ref2;
+            StringBuilder stackIn_8_1 = new StringBuilder().append("v.C(");
             if (param0 == null) {
               stackIn_9_2 = "null";
             } else {

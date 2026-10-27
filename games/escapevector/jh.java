@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jh extends hg {
+final class jh extends IntrusiveNode {
     boolean field_h;
     boolean field_g;
     static hh field_k;

@@ -19,15 +19,11 @@ final class fb extends com.ms.dll.Callback {
     }
 
     final void a(java.awt.Component param0, boolean param1, byte param2) {
-        int var5 = 0;
         Object var6 = null;
         Throwable var8 = null;
-        com.ms.awt.WComponentPeer var9 = null;
-        boolean stackIn_20_1 = false;
-        boolean stackIn_26_1 = false;
         Throwable decompiledCaughtException = null;
-        var9 = (com.ms.awt.WComponentPeer) null;
-        var5 = var9.getTopHwnd();
+        com.ms.awt.WComponentPeer var9 = (com.ms.awt.WComponentPeer) null;
+        int var5 = var9.getTopHwnd();
         if (param2 < 84) {
           return;
         }
@@ -41,7 +37,7 @@ final class fb extends com.ms.dll.Callback {
           this.field_a = true;
         }
         if (this.field_c == var5) {
-          stackIn_26_1 = (param1);
+          boolean stackIn_26_1 = (param1);
           this.field_d = stackIn_26_1;
         } else {
           if (this.field_c != 0) {
@@ -57,7 +53,7 @@ final class fb extends com.ms.dll.Callback {
             this.field_c = var5;
             this.field_e = com.ms.win32.User32.SetWindowLong(this.field_c, -4, this);
           }
-          stackIn_20_1 = (param1);
+          boolean stackIn_20_1 = (param1);
           this.field_d = stackIn_20_1;
         }
         com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
@@ -67,10 +63,8 @@ final class fb extends com.ms.dll.Callback {
         int stackIn_7_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
-        int var5;
-        int var5Lifetime1;
         if (param0 != this.field_c) {
-          var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
+          int var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
           return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
         }
         if (32 != param1) {
@@ -90,7 +84,7 @@ final class fb extends com.ms.dll.Callback {
           com.ms.win32.User32.SetCursor(stackIn_7_0);
           return 0;
         }
-        var5Lifetime1 = param3 & 65535;
+        int var5Lifetime1 = param3 & 65535;
         if (var5Lifetime1 == 1) {
           if (!this.field_d) {
             stackIn_16_0 = 0;

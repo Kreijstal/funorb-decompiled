@@ -6,8 +6,7 @@ final class lc {
     int[] field_b;
 
     final void a() {
-        int var1 = 0;
-        for (var1 = 0; var1 < this.field_b.length; var1++) {
+        for (int var1 = 0; var1 < this.field_b.length; var1++) {
           this.field_b[var1] = 0;
         }
     }

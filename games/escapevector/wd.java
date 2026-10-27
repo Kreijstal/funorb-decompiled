@@ -9,17 +9,8 @@ final class wd extends jl {
     static String field_q;
 
     private final void a(byte param0, String[] param1, int param2, int param3, int param4) {
-        int var7 = 0;
-        String[] var6 = null;
-        String var8 = null;
-        int var9 = 0;
-        String[] var10 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6_ref = null;
-        var9 = EscapeVector.field_A;
+        int var9 = EscapeVector.obfuscationControl;
         try {
           if (this.field_h == null) {
             return;
@@ -33,10 +24,10 @@ final class wd extends jl {
           if (param0 != -95) {
             return;
           }
-          var10 = param1;
-          var6 = var10;
-          for (var7 = 0; var7 < var10.length; var7++) {
-            var8 = var10[var7];
+          String[] var10 = param1;
+          String[] var6 = var10;
+          for (int var7 = 0; var7 < var10.length; var7++) {
+            String var8 = var10[var7];
             if (var8 != null &&
               0 < var8.length()) {
               if (param4 < 0) {
@@ -50,10 +41,10 @@ final class wd extends jl {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_24_0 = var6_ref;
-          stackIn_24_1 = new StringBuilder().append("wd.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6_ref = decompiledCaughtException;
+          RuntimeException stackIn_24_0 = var6_ref;
+          StringBuilder stackIn_24_1 = new StringBuilder().append("wd.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_25_2 = "null";
           } else {
@@ -87,18 +78,8 @@ final class wd extends jl {
     }
 
     private final void a(int param0, tc[] param1, byte param2) {
-        int var7 = 0;
-        int var4_int = 0;
-        tc[] var5 = null;
-        int var6 = 0;
-        tc var8 = null;
-        int var9 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var9 = EscapeVector.field_A;
+        int var9 = EscapeVector.obfuscationControl;
         try {
           if (this.field_h == null) {
             return;
@@ -109,12 +90,12 @@ final class wd extends jl {
           if (0 == param1.length) {
             return;
           }
-          var4_int = this.field_h.field_r;
+          int var4_int = this.field_h.field_r;
           param0 = param0 - var4_int;
-          var5 = param1;
-          var6 = 101 / ((param2 + 57) / 55);
-          for (var7 = 0; var5.length > var7; var7++) {
-            var8 = var5[var7];
+          tc[] var5 = param1;
+          int var6 = 101 / ((param2 + 57) / 55);
+          for (int var7 = 0; var5.length > var7; var7++) {
+            tc var8 = var5[var7];
             if (var8 != null) {
               var8.a(103, this.field_d - var8.d(11384), param0);
             }
@@ -122,10 +103,10 @@ final class wd extends jl {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_18_0 = var4;
-          stackIn_18_1 = new StringBuilder().append("wd.E(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var4;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("wd.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_19_2 = "null";
           } else {
@@ -147,42 +128,31 @@ final class wd extends jl {
     }
 
     private final int a(tc[] param0, int param1) {
-        int var4 = 0;
-        int var3_int = 0;
-        tc var5 = null;
-        int var6 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         try {
           if (param0 == null) {
-            stackIn_3_0 = 0;
+            int stackIn_3_0 = 0;
             return stackIn_3_0;
           }
           if (param0.length == 0) {
-            stackIn_7_0 = 0;
+            int stackIn_7_0 = 0;
             return stackIn_7_0;
           }
-          var3_int = param1;
-          for (var4 = 0; var4 < param0.length; var4++) {
-            var5 = param0[var4];
+          int var3_int = param1;
+          for (int var4 = 0; var4 < param0.length; var4++) {
+            tc var5 = param0[var4];
             if (var5 != null) {
               var3_int = t.a(var5.d(11384), var3_int, 41);
             }
           }
-          stackIn_16_0 = var3_int;
+          int stackIn_16_0 = var3_int;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_19_0 = var3;
-          stackIn_19_1 = new StringBuilder().append("wd.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_19_0 = var3;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("wd.A(");
           if (param0 == null) {
             stackIn_20_2 = "null";
           } else {

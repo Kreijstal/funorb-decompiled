@@ -20,28 +20,26 @@ final class lm {
 
     final static void a(byte param0) {
         try {
-          Exception var1 = null;
-          int decompiledRegionSelector0 = 0;
-          Throwable decompiledCaughtException = null;
+          boolean decompiledRegionSelector0 = false;
           if (bd.field_h != null) {
             try {
               bd.field_h.a(0, 0L);
-              bd.field_h.a(true, om.field_g.field_m, om.field_g.field_g, 24);
-              decompiledRegionSelector0 = 0;
+              bd.field_h.a(true, om.field_g.position, om.field_g.payload, 24);
+              decompiledRegionSelector0 = false;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              decompiledRegionSelector0 = 1;
+              Throwable decompiledCaughtException = decompiledCaughtParameter0;
+              Exception var1 = (Exception) (Object) decompiledCaughtException;
+              decompiledRegionSelector0 = true;
             }
-            if (decompiledRegionSelector0 == 0) {
-              om.field_g.field_m = om.field_g.field_m + 24;
+            if (!decompiledRegionSelector0) {
+              om.field_g.position = om.field_g.position + 24;
               if (param0 > -44) {
                 lm.a((byte) -105);
               }
               return;
             }
           }
-          om.field_g.field_m = om.field_g.field_m + 24;
+          om.field_g.position = om.field_g.position + 24;
           if (param0 <= -44) {
             return;
           }

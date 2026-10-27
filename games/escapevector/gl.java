@@ -11,18 +11,12 @@ final class gl extends jl {
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
-          RuntimeException stackIn_8_0 = null;
-          StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
-          Throwable var2 = null;
-          RuntimeException var2_ref = null;
-          String var3 = null;
-          java.net.URL var4 = null;
           try {
             try {
-              var4 = param1.getCodeBase();
-              var3 = sh.a((byte) 104, param1, var4).getFile();
+              java.net.URL var4 = param1.getCodeBase();
+              String var3 = sh.a((byte) 104, param1, var4).getFile();
               sd.a((byte) 119, param1, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
               sd.a((byte) 107, param1, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
               if (param0 != 15) {
@@ -34,14 +28,14 @@ final class gl extends jl {
               sd.a((byte) 123, param1, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = decompiledCaughtException;
+              Throwable var2 = decompiledCaughtException;
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = var2_ref;
-            stackIn_8_1 = new StringBuilder().append("gl.B(").append(param0).append(',');
+            RuntimeException var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_8_0 = var2_ref;
+            StringBuilder stackIn_8_1 = new StringBuilder().append("gl.B(").append(param0).append(',');
             if (param1 == null) {
               stackIn_9_2 = "null";
             } else {
@@ -108,17 +102,8 @@ final class gl extends jl {
     }
 
     private final void a(int param0, int param1, int param2, String[] param3, int param4) {
-        int var7 = 0;
-        String[] var6 = null;
-        String var8 = null;
-        int var9 = 0;
-        String[] var10 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6_ref = null;
-        var9 = EscapeVector.field_A;
+        int var9 = EscapeVector.obfuscationControl;
         try {
           if (this.field_h == null) {
             return;
@@ -132,10 +117,10 @@ final class gl extends jl {
           if (param0 != -1) {
             gl.b(true);
           }
-          var10 = param3;
-          var6 = var10;
-          for (var7 = 0; var7 < var10.length; var7++) {
-            var8 = var10[var7];
+          String[] var10 = param3;
+          String[] var6 = var10;
+          for (int var7 = 0; var7 < var10.length; var7++) {
+            String var8 = var10[var7];
             if (var8 != null &&
               var8.length() > 0) {
               if (0 > param2) {
@@ -149,10 +134,10 @@ final class gl extends jl {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_21_0 = var6_ref;
-          stackIn_21_1 = new StringBuilder().append("gl.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6_ref = decompiledCaughtException;
+          RuntimeException stackIn_21_0 = var6_ref;
+          StringBuilder stackIn_21_1 = new StringBuilder().append("gl.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_22_2 = "null";
           } else {

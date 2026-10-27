@@ -21,63 +21,49 @@ final class vi {
     }
 
     final static void a(gi param0, int param1) {
-        int dupTemp$3 = 0;
-        int dupTemp$0 = 0;
-        int var3 = 0;
-        int incrementValue$2 = 0;
-        int fieldTemp$1 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var2_intLifetime1;
-        int var2_intLifetime2;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         try {
           if (param1 != 3) {
             return;
           }
-          for (var2_int = 0; var2_int < 3; var2_int++) {
+          for (int var2_int = 0; var2_int < 3; var2_int++) {
             mf.field_l[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < hf.field_b; var2_intLifetime1++) {
+          for (int var2_intLifetime1 = 0; var2_intLifetime1 < hf.field_b; var2_intLifetime1++) {
             if (qm.field_d[var2_intLifetime1].field_a == param0.field_a) {
-              dupTemp$3 = qm.field_d[var2_intLifetime1].b(param1 ^ 83);
+              int dupTemp$3 = qm.field_d[var2_intLifetime1].b(param1 ^ 83);
               mf.field_l[dupTemp$3] = mf.field_l[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param0.b(108);
+          int dupTemp$0 = param0.b(108);
           mf.field_l[dupTemp$0] = mf.field_l[dupTemp$0] + 1;
-          var2_intLifetime2 = 0;
-          for (var3 = 0; hf.field_b > var3; var3++) {
+          int var2_intLifetime2 = 0;
+          for (int var3 = 0; hf.field_b > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (qm.field_d[var3].field_a == param0.field_a) {
-              var4 = qm.field_d[var3].b(47);
+              int var4 = qm.field_d[var3].b(47);
               if (mf.field_l[var4] > mn.field_k) {
                 mf.field_l[var4] = mf.field_l[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
             if (decompiledFrameRemainder0) {
-              incrementValue$2 = var2_intLifetime2;
+              int incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
               qm.field_d[incrementValue$2] = qm.field_d[var3];
             }
           }
           hf.field_b = var2_intLifetime2;
-          fieldTemp$1 = hf.field_b;
+          int fieldTemp$1 = hf.field_b;
           hf.field_b = hf.field_b + 1;
           qm.field_d[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_23_0 = var2;
-          stackIn_23_1 = new StringBuilder().append("vi.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_23_0 = var2;
+          StringBuilder stackIn_23_1 = new StringBuilder().append("vi.A(");
           if (param0 == null) {
             stackIn_24_2 = "null";
           } else {
@@ -88,29 +74,18 @@ final class vi {
     }
 
     final static void a(int param0, String param1, vl param2, wl param3, boolean param4) {
-        int var7 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        var9 = EscapeVector.field_A;
+        int var9 = EscapeVector.obfuscationControl;
         try {
           if (param4) {
             vi.a(-80);
           }
-          var5_int = 0;
-          var6 = -1;
-          for (var7 = 1; param1.length() > var7; var7++) {
-            var8 = param1.charAt(var7);
+          int var5_int = 0;
+          int var6 = -1;
+          for (int var7 = 1; param1.length() > var7; var7++) {
+            int var8 = param1.charAt(var7);
             if (var8 == 60) {
               var6 = (var5_int >> 8) + param2.field_b[0] + param3.b(param1.substring(0, var7));
             }
@@ -128,22 +103,22 @@ final class vi {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_22_0 = var5;
-          stackIn_22_1 = new StringBuilder().append("vi.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_22_0 = var5;
+          StringBuilder stackIn_22_1 = new StringBuilder().append("vi.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
+          StringBuilder stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
           if (param2 == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',');
+          StringBuilder stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',');
           if (param3 == null) {
             stackIn_29_2 = "null";
           } else {

@@ -8,7 +8,7 @@ abstract class fj extends vg {
     static String field_bb;
     private int field_ib;
     private int field_gb;
-    private ka field_Z;
+    private TerrainMaskSupport field_Z;
     private int field_ab;
     static ce field_eb;
     private int field_fb;
@@ -16,21 +16,15 @@ abstract class fj extends vg {
     private hm field_hb;
 
     void a(hm param0, int param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           this.field_hb = param0;
-          if (mc.field_c != this.field_Z) {
-            if (this.field_Z != t.field_a) {
-              this.field_ab = 0;
-              this.field_Z = t.field_a;
-            }
-          } else {
+          if (mc.field_c == this.field_Z) {
             this.a(false, this.field_ib, 12 + this.field_hb.field_g, this.field_hb.field_x + this.field_fb + 12);
             this.field_ab = 0;
+          } else if (this.field_Z != t.field_a) {
+            this.field_ab = 0;
+            this.field_Z = t.field_a;
           }
           if (param1 == 30) {
             return;
@@ -38,10 +32,10 @@ abstract class fj extends vg {
           this.a((byte) -72);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("fj.D(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var3;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("fj.D(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -102,10 +96,7 @@ abstract class fj extends vg {
     }
 
     boolean j(int param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         if (param0 == -13907) {
           if (null == this.field_Z) {
             return super.j(-13907);
@@ -114,7 +105,7 @@ abstract class fj extends vg {
             if (ff.field_b != this.field_Z) {
               return super.j(-13907);
             }
-            fieldTemp$0 = this.field_ab + 1;
+            int fieldTemp$0 = this.field_ab + 1;
             this.field_ab = this.field_ab + 1;
             if (fieldTemp$0 != this.field_db) {
               this.field_cb.field_F = (this.field_ab << 8) / this.field_db;
@@ -124,7 +115,7 @@ abstract class fj extends vg {
             this.field_cb.field_F = 256;
             return super.j(-13907);
           }
-          fieldTemp$1 = this.field_ab + 1;
+          int fieldTemp$1 = this.field_ab + 1;
           this.field_ab = this.field_ab + 1;
           if (this.field_gb == fieldTemp$1) {
             this.field_Z = mc.field_c;
@@ -144,7 +135,7 @@ abstract class fj extends vg {
           if (ff.field_b != this.field_Z) {
             return super.j(-13907);
           }
-          fieldTemp$2 = this.field_ab + 1;
+          int fieldTemp$2 = this.field_ab + 1;
           this.field_ab = this.field_ab + 1;
           if (fieldTemp$2 != this.field_db) {
             this.field_cb.field_F = (this.field_ab << 8) / this.field_db;
@@ -168,14 +159,10 @@ abstract class fj extends vg {
     }
 
     private final void b(byte param0, hm param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_cb != null) {
-            this.field_cb.c((byte) -62);
+            this.field_cb.unlink((byte) -62);
           }
           if (param1 != null) {
             param1.a(param1.field_g, 6 + this.field_fb, 6, true, param1.field_x);
@@ -191,10 +178,10 @@ abstract class fj extends vg {
           this.field_gb = 65;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_11_0 = var3;
-          stackIn_11_1 = new StringBuilder().append("fj.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var3;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("fj.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_12_2 = "null";
           } else {
@@ -205,17 +192,13 @@ abstract class fj extends vg {
     }
 
     boolean a(hm param0, char param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1, param2, 43)) {
             return true;
           }
           if (param3 <= 0) {
-            this.field_Z = (ka) null;
+            this.field_Z = (TerrainMaskSupport) null;
           }
           if (this.field_cb == null) {
             return false;
@@ -228,10 +211,10 @@ abstract class fj extends vg {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_17_0 = var5;
-          stackIn_17_1 = new StringBuilder().append("fj.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_17_0 = var5;
+          StringBuilder stackIn_17_1 = new StringBuilder().append("fj.G(");
           if (param0 == null) {
             stackIn_18_2 = "null";
           } else {

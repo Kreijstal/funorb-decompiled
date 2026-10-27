@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fl extends hg {
-    fl field_j;
-    long field_p;
+class DualLinkNode extends IntrusiveNode {
+    DualLinkNode secondaryNext;
+    long secondaryKey;
     static String field_h;
     static String field_l;
-    fl field_i;
+    DualLinkNode secondaryPrevious;
     static int field_o;
     static int[] field_m;
     static int[] field_k;
     static uc field_n;
     static String field_g;
 
-    final void d(int param0) {
-        int var2 = 125 / ((param0 - 31) / 57);
-        if (this.field_i == null) {
+    final void unlinkSecondary(int guard) {
+        int var2 = 125 / ((guard - 31) / 57);
+        if (this.secondaryPrevious == null) {
           return;
         }
-        this.field_i.field_j = this.field_j;
-        this.field_j.field_i = this.field_i;
-        this.field_i = null;
-        this.field_j = null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryPrevious = null;
+        this.secondaryNext = null;
     }
 
     final static String e(int param0) {
@@ -38,29 +38,24 @@ class fl extends hg {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        boolean stackIn_8_0 = false;
         if (param2 != -1) {
           field_k = (int[]) null;
         }
-        stackIn_8_0 = (param0 >= param4) && (param5 + param4 > param0) && (param6 >= param3) && (param3 + param1 > param6);
+        boolean stackIn_8_0 = (param0 >= param4) && (param5 + param4 > param0) && (param6 >= param3) && (param3 + param1 > param6);
         return stackIn_8_0;
     }
 
     final static void a(int param0, int param1) {
-        int var5 = 0;
-        ed var6 = null;
-        ed var7 = null;
-        fn var8 = null;
-        int var9 = EscapeVector.field_A;
-        int var2_int = 4 == param1 ? 1 : 0;
-        ed[] var3 = mb.field_f;
-        if (var2_int != 0) {
+        int var9 = EscapeVector.obfuscationControl;
+        boolean var2_int = (4 == param1);
+        Sprite[] var3 = mb.field_f;
+        if (var2_int) {
           var3 = ob.field_b;
         }
         if (var3 == null) {
           return;
         }
-        ed[] var4 = jm.field_K;
+        Sprite[] var4 = jm.field_K;
         if (param0 != -1) {
           field_h = (String) null;
         }
@@ -68,23 +63,23 @@ class fl extends hg {
           return;
         }
         try {
-          if (null == bf.field_M) {
-            bf.field_M = new rk[var3.length];
+          if (null == AccountRegistrationPanel.field_M) {
+            AccountRegistrationPanel.field_M = new rk[var3.length];
           }
-          for (var5 = 0; var5 < var3.length; var5++) {
-            var6 = var3[var5];
-            var7 = var4[var5];
-            var8 = new fn(rn.field_b[var5], rn.field_f[var5]);
-            bf.field_M[var5] = new rk(var6, var7, var8);
+          for (int var5 = 0; var5 < var3.length; var5++) {
+            Sprite var6 = var3[var5];
+            Sprite var7 = var4[var5];
+            fn var8 = new fn(rn.field_b[var5], rn.field_f[var5]);
+            AccountRegistrationPanel.field_M[var5] = new rk(var6, var7, var8);
           }
-          ka.a(105);
+          TerrainMaskSupport.a(105);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "fl.CA(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void a(String param0, lk param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        ga.field_d = param1;
+        IntPoint.field_d = param1;
         tl.field_l = param7;
         kl.field_n = param8;
         if (param3 != -22183) {
@@ -104,7 +99,7 @@ class fl extends hg {
         }
     }
 
-    protected fl() {
+    protected DualLinkNode() {
     }
 
     public static void a(byte param0) {

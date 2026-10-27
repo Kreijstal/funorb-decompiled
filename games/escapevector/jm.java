@@ -7,19 +7,19 @@ final class jm extends hm {
     static int field_L;
     private int field_z;
     private int field_C;
-    private ed[] field_J;
+    private Sprite[] field_J;
     static String field_M;
     int field_B;
-    private ed field_N;
+    private Sprite field_N;
     private int field_y;
-    static ed[] field_K;
+    static Sprite[] field_K;
     private int field_A;
     static mf field_I;
     private int field_H;
     boolean field_G;
-    private ed field_D;
+    private Sprite field_D;
     private int field_F;
-    private ed field_E;
+    private Sprite field_E;
 
     jm(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
@@ -40,35 +40,31 @@ final class jm extends hm {
         this.field_A = param0;
         this.field_H = param1;
         if (param2 >= -124) {
-          this.field_E = (ed) null;
+          this.field_E = (Sprite) null;
         }
         this.field_F = (16711422 & param0) >> 1;
         this.k(-27800);
     }
 
-    private final ed e(byte param0) {
-        int var4 = 0;
-        int var5 = 0;
-        double var6 = 0.0;
-        int var8 = 0;
-        int var9 = EscapeVector.field_A;
+    private final Sprite e(byte param0) {
+        int var9 = EscapeVector.obfuscationControl;
         int var2 = this.field_x >> 1;
-        ed var3 = new ed(var2, this.field_x);
+        Sprite var3 = new Sprite(var2, this.field_x);
         eo.a(var3, (byte) -8);
-        for (var4 = 0; var4 < this.field_x; var4++) {
-          for (var5 = 0; var2 > var5; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_x));
-            var8 = 1;
+        for (int var4 = 0; var4 < this.field_x; var4++) {
+          for (int var5 = 0; var2 > var5; var5++) {
+            double var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_x));
+            int var8 = 1;
             if (var6 < 1.0) {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(var6 >= 1.0) ? (int)(var6 * 255.0) : 255;
             }
-            em.b(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.b(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         dl.a((byte) 127);
         if (param0 >= -112) {
-          return (ed) null;
+          return (Sprite) null;
         }
         return var3;
     }
@@ -83,12 +79,7 @@ final class jm extends hm {
     }
 
     final void a(int param0, int param1, int param2, hm param3) {
-        ed discarded$1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
         try {
           if (this.field_G) {
             this.field_C = this.field_C + 1;
@@ -97,14 +88,14 @@ final class jm extends hm {
             }
           }
           if (param0 != -14472) {
-            discarded$1 = this.e((byte) 105);
+            Sprite discarded$1 = this.e((byte) 105);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("jm.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var5;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("jm.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -114,28 +105,21 @@ final class jm extends hm {
         }
     }
 
-    private final void a(int param0, int param1, ed param2, int param3) {
-        int var6 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
+    private final void a(int param0, int param1, Sprite param2, int param3) {
         String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
         int var7 = 0;
-        int var8 = 0;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
           if (param0 > -23) {
-            field_K = (ed[]) null;
+            field_K = (Sprite[]) null;
           }
-          var5_int = this.field_g + param3;
-          rd.a(var5_int - this.field_N.field_s, param3 + this.field_N.field_s, param1 + this.field_x, 19807, param1);
-          for (var6 = -this.field_C + param3; var6 < var5_int; var6 = var6 + param2.field_s) {
+          int var5_int = this.field_g + param3;
+          rd.a(var5_int - this.field_N.width, param3 + this.field_N.width, param1 + this.field_x, 19807, param1);
+          for (int var6 = -this.field_C + param3; var6 < var5_int; var6 = var6 + param2.width) {
             param2.e(var6, param1);
           }
           dl.a((byte) -125);
-          if (param3 + this.field_N.field_s >= em.field_a) {
+          if (param3 + this.field_N.width >= SoftwareRasterizer.clipLeft) {
             eo.a(this.field_E, (byte) -35);
             param2.e(-this.field_C, 0);
             param2.e(-this.field_C + this.field_z * 2, 0);
@@ -143,23 +127,23 @@ final class jm extends hm {
             dl.a((byte) 124);
             this.field_E.e(param3, param1);
           }
-          if (em.field_b >= -this.field_N.field_s + var5_int) {
+          if (SoftwareRasterizer.clipRight >= -this.field_N.width + var5_int) {
             eo.a(this.field_E, (byte) -29);
-            for (var7 = this.field_C + (this.field_g - this.field_N.field_s); 2 * this.field_z < var7; var7 = var7 - this.field_z * 2) {
+            for (var7 = this.field_C + (this.field_g - this.field_N.width); 2 * this.field_z < var7; var7 = var7 - this.field_z * 2) {
             }
             param2.e(-var7, 0);
             param2.e(2 * this.field_z - var7, 0);
             this.field_N.f(0, 0);
             dl.a((byte) -65);
-            this.field_E.e(var5_int - this.field_N.field_s, param1);
+            this.field_E.e(var5_int - this.field_N.width, param1);
             return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_17_0 = var5;
-          stackIn_17_1 = new StringBuilder().append("jm.C(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_17_0 = var5;
+          StringBuilder stackIn_17_1 = new StringBuilder().append("jm.C(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_18_2 = "null";
           } else {
@@ -170,33 +154,25 @@ final class jm extends hm {
     }
 
     private final void k(int param0) {
-        this.field_J = new ed[]{this.a(true, this.field_H, this.field_A), this.a(true, this.field_y, this.field_F)};
+        this.field_J = new Sprite[]{this.a(true, this.field_H, this.field_A), this.a(true, this.field_y, this.field_F)};
         this.field_N = this.e((byte) -122);
         this.field_D = this.field_N.d();
         if (param0 != -27800) {
           return;
         }
-        this.field_E = new ed(this.field_x >> 1, this.field_x);
+        this.field_E = new Sprite(this.field_x >> 1, this.field_x);
     }
 
-    final static void a(int param0, n param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
-          int var4 = 0;
-          byte[] var2 = null;
           int var3_int = 0;
-          int var5 = 0;
-          byte[] var6 = null;
-          RuntimeException stackIn_18_0 = null;
-          StringBuilder stackIn_18_1 = null;
           String stackIn_19_2 = null;
-          int decompiledRegionSelector0 = 0;
+          boolean decompiledRegionSelector0 = false;
           Throwable decompiledCaughtException = null;
-          RuntimeException var2_ref = null;
-          Exception var3 = null;
-          var5 = EscapeVector.field_A;
+          int var5 = EscapeVector.obfuscationControl;
           try {
-            var6 = new byte[24];
-            var2 = var6;
+            byte[] var6 = new byte[24];
+            byte[] var2 = var6;
             if (bd.field_h != null) {
               try {
                 bd.field_h.a(0, 0L);
@@ -211,16 +187,16 @@ final class jm extends hm {
                   throw new IOException();
                 }
                 param1.a(24, (byte) 21, param0, var2);
-                decompiledRegionSelector0 = 0;
+                decompiledRegionSelector0 = false;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                var3 = (Exception) (Object) decompiledCaughtException;
-                for (var4 = 0; var4 < 24; var4++) {
+                Exception var3 = (Exception) (Object) decompiledCaughtException;
+                for (int var4 = 0; var4 < 24; var4++) {
                   var2[var4] = (byte)-1;
                 }
-                decompiledRegionSelector0 = 1;
+                decompiledRegionSelector0 = true;
               }
-              if (decompiledRegionSelector0 == 0) {
+              if (!decompiledRegionSelector0) {
                 return;
               }
             }
@@ -228,9 +204,9 @@ final class jm extends hm {
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_18_0 = var2_ref;
-            stackIn_18_1 = new StringBuilder().append("jm.I(").append(param0).append(',');
+            RuntimeException var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_18_0 = var2_ref;
+            StringBuilder stackIn_18_1 = new StringBuilder().append("jm.I(").append(param0).append(',');
             if (param1 == null) {
               stackIn_19_2 = "null";
             } else {
@@ -263,22 +239,13 @@ final class jm extends hm {
           dl.a((byte) 119);
         }
         if (param1 <= 85) {
-          this.field_D = (ed) null;
+          this.field_D = (Sprite) null;
         }
     }
 
-    private final ed a(boolean param0, int param1, int param2) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = EscapeVector.field_A;
-        ed var14 = new ed(2 * this.field_z, this.field_x);
-        int var8Lifetime1;
-        int var9Lifetime1;
-        int var12Lifetime1;
+    private final Sprite a(boolean param0, int param1, int param2) {
+        int var13 = EscapeVector.obfuscationControl;
+        Sprite var14 = new Sprite(2 * this.field_z, this.field_x);
         eo.a(var14, (byte) -90);
         int var5 = this.field_x >> 1;
         int var6 = 0;
@@ -286,19 +253,19 @@ final class jm extends hm {
           this.field_B = 60;
         }
         while (var6 < this.field_x) {
-          var7 = (var6 >> 1) * (2 * this.field_z - 1) % (this.field_z * 2);
-          var8 = 16711935 & param1;
-          var9 = 65280 & param1;
-          var10 = -var5 + var6;
-          var11 = 128 + (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0);
-          var12 = var11 >= 256 ? var9 | var8 : (var11 * var8 & -16711936 | 16711680 & var11 * var9) >>> 8;
-          em.e(var7, var6, this.field_z, var12);
-          em.e(var7 - this.field_z * 2, var6, this.field_z, var12);
-          var8Lifetime1 = param2 & 16711935;
-          var9Lifetime1 = 65280 & param2;
-          var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (-16711936 & var11 * var8Lifetime1 | 16711680 & var11 * var9Lifetime1) >>> 8;
-          em.e(this.field_z + var7, var6, this.field_z, var12Lifetime1);
-          em.e(-this.field_z + var7, var6, this.field_z, var12Lifetime1);
+          int var7 = (var6 >> 1) * (2 * this.field_z - 1) % (this.field_z * 2);
+          int var8 = 16711935 & param1;
+          int var9 = 65280 & param1;
+          int var10 = -var5 + var6;
+          int var11 = 128 + (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0);
+          int var12 = var11 >= 256 ? var9 | var8 : (var11 * var8 & -16711936 | 16711680 & var11 * var9) >>> 8;
+          SoftwareRasterizer.e(var7, var6, this.field_z, var12);
+          SoftwareRasterizer.e(var7 - this.field_z * 2, var6, this.field_z, var12);
+          int var8Lifetime1 = param2 & 16711935;
+          int var9Lifetime1 = 65280 & param2;
+          int var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (-16711936 & var11 * var8Lifetime1 | 16711680 & var11 * var9Lifetime1) >>> 8;
+          SoftwareRasterizer.e(this.field_z + var7, var6, this.field_z, var12Lifetime1);
+          SoftwareRasterizer.e(-this.field_z + var7, var6, this.field_z, var12Lifetime1);
           var6++;
         }
         dl.a((byte) 127);
@@ -306,25 +273,14 @@ final class jm extends hm {
     }
 
     final static byte[] a(int param0, int param1, c param2, byte[] param3) {
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
-        Object stackIn_3_0 = null;
-        byte[] stackIn_18_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
-          var4_int = param2.j(param0, 8);
+          int var4_int = param2.j(param0, 8);
           if (0 == var4_int) {
-            stackIn_3_0 = null;
+            Object stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
           }
           if (param3 == null ||
@@ -334,8 +290,8 @@ final class jm extends hm {
           if (param1 <= 113) {
             field_I = (mf) null;
           }
-          var5 = param2.j(3, 8);
-          var6 = (byte)param2.j(8, 8);
+          int var5 = param2.j(3, 8);
+          int var6 = (byte)param2.j(8, 8);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param3[var7] = (byte)var6;
@@ -345,19 +301,19 @@ final class jm extends hm {
               param3[var7] = (byte)(var6 + param2.j(var5, 8));
             }
           }
-          stackIn_18_0 = (byte[]) (param3);
+          byte[] stackIn_18_0 = (byte[]) (param3);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_21_0 = var4;
-          stackIn_21_1 = new StringBuilder().append("jm.A(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_21_0 = var4;
+          StringBuilder stackIn_21_1 = new StringBuilder().append("jm.A(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
+          StringBuilder stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
           if (param3 == null) {
             stackIn_25_2 = "null";
           } else {
@@ -378,6 +334,6 @@ final class jm extends hm {
 
     static {
         field_M = "?";
-        field_K = new ed[17];
+        field_K = new Sprite[17];
     }
 }

@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uj {
-    static ed field_b;
+    static Sprite field_b;
     static boolean field_d;
     static String field_c;
     static int[] field_e;
-    static ed field_a;
+    static Sprite field_a;
     static int[] field_f;
     private static String field_z;
 

@@ -8,7 +8,7 @@ class jl {
     private int field_g;
     private String[] field_b;
     private String field_m;
-    static cn field_n;
+    static IntrusiveDeque field_n;
     static int field_a;
     private int field_j;
     private int field_e;
@@ -32,51 +32,37 @@ class jl {
     }
 
     final int a(String[] param0, int param1) {
-        int var5 = 0;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String[] var4 = null;
-        String var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_19_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
           if (this.field_h == null) {
-            stackIn_3_0 = 0;
+            int stackIn_3_0 = 0;
             return stackIn_3_0;
           }
           if (param0 == null) {
-            stackIn_7_0 = 0;
+            int stackIn_7_0 = 0;
             return stackIn_7_0;
           }
           if (param0.length == 0) {
-            stackIn_11_0 = 0;
+            int stackIn_11_0 = 0;
             return stackIn_11_0;
           }
-          var3_int = 0;
-          var4 = param0;
-          for (var5 = param1; var4.length > var5; var5++) {
-            var6 = var4[var5];
-            var7 = this.field_h.b(var6);
+          int var3_int = 0;
+          String[] var4 = param0;
+          for (int var5 = param1; var4.length > var5; var5++) {
+            String var6 = var4[var5];
+            int var7 = this.field_h.b(var6);
             if (var3_int <= var7) {
               var3_int = var7;
             }
           }
-          stackIn_19_0 = var3_int;
+          int stackIn_19_0 = var3_int;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_22_0 = var3;
-          stackIn_22_1 = new StringBuilder().append("jl.M(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_22_0 = var3;
+          StringBuilder stackIn_22_1 = new StringBuilder().append("jl.M(");
           if (param0 == null) {
             stackIn_23_2 = "null";
           } else {
@@ -100,7 +86,7 @@ class jl {
     }
 
     final static void b(int param0) {
-        se.a((byte) 86, oc.d((byte) -91));
+        se.a((byte) 86, PointCloudEffect.d((byte) -91));
         if (param0 != 2) {
           jl.a(8);
         }
@@ -141,21 +127,7 @@ class jl {
     }
 
     private final void a(boolean param0, int param1) {
-        int var4 = 0;
-        String var5;
-        int var16;
-        String[] var17;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        var16 = EscapeVector.field_A;
+        int var16 = EscapeVector.obfuscationControl;
         if (this.field_h == null) {
           return;
         }
@@ -165,24 +137,24 @@ class jl {
         if (this.field_b.length == 0) {
           return;
         }
-        var17 = this.field_b;
+        String[] var17 = this.field_b;
         if (!param0) {
           this.a((byte) 91, 82);
         }
-        for (var4 = 0; var17.length > var4; var4++) {
-          var5 = var17[var4];
+        for (int var4 = 0; var17.length > var4; var4++) {
+          String var5 = var17[var4];
           if (var5 != null &&
             var5.length() != 0) {
-            var6 = 640;
-            var7 = (-this.field_o + var6) / 2;
-            var8 = param1 - this.field_h.field_r;
-            var9 = this.field_o;
-            var10 = this.field_j;
-            var11 = -1;
-            var12 = 1;
-            var13 = 0;
-            var14 = this.field_f;
-            var15 = this.field_h.a(var5, var7, var8, var9, param1, var10, var11, var12, var13, var14);
+            int var6 = 640;
+            int var7 = (-this.field_o + var6) / 2;
+            int var8 = param1 - this.field_h.field_r;
+            int var9 = this.field_o;
+            int var10 = this.field_j;
+            int var11 = -1;
+            int var12 = 1;
+            int var13 = 0;
+            int var14 = this.field_f;
+            int var15 = this.field_h.a(var5, var7, var8, var9, param1, var10, var11, var12, var13, var14);
             param1 = param1 + var15 * this.field_f;
           }
         }
@@ -204,55 +176,41 @@ class jl {
     }
 
     private final int a(String[] param0, byte param1) {
-        int var5 = 0;
-        int var3_int = 0;
-        String[] var4 = null;
-        String var6 = null;
-        int var8 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_24_0 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        int var7 = 0;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
           if (this.field_h == null) {
-            stackIn_3_0 = 0;
+            int stackIn_3_0 = 0;
             return stackIn_3_0;
           }
           if (param0 == null) {
-            stackIn_7_0 = 0;
+            int stackIn_7_0 = 0;
             return stackIn_7_0;
           }
           if (param0.length == 0) {
-            stackIn_11_0 = 0;
+            int stackIn_11_0 = 0;
             return stackIn_11_0;
           }
           if (param1 <= 97) {
             this.field_e = 12;
           }
-          var3_int = 0;
-          var4 = param0;
-          for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = var4[var5];
+          int var3_int = 0;
+          String[] var4 = param0;
+          for (int var5 = 0; var5 < var4.length; var5++) {
+            String var6 = var4[var5];
             if (var6 != null &&
               0 != var6.length()) {
-              var7 = this.field_h.a(var6, this.field_o);
+              int var7 = this.field_h.a(var6, this.field_o);
               var3_int = var3_int + var7 * this.field_f;
             }
           }
-          stackIn_24_0 = var3_int;
+          int stackIn_24_0 = var3_int;
           return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_27_0 = var3;
-          stackIn_27_1 = new StringBuilder().append("jl.J(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_27_0 = var3;
+          StringBuilder stackIn_27_1 = new StringBuilder().append("jl.J(");
           if (param0 == null) {
             stackIn_28_2 = "null";
           } else {
@@ -301,7 +259,7 @@ class jl {
 
     static {
         field_a = 35;
-        field_n = new cn();
+        field_n = new IntrusiveDeque();
         field_l = "Please try again in a few minutes.";
         field_p = new int[8192];
         field_c = "Restarting level";

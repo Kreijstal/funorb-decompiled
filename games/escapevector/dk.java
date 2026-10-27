@@ -19,41 +19,32 @@ final class dk {
     private int[] field_r;
     private int field_g;
     private int[] field_a;
-    private ed field_n;
+    private Sprite field_n;
     int field_c;
 
     final void a(boolean param0, boolean param1, byte param2) {
         int stackIn_19_0 = 0;
         int stackIn_22_0 = 0;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        String var9;
         int var9_int;
-        int var10;
-        int var11;
-        int var12;
         int var8Lifetime1;
-        var12 = EscapeVector.field_A;
-        var4 = this.field_f + this.field_p;
+        int var12 = EscapeVector.obfuscationControl;
+        int var4 = this.field_f + this.field_p;
         if (param2 <= 16) {
           return;
         }
-        var5 = this.field_l + this.field_i;
-        var6 = 0;
+        int var5 = this.field_l + this.field_i;
+        int var6 = 0;
         if (param1) {
           var6 = 2;
         }
         if (param0) {
           var6 = 1;
         }
-        var7 = this.b((byte) -102);
+        int var7 = this.b((byte) -102);
         if (this.field_d == 2) {
           if (!param0) {
-            var8 = 1;
-            em.a(1 + this.field_f, 1 + this.field_n.field_z + this.field_l, -2 + this.field_p, -2 + this.field_i - this.field_n.field_z, var8);
+            int var8 = 1;
+            SoftwareRasterizer.a(1 + this.field_f, 1 + this.field_n.fullHeight + this.field_l, -2 + this.field_p, -2 + this.field_i - this.field_n.fullHeight, var8);
           } else {
             fc.a(var7, this.field_f - 2, var4 + 2, 2 + var5, true, 29788, false, this.field_e[1], this.field_m[1], this.field_g, -2 + this.field_l, false);
           }
@@ -62,75 +53,63 @@ final class dk {
         if (this.field_d == 3) {
           fc.a(var7, this.field_f, var4, var5, true, 29788, false, this.field_e[var6], this.field_m[var6], this.field_g, this.field_l, false);
         }
-        if (this.field_d != 0) {
-          if (this.field_d != 1) {
-            if (this.field_d == 4) {
-              var8Lifetime1 = this.c(-18641);
-              var9 = this.field_b + " - ";
-              this.field_s.b(var9, this.field_f + this.field_j, var8Lifetime1, this.field_r[1], -1);
-              this.field_s.a(this.field_o, this.field_f + this.field_j, var8Lifetime1, this.field_r[var6], -1);
-              if (this.field_n != null) {
-                this.field_n.e(var4 - this.field_n.field_A, this.field_l);
-              }
-            } else {
-              var8Lifetime1 = this.c(-18641);
-              var9_int = this.field_p / 2 + this.field_f;
-              lb.a(var8Lifetime1, this.field_o, this.field_r[var6], -128, var9_int);
-            }
+        if (this.field_d == 0) {
+          var8Lifetime1 = 1;
+          SoftwareRasterizer.c(this.field_f, this.field_l, this.field_n.fullWidth, this.field_n.fullHeight, this.field_m[var6], var8Lifetime1);
+          this.field_n.a(this.field_f, this.field_l, this.field_e[var6]);
+        } else if (this.field_d == 1) {
+          if (param0) {
+            stackIn_19_0 = this.field_k[1];
           } else {
-            if (param0) {
-              stackIn_19_0 = this.field_k[1];
-            } else {
-              stackIn_19_0 = this.field_k[0];
-            }
-            var8Lifetime1 = stackIn_19_0;
-            if (param0) {
-              stackIn_22_0 = this.field_a[1];
-            } else {
-              stackIn_22_0 = this.field_a[0];
-            }
-            var9_int = stackIn_22_0;
-            var10 = this.field_f + (this.field_p - var8Lifetime1) / 2;
-            var11 = this.field_l + (-var9_int + this.field_i) / 2;
-            this.field_n.a(var10, var11, var8Lifetime1, var9_int);
+            stackIn_19_0 = this.field_k[0];
+          }
+          var8Lifetime1 = stackIn_19_0;
+          if (param0) {
+            stackIn_22_0 = this.field_a[1];
+          } else {
+            stackIn_22_0 = this.field_a[0];
+          }
+          var9_int = stackIn_22_0;
+          int var10 = this.field_f + (this.field_p - var8Lifetime1) / 2;
+          int var11 = this.field_l + (-var9_int + this.field_i) / 2;
+          this.field_n.a(var10, var11, var8Lifetime1, var9_int);
+        } else if (this.field_d == 4) {
+          var8Lifetime1 = this.c(-18641);
+          String var9 = this.field_b + " - ";
+          this.field_s.b(var9, this.field_f + this.field_j, var8Lifetime1, this.field_r[1], -1);
+          this.field_s.a(this.field_o, this.field_f + this.field_j, var8Lifetime1, this.field_r[var6], -1);
+          if (this.field_n != null) {
+            this.field_n.e(var4 - this.field_n.fullWidth, this.field_l);
           }
         } else {
-          var8Lifetime1 = 1;
-          em.c(this.field_f, this.field_l, this.field_n.field_A, this.field_n.field_z, this.field_m[var6], var8Lifetime1);
-          this.field_n.a(this.field_f, this.field_l, this.field_e[var6]);
+          var8Lifetime1 = this.c(-18641);
+          var9_int = this.field_p / 2 + this.field_f;
+          lb.a(var8Lifetime1, this.field_o, this.field_r[var6], -128, var9_int);
         }
         return;
     }
 
     private final void h(int param0) {
-        int var6_int = 0;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        String var6;
-        int var7;
-        int var5Lifetime1;
-        var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         if (this.field_d != 4) {
           return;
         }
-        var2 = this.field_f + this.field_j;
-        var3 = this.field_p + this.field_f;
-        var4 = 1 + var3 - var2;
-        var5 = this.field_s.b(this.field_o);
+        int var2 = this.field_f + this.field_j;
+        int var3 = this.field_p + this.field_f;
+        int var4 = 1 + var3 - var2;
+        int var5 = this.field_s.b(this.field_o);
         if (var5 <= var4) {
           return;
         }
-        for (var6_int = this.field_o.length(); var6_int >= 0; var6_int--) {
+        for (int var6_int = this.field_o.length(); var6_int >= 0; var6_int--) {
           this.field_o = this.field_o.substring(0, var6_int);
-          var5Lifetime1 = this.field_s.b(this.field_o);
+          int var5Lifetime1 = this.field_s.b(this.field_o);
           if (var4 < var5Lifetime1) {
             continue;
           }
           break;
         }
-        var6 = oe.field_cc;
+        String var6 = GameplaySession.field_cc;
         if (this.field_o.length() <= var6.length()) {
           return;
         }
@@ -140,7 +119,7 @@ final class dk {
         }
     }
 
-    dk(int param0, int param1, String param2, int param3, ed param4, int param5, ih param6) {
+    dk(int param0, int param1, String param2, int param3, Sprite param4, int param5, ih param6) {
         this(param0, param1, param2, param3, param6);
         try {
           this.field_n = param4;
@@ -159,7 +138,7 @@ final class dk {
         if (this.field_n == null) {
           return 0;
         }
-        return this.field_n.field_A;
+        return this.field_n.fullWidth;
     }
 
     private final int d(int param0) {
@@ -185,27 +164,17 @@ final class dk {
     }
 
     final static byte[] a(byte param0, CharSequence param1) {
-        int var4 = 0;
-        byte[] stackIn_69_0 = null;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
         String stackIn_73_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        byte[] var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         try {
-          var2_int = param1.length();
-          var3 = new byte[var2_int];
+          int var2_int = param1.length();
+          byte[] var3 = new byte[var2_int];
           if (param0 != -14) {
             field_h = (int[]) null;
           }
-          for (var4 = 0; var4 < var2_int; var4++) {
+          for (int var4 = 0; var4 < var2_int; var4++) {
             {
-              var5 = param1.charAt(var4);
+              int var5 = param1.charAt(var4);
               if ((var5 <= 0 ||
                 var5 >= 128) && (160 > var5 ||
                 var5 > 255)) {
@@ -300,13 +269,13 @@ final class dk {
               }
             }
           }
-          stackIn_69_0 = var3;
+          byte[] stackIn_69_0 = var3;
           return stackIn_69_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_72_0 = var2;
-          stackIn_72_1 = new StringBuilder().append("dk.K(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_72_0 = var2;
+          StringBuilder stackIn_72_1 = new StringBuilder().append("dk.K(").append(param0).append(',');
           if (param1 == null) {
             stackIn_73_2 = "null";
           } else {
@@ -361,67 +330,51 @@ final class dk {
     }
 
     final static void e(int param0) {
-        int var7 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_13_1 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        dc var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        cc var5_ref_cc = null;
-        int[] var6 = null;
-        int var8 = 0;
-        c var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
-          var10 = om.field_g;
-          var2 = var10.e(0);
-          var3 = var10.e(0);
+          c var10 = om.field_g;
+          int var2 = var10.readUnsignedByte(0);
+          int var3 = var10.readUnsignedByte(0);
           if (param0 != 108457410) {
             return;
           }
           if (var2 == 0) {
-            var4 = (dc) (en.field_i.a(false));
+            dc var4 = (dc) (en.field_i.first(false));
             if (var4 == null) {
               nm.a(16);
               return;
             }
-            var5 = -var10.field_m + hi.field_r;
-            var12 = var4.field_h;
-            var11 = var12;
-            var6 = var11;
+            int var5 = -var10.position + hi.field_r;
+            int[] var12 = var4.field_h;
+            int[] var11 = var12;
+            int[] var6 = var11;
             if (var12.length << 2 < var5) {
               var5 = var12.length << 2;
             }
-            for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.e(0) << (ae.a(3, var7) << 8));
+            for (int var7 = 0; var5 > var7; var7++) {
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(0) << (ae.a(3, var7) << 8));
             }
             var4.field_g = true;
-            var4.c((byte) -105);
+            var4.unlink((byte) -105);
             return;
           }
           if (var2 == 1) {
-            var4_int = var10.e((byte) 106);
-            var5_ref_cc = (cc) (vn.field_e.a(false));
+            int var4_int = var10.e((byte) 106);
+            cc var5_ref_cc = (cc) (vn.field_e.first(false));
             while (var5_ref_cc != null) {
               if (var5_ref_cc.field_i != var3 ||
                 var4_int != var5_ref_cc.field_m) {
-                var5_ref_cc = (cc) (vn.field_e.b((byte) 70));
+                var5_ref_cc = (cc) (vn.field_e.next((byte) 70));
                 continue;
               }
               break;
             }
             if (var5_ref_cc != null) {
-              var5_ref_cc.c((byte) -62);
+              var5_ref_cc.unlink((byte) -62);
               return;
             }
-            stackIn_13_0 = param0;
-            stackIn_13_1 = 108457426;
+            int stackIn_13_0 = param0;
+            int stackIn_13_1 = 108457426;
             nm.a(stackIn_13_0 ^ stackIn_13_1);
             return;
           }
@@ -429,22 +382,20 @@ final class dk {
           nm.a(16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "dk.H(" + param0 + ')');
         }
     }
 
     final boolean a(byte param0, int param1, int param2) {
-        int var4;
-        int var5;
-        var4 = this.field_p + this.field_f;
+        int var4 = this.field_p + this.field_f;
         if (this.field_f <= param1 &&
           param1 < var4) {
           if (param0 != 65) {
             return true;
           }
-          var5 = this.field_l + this.field_i;
+          int var5 = this.field_l + this.field_i;
           if (this.field_l <= param2 &&
             param2 < var5) {
             return true;
@@ -476,14 +427,13 @@ final class dk {
     }
 
     private final int a(int param0) {
-        int discarded$0 = 0;
         if (null == this.field_n) {
           return 0;
         }
         if (param0 != 0) {
-          discarded$0 = this.a(true);
+          int discarded$0 = this.a(true);
         }
-        return this.field_n.field_z;
+        return this.field_n.fullHeight;
     }
 
     final void b(byte param0, int param1, int param2) {
@@ -511,8 +461,8 @@ final class dk {
         if (param0 != -16383) {
           this.field_s = (ih) null;
         }
-        int var3 = 0;
-        this.a(param1, var3 != 0, (byte) 27);
+        boolean var3 = false;
+        this.a(param1, (var3), (byte) 27);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -524,7 +474,7 @@ final class dk {
         this.h(160);
     }
 
-    dk(int param0, int param1, int param2, String param3, int param4, ed param5, int param6, ih param7) {
+    dk(int param0, int param1, int param2, String param3, int param4, Sprite param5, int param6, ih param7) {
         this(param0, param1, param3, param6, param7);
         try {
           this.field_n = param5;
@@ -549,7 +499,7 @@ final class dk {
         }
     }
 
-    dk(int param0, int param1, ed param2, int[] param3, int[] param4) {
+    dk(int param0, int param1, Sprite param2, int[] param3, int[] param4) {
         try {
           this.field_d = param0;
           this.field_c = param1;
@@ -561,7 +511,7 @@ final class dk {
         }
     }
 
-    dk(int param0, int param1, ed param2) {
+    dk(int param0, int param1, Sprite param2) {
         try {
           this.field_d = param0;
           this.field_n = param2;
@@ -572,9 +522,8 @@ final class dk {
     }
 
     static {
-        int var0 = 0;
         field_h = new int[32768];
-        for (var0 = 0; 32768 > var0; var0++) {
+        for (int var0 = 0; 32768 > var0; var0++) {
           field_h[var0] = (int)(16384.0 * Math.sin((double)var0 / 5215.1903));
         }
     }

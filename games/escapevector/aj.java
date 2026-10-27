@@ -7,12 +7,11 @@ final class aj {
     static hj field_f;
     static String field_e;
     static String field_b;
-    static ed field_c;
+    static Sprite field_c;
 
     final static void a(int param0, int param1, ij param2) {
-        c var3 = null;
         try {
-          var3 = om.field_c;
+          c var3 = om.field_c;
           var3.a(param1, true);
           var3.f(5, -123);
           var3.f(0, -123);
@@ -43,9 +42,9 @@ final class aj {
     final static boolean b(int param0) {
         if (param0 > -88) {
           field_a = (fe) null;
-          return nf.field_u;
+          return SpriteState.field_u;
         }
-        return nf.field_u;
+        return SpriteState.field_u;
     }
 
     static {

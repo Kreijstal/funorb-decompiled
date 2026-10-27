@@ -3,16 +3,16 @@
  */
 import java.io.*;
 
-final class vc {
-    int field_b;
-    int field_c;
+final class TerrainMap {
+    int secondaryTheme;
+    int terrainTheme;
     static String field_e;
-    int field_a;
-    int field_g;
+    int tilesWide;
+    int pixelHeight;
     static String field_i;
-    int[][] field_d;
-    int field_h;
-    int field_f;
+    int[][] tileMasks;
+    int pixelWidth;
+    int tilesHigh;
 
     public static void a(int param0) {
         try {
@@ -63,43 +63,43 @@ final class vc {
         }
     }
 
-    vc(DataInputStream param0, int param1) throws IOException {
+    TerrainMap(DataInputStream input, int formatVersion) throws IOException {
         String stackIn_30_2 = null;
-        int var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         try {
-          this.field_a = param0.readUnsignedByte();
-          this.field_h = this.field_a << 5;
-          this.field_f = param0.readUnsignedByte();
-          this.field_g = this.field_f << 5;
-          this.field_c = param0.readUnsignedByte();
-          this.field_b = this.field_c;
-          if (param1 >= 10) {
-            this.field_b = param0.readUnsignedByte();
+          this.tilesWide = input.readUnsignedByte();
+          this.pixelWidth = this.tilesWide << 5;
+          this.tilesHigh = input.readUnsignedByte();
+          this.pixelHeight = this.tilesHigh << 5;
+          this.terrainTheme = input.readUnsignedByte();
+          this.secondaryTheme = this.terrainTheme;
+          if (formatVersion >= 10) {
+            this.secondaryTheme = input.readUnsignedByte();
           }
-          this.field_d = new int[this.field_a * this.field_f][];
+          this.tileMasks = new int[this.tilesWide * this.tilesHigh][];
           int var3_int = 0;
-          L1: while (true) {
-            int stackIn_5_0 = this.field_a * this.field_f;
+          scanLoop1: while (true) {
+            int stackIn_5_0 = this.tilesWide * this.tilesHigh;
             int stackIn_5_1 = var3_int;
             if (stackIn_5_0 > stackIn_5_1) {
-              int var4 = param0.readByte();
+              int var4 = input.readByte();
               if (var7 != 0) {
                 return;
               }
               int var5 = 0;
               while (var5 < 4) {
                 stackIn_5_0 = ~(var3_int + var5);
-                stackIn_5_1 = ~(this.field_a * this.field_f);
+                stackIn_5_1 = ~(this.tilesWide * this.tilesHigh);
                 if (stackIn_5_0 > stackIn_5_1) {
                   if ((var4 & 3) == 0) {
-                    this.field_d[var3_int + var5] = null;
+                    this.tileMasks[var3_int + var5] = null;
                   } else if ((var4 & 3) == 1) {
-                    this.field_d[var5 + var3_int] = si.field_v;
+                    this.tileMasks[var5 + var3_int] = QuickChatPhraseDefinition.fullTileMask;
                   } else {
                     int[] array$0 = new int[32];
-                    this.field_d[var3_int + var5] = array$0;
+                    this.tileMasks[var3_int + var5] = array$0;
                     int[] var6 = array$0;
-                    bf.a(0, 32, param0, 0, 32, var6, 2147483647);
+                    AccountRegistrationPanel.decodeTerrainQuadrants(0, 32, input, 0, 32, var6, 2147483647);
                   }
                   var4 = var4 >>> 2;
                   var5++;
@@ -108,7 +108,7 @@ final class vc {
                 break;
               }
               var3_int += 4;
-              continue L1;
+              continue scanLoop1;
             }
             break;
           }
@@ -117,12 +117,12 @@ final class vc {
           RuntimeException var3 = decompiledCaughtParameter0;
           RuntimeException stackIn_29_0 = var3;
           StringBuilder stackIn_29_1 = new StringBuilder().append("vc.<init>(");
-          if (param0 == null) {
+          if (input == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(formatVersion).append(')').toString());
         }
     }
 

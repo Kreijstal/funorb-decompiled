@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fd {
-    private ed[] field_c;
+    private Sprite[] field_c;
     static String[] field_f;
     static String field_d;
     static String field_a;
@@ -27,7 +27,7 @@ final class fd {
         }
     }
 
-    fd(ed[] param0) {
+    fd(Sprite[] param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

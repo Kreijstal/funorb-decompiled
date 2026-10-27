@@ -24,13 +24,8 @@ final class hd extends java.awt.Canvas {
     }
 
     final static boolean a(String param0, boolean param1, String param2) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
-        StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (lb.b((byte) -35, param0)) {
             return false;
@@ -58,16 +53,16 @@ final class hd extends java.awt.Canvas {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_31_0 = var3;
-          stackIn_31_1 = new StringBuilder().append("hd.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_31_0 = var3;
+          StringBuilder stackIn_31_1 = new StringBuilder().append("hd.B(");
           if (param0 == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
           }
-          stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_35_2 = "null";
           } else {

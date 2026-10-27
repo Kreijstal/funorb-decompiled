@@ -16,11 +16,6 @@ final class gk {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-          java.net.URL var2 = null;
-          Exception var2_ref = null;
-          RuntimeException var2_ref2 = null;
-          RuntimeException stackIn_8_0 = null;
-          StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
@@ -28,20 +23,20 @@ final class gk {
               if (param0 != -9787) {
                 field_c = true;
               }
-              var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
+              java.net.URL var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
               param1.getAppletContext().showDocument(sh.a((byte) 114, param1, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
+              Exception var2_ref = (Exception) (Object) decompiledCaughtException;
               var2_ref.printStackTrace();
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = var2_ref2;
-            stackIn_8_1 = new StringBuilder().append("gk.B(").append(param0).append(',');
+            RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_8_0 = var2_ref2;
+            StringBuilder stackIn_8_1 = new StringBuilder().append("gk.B(").append(param0).append(',');
             if (param1 == null) {
               stackIn_9_2 = "null";
             } else {

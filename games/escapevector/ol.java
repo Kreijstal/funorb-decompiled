@@ -3,34 +3,34 @@
  */
 class ol extends cd {
     private int field_eb;
-    static bf field_E;
-    private ed field_Z;
+    static AccountRegistrationPanel field_E;
+    private Sprite field_Z;
     private int field_H;
     private int field_gb;
-    private ed[] field_w;
+    private Sprite[] field_w;
     static String field_K;
     private int field_C;
-    private ed[] field_A;
+    private Sprite[] field_A;
     private int field_R;
     static ij[] field_N;
-    private ed field_x;
+    private Sprite field_x;
     private int field_bb;
     private boolean field_ib;
     private int field_G;
     private int field_T;
     private int field_F;
     private int field_D;
-    private ed[] field_jb;
-    private ed[] field_V;
+    private Sprite[] field_jb;
+    private Sprite[] field_V;
     private String field_cb;
     private int field_M;
     private boolean field_B;
     private String field_S;
     private int field_P;
     private boolean field_y;
-    private ed field_O;
-    private ed field_z;
-    private ed[] field_fb;
+    private Sprite field_O;
+    private Sprite field_z;
+    private Sprite[] field_fb;
     private int field_U;
     private int field_Y;
     private boolean field_W;
@@ -39,63 +39,49 @@ class ol extends cd {
     private int field_kb;
     static int[] field_ab;
     private int field_L;
-    private ed field_db;
+    private Sprite field_db;
     private boolean field_I;
     private boolean field_J;
     private int field_hb;
 
     final static byte[][] a(int param0, mf param1, int[] param2, int param3, mf param4) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        byte[][] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
-        int var10 = 0;
-        byte[][] stackIn_3_0 = null;
-        byte[][] stackIn_8_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var10 = EscapeVector.field_A;
+        int var10 = EscapeVector.obfuscationControl;
         try {
-          var5_int = je.a(false, param3);
+          int var5_int = je.a(false, param3);
           if (0 >= var5_int) {
-            stackIn_3_0 = (byte[][]) null;
+            byte[][] stackIn_3_0 = (byte[][]) null;
             return stackIn_3_0;
           }
-          var6 = new byte[var5_int][];
-          var7 = 0;
-          var8 = 103 / ((75 - param0) / 49);
+          byte[][] var6 = new byte[var5_int][];
+          int var7 = 0;
+          int var8 = 103 / ((75 - param0) / 49);
           while (var5_int > var7) {
-            var9 = hf.a(param1, param2, var7, param3, param4, (byte) 97);
+            byte[] var9 = hf.a(param1, param2, var7, param3, param4, (byte) 97);
             var6[var7] = var9;
             var7++;
           }
-          stackIn_8_0 = var6;
+          byte[][] stackIn_8_0 = var6;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("ol.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var5;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("ol.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+          StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
           if (param2 == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',');
+          StringBuilder stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_18_2 = "null";
           } else {
@@ -120,11 +106,7 @@ class ol extends cd {
     }
 
     final static boolean a(byte param0, String param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -7) {
             field_N = (ij[]) null;
@@ -138,10 +120,10 @@ class ol extends cd {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_12_0 = var2;
-          stackIn_12_1 = new StringBuilder().append("ol.F(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var2;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("ol.F(").append(param0).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -152,11 +134,7 @@ class ol extends cd {
     }
 
     private final void a(int param0, ol param1) {
-        RuntimeException stackIn_100_0 = null;
-        StringBuilder stackIn_100_1 = null;
         String stackIn_101_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           if (param0 != -1680) {
             ol.g(-110);
@@ -277,10 +255,10 @@ class ol extends cd {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_100_0 = var3;
-          stackIn_100_1 = new StringBuilder().append("ol.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_100_0 = var3;
+          StringBuilder stackIn_100_1 = new StringBuilder().append("ol.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_101_2 = "null";
           } else {
@@ -291,13 +269,8 @@ class ol extends cd {
     }
 
     private ol(long param0, ol param1, int param2, int param3, int param4, int param5, String param6) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         this.field_H = -2147483648;
         this.field_eb = -1;
         this.field_gb = 256;
@@ -312,23 +285,23 @@ class ol extends cd {
         this.field_U = -2147483648;
         this.field_hb = -1;
         try {
-          this.field_e = param0;
+          this.key = param0;
           this.a(-1680, param1);
           if (param6 != null) {
             this.field_S = param6;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_6_0 = runtimeException;
-          stackIn_6_1 = new StringBuilder().append("ol.<init>(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = runtimeException;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ol.<init>(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_10_2 = "null";
           } else {

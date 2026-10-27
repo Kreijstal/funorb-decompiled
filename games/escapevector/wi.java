@@ -5,7 +5,7 @@ final class wi {
     static String field_c;
     int field_a;
     boolean field_g;
-    ed field_e;
+    Sprite field_e;
     int field_b;
     static java.awt.Color field_f;
     static int[] field_h;
@@ -13,7 +13,7 @@ final class wi {
     static String field_i;
 
     wi(int param0, int param1, int param2, int param3) {
-        this.field_e = new ed(param0, param1);
+        this.field_e = new Sprite(param0, param1);
         this.field_b = param2;
         this.field_a = param3;
         this.field_g = true;

@@ -3,7 +3,7 @@
  */
 final class mg {
     static String[] field_h;
-    static cn field_e;
+    static IntrusiveDeque field_e;
     static long field_d;
     static int field_b;
     static int[] field_a;
@@ -27,7 +27,7 @@ final class mg {
           field_g = null;
           return;
         }
-        field_e = (cn) null;
+        field_e = (IntrusiveDeque) null;
         field_h = null;
         field_c = null;
         field_a = null;
@@ -37,7 +37,7 @@ final class mg {
     static {
         field_h = new String[]{"Retrieval", "Retribution", "Simulator"};
         field_a = new int[8192];
-        field_e = new cn();
+        field_e = new IntrusiveDeque();
         field_g = new om(14, 0, 4, 1);
     }
 }

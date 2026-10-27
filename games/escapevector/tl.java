@@ -31,7 +31,7 @@ final class tl extends wg {
     }
 
     final void b(int[] param0, int param1, int param2) {
-        int var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         try {
           while (param2 > this.field_m) {
             this.field_k.a(param0, param1, this.field_m);
@@ -49,15 +49,11 @@ final class tl extends wg {
     }
 
     private final void e(int param0) {
-        int var3 = 0;
-        int var4 = 0;
         int var2 = this.field_p;
-        int var3Lifetime1;
-        int var4Lifetime1;
         if (0 != var2) {
           this.field_r = this.field_r - var2;
-          var3 = (this.field_r & 65536) != 0 ? this.field_s : 0;
-          var4 = this.field_n;
+          int var3 = (this.field_r & 65536) != 0 ? this.field_s : 0;
+          int var4 = this.field_n;
           this.field_k.a(ie.field_q / 200, var3, var4);
           this.field_q.a(ie.field_q / 200, var3 >> 2, var4);
           if (param0 >= 96) {
@@ -67,8 +63,8 @@ final class tl extends wg {
           return;
         }
         this.field_r = 0;
-        var3Lifetime1 = (this.field_r & 65536) != 0 ? this.field_s : 0;
-        var4Lifetime1 = this.field_n;
+        int var3Lifetime1 = (this.field_r & 65536) != 0 ? this.field_s : 0;
+        int var4Lifetime1 = this.field_n;
         this.field_k.a(ie.field_q / 200, var3Lifetime1, var4Lifetime1);
         this.field_q.a(ie.field_q / 200, var3Lifetime1 >> 2, var4Lifetime1);
         if (param0 >= 96) {
@@ -85,7 +81,7 @@ final class tl extends wg {
     }
 
     final void d(int param0) {
-        int var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         while (param0 > this.field_m) {
           this.field_k.d(this.field_m);
           this.field_q.d(this.field_m);

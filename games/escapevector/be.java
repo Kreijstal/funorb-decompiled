@@ -16,36 +16,31 @@ final class be {
     }
 
     final static void a(int param0, int param1) {
-        hg var2 = null;
-        int var3 = 0;
-        bd var4 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         try {
           if (param1 != 17205) {
             be.a((byte) 71);
           }
-          var4 = (bd) (rd.field_b.a(false));
+          bd var4 = (bd) (rd.field_b.first(false));
           while (var4 != null) {
             r.a(-118, var4, param0);
-            var4 = (bd) (rd.field_b.b((byte) 70));
+            var4 = (bd) (rd.field_b.next((byte) 70));
           }
-          var2 = nf.field_w.a(false);
+          IntrusiveNode var2 = SpriteState.field_w.first(false);
           while (var2 != null) {
             q.c(param0, (byte) -63);
-            var2 = nf.field_w.b((byte) 70);
+            var2 = SpriteState.field_w.next((byte) 70);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2_ref), "be.B(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
         field_a = "Play Tutorial";
-        cn discarded$0 = new cn();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
     }
 }

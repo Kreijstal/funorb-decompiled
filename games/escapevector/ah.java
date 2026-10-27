@@ -6,7 +6,7 @@ abstract class ah extends sm implements rj {
     static String field_g;
     static String field_l;
     static String field_m;
-    static ed field_j;
+    static Sprite field_j;
     static boolean field_h;
     static long field_e;
     private ul field_f;
@@ -79,7 +79,7 @@ abstract class ah extends sm implements rj {
           if (ff.field_e == 11) {
             bm.b((byte) 62);
           }
-          si.a(pl.field_t, hd.field_e, pb.field_d, (byte) 14);
+          QuickChatPhraseDefinition.a(pl.field_t, hd.field_e, pb.field_d, (byte) 14);
           nn.a(param0, param1, param1 - 1, 0);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ah.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nf extends fl {
-    int field_v;
-    int field_A;
-    int field_s;
-    static cn field_w;
-    int field_x;
-    int field_q;
+abstract class SpriteState extends DualLinkNode {
+    int offsetY;
+    int fullWidth;
+    int width;
+    static IntrusiveDeque field_w;
+    int height;
+    int offsetX;
     static lm field_y;
-    int field_z;
+    int fullHeight;
     static boolean field_u;
     static boolean field_r;
     static int[] field_t;
@@ -30,8 +30,7 @@ abstract class nf extends fl {
 
     final static void g(int param0) {
         Throwable decompiledCaughtException = null;
-        Object var1 = null;
-        var1 = om.field_b;
+        Object var1 = om.field_b;
         synchronized (var1) {
           md.field_G = md.field_G + 1;
           eb.field_K = vj.field_b;
@@ -43,7 +42,7 @@ abstract class nf extends fl {
           sf.field_c = fk.field_b;
           ng.field_ob = dd.field_c;
           if (param0 != -3657) {
-            nf.b(30, 39);
+            SpriteState.b(30, 39);
           }
           kb.field_f = 0;
         }
@@ -73,31 +72,27 @@ abstract class nf extends fl {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        int var6Lifetime1;
-        int var7Lifetime1;
         if (param1 == 34) {
-          var6 = this.field_A << 3;
-          var7 = this.field_z << 3;
+          int var6 = this.fullWidth << 3;
+          int var7 = this.fullHeight << 3;
           param0 = (param0 << 4) + (15 & var6);
           param4 = (param4 << 4) + (15 & var7);
           this.a(var6, var7, param0, param4, param3, param2);
           return;
         }
-        this.field_v = 118;
-        var6Lifetime1 = this.field_A << 3;
-        var7Lifetime1 = this.field_z << 3;
+        this.offsetY = 118;
+        int var6Lifetime1 = this.fullWidth << 3;
+        int var7Lifetime1 = this.fullHeight << 3;
         param0 = (param0 << 4) + (15 & var6Lifetime1);
         param4 = (param4 << 4) + (15 & var7Lifetime1);
         this.a(var6Lifetime1, var7Lifetime1, param0, param4, param3, param2);
     }
 
-    nf() {
+    SpriteState() {
     }
 
     static {
-        field_w = new cn();
+        field_w = new IntrusiveDeque();
         field_t = new int[8192];
         field_u = true;
     }

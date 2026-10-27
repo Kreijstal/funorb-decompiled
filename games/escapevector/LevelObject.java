@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sa extends hg {
+final class LevelObject extends IntrusiveNode {
     boolean field_h;
-    ed field_i;
+    Sprite collisionSprite;
     static String field_q;
-    int field_l;
-    int field_k;
-    int field_j;
-    private int field_s;
-    private int field_m;
+    int spriteFrame;
+    int x;
+    int objectId;
+    private int displayOffsetX;
+    private int displayOffsetY;
     boolean field_p;
     boolean field_r;
-    int field_g;
-    private ed field_t;
+    int y;
+    private Sprite displaySprite;
     int field_o;
-    int field_n;
+    int objectType;
 
     private final void a(boolean param0, int param1, int param2) {
         try {
           int var4_int = 100;
-          int var5 = ma.field_a.field_cb % var4_int;
-          if (null == this.field_i) {
+          int var5 = BoundedRandomAccessFile.activeSession.elapsedTicks % var4_int;
+          if (null == this.collisionSprite) {
             return;
           }
-          int var6 = this.field_i.field_A;
-          int var7 = this.field_i.field_z;
+          int var6 = this.collisionSprite.fullWidth;
+          int var7 = this.collisionSprite.fullHeight;
           int var8 = var6 + (var4_int - var5) * 2 * var6 / var4_int;
           int var9 = (-var5 + var4_int) * var7 * 2 / var4_int + var7;
           if (param0) {
@@ -33,28 +33,28 @@ final class sa extends hg {
           }
           int var10 = var5 * 128 / var4_int;
           int var11 = 16711680;
-          int var12 = this.field_g + (-param2 - (var9 - var7) / 2);
+          int var12 = this.y + (-param2 - (var9 - var7) / 2);
           int var13 = var9 + var12;
           int var14 = 480;
           if (var13 >= 0 &&
             var12 < var14) {
-            int var15 = -param1 + this.field_k - (var8 - var6) / 2;
+            int var15 = -param1 + this.x - (var8 - var6) / 2;
             int var16 = var8 + var15;
-            int var17 = ma.field_a.field_n;
-            em.b(var15, var12, var8, var9, var11, var10);
+            int var17 = BoundedRandomAccessFile.activeSession.worldWidth;
+            SoftwareRasterizer.b(var15, var12, var8, var9, var11, var10);
             if (var15 > 0 &&
               var17 <= var16) {
               return;
             }
             if (0 < var15) {
               var15 = var15 - var17;
-              if (EscapeVector.field_A != 0) {
+              if (EscapeVector.obfuscationControl != 0) {
                 var15 = var15 + var17;
               }
             } else {
               var15 = var15 + var17;
             }
-            em.b(var15, var12, var8, var9, var11, var10);
+            SoftwareRasterizer.b(var15, var12, var8, var9, var11, var10);
             return;
           }
           return;
@@ -68,9 +68,9 @@ final class sa extends hg {
         try {
           try {
             if (param0 != 27) {
-              sa.d((byte) -32);
+              LevelObject.d((byte) -32);
             }
-            je.field_a = new cn();
+            je.field_a = new IntrusiveDeque();
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             RuntimeException var1 = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class sa extends hg {
             return stackIn_2_0;
           }
           if (var2 != null) {
-            fn stackIn_7_0 = var2[this.field_n].a((byte) 120, this.field_l);
+            fn stackIn_7_0 = var2[this.objectType].a((byte) 120, this.spriteFrame);
             return stackIn_7_0;
           }
           Object stackIn_5_0 = null;
@@ -102,7 +102,7 @@ final class sa extends hg {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, ed[] param3, int param4, int param5, ed[] param6, int param7, int param8, wl param9, int param10, boolean param11) {
+    final static void a(int param0, int param1, boolean param2, Sprite[] param3, int param4, int param5, Sprite[] param6, int param7, int param8, wl param9, int param10, boolean param11) {
         String stackIn_7_2 = null;
         String stackIn_11_2 = null;
         String stackIn_15_2 = null;
@@ -138,17 +138,17 @@ final class sa extends hg {
         }
     }
 
-    private final ed d(int param0) {
+    private final Sprite d(int param0) {
         try {
           if (param0 != 0) {
-            sa.a(22, (byte) 101);
+            LevelObject.a(22, (byte) 101);
           }
           rk[] var2 = w.c(false);
           if (null == var2) {
             Object stackIn_7_0 = null;
-            return (ed) (stackIn_7_0);
+            return (Sprite) (stackIn_7_0);
           }
-          ed stackIn_9_0 = var2[this.field_n].a(-125, this.field_l);
+          Sprite stackIn_9_0 = var2[this.objectType].a(-125, this.spriteFrame);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2_ref = decompiledCaughtParameter0;
@@ -156,55 +156,55 @@ final class sa extends hg {
         }
     }
 
-    sa(int param0, int param1, int param2, int param3, boolean param4, boolean param5, int param6) {
+    LevelObject(int param0, int param1, int param2, int param3, boolean param4, boolean param5, int param6) {
         this(param0, param1, param2, param3);
         try {
           this.field_p = param5;
-          this.field_l = param6;
+          this.spriteFrame = param6;
           this.field_r = param4;
-          this.e(-7012);
+          this.refreshSprites(-7012);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "sa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    final void a(boolean param0, oe param1) {
+    final void stampTerrain(boolean guard, GameplaySession session) {
         int stackIn_31_0 = 0;
         String stackIn_39_2 = null;
-        int var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         try {
-          if (this.field_i == null) {
+          if (this.collisionSprite == null) {
             return;
           }
           int var3_int = 0;
           int var4 = 0;
           while (true) {
-            int stackIn_5_0 = ~this.field_i.field_x;
+            int stackIn_5_0 = ~this.collisionSprite.height;
             boolean decompiledFrameRemainder0 = true;
             if (stackIn_5_0 < ~var4) {
-              int var5 = var4 + (this.field_g + this.field_i.field_v);
+              int var5 = var4 + (this.y + this.collisionSprite.offsetY);
               int var6 = var5 >> 5;
               var5 = var5 & 31;
               stackIn_31_0 = 0;
               decompiledFrameRemainder0 = (var11 == 0);
               if (decompiledFrameRemainder0) {
                 int var7 = stackIn_31_0;
-                while (var7 < this.field_i.field_s) {
-                  int var8 = var7 + (this.field_i.field_q + this.field_k);
+                while (var7 < this.collisionSprite.width) {
+                  int var8 = var7 + (this.collisionSprite.offsetX + this.x);
                   int var9 = var8 >> 5;
                   stackIn_5_0 = var8 & 31;
                   int var8Lifetime1 = stackIn_5_0;
                   while (var9 < 0) {
-                    var9 = var9 + param1.field_Mb;
+                    var9 = var9 + session.tilesWide;
                   }
-                  var9 = var9 % param1.field_Mb;
-                  if (this.field_i.field_B[var3_int] != 0) {
-                    int[] var10 = param1.field_V[var9 + param1.field_Mb * var6];
-                    if (si.field_v != var10) {
+                  var9 = var9 % session.tilesWide;
+                  if (this.collisionSprite.pixels[var3_int] != 0) {
+                    int[] var10 = session.terrainMasks[var9 + session.tilesWide * var6];
+                    if (QuickChatPhraseDefinition.fullTileMask != var10) {
                       if (null == var10) {
                         int[] array$0 = new int[32];
                         var10 = array$0;
-                        param1.field_V[var9 + var6 * param1.field_Mb] = array$0;
+                        session.terrainMasks[var9 + var6 * session.tilesWide] = array$0;
                       }
                       var10[var5] = lb.a(var10[var5], 1 << var8Lifetime1);
                     }
@@ -217,18 +217,18 @@ final class sa extends hg {
               }
             }
             if (decompiledFrameRemainder0) {
-              stackIn_31_0 = param0 ? 1 : 0;
+              stackIn_31_0 = guard ? 1 : 0;
             }
             if (stackIn_31_0 != 1) {
-              this.field_j = -96;
+              this.objectId = -96;
             }
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var3 = decompiledCaughtParameter0;
           RuntimeException stackIn_38_0 = var3;
-          StringBuilder stackIn_38_1 = new StringBuilder().append("sa.E(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_38_1 = new StringBuilder().append("sa.E(").append(guard).append(',');
+          if (session == null) {
             stackIn_39_2 = "null";
           } else {
             stackIn_39_2 = "{...}";
@@ -239,9 +239,9 @@ final class sa extends hg {
 
     final void a(int param0, byte param1, int param2) {
         Object var4 = null;
-        int var13 = EscapeVector.field_A;
+        int var13 = EscapeVector.obfuscationControl;
         try {
-          if (this.field_i == null) {
+          if (this.collisionSprite == null) {
             return;
           }
           var4 = null;
@@ -253,9 +253,9 @@ final class sa extends hg {
           if (this.field_h) {
             int var9Lifetime1 = this.a((byte) 54);
             if (var9Lifetime1 > 0) {
-              var5 = this.field_s;
-              var4 = this.field_t;
-              var6 = this.field_m;
+              var5 = this.displayOffsetX;
+              var4 = this.displaySprite;
+              var6 = this.displayOffsetY;
               if (var5 < 0) {
                 var7 = -var5;
               }
@@ -264,24 +264,24 @@ final class sa extends hg {
               }
             }
           }
-          int var10 = this.field_g - param0;
+          int var10 = this.y - param0;
           if (var10 < 480 + var8 &&
-            var10 > -this.field_i.field_z) {
-            int var11 = -param2 + (this.field_k + ma.field_a.field_n + ma.field_a.field_n) - var7;
-            int var12 = this.field_i.field_A + var7 + var7;
+            var10 > -this.collisionSprite.fullHeight) {
+            int var11 = -param2 + (this.x + BoundedRandomAccessFile.activeSession.worldWidth + BoundedRandomAccessFile.activeSession.worldWidth) - var7;
+            int var12 = this.collisionSprite.fullWidth + var7 + var7;
             var11 = var11 + var12;
-            var11 = var11 % ma.field_a.field_n;
+            var11 = var11 % BoundedRandomAccessFile.activeSession.worldWidth;
             var11 = var11 - var12;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var11 >= 640))) {
               if (var13 == 0) {
                 if (null != var4) {
-                  this.field_i.e(var11 + var7, var10);
-                  ((ed) (var4)).c(var5 + var11 + var7, var10 + var6, this.a((byte) 122));
+                  this.collisionSprite.e(var11 + var7, var10);
+                  ((Sprite) (var4)).c(var5 + var11 + var7, var10 + var6, this.a((byte) 122));
                 } else {
-                  this.field_i.e(var11, var10);
+                  this.collisionSprite.e(var11, var10);
                 }
-                var11 = var11 + ma.field_a.field_n;
+                var11 = var11 + BoundedRandomAccessFile.activeSession.worldWidth;
                 continue;
               }
               break;
@@ -308,7 +308,7 @@ final class sa extends hg {
           if (param0 < 36) {
             field_q = (String) null;
           }
-          if (this.field_n == 2) {
+          if (this.objectType == 2) {
             int var2_int = -42 + this.field_o;
             if (var2_int <= 0) {
               int stackIn_14_0 = 0;
@@ -317,9 +317,9 @@ final class sa extends hg {
             int stackIn_16_0 = 16 * var2_int;
             return stackIn_16_0;
           }
-          double var2_double = (double)(ma.field_a.field_Zb / 8);
-          if (kg.a((byte) -98, this.field_n)) {
-            var2_double = (double)(ma.field_a.field_cb % 100) / 100.0;
+          double var2_double = (double)(BoundedRandomAccessFile.activeSession.field_Zb / 8);
+          if (kg.a((byte) -98, this.objectType)) {
+            var2_double = (double)(BoundedRandomAccessFile.activeSession.elapsedTicks % 100) / 100.0;
           }
           double var4 = Math.cos(3.141592653589793 * var2_double) + 2.0;
           int stackIn_9_0 = (int)(var4 * var4 * 28.0);
@@ -330,25 +330,25 @@ final class sa extends hg {
         }
     }
 
-    private final void e(int param0) {
-        this.field_i = k.a(this.field_l, (byte) -39, this.field_n);
-        this.field_t = this.d(0);
+    private final void refreshSprites(int guard) {
+        this.collisionSprite = k.a(this.spriteFrame, (byte) -39, this.objectType);
+        this.displaySprite = this.d(0);
         fn var2 = this.b(true);
-        if (param0 != -7012) {
+        if (guard != -7012) {
           return;
         }
         if (var2 == null) {
           return;
         }
         try {
-          this.field_s = var2.field_c;
-          this.field_m = var2.field_b;
+          this.displayOffsetX = var2.field_c;
+          this.displayOffsetY = var2.field_b;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "sa.H(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "sa.H(" + guard + ')');
         }
     }
 
-    sa(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
+    LevelObject(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         this(param0, param1, param2, param3);
         try {
           this.field_r = param4;
@@ -362,7 +362,7 @@ final class sa extends hg {
         try {
           try {
             if (hi.a(param0, -2)) {
-              tj var2 = new tj(ic.field_n, ae.field_c, qh.field_j, true);
+              DialogueScreen var2 = new DialogueScreen(ic.field_n, ae.field_c, qh.field_j, true);
               re.a(1820, var2);
             }
             if (param1 >= -69) {
@@ -371,9 +371,9 @@ final class sa extends hg {
             if (param0 == 2) {
               String var2_ref = "vengeance_intro";
               String var3 = "scene";
-              ed[] var4 = tm.field_cb;
+              Sprite[] var4 = tm.field_cb;
               String[] var5 = me.field_o;
-              tj var6 = new tj(var2_ref, var3, var4, var5, true);
+              DialogueScreen var6 = new DialogueScreen(var2_ref, var3, var4, var5, true);
               re.a(1820, var6);
             }
             return;
@@ -390,22 +390,22 @@ final class sa extends hg {
 
     final boolean e(byte param0) {
         try {
-          if (mf.a(this.field_n, -64)) {
+          if (mf.a(this.objectType, -64)) {
             return false;
           }
-          if (1 == this.field_n) {
+          if (1 == this.objectType) {
             return false;
           }
-          if (5 == this.field_n) {
+          if (5 == this.objectType) {
             return false;
           }
-          if (this.field_n == 6) {
+          if (this.objectType == 6) {
             return false;
           }
           if (param0 != -5) {
             return false;
           }
-          if (this.field_n == 7) {
+          if (this.objectType == 7) {
             return false;
           }
           return true;
@@ -415,47 +415,47 @@ final class sa extends hg {
         }
     }
 
-    final void a(oe param0, byte param1) {
+    final void removeFromTerrain(GameplaySession session, byte guard) {
         String stackIn_49_2 = null;
-        int var12 = EscapeVector.field_A;
+        int var12 = EscapeVector.obfuscationControl;
         try {
-          if (this.field_i == null) {
+          if (this.collisionSprite == null) {
             return;
           }
           int var3_int = 0;
-          if (param1 < 58) {
-            this.e(-105);
+          if (guard < 58) {
+            this.refreshSprites(-105);
           }
           int var4 = 0;
-          L1: while (true) {
-            int stackIn_9_0 = this.field_i.field_x;
+          scanLoop1: while (true) {
+            int stackIn_9_0 = this.collisionSprite.height;
             if (stackIn_9_0 > var4) {
-              int var5 = var4 + this.field_i.field_v + this.field_g;
+              int var5 = var4 + this.collisionSprite.offsetY + this.y;
               int var6 = var5 >> 5;
               var5 = var5 & 31;
               if (var12 != 0) {
                 return;
               }
               int var7 = 0;
-              while (var7 < this.field_i.field_s) {
-                int var8 = var7 + (this.field_k + this.field_i.field_q);
+              while (var7 < this.collisionSprite.width) {
+                int var8 = var7 + (this.x + this.collisionSprite.offsetX);
                 int var9 = var8 >> 5;
                 stackIn_9_0 = var8 & 31;
                 int var8Lifetime1 = stackIn_9_0;
                 while (0 > var9) {
-                  var9 = var9 + param0.field_Mb;
+                  var9 = var9 + session.tilesWide;
                 }
-                var9 = var9 % param0.field_Mb;
-                if (null != ma.field_a.field_eb) {
-                  ma.field_a.field_eb.a(var9, var6, true);
+                var9 = var9 % session.tilesWide;
+                if (null != BoundedRandomAccessFile.activeSession.dynamicTerrain) {
+                  BoundedRandomAccessFile.activeSession.dynamicTerrain.invalidateTileNeighborhood(var9, var6, true);
                 }
-                if (0 != this.field_i.field_B[var3_int]) {
-                  int[] var10 = param0.field_V[param0.field_Mb * var6 + var9];
+                if (0 != this.collisionSprite.pixels[var3_int]) {
+                  int[] var10 = session.terrainMasks[session.tilesWide * var6 + var9];
                   if (var10 != null) {
-                    if (si.field_v == var10) {
+                    if (QuickChatPhraseDefinition.fullTileMask == var10) {
                       int[] array$0 = new int[32];
                       var10 = array$0;
-                      param0.field_V[param0.field_Mb * var6 + var9] = array$0;
+                      session.terrainMasks[session.tilesWide * var6 + var9] = array$0;
                       int var11 = 0;
                       while (var11 < 32) {
                         var10[var11] = -1;
@@ -469,7 +469,7 @@ final class sa extends hg {
                 var7++;
               }
               var4++;
-              continue L1;
+              continue scanLoop1;
             }
             break;
           }
@@ -478,19 +478,19 @@ final class sa extends hg {
           RuntimeException var3 = decompiledCaughtParameter0;
           RuntimeException stackIn_48_0 = var3;
           StringBuilder stackIn_48_1 = new StringBuilder().append("sa.C(");
-          if (param0 == null) {
+          if (session == null) {
             stackIn_49_2 = "null";
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(guard).append(')').toString());
         }
     }
 
     public static void a(boolean param0) {
         try {
           if (param0) {
-            sa.a(77, 13, true, (ed[]) null, -108, -59, (ed[]) null, -14, -30, (wl) null, -40, true);
+            LevelObject.a(77, 13, true, (Sprite[]) null, -108, -59, (Sprite[]) null, -14, -30, (wl) null, -40, true);
           }
           field_q = null;
           return;
@@ -500,20 +500,20 @@ final class sa extends hg {
         }
     }
 
-    sa(int param0, int param1, int param2, int param3) {
+    LevelObject(int objectId, int objectType, int x, int y) {
         boolean stackIn_6_1 = false;
         this.field_o = 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          this.field_g = param3;
-          this.field_k = param2;
-          this.field_j = param0;
-          this.field_n = param1;
+          this.y = y;
+          this.x = x;
+          this.objectId = objectId;
+          this.objectType = objectType;
           Object stackIn_3_0 = this;
-          if (param1 != 2) {
+          if (objectType != 2) {
             Object stackIn_5_0 = this;
             Object stackIn_3_0Lifetime1 = stackIn_5_0;
-            if (!kg.a((byte) -125, this.field_n)) {
+            if (!kg.a((byte) -125, this.objectType)) {
               stackIn_6_1 = false;
               decompiledFrameRemainder0 = false;
             }
@@ -524,13 +524,13 @@ final class sa extends hg {
           this.field_h = stackIn_6_1;
           this.field_p = false;
           this.field_r = false;
-          this.field_l = 0;
-          this.e(-7012);
+          this.spriteFrame = 0;
+          this.refreshSprites(-7012);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) runtimeException), "sa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "sa.<init>(" + objectId + ',' + objectType + ',' + x + ',' + y + ')');
         }
     }
 

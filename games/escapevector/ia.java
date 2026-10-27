@@ -47,44 +47,31 @@ final class ia {
     int[] field_d;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = EscapeVector.field_A;
-        int var6Lifetime1;
-        for (var6 = 0; this.field_K > var6; var6++) {
+        int var7 = EscapeVector.obfuscationControl;
+        for (int var6 = 0; this.field_K > var6; var6++) {
           this.field_L[var6] = (short)(this.field_L[var6] * param3 / param1);
           this.field_r[var6] = (short)(this.field_r[var6] * param2 / param1);
           this.field_J[var6] = (short)(this.field_J[var6] * param0 / param1);
         }
         this.b((byte) 77);
-        var6Lifetime1 = -28 % ((64 - param4) / 54);
+        int var6Lifetime1 = -28 % ((64 - param4) / 54);
     }
 
     final void a(byte param0) {
-        int var8 = 0;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var9;
-        int var10;
-        int var12;
-        int var11;
-        var12 = EscapeVector.field_A;
+        int var12 = EscapeVector.obfuscationControl;
         if (this.field_B) {
           return;
         }
         this.field_B = true;
-        var2 = 32767;
-        var3 = 32767;
-        var4 = 32767;
-        var5 = -32768;
-        var6 = -32768;
-        var7 = -32768;
-        for (var8 = 0; var8 < this.field_K; var8++) {
-          var9 = this.field_L[var8];
-          var10 = this.field_r[var8];
+        int var2 = 32767;
+        int var3 = 32767;
+        int var4 = 32767;
+        int var5 = -32768;
+        int var6 = -32768;
+        int var7 = -32768;
+        for (int var8 = 0; var8 < this.field_K; var8++) {
+          int var9 = this.field_L[var8];
+          int var10 = this.field_r[var8];
           if (var5 < var9) {
             var5 = var9;
           }
@@ -97,7 +84,7 @@ final class ia {
           if (var9 < var2) {
             var2 = var9;
           }
-          var11 = this.field_J[var8];
+          int var11 = this.field_J[var8];
           if (var11 < var4) {
             var4 = var11;
           }
@@ -133,9 +120,8 @@ final class ia {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = EscapeVector.field_A;
-        for (var5 = param1; this.field_K > var5; var5++) {
+        int var6 = EscapeVector.obfuscationControl;
+        for (int var5 = param1; this.field_K > var5; var5++) {
           this.field_L[var5] = (short)(this.field_L[var5] + param2);
           this.field_r[var5] = (short)(this.field_r[var5] + param3);
           this.field_J[var5] = (short)(this.field_J[var5] + param0);

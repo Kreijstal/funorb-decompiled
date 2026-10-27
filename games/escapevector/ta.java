@@ -32,7 +32,7 @@ final class ta {
     private final void e(boolean param0) {
         Object var2 = null;
         if (null != this.field_f) {
-          var2 = hg.field_a;
+          var2 = IntrusiveNode.field_a;
         }
         if (!param0) {
           this.j(48);
@@ -73,7 +73,7 @@ final class ta {
         if (mj.field_d == 0) {
           sj.a(8192, (byte) 51);
         }
-        de.field_j = param0;
+        IntValueNode.field_j = param0;
         this.a(64, this.field_f);
         this.a(64, this.field_r);
         this.a(64, this.field_a);
@@ -114,13 +114,11 @@ final class ta {
     }
 
     private final boolean e(int param0, int param1) {
-        int var3 = 0;
-        int var3Lifetime1;
         if (param1 < 0) {
           return false;
         }
         if (param1 == this.field_c) {
-          var3 = -1 + this.field_h;
+          int var3 = -1 + this.field_h;
           if (0 > var3) {
             var3 = this.field_y - 1;
           }
@@ -133,7 +131,7 @@ final class ta {
         if (this.field_e != param1) {
           return false;
         }
-        var3Lifetime1 = 1 + this.field_h;
+        int var3Lifetime1 = 1 + this.field_h;
         if (this.field_y <= var3Lifetime1) {
           var3Lifetime1 = 0;
         }
@@ -141,13 +139,7 @@ final class ta {
         return true;
     }
 
-    private final void b(int param0, ed param1) {
-        ih var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+    private final void b(int param0, Sprite param1) {
         if (param1 == null) {
           return;
         }
@@ -156,12 +148,12 @@ final class ta {
           return;
         }
         try {
-          var4 = fh.field_g;
-          var5 = var4.field_r + var4.field_x;
-          var6 = hk.field_r[var3_int];
-          var7 = ((this.field_n.field_m - param1.field_z) / param0 - var5) / 3;
-          var8 = var7 + this.field_n.field_k + var4.field_r;
-          var9 = 320;
+          ih var4 = fh.field_g;
+          int var5 = var4.field_r + var4.field_x;
+          String var6 = hk.field_r[var3_int];
+          int var7 = ((this.field_n.field_m - param1.fullHeight) / param0 - var5) / 3;
+          int var8 = var7 + this.field_n.field_k + var4.field_r;
+          int var9 = 320;
           lb.a(var8, var6, 16777215, -110, var9);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ta.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -169,18 +161,17 @@ final class ta {
     }
 
     private final boolean a(byte param0, boolean param1, boolean param2) {
-        int var6 = 0;
-        int var4 = 0;
+        boolean var4 = false;
         if (this.c((byte) -16)) {
-          return var4 != 0;
+          return (var4);
         }
         if (param2) {
-          var6 = this.l(-8477);
+          int var6 = this.l(-8477);
           if (0 > var6) {
-            return var4 != 0;
+            return (var4);
           }
           if (this.e(-124, var6)) {
-            return var4 != 0;
+            return (var4);
           }
           if (this.field_j == var6) {
             pa.a(true);
@@ -196,13 +187,13 @@ final class ta {
           ce.field_f.a(true);
           mj.field_d = 0;
           gi.a((byte) -71);
-          var4 = 1;
-          return var4 != 0;
+          var4 = true;
+          return (var4);
         }
         if (param0 != -91) {
           this.field_r = (dk) null;
         }
-        return var4 != 0;
+        return (var4);
     }
 
     final static void m(int param0) {
@@ -213,7 +204,7 @@ final class ta {
     }
 
     private final int[] a(byte param0, int param1, int param2, int param3) {
-        int var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         if (param3 == 1) {
           param1 = param1 + param2 / 2;
         }
@@ -232,56 +223,36 @@ final class ta {
     }
 
     private final int a(int param0, int param1, ih param2, int param3) {
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
         try {
-          var5_int = this.g(true);
+          int var5_int = this.g(true);
           if (0 > var5_int) {
-            stackIn_3_0 = param3 / 2 + param0;
+            int stackIn_3_0 = param3 / 2 + param0;
             return stackIn_3_0;
           }
-          var6 = param2.b(kg.field_a + " ");
-          var7 = param2.b("" + jb.field_t[var5_int]);
-          var8 = var6 + var7;
-          var9 = param2.b(vg.field_T + " ");
-          var10 = param2.b("" + jb.field_s[var5_int]);
-          var11 = var10 + var9;
-          stackIn_7_0 = (var11 > var8) ? var11 : var8;
-          var12 = stackIn_7_0;
-          var13 = 0;
-          var14 = (-var12 + param3) / 2 + param0;
-          stackIn_10_0 = (var13 == 0) ? var6 : var9;
-          var15 = stackIn_10_0;
+          int var6 = param2.b(kg.field_a + " ");
+          int var7 = param2.b("" + jb.field_t[var5_int]);
+          int var8 = var6 + var7;
+          int var9 = param2.b(vg.field_T + " ");
+          int var10 = param2.b("" + jb.field_s[var5_int]);
+          int var11 = var10 + var9;
+          int stackIn_7_0 = (var11 > var8) ? var11 : var8;
+          int var12 = stackIn_7_0;
+          boolean var13 = false;
+          int var14 = (-var12 + param3) / 2 + param0;
+          int stackIn_10_0 = ((!(var13))) ? var6 : var9;
+          int var15 = stackIn_10_0;
           if (param1 != 15930) {
             this.field_x = (int[][]) null;
           }
-          var16 = var15 + var14;
-          stackIn_13_0 = var16;
+          int var16 = var15 + var14;
+          int stackIn_13_0 = var16;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("ta.Q(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var5;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("ta.Q(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -308,24 +279,7 @@ final class ta {
     }
 
     private final int e(int param0) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int[] var37 = null;
-        int[] var38 = null;
-        int[] var39 = null;
-        int[] var40 = null;
-        ed[] var15 = null;
-        dk[] array$0 = null;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        ed var20 = null;
-        int var21 = 0;
-        int var22 = 0;
-        dk var23 = null;
-        int var24 = EscapeVector.field_A;
+        int var24 = EscapeVector.obfuscationControl;
         if (this.field_p != null) {
           return this.field_u[this.field_h];
         }
@@ -340,24 +294,24 @@ final class ta {
         this.a((byte) -105);
         int[] var7 = new int[]{36, 40};
         this.field_p = new dk[this.field_y][];
-        for (var8 = 0; this.field_y > var8; var8++) {
-          var9 = this.field_u[var8];
-          var10 = this.a((byte) 89, var9);
-          var37 = this.b(22387, var10, var9);
-          var38 = this.a(var37, (byte) 100, var4);
-          var39 = this.a(var38, (byte) -115);
-          var40 = this.a((byte) -99, var3, var5, var10);
-          var15 = this.a(var8, (byte) -116);
-          array$0 = new dk[var9];
+        for (int var8 = 0; this.field_y > var8; var8++) {
+          int var9 = this.field_u[var8];
+          int var10 = this.a((byte) 89, var9);
+          int[] var37 = this.b(22387, var10, var9);
+          int[] var38 = this.a(var37, (byte) 100, var4);
+          int[] var39 = this.a(var38, (byte) -115);
+          int[] var40 = this.a((byte) -99, var3, var5, var10);
+          Sprite[] var15 = this.a(var8, (byte) -116);
+          dk[] array$0 = new dk[var9];
           this.field_p[var8] = array$0;
-          for (var16 = 0; var10 > var16; var16++) {
-            var17 = var37[var16];
-            for (var18 = 0; var18 < var17; var18++) {
-              var19 = this.a(var18, var37, 6340704, var16);
-              var20 = var15[var19];
-              var21 = var18 * var4 + var39[var16];
-              var22 = var40[var16];
-              var23 = new dk(var2, var19, var20, var6, var7);
+          for (int var16 = 0; var10 > var16; var16++) {
+            int var17 = var37[var16];
+            for (int var18 = 0; var18 < var17; var18++) {
+              int var19 = this.a(var18, var37, 6340704, var16);
+              Sprite var20 = var15[var19];
+              int var21 = var18 * var4 + var39[var16];
+              int var22 = var40[var16];
+              dk var23 = new dk(var2, var19, var20, var6, var7);
               var23.a(var5, 0, var4);
               var23.b((byte) 22, var21, var22);
               this.field_p[var8][var19] = var23;
@@ -434,7 +388,7 @@ final class ta {
     }
 
     private final boolean k(int param0) {
-        int var2 = 0;
+        boolean var2 = false;
         if (pn.p(-98)) {
           di.field_d.a(118);
           qk.a(this.field_t, 0);
@@ -442,44 +396,33 @@ final class ta {
             di.field_d.a(false, this.field_d);
           }
           this.a(20364);
-          var2 = this.a((byte) -91, false, s.a((byte) 15, nk.field_n)) ? 1 : 0;
-          return var2 != 0;
+          var2 = (this.a((byte) -91, false, s.a((byte) 15, nk.field_n)));
+          return (var2);
         }
         if (param0 >= -60) {
           this.e((byte) 96);
         }
-        return var2 != 0;
+        return (var2);
     }
 
     private final int[] a(int[] param0, byte param1) {
-        int var5 = 0;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int[] var4 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] stackIn_5_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
-          var3_int = 66 / ((param1 - 34) / 58);
-          var4 = new int[param0.length];
-          for (var5 = 0; param0.length > var5; var5++) {
-            var6 = param0[var5];
-            var7 = (-var6 + 640) / 2;
+          int var3_int = 66 / ((param1 - 34) / 58);
+          int[] var4 = new int[param0.length];
+          for (int var5 = 0; param0.length > var5; var5++) {
+            int var6 = param0[var5];
+            int var7 = (-var6 + 640) / 2;
             var4[var5] = var7;
           }
-          stackIn_5_0 = var4;
+          int[] stackIn_5_0 = var4;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("ta.S(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var3;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("ta.S(");
           if (param0 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -512,27 +455,19 @@ final class ta {
 
     private final int[] b(int param0) {
         int[] var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int[] var10;
-        var9 = EscapeVector.field_A;
+        int var9 = EscapeVector.obfuscationControl;
         if (this.field_b != param0) {
-          var3 = ce.field_f.a(this.field_b, true);
-          var4 = ce.field_f.c(this.field_b, 1);
-          var10 = new int[var4];
+          int var3 = ce.field_f.a(this.field_b, true);
+          int var4 = ce.field_f.c(this.field_b, 1);
+          int[] var10 = new int[var4];
           var2 = var10;
-          var5 = 0;
-          var6 = 0;
+          int var5 = 0;
+          int var6 = 0;
           while (var5 < var3) {
-            var7 = ce.field_f.b(var5, (byte) 55) ? 1 : 0;
-            var8 = ce.field_f.a(var5, (byte) -126, this.field_b) ? 1 : 0;
-            if ((var7 == 0 ||
-              var8 != 0) && var10.length > var6) {
+            boolean var7 = (ce.field_f.b(var5, (byte) 55));
+            boolean var8 = (ce.field_f.a(var5, (byte) -126, this.field_b));
+            if ((!var7 ||
+              var8) && var10.length > var6) {
               var10[var6++] = var5;
             }
             var5++;
@@ -544,110 +479,91 @@ final class ta {
     }
 
     private final int b(int param0, int param1) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int stackIn_6_0 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var7Lifetime1;
         this.field_e = -1;
         this.field_c = -1;
         if (1 >= this.field_y) {
           this.field_i = null;
           return param0;
         }
-        stackIn_6_0 = (this.field_y > 2) ? 2 : 1;
-        var3 = stackIn_6_0;
+        int stackIn_6_0 = (this.field_y > 2) ? 2 : 1;
+        int var3 = stackIn_6_0;
         this.field_i = new dk[var3];
         if (param1 != 8) {
           this.c(46);
         }
-        var4 = 0;
-        var5 = 0;
-        var6 = this.field_o.field_k + (-ah.field_j.field_z + this.field_o.field_m) / 2;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = this.field_o.field_k + (-ah.field_j.fullHeight + this.field_o.field_m) / 2;
         if (this.field_h > 0) {
-          incrementValue$0 = param0;
+          int incrementValue$0 = param0;
           param0++;
           this.field_c = incrementValue$0;
-          var7 = this.field_o.field_j - ah.field_j.field_A / 2;
+          int var7 = this.field_o.field_j - ah.field_j.fullWidth / 2;
           this.field_i[var4] = new dk(var5, this.field_c, of.field_a);
           this.field_i[var4].b((byte) 127, var7, var6);
-          this.field_i[var4].a(ah.field_j.field_z, 0, ah.field_j.field_A);
-          si.a(-92, this.field_i[var4]);
+          this.field_i[var4].a(ah.field_j.fullHeight, 0, ah.field_j.fullWidth);
+          QuickChatPhraseDefinition.a(-92, this.field_i[var4]);
           var4++;
         }
         if (this.field_y - 1 > this.field_h) {
-          incrementValue$1 = param0;
+          int incrementValue$1 = param0;
           param0++;
           this.field_e = incrementValue$1;
-          var7Lifetime1 = this.field_o.field_j + (this.field_o.field_g - ah.field_j.field_A / 2);
+          int var7Lifetime1 = this.field_o.field_j + (this.field_o.field_g - ah.field_j.fullWidth / 2);
           this.field_i[var4] = new dk(var5, this.field_e, ah.field_j);
           this.field_i[var4].b((byte) 122, var7Lifetime1, var6);
-          this.field_i[var4].a(ah.field_j.field_z, 0, ah.field_j.field_A);
-          si.a(-110, this.field_i[var4]);
+          this.field_i[var4].a(ah.field_j.fullHeight, 0, ah.field_j.fullWidth);
+          QuickChatPhraseDefinition.a(-110, this.field_i[var4]);
         }
         return param0;
     }
 
     final int c(int param0) {
-        int[] discarded$0 = null;
         int var2;
-        int var3;
-        var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         if (this.field_f != null) {
           var2 = this.field_j;
+        } else if (this.field_r != null) {
+          var2 = this.field_v;
         } else {
-          if (this.field_r != null) {
-            var2 = this.field_v;
-          } else {
-            var2 = this.field_d;
-          }
+          var2 = this.field_d;
         }
         if (param0 != 5201) {
-          discarded$0 = this.b(75);
+          int[] discarded$0 = this.b(75);
         }
         return var2;
     }
 
     final boolean j(int param0) {
-        int var2Lifetime1;
         if (!this.field_s.e((byte) -7)) {
           this.field_s.a((byte) 62);
         }
         this.f(true);
-        int var2 = 0;
-        var2 = this.k(-70) ? 1 : 0;
+        boolean var2 = (this.k(-70));
         if (param0 >= -111) {
           return true;
         }
-        if (var2 != 0) {
-          return var2 != 0;
+        if (var2) {
+          return (var2);
         }
-        var2Lifetime1 = this.h((byte) -30) ? 1 : 0;
-        if (var2Lifetime1 != 0) {
-          return var2Lifetime1 != 0;
+        boolean var2Lifetime1 = (this.h((byte) -30));
+        if (var2Lifetime1) {
+          return (var2Lifetime1);
         }
-        return var2Lifetime1 != 0;
+        return (var2Lifetime1);
     }
 
     private final void g(int param0, int param1) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
         this.field_t = new int[param0];
         int var3 = 0;
         var3 = qe.a(this.field_t, var3, true, this.field_x[this.field_h]);
         if (param1 <= this.field_j) {
-          incrementValue$0 = var3;
+          int incrementValue$0 = var3;
           var3++;
           this.field_t[incrementValue$0] = this.field_j;
         }
         if (this.field_v >= 0) {
-          incrementValue$1 = var3;
+          int incrementValue$1 = var3;
           var3++;
           this.field_t[incrementValue$1] = this.field_v;
         }
@@ -655,12 +571,12 @@ final class ta {
         var3++;
         this.field_t[incrementValue$2] = this.field_d;
         if (this.field_c >= 0) {
-          incrementValue$3 = var3;
+          int incrementValue$3 = var3;
           var3++;
           this.field_t[incrementValue$3] = this.field_c;
         }
         if (0 <= this.field_e) {
-          incrementValue$4 = var3;
+          int incrementValue$4 = var3;
           var3++;
           this.field_t[incrementValue$4] = this.field_e;
         }
@@ -676,34 +592,25 @@ final class ta {
     }
 
     private final int a(int param0, int[] param1, int param2, int param3) {
-        int var6 = 0;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var7 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_8_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         try {
-          var5_int = 0;
-          for (var6 = 0; param3 > var6; var6++) {
+          int var5_int = 0;
+          for (int var6 = 0; param3 > var6; var6++) {
             var5_int = var5_int + param1[var6];
           }
           var5_int = var5_int + param0;
           if (param2 == 6340704) {
-            stackIn_8_0 = var5_int;
+            int stackIn_8_0 = var5_int;
             return stackIn_8_0;
           }
-          stackIn_6_0 = -83;
+          int stackIn_6_0 = -83;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("ta.GB(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var5;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("ta.GB(").append(param0).append(',');
           if (param1 == null) {
             stackIn_12_2 = "null";
           } else {
@@ -714,44 +621,35 @@ final class ta {
     }
 
     private final boolean h(byte param0) {
-        int var2 = 0;
         di.field_d.a(this.a(-3, sf.field_c, ng.field_ob), (byte) 119, this.a(-3, dh.field_d, bj.field_y));
         this.a(20364);
-        var2 = this.a((byte) -91, true, s.a((byte) 15, -1)) ? 1 : 0;
+        boolean var2 = (this.a((byte) -91, true, s.a((byte) 15, -1)));
         int var3 = -122 / ((param0 - 73) / 47);
-        if (var2 != 0) {
-          return var2 != 0;
+        if (var2) {
+          return (var2);
         }
-        return var2 != 0;
+        return (var2);
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        var6 = this.field_o.field_k + this.field_o.field_m + 5;
-        var7 = 20;
+        int var6 = this.field_o.field_k + this.field_o.field_m + 5;
+        int var7 = 20;
         if (null != this.field_f) {
           var7 = 10;
-        } else {
-          if (this.field_r != null) {
-            var7 = 10;
-          }
+        } else if (this.field_r != null) {
+          var7 = 10;
         }
-        var8 = -this.field_o.field_k + (-this.field_o.field_m - var7) + 440;
-        var9 = this.field_o.field_j - 3 * ah.field_j.field_A / param2;
-        var10 = 3 * ah.field_j.field_A + this.field_o.field_g;
+        int var8 = -this.field_o.field_k + (-this.field_o.field_m - var7) + 440;
+        int var9 = this.field_o.field_j - 3 * ah.field_j.fullWidth / param2;
+        int var10 = 3 * ah.field_j.fullWidth + this.field_o.field_g;
         this.field_n = new gf(var9, var6, var10, var8, param4);
         this.field_n.a(15135, param0, param1, param3);
     }
 
     private final dk d(boolean param0) {
-        ed discarded$0 = null;
         int var2 = di.field_d.field_h;
         if (!param0) {
-          discarded$0 = this.f(74, -122);
+          Sprite discarded$0 = this.f(74, -122);
         }
         if (var2 < 0) {
           return null;
@@ -774,20 +672,7 @@ final class ta {
         return this.field_a;
     }
 
-    private final void a(int param0, ed param1) {
-        ih var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+    private final void a(int param0, Sprite param1) {
         if (param1 == null) {
           return;
         }
@@ -796,19 +681,19 @@ final class ta {
           return;
         }
         try {
-          var4 = fh.field_g;
-          var5 = var4.field_r + var4.field_x;
-          var6 = 6340704;
-          var7 = 10551200;
-          var8 = kg.field_a + " ";
-          var9 = "" + jb.field_t[var3_int];
-          var10 = vg.field_T + " ";
-          var11 = "" + jb.field_s[var3_int];
-          var12 = (640 + param1.field_A) / param0;
-          var13 = -var12 + (this.field_n.field_g + this.field_n.field_j);
-          var14 = this.a(var12, 15930, var4, var13);
-          var15 = var5 * 2;
-          var16 = this.field_n.field_k - (-((-var15 + this.field_n.field_m) / 2) - var4.field_r);
+          ih var4 = fh.field_g;
+          int var5 = var4.field_r + var4.field_x;
+          int var6 = 6340704;
+          int var7 = 10551200;
+          String var8 = kg.field_a + " ";
+          String var9 = "" + jb.field_t[var3_int];
+          String var10 = vg.field_T + " ";
+          String var11 = "" + jb.field_s[var3_int];
+          int var12 = (640 + param1.fullWidth) / param0;
+          int var13 = -var12 + (this.field_n.field_g + this.field_n.field_j);
+          int var14 = this.a(var12, 15930, var4, var13);
+          int var15 = var5 * 2;
+          int var16 = this.field_n.field_k - (-((-var15 + this.field_n.field_m) / 2) - var4.field_r);
           var4.b(var8, var14, var16, var6, -1);
           var4.a(var9, var14, var16, var7, -1);
           var16 = var16 + var5;
@@ -820,109 +705,79 @@ final class ta {
     }
 
     private final void f(byte param0) {
-        int discarded$0 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         en var2 = ce.field_f;
         if (param0 > -72) {
-          discarded$0 = this.g(true);
+          int discarded$0 = this.g(true);
         }
         int var3 = var2.c(this.field_b, 1);
         this.field_y = this.b(var3, (byte) 123);
         this.field_u = new int[this.field_y];
-        for (var4 = 0; var4 < this.field_y; var4++) {
-          var5 = this.a((byte) 125, var3, var4);
+        for (int var4 = 0; var4 < this.field_y; var4++) {
+          int var5 = this.a((byte) 125, var3, var4);
           this.field_u[var4] = var5;
         }
     }
 
     private final void d(int param0, int param1) {
-        int discarded$1 = 0;
-        int var3;
-        int var4;
-        ed var5;
-        dk[] var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        gb var15;
-        gb var16;
-        int[] var20;
-        var3 = 640;
-        var4 = 480;
-        var5 = new ed(var3, var4);
-        var20 = new int[4];
-        var7 = this.field_p[this.field_h];
-        em.a(var20);
+        int var3 = 640;
+        int var4 = 480;
+        Sprite var5 = new Sprite(var3, var4);
+        int[] var20 = new int[4];
+        dk[] var7 = this.field_p[this.field_h];
+        SoftwareRasterizer.a(var20);
         if (param0 != 4551) {
-          discarded$1 = this.l(122);
+          int discarded$1 = this.l(122);
         }
         var5.g();
         nm.a((byte) -103, -1, var7);
         md.field_D.a(124);
-        em.b(var20);
+        SoftwareRasterizer.b(var20);
         var5.f();
-        var8 = qm.a(var7, (byte) 26);
-        var9 = on.a(var7, -49);
-        var10 = vg.a(var7, (byte) -122);
-        var11 = pb.a((byte) 2, var7);
-        var5.field_z = var11 - var10;
-        var5.field_q = var5.field_q - var8;
-        var5.field_A = var9 - var8;
-        var5.field_v = var5.field_v - var10;
-        var12 = 40;
-        var13 = 0;
+        int var8 = qm.a(var7, (byte) 26);
+        int var9 = on.a(var7, -49);
+        int var10 = vg.a(var7, (byte) -122);
+        int var11 = pb.a((byte) 2, var7);
+        var5.fullHeight = var11 - var10;
+        var5.offsetX = var5.offsetX - var8;
+        var5.fullWidth = var9 - var8;
+        var5.offsetY = var5.offsetY - var10;
+        int var12 = 40;
+        int var13 = 0;
         if (pf.field_i == param1) {
           var13 = 0;
-        } else {
-          if (lj.field_f == param1) {
-            var13 = -var5.field_A + var3 - 1;
-          }
+        } else if (lj.field_f == param1) {
+          var13 = -var5.fullWidth + var3 - 1;
         }
-        var14 = var8;
-        var15 = new gb(var13, var10);
-        var16 = new gb(var14, var10);
+        int var14 = var8;
+        gb var15 = new gb(var13, var10);
+        gb var16 = new gb(var14, var10);
         this.field_s = new ea(var15, var16, var5, var12);
     }
 
     private final int a(int param0, ih param1, int param2, int param3, int param4, int param5) {
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_5_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (~this.field_b != param0) {
             this.field_v = -1;
             this.field_r = null;
-            stackIn_3_0 = param2;
+            int stackIn_3_0 = param2;
             return stackIn_3_0;
           }
-          var7_int = 3;
-          var8 = na.field_m;
-          var9 = ic.a(var8, 16777215, param1);
-          var10 = (-var9 + 640) / 2;
+          int var7_int = 3;
+          String var8 = DynamicTerrainRenderer.field_m;
+          int var9 = ic.a(var8, 16777215, param1);
+          int var10 = (-var9 + 640) / 2;
           this.field_r = new dk(var7_int, param2, var8, param3, param5, param1);
           this.field_r.b((byte) 124, var10, param4);
           this.field_v = param2;
-          stackIn_5_0 = this.field_v + 1;
+          int stackIn_5_0 = this.field_v + 1;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_8_0 = var7;
-          stackIn_8_1 = new StringBuilder().append("ta.T(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var7;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("ta.T(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -933,89 +788,70 @@ final class ta {
     }
 
     private final void h(int param0) {
-        int discarded$0 = 0;
-        int var3 = 0;
         int var2 = di.field_d.field_h;
-        int var3Lifetime1;
-        int var3Lifetime2;
         if (null != this.field_f) {
-          var3 = this.field_f.field_c == var2 ? 1 : 0;
-          this.field_f.a(-16383, var3 != 0);
+          boolean var3 = (this.field_f.field_c == var2);
+          this.field_f.a(-16383, (var3));
         }
         if (param0 != -1) {
-          discarded$0 = this.b(72, 122);
+          int discarded$0 = this.b(72, 122);
         }
         if (null != this.field_r) {
-          var3Lifetime1 = var2 == this.field_r.field_c ? 1 : 0;
-          this.field_r.a(-16383, var3Lifetime1 != 0);
+          boolean var3Lifetime1 = (var2 == this.field_r.field_c);
+          this.field_r.a(-16383, (var3Lifetime1));
         }
         if (this.field_a != null) {
-          var3Lifetime2 = var2 == this.field_a.field_c ? 1 : 0;
-          this.field_a.a(param0 - 16382, var3Lifetime2 != 0);
+          boolean var3Lifetime2 = (var2 == this.field_a.field_c);
+          this.field_a.a(param0 - 16382, (var3Lifetime2));
         }
     }
 
     private final void a(int param0) {
-        boolean discarded$0 = false;
-        dk var2 = null;
-        int var3 = 0;
         if (param0 != 20364) {
-          discarded$0 = this.k(2);
+          boolean discarded$0 = this.k(2);
         }
         if (di.field_d.field_e) {
-          var2 = this.d(true);
-          var3 = nk.a(-93, var2);
+          dk var2 = this.d(true);
+          int var3 = nk.a(-93, var2);
           rk.field_e.a(oa.field_w, 100, qm.field_c * 1536 / 64, var3);
         }
     }
 
-    private final ed b(boolean param0) {
-        int var4 = 0;
-        int var5 = 0;
+    private final Sprite b(boolean param0) {
         int var2 = this.g(param0);
         if (var2 < 0) {
           return null;
         }
-        ed var3 = this.f(-4343, var2);
+        Sprite var3 = this.f(-4343, var2);
         if (var3 != null) {
-          var4 = (640 - var3.field_A) / 2;
-          var5 = this.field_n.field_k + (this.field_n.field_m - var3.field_z) / 2;
+          int var4 = (640 - var3.fullWidth) / 2;
+          int var5 = this.field_n.field_k + (this.field_n.field_m - var3.fullHeight) / 2;
           var3.e(var4, var5);
         }
         return var3;
     }
 
     private final int a(int param0, ih param1, byte param2, int param3, int param4, int param5) {
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var7_int = 3;
-          var8 = ag.field_a;
+          int var7_int = 3;
+          String var8 = ag.field_a;
           if (param2 != 57) {
-            stackIn_2_0 = 94;
+            int stackIn_2_0 = 94;
             return stackIn_2_0;
           }
-          var9 = ic.a(var8, 16777215, param1);
-          var10 = (640 - var9) / 2;
+          int var9 = ic.a(var8, 16777215, param1);
+          int var10 = (640 - var9) / 2;
           this.field_a = new dk(var7_int, param3, var8, param5, param4, param1);
           this.field_a.b((byte) 121, var10, param0);
           this.field_d = param3;
-          stackIn_4_0 = 1 + this.field_d;
+          int stackIn_4_0 = 1 + this.field_d;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_7_0 = var7;
-          stackIn_7_1 = new StringBuilder().append("ta.DB(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var7;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("ta.DB(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -1050,12 +886,11 @@ final class ta {
     }
 
     private final void d(int param0) {
-        ed var4 = null;
         int var2 = -64 / ((param0 + 87) / 34);
         this.field_n.c(50);
         int var3 = this.g(true);
         if (var3 >= 0) {
-          var4 = this.b(true);
+          Sprite var4 = this.b(true);
           this.b(2, var4);
           this.a(var4, (byte) -33);
           this.a(2, var4);
@@ -1065,60 +900,43 @@ final class ta {
         this.e(true);
     }
 
-    private final void a(ed param0, byte param1) {
-        int[] discarded$0 = null;
+    private final void a(Sprite param0, byte param1) {
         String stackIn_9_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        ih var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
         try {
           if (param0 == null) {
             return;
           }
-          var3_int = this.g(true);
+          int var3_int = this.g(true);
           if (0 > var3_int) {
             return;
           }
-          var4 = fh.field_g;
-          var5 = 10551200;
-          var6 = 6340704;
-          var7 = mf.field_f[var3_int];
+          ih var4 = fh.field_g;
+          int var5 = 10551200;
+          int var6 = 6340704;
+          String var7 = mf.field_f[var3_int];
           if (!this.a(var3_int, 6144)) {
             stackIn_9_0 = he.field_q;
           } else {
             stackIn_9_0 = bg.field_d;
           }
-          var8 = stackIn_9_0;
-          var9 = var7 + "<br>" + "<col=" + Integer.toHexString(var6) + ">" + var8;
-          var10 = 18;
+          String var8 = stackIn_9_0;
+          String var9 = var7 + "<br>" + "<col=" + Integer.toHexString(var6) + ">" + var8;
+          int var10 = 18;
           if (param1 != -33) {
-            discarded$0 = this.a((byte) -123, 67, 100, -110);
+            int[] discarded$0 = this.a((byte) -123, 67, 100, -110);
           }
-          var11 = var10 + this.field_n.field_j;
-          var12 = -var11 - var10 + (-param0.field_A + 640) / 2;
-          var13 = var4.b(var9, var12, 0);
-          var14 = this.field_n.field_k + (this.field_n.field_m - var13) / 2;
+          int var11 = var10 + this.field_n.field_j;
+          int var12 = -var11 - var10 + (-param0.fullWidth + 640) / 2;
+          int var13 = var4.b(var9, var12, 0);
+          int var14 = this.field_n.field_k + (this.field_n.field_m - var13) / 2;
           var4.a(var9, var11, var14, var12, var13, var5, -1, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("ta.FB(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var3;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("ta.FB(");
           if (param0 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -1155,18 +973,17 @@ final class ta {
         return -1;
     }
 
-    private final ed[] a(int param0, byte param1) {
-        int var6 = 0;
-        int var7 = EscapeVector.field_A;
+    private final Sprite[] a(int param0, byte param1) {
+        int var7 = EscapeVector.obfuscationControl;
         int[] var8 = this.field_x[param0];
         int[] var3 = var8;
-        ed[] var4 = new ed[var8.length];
+        Sprite[] var4 = new Sprite[var8.length];
         int var5 = 0;
         if (param1 >= -28) {
-          return (ed[]) null;
+          return (Sprite[]) null;
         }
         while (var5 < var4.length) {
-          var6 = var8[var5];
+          int var6 = var8[var5];
           var4[var5] = this.f(-4343, var6);
           var5++;
         }
@@ -1174,36 +991,24 @@ final class ta {
     }
 
     private final int[] a(int[] param0, byte param1, int param2) {
-        int[] var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] stackIn_5_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5Lifetime1;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
-          var9 = new int[param0.length];
-          var4 = var9;
-          for (var5 = 0; param0.length > var5; var5++) {
-            var6 = param0[var5];
-            var7 = param2 * var6;
+          int[] var9 = new int[param0.length];
+          int[] var4 = var9;
+          for (int var5 = 0; param0.length > var5; var5++) {
+            int var6 = param0[var5];
+            int var7 = param2 * var6;
             var9[var5] = var7;
           }
-          var5Lifetime1 = -7 % ((61 - param1) / 36);
-          stackIn_5_0 = var4;
+          int var5Lifetime1 = -7 % ((61 - param1) / 36);
+          int[] stackIn_5_0 = var4;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_8_0 = var4_ref;
-          stackIn_8_1 = new StringBuilder().append("ta.RA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var4_ref;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("ta.RA(");
           if (param0 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -1222,7 +1027,7 @@ final class ta {
     }
 
     final void i(int param0) {
-        em.d();
+        SoftwareRasterizer.d();
         od.b(2);
         pb.a(4);
         if (param0 != 3) {
@@ -1234,15 +1039,14 @@ final class ta {
     }
 
     private final int[] b(int param0, int param1, int param2) {
-        int var6 = 0;
-        int var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         int[] var4 = new int[param1];
         int var5 = 0;
         if (param0 != 22387) {
           this.f((byte) 26);
         }
         while (var5 < param1) {
-          var6 = param2 / param1;
+          int var6 = param2 / param1;
           if (0 == var5) {
             var6 = var6 + param2 % param1;
           }
@@ -1253,24 +1057,19 @@ final class ta {
     }
 
     private final void a(byte param0) {
-        int var4 = 0;
-        int var5 = 0;
-        int[] array$0 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         int[] var2 = this.b(param0 ^ -105);
         this.field_x = new int[this.field_y][];
         int var3 = 0;
         if (param0 != -105) {
           this.g((byte) -10);
         }
-        for (var4 = 0; this.field_y > var4; var4++) {
-          var5 = this.field_u[var4];
-          array$0 = new int[var5];
+        for (int var4 = 0; this.field_y > var4; var4++) {
+          int var5 = this.field_u[var4];
+          int[] array$0 = new int[var5];
           this.field_x[var4] = array$0;
-          for (var6 = 0; var6 < var5; var6++) {
-            var7 = var2[var3++];
+          for (int var6 = 0; var6 < var5; var6++) {
+            int var7 = var2[var3++];
             this.field_x[var4][var6] = var7;
           }
         }
@@ -1295,7 +1094,6 @@ final class ta {
     }
 
     private final void a(int param0, dk param1) {
-        int var4 = 0;
         if (param1 == null) {
           return;
         }
@@ -1304,7 +1102,7 @@ final class ta {
           return;
         }
         try {
-          var4 = nk.a(-87, param1);
+          int var4 = nk.a(-87, param1);
           rk.field_e.a(pc.field_a, 100, qm.field_c * 6144 / param0, var4);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ta.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -1324,8 +1122,8 @@ final class ta {
         return var3;
     }
 
-    private final ed f(int param0, int param1) {
-        ed var3 = hn.field_c;
+    private final Sprite f(int param0, int param1) {
+        Sprite var3 = hn.field_c;
         if (this.a(param1, param0 ^ -2295)) {
           var3 = ce.field_f.b(param1, 117);
         }
@@ -1339,16 +1137,11 @@ final class ta {
     }
 
     private final boolean a(int param0, int param1) {
-        int var4 = 0;
-        int[] var3;
-        int var5;
-        int var6;
-        int[] var7;
-        var6 = EscapeVector.field_A;
-        var7 = this.field_l;
-        var3 = var7;
-        for (var4 = 0; var4 < var7.length; var4++) {
-          var5 = var7[var4];
+        int var6 = EscapeVector.obfuscationControl;
+        int[] var7 = this.field_l;
+        int[] var3 = var7;
+        for (int var4 = 0; var4 < var7.length; var4++) {
+          int var5 = var7[var4];
           if (~param0 == ~var5) {
             return true;
           }
@@ -1361,40 +1154,29 @@ final class ta {
     }
 
     private final int a(ih param0, int param1, int param2, int param3, int param4, int param5) {
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_5_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!aj.b(-122)) {
             this.field_j = -1;
             this.field_f = null;
-            stackIn_3_0 = param5;
+            int stackIn_3_0 = param5;
             return stackIn_3_0;
           }
-          var7_int = 3;
-          var8 = cn.field_e;
-          var9 = ic.a(var8, 16777215, param0);
+          int var7_int = 3;
+          String var8 = IntrusiveDeque.field_e;
+          int var9 = ic.a(var8, 16777215, param0);
           this.field_f = new dk(var7_int, param5, var8, param2, param3, param0);
-          var10 = (640 - var9) / 2;
-          var11 = -57 / ((param1 - 65) / 52);
+          int var10 = (640 - var9) / 2;
+          int var11 = -57 / ((param1 - 65) / 52);
           this.field_f.b((byte) 13, var10, param4);
           this.field_j = param5;
-          stackIn_5_0 = this.field_j + 1;
+          int stackIn_5_0 = this.field_j + 1;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_8_0 = var7;
-          stackIn_8_1 = new StringBuilder().append("ta.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var7;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("ta.G(");
           if (param0 == null) {
             stackIn_9_2 = "null";
           } else {

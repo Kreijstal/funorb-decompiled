@@ -12,33 +12,22 @@ class hc extends hm {
 
     final static boolean a(boolean param0, java.applet.Applet param1) {
         try {
-          int var5 = 0;
-          String var2 = null;
-          String var3 = null;
-          String[] var4 = null;
-          int var6 = 0;
-          int var7 = 0;
-          boolean stackIn_19_0 = false;
-          RuntimeException stackIn_22_0 = null;
-          StringBuilder stackIn_22_1 = null;
           String stackIn_23_2 = null;
           Throwable decompiledCaughtException = null;
-          Throwable var2_ref = null;
-          RuntimeException var2_ref2 = null;
-          var7 = EscapeVector.field_A;
+          int var7 = EscapeVector.obfuscationControl;
           try {
             if (an.field_a) {
               return true;
             }
             try {
-              var2 = "tuhstatbut";
+              String var2 = "tuhstatbut";
               if (param0) {
                 return false;
               }
-              var3 = (String) (sd.a(param1, "getcookies", -29155));
-              var4 = bb.a(-128, var3, ';');
-              for (var5 = 0; var4.length > var5; var5++) {
-                var6 = var4[var5].indexOf('=');
+              String var3 = (String) (sd.a(param1, "getcookies", -29155));
+              String[] var4 = bb.a(-128, var3, ';');
+              for (int var5 = 0; var4.length > var5; var5++) {
+                int var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
                   var4[var5].substring(0, var6).trim().equals(var2)) {
                   return true;
@@ -46,15 +35,15 @@ class hc extends hm {
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = decompiledCaughtException;
+              Throwable var2_ref = decompiledCaughtException;
             }
-            stackIn_19_0 = (null != param1.getParameter("tuhstatbut"));
+            boolean stackIn_19_0 = (null != param1.getParameter("tuhstatbut"));
             return stackIn_19_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_22_0 = var2_ref2;
-            stackIn_22_1 = new StringBuilder().append("hc.IA(").append(param0).append(',');
+            RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_22_0 = var2_ref2;
+            StringBuilder stackIn_22_1 = new StringBuilder().append("hc.IA(").append(param0).append(',');
             if (param1 == null) {
               stackIn_23_2 = "null";
             } else {
@@ -70,11 +59,7 @@ class hc extends hm {
     }
 
     boolean a(hm param0, char param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param3 <= 0) {
             this.h(-2);
@@ -86,10 +71,10 @@ class hc extends hm {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_12_0 = var5;
-          stackIn_12_1 = new StringBuilder().append("hc.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var5;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("hc.G(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -134,11 +119,7 @@ class hc extends hm {
     }
 
     boolean a(int param0, hm param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_y &&
             this.field_A) {
@@ -155,10 +136,10 @@ class hc extends hm {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_14_0 = var3;
-          stackIn_14_1 = new StringBuilder().append("hc.M(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var3;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("hc.M(").append(param0).append(',');
           if (param1 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -206,44 +187,35 @@ class hc extends hm {
     }
 
     final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        RuntimeException var5 = null;
-        hm var6 = null;
-        StringBuilder stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            var6 = (hm) null;
+            hm var6 = (hm) null;
             this.a(-48, 8, (byte) 115, -28, 107, (hm) null, -53);
           }
           if (this.a(param3, param1, param2, false)) {
             this.a(param1, param2, param3, 1);
             if (this.field_z) {
-              discarded$2 = param2.append(" active");
+              StringBuilder discarded$2 = param2.append(" active");
             }
             if (!this.field_y) {
-              discarded$3 = param2.append(" disabled");
+              StringBuilder discarded$3 = param2.append(" disabled");
             }
           }
-          stackIn_10_0 = (StringBuilder) (param2);
+          StringBuilder stackIn_10_0 = (StringBuilder) (param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("hc.AA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var5;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("hc.AA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
           if (param2 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -302,11 +274,7 @@ class hc extends hm {
     }
 
     boolean a(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {
-        RuntimeException var8 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_y &&
             this.a(param1, param3, param4, (byte) 83, param0)) {
@@ -325,10 +293,10 @@ class hc extends hm {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_14_0 = var8;
-          stackIn_14_1 = new StringBuilder().append("hc.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var8;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("hc.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_15_2 = "null";
           } else {

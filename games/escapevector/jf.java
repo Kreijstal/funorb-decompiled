@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jf extends bj implements sg, qb {
-    static ed field_H;
+    static Sprite field_H;
     static String field_M;
     static int field_J;
     static String field_K;
@@ -36,18 +36,13 @@ final class jf extends bj implements sg, qb {
 
     jf(qc param0) {
         super(0, 0, 288, 0, (db) null);
-        String var7 = null;
-        int var3 = 0;
-        k var4 = null;
-        int var5 = 0;
-        int var6 = 0;
         try {
           this.field_G = param0;
           this.field_N = new hc(bm.field_d, (wn) null);
           this.field_N.field_s = (db) ((Object) new ck());
-          var7 = r.a(mh.field_c, -63, new String[]{this.k(-102), this.a((byte) 126)});
-          var3 = 20;
-          var4 = new k(sb.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, sb.field_a.field_r, -1, 2147483647, true);
+          String var7 = r.a(mh.field_c, -63, new String[]{this.k(-102), this.a((byte) 126)});
+          int var3 = 20;
+          k var4 = new k(sb.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, sb.field_a.field_r, -1, 2147483647, true);
           this.field_L = new ue(var7, var4);
           this.field_L.field_i = "";
           this.field_L.a(ah.field_m, (byte) 102, 0);
@@ -57,8 +52,8 @@ final class jf extends bj implements sg, qb {
           this.field_L.b(2463, 26, -40 + this.field_g, var3);
           var3 = var3 + (15 + this.field_L.field_x);
           this.b(this.field_L, false);
-          var5 = 4;
-          var6 = 200;
+          int var5 = 4;
+          int var6 = 200;
           this.field_N.a(var6, var3, -var6 + 300 >> 1, true, 40);
           this.field_N.field_q = (wn) (this);
           this.b(this.field_N, false);
@@ -77,35 +72,26 @@ final class jf extends bj implements sg, qb {
     }
 
     public final void a(int param0, ue param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         try {
-          if (param2 != 0) {
-            if (1 != param2) {
-              if (param2 == 2) {
-                qd.a(12, "conduct.ws");
-              }
-            } else {
-              qd.a(12, "privacy.ws");
-            }
-          } else {
+          if (param2 == 0) {
             qd.a(param0 ^ -2849, "terms.ws");
+          } else if (1 == param2) {
+            qd.a(12, "privacy.ws");
+          } else if (param2 == 2) {
+            qd.a(12, "conduct.ws");
           }
           if (param0 == -2861) {
             return;
           }
-          field_H = (ed) null;
+          field_H = (Sprite) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("jf.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var5;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("jf.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -116,13 +102,7 @@ final class jf extends bj implements sg, qb {
     }
 
     final boolean a(hm param0, char param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        boolean stackIn_9_0 = false;
-        boolean stackIn_13_0 = false;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1, param2, 18)) {
             return true;
@@ -131,19 +111,19 @@ final class jf extends bj implements sg, qb {
             return false;
           }
           if (98 == param2) {
-            stackIn_9_0 = this.a((byte) 22, param0);
+            boolean stackIn_9_0 = this.a((byte) 22, param0);
             return stackIn_9_0;
           }
           if (param2 != 99) {
             return false;
           }
-          stackIn_13_0 = this.a(param0, true);
+          boolean stackIn_13_0 = this.a(param0, true);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("jf.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var5;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("jf.G(");
           if (param0 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -161,15 +141,10 @@ final class jf extends bj implements sg, qb {
     }
 
     public final void a(hc param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var6 = null;
-        ue var7 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 1) {
-            var7 = (ue) null;
+            ue var7 = (ue) null;
             this.a(-113, (ue) null, -113, -16);
           }
           if (param0 != this.field_N) {
@@ -179,10 +154,10 @@ final class jf extends bj implements sg, qb {
           this.field_G.o(-18861);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_8_0 = var6;
-          stackIn_8_1 = new StringBuilder().append("jf.K(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var6;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("jf.K(");
           if (param0 == null) {
             stackIn_9_2 = "null";
           } else {

@@ -20,7 +20,7 @@ final class cm extends oa {
     final static void a(java.applet.Applet param0, int param1) {
         try {
           va.a("", -121, param0);
-          de.a(false, param0);
+          IntValueNode.a(false, param0);
           if (param1 != 21027) {
             java.applet.Applet var3 = (java.applet.Applet) null;
             cm.a((java.applet.Applet) null, 73);
@@ -31,29 +31,23 @@ final class cm extends oa {
     }
 
     final static int a(int param0, int param1, byte param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        java.applet.Applet var5 = null;
-        int stackIn_7_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         try {
           if (param2 != 96) {
-            var5 = (java.applet.Applet) null;
+            java.applet.Applet var5 = (java.applet.Applet) null;
             cm.a((java.applet.Applet) null, 108);
           }
-          var3_int = 0;
+          int var3_int = 0;
           while (param1 > 0) {
             var3_int = var3_int << 1 | param0 & 1;
             param1--;
             param0 = param0 >>> 1;
           }
-          stackIn_7_0 = var3_int;
+          int stackIn_7_0 = var3_int;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var3), "cm.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }

@@ -18,10 +18,9 @@ final class tg extends ol {
     }
 
     final static jh b(int param0, int param1) {
-        jh var2 = null;
         if (param1 >= 89) {
-          var2 = new jh();
-          bc.field_b.a(-12328, var2);
+          jh var2 = new jh();
+          bc.field_b.addLast(-12328, var2);
           km.a(param0, -22);
           return var2;
         }
@@ -33,25 +32,19 @@ final class tg extends ol {
     }
 
     final static boolean a(int param0, CharSequence param1) {
-        RuntimeException var2 = null;
-        CharSequence var3 = null;
-        boolean stackIn_3_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 51) {
-            var3 = (CharSequence) null;
+            CharSequence var3 = (CharSequence) null;
             tg.a(-9, (CharSequence) null);
           }
-          stackIn_3_0 = n.a(false, param1, 113);
+          boolean stackIn_3_0 = PacketBuffer.a(false, param1, 113);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("tg.I(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("tg.I(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {

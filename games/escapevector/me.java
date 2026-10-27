@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class me extends hg {
+final class me extends IntrusiveNode {
     static String[] field_o;
     private String[] field_i;
     private int field_q;
@@ -52,12 +52,11 @@ final class me extends hg {
     }
 
     final void a(ih param0, int param1, byte param2, int param3) {
-        int discarded$0 = 0;
         try {
           this.field_l = param0;
           this.field_r = param1;
           if (param2 > -25) {
-            discarded$0 = this.e(-42);
+            int discarded$0 = this.e(-42);
           }
           this.field_m = param3;
         } catch (RuntimeException runtimeException) {
@@ -75,8 +74,8 @@ final class me extends hg {
     }
 
     private final int a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var7 = param4 == param0 ? 1 : 0;
-        int var8 = var7 == 0 ? this.field_m : this.field_r;
+        boolean var7 = (param4 == param0);
+        int var8 = (!(var7)) ? this.field_m : this.field_r;
         if (null != this.field_i[param4]) {
           this.field_l.a(this.field_i[param4], param2, param3, var8, -1);
         }
@@ -107,31 +106,19 @@ final class me extends hg {
     }
 
     private final void a(int param0, boolean param1, boolean[] param2) {
-        int discarded$1 = 0;
-        int var8 = 0;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var10 = EscapeVector.field_A;
+        int var10 = EscapeVector.obfuscationControl;
         try {
-          var4_int = this.field_k;
-          var5 = this.g(2);
-          var6 = this.f(-1);
-          var7 = var5 + (this.field_j + uc.a(-1, this.field_l));
+          int var4_int = this.field_k;
+          int var5 = this.g(2);
+          int var6 = this.f(-1);
+          int var7 = var5 + (this.field_j + uc.a(-1, this.field_l));
           if (!param1) {
-            discarded$1 = this.d((byte) 22);
+            int discarded$1 = this.d((byte) 22);
           }
-          for (var8 = 0; var8 < this.field_i.length; var8++) {
-            var9 = param2[var8] ? 1 : 0;
-            if (var9 != 0) {
+          for (int var8 = 0; var8 < this.field_i.length; var8++) {
+            boolean var9 = (param2[var8]);
+            if (var9) {
               var7 = this.a(param0, var6, var4_int, var7, var8, -17751);
             } else {
               var7 = var7 + var6;
@@ -139,10 +126,10 @@ final class me extends hg {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_12_0 = var4;
-          stackIn_12_1 = new StringBuilder().append("me.N(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var4;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("me.N(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -161,11 +148,7 @@ final class me extends hg {
     }
 
     final void a(int param0, boolean[] param1, byte param2) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 48) {
             return;
@@ -179,10 +162,10 @@ final class me extends hg {
           this.a(-6131, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_11_0 = runtimeException;
-          stackIn_11_1 = new StringBuilder().append("me.P(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = runtimeException;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("me.P(").append(param0).append(',');
           if (param1 == null) {
             stackIn_12_2 = "null";
           } else {
@@ -193,7 +176,6 @@ final class me extends hg {
     }
 
     final int e(byte param0) {
-        int discarded$0 = 0;
         if (0 == this.field_q) {
           return this.a((byte) -65);
         }
@@ -201,7 +183,7 @@ final class me extends hg {
           return this.i(param0 - 280);
         }
         if (param0 != -127) {
-          discarded$0 = this.g(21);
+          int discarded$0 = this.g(21);
         }
         if (this.field_q == 2) {
           return this.g((byte) -124);
@@ -234,24 +216,17 @@ final class me extends hg {
         int var3 = this.field_j - (-2 - uc.a(-1, this.field_l));
         this.field_l.a(this.field_h, var2, var3, this.field_m, -1);
         int var4 = this.field_l.b(this.field_h);
-        em.a(var2, var3, var4, 2, this.field_m);
+        SoftwareRasterizer.a(var2, var3, var4, 2, this.field_m);
     }
 
     private final int g(byte param0) {
-        int var5 = 0;
-        int var2;
-        String[] var3;
-        int var4;
-        String var6;
-        int var7;
-        int var8;
-        var8 = EscapeVector.field_A;
-        var2 = 0;
-        var4 = -23 % ((-68 - param0) / 56);
-        var3 = this.field_i;
-        for (var5 = 0; var3.length > var5; var5++) {
-          var6 = var3[var5];
-          var7 = this.field_l.b(var6);
+        int var8 = EscapeVector.obfuscationControl;
+        int var2 = 0;
+        int var4 = -23 % ((-68 - param0) / 56);
+        String[] var3 = this.field_i;
+        for (int var5 = 0; var3.length > var5; var5++) {
+          String var6 = var3[var5];
+          int var7 = this.field_l.b(var6);
           if (var2 < var7) {
             var2 = var7;
           }
@@ -260,23 +235,17 @@ final class me extends hg {
     }
 
     private final int d(byte param0) {
-        int var3 = 0;
-        int discarded$0 = 0;
-        int var2;
-        int var4;
-        int var5;
-        int var6;
-        var6 = EscapeVector.field_A;
-        var2 = 0;
-        for (var3 = 0; var3 <= 9; var3++) {
-          var4 = Character.forDigit(var3, 10);
-          var5 = this.field_l.a((char) var4);
+        int var6 = EscapeVector.obfuscationControl;
+        int var2 = 0;
+        for (int var3 = 0; var3 <= 9; var3++) {
+          int var4 = Character.forDigit(var3, 10);
+          int var5 = this.field_l.a((char) var4);
           if (var5 > var2) {
             var2 = var5;
           }
         }
         if (param0 <= 92) {
-          discarded$0 = this.e(7);
+          int discarded$0 = this.e(7);
         }
         return var2;
     }
@@ -294,15 +263,14 @@ final class me extends hg {
     }
 
     private final void b(int param0, int param1) {
-        int discarded$0 = 0;
-        int var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         int var3 = this.field_k;
         int var4 = this.g(2);
         int var5 = this.f(-1);
         int var6 = var4 + this.field_j + uc.a(-1, this.field_l);
         int var7 = 0;
         if (param0 != 3) {
-          discarded$0 = this.a(-111, -60, -104, -15, 22, -100);
+          int discarded$0 = this.a(-111, -60, -104, -15, 22, -100);
         }
         while (this.field_i.length > var7) {
           var6 = this.a(param1, var5, var3, var6, var7, -17751);
@@ -311,10 +279,9 @@ final class me extends hg {
     }
 
     private final int d(int param0) {
-        int discarded$0 = 0;
         int var2 = 32;
         if (param0 != -3987) {
-          discarded$0 = this.i(-81);
+          int discarded$0 = this.i(-81);
         }
         int var3 = this.field_l.a((char) var2);
         return var3 * 2;
@@ -341,16 +308,13 @@ final class me extends hg {
     }
 
     me(int param0) {
-        int var3 = 0;
-        int var4 = 0;
-        String var5 = null;
         this.field_s = param0;
         this.field_q = 0;
         this.field_i = new String[this.field_s];
         String var2 = ".";
-        for (var3 = 0; this.field_s > var3; var3++) {
-          var4 = 1 + var3;
-          var5 = Integer.toString(var4) + var2;
+        for (int var3 = 0; this.field_s > var3; var3++) {
+          int var4 = 1 + var3;
+          String var5 = Integer.toString(var4) + var2;
           this.field_i[var3] = var5;
         }
     }
@@ -370,24 +334,16 @@ final class me extends hg {
     }
 
     me(String param0, int[] param1) {
-        int var3_int = 0;
-        int var4 = 0;
-        Object var5 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           this.field_q = 3;
           this.field_h = param0;
           this.field_s = param1.length;
           this.field_i = new String[this.field_s];
-          for (var3_int = 0; var3_int < this.field_s; var3_int++) {
-            var4 = param1[var3_int];
-            var5 = Integer.toString(var4);
+          for (int var3_int = 0; var3_int < this.field_s; var3_int++) {
+            int var4 = param1[var3_int];
+            Object var5 = Integer.toString(var4);
             if (var4 < 0) {
               var5 = null;
             }
@@ -395,16 +351,16 @@ final class me extends hg {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("me.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var3;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("me.<init>(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";
           } else {

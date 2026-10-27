@@ -17,21 +17,17 @@ final class ra implements com.ms.directX.IEnumModesCallback {
     }
 
     public final void callbackEnumModes(com.ms.directX.DDSurfaceDesc param0, com.ms.com.IUnknown param1) {
-        int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
         if (field_a != null) {
-          fieldTemp$1 = field_c;
+          int fieldTemp$1 = field_c;
           field_c = field_c + 1;
           field_a[fieldTemp$1] = param0.width;
-          fieldTemp$2 = field_c;
+          int fieldTemp$2 = field_c;
           field_c = field_c + 1;
           field_a[fieldTemp$2] = param0.height;
-          fieldTemp$3 = field_c;
+          int fieldTemp$3 = field_c;
           field_c = field_c + 1;
           field_a[fieldTemp$3] = param0.rgbBitCount;
-          fieldTemp$4 = field_c;
+          int fieldTemp$4 = field_c;
           field_c = field_c + 1;
           field_a[fieldTemp$4] = param0.refreshRate;
         } else {
@@ -56,17 +52,13 @@ final class ra implements com.ms.directX.IEnumModesCallback {
     }
 
     final int[] a(int param0) {
-        int[] var3 = null;
-        int[] var2 = null;
-        int[] var3Lifetime1;
-        int[] var2Lifetime1;
         if (param0 == -2147483648) {
           this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
           field_a = new int[field_c];
           field_c = 0;
           this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-          var3 = field_a;
-          var2 = var3;
+          int[] var3 = field_a;
+          int[] var2 = var3;
           field_a = null;
           field_c = 0;
           return var3;
@@ -76,8 +68,8 @@ final class ra implements com.ms.directX.IEnumModesCallback {
         field_a = new int[field_c];
         field_c = 0;
         this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-        var3Lifetime1 = field_a;
-        var2Lifetime1 = var3Lifetime1;
+        int[] var3Lifetime1 = field_a;
+        int[] var2Lifetime1 = var3Lifetime1;
         field_a = null;
         field_c = 0;
         return var3Lifetime1;

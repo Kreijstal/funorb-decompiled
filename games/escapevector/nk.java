@@ -10,71 +10,54 @@ final class nk extends ah {
     static String field_r;
 
     final String a(byte param0, String param1) {
-        RuntimeException var3 = null;
-        String var4 = null;
-        String var5 = null;
-        int var6 = 0;
-        String var7 = null;
-        String stackIn_6_0 = null;
-        String stackIn_10_0 = null;
-        String stackIn_14_0 = null;
-        String stackIn_17_0 = null;
-        String stackIn_22_0 = null;
-        String stackIn_26_0 = null;
-        String stackIn_29_0 = null;
-        String stackIn_31_0 = null;
-        String stackIn_33_0 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
         String stackIn_37_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var7 = this.field_q.field_l.toLowerCase();
-          var4 = param1.toLowerCase();
+          String var7 = this.field_q.field_l.toLowerCase();
+          String var4 = param1.toLowerCase();
           if (0 == var4.length()) {
             return null;
           }
-          var5 = var4;
+          String var5 = var4;
           if (ol.a((byte) -7, var5)) {
-            stackIn_6_0 = vc.field_e;
+            String stackIn_6_0 = TerrainMap.field_e;
             return stackIn_6_0;
           }
           if (lb.b((byte) -78, var5)) {
-            stackIn_10_0 = gn.field_b;
+            String stackIn_10_0 = gn.field_b;
             return stackIn_10_0;
           }
           if (aa.a(1, var5)) {
-            stackIn_14_0 = n.field_j;
+            String stackIn_14_0 = PacketBuffer.field_j;
             return stackIn_14_0;
           }
-          var6 = 78 / ((param0 - 10) / 51);
+          int var6 = 78 / ((param0 - 10) / 51);
           if (this.b((byte) 53, param1)) {
-            stackIn_17_0 = bg.field_b;
+            String stackIn_17_0 = bg.field_b;
             return stackIn_17_0;
           }
           if (var7.length() <= 0) {
-            stackIn_33_0 = ml.field_b;
+            String stackIn_33_0 = ml.field_b;
             return stackIn_33_0;
           }
           if (lg.a(0, var5, var7)) {
-            stackIn_22_0 = cn.field_b;
+            String stackIn_22_0 = IntrusiveDeque.field_b;
             return stackIn_22_0;
           }
           if (lf.a(var5, (byte) 37, var7)) {
-            stackIn_26_0 = kk.field_a;
+            String stackIn_26_0 = kk.field_a;
             return stackIn_26_0;
           }
           if (!pi.a(-115, var5, var7)) {
-            stackIn_31_0 = vc.field_e;
+            String stackIn_31_0 = TerrainMap.field_e;
             return stackIn_31_0;
           }
-          stackIn_29_0 = cn.field_b;
+          String stackIn_29_0 = IntrusiveDeque.field_b;
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_36_0 = var3;
-          stackIn_36_1 = new StringBuilder().append("nk.L(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_36_0 = var3;
+          StringBuilder stackIn_36_1 = new StringBuilder().append("nk.L(").append(param0).append(',');
           if (param1 == null) {
             stackIn_37_2 = "null";
           } else {
@@ -96,34 +79,24 @@ final class nk extends ah {
     }
 
     private final boolean b(byte param0, String param1) {
-        String var3 = null;
-        RuntimeException var3_ref = null;
-        String var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        boolean stackIn_13_0 = false;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 53) {
             field_s = (String) null;
           }
-          var3 = this.field_o.field_l.toLowerCase();
-          var4 = param1.toLowerCase();
+          String var3 = this.field_o.field_l.toLowerCase();
+          String var4 = param1.toLowerCase();
           if (var3.length() > 0) {
             if (0 >= var4.length()) {
               return false;
             }
-            var5 = var3.lastIndexOf("@");
+            int var5 = var3.lastIndexOf("@");
             if (var5 >= 0 &&
               var5 < var3.length() - 1) {
-              var6 = var3.substring(0, var5);
-              var7 = var3.substring(1 + var5);
+              String var6 = var3.substring(0, var5);
+              String var7 = var3.substring(1 + var5);
               if (0 > var4.indexOf(var6)) {
-                stackIn_13_0 = (0 <= var4.indexOf(var7));
+                boolean stackIn_13_0 = (0 <= var4.indexOf(var7));
                 return stackIn_13_0;
               }
               return true;
@@ -131,10 +104,10 @@ final class nk extends ah {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_18_0 = var3_ref;
-          stackIn_18_1 = new StringBuilder().append("nk.H(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var3_ref;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("nk.H(").append(param0).append(',');
           if (param1 == null) {
             stackIn_19_2 = "null";
           } else {
@@ -145,30 +118,23 @@ final class nk extends ah {
     }
 
     final static int a(int param0, dk param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            stackIn_2_0 = 8192;
+            int stackIn_2_0 = 8192;
             return stackIn_2_0;
           }
-          var2_int = param1.field_f + param1.field_p / 2;
+          int var2_int = param1.field_f + param1.field_p / 2;
           if (param0 >= -83) {
             field_p = (mf) null;
           }
-          stackIn_6_0 = var2_int * 16384 / 640;
+          int stackIn_6_0 = var2_int * 16384 / 640;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_9_0 = var2;
-          stackIn_9_1 = new StringBuilder().append("nk.I(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var2;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("nk.I(").append(param0).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -179,37 +145,28 @@ final class nk extends ah {
     }
 
     final rf a(int param0, String param1) {
-        String var3 = null;
-        RuntimeException var3_ref = null;
-        String var4 = null;
-        rf stackIn_2_0 = null;
-        rf stackIn_5_0 = null;
-        rf stackIn_9_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_q.field_l.toLowerCase();
-          var4 = param1.toLowerCase();
+          String var3 = this.field_q.field_l.toLowerCase();
+          String var4 = param1.toLowerCase();
           if (param0 == ~var4.length()) {
-            stackIn_2_0 = ob.field_a;
+            rf stackIn_2_0 = ob.field_a;
             return stackIn_2_0;
           }
           if (!hd.a(var4, false, var3)) {
-            stackIn_5_0 = ob.field_a;
+            rf stackIn_5_0 = ob.field_a;
             return stackIn_5_0;
           }
           if (!this.b((byte) 53, param1)) {
             return df.field_h;
           }
-          stackIn_9_0 = ob.field_a;
+          rf stackIn_9_0 = ob.field_a;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_12_0 = var3_ref;
-          stackIn_12_1 = new StringBuilder().append("nk.G(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var3_ref;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("nk.G(").append(param0).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";
           } else {

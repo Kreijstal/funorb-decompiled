@@ -31,28 +31,22 @@ final class pc {
     }
 
     final static String a(int param0, CharSequence param1) {
-        String var2 = null;
-        RuntimeException var2_ref = null;
-        String stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
             field_a = (hh) null;
           }
-          var2 = jb.a(vn.a((byte) 122, param1), (byte) 29);
+          String var2 = jb.a(vn.a((byte) 122, param1), (byte) 29);
           if (var2 == null) {
             var2 = "";
           }
-          stackIn_6_0 = var2;
+          String stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_9_0 = var2_ref;
-          stackIn_9_1 = new StringBuilder().append("pc.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var2_ref;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("pc.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -63,8 +57,6 @@ final class pc {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var2Lifetime1;
         if (param1 < 0) {
           return 0;
         }
@@ -72,11 +64,11 @@ final class pc {
           return 0;
         }
         if (param0 == 2513) {
-          var2 = fh.field_c[param1].length;
+          int var2 = fh.field_c[param1].length;
           return var2;
         }
         field_c = (int[]) null;
-        var2Lifetime1 = fh.field_c[param1].length;
+        int var2Lifetime1 = fh.field_c[param1].length;
         return var2Lifetime1;
     }
 

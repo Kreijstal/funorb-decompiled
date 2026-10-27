@@ -15,51 +15,41 @@ final class nm {
     }
 
     final static ce a(int param0, String param1, ec param2, mf param3, String param4) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        ce stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 2) {
             field_a = (hh) null;
           }
-          var5_int = param3.b(-1, param1);
-          var6 = param3.a(var5_int, param4, true);
-          stackIn_3_0 = ml.a(param0 ^ -15620, param3, param2, var6, var5_int);
+          int var5_int = param3.b(-1, param1);
+          int var6 = param3.a(var5_int, param4, true);
+          ce stackIn_3_0 = ml.a(param0 ^ -15620, param3, param2, var6, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_6_0 = var5;
-          stackIn_6_1 = new StringBuilder().append("nm.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var5;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("nm.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (param2 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
           if (param3 == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
           if (param4 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -117,35 +107,26 @@ final class nm {
     }
 
     final static boolean a(byte param0, qh[] param1) {
-        int var3 = 0;
-        int var2_int = 0;
-        ed var4 = null;
-        int var5 = 0;
-        int stackIn_11_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         try {
-          var2_int = 1;
+          boolean var2_int = true;
           if (param0 > -71) {
             field_a = (hh) null;
           }
-          for (var3 = 0; var3 < param1.length; var3++) {
-            var4 = param1[var3].b(110);
+          for (int var3 = 0; var3 < param1.length; var3++) {
+            Sprite var4 = param1[var3].b(110);
             if (var4 == null) {
-              var2_int = 0;
+              var2_int = false;
             }
           }
-          stackIn_11_0 = var2_int;
-          return stackIn_11_0 != 0;
+          boolean stackIn_11_0 = var2_int;
+          return (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_14_0 = var2;
-          stackIn_14_1 = new StringBuilder().append("nm.F(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var2;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("nm.F(").append(param0).append(',');
           if (param1 == null) {
             stackIn_15_2 = "null";
           } else {

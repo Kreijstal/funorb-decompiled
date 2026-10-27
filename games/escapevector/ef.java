@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ef {
-    ed field_g;
+    Sprite field_g;
     private boolean field_j;
     static String[] field_c;
     private int field_f;
     private int field_e;
-    ed[] field_i;
+    Sprite[] field_i;
     static String field_k;
     static int field_d;
     private int field_a;
@@ -62,18 +62,11 @@ final class ef {
     }
 
     final void a(int param0, ef param1, hm param2, int param3, int param4, he param5) {
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
-        RuntimeException var7 = null;
         try {
-          var7_int = -58 / ((param4 + 32) / 47);
+          int var7_int = -58 / ((param4 + 32) / 47);
           if (this.field_j) {
             param1.a(param5, param2, param0, param3, (byte) 124);
             param1.a(true);
@@ -102,22 +95,22 @@ final class ef {
           param1.field_e = this.field_e;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_20_0 = var7;
-          stackIn_20_1 = new StringBuilder().append("ef.K(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_20_0 = var7;
+          StringBuilder stackIn_20_1 = new StringBuilder().append("ef.K(").append(param0).append(',');
           if (param1 == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
+          StringBuilder stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
           if (param2 == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(',');
+          StringBuilder stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_27_2 = "null";
           } else {
@@ -138,80 +131,64 @@ final class ef {
     final ef a(int param0, boolean param1) {
         this.field_j = param1 ? true : false;
         if (param0 > -100) {
-          this.field_g = (ed) null;
+          this.field_g = (Sprite) null;
           return this;
         }
         return this;
     }
 
     final void a(he param0, hm param1, int param2, int param3, byte param4) {
-        wl stackIn_20_0 = null;
-        String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
-        int stackIn_23_2 = 0;
         int stackIn_24_3 = 0;
-        int stackIn_26_3;
-        int stackIn_26_4;
-        int stackIn_26_5;
-        int stackIn_26_6;
-        int stackIn_26_7;
         int stackIn_27_8;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
-        StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        String var6 = null;
-        RuntimeException var6_ref = null;
-        int var7 = 0;
         try {
           if (param4 < 0) {
-            this.field_g = (ed) null;
+            this.field_g = (Sprite) null;
           }
           ld.a(param1.field_x, this.field_i, 4, param3 + param1.field_j, param2 + param1.field_k, param1.field_g);
           if (null != this.field_g) {
-            var6_int = param2 - (-param1.field_k - this.field_h);
+            int var6_int = param2 - (-param1.field_k - this.field_h);
             if (param0.field_m == 1) {
-              var6_int = var6_int + (param1.field_g - this.field_g.field_A) / 2;
+              var6_int = var6_int + (param1.field_g - this.field_g.fullWidth) / 2;
             }
-            var7 = this.field_f + param1.field_j + param3;
+            int var7 = this.field_f + param1.field_j + param3;
             if (param0.field_c == 1) {
-              var7 = var7 + (-this.field_g.field_z + param1.field_x) / 2;
+              var7 = var7 + (-this.field_g.fullHeight + param1.field_x) / 2;
             }
             if (param0.field_m == 2) {
-              var6_int = var6_int + (param1.field_g - this.field_g.field_A);
+              var6_int = var6_int + (param1.field_g - this.field_g.fullWidth);
             }
             if (param0.field_c == 2) {
-              var7 = var7 + (-this.field_g.field_z + param1.field_x);
+              var7 = var7 + (-this.field_g.fullHeight + param1.field_x);
             }
             this.field_g.e(var6_int, var7);
           }
-          var6 = param0.b((byte) 39, param1);
+          String var6 = param0.b((byte) 39, param1);
           if (var6 != null &&
             param0.field_l != null) {
             if (this.field_a < 0) {
               return;
             }
-            stackIn_20_0 = param0.field_l;
-            stackIn_20_1 = var6;
+            wl stackIn_20_0 = param0.field_l;
+            String stackIn_20_1 = var6;
             if (this.field_h == -2147483648) {
               stackIn_21_2 = 0;
             } else {
               stackIn_21_2 = this.field_h;
             }
-            stackIn_23_2 = stackIn_21_2 + (param2 + param1.field_k + param0.field_n);
+            int stackIn_23_2 = stackIn_21_2 + (param2 + param1.field_k + param0.field_n);
             if (this.field_f != -2147483648) {
               stackIn_24_3 = this.field_f;
             } else {
               stackIn_24_3 = 0;
             }
-            stackIn_26_3 = stackIn_24_3 + param0.field_f + (param1.field_j + param3);
-            stackIn_26_4 = -param0.field_n + param1.field_g - param0.field_b;
-            stackIn_26_5 = -param0.field_o - param0.field_f + param1.field_x;
-            stackIn_26_6 = this.field_a;
-            stackIn_26_7 = this.field_b;
+            int stackIn_26_3 = stackIn_24_3 + param0.field_f + (param1.field_j + param3);
+            int stackIn_26_4 = -param0.field_n + param1.field_g - param0.field_b;
+            int stackIn_26_5 = -param0.field_o - param0.field_f + param1.field_x;
+            int stackIn_26_6 = this.field_a;
+            int stackIn_26_7 = this.field_b;
             if (this.field_e != -2147483648) {
               stackIn_27_8 = this.field_e;
             } else {
@@ -221,16 +198,16 @@ final class ef {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_31_0 = var6_ref;
-          stackIn_31_1 = new StringBuilder().append("ef.H(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6_ref = decompiledCaughtException;
+          RuntimeException stackIn_31_0 = var6_ref;
+          StringBuilder stackIn_31_1 = new StringBuilder().append("ef.H(");
           if (param0 == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
           }
-          stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',');
+          StringBuilder stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',');
           if (param1 == null) {
             stackIn_35_2 = "null";
           } else {
@@ -240,25 +217,20 @@ final class ef {
         }
     }
 
-    final ef a(int param0, ed[] param1) {
-        RuntimeException var3 = null;
-        ef stackIn_2_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+    final ef a(int param0, Sprite[] param1) {
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           this.field_i = param1;
           if (param0 == 2) {
             return this;
           }
-          stackIn_2_0 = (ef) null;
+          ef stackIn_2_0 = (ef) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("ef.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var3;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("ef.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {

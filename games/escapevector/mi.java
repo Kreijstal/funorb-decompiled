@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends hg {
+final class mi extends IntrusiveNode {
     int[] field_p;
     int field_h;
     int field_i;
-    static cn field_l;
+    static IntrusiveDeque field_l;
     int field_r;
     int field_n;
     static String field_j;
@@ -13,7 +13,7 @@ final class mi extends hg {
     static int[] field_k;
     int field_o;
     static int field_g;
-    static ed[] field_m;
+    static Sprite[] field_m;
 
     final void a(int param0, byte param1, int param2, int param3, int param4, int param5, int[] param6, int param7) {
         if (param1 != 29) {
@@ -44,25 +44,19 @@ final class mi extends hg {
     }
 
     final static String a(byte[] param0, int param1) {
-        RuntimeException var2 = null;
-        String stackIn_2_0 = null;
-        String stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > 109) {
-            stackIn_4_0 = qi.a(param0.length, 0, param0, (byte) -109);
+            String stackIn_4_0 = qi.a(param0.length, 0, param0, (byte) -109);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (String) null;
+          String stackIn_2_0 = (String) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("mi.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var2;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("mi.B(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -77,7 +71,7 @@ final class mi extends hg {
         field_j = null;
         field_m = null;
         if (param0 <= 65) {
-          field_m = (ed[]) null;
+          field_m = (Sprite[]) null;
           field_k = null;
           return;
         }
@@ -89,6 +83,6 @@ final class mi extends hg {
 
     static {
         field_j = "You have <%0> unread messages!";
-        field_l = new cn();
+        field_l = new IntrusiveDeque();
     }
 }

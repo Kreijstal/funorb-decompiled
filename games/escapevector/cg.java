@@ -31,18 +31,14 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var7 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_4_0 = var7;
-          stackIn_4_1 = new StringBuilder().append("cg.imageUpdate(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var7;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("cg.imageUpdate(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {
@@ -154,39 +150,24 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static void c(int param0) {
-        int var7 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int[] var3 = null;
-        int[] var4 = null;
-        c var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        int[] var10 = null;
-        int[] var11 = null;
-        qd var12 = null;
-        jh var13 = null;
-        c var14 = null;
-        jh var15 = null;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
           if (param0 <= 68) {
             return;
           }
-          var14 = om.field_g;
-          var2 = var14.e(0);
+          c var14 = om.field_g;
+          int var2 = var14.readUnsignedByte(0);
           if (var2 == 0) {
-            var11 = v.a(-84);
-            var3 = var11;
-            var10 = var11;
-            var4 = var10;
-            var5 = var14;
-            var6 = ((n) ((Object) var5)).e(0);
-            for (var7 = 0; var6 > var7; var7++) {
-              var10[var7] = ((n) ((Object) var5)).g(-5053);
+            int[] var11 = v.a(-84);
+            int[] var3 = var11;
+            int[] var10 = var11;
+            int[] var4 = var10;
+            c var5 = var14;
+            int var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(0);
+            for (int var7 = 0; var6 > var7; var7++) {
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(-5053);
             }
-            var13 = (jh) (bc.field_b.a(false));
+            jh var13 = (jh) (bc.field_b.first(false));
             if (var13 == null) {
               nm.a(16);
               return;
@@ -194,16 +175,16 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
             var13.field_i = var3;
             var13.field_g = false;
             var13.field_h = true;
-            var13.c((byte) -86);
+            var13.unlink((byte) -86);
             return;
           }
           if (var2 == 1) {
-            var12 = (qd) (mi.field_l.a(false));
+            qd var12 = (qd) (mi.field_l.first(false));
             if (var12 == null) {
               nm.a(16);
               return;
             }
-            var12.c((byte) -64);
+            var12.unlink((byte) -64);
             return;
           }
           if (var2 != 2) {
@@ -211,7 +192,7 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
             nm.a(16);
             return;
           }
-          var15 = (jh) (bc.field_b.a(false));
+          jh var15 = (jh) (bc.field_b.first(false));
           if (var15 == null) {
             nm.a(16);
             return;
@@ -219,11 +200,11 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
           var15.field_i = v.a(-92);
           var15.field_g = true;
           var15.field_h = true;
-          var15.c((byte) -77);
+          var15.unlink((byte) -77);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "cg.J(" + param0 + ')');
         }
     }

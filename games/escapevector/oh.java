@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oh extends hg {
+final class oh extends IntrusiveNode {
     int field_l;
     static String field_p;
     int field_r;
@@ -17,18 +17,11 @@ final class oh extends hg {
     int field_j;
 
     final static void a(vj param0, boolean param1, int param2, boolean param3, byte param4) {
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        String var7 = null;
         try {
           rh.field_O[0] = gk.field_a.nextInt();
           rh.field_O[1] = gk.field_a.nextInt();
-          qj.field_a.field_m = 0;
+          qj.field_a.position = 0;
           rh.field_O[2] = (int)(va.field_b >> 32);
           rh.field_O[3] = (int)va.field_b;
           qj.field_a.a((byte) 126, rh.field_O[0]);
@@ -38,17 +31,17 @@ final class oh extends hg {
           jm.a(0, qj.field_a);
           qj.field_a.h(13, param2);
           param0.a(qj.field_a, (byte) -121);
-          om.field_c.field_m = 0;
+          om.field_c.position = 0;
           if (!param1) {
             om.field_c.f(16, -123);
           } else {
             om.field_c.f(18, -123);
           }
-          om.field_c.field_m = om.field_c.field_m + 2;
-          var5_int = om.field_c.field_m;
+          om.field_c.position = om.field_c.position + 2;
+          int var5_int = om.field_c.position;
           om.field_c.a((byte) 123, jm.field_L);
           om.field_c.a(ck.field_q, (byte) -23);
-          var6 = 0;
+          int var6 = 0;
           if (ej.field_d) {
             var6 = var6 | 1;
           }
@@ -62,7 +55,7 @@ final class oh extends hg {
             var6 = var6 | 16;
           }
           om.field_c.f(var6, param4 - 24);
-          var7 = tf.a(param4 ^ 98, oc.d((byte) -120));
+          String var7 = tf.a(param4 ^ 98, PointCloudEffect.d((byte) -120));
           if (var7 == null) {
             var7 = "";
           }
@@ -74,14 +67,14 @@ final class oh extends hg {
             om.field_c.a((byte) 100, p.field_i);
           }
           bn.a(param4 ^ -99, om.field_c, qj.field_a, q.field_O, cf.field_c);
-          om.field_c.i(-var5_int + om.field_c.field_m, 32614);
+          om.field_c.i(-var5_int + om.field_c.position, 32614);
           rn.a(-1, param4 + 30884);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_24_0 = var5;
-          stackIn_24_1 = new StringBuilder().append("oh.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_24_0 = var5;
+          StringBuilder stackIn_24_1 = new StringBuilder().append("oh.B(");
           if (param0 == null) {
             stackIn_25_2 = "null";
           } else {

@@ -47,7 +47,7 @@ final class ii {
         if (am.field_g <= 0) {
           return false;
         }
-        if (!g.i(90)) {
+        if (!NetworkGameClient.i(90)) {
           return true;
         }
         return false;

@@ -5,11 +5,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     static String field_a;
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (om.field_b == null) {
             return;
@@ -20,10 +16,10 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           ke.field_a = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("eg.mouseDragged(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("eg.mouseDragged(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -34,11 +30,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (null == om.field_b) {
             return;
@@ -49,10 +41,10 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           ke.field_a = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("eg.mouseExited(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("eg.mouseExited(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -63,11 +55,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final void mouseClicked(java.awt.event.MouseEvent param0) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!param0.isPopupTrigger()) {
             return;
@@ -75,10 +63,10 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           param0.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("eg.mouseClicked(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("eg.mouseClicked(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -88,31 +76,23 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static oc a(int param0, int param1, boolean param2, boolean param3, hh param4) {
-        oc var5 = null;
-        RuntimeException var5_ref = null;
-        oc stackIn_4_0 = null;
-        boolean stackIn_5_1 = false;
-        oc stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
+    final static PointCloudEffect a(int param0, int param1, boolean param2, boolean param3, hh param4) {
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new oc(param1, param0, param4);
+          PointCloudEffect var5 = new PointCloudEffect(param1, param0, param4);
           if (!param3) {
             field_a = (String) null;
           }
-          stackIn_4_0 = var5;
-          stackIn_5_1 = (param2);
+          PointCloudEffect stackIn_4_0 = var5;
+          boolean stackIn_5_1 = (param2);
           stackIn_4_0.field_q = stackIn_5_1;
-          stackIn_6_0 = var5;
+          PointCloudEffect stackIn_6_0 = var5;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = decompiledCaughtException;
-          stackIn_9_0 = var5_ref;
-          stackIn_9_1 = new StringBuilder().append("eg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var5_ref;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("eg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -123,11 +103,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (null == om.field_b) {
             return;
@@ -135,10 +111,10 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           vj.field_b = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("eg.focusLost(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("eg.focusLost(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -162,18 +138,13 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final synchronized void mouseReleased(java.awt.event.MouseEvent param0) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (om.field_b != null) {
             md.field_G = 0;
             vj.field_b = 0;
             ke.field_a = true;
-            var2_int = param0.getModifiers();
+            int var2_int = param0.getModifiers();
             if ((8 & var2_int) == 0) {
             }
             if ((4 & var2_int) != 0) {
@@ -187,10 +158,10 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           param0.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_9_0 = var2;
-          stackIn_9_1 = new StringBuilder().append("eg.mouseReleased(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var2;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("eg.mouseReleased(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -214,12 +185,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final synchronized void mousePressed(java.awt.event.MouseEvent param0) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (om.field_b != null) {
             md.field_G = 0;
@@ -233,7 +199,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               kb.field_f = 2;
               vj.field_b = 2;
             }
-            var2_int = param0.getModifiers();
+            int var2_int = param0.getModifiers();
             if ((var2_int & 4) == 0) {
             }
             if ((16 & var2_int) == 0) {
@@ -248,10 +214,10 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           param0.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_12_0 = var2;
-          stackIn_12_1 = new StringBuilder().append("eg.mousePressed(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var2;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("eg.mousePressed(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {

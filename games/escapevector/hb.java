@@ -6,23 +6,23 @@ import java.util.*;
 final class hb implements Iterator {
     private static int[] field_d;
     static int field_h;
-    static ed[][] field_b;
-    private hg field_g;
+    static Sprite[][] field_b;
+    private IntrusiveNode field_g;
     private int field_f;
     private qm field_e;
-    private hg field_c;
+    private IntrusiveNode field_c;
     static String field_a;
 
     public final void remove() {
         if (this.field_c == null) {
           throw new IllegalStateException();
         }
-        this.field_c.c((byte) -90);
+        this.field_c.unlink((byte) -90);
         this.field_c = null;
     }
 
     private final void a(byte param0) {
-        this.field_g = this.field_e.field_b[0].field_b;
+        this.field_g = this.field_e.field_b[0].next;
         this.field_c = null;
         if (param0 != -59) {
           this.hasNext();
@@ -31,9 +31,7 @@ final class hb implements Iterator {
     }
 
     public final boolean hasNext() {
-        int fieldTemp$0 = 0;
-        int var2;
-        var2 = EscapeVector.field_A;
+        int var2 = EscapeVector.obfuscationControl;
         if (this.field_g != this.field_e.field_b[-1 + this.field_f]) {
           return true;
         }
@@ -41,15 +39,15 @@ final class hb implements Iterator {
           if (this.field_e.field_g <= this.field_f) {
             return false;
           }
-          fieldTemp$0 = this.field_f;
+          int fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          if (this.field_e.field_b[fieldTemp$0].field_b == this.field_e.field_b[this.field_f - 1]) {
+          if (this.field_e.field_b[fieldTemp$0].next == this.field_e.field_b[this.field_f - 1]) {
             this.field_g = this.field_e.field_b[-1 + this.field_f];
             continue;
           }
           break;
         }
-        this.field_g = this.field_e.field_b[-1 + this.field_f].field_b;
+        this.field_g = this.field_e.field_b[-1 + this.field_f].next;
         return true;
     }
 
@@ -59,17 +57,15 @@ final class hb implements Iterator {
         if (param0) {
           hb.a(true);
         }
-        field_b = (ed[][]) null;
+        field_b = (Sprite[][]) null;
     }
 
     public final Object next() {
-        int fieldTemp$0 = 0;
-        hg var1;
-        int var2;
-        var2 = EscapeVector.field_A;
+        IntrusiveNode var1;
+        int var2 = EscapeVector.obfuscationControl;
         if (this.field_e.field_b[-1 + this.field_f] != this.field_g) {
           var1 = this.field_g;
-          this.field_g = var1.field_b;
+          this.field_g = var1.next;
           this.field_c = var1;
           return var1;
         }
@@ -77,12 +73,12 @@ final class hb implements Iterator {
           if (this.field_e.field_g <= this.field_f) {
             return null;
           }
-          fieldTemp$0 = this.field_f;
+          int fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          var1 = this.field_e.field_b[fieldTemp$0].field_b;
+          var1 = this.field_e.field_b[fieldTemp$0].next;
         } while (this.field_e.field_b[this.field_f - 1] == var1);
         this.field_c = var1;
-        this.field_g = var1.field_b;
+        this.field_g = var1.next;
         return var1;
     }
 
@@ -97,22 +93,16 @@ final class hb implements Iterator {
     }
 
     static {
-        int var0 = 0;
-        long var4 = 0L;
-        long var6 = 0L;
-        int var3 = 0;
-        int var2 = 0;
-        int var1 = 0;
         field_d = new int[98304];
-        for (var0 = 92682; var0 >= 46341; var0--) {
-          var4 = (long)((var0 << 1) - 1);
-          var6 = (long)((var0 << 1) + 1);
-          var3 = (int)((var6 * var6 >> 18) - 32768L);
-          var2 = (int)((var4 * var4 >> 18) - 32768L);
+        for (int var0 = 92682; var0 >= 46341; var0--) {
+          long var4 = (long)((var0 << 1) - 1);
+          long var6 = (long)((var0 << 1) + 1);
+          int var3 = (int)((var6 * var6 >> 18) - 32768L);
+          int var2 = (int)((var4 * var4 >> 18) - 32768L);
           if (!(field_d.length > var3)) {
             var3 = -1 + field_d.length;
           }
-          for (var1 = var2 < 0 ? 0 : var2; var1 <= var3; var1++) {
+          for (int var1 = var2 < 0 ? 0 : var2; var1 <= var3; var1++) {
             field_d[var1] = var0;
           }
         }

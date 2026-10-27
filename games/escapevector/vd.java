@@ -9,7 +9,7 @@ final class vd {
     static String[] field_i;
     private BitSet field_b;
     static String field_c;
-    static ed[] field_f;
+    static Sprite[] field_f;
     static String[] field_d;
     private boolean field_k;
     private ei field_a;
@@ -25,20 +25,13 @@ final class vd {
     }
 
     private final BitSet a(int param0, BitSet param1, int param2, BitSet param3) {
-        BitSet var5 = null;
-        RuntimeException var5_ref = null;
-        BitSet stackIn_15_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
             this.a(44, 44, true);
           }
-          var5 = param1;
+          BitSet var5 = param1;
           if (param1 != null &&
             param3 != null) {
             var5.or(param3);
@@ -51,19 +44,19 @@ final class vd {
             param3 == null) {
             var5 = new BitSet(param2);
           }
-          stackIn_15_0 = var5;
+          BitSet stackIn_15_0 = var5;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = decompiledCaughtException;
-          stackIn_18_0 = var5_ref;
-          stackIn_18_1 = new StringBuilder().append("vd.S(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var5_ref;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("vd.S(").append(param0).append(',');
           if (param1 == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',');
+          StringBuilder stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_22_2 = "null";
           } else {
@@ -98,46 +91,34 @@ final class vd {
     }
 
     private final BitSet a(DataInputStream param0, int param1, BitSet param2, int param3) throws IOException {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        BitSet var7 = null;
-        BitSet var8 = null;
-        BitSet stackIn_2_0 = null;
-        BitSet stackIn_6_0 = null;
-        BitSet stackIn_8_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            stackIn_2_0 = (BitSet) null;
+            BitSet stackIn_2_0 = (BitSet) null;
             return stackIn_2_0;
           }
-          var5_int = param0.readUnsignedByte();
-          var6 = 8 * var5_int;
+          int var5_int = param0.readUnsignedByte();
+          int var6 = 8 * var5_int;
           if (param3 < var6) {
-            stackIn_6_0 = (BitSet) (param2);
+            BitSet stackIn_6_0 = (BitSet) (param2);
             return stackIn_6_0;
           }
-          var7 = this.a(param3, param0, var5_int, 0);
-          var8 = this.a(0, param2, param3, var7);
-          stackIn_8_0 = var8;
+          BitSet var7 = this.a(param3, param0, var5_int, 0);
+          BitSet var8 = this.a(0, param2, param3, var7);
+          BitSet stackIn_8_0 = var8;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("vd.O(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var5;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("vd.O(");
           if (param0 == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -147,40 +128,30 @@ final class vd {
         }
     }
 
-    final static ed[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != 1317) {
-          return (ed[]) null;
+          return (Sprite[]) null;
         }
         return ge.a(1, param0, 1, 1, param1, (byte) 33, param2, param3, 3);
     }
 
     private final BitSet a(int param0, DataInputStream param1, int param2, int param3) throws IOException {
-        int var6 = 0;
-        BitSet var5 = null;
-        RuntimeException var5_ref = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        BitSet stackIn_5_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var9 = EscapeVector.field_A;
+        int var9 = EscapeVector.obfuscationControl;
         try {
-          var5 = new BitSet(param0);
-          for (var6 = param3; var6 < param2; var6++) {
-            var7 = param1.readByte();
-            var8 = var6 * 8;
+          BitSet var5 = new BitSet(param0);
+          for (int var6 = param3; var6 < param2; var6++) {
+            int var7 = param1.readByte();
+            int var8 = var6 * 8;
             var5 = this.a((byte) var7, param3 ^ -98, var5, param0, var8);
           }
-          stackIn_5_0 = var5;
+          BitSet stackIn_5_0 = var5;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = decompiledCaughtException;
-          stackIn_8_0 = var5_ref;
-          stackIn_8_1 = new StringBuilder().append("vd.G(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var5_ref;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("vd.G(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -211,12 +182,7 @@ final class vd {
     }
 
     private final boolean a(int param0, int param1, int param2, BitSet param3) {
-        RuntimeException var5 = null;
-        boolean stackIn_19_0 = false;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!this.field_k) {
             return false;
@@ -234,15 +200,15 @@ final class vd {
             return false;
           }
           if (param0 < param3.size()) {
-            stackIn_19_0 = param3.get(param0);
+            boolean stackIn_19_0 = param3.get(param0);
             return stackIn_19_0;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_22_0 = var5;
-          stackIn_22_1 = new StringBuilder().append("vd.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_22_0 = var5;
+          StringBuilder stackIn_22_1 = new StringBuilder().append("vd.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_23_2 = "null";
           } else {
@@ -253,46 +219,34 @@ final class vd {
     }
 
     private final byte a(boolean param0, int param1, int param2, BitSet param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        byte stackIn_7_0 = 0;
-        byte stackIn_13_0 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         try {
-          var5_int = param3.size();
-          var6 = 0;
-          var7 = 0;
+          int var5_int = param3.size();
+          int var6 = 0;
+          int var7 = 0;
           if (!param0) {
             this.field_j = 35;
           }
           while (8 > var7) {
-            var8 = param1 + var7;
+            int var8 = param1 + var7;
             if (var5_int <= var8) {
-              stackIn_7_0 = (byte)var6;
+              byte stackIn_7_0 = (byte)var6;
               return stackIn_7_0;
             }
             if (param3.get(var8)) {
-              var10 = 1 << var7;
+              int var10 = 1 << var7;
               var6 = var6 | var10;
             }
             var7++;
           }
-          stackIn_13_0 = (byte)var6;
+          byte stackIn_13_0 = (byte)var6;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("vd.W(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var5;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("vd.W(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -305,52 +259,39 @@ final class vd {
     final static void a(byte param0) {
         int var1 = -124 % ((param0 + 86) / 37);
         dl.field_a = false;
-        om.field_g.e(0);
+        om.field_g.readUnsignedByte(0);
     }
 
     private final BitSet a(byte param0, int param1, BitSet param2, int param3, int param4) {
-        int var7 = 0;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        BitSet stackIn_5_0 = null;
-        int stackIn_11_0 = 0;
-        BitSet stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         try {
           if (param2 == null) {
             param2 = new BitSet(param3);
           }
-          var6_int = param0;
+          int var6_int = param0;
           if (param1 > -14) {
-            stackIn_5_0 = (BitSet) null;
+            BitSet stackIn_5_0 = (BitSet) null;
             return stackIn_5_0;
           }
-          for (var7 = 0; var7 < 8; var7++) {
-            var8 = 1 << var7;
-            stackIn_11_0 = ((var6_int & var8) == 0) ? 0 : 1;
-            var9 = stackIn_11_0;
-            var10 = param4 + var7;
-            if (var9 == 0) {
+          for (int var7 = 0; var7 < 8; var7++) {
+            int var8 = 1 << var7;
+            boolean stackIn_11_0 = !((var6_int & var8) == 0);
+            boolean var9 = stackIn_11_0;
+            int var10 = param4 + var7;
+            if (!var9) {
               param2.clear(var10);
             } else {
               param2.set(var10);
             }
           }
-          stackIn_16_0 = (BitSet) (param2);
+          BitSet stackIn_16_0 = (BitSet) (param2);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_19_0 = var6;
-          stackIn_19_1 = new StringBuilder().append("vd.J(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_19_0 = var6;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("vd.J(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_20_2 = "null";
           } else {
@@ -361,58 +302,43 @@ final class vd {
     }
 
     private final byte[] a(int param0, int param1, BitSet param2) {
-        int var8 = 0;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        byte[] var7 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        Object stackIn_3_0 = null;
-        byte[] stackIn_14_0 = null;
-        byte[] stackIn_19_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         try {
           if (param2 == null) {
-            stackIn_3_0 = null;
+            Object stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
           }
-          var4_int = this.a(-106, param2);
+          int var4_int = this.a(-106, param2);
           if (param0 <= 21) {
             this.field_e = (BitSet) null;
           }
           if (var4_int >= param1) {
             return null;
           }
-          var5 = 1 + var4_int;
+          int var5 = 1 + var4_int;
           if (var5 < 0) {
             return null;
           }
-          var6 = this.b(-1, var5);
-          var7 = new byte[var6 + 1];
+          int var6 = this.b(-1, var5);
+          byte[] var7 = new byte[var6 + 1];
           var7[0] = (byte)var6;
           if (var6 <= 0) {
-            stackIn_14_0 = var7;
+            byte[] stackIn_14_0 = var7;
             return stackIn_14_0;
           }
-          for (var8 = 0; var6 > var8; var8++) {
-            var9 = 8 * var8;
-            var10 = this.a(true, var9, param1, param2);
+          for (int var8 = 0; var6 > var8; var8++) {
+            int var9 = 8 * var8;
+            int var10 = this.a(true, var9, param1, param2);
             var7[var8 + 1] = (byte)var10;
           }
-          stackIn_19_0 = var7;
+          byte[] stackIn_19_0 = var7;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_22_0 = var4;
-          stackIn_22_1 = new StringBuilder().append("vd.V(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_22_0 = var4;
+          StringBuilder stackIn_22_1 = new StringBuilder().append("vd.V(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_23_2 = "null";
           } else {
@@ -467,47 +393,35 @@ final class vd {
     }
 
     private final int a(int param0, BitSet param1) {
-        int var4 = 0;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_18_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         try {
           if (param1 == null) {
-            stackIn_4_0 = -1;
+            int stackIn_4_0 = -1;
             return stackIn_4_0;
           }
           if (param0 > -22) {
             this.field_j = -38;
           }
-          var3_int = param1.size();
+          int var3_int = param1.size();
           if (var3_int <= 0) {
-            stackIn_9_0 = -1;
+            int stackIn_9_0 = -1;
             return stackIn_9_0;
           }
-          for (var4 = -1 + var3_int; var4 >= 0; var4--) {
-            var5 = param1.get(var4) ? 1 : 0;
-            if (var5 != 0) {
-              stackIn_15_0 = var4;
+          for (int var4 = -1 + var3_int; var4 >= 0; var4--) {
+            boolean var5 = (param1.get(var4));
+            if (var5) {
+              int stackIn_15_0 = var4;
               return stackIn_15_0;
             }
           }
-          stackIn_18_0 = -1;
+          int stackIn_18_0 = -1;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_21_0 = var3;
-          stackIn_21_1 = new StringBuilder().append("vd.P(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_21_0 = var3;
+          StringBuilder stackIn_21_1 = new StringBuilder().append("vd.P(").append(param0).append(',');
           if (param1 == null) {
             stackIn_22_2 = "null";
           } else {
@@ -575,29 +489,19 @@ final class vd {
     }
 
     private final byte[] a(int param0, byte[] param1, byte[] param2) {
-        int incrementValue$1 = 0;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        byte[] var5 = null;
-        int var6 = 0;
-        byte[] stackIn_12_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0;
+          int var4_int = param0;
           if (param1 != null) {
             var4_int = var4_int + param1.length;
           }
           if (param2 != null) {
             var4_int = var4_int + param2.length;
           }
-          var5 = new byte[var4_int];
-          var6 = 0;
-          incrementValue$1 = var6;
+          byte[] var5 = new byte[var4_int];
+          int var6 = 0;
+          int incrementValue$1 = var6;
           var6++;
           var5[incrementValue$1] = (byte) 1;
           if (param1 != null) {
@@ -608,19 +512,19 @@ final class vd {
             qg.a(param2, 0, var5, var6, param2.length);
             var6 = var6 + param2.length;
           }
-          stackIn_12_0 = var5;
+          byte[] stackIn_12_0 = var5;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_15_0 = var4;
-          stackIn_15_1 = new StringBuilder().append("vd.U(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var4;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("vd.U(").append(param0).append(',');
           if (param1 == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+          StringBuilder stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
           if (param2 == null) {
             stackIn_19_2 = "null";
           } else {

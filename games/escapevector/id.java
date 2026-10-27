@@ -2,28 +2,25 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class id {
-    static ed field_a;
+    static Sprite field_a;
     static byte[][] field_b;
 
     final static void c(int param0) {
-        ed var1 = null;
-        ed var2 = null;
-        int var3 = 0;
-        int var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         try {
-          var1 = new ed(540, 140);
+          Sprite var1 = new Sprite(540, 140);
           eo.a(var1, (byte) -7);
           bi.b();
-          em.d();
+          SoftwareRasterizer.d();
           kb.field_d = 0;
           fi.a(-124);
           if (param0 < 115) {
             id.b(109);
           }
-          var2 = var1.b();
-          for (var3 = 0; var3 < 15; var3++) {
+          Sprite var2 = var1.b();
+          for (int var3 = 0; var3 < 15; var3++) {
             var2.e(-2, -2, 16777215);
-            em.d(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
           }
           ea.field_d.g();
           var1.g(0, 0);

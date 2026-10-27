@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class de extends hg {
+final class IntValueNode extends IntrusiveNode {
     static ik field_i;
     static String[] field_h;
-    int field_g;
+    int value;
     static boolean field_j;
 
     final static void a(String param0, String param1, int param2) {
@@ -24,41 +24,33 @@ final class de extends hg {
 
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
-          String var2 = null;
-          Exception var2_ref = null;
-          RuntimeException var2_ref2 = null;
-          int var3 = 0;
-          String var4 = null;
-          java.net.URL var5 = null;
-          RuntimeException stackIn_11_0 = null;
-          StringBuilder stackIn_11_1 = null;
           String stackIn_12_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var2 = param1.getDocumentBase().getFile();
+              String var2 = param1.getDocumentBase().getFile();
               if (param0) {
                 return;
               }
-              var3 = var2.indexOf('?');
-              var4 = "reload.ws";
+              int var3 = var2.indexOf('?');
+              String var4 = "reload.ws";
               if (var3 >= 0) {
                 var4 = var4 + var2.substring(var3);
               }
-              var5 = new java.net.URL(param1.getCodeBase(), var4);
+              java.net.URL var5 = new java.net.URL(param1.getCodeBase(), var4);
               param1.getAppletContext().showDocument(sh.a((byte) 12, param1, var5), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
+              Exception var2_ref = (Exception) (Object) decompiledCaughtException;
               var2_ref.printStackTrace();
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_11_0 = var2_ref2;
-            stackIn_11_1 = new StringBuilder().append("de.C(").append(param0).append(',');
+            RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_11_0 = var2_ref2;
+            StringBuilder stackIn_11_1 = new StringBuilder().append("de.C(").append(param0).append(',');
             if (param1 == null) {
               stackIn_12_2 = "null";
             } else {
@@ -81,18 +73,18 @@ final class de extends hg {
         field_i = null;
     }
 
-    de(int param0) {
-        this.field_g = param0;
+    IntValueNode(int param0) {
+        this.value = param0;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void startSelectedLevel(int gameMode, int levelIndex, int guard) {
         ce.field_f.a(true);
-        param0 = l.a(-8462, param0);
-        param1 = jg.a(param0, 13565, param1);
-        int var3 = nk.a(1, param0);
-        ma.field_a = new oe(ld.field_h[param0], var3, param0, param1);
-        ma.field_a.y((byte) -40);
-        if (param2 >= 77) {
+        gameMode = l.a(-8462, gameMode);
+        levelIndex = jg.a(gameMode, 13565, levelIndex);
+        int var3 = nk.a(1, gameMode);
+        BoundedRandomAccessFile.activeSession = new GameplaySession(ld.field_h[gameMode], var3, gameMode, levelIndex);
+        BoundedRandomAccessFile.activeSession.startSession((byte) -40);
+        if (guard >= 77) {
           return;
         }
         field_h = (String[]) null;

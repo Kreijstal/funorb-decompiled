@@ -7,7 +7,7 @@ final class tm extends vg implements qb {
     static int[] field_bb;
     static String field_Z;
     static long[] field_ab;
-    static ed[] field_cb;
+    static Sprite[] field_cb;
     static int[] field_fb;
 
     public final void a(hc param0, int param1, int param2, int param3, int param4) {
@@ -42,7 +42,7 @@ final class tm extends vg implements qb {
         int var12 = 0;
         int[] var19 = null;
         qe var14 = null;
-        int var15 = EscapeVector.field_A;
+        int var15 = EscapeVector.obfuscationControl;
         int var3 = 12;
         int[] var4 = new int[]{3170352, 6332512};
         int[] var5 = new int[]{6340704, 16777215};
@@ -79,7 +79,7 @@ final class tm extends vg implements qb {
         try {
           var3 = null;
           if (ge.field_h == param1) {
-            var3 = tj.field_k;
+            var3 = DialogueScreen.field_k;
           } else {
             if (param1 == ck.field_A) {
               this.field_x = this.field_x + 10;
@@ -210,7 +210,7 @@ final class tm extends vg implements qb {
         field_ab = new long[11];
         field_Z = "Email (Login):";
         field_db = new long[8][256];
-        field_cb = new ed[5];
+        field_cb = new Sprite[5];
         int var0 = 0;
         while (var0 < 256) {
             var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);

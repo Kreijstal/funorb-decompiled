@@ -8,7 +8,6 @@ final class pm {
     int field_b;
 
     pm() {
-        int var1 = 0;
         in.e(16);
         this.field_a = in.c() != 0 ? in.e(4) + 1 : 1;
         if (in.c() != 0) {
@@ -20,7 +19,7 @@ final class pm {
         }
         this.field_d = new int[this.field_a];
         this.field_c = new int[this.field_a];
-        for (var1 = 0; var1 < this.field_a; var1++) {
+        for (int var1 = 0; var1 < this.field_a; var1++) {
           in.e(8);
           this.field_d[var1] = in.e(8);
           this.field_c[var1] = in.e(8);

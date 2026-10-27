@@ -48,30 +48,21 @@ final class mh {
     }
 
     final static int a(int param0, CharSequence param1) {
-        int var4 = 0;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var5 = 0;
-        int stackIn_5_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         try {
-          var2_int = param1.length();
-          var3 = 0;
-          for (var4 = param0; var4 < var2_int; var4++) {
+          int var2_int = param1.length();
+          int var3 = 0;
+          for (int var4 = param0; var4 < var2_int; var4++) {
             var3 = hf.a(78, param1.charAt(var4)) + (-var3 + (var3 << 5));
           }
-          stackIn_5_0 = var3;
+          int stackIn_5_0 = var3;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("mh.E(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var2;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("mh.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
           } else {

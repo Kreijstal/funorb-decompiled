@@ -18,17 +18,7 @@ final class d {
     }
 
     final static boolean a(char param0, int param1) {
-        char[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        char[] var2Lifetime1;
-        int var3Lifetime1;
-        int var4Lifetime1;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         try {
           if (Character.isISOControl(param0)) {
             return false;
@@ -36,17 +26,17 @@ final class d {
           if (k.a(true, param0)) {
             return true;
           }
-          var6 = pb.field_a;
-          var2 = var6;
-          for (var3 = 0; var6.length > var3; var3++) {
-            var4 = var6[var3];
+          char[] var6 = pb.field_a;
+          char[] var2 = var6;
+          for (int var3 = 0; var6.length > var3; var3++) {
+            int var4 = var6[var3];
             if (~var4 == ~param0) {
               return true;
             }
           }
-          var2Lifetime1 = pn.field_nb;
-          for (var3Lifetime1 = 0; var2Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
-            var4Lifetime1 = var2Lifetime1[var3Lifetime1];
+          char[] var2Lifetime1 = pn.field_nb;
+          for (int var3Lifetime1 = 0; var2Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
+            int var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (var4Lifetime1 == param0) {
               return true;
             }
@@ -56,8 +46,8 @@ final class d {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2_ref), "d.E(" + param0 + ',' + param1 + ')');
         }
     }

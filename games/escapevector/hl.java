@@ -19,7 +19,6 @@ final class hl extends wg {
     private int field_q;
 
     private final int a(int[] param0, int param1, int param2, int param3, int param4) {
-        int var6;
         do {
           if (this.field_v <= 0) {
             if (this.field_y == 256 &&
@@ -34,7 +33,7 @@ final class hl extends wg {
             }
             return hl.a(0, 0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_m, 0, param3, param2, this, this.field_y, param4);
           }
-          var6 = param1 + this.field_v;
+          int var6 = param1 + this.field_v;
           if (var6 > param3) {
             var6 = param3;
           }
@@ -46,12 +45,10 @@ final class hl extends wg {
             } else {
               param1 = hl.b(0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_x, this.field_s, this.field_t, this.field_p, 0, var6, param2, this);
             }
+          } else if (!ie.field_o) {
+            param1 = hl.b(0, 0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_m, this.field_k, 0, var6, param2, this, this.field_y, param4);
           } else {
-            if (!ie.field_o) {
-              param1 = hl.b(0, 0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_m, this.field_k, 0, var6, param2, this, this.field_y, param4);
-            } else {
-              param1 = hl.a(0, 0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_x, this.field_s, this.field_t, this.field_p, 0, var6, param2, this, this.field_y, param4);
-            }
+            param1 = hl.a(0, 0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_x, this.field_s, this.field_t, this.field_p, 0, var6, param2, this, this.field_y, param4);
           }
           this.field_v = this.field_v - param1;
           if (this.field_v != 0) {
@@ -66,10 +63,6 @@ final class hl extends wg {
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, hl param13, int param14, int param15) {
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
         param13.field_m = param13.field_m - param13.field_k * param5;
         if (param14 != 0) {
           param10 = param5 + (param12 + 256 - param4 + param14) / param14;
@@ -84,11 +77,11 @@ final class hl extends wg {
           param1 = param4 >> 8;
           param0 = param2[param1 - 1];
           param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
-          incrementValue$6 = param5;
+          int incrementValue$6 = param5;
           param5++;
           param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
           param6 = param6 + param8;
-          incrementValue$7 = param5;
+          int incrementValue$7 = param5;
           param5++;
           param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
           param7 = param7 + param9;
@@ -105,11 +98,11 @@ final class hl extends wg {
         param1 = param15;
         while (param5 < param10) {
           param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
-          incrementValue$4 = param5;
+          int incrementValue$4 = param5;
           param5++;
           param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
           param6 = param6 + param8;
-          incrementValue$5 = param5;
+          int incrementValue$5 = param5;
           param5++;
           param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
           param7 = param7 + param9;
@@ -130,10 +123,6 @@ final class hl extends wg {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, hl param13, int param14, int param15) {
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
         param13.field_m = param13.field_m - param13.field_k * param5;
         if (param14 != 0) {
           param10 = param5 + (param12 - param4 + param14 - 257) / param14;
@@ -148,11 +137,11 @@ final class hl extends wg {
           param1 = param4 >> 8;
           param0 = param2[param1];
           param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
-          incrementValue$6 = param5;
+          int incrementValue$6 = param5;
           param5++;
           param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
           param6 = param6 + param8;
-          incrementValue$7 = param5;
+          int incrementValue$7 = param5;
           param5++;
           param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
           param7 = param7 + param9;
@@ -170,11 +159,11 @@ final class hl extends wg {
         while (param5 < param10) {
           param0 = param2[param4 >> 8];
           param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
-          incrementValue$4 = param5;
+          int incrementValue$4 = param5;
           param5++;
           param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
           param6 = param6 + param8;
-          incrementValue$5 = param5;
+          int incrementValue$5 = param5;
           param5++;
           param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
           param7 = param7 + param9;
@@ -199,7 +188,6 @@ final class hl extends wg {
     }
 
     private final int b(int[] param0, int param1, int param2, int param3, int param4) {
-        int var6;
         do {
           if (this.field_v <= 0) {
             if (this.field_y == -256 &&
@@ -214,7 +202,7 @@ final class hl extends wg {
             }
             return hl.b(0, 0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_m, 0, param3, param2, this, this.field_y, param4);
           }
-          var6 = param1 + this.field_v;
+          int var6 = param1 + this.field_v;
           if (var6 > param3) {
             var6 = param3;
           }
@@ -226,12 +214,10 @@ final class hl extends wg {
             } else {
               param1 = hl.a(0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_x, this.field_s, this.field_t, this.field_p, 0, var6, param2, this);
             }
+          } else if (!ie.field_o) {
+            param1 = hl.c(0, 0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_m, this.field_k, 0, var6, param2, this, this.field_y, param4);
           } else {
-            if (!ie.field_o) {
-              param1 = hl.c(0, 0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_m, this.field_k, 0, var6, param2, this, this.field_y, param4);
-            } else {
-              param1 = hl.b(0, 0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_x, this.field_s, this.field_t, this.field_p, 0, var6, param2, this, this.field_y, param4);
-            }
+            param1 = hl.b(0, 0, ((hh) (this.field_g)).field_h, param0, this.field_u, param1, this.field_x, this.field_s, this.field_t, this.field_p, 0, var6, param2, this, this.field_y, param4);
           }
           this.field_v = this.field_v - param1;
           if (this.field_v != 0) {
@@ -246,16 +232,6 @@ final class hl extends wg {
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, hl param10) {
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
         param3 = param3 >> 8;
         param9 = param9 >> 8;
         param5 = param5 << 2;
@@ -269,41 +245,41 @@ final class hl extends wg {
         param7 -= 6;
         while (param4 < param7) {
           param0 = param1[param3++];
-          incrementValue$1 = param4;
+          int incrementValue$1 = param4;
           param4++;
           param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
-          incrementValue$2 = param4;
+          int incrementValue$2 = param4;
           param4++;
           param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
           param0 = param1[param3++];
-          incrementValue$4 = param4;
+          int incrementValue$4 = param4;
           param4++;
           param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
-          incrementValue$5 = param4;
+          int incrementValue$5 = param4;
           param4++;
           param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
           param0 = param1[param3++];
-          incrementValue$7 = param4;
+          int incrementValue$7 = param4;
           param4++;
           param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
-          incrementValue$8 = param4;
+          int incrementValue$8 = param4;
           param4++;
           param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
           param0 = param1[param3++];
-          incrementValue$10 = param4;
+          int incrementValue$10 = param4;
           param4++;
           param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
-          incrementValue$11 = param4;
+          int incrementValue$11 = param4;
           param4++;
           param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
         }
         param7 += 6;
         while (param4 < param7) {
           param0 = param1[param3++];
-          incrementValue$13 = param4;
+          int incrementValue$13 = param4;
           param4++;
           param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
-          incrementValue$14 = param4;
+          int incrementValue$14 = param4;
           param4++;
           param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
         }
@@ -312,10 +288,9 @@ final class hl extends wg {
     }
 
     private final boolean i() {
-        int var1;
         int var2;
         int var3;
-        var1 = this.field_o;
+        int var1 = this.field_o;
         if (var1 != -2147483648) {
           var2 = hl.d(var1, this.field_n);
           var3 = hl.a(var1, this.field_n);
@@ -335,35 +310,31 @@ final class hl extends wg {
           this.field_s = 0;
           this.field_x = 0;
           this.field_m = 0;
-          this.c((byte) -120);
+          this.unlink((byte) -120);
           return true;
         }
-        if (this.field_m >= var1) {
-          if (this.field_m <= var1) {
-            this.field_k = 0;
-          } else {
-            this.field_k = -1;
-            this.field_v = this.field_m - var1;
-          }
-        } else {
+        if (!(this.field_m >= var1)) {
           this.field_k = 1;
           this.field_v = var1 - this.field_m;
-        }
-        if (this.field_x >= var2) {
-          if (this.field_x <= var2) {
-            this.field_t = 0;
-          } else {
-            this.field_t = -1;
-            if (this.field_v == 0 ||
-              this.field_v > this.field_x - var2) {
-              this.field_v = this.field_x - var2;
-            }
-          }
+        } else if (this.field_m <= var1) {
+          this.field_k = 0;
         } else {
+          this.field_k = -1;
+          this.field_v = this.field_m - var1;
+        }
+        if (!(this.field_x >= var2)) {
           this.field_t = 1;
           if (this.field_v == 0 ||
             this.field_v > var2 - this.field_x) {
             this.field_v = var2 - this.field_x;
+          }
+        } else if (this.field_x <= var2) {
+          this.field_t = 0;
+        } else {
+          this.field_t = -1;
+          if (this.field_v == 0 ||
+            this.field_v > this.field_x - var2) {
+            this.field_v = this.field_x - var2;
           }
         }
         if (this.field_s < var3) {
@@ -388,14 +359,7 @@ final class hl extends wg {
     }
 
     final synchronized void d(int param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        hh var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
         int var7;
         if (this.field_v > 0) {
           if (param0 < this.field_v) {
@@ -409,25 +373,25 @@ final class hl extends wg {
               this.field_s = 0;
               this.field_x = 0;
               this.field_m = 0;
-              this.c((byte) -12);
+              this.unlink((byte) -12);
               param0 = this.field_v;
             }
             this.field_v = 0;
             this.g();
           }
         }
-        var2 = (hh) (this.field_g);
-        var3 = this.field_q << 8;
-        var4 = this.field_l << 8;
-        var5 = var2.field_h.length << 8;
-        var6 = var4 - var3;
+        hh var2 = (hh) (this.field_g);
+        int var3 = this.field_q << 8;
+        int var4 = this.field_l << 8;
+        int var5 = var2.field_h.length << 8;
+        int var6 = var4 - var3;
         if (var6 <= 0) {
           this.field_r = 0;
         }
         if (this.field_u < 0) {
           if (this.field_y <= 0) {
             this.h();
-            this.c((byte) -123);
+            this.unlink((byte) -123);
             return;
           }
           this.field_u = 0;
@@ -435,7 +399,7 @@ final class hl extends wg {
         if (this.field_u >= var5) {
           if (this.field_y >= 0) {
             this.h();
-            this.c((byte) -56);
+            this.unlink((byte) -56);
             return;
           }
           this.field_u = var5 - 1;
@@ -517,7 +481,7 @@ final class hl extends wg {
               }
               this.field_u = var3 + var3 - 1 - this.field_u;
               this.field_y = -this.field_y;
-              fieldTemp$0 = this.field_r - 1;
+              int fieldTemp$0 = this.field_r - 1;
               this.field_r = this.field_r - 1;
               decompiledFrameRemainder0 = (fieldTemp$0 != 0);
             }
@@ -528,7 +492,7 @@ final class hl extends wg {
                 }
                 this.field_u = var4 + var4 - 1 - this.field_u;
                 this.field_y = -this.field_y;
-                fieldTemp$1 = this.field_r - 1;
+                int fieldTemp$1 = this.field_r - 1;
                 this.field_r = this.field_r - 1;
                 if (fieldTemp$1 == 0) {
                   break;
@@ -548,7 +512,7 @@ final class hl extends wg {
           if (this.field_u >= var5) {
             this.field_u = var5;
             this.h();
-            this.c((byte) -100);
+            this.unlink((byte) -100);
           }
           return;
         }
@@ -557,7 +521,7 @@ final class hl extends wg {
         }
         this.field_u = -1;
         this.h();
-        this.c((byte) -88);
+        this.unlink((byte) -88);
     }
 
     final synchronized void e() {
@@ -583,16 +547,6 @@ final class hl extends wg {
     }
 
     private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, hl param9) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         param2 = param2 >> 8;
         param8 = param8 >> 8;
         param4 = param4 << 2;
@@ -605,36 +559,36 @@ final class hl extends wg {
         param9.field_s = param9.field_s + param9.field_p * (param6 - param3);
         param6 -= 3;
         while (param3 < param6) {
-          incrementValue$0 = param3;
+          int incrementValue$0 = param3;
           param3++;
-          incrementValue$1 = param2;
+          int incrementValue$1 = param2;
           param2--;
           param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
           param4 = param4 + param5;
-          incrementValue$2 = param3;
+          int incrementValue$2 = param3;
           param3++;
-          incrementValue$3 = param2;
+          int incrementValue$3 = param2;
           param2--;
           param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
           param4 = param4 + param5;
-          incrementValue$4 = param3;
+          int incrementValue$4 = param3;
           param3++;
-          incrementValue$5 = param2;
+          int incrementValue$5 = param2;
           param2--;
           param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
           param4 = param4 + param5;
-          incrementValue$6 = param3;
+          int incrementValue$6 = param3;
           param3++;
-          incrementValue$7 = param2;
+          int incrementValue$7 = param2;
           param2--;
           param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
           param4 = param4 + param5;
         }
         param6 += 3;
         while (param3 < param6) {
-          incrementValue$8 = param3;
+          int incrementValue$8 = param3;
           param3++;
-          incrementValue$9 = param2;
+          int incrementValue$9 = param2;
           param2--;
           param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
           param4 = param4 + param5;
@@ -655,8 +609,6 @@ final class hl extends wg {
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, hl param10, int param11, int param12) {
-        int incrementValue$1 = 0;
-        int incrementValue$0 = 0;
         if (param11 != 0) {
           param7 = param5 + (param9 + 256 - param4 + param11) / param11;
         }
@@ -667,7 +619,7 @@ final class hl extends wg {
         while (param5 < param7) {
           param1 = param4 >> 8;
           param0 = param2[param1 - 1];
-          incrementValue$1 = param5;
+          int incrementValue$1 = param5;
           param5++;
           param3[incrementValue$1] = param3[incrementValue$1] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
           param4 = param4 + param11;
@@ -682,7 +634,7 @@ final class hl extends wg {
         param0 = param12;
         param1 = param11;
         while (param5 < param7) {
-          incrementValue$0 = param5;
+          int incrementValue$0 = param5;
           param5++;
           param3[incrementValue$0] = param3[incrementValue$0] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
           param4 = param4 + param1;
@@ -692,16 +644,6 @@ final class hl extends wg {
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, hl param8) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         param2 = param2 >> 8;
         param7 = param7 >> 8;
         param4 = param4 << 2;
@@ -711,32 +653,32 @@ final class hl extends wg {
         }
         param5 -= 3;
         while (param3 < param5) {
-          incrementValue$0 = param3;
+          int incrementValue$0 = param3;
           param3++;
-          incrementValue$1 = param2;
+          int incrementValue$1 = param2;
           param2--;
           param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
-          incrementValue$2 = param3;
+          int incrementValue$2 = param3;
           param3++;
-          incrementValue$3 = param2;
+          int incrementValue$3 = param2;
           param2--;
           param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
-          incrementValue$4 = param3;
+          int incrementValue$4 = param3;
           param3++;
-          incrementValue$5 = param2;
+          int incrementValue$5 = param2;
           param2--;
           param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
-          incrementValue$6 = param3;
+          int incrementValue$6 = param3;
           param3++;
-          incrementValue$7 = param2;
+          int incrementValue$7 = param2;
           param2--;
           param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
-          incrementValue$8 = param3;
+          int incrementValue$8 = param3;
           param3++;
-          incrementValue$9 = param2;
+          int incrementValue$9 = param2;
           param2--;
           param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
@@ -745,8 +687,6 @@ final class hl extends wg {
     }
 
     private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, hl param11, int param12, int param13) {
-        int incrementValue$3 = 0;
-        int incrementValue$2 = 0;
         param11.field_x = param11.field_x - param11.field_t * param5;
         param11.field_s = param11.field_s - param11.field_p * param5;
         if (param12 != 0) {
@@ -759,7 +699,7 @@ final class hl extends wg {
         while (param5 < param8) {
           param1 = param4 >> 8;
           param0 = param2[param1 - 1];
-          incrementValue$3 = param5;
+          int incrementValue$3 = param5;
           param5++;
           param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
           param6 = param6 + param7;
@@ -775,7 +715,7 @@ final class hl extends wg {
         param0 = param13;
         param1 = param12;
         while (param5 < param8) {
-          incrementValue$2 = param5;
+          int incrementValue$2 = param5;
           param5++;
           param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
           param6 = param6 + param7;
@@ -789,10 +729,6 @@ final class hl extends wg {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, hl param11, int param12, int param13) {
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
         if (param12 != 0) {
           param8 = param5 + (param10 + 256 - param4 + param12) / param12;
         }
@@ -806,10 +742,10 @@ final class hl extends wg {
           param1 = param4 >> 8;
           param0 = param2[param1 - 1];
           param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
-          incrementValue$6 = param5;
+          int incrementValue$6 = param5;
           param5++;
           param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
-          incrementValue$7 = param5;
+          int incrementValue$7 = param5;
           param5++;
           param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
           param4 = param4 + param12;
@@ -825,10 +761,10 @@ final class hl extends wg {
         param1 = param13;
         while (param5 < param8) {
           param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
-          incrementValue$4 = param5;
+          int incrementValue$4 = param5;
           param5++;
           param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
-          incrementValue$5 = param5;
+          int incrementValue$5 = param5;
           param5++;
           param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
           param4 = param4 + param12;
@@ -842,16 +778,6 @@ final class hl extends wg {
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, hl param12) {
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
         param3 = param3 >> 8;
         param11 = param11 >> 8;
         param5 = param5 << 2;
@@ -868,38 +794,38 @@ final class hl extends wg {
         param9 -= 6;
         while (param4 < param9) {
           param0 = param1[param3++];
-          incrementValue$1 = param4;
+          int incrementValue$1 = param4;
           param4++;
           param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
           param5 = param5 + param7;
-          incrementValue$2 = param4;
+          int incrementValue$2 = param4;
           param4++;
           param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
           param6 = param6 + param8;
           param0 = param1[param3++];
-          incrementValue$4 = param4;
+          int incrementValue$4 = param4;
           param4++;
           param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
           param5 = param5 + param7;
-          incrementValue$5 = param4;
+          int incrementValue$5 = param4;
           param4++;
           param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
           param6 = param6 + param8;
           param0 = param1[param3++];
-          incrementValue$7 = param4;
+          int incrementValue$7 = param4;
           param4++;
           param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
           param5 = param5 + param7;
-          incrementValue$8 = param4;
+          int incrementValue$8 = param4;
           param4++;
           param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
           param6 = param6 + param8;
           param0 = param1[param3++];
-          incrementValue$10 = param4;
+          int incrementValue$10 = param4;
           param4++;
           param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
           param5 = param5 + param7;
-          incrementValue$11 = param4;
+          int incrementValue$11 = param4;
           param4++;
           param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
           param6 = param6 + param8;
@@ -907,11 +833,11 @@ final class hl extends wg {
         param9 += 6;
         while (param4 < param9) {
           param0 = param1[param3++];
-          incrementValue$13 = param4;
+          int incrementValue$13 = param4;
           param4++;
           param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
           param5 = param5 + param7;
-          incrementValue$14 = param4;
+          int incrementValue$14 = param4;
           param4++;
           param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
           param6 = param6 + param8;
@@ -923,16 +849,6 @@ final class hl extends wg {
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, hl param10) {
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
         param3 = param3 >> 8;
         param9 = param9 >> 8;
         param5 = param5 << 2;
@@ -946,41 +862,41 @@ final class hl extends wg {
         param7 -= 6;
         while (param4 < param7) {
           param0 = param1[param3--];
-          incrementValue$1 = param4;
+          int incrementValue$1 = param4;
           param4++;
           param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
-          incrementValue$2 = param4;
+          int incrementValue$2 = param4;
           param4++;
           param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
           param0 = param1[param3--];
-          incrementValue$4 = param4;
+          int incrementValue$4 = param4;
           param4++;
           param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
-          incrementValue$5 = param4;
+          int incrementValue$5 = param4;
           param4++;
           param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
           param0 = param1[param3--];
-          incrementValue$7 = param4;
+          int incrementValue$7 = param4;
           param4++;
           param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
-          incrementValue$8 = param4;
+          int incrementValue$8 = param4;
           param4++;
           param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
           param0 = param1[param3--];
-          incrementValue$10 = param4;
+          int incrementValue$10 = param4;
           param4++;
           param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
-          incrementValue$11 = param4;
+          int incrementValue$11 = param4;
           param4++;
           param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
         }
         param7 += 6;
         while (param4 < param7) {
           param0 = param1[param3--];
-          incrementValue$13 = param4;
+          int incrementValue$13 = param4;
           param4++;
           param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
-          incrementValue$14 = param4;
+          int incrementValue$14 = param4;
           param4++;
           param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
         }
@@ -999,38 +915,26 @@ final class hl extends wg {
     }
 
     final synchronized void b(int[] param0, int param1, int param2) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        int discarded$4 = 0;
-        int discarded$3 = 0;
-        hh var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var10Lifetime1;
         if (this.field_o == 0 &&
           this.field_v == 0) {
           this.d(param2);
           return;
         }
-        var4 = (hh) (this.field_g);
-        var5 = this.field_q << 8;
-        var6 = this.field_l << 8;
-        var7 = var4.field_h.length << 8;
-        var8 = var6 - var5;
+        hh var4 = (hh) (this.field_g);
+        int var5 = this.field_q << 8;
+        int var6 = this.field_l << 8;
+        int var7 = var4.field_h.length << 8;
+        int var8 = var6 - var5;
         if (var8 <= 0) {
           this.field_r = 0;
         }
-        var9 = param1;
+        int var9 = param1;
         param2 = param2 + param1;
         if (this.field_u < 0) {
           if (this.field_y <= 0) {
             this.h();
-            this.c((byte) -26);
+            this.unlink((byte) -26);
             return;
           }
           this.field_u = 0;
@@ -1038,7 +942,7 @@ final class hl extends wg {
         if (this.field_u >= var7) {
           if (this.field_y >= 0) {
             this.h();
-            this.c((byte) -10);
+            this.unlink((byte) -10);
             return;
           }
           this.field_u = var7 - 1;
@@ -1094,7 +998,7 @@ final class hl extends wg {
                 if (this.field_u >= var5) {
                   return;
                 }
-                var10 = (var6 - 1 - this.field_u) / var8;
+                int var10 = (var6 - 1 - this.field_u) / var8;
                 if (var10 < this.field_r) {
                   this.field_u = this.field_u + var8 * var10;
                   this.field_r = this.field_r - var10;
@@ -1110,7 +1014,7 @@ final class hl extends wg {
                 if (this.field_u < var6) {
                   return;
                 }
-                var10Lifetime1 = (this.field_u - var5) / var8;
+                int var10Lifetime1 = (this.field_u - var5) / var8;
                 if (var10Lifetime1 < this.field_r) {
                   this.field_u = this.field_u - var8 * var10Lifetime1;
                   this.field_r = this.field_r - var10Lifetime1;
@@ -1131,7 +1035,7 @@ final class hl extends wg {
               }
               this.field_u = var5 + var5 - 1 - this.field_u;
               this.field_y = -this.field_y;
-              fieldTemp$0 = this.field_r - 1;
+              int fieldTemp$0 = this.field_r - 1;
               this.field_r = this.field_r - 1;
               decompiledFrameRemainder0 = (fieldTemp$0 != 0);
             }
@@ -1143,7 +1047,7 @@ final class hl extends wg {
                 }
                 this.field_u = var6 + var6 - 1 - this.field_u;
                 this.field_y = -this.field_y;
-                fieldTemp$1 = this.field_r - 1;
+                int fieldTemp$1 = this.field_r - 1;
                 this.field_r = this.field_r - 1;
                 if (fieldTemp$1 == 0) {
                   break;
@@ -1161,21 +1065,21 @@ final class hl extends wg {
           }
         }
         if (this.field_y >= 0) {
-          discarded$4 = this.a(param0, var9, var7, param2, 0);
+          int discarded$4 = this.a(param0, var9, var7, param2, 0);
           if (this.field_u >= var7) {
             this.field_u = var7;
             this.h();
-            this.c((byte) -66);
+            this.unlink((byte) -66);
           }
           return;
         }
-        discarded$3 = this.b(param0, var9, 0, param2, 0);
+        int discarded$3 = this.b(param0, var9, 0, param2, 0);
         if (this.field_u >= 0) {
           return;
         }
         this.field_u = -1;
         this.h();
-        this.c((byte) -123);
+        this.unlink((byte) -123);
         return;
     }
 
@@ -1191,16 +1095,6 @@ final class hl extends wg {
     }
 
     private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, hl param8) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         param2 = param2 >> 8;
         param7 = param7 >> 8;
         param4 = param4 << 2;
@@ -1210,32 +1104,32 @@ final class hl extends wg {
         }
         param5 -= 3;
         while (param3 < param5) {
-          incrementValue$0 = param3;
+          int incrementValue$0 = param3;
           param3++;
-          incrementValue$1 = param2;
+          int incrementValue$1 = param2;
           param2++;
           param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
-          incrementValue$2 = param3;
+          int incrementValue$2 = param3;
           param3++;
-          incrementValue$3 = param2;
+          int incrementValue$3 = param2;
           param2++;
           param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
-          incrementValue$4 = param3;
+          int incrementValue$4 = param3;
           param3++;
-          incrementValue$5 = param2;
+          int incrementValue$5 = param2;
           param2++;
           param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
-          incrementValue$6 = param3;
+          int incrementValue$6 = param3;
           param3++;
-          incrementValue$7 = param2;
+          int incrementValue$7 = param2;
           param2++;
           param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
-          incrementValue$8 = param3;
+          int incrementValue$8 = param3;
           param3++;
-          incrementValue$9 = param2;
+          int incrementValue$9 = param2;
           param2++;
           param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
@@ -1244,8 +1138,6 @@ final class hl extends wg {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, hl param10, int param11, int param12) {
-        int incrementValue$1 = 0;
-        int incrementValue$0 = 0;
         if (param11 != 0) {
           param7 = param5 + (param9 - param4 + param11 - 257) / param11;
         }
@@ -1256,7 +1148,7 @@ final class hl extends wg {
         while (param5 < param7) {
           param1 = param4 >> 8;
           param0 = param2[param1];
-          incrementValue$1 = param5;
+          int incrementValue$1 = param5;
           param5++;
           param3[incrementValue$1] = param3[incrementValue$1] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
           param4 = param4 + param11;
@@ -1271,7 +1163,7 @@ final class hl extends wg {
         param1 = param12;
         while (param5 < param7) {
           param0 = param2[param4 >> 8];
-          incrementValue$0 = param5;
+          int incrementValue$0 = param5;
           param5++;
           param3[incrementValue$0] = param3[incrementValue$0] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
           param4 = param4 + param11;
@@ -1285,17 +1177,13 @@ final class hl extends wg {
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_r == 0) {
           var1 = var1 - var1 * this.field_u / (((hh) (this.field_g)).field_h.length << 8);
-        } else {
-          if (this.field_r >= 0) {
-            var1 = var1 - var1 * this.field_q / ((hh) (this.field_g)).field_h.length;
-          }
+        } else if (this.field_r >= 0) {
+          var1 = var1 - var1 * this.field_q / ((hh) (this.field_g)).field_h.length;
         }
         return var1 > 255 ? 255 : var1;
     }
 
     final synchronized void a(int param0, int param1, int param2) {
-        int var6 = 0;
-        int var6Lifetime1;
         if (param0 == 0) {
           this.f(param1, param2);
           return;
@@ -1303,7 +1191,7 @@ final class hl extends wg {
         int var4 = hl.d(param1, param2);
         int var5 = hl.a(param1, param2);
         if (this.field_x != var4) {
-          var6 = param1 - this.field_m;
+          int var6 = param1 - this.field_m;
           if (this.field_m - param1 > var6) {
             var6 = this.field_m - param1;
           }
@@ -1331,7 +1219,7 @@ final class hl extends wg {
           return;
         }
         if (this.field_s != var5) {
-          var6Lifetime1 = param1 - this.field_m;
+          int var6Lifetime1 = param1 - this.field_m;
           if (this.field_m - param1 > var6Lifetime1) {
             var6Lifetime1 = this.field_m - param1;
           }
@@ -1383,16 +1271,6 @@ final class hl extends wg {
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, hl param9) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
         param2 = param2 >> 8;
         param8 = param8 >> 8;
         param4 = param4 << 2;
@@ -1405,36 +1283,36 @@ final class hl extends wg {
         param9.field_s = param9.field_s + param9.field_p * (param6 - param3);
         param6 -= 3;
         while (param3 < param6) {
-          incrementValue$0 = param3;
+          int incrementValue$0 = param3;
           param3++;
-          incrementValue$1 = param2;
+          int incrementValue$1 = param2;
           param2++;
           param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
           param4 = param4 + param5;
-          incrementValue$2 = param3;
+          int incrementValue$2 = param3;
           param3++;
-          incrementValue$3 = param2;
+          int incrementValue$3 = param2;
           param2++;
           param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
           param4 = param4 + param5;
-          incrementValue$4 = param3;
+          int incrementValue$4 = param3;
           param3++;
-          incrementValue$5 = param2;
+          int incrementValue$5 = param2;
           param2++;
           param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
           param4 = param4 + param5;
-          incrementValue$6 = param3;
+          int incrementValue$6 = param3;
           param3++;
-          incrementValue$7 = param2;
+          int incrementValue$7 = param2;
           param2++;
           param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
           param4 = param4 + param5;
         }
         param6 += 3;
         while (param3 < param6) {
-          incrementValue$8 = param3;
+          int incrementValue$8 = param3;
           param3++;
-          incrementValue$9 = param2;
+          int incrementValue$9 = param2;
           param2++;
           param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
           param4 = param4 + param5;
@@ -1457,15 +1335,13 @@ final class hl extends wg {
     }
 
     final synchronized void g(int param0) {
-        int var2 = 0;
-        int var2Lifetime1;
         if (param0 == 0) {
           this.f(0);
-          this.c((byte) -38);
+          this.unlink((byte) -38);
           return;
         }
         if (this.field_x != 0) {
-          var2 = -this.field_m;
+          int var2 = -this.field_m;
           if (this.field_m > var2) {
             var2 = this.field_m;
           }
@@ -1492,7 +1368,7 @@ final class hl extends wg {
           return;
         }
         if (this.field_s != 0) {
-          var2Lifetime1 = -this.field_m;
+          int var2Lifetime1 = -this.field_m;
           if (this.field_m > var2Lifetime1) {
             var2Lifetime1 = this.field_m;
           }
@@ -1521,12 +1397,10 @@ final class hl extends wg {
         this.field_v = 0;
         this.field_o = 0;
         this.field_m = 0;
-        this.c((byte) -23);
+        this.unlink((byte) -23);
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, hl param11, int param12, int param13) {
-        int incrementValue$3 = 0;
-        int incrementValue$2 = 0;
         param11.field_x = param11.field_x - param11.field_t * param5;
         param11.field_s = param11.field_s - param11.field_p * param5;
         if (param12 != 0) {
@@ -1539,7 +1413,7 @@ final class hl extends wg {
         while (param5 < param8) {
           param1 = param4 >> 8;
           param0 = param2[param1];
-          incrementValue$3 = param5;
+          int incrementValue$3 = param5;
           param5++;
           param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
           param6 = param6 + param7;
@@ -1555,7 +1429,7 @@ final class hl extends wg {
         param1 = param13;
         while (param5 < param8) {
           param0 = param2[param4 >> 8];
-          incrementValue$2 = param5;
+          int incrementValue$2 = param5;
           param5++;
           param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
           param6 = param6 + param7;
@@ -1569,10 +1443,6 @@ final class hl extends wg {
     }
 
     private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, hl param11, int param12, int param13) {
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
         if (param12 != 0) {
           param8 = param5 + (param10 - param4 + param12 - 257) / param12;
         }
@@ -1586,10 +1456,10 @@ final class hl extends wg {
           param1 = param4 >> 8;
           param0 = param2[param1];
           param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
-          incrementValue$6 = param5;
+          int incrementValue$6 = param5;
           param5++;
           param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
-          incrementValue$7 = param5;
+          int incrementValue$7 = param5;
           param5++;
           param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
           param4 = param4 + param12;
@@ -1606,10 +1476,10 @@ final class hl extends wg {
         while (param5 < param8) {
           param0 = param2[param4 >> 8];
           param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
-          incrementValue$4 = param5;
+          int incrementValue$4 = param5;
           param5++;
           param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
-          incrementValue$5 = param5;
+          int incrementValue$5 = param5;
           param5++;
           param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
           param4 = param4 + param12;
@@ -1649,16 +1519,6 @@ final class hl extends wg {
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, hl param12) {
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
         param3 = param3 >> 8;
         param11 = param11 >> 8;
         param5 = param5 << 2;
@@ -1675,38 +1535,38 @@ final class hl extends wg {
         param9 -= 6;
         while (param4 < param9) {
           param0 = param1[param3--];
-          incrementValue$1 = param4;
+          int incrementValue$1 = param4;
           param4++;
           param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
           param5 = param5 + param7;
-          incrementValue$2 = param4;
+          int incrementValue$2 = param4;
           param4++;
           param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
           param6 = param6 + param8;
           param0 = param1[param3--];
-          incrementValue$4 = param4;
+          int incrementValue$4 = param4;
           param4++;
           param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
           param5 = param5 + param7;
-          incrementValue$5 = param4;
+          int incrementValue$5 = param4;
           param4++;
           param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
           param6 = param6 + param8;
           param0 = param1[param3--];
-          incrementValue$7 = param4;
+          int incrementValue$7 = param4;
           param4++;
           param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
           param5 = param5 + param7;
-          incrementValue$8 = param4;
+          int incrementValue$8 = param4;
           param4++;
           param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
           param6 = param6 + param8;
           param0 = param1[param3--];
-          incrementValue$10 = param4;
+          int incrementValue$10 = param4;
           param4++;
           param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
           param5 = param5 + param7;
-          incrementValue$11 = param4;
+          int incrementValue$11 = param4;
           param4++;
           param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
           param6 = param6 + param8;
@@ -1714,11 +1574,11 @@ final class hl extends wg {
         param9 += 6;
         while (param4 < param9) {
           param0 = param1[param3--];
-          incrementValue$13 = param4;
+          int incrementValue$13 = param4;
           param4++;
           param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
           param5 = param5 + param7;
-          incrementValue$14 = param4;
+          int incrementValue$14 = param4;
           param4++;
           param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
           param6 = param6 + param8;

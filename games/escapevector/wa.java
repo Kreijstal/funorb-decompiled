@@ -3,9 +3,9 @@
  */
 final class wa {
     static om field_d;
-    static cn field_c;
-    static ed field_b;
-    static ed field_e;
+    static IntrusiveDeque field_c;
+    static Sprite field_b;
+    static Sprite field_e;
     static String field_a;
 
     public static void a(boolean param0) {
@@ -17,7 +17,7 @@ final class wa {
           field_b = null;
           return;
         }
-        field_b = (ed) null;
+        field_b = (Sprite) null;
         field_a = null;
         field_d = null;
         field_c = null;

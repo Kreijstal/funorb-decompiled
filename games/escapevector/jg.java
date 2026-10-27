@@ -22,7 +22,7 @@ final class jg {
             jg.a(true);
           }
           mj.field_d = 0;
-          oe.c((byte) -9);
+          GameplaySession.c((byte) -9);
           return;
         }
         if (bj.e((byte) 97)) {
@@ -31,7 +31,7 @@ final class jg {
             jg.a(true);
           }
           mj.field_d = 0;
-          oe.c((byte) -9);
+          GameplaySession.c((byte) -9);
           return;
         }
     }
@@ -52,33 +52,14 @@ final class jg {
 
     final byte[] a(int param0, int param1) {
         try {
-          int var16 = 0;
-          int incrementValue$2 = 0;
           Object var3 = null;
-          Object var3_ref = null;
-          int var4_int = 0;
-          int var5 = 0;
-          byte[] var6 = null;
-          int var7 = 0;
-          int var8 = 0;
-          int var9 = 0;
           int var10 = 0;
           int var11 = 0;
           int var12 = 0;
           int var13 = 0;
           int var14 = 0;
-          int var15 = 0;
-          int var18 = 0;
-          Object stackIn_9_0 = null;
-          Object stackIn_15_0 = null;
-          Object stackIn_23_0 = null;
-          Object stackIn_44_0 = null;
-          byte[] stackIn_50_0 = null;
-          Object stackIn_53_0 = null;
-          Throwable decompiledCaughtException = null;
-          IOException var4 = null;
-          var18 = EscapeVector.field_A;
-          var3_ref = this.field_a;
+          int var18 = EscapeVector.obfuscationControl;
+          Object var3_ref = this.field_a;
           synchronized (var3_ref) {
             try {
               if ((long)(6 + param0 * 6) > this.field_d.a(param1 ^ 22554)) {
@@ -86,35 +67,35 @@ final class jg {
               }
               this.field_d.a(param1 - 26296, (long)(6 * param0));
               this.field_d.a(0, 6, (byte) 101, bo.field_G);
-              var4_int = (bo.field_G[2] & 255) + ((65280 & bo.field_G[1] << 8) + (16711680 & bo.field_G[0] << 16));
-              var5 = ((255 & bo.field_G[3]) << 16) + (bo.field_G[4] << 8 & 65280) + (bo.field_G[5] & 255);
+              int var4_int = (bo.field_G[2] & 255) + ((65280 & bo.field_G[1] << 8) + (16711680 & bo.field_G[0] << 16));
+              int var5 = ((255 & bo.field_G[3]) << 16) + (bo.field_G[4] << 8 & 65280) + (bo.field_G[5] & 255);
               if (var4_int < 0) {
                 return null;
               }
               if (var4_int > this.field_e) {
-                stackIn_9_0 = null;
+                Object stackIn_9_0 = null;
                 return (byte[]) (stackIn_9_0);
               }
               if (var5 <= 0) {
                 return null;
               }
               if (this.field_a.a(16034) / 520L < (long)var5) {
-                stackIn_15_0 = null;
+                Object stackIn_15_0 = null;
                 return (byte[]) (stackIn_15_0);
               }
               if (param1 != 26296) {
                 this.toString();
               }
-              var6 = new byte[var4_int];
-              var7 = 0;
-              var8 = 0;
+              byte[] var6 = new byte[var4_int];
+              int var7 = 0;
+              int var8 = 0;
               while (var7 < var4_int) {
                 if (0 == var5) {
-                  stackIn_23_0 = null;
+                  Object stackIn_23_0 = null;
                   return (byte[]) (stackIn_23_0);
                 }
                 this.field_a.a(param1 ^ 26296, (long)(520 * var5));
-                var9 = var4_int - var7;
+                int var9 = var4_int - var7;
                 if (param0 > 65535) {
                   if (var9 > 510) {
                     var9 = 510;
@@ -149,24 +130,24 @@ final class jg {
                   return null;
                 }
                 if ((long)var12 > (this.field_a.a(16034) / 520L)) {
-                  stackIn_44_0 = null;
+                  Object stackIn_44_0 = null;
                   return (byte[]) (stackIn_44_0);
                 }
-                var15 = var9 + var14;
+                int var15 = var9 + var14;
                 var8++;
                 var5 = var12;
-                for (var16 = var14; var15 > var16; var16++) {
-                  incrementValue$2 = var7;
+                for (int var16 = var14; var15 > var16; var16++) {
+                  int incrementValue$2 = var7;
                   var7++;
                   var6[incrementValue$2] = bo.field_G[var16];
                 }
               }
-              stackIn_50_0 = var6;
+              byte[] stackIn_50_0 = var6;
               return stackIn_50_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var4 = (IOException) (Object) decompiledCaughtException;
-              stackIn_53_0 = null;
+              Throwable decompiledCaughtException = decompiledCaughtParameter0;
+              IOException var4 = (IOException) (Object) decompiledCaughtException;
+              Object stackIn_53_0 = null;
               return (byte[]) (stackIn_53_0);
             }
           }
@@ -178,38 +159,32 @@ final class jg {
     }
 
     final boolean a(byte param0, int param1, int param2, byte[] param3) {
-        Object var5 = null;
-        RuntimeException var5_ref = null;
-        int var6 = 0;
         Throwable var7 = null;
-        int stackIn_10_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
+        boolean stackIn_10_0 = false;
         String stackIn_16_2 = null;
-        Throwable decompiledCaughtException = null;
         try {
-          var5 = this.field_a;
+          Object var5 = this.field_a;
           synchronized (var5) {
             if (param2 >= 0 &&
               this.field_e >= param2) {
               if (param0 != 18) {
                 this.field_b = -93;
               }
-              var6 = this.a(512, param1, param3, param2, true) ? 1 : 0;
-              if (var6 == 0) {
-                var6 = this.a(param0 ^ 530, param1, param3, param2, false) ? 1 : 0;
+              boolean var6 = (this.a(512, param1, param3, param2, true));
+              if (!var6) {
+                var6 = (this.a(param0 ^ 530, param1, param3, param2, false));
               }
               stackIn_10_0 = var6;
             } else {
               throw new IllegalArgumentException();
             }
           }
-          return stackIn_10_0 != 0;
+          return (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_15_0 = var5_ref;
-          stackIn_15_1 = new StringBuilder().append("jg.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var5_ref;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("jg.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -232,27 +207,18 @@ final class jg {
 
     private final boolean a(int param0, int param1, byte[] param2, int param3, boolean param4) {
         try {
-          RuntimeException stackIn_69_0 = null;
-          StringBuilder stackIn_69_1 = null;
           String stackIn_70_2 = null;
-          int decompiledRegionSelector0 = 0;
-          int decompiledRegionSelector1 = 0;
+          boolean decompiledRegionSelector0 = false;
+          boolean decompiledRegionSelector1 = false;
           Throwable decompiledCaughtException = null;
-          Object var6 = null;
-          RuntimeException var6_ref = null;
           int var7_int = 0;
-          IOException var7 = null;
-          int var8 = 0;
-          int var9 = 0;
-          int var10 = 0;
           int var11 = 0;
           int var12 = 0;
           int var13 = 0;
           EOFException var14 = null;
-          int var16 = 0;
-          var16 = EscapeVector.field_A;
+          int var16 = EscapeVector.obfuscationControl;
           try {
-            var6 = this.field_a;
+            Object var6 = this.field_a;
             synchronized (var6) {
               try {
                 if (param4) {
@@ -283,25 +249,25 @@ final class jg {
                 }
                 this.field_d.a(0, (long)(param1 * 6));
                 this.field_d.a(true, 0, bo.field_G, 6);
-                var8 = 0;
-                var9 = 0;
-                L4: while (true) {
+                int var8 = 0;
+                int var9 = 0;
+                scanLoop1: while (true) {
                   if (var8 < param3) {
                     boolean decompiledFrameRemainder0 = true;
-                    var10 = 0;
+                    int var10 = 0;
                     if (param4) {
                       this.field_a.a(0, (long)(var7_int * 520));
                       if (param1 > 65535) {
                         try {
                           this.field_a.a(0, 10, (byte) 101, bo.field_G);
-                          decompiledRegionSelector0 = 0;
+                          decompiledRegionSelector0 = false;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
                           var14 = (EOFException) (Object) decompiledCaughtException;
-                          decompiledRegionSelector0 = 1;
+                          decompiledRegionSelector0 = true;
                         }
-                        if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                        if (decompiledRegionSelector0) {
+                          break scanLoop1;
                         }
                         var11 = (bo.field_G[1] << 16 & 16711680) + ((bo.field_G[0] << 24 & -16777216) + ((bo.field_G[2] & 255) << 8) + (bo.field_G[3] & 255));
                         var12 = ((bo.field_G[4] & 255) << 8) + (bo.field_G[5] & 255);
@@ -310,23 +276,23 @@ final class jg {
                       } else {
                         try {
                           this.field_a.a(0, 8, (byte) 101, bo.field_G);
-                          decompiledRegionSelector1 = 0;
+                          decompiledRegionSelector1 = false;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
                           var14 = (EOFException) (Object) decompiledCaughtException;
-                          decompiledRegionSelector1 = 1;
+                          decompiledRegionSelector1 = true;
                         }
-                        if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                        if (decompiledRegionSelector1) {
+                          break scanLoop1;
                         }
                         var13 = 255 & bo.field_G[7];
                         var12 = (255 & bo.field_G[3]) + (bo.field_G[2] << 8 & 65280);
                         var11 = (255 & bo.field_G[1]) + (bo.field_G[0] << 8 & 65280);
                         var10 = (bo.field_G[6] & 255) + (16711680 & bo.field_G[4] << 16) + (bo.field_G[5] << 8 & 65280);
                       }
-                      if ((var11 == param1 &&
+                      if (var11 == param1 &&
                         var12 == var9 &&
-                        this.field_b == var13) &&
+                        this.field_b == var13 &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
                         !((long)var10 <= this.field_a.a(16034) / 520L)))) {
                         return false;
@@ -394,15 +360,15 @@ final class jg {
                 return true;
               } catch (java.io.IOException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
-                var7 = (IOException) (Object) decompiledCaughtException;
+                IOException var7 = (IOException) (Object) decompiledCaughtException;
                 return false;
               }
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
-            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_69_0 = var6_ref;
-            stackIn_69_1 = new StringBuilder().append("jg.A(").append(param0).append(',').append(param1).append(',');
+            RuntimeException var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_69_0 = var6_ref;
+            StringBuilder stackIn_69_1 = new StringBuilder().append("jg.A(").append(param0).append(',').append(param1).append(',');
             if (param2 == null) {
               stackIn_70_2 = "null";
             } else {
@@ -419,107 +385,71 @@ final class jg {
 
     final static String a(Throwable param0, int param1) throws IOException {
         String var2;
-        PrintWriter var4;
-        String var5;
-        BufferedReader var6;
-        String var7;
-        String var8;
-        int var9;
-        int var10;
-        String var11;
-        int var12;
-        int var13;
-        rn var14;
-        StringWriter var15;
-        String var16;
-        String var17;
-        String var18;
-        String var19;
-        String var2Lifetime1;
-        String var2Lifetime2;
-        String var2Lifetime3;
-        String var11Lifetime1;
-        String var11Lifetime2;
-        String var11Lifetime3;
-        String var11Lifetime4;
-        String var11Lifetime5;
-        String var11Lifetime6;
-        String var2Lifetime3Lifetime1;
-        String var2Lifetime3Lifetime2;
-        String var2Lifetime3Lifetime3;
-        String var2Lifetime3Lifetime4;
-        String var2Lifetime3Lifetime5;
-        String var2Lifetime3Lifetime6;
-        String var2Lifetime3Lifetime7;
-        String var2Lifetime3Lifetime8;
-        String var2Lifetime3Lifetime9;
-        String var2Lifetime3Lifetime10;
-        String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
-        var13 = EscapeVector.field_A;
+        int var13 = EscapeVector.obfuscationControl;
         if (!(param0 instanceof rn)) {
           var2 = "";
-          var11 = var2;
+          String var11 = var2;
           var2 = var11;
-          var11Lifetime6 = var2;
+          String var11Lifetime6 = var2;
         } else {
-          var14 = (rn) ((Object) param0);
+          rn var14 = (rn) ((Object) param0);
           param0 = var14.field_a;
           var2 = var14.field_g + " | ";
         }
-        var15 = new StringWriter();
-        var4 = new PrintWriter((Writer) ((Object) var15));
+        StringWriter var15 = new StringWriter();
+        PrintWriter var4 = new PrintWriter((Writer) ((Object) var15));
         if (param1 != 41) {
           jg.a(true);
         }
         param0.printStackTrace(var4);
         var4.close();
-        var5 = var15.toString();
-        var11Lifetime1 = var5;
-        var2Lifetime1 = var11Lifetime1;
-        var11Lifetime2 = var5;
-        var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
-        var7 = var6.readLine();
-        var11Lifetime3 = var7;
-        var2Lifetime2 = var11Lifetime3;
-        var11Lifetime4 = var7;
+        String var5 = var15.toString();
+        String var11Lifetime1 = var5;
+        String var2Lifetime1 = var11Lifetime1;
+        String var11Lifetime2 = var5;
+        BufferedReader var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
+        String var7 = var6.readLine();
+        String var11Lifetime3 = var7;
+        String var2Lifetime2 = var11Lifetime3;
+        String var11Lifetime4 = var7;
         while (true) {
-          var8 = var6.readLine();
-          var11Lifetime5 = var8;
-          var2Lifetime3 = var11Lifetime5;
-          var11Lifetime5Lifetime1 = var8;
+          String var8 = var6.readLine();
+          String var11Lifetime5 = var8;
+          String var2Lifetime3 = var11Lifetime5;
+          String var11Lifetime5Lifetime1 = var8;
           if (var8 == null) {
             var2Lifetime3 = var2Lifetime3 + "| " + var7;
             return var2Lifetime3;
           }
-          var9 = var8.indexOf('(');
-          var10 = var8.indexOf(')', 1 + var9);
+          int var9 = var8.indexOf('(');
+          int var10 = var8.indexOf(')', 1 + var9);
           if (var9 == -1) {
             var11Lifetime5Lifetime2 = var8;
-            var2Lifetime3Lifetime1 = var11Lifetime5Lifetime2;
+            String var2Lifetime3Lifetime1 = var11Lifetime5Lifetime2;
             var2Lifetime3Lifetime1 = var11Lifetime5Lifetime2;
           } else {
             var11Lifetime5Lifetime2 = var8.substring(0, var9);
           }
-          var16 = var11Lifetime5Lifetime2.trim();
-          var2Lifetime3Lifetime2 = var16;
-          var2Lifetime3Lifetime3 = var16;
-          var17 = var16.substring(1 + var16.lastIndexOf(' '));
-          var2Lifetime3Lifetime4 = var17;
-          var2Lifetime3Lifetime5 = var17;
-          var18 = var17.substring(var17.lastIndexOf('\t') + 1);
-          var2Lifetime3Lifetime6 = var18;
-          var2Lifetime3Lifetime7 = var18;
-          var19 = var2Lifetime3Lifetime7 + var18;
-          var2Lifetime3Lifetime8 = var19;
-          var2Lifetime3Lifetime9 = var19;
-          var2Lifetime3Lifetime10 = var19;
+          String var16 = var11Lifetime5Lifetime2.trim();
+          String var2Lifetime3Lifetime2 = var16;
+          String var2Lifetime3Lifetime3 = var16;
+          String var17 = var16.substring(1 + var16.lastIndexOf(' '));
+          String var2Lifetime3Lifetime4 = var17;
+          String var2Lifetime3Lifetime5 = var17;
+          String var18 = var17.substring(var17.lastIndexOf('\t') + 1);
+          String var2Lifetime3Lifetime6 = var18;
+          String var2Lifetime3Lifetime7 = var18;
+          String var19 = var2Lifetime3Lifetime7 + var18;
+          String var2Lifetime3Lifetime8 = var19;
+          String var2Lifetime3Lifetime9 = var19;
+          String var2Lifetime3Lifetime10 = var19;
           if (var9 != -1) {
             if (-1 == var10) {
               var2Lifetime3Lifetime10 = var2Lifetime3Lifetime10 + ' ';
               continue;
             }
-            var12 = var8.indexOf(".java:", var9);
+            int var12 = var8.indexOf(".java:", var9);
             if (var12 >= 0) {
               var2Lifetime3Lifetime10 = var19 + var8.substring(var12 + 5, var10);
             }

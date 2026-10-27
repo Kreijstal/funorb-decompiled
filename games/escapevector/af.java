@@ -50,17 +50,10 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static void a(byte param0, lk param1, Object param2) {
-        int var3_int = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         Throwable decompiledCaughtException = null;
-        Exception var3 = null;
-        RuntimeException var3_ref = null;
-        int var4 = 0;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         try {
           if (param1.field_k == null) {
             return;
@@ -68,7 +61,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
           if (param0 != -61) {
             return;
           }
-          for (var3_int = 0; 50 > var3_int; var3_int++) {
+          for (int var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param1.field_k.peekEvent()) {
               en.a((byte) -15, 1L);
               continue;
@@ -83,20 +76,20 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var3 = (Exception) (Object) decompiledCaughtException;
+            Exception var3 = (Exception) (Object) decompiledCaughtException;
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_19_0 = var3_ref;
-          stackIn_19_1 = new StringBuilder().append("af.B(").append(param0).append(',');
+          RuntimeException var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_19_0 = var3_ref;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("af.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
+          StringBuilder stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
           if (param2 == null) {
             stackIn_23_2 = "null";
           } else {
@@ -135,7 +128,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
         int var7;
         vi.field_e[jf.field_J] = param4;
         cd.field_q[jf.field_J] = jf.field_J;
-        fl.field_k[jf.field_J] = param5;
+        DualLinkNode.field_k[jf.field_J] = param5;
         if (param5 < vl.field_e) {
           pg.field_d = param5;
         }
@@ -208,19 +201,12 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static void a(lk param0, java.awt.Frame param1, boolean param2) {
-        la var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         try {
           while (true) {
-            var3 = param0.a((byte) 45, param1);
+            la var3 = param0.a((byte) 45, param1);
             while (var3.field_f == 0) {
               en.a((byte) 93, 10L);
             }
@@ -234,16 +220,16 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
           param1.dispose();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_10_0 = var3_ref;
-          stackIn_10_1 = new StringBuilder().append("af.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var3_ref;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("af.C(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {

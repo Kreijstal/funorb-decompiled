@@ -7,7 +7,7 @@ final class bc {
     static boolean field_e;
     static int[] field_a;
     static int[] field_f;
-    static cn field_b;
+    static IntrusiveDeque field_b;
     static boolean field_d;
 
     public static void a(int param0) {
@@ -23,7 +23,7 @@ final class bc {
 
     final static ei a(int param0, int param1) {
         ei var2 = new ei();
-        nf.field_w.a(-12328, var2);
+        SpriteState.field_w.addLast(-12328, var2);
         if (param1 > 61) {
           q.c(param0, (byte) -71);
           return var2;
@@ -34,6 +34,6 @@ final class bc {
     static {
         field_g = new int[]{0, 1, 1, 1};
         field_f = new int[16384];
-        field_b = new cn();
+        field_b = new IntrusiveDeque();
     }
 }

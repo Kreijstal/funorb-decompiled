@@ -14,11 +14,7 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (null == ck.field_v) {
             return;
@@ -26,10 +22,10 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
           sb.field_b = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("ag.focusLost(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ag.focusLost(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -40,14 +36,12 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final void keyTyped(java.awt.event.KeyEvent param0) {
-        int var2_int = 0;
-        int var3 = 0;
         try {
           if (ck.field_v != null) {
-            var2_int = param0.getKeyChar();
+            int var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
-              eh.a(0, (char) var2_int)) {
-              var3 = 1 + bn.field_b & 127;
+              GameAppletShell.a(0, (char) var2_int)) {
+              int var3 = 1 + bn.field_b & 127;
               if (var3 != ve.field_l) {
                 td.field_b[bn.field_b] = -1;
                 ek.field_a[bn.field_b] = (char)var2_int;
@@ -69,20 +63,13 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
-        int var2_int = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var3Lifetime1;
         try {
           if (null == ck.field_v) {
             return;
           }
           ui.field_e = 0;
-          var2_int = param0.getKeyCode();
+          int var2_int = param0.getKeyCode();
           if (0 <= var2_int &&
             jc.field_a.length > var2_int) {
             var2_int = jc.field_a[var2_int];
@@ -101,14 +88,14 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
           }
           if (0 <= var2_int) {
-            var3 = bn.field_b + 1 & 127;
+            int var3 = bn.field_b + 1 & 127;
             if (var3 != ve.field_l) {
               td.field_b[bn.field_b] = var2_int;
               ek.field_a[bn.field_b] = (char)0;
               bn.field_b = var3;
             }
           }
-          var3Lifetime1 = param0.getModifiers();
+          int var3Lifetime1 = param0.getModifiers();
           if ((var3Lifetime1 & 10) == 0 &&
             var2_int != 85 &&
             var2_int != 10) {
@@ -117,10 +104,10 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
           param0.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_25_0 = var2;
-          stackIn_25_1 = new StringBuilder().append("ag.keyPressed(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_25_0 = var2;
+          StringBuilder stackIn_25_1 = new StringBuilder().append("ag.keyPressed(");
           if (param0 == null) {
             stackIn_26_2 = "null";
           } else {
@@ -131,16 +118,11 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
-        RuntimeException runtimeException = null;
-        int var2_int = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (ck.field_v != null) {
             ui.field_e = 0;
-            var2_int = param0.getKeyCode();
+            int var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
               var2_int < jc.field_a.length) {
               var2_int = -129 & jc.field_a[var2_int];
@@ -159,10 +141,10 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
           param0.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_14_0 = runtimeException;
-          stackIn_14_1 = new StringBuilder().append("ag.keyReleased(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = runtimeException;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("ag.keyReleased(");
           if (param0 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -174,39 +156,25 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     final static void a(String param0, byte param1, java.applet.Applet param2) {
         try {
-          String var4 = null;
-          String var5 = null;
-          String var6 = null;
-          String var7 = null;
-          RuntimeException stackIn_13_0 = null;
-          StringBuilder stackIn_13_1 = null;
           String stackIn_14_2 = null;
-          StringBuilder stackIn_16_1 = null;
           String stackIn_17_2 = null;
           Throwable decompiledCaughtException = null;
-          Throwable var3 = null;
-          RuntimeException var3_ref = null;
-          String var5Lifetime1;
-          String var5Lifetime2;
-          String var5Lifetime3;
-          String var5Lifetime4;
-          String var5Lifetime5;
           String var5Lifetime6;
           try {
             oh.field_p = param0;
             try {
-              var6 = param2.getParameter("cookieprefix");
-              var5 = var6;
-              var5Lifetime1 = var6;
+              String var6 = param2.getParameter("cookieprefix");
+              String var5 = var6;
+              String var5Lifetime1 = var6;
               if (param1 != 30) {
                 return;
               }
-              var4 = param2.getParameter("cookiehost");
-              var5Lifetime2 = var4;
-              var5Lifetime3 = var4;
-              var7 = var6 + "settings=" + param0 + "; version=1; path=/; domain=" + var4;
-              var5Lifetime4 = var7;
-              var5Lifetime5 = var7;
+              String var4 = param2.getParameter("cookiehost");
+              String var5Lifetime2 = var4;
+              String var5Lifetime3 = var4;
+              String var7 = var6 + "settings=" + param0 + "; version=1; path=/; domain=" + var4;
+              String var5Lifetime4 = var7;
+              String var5Lifetime5 = var7;
               if (0 != param0.length()) {
                 var5Lifetime6 = var7 + "; Expires=" + bh.a(-106, 94608000000L + td.b(128)) + "; Max-Age=" + 94608000L;
               } else {
@@ -215,21 +183,21 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
               sd.a((byte) -111, param2, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = decompiledCaughtException;
+              Throwable var3 = decompiledCaughtException;
             }
             gl.a((byte) 15, param2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_13_0 = var3_ref;
-            stackIn_13_1 = new StringBuilder().append("ag.C(");
+            RuntimeException var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_13_0 = var3_ref;
+            StringBuilder stackIn_13_1 = new StringBuilder().append("ag.C(");
             if (param0 == null) {
               stackIn_14_2 = "null";
             } else {
               stackIn_14_2 = "{...}";
             }
-            stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',');
+            StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',');
             if (param2 == null) {
               stackIn_17_2 = "null";
             } else {

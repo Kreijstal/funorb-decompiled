@@ -14,12 +14,9 @@ final class b {
     }
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var2 = EscapeVector.field_A;
+        int var2 = EscapeVector.obfuscationControl;
         try {
-          if (!hg.b(12)) {
+          if (!IntrusiveNode.b(12)) {
             if (null != df.field_d &&
               df.field_d.field_c) {
               ri.a(-25123);
@@ -38,8 +35,8 @@ final class b {
           field_a = (String) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "b.B(" + param0 + ')');
         }
     }

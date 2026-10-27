@@ -21,7 +21,7 @@ final class w extends vg {
         if (param0) {
           return (rk[]) null;
         }
-        return bf.field_M;
+        return AccountRegistrationPanel.field_M;
     }
 
     final void a(int param0, String param1, float param2, boolean param3) {
@@ -61,11 +61,10 @@ final class w extends vg {
 
     w(tb param0, String param1) {
         super(param0, 300, 120);
-        int var3_int = 0;
         try {
           this.field_Z = param1;
           if (null != this.field_Z) {
-            var3_int = dl.field_b.b(this.field_Z, 260, dl.field_b.field_r);
+            int var3_int = dl.field_b.b(this.field_Z, 260, dl.field_b.field_r);
             this.b(255, 150 + var3_int, 300);
           }
           this.field_cb = new jm(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -84,7 +83,7 @@ final class w extends vg {
         if (param2 < 80) {
           this.field_eb = true;
           if (this.field_Z != null) {
-            em.e(param1 + 20, -7 + (120 + param0), 260, 8421504);
+            SoftwareRasterizer.e(param1 + 20, -7 + (120 + param0), 260, 8421504);
             dl.field_b.a(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.field_r);
             return;
           }
@@ -93,7 +92,7 @@ final class w extends vg {
         if (this.field_Z == null) {
           return;
         }
-        em.e(param1 + 20, -7 + (120 + param0), 260, 8421504);
+        SoftwareRasterizer.e(param1 + 20, -7 + (120 + param0), 260, 8421504);
         dl.field_b.a(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.field_r);
     }
 

@@ -13,8 +13,7 @@ final class df {
     private int field_g;
 
     private final void a(boolean param0) {
-        int var2 = 0;
-        int var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         int var5 = -1640531527;
         int var7 = -1640531527;
         int var6 = -1640531527;
@@ -23,9 +22,7 @@ final class df {
         int var3 = -1640531527;
         int var4 = -1640531527;
         int var10 = -1640531527;
-        int var2Lifetime1;
-        int var2Lifetime2;
-        for (var2 = 0; var2 < 4; var2++) {
+        for (int var2 = 0; var2 < 4; var2++) {
           var3 = var3 ^ var4 << 11;
           var6 = var6 + var3;
           var4 = var4 + var5;
@@ -54,7 +51,7 @@ final class df {
         if (param0) {
           df.a((byte) -116);
         }
-        for (var2Lifetime1 = 0; var2Lifetime1 < 256; var2Lifetime1 += 8) {
+        for (int var2Lifetime1 = 0; var2Lifetime1 < 256; var2Lifetime1 += 8) {
           var7 = var7 + this.field_c[var2Lifetime1 + 4];
           var3 = var3 + this.field_c[var2Lifetime1];
           var8 = var8 + this.field_c[5 + var2Lifetime1];
@@ -96,7 +93,7 @@ final class df {
           this.field_i[6 + var2Lifetime1] = var9;
           this.field_i[var2Lifetime1 + 7] = var10;
         }
-        for (var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
+        for (int var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
           var9 = var9 + this.field_i[6 + var2Lifetime2];
           var3 = var3 + this.field_i[var2Lifetime2];
           var6 = var6 + this.field_i[var2Lifetime2 + 3];
@@ -156,39 +153,31 @@ final class df {
     }
 
     private final void b(int param0) {
-        int var2 = 0;
-        int dupTemp$1 = 0;
-        int dupTemp$2 = 0;
-        int var3;
-        int var4;
-        int var5;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         int fieldTemp$0 = this.field_a + 1;
         this.field_a = this.field_a + 1;
         this.field_e = this.field_e + fieldTemp$0;
         if (param0 > -96) {
           return;
         }
-        for (var2 = 0; var2 < 256; var2++) {
-          var3 = this.field_i[var2];
+        for (int var2 = 0; var2 < 256; var2++) {
+          int var3 = this.field_i[var2];
           if (0 != (var2 & 2)) {
             if ((1 & var2) != 0) {
               this.field_b = this.field_b ^ this.field_b >>> 16;
             } else {
               this.field_b = this.field_b ^ this.field_b << 2;
             }
+          } else if ((var2 & 1) != 0) {
+            this.field_b = this.field_b ^ this.field_b >>> 6;
           } else {
-            if ((var2 & 1) != 0) {
-              this.field_b = this.field_b ^ this.field_b >>> 6;
-            } else {
-              this.field_b = this.field_b ^ this.field_b << 13;
-            }
+            this.field_b = this.field_b ^ this.field_b << 13;
           }
           this.field_b = this.field_b + this.field_i[255 & var2 + 128];
-          dupTemp$1 = this.field_b + (this.field_i[ae.a(var3, 1020) >> 2] + this.field_e);
-          var4 = dupTemp$1;
+          int dupTemp$1 = this.field_b + (this.field_i[ae.a(var3, 1020) >> 2] + this.field_e);
+          int var4 = dupTemp$1;
           this.field_i[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_i[ae.a(var4 >> 8, 1020) >> 2];
+          int dupTemp$2 = var3 + this.field_i[ae.a(var4 >> 8, 1020) >> 2];
           this.field_e = dupTemp$2;
           this.field_c[var2] = dupTemp$2;
         }
@@ -209,11 +198,10 @@ final class df {
     }
 
     df(int[] param0) {
-        int var2_int = 0;
         try {
           this.field_i = new int[256];
           this.field_c = new int[256];
-          for (var2_int = 0; param0.length > var2_int; var2_int++) {
+          for (int var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_c[var2_int] = param0[var2_int];
           }
           this.a(false);

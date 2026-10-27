@@ -28,28 +28,9 @@ class ie {
     }
 
     private final void a(int[] param0, int param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
         int var7_int;
-        Object var7;
         int var8_int;
-        wg[] var8;
-        int var9;
-        Object var10;
-        wg var11;
-        nh var12;
-        int var13;
-        wg var14;
-        int var15_int;
-        wg var15;
-        int var6Lifetime1;
-        int var9Lifetime1;
-        Object var10Lifetime1;
-        wg var14Lifetime1;
-        wg var14Lifetime2;
-        var3 = param1;
+        int var3 = param1;
         if (field_o) {
           var3 = var3 << 1;
         }
@@ -60,10 +41,10 @@ class ie {
           this.field_b = this.field_b + (field_q >> 4);
           ie.a(this.field_u);
           this.a(this.field_u, this.field_u.d());
-          var4 = 0;
-          var5 = 255;
-          var6 = 7;
-          L3: while (true) {
+          int var4 = 0;
+          int var5 = 255;
+          int var6 = 7;
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -72,16 +53,16 @@ class ie {
                 var7_int = var6 & 3;
                 var8_int = -(var6 >> 2);
               }
-              var9 = var5 >>> var7_int & 286331153;
+              int var9 = var5 >>> var7_int & 286331153;
               while (var9 != 0) {
                 if ((var9 & 1) != 0) {
                   var5 = var5 & ~(1 << var7_int);
-                  var10 = null;
-                  var11 = this.field_c[var7_int];
-                  var14 = var11;
-                  var14Lifetime1 = var11;
+                  Object var10 = null;
+                  wg var11 = this.field_c[var7_int];
+                  wg var14 = var11;
+                  wg var14Lifetime1 = var11;
                   while (var11 != null) {
-                    var12 = var11.field_g;
+                    nh var12 = var11.field_g;
                     if (var12 != null &&
                       var12.field_g > var8_int) {
                       var5 = var5 | 1 << var7_int;
@@ -90,23 +71,23 @@ class ie {
                       continue;
                     }
                     var11.field_i = true;
-                    var13 = var11.a();
+                    int var13 = var11.a();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_g = var12.field_g + var13;
                     }
                     if (var4 >= this.field_a) {
-                      break L3;
+                      break scanLoop1;
                     }
-                    var14Lifetime2 = var11.c();
+                    wg var14Lifetime2 = var11.c();
                     if (var14Lifetime2 != null) {
-                      var15_int = var11.field_j;
+                      int var15_int = var11.field_j;
                       while (var14Lifetime2 != null) {
                         this.a(var14Lifetime2, var15_int * var14Lifetime2.d() >> 8);
                         var14Lifetime2 = var11.b();
                       }
                     }
-                    var15 = var11.field_h;
+                    wg var15 = var11.field_h;
                     var11.field_h = null;
                     if (var10 != null) {
                       ((wg) (var10)).field_h = var15;
@@ -128,14 +109,14 @@ class ie {
             }
             break;
           }
-          for (var6Lifetime1 = 0; var6Lifetime1 < 8; var6Lifetime1++) {
-            var7 = this.field_c[var6Lifetime1];
-            var8 = this.field_c;
-            var9Lifetime1 = var6Lifetime1;
+          for (int var6Lifetime1 = 0; var6Lifetime1 < 8; var6Lifetime1++) {
+            Object var7 = this.field_c[var6Lifetime1];
+            wg[] var8 = this.field_c;
+            int var9Lifetime1 = var6Lifetime1;
             this.field_l[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((wg) (var7)).field_h;
+              Object var10Lifetime1 = ((wg) (var7)).field_h;
               ((wg) (var7)).field_h = null;
               var7 = var10Lifetime1;
             }
@@ -163,14 +144,11 @@ class ie {
     final synchronized void d() {
         try {
           Throwable decompiledCaughtException = null;
-          long var1 = 0L;
           Exception var3 = null;
-          int var3_int = 0;
-          int var4 = 0;
           if (this.field_i) {
             return;
           }
-          var1 = td.b(128);
+          long var1 = td.b(128);
           try {
             if (var1 > this.field_s + 6000L) {
               this.field_s = var1 - 6000L;
@@ -197,11 +175,11 @@ class ie {
               this.field_n = 0L;
               this.field_e = true;
             }
-            var3_int = this.a();
+            int var3_int = this.a();
             if (this.field_k - var3_int > this.field_r) {
               this.field_r = this.field_k - var3_int;
             }
-            var4 = this.field_p + this.field_m;
+            int var4 = this.field_p + this.field_m;
             if (var4 + 256 > 16384) {
               var4 = 16128;
             }
@@ -332,14 +310,7 @@ class ie {
 
     final static ie a(lk param0, java.awt.Component param1, int param2, int param3) {
         try {
-          vm var4 = null;
-          Throwable var4_ref = null;
-          vm var5 = null;
-          vm stackIn_10_0 = null;
-          int stackIn_10_1 = 0;
           int stackIn_11_2 = 0;
-          vm stackIn_21_0 = null;
-          Throwable decompiledCaughtException = null;
           if (field_q == 0) {
             throw new IllegalStateException();
           }
@@ -349,15 +320,11 @@ class ie {
               param3 = 256;
             }
             try {
-              var5 = new vm();
-              var4 = var5;
-              stackIn_10_0 = var4;
-              stackIn_10_1 = 256;
-              if (!field_o) {
-                stackIn_11_2 = 1;
-              } else {
-                stackIn_11_2 = 2;
-              }
+              vm var5 = new vm();
+              vm var4 = var5;
+              vm stackIn_10_0 = var4;
+              int stackIn_10_1 = 256;
+              stackIn_11_2 = (!field_o) ? (1) : (2);
               ((ie) ((Object) stackIn_10_0)).field_f = new int[stackIn_10_1 * stackIn_11_2];
               ((ie) ((Object) var4)).field_p = param3;
               ((ie) ((Object) var4)).a(param1);
@@ -378,11 +345,11 @@ class ie {
                 }
                 field_j.field_f[param2] = (ie) ((Object) var5);
               }
-              stackIn_21_0 = var4;
+              vm stackIn_21_0 = var4;
               return (ie) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var4_ref = decompiledCaughtException;
+              Throwable decompiledCaughtException = decompiledCaughtParameter0;
+              Throwable var4_ref = decompiledCaughtException;
               return new ie();
             }
           }
@@ -395,19 +362,17 @@ class ie {
     }
 
     final synchronized void c() {
-        int var2 = 0;
-        int var1;
         if (field_j != null) {
-          var1 = 1;
-          for (var2 = 0; var2 < 2; var2++) {
+          boolean var1 = true;
+          for (int var2 = 0; var2 < 2; var2++) {
             if (field_j.field_f[var2] == this) {
               field_j.field_f[var2] = null;
             }
             if (field_j.field_f[var2] != null) {
-              var1 = 0;
+              var1 = false;
             }
           }
-          if (var1 != 0) {
+          if (var1) {
             field_j.field_c = true;
             while (field_j.field_g) {
               en.a((byte) -46, 50L);

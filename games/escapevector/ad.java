@@ -9,7 +9,7 @@ final class ad implements Runnable {
     private la field_g;
     private DataInputStream field_b;
     private la field_e;
-    private n field_i;
+    private PacketBuffer field_i;
     private java.net.URL field_j;
     private lk field_f;
     static int field_d;
@@ -17,24 +17,20 @@ final class ad implements Runnable {
     private int field_k;
 
     final static void a(int param0, int param1) {
-        int var3 = 0;
-        rl var4 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         try {
           if (param1 < 44) {
             return;
           }
-          var4 = (rl) (cd.field_s.a(false));
+          rl var4 = (rl) (cd.field_s.first(false));
           while (var4 != null) {
             qh.a(var4, true, param0);
-            var4 = (rl) (cd.field_s.b((byte) 70));
+            var4 = (rl) (cd.field_s.next((byte) 70));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2), "ad.A(" + param0 + ',' + param1 + ')');
         }
     }
@@ -47,36 +43,32 @@ final class ad implements Runnable {
         }
     }
 
-    final n c(int param0) {
+    final PacketBuffer c(int param0) {
         if (this.field_k == 3) {
           return this.field_i;
         }
         if (param0 < -12) {
           return null;
         }
-        return (n) null;
+        return (PacketBuffer) null;
     }
 
     public final void run() {
         try {
-          int var1_int = 0;
           Object var1 = null;
-          Object var2 = null;
           Throwable var3 = null;
-          int var4 = 0;
-          Throwable decompiledCaughtException = null;
-          var4 = EscapeVector.field_A;
+          int var4 = EscapeVector.obfuscationControl;
           try {
-            while (this.field_i.field_g.length > this.field_i.field_m) {
-              var1_int = this.field_b.read(this.field_i.field_g, this.field_i.field_m, -this.field_i.field_m + this.field_i.field_g.length);
+            while (this.field_i.payload.length > this.field_i.position) {
+              int var1_int = this.field_b.read(this.field_i.payload, this.field_i.position, -this.field_i.position + this.field_i.payload.length);
               if (0 <= var1_int) {
-                this.field_i.field_m = this.field_i.field_m + var1_int;
+                this.field_i.position = this.field_i.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_i.field_g.length == this.field_i.field_m) {
-              throw ad.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.field_g.length + " " + this.field_j));
+            if (this.field_i.payload.length == this.field_i.position) {
+              throw ad.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.payload.length + " " + this.field_j));
             }
             var1 = this;
             synchronized (var1) {
@@ -85,9 +77,9 @@ final class ad implements Runnable {
             }
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
+            Throwable decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
-            var2 = this;
+            Object var2 = this;
             synchronized (var2) {
               this.finalize();
               this.field_k = this.field_k + 1;
@@ -131,11 +123,6 @@ final class ad implements Runnable {
     }
 
     final synchronized boolean a(int param0) {
-        Throwable decompiledCaughtException = null;
-        IOException var2 = null;
-        OutputStream var3 = null;
-        java.net.Socket var4 = null;
-        CharSequence var5 = null;
         if (this.field_k >= 2) {
           return true;
         }
@@ -171,18 +158,18 @@ final class ad implements Runnable {
               this.field_b = (DataInputStream) (this.field_e.field_b);
             }
             if (1 == this.field_k) {
-              var4 = (java.net.Socket) (this.field_a.field_b);
+              java.net.Socket var4 = (java.net.Socket) (this.field_a.field_b);
               var4.setSoTimeout(10000);
-              var3 = var4.getOutputStream();
+              OutputStream var3 = var4.getOutputStream();
               var3.write(17);
-              var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_j.getFile() + "\n\n"));
+              CharSequence var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_j.getFile() + "\n\n"));
               var3.write(dk.a((byte) -14, var5));
               this.field_b = new DataInputStream(var4.getInputStream());
             }
-            this.field_i.field_m = 0;
+            this.field_i.position = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var2 = (IOException) (Object) decompiledCaughtException;
+            Throwable decompiledCaughtException = decompiledCaughtParameter0;
+            IOException var2 = (IOException) (Object) decompiledCaughtException;
             this.finalize();
             this.field_k = this.field_k + 1;
             if (this.field_g != null) {
@@ -244,7 +231,7 @@ final class ad implements Runnable {
         try {
           this.field_f = param0;
           this.field_j = param1;
-          this.field_i = new n(param2);
+          this.field_i = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

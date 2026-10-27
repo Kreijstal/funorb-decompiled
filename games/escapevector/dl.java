@@ -6,14 +6,14 @@ final class dl {
     static wl field_b;
 
     final static void a(byte param0) {
-        mi var1 = (mi) (re.field_q.b(-8980));
+        mi var1 = (mi) (re.field_q.removeLast(-8980));
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        em.a(var1.field_p, var1.field_q, var1.field_i);
-        em.f(var1.field_o, var1.field_n, var1.field_r, var1.field_h);
+        SoftwareRasterizer.a(var1.field_p, var1.field_q, var1.field_i);
+        SoftwareRasterizer.f(var1.field_o, var1.field_n, var1.field_r, var1.field_h);
         var1.field_p = null;
-        k.field_d.a(-12328, var1);
+        k.field_d.addLast(-12328, var1);
         int var2 = 108 % ((param0 - 69) / 38);
     }
 
@@ -26,16 +26,9 @@ final class dl {
     }
 
     final static boolean a(byte param0, String param1) {
-        int var3 = 0;
-        String var2 = null;
-        Exception var2_ref = null;
-        RuntimeException var2_ref2 = null;
-        int var4 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         Throwable decompiledCaughtException = null;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         try {
           try {
             if (!lk.field_e.startsWith("win")) {
@@ -45,11 +38,11 @@ final class dl {
               !param1.startsWith("https://")) {
               return false;
             }
-            var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+            String var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             if (param0 <= 26) {
               return true;
             }
-            for (var3 = 0; var3 < param1.length(); var3++) {
+            for (int var3 = 0; var3 < param1.length(); var3++) {
               if (var2.indexOf((int) param1.charAt(var3)) == -1) {
                 return false;
               }
@@ -58,14 +51,14 @@ final class dl {
             return true;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var2_ref = (Exception) (Object) decompiledCaughtException;
+            Exception var2_ref = (Exception) (Object) decompiledCaughtException;
             return false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_26_0 = var2_ref2;
-          stackIn_26_1 = new StringBuilder().append("dl.C(").append(param0).append(',');
+          RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_26_0 = var2_ref2;
+          StringBuilder stackIn_26_1 = new StringBuilder().append("dl.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_27_2 = "null";
           } else {

@@ -7,7 +7,7 @@ final class kf extends ah {
     static ee field_q;
     private String field_s;
     static int[] field_o;
-    static n field_r;
+    static PacketBuffer field_r;
 
     kf(ul param0) {
         super(param0);
@@ -23,33 +23,25 @@ final class kf extends ah {
     }
 
     final rf a(int param0, String param1) {
-        lm var3 = null;
-        RuntimeException var3_ref = null;
-        CharSequence var4 = null;
-        rf stackIn_3_0 = null;
-        rf stackIn_12_0 = null;
         rf stackIn_17_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4 = (CharSequence) ((Object) param1);
+          CharSequence var4 = (CharSequence) ((Object) param1);
           if (!tg.a(87, var4)) {
-            stackIn_3_0 = ob.field_a;
+            rf stackIn_3_0 = ob.field_a;
             return stackIn_3_0;
           }
           if (param0 != -1) {
             field_p = (hh) null;
           }
           if (!param1.equals(this.field_s)) {
-            var3 = of.a(122, param1);
+            lm var3 = of.a(122, param1);
             if (var3 != null &&
               null == var3.field_f) {
               this.field_n = var3.field_a;
               this.field_s = param1;
             } else {
-              stackIn_12_0 = ug.field_c;
+              rf stackIn_12_0 = ug.field_c;
               return stackIn_12_0;
             }
           }
@@ -60,10 +52,10 @@ final class kf extends ah {
           }
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_20_0 = var3_ref;
-          stackIn_20_1 = new StringBuilder().append("kf.G(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_20_0 = var3_ref;
+          StringBuilder stackIn_20_1 = new StringBuilder().append("kf.G(").append(param0).append(',');
           if (param1 == null) {
             stackIn_21_2 = "null";
           } else {
@@ -93,16 +85,11 @@ final class kf extends ah {
     }
 
     final static om a(byte param0, int param1) {
-        int var4 = 0;
-        om[] var2;
-        int var3;
-        int var5;
-        om[] var6;
-        var5 = EscapeVector.field_A;
-        var6 = vh.e(-91);
-        var2 = var6;
-        var3 = 2 % ((3 - param0) / 49);
-        for (var4 = 0; var6.length > var4; var4++) {
+        int var5 = EscapeVector.obfuscationControl;
+        om[] var6 = vh.e(-91);
+        om[] var2 = var6;
+        int var3 = 2 % ((3 - param0) / 49);
+        for (int var4 = 0; var6.length > var4; var4++) {
           if (param1 == var6[var4].field_f) {
             return var6[var4];
           }
@@ -111,50 +98,38 @@ final class kf extends ah {
     }
 
     final String a(byte param0, String param1) {
-        String var3 = null;
-        RuntimeException var3_ref = null;
-        int var4 = 0;
-        lm var5 = null;
-        CharSequence var6 = null;
-        String stackIn_2_0 = null;
-        Object stackIn_9_0 = null;
-        String stackIn_13_0 = null;
-        String stackIn_15_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var6 = (CharSequence) ((Object) param1);
-          var3 = ok.a(0, var6);
-          var4 = 4 / ((param0 - 10) / 51);
+          CharSequence var6 = (CharSequence) ((Object) param1);
+          String var3 = ok.a(0, var6);
+          int var4 = 4 / ((param0 - 10) / 51);
           if (var3 != null) {
-            stackIn_2_0 = var3;
+            String stackIn_2_0 = var3;
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_s)) {
-            var5 = of.a(122, param1);
+            lm var5 = of.a(122, param1);
             if (var5 == null) {
               return null;
             }
             if (var5.field_f != null) {
-              stackIn_9_0 = null;
+              Object stackIn_9_0 = null;
               return (String) (stackIn_9_0);
             }
             this.field_n = var5.field_a;
             this.field_s = param1;
           }
           if (this.field_n) {
-            stackIn_15_0 = fd.field_b;
+            String stackIn_15_0 = fd.field_b;
             return stackIn_15_0;
           }
-          stackIn_13_0 = vn.field_b;
+          String stackIn_13_0 = vn.field_b;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_18_0 = var3_ref;
-          stackIn_18_1 = new StringBuilder().append("kf.L(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var3_ref;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("kf.L(").append(param0).append(',');
           if (param1 == null) {
             stackIn_19_2 = "null";
           } else {

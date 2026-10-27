@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ea {
-    private ed field_a;
+    private Sprite field_a;
     private int field_c;
     private gb field_h;
     private int field_e;
@@ -10,9 +10,9 @@ final class ea {
     private gb field_j;
     static om field_g;
     private gb field_k;
-    static ed field_d;
+    static Sprite field_d;
     private int field_b;
-    static ed field_f;
+    static Sprite field_f;
 
     final void a(int param0) {
         if (param0 == 256) {
@@ -24,29 +24,23 @@ final class ea {
     }
 
     final static ab a(byte[] param0, int param1) {
-        ab var2 = null;
-        RuntimeException var2_ref = null;
-        ab stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1) {
-            field_f = (ed) null;
+            field_f = (Sprite) null;
           }
           if (param0 == null) {
             return null;
           }
-          var2 = new ab(param0, gn.field_k, gi.field_e, qh.field_k, bc.field_a, qk.field_f, qe.field_a);
+          ab var2 = new ab(param0, gn.field_k, gi.field_e, qh.field_k, bc.field_a, qk.field_f, qe.field_a);
           of.a(false);
-          stackIn_6_0 = var2;
+          ab stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_9_0 = var2_ref;
-          stackIn_9_1 = new StringBuilder().append("ea.F(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var2_ref;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("ea.F(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -61,7 +55,7 @@ final class ea {
         field_i = null;
         field_d = null;
         if (param0 <= 114) {
-          field_f = (ed) null;
+          field_f = (Sprite) null;
           field_f = null;
           return;
         }
@@ -105,23 +99,17 @@ final class ea {
     }
 
     final static boolean c(byte param0) {
-        int var2 = 0;
-        mn var1 = null;
-        RuntimeException var1_ref = null;
-        int var3 = 0;
-        mn var4 = null;
-        RuntimeException decompiledCaughtException = null;
-        var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         try {
-          var4 = (mn) (je.field_a.a(false));
-          var1 = var4;
+          mn var4 = (mn) (je.field_a.first(false));
+          mn var1 = var4;
           if (var1 == null) {
             return false;
           }
           if (param0 > -47) {
             return true;
           }
-          for (var2 = 0; var1.field_i > var2; var2++) {
+          for (int var2 = 0; var1.field_i > var2; var2++) {
             if (var4.field_r[var2] != null &&
               0 == var4.field_r[var2].field_f) {
               return false;
@@ -133,13 +121,13 @@ final class ea {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1_ref = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1_ref), "ea.D(" + param0 + ')');
         }
     }
 
-    ea(gb param0, gb param1, ed param2, int param3) {
+    ea(gb param0, gb param1, Sprite param2, int param3) {
         this.field_c = 0;
         this.field_b = 0;
         try {
@@ -156,6 +144,6 @@ final class ea {
     static {
         field_i = "M";
         field_g = new om(9, 0, 4, 1);
-        field_d = new ed(270, 70);
+        field_d = new Sprite(270, 70);
     }
 }

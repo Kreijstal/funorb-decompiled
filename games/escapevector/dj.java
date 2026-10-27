@@ -8,31 +8,26 @@ final class dj {
     static hl field_c;
 
     final static void a(int param0, int param1, int param2) {
-        RuntimeException decompiledCaughtException = null;
-        oh var3 = null;
-        RuntimeException var3_ref = null;
-        int var4 = 0;
-        oh var3Lifetime1;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         try {
-          eh.field_k = true;
-          var3 = (oh) (wa.field_c.a(false));
+          GameAppletShell.field_k = true;
+          oh var3 = (oh) (wa.field_c.first(false));
           while (var3 != null) {
             if (var3.field_m < 0) {
-              em.e(var3.field_i - var3.field_s + param2, param0 + var3.field_q, var3.field_s, hi.field_q);
+              SoftwareRasterizer.e(var3.field_i - var3.field_s + param2, param0 + var3.field_q, var3.field_s, hi.field_q);
             } else {
-              em.e(param2 + var3.field_i, param0 + var3.field_q, var3.field_s, hi.field_q);
+              SoftwareRasterizer.e(param2 + var3.field_i, param0 + var3.field_q, var3.field_s, hi.field_q);
             }
-            var3 = (oh) (wa.field_c.b((byte) 70));
+            var3 = (oh) (wa.field_c.next((byte) 70));
           }
-          var3Lifetime1 = (oh) (si.field_u.a(false));
+          oh var3Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.first(false));
           while (var3Lifetime1 != null) {
             if (var3Lifetime1.field_m >= 0) {
-              em.g(param2 + var3Lifetime1.field_i, param0 + var3Lifetime1.field_q, var3Lifetime1.field_s, hi.field_q);
+              SoftwareRasterizer.g(param2 + var3Lifetime1.field_i, param0 + var3Lifetime1.field_q, var3Lifetime1.field_s, hi.field_q);
             } else {
-              em.g(var3Lifetime1.field_i + param2, param0 - var3Lifetime1.field_s + var3Lifetime1.field_q, var3Lifetime1.field_s, hi.field_q);
+              SoftwareRasterizer.g(var3Lifetime1.field_i + param2, param0 - var3Lifetime1.field_s + var3Lifetime1.field_q, var3Lifetime1.field_s, hi.field_q);
             }
-            var3Lifetime1 = (oh) (si.field_u.b((byte) 70));
+            var3Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.next((byte) 70));
           }
           if (param1 < -5) {
             return;
@@ -40,21 +35,16 @@ final class dj {
           field_c = (hl) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var3_ref), "dj.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static char a(int param0, byte param1) {
-        int var2;
-        int var3;
-        int var2Lifetime1;
-        int var2Lifetime2;
-        int var3Lifetime1;
         if (param0 > -34) {
           dj.a(-28, (byte) 6);
-          var2 = param1 & 255;
+          int var2 = param1 & 255;
           if (0 == var2) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           }
@@ -62,7 +52,7 @@ final class dj {
             return (char)var2;
           }
           if (var2 < 160) {
-            var3 = cn.field_c[-128 + var2];
+            int var3 = IntrusiveDeque.field_c[-128 + var2];
             if (var3 == 0) {
               var3 = 63;
             }
@@ -70,7 +60,7 @@ final class dj {
           }
           return (char)var2;
         }
-        var2Lifetime1 = param1 & 255;
+        int var2Lifetime1 = param1 & 255;
         if (0 == var2Lifetime1) {
           throw new IllegalArgumentException("" + Integer.toString(var2Lifetime1, 16));
         }
@@ -80,27 +70,16 @@ final class dj {
         if (var2Lifetime1 >= 160) {
           return (char)var2Lifetime1;
         }
-        var3Lifetime1 = cn.field_c[-128 + var2Lifetime1];
+        int var3Lifetime1 = IntrusiveDeque.field_c[-128 + var2Lifetime1];
         if (var3Lifetime1 == 0) {
           var3Lifetime1 = 63;
         }
-        var2Lifetime2 = var3Lifetime1;
+        int var2Lifetime2 = var3Lifetime1;
         return (char)var2Lifetime2;
     }
 
     final static int a(int param0) {
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_25_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var2 = EscapeVector.field_A;
+        int var2 = EscapeVector.obfuscationControl;
         try {
           bo.field_F.a(true, (byte) -33, oj.field_G, ph.field_a);
           bo.field_F.m(0);
@@ -108,36 +87,36 @@ final class dj {
             bo.field_F.a(jc.field_c, nk.field_n, (byte) -116);
           }
           if (param0 != 6445) {
-            stackIn_6_0 = -79;
+            int stackIn_6_0 = -79;
             return stackIn_6_0;
           }
           if (-1 != rf.field_a) {
-            var1_int = rf.field_a;
+            int var1_int = rf.field_a;
             lj.a(-1, param0 - 6378);
-            stackIn_10_0 = var1_int;
+            int stackIn_10_0 = var1_int;
             return stackIn_10_0;
           }
           if (ei.field_i) {
-            stackIn_13_0 = 3;
+            int stackIn_13_0 = 3;
             return stackIn_13_0;
           }
           if (ui.field_b == dg.field_o) {
-            stackIn_16_0 = 1;
+            int stackIn_16_0 = 1;
             return stackIn_16_0;
           }
           if (!di.field_g.b(0)) {
-            stackIn_20_0 = 1;
+            int stackIn_20_0 = 1;
             return stackIn_20_0;
           }
           if (dg.field_o != dn.field_q) {
-            stackIn_25_0 = -1;
+            int stackIn_25_0 = -1;
             return stackIn_25_0;
           }
-          stackIn_23_0 = 2;
+          int stackIn_23_0 = 2;
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "dj.C(" + param0 + ')');
         }
     }

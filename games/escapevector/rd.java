@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rd {
-    static cn field_b;
+    static IntrusiveDeque field_b;
     static ng field_c;
     static int field_a;
 
@@ -12,42 +12,26 @@ final class rd {
           rd.a((byte) -74, (String) null);
         }
         hf.a(108);
-        em.h(param1, param4, param0, param2);
+        SoftwareRasterizer.h(param1, param4, param0, param2);
     }
 
     final static String a(byte param0, String param1) {
-        int var4_int = 0;
-        int var6 = 0;
-        char[] var2 = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
-        char[] var4 = null;
-        int var5 = 0;
-        int var7 = 0;
-        char[] var8 = null;
-        char[] var9 = null;
-        char[] var10 = null;
-        char[] var11 = null;
-        String stackIn_14_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         try {
           if (param0 != 72) {
             rd.a(111, -86, -93, -27, 95);
           }
-          var10 = param1.toCharArray();
-          var8 = var10;
-          var2 = var8;
-          var3 = 0;
-          for (var4_int = 0; var4_int < var10.length; var4_int++) {
+          char[] var10 = param1.toCharArray();
+          char[] var8 = var10;
+          char[] var2 = var8;
+          int var3 = 0;
+          for (int var4_int = 0; var4_int < var10.length; var4_int++) {
             if (var4_int < (-var3 - 1 + var10.length)) {
-              var5 = var10[var4_int];
+              int var5 = var10[var4_int];
               if (Character.isSpaceChar((char) var5)) {
                 var3++;
-                for (var6 = 1 + var4_int; var10.length > var6; var6++) {
+                for (int var6 = 1 + var4_int; var10.length > var6; var6++) {
                   var2[-1 + var6] = var10[var6];
                 }
               }
@@ -55,17 +39,17 @@ final class rd {
             }
             break;
           }
-          var11 = new char[var10.length - var3];
-          var9 = var11;
-          var4 = var9;
+          char[] var11 = new char[var10.length - var3];
+          char[] var9 = var11;
+          char[] var4 = var9;
           qg.a(var2, 0, var4, 0, var11.length);
-          stackIn_14_0 = new String(var11);
+          String stackIn_14_0 = new String(var11);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_17_0 = var2_ref;
-          stackIn_17_1 = new StringBuilder().append("rd.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_17_0 = var2_ref;
+          StringBuilder stackIn_17_1 = new StringBuilder().append("rd.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_18_2 = "null";
           } else {
@@ -82,6 +66,6 @@ final class rd {
     }
 
     static {
-        field_b = new cn();
+        field_b = new IntrusiveDeque();
     }
 }

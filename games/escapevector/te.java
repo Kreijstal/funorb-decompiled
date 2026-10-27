@@ -6,38 +6,35 @@ final class te extends fi {
     byte[] field_k;
 
     final void a(int param0, int param1) {
-        int var9 = 0;
-        int var9Lifetime1;
-        int var9Lifetime2;
         param0 = param0 + this.field_f;
         param1 = param1 + this.field_i;
-        int var3 = param0 + param1 * em.field_l;
+        int var3 = param0 + param1 * SoftwareRasterizer.width;
         int var4 = 0;
         int var5 = this.field_d;
         int var6 = this.field_g;
-        int var7 = em.field_l - var6;
+        int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
-        if (param1 < em.field_k) {
-          var9 = em.field_k - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          int var9 = SoftwareRasterizer.clipTop - param1;
           var5 = var5 - var9;
-          param1 = em.field_k;
+          param1 = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * em.field_l;
+          var3 = var3 + var9 * SoftwareRasterizer.width;
         }
-        if (param1 + var5 > em.field_j) {
-          var5 = var5 - (param1 + var5 - em.field_j);
+        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < em.field_a) {
-          var9Lifetime1 = em.field_a - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          int var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = em.field_a;
+          param0 = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > em.field_b) {
-          var9Lifetime2 = param0 + var6 - em.field_b;
+        if (param0 + var6 > SoftwareRasterizer.clipRight) {
+          int var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -46,7 +43,7 @@ final class te extends fi {
           var5 <= 0) {
           return;
         }
-        te.b(em.field_i, this.field_k, this.field_l, 0, var4, var3, var6, var5, var7, var8);
+        te.b(SoftwareRasterizer.pixels, this.field_k, this.field_l, 0, var4, var3, var6, var5, var7, var8);
     }
 
     te(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
@@ -61,38 +58,35 @@ final class te extends fi {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var10 = 0;
-        int var10Lifetime1;
-        int var10Lifetime2;
         param0 = param0 + this.field_f;
         param1 = param1 + this.field_i;
-        int var4 = param0 + param1 * em.field_l;
+        int var4 = param0 + param1 * SoftwareRasterizer.width;
         int var5 = 0;
         int var6 = this.field_d;
         int var7 = this.field_g;
-        int var8 = em.field_l - var7;
+        int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
-        if (param1 < em.field_k) {
-          var10 = em.field_k - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          int var10 = SoftwareRasterizer.clipTop - param1;
           var6 = var6 - var10;
-          param1 = em.field_k;
+          param1 = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * em.field_l;
+          var4 = var4 + var10 * SoftwareRasterizer.width;
         }
-        if (param1 + var6 > em.field_j) {
-          var6 = var6 - (param1 + var6 - em.field_j);
+        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < em.field_a) {
-          var10Lifetime1 = em.field_a - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          int var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = em.field_a;
+          param0 = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > em.field_b) {
-          var10Lifetime2 = param0 + var7 - em.field_b;
+        if (param0 + var7 > SoftwareRasterizer.clipRight) {
+          int var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -101,7 +95,7 @@ final class te extends fi {
           var6 <= 0) {
           return;
         }
-        te.a(em.field_i, this.field_k, this.field_l, var5, var4, var7, var6, var8, var9, param2);
+        te.a(SoftwareRasterizer.pixels, this.field_k, this.field_l, var5, var4, var7, var6, var8, var9, param2);
     }
 
     te(int param0, int param1, int param2) {
@@ -116,22 +110,16 @@ final class te extends fi {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var11 = 0;
-        int var12 = 0;
-        int incrementValue$12 = 0;
-        int var10;
-        int var13;
-        int var14;
-        var10 = 256 - param9;
-        for (var11 = -param6; var11 < 0; var11++) {
-          for (var12 = -param5; var12 < 0; var12++) {
-            var13 = param1[param3++];
+        int var10 = 256 - param9;
+        for (int var11 = -param6; var11 < 0; var11++) {
+          for (int var12 = -param5; var12 < 0; var12++) {
+            int var13 = param1[param3++];
             if (var13 == 0) {
               param4++;
             } else {
               var13 = param2[var13 & 255];
-              var14 = param0[param4];
-              incrementValue$12 = param4;
+              int var14 = param0[param4];
+              int incrementValue$12 = param4;
               param4++;
               param0[incrementValue$12] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
             }
@@ -142,24 +130,15 @@ final class te extends fi {
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var11 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$1 = 0;
-        int var10;
-        int var12;
-        int var12Lifetime1;
-        var10 = -(param6 >> 2);
+        int var10 = -(param6 >> 2);
         param6 = -(param6 & 3);
-        for (var11 = -param7; var11 < 0; var11++) {
-          for (var12 = var10; var12 < 0; var12++) {
+        for (int var11 = -param7; var11 < 0; var11++) {
+          for (int var12 = var10; var12 < 0; var12++) {
             param3 = param1[param4++];
             if (param3 == 0) {
               param5++;
             } else {
-              incrementValue$3 = param5;
+              int incrementValue$3 = param5;
               param5++;
               param0[incrementValue$3] = param2[param3 & 255];
             }
@@ -167,7 +146,7 @@ final class te extends fi {
             if (param3 == 0) {
               param5++;
             } else {
-              incrementValue$5 = param5;
+              int incrementValue$5 = param5;
               param5++;
               param0[incrementValue$5] = param2[param3 & 255];
             }
@@ -175,7 +154,7 @@ final class te extends fi {
             if (param3 == 0) {
               param5++;
             } else {
-              incrementValue$7 = param5;
+              int incrementValue$7 = param5;
               param5++;
               param0[incrementValue$7] = param2[param3 & 255];
             }
@@ -183,17 +162,17 @@ final class te extends fi {
             if (param3 == 0) {
               param5++;
             } else {
-              incrementValue$9 = param5;
+              int incrementValue$9 = param5;
               param5++;
               param0[incrementValue$9] = param2[param3 & 255];
             }
           }
-          for (var12Lifetime1 = param6; var12Lifetime1 < 0; var12Lifetime1++) {
+          for (int var12Lifetime1 = param6; var12Lifetime1 < 0; var12Lifetime1++) {
             param3 = param1[param4++];
             if (param3 == 0) {
               param5++;
             } else {
-              incrementValue$1 = param5;
+              int incrementValue$1 = param5;
               param5++;
               param0[incrementValue$1] = param2[param3 & 255];
             }

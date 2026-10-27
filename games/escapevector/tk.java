@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tk {
-    static ed[] field_a;
+    static Sprite[] field_a;
     static qh field_b;
 
     public static void b(int param0) {
@@ -21,39 +21,29 @@ final class tk {
         return af.field_e.a(false);
     }
 
-    final static ed[] a(boolean param0, qh[] param1) {
-        int var4 = 0;
-        RuntimeException var2 = null;
-        ed[] var3 = null;
-        int var5 = 0;
-        Object stackIn_3_0 = null;
-        ed[] stackIn_6_0 = null;
-        ed[] stackIn_11_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
+    final static Sprite[] a(boolean param0, qh[] param1) {
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         try {
           if (!nm.a((byte) -73, param1)) {
-            stackIn_3_0 = null;
-            return (ed[]) (stackIn_3_0);
+            Object stackIn_3_0 = null;
+            return (Sprite[]) (stackIn_3_0);
           }
-          var3 = new ed[param1.length];
+          Sprite[] var3 = new Sprite[param1.length];
           if (param0) {
-            stackIn_6_0 = (ed[]) null;
+            Sprite[] stackIn_6_0 = (Sprite[]) null;
             return stackIn_6_0;
           }
-          for (var4 = 0; var4 < param1.length; var4++) {
+          for (int var4 = 0; var4 < param1.length; var4++) {
             var3[var4] = param1[var4].b(94);
           }
-          stackIn_11_0 = var3;
+          Sprite[] stackIn_11_0 = var3;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_14_0 = var2;
-          stackIn_14_1 = new StringBuilder().append("tk.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var2;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("tk.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -68,34 +58,28 @@ final class tk {
     }
 
     final static void a(int param0, int param1) {
-        hg var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        qd var5 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         try {
-          var5 = (qd) (mi.field_l.a(false));
-          var3 = -57 / ((-46 - param0) / 51);
+          qd var5 = (qd) (mi.field_l.first(false));
+          int var3 = -57 / ((-46 - param0) / 51);
           while (var5 != null) {
             sm.a(var5, param1, true);
-            var5 = (qd) (mi.field_l.b((byte) 70));
+            var5 = (qd) (mi.field_l.next((byte) 70));
           }
-          var2 = bc.field_b.a(false);
+          IntrusiveNode var2 = bc.field_b.first(false);
           while (var2 != null) {
             km.a(param1, 122);
-            var2 = bc.field_b.b((byte) 70);
+            var2 = bc.field_b.next((byte) 70);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2_ref), "tk.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
-        field_a = new ed[7];
+        field_a = new Sprite[7];
     }
 }

@@ -11,12 +11,12 @@ abstract class sb {
     va field_j;
     va field_n;
     long field_k;
-    n field_e;
+    PacketBuffer field_e;
     int field_f;
     volatile int field_d;
     byte field_m;
     volatile int field_g;
-    n field_o;
+    PacketBuffer field_o;
     s field_c;
 
     final boolean c(int param0) {
@@ -41,7 +41,7 @@ abstract class sb {
         if (param0 == 88) {
           return this.field_j.c(0) + this.field_n.c(0);
         }
-        this.field_e = (n) null;
+        this.field_e = (PacketBuffer) null;
         return this.field_j.c(0) + this.field_n.c(0);
     }
 
@@ -70,21 +70,14 @@ abstract class sb {
     abstract boolean d(int param0);
 
     final s a(int param0, boolean param1, byte param2, int param3, byte param4) {
-        s stackIn_3_0 = null;
-        boolean stackIn_4_1 = false;
-        s stackIn_16_0 = null;
-        boolean stackIn_17_1 = false;
-        long var6;
-        s var8;
-        s var8Lifetime1;
-        var6 = (long)param3 + ((long)param0 << 32);
+        long var6 = (long)param3 + ((long)param0 << 32);
         if (param2 == 0) {
-          var8 = new s();
+          s var8 = new s();
           var8.field_y = param4;
-          stackIn_16_0 = var8;
-          stackIn_17_1 = (!param1) ? false : true;
+          s stackIn_16_0 = var8;
+          boolean stackIn_17_1 = (!param1) ? false : true;
           stackIn_16_0.field_r = stackIn_17_1;
-          var8.field_p = var6;
+          var8.secondaryKey = var6;
           if (param1) {
             if (this.a(true) >= 20) {
               throw new RuntimeException();
@@ -99,12 +92,12 @@ abstract class sb {
           return var8;
         }
         this.field_f = -16;
-        var8Lifetime1 = new s();
+        s var8Lifetime1 = new s();
         var8Lifetime1.field_y = param4;
-        stackIn_3_0 = var8Lifetime1;
-        stackIn_4_1 = (!param1) ? false : true;
+        s stackIn_3_0 = var8Lifetime1;
+        boolean stackIn_4_1 = (!param1) ? false : true;
         stackIn_3_0.field_r = stackIn_4_1;
-        var8Lifetime1.field_p = var6;
+        var8Lifetime1.secondaryKey = var6;
         if (param1) {
           if (this.a(true) >= 20) {
             throw new RuntimeException();
@@ -124,11 +117,11 @@ abstract class sb {
         this.field_l = new va();
         this.field_j = new va();
         this.field_n = new va();
-        this.field_e = new n(6);
+        this.field_e = new PacketBuffer(6);
         this.field_g = 0;
         this.field_m = (byte) 0;
         this.field_d = 0;
-        this.field_o = new n(10);
+        this.field_o = new PacketBuffer(10);
     }
 
     static {

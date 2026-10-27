@@ -14,29 +14,18 @@ final class q extends hc {
     static boolean[][] field_E;
     static String[] field_L;
     int field_J;
-    static ed field_G;
+    static Sprite field_G;
     private kn field_K;
 
     final boolean a(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {
-        int var12 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var8_int = 0;
-        RuntimeException var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        var14 = EscapeVector.field_A;
+        int var14 = EscapeVector.obfuscationControl;
         try {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
-          var8_int = -this.field_M + (param1 - param4);
-          var9 = -(2 * this.field_M) + this.field_g;
+          int var8_int = -this.field_M + (param1 - param4);
+          int var9 = -(2 * this.field_M) + this.field_g;
           if (var8_int > var9) {
             var8_int = var9;
           }
@@ -48,10 +37,10 @@ final class q extends hc {
             if (param6 != 2) {
               return true;
             }
-            var10 = 2147483647;
-            var11 = -1;
-            for (var12 = 0; this.field_K.a(true) > var12; var12++) {
-              var13 = -var8_int + this.field_K.a(-49, var12);
+            int var10 = 2147483647;
+            int var11 = -1;
+            for (int var12 = 0; this.field_K.a(true) > var12; var12++) {
+              int var13 = -var8_int + this.field_K.a(-49, var12);
               var13 = var13 * var13;
               if (var13 < var10) {
                 var10 = var13;
@@ -66,10 +55,10 @@ final class q extends hc {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_28_0 = var8;
-          stackIn_28_1 = new StringBuilder().append("q.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_28_0 = var8;
+          StringBuilder stackIn_28_1 = new StringBuilder().append("q.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_29_2 = "null";
           } else {
@@ -128,17 +117,15 @@ final class q extends hc {
     }
 
     final static void c(int param0, byte param1) {
-        c var2 = null;
-        c var2Lifetime1;
         if (param1 < -60) {
-          var2 = om.field_c;
+          c var2 = om.field_c;
           var2.a(param0, true);
           var2.f(1, -123);
           var2.f(0, -123);
           return;
         }
         field_P = true;
-        var2Lifetime1 = om.field_c;
+        c var2Lifetime1 = om.field_c;
         var2Lifetime1.a(param0, true);
         var2Lifetime1.f(1, -123);
         var2Lifetime1.f(0, -123);

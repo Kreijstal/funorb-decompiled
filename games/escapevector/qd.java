@@ -1,31 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qd extends hg {
+final class qd extends IntrusiveNode {
     int field_j;
     int field_k;
     int field_i;
     int field_h;
     int field_m;
-    static cn field_n;
+    static IntrusiveDeque field_n;
     int field_g;
     static volatile boolean field_l;
 
     final static boolean a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var2Lifetime1;
-        int var3Lifetime1;
         if (param1 >= -85) {
-          field_n = (cn) null;
-          var2 = dh.field_e.length;
+          field_n = (IntrusiveDeque) null;
+          int var2 = dh.field_e.length;
           if (0 > param0) {
             return false;
           }
           if (var2 <= param0) {
             return false;
           }
-          var3 = dh.field_e[param0];
+          int var3 = dh.field_e[param0];
           if (var3 != 2) {
             return true;
           }
@@ -34,14 +30,14 @@ final class qd extends hg {
           }
           return false;
         }
-        var2Lifetime1 = dh.field_e.length;
+        int var2Lifetime1 = dh.field_e.length;
         if (0 > param0) {
           return false;
         }
         if (var2Lifetime1 <= param0) {
           return false;
         }
-        var3Lifetime1 = dh.field_e[param0];
+        int var3Lifetime1 = dh.field_e[param0];
         if (var3Lifetime1 != 2) {
           return true;
         }
@@ -68,8 +64,7 @@ final class qd extends hg {
     }
 
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
-        int var4;
-        var4 = 0;
+        int var4 = 0;
         if (param2 != -8) {
           field_l = false;
         }
@@ -88,8 +83,7 @@ final class qd extends hg {
 
     final static void a(boolean param0) {
         int var1;
-        int var2;
-        var2 = EscapeVector.field_A;
+        int var2 = EscapeVector.obfuscationControl;
         dj.field_b = null;
         if (param0) {
           ei.field_i = false;
@@ -110,7 +104,7 @@ final class qd extends hg {
           cg.d(32);
           return;
         }
-        field_n = (cn) null;
+        field_n = (IntrusiveDeque) null;
         ei.field_i = false;
         if (eb.field_H) {
           be.field_b.r(94);
@@ -139,14 +133,13 @@ final class qd extends hg {
     }
 
     static {
-        field_n = new cn();
+        field_n = new IntrusiveDeque();
         field_l = true;
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static String $cfr$intArgs$a$3214d41809e1(boolean param0, boolean param1, int param2, boolean param3) {
-        int var4;
-        var4 = 0;
+        int var4 = 0;
         if (param2 != -8) {
           field_l = false;
         }

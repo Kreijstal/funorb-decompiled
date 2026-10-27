@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class km extends fh {
-    static ed field_k;
+    static Sprite field_k;
     static String field_o;
     static int[] field_j;
     static String field_l;
@@ -71,138 +71,109 @@ final class km extends fh {
         fg.b(0);
     }
 
-    final static void a(n param0, lk param1, int param2, int param3) {
+    final static void a(PacketBuffer param0, lk param1, int param2, int param3) {
         try {
-          int var5 = 0;
-          int var11_int = 0;
-          int var12_int = 0;
-          byte[] array$0 = null;
-          RuntimeException stackIn_38_0 = null;
-          StringBuilder stackIn_38_1 = null;
           String stackIn_39_2 = null;
-          StringBuilder stackIn_41_1 = null;
           String stackIn_42_2 = null;
           Throwable decompiledCaughtException = null;
-          RuntimeException var4 = null;
-          int var6_int = 0;
-          ClassNotFoundException var6 = null;
-          SecurityException var6_ref = null;
-          NullPointerException var6_ref2 = null;
-          Exception var6_ref3 = null;
-          Throwable var6_ref4 = null;
-          String var7 = null;
           String var8 = null;
           int var9 = 0;
-          String[] var10 = null;
-          byte[][] var11 = null;
-          Class[] var12 = null;
-          int var13 = 0;
-          int var14 = 0;
-          String var15 = null;
-          int var16 = 0;
-          mn var17 = null;
-          byte[][] var18 = null;
-          String var19 = null;
-          byte[][] var20 = null;
-          int var13Lifetime1;
-          var14 = EscapeVector.field_A;
+          int var14 = EscapeVector.obfuscationControl;
           try {
             if (param3 != -24183) {
               return;
             }
-            var17 = new mn();
-            var17.field_i = param0.e(0);
-            var17.field_g = param0.g(param3 + 19130);
+            mn var17 = new mn();
+            var17.field_i = param0.readUnsignedByte(0);
+            var17.field_g = param0.readInt(param3 + 19130);
             var17.field_p = new la[var17.field_i];
             var17.field_m = new int[var17.field_i];
             var17.field_o = new int[var17.field_i];
             var17.field_j = new int[var17.field_i];
             var17.field_l = new byte[var17.field_i][][];
             var17.field_r = new la[var17.field_i];
-            for (var5 = 0; var5 < var17.field_i; var5++) {
+            for (int var5 = 0; var5 < var17.field_i; var5++) {
               try {
-                var6_int = param0.e(0);
-                if (0 != var6_int &&
-                  var6_int != 1 &&
-                  var6_int != 2) {
-                  if (var6_int == 3 ||
-                    var6_int == 4) {
-                    var19 = param0.c(false);
-                    var8 = param0.c(false);
-                    var9 = param0.e(param3 + 24183);
-                    var10 = new String[var9];
-                    for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param0.c(false);
-                    }
-                    var20 = new byte[var9][];
-                    var18 = var20;
-                    var11 = var18;
-                    if (var6_int == 3) {
-                      for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param0.g(param3 ^ 19914);
-                        array$0 = new byte[var13];
-                        var11[var12_int] = array$0;
-                        param0.a(var20[var12_int], (byte) -96, 0, var13);
-                      }
-                    }
-                    var17.field_m[var5] = var6_int;
-                    var12 = new Class[var9];
-                    var16 = 0;
-                    var13Lifetime1 = var16;
-                    while (var16 < var9) {
-                      var12[var16] = en.a(var10[var16], (byte) 38);
-                      var16++;
-                    }
-                    var17.field_p[var5] = param1.a(var8, n.a(param3, -24074), en.a(var19, (byte) 38), var12);
-                    var17.field_l[var5] = var20;
-                  }
-                } else {
-                  var15 = param0.c(false);
-                  var7 = var15;
+                int var6_int = param0.readUnsignedByte(0);
+                if (0 == var6_int ||
+                  var6_int == 1 ||
+                  var6_int == 2) {
+                  String var15 = param0.c(false);
+                  String var7 = var15;
                   var8 = param0.c(false);
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param0.g(-5053);
+                    var9 = param0.readInt(-5053);
                   }
                   var17.field_m[var5] = var6_int;
                   var17.field_j[var5] = var9;
-                  var17.field_r[var5] = param1.a(var8, en.a(var15, (byte) 38), n.a(param3, 24120));
+                  var17.field_r[var5] = param1.a(var8, en.a(var15, (byte) 38), PacketBuffer.a(param3, 24120));
+                } else if (var6_int == 3 ||
+                  var6_int == 4) {
+                  String var19 = param0.c(false);
+                  var8 = param0.c(false);
+                  var9 = param0.readUnsignedByte(param3 + 24183);
+                  String[] var10 = new String[var9];
+                  for (int var11_int = 0; var11_int < var9; var11_int++) {
+                    var10[var11_int] = param0.c(false);
+                  }
+                  byte[][] var20 = new byte[var9][];
+                  byte[][] var18 = var20;
+                  byte[][] var11 = var18;
+                  if (var6_int == 3) {
+                    for (int var12_int = 0; var12_int < var9; var12_int++) {
+                      int var13 = param0.readInt(param3 ^ 19914);
+                      byte[] array$0 = new byte[var13];
+                      var11[var12_int] = array$0;
+                      param0.a(var20[var12_int], (byte) -96, 0, var13);
+                    }
+                  }
+                  var17.field_m[var5] = var6_int;
+                  Class[] var12 = new Class[var9];
+                  int var16 = 0;
+                  int var13Lifetime1 = var16;
+                  while (var16 < var9) {
+                    var12[var16] = en.a(var10[var16], (byte) 38);
+                    var16++;
+                  }
+                  var17.field_p[var5] = param1.a(var8, PacketBuffer.a(param3, -24074), en.a(var19, (byte) 38), var12);
+                  var17.field_l[var5] = var20;
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
+                ClassNotFoundException var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
                 var17.field_o[var5] = -1;
               } catch (java.lang.SecurityException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
-                var6_ref = (SecurityException) (Object) decompiledCaughtException;
+                SecurityException var6_ref = (SecurityException) (Object) decompiledCaughtException;
                 var17.field_o[var5] = -2;
               } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
-                var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
+                NullPointerException var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
                 var17.field_o[var5] = -3;
               } catch (java.lang.Exception decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
-                var6_ref3 = (Exception) (Object) decompiledCaughtException;
+                Exception var6_ref3 = (Exception) (Object) decompiledCaughtException;
                 var17.field_o[var5] = -4;
               } catch (java.lang.Throwable decompiledCaughtParameter4) {
                 decompiledCaughtException = decompiledCaughtParameter4;
-                var6_ref4 = decompiledCaughtException;
+                Throwable var6_ref4 = decompiledCaughtException;
                 var17.field_o[var5] = -5;
               }
             }
-            je.field_a.a(-12328, var17);
+            je.field_a.addLast(-12328, var17);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
-            var4 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_38_0 = var4;
-            stackIn_38_1 = new StringBuilder().append("km.F(");
+            RuntimeException var4 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_38_0 = var4;
+            StringBuilder stackIn_38_1 = new StringBuilder().append("km.F(");
             if (param0 == null) {
               stackIn_39_2 = "null";
             } else {
               stackIn_39_2 = "{...}";
             }
-            stackIn_41_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',');
+            StringBuilder stackIn_41_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',');
             if (param1 == null) {
               stackIn_42_2 = "null";
             } else {
@@ -217,24 +188,21 @@ final class km extends fh {
         }
     }
 
-    final static void a(n param0, int param1) {
-        int var2_int = 0;
-        int var2_intLifetime1;
-        int var2_intLifetime2;
+    final static void a(PacketBuffer param0, int param1) {
         try {
-          hk.field_n = param0.f(param1 - 1238557701) << 5;
-          var2_int = param0.e(0);
+          hk.field_n = param0.readUnsignedShort(param1 - 1238557701) << 5;
+          int var2_int = param0.readUnsignedByte(0);
           hk.field_n = hk.field_n + (var2_int >> 3);
           wk.field_d = 1835008 & var2_int << 18;
-          wk.field_d = wk.field_d + (param0.f(1952) << 2);
-          var2_intLifetime1 = param0.e(param1 - 1238559653);
+          wk.field_d = wk.field_d + (param0.readUnsignedShort(1952) << 2);
+          int var2_intLifetime1 = param0.readUnsignedByte(param1 - 1238559653);
           wk.field_d = wk.field_d + (var2_intLifetime1 >> 6);
-          oc.field_u = (63 & var2_intLifetime1) << 15;
-          oc.field_u = oc.field_u + (param0.e(param1 - 1238559653) << 7);
-          var2_intLifetime2 = param0.e(param1 ^ param1);
+          PointCloudEffect.field_u = (63 & var2_intLifetime1) << 15;
+          PointCloudEffect.field_u = PointCloudEffect.field_u + (param0.readUnsignedByte(param1 - 1238559653) << 7);
+          int var2_intLifetime2 = param0.readUnsignedByte(param1 ^ param1);
           bk.field_s = (var2_intLifetime2 & 1) << 16;
-          oc.field_u = oc.field_u + (var2_intLifetime2 >> 1);
-          bk.field_s = bk.field_s + param0.f(1952);
+          PointCloudEffect.field_u = PointCloudEffect.field_u + (var2_intLifetime2 >> 1);
+          bk.field_s = bk.field_s + param0.readUnsignedShort(1952);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "km.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

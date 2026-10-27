@@ -5,24 +5,18 @@ final class ug {
     static rf field_c;
     static String field_b;
     static String[] field_d;
-    static ed[] field_a;
+    static Sprite[] field_a;
 
     final static boolean a(int param0, int param1) {
-        int[] var2 = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var5 = jb.field_z;
-          var2 = var5;
-          var3 = param1;
+          int[] var5 = jb.field_z;
+          int[] var2 = var5;
+          int var3 = param1;
           while (true) {
             if (var5.length <= var3) {
               return false;
             }
-            var4 = var5[var3];
+            int var4 = var5[var3];
             if (param0 != var4) {
               var3++;
               continue;
@@ -31,8 +25,8 @@ final class ug {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2_ref), "ug.C(" + param0 + ',' + param1 + ')');
         }
     }
@@ -48,9 +42,7 @@ final class ug {
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = EscapeVector.field_A;
+        int var12 = EscapeVector.obfuscationControl;
         int[] var13 = new int[256];
         int[] var3 = var13;
         int var4 = (16744599 & param2) >> 16;
@@ -59,8 +51,8 @@ final class ug {
         int var7 = (param1 & 16746391) >> 16;
         int var8 = param1 >> 8 & 255;
         int var9 = 255 & param1;
-        for (var10 = 0; var10 < 256; var10++) {
-          var11 = 256 - var10;
+        for (int var10 = 0; var10 < 256; var10++) {
+          int var11 = 256 - var10;
           var13[var10] = (var6 * var10 >> 8) - (-(var9 * var11 >> 8) - ((var4 * var10 >> 8) + (var7 * var11 >> 8) << 16) - ((var5 * var10 >> 8) + (var11 * var8 >> 8) << 8));
         }
         if (param0 != 1746055568) {
@@ -73,6 +65,6 @@ final class ug {
         field_b = " - rotate ship left";
         field_d = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
         field_c = new rf();
-        field_a = new ed[5];
+        field_a = new Sprite[5];
     }
 }

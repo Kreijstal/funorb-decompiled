@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ll extends hg {
+final class ll extends IntrusiveNode {
     int field_g;
     int[] field_j;
     int field_i;
@@ -19,31 +19,25 @@ final class ll extends hg {
     }
 
     final static void b(boolean param0) {
-        c var2 = null;
-        ll var1 = (ll) (jl.field_n.a(param0));
+        ll var1 = (ll) (jl.field_n.first(param0));
         if (var1 != null) {
-          var2 = om.field_g;
-          var1.field_j = new int[]{var2.g(-5053), var2.g(-5053), var2.g(-5053), var2.g(-5053)};
-          var1.c((byte) -66);
+          c var2 = om.field_g;
+          var1.field_j = new int[]{var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053)};
+          var1.unlink((byte) -66);
           return;
         }
         nm.a(16);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var5;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         if (param3 > 0) {
-          if (30 <= param3) {
-            if (param3 <= 80) {
-              ea.field_f.e(8, param1);
-            } else {
-              if (param3 < 95) {
-                mf.a(param1, 8, (param3 - 80) * 4, ea.field_f, param2 - 115);
-              }
-            }
-          } else {
+          if (!(30 <= param3)) {
             mf.a(param1, 8, 60 - param3 * 2, ea.field_f, param2 ^ -97);
+          } else if (param3 <= 80) {
+            ea.field_f.e(8, param1);
+          } else if (param3 < 95) {
+            mf.a(param1, 8, (param3 - 80) * 4, ea.field_f, param2 - 115);
           }
         }
         if (param2 != 8) {
@@ -53,17 +47,17 @@ final class ll extends hg {
           return;
         }
         if (80 > param3) {
-          mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
+          mf.a(param0, -f.field_o.fullWidth + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
           return;
         }
         if (param3 <= 80) {
-          f.field_o.e(632 - f.field_o.field_A, param0);
+          f.field_o.e(632 - f.field_o.fullWidth, param0);
           return;
         }
         if (95 <= param3) {
           return;
         }
-        mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
+        mf.a(param0, -f.field_o.fullWidth + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
     }
 
     public static void a(byte param0) {
@@ -77,10 +71,9 @@ final class ll extends hg {
     }
 
     final static void a(boolean param0) {
-        CharSequence var3 = null;
         ck.field_r = om.field_g.c(!param0 ? true : false);
         if (param0) {
-          var3 = (CharSequence) ((Object) ck.field_r);
+          CharSequence var3 = (CharSequence) ((Object) ck.field_r);
           cc.field_k = sf.a(-101, var3);
           return;
         }
@@ -94,15 +87,15 @@ final class ll extends hg {
           if (!bo.a(30000, 1)) {
             return false;
           }
-          hi.field_r = om.field_g.e(param0 ^ 10550);
-          om.field_g.field_m = 0;
+          hi.field_r = om.field_g.readUnsignedByte(param0 ^ 10550);
+          om.field_g.position = 0;
         }
         if (hi.field_r == -2) {
           if (!bo.a(30000, 2)) {
             return false;
           }
-          hi.field_r = om.field_g.f(1952);
-          om.field_g.field_m = 0;
+          hi.field_r = om.field_g.readUnsignedShort(1952);
+          om.field_g.position = 0;
         }
         if (param0 == 10550) {
           return bo.a(30000, hi.field_r);

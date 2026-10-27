@@ -1,39 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cc extends hg {
+final class cc extends IntrusiveNode {
     static String field_k;
     int field_m;
     int field_g;
     int field_n;
     int field_o;
     int field_i;
-    static ed field_j;
+    static Sprite field_j;
     int field_h;
     static String field_l;
 
-    final static ed[] a(int param0, mf param1, int param2, byte param3) {
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        Object stackIn_2_0 = null;
-        ed[] stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+    final static Sprite[] a(int param0, mf param1, int param2, byte param3) {
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = -48 % ((param3 + 38) / 33);
+          int var4_int = -48 % ((param3 + 38) / 33);
           if (uc.a(param1, 120, param0, param2)) {
-            stackIn_4_0 = hf.b(121);
+            Sprite[] stackIn_4_0 = hf.b(121);
             return stackIn_4_0;
           }
-          stackIn_2_0 = null;
-          return (ed[]) (stackIn_2_0);
+          Object stackIn_2_0 = null;
+          return (Sprite[]) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_7_0 = var4;
-          stackIn_7_1 = new StringBuilder().append("cc.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var4;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("cc.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {

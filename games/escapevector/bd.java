@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bd extends hg {
+final class bd extends IntrusiveNode {
     static long field_k;
     static int[] field_l;
     int field_i;

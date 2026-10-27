@@ -50,42 +50,33 @@ final class bo extends hc {
     }
 
     final static vj a(String param0, boolean param1, int param2, String param3) {
-        long var4_long = 0L;
-        RuntimeException var4 = null;
-        Object var6 = null;
-        CharSequence var7 = null;
-        vj stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4_long = 0L;
+          long var4_long = 0L;
           if (param2 != 24564) {
             field_F = (tb) null;
           }
-          var6 = null;
+          Object var6 = null;
           if (param0.indexOf('@') == -1) {
-            var7 = (CharSequence) ((Object) param0);
+            CharSequence var7 = (CharSequence) ((Object) param0);
             var4_long = vn.a((byte) 88, var7);
           } else {
             var6 = param0;
           }
-          stackIn_6_0 = ei.a(0, param1, var4_long, (String) (var6), param3);
+          vj stackIn_6_0 = ei.a(0, param1, var4_long, (String) (var6), param3);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("bo.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var4;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("bo.C(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -96,15 +87,10 @@ final class bo extends hc {
     }
 
     final static void a(java.awt.Canvas param0, byte param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           sc.a((byte) -58, (java.awt.Component) ((Object) param0));
-          var2_int = 120 / ((param1 - 54) / 57);
+          int var2_int = 120 / ((param1 - 54) / 57);
           od.a((java.awt.Component) ((Object) param0), (byte) 9);
           if (null == ji.field_b) {
             return;
@@ -112,10 +98,10 @@ final class bo extends hc {
           ji.field_b.a(-5070, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_5_0 = var2;
-          stackIn_5_1 = new StringBuilder().append("bo.D(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_5_0 = var2;
+          StringBuilder stackIn_5_1 = new StringBuilder().append("bo.D(");
           if (param0 == null) {
             stackIn_6_2 = "null";
           } else {
@@ -136,20 +122,17 @@ final class bo extends hc {
 
     final static boolean a(int param0, int param1) {
         try {
-          int var2_int = 0;
-          IOException var2 = null;
-          Throwable decompiledCaughtException = null;
           if (param0 != 30000) {
             return false;
           }
-          if (param1 <= om.field_g.field_m) {
+          if (param1 <= om.field_g.position) {
             return true;
           }
           if (null == pg.field_c) {
             return false;
           }
           try {
-            var2_int = pg.field_c.b(-124);
+            int var2_int = pg.field_c.b(-124);
             if (var2_int <= 0) {
               if (0 > var2_int) {
                 nm.a(16);
@@ -161,20 +144,20 @@ final class bo extends hc {
               nm.a(16);
               return false;
             }
-            if (var2_int > param1 - om.field_g.field_m) {
-              var2_int = param1 - om.field_g.field_m;
+            if (var2_int > param1 - om.field_g.position) {
+              var2_int = param1 - om.field_g.position;
             }
-            pg.field_c.a(om.field_g.field_m, var2_int, om.field_g.field_g, (byte) -49);
+            pg.field_c.a(om.field_g.position, var2_int, om.field_g.payload, (byte) -49);
             sl.field_a = td.b(128);
-            om.field_g.field_m = om.field_g.field_m + var2_int;
-            if (param1 > om.field_g.field_m) {
+            om.field_g.position = om.field_g.position + var2_int;
+            if (param1 > om.field_g.position) {
               return false;
             }
-            om.field_g.field_m = 0;
+            om.field_g.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var2 = (IOException) (Object) decompiledCaughtException;
+            Throwable decompiledCaughtException = decompiledCaughtParameter0;
+            IOException var2 = (IOException) (Object) decompiledCaughtException;
             nm.a(16);
             return false;
           }

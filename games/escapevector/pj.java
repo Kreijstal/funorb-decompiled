@@ -13,22 +13,18 @@ final class pj implements Runnable {
     private la field_m;
     private byte[] field_l;
     private lk field_e;
-    static ed[] field_g;
+    static Sprite[] field_g;
     private InputStream field_h;
     private OutputStream field_b;
     private int field_a;
 
     final void c(int param0) {
         try {
-          Throwable decompiledCaughtException = null;
-          Object var2 = null;
-          InterruptedException var2_ref = null;
-          int var4 = 0;
-          var4 = EscapeVector.field_A;
+          int var4 = EscapeVector.obfuscationControl;
           if (this.field_f) {
             return;
           }
-          var2 = this;
+          Object var2 = this;
           synchronized (var2) {
             this.field_f = true;
             this.notifyAll();
@@ -44,8 +40,8 @@ final class pj implements Runnable {
               try {
                 ((Thread) (this.field_m.field_b)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = (InterruptedException) (Object) decompiledCaughtException;
+                Throwable decompiledCaughtException = decompiledCaughtParameter0;
+                InterruptedException var2_ref = (InterruptedException) (Object) decompiledCaughtException;
                 this.field_m = null;
                 return;
               }
@@ -83,15 +79,8 @@ final class pj implements Runnable {
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
-        int var6 = 0;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
-        Throwable decompiledCaughtException = null;
-        Object var5 = null;
-        RuntimeException var5_ref = null;
-        int var8 = 0;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
           if (this.field_f) {
             return;
@@ -103,9 +92,9 @@ final class pj implements Runnable {
           if (this.field_l == null) {
             this.field_l = new byte[this.field_j];
           }
-          var5 = this;
+          Object var5 = this;
           synchronized (var5) {
-            for (var6 = 0; param0 > var6; var6++) {
+            for (int var6 = 0; param0 > var6; var6++) {
               this.field_l[this.field_d] = param2[param1 + var6];
               this.field_d = (this.field_d + 1) % this.field_j;
               if (~((-100 + this.field_a + this.field_j) % this.field_j) == ~this.field_d) {
@@ -122,10 +111,10 @@ final class pj implements Runnable {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_29_0 = var5_ref;
-          stackIn_29_1 = new StringBuilder().append("pj.E(").append(param0).append(',').append(param1).append(',');
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_29_0 = var5_ref;
+          StringBuilder stackIn_29_1 = new StringBuilder().append("pj.E(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_30_2 = "null";
           } else {
@@ -171,26 +160,20 @@ final class pj implements Runnable {
 
     public final void run() {
         try {
-          int decompiledRegionSelector0 = 0;
+          boolean decompiledRegionSelector0 = false;
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
-          IOException var1 = null;
-          Exception var1_ref = null;
           int var2 = 0;
-          Object var3 = null;
           IOException var3_ref = null;
-          InterruptedException var4 = null;
-          int var6 = 0;
-          String var7 = null;
-          var6 = EscapeVector.field_A;
+          int var6 = EscapeVector.obfuscationControl;
           try {
             while (true) {
-              var3 = this;
+              Object var3 = this;
               synchronized (var3) {
                 boolean decompiledFrameRemainder0 = true;
                 if (this.field_d == this.field_a) {
                   if (this.field_f) {
-                    decompiledRegionSelector0 = 0;
+                    decompiledRegionSelector0 = false;
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -198,7 +181,7 @@ final class pj implements Runnable {
                       this.wait();
                     } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
-                      var4 = (InterruptedException) (Object) decompiledCaughtException;
+                      InterruptedException var4 = (InterruptedException) (Object) decompiledCaughtException;
                     }
                   }
                 }
@@ -209,10 +192,10 @@ final class pj implements Runnable {
                   } else {
                     var1_int = -this.field_a + this.field_j;
                   }
-                  decompiledRegionSelector0 = 1;
+                  decompiledRegionSelector0 = true;
                 }
               }
-              if (decompiledRegionSelector0 == 0) {
+              if (!decompiledRegionSelector0) {
                 try {
                   if (this.field_h != null) {
                     this.field_h.close();
@@ -225,7 +208,7 @@ final class pj implements Runnable {
                   }
                 } catch (java.io.IOException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
-                  var1 = (IOException) (Object) decompiledCaughtException;
+                  IOException var1 = (IOException) (Object) decompiledCaughtException;
                 }
                 this.field_l = null;
                 break;
@@ -253,8 +236,8 @@ final class pj implements Runnable {
             }
           } catch (java.lang.Exception decompiledCaughtParameter4) {
             decompiledCaughtException = decompiledCaughtParameter4;
-            var1_ref = (Exception) (Object) decompiledCaughtException;
-            var7 = (String) null;
+            Exception var1_ref = (Exception) (Object) decompiledCaughtException;
+            String var7 = (String) null;
             pf.a(false, (String) null, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -265,14 +248,8 @@ final class pj implements Runnable {
     }
 
     final void a(int param0, int param1, byte[] param2, byte param3) throws IOException {
-        int var5_int = 0;
-        int var6 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         try {
           if (param3 != -49) {
             return;
@@ -281,7 +258,7 @@ final class pj implements Runnable {
             return;
           }
           while (param1 > 0) {
-            var5_int = this.field_h.read(param2, param0, param1);
+            int var5_int = this.field_h.read(param2, param0, param1);
             if (var5_int <= 0) {
               throw new EOFException();
             }
@@ -290,10 +267,10 @@ final class pj implements Runnable {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("pj.A(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var5;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("pj.A(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {

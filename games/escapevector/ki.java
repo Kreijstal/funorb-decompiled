@@ -13,23 +13,18 @@ final class ki extends r {
     static String field_I;
 
     final static byte[] a(String param0, int param1) {
-        RuntimeException var2 = null;
-        byte[] stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 10592) {
             ki.l(-55);
           }
-          stackIn_3_0 = wk.field_e.a(param1 ^ -10596, param0, "");
+          byte[] stackIn_3_0 = wk.field_e.a(param1 ^ -10596, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("ki.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ki.A(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -51,10 +46,10 @@ final class ki extends r {
     }
 
     final String d(int param0) {
-        int var2 = this.field_C.field_u ? 1 : 0;
+        boolean var2 = (this.field_C.field_u);
         this.field_C.field_u = this.field_u;
         String var3 = this.field_C.d(param0);
-        this.field_C.field_u = var2 != 0 ? true : false;
+        this.field_C.field_u = (var2) ? true : false;
         return var3;
     }
 
@@ -75,31 +70,21 @@ final class ki extends r {
 
     ki(int param0, int param1, int param2, int param3, hm param4, boolean param5, int param6, int param7, wl param8, int param9, String param10) {
         super(param0, param1, param2, param3, (db) null, (wn) null);
-        boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var12_int = 0;
-        RuntimeException var12 = null;
-        int var13 = 0;
-        int var14 = 0;
         try {
           this.field_C = param4;
           this.field_D = param6;
           this.field_F = param9;
-          stackIn_4_1 = (param5);
+          boolean stackIn_4_1 = (param5);
           this.field_E = stackIn_4_1;
           this.field_K = param7;
           this.field_L = param8;
           this.field_G = param10;
-          var12_int = -this.field_K + this.field_D;
-          var13 = this.field_L.b(param10, var12_int, this.field_L.field_r) + 2 * this.field_K;
+          int var12_int = -this.field_K + this.field_D;
+          int var13 = this.field_L.b(param10, var12_int, this.field_L.field_r) + 2 * this.field_K;
           if (param3 >= var13) {
             var13 = param3;
           } else {
@@ -110,26 +95,26 @@ final class ki extends r {
           } else {
             stackIn_10_0 = 2 * this.field_K + this.field_D;
           }
-          var14 = stackIn_10_0;
+          int var14 = stackIn_10_0;
           this.field_C.a(-(3 * this.field_K) + (-this.field_D + param2), this.field_K + (var13 - param3 >> 1), var14, true, param3 - 2 * this.field_K);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var12 = decompiledCaughtException;
-          stackIn_14_0 = var12;
-          stackIn_14_1 = new StringBuilder().append("ki.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var12 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var12;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("ki.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+          StringBuilder stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
           if (param8 == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param9).append(',');
+          StringBuilder stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param9).append(',');
           if (param10 == null) {
             stackIn_21_2 = "null";
           } else {

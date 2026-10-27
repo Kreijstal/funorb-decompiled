@@ -7,7 +7,7 @@ final class rc {
     static String field_c;
 
     final static void a(java.awt.Canvas param0, boolean param1) {
-        oc.a((byte) -38, (java.awt.Component) ((Object) param0));
+        PointCloudEffect.a((byte) -38, (java.awt.Component) ((Object) param0));
         if (!param1) {
           return;
         }
@@ -22,53 +22,53 @@ final class rc {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
-        int var9 = EscapeVector.field_A;
+        int var9 = EscapeVector.obfuscationControl;
         if (param4) {
           if (param7 > param5) {
             if (param2 > param7) {
-              ha.a(param6, param7, param5, param1, param0, 41, param3, param2, em.field_i);
+              ha.a(param6, param7, param5, param1, param0, 41, param3, param2, SoftwareRasterizer.pixels);
               return;
             }
             if (param5 < param2) {
-              ha.a(param0, param2, param5, param1, param6, 38, param3, param7, em.field_i);
+              ha.a(param0, param2, param5, param1, param6, 38, param3, param7, SoftwareRasterizer.pixels);
               return;
             }
-            ha.a(param1, param5, param2, param0, param6, 127, param3, param7, em.field_i);
+            ha.a(param1, param5, param2, param0, param6, 127, param3, param7, SoftwareRasterizer.pixels);
             return;
           }
           if (param5 < param2) {
-            ha.a(param1, param5, param7, param6, param0, 42, param3, param2, em.field_i);
+            ha.a(param1, param5, param7, param6, param0, 42, param3, param2, SoftwareRasterizer.pixels);
             return;
           }
           if (param2 <= param7) {
-            ha.a(param6, param7, param2, param0, param1, 66, param3, param5, em.field_i);
+            ha.a(param6, param7, param2, param0, param1, 66, param3, param5, SoftwareRasterizer.pixels);
             return;
           }
-          ha.a(param0, param2, param7, param6, param1, 120, param3, param5, em.field_i);
+          ha.a(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
           return;
         }
         rc.a(-25);
         if (param7 > param5) {
           if (param2 > param7) {
-            ha.a(param6, param7, param5, param1, param0, 41, param3, param2, em.field_i);
+            ha.a(param6, param7, param5, param1, param0, 41, param3, param2, SoftwareRasterizer.pixels);
             return;
           }
           if (param5 < param2) {
-            ha.a(param0, param2, param5, param1, param6, 38, param3, param7, em.field_i);
+            ha.a(param0, param2, param5, param1, param6, 38, param3, param7, SoftwareRasterizer.pixels);
             return;
           }
-          ha.a(param1, param5, param2, param0, param6, 127, param3, param7, em.field_i);
+          ha.a(param1, param5, param2, param0, param6, 127, param3, param7, SoftwareRasterizer.pixels);
           return;
         }
         if (param5 < param2) {
-          ha.a(param1, param5, param7, param6, param0, 42, param3, param2, em.field_i);
+          ha.a(param1, param5, param7, param6, param0, 42, param3, param2, SoftwareRasterizer.pixels);
           return;
         }
         if (param2 <= param7) {
-          ha.a(param6, param7, param2, param0, param1, 66, param3, param5, em.field_i);
+          ha.a(param6, param7, param2, param0, param1, 66, param3, param5, SoftwareRasterizer.pixels);
           return;
         }
-        ha.a(param0, param2, param7, param6, param1, 120, param3, param5, em.field_i);
+        ha.a(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
     }
 
     public static void a(int param0) {
@@ -85,19 +85,11 @@ final class rc {
     }
 
     final static fn a(int param0, byte param1, fn param2, fn param3) {
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        fn stackIn_12_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.field_c;
-          var5 = param3.field_b;
+          int var4_int = param3.field_c;
+          int var5 = param3.field_b;
           if (param0 == 16384) {
             var5 = param2.field_c;
             var4_int = param3.field_b;
@@ -113,19 +105,19 @@ final class rc {
           if (param1 <= 119) {
             field_b = (oi) null;
           }
-          stackIn_12_0 = new fn(var4_int, var5);
+          fn stackIn_12_0 = new fn(var4_int, var5);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_15_0 = var4;
-          stackIn_15_1 = new StringBuilder().append("rc.B(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var4;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("rc.B(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+          StringBuilder stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
           if (param3 == null) {
             stackIn_19_2 = "null";
           } else {

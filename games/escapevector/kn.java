@@ -6,7 +6,7 @@ final class kn {
     static String field_c;
     static int field_b;
     static String field_f;
-    static ed field_h;
+    static Sprite field_h;
     private int[] field_a;
     private boolean field_d;
     private int field_g;
@@ -94,13 +94,11 @@ final class kn {
     }
 
     private final int d(int param0, int param1) {
-        int var3;
-        int var4;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         if (param0 != 0) {
           return 34;
         }
-        var3 = this.field_a.length;
+        int var3 = this.field_a.length;
         while (param1 >= var3) {
           if (!this.field_d) {
             var3 = var3 + this.field_e;

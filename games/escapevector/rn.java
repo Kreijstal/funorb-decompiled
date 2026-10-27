@@ -48,47 +48,32 @@ final class rn extends RuntimeException {
     }
 
     final static tk a(String param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        String[] var3 = null;
-        String[] var4 = null;
-        int var5 = 0;
-        String var6 = null;
         tk var7 = null;
-        int var8 = 0;
-        tk stackIn_4_0 = null;
-        tk stackIn_7_0 = null;
-        tk stackIn_10_0 = null;
-        tk stackIn_15_0 = null;
-        tk stackIn_18_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
-          var2_int = param0.length();
+          int var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = mf.field_d;
+            tk stackIn_4_0 = mf.field_d;
             return stackIn_4_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = d.field_c;
+            tk stackIn_7_0 = d.field_c;
             return stackIn_7_0;
           }
-          var3 = bb.a(-128, param0, '.');
+          String[] var3 = bb.a(-128, param0, '.');
           if (var3.length < 2) {
-            stackIn_10_0 = mf.field_d;
+            tk stackIn_10_0 = mf.field_d;
             return stackIn_10_0;
           }
-          var4 = var3;
-          var5 = param1;
+          String[] var4 = var3;
+          int var5 = param1;
           while (true) {
             if (var4.length <= var5) {
-              stackIn_18_0 = co.a(var3[var3.length - 1], 0);
+              tk stackIn_18_0 = co.a(var3[var3.length - 1], 0);
               return stackIn_18_0;
             }
-            var6 = var4[var5];
+            String var6 = var4[var5];
             var7 = vk.a(var6, param1 - 116);
             if (var7 == null) {
               var5++;
@@ -96,13 +81,13 @@ final class rn extends RuntimeException {
             }
             break;
           }
-          stackIn_15_0 = var7;
+          tk stackIn_15_0 = var7;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_21_0 = var2;
-          stackIn_21_1 = new StringBuilder().append("rn.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_21_0 = var2;
+          StringBuilder stackIn_21_1 = new StringBuilder().append("rn.B(");
           if (param0 == null) {
             stackIn_22_2 = "null";
           } else {
@@ -114,24 +99,22 @@ final class rn extends RuntimeException {
 
     final static void a(int param0, int param1) {
         try {
-          IOException iOException = null;
-          Throwable decompiledCaughtException = null;
           if (pg.field_c != null && (0 > param0 ||
             al.field_d == ck.field_t)) {
-            if (om.field_c.field_m == 0 &&
+            if (om.field_c.position == 0 &&
               (10000L + le.field_c) < td.b(128)) {
               om.field_c.a(param0, true);
             }
-            if (0 < om.field_c.field_m) {
+            if (0 < om.field_c.position) {
               try {
-                pg.field_c.a(om.field_c.field_m, 0, om.field_c.field_g, 5000);
+                pg.field_c.a(om.field_c.position, 0, om.field_c.payload, 5000);
                 le.field_c = td.b(128);
               } catch (java.io.IOException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                iOException = (IOException) (Object) decompiledCaughtException;
+                Throwable decompiledCaughtException = decompiledCaughtParameter0;
+                IOException iOException = (IOException) (Object) decompiledCaughtException;
                 nm.a(16);
               }
-              om.field_c.field_m = 0;
+              om.field_c.position = 0;
             }
             if (param1 == 30785) {
               return;
@@ -139,7 +122,7 @@ final class rn extends RuntimeException {
             rn.a(true);
             return;
           }
-          om.field_c.field_m = 0;
+          om.field_c.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

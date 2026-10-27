@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bl extends hg {
+final class bl extends IntrusiveNode {
     bl field_k;
     int field_i;
     static String[] field_l;
@@ -12,28 +12,22 @@ final class bl extends hg {
     int field_m;
 
     final static te[] a(int param0, int param1, mf param2, int param3) {
-        RuntimeException var4 = null;
-        mf var5 = null;
-        te[] stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!uc.a(param2, 100, param3, param0)) {
             return null;
           }
           if (param1 != 255) {
-            var5 = (mf) null;
+            mf var5 = (mf) null;
             bl.a(49, -40, (mf) null, 15);
           }
-          stackIn_6_0 = fg.a(13029);
+          te[] stackIn_6_0 = fg.a(13029);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("bl.A(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var4;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("bl.A(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_10_2 = "null";
           } else {

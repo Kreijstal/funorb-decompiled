@@ -12,8 +12,8 @@ final class oj extends hc {
     private static int[] field_I;
     private int field_R;
     static int field_G;
-    static ed field_Q;
-    static n field_L;
+    static Sprite field_Q;
+    static PacketBuffer field_L;
 
     final void a(int param0, int param1, int param2, hm param3) {
         try {
@@ -41,11 +41,7 @@ final class oj extends hc {
     }
 
     final boolean a(int param0, hm param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -4659) {
             return false;
@@ -53,10 +49,10 @@ final class oj extends hc {
           field_P = (int[]) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("oj.M(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("oj.M(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -67,129 +63,104 @@ final class oj extends hc {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        int var5;
-        int var6;
-        rf var8;
-        int var9;
-        int var10;
-        int var11;
-        ed var14;
-        ed var15;
-        ed var16;
-        ed var17;
-        ed var18;
-        ed var23;
-        ed var24;
-        ed var25;
-        int var5Lifetime1;
-        int var6Lifetime1;
-        int var9Lifetime1;
-        int var9Lifetime2;
-        int var10Lifetime1;
-        int var10Lifetime2;
-        rf var8Lifetime1;
-        var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         super.a(param0, (byte) 101, param2, param3);
         if (param1 >= 85) {
           if (param2 != 0) {
             return;
           }
-          var5 = this.field_k + param3 + (this.field_g >> 1);
-          var6 = this.field_j + param0 + (this.field_x >> 1);
-          var8 = this.field_F.a(17124);
+          int var5 = this.field_k + param3 + (this.field_g >> 1);
+          int var6 = this.field_j + param0 + (this.field_x >> 1);
+          rf var8 = this.field_F.a(17124);
           if (var8 != of.field_f &&
             ug.field_c != var8) {
             if (ob.field_a == var8) {
-              var24 = ul.field_E[2];
-              var24.c(var5 - (var24.field_s >> 1), var6 - (var24.field_x >> 1), 256);
+              Sprite var24 = ul.field_E[2];
+              var24.c(var5 - (var24.width >> 1), var6 - (var24.height >> 1), 256);
               return;
             }
             if (df.field_h != var8) {
               return;
             }
-            var23 = ul.field_E[1];
-            var23.c(-(var23.field_s >> 1) + var5, var6 - (var23.field_x >> 1), 256);
+            Sprite var23 = ul.field_E[1];
+            var23.c(-(var23.width >> 1) + var5, var6 - (var23.height >> 1), 256);
             return;
           }
-          var25 = ul.field_E[0];
-          var9 = var25.field_A << 1;
-          var10 = var25.field_z << 1;
+          Sprite var25 = ul.field_E[0];
+          int var9 = var25.fullWidth << 1;
+          int var10 = var25.fullHeight << 1;
           if (pi.field_j == null) {
-            pi.field_j = new ed(var9, var10);
+            pi.field_j = new Sprite(var9, var10);
             eo.a(pi.field_j, (byte) -111);
+          } else if (pi.field_j.width < var9) {
+            pi.field_j = new Sprite(var9, var10);
+            eo.a(pi.field_j, (byte) -111);
+          } else if (var10 <= pi.field_j.height) {
+            eo.a(pi.field_j, (byte) -79);
+            SoftwareRasterizer.d();
           } else {
-            if (pi.field_j.field_s < var9) {
-              pi.field_j = new ed(var9, var10);
-              eo.a(pi.field_j, (byte) -111);
-            } else {
-              if (var10 <= pi.field_j.field_x) {
-                eo.a(pi.field_j, (byte) -79);
-                em.d();
-              } else {
-                pi.field_j = new ed(var9, var10);
-                eo.a(pi.field_j, (byte) -111);
-              }
-            }
+            pi.field_j = new Sprite(var9, var10);
+            eo.a(pi.field_j, (byte) -111);
           }
-          var25.b(112, 144, var25.field_A << 4, var25.field_z << 4, -this.field_R << 10, 4096);
+          var25.b(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_R << 10, 4096);
           dl.a((byte) 116);
-          pi.field_j.c(var5 - var25.field_A, -var25.field_z + var6, 256);
+          pi.field_j.c(var5 - var25.fullWidth, -var25.fullHeight + var6, 256);
           return;
         }
         field_I = (int[]) null;
         if (param2 != 0) {
           return;
         }
-        var5Lifetime1 = this.field_k + param3 + (this.field_g >> 1);
-        var6Lifetime1 = this.field_j + param0 + (this.field_x >> 1);
-        var8Lifetime1 = this.field_F.a(17124);
+        int var5Lifetime1 = this.field_k + param3 + (this.field_g >> 1);
+        int var6Lifetime1 = this.field_j + param0 + (this.field_x >> 1);
+        rf var8Lifetime1 = this.field_F.a(17124);
         if (var8Lifetime1 == of.field_f) {
-          var15 = ul.field_E[0];
-          var9Lifetime1 = var15.field_A << 1;
-          var10Lifetime1 = var15.field_z << 1;
+          Sprite var15 = ul.field_E[0];
+          int var9Lifetime1 = var15.fullWidth << 1;
+          int var10Lifetime1 = var15.fullHeight << 1;
           if (pi.field_j != null &&
-            pi.field_j.field_s >= var9Lifetime1 &&
-            var10Lifetime1 <= pi.field_j.field_x) {
+            pi.field_j.width >= var9Lifetime1 &&
+            var10Lifetime1 <= pi.field_j.height) {
             eo.a(pi.field_j, (byte) -79);
-            em.d();
+            SoftwareRasterizer.d();
           } else {
-            pi.field_j = new ed(var9Lifetime1, var10Lifetime1);
+            pi.field_j = new Sprite(var9Lifetime1, var10Lifetime1);
             eo.a(pi.field_j, (byte) -111);
           }
-          var15.b(112, 144, var15.field_A << 4, var15.field_z << 4, -this.field_R << 10, 4096);
+          var15.b(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_R << 10, 4096);
           dl.a((byte) 116);
-          pi.field_j.c(var5Lifetime1 - var15.field_A, -var15.field_z + var6Lifetime1, 256);
+          pi.field_j.c(var5Lifetime1 - var15.fullWidth, -var15.fullHeight + var6Lifetime1, 256);
           return;
         }
         if (ug.field_c != var8Lifetime1) {
           if (ob.field_a == var8Lifetime1) {
-            var18 = ul.field_E[2];
-            var18.c(var5Lifetime1 - (var18.field_s >> 1), var6Lifetime1 - (var18.field_x >> 1), 256);
+            Sprite var18 = ul.field_E[2];
+            var18.c(var5Lifetime1 - (var18.width >> 1), var6Lifetime1 - (var18.height >> 1), 256);
             return;
           }
           if (df.field_h != var8Lifetime1) {
             return;
           }
-          var17 = ul.field_E[1];
-          var17.c(-(var17.field_s >> 1) + var5Lifetime1, var6Lifetime1 - (var17.field_x >> 1), 256);
+          Sprite var17 = ul.field_E[1];
+          var17.c(-(var17.width >> 1) + var5Lifetime1, var6Lifetime1 - (var17.height >> 1), 256);
           return;
         }
-        var16 = ul.field_E[0];
-        var14 = var16;
-        var9Lifetime2 = var16.field_A << 1;
-        var10Lifetime2 = var16.field_z << 1;
+        Sprite var16 = ul.field_E[0];
+        Sprite var14 = var16;
+        int var9Lifetime2 = var16.fullWidth << 1;
+        int var10Lifetime2 = var16.fullHeight << 1;
         if (pi.field_j != null &&
-          pi.field_j.field_s >= var9Lifetime2 &&
-          var10Lifetime2 <= pi.field_j.field_x) {
+          pi.field_j.width >= var9Lifetime2 &&
+          var10Lifetime2 <= pi.field_j.height) {
           eo.a(pi.field_j, (byte) -79);
-          em.d();
+          SoftwareRasterizer.d();
         } else {
-          pi.field_j = new ed(var9Lifetime2, var10Lifetime2);
+          pi.field_j = new Sprite(var9Lifetime2, var10Lifetime2);
           eo.a(pi.field_j, (byte) -111);
         }
-        var16.b(112, 144, var16.field_A << 4, var16.field_z << 4, -this.field_R << 10, 4096);
+        var16.b(112, 144, var16.fullWidth << 4, var16.fullHeight << 4, -this.field_R << 10, 4096);
         dl.a((byte) 116);
-        pi.field_j.c(var5Lifetime1 - var16.field_A, -var16.field_z + var6Lifetime1, 256);
+        pi.field_j.c(var5Lifetime1 - var16.fullWidth, -var16.fullHeight + var6Lifetime1, 256);
     }
 
     final static void a(int param0, int param1, byte param2, String param3) {
@@ -221,7 +192,7 @@ final class oj extends hc {
         }
         sn.a(4, 0, false);
         if (param0 < 79) {
-          field_Q = (ed) null;
+          field_Q = (Sprite) null;
         }
     }
 

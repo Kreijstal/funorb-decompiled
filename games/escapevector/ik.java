@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ik extends hg {
+final class ik extends IntrusiveNode {
     int field_m;
     int field_g;
     int field_o;
@@ -45,7 +45,6 @@ final class ik extends hg {
     }
 
     ik(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        int fieldTemp$0 = 0;
         try {
           this.field_o = param2;
           this.field_n = param4;
@@ -54,7 +53,7 @@ final class ik extends hg {
           this.field_k = param1;
           this.field_q = param6;
           this.field_j = param0;
-          fieldTemp$0 = qh.field_m;
+          int fieldTemp$0 = qh.field_m;
           qh.field_m = qh.field_m + 1;
           this.field_i = 65535 & fieldTemp$0;
         } catch (RuntimeException runtimeException) {

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mc {
-    static ka field_c;
+    static TerrainMaskSupport field_c;
     static hf field_b;
-    static ed[] field_d;
+    static Sprite[] field_d;
     static String field_a;
     private static String field_z;
 
@@ -14,13 +14,13 @@ final class mc {
         field_b = null;
         field_a = null;
         if (param0 != 8123) {
-          field_d = (ed[]) null;
+          field_d = (Sprite[]) null;
         }
     }
 
     static {
         field_z = "mc.A(";
-        field_c = new ka();
+        field_c = new TerrainMaskSupport();
         field_b = new hf();
         field_a = "Instructions";
     }

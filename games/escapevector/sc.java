@@ -15,7 +15,7 @@ final class sc implements db {
 
     final static void a(qd param0, int param1, int param2) {
         try {
-          mi.field_l.a(-12328, param0);
+          mi.field_l.addLast(-12328, param0);
           sm.a(param0, param1, true);
           if (param2 != 1) {
             sc.b((byte) 98);
@@ -26,26 +26,11 @@ final class sc implements db {
     }
 
     public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        double var9 = 0.0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        java.awt.Component var14 = null;
-        eb var15 = null;
         hm stackIn_5_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        double var9Lifetime1;
-        int var11Lifetime1;
-        int var12Lifetime1;
         try {
           if (param2 > -14) {
-            var14 = (java.awt.Component) null;
+            java.awt.Component var14 = (java.awt.Component) null;
             sc.a((byte) 67, (java.awt.Component) null);
           }
           if (!(param3 instanceof eb)) {
@@ -53,35 +38,35 @@ final class sc implements db {
           } else {
             stackIn_5_0 = (hm) (param3);
           }
-          var15 = (eb) (stackIn_5_0);
-          em.a(param3.field_k + param0, param3.field_j + param1, param3.field_g, param3.field_x, this.field_a);
+          eb var15 = (eb) (stackIn_5_0);
+          SoftwareRasterizer.a(param3.field_k + param0, param3.field_j + param1, param3.field_g, param3.field_x, this.field_a);
           if (var15 != null) {
           }
-          var7 = var15.field_D + (param0 + param3.field_k);
-          var8 = param3.field_j + (param1 + var15.field_I);
-          em.d(var7, var8, var15.field_N, this.field_c);
+          int var7 = var15.field_D + (param0 + param3.field_k);
+          int var8 = param3.field_j + (param1 + var15.field_I);
+          SoftwareRasterizer.d(var7, var8, var15.field_N, this.field_c);
           if (var15.field_G != -1) {
-            var9 = 2.0 * (3.141592653589793 * (double)var15.field_G) / (double)var15.field_M;
-            var11 = (int)(-Math.sin(var9) * (double)var15.field_N);
-            var12 = (int)(Math.cos(var9) * (double)var15.field_N);
-            em.d(var7 + var11, var12 + var8, 1, this.field_b);
+            double var9 = 2.0 * (3.141592653589793 * (double)var15.field_G) / (double)var15.field_M;
+            int var11 = (int)(-Math.sin(var9) * (double)var15.field_N);
+            int var12 = (int)(Math.cos(var9) * (double)var15.field_N);
+            SoftwareRasterizer.d(var7 + var11, var12 + var8, 1, this.field_b);
           }
-          em.d(var7, var8, 2, 1);
-          var9Lifetime1 = 3.141592653589793 * (double)var15.field_F * 2.0 / (double)var15.field_M;
-          var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_N);
-          var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_N);
-          em.d(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.d(var7, var8, 2, 1);
+          double var9Lifetime1 = 3.141592653589793 * (double)var15.field_F * 2.0 / (double)var15.field_M;
+          int var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_N);
+          int var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_N);
+          SoftwareRasterizer.d(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (null == this.field_e) {
             return;
           }
-          var13 = this.field_i + (var15.field_D + var15.field_N);
+          int var13 = this.field_i + (var15.field_D + var15.field_N);
           this.field_e.a(param3.field_l, var13 + param3.field_k + param0, param1 + (param3.field_j + this.field_f), param3.field_g - (var13 + this.field_i), param3.field_x - (this.field_i << 1), this.field_j, this.field_d, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_14_0 = var6;
-          stackIn_14_1 = new StringBuilder().append("sc.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var6;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("sc.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -92,21 +77,18 @@ final class sc implements db {
     }
 
     final static void b(byte param0) {
-        java.awt.Component var2;
         if (ff.field_e == 10) {
           fe.a(-84);
           ff.field_e = 11;
-        } else {
-          if (!g.i(56)) {
-            fe.a(-84);
-            ff.field_e = 11;
-          }
+        } else if (!NetworkGameClient.i(56)) {
+          fe.a(-84);
+          ff.field_e = 11;
         }
         pb.field_d = true;
         if (param0 < -81) {
           return;
         }
-        var2 = (java.awt.Component) null;
+        java.awt.Component var2 = (java.awt.Component) null;
         sc.a((byte) -55, (java.awt.Component) null);
     }
 

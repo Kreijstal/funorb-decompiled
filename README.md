@@ -2,7 +2,7 @@
 
 Current Java source for the complete 44-game FunOrb / AlterOrb catalog lives
 only in `games/<game>/`. GeoBlox, Deko Bloko, Armies of Gielinor, Steel Sentinels,
-Brick-a-brac and Ace of Skies have named sources directly in those directories,
+Brick-a-brac, Ace of Skies and Escape Vector have named sources directly in those directories,
 with a reading guide beside the Java. There is no separate
 readable mirror and no committed compilation binaries.
 
@@ -12,6 +12,9 @@ The pipeline, game naming rules and reproduction scripts belong to
 current reverse dictionaries belong here.
 
 ## Read the games
+
+- [Escape Vector](games/escapevector/README.md): session/ship updates, versioned
+  terrain masks, level-object collision edits, dynamic terrain, minimap and dialogue.
 
 - [Ace of Skies](games/aceofskies/README.md): flight/session updates, aircraft,
   bullets, pickups, motion arithmetic and shared client infrastructure.
@@ -303,6 +306,9 @@ env -u JAVA_TOOL_OPTIONS node readable/build-steelsentinels-rules.mjs --check
 env -u JAVA_TOOL_OPTIONS node readable/reproduce-steelsentinels.mjs --update
 env -u JAVA_TOOL_OPTIONS node readable/reproduce-steelsentinels.mjs --check
 node scripts/check-source-catalog.mjs /absolute/path/to/funorb-decompiled
+node readable/build-escapevector-rules.mjs --check
+node readable/reproduce-escapevector.mjs --update
+node readable/reproduce-escapevector.mjs --check
 node readable/restore-game.mjs dekobloko /tmp/original-dekobloko
 ```
 
@@ -331,6 +337,9 @@ Focused raw-class corrections are recorded under
 `publication.games.GAME.sourceRepairs.classes` in that same manifest. These
 receipts pin the original class, the replacement Java and its compiler-source
 archive, with whole-game compilation and any original-bytecode semantic probe.
+After naming, these repairs remain verifiable against the named export's pinned
+raw Git input; the published Java uses the reviewed names. Escape Vector's
+loader and object stamp/remove mask repairs are retained this way.
 The catalog's base generator identity continues to describe the unchanged
 exports. Deko's `readable/refresh-raw-class.mjs --check` reproduces a correction
 from its pinned compiler source without retaining another source checkout.

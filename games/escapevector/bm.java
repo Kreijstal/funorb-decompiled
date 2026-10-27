@@ -16,27 +16,21 @@ final class bm {
     }
 
     final static lm a(String param0, int param1, int param2) {
-        lm var3 = null;
-        RuntimeException var3_ref = null;
-        lm stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new lm(false);
+          lm var3 = new lm(false);
           var3.field_g = param1;
           if (param2 != 4) {
             field_g = (String) null;
           }
           var3.field_f = param0;
-          stackIn_3_0 = var3;
+          lm stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_6_0 = var3_ref;
-          stackIn_6_1 = new StringBuilder().append("bm.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3_ref;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("bm.B(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {

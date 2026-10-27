@@ -3,25 +3,15 @@
  */
 import java.io.*;
 
-final class ka {
-    static ed field_a;
+final class TerrainMaskSupport {
+    static Sprite field_a;
     static hh field_e;
     static int[] field_b;
     static int[] field_c;
     static int[] field_d;
 
     final static void a(int param0) {
-        int var1_int = 0;
-        int var2 = 0;
-        fn var3 = null;
-        ed var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        fn var7 = null;
-        int var8 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
           if (dj.field_d != null) {
             return;
@@ -30,19 +20,19 @@ final class ka {
             return;
           }
           dj.field_d = new fn[sc.field_h.length];
-          for (var1_int = 0; var1_int < sc.field_h.length; var1_int++) {
-            var2 = sc.field_h[var1_int];
-            var3 = ph.field_b;
-            var4 = k.a(var2, (byte) -39, 2);
-            var5 = var4.field_A - var3.field_c;
-            var6 = -var3.field_b + var4.field_z;
-            var7 = new fn(var5, var6);
+          for (int var1_int = 0; var1_int < sc.field_h.length; var1_int++) {
+            int var2 = sc.field_h[var1_int];
+            fn var3 = ph.field_b;
+            Sprite var4 = k.a(var2, (byte) -39, 2);
+            int var5 = var4.fullWidth - var3.field_c;
+            int var6 = -var3.field_b + var4.fullHeight;
+            fn var7 = new fn(var5, var6);
             dj.field_d[var1_int] = rc.a(var2, (byte) 121, var7, var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "ka.A(" + param0 + ')');
         }
     }
@@ -51,27 +41,25 @@ final class ka {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, DataInputStream param4, int[] param5, byte param6, int param7) throws IOException {
-        int var8_int = 0;
-        int var9 = 0;
-        int var10 = EscapeVector.field_A;
-        if (0 == param1) {
+    final static void decodeTerrainQuadrant(int left, int quadrantCode, int bottom, int right, DataInputStream input, int[] rows, byte guard, int top) throws IOException {
+        int var10 = EscapeVector.obfuscationControl;
+        if (0 == quadrantCode) {
           return;
         }
-        if (1 == param1) {
-          var8_int = -(1 << param0) + (2 << -1 + param3);
-          for (var9 = param7; param2 > var9; var9++) {
-            param5[var9] = lb.a(param5[var9], var8_int);
+        if (1 == quadrantCode) {
+          int var8_int = -(1 << left) + (2 << -1 + right);
+          for (int var9 = top; bottom > var9; var9++) {
+            rows[var9] = lb.a(rows[var9], var8_int);
           }
           return;
         }
         try {
-          if (param6 != -74) {
-            ka.a(1);
+          if (guard != -74) {
+            TerrainMaskSupport.a(1);
           }
-          bf.a(param7, param2, param4, param0, param3, param5, 2147483647);
+          AccountRegistrationPanel.decodeTerrainQuadrants(top, bottom, input, left, right, rows, 2147483647);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ka.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ka.B(" + left + ',' + quadrantCode + ',' + bottom + ',' + right + ',' + (input != null ? "{...}" : "null") + ',' + (rows != null ? "{...}" : "null") + ',' + guard + ',' + top + ')');
         }
     }
 

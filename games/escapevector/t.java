@@ -5,60 +5,50 @@ final class t {
     wc field_b;
     boolean field_c;
     private int field_d;
-    static ka field_a;
+    static TerrainMaskSupport field_a;
     private int[] field_e;
 
     private final void c(byte param0) {
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         try {
           if (param0 != 62) {
             this.b(103, false);
           }
           if (this.field_c) {
             this.field_d = 8;
-            if (EscapeVector.field_A == 0) {
+            if (EscapeVector.obfuscationControl == 0) {
               return;
             }
           }
           this.field_d = 9;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2), "t.G(" + param0 + ')');
         }
     }
 
     final static int a(int param0, int param1, int param2) {
-        RuntimeException var3 = null;
-        int stackIn_7_0 = 0;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < 9) {
-            field_a = (ka) null;
+            field_a = (TerrainMaskSupport) null;
           }
-          stackIn_7_0 = (param1 > param0) ? param1 : param0;
+          int stackIn_7_0 = (param1 > param0) ? param1 : param0;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var3), "t.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void a(int param0) {
-        int var3 = 0;
-        boolean stackIn_11_0 = false;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        boolean stackIn_11_0Lifetime1;
-        var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         try {
           while (true) {
             if (pn.p(-111)) {
               this.field_b.c((byte) 6);
-              stackIn_11_0 = this.a(param0 - 13569, false);
+              boolean stackIn_11_0 = this.a(param0 - 13569, false);
               if (var3 == 0) {
                 if (stackIn_11_0) {
                   return;
@@ -68,49 +58,37 @@ final class t {
               break;
             }
             this.field_b.a(param0 - 400, 240, 192, 24, param0);
-            stackIn_11_0Lifetime1 = this.a(-13169, true);
+            boolean stackIn_11_0Lifetime1 = this.a(-13169, true);
             break;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2), "t.F(" + param0 + ')');
         }
     }
 
     private final void a(int param0, int param1, byte param2, boolean param3) {
-        int stackIn_8_0 = 0;
-        int stackIn_31_0 = 0;
         int stackIn_63_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var7Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var7Lifetime2;
-        var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         try {
           if (5 * param0 > mj.field_d) {
             return;
           }
           mj.field_b.g();
-          em.d();
-          stackIn_8_0 = (!param3) ? 6340704 : 16777215;
-          var5_int = stackIn_8_0;
+          SoftwareRasterizer.d();
+          int stackIn_8_0 = (!param3) ? 6340704 : 16777215;
+          int var5_int = stackIn_8_0;
           if (param2 != -34) {
             this.field_e = (int[]) null;
           }
           boolean decompiledFrameRemainder0 = true;
-          var6 = mj.field_b.field_A / 2;
+          int var6 = mj.field_b.fullWidth / 2;
           if (param0 == 0) {
             fh.field_g.c(of.field_e, var6, 22, var5_int, -1);
           }
@@ -123,11 +101,11 @@ final class t {
               if (param0 != 2 ||
                 var11 != 0) {
                 if (param0 == 3) {
-                  var7 = fh.field_g.b(oi.field_N);
-                  var8 = fh.field_g.b(ee.field_d);
-                  stackIn_31_0 = (var8 < var7) ? var7 : var8;
-                  var9 = stackIn_31_0;
-                  var10 = (var9 - 68) / 2 + var6;
+                  int var7 = fh.field_g.b(oi.field_N);
+                  int var8 = fh.field_g.b(ee.field_d);
+                  int stackIn_31_0 = (var8 < var7) ? var7 : var8;
+                  int var9 = stackIn_31_0;
+                  int var10 = (var9 - 68) / 2 + var6;
                   fh.field_g.b(oi.field_N, var10, 22, var5_int, -1);
                   r.a(var10, 13202, 4, qm.field_c, var5_int);
                 }
@@ -140,7 +118,7 @@ final class t {
                     if (5 != param0 ||
                       var11 != 0) {
                       if (param0 != 6) {
-                        if ((param0 != 7) &&
+                        if (param0 != 7 &&
                           (decompiledFrameRemainder0 = (param0 == 8))) {
                           fh.field_g.c(uf.field_s, var6, 22, var5_int, -1);
                           decompiledFrameRemainder0 = (var11 != 0);
@@ -149,10 +127,10 @@ final class t {
                           fh.field_g.c(da.field_a, var6, 22, var5_int, -1);
                         }
                       }
-                      if ((decompiledFrameRemainder0) &&
+                      if (decompiledFrameRemainder0 &&
                         (param0 == 6 ||
                         var11 != 0)) {
-                        fh.field_g.c(na.field_m, var6, 22, var5_int, -1);
+                        fh.field_g.c(DynamicTerrainRenderer.field_m, var6, 22, var5_int, -1);
                         if (var11 != 0) {
                           var7Lifetime2 = fh.field_g.b(oi.field_N);
                           var8Lifetime1 = fh.field_g.b(ee.field_d);
@@ -183,18 +161,18 @@ final class t {
           md.field_D.a(112);
           cf.a(mj.field_b, true, 1);
           mj.field_b.h(5267536);
-          var7Lifetime1 = -mj.field_d + 30 + 5 * param0;
+          int var7Lifetime1 = -mj.field_d + 30 + 5 * param0;
           if (var7Lifetime1 > 0) {
-            mf.a(param1, (-mj.field_b.field_A + 640) / 2, var7Lifetime1, mj.field_b, param2 ^ 120);
+            mf.a(param1, (-mj.field_b.fullWidth + 640) / 2, var7Lifetime1, mj.field_b, param2 ^ 120);
             if (var11 == 0) {
               return;
             }
           }
-          mj.field_b.e((-mj.field_b.field_A + 640) / 2, param1);
+          mj.field_b.e((-mj.field_b.fullWidth + 640) / 2, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var5), "t.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
@@ -223,49 +201,40 @@ final class t {
     }
 
     private final int b(int param0) {
-        RuntimeException var2 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_10_0 = 0;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 52) {
             t.b((byte) -84);
           }
           if (this.field_b.field_h >= 0 &&
             this.field_e.length > this.field_b.field_h) {
-            stackIn_10_0 = this.field_e[this.field_b.field_h];
+            int stackIn_10_0 = this.field_e[this.field_b.field_h];
             return stackIn_10_0;
           }
-          stackIn_8_0 = -1;
+          int stackIn_8_0 = -1;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2), "t.E(" + param0 + ')');
         }
     }
 
     private final int a(int param0, int param1) {
-        RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_10_0 = 0;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 192) {
-            stackIn_2_0 = 121;
+            int stackIn_2_0 = 121;
             return stackIn_2_0;
           }
           if (param1 >= 0 &&
             param1 < this.field_e.length) {
-            stackIn_10_0 = this.field_e[param1];
+            int stackIn_10_0 = this.field_e[param1];
             return stackIn_10_0;
           }
-          stackIn_8_0 = -1;
+          int stackIn_8_0 = -1;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var3), "t.I(" + param0 + ',' + param1 + ')');
         }
     }
@@ -273,27 +242,14 @@ final class t {
     final void a(byte param0) {
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
-        Object stackIn_20_0;
-        Object stackIn_22_0;
-        int stackIn_22_1;
-        int stackIn_22_2;
-        int stackIn_22_3;
         boolean stackIn_23_4 = false;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var2_intLifetime1;
-        int var3Lifetime1;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         try {
-          em.d();
+          SoftwareRasterizer.d();
           od.b(2);
           if (mj.a((byte) 117)) {
-            var2_int = dn.a(0) / 2 + 20;
-            var3 = 15 + ea.d((byte) -122) / 2;
+            int var2_int = dn.a(0) / 2 + 20;
+            int var3 = 15 + ea.d((byte) -122) / 2;
             if (mj.field_d >= 40) {
               stackIn_8_0 = 0;
             } else {
@@ -311,20 +267,20 @@ final class t {
           }
           fc.a(stackIn_14_0, 240, 400, 16 + (192 + this.field_d * 24), true, 29788, true, 6324320, 3162160, 0, 176, true);
           pb.a(param0 ^ -12);
-          var2_intLifetime1 = 0;
-          var3Lifetime1 = 192;
+          int var2_intLifetime1 = 0;
+          int var3Lifetime1 = 192;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (this.field_e.length <= var2_intLifetime1))) {
-            var4 = this.a(192, var2_intLifetime1);
+            int var4 = this.a(192, var2_intLifetime1);
             if (var5 == 0) {
-              stackIn_22_0 = this;
-              stackIn_22_1 = var4;
-              stackIn_22_2 = var3Lifetime1;
-              stackIn_22_3 = -34;
+              Object stackIn_22_0 = this;
+              int stackIn_22_1 = var4;
+              int stackIn_22_2 = var3Lifetime1;
+              int stackIn_22_3 = -34;
               if (~var4 != ~this.b(69)) {
                 stackIn_23_4 = false;
               } else {
-                stackIn_20_0 = this;
+                Object stackIn_20_0 = this;
                 stackIn_23_4 = true;
               }
               this.a(stackIn_22_1, stackIn_22_2, (byte) stackIn_22_3, stackIn_23_4);
@@ -334,15 +290,15 @@ final class t {
             }
             break;
           }
-          if ((decompiledNaturalLoopExit0) &&
-            (param0 == -16)) {
+          if (decompiledNaturalLoopExit0 &&
+            param0 == -16) {
             return;
           }
           this.field_b = (wc) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2), "t.L(" + param0 + ')');
         }
     }
@@ -359,59 +315,36 @@ final class t {
     }
 
     private final void c(int param0) {
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         try {
           boolean decompiledSharedTail0 = !(this.field_c);
           if (!decompiledSharedTail0) {
             this.field_e = new int[]{0, 2, 3, 4, 5, 6, 7, 8};
-            decompiledSharedTail0 = (EscapeVector.field_A != 0);
+            decompiledSharedTail0 = (EscapeVector.obfuscationControl != 0);
           }
           if (decompiledSharedTail0) {
             this.field_e = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8};
           }
           if (param0 != 22) {
-            field_a = (ka) null;
+            field_a = (TerrainMaskSupport) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2), "t.H(" + param0 + ')');
         }
     }
 
     private final boolean a(int param0, boolean param1) {
-        int stackIn_68_0 = 0;
-        int stackIn_129_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        o var4_ref_o = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        o var9 = null;
-        int var10 = 0;
-        o var4_ref_oLifetime1;
-        o var4_ref_oLifetime2;
-        o var4_ref_oLifetime3;
-        int var4Lifetime1;
-        int var5Lifetime1;
-        int var6Lifetime1;
-        int var7Lifetime1;
-        int var8Lifetime1;
-        var10 = EscapeVector.field_A;
+        int var10 = EscapeVector.obfuscationControl;
         try {
           if (this.field_b.field_e) {
             rk.field_e.a(oa.field_w, 100, 1536 * qm.field_c / 64, 8192);
           }
-          var3_int = this.b(123);
+          int var3_int = this.b(123);
           if (var3_int == 0 &&
             this.field_b.b((byte) -18)) {
-            oe.c(param1, 2560);
+            GameplaySession.c(param1, 2560);
             return true;
           }
           if (var3_int == 1 &&
@@ -451,27 +384,25 @@ final class t {
               qm.field_c = 64;
               ce.d(8192);
             }
-            if ((!this.field_b.a(false)) &&
+            if (!this.field_b.a(false) &&
               (decompiledFrameRemainder0 = !(!this.field_b.b((byte) -18)))) {
               ce.d(param0 ^ -4977);
               decompiledFrameRemainder0 = (var10 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var4 = fh.field_g.b(oi.field_N);
-              var5 = fh.field_g.b(ee.field_d);
-              stackIn_68_0 = (var4 <= var5) ? var5 : var4;
-              var6 = stackIn_68_0;
-              var7 = 320 + (var6 - 68) / 2;
-              var8 = -var7 - 2 + dh.field_d;
-              if (var8 >= 0) {
-                if (var8 > 64) {
-                  var8 = 64;
-                  if (var10 != 0) {
-                    var8 = 0;
-                  }
-                }
-              } else {
+              int var4 = fh.field_g.b(oi.field_N);
+              int var5 = fh.field_g.b(ee.field_d);
+              int stackIn_68_0 = (var4 <= var5) ? var5 : var4;
+              int var6 = stackIn_68_0;
+              int var7 = 320 + (var6 - 68) / 2;
+              int var8 = -var7 - 2 + dh.field_d;
+              if (!(var8 >= 0)) {
                 var8 = 0;
+              } else if (var8 > 64) {
+                var8 = 64;
+                if (var10 != 0) {
+                  var8 = 0;
+                }
               }
               if (this.field_b.b((byte) -18) ||
                 ~qm.field_c != ~var8) {
@@ -487,7 +418,7 @@ final class t {
               if (kc.field_b < 0) {
                 kc.field_b = 0;
               }
-              var4_ref_o = ni.field_N;
+              o var4_ref_o = ni.field_N;
               if (null != var4_ref_o) {
                 var4_ref_o.d(kn.field_b * kc.field_b / 64);
               }
@@ -498,45 +429,43 @@ final class t {
               if (64 < kc.field_b) {
                 kc.field_b = 64;
               }
-              var4_ref_oLifetime1 = ni.field_N;
+              o var4_ref_oLifetime1 = ni.field_N;
               if (null != var4_ref_oLifetime1) {
                 var4_ref_oLifetime1.d(kn.field_b * kc.field_b / 64);
               }
             }
             if (this.field_b.d(-10809)) {
               kc.field_b = 0;
-              var4_ref_oLifetime2 = ni.field_N;
+              o var4_ref_oLifetime2 = ni.field_N;
               if (var4_ref_oLifetime2 != null) {
                 var4_ref_oLifetime2.d(kc.field_b * kn.field_b / 64);
               }
             }
             if (this.field_b.e(0)) {
               kc.field_b = 64;
-              var4_ref_oLifetime3 = ni.field_N;
+              o var4_ref_oLifetime3 = ni.field_N;
               if (var4_ref_oLifetime3 != null) {
                 var4_ref_oLifetime3.d(kn.field_b * kc.field_b / 64);
               }
             }
             if (this.field_b.a(false)) {
-              var4Lifetime1 = fh.field_g.b(oi.field_N);
-              var5Lifetime1 = fh.field_g.b(ee.field_d);
-              stackIn_129_0 = (var4Lifetime1 <= var5Lifetime1) ? var5Lifetime1 : var4Lifetime1;
-              var6Lifetime1 = stackIn_129_0;
-              var7Lifetime1 = 320 + (-68 + var6Lifetime1) / 2;
-              var8Lifetime1 = dh.field_d - 2 - var7Lifetime1;
+              int var4Lifetime1 = fh.field_g.b(oi.field_N);
+              int var5Lifetime1 = fh.field_g.b(ee.field_d);
+              int stackIn_129_0 = (var4Lifetime1 <= var5Lifetime1) ? var5Lifetime1 : var4Lifetime1;
+              int var6Lifetime1 = stackIn_129_0;
+              int var7Lifetime1 = 320 + (-68 + var6Lifetime1) / 2;
+              int var8Lifetime1 = dh.field_d - 2 - var7Lifetime1;
               if (0 > var8Lifetime1) {
                 var8Lifetime1 = 0;
                 if (var10 != 0 &&
                   var8Lifetime1 > 64) {
                   var8Lifetime1 = 64;
                 }
-              } else {
-                if (var8Lifetime1 > 64) {
-                  var8Lifetime1 = 64;
-                }
+              } else if (var8Lifetime1 > 64) {
+                var8Lifetime1 = 64;
               }
               kc.field_b = var8Lifetime1;
-              var9 = ni.field_N;
+              o var9 = ni.field_N;
               if (var9 != null) {
                 var9.d(kn.field_b * kc.field_b / 64);
               }
@@ -563,7 +492,7 @@ final class t {
           }
           if (var3_int == 7 &&
             this.field_b.b((byte) -18)) {
-            nf.a(param0 + 13193, this.field_b.field_j);
+            SpriteState.a(param0 + 13193, this.field_b.field_j);
             mj.field_d = 0;
             gi.a((byte) -94);
             return true;
@@ -576,12 +505,12 @@ final class t {
             if (df.field_d != null) {
               ri.a(-25123);
             }
-            gk.a(-9787, oc.d((byte) -122));
+            gk.a(-9787, PointCloudEffect.d((byte) -122));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var3), "t.B(" + param0 + ',' + param1 + ')');
         }
     }
@@ -598,6 +527,6 @@ final class t {
     }
 
     static {
-        field_a = new ka();
+        field_a = new TerrainMaskSupport();
     }
 }

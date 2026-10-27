@@ -7,29 +7,21 @@ final class e {
     static String field_b;
     static boolean field_a;
 
-    final static boolean a(bf param0, boolean param1, String param2, int param3, String param4, boolean param5, String param6) {
-        RuntimeException var7 = null;
-        qc var8 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
+    final static boolean a(AccountRegistrationPanel param0, boolean param1, String param2, int param3, String param4, boolean param5, String param6) {
         String stackIn_18_2 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (dn.field_q != vn.field_g) {
             return false;
           }
-          var8 = new qc(bo.field_F, param0);
+          qc var8 = new qc(bo.field_F, param0);
           bo.field_F.b(var8, 48);
           if (!ei.d(1000)) {
             gf.field_a = param3;
             hf.field_a = param5;
-            nf.field_y = null;
+            SpriteState.field_y = null;
             mf.field_b = param4;
             dn.field_q = dg.field_o;
             tf.field_h = param6;
@@ -42,28 +34,28 @@ final class e {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_17_0 = var7;
-          stackIn_17_1 = new StringBuilder().append("e.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_17_0 = var7;
+          StringBuilder stackIn_17_1 = new StringBuilder().append("e.A(");
           if (param0 == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',');
+          StringBuilder stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param5).append(',');
+          StringBuilder stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_27_2 = "null";
           } else {
@@ -88,7 +80,7 @@ final class e {
           }
           if (ia.field_y == dn.field_q) {
             dn.field_q = vn.field_g;
-            return nf.field_y;
+            return SpriteState.field_y;
           }
           return null;
         }
@@ -97,7 +89,7 @@ final class e {
         }
         if (ia.field_y == dn.field_q) {
           dn.field_q = vn.field_g;
-          return nf.field_y;
+          return SpriteState.field_y;
         }
         return null;
     }

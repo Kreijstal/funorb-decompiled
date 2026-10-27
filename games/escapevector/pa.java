@@ -6,7 +6,7 @@ final class pa {
     static hh field_a;
 
     final static void a(boolean param0) {
-        if (!nf.field_u) {
+        if (!SpriteState.field_u) {
           throw new IllegalStateException();
         }
         c.field_u = true;
@@ -23,35 +23,28 @@ final class pa {
     }
 
     final static void a(int param0) {
-        int var1_int = 0;
-        double var2 = 0.0;
-        int var4 = 0;
-        int var5 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var1_intLifetime1;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         try {
           bi.b();
           ij.field_i = 11;
           pb.field_c = new int[260];
-          for (var1_int = 0; var1_int < 256; var1_int++) {
-            var2 = 15.0;
+          for (int var1_int = 0; var1_int < 256; var1_int++) {
+            double var2 = 15.0;
             pb.field_c[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
           if (param0 >= -19) {
             field_b = (hh) null;
           }
-          var5 = 256;
-          var1_intLifetime1 = var5;
+          int var5 = 256;
+          int var1_intLifetime1 = var5;
           while (var5 < pb.field_c.length) {
             pb.field_c[var5] = 255;
             var5++;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "pa.A(" + param0 + ')');
         }
     }

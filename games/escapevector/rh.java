@@ -26,32 +26,23 @@ final class rh extends bj implements qb {
     }
 
     final void a(String[] param0, byte param1) {
-        int var4_int = 0;
-        int var5 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        ha var4 = null;
-        int var6 = 0;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         try {
-          this.field_A.a((byte) 127);
+          this.field_A.clear((byte) 127);
           if (param0 != null &&
             0 != param0.length) {
-            var3_int = param0.length;
+            int var3_int = param0.length;
             this.field_M = new String[var3_int];
             if (param1 != -103) {
               return;
             }
-            for (var4_int = 0; var4_int < var3_int; var4_int++) {
+            for (int var4_int = 0; var4_int < var3_int; var4_int++) {
               this.field_M[var4_int] = pc.a(param1 + 103, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
-            var4 = new ha(sb.field_a, 0, 1);
+            ha var4 = new ha(sb.field_a, 0, 1);
             this.field_K = new hc[1 + var3_int];
-            for (var5 = 0; var5 < var3_int; var5++) {
+            for (int var5 = 0; var5 < var3_int; var5++) {
               this.field_K[var5] = new hc(this.field_M[var5], (wn) (this));
               this.field_K[var5].field_s = (db) ((Object) var4);
               this.field_K[var5].field_i = ei.field_n;
@@ -67,10 +58,10 @@ final class rh extends bj implements qb {
           this.field_M = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_18_0 = var3;
-          stackIn_18_1 = new StringBuilder().append("rh.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var3;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("rh.A(");
           if (param0 == null) {
             stackIn_19_2 = "null";
           } else {
@@ -90,19 +81,13 @@ final class rh extends bj implements qb {
     }
 
     final boolean a(hm param0, char param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        boolean stackIn_6_0 = false;
-        boolean stackIn_12_0 = false;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1, param2, 91)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_6_0 = this.a((byte) 22, param0);
+            boolean stackIn_6_0 = this.a((byte) 22, param0);
             return stackIn_6_0;
           }
           if (param3 < 0) {
@@ -111,13 +96,13 @@ final class rh extends bj implements qb {
           if (99 != param2) {
             return false;
           }
-          stackIn_12_0 = this.a(param0, true);
+          boolean stackIn_12_0 = this.a(param0, true);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_15_0 = var5;
-          stackIn_15_1 = new StringBuilder().append("rh.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var5;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("rh.G(");
           if (param0 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -137,22 +122,12 @@ final class rh extends bj implements qb {
     }
 
     final static void a(byte param0, boolean param1, java.awt.Color param2, int param3, String param4) {
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
         Throwable decompiledCaughtException = null;
-        Exception var5 = null;
-        RuntimeException var5_ref = null;
-        Exception var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        java.awt.Graphics var9 = null;
-        java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = of.field_d.getGraphics();
+            java.awt.Graphics var9 = of.field_d.getGraphics();
             if (null == cg.field_l) {
               cg.field_l = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -167,7 +142,7 @@ final class rh extends bj implements qb {
               if (null == bj.field_z) {
                 bj.field_z = of.field_d.createImage(304, 34);
               }
-              var10 = bj.field_z.getGraphics();
+              java.awt.Graphics var10 = bj.field_z.getGraphics();
               var10.setColor(param2);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param3, 30);
@@ -180,9 +155,9 @@ final class rh extends bj implements qb {
               var9.drawImage(bj.field_z, -152 + pd.field_b / 2, -18 + ad.field_d / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = -152 + pd.field_b / 2;
-              var8 = ad.field_d / 2 - 18;
+              Exception var6 = (Exception) (Object) decompiledCaughtException;
+              int var7 = -152 + pd.field_b / 2;
+              int var8 = ad.field_d / 2 - 18;
               var9.setColor(param2);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, 2 + var8, param3 * 3, 30);
@@ -200,7 +175,7 @@ final class rh extends bj implements qb {
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var5 = (Exception) (Object) decompiledCaughtException;
+            Exception var5 = (Exception) (Object) decompiledCaughtException;
             of.field_d.repaint();
           }
           if (param0 != 9) {
@@ -209,15 +184,15 @@ final class rh extends bj implements qb {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
-          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_24_0 = var5_ref;
-          stackIn_24_1 = new StringBuilder().append("rh.C(").append(param0).append(',').append(param1).append(',');
+          RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_24_0 = var5_ref;
+          StringBuilder stackIn_24_1 = new StringBuilder().append("rh.C(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',');
+          StringBuilder stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_28_2 = "null";
           } else {
@@ -228,19 +203,13 @@ final class rh extends bj implements qb {
     }
 
     public final void a(hc param0, int param1, int param2, int param3, int param4) {
-        int var6_int = 0;
-        int var7 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         try {
           if (param3 != 1) {
             field_I = (pj) null;
           }
-          for (var6_int = 0; var6_int < this.field_M.length; var6_int++) {
+          for (int var6_int = 0; var6_int < this.field_M.length; var6_int++) {
             if (this.field_K[var6_int] == param0) {
               this.field_L.a((byte) -98, this.field_M[var6_int]);
             }
@@ -250,10 +219,10 @@ final class rh extends bj implements qb {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_15_0 = var6;
-          stackIn_15_1 = new StringBuilder().append("rh.K(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var6;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("rh.K(");
           if (param0 == null) {
             stackIn_16_2 = "null";
           } else {

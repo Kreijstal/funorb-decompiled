@@ -349,45 +349,36 @@ final class qg {
     }
 
     final static void a(byte[] param0, int param1, int param2, byte param3) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
         param2 = param1 + param2 - 7;
         while (param1 < param2) {
-          incrementValue$0 = param1;
+          int incrementValue$0 = param1;
           param1++;
           param0[incrementValue$0] = (byte)param3;
-          incrementValue$1 = param1;
+          int incrementValue$1 = param1;
           param1++;
           param0[incrementValue$1] = (byte)param3;
-          incrementValue$2 = param1;
+          int incrementValue$2 = param1;
           param1++;
           param0[incrementValue$2] = (byte)param3;
-          incrementValue$3 = param1;
+          int incrementValue$3 = param1;
           param1++;
           param0[incrementValue$3] = (byte)param3;
-          incrementValue$4 = param1;
+          int incrementValue$4 = param1;
           param1++;
           param0[incrementValue$4] = (byte)param3;
-          incrementValue$5 = param1;
+          int incrementValue$5 = param1;
           param1++;
           param0[incrementValue$5] = (byte)param3;
-          incrementValue$6 = param1;
+          int incrementValue$6 = param1;
           param1++;
           param0[incrementValue$6] = (byte)param3;
-          incrementValue$7 = param1;
+          int incrementValue$7 = param1;
           param1++;
           param0[incrementValue$7] = (byte)param3;
         }
         param2 += 7;
         while (param1 < param2) {
-          incrementValue$8 = param1;
+          int incrementValue$8 = param1;
           param1++;
           param0[incrementValue$8] = (byte)param3;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sh extends fl {
+abstract class sh extends DualLinkNode {
     int field_q;
     static String field_r;
     static String field_s;
@@ -20,36 +20,24 @@ abstract class sh extends fl {
     }
 
     final static ee a(byte param0, java.applet.Applet param1) {
-        String var2 = null;
-        RuntimeException var2_ref = null;
-        ee[] var3 = null;
-        int var4 = 0;
         ee var5 = null;
-        int var6 = 0;
-        ee stackIn_3_0 = null;
-        ee stackIn_6_0 = null;
-        ee stackIn_11_0 = null;
-        ee stackIn_14_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         try {
-          var2 = dc.a((byte) 90, "jagex-last-login-method", param1);
+          String var2 = dc.a((byte) 90, "jagex-last-login-method", param1);
           if (param0 != -1) {
-            stackIn_3_0 = (ee) null;
+            ee stackIn_3_0 = (ee) null;
             return stackIn_3_0;
           }
           if (var2 == null) {
-            stackIn_6_0 = qj.field_g;
+            ee stackIn_6_0 = qj.field_g;
             return stackIn_6_0;
           }
-          var3 = ma.a(false);
-          var4 = 0;
+          ee[] var3 = BoundedRandomAccessFile.a(false);
+          int var4 = 0;
           while (true) {
             if (var3.length <= var4) {
-              stackIn_14_0 = qj.field_g;
+              ee stackIn_14_0 = qj.field_g;
               return stackIn_14_0;
             }
             var5 = var3[var4];
@@ -59,13 +47,13 @@ abstract class sh extends fl {
             }
             break;
           }
-          stackIn_11_0 = var5;
+          ee stackIn_11_0 = var5;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_17_0 = var2_ref;
-          stackIn_17_1 = new StringBuilder().append("sh.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_17_0 = var2_ref;
+          StringBuilder stackIn_17_1 = new StringBuilder().append("sh.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_18_2 = "null";
           } else {
@@ -81,20 +69,13 @@ abstract class sh extends fl {
 
     final static java.net.URL a(byte param0, java.applet.Applet param1, java.net.URL param2) {
         Object var3 = null;
-        Object var4 = null;
-        java.net.URL stackIn_2_0 = null;
-        java.net.URL stackIn_10_0 = null;
-        Object stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          var4 = null;
+          Object var4 = null;
           if (param0 < 11) {
-            stackIn_2_0 = (java.net.URL) null;
+            java.net.URL stackIn_2_0 = (java.net.URL) null;
             return stackIn_2_0;
           }
           if (null != oh.field_p &&
@@ -107,19 +88,19 @@ abstract class sh extends fl {
             !wi.field_i.equals(param1.getParameter("session"))) {
             var4 = wi.field_i;
           }
-          stackIn_10_0 = vn.a((String) (var4), -1, (String) (var3), param2, 1);
+          java.net.URL stackIn_10_0 = vn.a((String) (var4), -1, (String) (var3), param2, 1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_13_0 = var3;
-          stackIn_13_1 = new StringBuilder().append("sh.A(").append(param0).append(',');
+          Object stackIn_13_0 = var3;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("sh.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
           if (param2 == null) {
             stackIn_17_2 = "null";
           } else {

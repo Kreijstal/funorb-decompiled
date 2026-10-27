@@ -36,42 +36,30 @@ abstract class sm implements el {
     }
 
     final static int a(int param0, int param1, dk[] param2, int param3) {
-        int var5 = 0;
-        dk[] var4 = null;
-        RuntimeException var4_ref = null;
-        int var6 = 0;
-        dk var7 = null;
-        int var8 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
           if (param2 == null) {
-            stackIn_3_0 = -1;
+            int stackIn_3_0 = -1;
             return stackIn_3_0;
           }
-          var4 = param2;
-          var6 = -90 % ((param1 + 58) / 32);
-          for (var5 = 0; var4.length > var5; var5++) {
-            var7 = var4[var5];
+          dk[] var4 = param2;
+          int var6 = -90 % ((param1 + 58) / 32);
+          for (int var5 = 0; var4.length > var5; var5++) {
+            dk var7 = var4[var5];
             if (var7 != null &&
               var7.a((byte) 65, param3, param0)) {
-              stackIn_10_0 = var7.field_c;
+              int stackIn_10_0 = var7.field_c;
               return stackIn_10_0;
             }
           }
-          stackIn_13_0 = -1;
+          int stackIn_13_0 = -1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_16_0 = var4_ref;
-          stackIn_16_1 = new StringBuilder().append("sm.R(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var4_ref;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("sm.R(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -101,13 +89,11 @@ abstract class sm implements el {
     }
 
     final static void a(qd param0, int param1, boolean param2) {
-        c var3 = null;
-        int var4 = 0;
         try {
-          var3 = om.field_c;
+          c var3 = om.field_c;
           var3.a(param1, param2);
-          var3.field_m = var3.field_m + 1;
-          var4 = var3.field_m;
+          var3.position = var3.position + 1;
+          int var4 = var3.position;
           var3.f(1, -123);
           var3.f(param0.field_m, -123);
           var3.f(param0.field_h, -123);
@@ -116,7 +102,7 @@ abstract class sm implements el {
           var3.a((byte) 125, param0.field_j);
           var3.a((byte) 127, param0.field_g);
           var3.c(var4, -76);
-          var3.e(86, var3.field_m - var4);
+          var3.e(86, var3.position - var4);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "sm.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -124,13 +110,11 @@ abstract class sm implements el {
 
     final static void a(boolean param0, boolean param1) {
         int var2 = 0;
-        int var3 = EscapeVector.field_A;
-        int var2Lifetime1;
+        int var3 = EscapeVector.obfuscationControl;
         int var2Lifetime2;
         int var2Lifetime3;
         int var2Lifetime4;
         int var2Lifetime5;
-        int var2Lifetime1Lifetime1;
         if (param0) {
           field_a = (String) null;
           if (s.field_x <= 0) {
@@ -173,7 +157,7 @@ abstract class sm implements el {
             sn.a(var2Lifetime4, 0, param1);
             return;
           }
-          df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
+          df.field_d = al.a(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
           if (null == df.field_d) {
             var2Lifetime5 = 3;
           } else {
@@ -191,7 +175,7 @@ abstract class sm implements el {
         }
         if (s.field_x <= 0) {
           if (!aj.b(-104)) {
-            var2Lifetime1 = 1;
+            int var2Lifetime1 = 1;
             if (null == km.field_n &&
               e.field_d) {
               sn.a(var2Lifetime1, 0, param1);
@@ -199,7 +183,7 @@ abstract class sm implements el {
             }
             return;
           }
-          var2Lifetime1Lifetime1 = 0;
+          int var2Lifetime1Lifetime1 = 0;
           if (null != km.field_n) {
             return;
           }
@@ -225,7 +209,7 @@ abstract class sm implements el {
           }
           return;
         }
-        df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
+        df.field_d = al.a(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
         if (null == df.field_d) {
           var2Lifetime3 = 3;
         } else {

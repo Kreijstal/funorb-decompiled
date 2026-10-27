@@ -40,17 +40,10 @@ final class rf {
     }
 
     final static te a(int param0, te param1, int[] param2) {
-        te var3 = null;
-        RuntimeException var3_ref = null;
-        te stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new te(0, 0, 0);
+          te var3 = new te(0, 0, 0);
           if (param0 > -15) {
             field_a = 60;
           }
@@ -62,19 +55,19 @@ final class rf {
           var3.field_h = param1.field_h;
           var3.field_f = param1.field_f;
           var3.field_d = param1.field_d;
-          stackIn_3_0 = var3;
+          te stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_6_0 = var3_ref;
-          stackIn_6_1 = new StringBuilder().append("rf.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3_ref;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("rf.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (param2 == null) {
             stackIn_10_2 = "null";
           } else {

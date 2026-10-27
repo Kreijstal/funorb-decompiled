@@ -6,7 +6,7 @@ final class ff {
     private fa field_c;
     static int field_h;
     private mf field_j;
-    static ka field_b;
+    static TerrainMaskSupport field_b;
     static int field_e;
     static boolean field_g;
     static String field_f;
@@ -40,9 +40,9 @@ final class ff {
         field_a = null;
     }
 
-    final si a(int param0, byte param1) {
+    final QuickChatPhraseDefinition a(int param0, byte param1) {
         byte[] var4 = null;
-        si var3 = (si) (this.field_c.a((long)param0, (byte) -54));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_c.a((long)param0, (byte) -54));
         if (var3 != null) {
           return var3;
         }
@@ -51,9 +51,9 @@ final class ff {
         } else {
           var4 = this.field_d.a(1, (byte) -97, param0);
         }
-        var3 = new si();
+        var3 = new QuickChatPhraseDefinition();
         if (var4 != null) {
-          var3.a(new n(var4), 0);
+          var3.a(new PacketBuffer(var4), 0);
         }
         if (param0 >= 32768) {
           var3.d((byte) 88);
@@ -77,12 +77,12 @@ final class ff {
             mj.field_d = mj.field_d + 1;
             pl.field_q.a(400);
             r.field_y = true;
-            de.field_j = true;
+            IntValueNode.field_j = true;
             return;
           }
           pl.field_q.a(400);
           r.field_y = true;
-          de.field_j = true;
+          IntValueNode.field_j = true;
           return;
         }
         if (dj.field_c != null) {
@@ -95,12 +95,12 @@ final class ff {
             mj.field_d = mj.field_d + 1;
             pl.field_q.a(400);
             r.field_y = true;
-            de.field_j = true;
+            IntValueNode.field_j = true;
             return;
           }
           pl.field_q.a(400);
           r.field_y = true;
-          de.field_j = true;
+          IntValueNode.field_j = true;
           return;
         }
         dj.field_c = hl.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
@@ -110,12 +110,12 @@ final class ff {
           mj.field_d = mj.field_d + 1;
           pl.field_q.a(400);
           r.field_y = true;
-          de.field_j = true;
+          IntValueNode.field_j = true;
           return;
         }
         pl.field_q.a(400);
         r.field_y = true;
-        de.field_j = true;
+        IntValueNode.field_j = true;
     }
 
     private ff() throws Throwable {
@@ -123,7 +123,7 @@ final class ff {
     }
 
     static {
-        field_b = new ka();
+        field_b = new TerrainMaskSupport();
         field_a = "Waiting for extra data";
         field_f = "Container is on hill - please land closer";
     }

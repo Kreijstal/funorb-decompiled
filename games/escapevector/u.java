@@ -16,60 +16,34 @@ final class u {
     private int[] field_f;
 
     final void a(float[] param0, int param1) {
-        int stackIn_5_0 = 0;
-        int[] stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
         int stackIn_10_2 = 0;
-        int[] stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
         int stackIn_15_2 = 0;
-        int var3;
-        int var4;
-        boolean[] var5;
-        int var6;
-        int var7;
-        int var8_int;
-        float var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        boolean[] var14;
-        int var15;
-        int var16;
-        int var6Lifetime1;
-        int var7Lifetime1;
-        int var8_intLifetime1;
-        int var9Lifetime1;
-        int var9Lifetime2;
-        int var10Lifetime1;
-        var3 = this.field_i.length;
-        var4 = field_l[this.field_a - 1];
-        var5 = field_g;
+        int var3 = this.field_i.length;
+        int var4 = field_l[this.field_a - 1];
+        boolean[] var5 = field_g;
         field_g[1] = true;
         var5[0] = true;
-        for (var6 = 2; var6 < var3; var6++) {
-          var7 = u.b(field_c, var6);
-          var8_int = u.a(field_c, var6);
-          var9 = this.a(field_c[var7], field_b[var7], field_c[var8_int], field_b[var8_int], field_c[var6]);
-          var10 = field_b[var6];
-          var11 = var4 - var9;
-          var12 = var9;
-          stackIn_5_0 = (var11 >= var12) ? var12 : var11;
-          var13 = stackIn_5_0 << 1;
+        for (int var6 = 2; var6 < var3; var6++) {
+          int var7 = u.b(field_c, var6);
+          int var8_int = u.a(field_c, var6);
+          int var9 = this.a(field_c[var7], field_b[var7], field_c[var8_int], field_b[var8_int], field_c[var6]);
+          int var10 = field_b[var6];
+          int var11 = var4 - var9;
+          int var12 = var9;
+          int stackIn_5_0 = (var11 >= var12) ? var12 : var11;
+          int var13 = stackIn_5_0 << 1;
           if (var10 == 0) {
             field_g[var6] = false;
             field_b[var6] = var9;
           } else {
-            var14 = field_g;
-            var15 = var7;
+            boolean[] var14 = field_g;
+            int var15 = var7;
             field_g[var8_int] = true;
             var14[var15] = true;
             field_g[var6] = true;
             if (var10 < var13) {
-              stackIn_14_0 = (int[]) (field_b);
-              stackIn_14_1 = var6;
+              int[] stackIn_14_0 = (int[]) (field_b);
+              int stackIn_14_1 = var6;
               if ((var10 & 1) == 0) {
                 stackIn_15_2 = var9 + var10 / 2;
               } else {
@@ -77,26 +51,22 @@ final class u {
               }
               stackIn_14_0[stackIn_14_1] = stackIn_15_2;
             } else {
-              stackIn_9_0 = (int[]) (field_b);
-              stackIn_9_1 = var6;
-              if (var11 <= var12) {
-                stackIn_10_2 = var9 - var10 + var11 - 1;
-              } else {
-                stackIn_10_2 = var10 - var12 + var9;
-              }
+              int[] stackIn_9_0 = (int[]) (field_b);
+              int stackIn_9_1 = var6;
+              stackIn_10_2 = (var11 <= var12) ? (var9 - var10 + var11 - 1) : (var10 - var12 + var9);
               stackIn_9_0[stackIn_9_1] = stackIn_10_2;
             }
           }
         }
         this.a(0, var3 - 1);
-        var6Lifetime1 = 0;
-        var7Lifetime1 = field_b[0] * this.field_a;
-        var16 = 1;
-        var8_intLifetime1 = var16;
+        int var6Lifetime1 = 0;
+        int var7Lifetime1 = field_b[0] * this.field_a;
+        int var16 = 1;
+        int var8_intLifetime1 = var16;
         while (var16 < var3) {
           if (field_g[var16]) {
-            var9Lifetime1 = field_c[var16];
-            var10Lifetime1 = field_b[var16] * this.field_a;
+            int var9Lifetime1 = field_c[var16];
+            int var10Lifetime1 = field_b[var16] * this.field_a;
             this.a(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, param0, param1);
             if (var9Lifetime1 >= param1) {
               return;
@@ -106,28 +76,22 @@ final class u {
           }
           var16++;
         }
-        var8 = field_j[var7Lifetime1];
-        for (var9Lifetime2 = var6Lifetime1; var9Lifetime2 < param1; var9Lifetime2++) {
+        float var8 = field_j[var7Lifetime1];
+        for (int var9Lifetime2 = var6Lifetime1; var9Lifetime2 < param1; var9Lifetime2++) {
           param0[var9Lifetime2] = param0[var9Lifetime2] * var8;
         }
     }
 
     private final void a(int param0, int param1) {
-        int var7 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var8;
         if (param0 >= param1) {
           return;
         }
-        var3 = param0;
-        var4 = field_c[var3];
-        var5 = field_b[var3];
-        var6 = field_g[var3] ? 1 : 0;
-        for (var7 = param0 + 1; var7 <= param1; var7++) {
-          var8 = field_c[var7];
+        int var3 = param0;
+        int var4 = field_c[var3];
+        int var5 = field_b[var3];
+        boolean var6 = (field_g[var3]);
+        for (int var7 = param0 + 1; var7 <= param1; var7++) {
+          int var8 = field_c[var7];
           if (var8 < var4) {
             field_c[var3] = var8;
             field_b[var3] = field_b[var7];
@@ -140,13 +104,12 @@ final class u {
         }
         field_c[var3] = var4;
         field_b[var3] = var5;
-        field_g[var3] = var6 != 0;
+        field_g[var3] = (var6);
         this.a(param0, var3 - 1);
         this.a(var3 + 1, param1);
     }
 
     private final void a(int param0, int param1, int param2, int param3, float[] param4, int param5) {
-        int var14 = 0;
         int var7 = param3 - param1;
         int var8 = param2 - param0;
         int var9 = var7 < 0 ? -var7 : var7;
@@ -159,7 +122,7 @@ final class u {
         if (param2 > param5) {
           param2 = param5;
         }
-        for (var14 = param0 + 1; var14 < param2; var14++) {
+        for (int var14 = param0 + 1; var14 < param2; var14++) {
           var12 = var12 + var9;
           if (var12 >= var8) {
             var12 = var12 - var8;
@@ -172,16 +135,11 @@ final class u {
     }
 
     private final static int b(int[] param0, int param1) {
-        int var5 = 0;
-        int var2;
-        int var3;
-        int var4;
-        int var6;
-        var2 = param0[param1];
-        var3 = -1;
-        var4 = -2147483648;
-        for (var5 = 0; var5 < param1; var5++) {
-          var6 = param0[var5];
+        int var2 = param0[param1];
+        int var3 = -1;
+        int var4 = -2147483648;
+        for (int var5 = 0; var5 < param1; var5++) {
+          int var6 = param0[var5];
           if (var6 < var2 &&
             var6 > var4) {
             var3 = var5;
@@ -200,16 +158,11 @@ final class u {
     }
 
     private final static int a(int[] param0, int param1) {
-        int var5 = 0;
-        int var2;
-        int var3;
-        int var4;
-        int var6;
-        var2 = param0[param1];
-        var3 = -1;
-        var4 = 2147483647;
-        for (var5 = 0; var5 < param1; var5++) {
-          var6 = param0[var5];
+        int var2 = param0[param1];
+        int var3 = -1;
+        int var4 = 2147483647;
+        for (int var5 = 0; var5 < param1; var5++) {
+          int var6 = param0[var5];
           if (var6 > var2 &&
             var6 < var4) {
             var3 = var5;
@@ -229,52 +182,35 @@ final class u {
     }
 
     final boolean b() {
-        int var6 = 0;
-        int var12 = 0;
-        int incrementValue$0 = 0;
-        int stackIn_3_0 = 0;
-        int[] stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
         int stackIn_14_2 = 0;
-        int var1;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var13;
-        stackIn_3_0 = (in.c() == 0) ? 0 : 1;
-        var1 = stackIn_3_0;
-        if (var1 == 0) {
+        boolean stackIn_3_0 = !(in.c() == 0);
+        boolean var1 = stackIn_3_0;
+        if (!var1) {
           return false;
         }
-        var2 = this.field_i.length;
+        int var2 = this.field_i.length;
         System.arraycopy(this.field_i, 0, field_c, 0, var2);
-        var3 = field_l[this.field_a - 1];
-        var4 = nm.a(var3 - 1, (byte) 78);
+        int var3 = field_l[this.field_a - 1];
+        int var4 = nm.a(var3 - 1, (byte) 78);
         field_b[0] = in.e(var4);
         field_b[1] = in.e(var4);
-        var5 = 2;
-        for (var6 = 0; var6 < this.field_k.length; var6++) {
-          var7 = this.field_k[var6];
-          var8 = this.field_d[var7];
-          var9 = this.field_f[var7];
-          var10 = (1 << var9) - 1;
-          var11 = 0;
+        int var5 = 2;
+        for (int var6 = 0; var6 < this.field_k.length; var6++) {
+          int var7 = this.field_k[var6];
+          int var8 = this.field_d[var7];
+          int var9 = this.field_f[var7];
+          int var10 = (1 << var9) - 1;
+          int var11 = 0;
           if (var9 > 0) {
             var11 = in.field_k[this.field_e[var7]].c();
           }
-          for (var12 = 0; var12 < var8; var12++) {
-            var13 = this.field_h[var7][var11 & var10];
+          for (int var12 = 0; var12 < var8; var12++) {
+            int var13 = this.field_h[var7][var11 & var10];
             var11 = var11 >>> var9;
-            incrementValue$0 = var5;
+            int incrementValue$0 = var5;
             var5++;
-            stackIn_13_0 = (int[]) (field_b);
-            stackIn_13_1 = incrementValue$0;
+            int[] stackIn_13_0 = (int[]) (field_b);
+            int stackIn_13_1 = incrementValue$0;
             if (var13 < 0) {
               stackIn_14_2 = 0;
             } else {
@@ -287,35 +223,15 @@ final class u {
     }
 
     u() {
-        int dupTemp$1 = 0;
-        int var8 = 0;
-        int incrementValue$0 = 0;
-        int var1;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int[] var6_ref_int__;
-        int var7;
-        int[] var9;
-        int[] var10;
-        int var4Lifetime1;
-        int var4Lifetime2;
-        int var6Lifetime1;
-        int var7Lifetime1;
-        int var5Lifetime1;
-        int var5Lifetime2;
-        int var5Lifetime3;
-        var1 = in.e(16);
+        int var1 = in.e(16);
         if (var1 != 1) {
           throw new RuntimeException();
         }
-        var2 = in.e(5);
-        var3 = 0;
+        int var2 = in.e(5);
+        int var3 = 0;
         this.field_k = new int[var2];
-        for (var4 = 0; var4 < var2; var4++) {
-          var5 = in.e(4);
+        for (int var4 = 0; var4 < var2; var4++) {
+          int var5 = in.e(4);
           this.field_k[var4] = var5;
           if (var5 >= var3) {
             var3 = var5 + 1;
@@ -325,37 +241,37 @@ final class u {
         this.field_f = new int[var3];
         this.field_e = new int[var3];
         this.field_h = new int[var3][];
-        for (var4Lifetime1 = 0; var4Lifetime1 < var3; var4Lifetime1++) {
+        for (int var4Lifetime1 = 0; var4Lifetime1 < var3; var4Lifetime1++) {
           this.field_d[var4Lifetime1] = in.e(3) + 1;
-          dupTemp$1 = in.e(2);
+          int dupTemp$1 = in.e(2);
           this.field_f[var4Lifetime1] = dupTemp$1;
-          var5Lifetime1 = dupTemp$1;
+          int var5Lifetime1 = dupTemp$1;
           if (var5Lifetime1 != 0) {
             this.field_e[var4Lifetime1] = in.e(8);
           }
           var5Lifetime1 = 1 << var5Lifetime1;
-          var10 = new int[var5Lifetime1];
-          var9 = var10;
-          var6_ref_int__ = var9;
+          int[] var10 = new int[var5Lifetime1];
+          int[] var9 = var10;
+          int[] var6_ref_int__ = var9;
           this.field_h[var4Lifetime1] = var10;
-          for (var7 = 0; var7 < var5Lifetime1; var7++) {
+          for (int var7 = 0; var7 < var5Lifetime1; var7++) {
             var6_ref_int__[var7] = in.e(8) - 1;
           }
         }
         this.field_a = in.e(2) + 1;
-        var4Lifetime2 = in.e(4);
-        var5Lifetime2 = 2;
-        for (var6 = 0; var6 < var2; var6++) {
+        int var4Lifetime2 = in.e(4);
+        int var5Lifetime2 = 2;
+        for (int var6 = 0; var6 < var2; var6++) {
           var5Lifetime2 = var5Lifetime2 + this.field_d[this.field_k[var6]];
         }
         this.field_i = new int[var5Lifetime2];
         this.field_i[0] = 0;
         this.field_i[1] = 1 << var4Lifetime2;
-        var5Lifetime3 = 2;
-        for (var6Lifetime1 = 0; var6Lifetime1 < var2; var6Lifetime1++) {
-          var7Lifetime1 = this.field_k[var6Lifetime1];
-          for (var8 = 0; var8 < this.field_d[var7Lifetime1]; var8++) {
-            incrementValue$0 = var5Lifetime3;
+        int var5Lifetime3 = 2;
+        for (int var6Lifetime1 = 0; var6Lifetime1 < var2; var6Lifetime1++) {
+          int var7Lifetime1 = this.field_k[var6Lifetime1];
+          for (int var8 = 0; var8 < this.field_d[var7Lifetime1]; var8++) {
+            int incrementValue$0 = var5Lifetime3;
             var5Lifetime3++;
             this.field_i[incrementValue$0] = in.e(var4Lifetime2);
           }

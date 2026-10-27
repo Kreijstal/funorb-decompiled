@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tj extends hg {
+final class DialogueScreen extends IntrusiveNode {
     private int field_p;
     private int[] field_D;
     int field_C;
@@ -10,19 +10,19 @@ final class tj extends hg {
     private hl field_u;
     private int field_v;
     static String field_G;
-    int field_E;
-    private int field_j;
+    int dialogueIndex;
+    private int revealedCharacters;
     static ui[] field_y;
     int field_t;
     static String field_k;
-    String[] field_g;
+    String[] dialogueLines;
     private boolean field_q;
-    boolean field_l;
-    private ed[] field_z;
+    boolean fullWidthScene;
+    private Sprite[] field_z;
     private hl field_A;
     private String[] field_x;
     private boolean field_H;
-    int field_B;
+    int revealedLine;
     private int field_F;
     boolean field_m;
     private wc field_w;
@@ -34,127 +34,72 @@ final class tj extends hg {
 
     private final int g(int param0) {
         int var2 = 0;
-        int var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         int var3 = this.a((byte) 67);
-        if (this.field_l) {
+        if (this.fullWidthScene) {
           var2 = -(var3 / 2) + 626;
+        } else if (!this.field_H) {
+          var2 = 632 - var3 / 2;
         } else {
-          if (!this.field_H) {
-            var2 = 632 - var3 / 2;
-          } else {
-            var2 = 162 - var3 / 2;
-          }
+          var2 = 162 - var3 / 2;
         }
         if (param0 != 2) {
-          tj.a(49, (byte) 53, -18);
+          DialogueScreen.a(49, (byte) 53, -18);
         }
         return var2 * 12288 / 640 + 2048;
     }
 
-    final void j(int param0) {
-        int var10 = 0;
-        int stackIn_5_0;
-        int stackIn_5_1;
-        int stackIn_5_2;
-        int stackIn_5_3;
-        int stackIn_6_4 = 0;
-        boolean stackIn_8_5;
-        int stackIn_8_6;
-        boolean stackIn_9_7 = false;
-        int stackIn_12_8 = 0;
-        int stackIn_14_0 = 0;
-        String stackIn_14_1 = null;
-        int stackIn_15_2 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_25_0;
-        int stackIn_25_1;
-        int stackIn_25_2;
-        int stackIn_25_3;
-        int stackIn_26_4 = 0;
-        boolean stackIn_28_5;
-        int stackIn_28_6;
-        boolean stackIn_29_7 = false;
-        int stackIn_32_8 = 0;
-        int stackIn_34_0 = 0;
-        String stackIn_34_1 = null;
-        int stackIn_35_2 = 0;
-        int stackIn_38_0;
-        int stackIn_38_1;
-        int stackIn_38_2;
-        int stackIn_38_3;
-        int stackIn_39_4 = 0;
-        boolean stackIn_41_5;
-        int stackIn_41_6;
-        boolean stackIn_42_7 = false;
-        int stackIn_45_8 = 0;
-        int stackIn_47_0 = 0;
-        String stackIn_47_1 = null;
-        int stackIn_48_2 = 0;
-        int stackIn_63_0 = 0;
-        int var2;
-        int var3;
+    final void drawDialogue(int guard) {
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
-        int var9;
         int var11;
         int var12;
-        String var13;
-        int var14;
-        int var15;
-        String var16;
-        String var17;
-        int var8Lifetime1;
-        int var8Lifetime2;
-        String var13Lifetime1;
-        String var13Lifetime2;
-        var15 = EscapeVector.field_A;
+        int var15 = EscapeVector.obfuscationControl;
         this.h(80);
         this.e(401);
-        var2 = this.a((byte) 67);
-        var3 = 43 - this.field_s;
-        if (param0 < 57) {
+        int var2 = this.a((byte) 67);
+        int var3 = 43 - this.field_s;
+        if (guard < 57) {
           return;
         }
-        if (!this.field_l) {
-          stackIn_19_0 = (!this.field_H) ? 8 : 170;
+        if (!this.fullWidthScene) {
+          int stackIn_19_0 = (!this.field_H) ? 8 : 170;
           var4 = stackIn_19_0;
-          stackIn_22_0 = (!this.field_H) ? 470 : 632;
+          int stackIn_22_0 = (!this.field_H) ? 470 : 632;
           var5 = stackIn_22_0;
           var6 = 65;
           var7 = 415;
           if (this.field_H) {
-            stackIn_38_0 = 0;
-            stackIn_38_1 = 409;
-            stackIn_38_2 = 382;
-            stackIn_38_3 = -var2 + (-8 + var4);
-            stackIn_39_4 = (this.field_w.field_h == 0) ? 8421504 : 3170352;
-            stackIn_41_5 = true;
-            stackIn_41_6 = -8 + var4;
-            stackIn_42_7 = (var3 != 0) ? false : true;
-            stackIn_45_8 = (0 != this.field_w.field_h) ? 6340704 : 16777215;
+            int stackIn_38_0 = 0;
+            int stackIn_38_1 = 409;
+            int stackIn_38_2 = 382;
+            int stackIn_38_3 = -var2 + (-8 + var4);
+            int stackIn_39_4 = (this.field_w.field_h == 0) ? 8421504 : 3170352;
+            boolean stackIn_41_5 = true;
+            int stackIn_41_6 = -8 + var4;
+            boolean stackIn_42_7 = (var3 != 0) ? false : true;
+            int stackIn_45_8 = (0 != this.field_w.field_h) ? 6340704 : 16777215;
             eo.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_41_5, stackIn_41_6, stackIn_42_7, stackIn_45_8, var3);
-            stackIn_47_0 = 405;
-            stackIn_47_1 = this.field_r;
-            stackIn_48_2 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
+            int stackIn_47_0 = 405;
+            String stackIn_47_1 = this.field_r;
+            int stackIn_48_2 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
             lb.a(stackIn_47_0, stackIn_47_1, stackIn_48_2, -113, var4 + (-8 - var2 / 2 - var3 * 16));
           } else {
-            stackIn_25_0 = 0;
-            stackIn_25_1 = 409;
-            stackIn_25_2 = 382;
-            stackIn_25_3 = 632 - var2;
-            stackIn_26_4 = (this.field_w.field_h != 0) ? 3170352 : 8421504;
-            stackIn_28_5 = true;
-            stackIn_28_6 = 632;
-            stackIn_29_7 = (0 != var3) ? false : true;
-            stackIn_32_8 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
+            int stackIn_25_0 = 0;
+            int stackIn_25_1 = 409;
+            int stackIn_25_2 = 382;
+            int stackIn_25_3 = 632 - var2;
+            int stackIn_26_4 = (this.field_w.field_h != 0) ? 3170352 : 8421504;
+            boolean stackIn_28_5 = true;
+            int stackIn_28_6 = 632;
+            boolean stackIn_29_7 = (0 != var3) ? false : true;
+            int stackIn_32_8 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
             eo.a(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_26_4, stackIn_28_5, stackIn_28_6, stackIn_29_7, stackIn_32_8, var3);
-            stackIn_34_0 = 405;
-            stackIn_34_1 = this.field_r;
-            stackIn_35_2 = (this.field_w.field_h != 0) ? 6340704 : 16777215;
+            int stackIn_34_0 = 405;
+            String stackIn_34_1 = this.field_r;
+            int stackIn_35_2 = (this.field_w.field_h != 0) ? 6340704 : 16777215;
             lb.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, -120, 16 * var3 + (632 - var2 / 2));
           }
         } else {
@@ -162,41 +107,41 @@ final class tj extends hg {
           var6 = 60;
           var4 = 8;
           var5 = 632;
-          stackIn_5_0 = 0;
-          stackIn_5_1 = 475;
-          stackIn_5_2 = 448;
-          stackIn_5_3 = -var2 - 6 + var5;
-          stackIn_6_4 = (this.field_w.field_h == 0) ? 8421504 : 3170352;
-          stackIn_8_5 = true;
-          stackIn_8_6 = var5 - 6;
-          stackIn_9_7 = (var3 != 0) ? false : true;
-          stackIn_12_8 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
+          int stackIn_5_0 = 0;
+          int stackIn_5_1 = 475;
+          int stackIn_5_2 = 448;
+          int stackIn_5_3 = -var2 - 6 + var5;
+          int stackIn_6_4 = (this.field_w.field_h == 0) ? 8421504 : 3170352;
+          boolean stackIn_8_5 = true;
+          int stackIn_8_6 = var5 - 6;
+          boolean stackIn_9_7 = (var3 != 0) ? false : true;
+          int stackIn_12_8 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
           eo.a(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, stackIn_8_5, stackIn_8_6, stackIn_9_7, stackIn_12_8, var3);
-          stackIn_14_0 = 471;
-          stackIn_14_1 = this.field_r;
-          stackIn_15_2 = (this.field_w.field_h != 0) ? 6340704 : 16777215;
+          int stackIn_14_0 = 471;
+          String stackIn_14_1 = this.field_r;
+          int stackIn_15_2 = (this.field_w.field_h != 0) ? 6340704 : 16777215;
           lb.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, -122, 16 * var3 + (-6 + (var5 - var2 / 2)));
         }
         qi.a(3162160, var5 - 3, 6324320, -1, 3 + var6, -108, 3 + var4, var7 - 3, var3);
         qi.a(5275728, var5, 10551200, 1, var6, 99, var4, var7, var3);
         if (this.field_C > 0) {
-          var8 = this.field_B;
-          var9 = this.field_j;
+          int var8 = this.revealedLine;
+          int var9 = this.revealedCharacters;
           if (this.field_C <= var8) {
             var8--;
             var9 = this.field_x[var8].length();
           }
-          for (var10 = 0; var8 >= var10; var10++) {
-            var16 = this.field_x[var10];
-            var13 = var16;
-            var13Lifetime1 = var16;
-            var13Lifetime2 = var16;
-            if (!this.field_l) {
-              stackIn_63_0 = (!this.field_H) ? 478 : 8;
+          for (int var10 = 0; var8 >= var10; var10++) {
+            String var16 = this.field_x[var10];
+            String var13 = var16;
+            String var13Lifetime1 = var16;
+            String var13Lifetime2 = var16;
+            if (!this.fullWidthScene) {
+              int stackIn_63_0 = (!this.field_H) ? 478 : 8;
               var11 = stackIn_63_0;
               var12 = 88 + var10 * 20;
             } else {
-              var14 = fh.field_g.b(var16);
+              int var14 = fh.field_g.b(var16);
               var11 = (-var14 + 640) / 2;
               if (var10 == 1 &&
                 614 - var2 < var11 + var14) {
@@ -205,7 +150,7 @@ final class tj extends hg {
               var12 = 445 + 20 * var10;
             }
             if (var8 == var10) {
-              var17 = var16.substring(0, var9);
+              String var17 = var16.substring(0, var9);
               var13Lifetime2 = var17;
               var13Lifetime2 = var17;
               var13Lifetime2 = var17;
@@ -221,63 +166,55 @@ final class tj extends hg {
         }
         if (this.field_p >= 30 &&
           this.field_v > 0) {
-          var8Lifetime1 = 128;
+          int var8Lifetime1 = 128;
           if (30 > this.field_v) {
             var8Lifetime1 = this.field_v * var8Lifetime1 / 30;
           }
-          em.a(15, 178, 610, 62, 0, var8Lifetime1);
+          SoftwareRasterizer.a(15, 178, 610, 62, 0, var8Lifetime1);
         }
         if (30 <= this.field_p &&
           this.field_v > 50) {
-          var8Lifetime2 = 128;
+          int var8Lifetime2 = 128;
           if (this.field_v < 80) {
             var8Lifetime2 = var8Lifetime2 * (-50 + this.field_v) / 30;
           }
-          em.a(15, 240, 610, 62, 0, var8Lifetime2);
+          SoftwareRasterizer.a(15, 240, 610, 62, 0, var8Lifetime2);
         }
         ll.a(244, 182, 8, this.field_v);
     }
 
-    tj(int[] param0, ed[] param1, String[] param2, boolean param3) {
+    DialogueScreen(int[] param0, Sprite[] param1, String[] param2, boolean param3) {
         this(param1, param2, param3);
-        int var5_int = 0;
-        boolean discarded$2 = false;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
         try {
           this.field_D = param0;
           this.field_h = new String[this.field_D.length];
           this.field_i = new String[this.field_D.length];
-          for (var5_int = 0; var5_int < this.field_D.length; var5_int++) {
+          for (int var5_int = 0; var5_int < this.field_D.length; var5_int++) {
             this.field_h[var5_int] = "photos_" + gd.field_R[this.field_D[var5_int]];
             this.field_i[var5_int] = "";
-            discarded$2 = this.a((byte) 124, var5_int);
+            boolean discarded$2 = this.a((byte) 124, var5_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_7_0 = var5;
-          stackIn_7_1 = new StringBuilder().append("tj.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var5;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("tj.<init>(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -291,7 +228,7 @@ final class tj extends hg {
         if (param0 != 8192) {
           this.field_w = (wc) null;
         }
-        if (this.field_l) {
+        if (this.fullWidthScene) {
           return 8192;
         }
         int var2 = this.field_H ? 401 : 239;
@@ -311,55 +248,46 @@ final class tj extends hg {
         }
     }
 
-    tj(String param0, String param1, ed[] param2, String[] param3, boolean param4) {
+    DialogueScreen(String param0, String param1, Sprite[] param2, String[] param3, boolean param4) {
         this(param2, param3, param4);
-        int var6_int = 0;
-        boolean discarded$2 = false;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
         try {
           this.field_D = new int[this.field_z.length];
           this.field_h = new String[this.field_z.length];
           this.field_i = new String[this.field_z.length];
-          for (var6_int = 0; this.field_D.length > var6_int; var6_int++) {
+          for (int var6_int = 0; this.field_D.length > var6_int; var6_int++) {
             this.field_D[var6_int] = var6_int;
             this.field_h[var6_int] = param0;
             this.field_i[var6_int] = param1 + (var6_int + 1);
-            discarded$2 = this.a((byte) 126, var6_int);
+            boolean discarded$2 = this.a((byte) 126, var6_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_7_0 = var6;
-          stackIn_7_1 = new StringBuilder().append("tj.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var6;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("tj.<init>(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
           if (param3 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -392,50 +320,42 @@ final class tj extends hg {
         field_k = null;
         field_G = null;
         if (!param0) {
-          tj.a((byte) -30, -21, 96);
+          DialogueScreen.a((byte) -30, -21, 96);
         }
         field_y = null;
     }
 
     private final void a(int param0, String param1) {
-        int var4 = 0;
-        RuntimeException runtimeException = null;
-        int var3_int = 0;
-        int var5 = 0;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         try {
           if (param0 != 43) {
             return;
           }
-          stackIn_6_0 = (!this.field_l) ? 154 : 614;
-          var3_int = stackIn_6_0;
+          int stackIn_6_0 = (!this.fullWidthScene) ? 154 : 614;
+          int var3_int = stackIn_6_0;
           this.field_C = fh.field_g.a(param1, new int[]{var3_int}, this.field_x);
-          for (var4 = 0; this.field_C > var4; var4++) {
+          for (int var4 = 0; this.field_C > var4; var4++) {
             if (this.field_x[var4].endsWith("<br>")) {
               this.field_x[var4] = this.field_x[var4].substring(0, -4 + this.field_x[var4].length());
             }
           }
-          this.field_B = 0;
-          this.field_j = 0;
-          while (this.field_B < this.field_C) {
-            if (0 == this.field_x[this.field_B].length()) {
-              this.field_B = this.field_B + 1;
+          this.revealedLine = 0;
+          this.revealedCharacters = 0;
+          while (this.revealedLine < this.field_C) {
+            if (0 == this.field_x[this.revealedLine].length()) {
+              this.revealedLine = this.revealedLine + 1;
               continue;
             }
             break;
           }
-          this.field_I = this.field_B;
+          this.field_I = this.revealedLine;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_19_0 = runtimeException;
-          stackIn_19_1 = new StringBuilder().append("tj.N(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_19_0 = runtimeException;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("tj.N(").append(param0).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";
           } else {
@@ -445,19 +365,10 @@ final class tj extends hg {
         }
     }
 
-    final void e(byte param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        boolean stackIn_60_1 = false;
-        int var2;
-        String var3;
-        int var4;
-        int var5;
-        String var6;
-        int var7;
-        var7 = EscapeVector.field_A;
+    final void advanceDialogue(byte guard) {
+        int var7 = EscapeVector.obfuscationControl;
         this.field_w.a(this.a(-84, sf.field_c, ng.field_ob), (byte) 126, this.a(-97, dh.field_d, bj.field_y));
-        if (param0 < 10) {
+        if (guard < 10) {
           return;
         }
         if (this.field_w.field_e) {
@@ -515,8 +426,8 @@ final class tj extends hg {
               if (this.field_p > 0) {
                 this.f((byte) -105);
               }
-              if (!this.field_l ||
-                this.field_E >= this.field_g.length) {
+              if (!this.fullWidthScene ||
+                this.dialogueIndex >= this.dialogueLines.length) {
                 if (this.field_s == 43) {
                   sj.a(this.d(8192), (byte) 51);
                 }
@@ -524,20 +435,20 @@ final class tj extends hg {
               }
             }
             if (this.field_n && (0 == this.field_s ||
-              this.field_l &&
-              this.field_E < this.field_g.length &&
+              this.fullWidthScene &&
+              this.dialogueIndex < this.dialogueLines.length &&
               this.field_p <= 20)) {
-              if (this.field_E < this.field_g.length) {
-                stackIn_60_1 = !(this.field_H);
+              if (this.dialogueIndex < this.dialogueLines.length) {
+                boolean stackIn_60_1 = !(this.field_H);
                 this.field_H = stackIn_60_1;
                 this.field_o = this.field_o + 1;
                 this.field_n = false;
-                if (!this.field_l) {
-                  this.a(43, this.field_g[this.field_E]);
+                if (!this.fullWidthScene) {
+                  this.a(43, this.dialogueLines[this.dialogueIndex]);
                   gi.a((byte) -98);
                 }
               } else {
-                if (ma.field_a != null) {
+                if (BoundedRandomAccessFile.activeSession != null) {
                   this.i(2048);
                   return;
                 }
@@ -556,56 +467,51 @@ final class tj extends hg {
                   this.field_o = this.field_o + 1;
                   this.field_q = false;
                 }
-              } else {
-                if (20 > this.field_p) {
-                  this.f(100);
-                } else {
-                  if (this.field_p < 30 &&
-                    this.a((byte) 125, this.field_o)) {
-                    this.f(100);
-                  }
-                }
+              } else if (20 > this.field_p) {
+                this.f(100);
+              } else if (this.field_p < 30 &&
+                this.a((byte) 125, this.field_o)) {
+                this.f(100);
               }
             }
-            boolean decompiledFrameRemainder0 = true;
             if (null != this.field_A) {
               this.field_F = this.field_F + 1;
               if (!this.field_n &&
                 43 <= this.field_s &&
                 this.field_t > 0) {
-                fieldTemp$0 = this.field_t - 1;
+                int fieldTemp$0 = this.field_t - 1;
                 this.field_t = this.field_t - 1;
                 if (fieldTemp$0 == 0) {
-                  if (this.field_C > this.field_B) {
-                    var2 = 0;
-                    var3 = this.field_x[this.field_B];
-                    while (this.field_j < var3.length()) {
-                      if (var3.regionMatches(this.field_j, "<photo>", 0, "<photo>".length())) {
-                        this.field_j = this.field_j + "<photo>".length();
+                  if (this.field_C > this.revealedLine) {
+                    boolean var2 = false;
+                    String var3 = this.field_x[this.revealedLine];
+                    while (this.revealedCharacters < var3.length()) {
+                      if (var3.regionMatches(this.revealedCharacters, "<photo>", 0, "<photo>".length())) {
+                        this.revealedCharacters = this.revealedCharacters + "<photo>".length();
                         this.field_q = true;
                         continue;
                       }
-                      if (var3.regionMatches(this.field_j, "<title>", 0, "<title>".length())) {
-                        this.field_j = this.field_j + "<title>".length();
+                      if (var3.regionMatches(this.revealedCharacters, "<title>", 0, "<title>".length())) {
+                        this.revealedCharacters = this.revealedCharacters + "<title>".length();
                         this.d((byte) -21);
                         continue;
                       }
                       break;
                     }
-                    if (this.field_j >= var3.length()) {
-                      this.field_B = this.field_B + 1;
-                      this.field_j = 0;
+                    if (this.revealedCharacters >= var3.length()) {
+                      this.revealedLine = this.revealedLine + 1;
+                      this.revealedCharacters = 0;
                       this.field_u.e(ie.field_q / 200, 0);
                     } else {
-                      fieldTemp$1 = this.field_j;
-                      this.field_j = this.field_j + 1;
-                      var4 = var3.charAt(fieldTemp$1);
+                      int fieldTemp$1 = this.revealedCharacters;
+                      this.revealedCharacters = this.revealedCharacters + 1;
+                      int var4 = var3.charAt(fieldTemp$1);
                       if (var4 == 60) {
-                        var5 = var3.indexOf('>', this.field_j);
-                        var6 = var3.substring(this.field_j, var5);
-                        this.field_j = 1 + var5;
+                        int var5 = var3.indexOf('>', this.revealedCharacters);
+                        String var6 = var3.substring(this.revealedCharacters, var5);
+                        this.revealedCharacters = 1 + var5;
                         if (var6.equals("delay")) {
-                          var2 = 1;
+                          var2 = true;
                           var4 = 32;
                         }
                       }
@@ -616,18 +522,16 @@ final class tj extends hg {
                       }
                     }
                     this.field_t = 2;
-                    if (this.field_B == this.field_C) {
+                    if (this.revealedLine == this.field_C) {
                       this.field_t = 100;
-                    } else {
-                      if ((var2 != 0)) {
-                        this.field_t = 50;
-                      }
+                    } else if (var2) {
+                      this.field_t = 50;
                     }
-                    decompiledFrameRemainder0 = false;
+                    boolean decompiledFrameRemainder0 = false;
                   }
                   else {
-                    this.field_E = this.field_E + 1;
-                    if (this.field_g.length <= this.field_E) {
+                    this.dialogueIndex = this.dialogueIndex + 1;
+                    if (this.dialogueLines.length <= this.dialogueIndex) {
                       rk.field_e.b(this.field_A);
                       this.field_A = null;
                       this.field_F = 0;
@@ -638,12 +542,12 @@ final class tj extends hg {
                         this.field_n = true;
                       }
                     } else {
-                      this.field_B = this.field_I;
-                      this.field_j = 0;
+                      this.revealedLine = this.field_I;
+                      this.revealedCharacters = 0;
                       this.field_t = 20;
                       this.field_n = true;
-                      if (this.field_l) {
-                        this.a(43, this.field_g[this.field_E]);
+                      if (this.fullWidthScene) {
+                        this.a(43, this.dialogueLines[this.dialogueIndex]);
                       }
                     }
                   }
@@ -653,7 +557,7 @@ final class tj extends hg {
             if (this.field_A != null) {
               this.field_A.a(ie.field_q / 200, 768 * qm.field_c / 64, this.g((byte) 111));
             }
-            de.field_j = true;
+            IntValueNode.field_j = true;
             return;
           }
         }
@@ -661,15 +565,8 @@ final class tj extends hg {
 
     private final int g(byte param0) {
         int var2;
-        int var3;
-        int var4;
-        int var6;
-        int var7;
-        String var8;
-        int stackIn_12_0 = 0;
-        String var9;
-        var3 = this.field_B;
-        var4 = this.field_j;
+        int var3 = this.revealedLine;
+        int var4 = this.revealedCharacters;
         if (param0 != 111) {
           return -60;
         }
@@ -677,29 +574,28 @@ final class tj extends hg {
           var3--;
           var4 = this.field_x[var3].length();
         }
-        var8 = this.field_x[var3];
-        if (!this.field_l) {
-          stackIn_12_0 = (!this.field_H) ? 478 : 8;
+        String var8 = this.field_x[var3];
+        if (!this.fullWidthScene) {
+          int stackIn_12_0 = (!this.field_H) ? 478 : 8;
           var2 = stackIn_12_0;
         } else {
-          var6 = this.a((byte) 67);
-          var7 = fh.field_g.b(var8);
+          int var6 = this.a((byte) 67);
+          int var7 = fh.field_g.b(var8);
           var2 = (640 - var7) / 2;
           if (1 == var3 &&
             626 - var6 - 12 < var7 + var2) {
             var2 = 626 - (var6 + 12 + var7);
           }
         }
-        var9 = var8.substring(0, var4);
+        String var9 = var8.substring(0, var4);
         var2 = var2 + (fh.field_g.b(var9) + fh.field_g.a('_') / 2);
         return var2 * 12288 / 640 + 2048;
     }
 
     private final int a(byte param0) {
-        boolean discarded$0 = false;
         int var2 = 40;
         if (param0 != 67) {
-          discarded$0 = this.a((byte) 12, 65);
+          boolean discarded$0 = this.a((byte) 12, 65);
         }
         int var3 = fh.field_g.b(ig.field_c) + 9;
         if (var2 < var3) {
@@ -720,7 +616,7 @@ final class tj extends hg {
         if (param0 != 401) {
           this.field_H = false;
         }
-        if (this.field_l) {
+        if (this.fullWidthScene) {
           var3 = 320;
           var4 = 67;
           var5 = 240;
@@ -731,38 +627,31 @@ final class tj extends hg {
           var4 = 72;
           var2 = !this.field_H ? 15 : 177;
         }
-        ed var6 = this.field_z[this.field_D[this.field_o]];
+        Sprite var6 = this.field_z[this.field_D[this.field_o]];
         qj.a(-1276284702, this.field_F, var4, var3, var6, var5, this.field_p, var2);
     }
 
     private final void h(int param0) {
-        int var3 = 0;
-        int var4 = 0;
-        int discarded$0 = 0;
-        ed var2;
-        int var5;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         if (this.field_v > 0 &&
           uj.field_a != null) {
-          var2 = uj.field_a;
-          for (var3 = 0; var3 < 480; var3 = var3 + var2.field_z) {
-            for (var4 = 0; var4 < 640; var4 = var4 + var2.field_A) {
+          Sprite var2 = uj.field_a;
+          for (int var3 = 0; var3 < 480; var3 = var3 + var2.fullHeight) {
+            for (int var4 = 0; var4 < 640; var4 = var4 + var2.fullWidth) {
               var2.b(var4, var3, this.field_v * 256 / 80);
             }
           }
         } else {
-          em.d();
+          SoftwareRasterizer.d();
         }
         if (param0 != 80) {
-          discarded$0 = this.a(-21, -68, -73);
+          int discarded$0 = this.a(-21, -68, -73);
         }
     }
 
     private final void f(byte param0) {
-        hl var2 = null;
-        hl var2Lifetime1;
         if (this.field_p == 30) {
-          var2 = hl.c(vd.field_g, 100, 3072 * qm.field_c / 64, this.d(8192));
+          hl var2 = hl.c(vd.field_g, 100, 3072 * qm.field_c / 64, this.d(8192));
           var2.e();
           rk.field_e.a(var2);
         }
@@ -770,7 +659,7 @@ final class tj extends hg {
           this.field_v = -93;
         }
         if (20 == this.field_p) {
-          var2Lifetime1 = hl.c(si.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
+          hl var2Lifetime1 = hl.c(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
           rk.field_e.a(var2Lifetime1);
         }
         this.field_p = this.field_p - 1;
@@ -793,15 +682,14 @@ final class tj extends hg {
         s.field_E = true;
         bc.field_d = true;
         if (param0 != 2048) {
-          tj.a(-3, (byte) -83, 42);
+          DialogueScreen.a(-3, (byte) -83, 42);
         }
         ik.field_p = true;
     }
 
     private final void d(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -21) {
-          discarded$0 = this.a(3, 15, -89);
+          int discarded$0 = this.a(3, 15, -89);
         }
         if (this.field_v == 0) {
           rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
@@ -815,34 +703,22 @@ final class tj extends hg {
 
     final static void a(byte param0, java.applet.Applet param1, String param2, String param3, long param4) {
         try {
-          RuntimeException stackIn_11_0 = null;
-          StringBuilder stackIn_11_1 = null;
           String stackIn_12_2 = null;
-          StringBuilder stackIn_14_1 = null;
           String stackIn_15_2 = null;
-          StringBuilder stackIn_17_1 = null;
           String stackIn_18_2 = null;
           Throwable decompiledCaughtException = null;
-          Throwable var6 = null;
-          RuntimeException var6_ref = null;
-          String var7 = null;
-          String var8 = null;
-          String var9 = null;
-          String var7Lifetime1;
-          String var7Lifetime2;
-          String var7Lifetime3;
           String var7Lifetime4;
           try {
             try {
-              var8 = param1.getParameter("cookiehost");
-              var7 = var8;
-              var7Lifetime1 = var8;
+              String var8 = param1.getParameter("cookiehost");
+              String var7 = var8;
+              String var7Lifetime1 = var8;
               if (param0 <= 59) {
                 return;
               }
-              var9 = param2 + "=" + param3 + "; version=1; path=/; domain=" + var8;
-              var7Lifetime2 = var9;
-              var7Lifetime3 = var9;
+              String var9 = param2 + "=" + param3 + "; version=1; path=/; domain=" + var8;
+              String var7Lifetime2 = var9;
+              String var7Lifetime3 = var9;
               if (param4 >= 0L) {
                 var7Lifetime4 = var9 + "; Expires=" + bh.a(-100, td.b(128) + param4 * 1000L) + "; Max-Age=" + param4;
               } else {
@@ -851,26 +727,26 @@ final class tj extends hg {
               sd.a((byte) -111, param1, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = decompiledCaughtException;
+              Throwable var6 = decompiledCaughtException;
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_11_0 = var6_ref;
-            stackIn_11_1 = new StringBuilder().append("tj.G(").append(param0).append(',');
+            RuntimeException var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_11_0 = var6_ref;
+            StringBuilder stackIn_11_1 = new StringBuilder().append("tj.G(").append(param0).append(',');
             if (param1 == null) {
               stackIn_12_2 = "null";
             } else {
               stackIn_12_2 = "{...}";
             }
-            stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+            StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
             if (param2 == null) {
               stackIn_15_2 = "null";
             } else {
               stackIn_15_2 = "{...}";
             }
-            stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+            StringBuilder stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
             if (param3 == null) {
               stackIn_18_2 = "null";
             } else {
@@ -886,13 +762,8 @@ final class tj extends hg {
     }
 
     private final boolean a(int param0, int param1, String param2, String param3) {
-        RuntimeException var5 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (null == this.field_z[param0]) {
             this.field_z[param0] = fe.a(param3, fi.field_j, param2, true);
@@ -906,16 +777,16 @@ final class tj extends hg {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("tj.B(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var5;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("tj.B(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
           if (param3 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -927,7 +798,7 @@ final class tj extends hg {
 
     private final void f(int param0) {
         if (this.field_p == 0) {
-          rk.field_e.a(si.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
+          rk.field_e.a(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
         }
         if (this.field_p == 20) {
           rk.field_e.a(vd.field_g, 100, qm.field_c * 3072 / 64, this.d(8192));
@@ -954,59 +825,42 @@ final class tj extends hg {
     }
 
     private final int a(int param0, int param1, int param2) {
-        int var4;
-        int var5;
-        var4 = this.a((byte) 67);
-        var5 = -104 % ((param0 + 17) / 56);
-        if (this.field_l) {
+        int var4 = this.a((byte) 67);
+        int var5 = -104 % ((param0 + 17) / 56);
+        if (this.fullWidthScene) {
           if (param1 >= 626 - var4 &&
             param1 < 626 &&
             param2 >= 448 &&
             param2 < 475) {
             return 0;
           }
-        } else {
-          if (!this.field_H) {
-            if (param1 >= 632 - var4 &&
-              param1 < 632 &&
-              382 <= param2 &&
-              param2 < 409) {
-              return 0;
-            }
-          } else {
-            if (-var4 + 162 <= param1 &&
-              param1 < 162 &&
-              param2 >= 382 &&
-              param2 < 409) {
-              return 0;
-            }
+        } else if (!this.field_H) {
+          if (param1 >= 632 - var4 &&
+            param1 < 632 &&
+            382 <= param2 &&
+            param2 < 409) {
+            return 0;
           }
+        } else if (-var4 + 162 <= param1 &&
+          param1 < 162 &&
+          param2 >= 382 &&
+          param2 < 409) {
+          return 0;
         }
         return -1;
     }
 
-    private tj(ed[] param0, String[] param1, boolean param2) {
-        int stackIn_2_1 = 0;
+    private DialogueScreen(Sprite[] param0, String[] param1, boolean param2) {
         int stackIn_3_2 = 0;
-        boolean stackIn_7_1 = false;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        this.field_E = 0;
+        this.dialogueIndex = 0;
         this.field_C = 0;
-        this.field_j = 0;
-        this.field_B = 0;
+        this.revealedCharacters = 0;
+        this.revealedLine = 0;
         this.field_t = 40;
-        stackIn_2_1 = 17;
-        if (!od.field_k) {
-          stackIn_3_2 = 0;
-        } else {
-          stackIn_3_2 = 10;
-        }
+        int stackIn_2_1 = 17;
+        stackIn_3_2 = (!od.field_k) ? (0) : (10);
         this.field_x = new String[stackIn_2_1 + stackIn_3_2];
         this.field_F = 0;
         this.field_v = 0;
@@ -1015,28 +869,28 @@ final class tj extends hg {
         this.field_r = ig.field_c;
         try {
           gi.a((byte) -103);
-          this.field_g = param1;
-          stackIn_7_1 = (param2);
-          this.field_l = stackIn_7_1;
+          this.dialogueLines = param1;
+          boolean stackIn_7_1 = (param2);
+          this.fullWidthScene = stackIn_7_1;
           this.field_z = param0;
           this.field_u = hl.a(ff.field_i, 100, 0);
           this.field_u.h(-1);
           rk.field_e.a(this.field_u);
           this.field_w = new wc(1);
           this.field_w.a(this.a(-77, dh.field_d, bj.field_y), true, 4767999);
-          this.a(43, this.field_g[this.field_E]);
+          this.a(43, this.dialogueLines[this.dialogueIndex]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_11_0 = var4;
-          stackIn_11_1 = new StringBuilder().append("tj.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var4;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("tj.<init>(");
           if (param0 == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+          StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
           if (param1 == null) {
             stackIn_15_2 = "null";
           } else {

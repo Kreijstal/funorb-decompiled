@@ -17,28 +17,21 @@ final class aa {
     }
 
     final static boolean a(int param0, String param1) {
-        int var3 = 0;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var4 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         try {
-          var2_int = param1.charAt(0);
-          for (var3 = param0; param1.length() > var3; var3++) {
+          int var2_int = param1.charAt(0);
+          for (int var3 = param0; param1.length() > var3; var3++) {
             if (param1.charAt(var3) != var2_int) {
               return false;
             }
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_12_0 = var2;
-          stackIn_12_1 = new StringBuilder().append("aa.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var2;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("aa.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";
           } else {

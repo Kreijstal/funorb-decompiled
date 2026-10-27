@@ -2,17 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hj extends wg {
-    private cn field_k;
-    private cn field_n;
+    private IntrusiveDeque field_k;
+    private IntrusiveDeque field_n;
     private int field_l;
     private int field_m;
 
     final synchronized void b(int[] param0, int param1, int param2) {
-        int var4 = 0;
-        il var5 = null;
-        int var7 = 0;
         Throwable decompiledCaughtException = null;
-        Object var6 = null;
         do {
           if (this.field_l < 0) {
             this.c(param0, param1, param2);
@@ -23,19 +19,19 @@ final class hj extends wg {
             this.c(param0, param1, param2);
             return;
           }
-          var4 = this.field_l - this.field_m;
+          int var4 = this.field_l - this.field_m;
           this.c(param0, param1, var4);
           param1 = param1 + var4;
           param2 = param2 - var4;
           this.field_m = this.field_m + var4;
           this.e();
-          var5 = (il) (this.field_n.a(false));
-          var6 = var5;
+          il var5 = (il) (this.field_n.first(false));
+          Object var6 = var5;
           synchronized (var6) {
-            var7 = var5.a(this);
+            int var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_g = var7;
-              this.a(var5.field_b, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_g = 0;
               this.a(var5);
@@ -46,10 +42,10 @@ final class hj extends wg {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        wg var4 = (wg) (this.field_k.a(false));
+        wg var4 = (wg) (this.field_k.first(false));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (wg) (this.field_k.b((byte) 70));
+          var4 = (wg) (this.field_k.next((byte) 70));
         }
     }
 
@@ -70,11 +66,7 @@ final class hj extends wg {
     }
 
     final synchronized void d(int param0) {
-        int var2 = 0;
-        il var3 = null;
-        int var5 = 0;
         Throwable decompiledCaughtException = null;
-        Object var4 = null;
         do {
           if (this.field_l < 0) {
             this.e(param0);
@@ -85,18 +77,18 @@ final class hj extends wg {
             this.e(param0);
             return;
           }
-          var2 = this.field_l - this.field_m;
+          int var2 = this.field_l - this.field_m;
           this.e(var2);
           param0 = param0 - var2;
           this.field_m = this.field_m + var2;
           this.e();
-          var3 = (il) (this.field_n.a(false));
-          var4 = var3;
+          il var3 = (il) (this.field_n.first(false));
+          Object var4 = var3;
           synchronized (var4) {
-            var5 = var3.a(this);
+            int var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_g = var5;
-              this.a(var3.field_b, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_g = 0;
               this.a(var3);
@@ -107,37 +99,36 @@ final class hj extends wg {
     }
 
     final synchronized void a(wg param0) {
-        this.field_k.a(param0, 8364);
+        this.field_k.addFirst(param0, 8364);
     }
 
     private final void e() {
-        il var1 = null;
         if (this.field_m > 0) {
-          var1 = (il) (this.field_n.a(false));
+          il var1 = (il) (this.field_n.first(false));
           while (var1 != null) {
             var1.field_g = var1.field_g - this.field_m;
-            var1 = (il) (this.field_n.b((byte) 70));
+            var1 = (il) (this.field_n.next((byte) 70));
           }
           this.field_l = this.field_l - this.field_m;
           this.field_m = 0;
         }
     }
 
-    private final void a(hg param0, il param1) {
+    private final void a(IntrusiveNode param0, il param1) {
         while (true) {
-          if (param0 == this.field_n.field_d) {
+          if (param0 == this.field_n.sentinel) {
             EscapeVector.$cfr$intArgs$a$aafaec74e55e(param1, param0, -7);
-            this.field_l = ((il) (this.field_n.field_d.field_b)).field_g;
+            this.field_l = ((il) (this.field_n.sentinel.next)).field_g;
             return;
           }
           if (((il) (param0)).field_g <= param1.field_g) {
-            param0 = param0.field_b;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         EscapeVector.$cfr$intArgs$a$aafaec74e55e(param1, param0, -7);
-        this.field_l = ((il) (this.field_n.field_d.field_b)).field_g;
+        this.field_l = ((il) (this.field_n.sentinel.next)).field_g;
         return;
     }
 
@@ -146,26 +137,26 @@ final class hj extends wg {
           this.e();
           param0.field_h = this;
           param0.a();
-          this.a(this.field_n.field_d.field_b, param0);
+          this.a(this.field_n.sentinel.next, param0);
           return;
         }
         throw new RuntimeException();
     }
 
     final wg c() {
-        return (wg) (this.field_k.a(false));
+        return (wg) (this.field_k.first(false));
     }
 
     private final void e(int param0) {
-        wg var2 = (wg) (this.field_k.a(false));
+        wg var2 = (wg) (this.field_k.first(false));
         while (var2 != null) {
           var2.d(param0);
-          var2 = (wg) (this.field_k.b((byte) 70));
+          var2 = (wg) (this.field_k.next((byte) 70));
         }
     }
 
     final synchronized void b(wg param0) {
-        param0.c((byte) -32);
+        param0.unlink((byte) -32);
     }
 
     final void a(hh param0, int param1, int param2) {
@@ -173,7 +164,7 @@ final class hj extends wg {
     }
 
     final wg b() {
-        return (wg) (this.field_k.b((byte) 70));
+        return (wg) (this.field_k.next((byte) 70));
     }
 
     final int a() {
@@ -181,11 +172,11 @@ final class hj extends wg {
     }
 
     private final void a(il param0) {
-        param0.c((byte) -31);
+        param0.unlink((byte) -31);
         param0.b();
         param0.field_h = null;
-        hg var2 = this.field_n.field_d.field_b;
-        if (var2 == this.field_n.field_d) {
+        IntrusiveNode var2 = this.field_n.sentinel.next;
+        if (var2 == this.field_n.sentinel) {
           this.field_l = -1;
         } else {
           this.field_l = ((il) (var2)).field_g;
@@ -193,8 +184,8 @@ final class hj extends wg {
     }
 
     public hj() {
-        this.field_k = new cn();
-        this.field_n = new cn();
+        this.field_k = new IntrusiveDeque();
+        this.field_n = new IntrusiveDeque();
         this.field_l = -1;
         this.field_m = 0;
     }

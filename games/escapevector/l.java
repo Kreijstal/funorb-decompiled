@@ -33,20 +33,16 @@ final class l extends bj implements qb {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var5Lifetime1;
-        int var6Lifetime1;
         if (param1 > 85) {
-          var5 = this.field_k + param3;
-          var6 = param0 + this.field_j;
+          int var5 = this.field_k + param3;
+          int var6 = param0 + this.field_j;
           sb.field_a.a(q.field_F, var5 + 20, var6 + 20, this.field_g - 40, this.field_x - 50, 16777215, -1, 1, 0, sb.field_a.field_r);
           super.a(param0, (byte) 99, param2, param3);
           return;
         }
         this.field_J = (hc) null;
-        var5Lifetime1 = this.field_k + param3;
-        var6Lifetime1 = param0 + this.field_j;
+        int var5Lifetime1 = this.field_k + param3;
+        int var6Lifetime1 = param0 + this.field_j;
         sb.field_a.a(q.field_F, var5Lifetime1 + 20, var6Lifetime1 + 20, this.field_g - 40, this.field_x - 50, 16777215, -1, 1, 0, sb.field_a.field_r);
         super.a(param0, (byte) 99, param2, param3);
     }
@@ -72,24 +68,15 @@ final class l extends bj implements qb {
     }
 
     public final void a(hc param0, int param1, int param2, int param3, int param4) {
-        int var7 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         try {
-          if (this.field_G != param0) {
-            if (this.field_I == param0) {
-              fe.a((byte) -83);
-            } else {
-              if (this.field_J == param0) {
-                bm.a(4);
-              }
-            }
-          } else {
-            eh.b(-74);
+          if (this.field_G == param0) {
+            GameAppletShell.b(-74);
+          } else if (this.field_I == param0) {
+            fe.a((byte) -83);
+          } else if (this.field_J == param0) {
+            bm.a(4);
           }
           if (param3 == 1) {
             return;
@@ -97,10 +84,10 @@ final class l extends bj implements qb {
           l.a((byte) -64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_13_0 = var6;
-          stackIn_13_1 = new StringBuilder().append("l.K(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var6;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("l.K(");
           if (param0 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -111,19 +98,13 @@ final class l extends bj implements qb {
     }
 
     final boolean a(hm param0, char param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        boolean stackIn_6_0 = false;
-        boolean stackIn_13_0 = false;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1, param2, 71)) {
             return true;
           }
           if (param2 == 98) {
-            stackIn_6_0 = this.a((byte) 22, param0);
+            boolean stackIn_6_0 = this.a((byte) 22, param0);
             return stackIn_6_0;
           }
           if (param3 < 0) {
@@ -132,13 +113,13 @@ final class l extends bj implements qb {
           if (param2 != 99) {
             return false;
           }
-          stackIn_13_0 = this.a(param0, true);
+          boolean stackIn_13_0 = this.a(param0, true);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("l.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var5;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("l.G(");
           if (param0 == null) {
             stackIn_17_2 = "null";
           } else {

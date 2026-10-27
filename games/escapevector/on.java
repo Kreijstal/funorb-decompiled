@@ -11,10 +11,9 @@ final class on {
     static String[] field_f;
 
     final static void a(mf param0, int param1) {
-        in var2 = null;
         try {
           in.a(param0.a(-4, "", "headers.packvorbis"));
-          var2 = in.a(param0, "jagex logo2.packvorbis", "");
+          in var2 = in.a(param0, "jagex logo2.packvorbis", "");
           if (param1 != -58) {
             field_c = (String) null;
           }
@@ -25,44 +24,32 @@ final class on {
     }
 
     final static int a(dk[] param0, int param1) {
-        int var4 = 0;
-        int var2_int = 0;
-        dk[] var3 = null;
-        dk var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_14_0 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         try {
-          var2_int = -2147483648;
-          var3 = param0;
+          int var2_int = -2147483648;
+          dk[] var3 = param0;
           if (param1 != -49) {
             on.a('\030', true);
           }
-          for (var4 = 0; var4 < var3.length; var4++) {
-            var5 = var3[var4];
-            var6 = var5.field_f + var5.field_p;
+          for (int var4 = 0; var4 < var3.length; var4++) {
+            dk var5 = var3[var4];
+            int var6 = var5.field_f + var5.field_p;
             if (var6 > var2_int) {
               var2_int = var6;
             }
           }
           if (-2147483648 != var2_int) {
-            stackIn_14_0 = var2_int;
+            int stackIn_14_0 = var2_int;
             return stackIn_14_0;
           }
-          stackIn_12_0 = 0;
+          int stackIn_12_0 = 0;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_17_0 = var2;
-          stackIn_17_1 = new StringBuilder().append("on.D(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_17_0 = var2;
+          StringBuilder stackIn_17_1 = new StringBuilder().append("on.D(");
           if (param0 == null) {
             stackIn_18_2 = "null";
           } else {
@@ -79,11 +66,10 @@ final class on {
     }
 
     final static boolean a(char param0, boolean param1) {
-        boolean stackIn_6_0 = false;
         if (param1) {
           return false;
         }
-        stackIn_6_0 = (param0 >= 48) && (param0 <= 57);
+        boolean stackIn_6_0 = (param0 >= 48) && (param0 <= 57);
         return stackIn_6_0;
     }
 

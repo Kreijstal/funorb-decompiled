@@ -9,39 +9,31 @@ final class qa extends r {
     static String field_H;
 
     final void a(int param0, int param1, int param2, int param3, hm param4, byte param5) {
-        RuntimeException runtimeException = null;
-        ni var7 = null;
-        int var8 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           super.a(param0, param1, param2, param3, param4, (byte) -97);
-          var7 = gf.field_b;
+          ni var7 = gf.field_b;
           if (var7 != null &&
             this.a(param2, param0, param1, (byte) 66, param3)) {
-            if (!(this.field_q instanceof mk)) {
-              if (var7.field_q instanceof mk) {
-                ((mk) (var7.field_q)).a(this, var7, (byte) -115);
-                gf.field_b = null;
-                if (EscapeVector.field_A != 0) {
-                  ((mk) (this.field_q)).a(this, var7, (byte) 41);
-                  gf.field_b = null;
-                }
-              }
-            } else {
+            if (this.field_q instanceof mk) {
               ((mk) (this.field_q)).a(this, var7, (byte) 41);
               gf.field_b = null;
+            } else if (var7.field_q instanceof mk) {
+              ((mk) (var7.field_q)).a(this, var7, (byte) -115);
+              gf.field_b = null;
+              if (EscapeVector.obfuscationControl != 0) {
+                ((mk) (this.field_q)).a(this, var7, (byte) 41);
+                gf.field_b = null;
+              }
             }
           }
-          var8 = 31 / ((-39 - param5) / 45);
+          int var8 = 31 / ((-39 - param5) / 45);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_20_0 = runtimeException;
-          stackIn_20_1 = new StringBuilder().append("qa.MA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_20_0 = runtimeException;
+          StringBuilder stackIn_20_1 = new StringBuilder().append("qa.MA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_21_2 = "null";
           } else {
@@ -62,24 +54,20 @@ final class qa extends r {
         }
     }
 
-    final static tj f(byte param0) {
-        RuntimeException var1 = null;
-        Object stackIn_2_0 = null;
-        tj stackIn_7_0 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static DialogueScreen f(byte param0) {
         try {
-          if (mg.field_e.a(-105)) {
-            stackIn_2_0 = null;
-            return (tj) (stackIn_2_0);
+          if (mg.field_e.isEmpty(-105)) {
+            Object stackIn_2_0 = null;
+            return (DialogueScreen) (stackIn_2_0);
           }
           if (param0 != -49) {
             field_H = (String) null;
           }
-          stackIn_7_0 = (tj) (mg.field_e.a(false));
+          DialogueScreen stackIn_7_0 = (DialogueScreen) (mg.field_e.first(false));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "qa.A(" + param0 + ')');
         }
     }
@@ -113,7 +101,7 @@ final class qa extends r {
                 fk.field_a = param1;
                 var2 = jn.a(113, "loginm3");
                 if (var2 != null) {
-                  fl.field_l = mi.a(var2, 113);
+                  DualLinkNode.field_l = mi.a(var2, 113);
                 }
                 var2 = jn.a(41, "loginm2");
                 if (null != var2) {
@@ -1109,7 +1097,7 @@ final class qa extends r {
                 }
                 var2 = jn.a(26, "reloadgame");
                 if (var2 != null) {
-                  vc.field_i = mi.a(var2, 127);
+                  TerrainMap.field_i = mi.a(var2, 127);
                 }
                 var2 = jn.a(64, "toserverlist");
                 if (var2 != null) {
@@ -1181,13 +1169,13 @@ final class qa extends r {
                 }
                 var2 = jn.a(48, "connectionlost_reconnecting");
                 if (null != var2) {
-                  fl.field_h = mi.a(var2, 124);
+                  DualLinkNode.field_h = mi.a(var2, 124);
                 }
                 var2 = jn.a(114, "connectionlost_withreason");
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  si.field_y = mi.a(var2, 118);
+                  QuickChatPhraseDefinition.field_y = mi.a(var2, 118);
                 }
                 var2 = jn.a(125, "passwordverificationrequired");
                 if (null != var2) {
@@ -1203,7 +1191,7 @@ final class qa extends r {
                 }
                 var2 = jn.a(103, "back");
                 if (var2 != null) {
-                  li.field_O = mi.a(var2, 115);
+                  Minimap.field_O = mi.a(var2, 115);
                 }
                 var2 = jn.a(103, "exitfullscreenmode");
                 if (!param0) {
@@ -1682,15 +1670,15 @@ final class qa extends r {
                 }
                 var2 = jn.a(65, "create_alert_passrepeated");
                 if (var2 != null) {
-                  n.field_j = mi.a(var2, 125);
+                  PacketBuffer.field_j = mi.a(var2, 125);
                 }
                 var2 = jn.a(89, "create_alert_passlength");
                 if (var2 != null) {
-                  vc.field_e = mi.a(var2, 115);
+                  TerrainMap.field_e = mi.a(var2, 115);
                 }
                 var2 = jn.a(17, "create_alert_passcontainsname");
                 if (var2 != null) {
-                  cn.field_b = mi.a(var2, 125);
+                  IntrusiveDeque.field_b = mi.a(var2, 125);
                 }
                 var2 = jn.a(18, "create_alert_passcontainsemail");
                 if (null != var2) {
@@ -1982,7 +1970,7 @@ final class qa extends r {
                 }
                 var2 = jn.a(127, "highscores");
                 if (null != var2) {
-                  na.field_m = mi.a(var2, 119);
+                  DynamicTerrainRenderer.field_m = mi.a(var2, 119);
                 }
                 var2 = jn.a(77, "rankings");
                 if (null != var2) {
@@ -2010,7 +1998,7 @@ final class qa extends r {
                 }
                 var2 = jn.a(17, "login_createaccount");
                 if (null != var2) {
-                  cn.field_e = mi.a(var2, 112);
+                  IntrusiveDeque.field_e = mi.a(var2, 112);
                 }
                 var2 = jn.a(76, "tohighscores");
                 if (var2 != null) {
@@ -2232,7 +2220,7 @@ final class qa extends r {
                 }
                 var2 = jn.a(99, "objective");
                 if (null != var2) {
-                  oc.field_v = mi.a(var2, 115);
+                  PointCloudEffect.field_v = mi.a(var2, 115);
                 }
                 var2 = jn.a(89, "currentobjective");
                 if (var2 != null) {
@@ -2268,7 +2256,7 @@ final class qa extends r {
                 }
                 var2 = jn.a(109, "unreachedlevel_cannotplayreason");
                 if (var2 != null) {
-                  eh.field_f = mi.a(var2, 127);
+                  GameAppletShell.field_f = mi.a(var2, 127);
                 }
                 var2 = jn.a(110, "unreachedlevel_cannotplayreason_shorter");
                 if (var2 != null) {
@@ -2764,7 +2752,7 @@ final class qa extends r {
                 }
                 var2 = jn.a(105, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
-                  tj.field_k = mi.a(var2, 127);
+                  DialogueScreen.field_k = mi.a(var2, 127);
                 }
                 var2 = jn.a(43, "fs_focus");
                 if (var2 != null) {
@@ -2824,7 +2812,7 @@ final class qa extends r {
                 }
                 var2 = jn.a(86, "hs_friend_tip");
                 if (null != var2) {
-                  tj.field_G = mi.a(var2, 115);
+                  DialogueScreen.field_G = mi.a(var2, 115);
                 }
                 var2 = jn.a(76, "hs_friend_tip_multi");
                 if (var2 != null) {
@@ -2844,19 +2832,19 @@ final class qa extends r {
                 }
                 var2 = jn.a(117, "rating_mode_name,0");
                 if (var2 != null) {
-                  oc.field_z[0] = mi.a(var2, 111);
+                  PointCloudEffect.field_z[0] = mi.a(var2, 111);
                 }
                 var2 = jn.a(27, "rating_mode_name,1");
                 if (var2 != null) {
-                  oc.field_z[1] = mi.a(var2, 114);
+                  PointCloudEffect.field_z[1] = mi.a(var2, 114);
                 }
                 var2 = jn.a(123, "rating_mode_long_name,0");
                 if (null != var2) {
-                  oc.field_r[0] = mi.a(var2, 113);
+                  PointCloudEffect.field_r[0] = mi.a(var2, 113);
                 }
                 var2 = jn.a(19, "rating_mode_long_name,1");
                 if (null != var2) {
-                  oc.field_r[1] = mi.a(var2, 112);
+                  PointCloudEffect.field_r[1] = mi.a(var2, 112);
                 }
                 var2 = jn.a(50, "graphics_config_fixed_size");
                 if (var2 != null) {
@@ -2900,7 +2888,7 @@ final class qa extends r {
                 }
                 var2 = jn.a(55, "createtouse");
                 if (var2 != null) {
-                  hg.field_a = mi.a(var2, 123);
+                  IntrusiveNode.field_a = mi.a(var2, 123);
                 }
                 var2 = jn.a(21, "achievementsoffline");
                 if (var2 != null) {
@@ -3097,7 +3085,7 @@ final class qa extends r {
                 fk.field_a = null;
             }
             void run() {
-                var3 = EscapeVector.field_A;
+                var3 = EscapeVector.obfuscationControl;
                 try {
                   runChunk0();
                   if (finished) return;
@@ -3118,8 +3106,8 @@ final class qa extends r {
                   throw t.a((Throwable) ((Object) stackIn_2605_0), ((StringBuilder) (Object) stackIn_2605_1).append(stackIn_2606_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2614_0 = (!eh.field_h);
-                  eh.field_h = stackIn_2614_0;
+                  stackIn_2614_0 = (!GameAppletShell.field_h);
+                  GameAppletShell.field_h = stackIn_2614_0;
                 }
             }
         }
@@ -3129,35 +3117,29 @@ final class qa extends r {
 
     private qa(int param0, int param1, int param2, int param3, db param4, wn param5, hm param6) {
         super(param0, param1, param2, param3, param4, param5);
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           this.field_C = param6;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_6_0 = runtimeException;
-          stackIn_6_1 = new StringBuilder().append("qa.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = runtimeException;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("qa.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (param5 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
           if (param6 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -3168,33 +3150,25 @@ final class qa extends r {
     }
 
     final static ih a(int param0, byte[] param1) {
-        ih var2 = null;
-        RuntimeException var2_ref = null;
-        ih stackIn_2_0 = null;
-        Object stackIn_5_0 = null;
-        ih stackIn_7_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 16826) {
-            stackIn_2_0 = (ih) null;
+            ih stackIn_2_0 = (ih) null;
             return stackIn_2_0;
           }
           if (null == param1) {
-            stackIn_5_0 = null;
+            Object stackIn_5_0 = null;
             return (ih) (stackIn_5_0);
           }
-          var2 = new ih(param1, gn.field_k, gi.field_e, qh.field_k, bc.field_a, qe.field_a);
+          ih var2 = new ih(param1, gn.field_k, gi.field_e, qh.field_k, bc.field_a, qe.field_a);
           of.a(false);
-          stackIn_7_0 = var2;
+          ih stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_11_0 = var2_ref;
-          stackIn_11_1 = new StringBuilder().append("qa.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var2_ref;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("qa.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_12_2 = "null";
           } else {

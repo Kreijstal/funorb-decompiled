@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn extends hg {
+final class mn extends IntrusiveNode {
     static int field_n;
     la[] field_r;
     int field_g;
@@ -16,11 +16,10 @@ final class mn extends hg {
     int[] field_j;
 
     final static String a(int param0, char param1, int param2) {
-        int var4 = 0;
-        int var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         char[] var7 = new char[param2];
         char[] var3 = var7;
-        for (var4 = 0; var7.length > var4; var4++) {
+        for (int var4 = 0; var7.length > var4; var4++) {
           var7[var4] = param1;
         }
         int var5 = 53 / ((49 - param0) / 63);
@@ -28,36 +27,30 @@ final class mn extends hg {
     }
 
     final static void d(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var1Lifetime1;
-        int var2Lifetime1;
-        int var3Lifetime1;
         if (param0 >= -112) {
           mn.a(81, (byte) 59);
-          var1 = lh.b((byte) 71) ? 1 : 0;
+          boolean var1 = (lh.b((byte) 71));
           if (rc.field_a == null) {
-            kh.a(var1 != 0, -1230, false);
+            kh.a((var1), -1230, false);
             return;
           }
-          var2 = vh.f(98);
+          int var2 = vh.f(98);
           if (rc.field_a.field_f != var2) {
-            var3 = rc.field_a.field_h ? 1 : 0;
-            kh.a(var1 != 0, -1230, var3 != 0);
+            boolean var3 = (rc.field_a.field_h);
+            kh.a((var1), -1230, (var3));
             return;
           }
           return;
         }
-        var1Lifetime1 = lh.b((byte) 71) ? 1 : 0;
+        boolean var1Lifetime1 = (lh.b((byte) 71));
         if (rc.field_a == null) {
-          kh.a(var1Lifetime1 != 0, -1230, false);
+          kh.a((var1Lifetime1), -1230, false);
           return;
         }
-        var2Lifetime1 = vh.f(98);
+        int var2Lifetime1 = vh.f(98);
         if (rc.field_a.field_f != var2Lifetime1) {
-          var3Lifetime1 = rc.field_a.field_h ? 1 : 0;
-          kh.a(var1Lifetime1 != 0, -1230, var3Lifetime1 != 0);
+          boolean var3Lifetime1 = (rc.field_a.field_h);
+          kh.a((var1Lifetime1), -1230, (var3Lifetime1));
           return;
         }
     }
@@ -76,39 +69,31 @@ final class mn extends hg {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var7 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        var10 = EscapeVector.field_A;
+        int var10 = EscapeVector.obfuscationControl;
         try {
-          em.e(param1, param2, 1 + param3, 10000536);
-          em.e(param1, param4 + param2, param3 + 1, 12105912);
-          var5_int = 1;
-          var6 = param4;
-          if (em.field_k > var5_int + param2) {
-            var5_int = em.field_k - param2;
+          SoftwareRasterizer.e(param1, param2, 1 + param3, 10000536);
+          SoftwareRasterizer.e(param1, param4 + param2, param3 + 1, 12105912);
+          int var5_int = 1;
+          int var6 = param4;
+          if (SoftwareRasterizer.clipTop > var5_int + param2) {
+            var5_int = SoftwareRasterizer.clipTop - param2;
           }
           if (param0 != -27951) {
             return;
           }
-          if (param2 + var6 > em.field_j) {
-            var6 = -param2 + em.field_j;
+          if (param2 + var6 > SoftwareRasterizer.clipBottom) {
+            var6 = -param2 + SoftwareRasterizer.clipBottom;
           }
-          for (var7 = var5_int; var6 > var7; var7++) {
-            var8 = var7 * 48 / param4 + 152;
-            var9 = var8 << 16 | var8 << 8 | var8;
-            em.field_i[param1 + em.field_l * (var7 + param2)] = var9;
-            em.field_i[param3 + (param1 + (param2 + var7) * em.field_l)] = var9;
+          for (int var7 = var5_int; var6 > var7; var7++) {
+            int var8 = var7 * 48 / param4 + 152;
+            int var9 = var8 << 16 | var8 << 8 | var8;
+            SoftwareRasterizer.pixels[param1 + SoftwareRasterizer.width * (var7 + param2)] = var9;
+            SoftwareRasterizer.pixels[param3 + (param1 + (param2 + var7) * SoftwareRasterizer.width)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var5), "mn.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class oc extends fl {
+final class PointCloudEffect extends DualLinkNode {
     static String[] field_r;
     int[] field_C;
     boolean field_B;
@@ -23,31 +23,22 @@ final class oc extends fl {
     static String[] field_z;
 
     final void a(int param0, int param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var8Lifetime1;
-        var11 = EscapeVector.field_A;
-        var4 = 2147483647;
-        var5 = -2147483648;
-        var6 = 2147483647;
-        var7 = -2147483648;
-        for (var8 = 0; var8 < this.field_F; var8++) {
+        int var11 = EscapeVector.obfuscationControl;
+        int var4 = 2147483647;
+        int var5 = -2147483648;
+        int var6 = 2147483647;
+        int var7 = -2147483648;
+        for (int var8 = 0; var8 < this.field_F; var8++) {
           if (this.field_E == null ||
             this.field_E[var8]) {
-            var9 = this.field_x[var8] >> 16;
+            int var9 = this.field_x[var8] >> 16;
             if (var9 - 2 < var4) {
               var4 = -2 + var9;
             }
             if (var5 < var9 + 3) {
               var5 = 3 + var9;
             }
-            var10 = this.field_A[var8] >> 16;
+            int var10 = this.field_A[var8] >> 16;
             if (-2 + var10 < var6) {
               var6 = var10 - 2;
             }
@@ -65,7 +56,7 @@ final class oc extends fl {
         if (var7 <= var6) {
           return;
         }
-        var8Lifetime1 = var5 - var4;
+        int var8Lifetime1 = var5 - var4;
         this.a(var8Lifetime1, var6, 58, var5, var7, var4);
         this.a(var6, var4, 26, var8Lifetime1);
         this.f(19507);
@@ -84,19 +75,14 @@ final class oc extends fl {
     }
 
     final void a() {
-        int var1 = 0;
-        double var2;
-        double var4;
-        double var6;
-        double var8;
-        for (var1 = 0; var1 < this.field_F; var1++) {
+        for (int var1 = 0; var1 < this.field_F; var1++) {
           if (this.field_E == null ||
             this.field_E[var1]) {
             this.i(var1);
-            var2 = (double)this.field_y[var1];
-            var4 = (double)this.field_C[var1];
-            var6 = (double)this.field_w[var1];
-            var8 = 1.0 - 0.000002 * Math.sqrt(var2 * var2 + var4 * var4 + var6 * var6);
+            double var2 = (double)this.field_y[var1];
+            double var4 = (double)this.field_C[var1];
+            double var6 = (double)this.field_w[var1];
+            double var8 = 1.0 - 0.000002 * Math.sqrt(var2 * var2 + var4 * var4 + var6 * var6);
             if (var8 < 0.5) {
               var8 = 0.5;
             }
@@ -115,7 +101,7 @@ final class oc extends fl {
     }
 
     final void f(byte param0) {
-        int var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         int var2 = 0;
         if (param0 > -124) {
           return;
@@ -127,11 +113,9 @@ final class oc extends fl {
     }
 
     private final boolean b(int param0, int param1) {
-        int var9 = 0;
-        int var10 = 0;
-        int[][] var3 = ma.field_a.field_V;
-        int var4 = ma.field_a.field_Mb;
-        int[] var5 = si.field_v;
+        int[][] var3 = BoundedRandomAccessFile.activeSession.terrainMasks;
+        int var4 = BoundedRandomAccessFile.activeSession.tilesWide;
+        int[] var5 = QuickChatPhraseDefinition.fullTileMask;
         param0 = param0 >> 16;
         param1 = param1 >> 16;
         int var6 = param0 >> 5;
@@ -140,7 +124,7 @@ final class oc extends fl {
           return false;
         }
         int[] var8 = var5;
-        if (var7 < ma.field_a.field_D) {
+        if (var7 < BoundedRandomAccessFile.activeSession.tilesHigh) {
           while (var6 < 0) {
             var6 = var6 + var4;
           }
@@ -151,8 +135,8 @@ final class oc extends fl {
           }
         }
         if (var8 != var5) {
-          var9 = param0 & 31;
-          var10 = param1 & 31;
+          int var9 = param0 & 31;
+          int var10 = param1 & 31;
           if ((var8[var10] & 1 << var9) == 0) {
             return false;
           }
@@ -165,80 +149,65 @@ final class oc extends fl {
         field_D = null;
         field_r = null;
         if (param0 <= 66) {
-          oc.d((byte) 25);
+          PointCloudEffect.d((byte) 25);
         }
         field_v = null;
     }
 
     private final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = 0;
-        te var8 = null;
-        te var9 = null;
-        int var10 = 0;
         te stackIn_8_0 = null;
-        Throwable decompiledCaughtException = null;
-        Exception var9_ref = null;
-        var10 = EscapeVector.field_A;
-        for (var7 = -param5 + param4; -param2 < var7; var7 = var7 - ma.field_a.field_n) {
+        int var10 = EscapeVector.obfuscationControl;
+        for (var7 = -param5 + param4; -param2 < var7; var7 = var7 - BoundedRandomAccessFile.activeSession.worldWidth) {
         }
         if (param1 != -641) {
           this.e(-1, -98);
         }
-        var7 = var7 + ma.field_a.field_n;
+        var7 = var7 + BoundedRandomAccessFile.activeSession.worldWidth;
         if (this.field_q) {
           stackIn_8_0 = gi.field_c;
         } else {
           stackIn_8_0 = rl.field_k;
         }
-        var8 = stackIn_8_0;
+        te var8 = stackIn_8_0;
         try {
-          var9 = this.e((byte) 96);
+          te var9 = this.e((byte) 96);
           while (var7 < 640) {
             var8.a(var7, param0 - param3);
             if (var9 != null) {
               var9.a(var7, -param3 + param0);
             }
-            var7 = var7 + ma.field_a.field_n;
+            var7 = var7 + BoundedRandomAccessFile.activeSession.worldWidth;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var9_ref = (Exception) (Object) decompiledCaughtException;
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          Exception var9_ref = (Exception) (Object) decompiledCaughtException;
           System.out.println("Error");
         }
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var11;
-        te var12;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var10Lifetime1;
-        int var10Lifetime2;
-        var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         if (param2 <= 8) {
-          var12 = (te) null;
+          te var12 = (te) null;
           this.a(-110, (te) null, (te) null);
         }
-        for (var5 = 0; var5 < this.field_F; var5++) {
+        for (int var5 = 0; var5 < this.field_F; var5++) {
           if (null == this.field_E ||
             this.field_E[var5]) {
-            var6 = this.field_x[var5] >> 16;
-            var7 = this.field_A[var5] >> 16;
+            int var6 = this.field_x[var5] >> 16;
+            int var7 = this.field_A[var5] >> 16;
             var6 = var6 - param1;
             var7 = var7 - param0;
-            var8 = var7 * param3 + var6;
-            var9 = 4096 - this.field_G * 16 >> 8;
+            int var8 = var7 * param3 + var6;
+            int var9 = 4096 - this.field_G * 16 >> 8;
             kh.a((byte) 99, var9, var8);
-            var10 = 14 * var9 >> 4;
+            int var10 = 14 * var9 >> 4;
             kh.a((byte) -101, var10, -1 + var8);
             kh.a((byte) -127, var10, var8 + 1);
             kh.a((byte) -113, var10, -param3 + var8);
             kh.a((byte) -108, var10, var8 + param3);
-            var10Lifetime1 = var9 * 12 >> 4;
+            int var10Lifetime1 = var9 * 12 >> 4;
             kh.a((byte) -84, var10Lifetime1, -1 + (-param3 + var8));
             kh.a((byte) 117, var10Lifetime1, 1 + (var8 - param3));
             kh.a((byte) 50, var10Lifetime1, var8 + param3 - 1);
@@ -247,7 +216,7 @@ final class oc extends fl {
             kh.a((byte) -103, var9, var8 - 2);
             kh.a((byte) 78, var9, var8 + 2);
             kh.a((byte) 79, var9, -(param3 * 2) + var8);
-            var10Lifetime2 = var9 * 5 >> 3;
+            int var10Lifetime2 = var9 * 5 >> 3;
             kh.a((byte) 36, var9, var8 + param3 * 2);
             kh.a((byte) -69, var10Lifetime2, var8 - param3 - 2);
             kh.a((byte) 23, var10Lifetime2, -2 + var8 + param3);
@@ -266,24 +235,20 @@ final class oc extends fl {
           if (param1 != -107) {
             field_t = true;
           }
-          vn.field_e.a(-12328, param2);
-          hg.a(-97, param0, param2);
+          vn.field_e.addLast(-12328, param2);
+          IntrusiveNode.a(-97, param0, param2);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void g(byte param0) {
-        int var2 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         int var3 = 118 / ((param0 + 12) / 57);
-        for (var2 = 0; var2 < 256; var2++) {
-          var4 = -(var2 * var2) + 512 * var2 >> 8;
-          var5 = var2;
-          var6 = var2 * var2 >> 8;
+        for (int var2 = 0; var2 < 256; var2++) {
+          int var4 = -(var2 * var2) + 512 * var2 >> 8;
+          int var5 = var2;
+          int var6 = var2 * var2 >> 8;
           if (var2 < 128) {
             var6 = var6 + (var2 * 128 - var2 * var2 >> 5);
           }
@@ -306,24 +271,20 @@ final class oc extends fl {
     }
 
     private final boolean c(int param0, int param1) {
-        int var3 = 0;
-        sa var4;
-        ed var5;
-        int var6;
         int var7;
-        for (var3 = 0; var3 < ma.field_a.field_kb.size(); var3++) {
-          var4 = (sa) (ma.field_a.field_kb.elementAt(var3));
-          var5 = var4.field_i;
-          var6 = var4.field_g + var5.field_v;
+        for (int var3 = 0; var3 < BoundedRandomAccessFile.activeSession.levelObjects.size(); var3++) {
+          LevelObject var4 = (LevelObject) (BoundedRandomAccessFile.activeSession.levelObjects.elementAt(var3));
+          Sprite var5 = var4.collisionSprite;
+          int var6 = var4.y + var5.offsetY;
           if (param1 >= var6 &&
-            param1 < var6 + var5.field_x) {
-            for (var7 = var4.field_k + var5.field_q; var7 < param0; var7 = var7 + ma.field_a.field_n) {
+            param1 < var6 + var5.height) {
+            for (var7 = var4.x + var5.offsetX; var7 < param0; var7 = var7 + BoundedRandomAccessFile.activeSession.worldWidth) {
             }
             while (var7 > param0) {
-              var7 = var7 - ma.field_a.field_n;
+              var7 = var7 - BoundedRandomAccessFile.activeSession.worldWidth;
             }
-            if (!(param0 >= var7 + var5.field_s) &&
-              var5.field_B[(param1 - var6) * var5.field_s + (param0 - var7)] != 0) {
+            if (!(param0 >= var7 + var5.width) &&
+              var5.pixels[(param1 - var6) * var5.width + (param0 - var7)] != 0) {
               return true;
             }
           }
@@ -345,11 +306,8 @@ final class oc extends fl {
     }
 
     private final void e(int param0, int param1) {
-        int[] var11 = null;
-        int var9 = 0;
-        int var3 = ma.field_a.field_Mb;
-        int[] var4 = si.field_v;
-        int var9Lifetime1;
+        int var3 = BoundedRandomAccessFile.activeSession.tilesWide;
+        int[] var4 = QuickChatPhraseDefinition.fullTileMask;
         param0 = param0 >> 16;
         param1 = param1 >> 16;
         if (this.c(param0, param1)) {
@@ -360,28 +318,28 @@ final class oc extends fl {
         if (var6 < 0) {
           return;
         }
-        ma.field_a.D(var6);
+        BoundedRandomAccessFile.activeSession.D(var6);
         while (var5 < 0) {
           var5 = var5 + var3;
         }
         var5 = var5 % var3;
-        if (ma.field_a.field_eb != null) {
-          ma.field_a.field_eb.a(var5, var6, true);
+        if (BoundedRandomAccessFile.activeSession.dynamicTerrain != null) {
+          BoundedRandomAccessFile.activeSession.dynamicTerrain.invalidateTileNeighborhood(var5, var6, true);
         }
-        int[][] var7 = ma.field_a.field_V;
+        int[][] var7 = BoundedRandomAccessFile.activeSession.terrainMasks;
         int[] var8 = var7[var6 * var3 + var5];
         if (var8 == null) {
           return;
         }
         if (var8 == var4) {
-          var11 = new int[32];
+          int[] var11 = new int[32];
           var8 = var11;
           var7[var6 * var3 + var5] = new int[32];
-          for (var9 = 0; var9 < 32; var9++) {
+          for (int var9 = 0; var9 < 32; var9++) {
             var11[var9] = -1;
           }
         }
-        var9Lifetime1 = param0 & 31;
+        int var9Lifetime1 = param0 & 31;
         int var10 = param1 & 31;
         var8[var10] = var8[var10] & ~(1 << var9Lifetime1);
     }
@@ -389,7 +347,7 @@ final class oc extends fl {
     final static java.applet.Applet d(byte param0) {
         if (param0 >= -58) {
           cc var2 = (cc) null;
-          oc.a(56, (byte) 48, (cc) null);
+          PointCloudEffect.a(56, (byte) 48, (cc) null);
         }
         if (null != bb.field_P) {
           return bb.field_P;
@@ -398,37 +356,25 @@ final class oc extends fl {
     }
 
     final void i(int param0) {
-        int stackIn_14_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_1 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_32_1 = 0;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        var2 = this.field_x[param0];
-        var3 = this.field_A[param0];
-        var4 = this.field_y[param0];
-        var5 = this.field_C[param0];
-        var6 = var2 + var4;
-        var7 = var3 + var5;
+        boolean stackIn_19_0 = false;
+        boolean stackIn_22_1 = false;
+        boolean stackIn_29_0 = false;
+        boolean stackIn_32_1 = false;
+        int var2 = this.field_x[param0];
+        int var3 = this.field_A[param0];
+        int var4 = this.field_y[param0];
+        int var5 = this.field_C[param0];
+        int var6 = var2 + var4;
+        int var7 = var3 + var5;
         if (!this.field_s &&
           !this.b(var6, var7)) {
           this.field_x[param0] = var6;
           this.field_A[param0] = var7;
         } else {
-          var8 = (int)Math.sqrt((double)var4 * (double)var4 + (double)var5 * (double)var5) >> 16;
+          int var8 = (int)Math.sqrt((double)var4 * (double)var4 + (double)var5 * (double)var5) >> 16;
           var4 = var4 / (var8 + 1);
           var5 = var5 / (var8 + 1);
-          var9 = 0;
+          int var9 = 0;
           while (true) {
             if (var9 >= var8) {
               var2 = var6;
@@ -447,24 +393,16 @@ final class oc extends fl {
                 continue;
               }
             }
-            stackIn_14_0 = (!this.b(var2 - 65536, var3)) ? 0 : 1;
+            int stackIn_14_0 = (!this.b(var2 - 65536, var3)) ? 0 : 1;
             boolean decompiledFrameRemainder0 = true;
             var9 = stackIn_14_0;
-            var10 = this.b(var2 + 65536, var3) ? 1 : 0;
-            var11 = this.b(var2, var3 - 65536) ? 1 : 0;
-            var12 = this.b(var2, var3 + 65536) ? 1 : 0;
+            int var10 = this.b(var2 + 65536, var3) ? 1 : 0;
+            boolean var11 = (this.b(var2, var3 - 65536));
+            boolean var12 = (this.b(var2, var3 + 65536));
             if (var11 != var12) {
-              if (var11 != 0 &&
-                var12 == 0) {
-                stackIn_19_0 = 1;
-              } else {
-                stackIn_19_0 = 0;
-              }
-              if (this.field_C[param0] >= 0) {
-                stackIn_22_1 = 0;
-              } else {
-                stackIn_22_1 = 1;
-              }
+              stackIn_19_0 = ((var11) &&
+                (!(var12)));
+              stackIn_22_1 = !(this.field_C[param0] >= 0);
               if (stackIn_19_0 == stackIn_22_1) {
                 this.field_C[param0] = -this.field_C[param0] >> 2;
                 this.field_y[param0] = this.field_y[param0] + this.field_y[param0] * 3;
@@ -473,17 +411,9 @@ final class oc extends fl {
             }
             if (decompiledFrameRemainder0) {
               if (var9 != var10) {
-                if (var9 != 0 &&
-                  var10 == 0) {
-                  stackIn_29_0 = 1;
-                } else {
-                  stackIn_29_0 = 0;
-                }
-                if (this.field_y[param0] >= 0) {
-                  stackIn_32_1 = 0;
-                } else {
-                  stackIn_32_1 = 1;
-                }
+                stackIn_29_0 = (var9 != 0 &&
+                  var10 == 0);
+                stackIn_32_1 = !(this.field_y[param0] >= 0);
                 if (stackIn_29_0 == stackIn_32_1) {
                   this.field_y[param0] = -this.field_y[param0] >> 2;
                   this.field_C[param0] = this.field_C[param0] + this.field_C[param0] * 3;
@@ -492,21 +422,15 @@ final class oc extends fl {
               }
               if (decompiledFrameRemainder0) {
                 if (!this.field_s &&
-                  ma.field_a.field_Pb >= 0) {
+                  BoundedRandomAccessFile.activeSession.levelIndex >= 0) {
                   if (var9 == 0) {
                     this.e(var2, var3);
-                  } else {
-                    if (var10 == 0) {
-                      this.e(var2, var3);
-                    } else {
-                      if (var11 == 0) {
-                        this.e(var2, var3);
-                      } else {
-                        if ((var12 == 0)) {
-                          this.e(var2, var3);
-                        }
-                      }
-                    }
+                  } else if (var10 == 0) {
+                    this.e(var2, var3);
+                  } else if (!var11) {
+                    this.e(var2, var3);
+                  } else if (!var12) {
+                    this.e(var2, var3);
                   }
                   decompiledFrameRemainder0 = false;
                 }
@@ -524,18 +448,14 @@ final class oc extends fl {
     }
 
     private final void f(int param0) {
-        int var3 = 0;
-        int var2;
-        int var4;
-        int var5;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         this.field_B = true;
         if (param0 != 19507) {
           return;
         }
-        var2 = rl.field_k.field_g * rl.field_k.field_d;
-        for (var3 = 0; var2 > var3; var3++) {
-          var4 = rl.field_k.field_k[var3] & 255;
+        int var2 = rl.field_k.field_g * rl.field_k.field_d;
+        for (int var3 = 0; var2 > var3; var3++) {
+          int var4 = rl.field_k.field_k[var3] & 255;
           if (this.field_G >= var4) {
             rl.field_k.field_k[var3] = (byte) 0;
           } else {
@@ -558,9 +478,7 @@ final class oc extends fl {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = EscapeVector.field_A;
+        int var10 = EscapeVector.obfuscationControl;
         int var7 = -100 % ((-7 - param2) / 38);
         if (rl.field_k == null) {
           rl.field_k = new te(param3 - param5, param4 - param1, 256);
@@ -570,11 +488,11 @@ final class oc extends fl {
           rl.field_k.field_a = param0;
           rl.field_k.field_d = -param1 + param4;
           rl.field_k.field_h = -param1 + param4;
-          var8 = rl.field_k.field_d * rl.field_k.field_g;
+          int var8 = rl.field_k.field_d * rl.field_k.field_g;
           if (rl.field_k.field_k.length < var8) {
             rl.field_k.field_k = new byte[var8];
           } else {
-            for (var9 = 0; var8 > var9; var9++) {
+            for (int var9 = 0; var8 > var9; var9++) {
               rl.field_k.field_k[var9] = (byte) 0;
             }
           }
@@ -582,68 +500,54 @@ final class oc extends fl {
         this.g(122);
     }
 
-    oc(ed param0, int param1, int param2, hh param3) {
-        int var11 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
+    PointCloudEffect(Sprite param0, int param1, int param2, hh param3) {
         String stackIn_21_2 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var9Lifetime1;
-        int var10Lifetime1;
         this.field_s = false;
         this.field_q = false;
         this.field_G = 0;
         try {
-          param2 = param2 + param0.field_v;
-          param1 = param1 + param0.field_q;
-          var5_int = (param0.field_s << 15) + (param1 << 16);
-          var6 = (param0.field_x << 15) + (param2 << 16);
-          var7 = 0;
-          var8 = param0.field_s * param0.field_x;
-          for (var9 = 0; var8 > var9; var9++) {
-            if (param0.field_B[var9] != 0) {
+          param2 = param2 + param0.offsetY;
+          param1 = param1 + param0.offsetX;
+          int var5_int = (param0.width << 15) + (param1 << 16);
+          int var6 = (param0.height << 15) + (param2 << 16);
+          int var7 = 0;
+          int var8 = param0.width * param0.height;
+          for (int var9 = 0; var8 > var9; var9++) {
+            if (param0.pixels[var9] != 0) {
               var7++;
             }
           }
           this.field_F = var7 * 8;
           this.d(this.field_F, 0);
-          var9Lifetime1 = 0;
-          for (var10 = 0; var10 < var8; var10++) {
-            if (param0.field_B[var10] != 0) {
-              for (var11 = 0; var11 < 8; var11++) {
-                this.field_x[var9Lifetime1] = var10 % param0.field_s + param1 << 16;
-                this.field_A[var9Lifetime1] = param2 + var10 / param0.field_s << 16;
+          int var9Lifetime1 = 0;
+          for (int var10 = 0; var10 < var8; var10++) {
+            if (param0.pixels[var10] != 0) {
+              for (int var11 = 0; var11 < 8; var11++) {
+                this.field_x[var9Lifetime1] = var10 % param0.width + param1 << 16;
+                this.field_A[var9Lifetime1] = param2 + var10 / param0.width << 16;
                 var9Lifetime1++;
               }
             }
           }
-          for (var10Lifetime1 = 0; this.field_F > var10Lifetime1; var10Lifetime1++) {
+          for (int var10Lifetime1 = 0; this.field_F > var10Lifetime1; var10Lifetime1++) {
             this.field_y[var10Lifetime1] = -262144 + (int)(Math.random() * 524289.0);
             this.field_C[var10Lifetime1] = -262144 + (int)(524289.0 * Math.random());
             this.field_w[var10Lifetime1] = -262144 + (int)(Math.random() * 524289.0);
           }
-          pl.field_n.a(param3, 100, ma.field_a.b(131072 * (param0.field_x + param0.field_s), var5_int, 96, var6), ma.field_a.c(var5_int, 112));
+          pl.field_n.a(param3, 100, BoundedRandomAccessFile.activeSession.b(131072 * (param0.height + param0.width), var5_int, 96, var6), BoundedRandomAccessFile.activeSession.c(var5_int, 112));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_20_0 = var5;
-          stackIn_20_1 = new StringBuilder().append("oc.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_20_0 = var5;
+          StringBuilder stackIn_20_1 = new StringBuilder().append("oc.<init>(");
           if (param0 == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_24_2 = "null";
           } else {
@@ -653,96 +557,67 @@ final class oc extends fl {
         }
     }
 
-    oc(int param0, int param1, hh param2) {
-        int var4_int = 0;
-        double var5 = 0.0;
-        double var7 = 0.0;
+    PointCloudEffect(int param0, int param1, hh param2) {
         this.field_s = false;
         this.field_q = false;
         this.field_G = 0;
         try {
           this.field_F = 4096;
           this.d(this.field_F, 0);
-          for (var4_int = 0; this.field_F > var4_int; var4_int++) {
-            var5 = 6.283185307179586 * Math.random();
-            var7 = Math.sqrt(Math.random()) * 524288.0;
+          for (int var4_int = 0; this.field_F > var4_int; var4_int++) {
+            double var5 = 6.283185307179586 * Math.random();
+            double var7 = Math.sqrt(Math.random()) * 524288.0;
             this.field_x[var4_int] = param0 + (int)(Math.sin(var5) * var7);
             this.field_A[var4_int] = (int)(var7 * Math.cos(var5)) + param1;
             this.field_y[var4_int] = -262144 + (int)(524289.0 * Math.random());
             this.field_C[var4_int] = -262144 + (int)(Math.random() * 524289.0);
             this.field_w[var4_int] = -262144 + (int)(524289.0 * Math.random());
           }
-          pl.field_n.a(param2, 100, ma.field_a.b(4194304, param0, 96, param1), ma.field_a.c(param0, 109));
+          pl.field_n.a(param2, 100, BoundedRandomAccessFile.activeSession.b(4194304, param0, 96, param1), BoundedRandomAccessFile.activeSession.c(param0, 109));
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final te e(byte param0) {
-        int stackIn_14_0 = 0;
-        int stackIn_36_0 = 0;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        byte[] var16;
-        byte[] var17;
-        byte[] var20;
-        byte[] var25;
-        byte[] var26;
-        int var4Lifetime1;
-        int var7Lifetime1;
-        int var8Lifetime1;
-        int var9Lifetime1;
-        int var10Lifetime1;
-        int var11Lifetime1;
-        int var12Lifetime1;
-        var15 = EscapeVector.field_A;
+        int var15 = EscapeVector.obfuscationControl;
         if (!this.field_q) {
           return null;
         }
         if (param0 <= 86) {
           field_z = (String[]) null;
         }
-        var20 = gi.field_i.field_k;
-        var17 = var20;
-        var16 = var17;
-        var26 = var16;
-        var25 = rl.field_k.field_k;
-        for (var4 = 0; var20.length > var4; var4++) {
+        byte[] var20 = gi.field_i.field_k;
+        byte[] var17 = var20;
+        byte[] var16 = var17;
+        byte[] var26 = var16;
+        byte[] var25 = rl.field_k.field_k;
+        for (int var4 = 0; var20.length > var4; var4++) {
           var20[var4] = (byte) 0;
         }
-        var4Lifetime1 = rl.field_k.field_a;
-        var5 = rl.field_k.field_h;
-        var6 = 0;
-        var7 = 0;
+        int var4Lifetime1 = rl.field_k.field_a;
+        int var5 = rl.field_k.field_h;
+        int var6 = 0;
+        int var7 = 0;
         while (var5 > var7) {
-          var8 = var6;
-          var9 = var6 - (-var4Lifetime1 + 1);
-          var10 = 0;
-          var11 = 0;
-          var12 = 0;
-          while (var10 == 0 ||
-            var11 == 0) {
-            stackIn_14_0 = ~var12;
+          int var8 = var6;
+          int var9 = var6 - (-var4Lifetime1 + 1);
+          boolean var10 = false;
+          boolean var11 = false;
+          int var12 = 0;
+          while (!var10 ||
+            !var11) {
+            int stackIn_14_0 = ~var12;
             if (stackIn_14_0 > ~var4Lifetime1) {
-              if (var10 == 0 &&
+              if (!var10 &&
                 var25[var8] != 0) {
-                var10 = 1;
+                var10 = true;
                 var26[var8] = (byte) 1;
               }
-              if (var11 == 0 &&
+              if (!var11 &&
                 var25[var9] != 0) {
                 var26[var9] = (byte) 1;
-                var11 = 1;
+                var11 = true;
               }
               var8++;
               var9--;
@@ -754,32 +629,32 @@ final class oc extends fl {
           var6 = var6 + var4Lifetime1;
           var7++;
         }
-        var7Lifetime1 = 0;
-        var8Lifetime1 = (-1 + var5) * var4Lifetime1;
-        var9Lifetime1 = 0;
+        int var7Lifetime1 = 0;
+        int var8Lifetime1 = (-1 + var5) * var4Lifetime1;
+        int var9Lifetime1 = 0;
         while (true) {
           if (var9Lifetime1 >= var4Lifetime1) {
             return gi.field_i;
           }
-          var10Lifetime1 = var7Lifetime1;
-          var11Lifetime1 = var7Lifetime1 + var8Lifetime1;
-          var12Lifetime1 = 0;
-          var13 = 0;
-          var14 = 0;
+          int var10Lifetime1 = var7Lifetime1;
+          int var11Lifetime1 = var7Lifetime1 + var8Lifetime1;
+          boolean var12Lifetime1 = false;
+          boolean var13 = false;
+          int var14 = 0;
           var7Lifetime1++;
-          while (var12Lifetime1 == 0 ||
-            var13 == 0) {
-            stackIn_36_0 = ~var14;
+          while (!var12Lifetime1 ||
+            !var13) {
+            int stackIn_36_0 = ~var14;
             if (stackIn_36_0 > ~var5) {
-              if (var12Lifetime1 == 0 &&
+              if (!var12Lifetime1 &&
                 var25[var10Lifetime1] != 0) {
-                var12Lifetime1 = 1;
+                var12Lifetime1 = true;
                 var26[var10Lifetime1] = (byte) 1;
               }
-              if (var13 == 0 &&
+              if (!var13 &&
                 var25[var11Lifetime1] != 0) {
                 var26[var11Lifetime1] = (byte) 1;
-                var13 = 1;
+                var13 = true;
               }
               var10Lifetime1 = var10Lifetime1 + var4Lifetime1;
               var14++;
@@ -792,7 +667,7 @@ final class oc extends fl {
         }
     }
 
-    oc(int param0) {
+    PointCloudEffect(int param0) {
         this.field_s = false;
         this.field_q = false;
         this.field_G = 0;

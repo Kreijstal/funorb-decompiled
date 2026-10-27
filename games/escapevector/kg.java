@@ -9,12 +9,7 @@ final class kg {
     static String field_b;
 
     final boolean g(int param0) {
-        int var3 = 0;
-        gn[] var2;
-        gn var4;
-        int var5;
-        gn[] var6;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         if (param0 != -9949) {
           this.field_c = (vd) null;
         }
@@ -22,10 +17,10 @@ final class kg {
           return true;
         }
         this.field_c.b(104);
-        var6 = this.field_d;
-        var2 = var6;
-        for (var3 = 0; var3 < var6.length; var3++) {
-          var4 = var6[var3];
+        gn[] var6 = this.field_d;
+        gn[] var2 = var6;
+        for (int var3 = 0; var3 < var6.length; var3++) {
+          gn var4 = var6[var3];
           if (var4 != null) {
             var4.c(5);
           }
@@ -43,22 +38,17 @@ final class kg {
     }
 
     final int a(boolean param0, int param1, int param2) {
-        int var5 = 0;
-        gn[] var4;
-        gn var6;
-        int var7;
-        gn[] var8;
-        var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         if (null == this.field_d) {
           return -1;
         }
-        var8 = this.field_d;
-        var4 = var8;
+        gn[] var8 = this.field_d;
+        gn[] var4 = var8;
         if (!param0) {
           return 3;
         }
-        for (var5 = 0; var5 < var8.length; var5++) {
-          var6 = var8[var5];
+        for (int var5 = 0; var5 < var8.length; var5++) {
+          gn var6 = var8[var5];
           if (var6 != null &&
             var6.field_j == param1) {
             return var6.b(param2, 80);
@@ -68,10 +58,7 @@ final class kg {
     }
 
     final boolean c(int param0) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         if (null == this.field_e) {
           return false;
         }
@@ -83,10 +70,10 @@ final class kg {
         if (var3 <= 0) {
           return false;
         }
-        for (var4 = 0; var3 > var4; var4++) {
-          var5 = this.field_e.b(var4, 74);
-          var6 = nl.a((byte) 111, var5) ? 1 : 0;
-          if (var6 == 0) {
+        for (int var4 = 0; var3 > var4; var4++) {
+          int var5 = this.field_e.b(var4, 74);
+          boolean var6 = (nl.a((byte) 111, var5));
+          if (!var6) {
             return false;
           }
         }
@@ -101,18 +88,15 @@ final class kg {
     }
 
     final boolean a(int param0, boolean param1) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         int var3 = je.a(param1, param0);
         if (0 >= var3) {
           return false;
         }
-        for (var4 = 0; var4 < var3; var4++) {
-          var5 = this.a(true, param0, var4);
-          var6 = nl.a((byte) 98, var5) ? 1 : 0;
-          if (var6 == 0) {
+        for (int var4 = 0; var4 < var3; var4++) {
+          int var5 = this.a(true, param0, var4);
+          boolean var6 = (nl.a((byte) 98, var5));
+          if (!var6) {
             return false;
           }
         }
@@ -127,17 +111,13 @@ final class kg {
     }
 
     final int b(int param0, int param1) {
-        int var4 = 0;
-        gn[] var3;
-        gn var5;
-        int var6;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         if (null == this.field_d) {
           return -1;
         }
-        var3 = this.field_d;
-        for (var4 = param1; var4 < var3.length; var4++) {
-          var5 = var3[var4];
+        gn[] var3 = this.field_d;
+        for (int var4 = param1; var4 < var3.length; var4++) {
+          gn var5 = var3[var4];
           if (var5 != null &&
             param0 == var5.field_j) {
             return var5.field_d;
@@ -147,21 +127,16 @@ final class kg {
     }
 
     final int a(int param0, int param1) {
-        int var4 = 0;
-        gn var5;
-        int var7;
-        gn[] var8;
-        int var6;
-        var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         if (this.field_d == null) {
           return 0;
         }
         if (param0 != 29386) {
           this.field_e = (gn) null;
         }
-        var8 = this.field_d;
-        for (var4 = 0; var8.length > var4; var4++) {
-          var5 = var8[var4];
+        gn[] var8 = this.field_d;
+        for (int var4 = 0; var8.length > var4; var4++) {
+          gn var5 = var8[var4];
           if (var5 != null &&
             param1 == var5.field_j) {
             if (0 == var5.field_d) {
@@ -171,7 +146,7 @@ final class kg {
               return var5.field_n;
             }
             if (var5.field_d == 1) {
-              var6 = je.a(false, param1);
+              int var6 = je.a(false, param1);
               if (0 >= var6) {
                 return 0;
               }
@@ -183,23 +158,15 @@ final class kg {
     }
 
     final static boolean a(byte param0, int param1) {
-        int var2;
-        int var3;
-        int var4;
-        boolean stackIn_4_0 = false;
-        var2 = -43 / ((param0 + 62) / 32);
-        var3 = 14;
-        var4 = var3 + 3;
-        stackIn_4_0 = (param1 >= var3) && (var4 > param1);
+        int var2 = -43 / ((param0 + 62) / 32);
+        int var3 = 14;
+        int var4 = var3 + 3;
+        boolean stackIn_4_0 = (param1 >= var3) && (var4 > param1);
         return stackIn_4_0;
     }
 
     final void a(byte param0, int param1, int[] param2, int param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != null &&
             param2.length == 4) {
@@ -217,10 +184,10 @@ final class kg {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_14_0 = runtimeException;
-          stackIn_14_1 = new StringBuilder().append("kg.K(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = runtimeException;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("kg.K(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -231,16 +198,8 @@ final class kg {
     }
 
     final void a(int param0, int param1, int param2, int[] param3) {
-        int var6 = 0;
-        gn[] var5 = null;
-        gn var7 = null;
-        int var8 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
           if (param3 != null &&
             param3.length == 4) {
@@ -250,9 +209,9 @@ final class kg {
             if (param0 != -15748) {
               return;
             }
-            var5 = this.field_d;
-            for (var6 = 0; var5.length > var6; var6++) {
-              var7 = var5[var6];
+            gn[] var5 = this.field_d;
+            for (int var6 = 0; var5.length > var6; var6++) {
+              gn var7 = var5[var6];
               if (var7 != null &&
                 param1 == var7.field_j) {
                 var7.a((byte) -15, param2, param3);
@@ -262,10 +221,10 @@ final class kg {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = decompiledCaughtException;
-          stackIn_19_0 = var5_ref;
-          stackIn_19_1 = new StringBuilder().append("kg.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = decompiledCaughtException;
+          RuntimeException stackIn_19_0 = var5_ref;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("kg.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_20_2 = "null";
           } else {
@@ -276,19 +235,14 @@ final class kg {
     }
 
     final void b(int param0) {
-        int var4 = 0;
-        int var2;
-        gn[] var3;
-        gn var5;
-        int var6;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         if (this.field_d == null) {
           return;
         }
-        var2 = 127 % ((67 - param0) / 42);
-        var3 = this.field_d;
-        for (var4 = 0; var3.length > var4; var4++) {
-          var5 = var3[var4];
+        int var2 = 127 % ((67 - param0) / 42);
+        gn[] var3 = this.field_d;
+        for (int var4 = 0; var3.length > var4; var4++) {
+          gn var5 = var3[var4];
           if (var5 != null) {
             var5.b(7108);
           }
@@ -299,19 +253,14 @@ final class kg {
     }
 
     final boolean d(int param0) {
-        int var3 = 0;
-        gn[] var2;
-        gn var4;
-        int var5;
-        gn[] var6;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         if (null == this.field_d) {
           return false;
         }
-        var6 = this.field_d;
-        var2 = var6;
-        for (var3 = 0; var3 < var6.length; var3++) {
-          var4 = var6[var3];
+        gn[] var6 = this.field_d;
+        gn[] var2 = var6;
+        for (int var3 = 0; var3 < var6.length; var3++) {
+          gn var4 = var6[var3];
           if (var4 != null &&
             var4.a(false)) {
             return true;
@@ -325,35 +274,25 @@ final class kg {
     }
 
     kg() {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var2Lifetime1;
-        int var3Lifetime1;
-        int var4Lifetime1;
-        int var5Lifetime1;
-        int var6Lifetime1;
         this.field_c = new vd();
         int var1 = 4;
         this.field_d = new gn[var1];
-        for (var2 = 0; var1 > var2; var2++) {
-          var3 = pc.field_f[var2];
-          var4 = -1;
+        for (int var2 = 0; var1 > var2; var2++) {
+          int var3 = pc.field_f[var2];
+          int var4 = -1;
           if (var3 == 1) {
             var4 = 1;
           }
-          var5 = fl.field_m[var2];
-          var6 = nk.a(1, var2) == 2 ? 1 : 0;
-          this.field_d[var2] = new gn(var2, var3, var4, var5, var6 != 0, this);
+          int var5 = DualLinkNode.field_m[var2];
+          boolean var6 = (nk.a(1, var2) == 2);
+          this.field_d[var2] = new gn(var2, var3, var4, var5, (var6), this);
         }
-        var2Lifetime1 = 2;
-        var3Lifetime1 = 1;
-        var4Lifetime1 = 0;
-        var5Lifetime1 = 1;
-        var6Lifetime1 = 1;
-        this.field_e = new gn(var2Lifetime1, var3Lifetime1, var4Lifetime1, var5Lifetime1, var6Lifetime1 != 0, this);
+        int var2Lifetime1 = 2;
+        int var3Lifetime1 = 1;
+        int var4Lifetime1 = 0;
+        int var5Lifetime1 = 1;
+        boolean var6Lifetime1 = true;
+        this.field_e = new gn(var2Lifetime1, var3Lifetime1, var4Lifetime1, var5Lifetime1, (var6Lifetime1), this);
     }
 
     final boolean a(int param0, boolean param1, int param2) {
@@ -373,19 +312,14 @@ final class kg {
     }
 
     final boolean a(int param0) {
-        int var3 = 0;
-        gn[] var2;
-        gn var4;
-        int var5;
-        gn[] var6;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         if (!this.field_c.d((byte) -83)) {
           return false;
         }
-        var6 = this.field_d;
-        var2 = var6;
-        for (var3 = 0; var3 < var6.length; var3++) {
-          var4 = var6[var3];
+        gn[] var6 = this.field_d;
+        gn[] var2 = var6;
+        for (int var3 = 0; var3 < var6.length; var3++) {
+          gn var4 = var6[var3];
           if (var4.field_d != 1 &&
             !var4.field_i) {
             return false;
@@ -399,21 +333,17 @@ final class kg {
     }
 
     final boolean b(int param0, int param1, int param2) {
-        gn[] var4;
-        int var5;
-        gn var6;
-        int var7;
-        var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         if (this.field_d == null) {
           return false;
         }
-        var4 = this.field_d;
-        var5 = 0;
+        gn[] var4 = this.field_d;
+        int var5 = 0;
         if (param0 != 15954) {
           this.field_e = (gn) null;
         }
         while (var5 < var4.length) {
-          var6 = var4[var5];
+          gn var6 = var4[var5];
           if (var6 != null &&
             param1 == var6.field_j) {
             return var6.a(0, param2);

@@ -23,39 +23,32 @@ final class bg {
     }
 
     final static byte[][][] a(mf param0, byte[][][] param1, mf param2, int param3) {
-        RuntimeException var4 = null;
-        byte[][][] stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 0) {
             bg.a(-94);
           }
-          stackIn_3_0 = sl.a(param2, param0, (int[]) null, param1, 1, param3 + 0);
+          byte[][][] stackIn_3_0 = sl.a(param2, param0, (int[]) null, param1, 1, param3 + 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_6_0 = var4;
-          stackIn_6_1 = new StringBuilder().append("bg.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var4;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("bg.B(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
           if (param2 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -66,9 +59,8 @@ final class bg {
     }
 
     static {
-        int var0 = 0;
         field_a = new di[255];
-        for (var0 = 0; var0 < field_a.length; var0++) {
+        for (int var0 = 0; var0 < field_a.length; var0++) {
           field_a[var0] = new di();
         }
         field_d = "Achieved";

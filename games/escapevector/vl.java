@@ -18,9 +18,8 @@ final class vl {
     }
 
     final int b(int param0) {
-        int var2;
         int stackIn_5_0 = 0;
-        var2 = -117 % ((param0 - 60) / 52);
+        int var2 = -117 % ((param0 - 60) / 52);
         if (this.field_b != null &&
           this.field_b.length != 0) {
           stackIn_5_0 = this.field_b[-1 + this.field_b.length];
@@ -38,22 +37,10 @@ final class vl {
     }
 
     final static void b(int param0, int param1) {
-        int var5 = 0;
-        int stackIn_4_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        ed[] var3 = null;
-        ed[] var4 = null;
-        ed var6 = null;
-        int var7 = 0;
-        ed[] var8 = null;
-        ed var9 = null;
-        int var10 = 0;
-        var10 = EscapeVector.field_A;
+        int var10 = EscapeVector.obfuscationControl;
         try {
-          stackIn_4_0 = (param1 != 4) ? 0 : 1;
-          var2_int = stackIn_4_0;
+          boolean stackIn_4_0 = !(param1 != 4);
+          boolean var2_int = stackIn_4_0;
           if (hb.field_b == null) {
             return;
           }
@@ -68,50 +55,48 @@ final class vl {
             param1 == 6) {
             param1 = 0;
           }
-          var3 = hb.field_b[param1];
-          if (var2_int != 0) {
+          Sprite[] var3 = hb.field_b[param1];
+          if (var2_int) {
             var3 = v.field_a;
           }
           if (param0 != 1) {
             vl.a(98);
           }
-          var4 = qi.field_M[param1];
-          for (var5 = 0; 3 > var5; var5++) {
+          Sprite[] var4 = qi.field_M[param1];
+          for (int var5 = 0; 3 > var5; var5++) {
             if (var3 == null) {
               param1 = 0;
               var3 = hb.field_b[param1];
               var4 = qi.field_M[param1];
             }
-            var6 = var3[var5];
-            var7 = var5 + 14;
-            var8 = mb.field_f;
-            if (var2_int != 0) {
+            Sprite var6 = var3[var5];
+            int var7 = var5 + 14;
+            Sprite[] var8 = mb.field_f;
+            if (var2_int) {
               var8 = ob.field_b;
             }
             var8[var7] = var6;
-            var9 = var4[var5];
+            Sprite var9 = var4[var5];
             jm.field_K[var7] = var9;
           }
-          fl.a(-1, param1);
+          DualLinkNode.a(-1, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2), "vl.B(" + param0 + ',' + param1 + ')');
         }
     }
 
     final int a(byte param0, int param1) {
-        int var3;
-        int var4;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         if (this.field_b == null) {
           return 0;
         }
         if (0 == this.field_b.length) {
           return 0;
         }
-        var3 = 1;
+        int var3 = 1;
         if (param0 != 52) {
           this.a((byte) -102, -12);
         }
@@ -131,11 +116,10 @@ final class vl {
     }
 
     final static int[] a(int param0, int param1, int param2, byte param3) {
-        int var5 = 0;
-        int var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         int[] var7 = new int[param2];
         int[] var4 = var7;
-        for (var5 = 0; var5 < param2; var5++) {
+        for (int var5 = 0; var5 < param2; var5++) {
           var7[var5] = (var5 + (param1 + 1)) * param0;
         }
         if (param3 != -17) {

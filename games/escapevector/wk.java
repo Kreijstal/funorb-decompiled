@@ -28,9 +28,9 @@ final class wk {
           !(param0 <= vi.field_e.length)) {
           vi.field_e = new int[param0 * 2];
         }
-        if (null == fl.field_k ||
-          !(param0 <= fl.field_k.length)) {
-          fl.field_k = new int[param0 * 2];
+        if (null == DualLinkNode.field_k ||
+          !(param0 <= DualLinkNode.field_k.length)) {
+          DualLinkNode.field_k = new int[param0 * 2];
         }
         if (pc.field_c == null ||
           !(pc.field_c.length >= param0)) {
@@ -64,42 +64,28 @@ final class wk {
     }
 
     final static int a(boolean param0, int param1, CharSequence param2, int param3) {
-        int var8 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_43_0 = 0;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
         String stackIn_47_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         try {
           if (param1 >= 2 &&
             36 >= param1) {
-            var4_int = 0;
+            boolean var4_int = false;
             if (param3 != 97) {
-              stackIn_7_0 = 11;
+              int stackIn_7_0 = 11;
               return stackIn_7_0;
             }
-            var5 = 0;
-            var6 = 0;
-            var7 = param2.length();
-            for (var8 = 0; var8 < var7; var8++) {
+            boolean var5 = false;
+            int var6 = 0;
+            int var7 = param2.length();
+            for (int var8 = 0; var8 < var7; var8++) {
               boolean decompiledFrameRemainder0 = true;
-              var9 = param2.charAt(var8);
-              if ((var8 == 0) &&
-                (var9 == 45)) {
-                var4_int = 1;
+              int var9 = param2.charAt(var8);
+              if (var8 == 0 &&
+                var9 == 45) {
+                var4_int = true;
                 decompiledFrameRemainder0 = false;
               }
-              if ((decompiledFrameRemainder0) && (var8 != 0 || (var9 != 43 ||
+              if (decompiledFrameRemainder0 && (var8 != 0 || (var9 != 43 ||
                 !param0))) {
                 if (var9 >= 48 &&
                   var9 <= 57) {
@@ -116,29 +102,29 @@ final class wk {
                 if (param1 <= var9) {
                   throw new NumberFormatException();
                 }
-                if (var4_int != 0) {
+                if (var4_int) {
                   var9 = -var9;
                 }
-                var10 = var6 * param1 + var9;
+                int var10 = var6 * param1 + var9;
                 if (var6 != var10 / param1) {
                   throw new NumberFormatException();
                 }
                 var6 = var10;
-                var5 = 1;
+                var5 = true;
               }
             }
-            if (var5 == 0) {
+            if (!var5) {
               throw new NumberFormatException();
             }
-            stackIn_43_0 = var6;
+            int stackIn_43_0 = var6;
             return stackIn_43_0;
           }
           throw new IllegalArgumentException("" + param1);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_46_0 = var4;
-          stackIn_46_1 = new StringBuilder().append("wk.B(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_46_0 = var4;
+          StringBuilder stackIn_46_1 = new StringBuilder().append("wk.B(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_47_2 = "null";
           } else {
@@ -149,30 +135,17 @@ final class wk {
     }
 
     final static ia a(int param0, c param1) {
-        int var8 = 0;
-        ia stackIn_24_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        ia var6 = null;
-        int var7 = 0;
-        int var9 = 0;
-        var9 = EscapeVector.field_A;
+        int var9 = EscapeVector.obfuscationControl;
         try {
-          var2_int = param1.j(8, 8);
+          int var2_int = param1.j(8, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = 51 % ((-82 - param0) / 38);
-          var4 = da.a(param1, (byte) -104) ? 1 : 0;
-          var5 = da.a(param1, (byte) -114) ? 1 : 0;
-          var6 = new ia();
+          int var3 = 51 % ((-82 - param0) / 38);
+          boolean var4 = (da.a(param1, (byte) -104));
+          boolean var5 = (da.a(param1, (byte) -114));
+          ia var6 = new ia();
           var6.field_K = (short)param1.j(16, 8);
           var6.field_L = rg.a(param1, 16, var6.field_L, -1);
           var6.field_r = rg.a(param1, 16, var6.field_r, -1);
@@ -181,7 +154,7 @@ final class wk {
           var6.field_e = rg.a(param1, 16, var6.field_e, -1);
           var6.field_o = rg.a(param1, 16, var6.field_o, -1);
           var6.field_f = rg.a(param1, 16, var6.field_f, -1);
-          if (var4 != 0) {
+          if (var4) {
             var6.field_M = (short)param1.j(16, 8);
             var6.field_N = rg.a(param1, 16, var6.field_N, -1);
             var6.field_q = rg.a(param1, 16, var6.field_q, -1);
@@ -190,7 +163,7 @@ final class wk {
             var6.field_u = rg.a(param1, 16, var6.field_u, -1);
             var6.field_j = rg.a(param1, 16, var6.field_j, -1);
           }
-          if (var5 != 0) {
+          if (var5) {
             param1.j(16, 8);
             var6.field_v = rg.a(param1, 16, var6.field_v, -1);
             var6.field_c = rg.a(param1, 16, var6.field_c, -1);
@@ -203,8 +176,8 @@ final class wk {
           }
           if (da.a(param1, (byte) -102)) {
             var6.field_n = jm.a(16, 118, param1, var6.field_n);
-            var7 = 0;
-            for (var8 = 0; var8 < var6.field_n.length; var8++) {
+            int var7 = 0;
+            for (int var8 = 0; var8 < var6.field_n.length; var8++) {
               if ((255 & var6.field_n[var8]) > var7) {
                 var7 = var6.field_n[var8] & 255;
               }
@@ -215,13 +188,13 @@ final class wk {
               var6.field_I = (byte)(1 + var7);
             }
           }
-          stackIn_24_0 = var6;
+          ia stackIn_24_0 = var6;
           return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_27_0 = var2;
-          stackIn_27_1 = new StringBuilder().append("wk.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_27_0 = var2;
+          StringBuilder stackIn_27_1 = new StringBuilder().append("wk.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_28_2 = "null";
           } else {
@@ -232,52 +205,43 @@ final class wk {
     }
 
     final static String a(String param0, boolean param1, String param2, String param3, mf param4) {
-        RuntimeException var5 = null;
-        String stackIn_2_0 = null;
-        String stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!param4.b(0)) {
-            stackIn_2_0 = (String) (param0);
+            String stackIn_2_0 = (String) (param0);
             return stackIn_2_0;
           }
           if (param1) {
             field_a = (String) null;
           }
-          stackIn_6_0 = param2 + " - " + param4.a(param3, 0) + "%";
+          String stackIn_6_0 = param2 + " - " + param4.a(param3, 0) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("wk.D(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var5;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("wk.D(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+          StringBuilder stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
           if (param4 == null) {
             stackIn_19_2 = "null";
           } else {

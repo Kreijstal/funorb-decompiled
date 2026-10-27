@@ -22,82 +22,58 @@ final class co {
     }
 
     final static char a(ih param0, byte param1) {
-        int stackIn_3_0 = 0;
-        int stackIn_29_0 = 0;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        char[] var4_ref_char__ = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        char[] var9 = null;
-        char[] var10 = null;
-        char[] var11 = null;
-        char[] var4_ref_char__Lifetime1;
-        int var4Lifetime1;
-        int var5Lifetime1;
-        int var5Lifetime2;
-        int var5Lifetime3;
-        int var6Lifetime1;
-        int var7Lifetime1;
-        var8 = EscapeVector.field_A;
+        int var8 = EscapeVector.obfuscationControl;
         try {
-          var2_int = 119;
-          var3 = param0.a((char) var2_int);
-          var11 = tc.field_k[0];
-          var10 = var11;
-          var9 = var10;
-          var4_ref_char__ = var9;
+          int var2_int = 119;
+          int var3 = param0.a((char) var2_int);
+          char[] var11 = tc.field_k[0];
+          char[] var10 = var11;
+          char[] var9 = var10;
+          char[] var4_ref_char__ = var9;
           if (param1 >= -122) {
-            stackIn_3_0 = 65479;
+            int stackIn_3_0 = 65479;
             return (char) stackIn_3_0;
           }
-          for (var5 = 0; var5 < var11.length; var5++) {
-            var6 = var11[var5];
+          for (int var5 = 0; var5 < var11.length; var5++) {
+            int var6 = var11[var5];
             if (ml.a((char) var6, 21654)) {
-              var7 = param0.a((char) var6);
+              int var7 = param0.a((char) var6);
               if (var3 < var7) {
                 var3 = var7;
                 var2_int = var6;
               }
             }
           }
-          var4_ref_char__Lifetime1 = tc.field_k[1];
-          for (var5Lifetime1 = 0; var4_ref_char__Lifetime1.length > var5Lifetime1; var5Lifetime1++) {
-            var6Lifetime1 = var4_ref_char__Lifetime1[var5Lifetime1];
-            var7Lifetime1 = param0.a((char) var6Lifetime1);
+          char[] var4_ref_char__Lifetime1 = tc.field_k[1];
+          for (int var5Lifetime1 = 0; var4_ref_char__Lifetime1.length > var5Lifetime1; var5Lifetime1++) {
+            int var6Lifetime1 = var4_ref_char__Lifetime1[var5Lifetime1];
+            int var7Lifetime1 = param0.a((char) var6Lifetime1);
             if (ml.a((char) var6Lifetime1, 21654) &&
               var7Lifetime1 > var3) {
               var2_int = var6Lifetime1;
               var3 = var7Lifetime1;
             }
           }
-          var4 = vk.a((byte) -89, bb.field_R[0], param0, uj.field_f[0]);
-          var5Lifetime2 = param0.a((char) var4);
+          int var4 = vk.a((byte) -89, bb.field_R[0], param0, uj.field_f[0]);
+          int var5Lifetime2 = param0.a((char) var4);
           if (var5Lifetime2 > var3) {
             var3 = var5Lifetime2;
             var2_int = var4;
           }
-          var4Lifetime1 = vk.a((byte) -63, bb.field_R[1], param0, uj.field_f[1]);
-          var5Lifetime3 = param0.a((char) var4Lifetime1);
+          int var4Lifetime1 = vk.a((byte) -63, bb.field_R[1], param0, uj.field_f[1]);
+          int var5Lifetime3 = param0.a((char) var4Lifetime1);
           if (var5Lifetime3 > var3) {
             var3 = var5Lifetime3;
             var2_int = var4Lifetime1;
           }
-          stackIn_29_0 = var2_int;
+          int stackIn_29_0 = var2_int;
           return (char) stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_32_0 = var2;
-          stackIn_32_1 = new StringBuilder().append("co.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_32_0 = var2;
+          StringBuilder stackIn_32_1 = new StringBuilder().append("co.A(");
           if (param0 == null) {
             stackIn_33_2 = "null";
           } else {
@@ -108,27 +84,17 @@ final class co {
     }
 
     final static tk a(String param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        Object stackIn_7_0 = null;
-        tk stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         try {
-          var2_int = param0.length();
-          var3 = param1;
+          int var2_int = param0.length();
+          int var3 = param1;
           while (true) {
             if (var3 >= var2_int) {
-              stackIn_10_0 = wh.field_p;
+              tk stackIn_10_0 = wh.field_p;
               return stackIn_10_0;
             }
-            var4 = param0.charAt(var3);
+            int var4 = param0.charAt(var3);
             if (48 > var4) {
               return null;
             }
@@ -138,13 +104,13 @@ final class co {
             }
             break;
           }
-          stackIn_7_0 = null;
+          Object stackIn_7_0 = null;
           return (tk) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_13_0 = var2;
-          stackIn_13_1 = new StringBuilder().append("co.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var2;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("co.C(");
           if (param0 == null) {
             stackIn_14_2 = "null";
           } else {

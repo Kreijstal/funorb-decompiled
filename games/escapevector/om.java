@@ -8,7 +8,7 @@ final class om {
     static p field_e;
     static c field_g;
     static c field_c;
-    static ed[] field_a;
+    static Sprite[] field_a;
 
     public final String toString() {
         throw new IllegalStateException();

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class g extends eh {
+abstract class NetworkGameClient extends GameAppletShell {
     static lk field_r;
     static int field_q;
     private int field_w;
@@ -24,8 +24,7 @@ abstract class g extends eh {
     }
 
     final int k(byte param0) {
-        int var2;
-        var2 = this.g((byte) 117);
+        int var2 = this.g((byte) 117);
         if (param0 != -67) {
           return 16;
         }
@@ -50,7 +49,7 @@ abstract class g extends eh {
             ad.a(7, 69);
           }
           if (sn.field_b[8]) {
-            sa.d((byte) 27);
+            LevelObject.d((byte) 27);
           }
         }
         return var2;
@@ -59,7 +58,7 @@ abstract class g extends eh {
     final int a(boolean param0, int param1) {
         if (param1 != -556) {
           int[] var4 = (int[]) null;
-          g.a((byte[]) null, 119, (int[]) null, 11, -27);
+          NetworkGameClient.a((byte[]) null, 119, (int[]) null, 11, -27);
         }
         return this.a(255, true, param0);
     }
@@ -92,9 +91,9 @@ abstract class g extends eh {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         ff.field_h = this.field_u;
-        nf.b(ff.field_h, 15);
+        SpriteState.b(ff.field_h, 15);
         qf.a(5000, 5000, this.field_t, this.field_n, param4, field_r, this.field_p, param6, (byte) 84, this.field_o, this.field_m, this.field_s, ff.field_h, this.field_y);
-        fl.a(this.field_s, field_r, param4, param5 ^ 22212, ff.field_h, this.field_t, this.field_p, this.field_y, this.field_o);
+        DualLinkNode.a(this.field_s, field_r, param4, param5 ^ 22212, ff.field_h, this.field_t, this.field_p, this.field_y, this.field_o);
         cg.e(param5 + 213);
         ji.field_b = EscapeVector.n(13);
         rc.a(of.field_d, true);
@@ -111,20 +110,15 @@ abstract class g extends eh {
     }
 
     final void j(int param0) {
-        int discarded$1 = 0;
-        int discarded$2 = 0;
-        int var3;
-        int stackIn_11_1 = 0;
-        boolean stackIn_11_2 = false;
         Object stackIn_12_0;
         boolean stackIn_12_3;
-        var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         if (param0 != -9926) {
           this.field_o = 25;
         }
         if (aa.a((byte) 102)) {
-          stackIn_11_1 = param0 ^ -9787;
-          stackIn_11_2 = false;
+          int stackIn_11_1 = param0 ^ -9787;
+          boolean stackIn_11_2 = false;
           if (null == df.field_d) {
             stackIn_12_0 = this;
             stackIn_12_3 = false;
@@ -132,61 +126,44 @@ abstract class g extends eh {
             stackIn_12_0 = this;
             stackIn_12_3 = true;
           }
-          discarded$1 = this.a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
-        } else {
-          if (fc.field_a >= 10) {
-            if (jf.l(3)) {
-              if (ff.field_e == 0) {
-                discarded$2 = this.a(255, false, false);
-              } else {
-                ac.a(25972, mg.field_f);
-              }
-            } else {
-              fc.a(true);
-            }
+          int discarded$1 = this.a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
+        } else if (fc.field_a >= 10) {
+          if (!jf.l(3)) {
+            fc.a(true);
+          } else if (ff.field_e == 0) {
+            int discarded$2 = this.a(255, false, false);
+          } else {
+            ac.a(25972, mg.field_f);
           }
         }
     }
 
-    final static ed[] e(int param0) {
-        int var2 = 0;
-        int var6_int = 0;
-        int var7 = 0;
-        ed[] var1;
-        int var3;
-        int[] var6;
-        int var8;
-        int[] var9;
-        int[] var13;
-        int[] var16;
-        byte[] var20;
-        int[] var21;
-        byte[] var22;
-        var8 = EscapeVector.field_A;
-        var1 = new ed[qk.field_j];
-        for (var2 = 0; qk.field_j > var2; var2++) {
-          var3 = qh.field_k[var2] * bc.field_a[var2];
-          var20 = qe.field_a[var2];
+    final static Sprite[] e(int param0) {
+        int var8 = EscapeVector.obfuscationControl;
+        Sprite[] var1 = new Sprite[qk.field_j];
+        for (int var2 = 0; qk.field_j > var2; var2++) {
+          int var3 = qh.field_k[var2] * bc.field_a[var2];
+          byte[] var20 = qe.field_a[var2];
           if (!bj.field_E[var2]) {
-            var9 = new int[var3];
-            var21 = var9;
-            for (var6_int = 0; var6_int < var3; var6_int++) {
+            int[] var9 = new int[var3];
+            int[] var21 = var9;
+            for (int var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = qk.field_f[ae.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new ed(on.field_e, hd.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var21);
+            var1[var2] = new Sprite(on.field_e, hd.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var21);
           } else {
-            var22 = hn.field_b[var2];
-            var16 = new int[var3];
-            var13 = var16;
-            var6 = var13;
-            for (var7 = 0; var7 < var3; var7++) {
+            byte[] var22 = hn.field_b[var2];
+            int[] var16 = new int[var3];
+            int[] var13 = var16;
+            int[] var6 = var13;
+            for (int var7 = 0; var7 < var3; var7++) {
               var6[var7] = lb.a(ae.a(255, (int) var22[var7]) << 24, qk.field_f[ae.a(255, (int) var20[var7])]);
             }
-            var1[var2] = (ed) ((Object) new uh(on.field_e, hd.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var16));
+            var1[var2] = (Sprite) ((Object) new uh(on.field_e, hd.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var16));
           }
         }
         if (param0 != 15556) {
-          g.e(126);
+          NetworkGameClient.e(126);
         }
         of.a(false);
         return var1;
@@ -204,44 +181,34 @@ abstract class g extends eh {
     }
 
     private final void a(int param0, String param1, int param2, int param3, int param4) {
-        boolean stackIn_7_1 = false;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         Throwable decompiledCaughtException = null;
-        String var6 = null;
-        Exception var6_ref = null;
-        RuntimeException var6_ref2 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
         try {
           try {
             if (!this.a(true)) {
               return;
             }
             this.field_s = this.getCodeBase().getHost();
-            var6 = this.field_s.toLowerCase();
-            stackIn_7_1 = (var6.equals("jagex.com")) || (var6.endsWith(".jagex.com"));
+            String var6 = this.field_s.toLowerCase();
+            boolean stackIn_7_1 = (var6.equals("jagex.com")) || (var6.endsWith(".jagex.com"));
             this.field_x = stackIn_7_1;
             this.field_o = Integer.parseInt(this.getParameter("gameport1"));
             this.field_y = Integer.parseInt(this.getParameter("gameport2"));
-            var7 = this.getParameter("servernum");
+            String var7 = this.getParameter("servernum");
             if (var7 != null) {
               this.field_t = Integer.parseInt(var7);
             }
             this.field_p = Integer.parseInt(this.getParameter("gamecrc"));
             this.field_m = Long.parseLong(this.getParameter("instanceid"));
             this.field_n = this.getParameter("member").equals("yes");
-            var8 = this.getParameter("lang");
+            String var8 = this.getParameter("lang");
             if (var8 != null) {
               this.field_u = Integer.parseInt(var8);
             }
             if (this.field_u >= 5) {
               this.field_u = 0;
             }
-            var9 = this.getParameter("affid");
+            String var9 = this.getParameter("affid");
             if (var9 != null) {
               this.field_w = Integer.parseInt(var9);
             }
@@ -249,17 +216,17 @@ abstract class g extends eh {
             this.a(this.field_p, param3, 1, param0, param2, param4, param1);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var6_ref = (Exception) (Object) decompiledCaughtException;
-            var10 = (String) null;
+            Exception var6_ref = (Exception) (Object) decompiledCaughtException;
+            String var10 = (String) null;
             pf.a(false, (String) null, (Throwable) ((Object) var6_ref));
             this.a(-1, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_23_0 = var6_ref2;
-          stackIn_23_1 = new StringBuilder().append("g.BA(").append(param0).append(',');
+          RuntimeException var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_23_0 = var6_ref2;
+          StringBuilder stackIn_23_1 = new StringBuilder().append("g.BA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_24_2 = "null";
           } else {
@@ -271,37 +238,25 @@ abstract class g extends eh {
 
     private final int a(int param0, boolean param1, boolean param2) {
         try {
-          Throwable decompiledCaughtException = null;
-          int var4 = 0;
-          int var5_int = 0;
-          Exception var5 = null;
-          String var7 = null;
-          int var8 = 0;
-          String var9 = null;
-          String var10 = null;
-          Boolean var11 = null;
-          n var12 = null;
-          int var5_intLifetime1;
-          int var5_intLifetime2;
-          var8 = EscapeVector.field_A;
-          var4 = mm.a(param0 ^ 191, param2, mg.field_f, ff.field_h);
+          int var8 = EscapeVector.obfuscationControl;
+          int var4 = mm.a(param0 ^ 191, param2, mg.field_f, ff.field_h);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = ui.a(kn.b(true), jd.a(false), 55);
+            int var5_int = ui.a(kn.b(true), jd.a(false), 55);
             if (var5_int != -1) {
               jk.a(jf.field_I, ca.field_a, param0 ^ -156, var5_int);
               jf.field_I = null;
               ca.field_a = null;
             }
-            var11 = vg.l(-9878);
+            Boolean var11 = vg.l(-9878);
             if (var11 != null) {
               bh.a(var11.booleanValue(), -19503);
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = kh.a(fl.e(0), this.field_w, ce.c(31069), uf.a(30519), jh.d(param0 ^ -4157), oi.k(-99), 0);
+            int var5_intLifetime1 = kh.a(DualLinkNode.e(0), this.field_w, ce.c(31069), uf.a(30519), jh.d(param0 ^ -4157), oi.k(-99), 0);
             if (var5_intLifetime1 != -1) {
               j.a(jf.field_I, ca.field_a, (byte) -72, var5_intLifetime1);
               jf.field_I = null;
@@ -317,13 +272,13 @@ abstract class g extends eh {
             if (param1) {
               q.field_P = false;
             } else {
-              var5_intLifetime2 = mj.a(1, this.field_w, uf.a(30519), fl.e(0), false, this.field_x);
+              int var5_intLifetime2 = mj.a(1, this.field_w, uf.a(30519), DualLinkNode.e(0), false, this.field_x);
               if (var5_intLifetime2 != -1) {
                 if (0 == var5_intLifetime2) {
                   eb.field_J = mg.field_d;
                   qd.a(true);
                   ff.field_e = 10;
-                  nf.field_u = false;
+                  SpriteState.field_u = false;
                 } else {
                   hi.a(var5_intLifetime2, (byte) 83, ca.field_a);
                   ca.field_a = null;
@@ -333,27 +288,27 @@ abstract class g extends eh {
           }
           if (var4 == 4) {
             if (ej.field_d) {
-              cm.a(oc.d((byte) -113), 21027);
+              cm.a(PointCloudEffect.d((byte) -113), 21027);
             } else {
-              nf.field_u = true;
+              SpriteState.field_u = true;
               ff.field_e = 10;
             }
           }
           if (var4 == 5) {
-            gk.a(param0 - 10042, oc.d((byte) -72));
+            gk.a(param0 - 10042, PointCloudEffect.d((byte) -72));
           }
           if (var4 == 6 &&
             c.field_u) {
             ff.field_e = 10;
           }
           if (var4 == 7) {
-            v.a(oc.d((byte) -120), (byte) -99);
+            v.a(PointCloudEffect.d((byte) -120), (byte) -99);
           }
           if (var4 == 8) {
-            cm.a(oc.d((byte) -127), param0 ^ 21212);
+            cm.a(PointCloudEffect.d((byte) -127), param0 ^ 21212);
           }
           if (var4 == 9) {
-            dm.a(param0 - 251, oc.d((byte) -89));
+            dm.a(param0 - 251, PointCloudEffect.d((byte) -89));
           }
           if (var4 == 10) {
             om.field_c.a(17, true);
@@ -362,10 +317,10 @@ abstract class g extends eh {
             this.field_m = -32L;
           }
           if (var4 == 11) {
-            de.a(false, oc.d((byte) -102));
+            IntValueNode.a(false, PointCloudEffect.d((byte) -102));
           }
           if (var4 == 12) {
-            md.a(oc.d((byte) -86), (byte) -123, dg.c((byte) -31));
+            md.a(PointCloudEffect.d((byte) -86), (byte) -123, dg.c((byte) -31));
           }
           if (var4 == 13) {
             try {
@@ -373,21 +328,21 @@ abstract class g extends eh {
                 pk.field_m = new ad(field_r, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (pk.field_m.a(17)) {
-                var12 = pk.field_m.c(-43);
+                PacketBuffer var12 = pk.field_m.c(-43);
                 if (var12 != null) {
-                  var7 = qi.a(var12.field_m, 0, var12.field_g, (byte) 117);
+                  String var7 = qi.a(var12.position, 0, var12.payload, (byte) 117);
                   jk.a(var7, (byte) -6);
                 } else {
-                  var9 = (String) null;
+                  String var9 = (String) null;
                   jk.a((String) null, (byte) -6);
                 }
                 pk.field_m = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var5 = (Exception) (Object) decompiledCaughtException;
+              Throwable decompiledCaughtException = decompiledCaughtParameter0;
+              Exception var5 = (Exception) (Object) decompiledCaughtException;
               pf.a(false, "S1", (Throwable) ((Object) var5));
-              var10 = (String) null;
+              String var10 = (String) null;
               jk.a((String) null, (byte) -6);
               pk.field_m = null;
             }
@@ -427,12 +382,12 @@ abstract class g extends eh {
     }
 
     private final void c(boolean param0) {
-        int var2 = om.field_g.e(0);
-        int var3 = (1 & var2) != 0 ? 1 : 0;
+        int var2 = om.field_g.readUnsignedByte(0);
+        boolean var3 = ((1 & var2) != 0);
         int var4 = -1 + hi.field_r;
         byte[] var5 = new byte[var4];
         om.field_g.a(var5, 19583, var4, 0);
-        th.a(param0, var3 != 0, oc.d((byte) -122), mi.a(var5, 117));
+        th.a(param0, (var3), PointCloudEffect.d((byte) -122), mi.a(var5, 117));
     }
 
     final void a(String param0, int param1, int param2) {
@@ -449,14 +404,9 @@ abstract class g extends eh {
     }
 
     final void f(int param0) {
-        boolean stackIn_25_0 = false;
-        int var2;
-        int var3;
-        gi var4;
-        int var5;
-        var5 = EscapeVector.field_A;
-        var2 = cd.field_v;
-        var3 = 96 % ((80 - param0) / 33);
+        int var5 = EscapeVector.obfuscationControl;
+        int var2 = cd.field_v;
+        int var3 = 96 % ((80 - param0) / 33);
         if (var2 < 64 &&
           sn.field_b[var2]) {
           if (var2 == 0) {
@@ -464,60 +414,44 @@ abstract class g extends eh {
           }
           if (var2 == 1) {
             ll.b(false);
+          } else if (2 == var2) {
+            ja.a((byte) -120);
+          } else if (3 == var2) {
+            cg.c(103);
+          } else if (var2 == 4) {
+            dk.e(108457410);
+          } else if (var2 == 5) {
+            ge.a((byte) 124);
+          } else if (var2 == 6) {
+            ri.a((byte) 113);
+          } else if (7 == var2) {
+            this.h((byte) 108);
+          } else if (var2 == 8) {
+            km.a(om.field_g, field_r, hi.field_r, -24183);
+          } else if (var2 == 16) {
+            ll.a(true);
           } else {
-            if (2 != var2) {
-              if (3 == var2) {
-                cg.c(103);
-              } else {
-                if (var2 == 4) {
-                  dk.e(108457410);
-                } else {
-                  if (var2 == 5) {
-                    ge.a((byte) 124);
-                  } else {
-                    if (var2 != 6) {
-                      if (7 != var2) {
-                        if (var2 != 8) {
-                          if (var2 == 16) {
-                            ll.a(true);
-                          } else {
-                            if (11 != var2 &&
-                              12 != var2) {
-                              if (13 == var2) {
-                                bk.g(0);
-                                return;
-                              }
-                              if (var2 == 17) {
-                                this.c(true);
-                                return;
-                              }
-                              if (var2 == 18) {
-                                vd.a((byte) -125);
-                                return;
-                              }
-                              pf.a(false, "MGS1: " + hf.b((byte) 107), (Throwable) null);
-                              nm.a(16);
-                              return;
-                            }
-                            stackIn_25_0 = (12 == var2);
-                            var4 = sl.a(stackIn_25_0, 2);
-                            na.a(19956, var4);
-                          }
-                        } else {
-                          km.a(om.field_g, field_r, hi.field_r, -24183);
-                        }
-                      } else {
-                        this.h((byte) 108);
-                      }
-                    } else {
-                      ri.a((byte) 113);
-                    }
-                  }
-                }
+            if (11 != var2 &&
+              12 != var2) {
+              if (13 == var2) {
+                bk.g(0);
+                return;
               }
-            } else {
-              ja.a((byte) -120);
+              if (var2 == 17) {
+                this.c(true);
+                return;
+              }
+              if (var2 == 18) {
+                vd.a((byte) -125);
+                return;
+              }
+              pf.a(false, "MGS1: " + hf.b((byte) 107), (Throwable) null);
+              nm.a(16);
+              return;
             }
+            boolean stackIn_25_0 = (12 == var2);
+            gi var4 = sl.a(stackIn_25_0, 2);
+            DynamicTerrainRenderer.a(19956, var4);
           }
           return;
         }
@@ -526,59 +460,47 @@ abstract class g extends eh {
     }
 
     final static void a(byte[] param0, int param1, int[] param2, int param3, int param4) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        byte dupTemp$2 = 0;
-        int dupTemp$3 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        var7 = EscapeVector.field_A;
+        int var7 = EscapeVector.obfuscationControl;
         try {
           if (param3 <= 113) {
             field_r = (lk) null;
           }
-          var5_int = 0;
+          int var5_int = 0;
           while (true) {
             if (var5_int >= al.field_f.length) {
               return;
             }
             param4 = al.field_f[var5_int];
-            var6 = var5_int << 4;
+            int var6 = var5_int << 4;
             while (true) {
-              incrementValue$0 = param4;
+              int incrementValue$0 = param4;
               param4--;
               if (incrementValue$0 == 0) {
                 var5_int++;
                 break;
               }
-              incrementValue$1 = var6;
+              int incrementValue$1 = var6;
               var6++;
               param1 = bc.field_f[incrementValue$1];
-              dupTemp$2 = param0[param1];
-              dupTemp$3 = param2[dupTemp$2];
+              byte dupTemp$2 = param0[param1];
+              int dupTemp$3 = param2[dupTemp$2];
               param2[dupTemp$2] = dupTemp$3 + 1;
               bc.field_f[dupTemp$3] = param1;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_12_0 = var5;
-          stackIn_12_1 = new StringBuilder().append("g.IA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var5;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("g.IA(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -590,14 +512,14 @@ abstract class g extends eh {
 
     private final void h(byte param0) {
         String var2 = tf.b((byte) 0);
-        va.a(var2, -112, oc.d((byte) -59));
+        va.a(var2, -112, PointCloudEffect.d((byte) -59));
         int var3 = 59 % ((param0 - 41) / 61);
     }
 
     public static void i(byte param0) {
         field_r = null;
         if (param0 != -73) {
-          g.a(-56, 26);
+          NetworkGameClient.a(-56, 26);
         }
     }
 
@@ -617,7 +539,6 @@ abstract class g extends eh {
     }
 
     private final int g(byte param0) {
-        int var2;
         if (this.field_b) {
           return -1;
         }
@@ -627,7 +548,7 @@ abstract class g extends eh {
         if (q.field_P) {
           return -1;
         }
-        var2 = mj.a(1, this.field_w, uf.a(param0 ^ 30530), fl.e(param0 - 117), true, this.field_x);
+        int var2 = mj.a(1, this.field_w, uf.a(param0 ^ 30530), DualLinkNode.e(param0 - 117), true, this.field_x);
         if (var2 == -1) {
           return -1;
         }
@@ -653,29 +574,17 @@ abstract class g extends eh {
     }
 
     final void a(int param0, boolean param1) {
-        int stackIn_24_0 = 0;
-        String stackIn_98_0 = null;
-        boolean stackIn_99_1 = false;
-        int stackIn_101_2 = 0;
-        boolean stackIn_102_3;
-        int stackIn_131_0 = 0;
-        int var3;
-        java.awt.Dimension var4;
-        int var5;
-        java.awt.Container var6;
-        int var3Lifetime1;
-        int var3Lifetime2;
-        var5 = EscapeVector.field_A;
+        int var5 = EscapeVector.obfuscationControl;
         if (km.field_n != null) {
           if (null == df.field_d) {
-            var6 = pg.a(-1);
-            var4 = var6.getSize();
+            java.awt.Container var6 = pg.a(-1);
+            java.awt.Dimension var4 = var6.getSize();
             km.field_n.a(var4.height, var4.width, 18705);
           }
           km.field_n.b(9477);
         }
         ac.a(28087);
-        nf.g(-3657);
+        SpriteState.g(-3657);
         if (!ii.b(16836) &&
           11 != ff.field_e) {
           b.a(-103);
@@ -684,7 +593,7 @@ abstract class g extends eh {
           mg.field_f = ji.field_b.a(-126);
         }
         if (rb.a(true)) {
-          var3 = 1200 * se.a(0);
+          int var3 = 1200 * se.a(0);
           if (this.field_v ||
             !(mg.a((byte) -12) <= var3) &&
             !(of.a((byte) -127) <= var3)) {
@@ -692,17 +601,17 @@ abstract class g extends eh {
             nm.a(param0 ^ -17);
             sc.b((byte) -87);
             hi.a(2, (byte) 83, ah.field_g);
-            hg.a(12);
+            IntrusiveNode.a(12);
             q.field_P = true;
             tg.field_mb = td.b(param0 + 129) + 15000L;
           }
         }
         if (jn.field_b == -1 ||
           jn.field_b == 0) {
-          stackIn_24_0 = (-1 != jn.field_b) ? 0 : 1;
-          var3Lifetime1 = stackIn_24_0;
+          boolean stackIn_24_0 = !(-1 != jn.field_b);
+          boolean var3Lifetime1 = stackIn_24_0;
           jn.field_b = ae.b(param0 - 1021831774);
-          if (var3Lifetime1 != 0 &&
+          if (var3Lifetime1 &&
             0 == jn.field_b &&
             ff.field_e == 11 &&
             !um.a(17830)) {
@@ -716,45 +625,31 @@ abstract class g extends eh {
         if (jn.field_b != -1 &&
           jn.field_b != 0) {
           if (10 > fc.field_a) {
-            if (jn.field_b != 3) {
-              if (jn.field_b != 4) {
-                if (2 == jn.field_b) {
-                  this.a(-1, "js5connect_full");
-                } else {
-                  if (jn.field_b != 5) {
-                    this.a(-1, "js5connect");
-                  } else {
-                    this.a(-1, "outofdate");
-                  }
-                }
-              } else {
-                this.a(-1, "js5io");
-              }
-            } else {
+            if (jn.field_b == 3) {
               this.a(param0 + 0, "js5crc");
+            } else if (jn.field_b == 4) {
+              this.a(-1, "js5io");
+            } else if (2 == jn.field_b) {
+              this.a(-1, "js5connect_full");
+            } else if (jn.field_b != 5) {
+              this.a(-1, "js5connect");
+            } else {
+              this.a(-1, "outofdate");
             }
-          } else {
-            if (ff.field_e >= 10) {
-              sc.b((byte) -103);
-              if (jn.field_b == 3) {
-                hi.a(256, (byte) 83, ag.field_b);
-              } else {
-                if (jn.field_b == 4) {
-                  hi.a(256, (byte) 83, nn.field_e);
-                } else {
-                  if (jn.field_b != 2) {
-                    if (jn.field_b != 5) {
-                      hi.a(256, (byte) 83, gm.field_f);
-                    } else {
-                      hi.a(5, (byte) 83, gj.field_a);
-                    }
-                  } else {
-                    hi.a(256, (byte) 83, km.field_l);
-                  }
-                }
-              }
-              q.field_P = true;
+          } else if (ff.field_e >= 10) {
+            sc.b((byte) -103);
+            if (jn.field_b == 3) {
+              hi.a(256, (byte) 83, ag.field_b);
+            } else if (jn.field_b == 4) {
+              hi.a(256, (byte) 83, nn.field_e);
+            } else if (jn.field_b == 2) {
+              hi.a(256, (byte) 83, km.field_l);
+            } else if (jn.field_b != 5) {
+              hi.a(256, (byte) 83, gm.field_f);
+            } else {
+              hi.a(5, (byte) 83, gj.field_a);
             }
+            q.field_P = true;
           }
         }
         if ((param0 != jn.field_b &&
@@ -792,12 +687,10 @@ abstract class g extends eh {
             nk.field_p.b(~param0)) {
             if (!nk.field_p.a("", (byte) -119)) {
               nk.field_p = null;
-            } else {
-              if (nk.field_p.a(0, "")) {
-                qa.a(true, nk.field_p);
-                nk.field_p = null;
-                fn.a((byte) 62);
-              }
+            } else if (nk.field_p.a(0, "")) {
+              qa.a(true, nk.field_p);
+              nk.field_p = null;
+              fn.a((byte) 62);
             }
           }
           if (nk.field_p == null) {
@@ -814,10 +707,10 @@ abstract class g extends eh {
           dh.a(ej.field_d, (byte) -124, pl.field_j, ii.field_a, w.field_ab);
           if (jb.field_p ||
             ac.field_d != null) {
-            stackIn_98_0 = ac.field_d;
-            stackIn_99_1 = !(jb.field_p);
-            stackIn_101_2 = 64;
-            stackIn_102_3 = !(jb.field_p);
+            String stackIn_98_0 = ac.field_d;
+            boolean stackIn_99_1 = !(jb.field_p);
+            int stackIn_101_2 = 64;
+            boolean stackIn_102_3 = !(jb.field_p);
             ff.a(stackIn_98_0, stackIn_99_1, stackIn_101_2, stackIn_102_3);
           }
           if (bc.field_e) {
@@ -831,7 +724,7 @@ abstract class g extends eh {
           ii.field_a = null;
           pl.field_j = null;
           w.field_ab = null;
-          si.a(82, (java.applet.Applet) (this));
+          QuickChatPhraseDefinition.a(82, (java.applet.Applet) (this));
           fn.a((byte) 126);
           fc.field_a = 10;
         }
@@ -841,12 +734,11 @@ abstract class g extends eh {
           }
           fc.field_a = 11;
         }
-        boolean decompiledFrameRemainder0 = true;
         if (fc.field_a == 11) {
           if (mg.field_c != null && (!mg.field_c.b(0) ||
             !mg.field_c.a((byte) -119))) {
             dn.a(vh.a(md.field_H, mg.field_c, gj.field_g, -12920), 17637, 0.0f);
-            decompiledFrameRemainder0 = false;
+            boolean decompiledFrameRemainder0 = false;
           }
           else {
             of.field_b = true;
@@ -858,18 +750,18 @@ abstract class g extends eh {
           fc.field_a = 13;
         }
         if (fc.field_a == 13) {
-          var3Lifetime2 = 1;
-          if (null != fl.field_n) {
-            stackIn_131_0 = (!fl.field_n.a(7020)) ? 0 : 1;
+          boolean var3Lifetime2 = true;
+          if (null != DualLinkNode.field_n) {
+            boolean stackIn_131_0 = !(!DualLinkNode.field_n.a(7020));
             var3Lifetime2 = stackIn_131_0;
-            dn.a(fl.field_n.field_b, 17637, fl.field_n.field_a);
+            dn.a(DualLinkNode.field_n.field_b, 17637, DualLinkNode.field_n.field_a);
           }
-          if (var3Lifetime2 != 0) {
+          if (var3Lifetime2) {
             fc.field_a = 20;
           }
         }
         if (!param1 &&
-          n.field_i) {
+          PacketBuffer.field_i) {
           bo.a(of.field_d, (byte) -127);
           this.d(-32);
           rc.a(of.field_d, true);
@@ -885,19 +777,12 @@ abstract class g extends eh {
     }
 
     final static void h(int param0) {
-        int[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
-        var4 = EscapeVector.field_A;
+        int var4 = EscapeVector.obfuscationControl;
         try {
-          var5 = al.field_f;
-          var1 = var5;
-          var2 = 0;
-          var3 = var5.length;
+          int[] var5 = al.field_f;
+          int[] var1 = var5;
+          int var2 = 0;
+          int var3 = var5.length;
           if (param0 >= -110) {
             return;
           }
@@ -913,8 +798,8 @@ abstract class g extends eh {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1_ref = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1_ref), "g.MA(" + param0 + ')');
         }
     }
@@ -923,7 +808,7 @@ abstract class g extends eh {
         sn.field_b[1] = param0;
     }
 
-    protected g() {
+    protected NetworkGameClient() {
     }
 
     static {

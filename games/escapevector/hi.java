@@ -10,7 +10,6 @@ final class hi extends ah {
     static int field_q;
 
     final static void a(int param0, byte param1, String param2) {
-        int var3_int = 0;
         try {
           if (param1 != 83) {
             field_q = -5;
@@ -21,7 +20,7 @@ final class hi extends ah {
             if (!be.field_b.field_G) {
               return;
             }
-            var3_int = 1;
+            boolean var3_int = true;
             if (8 != param0) {
             } else {
               param0 = 2;
@@ -34,11 +33,11 @@ final class hi extends ah {
             }
             if (param0 == 10) {
               ui.a(90);
-              var3_int = 0;
+              var3_int = false;
             }
-            if (var3_int != 0) {
+            if (var3_int) {
               if (ni.field_F) {
-                param2 = r.a(si.field_y, param1 - 146, new String[]{param2});
+                param2 = r.a(QuickChatPhraseDefinition.field_y, param1 - 146, new String[]{param2});
               }
               if (ha.field_a) {
                 param2 = jl.field_l;
@@ -93,27 +92,20 @@ final class hi extends ah {
     }
 
     final String a(byte param0, String param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String stackIn_3_0 = null;
-        String stackIn_5_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(-1, param1) == ob.field_a) {
-            stackIn_3_0 = eo.field_a;
+            String stackIn_3_0 = eo.field_a;
             return stackIn_3_0;
           }
-          var3_int = -127 % ((param0 - 10) / 51);
-          stackIn_5_0 = ec.field_c;
+          int var3_int = -127 % ((param0 - 10) / 51);
+          String stackIn_5_0 = ec.field_c;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("hi.L(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var3;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("hi.L(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -153,32 +145,24 @@ final class hi extends ah {
     }
 
     final rf a(int param0, String param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int stackIn_3_0 = 0;
-        rf stackIn_6_0 = null;
-        rf stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (null != cd.a(param0 ^ 0, param1)) ? 0 : 1;
-          var3_int = stackIn_3_0;
-          if (var3_int == 0) {
-            stackIn_6_0 = ob.field_a;
+          boolean stackIn_3_0 = !(null != cd.a(param0 ^ 0, param1));
+          boolean var3_int = stackIn_3_0;
+          if (!var3_int) {
+            rf stackIn_6_0 = ob.field_a;
             return stackIn_6_0;
           }
           if (param0 != -1) {
             field_n = (String) null;
           }
-          stackIn_10_0 = df.field_h;
+          rf stackIn_10_0 = df.field_h;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_13_0 = var3;
-          stackIn_13_1 = new StringBuilder().append("hi.G(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var3;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("hi.G(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {

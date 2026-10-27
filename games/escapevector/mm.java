@@ -7,19 +7,13 @@ final class mm {
     static String field_a;
 
     final static boolean a(int param0) {
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_21_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var2 = EscapeVector.field_A;
+        int var2 = EscapeVector.obfuscationControl;
         try {
           if (mj.field_d == 0) {
             sj.a(8192, (byte) 51);
           }
-          var1_int = 0;
-          de.field_j = true;
+          boolean var1_int = false;
+          IntValueNode.field_j = true;
           if (param0 > -13) {
             field_a = (String) null;
           }
@@ -36,20 +30,20 @@ final class mm {
             if (!pn.p(-126)) {
               di.field_d.a(gb.a(sf.field_c, ng.field_ob, 8158), (byte) 126, gb.a(dh.field_d, bj.field_y, 8158));
               if (!fn.a(true, 0)) {
-                return var1_int != 0;
+                return (var1_int);
               }
-              var1_int = 1;
-              stackIn_21_0 = var1_int;
-              return stackIn_21_0 != 0;
+              var1_int = true;
+              boolean stackIn_21_0 = var1_int;
+              return (stackIn_21_0);
             }
             di.field_d.c((byte) 6);
           } while (!fn.a(false, 0));
-          var1_int = 1;
-          stackIn_17_0 = var1_int;
-          return stackIn_17_0 != 0;
+          var1_int = true;
+          boolean stackIn_17_0 = var1_int;
+          return (stackIn_17_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "mm.F(" + param0 + ')');
         }
     }
@@ -71,7 +65,7 @@ final class mm {
     }
 
     final static boolean a(int param0, int param1) {
-        int var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.obfuscationControl;
         if (param0 != 4) {
           return false;
         }
@@ -108,30 +102,18 @@ final class mm {
     }
 
     final static String a(int param0, CharSequence param1) {
-        int var4 = 0;
-        int var2_int = 0;
-        char[] var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        char[] var7 = null;
-        char[] var8 = null;
-        String stackIn_19_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         try {
-          var2_int = param1.length();
+          int var2_int = param1.length();
           if (var2_int > 20) {
             var2_int = 20;
           }
-          var8 = new char[var2_int];
-          var7 = var8;
-          var3 = var7;
-          for (var4 = param0; var2_int > var4; var4++) {
-            var5 = param1.charAt(var4);
+          char[] var8 = new char[var2_int];
+          char[] var7 = var8;
+          char[] var3 = var7;
+          for (int var4 = param0; var2_int > var4; var4++) {
+            int var5 = param1.charAt(var4);
             if (var5 >= 65 &&
               90 >= var5) {
               var3[var4] = (char)(-65 + var5 + 97);
@@ -144,13 +126,13 @@ final class mm {
               var3[var4] = (char)var5;
             }
           }
-          stackIn_19_0 = new String(var8);
+          String stackIn_19_0 = new String(var8);
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_22_0 = var2;
-          stackIn_22_1 = new StringBuilder().append("mm.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_22_0 = var2;
+          StringBuilder stackIn_22_1 = new StringBuilder().append("mm.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_23_2 = "null";
           } else {

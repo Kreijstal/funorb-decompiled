@@ -45,18 +45,6 @@ final class fc {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11) {
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var12Lifetime1;
-        int var13Lifetime1;
-        int var14Lifetime1;
-        int var15Lifetime1;
-        int var16Lifetime1;
-        int var17Lifetime1;
         if (param6) {
           param1 = 2 - bk.a(6, false, -param1 + 2) * 6;
           param2 = 3 + 6 * bk.a(6, false, -2 + (param2 - 1));
@@ -67,37 +55,37 @@ final class fc {
           field_a = -100;
           if (!param4 ||
             param0 >= 16) {
-            em.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
+            SoftwareRasterizer.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
             qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
             if (param11) {
               qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
             }
             return;
           }
-          var12 = 66049 * (16 - param0);
-          var13 = 986895 & 330245 * (-param0 + 16) >> 4;
-          var14 = param1;
-          var15 = param10;
-          var16 = param2;
-          var17 = param3;
+          int var12 = 66049 * (16 - param0);
+          int var13 = 986895 & 330245 * (-param0 + 16) >> 4;
+          int var14 = param1;
+          int var15 = param10;
+          int var16 = param2;
+          int var17 = param3;
           if (param11) {
-            em.a(param1 + 1, param10 + 1, -2 + param2 - param1, 3, 0);
-            em.a(1 + param1, 4 + param10, 3, param3 + (-param10 - 8), 0);
-            em.a(param2 - 4, param10 + 4, 3, param3 - param10 - 8, 0);
+            SoftwareRasterizer.a(param1 + 1, param10 + 1, -2 + param2 - param1, 3, 0);
+            SoftwareRasterizer.a(1 + param1, 4 + param10, 3, param3 + (-param10 - 8), 0);
+            SoftwareRasterizer.a(param2 - 4, param10 + 4, 3, param3 - param10 - 8, 0);
             var14 += 3;
             var15 += 3;
             var17 -= 3;
             var16 -= 3;
-            em.a(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
+            SoftwareRasterizer.a(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
           } else {
-            em.c(var14 + 1, var15 + 1, var16 + (-var14 - 2), -2 + (-var15 + var17), var12, var13);
+            SoftwareRasterizer.c(var14 + 1, var15 + 1, var16 + (-var14 - 2), -2 + (-var15 + var17), var12, var13);
             qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
             if (param11) {
               qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
             }
             return;
           }
-          em.c(var14 + 1, var15 + 1, var16 + (-var14 - 2), -2 + (-var15 + var17), var12, var13);
+          SoftwareRasterizer.c(var14 + 1, var15 + 1, var16 + (-var14 - 2), -2 + (-var15 + var17), var12, var13);
           qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
             qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
@@ -105,7 +93,7 @@ final class fc {
           return;
         }
         if (!param4) {
-          em.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
+          SoftwareRasterizer.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
           qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
             qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
@@ -113,37 +101,37 @@ final class fc {
           return;
         }
         if (param0 >= 16) {
-          em.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
+          SoftwareRasterizer.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
           qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
             qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
           }
           return;
         }
-        var12Lifetime1 = 66049 * (16 - param0);
-        var13Lifetime1 = 986895 & 330245 * (-param0 + 16) >> 4;
-        var14Lifetime1 = param1;
-        var15Lifetime1 = param10;
-        var16Lifetime1 = param2;
-        var17Lifetime1 = param3;
+        int var12Lifetime1 = 66049 * (16 - param0);
+        int var13Lifetime1 = 986895 & 330245 * (-param0 + 16) >> 4;
+        int var14Lifetime1 = param1;
+        int var15Lifetime1 = param10;
+        int var16Lifetime1 = param2;
+        int var17Lifetime1 = param3;
         if (param11) {
-          em.a(param1 + 1, param10 + 1, -2 + param2 - param1, 3, 0);
-          em.a(1 + param1, 4 + param10, 3, param3 + (-param10 - 8), 0);
-          em.a(param2 - 4, param10 + 4, 3, param3 - param10 - 8, 0);
+          SoftwareRasterizer.a(param1 + 1, param10 + 1, -2 + param2 - param1, 3, 0);
+          SoftwareRasterizer.a(1 + param1, 4 + param10, 3, param3 + (-param10 - 8), 0);
+          SoftwareRasterizer.a(param2 - 4, param10 + 4, 3, param3 - param10 - 8, 0);
           var14Lifetime1 += 3;
           var15Lifetime1 += 3;
           var17Lifetime1 -= 3;
           var16Lifetime1 -= 3;
-          em.a(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
+          SoftwareRasterizer.a(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
         } else {
-          em.c(var14Lifetime1 + 1, var15Lifetime1 + 1, var16Lifetime1 + (-var14Lifetime1 - 2), -2 + (-var15Lifetime1 + var17Lifetime1), var12Lifetime1, var13Lifetime1);
+          SoftwareRasterizer.c(var14Lifetime1 + 1, var15Lifetime1 + 1, var16Lifetime1 + (-var14Lifetime1 - 2), -2 + (-var15Lifetime1 + var17Lifetime1), var12Lifetime1, var13Lifetime1);
           qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
             qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
           }
           return;
         }
-        em.c(var14Lifetime1 + 1, var15Lifetime1 + 1, var16Lifetime1 + (-var14Lifetime1 - 2), -2 + (-var15Lifetime1 + var17Lifetime1), var12Lifetime1, var13Lifetime1);
+        SoftwareRasterizer.c(var14Lifetime1 + 1, var15Lifetime1 + 1, var16Lifetime1 + (-var14Lifetime1 - 2), -2 + (-var15Lifetime1 + var17Lifetime1), var12Lifetime1, var13Lifetime1);
         qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
         if (param11) {
           qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);

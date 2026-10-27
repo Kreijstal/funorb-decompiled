@@ -4,46 +4,42 @@
 import java.io.*;
 
 final class ji {
-    static cn field_c;
+    static IntrusiveDeque field_c;
     static String field_a;
     static ca field_b;
 
     final static mf a(boolean param0, int param1, boolean param2, int param3, boolean param4, byte param5) {
         try {
           Object var6 = null;
-          Object var7 = null;
-          hk var8 = null;
-          mf stackIn_17_0 = null;
-          Throwable decompiledCaughtException = null;
           try {
             var6 = null;
-            if (null != ga.field_d.field_b) {
-              uc.field_h = new rg(ga.field_d.field_b, 5200, 0);
-              ga.field_d.field_b = null;
-              var6 = new jg(255, uc.field_h, new rg(ga.field_d.field_x, 12000, 0), 2097152);
+            if (null != IntPoint.field_d.field_b) {
+              uc.field_h = new rg(IntPoint.field_d.field_b, 5200, 0);
+              IntPoint.field_d.field_b = null;
+              var6 = new jg(255, uc.field_h, new rg(IntPoint.field_d.field_x, 12000, 0), 2097152);
             }
             if (param5 != 114) {
               field_a = (String) null;
             }
-            var7 = null;
+            Object var7 = null;
             if (uc.field_h != null) {
               if (bg.field_e == null) {
-                bg.field_e = new rg[ga.field_d.field_u.length];
+                bg.field_e = new rg[IntPoint.field_d.field_u.length];
               }
               if (bg.field_e[param1] == null) {
-                bg.field_e[param1] = new rg(ga.field_d.field_u[param1], 12000, 0);
-                ga.field_d.field_u[param1] = null;
+                bg.field_e[param1] = new rg(IntPoint.field_d.field_u[param1], 12000, 0);
+                IntPoint.field_d.field_u[param1] = null;
               }
               var7 = new jg(param1, uc.field_h, bg.field_e[param1], 2097152);
             }
-            var8 = af.field_e.a(param2, 255, (jg) (var6), param1, (jg) (var7));
+            hk var8 = af.field_e.a(param2, 255, (jg) (var6), param1, (jg) (var7));
             if (param0) {
               var8.b((byte) -49);
             }
-            stackIn_17_0 = new mf(var8, param4, param3);
+            mf stackIn_17_0 = new mf(var8, param4, param3);
             return stackIn_17_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
+            Throwable decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (IOException) (Object) decompiledCaughtException;
             throw new RuntimeException(((IOException) (var6)).toString());
           }
@@ -92,40 +88,29 @@ final class ji {
     }
 
     final static int a(int param0, ih param1, String[] param2, int param3, int param4, int param5, int param6) {
-        int var8 = 0;
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        String var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int stackIn_5_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var11 = EscapeVector.field_A;
+        int var11 = EscapeVector.obfuscationControl;
         try {
-          var7_int = param3 + param5;
-          for (var8 = param6; param4 > var8; var8++) {
-            var9 = param2[var8];
-            var10 = ic.a(var9, 16777215, param1);
+          int var7_int = param3 + param5;
+          for (int var8 = param6; param4 > var8; var8++) {
+            String var9 = param2[var8];
+            int var10 = ic.a(var9, 16777215, param1);
             var7_int = var7_int + (var10 + param0);
           }
-          stackIn_5_0 = var7_int;
+          int stackIn_5_0 = var7_int;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_8_0 = var7;
-          stackIn_8_1 = new StringBuilder().append("ji.F(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var7;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("ji.F(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
+          StringBuilder stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
           if (param2 == null) {
             stackIn_12_2 = "null";
           } else {
@@ -136,25 +121,19 @@ final class ji {
     }
 
     final static int a(int param0, int param1, byte[] param2) {
-        RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 255) {
-            stackIn_4_0 = ae.a(param2, (byte) -95, param1, 0);
+            int stackIn_4_0 = ae.a(param2, (byte) -95, param1, 0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = 72;
+          int stackIn_2_0 = 72;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("ji.B(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var3;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("ji.B(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_8_2 = "null";
           } else {

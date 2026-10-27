@@ -13,7 +13,7 @@ final class um {
           if (ff.field_e < 10) {
             return false;
           }
-          if (!nf.field_u) {
+          if (!SpriteState.field_u) {
             return !rb.a(true) ? true : false;
           }
           return false;
@@ -21,7 +21,7 @@ final class um {
         if (ff.field_e < 10) {
           return false;
         }
-        if (!nf.field_u) {
+        if (!SpriteState.field_u) {
           return !rb.a(true) ? true : false;
         }
         return false;

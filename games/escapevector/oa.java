@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class oa extends fl {
+abstract class oa extends DualLinkNode {
     static int field_t;
     static int field_v;
     static String field_q;
@@ -11,12 +11,11 @@ abstract class oa extends fl {
     boolean field_s;
 
     final static void a(int param0, dc param1, int param2) {
-        c var3 = null;
         if (param2 != -755) {
           return;
         }
         try {
-          var3 = om.field_c;
+          c var3 = om.field_c;
           var3.a(param0, true);
           var3.f(2, -123);
           var3.f(0, -123);

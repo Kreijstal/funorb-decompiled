@@ -17,36 +17,20 @@ final class sf {
     static String field_n;
     static int field_c;
     private int field_k;
-    static ed[] field_b;
+    static Sprite[] field_b;
     private int field_o;
     static hh[] field_e;
 
     final static String a(int param0, CharSequence param1) {
-        int var6 = 0;
-        StringBuilder discarded$0 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_28_0 = null;
-        String stackIn_30_0 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        StringBuilder var5 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        var9 = EscapeVector.field_A;
+        int var9 = EscapeVector.obfuscationControl;
         try {
           if (param1 == null) {
-            stackIn_3_0 = null;
+            Object stackIn_3_0 = null;
             return (String) (stackIn_3_0);
           }
-          var2_int = 0;
-          var3 = param1.length();
+          int var2_int = 0;
+          int var3 = param1.length();
           while (var2_int < var3) {
             if (fd.a(true, param1.charAt(var2_int))) {
               var2_int++;
@@ -61,37 +45,37 @@ final class sf {
             }
             break;
           }
-          var4 = -var2_int + var3;
+          int var4 = -var2_int + var3;
           if (var4 < 1) {
             return null;
           }
           if (12 < var4) {
             return null;
           }
-          var5 = new StringBuilder(var4);
+          StringBuilder var5 = new StringBuilder(var4);
           if (param0 > -65) {
             sf.a(true);
           }
-          for (var6 = var2_int; var6 < var3; var6++) {
-            var7 = param1.charAt(var6);
+          for (int var6 = var2_int; var6 < var3; var6++) {
+            int var7 = param1.charAt(var6);
             if (d.a((char) var7, -11217)) {
-              var8 = eo.a(227, (char) var7);
+              int var8 = eo.a(227, (char) var7);
               if (0 != var8) {
-                discarded$0 = var5.append((char) var8);
+                StringBuilder discarded$0 = var5.append((char) var8);
               }
             }
           }
           if (var5.length() != 0) {
-            stackIn_30_0 = var5.toString();
+            String stackIn_30_0 = var5.toString();
             return stackIn_30_0;
           }
-          stackIn_28_0 = null;
+          Object stackIn_28_0 = null;
           return (String) (stackIn_28_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_33_0 = var2;
-          stackIn_33_1 = new StringBuilder().append("sf.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_33_0 = var2;
+          StringBuilder stackIn_33_1 = new StringBuilder().append("sf.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_34_2 = "null";
           } else {
@@ -153,13 +137,13 @@ final class sf {
     }
 
     private final int b(int param0) {
-        oe var2 = ma.field_a;
+        GameplaySession var2 = BoundedRandomAccessFile.activeSession;
         if (var2 == null) {
           return 0;
         }
-        int var3 = var2.field_ob;
-        int var4 = var2.field_fc;
-        var3 = tj.a(var4, (byte) 126, var3);
+        int var3 = var2.score;
+        int var4 = var2.gameMode;
+        var3 = DialogueScreen.a(var4, (byte) 126, var3);
         if (param0 != -1) {
           this.b(90, -103);
         }
@@ -179,94 +163,74 @@ final class sf {
     }
 
     final static tk a(String param0, byte param1) {
-        tk stackIn_4_0 = null;
-        tk stackIn_8_0 = null;
-        tk stackIn_13_0 = null;
-        int stackIn_22_0 = 0;
-        tk stackIn_27_0 = null;
-        tk stackIn_33_0 = null;
-        tk stackIn_44_0 = null;
-        tk stackIn_49_0 = null;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
         String stackIn_56_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var3Lifetime1;
-        int var4Lifetime1;
-        int var5Lifetime1;
-        var6 = EscapeVector.field_A;
+        int var6 = EscapeVector.obfuscationControl;
         try {
-          var2_int = param0.length();
+          int var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = mf.field_d;
+            tk stackIn_4_0 = mf.field_d;
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            stackIn_8_0 = d.field_c;
+            tk stackIn_8_0 = d.field_c;
             return stackIn_8_0;
           }
           if (34 == param0.charAt(0)) {
             if (param0.charAt(var2_int - 1) != 34) {
-              stackIn_13_0 = wh.field_p;
+              tk stackIn_13_0 = wh.field_p;
               return stackIn_13_0;
             }
-            var3 = 0;
-            for (var4 = 1; var4 < var2_int - 1; var4++) {
-              var5 = param0.charAt(var4);
+            boolean var3 = false;
+            for (int var4 = 1; var4 < var2_int - 1; var4++) {
+              int var5 = param0.charAt(var4);
               if (var5 == 92) {
-                stackIn_22_0 = (var3 != 0) ? 0 : 1;
+                boolean stackIn_22_0 = !((var3));
                 var3 = stackIn_22_0;
               } else {
                 if (34 == var5 &&
-                  var3 == 0) {
-                  stackIn_27_0 = wh.field_p;
+                  !var3) {
+                  tk stackIn_27_0 = wh.field_p;
                   return stackIn_27_0;
                 }
-                var3 = 0;
+                var3 = false;
               }
             }
             return null;
           }
           if (param1 != 119) {
-            stackIn_33_0 = (tk) null;
+            tk stackIn_33_0 = (tk) null;
             return stackIn_33_0;
           }
-          var3Lifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < var2_int; var4Lifetime1++) {
+          boolean var3Lifetime1 = false;
+          for (int var4Lifetime1 = 0; var4Lifetime1 < var2_int; var4Lifetime1++) {
             boolean decompiledFrameRemainder0 = true;
-            var5Lifetime1 = param0.charAt(var4Lifetime1);
+            int var5Lifetime1 = param0.charAt(var4Lifetime1);
             if (var5Lifetime1 == 46) {
               if (var4Lifetime1 != 0 &&
                 var2_int - 1 != var4Lifetime1 &&
-                var3Lifetime1 == 0) {
-                var3Lifetime1 = 1;
+                !var3Lifetime1) {
+                var3Lifetime1 = true;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_44_0 = wh.field_p;
+                tk stackIn_44_0 = wh.field_p;
                 return stackIn_44_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (en.field_g.indexOf(var5Lifetime1) == -1) {
-                stackIn_49_0 = wh.field_p;
+                tk stackIn_49_0 = wh.field_p;
                 return stackIn_49_0;
               }
-              var3Lifetime1 = 0;
+              var3Lifetime1 = false;
             }
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_55_0 = var2;
-          stackIn_55_1 = new StringBuilder().append("sf.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_55_0 = var2;
+          StringBuilder stackIn_55_1 = new StringBuilder().append("sf.C(");
           if (param0 == null) {
             stackIn_56_2 = "null";
           } else {
