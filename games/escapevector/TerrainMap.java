@@ -38,8 +38,8 @@ final class TerrainMap {
               }
               GrowableIntList.field_b = param0;
               DraggableWidget.field_N = new TrackerMusicPlayer(param1);
-              DraggableWidget.field_N.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
-              DraggableWidget.field_N.a(param2);
+              DraggableWidget.field_N.setMasterVolume(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
+              DraggableWidget.field_N.setLooping(param2);
               LevelSelectScreen.field_l.flush();
               MembershipAssetSupport.field_c.scheduleListener((PcmMixerListener) ((Object) DraggableWidget.field_N));
             }

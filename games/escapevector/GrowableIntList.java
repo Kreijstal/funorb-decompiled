@@ -121,7 +121,7 @@ final class GrowableIntList {
         if (!param0) {
           return (LoginText) null;
         }
-        return new LoginText(TrackerMusicDefinition.c(31069), KeyCodeSupport.c(-89));
+        return new LoginText(TrackerMusicDefinition.currentEmailOrLoginName(31069), KeyCodeSupport.c(-89));
     }
 
     final int size(boolean guard) {

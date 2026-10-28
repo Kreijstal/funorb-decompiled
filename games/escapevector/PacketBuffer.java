@@ -420,7 +420,7 @@ class PacketBuffer extends IntrusiveNode {
             return false;
           }
           for (int var4 = 0; text.length() > var4; var4++) {
-            if (!SpriteOffset.a(text.charAt(var4), (byte) -124)) {
+            if (!SpriteOffset.isAccountNameCharacter(text.charAt(var4), (byte) -124)) {
               return false;
             }
           }

@@ -1872,7 +1872,7 @@ final class GameplaySession {
         String var4 = this.rockBusterPickupMessage(false, var3);
         this.showHudMessage(guard - 430, var4);
         this.rockBusterAmmo = this.rockBusterAmmo + var3;
-        AccountRegistrationPanel.a(var3, -15655);
+        AccountRegistrationPanel.addSessionCounterOffset(var3, -15655);
     }
 
     final void startSession(byte guard) {
@@ -3054,7 +3054,7 @@ final class GameplaySession {
         }
         LoginHandshakeSupport.field_b.bindAsFramebuffer();
         SoftwareRasterizer.clearFramebuffer();
-        String var3 = TrackerMusicDefinition.a((byte) 120, this.gameMode, this.levelIndex);
+        String var3 = TrackerMusicDefinition.levelDisplayName((byte) 120, this.gameMode, this.levelIndex);
         ByteStorage.gameFont.drawCentered(var3, 160, 22, 7899280, -1);
         AlphaContainer.field_D.bindRaster(126);
         MeshProjectionSupport.markSpriteEdges(LoginHandshakeSupport.field_b, true, 1);

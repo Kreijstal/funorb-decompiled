@@ -303,7 +303,7 @@ final class LevelSelectScreen {
           this.previewDirty = false;
           this.previewSession.selectLevel(this.selectedLevelIndex, 110);
           this.configurePreviewMinimap(true);
-          SpriteOffset.a((byte) 82);
+          SpriteOffset.resetFrameTiming((byte) 82);
         }
     }
 
@@ -795,7 +795,7 @@ final class LevelSelectScreen {
             int var19 = var12[var17];
             for (int var20 = 0; var19 > var20; var20++) {
               if (var18 < var14) {
-                String var28 = TrackerMusicDefinition.a((byte) 127, this.gameMode, var18);
+                String var28 = TrackerMusicDefinition.levelDisplayName((byte) 127, this.gameMode, var18);
                 String var29 = this.visibleLevelName(var18, var16, var28, false);
                 boolean var22 = (this.isLevelAccessible(var16, var18, true));
                 int var23 = var18;

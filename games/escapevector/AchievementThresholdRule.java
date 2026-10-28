@@ -219,7 +219,7 @@ final class AchievementThresholdRule {
         String stackIn_13_2 = null;
         try {
           if (null != LegacyWidgetStyle.field_E) {
-            LegacyWidgetStyle.field_E.field_G.setSuggestions(suggestions, (byte) -103);
+            LegacyWidgetStyle.field_E.suggestions.setSuggestions(suggestions, (byte) -103);
           }
           if (guard != 4) {
             return;

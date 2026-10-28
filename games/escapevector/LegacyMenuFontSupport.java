@@ -11,7 +11,7 @@ final class LegacyMenuFontSupport {
           MembershipAssetSupport.field_a = textFont;
           Js5Transport.field_h = wrapWidth;
           MenuTitleRenderSupport.field_e = buttonFont;
-          ObjectSpriteSet.a(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / horizontalDivisor, 11710);
+          ObjectSpriteSet.setLegacyMenuAnchors(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / horizontalDivisor, 11710);
           ThemeAssetSupport.setLegacyMenuFontMetrics(horizontalDivisor + 97, textFont.maxDescent + textFont.capHeight, buttonFont.capHeight, textFont.capHeight, buttonFont.capHeight + buttonFont.maxDescent);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ke.B(" + (textFont != null ? "{...}" : "null") + ',' + horizontalDivisor + ',' + wrapWidth + ',' + (buttonFont != null ? "{...}" : "null") + ')');

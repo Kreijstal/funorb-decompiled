@@ -240,7 +240,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         var0 = var15;
         while (10 >= var15) {
             var1 = -8 + 8 * var15;
-            field_ab[var15] = DisplayModeInfo.bitwiseOr(SpriteOffset.a(field_db[7][7 + var1], 255L), DisplayModeInfo.bitwiseOr(DisplayModeInfo.bitwiseOr(SpriteOffset.a(field_db[5][var1 + 5], 16711680L), DisplayModeInfo.bitwiseOr(SpriteOffset.a(4278190080L, field_db[4][4 + var1]), DisplayModeInfo.bitwiseOr(DisplayModeInfo.bitwiseOr(SpriteOffset.a(field_db[2][2 + var1], 280375465082880L), DisplayModeInfo.bitwiseOr(SpriteOffset.a(field_db[1][var1 + 1], 71776119061217280L), SpriteOffset.a(field_db[0][var1], -72057594037927936L))), SpriteOffset.a(1095216660480L, field_db[3][3 + var1])))), SpriteOffset.a(65280L, field_db[6][var1 + 6])));
+            field_ab[var15] = DisplayModeInfo.bitwiseOr(SpriteOffset.bitwiseAnd(field_db[7][7 + var1], 255L), DisplayModeInfo.bitwiseOr(DisplayModeInfo.bitwiseOr(SpriteOffset.bitwiseAnd(field_db[5][var1 + 5], 16711680L), DisplayModeInfo.bitwiseOr(SpriteOffset.bitwiseAnd(4278190080L, field_db[4][4 + var1]), DisplayModeInfo.bitwiseOr(DisplayModeInfo.bitwiseOr(SpriteOffset.bitwiseAnd(field_db[2][2 + var1], 280375465082880L), DisplayModeInfo.bitwiseOr(SpriteOffset.bitwiseAnd(field_db[1][var1 + 1], 71776119061217280L), SpriteOffset.bitwiseAnd(field_db[0][var1], -72057594037927936L))), SpriteOffset.bitwiseAnd(1095216660480L, field_db[3][3 + var1])))), SpriteOffset.bitwiseAnd(65280L, field_db[6][var1 + 6])));
             var15++;
         }
     }

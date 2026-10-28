@@ -63,14 +63,14 @@ class DualLinkNode extends IntrusiveNode {
           return;
         }
         try {
-          if (null == AccountRegistrationPanel.field_M) {
-            AccountRegistrationPanel.field_M = new ObjectSpriteSet[var3.length];
+          if (null == AccountRegistrationPanel.objectSpriteSets) {
+            AccountRegistrationPanel.objectSpriteSets = new ObjectSpriteSet[var3.length];
           }
           for (int var5 = 0; var5 < var3.length; var5++) {
             Sprite var6 = var3[var5];
             Sprite var7 = var4[var5];
             SpriteOffset var8 = new SpriteOffset(ClientException.field_b[var5], ClientException.field_f[var5]);
-            AccountRegistrationPanel.field_M[var5] = new ObjectSpriteSet(var6, var7, var8);
+            AccountRegistrationPanel.objectSpriteSets[var5] = new ObjectSpriteSet(var6, var7, var8);
           }
           TerrainMaskSupport.a(105);
         } catch (RuntimeException runtimeException) {

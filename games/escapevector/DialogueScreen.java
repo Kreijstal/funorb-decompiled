@@ -770,7 +770,7 @@ final class DialogueScreen extends IntrusiveNode {
             if (this.photos[photoSlot] == null) {
               return false;
             }
-            SpriteOffset.a((byte) 44);
+            SpriteOffset.resetFrameTiming((byte) 44);
           }
           if (guard == 23381) {
             return true;

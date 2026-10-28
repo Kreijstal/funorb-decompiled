@@ -87,7 +87,7 @@ public final class EscapeVector extends NetworkGameClient {
                 if (1000 > LoginHandshakeSupport.field_d) {
                   LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
                 }
-                int var3Lifetime2 = SpriteOffset.b(-14);
+                int var3Lifetime2 = SpriteOffset.pollLegacyMenuAction(-14);
                 if (var3Lifetime2 == 2) {
                   DisplayAndRatingSupport.exitFullscreen(-25123);
                 }
@@ -543,7 +543,7 @@ public final class EscapeVector extends NetworkGameClient {
             SavedCompletionFlags.field_f = SpriteArchiveSupport.loadNamedSprites(IndexedSpriteState.field_j, (byte) 123, "", "level_complete_tick");
             FullscreenFocusCanvas.field_a = SpriteCheckboxPainter.loadIndexedSprites("scrshots", "", (byte) -48, IndexedSpriteState.field_j);
             MarkerSliderPainter.field_h = null;
-            SpriteOffset.a((byte) 92);
+            SpriteOffset.resetFrameTiming((byte) 92);
             return;
           }
           if (null != QuickChatPhraseCache.field_i) {
@@ -563,7 +563,7 @@ public final class EscapeVector extends NetworkGameClient {
               ObjectSpriteSet.field_d[3] = ConnectionSupport.loadNamedTrackerMusic(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_4");
               ObjectSpriteSet.field_d[4] = ConnectionSupport.loadNamedTrackerMusic(PacketBuffer.xor((int) guard, -94), "", var2_ref, PointCloudEffect.field_D, "music/simulator");
               PointCloudEffect.field_D = null;
-              SpriteOffset.a((byte) 93);
+              SpriteOffset.resetFrameTiming((byte) 93);
               return;
             }
             if (null == UsernameCredentials.field_h) {
@@ -571,7 +571,7 @@ public final class EscapeVector extends NetworkGameClient {
               this.renderClient((byte) -127);
               UsernameCredentials.field_h = CampaignLoadingSupport.loadCampaigns(UiContainer.field_B, UsernameCredentials.field_h, StatefulTextPainter.field_u, 0);
               UiContainer.field_B = null;
-              SpriteOffset.a((byte) 51);
+              SpriteOffset.resetFrameTiming((byte) 51);
               return;
             }
             AccountMessagePanel.setTickRate(50, true);
@@ -640,7 +640,7 @@ public final class EscapeVector extends NetworkGameClient {
           MonotonicClockSupport.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-rock-buster").toPcmSample().resample(var2);
           AchievementQuery.field_k = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "level_complete").toPcmSample().resample(var2);
           AlternateUsernameCredentials.field_o = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "level_complete_score").toPcmSample().resample(var2);
-          SpriteOffset.a((byte) 106);
+          SpriteOffset.resetFrameTiming((byte) 106);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -768,7 +768,7 @@ public final class EscapeVector extends NetworkGameClient {
           if (null != KeyboardIdleSupport.field_c) {
             RegistrationRequestDialog.a(8, KeyboardIdleSupport.field_c);
             KeyboardIdleSupport.field_c = null;
-            SpriteOffset.a((byte) 57);
+            SpriteOffset.resetFrameTiming((byte) 57);
           }
           IndexedSpriteState.field_j = MarkerSliderPainter.createArchive(1, 0, guard, 1, true);
           LoginText.field_c = LoginHandshakeSupport.createDefaultArchive(6, -125);
@@ -883,7 +883,7 @@ public final class EscapeVector extends NetworkGameClient {
         int var9 = obfuscationControl;
         try {
           DialogueScreen var2 = DropTargetWidget.f((byte) -49);
-          java.awt.Canvas var3 = AccountRegistrationPanel.i((byte) 10);
+          java.awt.Canvas var3 = AccountRegistrationPanel.currentCanvas((byte) 10);
           if (guard != -27273) {
             field_z = (String) null;
           }
@@ -893,12 +893,12 @@ public final class EscapeVector extends NetworkGameClient {
             return;
           }
           if (!ShipHullGeometry.field_h) {
-            TextFieldValidator.a(var3, 0);
+            TextFieldValidator.drawLoadingProgress(var3, 0);
             return;
           }
           if (!AchievementThresholdRule.isAccountStateReady((byte) -64)) {
             InstructionsScreen.setLoadingProgress(QuickChatPhraseCache.field_a, 17637, 100.0f);
-            TextFieldValidator.a(var3, 0);
+            TextFieldValidator.drawLoadingProgress(var3, 0);
             return;
           }
           boolean decompiledFrameRemainder0 = true;

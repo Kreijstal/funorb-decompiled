@@ -91,7 +91,7 @@ final class LevelObject extends IntrusiveNode {
             return stackIn_2_0;
           }
           if (var2 != null) {
-            SpriteOffset stackIn_7_0 = var2[this.objectType].a((byte) 120, this.spriteFrame);
+            SpriteOffset stackIn_7_0 = var2[this.objectType].glowOffset((byte) 120, this.spriteFrame);
             return stackIn_7_0;
           }
           Object stackIn_5_0 = null;
@@ -148,7 +148,7 @@ final class LevelObject extends IntrusiveNode {
             Object stackIn_7_0 = null;
             return (Sprite) (stackIn_7_0);
           }
-          Sprite stackIn_9_0 = var2[this.objectType].a(-125, this.spriteFrame);
+          Sprite stackIn_9_0 = var2[this.objectType].glowSprite(-125, this.spriteFrame);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2_ref = decompiledCaughtParameter0;

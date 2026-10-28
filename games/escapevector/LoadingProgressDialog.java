@@ -21,7 +21,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         if (guard) {
           return (ObjectSpriteSet[]) null;
         }
-        return AccountRegistrationPanel.field_M;
+        return AccountRegistrationPanel.objectSpriteSets;
     }
 
     final void setProgress(int guard, String status, float percent, boolean alternateColors) {

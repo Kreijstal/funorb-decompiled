@@ -256,7 +256,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            int var5_intLifetime1 = SpriteArchiveSupport.pollLoginWithText(DualLinkNode.e(0), this.affiliateId, TrackerMusicDefinition.c(31069), UiTheme.a(30519), AchievementQuery.d(guard ^ -4157), DisplayNameForm.k(-99), 0);
+            int var5_intLifetime1 = SpriteArchiveSupport.pollLoginWithText(DualLinkNode.e(0), this.affiliateId, TrackerMusicDefinition.currentEmailOrLoginName(31069), UiTheme.a(30519), AchievementQuery.d(guard ^ -4157), DisplayNameForm.k(-99), 0);
             if (var5_intLifetime1 != -1) {
               NameAvailabilityResponseSupport.completeNameAvailability(AccountTermsPanel.field_I, MouseWheelInput.field_a, (byte) -72, var5_intLifetime1);
               AccountTermsPanel.field_I = null;
@@ -387,7 +387,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4 = -1 + EmailSyntaxValidator.field_r;
         byte[] var5 = new byte[var4];
         QuickChatDynamicCommand.incomingPackets.readCipheredBytes(var5, 19583, var4, 0);
-        Bzip2State.a(guard, (var3), PointCloudEffect.activeApplet((byte) -122), RasterSnapshot.a(var5, 117));
+        Bzip2State.openBrowserUrl(guard, (var3), PointCloudEffect.activeApplet((byte) -122), RasterSnapshot.a(var5, 117));
     }
 
     final void startApplet(String cacheName, int width, int indexCount) {
@@ -690,7 +690,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             } else if (PasswordValidator.field_p.tryLoadNamedGroup(0, "")) {
               DropTargetWidget.a(true, PasswordValidator.field_p);
               PasswordValidator.field_p = null;
-              SpriteOffset.a((byte) 62);
+              SpriteOffset.resetFrameTiming((byte) 62);
             }
           }
           if (PasswordValidator.field_p == null) {
@@ -725,7 +725,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           AlternateUsernameCredentials.field_j = null;
           LoadingProgressDialog.field_ab = null;
           QuickChatPhraseDefinition.inspectAppletUsername(82, (java.applet.Applet) (this));
-          SpriteOffset.a((byte) 126);
+          SpriteOffset.resetFrameTiming((byte) 126);
           AccountNoticeKind.frameworkLoadingStage = 10;
         }
         if (AccountNoticeKind.frameworkLoadingStage == 10) {

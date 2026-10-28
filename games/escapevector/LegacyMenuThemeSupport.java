@@ -26,7 +26,7 @@ final class LegacyMenuThemeSupport {
           }
           LegacyMenuFontSupport.configureFonts(param16, 2, param9, param7);
           ThemeAssetSupport.setLegacyMenuFontMetrics(-127, param4, param12, param1, param15);
-          ObjectSpriteSet.a(param0, param10, 11710);
+          ObjectSpriteSet.setLegacyMenuAnchors(param0, param10, 11710);
           ValidationState.a(param11, param6, param14, 3, param20, param8);
           BoundedRandomAccessFile.legacyFrameHook(25398, param18, param19, param5);
           MeshMaterial.setLegacyMenuColors(param17, param3, param2, -11997);

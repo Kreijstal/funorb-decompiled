@@ -204,7 +204,7 @@ final class MenuInputState {
         Js5Transport.field_a = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo14", -124, spriteArchive, "commonui", fontArchive));
         RasterRestoreSupport.field_b = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo14bold", -93, spriteArchive, "commonui", fontArchive));
         Sprite var17 = new Sprite(legacyArchive.getNamedFile(-4, "", "button.gif"), (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
-        AccountRegistrationPanel.a(spriteArchive, 50, "dropdown", "commonui");
+        AccountRegistrationPanel.loadNamedIndexedSprite(spriteArchive, 50, "dropdown", "commonui");
         IndexedSprite[] var5 = SpriteCheckboxPainter.loadIndexedSprites("commonui", "screen_options", (byte) -65, spriteArchive);
         SoundCache.field_f = new IndexedSprite[4];
         CachedArchiveProvider.field_w = new IndexedSprite[4];

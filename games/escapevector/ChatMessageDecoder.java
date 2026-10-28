@@ -121,7 +121,7 @@ final class ChatMessageDecoder {
           var2.readString(false);
         }
         if (!quickChat) {
-          SelfDestructEffects.field_d = SpriteOffset.a(var2, 10241, 80);
+          SelfDestructEffects.field_d = SpriteOffset.readHuffmanString(var2, 10241, 80);
           Checkbox.field_H = null;
           return new ChatMessage(quickChat);
         }
@@ -145,7 +145,7 @@ final class ChatMessageDecoder {
         if (var7 == 0) {
           return new ChatMessage(quickChat);
         }
-        SelfDestructEffects.field_d = SpriteOffset.a(var2, 10241, 80);
+        SelfDestructEffects.field_d = SpriteOffset.readHuffmanString(var2, 10241, 80);
         Checkbox.field_H = null;
         return new ChatMessage(quickChat);
     }

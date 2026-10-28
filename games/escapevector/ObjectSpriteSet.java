@@ -4,32 +4,32 @@
 final class ObjectSpriteSet {
     static PcmSample field_c;
     static PcmStreamMixer field_e;
-    private Sprite[] field_a;
-    private Sprite[] field_f;
-    private SpriteOffset[] field_g;
+    private Sprite[] sprites;
+    private Sprite[] glowSprites;
+    private SpriteOffset[] glowOffsets;
     static TrackerMusicDefinition[] field_d;
     static boolean field_b;
 
-    private final Sprite a(byte param0, int param1, Sprite param2, Sprite param3, Sprite param4) {
+    private final Sprite cropRotatedSprite(byte guard, int angle, Sprite original, Sprite padded, Sprite rotated) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
-          int var6_int = (param3.fullWidth - param2.fullWidth) / 2;
-          int var7 = (-param2.fullHeight + param3.fullHeight) / 2;
+          int var6_int = (padded.fullWidth - original.fullWidth) / 2;
+          int var7 = (-original.fullHeight + padded.fullHeight) / 2;
           SpriteOffset var12 = new SpriteOffset(var6_int, var7);
-          var6_int = -param2.fullWidth + (param3.fullWidth - var6_int);
-          var7 = -param2.fullHeight + (param3.fullHeight - var7);
+          var6_int = -original.fullWidth + (padded.fullWidth - var6_int);
+          var7 = -original.fullHeight + (padded.fullHeight - var7);
           SpriteOffset var9 = new SpriteOffset(var6_int, var7);
-          SpriteOffset var13 = CanvasRenderSupport.selectQuarterTurnOffset(param1, (byte) 120, var9, var12);
-          SpriteOffset var10 = this.a(param1, param2.fullHeight, -29295, param2.fullWidth);
-          if (param0 <= 21) {
+          SpriteOffset var13 = CanvasRenderSupport.selectQuarterTurnOffset(angle, (byte) 120, var9, var12);
+          SpriteOffset var10 = this.rotatedDimensions(angle, original.fullHeight, -29295, original.fullWidth);
+          if (guard <= 21) {
             ObjectSpriteSet.releaseStatics(104);
           }
           Sprite var11 = new Sprite(var10.x, var10.y);
           SoftwareRasterizer.saveClip(DisplayNameForm.field_M);
           var11.bindAsFramebuffer();
-          param4.drawTransparent(-var13.x, -var13.y);
+          rotated.drawTransparent(-var13.x, -var13.y);
           AlphaContainer.field_D.bindRaster(124);
           SoftwareRasterizer.restoreClip(DisplayNameForm.field_M);
           Sprite stackIn_3_0 = var11;
@@ -38,20 +38,20 @@ final class ObjectSpriteSet {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var6;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("rk.J(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("rk.J(").append(guard).append(',').append(angle).append(',');
+          if (original == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param3 == null) {
+          if (padded == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param4 == null) {
+          if (rotated == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -60,25 +60,25 @@ final class ObjectSpriteSet {
         }
     }
 
-    private final SpriteOffset a(int param0, int param1, int param2, int param3) {
-        int var5 = param3;
-        int var6 = param1;
-        if (param0 == 16384) {
-          var6 = param3;
-          var5 = param1;
+    private final SpriteOffset rotatedDimensions(int angle, int height, int guard, int width) {
+        int var5 = width;
+        int var6 = height;
+        if (angle == 16384) {
+          var6 = width;
+          var5 = height;
         }
-        if (param0 == 32768) {
-          var6 = param1;
-          var5 = param3;
+        if (angle == 32768) {
+          var6 = height;
+          var5 = width;
         }
-        if (param0 == 49152) {
-          var6 = param3;
-          var5 = param1;
+        if (angle == 49152) {
+          var6 = width;
+          var5 = height;
         }
-        if (param2 == -29295) {
+        if (guard == -29295) {
           return new SpriteOffset(var5, var6);
         }
-        this.field_g = (SpriteOffset[]) null;
+        this.glowOffsets = (SpriteOffset[]) null;
         return new SpriteOffset(var5, var6);
     }
 
@@ -91,59 +91,59 @@ final class ObjectSpriteSet {
         }
     }
 
-    final Sprite a(int param0, int param1) {
-        if (param1 == 0) {
-          return this.field_f[0];
+    final Sprite glowSprite(int guard, int angle) {
+        if (angle == 0) {
+          return this.glowSprites[0];
         }
-        if (param1 == 16384) {
-          return this.field_f[1];
+        if (angle == 16384) {
+          return this.glowSprites[1];
         }
-        if (param0 > -63) {
-          ObjectSpriteSet.a(26, -60, 78);
-          if (param1 == 32768) {
-            return this.field_f[2];
+        if (guard > -63) {
+          ObjectSpriteSet.setLegacyMenuAnchors(26, -60, 78);
+          if (angle == 32768) {
+            return this.glowSprites[2];
           }
-          if (param1 == 49152) {
-            return this.field_f[3];
+          if (angle == 49152) {
+            return this.glowSprites[3];
           }
           return null;
         }
-        if (param1 == 32768) {
-          return this.field_f[2];
+        if (angle == 32768) {
+          return this.glowSprites[2];
         }
-        if (param1 == 49152) {
-          return this.field_f[3];
+        if (angle == 49152) {
+          return this.glowSprites[3];
         }
         return null;
     }
 
-    private final SpriteOffset a(Sprite param0, int param1, Sprite param2, SpriteOffset param3) {
+    private final SpriteOffset oppositeGlowOffset(Sprite glow, int guard, Sprite sprite, SpriteOffset offset) {
         String stackIn_19_2 = null;
         String stackIn_22_2 = null;
         String stackIn_25_2 = null;
         try {
-          int var5_int = param2.fullWidth;
-          int var6 = param2.fullHeight;
-          if (param1 != -1) {
+          int var5_int = sprite.fullWidth;
+          int var6 = sprite.fullHeight;
+          if (guard != -1) {
             Sprite var10 = (Sprite) null;
-            Sprite discarded$0 = this.a((Sprite) null, 124, 55);
+            Sprite discarded$0 = this.rotateSprite((Sprite) null, 124, 55);
           }
-          int var7 = param3.x;
-          int var8 = param3.y;
-          if (param0 != null) {
-            if (param3.x < 0) {
-              var5_int = var5_int - param3.x;
+          int var7 = offset.x;
+          int var8 = offset.y;
+          if (glow != null) {
+            if (offset.x < 0) {
+              var5_int = var5_int - offset.x;
             }
-            if (param3.y < 0) {
-              var6 = var6 - param3.y;
+            if (offset.y < 0) {
+              var6 = var6 - offset.y;
             }
-            var7 = var5_int - param0.fullWidth;
-            var8 = -param0.fullHeight + var6;
-            if (param3.x >= 0) {
-              var7 = var7 - param3.x;
+            var7 = var5_int - glow.fullWidth;
+            var8 = -glow.fullHeight + var6;
+            if (offset.x >= 0) {
+              var7 = var7 - offset.x;
             }
-            if (param3.y >= 0) {
-              var8 = var8 - param3.y;
+            if (offset.y >= 0) {
+              var8 = var8 - offset.y;
             }
           }
           SpriteOffset var9 = new SpriteOffset(var7, var8);
@@ -154,19 +154,19 @@ final class ObjectSpriteSet {
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_18_0 = var5;
           StringBuilder stackIn_18_1 = new StringBuilder().append("rk.B(");
-          if (param0 == null) {
+          if (glow == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          StringBuilder stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(',');
+          if (sprite == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
           StringBuilder stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
-          if (param3 == null) {
+          if (offset == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
@@ -175,37 +175,37 @@ final class ObjectSpriteSet {
         }
     }
 
-    final SpriteOffset a(byte param0, int param1) {
-        if (param1 == 0) {
-          return this.field_g[0];
+    final SpriteOffset glowOffset(byte guard, int angle) {
+        if (angle == 0) {
+          return this.glowOffsets[0];
         }
-        if (16384 == param1) {
-          return this.field_g[1];
+        if (16384 == angle) {
+          return this.glowOffsets[1];
         }
-        if (param1 == 32768) {
-          return this.field_g[2];
+        if (angle == 32768) {
+          return this.glowOffsets[2];
         }
-        int var3 = 6 % ((-71 - param0) / 35);
-        if (param1 == 49152) {
-          return this.field_g[3];
+        int var3 = 6 % ((-71 - guard) / 35);
+        if (angle == 49152) {
+          return this.glowOffsets[3];
         }
         return null;
     }
 
-    private final Sprite a(Sprite param0, int param1) {
+    private final Sprite padToSquare(Sprite sprite, int verticalDivisor) {
         String stackIn_8_2 = null;
         try {
-          int var3_int = param0.fullWidth;
-          if (param0.fullHeight > var3_int) {
-            var3_int = param0.fullHeight;
+          int var3_int = sprite.fullWidth;
+          if (sprite.fullHeight > var3_int) {
+            var3_int = sprite.fullHeight;
           }
           Sprite var4 = new Sprite(var3_int, var3_int);
-          int var5 = (var3_int - param0.fullWidth) / 2;
-          int var6 = (-param0.fullHeight + var3_int) / param1;
+          int var5 = (var3_int - sprite.fullWidth) / 2;
+          int var6 = (-sprite.fullHeight + var3_int) / verticalDivisor;
           SoftwareRasterizer.saveClip(DisplayNameForm.field_M);
           var4.bindAsFramebuffer();
-          param0.drawTransparent(var5, var6);
-          AlphaContainer.field_D.bindRaster(param1 ^ 126);
+          sprite.drawTransparent(var5, var6);
+          AlphaContainer.field_D.bindRaster(verticalDivisor ^ 126);
           SoftwareRasterizer.restoreClip(DisplayNameForm.field_M);
           Sprite stackIn_4_0 = var4;
           return stackIn_4_0;
@@ -214,61 +214,61 @@ final class ObjectSpriteSet {
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_7_0 = var3;
           StringBuilder stackIn_7_1 = new StringBuilder().append("rk.A(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(verticalDivisor).append(')').toString());
         }
     }
 
-    final Sprite a(boolean param0, int param1) {
-        if (param0) {
+    final Sprite sprite(boolean guard, int angle) {
+        if (guard) {
           field_e = (PcmStreamMixer) null;
-          if (0 == param1) {
-            return this.field_a[0];
+          if (0 == angle) {
+            return this.sprites[0];
           }
-          if (param1 == 16384) {
-            return this.field_a[1];
+          if (angle == 16384) {
+            return this.sprites[1];
           }
-          if (param1 == 32768) {
-            return this.field_a[2];
+          if (angle == 32768) {
+            return this.sprites[2];
           }
-          if (49152 == param1) {
-            return this.field_a[3];
+          if (49152 == angle) {
+            return this.sprites[3];
           }
           return null;
         }
-        if (0 == param1) {
-          return this.field_a[0];
+        if (0 == angle) {
+          return this.sprites[0];
         }
-        if (param1 == 16384) {
-          return this.field_a[1];
+        if (angle == 16384) {
+          return this.sprites[1];
         }
-        if (param1 == 32768) {
-          return this.field_a[2];
+        if (angle == 32768) {
+          return this.sprites[2];
         }
-        if (49152 == param1) {
-          return this.field_a[3];
+        if (49152 == angle) {
+          return this.sprites[3];
         }
         return null;
     }
 
-    ObjectSpriteSet(Sprite param0, Sprite param1, SpriteOffset param2) {
+    ObjectSpriteSet(Sprite sprite, Sprite glow, SpriteOffset offset) {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
-          this.field_a = new Sprite[DialWidgetPainter.field_h.length];
-          this.field_f = new Sprite[DialWidgetPainter.field_h.length];
-          this.field_g = new SpriteOffset[DialWidgetPainter.field_h.length];
-          for (int var4_int = 0; this.field_a.length > var4_int; var4_int++) {
+          this.sprites = new Sprite[DialWidgetPainter.field_h.length];
+          this.glowSprites = new Sprite[DialWidgetPainter.field_h.length];
+          this.glowOffsets = new SpriteOffset[DialWidgetPainter.field_h.length];
+          for (int var4_int = 0; this.sprites.length > var4_int; var4_int++) {
             int var5 = DialWidgetPainter.field_h[var4_int];
-            this.field_a[var4_int] = this.a(param0, -67, var5);
-            this.field_f[var4_int] = this.a(param1, -53, var5);
-            SpriteOffset var6 = this.a(param1, -1, param0, param2);
-            this.field_g[var4_int] = CanvasRenderSupport.selectQuarterTurnOffset(var5, (byte) 124, var6, param2);
+            this.sprites[var4_int] = this.rotateSprite(sprite, -67, var5);
+            this.glowSprites[var4_int] = this.rotateSprite(glow, -53, var5);
+            SpriteOffset var6 = this.oppositeGlowOffset(glow, -1, sprite, offset);
+            this.glowOffsets[var4_int] = CanvasRenderSupport.selectQuarterTurnOffset(var5, (byte) 124, var6, offset);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -276,19 +276,19 @@ final class ObjectSpriteSet {
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_7_0 = var4;
           StringBuilder stackIn_7_1 = new StringBuilder().append("rk.<init>(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param1 == null) {
+          if (glow == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (offset == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -297,23 +297,23 @@ final class ObjectSpriteSet {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        if (param2 != 11710) {
+    final static void setLegacyMenuAnchors(int secondaryAnchor, int centerX, int guard) {
+        if (guard != 11710) {
           return;
         }
-        ClientException.field_e = param1;
-        LoginDialog.field_nb = param0;
+        ClientException.field_e = centerX;
+        LoginDialog.field_nb = secondaryAnchor;
     }
 
-    private final Sprite a(Sprite param0, int param1, int param2) {
+    private final Sprite rotateSprite(Sprite sprite, int guard, int angle) {
         String stackIn_11_2 = null;
         try {
-          if (param0 == null) {
+          if (sprite == null) {
             return null;
           }
           int var4_int = 4096;
-          Sprite var5 = this.a(param0, 2);
-          if (param1 > -37) {
+          Sprite var5 = this.padToSquare(sprite, 2);
+          if (guard > -37) {
             Sprite stackIn_5_0 = (Sprite) null;
             return stackIn_5_0;
           }
@@ -324,10 +324,10 @@ final class ObjectSpriteSet {
           Sprite var10 = new Sprite(var6, var7);
           SoftwareRasterizer.saveClip(DisplayNameForm.field_M);
           var10.bindAsFramebuffer();
-          var5.drawCenteredRotatedScaled(var8, (byte) 34, var4_int, param2, var9);
+          var5.drawCenteredRotatedScaled(var8, (byte) 34, var4_int, angle, var9);
           AlphaContainer.field_D.bindRaster(124);
           SoftwareRasterizer.restoreClip(DisplayNameForm.field_M);
-          Sprite var11 = this.a((byte) 100, param2, param0, var5, var10);
+          Sprite var11 = this.cropRotatedSprite((byte) 100, angle, sprite, var5, var10);
           Sprite stackIn_7_0 = var11;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -335,12 +335,12 @@ final class ObjectSpriteSet {
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var4;
           StringBuilder stackIn_10_1 = new StringBuilder().append("rk.E(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',').append(angle).append(')').toString());
         }
     }
 

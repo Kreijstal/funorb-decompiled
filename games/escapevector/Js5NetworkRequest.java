@@ -58,7 +58,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
                   SpriteStrip.field_g.decompress(122, var14, var10);
                 }
               } else {
-                Bzip2Decoder.a(var14, var5, bytes, var4, 9);
+                Bzip2Decoder.decompress(var14, var5, bytes, var4, 9);
               }
               byte[] stackIn_23_0 = var6;
               return stackIn_23_0;

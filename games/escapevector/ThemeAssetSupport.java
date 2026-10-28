@@ -29,7 +29,7 @@ final class ThemeAssetSupport {
           do {
             if (!AccountRequestDialog.pollKeyEvent(-126)) {
               HighscorePlayerRecord.field_d.updatePointer(TransitionPoint.hitLoginOrDiscardPrompt(SessionCounterState.field_c, LoginDialog.field_ob, 8158), (byte) 126, TransitionPoint.hitLoginOrDiscardPrompt(GzipDecoder.field_d, UiContainer.field_y, 8158));
-              if (!SpriteOffset.a(true, 0)) {
+              if (!SpriteOffset.handleLoginOrDiscardPrompt(true, 0)) {
                 return (var1_int);
               }
               var1_int = true;
@@ -37,7 +37,7 @@ final class ThemeAssetSupport {
               return (stackIn_21_0);
             }
             HighscorePlayerRecord.field_d.handleKeyEvent((byte) 6);
-          } while (!SpriteOffset.a(false, 0));
+          } while (!SpriteOffset.handleLoginOrDiscardPrompt(false, 0));
           var1_int = true;
           boolean stackIn_17_0 = var1_int;
           return (stackIn_17_0);
@@ -75,7 +75,7 @@ final class ThemeAssetSupport {
         ResourceArchive var4 = IndexedSpriteState.field_j;
         if (5 == theme) {
           AchievementTracker.loadTutorialSprites(var4, 5);
-          SpriteOffset.a((byte) 53);
+          SpriteOffset.resetFrameTiming((byte) 53);
           return true;
         }
         if (theme != 4) {
@@ -85,7 +85,7 @@ final class ThemeAssetSupport {
             PcmResampler.field_a[theme].expandToFullSize();
             DelayedServerPacket.loadSkyLayers(var4, theme, false);
             WeightedLruCache.field_c[theme] = true;
-            SpriteOffset.a((byte) 53);
+            SpriteOffset.resetFrameTiming((byte) 53);
             return true;
           }
           return false;
@@ -94,10 +94,10 @@ final class ThemeAssetSupport {
           ChatMessageDecoder.field_b[theme] = FrameCadenceSupport.field_b.sprites;
           GameModeSelectScreen.field_g[theme] = FrameCadenceSupport.field_b.texture;
           WeightedLruCache.field_c[theme] = true;
-          SpriteOffset.a((byte) 53);
+          SpriteOffset.resetFrameTiming((byte) 53);
           return true;
         }
-        SpriteOffset.a((byte) 53);
+        SpriteOffset.resetFrameTiming((byte) 53);
         return true;
     }
 

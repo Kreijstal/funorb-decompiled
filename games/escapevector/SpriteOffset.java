@@ -9,11 +9,11 @@ final class SpriteOffset {
     static String field_a;
     int y;
 
-    final static boolean a(boolean param0, int param1) {
+    final static boolean handleLoginOrDiscardPrompt(boolean pointerDriven, int guard) {
         if (HighscorePlayerRecord.field_d.selectionChanged) {
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, 8192);
         }
-        if (param1 != 0) {
+        if (guard != 0) {
           return false;
         }
         if (!HighscorePlayerRecord.field_d.isInitialActivation((byte) -18)) {
@@ -32,7 +32,7 @@ final class SpriteOffset {
           GameProgressSupport.field_c = new GameProgressTracker();
           LoginHandshakeSupport.field_d = 0;
           PacketBuffer.field_h = false;
-          AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, param0);
+          AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, pointerDriven);
           ChatMessage.clearFrameOffsets((byte) -66);
           return true;
         }
@@ -53,12 +53,12 @@ final class SpriteOffset {
         field_e = null;
     }
 
-    final static int b(int param0) {
+    final static int pollLegacyMenuAction(int guard) {
         int var7 = EscapeVector.obfuscationControl;
         try {
           boolean var1_int = false;
           boolean var2 = false;
-          if (param0 != -14) {
+          if (guard != -14) {
             field_a = (String) null;
           }
           while (AccountRequestDialog.pollKeyEvent(-108)) {
@@ -80,17 +80,17 @@ final class SpriteOffset {
             LegacyMenuState.input.selectedIndex >= 0) {
             var3 = CachedTextLayout.field_j[LegacyMenuState.input.selectedIndex];
             if (2 == var3) {
-              TextFieldValidator.e(0);
+              TextFieldValidator.clearLegacyMenuState(0);
             } else if (var3 == 5) {
-              TextFieldValidator.e(0);
+              TextFieldValidator.clearLegacyMenuState(0);
             }
           } else if (var2 &&
             ArchiveIndex.field_j != 2) {
-            TextFieldValidator.e(0);
+            TextFieldValidator.clearLegacyMenuState(0);
           }
           if (var3 == 0 &&
             ArchiveIndex.field_j == 2) {
-            long var4 = -SavedDataWrite.field_k + MonotonicClockSupport.monotonicMillis(param0 + 142);
+            long var4 = -SavedDataWrite.field_k + MonotonicClockSupport.monotonicMillis(guard + 142);
             int var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
               LoginText.buildLegacyMenu(5, 0, true);
@@ -102,28 +102,28 @@ final class SpriteOffset {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "fn.E(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "fn.E(" + guard + ')');
         }
     }
 
-    static long a(long param0, long param1) {
-        return param0 & param1;
+    static long bitwiseAnd(long left, long right) {
+        return left & right;
     }
 
-    final static String a(PacketBuffer param0, int param1, int param2) {
+    final static String readHuffmanString(PacketBuffer input, int guard, int maximumLength) {
         String stackIn_11_2 = null;
         Throwable decompiledCaughtException = null;
         try {
           try {
-            if (param1 != 10241) {
+            if (guard != 10241) {
               field_a = (String) null;
             }
-            int var3_int = param0.readUnsignedSmart(true);
-            if (param2 < var3_int) {
-              var3_int = param2;
+            int var3_int = input.readUnsignedSmart(true);
+            if (maximumLength < var3_int) {
+              var3_int = maximumLength;
             }
             byte[] var4 = new byte[var3_int];
-            param0.position = param0.position + ReflectionCheck.field_q.decode(var4, true, 0, param0.position, var3_int, param0.payload);
+            input.position = input.position + ReflectionCheck.field_q.decode(var4, true, 0, input.position, var3_int, input.payload);
             String var5 = AccountMessagePanel.decodeCp1252(var3_int, 0, var4, (byte) -94);
             String stackIn_5_0 = var5;
             return stackIn_5_0;
@@ -138,63 +138,63 @@ final class SpriteOffset {
           RuntimeException var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           RuntimeException stackIn_10_0 = var3_ref;
           StringBuilder stackIn_10_1 = new StringBuilder().append("fn.G(");
-          if (param0 == null) {
+          if (input == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',').append(maximumLength).append(')').toString());
         }
     }
 
-    final static boolean a(char param0, byte param1) {
-        if (Character.isISOControl(param0)) {
+    final static boolean isAccountNameCharacter(char character, byte guard) {
+        if (Character.isISOControl(character)) {
           return false;
         }
-        if (TextWidgetPainter.isAsciiAlphanumeric(true, param0)) {
+        if (TextWidgetPainter.isAsciiAlphanumeric(true, character)) {
           return true;
         }
-        if (param1 != -124) {
+        if (guard != -124) {
           field_d = (String) null;
-          if (45 == param0) {
+          if (45 == character) {
             return true;
           }
-          if (param0 == 160) {
+          if (character == 160) {
             return true;
           }
-          if (param0 == 32) {
+          if (character == 32) {
             return true;
           }
-          if (param0 != 95) {
+          if (character != 95) {
             return false;
           }
           return true;
         }
-        if (45 == param0) {
+        if (45 == character) {
           return true;
         }
-        if (param0 == 160) {
+        if (character == 160) {
           return true;
         }
-        if (param0 == 32) {
+        if (character == 32) {
           return true;
         }
-        if (param0 != 95) {
+        if (character != 95) {
           return false;
         }
         return true;
     }
 
-    SpriteOffset(int param0, int param1) {
-        this.y = param1;
-        this.x = param0;
+    SpriteOffset(int x, int y) {
+        this.y = y;
+        this.x = x;
     }
 
-    final static void a(byte param0) {
+    final static void resetFrameTiming(byte guard) {
         int var2 = EscapeVector.obfuscationControl;
         try {
-          if (param0 <= 30) {
-            SpriteOffset.a((byte) 80);
+          if (guard <= 30) {
+            SpriteOffset.resetFrameTiming((byte) 80);
           }
           IntrusiveNodeHashTable.field_f.resetTiming(237);
           for (int var1_int = 0; 32 > var1_int; var1_int++) {
@@ -205,7 +205,7 @@ final class SpriteOffset {
           }
           Js5NetworkRequest.field_z = 0;
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fn.F(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fn.F(" + guard + ')');
         }
     }
 

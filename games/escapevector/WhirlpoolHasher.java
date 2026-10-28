@@ -186,7 +186,7 @@ final class WhirlpoolHasher {
         int var2 = 0;
         int var3 = 0;
         while (var2 < 8) {
-          this.field_i[var2] = DisplayModeInfo.bitwiseOr(DisplayModeInfo.bitwiseOr(SpriteOffset.a((long)this.field_h[6 + var3] << 8, 65280L), DisplayModeInfo.bitwiseOr(SpriteOffset.a(16711680L, (long)this.field_h[5 + var3] << 16), DisplayModeInfo.bitwiseOr(SpriteOffset.a(255L, (long)this.field_h[var3 + 4]) << 24, DisplayModeInfo.bitwiseOr(SpriteOffset.a(255L, (long)this.field_h[3 + var3]) << 32, DisplayModeInfo.bitwiseOr(SpriteOffset.a(255L, (long)this.field_h[2 + var3]) << 40, DisplayModeInfo.bitwiseOr(SpriteOffset.a(71776119061217280L, (long)this.field_h[var3 + 1] << 48), (long)this.field_h[var3] << 56)))))), SpriteOffset.a((long)this.field_h[7 + var3], 255L));
+          this.field_i[var2] = DisplayModeInfo.bitwiseOr(DisplayModeInfo.bitwiseOr(SpriteOffset.bitwiseAnd((long)this.field_h[6 + var3] << 8, 65280L), DisplayModeInfo.bitwiseOr(SpriteOffset.bitwiseAnd(16711680L, (long)this.field_h[5 + var3] << 16), DisplayModeInfo.bitwiseOr(SpriteOffset.bitwiseAnd(255L, (long)this.field_h[var3 + 4]) << 24, DisplayModeInfo.bitwiseOr(SpriteOffset.bitwiseAnd(255L, (long)this.field_h[3 + var3]) << 32, DisplayModeInfo.bitwiseOr(SpriteOffset.bitwiseAnd(255L, (long)this.field_h[2 + var3]) << 40, DisplayModeInfo.bitwiseOr(SpriteOffset.bitwiseAnd(71776119061217280L, (long)this.field_h[var3 + 1] << 48), (long)this.field_h[var3] << 56)))))), SpriteOffset.bitwiseAnd((long)this.field_h[7 + var3], 255L));
           var2++;
           var3 += 8;
         }

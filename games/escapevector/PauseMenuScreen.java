@@ -179,7 +179,7 @@ final class PauseMenuScreen {
             if (IterableNodeHashTable.field_c < 0) {
               IterableNodeHashTable.field_c = 0;
             }
-            TrackerMusicDefinition.d(8192);
+            TrackerMusicDefinition.playFootstep(8192);
           }
           if (PauseMenuState.input.isRightPressed(-98) &&
             64 > IterableNodeHashTable.field_c) {
@@ -187,15 +187,15 @@ final class PauseMenuScreen {
             if (IterableNodeHashTable.field_c > 64) {
               IterableNodeHashTable.field_c = 64;
             }
-            TrackerMusicDefinition.d(8192);
+            TrackerMusicDefinition.playFootstep(8192);
           }
           if (PauseMenuState.input.isHomePressed(-10809)) {
             IterableNodeHashTable.field_c = 0;
-            TrackerMusicDefinition.d(8192);
+            TrackerMusicDefinition.playFootstep(8192);
           }
           if (PauseMenuState.input.isEndPressed(0)) {
             IterableNodeHashTable.field_c = 64;
-            TrackerMusicDefinition.d(8192);
+            TrackerMusicDefinition.playFootstep(8192);
           }
           if (PauseMenuState.input.isPointerHeld(false)) {
             int var3 = ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N);
@@ -212,10 +212,10 @@ final class PauseMenuScreen {
             if (PauseMenuState.input.isInitialActivation((byte) -18) ||
               var7 != IterableNodeHashTable.field_c) {
               IterableNodeHashTable.field_c = var7;
-              TrackerMusicDefinition.d(8192);
+              TrackerMusicDefinition.playFootstep(8192);
             }
           } else if (PauseMenuState.input.isInitialActivation((byte) -18)) {
-            TrackerMusicDefinition.d(8192);
+            TrackerMusicDefinition.playFootstep(8192);
           }
         }
         if (guard < 121) {
@@ -230,7 +230,7 @@ final class PauseMenuScreen {
             }
             TrackerMusicPlayer var10 = DraggableWidget.field_N;
             if (var10 != null) {
-              var10.d(MembershipPromotionSupport.field_b * GrowableIntList.field_b / 64);
+              var10.setMasterVolume(MembershipPromotionSupport.field_b * GrowableIntList.field_b / 64);
             }
           }
           if (PauseMenuState.input.isRightPressed(-98) &&
@@ -241,21 +241,21 @@ final class PauseMenuScreen {
             }
             TrackerMusicPlayer var11 = DraggableWidget.field_N;
             if (var11 != null) {
-              var11.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
+              var11.setMasterVolume(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
             }
           }
           if (PauseMenuState.input.isHomePressed(-10809)) {
             MembershipPromotionSupport.field_b = 0;
             TrackerMusicPlayer var12 = DraggableWidget.field_N;
             if (var12 != null) {
-              var12.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
+              var12.setMasterVolume(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
             }
           }
           if (PauseMenuState.input.isEndPressed(0)) {
             MembershipPromotionSupport.field_b = 64;
             TrackerMusicPlayer var13 = DraggableWidget.field_N;
             if (var13 != null) {
-              var13.d(MembershipPromotionSupport.field_b * GrowableIntList.field_b / 64);
+              var13.setMasterVolume(MembershipPromotionSupport.field_b * GrowableIntList.field_b / 64);
             }
           }
           if (PauseMenuState.input.isPointerHeld(false)) {
@@ -273,7 +273,7 @@ final class PauseMenuScreen {
             MembershipPromotionSupport.field_b = var7Lifetime1;
             TrackerMusicPlayer var8 = DraggableWidget.field_N;
             if (var8 != null) {
-              var8.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
+              var8.setMasterVolume(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
             }
           }
         }

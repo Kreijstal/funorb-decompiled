@@ -130,10 +130,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           return null;
         }
         if (param1 == -39) {
-          return var5[param2].a(false, param0);
+          return var5[param2].sprite(false, param0);
         }
         TextWidgetPainter.isAsciiAlphanumeric(true, '￾');
-        return var5[param2].a(false, param0);
+        return var5[param2].sprite(false, param0);
     }
 
     public void drawWidget(int originX, int originY, int guard, UiComponent component, boolean enabled) {

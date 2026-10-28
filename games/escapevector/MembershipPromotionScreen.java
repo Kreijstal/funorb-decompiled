@@ -51,7 +51,7 @@ final class MembershipPromotionScreen {
           ModeProgressSupport.field_e.ensureIndex(0) &&
           ModeProgressSupport.field_e.tryLoadNamedGroup(0, "arialish12") &&
           ModeProgressSupport.field_e.tryLoadNamedGroup(0, "pump32")) {
-          TriangleMesh.field_z = AccountRegistrationPanel.a(ThreeSliceButtonPainter.field_x, 54, "frame", "members_expansion_screen");
+          TriangleMesh.field_z = AccountRegistrationPanel.loadNamedIndexedSprite(ThreeSliceButtonPainter.field_x, 54, "frame", "members_expansion_screen");
           TrackerMusicLoader.field_c = MembershipPromotionScreen.loadNamedSprite("members_expansion_screen", ThreeSliceButtonPainter.field_x, "arrow", true);
           KeyboardStateSupport.field_c = DisplayNameForm.loadBinaryFont(4, ModeProgressSupport.field_e, "arialish12", "", ThreeSliceButtonPainter.field_x);
           ReflectionCheck.field_h = KeyboardStateSupport.loadCoverageFont("", -73, ThreeSliceButtonPainter.field_x, "pump32", ModeProgressSupport.field_e);

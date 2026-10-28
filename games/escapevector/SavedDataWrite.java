@@ -3,7 +3,7 @@
  */
 final class SavedDataWrite extends IntrusiveNode {
     static long field_k;
-    static int[] field_l;
+    static int[] bzip2Transform;
     int crc32;
     static String field_m;
     static BufferedRandomAccessFile field_h;
@@ -17,7 +17,7 @@ final class SavedDataWrite extends IntrusiveNode {
           return;
         }
         field_g = null;
-        field_l = null;
+        bzip2Transform = null;
     }
 
     SavedDataWrite(byte[] payload) {

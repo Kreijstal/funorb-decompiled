@@ -366,7 +366,7 @@ final class MainMenuScreen {
               if (0 > IterableNodeHashTable.field_c) {
                 IterableNodeHashTable.field_c = 0;
               }
-              TrackerMusicDefinition.d(8192);
+              TrackerMusicDefinition.playFootstep(8192);
             }
             if (this.input.isRightPressed(-98) &&
               IterableNodeHashTable.field_c < 64) {
@@ -374,19 +374,19 @@ final class MainMenuScreen {
               if (IterableNodeHashTable.field_c > 64) {
                 IterableNodeHashTable.field_c = 64;
               }
-              TrackerMusicDefinition.d(8192);
+              TrackerMusicDefinition.playFootstep(8192);
             }
             if (this.input.isHomePressed(-10809)) {
               IterableNodeHashTable.field_c = 0;
-              TrackerMusicDefinition.d(8192);
+              TrackerMusicDefinition.playFootstep(8192);
             }
             if (this.input.isEndPressed(0)) {
               IterableNodeHashTable.field_c = 64;
-              TrackerMusicDefinition.d(8192);
+              TrackerMusicDefinition.playFootstep(8192);
             }
             if (!this.input.isPointerHeld(false) &&
               (decompiledFrameRemainder0 = !(!this.input.isInitialActivation((byte) -18)))) {
-              TrackerMusicDefinition.d(guard ^ -4977);
+              TrackerMusicDefinition.playFootstep(guard ^ -4977);
               decompiledFrameRemainder0 = (var10 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -407,7 +407,7 @@ final class MainMenuScreen {
               if (this.input.isInitialActivation((byte) -18) ||
                 ~IterableNodeHashTable.field_c != ~var8) {
                 IterableNodeHashTable.field_c = var8;
-                TrackerMusicDefinition.d(8192);
+                TrackerMusicDefinition.playFootstep(8192);
               }
             }
           }
@@ -420,7 +420,7 @@ final class MainMenuScreen {
               }
               TrackerMusicPlayer var4_ref_o = DraggableWidget.field_N;
               if (null != var4_ref_o) {
-                var4_ref_o.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
+                var4_ref_o.setMasterVolume(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
               }
             }
             if (this.input.isRightPressed(-98) &&
@@ -431,21 +431,21 @@ final class MainMenuScreen {
               }
               TrackerMusicPlayer var4_ref_oLifetime1 = DraggableWidget.field_N;
               if (null != var4_ref_oLifetime1) {
-                var4_ref_oLifetime1.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
+                var4_ref_oLifetime1.setMasterVolume(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
               }
             }
             if (this.input.isHomePressed(-10809)) {
               MembershipPromotionSupport.field_b = 0;
               TrackerMusicPlayer var4_ref_oLifetime2 = DraggableWidget.field_N;
               if (var4_ref_oLifetime2 != null) {
-                var4_ref_oLifetime2.d(MembershipPromotionSupport.field_b * GrowableIntList.field_b / 64);
+                var4_ref_oLifetime2.setMasterVolume(MembershipPromotionSupport.field_b * GrowableIntList.field_b / 64);
               }
             }
             if (this.input.isEndPressed(0)) {
               MembershipPromotionSupport.field_b = 64;
               TrackerMusicPlayer var4_ref_oLifetime3 = DraggableWidget.field_N;
               if (var4_ref_oLifetime3 != null) {
-                var4_ref_oLifetime3.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
+                var4_ref_oLifetime3.setMasterVolume(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
               }
             }
             if (this.input.isPointerHeld(false)) {
@@ -467,7 +467,7 @@ final class MainMenuScreen {
               MembershipPromotionSupport.field_b = var8Lifetime1;
               TrackerMusicPlayer var9 = DraggableWidget.field_N;
               if (var9 != null) {
-                var9.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
+                var9.setMasterVolume(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
               }
             }
           }

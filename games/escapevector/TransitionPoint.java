@@ -107,7 +107,7 @@ final class TransitionPoint {
             IntroFrameRenderer.drawIntroFrame(240, 320, guard ^ 72);
             SecondaryNodeHashTable.presentRaster(canvas, 0, -1, 0);
           } else if (QuickChatPhraseCache.field_e != 0) {
-            TextFieldValidator.a(canvas, 0);
+            TextFieldValidator.drawLoadingProgress(canvas, 0);
           } else {
             MenuInputState.drawAccountOverlay(option, 1983, false);
             SecondaryNodeHashTable.presentRaster(canvas, 0, -1, 0);

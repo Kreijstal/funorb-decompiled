@@ -40,7 +40,7 @@ final class AlphaContainer extends SingleChildContainer {
             try {
               java.net.URL var3 = new java.net.URL(applet.getCodeBase(), relativeUrl);
               var3 = WeightedCacheEntry.withSessionParameters((byte) 95, applet, var3);
-              Bzip2State.a(true, true, applet, var3.toString());
+              Bzip2State.openBrowserUrl(true, true, applet, var3.toString());
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Exception var3_ref2 = (Exception) (Object) decompiledCaughtException;

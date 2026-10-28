@@ -2,42 +2,42 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Bzip2State {
-    int field_F;
-    int field_k;
-    byte field_t;
-    int field_m;
-    int[] field_c;
-    int[][] field_I;
-    int field_b;
-    int[][] field_H;
-    boolean[] field_d;
+    int bitCount;
+    int transformPosition;
+    byte outputByte;
+    int bitBuffer;
+    int[] minimumCodeLengths;
+    int[][] huffmanPermutations;
+    int repeatRemaining;
+    int[][] huffmanLimits;
+    boolean[] symbolsInUse;
     static int field_p;
-    int field_e;
-    int field_g;
+    int inputPosition;
+    int originalPointer;
     static int[] field_y;
-    int field_u;
-    byte[] field_o;
-    int field_J;
-    byte[] field_z;
-    byte[] field_w;
-    int field_n;
-    int[] field_j;
-    int[][] field_a;
-    int field_h;
-    byte[] field_E;
-    int field_C;
-    int field_x;
+    int blockBytesUsed;
+    byte[] mtfSymbols;
+    int outputRemaining;
+    byte[] input;
+    byte[] symbolMap;
+    int totalOutputBytes;
+    int[] symbolFrequencies;
+    int[][] huffmanBases;
+    int usedSymbolCount;
+    byte[] selectorMtf;
+    int outputPosition;
+    int blockLength;
     static int[] field_v;
-    byte[][] field_q;
-    int field_A;
-    int[] field_r;
+    byte[][] codeLengths;
+    int totalInputBytes;
+    int[] mtfBaseIndices;
     static PcmSample field_G;
-    boolean[] field_f;
-    int field_l;
-    byte[] field_D;
-    int[] field_B;
-    int field_i;
-    byte[] field_s;
+    boolean[] symbolGroupsInUse;
+    int nextByte;
+    byte[] output;
+    int[] cumulativeFrequencies;
+    int blockSize100k;
+    byte[] selectors;
 
     public static void releaseStatics(int guard) {
         field_y = null;
@@ -50,24 +50,24 @@ final class Bzip2State {
         field_v = null;
     }
 
-    final static void a(boolean param0, boolean param1, java.applet.Applet param2, String param3) {
+    final static void openBrowserUrl(boolean guard, boolean unusedFlag, java.applet.Applet applet, String url) {
         try {
           String stackIn_14_2 = null;
           String stackIn_17_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (SystemTaskService.osNameLowerCase.startsWith("win") &&
-              RasterRestoreSupport.openWindowsUrl((byte) 38, param3)) {
+              RasterRestoreSupport.openWindowsUrl((byte) 38, url)) {
               return;
             }
             try {
-              param2.getAppletContext().showDocument(new java.net.URL(param3), "_blank");
+              applet.getAppletContext().showDocument(new java.net.URL(url), "_blank");
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               java.net.MalformedURLException var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              GameModeSelectScreen.reportClientError(false, "MGR1: " + param3, (Throwable) null);
+              GameModeSelectScreen.reportClientError(false, "MGR1: " + url, (Throwable) null);
             }
-            if (param0) {
+            if (guard) {
               return;
             }
             field_p = -75;
@@ -76,14 +76,14 @@ final class Bzip2State {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var4 = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_13_0 = var4;
-            StringBuilder stackIn_13_1 = new StringBuilder().append("th.B(").append(param0).append(',').append(param1).append(',');
-            if (param2 == null) {
+            StringBuilder stackIn_13_1 = new StringBuilder().append("th.B(").append(guard).append(',').append(unusedFlag).append(',');
+            if (applet == null) {
               stackIn_14_2 = "null";
             } else {
               stackIn_14_2 = "{...}";
             }
             StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-            if (param3 == null) {
+            if (url == null) {
               stackIn_17_2 = "null";
             } else {
               stackIn_17_2 = "{...}";
@@ -98,22 +98,22 @@ final class Bzip2State {
     }
 
     Bzip2State() {
-        this.field_d = new boolean[256];
-        this.field_o = new byte[4096];
-        this.field_I = new int[6][258];
-        this.field_w = new byte[256];
-        this.field_e = 0;
-        this.field_a = new int[6][258];
-        this.field_C = 0;
-        this.field_j = new int[256];
-        this.field_q = new byte[6][258];
-        this.field_H = new int[6][258];
-        this.field_f = new boolean[16];
-        this.field_B = new int[257];
-        this.field_c = new int[6];
-        this.field_r = new int[16];
-        this.field_E = new byte[18002];
-        this.field_s = new byte[18002];
+        this.symbolsInUse = new boolean[256];
+        this.mtfSymbols = new byte[4096];
+        this.huffmanPermutations = new int[6][258];
+        this.symbolMap = new byte[256];
+        this.inputPosition = 0;
+        this.huffmanBases = new int[6][258];
+        this.outputPosition = 0;
+        this.symbolFrequencies = new int[256];
+        this.codeLengths = new byte[6][258];
+        this.huffmanLimits = new int[6][258];
+        this.symbolGroupsInUse = new boolean[16];
+        this.cumulativeFrequencies = new int[257];
+        this.minimumCodeLengths = new int[6];
+        this.mtfBaseIndices = new int[16];
+        this.selectorMtf = new byte[18002];
+        this.selectors = new byte[18002];
     }
 
     static {

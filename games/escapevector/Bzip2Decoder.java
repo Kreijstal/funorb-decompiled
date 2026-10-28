@@ -2,116 +2,116 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Bzip2Decoder {
-    private static Bzip2State field_a;
+    private static Bzip2State state;
 
-    private final static int a(int param0, Bzip2State param1) {
-        while (param1.field_F < param0) {
-          param1.field_m = param1.field_m << 8 | param1.field_z[param1.field_e] & 255;
-          param1.field_F = param1.field_F + 8;
-          param1.field_e = param1.field_e + 1;
-          param1.field_A = param1.field_A + 1;
-          if (param1.field_A != 0) {
+    private final static int readBits(int count, Bzip2State state) {
+        while (state.bitCount < count) {
+          state.bitBuffer = state.bitBuffer << 8 | state.input[state.inputPosition] & 255;
+          state.bitCount = state.bitCount + 8;
+          state.inputPosition = state.inputPosition + 1;
+          state.totalInputBytes = state.totalInputBytes + 1;
+          if (state.totalInputBytes != 0) {
             continue;
           }
         }
-        int var2 = param1.field_m >> param1.field_F - param0 & (1 << param0) - 1;
-        param1.field_F = param1.field_F - param0;
+        int var2 = state.bitBuffer >> state.bitCount - count & (1 << count) - 1;
+        state.bitCount = state.bitCount - count;
         return var2;
     }
 
-    private final static byte a(Bzip2State param0) {
-        return (byte)Bzip2Decoder.a(8, param0);
+    private final static byte readByte(Bzip2State state) {
+        return (byte)Bzip2Decoder.readBits(8, state);
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompress(byte[] output, int outputLength, byte[] input, int unusedCompressedLength, int inputOffset) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
-        Object var5 = field_a;
+        Object var5 = state;
         synchronized (var5) {
-          field_a.field_z = param2;
-          field_a.field_e = param4;
-          field_a.field_D = param0;
-          field_a.field_C = 0;
-          field_a.field_J = param1;
-          field_a.field_F = 0;
-          field_a.field_m = 0;
-          field_a.field_A = 0;
-          field_a.field_n = 0;
-          Bzip2Decoder.b(field_a);
-          param1 = param1 - field_a.field_J;
-          field_a.field_z = null;
-          field_a.field_D = null;
-          stackIn_2_0 = param1;
+          state.input = input;
+          state.inputPosition = inputOffset;
+          state.output = output;
+          state.outputPosition = 0;
+          state.outputRemaining = outputLength;
+          state.bitCount = 0;
+          state.bitBuffer = 0;
+          state.totalInputBytes = 0;
+          state.totalOutputBytes = 0;
+          Bzip2Decoder.decodeBlocks(state);
+          outputLength = outputLength - state.outputRemaining;
+          state.input = null;
+          state.output = null;
+          stackIn_2_0 = outputLength;
         }
         return stackIn_2_0;
     }
 
-    private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
+    private final static void buildHuffmanTables(int[] limits, int[] bases, int[] permutation, byte[] lengths, int minimumLength, int maximumLength, int symbolCount) {
         int var7 = 0;
-        for (int var8 = param4; var8 <= param5; var8++) {
-          for (int var9 = 0; var9 < param6; var9++) {
-            if (param3[var9] == var8) {
-              param2[var7] = var9;
+        for (int var8 = minimumLength; var8 <= maximumLength; var8++) {
+          for (int var9 = 0; var9 < symbolCount; var9++) {
+            if (lengths[var9] == var8) {
+              permutation[var7] = var9;
               var7++;
             }
           }
         }
         for (int var8Lifetime1 = 0; var8Lifetime1 < 23; var8Lifetime1++) {
-          param1[var8Lifetime1] = 0;
+          bases[var8Lifetime1] = 0;
         }
-        for (int var8Lifetime2 = 0; var8Lifetime2 < param6; var8Lifetime2++) {
-          int dupTemp$0 = param3[var8Lifetime2] + 1;
-          param1[dupTemp$0] = param1[dupTemp$0] + 1;
+        for (int var8Lifetime2 = 0; var8Lifetime2 < symbolCount; var8Lifetime2++) {
+          int dupTemp$0 = lengths[var8Lifetime2] + 1;
+          bases[dupTemp$0] = bases[dupTemp$0] + 1;
         }
         for (int var8Lifetime3 = 1; var8Lifetime3 < 23; var8Lifetime3++) {
-          param1[var8Lifetime3] = param1[var8Lifetime3] + param1[var8Lifetime3 - 1];
+          bases[var8Lifetime3] = bases[var8Lifetime3] + bases[var8Lifetime3 - 1];
         }
         for (int var8Lifetime4 = 0; var8Lifetime4 < 23; var8Lifetime4++) {
-          param0[var8Lifetime4] = 0;
+          limits[var8Lifetime4] = 0;
         }
         int var10 = 0;
-        for (int var8Lifetime5 = param4; var8Lifetime5 <= param5; var8Lifetime5++) {
-          var10 = var10 + (param1[var8Lifetime5 + 1] - param1[var8Lifetime5]);
-          param0[var8Lifetime5] = var10 - 1;
+        for (int var8Lifetime5 = minimumLength; var8Lifetime5 <= maximumLength; var8Lifetime5++) {
+          var10 = var10 + (bases[var8Lifetime5 + 1] - bases[var8Lifetime5]);
+          limits[var8Lifetime5] = var10 - 1;
           var10 = var10 << 1;
         }
-        for (int var8Lifetime6 = param4 + 1; var8Lifetime6 <= param5; var8Lifetime6++) {
-          param1[var8Lifetime6] = (param0[var8Lifetime6 - 1] + 1 << 1) - param1[var8Lifetime6];
+        for (int var8Lifetime6 = minimumLength + 1; var8Lifetime6 <= maximumLength; var8Lifetime6++) {
+          bases[var8Lifetime6] = (limits[var8Lifetime6 - 1] + 1 << 1) - bases[var8Lifetime6];
         }
     }
 
     public static void releaseStatics() {
-        field_a = null;
+        state = null;
     }
 
-    private final static byte c(Bzip2State param0) {
-        return (byte)Bzip2Decoder.a(1, param0);
+    private final static byte readBit(Bzip2State state) {
+        return (byte)Bzip2Decoder.readBits(1, state);
     }
 
-    private final static void e(Bzip2State param0) {
-        param0.field_h = 0;
+    private final static void buildSymbolMap(Bzip2State state) {
+        state.usedSymbolCount = 0;
         for (int var1 = 0; var1 < 256; var1++) {
-          if (param0.field_d[var1]) {
-            param0.field_w[param0.field_h] = (byte)var1;
-            param0.field_h = param0.field_h + 1;
+          if (state.symbolsInUse[var1]) {
+            state.symbolMap[state.usedSymbolCount] = (byte)var1;
+            state.usedSymbolCount = state.usedSymbolCount + 1;
           }
         }
     }
 
-    private final static void d(Bzip2State param0) {
-        int var2 = param0.field_t;
-        int var3 = param0.field_b;
-        int var4 = param0.field_u;
-        int var5 = param0.field_l;
-        int[] var15 = SavedDataWrite.field_l;
+    private final static void writeDecodedRuns(Bzip2State state) {
+        int var2 = state.outputByte;
+        int var3 = state.repeatRemaining;
+        int var4 = state.blockBytesUsed;
+        int var5 = state.nextByte;
+        int[] var15 = SavedDataWrite.bzip2Transform;
         int[] var14 = var15;
         int[] var6 = var14;
-        int var7 = param0.field_k;
-        byte[] var8 = param0.field_D;
-        int var9 = param0.field_C;
-        int var10 = param0.field_J;
+        int var7 = state.transformPosition;
+        byte[] var8 = state.output;
+        int var9 = state.outputPosition;
+        int var10 = state.outputRemaining;
         int var11 = var10;
-        int var12 = param0.field_x + 1;
+        int var12 = state.blockLength + 1;
         scanLoop1: while (true) {
           if (var3 > 0) {
             while (true) {
@@ -197,23 +197,23 @@ final class Bzip2Decoder {
           var3 = 0;
           break;
         }
-        int var13 = param0.field_n;
-        param0.field_n = param0.field_n + (var11 - var10);
-        if (param0.field_n >= var13) {
+        int var13 = state.totalOutputBytes;
+        state.totalOutputBytes = state.totalOutputBytes + (var11 - var10);
+        if (state.totalOutputBytes >= var13) {
         }
-        param0.field_t = (byte) var2;
-        param0.field_b = var3;
-        param0.field_u = var4;
-        param0.field_l = var5;
-        SavedDataWrite.field_l = var6;
-        param0.field_k = var7;
-        param0.field_D = var8;
-        param0.field_C = var9;
-        param0.field_J = var10;
+        state.outputByte = (byte) var2;
+        state.repeatRemaining = var3;
+        state.blockBytesUsed = var4;
+        state.nextByte = var5;
+        SavedDataWrite.bzip2Transform = var6;
+        state.transformPosition = var7;
+        state.output = var8;
+        state.outputPosition = var9;
+        state.outputRemaining = var10;
         return;
     }
 
-    private final static void b(Bzip2State param0) {
+    private final static void decodeBlocks(Bzip2State state) {
         int var27;
         int var28;
         int var30;
@@ -225,75 +225,75 @@ final class Bzip2Decoder {
         Object var23 = null;
         Object var24 = null;
         Object var25 = null;
-        param0.field_i = 1;
-        if (SavedDataWrite.field_l == null) {
-          SavedDataWrite.field_l = new int[param0.field_i * 100000];
+        state.blockSize100k = 1;
+        if (SavedDataWrite.bzip2Transform == null) {
+          SavedDataWrite.bzip2Transform = new int[state.blockSize100k * 100000];
         }
         boolean var26 = true;
         while (true) {
           if (!var26) {
             return;
           }
-          int var1 = Bzip2Decoder.a(param0);
+          int var1 = Bzip2Decoder.readByte(state);
           if (var1 == 23) {
             return;
           }
-          var1 = Bzip2Decoder.a(param0);
-          var1 = Bzip2Decoder.a(param0);
-          var1 = Bzip2Decoder.a(param0);
-          var1 = Bzip2Decoder.a(param0);
-          var1 = Bzip2Decoder.a(param0);
-          var1 = Bzip2Decoder.a(param0);
-          var1 = Bzip2Decoder.a(param0);
-          var1 = Bzip2Decoder.a(param0);
-          var1 = Bzip2Decoder.a(param0);
-          var1 = Bzip2Decoder.c(param0);
+          var1 = Bzip2Decoder.readByte(state);
+          var1 = Bzip2Decoder.readByte(state);
+          var1 = Bzip2Decoder.readByte(state);
+          var1 = Bzip2Decoder.readByte(state);
+          var1 = Bzip2Decoder.readByte(state);
+          var1 = Bzip2Decoder.readByte(state);
+          var1 = Bzip2Decoder.readByte(state);
+          var1 = Bzip2Decoder.readByte(state);
+          var1 = Bzip2Decoder.readByte(state);
+          var1 = Bzip2Decoder.readBit(state);
           if (var1 == 0) {
           }
-          param0.field_g = 0;
-          var1 = Bzip2Decoder.a(param0);
-          param0.field_g = param0.field_g << 8 | var1 & 255;
-          var1 = Bzip2Decoder.a(param0);
-          param0.field_g = param0.field_g << 8 | var1 & 255;
-          var1 = Bzip2Decoder.a(param0);
-          param0.field_g = param0.field_g << 8 | var1 & 255;
+          state.originalPointer = 0;
+          var1 = Bzip2Decoder.readByte(state);
+          state.originalPointer = state.originalPointer << 8 | var1 & 255;
+          var1 = Bzip2Decoder.readByte(state);
+          state.originalPointer = state.originalPointer << 8 | var1 & 255;
+          var1 = Bzip2Decoder.readByte(state);
+          state.originalPointer = state.originalPointer << 8 | var1 & 255;
           for (var4 = 0; var4 < 16; var4++) {
-            var1 = Bzip2Decoder.c(param0);
+            var1 = Bzip2Decoder.readBit(state);
             if (var1 != 1) {
-              param0.field_f[var4] = false;
+              state.symbolGroupsInUse[var4] = false;
             } else {
-              param0.field_f[var4] = true;
+              state.symbolGroupsInUse[var4] = true;
             }
           }
           for (var4 = 0; var4 < 256; var4++) {
-            param0.field_d[var4] = false;
+            state.symbolsInUse[var4] = false;
           }
           for (var4 = 0; var4 < 16; var4++) {
-            if (param0.field_f[var4]) {
+            if (state.symbolGroupsInUse[var4]) {
               for (var5 = 0; var5 < 16; var5++) {
-                var1 = Bzip2Decoder.c(param0);
+                var1 = Bzip2Decoder.readBit(state);
                 if (var1 == 1) {
-                  param0.field_d[var4 * 16 + var5] = true;
+                  state.symbolsInUse[var4 * 16 + var5] = true;
                 }
               }
             }
           }
-          Bzip2Decoder.e(param0);
-          int var7 = param0.field_h + 2;
-          int var8 = Bzip2Decoder.a(3, param0);
-          int var9 = Bzip2Decoder.a(15, param0);
+          Bzip2Decoder.buildSymbolMap(state);
+          int var7 = state.usedSymbolCount + 2;
+          int var8 = Bzip2Decoder.readBits(3, state);
+          int var9 = Bzip2Decoder.readBits(15, state);
           var4 = 0;
           while (var4 < var9) {
             var5 = 0;
             while (true) {
-              var1 = Bzip2Decoder.c(param0);
+              var1 = Bzip2Decoder.readBit(state);
               if (var1 != 0) {
                 var5++;
                 continue;
               }
               break;
             }
-            param0.field_E[var4] = (byte)var5;
+            state.selectorMtf[var4] = (byte)var5;
             var4++;
           }
           byte[] var37 = new byte[6];
@@ -305,18 +305,18 @@ final class Bzip2Decoder {
             var29 = (byte)(var29 + 1);
           }
           for (var4 = 0; var4 < var9; var4++) {
-            var29 = param0.field_E[var4];
+            var29 = state.selectorMtf[var4];
             var28 = var37[var29];
             while (var29 > 0) {
               var27_ref_byte__[var29] = var27_ref_byte__[var29 - 1];
               var29 = (byte)(var29 - 1);
             }
             var27_ref_byte__[0] = (byte)var28;
-            param0.field_s[var4] = (byte)var28;
+            state.selectors[var4] = (byte)var28;
           }
           int var6 = 0;
           while (var6 < var8) {
-            int var17 = Bzip2Decoder.a(5, param0);
+            int var17 = Bzip2Decoder.readBits(5, state);
             var4 = 0;
             while (true) {
               if (var4 >= var7) {
@@ -324,13 +324,13 @@ final class Bzip2Decoder {
                 break;
               }
               while (true) {
-                var1 = Bzip2Decoder.c(param0);
+                var1 = Bzip2Decoder.readBit(state);
                 if (var1 == 0) {
-                  param0.field_q[var6][var4] = (byte)var17;
+                  state.codeLengths[var6][var4] = (byte)var17;
                   var4++;
                   break;
                 }
-                var1 = Bzip2Decoder.c(param0);
+                var1 = Bzip2Decoder.readBit(state);
                 if (var1 != 0) {
                   var17--;
                   continue;
@@ -343,76 +343,76 @@ final class Bzip2Decoder {
             int var2 = 32;
             int var3 = 0;
             for (var4 = 0; var4 < var7; var4++) {
-              if (param0.field_q[var6][var4] > var3) {
-                var3 = param0.field_q[var6][var4];
+              if (state.codeLengths[var6][var4] > var3) {
+                var3 = state.codeLengths[var6][var4];
               }
-              if (param0.field_q[var6][var4] < var2) {
-                var2 = param0.field_q[var6][var4];
+              if (state.codeLengths[var6][var4] < var2) {
+                var2 = state.codeLengths[var6][var4];
               }
             }
-            Bzip2Decoder.a(param0.field_H[var6], param0.field_a[var6], param0.field_I[var6], param0.field_q[var6], var2, var3, var7);
-            param0.field_c[var6] = var2;
+            Bzip2Decoder.buildHuffmanTables(state.huffmanLimits[var6], state.huffmanBases[var6], state.huffmanPermutations[var6], state.codeLengths[var6], var2, var3, var7);
+            state.minimumCodeLengths[var6] = var2;
           }
-          int var10 = param0.field_h + 1;
+          int var10 = state.usedSymbolCount + 1;
           int var11 = -1;
           int var12 = 0;
           for (var4 = 0; var4 <= 255; var4++) {
-            param0.field_j[var4] = 0;
+            state.symbolFrequencies[var4] = 0;
           }
           var29 = 4095;
           for (var27 = 15; var27 >= 0; var27--) {
             for (var28 = 15; var28 >= 0; var28--) {
-              param0.field_o[var29] = (byte)(var27 * 16 + var28);
+              state.mtfSymbols[var29] = (byte)(var27 * 16 + var28);
               var29--;
             }
-            param0.field_r[var27] = var29 + 1;
+            state.mtfBaseIndices[var27] = var29 + 1;
           }
           int var14 = 0;
           if (var12 == 0) {
             var11++;
             var12 = 50;
-            var21 = param0.field_s[var11];
-            var22 = param0.field_c[var21];
-            var23 = param0.field_H[var21];
-            var25 = param0.field_I[var21];
-            var24 = param0.field_a[var21];
+            var21 = state.selectors[var11];
+            var22 = state.minimumCodeLengths[var21];
+            var23 = state.huffmanLimits[var21];
+            var25 = state.huffmanPermutations[var21];
+            var24 = state.huffmanBases[var21];
           }
           var12--;
           int var18 = var22;
-          int var19 = Bzip2Decoder.a(var18, param0);
+          int var19 = Bzip2Decoder.readBits(var18, state);
           while (var19 > ((int[]) (var23))[var18]) {
             var18++;
-            var20 = Bzip2Decoder.c(param0);
+            var20 = Bzip2Decoder.readBit(state);
             var19 = var19 << 1 | var20;
           }
           int var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
           while (true) {
             if (var13 == var10) {
-              param0.field_b = 0;
-              param0.field_t = (byte) 0;
-              param0.field_B[0] = 0;
+              state.repeatRemaining = 0;
+              state.outputByte = (byte) 0;
+              state.cumulativeFrequencies[0] = 0;
               for (var4 = 1; var4 <= 256; var4++) {
-                param0.field_B[var4] = param0.field_j[var4 - 1];
+                state.cumulativeFrequencies[var4] = state.symbolFrequencies[var4 - 1];
               }
               for (var4 = 1; var4 <= 256; var4++) {
-                param0.field_B[var4] = param0.field_B[var4] + param0.field_B[var4 - 1];
+                state.cumulativeFrequencies[var4] = state.cumulativeFrequencies[var4] + state.cumulativeFrequencies[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(SavedDataWrite.field_l[var4] & 255);
-                int dupTemp$1 = param0.field_B[var1 & 255];
-                SavedDataWrite.field_l[dupTemp$1] = SavedDataWrite.field_l[dupTemp$1] | var4 << 8;
-                param0.field_B[var1 & 255] = param0.field_B[var1 & 255] + 1;
+                var1 = (byte)(SavedDataWrite.bzip2Transform[var4] & 255);
+                int dupTemp$1 = state.cumulativeFrequencies[var1 & 255];
+                SavedDataWrite.bzip2Transform[dupTemp$1] = SavedDataWrite.bzip2Transform[dupTemp$1] | var4 << 8;
+                state.cumulativeFrequencies[var1 & 255] = state.cumulativeFrequencies[var1 & 255] + 1;
               }
-              param0.field_k = SavedDataWrite.field_l[param0.field_g] >> 8;
-              param0.field_u = 0;
-              param0.field_k = SavedDataWrite.field_l[param0.field_k];
-              param0.field_l = (byte)(param0.field_k & 255);
-              param0.field_k = param0.field_k >> 8;
-              param0.field_u = param0.field_u + 1;
-              param0.field_x = var14;
-              Bzip2Decoder.d(param0);
-              if (param0.field_u == param0.field_x + 1 &&
-                param0.field_b == 0) {
+              state.transformPosition = SavedDataWrite.bzip2Transform[state.originalPointer] >> 8;
+              state.blockBytesUsed = 0;
+              state.transformPosition = SavedDataWrite.bzip2Transform[state.transformPosition];
+              state.nextByte = (byte)(state.transformPosition & 255);
+              state.transformPosition = state.transformPosition >> 8;
+              state.blockBytesUsed = state.blockBytesUsed + 1;
+              state.blockLength = var14;
+              Bzip2Decoder.writeDecodedRuns(state);
+              if (state.blockBytesUsed == state.blockLength + 1 &&
+                state.repeatRemaining == 0) {
                 var26 = true;
                 break;
               }
@@ -423,69 +423,69 @@ final class Bzip2Decoder {
               var13 != 1) {
               int var33 = var13 - 1;
               if (var33 < 16) {
-                var30 = param0.field_r[0];
-                var1 = param0.field_o[var30 + var33];
+                var30 = state.mtfBaseIndices[0];
+                var1 = state.mtfSymbols[var30 + var33];
                 while (var33 > 3) {
                   int var34 = var30 + var33;
-                  param0.field_o[var34] = param0.field_o[var34 - 1];
-                  param0.field_o[var34 - 1] = param0.field_o[var34 - 2];
-                  param0.field_o[var34 - 2] = param0.field_o[var34 - 3];
-                  param0.field_o[var34 - 3] = param0.field_o[var34 - 4];
+                  state.mtfSymbols[var34] = state.mtfSymbols[var34 - 1];
+                  state.mtfSymbols[var34 - 1] = state.mtfSymbols[var34 - 2];
+                  state.mtfSymbols[var34 - 2] = state.mtfSymbols[var34 - 3];
+                  state.mtfSymbols[var34 - 3] = state.mtfSymbols[var34 - 4];
                   var33 -= 4;
                 }
                 while (var33 > 0) {
-                  param0.field_o[var30 + var33] = param0.field_o[var30 + var33 - 1];
+                  state.mtfSymbols[var30 + var33] = state.mtfSymbols[var30 + var33 - 1];
                   var33--;
                 }
-                param0.field_o[var30] = (byte)var1;
+                state.mtfSymbols[var30] = (byte)var1;
               } else {
                 int var31 = var33 / 16;
                 int var32 = var33 % 16;
-                int var35 = param0.field_r[var31] + var32;
+                int var35 = state.mtfBaseIndices[var31] + var32;
                 var30 = var35;
-                var1 = param0.field_o[var35];
-                while (var35 > param0.field_r[var31]) {
-                  param0.field_o[var35] = param0.field_o[var35 - 1];
+                var1 = state.mtfSymbols[var35];
+                while (var35 > state.mtfBaseIndices[var31]) {
+                  state.mtfSymbols[var35] = state.mtfSymbols[var35 - 1];
                   var35--;
                 }
-                param0.field_r[var31] = param0.field_r[var31] + 1;
+                state.mtfBaseIndices[var31] = state.mtfBaseIndices[var31] + 1;
                 while (var31 > 0) {
-                  param0.field_r[var31] = param0.field_r[var31] - 1;
-                  param0.field_o[param0.field_r[var31]] = param0.field_o[param0.field_r[var31 - 1] + 16 - 1];
+                  state.mtfBaseIndices[var31] = state.mtfBaseIndices[var31] - 1;
+                  state.mtfSymbols[state.mtfBaseIndices[var31]] = state.mtfSymbols[state.mtfBaseIndices[var31 - 1] + 16 - 1];
                   var31--;
                 }
-                param0.field_r[0] = param0.field_r[0] - 1;
-                param0.field_o[param0.field_r[0]] = (byte)var1;
-                if (param0.field_r[0] == 0) {
+                state.mtfBaseIndices[0] = state.mtfBaseIndices[0] - 1;
+                state.mtfSymbols[state.mtfBaseIndices[0]] = (byte)var1;
+                if (state.mtfBaseIndices[0] == 0) {
                   var29 = 4095;
                   for (var27 = 15; var27 >= 0; var27--) {
                     for (var28 = 15; var28 >= 0; var28--) {
-                      param0.field_o[var29] = param0.field_o[param0.field_r[var27] + var28];
+                      state.mtfSymbols[var29] = state.mtfSymbols[state.mtfBaseIndices[var27] + var28];
                       var29--;
                     }
-                    param0.field_r[var27] = var29 + 1;
+                    state.mtfBaseIndices[var27] = var29 + 1;
                   }
                 }
               }
-              int dupTemp$0 = param0.field_w[var1 & 255] & 255;
-              param0.field_j[dupTemp$0] = param0.field_j[dupTemp$0] + 1;
-              SavedDataWrite.field_l[var14] = param0.field_w[var1 & 255] & 255;
+              int dupTemp$0 = state.symbolMap[var1 & 255] & 255;
+              state.symbolFrequencies[dupTemp$0] = state.symbolFrequencies[dupTemp$0] + 1;
+              SavedDataWrite.bzip2Transform[var14] = state.symbolMap[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
                 var12 = 50;
-                var21 = param0.field_s[var11];
-                var22 = param0.field_c[var21];
-                var23 = param0.field_H[var21];
-                var25 = param0.field_I[var21];
-                var24 = param0.field_a[var21];
+                var21 = state.selectors[var11];
+                var22 = state.minimumCodeLengths[var21];
+                var23 = state.huffmanLimits[var21];
+                var25 = state.huffmanPermutations[var21];
+                var24 = state.huffmanBases[var21];
               }
               var12--;
               var18 = var22;
-              var19 = Bzip2Decoder.a(var18, param0);
+              var19 = Bzip2Decoder.readBits(var18, state);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = Bzip2Decoder.c(param0);
+                var20 = Bzip2Decoder.readBit(state);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -503,28 +503,28 @@ final class Bzip2Decoder {
               if (var12 == 0) {
                 var11++;
                 var12 = 50;
-                var21 = param0.field_s[var11];
-                var22 = param0.field_c[var21];
-                var23 = param0.field_H[var21];
-                var25 = param0.field_I[var21];
-                var24 = param0.field_a[var21];
+                var21 = state.selectors[var11];
+                var22 = state.minimumCodeLengths[var21];
+                var23 = state.huffmanLimits[var21];
+                var25 = state.huffmanPermutations[var21];
+                var24 = state.huffmanBases[var21];
               }
               var12--;
               var18 = var22;
-              var19 = Bzip2Decoder.a(var18, param0);
+              var19 = Bzip2Decoder.readBits(var18, state);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = Bzip2Decoder.c(param0);
+                var20 = Bzip2Decoder.readBit(state);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
             } while (var13 == 0 ||
               var13 == 1);
             var15++;
-            var1 = param0.field_w[param0.field_o[param0.field_r[0]] & 255];
-            param0.field_j[var1 & 255] = param0.field_j[var1 & 255] + var15;
+            var1 = state.symbolMap[state.mtfSymbols[state.mtfBaseIndices[0]] & 255];
+            state.symbolFrequencies[var1 & 255] = state.symbolFrequencies[var1 & 255] + var15;
             while (var15 > 0) {
-              SavedDataWrite.field_l[var14] = var1 & 255;
+              SavedDataWrite.bzip2Transform[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -533,6 +533,6 @@ final class Bzip2Decoder {
     }
 
     static {
-        field_a = new Bzip2State();
+        state = new Bzip2State();
     }
 }

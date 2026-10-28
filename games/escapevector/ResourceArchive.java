@@ -95,7 +95,7 @@ final class ResourceArchive {
             return stackIn_6_0;
           }
           while (var4 < text.length()) {
-            if (!SpriteOffset.a(text.charAt(var4), (byte) -124)) {
+            if (!SpriteOffset.isAccountNameCharacter(text.charAt(var4), (byte) -124)) {
               String stackIn_12_0 = Js5NetworkRequest.field_B;
               return stackIn_12_0;
             }

@@ -70,19 +70,19 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         field_i = null;
         if (guard != -16187) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
-          TextFieldValidator.a((java.awt.Canvas) null, -55);
+          TextFieldValidator.drawLoadingProgress((java.awt.Canvas) null, -55);
         }
     }
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void drawLoadingProgress(java.awt.Canvas canvas, int guard) {
         try {
           if (QuickChatPhraseCache.field_e == 11) {
             NameAvailabilityResultSupport.loadingRenderHook((byte) 62);
           }
           QuickChatPhraseDefinition.showLoadingProgress(AlternateUsernameCredentials.field_t, DelegatingCanvas.field_e, MenuTitleRenderSupport.field_d, (byte) 14);
-          SecondaryNodeHashTable.presentRaster(param0, param1, param1 - 1, 0);
+          SecondaryNodeHashTable.presentRaster(canvas, guard, guard - 1, 0);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ah.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ah.BA(" + (canvas != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -94,13 +94,13 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         }
     }
 
-    final static void e(int param0) {
+    final static void clearLegacyMenuState(int guard) {
         ContactEntry.field_nb = null;
         IterableNodeHashTable.field_f = null;
         SecondaryNodeHashTable.field_i = null;
         ModalStack.field_G = null;
         ModalStack.field_D = false;
-        if (param0 != 0) {
+        if (guard != 0) {
           field_e = -59L;
         }
     }
