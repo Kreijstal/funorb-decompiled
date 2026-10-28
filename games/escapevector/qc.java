@@ -630,7 +630,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime137 = ki.a("objective_simulator", 10592);
           if (null != var2Lifetime137) {
-            ia.field_p = RasterSnapshot.a(var2Lifetime137, 110);
+            TriangleMesh.field_p = RasterSnapshot.a(var2Lifetime137, 110);
           }
           byte[] var2Lifetime138 = ki.a("title_objective_retrieval", 10592);
           if (var2Lifetime138 != null) {
@@ -946,7 +946,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime216 = ki.a("score_colon", 10592);
           if (var2Lifetime216 != null) {
-            uk.field_a = RasterSnapshot.a(var2Lifetime216, 111);
+            ShipHullGeometry.field_a = RasterSnapshot.a(var2Lifetime216, 111);
           }
           byte[] var2Lifetime217 = ki.a("time_colon", 10592);
           if (var2Lifetime217 != null) {

@@ -51,7 +51,7 @@ final class fe {
           pc.field_e.b(0) &&
           pc.field_e.a(0, "arialish12") &&
           pc.field_e.a(0, "pump32")) {
-          ia.field_z = AccountRegistrationPanel.a(ck.field_x, 54, "frame", "members_expansion_screen");
+          TriangleMesh.field_z = AccountRegistrationPanel.a(ck.field_x, 54, "frame", "members_expansion_screen");
           ml.field_c = fe.a("members_expansion_screen", ck.field_x, "arrow", true);
           ac.field_c = oi.a(4, pc.field_e, "arialish12", "", ck.field_x);
           mn.field_h = ac.a("", -73, ck.field_x, "pump32", pc.field_e);
@@ -62,12 +62,12 @@ final class fe {
           pc.field_e = null;
         }
         this.b((byte) 87);
-        if (null == ia.field_z) {
+        if (null == TriangleMesh.field_z) {
           return;
         }
         this.field_h.e(376, 339);
         this.field_g.e(9, 9);
-        ia.field_z.draw(0, 0);
+        TriangleMesh.field_z.draw(0, 0);
         if (null != ml.field_c) {
           ml.field_c.e(9, 257);
           ml.field_c.c(558, 257);
@@ -459,7 +459,7 @@ final class fe {
     }
 
     private final int a(int param0, int param1, int param2) {
-        if (ia.field_z == null) {
+        if (TriangleMesh.field_z == null) {
           return -1;
         }
         if (508 <= param0 && param0 < 635 && param1 >= 299 &&

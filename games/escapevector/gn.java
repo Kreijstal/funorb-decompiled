@@ -318,10 +318,10 @@ final class gn {
         if (param0 > -107) {
           dk[] var2 = (dk[]) null;
           gn.a((dk[]) null, false, (byte) -37);
-          uk.b(0);
+          ShipHullGeometry.b(0);
           return;
         }
-        uk.b(0);
+        ShipHullGeometry.b(0);
     }
 
     private final boolean a(boolean param0, int param1) {

@@ -196,7 +196,7 @@ final class mb {
           if (var4 == null) {
             return;
           }
-          var4.a(param1, false, this.field_e, 255 ^ this.field_e);
+          var4.awardAchievement(param1, false, this.field_e, 255 ^ this.field_e);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

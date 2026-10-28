@@ -45,7 +45,7 @@ public final class EscapeVector extends NetworkGameClient {
           SingleChildContainer.field_y = false;
           if (!ii.b(16836)) {
             boolean decompiledFrameRemainder0 = true;
-            if (!uk.field_h) {
+            if (!ShipHullGeometry.field_h) {
               this.n((byte) -96);
             } else if (mb.b((byte) -120)) {
               if (!mj.a((byte) 79)) {
@@ -330,7 +330,7 @@ public final class EscapeVector extends NetworkGameClient {
           bi.releaseStatics();
           ri.releaseStatics(-117);
           ui.releaseStatics(true);
-          ia.releaseStatics(true);
+          TriangleMesh.releaseStatics(true);
           ml.releaseStatics(-117);
           aa.releaseStatics((byte) -96);
           mm.releaseStatics(56);
@@ -441,7 +441,7 @@ public final class EscapeVector extends NetworkGameClient {
           mb.releaseStatics(4);
           qh.releaseStatics(7);
           TerrainMap.releaseStatics(-126);
-          uk.releaseStatics(-1);
+          ShipHullGeometry.releaseStatics(-1);
           IntPoint.releaseStatics(-3217);
           jh.releaseStatics(false);
           qd.releaseStatics(false);
@@ -576,7 +576,7 @@ public final class EscapeVector extends NetworkGameClient {
             }
             qi.a(50, true);
             pl.field_q = new t();
-            CheckboxPainter.field_l = new ig(1, vh.f(param0 ^ -35));
+            CheckboxPainter.field_l = new ig(1, Bullet.accountStateIndex(param0 ^ -35));
             UiComponent.field_o = new pf(true);
             rc.field_a = new ak(false, 1);
             if (param0 != -96) {
@@ -584,10 +584,10 @@ public final class EscapeVector extends NetworkGameClient {
             }
             da.field_b = new ta();
             qk.field_e = new dn(true);
-            GameplaySession.c((byte) 115);
+            GameplaySession.resetSessionMenuState((byte) 115);
             fg.c(0);
             this.l(param0 + 95);
-            uk.field_h = true;
+            ShipHullGeometry.field_h = true;
             TextLayoutLine.b(1, 0);
             return;
           }
@@ -614,7 +614,7 @@ public final class EscapeVector extends NetworkGameClient {
           ri.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "right-foot-down").toPcmSample().resample(var2);
           DraggableWidget.field_M = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "ship-fire").toPcmSample().resample(var2);
           gn.field_e = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "ship-fire-three").toPcmSample().resample(var2);
-          uk.field_j = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "alien-fire").toPcmSample().resample(var2);
+          ShipHullGeometry.field_j = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "alien-fire").toPcmSample().resample(var2);
           Bzip2State.field_G = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield").toPcmSample().resample(var2);
           co.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield_impact").toPcmSample().resample(var2);
           gm.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield_empty").toPcmSample().resample(var2);
@@ -892,7 +892,7 @@ public final class EscapeVector extends NetworkGameClient {
             gb.a((var4), (byte) 92, var3);
             return;
           }
-          if (!uk.field_h) {
+          if (!ShipHullGeometry.field_h) {
             TextFieldValidator.a(var3, 0);
             return;
           }
@@ -1194,7 +1194,7 @@ public final class EscapeVector extends NetworkGameClient {
           boolean stackIn_37_0 = !(lf.field_H == 2);
           boolean var3 = stackIn_37_0;
           if (BoundedRandomAccessFile.activeSession != null) {
-            BoundedRandomAccessFile.activeSession.e((var3), 0);
+            BoundedRandomAccessFile.activeSession.updateMusic((var3), 0);
           }
           lf.field_H = 2;
           return;

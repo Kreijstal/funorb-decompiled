@@ -347,7 +347,7 @@ final class en {
         if (var9 == null) {
           return;
         }
-        var9.a(param1, false, var7, var8);
+        var9.awardAchievement(param1, false, var7, var8);
     }
 
     private final void a(int[] param0, int param1) {

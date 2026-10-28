@@ -39,8 +39,8 @@ final class ac {
             if (SelfDestructEffects.field_j != null) {
               SelfDestructEffects.field_j.a(param0 ^ -16802);
             }
-            if (uk.field_b != null) {
-              uk.field_b.a(-24580);
+            if (ShipHullGeometry.field_b != null) {
+              ShipHullGeometry.field_b.a(-24580);
             }
             if (param0 != -16802) {
               return;

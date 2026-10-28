@@ -130,7 +130,7 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
           int var3 = var10.readUnsignedByte(0);
           var10.beginBitReading(-17928);
           DialogueScreen.field_y = IntrusiveNode.a(var10, 22178);
-          fh.field_e = new ia[var3];
+          fh.field_e = new TriangleMesh[var3];
           SectorCacheStore.field_c = new int[var3][];
           if (param1 < 41) {
             h.a(82, (byte) -78);
@@ -142,7 +142,7 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
           int var9 = 0;
           int var4Lifetime1 = var9;
           while (var3 > var9) {
-            ia var5 = fh.field_e[var9];
+            TriangleMesh var5 = fh.field_e[var9];
             var5.a(6, 1, 6, 6, -72);
             var5.a((byte) 49);
             int[] var6 = new int[]{var5.field_b + var5.field_a >> 1, var5.field_R + var5.field_i >> 1, var5.field_O + var5.field_g >> 1};

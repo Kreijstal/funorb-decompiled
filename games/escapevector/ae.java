@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ae implements WidgetPainter {
-    static uk field_b;
+    static ShipHullGeometry field_b;
     static SystemTaskService field_a;
     static Sprite[] field_c;
     static java.security.SecureRandom field_d;
@@ -57,7 +57,7 @@ final class ae implements WidgetPainter {
     final static int b(int param0) {
         FullscreenFocusCanvas.field_e.a((byte) 12);
         if (param0 != -1021831775) {
-          field_b = (uk) null;
+          field_b = (ShipHullGeometry) null;
         }
         if (!SelfDestructEffects.field_j.d(-3994)) {
           return un.f(param0 + 1021831755);
@@ -154,7 +154,7 @@ final class ae implements WidgetPainter {
 
     static {
         field_c = new Sprite[30];
-        field_b = new uk();
+        field_b = new ShipHullGeometry();
         field_e = new String[]{"Congratulations on your success so far.<delay><br><br>We have just received intelligence on two types of alien defence.", "These blue cylinders will repel your ship.", "These green pods will shoot energy balls at any unidentified ship within range of their sensors."};
     }
 }

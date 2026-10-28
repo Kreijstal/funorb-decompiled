@@ -6,7 +6,7 @@ final class cf {
     static java.math.BigInteger field_c;
     static String field_a;
 
-    final static void a(boolean param0, int[] param1, boolean param2, int[] param3, boolean param4, boolean param5, ia param6) {
+    final static void a(boolean param0, int[] param1, boolean param2, int[] param3, boolean param4, boolean param5, TriangleMesh param6) {
         int stackIn_69_0 = 0;
         int stackIn_69_1 = 0;
         String stackIn_77_2 = null;
@@ -161,7 +161,7 @@ final class cf {
                 }
               }
             }
-            vh.a(param6, var7_int, var8, param4, 4198);
+            Bullet.bucketMeshFacesByDepth(param6, var7_int, var8, param4, 4198);
             stackIn_69_0 = param5 ? 1 : 0;
             stackIn_69_1 = 1;
             break;

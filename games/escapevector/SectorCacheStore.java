@@ -22,7 +22,7 @@ final class SectorCacheStore {
             SectorCacheStore.releaseStatics(true);
           }
           mj.field_d = 0;
-          GameplaySession.c((byte) -9);
+          GameplaySession.resetSessionMenuState((byte) -9);
           return;
         }
         if (UiContainer.e((byte) 97)) {
@@ -31,7 +31,7 @@ final class SectorCacheStore {
             SectorCacheStore.releaseStatics(true);
           }
           mj.field_d = 0;
-          GameplaySession.c((byte) -9);
+          GameplaySession.resetSessionMenuState((byte) -9);
           return;
         }
     }

@@ -92,8 +92,8 @@ class DualLinkNode extends IntrusiveNode {
           mn.field_n = param6;
           kh.field_c = param0;
           SelfDestructEffects.field_j = (Js5Transport) ((Object) new bk());
-          uk.field_b = new DiskCacheWorker(param1);
-          FullscreenFocusCanvas.field_e = new sk(SelfDestructEffects.field_j, uk.field_b);
+          ShipHullGeometry.field_b = new DiskCacheWorker(param1);
+          FullscreenFocusCanvas.field_e = new sk(SelfDestructEffects.field_j, ShipHullGeometry.field_b);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "fl.W(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

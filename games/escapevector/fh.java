@@ -3,7 +3,7 @@
  */
 abstract class fh {
     private static String[] field_f;
-    static ia[] field_e;
+    static TriangleMesh[] field_e;
     static int[] field_d;
     static boolean field_a;
     private static String[] field_h;

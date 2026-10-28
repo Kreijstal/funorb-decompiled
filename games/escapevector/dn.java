@@ -61,7 +61,7 @@ final class dn {
         if (param0 != 0) {
           dn.releaseStatics(-11);
         }
-        return vi.field_a - ia.field_x;
+        return vi.field_a - TriangleMesh.field_x;
     }
 
     private final void e(byte param0) {
@@ -504,13 +504,13 @@ final class dn {
             var3_ref = pf.field_h;
           } else {
             if (!var6.shipDestroyed &&
-              !var6.field_Ib) {
+              !var6.levelEnded) {
               if (var6.levelIndex < 0) {
                 var3_ref = AccountRegistrationPanel.field_O;
               } else if (1 == var6.tetheredObjectType) {
-                var3_ref = pn.field_qb[var5.m((byte) -84)];
-              } else if (var6.field_ec) {
-                var3_ref = EmailAvailabilityRequest.field_f[var5.m((byte) -84)];
+                var3_ref = pn.field_qb[var5.missionDialogueTier((byte) -84)];
+              } else if (var6.cargoLost) {
+                var3_ref = EmailAvailabilityRequest.field_f[var5.missionDialogueTier((byte) -84)];
               } else if (var6.objectiveType != 1) {
                 var3_ref = LevelObject.field_q;
               } else {
@@ -606,7 +606,7 @@ final class dn {
         this.field_B = new jl(var2, var3);
         this.a(this.field_B, 16777215);
         var2 = pl.field_p;
-        var3 = new String[]{ia.field_p + "<br>" + "<br>", fk.field_e};
+        var3 = new String[]{TriangleMesh.field_p + "<br>" + "<br>", fk.field_e};
         this.field_s = new jl(var2, var3);
         if (param0 != 14972) {
           return;

@@ -975,7 +975,7 @@ final class pf {
         this.d((byte) -35);
         int var2 = this.field_d.length;
         this.a(param0, (byte) -73, var2);
-        this.field_f = vh.f(104);
+        this.field_f = Bullet.accountStateIndex(104);
     }
 
     static {

@@ -134,7 +134,7 @@ final class wk {
         }
     }
 
-    final static ia a(int param0, CipherPacketBuffer param1) {
+    final static TriangleMesh a(int param0, CipherPacketBuffer param1) {
         String stackIn_28_2 = null;
         int var9 = EscapeVector.obfuscationControl;
         try {
@@ -145,7 +145,7 @@ final class wk {
           int var3 = 51 % ((-82 - param0) / 38);
           boolean var4 = (da.a(param1, (byte) -104));
           boolean var5 = (da.a(param1, (byte) -114));
-          ia var6 = new ia();
+          TriangleMesh var6 = new TriangleMesh();
           var6.field_K = (short)param1.readBits(16, 8);
           var6.field_L = BufferedRandomAccessFile.a(param1, 16, var6.field_L, -1);
           var6.field_r = BufferedRandomAccessFile.a(param1, 16, var6.field_r, -1);
@@ -188,7 +188,7 @@ final class wk {
               var6.field_I = (byte)(1 + var7);
             }
           }
-          ia stackIn_24_0 = var6;
+          TriangleMesh stackIn_24_0 = var6;
           return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -15,7 +15,7 @@ final class j {
         String stackIn_20_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          dn.field_q = ia.field_y;
+          dn.field_q = TriangleMesh.field_y;
           if (param3 == 255) {
             boolean stackIn_10_0 = !(13 <= gf.field_a);
             SpriteState.field_y = fc.a(stackIn_10_0, (byte) -82);

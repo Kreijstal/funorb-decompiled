@@ -760,7 +760,7 @@ final class Minimap {
         if (null == this.field_D) {
           return;
         }
-        if (this.session.field_ec) {
+        if (this.session.cargoLost) {
           return;
         }
         int var4 = this.a((byte) -29, this.field_J);

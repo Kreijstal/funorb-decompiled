@@ -78,7 +78,7 @@ final class e {
           if (dn.field_q == RasterBuffer.field_g) {
             throw new IllegalStateException();
           }
-          if (ia.field_y == dn.field_q) {
+          if (TriangleMesh.field_y == dn.field_q) {
             dn.field_q = RasterBuffer.field_g;
             return SpriteState.field_y;
           }
@@ -87,7 +87,7 @@ final class e {
         if (dn.field_q == RasterBuffer.field_g) {
           throw new IllegalStateException();
         }
-        if (ia.field_y == dn.field_q) {
+        if (TriangleMesh.field_y == dn.field_q) {
           dn.field_q = RasterBuffer.field_g;
           return SpriteState.field_y;
         }

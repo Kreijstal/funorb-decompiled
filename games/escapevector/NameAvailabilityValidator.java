@@ -86,7 +86,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
 
     final static om a(byte param0, int param1) {
         int var5 = EscapeVector.obfuscationControl;
-        om[] var6 = vh.e(-91);
+        om[] var6 = Bullet.e(-91);
         om[] var2 = var6;
         int var3 = 2 % ((3 - param0) / 49);
         for (int var4 = 0; var6.length > var4; var4++) {

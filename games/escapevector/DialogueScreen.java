@@ -677,7 +677,7 @@ final class DialogueScreen extends IntrusiveNode {
           this.field_A.fadeOut(AudioOutput.sampleRate / 200);
         }
         this.field_u.fadeOut(AudioOutput.sampleRate / 200);
-        vh.a((byte) -22);
+        Bullet.removeFirstDialogue((byte) -22);
         gi.a((byte) -111);
         Js5NetworkRequest.field_E = true;
         bc.field_d = true;

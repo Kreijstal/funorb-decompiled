@@ -208,7 +208,7 @@ final class ig {
         }
         if (var3 == this.field_e) {
           SelfDestructEffects.field_q = -1;
-          GameplaySession.c(param0, 2560);
+          GameplaySession.openSessionScreen(param0, 2560);
           return true;
         }
         if (this.field_f != var3) {
@@ -217,7 +217,7 @@ final class ig {
         LevelObject.a(this.field_a, (byte) -128);
         mj.field_d = 0;
         LaserGateSpan.field_k = 0;
-        GameplaySession.c((byte) 30);
+        GameplaySession.resetSessionMenuState((byte) 30);
         return true;
     }
 
@@ -716,7 +716,7 @@ final class ig {
           }
           if (PasswordValidator.field_n == 13) {
             SelfDestructEffects.field_q = -1;
-            GameplaySession.c(false, param0 ^ 989);
+            GameplaySession.openSessionScreen(false, param0 ^ 989);
             return;
           }
           if (this.a(false, -54)) {

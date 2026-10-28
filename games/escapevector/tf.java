@@ -154,9 +154,9 @@ final class tf {
         if (ch.field_a.field_h == this.field_l &&
           ch.field_a.b((byte) -18)) {
           ac.b(112);
-          BoundedRandomAccessFile.activeSession.field_Jb = true;
-          BoundedRandomAccessFile.activeSession.field_Cb = true;
-          BoundedRandomAccessFile.activeSession.x((byte) 68);
+          BoundedRandomAccessFile.activeSession.quitRequested = true;
+          BoundedRandomAccessFile.activeSession.advanceLevelRequested = true;
+          BoundedRandomAccessFile.activeSession.finishPendingBonuses((byte) 68);
           da.field_c = null;
           bc.field_d = true;
           Js5NetworkRequest.field_E = true;
@@ -169,7 +169,7 @@ final class tf {
         }
         if (this.field_g == ch.field_a.field_h &&
           ch.field_a.b((byte) -18)) {
-          BoundedRandomAccessFile.activeSession.j(256);
+          BoundedRandomAccessFile.activeSession.replayMissionBriefing(256);
           return true;
         }
         if (ch.field_a.field_h == this.field_j) {
@@ -298,8 +298,8 @@ final class tf {
         if (!ch.field_a.b((byte) -18)) {
           return false;
         }
-        BoundedRandomAccessFile.activeSession.field_Jb = true;
-        BoundedRandomAccessFile.activeSession.x((byte) -48);
+        BoundedRandomAccessFile.activeSession.quitRequested = true;
+        BoundedRandomAccessFile.activeSession.finishPendingBonuses((byte) -48);
         bc.field_d = true;
         da.field_c = null;
         Js5NetworkRequest.field_E = true;
@@ -412,7 +412,7 @@ final class tf {
           this.field_m = -2;
         }
         if (var5.levelIndex >= 0 &&
-          var5.field_rc) {
+          var5.scoringEnabled) {
           int incrementValue$6 = var2;
           var2++;
           this.field_k = incrementValue$6;

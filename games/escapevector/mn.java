@@ -34,7 +34,7 @@ final class mn extends IntrusiveNode {
             kh.a((var1), -1230, false);
             return;
           }
-          int var2 = vh.f(98);
+          int var2 = Bullet.accountStateIndex(98);
           if (rc.field_a.field_f != var2) {
             boolean var3 = (rc.field_a.field_h);
             kh.a((var1), -1230, (var3));
@@ -47,7 +47,7 @@ final class mn extends IntrusiveNode {
           kh.a((var1Lifetime1), -1230, false);
           return;
         }
-        int var2Lifetime1 = vh.f(98);
+        int var2Lifetime1 = Bullet.accountStateIndex(98);
         if (rc.field_a.field_f != var2Lifetime1) {
           boolean var3Lifetime1 = (rc.field_a.field_h);
           kh.a((var1Lifetime1), -1230, (var3Lifetime1));

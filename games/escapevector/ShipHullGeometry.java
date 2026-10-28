@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk {
+final class ShipHullGeometry {
     static DiskCacheWorker field_b;
-    IntPoint field_g;
+    IntPoint leftWing;
     static String field_a;
     static PcmSample field_j;
-    IntPoint field_e;
-    IntPoint field_k;
-    IntPoint field_c;
-    IntPoint field_d;
-    IntPoint field_i;
-    IntPoint field_f;
+    IntPoint cameraOrigin;
+    IntPoint nose;
+    IntPoint rightWing;
+    IntPoint centerNotch;
+    IntPoint boundsMax;
+    IntPoint boundsMin;
     static boolean field_h;
 
     final static void b(int param0) {
@@ -22,8 +22,8 @@ final class uk {
           jb.field_r.d(true);
         }
         if (param0 != 0) {
-          ia var2 = (ia) null;
-          uk.a(19, -90, 62, -122, 5, (ia) null, -13, -75);
+          TriangleMesh var2 = (TriangleMesh) null;
+          ShipHullGeometry.a(19, -90, 62, -122, 5, (TriangleMesh) null, -13, -75);
         }
         dl.a(false);
     }
@@ -45,7 +45,7 @@ final class uk {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, ia param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, TriangleMesh param5, int param6, int param7) {
         int stackIn_17_0 = 0;
         int stackIn_20_1 = 0;
         int stackIn_26_0 = 0;
@@ -66,7 +66,7 @@ final class uk {
           if (param1 != -16711760) {
             return;
           }
-          ia var44 = param5;
+          TriangleMesh var44 = param5;
           if (var44.field_n != null &&
             var44.field_I > 1) {
             byte[] var60 = var44.field_n;
@@ -196,14 +196,14 @@ final class uk {
         }
     }
 
-    uk() {
-        this.field_e = new IntPoint(0, 0);
-        this.field_g = new IntPoint(0, 0);
-        this.field_c = new IntPoint(0, 0);
-        this.field_d = new IntPoint(0, 0);
-        this.field_k = new IntPoint(0, 0);
-        this.field_f = new IntPoint(0, 0);
-        this.field_i = new IntPoint(0, 0);
+    ShipHullGeometry() {
+        this.cameraOrigin = new IntPoint(0, 0);
+        this.leftWing = new IntPoint(0, 0);
+        this.rightWing = new IntPoint(0, 0);
+        this.centerNotch = new IntPoint(0, 0);
+        this.nose = new IntPoint(0, 0);
+        this.boundsMin = new IntPoint(0, 0);
+        this.boundsMax = new IntPoint(0, 0);
     }
 
     static {

@@ -344,7 +344,7 @@ final class t {
           int var3_int = this.b(123);
           if (var3_int == 0 &&
             this.field_b.b((byte) -18)) {
-            GameplaySession.c(param1, 2560);
+            GameplaySession.openSessionScreen(param1, 2560);
             return true;
           }
           if (var3_int == 1 &&

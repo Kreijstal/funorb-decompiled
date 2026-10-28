@@ -534,7 +534,7 @@ final class ak {
           for (int var14 = 0; var14 < var26.length; var14++) {
             var26[var14] = var14;
           }
-          uk.a(-1, var24, var26);
+          ShipHullGeometry.a(-1, var24, var26);
           int[] var16 = this.a(var26, 12);
           int[] stackIn_5_0 = var16;
           return stackIn_5_0;
@@ -1177,7 +1177,7 @@ final class ak {
         this.field_h = param0 ? true : false;
         this.field_c = 0;
         this.a(true, param1);
-        this.field_f = vh.f(121);
+        this.field_f = Bullet.accountStateIndex(121);
         this.h((byte) -126);
     }
 

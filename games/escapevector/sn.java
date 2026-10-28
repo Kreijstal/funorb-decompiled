@@ -10,7 +10,7 @@ final class sn {
 
     final static void c(int param0) {
         int var1 = l.a(-8462, SelfDestructEffects.field_q);
-        int var2 = vh.f(127);
+        int var2 = Bullet.accountStateIndex(127);
         if (param0 != -1) {
           field_b = (boolean[]) null;
         }
@@ -256,7 +256,7 @@ final class sn {
             }
           }
           vi.field_a = -(var3_intLifetime1 >> 1) + ClientException.field_e + var3_intLifetime1;
-          ia.field_x = ClientException.field_e - (var3_intLifetime1 >> 1);
+          TriangleMesh.field_x = ClientException.field_e - (var3_intLifetime1 >> 1);
           mh.field_f = cb.field_c.field_k * (CheckboxPainter.field_s + en.field_k << 1);
           for (int var4Lifetime2 = param1; Js5NetworkRequest.field_I.length > var4Lifetime2; var4Lifetime2++) {
             int stackIn_112_0 = mh.field_f;

@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh extends IntrusiveNode {
-    static int field_i;
-    int field_j;
-    int field_n;
-    int field_m;
-    boolean field_h;
-    int field_k;
-    int field_g;
-    int field_l;
+final class Bullet extends IntrusiveNode {
+    static int collisionLaserCount;
+    int xQ16;
+    int velocityXQ16;
+    int remainingTicks;
+    boolean inactive;
+    int kind;
+    int velocityYQ16;
+    int yQ16;
 
     final static om[] e(int param0) {
         try {
           if (param0 > -90) {
-            field_i = -121;
+            collisionLaserCount = -121;
           }
           om[] stackIn_4_0 = new om[]{co.field_b, qi.field_P, eb.field_L, pl.field_m, ci.field_d, pj.field_k, sj.field_l, ea.field_g, ki.field_H, AccountRegistrationPanel.field_L, le.field_a, an.field_c, mg.field_g, wa.field_d};
           return stackIn_4_0;
@@ -25,17 +25,17 @@ final class vh extends IntrusiveNode {
         }
     }
 
-    final static String a(String param0, ResourceArchive param1, String param2, int param3) {
+    final static String formatArchiveProgress(String fallback, ResourceArchive archive, String label, int guard) {
         String stackIn_12_2 = null;
         String stackIn_16_2 = null;
         String stackIn_20_2 = null;
         try {
-          if (!param1.b(0)) {
-            String stackIn_2_0 = (String) (param0);
+          if (!archive.b(0)) {
+            String stackIn_2_0 = (String) (fallback);
             return stackIn_2_0;
           }
-          if (param3 == -12920) {
-            String stackIn_7_0 = param2 + " - " + param1.a(-125) + "%";
+          if (guard == -12920) {
+            String stackIn_7_0 = label + " - " + archive.a(-125) + "%";
             return stackIn_7_0;
           }
           String stackIn_5_0 = (String) null;
@@ -45,41 +45,41 @@ final class vh extends IntrusiveNode {
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_11_0 = var4;
           StringBuilder stackIn_11_1 = new StringBuilder().append("vh.G(");
-          if (param0 == null) {
+          if (fallback == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param1 == null) {
+          if (archive == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
           StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param2 == null) {
+          if (label == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void a(int param0, boolean param1, int param2) {
+    final void draw(int cameraX, boolean guard, int cameraY) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var11 = EscapeVector.obfuscationControl;
         try {
-          if (param1) {
+          if (guard) {
             return;
           }
           int var4_int = BoundedRandomAccessFile.activeSession.worldWidth;
-          int var5 = (this.field_l >> 16) - param2;
+          int var5 = (this.yQ16 >> 16) - cameraY;
           if (var5 >= -1 &&
             481 > var5) {
-            int var6 = -param0 + (this.field_j >> 16);
+            int var6 = -cameraX + (this.xQ16 >> 16);
             do {
               if (var6 < -1) {
                 var6 = var6 + var4_int;
@@ -94,7 +94,7 @@ final class vh extends IntrusiveNode {
               if (var11 != 0) {
                 return;
               }
-              if (this.field_k == 1) {
+              if (this.kind == 1) {
                 var9 = 4198404;
                 var8 = 8413216;
                 var7 = 16769152;
@@ -103,7 +103,7 @@ final class vh extends IntrusiveNode {
                 var9 = 266304;
                 var8 = 2121856;
               }
-              int var10 = this.field_m << 2;
+              int var10 = this.remainingTicks << 2;
               if (var10 < 256) {
                 var8 = (-16711936 & (var8 & 16711935) * var10 | (var8 & 65280) * var10 & 16711680) >>> 8;
                 var7 = (-16711936 & var10 * (16711935 & var7) | 16711680 & (65280 & var7) * var10) >>> 8;
@@ -125,14 +125,14 @@ final class vh extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var4), "vh.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) var4), "vh.F(" + cameraX + ',' + guard + ',' + cameraY + ')');
         }
     }
 
-    final static int f(int param0) {
+    final static int accountStateIndex(int guard) {
         try {
-          if (param0 <= 87) {
-            vh.a((byte) 46);
+          if (guard <= 87) {
+            Bullet.removeFirstDialogue((byte) 46);
           }
           if (aj.b(-90)) {
             int stackIn_7_0 = 0;
@@ -147,11 +147,11 @@ final class vh extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "vh.E(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "vh.E(" + guard + ')');
         }
     }
 
-    final static void a(ia param0, int param1, int param2, boolean param3, int param4) {
+    final static void bucketMeshFacesByDepth(TriangleMesh mesh, int nearDepth, int farDepth, boolean cullBackfaces, int guard) {
         int stackIn_32_0 = 0;
         int stackIn_52_0 = 0;
         String stackIn_69_2 = null;
@@ -161,25 +161,25 @@ final class vh extends IntrusiveNode {
         int var17 = 0;
         int var19 = EscapeVector.obfuscationControl;
         try {
-          int var5_int = nm.a(3 * (-param1 + param2), (byte) 78);
-          if (param4 != 4198) {
-            field_i = 9;
+          int var5_int = nm.a(3 * (-nearDepth + farDepth), (byte) 78);
+          if (guard != 4198) {
+            collisionLaserCount = 9;
           }
-          int var6 = 3 * param1;
+          int var6 = 3 * nearDepth;
           int var7 = -10 + var5_int;
           NetworkGameClient.h(-115);
-          if (param0.field_I > 0 &&
-            null != param0.field_n) {
+          if (mesh.field_I > 0 &&
+            null != mesh.field_n) {
             cj.a((byte) -99);
           }
           aj.field_d = 0;
           int var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var8 < param0.field_D)))) {
-            int var9 = param0.field_e[var8];
-            int var10 = param0.field_o[var8];
-            int var11 = param0.field_f[var8];
-            boolean stackOut_13_0 = param3;
+          while (!(decompiledNaturalLoopExit0 = (!(var8 < mesh.field_D)))) {
+            int var9 = mesh.field_e[var8];
+            int var10 = mesh.field_o[var8];
+            int var11 = mesh.field_f[var8];
+            boolean stackOut_13_0 = cullBackfaces;
             stackIn_52_0 = stackOut_13_0 ? 1 : 0;
             boolean stackIn_14_0 = stackOut_13_0;
             if (var19 == 0) {
@@ -218,9 +218,9 @@ final class vh extends IntrusiveNode {
                         int var18 = stackIn_43_0Lifetime1;
                         bc.field_f[var18] = var8;
                         al.field_f[var16] = 1 + var17;
-                        if (param0.field_I > 0 &&
-                          param0.field_n != null) {
-                          byte dupTemp$0 = param0.field_n[var8];
+                        if (mesh.field_I > 0 &&
+                          mesh.field_n != null) {
+                          byte dupTemp$0 = mesh.field_n[var8];
                           EditableTextWidget.field_I[dupTemp$0] = EditableTextWidget.field_I[dupTemp$0] + 1;
                         }
                         aj.field_d = aj.field_d + 1;
@@ -236,10 +236,10 @@ final class vh extends IntrusiveNode {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_52_0 = ~param0.field_I;
+            stackIn_52_0 = ~mesh.field_I;
           }
           if (stackIn_52_0 < -1 &&
-            null != param0.field_n) {
+            null != mesh.field_n) {
             int var8Lifetime1 = 0;
             int var9Lifetime1 = 0;
             while (!(EditableTextWidget.field_I.length <= var9Lifetime1)) {
@@ -258,63 +258,63 @@ final class vh extends IntrusiveNode {
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_68_0 = var5;
           StringBuilder stackIn_68_1 = new StringBuilder().append("vh.D(");
-          if (param0 == null) {
+          if (mesh == null) {
             stackIn_69_2 = "null";
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(nearDepth).append(',').append(farDepth).append(',').append(cullBackfaces).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static void a(byte param0) {
+    final static void removeFirstDialogue(byte guard) {
         try {
-          if (param0 != -22) {
-            vh.a((String) null, (ResourceArchive) null, (String) null, -6);
+          if (guard != -22) {
+            Bullet.formatArchiveProgress((String) null, (ResourceArchive) null, (String) null, -6);
           }
           if (mg.field_e.isEmpty(-107)) {
             return;
           }
-          mg.field_e.removeFirst(param0 - 20223);
+          mg.field_e.removeFirst(guard - 20223);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) runtimeException), "vh.C(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vh.C(" + guard + ')');
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
+    final void reset(int xQ16, boolean inactive, int velocityXQ16, int velocityYQ16, byte guard, int kind, int yQ16, int remainingTicks) {
         try {
-          this.field_k = param5;
-          this.field_g = param3;
-          this.field_l = param6;
-          this.field_j = param0;
-          this.field_m = param7;
-          this.field_h = param1;
-          this.field_n = param2;
-          if (param4 >= -118) {
-            vh.f(-128);
+          this.kind = kind;
+          this.velocityYQ16 = velocityYQ16;
+          this.yQ16 = yQ16;
+          this.xQ16 = xQ16;
+          this.remainingTicks = remainingTicks;
+          this.inactive = inactive;
+          this.velocityXQ16 = velocityXQ16;
+          if (guard >= -118) {
+            Bullet.accountStateIndex(-128);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "vh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vh.B(" + xQ16 + ',' + inactive + ',' + velocityXQ16 + ',' + velocityYQ16 + ',' + guard + ',' + kind + ',' + yQ16 + ',' + remainingTicks + ')');
         }
     }
 
-    final void d(int param0) {
+    final void deactivate(int guard) {
         try {
-          int var2_int = 54 / ((param0 - 40) / 51);
-          this.a(0, true, 0, 0, (byte) -125, 0, 0, 0);
+          int var2_int = 54 / ((guard - 40) / 51);
+          this.reset(0, true, 0, 0, (byte) -125, 0, 0, 0);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "vh.H(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vh.H(" + guard + ')');
         }
     }
 
-    vh(int param0, int param1, int param2, int param3, int param4, int param5) {
+    Bullet(int xQ16, int yQ16, int velocityXQ16, int velocityYQ16, int kind, int remainingTicks) {
         try {
-          this.a(param0, false, param2, param3, (byte) -122, param4, param1, param5);
+          this.reset(xQ16, false, velocityXQ16, velocityYQ16, (byte) -122, kind, yQ16, remainingTicks);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "vh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vh.<init>(" + xQ16 + ',' + yQ16 + ',' + velocityXQ16 + ',' + velocityYQ16 + ',' + kind + ',' + remainingTicks + ')');
         }
     }
 

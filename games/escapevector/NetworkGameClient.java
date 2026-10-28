@@ -737,7 +737,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (fc.field_a == 11) {
           if (mg.field_c != null && (!mg.field_c.b(0) ||
             !mg.field_c.a((byte) -119))) {
-            dn.a(vh.a(md.field_H, mg.field_c, gj.field_g, -12920), 17637, 0.0f);
+            dn.a(Bullet.formatArchiveProgress(md.field_H, mg.field_c, gj.field_g, -12920), 17637, 0.0f);
             boolean decompiledFrameRemainder0 = false;
           }
           else {

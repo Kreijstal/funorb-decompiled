@@ -12,7 +12,7 @@ final class jk {
         String stackIn_20_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          ui.field_b = ia.field_y;
+          ui.field_b = TriangleMesh.field_y;
           if (param3 == 255) {
             boolean stackIn_5_0 = !(gf.field_a >= 13);
             co.field_a = fc.a(stackIn_5_0, (byte) -79);
@@ -70,7 +70,7 @@ final class jk {
           return;
         }
         this.a(param1, param2, 14714);
-        var5.a(param2, false, this.field_c, this.field_c ^ 255);
+        var5.awardAchievement(param2, false, this.field_c, this.field_c ^ 255);
     }
 
     final static void a(String param0, byte param1) {

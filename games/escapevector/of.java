@@ -91,7 +91,7 @@ final class of {
           if (ui.field_b == EmailAvailabilityValidator.field_o) {
             return null;
           }
-          if (ia.field_y == ui.field_b &&
+          if (TriangleMesh.field_y == ui.field_b &&
             param1.equals(tc.field_j)) {
             ui.field_b = RasterBuffer.field_g;
             NameAvailabilityResult stackIn_8_0 = co.field_a;

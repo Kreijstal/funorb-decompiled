@@ -69,7 +69,7 @@ final class SeekerMine extends IntrusiveNode {
         if (param0 > -97) {
           return;
         }
-        GameplaySession.c((byte) -14);
+        GameplaySession.resetSessionMenuState((byte) -14);
         EmailSyntaxValidator.field_q = param1;
     }
 

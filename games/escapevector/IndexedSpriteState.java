@@ -32,7 +32,7 @@ abstract class IndexedSpriteState {
           int[] var20 = var21;
           int[] var2 = var20;
           for (int var3 = 0; var3 < var1_int; var3++) {
-            ia var4_ref_ia = fh.field_e[var3];
+            TriangleMesh var4_ref_ia = fh.field_e[var3];
             var4_ref_ia.a((byte) 49);
             ee.a(var3, 103);
             int var5 = var4_ref_ia.field_a + var4_ref_ia.field_b >> 1;
@@ -81,13 +81,13 @@ abstract class IndexedSpriteState {
               }
             }
             var21[var16] = -2147483648;
-            ia var17 = fh.field_e[var16];
+            TriangleMesh var17 = fh.field_e[var16];
             ee.a(var16, 61);
             for (int var18 = 0; 3 > var18; var18++) {
               TerrainMaskSupport.field_c[var18] = TerrainMaskSupport.field_c[var18] + SectorCacheStore.field_c[var15][var18];
             }
             cf.a(true, TerrainMaskSupport.field_c, false, kh.field_a, false, true, var17);
-            uk.a(var13Lifetime1, -16711760, var7Lifetime1, var12Lifetime1, var14, var17, var9Lifetime1, var8Lifetime1);
+            ShipHullGeometry.a(var13Lifetime1, -16711760, var7Lifetime1, var12Lifetime1, var14, var17, var9Lifetime1, var8Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

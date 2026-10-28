@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia {
+final class TriangleMesh {
     short[] field_o;
     short[] field_v;
     static al field_y;
@@ -129,7 +129,7 @@ final class ia {
         this.b((byte) 77);
     }
 
-    ia() {
+    TriangleMesh() {
         this.field_I = (byte) 0;
         this.field_B = false;
     }
