@@ -22,7 +22,7 @@ final class cj {
           Js5NetworkRequest.field_G.offsetY = cb.field_a.height;
           RasterRestoreSupport.popRasterState((byte) 120);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "cj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class cj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "cj.C(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "cj.C(" + param0 + ')');
         }
     }
 

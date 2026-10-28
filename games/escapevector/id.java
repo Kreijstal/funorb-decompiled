@@ -26,7 +26,7 @@ final class id {
           var1.drawHalfSize(0, 0);
           RasterRestoreSupport.popRasterState((byte) 116);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "id.D(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "id.D(" + param0 + ')');
         }
     }
 

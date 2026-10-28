@@ -2,9 +2,9 @@
 
 This is the only published Java tree. Reviewed rules and the reproducer live in dekobloko-work/readable. The current reverse dictionary is ../../decompilation/escapevector-naming.json.
 
-This pass names 281 reviewed classes and 8394 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
+This pass names 287 reviewed classes and 8750 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
 
-Coverage: 283/349 class declarations and 2151/2781 methods have readable names; 277 constructors follow their owning class. 66 classes and 630 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
+Coverage: 289/349 class declarations and 2247/2781 methods have readable names; 277 constructors follow their owning class. 60 classes and 534 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
 
 ## Entry points
 
@@ -67,6 +67,8 @@ Every DialogueScreen and MenuInputState method has a reviewed name. Dialogue sep
 Every AchievementsScreen method now has a reviewed name. It separates earned snapshots, hidden/member filtering, page partitioning, icon grids, hover/selected slots, action order, page changes and footer actions. AnimatedPanelFrame exposes geometry, colors and opening phase; SlidingSpriteTransition retains its own alpha/time and copied TransitionPoint. The original shared raster, screen clock, member placeholders, account-error notice and interpolation aliasing remain unchanged.
 
 Every HighscoresScreen, HighscoreTable, InstructionsScreen and GameModeSelectScreen method has a reviewed name. Highscores separate category/ranking controls, query status, two-board merging, row origins, packed score/level columns and optional submitted rows. Instructions separate controls, pickup legends and context-dependent objective/mode pages. The selector distinguishes Normal/Hard retrieval ordering and member modes. SpriteLoadTask retains lazy packed/image loading and optional XTEA keys; MenuEdgeSegment identifies the shared background animation. Unrelated error/login helpers remain on their original owners, and original query mutations and guard paths are retained.
+
+Every MainMenuScreen, LevelSelectScreen, GameProgressTracker, ModeProgress, SavedCompletionFlags and LevelAvailabilitySupport method has a reviewed name. Menu actions distinguish membership promotion, sound/music controls, fullscreen and account screens. Level selection retains introduction/tutorial actions, grouped mission rows, path markers and the Simulator minimap preview. Progress separates sequential queries, pending updates and all-infrastructure completion. Saved flags use version-one Retribution/Simulator sections; read-group zero means Simulator while write-group zero means Retribution. Bitset merges retain their original mutation/aliasing, final-level clamps and payload bounds. MainMenuScreen.wrapClientException preserves the same cause and accumulated context.
 
 `IterableNodeHashTable` and `NodeHashTableIterator` own primary-link buckets; `IterableDualLinkDeque` and `DualLinkDequeIterator` traverse secondary links independently. `IntrusiveDequeCursor` supports independent forward/backward scans. `WeightedLruCache` combines hash lookup, secondary recency links and entry weights; `StrongCacheEntry` is the concrete retained-value implementation. Original null-at-exhaustion behavior and throwing constructor stubs remain.
 

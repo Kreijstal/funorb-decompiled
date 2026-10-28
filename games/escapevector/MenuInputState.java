@@ -249,7 +249,7 @@ final class MenuInputState {
           RasterRestoreSupport.popRasterState((byte) -109);
           LoginCredentialType.field_f = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "wc.L(" + guard + ',' + (legacyArchive != null ? "{...}" : "null") + ',' + (spriteArchive != null ? "{...}" : "null") + ',' + (fontArchive != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "wc.L(" + guard + ',' + (legacyArchive != null ? "{...}" : "null") + ',' + (spriteArchive != null ? "{...}" : "null") + ',' + (fontArchive != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -380,7 +380,7 @@ final class MenuInputState {
             field_b = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "wc.C(" + firstShort + ',' + byteValue + ',' + guard + ',' + secondShort + ',' + (output != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "wc.C(" + firstShort + ',' + byteValue + ',' + guard + ',' + secondShort + ',' + (output != null ? "{...}" : "null") + ')');
         }
     }
 

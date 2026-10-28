@@ -133,7 +133,7 @@ final class AchievementTracker {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class AchievementTracker {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class AchievementTracker {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ final class AchievementTracker {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -389,7 +389,7 @@ final class AchievementTracker {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ final class AchievementTracker {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "en.Q(" + exponent + ',' + base + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var3), "en.Q(" + exponent + ',' + base + ',' + guard + ')');
         }
     }
 
@@ -526,7 +526,7 @@ final class AchievementTracker {
           EmailValidationError.field_a[var2_int] = fe.a("tutorial", archive, "texture", true);
           WeightedLruCache.field_c[var2_int] = true;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "en.PA(" + (archive != null ? "{...}" : "null") + ',' + themeIndex + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "en.PA(" + (archive != null ? "{...}" : "null") + ',' + themeIndex + ')');
         }
     }
 
@@ -675,7 +675,7 @@ final class AchievementTracker {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(shift).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(shift).append(')').toString());
         }
     }
 
@@ -689,7 +689,7 @@ final class AchievementTracker {
           }
           words[wordIndex] = var5_int;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "en.I(" + bit + ',' + guard + ',' + (words != null ? "{...}" : "null") + ',' + wordIndex + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "en.I(" + bit + ',' + guard + ',' + (words != null ? "{...}" : "null") + ',' + wordIndex + ')');
         }
     }
 
@@ -829,7 +829,7 @@ final class AchievementTracker {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "en.D(" + defaultCountdown + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "en.D(" + defaultCountdown + ')');
         }
     }
 
@@ -919,7 +919,7 @@ final class AchievementTracker {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

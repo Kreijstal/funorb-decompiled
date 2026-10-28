@@ -33,7 +33,7 @@ final class TerrainMaskSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "ka.A(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "ka.A(" + param0 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class TerrainMaskSupport {
           }
           AccountRegistrationPanel.decodeTerrainQuadrants(top, bottom, input, left, right, rows, 2147483647);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ka.B(" + left + ',' + quadrantCode + ',' + bottom + ',' + right + ',' + (input != null ? "{...}" : "null") + ',' + (rows != null ? "{...}" : "null") + ',' + guard + ',' + top + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ka.B(" + left + ',' + quadrantCode + ',' + bottom + ',' + right + ',' + (input != null ? "{...}" : "null") + ',' + (rows != null ? "{...}" : "null") + ',' + guard + ',' + top + ')');
         }
     }
 

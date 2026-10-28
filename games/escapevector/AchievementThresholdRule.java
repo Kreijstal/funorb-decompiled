@@ -49,7 +49,7 @@ final class AchievementThresholdRule {
               UiComponent.field_o.update(117);
             } else if (0 <= SelfDestructEffects.field_q) {
               sn.c(-1);
-              CheckboxPainter.field_l.j(2525);
+              CheckboxPainter.field_l.update(2525);
             } else if (!PacketBuffer.field_h) {
               if (e.field_a) {
                 var2 = (da.field_b.update(-122));
@@ -88,12 +88,12 @@ final class AchievementThresholdRule {
             return;
           }
           TrackerMusicDefinition.field_f.serviceAccountAchievements(-32464);
-          ua.field_c.b(126);
+          ua.field_c.flushPendingUpdates(126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "mb.F(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "mb.F(" + guard + ')');
         }
     }
 
@@ -107,21 +107,21 @@ final class AchievementThresholdRule {
             return false;
           }
           if (var1_int &&
-            !ua.field_c.a(-19836)) {
+            !ua.field_c.isLoaded(-19836)) {
             return false;
           }
           if (var1_int &&
-            UiContainer.e((byte) 98) &&
+            UiContainer.hasMembership((byte) 98) &&
             se.field_b == null) {
             return false;
           }
           if (var1_int &&
-            UiContainer.e((byte) 116) &&
+            UiContainer.hasMembership((byte) 116) &&
             ArchiveProvider.field_b == null) {
             return false;
           }
           if (var1_int &&
-            UiContainer.e((byte) 111) &&
+            UiContainer.hasMembership((byte) 111) &&
             null != StatefulTextPainter.field_u) {
             return false;
           }
@@ -132,7 +132,7 @@ final class AchievementThresholdRule {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "mb.A(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "mb.A(" + guard + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class AchievementThresholdRule {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class AchievementThresholdRule {
           }
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "mb.B(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "mb.B(" + guard + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class AchievementThresholdRule {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var4_ref), "mb.D(" + guard + ',' + mode + ',' + value + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var4_ref), "mb.D(" + guard + ',' + mode + ',' + value + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class AchievementThresholdRule {
           this.minimumValue = minimumValue;
           this.achievementId = achievementId;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "mb.<init>(" + minimumValue + ',' + requiredMode + ',' + achievementId + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "mb.<init>(" + minimumValue + ',' + requiredMode + ',' + achievementId + ')');
         }
     }
 
@@ -238,7 +238,7 @@ final class AchievementThresholdRule {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 

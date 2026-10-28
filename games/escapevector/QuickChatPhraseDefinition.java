@@ -64,7 +64,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(opcode).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(opcode).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           SoftwareRasterizer.clearFramebuffer();
           se.a(true, guard ^ 17111);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "si.D(" + percent + ',' + (text != null ? "{...}" : "null") + ',' + alternateStyle + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "si.D(" + percent + ',' + (text != null ? "{...}" : "null") + ',' + alternateStyle + ',' + guard + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           int[] var3 = new int[]{6340704, 16777215, 16777215};
           button.setBackgroundColors(var2, var3, -2);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "si.E(" + guard + ',' + (button != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "si.E(" + guard + ',' + (button != null ? "{...}" : "null") + ')');
         }
     }
 

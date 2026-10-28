@@ -192,7 +192,7 @@ final class cf {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class cf {
             cf.a(true, -127, (CharSequence) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "cf.A(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cf.A(" + guard + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class cf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "cf.B(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "cf.B(" + guard + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class cf {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -391,7 +391,7 @@ final class cf {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
         }
     }
 
@@ -413,7 +413,7 @@ final class cf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

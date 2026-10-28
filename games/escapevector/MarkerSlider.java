@@ -64,7 +64,7 @@ final class MarkerSlider extends TextButton {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(button).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(button).append(')').toString());
         }
     }
 

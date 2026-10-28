@@ -41,7 +41,7 @@ final class DynamicTerrainRenderer {
             this.rebuildBoundaryMasks(16);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "na.VA(" + (tiles != null ? "{...}" : "null") + ',' + (pixels != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "na.VA(" + (tiles != null ? "{...}" : "null") + ',' + (pixels != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(',').append(row).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(',').append(row).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -257,7 +257,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(tileX).append(',').append(guard).append(',').append(tileY).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(tileX).append(',').append(guard).append(',').append(tileY).append(')').toString());
         }
     }
 
@@ -296,7 +296,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(value).append(',').append(guard).append(',').append(column).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(value).append(',').append(guard).append(',').append(column).append(')').toString());
         }
     }
 
@@ -438,7 +438,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -477,7 +477,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(guard).append(',').append(column).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(guard).append(',').append(column).append(')').toString());
         }
     }
 
@@ -604,7 +604,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -703,7 +703,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -816,7 +816,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -884,7 +884,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -933,7 +933,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(pixelY).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(pixelY).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -957,7 +957,7 @@ final class DynamicTerrainRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "na.TA(" + rowLimit + ',' + startIndex + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "na.TA(" + rowLimit + ',' + startIndex + ')');
         }
     }
 
@@ -1008,7 +1008,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(tileX).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(tileX).append(')').toString());
         }
     }
 
@@ -1043,7 +1043,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(tileY).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(tileY).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1103,7 +1103,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -1164,7 +1164,7 @@ final class DynamicTerrainRenderer {
           this.unpackBitRange(1, -1, 0, this.tileHeight, var12, this.columnScratch);
           this.copyMaskColumn(1, this.columnScratch, this.tileHeight, pixels, -23372, 1 + this.tileWidth);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "na.DB(" + (tiles != null ? "{...}" : "null") + ',' + guard + ',' + (pixels != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "na.DB(" + (tiles != null ? "{...}" : "null") + ',' + guard + ',' + (pixels != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1210,7 +1210,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -1222,7 +1222,7 @@ final class DynamicTerrainRenderer {
           }
           this.positionCacheY(cache, tileY, (byte) -40);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "na.O(" + guard + ',' + (cache != null ? "{...}" : "null") + ',' + tileX + ',' + tileY + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "na.O(" + guard + ',' + (cache != null ? "{...}" : "null") + ',' + tileX + ',' + tileY + ')');
         }
     }
 
@@ -1273,7 +1273,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -1373,7 +1373,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(tileX).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(tileX).append(')').toString());
         }
     }
 
@@ -1435,7 +1435,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -1482,7 +1482,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1538,7 +1538,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -1582,7 +1582,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1609,7 +1609,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(start).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(start).append(')').toString());
         }
     }
 
@@ -1697,7 +1697,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -1755,7 +1755,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1871,7 +1871,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(column).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(column).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1938,7 +1938,7 @@ final class DynamicTerrainRenderer {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(',').append(tileX).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(',').append(tileX).append(')').toString());
         }
     }
 
@@ -1967,7 +1967,7 @@ final class DynamicTerrainRenderer {
           this.allocateCompositeSurfaces(96);
           this.savedClip = new int[4];
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "na.<init>(" + (terrainMasks != null ? "{...}" : "null") + ',' + (fullTileMask != null ? "{...}" : "null") + ',' + (options != null ? "{...}" : "null") + ',' + tilesWide + ',' + tilesHigh + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "na.<init>(" + (terrainMasks != null ? "{...}" : "null") + ',' + (fullTileMask != null ? "{...}" : "null") + ',' + (options != null ? "{...}" : "null") + ',' + tilesWide + ',' + tilesHigh + ')');
         }
     }
 

@@ -41,7 +41,7 @@ final class WeightedLruCache {
           this.recency.addLast(false, var6_ref);
           ((WeightedCacheEntry) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "fa.D(" + key + ',' + (value != null ? "{...}" : "null") + ',' + weight + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fa.D(" + key + ',' + (value != null ? "{...}" : "null") + ',' + weight + ',' + guard + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class WeightedLruCache {
         try {
           this.putWeighted(key, value, 1, 11261);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "fa.B(" + (value != null ? "{...}" : "null") + ',' + key + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fa.B(" + (value != null ? "{...}" : "null") + ',' + key + ',' + guard + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class WeightedLruCache {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class WeightedLruCache {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(fileId).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(fileId).append(')').toString());
         }
     }
 

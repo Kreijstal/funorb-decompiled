@@ -65,7 +65,7 @@ final class AnimatedPathMarker {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class AnimatedPathMarker {
         try {
           this.markerPosition = this.waypoints[0];
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qe.M(" + (coordinates != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qe.M(" + (coordinates != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class AnimatedPathMarker {
           }
           SoftwareRasterizer.restoreClip(sf.field_m);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qe.A(" + guard + ',' + y + ',' + width + ',' + (sprites != null ? "{...}" : "null") + ',' + tint + ',' + x + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qe.A(" + guard + ',' + y + ',' + width + ',' + (sprites != null ? "{...}" : "null") + ',' + tint + ',' + x + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class AnimatedPathMarker {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(durationTicks).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(durationTicks).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ final class AnimatedPathMarker {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -354,7 +354,7 @@ final class AnimatedPathMarker {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -376,7 +376,7 @@ final class AnimatedPathMarker {
           this.textShadowColor = textShadowColor;
           this.fillColors = fillColors;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qe.<init>(" + markerIndex + ',' + (coordinates != null ? "{...}" : "null") + ',' + radius + ',' + (fillColors != null ? "{...}" : "null") + ',' + (outlineColors != null ? "{...}" : "null") + ',' + textColor + ',' + textShadowColor + ',' + (unusedFont != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qe.<init>(" + markerIndex + ',' + (coordinates != null ? "{...}" : "null") + ',' + radius + ',' + (fillColors != null ? "{...}" : "null") + ',' + (outlineColors != null ? "{...}" : "null") + ',' + textColor + ',' + textShadowColor + ',' + (unusedFont != null ? "{...}" : "null") + ')');
         }
     }
 

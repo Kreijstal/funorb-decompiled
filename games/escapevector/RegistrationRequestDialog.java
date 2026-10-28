@@ -33,7 +33,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -60,7 +60,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         try {
           this.a(-4814, NameAvailabilityResultSupport.createTextResponse(mj.field_a, param0, param0 ^ 252), true);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qc.WB(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qc.WB(" + param0 + ')');
         }
     }
 
@@ -414,67 +414,67 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime83 = LabeledField.loadNamedAsset("vengenceLevelNames,0", 10592);
           if (var2Lifetime83 != null) {
-            vd.field_d[0] = RasterSnapshot.a(var2Lifetime83, 119);
+            SavedCompletionFlags.field_d[0] = RasterSnapshot.a(var2Lifetime83, 119);
           }
           byte[] var2Lifetime84 = LabeledField.loadNamedAsset("vengenceLevelNames,1", 10592);
           if (var2Lifetime84 != null) {
-            vd.field_d[1] = RasterSnapshot.a(var2Lifetime84, param0 + 102);
+            SavedCompletionFlags.field_d[1] = RasterSnapshot.a(var2Lifetime84, param0 + 102);
           }
           byte[] var2Lifetime85 = LabeledField.loadNamedAsset("vengenceLevelNames,2", param0 ^ 10600);
           if (var2Lifetime85 != null) {
-            vd.field_d[2] = RasterSnapshot.a(var2Lifetime85, 120);
+            SavedCompletionFlags.field_d[2] = RasterSnapshot.a(var2Lifetime85, 120);
           }
           byte[] var2Lifetime86 = LabeledField.loadNamedAsset("vengenceLevelNames,3", param0 ^ 10600);
           if (null != var2Lifetime86) {
-            vd.field_d[3] = RasterSnapshot.a(var2Lifetime86, param0 + 110);
+            SavedCompletionFlags.field_d[3] = RasterSnapshot.a(var2Lifetime86, param0 + 110);
           }
           byte[] var2Lifetime87 = LabeledField.loadNamedAsset("vengenceLevelNames,4", 10592);
           if (var2Lifetime87 != null) {
-            vd.field_d[4] = RasterSnapshot.a(var2Lifetime87, param0 + 107);
+            SavedCompletionFlags.field_d[4] = RasterSnapshot.a(var2Lifetime87, param0 + 107);
           }
           byte[] var2Lifetime88 = LabeledField.loadNamedAsset("vengenceLevelNames,5", 10592);
           if (var2Lifetime88 != null) {
-            vd.field_d[5] = RasterSnapshot.a(var2Lifetime88, 112);
+            SavedCompletionFlags.field_d[5] = RasterSnapshot.a(var2Lifetime88, 112);
           }
           byte[] var2Lifetime89 = LabeledField.loadNamedAsset("vengenceLevelNames,6", 10592);
           if (null != var2Lifetime89) {
-            vd.field_d[6] = RasterSnapshot.a(var2Lifetime89, 118);
+            SavedCompletionFlags.field_d[6] = RasterSnapshot.a(var2Lifetime89, 118);
           }
           byte[] var2Lifetime90 = LabeledField.loadNamedAsset("vengenceLevelNames,7", 10592);
           if (var2Lifetime90 != null) {
-            vd.field_d[7] = RasterSnapshot.a(var2Lifetime90, param0 + 115);
+            SavedCompletionFlags.field_d[7] = RasterSnapshot.a(var2Lifetime90, param0 + 115);
           }
           byte[] var2Lifetime91 = LabeledField.loadNamedAsset("vengenceLevelNames,8", 10592);
           if (var2Lifetime91 != null) {
-            vd.field_d[8] = RasterSnapshot.a(var2Lifetime91, 120);
+            SavedCompletionFlags.field_d[8] = RasterSnapshot.a(var2Lifetime91, 120);
           }
           byte[] var2Lifetime92 = LabeledField.loadNamedAsset("vengenceLevelNames,9", 10592);
           if (var2Lifetime92 != null) {
-            vd.field_d[9] = RasterSnapshot.a(var2Lifetime92, 118);
+            SavedCompletionFlags.field_d[9] = RasterSnapshot.a(var2Lifetime92, 118);
           }
           byte[] var2Lifetime93 = LabeledField.loadNamedAsset("vengenceLevelNames,10", 10592);
           if (var2Lifetime93 != null) {
-            vd.field_d[10] = RasterSnapshot.a(var2Lifetime93, PacketBuffer.xor(param0, 122));
+            SavedCompletionFlags.field_d[10] = RasterSnapshot.a(var2Lifetime93, PacketBuffer.xor(param0, 122));
           }
           byte[] var2Lifetime94 = LabeledField.loadNamedAsset("vengenceLevelNames,11", param0 + 10584);
           if (var2Lifetime94 != null) {
-            vd.field_d[11] = RasterSnapshot.a(var2Lifetime94, 112);
+            SavedCompletionFlags.field_d[11] = RasterSnapshot.a(var2Lifetime94, 112);
           }
           byte[] var2Lifetime95 = LabeledField.loadNamedAsset("vengenceLevelNames,12", 10592);
           if (null != var2Lifetime95) {
-            vd.field_d[12] = RasterSnapshot.a(var2Lifetime95, 125);
+            SavedCompletionFlags.field_d[12] = RasterSnapshot.a(var2Lifetime95, 125);
           }
           byte[] var2Lifetime96 = LabeledField.loadNamedAsset("vengenceLevelNames,13", 10592);
           if (var2Lifetime96 != null) {
-            vd.field_d[13] = RasterSnapshot.a(var2Lifetime96, 110);
+            SavedCompletionFlags.field_d[13] = RasterSnapshot.a(var2Lifetime96, 110);
           }
           byte[] var2Lifetime97 = LabeledField.loadNamedAsset("vengenceLevelNames,14", 10592);
           if (null != var2Lifetime97) {
-            vd.field_d[14] = RasterSnapshot.a(var2Lifetime97, PacketBuffer.xor(param0, 112));
+            SavedCompletionFlags.field_d[14] = RasterSnapshot.a(var2Lifetime97, PacketBuffer.xor(param0, 112));
           }
           byte[] var2Lifetime98 = LabeledField.loadNamedAsset("vengenceLevelNames,15", param0 ^ 10600);
           if (null != var2Lifetime98) {
-            vd.field_d[15] = RasterSnapshot.a(var2Lifetime98, 120);
+            SavedCompletionFlags.field_d[15] = RasterSnapshot.a(var2Lifetime98, 120);
           }
           byte[] var2Lifetime99 = LabeledField.loadNamedAsset("simulatorLevelNames,0", 10592);
           if (var2Lifetime99 != null) {
@@ -754,7 +754,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime168 = LabeledField.loadNamedAsset("powerup_shield", 10592);
           if (var2Lifetime168 != null) {
-            nl.field_a = RasterSnapshot.a(var2Lifetime168, 117);
+            LevelAvailabilitySupport.field_a = RasterSnapshot.a(var2Lifetime168, 117);
           }
           byte[] var2Lifetime169 = LabeledField.loadNamedAsset("powerup_tripleshot", 10592);
           if (null != var2Lifetime169) {
@@ -766,7 +766,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime171 = LabeledField.loadNamedAsset("powerup_rockbuster", param0 + 10584);
           if (null != var2Lifetime171) {
-            gn.field_l = RasterSnapshot.a(var2Lifetime171, 114);
+            ModeProgress.field_l = RasterSnapshot.a(var2Lifetime171, 114);
           }
           byte[] var2Lifetime172 = LabeledField.loadNamedAsset("powerup_fiverockbusters", 10592);
           if (var2Lifetime172 != null) {
@@ -942,7 +942,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime215 = LabeledField.loadNamedAsset("lives_colon", 10592);
           if (null != var2Lifetime215) {
-            vd.field_c = RasterSnapshot.a(var2Lifetime215, 116);
+            SavedCompletionFlags.field_c = RasterSnapshot.a(var2Lifetime215, 116);
           }
           byte[] var2Lifetime216 = LabeledField.loadNamedAsset("score_colon", 10592);
           if (var2Lifetime216 != null) {
@@ -1162,11 +1162,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime270 = LabeledField.loadNamedAsset("vengeanceAlienMessage,0", 10592);
           if (var2Lifetime270 != null) {
-            vd.field_i[0] = RasterSnapshot.a(var2Lifetime270, 122);
+            SavedCompletionFlags.field_i[0] = RasterSnapshot.a(var2Lifetime270, 122);
           }
           byte[] var2Lifetime271 = LabeledField.loadNamedAsset("vengeanceAlienMessage,1", 10592);
           if (var2Lifetime271 != null) {
-            vd.field_i[1] = RasterSnapshot.a(var2Lifetime271, 117);
+            SavedCompletionFlags.field_i[1] = RasterSnapshot.a(var2Lifetime271, 117);
           }
           byte[] var2Lifetime272 = LabeledField.loadNamedAsset("titleMembersExpansion", 10592);
           if (var2Lifetime272 != null) {
@@ -1263,7 +1263,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           } else {
             stackIn_1028_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_1027_0), ((StringBuilder) (Object) stackIn_1027_1).append(stackIn_1028_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_1027_0), ((StringBuilder) (Object) stackIn_1027_1).append(stackIn_1028_2).append(')').toString());
         }
         if (GameAppletShell.field_h) {
           var3++;
@@ -1288,7 +1288,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "qc.H(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "qc.H(" + guard + ')');
         }
     }
 
@@ -1381,7 +1381,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1392,7 +1392,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           field_vb = null;
           field_xb = null;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qc.UB(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qc.UB(" + guard + ')');
         }
     }
 

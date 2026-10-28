@@ -107,7 +107,7 @@ final class PathPoint {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(centerY).append(',').append(phase).append(',').append(left).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(centerY).append(',').append(phase).append(',').append(left).append(')').toString());
         }
     }
 
@@ -115,11 +115,11 @@ final class PathPoint {
         regionExit1: {
           int var2 = EscapeVector.obfuscationControl;
           boolean var1 = (UiComponent.field_o.input.pointerDriven);
-          if (!UiContainer.e((byte) -32) ||
+          if (!UiContainer.hasMembership((byte) -32) ||
             UiComponent.field_o.accountStateIndex == 2) {
             if (AccountSessionSupport.isGuestSession(-119)) {
               if (UiComponent.field_o.accountStateIndex == 0) {
-                if (UiContainer.e((byte) -122)) {
+                if (UiContainer.hasMembership((byte) -122)) {
                   break regionExit1;
                 }
                 if (AccountSessionSupport.isGuestSession(-126)) {
@@ -132,7 +132,7 @@ final class PathPoint {
               UiComponent.field_o = new GameModeSelectScreen((var1));
               break regionExit1;
             }
-            if (!UiContainer.e((byte) -122) &&
+            if (!UiContainer.hasMembership((byte) -122) &&
               !AccountSessionSupport.isGuestSession(-126) &&
               1 != UiComponent.field_o.accountStateIndex) {
               UiComponent.field_o = new GameModeSelectScreen((var1));

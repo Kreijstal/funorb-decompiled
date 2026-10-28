@@ -30,7 +30,7 @@ final class ArchivePreloader {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class ArchivePreloader {
           this.taskCount = this.taskCount + 1;
           this.tasks[fieldTemp$0] = var8;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "uc.G(" + groupId + ',' + (archive != null ? "{...}" : "null") + ',' + guard + ',' + (waitingText != null ? "{...}" : "null") + ',' + (progressText != null ? "{...}" : "null") + ',' + (groupName != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uc.G(" + groupId + ',' + (archive != null ? "{...}" : "null") + ',' + guard + ',' + (waitingText != null ? "{...}" : "null") + ',' + (progressText != null ? "{...}" : "null") + ',' + (groupName != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class ArchivePreloader {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(',').append(groupId).append(',').append(fileId).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(',').append(groupId).append(',').append(fileId).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class ArchivePreloader {
             field_h = (BufferedRandomAccessFile) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "uc.I(" + (archive != null ? "{...}" : "null") + ',' + (waitingText != null ? "{...}" : "null") + ',' + (progressText != null ? "{...}" : "null") + ',' + (groupName != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uc.I(" + (archive != null ? "{...}" : "null") + ',' + (waitingText != null ? "{...}" : "null") + ',' + (progressText != null ? "{...}" : "null") + ',' + (groupName != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class ArchivePreloader {
           }
           this.progressPercent = (float)this.progressCeiling * var4_float / (float)(this.taskCount + 1);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "uc.C(" + percent + ',' + guard + ',' + (task != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uc.C(" + percent + ',' + guard + ',' + (task != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -170,7 +170,7 @@ final class ArchivePreloader {
             this.addTask(-32, (ResourceArchive) null, 21, (String) null, (String) null, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "uc.F(" + (waitingText != null ? "{...}" : "null") + ',' + guard + ',' + (progressText != null ? "{...}" : "null") + ',' + (archive != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uc.F(" + (waitingText != null ? "{...}" : "null") + ',' + guard + ',' + (progressText != null ? "{...}" : "null") + ',' + (archive != null ? "{...}" : "null") + ')');
         }
     }
 

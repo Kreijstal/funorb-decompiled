@@ -50,7 +50,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(lastCharacter).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(lastCharacter).append(')').toString());
         }
     }
 
@@ -59,7 +59,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         try {
           this.value = value;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (value != null ? "{...}" : "null") + ',' + weight + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "vk.<init>(" + (value != null ? "{...}" : "null") + ',' + weight + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(guard).append(')').toString());
         }
     }
 

@@ -27,7 +27,7 @@ final class AchievementFlagSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "ug.C(" + achievementId + ',' + start + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "ug.C(" + achievementId + ',' + start + ')');
         }
     }
 

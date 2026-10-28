@@ -27,7 +27,7 @@ class LegacyTextBlock {
           this.font = font;
           this.updateLayout((byte) 102);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "jl.D(" + bodyColor + ',' + (font != null ? "{...}" : "null") + ',' + titleColor + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "jl.D(" + bodyColor + ',' + (font != null ? "{...}" : "null") + ',' + titleColor + ',' + guard + ')');
         }
     }
 
@@ -68,7 +68,7 @@ class LegacyTextBlock {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(firstLine).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(firstLine).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ class LegacyTextBlock {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -253,7 +253,7 @@ class LegacyTextBlock {
           }
           this.paragraphs = paragraphs;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "jl.<init>(" + (title != null ? "{...}" : "null") + ',' + (paragraphs != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "jl.<init>(" + (title != null ? "{...}" : "null") + ',' + (paragraphs != null ? "{...}" : "null") + ')');
         }
     }
 

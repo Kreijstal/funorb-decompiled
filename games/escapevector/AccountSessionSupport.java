@@ -20,7 +20,7 @@ final class AccountSessionSupport {
           var3.writeByte(query.field_j, -123);
           int var4 = 58 % ((guard + 64) / 39);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "aj.B(" + guard + ',' + opcode + ',' + (query != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "aj.B(" + guard + ',' + opcode + ',' + (query != null ? "{...}" : "null") + ')');
         }
     }
 

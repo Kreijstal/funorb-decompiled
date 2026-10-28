@@ -23,7 +23,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
             field_l = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ah.CA(" + guard + ',' + (field != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ah.CA(" + guard + ',' + (field != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,7 +47,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         try {
           this.markChanged(false);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ah.W(" + (field != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ah.W(" + (field != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -82,7 +82,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           QuickChatPhraseDefinition.showLoadingProgress(AlternateUsernameCredentials.field_t, DelegatingCanvas.field_e, pb.field_d, (byte) 14);
           SecondaryNodeHashTable.presentRaster(param0, param1, param1 - 1, 0);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ah.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ah.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         try {
           this.field = param0;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

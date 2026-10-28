@@ -30,7 +30,7 @@ final class EmailCredentials extends LoginCredentials {
           buffer.writeCircumfixedString((byte) 100, this.email);
           buffer.writeBase38Password(this.password, (byte) 111);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "bh.G(" + (buffer != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "bh.G(" + (buffer != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class EmailCredentials extends LoginCredentials {
           this.password = param1;
           this.email = param0;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -50,7 +50,7 @@ final class SpriteLabelColumns extends LegacyTextBlock {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(baselineY).append(',').append(color).append(',').append(alignment).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(baselineY).append(',').append(color).append(',').append(alignment).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class SpriteLabelColumns extends LegacyTextBlock {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class SpriteLabelColumns extends LegacyTextBlock {
           int var5_int = 77 % ((guard - 47) / 60);
           this.updateColumns(126);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "wd.D(" + bodyColor + ',' + (font != null ? "{...}" : "null") + ',' + titleColor + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "wd.D(" + bodyColor + ',' + (font != null ? "{...}" : "null") + ',' + titleColor + ',' + guard + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class SpriteLabelColumns extends LegacyTextBlock {
           for (int var4 = 0; var4 < rows.length; var4++) {
             SpriteStrip var5 = rows[var4];
             if (var5 != null) {
-              var3_int = t.a(var5.width(11384), var3_int, 41);
+              var3_int = MainMenuScreen.maxInt(var5.width(11384), var3_int, 41);
             }
           }
           int stackIn_16_0 = var3_int;
@@ -158,7 +158,7 @@ final class SpriteLabelColumns extends LegacyTextBlock {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(minimumWidth).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(minimumWidth).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class SpriteLabelColumns extends LegacyTextBlock {
           this.labels = labels;
           this.spriteRows = spriteRows;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (title != null ? "{...}" : "null") + ',' + (spriteRows != null ? "{...}" : "null") + ',' + (labels != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "wd.<init>(" + (title != null ? "{...}" : "null") + ',' + (spriteRows != null ? "{...}" : "null") + ',' + (labels != null ? "{...}" : "null") + ')');
         }
     }
 

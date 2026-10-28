@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nl {
+final class LevelAvailabilitySupport {
     static String field_a;
 
     public static void releaseStatics(int guard) {
@@ -11,15 +11,15 @@ final class nl {
         field_a = null;
     }
 
-    final static boolean a(byte param0, int param1) {
-        if (param1 == 0) {
+    final static boolean isAccessible(byte guard, int levelStatus) {
+        if (levelStatus == 0) {
           return true;
         }
-        if (param0 >= 95) {
-          return param1 != 1 ? false : true;
+        if (guard >= 95) {
+          return levelStatus != 1 ? false : true;
         }
         field_a = (String) null;
-        if (param1 == 1) {
+        if (levelStatus == 1) {
           return true;
         }
         return false;

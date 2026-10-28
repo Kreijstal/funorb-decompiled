@@ -28,7 +28,7 @@ abstract class MouseWheelInput {
             field_a = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ca.E(" + guard + ',' + opcode + ',' + (write != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ca.E(" + guard + ',' + opcode + ',' + (write != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -96,7 +96,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

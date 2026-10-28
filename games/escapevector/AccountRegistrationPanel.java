@@ -47,7 +47,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           var9 = var9 >>> 2;
           TerrainMaskSupport.decodeTerrainQuadrant(var7_int, var9, bottom, right, input, rows, (byte) -74, var8);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "bf.L(" + top + ',' + bottom + ',' + (input != null ? "{...}" : "null") + ',' + left + ',' + right + ',' + (rows != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "bf.L(" + top + ',' + bottom + ',' + (input != null ? "{...}" : "null") + ',' + left + ',' + right + ',' + (rows != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -212,7 +212,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         var3 = var3 + (this.a(20, this.field_R, 170, ri.field_a, 25, "", var3) + 5);
         var3 = var3 + this.a(170, this.field_Q, RegistrationRequestDialog.field_vb, var3, 100);
         var3 = var3 + (this.a(170, mh.field_d, var3, this.field_U, DualLinkDequeIterator.field_a, 170) + 5);
-        var3 = var3 + (5 + this.a(170, ValidationHelpWidget.field_J, var3, this.field_S, ig.field_i, 170));
+        var3 = var3 + (5 + this.a(170, ValidationHelpWidget.field_J, var3, this.field_S, LevelSelectScreen.field_i, 170));
         var3 = var3 + this.a(IterableNodeHashTable.field_a, (byte) 123, var3, this.field_N, 170);
         LabeledField var4 = new LabeledField(46, var3, -90 + this.width, 25, this.field_J, true, -120 + this.width, 5, ke.field_c, 11579568, ii.field_b);
         this.addChild(var4, false);
@@ -286,7 +286,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -324,7 +324,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -358,7 +358,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -375,7 +375,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           super.updateHover(guard, offsetY, offsetX, root);
           this.field_K.enabled = this.b(true);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "bf.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "bf.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -437,7 +437,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -475,7 +475,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -522,7 +522,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(hotspotId).append(',').append(buttonCode).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(hotspotId).append(',').append(buttonCode).append(')').toString());
         }
     }
 

@@ -25,13 +25,13 @@ final class SpriteFactorySupport {
             for (int var6 = 0; var1 > var6; var6++) {
               var5_ref_int__[var6] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(var20[var6] << 24, -16777216), ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var21[var6], 255)]);
             }
-            var3 = new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var13);
+            var3 = new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var13);
           } else {
             int[] var9 = new int[var1];
             for (int var5 = 0; var1 > var5; var5++) {
               var9[var5] = ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var21[var5], 255)];
             }
-            var3 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var9);
+            var3 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var9);
           }
           SpriteDecodeSupport.releaseSpriteSheet(false);
           return (Sprite) (var3);
@@ -47,13 +47,13 @@ final class SpriteFactorySupport {
           for (int var6Lifetime1 = 0; var1Lifetime1 > var6Lifetime1; var6Lifetime1++) {
             var5_ref_int__Lifetime1[var6Lifetime1] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(var18[var6Lifetime1] << 24, -16777216), ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var19[var6Lifetime1], 255)]);
           }
-          var3Lifetime1 = new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var13Lifetime1);
+          var3Lifetime1 = new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var13Lifetime1);
         } else {
           int[] var9Lifetime1 = new int[var1Lifetime1];
           for (int var5Lifetime1 = 0; var1Lifetime1 > var5Lifetime1; var5Lifetime1++) {
             var9Lifetime1[var5Lifetime1] = ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var19[var5Lifetime1], 255)];
           }
-          var3Lifetime1 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var9Lifetime1);
+          var3Lifetime1 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var9Lifetime1);
         }
         SpriteDecodeSupport.releaseSpriteSheet(false);
         return (Sprite) (var3Lifetime1);
@@ -63,12 +63,12 @@ final class SpriteFactorySupport {
         if (guard) {
           SpriteFactorySupport.buildSpriteFromSheet(13);
           if (AchievementRecord.a(mode, -102)) {
-            return pc.a(2513, mode);
+            return pc.levelNameCount(2513, mode);
           }
           return 0;
         }
         if (AchievementRecord.a(mode, -102)) {
-          return pc.a(2513, mode);
+          return pc.levelNameCount(2513, mode);
         }
         return 0;
     }
@@ -87,7 +87,7 @@ final class SpriteFactorySupport {
           id.c(120);
           SocketConnector.field_d = 0 - NodeHashTableIterator.field_h;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "je.A(" + (archive != null ? "{...}" : "null") + ',' + (mixer != null ? "{...}" : "null") + ',' + durationMillis + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "je.A(" + (archive != null ? "{...}" : "null") + ',' + (mixer != null ? "{...}" : "null") + ',' + durationMillis + ',' + guard + ')');
         }
     }
 

@@ -70,7 +70,7 @@ final class KeyboardStateSupport {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             RuntimeException var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw t.a((Throwable) ((Object) var1_ref), "ac.F(" + guard + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "ac.F(" + guard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -115,7 +115,7 @@ final class KeyboardStateSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           Throwable decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "ac.B(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "ac.B(" + guard + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class KeyboardStateSupport {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

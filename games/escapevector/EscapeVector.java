@@ -12,7 +12,7 @@ public final class EscapeVector extends NetworkGameClient {
           this.renderFrame(-27273);
           jd.a((byte) -54);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.O(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "EscapeVector.O(" + guard + ')');
         }
     }
 
@@ -32,7 +32,7 @@ public final class EscapeVector extends NetworkGameClient {
             ValidationIndicator.a((byte) 97);
           }
           UiContainer.field_C.serviceOutput();
-          ig.field_l.serviceOutput();
+          LevelSelectScreen.field_l.serviceOutput();
           int stackIn_16_1 = -1;
           boolean stackIn_17_2 = (null != IsaacRandom.field_d);
           this.a(stackIn_16_1, stackIn_17_2);
@@ -101,10 +101,10 @@ public final class EscapeVector extends NetworkGameClient {
                   if (null != BoundedRandomAccessFile.activeSession) {
                     da.field_c.b(ch.field_a.pointerDriven, 320);
                     if (var4 != 0) {
-                      AlternateUsernameCredentials.field_q.b(-26480, AlternateUsernameCredentials.field_q.field_b.pointerDriven);
+                      AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, AlternateUsernameCredentials.field_q.input.pointerDriven);
                     }
                   } else {
-                    AlternateUsernameCredentials.field_q.b(-26480, AlternateUsernameCredentials.field_q.field_b.pointerDriven);
+                    AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, AlternateUsernameCredentials.field_q.input.pointerDriven);
                   }
                   mj.field_d = 0;
                   ChatMessage.clearFrameOffsets((byte) -67);
@@ -177,7 +177,7 @@ public final class EscapeVector extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "EscapeVector.H(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "EscapeVector.H(" + guard + ')');
         }
     }
 
@@ -188,7 +188,7 @@ public final class EscapeVector extends NetworkGameClient {
             EscapeVector.drawOutlinedText((String) null, 38, -112, (byte) -73);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.CB(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "EscapeVector.CB(" + guard + ')');
         }
     }
 
@@ -233,7 +233,7 @@ public final class EscapeVector extends NetworkGameClient {
           InstructionsScreen.releaseStatics(-1);
           AchievementsScreen.releaseStatics(0);
           AchievementTracker.releaseStatics(1);
-          kg.releaseStatics(80);
+          GameProgressTracker.releaseStatics(80);
           p.releaseStatics(99);
           Js5Transport.releaseStatics(-4470);
           DiskCacheWorker.releaseStatics(-4);
@@ -245,8 +245,8 @@ public final class EscapeVector extends NetworkGameClient {
           TrackerMusicPlayer.releaseStatics();
           AudioOutput.releaseStatics();
           GameplaySession.releaseStatics((byte) 69);
-          t.releaseStatics((byte) -34);
-          ig.releaseStatics(-60);
+          MainMenuScreen.releaseStatics((byte) -34);
+          LevelSelectScreen.releaseStatics(-60);
           GameModeSelectScreen.releaseStatics(459);
           tf.releaseStatics(-92);
           MenuInputState.releaseStatics((byte) 49);
@@ -260,8 +260,8 @@ public final class EscapeVector extends NetworkGameClient {
           IndexedSpriteState.releaseStatics(-26317);
           ji.releaseStatics(2097152);
           AudioService.releaseStatics((byte) -58);
-          gn.releaseStatics(false);
-          vd.releaseStatics((byte) 80);
+          ModeProgress.releaseStatics(false);
+          SavedCompletionFlags.releaseStatics((byte) 80);
           ChatMessageDecoder.releaseStatics(127);
           le.releaseStatics(91);
           ArchiveIndex.releaseStatics((byte) 18);
@@ -311,7 +311,7 @@ public final class EscapeVector extends NetworkGameClient {
           cb.releaseStatics(-13379);
           bn.releaseStatics(true);
           lh.releaseStatics((byte) 26);
-          nl.releaseStatics(16558);
+          LevelAvailabilitySupport.releaseStatics(16558);
           LoginCredentialType.releaseStatics(124);
           LoginCredentials.releaseStatics(-102);
           CipherPacketBuffer.releaseStatics(106);
@@ -483,7 +483,7 @@ public final class EscapeVector extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "EscapeVector.E(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "EscapeVector.E(" + guard + ')');
         }
     }
 
@@ -492,7 +492,7 @@ public final class EscapeVector extends NetworkGameClient {
         try {
           KeyboardStateSupport.a(guard ^ -25900, mg.field_f);
           if (null == ByteStorage.gameFont) {
-            gn.a(-122);
+            ModeProgress.refreshAccountUi(-122);
             InstructionsScreen.setLoadingProgress(TextLayout.field_f, guard ^ -17595, 70.0f);
             this.renderClient((byte) -128);
             ByteStorage.gameFont = DisplayNameForm.loadBinaryFont(guard ^ -92, sn.field_c, "", "fonts_squarish16", IndexedSpriteState.field_j);
@@ -540,7 +540,7 @@ public final class EscapeVector extends NetworkGameClient {
             DualLinkDequeIterator.field_e.drawDownscaled(0, 0, 32, 32);
             AlphaContainer.field_D.a(guard ^ -35);
             this.loadLevelSelectBackgrounds(false);
-            vd.field_f = kh.a(IndexedSpriteState.field_j, (byte) 123, "", "level_complete_tick");
+            SavedCompletionFlags.field_f = kh.a(IndexedSpriteState.field_j, (byte) 123, "", "level_complete_tick");
             FullscreenFocusCanvas.field_a = SpriteCheckboxPainter.loadIndexedSprites("scrshots", "", (byte) -48, IndexedSpriteState.field_j);
             MarkerSliderPainter.field_h = null;
             SpriteOffset.a((byte) 92);
@@ -575,8 +575,8 @@ public final class EscapeVector extends NetworkGameClient {
               return;
             }
             AccountMessagePanel.setTickRate(50, true);
-            AlternateUsernameCredentials.field_q = new t();
-            CheckboxPainter.field_l = new ig(1, Bullet.accountStateIndex(guard ^ -35));
+            AlternateUsernameCredentials.field_q = new MainMenuScreen();
+            CheckboxPainter.field_l = new LevelSelectScreen(1, Bullet.accountStateIndex(guard ^ -35));
             UiComponent.field_o = new GameModeSelectScreen(true);
             rc.field_a = new HighscoresScreen(false, 1);
             if (guard != -96) {
@@ -604,7 +604,7 @@ public final class EscapeVector extends NetworkGameClient {
           pc.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "button_formation").toPcmSample().resample(var2);
           UiTheme.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "frame-appear").toPcmSample().resample(var2);
           QuickChatPhraseDefinition.field_t = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "photo-blob-grow").toPcmSample().resample(var2);
-          vd.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "photo-body-explode").toPcmSample().resample(var2);
+          SavedCompletionFlags.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "photo-body-explode").toPcmSample().resample(var2);
           ArchiveProvider.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "grid_effect_1").toPcmSample().resample(var2);
           pa.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "grid_effect_2").toPcmSample().resample(var2);
           PcmResampler.field_g = VorbisSample.loadNamed(StripedProgressBar.field_I, "", "pixelate").decodeToPcm().resample(var2);
@@ -613,7 +613,7 @@ public final class EscapeVector extends NetworkGameClient {
           TerrainMaskSupport.field_e = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "left-foot-down").toPcmSample().resample(var2);
           ri.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "right-foot-down").toPcmSample().resample(var2);
           DraggableWidget.field_M = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "ship-fire").toPcmSample().resample(var2);
-          gn.field_e = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "ship-fire-three").toPcmSample().resample(var2);
+          ModeProgress.field_e = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "ship-fire-three").toPcmSample().resample(var2);
           ShipHullGeometry.field_j = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "alien-fire").toPcmSample().resample(var2);
           Bzip2State.field_G = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield").toPcmSample().resample(var2);
           InputGlyphSupport.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield_impact").toPcmSample().resample(var2);
@@ -645,7 +645,7 @@ public final class EscapeVector extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref2), "EscapeVector.FB(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref2), "EscapeVector.FB(" + guard + ')');
         }
     }
 
@@ -661,7 +661,7 @@ public final class EscapeVector extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "EscapeVector.AB(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "EscapeVector.AB(" + guard + ')');
         }
     }
 
@@ -696,7 +696,7 @@ public final class EscapeVector extends NetworkGameClient {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -707,7 +707,7 @@ public final class EscapeVector extends NetworkGameClient {
           StripedProgressBar.objectGlowSprites[3] = fe.a("", IndexedSpriteState.field_j, "sprites_magnet_glow", true);
           StripedProgressBar.objectGlowSprites[4] = fe.a("", IndexedSpriteState.field_j, "sprites_repeller_glow", true);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.DB(" + fuelIndex + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "EscapeVector.DB(" + fuelIndex + ')');
         }
     }
 
@@ -731,7 +731,7 @@ public final class EscapeVector extends NetworkGameClient {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw t.a((Throwable) ((Object) var1_ref), "EscapeVector.GB(" + guard + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "EscapeVector.GB(" + guard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -751,15 +751,15 @@ public final class EscapeVector extends NetworkGameClient {
           if (UiContainer.field_C != null) {
             UiContainer.field_C.shutdown();
           }
-          if (ig.field_l != null) {
-            ig.field_l.shutdown();
+          if (LevelSelectScreen.field_l != null) {
+            LevelSelectScreen.field_l.shutdown();
           }
           di.a(1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "EscapeVector.B(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "EscapeVector.B(" + guard + ')');
         }
     }
 
@@ -792,7 +792,7 @@ public final class EscapeVector extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "EscapeVector.HB(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "EscapeVector.HB(" + guard + ')');
         }
     }
 
@@ -838,7 +838,7 @@ public final class EscapeVector extends NetworkGameClient {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -875,7 +875,7 @@ public final class EscapeVector extends NetworkGameClient {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -918,7 +918,7 @@ public final class EscapeVector extends NetworkGameClient {
             if (decompiledFrameRemainder0) {
               if (!TextLayout.field_b) {
                 if (SelfDestructEffects.field_q >= 0) {
-                  CheckboxPainter.field_l.e(3);
+                  CheckboxPainter.field_l.draw(3);
                   decompiledFrameRemainder0 = (var9 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -944,7 +944,7 @@ public final class EscapeVector extends NetworkGameClient {
                           }
                           if (decompiledFrameRemainder0 &&
                             null != AlternateUsernameCredentials.field_q) {
-                            AlternateUsernameCredentials.field_q.a((byte) -16);
+                            AlternateUsernameCredentials.field_q.draw((byte) -16);
                             if (var9 != 0) {
                               this.drawLoginOrDiscardPrompt(false);
                               UiComponent.field_o.draw(100);
@@ -992,7 +992,7 @@ public final class EscapeVector extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "EscapeVector.BB(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "EscapeVector.BB(" + guard + ')');
         }
     }
 
@@ -1014,15 +1014,15 @@ public final class EscapeVector extends NetworkGameClient {
           boolean stackIn_3_0 = var3;
           int stackIn_3_1 = 4;
           boolean stackIn_4_2 = (null != IntValueNode.field_i);
-          String var4 = InstructionsScreen.loginRequirementText((stackIn_3_0), stackIn_3_1, stackIn_4_2, ua.field_c.d(17523));
+          String var4 = InstructionsScreen.loginRequirementText((stackIn_3_0), stackIn_3_1, stackIn_4_2, ua.field_c.hasPendingProgress(17523));
           boolean stackIn_7_0 = var3;
-          boolean stackIn_7_1 = ua.field_c.d(17523);
+          boolean stackIn_7_1 = ua.field_c.hasPendingProgress(17523);
           int stackIn_7_2 = -8;
           boolean stackIn_8_3 = (null != IntValueNode.field_i);
           String var5 = AchievementRecord.chooseAlternateClickPromptWithIntGuard((stackIn_7_0), stackIn_7_1, stackIn_7_2, stackIn_8_3);
           boolean stackIn_11_0 = var3;
           boolean stackIn_12_1 = (IntValueNode.field_i != null);
-          String var6 = ScoreSubmission.a((stackIn_11_0), stackIn_12_1, (byte) -112, ua.field_c.d(17523));
+          String var6 = ScoreSubmission.a((stackIn_11_0), stackIn_12_1, (byte) -112, ua.field_c.hasPendingProgress(17523));
           int var7 = ByteStorage.gameFont.stringWidth(var2);
           int var8 = ByteStorage.gameFont.stringWidth(var4);
           if (var8 > var7) {
@@ -1088,7 +1088,7 @@ public final class EscapeVector extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "EscapeVector.UA(" + doubleBorder + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "EscapeVector.UA(" + doubleBorder + ')');
         }
     }
 
@@ -1096,7 +1096,7 @@ public final class EscapeVector extends NetworkGameClient {
         try {
           this.a("escapevector", 640, 12);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.init()");
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "EscapeVector.init()");
         }
     }
 
@@ -1105,7 +1105,7 @@ public final class EscapeVector extends NetworkGameClient {
           this.a(0, 11, 8, 7, 21, (byte) -99, false, 9);
           AudioOutput.configure(22050, true, 10);
           UiContainer.field_C = AudioOutput.create(NetworkGameClient.field_r, (java.awt.Component) ((Object) SpriteDecodeSupport.field_d), 0, 1024);
-          ig.field_l = AudioOutput.create(NetworkGameClient.field_r, (java.awt.Component) ((Object) SpriteDecodeSupport.field_d), 1, 22050);
+          LevelSelectScreen.field_l = AudioOutput.create(NetworkGameClient.field_r, (java.awt.Component) ((Object) SpriteDecodeSupport.field_d), 1, 22050);
           ObjectSpriteSet.field_e = new PcmStreamMixer();
           UiContainer.field_C.setStream(ObjectSpriteSet.field_e);
           AlternateUsernameCredentials.field_n = new PcmStreamMixer();
@@ -1120,14 +1120,14 @@ public final class EscapeVector extends NetworkGameClient {
           }
           BoundedRandomAccessFile.field_b.setFeedback(0.9399999976158142f);
           BoundedRandomAccessFile.field_b.setDampingTimeMicros(14.826103210449219f);
-          ig.field_l.setStream(BoundedRandomAccessFile.field_b);
+          LevelSelectScreen.field_l.setStream(BoundedRandomAccessFile.field_b);
           this.a(true, (byte) -35, true, true, true);
-          ua.field_c = new kg();
+          ua.field_c = new GameProgressTracker();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "EscapeVector.P(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "EscapeVector.P(" + guard + ')');
         }
     }
 
@@ -1152,7 +1152,7 @@ public final class EscapeVector extends NetworkGameClient {
           AchievementThresholdRule.objectSprites[12] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_one_rockbuster", true);
           AchievementThresholdRule.objectSprites[13] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_five_rockbusters", true);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.MB(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "EscapeVector.MB(" + guard + ')');
         }
     }
 
@@ -1201,7 +1201,7 @@ public final class EscapeVector extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "EscapeVector.EB(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "EscapeVector.EB(" + guard + ')');
         }
     }
 
@@ -1225,7 +1225,7 @@ public final class EscapeVector extends NetworkGameClient {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(x).append(',').append(baselineY).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(x).append(',').append(baselineY).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1240,7 +1240,7 @@ public final class EscapeVector extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "EscapeVector.VA(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "EscapeVector.VA(" + guard + ')');
         }
     }
 
@@ -1271,7 +1271,7 @@ public final class EscapeVector extends NetworkGameClient {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -1282,7 +1282,7 @@ public final class EscapeVector extends NetworkGameClient {
           this.loadObjectGlowSprites(0);
           SpriteLoadTask.loadInfrastructureSprites(IndexedSpriteState.field_j, (byte) -23);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.IB(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "EscapeVector.IB(" + guard + ')');
         }
     }
 
@@ -1322,7 +1322,7 @@ public final class EscapeVector extends NetworkGameClient {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
         }
     }
 }

@@ -31,7 +31,7 @@ final class BoundedUrlRequest implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "ad.A(" + param0 + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "ad.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class BoundedUrlRequest implements Runnable {
           this.field_j = param1;
           this.field_i = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

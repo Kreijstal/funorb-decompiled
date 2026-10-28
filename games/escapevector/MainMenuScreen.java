@@ -1,54 +1,54 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class t {
-    MenuInputState field_b;
-    boolean field_c;
-    private int field_d;
+final class MainMenuScreen {
+    MenuInputState input;
+    boolean members;
+    private int actionCount;
     static TerrainMaskSupport field_a;
-    private int[] field_e;
+    private int[] actionCodes;
 
-    private final void c(byte param0) {
+    private final void setActionCount(byte guard) {
         try {
-          if (param0 != 62) {
-            this.b(103, false);
+          if (guard != 62) {
+            this.updatePointerSelection(103, false);
           }
-          if (this.field_c) {
-            this.field_d = 8;
+          if (this.members) {
+            this.actionCount = 8;
             if (EscapeVector.obfuscationControl == 0) {
               return;
             }
           }
-          this.field_d = 9;
+          this.actionCount = 9;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "t.G(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "t.G(" + guard + ')');
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int maxInt(int left, int right, int guard) {
         try {
-          if (param2 < 9) {
+          if (guard < 9) {
             field_a = (TerrainMaskSupport) null;
           }
-          int stackIn_7_0 = (param1 > param0) ? param1 : param0;
+          int stackIn_7_0 = (right > left) ? right : left;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "t.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var3), "t.K(" + left + ',' + right + ',' + guard + ')');
         }
     }
 
-    final void a(int param0) {
+    final void update(int guard) {
         int var3 = EscapeVector.obfuscationControl;
         try {
           while (true) {
             if (AccountRequestDialog.pollKeyEvent(-111)) {
-              this.field_b.handleKeyEvent((byte) 6);
-              boolean stackIn_11_0 = this.a(param0 - 13569, false);
+              this.input.handleKeyEvent((byte) 6);
+              boolean stackIn_11_0 = this.handleActivation(guard - 13569, false);
               if (var3 == 0) {
                 if (stackIn_11_0) {
                   return;
@@ -57,19 +57,19 @@ final class t {
               }
               break;
             }
-            this.field_b.updateVerticalList(param0 - 400, 240, 192, 24, param0);
-            boolean stackIn_11_0Lifetime1 = this.a(-13169, true);
+            this.input.updateVerticalList(guard - 400, 240, 192, 24, guard);
+            boolean stackIn_11_0Lifetime1 = this.handleActivation(-13169, true);
             break;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "t.F(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "t.F(" + guard + ')');
         }
     }
 
-    private final void a(int param0, int param1, byte param2, boolean param3) {
+    private final void drawAction(int actionCode, int y, byte guard, boolean selected) {
         int stackIn_63_0 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
@@ -77,30 +77,30 @@ final class t {
         int var7Lifetime2;
         int var11 = EscapeVector.obfuscationControl;
         try {
-          if (5 * param0 > mj.field_d) {
+          if (5 * actionCode > mj.field_d) {
             return;
           }
           mj.field_b.bindAsFramebuffer();
           SoftwareRasterizer.clearFramebuffer();
-          int stackIn_8_0 = (!param3) ? 6340704 : 16777215;
+          int stackIn_8_0 = (!selected) ? 6340704 : 16777215;
           int var5_int = stackIn_8_0;
-          if (param2 != -34) {
-            this.field_e = (int[]) null;
+          if (guard != -34) {
+            this.actionCodes = (int[]) null;
           }
           boolean decompiledFrameRemainder0 = true;
           int var6 = mj.field_b.fullWidth / 2;
-          if (param0 == 0) {
+          if (actionCode == 0) {
             ByteStorage.gameFont.drawCentered(SpriteDecodeSupport.field_e, var6, 22, var5_int, -1);
           }
-          if (param0 != 0 ||
+          if (actionCode != 0 ||
             var11 != 0) {
-            if (param0 != 1) {
-              if (param0 == 2) {
+            if (actionCode != 1) {
+              if (actionCode == 2) {
                 ByteStorage.gameFont.drawCentered(mc.field_a, var6, 22, var5_int, -1);
               }
-              if (param0 != 2 ||
+              if (actionCode != 2 ||
                 var11 != 0) {
-                if (param0 == 3) {
+                if (actionCode == 3) {
                   int var7 = ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N);
                   int var8 = ByteStorage.gameFont.stringWidth(LoginMethod.field_d);
                   int stackIn_31_0 = (var8 < var7) ? var7 : var8;
@@ -109,17 +109,17 @@ final class t {
                   ByteStorage.gameFont.drawRight(DisplayNameForm.field_N, var10, 22, var5_int, -1);
                   SingleChildContainer.a(var10, 13202, 4, IterableNodeHashTable.field_c, var5_int);
                 }
-                if (param0 != 3 ||
+                if (actionCode != 3 ||
                   var11 != 0) {
-                  if (4 != param0) {
-                    if (5 == param0) {
+                  if (4 != actionCode) {
+                    if (5 == actionCode) {
                       ByteStorage.gameFont.drawCentered(BrowserSessionMarkerState.field_b, var6, 22, var5_int, -1);
                     }
-                    if (5 != param0 ||
+                    if (5 != actionCode ||
                       var11 != 0) {
-                      if (param0 != 6) {
-                        if (param0 != 7 &&
-                          (decompiledFrameRemainder0 = (param0 == 8))) {
+                      if (actionCode != 6) {
+                        if (actionCode != 7 &&
+                          (decompiledFrameRemainder0 = (actionCode == 8))) {
                           ByteStorage.gameFont.drawCentered(UiTheme.field_s, var6, 22, var5_int, -1);
                           decompiledFrameRemainder0 = (var11 != 0);
                         }
@@ -128,7 +128,7 @@ final class t {
                         }
                       }
                       if (decompiledFrameRemainder0 &&
-                        (param0 == 6 ||
+                        (actionCode == 6 ||
                         var11 != 0)) {
                         ByteStorage.gameFont.drawCentered(DynamicTerrainRenderer.field_m, var6, 22, var5_int, -1);
                         if (var11 != 0) {
@@ -161,30 +161,30 @@ final class t {
           AlphaContainer.field_D.a(112);
           cf.a(mj.field_b, true, 1);
           mj.field_b.addOutline(5267536);
-          int var7Lifetime1 = -mj.field_d + 30 + 5 * param0;
+          int var7Lifetime1 = -mj.field_d + 30 + 5 * actionCode;
           if (var7Lifetime1 > 0) {
-            ResourceArchive.drawSpriteWithRowJitter(param1, (-mj.field_b.fullWidth + 640) / 2, var7Lifetime1, mj.field_b, param2 ^ 120);
+            ResourceArchive.drawSpriteWithRowJitter(y, (-mj.field_b.fullWidth + 640) / 2, var7Lifetime1, mj.field_b, guard ^ 120);
             if (var11 == 0) {
               return;
             }
           }
-          mj.field_b.drawTransparent((-mj.field_b.fullWidth + 640) / 2, param1);
+          mj.field_b.drawTransparent((-mj.field_b.fullWidth + 640) / 2, y);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var5), "t.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var5), "t.A(" + actionCode + ',' + y + ',' + guard + ',' + selected + ')');
         }
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapClientException(Throwable failure, String context) {
         ClientException var2;
         RuntimeException var2_ref;
-        if (param0 instanceof ClientException) {
-          var2 = (ClientException) ((Object) param0);
-          var2.context = var2.context + ' ' + param1;
+        if (failure instanceof ClientException) {
+          var2 = (ClientException) ((Object) failure);
+          var2.context = var2.context + ' ' + context;
         } else {
-          var2 = new ClientException(param0, param1);
+          var2 = new ClientException(failure, context);
         }
         return var2;
     }
@@ -196,18 +196,18 @@ final class t {
         try {
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "t.D(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "t.D(" + guard + ')');
         }
     }
 
-    private final int b(int param0) {
+    private final int selectedActionCode(int guard) {
         try {
-          if (param0 < 52) {
-            t.releaseStatics((byte) -84);
+          if (guard < 52) {
+            MainMenuScreen.releaseStatics((byte) -84);
           }
-          if (this.field_b.selectedIndex >= 0 &&
-            this.field_e.length > this.field_b.selectedIndex) {
-            int stackIn_10_0 = this.field_e[this.field_b.selectedIndex];
+          if (this.input.selectedIndex >= 0 &&
+            this.actionCodes.length > this.input.selectedIndex) {
+            int stackIn_10_0 = this.actionCodes[this.input.selectedIndex];
             return stackIn_10_0;
           }
           int stackIn_8_0 = -1;
@@ -215,19 +215,19 @@ final class t {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "t.E(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "t.E(" + guard + ')');
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int actionCodeAt(int guard, int index) {
         try {
-          if (param0 != 192) {
+          if (guard != 192) {
             int stackIn_2_0 = 121;
             return stackIn_2_0;
           }
-          if (param1 >= 0 &&
-            param1 < this.field_e.length) {
-            int stackIn_10_0 = this.field_e[param1];
+          if (index >= 0 &&
+            index < this.actionCodes.length) {
+            int stackIn_10_0 = this.actionCodes[index];
             return stackIn_10_0;
           }
           int stackIn_8_0 = -1;
@@ -235,11 +235,11 @@ final class t {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "t.I(" + param0 + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var3), "t.I(" + guard + ',' + index + ')');
         }
     }
 
-    final void a(byte param0) {
+    final void draw(byte guard) {
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         boolean stackIn_23_4 = false;
@@ -256,7 +256,7 @@ final class t {
               stackIn_8_0 = -mj.field_d + 40;
             }
             AccountNoticeKind.drawAnimatedPanelFrame(stackIn_8_0, -var2_int + 320, var2_int + 321, 301 + var3, true, 29788, true, 6324320, 3162160, 0, 300 - var3, true);
-            AchievementTracker.drawLegacyMenu(param0 ^ -16);
+            AchievementTracker.drawLegacyMenu(guard ^ -16);
             pb.a(4);
             return;
           }
@@ -265,25 +265,25 @@ final class t {
           } else {
             stackIn_14_0 = -mj.field_d + 40;
           }
-          AccountNoticeKind.drawAnimatedPanelFrame(stackIn_14_0, 240, 400, 16 + (192 + this.field_d * 24), true, 29788, true, 6324320, 3162160, 0, 176, true);
-          pb.a(param0 ^ -12);
+          AccountNoticeKind.drawAnimatedPanelFrame(stackIn_14_0, 240, 400, 16 + (192 + this.actionCount * 24), true, 29788, true, 6324320, 3162160, 0, 176, true);
+          pb.a(guard ^ -12);
           int var2_intLifetime1 = 0;
           int var3Lifetime1 = 192;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (this.field_e.length <= var2_intLifetime1))) {
-            int var4 = this.a(192, var2_intLifetime1);
+          while (!(decompiledNaturalLoopExit0 = (this.actionCodes.length <= var2_intLifetime1))) {
+            int var4 = this.actionCodeAt(192, var2_intLifetime1);
             if (var5 == 0) {
               Object stackIn_22_0 = this;
               int stackIn_22_1 = var4;
               int stackIn_22_2 = var3Lifetime1;
               int stackIn_22_3 = -34;
-              if (~var4 != ~this.b(69)) {
+              if (~var4 != ~this.selectedActionCode(69)) {
                 stackIn_23_4 = false;
               } else {
                 Object stackIn_20_0 = this;
                 stackIn_23_4 = true;
               }
-              this.a(stackIn_22_1, stackIn_22_2, (byte) stackIn_22_3, stackIn_23_4);
+              this.drawAction(stackIn_22_1, stackIn_22_2, (byte) stackIn_22_3, stackIn_23_4);
               var3Lifetime1 += 24;
               var2_intLifetime1++;
               continue;
@@ -291,76 +291,76 @@ final class t {
             break;
           }
           if (decompiledNaturalLoopExit0 &&
-            param0 == -16) {
+            guard == -16) {
             return;
           }
-          this.field_b = (MenuInputState) null;
+          this.input = (MenuInputState) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "t.L(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "t.L(" + guard + ')');
         }
     }
 
-    final void b(int param0, boolean param1) {
-        if (param0 != -26480) {
+    final void updatePointerSelection(int guard, boolean pointerDriven) {
+        if (guard != -26480) {
           return;
         }
         try {
-          this.field_b.setPointerSelection(this.field_b.hitVerticalList((byte) 115, 192, GzipDecoder.field_d, 24, 400, UiContainer.field_y, 240), param1, 4767999);
+          this.input.setPointerSelection(this.input.hitVerticalList((byte) 115, 192, GzipDecoder.field_d, 24, 400, UiContainer.field_y, 240), pointerDriven, 4767999);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "t.J(" + param0 + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "t.J(" + guard + ',' + pointerDriven + ')');
         }
     }
 
-    private final void c(int param0) {
+    private final void buildActionCodes(int guard) {
         try {
-          boolean decompiledSharedTail0 = !(this.field_c);
+          boolean decompiledSharedTail0 = !(this.members);
           if (!decompiledSharedTail0) {
-            this.field_e = new int[]{0, 2, 3, 4, 5, 6, 7, 8};
+            this.actionCodes = new int[]{0, 2, 3, 4, 5, 6, 7, 8};
             decompiledSharedTail0 = (EscapeVector.obfuscationControl != 0);
           }
           if (decompiledSharedTail0) {
-            this.field_e = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8};
+            this.actionCodes = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8};
           }
-          if (param0 != 22) {
+          if (guard != 22) {
             field_a = (TerrainMaskSupport) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "t.H(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "t.H(" + guard + ')');
         }
     }
 
-    private final boolean a(int param0, boolean param1) {
+    private final boolean handleActivation(int guard, boolean pointerDriven) {
         int var10 = EscapeVector.obfuscationControl;
         try {
-          if (this.field_b.selectionChanged) {
+          if (this.input.selectionChanged) {
             ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, 8192);
           }
-          int var3_int = this.b(123);
+          int var3_int = this.selectedActionCode(123);
           if (var3_int == 0 &&
-            this.field_b.isInitialActivation((byte) -18)) {
-            GameplaySession.openSessionScreen(param1, 2560);
+            this.input.isInitialActivation((byte) -18)) {
+            GameplaySession.openSessionScreen(pointerDriven, 2560);
             return true;
           }
           if (var3_int == 1 &&
-            this.field_b.isInitialActivation((byte) -18)) {
+            this.input.isInitialActivation((byte) -18)) {
             wk.field_c = true;
-            AccountSessionSupport.field_a.a(param1, (byte) 47);
+            AccountSessionSupport.field_a.a(pointerDriven, (byte) 47);
             mj.field_d = 0;
           }
           if (var3_int == 2 &&
-            this.field_b.isInitialActivation((byte) -18)) {
-            ek.a(this.field_b.pointerDriven, false);
+            this.input.isInitialActivation((byte) -18)) {
+            ek.a(this.input.pointerDriven, false);
             return true;
           }
           boolean decompiledFrameRemainder0 = true;
           if (var3_int == 3) {
-            if (this.field_b.isLeftPressed(param0 + 13072) &&
+            if (this.input.isLeftPressed(guard + 13072) &&
               IterableNodeHashTable.field_c > 0) {
               IterableNodeHashTable.field_c = IterableNodeHashTable.field_c - 8;
               if (0 > IterableNodeHashTable.field_c) {
@@ -368,7 +368,7 @@ final class t {
               }
               TrackerMusicDefinition.d(8192);
             }
-            if (this.field_b.isRightPressed(-98) &&
+            if (this.input.isRightPressed(-98) &&
               IterableNodeHashTable.field_c < 64) {
               IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 8;
               if (IterableNodeHashTable.field_c > 64) {
@@ -376,17 +376,17 @@ final class t {
               }
               TrackerMusicDefinition.d(8192);
             }
-            if (this.field_b.isHomePressed(-10809)) {
+            if (this.input.isHomePressed(-10809)) {
               IterableNodeHashTable.field_c = 0;
               TrackerMusicDefinition.d(8192);
             }
-            if (this.field_b.isEndPressed(0)) {
+            if (this.input.isEndPressed(0)) {
               IterableNodeHashTable.field_c = 64;
               TrackerMusicDefinition.d(8192);
             }
-            if (!this.field_b.isPointerHeld(false) &&
-              (decompiledFrameRemainder0 = !(!this.field_b.isInitialActivation((byte) -18)))) {
-              TrackerMusicDefinition.d(param0 ^ -4977);
+            if (!this.input.isPointerHeld(false) &&
+              (decompiledFrameRemainder0 = !(!this.input.isInitialActivation((byte) -18)))) {
+              TrackerMusicDefinition.d(guard ^ -4977);
               decompiledFrameRemainder0 = (var10 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -404,7 +404,7 @@ final class t {
                   var8 = 0;
                 }
               }
-              if (this.field_b.isInitialActivation((byte) -18) ||
+              if (this.input.isInitialActivation((byte) -18) ||
                 ~IterableNodeHashTable.field_c != ~var8) {
                 IterableNodeHashTable.field_c = var8;
                 TrackerMusicDefinition.d(8192);
@@ -412,7 +412,7 @@ final class t {
             }
           }
           if (var3_int == 4) {
-            if (this.field_b.isLeftPressed(116) &&
+            if (this.input.isLeftPressed(116) &&
               kc.field_b > 0) {
               kc.field_b = kc.field_b - 8;
               if (kc.field_b < 0) {
@@ -423,7 +423,7 @@ final class t {
                 var4_ref_o.d(GrowableIntList.field_b * kc.field_b / 64);
               }
             }
-            if (this.field_b.isRightPressed(-98) &&
+            if (this.input.isRightPressed(-98) &&
               kc.field_b < 64) {
               kc.field_b = kc.field_b + 8;
               if (64 < kc.field_b) {
@@ -434,21 +434,21 @@ final class t {
                 var4_ref_oLifetime1.d(GrowableIntList.field_b * kc.field_b / 64);
               }
             }
-            if (this.field_b.isHomePressed(-10809)) {
+            if (this.input.isHomePressed(-10809)) {
               kc.field_b = 0;
               TrackerMusicPlayer var4_ref_oLifetime2 = DraggableWidget.field_N;
               if (var4_ref_oLifetime2 != null) {
                 var4_ref_oLifetime2.d(kc.field_b * GrowableIntList.field_b / 64);
               }
             }
-            if (this.field_b.isEndPressed(0)) {
+            if (this.input.isEndPressed(0)) {
               kc.field_b = 64;
               TrackerMusicPlayer var4_ref_oLifetime3 = DraggableWidget.field_N;
               if (var4_ref_oLifetime3 != null) {
                 var4_ref_oLifetime3.d(GrowableIntList.field_b * kc.field_b / 64);
               }
             }
-            if (this.field_b.isPointerHeld(false)) {
+            if (this.input.isPointerHeld(false)) {
               int var4Lifetime1 = ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N);
               int var5Lifetime1 = ByteStorage.gameFont.stringWidth(LoginMethod.field_d);
               int stackIn_129_0 = (var4Lifetime1 <= var5Lifetime1) ? var5Lifetime1 : var4Lifetime1;
@@ -472,36 +472,36 @@ final class t {
             }
           }
           if (var3_int == 5 &&
-            this.field_b.isInitialActivation((byte) -18)) {
+            this.input.isInitialActivation((byte) -18)) {
             if (null != IsaacRandom.field_d) {
-              ri.a(param0 - 11954);
+              ri.a(guard - 11954);
               if (var10 != 0) {
-                TickClock.a(24, param1);
+                TickClock.a(24, pointerDriven);
               }
             } else {
-              TickClock.a(24, param1);
+              TickClock.a(24, pointerDriven);
             }
             return true;
           }
           if (var3_int == 6 &&
-            this.field_b.isInitialActivation((byte) -18)) {
-            kh.showHighscoresScreen(this.field_b.pointerDriven, -1230, false);
+            this.input.isInitialActivation((byte) -18)) {
+            kh.showHighscoresScreen(this.input.pointerDriven, -1230, false);
             mj.field_d = 0;
             ChatMessage.clearFrameOffsets((byte) -96);
             return true;
           }
           if (var3_int == 7 &&
-            this.field_b.isInitialActivation((byte) -18)) {
-            SpriteState.a(param0 + 13193, this.field_b.pointerDriven);
+            this.input.isInitialActivation((byte) -18)) {
+            SpriteState.a(guard + 13193, this.input.pointerDriven);
             mj.field_d = 0;
             ChatMessage.clearFrameOffsets((byte) -94);
             return true;
           }
-          if (param0 != -13169) {
-            this.b(2, false);
+          if (guard != -13169) {
+            this.updatePointerSelection(2, false);
           }
           if (8 == var3_int &&
-            this.field_b.isInitialActivation((byte) -18)) {
+            this.input.isInitialActivation((byte) -18)) {
             if (IsaacRandom.field_d != null) {
               ri.a(-25123);
             }
@@ -511,18 +511,18 @@ final class t {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "t.B(" + param0 + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var3), "t.B(" + guard + ',' + pointerDriven + ')');
         }
     }
 
-    t() {
+    MainMenuScreen() {
         try {
-          this.field_c = UiContainer.e((byte) 117);
-          this.c((byte) 62);
-          this.c(22);
-          this.field_b = new MenuInputState(this.field_d);
+          this.members = UiContainer.hasMembership((byte) 117);
+          this.setActionCount((byte) 62);
+          this.buildActionCodes(22);
+          this.input = new MenuInputState(this.actionCount);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "t.<init>()");
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "t.<init>()");
         }
     }
 

@@ -34,7 +34,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(',').append(length).append(',').append(offset).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(',').append(length).append(',').append(offset).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "c.DB(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "c.DB(" + param0 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         try {
           this.opcodeCipher = new IsaacRandom(seed);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "c.RA(" + (seed != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "c.RA(" + (seed != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

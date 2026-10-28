@@ -24,7 +24,7 @@ final class QuickChatPhraseCache {
           rd.field_c = new LoginDialog(Checkbox.field_F, PcmResampler.field_d);
           Checkbox.field_F.pushPanel(rd.field_c, 40);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ff.A(" + (unusedMessage != null ? "{...}" : "null") + ',' + allowGuest + ',' + guard + ',' + showCreateAccount + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ff.A(" + (unusedMessage != null ? "{...}" : "null") + ',' + allowGuest + ',' + guard + ',' + showCreateAccount + ')');
         }
     }
 
@@ -75,12 +75,12 @@ final class QuickChatPhraseCache {
         if (mj.field_d != 0) {
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
-            AlternateUsernameCredentials.field_q.a(400);
+            AlternateUsernameCredentials.field_q.update(400);
             SingleChildContainer.field_y = true;
             IntValueNode.field_j = true;
             return;
           }
-          AlternateUsernameCredentials.field_q.a(400);
+          AlternateUsernameCredentials.field_q.update(400);
           SingleChildContainer.field_y = true;
           IntValueNode.field_j = true;
           return;
@@ -93,12 +93,12 @@ final class QuickChatPhraseCache {
           StringNode.playFrameAppearSound(8192, (byte) 51);
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
-            AlternateUsernameCredentials.field_q.a(400);
+            AlternateUsernameCredentials.field_q.update(400);
             SingleChildContainer.field_y = true;
             IntValueNode.field_j = true;
             return;
           }
-          AlternateUsernameCredentials.field_q.a(400);
+          AlternateUsernameCredentials.field_q.update(400);
           SingleChildContainer.field_y = true;
           IntValueNode.field_j = true;
           return;
@@ -108,12 +108,12 @@ final class QuickChatPhraseCache {
         StringNode.playFrameAppearSound(8192, (byte) 51);
         if (mj.field_d < 1000) {
           mj.field_d = mj.field_d + 1;
-          AlternateUsernameCredentials.field_q.a(400);
+          AlternateUsernameCredentials.field_q.update(400);
           SingleChildContainer.field_y = true;
           IntValueNode.field_j = true;
           return;
         }
-        AlternateUsernameCredentials.field_q.a(400);
+        AlternateUsernameCredentials.field_q.update(400);
         SingleChildContainer.field_y = true;
         IntValueNode.field_j = true;
     }

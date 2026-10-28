@@ -25,7 +25,7 @@ final class ProxyAuthenticationException extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "im.A(" + left + ',' + right + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var3), "im.A(" + left + ',' + right + ',' + guard + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class ProxyAuthenticationException extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "im.B(" + guard + ',' + opcode + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "im.B(" + guard + ',' + opcode + ')');
         }
     }
 

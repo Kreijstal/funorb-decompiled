@@ -14,14 +14,14 @@ final class ShipHullGeometry {
     IntPoint boundsMin;
     static boolean field_h;
 
-    final static void b(int param0) {
+    final static void refreshAccountUi(int guard) {
         if (Checkbox.field_F != null) {
           Checkbox.field_F.refreshPanelVisibility(0);
         }
         if (ProxySocketConnector.field_r != null) {
           ProxySocketConnector.field_r.setStopAnimatingWhenNormal(true);
         }
-        if (param0 != 0) {
+        if (guard != 0) {
           TriangleMesh var2 = (TriangleMesh) null;
           ShipHullGeometry.a(19, -90, 62, -122, 5, (TriangleMesh) null, -13, -75);
         }
@@ -32,7 +32,7 @@ final class ShipHullGeometry {
         try {
           ChatMessage.sortIntPairs(param0 + param1.length, param2, 1, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "uk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class ShipHullGeometry {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

@@ -11,13 +11,13 @@ final class SectorCacheStore {
     private BufferedRandomAccessFile field_d;
 
     final static void a(byte param0) {
-        t var1 = AlternateUsernameCredentials.field_q;
-        if (var1.field_c &&
-          UiContainer.e((byte) -39)) {
+        MainMenuScreen var1 = AlternateUsernameCredentials.field_q;
+        if (var1.members &&
+          UiContainer.hasMembership((byte) -39)) {
           return;
         }
-        if (var1.field_c) {
-          AlternateUsernameCredentials.field_q = new t();
+        if (var1.members) {
+          AlternateUsernameCredentials.field_q = new MainMenuScreen();
           if (param0 <= 117) {
             SectorCacheStore.releaseStatics(true);
           }
@@ -25,8 +25,8 @@ final class SectorCacheStore {
           GameplaySession.resetSessionMenuState((byte) -9);
           return;
         }
-        if (UiContainer.e((byte) 97)) {
-          AlternateUsernameCredentials.field_q = new t();
+        if (UiContainer.hasMembership((byte) 97)) {
+          AlternateUsernameCredentials.field_q = new MainMenuScreen();
           if (param0 <= 117) {
             SectorCacheStore.releaseStatics(true);
           }
@@ -190,7 +190,7 @@ final class SectorCacheStore {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -374,7 +374,7 @@ final class SectorCacheStore {
             } else {
               stackIn_70_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -468,7 +468,7 @@ final class SectorCacheStore {
           this.field_e = param3;
           this.field_a = param1;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "jg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "jg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

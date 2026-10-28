@@ -42,7 +42,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.statusText = status;
           this.progressBar.progressQ16 = (int)(percent / 100.0f * 65536.0f);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "w.I(" + guard + ',' + (status != null ? "{...}" : "null") + ',' + percent + ',' + alternateColors + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "w.I(" + guard + ',' + (status != null ? "{...}" : "null") + ',' + percent + ',' + alternateColors + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.field_gb = false;
           this.addChild(this.progressBar, false);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

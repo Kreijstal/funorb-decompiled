@@ -105,7 +105,7 @@ abstract class TickClock {
           }
           SoftwareRasterizer.bind(sprite.pixels, sprite.fullWidth, sprite.fullHeight);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "eo.B(" + (sprite != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "eo.B(" + (sprite != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

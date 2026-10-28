@@ -220,7 +220,7 @@ final class DialogueScreen extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(fullWidthScene).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(fullWidthScene).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class DialogueScreen extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(fullWidthScene).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(fullWidthScene).append(')').toString());
         }
     }
 
@@ -361,7 +361,7 @@ final class DialogueScreen extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -597,7 +597,7 @@ final class DialogueScreen extends IntrusiveNode {
         if (guard != 67) {
           boolean discarded$0 = this.tryLoadScenePhoto((byte) 12, 65);
         }
-        int var3 = ByteStorage.gameFont.stringWidth(ig.field_c) + 9;
+        int var3 = ByteStorage.gameFont.stringWidth(LevelSelectScreen.field_c) + 9;
         if (var2 < var3) {
           var2 = var3;
         }
@@ -651,7 +651,7 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void advancePhotoClosing(byte guard) {
         if (this.photoTransitionTicks == 30) {
-          PcmSampleStream var2 = PcmSampleStream.createAtRatePercentQ6(vd.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, this.photoPan(8192));
+          PcmSampleStream var2 = PcmSampleStream.createAtRatePercentQ6(SavedCompletionFlags.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, this.photoPan(8192));
           var2.playBackwardFromEnd();
           ObjectSpriteSet.field_e.addSubstream(var2);
         }
@@ -752,7 +752,7 @@ final class DialogueScreen extends IntrusiveNode {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(lifetimeSeconds).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(lifetimeSeconds).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -792,7 +792,7 @@ final class DialogueScreen extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -801,7 +801,7 @@ final class DialogueScreen extends IntrusiveNode {
           ObjectSpriteSet.field_e.playSampleWithPan(QuickChatPhraseDefinition.field_t, 100, 3072 * IterableNodeHashTable.field_c / 64, this.photoPan(8192));
         }
         if (this.photoTransitionTicks == 20) {
-          ObjectSpriteSet.field_e.playSampleWithPan(vd.field_g, 100, IterableNodeHashTable.field_c * 3072 / 64, this.photoPan(8192));
+          ObjectSpriteSet.field_e.playSampleWithPan(SavedCompletionFlags.field_g, 100, IterableNodeHashTable.field_c * 3072 / 64, this.photoPan(8192));
         }
         if (guard != 100) {
           return;
@@ -866,7 +866,7 @@ final class DialogueScreen extends IntrusiveNode {
         this.backgroundFadeTicks = 0;
         this.autoClose = true;
         this.firstNonemptyLine = 0;
-        this.actionLabel = ig.field_c;
+        this.actionLabel = LevelSelectScreen.field_c;
         try {
           ChatMessage.clearFrameOffsets((byte) -103);
           this.dialogueLines = dialogueLines;
@@ -896,7 +896,7 @@ final class DialogueScreen extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(fullWidthScene).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(fullWidthScene).append(')').toString());
         }
     }
 

@@ -29,10 +29,10 @@ final class SpriteOffset {
         if (di.field_d.selectedIndex == 1) {
           IntValueNode.field_i = null;
           TrackerMusicDefinition.field_f = new AchievementTracker();
-          ua.field_c = new kg();
+          ua.field_c = new GameProgressTracker();
           mj.field_d = 0;
           PacketBuffer.field_h = false;
-          AlternateUsernameCredentials.field_q.b(-26480, param0);
+          AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, param0);
           ChatMessage.clearFrameOffsets((byte) -66);
           return true;
         }
@@ -102,7 +102,7 @@ final class SpriteOffset {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "fn.E(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "fn.E(" + param0 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class SpriteOffset {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class SpriteOffset {
           }
           Js5NetworkRequest.field_z = 0;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "fn.F(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fn.F(" + param0 + ')');
         }
     }
 

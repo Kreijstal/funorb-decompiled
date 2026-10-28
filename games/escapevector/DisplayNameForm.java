@@ -87,7 +87,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(fieldWidth).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(fieldWidth).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           super.updateHover(guard, offsetY, offsetX, root);
           this.submitButton.enabled = this.canSubmit(guard + 14569);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oi.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oi.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           String var4 = name;
           ((EditableTextWidget) ((Object) var3)).setText(var4, false, -33);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oi.J(" + guard + ',' + (name != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oi.J(" + guard + ',' + (name != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -253,7 +253,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 
@@ -285,7 +285,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -316,7 +316,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         var2.setBounds(270, var3, 20, true, 50);
         var3 += 50;
         this.addChild(var2, false);
-        var3 = var3 + (5 + this.appendStandardValidatedField(170, ValidationHelpWidget.field_J, this.nameField, var3, (byte) -5, ig.field_i));
+        var3 = var3 + (5 + this.appendStandardValidatedField(170, ValidationHelpWidget.field_J, this.nameField, var3, (byte) -5, LevelSelectScreen.field_i));
         this.submitButton.setBounds(var5, var3, 496 - var5 >> 1, true, 40);
         this.cancelButton.setBounds(60, 15 + var3, 3 + var4, true, 40);
         this.cancelButton.listener = (UiListener) (this);

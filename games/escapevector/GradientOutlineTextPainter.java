@@ -38,7 +38,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
             field_r = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "re.S(" + guard + ',' + (dialogue != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "re.S(" + guard + ',' + (dialogue != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,7 +64,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(enabled).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(enabled).append(')').toString());
         }
     }
 

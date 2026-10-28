@@ -49,7 +49,7 @@ final class EmailValidationError {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class EmailValidationError {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "tk.A(" + guard + ',' + opcode + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "tk.A(" + guard + ',' + opcode + ')');
         }
     }
 

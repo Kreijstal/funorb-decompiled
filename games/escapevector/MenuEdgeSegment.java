@@ -80,7 +80,7 @@ final class MenuEdgeSegment extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(reconnect).append(',').append(clientValue).append(',').append(option).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(reconnect).append(',').append(clientValue).append(',').append(option).append(',').append(guard).append(')').toString());
         }
     }
 

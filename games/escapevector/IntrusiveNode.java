@@ -55,7 +55,7 @@ class IntrusiveNode {
           var5.appendCrc32(var4, -61);
           var5.backpatchByteLength(118, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "hg.WA(" + guard + ',' + opcode + ',' + (record != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "hg.WA(" + guard + ',' + opcode + ',' + (record != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,7 +102,7 @@ class IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
         }
     }
 

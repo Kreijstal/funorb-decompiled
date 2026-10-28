@@ -55,19 +55,19 @@ final class ml {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void a(ScoreSubmission param0, int param1, byte param2) {
         try {
           LoginCredentials.field_d.addLast(-12328, param0);
-          ig.writeScoreSubmission(-75, param1, param0);
+          LevelSelectScreen.writeScoreSubmission(-75, param1, param0);
           if (param2 != 101) {
             ml.releaseStatics(-42);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ml.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ml.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

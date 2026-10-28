@@ -41,7 +41,7 @@ final class PairedTextColumns extends LegacyTextBlock {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -64,7 +64,7 @@ final class PairedTextColumns extends LegacyTextBlock {
           this.leftRows = leftRows;
           this.rightRows = rightRows;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "gl.<init>(" + (title != null ? "{...}" : "null") + ',' + (leftRows != null ? "{...}" : "null") + ',' + (rightRows != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "gl.<init>(" + (title != null ? "{...}" : "null") + ',' + (leftRows != null ? "{...}" : "null") + ',' + (rightRows != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class PairedTextColumns extends LegacyTextBlock {
           this.leftColor = leftColor;
           this.updateColumns((byte) 38);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "gl.C(" + rightColor + ',' + leftColor + ',' + titleColor + ',' + guard + ',' + (font != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "gl.C(" + rightColor + ',' + leftColor + ',' + titleColor + ',' + guard + ',' + (font != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class PairedTextColumns extends LegacyTextBlock {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(color).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(color).append(')').toString());
         }
     }
 

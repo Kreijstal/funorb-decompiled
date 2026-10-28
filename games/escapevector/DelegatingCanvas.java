@@ -19,7 +19,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegate.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "hd.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "hd.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegate.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "hd.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "hd.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegate = delegate;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "hd.<init>(" + (delegate != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "hd.<init>(" + (delegate != null ? "{...}" : "null") + ')');
         }
     }
 

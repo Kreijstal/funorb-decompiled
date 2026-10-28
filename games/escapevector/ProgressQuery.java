@@ -50,7 +50,7 @@ final class ProgressQuery extends IntrusiveNode {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -82,7 +82,7 @@ final class ProgressQuery extends IntrusiveNode {
           ByteStorage.gameFont.drawCenteredAlpha(param1, 1 + param2, 1 + param3, 0, -1, 64);
           ByteStorage.gameFont.drawCentered(param1, param2, param3, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "dc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "dc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

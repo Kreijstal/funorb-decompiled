@@ -14,7 +14,7 @@ final class ke {
           ObjectSpriteSet.a(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / param1, 11710);
           mm.a(param1 + 97, param0.maxDescent + param0.capHeight, param3.capHeight, param0.capHeight, param3.capHeight + param3.maxDescent);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ke.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ke.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

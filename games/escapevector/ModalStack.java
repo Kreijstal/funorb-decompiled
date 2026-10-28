@@ -81,7 +81,7 @@ final class ModalStack extends SingleChildContainer {
           var3.open = true;
           var3.focusNext(-4659, (UiComponent) (this));
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "tb.F(" + (panel != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "tb.F(" + (panel != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

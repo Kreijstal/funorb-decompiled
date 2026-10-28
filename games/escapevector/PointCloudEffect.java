@@ -238,7 +238,7 @@ final class PointCloudEffect extends DualLinkNode {
           RasterBuffer.field_e.addLast(-12328, record);
           IntrusiveNode.writeProgressRecord(-97, opcode, record);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oc.B(" + opcode + ',' + guard + ',' + (record != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oc.B(" + opcode + ',' + guard + ',' + (record != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -266,7 +266,7 @@ final class PointCloudEffect extends DualLinkNode {
           destination.field_d = source.field_d;
           destination.field_h = source.field_h;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oc.F(" + guard + ',' + (source != null ? "{...}" : "null") + ',' + (destination != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oc.F(" + guard + ',' + (source != null ? "{...}" : "null") + ',' + (destination != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -301,7 +301,7 @@ final class PointCloudEffect extends DualLinkNode {
         try {
           component.addFocusListener(ThreeSliceButtonPainter.field_v);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oc.Q(" + guard + ',' + (component != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oc.Q(" + guard + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -553,7 +553,7 @@ final class PointCloudEffect extends DualLinkNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -575,7 +575,7 @@ final class PointCloudEffect extends DualLinkNode {
           }
           AlternateUsernameCredentials.field_n.playSampleWithPan(sound, 100, BoundedRandomAccessFile.activeSession.spatialVolume(4194304, xQ16, 96, yQ16), BoundedRandomAccessFile.activeSession.spatialPan(xQ16, 109));
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oc.<init>(" + xQ16 + ',' + yQ16 + ',' + (sound != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oc.<init>(" + xQ16 + ',' + yQ16 + ',' + (sound != null ? "{...}" : "null") + ')');
         }
     }
 

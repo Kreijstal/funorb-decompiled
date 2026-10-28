@@ -44,7 +44,7 @@ class LegacyStyleNode extends DualLinkNode {
             EmailValidationError stackIn_14_0 = ClientException.a(var4, ~missingSeparator);
             return stackIn_14_0;
           }
-          EmailValidationError stackIn_4_0 = ig.field_g;
+          EmailValidationError stackIn_4_0 = LevelSelectScreen.field_g;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,7 +56,7 @@ class LegacyStyleNode extends DualLinkNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

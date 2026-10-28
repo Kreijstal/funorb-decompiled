@@ -94,7 +94,7 @@ final class ReflectionCheck extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var5), "mn.D(" + guard + ',' + x + ',' + y + ',' + width + ',' + height + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var5), "mn.D(" + guard + ',' + x + ',' + y + ',' + width + ',' + height + ')');
         }
     }
 

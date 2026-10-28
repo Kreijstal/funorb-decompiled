@@ -88,7 +88,7 @@ final class NodeHashTableIterator implements Iterator {
           this.table = table;
           this.reset((byte) -59);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (table != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "hb.<init>(" + (table != null ? "{...}" : "null") + ')');
         }
     }
 

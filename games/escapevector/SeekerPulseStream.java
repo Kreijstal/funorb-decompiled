@@ -44,7 +44,7 @@ final class SeekerPulseStream extends PcmStream {
           this.field_q.process(samples, offset, length);
           this.field_m = this.field_m - length;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "tl.C(" + (samples != null ? "{...}" : "null") + ',' + offset + ',' + length + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "tl.C(" + (samples != null ? "{...}" : "null") + ',' + offset + ',' + length + ')');
         }
     }
 

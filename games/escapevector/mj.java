@@ -204,7 +204,7 @@ final class mj {
             } else {
               stackIn_111_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(',').append(param4).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

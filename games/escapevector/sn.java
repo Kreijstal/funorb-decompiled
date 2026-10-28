@@ -15,7 +15,7 @@ final class sn {
           field_b = (boolean[]) null;
         }
         if (var1 != SelfDestructEffects.field_q ||
-          CheckboxPainter.field_l.field_h != var2) {
+          CheckboxPainter.field_l.accountStateIndex != var2) {
           boolean var3 = (di.field_d.pointerDriven);
           ArchiveKeyRequest.a(0, var1, (var3), var2);
         }
@@ -297,7 +297,7 @@ final class sn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "sn.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var3), "sn.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -335,7 +335,7 @@ final class sn {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

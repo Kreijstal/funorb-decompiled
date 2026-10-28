@@ -22,7 +22,7 @@ final class GzipDecoder {
           }
           MeshMaterial.field_b = RasterBuffer.field_g;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "dh.D(" + guard + ',' + byteGuard + ',' + (sprites != null ? "{...}" : "null") + ',' + (fonts != null ? "{...}" : "null") + ',' + (buttons != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "dh.D(" + guard + ',' + byteGuard + ',' + (sprites != null ? "{...}" : "null") + ',' + (fonts != null ? "{...}" : "null") + ',' + (buttons != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class GzipDecoder {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class GzipDecoder {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "dh.B(" + achievementId + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "dh.B(" + achievementId + ',' + guard + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class GzipDecoder {
             this.inflater.reset();
             int var4_int = -73 % ((13 - guard) / 58);
           } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "dh.C(" + guard + ',' + (destination != null ? "{...}" : "null") + ',' + (input != null ? "{...}" : "null") + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "dh.C(" + guard + ',' + (destination != null ? "{...}" : "null") + ',' + (input != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

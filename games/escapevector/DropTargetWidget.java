@@ -39,7 +39,7 @@ final class DropTargetWidget extends SingleChildContainer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ final class DropTargetWidget extends SingleChildContainer {
           int var1_int = -40 / ((17 - guard) / 42);
           field_I = null;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qa.C(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qa.C(" + guard + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class DropTargetWidget extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "qa.A(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "qa.A(" + param0 + ')');
         }
     }
 
@@ -1542,7 +1542,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(48, "login_email");
                 if (var2 != null) {
-                  kg.field_b = RasterSnapshot.a(var2, 117);
+                  GameProgressTracker.field_b = RasterSnapshot.a(var2, 117);
                 }
                 var2 = IntKeyLookup.a(83, "login_username_tooltip");
                 if (var2 != null) {
@@ -1586,7 +1586,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(45, "create_displayname_hint");
                 if (null != var2) {
-                  ig.field_i = RasterSnapshot.a(var2, 122);
+                  LevelSelectScreen.field_i = RasterSnapshot.a(var2, 122);
                 }
                 var2 = IntKeyLookup.a(83, "create_password_tooltip");
                 if (var2 != null) {
@@ -1666,7 +1666,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(98, "create_alert_passchars");
                 if (var2 != null) {
-                  gn.field_b = RasterSnapshot.a(var2, 121);
+                  ModeProgress.field_b = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(65, "create_alert_passrepeated");
                 if (var2 != null) {
@@ -2058,7 +2058,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(71, "skip");
                 if (var2 != null) {
-                  ig.field_c = RasterSnapshot.a(var2, 127);
+                  LevelSelectScreen.field_c = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(42, "skiptutorial");
                 if (null != var2) {
@@ -2340,7 +2340,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(126, "orbpoints_colon");
                 if (null != var2) {
-                  kg.field_a = RasterSnapshot.a(var2, 121);
+                  GameProgressTracker.field_a = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(20, "orbcoins_colon");
                 if (var2 != null) {
@@ -3103,7 +3103,7 @@ final class DropTargetWidget extends SingleChildContainer {
                   } else {
                     stackIn_2606_2 = "{...}";
                   }
-                  throw t.a((Throwable) ((Object) stackIn_2605_0), ((StringBuilder) (Object) stackIn_2605_1).append(stackIn_2606_2).append(')').toString());
+                  throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_2605_0), ((StringBuilder) (Object) stackIn_2605_1).append(stackIn_2606_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2614_0 = (!GameAppletShell.field_h);
@@ -3145,7 +3145,7 @@ final class DropTargetWidget extends SingleChildContainer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -3160,7 +3160,7 @@ final class DropTargetWidget extends SingleChildContainer {
             Object stackIn_5_0 = null;
             return (BinaryBitmapFont) (stackIn_5_0);
           }
-          BinaryBitmapFont var2 = new BinaryBitmapFont(param1, gn.spriteOffsetXs, ChatMessage.spriteOffsetYs, SpriteLoadTask.spriteWidths, SavedDataQuerySupport.spriteHeights, AnimatedPathMarker.spriteIndices);
+          BinaryBitmapFont var2 = new BinaryBitmapFont(param1, ModeProgress.spriteOffsetXs, ChatMessage.spriteOffsetYs, SpriteLoadTask.spriteWidths, SavedDataQuerySupport.spriteHeights, AnimatedPathMarker.spriteIndices);
           SpriteDecodeSupport.releaseSpriteSheet(false);
           BinaryBitmapFont stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -3174,7 +3174,7 @@ final class DropTargetWidget extends SingleChildContainer {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

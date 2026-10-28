@@ -37,7 +37,7 @@ final class AccountOverlayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "b.B(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "b.B(" + guard + ')');
         }
     }
 

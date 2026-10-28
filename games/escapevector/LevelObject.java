@@ -60,7 +60,7 @@ final class LevelObject extends IntrusiveNode {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var4 = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var4), "sa.J(" + guard + ',' + cameraX + ',' + cameraY + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var4), "sa.J(" + guard + ',' + cameraX + ',' + cameraY + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class LevelObject extends IntrusiveNode {
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             RuntimeException var1 = decompiledCaughtParameter0;
-            throw t.a((Throwable) ((Object) var1), "sa.B(" + param0 + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "sa.B(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -98,7 +98,7 @@ final class LevelObject extends IntrusiveNode {
           return (SpriteOffset) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2_ref = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var2_ref), "sa.A(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "sa.A(" + guard + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class LevelObject extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param10).append(',').append(param11).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param10).append(',').append(param11).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class LevelObject extends IntrusiveNode {
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2_ref = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var2_ref), "sa.I(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "sa.I(" + guard + ')');
         }
     }
 
@@ -164,7 +164,7 @@ final class LevelObject extends IntrusiveNode {
           this.missionTarget = missionTarget;
           this.refreshSprites(-7012);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "sa.<init>(" + objectId + ',' + objectType + ',' + x + ',' + y + ',' + missionTarget + ',' + triggersCountdown + ',' + spriteFrame + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "sa.<init>(" + objectId + ',' + objectType + ',' + x + ',' + y + ',' + missionTarget + ',' + triggersCountdown + ',' + spriteFrame + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class LevelObject extends IntrusiveNode {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -299,7 +299,7 @@ final class LevelObject extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw t.a((Throwable) (var4), "sa.L(" + cameraY + ',' + guard + ',' + cameraX + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) (var4), "sa.L(" + cameraY + ',' + guard + ',' + cameraX + ')');
         }
     }
 
@@ -318,7 +318,7 @@ final class LevelObject extends IntrusiveNode {
             return stackIn_16_0;
           }
           double var2_double = (double)(BoundedRandomAccessFile.activeSession.shieldPulsePhase / 8);
-          if (kg.a((byte) -98, this.objectType)) {
+          if (GameProgressTracker.isPulsingInfrastructureType((byte) -98, this.objectType)) {
             var2_double = (double)(BoundedRandomAccessFile.activeSession.elapsedTicks % 100) / 100.0;
           }
           double var4 = Math.cos(3.141592653589793 * var2_double) + 2.0;
@@ -326,7 +326,7 @@ final class LevelObject extends IntrusiveNode {
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2 = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var2), "sa.M(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "sa.M(" + guard + ')');
         }
     }
 
@@ -344,7 +344,7 @@ final class LevelObject extends IntrusiveNode {
           this.displayOffsetX = var2.x;
           this.displayOffsetY = var2.y;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "sa.H(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "sa.H(" + guard + ')');
         }
     }
 
@@ -354,7 +354,7 @@ final class LevelObject extends IntrusiveNode {
           this.missionTarget = missionTarget;
           this.triggersCountdown = triggersCountdown;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "sa.<init>(" + objectId + ',' + objectType + ',' + x + ',' + y + ',' + missionTarget + ',' + triggersCountdown + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "sa.<init>(" + objectId + ',' + objectType + ',' + x + ',' + y + ',' + missionTarget + ',' + triggersCountdown + ')');
         }
     }
 
@@ -379,7 +379,7 @@ final class LevelObject extends IntrusiveNode {
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             RuntimeException var2_ref2 = decompiledCaughtParameter0;
-            throw t.a((Throwable) ((Object) var2_ref2), "sa.D(" + param0 + ',' + param1 + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref2), "sa.D(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -411,7 +411,7 @@ final class LevelObject extends IntrusiveNode {
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2 = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var2), "sa.F(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "sa.F(" + guard + ')');
         }
     }
 
@@ -483,7 +483,7 @@ final class LevelObject extends IntrusiveNode {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -496,7 +496,7 @@ final class LevelObject extends IntrusiveNode {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var1 = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var1), "sa.G(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "sa.G(" + guard + ')');
         }
     }
 
@@ -513,7 +513,7 @@ final class LevelObject extends IntrusiveNode {
           if (objectType != 2) {
             Object stackIn_5_0 = this;
             Object stackIn_3_0Lifetime1 = stackIn_5_0;
-            if (!kg.a((byte) -125, this.objectType)) {
+            if (!GameProgressTracker.isPulsingInfrastructureType((byte) -125, this.objectType)) {
               stackIn_6_1 = false;
               decompiledFrameRemainder0 = false;
             }
@@ -530,7 +530,7 @@ final class LevelObject extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) runtimeException), "sa.<init>(" + objectId + ',' + objectType + ',' + x + ',' + y + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "sa.<init>(" + objectId + ',' + objectType + ',' + x + ',' + y + ')');
         }
     }
 

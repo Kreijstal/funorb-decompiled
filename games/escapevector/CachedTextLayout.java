@@ -58,7 +58,7 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(rightX).append(',').append(baselineY).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(rightX).append(',').append(baselineY).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(width).append(',').append(horizontalAlignment).append(',').append(verticalAlignment).append(',').append(lineSpacing).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(width).append(',').append(horizontalAlignment).append(',').append(verticalAlignment).append(',').append(lineSpacing).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ final class CachedTextLayout extends TextLayout {
           var8.insertionX[text.length()] = leftX + font.stringWidth(text);
           ChatHistorySupport.fillJustifiedInsertionPositions(guard, text, var8, font, false);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "wh.A(" + (text != null ? "{...}" : "null") + ',' + guard + ',' + leftX + ',' + baselineY + ',' + (font != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "wh.A(" + (text != null ? "{...}" : "null") + ',' + guard + ',' + leftX + ',' + baselineY + ',' + (font != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class CachedTextLayout extends TextLayout {
           var8.insertionX[text.length()] = (var7 >> 1) + centerX;
           ChatHistorySupport.fillJustifiedInsertionPositions(0, text, var8, font, false);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "wh.F(" + (text != null ? "{...}" : "null") + ',' + centerX + ',' + (font != null ? "{...}" : "null") + ',' + baselineY + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "wh.F(" + (text != null ? "{...}" : "null") + ',' + centerX + ',' + (font != null ? "{...}" : "null") + ',' + baselineY + ',' + guard + ')');
         }
     }
 

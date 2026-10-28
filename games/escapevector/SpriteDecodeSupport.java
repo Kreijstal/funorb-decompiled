@@ -78,7 +78,7 @@ final class SpriteDecodeSupport {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class SpriteDecodeSupport {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class SpriteDecodeSupport {
           SpriteDecodeSupport.releaseStatics(89);
         }
         ChatMessage.spriteOffsetYs = null;
-        gn.spriteOffsetXs = null;
+        ModeProgress.spriteOffsetXs = null;
         AnimatedPathMarker.spriteIndices = (byte[][]) null;
         SavedDataQuerySupport.spriteHeights = null;
         ArchiveLoadTask.spritePalette = null;

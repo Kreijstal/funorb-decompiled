@@ -17,7 +17,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var4 = EscapeVector.obfuscationControl;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         if (guard != 6) {
-          UiContainer.e((byte) -76);
+          UiContainer.hasMembership((byte) -76);
         }
         UiComponent var3 = (UiComponent) (var2.first(guard ^ 9));
         while (var3 != null) {
@@ -68,8 +68,8 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         this.children = new IntrusiveDeque();
     }
 
-    final static boolean e(byte param0) {
-        int var1 = -82 % ((34 - param0) / 63);
+    final static boolean hasMembership(byte guard) {
+        int var1 = -82 % ((34 - guard) / 63);
         boolean stackIn_4_0 = (!AccountSessionSupport.isGuestSession(-105)) && (0 < Js5NetworkRequest.field_x);
         return stackIn_4_0;
     }
@@ -140,7 +140,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(button).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(button).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(offsetY).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(offsetY).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -363,7 +363,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -373,7 +373,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         try {
           IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
           if (guard != -4659) {
-            UiContainer.e((byte) 13);
+            UiContainer.hasMembership((byte) 13);
           }
           UiComponent var4 = (UiComponent) (var3.first(15));
           while (var4 != null) {
@@ -393,7 +393,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -448,7 +448,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -460,7 +460,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           }
           this.children.addLast(-12328, component);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "bj.QA(" + (component != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "bj.QA(" + (component != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -490,7 +490,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -523,7 +523,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(depth).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(depth).append(')').toString());
         }
     }
 

@@ -30,7 +30,7 @@ final class UiTheme {
             UiTheme.a(-27);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "uf.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uf.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class UiTheme {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ final class UiTheme {
           be.field_b = new AccountRequestDialog(Checkbox.field_F, RasterRestoreSupport.field_b, param1, DialWidget.field_H, LinkButtonPainter.field_a);
           Checkbox.field_F.pushPanel(be.field_b, 77);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "uf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class UiTheme {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.createStateLayer(4, (byte) -53).setFlushBeforeApply(guard ^ 31367, true).setFrameSprites(2, var5);
-          var4.createStateLayer(5, (byte) -53).setFrameSprites(2, vd.a(65793, 0, 0, 0, 1317)).setFlushBeforeApply(guard + 31367, true).setTextColor(-1, -22572);
+          var4.createStateLayer(5, (byte) -53).setFrameSprites(2, SavedCompletionFlags.createFrameSprites(65793, 0, 0, 0, 1317)).setFlushBeforeApply(guard + 31367, true).setTextColor(-1, -22572);
           this.buttonPainter = (WidgetPainter) ((Object) var4);
           StatefulTextPainter var6 = new StatefulTextPainter(var4, true);
           var6.horizontalAlignment = 0;
@@ -215,7 +215,7 @@ final class UiTheme {
           StatefulTextPainter var19 = new StatefulTextPainter(var4, true);
           var19.setSpriteForAllStates(var13, (byte) 87);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "uf.A(" + guard + ',' + (font != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uf.A(" + guard + ',' + (font != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -249,7 +249,7 @@ final class UiTheme {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(x).append(',').append(y).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(x).append(',').append(y).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class UiTheme {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(y).append(',').append(x).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(y).append(',').append(x).append(',').append(guard).append(')').toString());
         }
     }
 

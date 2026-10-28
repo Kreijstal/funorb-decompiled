@@ -39,7 +39,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class AgeValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           CharSequence var6 = (CharSequence) ((Object) text);
-          int var3_int = gn.a(guard ^ -16777216, var6);
+          int var3_int = ModeProgress.parseDecimal(guard ^ -16777216, var6);
           if (guard != -1) {
             String var4 = (String) null;
             this.validateText(-6, (String) null);
@@ -151,7 +151,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

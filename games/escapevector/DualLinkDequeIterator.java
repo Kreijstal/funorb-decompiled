@@ -21,7 +21,7 @@ final class DualLinkDequeIterator implements Iterator {
           component.addMouseMotionListener(QuickChatDynamicCommand.mouseHandler);
           component.addFocusListener(QuickChatDynamicCommand.mouseHandler);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "rm.A(" + (component != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "rm.A(" + (component != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class DualLinkDequeIterator implements Iterator {
           this.nextNode = this.deque.sentinel.secondaryNext;
           this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "rm.<init>(" + (deque != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "rm.<init>(" + (deque != null ? "{...}" : "null") + ')');
         }
     }
 

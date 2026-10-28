@@ -48,7 +48,7 @@ final class EmailAvailabilityRequest {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "d.E(" + param0 + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "d.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class EmailAvailabilityRequest {
         try {
           this.email = param0;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "d.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "d.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

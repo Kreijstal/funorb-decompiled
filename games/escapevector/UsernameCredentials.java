@@ -15,7 +15,7 @@ class UsernameCredentials extends LoginCredentials {
         try {
           buffer.writeBase38Password(this.password, (byte) 111);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ld.G(" + (buffer != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ld.G(" + (buffer != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -161,7 +161,7 @@ class UsernameCredentials extends LoginCredentials {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(guard).append(',').append(y).append(',').append(x).append(',').append(width).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(guard).append(',').append(y).append(',').append(x).append(',').append(width).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ class UsernameCredentials extends LoginCredentials {
           this.encodedUsername = param0;
           this.password = param1;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ld.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ld.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -243,7 +243,7 @@ class UsernameCredentials extends LoginCredentials {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

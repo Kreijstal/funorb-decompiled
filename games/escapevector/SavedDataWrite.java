@@ -24,7 +24,7 @@ final class SavedDataWrite extends IntrusiveNode {
         try {
           this.payload = payload;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "bd.<init>(" + (payload != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "bd.<init>(" + (payload != null ? "{...}" : "null") + ')');
         }
     }
 

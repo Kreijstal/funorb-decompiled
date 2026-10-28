@@ -22,9 +22,9 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           if (mc.field_c == this.transitionPhase) {
             this.animateResize(false, this.resizeTicks, 12 + this.pendingContent.width, this.pendingContent.height + this.headerInset + 12);
             this.transitionTick = 0;
-          } else if (this.transitionPhase != t.field_a) {
+          } else if (this.transitionPhase != MainMenuScreen.field_a) {
             this.transitionTick = 0;
-            this.transitionPhase = t.field_a;
+            this.transitionPhase = MainMenuScreen.field_a;
           }
           if (guard == 30) {
             return;
@@ -41,7 +41,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           this.headerInset = param2;
           this.installContent((byte) -123, param1);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           if (null == this.transitionPhase) {
             return super.updateAnimationsAndCheckClosed(-13907);
           }
-          if (this.transitionPhase != t.field_a) {
+          if (this.transitionPhase != MainMenuScreen.field_a) {
             if (QuickChatPhraseCache.field_b != this.transitionPhase) {
               return super.updateAnimationsAndCheckClosed(-13907);
             }
@@ -131,7 +131,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         if (null == this.transitionPhase) {
           return super.updateAnimationsAndCheckClosed(-13907);
         }
-        if (this.transitionPhase != t.field_a) {
+        if (this.transitionPhase != MainMenuScreen.field_a) {
           if (QuickChatPhraseCache.field_b != this.transitionPhase) {
             return super.updateAnimationsAndCheckClosed(-13907);
           }
@@ -187,7 +187,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -220,12 +220,12 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
     final void onResizeComplete(int guard) {
-        if (t.field_a == this.transitionPhase) {
+        if (MainMenuScreen.field_a == this.transitionPhase) {
           return;
         }
         this.transitionPhase = QuickChatPhraseCache.field_b;

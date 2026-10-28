@@ -71,7 +71,7 @@ final class HudMessage extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class HudMessage extends IntrusiveNode {
           this.text = text;
           this.durationTicks = durationTicks;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (text != null ? "{...}" : "null") + ',' + durationTicks + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "rb.<init>(" + (text != null ? "{...}" : "null") + ',' + durationTicks + ')');
         }
     }
 

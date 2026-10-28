@@ -31,14 +31,14 @@ final class SimulatorAssetSupport {
         IndexedSprite[] var1 = new IndexedSprite[ArchiveLoadTask.spriteCount];
         if (guard == 13029) {
           for (int var2 = 0; ArchiveLoadTask.spriteCount > var2; var2++) {
-            var1[var2] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], SpriteLoadTask.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], AnimatedPathMarker.spriteIndices[var2], ArchiveLoadTask.spritePalette);
+            var1[var2] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], SpriteLoadTask.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], AnimatedPathMarker.spriteIndices[var2], ArchiveLoadTask.spritePalette);
           }
           SpriteDecodeSupport.releaseSpriteSheet(false);
           return var1;
         }
         SimulatorAssetSupport.loadSimulatorSprites(16);
         for (int var2Lifetime1 = 0; ArchiveLoadTask.spriteCount > var2Lifetime1; var2Lifetime1++) {
-          var1[var2Lifetime1] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2Lifetime1], ChatMessage.spriteOffsetYs[var2Lifetime1], SpriteLoadTask.spriteWidths[var2Lifetime1], SavedDataQuerySupport.spriteHeights[var2Lifetime1], AnimatedPathMarker.spriteIndices[var2Lifetime1], ArchiveLoadTask.spritePalette);
+          var1[var2Lifetime1] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[var2Lifetime1], ChatMessage.spriteOffsetYs[var2Lifetime1], SpriteLoadTask.spriteWidths[var2Lifetime1], SavedDataQuerySupport.spriteHeights[var2Lifetime1], AnimatedPathMarker.spriteIndices[var2Lifetime1], ArchiveLoadTask.spritePalette);
         }
         SpriteDecodeSupport.releaseSpriteSheet(false);
         return var1;
@@ -53,7 +53,7 @@ final class SimulatorAssetSupport {
 
     final static void loadSimulatorSprites(int guard) {
         int var6 = EscapeVector.obfuscationControl;
-        if (!UiContainer.e((byte) 118)) {
+        if (!UiContainer.hasMembership((byte) 118)) {
           return;
         }
         String var1 = "simulator";
@@ -75,7 +75,7 @@ final class SimulatorAssetSupport {
           String var3Lifetime2 = "rock_buster";
           ej.field_a = fe.a(var1, IndexedSpriteState.field_j, var3Lifetime2, true);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "fg.B(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fg.B(" + guard + ')');
         }
     }
 

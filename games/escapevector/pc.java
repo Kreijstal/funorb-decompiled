@@ -52,23 +52,23 @@ final class pc {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final static int a(int param0, int param1) {
-        if (param1 < 0) {
+    final static int levelNameCount(int guard, int gameMode) {
+        if (gameMode < 0) {
           return 0;
         }
-        if (ByteStorage.levelNamesByMode.length <= param1) {
+        if (ByteStorage.levelNamesByMode.length <= gameMode) {
           return 0;
         }
-        if (param0 == 2513) {
-          int var2 = ByteStorage.levelNamesByMode[param1].length;
+        if (guard == 2513) {
+          int var2 = ByteStorage.levelNamesByMode[gameMode].length;
           return var2;
         }
         field_c = (int[]) null;
-        int var2Lifetime1 = ByteStorage.levelNamesByMode[param1].length;
+        int var2Lifetime1 = ByteStorage.levelNamesByMode[gameMode].length;
         return var2Lifetime1;
     }
 

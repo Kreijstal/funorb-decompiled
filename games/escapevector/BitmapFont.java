@@ -137,7 +137,7 @@ abstract class BitmapFont extends DualLinkNode {
                 } else {
                   try {
                     CharSequence var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                    var10 = gn.a(16777215, var13);
+                    var10 = ModeProgress.parseDecimal(16777215, var13);
                     IndexedSpriteState var11_ref_fi = this.images[var10];
                     if (this.imageBaselines == null) {
                       stackIn_27_0 = var11_ref_fi.field_h;
@@ -318,7 +318,7 @@ abstract class BitmapFont extends DualLinkNode {
                 if (var8.startsWith("img=")) {
                   try {
                     CharSequence var10 = (CharSequence) ((Object) var8.substring(4));
-                    int var9_int = gn.a(16777215, var10);
+                    int var9_int = ModeProgress.parseDecimal(16777215, var10);
                     var4 = var4 + this.images[var9_int].field_a;
                     var3 = 0;
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -450,7 +450,7 @@ abstract class BitmapFont extends DualLinkNode {
             currentColor = defaultColor;
           } else if (tag.startsWith("trans=")) {
             CharSequence var4 = (CharSequence) ((Object) tag.substring(6));
-            currentAlpha = gn.a(16777215, var4);
+            currentAlpha = ModeProgress.parseDecimal(16777215, var4);
           } else if (tag.equals("/trans")) {
             currentAlpha = defaultAlpha;
           } else if (tag.startsWith("str=")) {
@@ -575,7 +575,7 @@ abstract class BitmapFont extends DualLinkNode {
               } else if (var15.startsWith("img=")) {
                 try {
                   CharSequence var18 = (CharSequence) ((Object) var15.substring(4));
-                  int var16_int = gn.a(16777215, var18);
+                  int var16_int = ModeProgress.parseDecimal(16777215, var18);
                   var4 = var4 + this.images[var16_int].field_a;
                   var10 = 0;
                 } catch (java.lang.Exception decompiledCaughtParameter0) {

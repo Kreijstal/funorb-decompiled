@@ -21,7 +21,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           var3.writeByte(0, -123);
           var3.writeByte(query.campaignId, -123);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oa.E(" + opcode + ',' + (query != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oa.E(" + opcode + ',' + (query != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

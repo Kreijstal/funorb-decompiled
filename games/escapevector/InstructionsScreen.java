@@ -35,7 +35,7 @@ final class InstructionsScreen {
 
     private final void buildPickupLegend(byte guard) {
         SpriteStrip[] var2 = this.buildPickupSpriteStrips(false);
-        String[] var3 = new String[]{gk.field_b, UiContainer.field_D, nl.field_a, kc.field_a, ArchiveProvider.field_c, gn.field_l, NodeHashTableIterator.field_a};
+        String[] var3 = new String[]{gk.field_b, UiContainer.field_D, LevelAvailabilitySupport.field_a, kc.field_a, ArchiveProvider.field_c, ModeProgress.field_l, NodeHashTableIterator.field_a};
         this.prefixBullets(var3, (byte) -10);
         BinaryBitmapFont var4 = ByteStorage.gameFont;
         int var5 = 16777215;
@@ -67,13 +67,13 @@ final class InstructionsScreen {
     private final void measureContentWidth(byte guard) {
         int var2 = 107 % ((11 - guard) / 36);
         this.contentWidth = 0;
-        this.contentWidth = t.a(this.controlLegend.contentWidth(true), this.contentWidth, 63);
-        this.contentWidth = t.a(this.pickupLegend.contentWidth(true), this.contentWidth, 37);
-        this.contentWidth = t.a(this.objectiveText.contentWidth(true), this.contentWidth, 54);
-        this.contentWidth = t.a(this.retrievalText.contentWidth(true), this.contentWidth, 24);
+        this.contentWidth = MainMenuScreen.maxInt(this.controlLegend.contentWidth(true), this.contentWidth, 63);
+        this.contentWidth = MainMenuScreen.maxInt(this.pickupLegend.contentWidth(true), this.contentWidth, 37);
+        this.contentWidth = MainMenuScreen.maxInt(this.objectiveText.contentWidth(true), this.contentWidth, 54);
+        this.contentWidth = MainMenuScreen.maxInt(this.retrievalText.contentWidth(true), this.contentWidth, 24);
         if (this.members) {
-          this.contentWidth = t.a(this.retributionText.contentWidth(true), this.contentWidth, 89);
-          this.contentWidth = t.a(this.simulatorText.contentWidth(true), this.contentWidth, 14);
+          this.contentWidth = MainMenuScreen.maxInt(this.retributionText.contentWidth(true), this.contentWidth, 89);
+          this.contentWidth = MainMenuScreen.maxInt(this.simulatorText.contentWidth(true), this.contentWidth, 14);
         }
     }
 
@@ -127,7 +127,7 @@ final class InstructionsScreen {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class InstructionsScreen {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class InstructionsScreen {
           da.field_c.b(false, 320);
         }
         if (this.mainMenuCode == actionCode) {
-          AlternateUsernameCredentials.field_q.b(-26480, false);
+          AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, false);
         }
         mj.field_d = 0;
         ChatMessage.clearFrameOffsets((byte) -118);
@@ -306,7 +306,7 @@ final class InstructionsScreen {
           Sprite[] var3 = AchievementThresholdRule.objectSprites;
           return this.powerupSprites(var3, guard + 4802);
         }
-        if (!UiContainer.e((byte) -75)) {
+        if (!UiContainer.hasMembership((byte) -75)) {
           return null;
         }
         if (mode == 2) {
@@ -364,15 +364,15 @@ final class InstructionsScreen {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(guard).append(')').toString());
         }
     }
 
     private final void measureContentHeight(int initialHeight) {
         this.contentHeight = initialHeight;
         this.contentHeight = this.contentHeight + this.controlLegend.height((byte) -90);
-        this.contentHeight = t.a(this.pickupLegend.height((byte) -90), this.contentHeight, 76);
-        this.contentHeight = t.a(this.objectiveText.height((byte) -90), this.contentHeight, 62);
+        this.contentHeight = MainMenuScreen.maxInt(this.pickupLegend.height((byte) -90), this.contentHeight, 76);
+        this.contentHeight = MainMenuScreen.maxInt(this.objectiveText.height((byte) -90), this.contentHeight, 62);
         int var2 = this.retrievalText.height((byte) -90);
         var2 = var2 + this.retrievalText.fontHeight((byte) 124);
         if (this.members) {
@@ -380,7 +380,7 @@ final class InstructionsScreen {
           var2 = var2 + this.retributionText.fontHeight((byte) 109);
           var2 = var2 + this.simulatorText.height((byte) -90);
         }
-        this.contentHeight = t.a(var2, this.contentHeight, 81);
+        this.contentHeight = MainMenuScreen.maxInt(var2, this.contentHeight, 81);
     }
 
     private final int selectedActionCode(int guard) {
@@ -447,7 +447,7 @@ final class InstructionsScreen {
           var14.setPosition((byte) 125, param5, param1);
           this.pageButtons[param8] = var13;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "dn.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "dn.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
     }
 
@@ -621,7 +621,7 @@ final class InstructionsScreen {
           BinaryBitmapFont var5 = ByteStorage.gameFont;
           block.configure(var4, var5, var3_int, -87);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "dn.KA(" + (block != null ? "{...}" : "null") + ',' + color + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "dn.KA(" + (block != null ? "{...}" : "null") + ',' + color + ')');
         }
     }
 
@@ -633,7 +633,7 @@ final class InstructionsScreen {
         try {
           DelegatingCanvas.field_e = message;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "dn.J(" + (message != null ? "{...}" : "null") + ',' + guard + ',' + progress + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "dn.J(" + (message != null ? "{...}" : "null") + ',' + guard + ',' + progress + ')');
         }
     }
 
@@ -842,7 +842,7 @@ final class InstructionsScreen {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -880,7 +880,7 @@ final class InstructionsScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -935,7 +935,7 @@ final class InstructionsScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -965,7 +965,7 @@ final class InstructionsScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1042,7 +1042,7 @@ final class InstructionsScreen {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(',').append(offset).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(',').append(offset).append(')').toString());
         }
     }
 
@@ -1082,7 +1082,7 @@ final class InstructionsScreen {
         } else {
           this.inSession = true;
         }
-        this.members = UiContainer.e((byte) 115);
+        this.members = UiContainer.hasMembership((byte) 115);
         this.buildTextContent((byte) 19);
         this.buildLayout(-66, pointerDriven);
         this.buildFrame((byte) 87);

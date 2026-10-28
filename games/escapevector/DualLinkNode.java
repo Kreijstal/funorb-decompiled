@@ -74,7 +74,7 @@ class DualLinkNode extends IntrusiveNode {
           }
           TerrainMaskSupport.a(105);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "fl.CA(" + param0 + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fl.CA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ class DualLinkNode extends IntrusiveNode {
           ShipHullGeometry.field_b = new DiskCacheWorker(param1);
           FullscreenFocusCanvas.field_e = new Js5ArchiveManager(SelfDestructEffects.field_j, ShipHullGeometry.field_b);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "fl.W(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fl.W(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

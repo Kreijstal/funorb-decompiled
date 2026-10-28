@@ -25,7 +25,7 @@ final class AchievementRecord extends IntrusiveNode {
           if (var3 != 2) {
             return true;
           }
-          if (UiContainer.e((byte) -56)) {
+          if (UiContainer.hasMembership((byte) -56)) {
             return true;
           }
           return false;
@@ -41,7 +41,7 @@ final class AchievementRecord extends IntrusiveNode {
         if (var3Lifetime1 != 2) {
           return true;
         }
-        if (!UiContainer.e((byte) -56)) {
+        if (!UiContainer.hasMembership((byte) -56)) {
           return false;
         }
         return true;
@@ -52,7 +52,7 @@ final class AchievementRecord extends IntrusiveNode {
           MouseWheelInput.field_d = param1;
           WhirlpoolHasher.a(param0, 39);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

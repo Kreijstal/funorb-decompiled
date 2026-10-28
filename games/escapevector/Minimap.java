@@ -123,7 +123,7 @@ final class Minimap {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(targetWidth).append(',').append(targetHeight).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(targetWidth).append(',').append(targetHeight).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class Minimap {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -295,7 +295,7 @@ final class Minimap {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(start).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(start).append(')').toString());
         }
     }
 
@@ -364,7 +364,7 @@ final class Minimap {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(tileY).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(tileY).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -463,7 +463,7 @@ final class Minimap {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(color).append(',').append(guard).append(',').append(rectangleHeight).append(',').append(y).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(color).append(',').append(guard).append(',').append(rectangleHeight).append(',').append(y).append(')').toString());
         }
     }
 
@@ -603,7 +603,7 @@ final class Minimap {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -748,7 +748,7 @@ final class Minimap {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -859,7 +859,7 @@ final class Minimap {
           this.buildTerrainGradient(100);
           this.buildLegend(true);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "li.<init>(" + (session != null ? "{...}" : "null") + ',' + (focusObject != null ? "{...}" : "null") + ',' + option + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "li.<init>(" + (session != null ? "{...}" : "null") + ',' + (focusObject != null ? "{...}" : "null") + ',' + option + ')');
         }
     }
 

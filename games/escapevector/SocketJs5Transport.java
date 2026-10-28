@@ -101,7 +101,7 @@ final class SocketJs5Transport extends Js5Transport {
             } else {
               stackIn_40_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(loggedIn).append(',').append(guard).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(loggedIn).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -121,7 +121,7 @@ final class SocketJs5Transport extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "bk.Q(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "bk.Q(" + guard + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class SocketJs5Transport extends Js5Transport {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             RuntimeException var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw t.a((Throwable) ((Object) var3_ref), "bk.N(" + loggedIn + ',' + guard + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) var3_ref), "bk.N(" + loggedIn + ',' + guard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -207,7 +207,7 @@ final class SocketJs5Transport extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var5_ref), "bk.K(" + boardId + ',' + guard + ',' + queryKind + ',' + opcode + ',' + rowLimit + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var5_ref), "bk.K(" + boardId + ',' + guard + ',' + queryKind + ',' + opcode + ',' + rowLimit + ')');
         }
     }
 
@@ -231,7 +231,7 @@ final class SocketJs5Transport extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           RuntimeException var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "bk.B(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "bk.B(" + guard + ')');
         }
     }
 
@@ -247,7 +247,7 @@ final class SocketJs5Transport extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "bk.E(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "bk.E(" + guard + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class SocketJs5Transport extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "bk.P(" + divisor + ',' + guard + ',' + value + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var3), "bk.P(" + divisor + ',' + guard + ',' + value + ')');
         }
     }
 
@@ -398,7 +398,7 @@ final class SocketJs5Transport extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "bk.M(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "bk.M(" + guard + ')');
         }
     }
 
@@ -433,7 +433,7 @@ final class SocketJs5Transport extends Js5Transport {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             RuntimeException var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw t.a((Throwable) ((Object) var2_ref), "bk.L(" + guard + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "bk.L(" + guard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -723,7 +723,7 @@ final class SocketJs5Transport extends Js5Transport {
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
             RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw t.a((Throwable) ((Object) var2_ref2), "bk.I(" + guard + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref2), "bk.I(" + guard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -765,7 +765,7 @@ final class SocketJs5Transport extends Js5Transport {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(guard).append(')').toString());
         }
     }
 

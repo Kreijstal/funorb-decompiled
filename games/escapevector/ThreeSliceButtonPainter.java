@@ -19,7 +19,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         try {
           ScoreSubmission var4 = (ScoreSubmission) (LoginCredentials.field_d.first(false));
           while (var4 != null) {
-            ig.writeScoreSubmission(guard - 209, opcode, var4);
+            LevelSelectScreen.writeScoreSubmission(guard - 209, opcode, var4);
             var4 = (ScoreSubmission) (LoginCredentials.field_d.next((byte) 70));
           }
           if (guard != 105) {
@@ -34,7 +34,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "ck.K(" + opcode + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "ck.K(" + opcode + ',' + guard + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(enabled).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(enabled).append(')').toString());
         }
     }
 

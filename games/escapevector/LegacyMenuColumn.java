@@ -60,7 +60,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
           }
           this.textColor = textColor;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "me.K(" + (font != null ? "{...}" : "null") + ',' + selectedColor + ',' + guard + ',' + textColor + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "me.K(" + (font != null ? "{...}" : "null") + ',' + selectedColor + ',' + guard + ',' + textColor + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -329,7 +329,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
           }
           this.rowCount = this.rows.length;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "me.<init>(" + (header != null ? "{...}" : "null") + ',' + (rows != null ? "{...}" : "null") + ',' + widthMode + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "me.<init>(" + (header != null ? "{...}" : "null") + ',' + (rows != null ? "{...}" : "null") + ',' + widthMode + ')');
         }
     }
 
@@ -366,7 +366,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

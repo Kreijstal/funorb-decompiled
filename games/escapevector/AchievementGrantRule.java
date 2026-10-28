@@ -46,7 +46,7 @@ final class AchievementGrantRule {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(',').append(responseCode).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(',').append(responseCode).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class AchievementGrantRule {
             pendingMouseY = 86;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "jk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "jk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

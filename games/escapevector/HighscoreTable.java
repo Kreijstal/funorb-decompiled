@@ -116,7 +116,7 @@ final class HighscoreTable {
             field_u = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "gj.D(" + guard + ',' + (firstArchive != null ? "{...}" : "null") + ',' + (secondArchive != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "gj.D(" + guard + ',' + (firstArchive != null ? "{...}" : "null") + ',' + (secondArchive != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class HighscoreTable {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class HighscoreTable {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class HighscoreTable {
             int[] discarded$0 = this.fromLevelValues((byte) -24);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "gj.T(" + guard + ',' + (text != null ? "{...}" : "null") + ',' + color + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "gj.T(" + guard + ',' + (text != null ? "{...}" : "null") + ',' + color + ')');
         }
     }
 
@@ -367,7 +367,7 @@ final class HighscoreTable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -396,7 +396,7 @@ final class HighscoreTable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -429,7 +429,7 @@ final class HighscoreTable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(mode).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(mode).append(')').toString());
         }
     }
 
@@ -559,7 +559,7 @@ final class HighscoreTable {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(queryColumn).append(',').append(categoryCode).append(',').append(y).append(',').append(showSubmittedScore).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(queryColumn).append(',').append(categoryCode).append(',').append(y).append(',').append(showSubmittedScore).append(')').toString());
         }
     }
 

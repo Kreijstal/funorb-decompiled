@@ -9,12 +9,12 @@ final class ArchiveKeyRequest extends IntrusiveNode {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         param1 = AccountChoicePanel.a(-8462, param1);
-        CheckboxPainter.field_l = new ig(param1, param3);
+        CheckboxPainter.field_l = new LevelSelectScreen(param1, param3);
         mj.field_d = param0;
         SelfDestructEffects.field_q = param1;
-        di.field_d = new MenuInputState(CheckboxPainter.field_l.field_p);
+        di.field_d = new MenuInputState(CheckboxPainter.field_l.actionCount);
         int var4 = LoginForm.a(param1, (byte) 121);
-        di.field_d.initializeSelection(102, param2, CheckboxPainter.field_l.a(UiContainer.field_y, 12089, GzipDecoder.field_d), var4);
+        di.field_d.initializeSelection(102, param2, CheckboxPainter.field_l.hitTest(UiContainer.field_y, 12089, GzipDecoder.field_d), var4);
         ChatMessage.clearFrameOffsets((byte) -70);
     }
 

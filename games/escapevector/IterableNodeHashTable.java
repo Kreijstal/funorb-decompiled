@@ -63,7 +63,7 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class IterableNodeHashTable implements Iterable {
           node.next.previous = node;
           node.key = key;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qm.B(" + key + ',' + guard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qm.B(" + key + ',' + guard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 

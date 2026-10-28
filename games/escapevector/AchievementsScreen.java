@@ -156,7 +156,7 @@ final class AchievementsScreen {
           int var9 = 320;
           MatchingTextValidator.a(var8, var6, 16777215, -110, var9);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ta.D(" + divisor + ',' + (icon != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ta.D(" + divisor + ',' + (icon != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class AchievementsScreen {
             kh.showHighscoresScreen(lh.b((byte) -116), -1230, true);
           }
           if (this.mainMenuActionId == var6) {
-            AlternateUsernameCredentials.field_q.b(-26480, pointerDriven);
+            AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, pointerDriven);
             di.field_d = null;
           }
           e.field_a = false;
@@ -230,7 +230,7 @@ final class AchievementsScreen {
             int stackIn_3_0 = width / 2 + left;
             return stackIn_3_0;
           }
-          int var6 = font.stringWidth(kg.field_a + " ");
+          int var6 = font.stringWidth(GameProgressTracker.field_a + " ");
           int var7 = font.stringWidth("" + ProxySocketConnector.achievementOrbPoints[var5_int]);
           int var8 = var6 + var7;
           int var9 = font.stringWidth(ResizableModalPanel.field_T + " ");
@@ -258,7 +258,7 @@ final class AchievementsScreen {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(width).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(width).append(')').toString());
         }
     }
 
@@ -428,7 +428,7 @@ final class AchievementsScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -436,7 +436,7 @@ final class AchievementsScreen {
         if (guard < 14) {
           field_w = 98;
         }
-        if (UiContainer.e((byte) -119)) {
+        if (UiContainer.hasMembership((byte) -119)) {
           return false;
         }
         return TrackerMusicDefinition.field_f.isMembersOnly(achievementId, 1);
@@ -616,7 +616,7 @@ final class AchievementsScreen {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(',').append(rowIndex).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(',').append(rowIndex).append(')').toString());
         }
     }
 
@@ -685,7 +685,7 @@ final class AchievementsScreen {
           int var5 = var4.maxAscent + var4.maxDescent;
           int var6 = 6340704;
           int var7 = 10551200;
-          String var8 = kg.field_a + " ";
+          String var8 = GameProgressTracker.field_a + " ";
           String var9 = "" + ProxySocketConnector.achievementOrbPoints[var3_int];
           String var10 = ResizableModalPanel.field_T + " ";
           String var11 = "" + ProxySocketConnector.achievementOrbCoins[var3_int];
@@ -700,7 +700,7 @@ final class AchievementsScreen {
           var4.drawRight(var10, var14, var16, var6, -1);
           var4.drawLeft(var11, var14, var16, var7, -1);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ta.C(" + divisor + ',' + (icon != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ta.C(" + divisor + ',' + (icon != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -783,7 +783,7 @@ final class AchievementsScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(actionId).append(',').append(revealTick).append(',').append(y).append(',').append(frameId).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(actionId).append(',').append(revealTick).append(',').append(y).append(',').append(frameId).append(')').toString());
         }
     }
 
@@ -857,7 +857,7 @@ final class AchievementsScreen {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(',').append(actionId).append(',').append(frameId).append(',').append(revealTick).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(',').append(actionId).append(',').append(frameId).append(',').append(revealTick).append(')').toString());
         }
     }
 
@@ -942,7 +942,7 @@ final class AchievementsScreen {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1014,7 +1014,7 @@ final class AchievementsScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(',').append(scale).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(',').append(scale).append(')').toString());
         }
     }
 
@@ -1105,7 +1105,7 @@ final class AchievementsScreen {
           int var4 = PasswordValidator.a(-87, button);
           ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, IterableNodeHashTable.field_c * 6144 / volumeDivisor, var4);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ta.P(" + volumeDivisor + ',' + (button != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ta.P(" + volumeDivisor + ',' + (button != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1182,7 +1182,7 @@ final class AchievementsScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(',').append(revealTick).append(',').append(frameId).append(',').append(y).append(',').append(actionId).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(',').append(revealTick).append(',').append(frameId).append(',').append(y).append(',').append(actionId).append(')').toString());
         }
     }
 

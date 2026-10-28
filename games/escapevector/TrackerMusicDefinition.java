@@ -116,7 +116,7 @@ final class TrackerMusicDefinition {
         }
         if (null == AudioService.field_b) {
           mj.field_e = ProxySocketConnector.field_o;
-          AudioService.field_b = new String[][]{mj.field_e, ProxySocketConnector.field_o, vd.field_d, ThreeSliceButtonPainter.field_u};
+          AudioService.field_b = new String[][]{mj.field_e, ProxySocketConnector.field_o, SavedCompletionFlags.field_d, ThreeSliceButtonPainter.field_u};
         }
         return AudioService.field_b[param1][param2];
     }
@@ -257,7 +257,7 @@ final class TrackerMusicDefinition {
           }
           this.a(260404420);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -81,7 +81,7 @@ final class SpriteStrip extends IntrusiveNode {
           this.sprites = sprites;
           this.updateWidth((byte) 112);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "tc.<init>(" + (sprites != null ? "{...}" : "null") + ',' + spacing + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "tc.<init>(" + (sprites != null ? "{...}" : "null") + ',' + spacing + ')');
         }
     }
 

@@ -16,7 +16,7 @@ final class LoginDialog extends ContentTransitionDialog {
         try {
           super.transitionToContent(content, guard);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ng.D(" + (content != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ng.D(" + (content != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

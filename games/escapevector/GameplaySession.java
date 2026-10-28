@@ -364,7 +364,7 @@ final class GameplaySession {
           this.tilesHigh = terrain.tilesHigh;
           this.snapshotTerrain((byte) 111);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.SF(" + headerOnly + ',' + formatVersion + ',' + guard + ',' + (input != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.SF(" + headerOnly + ',' + formatVersion + ',' + guard + ',' + (input != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -539,7 +539,7 @@ final class GameplaySession {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(guard).append(',').append(objectId).append(',').append(formatVersion).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(guard).append(',').append(objectId).append(',').append(formatVersion).append(')').toString());
         }
     }
 
@@ -550,7 +550,7 @@ final class GameplaySession {
         if (null == ua.field_c) {
           return;
         }
-        if (!ua.field_c.c(115)) {
+        if (!ua.field_c.allInfrastructureLevelsAccessible(115)) {
           return;
         }
         int var3 = 28;
@@ -602,7 +602,7 @@ final class GameplaySession {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(',').append(pixelY).append(',').append(pixelX).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(',').append(pixelY).append(',').append(pixelX).append(')').toString());
         }
     }
 
@@ -799,7 +799,7 @@ final class GameplaySession {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(')').toString());
         }
     }
 
@@ -841,7 +841,7 @@ final class GameplaySession {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(rightX).append(',').append(leftX).append(',').append(guard).append(',').append(y).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(rightX).append(',').append(leftX).append(',').append(guard).append(',').append(y).append(')').toString());
         }
     }
 
@@ -910,13 +910,13 @@ final class GameplaySession {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
     private final void saveLevelProgress(int guard) {
-        if (ua.field_c.b(15954, this.gameMode, this.levelIndex)) {
-          ua.field_c.a(-15748, this.gameMode, this.levelIndex, ValidationIndicator.k(64));
+        if (ua.field_c.canRecordLevelCompletion(15954, this.gameMode, this.levelIndex)) {
+          ua.field_c.recordLevelCompletion(-15748, this.gameMode, this.levelIndex, ValidationIndicator.k(64));
         }
         if (guard != 6324320) {
           this.recordLevelResult((byte) 87, 37);
@@ -1027,7 +1027,7 @@ final class GameplaySession {
           }
           int guardQuotient = -29 / ((79 - guard) / 37);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.FB(" + guard + ',' + (input != null ? "{...}" : "null") + ',' + formatVersion + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.FB(" + guard + ',' + (input != null ? "{...}" : "null") + ',' + formatVersion + ')');
         }
     }
 
@@ -1093,7 +1093,7 @@ final class GameplaySession {
           PointCloudEffect var7 = AchievementDefinition.createSpriteDebris((byte) -43, sound, y, sprite, (var6_int), x);
           this.pointCloudEffects.addLast(-12328, var7);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.D(" + x + ',' + guard + ',' + (sprite != null ? "{...}" : "null") + ',' + y + ',' + (sound != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.D(" + x + ',' + guard + ',' + (sprite != null ? "{...}" : "null") + ',' + y + ',' + (sound != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1220,7 +1220,7 @@ final class GameplaySession {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
         }
     }
 
@@ -1376,7 +1376,7 @@ final class GameplaySession {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1480,7 +1480,7 @@ final class GameplaySession {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(bitX).append(',').append(guard).append(',').append(rowY).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(bitX).append(',').append(guard).append(',').append(rowY).append(')').toString());
         }
     }
 
@@ -1512,7 +1512,7 @@ final class GameplaySession {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1645,7 +1645,7 @@ final class GameplaySession {
           int var3_int = -72 / ((guard + 38) / 58);
           this.queueHudMessage(100, (byte) 91, text);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.QB(" + guard + ',' + (text != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.QB(" + guard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1660,7 +1660,7 @@ final class GameplaySession {
           }
           stream.setVolumeQ6(0);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.JB(" + guard + ',' + (stream != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.JB(" + guard + ',' + (stream != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1764,7 +1764,7 @@ final class GameplaySession {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1851,7 +1851,7 @@ final class GameplaySession {
           }
           this.hudMessageQueue.addLast(-12328, var4);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.SB(" + durationTicks + ',' + guard + ',' + (text != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.SB(" + durationTicks + ',' + guard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1911,7 +1911,7 @@ final class GameplaySession {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(formatVersion).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(formatVersion).append(')').toString());
         }
     }
 
@@ -2041,7 +2041,7 @@ final class GameplaySession {
           levelInput.close();
           this.shipLanded = false;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.FD(" + headerOnly + ',' + guard + ',' + (input != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.FD(" + headerOnly + ',' + guard + ',' + (input != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2094,7 +2094,7 @@ final class GameplaySession {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -2459,7 +2459,7 @@ final class GameplaySession {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(y).append(',').append(x).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(y).append(',').append(x).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -2561,7 +2561,7 @@ final class GameplaySession {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(y).append(',').append(x).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(y).append(',').append(x).append(')').toString());
         }
     }
 
@@ -2588,7 +2588,7 @@ final class GameplaySession {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(formatVersion).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(formatVersion).append(')').toString());
         }
     }
 
@@ -2681,7 +2681,7 @@ final class GameplaySession {
           mine.unlink((byte) -11);
           this.recordDestructionForAchievement((byte) -128);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.RC(" + (mine != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.RC(" + (mine != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -2737,7 +2737,7 @@ final class GameplaySession {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(x).append(',').append(formatVersion).append(',').append(guard).append(',').append(objectType).append(',').append(y).append(',').append(objectId).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(x).append(',').append(formatVersion).append(',').append(guard).append(',').append(objectType).append(',').append(y).append(',').append(objectId).append(')').toString());
         }
     }
 
@@ -2805,7 +2805,7 @@ final class GameplaySession {
           this.decodeLevelBytes(bytes, 100);
           this.initializeLevelObjects(buildTerrainRenderer, -119);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.A(" + buildTerrainRenderer + ',' + (bytes != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.A(" + buildTerrainRenderer + ',' + (bytes != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -2857,7 +2857,7 @@ final class GameplaySession {
         }
         if (this.levelIndex == 12) {
           int[] var35 = LoadingProgressDialog.field_bb;
-          String[] var22 = vd.field_i;
+          String[] var22 = SavedCompletionFlags.field_i;
           DialogueScreen var23 = new DialogueScreen(var35, var12, var22, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var23);
         }
@@ -2884,12 +2884,12 @@ final class GameplaySession {
         this.detachSessionAudio(72);
         GzipDecoder.field_b = BoundedRandomAccessFile.activeSession.gameMode;
         BoundedRandomAccessFile.activeSession = null;
-        AlternateUsernameCredentials.field_q = new t();
+        AlternateUsernameCredentials.field_q = new MainMenuScreen();
         GameplaySession.resetSessionMenuState((byte) -28);
         mj.field_d = guard;
         if (AccountSessionSupport.isGuestSession(-89) && (null != IntValueNode.field_i ||
           TrackerMusicDefinition.field_f.hasSessionAchievements(-49) ||
-          ua.field_c.d(17523))) {
+          ua.field_c.hasPendingProgress(17523))) {
           PacketBuffer.field_h = true;
           di.field_d = new MenuInputState(2);
           di.field_d.setPointerSelection(TransitionPoint.hitLoginOrDiscardPrompt(GzipDecoder.field_d, UiContainer.field_y, 8158), true, 4767999);
@@ -2910,7 +2910,7 @@ final class GameplaySession {
         try {
           this.spawnExplosion(123, projectile.yQ16, td.field_c, projectile.xQ16);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.MC(" + (projectile != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.MC(" + (projectile != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -3024,7 +3024,7 @@ final class GameplaySession {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -3075,7 +3075,7 @@ final class GameplaySession {
           this.laserGateDestroyed = true;
           this.laserGateCount = this.laserGateCount - 1;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.E(" + (gate != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.E(" + (gate != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -3108,7 +3108,7 @@ final class GameplaySession {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(x).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(x).append(')').toString());
         }
     }
 
@@ -3146,7 +3146,7 @@ final class GameplaySession {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(',').append(objectIndex).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(',').append(objectIndex).append(')').toString());
         }
     }
 
@@ -3182,7 +3182,7 @@ final class GameplaySession {
         if (ua.field_c == null) {
           return;
         }
-        if (!ua.field_c.a(this.gameMode, false)) {
+        if (!ua.field_c.allLevelsAccessible(this.gameMode, false)) {
           return;
         }
         int var3 = 29;
@@ -3384,7 +3384,7 @@ final class GameplaySession {
         try {
           this.decodeLevelStream(option, -1, input);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.TC(" + (input != null ? "{...}" : "null") + ',' + option + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.TC(" + (input != null ? "{...}" : "null") + ',' + option + ')');
         }
     }
 
@@ -3512,10 +3512,10 @@ final class GameplaySession {
           return;
         }
         try {
-          ua.field_c.a((byte) -64, this.gameMode, ValidationIndicator.k(64), this.levelIndex);
+          ua.field_c.recordInfrastructureCompletion((byte) -64, this.gameMode, ValidationIndicator.k(64), this.levelIndex);
           int var3_int = 90 % ((42 - guard) / 62);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.VF(" + guard + ',' + (object != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.VF(" + guard + ',' + (object != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -3557,7 +3557,7 @@ final class GameplaySession {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -3743,7 +3743,7 @@ final class GameplaySession {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(formatVersion).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(formatVersion).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -3774,7 +3774,7 @@ final class GameplaySession {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -5145,7 +5145,7 @@ final class GameplaySession {
             } else {
               this.spawnBullet(this.shipYQ16 + var9Lifetime7 * 5, this.shipXQ16 + var8 * 5, (var8 >> 3) - (var9Lifetime7 >> 3) + (this.shipVelocityYQ16 + var9Lifetime7), 256, 0, this.shipVelocityXQ16 + (var8 - ((var8 >> 3) + (var9Lifetime7 >> 3))));
               this.spawnBullet(this.shipYQ16 + var9Lifetime7 * 5, 5 * var8 + this.shipXQ16, -(var8 >> 3) - (var9Lifetime7 >> 3) + (var9Lifetime7 + this.shipVelocityYQ16), 256, 0, (var9Lifetime7 >> 3) + this.shipVelocityXQ16 + (var8 - (var8 >> 3)));
-              AlternateUsernameCredentials.field_n.playSampleWithPan(gn.field_e, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
+              AlternateUsernameCredentials.field_n.playSampleWithPan(ModeProgress.field_e, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
             }
             this.shotCooldownTicks = 9;
           }
@@ -5370,7 +5370,7 @@ final class GameplaySession {
           var10 = var10 + var7;
         }
         int var3Lifetime1 = var13.stringWidth(AccountTermsPanel.field_K);
-        int var4Lifetime3 = var13.stringWidth(vd.field_c);
+        int var4Lifetime3 = var13.stringWidth(SavedCompletionFlags.field_c);
         int var5Lifetime1 = var13.stringWidth(Integer.toString(this.levelIndex + 1));
         if (var3Lifetime1 < var4Lifetime3) {
           var3Lifetime1 = var4Lifetime3;
@@ -5412,7 +5412,7 @@ final class GameplaySession {
         GameAppletShell.a(var9Lifetime1, 634 - var5Lifetime1 - var3Lifetime1 - 10, -4, 6320248, -2, var6Lifetime1 + 6, -3, 644, 12110032, 3160124, var8Lifetime1 * 2);
         var13.drawRight(AccountTermsPanel.field_K, -var5Lifetime1 + 634, 22, 10004656, -1);
         var13.drawLeft(Integer.toString(this.levelIndex + 1), -var5Lifetime1 + 634, 22, 16777215, -1);
-        var13.drawRight(vd.field_c, -var5Lifetime1 + 634, 40, 10004656, -1);
+        var13.drawRight(SavedCompletionFlags.field_c, -var5Lifetime1 + 634, 40, 10004656, -1);
         var13.drawLeft(Integer.toString(this.livesRemaining), -var5Lifetime1 + 634, 40, 16777215, -1);
         var13.drawRight(ShipHullGeometry.field_a, -var5Lifetime1 + 634, 58, 10004656, -1);
         BinaryBitmapFont stackIn_47_0 = var13;
@@ -5680,7 +5680,7 @@ final class GameplaySession {
           GradientOutlineTextPainter.enqueueDialogue(1820, var17);
         } else {
           int[] var32 = LoadingProgressDialog.field_bb;
-          String[] var13 = vd.field_i;
+          String[] var13 = SavedCompletionFlags.field_i;
           DialogueScreen var14 = new DialogueScreen(var32, var12, var13, false);
           GradientOutlineTextPainter.enqueueDialogue(guard - 9154, var14);
         }
@@ -5736,7 +5736,7 @@ final class GameplaySession {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -5828,7 +5828,7 @@ final class GameplaySession {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -5912,7 +5912,7 @@ final class GameplaySession {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(y).append(',').append(lastColumnAdjustment).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(y).append(',').append(lastColumnAdjustment).append(')').toString());
         }
     }
 
@@ -6210,7 +6210,7 @@ final class GameplaySession {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(color).append(',').append(cameraX).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(color).append(',').append(cameraX).append(')').toString());
         }
     }
 
@@ -6281,7 +6281,7 @@ final class GameplaySession {
             this.initializeSessionOption((byte) 84, option);
             this.checkCampaignAchievements(0);
           } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "oe.<init>(" + (levelData != null ? "{...}" : "null") + ',' + option + ',' + gameMode + ',' + levelIndex + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.<init>(" + (levelData != null ? "{...}" : "null") + ',' + option + ',' + gameMode + ',' + levelIndex + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -6318,7 +6318,7 @@ final class GameplaySession {
           try {
             this.levelData = levelData;
           } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "oe.<init>(" + (levelData != null ? "{...}" : "null") + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.<init>(" + (levelData != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

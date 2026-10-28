@@ -48,7 +48,7 @@ final class AchievementDefinition {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(indexedRendering).append(',').append(x).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(indexedRendering).append(',').append(x).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class AchievementDefinition {
         if (guard > -56) {
           return false;
         }
-        if (UiContainer.e((byte) -52)) {
+        if (UiContainer.hasMembership((byte) -52)) {
           int var3 = 1 << mode;
           boolean var4 = (0 != (this.allowedGameModes & var3));
           return (var4);

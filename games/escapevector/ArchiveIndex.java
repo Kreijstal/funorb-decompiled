@@ -212,7 +212,7 @@ final class ArchiveIndex {
           } else {
             stackIn_103_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
         }
     }
 
@@ -235,7 +235,7 @@ final class ArchiveIndex {
           }
           this.decode((byte) -23, encoded);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "f.<init>(" + (encoded != null ? "{...}" : "null") + ',' + expectedCrc32 + ',' + (expectedDigest != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "f.<init>(" + (encoded != null ? "{...}" : "null") + ',' + expectedCrc32 + ',' + (expectedDigest != null ? "{...}" : "null") + ')');
         }
     }
 

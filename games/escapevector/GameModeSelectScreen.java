@@ -48,7 +48,7 @@ final class GameModeSelectScreen {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class GameModeSelectScreen {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(bottom).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(bottom).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class GameModeSelectScreen {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class GameModeSelectScreen {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class GameModeSelectScreen {
             BinaryBitmapFont var11 = (BinaryBitmapFont) null;
             int[] discarded$1 = this.createModeButtons(20, -91, (BinaryBitmapFont) null, (byte) -102);
           }
-          if (UiContainer.e((byte) 127)) {
+          if (UiContainer.hasMembership((byte) 127)) {
             var5 = AlternateUsernameCredentials.field_s;
             var6 = new int[]{1, 0, 2, 3};
             var7 = BufferedSocket.field_g;
@@ -224,7 +224,7 @@ final class GameModeSelectScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -265,7 +265,7 @@ final class GameModeSelectScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(',').append(revealTick).append(',').append(firstAction).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(',').append(revealTick).append(',').append(firstAction).append(')').toString());
         }
     }
 
@@ -296,7 +296,7 @@ final class GameModeSelectScreen {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -387,7 +387,7 @@ final class GameModeSelectScreen {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(x).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(x).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -609,7 +609,7 @@ final class GameModeSelectScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "pf.C(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "pf.C(" + guard + ')');
         }
     }
 
@@ -638,7 +638,7 @@ final class GameModeSelectScreen {
           int var11 = this.buttonPan((byte) 120, var10);
           ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, ratePercent, volume, var11);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "pf.V(" + interval + ',' + guard + ',' + (buttons != null ? "{...}" : "null") + ',' + firstTick + ',' + ratePercent + ',' + volume + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "pf.V(" + interval + ',' + guard + ',' + (buttons != null ? "{...}" : "null") + ',' + firstTick + ',' + ratePercent + ',' + volume + ')');
         }
     }
 
@@ -714,7 +714,7 @@ final class GameModeSelectScreen {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -779,7 +779,7 @@ final class GameModeSelectScreen {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -853,7 +853,7 @@ final class GameModeSelectScreen {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -967,7 +967,7 @@ final class GameModeSelectScreen {
           int var9 = this.buttonPan((byte) -97, var6);
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, ratePercent, volume, var9);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "pf.G(" + (buttons != null ? "{...}" : "null") + ',' + guard + ',' + ratePercent + ',' + volume + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "pf.G(" + (buttons != null ? "{...}" : "null") + ',' + guard + ',' + ratePercent + ',' + volume + ')');
         }
     }
 

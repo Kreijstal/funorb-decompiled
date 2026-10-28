@@ -44,7 +44,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
     }
 
     final static int a(int param0, byte param1) {
-        int var2 = ua.field_c.a(29386, param0);
+        int var2 = ua.field_c.unlockedLevelIndex(29386, param0);
         if (param1 != 121) {
           field_O = (String) null;
         }
@@ -185,7 +185,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         if (var2 >= var3) {
           var2 = 0;
         } else if (var2 == 0) {
-          var2 = CheckboxPainter.field_l.field_s;
+          var2 = CheckboxPainter.field_l.tutorialAction;
         }
         return var2;
     }
@@ -196,7 +196,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             this.passwordField = (EditableTextWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "h.W(" + (field != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "h.W(" + (field != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -289,7 +289,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           String var8 = lh.field_b;
           LoginMethod var9 = WeightedCacheEntry.readLastLoginMethod((byte) -1, PointCloudEffect.activeApplet((byte) -107));
           if (var9 == NameAvailabilityValidator.field_q) {
-            var8 = kg.field_b;
+            var8 = GameProgressTracker.field_b;
           } else if (var9 == MenuEdgeSegment.field_n) {
             var8 = TileSpriteCacheEntry.field_c;
           }
@@ -354,7 +354,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -375,7 +375,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           var3.setText(var4, false, -33);
           this.passwordField.clearText((byte) -29);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "h.F(" + (identifier != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "h.F(" + (identifier != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

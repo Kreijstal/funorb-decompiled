@@ -39,7 +39,7 @@ final class nb {
           String var6 = param0.getParameter("currency");
           if (var6 != null &&
             LoginCredentialType.isDecimalText(false, (CharSequence) ((Object) var6))) {
-            gn.a(16777215, (CharSequence) ((Object) var6));
+            ModeProgress.parseDecimal(16777215, (CharSequence) ((Object) var6));
           }
           sf.field_b = new Sprite[param4.length];
           for (int var7 = 0; var7 < param4.length; var7++) {
@@ -62,7 +62,7 @@ final class nb {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(')').toString());
         }
     }
 

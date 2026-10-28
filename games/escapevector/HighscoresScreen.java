@@ -45,7 +45,7 @@ final class HighscoresScreen {
     private final void close(boolean pointerDriven, byte guard) {
         LegacyWidgetStyle.field_N = null;
         CheckboxPainter.field_n = false;
-        AlternateUsernameCredentials.field_q.b(guard - 26357, pointerDriven);
+        AlternateUsernameCredentials.field_q.updatePointerSelection(guard - 26357, pointerDriven);
         di.field_d = null;
         mj.field_d = 0;
         if (guard != -123) {
@@ -105,7 +105,7 @@ final class HighscoresScreen {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class HighscoresScreen {
           left.longColumns[this.queryColumn] = var23;
           this.assignRowBoardIds((byte) 69, leftBoardId, var21, rightBoardId);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ak.F(" + rightBoardId + ',' + (left != null ? "{...}" : "null") + ',' + (right != null ? "{...}" : "null") + ',' + guard + ',' + leftBoardId + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ak.F(" + rightBoardId + ',' + (left != null ? "{...}" : "null") + ',' + (right != null ? "{...}" : "null") + ',' + guard + ',' + leftBoardId + ')');
         }
     }
 
@@ -381,7 +381,7 @@ final class HighscoresScreen {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -433,7 +433,7 @@ final class HighscoresScreen {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -554,7 +554,7 @@ final class HighscoresScreen {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(rightColumn).append(',').append(guard).append(',').append(leftColumn).append(',').append(leftMode).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(rightColumn).append(',').append(guard).append(',').append(leftColumn).append(',').append(leftMode).append(')').toString());
         }
     }
 
@@ -658,7 +658,7 @@ final class HighscoresScreen {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param8).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -705,12 +705,12 @@ final class HighscoresScreen {
         var4Lifetime1 = AnimatedPathMarker.appendInts(this.actionCodes, var4Lifetime1, true, var28);
         var4Lifetime1 = AnimatedPathMarker.appendInts(this.actionCodes, var4Lifetime1, true, var29);
         AnimatedPathMarker.appendInts(this.actionCodes, var4Lifetime1, true, var30);
-        gn.a(this.categoryButtons, true, (byte) 41);
+        ModeProgress.configureButtonPalette(this.categoryButtons, true, (byte) 41);
         if (guard > -120) {
           this.actionCodes = (int[]) null;
         }
-        gn.a(this.rankingButtons, !AccountSessionSupport.isGuestSession(-102) ? true : false, (byte) 41);
-        gn.a(this.mainMenuButtons, false, (byte) 41);
+        ModeProgress.configureButtonPalette(this.rankingButtons, !AccountSessionSupport.isGuestSession(-102) ? true : false, (byte) 41);
+        ModeProgress.configureButtonPalette(this.mainMenuButtons, false, (byte) 41);
         this.table = null;
     }
 
@@ -743,7 +743,7 @@ final class HighscoresScreen {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -777,7 +777,7 @@ final class HighscoresScreen {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(rightBoardId).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(rightBoardId).append(')').toString());
         }
     }
 
@@ -810,7 +810,7 @@ final class HighscoresScreen {
         String stackIn_8_2 = null;
         try {
           String[] var12 = mg.field_h;
-          if (!UiContainer.e((byte) 103)) {
+          if (!UiContainer.hasMembership((byte) 103)) {
             var10 = new int[]{5};
             var11 = new String[]{var12[0]};
           } else {
@@ -834,7 +834,7 @@ final class HighscoresScreen {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -923,7 +923,7 @@ final class HighscoresScreen {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -975,7 +975,7 @@ final class HighscoresScreen {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -1009,7 +1009,7 @@ final class HighscoresScreen {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -1060,7 +1060,7 @@ final class HighscoresScreen {
         if (EmailSyntaxValidator.a(gameMode, -2)) {
           this.categoryCode = 5;
         }
-        if (!UiContainer.e((byte) 98)) {
+        if (!UiContainer.hasMembership((byte) 98)) {
           return;
         }
         if (gameMode == 2) {

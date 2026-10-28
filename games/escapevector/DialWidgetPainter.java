@@ -21,7 +21,7 @@ final class DialWidgetPainter implements WidgetPainter {
             DialWidgetPainter.b((byte) 98);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "sc.B(" + (record != null ? "{...}" : "null") + ',' + opcode + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "sc.B(" + (record != null ? "{...}" : "null") + ',' + opcode + ',' + guard + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class DialWidgetPainter implements WidgetPainter {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(enabled).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(enabled).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class DialWidgetPainter implements WidgetPainter {
           this.field_a = param7;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class DialWidgetPainter implements WidgetPainter {
         try {
           Js5Transport.field_b = -1;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "sc.A(" + guard + ',' + (component != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "sc.A(" + guard + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 

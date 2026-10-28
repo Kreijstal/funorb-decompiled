@@ -31,7 +31,7 @@ final class NineSliceFrame {
         try {
           this.sprites = sprites;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "fd.<init>(" + (sprites != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fd.<init>(" + (sprites != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -20,7 +20,7 @@ final class TerrainMap {
           int var1_int = 112 / ((-60 - guard) / 60);
           field_i = null;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "vc.A(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "vc.A(" + guard + ')');
         }
     }
 
@@ -28,7 +28,7 @@ final class TerrainMap {
         try {
           String stackIn_16_2 = null;
           try {
-            Object var4 = ig.field_l;
+            Object var4 = LevelSelectScreen.field_l;
             synchronized (var4) {
               if (param3 > -61) {
                 field_e = (String) null;
@@ -40,7 +40,7 @@ final class TerrainMap {
               DraggableWidget.field_N = new TrackerMusicPlayer(param1);
               DraggableWidget.field_N.d(GrowableIntList.field_b * kc.field_b / 64);
               DraggableWidget.field_N.a(param2);
-              ig.field_l.flush();
+              LevelSelectScreen.field_l.flush();
               nb.field_c.scheduleListener((PcmMixerListener) ((Object) DraggableWidget.field_N));
             }
             return;
@@ -54,7 +54,7 @@ final class TerrainMap {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -122,7 +122,7 @@ final class TerrainMap {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(formatVersion).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(formatVersion).append(')').toString());
         }
     }
 

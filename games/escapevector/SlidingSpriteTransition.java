@@ -32,7 +32,7 @@ final class SlidingSpriteTransition {
           if (fontBytes == null) {
             return null;
           }
-          CoverageBitmapFont var2 = new CoverageBitmapFont(fontBytes, gn.spriteOffsetXs, ChatMessage.spriteOffsetYs, SpriteLoadTask.spriteWidths, SavedDataQuerySupport.spriteHeights, ArchiveLoadTask.spritePalette, AnimatedPathMarker.spriteIndices);
+          CoverageBitmapFont var2 = new CoverageBitmapFont(fontBytes, ModeProgress.spriteOffsetXs, ChatMessage.spriteOffsetYs, SpriteLoadTask.spriteWidths, SavedDataQuerySupport.spriteHeights, ArchiveLoadTask.spritePalette, AnimatedPathMarker.spriteIndices);
           SpriteDecodeSupport.releaseSpriteSheet(false);
           CoverageBitmapFont stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -46,7 +46,7 @@ final class SlidingSpriteTransition {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class SlidingSpriteTransition {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "ea.D(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "ea.D(" + guard + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class SlidingSpriteTransition {
           this.durationTicks = durationTicks;
           this.current = this.start.copy(10);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ea.<init>(" + (start != null ? "{...}" : "null") + ',' + (end != null ? "{...}" : "null") + ',' + (sprite != null ? "{...}" : "null") + ',' + durationTicks + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ea.<init>(" + (start != null ? "{...}" : "null") + ',' + (end != null ? "{...}" : "null") + ',' + (sprite != null ? "{...}" : "null") + ',' + durationTicks + ')');
         }
     }
 

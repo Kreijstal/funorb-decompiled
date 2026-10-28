@@ -25,7 +25,7 @@ final class ArchiveLoadTask {
         di.field_d = null;
         mj.field_d = 0;
         int var2 = -17 % ((-17 - param1) / 39);
-        AlternateUsernameCredentials.field_q.b(-26480, param0);
+        AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, param0);
         ChatMessage.clearFrameOffsets((byte) -123);
     }
 
@@ -65,7 +65,7 @@ final class ArchiveLoadTask {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
         }
     }
 

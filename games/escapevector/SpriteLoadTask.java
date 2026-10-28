@@ -94,7 +94,7 @@ final class SpriteLoadTask {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class SpriteLoadTask {
           var3.writeByte(query.requestId, -123);
           var3.writeByte(query.rowCount, -123);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qh.D(" + (query != null ? "{...}" : "null") + ',' + guard + ',' + opcode + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qh.D(" + (query != null ? "{...}" : "null") + ',' + guard + ',' + opcode + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class SpriteLoadTask {
           this.fileName = fileName;
           this.xteaKey = xteaKey;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (archive != null ? "{...}" : "null") + ',' + (fileName != null ? "{...}" : "null") + ',' + (groupName != null ? "{...}" : "null") + ',' + format + ',' + waitForGroup + ',' + (xteaKey != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qh.<init>(" + (archive != null ? "{...}" : "null") + ',' + (fileName != null ? "{...}" : "null") + ',' + (groupName != null ? "{...}" : "null") + ',' + format + ',' + waitForGroup + ',' + (xteaKey != null ? "{...}" : "null") + ')');
         }
     }
 

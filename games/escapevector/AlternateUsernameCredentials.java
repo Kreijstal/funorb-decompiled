@@ -8,7 +8,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
     static QuickChatDynamicCommand field_m;
     static ResourceArchive field_j;
     static int field_r;
-    static t field_q;
+    static MainMenuScreen field_q;
     static String[] field_s;
     static PcmSample field_o;
     static String field_i;

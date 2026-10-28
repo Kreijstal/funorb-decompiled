@@ -21,7 +21,7 @@ final class Bullet extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "vh.A(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "vh.A(" + guard + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class Bullet extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class Bullet extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var4), "vh.F(" + cameraX + ',' + guard + ',' + cameraY + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var4), "vh.F(" + cameraX + ',' + guard + ',' + cameraY + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class Bullet extends IntrusiveNode {
             int stackIn_7_0 = 0;
             return stackIn_7_0;
           }
-          if (!UiContainer.e((byte) 104)) {
+          if (!UiContainer.hasMembership((byte) 104)) {
             int stackIn_12_0 = 1;
             return stackIn_12_0;
           }
@@ -147,7 +147,7 @@ final class Bullet extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "vh.E(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "vh.E(" + guard + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class Bullet extends IntrusiveNode {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(nearDepth).append(',').append(farDepth).append(',').append(cullBackfaces).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(nearDepth).append(',').append(farDepth).append(',').append(cullBackfaces).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ final class Bullet extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) runtimeException), "vh.C(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "vh.C(" + guard + ')');
         }
     }
 
@@ -297,7 +297,7 @@ final class Bullet extends IntrusiveNode {
             Bullet.accountStateIndex(-128);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "vh.B(" + xQ16 + ',' + inactive + ',' + velocityXQ16 + ',' + velocityYQ16 + ',' + guard + ',' + kind + ',' + yQ16 + ',' + remainingTicks + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "vh.B(" + xQ16 + ',' + inactive + ',' + velocityXQ16 + ',' + velocityYQ16 + ',' + guard + ',' + kind + ',' + yQ16 + ',' + remainingTicks + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class Bullet extends IntrusiveNode {
           int var2_int = 54 / ((guard - 40) / 51);
           this.reset(0, true, 0, 0, (byte) -125, 0, 0, 0);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "vh.H(" + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "vh.H(" + guard + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class Bullet extends IntrusiveNode {
         try {
           this.reset(xQ16, false, velocityXQ16, velocityYQ16, (byte) -122, kind, yQ16, remainingTicks);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "vh.<init>(" + xQ16 + ',' + yQ16 + ',' + velocityXQ16 + ',' + velocityYQ16 + ',' + kind + ',' + remainingTicks + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "vh.<init>(" + xQ16 + ',' + yQ16 + ',' + velocityXQ16 + ',' + velocityYQ16 + ',' + kind + ',' + remainingTicks + ')');
         }
     }
 

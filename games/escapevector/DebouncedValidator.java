@@ -65,7 +65,7 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ abstract class DebouncedValidator implements ValidationSource {
           var3.appendCrc32(var4, -76);
           var3.backpatchByteLength(86, var3.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "sm.O(" + (record != null ? "{...}" : "null") + ',' + opcode + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "sm.O(" + (record != null ? "{...}" : "null") + ',' + opcode + ',' + guard + ')');
         }
     }
 

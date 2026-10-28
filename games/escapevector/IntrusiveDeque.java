@@ -105,7 +105,7 @@ final class IntrusiveDeque {
           }
           node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "cn.D(" + (node != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cn.D(" + (node != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -149,7 +149,7 @@ final class IntrusiveDeque {
           node.previous.next = node;
           node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "cn.A(" + guard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cn.A(" + guard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 

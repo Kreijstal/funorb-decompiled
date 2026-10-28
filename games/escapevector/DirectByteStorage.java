@@ -40,7 +40,7 @@ final class DirectByteStorage extends ByteStorage {
           }
           this.buffer.put(bytes);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "km.B(" + guard + ',' + (bytes != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "km.B(" + guard + ',' + (bytes != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,8 +64,8 @@ final class DirectByteStorage extends ByteStorage {
           TrackerMusicDefinition.field_f.requestAccountAchievements((byte) -126);
           TrackerMusicDefinition.field_f.pollAccountQuery(param0 ^ 19593);
         }
-        if (!ua.field_c.a(-19836)) {
-          ua.field_c.g(-9949);
+        if (!ua.field_c.isLoaded(-19836)) {
+          ua.field_c.pollLoad(-9949);
         }
         CachedArchiveProvider.b(param0 ^ -57);
         SimulatorAssetSupport.loadSimulatorSprites(0);
@@ -179,7 +179,7 @@ final class DirectByteStorage extends ByteStorage {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(unused).append(',').append(guard).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(unused).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -204,7 +204,7 @@ final class DirectByteStorage extends ByteStorage {
           PointCloudEffect.field_u = PointCloudEffect.field_u + (var2_intLifetime2 >> 1);
           SocketJs5Transport.field_s = SocketJs5Transport.field_s + param0.readUnsignedShort(1952);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "km.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "km.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -33,7 +33,7 @@ final class DialWidget extends TextButton {
           PacketBuffer var18 = var17;
           var18.position = -2 + encoded.length;
           ArchiveLoadTask.spriteCount = var18.readUnsignedShort(1952);
-          gn.spriteOffsetXs = new int[ArchiveLoadTask.spriteCount];
+          ModeProgress.spriteOffsetXs = new int[ArchiveLoadTask.spriteCount];
           UiContainer.spriteHasAlpha = new boolean[ArchiveLoadTask.spriteCount];
           SavedDataQuerySupport.spriteHeights = new int[ArchiveLoadTask.spriteCount];
           if (!guard) {
@@ -49,7 +49,7 @@ final class DialWidget extends TextButton {
           DelegatingCanvas.spriteSheetHeight = var18.readUnsignedShort(1952);
           int var3 = 1 + (var18.readUnsignedByte(0) & 255);
           for (int var4 = 0; var4 < ArchiveLoadTask.spriteCount; var4++) {
-            gn.spriteOffsetXs[var4] = var17.readUnsignedShort(1952);
+            ModeProgress.spriteOffsetXs[var4] = var17.readUnsignedShort(1952);
           }
           for (int var4Lifetime1 = 0; ArchiveLoadTask.spriteCount > var4Lifetime1; var4Lifetime1++) {
             ChatMessage.spriteOffsetYs[var4Lifetime1] = var18.readUnsignedShort(1952);
@@ -129,7 +129,7 @@ final class DialWidget extends TextButton {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class DialWidget extends TextButton {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(button).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(button).append(')').toString());
         }
     }
 

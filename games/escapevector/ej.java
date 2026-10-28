@@ -19,7 +19,7 @@ final class ej {
             ej.a((byte) -29, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ej.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ej.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

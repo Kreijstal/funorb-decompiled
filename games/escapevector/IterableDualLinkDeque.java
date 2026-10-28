@@ -39,7 +39,7 @@ final class IterableDualLinkDeque implements Iterable {
           node.secondaryPrevious.secondaryNext = node;
           node.secondaryNext.secondaryPrevious = node;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "vb.C(" + guard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "vb.C(" + guard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 

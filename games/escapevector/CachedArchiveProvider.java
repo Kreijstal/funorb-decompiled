@@ -180,7 +180,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     }
 
     final static void b(int param0) {
-        if (!UiContainer.e((byte) 113)) {
+        if (!UiContainer.hasMembership((byte) 113)) {
           return;
         }
         if (StatefulTextPainter.field_u == null) {
@@ -502,7 +502,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -543,7 +543,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3), "hk.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var3), "hk.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -612,7 +612,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

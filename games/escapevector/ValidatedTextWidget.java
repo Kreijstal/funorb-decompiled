@@ -27,7 +27,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           super.updateHover(guard, offsetY, offsetX, root);
           this.field_W = -offsetX - this.x + GzipDecoder.field_d;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "gd.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "gd.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
             ValidatedTextWidget.releaseStatics((byte) 31);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "gd.KA(" + (validator != null ? "{...}" : "null") + ',' + guard + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "gd.KA(" + (validator != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

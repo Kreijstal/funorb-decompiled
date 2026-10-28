@@ -67,7 +67,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(theme).append(',').append(guard).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(theme).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ final class DelayedServerPacket extends IntrusiveNode {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -114,7 +114,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           this.payload = payload;
           this.readyAtMillis = readyAtMillis;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "dm.<init>(" + readyAtMillis + ',' + opcode + ',' + (payload != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "dm.<init>(" + readyAtMillis + ',' + opcode + ',' + (payload != null ? "{...}" : "null") + ')');
         }
     }
 
