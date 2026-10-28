@@ -16,7 +16,7 @@ final class GzipDecoder {
           di.field_g.complete((byte) -128, false);
           MenuInputState.loadCommonUiAssets(83, sprites, fonts, buttons);
           GrowableIntList.a((byte) -96);
-          dn.field_q = RasterBuffer.field_g;
+          InstructionsScreen.field_q = RasterBuffer.field_g;
           if (byteGuard > -111) {
             GzipDecoder.isMembersAchievement(13, (byte) 34);
           }

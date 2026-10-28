@@ -11,23 +11,23 @@ final class AccountPanelInputSupport {
         int var4 = EscapeVector.obfuscationControl;
         try {
           GameAppletShell.field_k = true;
-          oh var3 = (oh) (TrackerGainSupport.field_c.first(false));
+          MenuEdgeSegment var3 = (MenuEdgeSegment) (TrackerGainSupport.field_c.first(false));
           while (var3 != null) {
-            if (var3.field_m < 0) {
-              SoftwareRasterizer.drawHorizontalLine(var3.field_i - var3.field_s + offsetX, offsetY + var3.field_q, var3.field_s, EmailSyntaxValidator.field_q);
+            if (var3.direction < 0) {
+              SoftwareRasterizer.drawHorizontalLine(var3.x - var3.length + offsetX, offsetY + var3.y, var3.length, EmailSyntaxValidator.field_q);
             } else {
-              SoftwareRasterizer.drawHorizontalLine(offsetX + var3.field_i, offsetY + var3.field_q, var3.field_s, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawHorizontalLine(offsetX + var3.x, offsetY + var3.y, var3.length, EmailSyntaxValidator.field_q);
             }
-            var3 = (oh) (TrackerGainSupport.field_c.next((byte) 70));
+            var3 = (MenuEdgeSegment) (TrackerGainSupport.field_c.next((byte) 70));
           }
-          oh var3Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.first(false));
+          MenuEdgeSegment var3Lifetime1 = (MenuEdgeSegment) (QuickChatPhraseDefinition.field_u.first(false));
           while (var3Lifetime1 != null) {
-            if (var3Lifetime1.field_m >= 0) {
-              SoftwareRasterizer.drawVerticalLine(offsetX + var3Lifetime1.field_i, offsetY + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
+            if (var3Lifetime1.direction >= 0) {
+              SoftwareRasterizer.drawVerticalLine(offsetX + var3Lifetime1.x, offsetY + var3Lifetime1.y, var3Lifetime1.length, EmailSyntaxValidator.field_q);
             } else {
-              SoftwareRasterizer.drawVerticalLine(var3Lifetime1.field_i + offsetX, offsetY - var3Lifetime1.field_s + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawVerticalLine(var3Lifetime1.x + offsetX, offsetY - var3Lifetime1.length + var3Lifetime1.y, var3Lifetime1.length, EmailSyntaxValidator.field_q);
             }
-            var3Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.next((byte) 70));
+            var3Lifetime1 = (MenuEdgeSegment) (QuickChatPhraseDefinition.field_u.next((byte) 70));
           }
           if (guard < -5) {
             return;
@@ -108,7 +108,7 @@ final class AccountPanelInputSupport {
             int stackIn_20_0 = 1;
             return stackIn_20_0;
           }
-          if (EmailAvailabilityValidator.field_o != dn.field_q) {
+          if (EmailAvailabilityValidator.field_o != InstructionsScreen.field_q) {
             int stackIn_25_0 = -1;
             return stackIn_25_0;
           }

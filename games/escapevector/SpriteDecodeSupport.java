@@ -125,7 +125,7 @@ final class SpriteDecodeSupport {
         AnimatedPathMarker.spriteIndices = (byte[][]) null;
         SavedDataQuerySupport.spriteHeights = null;
         ArchiveLoadTask.spritePalette = null;
-        qh.spriteWidths = null;
+        SpriteLoadTask.spriteWidths = null;
     }
 
     final static int mouseIdleTicks(byte guard) {

@@ -3,7 +3,7 @@
  */
 final class HudMessage extends IntrusiveNode {
     static int[] field_h;
-    static qh[] field_k;
+    static SpriteLoadTask[] field_k;
     static String[] field_j;
     String text;
     int durationTicks;
@@ -58,7 +58,7 @@ final class HudMessage extends IntrusiveNode {
             }
           }
           if (param3 > -5) {
-            field_k = (qh[]) null;
+            field_k = (SpriteLoadTask[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

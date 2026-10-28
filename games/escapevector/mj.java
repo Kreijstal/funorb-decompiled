@@ -54,7 +54,7 @@ final class mj {
               Checkbox.readIncomingBytes(30000, 8)) {
               SecondaryIntrusiveDeque.field_b = QuickChatDynamicCommand.incomingPackets.readLong(param0 - 800509814);
               QuickChatDynamicCommand.incomingPackets.position = 0;
-              oh.a(ArchiveIndex.field_m, param4, param1, param5, (byte) -99);
+              MenuEdgeSegment.writeLoginRequest(ArchiveIndex.field_m, param4, param1, param5, (byte) -99);
               AccountFormStage.field_d = mc.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -120,7 +120,7 @@ final class mj {
               if (ArchiveIndex.field_m.type((byte) 32) == AlphaContainer.field_E) {
                 NameAvailabilityValidator.field_q.a(27002, PointCloudEffect.activeApplet((byte) -114));
               } else if (ArchiveIndex.field_m.type((byte) 32) == DisplayModeInfo.field_a) {
-                oh.field_n.a(27002, PointCloudEffect.activeApplet((byte) -71));
+                MenuEdgeSegment.field_n.a(27002, PointCloudEffect.activeApplet((byte) -71));
               }
               e.field_c = false;
               if (var6 != null) {

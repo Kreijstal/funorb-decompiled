@@ -18,7 +18,7 @@ final class AchievementThresholdRule {
           if (p.field_h != 0) {
             if (!AccountSessionSupport.isGuestSession(-124)) {
               if (1 == p.field_h) {
-                kh.a(true, -1230, true);
+                kh.showHighscoresScreen(true, -1230, true);
               }
               if (p.field_h == 2) {
                 PacketBuffer.field_h = false;
@@ -40,13 +40,13 @@ final class AchievementThresholdRule {
           if (var4 == null) {
             if (null == BoundedRandomAccessFile.activeSession &&
               !wk.field_c) {
-              pf.e((byte) -111);
+              GameModeSelectScreen.advanceMenuEdgeSegments((byte) -111);
             }
             if (wk.field_c) {
               kc.a((byte) -75);
             } else if (TextLayout.field_b) {
               PathPoint.refreshScreenForAccountState(-883);
-              UiComponent.field_o.e(117);
+              UiComponent.field_o.update(117);
             } else if (0 <= SelfDestructEffects.field_q) {
               sn.c(-1);
               CheckboxPainter.field_l.j(2525);
@@ -58,12 +58,12 @@ final class AchievementThresholdRule {
                 }
               } else if (CheckboxPainter.field_n) {
                 ReflectionCheck.d((byte) -120);
-                var2 = (rc.field_a.f(-91));
+                var2 = (rc.field_a.update(-91));
                 if (var2) {
                   return;
                 }
               } else if (ch.field_b) {
-                var2 = (ArchiveLoadTask.field_e.f(-1));
+                var2 = (ArchiveLoadTask.field_e.update(-1));
                 if (var2) {
                   return;
                 }

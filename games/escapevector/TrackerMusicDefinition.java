@@ -46,7 +46,7 @@ final class TrackerMusicDefinition {
     }
 
     final static String c(int param0) {
-        if (dn.field_q == EmailAvailabilityValidator.field_o) {
+        if (InstructionsScreen.field_q == EmailAvailabilityValidator.field_o) {
           return AgeValidator.field_o;
         }
         if (!di.field_g.isComplete(0)) {

@@ -45,14 +45,14 @@ final class id {
     }
 
     final static int a(int param0) {
-        ak var1 = rc.field_a;
+        HighscoresScreen var1 = rc.field_a;
         if (param0 != 0) {
           field_b = (byte[][]) null;
         }
         if (AccountSessionSupport.isGuestSession(param0 ^ -126)) {
-          return var1.a(1, 0);
+          return var1.actionIndex(1, 0);
         }
-        return var1.a(1, 0);
+        return var1.actionIndex(1, 0);
     }
 
     static {

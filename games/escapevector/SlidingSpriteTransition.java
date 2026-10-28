@@ -32,7 +32,7 @@ final class SlidingSpriteTransition {
           if (fontBytes == null) {
             return null;
           }
-          CoverageBitmapFont var2 = new CoverageBitmapFont(fontBytes, gn.spriteOffsetXs, ChatMessage.spriteOffsetYs, qh.spriteWidths, SavedDataQuerySupport.spriteHeights, ArchiveLoadTask.spritePalette, AnimatedPathMarker.spriteIndices);
+          CoverageBitmapFont var2 = new CoverageBitmapFont(fontBytes, gn.spriteOffsetXs, ChatMessage.spriteOffsetYs, SpriteLoadTask.spriteWidths, SavedDataQuerySupport.spriteHeights, ArchiveLoadTask.spritePalette, AnimatedPathMarker.spriteIndices);
           SpriteDecodeSupport.releaseSpriteSheet(false);
           CoverageBitmapFont stackIn_6_0 = var2;
           return stackIn_6_0;

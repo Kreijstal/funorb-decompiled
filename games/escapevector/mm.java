@@ -92,7 +92,7 @@ final class mm {
         }
         if (se.field_b != null) {
           ChatMessageDecoder.field_b[param1] = se.field_b.field_g;
-          pf.field_g[param1] = se.field_b.field_d;
+          GameModeSelectScreen.field_g[param1] = se.field_b.field_d;
           WeightedLruCache.field_c[param1] = true;
           SpriteOffset.a((byte) 53);
           return true;

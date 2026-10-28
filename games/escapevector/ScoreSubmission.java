@@ -53,8 +53,8 @@ final class ScoreSubmission extends IntrusiveNode {
           this.boardIdComplement = param1;
           this.field_q = param6;
           this.boardId = param0;
-          int fieldTemp$0 = qh.field_m;
-          qh.field_m = qh.field_m + 1;
+          int fieldTemp$0 = SpriteLoadTask.field_m;
+          SpriteLoadTask.field_m = SpriteLoadTask.field_m + 1;
           this.requestId = 65535 & fieldTemp$0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ik.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');

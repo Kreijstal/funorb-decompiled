@@ -114,31 +114,31 @@ final class PathPoint {
     final static void refreshScreenForAccountState(int guard) {
         regionExit1: {
           int var2 = EscapeVector.obfuscationControl;
-          boolean var1 = (UiComponent.field_o.field_b.pointerDriven);
+          boolean var1 = (UiComponent.field_o.input.pointerDriven);
           if (!UiContainer.e((byte) -32) ||
-            UiComponent.field_o.field_f == 2) {
+            UiComponent.field_o.accountStateIndex == 2) {
             if (AccountSessionSupport.isGuestSession(-119)) {
-              if (UiComponent.field_o.field_f == 0) {
+              if (UiComponent.field_o.accountStateIndex == 0) {
                 if (UiContainer.e((byte) -122)) {
                   break regionExit1;
                 }
                 if (AccountSessionSupport.isGuestSession(-126)) {
                   break regionExit1;
                 }
-                if (1 == UiComponent.field_o.field_f) {
+                if (1 == UiComponent.field_o.accountStateIndex) {
                   break regionExit1;
                 }
               }
-              UiComponent.field_o = new pf((var1));
+              UiComponent.field_o = new GameModeSelectScreen((var1));
               break regionExit1;
             }
             if (!UiContainer.e((byte) -122) &&
               !AccountSessionSupport.isGuestSession(-126) &&
-              1 != UiComponent.field_o.field_f) {
-              UiComponent.field_o = new pf((var1));
+              1 != UiComponent.field_o.accountStateIndex) {
+              UiComponent.field_o = new GameModeSelectScreen((var1));
             }
           } else {
-            UiComponent.field_o = new pf((var1));
+            UiComponent.field_o = new GameModeSelectScreen((var1));
           }
         }
         if (guard != -883) {

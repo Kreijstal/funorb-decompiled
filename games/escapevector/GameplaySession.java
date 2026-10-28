@@ -1419,7 +1419,7 @@ final class GameplaySession {
         if (guard != 2560) {
           GameplaySession.resetSessionMenuState((byte) 49);
         }
-        UiComponent.field_o = new pf(option);
+        UiComponent.field_o = new GameModeSelectScreen(option);
         di.field_d = null;
         mj.field_d = 0;
         ChatMessage.clearFrameOffsets((byte) -93);
@@ -1726,7 +1726,7 @@ final class GameplaySession {
         if (var4 != null) {
           y = y + var4.fullHeight;
         }
-        Sprite var6 = pf.field_g[this.secondaryTheme];
+        Sprite var6 = GameModeSelectScreen.field_g[this.secondaryTheme];
         if (var6 == null) {
           return;
         }
@@ -2509,7 +2509,7 @@ final class GameplaySession {
         if (guard) {
           this.bulletCapacity = -101;
         }
-        this.showHudMessage(113, oh.field_g);
+        this.showHudMessage(113, MenuEdgeSegment.field_g);
     }
 
     private final void tileParallaxLayer(boolean repeatVertically, boolean fillBottom, int guard, Sprite sprite, int y, int x) {
@@ -2657,7 +2657,7 @@ final class GameplaySession {
         this.activateCountdown(-75, 3);
         this.showObjectiveMessage(false);
         LevelObject var4 = this.findCargoContainer(false);
-        this.minimap = new Minimap(this, var4, gj.a(this.levelIndex, this.gameMode, (byte) 54));
+        this.minimap = new Minimap(this, var4, HighscoreTable.wrapMinimapAtSpawn(this.levelIndex, this.gameMode, (byte) 54));
         this.applyInitialPowerups((byte) 0);
         AchievementTracker var5 = TrackerMusicDefinition.field_f;
         if (var5 != null) {
@@ -2925,7 +2925,7 @@ final class GameplaySession {
         if (this.shieldEnergy >= 500) {
           this.shieldEnergy = 500;
         }
-        this.showHudMessage(-116, qh.field_e);
+        this.showHudMessage(-116, SpriteLoadTask.field_e);
     }
 
     private final void drawTutorialCavernBackground(int cameraY, int guard, int cameraX) {
@@ -3867,7 +3867,7 @@ final class GameplaySession {
         Object var44 = null;
         int obfuscationControl = EscapeVector.obfuscationControl;
         if (this.dynamicTerrain != null) {
-          pf.e((byte) -106);
+          GameModeSelectScreen.advanceMenuEdgeSegments((byte) -106);
         }
         if (this.levelIndex < 0) {
           this.tutorialBackgroundPhase = -1 + this.tutorialBackgroundPhase & 1023;
@@ -5924,7 +5924,7 @@ final class GameplaySession {
               break regionExit1;
             }
             if (levelIndex < 0) {
-              pf.a(false, "EV1: " + score, (Throwable) null);
+              GameModeSelectScreen.reportClientError(false, "EV1: " + score, (Throwable) null);
               return;
             }
             int var4Lifetime2 = this.firstLevelIndex;

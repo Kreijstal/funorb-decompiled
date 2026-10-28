@@ -26,19 +26,19 @@ final class jd {
           if (param0 != -54) {
             jd.a(15, false);
           }
-          oh var5_ref_oh = (oh) (TrackerGainSupport.field_c.first(false));
+          MenuEdgeSegment var5_ref_oh = (MenuEdgeSegment) (TrackerGainSupport.field_c.first(false));
           while (var5_ref_oh != null) {
-            int stackIn_12_0 = var5_ref_oh.field_o;
+            int stackIn_12_0 = var5_ref_oh.lifetimeTicks;
             int stackIn_12_1 = 100;
             if (stackIn_12_0 >= stackIn_12_1 &&
-              var5_ref_oh.field_q >= 0 &&
-              var5_ref_oh.field_q < 480) {
-              int var6 = 640 * var5_ref_oh.field_q;
-              int var7 = var5_ref_oh.field_i;
-              if (var5_ref_oh.field_m < 0) {
-                var7 = var7 - var5_ref_oh.field_s;
+              var5_ref_oh.y >= 0 &&
+              var5_ref_oh.y < 480) {
+              int var6 = 640 * var5_ref_oh.y;
+              int var7 = var5_ref_oh.x;
+              if (var5_ref_oh.direction < 0) {
+                var7 = var7 - var5_ref_oh.length;
               }
-              int var8 = var7 + var5_ref_oh.field_s;
+              int var8 = var7 + var5_ref_oh.length;
               for (int var9 = var7; var9 < var8; var9 += 6) {
                 if (var9 >= 0 &&
                   640 > var9 &&
@@ -49,29 +49,29 @@ final class jd {
                 }
               }
             }
-            var5_ref_oh = (oh) (TrackerGainSupport.field_c.next((byte) 70));
+            var5_ref_oh = (MenuEdgeSegment) (TrackerGainSupport.field_c.next((byte) 70));
           }
           int var4 = 0;
-          oh var5_ref_ohLifetime1 = (oh) (QuickChatPhraseDefinition.field_u.first(false));
+          MenuEdgeSegment var5_ref_ohLifetime1 = (MenuEdgeSegment) (QuickChatPhraseDefinition.field_u.first(false));
           while (var5_ref_ohLifetime1 != null) {
-            if (var5_ref_ohLifetime1.field_i >= 0 &&
-              var5_ref_ohLifetime1.field_i < 640) {
-              int var6Lifetime1 = var5_ref_ohLifetime1.field_q;
-              if (0 > var5_ref_ohLifetime1.field_m) {
-                var6Lifetime1 = var6Lifetime1 - var5_ref_ohLifetime1.field_s;
+            if (var5_ref_ohLifetime1.x >= 0 &&
+              var5_ref_ohLifetime1.x < 640) {
+              int var6Lifetime1 = var5_ref_ohLifetime1.y;
+              if (0 > var5_ref_ohLifetime1.direction) {
+                var6Lifetime1 = var6Lifetime1 - var5_ref_ohLifetime1.length;
               }
-              int var7Lifetime1 = var6Lifetime1 + var5_ref_ohLifetime1.field_s;
+              int var7Lifetime1 = var6Lifetime1 + var5_ref_ohLifetime1.length;
               for (int var8Lifetime1 = var6Lifetime1; var8Lifetime1 < var7Lifetime1; var8Lifetime1 += 6) {
                 if (var8Lifetime1 >= 0 &&
                   var8Lifetime1 < 480 &&
-                  6324320 == SoftwareRasterizer.pixels[var8Lifetime1 * 640 + var5_ref_ohLifetime1.field_i]) {
-                  int var9Lifetime1 = 256 * var5_ref_ohLifetime1.field_i / 640;
+                  6324320 == SoftwareRasterizer.pixels[var8Lifetime1 * 640 + var5_ref_ohLifetime1.x]) {
+                  int var9Lifetime1 = 256 * var5_ref_ohLifetime1.x / 640;
                   var3 = var3 + (-var9Lifetime1 + 256);
                   var4 = var4 + var9Lifetime1;
                 }
               }
             }
-            var5_ref_ohLifetime1 = (oh) (QuickChatPhraseDefinition.field_u.next((byte) 70));
+            var5_ref_ohLifetime1 = (MenuEdgeSegment) (QuickChatPhraseDefinition.field_u.next((byte) 70));
           }
           int var5 = (int)Math.sqrt((double)((var1_int + var2) * 8));
           if (var2 + var1_int == 0) {

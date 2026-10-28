@@ -188,7 +188,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             return;
           }
           if (var2 != 2) {
-            pf.a(false, "A1: " + LoginStage.formatPacketDiagnostic((byte) 58), (Throwable) null);
+            GameModeSelectScreen.reportClientError(false, "A1: " + LoginStage.formatPacketDiagnostic((byte) 58), (Throwable) null);
             nm.a(16);
             return;
           }

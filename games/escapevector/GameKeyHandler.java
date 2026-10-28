@@ -161,7 +161,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           Throwable decompiledCaughtException = null;
           String var5Lifetime6;
           try {
-            oh.field_p = param0;
+            MenuEdgeSegment.field_p = param0;
             try {
               String var6 = param2.getParameter("cookieprefix");
               String var5 = var6;

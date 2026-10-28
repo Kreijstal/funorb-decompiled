@@ -6,24 +6,24 @@ final class kh {
     static String field_c;
     static int[] field_a;
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void showHighscoresScreen(boolean pointerDriven, int guard, boolean showSubmittedScore) {
         CheckboxPainter.field_n = true;
-        if (param1 == -1230) {
+        if (guard == -1230) {
           LegacyWidgetStyle.field_N = null;
           int var3 = GzipDecoder.field_b;
-          rc.field_a = new ak(param2, var3);
-          int var4 = rc.field_a.h(param1 ^ -1209);
+          rc.field_a = new HighscoresScreen(showSubmittedScore, var3);
+          int var4 = rc.field_a.actionCount(guard ^ -1209);
           di.field_d = new MenuInputState(var4);
-          di.field_d.initializeSelection(100, param0, rc.field_a.c(GzipDecoder.field_d, -1, UiContainer.field_y), id.a(0));
+          di.field_d.initializeSelection(100, pointerDriven, rc.field_a.hitTest(GzipDecoder.field_d, -1, UiContainer.field_y), id.a(0));
           return;
         }
         field_a = (int[]) null;
         LegacyWidgetStyle.field_N = null;
         int var3Lifetime1 = GzipDecoder.field_b;
-        rc.field_a = new ak(param2, var3Lifetime1);
-        int var4Lifetime1 = rc.field_a.h(param1 ^ -1209);
+        rc.field_a = new HighscoresScreen(showSubmittedScore, var3Lifetime1);
+        int var4Lifetime1 = rc.field_a.actionCount(guard ^ -1209);
         di.field_d = new MenuInputState(var4Lifetime1);
-        di.field_d.initializeSelection(100, param0, rc.field_a.c(GzipDecoder.field_d, -1, UiContainer.field_y), id.a(0));
+        di.field_d.initializeSelection(100, pointerDriven, rc.field_a.hitTest(GzipDecoder.field_d, -1, UiContainer.field_y), id.a(0));
     }
 
     final static int a(String param0, int param1, String param2, String param3, boolean param4, int param5, int param6) {

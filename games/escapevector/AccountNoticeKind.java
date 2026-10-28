@@ -33,14 +33,14 @@ final class AccountNoticeKind {
         if (guard == 3161) {
           DialWidget.field_H = false;
           WhirlpoolHasher.a(-1, guard - 3109);
-          dn.field_q = RasterBuffer.field_g;
+          InstructionsScreen.field_q = RasterBuffer.field_g;
           MeshMaterial.field_b = RasterBuffer.field_g;
           return;
         }
         frameworkLoadingStage = -26;
         DialWidget.field_H = false;
         WhirlpoolHasher.a(-1, guard - 3109);
-        dn.field_q = RasterBuffer.field_g;
+        InstructionsScreen.field_q = RasterBuffer.field_g;
         MeshMaterial.field_b = RasterBuffer.field_g;
     }
 

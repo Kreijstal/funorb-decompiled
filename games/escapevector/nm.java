@@ -106,7 +106,7 @@ final class nm {
         field_a = null;
     }
 
-    final static boolean a(byte param0, qh[] param1) {
+    final static boolean a(byte param0, SpriteLoadTask[] param1) {
         String stackIn_15_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
@@ -115,7 +115,7 @@ final class nm {
             field_a = (PcmSample) null;
           }
           for (int var3 = 0; var3 < param1.length; var3++) {
-            Sprite var4 = param1[var3].b(110);
+            Sprite var4 = param1[var3].loadSprite(110);
             if (var4 == null) {
               var2_int = false;
             }

@@ -290,7 +290,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           LoginMethod var9 = WeightedCacheEntry.readLastLoginMethod((byte) -1, PointCloudEffect.activeApplet((byte) -107));
           if (var9 == NameAvailabilityValidator.field_q) {
             var8 = kg.field_b;
-          } else if (var9 == oh.field_n) {
+          } else if (var9 == MenuEdgeSegment.field_n) {
             var8 = TileSpriteCacheEntry.field_c;
           }
           LabeledField dupTemp$0 = new LabeledField(10, this.y, -20 + this.width, 25, this.identifierField, false, 80, 3, var7, 16777215, var8);

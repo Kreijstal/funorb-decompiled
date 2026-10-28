@@ -37,7 +37,7 @@ final class p {
           this.a(-100);
         }
         if (null == this.field_d) {
-          this.field_d = EmailValidationError.field_b.b(-100);
+          this.field_d = EmailValidationError.field_b.loadSprite(-100);
         }
         if (null == this.field_g) {
           return false;

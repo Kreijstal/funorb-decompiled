@@ -1,85 +1,85 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh {
+final class SpriteLoadTask {
     static PcmSample field_i;
     static String field_e;
     static int field_m;
-    private boolean field_b;
+    private boolean waitForGroup;
     static int[] spriteWidths;
     static Sprite field_l;
     static String[] field_j;
-    private int field_f;
-    private String field_h;
-    private ResourceArchive field_d;
-    private String field_a;
-    private int[] field_g;
-    private Sprite field_c;
+    private int format;
+    private String fileName;
+    private ResourceArchive archive;
+    private String groupName;
+    private int[] xteaKey;
+    private Sprite sprite;
 
-    final Sprite b(int param0) {
+    final Sprite loadSprite(int guard) {
         byte[] var3_array = null;
         byte[] var3_arrayLifetime2;
-        if (this.field_c != null) {
-          return this.field_c;
+        if (this.sprite != null) {
+          return this.sprite;
         }
-        if (!this.field_b) {
-          int var2 = 5 % ((-30 - param0) / 48);
-          if (this.field_f == 0) {
-            this.field_c = fe.a(this.field_a, this.field_d, this.field_h, true);
-            return this.field_c;
+        if (!this.waitForGroup) {
+          int var2 = 5 % ((-30 - guard) / 48);
+          if (this.format == 0) {
+            this.sprite = fe.a(this.groupName, this.archive, this.fileName, true);
+            return this.sprite;
           }
-          if (this.field_f == 1) {
+          if (this.format == 1) {
             Object var3 = null;
-            if (this.field_g != null) {
-              var3_array = this.field_d.getNamedFileWithKey((byte) 78, this.field_a, this.field_h, this.field_g);
+            if (this.xteaKey != null) {
+              var3_array = this.archive.getNamedFileWithKey((byte) 78, this.groupName, this.fileName, this.xteaKey);
             } else {
-              var3_array = this.field_d.getNamedFile(-4, this.field_h, this.field_a);
+              var3_array = this.archive.getNamedFile(-4, this.fileName, this.groupName);
             }
-            this.field_c = new Sprite(var3_array, (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
-            return this.field_c;
+            this.sprite = new Sprite(var3_array, (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
+            return this.sprite;
           }
-          return this.field_c;
+          return this.sprite;
         }
-        if (!this.field_d.tryLoadNamedGroup(0, this.field_a)) {
+        if (!this.archive.tryLoadNamedGroup(0, this.groupName)) {
           return null;
         }
-        int var2Lifetime1 = 5 % ((-30 - param0) / 48);
-        if (this.field_f == 0) {
-          this.field_c = fe.a(this.field_a, this.field_d, this.field_h, true);
-          return this.field_c;
+        int var2Lifetime1 = 5 % ((-30 - guard) / 48);
+        if (this.format == 0) {
+          this.sprite = fe.a(this.groupName, this.archive, this.fileName, true);
+          return this.sprite;
         }
-        if (this.field_f != 1) {
-          return this.field_c;
+        if (this.format != 1) {
+          return this.sprite;
         }
         byte[] var3_arrayLifetime1 = null;
-        if (this.field_g != null) {
-          var3_arrayLifetime2 = this.field_d.getNamedFileWithKey((byte) 78, this.field_a, this.field_h, this.field_g);
+        if (this.xteaKey != null) {
+          var3_arrayLifetime2 = this.archive.getNamedFileWithKey((byte) 78, this.groupName, this.fileName, this.xteaKey);
         } else {
-          var3_arrayLifetime2 = this.field_d.getNamedFile(-4, this.field_h, this.field_a);
+          var3_arrayLifetime2 = this.archive.getNamedFile(-4, this.fileName, this.groupName);
         }
-        this.field_c = new Sprite(var3_arrayLifetime2, (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
-        return this.field_c;
+        this.sprite = new Sprite(var3_arrayLifetime2, (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
+        return this.sprite;
     }
 
-    final static void a(ResourceArchive param0, byte param1) {
+    final static void loadInfrastructureSprites(ResourceArchive archive, byte guard) {
         String stackIn_16_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
           NodeHashTableIterator.field_b = new Sprite[7][3];
           AccountMessagePanel.field_M = new Sprite[7][3];
-          if (param1 != -23) {
-            qh.releaseStatics(-112);
+          if (guard != -23) {
+            SpriteLoadTask.releaseStatics(-112);
           }
           for (int var2_int = 0; on.field_f.length > var2_int; var2_int++) {
             String var3 = on.field_f[var2_int];
             if (var3 != null &&
               var3.length() != 0) {
               String var4 = "";
-              NodeHashTableIterator.field_b[var2_int] = kh.a(param0, (byte) -112, var4, var3);
+              NodeHashTableIterator.field_b[var2_int] = kh.a(archive, (byte) -112, var4, var3);
               String var5 = NameAvailabilityResult.field_b[var2_int];
               if (var5 != null &&
                 var5.length() != 0) {
-                AccountMessagePanel.field_M[var2_int] = kh.a(param0, (byte) -10, var4, var5);
+                AccountMessagePanel.field_M[var2_int] = kh.a(archive, (byte) -10, var4, var5);
               }
             }
           }
@@ -89,12 +89,12 @@ final class qh {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_15_0 = var2;
           StringBuilder stackIn_15_1 = new StringBuilder().append("qh.B(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -120,16 +120,16 @@ final class qh {
         field_l = null;
     }
 
-    qh(ResourceArchive param0, String param1, String param2, int param3, boolean param4, int[] param5) {
+    SpriteLoadTask(ResourceArchive archive, String fileName, String groupName, int format, boolean waitForGroup, int[] xteaKey) {
         try {
-          this.field_b = param4 ? true : false;
-          this.field_d = param0;
-          this.field_f = param3;
-          this.field_a = param2;
-          this.field_h = param1;
-          this.field_g = param5;
+          this.waitForGroup = waitForGroup ? true : false;
+          this.archive = archive;
+          this.format = format;
+          this.groupName = groupName;
+          this.fileName = fileName;
+          this.xteaKey = xteaKey;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (archive != null ? "{...}" : "null") + ',' + (fileName != null ? "{...}" : "null") + ',' + (groupName != null ? "{...}" : "null") + ',' + format + ',' + waitForGroup + ',' + (xteaKey != null ? "{...}" : "null") + ')');
         }
     }
 

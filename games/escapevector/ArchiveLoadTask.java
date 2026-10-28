@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArchiveLoadTask {
-    static dn field_e;
+    static InstructionsScreen field_e;
     String groupName;
     int groupId;
     static int spriteCount;
@@ -42,7 +42,7 @@ final class ArchiveLoadTask {
             di.field_d.selectFromKeyboard(false, var2_int);
           }
           if (guard != 0) {
-            field_e = (dn) null;
+            field_e = (InstructionsScreen) null;
           }
           if (96 != PasswordValidator.field_n &&
             98 != PasswordValidator.field_n) {

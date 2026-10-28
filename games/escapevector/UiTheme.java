@@ -107,7 +107,7 @@ final class UiTheme {
     }
 
     final static String a(int param0) {
-        if (dn.field_q == EmailAvailabilityValidator.field_o) {
+        if (InstructionsScreen.field_q == EmailAvailabilityValidator.field_o) {
           return ResourceArchive.field_b;
         }
         if (param0 == 30519) {

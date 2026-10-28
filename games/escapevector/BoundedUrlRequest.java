@@ -24,7 +24,7 @@ final class BoundedUrlRequest implements Runnable {
           }
           RatingQuery var4 = (RatingQuery) (LegacyStyleNode.field_s.first(false));
           while (var4 != null) {
-            qh.writeRatingQuery(var4, true, param0);
+            SpriteLoadTask.writeRatingQuery(var4, true, param0);
             var4 = (RatingQuery) (LegacyStyleNode.field_s.next((byte) 70));
           }
           return;

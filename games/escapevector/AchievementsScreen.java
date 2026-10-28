@@ -177,7 +177,7 @@ final class AchievementsScreen {
             pa.a(true);
           }
           if (this.highscoresActionId == var6) {
-            kh.a(lh.b((byte) -116), -1230, true);
+            kh.showHighscoresScreen(lh.b((byte) -116), -1230, true);
           }
           if (this.mainMenuActionId == var6) {
             AlternateUsernameCredentials.field_q.b(-26480, pointerDriven);
@@ -744,7 +744,7 @@ final class AchievementsScreen {
         var5.offsetY = var5.offsetY - var10;
         int var12 = 40;
         int var13 = 0;
-        if (pf.field_i == direction) {
+        if (GameModeSelectScreen.field_i == direction) {
           var13 = 0;
         } else if (WhirlpoolHasher.field_f == direction) {
           var13 = -var5.fullWidth + var3 - 1;
@@ -1189,7 +1189,7 @@ final class AchievementsScreen {
     private final void setPage(int page, byte guard) {
         int var3 = WhirlpoolHasher.field_f;
         if (page < this.currentPage) {
-          var3 = pf.field_i;
+          var3 = GameModeSelectScreen.field_i;
         } else {
           var3 = WhirlpoolHasher.field_f;
         }
@@ -1224,7 +1224,7 @@ final class AchievementsScreen {
         this.earnedSnapshotIds = TrackerMusicDefinition.field_f.earnedAchievementIds(this.achievementSetKind, (byte) -32);
         this.allocatePages((byte) -128);
         this.buildLayout((byte) 102);
-        this.startGridSlide(4551, pf.field_i);
+        this.startGridSlide(4551, GameModeSelectScreen.field_i);
     }
 
     static {

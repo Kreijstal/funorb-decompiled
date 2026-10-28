@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rc {
-    static ak field_a;
+    static HighscoresScreen field_a;
     static DisplayNameForm field_b;
     static String field_c;
 

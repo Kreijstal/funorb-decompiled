@@ -3,12 +3,12 @@
  */
 final class EmailValidationError {
     static Sprite[] field_a;
-    static qh field_b;
+    static SpriteLoadTask field_b;
 
     public static void releaseStatics(int guard) {
         if (guard != 31167) {
-          qh[] var2 = (qh[]) null;
-          EmailValidationError.a(false, (qh[]) null);
+          SpriteLoadTask[] var2 = (SpriteLoadTask[]) null;
+          EmailValidationError.a(false, (SpriteLoadTask[]) null);
         }
         field_b = null;
         field_a = null;
@@ -21,7 +21,7 @@ final class EmailValidationError {
         return FullscreenFocusCanvas.field_e.ensureMasterIndex(false);
     }
 
-    final static Sprite[] a(boolean param0, qh[] param1) {
+    final static Sprite[] a(boolean param0, SpriteLoadTask[] param1) {
         String stackIn_15_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
@@ -35,7 +35,7 @@ final class EmailValidationError {
             return stackIn_6_0;
           }
           for (int var4 = 0; var4 < param1.length; var4++) {
-            var3[var4] = param1[var4].b(94);
+            var3[var4] = param1[var4].loadSprite(94);
           }
           Sprite[] stackIn_11_0 = var3;
           return stackIn_11_0;

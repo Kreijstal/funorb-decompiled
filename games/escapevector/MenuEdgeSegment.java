@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oh extends IntrusiveNode {
-    int field_l;
+final class MenuEdgeSegment extends IntrusiveNode {
+    int lowerBranchBudget;
     static String field_p;
-    int field_r;
-    int field_s;
+    int ageTicks;
+    int length;
     static String field_g;
-    int field_q;
-    int field_i;
-    int field_h;
+    int y;
+    int x;
+    int targetLength;
     static LoginMethod field_n;
-    int field_o;
-    int field_m;
+    int lifetimeTicks;
+    int direction;
     static String field_k;
-    int field_j;
+    int upperBranchBudget;
 
-    final static void a(LoginCredentials param0, boolean param1, int param2, boolean param3, byte param4) {
+    final static void writeLoginRequest(LoginCredentials credentials, boolean reconnect, int clientValue, boolean option, byte guard) {
         String stackIn_25_2 = null;
         try {
           NameSuggestionsPanel.field_O[0] = gk.field_a.nextInt();
@@ -29,10 +29,10 @@ final class oh extends IntrusiveNode {
           PathPoint.field_a.writeInt((byte) 124, NameSuggestionsPanel.field_O[2]);
           PathPoint.field_a.writeInt((byte) 126, NameSuggestionsPanel.field_O[3]);
           StripedProgressBar.writeInstallationSeed(0, PathPoint.field_a);
-          PathPoint.field_a.writeShort(13, param2);
-          param0.writeTo(PathPoint.field_a, (byte) -121);
+          PathPoint.field_a.writeShort(13, clientValue);
+          credentials.writeTo(PathPoint.field_a, (byte) -121);
           QuickChatDynamicCommand.outgoingPackets.position = 0;
-          if (!param1) {
+          if (!reconnect) {
             QuickChatDynamicCommand.outgoingPackets.writeByte(16, -123);
           } else {
             QuickChatDynamicCommand.outgoingPackets.writeByte(18, -123);
@@ -48,39 +48,39 @@ final class oh extends IntrusiveNode {
           if (KeyCodeSupport.field_b) {
             var6 = var6 | 4;
           }
-          if (param3) {
+          if (option) {
             var6 = var6 | 8;
           }
           if (null != p.field_i) {
             var6 = var6 | 16;
           }
-          QuickChatDynamicCommand.outgoingPackets.writeByte(var6, param4 - 24);
-          String var7 = tf.a(param4 ^ 98, PointCloudEffect.activeApplet((byte) -120));
+          QuickChatDynamicCommand.outgoingPackets.writeByte(var6, guard - 24);
+          String var7 = tf.a(guard ^ 98, PointCloudEffect.activeApplet((byte) -120));
           if (var7 == null) {
             var7 = "";
           }
           QuickChatDynamicCommand.outgoingPackets.writeString(var7, 101);
-          if (param4 != -99) {
+          if (guard != -99) {
             return;
           }
           if (p.field_i != null) {
             QuickChatDynamicCommand.outgoingPackets.writeCircumfixedString((byte) 100, p.field_i);
           }
-          bn.a(param4 ^ -99, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
+          bn.a(guard ^ -99, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
           QuickChatDynamicCommand.outgoingPackets.backpatchShortLength(-var5_int + QuickChatDynamicCommand.outgoingPackets.position, 32614);
-          ClientException.a(-1, param4 + 30884);
+          ClientException.a(-1, guard + 30884);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_24_0 = var5;
           StringBuilder stackIn_24_1 = new StringBuilder().append("oh.B(");
-          if (param0 == null) {
+          if (credentials == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(reconnect).append(',').append(clientValue).append(',').append(option).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -93,14 +93,14 @@ final class oh extends IntrusiveNode {
           return;
         }
         LoginCredentials var2 = (LoginCredentials) null;
-        oh.a((LoginCredentials) null, true, 101, true, (byte) -46);
+        MenuEdgeSegment.writeLoginRequest((LoginCredentials) null, true, 101, true, (byte) -46);
         field_p = null;
         field_k = null;
         field_n = null;
         field_g = null;
     }
 
-    oh() {
+    MenuEdgeSegment() {
     }
 
     static {

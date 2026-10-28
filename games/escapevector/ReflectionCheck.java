@@ -31,26 +31,26 @@ final class ReflectionCheck extends IntrusiveNode {
           ReflectionCheck.a(81, (byte) 59);
           boolean var1 = (lh.b((byte) 71));
           if (rc.field_a == null) {
-            kh.a((var1), -1230, false);
+            kh.showHighscoresScreen((var1), -1230, false);
             return;
           }
           int var2 = Bullet.accountStateIndex(98);
-          if (rc.field_a.field_f != var2) {
-            boolean var3 = (rc.field_a.field_h);
-            kh.a((var1), -1230, (var3));
+          if (rc.field_a.accountStateIndex != var2) {
+            boolean var3 = (rc.field_a.showSubmittedScore);
+            kh.showHighscoresScreen((var1), -1230, (var3));
             return;
           }
           return;
         }
         boolean var1Lifetime1 = (lh.b((byte) 71));
         if (rc.field_a == null) {
-          kh.a((var1Lifetime1), -1230, false);
+          kh.showHighscoresScreen((var1Lifetime1), -1230, false);
           return;
         }
         int var2Lifetime1 = Bullet.accountStateIndex(98);
-        if (rc.field_a.field_f != var2Lifetime1) {
-          boolean var3Lifetime1 = (rc.field_a.field_h);
-          kh.a((var1Lifetime1), -1230, (var3Lifetime1));
+        if (rc.field_a.accountStateIndex != var2Lifetime1) {
+          boolean var3Lifetime1 = (rc.field_a.showSubmittedScore);
+          kh.showHighscoresScreen((var1Lifetime1), -1230, (var3Lifetime1));
           return;
         }
     }

@@ -33,7 +33,7 @@ final class da {
 
     final static IndexedSprite b(byte param0) {
         int var2 = 85 % ((param0 + 46) / 39);
-        IndexedSprite var1 = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], AnimatedPathMarker.spriteIndices[0], ArchiveLoadTask.spritePalette);
+        IndexedSprite var1 = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], AnimatedPathMarker.spriteIndices[0], ArchiveLoadTask.spritePalette);
         SpriteDecodeSupport.releaseSpriteSheet(false);
         return var1;
     }

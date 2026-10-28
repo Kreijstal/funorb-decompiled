@@ -13,7 +13,7 @@ final class e {
         String stackIn_24_2 = null;
         String stackIn_27_2 = null;
         try {
-          if (dn.field_q != RasterBuffer.field_g) {
+          if (InstructionsScreen.field_q != RasterBuffer.field_g) {
             return false;
           }
           RegistrationRequestDialog var8 = new RegistrationRequestDialog(Checkbox.field_F, param0);
@@ -23,7 +23,7 @@ final class e {
             LoginStage.field_a = param5;
             SpriteState.field_y = null;
             ResourceArchive.field_b = param4;
-            dn.field_q = EmailAvailabilityValidator.field_o;
+            InstructionsScreen.field_q = EmailAvailabilityValidator.field_o;
             tf.field_h = param6;
             AgeValidator.field_o = param2;
           } else {
@@ -75,20 +75,20 @@ final class e {
     final static NameAvailabilityResult a(int param0) {
         if (param0 != -16055) {
           e.releaseStatics(108);
-          if (dn.field_q == RasterBuffer.field_g) {
+          if (InstructionsScreen.field_q == RasterBuffer.field_g) {
             throw new IllegalStateException();
           }
-          if (TriangleMesh.field_y == dn.field_q) {
-            dn.field_q = RasterBuffer.field_g;
+          if (TriangleMesh.field_y == InstructionsScreen.field_q) {
+            InstructionsScreen.field_q = RasterBuffer.field_g;
             return SpriteState.field_y;
           }
           return null;
         }
-        if (dn.field_q == RasterBuffer.field_g) {
+        if (InstructionsScreen.field_q == RasterBuffer.field_g) {
           throw new IllegalStateException();
         }
-        if (TriangleMesh.field_y == dn.field_q) {
-          dn.field_q = RasterBuffer.field_g;
+        if (TriangleMesh.field_y == InstructionsScreen.field_q) {
+          InstructionsScreen.field_q = RasterBuffer.field_g;
           return SpriteState.field_y;
         }
         return null;

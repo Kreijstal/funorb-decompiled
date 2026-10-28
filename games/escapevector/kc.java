@@ -4,7 +4,7 @@
 final class kc {
     static int field_b;
     static String field_a;
-    static qh[] field_c;
+    static SpriteLoadTask[] field_c;
 
     final static void a(byte param0) {
         if (mj.field_d >= 1000) {

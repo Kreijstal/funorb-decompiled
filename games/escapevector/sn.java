@@ -43,7 +43,7 @@ final class sn {
           ModalStack.field_D = true;
           ArchiveIndex.field_j = param0;
           if (ArchiveIndex.field_j == 0) {
-            var3_int = PasswordFieldPainter.a(pf.field_e, -118, nb.field_a, Js5Transport.field_h, KeyboardStateSupport.field_a);
+            var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, -118, nb.field_a, Js5Transport.field_h, KeyboardStateSupport.field_a);
             var4 = var3_int + 3;
             jj.field_a = new int[var4];
             Js5NetworkRequest.field_I = new String[var4];
@@ -52,7 +52,7 @@ final class sn {
             }
             CachedTextLayout.field_j = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
+              Js5NetworkRequest.field_I[var5] = GameModeSelectScreen.field_e[var5];
             }
             Js5NetworkRequest.field_I[var4 - 3] = "";
             Js5NetworkRequest.field_I[var4 - 2] = lh.field_a;
@@ -62,7 +62,7 @@ final class sn {
             jj.field_a[-1 + var4] = 1;
             CachedTextLayout.field_j[1] = 5;
           } else if (ArchiveIndex.field_j == 1) {
-            var3_int = PasswordFieldPainter.a(pf.field_e, -126, nb.field_a, Js5Transport.field_h, KeyboardStateSupport.field_a);
+            var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, -126, nb.field_a, Js5Transport.field_h, KeyboardStateSupport.field_a);
             var4 = 2 + var3_int;
             Js5NetworkRequest.field_I = new String[var4];
             jj.field_a = new int[var4];
@@ -71,7 +71,7 @@ final class sn {
             }
             CachedTextLayout.field_j = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
+              Js5NetworkRequest.field_I[var5] = GameModeSelectScreen.field_e[var5];
             }
             Js5NetworkRequest.field_I[-2 + var4] = "";
             Js5NetworkRequest.field_I[-1 + var4] = TextFieldValidator.field_k;
@@ -80,9 +80,9 @@ final class sn {
           } else if (ArchiveIndex.field_j != 2) {
             if (ArchiveIndex.field_j == 3) {
               if (!NetworkGameClient.field_r.field_f) {
-                var3_int = PasswordFieldPainter.a(pf.field_e, param1 ^ 114, nb.field_a, Js5Transport.field_h, DialogueScreen.field_k);
+                var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, param1 ^ 114, nb.field_a, Js5Transport.field_h, DialogueScreen.field_k);
               } else {
-                var3_int = PasswordFieldPainter.a(pf.field_e, -122, nb.field_a, Js5Transport.field_h, AccountSessionSupport.field_e);
+                var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, -122, nb.field_a, Js5Transport.field_h, AccountSessionSupport.field_e);
               }
               var4 = 2 + var3_int;
               Js5NetworkRequest.field_I = new String[var4];
@@ -92,14 +92,14 @@ final class sn {
               }
               CachedTextLayout.field_j = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
+                Js5NetworkRequest.field_I[var5] = GameModeSelectScreen.field_e[var5];
               }
               Js5NetworkRequest.field_I[-2 + var4] = "";
               Js5NetworkRequest.field_I[-1 + var4] = TextFieldValidator.field_k;
               jj.field_a[var4 - 1] = 0;
               CachedTextLayout.field_j[0] = 5;
             } else if (ArchiveIndex.field_j == 4) {
-              var3_int = PasswordFieldPainter.a(pf.field_e, -110, nb.field_a, Js5Transport.field_h, LegacyWidgetStyle.field_K);
+              var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, -110, nb.field_a, Js5Transport.field_h, LegacyWidgetStyle.field_K);
               var4 = var3_int + 2;
               Js5NetworkRequest.field_I = new String[var4];
               jj.field_a = new int[var4];
@@ -108,7 +108,7 @@ final class sn {
               }
               CachedTextLayout.field_j = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
+                Js5NetworkRequest.field_I[var5] = GameModeSelectScreen.field_e[var5];
               }
               Js5NetworkRequest.field_I[var4 - 2] = "";
               Js5NetworkRequest.field_I[-1 + var4] = TextFieldValidator.field_k;
@@ -118,7 +118,7 @@ final class sn {
               if (5 != ArchiveIndex.field_j) {
                 throw new IllegalArgumentException();
               }
-              var3_int = PasswordFieldPainter.a(pf.field_e, 122, nb.field_a, Js5Transport.field_h, MouseInputHandler.field_a);
+              var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, 122, nb.field_a, Js5Transport.field_h, MouseInputHandler.field_a);
               var4 = 3 + var3_int;
               Js5NetworkRequest.field_I = new String[var4];
               jj.field_a = new int[var4];
@@ -127,7 +127,7 @@ final class sn {
               }
               CachedTextLayout.field_j = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
+                Js5NetworkRequest.field_I[var5] = GameModeSelectScreen.field_e[var5];
               }
               Js5NetworkRequest.field_I[var4 - 3] = "";
               Js5NetworkRequest.field_I[-2 + var4] = MarkerSliderPainter.field_f;
@@ -138,10 +138,10 @@ final class sn {
               CachedTextLayout.field_j[1] = 5;
             }
           } else {
-            var3_int = PasswordFieldPainter.a(pf.field_e, -101, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(SpriteOffset.field_d, -63, new String[]{"<br><%0><br>"}));
+            var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, -101, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(SpriteOffset.field_d, -63, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(pf.field_e[var5])) {
+              if (!"<%0>".equals(GameModeSelectScreen.field_e[var5])) {
                 continue;
               }
               var4 = var5;
@@ -151,13 +151,13 @@ final class sn {
               throw new IllegalStateException();
             }
             ContactEntry.field_nb = new String[var4];
-            ArraySupport.copy(pf.field_e, 0, ContactEntry.field_nb, 0, var4);
+            ArraySupport.copy(GameModeSelectScreen.field_e, 0, ContactEntry.field_nb, 0, var4);
             SecondaryNodeHashTable.field_i = new String[-1 - var4 + var3_int];
-            ArraySupport.copy(pf.field_e, 1 + var4, SecondaryNodeHashTable.field_i, 0, -var4 + (var3_int - 1));
+            ArraySupport.copy(GameModeSelectScreen.field_e, 1 + var4, SecondaryNodeHashTable.field_i, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = PasswordFieldPainter.a(pf.field_e, param1 ^ 71, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(AccountFormStage.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
+            var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, param1 ^ 71, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(AccountFormStage.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(pf.field_e[var5])) {
+              if (!"<%0>".equals(GameModeSelectScreen.field_e[var5])) {
                 continue;
               }
               var4 = var5;
@@ -167,9 +167,9 @@ final class sn {
               throw new IllegalStateException();
             }
             IterableNodeHashTable.field_f = new String[var4];
-            ArraySupport.copy(pf.field_e, 0, IterableNodeHashTable.field_f, 0, var4);
+            ArraySupport.copy(GameModeSelectScreen.field_e, 0, IterableNodeHashTable.field_f, 0, var4);
             ModalStack.field_G = new String[var3_int - var4 - 1];
-            ArraySupport.copy(pf.field_e, 1 + var4, ModalStack.field_G, 0, -1 + var3_int - var4);
+            ArraySupport.copy(GameModeSelectScreen.field_e, 1 + var4, ModalStack.field_G, 0, -1 + var3_int - var4);
             if (IterableNodeHashTable.field_f.length > ContactEntry.field_nb.length) {
               stackIn_52_0 = IterableNodeHashTable.field_f.length;
             } else {

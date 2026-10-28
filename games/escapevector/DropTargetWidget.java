@@ -133,7 +133,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(33, "login_gameupdated");
                 if (var2 != null) {
-                  gj.field_a = RasterSnapshot.a(var2, 111);
+                  HighscoreTable.field_a = RasterSnapshot.a(var2, 111);
                 }
                 var2 = IntKeyLookup.a(38, "create_unable");
                 if (var2 != null) {
@@ -2126,7 +2126,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(66, "returntogame");
                 if (var2 != null) {
-                  gj.field_u = RasterSnapshot.a(var2, 124);
+                  HighscoreTable.field_u = RasterSnapshot.a(var2, 124);
                 }
                 var2 = IntKeyLookup.a(93, "endgameresign");
                 if (null != var2) {
@@ -3160,7 +3160,7 @@ final class DropTargetWidget extends SingleChildContainer {
             Object stackIn_5_0 = null;
             return (BinaryBitmapFont) (stackIn_5_0);
           }
-          BinaryBitmapFont var2 = new BinaryBitmapFont(param1, gn.spriteOffsetXs, ChatMessage.spriteOffsetYs, qh.spriteWidths, SavedDataQuerySupport.spriteHeights, AnimatedPathMarker.spriteIndices);
+          BinaryBitmapFont var2 = new BinaryBitmapFont(param1, gn.spriteOffsetXs, ChatMessage.spriteOffsetYs, SpriteLoadTask.spriteWidths, SavedDataQuerySupport.spriteHeights, AnimatedPathMarker.spriteIndices);
           SpriteDecodeSupport.releaseSpriteSheet(false);
           BinaryBitmapFont stackIn_7_0 = var2;
           return stackIn_7_0;

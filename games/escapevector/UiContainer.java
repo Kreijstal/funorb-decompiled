@@ -276,10 +276,10 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
-        int var4 = -53 / ((param0 - 70) / 45);
-        int var3 = param2 / 2500;
-        var3 = NameAvailabilityValidator.scaleCampaignBonus(106, param1, var3);
+    final static int scoreFromPacked(int guard, int mode, int packedScore) {
+        int var4 = -53 / ((guard - 70) / 45);
+        int var3 = packedScore / 2500;
+        var3 = NameAvailabilityValidator.scaleCampaignBonus(106, mode, var3);
         return var3;
     }
 

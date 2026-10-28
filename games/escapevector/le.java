@@ -25,7 +25,7 @@ final class le {
           if (!PasswordValidator.field_p.ensureIndex(0)) {
             return AlphaContainer.field_H;
           }
-          return gj.field_g;
+          return HighscoreTable.field_g;
         }
         if (!ii.field_a.ensureIndex(0)) {
           return TextFieldValidator.field_l;

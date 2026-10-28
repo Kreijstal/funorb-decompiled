@@ -598,7 +598,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime129 = LabeledField.loadNamedAsset("activateshield", 10592);
           if (null != var2Lifetime129) {
-            oh.field_k = RasterSnapshot.a(var2Lifetime129, 126);
+            MenuEdgeSegment.field_k = RasterSnapshot.a(var2Lifetime129, 126);
           }
           byte[] var2Lifetime130 = LabeledField.loadNamedAsset("firerockbuster", param0 ^ 10600);
           if (var2Lifetime130 != null) {
@@ -686,7 +686,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime151 = LabeledField.loadNamedAsset("objective_levelcomplete", param0 + 10584);
           if (var2Lifetime151 != null) {
-            pf.field_h = RasterSnapshot.a(var2Lifetime151, 127);
+            GameModeSelectScreen.field_h = RasterSnapshot.a(var2Lifetime151, 127);
           }
           byte[] var2Lifetime152 = LabeledField.loadNamedAsset("objective_levelwillrestart", 10592);
           if (var2Lifetime152 != null) {
@@ -726,7 +726,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime161 = LabeledField.loadNamedAsset("shieldrecharged", 10592);
           if (var2Lifetime161 != null) {
-            qh.field_e = RasterSnapshot.a(var2Lifetime161, 121);
+            SpriteLoadTask.field_e = RasterSnapshot.a(var2Lifetime161, 121);
           }
           byte[] var2Lifetime162 = LabeledField.loadNamedAsset("tripleshot", 10592);
           if (var2Lifetime162 != null) {
@@ -734,7 +734,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime163 = LabeledField.loadNamedAsset("extrathrust", param0 + 10584);
           if (null != var2Lifetime163) {
-            oh.field_g = RasterSnapshot.a(var2Lifetime163, 122);
+            MenuEdgeSegment.field_g = RasterSnapshot.a(var2Lifetime163, 122);
           }
           byte[] var2Lifetime164 = LabeledField.loadNamedAsset("rockbuster_entertofire", param0 ^ 10600);
           if (null != var2Lifetime164) {
@@ -1002,27 +1002,27 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime230 = LabeledField.loadNamedAsset("classicIntroMessage,0", 10592);
           if (var2Lifetime230 != null) {
-            qh.field_j[0] = RasterSnapshot.a(var2Lifetime230, param0 + 108);
+            SpriteLoadTask.field_j[0] = RasterSnapshot.a(var2Lifetime230, param0 + 108);
           }
           byte[] var2Lifetime231 = LabeledField.loadNamedAsset("classicIntroMessage,1", param0 ^ 10600);
           if (var2Lifetime231 != null) {
-            qh.field_j[1] = RasterSnapshot.a(var2Lifetime231, 121);
+            SpriteLoadTask.field_j[1] = RasterSnapshot.a(var2Lifetime231, 121);
           }
           byte[] var2Lifetime232 = LabeledField.loadNamedAsset("classicIntroMessage,2", 10592);
           if (null != var2Lifetime232) {
-            qh.field_j[2] = RasterSnapshot.a(var2Lifetime232, 124);
+            SpriteLoadTask.field_j[2] = RasterSnapshot.a(var2Lifetime232, 124);
           }
           byte[] var2Lifetime233 = LabeledField.loadNamedAsset("classicIntroMessage,3", param0 ^ 10600);
           if (var2Lifetime233 != null) {
-            qh.field_j[3] = RasterSnapshot.a(var2Lifetime233, 119);
+            SpriteLoadTask.field_j[3] = RasterSnapshot.a(var2Lifetime233, 119);
           }
           byte[] var2Lifetime234 = LabeledField.loadNamedAsset("classicIntroMessage,4", 10592);
           if (var2Lifetime234 != null) {
-            qh.field_j[4] = RasterSnapshot.a(var2Lifetime234, 111);
+            SpriteLoadTask.field_j[4] = RasterSnapshot.a(var2Lifetime234, 111);
           }
           byte[] var2Lifetime235 = LabeledField.loadNamedAsset("classicIntroMessage,5", 10592);
           if (var2Lifetime235 != null) {
-            qh.field_j[5] = RasterSnapshot.a(var2Lifetime235, 126);
+            SpriteLoadTask.field_j[5] = RasterSnapshot.a(var2Lifetime235, 126);
           }
           byte[] var2Lifetime236 = LabeledField.loadNamedAsset("vengeanceIntroMessage,0", 10592);
           if (null != var2Lifetime236) {

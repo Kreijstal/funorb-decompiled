@@ -65,7 +65,7 @@ final class Bzip2State {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               java.net.MalformedURLException var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              pf.a(false, "MGR1: " + param3, (Throwable) null);
+              GameModeSelectScreen.reportClientError(false, "MGR1: " + param3, (Throwable) null);
             }
             if (param0) {
               return;

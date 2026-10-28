@@ -3,33 +3,33 @@
  */
 import java.io.*;
 
-final class pf {
+final class GameModeSelectScreen {
     static int field_i;
-    private LegacyButton[] field_c;
-    MenuInputState field_b;
+    private LegacyButton[] modeButtons;
+    MenuInputState input;
     static Sprite[] field_g;
-    private int[] field_d;
+    private int[] actionCodes;
     static String[] field_e;
     static String field_h;
-    private LegacyButton[] field_a;
-    int field_f;
+    private LegacyButton[] footerButtons;
+    int accountStateIndex;
 
-    private final int a(int param0, LegacyButton[] param1) {
+    private final int selectedButtonIndex(int guard, LegacyButton[] buttons) {
         String stackIn_15_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          int var3_int = this.field_b.selectedIndex;
-          if (param0 != 6481) {
+          int var3_int = this.input.selectedIndex;
+          if (guard != 6481) {
             int stackIn_3_0 = -57;
             return stackIn_3_0;
           }
           int var4 = 0;
           while (true) {
-            if (var4 >= param1.length) {
+            if (var4 >= buttons.length) {
               int stackIn_11_0 = -1;
               return stackIn_11_0;
             }
-            LegacyButton var5 = param1[var4];
+            LegacyButton var5 = buttons[var4];
             if (var5.actionId != var3_int) {
               var4++;
               continue;
@@ -42,8 +42,8 @@ final class pf {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_14_0 = var3;
-          StringBuilder stackIn_14_1 = new StringBuilder().append("pf.J(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_14_1 = new StringBuilder().append("pf.J(").append(guard).append(',');
+          if (buttons == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -52,38 +52,38 @@ final class pf {
         }
     }
 
-    private final int a(int param0, int param1, LegacyButton[] param2, int param3) {
+    private final int centeredButtonBottom(int guard, int top, LegacyButton[] buttons, int bottom) {
         String stackIn_7_2 = null;
         try {
-          if (param0 != 4) {
+          if (guard != 4) {
             LegacyButton[] var9 = (LegacyButton[]) null;
-            int discarded$1 = this.a(-84, (LegacyButton[]) null);
+            int discarded$1 = this.selectedButtonIndex(-84, (LegacyButton[]) null);
           }
-          int var5_int = param3 - param1;
-          int var6 = this.a((byte) -106, param2);
+          int var5_int = bottom - top;
+          int var6 = this.maximumButtonHeight((byte) -106, buttons);
           int var7 = (var5_int - var6) / 2;
-          int var8 = param3 - var7;
+          int var8 = bottom - var7;
           int stackIn_3_0 = var8;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var5;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("pf.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("pf.F(").append(guard).append(',').append(top).append(',');
+          if (buttons == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(bottom).append(')').toString());
         }
     }
 
-    private final int b(byte param0) {
-        if (param0 != 89) {
-          boolean discarded$0 = this.a((byte) -26);
+    private final int selectedGameMode(byte guard) {
+        if (guard != 89) {
+          boolean discarded$0 = this.handleKeyboard((byte) -26);
         }
-        int var2 = this.a(6481, this.field_c);
+        int var2 = this.selectedButtonIndex(6481, this.modeButtons);
         if (var2 == 0) {
           return 1;
         }
@@ -99,64 +99,64 @@ final class pf {
         return -1;
     }
 
-    final void d(int param0) {
-        if (param0 != 100) {
-          this.field_a = (LegacyButton[]) null;
+    final void draw(int guard) {
+        if (guard != 100) {
+          this.footerButtons = (LegacyButton[]) null;
         }
         SoftwareRasterizer.clearFramebuffer();
-        SelfDestructEffects.b(param0 - 98);
+        SelfDestructEffects.b(guard - 98);
         pb.a(4);
-        this.a(this.field_c, (byte) -116);
-        this.a(this.field_a, (byte) -109);
+        this.drawButtons(this.modeButtons, (byte) -116);
+        this.drawButtons(this.footerButtons, (byte) -109);
     }
 
-    private final int a(int param0, int param1, int param2) {
-        if (param0 != 1) {
+    private final int hitTest(int guard, int y, int x) {
+        if (guard != 1) {
           field_h = (String) null;
         }
-        int var4 = this.a(param1, this.field_c, param2, 3);
+        int var4 = this.hitButtons(y, this.modeButtons, x, 3);
         if (var4 >= 0) {
           return var4;
         }
-        var4 = this.a(param1, this.field_a, param2, 3);
+        var4 = this.hitButtons(y, this.footerButtons, x, 3);
         if (var4 >= 0) {
           return var4;
         }
         return -1;
     }
 
-    private final boolean b(int param0, LegacyButton[] param1, LegacyButton[] param2) {
+    private final boolean selectPrevious(int guard, LegacyButton[] buttons, LegacyButton[] precedingRow) {
         int var5 = 0;
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         try {
-          if (param0 <= 7) {
+          if (guard <= 7) {
             return true;
           }
-          int var4_int = this.a(6481, param1);
+          int var4_int = this.selectedButtonIndex(6481, buttons);
           if (var4_int < 0) {
             return false;
           }
           if (var4_int == 0) {
-            var5 = param2[param2.length - 1].actionId;
-            this.field_b.selectFromKeyboard(false, var5);
+            var5 = precedingRow[precedingRow.length - 1].actionId;
+            this.input.selectFromKeyboard(false, var5);
           } else {
-            var5 = param1[var4_int - 1].actionId;
-            this.field_b.selectFromKeyboard(false, var5);
+            var5 = buttons[var4_int - 1].actionId;
+            this.input.selectFromKeyboard(false, var5);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var4;
-          StringBuilder stackIn_13_1 = new StringBuilder().append("pf.P(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_13_1 = new StringBuilder().append("pf.P(").append(guard).append(',');
+          if (buttons == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param2 == null) {
+          if (precedingRow == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -165,20 +165,20 @@ final class pf {
         }
     }
 
-    private final int a(byte param0, LegacyButton param1) {
+    private final int buttonPan(byte guard, LegacyButton button) {
         String stackIn_5_2 = null;
         try {
-          int var3_int = param1.width / 2 + param1.x;
+          int var3_int = button.width / 2 + button.x;
           int var4 = 16384 * var3_int / 640;
-          int var5 = 51 % ((param0 - 56) / 58);
+          int var5 = 51 % ((guard - 56) / 58);
           int stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_4_0 = var3;
-          StringBuilder stackIn_4_1 = new StringBuilder().append("pf.EA(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_4_1 = new StringBuilder().append("pf.EA(").append(guard).append(',');
+          if (button == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
@@ -187,16 +187,16 @@ final class pf {
         }
     }
 
-    private final int[] a(int param0, int param1, BinaryBitmapFont param2, byte param3) {
+    private final int[] createModeButtons(int firstAction, int revealTick, BinaryBitmapFont font, byte guard) {
         String[] var5 = null;
         int[] var6 = null;
         Sprite[] var7 = null;
         int[] var8 = null;
         String stackIn_10_2 = null;
         try {
-          if (param3 < 91) {
+          if (guard < 91) {
             BinaryBitmapFont var11 = (BinaryBitmapFont) null;
-            int[] discarded$1 = this.a(20, -91, (BinaryBitmapFont) null, (byte) -102);
+            int[] discarded$1 = this.createModeButtons(20, -91, (BinaryBitmapFont) null, (byte) -102);
           }
           if (UiContainer.e((byte) 127)) {
             var5 = AlternateUsernameCredentials.field_s;
@@ -210,25 +210,25 @@ final class pf {
             var5 = new String[]{AlternateUsernameCredentials.field_s[0], AlternateUsernameCredentials.field_s[1]};
           }
           int var9 = var5.length;
-          int[] var15 = this.a(param0, true, var9);
-          this.a(3390, param1, var5, var7, var15, param2, var8);
+          int[] var15 = this.actionRange(firstAction, true, var9);
+          this.layoutModeButtons(3390, revealTick, var5, var7, var15, font, var8);
           int[] stackIn_6_0 = var6;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5_ref = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var5_ref;
-          StringBuilder stackIn_9_1 = new StringBuilder().append("pf.S(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_9_1 = new StringBuilder().append("pf.S(").append(firstAction).append(',').append(revealTick).append(',');
+          if (font == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final int[] a(BinaryBitmapFont param0, int param1, int param2, int param3) {
+    private final int[] createFooterButtons(BinaryBitmapFont font, int guard, int revealTick, int firstAction) {
         int[] var8 = null;
         String[] var9 = null;
         int[] var10 = null;
@@ -247,12 +247,12 @@ final class pf {
             var8 = new int[]{3, 4};
           }
           int var11 = var9.length;
-          int[] var20 = this.a(param3, true, var11);
-          if (param1 < 62) {
+          int[] var20 = this.actionRange(firstAction, true, var11);
+          if (guard < 62) {
             field_e = (String[]) null;
           }
-          int[] var21 = TextLayoutLine.a(param2, param3, var11, (byte) -17);
-          this.field_a = DynamicTerrainRenderer.createButtonRow(var6, var20, var7, var5_int, param0, var9, var10, false, var21);
+          int[] var21 = TextLayoutLine.a(revealTick, firstAction, var11, (byte) -17);
+          this.footerButtons = DynamicTerrainRenderer.createButtonRow(var6, var20, var7, var5_int, font, var9, var10, false, var21);
           int[] stackIn_6_0 = var8;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -260,30 +260,30 @@ final class pf {
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var5;
           StringBuilder stackIn_9_1 = new StringBuilder().append("pf.CA(");
-          if (param0 == null) {
+          if (font == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(',').append(revealTick).append(',').append(firstAction).append(')').toString());
         }
     }
 
-    private final void a(LegacyButton[] param0, byte param1) {
+    private final void drawButtons(LegacyButton[] buttons, byte guard) {
         String stackIn_13_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          LegacyButton[] var9 = param0;
+          LegacyButton[] var9 = buttons;
           LegacyButton[] var3 = var9;
           for (int var4 = 0; var4 < var9.length; var4++) {
             LegacyButton var5 = var9[var4];
-            boolean stackIn_6_0 = !(~this.field_b.selectedIndex != ~var5.actionId);
+            boolean stackIn_6_0 = !(~this.input.selectedIndex != ~var5.actionId);
             boolean var6 = stackIn_6_0;
             var5.draw(-16383, (var6));
           }
-          if (param1 > -39) {
+          if (guard > -39) {
             BinaryBitmapFont var8 = (BinaryBitmapFont) null;
-            int[] discarded$1 = this.a(28, -16, (BinaryBitmapFont) null, (byte) 69);
+            int[] discarded$1 = this.createModeButtons(28, -16, (BinaryBitmapFont) null, (byte) 69);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -291,85 +291,85 @@ final class pf {
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var3_ref;
           StringBuilder stackIn_12_1 = new StringBuilder().append("pf.H(");
-          if (param0 == null) {
+          if (buttons == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final boolean a(byte param0) {
+    private final boolean handleKeyboard(byte guard) {
         int var5 = EscapeVector.obfuscationControl;
         boolean var2 = false;
-        int var3 = -14 % ((param0 - 15) / 58);
+        int var3 = -14 % ((guard - 15) / 58);
         while (AccountRequestDialog.pollKeyEvent(-98)) {
-          this.field_b.handleKeyWithoutNavigation(113);
+          this.input.handleKeyWithoutNavigation(113);
           if (PasswordValidator.field_n == 97 ||
             PasswordValidator.field_n == 99) {
-            boolean var4 = (this.a(-101, this.field_c, this.field_a));
+            boolean var4 = (this.selectNext(-101, this.modeButtons, this.footerButtons));
             if (!var4) {
-              var4 = (this.a(-101, this.field_a, this.field_c));
+              var4 = (this.selectNext(-101, this.footerButtons, this.modeButtons));
             }
             if (!var4) {
-              this.field_b.selectFromKeyboard(false, 0);
+              this.input.selectFromKeyboard(false, 0);
             }
           }
           if (96 == PasswordValidator.field_n ||
             PasswordValidator.field_n == 98) {
-            boolean var4Lifetime1 = (this.b(33, this.field_c, this.field_a));
+            boolean var4Lifetime1 = (this.selectPrevious(33, this.modeButtons, this.footerButtons));
             if (!var4Lifetime1) {
-              var4Lifetime1 = (this.b(84, this.field_a, this.field_c));
+              var4Lifetime1 = (this.selectPrevious(84, this.footerButtons, this.modeButtons));
             }
             if (!var4Lifetime1) {
-              this.field_b.selectFromKeyboard(false, 0);
+              this.input.selectFromKeyboard(false, 0);
             }
           }
           if (PasswordValidator.field_n == 13) {
             TextLayout.field_b = false;
             ArchiveLoadTask.a((var2), -87);
           }
-          if (this.a((var2), (byte) 91)) {
+          if (this.handleActivation((var2), (byte) 91)) {
             return true;
           }
         }
         return false;
     }
 
-    final void e(int param0) {
-        this.c((byte) 16);
-        if (this.a((byte) 94)) {
+    final void update(int guard) {
+        this.updateRevealEffects((byte) 16);
+        if (this.handleKeyboard((byte) 94)) {
           return;
         }
-        if (param0 <= 61) {
+        if (guard <= 61) {
           field_h = (String) null;
         }
-        int var2 = this.a(1, UiContainer.field_y, GzipDecoder.field_d);
-        int var3 = this.a(1, LoginDialog.field_ob, sf.field_c);
-        this.field_b.updatePointer(var3, (byte) 121, var2);
-        boolean discarded$0 = this.a(true, (byte) 91);
+        int var2 = this.hitTest(1, UiContainer.field_y, GzipDecoder.field_d);
+        int var3 = this.hitTest(1, LoginDialog.field_ob, sf.field_c);
+        this.input.updatePointer(var3, (byte) 121, var2);
+        boolean discarded$0 = this.handleActivation(true, (byte) 91);
     }
 
-    private final int a(int param0, LegacyButton[] param1, int param2, int param3) {
+    private final int hitButtons(int y, LegacyButton[] buttons, int x, int guard) {
         LegacyButton var7 = null;
         String stackIn_14_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          LegacyButton[] var10 = param1;
+          LegacyButton[] var10 = buttons;
           LegacyButton[] var5 = var10;
           int var6 = 0;
           while (true) {
             if (var6 >= var10.length) {
-              if (param3 != 3) {
+              if (guard != 3) {
                 LegacyButton[] var9 = (LegacyButton[]) null;
-                int discarded$1 = this.a(-122, (LegacyButton[]) null);
+                int discarded$1 = this.selectedButtonIndex(-122, (LegacyButton[]) null);
               }
               int stackIn_10_0 = -1;
               return stackIn_10_0;
             }
             var7 = var10[var6];
-            if (!var7.hitTest((byte) 65, param2, param0)) {
+            if (!var7.hitTest((byte) 65, x, y)) {
               var6++;
               continue;
             }
@@ -381,164 +381,164 @@ final class pf {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5_ref = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var5_ref;
-          StringBuilder stackIn_13_1 = new StringBuilder().append("pf.AA(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_13_1 = new StringBuilder().append("pf.AA(").append(y).append(',');
+          if (buttons == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(x).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final void c(int param0) {
+    private final void playCurrentSelectionSound(int guard) {
         Throwable decompiledCaughtException = null;
-        int var2 = 84 / ((59 - param0) / 54);
-        if (!this.field_b.selectionChanged) {
+        int var2 = 84 / ((59 - guard) / 54);
+        if (!this.input.selectionChanged) {
           return;
         }
         int var3 = 100;
         int var4 = 1536 * IterableNodeHashTable.field_c / 64;
         Object var5 = ObjectSpriteSet.field_e;
         synchronized (var5) {
-          this.a(this.field_c, (byte) -23, var3, var4);
-          this.a(this.field_a, (byte) -23, var3, var4);
+          this.playSelectionSound(this.modeButtons, (byte) -23, var3, var4);
+          this.playSelectionSound(this.footerButtons, (byte) -23, var3, var4);
         }
         return;
     }
 
-    private final void b(int param0) {
+    private final void openGuestLogin(int guard) {
         pa.a(true);
         mj.field_d = 0;
         ChatMessage.clearFrameOffsets((byte) -113);
-        if (param0 != -15268) {
+        if (guard != -15268) {
           return;
         }
     }
 
-    final static void e(byte param0) {
+    final static void advanceMenuEdgeSegments(byte guard) {
         boolean stackIn_78_0 = false;
         boolean stackIn_84_0 = false;
         int var9 = EscapeVector.obfuscationControl;
         try {
           if (mh.field_e < 100 &&
             Math.random() < 0.05 * (double)(100 - mh.field_e) / 100.0) {
-            oh var10 = new oh();
-            oh var11 = var10;
+            MenuEdgeSegment var10 = new MenuEdgeSegment();
+            MenuEdgeSegment var11 = var10;
             if (Math.random() < 0.5) {
-              var11.field_m = 1;
-              var11.field_i = 0;
+              var11.direction = 1;
+              var11.x = 0;
             } else {
-              var10.field_m = -1;
-              var10.field_i = 640;
+              var10.direction = -1;
+              var10.x = 640;
             }
-            var11.field_q = 0 + (int)(81.0 * Math.random()) * 6;
-            var11.field_h = 50 + (int)(100.0 * Math.random());
-            var11.field_o = (int)(Math.random() * 200.0) + 100;
+            var11.y = 0 + (int)(81.0 * Math.random()) * 6;
+            var11.targetLength = 50 + (int)(100.0 * Math.random());
+            var11.lifetimeTicks = (int)(Math.random() * 200.0) + 100;
             int var2 = (int)(7.0 * Math.random());
             if (var2 < 0) {
               var2 = 0;
             } else if (var2 > 6) {
               var2 = 6;
             }
-            var11.field_l = -var2 + 6;
-            var11.field_j = var2;
+            var11.lowerBranchBudget = -var2 + 6;
+            var11.upperBranchBudget = var2;
             TrackerGainSupport.field_c.addLast(-12328, var11);
-            if (var11.field_o >= 100) {
+            if (var11.lifetimeTicks >= 100) {
               mh.field_e = mh.field_e + 1;
             }
           }
-          if (param0 > -94) {
-            pf.e((byte) 116);
+          if (guard > -94) {
+            GameModeSelectScreen.advanceMenuEdgeSegments((byte) 116);
           }
-          oh var1 = (oh) (TrackerGainSupport.field_c.first(false));
+          MenuEdgeSegment var1 = (MenuEdgeSegment) (TrackerGainSupport.field_c.first(false));
           while (var1 != null) {
-            if (var1.field_o > var1.field_r) {
-              var1.field_r = var1.field_r + 1;
-              if (var1.field_s >= var1.field_h) {
-                var1.field_i = var1.field_i + var1.field_m;
+            if (var1.lifetimeTicks > var1.ageTicks) {
+              var1.ageTicks = var1.ageTicks + 1;
+              if (var1.length >= var1.targetLength) {
+                var1.x = var1.x + var1.direction;
               } else {
-                var1.field_s = var1.field_s + 1;
+                var1.length = var1.length + 1;
               }
-            } else if (var1.field_s > 0) {
-              var1.field_s = var1.field_s - 1;
-              var1.field_i = var1.field_i + var1.field_m;
+            } else if (var1.length > 0) {
+              var1.length = var1.length - 1;
+              var1.x = var1.x + var1.direction;
             } else {
               var1.unlink((byte) -33);
             }
-            if (var1.field_m < 0 &&
-              var1.field_i <= 0) {
+            if (var1.direction < 0 &&
+              var1.x <= 0) {
               var1.unlink((byte) -26);
             }
-            if (0 < var1.field_m &&
-              640 <= var1.field_i) {
+            if (0 < var1.direction &&
+              640 <= var1.x) {
               var1.unlink((byte) -69);
             }
             if (!var1.isLinked((byte) 48) &&
-              100 <= var1.field_o) {
+              100 <= var1.lifetimeTicks) {
               mh.field_e = mh.field_e - 1;
             }
-            int var2Lifetime1 = (var1.field_o - 50) / 20;
+            int var2Lifetime1 = (var1.lifetimeTicks - 50) / 20;
             for (int var3 = 0; var3 < var2Lifetime1; var3++) {
-              if (~(-(3 * (-var3 + var2Lifetime1)) + var1.field_o) == ~var1.field_r) {
-                int var4 = var1.field_i + var1.field_m * (var1.field_s + (var1.field_o - var1.field_r));
+              if (~(-(3 * (-var3 + var2Lifetime1)) + var1.lifetimeTicks) == ~var1.ageTicks) {
+                int var4 = var1.x + var1.direction * (var1.length + (var1.lifetimeTicks - var1.ageTicks));
                 int var5 = var4;
-                if (var1.field_m > 0) {
+                if (var1.direction > 0) {
                   var5 += 5;
                 }
                 var5 = 2 + (var5 - 2) / 6 * 6;
-                var5 = var5 - (var2Lifetime1 - var3) * (6 * var1.field_m);
-                int var6_int = (int)(Math.random() * (double)var1.field_j);
+                var5 = var5 - (var2Lifetime1 - var3) * (6 * var1.direction);
+                int var6_int = (int)(Math.random() * (double)var1.upperBranchBudget);
                 if (var6_int > 0) {
-                  oh var7_ref_oh = new oh();
-                  var7_ref_oh.field_i = var5;
-                  var7_ref_oh.field_s = 1;
-                  var7_ref_oh.field_h = 1 + 6 * var6_int;
-                  var7_ref_oh.field_o = 50;
-                  var7_ref_oh.field_q = var1.field_q + 1;
-                  var7_ref_oh.field_m = -1;
+                  MenuEdgeSegment var7_ref_oh = new MenuEdgeSegment();
+                  var7_ref_oh.x = var5;
+                  var7_ref_oh.length = 1;
+                  var7_ref_oh.targetLength = 1 + 6 * var6_int;
+                  var7_ref_oh.lifetimeTicks = 50;
+                  var7_ref_oh.y = var1.y + 1;
+                  var7_ref_oh.direction = -1;
                   QuickChatPhraseDefinition.field_u.addLast(-12328, var7_ref_oh);
                 }
-                int var7 = (int)(Math.random() * (double)var1.field_l);
+                int var7 = (int)(Math.random() * (double)var1.lowerBranchBudget);
                 if (0 < var7) {
-                  oh var8_ref_oh = new oh();
-                  var8_ref_oh.field_s = 1;
-                  var8_ref_oh.field_q = var1.field_q;
-                  var8_ref_oh.field_o = 50;
-                  var8_ref_oh.field_h = 1 + 6 * var7;
-                  var8_ref_oh.field_m = 1;
-                  var8_ref_oh.field_i = var5;
+                  MenuEdgeSegment var8_ref_oh = new MenuEdgeSegment();
+                  var8_ref_oh.length = 1;
+                  var8_ref_oh.y = var1.y;
+                  var8_ref_oh.lifetimeTicks = 50;
+                  var8_ref_oh.targetLength = 1 + 6 * var7;
+                  var8_ref_oh.direction = 1;
+                  var8_ref_oh.x = var5;
                   QuickChatPhraseDefinition.field_u.addLast(-12328, var8_ref_oh);
                 }
               }
             }
-            var1 = (oh) (TrackerGainSupport.field_c.next((byte) 70));
+            var1 = (MenuEdgeSegment) (TrackerGainSupport.field_c.next((byte) 70));
           }
-          oh var1Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.first(false));
+          MenuEdgeSegment var1Lifetime1 = (MenuEdgeSegment) (QuickChatPhraseDefinition.field_u.first(false));
           while (var1Lifetime1 != null) {
             boolean var2Lifetime2 = false;
-            int stackIn_55_0 = ~var1Lifetime1.field_r;
-            int stackIn_55_1 = ~var1Lifetime1.field_o;
+            int stackIn_55_0 = ~var1Lifetime1.ageTicks;
+            int stackIn_55_1 = ~var1Lifetime1.lifetimeTicks;
             if (stackIn_55_0 > stackIn_55_1) {
-              if (var1Lifetime1.field_s < var1Lifetime1.field_h) {
-                var1Lifetime1.field_s = var1Lifetime1.field_s + 1;
+              if (var1Lifetime1.length < var1Lifetime1.targetLength) {
+                var1Lifetime1.length = var1Lifetime1.length + 1;
               }
-              var1Lifetime1.field_r = var1Lifetime1.field_r + 1;
-              if (var1Lifetime1.field_s % 6 == 0) {
+              var1Lifetime1.ageTicks = var1Lifetime1.ageTicks + 1;
+              if (var1Lifetime1.length % 6 == 0) {
                 var2Lifetime2 = true;
               }
-            } else if (var1Lifetime1.field_s <= 0) {
+            } else if (var1Lifetime1.length <= 0) {
               var1Lifetime1.unlink((byte) -59);
             } else {
-              var1Lifetime1.field_q = var1Lifetime1.field_q + var1Lifetime1.field_m;
-              var1Lifetime1.field_s = var1Lifetime1.field_s - 1;
+              var1Lifetime1.y = var1Lifetime1.y + var1Lifetime1.direction;
+              var1Lifetime1.length = var1Lifetime1.length - 1;
             }
-            if (var1Lifetime1.field_m < 0 &&
-              var1Lifetime1.field_i <= 0) {
+            if (var1Lifetime1.direction < 0 &&
+              var1Lifetime1.x <= 0) {
               var1Lifetime1.unlink((byte) -56);
             }
-            if (var1Lifetime1.field_m > 0 &&
-              480 <= var1Lifetime1.field_i) {
+            if (var1Lifetime1.direction > 0 &&
+              480 <= var1Lifetime1.x) {
               var1Lifetime1.unlink((byte) -113);
             }
             if (var2Lifetime2) {
@@ -554,162 +554,162 @@ final class pf {
                 stackIn_84_0 = false;
               }
               boolean var4Lifetime1 = stackIn_84_0;
-              int var5Lifetime1 = var1Lifetime1.field_q + var1Lifetime1.field_s * var1Lifetime1.field_m;
-              if (var1Lifetime1.field_m < 0) {
+              int var5Lifetime1 = var1Lifetime1.y + var1Lifetime1.length * var1Lifetime1.direction;
+              if (var1Lifetime1.direction < 0) {
                 var5Lifetime1--;
               }
-              oh var6 = new oh();
-              var6.field_q = var5Lifetime1;
-              var6.field_m = -1;
-              var6.field_i = 1 + var1Lifetime1.field_i;
-              var6.field_h = 50 + (int)(Math.random() * 100.0);
+              MenuEdgeSegment var6 = new MenuEdgeSegment();
+              var6.y = var5Lifetime1;
+              var6.direction = -1;
+              var6.x = 1 + var1Lifetime1.x;
+              var6.targetLength = 50 + (int)(Math.random() * 100.0);
               if (!var3Lifetime1) {
-                var6.field_o = (int)(Math.random() * 40.0) + 10;
+                var6.lifetimeTicks = (int)(Math.random() * 40.0) + 10;
               } else {
-                var6.field_o = 100 + (int)(200.0 * Math.random());
+                var6.lifetimeTicks = 100 + (int)(200.0 * Math.random());
                 int var7Lifetime1 = (int)(Math.random() * 7.0);
                 if (!(var7Lifetime1 >= 0)) {
                   var7Lifetime1 = 0;
                 } else if (6 < var7Lifetime1) {
                   var7Lifetime1 = 6;
                 }
-                var6.field_j = var7Lifetime1;
-                var6.field_l = -var7Lifetime1 + 6;
+                var6.upperBranchBudget = var7Lifetime1;
+                var6.lowerBranchBudget = -var7Lifetime1 + 6;
               }
               TrackerGainSupport.field_c.addLast(-12328, var6);
-              if (100 <= var6.field_o) {
+              if (100 <= var6.lifetimeTicks) {
                 mh.field_e = mh.field_e + 1;
               }
-              oh var12 = new oh();
-              var12.field_i = var1Lifetime1.field_i;
-              var12.field_q = var5Lifetime1;
-              var12.field_m = 1;
-              var12.field_h = 50 + (int)(Math.random() * 100.0);
+              MenuEdgeSegment var12 = new MenuEdgeSegment();
+              var12.x = var1Lifetime1.x;
+              var12.y = var5Lifetime1;
+              var12.direction = 1;
+              var12.targetLength = 50 + (int)(Math.random() * 100.0);
               if (!var4Lifetime1) {
-                var12.field_o = 10 + (int)(40.0 * Math.random());
+                var12.lifetimeTicks = 10 + (int)(40.0 * Math.random());
               } else {
-                var12.field_o = 100 + (int)(200.0 * Math.random());
+                var12.lifetimeTicks = 100 + (int)(200.0 * Math.random());
                 int var8 = (int)(Math.random() * 7.0);
                 if (!(var8 >= 0)) {
                   var8 = 0;
                 } else if (var8 > 6) {
                   var8 = 6;
                 }
-                var12.field_j = var8;
-                var12.field_l = 6 - var8;
+                var12.upperBranchBudget = var8;
+                var12.lowerBranchBudget = 6 - var8;
               }
               TrackerGainSupport.field_c.addLast(-12328, var12);
-              if (100 <= var12.field_o) {
+              if (100 <= var12.lifetimeTicks) {
                 mh.field_e = mh.field_e + 1;
               }
             }
-            var1Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.next((byte) 70));
+            var1Lifetime1 = (MenuEdgeSegment) (QuickChatPhraseDefinition.field_u.next((byte) 70));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "pf.C(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1_ref), "pf.C(" + guard + ')');
         }
     }
 
-    private final void a(int param0, int param1, LegacyButton[] param2, int param3, int param4, int param5) {
+    private final void playButtonRevealSound(int interval, int guard, LegacyButton[] buttons, int firstTick, int ratePercent, int volume) {
         int var7_int = mj.field_d;
-        if (param3 > var7_int) {
+        if (firstTick > var7_int) {
           return;
         }
-        if (var7_int % param0 != 0) {
+        if (var7_int % interval != 0) {
           return;
         }
-        int var8 = param3 + param0 * (-1 + param2.length);
-        if (param1 != 6) {
-          this.field_f = 120;
+        int var8 = firstTick + interval * (-1 + buttons.length);
+        if (guard != 6) {
+          this.accountStateIndex = 120;
         }
         if (var7_int > var8) {
           return;
         }
-        int var9 = (var7_int - param3) / param0;
+        int var9 = (var7_int - firstTick) / interval;
         if (var9 < 0 ||
-          var9 >= param2.length) {
+          var9 >= buttons.length) {
           return;
         }
         try {
-          LegacyButton var10 = param2[var9];
-          int var11 = this.a((byte) 120, var10);
-          ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, param4, param5, var11);
+          LegacyButton var10 = buttons[var9];
+          int var11 = this.buttonPan((byte) 120, var10);
+          ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, ratePercent, volume, var11);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "pf.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "pf.V(" + interval + ',' + guard + ',' + (buttons != null ? "{...}" : "null") + ',' + firstTick + ',' + ratePercent + ',' + volume + ')');
         }
     }
 
-    private final boolean a(boolean param0, byte param1) {
-        this.c(113);
-        if (!this.field_b.isInitialActivation((byte) -18)) {
+    private final boolean handleActivation(boolean pointerDriven, byte guard) {
+        this.playCurrentSelectionSound(113);
+        if (!this.input.isInitialActivation((byte) -18)) {
           return false;
         }
-        int var3 = this.field_b.selectedIndex;
+        int var3 = this.input.selectedIndex;
         if (var3 >= 0 &&
-          this.field_d.length > var3) {
-          int var4 = this.field_d[var3];
+          this.actionCodes.length > var3) {
+          int var4 = this.actionCodes[var3];
           if (var4 == 3 &&
             AccountSessionSupport.isGuestSession(-100)) {
-            this.b(-15268);
+            this.openGuestLogin(-15268);
             return true;
           }
           if (4 == var4) {
             TextLayout.field_b = false;
-            ArchiveLoadTask.a(param0, param1 + 34);
+            ArchiveLoadTask.a(pointerDriven, guard + 34);
             return true;
           }
-          if (this.b((byte) 89) == var4) {
+          if (this.selectedGameMode((byte) 89) == var4) {
             TextLayout.field_b = false;
             int var5 = AccountChoicePanel.a(-8462, var4);
-            ArchiveKeyRequest.a(0, var5, param0, this.field_f);
+            ArchiveKeyRequest.a(0, var5, pointerDriven, this.accountStateIndex);
             return true;
           }
-          if (param1 == 91) {
+          if (guard == 91) {
             return false;
           }
-          this.field_b = (MenuInputState) null;
+          this.input = (MenuInputState) null;
           return false;
         }
         return false;
     }
 
-    private final boolean a(int param0, LegacyButton[] param1, LegacyButton[] param2) {
+    private final boolean selectNext(int guard, LegacyButton[] buttons, LegacyButton[] followingRow) {
         int var5 = 0;
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          int var4_int = this.a(6481, param1);
+          int var4_int = this.selectedButtonIndex(6481, buttons);
           if (var4_int < 0) {
             return false;
           }
-          if (param1.length - 1 > var4_int) {
-            var5 = param1[var4_int + 1].actionId;
-            this.field_b.selectFromKeyboard(false, var5);
+          if (buttons.length - 1 > var4_int) {
+            var5 = buttons[var4_int + 1].actionId;
+            this.input.selectFromKeyboard(false, var5);
           } else {
-            var5 = param2[0].actionId;
-            this.field_b.selectFromKeyboard(false, var5);
+            var5 = followingRow[0].actionId;
+            this.input.selectFromKeyboard(false, var5);
           }
-          if (param0 == -101) {
+          if (guard == -101) {
             return true;
           }
-          this.field_b = (MenuInputState) null;
+          this.input = (MenuInputState) null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var4;
-          StringBuilder stackIn_13_1 = new StringBuilder().append("pf.BA(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_13_1 = new StringBuilder().append("pf.BA(").append(guard).append(',');
+          if (buttons == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param2 == null) {
+          if (followingRow == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -718,7 +718,7 @@ final class pf {
         }
     }
 
-    private final void c(byte param0) {
+    private final void updateRevealEffects(byte guard) {
         if (mj.field_d == 0) {
           StringNode.playFrameAppearSound(8192, (byte) 51);
         }
@@ -726,41 +726,41 @@ final class pf {
         int var2 = 6144 * IterableNodeHashTable.field_c / 64;
         int var3 = 100;
         int var4 = 10;
-        if (param0 < 4) {
+        if (guard < 4) {
           field_g = (Sprite[]) null;
         }
         int var5 = var4;
-        this.a(var4, 6, this.field_c, var5, var3, var2);
-        var5 = var5 + var4 * this.field_c.length;
-        this.a(var4, 6, this.field_a, var5, var3, var2);
+        this.playButtonRevealSound(var4, 6, this.modeButtons, var5, var3, var2);
+        var5 = var5 + var4 * this.modeButtons.length;
+        this.playButtonRevealSound(var4, 6, this.footerButtons, var5, var3, var2);
         if (!(mj.field_d >= 1000)) {
           mj.field_d = mj.field_d + 1;
         }
     }
 
-    private final int[] a(int param0, boolean param1, int param2) {
+    private final int[] actionRange(int firstAction, boolean guard, int count) {
         int var6 = EscapeVector.obfuscationControl;
-        int[] var7 = new int[param2];
+        int[] var7 = new int[count];
         int[] var4 = var7;
-        if (!param1) {
-          this.d(106);
+        if (!guard) {
+          this.draw(106);
         }
-        for (int var5 = 0; var5 < param2; var5++) {
-          var7[var5] = param0 + var5;
+        for (int var5 = 0; var5 < count; var5++) {
+          var7[var5] = firstAction + var5;
         }
         return var4;
     }
 
-    private final int a(byte param0, LegacyButton[] param1) {
+    private final int maximumButtonHeight(byte guard, LegacyButton[] buttons) {
         String stackIn_14_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
           int var3_int = 0;
-          if (param0 > -105) {
+          if (guard > -105) {
             LegacyButton[] var8 = (LegacyButton[]) null;
-            this.a((LegacyButton[]) null, (byte) 115, 95, -46);
+            this.playSelectionSound((LegacyButton[]) null, (byte) 115, 95, -46);
           }
-          LegacyButton[] var4 = param1;
+          LegacyButton[] var4 = buttons;
           for (int var5 = 0; var5 < var4.length; var5++) {
             LegacyButton var6 = var4[var5];
             if (var6.height > var3_int) {
@@ -773,8 +773,8 @@ final class pf {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var3;
-          StringBuilder stackIn_13_1 = new StringBuilder().append("pf.D(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_13_1 = new StringBuilder().append("pf.D(").append(guard).append(',');
+          if (buttons == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -783,7 +783,7 @@ final class pf {
         }
     }
 
-    private final void a(int param0, int param1, String[] param2, Sprite[] param3, int[] param4, BinaryBitmapFont param5, int[] param6) {
+    private final void layoutModeButtons(int guard, int revealTick, String[] labels, Sprite[] sprites, int[] actionIds, BinaryBitmapFont font, int[] frameIds) {
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         String stackIn_19_2 = null;
@@ -792,12 +792,12 @@ final class pf {
         int var23 = EscapeVector.obfuscationControl;
         try {
           int var8_int = 2;
-          int var9 = param2.length;
-          this.field_c = new LegacyButton[var9];
+          int var9 = labels.length;
+          this.modeButtons = new LegacyButton[var9];
           int var10 = 0;
           for (int var11 = 0; var11 < var9; var11++) {
-            LegacyButton var12_ref_dk = new LegacyButton(var8_int, param4[var11], param2[var11], param1, param3[var11], param6[var11], param5);
-            this.field_c[var11] = var12_ref_dk;
+            LegacyButton var12_ref_dk = new LegacyButton(var8_int, actionIds[var11], labels[var11], revealTick, sprites[var11], frameIds[var11], font);
+            this.modeButtons[var11] = var12_ref_dk;
             var10 = var10 + var12_ref_dk.width;
           }
           int var11Lifetime1 = 640;
@@ -805,13 +805,13 @@ final class pf {
           int var13 = PcmResampler.a(var10, (byte) 86, var11Lifetime1, var9, var12);
           int var14 = 0;
           int var15 = var14 + var13;
-          if (param0 != 3390) {
+          if (guard != 3390) {
             return;
           }
           int var16 = TextWidgetPainter.field_j.fullHeight / 2 + 77;
           int var17 = 442;
-          int var18 = this.a(4, var16, this.field_c, var17);
-          LegacyButton[] var19 = this.field_c;
+          int var18 = this.centeredButtonBottom(4, var16, this.modeButtons, var17);
+          LegacyButton[] var19 = this.modeButtons;
           for (int var20 = 0; var19.length > var20; var20++) {
             LegacyButton var21 = var19[var20];
             int var22 = var18 - var21.height;
@@ -823,32 +823,32 @@ final class pf {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var8;
-          StringBuilder stackIn_12_1 = new StringBuilder().append("pf.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_12_1 = new StringBuilder().append("pf.B(").append(guard).append(',').append(revealTick).append(',');
+          if (labels == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param3 == null) {
+          if (sprites == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
           StringBuilder stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param4 == null) {
+          if (actionIds == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
           StringBuilder stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
-          if (param5 == null) {
+          if (font == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
           StringBuilder stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
-          if (param6 == null) {
+          if (frameIds == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
@@ -857,36 +857,36 @@ final class pf {
         }
     }
 
-    private final void d(byte param0) {
+    private final void buildLayout(byte guard) {
         BinaryBitmapFont var2 = ByteStorage.gameFont;
         int var3 = 10;
-        int[] var4 = this.a(0, var3, var2, (byte) 102);
-        int[] var5 = this.a(var2, 84, var3, var4.length);
+        int[] var4 = this.createModeButtons(0, var3, var2, (byte) 102);
+        int[] var5 = this.createFooterButtons(var2, 84, var3, var4.length);
         int var6 = var4.length + var5.length;
-        int var7 = 60 / ((50 - param0) / 47);
-        this.field_d = new int[var6];
-        ArraySupport.copy(var4, 0, this.field_d, 0, var4.length);
-        ArraySupport.copy(var5, 0, this.field_d, var4.length, var5.length);
-        IndexedSpriteState.a(this.field_c, 0);
-        IndexedSpriteState.a(this.field_a, 0);
+        int var7 = 60 / ((50 - guard) / 47);
+        this.actionCodes = new int[var6];
+        ArraySupport.copy(var4, 0, this.actionCodes, 0, var4.length);
+        ArraySupport.copy(var5, 0, this.actionCodes, var4.length, var5.length);
+        IndexedSpriteState.a(this.modeButtons, 0);
+        IndexedSpriteState.a(this.footerButtons, 0);
     }
 
-    final static void a(boolean param0, String param1, Throwable param2) {
+    final static void reportClientError(boolean guard, String message, Throwable failure) {
         try {
           String stackIn_14_6;
           int var6 = EscapeVector.obfuscationControl;
           try {
             String var3 = "";
-            if (param2 != null) {
-              var3 = SectorCacheStore.a(param2, 41);
+            if (failure != null) {
+              var3 = SectorCacheStore.a(failure, 41);
             }
-            if (param1 != null) {
-              if (param2 != null) {
+            if (message != null) {
+              if (failure != null) {
                 var3 = var3 + " | ";
               }
-              var3 = var3 + param1;
+              var3 = var3 + message;
             }
-            SpriteFactorySupport.printEncodedError(param0, var3);
+            SpriteFactorySupport.printEncodedError(guard, var3);
             var3 = ResizableModalPanel.replaceAllLiteral(var3, ":", (byte) 111, "%3a");
             var3 = ResizableModalPanel.replaceAllLiteral(var3, "@", (byte) 111, "%40");
             var3 = ResizableModalPanel.replaceAllLiteral(var3, "&", (byte) 111, "%26");
@@ -927,16 +927,16 @@ final class pf {
         }
     }
 
-    private final void a(boolean param0, byte param1, int param2) {
-        if (param1 != -73) {
-          this.field_b = (MenuInputState) null;
+    private final void initializeInput(boolean pointerDriven, byte guard, int actionCount) {
+        if (guard != -73) {
+          this.input = (MenuInputState) null;
         }
-        this.field_b = new MenuInputState(param2);
-        int var4 = this.a(UiContainer.field_y, this.field_c, GzipDecoder.field_d, 3);
+        this.input = new MenuInputState(actionCount);
+        int var4 = this.hitButtons(UiContainer.field_y, this.modeButtons, GzipDecoder.field_d, 3);
         if (var4 < 0) {
-          var4 = this.a(UiContainer.field_y, this.field_a, GzipDecoder.field_d, 3);
+          var4 = this.hitButtons(UiContainer.field_y, this.footerButtons, GzipDecoder.field_d, 3);
         }
-        this.field_b.initializeSelection(125, param0, var4, 0);
+        this.input.initializeSelection(125, pointerDriven, var4, 0);
     }
 
     public static void releaseStatics(int guard) {
@@ -945,37 +945,37 @@ final class pf {
         field_g = null;
         if (guard != 459) {
           Throwable var2 = (Throwable) null;
-          pf.a(false, (String) null, (Throwable) null);
+          GameModeSelectScreen.reportClientError(false, (String) null, (Throwable) null);
         }
     }
 
-    private final void a(LegacyButton[] param0, byte param1, int param2, int param3) {
-        int var5_int = this.a(6481, param0);
+    private final void playSelectionSound(LegacyButton[] buttons, byte guard, int ratePercent, int volume) {
+        int var5_int = this.selectedButtonIndex(6481, buttons);
         if (var5_int < 0) {
           return;
         }
-        LegacyButton var6 = param0[var5_int];
+        LegacyButton var6 = buttons[var5_int];
         int var7 = var6.actionId;
-        int var8 = this.field_b.selectedIndex;
-        if (param1 != -23) {
+        int var8 = this.input.selectedIndex;
+        if (guard != -23) {
           field_e = (String[]) null;
         }
         if (var7 != var8) {
           return;
         }
         try {
-          int var9 = this.a((byte) -97, var6);
-          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, param2, param3, var9);
+          int var9 = this.buttonPan((byte) -97, var6);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, ratePercent, volume, var9);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "pf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "pf.G(" + (buttons != null ? "{...}" : "null") + ',' + guard + ',' + ratePercent + ',' + volume + ')');
         }
     }
 
-    pf(boolean param0) {
-        this.d((byte) -35);
-        int var2 = this.field_d.length;
-        this.a(param0, (byte) -73, var2);
-        this.field_f = Bullet.accountStateIndex(104);
+    GameModeSelectScreen(boolean pointerDriven) {
+        this.buildLayout((byte) -35);
+        int var2 = this.actionCodes.length;
+        this.initializeInput(pointerDriven, (byte) -73, var2);
+        this.accountStateIndex = Bullet.accountStateIndex(104);
     }
 
     static {

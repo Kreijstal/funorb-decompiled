@@ -127,7 +127,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               Exception var2_ref = (Exception) (Object) decompiledCaughtException;
               String var6 = (String) null;
-              pf.a(false, (String) null, (Throwable) ((Object) var2_ref));
+              GameModeSelectScreen.reportClientError(false, (String) null, (Throwable) ((Object) var2_ref));
               decompiledRegionSelector1 = false;
             }
             if (decompiledRegionSelector1) {

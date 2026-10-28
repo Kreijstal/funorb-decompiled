@@ -78,9 +78,9 @@ abstract class WeightedCacheEntry extends DualLinkNode {
             java.net.URL stackIn_2_0 = (java.net.URL) null;
             return stackIn_2_0;
           }
-          if (null != oh.field_p &&
-            !oh.field_p.equals(applet.getParameter("settings"))) {
-            var3 = oh.field_p;
+          if (null != MenuEdgeSegment.field_p &&
+            !MenuEdgeSegment.field_p.equals(applet.getParameter("settings"))) {
+            var3 = MenuEdgeSegment.field_p;
             var4 = var3;
             var4 = var3;
           }

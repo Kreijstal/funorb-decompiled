@@ -45,7 +45,7 @@ final class tf {
         }
         int var3 = stackIn_6_0;
         if (mj.a((byte) 122)) {
-          int var4 = 20 + dn.a(0) / 2;
+          int var4 = 20 + InstructionsScreen.legacyMenuWidth(0) / 2;
           int var5 = 15 + SlidingSpriteTransition.legacyMenuHeight((byte) -96) / 2;
           GameAppletShell.a(var3, 320 - var4, 240 - var5, 6320248, 0, var5 + 241, -3, 321 + var4, 12110032, 3160124, 2 * var2);
           AchievementTracker.drawLegacyMenu(0);
@@ -329,8 +329,8 @@ final class tf {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var2 = decompiledCaughtException;
             }
-            if (oh.field_p != null) {
-              String stackIn_12_0 = oh.field_p;
+            if (MenuEdgeSegment.field_p != null) {
+              String stackIn_12_0 = MenuEdgeSegment.field_p;
               return stackIn_12_0;
             }
             if (param0 != -1) {

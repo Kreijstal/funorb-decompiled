@@ -97,7 +97,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         int var3 = -15 / ((26 - guard) / 47);
         this.progressBar.setColors(4210752, 2121792, -127);
         AccountMessagePanel var2 = new AccountMessagePanel(this, this.messageFont, DraggableWidget.field_K);
-        var2.appendActionButton(false, gj.field_u, 15);
+        var2.appendActionButton(false, HighscoreTable.field_u, 15);
         this.transitionToContent(var2, 30);
     }
 

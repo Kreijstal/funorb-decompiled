@@ -17,7 +17,7 @@ class UiComponent extends IntrusiveNode {
     static String field_m;
     int width;
     static String field_r;
-    static pf field_o;
+    static GameModeSelectScreen field_o;
     static int[] field_h;
     static int[] field_w;
     String tooltip;

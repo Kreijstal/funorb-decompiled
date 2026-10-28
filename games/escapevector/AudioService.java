@@ -47,7 +47,7 @@ final class AudioService implements Runnable {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             Exception exception = (Exception) (Object) decompiledCaughtException;
-            pf.a(false, (String) null, (Throwable) ((Object) exception));
+            GameModeSelectScreen.reportClientError(false, (String) null, (Throwable) ((Object) exception));
             decompiledRegionSelector0 = 2;
           }
           if (decompiledRegionSelector0 == 0) {
@@ -243,7 +243,7 @@ final class AudioService implements Runnable {
           int var2 = var9.readUnsignedByte(param0 ^ 124);
           if (var2 != 0) {
             if (var2 != 1) {
-              pf.a(false, "A1: " + LoginStage.formatPacketDiagnostic((byte) -65), (Throwable) null);
+              GameModeSelectScreen.reportClientError(false, "A1: " + LoginStage.formatPacketDiagnostic((byte) -65), (Throwable) null);
               nm.a(16);
               if (var6 == 0) {
                 return;

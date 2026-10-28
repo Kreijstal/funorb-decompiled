@@ -20,12 +20,12 @@ abstract class SpriteState extends DualLinkNode {
         LoginMethod.field_a = cb.field_b[param0];
         if (param1 == 15) {
           AlphaContainer.field_H = SpriteStrip.field_i[param0];
-          gj.field_g = jj.field_c[param0];
+          HighscoreTable.field_g = jj.field_c[param0];
           return;
         }
         field_y = (NameAvailabilityResult) null;
         AlphaContainer.field_H = SpriteStrip.field_i[param0];
-        gj.field_g = jj.field_c[param0];
+        HighscoreTable.field_g = jj.field_c[param0];
     }
 
     final static void pollMouseState(int guard) {

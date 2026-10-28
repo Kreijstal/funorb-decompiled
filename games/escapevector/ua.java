@@ -6,18 +6,18 @@ final class ua {
     static String field_b;
     static kg field_c;
 
-    final static int[] a(int param0, boolean param1, int param2, HighscoreQuery param3) {
+    final static int[] queryScoreValues(int mode, boolean guard, int column, HighscoreQuery query) {
         String stackIn_11_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (!param1) {
+          if (!guard) {
             field_b = (String) null;
           }
-          int[] var8 = param3.intColumns[param2];
+          int[] var8 = query.intColumns[column];
           int[] var4 = var8;
           int[] var5 = new int[var8.length];
           for (int var6 = 0; var8.length > var6; var6++) {
-            var5[var6] = UiContainer.a(-19, param0, var8[var6]);
+            var5[var6] = UiContainer.scoreFromPacked(-19, mode, var8[var6]);
           }
           int[] stackIn_7_0 = var5;
           return stackIn_7_0;
@@ -25,8 +25,8 @@ final class ua {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4_ref = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var4_ref;
-          StringBuilder stackIn_10_1 = new StringBuilder().append("ua.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_10_1 = new StringBuilder().append("ua.A(").append(mode).append(',').append(guard).append(',').append(column).append(',');
+          if (query == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

@@ -125,13 +125,13 @@ final class LoginStage {
         }
         Sprite[] var1 = new Sprite[ArchiveLoadTask.spriteCount];
         for (int var2 = 0; var2 < ArchiveLoadTask.spriteCount; var2++) {
-          int var3 = SavedDataQuerySupport.spriteHeights[var2] * qh.spriteWidths[var2];
+          int var3 = SavedDataQuerySupport.spriteHeights[var2] * SpriteLoadTask.spriteWidths[var2];
           byte[] var4 = AnimatedPathMarker.spriteIndices[var2];
           int[] var5 = new int[var3];
           for (int var6 = 0; var6 < var3; var6++) {
             var5[var6] = ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var5);
+          var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], SpriteLoadTask.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var5);
         }
         SpriteDecodeSupport.releaseSpriteSheet(false);
         return var1;

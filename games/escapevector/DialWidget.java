@@ -43,7 +43,7 @@ final class DialWidget extends TextButton {
           CheckboxPainter.spriteAlphas = new byte[ArchiveLoadTask.spriteCount][];
           ChatMessage.spriteOffsetYs = new int[ArchiveLoadTask.spriteCount];
           AnimatedPathMarker.spriteIndices = new byte[ArchiveLoadTask.spriteCount][];
-          qh.spriteWidths = new int[ArchiveLoadTask.spriteCount];
+          SpriteLoadTask.spriteWidths = new int[ArchiveLoadTask.spriteCount];
           var18.position = -(ArchiveLoadTask.spriteCount * 8) + (-7 + encoded.length);
           on.spriteSheetWidth = var18.readUnsignedShort(1952);
           DelegatingCanvas.spriteSheetHeight = var18.readUnsignedShort(1952);
@@ -55,7 +55,7 @@ final class DialWidget extends TextButton {
             ChatMessage.spriteOffsetYs[var4Lifetime1] = var18.readUnsignedShort(1952);
           }
           for (int var4Lifetime2 = 0; var4Lifetime2 < ArchiveLoadTask.spriteCount; var4Lifetime2++) {
-            qh.spriteWidths[var4Lifetime2] = var18.readUnsignedShort(1952);
+            SpriteLoadTask.spriteWidths[var4Lifetime2] = var18.readUnsignedShort(1952);
           }
           for (int var4Lifetime3 = 0; ArchiveLoadTask.spriteCount > var4Lifetime3; var4Lifetime3++) {
             SavedDataQuerySupport.spriteHeights[var4Lifetime3] = var18.readUnsignedShort(1952);
@@ -70,7 +70,7 @@ final class DialWidget extends TextButton {
           }
           var18.position = 0;
           for (int var4Lifetime5 = 0; var4Lifetime5 < ArchiveLoadTask.spriteCount; var4Lifetime5++) {
-            int var5 = qh.spriteWidths[var4Lifetime5];
+            int var5 = SpriteLoadTask.spriteWidths[var4Lifetime5];
             int var6 = SavedDataQuerySupport.spriteHeights[var4Lifetime5];
             int var7 = var6 * var5;
             byte[] var21 = new byte[var7];

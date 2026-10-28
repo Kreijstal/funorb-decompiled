@@ -323,7 +323,7 @@ final class SocketJs5Transport extends Js5Transport {
               return;
             }
             if (4 != var2) {
-              pf.a(false, "F1: " + LoginStage.formatPacketDiagnostic((byte) -76), (Throwable) null);
+              GameModeSelectScreen.reportClientError(false, "F1: " + LoginStage.formatPacketDiagnostic((byte) -76), (Throwable) null);
               nm.a(16);
               return;
             }

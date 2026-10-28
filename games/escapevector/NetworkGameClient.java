@@ -103,7 +103,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param5 != -99) {
           this.j(28);
         }
-        dn.field_a = param2;
+        InstructionsScreen.field_a = param2;
         MenuInputState.field_l = param7;
         this.f((byte) -14);
         GameKeyHandler.b(79);
@@ -142,7 +142,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var8 = EscapeVector.obfuscationControl;
         Sprite[] var1 = new Sprite[ArchiveLoadTask.spriteCount];
         for (int var2 = 0; ArchiveLoadTask.spriteCount > var2; var2++) {
-          int var3 = qh.spriteWidths[var2] * SavedDataQuerySupport.spriteHeights[var2];
+          int var3 = SpriteLoadTask.spriteWidths[var2] * SavedDataQuerySupport.spriteHeights[var2];
           byte[] var20 = AnimatedPathMarker.spriteIndices[var2];
           if (!UiContainer.spriteHasAlpha[var2]) {
             int[] var9 = new int[var3];
@@ -150,7 +150,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             for (int var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var20[var6_int], 255)];
             }
-            var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var21);
+            var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], SpriteLoadTask.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var21);
           } else {
             byte[] var22 = CheckboxPainter.spriteAlphas[var2];
             int[] var16 = new int[var3];
@@ -159,7 +159,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             for (int var7 = 0; var7 < var3; var7++) {
               var6[var7] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(255, (int) var22[var7]) << 24, ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd(255, (int) var20[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], SpriteLoadTask.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var16));
           }
         }
         if (param0 != 15556) {
@@ -218,7 +218,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             decompiledCaughtException = decompiledCaughtParameter0;
             Exception var6_ref = (Exception) (Object) decompiledCaughtException;
             String var10 = (String) null;
-            pf.a(false, (String) null, (Throwable) ((Object) var6_ref));
+            GameModeSelectScreen.reportClientError(false, (String) null, (Throwable) ((Object) var6_ref));
             this.a(-1, "crash");
           }
           return;
@@ -341,7 +341,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;
               Exception var5 = (Exception) (Object) decompiledCaughtException;
-              pf.a(false, "S1", (Throwable) ((Object) var5));
+              GameModeSelectScreen.reportClientError(false, "S1", (Throwable) ((Object) var5));
               String var10 = (String) null;
               AchievementGrantRule.a((String) null, (byte) -6);
               ViewportController.field_m = null;
@@ -445,7 +445,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 vd.a((byte) -125);
                 return;
               }
-              pf.a(false, "MGS1: " + LoginStage.formatPacketDiagnostic((byte) 107), (Throwable) null);
+              GameModeSelectScreen.reportClientError(false, "MGS1: " + LoginStage.formatPacketDiagnostic((byte) 107), (Throwable) null);
               nm.a(16);
               return;
             }
@@ -455,7 +455,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           return;
         }
-        pf.a(false, "MGS2: " + LoginStage.formatPacketDiagnostic((byte) 49), (Throwable) null);
+        GameModeSelectScreen.reportClientError(false, "MGS2: " + LoginStage.formatPacketDiagnostic((byte) 49), (Throwable) null);
         nm.a(16);
     }
 
@@ -647,7 +647,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             } else if (IntKeyLookup.field_b != 5) {
               EmailSyntaxValidator.a(256, (byte) 83, gm.field_f);
             } else {
-              EmailSyntaxValidator.a(5, (byte) 83, gj.field_a);
+              EmailSyntaxValidator.a(5, (byte) 83, HighscoreTable.field_a);
             }
             MarkerSlider.field_P = true;
           }
@@ -673,7 +673,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (AccountNoticeKind.frameworkLoadingStage == 1) {
           if (QuickChatPhraseCache.field_h != 0) {
-            PasswordValidator.field_p = mj.a(dn.field_a, param0 - 127);
+            PasswordValidator.field_p = mj.a(InstructionsScreen.field_a, param0 - 127);
           }
           ii.field_a = MarkerSliderPainter.createArchive(MarkerSliderPainter.field_k, 0, false, 1, true);
           LoadingProgressDialog.field_ab = MarkerSliderPainter.createArchive(ChatMessage.field_l, 0, false, 1, true);
@@ -737,7 +737,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (AccountNoticeKind.frameworkLoadingStage == 11) {
           if (mg.field_c != null && (!mg.field_c.ensureIndex(0) ||
             !mg.field_c.tryLoadAllGroups((byte) -119))) {
-            dn.a(Bullet.formatArchiveProgress(AlphaContainer.field_H, mg.field_c, gj.field_g, -12920), 17637, 0.0f);
+            InstructionsScreen.setLoadingProgress(Bullet.formatArchiveProgress(AlphaContainer.field_H, mg.field_c, HighscoreTable.field_g, -12920), 17637, 0.0f);
             boolean decompiledFrameRemainder0 = false;
           }
           else {
@@ -754,7 +754,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (null != DualLinkNode.field_n) {
             boolean stackIn_131_0 = !(!DualLinkNode.field_n.pollComplete(7020));
             var3Lifetime2 = stackIn_131_0;
-            dn.a(DualLinkNode.field_n.message, 17637, DualLinkNode.field_n.progressPercent);
+            InstructionsScreen.setLoadingProgress(DualLinkNode.field_n.message, 17637, DualLinkNode.field_n.progressPercent);
           }
           if (var3Lifetime2) {
             AccountNoticeKind.frameworkLoadingStage = 20;

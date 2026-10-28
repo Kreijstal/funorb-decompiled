@@ -15,7 +15,7 @@ final class NameAvailabilityResponseSupport {
         String stackIn_20_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          dn.field_q = TriangleMesh.field_y;
+          InstructionsScreen.field_q = TriangleMesh.field_y;
           if (responseCode == 255) {
             boolean stackIn_10_0 = !(13 <= AnimatedPanelFrame.field_a);
             SpriteState.field_y = AccountNoticeKind.createBooleanResponse(stackIn_10_0, (byte) -82);

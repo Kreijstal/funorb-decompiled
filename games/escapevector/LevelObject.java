@@ -362,7 +362,7 @@ final class LevelObject extends IntrusiveNode {
         try {
           try {
             if (EmailSyntaxValidator.a(param0, -2)) {
-              DialogueScreen var2 = new DialogueScreen(SeekerMine.field_n, SpriteCheckboxPainter.field_c, qh.field_j, true);
+              DialogueScreen var2 = new DialogueScreen(SeekerMine.field_n, SpriteCheckboxPainter.field_c, SpriteLoadTask.field_j, true);
               GradientOutlineTextPainter.enqueueDialogue(1820, var2);
             }
             if (param1 >= -69) {

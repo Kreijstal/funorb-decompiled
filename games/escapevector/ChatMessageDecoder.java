@@ -138,7 +138,7 @@ final class ChatMessageDecoder {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           Throwable decompiledCaughtException = decompiledCaughtParameter0;
           Exception var6 = (Exception) (Object) decompiledCaughtException;
-          pf.a(false, "CC1", (Throwable) ((Object) var6));
+          GameModeSelectScreen.reportClientError(false, "CC1", (Throwable) ((Object) var6));
           Checkbox.field_H = null;
           SelfDestructEffects.field_d = null;
         }
@@ -165,7 +165,7 @@ final class ChatMessageDecoder {
           le.field_c = dupTemp$1;
           field_a = dupTemp$1;
           if (Js5ArchiveManager.field_d.field_f != 1) {
-            AccountFormStage.field_d = ak.field_d;
+            AccountFormStage.field_d = HighscoresScreen.field_d;
           } else {
             try {
               TextLayout.field_c = new BufferedSocket((java.net.Socket) (Js5ArchiveManager.field_d.field_b), MouseWheelInput.field_c);
@@ -183,12 +183,12 @@ final class ChatMessageDecoder {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;
               IOException var2 = (IOException) (Object) decompiledCaughtException;
-              AccountFormStage.field_d = ak.field_d;
+              AccountFormStage.field_d = HighscoresScreen.field_d;
               if (EscapeVector.obfuscationControl == 0) {
                 Js5ArchiveManager.field_d = null;
                 return true;
               }
-              AccountFormStage.field_d = ak.field_d;
+              AccountFormStage.field_d = HighscoresScreen.field_d;
               Js5ArchiveManager.field_d = null;
               return true;
             }

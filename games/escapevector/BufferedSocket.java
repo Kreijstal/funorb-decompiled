@@ -238,7 +238,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             Exception var1_ref = (Exception) (Object) decompiledCaughtException;
             String var7 = (String) null;
-            pf.a(false, (String) null, (Throwable) ((Object) var1_ref));
+            GameModeSelectScreen.reportClientError(false, (String) null, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

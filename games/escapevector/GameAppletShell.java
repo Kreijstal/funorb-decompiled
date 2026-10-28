@@ -63,7 +63,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var8_ref = decompiledCaughtException;
-              pf.a(false, (String) null, var8_ref);
+              GameModeSelectScreen.reportClientError(false, (String) null, var8_ref);
               this.a(-1, "crash");
             }
             return;
@@ -479,7 +479,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              pf.a(false, (String) null, (Throwable) (var1));
+              GameModeSelectScreen.reportClientError(false, (String) null, (Throwable) (var1));
               this.a(-1, "crash");
             }
             this.a((byte) 101, true);

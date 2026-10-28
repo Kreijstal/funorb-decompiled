@@ -15,7 +15,7 @@ final class SpriteFactorySupport {
         int var7 = EscapeVector.obfuscationControl;
         Object var3Lifetime1;
         if (guard > 44) {
-          int var1 = qh.spriteWidths[0] * SavedDataQuerySupport.spriteHeights[0];
+          int var1 = SpriteLoadTask.spriteWidths[0] * SavedDataQuerySupport.spriteHeights[0];
           byte[] var21 = AnimatedPathMarker.spriteIndices[0];
           if (UiContainer.spriteHasAlpha[0]) {
             byte[] var20 = CheckboxPainter.spriteAlphas[0];
@@ -25,19 +25,19 @@ final class SpriteFactorySupport {
             for (int var6 = 0; var1 > var6; var6++) {
               var5_ref_int__[var6] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(var20[var6] << 24, -16777216), ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var21[var6], 255)]);
             }
-            var3 = new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var13);
+            var3 = new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var13);
           } else {
             int[] var9 = new int[var1];
             for (int var5 = 0; var1 > var5; var5++) {
               var9[var5] = ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var21[var5], 255)];
             }
-            var3 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var9);
+            var3 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var9);
           }
           SpriteDecodeSupport.releaseSpriteSheet(false);
           return (Sprite) (var3);
         }
         SpriteFactorySupport.releaseStatics(24);
-        int var1Lifetime1 = qh.spriteWidths[0] * SavedDataQuerySupport.spriteHeights[0];
+        int var1Lifetime1 = SpriteLoadTask.spriteWidths[0] * SavedDataQuerySupport.spriteHeights[0];
         byte[] var19 = AnimatedPathMarker.spriteIndices[0];
         if (UiContainer.spriteHasAlpha[0]) {
           byte[] var18 = CheckboxPainter.spriteAlphas[0];
@@ -47,13 +47,13 @@ final class SpriteFactorySupport {
           for (int var6Lifetime1 = 0; var1Lifetime1 > var6Lifetime1; var6Lifetime1++) {
             var5_ref_int__Lifetime1[var6Lifetime1] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(var18[var6Lifetime1] << 24, -16777216), ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var19[var6Lifetime1], 255)]);
           }
-          var3Lifetime1 = new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var13Lifetime1);
+          var3Lifetime1 = new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var13Lifetime1);
         } else {
           int[] var9Lifetime1 = new int[var1Lifetime1];
           for (int var5Lifetime1 = 0; var1Lifetime1 > var5Lifetime1; var5Lifetime1++) {
             var9Lifetime1[var5Lifetime1] = ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var19[var5Lifetime1], 255)];
           }
-          var3Lifetime1 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var9Lifetime1);
+          var3Lifetime1 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var9Lifetime1);
         }
         SpriteDecodeSupport.releaseSpriteSheet(false);
         return (Sprite) (var3Lifetime1);

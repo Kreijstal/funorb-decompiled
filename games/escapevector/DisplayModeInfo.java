@@ -139,7 +139,7 @@ final class DisplayModeInfo {
             var6_ref_ik.field_l = var4_long;
             var6_ref_ik.unlink((byte) -85);
           } else {
-            pf.a(false, "HS1: " + LoginStage.formatPacketDiagnostic((byte) 115), (Throwable) null);
+            GameModeSelectScreen.reportClientError(false, "HS1: " + LoginStage.formatPacketDiagnostic((byte) 115), (Throwable) null);
             nm.a(16);
           }
           int var3Lifetime1 = -111 / ((-41 - param0) / 43);

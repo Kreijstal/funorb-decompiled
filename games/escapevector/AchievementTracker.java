@@ -326,7 +326,7 @@ final class AchievementTracker {
         AchievementDefinition var3 = this.definition(achievementId, false);
         if (var3 == null ||
           null == var3.icon) {
-          return qh.field_l;
+          return SpriteLoadTask.field_l;
         }
         return var3.icon;
     }

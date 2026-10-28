@@ -248,7 +248,7 @@ final class t {
           SoftwareRasterizer.clearFramebuffer();
           SelfDestructEffects.b(2);
           if (mj.a((byte) 117)) {
-            int var2_int = dn.a(0) / 2 + 20;
+            int var2_int = InstructionsScreen.legacyMenuWidth(0) / 2 + 20;
             int var3 = 15 + SlidingSpriteTransition.legacyMenuHeight((byte) -122) / 2;
             if (mj.field_d >= 40) {
               stackIn_8_0 = 0;
@@ -485,7 +485,7 @@ final class t {
           }
           if (var3_int == 6 &&
             this.field_b.isInitialActivation((byte) -18)) {
-            kh.a(this.field_b.pointerDriven, -1230, false);
+            kh.showHighscoresScreen(this.field_b.pointerDriven, -1230, false);
             mj.field_d = 0;
             ChatMessage.clearFrameOffsets((byte) -96);
             return true;

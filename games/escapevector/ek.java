@@ -12,12 +12,12 @@ final class ek {
         di.field_d = null;
         if (!param1) {
           ChatMessage.clearFrameOffsets((byte) -58);
-          ArchiveLoadTask.field_e = new dn(param0);
+          ArchiveLoadTask.field_e = new InstructionsScreen(param0);
           return;
         }
         ek.releaseStatics(-110);
         ChatMessage.clearFrameOffsets((byte) -58);
-        ArchiveLoadTask.field_e = new dn(param0);
+        ArchiveLoadTask.field_e = new InstructionsScreen(param0);
     }
 
     public static void releaseStatics(int guard) {
