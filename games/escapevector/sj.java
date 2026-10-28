@@ -15,11 +15,11 @@ final class sj extends IntrusiveNode {
         }
         mb.field_a = PcmSampleStream.c(uf.field_g, 100, qm.field_c * 6144 / 64, param0);
         if (param1 == 51) {
-          rk.field_e.addSubstream(mb.field_a);
+          ObjectSpriteSet.field_e.addSubstream(mb.field_a);
           return;
         }
         field_l = (om) null;
-        rk.field_e.addSubstream(mb.field_a);
+        ObjectSpriteSet.field_e.addSubstream(mb.field_a);
     }
 
     public static void a(byte param0) {

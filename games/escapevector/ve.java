@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ve implements db {
+final class ve implements WidgetPainter {
     private int field_m;
     static int field_l;
     private BitmapFont field_e;
@@ -17,46 +17,46 @@ final class ve implements db {
     static int field_g;
     static int field_k;
 
-    public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
-        hm stackIn_4_0 = null;
+    public final void drawWidget(int originX, int originY, int guard, UiComponent component, boolean enabled) {
+        UiComponent stackIn_4_0 = null;
         String stackIn_16_2 = null;
         int var11 = EscapeVector.obfuscationControl;
         try {
-          if (!(param3 instanceof q)) {
+          if (!(component instanceof q)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (hm) (param3);
+            stackIn_4_0 = (UiComponent) (component);
           }
           q var12 = (q) (stackIn_4_0);
           if (var12 != null) {
           }
-          SoftwareRasterizer.a(param3.field_k + param0, param1 + param3.field_j, param3.field_g, param3.field_x, this.field_b);
-          int var7 = param3.field_g - 2 * var12.field_M;
-          int var8 = param0 - (-param3.field_k - var12.field_M);
-          int var9 = var12.field_J + (param1 + param3.field_j);
+          SoftwareRasterizer.a(component.x + originX, originY + component.y, component.width, component.height, this.field_b);
+          int var7 = component.width - 2 * var12.field_M;
+          int var8 = originX - (-component.x - var12.field_M);
+          int var9 = var12.field_J + (originY + component.y);
           SoftwareRasterizer.d(var8, var9, var8 + var7, var9, this.field_m);
           for (int var10 = -1 + var12.e((byte) 98); var10 >= 0; var10--) {
             SoftwareRasterizer.d(var8 + var7 * var12.b(var10, (byte) 97) / var12.k(-1), var9, this.field_j, this.field_c);
           }
-          if (param2 > -14) {
+          if (guard > -14) {
             this.field_j = -58;
           }
           if (this.field_e == null) {
             return;
           }
-          this.field_e.c(var12.field_l, var8 + var7 / 2, var12.field_J + this.field_e.field_y + var9, this.field_i, this.field_a);
+          this.field_e.c(var12.text, var8 + var7 / 2, var12.field_J + this.field_e.field_y + var9, this.field_i, this.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_15_0 = var6;
-          StringBuilder stackIn_15_1 = new StringBuilder().append("ve.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_15_1 = new StringBuilder().append("ve.M(").append(originX).append(',').append(originY).append(',').append(guard).append(',');
+          if (component == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(enabled).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class ve implements db {
             kc.field_c = dn.a(0, vl.field_f, ej.field_g, param1, 1, param3, dn.field_C);
             int[] var6 = (int[]) null;
             HudMessage.field_k = dn.a(0, ok.field_b, CipherPacketBuffer.field_q, param2, 0, (int[]) null, q.field_L);
-            tk.field_b = new qh(param1, bm.field_e, Js5Transport.field_i, 1, od.field_n, param3);
+            tk.field_b = new qh(param1, bm.field_e, Js5Transport.field_i, 1, SelfDestructEffects.field_n, param3);
             om.field_e = new p();
             Object stackIn_3_0 = null;
             return (p) (stackIn_3_0);
@@ -129,7 +129,7 @@ final class ve implements db {
         try {
           if (-1 == bg.field_f &&
             oj.field_M == -1) {
-            oj.field_M = bj.field_y;
+            oj.field_M = UiContainer.field_y;
             bg.field_f = dh.field_d;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -168,7 +168,7 @@ final class ve implements db {
           on.field_b = param1;
           if (!un.field_u &&
             ei.field_j < ef.field_d &&
-            ah.field_h) {
+            TextFieldValidator.field_h) {
             ei.field_j = 0;
             ci.field_g = oj.field_M;
             ni.field_O = bg.field_f;

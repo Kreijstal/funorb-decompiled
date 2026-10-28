@@ -90,7 +90,7 @@ final class sl {
         boolean stackIn_3_0 = (0 != (128 & var3));
         rm.field_c = stackIn_3_0;
         ve.field_g = var2.readUnsignedByte(0);
-        ah.field_e = var2.i(-800509813);
+        TextFieldValidator.field_e = var2.i(-800509813);
         if (DualLinkNode.field_o != 2) {
           im.field_a = 0;
           IntKeyLookup.field_d = 0;
@@ -121,14 +121,14 @@ final class sl {
           var2.c(false);
         }
         if (!param0) {
-          od.field_d = fn.a(var2, 10241, 80);
+          SelfDestructEffects.field_d = SpriteOffset.a(var2, 10241, 80);
           bo.field_H = null;
           return new gi(param0);
         }
         int var5 = var2.readUnsignedShort(1952);
         try {
           QuickChatPhraseDefinition var8 = hi.field_s.a(var5, (byte) -126);
-          od.field_d = var8.g(-4);
+          SelfDestructEffects.field_d = var8.g(-4);
           if (rm.field_g.equals(ck.field_r)) {
             stackIn_26_0 = null;
           } else {
@@ -140,12 +140,12 @@ final class sl {
           Exception var6 = (Exception) (Object) decompiledCaughtException;
           pf.a(false, "CC1", (Throwable) ((Object) var6));
           bo.field_H = null;
-          od.field_d = null;
+          SelfDestructEffects.field_d = null;
         }
         if (var7 == 0) {
           return new gi(param0);
         }
-        od.field_d = fn.a(var2, 10241, 80);
+        SelfDestructEffects.field_d = SpriteOffset.a(var2, 10241, 80);
         bo.field_H = null;
         return new gi(param0);
     }
@@ -168,7 +168,7 @@ final class sl {
             al.field_d = ak.field_d;
           } else {
             try {
-              pg.field_c = new pj((java.net.Socket) (sk.field_d.field_b), MouseWheelInput.field_c);
+              TextLayout.field_c = new pj((java.net.Socket) (sk.field_d.field_b), MouseWheelInput.field_c);
               om.field_c.position = 0;
               CipherPacketBuffer var4 = om.field_g;
               CipherPacketBuffer var5 = var4;

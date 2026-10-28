@@ -18,7 +18,7 @@ final class tk {
         if (param0 != 23403) {
           tk.b(-66);
         }
-        return af.field_e.a(false);
+        return FullscreenFocusCanvas.field_e.a(false);
     }
 
     final static Sprite[] a(boolean param0, qh[] param1) {
@@ -63,7 +63,7 @@ final class tk {
           qd var5 = (qd) (RasterSnapshot.field_l.first(false));
           int var3 = -57 / ((-46 - param0) / 51);
           while (var5 != null) {
-            sm.a(var5, param1, true);
+            DebouncedValidator.a(var5, param1, true);
             var5 = (qd) (RasterSnapshot.field_l.next((byte) 70));
           }
           IntrusiveNode var2 = bc.field_b.first(false);

@@ -1,48 +1,48 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends ul implements og {
+final class gd extends EditableTextWidget implements og {
     static String field_Z;
     private static int[][] field_F;
     static PcmSampleStream[] field_K;
     private static int field_Y;
     static int field_X;
     private static int[][] field_Q;
-    private el field_T;
+    private ValidationSource field_T;
     private static int[][] field_V;
     static String[] field_R;
     private int field_W;
     static int[][][] field_U;
     private static int[][] field_S;
 
-    public final el a(byte param0) {
+    public final ValidationSource a(byte param0) {
         if (param0 != -89) {
-          return (el) null;
+          return (ValidationSource) null;
         }
         return this.field_T;
     }
 
-    final void a(int param0, int param1, int param2, hm param3) {
+    final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_W = -param2 - this.field_k + dh.field_d;
+          super.updateHover(guard, offsetY, offsetX, root);
+          this.field_W = -offsetX - this.x + dh.field_d;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "gd.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "gd.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(boolean param0) {
         super.a(param0);
         if (null != this.field_T) {
-          this.field_T.a(false);
+          this.field_T.markChanged(false);
         }
     }
 
-    gd(String param0, wn param1, int param2) {
+    gd(String param0, UiListener param1, int param2) {
         super(param0, param1, param2);
     }
 
-    final void a(el param0, byte param1) {
+    final void a(ValidationSource param0, byte param1) {
         try {
           this.field_T = param0;
           if (param1 != 63) {
@@ -70,19 +70,19 @@ final class gd extends ul implements og {
         field_S = (int[][]) null;
     }
 
-    final String d(int param0) {
-        if (!this.field_u) {
+    final String getTooltip(int guard) {
+        if (!this.hovered) {
           return null;
         }
-        if (this.field_i == null) {
+        if (this.tooltip == null) {
           return null;
         }
-        ri.a(bj.field_y, dh.field_d + this.field_g - this.field_W, (byte) -62);
-        if (param0 == 1) {
-          return this.field_i;
+        ri.a(UiContainer.field_y, dh.field_d + this.width - this.field_W, (byte) -62);
+        if (guard == 1) {
+          return this.tooltip;
         }
         field_Z = (String) null;
-        return this.field_i;
+        return this.tooltip;
     }
 
     static {

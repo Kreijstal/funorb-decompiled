@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb extends ah {
+final class lb extends TextFieldValidator {
     static String[] field_n;
-    private ul field_o;
+    private EditableTextWidget field_o;
 
     public static void g(int param0) {
         if (param0 != -17318) {
@@ -12,23 +12,23 @@ final class lb extends ah {
         field_n = null;
     }
 
-    final String a(byte param0, String param1) {
+    final String messageForText(byte guard, String text) {
         String stackIn_18_2 = null;
         try {
           if (this.field_o instanceof og) {
-            el var3 = ((og) ((Object) this.field_o)).a((byte) -89);
+            ValidationSource var3 = ((og) ((Object) this.field_o)).a((byte) -89);
             if (var3 != null) {
-              if (var3.a(17124) == IsaacRandom.field_h &&
-                !param1.equals(this.field_o.field_l)) {
+              if (var3.validationState(17124) == IsaacRandom.field_h &&
+                !text.equals(this.field_o.text)) {
                 String stackIn_7_0 = me.field_n;
                 return stackIn_7_0;
               }
-              String stackIn_9_0 = var3.b(54);
+              String stackIn_9_0 = var3.validationMessage(54);
               return stackIn_9_0;
             }
           }
-          int var3_int = 126 % ((10 - param0) / 51);
-          if (param1.equals(this.field_o.field_l)) {
+          int var3_int = 126 % ((10 - guard) / 51);
+          if (text.equals(this.field_o.text)) {
             return null;
           }
           String stackIn_13_0 = me.field_n;
@@ -37,8 +37,8 @@ final class lb extends ah {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_17_0 = var3_ref;
-          StringBuilder stackIn_17_1 = new StringBuilder().append("lb.L(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_17_1 = new StringBuilder().append("lb.L(").append(guard).append(',');
+          if (text == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
@@ -47,22 +47,22 @@ final class lb extends ah {
         }
     }
 
-    final rf a(int param0, String param1) {
-        rf stackIn_10_0 = null;
+    final ValidationState validateText(int guard, String text) {
+        ValidationState stackIn_10_0 = null;
         String stackIn_14_2 = null;
         try {
-          if (param0 != -1) {
+          if (guard != -1) {
             field_n = (String[]) null;
           }
           if (this.field_o instanceof og) {
-            el var3 = ((og) ((Object) this.field_o)).a((byte) -89);
+            ValidationSource var3 = ((og) ((Object) this.field_o)).a((byte) -89);
             if (var3 != null &&
-              var3.a(17124) != IsaacRandom.field_h) {
-              rf stackIn_6_0 = ArchiveProvider.field_a;
+              var3.validationState(17124) != IsaacRandom.field_h) {
+              ValidationState stackIn_6_0 = ArchiveProvider.field_a;
               return stackIn_6_0;
             }
           }
-          if (param1.equals(this.field_o.field_l)) {
+          if (text.equals(this.field_o.text)) {
             stackIn_10_0 = IsaacRandom.field_h;
           } else {
             stackIn_10_0 = ArchiveProvider.field_a;
@@ -72,8 +72,8 @@ final class lb extends ah {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var3_ref;
-          StringBuilder stackIn_13_1 = new StringBuilder().append("lb.G(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_13_1 = new StringBuilder().append("lb.G(").append(guard).append(',');
+          if (text == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -115,7 +115,7 @@ final class lb extends ah {
         }
     }
 
-    lb(ul param0, ul param1) {
+    lb(EditableTextWidget param0, EditableTextWidget param1) {
         super(param0);
         try {
           this.field_o = param1;
@@ -150,7 +150,7 @@ final class lb extends ah {
 
     final static void a(int param0, String param1, int param2, int param3, int param4) {
         mj.field_b.g();
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clearFramebuffer();
         fh.field_g.c(param1, 160, 22, param2, -1);
         md.field_D.a(122);
         cf.a(mj.field_b, true, 1);

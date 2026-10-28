@@ -142,7 +142,7 @@ final class tf {
     private final boolean a(boolean param0, int param1) {
         int var9 = EscapeVector.obfuscationControl;
         if (ch.field_a.field_e) {
-          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
         }
         if (ch.field_a.field_h == 0 &&
           ch.field_a.b((byte) -18)) {
@@ -179,7 +179,7 @@ final class tf {
             if (qm.field_c < 0) {
               qm.field_c = 0;
             }
-            ce.d(8192);
+            TrackerMusicDefinition.d(8192);
           }
           if (ch.field_a.b(-98) &&
             64 > qm.field_c) {
@@ -187,15 +187,15 @@ final class tf {
             if (qm.field_c > 64) {
               qm.field_c = 64;
             }
-            ce.d(8192);
+            TrackerMusicDefinition.d(8192);
           }
           if (ch.field_a.d(-10809)) {
             qm.field_c = 0;
-            ce.d(8192);
+            TrackerMusicDefinition.d(8192);
           }
           if (ch.field_a.e(0)) {
             qm.field_c = 64;
-            ce.d(8192);
+            TrackerMusicDefinition.d(8192);
           }
           if (ch.field_a.a(false)) {
             int var3 = fh.field_g.b(oi.field_N);
@@ -212,10 +212,10 @@ final class tf {
             if (ch.field_a.b((byte) -18) ||
               var7 != qm.field_c) {
               qm.field_c = var7;
-              ce.d(8192);
+              TrackerMusicDefinition.d(8192);
             }
           } else if (ch.field_a.b((byte) -18)) {
-            ce.d(8192);
+            TrackerMusicDefinition.d(8192);
           }
         }
         if (param1 < 121) {
@@ -228,7 +228,7 @@ final class tf {
             if (0 > kc.field_b) {
               kc.field_b = 0;
             }
-            o var10 = ni.field_N;
+            TrackerMusicPlayer var10 = ni.field_N;
             if (var10 != null) {
               var10.d(kc.field_b * kn.field_b / 64);
             }
@@ -239,21 +239,21 @@ final class tf {
             if (64 < kc.field_b) {
               kc.field_b = 64;
             }
-            o var11 = ni.field_N;
+            TrackerMusicPlayer var11 = ni.field_N;
             if (var11 != null) {
               var11.d(kn.field_b * kc.field_b / 64);
             }
           }
           if (ch.field_a.d(-10809)) {
             kc.field_b = 0;
-            o var12 = ni.field_N;
+            TrackerMusicPlayer var12 = ni.field_N;
             if (var12 != null) {
               var12.d(kn.field_b * kc.field_b / 64);
             }
           }
           if (ch.field_a.e(0)) {
             kc.field_b = 64;
-            o var13 = ni.field_N;
+            TrackerMusicPlayer var13 = ni.field_N;
             if (var13 != null) {
               var13.d(kc.field_b * kn.field_b / 64);
             }
@@ -271,7 +271,7 @@ final class tf {
               var7Lifetime1 = 64;
             }
             kc.field_b = var7Lifetime1;
-            o var8 = ni.field_N;
+            TrackerMusicPlayer var8 = ni.field_N;
             if (var8 != null) {
               var8.d(kn.field_b * kc.field_b / 64);
             }
@@ -290,7 +290,7 @@ final class tf {
           ch.field_a.f(23518))) {
           boolean stackIn_99_0 = !(SpriteState.field_r);
           SpriteState.field_r = stackIn_99_0;
-          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, qm.field_c * 1536 / 64, 8192);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, qm.field_c * 1536 / 64, 8192);
         }
         if (this.field_e != ch.field_a.field_h) {
           return false;
@@ -315,7 +315,7 @@ final class tf {
             try {
               String var9 = param1.getParameter("cookieprefix");
               String var3 = var9 + "settings";
-              String var4 = (String) (sd.a(param1, "getcookies", -29155));
+              String var4 = (String) (JavaScriptBridge.callWindowFunction(param1, "getcookies", -29155));
               String[] var5 = bb.a(-128, var4, ';');
               for (int var6 = 0; var6 < var5.length; var6++) {
                 int var7 = var5[var6].indexOf('=');
@@ -361,7 +361,7 @@ final class tf {
         if (param1 != 320) {
           this.a((byte) 11);
         }
-        ch.field_a.a(ch.field_a.a((byte) 119, this.field_f, dh.field_d, 24, this.field_a, bj.field_y, this.field_d), param0, param1 + 4767679);
+        ch.field_a.a(ch.field_a.a((byte) 119, this.field_f, dh.field_d, 24, this.field_a, UiContainer.field_y, this.field_d), param0, param1 + 4767679);
     }
 
     private final int c(byte param0) {
@@ -440,7 +440,7 @@ final class tf {
     private final void a(int param0, int param1, boolean param2, int param3) {
         String stackIn_32_1 = null;
         mj.field_b.g();
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clearFramebuffer();
         int stackIn_3_0 = (!param2) ? 7899280 : 16777215;
         int var5 = stackIn_3_0;
         int var6 = mj.field_b.fullWidth / 2;

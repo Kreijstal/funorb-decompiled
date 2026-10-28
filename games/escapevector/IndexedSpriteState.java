@@ -52,14 +52,14 @@ abstract class IndexedSpriteState {
           int var6Lifetime1 = kb.field_d << 4;
           int var7Lifetime1 = 0;
           int var8Lifetime1 = fc.a(10758, var6Lifetime1) >> 8;
-          int var9Lifetime1 = ul.a(-127, var6Lifetime1) >> 8;
+          int var9Lifetime1 = EditableTextWidget.a(-127, var6Lifetime1) >> 8;
           if (param0 >= -107) {
             IndexedSpriteState.a(56);
           }
           if (dh.field_d != -1 &&
-            -1 != bj.field_y) {
+            -1 != UiContainer.field_y) {
             var7Lifetime1 = -320 + dh.field_d;
-            var8Lifetime1 = -bj.field_y + 240;
+            var8Lifetime1 = -UiContainer.field_y + 240;
             var9Lifetime1 = -128;
           }
           double var10 = 256.0 / Math.sqrt((double)(var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1 + var9Lifetime1 * var9Lifetime1));
@@ -129,9 +129,9 @@ abstract class IndexedSpriteState {
         }
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int x, int y, int alpha);
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int x, int y);
 
     static {
         field_b = "Name";

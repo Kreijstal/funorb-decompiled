@@ -27,20 +27,20 @@ abstract class BitmapFont extends DualLinkNode {
     private static String[] field_z;
     private static int field_E;
 
-    private final void a(byte[] param0) {
+    private final void decodeFontMetrics(byte[] data) {
         int var2;
         this.field_t = new int[256];
-        if (param0.length == 257) {
+        if (data.length == 257) {
           for (var2 = 0; var2 < this.field_t.length; var2++) {
-            this.field_t[var2] = param0[var2] & 255;
+            this.field_t[var2] = data[var2] & 255;
           }
-          this.field_y = param0[256] & 255;
+          this.field_y = data[256] & 255;
         } else {
           var2 = 0;
           for (int var3_int = 0; var3_int < 256; var3_int++) {
             int incrementValue$6 = var2;
             var2++;
-            this.field_t[var3_int] = param0[incrementValue$6] & 255;
+            this.field_t[var3_int] = data[incrementValue$6] & 255;
           }
           int[] var14 = new int[256];
           int[] var10 = var14;
@@ -51,12 +51,12 @@ abstract class BitmapFont extends DualLinkNode {
           for (int var5_int = 0; var5_int < 256; var5_int++) {
             int incrementValue$5 = var2;
             var2++;
-            var3[var5_int] = param0[incrementValue$5] & 255;
+            var3[var5_int] = data[incrementValue$5] & 255;
           }
           for (int var5_intLifetime1 = 0; var5_intLifetime1 < 256; var5_intLifetime1++) {
             int incrementValue$4 = var2;
             var2++;
-            var4[var5_intLifetime1] = param0[incrementValue$4] & 255;
+            var4[var5_intLifetime1] = data[incrementValue$4] & 255;
           }
           byte[][] var15 = new byte[256][];
           byte[][] var11 = var15;
@@ -68,7 +68,7 @@ abstract class BitmapFont extends DualLinkNode {
             for (int var8 = 0; var8 < var15[var6_int].length; var8++) {
               int incrementValue$3 = var2;
               var2++;
-              var7 = (byte)(var7 + param0[incrementValue$3]);
+              var7 = (byte)(var7 + data[incrementValue$3]);
               var15[var6_int][var8] = (byte)var7;
             }
           }
@@ -82,7 +82,7 @@ abstract class BitmapFont extends DualLinkNode {
             for (int var9 = 0; var9 < var16[var7Lifetime1].length; var9++) {
               int incrementValue$1 = var2;
               var2++;
-              var8Lifetime1 = (byte)(var8Lifetime1 + param0[incrementValue$1]);
+              var8Lifetime1 = (byte)(var8Lifetime1 + data[incrementValue$1]);
               var16[var7Lifetime1][var9] = (byte)var8Lifetime1;
             }
           }
@@ -93,7 +93,7 @@ abstract class BitmapFont extends DualLinkNode {
               for (int var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_v[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.field_t, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_v[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.computePairKerning(var15, var16, var17, this.field_t, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -146,9 +146,9 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                     int var12 = stackIn_27_0;
                     if (field_A != 256) {
-                      var11_ref_fi.a(param1, param2 + this.field_y - var12, field_A);
+                      var11_ref_fi.drawAlpha(param1, param2 + this.field_y - var12, field_A);
                     } else {
-                      var11_ref_fi.a(param1, param2 + this.field_y - var12);
+                      var11_ref_fi.draw(param1, param2 + this.field_y - var12);
                     }
                     param1 = param1 + var11_ref_fi.field_a;
                     var5 = 0;
@@ -191,10 +191,10 @@ abstract class BitmapFont extends DualLinkNode {
               }
               param1 = param1 + this.field_t[var8];
               if (field_u != -1) {
-                SoftwareRasterizer.e(var11, param2 + (int)((double)this.field_y * 0.7), param1 - var11, field_u);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_y * 0.7), param1 - var11, field_u);
               }
               if (field_K != -1) {
-                SoftwareRasterizer.e(var11, param2 + this.field_y + 1, param1 - var11, field_K);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_y + 1, param1 - var11, field_K);
               }
               var5 = var8;
             }
@@ -252,12 +252,12 @@ abstract class BitmapFont extends DualLinkNode {
         field_F = 0;
     }
 
-    private final void b(String param0, int param1) {
+    private final void prepareJustification(String text, int targetWidth) {
         int var3 = 0;
         boolean var4 = false;
-        int var5 = param0.length();
+        int var5 = text.length();
         for (int var6 = 0; var6 < var5; var6++) {
-          int var7 = param0.charAt(var6);
+          int var7 = text.charAt(var6);
           if (var7 == 60) {
             var4 = true;
           } else if (var7 == 62) {
@@ -268,7 +268,7 @@ abstract class BitmapFont extends DualLinkNode {
           }
         }
         if (var3 > 0) {
-          field_L = (param1 - this.b(param0) << 8) / var3;
+          field_L = (targetWidth - this.b(text) << 8) / var3;
         }
     }
 
@@ -406,7 +406,7 @@ abstract class BitmapFont extends DualLinkNode {
             var14 = var14 + param10;
           } else if (param8 != 2) {
             if (var15Lifetime1 != var13 - 1) {
-              this.b(field_z[var15Lifetime1], param3);
+              this.prepareJustification(field_z[var15Lifetime1], param3);
               this.a(field_z[var15Lifetime1], param1, var14);
               field_L = 0;
             } else {
@@ -636,7 +636,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var11;
     }
 
-    private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
+    private final static int computePairKerning(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
         int var7 = param2[param5];
         int var8 = var7 + param4[param5];
         int var9 = param2[param6];
@@ -676,7 +676,7 @@ abstract class BitmapFont extends DualLinkNode {
         this.field_B = param2;
         this.field_G = param3;
         this.field_M = param4;
-        this.a(param0);
+        this.decodeFontMetrics(param0);
         int var6 = 2147483647;
         int var7 = -2147483648;
         for (int var8 = 0; var8 < 256; var8++) {

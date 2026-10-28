@@ -67,12 +67,12 @@ final class fe {
         }
         this.field_h.e(376, 339);
         this.field_g.e(9, 9);
-        ia.field_z.a(0, 0);
+        ia.field_z.draw(0, 0);
         if (null != ml.field_c) {
           ml.field_c.e(9, 257);
           ml.field_c.c(558, 257);
-          if (bj.field_y > 257 &&
-            bj.field_y < 290) {
+          if (UiContainer.field_y > 257 &&
+            UiContainer.field_y < 290) {
             int var2Lifetime2 = 40 + (40 * vl.a(this.field_m << 4, -124) >> 16);
             if (var2Lifetime2 > 0) {
               if (dh.field_d > 9 &&
@@ -187,7 +187,7 @@ final class fe {
         if (!param1) {
           return 0;
         }
-        this.field_a.a(this.a(sf.field_c, ng.field_ob, -16311), (byte) 122, this.a(dh.field_d, bj.field_y, -16311));
+        this.field_a.a(this.a(sf.field_c, ng.field_ob, -16311), (byte) 122, this.a(dh.field_d, UiContainer.field_y, -16311));
         boolean var4Lifetime1 = false;
         if (this.field_a.b((byte) -18)) {
           if (this.field_a.field_h == 0) {
@@ -197,7 +197,7 @@ final class fe {
             return 2;
           }
         }
-        if (rf.field_b) {
+        if (ValidationState.field_b) {
           while (pn.p(-71)) {
             int var5 = this.a(false);
             if (var5 == 0) {
@@ -241,7 +241,7 @@ final class fe {
         try {
           int var4_int = param1.b(-1, param0);
           int var5 = param1.a(var4_int, param2, param3);
-          Sprite stackIn_1_0 = ul.a(var4_int, var5, param1, (byte) 9);
+          Sprite stackIn_1_0 = EditableTextWidget.a(var4_int, var5, param1, (byte) 9);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -289,7 +289,7 @@ final class fe {
         IndexedSprite var6 = this.field_b[this.field_i];
         IndexedSprite var2 = var6;
         if (var2 != null) {
-          var6.a(9, 58);
+          var6.draw(9, 58);
         } else if (null != ac.field_c) {
           ac.field_c.a(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
         }
@@ -320,7 +320,7 @@ final class fe {
         this.field_m = 0;
         this.field_i = 0;
         this.field_e = 0;
-        this.field_a.a(105, param0, this.a(dh.field_d, bj.field_y, -16311), -1);
+        this.field_a.a(105, param0, this.a(dh.field_d, UiContainer.field_y, -16311), -1);
     }
 
     private final void a(boolean param0, String[] param1, IndexedSprite[] param2, java.applet.Applet param3, String param4, int param5) {
@@ -345,7 +345,7 @@ final class fe {
           this.field_b = param2;
           if (this.field_b != null &&
             3 <= this.field_b.length) {
-            rf.field_b = param0;
+            ValidationState.field_b = param0;
             return;
           }
           throw new IllegalArgumentException("");
@@ -405,7 +405,7 @@ final class fe {
             this.a(false, (String[]) null, (IndexedSprite[]) null, (java.applet.Applet) null, (String) null, 46);
           }
           SoftwareRasterizer.c(0, var5.height / 2, var5.width, var5.height, 16306250, 15568919);
-          String var6 = hm.field_r;
+          String var6 = UiComponent.field_r;
           String var7 = mh.field_b;
           this.a(0, mn.field_h, var6, var5.height, 0, var5, -16, 0.5f, var18, var5.width);
           this.a(0, mn.field_h, var7, var5.height, 0, var5, 20, 0.5f, var18, var5.width);
@@ -424,7 +424,7 @@ final class fe {
         try {
           hf.a(param2 ^ 26);
           for (int var9_int = param1; var9_int < param3; var9_int++) {
-            SoftwareRasterizer.f(param5, var9_int, param4, 1 + var9_int);
+            SoftwareRasterizer.setClip(param5, var9_int, param4, 1 + var9_int);
             int var10 = var9_int * param7.length / param3;
             int var11 = param7[param7.length + (-var10 - 1)];
             param0.a(param6, param5, param1, param4, param3, var11, -1, 1, 1, 0);

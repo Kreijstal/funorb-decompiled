@@ -17,7 +17,7 @@ final class ua {
           int[] var4 = var8;
           int[] var5 = new int[var8.length];
           for (int var6 = 0; var8.length > var6; var6++) {
-            var5[var6] = bj.a(-19, param0, var8[var6]);
+            var5[var6] = UiContainer.a(-19, param0, var8[var6]);
           }
           int[] stackIn_7_0 = var5;
           return stackIn_7_0;

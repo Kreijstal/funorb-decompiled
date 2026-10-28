@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ad implements Runnable {
+final class BoundedUrlRequest implements Runnable {
     static String field_c;
     static String field_h;
     private SystemTask field_g;
@@ -68,7 +68,7 @@ final class ad implements Runnable {
               break;
             }
             if (this.field_i.payload.length == this.field_i.position) {
-              throw ad.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.payload.length + " " + this.field_j));
+              throw BoundedUrlRequest.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_i.payload.length + " " + this.field_j));
             }
             var1 = this;
             synchronized (var1) {
@@ -180,7 +180,7 @@ final class ad implements Runnable {
                 if (param0 == 17) {
                   return false;
                 }
-                ad.a(49, -88);
+                BoundedUrlRequest.a(49, -88);
                 return false;
               }
               this.finalize();
@@ -188,7 +188,7 @@ final class ad implements Runnable {
               if (param0 == 17) {
                 return false;
               }
-              ad.a(49, -88);
+              BoundedUrlRequest.a(49, -88);
               return false;
             }
             this.field_g = this.field_f.a(true, 5, (Runnable) (this));
@@ -199,7 +199,7 @@ final class ad implements Runnable {
               if (param0 == 17) {
                 return false;
               }
-              ad.a(49, -88);
+              BoundedUrlRequest.a(49, -88);
               return false;
             }
             this.finalize();
@@ -207,7 +207,7 @@ final class ad implements Runnable {
             if (param0 == 17) {
               return false;
             }
-            ad.a(49, -88);
+            BoundedUrlRequest.a(49, -88);
             return false;
           }
         }
@@ -222,12 +222,12 @@ final class ad implements Runnable {
           this.field_k = this.field_k + 1;
         }
         if (param0 != 17) {
-          ad.a(49, -88);
+          BoundedUrlRequest.a(49, -88);
         }
         return false;
     }
 
-    ad(SystemTaskService param0, java.net.URL param1, int param2) {
+    BoundedUrlRequest(SystemTaskService param0, java.net.URL param1, int param2) {
         try {
           this.field_f = param0;
           this.field_j = param1;
@@ -243,7 +243,7 @@ final class ad implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

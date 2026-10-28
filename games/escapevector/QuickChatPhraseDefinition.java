@@ -127,7 +127,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             bo.field_F.b(jb.field_r, param3 + 102);
           }
           jb.field_r.a(-100, param1, param0, param2);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearFramebuffer();
           se.a(true, param3 ^ 17111);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

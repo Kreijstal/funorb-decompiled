@@ -95,7 +95,7 @@ final class ResourceArchive {
             return stackIn_6_0;
           }
           while (var4 < param2.length()) {
-            if (!fn.a(param2.charAt(var4), (byte) -124)) {
+            if (!SpriteOffset.a(param2.charAt(var4), (byte) -124)) {
               String stackIn_12_0 = Js5NetworkRequest.field_B;
               return stackIn_12_0;
             }

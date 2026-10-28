@@ -145,7 +145,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final Sprite b() {
+    final Sprite copy() {
         Sprite var1 = new Sprite(this.width, this.height);
         var1.fullWidth = this.fullWidth;
         var1.fullHeight = this.fullHeight;
@@ -1456,7 +1456,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final Sprite d() {
+    final Sprite copyMirroredHorizontally() {
         Sprite var1 = new Sprite(this.width, this.height);
         var1.fullWidth = this.fullWidth;
         var1.fullHeight = this.fullHeight;
@@ -1606,7 +1606,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void a() {
+    final void rotateClockwise() {
         int[] var1 = new int[this.width * this.height];
         int var2 = 0;
         for (int var3 = 0; var3 < this.width; var3++) {

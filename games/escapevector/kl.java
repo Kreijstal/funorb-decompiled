@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl extends ah {
+final class kl extends TextFieldValidator {
     static int field_n;
     static String field_o;
     static String field_p;
@@ -17,7 +17,7 @@ final class kl extends ah {
         field_o = null;
     }
 
-    kl(ul param0) {
+    kl(EditableTextWidget param0) {
         super(param0);
     }
 
@@ -98,11 +98,11 @@ final class kl extends ah {
         return false;
     }
 
-    final String a(byte param0, String param1) {
+    final String messageForText(byte guard, String text) {
         String stackIn_8_2 = null;
         try {
-          int var3_int = 95 / ((param0 - 10) / 51);
-          if (this.a(-1, param1) != ArchiveProvider.field_a) {
+          int var3_int = 95 / ((guard - 10) / 51);
+          if (this.validateText(-1, text) != ArchiveProvider.field_a) {
             return null;
           }
           String stackIn_3_0 = tb.field_E;
@@ -111,8 +111,8 @@ final class kl extends ah {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_7_0 = var3;
-          StringBuilder stackIn_7_1 = new StringBuilder().append("kl.L(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_7_1 = new StringBuilder().append("kl.L(").append(guard).append(',');
+          if (text == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -121,32 +121,32 @@ final class kl extends ah {
         }
     }
 
-    final rf a(int param0, String param1) {
+    final ValidationState validateText(int guard, String text) {
         String stackIn_13_2 = null;
         try {
-          CharSequence var5 = (CharSequence) ((Object) param1);
+          CharSequence var5 = (CharSequence) ((Object) text);
           if (!fk.a(false, var5)) {
-            rf stackIn_2_0 = ArchiveProvider.field_a;
+            ValidationState stackIn_2_0 = ArchiveProvider.field_a;
             return stackIn_2_0;
           }
-          CharSequence var6 = (CharSequence) ((Object) param1);
-          int var3_int = gn.a(param0 ^ -16777216, var6);
-          if (param0 != -1) {
+          CharSequence var6 = (CharSequence) ((Object) text);
+          int var3_int = gn.a(guard ^ -16777216, var6);
+          if (guard != -1) {
             String var4 = (String) null;
-            this.a(-6, (String) null);
+            this.validateText(-6, (String) null);
           }
           if (0 < var3_int &&
             130 >= var3_int) {
             return IsaacRandom.field_h;
           }
-          rf stackIn_9_0 = ArchiveProvider.field_a;
+          ValidationState stackIn_9_0 = ArchiveProvider.field_a;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var3;
-          StringBuilder stackIn_12_1 = new StringBuilder().append("kl.G(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_12_1 = new StringBuilder().append("kl.G(").append(guard).append(',');
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";

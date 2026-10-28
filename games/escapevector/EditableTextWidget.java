@@ -1,44 +1,44 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ul extends hc {
+class EditableTextWidget extends TextButton {
     private boolean field_J;
     static Sprite[] field_E;
     private int field_N;
     private long field_G;
     private boolean field_M;
     static int[] field_I;
-    static ce field_O;
+    static TrackerMusicDefinition field_O;
     private long field_D;
     private int field_H;
     private int field_P;
     private int field_L;
 
-    final boolean a(hm param0, char param1, int param2, int param3) {
+    final boolean onFocusedKey(UiComponent root, char character, int keyCode, int guard) {
         int stackIn_49_1 = 0;
         int stackIn_55_1 = 0;
         String stackIn_81_2 = null;
         try {
           this.field_G = td.b(128);
-          if (param3 < 0) {
+          if (guard < 0) {
             this.g((byte) 21);
           }
-          if (param1 != 60 &&
-            62 != param1) {
-            if (param1 >= 32 &&
-              126 >= param1) {
+          if (character != 60 &&
+            62 != character) {
+            if (character >= 32 &&
+              126 >= character) {
               if (this.field_L != this.field_P) {
                 this.k(0);
               }
               if (this.field_H == -1 ||
-                !(this.field_l.length() >= this.field_H)) {
-                if (this.field_L >= this.field_l.length()) {
-                  this.field_l = this.field_l + param1;
-                  int dupTemp$0 = this.field_l.length();
+                !(this.text.length() >= this.field_H)) {
+                if (this.field_L >= this.text.length()) {
+                  this.text = this.text + character;
+                  int dupTemp$0 = this.text.length();
                   this.field_L = dupTemp$0;
                   this.field_P = dupTemp$0;
                 } else {
-                  this.field_l = this.field_l.substring(0, this.field_L) + param1 + this.field_l.substring(this.field_L, this.field_l.length());
+                  this.text = this.text.substring(0, this.field_L) + character + this.text.substring(this.field_L, this.text.length());
                   this.field_L = this.field_L + 1;
                   this.field_P = this.field_L;
                 }
@@ -46,7 +46,7 @@ class ul extends hc {
               }
               return true;
             }
-            if (param2 == 85) {
+            if (keyCode == 85) {
               if (this.field_P != this.field_L) {
                 this.k(0);
                 return true;
@@ -56,14 +56,14 @@ class ul extends hc {
                 this.k(0);
                 return true;
               }
-            } else if (param2 != 101) {
-              if (param2 == 13) {
+            } else if (keyCode != 101) {
+              if (keyCode == 13) {
                 this.h((byte) -29);
                 return true;
               }
-              if (param2 != 96) {
-                if (97 == param2) {
-                  if (this.field_L >= this.field_l.length()) {
+              if (keyCode != 96) {
+                if (97 == keyCode) {
+                  if (this.field_L >= this.text.length()) {
                     return false;
                   }
                   if (ik.field_h[82]) {
@@ -74,30 +74,30 @@ class ul extends hc {
                   this.b(stackIn_49_1, 121);
                   return true;
                 }
-                if (102 == param2) {
+                if (102 == keyCode) {
                   this.b(0, 33);
                   return true;
                 }
-                if (param2 == 103) {
-                  this.b(this.field_l.length(), 115);
+                if (keyCode == 103) {
+                  this.b(this.text.length(), 115);
                   return true;
                 }
-                if (param2 == 84) {
+                if (keyCode == 84) {
                   this.n(0);
                   return true;
                 }
                 if (ik.field_h[82] &&
-                  param2 == 65) {
+                  keyCode == 65) {
                   this.g((byte) 8);
                   return true;
                 }
                 if (ik.field_h[82] &&
-                  66 == param2) {
+                  66 == keyCode) {
                   this.e((byte) 104);
                   return true;
                 }
                 if (ik.field_h[82] &&
-                  param2 == 67) {
+                  keyCode == 67) {
                   this.q(87);
                   return true;
                 }
@@ -115,7 +115,7 @@ class ul extends hc {
                 this.k(0);
                 return true;
               }
-              if (this.field_L < this.field_l.length()) {
+              if (this.field_L < this.text.length()) {
                 this.field_P = this.field_L + 1;
                 this.k(0);
                 return true;
@@ -129,12 +129,12 @@ class ul extends hc {
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_80_0 = var5;
           StringBuilder stackIn_80_1 = new StringBuilder().append("ul.G(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_81_2 = "null";
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -142,16 +142,16 @@ class ul extends hc {
         int var2 = this.field_P < this.field_L ? this.field_P : this.field_L;
         if (param0 == 100) {
           int var3 = this.field_L > this.field_P ? this.field_L : this.field_P;
-          return this.field_l.substring(var2, var3);
+          return this.text.substring(var2, var3);
         }
         return (String) null;
     }
 
     void a(boolean param0) {
-        if (this.field_q instanceof rj) {
-          ((rj) (this.field_q)).a(this, 0);
+        if (this.listener instanceof TextInputListener) {
+          ((TextInputListener) (this.listener)).onTextChanged(this, 0);
           if (param0) {
-            field_O = (ce) null;
+            field_O = (TrackerMusicDefinition) null;
             return;
           }
           return;
@@ -159,18 +159,18 @@ class ul extends hc {
         if (!param0) {
           return;
         }
-        field_O = (ce) null;
+        field_O = (TrackerMusicDefinition) null;
     }
 
     private final int o(int param0) {
         int var3;
         int var4 = EscapeVector.obfuscationControl;
-        int var2 = this.field_l.length();
+        int var2 = this.text.length();
         if (var2 == this.field_L) {
           return this.field_L;
         }
         for (var3 = param0 + this.field_L; var2 > var3; var3++) {
-          if (this.field_l.charAt(var3 - 1) == 32) {
+          if (this.text.charAt(var3 - 1) == 32) {
             return var3;
           }
         }
@@ -199,7 +199,7 @@ class ul extends hc {
           }
           return stackIn_15_0;
         }
-        ul.a(-64, 14);
+        EditableTextWidget.a(-64, 14);
         if (param1 < 4096) {
           if (param1 >= 2048) {
             stackIn_9_0 = -un.field_t[-2048 + param1];
@@ -217,10 +217,10 @@ class ul extends hc {
     }
 
     private final void n(int param0) {
-        if (this.field_q instanceof rj) {
-          ((rj) (this.field_q)).a(true, this);
+        if (this.listener instanceof TextInputListener) {
+          ((TextInputListener) (this.listener)).onSubmit(true, this);
           if (param0 != 0) {
-            ul.a(-65, 47, 47);
+            EditableTextWidget.a(-65, 47, 47);
             return;
           }
           return;
@@ -228,7 +228,7 @@ class ul extends hc {
         if (param0 == 0) {
           return;
         }
-        ul.a(-65, 47, 47);
+        EditableTextWidget.a(-65, 47, 47);
     }
 
     final void a(String param0, boolean param1, int param2) {
@@ -240,13 +240,13 @@ class ul extends hc {
           if (param0 == null) {
             param0 = "";
           }
-          this.field_l = param0;
+          this.text = param0;
           int var4_int = param0.length();
           if (this.field_H != -1 &&
             var4_int > this.field_H) {
-            this.field_l = this.field_l.substring(0, this.field_H);
+            this.text = this.text.substring(0, this.field_H);
           }
-          int dupTemp$1 = this.field_l.length();
+          int dupTemp$1 = this.text.length();
           this.field_P = dupTemp$1;
           this.field_L = dupTemp$1;
           if (param1) {
@@ -272,7 +272,7 @@ class ul extends hc {
         String stackIn_15_2 = null;
         try {
           if (this.field_H != -1) {
-            int var3_int = this.field_H - this.field_l.length();
+            int var3_int = this.field_H - this.text.length();
             if (0 <= var3_int) {
               return;
             }
@@ -281,10 +281,10 @@ class ul extends hc {
           if (param0 != -120) {
             this.field_J = false;
           }
-          if (this.field_L != this.field_l.length()) {
-            this.field_l = this.field_l.substring(0, this.field_L) + param1 + this.field_l.substring(this.field_L, this.field_l.length());
+          if (this.field_L != this.text.length()) {
+            this.text = this.text.substring(0, this.field_L) + param1 + this.text.substring(this.field_L, this.text.length());
           } else {
-            this.field_l = this.field_l + param1;
+            this.text = this.text + param1;
           }
           this.field_L = this.field_L + param1.length();
           this.field_P = this.field_L;
@@ -304,27 +304,27 @@ class ul extends hc {
         }
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {
+    final boolean onPointerPressed(int offsetY, int pointerX, byte guard, int pointerY, int offsetX, UiComponent root, int button) {
         int stackIn_6_1 = 0;
         String stackIn_22_2 = null;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.onPointerPressed(offsetY, pointerX, guard, pointerY, offsetX, root, button)) {
             return false;
           }
-          if (!(this.field_s instanceof ao)) {
+          if (!(this.painter instanceof WidgetTextLayout)) {
             return false;
           }
-          int var8_int = ((ao) ((Object) this.field_s)).a(param4, param0, bj.field_y, dh.field_d, 118, (hm) (this));
+          int var8_int = ((WidgetTextLayout) ((Object) this.painter)).a(offsetX, offsetY, UiContainer.field_y, dh.field_d, 118, (UiComponent) (this));
           stackIn_6_1 = (var8_int == -1) ? (0) : (var8_int);
           this.b(stackIn_6_1, 61);
-          long var8_long = td.b(param2 + 125);
+          long var8_long = td.b(guard + 125);
           boolean stackIn_9_1 = !(-this.field_D + var8_long >= 250L);
           this.field_M = stackIn_9_1;
           if (this.field_M) {
             this.field_P = this.p(-121);
             this.field_L = this.o(1);
             if (this.field_L > 0 &&
-              this.field_l.charAt(-1 + this.field_L) == 32) {
+              this.text.charAt(-1 + this.field_L) == 32) {
               this.field_L = this.field_L - 1;
             }
             this.field_N = this.field_L;
@@ -335,13 +335,13 @@ class ul extends hc {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8 = decompiledCaughtException;
           RuntimeException stackIn_21_0 = var8;
-          StringBuilder stackIn_21_1 = new StringBuilder().append("ul.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          StringBuilder stackIn_21_1 = new StringBuilder().append("ul.V(").append(offsetY).append(',').append(pointerX).append(',').append(guard).append(',').append(pointerY).append(',').append(offsetX).append(',');
+          if (root == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(button).append(')').toString());
         }
     }
 
@@ -349,7 +349,7 @@ class ul extends hc {
         String stackIn_9_2 = null;
         try {
           if (param3 <= 3) {
-            ul.f((byte) -115);
+            EditableTextWidget.f((byte) -115);
           }
           if (uc.a(param2, 105, param0, param1)) {
             return al.a((byte) 108);
@@ -377,7 +377,7 @@ class ul extends hc {
         }
         int var3 = -8 % ((param0 - 6) / 38);
         for (var2 = this.field_L - 1; var2 > 0; var2--) {
-          if (this.field_l.charAt(var2 - 1) == 32) {
+          if (this.text.charAt(var2 - 1) == 32) {
             return var2;
           }
         }
@@ -387,7 +387,7 @@ class ul extends hc {
     public static void f(byte param0) {
         field_O = null;
         if (param0 > -52) {
-          field_O = (ce) null;
+          field_O = (TrackerMusicDefinition) null;
           field_E = null;
           field_I = null;
           return;
@@ -398,7 +398,7 @@ class ul extends hc {
 
     private final void b(int param0, int param1) {
         if (param1 < 17) {
-          ul.f((byte) -102);
+          EditableTextWidget.f((byte) -102);
           this.field_L = param0;
           if (!ik.field_h[81]) {
             this.field_P = this.field_L;
@@ -420,13 +420,13 @@ class ul extends hc {
           this.field_v = 0;
           return;
         }
-        if (!(this.field_s instanceof ao)) {
+        if (!(this.painter instanceof WidgetTextLayout)) {
           return;
         }
-        ao var9 = (ao) ((Object) this.field_s);
-        pg var3 = var9.b((hm) (this), 90);
+        WidgetTextLayout var9 = (WidgetTextLayout) ((Object) this.painter);
+        TextLayout var3 = var9.b((UiComponent) (this), 90);
         int var4 = var3.a((byte) -112);
-        int var5 = var9.a((hm) (this), -25033);
+        int var5 = var9.a((UiComponent) (this), -25033);
         int var6 = var9.a(115) >> 1;
         if (var5 - var6 > var4) {
           this.field_n = 0;
@@ -464,7 +464,7 @@ class ul extends hc {
           if (param0 >= 34) {
             return;
           }
-          ul.f((byte) 49);
+          EditableTextWidget.f((byte) 49);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -478,7 +478,7 @@ class ul extends hc {
           this.k(0);
           return;
         }
-        this.a(-32, (byte) 101, 85, 10);
+        this.drawLayer(-32, (byte) 101, 85, 10);
         this.e((byte) 90);
         this.k(0);
     }
@@ -489,7 +489,7 @@ class ul extends hc {
           int var3 = this.field_P < this.field_L ? this.field_L : this.field_P;
           this.field_L = var2;
           this.field_P = var2;
-          this.field_l = this.field_l.substring(0, var2) + this.field_l.substring(var3, this.field_l.length());
+          this.text = this.text.substring(0, var2) + this.text.substring(var3, this.text.length());
           this.a(false);
         }
         if (param0 == 0) {
@@ -519,13 +519,13 @@ class ul extends hc {
         return 0;
     }
 
-    ul(String param0, wn param1, int param2) {
+    EditableTextWidget(String param0, UiListener param1, int param2) {
         super(param0, param1);
         this.field_N = -1;
         this.field_M = false;
         this.field_D = 0L;
         try {
-          this.field_s = mb.field_g.field_p;
+          this.painter = mb.field_g.field_p;
           this.field_H = param2;
           this.a(param0, true, -33);
           this.field_J = true;
@@ -535,17 +535,17 @@ class ul extends hc {
         }
     }
 
-    void a(int param0, int param1, int param2, hm param3) {
+    void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
         try {
-          super.a(param0 + 0, param1, param2, param3);
-          if (param0 != -14472) {
+          super.updateHover(guard + 0, offsetY, offsetX, root);
+          if (guard != -14472) {
             field_I = (int[]) null;
           }
           this.m(-22686);
           if (this.field_t == 1) {
-            if (this.field_s instanceof ao) {
-              ao var7 = (ao) ((Object) this.field_s);
-              int var6 = var7.a(param2, param1, bj.field_y, dh.field_d, param0 + 14560, (hm) (this));
+            if (this.painter instanceof WidgetTextLayout) {
+              WidgetTextLayout var7 = (WidgetTextLayout) ((Object) this.painter);
+              int var6 = var7.a(offsetX, offsetY, UiContainer.field_y, dh.field_d, guard + 14560, (UiComponent) (this));
               if (var6 != -1) {
                 if (this.field_M && this.field_N > var6 &&
                   var6 > this.field_P) {
@@ -557,20 +557,20 @@ class ul extends hc {
             this.field_G = td.b(128);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ul.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ul.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
         }
     }
 
     final void h(byte param0) {
-        this.field_l = "";
+        this.text = "";
         this.field_P = 0;
         this.field_L = 0;
         if (param0 == -29) {
           this.a(false);
           return;
         }
-        hm var3 = (hm) null;
-        this.a(-33, 14, (byte) 69, 46, -80, (hm) null, 28);
+        UiComponent var3 = (UiComponent) null;
+        this.onPointerPressed(-33, 14, (byte) 69, 46, -80, (UiComponent) null, 28);
         this.a(false);
     }
 
@@ -595,50 +595,50 @@ class ul extends hc {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        if (param1 > 85) {
-          if (this.field_s == null) {
+    final void drawLayer(int screenY, byte guard, int layer, int screenX) {
+        if (guard > 85) {
+          if (this.painter == null) {
             return;
           }
-          if (param2 != 0) {
+          if (layer != 0) {
             return;
           }
-          this.field_s.a(param3, param0, -21, (hm) (this), this.field_y);
-          if (!(this.field_s instanceof ao)) {
+          this.painter.drawWidget(screenX, screenY, -21, (UiComponent) (this), this.enabled);
+          if (!(this.painter instanceof WidgetTextLayout)) {
             return;
           }
-          ao var10 = (ao) ((Object) this.field_s);
+          WidgetTextLayout var10 = (WidgetTextLayout) ((Object) this.painter);
           if (this.field_P != this.field_L) {
-            var10.a(param3, this.field_L, (hm) (this), this.field_P, -613528456, param0);
+            var10.a(screenX, this.field_L, (UiComponent) (this), this.field_P, -613528456, screenY);
           }
           long var6 = td.b(128);
           if (500L <= (-this.field_G + var6) % 1000L) {
             return;
           }
-          var10.a((hm) (this), this.field_L, param3, param0, true);
+          var10.a((UiComponent) (this), this.field_L, screenX, screenY, true);
           return;
         }
         this.field_H = -76;
-        if (this.field_s == null) {
+        if (this.painter == null) {
           return;
         }
-        if (param2 != 0) {
+        if (layer != 0) {
           return;
         }
-        this.field_s.a(param3, param0, -21, (hm) (this), this.field_y);
-        if (!(this.field_s instanceof ao)) {
+        this.painter.drawWidget(screenX, screenY, -21, (UiComponent) (this), this.enabled);
+        if (!(this.painter instanceof WidgetTextLayout)) {
           return;
         }
-        ao var9 = (ao) ((Object) this.field_s);
-        ao var8 = var9;
+        WidgetTextLayout var9 = (WidgetTextLayout) ((Object) this.painter);
+        WidgetTextLayout var8 = var9;
         if (this.field_P != this.field_L) {
-          var9.a(param3, this.field_L, (hm) (this), this.field_P, -613528456, param0);
+          var9.a(screenX, this.field_L, (UiComponent) (this), this.field_P, -613528456, screenY);
         }
         long var6Lifetime1 = td.b(128);
         if (500L <= (-this.field_G + var6Lifetime1) % 1000L) {
           return;
         }
-        var9.a((hm) (this), this.field_L, param3, param0, true);
+        var9.a((UiComponent) (this), this.field_L, screenX, screenY, true);
         return;
     }
 

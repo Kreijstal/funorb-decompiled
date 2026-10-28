@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class he extends k {
+final class he extends TextWidgetPainter {
     static String field_q;
     static Calendar field_s;
     static String field_v;
@@ -83,72 +83,72 @@ final class he extends k {
         }
     }
 
-    public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
-        hm stackIn_3_0 = null;
+    public final void drawWidget(int originX, int originY, int guard, UiComponent component, boolean enabled) {
+        UiComponent stackIn_3_0 = null;
         String stackIn_34_2 = null;
         try {
-          if (!(param3 instanceof hc)) {
+          if (!(component instanceof TextButton)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (hm) (param3);
+            stackIn_3_0 = (UiComponent) (component);
           }
-          hc var10 = (hc) (stackIn_3_0);
-          rd.a(param3.field_g + param3.field_k + param0, param0 + param3.field_k, param3.field_j + (param1 + param3.field_x), 19807, param1 + param3.field_j);
+          TextButton var10 = (TextButton) (stackIn_3_0);
+          rd.a(component.width + component.x + originX, originX + component.x, component.y + (originY + component.height), 19807, originY + component.y);
           if (var10 != null) {
-            param4 = param4 & var10.field_y;
+            enabled = enabled & var10.enabled;
           }
           ef var7 = this.field_w[0];
           this.field_t.a(true);
-          var7.a(param0, this.field_t, param3, param1, 63, this);
+          var7.a(originX, this.field_t, component, originY, 63, this);
           if (var10 != null) {
             if (var10.field_z) {
               ef var11 = this.field_w[1];
               if (var11 != null) {
-                var11.a(param0, this.field_t, param3, param1, -106, this);
+                var11.a(originX, this.field_t, component, originY, -106, this);
               }
             }
-            if (var10.field_u) {
+            if (var10.hovered) {
               ef var12 = this.field_w[3];
               if (0 != var10.field_t &&
                 var12 != null) {
-                var12.a(param0, this.field_t, param3, param1, -124, this);
+                var12.a(originX, this.field_t, component, originY, -124, this);
               } else {
                 ef var9 = this.field_w[2];
                 if (var9 != null) {
-                  var9.a(param0, this.field_t, param3, param1, -101, this);
+                  var9.a(originX, this.field_t, component, originY, -101, this);
                 }
               }
             }
           }
-          if (param3.h(0)) {
+          if (component.isFocused(0)) {
             ef var13 = this.field_w[5];
             if (var13 != null) {
-              var13.a(param0, this.field_t, param3, param1, 51, this);
+              var13.a(originX, this.field_t, component, originY, 51, this);
             }
           }
-          if (!param4) {
+          if (!enabled) {
             ef var14 = this.field_w[4];
             if (var14 != null) {
-              var14.a(param0, this.field_t, param3, param1, -94, this);
+              var14.a(originX, this.field_t, component, originY, -94, this);
             }
           }
-          if (param2 >= -14) {
+          if (guard >= -14) {
             he.a(true);
           }
-          this.field_t.a(this, param3, param0, param1, (byte) 21);
+          this.field_t.a(this, component, originX, originY, (byte) 21);
           dl.a((byte) -8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_33_0 = var6;
-          StringBuilder stackIn_33_1 = new StringBuilder().append("he.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_33_1 = new StringBuilder().append("he.M(").append(originX).append(',').append(originY).append(',').append(guard).append(',');
+          if (component == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(enabled).append(')').toString());
         }
     }
 

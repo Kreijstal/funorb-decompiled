@@ -25,7 +25,7 @@ final class ClientException extends RuntimeException {
     final static boolean a(int param0) {
         if (param0 != -31879) {
           ClientException.a(21, -45);
-          if (pg.field_c == null) {
+          if (TextLayout.field_c == null) {
             return false;
           }
           if (al.field_d.a((byte) 63)) {
@@ -33,7 +33,7 @@ final class ClientException extends RuntimeException {
           }
           return false;
         }
-        if (pg.field_c == null) {
+        if (TextLayout.field_c == null) {
           return false;
         }
         if (al.field_d.a((byte) 63)) {
@@ -99,7 +99,7 @@ final class ClientException extends RuntimeException {
 
     final static void a(int param0, int param1) {
         try {
-          if (pg.field_c != null && (0 > param0 ||
+          if (TextLayout.field_c != null && (0 > param0 ||
             al.field_d == ck.field_t)) {
             if (om.field_c.position == 0 &&
               (10000L + le.field_c) < td.b(128)) {
@@ -107,7 +107,7 @@ final class ClientException extends RuntimeException {
             }
             if (0 < om.field_c.position) {
               try {
-                pg.field_c.a(om.field_c.position, 0, om.field_c.payload, 5000);
+                TextLayout.field_c.a(om.field_c.position, 0, om.field_c.payload, 5000);
                 le.field_c = td.b(128);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 Throwable decompiledCaughtException = decompiledCaughtParameter0;

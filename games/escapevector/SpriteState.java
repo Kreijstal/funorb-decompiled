@@ -35,8 +35,8 @@ abstract class SpriteState extends DualLinkNode {
           md.field_G = md.field_G + 1;
           eb.field_K = vj.field_b;
           dh.field_d = vb.field_b;
-          bj.field_y = jk.field_b;
-          ah.field_h = ke.field_a;
+          UiContainer.field_y = jk.field_b;
+          TextFieldValidator.field_h = ke.field_a;
           ke.field_a = false;
           qi.field_N = kb.field_f;
           sf.field_c = fk.field_b;
@@ -67,7 +67,7 @@ abstract class SpriteState extends DualLinkNode {
         int var3 = da.field_b.d((byte) -73);
         di.field_d = new wc(var3);
         int var4 = da.field_b.c(5201);
-        int var5 = da.field_b.a(-3, dh.field_d, bj.field_y);
+        int var5 = da.field_b.a(-3, dh.field_d, UiContainer.field_y);
         di.field_d.a(95, param1, var5, var4);
     }
 

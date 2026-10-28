@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class vg extends bb {
-    static k field_U;
+    static TextWidgetPainter field_U;
     static String field_T;
     private int field_X;
     private int field_Y;
@@ -82,7 +82,7 @@ abstract class vg extends bb {
 
     void b(int param0, int param1, byte param2) {
         int var16 = EscapeVector.obfuscationControl;
-        SoftwareRasterizer.c(param1 + 6, param0 + 35, -12 + this.field_g, -40 + this.field_x, 2105376, 0);
+        SoftwareRasterizer.c(param1 + 6, param0 + 35, -12 + this.width, -40 + this.height, 2105376, 0);
         int var4 = 35;
         int var5 = 211;
         int var6 = 194;
@@ -93,7 +93,7 @@ abstract class vg extends bb {
             var8 < SoftwareRasterizer.clipBottom) {
             int var9 = var7 * (var6 - var5) / var4 + var5;
             int var10 = 0;
-            int var11 = this.field_g;
+            int var11 = this.width;
             if (20 >= var7) {
               while (var10 <= 20) {
                 int var12 = (20 - var7) * (20 - var7) + (20 - var10) * (-var10 + 20);
@@ -129,7 +129,7 @@ abstract class vg extends bb {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            SoftwareRasterizer.e(param1 + var10, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(param1 + var10, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -142,27 +142,27 @@ abstract class vg extends bb {
         while (var7Lifetime1 < var4Lifetime1) {
           int var9Lifetime1 = var5Lifetime1 + var7Lifetime1 * (var6Lifetime1 - var5Lifetime1) / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          SoftwareRasterizer.e(param1, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.e(-6 + this.field_g + param1, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + this.width + param1, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        cc.field_j.e(-90 + (param1 + this.field_g), 10 + param0);
-        ee.a(5 + param1, -10 + this.field_g, true, nn.field_a, 35 + param0);
-        ee.a(param1, this.field_g, true, bn.field_d, param0 + this.field_x - 22);
+        cc.field_j.e(-90 + (param1 + this.width), 10 + param0);
+        ee.a(5 + param1, -10 + this.width, true, nn.field_a, 35 + param0);
+        ee.a(param1, this.width, true, bn.field_d, param0 + this.height - 22);
         int var5Lifetime2 = 169;
-        int var4Lifetime2 = -79 + this.field_x;
+        int var4Lifetime2 = -79 + this.height;
         int var6Lifetime2 = 127;
         int var7Lifetime2 = 0;
         int var8Lifetime2 = 57 + param0;
         if (param2 <= 80) {
-          field_U = (k) null;
+          field_U = (TextWidgetPainter) null;
         }
         while (var7Lifetime2 < var4Lifetime2) {
           int var9Lifetime2 = var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          SoftwareRasterizer.e(param1, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.e(-6 + (this.field_g + param1), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (this.width + param1), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }
@@ -170,7 +170,7 @@ abstract class vg extends bb {
 
     boolean j(int param0) {
         if (param0 != -13907) {
-          field_U = (k) null;
+          field_U = (TextWidgetPainter) null;
         }
         if (this.field_V <= 0) {
         } else {
@@ -204,14 +204,14 @@ abstract class vg extends bb {
           return;
         }
         this.field_Y = 0;
-        this.field_S = this.field_g;
+        this.field_S = this.width;
         this.field_X = param3;
         this.field_V = param1;
         this.field_M = param2;
         if (param0) {
           this.field_V = 115;
         }
-        this.field_W = this.field_x;
+        this.field_W = this.height;
     }
 
     boolean a(byte param0) {

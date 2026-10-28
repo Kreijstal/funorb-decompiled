@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-public class ai {
+public class CacheFileLocator {
     private static int field_c;
     private static String field_b;
     private static String field_a;
@@ -13,14 +13,14 @@ public class ai {
 
     public static File a(String param0, byte param1) {
         int var2 = -89 / ((param1 - 54) / 33);
-        return ai.a(field_a, field_c, 24173, param0);
+        return CacheFileLocator.a(field_a, field_c, 24173, param0);
     }
 
     public static File a(String param0, int param1, int param2, String param3) {
         return net.alterorb.launcher.Hook.cacheRedirect(param0, param3);
     }
 
-    private ai() throws Throwable {
+    private CacheFileLocator() throws Throwable {
         throw new Error();
     }
 
@@ -30,7 +30,7 @@ public class ai {
         try {
           if (param2 > -12) {
             String var4 = (String) null;
-            ai.a((String) null, 107, 50, (String) null);
+            CacheFileLocator.a((String) null, 107, 50, (String) null);
           }
           field_b = System.getProperty("user.home");
           if (null == field_b) {

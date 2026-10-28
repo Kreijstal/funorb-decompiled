@@ -59,10 +59,10 @@ final class km extends fh {
         if (param0 != -59) {
           return;
         }
-        if (!ce.field_f.field_h &&
-          !ce.field_f.field_c) {
-          ce.field_f.b((byte) -126);
-          ce.field_f.e(param0 ^ 19593);
+        if (!TrackerMusicDefinition.field_f.field_h &&
+          !TrackerMusicDefinition.field_f.field_c) {
+          TrackerMusicDefinition.field_f.b((byte) -126);
+          TrackerMusicDefinition.field_f.e(param0 ^ 19593);
         }
         if (!ua.field_c.a(-19836)) {
           ua.field_c.g(-9949);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class o extends PcmMixerListener {
+final class TrackerMusicPlayer extends PcmMixerListener {
     private int[] field_m;
     private int[] field_Y;
     private int[] field_J;
@@ -32,7 +32,7 @@ final class o extends PcmMixerListener {
     private int[] field_p;
     private int field_W;
     private boolean field_t;
-    private ce field_u;
+    private TrackerMusicDefinition field_u;
     private int field_k;
     private int field_H;
     private int[] field_eb;
@@ -50,7 +50,7 @@ final class o extends PcmMixerListener {
     private int field_y;
     private int[] field_kb;
     private int[] field_Q;
-    private ce field_F;
+    private TrackerMusicDefinition field_F;
     private int[] field_E;
     private int[] field_O;
     private int field_M;
@@ -987,7 +987,7 @@ final class o extends PcmMixerListener {
         }
     }
 
-    o(ce param0) {
+    TrackerMusicPlayer(TrackerMusicDefinition param0) {
         this.field_jb = 64;
         this.field_H = 0;
         this.field_W = -1;

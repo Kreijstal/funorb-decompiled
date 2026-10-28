@@ -1,36 +1,36 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ue extends hc {
+class ue extends TextButton {
     private IntrusiveDeque field_D;
     private String[] field_F;
     private bl field_E;
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        int var5 = param2 - this.field_k;
-        int var6 = param1 - this.field_j;
+        int var5 = param2 - this.x;
+        int var6 = param1 - this.y;
         bl var7 = this.a(var6, (byte) -110, var5);
         if (var7 != null &&
-          null != this.field_q) {
-          ((sg) ((Object) this.field_q)).a(param0 ^ 18321, this, var7.field_m, param3);
+          null != this.listener) {
+          ((sg) ((Object) this.listener)).a(param0 ^ 18321, this, var7.field_m, param3);
         }
     }
 
-    void a(int param0, byte param1, int param2, int param3) {
-        super.a(param0, (byte) 87, param2, param3);
-        if (param1 <= 85) {
+    void drawLayer(int screenY, byte guard, int layer, int screenX) {
+        super.drawLayer(screenY, (byte) 87, layer, screenX);
+        if (guard <= 85) {
           this.field_D = (IntrusiveDeque) null;
         }
-        if (param2 != 0) {
+        if (layer != 0) {
           return;
         }
-        ao var9 = (ao) ((Object) this.field_s);
+        WidgetTextLayout var9 = (WidgetTextLayout) ((Object) this.painter);
         bl var6 = this.field_E;
         if (var6 == null) {
         } else {
-          int var7 = var9.a((byte) -113, (hm) (this), param3);
-          int var8 = var9.a((hm) (this), param0, -16956);
+          int var7 = var9.a((byte) -113, (UiComponent) (this), screenX);
+          int var8 = var9.a((UiComponent) (this), screenY, -16956);
           do {
             SeekerMine.a(false, 2 + var6.field_j, var6.field_i + var7 - 2, var6.field_n + 2, -2 + var8 + var6.field_g);
             var6 = var6.field_k;
@@ -79,17 +79,17 @@ class ue extends hc {
         int var16 = EscapeVector.obfuscationControl;
         this.field_D = new IntrusiveDeque();
         int var2 = param0;
-        ao var3 = (ao) ((Object) this.field_s);
-        pg var4 = var3.b((hm) (this), 90);
+        WidgetTextLayout var3 = (WidgetTextLayout) ((Object) this.painter);
+        TextLayout var4 = var3.b((UiComponent) (this), 90);
         while (true) {
-          int var5 = this.field_l.indexOf("<hotspot=", var2);
+          int var5 = this.text.indexOf("<hotspot=", var2);
           if (var5 == -1) {
             return;
           }
-          int var7 = this.field_l.indexOf(">", var5);
-          String var6 = this.field_l.substring(9 + var5, var7);
+          int var7 = this.text.indexOf(">", var5);
+          String var6 = this.text.substring(9 + var5, var7);
           int var7Lifetime1 = Integer.parseInt(var6);
-          var2 = this.field_l.indexOf("</hotspot>", var5);
+          var2 = this.text.indexOf("</hotspot>", var5);
           int var8 = var4.a(var5, 0);
           int var9 = var4.a(var2, 0);
           Object var10 = null;
@@ -119,19 +119,19 @@ class ue extends hc {
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4) {
-        if (!param3) {
+    final void setBounds(int width, int y, int x, boolean guard, int height) {
+        if (!guard) {
           ue.b(-85, (byte) -78);
         }
-        super.a(param0, param1, param2, param3, param4);
+        super.setBounds(width, y, x, guard, height);
         this.k(0);
     }
 
-    ue(String param0, db param1) {
-        super(param0, (wn) null);
+    ue(String param0, WidgetPainter param1) {
+        super(param0, (UiListener) null);
         this.field_E = null;
         try {
-          this.field_s = param1;
+          this.painter = param1;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ue.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -162,7 +162,7 @@ class ue extends hc {
     final static void b(int param0, byte param1) {
         try {
           try {
-            sd.a((byte) 106, PointCloudEffect.d((byte) -62), new Object[]{new Integer(param0)}, "resizing");
+            JavaScriptBridge.callWindowFunctionWithArguments((byte) 106, PointCloudEffect.d((byte) -62), new Object[]{new Integer(param0)}, "resizing");
           } catch (Throwable throwable) {
           }
           if (param1 <= 93) {
@@ -176,16 +176,16 @@ class ue extends hc {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        this.a(param2, param3, param1, true, ((ao) ((Object) this.field_s)).a(-106, (hm) (this)));
+        this.setBounds(param2, param3, param1, true, ((WidgetTextLayout) ((Object) this.painter)).a(-106, (UiComponent) (this)));
         if (param0 != 2463) {
           this.field_F = (String[]) null;
         }
     }
 
-    boolean a(int param0, hm param1) {
+    boolean focusNext(int guard, UiComponent root) {
         String stackIn_7_2 = null;
         try {
-          if (param0 == -4659) {
+          if (guard == -4659) {
             return false;
           }
           this.field_E = (bl) null;
@@ -194,8 +194,8 @@ class ue extends hc {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var3;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("ue.M(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ue.M(").append(guard).append(',');
+          if (root == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -204,28 +204,28 @@ class ue extends hc {
         }
     }
 
-    void a(int param0, int param1, int param2, hm param3) {
+    void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(guard, offsetY, offsetX, root);
           this.field_E = null;
-          if (this.field_u) {
-            int var5_int = -param2 + (dh.field_d - this.field_k);
-            int var6 = -param1 + bj.field_y - this.field_j;
+          if (this.hovered) {
+            int var5_int = -offsetX + (dh.field_d - this.x);
+            int var6 = -offsetY + UiContainer.field_y - this.y;
             this.field_E = this.a(var6, (byte) -111, var5_int);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ue.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ue.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
         }
     }
 
-    String d(int param0) {
+    String getTooltip(int guard) {
         if (this.field_E == null) {
           return null;
         }
         if (this.field_F == null) {
           return null;
         }
-        if (param0 != 1) {
+        if (guard != 1) {
           return (String) null;
         }
         if (this.field_E.field_m >= this.field_F.length) {

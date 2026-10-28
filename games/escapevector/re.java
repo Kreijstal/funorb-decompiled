@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class re extends k {
-    static rf field_s;
+class re extends TextWidgetPainter {
+    static ValidationState field_s;
     static IntrusiveDeque field_q;
     static String[] field_r;
 
@@ -42,29 +42,29 @@ class re extends k {
         }
     }
 
-    public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
+    public final void drawWidget(int originX, int originY, int guard, UiComponent component, boolean enabled) {
         String stackIn_8_2 = null;
         try {
-          if (param4) {
-            mn.a(-27951, param0 + param3.field_k, param1 + param3.field_j, param3.field_g, param3.field_x);
+          if (enabled) {
+            mn.a(-27951, originX + component.x, originY + component.y, component.width, component.height);
           }
-          super.a(param0, param1, -60, param3, param4);
-          if (param2 < -14) {
+          super.drawWidget(originX, originY, -60, component, enabled);
+          if (guard < -14) {
             return;
           }
-          field_s = (rf) null;
+          field_s = (ValidationState) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_7_0 = var6;
-          StringBuilder stackIn_7_1 = new StringBuilder().append("re.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_7_1 = new StringBuilder().append("re.M(").append(originX).append(',').append(originY).append(',').append(guard).append(',');
+          if (component == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(enabled).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ class re extends k {
         field_s = null;
         field_q = null;
         if (param0 != -11967) {
-          field_s = (rf) null;
+          field_s = (ValidationState) null;
         }
     }
 
@@ -82,7 +82,7 @@ class re extends k {
     }
 
     static {
-        field_s = new rf();
+        field_s = new ValidationState();
         field_q = new IntrusiveDeque();
         field_r = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
     }

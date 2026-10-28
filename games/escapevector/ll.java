@@ -9,12 +9,12 @@ final class ll extends IntrusiveNode {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         param1 = l.a(-8462, param1);
-        hn.field_l = new ig(param1, param3);
+        CheckboxPainter.field_l = new ig(param1, param3);
         mj.field_d = param0;
-        od.field_q = param1;
-        di.field_d = new wc(hn.field_l.field_p);
+        SelfDestructEffects.field_q = param1;
+        di.field_d = new wc(CheckboxPainter.field_l.field_p);
         int var4 = h.a(param1, (byte) 121);
-        di.field_d.a(102, param2, hn.field_l.a(bj.field_y, 12089, dh.field_d), var4);
+        di.field_d.a(102, param2, CheckboxPainter.field_l.a(UiContainer.field_y, 12089, dh.field_d), var4);
         gi.a((byte) -70);
     }
 

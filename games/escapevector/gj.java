@@ -407,14 +407,14 @@ final class gj {
           int[] var8 = new int[this.field_h];
           int[] var4 = var8;
           for (int var5 = 0; param1.length > var5; var5++) {
-            int var6 = bj.a(-56, param2, param1[var5]);
+            int var6 = UiContainer.a(-56, param2, param1[var5]);
             var8[var5] = var6;
           }
           if (!param0) {
             this.e((byte) -108);
           }
           if (this.field_r) {
-            int var5Lifetime1 = bj.a(-49, param2, this.field_b.field_q[0]);
+            int var5Lifetime1 = UiContainer.a(-49, param2, this.field_b.field_q[0]);
             var4[-1 + this.field_h] = var5Lifetime1;
           }
           int[] stackIn_9_0 = var4;

@@ -52,7 +52,7 @@ final class tb extends r {
         }
     }
 
-    final hm j(int param0) {
+    final UiComponent j(int param0) {
         int var4 = EscapeVector.obfuscationControl;
         wf var2 = new wf(this.field_H);
         bb var3 = (bb) (var2.c(param0 ^ 15));
@@ -68,7 +68,7 @@ final class tb extends r {
         return null;
     }
 
-    final void b(hm param0, int param1) {
+    final void b(UiComponent param0, int param1) {
         try {
           if (!(param0 instanceof bb)) {
             throw new IllegalArgumentException();
@@ -76,10 +76,10 @@ final class tb extends r {
           bb var3 = (bb) (param0);
           this.field_H.addFirst(var3, 8364);
           if (param1 < 36) {
-            this.a(-45, (byte) -105, -25, -82);
+            this.drawLayer(-45, (byte) -105, -25, -82);
           }
           var3.field_G = true;
-          var3.a(-4659, (hm) (this));
+          var3.focusNext(-4659, (UiComponent) (this));
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "tb.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -101,19 +101,19 @@ final class tb extends r {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawLayer(int screenY, byte guard, int layer, int screenX) {
         int var7 = EscapeVector.obfuscationControl;
-        if (this.field_s != null) {
-          this.field_s.a(param3, param0, -43, (hm) (this), true);
+        if (this.painter != null) {
+          this.painter.drawWidget(screenX, screenY, -43, (UiComponent) (this), true);
         }
         wf var5 = new wf(this.field_H);
-        hm var6 = (hm) (var5.b(-31616));
-        if (param1 < 85) {
+        UiComponent var6 = (UiComponent) (var5.b(-31616));
+        if (guard < 85) {
           this.field_H = (IntrusiveDeque) null;
         }
         while (var6 != null) {
-          var6.a(this.field_j + param0, (byte) 124, param2, this.field_k + param3);
-          var6 = (hm) (var5.a((byte) 57));
+          var6.drawLayer(this.y + screenY, (byte) 124, layer, this.x + screenX);
+          var6 = (UiComponent) (var5.a((byte) 57));
         }
     }
 
@@ -127,11 +127,11 @@ final class tb extends r {
           }
           var3 = (bb) (var2.a(param0 ^ 91));
         }
-        this.field_C = (hm) ((Object) this.n(param0));
+        this.field_C = (UiComponent) ((Object) this.n(param0));
     }
 
     public tb() {
-        super(0, 0, dm.field_h, r.field_B, (db) null, (wn) null);
+        super(0, 0, dm.field_h, r.field_B, (WidgetPainter) null, (UiListener) null);
         this.field_H = new IntrusiveDeque();
     }
 

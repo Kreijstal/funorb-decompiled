@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tm extends vg implements qb {
-    private hc field_eb;
+final class tm extends vg implements ButtonListener {
+    private TextButton field_eb;
     static long[][] field_db;
     static int[] field_bb;
     static String field_Z;
@@ -10,17 +10,17 @@ final class tm extends vg implements qb {
     static Sprite[] field_cb;
     static int[] field_fb;
 
-    public final void a(hc param0, int param1, int param2, int param3, int param4) {
+    public final void onAction(TextButton button, int buttonCode, int localY, int guard, int localX) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param3 != 1) {
+          if (guard != 1) {
             tm.c(-26, 47, -12);
           }
-          if (param0 == this.field_eb) {
+          if (button == this.field_eb) {
             this.o(127);
           }
           return;
@@ -29,12 +29,12 @@ final class tm extends vg implements qb {
           var6 = decompiledCaughtException;
           stackIn_7_0 = var6;
           stackIn_7_1 = new StringBuilder().append("tm.K(");
-          if (param0 == null) {
+          if (button == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 
@@ -75,34 +75,34 @@ final class tm extends vg implements qb {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hm var4 = null;
+        UiComponent var4 = null;
         try {
           var3 = null;
           if (AudioService.field_h == param1) {
             var3 = DialogueScreen.field_k;
           } else {
             if (param1 == ck.field_A) {
-              this.field_x = this.field_x + 10;
+              this.height = this.height + 10;
               var3 = ol.field_K;
               if (tb.a(false)) {
                 var3 = e.field_b;
-                this.field_x = this.field_x + 20;
+                this.height = this.height + 20;
               }
             } else {
               if (um.field_d == param1) {
                 var3 = eg.field_a;
-                this.field_x = this.field_x + 30;
+                this.height = this.height + 30;
               }
             }
           }
-          var4 = new hm((String) (var3), (wn) null);
-          var4.field_j = 50;
-          var4.field_x = 80;
-          var4.field_g = this.field_g;
-          var4.field_k = 0;
-          var4.field_s = (db) ((Object) new k(ke.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4 = new UiComponent((String) (var3), (UiListener) null);
+          var4.y = 50;
+          var4.height = 80;
+          var4.width = this.width;
+          var4.x = 0;
+          var4.painter = (WidgetPainter) ((Object) new TextWidgetPainter(ke.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(var4, false);
-          this.field_eb = this.a(-1, ah.field_k, (wn) (this));
+          this.field_eb = this.a(-1, TextFieldValidator.field_k, (UiListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,13 +136,13 @@ final class tm extends vg implements qb {
         field_bb = null;
     }
 
-    private final hc a(int param0, String param1, wn param2) {
-        hc discarded$1 = null;
-        hc var4 = null;
+    private final TextButton a(int param0, String param1, UiListener param2) {
+        TextButton discarded$1 = null;
+        TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        wn var6 = null;
-        hc stackIn_3_0 = null;
+        UiListener var6 = null;
+        TextButton stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -150,17 +150,17 @@ final class tm extends vg implements qb {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hc(param1, param2);
+          var4 = new TextButton(param1, param2);
           if (param0 != -1) {
-            var6 = (wn) null;
-            discarded$1 = this.a(36, (String) null, (wn) null);
+            var6 = (UiListener) null;
+            discarded$1 = this.a(36, (String) null, (UiListener) null);
           }
-          var4.field_s = (db) ((Object) new ck());
-          var5 = this.field_x - 6;
-          this.field_x = this.field_x + 38;
-          var4.a(-16 + this.field_g - 14, var5, 15, true, 30);
+          var4.painter = (WidgetPainter) ((Object) new ck());
+          var5 = this.height - 6;
+          this.height = this.height + 38;
+          var4.setBounds(-16 + this.width - 14, var5, 15, true, 30);
           this.b(var4, false);
-          this.i(param0 + 1);
+          this.refreshLayout(param0 + 1);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -240,7 +240,7 @@ final class tm extends vg implements qb {
         var0 = var15;
         while (10 >= var15) {
             var1 = -8 + 8 * var15;
-            field_ab[var15] = ja.a(fn.a(field_db[7][7 + var1], 255L), ja.a(ja.a(fn.a(field_db[5][var1 + 5], 16711680L), ja.a(fn.a(4278190080L, field_db[4][4 + var1]), ja.a(ja.a(fn.a(field_db[2][2 + var1], 280375465082880L), ja.a(fn.a(field_db[1][var1 + 1], 71776119061217280L), fn.a(field_db[0][var1], -72057594037927936L))), fn.a(1095216660480L, field_db[3][3 + var1])))), fn.a(65280L, field_db[6][var1 + 6])));
+            field_ab[var15] = ja.a(SpriteOffset.a(field_db[7][7 + var1], 255L), ja.a(ja.a(SpriteOffset.a(field_db[5][var1 + 5], 16711680L), ja.a(SpriteOffset.a(4278190080L, field_db[4][4 + var1]), ja.a(ja.a(SpriteOffset.a(field_db[2][2 + var1], 280375465082880L), ja.a(SpriteOffset.a(field_db[1][var1 + 1], 71776119061217280L), SpriteOffset.a(field_db[0][var1], -72057594037927936L))), SpriteOffset.a(1095216660480L, field_db[3][3 + var1])))), SpriteOffset.a(65280L, field_db[6][var1 + 6])));
             var15++;
         }
     }

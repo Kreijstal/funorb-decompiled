@@ -9,7 +9,7 @@ final class md extends r {
     static String field_H;
 
     public md() {
-        super(0, 0, 0, 0, (db) null, (wn) null);
+        super(0, 0, 0, 0, (WidgetPainter) null, (UiListener) null);
         this.field_F = 256;
     }
 
@@ -76,10 +76,10 @@ final class md extends r {
         }
     }
 
-    md(hm param0) {
-        super(param0.field_k, param0.field_j, param0.field_g, param0.field_x, (db) null, (wn) null);
+    md(UiComponent param0) {
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetPainter) null, (UiListener) null);
         try {
-          param0.a(this.field_g, 0, 0, true, this.field_x);
+          param0.setBounds(this.width, 0, 0, true, this.height);
           this.field_C = param0;
           this.field_F = 256;
         } catch (RuntimeException runtimeException) {
@@ -94,8 +94,8 @@ final class md extends r {
         field_H = null;
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        if (param2 != 0) {
+    final void drawLayer(int screenY, byte guard, int layer, int screenX) {
+        if (layer != 0) {
           return;
         }
         if (null == this.field_C) {
@@ -105,20 +105,20 @@ final class md extends r {
           return;
         }
         if (this.field_F == 256) {
-          this.field_C.a(this.field_j + param0, (byte) 95, param2, this.field_k + param3);
+          this.field_C.drawLayer(this.y + screenY, (byte) 95, layer, this.x + screenX);
           return;
         }
-        Sprite var6 = new Sprite(this.field_C.field_g, this.field_C.field_x);
+        Sprite var6 = new Sprite(this.field_C.width, this.field_C.height);
         eo.a(var6, (byte) -105);
-        this.field_C.a(0, (byte) 91, param2, 0);
-        if (param1 >= 85) {
+        this.field_C.drawLayer(0, (byte) 91, layer, 0);
+        if (guard >= 85) {
           dl.a((byte) 107);
-          var6.d(this.field_k + param3, this.field_j + param0, this.field_F);
+          var6.d(this.x + screenX, this.y + screenY, this.field_F);
           return;
         }
         field_H = (String) null;
         dl.a((byte) 107);
-        var6.d(this.field_k + param3, this.field_j + param0, this.field_F);
+        var6.d(this.x + screenX, this.y + screenY, this.field_F);
     }
 
     static {

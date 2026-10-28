@@ -84,28 +84,28 @@ final class rc {
         field_b = null;
     }
 
-    final static fn a(int param0, byte param1, fn param2, fn param3) {
+    final static SpriteOffset a(int param0, byte param1, SpriteOffset param2, SpriteOffset param3) {
         String stackIn_16_2 = null;
         String stackIn_19_2 = null;
         try {
-          int var4_int = param3.field_c;
-          int var5 = param3.field_b;
+          int var4_int = param3.x;
+          int var5 = param3.y;
           if (param0 == 16384) {
-            var5 = param2.field_c;
-            var4_int = param3.field_b;
+            var5 = param2.x;
+            var4_int = param3.y;
           }
           if (param0 == 32768) {
-            var4_int = param2.field_c;
-            var5 = param2.field_b;
+            var4_int = param2.x;
+            var5 = param2.y;
           }
           if (param0 == 49152) {
-            var5 = param3.field_c;
-            var4_int = param2.field_b;
+            var5 = param3.x;
+            var4_int = param2.y;
           }
           if (param1 <= 119) {
             field_b = (oi) null;
           }
-          fn stackIn_12_0 = new fn(var4_int, var5);
+          SpriteOffset stackIn_12_0 = new SpriteOffset(var4_int, var5);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

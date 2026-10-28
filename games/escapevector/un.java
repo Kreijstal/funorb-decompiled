@@ -15,14 +15,14 @@ final class un extends re {
         super(param0, param1);
     }
 
-    final String b(byte param0, hm param1) {
+    final String b(byte param0, UiComponent param1) {
         String stackIn_7_2 = null;
         try {
           if (param0 != 39) {
             CharSequence var4 = (CharSequence) null;
             un.a((CharSequence) null, 116, 'ﾤ');
           }
-          String stackIn_3_0 = kh.a(param1.field_l.length(), '*', (byte) 53);
+          String stackIn_3_0 = kh.a(param1.text.length(), '*', (byte) 53);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -151,11 +151,11 @@ final class un extends re {
 
     final static int f(int param0) {
         try {
-          if (4 <= od.field_j.field_g) {
-            if (-1 == od.field_j.field_d) {
+          if (4 <= SelfDestructEffects.field_j.field_g) {
+            if (-1 == SelfDestructEffects.field_j.field_d) {
               return 3;
             }
-            if (od.field_j.field_d == -2) {
+            if (SelfDestructEffects.field_j.field_d == -2) {
               return 4;
             }
             return 1;
@@ -180,7 +180,7 @@ final class un extends re {
             if (ke.field_b == 2) {
               rh.field_I = new pj((java.net.Socket) (qk.field_g.field_b), IntPoint.field_d);
               PacketBuffer var2 = new PacketBuffer(13);
-              wc.a(ce.field_j, he.field_y, true, rh.field_N, var2);
+              wc.a(TrackerMusicDefinition.field_j, he.field_y, true, rh.field_N, var2);
               var2.f(15, -123);
               var2.a((byte) 123, mn.field_n);
               rh.field_I.a(13, 0, var2.payload, 5000);
@@ -204,7 +204,7 @@ final class un extends re {
               int stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            od.field_j.a(rh.field_I, PointCloudEffect.field_t, (byte) -99);
+            SelfDestructEffects.field_j.a(rh.field_I, PointCloudEffect.field_t, (byte) -99);
             qk.field_g = null;
             ke.field_b = 0;
             rh.field_I = null;

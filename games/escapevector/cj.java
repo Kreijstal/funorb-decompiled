@@ -30,7 +30,7 @@ final class cj {
         int var5 = EscapeVector.obfuscationControl;
         try {
           int var2 = -55 % ((param0 + 59) / 39);
-          int[] var6 = ul.field_I;
+          int[] var6 = EditableTextWidget.field_I;
           int[] var1 = var6;
           int var3 = 0;
           int var4 = var6.length;

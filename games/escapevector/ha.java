@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ha implements db {
+final class ha implements WidgetPainter {
     private BitmapFont field_f;
     static hf field_c;
     private int field_b;
@@ -17,32 +17,32 @@ final class ha implements db {
         field_e = null;
     }
 
-    public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
+    public final void drawWidget(int originX, int originY, int guard, UiComponent component, boolean enabled) {
         int stackIn_5_0 = 0;
         String stackIn_21_2 = null;
         int var11 = EscapeVector.obfuscationControl;
         try {
-          stackIn_5_0 = (!param3.field_u &&
-            !param3.h(0)) ? (2188450) : (3249872);
+          stackIn_5_0 = (!component.hovered &&
+            !component.isFocused(0)) ? (2188450) : (3249872);
           int var6_int = stackIn_5_0;
-          if (param2 > -14) {
+          if (guard > -14) {
             return;
           }
-          this.field_f.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_l + "</u>", param3.field_k + param0, param3.field_j + param1, param3.field_g, param3.field_x, var6_int, -1, this.field_b, this.field_d, this.field_f.field_r + this.field_f.field_x);
-          if (param3.h(0)) {
-            int var7 = this.field_f.b(param3.field_l);
+          this.field_f.a("<u=" + Integer.toString(var6_int, 16) + ">" + component.text + "</u>", component.x + originX, component.y + originY, component.width, component.height, var6_int, -1, this.field_b, this.field_d, this.field_f.field_r + this.field_f.field_x);
+          if (component.isFocused(0)) {
+            int var7 = this.field_f.b(component.text);
             int var8 = this.field_f.field_x + this.field_f.field_r;
-            int var9 = param0 + param3.field_k;
-            int var10 = param3.field_j + param1;
+            int var9 = originX + component.x;
+            int var10 = component.y + originY;
             if (this.field_b == 2) {
-              var9 = var9 + (-var7 + param3.field_g);
+              var9 = var9 + (-var7 + component.width);
             } else if (1 == this.field_b) {
-              var9 = var9 + (param3.field_g - var7 >> 1);
+              var9 = var9 + (component.width - var7 >> 1);
             }
             if (this.field_d == 2) {
-              var10 = var10 + (param3.field_x - var8);
+              var10 = var10 + (component.height - var8);
             } else if (this.field_d == 1) {
-              var10 = var10 + (-var8 + param3.field_x >> 1);
+              var10 = var10 + (-var8 + component.height >> 1);
             }
             SeekerMine.a(false, 4 + var7, var9 - 2, var8, var10 + 2);
           }
@@ -51,13 +51,13 @@ final class ha implements db {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_20_0 = var6;
-          StringBuilder stackIn_20_1 = new StringBuilder().append("ha.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_20_1 = new StringBuilder().append("ha.M(").append(originX).append(',').append(originY).append(',').append(guard).append(',');
+          if (component == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(enabled).append(')').toString());
         }
     }
 

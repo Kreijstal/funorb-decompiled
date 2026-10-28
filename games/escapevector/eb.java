@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb extends hc {
+final class eb extends TextButton {
     int field_N;
     int field_I;
     int field_M;
@@ -34,13 +34,13 @@ final class eb extends hc {
           var18.position = -2 + param0.length;
           qk.field_j = var18.readUnsignedShort(1952);
           gn.field_k = new int[qk.field_j];
-          bj.field_E = new boolean[qk.field_j];
+          UiContainer.field_E = new boolean[qk.field_j];
           bc.field_a = new int[qk.field_j];
           if (!param1) {
             byte[] var16 = (byte[]) null;
             eb.a((byte[]) null, false);
           }
-          hn.field_b = new byte[qk.field_j][];
+          CheckboxPainter.field_b = new byte[qk.field_j][];
           gi.field_e = new int[qk.field_j];
           qe.field_a = new byte[qk.field_j][];
           qh.field_k = new int[qk.field_j];
@@ -80,7 +80,7 @@ final class eb extends hc {
             byte[] var22 = new byte[var7];
             byte[] var20 = var22;
             byte[] var9 = var20;
-            hn.field_b[var4Lifetime5] = var22;
+            CheckboxPainter.field_b[var4Lifetime5] = var22;
             boolean var10 = false;
             int var11 = var18.readUnsignedByte(0);
             if ((var11 & 1) == 0) {
@@ -116,7 +116,7 @@ final class eb extends hc {
                 }
               }
             }
-            bj.field_E[var4Lifetime5] = (var10);
+            UiContainer.field_E[var4Lifetime5] = (var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -133,15 +133,15 @@ final class eb extends hc {
         }
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {
+    final boolean onPointerPressed(int offsetY, int pointerX, byte guard, int pointerY, int offsetX, UiComponent root, int button) {
         String stackIn_21_2 = null;
         int var12 = EscapeVector.obfuscationControl;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.onPointerPressed(offsetY, pointerX, guard, pointerY, offsetX, root, button)) {
             return false;
           }
-          int var8_int = -param4 - this.field_k - (this.field_D - param1);
-          int var9 = -this.field_j + (-param0 + (-this.field_I + param3));
+          int var8_int = -offsetX - this.x - (this.field_D - pointerX);
+          int var9 = -this.y + (-offsetY + (-this.field_I + pointerY));
           if (this.field_N * this.field_N <= var8_int * var8_int + var9 * var9) {
             return true;
           }
@@ -163,13 +163,13 @@ final class eb extends hc {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8 = decompiledCaughtException;
           RuntimeException stackIn_20_0 = var8;
-          StringBuilder stackIn_20_1 = new StringBuilder().append("eb.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          StringBuilder stackIn_20_1 = new StringBuilder().append("eb.V(").append(offsetY).append(',').append(pointerX).append(',').append(guard).append(',').append(pointerY).append(',').append(offsetX).append(',');
+          if (root == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(button).append(')').toString());
         }
     }
 

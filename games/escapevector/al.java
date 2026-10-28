@@ -64,7 +64,7 @@ final class al {
         return var4;
     }
 
-    final static af a(int param0, int param1, SystemTaskService param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, SystemTaskService param2, int param3, int param4, int param5) {
         String stackIn_10_2 = null;
         try {
           java.awt.Frame var8 = IntrusiveNodeHashTable.a((byte) 93, param0, param3, param2, param4, param5);
@@ -72,7 +72,7 @@ final class al {
           if (var8 == null) {
             return null;
           }
-          af var7 = new af();
+          FullscreenFocusCanvas var7 = new FullscreenFocusCanvas();
           var7.field_d = var8;
           var7.field_d.add((java.awt.Component) ((Object) var7));
           if (param1 != -16493) {
@@ -81,7 +81,7 @@ final class al {
           var7.setBounds(0, 0, param0, param3);
           var7.addFocusListener(var7);
           var7.requestFocus();
-          af stackIn_6_0 = var7;
+          FullscreenFocusCanvas stackIn_6_0 = var7;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

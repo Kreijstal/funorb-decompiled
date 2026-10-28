@@ -20,7 +20,7 @@ final class HudMessage extends IntrusiveNode {
     final static boolean a(boolean param0) {
         if (!param0) {
           HudMessage.a((byte) -76);
-          if (pg.field_c == null) {
+          if (TextLayout.field_c == null) {
             return false;
           }
           if (al.field_d == ck.field_t) {
@@ -28,7 +28,7 @@ final class HudMessage extends IntrusiveNode {
           }
           return false;
         }
-        if (pg.field_c == null) {
+        if (TextLayout.field_c == null) {
           return false;
         }
         if (al.field_d == ck.field_t) {

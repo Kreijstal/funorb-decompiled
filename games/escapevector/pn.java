@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pn extends fj implements qb {
+class pn extends fj implements ButtonListener {
     private boolean field_lb;
     private boolean field_ob;
     private boolean field_tb;
@@ -32,7 +32,7 @@ class pn extends fj implements qb {
             var6.a(false, TerrainMap.field_i, 11);
             var6.a(false, d.field_d, 17);
           } else if (param2 == 256) {
-            var6.a((wn) (this), (byte) -67, sh.field_s);
+            var6.a((UiListener) (this), (byte) -67, sh.field_s);
           } else {
             qi stackIn_14_0 = var6;
             boolean stackIn_14_1 = false;
@@ -52,7 +52,7 @@ class pn extends fj implements qb {
               this.a(var6, 30);
               return;
             }
-            var6.a((wn) (this), (byte) -67, WhirlpoolHasher.field_g);
+            var6.a((UiListener) (this), (byte) -67, WhirlpoolHasher.field_g);
           } else {
             var6.a(false, ej.field_c, 9);
           }
@@ -154,14 +154,14 @@ class pn extends fj implements qb {
         }
     }
 
-    final boolean a(hm param0, char param1, int param2, int param3) {
+    final boolean onFocusedKey(UiComponent root, char character, int keyCode, int guard) {
         String stackIn_11_2 = null;
         try {
-          if (param3 < 0) {
+          if (guard < 0) {
             return true;
           }
-          if (param2 != 13) {
-            boolean stackIn_7_0 = super.a(param0, param1, param2, 117);
+          if (keyCode != 13) {
+            boolean stackIn_7_0 = super.onFocusedKey(root, character, keyCode, 117);
             return stackIn_7_0;
           }
           this.o(-18861);
@@ -171,26 +171,26 @@ class pn extends fj implements qb {
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var5;
           StringBuilder stackIn_10_1 = new StringBuilder().append("pn.G(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
-    public void a(hc param0, int param1, int param2, int param3, int param4) {
+    public void onAction(TextButton button, int buttonCode, int localY, int guard, int localX) {
         String stackIn_9_2 = null;
         try {
-          if (param3 != 1) {
+          if (guard != 1) {
             return;
           }
           if (!this.field_tb) {
             md.a(PointCloudEffect.d((byte) -85), (byte) -96, "tochangedisplayname.ws");
             return;
           }
-          WhirlpoolHasher.a(3, param3 + 106);
+          WhirlpoolHasher.a(3, guard + 106);
           this.o(-18861);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -198,12 +198,12 @@ class pn extends fj implements qb {
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_8_0 = var6;
           StringBuilder stackIn_8_1 = new StringBuilder().append("pn.K(");
-          if (param0 == null) {
+          if (button == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 

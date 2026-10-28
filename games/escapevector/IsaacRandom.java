@@ -8,8 +8,8 @@ final class IsaacRandom {
     private int[] field_i;
     private int[] field_c;
     private int field_b;
-    static af field_d;
-    static rf field_h;
+    static FullscreenFocusCanvas field_d;
+    static ValidationState field_h;
     private int field_g;
 
     private final void initialize(boolean guard) {
@@ -212,6 +212,6 @@ final class IsaacRandom {
 
     static {
         field_f = new int[8192];
-        field_h = new rf();
+        field_h = new ValidationState();
     }
 }

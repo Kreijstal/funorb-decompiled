@@ -30,12 +30,12 @@ final class GameplaySession {
     private int initialTilesHigh;
     private int terrainTheme;
     private byte[][] levelData;
-    private ce field_Y;
+    private TrackerMusicDefinition field_Y;
     int levelIndex;
     int gameMode;
     int worldWidth;
     private IntrusiveDeque pointCloudEffects;
-    private od field_Db;
+    private SelfDestructEffects field_Db;
     private PointCloudEffect exhaustParticles;
     int spawnXQ16;
     private int shipAngle256;
@@ -272,7 +272,7 @@ final class GameplaySession {
           return;
         }
         this.triShotEnabled = true;
-        af.a(0);
+        FullscreenFocusCanvas.a(0);
         this.a(-128, hd.field_a);
         if (param1 != 59) {
           this.field_oc = -54;
@@ -370,7 +370,7 @@ final class GameplaySession {
 
     private final void t(int param0) {
         int var5 = EscapeVector.obfuscationControl;
-        ce.field_f.c(0, this.gameMode, this.levelIndex);
+        TrackerMusicDefinition.field_f.c(0, this.gameMode, this.levelIndex);
         this.o(0);
         if (this.levelIndex == 15 &&
           this.firstLevelIndex <= 0) {
@@ -461,7 +461,7 @@ final class GameplaySession {
           param1 == 5) {
           var3 = PcmResampler.field_b;
         } else if (5 == param1) {
-          var3 = af.field_g;
+          var3 = FullscreenFocusCanvas.field_g;
         }
         return var3;
     }
@@ -469,7 +469,7 @@ final class GameplaySession {
     private final void a(int param0, boolean param1) {
         this.stopSessionAudio((byte) -41);
         this.pointCloudEffects.clear((byte) 118);
-        this.field_Db = new od(this);
+        this.field_Db = new SelfDestructEffects(this);
         this.exhaustParticles.f((byte) -125);
         if (param0 != 24661) {
           PcmSample var4 = (PcmSample) null;
@@ -1244,7 +1244,7 @@ final class GameplaySession {
           re.a(1820, var5);
         }
         if (param0 == ~this.levelIndex) {
-          DialogueScreen var6 = new DialogueScreen(bj.field_F, ae.field_c, me.field_g, false);
+          DialogueScreen var6 = new DialogueScreen(UiContainer.field_F, ae.field_c, me.field_g, false);
           re.a(param0 + 1829, var6);
         }
         if (this.levelIndex == 12) {
@@ -1363,7 +1363,7 @@ final class GameplaySession {
               IOException var3 = (IOException) (Object) decompiledCaughtException;
             }
             if (guard < 36) {
-              this.field_Db = (od) null;
+              this.field_Db = (SelfDestructEffects) null;
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -1415,11 +1415,11 @@ final class GameplaySession {
     }
 
     final static void c(boolean param0, int param1) {
-        pg.field_b = true;
+        TextLayout.field_b = true;
         if (param1 != 2560) {
           GameplaySession.c((byte) 49);
         }
-        hm.field_o = new pf(param0);
+        UiComponent.field_o = new pf(param0);
         di.field_d = null;
         mj.field_d = 0;
         gi.a((byte) -93);
@@ -1610,7 +1610,7 @@ final class GameplaySession {
 
     private final void f(boolean param0) {
         int var2 = this.score + this.levelScore;
-        ce.field_f.d((byte) -101, this.gameMode, var2);
+        TrackerMusicDefinition.field_f.d((byte) -101, this.gameMode, var2);
         if (param0) {
           this.tilesWide = -77;
         }
@@ -1632,7 +1632,7 @@ final class GameplaySession {
           DialogueScreen var7 = new DialogueScreen(DynamicTerrainRenderer.field_i, ae.field_c, co.field_e, false);
           re.a(1820, var7);
         } else if (this.levelIndex < 12) {
-          DialogueScreen var8 = new DialogueScreen(bj.field_F, ae.field_c, me.field_g, false);
+          DialogueScreen var8 = new DialogueScreen(UiContainer.field_F, ae.field_c, me.field_g, false);
           re.a(1820, var8);
         } else {
           DialogueScreen var9 = new DialogueScreen(vl.field_c, ae.field_c, SeekerPulseStream.field_t, false);
@@ -1717,7 +1717,7 @@ final class GameplaySession {
         if (param0 != 4251) {
           this.q(11);
         }
-        return wk.a(ah.field_l, false, sm.field_d, da.field_d[this.terrainTheme], IndexedSpriteState.field_j);
+        return wk.a(TextFieldValidator.field_l, false, DebouncedValidator.field_d, da.field_d[this.terrainTheme], IndexedSpriteState.field_j);
     }
 
     private final void c(int param0, int param1, int param2) {
@@ -1940,7 +1940,7 @@ final class GameplaySession {
 
     private final void E(int param0) {
         if (hi.a(this.gameMode, -2)) {
-          DialogueScreen var2 = new DialogueScreen(fn.field_e, ae.field_c, mb.field_b, true);
+          DialogueScreen var2 = new DialogueScreen(SpriteOffset.field_e, ae.field_c, mb.field_b, true);
           var2.field_m = false;
           re.a(1820, var2);
         }
@@ -1968,7 +1968,7 @@ final class GameplaySession {
         }
         if (null != this.field_Db) {
           boolean var5 = false;
-          ce var6 = this.field_Db.b(true);
+          TrackerMusicDefinition var6 = this.field_Db.b(true);
           if (var6 != null) {
             var2 = var5;
           }
@@ -2187,7 +2187,7 @@ final class GameplaySession {
                 this.field_i.fullHeight = 60;
                 var3_ref_ed.height = 60;
                 this.field_i.g();
-                SoftwareRasterizer.d();
+                SoftwareRasterizer.clearFramebuffer();
                 fh.field_g.c(SeekerMine.field_k[3 * this.field_y], 319, 20, 16777215, -1);
                 fh.field_g.c(SeekerMine.field_k[this.field_y * 3 + 1], 319, 40, 16777215, -1);
                 fh.field_g.c(SeekerMine.field_k[2 + this.field_y * 3], 319, 60, 16777215, -1);
@@ -2235,7 +2235,7 @@ final class GameplaySession {
             Sprite var2Lifetime1 = this.field_i;
             var2Lifetime1.height = 40;
             this.field_i.g();
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clearFramebuffer();
             int var3 = 0;
             for (int var4 = 0; var4 < this.field_d; var4++) {
               int var5 = this.field_g[var4];
@@ -2259,10 +2259,10 @@ final class GameplaySession {
         }
     }
 
-    private final ce w(byte param0) {
+    private final TrackerMusicDefinition w(byte param0) {
         Object var2 = null;
         int var3 = this.c(true);
-        ce[] var4 = rk.field_d;
+        TrackerMusicDefinition[] var4 = ObjectSpriteSet.field_d;
         if (var4 != null && var3 >= 0 && var4.length > var3 &&
           var4[var3] != null) {
           var2 = var4[var3];
@@ -2271,12 +2271,12 @@ final class GameplaySession {
           this.laserGateSpans = (IntrusiveDeque) null;
         }
         if (this.field_Db != null) {
-          ce var5 = this.field_Db.b(true);
+          TrackerMusicDefinition var5 = this.field_Db.b(true);
           if (var5 != null) {
             var2 = var5;
           }
         }
-        return (ce) (var2);
+        return (TrackerMusicDefinition) (var2);
     }
 
     private final LevelObject findCargoContainer(boolean guard) {
@@ -2314,7 +2314,7 @@ final class GameplaySession {
         if (aj.b(-100)) {
           return;
         }
-        if (od.field_k) {
+        if (SelfDestructEffects.field_k) {
           return;
         }
         int var3 = this.g(20824);
@@ -2376,7 +2376,7 @@ final class GameplaySession {
           int var7 = -16 + (var5.xQ16 >> 16) - param0;
           int stackIn_9_0 = -param1 + (var5.yQ16 >> 16) - 16;
           int var8 = stackIn_9_0;
-          while (-od.field_b.fullWidth < var7) {
+          while (-SelfDestructEffects.field_b.fullWidth < var7) {
             var7 = var7 - this.worldWidth;
           }
           for (var7 = var7 + this.worldWidth; 640 > var7; var7 = var7 + this.worldWidth) {
@@ -2388,7 +2388,7 @@ final class GameplaySession {
             }
             var9.e(8 + var7, var8 + 8);
             if (var6) {
-              od.field_b.c(var7, var8, 128);
+              SelfDestructEffects.field_b.c(var7, var8, 128);
             }
           }
           var5 = (SeekerMine) (this.seekerMines.next((byte) 70));
@@ -2659,7 +2659,7 @@ final class GameplaySession {
         LevelObject var4 = this.findCargoContainer(false);
         this.minimap = new Minimap(this, var4, gj.a(this.levelIndex, this.gameMode, (byte) 54));
         this.applyInitialPowerups((byte) 0);
-        en var5 = ce.field_f;
+        en var5 = TrackerMusicDefinition.field_f;
         if (var5 != null) {
           var5.a((byte) 36);
         }
@@ -2689,7 +2689,7 @@ final class GameplaySession {
         if (param1) {
           this.field_i = (Sprite) null;
         }
-        if (ce.field_f.a((byte) 54, param3, param2, param0)) {
+        if (TrackerMusicDefinition.field_f.a((byte) 54, param3, param2, param0)) {
           int fieldTemp$0 = this.field_z;
           this.field_z = this.field_z + 1;
           this.field_Lb[fieldTemp$0] = param2;
@@ -2888,11 +2888,11 @@ final class GameplaySession {
         GameplaySession.c((byte) -28);
         mj.field_d = param0;
         if (aj.b(-89) && (null != IntValueNode.field_i ||
-          ce.field_f.b(-49) ||
+          TrackerMusicDefinition.field_f.b(-49) ||
           ua.field_c.d(17523))) {
           PacketBuffer.field_h = true;
           di.field_d = new wc(2);
-          di.field_d.a(gb.a(dh.field_d, bj.field_y, 8158), true, 4767999);
+          di.field_d.a(gb.a(dh.field_d, UiContainer.field_y, 8158), true, 4767999);
           boolean decompiledFrameRemainder0 = false;
         }
         else {
@@ -2942,7 +2942,7 @@ final class GameplaySession {
           int var6 = (param0 >> 3) - param0;
           var6 += 240;
           if (var6 > 0) {
-            SoftwareRasterizer.f(0, var6, 640, 480);
+            SoftwareRasterizer.setClip(0, var6, 640, 480);
           }
           boolean var7 = false;
           while (true) {
@@ -3053,8 +3053,8 @@ final class GameplaySession {
           return;
         }
         mj.field_b.g();
-        SoftwareRasterizer.d();
-        String var3 = ce.a((byte) 120, this.gameMode, this.levelIndex);
+        SoftwareRasterizer.clearFramebuffer();
+        String var3 = TrackerMusicDefinition.a((byte) 120, this.gameMode, this.levelIndex);
         fh.field_g.c(var3, 160, 22, 7899280, -1);
         md.field_D.a(126);
         cf.a(mj.field_b, true, 1);
@@ -3162,7 +3162,7 @@ final class GameplaySession {
         if (param1 != 0) {
           return;
         }
-        ce var3 = this.w((byte) -123);
+        TrackerMusicDefinition var3 = this.w((byte) -123);
         int var4 = this.s(-68661304);
         boolean var5 = (this.t((byte) -48));
         if (var3 != null &&
@@ -3205,7 +3205,7 @@ final class GameplaySession {
         boolean stackIn_91_0 = false;
         int var11 = EscapeVector.obfuscationControl;
         if (!this.n((byte) 59)) {
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearFramebuffer();
           fh.field_g.c(this.r(4251), 320, 250, 16777215, -1);
           return;
         }
@@ -3324,7 +3324,7 @@ final class GameplaySession {
                 oj.a(306, 340, (byte) -116, DualLinkNode.field_g);
                 EscapeVector.a(Integer.toString(this.shieldEnergy + this.shieldEnergy), 340, 306, (byte) -43);
               }
-              oj.a(336, 340, (byte) 85, ad.field_c);
+              oj.a(336, 340, (byte) 85, BoundedUrlRequest.field_c);
               EscapeVector.a(Integer.toString(this.score), 340, 336, (byte) 119);
             } else {
               IntPoint.field_b.e(640 - IntPoint.field_b.fullWidth >> 1, 480 - IntPoint.field_b.fullHeight >> 1);
@@ -3900,7 +3900,7 @@ final class GameplaySession {
               gi.a((byte) -56);
               return;
             }
-            if (od.field_k &&
+            if (SelfDestructEffects.field_k &&
               nk.field_n == 12) {
               this.field_c = 63;
               this.tetheredObjectType = 1;
@@ -3909,7 +3909,7 @@ final class GameplaySession {
               this.field_rc = false;
               System.out.println("Level skip cheat activated");
             }
-            if (od.field_k &&
+            if (SelfDestructEffects.field_k &&
               nk.field_n == 11) {
               boolean stackIn_35_1 = !(this.easyMode);
               this.easyMode = stackIn_35_1;
@@ -3917,7 +3917,7 @@ final class GameplaySession {
               this.field_rc = stackIn_38_1;
               System.out.println("Easypeasy cheat activated");
             }
-            if (!od.field_k) {
+            if (!SelfDestructEffects.field_k) {
               continue;
             }
             int stackIn_82_0 = ~nk.field_n;
@@ -4425,7 +4425,7 @@ final class GameplaySession {
             if (decompiledFrameRemainder0 &&
               this.b(var16, Js5NetworkRequest.field_H, var17_int, -1)) {
               if (!this.shipDestroyed) {
-                int var18Lifetime2 = hc.a(this.gameMode, (byte) 77);
+                int var18Lifetime2 = TextButton.a(this.gameMode, (byte) 77);
                 this.levelScore = this.levelScore + var18Lifetime2;
                 v.a(8, var18Lifetime2);
               }
@@ -4604,7 +4604,7 @@ final class GameplaySession {
                     this.field_R = null;
                   }
                   if (var5_ref_hl == null) {
-                    PcmSampleStream var35 = PcmSampleStream.c(fn.field_f, 100, 3584 * qm.field_c / 64, 8192);
+                    PcmSampleStream var35 = PcmSampleStream.c(SpriteOffset.field_f, 100, 3584 * qm.field_c / 64, 8192);
                     var5_ref_hl = var35;
                     var35.h(-1);
                     pl.field_n.addSubstream(var35);
@@ -4795,7 +4795,7 @@ final class GameplaySession {
               var12 = ((var6 >> 4) * var4 + var5 * (var7 >> 4)) * qm.field_c / 64 >> 6;
               if (this.pickupAnimationTicks == 0 &&
                 var8 >= 150994944) {
-                pl.field_n.playSample(rk.field_c, 100, var12 >> 11);
+                pl.field_n.playSample(ObjectSpriteSet.field_c, 100, var12 >> 11);
                 this.field_W = true;
                 this.field_fb.field_l = 0;
               } else {
@@ -4897,7 +4897,7 @@ final class GameplaySession {
                   if (!(var41.width <= var13_int) &&
                     var41.pixels[(var9Lifetime5 - var12) * var41.width + var13_int] != 0) {
                     if (!this.shipDestroyed) {
-                      int var14Lifetime2 = hc.a(this.gameMode, (byte) 112);
+                      int var14Lifetime2 = TextButton.a(this.gameMode, (byte) 112);
                       this.levelScore = this.levelScore + var14Lifetime2;
                       v.a(8, var14Lifetime2);
                     }
@@ -5015,7 +5015,7 @@ final class GameplaySession {
                 var11_ref_ed.width = 7;
                 var10_ref_ed.fullHeight = 7;
                 ResourceArchive.field_a.g();
-                SoftwareRasterizer.d();
+                SoftwareRasterizer.clearFramebuffer();
                 ResourceArchive.field_m.a(4, (byte) 34, 4096, -rockBuster.angle256 << 8, 4);
                 md.field_D.a(120);
                 var12 = (int)Math.sqrt((double)rockBuster.velocityYQ16 * (double)rockBuster.velocityYQ16 + (double)rockBuster.velocityXQ16 * (double)rockBuster.velocityXQ16);
@@ -5060,7 +5060,7 @@ final class GameplaySession {
                       continue;
                     }
                     if (!this.shipDestroyed) {
-                      int var24 = hc.a(this.gameMode, (byte) 105);
+                      int var24 = TextButton.a(this.gameMode, (byte) 105);
                       this.levelScore = this.levelScore + var24;
                       v.a(8, var24);
                     }
@@ -5181,10 +5181,10 @@ final class GameplaySession {
             if (turret.shotCooldownTicks > 0) {
               turret.shotCooldownTicks = turret.shotCooldownTicks - 1;
             } else if (!this.shipDestroyed) {
-              fn muzzleOffset = rf.a(turret.spriteFrame, 16384);
+              SpriteOffset muzzleOffset = ValidationState.a(turret.spriteFrame, 16384);
               if (muzzleOffset != null) {
-                int var9Lifetime8 = turret.x + muzzleOffset.field_c << 16;
-                int var10Lifetime5 = muzzleOffset.field_b + turret.y << 16;
+                int var9Lifetime8 = turret.x + muzzleOffset.x << 16;
+                int var10Lifetime5 = muzzleOffset.y + turret.y << 16;
                 int var11Lifetime4 = this.shipXQ16 - var9Lifetime8;
                 var12 = this.shipYQ16 - var10Lifetime5;
                 if (!(var11Lifetime4 >= (-this.worldWidth << 15))) {
@@ -5316,7 +5316,7 @@ final class GameplaySession {
         int stackIn_48_4 = 0;
         ih var13 = fh.field_g;
         int var3 = var13.b(di.field_b);
-        int var4 = var13.b(k.field_p);
+        int var4 = var13.b(TextWidgetPainter.field_p);
         if (var4 > var3) {
           var3 = var4;
         }
@@ -5324,7 +5324,7 @@ final class GameplaySession {
         int var6 = 40;
         int var7 = 18;
         if (0 < this.rockBusterAmmo) {
-          int var4Lifetime1 = var13.b(af.field_f);
+          int var4Lifetime1 = var13.b(FullscreenFocusCanvas.field_f);
           var6 = var6 + var7;
           if (var3 < var4Lifetime1) {
             var3 = var4Lifetime1;
@@ -5352,11 +5352,11 @@ final class GameplaySession {
         var13.b(di.field_b, var3 + 6, var10, 10004656, -1);
         var13.a(Integer.toString(this.fuel), 6 + var3, var10, 16777215, -1);
         var10 = var10 + var7;
-        var13.b(k.field_p, var3 + 6, var10, 10004656, -1);
+        var13.b(TextWidgetPainter.field_p, var3 + 6, var10, 10004656, -1);
         var13.a(Integer.toString(this.shieldEnergy + this.shieldEnergy), 6 + var3, var10, 16777215, -1);
         var10 = var10 + var7;
         if (this.rockBusterAmmo > 0) {
-          var13.b(af.field_f, var3 + 6, var10, 10004656, -1);
+          var13.b(FullscreenFocusCanvas.field_f, var3 + 6, var10, 10004656, -1);
           var13.a(Integer.toString(this.rockBusterAmmo), 6 + var3, var10, 16777215, -1);
           var10 = var10 + var7;
         }
@@ -5393,7 +5393,7 @@ final class GameplaySession {
         if (SpriteState.field_r ||
           this.countdownActive) {
           var6Lifetime1 += 18;
-          int var4Lifetime7 = var13.b(hn.field_f);
+          int var4Lifetime7 = var13.b(CheckboxPainter.field_f);
           if (var3Lifetime1 < var4Lifetime7) {
             var3Lifetime1 = var4Lifetime7;
           }
@@ -5425,7 +5425,7 @@ final class GameplaySession {
         if (SpriteState.field_r ||
           this.countdownActive) {
           int var12 = this.a((byte) 114, 50, 16777215, 16711680);
-          var13.b(hn.field_f, -var5Lifetime1 + 634, 76, 10004656, -1);
+          var13.b(CheckboxPainter.field_f, -var5Lifetime1 + 634, 76, 10004656, -1);
           var13.a(var11, -var5Lifetime1 + 634, 76, var12, -1);
         }
     }
@@ -6222,7 +6222,7 @@ final class GameplaySession {
           this.objectiveType = 0;
           this.levelObjects = new Vector();
           this.pointCloudEffects = new IntrusiveDeque();
-          this.field_Db = new od(this);
+          this.field_Db = new SelfDestructEffects(this);
           this.exhaustParticles = new PointCloudEffect(512);
           this.exhaustWriteIndex = 0;
           this.activeExhaustParticles = 0;
@@ -6240,8 +6240,8 @@ final class GameplaySession {
           this.initialPowerups = new IntrusiveDeque();
           this.laserGateSpans = new IntrusiveDeque();
           try {
-            od.field_k = l.a((byte) -111);
-            if (od.field_k) {
+            SelfDestructEffects.field_k = l.a((byte) -111);
+            if (SelfDestructEffects.field_k) {
               System.out.println("Mod logged in: Cheats activated");
             }
             this.field_jb = PcmSampleStream.a(oj.field_N, 100, 0);
@@ -6298,7 +6298,7 @@ final class GameplaySession {
           this.objectiveType = 0;
           this.levelObjects = new Vector();
           this.pointCloudEffects = new IntrusiveDeque();
-          this.field_Db = new od(this);
+          this.field_Db = new SelfDestructEffects(this);
           this.exhaustParticles = new PointCloudEffect(512);
           this.exhaustWriteIndex = 0;
           this.activeExhaustParticles = 0;

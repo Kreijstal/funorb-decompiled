@@ -32,7 +32,7 @@ final class ji {
               }
               var7 = new SectorCacheStore(param1, uc.field_h, bg.field_e[param1], 2097152);
             }
-            CachedArchiveProvider var8 = af.field_e.a(param2, 255, (SectorCacheStore) (var6), param1, (SectorCacheStore) (var7));
+            CachedArchiveProvider var8 = FullscreenFocusCanvas.field_e.a(param2, 255, (SectorCacheStore) (var6), param1, (SectorCacheStore) (var7));
             if (param0) {
               var8.b((byte) -49);
             }

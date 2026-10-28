@@ -67,23 +67,23 @@ final class CoverageBitmapFont extends BitmapFont {
         }
     }
 
-    private final static byte[][] a(int[] param0, byte[][] param1) {
-        for (int var2_int = 0; var2_int < param0.length; var2_int++) {
-          int var3 = param0[var2_int];
+    private final static byte[][] convertPaletteToCoverage(int[] palette, byte[][] glyphPixels) {
+        for (int var2_int = 0; var2_int < palette.length; var2_int++) {
+          int var3 = palette[var2_int];
           int var4_int = (var3 >> 15 & 510) + (var3 & 255);
-          param0[var2_int] = var4_int / 3 + (var3 >> 8 & 255) >> 1;
+          palette[var2_int] = var4_int / 3 + (var3 >> 8 & 255) >> 1;
         }
-        byte[][] var2 = param1;
+        byte[][] var2 = glyphPixels;
         for (int var3Lifetime1 = 0; var3Lifetime1 < var2.length; var3Lifetime1++) {
           byte[] var4 = var2[var3Lifetime1];
           for (int var5 = 0; var5 < var4.length; var5++) {
             int var6 = var4[var5];
             if (var6 != 0) {
-              var4[var5] = (byte)param0[var6];
+              var4[var5] = (byte)palette[var6];
             }
           }
         }
-        return param1;
+        return glyphPixels;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
@@ -130,7 +130,7 @@ final class CoverageBitmapFont extends BitmapFont {
     CoverageBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
         this.field_O = new byte[256][];
-        this.field_O = CoverageBitmapFont.a(param5, param6);
+        this.field_O = CoverageBitmapFont.convertPaletteToCoverage(param5, param6);
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

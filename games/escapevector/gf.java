@@ -36,15 +36,15 @@ final class gf {
         if (param0 != -78) {
           String var4 = (String) null;
           gf.a((String) null, (byte) 43);
-          od.field_j.field_g = od.field_j.field_g + 1;
+          SelfDestructEffects.field_j.field_g = SelfDestructEffects.field_j.field_g + 1;
           if (param1 == 51) {
-            od.field_j.field_d = 2;
-            if (od.field_j.field_g < 2) {
-              if (od.field_j.field_g >= 2 &&
+            SelfDestructEffects.field_j.field_d = 2;
+            if (SelfDestructEffects.field_j.field_g < 2) {
+              if (SelfDestructEffects.field_j.field_g >= 2 &&
                 param1 == 50) {
                 return 5;
               }
-              if (od.field_j.field_g < 4) {
+              if (SelfDestructEffects.field_j.field_g < 4) {
                 return -1;
               }
               return 1;
@@ -52,23 +52,23 @@ final class gf {
             if (param1 == 51) {
               return 2;
             }
-            if (od.field_j.field_g >= 2 &&
+            if (SelfDestructEffects.field_j.field_g >= 2 &&
               param1 == 50) {
               return 5;
             }
-            if (od.field_j.field_g < 4) {
+            if (SelfDestructEffects.field_j.field_g < 4) {
               return -1;
             }
             return 1;
           }
           if (param1 == 50) {
-            od.field_j.field_d = 5;
-            if (od.field_j.field_g < 2) {
-              if (od.field_j.field_g >= 2 &&
+            SelfDestructEffects.field_j.field_d = 5;
+            if (SelfDestructEffects.field_j.field_g < 2) {
+              if (SelfDestructEffects.field_j.field_g >= 2 &&
                 param1 == 50) {
                 return 5;
               }
-              if (od.field_j.field_g < 4) {
+              if (SelfDestructEffects.field_j.field_g < 4) {
                 return -1;
               }
               return 1;
@@ -76,22 +76,22 @@ final class gf {
             if (param1 == 51) {
               return 2;
             }
-            if (od.field_j.field_g >= 2 &&
+            if (SelfDestructEffects.field_j.field_g >= 2 &&
               param1 == 50) {
               return 5;
             }
-            if (od.field_j.field_g < 4) {
+            if (SelfDestructEffects.field_j.field_g < 4) {
               return -1;
             }
             return 1;
           }
-          od.field_j.field_d = 1;
-          if (od.field_j.field_g < 2) {
-            if (od.field_j.field_g >= 2 &&
+          SelfDestructEffects.field_j.field_d = 1;
+          if (SelfDestructEffects.field_j.field_g < 2) {
+            if (SelfDestructEffects.field_j.field_g >= 2 &&
               param1 == 50) {
               return 5;
             }
-            if (od.field_j.field_g >= 4) {
+            if (SelfDestructEffects.field_j.field_g >= 4) {
               return 1;
             }
             return -1;
@@ -99,71 +99,71 @@ final class gf {
           if (param1 == 51) {
             return 2;
           }
-          if (od.field_j.field_g >= 2 &&
+          if (SelfDestructEffects.field_j.field_g >= 2 &&
             param1 == 50) {
             return 5;
           }
-          if (od.field_j.field_g < 4) {
+          if (SelfDestructEffects.field_j.field_g < 4) {
             return -1;
           }
           return 1;
         }
-        od.field_j.field_g = od.field_j.field_g + 1;
+        SelfDestructEffects.field_j.field_g = SelfDestructEffects.field_j.field_g + 1;
         if (param1 == 51) {
-          od.field_j.field_d = 2;
-          if (od.field_j.field_g >= 2 &&
+          SelfDestructEffects.field_j.field_d = 2;
+          if (SelfDestructEffects.field_j.field_g >= 2 &&
             param1 == 51) {
             return 2;
           }
-          if (od.field_j.field_g >= 2) {
+          if (SelfDestructEffects.field_j.field_g >= 2) {
             if (param1 != 50) {
-              if (od.field_j.field_g >= 4) {
+              if (SelfDestructEffects.field_j.field_g >= 4) {
                 return 1;
               }
               return -1;
             }
             return 5;
           }
-          if (od.field_j.field_g >= 4) {
+          if (SelfDestructEffects.field_j.field_g >= 4) {
             return 1;
           }
           return -1;
         }
         if (param1 == 50) {
-          od.field_j.field_d = 5;
-          if (od.field_j.field_g >= 2 &&
+          SelfDestructEffects.field_j.field_d = 5;
+          if (SelfDestructEffects.field_j.field_g >= 2 &&
             param1 == 51) {
             return 2;
           }
-          if (od.field_j.field_g >= 2) {
+          if (SelfDestructEffects.field_j.field_g >= 2) {
             if (param1 != 50) {
-              if (od.field_j.field_g >= 4) {
+              if (SelfDestructEffects.field_j.field_g >= 4) {
                 return 1;
               }
               return -1;
             }
             return 5;
           }
-          if (od.field_j.field_g >= 4) {
+          if (SelfDestructEffects.field_j.field_g >= 4) {
             return 1;
           }
           return -1;
         }
-        od.field_j.field_d = 1;
-        if (od.field_j.field_g >= 2 &&
+        SelfDestructEffects.field_j.field_d = 1;
+        if (SelfDestructEffects.field_j.field_g >= 2 &&
           param1 == 51) {
           return 2;
         }
-        if (od.field_j.field_g >= 2) {
+        if (SelfDestructEffects.field_j.field_g >= 2) {
           if (param1 != 50) {
-            if (od.field_j.field_g >= 4) {
+            if (SelfDestructEffects.field_j.field_g >= 4) {
               return 1;
             }
             return -1;
           }
           return 5;
         }
-        if (od.field_j.field_g >= 4) {
+        if (SelfDestructEffects.field_j.field_g >= 4) {
           return 1;
         }
         return -1;

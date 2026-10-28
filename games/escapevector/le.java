@@ -28,10 +28,10 @@ final class le {
           return gj.field_g;
         }
         if (!ii.field_a.b(0)) {
-          return ah.field_l;
+          return TextFieldValidator.field_l;
         }
         if (!ii.field_a.a(0, "commonui")) {
-          return sm.field_d + " - " + ii.field_a.a("commonui", 0) + "%";
+          return DebouncedValidator.field_d + " - " + ii.field_a.a("commonui", 0) + "%";
         }
         if (!w.field_ab.b(0)) {
           return CipherPacketBuffer.field_o;

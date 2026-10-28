@@ -25,7 +25,7 @@ final class qd extends IntrusiveNode {
           if (var3 != 2) {
             return true;
           }
-          if (bj.e((byte) -56)) {
+          if (UiContainer.e((byte) -56)) {
             return true;
           }
           return false;
@@ -41,7 +41,7 @@ final class qd extends IntrusiveNode {
         if (var3Lifetime1 != 2) {
           return true;
         }
-        if (!bj.e((byte) -56)) {
+        if (!UiContainer.e((byte) -56)) {
           return false;
         }
         return true;
@@ -138,18 +138,18 @@ final class qd extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$3214d41809e1(boolean param0, boolean param1, int param2, boolean param3) {
+    final static String chooseAlternateClickPromptWithIntGuard(boolean firstFlag, boolean secondFlag, int guard, boolean thirdFlag) {
         int var4 = 0;
-        if (param2 != -8) {
+        if (guard != -8) {
           field_l = false;
         }
-        if (param0) {
+        if (firstFlag) {
           var4 += 4;
         }
-        if (param3) {
+        if (thirdFlag) {
           var4 += 2;
         }
-        if (!param1) {
+        if (!secondFlag) {
           return fd.field_f[var4];
         }
         var4++;

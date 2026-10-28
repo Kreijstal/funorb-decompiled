@@ -8,7 +8,7 @@ final class wc {
     int field_h;
     boolean field_j;
     private int field_a;
-    static ce field_d;
+    static TrackerMusicDefinition field_d;
     private int field_c;
     private int field_i;
     int field_k;
@@ -88,7 +88,7 @@ final class wc {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 == 0) {
-          int var6 = this.a((byte) 113, param2, dh.field_d, param3, param4, bj.field_y, param1);
+          int var6 = this.a((byte) 113, param2, dh.field_d, param3, param4, UiContainer.field_y, param1);
           int var7 = this.a((byte) 124, param2, sf.field_c, param3, param4, ng.field_ob, param1);
           this.a(var7, (byte) 118, var6);
           return;
@@ -199,7 +199,7 @@ final class wc {
         bn.field_d = kh.a(param2, (byte) -114, "commonui", "frame_bottom");
         cc.field_j = fe.a("commonui", param2, "jagex_logo_grey", true);
         fk.field_f = kh.a(param2, (byte) -81, "commonui", "button");
-        ul.field_E = ui.a("validation", param2, "commonui", (byte) 77);
+        EditableTextWidget.field_E = ui.a("validation", param2, "commonui", (byte) 77);
         ke.field_c = (BitmapFont) ((Object) ac.a("arezzo12", -110, param2, "commonui", param3));
         Js5Transport.field_a = (BitmapFont) ((Object) ac.a("arezzo14", -124, param2, "commonui", param3));
         dl.field_b = (BitmapFont) ((Object) ac.a("arezzo14bold", -93, param2, "commonui", param3));
@@ -225,7 +225,7 @@ final class wc {
           IndexedSprite[] var14 = var6[var9];
           IndexedSprite[] var10 = var14;
           for (int var11_int = 0; var14.length > var11_int; var11_int++) {
-            var14[var11_int] = rf.a(-50, var5[var9], var19[var11_int]);
+            var14[var11_int] = ValidationState.a(-50, var5[var9], var19[var11_int]);
           }
         }
         var9 = var17.height;
@@ -275,7 +275,7 @@ final class wc {
           ArchiveRequest.a(param1, var4, -755);
           return var4;
         }
-        field_d = (ce) null;
+        field_d = (TrackerMusicDefinition) null;
         en.field_i.addLast(-12328, var4);
         ArchiveRequest.a(param1, var4, -755);
         return var4;
@@ -298,7 +298,7 @@ final class wc {
           this.field_i = qi.field_N;
           this.field_j = true;
           this.field_h = param0;
-          this.field_f = af.field_h;
+          this.field_f = FullscreenFocusCanvas.field_h;
         }
         if (this.field_a == 0) {
           if (qi.field_N == 0) {
@@ -310,7 +310,7 @@ final class wc {
                 return;
               }
               if (!this.field_j &&
-                !ah.field_h) {
+                !TextFieldValidator.field_h) {
                 return;
               }
               if (param2 >= 0) {
@@ -352,7 +352,7 @@ final class wc {
           return;
         }
         if (!this.field_j &&
-          !ah.field_h) {
+          !TextFieldValidator.field_h) {
           return;
         }
         if (param2 < 0) {
@@ -409,7 +409,7 @@ final class wc {
           se.a(param2, param1 + 15130);
           return;
         }
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clearFramebuffer();
         if (param1 != 1983) {
           wc.a(97, 35, -50, (byte) 98);
           se.a(param2, param1 + 15130);

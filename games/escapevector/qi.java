@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends bj implements qb {
+final class qi extends UiContainer implements ButtonListener {
     static Sprite[][] field_M;
     static PcmSample field_J;
     private int field_H;
@@ -9,7 +9,7 @@ final class qi extends bj implements qb {
     private pn field_K;
     static int field_N;
     private String field_G;
-    private hc[] field_I;
+    private TextButton[] field_I;
     private int[] field_O;
     private BitmapFont field_L;
 
@@ -36,7 +36,7 @@ final class qi extends bj implements qb {
         try {
           int var4_int = this.field_H;
           this.a(1 + var4_int, 106);
-          this.field_I[var4_int] = this.a((wn) (this), (byte) -67, param1);
+          this.field_I[var4_int] = this.a((UiListener) (this), (byte) -67, param1);
           this.field_O[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "qi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -48,8 +48,8 @@ final class qi extends bj implements qb {
         if (param0 <= this.field_H) {
           return;
         }
-        hc[] var7 = new hc[param0];
-        hc[] var3 = var7;
+        TextButton[] var7 = new TextButton[param0];
+        TextButton[] var3 = var7;
         int[] var4 = new int[param0];
         for (int var5 = 0; this.field_H > var5; var5++) {
           var7[var5] = this.field_I[var5];
@@ -63,21 +63,21 @@ final class qi extends bj implements qb {
         }
     }
 
-    final hc a(wn param0, byte param1, String param2) {
+    final TextButton a(UiListener param0, byte param1, String param2) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
-          hc var4 = new hc(param2, param0);
-          var4.field_s = (db) ((Object) new ck());
-          int var5 = this.field_x - 2;
+          TextButton var4 = new TextButton(param2, param0);
+          var4.painter = (WidgetPainter) ((Object) new ck());
+          int var5 = this.height - 2;
           if (param1 != -67) {
             byte[] var6 = (byte[]) null;
             qi.a(114, 51, (byte[]) null, (byte) 116);
           }
-          this.a(this.field_g, 0, 0, true, this.field_x + 34);
-          var4.a(this.field_g - 14, var5, 7, true, 30);
+          this.setBounds(this.width, 0, 0, true, this.height + 34);
+          var4.setBounds(this.width - 14, var5, 7, true, 30);
           this.b(var4, false);
-          hc stackIn_3_0 = var4;
+          TextButton stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,29 +100,29 @@ final class qi extends bj implements qb {
     }
 
     qi(pn param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (db) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         this.field_H = 0;
         try {
           this.field_G = param2;
           this.field_L = param1;
           this.field_K = param0;
           int var4_int = this.field_G == null ? 0 : this.field_L.b(this.field_G, 260, this.field_L.field_r);
-          this.a(288, 0, 0, true, 22 + var4_int);
+          this.setBounds(288, 0, 0, true, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(hc param0, int param1, int param2, int param3, int param4) {
+    public final void onAction(TextButton button, int buttonCode, int localY, int guard, int localX) {
         String stackIn_13_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
           int var6_int = 0;
-          if (param3 != 1) {
+          if (guard != 1) {
             return;
           }
           while (var6_int < this.field_H) {
-            if (this.field_I[var6_int] != param0) {
+            if (this.field_I[var6_int] != button) {
               var6_int++;
               continue;
             }
@@ -140,12 +140,12 @@ final class qi extends bj implements qb {
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var6;
           StringBuilder stackIn_12_1 = new StringBuilder().append("qi.K(");
-          if (param0 == null) {
+          if (button == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 
@@ -185,27 +185,27 @@ final class qi extends bj implements qb {
           var14 = 3 + var13;
           var12 = 4 + var11;
         }
-        SoftwareRasterizer.e(-(param8 * 16) - var9 + param6, param4, var10 + (param1 - param6), param0);
-        SoftwareRasterizer.e(16 * param8 + (-var9 + param6), param4, var10 + (param1 - param6), param0);
+        SoftwareRasterizer.drawHorizontalLine(-(param8 * 16) - var9 + param6, param4, var10 + (param1 - param6), param0);
+        SoftwareRasterizer.drawHorizontalLine(16 * param8 + (-var9 + param6), param4, var10 + (param1 - param6), param0);
         int var17 = -30 % ((param5 - 20) / 45);
-        SoftwareRasterizer.e(-(16 * param8) - var11 + param6, -1 + param7, -param6 + (param1 + var12), param0);
-        SoftwareRasterizer.e(-var11 + param6 + param8 * 16, param7 - 1, var12 + (-param6 + param1), param0);
+        SoftwareRasterizer.drawHorizontalLine(-(16 * param8) - var11 + param6, -1 + param7, -param6 + (param1 + var12), param0);
+        SoftwareRasterizer.drawHorizontalLine(-var11 + param6 + param8 * 16, param7 - 1, var12 + (-param6 + param1), param0);
         SoftwareRasterizer.g(param6, -(12 * param8) + (-var13 + param4), param7 + (-param4 + var14), param0);
         SoftwareRasterizer.g(param6, -var13 + (param4 + 12 * param8), var14 - param4 + param7, param0);
         SoftwareRasterizer.g(-1 + param1, -(12 * param8) + (param4 - var15), param7 + (-param4 + var16), param0);
         SoftwareRasterizer.g(param1 - 1, 12 * param8 + (-var15 + param4), -param4 + (param7 + var16), param0);
-        SoftwareRasterizer.e(-var9 + param6 + param8 * 16, param4, -param6 + (param1 + var10) - param8 * 32, param2);
-        SoftwareRasterizer.e(-var11 + param6 + param8 * 16, param7 - 1, -(32 * param8) + (var12 - param6) + param1, param2);
+        SoftwareRasterizer.drawHorizontalLine(-var9 + param6 + param8 * 16, param4, -param6 + (param1 + var10) - param8 * 32, param2);
+        SoftwareRasterizer.drawHorizontalLine(-var11 + param6 + param8 * 16, param7 - 1, -(32 * param8) + (var12 - param6) + param1, param2);
         SoftwareRasterizer.g(param6, param8 * 12 + (param4 - var13), -(24 * param8) - param4 + (param7 + var14), param2);
         SoftwareRasterizer.g(-1 + param1, 12 * param8 + (param4 - var15), var16 + (-param4 + (param7 - param8 * 24)), param2);
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        if (param1 <= 85) {
+    final void drawLayer(int screenY, byte guard, int layer, int screenX) {
+        if (guard <= 85) {
           qi.a(-30, 97, 116, 20, 118, -63, -60, -67, 114);
         }
-        super.a(param0, (byte) 103, param2, param3);
-        this.field_L.a(this.field_G, 14 + (this.field_k + param3), 10 + param0 + this.field_j, -28 + this.field_g, this.field_x, 16777215, -1, 0, 0, this.field_L.field_r);
+        super.drawLayer(screenY, (byte) 103, layer, screenX);
+        this.field_L.a(this.field_G, 14 + (this.x + screenX), 10 + screenY + this.y, -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_L.field_r);
     }
 
     final static String a(int param0, int param1, byte[] param2, byte param3) {

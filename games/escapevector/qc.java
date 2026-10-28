@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qc extends pn implements qb {
+final class qc extends pn implements ButtonListener {
     static String field_yb;
     private boolean field_wb;
     static String field_xb;
@@ -37,15 +37,15 @@ final class qc extends pn implements qb {
         }
     }
 
-    public final void a(hc param0, int param1, int param2, int param3, int param4) {
+    public final void onAction(TextButton button, int buttonCode, int localY, int guard, int localX) {
         String stackIn_13_2 = null;
         try {
           if (this.field_zb) {
             ve.a(122, false, true);
             return;
           }
-          sm.b((byte) -51);
-          if (param3 != 1) {
+          DebouncedValidator.b((byte) -51);
+          if (guard != 1) {
             return;
           }
           this.o(-18861);
@@ -55,12 +55,12 @@ final class qc extends pn implements qb {
           RuntimeException runtimeException = decompiledCaughtException;
           RuntimeException stackIn_12_0 = runtimeException;
           StringBuilder stackIn_12_1 = new StringBuilder().append("qc.K(");
-          if (param0 == null) {
+          if (button == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 
@@ -554,7 +554,7 @@ final class qc extends pn implements qb {
           }
           byte[] var2Lifetime118 = ki.a("ctrlkey", param0 ^ 10600);
           if (var2Lifetime118 != null) {
-            fn.field_a = RasterSnapshot.a(var2Lifetime118, 126);
+            SpriteOffset.field_a = RasterSnapshot.a(var2Lifetime118, 126);
           }
           byte[] var2Lifetime119 = ki.a("shieldkeys", 10592);
           if (null != var2Lifetime119) {
@@ -750,7 +750,7 @@ final class qc extends pn implements qb {
           }
           byte[] var2Lifetime167 = ki.a("fiverockbusters", 10592);
           if (var2Lifetime167 != null) {
-            af.field_g = RasterSnapshot.a(var2Lifetime167, 123);
+            FullscreenFocusCanvas.field_g = RasterSnapshot.a(var2Lifetime167, 123);
           }
           byte[] var2Lifetime168 = ki.a("powerup_shield", 10592);
           if (var2Lifetime168 != null) {
@@ -778,7 +778,7 @@ final class qc extends pn implements qb {
           }
           byte[] var2Lifetime174 = ki.a("tnt", 10592);
           if (var2Lifetime174 != null) {
-            bj.field_D = RasterSnapshot.a(var2Lifetime174, 122);
+            UiContainer.field_D = RasterSnapshot.a(var2Lifetime174, 122);
           }
           byte[] var2Lifetime175 = ki.a("containerdestroyed", 10592);
           if (var2Lifetime175 != null) {
@@ -930,11 +930,11 @@ final class qc extends pn implements qb {
           }
           byte[] var2Lifetime212 = ki.a("shield_colon", param0 + 10584);
           if (null != var2Lifetime212) {
-            k.field_p = RasterSnapshot.a(var2Lifetime212, 114);
+            TextWidgetPainter.field_p = RasterSnapshot.a(var2Lifetime212, 114);
           }
           byte[] var2Lifetime213 = ki.a("rockbusters_colon", 10592);
           if (var2Lifetime213 != null) {
-            af.field_f = RasterSnapshot.a(var2Lifetime213, param0 ^ 103);
+            FullscreenFocusCanvas.field_f = RasterSnapshot.a(var2Lifetime213, param0 ^ 103);
           }
           byte[] var2Lifetime214 = ki.a("level_colon", 10592);
           if (var2Lifetime214 != null) {
@@ -950,7 +950,7 @@ final class qc extends pn implements qb {
           }
           byte[] var2Lifetime217 = ki.a("time_colon", 10592);
           if (var2Lifetime217 != null) {
-            hn.field_f = RasterSnapshot.a(var2Lifetime217, param0 ^ 103);
+            CheckboxPainter.field_f = RasterSnapshot.a(var2Lifetime217, param0 ^ 103);
           }
           byte[] var2Lifetime218 = ki.a("targets_colon", 10592);
           if (var2Lifetime218 != null) {
@@ -970,7 +970,7 @@ final class qc extends pn implements qb {
           }
           byte[] var2Lifetime222 = ki.a("totalscore_colon", 10592);
           if (var2Lifetime222 != null) {
-            ad.field_c = RasterSnapshot.a(var2Lifetime222, 114);
+            BoundedUrlRequest.field_c = RasterSnapshot.a(var2Lifetime222, 114);
           }
           byte[] var2Lifetime223 = ki.a("continue_", param0 + 10584);
           if (null != var2Lifetime223) {
@@ -1210,7 +1210,7 @@ final class qc extends pn implements qb {
           }
           byte[] var2Lifetime282 = ki.a("titleMiniMapCrate", 10592);
           if (null != var2Lifetime282) {
-            af.field_b = RasterSnapshot.a(var2Lifetime282, 118);
+            FullscreenFocusCanvas.field_b = RasterSnapshot.a(var2Lifetime282, 118);
           }
           byte[] var2Lifetime283 = ki.a("titleMiniMapTargets", param0 ^ 10600);
           if (var2Lifetime283 != null) {
@@ -1336,12 +1336,12 @@ final class qc extends pn implements qb {
               this.a(new jf(this), 30);
               return;
             }
-            var5.a((wn) (this), (byte) -67, bm.field_d);
+            var5.a((UiListener) (this), (byte) -67, bm.field_d);
             decompiledFrameRemainder0 = (var6 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (this.field_zb) {
-              var5.a((wn) (this), (byte) -67, bm.field_d);
+              var5.a((UiListener) (this), (byte) -67, bm.field_d);
               if (var6 != 0) {
                 if (param1.field_g == 5) {
                   var5.a(false, TerrainMap.field_i, 11);

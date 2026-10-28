@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends hc {
+final class oj extends TextButton {
     static PcmSample field_N;
     private static int[] field_K;
     static int[][] field_E;
     private static int[] field_P;
     private static int[] field_O;
-    private el field_F;
+    private ValidationSource field_F;
     static int field_M;
     private static int[] field_I;
     private int field_R;
@@ -15,12 +15,12 @@ final class oj extends hc {
     static Sprite field_Q;
     static PacketBuffer field_L;
 
-    final void a(int param0, int param1, int param2, hm param3) {
+    final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
         try {
           this.field_R = this.field_R + 1;
-          super.a(param0, param1, param2, param3);
+          super.updateHover(guard, offsetY, offsetX, root);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oj.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "oj.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,10 +40,10 @@ final class oj extends hc {
         field_L = null;
     }
 
-    final boolean a(int param0, hm param1) {
+    final boolean focusNext(int guard, UiComponent root) {
         String stackIn_7_2 = null;
         try {
-          if (param0 == -4659) {
+          if (guard == -4659) {
             return false;
           }
           field_P = (int[]) null;
@@ -52,8 +52,8 @@ final class oj extends hc {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var3;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("oj.M(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("oj.M(").append(guard).append(',');
+          if (root == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -62,31 +62,31 @@ final class oj extends hc {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawLayer(int screenY, byte guard, int layer, int screenX) {
         int var11 = EscapeVector.obfuscationControl;
-        super.a(param0, (byte) 101, param2, param3);
-        if (param1 >= 85) {
-          if (param2 != 0) {
+        super.drawLayer(screenY, (byte) 101, layer, screenX);
+        if (guard >= 85) {
+          if (layer != 0) {
             return;
           }
-          int var5 = this.field_k + param3 + (this.field_g >> 1);
-          int var6 = this.field_j + param0 + (this.field_x >> 1);
-          rf var8 = this.field_F.a(17124);
+          int var5 = this.x + screenX + (this.width >> 1);
+          int var6 = this.y + screenY + (this.height >> 1);
+          ValidationState var8 = this.field_F.validationState(17124);
           if (var8 != of.field_f &&
             ug.field_c != var8) {
             if (ArchiveProvider.field_a == var8) {
-              Sprite var24 = ul.field_E[2];
+              Sprite var24 = EditableTextWidget.field_E[2];
               var24.c(var5 - (var24.width >> 1), var6 - (var24.height >> 1), 256);
               return;
             }
             if (IsaacRandom.field_h != var8) {
               return;
             }
-            Sprite var23 = ul.field_E[1];
+            Sprite var23 = EditableTextWidget.field_E[1];
             var23.c(-(var23.width >> 1) + var5, var6 - (var23.height >> 1), 256);
             return;
           }
-          Sprite var25 = ul.field_E[0];
+          Sprite var25 = EditableTextWidget.field_E[0];
           int var9 = var25.fullWidth << 1;
           int var10 = var25.fullHeight << 1;
           if (RockBuster.field_j == null) {
@@ -97,7 +97,7 @@ final class oj extends hc {
             eo.a(RockBuster.field_j, (byte) -111);
           } else if (var10 <= RockBuster.field_j.height) {
             eo.a(RockBuster.field_j, (byte) -79);
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clearFramebuffer();
           } else {
             RockBuster.field_j = new Sprite(var9, var10);
             eo.a(RockBuster.field_j, (byte) -111);
@@ -108,21 +108,21 @@ final class oj extends hc {
           return;
         }
         field_I = (int[]) null;
-        if (param2 != 0) {
+        if (layer != 0) {
           return;
         }
-        int var5Lifetime1 = this.field_k + param3 + (this.field_g >> 1);
-        int var6Lifetime1 = this.field_j + param0 + (this.field_x >> 1);
-        rf var8Lifetime1 = this.field_F.a(17124);
+        int var5Lifetime1 = this.x + screenX + (this.width >> 1);
+        int var6Lifetime1 = this.y + screenY + (this.height >> 1);
+        ValidationState var8Lifetime1 = this.field_F.validationState(17124);
         if (var8Lifetime1 == of.field_f) {
-          Sprite var15 = ul.field_E[0];
+          Sprite var15 = EditableTextWidget.field_E[0];
           int var9Lifetime1 = var15.fullWidth << 1;
           int var10Lifetime1 = var15.fullHeight << 1;
           if (RockBuster.field_j != null &&
             RockBuster.field_j.width >= var9Lifetime1 &&
             var10Lifetime1 <= RockBuster.field_j.height) {
             eo.a(RockBuster.field_j, (byte) -79);
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clearFramebuffer();
           } else {
             RockBuster.field_j = new Sprite(var9Lifetime1, var10Lifetime1);
             eo.a(RockBuster.field_j, (byte) -111);
@@ -134,18 +134,18 @@ final class oj extends hc {
         }
         if (ug.field_c != var8Lifetime1) {
           if (ArchiveProvider.field_a == var8Lifetime1) {
-            Sprite var18 = ul.field_E[2];
+            Sprite var18 = EditableTextWidget.field_E[2];
             var18.c(var5Lifetime1 - (var18.width >> 1), var6Lifetime1 - (var18.height >> 1), 256);
             return;
           }
           if (IsaacRandom.field_h != var8Lifetime1) {
             return;
           }
-          Sprite var17 = ul.field_E[1];
+          Sprite var17 = EditableTextWidget.field_E[1];
           var17.c(-(var17.width >> 1) + var5Lifetime1, var6Lifetime1 - (var17.height >> 1), 256);
           return;
         }
-        Sprite var16 = ul.field_E[0];
+        Sprite var16 = EditableTextWidget.field_E[0];
         Sprite var14 = var16;
         int var9Lifetime2 = var16.fullWidth << 1;
         int var10Lifetime2 = var16.fullHeight << 1;
@@ -153,7 +153,7 @@ final class oj extends hc {
           RockBuster.field_j.width >= var9Lifetime2 &&
           var10Lifetime2 <= RockBuster.field_j.height) {
           eo.a(RockBuster.field_j, (byte) -79);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearFramebuffer();
         } else {
           RockBuster.field_j = new Sprite(var9Lifetime2, var10Lifetime2);
           eo.a(RockBuster.field_j, (byte) -111);
@@ -196,17 +196,17 @@ final class oj extends hc {
         }
     }
 
-    final String d(int param0) {
-        if (param0 != 1) {
+    final String getTooltip(int guard) {
+        if (guard != 1) {
           return (String) null;
         }
-        if (!this.field_u) {
+        if (!this.hovered) {
           return null;
         }
-        return this.field_F.b(param0 ^ 64);
+        return this.field_F.validationMessage(guard ^ 64);
     }
 
-    oj(el param0) {
+    oj(ValidationSource param0) {
         try {
           this.field_F = param0;
         } catch (RuntimeException runtimeException) {

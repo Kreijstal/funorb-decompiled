@@ -11,7 +11,7 @@ final class ke {
           nb.field_a = param0;
           Js5Transport.field_h = param2;
           pb.field_e = param3;
-          rk.a(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / param1, 11710);
+          ObjectSpriteSet.a(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / param1, 11710);
           mm.a(param1 + 97, param0.field_x + param0.field_N, param3.field_N, param0.field_N, param3.field_N + param3.field_x);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ke.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

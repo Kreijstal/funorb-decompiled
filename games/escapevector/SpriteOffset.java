@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fn {
+final class SpriteOffset {
     static int[] field_e;
     static PcmSample field_f;
     static String field_d;
-    int field_c;
+    int x;
     static String field_a;
-    int field_b;
+    int y;
 
     final static boolean a(boolean param0, int param1) {
         if (di.field_d.field_e) {
-          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
         }
         if (param1 != 0) {
           return false;
@@ -28,7 +28,7 @@ final class fn {
         }
         if (di.field_d.field_h == 1) {
           IntValueNode.field_i = null;
-          ce.field_f = new en();
+          TrackerMusicDefinition.field_f = new en();
           ua.field_c = new kg();
           mj.field_d = 0;
           PacketBuffer.field_h = false;
@@ -71,7 +71,7 @@ final class fn {
             }
             var2 = true;
           }
-          cb.field_c.a(CachedArchiveProvider.a((byte) 122, sf.field_c, ng.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, dh.field_d, bj.field_y));
+          cb.field_c.a(CachedArchiveProvider.a((byte) 122, sf.field_c, ng.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, dh.field_d, UiContainer.field_y));
           if (cb.field_c.b((byte) -18)) {
             var1_int = true;
           }
@@ -80,13 +80,13 @@ final class fn {
             cb.field_c.field_h >= 0) {
             var3 = wh.field_j[cb.field_c.field_h];
             if (2 == var3) {
-              ah.e(0);
+              TextFieldValidator.e(0);
             } else if (var3 == 5) {
-              ah.e(0);
+              TextFieldValidator.e(0);
             }
           } else if (var2 &&
             ArchiveIndex.field_j != 2) {
-            ah.e(0);
+            TextFieldValidator.e(0);
           }
           if (var3 == 0 &&
             ArchiveIndex.field_j == 2) {
@@ -151,7 +151,7 @@ final class fn {
         if (Character.isISOControl(param0)) {
           return false;
         }
-        if (k.a(true, param0)) {
+        if (TextWidgetPainter.a(true, param0)) {
           return true;
         }
         if (param1 != -124) {
@@ -185,16 +185,16 @@ final class fn {
         return true;
     }
 
-    fn(int param0, int param1) {
-        this.field_b = param1;
-        this.field_c = param0;
+    SpriteOffset(int param0, int param1) {
+        this.y = param1;
+        this.x = param0;
     }
 
     final static void a(byte param0) {
         int var2 = EscapeVector.obfuscationControl;
         try {
           if (param0 <= 30) {
-            fn.a((byte) 80);
+            SpriteOffset.a((byte) 80);
           }
           IntrusiveNodeHashTable.field_f.a(237);
           for (int var1_int = 0; 32 > var1_int; var1_int++) {

@@ -7,7 +7,7 @@ final class pk {
     private int field_j;
     private int field_n;
     private int field_e;
-    static ad field_m;
+    static BoundedUrlRequest field_m;
     private int field_g;
     private int field_o;
     private int field_d;
@@ -36,24 +36,24 @@ final class pk {
         this.field_l.a(true, this.field_r, this.field_p);
     }
 
-    final af a(boolean param0) {
+    final FullscreenFocusCanvas a(boolean param0) {
         this.field_p = pd.field_b;
         if (!param0) {
           this.b(12);
-          this.field_r = ad.field_d;
+          this.field_r = BoundedUrlRequest.field_d;
           this.field_l.a(param0, this.field_o, this.field_j);
           PacketBuffer.field_i = false;
-          af var2 = al.a(this.field_j, -16493, NetworkGameClient.field_r, this.field_o, 0, 0);
+          FullscreenFocusCanvas var2 = al.a(this.field_j, -16493, NetworkGameClient.field_r, this.field_o, 0, 0);
           if (var2 == null) {
             this.a(0);
             return var2;
           }
           return var2;
         }
-        this.field_r = ad.field_d;
+        this.field_r = BoundedUrlRequest.field_d;
         this.field_l.a(param0, this.field_o, this.field_j);
         PacketBuffer.field_i = false;
-        af var2Lifetime1 = al.a(this.field_j, -16493, NetworkGameClient.field_r, this.field_o, 0, 0);
+        FullscreenFocusCanvas var2Lifetime1 = al.a(this.field_j, -16493, NetworkGameClient.field_r, this.field_o, 0, 0);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }
@@ -140,7 +140,7 @@ final class pk {
         }
         if (pd.field_b != var2) {
           this.field_l.a(true, var3, var2);
-        } else if (var3 != ad.field_d) {
+        } else if (var3 != BoundedUrlRequest.field_d) {
           this.field_l.a(true, var3, var2);
         }
         if (param0 != 13) {
@@ -165,7 +165,7 @@ final class pk {
             pb.field_b = 0;
           }
           if (this.field_q == pd.field_b &&
-            this.field_i == ad.field_d) {
+            this.field_i == BoundedUrlRequest.field_d) {
             return;
           }
           this.field_l.a(true, this.field_i, this.field_q);

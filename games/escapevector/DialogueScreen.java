@@ -237,10 +237,10 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void k(int param0) {
         if (this.field_v == 80) {
-          rk.field_e.playSampleWithPan(bm.field_a, 100, 3072 * qm.field_c / 64, 10240);
+          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, 3072 * qm.field_c / 64, 10240);
         }
         if (this.field_v == 30) {
-          rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
+          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
         }
         this.field_v = this.field_v - 1;
         if (param0 <= 102) {
@@ -367,12 +367,12 @@ final class DialogueScreen extends IntrusiveNode {
 
     final void advanceDialogue(byte guard) {
         int var7 = EscapeVector.obfuscationControl;
-        this.field_w.a(this.a(-84, sf.field_c, ng.field_ob), (byte) 126, this.a(-97, dh.field_d, bj.field_y));
+        this.field_w.a(this.a(-84, sf.field_c, ng.field_ob), (byte) 126, this.a(-97, dh.field_d, UiContainer.field_y));
         if (guard < 10) {
           return;
         }
         if (this.field_w.field_e) {
-          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, this.g(2));
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, this.g(2));
         }
         if (qi.field_N != 0) {
           this.i(2048);
@@ -385,7 +385,7 @@ final class DialogueScreen extends IntrusiveNode {
             if (pn.p(-82)) {
               this.field_w.c((byte) 6);
               if (this.field_w.field_e) {
-                rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, this.g(2));
+                ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, this.g(2));
               }
               if (nk.field_n != 13 &&
                 nk.field_n != 84 &&
@@ -411,14 +411,14 @@ final class DialogueScreen extends IntrusiveNode {
                 sj.a(this.d(8192), (byte) 51);
               }
               if (23 == this.field_s) {
-                rk.field_e.playSampleWithPan(pc.field_a, 100, 3072 * qm.field_c / 64, this.g(2));
+                ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 3072 * qm.field_c / 64, this.g(2));
               }
               this.field_s = this.field_s + 1;
               if (this.field_s == 43 &&
                 this.field_A == null) {
                 this.field_A = PcmSampleStream.c(en.field_d, 100, qm.field_c * 768 / 64, this.g((byte) 111));
                 this.field_A.h(-1);
-                rk.field_e.addSubstream(this.field_A);
+                ObjectSpriteSet.field_e.addSubstream(this.field_A);
               }
             }
             if (this.field_n &&
@@ -532,11 +532,11 @@ final class DialogueScreen extends IntrusiveNode {
                   else {
                     this.dialogueIndex = this.dialogueIndex + 1;
                     if (this.dialogueLines.length <= this.dialogueIndex) {
-                      rk.field_e.removeSubstream(this.field_A);
+                      ObjectSpriteSet.field_e.removeSubstream(this.field_A);
                       this.field_A = null;
                       this.field_F = 0;
                       if (!this.field_m) {
-                        this.field_r = ah.field_i;
+                        this.field_r = TextFieldValidator.field_i;
                       } else {
                         this.a(43, (String) null);
                         this.field_n = true;
@@ -601,7 +601,7 @@ final class DialogueScreen extends IntrusiveNode {
         if (var2 < var3) {
           var2 = var3;
         }
-        var3 = 9 + fh.field_g.b(ah.field_i);
+        var3 = 9 + fh.field_g.b(TextFieldValidator.field_i);
         if (var2 < var3) {
           var2 = var3;
         }
@@ -642,7 +642,7 @@ final class DialogueScreen extends IntrusiveNode {
             }
           }
         } else {
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearFramebuffer();
         }
         if (param0 != 80) {
           int discarded$0 = this.a(-21, -68, -73);
@@ -653,14 +653,14 @@ final class DialogueScreen extends IntrusiveNode {
         if (this.field_p == 30) {
           PcmSampleStream var2 = PcmSampleStream.c(vd.field_g, 100, 3072 * qm.field_c / 64, this.d(8192));
           var2.e();
-          rk.field_e.addSubstream(var2);
+          ObjectSpriteSet.field_e.addSubstream(var2);
         }
         if (param0 >= -86) {
           this.field_v = -93;
         }
         if (20 == this.field_p) {
           PcmSampleStream var2Lifetime1 = PcmSampleStream.c(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
-          rk.field_e.addSubstream(var2Lifetime1);
+          ObjectSpriteSet.field_e.addSubstream(var2Lifetime1);
         }
         this.field_p = this.field_p - 1;
     }
@@ -692,10 +692,10 @@ final class DialogueScreen extends IntrusiveNode {
           int discarded$0 = this.a(3, 15, -89);
         }
         if (this.field_v == 0) {
-          rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
+          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
         }
         if (this.field_v == 50) {
-          rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 10240);
+          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 10240);
         }
         this.field_v = this.field_v + 1;
         mm.a(param0 + 25, 4);
@@ -724,7 +724,7 @@ final class DialogueScreen extends IntrusiveNode {
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              sd.a((byte) -111, param1, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.evaluateScript((byte) -111, param1, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var6 = decompiledCaughtException;
@@ -770,7 +770,7 @@ final class DialogueScreen extends IntrusiveNode {
             if (this.field_z[param0] == null) {
               return false;
             }
-            fn.a((byte) 44);
+            SpriteOffset.a((byte) 44);
           }
           if (param1 == 23381) {
             return true;
@@ -798,10 +798,10 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void f(int param0) {
         if (this.field_p == 0) {
-          rk.field_e.playSampleWithPan(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
+          ObjectSpriteSet.field_e.playSampleWithPan(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
         }
         if (this.field_p == 20) {
-          rk.field_e.playSampleWithPan(vd.field_g, 100, qm.field_c * 3072 / 64, this.d(8192));
+          ObjectSpriteSet.field_e.playSampleWithPan(vd.field_g, 100, qm.field_c * 3072 / 64, this.d(8192));
         }
         if (param0 != 100) {
           return;
@@ -811,9 +811,9 @@ final class DialogueScreen extends IntrusiveNode {
 
     final static int[] a(byte param0, int param1, int param2) {
         int var3 = fc.a(10758, param2);
-        int var4 = ul.a(-127, param2);
+        int var4 = EditableTextWidget.a(-127, param2);
         int var5 = fc.a(10758, param1);
-        int var6 = ul.a(-126, param1);
+        int var6 = EditableTextWidget.a(-126, param1);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         if (param0 != 82) {
           field_k = (String) null;
@@ -860,7 +860,7 @@ final class DialogueScreen extends IntrusiveNode {
         this.revealedLine = 0;
         this.field_t = 40;
         int stackIn_2_1 = 17;
-        stackIn_3_2 = (!od.field_k) ? (0) : (10);
+        stackIn_3_2 = (!SelfDestructEffects.field_k) ? (0) : (10);
         this.field_x = new String[stackIn_2_1 + stackIn_3_2];
         this.field_F = 0;
         this.field_v = 0;
@@ -875,9 +875,9 @@ final class DialogueScreen extends IntrusiveNode {
           this.field_z = param0;
           this.field_u = PcmSampleStream.a(ff.field_i, 100, 0);
           this.field_u.h(-1);
-          rk.field_e.addSubstream(this.field_u);
+          ObjectSpriteSet.field_e.addSubstream(this.field_u);
           this.field_w = new wc(1);
-          this.field_w.a(this.a(-77, dh.field_d, bj.field_y), true, 4767999);
+          this.field_w.a(this.a(-77, dh.field_d, UiContainer.field_y), true, 4767999);
           this.a(43, this.dialogueLines[this.dialogueIndex]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

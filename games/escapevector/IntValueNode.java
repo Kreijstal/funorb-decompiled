@@ -78,7 +78,7 @@ final class IntValueNode extends IntrusiveNode {
     }
 
     final static void startSelectedLevel(int gameMode, int levelIndex, int guard) {
-        ce.field_f.a(true);
+        TrackerMusicDefinition.field_f.a(true);
         gameMode = l.a(-8462, gameMode);
         levelIndex = SectorCacheStore.a(gameMode, 13565, levelIndex);
         int var3 = nk.a(1, gameMode);

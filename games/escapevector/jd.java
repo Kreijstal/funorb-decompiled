@@ -92,8 +92,8 @@ final class jd {
             vi.field_d = PcmSampleStream.c(pa.field_b, 100, 0, var8Lifetime2);
             mm.field_b.h(-1);
             vi.field_d.h(-1);
-            rk.field_e.addSubstream(mm.field_b);
-            rk.field_e.addSubstream(vi.field_d);
+            ObjectSpriteSet.field_e.addSubstream(mm.field_b);
+            ObjectSpriteSet.field_e.addSubstream(vi.field_d);
           }
           mm.field_b.a(441, qm.field_c * var5 / 64, var6Lifetime2);
           vi.field_d.a(441, var7Lifetime2 * qm.field_c / 64, var8Lifetime2);

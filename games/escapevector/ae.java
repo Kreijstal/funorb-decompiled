@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ae implements db {
+final class ae implements WidgetPainter {
     static uk field_b;
     static SystemTaskService field_a;
     static Sprite[] field_c;
@@ -55,11 +55,11 @@ final class ae implements db {
     }
 
     final static int b(int param0) {
-        af.field_e.a((byte) 12);
+        FullscreenFocusCanvas.field_e.a((byte) 12);
         if (param0 != -1021831775) {
           field_b = (uk) null;
         }
-        if (!od.field_j.d(-3994)) {
+        if (!SelfDestructEffects.field_j.d(-3994)) {
           return un.f(param0 + 1021831755);
         }
         return 0;
@@ -115,36 +115,36 @@ final class ae implements db {
         }
     }
 
-    public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
+    public final void drawWidget(int originX, int originY, int guard, UiComponent component, boolean enabled) {
         String stackIn_11_2 = null;
         try {
-          if (param2 > -14) {
-            hm var9 = (hm) null;
-            this.a(-95, 88, 12, (hm) null, false);
+          if (guard > -14) {
+            UiComponent var9 = (UiComponent) null;
+            this.drawWidget(-95, 88, 12, (UiComponent) null, false);
           }
-          int var6_int = param0 + param3.field_k;
-          int var7 = param1 + param3.field_j;
-          mn.a(-27951, var6_int, var7, param3.field_g, param3.field_x);
-          Sprite var8 = ul.field_E[1];
-          if (param3 instanceof hc &&
-            ((hc) (param3)).field_z) {
-            var8.c((-var8.fullWidth + param3.field_g >> 1) + 1 + var6_int, var7 - (-1 - (param3.field_x - var8.fullHeight >> 1)), 256);
+          int var6_int = originX + component.x;
+          int var7 = originY + component.y;
+          mn.a(-27951, var6_int, var7, component.width, component.height);
+          Sprite var8 = EditableTextWidget.field_E[1];
+          if (component instanceof TextButton &&
+            ((TextButton) (component)).field_z) {
+            var8.c((-var8.fullWidth + component.width >> 1) + 1 + var6_int, var7 - (-1 - (component.height - var8.fullHeight >> 1)), 256);
           }
-          if (param3.h(0)) {
-            SeekerMine.a(false, param3.field_g - 4, 2 + var6_int, -4 + param3.field_x, 2 + var7);
+          if (component.isFocused(0)) {
+            SeekerMine.a(false, component.width - 4, 2 + var6_int, -4 + component.height, 2 + var7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var6;
-          StringBuilder stackIn_10_1 = new StringBuilder().append("ae.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_10_1 = new StringBuilder().append("ae.M(").append(originX).append(',').append(originY).append(',').append(guard).append(',');
+          if (component == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(enabled).append(')').toString());
         }
     }
 

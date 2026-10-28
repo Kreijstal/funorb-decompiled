@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-abstract class r extends hm implements ba {
+abstract class r extends UiComponent implements UiContainerMarker {
     static String[] field_A;
     static int field_B;
-    hm field_C;
+    UiComponent field_C;
     static boolean field_y;
     static int field_z;
 
-    private final boolean a(hm param0, int param1) {
+    private final boolean a(UiComponent param0, int param1) {
         String stackIn_12_2 = null;
         try {
           if (param1 != -812) {
             return false;
           }
-          boolean stackIn_8_0 = (null != this.field_C) && (!this.field_C.h(param1 + 812)) && (this.field_C.a(-4659, param0));
+          boolean stackIn_8_0 = (null != this.field_C) && (!this.field_C.isFocused(param1 + 812)) && (this.field_C.focusNext(-4659, param0));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -32,36 +32,36 @@ abstract class r extends hm implements ba {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, hm param4, byte param5) {
+    void onPointerReleased(int pointerY, int offsetY, int pointerX, int offsetX, UiComponent root, byte guard) {
         String stackIn_7_2 = null;
         try {
-          int var7_int = 76 / ((param5 + 39) / 45);
+          int var7_int = 76 / ((guard + 39) / 45);
           if (this.field_C != null) {
-            this.field_C.a(param0, param1 + this.field_k, param2, param3 + this.field_j, param4, (byte) 117);
+            this.field_C.onPointerReleased(pointerY, offsetY + this.x, pointerX, offsetX + this.y, root, (byte) 117);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var7 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var7;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("r.MA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("r.MA(").append(pointerY).append(',').append(offsetY).append(',').append(pointerX).append(',').append(offsetX).append(',');
+          if (root == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final boolean b(int param0, hm param1) {
+    private final boolean b(int param0, UiComponent param1) {
         String stackIn_11_2 = null;
         try {
           if (param0 > -67) {
-            hm var4 = (hm) null;
-            boolean discarded$1 = this.a((hm) null, -59);
+            UiComponent var4 = (UiComponent) null;
+            boolean discarded$1 = this.a((UiComponent) null, -59);
           }
-          boolean stackIn_7_0 = (null != this.field_C) && (!this.field_C.h(0)) && (this.field_C.a(-4659, param1));
+          boolean stackIn_7_0 = (null != this.field_C) && (!this.field_C.isFocused(0)) && (this.field_C.focusNext(-4659, param1));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,10 +87,10 @@ abstract class r extends hm implements ba {
             StringBuilder discarded$6 = param3.append(' ');
           }
           if (param1 < 61) {
-            this.field_C = (hm) null;
+            this.field_C = (UiComponent) null;
           }
           if (this.field_C != null) {
-            this.field_C.a(0, param2, param3, 1 + param0);
+            this.field_C.appendDebugTree(0, param2, param3, 1 + param0);
           } else {
             StringBuilder discarded$5 = param3.append("null");
           }
@@ -120,58 +120,58 @@ abstract class r extends hm implements ba {
           return;
         }
         if (null != this.field_C) {
-          this.field_C.i(param0 ^ -6844);
+          this.field_C.refreshLayout(param0 ^ -6844);
         }
     }
 
-    r(int param0, int param1, int param2, int param3, db param4, wn param5) {
+    r(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final int e(int param0) {
-        if (param0 != 12050) {
-          hm var3 = (hm) null;
-          this.a(-87, (hm) null);
+    final int maximumRenderLayer(int guard) {
+        if (guard != 12050) {
+          UiComponent var3 = (UiComponent) null;
+          this.focusNext(-87, (UiComponent) null);
         }
-        return null != this.field_C ? this.field_C.e(12050) : 0;
+        return null != this.field_C ? this.field_C.maximumRenderLayer(12050) : 0;
     }
 
-    boolean a(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {
+    boolean onPointerPressed(int offsetY, int pointerX, byte guard, int pointerY, int offsetX, UiComponent root, int button) {
         String stackIn_10_2 = null;
         try {
-          if (param2 != 3) {
-            this.field_C = (hm) null;
+          if (guard != 3) {
+            this.field_C = (UiComponent) null;
           }
-          boolean stackIn_6_0 = (null != this.field_C) && (this.field_C.a(this.field_j + param0, param1, (byte) 3, param3, param4 + this.field_k, param5, param6));
+          boolean stackIn_6_0 = (null != this.field_C) && (this.field_C.onPointerPressed(this.y + offsetY, pointerX, (byte) 3, pointerY, offsetX + this.x, root, button));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8 = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var8;
-          StringBuilder stackIn_9_1 = new StringBuilder().append("r.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          StringBuilder stackIn_9_1 = new StringBuilder().append("r.V(").append(offsetY).append(',').append(pointerX).append(',').append(guard).append(',').append(pointerY).append(',').append(offsetX).append(',');
+          if (root == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(button).append(')').toString());
         }
     }
 
-    final boolean a(int param0, hm param1) {
+    final boolean focusNext(int guard, UiComponent root) {
         String stackIn_11_2 = null;
         try {
-          if (param0 != -4659) {
+          if (guard != -4659) {
             return true;
           }
-          boolean stackIn_7_0 = (null != this.field_C) && (this.field_C.a(-4659, param1));
+          boolean stackIn_7_0 = (null != this.field_C) && (this.field_C.focusNext(-4659, root));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var3;
-          StringBuilder stackIn_10_1 = new StringBuilder().append("r.M(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_10_1 = new StringBuilder().append("r.M(").append(guard).append(',');
+          if (root == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -180,37 +180,37 @@ abstract class r extends hm implements ba {
         }
     }
 
-    StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    StringBuilder appendDebugTree(int guard, Hashtable visited, StringBuilder output, int depth) {
         String stackIn_9_2 = null;
         String stackIn_12_2 = null;
         try {
-          if (param0 != 0) {
-            hm var6 = (hm) null;
-            boolean discarded$1 = this.b(71, (hm) null);
+          if (guard != 0) {
+            UiComponent var6 = (UiComponent) null;
+            boolean discarded$1 = this.b(71, (UiComponent) null);
           }
-          if (this.a(param3, param1, param2, false)) {
-            this.a(param1, param2, param3, 1);
-            this.a(param3, (byte) 91, param1, param2);
+          if (this.beginDebugDescription(depth, visited, output, false)) {
+            this.appendDebugBody(visited, output, depth, 1);
+            this.a(depth, (byte) 91, visited, output);
           }
-          StringBuilder stackIn_5_0 = (StringBuilder) (param2);
+          StringBuilder stackIn_5_0 = (StringBuilder) (output);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_8_0 = var5;
-          StringBuilder stackIn_8_1 = new StringBuilder().append("r.AA(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_8_1 = new StringBuilder().append("r.AA(").append(guard).append(',');
+          if (visited == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           StringBuilder stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
+          if (output == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(depth).append(')').toString());
         }
     }
 
@@ -304,42 +304,42 @@ abstract class r extends hm implements ba {
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int width, int y, int x, boolean guard, int height) {
+        super.setBounds(width, y, x, guard, height);
         this.k(-6844);
     }
 
-    final boolean b(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {
+    final boolean onMouseWheel(int offsetX, int rotation, byte guard, int pointerY, int pointerX, UiComponent root, int offsetY) {
         String stackIn_11_2 = null;
         try {
-          if (param2 > -103) {
+          if (guard > -103) {
             String[] var9 = (String[]) null;
             r.a((String) null, -44, (String[]) null);
           }
-          boolean stackIn_7_0 = (null != this.field_C) && (this.field_C.h(0)) && (this.field_C.b(param0, param1, (byte) -115, param3, param4, param5, param6));
+          boolean stackIn_7_0 = (null != this.field_C) && (this.field_C.isFocused(0)) && (this.field_C.onMouseWheel(offsetX, rotation, (byte) -115, pointerY, pointerX, root, offsetY));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8 = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var8;
-          StringBuilder stackIn_10_1 = new StringBuilder().append("r.JA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          StringBuilder stackIn_10_1 = new StringBuilder().append("r.JA(").append(offsetX).append(',').append(rotation).append(',').append(guard).append(',').append(pointerY).append(',').append(pointerX).append(',');
+          if (root == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(offsetY).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, int param2, hm param3) {
+    void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
         String stackIn_9_2 = null;
         try {
-          super.a(param0 ^ 0, param1, param2, param3);
+          super.updateHover(guard ^ 0, offsetY, offsetX, root);
           if (this.field_C != null) {
-            this.field_C.a(param0 + 0, this.field_j + param1, this.field_k + param2, param3);
+            this.field_C.updateHover(guard + 0, this.y + offsetY, this.x + offsetX, root);
           }
-          if (param0 != -14472) {
+          if (guard != -14472) {
             String[] var6 = (String[]) null;
             r.a((String) null, 17, (String[]) null);
           }
@@ -348,8 +348,8 @@ abstract class r extends hm implements ba {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_8_0 = var5;
-          StringBuilder stackIn_8_1 = new StringBuilder().append("r.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_8_1 = new StringBuilder().append("r.Q(").append(guard).append(',').append(offsetY).append(',').append(offsetX).append(',');
+          if (root == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -358,29 +358,29 @@ abstract class r extends hm implements ba {
         }
     }
 
-    void a(int param0, byte param1, int param2, int param3) {
-        if (0 == param2 &&
-          null != this.field_s) {
-          this.field_s.a(param3, param0, -33, (hm) (this), true);
+    void drawLayer(int screenY, byte guard, int layer, int screenX) {
+        if (0 == layer &&
+          null != this.painter) {
+          this.painter.drawWidget(screenX, screenY, -33, (UiComponent) (this), true);
         }
         if (null != this.field_C) {
-          this.field_C.a(param0 + this.field_j, (byte) 112, param2, param3 + this.field_k);
+          this.field_C.drawLayer(screenY + this.y, (byte) 112, layer, screenX + this.x);
         }
-        if (param1 <= 85) {
+        if (guard <= 85) {
           field_y = false;
         }
     }
 
-    hm j(int param0) {
-        hm var2 = this.field_C;
+    UiComponent j(int param0) {
+        UiComponent var2 = this.field_C;
         if (var2 != null &&
-          var2.h(0)) {
+          var2.isFocused(0)) {
           return var2;
         }
         if (param0 == 0) {
           return null;
         }
-        return (hm) null;
+        return (UiComponent) null;
     }
 
     final static void a(int param0, bd param1, int param2) {
@@ -419,10 +419,10 @@ abstract class r extends hm implements ba {
         }
     }
 
-    String d(int param0) {
-        String var2 = super.d(param0);
+    String getTooltip(int guard) {
+        String var2 = super.getTooltip(guard);
         if (this.field_C != null) {
-          String var3 = this.field_C.d(1);
+          String var3 = this.field_C.getTooltip(1);
           if (var3 != null) {
             return var3;
           }
@@ -438,35 +438,35 @@ abstract class r extends hm implements ba {
         }
     }
 
-    final void f(int param0) {
+    final void clearFocus(int guard) {
         if (this.field_C != null) {
-          this.field_C.f(61);
+          this.field_C.clearFocus(61);
         }
-        if (param0 <= 46) {
-          this.a(-54, (byte) 0, -102, 84);
+        if (guard <= 46) {
+          this.drawLayer(-54, (byte) 0, -102, 84);
         }
     }
 
-    final boolean a(hm param0, char param1, int param2, int param3) {
+    final boolean onFocusedKey(UiComponent root, char character, int keyCode, int guard) {
         boolean stackIn_12_0 = false;
         String stackIn_16_2 = null;
         try {
-          if (param3 < 0) {
-            this.field_C = (hm) null;
+          if (guard < 0) {
+            this.field_C = (UiComponent) null;
           }
           if (this.field_C != null &&
-            this.field_C.h(0) &&
-            this.field_C.a(param0, param1, param2, 35)) {
+            this.field_C.isFocused(0) &&
+            this.field_C.onFocusedKey(root, character, keyCode, 35)) {
             return true;
           }
-          int var5_int = param2;
+          int var5_int = keyCode;
           if (var5_int != 80) {
             return false;
           }
           if (ik.field_h[81]) {
-            stackIn_12_0 = this.b(-106, param0);
+            stackIn_12_0 = this.b(-106, root);
           } else {
-            stackIn_12_0 = this.a(param0, -812);
+            stackIn_12_0 = this.a(root, -812);
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -474,19 +474,19 @@ abstract class r extends hm implements ba {
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_15_0 = var5;
           StringBuilder stackIn_15_1 = new StringBuilder().append("r.G(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
-    final boolean h(int param0) {
-        if (param0 != 0) {
-          hm var3 = (hm) null;
-          boolean discarded$0 = this.b(-85, (hm) null);
+    final boolean isFocused(int guard) {
+        if (guard != 0) {
+          UiComponent var3 = (UiComponent) null;
+          boolean discarded$0 = this.b(-85, (UiComponent) null);
         }
         return null != this.j(0) ? true : false;
     }

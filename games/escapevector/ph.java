@@ -3,7 +3,7 @@
  */
 final class ph {
     private int[] field_c;
-    static fn field_b;
+    static SpriteOffset field_b;
     static int field_a;
 
     final int a(byte[] param0, boolean param1, int param2, int param3, int param4, byte[] param5) {
@@ -192,7 +192,7 @@ final class ph {
 
     public static void a(byte param0) {
         if (param0 != 106) {
-          field_b = (fn) null;
+          field_b = (SpriteOffset) null;
           field_b = null;
           return;
         }
@@ -200,6 +200,6 @@ final class ph {
     }
 
     static {
-        field_b = new fn(16, 6);
+        field_b = new SpriteOffset(16, 6);
     }
 }

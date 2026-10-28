@@ -80,7 +80,7 @@ final class di {
         try {
           Sprite[] var16 = (Sprite[]) null;
           ti.a(param8, param10, param1, param5, param11, 480, 0, param4, param3, lh.field_e, param12, pc.field_d, param2, param7, (Sprite[]) null, 2, param14, 0, gd.field_X, param6, param0);
-          sm.a(false, param9);
+          DebouncedValidator.a(false, param9);
           if (param13 > -5) {
             field_g = (d) null;
           }

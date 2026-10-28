@@ -71,8 +71,8 @@ final class mn extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var10 = EscapeVector.obfuscationControl;
         try {
-          SoftwareRasterizer.e(param1, param2, 1 + param3, 10000536);
-          SoftwareRasterizer.e(param1, param4 + param2, param3 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param1, param2, 1 + param3, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param1, param4 + param2, param3 + 1, 12105912);
           int var5_int = 1;
           int var6 = param4;
           if (SoftwareRasterizer.clipTop > var5_int + param2) {

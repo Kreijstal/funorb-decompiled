@@ -44,7 +44,7 @@ final class ak {
 
     private final void a(boolean param0, byte param1) {
         ol.field_N = null;
-        hn.field_n = false;
+        CheckboxPainter.field_n = false;
         pl.field_q.b(param1 - 26357, param0);
         di.field_d = null;
         mj.field_d = 0;
@@ -265,8 +265,8 @@ final class ak {
     }
 
     final void a(boolean param0) {
-        SoftwareRasterizer.d();
-        od.b(2);
+        SoftwareRasterizer.clearFramebuffer();
+        SelfDestructEffects.b(2);
         this.l(-1);
         pb.a(4);
         if (param0) {
@@ -441,7 +441,7 @@ final class ak {
         if (di.field_d.field_e) {
           dk var2 = this.j((byte) 82);
           int var3 = nk.a(-122, var2);
-          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, var3);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, var3);
         }
         if (param0) {
           String discarded$0 = this.g((byte) 4);
@@ -579,23 +579,23 @@ final class ak {
         }
         if (!aj.b(-122)) {
           if (mj.field_d == 0) {
-            rk.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 5120);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 5120);
           }
           if (10 == mj.field_d) {
-            rk.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
           }
           if (mj.field_d == 20) {
-            rk.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 11264);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 11264);
           }
           if (30 == mj.field_d) {
-            rk.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
           }
         } else {
           if (mj.field_d == 0) {
-            rk.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
           }
           if (mj.field_d == 10) {
-            rk.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
           }
         }
         if (mj.field_d < 1000) {
@@ -604,15 +604,15 @@ final class ak {
     }
 
     final int c(int param0, int param1, int param2) {
-        int var4 = sm.a(param2, -121, this.field_k, param0);
+        int var4 = DebouncedValidator.a(param2, -121, this.field_k, param0);
         if (0 <= var4) {
           return var4;
         }
-        var4 = sm.a(param2, -94, this.field_i, param0);
+        var4 = DebouncedValidator.a(param2, -94, this.field_i, param0);
         if (0 <= var4) {
           return var4;
         }
-        var4 = sm.a(param2, param1 ^ 108, this.field_j, param0);
+        var4 = DebouncedValidator.a(param2, param1 ^ 108, this.field_j, param0);
         if (param1 >= ~var4) {
           return var4;
         }
@@ -626,7 +626,7 @@ final class ak {
         if (var3) {
           return (var3);
         }
-        di.field_d.a(this.c(sf.field_c, -1, ng.field_ob), (byte) 120, this.c(dh.field_d, -1, bj.field_y));
+        di.field_d.a(this.c(sf.field_c, -1, ng.field_ob), (byte) 120, this.c(dh.field_d, -1, UiContainer.field_y));
         this.c(false);
         boolean var3Lifetime1 = (this.a(true, Js5NetworkRequest.a((byte) 15, -1), (byte) 79));
         return (var3Lifetime1);
@@ -640,7 +640,7 @@ final class ak {
           }
           int[] var16 = new int[]{0};
           int[] var10 = var16;
-          String[] var11 = new String[]{ag.field_a};
+          String[] var11 = new String[]{GameKeyHandler.field_a};
           int var12 = var16.length;
           int[] var26 = this.b(var12, param3, 10);
           int[] var28 = this.a(param0, -47, var12, param4);
@@ -810,7 +810,7 @@ final class ak {
         String stackIn_8_2 = null;
         try {
           String[] var12 = mg.field_h;
-          if (!bj.e((byte) 103)) {
+          if (!UiContainer.e((byte) 103)) {
             var10 = new int[]{5};
             var11 = new String[]{var12[0]};
           } else {
@@ -1060,7 +1060,7 @@ final class ak {
         if (hi.a(param1, -2)) {
           this.field_e = 5;
         }
-        if (!bj.e((byte) 98)) {
+        if (!UiContainer.e((byte) 98)) {
           return;
         }
         if (param1 == 2) {

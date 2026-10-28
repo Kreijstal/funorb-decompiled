@@ -170,7 +170,7 @@ final class SystemTaskService implements Runnable {
                   case 16:
                   default:
                     if (!this.field_f) {
-                      throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw SystemTaskService.<RuntimeException>rethrowUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
@@ -187,7 +187,7 @@ final class SystemTaskService implements Runnable {
                         if (this.field_m) {
                           this.field_i.a(var14, var8.field_c & 65535, var8.field_a & 65535, var8.field_c >>> 16, -7976, var8.field_a >> 16);
                         } else {
-                          Class.forName("gg").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_t, new Object[]{var14, new Integer(var8.field_c >>> 16), new Integer(65535 & var8.field_c), new Integer(var8.field_a >> 16), new Integer(65535 & var8.field_a)});
+                          Class.forName("FullscreenDisplayController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_t, new Object[]{var14, new Integer(var8.field_c >>> 16), new Integer(65535 & var8.field_c), new Integer(var8.field_a >> 16), new Integer(65535 & var8.field_a)});
                         }
                         break;
                       case 12:
@@ -229,21 +229,21 @@ final class SystemTaskService implements Runnable {
                           Class.forName("vf").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_h, new Object[]{var11[0], var11[1], new Integer(var8.field_c), new Integer(var8.field_a), var11[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw SystemTaskService.<RuntimeException>rethrowUnchecked(new Exception(""));
                           }
                           try {
                             if (!field_e.startsWith("win")) {
-                              throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw SystemTaskService.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             String var12 = (String) (var8.field_d);
                             if (!var12.startsWith("http://") &&
                               !var12.startsWith("https://")) {
-                              throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw SystemTaskService.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             String var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (int var5 = 0; var5 < var12.length(); var5++) {
                               if (var4_ref_String.indexOf((int) var12.charAt(var5)) == -1) {
-                                throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw SystemTaskService.<RuntimeException>rethrowUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var12 + "\"");
@@ -252,13 +252,13 @@ final class SystemTaskService implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             Exception var3_ref2 = (Exception) (Object) decompiledCaughtException;
                             var8.field_b = var3_ref2;
-                            throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                            throw SystemTaskService.<RuntimeException>rethrowUnchecked(var3_ref2);
                           }
                         }
                         break;
                       case 7:
                         if (!this.field_m) {
-                          Class.forName("gg").getMethod("exit", new Class[]{}).invoke(this.field_t, new Object[]{});
+                          Class.forName("FullscreenDisplayController").getMethod("exit", new Class[]{}).invoke(this.field_t, new Object[]{});
                         } else {
                           this.field_i.a(8, (java.awt.Frame) (var8.field_d));
                         }
@@ -267,7 +267,7 @@ final class SystemTaskService implements Runnable {
                         if (this.field_m) {
                           var8.field_b = this.field_i.a(-2147483648);
                         } else {
-                          var8.field_b = Class.forName("gg").getMethod("listmodes", new Class[]{}).invoke(this.field_t, new Object[]{});
+                          var8.field_b = Class.forName("FullscreenDisplayController").getMethod("listmodes", new Class[]{}).invoke(this.field_t, new Object[]{});
                         }
                         break;
                       case 21:
@@ -541,14 +541,14 @@ final class SystemTaskService implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        ai.a(field_w, field_q, -109);
+        CacheFileLocator.a(field_w, field_q, -109);
         if (this.field_f) {
-          this.field_j = new BoundedRandomAccessFile(ai.a((String) null, field_q, 24173, "random.dat"), "rw", 25L);
-          this.field_b = new BoundedRandomAccessFile(ai.a("main_file_cache.dat2", (byte) -23), "rw", 314572800L);
-          this.field_x = new BoundedRandomAccessFile(ai.a("main_file_cache.idx255", (byte) 124), "rw", 1048576L);
+          this.field_j = new BoundedRandomAccessFile(CacheFileLocator.a((String) null, field_q, 24173, "random.dat"), "rw", 25L);
+          this.field_b = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.dat2", (byte) -23), "rw", 314572800L);
+          this.field_x = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.idx255", (byte) 124), "rw", 1048576L);
           this.field_u = new BoundedRandomAccessFile[param2];
           for (int var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_u[var5_int] = new BoundedRandomAccessFile(ai.a("main_file_cache.idx" + var5_int, (byte) 87), "rw", 1048576L);
+            this.field_u[var5_int] = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.idx" + var5_int, (byte) 87), "rw", 1048576L);
           }
           if (this.field_m) {
             try {
@@ -560,7 +560,7 @@ final class SystemTaskService implements Runnable {
           }
           try {
             if (!this.field_m) {
-              this.field_t = Class.forName("gg").newInstance();
+              this.field_t = Class.forName("FullscreenDisplayController").newInstance();
             } else {
               ra var6 = new ra();
               this.field_i = var6;
@@ -592,7 +592,7 @@ final class SystemTaskService implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

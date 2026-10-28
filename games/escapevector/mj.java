@@ -17,7 +17,7 @@ final class mj {
           Throwable var8_ref_Throwable = null;
           int var9 = EscapeVector.obfuscationControl;
           try {
-            if (null == pg.field_c &&
+            if (null == TextLayout.field_c &&
               !sl.a(param4, (byte) 0)) {
               int stackIn_5_0 = -1;
               return stackIn_5_0;
@@ -45,7 +45,7 @@ final class mj {
               if (0 == var6_int) {
                 al.field_d = ha.field_c;
               } else {
-                al.field_d = hn.field_q;
+                al.field_d = CheckboxPainter.field_q;
                 cd.field_v = var6_int;
                 hi.field_r = -1;
               }
@@ -67,7 +67,7 @@ final class mj {
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
-                  al.field_d = hn.field_q;
+                  al.field_d = CheckboxPainter.field_q;
                   hi.field_r = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -124,19 +124,19 @@ final class mj {
               }
               e.field_c = false;
               if (var6 != null) {
-                ag.a(var6, (byte) 30, PointCloudEffect.d((byte) -119));
+                GameKeyHandler.a(var6, (byte) 30, PointCloudEffect.d((byte) -119));
               }
               if (Js5NetworkRequest.field_x <= 0 &&
                 !ff.field_g) {
                 try {
-                  sd.a(PointCloudEffect.d((byte) -107), "unzap", param0 - 29156);
+                  JavaScriptBridge.callWindowFunction(PointCloudEffect.d((byte) -107), "unzap", param0 - 29156);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  sd.a((byte) 116, PointCloudEffect.d((byte) -128), new Object[]{jb.a(mg.field_d, (byte) 29)}, "zap");
+                  JavaScriptBridge.callWindowFunctionWithArguments((byte) 116, PointCloudEffect.d((byte) -128), new Object[]{jb.a(mg.field_d, (byte) 29)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -153,7 +153,7 @@ final class mj {
               int stackIn_81_0 = cd.field_v;
               return stackIn_81_0;
             }
-            if (hn.field_q == al.field_d &&
+            if (CheckboxPainter.field_q == al.field_d &&
               ll.d(param0 + 10549)) {
               nm.a(16);
               if (cd.field_v == 7 &&
@@ -170,7 +170,7 @@ final class mj {
               int stackIn_93_0 = cd.field_v;
               return stackIn_93_0;
             }
-            if (null == pg.field_c) {
+            if (null == TextLayout.field_c) {
               if (e.field_c) {
                 if (un.e(64655) > 30000L) {
                   MouseWheelInput.field_a = DualLinkNode.field_l;

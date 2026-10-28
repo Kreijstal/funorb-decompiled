@@ -24,7 +24,7 @@ final class TerrainMap {
         }
     }
 
-    final static void a(int param0, ce param1, boolean param2, byte param3) {
+    final static void a(int param0, TrackerMusicDefinition param1, boolean param2, byte param3) {
         try {
           String stackIn_16_2 = null;
           try {
@@ -37,7 +37,7 @@ final class TerrainMap {
                 nb.field_c.removeListener((PcmMixerListener) ((Object) ni.field_N));
               }
               kn.field_b = param0;
-              ni.field_N = new o(param1);
+              ni.field_N = new TrackerMusicPlayer(param1);
               ni.field_N.d(kn.field_b * kc.field_b / 64);
               ni.field_N.a(param2);
               ig.field_l.b();

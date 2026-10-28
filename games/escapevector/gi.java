@@ -170,9 +170,9 @@ final class gi {
         this.field_h = im.field_a;
         this.field_f = IntKeyLookup.field_d;
         this.field_m = ve.field_g;
-        this.field_n = od.field_d;
+        this.field_n = SelfDestructEffects.field_d;
         this.field_a = DualLinkNode.field_o;
-        this.field_b = ah.field_e;
+        this.field_b = TextFieldValidator.field_e;
         if (param0) {
           this.field_k = bo.field_H;
         } else {

@@ -482,7 +482,7 @@ final class Minimap {
         }
         int var11 = -var8 + (param4 - (var10 + var9.field_x));
         int var12 = 15658734;
-        String var13 = null == this.field_D ? sj.field_k : af.field_b;
+        String var13 = null == this.field_D ? sj.field_k : FullscreenFocusCanvas.field_b;
         var9.c(var13, this.field_f / 2, var11, var12, -1);
         this.d(111);
     }

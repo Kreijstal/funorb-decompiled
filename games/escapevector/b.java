@@ -24,10 +24,10 @@ final class b {
             }
             return;
           }
-          pn.field_pb.a(true, (byte) -33, on.field_a, sm.field_b);
+          pn.field_pb.handlePointerFrame(true, (byte) -33, on.field_a, DebouncedValidator.field_b);
           pn.field_pb.m(0);
           while (pn.p(-104)) {
-            pn.field_pb.a(jc.field_c, nk.field_n, (byte) -121);
+            pn.field_pb.handleKey(jc.field_c, nk.field_n, (byte) -121);
           }
           if (param0 < -31) {
             return;

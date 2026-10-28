@@ -45,31 +45,31 @@ final class ki extends r {
         field_I = null;
     }
 
-    final String d(int param0) {
-        boolean var2 = (this.field_C.field_u);
-        this.field_C.field_u = this.field_u;
-        String var3 = this.field_C.d(param0);
-        this.field_C.field_u = (var2) ? true : false;
+    final String getTooltip(int guard) {
+        boolean var2 = (this.field_C.hovered);
+        this.field_C.hovered = this.hovered;
+        String var3 = this.field_C.getTooltip(guard);
+        this.field_C.hovered = (var2) ? true : false;
         return var3;
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        int var5 = this.field_k + param3;
-        int var6 = this.field_j + param0;
-        super.a(param0, (byte) 114, param2, param3);
-        if (param2 != 0) {
+    final void drawLayer(int screenY, byte guard, int layer, int screenX) {
+        int var5 = this.x + screenX;
+        int var6 = this.y + screenY;
+        super.drawLayer(screenY, (byte) 114, layer, screenX);
+        if (layer != 0) {
           return;
         }
-        int var7 = this.field_E ? this.field_g - (this.field_D + this.field_K * 2) : 0;
-        this.field_L.a(this.field_G, this.field_K + var5 + var7, var6 + this.field_K, -this.field_K + this.field_D, -(this.field_K * 2) + this.field_x, this.field_F, -1, this.field_E ? 0 : 2, 1, this.field_L.field_r);
-        if (param1 >= 85) {
+        int var7 = this.field_E ? this.width - (this.field_D + this.field_K * 2) : 0;
+        this.field_L.a(this.field_G, this.field_K + var5 + var7, var6 + this.field_K, -this.field_K + this.field_D, -(this.field_K * 2) + this.height, this.field_F, -1, this.field_E ? 0 : 2, 1, this.field_L.field_r);
+        if (guard >= 85) {
           return;
         }
         this.field_E = false;
     }
 
-    ki(int param0, int param1, int param2, int param3, hm param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (db) null, (wn) null);
+    ki(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetPainter) null, (UiListener) null);
         int stackIn_10_0 = 0;
         String stackIn_15_2 = null;
         String stackIn_18_2 = null;
@@ -88,7 +88,7 @@ final class ki extends r {
           if (param3 >= var13) {
             var13 = param3;
           } else {
-            this.a(param2, param1, param0, true, var13);
+            this.setBounds(param2, param1, param0, true, var13);
           }
           if (this.field_E) {
             stackIn_10_0 = 0;
@@ -96,7 +96,7 @@ final class ki extends r {
             stackIn_10_0 = 2 * this.field_K + this.field_D;
           }
           int var14 = stackIn_10_0;
-          this.field_C.a(-(3 * this.field_K) + (-this.field_D + param2), this.field_K + (var13 - param3 >> 1), var14, true, param3 - 2 * this.field_K);
+          this.field_C.setBounds(-(3 * this.field_K) + (-this.field_D + param2), this.field_K + (var13 - param3 >> 1), var14, true, param3 - 2 * this.field_K);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

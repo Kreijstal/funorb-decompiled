@@ -5,7 +5,7 @@ final class of {
     static String field_e;
     static java.awt.Canvas field_d;
     static int field_c;
-    static rf field_f;
+    static ValidationState field_f;
     static boolean field_b;
     static Sprite field_a;
     static fd field_g;
@@ -150,6 +150,6 @@ final class of {
     static {
         field_e = "Start Game";
         field_c = 70;
-        field_f = new rf();
+        field_f = new ValidationState();
     }
 }

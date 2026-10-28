@@ -14,8 +14,8 @@ final class SecondaryIntrusiveDeque {
     }
 
     final static void d(int param0) {
-        od.field_j.field_g = param0;
-        od.field_j.field_d = 0;
+        SelfDestructEffects.field_j.field_g = param0;
+        SelfDestructEffects.field_j.field_d = 0;
     }
 
     final int c(int param0) {
@@ -403,7 +403,7 @@ final class SecondaryIntrusiveDeque {
               if (0 == param0.length()) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              sd.a((byte) -111, param2, "document.cookie=\"" + var5 + "\"");
+              JavaScriptBridge.evaluateScript((byte) -111, param2, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
             gl.a((byte) 15, param2);

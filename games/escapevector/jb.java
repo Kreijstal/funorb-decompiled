@@ -197,7 +197,7 @@ final class jb extends kb {
         if (var7 == null) {
           return this.b(false);
         }
-        throw jb.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw jb.<RuntimeException>rethrowUnchecked((Throwable) var7);
     }
 
     public static void c(boolean param0) {
@@ -348,7 +348,7 @@ final class jb extends kb {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

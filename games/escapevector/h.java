@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends bj implements rj, qb {
+final class h extends UiContainer implements TextInputListener, ButtonListener {
     private boolean field_K;
-    private hc field_N;
+    private TextButton field_N;
     private boolean field_M;
     static String field_O;
     private boolean field_P;
-    private ul field_L;
-    private ul field_J;
-    private hc field_G;
+    private EditableTextWidget field_L;
+    private EditableTextWidget field_J;
+    private TextButton field_G;
     private String field_H;
-    private hc field_I;
+    private TextButton field_I;
 
-    public final void a(hc param0, int param1, int param2, int param3, int param4) {
+    public final void onAction(TextButton button, int buttonCode, int localY, int guard, int localX) {
         String stackIn_18_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (this.field_G == param0) {
+          if (this.field_G == button) {
             this.a((byte) 103);
-          } else if (this.field_N == param0) {
+          } else if (this.field_N == button) {
             fe.a((byte) -83);
-          } else if (this.field_I == param0) {
+          } else if (this.field_I == button) {
             if (this.field_K) {
               fh.b(-54);
             } else if (this.field_P) {
@@ -30,7 +30,7 @@ final class h extends bj implements rj, qb {
               ta.m(2);
             }
           }
-          if (param3 != 1) {
+          if (guard != 1) {
             this.field_H = (String) null;
           }
           return;
@@ -39,45 +39,45 @@ final class h extends bj implements rj, qb {
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_17_0 = var6;
           StringBuilder stackIn_17_1 = new StringBuilder().append("h.K(");
-          if (param0 == null) {
+          if (button == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawLayer(int screenY, byte guard, int layer, int screenX) {
         if (null != this.field_H) {
-          Js5Transport.field_a.a(this.field_H, 20 + (this.field_k + param3), this.field_j + (param0 + 15), -40 + this.field_g, this.field_x, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
+          Js5Transport.field_a.a(this.field_H, 20 + (this.x + screenX), this.y + (screenY + 15), -40 + this.width, this.height, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
         }
         if (null != this.field_N) {
-          SoftwareRasterizer.e(10 + param3, 134 + param0, this.field_g - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + screenX, 134 + screenY, this.width - 20, 4210752);
         }
-        if (param1 < 85) {
+        if (guard < 85) {
           this.field_H = (String) null;
         }
-        super.a(param0, (byte) 87, param2, param3);
+        super.drawLayer(screenY, (byte) 87, layer, screenX);
     }
 
-    final boolean a(hm param0, char param1, int param2, int param3) {
+    final boolean onFocusedKey(UiComponent root, char character, int keyCode, int guard) {
         String stackIn_18_2 = null;
         try {
-          if (super.a(param0, param1, param2, 60)) {
+          if (super.onFocusedKey(root, character, keyCode, 60)) {
             return true;
           }
-          if (param2 == 98) {
-            boolean stackIn_7_0 = this.a((byte) 22, param0);
+          if (keyCode == 98) {
+            boolean stackIn_7_0 = this.a((byte) 22, root);
             return stackIn_7_0;
           }
-          if (param2 == 99) {
-            boolean stackIn_10_0 = this.a(param0, true);
+          if (keyCode == 99) {
+            boolean stackIn_10_0 = this.a(root, true);
             return stackIn_10_0;
           }
-          if (param3 <= 0) {
-            ul var6 = (ul) null;
-            this.a((ul) null, -39);
+          if (guard <= 0) {
+            EditableTextWidget var6 = (EditableTextWidget) null;
+            this.onTextChanged((EditableTextWidget) null, -39);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,25 +85,25 @@ final class h extends bj implements rj, qb {
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_17_0 = var5;
           StringBuilder stackIn_17_1 = new StringBuilder().append("h.G(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
-    public final void a(boolean param0, ul param1) {
+    public final void onSubmit(boolean guard, EditableTextWidget field) {
         String stackIn_11_2 = null;
         try {
-          if (param1 == this.field_L) {
-            this.field_J.a(-4659, (hm) (this));
+          if (field == this.field_L) {
+            this.field_J.focusNext(-4659, (UiComponent) (this));
           }
-          if (this.field_J == param1) {
+          if (this.field_J == field) {
             this.a((byte) 100);
           }
-          if (!param0) {
+          if (!guard) {
             this.field_H = (String) null;
           }
           return;
@@ -111,8 +111,8 @@ final class h extends bj implements rj, qb {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var3;
-          StringBuilder stackIn_10_1 = new StringBuilder().append("h.CA(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_10_1 = new StringBuilder().append("h.CA(").append(guard).append(',');
+          if (field == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -167,11 +167,11 @@ final class h extends bj implements rj, qb {
 
     final String j(int param0) {
         if (param0 != 35) {
-          hc var3 = (hc) null;
-          this.a((hc) null, 35, 44, 83, 31);
+          TextButton var3 = (TextButton) null;
+          this.onAction((TextButton) null, 35, 44, 83, 31);
         }
-        if (null != this.field_L.field_l) {
-          return this.field_L.field_l;
+        if (null != this.field_L.text) {
+          return this.field_L.text;
         }
         return "";
     }
@@ -185,24 +185,24 @@ final class h extends bj implements rj, qb {
         if (var2 >= var3) {
           var2 = 0;
         } else if (var2 == 0) {
-          var2 = hn.field_l.field_s;
+          var2 = CheckboxPainter.field_l.field_s;
         }
         return var2;
     }
 
-    public final void a(ul param0, int param1) {
+    public final void onTextChanged(EditableTextWidget field, int guard) {
         try {
-          if (param1 != 0) {
-            this.field_J = (ul) null;
+          if (guard != 0) {
+            this.field_J = (EditableTextWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "h.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "h.W(" + (field != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
     final void h(byte param0) {
         if (param0 >= -127) {
-          this.field_N = (hc) null;
+          this.field_N = (TextButton) null;
         }
         this.field_L.h((byte) -29);
         this.field_J.h((byte) -29);
@@ -210,18 +210,18 @@ final class h extends bj implements rj, qb {
 
     private final void a(byte param0) {
         if (param0 <= 88) {
-          ul var3 = (ul) null;
-          this.a(true, (ul) null);
+          EditableTextWidget var3 = (EditableTextWidget) null;
+          this.onSubmit(true, (EditableTextWidget) null);
         }
         if (gm.b(8192) ||
-          !(this.field_L.field_l.length() <= 0) &&
-          !(this.field_J.field_l.length() <= 0)) {
-          RasterSnapshot.a(0, this.field_J.field_l, this.field_L.field_l);
+          !(this.field_L.text.length() <= 0) &&
+          !(this.field_J.text.length() <= 0)) {
+          RasterSnapshot.a(0, this.field_J.text, this.field_L.text);
         }
     }
 
     h(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (db) null);
+        super(0, 0, 310, 190, (WidgetPainter) null);
         String stackIn_19_3 = null;
         String stackIn_60_2 = null;
         String stackIn_63_2 = null;
@@ -237,54 +237,54 @@ final class h extends bj implements rj, qb {
             this.field_P)) {
             throw new IllegalStateException();
           }
-          this.field_L = (ul) ((Object) new gd(param0, (wn) (this), 100));
-          this.field_J = (ul) ((Object) new gd("", (wn) (this), 20));
+          this.field_L = (EditableTextWidget) ((Object) new gd(param0, (UiListener) (this), 100));
+          this.field_J = (EditableTextWidget) ((Object) new gd("", (UiListener) (this), 20));
           if (!this.field_K) {
-            this.field_G = new hc(ta.field_g, (wn) null);
-            hc stackIn_18_1 = null;
-            hc stackIn_18_2 = null;
+            this.field_G = new TextButton(ta.field_g, (UiListener) null);
+            TextButton stackIn_18_1 = null;
+            TextButton stackIn_18_2 = null;
             if (this.field_P) {
               stackIn_19_3 = cj.field_c;
             } else {
-              hc stackIn_19_1 = null;
-              hc stackIn_19_2 = null;
+              TextButton stackIn_19_1 = null;
+              TextButton stackIn_19_2 = null;
               stackIn_19_3 = Minimap.field_O;
             }
-            this.field_I = new hc(stackIn_19_3, (wn) null);
+            this.field_I = new TextButton(stackIn_19_3, (UiListener) null);
             if (this.field_M) {
-              this.field_N = new hc(pc.field_g, (wn) (this));
+              this.field_N = new TextButton(pc.field_g, (UiListener) (this));
             }
           } else {
-            this.field_G = new hc(sh.field_s, (wn) null);
-            this.field_I = new hc(d.field_d, (wn) null);
-            this.field_L.field_y = false;
+            this.field_G = new TextButton(sh.field_s, (UiListener) null);
+            this.field_I = new TextButton(d.field_d, (UiListener) null);
+            this.field_L.enabled = false;
           }
-          this.field_L.field_s = (db) ((Object) new re(10000536));
-          this.field_J.field_s = (db) ((Object) new un(10000536));
+          this.field_L.painter = (WidgetPainter) ((Object) new re(10000536));
+          this.field_J.painter = (WidgetPainter) ((Object) new un(10000536));
           ck var6 = new ck();
-          this.field_G.field_s = (db) ((Object) var6);
+          this.field_G.painter = (WidgetPainter) ((Object) var6);
           if (this.field_I != null) {
-            this.field_I.field_s = (db) ((Object) var6);
+            this.field_I.painter = (WidgetPainter) ((Object) var6);
           }
           if (null != this.field_N) {
-            this.field_N.field_s = (db) ((Object) var6);
+            this.field_N.painter = (WidgetPainter) ((Object) var6);
           }
-          this.field_L.field_i = cd.field_u;
+          this.field_L.tooltip = cd.field_u;
           if (this.field_N != null) {
-            this.field_N.field_i = mm.field_c;
+            this.field_N.tooltip = mm.field_c;
           }
           if (this.field_K) {
-            this.field_I.field_i = gd.field_Z;
+            this.field_I.tooltip = gd.field_Z;
           } else if (!this.field_P) {
-            this.field_I.field_s = (db) ((Object) new ha());
+            this.field_I.painter = (WidgetPainter) ((Object) new ha());
           } else {
-            this.field_I.field_i = lf.field_G;
-            this.field_I.field_s = (db) ((Object) new ha());
+            this.field_I.tooltip = lf.field_G;
+            this.field_I.painter = (WidgetPainter) ((Object) new ha());
           }
-          this.field_j = 15;
+          this.y = 15;
           BitmapFont var7 = Js5Transport.field_a;
           if (null != this.field_H) {
-            this.field_j = this.field_j + (var7.b(this.field_H, -40 + this.field_g, var7.field_r) + 5);
+            this.y = this.y + (var7.b(this.field_H, -40 + this.width, var7.field_r) + 5);
           }
           String var8 = lh.field_b;
           ee var9 = sh.a((byte) -1, PointCloudEffect.d((byte) -107));
@@ -293,43 +293,43 @@ final class h extends bj implements rj, qb {
           } else if (var9 == oh.field_n) {
             var8 = wi.field_c;
           }
-          ki dupTemp$0 = new ki(10, this.field_j, -20 + this.field_g, 25, this.field_L, false, 80, 3, var7, 16777215, var8);
+          ki dupTemp$0 = new ki(10, this.y, -20 + this.width, 25, this.field_L, false, 80, 3, var7, 16777215, var8);
           ki var12 = dupTemp$0;
           this.b(dupTemp$0, false);
-          this.field_j = this.field_j + (((hm) ((Object) var12)).field_x + 5);
-          ki dupTemp$1 = new ki(10, this.field_j, this.field_g - 20, 25, this.field_J, false, 80, 3, var7, 16777215, qc.field_vb);
+          this.y = this.y + (((UiComponent) ((Object) var12)).height + 5);
+          ki dupTemp$1 = new ki(10, this.y, this.width - 20, 25, this.field_J, false, 80, 3, var7, 16777215, qc.field_vb);
           ki var13 = dupTemp$1;
           this.b(dupTemp$1, false);
-          this.field_j = this.field_j + (((hm) ((Object) var13)).field_x + 5);
-          this.field_G.field_q = (wn) (this);
+          this.y = this.y + (((UiComponent) ((Object) var13)).height + 5);
+          this.field_G.listener = (UiListener) (this);
           if (this.field_N != null) {
-            this.field_N.field_q = (wn) (this);
+            this.field_N.listener = (UiListener) (this);
           }
           if (null != this.field_I) {
-            this.field_I.field_q = (wn) (this);
+            this.field_I.listener = (UiListener) (this);
           }
           if (this.field_N == null) {
-            this.field_G.a(-10 + (-6 + this.field_g), this.field_j, 8, true, 30);
-            this.field_j = this.field_j + 35;
+            this.field_G.setBounds(-10 + (-6 + this.width), this.y, 8, true, 30);
+            this.y = this.y + 35;
           } else {
-            this.field_G.a(-95 + this.field_g, this.field_j, 85, true, 30);
-            this.field_j = this.field_j + 60;
+            this.field_G.setBounds(-95 + this.width, this.y, 85, true, 30);
+            this.y = this.y + 60;
           }
           if (this.field_N != null) {
-            this.field_N.a(this.field_g - 6 - 10, this.field_j, 8, true, 30);
-            this.field_j = this.field_j + 35;
+            this.field_N.setBounds(this.width - 6 - 10, this.y, 8, true, 30);
+            this.y = this.y + 35;
           }
           if (null != this.field_I) {
             if (!this.field_K &&
               !this.field_P) {
-              this.field_I.a(40, this.field_j, 8, true, 20);
-              this.field_j = this.field_j + 25;
+              this.field_I.setBounds(40, this.y, 8, true, 20);
+              this.y = this.y + 25;
             } else {
-              this.field_I.a(-6 + (this.field_g - 10), this.field_j, 8, true, 30);
-              this.field_j = this.field_j + 35;
+              this.field_I.setBounds(-6 + (this.width - 10), this.y, 8, true, 30);
+              this.y = this.y + 35;
             }
           }
-          this.a(this.field_g, 0, 0, true, 3 + this.field_j);
+          this.setBounds(this.width, 0, 0, true, 3 + this.y);
           this.b(this.field_G, false);
           if (this.field_N != null) {
             this.b(this.field_N, false);
@@ -370,7 +370,7 @@ final class h extends bj implements rj, qb {
           return;
         }
         try {
-          ul var3 = this.field_L;
+          EditableTextWidget var3 = this.field_L;
           String var4 = param0;
           var3.a(var4, false, -33);
           this.field_J.h((byte) -29);

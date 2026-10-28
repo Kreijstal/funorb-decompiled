@@ -19,14 +19,14 @@ final class TerrainMaskSupport {
           if (param0 <= 48) {
             return;
           }
-          dj.field_d = new fn[sc.field_h.length];
+          dj.field_d = new SpriteOffset[sc.field_h.length];
           for (int var1_int = 0; var1_int < sc.field_h.length; var1_int++) {
             int var2 = sc.field_h[var1_int];
-            fn var3 = ph.field_b;
-            Sprite var4 = k.a(var2, (byte) -39, 2);
-            int var5 = var4.fullWidth - var3.field_c;
-            int var6 = -var3.field_b + var4.fullHeight;
-            fn var7 = new fn(var5, var6);
+            SpriteOffset var3 = ph.field_b;
+            Sprite var4 = TextWidgetPainter.a(var2, (byte) -39, 2);
+            int var5 = var4.fullWidth - var3.x;
+            int var6 = -var3.y + var4.fullHeight;
+            SpriteOffset var7 = new SpriteOffset(var5, var6);
             dj.field_d[var1_int] = rc.a(var2, (byte) 121, var7, var3);
           }
           return;

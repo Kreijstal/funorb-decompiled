@@ -53,7 +53,7 @@ final class ci {
     }
 
     final static void a(int param0) {
-        if (!ce.field_f.b(param0 + 117)) {
+        if (!TrackerMusicDefinition.field_f.b(param0 + 117)) {
           if (null == IntValueNode.field_i) {
             if (param0 != 0) {
               field_d = (om) null;
@@ -93,7 +93,7 @@ final class ci {
         if (param1 > -56) {
           return false;
         }
-        if (bj.e((byte) -52)) {
+        if (UiContainer.e((byte) -52)) {
           int var3 = 1 << param0;
           boolean var4 = (0 != (this.field_c & var3));
           return (var4);

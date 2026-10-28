@@ -36,7 +36,7 @@ final class AudioService implements Runnable {
                   var1_int++;
                 }
                 en.a((byte) -95, 10L);
-                af.a((byte) -61, this.field_e, (Object) null);
+                FullscreenFocusCanvas.a((byte) -61, this.field_e, (Object) null);
                 continue;
               }
               break;
@@ -61,7 +61,7 @@ final class AudioService implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter1;
           Throwable var3 = decompiledCaughtException;
           this.field_g = false;
-          throw AudioService.<RuntimeException>$cfr$sneakyThrow(var3);
+          throw AudioService.<RuntimeException>rethrowUnchecked(var3);
         }
         if (decompiledRegionSelector1 == 0) {
           this.field_g = false;
@@ -387,7 +387,7 @@ final class AudioService implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

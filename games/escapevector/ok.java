@@ -27,7 +27,7 @@ final class ok {
           field_c = -87;
           eo.a(LaserGateSpan.field_l, (byte) -107);
           bi.b();
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearFramebuffer();
           IndexedSpriteState.a(-111);
           if (var5 < 256) {
             SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
@@ -41,7 +41,7 @@ final class ok {
         } else {
           eo.a(LaserGateSpan.field_l, (byte) -107);
           bi.b();
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearFramebuffer();
           IndexedSpriteState.a(-111);
           if (var5 < 256) {
             SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);

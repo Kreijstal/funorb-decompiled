@@ -23,7 +23,7 @@ final class ui {
         try {
           int var3_int = -113 % ((param2 + 13) / 50);
           String var4 = (String) null;
-          int stackIn_1_0 = od.a((byte) -32, false, (String) null, param0, param1, 0, 0);
+          int stackIn_1_0 = SelfDestructEffects.a((byte) -32, false, (String) null, param0, param1, 0, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

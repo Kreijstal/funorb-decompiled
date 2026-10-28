@@ -59,7 +59,7 @@ final class wk {
         pl.field_r = -2147483648;
         jf.field_J = 0;
         ArchiveRequest.field_t = -2147483648;
-        pg.field_d = 2147483647;
+        TextLayout.field_d = 2147483647;
         vl.field_e = 2147483647;
     }
 

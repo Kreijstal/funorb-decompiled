@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rf {
+final class ValidationState {
     static boolean field_b;
     static int field_a;
 
-    final static fn a(int param0, int param1) {
+    final static SpriteOffset a(int param0, int param1) {
         if (dj.field_d == null) {
           return null;
         }
@@ -25,7 +25,7 @@ final class rf {
     }
 
     final static void a(fd param0, int param1, int param2, int param3, fd param4, int param5) {
-        hn.field_s = param2;
+        CheckboxPainter.field_s = param2;
         gf.field_e = param4;
         fe.field_k = param5;
         en.field_k = param1;

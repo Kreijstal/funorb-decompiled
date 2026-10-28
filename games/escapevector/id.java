@@ -11,13 +11,13 @@ final class id {
           Sprite var1 = new Sprite(540, 140);
           eo.a(var1, (byte) -7);
           bi.b();
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearFramebuffer();
           kb.field_d = 0;
           IndexedSpriteState.a(-124);
           if (param0 < 115) {
             id.b(109);
           }
-          Sprite var2 = var1.b();
+          Sprite var2 = var1.copy();
           for (int var3 = 0; var3 < 15; var3++) {
             var2.e(-2, -2, 16777215);
             SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);

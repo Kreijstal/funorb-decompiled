@@ -138,7 +138,7 @@ final class vh extends IntrusiveNode {
             int stackIn_7_0 = 0;
             return stackIn_7_0;
           }
-          if (!bj.e((byte) 104)) {
+          if (!UiContainer.e((byte) 104)) {
             int stackIn_12_0 = 1;
             return stackIn_12_0;
           }
@@ -221,7 +221,7 @@ final class vh extends IntrusiveNode {
                         if (param0.field_I > 0 &&
                           param0.field_n != null) {
                           byte dupTemp$0 = param0.field_n[var8];
-                          ul.field_I[dupTemp$0] = ul.field_I[dupTemp$0] + 1;
+                          EditableTextWidget.field_I[dupTemp$0] = EditableTextWidget.field_I[dupTemp$0] + 1;
                         }
                         aj.field_d = aj.field_d + 1;
                         break;
@@ -242,9 +242,9 @@ final class vh extends IntrusiveNode {
             null != param0.field_n) {
             int var8Lifetime1 = 0;
             int var9Lifetime1 = 0;
-            while (!(ul.field_I.length <= var9Lifetime1)) {
-              int var10Lifetime1 = ul.field_I[var9Lifetime1];
-              ul.field_I[var9Lifetime1] = var8Lifetime1;
+            while (!(EditableTextWidget.field_I.length <= var9Lifetime1)) {
+              int var10Lifetime1 = EditableTextWidget.field_I[var9Lifetime1];
+              EditableTextWidget.field_I[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

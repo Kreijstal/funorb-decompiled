@@ -4,19 +4,19 @@
 final class uf {
     int field_f;
     static int field_n;
-    db field_p;
-    db field_k;
+    WidgetPainter field_p;
+    WidgetPainter field_k;
     int field_a;
     static String field_s;
-    db field_o;
+    WidgetPainter field_o;
     private boolean field_m;
     int field_l;
     BitmapFont field_d;
     int field_h;
     int field_q;
     private int field_c;
-    db field_b;
-    db field_i;
+    WidgetPainter field_b;
+    WidgetPainter field_i;
     static Sprite field_e;
     int field_j;
     int field_r;
@@ -144,8 +144,8 @@ final class uf {
     final void a(int param0, BitmapFont param1) {
         int var15 = EscapeVector.obfuscationControl;
         try {
-          k var17 = new k(param1, 2, 2, 2236962, 1, 1, 1, param1.field_x + param1.field_r + 2);
-          this.field_i = (db) ((Object) var17);
+          TextWidgetPainter var17 = new TextWidgetPainter(param1, 2, 2, 2236962, 1, 1, 1, param1.field_x + param1.field_r + 2);
+          this.field_i = (WidgetPainter) ((Object) var17);
           var17.field_h = 16777215;
           he var4 = new he();
           if (param0 != -31476) {
@@ -175,21 +175,21 @@ final class uf {
           var5[4] = (Sprite) ((Object) var18);
           var4.a(4, (byte) -53).a(param0 ^ 31367, true).a(2, var5);
           var4.a(5, (byte) -53).a(2, vd.a(65793, 0, 0, 0, 1317)).a(param0 + 31367, true).a(-1, -22572);
-          this.field_o = (db) ((Object) var4);
+          this.field_o = (WidgetPainter) ((Object) var4);
           he var6 = new he(var4, true);
           var6.field_m = 0;
           he var7 = new he(var4, true);
           var7.field_m = 0;
           var7.a(jj.a(8947848, 46), param0 + 31482);
           var7.a(1, (byte) -53).a(2, jj.a(11184810, 51)).a(2236962, -22572);
-          this.field_k = (db) ((Object) new hn(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_k = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           sc discarded$0 = new sc(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           ve discarded$1 = new ve(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           he var8 = new he();
           var17.a(var8, 111);
           var8.a(0, (byte) -53).a(2, ph.a(15658734, 1, 7829367, 10066329)).a(1118481, -22572).b(-93, -1);
           var8.a(4, (byte) -53).a(-121, true).a(param0 + 31478, var5);
-          this.field_p = (db) ((Object) var8);
+          this.field_p = (WidgetPainter) ((Object) var8);
           Sprite[] var9 = new Sprite[9];
           Sprite[] var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
@@ -204,14 +204,14 @@ final class uf {
           Sprite var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           he var14 = new he(var4, true);
-          var14.a(var13.b(), (byte) 74);
-          var13.a();
+          var14.a(var13.copy(), (byte) 74);
+          var13.rotateClockwise();
           he var14Lifetime1 = new he(var4, true);
-          var14Lifetime1.a(var13.b(), (byte) 118);
-          var13.a();
+          var14Lifetime1.a(var13.copy(), (byte) 118);
+          var13.rotateClockwise();
           he var14Lifetime2 = new he(var4, true);
-          var14Lifetime2.a(var13.b(), (byte) 78);
-          var13.a();
+          var14Lifetime2.a(var13.copy(), (byte) 78);
+          var13.rotateClockwise();
           he var19 = new he(var4, true);
           var19.a(var13, (byte) 87);
         } catch (RuntimeException runtimeException) {

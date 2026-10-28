@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ck extends k {
+final class ck extends TextWidgetPainter {
     static fc field_A;
     private int field_w;
     private Sprite[] field_s;
     private int field_z;
     static hf field_t;
     static ResourceArchive field_x;
-    static ag field_v;
+    static GameKeyHandler field_v;
     private int field_y;
     static String[] field_u;
     static String field_r;
@@ -50,21 +50,21 @@ final class ck extends k {
         }
     }
 
-    public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
+    public final void drawWidget(int originX, int originY, int guard, UiComponent component, boolean enabled) {
         boolean stackIn_6_0 = false;
         int stackIn_13_0 = 0;
         String stackIn_23_2 = null;
         try {
-          if (!param3.field_u) {
-            stackIn_6_0 = (param3.h(0));
+          if (!component.hovered) {
+            stackIn_6_0 = (component.isFocused(0));
           } else {
             stackIn_6_0 = true;
           }
           boolean var6_int = stackIn_6_0;
-          if (param3 instanceof hc) {
-            param4 = param4 & ((hc) (param3)).field_y;
+          if (component instanceof TextButton) {
+            enabled = enabled & ((TextButton) (component)).enabled;
           }
-          if (!param4) {
+          if (!enabled) {
             stackIn_13_0 = this.field_z;
           } else if (var6_int) {
             stackIn_13_0 = this.field_w;
@@ -72,25 +72,25 @@ final class ck extends k {
             stackIn_13_0 = this.field_y;
           }
           int var7 = stackIn_13_0;
-          int stackIn_16_0 = (!param4) ? 7105644 : 16777215;
+          int stackIn_16_0 = (!enabled) ? 7105644 : 16777215;
           int var8 = stackIn_16_0;
-          if (param2 >= -14) {
+          if (guard >= -14) {
             this.field_w = -93;
           }
-          qe.a(-100, param3.field_j + (param1 + (-this.field_s[0].fullHeight + param3.field_x >> 1)), param3.field_g, this.field_s, var7, param0 + param3.field_k);
-          this.field_l.a(param3.field_l, param0 + param3.field_k, param3.field_j + param1 - 2, param3.field_g, param3.field_x, var8, -1, 1, 1, this.field_l.field_r);
+          qe.a(-100, component.y + (originY + (-this.field_s[0].fullHeight + component.height >> 1)), component.width, this.field_s, var7, originX + component.x);
+          this.field_l.a(component.text, originX + component.x, component.y + originY - 2, component.width, component.height, var8, -1, 1, 1, this.field_l.field_r);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_22_0 = var6;
-          StringBuilder stackIn_22_1 = new StringBuilder().append("ck.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_22_1 = new StringBuilder().append("ck.M(").append(originX).append(',').append(originY).append(',').append(guard).append(',');
+          if (component == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(enabled).append(')').toString());
         }
     }
 
@@ -120,6 +120,6 @@ final class ck extends k {
         field_A = new fc();
         field_t = new hf();
         field_u = new String[]{"Anti-gravity", "Breach", "Cataclysm", "Dash", "Deep Vertigo", "Divided", "Explosive Exit", "Gravity Chamber", "Mine Field", "Orb", "Pinball", "Pulse", "Slanted Mines", "Upwards and Onwards", "Asteroids Normal", "Asteroids"};
-        field_v = new ag();
+        field_v = new GameKeyHandler();
     }
 }

@@ -197,7 +197,7 @@ final class SoftwareRasterizer {
         pixels = param0;
         width = param1;
         height = param2;
-        SoftwareRasterizer.f(0, 0, param1, param2);
+        SoftwareRasterizer.setClip(0, 0, param1, param2);
     }
 
     final static void c() {
@@ -256,8 +256,8 @@ final class SoftwareRasterizer {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4) {
-        SoftwareRasterizer.e(param0, param1, param2, param4);
-        SoftwareRasterizer.e(param0, param1 + param3 - 1, param2, param4);
+        SoftwareRasterizer.drawHorizontalLine(param0, param1, param2, param4);
+        SoftwareRasterizer.drawHorizontalLine(param0, param1 + param3 - 1, param2, param4);
         SoftwareRasterizer.g(param0, param1, param3, param4);
         SoftwareRasterizer.g(param0 + param2 - 1, param1, param3, param4);
     }
@@ -552,9 +552,9 @@ final class SoftwareRasterizer {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            SoftwareRasterizer.e(param0 + param2, param1, -param2 + 1, param4);
+            SoftwareRasterizer.drawHorizontalLine(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            SoftwareRasterizer.e(param0, param1, param2 + 1, param4);
+            SoftwareRasterizer.drawHorizontalLine(param0, param1, param2 + 1, param4);
           }
           return;
         }
@@ -619,23 +619,23 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
-        if (param0 < 0) {
-          param0 = 0;
+    final static void setClip(int left, int top, int right, int bottom) {
+        if (left < 0) {
+          left = 0;
         }
-        if (param1 < 0) {
-          param1 = 0;
+        if (top < 0) {
+          top = 0;
         }
-        if (param2 > width) {
-          param2 = width;
+        if (right > width) {
+          right = width;
         }
-        if (param3 > height) {
-          param3 = height;
+        if (bottom > height) {
+          bottom = height;
         }
-        clipLeft = param0;
-        clipTop = param1;
-        clipRight = param2;
-        clipBottom = param3;
+        clipLeft = left;
+        clipTop = top;
+        clipRight = right;
+        clipBottom = bottom;
         SoftwareRasterizer.b();
     }
 
@@ -1150,21 +1150,21 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3) {
-        if (param1 >= clipTop) {
-          if (param1 >= clipBottom) {
+    final static void drawHorizontalLine(int x, int y, int length, int color) {
+        if (y >= clipTop) {
+          if (y >= clipBottom) {
             return;
           }
-          if (param0 < clipLeft) {
-            param2 = param2 - (clipLeft - param0);
-            param0 = clipLeft;
+          if (x < clipLeft) {
+            length = length - (clipLeft - x);
+            x = clipLeft;
           }
-          if (param0 + param2 > clipRight) {
-            param2 = clipRight - param0;
+          if (x + length > clipRight) {
+            length = clipRight - x;
           }
-          int var4 = param0 + param1 * width;
-          for (int var5 = 0; var5 < param2; var5++) {
-            pixels[var4 + var5] = param3;
+          int var4 = x + y * width;
+          for (int var5 = 0; var5 < length; var5++) {
+            pixels[var4 + var5] = color;
           }
           return;
         }
@@ -1179,7 +1179,7 @@ final class SoftwareRasterizer {
         field_g = null;
     }
 
-    final static void d() {
+    final static void clearFramebuffer() {
         int var0 = 0;
         int var1 = width * height - 7;
         while (var0 < var1) {

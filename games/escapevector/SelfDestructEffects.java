@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class od {
+final class SelfDestructEffects {
     static boolean field_k;
     static boolean field_s;
     static String field_d;
@@ -14,7 +14,7 @@ final class od {
     private IntrusiveDeque field_o;
     private int field_a;
     private int field_m;
-    private ce field_e;
+    private TrackerMusicDefinition field_e;
     private int field_g;
     private int field_r;
     private Sprite field_l;
@@ -37,7 +37,7 @@ final class od {
         }
         if (!param0) {
           java.awt.Component var7 = (java.awt.Component) null;
-          od.a((java.awt.Component) null, (byte) -120);
+          SelfDestructEffects.a((java.awt.Component) null, (byte) -120);
         }
     }
 
@@ -80,7 +80,7 @@ final class od {
     final static void b(int param0) {
         if (param0 != 2) {
           java.awt.Component var2 = (java.awt.Component) null;
-          od.a((java.awt.Component) null, (byte) -63);
+          SelfDestructEffects.a((java.awt.Component) null, (byte) -63);
         }
         dj.a(0, -14, 0);
     }
@@ -137,7 +137,7 @@ final class od {
           if (param0 != -32) {
             field_s = false;
           }
-          if (null == pg.field_c &&
+          if (null == TextLayout.field_c &&
             !sl.a(false, (byte) 0)) {
             int stackIn_6_0 = -1;
             return stackIn_6_0;
@@ -251,7 +251,7 @@ final class od {
             } else {
               String var9_ref_String = om.field_g.d(param0 - 15176);
               if (var9_ref_String != null) {
-                ag.a(var9_ref_String, (byte) 30, PointCloudEffect.d((byte) -83));
+                GameKeyHandler.a(var9_ref_String, (byte) 30, PointCloudEffect.d((byte) -83));
               }
             }
             nm.a(16);
@@ -259,7 +259,7 @@ final class od {
             int stackIn_53_0 = cd.field_v;
             return stackIn_53_0;
           }
-          if (pg.field_c == null) {
+          if (TextLayout.field_c == null) {
             if (e.field_c) {
               if (30000L < un.e(64655)) {
                 MouseWheelInput.field_a = DualLinkNode.field_l;
@@ -389,7 +389,7 @@ final class od {
         SoftwareRasterizer.a(0, 0, var6, var7, var8, var5);
     }
 
-    final ce b(boolean param0) {
+    final TrackerMusicDefinition b(boolean param0) {
         if (!param0) {
           field_d = (String) null;
         }
@@ -444,7 +444,7 @@ final class od {
         }
     }
 
-    od(GameplaySession param0) {
+    SelfDestructEffects(GameplaySession param0) {
         this.field_o = new IntrusiveDeque();
         this.field_g = 1500;
         this.field_r = -1;

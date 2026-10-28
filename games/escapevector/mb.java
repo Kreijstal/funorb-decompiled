@@ -44,19 +44,19 @@ final class mb {
             }
             if (wk.field_c) {
               kc.a((byte) -75);
-            } else if (pg.field_b) {
+            } else if (TextLayout.field_b) {
               qj.a(-883);
-              hm.field_o.e(117);
-            } else if (0 <= od.field_q) {
+              UiComponent.field_o.e(117);
+            } else if (0 <= SelfDestructEffects.field_q) {
               sn.c(-1);
-              hn.field_l.j(2525);
+              CheckboxPainter.field_l.j(2525);
             } else if (!PacketBuffer.field_h) {
               if (e.field_a) {
                 var2 = (da.field_b.j(-122));
                 if (var2) {
                   return;
                 }
-              } else if (hn.field_n) {
+              } else if (CheckboxPainter.field_n) {
                 mn.d((byte) -120);
                 var2 = (rc.field_a.f(-91));
                 if (var2) {
@@ -87,7 +87,7 @@ final class mb {
           if (aj.b(-102)) {
             return;
           }
-          ce.field_f.d(-32464);
+          TrackerMusicDefinition.field_f.d(-32464);
           ua.field_c.b(126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -102,8 +102,8 @@ final class mb {
           boolean stackIn_4_0 = !(aj.b(-96));
           boolean var1_int = stackIn_4_0;
           if (var1_int &&
-            !ce.field_f.field_h &&
-            !ce.field_f.field_c) {
+            !TrackerMusicDefinition.field_f.field_h &&
+            !TrackerMusicDefinition.field_f.field_c) {
             return false;
           }
           if (var1_int &&
@@ -111,17 +111,17 @@ final class mb {
             return false;
           }
           if (var1_int &&
-            bj.e((byte) 98) &&
+            UiContainer.e((byte) 98) &&
             se.field_b == null) {
             return false;
           }
           if (var1_int &&
-            bj.e((byte) 116) &&
+            UiContainer.e((byte) 116) &&
             ArchiveProvider.field_b == null) {
             return false;
           }
           if (var1_int &&
-            bj.e((byte) 111) &&
+            UiContainer.e((byte) 111) &&
             null != he.field_u) {
             return false;
           }
@@ -139,7 +139,7 @@ final class mb {
     final static void a(Sprite param0, int param1) {
         String stackIn_8_2 = null;
         try {
-          ah.field_j = param0;
+          TextFieldValidator.field_j = param0;
           of.field_a = new Sprite(param0.fullWidth, param0.fullHeight);
           if (param1 > -11) {
             field_a = (PcmSampleStream) null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hn implements db {
+final class CheckboxPainter implements WidgetPainter {
     private int field_a;
     private int field_p;
     private int field_m;
@@ -47,29 +47,29 @@ final class hn implements db {
         }
     }
 
-    public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
-        hm stackIn_3_0 = null;
+    public final void drawWidget(int originX, int originY, int guard, UiComponent component, boolean enabled) {
+        UiComponent stackIn_3_0 = null;
         String stackIn_20_2 = null;
         try {
-          if (!(param3 instanceof bo)) {
+          if (!(component instanceof bo)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (hm) (param3);
+            stackIn_3_0 = (UiComponent) (component);
           }
           bo var11 = (bo) (stackIn_3_0);
           if (var11 != null) {
-            param4 = param4 & var11.field_y;
+            enabled = enabled & var11.enabled;
           }
           int var7 = 5592405;
-          SoftwareRasterizer.a(param0 + param3.field_k, param1 + param3.field_j, param3.field_g, param3.field_x, this.field_t);
-          if (param4) {
+          SoftwareRasterizer.a(originX + component.x, originY + component.y, component.width, component.height, this.field_t);
+          if (enabled) {
             var7 = 16777215;
           }
-          int var8 = param3.field_k + param0 + this.field_e;
-          if (param2 > -14) {
+          int var8 = component.x + originX + this.field_e;
+          if (guard > -14) {
             return;
           }
-          int var9 = this.field_r + (param3.field_j + param1);
+          int var9 = this.field_r + (component.y + originY);
           SoftwareRasterizer.e(var8, var9, this.field_a, this.field_k, 5592405);
           SoftwareRasterizer.a(var8, var9, this.field_a, this.field_k, var7);
           if (var11.field_z) {
@@ -78,20 +78,20 @@ final class hn implements db {
           }
           if (this.field_o != null) {
             int var10 = this.field_e + (this.field_a + this.field_g);
-            this.field_o.a(param3.field_l, var10 + param0 + param3.field_k, this.field_m + param3.field_j + param1, param3.field_g - (var10 + this.field_g), -(this.field_g << 1) + param3.field_x, this.field_i, this.field_d, this.field_p, this.field_j, 0);
+            this.field_o.a(component.text, var10 + originX + component.x, this.field_m + component.y + originY, component.width - (var10 + this.field_g), -(this.field_g << 1) + component.height, this.field_i, this.field_d, this.field_p, this.field_j, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_19_0 = var6;
-          StringBuilder stackIn_19_1 = new StringBuilder().append("hn.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_19_1 = new StringBuilder().append("hn.M(").append(originX).append(',').append(originY).append(',').append(guard).append(',');
+          if (component == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(enabled).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class hn implements db {
         field_c = null;
     }
 
-    hn(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    CheckboxPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_p = 1;
         this.field_j = 1;
         try {

@@ -2,5 +2,5 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface og {
-    public abstract el a(byte param0);
+    public abstract ValidationSource a(byte param0);
 }

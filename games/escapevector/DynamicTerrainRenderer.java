@@ -544,7 +544,7 @@ final class DynamicTerrainRenderer {
 
     private final void a(int param0, byte param1) {
         SoftwareRasterizer.a(this.field_c);
-        SoftwareRasterizer.f(0, param0, 639, 479);
+        SoftwareRasterizer.setClip(0, param0, 639, 479);
         this.field_y[0].e(0, 0);
         if (param1 != 104) {
           field_w = (Sprite) null;
@@ -944,7 +944,7 @@ final class DynamicTerrainRenderer {
           int var2_int = 0;
           do {
             if (!(jf.field_J > var2_int)) {
-              vj.a((byte) -128, jf.field_J + param0, param0 + param0, pl.field_r, false, pg.field_d, param0);
+              vj.a((byte) -128, jf.field_J + param0, param0 + param0, pl.field_r, false, TextLayout.field_d, param0);
               break;
             }
             cd.field_q[var2_int + param0] = var2_int;
@@ -1134,13 +1134,13 @@ final class DynamicTerrainRenderer {
         int var13 = -var5;
         int var14 = -var6;
         int var15 = var5 >= 0 ? 1 : -1;
-        SoftwareRasterizer.f(var9, var11, var10, var12);
+        SoftwareRasterizer.setClip(var9, var11, var10, var12);
         dj.a(var14, -24, var13);
-        SoftwareRasterizer.f(var7 * var15 + var9, var11, var10 + var5 * var15, var12);
+        SoftwareRasterizer.setClip(var7 * var15 + var9, var11, var10 + var5 * var15, var12);
         dj.a(var14, -123, var13 + var15 * var3);
-        SoftwareRasterizer.f(var9, var11 + var8, var10, var6 + var12);
+        SoftwareRasterizer.setClip(var9, var11 + var8, var10, var6 + var12);
         dj.a(var14 + var4, -127, var13);
-        SoftwareRasterizer.f(var9 + var7 * var15, var11 + var8, var10 + var5 * var15, var12 + var6);
+        SoftwareRasterizer.setClip(var9 + var7 * var15, var11 + var8, var10 + var5 * var15, var12 + var6);
         dj.a(var14 + var4, -94, var3 * var15 + var13);
         md.field_D.a(107);
         SoftwareRasterizer.b(this.field_c);
@@ -1781,8 +1781,8 @@ final class DynamicTerrainRenderer {
         SoftwareRasterizer.a(this.field_c);
         int var5 = 480;
         this.field_y[1].g();
-        SoftwareRasterizer.f(0, 0, var4, var5);
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.setClip(0, 0, var4, var5);
+        SoftwareRasterizer.clearFramebuffer();
         int var6 = this.field_p.length;
         int var7 = this.field_p[0].length;
         int var8 = -this.tileHeight - param0;

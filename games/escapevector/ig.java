@@ -160,7 +160,7 @@ final class ig {
         try {
           int var6_int = param2.field_p / param1 + param2.field_l;
           int var7 = var6_int * 16384 / 640;
-          rk.field_e.playSampleWithPan(param0, param4, param3, var7);
+          ObjectSpriteSet.field_e.playSampleWithPan(param0, param4, param3, var7);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ig.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -187,7 +187,7 @@ final class ig {
           }
           pl.field_q = null;
           IntValueNode.field_i = null;
-          od.field_q = -1;
+          SelfDestructEffects.field_q = -1;
           int var6Lifetime1 = var3;
           IntValueNode.startSelectedLevel(this.field_a, var6Lifetime1, 89);
           return true;
@@ -195,7 +195,7 @@ final class ig {
         if (this.field_s == var3) {
           IntValueNode.field_i = null;
           pl.field_q = null;
-          od.field_q = -1;
+          SelfDestructEffects.field_q = -1;
           IntValueNode.startSelectedLevel(this.field_a, -1, 101);
           return true;
         }
@@ -207,7 +207,7 @@ final class ig {
           return true;
         }
         if (var3 == this.field_e) {
-          od.field_q = -1;
+          SelfDestructEffects.field_q = -1;
           GameplaySession.c(param0, 2560);
           return true;
         }
@@ -303,7 +303,7 @@ final class ig {
           this.field_o = false;
           this.field_r.selectLevel(this.field_m, 110);
           this.a(true);
-          fn.a((byte) 82);
+          SpriteOffset.a((byte) 82);
         }
     }
 
@@ -489,7 +489,7 @@ final class ig {
           ig.h(-11);
         }
         if (di.field_d.field_e) {
-          Object var2 = rk.field_e;
+          Object var2 = ObjectSpriteSet.field_e;
           synchronized (var2) {
             int var3 = 1536 * qm.field_c / 64;
             int var4 = 100;
@@ -503,7 +503,7 @@ final class ig {
                 qe var8 = var6[var7];
                 if (var8.field_d == var5) {
                   int var9 = var8.field_f.field_h * 16384 / 640;
-                  rk.field_e.playSampleWithPan(ArchiveRequest.field_w, var4Lifetime1, var3, var9);
+                  ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, var4Lifetime1, var3, var9);
                 }
               }
             }
@@ -601,8 +601,8 @@ final class ig {
     }
 
     final void e(int param0) {
-        SoftwareRasterizer.d();
-        od.b(param0 ^ 1);
+        SoftwareRasterizer.clearFramebuffer();
+        SelfDestructEffects.b(param0 ^ 1);
         int var2 = mj.field_d < 50 ? -mj.field_d + 50 : 0;
         if (null != this.field_k) {
           this.field_k.d(3, 79);
@@ -715,7 +715,7 @@ final class ig {
             }
           }
           if (nk.field_n == 13) {
-            od.field_q = -1;
+            SelfDestructEffects.field_q = -1;
             GameplaySession.c(false, param0 ^ 989);
             return;
           }
@@ -723,7 +723,7 @@ final class ig {
             return;
           }
         }
-        var6.a(this.a(ng.field_ob, 12089, sf.field_c), (byte) 126, this.a(bj.field_y, 12089, dh.field_d));
+        var6.a(this.a(ng.field_ob, 12089, sf.field_c), (byte) 126, this.a(UiContainer.field_y, 12089, dh.field_d));
         boolean discarded$0 = this.a(true, -89);
         this.c((byte) 86);
         this.g(param0 ^ -2493);
@@ -743,7 +743,7 @@ final class ig {
         }
         if (var4 != null) {
           int var5 = 8 + fh.field_g.b((String) (var4), 387, 20);
-          SoftwareRasterizer.e(7, 426 + (-var5 - 1), 393, 3162160);
+          SoftwareRasterizer.drawHorizontalLine(7, 426 + (-var5 - 1), 393, 3162160);
           SoftwareRasterizer.a(7, -var5 + 426, 393, var5, 0);
           fh.field_g.a((String) (var4), 10, 128, 387, 294, 6340704, -1, 1, 2, 20);
         }
@@ -795,7 +795,7 @@ final class ig {
             int var19 = var12[var17];
             for (int var20 = 0; var19 > var20; var20++) {
               if (var18 < var14) {
-                String var28 = ce.a((byte) 127, this.field_a, var18);
+                String var28 = TrackerMusicDefinition.a((byte) 127, this.field_a, var18);
                 String var29 = this.a(var18, var16, var28, false);
                 boolean var22 = (this.a(var16, var18, true));
                 int var23 = var18;
@@ -861,7 +861,7 @@ final class ig {
             }
           }
         }
-        od.field_s = true;
+        SelfDestructEffects.field_s = true;
         if (1000 > mj.field_d) {
           mj.field_d = mj.field_d + 1;
         }

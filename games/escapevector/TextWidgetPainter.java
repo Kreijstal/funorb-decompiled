@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class k implements db, ao {
+class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
     int field_k;
     int field_h;
     int field_i;
@@ -19,7 +19,7 @@ class k implements db, ao {
     static IntrusiveDeque field_d;
     private boolean field_a;
 
-    public final int a(byte param0, hm param1, int param2) {
+    public final int a(byte param0, UiComponent param1, int param2) {
         String stackIn_8_2 = null;
         try {
           if (param0 == -113) {
@@ -42,14 +42,14 @@ class k implements db, ao {
         }
     }
 
-    public final int a(int param0, int param1, int param2, int param3, int param4, hm param5) {
+    public final int a(int param0, int param1, int param2, int param3, int param4, UiComponent param5) {
         String stackIn_7_2 = null;
         try {
           if (param4 <= 81) {
             this.field_e = -116;
           }
           this.b(param5, 90);
-          int stackIn_3_0 = param5.field_p.a((byte) 39, param3 - this.a((byte) -113, param5, param0), param2 - this.a(param5, param1, -16956));
+          int stackIn_3_0 = param5.textLayout.a((byte) 39, param3 - this.a((byte) -113, param5, param0), param2 - this.a(param5, param1, -16956));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,12 +65,12 @@ class k implements db, ao {
         }
     }
 
-    public final int a(hm param0, int param1, int param2) {
+    public final int a(UiComponent param0, int param1, int param2) {
         String stackIn_7_2 = null;
         try {
           if (param2 != -16956) {
-            hm var5 = (hm) null;
-            this.a(-8, (hm) null);
+            UiComponent var5 = (UiComponent) null;
+            this.a(-8, (UiComponent) null);
           }
           int stackIn_3_0 = this.b(param0, 0, 0, param1);
           return stackIn_3_0;
@@ -88,26 +88,26 @@ class k implements db, ao {
         }
     }
 
-    private final void a(hm param0, int param1, int param2, int param3) {
+    private final void a(UiComponent param0, int param1, int param2, int param3) {
         try {
           this.a(param1, this.field_h, this.field_e, param2, 0, 0, true, param0);
           if (param3 >= -15) {
-            hm var6 = (hm) null;
-            this.a((byte) 102, (hm) null);
+            UiComponent var6 = (UiComponent) null;
+            this.a((byte) 102, (UiComponent) null);
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "k.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final int b(hm param0, int param1, int param2, int param3) {
+    private final int b(UiComponent param0, int param1, int param2, int param3) {
         String stackIn_7_2 = null;
         try {
           if (param1 != 0) {
-            hm var6 = (hm) null;
-            this.a(-51, -123, -119, 54, -115, (hm) null);
+            UiComponent var6 = (UiComponent) null;
+            this.a(-51, -123, -119, 54, -115, (UiComponent) null);
           }
-          int stackIn_3_0 = param2 + (param0.field_v + this.field_f + (param3 + param0.field_j));
+          int stackIn_3_0 = param2 + (param0.field_v + this.field_f + (param3 + param0.y));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,7 +124,7 @@ class k implements db, ao {
     }
 
     final static Sprite a(int param0, byte param1, int param2) {
-        rk[] var5 = w.c(false);
+        ObjectSpriteSet[] var5 = w.c(false);
         var5 = var5;
         if (var5 == null) {
           return null;
@@ -132,32 +132,32 @@ class k implements db, ao {
         if (param1 == -39) {
           return var5[param2].a(false, param0);
         }
-        k.a(true, '￾');
+        TextWidgetPainter.a(true, '￾');
         return var5[param2].a(false, param0);
     }
 
-    public void a(int param0, int param1, int param2, hm param3, boolean param4) {
+    public void drawWidget(int originX, int originY, int guard, UiComponent component, boolean enabled) {
         if (null == this.field_l) {
           return;
         }
         try {
-          if (param2 >= -14) {
-            hm var7 = (hm) null;
-            this.a((hm) null, -75, 106, 104, false);
+          if (guard >= -14) {
+            UiComponent var7 = (UiComponent) null;
+            this.a((UiComponent) null, -75, 106, 104, false);
           }
-          this.a(param3, param1, param0, -100);
+          this.a(component, originY, originX, -100);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "k.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "k.M(" + originX + ',' + originY + ',' + guard + ',' + (component != null ? "{...}" : "null") + ',' + enabled + ')');
         }
     }
 
-    public final int a(hm param0, int param1) {
+    public final int a(UiComponent param0, int param1) {
         String stackIn_7_2 = null;
         try {
           if (param1 != -25033) {
             this.field_g = 7;
           }
-          int stackIn_3_0 = -this.field_b - this.field_n + param0.field_g;
+          int stackIn_3_0 = -this.field_b - this.field_n + param0.width;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -173,7 +173,7 @@ class k implements db, ao {
         }
     }
 
-    public final void a(int param0, int param1, hm param2, int param3, int param4, int param5) {
+    public final void a(int param0, int param1, UiComponent param2, int param3, int param4, int param5) {
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
         String stackIn_26_2 = null;
@@ -182,17 +182,17 @@ class k implements db, ao {
         int var16 = EscapeVector.obfuscationControl;
         try {
           if (param4 != -613528456) {
-            hm var17 = (hm) null;
-            this.a(-128, 94, 31, -40, 4, (hm) null);
+            UiComponent var17 = (UiComponent) null;
+            this.a(-128, 94, 31, -40, 4, (UiComponent) null);
           }
           if (param3 == param1) {
             return;
           }
-          if (!param2.h(0)) {
+          if (!param2.isFocused(0)) {
             return;
           }
-          pg var18 = this.b(param2, 90);
-          pg var19 = var18;
+          TextLayout var18 = this.b(param2, 90);
+          TextLayout var19 = var18;
           if (param1 <= param3) {
             var8 = param1;
             var9 = param3;
@@ -202,7 +202,7 @@ class k implements db, ao {
           }
           int var10 = var19.a(var8, 0);
           int var11 = var19.a(var9, 0);
-          rd.a(param2.field_g + (param2.field_k + param0), param0 + param2.field_k, param2.field_x + (param2.field_j + param5), 19807, param5 + param2.field_j);
+          rd.a(param2.width + (param2.x + param0), param0 + param2.x, param2.height + (param2.y + param5), 19807, param5 + param2.y);
           for (int var12 = var10; var11 >= var12; var12++) {
             vl var13 = var18.field_a[var12];
             if (var12 == var10) {
@@ -219,7 +219,7 @@ class k implements db, ao {
               stackIn_20_0 = var13.field_b[var13.field_b.length - 1];
             }
             int var15 = stackIn_20_0;
-            mb.field_g.a(var13.field_a, 1, this.field_i >>> 24, var13.field_d + (param5 + param2.field_j) - (-this.field_f - param2.field_v), var15 - var14, this.field_i, this.a(var14, param2, -18079, param0));
+            mb.field_g.a(var13.field_a, 1, this.field_i >>> 24, var13.field_d + (param5 + param2.y) - (-this.field_f - param2.field_v), var15 - var14, this.field_i, this.a(var14, param2, -18079, param0));
           }
           dl.a((byte) -59);
           return;
@@ -237,12 +237,12 @@ class k implements db, ao {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, hm param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, UiComponent param7) {
         String stackIn_29_2 = null;
         int var11 = 0;
         int var13 = EscapeVector.obfuscationControl;
         try {
-          rd.a(param3 + param7.field_k + param7.field_g, param3 + param7.field_k, param0 - (-param7.field_j - param7.field_x), 19807, param7.field_j + param0);
+          rd.a(param3 + param7.x + param7.width, param3 + param7.x, param0 - (-param7.y - param7.height), 19807, param7.y + param0);
           int var9_int = this.a(param7, -25033);
           int var10 = this.b(-14072, param7);
           if (this.field_a) {
@@ -274,7 +274,7 @@ class k implements db, ao {
             }
           }
           if (!param6) {
-            k.b(85);
+            TextWidgetPainter.b(85);
           }
           dl.a((byte) 125);
           return;
@@ -292,14 +292,14 @@ class k implements db, ao {
         }
     }
 
-    private final int a(int param0, hm param1, int param2, int param3) {
+    private final int a(int param0, UiComponent param1, int param2, int param3) {
         String stackIn_7_2 = null;
         try {
           if (param2 != -18079) {
-            hm var6 = (hm) null;
-            int discarded$1 = this.a(39, (hm) null, 121, 83);
+            UiComponent var6 = (UiComponent) null;
+            int discarded$1 = this.a(39, (UiComponent) null, 121, 83);
           }
-          int stackIn_3_0 = param0 + (this.field_n + param1.field_k) + (param3 + param1.field_n);
+          int stackIn_3_0 = param0 + (this.field_n + param1.x) + (param3 + param1.field_n);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -315,13 +315,13 @@ class k implements db, ao {
         }
     }
 
-    private final int b(int param0, hm param1) {
+    private final int b(int param0, UiComponent param1) {
         String stackIn_7_2 = null;
         try {
           if (param0 != -14072) {
             this.field_i = 0;
           }
-          int stackIn_3_0 = -this.field_o + (param1.field_x - this.field_f);
+          int stackIn_3_0 = -this.field_o + (param1.height - this.field_f);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -337,7 +337,7 @@ class k implements db, ao {
         }
     }
 
-    final void a(k param0, int param1) {
+    final void a(TextWidgetPainter param0, int param1) {
         try {
           param0.field_f = this.field_f;
           param0.field_g = this.field_g;
@@ -446,13 +446,13 @@ class k implements db, ao {
         return stackIn_50_0;
     }
 
-    String b(byte param0, hm param1) {
+    String b(byte param0, UiComponent param1) {
         String stackIn_7_2 = null;
         try {
           if (param0 != 39) {
             field_d = (IntrusiveDeque) null;
           }
-          String stackIn_3_0 = param1.field_l;
+          String stackIn_3_0 = param1.text;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -468,21 +468,21 @@ class k implements db, ao {
         }
     }
 
-    public final void a(hm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         try {
           if (!param4) {
             this.field_h = 30;
           }
-          if (param0.h(0)) {
-            pg var13 = this.b(param0, 90);
-            pg var14 = var13;
+          if (param0.isFocused(0)) {
+            TextLayout var13 = this.b(param0, 90);
+            TextLayout var14 = var13;
             int var7 = var14.a(param1, 0);
             vl var8 = var13.field_a[var7];
             int var9 = var14.a((byte) 122, param1);
             int var10 = this.a(var9, param0, -18079, param2);
             int var11 = this.a(param0, param3, -16956) + Math.max(0, var8.field_d);
             int var12 = this.a(param0, param3, -16956) + Math.min(this.b(-14072, param0), Math.min(var8.field_a, var7 + 1 < var14.field_a.length ? var13.field_a[1 + var7].field_d : var8.field_a));
-            rd.a(param0.field_g + param2 + param0.field_k, param0.field_k + param2, param3 + (param0.field_j + param0.field_x), 19807, param0.field_j + param3);
+            rd.a(param0.width + param2 + param0.x, param0.x + param2, param3 + (param0.y + param0.height), 19807, param0.y + param3);
             mb.field_g.a(var10, var12, -29666, var10, var11, this.field_g);
             dl.a((byte) 122);
           }
@@ -491,29 +491,29 @@ class k implements db, ao {
         }
     }
 
-    k(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    TextWidgetPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    protected k() {
+    protected TextWidgetPainter() {
     }
 
-    public final pg b(hm param0, int param1) {
+    public final TextLayout b(UiComponent param0, int param1) {
         String stackIn_13_2 = null;
         try {
-          if (null == param0.field_p) {
-            param0.field_p = (pg) ((Object) new wh());
+          if (null == param0.textLayout) {
+            param0.textLayout = (TextLayout) ((Object) new wh());
           }
           if (this.field_a) {
-            ((wh) (param0.field_p)).a(this.b(param1 - 14162, param0), this.b((byte) 39, param0), this.field_l, this.a(param0, param1 - 25123), this.field_m, this.field_c, this.field_k, (byte) -13);
+            ((wh) (param0.textLayout)).a(this.b(param1 - 14162, param0), this.b((byte) 39, param0), this.field_l, this.a(param0, param1 - 25123), this.field_m, this.field_c, this.field_k, (byte) -13);
           } else {
             this.c(param0, -86);
           }
           if (param1 != 90) {
-            hm var4 = (hm) null;
-            this.a((byte) 117, (hm) null, -58);
+            UiComponent var4 = (UiComponent) null;
+            this.a((byte) 117, (UiComponent) null, -58);
           }
-          pg stackIn_9_0 = param0.field_p;
+          TextLayout stackIn_9_0 = param0.textLayout;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -529,13 +529,13 @@ class k implements db, ao {
         }
     }
 
-    private final void c(hm param0, int param1) {
+    private final void c(UiComponent param0, int param1) {
         String stackIn_33_2 = null;
         int var5 = 0;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (null == param0.field_p) {
-            param0.field_p = (pg) ((Object) new wh());
+          if (null == param0.textLayout) {
+            param0.textLayout = (TextLayout) ((Object) new wh());
           }
           int var3_int = this.a(param0, -25033);
           if (param1 >= -6) {
@@ -557,23 +557,23 @@ class k implements db, ao {
           if (var6Lifetime1 != 0 &&
             var6Lifetime1 != 3) {
             if (1 == var6Lifetime1) {
-              if (!(param0.field_p instanceof wh)) {
+              if (!(param0.textLayout instanceof wh)) {
                 return;
               }
-              ((wh) (param0.field_p)).a(this.b((byte) 39, param0), var3_int >> 1, this.field_l, var5, true);
+              ((wh) (param0.textLayout)).a(this.b((byte) 39, param0), var3_int >> 1, this.field_l, var5, true);
               return;
             }
             if (2 != var6Lifetime1) {
               return;
             }
-            if (!(param0.field_p instanceof wh)) {
+            if (!(param0.textLayout instanceof wh)) {
               return;
             }
-            ((wh) (param0.field_p)).a(this.field_l, this.b((byte) 39, param0), var3_int, var5, (byte) 69);
+            ((wh) (param0.textLayout)).a(this.field_l, this.b((byte) 39, param0), var3_int, var5, (byte) 69);
             return;
           }
-          if (param0.field_p instanceof wh) {
-            ((wh) (param0.field_p)).a(this.b((byte) 39, param0), 0, 0, var5, this.field_l);
+          if (param0.textLayout instanceof wh) {
+            ((wh) (param0.textLayout)).a(this.b((byte) 39, param0), 0, 0, var5, this.field_l);
             return;
           }
           return;
@@ -591,7 +591,7 @@ class k implements db, ao {
         }
     }
 
-    k(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    TextWidgetPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_h = param5;
           this.field_k = param9;
@@ -611,7 +611,7 @@ class k implements db, ao {
         }
     }
 
-    public final int a(byte param0, hm param1) {
+    public final int a(byte param0, UiComponent param1) {
         String stackIn_8_2 = null;
         try {
           if (param0 != -46) {
@@ -619,7 +619,7 @@ class k implements db, ao {
             return stackIn_2_0;
           }
           this.b(param1, 90);
-          int stackIn_4_0 = param1.field_p.a((byte) -112) + this.field_n + this.field_b;
+          int stackIn_4_0 = param1.textLayout.a((byte) -112) + this.field_n + this.field_b;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -635,15 +635,15 @@ class k implements db, ao {
         }
     }
 
-    public final int a(int param0, hm param1) {
+    public final int a(int param0, UiComponent param1) {
         String stackIn_7_2 = null;
         try {
           this.b(param1, 90);
           if (param0 > -95) {
-            hm var4 = (hm) null;
-            this.a((hm) null, 11, -109, 0);
+            UiComponent var4 = (UiComponent) null;
+            this.a((UiComponent) null, 11, -109, 0);
           }
-          int stackIn_3_0 = param1.field_p.c(0) + (this.field_f + this.field_o);
+          int stackIn_3_0 = param1.textLayout.c(0) + (this.field_f + this.field_o);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

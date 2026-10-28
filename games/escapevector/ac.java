@@ -36,8 +36,8 @@ final class ac {
           Throwable decompiledCaughtException = null;
           int var3 = EscapeVector.obfuscationControl;
           try {
-            if (od.field_j != null) {
-              od.field_j.a(param0 ^ -16802);
+            if (SelfDestructEffects.field_j != null) {
+              SelfDestructEffects.field_j.a(param0 ^ -16802);
             }
             if (uk.field_b != null) {
               uk.field_b.a(-24580);
@@ -100,7 +100,7 @@ final class ac {
               Js5Transport.field_b = TetherHumStream.field_k;
             } else {
               while (TetherHumStream.field_k != Js5Transport.field_b) {
-                var2 = hc.field_C[TetherHumStream.field_k];
+                var2 = TextButton.field_C[TetherHumStream.field_k];
                 TetherHumStream.field_k = 127 & 1 + TetherHumStream.field_k;
                 if (0 <= var2) {
                   ik.field_h[var2] = true;

@@ -117,7 +117,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListener(IntrusiveNode before, PcmMixerListener listener) {
         while (true) {
           if (before == this.listeners.sentinel) {
-            EscapeVector.$cfr$intArgs$a$aafaec74e55e(listener, before, -7);
+            EscapeVector.insertNodeBeforeWithIntGuard(listener, before, -7);
             this.nextListenerDeadline = ((PcmMixerListener) (this.listeners.sentinel.next)).remainingSamples;
             return;
           }
@@ -127,7 +127,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        EscapeVector.$cfr$intArgs$a$aafaec74e55e(listener, before, -7);
+        EscapeVector.insertNodeBeforeWithIntGuard(listener, before, -7);
         this.nextListenerDeadline = ((PcmMixerListener) (this.listeners.sentinel.next)).remainingSamples;
         return;
     }

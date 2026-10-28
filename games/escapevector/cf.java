@@ -101,9 +101,9 @@ final class cf {
                   int var24Lifetime1Lifetime1 = param6.field_k[var23Lifetime2];
                   int var25Lifetime1Lifetime1 = param6.field_d[var23Lifetime2];
                   int var26Lifetime1Lifetime1 = param6.field_E[var23Lifetime2];
-                  hm.field_w[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 >> 16);
+                  UiComponent.field_w[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 >> 16);
                   hd.field_d[var23Lifetime2] = var10 + (var13 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var16 + var26Lifetime1Lifetime1 * var19 >> 16);
-                  hm.field_h[var23Lifetime2] = (var24Lifetime1Lifetime1 * var14 + var25Lifetime1Lifetime1 * var17 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
+                  UiComponent.field_h[var23Lifetime2] = (var24Lifetime1Lifetime1 * var14 + var25Lifetime1Lifetime1 * var17 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param6.field_C[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param6.field_P[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param6.field_s[var23Lifetime2];

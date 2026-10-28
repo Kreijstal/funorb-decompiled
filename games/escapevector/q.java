@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class q extends hc {
+final class q extends TextButton {
     int field_M;
     private int field_D;
     static java.math.BigInteger field_O;
@@ -17,15 +17,15 @@ final class q extends hc {
     static Sprite field_G;
     private kn field_K;
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {
+    final boolean onPointerPressed(int offsetY, int pointerX, byte guard, int pointerY, int offsetX, UiComponent root, int button) {
         String stackIn_29_2 = null;
         int var14 = EscapeVector.obfuscationControl;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.onPointerPressed(offsetY, pointerX, guard, pointerY, offsetX, root, button)) {
             return false;
           }
-          int var8_int = -this.field_M + (param1 - param4);
-          int var9 = -(2 * this.field_M) + this.field_g;
+          int var8_int = -this.field_M + (pointerX - offsetX);
+          int var9 = -(2 * this.field_M) + this.width;
           if (var8_int > var9) {
             var8_int = var9;
           }
@@ -33,8 +33,8 @@ final class q extends hc {
             var8_int = 0;
           }
           var8_int = var8_int * this.field_D / var9;
-          if (param6 != 1) {
-            if (param6 != 2) {
+          if (button != 1) {
+            if (button != 2) {
               return true;
             }
             int var10 = 2147483647;
@@ -58,13 +58,13 @@ final class q extends hc {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8 = decompiledCaughtException;
           RuntimeException stackIn_28_0 = var8;
-          StringBuilder stackIn_28_1 = new StringBuilder().append("q.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          StringBuilder stackIn_28_1 = new StringBuilder().append("q.V(").append(offsetY).append(',').append(pointerX).append(',').append(guard).append(',').append(pointerY).append(',').append(offsetX).append(',');
+          if (root == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(button).append(')').toString());
         }
     }
 
@@ -111,8 +111,8 @@ final class q extends hc {
         if (param0 == -1) {
           return this.field_D;
         }
-        hm var3 = (hm) null;
-        this.a(-27, -35, (byte) -19, -117, -67, (hm) null, 21);
+        UiComponent var3 = (UiComponent) null;
+        this.onPointerPressed(-27, -35, (byte) -19, -117, -67, (UiComponent) null, 21);
         return this.field_D;
     }
 

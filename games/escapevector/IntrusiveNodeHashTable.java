@@ -128,7 +128,7 @@ final class IntrusiveNodeHashTable {
             java.awt.Frame stackIn_41_0 = var7;
             return stackIn_41_0;
           }
-          af.a(param3, var7, false);
+          FullscreenFocusCanvas.a(param3, var7, false);
           Object stackIn_39_0 = null;
           return (java.awt.Frame) (stackIn_39_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

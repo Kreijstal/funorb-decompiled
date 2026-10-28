@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_b;
     static String field_f;
     volatile boolean field_c;
@@ -27,7 +27,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
           bk.field_r.a((byte) -118);
         }
         if (param0 != 0) {
-          af.a((byte) -8);
+          FullscreenFocusCanvas.a((byte) -8);
           return;
         }
     }
@@ -104,7 +104,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(SystemTaskService param0, boolean param1) {
         try {
-          af.a(param0, this.field_d, false);
+          FullscreenFocusCanvas.a(param0, this.field_d, false);
           if (!param1) {
             field_e = (sk) null;
           }
@@ -116,7 +116,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void paint(java.awt.Graphics param0) {
     }
 
-    af() {
+    FullscreenFocusCanvas() {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -130,7 +130,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
         cd.field_q[jf.field_J] = jf.field_J;
         DualLinkNode.field_k[jf.field_J] = param5;
         if (param5 < vl.field_e) {
-          pg.field_d = param5;
+          TextLayout.field_d = param5;
         }
         if (ArchiveRequest.field_t >= param5) {
           pc.field_c[jf.field_J] = param1;
@@ -146,15 +146,15 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
             var7 = stackIn_48_0;
             Bzip2State.field_v[jf.field_J] = var7;
             jf.field_J = jf.field_J + 1;
-            if (var7 < pg.field_d) {
-              pg.field_d = var7;
+            if (var7 < TextLayout.field_d) {
+              TextLayout.field_d = var7;
             }
             if (pl.field_r < var7) {
               pl.field_r = var7;
             }
             return;
           }
-          af.a(-7, 8, -13, 15, -127, 46);
+          FullscreenFocusCanvas.a(-7, 8, -13, 15, -127, 46);
           RasterSnapshot.field_k[jf.field_J] = param2;
           tm.field_fb[jf.field_J] = param3;
           var6 = param3 + param2 + param1;
@@ -178,7 +178,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
             }
             var7 = stackIn_8_0;
           } else {
-            af.a(-7, 8, -13, 15, -127, 46);
+            FullscreenFocusCanvas.a(-7, 8, -13, 15, -127, 46);
             RasterSnapshot.field_k[jf.field_J] = param2;
             tm.field_fb[jf.field_J] = param3;
             var6 = param3 + param2 + param1;
@@ -192,8 +192,8 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
         Bzip2State.field_v[jf.field_J] = var7;
         jf.field_J = jf.field_J + 1;
-        if (var7 < pg.field_d) {
-          pg.field_d = var7;
+        if (var7 < TextLayout.field_d) {
+          TextLayout.field_d = var7;
         }
         if (pl.field_r < var7) {
           pl.field_r = var7;

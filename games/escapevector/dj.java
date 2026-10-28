@@ -4,7 +4,7 @@
 final class dj {
     static String field_b;
     static boolean[] field_a;
-    static fn[] field_d;
+    static SpriteOffset[] field_d;
     static PcmSampleStream field_c;
 
     final static void a(int param0, int param1, int param2) {
@@ -14,9 +14,9 @@ final class dj {
           oh var3 = (oh) (wa.field_c.first(false));
           while (var3 != null) {
             if (var3.field_m < 0) {
-              SoftwareRasterizer.e(var3.field_i - var3.field_s + param2, param0 + var3.field_q, var3.field_s, hi.field_q);
+              SoftwareRasterizer.drawHorizontalLine(var3.field_i - var3.field_s + param2, param0 + var3.field_q, var3.field_s, hi.field_q);
             } else {
-              SoftwareRasterizer.e(param2 + var3.field_i, param0 + var3.field_q, var3.field_s, hi.field_q);
+              SoftwareRasterizer.drawHorizontalLine(param2 + var3.field_i, param0 + var3.field_q, var3.field_s, hi.field_q);
             }
             var3 = (oh) (wa.field_c.next((byte) 70));
           }
@@ -81,17 +81,17 @@ final class dj {
     final static int a(int param0) {
         int var2 = EscapeVector.obfuscationControl;
         try {
-          bo.field_F.a(true, (byte) -33, oj.field_G, ph.field_a);
+          bo.field_F.handlePointerFrame(true, (byte) -33, oj.field_G, ph.field_a);
           bo.field_F.m(0);
           while (pn.p(-116)) {
-            bo.field_F.a(jc.field_c, nk.field_n, (byte) -116);
+            bo.field_F.handleKey(jc.field_c, nk.field_n, (byte) -116);
           }
           if (param0 != 6445) {
             int stackIn_6_0 = -79;
             return stackIn_6_0;
           }
-          if (-1 != rf.field_a) {
-            int var1_int = rf.field_a;
+          if (-1 != ValidationState.field_a) {
+            int var1_int = ValidationState.field_a;
             WhirlpoolHasher.a(-1, param0 - 6378);
             int stackIn_10_0 = var1_int;
             return stackIn_10_0;

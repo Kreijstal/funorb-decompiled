@@ -70,9 +70,9 @@ final class uk {
           if (var44.field_n != null &&
             var44.field_I > 1) {
             byte[] var60 = var44.field_n;
-            NetworkGameClient.a(var60, 0, ul.field_I, 114, 0);
+            NetworkGameClient.a(var60, 0, EditableTextWidget.field_I, 114, 0);
           } else {
-            od.f(46);
+            SelfDestructEffects.f(46);
           }
           int[] var54 = new int[param5.field_M];
           int[] var49 = var54;

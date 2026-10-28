@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class bo extends hc {
+final class bo extends TextButton {
     static tb field_F;
     static int field_E;
     static String field_D;
@@ -21,10 +21,10 @@ final class bo extends hc {
         super.a(param0 ^ 0, param1, param2, param3);
     }
 
-    private bo(String param0, db param1, wn param2) {
+    private bo(String param0, WidgetPainter param1, UiListener param2) {
         super(param0, param1, param2);
         try {
-          this.field_s = mb.field_g.field_k;
+          this.painter = mb.field_g.field_k;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "bo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -40,10 +40,10 @@ final class bo extends hc {
         field_G = null;
     }
 
-    private bo(String param0, wn param1) {
+    private bo(String param0, UiListener param1) {
         this(param0, mb.field_g.field_o, param1);
         try {
-          this.field_s = mb.field_g.field_k;
+          this.painter = mb.field_g.field_k;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "bo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -91,7 +91,7 @@ final class bo extends hc {
         try {
           sc.a((byte) -58, (java.awt.Component) ((Object) param0));
           int var2_int = 120 / ((param1 - 54) / 57);
-          od.a((java.awt.Component) ((Object) param0), (byte) 9);
+          SelfDestructEffects.a((java.awt.Component) ((Object) param0), (byte) 9);
           if (null == ji.field_b) {
             return;
           }
@@ -111,7 +111,7 @@ final class bo extends hc {
         }
     }
 
-    bo(String param0, wn param1, boolean param2) {
+    bo(String param0, UiListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_z = param2 ? true : false;
@@ -128,11 +128,11 @@ final class bo extends hc {
           if (param1 <= om.field_g.position) {
             return true;
           }
-          if (null == pg.field_c) {
+          if (null == TextLayout.field_c) {
             return false;
           }
           try {
-            int var2_int = pg.field_c.b(-124);
+            int var2_int = TextLayout.field_c.b(-124);
             if (var2_int <= 0) {
               if (0 > var2_int) {
                 nm.a(16);
@@ -147,7 +147,7 @@ final class bo extends hc {
             if (var2_int > param1 - om.field_g.position) {
               var2_int = param1 - om.field_g.position;
             }
-            pg.field_c.a(om.field_g.position, var2_int, om.field_g.payload, (byte) -49);
+            TextLayout.field_c.a(om.field_g.position, var2_int, om.field_g.payload, (byte) -49);
             sl.field_a = td.b(128);
             om.field_g.position = om.field_g.position + var2_int;
             if (param1 > om.field_g.position) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bb extends bj {
+abstract class bb extends UiContainer {
     static String field_O;
     static java.applet.Applet field_P;
     static IntrusiveDeque field_L;
@@ -30,40 +30,40 @@ abstract class bb extends bj {
         return stackIn_12_0;
     }
 
-    final hm a(boolean param0) {
-        hm var2 = super.a(param0);
+    final UiComponent a(boolean param0) {
+        UiComponent var2 = super.a(param0);
         if (var2 != null) {
           return var2;
         }
-        return (hm) (this);
+        return (UiComponent) (this);
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawLayer(int screenY, byte guard, int layer, int screenX) {
         if (0 == this.field_N) {
           return;
         }
         if (this.field_N >= 256) {
-          if (param2 != 0) {
+          if (layer != 0) {
             return;
           }
-          this.b(this.field_j + param0, param3 + this.field_k, (byte) 89);
-          super.a(param0, (byte) 87, param2, param3);
+          this.b(this.y + screenY, screenX + this.x, (byte) 89);
+          super.drawLayer(screenY, (byte) 87, layer, screenX);
           return;
         }
         if (Minimap.field_r == null ||
-          !(Minimap.field_r.width >= this.field_g) ||
-          !(this.field_x <= Minimap.field_r.height)) {
-          Minimap.field_r = new Sprite(this.field_g, this.field_x);
+          !(Minimap.field_r.width >= this.width) ||
+          !(this.height <= Minimap.field_r.height)) {
+          Minimap.field_r = new Sprite(this.width, this.height);
         }
         eo.a(Minimap.field_r, (byte) -76);
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clearFramebuffer();
         this.b(0, 0, (byte) 87);
-        super.a(-this.field_j - param0, (byte) 118, param2, -this.field_k - param3);
-        if (param1 <= 85) {
+        super.drawLayer(-this.y - screenY, (byte) 118, layer, -this.x - screenX);
+        if (guard <= 85) {
           field_L = (IntrusiveDeque) null;
         }
         dl.a((byte) 125);
-        Minimap.field_r.d(this.field_k + param3, this.field_j + param0, this.field_N);
+        Minimap.field_r.d(this.x + screenX, this.y + screenY, this.field_N);
     }
 
     final static void a(int param0, int param1, int param2, IndexedSprite param3, int param4, int param5) {
@@ -204,7 +204,7 @@ abstract class bb extends bj {
     }
 
     bb(tb param0, int param1, int param2) {
-        super(dm.field_h - param1 >> 1, r.field_B - param2 >> 1, param1, param2, (db) null);
+        super(dm.field_h - param1 >> 1, r.field_B - param2 >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_G = false;
           this.field_N = 0;
@@ -273,7 +273,7 @@ abstract class bb extends bj {
         if (param0 != 255) {
           field_K = (String) null;
         }
-        this.a(param2, -param1 + r.field_B >> 1, -param2 + dm.field_h >> 1, true, param1);
+        this.setBounds(param2, -param1 + r.field_B >> 1, -param2 + dm.field_h >> 1, true, param1);
     }
 
     static {

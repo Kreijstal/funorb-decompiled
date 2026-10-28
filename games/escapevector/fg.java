@@ -53,7 +53,7 @@ final class fg {
 
     final static void b(int param0) {
         int var6 = EscapeVector.obfuscationControl;
-        if (!bj.e((byte) 118)) {
+        if (!UiContainer.e((byte) 118)) {
           return;
         }
         String var1 = "simulator";

@@ -103,8 +103,8 @@ final class pf {
         if (param0 != 100) {
           this.field_a = (dk[]) null;
         }
-        SoftwareRasterizer.d();
-        od.b(param0 - 98);
+        SoftwareRasterizer.clearFramebuffer();
+        SelfDestructEffects.b(param0 - 98);
         pb.a(4);
         this.a(this.field_c, (byte) -116);
         this.a(this.field_a, (byte) -109);
@@ -198,7 +198,7 @@ final class pf {
             ih var11 = (ih) null;
             int[] discarded$1 = this.a(20, -91, (ih) null, (byte) -102);
           }
-          if (bj.e((byte) 127)) {
+          if (UiContainer.e((byte) 127)) {
             var5 = pl.field_s;
             var6 = new int[]{1, 0, 2, 3};
             var7 = pj.field_g;
@@ -240,9 +240,9 @@ final class pf {
           if (!aj.b(-96)) {
             var10 = new int[]{0};
             var8 = new int[]{4};
-            var9 = new String[]{ag.field_a};
+            var9 = new String[]{GameKeyHandler.field_a};
           } else {
-            var9 = new String[]{IntrusiveDeque.field_e, ag.field_a};
+            var9 = new String[]{IntrusiveDeque.field_e, GameKeyHandler.field_a};
             var10 = new int[]{0, 1};
             var8 = new int[]{3, 4};
           }
@@ -327,7 +327,7 @@ final class pf {
             }
           }
           if (nk.field_n == 13) {
-            pg.field_b = false;
+            TextLayout.field_b = false;
             qk.a((var2), -87);
           }
           if (this.a((var2), (byte) 91)) {
@@ -345,7 +345,7 @@ final class pf {
         if (param0 <= 61) {
           field_h = (String) null;
         }
-        int var2 = this.a(1, bj.field_y, dh.field_d);
+        int var2 = this.a(1, UiContainer.field_y, dh.field_d);
         int var3 = this.a(1, ng.field_ob, sf.field_c);
         this.field_b.a(var3, (byte) 121, var2);
         boolean discarded$0 = this.a(true, (byte) 91);
@@ -399,7 +399,7 @@ final class pf {
         }
         int var3 = 100;
         int var4 = 1536 * qm.field_c / 64;
-        Object var5 = rk.field_e;
+        Object var5 = ObjectSpriteSet.field_e;
         synchronized (var5) {
           this.a(this.field_c, (byte) -23, var3, var4);
           this.a(this.field_a, (byte) -23, var3, var4);
@@ -636,7 +636,7 @@ final class pf {
         try {
           dk var10 = param2[var9];
           int var11 = this.a((byte) 120, var10);
-          rk.field_e.playSampleWithPan(pc.field_a, param4, param5, var11);
+          ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, param4, param5, var11);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "pf.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -657,12 +657,12 @@ final class pf {
             return true;
           }
           if (4 == var4) {
-            pg.field_b = false;
+            TextLayout.field_b = false;
             qk.a(param0, param1 + 34);
             return true;
           }
           if (this.b((byte) 89) == var4) {
-            pg.field_b = false;
+            TextLayout.field_b = false;
             int var5 = l.a(-8462, var4);
             ll.a(0, var5, param0, this.field_f);
             return true;
@@ -808,7 +808,7 @@ final class pf {
           if (param0 != 3390) {
             return;
           }
-          int var16 = k.field_j.fullHeight / 2 + 77;
+          int var16 = TextWidgetPainter.field_j.fullHeight / 2 + 77;
           int var17 = 442;
           int var18 = this.a(4, var16, this.field_c, var17);
           dk[] var19 = this.field_c;
@@ -932,9 +932,9 @@ final class pf {
           this.field_b = (wc) null;
         }
         this.field_b = new wc(param2);
-        int var4 = this.a(bj.field_y, this.field_c, dh.field_d, 3);
+        int var4 = this.a(UiContainer.field_y, this.field_c, dh.field_d, 3);
         if (var4 < 0) {
-          var4 = this.a(bj.field_y, this.field_a, dh.field_d, 3);
+          var4 = this.a(UiContainer.field_y, this.field_a, dh.field_d, 3);
         }
         this.field_b.a(125, param0, var4, 0);
     }
@@ -965,7 +965,7 @@ final class pf {
         }
         try {
           int var9 = this.a((byte) -97, var6);
-          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, param2, param3, var9);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, param2, param3, var9);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "pf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

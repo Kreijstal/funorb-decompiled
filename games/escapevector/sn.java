@@ -9,13 +9,13 @@ final class sn {
     private String field_a;
 
     final static void c(int param0) {
-        int var1 = l.a(-8462, od.field_q);
+        int var1 = l.a(-8462, SelfDestructEffects.field_q);
         int var2 = vh.f(127);
         if (param0 != -1) {
           field_b = (boolean[]) null;
         }
-        if (var1 != od.field_q ||
-          hn.field_l.field_h != var2) {
+        if (var1 != SelfDestructEffects.field_q ||
+          CheckboxPainter.field_l.field_h != var2) {
           boolean var3 = (di.field_d.field_j);
           ll.a(0, var1, (var3), var2);
         }
@@ -58,7 +58,7 @@ final class sn {
             Js5NetworkRequest.field_I[var4 - 2] = lh.field_a;
             jj.field_a[-2 + var4] = 0;
             wh.field_j[0] = 4;
-            Js5NetworkRequest.field_I[var4 - 1] = ah.field_k;
+            Js5NetworkRequest.field_I[var4 - 1] = TextFieldValidator.field_k;
             jj.field_a[-1 + var4] = 1;
             wh.field_j[1] = 5;
           } else if (ArchiveIndex.field_j == 1) {
@@ -74,7 +74,7 @@ final class sn {
               Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
             }
             Js5NetworkRequest.field_I[-2 + var4] = "";
-            Js5NetworkRequest.field_I[-1 + var4] = ah.field_k;
+            Js5NetworkRequest.field_I[-1 + var4] = TextFieldValidator.field_k;
             jj.field_a[var4 - 1] = 0;
             wh.field_j[0] = 5;
           } else if (ArchiveIndex.field_j != 2) {
@@ -95,7 +95,7 @@ final class sn {
                 Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
               }
               Js5NetworkRequest.field_I[-2 + var4] = "";
-              Js5NetworkRequest.field_I[-1 + var4] = ah.field_k;
+              Js5NetworkRequest.field_I[-1 + var4] = TextFieldValidator.field_k;
               jj.field_a[var4 - 1] = 0;
               wh.field_j[0] = 5;
             } else if (ArchiveIndex.field_j == 4) {
@@ -111,7 +111,7 @@ final class sn {
                 Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
               }
               Js5NetworkRequest.field_I[var4 - 2] = "";
-              Js5NetworkRequest.field_I[-1 + var4] = ah.field_k;
+              Js5NetworkRequest.field_I[-1 + var4] = TextFieldValidator.field_k;
               jj.field_a[var4 - 1] = 0;
               wh.field_j[0] = 5;
             } else {
@@ -133,12 +133,12 @@ final class sn {
               Js5NetworkRequest.field_I[-2 + var4] = ve.field_f;
               jj.field_a[var4 - 2] = 0;
               wh.field_j[0] = 3;
-              Js5NetworkRequest.field_I[-1 + var4] = ah.field_k;
+              Js5NetworkRequest.field_I[-1 + var4] = TextFieldValidator.field_k;
               jj.field_a[-1 + var4] = 1;
               wh.field_j[1] = 5;
             }
           } else {
-            var3_int = un.a(pf.field_e, -101, nb.field_a, Js5Transport.field_h, r.a(fn.field_d, -63, new String[]{"<br><%0><br>"}));
+            var3_int = un.a(pf.field_e, -101, nb.field_a, Js5Transport.field_h, r.a(SpriteOffset.field_d, -63, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(pf.field_e[var5])) {
@@ -257,7 +257,7 @@ final class sn {
           }
           vi.field_a = -(var3_intLifetime1 >> 1) + ClientException.field_e + var3_intLifetime1;
           ia.field_x = ClientException.field_e - (var3_intLifetime1 >> 1);
-          mh.field_f = cb.field_c.field_k * (hn.field_s + en.field_k << 1);
+          mh.field_f = cb.field_c.field_k * (CheckboxPainter.field_s + en.field_k << 1);
           for (int var4Lifetime2 = param1; Js5NetworkRequest.field_I.length > var4Lifetime2; var4Lifetime2++) {
             int stackIn_112_0 = mh.field_f;
             if (jj.field_a[var4Lifetime2] < 0) {
@@ -275,21 +275,21 @@ final class sn {
             int var6Lifetime1 = jj.field_a[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               int var7Lifetime2 = ee.a(param1 ^ 61, Js5NetworkRequest.field_I[var4Lifetime3], true);
-              var5Lifetime3 = var5Lifetime3 + hn.field_s;
+              var5Lifetime3 = var5Lifetime3 + CheckboxPainter.field_s;
               int var8Lifetime1 = ClientException.field_e - (var7Lifetime2 >> 1);
               cj.field_d[var4Lifetime3] = new int[4];
               cj.field_d[var4Lifetime3][0] = var8Lifetime1 - fe.field_k;
               cj.field_d[var4Lifetime3][1] = var5Lifetime3;
               cj.field_d[var4Lifetime3][2] = (fe.field_k << 1) + var7Lifetime2;
               cj.field_d[var4Lifetime3][3] = (en.field_k << 1) + ok.field_a;
-              var5Lifetime3 = var5Lifetime3 + (hn.field_s + (en.field_k << 1) + ok.field_a);
+              var5Lifetime3 = var5Lifetime3 + (CheckboxPainter.field_s + (en.field_k << 1) + ok.field_a);
             } else {
               var5Lifetime3 = var5Lifetime3 + je.field_b;
             }
             var4Lifetime3++;
           }
           if (2 != ArchiveIndex.field_j) {
-            cb.field_c.a(param1 ^ 90, param2, CachedArchiveProvider.a((byte) 122, dh.field_d, bj.field_y), 0);
+            cb.field_c.a(param1 ^ 90, param2, CachedArchiveProvider.a((byte) 122, dh.field_d, UiContainer.field_y), 0);
           } else {
             cb.field_c.a(param1 + 91, param2, -1, -1);
           }

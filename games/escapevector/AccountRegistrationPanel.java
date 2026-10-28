@@ -3,24 +3,24 @@
  */
 import java.io.*;
 
-final class AccountRegistrationPanel extends bj implements sg, qb, qn {
+final class AccountRegistrationPanel extends UiContainer implements sg, ButtonListener, qn {
     private gd field_R;
-    static rk[] field_M;
+    static ObjectSpriteSet[] field_M;
     private bo field_J;
     private ue field_H;
     rh field_G;
     static String field_O;
-    private hc field_P;
+    private TextButton field_P;
     static om field_L;
     private gd field_I;
-    private hc field_K;
+    private TextButton field_K;
     private gd field_N;
     static Sprite field_T;
     private gd field_Q;
     private gd field_U;
     private gd field_S;
 
-    private final int a(int param0, hm param1, String param2, int param3, int param4) {
+    private final int a(int param0, UiComponent param1, String param2, int param3, int param4) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
@@ -29,7 +29,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
           }
           ki var6 = new ki(20, param3, param0 + 120, 25, param1, false, 120, 3, Js5Transport.field_a, 16777215, param2);
           this.b(var6, false);
-          int stackIn_3_0 = var6.field_x;
+          int stackIn_3_0 = var6.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,15 +51,15 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         }
     }
 
-    public final void a(hc param0, int param1, int param2, int param3, int param4) {
+    public final void onAction(TextButton button, int buttonCode, int localY, int guard, int localX) {
         String stackIn_10_2 = null;
         try {
-          if (param0 == this.field_P) {
+          if (button == this.field_P) {
             qe.a(true);
-          } else if (this.field_K == param0) {
+          } else if (this.field_K == button) {
             boolean discarded$1 = this.h((byte) 123);
           }
-          if (param3 == 1) {
+          if (guard == 1) {
             return;
           }
           this.field_N = (gd) null;
@@ -69,16 +69,16 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var6;
           StringBuilder stackIn_9_1 = new StringBuilder().append("bf.K(");
-          if (param0 == null) {
+          if (button == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 
-    private final int a(int param0, String param1, int param2, hm param3, String param4, int param5) {
+    private final int a(int param0, String param1, int param2, UiComponent param3, String param4, int param5) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -119,7 +119,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         try {
           gd var3 = this.field_S;
           String var4 = param1;
-          ((ul) ((Object) var3)).a(var4, false, -33);
+          ((EditableTextWidget) ((Object) var3)).a(var4, false, -33);
           if (param0 < -49) {
             return;
           }
@@ -170,42 +170,42 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
     }
 
     public AccountRegistrationPanel() {
-        super(0, 0, 496, 0, (db) null);
-        this.field_S = new gd("", (wn) null, 12);
-        this.field_I = new gd("", (wn) null, 100);
-        this.field_R = new gd("", (wn) null, 100);
-        this.field_Q = new gd("", (wn) null, 20);
-        this.field_U = new gd("", (wn) null, 20);
-        this.field_N = new gd("", (wn) null, 3);
+        super(0, 0, 496, 0, (WidgetPainter) null);
+        this.field_S = new gd("", (UiListener) null, 12);
+        this.field_I = new gd("", (UiListener) null, 100);
+        this.field_R = new gd("", (UiListener) null, 100);
+        this.field_Q = new gd("", (UiListener) null, 20);
+        this.field_U = new gd("", (UiListener) null, 20);
+        this.field_N = new gd("", (UiListener) null, 3);
         boolean var1 = true;
-        this.field_J = new bo("", (wn) null, (var1));
-        this.field_K = new hc(ag.field_c, (wn) null);
-        this.field_P = new hc(CipherPacketBuffer.field_p, (wn) null);
-        this.field_S.field_i = bb.field_K;
-        this.field_I.field_i = en.field_a;
-        this.field_R.field_i = co.field_f;
-        this.field_Q.field_i = aa.field_b;
-        this.field_U.field_i = pl.field_i;
-        this.field_N.field_i = ta.field_k;
-        this.field_J.field_i = ad.field_h;
+        this.field_J = new bo("", (UiListener) null, (var1));
+        this.field_K = new TextButton(GameKeyHandler.field_c, (UiListener) null);
+        this.field_P = new TextButton(CipherPacketBuffer.field_p, (UiListener) null);
+        this.field_S.tooltip = bb.field_K;
+        this.field_I.tooltip = en.field_a;
+        this.field_R.tooltip = co.field_f;
+        this.field_Q.tooltip = aa.field_b;
+        this.field_U.tooltip = pl.field_i;
+        this.field_N.tooltip = ta.field_k;
+        this.field_J.tooltip = BoundedUrlRequest.field_h;
         this.field_S.a(new kf(this.field_S), (byte) 63);
         this.field_I.a(new hi(this.field_I), (byte) 63);
         this.field_R.a(new dg(this.field_R, this.field_I), (byte) 63);
         this.field_Q.a(new nk(this.field_Q, this.field_S, this.field_I), (byte) 63);
         this.field_U.a(new lb(this.field_U, this.field_Q), (byte) 63);
         this.field_N.a(new kl(this.field_N), (byte) 63);
-        this.field_K.field_y = false;
-        this.field_K.field_s = (db) ((Object) new ck());
-        this.field_P.field_s = (db) ((Object) new ha());
-        this.field_S.field_s = (db) ((Object) new re(10000536));
+        this.field_K.enabled = false;
+        this.field_K.painter = (WidgetPainter) ((Object) new ck());
+        this.field_P.painter = (WidgetPainter) ((Object) new ha());
+        this.field_S.painter = (WidgetPainter) ((Object) new re(10000536));
         re dupTemp$0 = new re(10000536);
-        this.field_R.field_s = (db) ((Object) dupTemp$0);
-        this.field_I.field_s = (db) ((Object) dupTemp$0);
-        this.field_N.field_s = (db) ((Object) new re(10000536));
-        this.field_J.field_s = (db) ((Object) new ae());
+        this.field_R.painter = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_I.painter = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_N.painter = (WidgetPainter) ((Object) new re(10000536));
+        this.field_J.painter = (WidgetPainter) ((Object) new ae());
         un dupTemp$1 = new un(10000536);
-        this.field_U.field_s = (db) ((Object) dupTemp$1);
-        this.field_Q.field_s = (db) ((Object) dupTemp$1);
+        this.field_U.painter = (WidgetPainter) ((Object) dupTemp$1);
+        this.field_Q.painter = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = r.a(aj.field_b, -63, new String[]{this.j(66), this.k(3674)});
         int var3 = 20;
         var3 = var3 + this.a(170, this.field_I, tm.field_Z, var3, 100);
@@ -214,30 +214,30 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         var3 = var3 + (this.a(170, mh.field_d, var3, this.field_U, rm.field_a, 170) + 5);
         var3 = var3 + (5 + this.a(170, lf.field_J, var3, this.field_S, ig.field_i, 170));
         var3 = var3 + this.a(qm.field_a, (byte) 123, var3, this.field_N, 170);
-        ki var4 = new ki(46, var3, -90 + this.field_g, 25, this.field_J, true, -120 + this.field_g, 5, ke.field_c, 11579568, ii.field_b);
+        ki var4 = new ki(46, var3, -90 + this.width, 25, this.field_J, true, -120 + this.width, 5, ke.field_c, 11579568, ii.field_b);
         this.b(var4, false);
-        var3 = var3 + var4.field_x;
-        k var5 = new k(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, Js5Transport.field_a.field_r, -1, 2147483647, true);
+        var3 = var3 + var4.height;
+        TextWidgetPainter var5 = new TextWidgetPainter(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, Js5Transport.field_a.field_r, -1, 2147483647, true);
         this.field_H = new ue(var2, var5);
-        this.field_H.field_i = "";
-        this.field_H.a(ah.field_m, (byte) 65, 0);
-        this.field_H.a(ah.field_m, (byte) 97, 1);
-        this.field_H.field_q = (wn) (this);
-        this.field_H.b(2463, 46, this.field_g - 90, var3);
-        var3 = var3 + (15 + this.field_H.field_x);
+        this.field_H.tooltip = "";
+        this.field_H.a(TextFieldValidator.field_m, (byte) 65, 0);
+        this.field_H.a(TextFieldValidator.field_m, (byte) 97, 1);
+        this.field_H.listener = (UiListener) (this);
+        this.field_H.b(2463, 46, this.width - 90, var3);
+        var3 = var3 + (15 + this.field_H.height);
         this.b(this.field_H, false);
         int var6 = 4;
         int var7 = 200;
-        this.field_K.a(var7, var3, -var7 + 496 >> 1, true, 40);
-        this.field_P.a(60, 15 + var3, var6 + 3, true, 40);
-        this.field_P.field_q = (wn) (this);
-        this.field_K.field_q = (wn) (this);
+        this.field_K.setBounds(var7, var3, -var7 + 496 >> 1, true, 40);
+        this.field_P.setBounds(60, 15 + var3, var6 + 3, true, 40);
+        this.field_P.listener = (UiListener) (this);
+        this.field_K.listener = (UiListener) (this);
         this.b(this.field_K, false);
         this.b(this.field_P, false);
         this.field_G = new rh((qn) (this));
-        this.field_G.a(-60 - this.field_S.field_k + (this.field_g - this.field_S.field_g), 20 + this.field_S.field_j, 60 + this.field_S.field_k + this.field_S.field_g, true, 150);
+        this.field_G.setBounds(-60 - this.field_S.x + (this.width - this.field_S.width), 20 + this.field_S.y, 60 + this.field_S.x + this.field_S.width, true, 150);
         this.b(this.field_G, false);
-        this.a(496, 0, 0, true, var6 + (var3 + 55));
+        this.setBounds(496, 0, 0, true, var6 + (var3 + 55));
     }
 
     private final String k(int param0) {
@@ -261,11 +261,11 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
           if (param0) {
             return false;
           }
-          el var3 = param1.a((byte) -89);
+          ValidationSource var3 = param1.a((byte) -89);
           if (var3 == null) {
             return true;
           }
-          rf var4 = var3.a(17124);
+          ValidationState var4 = var3.validationState(17124);
           if (var4 == ArchiveProvider.field_a) {
             return false;
           }
@@ -328,7 +328,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         }
     }
 
-    private final int a(String param0, byte param1, int param2, hm param3, int param4) {
+    private final int a(String param0, byte param1, int param2, UiComponent param3, int param4) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
@@ -339,8 +339,8 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
           }
           oj var7 = new oj(((og) ((Object) param3)).a((byte) -89));
           this.b(var7, false);
-          var7.a(15, (-15 + var8.field_x >> 1) + var8.field_j, 3 + var8.field_g + var8.field_k, true, 15);
-          int stackIn_3_0 = var8.field_x;
+          var7.setBounds(15, (-15 + var8.height >> 1) + var8.y, 3 + var8.width + var8.x, true, 15);
+          int stackIn_3_0 = var8.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -366,16 +366,16 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         if (param0 == 10) {
           return null == IsaacRandom.field_d ? of.field_d : (java.awt.Canvas) ((Object) IsaacRandom.field_d);
         }
-        field_M = (rk[]) null;
+        field_M = (ObjectSpriteSet[]) null;
         return null == IsaacRandom.field_d ? of.field_d : (java.awt.Canvas) ((Object) IsaacRandom.field_d);
     }
 
-    final void a(int param0, int param1, int param2, hm param3) {
+    final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_K.field_y = this.b(true);
+          super.updateHover(guard, offsetY, offsetX, root);
+          this.field_K.enabled = this.b(true);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "bf.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bf.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -409,49 +409,49 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(hm param0, char param1, int param2, int param3) {
+    final boolean onFocusedKey(UiComponent root, char character, int keyCode, int guard) {
         String stackIn_18_2 = null;
         try {
-          if (super.a(param0, param1, param2, 20)) {
+          if (super.onFocusedKey(root, character, keyCode, 20)) {
             return true;
           }
-          if (param2 == 98) {
-            boolean stackIn_7_0 = this.a((byte) 22, param0);
+          if (keyCode == 98) {
+            boolean stackIn_7_0 = this.a((byte) 22, root);
             return stackIn_7_0;
           }
-          if (param3 <= 0) {
+          if (guard <= 0) {
             this.field_I = (gd) null;
           }
-          if (param2 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          boolean stackIn_12_0 = this.a(param0, true);
+          boolean stackIn_12_0 = this.a(root, true);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_17_0 = var5;
           StringBuilder stackIn_17_1 = new StringBuilder().append("bf.G(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final int a(int param0, hm param1, int param2, String param3, int param4, String param5, int param6) {
+    private final int a(int param0, UiComponent param1, int param2, String param3, int param4, String param5, int param6) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
           ki var10 = new ki(20, param6, 120 + param2, param4, param1, false, 120, 3, Js5Transport.field_a, 16777215, param3);
           this.b(var10, false);
-          lf var9 = new lf(((og) ((Object) param1)).a((byte) -89), param5, 126, var10.field_x + param6, param2 + 50, param0);
-          var9.field_q = (wn) (this);
+          lf var9 = new lf(((og) ((Object) param1)).a((byte) -89), param5, 126, var10.height + param6, param2 + 50, param0);
+          var9.listener = (UiListener) (this);
           this.b(var9, false);
-          int stackIn_1_0 = var9.field_x + var10.field_x;
+          int stackIn_1_0 = var9.height + var10.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -486,10 +486,10 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         int var2 = -1;
         int var3 = 38 % ((param0 - 51) / 35);
         try {
-          var2 = Integer.parseInt(this.field_N.field_l);
+          var2 = Integer.parseInt(this.field_N.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return e.a(this, false, this.field_I.field_l, var2, this.field_Q.field_l, this.field_J.field_z, this.field_S.field_l);
+        return e.a(this, false, this.field_I.text, var2, this.field_Q.text, this.field_J.field_z, this.field_S.text);
     }
 
     public final void a(int param0, ue param1, int param2, int param3) {
@@ -497,7 +497,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         int var6 = EscapeVector.obfuscationControl;
         try {
           if (param0 != -2861) {
-            field_M = (rk[]) null;
+            field_M = (ObjectSpriteSet[]) null;
           }
           if (0 == param2) {
             qd.a(12, "terms.ws");

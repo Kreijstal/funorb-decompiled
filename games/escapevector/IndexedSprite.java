@@ -5,36 +5,36 @@ final class IndexedSprite extends IndexedSpriteState {
     int[] field_l;
     byte[] field_k;
 
-    final void a(int param0, int param1) {
-        param0 = param0 + this.field_f;
-        param1 = param1 + this.field_i;
-        int var3 = param0 + param1 * SoftwareRasterizer.width;
+    final void draw(int x, int y) {
+        x = x + this.field_f;
+        y = y + this.field_i;
+        int var3 = x + y * SoftwareRasterizer.width;
         int var4 = 0;
         int var5 = this.field_d;
         int var6 = this.field_g;
         int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          int var9 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          int var9 = SoftwareRasterizer.clipTop - y;
           var5 = var5 - var9;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * SoftwareRasterizer.width;
         }
-        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
-          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
+        if (y + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (y + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          int var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          int var9Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRasterizer.clipRight) {
-          int var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
+        if (x + var6 > SoftwareRasterizer.clipRight) {
+          int var9Lifetime2 = x + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -57,36 +57,36 @@ final class IndexedSprite extends IndexedSpriteState {
         this.field_l = param7;
     }
 
-    final void a(int param0, int param1, int param2) {
-        param0 = param0 + this.field_f;
-        param1 = param1 + this.field_i;
-        int var4 = param0 + param1 * SoftwareRasterizer.width;
+    final void drawAlpha(int x, int y, int alpha) {
+        x = x + this.field_f;
+        y = y + this.field_i;
+        int var4 = x + y * SoftwareRasterizer.width;
         int var5 = 0;
         int var6 = this.field_d;
         int var7 = this.field_g;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          int var10 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          int var10 = SoftwareRasterizer.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRasterizer.width;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          int var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          int var10Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-          int var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
+        if (x + var7 > SoftwareRasterizer.clipRight) {
+          int var10Lifetime2 = x + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -95,7 +95,7 @@ final class IndexedSprite extends IndexedSpriteState {
           var6 <= 0) {
           return;
         }
-        IndexedSprite.a(SoftwareRasterizer.pixels, this.field_k, this.field_l, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.a(SoftwareRasterizer.pixels, this.field_k, this.field_l, var5, var4, var7, var6, var8, var9, alpha);
     }
 
     IndexedSprite(int param0, int param1, int param2) {

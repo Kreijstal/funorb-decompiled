@@ -1,50 +1,50 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class l extends bj implements qb {
-    private hc field_J;
+final class l extends UiContainer implements ButtonListener {
+    private TextButton field_J;
     static int field_H;
-    private hc field_G;
-    private hc field_I;
+    private TextButton field_G;
+    private TextButton field_I;
 
     public l() {
-        super(0, 0, 476, 225, (db) null);
-        this.field_I = new hc(pc.field_g, (wn) null);
-        this.field_G = new hc(CipherPacketBuffer.field_p, (wn) null);
-        this.field_J = new hc(cj.field_c, (wn) null);
+        super(0, 0, 476, 225, (WidgetPainter) null);
+        this.field_I = new TextButton(pc.field_g, (UiListener) null);
+        this.field_G = new TextButton(CipherPacketBuffer.field_p, (UiListener) null);
+        this.field_J = new TextButton(cj.field_c, (UiListener) null);
         ck var1 = new ck();
-        this.field_I.field_s = (db) ((Object) var1);
-        this.field_G.field_s = (db) ((Object) var1);
-        this.field_J.field_s = (db) ((Object) var1);
+        this.field_I.painter = (WidgetPainter) ((Object) var1);
+        this.field_G.painter = (WidgetPainter) ((Object) var1);
+        this.field_J.painter = (WidgetPainter) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_G.a(var4, this.field_x - (48 + var2), -var3 + this.field_g >> 1, true, 30);
-        this.field_J.a(var4, -48 + (this.field_x - var2), (this.field_g - var3 >> 1) + (var4 + var2), true, 30);
-        this.field_I.a(var3, -78 + (this.field_x - 2 * var2), -var3 + this.field_g >> 1, true, 30);
-        this.field_G.field_q = (wn) (this);
-        this.field_I.field_q = (wn) (this);
-        this.field_J.field_q = (wn) (this);
-        this.field_I.field_i = mm.field_c;
-        this.field_J.field_i = lf.field_G;
+        this.field_G.setBounds(var4, this.height - (48 + var2), -var3 + this.width >> 1, true, 30);
+        this.field_J.setBounds(var4, -48 + (this.height - var2), (this.width - var3 >> 1) + (var4 + var2), true, 30);
+        this.field_I.setBounds(var3, -78 + (this.height - 2 * var2), -var3 + this.width >> 1, true, 30);
+        this.field_G.listener = (UiListener) (this);
+        this.field_I.listener = (UiListener) (this);
+        this.field_J.listener = (UiListener) (this);
+        this.field_I.tooltip = mm.field_c;
+        this.field_J.tooltip = lf.field_G;
         this.b(this.field_G, false);
         this.b(this.field_I, false);
         this.b(this.field_J, false);
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        if (param1 > 85) {
-          int var5 = this.field_k + param3;
-          int var6 = param0 + this.field_j;
-          Js5Transport.field_a.a(q.field_F, var5 + 20, var6 + 20, this.field_g - 40, this.field_x - 50, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
-          super.a(param0, (byte) 99, param2, param3);
+    final void drawLayer(int screenY, byte guard, int layer, int screenX) {
+        if (guard > 85) {
+          int var5 = this.x + screenX;
+          int var6 = screenY + this.y;
+          Js5Transport.field_a.a(q.field_F, var5 + 20, var6 + 20, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
+          super.drawLayer(screenY, (byte) 99, layer, screenX);
           return;
         }
-        this.field_J = (hc) null;
-        int var5Lifetime1 = this.field_k + param3;
-        int var6Lifetime1 = param0 + this.field_j;
-        Js5Transport.field_a.a(q.field_F, var5Lifetime1 + 20, var6Lifetime1 + 20, this.field_g - 40, this.field_x - 50, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
-        super.a(param0, (byte) 99, param2, param3);
+        this.field_J = (TextButton) null;
+        int var5Lifetime1 = this.x + screenX;
+        int var6Lifetime1 = screenY + this.y;
+        Js5Transport.field_a.a(q.field_F, var5Lifetime1 + 20, var6Lifetime1 + 20, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
+        super.drawLayer(screenY, (byte) 99, layer, screenX);
     }
 
     final static boolean a(byte param0) {
@@ -67,18 +67,18 @@ final class l extends bj implements qb {
         return false;
     }
 
-    public final void a(hc param0, int param1, int param2, int param3, int param4) {
+    public final void onAction(TextButton button, int buttonCode, int localY, int guard, int localX) {
         String stackIn_14_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (this.field_G == param0) {
+          if (this.field_G == button) {
             GameAppletShell.b(-74);
-          } else if (this.field_I == param0) {
+          } else if (this.field_I == button) {
             fe.a((byte) -83);
-          } else if (this.field_J == param0) {
+          } else if (this.field_J == button) {
             bm.a(4);
           }
-          if (param3 == 1) {
+          if (guard == 1) {
             return;
           }
           l.a((byte) -64);
@@ -88,44 +88,44 @@ final class l extends bj implements qb {
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var6;
           StringBuilder stackIn_13_1 = new StringBuilder().append("l.K(");
-          if (param0 == null) {
+          if (button == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 
-    final boolean a(hm param0, char param1, int param2, int param3) {
+    final boolean onFocusedKey(UiComponent root, char character, int keyCode, int guard) {
         String stackIn_17_2 = null;
         try {
-          if (super.a(param0, param1, param2, 71)) {
+          if (super.onFocusedKey(root, character, keyCode, 71)) {
             return true;
           }
-          if (param2 == 98) {
-            boolean stackIn_6_0 = this.a((byte) 22, param0);
+          if (keyCode == 98) {
+            boolean stackIn_6_0 = this.a((byte) 22, root);
             return stackIn_6_0;
           }
-          if (param3 < 0) {
+          if (guard < 0) {
             return true;
           }
-          if (param2 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          boolean stackIn_13_0 = this.a(param0, true);
+          boolean stackIn_13_0 = this.a(root, true);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_16_0 = var5;
           StringBuilder stackIn_16_1 = new StringBuilder().append("l.G(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ce {
+final class TrackerMusicDefinition {
     int[][] field_g;
     private int field_F;
     int[] field_J;
@@ -56,7 +56,7 @@ final class ce {
           return di.field_g.a(-52);
         }
         if (param0 != 31069) {
-          ce.b(-82);
+          TrackerMusicDefinition.b(-82);
         }
         return vk.field_v;
     }
@@ -121,7 +121,7 @@ final class ce {
         return AudioService.field_b[param1][param2];
     }
 
-    ce(PacketBuffer param0, SoundCache param1) {
+    TrackerMusicDefinition(PacketBuffer param0, SoundCache param1) {
         try {
           this.field_o = param1;
           this.field_w = param0.readUnsignedByte(0) + 1;

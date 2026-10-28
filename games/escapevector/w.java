@@ -17,9 +17,9 @@ final class w extends vg {
         this.field_cb.field_G = false;
     }
 
-    final static rk[] c(boolean param0) {
+    final static ObjectSpriteSet[] c(boolean param0) {
         if (param0) {
-          return (rk[]) null;
+          return (ObjectSpriteSet[]) null;
         }
         return AccountRegistrationPanel.field_M;
     }
@@ -79,11 +79,11 @@ final class w extends vg {
 
     final void b(int param0, int param1, byte param2) {
         super.b(param0, param1, (byte) 109);
-        dl.field_b.c(this.field_db, param1 + (this.field_g >> 1), 103 + param0, 16777215, -1);
+        dl.field_b.c(this.field_db, param1 + (this.width >> 1), 103 + param0, 16777215, -1);
         if (param2 < 80) {
           this.field_eb = true;
           if (this.field_Z != null) {
-            SoftwareRasterizer.e(param1 + 20, -7 + (120 + param0), 260, 8421504);
+            SoftwareRasterizer.drawHorizontalLine(param1 + 20, -7 + (120 + param0), 260, 8421504);
             dl.field_b.a(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.field_r);
             return;
           }
@@ -92,7 +92,7 @@ final class w extends vg {
         if (this.field_Z == null) {
           return;
         }
-        SoftwareRasterizer.e(param1 + 20, -7 + (120 + param0), 260, 8421504);
+        SoftwareRasterizer.drawHorizontalLine(param1 + 20, -7 + (120 + param0), 260, 8421504);
         dl.field_b.a(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.field_r);
     }
 

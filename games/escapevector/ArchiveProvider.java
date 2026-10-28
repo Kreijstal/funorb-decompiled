@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ArchiveProvider {
-    static rf field_a;
+    static ValidationState field_a;
     static Sprite[] field_b;
     static PcmSample field_d;
     static String field_c;
@@ -42,7 +42,7 @@ abstract class ArchiveProvider {
 
     static {
         field_b = new Sprite[17];
-        field_a = new rf();
+        field_a = new ValidationState();
         field_c = "Extra thrust";
     }
 }

@@ -61,7 +61,7 @@ final class ef {
         return this;
     }
 
-    final void a(int param0, ef param1, hm param2, int param3, int param4, he param5) {
+    final void a(int param0, ef param1, UiComponent param2, int param3, int param4, he param5) {
         String stackIn_21_2 = null;
         String stackIn_24_2 = null;
         String stackIn_27_2 = null;
@@ -137,7 +137,7 @@ final class ef {
         return this;
     }
 
-    final void a(he param0, hm param1, int param2, int param3, byte param4) {
+    final void a(he param0, UiComponent param1, int param2, int param3, byte param4) {
         int stackIn_21_2 = 0;
         int stackIn_24_3 = 0;
         int stackIn_27_8;
@@ -147,21 +147,21 @@ final class ef {
           if (param4 < 0) {
             this.field_g = (Sprite) null;
           }
-          ld.a(param1.field_x, this.field_i, 4, param3 + param1.field_j, param2 + param1.field_k, param1.field_g);
+          ld.a(param1.height, this.field_i, 4, param3 + param1.y, param2 + param1.x, param1.width);
           if (null != this.field_g) {
-            int var6_int = param2 - (-param1.field_k - this.field_h);
+            int var6_int = param2 - (-param1.x - this.field_h);
             if (param0.field_m == 1) {
-              var6_int = var6_int + (param1.field_g - this.field_g.fullWidth) / 2;
+              var6_int = var6_int + (param1.width - this.field_g.fullWidth) / 2;
             }
-            int var7 = this.field_f + param1.field_j + param3;
+            int var7 = this.field_f + param1.y + param3;
             if (param0.field_c == 1) {
-              var7 = var7 + (-this.field_g.fullHeight + param1.field_x) / 2;
+              var7 = var7 + (-this.field_g.fullHeight + param1.height) / 2;
             }
             if (param0.field_m == 2) {
-              var6_int = var6_int + (param1.field_g - this.field_g.fullWidth);
+              var6_int = var6_int + (param1.width - this.field_g.fullWidth);
             }
             if (param0.field_c == 2) {
-              var7 = var7 + (-this.field_g.fullHeight + param1.field_x);
+              var7 = var7 + (-this.field_g.fullHeight + param1.height);
             }
             this.field_g.e(var6_int, var7);
           }
@@ -178,15 +178,15 @@ final class ef {
             } else {
               stackIn_21_2 = this.field_h;
             }
-            int stackIn_23_2 = stackIn_21_2 + (param2 + param1.field_k + param0.field_n);
+            int stackIn_23_2 = stackIn_21_2 + (param2 + param1.x + param0.field_n);
             if (this.field_f != -2147483648) {
               stackIn_24_3 = this.field_f;
             } else {
               stackIn_24_3 = 0;
             }
-            int stackIn_26_3 = stackIn_24_3 + param0.field_f + (param1.field_j + param3);
-            int stackIn_26_4 = -param0.field_n + param1.field_g - param0.field_b;
-            int stackIn_26_5 = -param0.field_o - param0.field_f + param1.field_x;
+            int stackIn_26_3 = stackIn_24_3 + param0.field_f + (param1.y + param3);
+            int stackIn_26_4 = -param0.field_n + param1.width - param0.field_b;
+            int stackIn_26_5 = -param0.field_o - param0.field_f + param1.height;
             int stackIn_26_6 = this.field_a;
             int stackIn_26_7 = this.field_b;
             if (this.field_e != -2147483648) {

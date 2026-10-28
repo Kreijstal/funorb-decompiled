@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends ah {
+final class nk extends TextFieldValidator {
     static int field_n;
-    private ul field_o;
-    private ul field_q;
+    private EditableTextWidget field_o;
+    private EditableTextWidget field_q;
     static ResourceArchive field_p;
     static String field_s;
     static String field_r;
 
-    final String a(byte param0, String param1) {
+    final String messageForText(byte guard, String text) {
         String stackIn_37_2 = null;
         try {
-          String var7 = this.field_q.field_l.toLowerCase();
-          String var4 = param1.toLowerCase();
+          String var7 = this.field_q.text.toLowerCase();
+          String var4 = text.toLowerCase();
           if (0 == var4.length()) {
             return null;
           }
@@ -30,8 +30,8 @@ final class nk extends ah {
             String stackIn_14_0 = PacketBuffer.field_j;
             return stackIn_14_0;
           }
-          int var6 = 78 / ((param0 - 10) / 51);
-          if (this.b((byte) 53, param1)) {
+          int var6 = 78 / ((guard - 10) / 51);
+          if (this.b((byte) 53, text)) {
             String stackIn_17_0 = bg.field_b;
             return stackIn_17_0;
           }
@@ -57,8 +57,8 @@ final class nk extends ah {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_36_0 = var3;
-          StringBuilder stackIn_36_1 = new StringBuilder().append("nk.L(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_36_1 = new StringBuilder().append("nk.L(").append(guard).append(',');
+          if (text == null) {
             stackIn_37_2 = "null";
           } else {
             stackIn_37_2 = "{...}";
@@ -71,11 +71,11 @@ final class nk extends ah {
         if (param0 != -8055) {
           field_n = -37;
           ImageProducerRasterBuffer.field_l = null;
-          bj.field_z = null;
+          UiContainer.field_z = null;
           return;
         }
         ImageProducerRasterBuffer.field_l = null;
-        bj.field_z = null;
+        UiContainer.field_z = null;
     }
 
     private final boolean b(byte param0, String param1) {
@@ -84,7 +84,7 @@ final class nk extends ah {
           if (param0 != 53) {
             field_s = (String) null;
           }
-          String var3 = this.field_o.field_l.toLowerCase();
+          String var3 = this.field_o.text.toLowerCase();
           String var4 = param1.toLowerCase();
           if (var3.length() > 0) {
             if (0 >= var4.length()) {
@@ -144,30 +144,30 @@ final class nk extends ah {
         }
     }
 
-    final rf a(int param0, String param1) {
+    final ValidationState validateText(int guard, String text) {
         String stackIn_13_2 = null;
         try {
-          String var3 = this.field_q.field_l.toLowerCase();
-          String var4 = param1.toLowerCase();
-          if (param0 == ~var4.length()) {
-            rf stackIn_2_0 = ArchiveProvider.field_a;
+          String var3 = this.field_q.text.toLowerCase();
+          String var4 = text.toLowerCase();
+          if (guard == ~var4.length()) {
+            ValidationState stackIn_2_0 = ArchiveProvider.field_a;
             return stackIn_2_0;
           }
           if (!hd.a(var4, false, var3)) {
-            rf stackIn_5_0 = ArchiveProvider.field_a;
+            ValidationState stackIn_5_0 = ArchiveProvider.field_a;
             return stackIn_5_0;
           }
-          if (!this.b((byte) 53, param1)) {
+          if (!this.b((byte) 53, text)) {
             return IsaacRandom.field_h;
           }
-          rf stackIn_9_0 = ArchiveProvider.field_a;
+          ValidationState stackIn_9_0 = ArchiveProvider.field_a;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var3_ref;
-          StringBuilder stackIn_12_1 = new StringBuilder().append("nk.G(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_12_1 = new StringBuilder().append("nk.G(").append(guard).append(',');
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -209,7 +209,7 @@ final class nk extends ah {
         }
     }
 
-    nk(ul param0, ul param1, ul param2) {
+    nk(EditableTextWidget param0, EditableTextWidget param1, EditableTextWidget param2) {
         super(param0);
         try {
           this.field_q = param1;

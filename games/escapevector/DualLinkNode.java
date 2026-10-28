@@ -64,13 +64,13 @@ class DualLinkNode extends IntrusiveNode {
         }
         try {
           if (null == AccountRegistrationPanel.field_M) {
-            AccountRegistrationPanel.field_M = new rk[var3.length];
+            AccountRegistrationPanel.field_M = new ObjectSpriteSet[var3.length];
           }
           for (int var5 = 0; var5 < var3.length; var5++) {
             Sprite var6 = var3[var5];
             Sprite var7 = var4[var5];
-            fn var8 = new fn(ClientException.field_b[var5], ClientException.field_f[var5]);
-            AccountRegistrationPanel.field_M[var5] = new rk(var6, var7, var8);
+            SpriteOffset var8 = new SpriteOffset(ClientException.field_b[var5], ClientException.field_f[var5]);
+            AccountRegistrationPanel.field_M[var5] = new ObjectSpriteSet(var6, var7, var8);
           }
           TerrainMaskSupport.a(105);
         } catch (RuntimeException runtimeException) {
@@ -88,12 +88,12 @@ class DualLinkNode extends IntrusiveNode {
         try {
           rh.field_N = param2;
           he.field_y = param4;
-          ce.field_j = param5;
+          TrackerMusicDefinition.field_j = param5;
           mn.field_n = param6;
           kh.field_c = param0;
-          od.field_j = (Js5Transport) ((Object) new bk());
+          SelfDestructEffects.field_j = (Js5Transport) ((Object) new bk());
           uk.field_b = new DiskCacheWorker(param1);
-          af.field_e = new sk(od.field_j, uk.field_b);
+          FullscreenFocusCanvas.field_e = new sk(SelfDestructEffects.field_j, uk.field_b);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "fl.W(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

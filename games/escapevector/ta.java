@@ -37,7 +37,7 @@ final class ta {
         if (!param0) {
           this.j(48);
         }
-        en var3 = ce.field_f;
+        en var3 = TrackerMusicDefinition.field_f;
         if (var3.field_c) {
           var2 = cc.field_l;
         }
@@ -184,7 +184,7 @@ final class ta {
             di.field_d = null;
           }
           e.field_a = false;
-          ce.field_f.a(true);
+          TrackerMusicDefinition.field_f.a(true);
           mj.field_d = 0;
           gi.a((byte) -71);
           var4 = true;
@@ -338,7 +338,7 @@ final class ta {
     }
 
     final int a(int param0, int param1, int param2) {
-        int var4 = sm.a(param2, 31, this.field_p[this.field_h], param1);
+        int var4 = DebouncedValidator.a(param2, 31, this.field_p[this.field_h], param1);
         if (var4 >= 0) {
           return var4;
         }
@@ -358,7 +358,7 @@ final class ta {
           return this.field_a.field_c;
         }
         if (this.field_i != null) {
-          var4 = sm.a(param2, 57, this.field_i, param1);
+          var4 = DebouncedValidator.a(param2, 57, this.field_i, param1);
           if (var4 >= 0) {
             return var4;
           }
@@ -436,10 +436,10 @@ final class ta {
         if (param0 < 14) {
           field_w = 98;
         }
-        if (bj.e((byte) -119)) {
+        if (UiContainer.e((byte) -119)) {
           return false;
         }
-        return ce.field_f.f(param1, 1);
+        return TrackerMusicDefinition.field_f.f(param1, 1);
     }
 
     private final void c(boolean param0) {
@@ -457,15 +457,15 @@ final class ta {
         int[] var2;
         int var9 = EscapeVector.obfuscationControl;
         if (this.field_b != param0) {
-          int var3 = ce.field_f.a(this.field_b, true);
-          int var4 = ce.field_f.c(this.field_b, 1);
+          int var3 = TrackerMusicDefinition.field_f.a(this.field_b, true);
+          int var4 = TrackerMusicDefinition.field_f.c(this.field_b, 1);
           int[] var10 = new int[var4];
           var2 = var10;
           int var5 = 0;
           int var6 = 0;
           while (var5 < var3) {
-            boolean var7 = (ce.field_f.b(var5, (byte) 55));
-            boolean var8 = (ce.field_f.a(var5, (byte) -126, this.field_b));
+            boolean var7 = (TrackerMusicDefinition.field_f.b(var5, (byte) 55));
+            boolean var8 = (TrackerMusicDefinition.field_f.a(var5, (byte) -126, this.field_b));
             if ((!var7 ||
               var8) && var10.length > var6) {
               var10[var6++] = var5;
@@ -493,15 +493,15 @@ final class ta {
         }
         int var4 = 0;
         int var5 = 0;
-        int var6 = this.field_o.field_k + (-ah.field_j.fullHeight + this.field_o.field_m) / 2;
+        int var6 = this.field_o.field_k + (-TextFieldValidator.field_j.fullHeight + this.field_o.field_m) / 2;
         if (this.field_h > 0) {
           int incrementValue$0 = param0;
           param0++;
           this.field_c = incrementValue$0;
-          int var7 = this.field_o.field_j - ah.field_j.fullWidth / 2;
+          int var7 = this.field_o.field_j - TextFieldValidator.field_j.fullWidth / 2;
           this.field_i[var4] = new dk(var5, this.field_c, of.field_a);
           this.field_i[var4].b((byte) 127, var7, var6);
-          this.field_i[var4].a(ah.field_j.fullHeight, 0, ah.field_j.fullWidth);
+          this.field_i[var4].a(TextFieldValidator.field_j.fullHeight, 0, TextFieldValidator.field_j.fullWidth);
           QuickChatPhraseDefinition.a(-92, this.field_i[var4]);
           var4++;
         }
@@ -509,10 +509,10 @@ final class ta {
           int incrementValue$1 = param0;
           param0++;
           this.field_e = incrementValue$1;
-          int var7Lifetime1 = this.field_o.field_j + (this.field_o.field_g - ah.field_j.fullWidth / 2);
-          this.field_i[var4] = new dk(var5, this.field_e, ah.field_j);
+          int var7Lifetime1 = this.field_o.field_j + (this.field_o.field_g - TextFieldValidator.field_j.fullWidth / 2);
+          this.field_i[var4] = new dk(var5, this.field_e, TextFieldValidator.field_j);
           this.field_i[var4].b((byte) 122, var7Lifetime1, var6);
-          this.field_i[var4].a(ah.field_j.fullHeight, 0, ah.field_j.fullWidth);
+          this.field_i[var4].a(TextFieldValidator.field_j.fullHeight, 0, TextFieldValidator.field_j.fullWidth);
           QuickChatPhraseDefinition.a(-110, this.field_i[var4]);
         }
         return param0;
@@ -621,7 +621,7 @@ final class ta {
     }
 
     private final boolean h(byte param0) {
-        di.field_d.a(this.a(-3, sf.field_c, ng.field_ob), (byte) 119, this.a(-3, dh.field_d, bj.field_y));
+        di.field_d.a(this.a(-3, sf.field_c, ng.field_ob), (byte) 119, this.a(-3, dh.field_d, UiContainer.field_y));
         this.a(20364);
         boolean var2 = (this.a((byte) -91, true, Js5NetworkRequest.a((byte) 15, -1)));
         int var3 = -122 / ((param0 - 73) / 47);
@@ -640,8 +640,8 @@ final class ta {
           var7 = 10;
         }
         int var8 = -this.field_o.field_k + (-this.field_o.field_m - var7) + 440;
-        int var9 = this.field_o.field_j - 3 * ah.field_j.fullWidth / param2;
-        int var10 = 3 * ah.field_j.fullWidth + this.field_o.field_g;
+        int var9 = this.field_o.field_j - 3 * TextFieldValidator.field_j.fullWidth / param2;
+        int var10 = 3 * TextFieldValidator.field_j.fullWidth + this.field_o.field_g;
         this.field_n = new gf(var9, var6, var10, var8, param4);
         this.field_n.a(15135, param0, param1, param3);
     }
@@ -706,7 +706,7 @@ final class ta {
 
     private final void f(byte param0) {
         int var6 = EscapeVector.obfuscationControl;
-        en var2 = ce.field_f;
+        en var2 = TrackerMusicDefinition.field_f;
         if (param0 > -72) {
           int discarded$0 = this.g(true);
         }
@@ -813,7 +813,7 @@ final class ta {
         if (di.field_d.field_e) {
           dk var2 = this.d(true);
           int var3 = nk.a(-93, var2);
-          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, qm.field_c * 1536 / 64, var3);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, qm.field_c * 1536 / 64, var3);
         }
     }
 
@@ -835,7 +835,7 @@ final class ta {
         String stackIn_8_2 = null;
         try {
           int var7_int = 3;
-          String var8 = ag.field_a;
+          String var8 = GameKeyHandler.field_a;
           if (param2 != 57) {
             int stackIn_2_0 = 94;
             return stackIn_2_0;
@@ -950,7 +950,7 @@ final class ta {
         if (param0 != 111) {
           this.field_r = (dk) null;
         }
-        en var2 = ce.field_f;
+        en var2 = TrackerMusicDefinition.field_f;
         if (var2.b(-106)) {
           this.field_b = 0;
         } else {
@@ -1027,8 +1027,8 @@ final class ta {
     }
 
     final void i(int param0) {
-        SoftwareRasterizer.d();
-        od.b(2);
+        SoftwareRasterizer.clearFramebuffer();
+        SelfDestructEffects.b(2);
         pb.a(4);
         if (param0 != 3) {
           this.field_i = (dk[]) null;
@@ -1103,7 +1103,7 @@ final class ta {
         }
         try {
           int var4 = nk.a(-87, param1);
-          rk.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / param0, var4);
+          ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / param0, var4);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ta.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1123,9 +1123,9 @@ final class ta {
     }
 
     private final Sprite f(int param0, int param1) {
-        Sprite var3 = hn.field_c;
+        Sprite var3 = CheckboxPainter.field_c;
         if (this.a(param1, param0 ^ -2295)) {
-          var3 = ce.field_f.b(param1, 117);
+          var3 = TrackerMusicDefinition.field_f.b(param1, 117);
         }
         if (this.c(73, param1)) {
           var3 = rm.field_e;
@@ -1207,7 +1207,7 @@ final class ta {
         this.g(var4, 0);
         di.field_d = new wc(var4);
         int var5 = da.field_b.c(5201);
-        int var6 = da.field_b.a(-3, dh.field_d, bj.field_y);
+        int var6 = da.field_b.a(-3, dh.field_d, UiContainer.field_y);
         di.field_d.a(117, true, var6, var5);
         mj.field_d = 0;
         gi.a((byte) -70);
@@ -1221,7 +1221,7 @@ final class ta {
         this.field_h = 0;
         this.field_m = -1;
         this.e((byte) 111);
-        this.field_l = ce.field_f.a(this.field_b, (byte) -32);
+        this.field_l = TrackerMusicDefinition.field_f.a(this.field_b, (byte) -32);
         this.f((byte) -128);
         this.g((byte) 102);
         this.d(4551, pf.field_i);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gg {
+final class FullscreenDisplayController {
     private java.awt.GraphicsDevice field_a;
     private java.awt.DisplayMode field_b;
 
@@ -67,7 +67,7 @@ final class gg {
         this.a(265181602, (java.awt.Frame) null);
     }
 
-    public gg() throws Exception {
+    public FullscreenDisplayController() throws Exception {
         java.awt.GraphicsEnvironment var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         this.field_a = var1.getDefaultScreenDevice();
         if (this.field_a.isFullScreenSupported()) {
@@ -83,11 +83,11 @@ final class gg {
             return;
           }
         }
-        throw gg.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw FullscreenDisplayController.<RuntimeException>rethrowUnchecked(new Exception());
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

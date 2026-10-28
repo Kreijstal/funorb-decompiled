@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class jm extends hm {
+final class jm extends UiComponent {
     static int field_L;
     private int field_z;
     private int field_C;
@@ -48,12 +48,12 @@ final class jm extends hm {
 
     private final Sprite e(byte param0) {
         int var9 = EscapeVector.obfuscationControl;
-        int var2 = this.field_x >> 1;
-        Sprite var3 = new Sprite(var2, this.field_x);
+        int var2 = this.height >> 1;
+        Sprite var3 = new Sprite(var2, this.height);
         eo.a(var3, (byte) -8);
-        for (int var4 = 0; var4 < this.field_x; var4++) {
+        for (int var4 = 0; var4 < this.height; var4++) {
           for (int var5 = 0; var2 > var5; var5++) {
-            double var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_x));
+            double var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.height));
             int var8 = 1;
             if (var6 < 1.0) {
               var6 = Math.sqrt(-var6 + 1.0);
@@ -78,7 +78,7 @@ final class jm extends hm {
         field_K = null;
     }
 
-    final void a(int param0, int param1, int param2, hm param3) {
+    final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
         String stackIn_9_2 = null;
         try {
           if (this.field_G) {
@@ -87,7 +87,7 @@ final class jm extends hm {
               this.field_C = this.field_C - 2 * this.field_z;
             }
           }
-          if (param0 != -14472) {
+          if (guard != -14472) {
             Sprite discarded$1 = this.e((byte) 105);
           }
           return;
@@ -95,8 +95,8 @@ final class jm extends hm {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_8_0 = var5;
-          StringBuilder stackIn_8_1 = new StringBuilder().append("jm.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_8_1 = new StringBuilder().append("jm.Q(").append(guard).append(',').append(offsetY).append(',').append(offsetX).append(',');
+          if (root == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -113,8 +113,8 @@ final class jm extends hm {
           if (param0 > -23) {
             field_K = (Sprite[]) null;
           }
-          int var5_int = this.field_g + param3;
-          rd.a(var5_int - this.field_N.width, param3 + this.field_N.width, param1 + this.field_x, 19807, param1);
+          int var5_int = this.width + param3;
+          rd.a(var5_int - this.field_N.width, param3 + this.field_N.width, param1 + this.height, 19807, param1);
           for (int var6 = -this.field_C + param3; var6 < var5_int; var6 = var6 + param2.width) {
             param2.e(var6, param1);
           }
@@ -129,7 +129,7 @@ final class jm extends hm {
           }
           if (SoftwareRasterizer.clipRight >= -this.field_N.width + var5_int) {
             eo.a(this.field_E, (byte) -29);
-            for (var7 = this.field_C + (this.field_g - this.field_N.width); 2 * this.field_z < var7; var7 = var7 - this.field_z * 2) {
+            for (var7 = this.field_C + (this.width - this.field_N.width); 2 * this.field_z < var7; var7 = var7 - this.field_z * 2) {
             }
             param2.e(-var7, 0);
             param2.e(2 * this.field_z - var7, 0);
@@ -156,11 +156,11 @@ final class jm extends hm {
     private final void k(int param0) {
         this.field_J = new Sprite[]{this.a(true, this.field_H, this.field_A), this.a(true, this.field_y, this.field_F)};
         this.field_N = this.e((byte) -122);
-        this.field_D = this.field_N.d();
+        this.field_D = this.field_N.copyMirroredHorizontally();
         if (param0 != -27800) {
           return;
         }
-        this.field_E = new Sprite(this.field_x >> 1, this.field_x);
+        this.field_E = new Sprite(this.height >> 1, this.height);
     }
 
     final static void a(int param0, PacketBuffer param1) {
@@ -221,51 +221,51 @@ final class jm extends hm {
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int width, int y, int x, boolean guard, int height) {
+        super.setBounds(width, y, x, guard, height);
         this.k(-27800);
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        if (param2 != 0) {
+    final void drawLayer(int screenY, byte guard, int layer, int screenX) {
+        if (layer != 0) {
           return;
         }
-        int var5 = this.field_k + param3;
-        int var6 = param0 + this.field_j;
+        int var5 = this.x + screenX;
+        int var6 = screenY + this.y;
         this.a(-32, var6, this.field_J[0], var5);
         if (65536 > this.field_B) {
-          rd.a(this.field_g + var5, var5 + (this.field_B * this.field_g >> 16), var6 + this.field_x, 19807, var6);
+          rd.a(this.width + var5, var5 + (this.field_B * this.width >> 16), var6 + this.height, 19807, var6);
           this.a(-81, var6, this.field_J[1], var5);
           dl.a((byte) 119);
         }
-        if (param1 <= 85) {
+        if (guard <= 85) {
           this.field_D = (Sprite) null;
         }
     }
 
     private final Sprite a(boolean param0, int param1, int param2) {
         int var13 = EscapeVector.obfuscationControl;
-        Sprite var14 = new Sprite(2 * this.field_z, this.field_x);
+        Sprite var14 = new Sprite(2 * this.field_z, this.height);
         eo.a(var14, (byte) -90);
-        int var5 = this.field_x >> 1;
+        int var5 = this.height >> 1;
         int var6 = 0;
         if (!param0) {
           this.field_B = 60;
         }
-        while (var6 < this.field_x) {
+        while (var6 < this.height) {
           int var7 = (var6 >> 1) * (2 * this.field_z - 1) % (this.field_z * 2);
           int var8 = 16711935 & param1;
           int var9 = 65280 & param1;
           int var10 = -var5 + var6;
           int var11 = 128 + (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0);
           int var12 = var11 >= 256 ? var9 | var8 : (var11 * var8 & -16711936 | 16711680 & var11 * var9) >>> 8;
-          SoftwareRasterizer.e(var7, var6, this.field_z, var12);
-          SoftwareRasterizer.e(var7 - this.field_z * 2, var6, this.field_z, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_z, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_z * 2, var6, this.field_z, var12);
           int var8Lifetime1 = param2 & 16711935;
           int var9Lifetime1 = 65280 & param2;
           int var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (-16711936 & var11 * var8Lifetime1 | 16711680 & var11 * var9Lifetime1) >>> 8;
-          SoftwareRasterizer.e(this.field_z + var7, var6, this.field_z, var12Lifetime1);
-          SoftwareRasterizer.e(-this.field_z + var7, var6, this.field_z, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_z + var7, var6, this.field_z, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_z + var7, var6, this.field_z, var12Lifetime1);
           var6++;
         }
         dl.a((byte) 127);
@@ -329,7 +329,7 @@ final class jm extends hm {
         this.field_H = param5;
         this.field_F = param8;
         this.field_y = param7;
-        this.a(param2, param1, param0, true, param3);
+        this.setBounds(param2, param1, param0, true, param3);
     }
 
     static {

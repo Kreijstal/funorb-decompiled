@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rk {
+final class ObjectSpriteSet {
     static PcmSample field_c;
     static PcmStreamMixer field_e;
     private Sprite[] field_a;
     private Sprite[] field_f;
-    private fn[] field_g;
-    static ce[] field_d;
+    private SpriteOffset[] field_g;
+    static TrackerMusicDefinition[] field_d;
     static boolean field_b;
 
     private final Sprite a(byte param0, int param1, Sprite param2, Sprite param3, Sprite param4) {
@@ -17,19 +17,19 @@ final class rk {
         try {
           int var6_int = (param3.fullWidth - param2.fullWidth) / 2;
           int var7 = (-param2.fullHeight + param3.fullHeight) / 2;
-          fn var12 = new fn(var6_int, var7);
+          SpriteOffset var12 = new SpriteOffset(var6_int, var7);
           var6_int = -param2.fullWidth + (param3.fullWidth - var6_int);
           var7 = -param2.fullHeight + (param3.fullHeight - var7);
-          fn var9 = new fn(var6_int, var7);
-          fn var13 = rc.a(param1, (byte) 120, var9, var12);
-          fn var10 = this.a(param1, param2.fullHeight, -29295, param2.fullWidth);
+          SpriteOffset var9 = new SpriteOffset(var6_int, var7);
+          SpriteOffset var13 = rc.a(param1, (byte) 120, var9, var12);
+          SpriteOffset var10 = this.a(param1, param2.fullHeight, -29295, param2.fullWidth);
           if (param0 <= 21) {
-            rk.a(104);
+            ObjectSpriteSet.a(104);
           }
-          Sprite var11 = new Sprite(var10.field_c, var10.field_b);
+          Sprite var11 = new Sprite(var10.x, var10.y);
           SoftwareRasterizer.a(oi.field_M);
           var11.g();
-          param4.e(-var13.field_c, -var13.field_b);
+          param4.e(-var13.x, -var13.y);
           md.field_D.a(124);
           SoftwareRasterizer.b(oi.field_M);
           Sprite stackIn_3_0 = var11;
@@ -60,7 +60,7 @@ final class rk {
         }
     }
 
-    private final fn a(int param0, int param1, int param2, int param3) {
+    private final SpriteOffset a(int param0, int param1, int param2, int param3) {
         int var5 = param3;
         int var6 = param1;
         if (param0 == 16384) {
@@ -76,10 +76,10 @@ final class rk {
           var5 = param1;
         }
         if (param2 == -29295) {
-          return new fn(var5, var6);
+          return new SpriteOffset(var5, var6);
         }
-        this.field_g = (fn[]) null;
-        return new fn(var5, var6);
+        this.field_g = (SpriteOffset[]) null;
+        return new SpriteOffset(var5, var6);
     }
 
     public static void a(int param0) {
@@ -87,7 +87,7 @@ final class rk {
         field_c = null;
         field_e = null;
         if (param0 < 120) {
-          rk.a(53);
+          ObjectSpriteSet.a(53);
         }
     }
 
@@ -99,7 +99,7 @@ final class rk {
           return this.field_f[1];
         }
         if (param0 > -63) {
-          rk.a(26, -60, 78);
+          ObjectSpriteSet.a(26, -60, 78);
           if (param1 == 32768) {
             return this.field_f[2];
           }
@@ -117,7 +117,7 @@ final class rk {
         return null;
     }
 
-    private final fn a(Sprite param0, int param1, Sprite param2, fn param3) {
+    private final SpriteOffset a(Sprite param0, int param1, Sprite param2, SpriteOffset param3) {
         String stackIn_19_2 = null;
         String stackIn_22_2 = null;
         String stackIn_25_2 = null;
@@ -128,26 +128,26 @@ final class rk {
             Sprite var10 = (Sprite) null;
             Sprite discarded$0 = this.a((Sprite) null, 124, 55);
           }
-          int var7 = param3.field_c;
-          int var8 = param3.field_b;
+          int var7 = param3.x;
+          int var8 = param3.y;
           if (param0 != null) {
-            if (param3.field_c < 0) {
-              var5_int = var5_int - param3.field_c;
+            if (param3.x < 0) {
+              var5_int = var5_int - param3.x;
             }
-            if (param3.field_b < 0) {
-              var6 = var6 - param3.field_b;
+            if (param3.y < 0) {
+              var6 = var6 - param3.y;
             }
             var7 = var5_int - param0.fullWidth;
             var8 = -param0.fullHeight + var6;
-            if (param3.field_c >= 0) {
-              var7 = var7 - param3.field_c;
+            if (param3.x >= 0) {
+              var7 = var7 - param3.x;
             }
-            if (param3.field_b >= 0) {
-              var8 = var8 - param3.field_b;
+            if (param3.y >= 0) {
+              var8 = var8 - param3.y;
             }
           }
-          fn var9 = new fn(var7, var8);
-          fn stackIn_15_0 = var9;
+          SpriteOffset var9 = new SpriteOffset(var7, var8);
+          SpriteOffset stackIn_15_0 = var9;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -175,7 +175,7 @@ final class rk {
         }
     }
 
-    final fn a(byte param0, int param1) {
+    final SpriteOffset a(byte param0, int param1) {
         if (param1 == 0) {
           return this.field_g[0];
         }
@@ -255,19 +255,19 @@ final class rk {
         return null;
     }
 
-    rk(Sprite param0, Sprite param1, fn param2) {
+    ObjectSpriteSet(Sprite param0, Sprite param1, SpriteOffset param2) {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
           this.field_a = new Sprite[sc.field_h.length];
           this.field_f = new Sprite[sc.field_h.length];
-          this.field_g = new fn[sc.field_h.length];
+          this.field_g = new SpriteOffset[sc.field_h.length];
           for (int var4_int = 0; this.field_a.length > var4_int; var4_int++) {
             int var5 = sc.field_h[var4_int];
             this.field_a[var4_int] = this.a(param0, -67, var5);
             this.field_f[var4_int] = this.a(param1, -53, var5);
-            fn var6 = this.a(param1, -1, param0, param2);
+            SpriteOffset var6 = this.a(param1, -1, param0, param2);
             this.field_g[var4_int] = rc.a(var5, (byte) 124, var6, param2);
           }
           return;

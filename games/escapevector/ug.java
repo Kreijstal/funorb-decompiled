@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ug {
-    static rf field_c;
+    static ValidationState field_c;
     static String field_b;
     static String[] field_d;
     static Sprite[] field_a;
@@ -64,7 +64,7 @@ final class ug {
     static {
         field_b = " - rotate ship left";
         field_d = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
-        field_c = new rf();
+        field_c = new ValidationState();
         field_a = new Sprite[5];
     }
 }

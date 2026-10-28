@@ -27,10 +27,10 @@ final class se {
     final static void a(boolean param0, int param1) {
         if (param1 != 17113) {
           field_a = (String[]) null;
-          bo.field_F.a(0, 0, (byte) -55);
+          bo.field_F.render(0, 0, (byte) -55);
           return;
         }
-        bo.field_F.a(0, 0, (byte) -55);
+        bo.field_F.render(0, 0, (byte) -55);
     }
 
     final static void a(byte param0, java.applet.Applet param1) {

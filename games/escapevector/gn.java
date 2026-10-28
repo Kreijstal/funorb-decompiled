@@ -329,7 +329,7 @@ final class gn {
           return true;
         }
         if (this.field_a &&
-          !bj.e((byte) 104)) {
+          !UiContainer.e((byte) 104)) {
           return false;
         }
         if (aj.b(-117) &&
@@ -408,7 +408,7 @@ final class gn {
             }
             return;
           }
-          if (!bj.e((byte) 101)) {
+          if (!UiContainer.e((byte) 101)) {
             this.field_i = true;
             return;
           }
@@ -457,7 +457,7 @@ final class gn {
             this.a((byte) -7);
             return;
           }
-          if (!bj.e((byte) 101)) {
+          if (!UiContainer.e((byte) 101)) {
             this.field_i = true;
             return;
           }

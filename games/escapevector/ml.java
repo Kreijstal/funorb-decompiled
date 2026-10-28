@@ -24,7 +24,7 @@ final class ml {
         field_a = null;
     }
 
-    final static ce a(int param0, ResourceArchive param1, SoundCache param2, int param3, int param4) {
+    final static TrackerMusicDefinition a(int param0, ResourceArchive param1, SoundCache param2, int param3, int param4) {
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
@@ -34,10 +34,10 @@ final class ml {
             return null;
           }
           if (param0 == -15618) {
-            ce stackIn_7_0 = new ce(new PacketBuffer(var6), param2);
+            TrackerMusicDefinition stackIn_7_0 = new TrackerMusicDefinition(new PacketBuffer(var6), param2);
             return stackIn_7_0;
           }
-          ce stackIn_5_0 = (ce) null;
+          TrackerMusicDefinition stackIn_5_0 = (TrackerMusicDefinition) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends ah {
+final class dg extends TextFieldValidator {
     static Sprite field_t;
     private boolean field_q;
     static Sprite field_r;
@@ -27,7 +27,7 @@ final class dg extends ah {
         field_r = null;
     }
 
-    dg(ul param0, ul param1) {
+    dg(EditableTextWidget param0, EditableTextWidget param1) {
         super(param0);
         this.field_q = false;
         this.field_n = "";
@@ -38,22 +38,22 @@ final class dg extends ah {
         }
     }
 
-    final rf a(int param0, String param1) {
-        rf stackIn_12_0 = null;
+    final ValidationState validateText(int guard, String text) {
+        ValidationState stackIn_12_0 = null;
         String stackIn_16_2 = null;
         try {
-          if (this.field_p.a(param0, param1) == ArchiveProvider.field_a) {
-            rf stackIn_2_0 = ArchiveProvider.field_a;
+          if (this.field_p.validateText(guard, text) == ArchiveProvider.field_a) {
+            ValidationState stackIn_2_0 = ArchiveProvider.field_a;
             return stackIn_2_0;
           }
-          if (!param1.equals(this.field_n)) {
-            d var3 = ja.a(param1, true);
+          if (!text.equals(this.field_n)) {
+            d var3 = ja.a(text, true);
             if (!var3.b(0)) {
-              rf stackIn_7_0 = ug.field_c;
+              ValidationState stackIn_7_0 = ug.field_c;
               return stackIn_7_0;
             }
-            this.field_n = param1;
-            this.field_q = var3.c(param0 + 14669);
+            this.field_n = text;
+            this.field_q = var3.c(guard + 14669);
           }
           if (this.field_q) {
             stackIn_12_0 = IsaacRandom.field_h;
@@ -65,8 +65,8 @@ final class dg extends ah {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_15_0 = var3_ref;
-          StringBuilder stackIn_15_1 = new StringBuilder().append("dg.G(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_15_1 = new StringBuilder().append("dg.G(").append(guard).append(',');
+          if (text == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -75,26 +75,26 @@ final class dg extends ah {
         }
     }
 
-    final String a(byte param0, String param1) {
+    final String messageForText(byte guard, String text) {
         String stackIn_13_2 = null;
         try {
-          if (this.field_p.a(-1, param1) == ArchiveProvider.field_a) {
-            String stackIn_3_0 = this.field_p.a((byte) -53, param1);
+          if (this.field_p.validateText(-1, text) == ArchiveProvider.field_a) {
+            String stackIn_3_0 = this.field_p.messageForText((byte) -53, text);
             return stackIn_3_0;
           }
-          if (this.a(-1, param1) == ArchiveProvider.field_a) {
+          if (this.validateText(-1, text) == ArchiveProvider.field_a) {
             String stackIn_7_0 = wa.field_a;
             return stackIn_7_0;
           }
-          int var3_int = -120 % ((param0 - 10) / 51);
+          int var3_int = -120 % ((guard - 10) / 51);
           String stackIn_9_0 = SoundCache.field_c;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var3;
-          StringBuilder stackIn_12_1 = new StringBuilder().append("dg.L(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_12_1 = new StringBuilder().append("dg.L(").append(guard).append(',');
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";

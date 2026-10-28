@@ -121,7 +121,7 @@ final class kn {
         if (!param0) {
           return (sn) null;
         }
-        return new sn(ce.c(31069), jc.c(-89));
+        return new sn(TrackerMusicDefinition.c(31069), jc.c(-89));
     }
 
     final int a(boolean param0) {

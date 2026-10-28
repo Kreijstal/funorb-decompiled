@@ -89,7 +89,7 @@ final class ff {
           dj.field_c.g(2048);
         } else {
           dj.field_c = PcmSampleStream.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
-          rk.field_e.addSubstream(dj.field_c);
+          ObjectSpriteSet.field_e.addSubstream(dj.field_c);
           sj.a(8192, (byte) 51);
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
@@ -104,7 +104,7 @@ final class ff {
           return;
         }
         dj.field_c = PcmSampleStream.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
-        rk.field_e.addSubstream(dj.field_c);
+        ObjectSpriteSet.field_e.addSubstream(dj.field_c);
         sj.a(8192, (byte) 51);
         if (mj.field_d < 1000) {
           mj.field_d = mj.field_d + 1;

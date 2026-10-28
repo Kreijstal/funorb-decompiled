@@ -114,31 +114,31 @@ final class qj {
     final static void a(int param0) {
         regionExit1: {
           int var2 = EscapeVector.obfuscationControl;
-          boolean var1 = (hm.field_o.field_b.field_j);
-          if (!bj.e((byte) -32) ||
-            hm.field_o.field_f == 2) {
+          boolean var1 = (UiComponent.field_o.field_b.field_j);
+          if (!UiContainer.e((byte) -32) ||
+            UiComponent.field_o.field_f == 2) {
             if (aj.b(-119)) {
-              if (hm.field_o.field_f == 0) {
-                if (bj.e((byte) -122)) {
+              if (UiComponent.field_o.field_f == 0) {
+                if (UiContainer.e((byte) -122)) {
                   break regionExit1;
                 }
                 if (aj.b(-126)) {
                   break regionExit1;
                 }
-                if (1 == hm.field_o.field_f) {
+                if (1 == UiComponent.field_o.field_f) {
                   break regionExit1;
                 }
               }
-              hm.field_o = new pf((var1));
+              UiComponent.field_o = new pf((var1));
               break regionExit1;
             }
-            if (!bj.e((byte) -122) &&
+            if (!UiContainer.e((byte) -122) &&
               !aj.b(-126) &&
-              1 != hm.field_o.field_f) {
-              hm.field_o = new pf((var1));
+              1 != UiComponent.field_o.field_f) {
+              UiComponent.field_o = new pf((var1));
             }
           } else {
-            hm.field_o = new pf((var1));
+            UiComponent.field_o = new pf((var1));
           }
         }
         if (param0 != -883) {

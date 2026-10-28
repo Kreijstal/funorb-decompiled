@@ -387,7 +387,7 @@ final class bk extends Js5Transport {
               stackIn_63_1 = var7_ref;
               stackIn_63_2 = -7;
             }
-            EscapeVector.$cfr$intArgs$a$aafaec74e55e((IntrusiveNode) (stackIn_63_0), (IntrusiveNode) (stackIn_63_1), stackIn_63_2);
+            EscapeVector.insertNodeBeforeWithIntGuard((IntrusiveNode) (stackIn_63_0), (IntrusiveNode) (stackIn_63_1), stackIn_63_2);
             if (var8 == 0) {
               return;
             }
@@ -620,7 +620,7 @@ final class bk extends Js5Transport {
                           if (var11) {
                             var14_ref = (Js5NetworkRequest) (this.field_n.first(0));
                             while (var14_ref != null) {
-                              stackIn_122_0 = $cfr$lcmp(var12, var14_ref.secondaryKey);
+                              stackIn_122_0 = compareLongs(var12, var14_ref.secondaryKey);
                               if (var16 != 0) {
                                 decompiledFrameCompleted2 = false;
                                 break;
@@ -641,7 +641,7 @@ final class bk extends Js5Transport {
                             decompiledFrameCompleted1) {
                             var14_ref = (Js5NetworkRequest) (this.field_l.first(0));
                             while (null != var14_ref) {
-                              stackIn_122_0 = $cfr$lcmp(~var12, ~var14_ref.secondaryKey);
+                              stackIn_122_0 = compareLongs(~var12, ~var14_ref.secondaryKey);
                               if (var16 != 0) {
                                 decompiledFrameCompleted0 = false;
                                 break;
@@ -776,7 +776,7 @@ final class bk extends Js5Transport {
         field_q = new String[]{"Well done, commander. You have secured all the stolen technology stored in the aliens' outer system.<delay><br>Your mission is complete."};
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

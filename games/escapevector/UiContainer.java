@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class bj extends hm implements ba {
+class UiContainer extends UiComponent implements UiContainerMarker {
     static boolean[] field_E;
     static java.awt.Image field_z;
     static ResourceArchive field_B;
@@ -17,12 +17,12 @@ class bj extends hm implements ba {
         int var4 = EscapeVector.obfuscationControl;
         wf var2 = new wf(this.field_A);
         if (param0 != 6) {
-          bj.e((byte) -76);
+          UiContainer.e((byte) -76);
         }
-        hm var3 = (hm) (var2.c(param0 ^ 9));
+        UiComponent var3 = (UiComponent) (var2.c(param0 ^ 9));
         while (var3 != null) {
-          var3.i(0);
-          var3 = (hm) (var2.a(53));
+          var3.refreshLayout(0);
+          var3 = (UiComponent) (var2.a(53));
         }
     }
 
@@ -38,33 +38,33 @@ class bj extends hm implements ba {
         field_E = null;
     }
 
-    final boolean h(int param0) {
-        if (param0 != 0) {
+    final boolean isFocused(int guard) {
+        if (guard != 0) {
           return false;
         }
         return this.a(true) != null ? true : false;
     }
 
-    void a(int param0, byte param1, int param2, int param3) {
+    void drawLayer(int screenY, byte guard, int layer, int screenX) {
         int var7 = EscapeVector.obfuscationControl;
-        if (param1 <= 85) {
+        if (guard <= 85) {
           StringBuilder var8 = (StringBuilder) null;
-          this.a(37, (Hashtable) null, (StringBuilder) null, 58);
+          this.appendDebugTree(37, (Hashtable) null, (StringBuilder) null, 58);
         }
-        if (param2 == 0 &&
-          null != this.field_s) {
-          this.field_s.a(param3, param0, -42, (hm) (this), true);
+        if (layer == 0 &&
+          null != this.painter) {
+          this.painter.drawWidget(screenX, screenY, -42, (UiComponent) (this), true);
         }
         wf var5 = new wf(this.field_A);
-        hm var6 = (hm) (var5.b(-31616));
+        UiComponent var6 = (UiComponent) (var5.b(-31616));
         while (var6 != null) {
-          var6.a(param0 + this.field_j, (byte) 127, param2, this.field_k + param3);
-          var6 = (hm) (var5.a((byte) 59));
+          var6.drawLayer(screenY + this.y, (byte) 127, layer, this.x + screenX);
+          var6 = (UiComponent) (var5.a((byte) 59));
         }
     }
 
-    bj(int param0, int param1, int param2, int param3, db param4) {
-        super(param0, param1, param2, param3, param4, (wn) null);
+    UiContainer(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+        super(param0, param1, param2, param3, param4, (UiListener) null);
         this.field_A = new IntrusiveDeque();
     }
 
@@ -74,55 +74,55 @@ class bj extends hm implements ba {
         return stackIn_4_0;
     }
 
-    final int e(int param0) {
+    final int maximumRenderLayer(int guard) {
         int var6 = EscapeVector.obfuscationControl;
         int var2 = 0;
         wf var3 = new wf(this.field_A);
-        if (param0 != 12050) {
+        if (guard != 12050) {
           return 121;
         }
-        hm var4 = (hm) (var3.c(15));
+        UiComponent var4 = (UiComponent) (var3.c(15));
         while (var4 != null) {
-          int var5 = var4.e(12050);
+          int var5 = var4.maximumRenderLayer(12050);
           if (var5 > var2) {
             var2 = var5;
           }
-          var4 = (hm) (var3.a(56));
+          var4 = (UiComponent) (var3.a(56));
         }
         return var2;
     }
 
-    final String d(int param0) {
+    final String getTooltip(int guard) {
         int var5 = EscapeVector.obfuscationControl;
         wf var2 = new wf(this.field_A);
-        if (param0 != 1) {
+        if (guard != 1) {
           Hashtable var6 = (Hashtable) null;
           this.a((StringBuilder) null, -16, (Hashtable) null, 72);
         }
-        hm var3 = (hm) (var2.c(15));
+        UiComponent var3 = (UiComponent) (var2.c(15));
         while (var3 != null) {
-          String var4 = var3.d(1);
+          String var4 = var3.getTooltip(1);
           if (var4 != null) {
             return var4;
           }
-          var3 = (hm) (var2.a(param0 + 57));
+          var3 = (UiComponent) (var2.a(guard + 57));
         }
         return null;
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {
+    final boolean onPointerPressed(int offsetY, int pointerX, byte guard, int pointerY, int offsetX, UiComponent root, int button) {
         String stackIn_16_2 = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
-          if (param2 != 3) {
+          if (guard != 3) {
             return false;
           }
           wf var8 = new wf(this.field_A);
-          hm var9 = (hm) (var8.c(param2 ^ 12));
+          UiComponent var9 = (UiComponent) (var8.c(guard ^ 12));
           while (var9 != null) {
             if (var9.isLinked((byte) 48)) {
-              if (!var9.a(this.field_j + param0, param1, (byte) 3, param3, this.field_k + param4, param5, param6)) {
-                var9 = (hm) (var8.a(108));
+              if (!var9.onPointerPressed(this.y + offsetY, pointerX, (byte) 3, pointerY, this.x + offsetX, root, button)) {
+                var9 = (UiComponent) (var8.a(108));
                 continue;
               }
               return true;
@@ -134,45 +134,45 @@ class bj extends hm implements ba {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8_ref = decompiledCaughtException;
           RuntimeException stackIn_15_0 = var8_ref;
-          StringBuilder stackIn_15_1 = new StringBuilder().append("bj.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          StringBuilder stackIn_15_1 = new StringBuilder().append("bj.V(").append(offsetY).append(',').append(pointerX).append(',').append(guard).append(',').append(pointerY).append(',').append(offsetX).append(',');
+          if (root == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(button).append(')').toString());
         }
     }
 
-    boolean a(hm param0, char param1, int param2, int param3) {
+    boolean onFocusedKey(UiComponent root, char character, int keyCode, int guard) {
         boolean stackIn_16_0 = false;
         String stackIn_20_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
           wf var5 = new wf(this.field_A);
-          hm var8 = (hm) (var5.c(15));
-          if (param3 <= 0) {
+          UiComponent var8 = (UiComponent) (var5.c(15));
+          if (guard <= 0) {
             return false;
           }
           while (var8 != null) {
             if (var8.isLinked((byte) 48)) {
-              if (var8.h(0) &&
-                var8.a(param0, param1, param2, 37)) {
+              if (var8.isFocused(0) &&
+                var8.onFocusedKey(root, character, keyCode, 37)) {
                 return true;
               }
-              var8 = (hm) (var5.a(54));
+              var8 = (UiComponent) (var5.a(54));
               continue;
             }
             break;
           }
-          int var6 = param2;
+          int var6 = keyCode;
           if (80 != var6) {
             return false;
           }
           if (!ik.field_h[81]) {
-            stackIn_16_0 = this.a(param0, true);
+            stackIn_16_0 = this.a(root, true);
           } else {
-            stackIn_16_0 = this.a((byte) 22, param0);
+            stackIn_16_0 = this.a((byte) 22, root);
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -180,39 +180,39 @@ class bj extends hm implements ba {
           RuntimeException var5_ref = decompiledCaughtException;
           RuntimeException stackIn_19_0 = var5_ref;
           StringBuilder stackIn_19_1 = new StringBuilder().append("bj.G(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
-        if (!param3) {
+    final void setBounds(int width, int y, int x, boolean guard, int height) {
+        super.setBounds(width, y, x, guard, height);
+        if (!guard) {
           return;
         }
         this.f((byte) 6);
     }
 
-    final boolean b(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {
+    final boolean onMouseWheel(int offsetX, int rotation, byte guard, int pointerY, int pointerX, UiComponent root, int offsetY) {
         String stackIn_17_2 = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
-          if (param2 >= -103) {
+          if (guard >= -103) {
             field_B = (ResourceArchive) null;
           }
           wf var8 = new wf(this.field_A);
-          hm var9 = (hm) (var8.c(15));
+          UiComponent var9 = (UiComponent) (var8.c(15));
           while (var9 != null) {
             if (var9.isLinked((byte) 48)) {
-              if (var9.h(0) &&
-                var9.b(param0, param1, (byte) -127, param3, param4, param5, param6)) {
+              if (var9.isFocused(0) &&
+                var9.onMouseWheel(offsetX, rotation, (byte) -127, pointerY, pointerX, root, offsetY)) {
                 return true;
               }
-              var9 = (hm) (var8.a(102));
+              var9 = (UiComponent) (var8.a(102));
               continue;
             }
             break;
@@ -222,27 +222,27 @@ class bj extends hm implements ba {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8_ref = decompiledCaughtException;
           RuntimeException stackIn_16_0 = var8_ref;
-          StringBuilder stackIn_16_1 = new StringBuilder().append("bj.JA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          StringBuilder stackIn_16_1 = new StringBuilder().append("bj.JA(").append(offsetX).append(',').append(rotation).append(',').append(guard).append(',').append(pointerY).append(',').append(pointerX).append(',');
+          if (root == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(offsetY).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, int param2, hm param3) {
+    void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
         String stackIn_9_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(guard, offsetY, offsetX, root);
           wf var5 = new wf(this.field_A);
-          hm var6 = (hm) (var5.c(15));
+          UiComponent var6 = (UiComponent) (var5.c(15));
           while (var6 != null) {
             if (var6.isLinked((byte) 48)) {
-              var6.a(-14472, this.field_j + param1, param2 + this.field_k, param3);
-              var6 = (hm) (var5.a(57));
+              var6.updateHover(-14472, this.y + offsetY, offsetX + this.x, root);
+              var6 = (UiComponent) (var5.a(57));
               continue;
             }
             break;
@@ -252,8 +252,8 @@ class bj extends hm implements ba {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
           RuntimeException stackIn_8_0 = runtimeException;
-          StringBuilder stackIn_8_1 = new StringBuilder().append("bj.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_8_1 = new StringBuilder().append("bj.Q(").append(guard).append(',').append(offsetY).append(',').append(offsetX).append(',');
+          if (root == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -262,17 +262,17 @@ class bj extends hm implements ba {
         }
     }
 
-    final void f(int param0) {
+    final void clearFocus(int guard) {
         int var4 = EscapeVector.obfuscationControl;
         wf var2 = new wf(this.field_A);
-        hm var3 = (hm) (var2.c(15));
+        UiComponent var3 = (UiComponent) (var2.c(15));
         while (var3 != null) {
-          var3.f(111);
-          var3 = (hm) (var2.a(25));
+          var3.clearFocus(111);
+          var3 = (UiComponent) (var2.a(25));
         }
-        if (param0 < 46) {
-          hm var5 = (hm) null;
-          this.a((hm) null, 'c', -45, -89);
+        if (guard < 46) {
+          UiComponent var5 = (UiComponent) null;
+          this.onFocusedKey((UiComponent) null, 'c', -45, -89);
         }
     }
 
@@ -283,7 +283,7 @@ class bj extends hm implements ba {
         return var3;
     }
 
-    final boolean a(byte param0, hm param1) {
+    final boolean a(byte param0, UiComponent param1) {
         String stackIn_23_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
@@ -294,20 +294,20 @@ class bj extends hm implements ba {
           if (param0 != 22) {
             return true;
           }
-          hm var4 = (hm) (var8.b(-31616));
+          UiComponent var4 = (UiComponent) (var8.b(-31616));
           while (var4 != null) {
-            if (var4.h(0)) {
+            if (var4.isFocused(0)) {
               wf var5 = new wf(this.field_A);
               var5.a((byte) 55, (IntrusiveNode) (var4));
-              hm var6 = (hm) (var5.a((byte) 47));
+              UiComponent var6 = (UiComponent) (var5.a((byte) 47));
               while (var6 != null) {
-                if (var6.a(-4659, param1)) {
+                if (var6.focusNext(-4659, param1)) {
                   return true;
                 }
-                var6 = (hm) (var5.a((byte) 80));
+                var6 = (UiComponent) (var5.a((byte) 80));
               }
             }
-            var4 = (hm) (var8.a((byte) 74));
+            var4 = (UiComponent) (var8.a((byte) 74));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -324,7 +324,7 @@ class bj extends hm implements ba {
         }
     }
 
-    final boolean a(hm param0, boolean param1) {
+    final boolean a(UiComponent param0, boolean param1) {
         String stackIn_23_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
@@ -333,24 +333,24 @@ class bj extends hm implements ba {
           }
           wf var9 = new wf(this.field_A);
           if (!param1) {
-            hm var8 = (hm) null;
-            this.a(31, -112, (byte) -74, 114, -25, (hm) null, -91);
+            UiComponent var8 = (UiComponent) null;
+            this.onPointerPressed(31, -112, (byte) -74, 114, -25, (UiComponent) null, -91);
           }
-          hm var4 = (hm) (var9.c(15));
+          UiComponent var4 = (UiComponent) (var9.c(15));
           while (var4 != null) {
-            if (var4.h(0)) {
+            if (var4.isFocused(0)) {
               wf var5 = new wf(this.field_A);
               var5.a(-12818, var4);
-              hm var6 = (hm) (var5.a(125));
+              UiComponent var6 = (UiComponent) (var5.a(125));
               while (var6 != null) {
-                if (!var6.a(-4659, param0)) {
-                  var6 = (hm) (var5.a(80));
+                if (!var6.focusNext(-4659, param0)) {
+                  var6 = (UiComponent) (var5.a(80));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (hm) (var9.a(98));
+            var4 = (UiComponent) (var9.a(98));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -367,28 +367,28 @@ class bj extends hm implements ba {
         }
     }
 
-    final boolean a(int param0, hm param1) {
+    final boolean focusNext(int guard, UiComponent root) {
         String stackIn_15_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
           wf var3 = new wf(this.field_A);
-          if (param0 != -4659) {
-            bj.e((byte) 13);
+          if (guard != -4659) {
+            UiContainer.e((byte) 13);
           }
-          hm var4 = (hm) (var3.c(15));
+          UiComponent var4 = (UiComponent) (var3.c(15));
           while (var4 != null) {
-            if (var4.a(-4659, param1)) {
+            if (var4.focusNext(-4659, root)) {
               return true;
             }
-            var4 = (hm) (var3.a(param0 + 4779));
+            var4 = (UiComponent) (var3.a(guard + 4779));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_14_0 = var3_ref;
-          StringBuilder stackIn_14_1 = new StringBuilder().append("bj.M(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_14_1 = new StringBuilder().append("bj.M(").append(guard).append(',');
+          if (root == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -397,18 +397,18 @@ class bj extends hm implements ba {
         }
     }
 
-    hm a(boolean param0) {
+    UiComponent a(boolean param0) {
         int var4 = EscapeVector.obfuscationControl;
         wf var2 = new wf(this.field_A);
         if (!param0) {
           field_y = 52;
         }
-        hm var3 = (hm) (var2.c(15));
+        UiComponent var3 = (UiComponent) (var2.c(15));
         while (var3 != null) {
-          if (var3.h(0)) {
+          if (var3.isFocused(0)) {
             return var3;
           }
-          var3 = (hm) (var2.a(78));
+          var3 = (UiComponent) (var2.a(78));
         }
         return null;
     }
@@ -422,14 +422,14 @@ class bj extends hm implements ba {
           if (param3 <= 95) {
             field_D = (String) null;
           }
-          hm var6 = (hm) (var5.c(15));
+          UiComponent var6 = (UiComponent) (var5.c(15));
           while (var6 != null) {
             StringBuilder discarded$3 = param0.append('\n');
             for (int var7 = 0; param1 >= var7; var7++) {
               StringBuilder discarded$4 = param0.append(' ');
             }
-            var6.a(0, param2, param0, param1 + 1);
-            var6 = (hm) (var5.a(31));
+            var6.appendDebugTree(0, param2, param0, param1 + 1);
+            var6 = (UiComponent) (var5.a(31));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -452,11 +452,11 @@ class bj extends hm implements ba {
         }
     }
 
-    final void b(hm param0, boolean param1) {
+    final void b(UiComponent param0, boolean param1) {
         try {
           if (param1) {
-            hm var4 = (hm) null;
-            this.a((byte) -114, (hm) null);
+            UiComponent var4 = (UiComponent) null;
+            this.a((byte) -114, (UiComponent) null);
           }
           this.field_A.addLast(-12328, param0);
         } catch (RuntimeException runtimeException) {
@@ -464,66 +464,66 @@ class bj extends hm implements ba {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, hm param4, byte param5) {
+    final void onPointerReleased(int pointerY, int offsetY, int pointerX, int offsetX, UiComponent root, byte guard) {
         String stackIn_10_2 = null;
         int var9 = EscapeVector.obfuscationControl;
         try {
           wf var7 = new wf(this.field_A);
-          hm var8_ref_hm = (hm) (var7.c(15));
+          UiComponent var8_ref_hm = (UiComponent) (var7.c(15));
           while (var8_ref_hm != null) {
             if (var8_ref_hm.isLinked((byte) 48)) {
-              var8_ref_hm.a(param0, this.field_k + param1, param2, param3 + this.field_j, param4, (byte) -113);
-              var8_ref_hm = (hm) (var7.a(29));
+              var8_ref_hm.onPointerReleased(pointerY, this.x + offsetY, pointerX, offsetX + this.y, root, (byte) -113);
+              var8_ref_hm = (UiComponent) (var7.a(29));
               continue;
             }
             break;
           }
-          int var8 = -114 % ((-39 - param5) / 45);
+          int var8 = -114 % ((-39 - guard) / 45);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
           RuntimeException stackIn_9_0 = runtimeException;
-          StringBuilder stackIn_9_1 = new StringBuilder().append("bj.MA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          StringBuilder stackIn_9_1 = new StringBuilder().append("bj.MA(").append(pointerY).append(',').append(offsetY).append(',').append(pointerX).append(',').append(offsetX).append(',');
+          if (root == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    final StringBuilder appendDebugTree(int guard, Hashtable visited, StringBuilder output, int depth) {
         String stackIn_9_2 = null;
         String stackIn_12_2 = null;
         try {
-          if (param0 != 0) {
-            this.a(-82, (byte) 105, -122, -83);
+          if (guard != 0) {
+            this.drawLayer(-82, (byte) 105, -122, -83);
           }
-          if (this.a(param3, param1, param2, false)) {
-            this.a(param1, param2, param3, 1);
-            this.a(param2, param3, param1, 115);
+          if (this.beginDebugDescription(depth, visited, output, false)) {
+            this.appendDebugBody(visited, output, depth, 1);
+            this.a(output, depth, visited, 115);
           }
-          StringBuilder stackIn_5_0 = (StringBuilder) (param2);
+          StringBuilder stackIn_5_0 = (StringBuilder) (output);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_8_0 = var5;
-          StringBuilder stackIn_8_1 = new StringBuilder().append("bj.AA(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_8_1 = new StringBuilder().append("bj.AA(").append(guard).append(',');
+          if (visited == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           StringBuilder stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
+          if (output == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(depth).append(')').toString());
         }
     }
 

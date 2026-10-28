@@ -11,9 +11,9 @@ final class dl {
           throw new IllegalStateException();
         }
         SoftwareRasterizer.a(var1.field_p, var1.field_q, var1.field_i);
-        SoftwareRasterizer.f(var1.field_o, var1.field_n, var1.field_r, var1.field_h);
+        SoftwareRasterizer.setClip(var1.field_o, var1.field_n, var1.field_r, var1.field_h);
         var1.field_p = null;
-        k.field_d.addLast(-12328, var1);
+        TextWidgetPainter.field_d.addLast(-12328, var1);
         int var2 = 108 % ((param0 - 69) / 38);
     }
 

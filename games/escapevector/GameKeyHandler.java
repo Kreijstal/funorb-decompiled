@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_a;
     static String field_c;
     static String field_b;
@@ -81,7 +81,7 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           if (0 <= Js5Transport.field_b &&
             var2_int >= 0) {
-            hc.field_C[Js5Transport.field_b] = var2_int;
+            TextButton.field_C[Js5Transport.field_b] = var2_int;
             Js5Transport.field_b = 1 + Js5Transport.field_b & 127;
             if (TetherHumStream.field_k == Js5Transport.field_b) {
               Js5Transport.field_b = -1;
@@ -131,7 +131,7 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (Js5Transport.field_b >= 0 &&
               var2_int >= 0) {
-              hc.field_C[Js5Transport.field_b] = ~var2_int;
+              TextButton.field_C[Js5Transport.field_b] = ~var2_int;
               Js5Transport.field_b = Js5Transport.field_b + 1 & 127;
               if (TetherHumStream.field_k == Js5Transport.field_b) {
                 Js5Transport.field_b = -1;
@@ -180,7 +180,7 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              sd.a((byte) -111, param2, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluateScript((byte) -111, param2, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var3 = decompiledCaughtException;

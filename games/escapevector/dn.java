@@ -35,7 +35,7 @@ final class dn {
 
     private final void a(byte param0) {
         tc[] var2 = this.b(false);
-        String[] var3 = new String[]{gk.field_b, bj.field_D, nl.field_a, kc.field_a, ArchiveProvider.field_c, gn.field_l, hb.field_a};
+        String[] var3 = new String[]{gk.field_b, UiContainer.field_D, nl.field_a, kc.field_a, ArchiveProvider.field_c, gn.field_l, hb.field_a};
         this.a(var3, (byte) -10);
         ih var4 = fh.field_g;
         int var5 = 16777215;
@@ -284,7 +284,7 @@ final class dn {
           int var4 = 100;
           int var5 = 6144 * qm.field_c / 64;
           int var6 = 8192;
-          PcmStreamMixer var7 = rk.field_e;
+          PcmStreamMixer var7 = ObjectSpriteSet.field_e;
           var7.playSampleWithPan(var3, var4, var5, var6);
         }
         if (var2 < 1000) {
@@ -293,7 +293,7 @@ final class dn {
     }
 
     private final void l(int param0) {
-        PcmStreamMixer var2 = rk.field_e;
+        PcmStreamMixer var2 = ObjectSpriteSet.field_e;
         PcmSample var3 = ArchiveRequest.field_w;
         int var4 = 100;
         int var5 = param0 * qm.field_c / 64;
@@ -306,7 +306,7 @@ final class dn {
           Sprite[] var3 = mb.field_f;
           return this.a(var3, param0 + 4802);
         }
-        if (!bj.e((byte) -75)) {
+        if (!UiContainer.e((byte) -75)) {
           return null;
         }
         if (param1 == 2) {
@@ -480,7 +480,7 @@ final class dn {
         } else {
           var3 = this.b(this.field_g, -3844);
         }
-        int var4 = this.a(104, dh.field_d, bj.field_y);
+        int var4 = this.a(104, dh.field_d, UiContainer.field_y);
         this.field_d.a(121, param0, var4, var3);
         if (param1) {
           tc[] discarded$0 = this.b(true);
@@ -735,8 +735,8 @@ final class dn {
           dn.a((String) null, 106, 1.9259626865386963f);
         }
         if (!this.field_w) {
-          SoftwareRasterizer.d();
-          od.b(2);
+          SoftwareRasterizer.clearFramebuffer();
+          SelfDestructEffects.b(2);
           this.field_y.c(105);
           pb.a(4);
         } else {
@@ -825,7 +825,7 @@ final class dn {
           int var10 = var8 + 1;
           int var11 = param2 + this.field_v;
           if (var6 == null) {
-            String var12 = ag.field_a;
+            String var12 = GameKeyHandler.field_a;
             int[] stackIn_7_0 = this.a(var12, var11, var10, this.field_e, 10551200, var9, param3, var7, var8);
             return stackIn_7_0;
           }
@@ -902,7 +902,7 @@ final class dn {
     }
 
     private final void d(int param0) {
-        int var2 = this.a(103, dh.field_d, bj.field_y);
+        int var2 = this.a(103, dh.field_d, UiContainer.field_y);
         if (param0 != -22600) {
           this.field_z = (dk) null;
         }
@@ -1047,7 +1047,7 @@ final class dn {
     }
 
     private final void a(boolean param0) {
-        String[] var8 = new String[]{um.field_c, dc.field_i, PacketBuffer.field_k, fn.field_a, tc.field_h, ll.field_h, ea.field_i};
+        String[] var8 = new String[]{um.field_c, dc.field_i, PacketBuffer.field_k, SpriteOffset.field_a, tc.field_h, ll.field_h, ea.field_i};
         if (!param0) {
           return;
         }
@@ -1082,7 +1082,7 @@ final class dn {
         } else {
           this.field_w = true;
         }
-        this.field_b = bj.e((byte) 115);
+        this.field_b = UiContainer.e((byte) 115);
         this.d((byte) 19);
         this.a(-66, param0);
         this.j((byte) 87);

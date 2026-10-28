@@ -119,7 +119,7 @@ final class WhirlpoolHasher {
     }
 
     final static void a(int param0, int param1) {
-        rf.field_a = param0;
+        ValidationState.field_a = param0;
         if (param1 <= 11) {
           WhirlpoolHasher.releaseStatics(false);
         }
@@ -186,7 +186,7 @@ final class WhirlpoolHasher {
         int var2 = 0;
         int var3 = 0;
         while (var2 < 8) {
-          this.field_i[var2] = ja.a(ja.a(fn.a((long)this.field_h[6 + var3] << 8, 65280L), ja.a(fn.a(16711680L, (long)this.field_h[5 + var3] << 16), ja.a(fn.a(255L, (long)this.field_h[var3 + 4]) << 24, ja.a(fn.a(255L, (long)this.field_h[3 + var3]) << 32, ja.a(fn.a(255L, (long)this.field_h[2 + var3]) << 40, ja.a(fn.a(71776119061217280L, (long)this.field_h[var3 + 1] << 48), (long)this.field_h[var3] << 56)))))), fn.a((long)this.field_h[7 + var3], 255L));
+          this.field_i[var2] = ja.a(ja.a(SpriteOffset.a((long)this.field_h[6 + var3] << 8, 65280L), ja.a(SpriteOffset.a(16711680L, (long)this.field_h[5 + var3] << 16), ja.a(SpriteOffset.a(255L, (long)this.field_h[var3 + 4]) << 24, ja.a(SpriteOffset.a(255L, (long)this.field_h[3 + var3]) << 32, ja.a(SpriteOffset.a(255L, (long)this.field_h[2 + var3]) << 40, ja.a(SpriteOffset.a(71776119061217280L, (long)this.field_h[var3 + 1] << 48), (long)this.field_h[var3] << 56)))))), SpriteOffset.a((long)this.field_h[7 + var3], 255L));
           var2++;
           var3 += 8;
         }

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends bj implements qb {
+final class rh extends UiContainer implements ButtonListener {
     static int field_N;
-    private hc[] field_K;
+    private TextButton[] field_K;
     static pj field_I;
     static String field_J;
     private qn field_L;
@@ -11,17 +11,17 @@ final class rh extends bj implements qb {
     static int[] field_O;
     static volatile boolean field_H;
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        super.a(param0, (byte) 102, param2, param3);
-        if (param1 < 85) {
+    final void drawLayer(int screenY, byte guard, int layer, int screenX) {
+        super.drawLayer(screenY, (byte) 102, layer, screenX);
+        if (guard < 85) {
           return;
         }
-        if (param2 != 0) {
+        if (layer != 0) {
           return;
         }
         BitmapFont var5 = Js5Transport.field_a;
         if (this.field_M != null) {
-          var5.a(hm.field_m, param3 + this.field_k, param0 + this.field_j, this.field_g, 20, 16777215, -1, 0, 0, var5.field_r + var5.field_x);
+          var5.a(UiComponent.field_m, screenX + this.x, screenY + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_r + var5.field_x);
         }
     }
 
@@ -41,17 +41,17 @@ final class rh extends bj implements qb {
               this.field_M[var4_int] = pc.a(param1 + 103, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
             ha var4 = new ha(Js5Transport.field_a, 0, 1);
-            this.field_K = new hc[1 + var3_int];
+            this.field_K = new TextButton[1 + var3_int];
             for (int var5 = 0; var5 < var3_int; var5++) {
-              this.field_K[var5] = new hc(this.field_M[var5], (wn) (this));
-              this.field_K[var5].field_s = (db) ((Object) var4);
-              this.field_K[var5].field_i = ei.field_n;
-              this.field_K[var5].a(80, 16 * var5 + 20, 0, true, 15);
+              this.field_K[var5] = new TextButton(this.field_M[var5], (UiListener) (this));
+              this.field_K[var5].painter = (WidgetPainter) ((Object) var4);
+              this.field_K[var5].tooltip = ei.field_n;
+              this.field_K[var5].setBounds(80, 16 * var5 + 20, 0, true, 15);
               this.b(this.field_K[var5], false);
             }
-            this.field_K[var3_int] = new hc(uj.field_c, (wn) (this));
-            this.field_K[var3_int].field_s = (db) ((Object) var4);
-            this.field_K[var3_int].a(100, 16 * (1 + var3_int) + 20, 0, true, 15);
+            this.field_K[var3_int] = new TextButton(uj.field_c, (UiListener) (this));
+            this.field_K[var3_int].painter = (WidgetPainter) ((Object) var4);
+            this.field_K[var3_int].setBounds(100, 16 * (1 + var3_int) + 20, 0, true, 15);
             this.b(this.field_K[var3_int], false);
             return;
           }
@@ -72,7 +72,7 @@ final class rh extends bj implements qb {
     }
 
     rh(qn param0) {
-        super(0, 0, 0, 0, (db) null);
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_L = param0;
         } catch (RuntimeException runtimeException) {
@@ -80,35 +80,35 @@ final class rh extends bj implements qb {
         }
     }
 
-    final boolean a(hm param0, char param1, int param2, int param3) {
+    final boolean onFocusedKey(UiComponent root, char character, int keyCode, int guard) {
         String stackIn_16_2 = null;
         try {
-          if (super.a(param0, param1, param2, 91)) {
+          if (super.onFocusedKey(root, character, keyCode, 91)) {
             return true;
           }
-          if (param2 == 98) {
-            boolean stackIn_6_0 = this.a((byte) 22, param0);
+          if (keyCode == 98) {
+            boolean stackIn_6_0 = this.a((byte) 22, root);
             return stackIn_6_0;
           }
-          if (param3 < 0) {
+          if (guard < 0) {
             field_N = -69;
           }
-          if (99 != param2) {
+          if (99 != keyCode) {
             return false;
           }
-          boolean stackIn_12_0 = this.a(param0, true);
+          boolean stackIn_12_0 = this.a(root, true);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_15_0 = var5;
           StringBuilder stackIn_15_1 = new StringBuilder().append("rh.G(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(character).append(',').append(keyCode).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -133,16 +133,16 @@ final class rh extends bj implements qb {
             }
             if (param1) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, pd.field_b, ad.field_d);
+              var9.fillRect(0, 0, pd.field_b, BoundedUrlRequest.field_d);
             }
             if (param2 == null) {
               param2 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (null == bj.field_z) {
-                bj.field_z = of.field_d.createImage(304, 34);
+              if (null == UiContainer.field_z) {
+                UiContainer.field_z = of.field_d.createImage(304, 34);
               }
-              java.awt.Graphics var10 = bj.field_z.getGraphics();
+              java.awt.Graphics var10 = UiContainer.field_z.getGraphics();
               var10.setColor(param2);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param3, 30);
@@ -152,12 +152,12 @@ final class rh extends bj implements qb {
               var10.setFont(ImageProducerRasterBuffer.field_l);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (304 - param4.length() * 6) / 2, 22);
-              var9.drawImage(bj.field_z, -152 + pd.field_b / 2, -18 + ad.field_d / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(UiContainer.field_z, -152 + pd.field_b / 2, -18 + BoundedUrlRequest.field_d / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Exception var6 = (Exception) (Object) decompiledCaughtException;
               int var7 = -152 + pd.field_b / 2;
-              int var8 = ad.field_d / 2 - 18;
+              int var8 = BoundedUrlRequest.field_d / 2 - 18;
               var9.setColor(param2);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, 2 + var8, param3 * 3, 30);
@@ -168,10 +168,10 @@ final class rh extends bj implements qb {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param4, (-(6 * param4.length()) + 304) / 2 + var7, 22 + var8);
             }
-            if (pg.field_e != null) {
+            if (TextLayout.field_e != null) {
               var9.setFont(ImageProducerRasterBuffer.field_l);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(pg.field_e, pd.field_b / 2 - 6 * pg.field_e.length() / 2, ad.field_d / 2 - 26);
+              var9.drawString(TextLayout.field_e, pd.field_b / 2 - 6 * TextLayout.field_e.length() / 2, BoundedUrlRequest.field_d / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -202,19 +202,19 @@ final class rh extends bj implements qb {
         }
     }
 
-    public final void a(hc param0, int param1, int param2, int param3, int param4) {
+    public final void onAction(TextButton button, int buttonCode, int localY, int guard, int localX) {
         String stackIn_16_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (param3 != 1) {
+          if (guard != 1) {
             field_I = (pj) null;
           }
           for (int var6_int = 0; var6_int < this.field_M.length; var6_int++) {
-            if (this.field_K[var6_int] == param0) {
+            if (this.field_K[var6_int] == button) {
               this.field_L.a((byte) -98, this.field_M[var6_int]);
             }
           }
-          if (param0 == this.field_K[this.field_M.length]) {
+          if (button == this.field_K[this.field_M.length]) {
             this.field_L.a((byte) -61);
           }
           return;
@@ -223,12 +223,12 @@ final class rh extends bj implements qb {
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_15_0 = var6;
           StringBuilder stackIn_15_1 = new StringBuilder().append("rh.K(");
-          if (param0 == null) {
+          if (button == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(buttonCode).append(',').append(localY).append(',').append(guard).append(',').append(localX).append(')').toString());
         }
     }
 

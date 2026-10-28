@@ -81,7 +81,7 @@ final class t {
             return;
           }
           mj.field_b.g();
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearFramebuffer();
           int stackIn_8_0 = (!param3) ? 6340704 : 16777215;
           int var5_int = stackIn_8_0;
           if (param2 != -34) {
@@ -245,8 +245,8 @@ final class t {
         boolean stackIn_23_4 = false;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          SoftwareRasterizer.d();
-          od.b(2);
+          SoftwareRasterizer.clearFramebuffer();
+          SelfDestructEffects.b(2);
           if (mj.a((byte) 117)) {
             int var2_int = dn.a(0) / 2 + 20;
             int var3 = 15 + ea.d((byte) -122) / 2;
@@ -308,7 +308,7 @@ final class t {
           return;
         }
         try {
-          this.field_b.a(this.field_b.a((byte) 115, 192, dh.field_d, 24, 400, bj.field_y, 240), param1, 4767999);
+          this.field_b.a(this.field_b.a((byte) 115, 192, dh.field_d, 24, 400, UiContainer.field_y, 240), param1, 4767999);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "t.J(" + param0 + ',' + param1 + ')');
         }
@@ -339,7 +339,7 @@ final class t {
         int var10 = EscapeVector.obfuscationControl;
         try {
           if (this.field_b.field_e) {
-            rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
           }
           int var3_int = this.b(123);
           if (var3_int == 0 &&
@@ -366,7 +366,7 @@ final class t {
               if (0 > qm.field_c) {
                 qm.field_c = 0;
               }
-              ce.d(8192);
+              TrackerMusicDefinition.d(8192);
             }
             if (this.field_b.b(-98) &&
               qm.field_c < 64) {
@@ -374,19 +374,19 @@ final class t {
               if (qm.field_c > 64) {
                 qm.field_c = 64;
               }
-              ce.d(8192);
+              TrackerMusicDefinition.d(8192);
             }
             if (this.field_b.d(-10809)) {
               qm.field_c = 0;
-              ce.d(8192);
+              TrackerMusicDefinition.d(8192);
             }
             if (this.field_b.e(0)) {
               qm.field_c = 64;
-              ce.d(8192);
+              TrackerMusicDefinition.d(8192);
             }
             if (!this.field_b.a(false) &&
               (decompiledFrameRemainder0 = !(!this.field_b.b((byte) -18)))) {
-              ce.d(param0 ^ -4977);
+              TrackerMusicDefinition.d(param0 ^ -4977);
               decompiledFrameRemainder0 = (var10 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -407,7 +407,7 @@ final class t {
               if (this.field_b.b((byte) -18) ||
                 ~qm.field_c != ~var8) {
                 qm.field_c = var8;
-                ce.d(8192);
+                TrackerMusicDefinition.d(8192);
               }
             }
           }
@@ -418,7 +418,7 @@ final class t {
               if (kc.field_b < 0) {
                 kc.field_b = 0;
               }
-              o var4_ref_o = ni.field_N;
+              TrackerMusicPlayer var4_ref_o = ni.field_N;
               if (null != var4_ref_o) {
                 var4_ref_o.d(kn.field_b * kc.field_b / 64);
               }
@@ -429,21 +429,21 @@ final class t {
               if (64 < kc.field_b) {
                 kc.field_b = 64;
               }
-              o var4_ref_oLifetime1 = ni.field_N;
+              TrackerMusicPlayer var4_ref_oLifetime1 = ni.field_N;
               if (null != var4_ref_oLifetime1) {
                 var4_ref_oLifetime1.d(kn.field_b * kc.field_b / 64);
               }
             }
             if (this.field_b.d(-10809)) {
               kc.field_b = 0;
-              o var4_ref_oLifetime2 = ni.field_N;
+              TrackerMusicPlayer var4_ref_oLifetime2 = ni.field_N;
               if (var4_ref_oLifetime2 != null) {
                 var4_ref_oLifetime2.d(kc.field_b * kn.field_b / 64);
               }
             }
             if (this.field_b.e(0)) {
               kc.field_b = 64;
-              o var4_ref_oLifetime3 = ni.field_N;
+              TrackerMusicPlayer var4_ref_oLifetime3 = ni.field_N;
               if (var4_ref_oLifetime3 != null) {
                 var4_ref_oLifetime3.d(kn.field_b * kc.field_b / 64);
               }
@@ -465,7 +465,7 @@ final class t {
                 var8Lifetime1 = 64;
               }
               kc.field_b = var8Lifetime1;
-              o var9 = ni.field_N;
+              TrackerMusicPlayer var9 = ni.field_N;
               if (var9 != null) {
                 var9.d(kn.field_b * kc.field_b / 64);
               }
@@ -517,7 +517,7 @@ final class t {
 
     t() {
         try {
-          this.field_c = bj.e((byte) 117);
+          this.field_c = UiContainer.e((byte) 117);
           this.c((byte) 62);
           this.c(22);
           this.field_b = new wc(this.field_d);

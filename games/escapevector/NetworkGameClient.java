@@ -46,7 +46,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             be.a(6, 17205);
           }
           if (sn.field_b[6]) {
-            ad.a(7, 69);
+            BoundedUrlRequest.a(7, 69);
           }
           if (sn.field_b[8]) {
             LevelObject.d((byte) 27);
@@ -106,7 +106,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         dn.field_a = param2;
         wc.field_l = param7;
         this.f((byte) -14);
-        ag.b(79);
+        GameKeyHandler.b(79);
     }
 
     final void j(int param0) {
@@ -144,7 +144,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         for (int var2 = 0; qk.field_j > var2; var2++) {
           int var3 = qh.field_k[var2] * bc.field_a[var2];
           byte[] var20 = qe.field_a[var2];
-          if (!bj.field_E[var2]) {
+          if (!UiContainer.field_E[var2]) {
             int[] var9 = new int[var3];
             int[] var21 = var9;
             for (int var6_int = 0; var6_int < var3; var6_int++) {
@@ -152,7 +152,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
             var1[var2] = new Sprite(on.field_e, hd.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var21);
           } else {
-            byte[] var22 = hn.field_b[var2];
+            byte[] var22 = CheckboxPainter.field_b[var2];
             int[] var16 = new int[var3];
             int[] var13 = var16;
             int[] var6 = var13;
@@ -256,7 +256,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            int var5_intLifetime1 = kh.a(DualLinkNode.e(0), this.field_w, ce.c(31069), uf.a(30519), jh.d(param0 ^ -4157), oi.k(-99), 0);
+            int var5_intLifetime1 = kh.a(DualLinkNode.e(0), this.field_w, TrackerMusicDefinition.c(31069), uf.a(30519), jh.d(param0 ^ -4157), oi.k(-99), 0);
             if (var5_intLifetime1 != -1) {
               j.a(jf.field_I, MouseWheelInput.field_a, (byte) -72, var5_intLifetime1);
               jf.field_I = null;
@@ -325,7 +325,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 13) {
             try {
               if (pk.field_m == null) {
-                pk.field_m = new ad(field_r, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                pk.field_m = new BoundedUrlRequest(field_r, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (pk.field_m.a(17)) {
                 PacketBuffer var12 = pk.field_m.c(-43);
@@ -577,7 +577,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var5 = EscapeVector.obfuscationControl;
         if (km.field_n != null) {
           if (null == IsaacRandom.field_d) {
-            java.awt.Container var6 = pg.a(-1);
+            java.awt.Container var6 = TextLayout.a(-1);
             java.awt.Dimension var4 = var6.getSize();
             km.field_n.a(var4.height, var4.width, 18705);
           }
@@ -600,7 +600,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_v = false;
             nm.a(param0 ^ -17);
             sc.b((byte) -87);
-            hi.a(2, (byte) 83, ah.field_g);
+            hi.a(2, (byte) 83, TextFieldValidator.field_g);
             IntrusiveNode.a(12);
             q.field_P = true;
             tg.field_mb = td.b(param0 + 129) + 15000L;
@@ -639,7 +639,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else if (ff.field_e >= 10) {
             sc.b((byte) -103);
             if (IntKeyLookup.field_b == 3) {
-              hi.a(256, (byte) 83, ag.field_b);
+              hi.a(256, (byte) 83, GameKeyHandler.field_b);
             } else if (IntKeyLookup.field_b == 4) {
               hi.a(256, (byte) 83, nn.field_e);
             } else if (IntKeyLookup.field_b == 2) {
@@ -690,7 +690,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             } else if (nk.field_p.a(0, "")) {
               qa.a(true, nk.field_p);
               nk.field_p = null;
-              fn.a((byte) 62);
+              SpriteOffset.a((byte) 62);
             }
           }
           if (nk.field_p == null) {
@@ -725,7 +725,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           pl.field_j = null;
           w.field_ab = null;
           QuickChatPhraseDefinition.a(82, (java.applet.Applet) (this));
-          fn.a((byte) 126);
+          SpriteOffset.a((byte) 126);
           fc.field_a = 10;
         }
         if (fc.field_a == 10) {

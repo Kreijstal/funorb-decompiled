@@ -13,7 +13,7 @@ final class SectorCacheStore {
     final static void a(byte param0) {
         t var1 = pl.field_q;
         if (var1.field_c &&
-          bj.e((byte) -39)) {
+          UiContainer.e((byte) -39)) {
           return;
         }
         if (var1.field_c) {
@@ -25,7 +25,7 @@ final class SectorCacheStore {
           GameplaySession.c((byte) -9);
           return;
         }
-        if (bj.e((byte) 97)) {
+        if (UiContainer.e((byte) 97)) {
           pl.field_q = new t();
           if (param0 <= 117) {
             SectorCacheStore.a(true);

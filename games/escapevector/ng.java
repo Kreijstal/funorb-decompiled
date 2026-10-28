@@ -8,11 +8,11 @@ final class ng extends fj {
     static String field_lb;
     static int field_nb;
 
-    ng(tb param0, hm param1) {
+    ng(tb param0, UiComponent param1) {
         super(param0, param1, 33, 20, 30);
     }
 
-    final void a(hm param0, int param1) {
+    final void a(UiComponent param0, int param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {

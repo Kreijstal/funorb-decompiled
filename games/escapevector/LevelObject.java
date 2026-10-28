@@ -83,19 +83,19 @@ final class LevelObject extends IntrusiveNode {
         }
     }
 
-    private final fn getDisplayOffset(boolean guard) {
+    private final SpriteOffset getDisplayOffset(boolean guard) {
         try {
-          rk[] var2 = w.c(false);
+          ObjectSpriteSet[] var2 = w.c(false);
           if (!guard) {
-            fn stackIn_2_0 = (fn) null;
+            SpriteOffset stackIn_2_0 = (SpriteOffset) null;
             return stackIn_2_0;
           }
           if (var2 != null) {
-            fn stackIn_7_0 = var2[this.objectType].a((byte) 120, this.spriteFrame);
+            SpriteOffset stackIn_7_0 = var2[this.objectType].a((byte) 120, this.spriteFrame);
             return stackIn_7_0;
           }
           Object stackIn_5_0 = null;
-          return (fn) (stackIn_5_0);
+          return (SpriteOffset) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2_ref = decompiledCaughtParameter0;
           throw t.a((Throwable) ((Object) var2_ref), "sa.A(" + guard + ')');
@@ -143,7 +143,7 @@ final class LevelObject extends IntrusiveNode {
           if (guard != 0) {
             LevelObject.a(22, (byte) 101);
           }
-          rk[] var2 = w.c(false);
+          ObjectSpriteSet[] var2 = w.c(false);
           if (null == var2) {
             Object stackIn_7_0 = null;
             return (Sprite) (stackIn_7_0);
@@ -331,9 +331,9 @@ final class LevelObject extends IntrusiveNode {
     }
 
     private final void refreshSprites(int guard) {
-        this.collisionSprite = k.a(this.spriteFrame, (byte) -39, this.objectType);
+        this.collisionSprite = TextWidgetPainter.a(this.spriteFrame, (byte) -39, this.objectType);
         this.displaySprite = this.getDisplaySprite(0);
-        fn var2 = this.getDisplayOffset(true);
+        SpriteOffset var2 = this.getDisplayOffset(true);
         if (guard != -7012) {
           return;
         }
@@ -341,8 +341,8 @@ final class LevelObject extends IntrusiveNode {
           return;
         }
         try {
-          this.displayOffsetX = var2.field_c;
-          this.displayOffsetY = var2.field_b;
+          this.displayOffsetX = var2.x;
+          this.displayOffsetY = var2.y;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "sa.H(" + guard + ')');
         }

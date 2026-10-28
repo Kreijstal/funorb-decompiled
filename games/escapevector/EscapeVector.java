@@ -31,7 +31,7 @@ public final class EscapeVector extends NetworkGameClient {
             ri.a(-25123);
             oj.a((byte) 97);
           }
-          bj.field_C.d();
+          UiContainer.field_C.d();
           ig.field_l.d();
           int stackIn_16_1 = -1;
           boolean stackIn_17_2 = (null != IsaacRandom.field_d);
@@ -40,7 +40,7 @@ public final class EscapeVector extends NetworkGameClient {
             this.f(true);
             of.field_b = false;
           }
-          od.field_s = false;
+          SelfDestructEffects.field_s = false;
           IntValueNode.field_j = false;
           r.field_y = false;
           if (!ii.b(16836)) {
@@ -87,7 +87,7 @@ public final class EscapeVector extends NetworkGameClient {
                 if (1000 > mj.field_d) {
                   mj.field_d = mj.field_d + 1;
                 }
-                int var3Lifetime2 = fn.b(-14);
+                int var3Lifetime2 = SpriteOffset.b(-14);
                 if (var3Lifetime2 == 2) {
                   ri.a(-25123);
                 }
@@ -160,7 +160,7 @@ public final class EscapeVector extends NetworkGameClient {
             mb.field_a.g(2048);
             mb.field_a = null;
           }
-          if (!od.field_s) {
+          if (!SelfDestructEffects.field_s) {
             int var3Lifetime1 = 0;
             while (!(gd.field_K.length <= var3Lifetime1)) {
               if (var4 != 0) {
@@ -195,14 +195,14 @@ public final class EscapeVector extends NetworkGameClient {
     final void releaseClientStatics(byte guard) {
         try {
           EscapeVector.l((byte) -95);
-          ag.a(47);
+          GameKeyHandler.a(47);
           nm.a(false);
           ek.a(69);
           dj.a((byte) -116);
           NetworkGameClient.i((byte) -73);
           ClientException.a(false);
           GameAppletShell.d((byte) -111);
-          ad.b(-1);
+          BoundedUrlRequest.b(-1);
           eg.a(-1);
           MouseWheelInput.a((byte) 104);
           SoftwareRasterizer.a();
@@ -227,7 +227,7 @@ public final class EscapeVector extends NetworkGameClient {
           eo.b((byte) -72);
           RasterBuffer.a((byte) 107);
           uc.a((byte) -59);
-          af.a((byte) 71);
+          FullscreenFocusCanvas.a((byte) 71);
           pk.b(false);
           ak.c((byte) 77);
           dn.h(-1);
@@ -241,8 +241,8 @@ public final class EscapeVector extends NetworkGameClient {
           BufferedRandomAccessFile.b((byte) 123);
           pj.b((byte) 6);
           IntrusiveDeque.b(true);
-          ce.b(-32408);
-          o.d();
+          TrackerMusicDefinition.b(-32408);
+          TrackerMusicPlayer.d();
           AudioOutput.e();
           GameplaySession.f((byte) 69);
           t.b((byte) -34);
@@ -296,7 +296,7 @@ public final class EscapeVector extends NetworkGameClient {
           kh.a((byte) 65);
           ac.c(105);
           DynamicTerrainRenderer.d(3);
-          od.d(-12548);
+          SelfDestructEffects.d(-12548);
           PointCloudEffect.h(109);
           Minimap.a(68);
           TetherHumStream.e(-1600199832);
@@ -326,7 +326,7 @@ public final class EscapeVector extends NetworkGameClient {
           ArchiveRequest.releaseStatics(5);
           on.a(127);
           tm.n(-23008);
-          k.b(-24239);
+          TextWidgetPainter.b(-24239);
           bi.c();
           ri.b(-117);
           ui.a(true);
@@ -349,17 +349,17 @@ public final class EscapeVector extends NetworkGameClient {
           mn.a((byte) 96);
           jd.b((byte) 77);
           ej.a(26);
-          hn.a((byte) -44);
+          CheckboxPainter.a((byte) -44);
           he.a(true);
           sc.a((byte) -76);
           ve.a(0);
-          pg.b(0);
-          hm.d((byte) 58);
-          hc.j(1);
+          TextLayout.b(0);
+          UiComponent.releaseStatics((byte) 58);
+          TextButton.j(1);
           r.a((byte) 58);
           vg.i((byte) -112);
           bb.h((byte) 127);
-          bj.g((byte) -68);
+          UiContainer.g((byte) -68);
           wf.a(false);
           ch.a(-5691);
           wa.a(false);
@@ -387,14 +387,14 @@ public final class EscapeVector extends NetworkGameClient {
           qj.b(-10497);
           ki.l(88);
           gd.i((byte) -87);
-          ul.f((byte) -96);
+          EditableTextWidget.f((byte) -96);
           fj.n(-11555);
           jm.a((byte) 127);
           rh.j(-24896);
           oj.e((byte) 113);
           lf.a((byte) 113);
           bo.a((byte) 105);
-          ah.f(-16187);
+          TextFieldValidator.f(-16187);
           jf.j(1);
           eb.a(true);
           q.a((byte) 59);
@@ -445,8 +445,8 @@ public final class EscapeVector extends NetworkGameClient {
           IntPoint.a(-3217);
           jh.a(false);
           qd.b(false);
-          rk.a(122);
-          fn.a(122);
+          ObjectSpriteSet.a(122);
+          SpriteOffset.a(122);
           RasterSnapshot.a((byte) 75);
           al.a(-128);
           lm.b((byte) -10);
@@ -476,7 +476,7 @@ public final class EscapeVector extends NetworkGameClient {
           lb.g(-17318);
           TerrainMaskSupport.a((byte) 14);
           bl.d(255);
-          sm.b(true);
+          DebouncedValidator.b(true);
           tk.b(31167);
           this.field_s = null;
           return;
@@ -493,7 +493,7 @@ public final class EscapeVector extends NetworkGameClient {
           ac.a(param0 ^ -25900, mg.field_f);
           if (null == fh.field_g) {
             gn.a(-122);
-            dn.a(pg.field_f, param0 ^ -17595, 70.0f);
+            dn.a(TextLayout.field_f, param0 ^ -17595, 70.0f);
             this.renderClient((byte) -128);
             fh.field_g = oi.a(param0 ^ -92, sn.field_c, "", "fonts_squarish16", IndexedSpriteState.field_j);
             sn.field_c = null;
@@ -506,19 +506,19 @@ public final class EscapeVector extends NetworkGameClient {
             kb.field_c = fe.a("", IndexedSpriteState.field_j, "titles_retrieval_levels", true);
             p.field_c = fe.a("", IndexedSpriteState.field_j, "titles_retribution_levels", true);
             oj.field_Q = fe.a("", IndexedSpriteState.field_j, "titles_simulator_levels", true);
-            k.field_j = fe.a("", IndexedSpriteState.field_j, "titles_select_level_set", true);
+            TextWidgetPainter.field_j = fe.a("", IndexedSpriteState.field_j, "titles_select_level_set", true);
             pj.field_g = kh.a(IndexedSpriteState.field_j, (byte) 123, "", "level_set_icons");
             this.m((byte) 125);
             Js5NetworkRequest.field_H = fe.a("", IndexedSpriteState.field_j, "seeker_mine", true);
-            od.field_b = fe.a("", IndexedSpriteState.field_j, "seeker_mine_glow", true);
+            SelfDestructEffects.field_b = fe.a("", IndexedSpriteState.field_j, "seeker_mine_glow", true);
             ResourceArchive.field_m = fe.a("", IndexedSpriteState.field_j, "rock_buster", true);
             IntPoint.field_b = fe.a("", IndexedSpriteState.field_j, "interface_level_complete", true);
             ij.field_g = fe.a("", IndexedSpriteState.field_j, "interface_game_over", true);
             mc.field_d = kh.a(IndexedSpriteState.field_j, (byte) 124, "", "achievements");
             bn.a(mc.field_d, 0);
-            hn.field_c = fe.a("basic", ve.field_h, "unachieved", true);
+            CheckboxPainter.field_c = fe.a("basic", ve.field_h, "unachieved", true);
             rm.field_e = fe.a("basic", ve.field_h, "locked", true);
-            qh.field_l = new Sprite(hn.field_c.fullWidth, hn.field_c.fullHeight);
+            qh.field_l = new Sprite(CheckboxPainter.field_c.fullWidth, CheckboxPainter.field_c.fullHeight);
             qh.field_l.f();
             mb.a(fe.a("", IndexedSpriteState.field_j, "achievements_next_page_button", true), -84);
             RasterSnapshot.field_m = new Sprite[mc.field_d.length];
@@ -534,50 +534,50 @@ public final class EscapeVector extends NetworkGameClient {
             }
             id.field_a = new Sprite(32, 32);
             id.field_a.g();
-            hn.field_c.a(0, 0, 32, 32);
+            CheckboxPainter.field_c.a(0, 0, 32, 32);
             uj.field_b = new Sprite(32, 32);
             uj.field_b.g();
             rm.field_e.a(0, 0, 32, 32);
             md.field_D.a(param0 ^ -35);
             this.g(false);
             vd.field_f = kh.a(IndexedSpriteState.field_j, (byte) 123, "", "level_complete_tick");
-            af.field_a = ae.a("scrshots", "", (byte) -48, IndexedSpriteState.field_j);
+            FullscreenFocusCanvas.field_a = ae.a("scrshots", "", (byte) -48, IndexedSpriteState.field_j);
             ve.field_h = null;
-            fn.a((byte) 92);
+            SpriteOffset.a((byte) 92);
             return;
           }
           if (null != ff.field_i) {
             if (null == fj.field_eb) {
               dn.a(q.field_H, param0 + 17733, 90.0f);
               this.renderClient((byte) 48);
-              SoundCache var2_ref = new SoundCache(hn.field_h, jm.field_I);
+              SoundCache var2_ref = new SoundCache(CheckboxPainter.field_h, jm.field_I);
               jm.field_I = null;
-              hn.field_h = null;
+              CheckboxPainter.field_h = null;
               fj.field_eb = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/menu");
-              ul.field_O = nm.a(param0 ^ -94, "", var2_ref, PointCloudEffect.field_D, "music/briefing");
+              EditableTextWidget.field_O = nm.a(param0 ^ -94, "", var2_ref, PointCloudEffect.field_D, "music/briefing");
               wc.field_d = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/panic");
-              rk.field_d = new ce[5];
-              rk.field_d[0] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_1");
-              rk.field_d[1] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_2");
-              rk.field_d[2] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_3");
-              rk.field_d[3] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_4");
-              rk.field_d[4] = nm.a(PacketBuffer.a((int) param0, -94), "", var2_ref, PointCloudEffect.field_D, "music/simulator");
+              ObjectSpriteSet.field_d = new TrackerMusicDefinition[5];
+              ObjectSpriteSet.field_d[0] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_1");
+              ObjectSpriteSet.field_d[1] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_2");
+              ObjectSpriteSet.field_d[2] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_3");
+              ObjectSpriteSet.field_d[3] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_4");
+              ObjectSpriteSet.field_d[4] = nm.a(PacketBuffer.a((int) param0, -94), "", var2_ref, PointCloudEffect.field_D, "music/simulator");
               PointCloudEffect.field_D = null;
-              fn.a((byte) 93);
+              SpriteOffset.a((byte) 93);
               return;
             }
             if (null == ld.field_h) {
               dn.a(qa.field_H, param0 ^ -17595, 100.0f);
               this.renderClient((byte) -127);
-              ld.field_h = bg.a(bj.field_B, ld.field_h, he.field_u, 0);
-              bj.field_B = null;
-              fn.a((byte) 51);
+              ld.field_h = bg.a(UiContainer.field_B, ld.field_h, he.field_u, 0);
+              UiContainer.field_B = null;
+              SpriteOffset.a((byte) 51);
               return;
             }
             qi.a(50, true);
             pl.field_q = new t();
-            hn.field_l = new ig(1, vh.f(param0 ^ -35));
-            hm.field_o = new pf(true);
+            CheckboxPainter.field_l = new ig(1, vh.f(param0 ^ -35));
+            UiComponent.field_o = new pf(true);
             rc.field_a = new ak(false, 1);
             if (param0 != -96) {
               field_z = (String) null;
@@ -594,53 +594,53 @@ public final class EscapeVector extends NetworkGameClient {
           dn.a(qf.field_n, 17637, 80.0f);
           this.renderClient((byte) 7);
           PcmResampler var2 = new PcmResampler(22050, AudioOutput.field_q);
-          ff.field_i = kj.a(hn.field_h, "", "write-text").a().resample(var2);
-          en.field_d = kj.a(hn.field_h, "", "cursor").a().resample(var2);
-          bm.field_a = kj.a(hn.field_h, "", "interference").a().resample(var2);
-          qh.field_i = kj.a(hn.field_h, "", "interference_300ms").a().resample(var2);
-          nn.field_g = kj.a(hn.field_h, "", "mainmenu_formation").a().resample(var2);
-          ArchiveRequest.field_w = kj.a(hn.field_h, "", "mouseover").a().resample(var2);
-          b.field_b = kj.a(hn.field_h, "", "level_indicator").a().resample(var2);
-          pc.field_a = kj.a(hn.field_h, "", "button_formation").a().resample(var2);
-          uf.field_g = kj.a(hn.field_h, "", "frame-appear").a().resample(var2);
-          QuickChatPhraseDefinition.field_t = kj.a(hn.field_h, "", "photo-blob-grow").a().resample(var2);
-          vd.field_g = kj.a(hn.field_h, "", "photo-body-explode").a().resample(var2);
-          ArchiveProvider.field_d = kj.a(hn.field_h, "", "grid_effect_1").a().resample(var2);
-          pa.field_b = kj.a(hn.field_h, "", "grid_effect_2").a().resample(var2);
+          ff.field_i = kj.a(CheckboxPainter.field_h, "", "write-text").a().resample(var2);
+          en.field_d = kj.a(CheckboxPainter.field_h, "", "cursor").a().resample(var2);
+          bm.field_a = kj.a(CheckboxPainter.field_h, "", "interference").a().resample(var2);
+          qh.field_i = kj.a(CheckboxPainter.field_h, "", "interference_300ms").a().resample(var2);
+          nn.field_g = kj.a(CheckboxPainter.field_h, "", "mainmenu_formation").a().resample(var2);
+          ArchiveRequest.field_w = kj.a(CheckboxPainter.field_h, "", "mouseover").a().resample(var2);
+          b.field_b = kj.a(CheckboxPainter.field_h, "", "level_indicator").a().resample(var2);
+          pc.field_a = kj.a(CheckboxPainter.field_h, "", "button_formation").a().resample(var2);
+          uf.field_g = kj.a(CheckboxPainter.field_h, "", "frame-appear").a().resample(var2);
+          QuickChatPhraseDefinition.field_t = kj.a(CheckboxPainter.field_h, "", "photo-blob-grow").a().resample(var2);
+          vd.field_g = kj.a(CheckboxPainter.field_h, "", "photo-body-explode").a().resample(var2);
+          ArchiveProvider.field_d = kj.a(CheckboxPainter.field_h, "", "grid_effect_1").a().resample(var2);
+          pa.field_b = kj.a(CheckboxPainter.field_h, "", "grid_effect_2").a().resample(var2);
           PcmResampler.field_g = in.a(jm.field_I, "", "pixelate").b().resample(var2);
-          oj.field_N = kj.a(hn.field_h, "", "gas-pump").a().resample(var2);
-          ng.field_mb = kj.a(hn.field_h, "", "gas-burn").a().resample(var2);
-          TerrainMaskSupport.field_e = kj.a(hn.field_h, "", "left-foot-down").a().resample(var2);
-          ri.field_b = kj.a(hn.field_h, "", "right-foot-down").a().resample(var2);
-          ni.field_M = kj.a(hn.field_h, "", "ship-fire").a().resample(var2);
-          gn.field_e = kj.a(hn.field_h, "", "ship-fire-three").a().resample(var2);
-          uk.field_j = kj.a(hn.field_h, "", "alien-fire").a().resample(var2);
-          Bzip2State.field_G = kj.a(hn.field_h, "", "shield").a().resample(var2);
-          co.field_d = kj.a(hn.field_h, "", "shield_impact").a().resample(var2);
-          gm.field_b = kj.a(hn.field_h, "", "shield_empty").a().resample(var2);
-          qa.field_E = kj.a(hn.field_h, "", "fuel-start").a().resample(var2);
-          lm.field_d = kj.a(hn.field_h, "", "fuel-filling").a().resample(var2);
-          al.field_b = kj.a(hn.field_h, "", "fuel-stop").a().resample(var2);
-          fn.field_f = kj.a(hn.field_h, "", "fuel-full").a().resample(var2);
-          fg.field_a = kj.a(hn.field_h, "", "crate-attach").a().resample(var2);
-          rk.field_c = kj.a(hn.field_h, "", "tether-tighten").a().resample(var2);
-          bc.field_c = kj.a(hn.field_h, "", "tether-release").a().resample(var2);
-          nm.field_a = kj.a(hn.field_h, "", "powerup-collect").a().resample(var2);
-          vi.field_c = kj.a(hn.field_h, "", "repeller-active").a().resample(var2);
-          w.field_hb = kj.a(hn.field_h, "", "magnet-active").a().resample(var2);
-          of.field_h = kj.a(hn.field_h, "", "laser").a().resample(var2);
-          IntrusiveNodeHashTable.field_a = kj.a(hn.field_h, "", "explosion-ship").a().resample(var2);
-          RasterBuffer.field_c = kj.a(hn.field_h, "", "explosion_5_seconds").a().resample(var2);
+          oj.field_N = kj.a(CheckboxPainter.field_h, "", "gas-pump").a().resample(var2);
+          ng.field_mb = kj.a(CheckboxPainter.field_h, "", "gas-burn").a().resample(var2);
+          TerrainMaskSupport.field_e = kj.a(CheckboxPainter.field_h, "", "left-foot-down").a().resample(var2);
+          ri.field_b = kj.a(CheckboxPainter.field_h, "", "right-foot-down").a().resample(var2);
+          ni.field_M = kj.a(CheckboxPainter.field_h, "", "ship-fire").a().resample(var2);
+          gn.field_e = kj.a(CheckboxPainter.field_h, "", "ship-fire-three").a().resample(var2);
+          uk.field_j = kj.a(CheckboxPainter.field_h, "", "alien-fire").a().resample(var2);
+          Bzip2State.field_G = kj.a(CheckboxPainter.field_h, "", "shield").a().resample(var2);
+          co.field_d = kj.a(CheckboxPainter.field_h, "", "shield_impact").a().resample(var2);
+          gm.field_b = kj.a(CheckboxPainter.field_h, "", "shield_empty").a().resample(var2);
+          qa.field_E = kj.a(CheckboxPainter.field_h, "", "fuel-start").a().resample(var2);
+          lm.field_d = kj.a(CheckboxPainter.field_h, "", "fuel-filling").a().resample(var2);
+          al.field_b = kj.a(CheckboxPainter.field_h, "", "fuel-stop").a().resample(var2);
+          SpriteOffset.field_f = kj.a(CheckboxPainter.field_h, "", "fuel-full").a().resample(var2);
+          fg.field_a = kj.a(CheckboxPainter.field_h, "", "crate-attach").a().resample(var2);
+          ObjectSpriteSet.field_c = kj.a(CheckboxPainter.field_h, "", "tether-tighten").a().resample(var2);
+          bc.field_c = kj.a(CheckboxPainter.field_h, "", "tether-release").a().resample(var2);
+          nm.field_a = kj.a(CheckboxPainter.field_h, "", "powerup-collect").a().resample(var2);
+          vi.field_c = kj.a(CheckboxPainter.field_h, "", "repeller-active").a().resample(var2);
+          w.field_hb = kj.a(CheckboxPainter.field_h, "", "magnet-active").a().resample(var2);
+          of.field_h = kj.a(CheckboxPainter.field_h, "", "laser").a().resample(var2);
+          IntrusiveNodeHashTable.field_a = kj.a(CheckboxPainter.field_h, "", "explosion-ship").a().resample(var2);
+          RasterBuffer.field_c = kj.a(CheckboxPainter.field_h, "", "explosion_5_seconds").a().resample(var2);
           pa.field_a = in.a(jm.field_I, "", "beeping").b().resample(var2);
           this.a(param0 + 97, var2);
-          ci.field_a = kj.a(hn.field_h, "", "mine_inactive_hum_2").a().resample(var2);
-          qi.field_J = kj.a(hn.field_h, "", "100Hz square").a();
-          ve.field_d = kj.a(hn.field_h, "", "explosion-seeker-mine").a().resample(var2);
-          kf.field_p = kj.a(hn.field_h, "", "rockbuster").a().resample(var2);
-          td.field_c = kj.a(hn.field_h, "", "explosion-rock-buster").a().resample(var2);
-          jh.field_k = kj.a(hn.field_h, "", "level_complete").a().resample(var2);
-          pl.field_o = kj.a(hn.field_h, "", "level_complete_score").a().resample(var2);
-          fn.a((byte) 106);
+          ci.field_a = kj.a(CheckboxPainter.field_h, "", "mine_inactive_hum_2").a().resample(var2);
+          qi.field_J = kj.a(CheckboxPainter.field_h, "", "100Hz square").a();
+          ve.field_d = kj.a(CheckboxPainter.field_h, "", "explosion-seeker-mine").a().resample(var2);
+          kf.field_p = kj.a(CheckboxPainter.field_h, "", "rockbuster").a().resample(var2);
+          td.field_c = kj.a(CheckboxPainter.field_h, "", "explosion-rock-buster").a().resample(var2);
+          jh.field_k = kj.a(CheckboxPainter.field_h, "", "level_complete").a().resample(var2);
+          pl.field_o = kj.a(CheckboxPainter.field_h, "", "level_complete_score").a().resample(var2);
+          SpriteOffset.a((byte) 106);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -655,8 +655,8 @@ public final class EscapeVector extends NetworkGameClient {
             field_z = (String) null;
           }
           nb.a((java.applet.Applet) (this), 1585176, (byte) -125, 6340704, vj.field_c, 192);
-          aj.field_a = new fe((java.applet.Applet) (this), sh.field_r, af.field_a, vj.field_c);
-          af.field_a = null;
+          aj.field_a = new fe((java.applet.Applet) (this), sh.field_r, FullscreenFocusCanvas.field_a, vj.field_c);
+          FullscreenFocusCanvas.field_a = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -665,38 +665,38 @@ public final class EscapeVector extends NetworkGameClient {
         }
     }
 
-    final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
+    final static void insertNodeBefore(IntrusiveNode node, IntrusiveNode before, byte guard) {
         String stackIn_12_2 = null;
         String stackIn_16_2 = null;
         try {
-          if (param0.previous != null) {
-            param0.unlink((byte) -69);
+          if (node.previous != null) {
+            node.unlink((byte) -69);
           }
-          if (param2 != -7) {
+          if (guard != -7) {
             return;
           }
-          param0.previous = param1.previous;
-          param0.next = param1;
-          param0.previous.next = param0;
-          param0.next.previous = param0;
+          node.previous = before.previous;
+          node.next = before;
+          node.previous.next = node;
+          node.next.previous = node;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
           RuntimeException stackIn_11_0 = runtimeException;
           StringBuilder stackIn_11_1 = new StringBuilder().append("EscapeVector.WA(");
-          if (param0 == null) {
+          if (node == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param1 == null) {
+          if (before == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -748,8 +748,8 @@ public final class EscapeVector extends NetworkGameClient {
           if (!param0) {
             field_z = (String) null;
           }
-          if (bj.field_C != null) {
-            bj.field_C.c();
+          if (UiContainer.field_C != null) {
+            UiContainer.field_C.c();
           }
           if (ig.field_l != null) {
             ig.field_l.c();
@@ -768,26 +768,26 @@ public final class EscapeVector extends NetworkGameClient {
           if (null != mg.field_c) {
             qc.a(8, mg.field_c);
             mg.field_c = null;
-            fn.a((byte) 57);
+            SpriteOffset.a((byte) 57);
           }
           IndexedSpriteState.field_j = ve.a(1, 0, param0, 1, true);
           sn.field_c = mj.a(6, -125);
-          hn.field_h = mj.a(2, -126);
+          CheckboxPainter.field_h = mj.a(2, -126);
           jm.field_I = mj.a(3, -127);
           PointCloudEffect.field_D = mj.a(4, -126);
-          bj.field_B = mj.a(10, -124);
+          UiContainer.field_B = mj.a(10, -124);
           he.field_u = mj.a(5, -128);
           gj.a((byte) 57, ei.field_m, ve.field_h);
           uf.a(ve.field_h, ei.field_m, (byte) -96);
           DualLinkNode.field_n = new uc(70);
-          DualLinkNode.field_n.a(ve.field_h, ah.field_l, sm.field_d, "basic", 14826);
-          DualLinkNode.field_n.a(IndexedSpriteState.field_j, ah.field_l, sm.field_d, "", 14826);
-          DualLinkNode.field_n.a(IndexedSpriteState.field_j, ah.field_l, sm.field_d, "scrshots", 14826);
+          DualLinkNode.field_n.a(ve.field_h, TextFieldValidator.field_l, DebouncedValidator.field_d, "basic", 14826);
+          DualLinkNode.field_n.a(IndexedSpriteState.field_j, TextFieldValidator.field_l, DebouncedValidator.field_d, "", 14826);
+          DualLinkNode.field_n.a(IndexedSpriteState.field_j, TextFieldValidator.field_l, DebouncedValidator.field_d, "scrshots", 14826);
           DualLinkNode.field_n.a(sn.field_c, CipherPacketBuffer.field_o, qf.field_h, "", 14826);
-          DualLinkNode.field_n.a(bd.field_g, (byte) -125, gm.field_d, hn.field_h);
+          DualLinkNode.field_n.a(bd.field_g, (byte) -125, gm.field_d, CheckboxPainter.field_h);
           DualLinkNode.field_n.a(bd.field_g, (byte) -115, gm.field_d, jm.field_I);
           DualLinkNode.field_n.a(bm.field_f, (byte) -119, uc.field_d, PointCloudEffect.field_D);
-          DualLinkNode.field_n.a(cd.field_r, (byte) -121, ek.field_b, bj.field_B);
+          DualLinkNode.field_n.a(cd.field_r, (byte) -121, ek.field_b, UiContainer.field_B);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -845,19 +845,19 @@ public final class EscapeVector extends NetworkGameClient {
     private final void a(int param0, PcmResampler param1) {
         String stackIn_6_2 = null;
         try {
-          sf.field_e[0] = kj.a(hn.field_h, "", "explosion-fuel-tank").a().resample(param1);
-          sf.field_e[param0] = kj.a(hn.field_h, "", "explosion-crate").a().resample(param1);
-          PcmSample dupTemp$8 = kj.a(hn.field_h, "", "explosion-magnet-repeller").a().resample(param1);
+          sf.field_e[0] = kj.a(CheckboxPainter.field_h, "", "explosion-fuel-tank").a().resample(param1);
+          sf.field_e[param0] = kj.a(CheckboxPainter.field_h, "", "explosion-crate").a().resample(param1);
+          PcmSample dupTemp$8 = kj.a(CheckboxPainter.field_h, "", "explosion-magnet-repeller").a().resample(param1);
           sf.field_e[4] = dupTemp$8;
           sf.field_e[3] = dupTemp$8;
-          sf.field_e[2] = kj.a(hn.field_h, "", "explosion-turret").a().resample(param1);
-          PcmSample dupTemp$9 = kj.a(hn.field_h, "", "explosion-tnt").a().resample(param1);
+          sf.field_e[2] = kj.a(CheckboxPainter.field_h, "", "explosion-turret").a().resample(param1);
+          PcmSample dupTemp$9 = kj.a(CheckboxPainter.field_h, "", "explosion-tnt").a().resample(param1);
           sf.field_e[8] = dupTemp$9;
           sf.field_e[5] = dupTemp$9;
-          PcmSample dupTemp$10 = kj.a(hn.field_h, "", "explosion-laser").a().resample(param1);
+          PcmSample dupTemp$10 = kj.a(CheckboxPainter.field_h, "", "explosion-laser").a().resample(param1);
           sf.field_e[7] = dupTemp$10;
           sf.field_e[6] = dupTemp$10;
-          PcmSample dupTemp$11 = kj.a(hn.field_h, "", "explosion-powerup").a().resample(param1);
+          PcmSample dupTemp$11 = kj.a(CheckboxPainter.field_h, "", "explosion-powerup").a().resample(param1);
           sf.field_e[13] = dupTemp$11;
           sf.field_e[12] = dupTemp$11;
           sf.field_e[11] = dupTemp$11;
@@ -887,18 +887,18 @@ public final class EscapeVector extends NetworkGameClient {
           if (guard != -27273) {
             field_z = (String) null;
           }
-          boolean var4 = (hm.g(11187));
+          boolean var4 = (UiComponent.g(11187));
           if (ii.b(16836)) {
             gb.a((var4), (byte) 92, var3);
             return;
           }
           if (!uk.field_h) {
-            ah.a(var3, 0);
+            TextFieldValidator.a(var3, 0);
             return;
           }
           if (!mb.b((byte) -64)) {
             dn.a(ff.field_a, 17637, 100.0f);
-            ah.a(var3, 0);
+            TextFieldValidator.a(var3, 0);
             return;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -911,14 +911,14 @@ public final class EscapeVector extends NetworkGameClient {
               BoundedRandomAccessFile.activeSession.renderSession(0);
             }
             if (wk.field_c) {
-              SoftwareRasterizer.d();
+              SoftwareRasterizer.clearFramebuffer();
               aj.field_a.c(-76);
               decompiledFrameRemainder0 = (var9 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (!pg.field_b) {
-                if (od.field_q >= 0) {
-                  hn.field_l.e(3);
+              if (!TextLayout.field_b) {
+                if (SelfDestructEffects.field_q >= 0) {
+                  CheckboxPainter.field_l.e(3);
                   decompiledFrameRemainder0 = (var9 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -928,7 +928,7 @@ public final class EscapeVector extends NetworkGameClient {
                       decompiledFrameRemainder0 = (var9 != 0);
                     }
                     if (decompiledFrameRemainder0) {
-                      if (hn.field_n) {
+                      if (CheckboxPainter.field_n) {
                         rc.field_a.a(false);
                         decompiledFrameRemainder0 = (var9 != 0);
                       }
@@ -947,7 +947,7 @@ public final class EscapeVector extends NetworkGameClient {
                             pl.field_q.a((byte) -16);
                             if (var9 != 0) {
                               this.e(false);
-                              hm.field_o.d(100);
+                              UiComponent.field_o.d(100);
                             }
                           }
                         }
@@ -956,21 +956,21 @@ public final class EscapeVector extends NetworkGameClient {
                   } else {
                     this.e(false);
                     if (var9 != 0) {
-                      hm.field_o.d(100);
+                      UiComponent.field_o.d(100);
                     }
                   }
                 }
               } else {
-                hm.field_o.d(100);
+                UiComponent.field_o.d(100);
               }
             }
           }
-          if (od.field_k &&
+          if (SelfDestructEffects.field_k &&
             null != BoundedRandomAccessFile.activeSession &&
             BoundedRandomAccessFile.activeSession.easyMode) {
             fh.field_g.c("EASY PEASY MODE IS ON", 320, 40, 16744576, -1);
           }
-          if (od.field_k &&
+          if (SelfDestructEffects.field_k &&
             null != BoundedRandomAccessFile.activeSession &&
             BoundedRandomAccessFile.activeSession.timeHackMode) {
             fh.field_g.c("TIME HACK MODE IS ON", 320, 40, 16744576, -1);
@@ -1007,10 +1007,10 @@ public final class EscapeVector extends NetworkGameClient {
         int stackIn_54_2 = 0;
         int stackIn_58_2 = 0;
         try {
-          SoftwareRasterizer.d();
-          od.b(2);
+          SoftwareRasterizer.clearFramebuffer();
+          SelfDestructEffects.b(2);
           String var2 = nk.field_r;
-          boolean var3 = (ce.field_f.b(110));
+          boolean var3 = (TrackerMusicDefinition.field_f.b(110));
           boolean stackIn_3_0 = var3;
           int stackIn_3_1 = 4;
           boolean stackIn_4_2 = (null != IntValueNode.field_i);
@@ -1019,7 +1019,7 @@ public final class EscapeVector extends NetworkGameClient {
           boolean stackIn_7_1 = ua.field_c.d(17523);
           int stackIn_7_2 = -8;
           boolean stackIn_8_3 = (null != IntValueNode.field_i);
-          String var5 = qd.$cfr$intArgs$a$3214d41809e1((stackIn_7_0), stackIn_7_1, stackIn_7_2, stackIn_8_3);
+          String var5 = qd.chooseAlternateClickPromptWithIntGuard((stackIn_7_0), stackIn_7_1, stackIn_7_2, stackIn_8_3);
           boolean stackIn_11_0 = var3;
           boolean stackIn_12_1 = (IntValueNode.field_i != null);
           String var6 = ik.a((stackIn_11_0), stackIn_12_1, (byte) -112, ua.field_c.d(17523));
@@ -1104,15 +1104,15 @@ public final class EscapeVector extends NetworkGameClient {
         try {
           this.a(0, 11, 8, 7, 21, (byte) -99, false, 9);
           AudioOutput.a(22050, true, 10);
-          bj.field_C = AudioOutput.a(NetworkGameClient.field_r, (java.awt.Component) ((Object) of.field_d), 0, 1024);
+          UiContainer.field_C = AudioOutput.a(NetworkGameClient.field_r, (java.awt.Component) ((Object) of.field_d), 0, 1024);
           ig.field_l = AudioOutput.a(NetworkGameClient.field_r, (java.awt.Component) ((Object) of.field_d), 1, 22050);
-          rk.field_e = new PcmStreamMixer();
-          bj.field_C.b(rk.field_e);
+          ObjectSpriteSet.field_e = new PcmStreamMixer();
+          UiContainer.field_C.b(ObjectSpriteSet.field_e);
           pl.field_n = new PcmStreamMixer();
           SoundCache.field_a = new ReverbPcmStream(pl.field_n);
           SoundCache.field_a.d(0.9399999976158142f);
           SoundCache.field_a.b(14.826103210449219f);
-          rk.field_e.addSubstream(SoundCache.field_a);
+          ObjectSpriteSet.field_e.addSubstream(SoundCache.field_a);
           nb.field_c = new PcmStreamMixer();
           BoundedRandomAccessFile.field_b = new ReverbPcmStream(nb.field_c);
           if (guard != -97) {
@@ -1166,7 +1166,7 @@ public final class EscapeVector extends NetworkGameClient {
           if (var2 != null &&
             !var2.fullWidthScene) {
             if (lf.field_H != 1) {
-              TerrainMap.a(40, ul.field_O, true, (byte) -101);
+              TerrainMap.a(40, EditableTextWidget.field_O, true, (byte) -101);
               lf.field_H = 1;
             }
             if (-1 + var2.dialogueLines.length > var2.dialogueIndex) {
@@ -1291,38 +1291,38 @@ public final class EscapeVector extends NetworkGameClient {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$aafaec74e55e(IntrusiveNode param0, IntrusiveNode param1, int param2) {
+    final static void insertNodeBeforeWithIntGuard(IntrusiveNode node, IntrusiveNode before, int guard) {
         String stackIn_12_2 = null;
         String stackIn_16_2 = null;
         try {
-          if (param0.previous != null) {
-            param0.unlink((byte) -69);
+          if (node.previous != null) {
+            node.unlink((byte) -69);
           }
-          if (param2 != -7) {
+          if (guard != -7) {
             return;
           }
-          param0.previous = param1.previous;
-          param0.next = param1;
-          param0.previous.next = param0;
-          param0.next.previous = param0;
+          node.previous = before.previous;
+          node.next = before;
+          node.previous.next = node;
+          node.next.previous = node;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
           RuntimeException stackIn_11_0 = runtimeException;
           StringBuilder stackIn_11_1 = new StringBuilder().append("EscapeVector.WA(");
-          if (param0 == null) {
+          if (node == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param1 == null) {
+          if (before == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(')').toString());
         }
     }
 }

@@ -173,9 +173,9 @@ final class PointCloudEffect extends DualLinkNode {
         try {
           IndexedSprite var9 = this.e((byte) 96);
           while (var7 < 640) {
-            var8.a(var7, param0 - param3);
+            var8.draw(var7, param0 - param3);
             if (var9 != null) {
-              var9.a(var7, -param3 + param0);
+              var9.draw(var7, -param3 + param0);
             }
             var7 = var7 + BoundedRandomAccessFile.activeSession.worldWidth;
           }

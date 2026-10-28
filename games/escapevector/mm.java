@@ -18,18 +18,18 @@ final class mm {
             field_a = (String) null;
           }
           if (0 == mj.field_d) {
-            rk.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
           }
           if (10 == mj.field_d) {
-            rk.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
           }
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
           }
           do {
             if (!pn.p(-126)) {
-              di.field_d.a(gb.a(sf.field_c, ng.field_ob, 8158), (byte) 126, gb.a(dh.field_d, bj.field_y, 8158));
-              if (!fn.a(true, 0)) {
+              di.field_d.a(gb.a(sf.field_c, ng.field_ob, 8158), (byte) 126, gb.a(dh.field_d, UiContainer.field_y, 8158));
+              if (!SpriteOffset.a(true, 0)) {
                 return (var1_int);
               }
               var1_int = true;
@@ -37,7 +37,7 @@ final class mm {
               return (stackIn_21_0);
             }
             di.field_d.c((byte) 6);
-          } while (!fn.a(false, 0));
+          } while (!SpriteOffset.a(false, 0));
           var1_int = true;
           boolean stackIn_17_0 = var1_int;
           return (stackIn_17_0);
@@ -75,7 +75,7 @@ final class mm {
         ResourceArchive var4 = IndexedSpriteState.field_j;
         if (5 == param1) {
           en.a(var4, 5);
-          fn.a((byte) 53);
+          SpriteOffset.a((byte) 53);
           return true;
         }
         if (param1 != 4) {
@@ -85,7 +85,7 @@ final class mm {
             PcmResampler.field_a[param1].c();
             dm.a(var4, param1, false);
             fa.field_c[param1] = true;
-            fn.a((byte) 53);
+            SpriteOffset.a((byte) 53);
             return true;
           }
           return false;
@@ -94,10 +94,10 @@ final class mm {
           sl.field_b[param1] = se.field_b.field_g;
           pf.field_g[param1] = se.field_b.field_d;
           fa.field_c[param1] = true;
-          fn.a((byte) 53);
+          SpriteOffset.a((byte) 53);
           return true;
         }
-        fn.a((byte) 53);
+        SpriteOffset.a((byte) 53);
         return true;
     }
 

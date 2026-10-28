@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pg {
+abstract class TextLayout {
     static int field_d;
     static String field_e;
     static boolean field_b;
@@ -38,7 +38,7 @@ abstract class pg {
     final int a(byte param0) {
         int var7 = EscapeVector.obfuscationControl;
         if (param0 != -112) {
-          pg.a(72);
+          TextLayout.a(72);
         }
         int var2 = -1;
         if (this.field_a != null) {

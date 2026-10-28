@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wh extends pg {
+final class wh extends TextLayout {
     private BitmapFont field_i;
     private boolean field_n;
     static int[] field_j;

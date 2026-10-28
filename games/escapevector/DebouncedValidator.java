@@ -1,38 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sm implements el {
-    private long field_c;
+abstract class DebouncedValidator implements ValidationSource {
+    private long lastChangeMillis;
     static String field_a;
     static int field_b;
     static String field_d;
 
-    public final rf a(int param0) {
-        if (this.c(-107)) {
+    public final ValidationState validationState(int guard) {
+        if (this.isEmpty(-107)) {
           return re.field_s;
         }
-        if (param0 != 17124) {
-          sm.a(false, true);
-          if (td.b(param0 - 16996) < (this.field_c + 350L)) {
+        if (guard != 17124) {
+          DebouncedValidator.a(false, true);
+          if (td.b(guard - 16996) < (this.lastChangeMillis + 350L)) {
             return of.field_f;
           }
-          return this.d(-76);
+          return this.evaluateState(-76);
         }
-        if (td.b(param0 - 16996) < (this.field_c + 350L)) {
+        if (td.b(guard - 16996) < (this.lastChangeMillis + 350L)) {
           return of.field_f;
         }
-        return this.d(-76);
+        return this.evaluateState(-76);
     }
 
-    public final String b(int param0) {
-        int var2 = 103 / ((param0 + 35) / 59);
-        if (this.c(95)) {
+    public final String validationMessage(int guard) {
+        int var2 = 103 / ((guard + 35) / 59);
+        if (this.isEmpty(95)) {
           return null;
         }
-        if ((350L + this.field_c) > td.b(128)) {
+        if ((350L + this.lastChangeMillis) > td.b(128)) {
           return null;
         }
-        return this.a((byte) 125);
+        return this.evaluateMessage((byte) 125);
     }
 
     final static int a(int param0, int param1, dk[] param2, int param3) {
@@ -69,19 +69,19 @@ abstract class sm implements el {
         }
     }
 
-    public final void a(boolean param0) {
-        this.field_c = td.b(128);
-        if (param0) {
+    public final void markChanged(boolean guard) {
+        this.lastChangeMillis = td.b(128);
+        if (guard) {
           field_b = -44;
         }
     }
 
-    abstract rf d(int param0);
+    abstract ValidationState evaluateState(int guard);
 
     public static void b(boolean param0) {
         field_a = null;
         if (!param0) {
-          sm.a(false, false);
+          DebouncedValidator.a(false, false);
           field_d = null;
           return;
         }
@@ -231,7 +231,7 @@ abstract class sm implements el {
         ha.field_a = true;
     }
 
-    abstract String a(byte param0);
+    abstract String evaluateMessage(byte guard);
 
     static {
         field_a = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";

@@ -8,38 +8,38 @@ final class qa extends r {
     static PcmSample field_E;
     static String field_H;
 
-    final void a(int param0, int param1, int param2, int param3, hm param4, byte param5) {
+    final void onPointerReleased(int pointerY, int offsetY, int pointerX, int offsetX, UiComponent root, byte guard) {
         String stackIn_21_2 = null;
         try {
-          super.a(param0, param1, param2, param3, param4, (byte) -97);
+          super.onPointerReleased(pointerY, offsetY, pointerX, offsetX, root, (byte) -97);
           ni var7 = gf.field_b;
           if (var7 != null &&
-            this.a(param2, param0, param1, (byte) 66, param3)) {
-            if (this.field_q instanceof mk) {
-              ((mk) (this.field_q)).a(this, var7, (byte) 41);
+            this.hitTest(pointerX, pointerY, offsetY, (byte) 66, offsetX)) {
+            if (this.listener instanceof mk) {
+              ((mk) (this.listener)).a(this, var7, (byte) 41);
               gf.field_b = null;
-            } else if (var7.field_q instanceof mk) {
-              ((mk) (var7.field_q)).a(this, var7, (byte) -115);
+            } else if (var7.listener instanceof mk) {
+              ((mk) (var7.listener)).a(this, var7, (byte) -115);
               gf.field_b = null;
               if (EscapeVector.obfuscationControl != 0) {
-                ((mk) (this.field_q)).a(this, var7, (byte) 41);
+                ((mk) (this.listener)).a(this, var7, (byte) 41);
                 gf.field_b = null;
               }
             }
           }
-          int var8 = 31 / ((-39 - param5) / 45);
+          int var8 = 31 / ((-39 - guard) / 45);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
           RuntimeException stackIn_20_0 = runtimeException;
-          StringBuilder stackIn_20_1 = new StringBuilder().append("qa.MA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          StringBuilder stackIn_20_1 = new StringBuilder().append("qa.MA(").append(pointerY).append(',').append(offsetY).append(',').append(pointerX).append(',').append(offsetX).append(',');
+          if (root == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -113,11 +113,11 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(33, "idlemessage20min");
                 if (null != var2) {
-                  ah.field_g = RasterSnapshot.a(var2, 116);
+                  TextFieldValidator.field_g = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(120, "error_js5crc");
                 if (null != var2) {
-                  ag.field_b = RasterSnapshot.a(var2, 117);
+                  GameKeyHandler.field_b = RasterSnapshot.a(var2, 117);
                 }
                 var2 = IntKeyLookup.a(75, "error_js5io");
                 if (var2 != null) {
@@ -1350,11 +1350,11 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(37, "openinpopupwindow");
                 if (var2 != null) {
-                  ah.field_m = RasterSnapshot.a(var2, 120);
+                  TextFieldValidator.field_m = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(117, "create");
                 if (null != var2) {
-                  ag.field_c = RasterSnapshot.a(var2, 121);
+                  GameKeyHandler.field_c = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(121, "create_pleasechooseapassword");
                 if (var2 != null) {
@@ -1510,7 +1510,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(19, "create_suggestions");
                 if (null != var2) {
-                  hm.field_m = RasterSnapshot.a(var2, 119);
+                  UiComponent.field_m = RasterSnapshot.a(var2, 119);
                 }
                 var2 = IntKeyLookup.a(90, "create_more_suggestions");
                 if (var2 != null) {
@@ -1570,7 +1570,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(52, "login_no_displayname");
                 if (var2 != null) {
-                  sm.field_a = RasterSnapshot.a(var2, 117);
+                  DebouncedValidator.field_a = RasterSnapshot.a(var2, 117);
                 }
                 var2 = IntKeyLookup.a(49, "create_username_tooltip");
                 if (null != var2) {
@@ -1614,7 +1614,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(116, "create_optin_news_tooltip");
                 if (var2 != null) {
-                  ad.field_h = RasterSnapshot.a(var2, 127);
+                  BoundedUrlRequest.field_h = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(49, "create_u13_email_tooltip");
                 if (null != var2) {
@@ -1822,7 +1822,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(84, "waitingfor_graphics");
                 if (var2 != null) {
-                  ah.field_l = RasterSnapshot.a(var2, 127);
+                  TextFieldValidator.field_l = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(45, "waitingfor_models");
                 if (null != var2) {
@@ -1866,7 +1866,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(33, "loading_graphics");
                 if (null != var2) {
-                  sm.field_d = RasterSnapshot.a(var2, 111);
+                  DebouncedValidator.field_d = RasterSnapshot.a(var2, 111);
                 }
                 var2 = IntKeyLookup.a(123, "loading_models");
                 if (null != var2) {
@@ -1910,7 +1910,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(34, "unpacking_graphics");
                 if (null != var2) {
-                  pg.field_f = RasterSnapshot.a(var2, 120);
+                  TextLayout.field_f = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(93, "unpacking_models");
                 if (null != var2) {
@@ -2018,7 +2018,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(107, "mainmenu");
                 if (var2 != null) {
-                  ag.field_a = RasterSnapshot.a(var2, 113);
+                  GameKeyHandler.field_a = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(68, "pausemenu");
                 if (null != var2) {
@@ -2086,7 +2086,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(43, "ok");
                 if (null != var2) {
-                  ah.field_i = RasterSnapshot.a(var2, 124);
+                  TextFieldValidator.field_i = RasterSnapshot.a(var2, 124);
                 }
                 var2 = IntKeyLookup.a(53, "on");
                 if (null != var2) {
@@ -2636,7 +2636,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(55, "members_expansion_price_top");
                 if (var2 != null) {
-                  hm.field_r = RasterSnapshot.a(var2, 123);
+                  UiComponent.field_r = RasterSnapshot.a(var2, 123);
                 }
                 var2 = IntKeyLookup.a(42, "members_expansion_price_bottom");
                 if (var2 != null) {
@@ -2728,7 +2728,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(111, "fs_accept_countdown_sing");
                 if (var2 != null) {
-                  fn.field_d = RasterSnapshot.a(var2, 117);
+                  SpriteOffset.field_d = RasterSnapshot.a(var2, 117);
                 }
                 var2 = IntKeyLookup.a(57, "fs_accept_countdown_pl");
                 if (var2 != null) {
@@ -2740,7 +2740,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(22, "fs_button_close");
                 if (null != var2) {
-                  ah.field_k = RasterSnapshot.a(var2, 116);
+                  TextFieldValidator.field_k = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(102, "fs_button_members");
                 if (null != var2) {
@@ -3115,7 +3115,7 @@ final class qa extends r {
         decompiledBody.run();
     }
 
-    private qa(int param0, int param1, int param2, int param3, db param4, wn param5, hm param6) {
+    private qa(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5, UiComponent param6) {
         super(param0, param1, param2, param3, param4, param5);
         String stackIn_7_2 = null;
         String stackIn_11_2 = null;

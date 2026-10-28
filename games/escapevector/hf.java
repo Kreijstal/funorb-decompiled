@@ -7,7 +7,7 @@ final class hf {
     static boolean field_a;
 
     final static void a(int param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (k.field_d.removeLast(-8980));
+        RasterSnapshot var1 = (RasterSnapshot) (TextWidgetPainter.field_d.removeLast(-8980));
         if (var1 == null) {
           var1 = new RasterSnapshot();
         }

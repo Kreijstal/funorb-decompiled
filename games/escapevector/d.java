@@ -23,7 +23,7 @@ final class d {
           if (Character.isISOControl(param0)) {
             return false;
           }
-          if (k.a(true, param0)) {
+          if (TextWidgetPainter.a(true, param0)) {
             return true;
           }
           char[] var6 = pb.field_a;

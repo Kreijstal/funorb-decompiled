@@ -8,13 +8,13 @@ final class nm {
         if (param0 != 16) {
           field_a = (PcmSample) null;
         }
-        if (pg.field_c != null) {
-          pg.field_c.c(12497);
-          pg.field_c = null;
+        if (TextLayout.field_c != null) {
+          TextLayout.field_c.c(12497);
+          TextLayout.field_c = null;
         }
     }
 
-    final static ce a(int param0, String param1, SoundCache param2, ResourceArchive param3, String param4) {
+    final static TrackerMusicDefinition a(int param0, String param1, SoundCache param2, ResourceArchive param3, String param4) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -25,7 +25,7 @@ final class nm {
           }
           int var5_int = param3.b(-1, param1);
           int var6 = param3.a(var5_int, param4, true);
-          ce stackIn_3_0 = ml.a(param0 ^ -15620, param3, param2, var6, var5_int);
+          TrackerMusicDefinition stackIn_3_0 = ml.a(param0 ^ -15620, param3, param2, var6, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

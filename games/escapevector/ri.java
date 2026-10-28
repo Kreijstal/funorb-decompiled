@@ -80,9 +80,9 @@ final class ri {
             for (int var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               km.a(var14, 1238559653);
               if (var6_intLifetime1 != 0) {
-                af.a(1, CachedArchiveProvider.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, bk.field_s);
+                FullscreenFocusCanvas.a(1, CachedArchiveProvider.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, bk.field_s);
               } else {
-                af.a(param0 - 112, CachedArchiveProvider.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, bk.field_s);
+                FullscreenFocusCanvas.a(param0 - 112, CachedArchiveProvider.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, bk.field_s);
               }
             }
             DynamicTerrainRenderer.b(var5, 0);

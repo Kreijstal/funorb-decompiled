@@ -40,7 +40,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               pd.field_b = param3;
               j.field_b = param3;
-              ad.field_d = param4;
+              BoundedUrlRequest.field_d = param4;
               qa.field_G = param4;
               he.field_r = this;
               Js5NetworkRequest.field_D = 0;
@@ -180,7 +180,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           Object var6 = this;
           synchronized (var6) {
-            rk.field_b = qd.field_l;
+            ObjectSpriteSet.field_b = qd.field_l;
           }
           this.updateClient(-111);
           return;
@@ -257,7 +257,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.field_b = true;
             System.out.println("error_game_" + param1);
             try {
-              sd.a(PointCloudEffect.d((byte) -87), "loggedout", -29155);
+              JavaScriptBridge.callWindowFunction(PointCloudEffect.d((byte) -87), "loggedout", -29155);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var3 = decompiledCaughtException;
@@ -447,13 +447,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 dm.a((byte) -61);
                 this.d(2);
-                md.field_D = PcmResampler.createRasterBuffer((java.awt.Component) ((Object) of.field_d), ad.field_d, (byte) 125, pd.field_b);
+                md.field_D = PcmResampler.createRasterBuffer((java.awt.Component) ((Object) of.field_d), BoundedUrlRequest.field_d, (byte) 125, pd.field_b);
                 this.initializeClient((byte) -97);
                 IntrusiveNodeHashTable.field_f = pe.a(18863);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != me.field_p) {
-                    stackIn_98_0 = $cfr$lcmp(me.field_p, td.b(128));
+                    stackIn_98_0 = compareLongs(me.field_p, td.b(128));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if (decompiledFrameRemainder0 &&
                       stackIn_98_0 <= 0) {
@@ -468,7 +468,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(var3 < Js5NetworkRequest.field_z)) {
                       this.c((byte) 92);
-                      af.a((byte) -61, NetworkGameClient.field_r, of.field_d);
+                      FullscreenFocusCanvas.a((byte) -61, NetworkGameClient.field_r, of.field_d);
                       break;
                     }
                     this.a(48);
@@ -512,7 +512,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (fieldTemp$0 > 50) {
             QuickChatPhraseDefinition.field_r = QuickChatPhraseDefinition.field_r - 50;
             rh.field_H = true;
-            of.field_d.setSize(pd.field_b, ad.field_d);
+            of.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
             of.field_d.setVisible(true);
             if (null != qj.field_i &&
               null == qj.field_f) {
@@ -759,7 +759,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var3)).setLayout((java.awt.LayoutManager) null);
           of.field_d = (java.awt.Canvas) ((Object) new hd((java.awt.Component) (this)));
           ((java.awt.Container) (var3)).add((java.awt.Component) ((Object) of.field_d));
-          of.field_d.setSize(pd.field_b, ad.field_d);
+          of.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
           of.field_d.setVisible(true);
           if (var3 == qj.field_i) {
             java.awt.Insets var4 = qj.field_i.getInsets();
@@ -772,7 +772,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           of.field_d.addFocusListener((java.awt.event.FocusListener) (this));
           of.field_d.requestFocus();
-          rk.field_b = true;
+          ObjectSpriteSet.field_b = true;
           qd.field_l = true;
           rh.field_H = true;
           PacketBuffer.field_i = false;
@@ -874,7 +874,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         field_a = -1;
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

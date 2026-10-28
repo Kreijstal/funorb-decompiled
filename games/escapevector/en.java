@@ -805,7 +805,7 @@ final class en {
             int var7Lifetime1 = ee.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
             int var8Lifetime1 = ClientException.field_e - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
-              var1_int = var1_int + hn.field_s;
+              var1_int = var1_int + CheckboxPainter.field_s;
               if (var4 != cb.field_c.field_h) {
                 stackIn_44_0 = of.field_g;
               } else {
@@ -819,7 +819,7 @@ final class en {
             }
             if (0 <= var4) {
               pb.field_e.a(var6, var8Lifetime1, var1_int + he.field_x, var5, -1);
-              var1_int = var1_int + (ok.field_a + (hn.field_s + field_k));
+              var1_int = var1_int + (ok.field_a + (CheckboxPainter.field_s + field_k));
             } else {
               nb.field_a.a(var6, var8Lifetime1, var1_int + vk.field_t, var5, -1);
               var1_int = var1_int + je.field_b;

@@ -17,15 +17,15 @@ final class gl extends jl {
             try {
               java.net.URL var4 = param1.getCodeBase();
               String var3 = sh.a((byte) 104, param1, var4).getFile();
-              sd.a((byte) 119, param1, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
-              sd.a((byte) 107, param1, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
+              JavaScriptBridge.callWindowFunctionWithArguments((byte) 119, param1, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
+              JavaScriptBridge.callWindowFunctionWithArguments((byte) 107, param1, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
               if (param0 != 15) {
                 gl.b(true);
               }
-              sd.a((byte) 112, param1, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
-              sd.a((byte) 110, param1, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
-              sd.a((byte) 104, param1, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
-              sd.a((byte) 123, param1, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
+              JavaScriptBridge.callWindowFunctionWithArguments((byte) 112, param1, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
+              JavaScriptBridge.callWindowFunctionWithArguments((byte) 110, param1, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
+              JavaScriptBridge.callWindowFunctionWithArguments((byte) 104, param1, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
+              JavaScriptBridge.callWindowFunctionWithArguments((byte) 123, param1, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var2 = decompiledCaughtException;
@@ -77,12 +77,12 @@ final class gl extends jl {
         this.field_d = (-this.field_o + var3) / 2 + var4;
     }
 
-    final static k c(boolean param0) {
+    final static TextWidgetPainter c(boolean param0) {
         if (!param0) {
-          return (k) null;
+          return (TextWidgetPainter) null;
         }
         if (null == vg.field_U) {
-          vg.field_U = new k(ke.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, ke.field_c.field_r, -1, 2147483647, true);
+          vg.field_U = new TextWidgetPainter(ke.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, ke.field_c.field_r, -1, 2147483647, true);
         }
         return vg.field_U;
     }

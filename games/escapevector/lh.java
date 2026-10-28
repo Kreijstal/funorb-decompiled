@@ -19,23 +19,23 @@ final class lh {
           if (var1 == null &&
             LaserGateSpan.field_k < 80) {
             LaserGateSpan.field_k = 95;
-            rk.field_e.playSampleWithPan(qh.field_i, 100, 3072 * qm.field_c / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, 3072 * qm.field_c / 64, 8192);
           }
           Object var2 = null;
           int var3 = 0;
           if (!wk.field_c) {
-            if (pg.field_b) {
-              Sprite var18 = k.field_j;
+            if (TextLayout.field_b) {
+              Sprite var18 = TextWidgetPainter.field_j;
               var2 = var18;
               var3 = (77 - var18.fullHeight) / 2;
             } else {
-              if (od.field_q == 0) {
+              if (SelfDestructEffects.field_q == 0) {
                 Sprite var17 = kb.field_c;
                 var2 = var17;
                 var3 = (77 - var17.fullHeight) / 2;
                 if (var2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k > 80) {
                     LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -45,28 +45,28 @@ final class lh {
                   dg.field_t = (Sprite) (var2);
                   if (!(LaserGateSpan.field_k >= 95)) {
                     LaserGateSpan.field_k = 95;
-                    rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                   } else if (LaserGateSpan.field_k < 110) {
                     LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                   }
                 }
                 return;
               }
-              if (od.field_q == 1) {
+              if (SelfDestructEffects.field_q == 1) {
                 Sprite var12 = kb.field_c;
                 var2 = var12;
                 var3 = (77 - var12.fullHeight) / 2;
-              } else if (od.field_q == 2) {
+              } else if (SelfDestructEffects.field_q == 2) {
                 Sprite var13 = p.field_c;
                 var2 = var13;
                 var3 = (77 - var13.fullHeight) / 2;
-              } else if (od.field_q == 3) {
+              } else if (SelfDestructEffects.field_q == 3) {
                 Sprite var14 = oj.field_Q;
                 var2 = var14;
                 var3 = (77 - var14.fullHeight) / 2;
               } else if (!PacketBuffer.field_h) {
                 if (e.field_a) {
-                  if (ce.field_f.b(123)) {
+                  if (TrackerMusicDefinition.field_f.b(123)) {
                     var2 = lf.field_I;
                   } else {
                     var2 = oi.field_O;
@@ -74,7 +74,7 @@ final class lh {
                   var3 = (-((Sprite) (var2)).fullHeight + 90) / 2;
                   if (var2 == null) {
                     if (LaserGateSpan.field_k == 110) {
-                      rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                      ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                     }
                     if (LaserGateSpan.field_k > 80) {
                       LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -84,14 +84,14 @@ final class lh {
                     dg.field_t = (Sprite) (var2);
                     if (!(LaserGateSpan.field_k >= 95)) {
                       LaserGateSpan.field_k = 95;
-                      rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                      ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                     } else if (LaserGateSpan.field_k < 110) {
                       LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                     }
                   }
                   return;
                 }
-                if (hn.field_n) {
+                if (CheckboxPainter.field_n) {
                   Sprite var15 = DynamicTerrainRenderer.field_w;
                   var2 = var15;
                   var3 = (66 - var15.fullHeight) / 2;
@@ -105,7 +105,7 @@ final class lh {
           }
           if (var2 == null) {
             if (LaserGateSpan.field_k == 110) {
-              rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
             }
             if (LaserGateSpan.field_k <= 80) {
               return;
@@ -116,7 +116,7 @@ final class lh {
             dg.field_t = (Sprite) (var2);
             if (LaserGateSpan.field_k < 95) {
               LaserGateSpan.field_k = 95;
-              rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+              ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
               return;
             }
             if (LaserGateSpan.field_k < 110) {
@@ -135,18 +135,18 @@ final class lh {
           Object var2Lifetime1 = null;
           int var3Lifetime1 = 0;
           if (!wk.field_c) {
-            if (pg.field_b) {
-              Sprite var25 = k.field_j;
+            if (TextLayout.field_b) {
+              Sprite var25 = TextWidgetPainter.field_j;
               var2Lifetime1 = var25;
               var3Lifetime1 = (77 - var25.fullHeight) / 2;
             } else {
-              if (od.field_q == 0) {
+              if (SelfDestructEffects.field_q == 0) {
                 Sprite var24 = kb.field_c;
                 var2Lifetime1 = var24;
                 var3Lifetime1 = (77 - var24.fullHeight) / 2;
                 if (var2Lifetime1 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k > 80) {
                     LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -156,28 +156,28 @@ final class lh {
                   dg.field_t = (Sprite) (var2Lifetime1);
                   if (!(LaserGateSpan.field_k >= 95)) {
                     LaserGateSpan.field_k = 95;
-                    rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                   } else if (LaserGateSpan.field_k < 110) {
                     LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                   }
                 }
                 return;
               }
-              if (od.field_q == 1) {
+              if (SelfDestructEffects.field_q == 1) {
                 Sprite var19 = kb.field_c;
                 var2Lifetime1 = var19;
                 var3Lifetime1 = (77 - var19.fullHeight) / 2;
-              } else if (od.field_q == 2) {
+              } else if (SelfDestructEffects.field_q == 2) {
                 Sprite var20 = p.field_c;
                 var2Lifetime1 = var20;
                 var3Lifetime1 = (77 - var20.fullHeight) / 2;
-              } else if (od.field_q == 3) {
+              } else if (SelfDestructEffects.field_q == 3) {
                 Sprite var21 = oj.field_Q;
                 var2Lifetime1 = var21;
                 var3Lifetime1 = (77 - var21.fullHeight) / 2;
               } else if (!PacketBuffer.field_h) {
                 if (e.field_a) {
-                  if (ce.field_f.b(123)) {
+                  if (TrackerMusicDefinition.field_f.b(123)) {
                     var2Lifetime1 = lf.field_I;
                   } else {
                     var2Lifetime1 = oi.field_O;
@@ -185,7 +185,7 @@ final class lh {
                   var3Lifetime1 = (-((Sprite) (var2Lifetime1)).fullHeight + 90) / 2;
                   if (var2Lifetime1 == null) {
                     if (LaserGateSpan.field_k == 110) {
-                      rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                      ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                     }
                     if (LaserGateSpan.field_k > 80) {
                       LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -195,14 +195,14 @@ final class lh {
                     dg.field_t = (Sprite) (var2Lifetime1);
                     if (!(LaserGateSpan.field_k >= 95)) {
                       LaserGateSpan.field_k = 95;
-                      rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                      ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                     } else if (LaserGateSpan.field_k < 110) {
                       LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                     }
                   }
                   return;
                 }
-                if (hn.field_n) {
+                if (CheckboxPainter.field_n) {
                   Sprite var22 = DynamicTerrainRenderer.field_w;
                   var2Lifetime1 = var22;
                   var3Lifetime1 = (66 - var22.fullHeight) / 2;
@@ -216,7 +216,7 @@ final class lh {
           }
           if (var2Lifetime1 == null) {
             if (LaserGateSpan.field_k == 110) {
-              rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
             }
             if (LaserGateSpan.field_k <= 80) {
               return;
@@ -228,7 +228,7 @@ final class lh {
           dg.field_t = (Sprite) (var2Lifetime1);
           if (LaserGateSpan.field_k < 95) {
             LaserGateSpan.field_k = 95;
-            rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
             return;
           }
           if (LaserGateSpan.field_k >= 110) {
@@ -239,14 +239,14 @@ final class lh {
         }
         if (LaserGateSpan.field_k < 80) {
           LaserGateSpan.field_k = 95;
-          rk.field_e.playSampleWithPan(qh.field_i, 100, 3072 * qm.field_c / 64, 8192);
+          ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, 3072 * qm.field_c / 64, 8192);
         }
         Object var2Lifetime2 = null;
         int var3Lifetime2 = 0;
         if (wk.field_c) {
           if (var2Lifetime2 == null) {
             if (LaserGateSpan.field_k == 110) {
-              rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
             }
             if (LaserGateSpan.field_k <= 80) {
               return;
@@ -258,7 +258,7 @@ final class lh {
           dg.field_t = (Sprite) (var2Lifetime2);
           if (LaserGateSpan.field_k < 95) {
             LaserGateSpan.field_k = 95;
-            rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
             return;
           }
           if (LaserGateSpan.field_k >= 110) {
@@ -267,18 +267,18 @@ final class lh {
           LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
           return;
         }
-        if (pg.field_b) {
-          Sprite var32 = k.field_j;
+        if (TextLayout.field_b) {
+          Sprite var32 = TextWidgetPainter.field_j;
           var2Lifetime2 = var32;
           var3Lifetime2 = (77 - var32.fullHeight) / 2;
         } else {
-          if (od.field_q == 0) {
+          if (SelfDestructEffects.field_q == 0) {
             Sprite var31 = kb.field_c;
             var2Lifetime2 = var31;
             var3Lifetime2 = (77 - var31.fullHeight) / 2;
             if (var2Lifetime2 == null) {
               if (LaserGateSpan.field_k == 110) {
-                rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
               }
               if (LaserGateSpan.field_k <= 80) {
                 return;
@@ -289,7 +289,7 @@ final class lh {
               dg.field_t = (Sprite) (var2Lifetime2);
               if (LaserGateSpan.field_k < 95) {
                 LaserGateSpan.field_k = 95;
-                rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                 return;
               }
               if (LaserGateSpan.field_k < 110) {
@@ -299,16 +299,16 @@ final class lh {
             }
             return;
           }
-          if (od.field_q == 1) {
+          if (SelfDestructEffects.field_q == 1) {
             Sprite var26 = kb.field_c;
             var2Lifetime2 = var26;
             var3Lifetime2 = (77 - var26.fullHeight) / 2;
-          } else if (od.field_q != 2) {
-            if (od.field_q != 3) {
+          } else if (SelfDestructEffects.field_q != 2) {
+            if (SelfDestructEffects.field_q != 3) {
               if (PacketBuffer.field_h) {
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -320,7 +320,7 @@ final class lh {
                 dg.field_t = (Sprite) (var2Lifetime2);
                 if (LaserGateSpan.field_k < 95) {
                   LaserGateSpan.field_k = 95;
-                  rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                  ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                   return;
                 }
                 if (LaserGateSpan.field_k >= 110) {
@@ -330,7 +330,7 @@ final class lh {
                 return;
               }
               if (e.field_a) {
-                if (ce.field_f.b(123)) {
+                if (TrackerMusicDefinition.field_f.b(123)) {
                   var2Lifetime2 = lf.field_I;
                 } else {
                   var2Lifetime2 = oi.field_O;
@@ -338,7 +338,7 @@ final class lh {
                 var3Lifetime2 = (-((Sprite) (var2Lifetime2)).fullHeight + 90) / 2;
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -349,7 +349,7 @@ final class lh {
                   dg.field_t = (Sprite) (var2Lifetime2);
                   if (LaserGateSpan.field_k < 95) {
                     LaserGateSpan.field_k = 95;
-                    rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                     return;
                   }
                   if (LaserGateSpan.field_k < 110) {
@@ -359,13 +359,13 @@ final class lh {
                 }
                 return;
               }
-              if (hn.field_n) {
+              if (CheckboxPainter.field_n) {
                 Sprite var29 = DynamicTerrainRenderer.field_w;
                 var2Lifetime2 = var29;
                 var3Lifetime2 = (66 - var29.fullHeight) / 2;
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -377,7 +377,7 @@ final class lh {
                 dg.field_t = (Sprite) (var2Lifetime2);
                 if (LaserGateSpan.field_k < 95) {
                   LaserGateSpan.field_k = 95;
-                  rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                  ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                   return;
                 }
                 if (LaserGateSpan.field_k >= 110) {
@@ -389,7 +389,7 @@ final class lh {
               if (!ch.field_b) {
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -400,7 +400,7 @@ final class lh {
                   dg.field_t = (Sprite) (var2Lifetime2);
                   if (LaserGateSpan.field_k < 95) {
                     LaserGateSpan.field_k = 95;
-                    rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                     return;
                   }
                   if (LaserGateSpan.field_k < 110) {
@@ -415,7 +415,7 @@ final class lh {
               var3Lifetime2 = (100 - var30.fullHeight) / 2;
               if (var2Lifetime2 == null) {
                 if (LaserGateSpan.field_k == 110) {
-                  rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                  ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                 }
                 if (LaserGateSpan.field_k <= 80) {
                   return;
@@ -426,7 +426,7 @@ final class lh {
                 dg.field_t = (Sprite) (var2Lifetime2);
                 if (LaserGateSpan.field_k < 95) {
                   LaserGateSpan.field_k = 95;
-                  rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                  ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                   return;
                 }
                 if (LaserGateSpan.field_k < 110) {
@@ -447,7 +447,7 @@ final class lh {
         }
         if (var2Lifetime2 == null) {
           if (LaserGateSpan.field_k == 110) {
-            rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
           }
           if (LaserGateSpan.field_k <= 80) {
             return;
@@ -458,7 +458,7 @@ final class lh {
           dg.field_t = (Sprite) (var2Lifetime2);
           if (LaserGateSpan.field_k < 95) {
             LaserGateSpan.field_k = 95;
-            rk.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
             return;
           }
           if (LaserGateSpan.field_k < 110) {

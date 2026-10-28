@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ah extends sm implements rj {
+abstract class TextFieldValidator extends DebouncedValidator implements TextInputListener {
     static String field_i;
     static String field_g;
     static String field_l;
@@ -9,57 +9,57 @@ abstract class ah extends sm implements rj {
     static Sprite field_j;
     static boolean field_h;
     static long field_e;
-    private ul field_f;
+    private EditableTextWidget field;
     static String field_k;
 
-    final String a(byte param0) {
-        int var2 = 91 / ((52 - param0) / 53);
-        return this.a((byte) -109, this.field_f.field_l);
+    final String evaluateMessage(byte guard) {
+        int var2 = 91 / ((52 - guard) / 53);
+        return this.messageForText((byte) -109, this.field.text);
     }
 
-    public final void a(boolean param0, ul param1) {
+    public final void onSubmit(boolean guard, EditableTextWidget field) {
         try {
-          if (!param0) {
+          if (!guard) {
             field_l = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ah.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ah.CA(" + guard + ',' + (field != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract rf a(int param0, String param1);
+    abstract ValidationState validateText(int guard, String text);
 
-    public final boolean c(int param0) {
-        int var2 = -113 % ((41 - param0) / 50);
-        if (this.field_f.field_l == null) {
+    public final boolean isEmpty(int guard) {
+        int var2 = -113 % ((41 - guard) / 50);
+        if (this.field.text == null) {
           return true;
         }
-        if (this.field_f.field_l.length() != 0) {
+        if (this.field.text.length() != 0) {
           return false;
         }
         return true;
     }
 
-    public final void a(ul param0, int param1) {
-        if (param1 != 0) {
+    public final void onTextChanged(EditableTextWidget field, int guard) {
+        if (guard != 0) {
           return;
         }
         try {
-          this.a(false);
+          this.markChanged(false);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ah.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ah.W(" + (field != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final rf d(int param0) {
-        if (param0 < -60) {
-          return this.a(-1, this.field_f.field_l);
+    final ValidationState evaluateState(int guard) {
+        if (guard < -60) {
+          return this.validateText(-1, this.field.text);
         }
-        ah.f(-116);
-        return this.a(-1, this.field_f.field_l);
+        TextFieldValidator.f(-116);
+        return this.validateText(-1, this.field.text);
     }
 
-    abstract String a(byte param0, String param1);
+    abstract String messageForText(byte guard, String text);
 
     public static void f(int param0) {
         field_j = null;
@@ -70,7 +70,7 @@ abstract class ah extends sm implements rj {
         field_i = null;
         if (param0 != -16187) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
-          ah.a((java.awt.Canvas) null, -55);
+          TextFieldValidator.a((java.awt.Canvas) null, -55);
         }
     }
 
@@ -86,9 +86,9 @@ abstract class ah extends sm implements rj {
         }
     }
 
-    ah(ul param0) {
+    TextFieldValidator(EditableTextWidget param0) {
         try {
-          this.field_f = param0;
+          this.field = param0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

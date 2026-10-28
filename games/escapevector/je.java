@@ -17,8 +17,8 @@ final class je {
         if (param0 > 44) {
           int var1 = qh.field_k[0] * bc.field_a[0];
           byte[] var21 = qe.field_a[0];
-          if (bj.field_E[0]) {
-            byte[] var20 = hn.field_b[0];
+          if (UiContainer.field_E[0]) {
+            byte[] var20 = CheckboxPainter.field_b[0];
             int[] var13 = new int[var1];
             int[] var11 = var13;
             int[] var5_ref_int__ = var11;
@@ -39,8 +39,8 @@ final class je {
         je.a(24);
         int var1Lifetime1 = qh.field_k[0] * bc.field_a[0];
         byte[] var19 = qe.field_a[0];
-        if (bj.field_E[0]) {
-          byte[] var18 = hn.field_b[0];
+        if (UiContainer.field_E[0]) {
+          byte[] var18 = CheckboxPainter.field_b[0];
           int[] var13Lifetime1 = new int[var1Lifetime1];
           int[] var11Lifetime1 = var13Lifetime1;
           int[] var5_ref_int__Lifetime1 = var11Lifetime1;

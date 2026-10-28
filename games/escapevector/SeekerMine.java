@@ -18,7 +18,7 @@ final class SeekerMine extends IntrusiveNode {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
-          int var3_int = hn.a(param2, param1 - 16777215);
+          int var3_int = CheckboxPainter.a(param2, param1 - 16777215);
           int var4 = 4 * var3_int + param2.b(param0);
           if (param1 == 16777215) {
             int stackIn_4_0 = var4;

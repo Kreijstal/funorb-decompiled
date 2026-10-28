@@ -15,7 +15,7 @@ final class dc extends IntrusiveNode {
           int var7 = EscapeVector.obfuscationControl;
           try {
             try {
-              String var3 = (String) (sd.a(param2, "getcookies", -29155));
+              String var3 = (String) (JavaScriptBridge.callWindowFunction(param2, "getcookies", -29155));
               String[] var4 = bb.a(-128, var3, ';');
               for (int var5 = 0; var4.length > var5; var5++) {
                 int var6 = var4[var5].indexOf('=');
