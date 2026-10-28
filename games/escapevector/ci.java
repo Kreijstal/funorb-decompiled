@@ -15,7 +15,7 @@ final class ci {
         field_d = null;
         field_a = null;
         if (guard != 4) {
-          ci.a(-111, 38, 24, -46);
+          ci.requestArchiveKey(-111, 38, 24, -46);
         }
     }
 
@@ -75,17 +75,17 @@ final class ci {
         field_d = (QuickChatDynamicCommand) null;
     }
 
-    final static ll a(int param0, int param1, int param2, int param3) {
-        ll var4 = new ll();
-        var4.field_i = param1;
-        var4.field_g = param0;
+    final static ArchiveKeyRequest requestArchiveKey(int archiveId, int groupId, int guard, int opcode) {
+        ArchiveKeyRequest var4 = new ArchiveKeyRequest();
+        var4.groupId = groupId;
+        var4.archiveId = archiveId;
         jl.field_n.addLast(-12328, var4);
-        if (param2 == -1) {
-          BoundedRandomAccessFile.a(-100, param3, var4);
+        if (guard == -1) {
+          BoundedRandomAccessFile.writeArchiveKeyRequest(-100, opcode, var4);
           return var4;
         }
         field_g = 109;
-        BoundedRandomAccessFile.a(-100, param3, var4);
+        BoundedRandomAccessFile.writeArchiveKeyRequest(-100, opcode, var4);
         return var4;
     }
 
@@ -107,7 +107,7 @@ final class ci {
     }
 
     ci(int param0, boolean param1, boolean param2, int param3, int param4, int param5) {
-        this.field_e = jb.field_w;
+        this.field_e = ProxySocketConnector.field_w;
         this.field_h = param1 ? true : false;
         this.field_b = param0;
         this.field_f = param2 ? true : false;

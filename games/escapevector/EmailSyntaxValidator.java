@@ -29,7 +29,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               } else {
                 param2 = IndexedSpriteState.field_c;
               }
-              PcmResampler.field_d.a(vk.field_v, (byte) 106);
+              PcmResampler.field_d.a(StrongCacheEntry.field_v, (byte) 106);
             }
             if (param0 == 10) {
               ui.a(90);

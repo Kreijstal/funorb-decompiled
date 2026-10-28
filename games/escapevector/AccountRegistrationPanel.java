@@ -211,9 +211,9 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         var3 = var3 + this.a(170, this.field_I, tm.field_Z, var3, 100);
         var3 = var3 + (this.a(20, this.field_R, 170, ri.field_a, 25, "", var3) + 5);
         var3 = var3 + this.a(170, this.field_Q, qc.field_vb, var3, 100);
-        var3 = var3 + (this.a(170, mh.field_d, var3, this.field_U, rm.field_a, 170) + 5);
+        var3 = var3 + (this.a(170, mh.field_d, var3, this.field_U, DualLinkDequeIterator.field_a, 170) + 5);
         var3 = var3 + (5 + this.a(170, lf.field_J, var3, this.field_S, ig.field_i, 170));
-        var3 = var3 + this.a(qm.field_a, (byte) 123, var3, this.field_N, 170);
+        var3 = var3 + this.a(IterableNodeHashTable.field_a, (byte) 123, var3, this.field_N, 170);
         ki var4 = new ki(46, var3, -90 + this.width, 25, this.field_J, true, -120 + this.width, 5, ke.field_c, 11579568, ii.field_b);
         this.b(var4, false);
         var3 = var3 + var4.height;
@@ -500,17 +500,17 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             field_M = (ObjectSpriteSet[]) null;
           }
           if (0 == hotspotId) {
-            qd.a(12, "terms.ws");
+            AchievementRecord.a(12, "terms.ws");
             return;
           }
           if (1 == hotspotId) {
-            qd.a(12, "privacy.ws");
+            AchievementRecord.a(12, "privacy.ws");
             return;
           }
           if (2 != hotspotId) {
             return;
           }
-          qd.a(12, "conduct.ws");
+          AchievementRecord.a(12, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

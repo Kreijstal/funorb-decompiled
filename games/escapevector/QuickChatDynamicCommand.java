@@ -4,10 +4,10 @@
 final class QuickChatDynamicCommand {
     int id;
     int parameterCount;
-    static eg field_b;
+    static MouseInputHandler mouseHandler;
     static p field_e;
-    static CipherPacketBuffer field_g;
-    static CipherPacketBuffer field_c;
+    static CipherPacketBuffer incomingPackets;
+    static CipherPacketBuffer outgoingPackets;
     static Sprite[] field_a;
 
     public final String toString() {
@@ -15,9 +15,9 @@ final class QuickChatDynamicCommand {
     }
 
     public static void releaseStatics(int guard) {
-        field_c = null;
-        field_b = null;
-        field_g = null;
+        outgoingPackets = null;
+        mouseHandler = null;
+        incomingPackets = null;
         if (guard == 5468) {
           field_e = null;
           field_a = null;
@@ -34,6 +34,6 @@ final class QuickChatDynamicCommand {
     }
 
     static {
-        field_b = new eg();
+        mouseHandler = new MouseInputHandler();
     }
 }

@@ -9,42 +9,42 @@ final class tb extends SingleChildContainer {
 
     final bb n(int param0) {
         int var4 = EscapeVector.obfuscationControl;
-        wf var2 = new wf(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         if (param0 != 0) {
           field_E = (String) null;
         }
-        bb var3 = (bb) (var2.c(param0 ^ 15));
+        bb var3 = (bb) (var2.first(param0 ^ 15));
         while (var3 != null) {
           if (var3.field_G) {
             return var3;
           }
-          var3 = (bb) (var2.a(59));
+          var3 = (bb) (var2.next(59));
         }
         return null;
     }
 
     final void p(int param0) {
         int var4 = EscapeVector.obfuscationControl;
-        wf var2 = new wf(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         if (param0 != 0) {
           return;
         }
-        bb var3 = (bb) (var2.c(15));
+        bb var3 = (bb) (var2.first(15));
         while (var3 != null) {
           if (var3.a((byte) -60)) {
             var3.unlink((byte) -47);
           }
-          var3 = (bb) (var2.a(30));
+          var3 = (bb) (var2.next(30));
         }
     }
 
     final void l(int param0) {
         int var4 = EscapeVector.obfuscationControl;
-        wf var2 = new wf(this.field_H);
-        bb var3 = (bb) (var2.c(15));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
+        bb var3 = (bb) (var2.first(15));
         while (var3 != null) {
           var3.field_G = false;
-          var3 = (bb) (var2.a(25));
+          var3 = (bb) (var2.next(25));
         }
         this.child = null;
         if (param0 != 17415) {
@@ -54,8 +54,8 @@ final class tb extends SingleChildContainer {
 
     final UiComponent focusedChild(int guard) {
         int var4 = EscapeVector.obfuscationControl;
-        wf var2 = new wf(this.field_H);
-        bb var3 = (bb) (var2.c(guard ^ 15));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
+        bb var3 = (bb) (var2.first(guard ^ 15));
         if (guard != 0) {
           field_G = (String[]) null;
         }
@@ -63,7 +63,7 @@ final class tb extends SingleChildContainer {
           if (var3.field_G) {
             return var3.a(true);
           }
-          var3 = (bb) (var2.a(guard + 36));
+          var3 = (bb) (var2.next(guard + 36));
         }
         return null;
     }
@@ -106,32 +106,32 @@ final class tb extends SingleChildContainer {
         if (this.painter != null) {
           this.painter.drawWidget(screenX, screenY, -43, (UiComponent) (this), true);
         }
-        wf var5 = new wf(this.field_H);
-        UiComponent var6 = (UiComponent) (var5.b(-31616));
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_H);
+        UiComponent var6 = (UiComponent) (var5.last(-31616));
         if (guard < 85) {
           this.field_H = (IntrusiveDeque) null;
         }
         while (var6 != null) {
           var6.drawLayer(this.y + screenY, (byte) 124, layer, this.x + screenX);
-          var6 = (UiComponent) (var5.a((byte) 57));
+          var6 = (UiComponent) (var5.previous((byte) 57));
         }
     }
 
     final void m(int param0) {
         int var4 = EscapeVector.obfuscationControl;
-        wf var2 = new wf(this.field_H);
-        bb var3 = (bb) (var2.c(15));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
+        bb var3 = (bb) (var2.first(15));
         while (var3 != null) {
           if (var3.j(-13907)) {
             var3.unlink((byte) -126);
           }
-          var3 = (bb) (var2.a(param0 ^ 91));
+          var3 = (bb) (var2.next(param0 ^ 91));
         }
         this.child = (UiComponent) ((Object) this.n(param0));
     }
 
     public tb() {
-        super(0, 0, dm.field_h, SingleChildContainer.field_B, (WidgetPainter) null, (UiListener) null);
+        super(0, 0, DelayedServerPacket.field_h, SingleChildContainer.field_B, (WidgetPainter) null, (UiListener) null);
         this.field_H = new IntrusiveDeque();
     }
 

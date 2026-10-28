@@ -86,14 +86,14 @@ final class CipherPacketBuffer extends PacketBuffer {
     final static void p(int param0) {
         int var3 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var1 = QuickChatDynamicCommand.field_c;
+          CipherPacketBuffer var1 = QuickChatDynamicCommand.outgoingPackets;
           while (ea.c((byte) -115)) {
             var1.writeCipheredOpcode(8, true);
             int fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             int var2 = fieldTemp$0;
             ResourceArchive.writeReflectionCheckResults(param0 ^ -25858, var1);
-            QuickChatDynamicCommand.field_c.backpatchByteLength(82, var1.position - var2);
+            QuickChatDynamicCommand.outgoingPackets.backpatchByteLength(82, var1.position - var2);
           }
           if (param0 == 11197) {
             return;

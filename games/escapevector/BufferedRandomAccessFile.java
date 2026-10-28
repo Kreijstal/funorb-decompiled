@@ -403,19 +403,19 @@ final class BufferedRandomAccessFile {
           }
           if (vj.field_a != 0 &&
             GameAppletShell.field_a < 0) {
-            dm var4_ref_dm = (dm) (bb.field_L.first(false));
+            DelayedServerPacket var4_ref_dm = (DelayedServerPacket) (bb.field_L.first(false));
             if (var4_ref_dm != null &&
-              var4_ref_dm.field_g < var2_long) {
+              var4_ref_dm.readyAtMillis < var2_long) {
               var4_ref_dm.unlink((byte) -67);
-              EmailSyntaxValidator.field_r = var4_ref_dm.field_j.length;
-              QuickChatDynamicCommand.field_g.position = 0;
+              EmailSyntaxValidator.field_r = var4_ref_dm.payload.length;
+              QuickChatDynamicCommand.incomingPackets.position = 0;
               for (int var5_int = 0; var5_int < EmailSyntaxValidator.field_r; var5_int++) {
-                QuickChatDynamicCommand.field_g.payload[var5_int] = var4_ref_dm.field_j[var5_int];
+                QuickChatDynamicCommand.incomingPackets.payload[var5_int] = var4_ref_dm.payload[var5_int];
               }
               NetworkGameClient.field_q = ArchiveIndex.field_t;
               ArchiveIndex.field_t = jj.field_b;
               jj.field_b = cd.field_v;
-              cd.field_v = var4_ref_dm.field_i;
+              cd.field_v = var4_ref_dm.opcode;
               return true;
             }
           }
@@ -435,15 +435,15 @@ final class BufferedRandomAccessFile {
         try {
           while (true) {
             if (stackIn_22_0 < 0) {
-              QuickChatDynamicCommand.field_g.position = 0;
+              QuickChatDynamicCommand.incomingPackets.position = 0;
               if (!bo.a(30000, 1)) {
                 return false;
               }
-              GameAppletShell.field_a = QuickChatDynamicCommand.field_g.readCipheredOpcode(8);
-              QuickChatDynamicCommand.field_g.position = 0;
+              GameAppletShell.field_a = QuickChatDynamicCommand.incomingPackets.readCipheredOpcode(8);
+              QuickChatDynamicCommand.incomingPackets.position = 0;
               EmailSyntaxValidator.field_r = param0[GameAppletShell.field_a];
             }
-            if (!ll.d(10550)) {
+            if (!ArchiveKeyRequest.hasCompletePacket(10550)) {
               return false;
             }
             if (vj.field_a == 0) {
@@ -461,9 +461,9 @@ final class BufferedRandomAccessFile {
                 var4 = 0;
               }
             }
-            dm var5 = new dm(var2_long + (long)var4, GameAppletShell.field_a, new byte[EmailSyntaxValidator.field_r]);
+            DelayedServerPacket var5 = new DelayedServerPacket(var2_long + (long)var4, GameAppletShell.field_a, new byte[EmailSyntaxValidator.field_r]);
             for (int var6 = 0; var6 < EmailSyntaxValidator.field_r; var6++) {
-              var5.field_j[var6] = QuickChatDynamicCommand.field_g.payload[var6];
+              var5.payload[var6] = QuickChatDynamicCommand.incomingPackets.payload[var6];
             }
             bb.field_L.addLast(-12328, var5);
             GameAppletShell.field_a = -1;

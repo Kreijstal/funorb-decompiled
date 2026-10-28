@@ -80,7 +80,7 @@ final class kh {
           int var6 = 21 / ((param1 - 62) / 60);
           int var4_int = param0.findGroupId(-1, param2);
           int var5 = param0.findFileId(var4_int, param3, true);
-          Sprite[] stackIn_1_0 = cc.a(var4_int, param0, var5, (byte) 75);
+          Sprite[] stackIn_1_0 = ProgressRecord.loadSprites(var4_int, param0, var5, (byte) 75);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,8 +126,8 @@ final class kh {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        int var3 = (255 & rl.field_k.field_k[param2]) + param1;
-        rl.field_k.field_k[param2] = (byte)MatchingTextValidator.a(var3, var3 << 23 >> 31);
+        int var3 = (255 & RatingQuery.field_k.field_k[param2]) + param1;
+        RatingQuery.field_k.field_k[param2] = (byte)MatchingTextValidator.a(var3, var3 << 23 >> 31);
         int var4 = -46 % ((-11 - param0) / 34);
     }
 

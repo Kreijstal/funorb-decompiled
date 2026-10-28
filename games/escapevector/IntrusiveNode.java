@@ -36,26 +36,26 @@ class IntrusiveNode {
         return false;
     }
 
-    final static void a(int param0, int param1, cc param2) {
-        CipherPacketBuffer var5 = QuickChatDynamicCommand.field_c;
-        var5.writeCipheredOpcode(param1, true);
+    final static void writeProgressRecord(int guard, int opcode, ProgressRecord record) {
+        CipherPacketBuffer var5 = QuickChatDynamicCommand.outgoingPackets;
+        var5.writeCipheredOpcode(opcode, true);
         var5.position = var5.position + 1;
         int var4 = var5.position;
-        if (param0 > -20) {
+        if (guard > -20) {
           return;
         }
         try {
           var5.writeByte(1, -123);
-          var5.writeByte(param2.field_i, -123);
-          var5.writeSignedSmart(12680, param2.field_m);
-          var5.writeInt((byte) 126, param2.field_n);
-          var5.writeInt((byte) 127, param2.field_h);
-          var5.writeInt((byte) 123, param2.field_o);
-          var5.writeInt((byte) 125, param2.field_g);
+          var5.writeByte(record.campaignId, -123);
+          var5.writeSignedSmart(12680, record.levelIndex);
+          var5.writeInt((byte) 126, record.field_n);
+          var5.writeInt((byte) 127, record.field_h);
+          var5.writeInt((byte) 123, record.field_o);
+          var5.writeInt((byte) 125, record.field_g);
           var5.appendCrc32(var4, -61);
           var5.backpatchByteLength(118, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "hg.WA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "hg.WA(" + guard + ',' + opcode + ',' + (record != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -82,7 +82,7 @@ class IntrusiveNode {
               param0.readBits(12, 8);
               var4[var5] = var6;
             } else {
-              int var6_int = param0.readBits(wf.a(var5 - 1, 24787), 8);
+              int var6_int = param0.readBits(IntrusiveDequeCursor.integerBitLength(var5 - 1, 24787), 8);
               var4[var5] = var4[var6_int];
             }
           }

@@ -268,22 +268,22 @@ final class Minimap {
         }
     }
 
-    private final tc[] a(IntrusiveDeque param0, int param1) {
+    private final SpriteStrip[] a(IntrusiveDeque param0, int param1) {
         String stackIn_9_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
           int var3_int = param0.size((byte) 62);
-          tc[] var4 = new tc[var3_int];
+          SpriteStrip[] var4 = new SpriteStrip[var3_int];
           int var5 = param1;
           IntrusiveNode var6 = param0.first(false);
           while (var6 != null) {
-            tc var7 = (tc) (var6);
+            SpriteStrip var7 = (SpriteStrip) (var6);
             int incrementValue$1 = var5;
             var5++;
             var4[incrementValue$1] = var7;
             var6 = param0.next((byte) 70);
           }
-          tc[] stackIn_5_0 = var4;
+          SpriteStrip[] stackIn_5_0 = var4;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -775,21 +775,21 @@ final class Minimap {
         if (!param0) {
           return;
         }
-        var4.addLast(-12328, new tc(new Sprite[]{this.a(this.field_y, -5425)}, 0));
+        var4.addLast(-12328, new SpriteStrip(new Sprite[]{this.a(this.field_y, -5425)}, 0));
         if (null != this.field_D) {
           var3.addLast(-12328, new sj(gk.field_b));
-          var4.addLast(-12328, new tc(new Sprite[]{this.a(this.field_q, -5425)}, 0));
+          var4.addLast(-12328, new SpriteStrip(new Sprite[]{this.a(this.field_q, -5425)}, 0));
         }
         IntrusiveDeque var5 = this.session.missionTargets;
         if (var5 != null &&
           !var5.isEmpty(-103)) {
           var3.addLast(-12328, new sj(wd.field_q));
-          var4.addLast(-12328, new tc(new Sprite[]{this.a(this.field_l, -5425)}, 0));
+          var4.addLast(-12328, new SpriteStrip(new Sprite[]{this.a(this.field_l, -5425)}, 0));
         }
         if (this.field_C != null &&
           !this.field_C.isEmpty(-111)) {
-          var3.addLast(-12328, new sj(vb.field_a));
-          var4.addLast(-12328, new tc(new Sprite[]{this.a(this.field_G, -5425)}, 0));
+          var3.addLast(-12328, new sj(IterableDualLinkDeque.field_a));
+          var4.addLast(-12328, new SpriteStrip(new Sprite[]{this.a(this.field_G, -5425)}, 0));
         }
         this.field_j = new wd(var2, this.a(var4, 0), this.b(var3, 11125));
         this.c((byte) -112);

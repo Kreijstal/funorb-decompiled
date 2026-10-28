@@ -221,8 +221,8 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         try {
           int var3_int = param0.length();
           if (param1 != -63) {
-            bd var12 = (bd) null;
-            SingleChildContainer.a(-19, (bd) null, 121);
+            SavedDataWrite var12 = (SavedDataWrite) null;
+            SingleChildContainer.writeSavedData(-19, (SavedDataWrite) null, 121);
           }
           int var4 = var3_int;
           int var5 = 0;
@@ -383,25 +383,25 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         return (UiComponent) null;
     }
 
-    final static void a(int param0, bd param1, int param2) {
+    final static void writeSavedData(int guard, SavedDataWrite write, int opcode) {
         String stackIn_9_2 = null;
         try {
-          CipherPacketBuffer var5 = QuickChatDynamicCommand.field_c;
-          var5.writeCipheredOpcode(param2, true);
+          CipherPacketBuffer var5 = QuickChatDynamicCommand.outgoingPackets;
+          var5.writeCipheredOpcode(opcode, true);
           var5.position = var5.position + 1;
           int var4 = var5.position;
           var5.writeByte(1, -123);
-          if (param1.field_j != null) {
-            var5.writeByte(param1.field_j.length, -123);
-            var5.writeBytes(param1.field_j.length, (byte) 21, 0, param1.field_j);
+          if (write.payload != null) {
+            var5.writeByte(write.payload.length, -123);
+            var5.writeBytes(write.payload.length, (byte) 21, 0, write.payload);
           } else {
             var5.writeByte(0, -123);
           }
           var5.appendCrc32(var4, -38);
           var5.position = var5.position - 4;
-          param1.field_i = var5.readInt(-5053);
+          write.crc32 = var5.readInt(-5053);
           var5.backpatchByteLength(-80, -var4 + var5.position);
-          if (param0 >= -80) {
+          if (guard >= -80) {
             SingleChildContainer.releaseStatics((byte) 12);
           }
           return;
@@ -409,13 +409,13 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_8_0 = var3;
-          StringBuilder stackIn_8_1 = new StringBuilder().append("r.IA(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_8_1 = new StringBuilder().append("r.IA(").append(guard).append(',');
+          if (write == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(opcode).append(')').toString());
         }
     }
 
@@ -433,8 +433,8 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
     public static void releaseStatics(byte guard) {
         field_A = null;
         if (guard != 58) {
-          bd var2 = (bd) null;
-          SingleChildContainer.a(-124, (bd) null, 82);
+          SavedDataWrite var2 = (SavedDataWrite) null;
+          SingleChildContainer.writeSavedData(-124, (SavedDataWrite) null, 82);
         }
     }
 
@@ -463,7 +463,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           if (var5_int != 80) {
             return false;
           }
-          if (ik.field_h[81]) {
+          if (ScoreSubmission.field_h[81]) {
             stackIn_12_0 = this.focusChildIfUnfocused(-106, root);
           } else {
             stackIn_12_0 = this.focusChildIfUnfocused(root, -812);

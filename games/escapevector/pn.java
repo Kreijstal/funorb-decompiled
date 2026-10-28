@@ -32,12 +32,12 @@ class pn extends fj implements ButtonListener {
             var6.a(false, TerrainMap.field_i, 11);
             var6.a(false, EmailAvailabilityRequest.field_d, 17);
           } else if (param2 == 256) {
-            var6.a((UiListener) (this), (byte) -67, sh.field_s);
+            var6.a((UiListener) (this), (byte) -67, WeightedCacheEntry.field_s);
           } else {
             qi stackIn_14_0 = var6;
             boolean stackIn_14_1 = false;
             if (this.field_ob) {
-              stackIn_15_2 = sh.field_s;
+              stackIn_15_2 = WeightedCacheEntry.field_s;
             } else {
               stackIn_15_2 = Minimap.field_O;
             }

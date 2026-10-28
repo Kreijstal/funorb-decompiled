@@ -32,16 +32,16 @@ final class mj {
               } else {
                 ArchiveIndex.field_m = ei.a(param0 - 1, false, mg.field_d, (String) null, param2);
               }
-              QuickChatDynamicCommand.field_c.position = 0;
-              QuickChatDynamicCommand.field_c.writeByte(14, -123);
-              QuickChatDynamicCommand.field_c.writeByte(ArchiveIndex.field_m.a((byte) 32).field_d, -123);
+              QuickChatDynamicCommand.outgoingPackets.position = 0;
+              QuickChatDynamicCommand.outgoingPackets.writeByte(14, -123);
+              QuickChatDynamicCommand.outgoingPackets.writeByte(ArchiveIndex.field_m.a((byte) 32).field_d, -123);
               ClientException.a(-1, 30785);
-              al.field_d = tc.field_p;
+              al.field_d = SpriteStrip.field_p;
             }
-            if (al.field_d == tc.field_p &&
+            if (al.field_d == SpriteStrip.field_p &&
               bo.a(30000, 1)) {
-              int var6_int = QuickChatDynamicCommand.field_g.readUnsignedByte(0);
-              QuickChatDynamicCommand.field_g.position = 0;
+              int var6_int = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
+              QuickChatDynamicCommand.incomingPackets.position = 0;
               if (0 == var6_int) {
                 al.field_d = ha.field_c;
               } else {
@@ -52,18 +52,18 @@ final class mj {
             }
             if (al.field_d == ha.field_c &&
               bo.a(30000, 8)) {
-              SecondaryIntrusiveDeque.field_b = QuickChatDynamicCommand.field_g.readLong(param0 - 800509814);
-              QuickChatDynamicCommand.field_g.position = 0;
+              SecondaryIntrusiveDeque.field_b = QuickChatDynamicCommand.incomingPackets.readLong(param0 - 800509814);
+              QuickChatDynamicCommand.incomingPackets.position = 0;
               oh.a(ArchiveIndex.field_m, param4, param1, param5, (byte) -99);
               al.field_d = mc.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
             if (mc.field_b == al.field_d &&
               bo.a(30000, 1)) {
-              int var6_intLifetime1 = QuickChatDynamicCommand.field_g.readUnsignedByte(0);
+              int var6_intLifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
               cd.field_v = var6_intLifetime1;
               p.field_i = null;
-              QuickChatDynamicCommand.field_g.position = 0;
+              QuickChatDynamicCommand.incomingPackets.position = 0;
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
@@ -84,13 +84,13 @@ final class mj {
               }
             }
             if (al.field_d == ClientException.field_c &&
-              ll.d(param0 + 10549)) {
-              mg.field_d = QuickChatDynamicCommand.field_g.readLong(-800509813);
-              mg.field_b = QuickChatDynamicCommand.field_g.readUnsignedByte(0);
-              QuickChatDynamicCommand.field_g.readUnsignedByte(0);
-              Js5NetworkRequest.field_x = QuickChatDynamicCommand.field_g.readUnsignedShort(1952);
-              String var6 = QuickChatDynamicCommand.field_g.readNullableString(-15208);
-              int var7 = QuickChatDynamicCommand.field_g.readUnsignedByte(0);
+              ArchiveKeyRequest.hasCompletePacket(param0 + 10549)) {
+              mg.field_d = QuickChatDynamicCommand.incomingPackets.readLong(-800509813);
+              mg.field_b = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
+              QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
+              Js5NetworkRequest.field_x = QuickChatDynamicCommand.incomingPackets.readUnsignedShort(1952);
+              String var6 = QuickChatDynamicCommand.incomingPackets.readNullableString(-15208);
+              int var7 = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
               if ((1 & var7) != 0) {
                 NameAvailabilityResult.a((byte) -63);
               }
@@ -103,19 +103,19 @@ final class mj {
                 }
               }
               if (jc.field_b) {
-                QuickChatDynamicCommand.field_g.readUnsignedByte(param0 ^ 1);
-                QuickChatDynamicCommand.field_g.readUnsignedByte(0);
-                QuickChatDynamicCommand.field_g.readInt(param0 - 5054);
-                kb.field_e = QuickChatDynamicCommand.field_g.readUnsignedShort(1952);
-                lf.field_K = new byte[kb.field_e];
-                for (int var8 = 0; var8 < kb.field_e; var8++) {
-                  lf.field_K[var8] = QuickChatDynamicCommand.field_g.readByte(false);
+                QuickChatDynamicCommand.incomingPackets.readUnsignedByte(param0 ^ 1);
+                QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
+                QuickChatDynamicCommand.incomingPackets.readInt(param0 - 5054);
+                SocketConnector.field_e = QuickChatDynamicCommand.incomingPackets.readUnsignedShort(1952);
+                lf.field_K = new byte[SocketConnector.field_e];
+                for (int var8 = 0; var8 < SocketConnector.field_e; var8++) {
+                  lf.field_K[var8] = QuickChatDynamicCommand.incomingPackets.readByte(false);
                 }
               }
-              ck.field_r = QuickChatDynamicCommand.field_g.readString(false);
+              ck.field_r = QuickChatDynamicCommand.incomingPackets.readString(false);
               CharSequence var11 = (CharSequence) ((Object) ck.field_r);
-              cc.field_k = sf.a(-83, var11);
-              LaserGateSpan.field_g = QuickChatDynamicCommand.field_g.readUnsignedByte(param0 - 1);
+              ProgressRecord.field_k = sf.a(-83, var11);
+              LaserGateSpan.field_g = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(param0 - 1);
               al.field_d = ck.field_t;
               if (ArchiveIndex.field_m.a((byte) 32) == md.field_E) {
                 NameAvailabilityValidator.field_q.a(27002, PointCloudEffect.d((byte) -114));
@@ -136,7 +136,7 @@ final class mj {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWindowFunctionWithArguments((byte) 116, PointCloudEffect.d((byte) -128), new Object[]{jb.a(mg.field_d, (byte) 29)}, "zap");
+                  JavaScriptBridge.callWindowFunctionWithArguments((byte) 116, PointCloudEffect.d((byte) -128), new Object[]{ProxySocketConnector.decodeBase37Name(mg.field_d, (byte) 29)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -145,16 +145,16 @@ final class mj {
               if (Js5NetworkRequest.field_x > 0) {
                 ej.field_d = true;
               }
-              QuickChatDynamicCommand.field_c.initializeCipher(NameSuggestionsPanel.field_O, (byte) 107);
+              QuickChatDynamicCommand.outgoingPackets.initializeCipher(NameSuggestionsPanel.field_O, (byte) 107);
               for (int var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 NameSuggestionsPanel.field_O[var8Lifetime1] = NameSuggestionsPanel.field_O[var8Lifetime1] + 50;
               }
-              QuickChatDynamicCommand.field_g.initializeCipher(NameSuggestionsPanel.field_O, (byte) 85);
+              QuickChatDynamicCommand.incomingPackets.initializeCipher(NameSuggestionsPanel.field_O, (byte) 85);
               int stackIn_81_0 = cd.field_v;
               return stackIn_81_0;
             }
             if (CheckboxPainter.field_q == al.field_d &&
-              ll.d(param0 + 10549)) {
+              ArchiveKeyRequest.hasCompletePacket(param0 + 10549)) {
               nm.a(16);
               if (cd.field_v == 7 &&
                 !e.field_c) {
@@ -165,7 +165,7 @@ final class mj {
               if (cd.field_v == 7) {
                 cd.field_v = 3;
               }
-              MouseWheelInput.field_a = QuickChatDynamicCommand.field_g.readString(false);
+              MouseWheelInput.field_a = QuickChatDynamicCommand.incomingPackets.readString(false);
               e.field_c = false;
               int stackIn_93_0 = cd.field_v;
               return stackIn_93_0;

@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-abstract class kb {
+abstract class SocketConnector {
     static int field_e;
-    static volatile int field_f;
-    int field_b;
+    static volatile int pendingClickButton;
+    int port;
     static String field_g;
     static int field_d;
     static Sprite field_c;
-    String field_a;
+    String host;
 
     public static void releaseStatics(boolean guard) {
         field_g = null;
@@ -20,17 +20,17 @@ abstract class kb {
         }
     }
 
-    abstract java.net.Socket a(int param0) throws IOException;
+    abstract java.net.Socket connect(int firstProxyIndex) throws IOException;
 
-    final java.net.Socket b(boolean param0) throws IOException {
-        if (param0) {
+    final java.net.Socket connectDirect(boolean guard) throws IOException {
+        if (guard) {
           return (java.net.Socket) null;
         }
-        return new java.net.Socket(this.field_a, this.field_b);
+        return new java.net.Socket(this.host, this.port);
     }
 
     static {
-        field_f = 0;
+        pendingClickButton = 0;
         field_g = "Resume Game";
     }
 }

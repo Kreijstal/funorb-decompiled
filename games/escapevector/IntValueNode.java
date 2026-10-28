@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntValueNode extends IntrusiveNode {
-    static ik field_i;
+    static ScoreSubmission field_i;
     static String[] field_h;
     int value;
     static boolean field_j;
@@ -38,7 +38,7 @@ final class IntValueNode extends IntrusiveNode {
                 var4 = var4 + var2.substring(var3);
               }
               java.net.URL var5 = new java.net.URL(param1.getCodeBase(), var4);
-              param1.getAppletContext().showDocument(sh.a((byte) 12, param1, var5), "_self");
+              param1.getAppletContext().showDocument(WeightedCacheEntry.withSessionParameters((byte) 12, param1, var5), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -65,7 +65,7 @@ final class qh {
         String stackIn_16_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          hb.field_b = new Sprite[7][3];
+          NodeHashTableIterator.field_b = new Sprite[7][3];
           qi.field_M = new Sprite[7][3];
           if (param1 != -23) {
             qh.releaseStatics(-112);
@@ -75,7 +75,7 @@ final class qh {
             if (var3 != null &&
               var3.length() != 0) {
               String var4 = "";
-              hb.field_b[var2_int] = kh.a(param0, (byte) -112, var4, var3);
+              NodeHashTableIterator.field_b[var2_int] = kh.a(param0, (byte) -112, var4, var3);
               String var5 = NameAvailabilityResult.field_b[var2_int];
               if (var5 != null &&
                 var5.length() != 0) {
@@ -98,14 +98,14 @@ final class qh {
         }
     }
 
-    final static void a(rl param0, boolean param1, int param2) {
+    final static void writeRatingQuery(RatingQuery query, boolean guard, int opcode) {
         try {
-          CipherPacketBuffer var3 = QuickChatDynamicCommand.field_c;
-          var3.writeCipheredOpcode(param2, param1);
-          var3.writeByte(param0.field_i, -123);
-          var3.writeByte(param0.field_g, -123);
+          CipherPacketBuffer var3 = QuickChatDynamicCommand.outgoingPackets;
+          var3.writeCipheredOpcode(opcode, guard);
+          var3.writeByte(query.requestId, -123);
+          var3.writeByte(query.rowCount, -123);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "qh.D(" + (query != null ? "{...}" : "null") + ',' + guard + ',' + opcode + ')');
         }
     }
 

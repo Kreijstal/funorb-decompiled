@@ -17,18 +17,18 @@ final class ck extends TextWidgetPainter {
     final static void a(int param0, byte param1) {
         int var3 = EscapeVector.obfuscationControl;
         try {
-          ik var4 = (ik) (vj.field_d.first(false));
+          ScoreSubmission var4 = (ScoreSubmission) (vj.field_d.first(false));
           while (var4 != null) {
-            ig.a(param1 - 209, param0, var4);
-            var4 = (ik) (vj.field_d.next((byte) 70));
+            ig.writeScoreSubmission(param1 - 209, param0, var4);
+            var4 = (ScoreSubmission) (vj.field_d.next((byte) 70));
           }
           if (param1 != 105) {
             field_q = -25L;
           }
-          ij var5 = (ij) (qd.field_n.first(false));
+          HighscoreQuery var5 = (HighscoreQuery) (AchievementRecord.field_n.first(false));
           while (var5 != null) {
-            aj.a(42, param0, var5);
-            var5 = (ij) (qd.field_n.next((byte) 70));
+            aj.writeHighscoreQuery(42, param0, var5);
+            var5 = (HighscoreQuery) (AchievementRecord.field_n.next((byte) 70));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

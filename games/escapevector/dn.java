@@ -34,13 +34,13 @@ final class dn {
     private int field_D;
 
     private final void a(byte param0) {
-        tc[] var2 = this.b(false);
-        String[] var3 = new String[]{gk.field_b, UiContainer.field_D, nl.field_a, kc.field_a, ArchiveProvider.field_c, gn.field_l, hb.field_a};
+        SpriteStrip[] var2 = this.b(false);
+        String[] var3 = new String[]{gk.field_b, UiContainer.field_D, nl.field_a, kc.field_a, ArchiveProvider.field_c, gn.field_l, NodeHashTableIterator.field_a};
         this.a(var3, (byte) -10);
         ih var4 = fh.field_g;
         int var5 = 16777215;
         int var6 = this.g((byte) 49);
-        this.field_o = new wd(vb.field_a, var2, var3);
+        this.field_o = new wd(IterableDualLinkDeque.field_a, var2, var3);
         if (param0 <= 111) {
           return;
         }
@@ -282,7 +282,7 @@ final class dn {
         if (param0 == ~var2) {
           PcmSample var3 = pc.field_a;
           int var4 = 100;
-          int var5 = 6144 * qm.field_c / 64;
+          int var5 = 6144 * IterableNodeHashTable.field_c / 64;
           int var6 = 8192;
           PcmStreamMixer var7 = ObjectSpriteSet.field_e;
           var7.playSampleWithPan(var3, var4, var5, var6);
@@ -296,7 +296,7 @@ final class dn {
         PcmStreamMixer var2 = ObjectSpriteSet.field_e;
         PcmSample var3 = ArchiveRequest.field_w;
         int var4 = 100;
-        int var5 = param0 * qm.field_c / 64;
+        int var5 = param0 * IterableNodeHashTable.field_c / 64;
         int var6 = 8192;
         var2.playSampleWithPan(var3, var4, var5, var6);
     }
@@ -483,7 +483,7 @@ final class dn {
         int var4 = this.a(104, dh.field_d, UiContainer.field_y);
         this.field_d.a(121, param0, var4, var3);
         if (param1) {
-          tc[] discarded$0 = this.b(true);
+          SpriteStrip[] discarded$0 = this.b(true);
         }
     }
 
@@ -522,7 +522,7 @@ final class dn {
           }
         }
         if (12 <= var6.levelIndex) {
-          String[] var4 = new String[]{var3_ref, " ", fa.field_e};
+          String[] var4 = new String[]{var3_ref, " ", WeightedLruCache.field_e};
           return var4;
         }
         String[] var4Lifetime1 = new String[]{var3_ref};
@@ -631,7 +631,7 @@ final class dn {
           return;
         }
         try {
-          hd.field_e = param0;
+          DelegatingCanvas.field_e = param0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dn.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -646,10 +646,10 @@ final class dn {
         return ua.field_b;
     }
 
-    private final tc[] b(boolean param0) {
+    private final SpriteStrip[] b(boolean param0) {
         int var12 = EscapeVector.obfuscationControl;
         if (param0) {
-          return (tc[]) null;
+          return (SpriteStrip[]) null;
         }
         Sprite[] var13 = this.a(-4898, 1);
         Sprite[] var2 = var13;
@@ -661,7 +661,7 @@ final class dn {
           return null;
         }
         int var4 = var13.length;
-        tc[] var5 = new tc[var4];
+        SpriteStrip[] var5 = new SpriteStrip[var4];
         int var6 = 8;
         for (int var7 = 0; var4 > var7; var7++) {
           Sprite var8 = var13[var7];
@@ -670,7 +670,7 @@ final class dn {
             var9 = var3[var7];
           }
           Sprite[] var10 = new Sprite[]{var8, (Sprite) (var9)};
-          tc var11 = new tc(var10, var6);
+          SpriteStrip var11 = new SpriteStrip(var10, var6);
           var5[var7] = var11;
         }
         return var5;
@@ -829,7 +829,7 @@ final class dn {
             int[] stackIn_7_0 = this.a(var12, var11, var10, this.field_e, 10551200, var9, param3, var7, var8);
             return stackIn_7_0;
           }
-          String var12Lifetime1 = fa.field_f;
+          String var12Lifetime1 = WeightedLruCache.field_f;
           int[] stackIn_5_0 = this.a(var12Lifetime1, var11, var10, this.field_g, 10551200, var9, param3, var7, var8);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1047,7 +1047,7 @@ final class dn {
     }
 
     private final void a(boolean param0) {
-        String[] var8 = new String[]{um.field_c, dc.field_i, PacketBuffer.field_k, SpriteOffset.field_a, tc.field_h, ll.field_h, ea.field_i};
+        String[] var8 = new String[]{um.field_c, ProgressQuery.field_i, PacketBuffer.field_k, SpriteOffset.field_a, SpriteStrip.field_h, ArchiveKeyRequest.field_h, ea.field_i};
         if (!param0) {
           return;
         }

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends IntrusiveNode {
-    private Sprite[] field_l;
-    private int field_q;
+final class SpriteStrip extends IntrusiveNode {
+    private Sprite[] sprites;
+    private int spacing;
     static hf field_p;
     static dh field_g;
     static String field_j;
@@ -11,7 +11,7 @@ final class tc extends IntrusiveNode {
     static String field_o;
     static char[] field_n;
     static char[][] field_k;
-    private int field_m;
+    private int width;
     static String field_h;
 
     public static void releaseStatics(int guard) {
@@ -26,62 +26,62 @@ final class tc extends IntrusiveNode {
         field_h = null;
     }
 
-    private final void a(byte param0) {
+    private final void updateWidth(byte guard) {
         int var4 = EscapeVector.obfuscationControl;
-        this.field_m = 0;
-        if (null == this.field_l) {
+        this.width = 0;
+        if (null == this.sprites) {
           return;
         }
-        if (0 == this.field_l.length) {
+        if (0 == this.sprites.length) {
           return;
         }
-        if (param0 <= 84) {
-          tc.releaseStatics(-24);
+        if (guard <= 84) {
+          SpriteStrip.releaseStatics(-24);
         }
-        for (int var2 = 0; this.field_l.length > var2; var2++) {
-          Sprite var3 = this.field_l[var2];
+        for (int var2 = 0; this.sprites.length > var2; var2++) {
+          Sprite var3 = this.sprites[var2];
           if (var3 != null) {
-            this.field_m = this.field_m + var3.fullWidth;
-            this.field_m = this.field_m + this.field_q;
+            this.width = this.width + var3.fullWidth;
+            this.width = this.width + this.spacing;
           }
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void draw(int guard, int x, int y) {
         int var6 = EscapeVector.obfuscationControl;
-        if (param0 != 103) {
+        if (guard != 103) {
           field_n = (char[]) null;
         }
-        if (this.field_l == null) {
+        if (this.sprites == null) {
           return;
         }
-        if (this.field_l.length == 0) {
+        if (this.sprites.length == 0) {
           return;
         }
-        for (int var4 = 0; var4 < this.field_l.length; var4++) {
-          Sprite var5 = this.field_l[var4];
+        for (int var4 = 0; var4 < this.sprites.length; var4++) {
+          Sprite var5 = this.sprites[var4];
           if (var5 != null) {
-            var5.e(param1, param2);
-            param1 = param1 + var5.fullWidth;
-            param1 = param1 + this.field_q;
+            var5.e(x, y);
+            x = x + var5.fullWidth;
+            x = x + this.spacing;
           }
         }
     }
 
-    final int d(int param0) {
-        if (param0 != 11384) {
-          this.a((byte) -120);
+    final int width(int guard) {
+        if (guard != 11384) {
+          this.updateWidth((byte) -120);
         }
-        return this.field_m;
+        return this.width;
     }
 
-    tc(Sprite[] param0, int param1) {
+    SpriteStrip(Sprite[] sprites, int spacing) {
         try {
-          this.field_q = param1;
-          this.field_l = param0;
-          this.a((byte) 112);
+          this.spacing = spacing;
+          this.sprites = sprites;
+          this.updateWidth((byte) 112);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "tc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "tc.<init>(" + (sprites != null ? "{...}" : "null") + ',' + spacing + ')');
         }
     }
 

@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sh extends DualLinkNode {
-    int field_q;
+abstract class WeightedCacheEntry extends DualLinkNode {
+    int weight;
     static String field_r;
     static String field_s;
 
-    abstract boolean d(byte param0);
+    abstract boolean isSoft(byte guard);
 
-    abstract Object e(byte param0);
+    abstract Object getValue(byte guard);
 
     public static void releaseStatics(int guard) {
         field_s = null;
         field_r = null;
         if (guard != 0) {
           java.net.URL var2 = (java.net.URL) null;
-          sh.a((byte) -113, (java.applet.Applet) null, (java.net.URL) null);
+          WeightedCacheEntry.withSessionParameters((byte) -113, (java.applet.Applet) null, (java.net.URL) null);
         }
     }
 
-    final static ee a(byte param0, java.applet.Applet param1) {
+    final static ee readLastLoginMethod(byte guard, java.applet.Applet applet) {
         ee var5 = null;
         String stackIn_18_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          String var2 = dc.a((byte) 90, "jagex-last-login-method", param1);
-          if (param0 != -1) {
+          String var2 = ProgressQuery.readCookie((byte) 90, "jagex-last-login-method", applet);
+          if (guard != -1) {
             ee stackIn_3_0 = (ee) null;
             return stackIn_3_0;
           }
@@ -53,8 +53,8 @@ abstract class sh extends DualLinkNode {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
           RuntimeException stackIn_17_0 = var2_ref;
-          StringBuilder stackIn_17_1 = new StringBuilder().append("sh.C(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_17_1 = new StringBuilder().append("sh.C(").append(guard).append(',');
+          if (applet == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
@@ -63,45 +63,45 @@ abstract class sh extends DualLinkNode {
         }
     }
 
-    sh(int param0) {
-        this.field_q = param0;
+    WeightedCacheEntry(int weight) {
+        this.weight = weight;
     }
 
-    final static java.net.URL a(byte param0, java.applet.Applet param1, java.net.URL param2) {
+    final static java.net.URL withSessionParameters(byte guard, java.applet.Applet applet, java.net.URL url) {
         Object var3 = null;
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         try {
           var3 = null;
           Object var4 = null;
-          if (param0 < 11) {
+          if (guard < 11) {
             java.net.URL stackIn_2_0 = (java.net.URL) null;
             return stackIn_2_0;
           }
           if (null != oh.field_p &&
-            !oh.field_p.equals(param1.getParameter("settings"))) {
+            !oh.field_p.equals(applet.getParameter("settings"))) {
             var3 = oh.field_p;
             var4 = var3;
             var4 = var3;
           }
           if (wi.field_i != null &&
-            !wi.field_i.equals(param1.getParameter("session"))) {
+            !wi.field_i.equals(applet.getParameter("session"))) {
             var4 = wi.field_i;
           }
-          java.net.URL stackIn_10_0 = RasterBuffer.a((String) (var4), -1, (String) (var3), param2, 1);
+          java.net.URL stackIn_10_0 = RasterBuffer.a((String) (var4), -1, (String) (var3), url, 1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           Object stackIn_13_0 = var3;
-          StringBuilder stackIn_13_1 = new StringBuilder().append("sh.A(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_13_1 = new StringBuilder().append("sh.A(").append(guard).append(',');
+          if (applet == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param2 == null) {
+          if (url == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";

@@ -74,7 +74,7 @@ final class ClientException extends RuntimeException {
               return stackIn_18_0;
             }
             String var6 = var4[var5];
-            var7 = vk.a(var6, param1 - 116);
+            var7 = StrongCacheEntry.validateDomainLabel(var6, param1 - 116);
             if (var7 == null) {
               var5++;
               continue;
@@ -101,20 +101,20 @@ final class ClientException extends RuntimeException {
         try {
           if (TextLayout.field_c != null && (0 > param0 ||
             al.field_d == ck.field_t)) {
-            if (QuickChatDynamicCommand.field_c.position == 0 &&
+            if (QuickChatDynamicCommand.outgoingPackets.position == 0 &&
               (10000L + le.field_c) < td.b(128)) {
-              QuickChatDynamicCommand.field_c.writeCipheredOpcode(param0, true);
+              QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(param0, true);
             }
-            if (0 < QuickChatDynamicCommand.field_c.position) {
+            if (0 < QuickChatDynamicCommand.outgoingPackets.position) {
               try {
-                TextLayout.field_c.a(QuickChatDynamicCommand.field_c.position, 0, QuickChatDynamicCommand.field_c.payload, 5000);
+                TextLayout.field_c.a(QuickChatDynamicCommand.outgoingPackets.position, 0, QuickChatDynamicCommand.outgoingPackets.payload, 5000);
                 le.field_c = td.b(128);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 Throwable decompiledCaughtException = decompiledCaughtParameter0;
                 IOException iOException = (IOException) (Object) decompiledCaughtException;
                 nm.a(16);
               }
-              QuickChatDynamicCommand.field_c.position = 0;
+              QuickChatDynamicCommand.outgoingPackets.position = 0;
             }
             if (param1 == 30785) {
               return;
@@ -122,7 +122,7 @@ final class ClientException extends RuntimeException {
             ClientException.releaseStatics(true);
             return;
           }
-          QuickChatDynamicCommand.field_c.position = 0;
+          QuickChatDynamicCommand.outgoingPackets.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

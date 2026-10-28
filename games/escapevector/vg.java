@@ -147,7 +147,7 @@ abstract class vg extends bb {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        cc.field_j.e(-90 + (param1 + this.width), 10 + param0);
+        ProgressRecord.field_j.e(-90 + (param1 + this.width), 10 + param0);
         ee.a(5 + param1, -10 + this.width, true, nn.field_a, 35 + param0);
         ee.a(param1, this.width, true, bn.field_d, param0 + this.height - 22);
         int var5Lifetime2 = 169;

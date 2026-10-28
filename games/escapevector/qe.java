@@ -34,7 +34,7 @@ final class qe {
           var8[this.field_d] = null;
         } else {
           var5 = 256;
-          int var6 = qm.field_c * 6144 / 64;
+          int var6 = IterableNodeHashTable.field_c * 6144 / 64;
           int var7 = 16384 * this.field_f.field_h / 640;
           var4.rampVolumeAndPanQ6(var5, var6, var7);
         }

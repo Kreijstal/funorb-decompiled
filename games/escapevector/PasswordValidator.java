@@ -153,7 +153,7 @@ final class PasswordValidator extends TextFieldValidator {
             ValidationState stackIn_2_0 = ArchiveProvider.field_a;
             return stackIn_2_0;
           }
-          if (!hd.a(var4, false, var3)) {
+          if (!DelegatingCanvas.isPasswordAcceptable(var4, false, var3)) {
             ValidationState stackIn_5_0 = ArchiveProvider.field_a;
             return stackIn_5_0;
           }
@@ -177,7 +177,7 @@ final class PasswordValidator extends TextFieldValidator {
     }
 
     final static int a(int param0, int param1) {
-        if (!qd.a(param1, -102)) {
+        if (!AchievementRecord.a(param1, -102)) {
           return 1;
         }
         if (param0 == 1) {

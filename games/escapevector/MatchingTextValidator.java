@@ -126,10 +126,10 @@ final class MatchingTextValidator extends TextFieldValidator {
 
     final static void c(boolean param0) {
         Throwable decompiledCaughtException = null;
-        if (QuickChatDynamicCommand.field_b != null) {
-          Object var1 = QuickChatDynamicCommand.field_b;
+        if (QuickChatDynamicCommand.mouseHandler != null) {
+          Object var1 = QuickChatDynamicCommand.mouseHandler;
           synchronized (var1) {
-            QuickChatDynamicCommand.field_b = null;
+            QuickChatDynamicCommand.mouseHandler = null;
           }
         }
         if (!param0) {

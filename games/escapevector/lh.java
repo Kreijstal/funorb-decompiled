@@ -19,7 +19,7 @@ final class lh {
           if (var1 == null &&
             LaserGateSpan.field_k < 80) {
             LaserGateSpan.field_k = 95;
-            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, 3072 * qm.field_c / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
           }
           Object var2 = null;
           int var3 = 0;
@@ -30,12 +30,12 @@ final class lh {
               var3 = (77 - var18.fullHeight) / 2;
             } else {
               if (SelfDestructEffects.field_q == 0) {
-                Sprite var17 = kb.field_c;
+                Sprite var17 = SocketConnector.field_c;
                 var2 = var17;
                 var3 = (77 - var17.fullHeight) / 2;
                 if (var2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k > 80) {
                     LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -45,7 +45,7 @@ final class lh {
                   EmailAvailabilityValidator.field_t = (Sprite) (var2);
                   if (!(LaserGateSpan.field_k >= 95)) {
                     LaserGateSpan.field_k = 95;
-                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   } else if (LaserGateSpan.field_k < 110) {
                     LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                   }
@@ -53,7 +53,7 @@ final class lh {
                 return;
               }
               if (SelfDestructEffects.field_q == 1) {
-                Sprite var12 = kb.field_c;
+                Sprite var12 = SocketConnector.field_c;
                 var2 = var12;
                 var3 = (77 - var12.fullHeight) / 2;
               } else if (SelfDestructEffects.field_q == 2) {
@@ -74,7 +74,7 @@ final class lh {
                   var3 = (-((Sprite) (var2)).fullHeight + 90) / 2;
                   if (var2 == null) {
                     if (LaserGateSpan.field_k == 110) {
-                      ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                      ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                     }
                     if (LaserGateSpan.field_k > 80) {
                       LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -84,7 +84,7 @@ final class lh {
                     EmailAvailabilityValidator.field_t = (Sprite) (var2);
                     if (!(LaserGateSpan.field_k >= 95)) {
                       LaserGateSpan.field_k = 95;
-                      ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                      ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                     } else if (LaserGateSpan.field_k < 110) {
                       LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                     }
@@ -105,7 +105,7 @@ final class lh {
           }
           if (var2 == null) {
             if (LaserGateSpan.field_k == 110) {
-              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
             }
             if (LaserGateSpan.field_k <= 80) {
               return;
@@ -116,7 +116,7 @@ final class lh {
             EmailAvailabilityValidator.field_t = (Sprite) (var2);
             if (LaserGateSpan.field_k < 95) {
               LaserGateSpan.field_k = 95;
-              ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+              ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
               return;
             }
             if (LaserGateSpan.field_k < 110) {
@@ -141,12 +141,12 @@ final class lh {
               var3Lifetime1 = (77 - var25.fullHeight) / 2;
             } else {
               if (SelfDestructEffects.field_q == 0) {
-                Sprite var24 = kb.field_c;
+                Sprite var24 = SocketConnector.field_c;
                 var2Lifetime1 = var24;
                 var3Lifetime1 = (77 - var24.fullHeight) / 2;
                 if (var2Lifetime1 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k > 80) {
                     LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -156,7 +156,7 @@ final class lh {
                   EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime1);
                   if (!(LaserGateSpan.field_k >= 95)) {
                     LaserGateSpan.field_k = 95;
-                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   } else if (LaserGateSpan.field_k < 110) {
                     LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                   }
@@ -164,7 +164,7 @@ final class lh {
                 return;
               }
               if (SelfDestructEffects.field_q == 1) {
-                Sprite var19 = kb.field_c;
+                Sprite var19 = SocketConnector.field_c;
                 var2Lifetime1 = var19;
                 var3Lifetime1 = (77 - var19.fullHeight) / 2;
               } else if (SelfDestructEffects.field_q == 2) {
@@ -185,7 +185,7 @@ final class lh {
                   var3Lifetime1 = (-((Sprite) (var2Lifetime1)).fullHeight + 90) / 2;
                   if (var2Lifetime1 == null) {
                     if (LaserGateSpan.field_k == 110) {
-                      ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                      ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                     }
                     if (LaserGateSpan.field_k > 80) {
                       LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -195,7 +195,7 @@ final class lh {
                     EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime1);
                     if (!(LaserGateSpan.field_k >= 95)) {
                       LaserGateSpan.field_k = 95;
-                      ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                      ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                     } else if (LaserGateSpan.field_k < 110) {
                       LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                     }
@@ -216,7 +216,7 @@ final class lh {
           }
           if (var2Lifetime1 == null) {
             if (LaserGateSpan.field_k == 110) {
-              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
             }
             if (LaserGateSpan.field_k <= 80) {
               return;
@@ -228,7 +228,7 @@ final class lh {
           EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime1);
           if (LaserGateSpan.field_k < 95) {
             LaserGateSpan.field_k = 95;
-            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
             return;
           }
           if (LaserGateSpan.field_k >= 110) {
@@ -239,14 +239,14 @@ final class lh {
         }
         if (LaserGateSpan.field_k < 80) {
           LaserGateSpan.field_k = 95;
-          ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, 3072 * qm.field_c / 64, 8192);
+          ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
         }
         Object var2Lifetime2 = null;
         int var3Lifetime2 = 0;
         if (wk.field_c) {
           if (var2Lifetime2 == null) {
             if (LaserGateSpan.field_k == 110) {
-              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
             }
             if (LaserGateSpan.field_k <= 80) {
               return;
@@ -258,7 +258,7 @@ final class lh {
           EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
           if (LaserGateSpan.field_k < 95) {
             LaserGateSpan.field_k = 95;
-            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
             return;
           }
           if (LaserGateSpan.field_k >= 110) {
@@ -273,12 +273,12 @@ final class lh {
           var3Lifetime2 = (77 - var32.fullHeight) / 2;
         } else {
           if (SelfDestructEffects.field_q == 0) {
-            Sprite var31 = kb.field_c;
+            Sprite var31 = SocketConnector.field_c;
             var2Lifetime2 = var31;
             var3Lifetime2 = (77 - var31.fullHeight) / 2;
             if (var2Lifetime2 == null) {
               if (LaserGateSpan.field_k == 110) {
-                ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
               }
               if (LaserGateSpan.field_k <= 80) {
                 return;
@@ -289,7 +289,7 @@ final class lh {
               EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
               if (LaserGateSpan.field_k < 95) {
                 LaserGateSpan.field_k = 95;
-                ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                 return;
               }
               if (LaserGateSpan.field_k < 110) {
@@ -300,7 +300,7 @@ final class lh {
             return;
           }
           if (SelfDestructEffects.field_q == 1) {
-            Sprite var26 = kb.field_c;
+            Sprite var26 = SocketConnector.field_c;
             var2Lifetime2 = var26;
             var3Lifetime2 = (77 - var26.fullHeight) / 2;
           } else if (SelfDestructEffects.field_q != 2) {
@@ -308,7 +308,7 @@ final class lh {
               if (PacketBuffer.field_h) {
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -320,7 +320,7 @@ final class lh {
                 EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
                 if (LaserGateSpan.field_k < 95) {
                   LaserGateSpan.field_k = 95;
-                  ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                  ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   return;
                 }
                 if (LaserGateSpan.field_k >= 110) {
@@ -338,7 +338,7 @@ final class lh {
                 var3Lifetime2 = (-((Sprite) (var2Lifetime2)).fullHeight + 90) / 2;
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -349,7 +349,7 @@ final class lh {
                   EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
                   if (LaserGateSpan.field_k < 95) {
                     LaserGateSpan.field_k = 95;
-                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                     return;
                   }
                   if (LaserGateSpan.field_k < 110) {
@@ -365,7 +365,7 @@ final class lh {
                 var3Lifetime2 = (66 - var29.fullHeight) / 2;
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -377,7 +377,7 @@ final class lh {
                 EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
                 if (LaserGateSpan.field_k < 95) {
                   LaserGateSpan.field_k = 95;
-                  ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                  ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   return;
                 }
                 if (LaserGateSpan.field_k >= 110) {
@@ -389,7 +389,7 @@ final class lh {
               if (!ch.field_b) {
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -400,7 +400,7 @@ final class lh {
                   EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
                   if (LaserGateSpan.field_k < 95) {
                     LaserGateSpan.field_k = 95;
-                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                     return;
                   }
                   if (LaserGateSpan.field_k < 110) {
@@ -415,7 +415,7 @@ final class lh {
               var3Lifetime2 = (100 - var30.fullHeight) / 2;
               if (var2Lifetime2 == null) {
                 if (LaserGateSpan.field_k == 110) {
-                  ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                  ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                 }
                 if (LaserGateSpan.field_k <= 80) {
                   return;
@@ -426,7 +426,7 @@ final class lh {
                 EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
                 if (LaserGateSpan.field_k < 95) {
                   LaserGateSpan.field_k = 95;
-                  ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                  ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   return;
                 }
                 if (LaserGateSpan.field_k < 110) {
@@ -447,7 +447,7 @@ final class lh {
         }
         if (var2Lifetime2 == null) {
           if (LaserGateSpan.field_k == 110) {
-            ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
           }
           if (LaserGateSpan.field_k <= 80) {
             return;
@@ -458,7 +458,7 @@ final class lh {
           EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
           if (LaserGateSpan.field_k < 95) {
             LaserGateSpan.field_k = 95;
-            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(qh.field_i, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
             return;
           }
           if (LaserGateSpan.field_k < 110) {

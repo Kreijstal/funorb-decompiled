@@ -31,14 +31,14 @@ final class fg {
         IndexedSprite[] var1 = new IndexedSprite[qk.field_j];
         if (param0 == 13029) {
           for (int var2 = 0; qk.field_j > var2; var2++) {
-            var1[var2] = new IndexedSprite(on.field_e, hd.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], qe.field_a[var2], qk.field_f);
+            var1[var2] = new IndexedSprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], qe.field_a[var2], qk.field_f);
           }
           of.a(false);
           return var1;
         }
         fg.b(16);
         for (int var2Lifetime1 = 0; qk.field_j > var2Lifetime1; var2Lifetime1++) {
-          var1[var2Lifetime1] = new IndexedSprite(on.field_e, hd.field_c, gn.field_k[var2Lifetime1], gi.field_e[var2Lifetime1], qh.field_k[var2Lifetime1], bc.field_a[var2Lifetime1], qe.field_a[var2Lifetime1], qk.field_f);
+          var1[var2Lifetime1] = new IndexedSprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[var2Lifetime1], gi.field_e[var2Lifetime1], qh.field_k[var2Lifetime1], bc.field_a[var2Lifetime1], qe.field_a[var2Lifetime1], qk.field_f);
         }
         of.a(false);
         return var1;

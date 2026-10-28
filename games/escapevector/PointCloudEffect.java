@@ -167,7 +167,7 @@ final class PointCloudEffect extends DualLinkNode {
         if (this.field_q) {
           stackIn_8_0 = gi.field_c;
         } else {
-          stackIn_8_0 = rl.field_k;
+          stackIn_8_0 = RatingQuery.field_k;
         }
         IndexedSprite var8 = stackIn_8_0;
         try {
@@ -230,13 +230,13 @@ final class PointCloudEffect extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, byte param1, cc param2) {
+    final static void a(int param0, byte param1, ProgressRecord param2) {
         try {
           if (param1 != -107) {
             field_t = true;
           }
           RasterBuffer.field_e.addLast(-12328, param2);
-          IntrusiveNode.a(-97, param0, param2);
+          IntrusiveNode.writeProgressRecord(-97, param0, param2);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -252,7 +252,7 @@ final class PointCloudEffect extends DualLinkNode {
           if (var2 < 128) {
             var6 = var6 + (var2 * 128 - var2 * var2 >> 5);
           }
-          rl.field_k.field_l[var2] = MatchingTextValidator.a(MatchingTextValidator.a(var4 << 16, var5 << 8), var6);
+          RatingQuery.field_k.field_l[var2] = MatchingTextValidator.a(MatchingTextValidator.a(var4 << 16, var5 << 8), var6);
         }
     }
 
@@ -346,8 +346,8 @@ final class PointCloudEffect extends DualLinkNode {
 
     final static java.applet.Applet d(byte param0) {
         if (param0 >= -58) {
-          cc var2 = (cc) null;
-          PointCloudEffect.a(56, (byte) 48, (cc) null);
+          ProgressRecord var2 = (ProgressRecord) null;
+          PointCloudEffect.a(56, (byte) 48, (ProgressRecord) null);
         }
         if (null != bb.field_P) {
           return bb.field_P;
@@ -453,11 +453,11 @@ final class PointCloudEffect extends DualLinkNode {
         if (param0 != 19507) {
           return;
         }
-        int var2 = rl.field_k.field_g * rl.field_k.field_d;
+        int var2 = RatingQuery.field_k.field_g * RatingQuery.field_k.field_d;
         for (int var3 = 0; var2 > var3; var3++) {
-          int var4 = rl.field_k.field_k[var3] & 255;
+          int var4 = RatingQuery.field_k.field_k[var3] & 255;
           if (this.field_G >= var4) {
-            rl.field_k.field_k[var3] = (byte) 0;
+            RatingQuery.field_k.field_k[var3] = (byte) 0;
           } else {
             this.field_B = false;
           }
@@ -465,12 +465,12 @@ final class PointCloudEffect extends DualLinkNode {
     }
 
     private final void g(int param0) {
-        this.a(109, rl.field_k, gi.field_c);
-        gi.field_c.field_k = rl.field_k.field_k;
+        this.a(109, RatingQuery.field_k, gi.field_c);
+        gi.field_c.field_k = RatingQuery.field_k.field_k;
         if (param0 < 114) {
           field_r = (String[]) null;
         }
-        this.a(112, rl.field_k, gi.field_i);
+        this.a(112, RatingQuery.field_k, gi.field_i);
         int var2 = gi.field_i.field_h * gi.field_i.field_a;
         if (gi.field_i.field_k.length < var2) {
           gi.field_i.field_k = new byte[var2];
@@ -480,20 +480,20 @@ final class PointCloudEffect extends DualLinkNode {
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = EscapeVector.obfuscationControl;
         int var7 = -100 % ((-7 - param2) / 38);
-        if (rl.field_k == null) {
-          rl.field_k = new IndexedSprite(param3 - param5, param4 - param1, 256);
+        if (RatingQuery.field_k == null) {
+          RatingQuery.field_k = new IndexedSprite(param3 - param5, param4 - param1, 256);
           this.g((byte) -82);
         } else {
-          rl.field_k.field_g = param0;
-          rl.field_k.field_a = param0;
-          rl.field_k.field_d = -param1 + param4;
-          rl.field_k.field_h = -param1 + param4;
-          int var8 = rl.field_k.field_d * rl.field_k.field_g;
-          if (rl.field_k.field_k.length < var8) {
-            rl.field_k.field_k = new byte[var8];
+          RatingQuery.field_k.field_g = param0;
+          RatingQuery.field_k.field_a = param0;
+          RatingQuery.field_k.field_d = -param1 + param4;
+          RatingQuery.field_k.field_h = -param1 + param4;
+          int var8 = RatingQuery.field_k.field_d * RatingQuery.field_k.field_g;
+          if (RatingQuery.field_k.field_k.length < var8) {
+            RatingQuery.field_k.field_k = new byte[var8];
           } else {
             for (int var9 = 0; var8 > var9; var9++) {
-              rl.field_k.field_k[var9] = (byte) 0;
+              RatingQuery.field_k.field_k[var9] = (byte) 0;
             }
           }
         }
@@ -591,12 +591,12 @@ final class PointCloudEffect extends DualLinkNode {
         byte[] var17 = var20;
         byte[] var16 = var17;
         byte[] var26 = var16;
-        byte[] var25 = rl.field_k.field_k;
+        byte[] var25 = RatingQuery.field_k.field_k;
         for (int var4 = 0; var20.length > var4; var4++) {
           var20[var4] = (byte) 0;
         }
-        int var4Lifetime1 = rl.field_k.field_a;
-        int var5 = rl.field_k.field_h;
+        int var4Lifetime1 = RatingQuery.field_k.field_a;
+        int var5 = RatingQuery.field_k.field_h;
         int var6 = 0;
         int var7 = 0;
         while (var5 > var7) {

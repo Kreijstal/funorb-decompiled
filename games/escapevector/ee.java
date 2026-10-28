@@ -10,7 +10,7 @@ final class ee {
     final static void a(int param0, int param1) {
         int var6 = EscapeVector.obfuscationControl;
         int var2 = 0;
-        int var3 = kb.field_d;
+        int var3 = SocketConnector.field_d;
         if (var3 < 5) {
           var2 = 8192 * var3 * var3 / 1100;
         } else {

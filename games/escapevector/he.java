@@ -192,15 +192,15 @@ final class he extends TextWidgetPainter {
         }
     }
 
-    final static kb a(String param0, int param1, byte param2) {
+    final static SocketConnector a(String param0, int param1, byte param2) {
         String stackIn_5_2 = null;
         try {
-          jb var3 = new jb();
+          ProxySocketConnector var3 = new ProxySocketConnector();
           int var4 = -90 / ((param2 + 5) / 40);
-          ((kb) ((Object) var3)).field_b = param1;
-          ((kb) ((Object) var3)).field_a = param0;
-          jb stackIn_1_0 = var3;
-          return (kb) ((Object) stackIn_1_0);
+          ((SocketConnector) ((Object) var3)).port = param1;
+          ((SocketConnector) ((Object) var3)).host = param0;
+          ProxySocketConnector stackIn_1_0 = var3;
+          return (SocketConnector) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;

@@ -16,7 +16,7 @@ final class gl extends jl {
           try {
             try {
               java.net.URL var4 = param1.getCodeBase();
-              String var3 = sh.a((byte) 104, param1, var4).getFile();
+              String var3 = WeightedCacheEntry.withSessionParameters((byte) 104, param1, var4).getFile();
               JavaScriptBridge.callWindowFunctionWithArguments((byte) 119, param1, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
               JavaScriptBridge.callWindowFunctionWithArguments((byte) 107, param1, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
               if (param0 != 15) {

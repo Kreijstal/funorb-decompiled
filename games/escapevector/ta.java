@@ -39,7 +39,7 @@ final class ta {
         }
         en var3 = TrackerMusicDefinition.field_f;
         if (var3.field_c) {
-          var2 = cc.field_l;
+          var2 = ProgressRecord.field_l;
         }
         if (var2 == null) {
           return;
@@ -231,10 +231,10 @@ final class ta {
             return stackIn_3_0;
           }
           int var6 = param2.b(kg.field_a + " ");
-          int var7 = param2.b("" + jb.field_t[var5_int]);
+          int var7 = param2.b("" + ProxySocketConnector.field_t[var5_int]);
           int var8 = var6 + var7;
           int var9 = param2.b(vg.field_T + " ");
-          int var10 = param2.b("" + jb.field_s[var5_int]);
+          int var10 = param2.b("" + ProxySocketConnector.field_s[var5_int]);
           int var11 = var10 + var9;
           int stackIn_7_0 = (var11 > var8) ? var11 : var8;
           int var12 = stackIn_7_0;
@@ -686,9 +686,9 @@ final class ta {
           int var6 = 6340704;
           int var7 = 10551200;
           String var8 = kg.field_a + " ";
-          String var9 = "" + jb.field_t[var3_int];
+          String var9 = "" + ProxySocketConnector.field_t[var3_int];
           String var10 = vg.field_T + " ";
-          String var11 = "" + jb.field_s[var3_int];
+          String var11 = "" + ProxySocketConnector.field_s[var3_int];
           int var12 = (640 + param1.fullWidth) / param0;
           int var13 = -var12 + (this.field_n.field_g + this.field_n.field_j);
           int var14 = this.a(var12, 15930, var4, var13);
@@ -734,7 +734,7 @@ final class ta {
         md.field_D.a(124);
         SoftwareRasterizer.b(var20);
         var5.f();
-        int var8 = qm.a(var7, (byte) 26);
+        int var8 = IterableNodeHashTable.minimumButtonX(var7, (byte) 26);
         int var9 = on.a(var7, -49);
         int var10 = vg.a(var7, (byte) -122);
         int var11 = pb.a((byte) 2, var7);
@@ -813,7 +813,7 @@ final class ta {
         if (di.field_d.field_e) {
           dk var2 = this.d(true);
           int var3 = PasswordValidator.a(-93, var2);
-          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, qm.field_c * 1536 / 64, var3);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, IterableNodeHashTable.field_c * 1536 / 64, var3);
         }
     }
 
@@ -1103,7 +1103,7 @@ final class ta {
         }
         try {
           int var4 = PasswordValidator.a(-87, param1);
-          ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / param0, var4);
+          ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, IterableNodeHashTable.field_c * 6144 / param0, var4);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ta.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1128,7 +1128,7 @@ final class ta {
           var3 = TrackerMusicDefinition.field_f.b(param1, 117);
         }
         if (this.c(73, param1)) {
-          var3 = rm.field_e;
+          var3 = DualLinkDequeIterator.field_e;
         }
         if (param0 != -4343) {
           this.field_a = (dk) null;

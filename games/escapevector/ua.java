@@ -6,14 +6,14 @@ final class ua {
     static String field_b;
     static kg field_c;
 
-    final static int[] a(int param0, boolean param1, int param2, ij param3) {
+    final static int[] a(int param0, boolean param1, int param2, HighscoreQuery param3) {
         String stackIn_11_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
           if (!param1) {
             field_b = (String) null;
           }
-          int[] var8 = param3.field_o[param2];
+          int[] var8 = param3.intColumns[param2];
           int[] var4 = var8;
           int[] var5 = new int[var8.length];
           for (int var6 = 0; var8.length > var6; var6++) {
@@ -49,7 +49,7 @@ final class ua {
         if (aj.b(-127)) {
           return;
         }
-        CipherPacketBuffer var4 = QuickChatDynamicCommand.field_c;
+        CipherPacketBuffer var4 = QuickChatDynamicCommand.outgoingPackets;
         var4.writeCipheredOpcode(16, true);
         var4.position = var4.position + 1;
         if (param3 == 1) {

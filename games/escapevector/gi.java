@@ -37,14 +37,14 @@ final class gi {
 
     final static void a(int param0) {
         try {
-          int var1_int = jb.field_u.length;
-          jb.field_k = new jk[var1_int];
+          int var1_int = ProxySocketConnector.field_u.length;
+          ProxySocketConnector.field_k = new jk[var1_int];
           for (int var2 = param0; var2 < var1_int; var2++) {
-            int var3 = jb.field_u[var2];
-            int var4 = jb.field_h[var2];
-            int var5 = jb.field_v[var2];
+            int var3 = ProxySocketConnector.field_u[var2];
+            int var4 = ProxySocketConnector.field_h[var2];
+            int var5 = ProxySocketConnector.field_v[var2];
             jk var6 = new jk(var3, var4, var5);
-            jb.field_k[var2] = var6;
+            ProxySocketConnector.field_k[var2] = var6;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,9 +165,9 @@ final class gi {
     }
 
     gi(boolean param0) {
-        this.field_j = rm.field_g;
-        this.field_g = rm.field_c;
-        this.field_h = im.field_a;
+        this.field_j = DualLinkDequeIterator.field_g;
+        this.field_g = DualLinkDequeIterator.field_c;
+        this.field_h = ProxyAuthenticationException.field_a;
         this.field_f = IntKeyLookup.field_d;
         this.field_m = ve.field_g;
         this.field_n = SelfDestructEffects.field_d;

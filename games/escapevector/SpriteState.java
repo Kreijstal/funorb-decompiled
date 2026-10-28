@@ -19,32 +19,32 @@ abstract class SpriteState extends DualLinkNode {
     final static void b(int param0, int param1) {
         ee.field_a = cb.field_b[param0];
         if (param1 == 15) {
-          md.field_H = tc.field_i[param0];
+          md.field_H = SpriteStrip.field_i[param0];
           gj.field_g = jj.field_c[param0];
           return;
         }
         field_y = (NameAvailabilityResult) null;
-        md.field_H = tc.field_i[param0];
+        md.field_H = SpriteStrip.field_i[param0];
         gj.field_g = jj.field_c[param0];
     }
 
     final static void g(int param0) {
         Throwable decompiledCaughtException = null;
-        Object var1 = QuickChatDynamicCommand.field_b;
+        Object var1 = QuickChatDynamicCommand.mouseHandler;
         synchronized (var1) {
-          md.field_G = md.field_G + 1;
-          eb.field_K = vj.field_b;
-          dh.field_d = vb.field_b;
-          UiContainer.field_y = jk.field_b;
-          TextFieldValidator.field_h = ke.field_a;
-          ke.field_a = false;
-          qi.field_N = kb.field_f;
-          sf.field_c = fk.field_b;
-          ng.field_ob = PcmResampler.field_c;
+          md.mouseIdleTicks = md.mouseIdleTicks + 1;
+          eb.field_K = vj.heldMouseButton;
+          dh.field_d = IterableDualLinkDeque.pendingMouseX;
+          UiContainer.field_y = jk.pendingMouseY;
+          TextFieldValidator.field_h = ke.mouseInputChanged;
+          ke.mouseInputChanged = false;
+          qi.field_N = SocketConnector.pendingClickButton;
+          sf.field_c = fk.pendingClickX;
+          ng.field_ob = PcmResampler.pendingClickY;
           if (param0 != -3657) {
             SpriteState.b(30, 39);
           }
-          kb.field_f = 0;
+          SocketConnector.pendingClickButton = 0;
         }
     }
 

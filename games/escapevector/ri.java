@@ -52,15 +52,15 @@ final class ri {
     final static void a(byte param0) {
         int var12 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var14 = QuickChatDynamicCommand.field_g;
+          CipherPacketBuffer var14 = QuickChatDynamicCommand.incomingPackets;
           int var2 = var14.readUnsignedByte(0);
           if (param0 != 113) {
             field_b = (PcmSample) null;
           }
-          rl var3 = (rl) (cd.field_s.first(false));
+          RatingQuery var3 = (RatingQuery) (cd.field_s.first(false));
           while (var3 != null) {
-            if (var3.field_i != var2) {
-              var3 = (rl) (cd.field_s.next((byte) 70));
+            if (var3.requestId != var2) {
+              var3 = (RatingQuery) (cd.field_s.next((byte) 70));
               continue;
             }
             break;
@@ -71,7 +71,7 @@ final class ri {
           }
           int var4 = var14.readUnsignedByte(0);
           if (0 != var4) {
-            int var5 = var3.field_g;
+            int var5 = var3.rowCount;
             TextHotspotRegion.field_l[0] = ck.field_r;
             for (int var6_int = 1; var4 > var6_int; var6_int++) {
               TextHotspotRegion.field_l[var6_int] = var14.readString(false);

@@ -20,15 +20,15 @@ abstract class MouseWheelInput {
         }
     }
 
-    final static void a(int param0, int param1, bd param2) {
+    final static void enqueueSavedDataWrite(int guard, int opcode, SavedDataWrite write) {
         try {
-          rd.field_b.addLast(-12328, param2);
-          SingleChildContainer.a(-110, param2, param1);
-          if (param0 != 1) {
+          rd.field_b.addLast(-12328, write);
+          SingleChildContainer.writeSavedData(-110, write, opcode);
+          if (guard != 1) {
             field_a = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ca.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ca.E(" + guard + ',' + opcode + ',' + (write != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -24,7 +24,7 @@ final class gk {
                 field_c = true;
               }
               java.net.URL var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-              param1.getAppletContext().showDocument(sh.a((byte) 114, param1, var2), "_top");
+              param1.getAppletContext().showDocument(WeightedCacheEntry.withSessionParameters((byte) 114, param1, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

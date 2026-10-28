@@ -11,7 +11,7 @@ final class SpriteOffset {
 
     final static boolean a(boolean param0, int param1) {
         if (di.field_d.field_e) {
-          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, 8192);
         }
         if (param1 != 0) {
           return false;
@@ -90,7 +90,7 @@ final class SpriteOffset {
           }
           if (var3 == 0 &&
             ArchiveIndex.field_j == 2) {
-            long var4 = -bd.field_k + td.b(param0 + 142);
+            long var4 = -SavedDataWrite.field_k + td.b(param0 + 142);
             int var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
               sn.a(5, 0, true);

@@ -46,7 +46,7 @@ final class le {
           return ff.field_a;
         }
         if (!pl.field_j.tryLoadAllGroups((byte) -119)) {
-          return wf.field_b + " - " + pl.field_j.overallProgress(-67) + "%";
+          return IntrusiveDequeCursor.field_b + " - " + pl.field_j.overallProgress(-67) + "%";
         }
         return field_b;
     }

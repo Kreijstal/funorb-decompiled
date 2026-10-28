@@ -29,12 +29,12 @@ class DualLinkNode extends IntrusiveNode {
           return tf.field_h;
         }
         if (EmailAvailabilityValidator.field_o == ui.field_b) {
-          return tc.field_j;
+          return SpriteStrip.field_j;
         }
         if (!di.field_g.isComplete(param0)) {
-          return tc.field_j;
+          return SpriteStrip.field_j;
         }
-        return vk.field_v;
+        return StrongCacheEntry.field_v;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

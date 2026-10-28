@@ -65,10 +65,10 @@ final class jf extends UiContainer implements TextHotspotListener, ButtonListene
 
     final static boolean l(int param0) {
         if (param0 == 3) {
-          return kb.field_d > 250 ? true : false;
+          return SocketConnector.field_d > 250 ? true : false;
         }
         field_M = (String) null;
-        return kb.field_d > 250 ? true : false;
+        return SocketConnector.field_d > 250 ? true : false;
     }
 
     public final void onHotspotAction(int guard, TextHotspotWidget widget, int hotspotId, int buttonCode) {
@@ -76,11 +76,11 @@ final class jf extends UiContainer implements TextHotspotListener, ButtonListene
         int var6 = EscapeVector.obfuscationControl;
         try {
           if (hotspotId == 0) {
-            qd.a(guard ^ -2849, "terms.ws");
+            AchievementRecord.a(guard ^ -2849, "terms.ws");
           } else if (1 == hotspotId) {
-            qd.a(12, "privacy.ws");
+            AchievementRecord.a(12, "privacy.ws");
           } else if (hotspotId == 2) {
-            qd.a(12, "conduct.ws");
+            AchievementRecord.a(12, "conduct.ws");
           }
           if (guard == -2861) {
             return;

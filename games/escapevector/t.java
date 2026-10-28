@@ -107,7 +107,7 @@ final class t {
                   int var9 = stackIn_31_0;
                   int var10 = (var9 - 68) / 2 + var6;
                   fh.field_g.b(oi.field_N, var10, 22, var5_int, -1);
-                  SingleChildContainer.a(var10, 13202, 4, qm.field_c, var5_int);
+                  SingleChildContainer.a(var10, 13202, 4, IterableNodeHashTable.field_c, var5_int);
                 }
                 if (param0 != 3 ||
                   var11 != 0) {
@@ -339,7 +339,7 @@ final class t {
         int var10 = EscapeVector.obfuscationControl;
         try {
           if (this.field_b.field_e) {
-            ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, 8192);
           }
           int var3_int = this.b(123);
           if (var3_int == 0 &&
@@ -361,27 +361,27 @@ final class t {
           boolean decompiledFrameRemainder0 = true;
           if (var3_int == 3) {
             if (this.field_b.g(param0 + 13072) &&
-              qm.field_c > 0) {
-              qm.field_c = qm.field_c - 8;
-              if (0 > qm.field_c) {
-                qm.field_c = 0;
+              IterableNodeHashTable.field_c > 0) {
+              IterableNodeHashTable.field_c = IterableNodeHashTable.field_c - 8;
+              if (0 > IterableNodeHashTable.field_c) {
+                IterableNodeHashTable.field_c = 0;
               }
               TrackerMusicDefinition.d(8192);
             }
             if (this.field_b.b(-98) &&
-              qm.field_c < 64) {
-              qm.field_c = qm.field_c + 8;
-              if (qm.field_c > 64) {
-                qm.field_c = 64;
+              IterableNodeHashTable.field_c < 64) {
+              IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 8;
+              if (IterableNodeHashTable.field_c > 64) {
+                IterableNodeHashTable.field_c = 64;
               }
               TrackerMusicDefinition.d(8192);
             }
             if (this.field_b.d(-10809)) {
-              qm.field_c = 0;
+              IterableNodeHashTable.field_c = 0;
               TrackerMusicDefinition.d(8192);
             }
             if (this.field_b.e(0)) {
-              qm.field_c = 64;
+              IterableNodeHashTable.field_c = 64;
               TrackerMusicDefinition.d(8192);
             }
             if (!this.field_b.a(false) &&
@@ -405,8 +405,8 @@ final class t {
                 }
               }
               if (this.field_b.b((byte) -18) ||
-                ~qm.field_c != ~var8) {
-                qm.field_c = var8;
+                ~IterableNodeHashTable.field_c != ~var8) {
+                IterableNodeHashTable.field_c = var8;
                 TrackerMusicDefinition.d(8192);
               }
             }

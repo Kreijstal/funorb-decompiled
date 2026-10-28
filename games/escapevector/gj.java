@@ -6,7 +6,7 @@ final class gj {
     private me field_s;
     private int field_f;
     private me field_k;
-    private ij field_y;
+    private HighscoreQuery field_y;
     static String field_u;
     private me field_d;
     private me field_l;
@@ -15,7 +15,7 @@ final class gj {
     int field_t;
     private boolean[] field_q;
     int field_o;
-    private ik field_b;
+    private ScoreSubmission field_b;
     private IntrusiveDeque field_n;
     int field_m;
     int field_p;
@@ -41,9 +41,9 @@ final class gj {
 
     private final int[] c(byte param0) {
         int var8 = EscapeVector.obfuscationControl;
-        int[] var10 = this.field_y.field_o[this.field_p];
+        int[] var10 = this.field_y.intColumns[this.field_p];
         int[] var2 = var10;
-        int var3 = jb.a(92, this.field_y.field_n);
+        int var3 = ProxySocketConnector.a(92, this.field_y.boardId);
         if (param0 <= 19) {
           int[] var9 = (int[]) null;
           int[] discarded$0 = this.a(false, (int[]) null, 43);
@@ -73,9 +73,9 @@ final class gj {
 
     private final int[] b(byte param0) {
         int var8 = EscapeVector.obfuscationControl;
-        int[] var10 = this.field_y.field_o[this.field_p];
+        int[] var10 = this.field_y.intColumns[this.field_p];
         int[] var2 = var10;
-        int var3 = jb.a(105, this.field_y.field_n);
+        int var3 = ProxySocketConnector.a(105, this.field_y.boardId);
         if (param0 <= 120) {
           int[] var9 = (int[]) null;
           int[] discarded$0 = this.a(true, (int[]) null, -69);
@@ -287,7 +287,7 @@ final class gj {
           return ng.field_lb;
         }
         if (param0 != -17651) {
-          this.field_b = (ik) null;
+          this.field_b = (ScoreSubmission) null;
         }
         if (param1 == 0) {
           return wc.field_b;
@@ -318,7 +318,7 @@ final class gj {
         if (param0 <= 123) {
           return -15;
         }
-        int var2 = this.field_y.field_n;
+        int var2 = this.field_y.boardId;
         int var3 = this.a(var2, false);
         if (0 > var3 ||
           RasterBuffer.field_a.length <= var3) {
@@ -328,10 +328,10 @@ final class gj {
         int[] var5 = var4;
         for (int var6 = 0; var5.length > var6; var6++) {
           int var7 = var5[var6];
-          this.field_y.field_n = var7;
+          this.field_y.boardId = var7;
           int var8 = ld.a(this.field_b, this.field_p, 0, this.field_y);
           if (0 <= var8) {
-            this.field_y.field_n = var2;
+            this.field_y.boardId = var2;
             return var8;
           }
         }
@@ -348,11 +348,11 @@ final class gj {
           String[] var7 = new String[this.field_h];
           String[] var3 = var7;
           for (int var4 = 0; var4 < param0.length; var4++) {
-            int var5 = jb.a(107, param0[var4]);
+            int var5 = ProxySocketConnector.a(107, param0[var4]);
             var7[var4] = this.a(-17651, var5);
           }
           if (this.field_r) {
-            int var4Lifetime1 = jb.a(115, this.field_b.field_j);
+            int var4Lifetime1 = ProxySocketConnector.a(115, this.field_b.boardId);
             var3[this.field_h - 1] = this.a(-17651, var4Lifetime1);
           }
           String[] stackIn_10_0 = var3;
@@ -484,7 +484,7 @@ final class gj {
         return -1;
     }
 
-    gj(ij param0, int[] param1, ik param2, int param3, int param4, int param5, boolean param6) {
+    gj(HighscoreQuery param0, int[] param1, ScoreSubmission param2, int param3, int param4, int param5, boolean param6) {
         int stackIn_12_1 = 0;
         String stackIn_21_2 = null;
         String stackIn_24_2 = null;
@@ -499,18 +499,18 @@ final class gj {
           if (null != this.field_b) {
             this.field_e = this.a(124);
           }
-          boolean stackIn_9_1 = (param6) && (this.field_e < 0) && (null != this.field_b) && (this.c(-1, this.field_b.field_j) == this.field_w);
+          boolean stackIn_9_1 = (param6) && (this.field_e < 0) && (null != this.field_b) && (this.c(-1, this.field_b.boardId) == this.field_w);
           this.field_r = stackIn_9_1;
           stackIn_12_1 = (!this.field_r) ? (0) : (1);
-          this.field_h = stackIn_12_1 + this.field_y.field_m[this.field_p].length;
+          this.field_h = stackIn_12_1 + this.field_y.stringColumns[this.field_p].length;
           if (this.field_r) {
             this.field_e = this.field_h - 1;
           }
           this.field_n = new IntrusiveDeque();
-          int var8_int = this.field_y.field_m[this.field_p].length;
+          int var8_int = this.field_y.stringColumns[this.field_p].length;
           this.field_x = new me(var8_int);
           this.field_n.addLast(-12328, this.field_x);
-          String[] var9 = this.a(this.field_y.field_m[this.field_p], -1);
+          String[] var9 = this.a(this.field_y.stringColumns[this.field_p], -1);
           this.b(var9, -117);
           this.field_k = new me(IndexedSpriteState.field_b, var9, 1);
           this.field_n.addLast(-12328, this.field_k);
@@ -526,7 +526,7 @@ final class gj {
           int[] var25 = this.b((byte) 127);
           this.field_i = new me(jd.field_c, var25);
           this.field_n.addLast(-12328, this.field_i);
-          int[] var26 = this.a(true, this.field_y.field_o[this.field_p], jb.a(90, this.field_y.field_n));
+          int[] var26 = this.a(true, this.field_y.intColumns[this.field_p], ProxySocketConnector.a(90, this.field_y.boardId));
           this.field_d = new me(kn.field_f, var26);
           this.field_n.addLast(-12328, this.field_d);
           this.a((byte) -113);

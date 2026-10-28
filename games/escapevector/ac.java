@@ -94,7 +94,7 @@ final class ac {
               int var5 = 0;
               var2 = var5;
               while (112 > var5) {
-                ik.field_h[var5] = false;
+                ScoreSubmission.field_h[var5] = false;
                 var5++;
               }
               Js5Transport.field_b = TetherHumStream.field_k;
@@ -103,10 +103,10 @@ final class ac {
                 var2 = TextButton.field_C[TetherHumStream.field_k];
                 TetherHumStream.field_k = 127 & 1 + TetherHumStream.field_k;
                 if (0 <= var2) {
-                  ik.field_h[var2] = true;
+                  ScoreSubmission.field_h[var2] = true;
                   continue;
                 }
-                ik.field_h[~var2] = false;
+                ScoreSubmission.field_h[~var2] = false;
               }
             }
             ta.field_w = bn.field_b;

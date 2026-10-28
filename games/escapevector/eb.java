@@ -46,7 +46,7 @@ final class eb extends TextButton {
           qh.field_k = new int[qk.field_j];
           var18.position = -(qk.field_j * 8) + (-7 + param0.length);
           on.field_e = var18.readUnsignedShort(1952);
-          hd.field_c = var18.readUnsignedShort(1952);
+          DelegatingCanvas.field_c = var18.readUnsignedShort(1952);
           int var3 = 1 + (var18.readUnsignedByte(0) & 255);
           for (int var4 = 0; var4 < qk.field_j; var4++) {
             gn.field_k[var4] = var17.readUnsignedShort(1952);

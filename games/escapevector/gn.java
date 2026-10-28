@@ -5,7 +5,7 @@ final class gn {
     static PcmSample field_e;
     boolean field_i;
     private int field_c;
-    private dc field_m;
+    private ProgressQuery field_m;
     static int[] field_k;
     private kg field_f;
     int field_j;
@@ -37,7 +37,7 @@ final class gn {
             }
           }
           while (true) {
-            cc var2_ref = (cc) (this.field_h.removeFirst(-20245));
+            ProgressRecord var2_ref = (ProgressRecord) (this.field_h.removeFirst(-20245));
             if (var2_ref != null) {
               PointCloudEffect.a(5, (byte) -107, var2_ref);
               continue;
@@ -72,7 +72,7 @@ final class gn {
           }
         }
         while (true) {
-          cc var4 = (cc) (this.field_h.removeFirst(-20245));
+          ProgressRecord var4 = (ProgressRecord) (this.field_h.removeFirst(-20245));
           if (var4 != null) {
             PointCloudEffect.a(5, (byte) -107, var4);
             continue;
@@ -261,7 +261,7 @@ final class gn {
               if (this.field_n >= var4_int) {
                 this.field_n = var4_int - 1;
               }
-              cc var5 = new cc(this.field_j, param1, param2[0], param2[1], param2[2], param2[3]);
+              ProgressRecord var5 = new ProgressRecord(this.field_j, param1, param2[0], param2[1], param2[2], param2[3]);
               this.field_h.addLast(-12328, var5);
               this.d(87);
             }
@@ -390,9 +390,9 @@ final class gn {
               if (this.field_m == null) {
                 this.field_m = wc.a(this.field_j, 5, 1, (byte) -51);
               }
-              this.field_i = this.field_m.field_g;
+              this.field_i = this.field_m.complete;
               if (this.field_i) {
-                var2 = this.field_m.field_h[0];
+                var2 = this.field_m.progressWords[0];
                 if (this.field_a) {
                   this.field_n = var2;
                 } else if (var2 > this.field_n) {
@@ -423,7 +423,7 @@ final class gn {
           if (this.field_m == null) {
             this.field_m = wc.a(this.field_j, 5, 1, (byte) -51);
           }
-          this.field_i = this.field_m.field_g;
+          this.field_i = this.field_m.complete;
           if (!this.field_i) {
             return;
           }
@@ -443,11 +443,11 @@ final class gn {
             if (this.field_m == null) {
               this.field_m = wc.a(this.field_j, 5, 1, (byte) -51);
             }
-            this.field_i = this.field_m.field_g;
+            this.field_i = this.field_m.complete;
             if (!this.field_i) {
               return;
             }
-            var2 = this.field_m.field_h[0];
+            var2 = this.field_m.progressWords[0];
             if (this.field_a) {
               this.field_n = var2;
             } else if (var2 > this.field_n) {
@@ -472,12 +472,12 @@ final class gn {
           if (this.field_m == null) {
             this.field_m = wc.a(this.field_j, 5, 1, (byte) -51);
           }
-          this.field_i = this.field_m.field_g;
+          this.field_i = this.field_m.complete;
           if (!this.field_i) {
             return;
           }
         }
-        int var2Lifetime1 = this.field_m.field_h[0];
+        int var2Lifetime1 = this.field_m.progressWords[0];
         if (this.field_a) {
           this.field_n = var2Lifetime1;
         } else if (var2Lifetime1 > this.field_n) {

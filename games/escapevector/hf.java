@@ -25,7 +25,7 @@ final class hf {
           for (int var2 = 0; var2 < EmailSyntaxValidator.field_r; var2++) {
             String var7 = var1 + ' ';
             var1 = var7;
-            int var3 = 255 & QuickChatDynamicCommand.field_g.payload[var2];
+            int var3 = 255 & QuickChatDynamicCommand.incomingPackets.payload[var2];
             int var4 = var3 >> 4;
             if (var4 < 10) {
               var4 += 48;
@@ -131,7 +131,7 @@ final class hf {
           for (int var6 = 0; var6 < var3; var6++) {
             var5[var6] = qk.field_f[ae.a((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(on.field_e, hd.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var5);
+          var1[var2] = new Sprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var5);
         }
         of.a(false);
         return var1;

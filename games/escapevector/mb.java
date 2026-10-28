@@ -70,7 +70,7 @@ final class mb {
               } else if (pl.field_q != null) {
                 ff.a((byte) 127);
               } else if (null != da.field_c) {
-                rl.e(-46);
+                RatingQuery.e(-46);
               } else {
                 if (mj.field_d < 1000) {
                   mj.field_d = mj.field_d + 1;

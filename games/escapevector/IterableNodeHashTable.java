@@ -3,49 +3,49 @@
  */
 import java.util.*;
 
-final class qm implements Iterable {
-    private IntrusiveNode field_e;
+final class IterableNodeHashTable implements Iterable {
+    private IntrusiveNode lookupCursor;
     static gi[] field_d;
     static int field_c;
-    int field_g;
+    int bucketCount;
     static String[] field_f;
-    IntrusiveNode[] field_b;
+    IntrusiveNode[] buckets;
     static String field_a;
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode get(int guard, long key) {
         int var6 = EscapeVector.obfuscationControl;
-        if (param0 != -2678) {
-          this.field_g = -103;
+        if (guard != -2678) {
+          this.bucketCount = -103;
         }
-        IntrusiveNode var4 = this.field_b[(int)((long)(-1 + this.field_g) & param1)];
-        this.field_e = var4.next;
-        while (var4 != this.field_e) {
-          if (~param1 == ~this.field_e.key) {
-            IntrusiveNode var5 = this.field_e;
-            this.field_e = this.field_e.next;
+        IntrusiveNode var4 = this.buckets[(int)((long)(-1 + this.bucketCount) & key)];
+        this.lookupCursor = var4.next;
+        while (var4 != this.lookupCursor) {
+          if (~key == ~this.lookupCursor.key) {
+            IntrusiveNode var5 = this.lookupCursor;
+            this.lookupCursor = this.lookupCursor.next;
             return var5;
           }
-          this.field_e = this.field_e.next;
+          this.lookupCursor = this.lookupCursor.next;
         }
-        this.field_e = null;
+        this.lookupCursor = null;
         return null;
     }
 
-    final static int a(dk[] param0, byte param1) {
+    final static int minimumButtonX(dk[] buttons, byte guard) {
         String stackIn_18_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
           int var2_int = 2147483647;
-          dk[] var3 = param0;
+          dk[] var3 = buttons;
           for (int var4 = 0; var4 < var3.length; var4++) {
             dk var5 = var3[var4];
             if (var5.field_f < var2_int) {
               var2_int = var5.field_f;
             }
           }
-          if (param1 <= 9) {
+          if (guard <= 9) {
             dk[] var7 = (dk[]) null;
-            qm.a((dk[]) null, (byte) 66);
+            IterableNodeHashTable.minimumButtonX((dk[]) null, (byte) 66);
           }
           if (var2_int != 2147483647) {
             int stackIn_14_0 = var2_int;
@@ -58,35 +58,35 @@ final class qm implements Iterable {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_17_0 = var2;
           StringBuilder stackIn_17_1 = new StringBuilder().append("qm.A(");
-          if (param0 == null) {
+          if (buttons == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(guard).append(')').toString());
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new hb(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final void a(long param0, byte param1, IntrusiveNode param2) {
-        if (param2.previous != null) {
-          param2.unlink((byte) -51);
+    final void put(long key, byte guard, IntrusiveNode node) {
+        if (node.previous != null) {
+          node.unlink((byte) -51);
         }
-        if (param1 != -106) {
+        if (guard != -106) {
           return;
         }
         try {
-          IntrusiveNode var5 = this.field_b[(int)(param0 & (long)(-1 + this.field_g))];
-          param2.previous = var5.previous;
-          param2.next = var5;
-          param2.previous.next = param2;
-          param2.next.previous = param2;
-          param2.key = param0;
+          IntrusiveNode var5 = this.buckets[(int)(key & (long)(-1 + this.bucketCount))];
+          node.previous = var5.previous;
+          node.next = var5;
+          node.previous.next = node;
+          node.next.previous = node;
+          node.key = key;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "qm.B(" + key + ',' + guard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class qm implements Iterable {
         }
     }
 
-    private qm() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 

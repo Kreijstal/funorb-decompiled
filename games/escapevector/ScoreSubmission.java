@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ik extends IntrusiveNode {
+final class ScoreSubmission extends IntrusiveNode {
     int field_m;
     int field_g;
     int field_o;
     static boolean[] field_h;
-    int field_j;
+    int boardId;
     int[] field_q;
     int field_n;
     static boolean field_p;
     long field_l;
-    int field_k;
-    int field_i;
+    int boardIdComplement;
+    int requestId;
 
     public static void releaseStatics(int guard) {
         field_h = null;
         if (guard != 65535) {
-          ik.a(false, false, (byte) -31, false);
+          ScoreSubmission.a(false, false, (byte) -31, false);
         }
     }
 
@@ -33,29 +33,29 @@ final class ik extends IntrusiveNode {
           var4 += 2;
           if (param3) {
             var4++;
-            return wf.field_c[var4];
+            return IntrusiveDequeCursor.field_c[var4];
           }
-          return wf.field_c[var4];
+          return IntrusiveDequeCursor.field_c[var4];
         }
         if (!param3) {
-          return wf.field_c[var4];
+          return IntrusiveDequeCursor.field_c[var4];
         }
         var4++;
-        return wf.field_c[var4];
+        return IntrusiveDequeCursor.field_c[var4];
     }
 
-    ik(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    ScoreSubmission(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         try {
           this.field_o = param2;
           this.field_n = param4;
           this.field_g = param5;
           this.field_m = param3;
-          this.field_k = param1;
+          this.boardIdComplement = param1;
           this.field_q = param6;
-          this.field_j = param0;
+          this.boardId = param0;
           int fieldTemp$0 = qh.field_m;
           qh.field_m = qh.field_m + 1;
-          this.field_i = 65535 & fieldTemp$0;
+          this.requestId = 65535 & fieldTemp$0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ik.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

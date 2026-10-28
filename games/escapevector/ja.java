@@ -23,14 +23,14 @@ final class ja {
         int var3 = 0;
         int var26 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var28 = QuickChatDynamicCommand.field_g;
+          CipherPacketBuffer var28 = QuickChatDynamicCommand.incomingPackets;
           int var2 = var28.readUnsignedByte(0);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort(1952);
-            ij var4 = (ij) (qd.field_n.first(false));
+            HighscoreQuery var4 = (HighscoreQuery) (AchievementRecord.field_n.first(false));
             while (var4 != null) {
-              if (~var4.field_n != ~var3) {
-                var4 = (ij) (qd.field_n.next((byte) 70));
+              if (~var4.boardId != ~var3) {
+                var4 = (HighscoreQuery) (AchievementRecord.field_n.next((byte) 70));
                 continue;
               }
               break;
@@ -56,14 +56,14 @@ final class ja {
                 }
               }
               String[][] dupTemp$0 = new String[3][var6];
-              var4.field_m = dupTemp$0;
+              var4.stringColumns = dupTemp$0;
               String[][] var8 = dupTemp$0;
               String[][] var9 = new String[3][var6];
               long[][] dupTemp$1 = new long[3][var6];
-              var4.field_k = dupTemp$1;
+              var4.longColumns = dupTemp$1;
               long[][] var10 = dupTemp$1;
               int[][] dupTemp$2 = new int[3][var7 * var6];
-              var4.field_o = dupTemp$2;
+              var4.intColumns = dupTemp$2;
               int[][] var11 = dupTemp$2;
               int var12 = 0;
               int var13 = 0;
@@ -119,15 +119,15 @@ final class ja {
                 }
               }
             }
-            var4.field_l = true;
+            var4.complete = true;
             var4.unlink((byte) -90);
           } else if (var2 == 1) {
             var3 = var28.readUnsignedShort(1952);
             long var4_long = var28.readLong(-800509813);
-            ik var6_ref_ik = (ik) (vj.field_d.first(false));
+            ScoreSubmission var6_ref_ik = (ScoreSubmission) (vj.field_d.first(false));
             while (var6_ref_ik != null) {
-              if (var6_ref_ik.field_i != var3) {
-                var6_ref_ik = (ik) (vj.field_d.next((byte) 70));
+              if (var6_ref_ik.requestId != var3) {
+                var6_ref_ik = (ScoreSubmission) (vj.field_d.next((byte) 70));
                 continue;
               }
               break;

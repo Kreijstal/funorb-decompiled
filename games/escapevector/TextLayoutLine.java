@@ -41,7 +41,7 @@ final class TextLayoutLine {
         try {
           boolean stackIn_4_0 = !(param1 != 4);
           boolean var2_int = stackIn_4_0;
-          if (hb.field_b == null) {
+          if (NodeHashTableIterator.field_b == null) {
             return;
           }
           if (null == qi.field_M) {
@@ -55,7 +55,7 @@ final class TextLayoutLine {
             param1 == 6) {
             param1 = 0;
           }
-          Sprite[] var3 = hb.field_b[param1];
+          Sprite[] var3 = NodeHashTableIterator.field_b[param1];
           if (var2_int) {
             var3 = v.field_a;
           }
@@ -66,7 +66,7 @@ final class TextLayoutLine {
           for (int var5 = 0; 3 > var5; var5++) {
             if (var3 == null) {
               param1 = 0;
-              var3 = hb.field_b[param1];
+              var3 = NodeHashTableIterator.field_b[param1];
               var4 = qi.field_M[param1];
             }
             Sprite var6 = var3[var5];

@@ -6,7 +6,7 @@ final class en {
     static String field_a;
     static String field_g;
     boolean field_c;
-    private jh field_m;
+    private AchievementQuery field_m;
     private IntrusiveDeque field_f;
     private int[] field_j;
     boolean field_h;
@@ -310,13 +310,13 @@ final class en {
         if (param0 < 0) {
           return null;
         }
-        if (jb.field_l.length <= param0) {
+        if (ProxySocketConnector.field_l.length <= param0) {
           return null;
         }
         if (param1) {
           field_k = -102;
         }
-        return jb.field_l[param0];
+        return ProxySocketConnector.field_l[param0];
     }
 
     final Sprite b(int param0, int param1) {
@@ -446,7 +446,7 @@ final class en {
         int[] var6 = var7;
         if (var6 != null &&
           4 == var8.length) {
-          this.field_f.addLast(-12328, new qd(param2, param1, var8[0], var8[1], var8[2], var8[3]));
+          this.field_f.addLast(-12328, new AchievementRecord(param2, param1, var8[0], var8[1], var8[2], var8[3]));
           return true;
         }
         return false;
@@ -454,13 +454,13 @@ final class en {
 
     final void d(byte param0, int param1, int param2) {
         int var7 = EscapeVector.obfuscationControl;
-        if (null == jb.field_i) {
+        if (null == ProxySocketConnector.field_i) {
           return;
         }
         if (param0 > -63) {
           this.field_c = false;
         }
-        mb[] var8 = jb.field_i;
+        mb[] var8 = ProxySocketConnector.field_i;
         mb[] var4 = var8;
         for (int var5 = 0; var8.length > var5; var5++) {
           mb var6 = var8[var5];
@@ -484,12 +484,12 @@ final class en {
         if (param0 != -19636) {
           return;
         }
-        if (!this.field_m.field_h) {
+        if (!this.field_m.complete) {
           return;
         }
-        if (!this.field_m.field_g) {
-          this.a((byte) -82, this.field_m.field_i);
-          this.a(this.field_m.field_i, -20915);
+        if (!this.field_m.unavailable) {
+          this.a((byte) -82, this.field_m.achievementWords);
+          this.a(this.field_m.achievementWords, -20915);
           this.field_c = false;
           this.field_m = null;
           this.field_h = true;
@@ -524,7 +524,7 @@ final class en {
           CipherPacketBuffer.field_n = fe.a("tutorial", param0, "panel", true);
           gm.field_a = fe.a("tutorial", param0, "platform", true);
           tk.field_a[var2_int] = fe.a("tutorial", param0, "texture", true);
-          fa.field_c[var2_int] = true;
+          WeightedLruCache.field_c[var2_int] = true;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "en.PA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -590,17 +590,17 @@ final class en {
 
     private final int c(byte param0, int param1, int param2) {
         if (param0 > -95) {
-          this.field_m = (jh) null;
+          this.field_m = (AchievementQuery) null;
         }
         return param1 | param2;
     }
 
     final void c(int param0, int param1, int param2) {
         int var7 = EscapeVector.obfuscationControl;
-        if (jb.field_k == null) {
+        if (ProxySocketConnector.field_k == null) {
           return;
         }
-        jk[] var8 = jb.field_k;
+        jk[] var8 = ProxySocketConnector.field_k;
         jk[] var4 = var8;
         for (int var5 = param0; var8.length > var5; var5++) {
           jk var6 = var8[var5];
@@ -645,9 +645,9 @@ final class en {
         int var8 = EscapeVector.obfuscationControl;
         int var3 = 0;
         if (param1 != 1) {
-          this.field_m = (jh) null;
+          this.field_m = (AchievementQuery) null;
         }
-        int[] var4 = jb.field_z;
+        int[] var4 = ProxySocketConnector.field_z;
         for (int var5 = 0; var4.length > var5; var5++) {
           int var6 = var4[var5];
           boolean var7 = (this.a(var6, (byte) -128, param0));
@@ -708,7 +708,7 @@ final class en {
           return;
         }
         if (param0 != -47) {
-          this.field_m = (jh) null;
+          this.field_m = (AchievementQuery) null;
         }
         int var5 = param2 / 32;
         if (var5 >= 0) {
@@ -747,7 +747,7 @@ final class en {
           int var1_int = EmailSyntaxValidator.field_o;
           int var2 = param0;
           if (2 == ArchiveIndex.field_j) {
-            long var3_long = -bd.field_k + td.b(128);
+            long var3_long = -SavedDataWrite.field_k + td.b(128);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (0 > var2) {
               var2 = 0;
@@ -765,10 +765,10 @@ final class en {
             String var6 = Js5NetworkRequest.field_I[var3];
             if (2 == ArchiveIndex.field_j &&
               1 == var2) {
-              if (tg.field_nb.length >= qm.field_f.length) {
+              if (tg.field_nb.length >= IterableNodeHashTable.field_f.length) {
                 stackIn_19_0 = tg.field_nb.length;
               } else {
-                stackIn_19_0 = qm.field_f.length;
+                stackIn_19_0 = IterableNodeHashTable.field_f.length;
               }
               int var7 = stackIn_19_0;
               if (tb.field_G.length > nn.field_i.length) {
@@ -821,7 +821,7 @@ final class en {
               pb.field_e.a(var6, var8Lifetime1, var1_int + he.field_x, var5, -1);
               var1_int = var1_int + (ok.field_a + (CheckboxPainter.field_s + field_k));
             } else {
-              nb.field_a.a(var6, var8Lifetime1, var1_int + vk.field_t, var5, -1);
+              nb.field_a.a(var6, var8Lifetime1, var1_int + StrongCacheEntry.field_t, var5, -1);
               var1_int = var1_int + je.field_b;
             }
           }
@@ -877,7 +877,7 @@ final class en {
           return;
         }
         while (true) {
-          qd var2 = (qd) (this.field_f.removeFirst(-20245));
+          AchievementRecord var2 = (AchievementRecord) (this.field_f.removeFirst(-20245));
           if (var2 != null) {
             sc.a(var2, 4, 1);
             continue;

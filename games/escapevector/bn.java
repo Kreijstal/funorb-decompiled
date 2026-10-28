@@ -30,10 +30,10 @@ final class bn {
         String stackIn_11_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (jb.field_l == null) {
+          if (ProxySocketConnector.field_l == null) {
             return;
           }
-          ci[] var8 = jb.field_l;
+          ci[] var8 = ProxySocketConnector.field_l;
           ci[] var2 = var8;
           for (int var3 = param1; var8.length > var3; var3++) {
             ci var4 = var8[var3];

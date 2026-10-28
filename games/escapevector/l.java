@@ -133,7 +133,7 @@ final class l extends UiContainer implements ButtonListener {
         if (param0 != -8462) {
           return -107;
         }
-        if (!qd.a(param1, -99)) {
+        if (!AchievementRecord.a(param1, -99)) {
           return -1;
         }
         return param1;

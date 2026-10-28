@@ -92,12 +92,12 @@ final class of {
             return null;
           }
           if (TriangleMesh.field_y == ui.field_b &&
-            param1.equals(tc.field_j)) {
+            param1.equals(SpriteStrip.field_j)) {
             ui.field_b = RasterBuffer.field_g;
             NameAvailabilityResult stackIn_8_0 = co.field_a;
             return stackIn_8_0;
           }
-          tc.field_j = param1;
+          SpriteStrip.field_j = param1;
           co.field_a = null;
           ui.field_b = EmailAvailabilityValidator.field_o;
           Object stackIn_10_0 = null;
@@ -132,7 +132,7 @@ final class of {
         if (param0 >= -72) {
           of.releaseStatics(-52);
         }
-        return md.field_G;
+        return md.mouseIdleTicks;
     }
 
     public static void releaseStatics(int guard) {

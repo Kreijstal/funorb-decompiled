@@ -42,7 +42,7 @@ final class TrackerMusicDefinition {
     int field_B;
 
     final static void d(int param0) {
-        pl.field_n.playSampleWithPan(!(0.5 <= Math.random()) ? TerrainMaskSupport.field_e : ri.field_b, 100, 6144 * qm.field_c / 64, param0);
+        pl.field_n.playSampleWithPan(!(0.5 <= Math.random()) ? TerrainMaskSupport.field_e : ri.field_b, 100, 6144 * IterableNodeHashTable.field_c / 64, param0);
     }
 
     final static String c(int param0) {
@@ -58,7 +58,7 @@ final class TrackerMusicDefinition {
         if (param0 != 31069) {
           TrackerMusicDefinition.releaseStatics(-82);
         }
-        return vk.field_v;
+        return StrongCacheEntry.field_v;
     }
 
     public static void releaseStatics(int guard) {
@@ -115,8 +115,8 @@ final class TrackerMusicDefinition {
           return "";
         }
         if (null == AudioService.field_b) {
-          mj.field_e = jb.field_o;
-          AudioService.field_b = new String[][]{mj.field_e, jb.field_o, vd.field_d, ck.field_u};
+          mj.field_e = ProxySocketConnector.field_o;
+          AudioService.field_b = new String[][]{mj.field_e, ProxySocketConnector.field_o, vd.field_d, ck.field_u};
         }
         return AudioService.field_b[param1][param2];
     }

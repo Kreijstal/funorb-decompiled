@@ -169,22 +169,22 @@ final class bk extends Js5Transport {
         }
     }
 
-    final static ij a(int param0, boolean param1, int param2, int param3, int param4) {
+    final static HighscoreQuery a(int param0, boolean param1, int param2, int param3, int param4) {
         int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          ij var5 = (ij) (qd.field_n.first(false));
+          HighscoreQuery var5 = (HighscoreQuery) (AchievementRecord.field_n.first(false));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var5))) {
             stackIn_11_0 = ~param0;
-            stackIn_11_1 = ~var5.field_n;
+            stackIn_11_1 = ~var5.boardId;
             if (var6 == 0) {
               if (stackIn_11_0 == stackIn_11_1) {
-                ij stackIn_8_0 = var5;
+                HighscoreQuery stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
-              var5 = (ij) (qd.field_n.next((byte) 70));
+              var5 = (HighscoreQuery) (AchievementRecord.field_n.next((byte) 70));
               continue;
             }
             break;
@@ -196,13 +196,13 @@ final class bk extends Js5Transport {
           if (stackIn_11_0 != stackIn_11_1) {
             field_q = (String[]) null;
           }
-          ij var5Lifetime1 = new ij();
+          HighscoreQuery var5Lifetime1 = new HighscoreQuery();
           var5Lifetime1.field_j = param4;
-          var5Lifetime1.field_n = param0;
+          var5Lifetime1.boardId = param0;
           var5Lifetime1.field_h = param2;
-          qd.field_n.addLast(-12328, var5Lifetime1);
-          aj.a(124, param3, var5Lifetime1);
-          ij stackIn_15_0 = var5Lifetime1;
+          AchievementRecord.field_n.addLast(-12328, var5Lifetime1);
+          aj.writeHighscoreQuery(124, param3, var5Lifetime1);
+          HighscoreQuery stackIn_15_0 = var5Lifetime1;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -273,7 +273,7 @@ final class bk extends Js5Transport {
         int stackIn_63_2 = 0;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var1 = QuickChatDynamicCommand.field_g;
+          CipherPacketBuffer var1 = QuickChatDynamicCommand.incomingPackets;
           int var2 = var1.readUnsignedByte(param0 ^ 0);
           if (param0 == var2) {
             if (null == ml.field_a) {

@@ -21,10 +21,10 @@ final class NameAvailabilityResult {
     final static void a(byte param0) {
         try {
           boolean decompiledRegionSelector0 = false;
-          if (bd.field_h != null) {
+          if (SavedDataWrite.field_h != null) {
             try {
-              bd.field_h.a(0, 0L);
-              bd.field_h.a(true, QuickChatDynamicCommand.field_g.position, QuickChatDynamicCommand.field_g.payload, 24);
+              SavedDataWrite.field_h.a(0, 0L);
+              SavedDataWrite.field_h.a(true, QuickChatDynamicCommand.incomingPackets.position, QuickChatDynamicCommand.incomingPackets.payload, 24);
               decompiledRegionSelector0 = false;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;
@@ -32,14 +32,14 @@ final class NameAvailabilityResult {
               decompiledRegionSelector0 = true;
             }
             if (!decompiledRegionSelector0) {
-              QuickChatDynamicCommand.field_g.position = QuickChatDynamicCommand.field_g.position + 24;
+              QuickChatDynamicCommand.incomingPackets.position = QuickChatDynamicCommand.incomingPackets.position + 24;
               if (param0 > -44) {
                 NameAvailabilityResult.a((byte) -105);
               }
               return;
             }
           }
-          QuickChatDynamicCommand.field_g.position = QuickChatDynamicCommand.field_g.position + 24;
+          QuickChatDynamicCommand.incomingPackets.position = QuickChatDynamicCommand.incomingPackets.position + 24;
           if (param0 <= -44) {
             return;
           }

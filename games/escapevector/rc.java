@@ -12,7 +12,7 @@ final class rc {
           return;
         }
         try {
-          rm.a((java.awt.Component) ((Object) param0), (byte) 38);
+          DualLinkDequeIterator.attachMouseInput((java.awt.Component) ((Object) param0), (byte) 38);
           if (ji.field_b != null) {
             ji.field_b.attach((java.awt.Component) ((Object) param0), true);
           }

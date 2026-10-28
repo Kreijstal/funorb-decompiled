@@ -4,7 +4,7 @@
 final class jk {
     private int field_a;
     private int field_d;
-    static volatile int field_b;
+    static volatile int pendingMouseY;
     private int field_c;
 
     final static void a(String[] args, String param1, int param2, int param3) {
@@ -28,7 +28,7 @@ final class jk {
           if (param2 == -101) {
             return;
           }
-          field_b = 26;
+          pendingMouseY = 26;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,7 +76,7 @@ final class jk {
     final static void a(String param0, byte param1) {
         try {
           if (param1 != -6) {
-            field_b = 86;
+            pendingMouseY = 86;
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "jk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -90,6 +90,6 @@ final class jk {
     }
 
     static {
-        field_b = -1;
+        pendingMouseY = -1;
     }
 }

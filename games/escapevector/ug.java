@@ -9,7 +9,7 @@ final class ug {
 
     final static boolean a(int param0, int param1) {
         try {
-          int[] var5 = jb.field_z;
+          int[] var5 = ProxySocketConnector.field_z;
           int[] var2 = var5;
           int var3 = param1;
           while (true) {

@@ -49,7 +49,7 @@ abstract class IndexedSpriteState {
           int var3Lifetime1 = kh.field_a[9] >> 8;
           int var4 = kh.field_a[10] >> 8;
           int var5Lifetime1 = kh.field_a[11] >> 8;
-          int var6Lifetime1 = kb.field_d << 4;
+          int var6Lifetime1 = SocketConnector.field_d << 4;
           int var7Lifetime1 = 0;
           int var8Lifetime1 = fc.a(10758, var6Lifetime1) >> 8;
           int var9Lifetime1 = EditableTextWidget.a(-127, var6Lifetime1) >> 8;

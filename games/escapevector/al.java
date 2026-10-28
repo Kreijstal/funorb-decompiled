@@ -56,7 +56,7 @@ final class al {
         for (int var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = qk.field_f[ae.a((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var3);
+        Sprite var4 = new Sprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var3);
         of.a(false);
         if (param0 < 98) {
           field_a = (int[]) null;

@@ -95,8 +95,8 @@ final class jd {
             ObjectSpriteSet.field_e.addSubstream(mm.field_b);
             ObjectSpriteSet.field_e.addSubstream(vi.field_d);
           }
-          mm.field_b.rampVolumeAndPanQ6(441, qm.field_c * var5 / 64, var6Lifetime2);
-          vi.field_d.rampVolumeAndPanQ6(441, var7Lifetime2 * qm.field_c / 64, var8Lifetime2);
+          mm.field_b.rampVolumeAndPanQ6(441, IterableNodeHashTable.field_c * var5 / 64, var6Lifetime2);
+          vi.field_d.rampVolumeAndPanQ6(441, var7Lifetime2 * IterableNodeHashTable.field_c / 64, var8Lifetime2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

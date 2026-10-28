@@ -125,7 +125,7 @@ final class bo extends TextButton {
           if (param0 != 30000) {
             return false;
           }
-          if (param1 <= QuickChatDynamicCommand.field_g.position) {
+          if (param1 <= QuickChatDynamicCommand.incomingPackets.position) {
             return true;
           }
           if (null == TextLayout.field_c) {
@@ -144,16 +144,16 @@ final class bo extends TextButton {
               nm.a(16);
               return false;
             }
-            if (var2_int > param1 - QuickChatDynamicCommand.field_g.position) {
-              var2_int = param1 - QuickChatDynamicCommand.field_g.position;
+            if (var2_int > param1 - QuickChatDynamicCommand.incomingPackets.position) {
+              var2_int = param1 - QuickChatDynamicCommand.incomingPackets.position;
             }
-            TextLayout.field_c.a(QuickChatDynamicCommand.field_g.position, var2_int, QuickChatDynamicCommand.field_g.payload, (byte) -49);
+            TextLayout.field_c.a(QuickChatDynamicCommand.incomingPackets.position, var2_int, QuickChatDynamicCommand.incomingPackets.payload, (byte) -49);
             sl.field_a = td.b(128);
-            QuickChatDynamicCommand.field_g.position = QuickChatDynamicCommand.field_g.position + var2_int;
-            if (param1 > QuickChatDynamicCommand.field_g.position) {
+            QuickChatDynamicCommand.incomingPackets.position = QuickChatDynamicCommand.incomingPackets.position + var2_int;
+            if (param1 > QuickChatDynamicCommand.incomingPackets.position) {
               return false;
             }
-            QuickChatDynamicCommand.field_g.position = 0;
+            QuickChatDynamicCommand.incomingPackets.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             Throwable decompiledCaughtException = decompiledCaughtParameter0;

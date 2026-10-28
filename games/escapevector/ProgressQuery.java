@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends IntrusiveNode {
-    int[] field_h;
-    boolean field_g;
+final class ProgressQuery extends IntrusiveNode {
+    int[] progressWords;
+    boolean complete;
     static String field_i;
-    int field_j;
+    int campaignId;
 
-    final static String a(byte param0, String param1, java.applet.Applet param2) {
+    final static String readCookie(byte guard, String name, java.applet.Applet applet) {
         try {
           String stackIn_17_2 = null;
           String stackIn_20_2 = null;
@@ -15,17 +15,17 @@ final class dc extends IntrusiveNode {
           int var7 = EscapeVector.obfuscationControl;
           try {
             try {
-              String var3 = (String) (JavaScriptBridge.callWindowFunction(param2, "getcookies", -29155));
+              String var3 = (String) (JavaScriptBridge.callWindowFunction(applet, "getcookies", -29155));
               String[] var4 = bb.a(-128, var3, ';');
               for (int var5 = 0; var4.length > var5; var5++) {
                 int var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
-                  var4[var5].substring(0, var6).trim().equals(param1)) {
+                  var4[var5].substring(0, var6).trim().equals(name)) {
                   String stackIn_6_0 = var4[var5].substring(1 + var6).trim();
                   return stackIn_6_0;
                 }
               }
-              if (param0 <= 78) {
+              if (guard <= 78) {
                 field_i = (String) null;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -38,14 +38,14 @@ final class dc extends IntrusiveNode {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_16_0 = var3_ref;
-            StringBuilder stackIn_16_1 = new StringBuilder().append("dc.B(").append(param0).append(',');
-            if (param1 == null) {
+            StringBuilder stackIn_16_1 = new StringBuilder().append("dc.B(").append(guard).append(',');
+            if (name == null) {
               stackIn_17_2 = "null";
             } else {
               stackIn_17_2 = "{...}";
             }
             StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
-            if (param2 == null) {
+            if (applet == null) {
               stackIn_20_2 = "null";
             } else {
               stackIn_20_2 = "{...}";
@@ -59,12 +59,12 @@ final class dc extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
-        if (param0 > -5) {
+    final static int ceilDivide(int guard, int divisor, int value) {
+        if (guard > -5) {
           return -127;
         }
-        int var3 = param2 / param1;
-        if (param2 % param1 == 0) {
+        int var3 = value / divisor;
+        if (value % divisor == 0) {
           return var3;
         }
         var3++;
@@ -94,13 +94,13 @@ final class dc extends IntrusiveNode {
         return param3 * (-param2 + param0) / param1 + param2;
     }
 
-    dc() {
+    ProgressQuery() {
     }
 
     public static void releaseStatics(boolean guard) {
         field_i = null;
         if (guard) {
-          dc.releaseStatics(true);
+          ProgressQuery.releaseStatics(true);
         }
     }
 

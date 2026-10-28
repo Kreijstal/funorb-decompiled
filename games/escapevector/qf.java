@@ -25,8 +25,8 @@ final class qf extends eo {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            QuickChatDynamicCommand.field_g = new CipherPacketBuffer(param1);
-            QuickChatDynamicCommand.field_c = new CipherPacketBuffer(param0);
+            QuickChatDynamicCommand.incomingPackets = new CipherPacketBuffer(param1);
+            QuickChatDynamicCommand.outgoingPackets = new CipherPacketBuffer(param0);
             if (param8 != 84) {
               qf.releaseStatics(-106);
             }
@@ -45,7 +45,7 @@ final class qf extends eo {
               return;
             }
             try {
-              bd.field_h = new BufferedRandomAccessFile(MouseWheelInput.field_c.field_j, 64, 0);
+              SavedDataWrite.field_h = new BufferedRandomAccessFile(MouseWheelInput.field_c.field_j, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

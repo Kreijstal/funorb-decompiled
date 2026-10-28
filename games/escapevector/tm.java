@@ -90,7 +90,7 @@ final class tm extends vg implements ButtonListener {
               }
             } else {
               if (um.field_d == param1) {
-                var3 = eg.field_a;
+                var3 = MouseInputHandler.field_a;
                 this.height = this.height + 30;
               }
             }

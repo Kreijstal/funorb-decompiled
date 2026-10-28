@@ -55,7 +55,7 @@ final class fe {
           ml.field_c = fe.a("members_expansion_screen", ck.field_x, "arrow", true);
           ac.field_c = oi.a(4, pc.field_e, "arialish12", "", ck.field_x);
           ReflectionCheck.field_h = ac.a("", -73, ck.field_x, "pump32", pc.field_e);
-          wf.field_e = p.a((byte) 8, "benefit_orbs", ck.field_x, "members_expansion_screen");
+          IntrusiveDequeCursor.field_e = p.a((byte) 8, "benefit_orbs", ck.field_x, "members_expansion_screen");
           ee.field_c = p.a((byte) 8, "button_text", ck.field_x, "members_expansion_screen");
           QuickChatDynamicCommand.field_a = ui.a("button_highlights", ck.field_x, "members_expansion_screen", (byte) 71);
           ck.field_x = null;
@@ -95,7 +95,7 @@ final class fe {
         }
         this.field_c.e(16, 302);
         ac.field_c.a(this.field_d[this.field_i], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-        wf.field_e.e(30, 330);
+        IntrusiveDequeCursor.field_e.e(30, 330);
         ac.field_c.a(MatchingTextValidator.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ac.field_c.a(MatchingTextValidator.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ac.field_c.a(MatchingTextValidator.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);

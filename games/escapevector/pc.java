@@ -36,7 +36,7 @@ final class pc {
           if (param0 != 0) {
             field_a = (PcmSample) null;
           }
-          String var2 = jb.a(RasterBuffer.a((byte) 122, param1), (byte) 29);
+          String var2 = ProxySocketConnector.decodeBase37Name(RasterBuffer.a((byte) 122, param1), (byte) 29);
           if (var2 == null) {
             var2 = "";
           }

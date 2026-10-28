@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ll extends IntrusiveNode {
-    int field_g;
-    int[] field_j;
-    int field_i;
+final class ArchiveKeyRequest extends IntrusiveNode {
+    int archiveId;
+    int[] key;
+    int groupId;
     static String field_h;
 
     final static void a(int param0, int param1, boolean param2, int param3) {
@@ -18,11 +18,11 @@ final class ll extends IntrusiveNode {
         gi.a((byte) -70);
     }
 
-    final static void b(boolean param0) {
-        ll var1 = (ll) (jl.field_n.first(param0));
+    final static void decodeArchiveKeyResponse(boolean guard) {
+        ArchiveKeyRequest var1 = (ArchiveKeyRequest) (jl.field_n.first(guard));
         if (var1 != null) {
-          CipherPacketBuffer var2 = QuickChatDynamicCommand.field_g;
-          var1.field_j = new int[]{var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053)};
+          CipherPacketBuffer var2 = QuickChatDynamicCommand.incomingPackets;
+          var1.key = new int[]{var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053)};
           var1.unlink((byte) -66);
           return;
         }
@@ -41,7 +41,7 @@ final class ll extends IntrusiveNode {
           }
         }
         if (param2 != 8) {
-          ll.a(114, -28, -15, 125);
+          ArchiveKeyRequest.a(114, -28, -15, 125);
         }
         if (param3 <= 50) {
           return;
@@ -67,37 +67,37 @@ final class ll extends IntrusiveNode {
         }
     }
 
-    ll() {
+    ArchiveKeyRequest() {
     }
 
-    final static void a(boolean param0) {
-        ck.field_r = QuickChatDynamicCommand.field_g.readString(!param0 ? true : false);
-        if (param0) {
+    final static void decodeAccountName(boolean guard) {
+        ck.field_r = QuickChatDynamicCommand.incomingPackets.readString(!guard ? true : false);
+        if (guard) {
           CharSequence var3 = (CharSequence) ((Object) ck.field_r);
-          cc.field_k = sf.a(-101, var3);
+          ProgressRecord.field_k = sf.a(-101, var3);
           return;
         }
         field_h = (String) null;
         CharSequence var2 = (CharSequence) ((Object) ck.field_r);
-        cc.field_k = sf.a(-101, var2);
+        ProgressRecord.field_k = sf.a(-101, var2);
     }
 
-    final static boolean d(int param0) {
+    final static boolean hasCompletePacket(int guard) {
         if (EmailSyntaxValidator.field_r == -1) {
           if (!bo.a(30000, 1)) {
             return false;
           }
-          EmailSyntaxValidator.field_r = QuickChatDynamicCommand.field_g.readUnsignedByte(param0 ^ 10550);
-          QuickChatDynamicCommand.field_g.position = 0;
+          EmailSyntaxValidator.field_r = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(guard ^ 10550);
+          QuickChatDynamicCommand.incomingPackets.position = 0;
         }
         if (EmailSyntaxValidator.field_r == -2) {
           if (!bo.a(30000, 2)) {
             return false;
           }
-          EmailSyntaxValidator.field_r = QuickChatDynamicCommand.field_g.readUnsignedShort(1952);
-          QuickChatDynamicCommand.field_g.position = 0;
+          EmailSyntaxValidator.field_r = QuickChatDynamicCommand.incomingPackets.readUnsignedShort(1952);
+          QuickChatDynamicCommand.incomingPackets.position = 0;
         }
-        if (param0 == 10550) {
+        if (guard == 10550) {
           return bo.a(30000, EmailSyntaxValidator.field_r);
         }
         field_h = (String) null;

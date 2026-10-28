@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qd extends IntrusiveNode {
+final class AchievementRecord extends IntrusiveNode {
     int field_j;
     int field_k;
     int field_i;
@@ -123,7 +123,7 @@ final class qd extends IntrusiveNode {
         }
     }
 
-    qd(int param0, int param1, int param2, int param3, int param4, int param5) {
+    AchievementRecord(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.field_j = param4;
         this.field_i = param3;
         this.field_g = param5;

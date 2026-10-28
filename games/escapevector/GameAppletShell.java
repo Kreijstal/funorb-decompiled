@@ -113,7 +113,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void focusLost(java.awt.event.FocusEvent param0) {
         String stackIn_6_2 = null;
         try {
-          qd.field_l = false;
+          AchievementRecord.field_l = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -180,7 +180,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           Object var6 = this;
           synchronized (var6) {
-            ObjectSpriteSet.field_b = qd.field_l;
+            ObjectSpriteSet.field_b = AchievementRecord.field_l;
           }
           this.updateClient(-111);
           return;
@@ -193,7 +193,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void stop() {
         if (he.field_r != this ||
-          rl.field_j) {
+          RatingQuery.field_j) {
           return;
         }
         try {
@@ -291,7 +291,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void destroy() {
         try {
           if (this == he.field_r &&
-            !rl.field_j) {
+            !RatingQuery.field_j) {
             me.field_p = td.b(128);
             en.a((byte) 100, 5000L);
             ae.field_a = null;
@@ -445,7 +445,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     Throwable var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                dm.a((byte) -61);
+                DelayedServerPacket.detectMaximumHeap((byte) -61);
                 this.d(2);
                 md.field_D = PcmResampler.createRasterBuffer((java.awt.Component) ((Object) of.field_d), BoundedUrlRequest.field_d, (byte) 125, pd.field_b);
                 this.initializeClient((byte) -97);
@@ -499,9 +499,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     private final void c(byte param0) {
         try {
           long var2_long = td.b(128);
-          long var4 = wi.field_d[rl.field_h];
-          wi.field_d[rl.field_h] = var2_long;
-          rl.field_h = 1 + rl.field_h & 31;
+          long var4 = wi.field_d[RatingQuery.field_h];
+          wi.field_d[RatingQuery.field_h] = var2_long;
+          RatingQuery.field_h = 1 + RatingQuery.field_h & 31;
           if (var4 != 0L &&
             var4 < var2_long) {
             int var6 = (int)(-var4 + var2_long);
@@ -538,7 +538,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void focusGained(java.awt.event.FocusEvent param0) {
         String stackIn_6_2 = null;
         try {
-          qd.field_l = true;
+          AchievementRecord.field_l = true;
           NameSuggestionsPanel.field_H = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -634,7 +634,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void start() {
         try {
           if (he.field_r == this &&
-            !rl.field_j) {
+            !RatingQuery.field_j) {
             me.field_p = 0L;
             return;
           }
@@ -672,7 +672,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_24_2 = null;
         try {
           if (he.field_r == this &&
-            !rl.field_j) {
+            !RatingQuery.field_j) {
             NameSuggestionsPanel.field_H = true;
             if (dh.field_c &&
               -bn.field_c + td.b(128) > 1000L) {
@@ -757,7 +757,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             var3 = qj.field_f;
           }
           ((java.awt.Container) (var3)).setLayout((java.awt.LayoutManager) null);
-          of.field_d = (java.awt.Canvas) ((Object) new hd((java.awt.Component) (this)));
+          of.field_d = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var3)).add((java.awt.Component) ((Object) of.field_d));
           of.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
           of.field_d.setVisible(true);
@@ -773,7 +773,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           of.field_d.addFocusListener((java.awt.event.FocusListener) (this));
           of.field_d.requestFocus();
           ObjectSpriteSet.field_b = true;
-          qd.field_l = true;
+          AchievementRecord.field_l = true;
           NameSuggestionsPanel.field_H = true;
           PacketBuffer.field_i = false;
           bn.field_c = td.b(128);
@@ -817,10 +817,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           Object var3_ref = this;
           synchronized (var3_ref) {
-            if (rl.field_j) {
+            if (RatingQuery.field_j) {
               return;
             }
-            rl.field_j = true;
+            RatingQuery.field_j = true;
           }
           if (null != bb.field_P) {
             bb.field_P.destroy();

@@ -3,7 +3,7 @@
  */
 final class md extends SingleChildContainer {
     static fk field_E;
-    static volatile int field_G;
+    static volatile int mouseIdleTicks;
     static RasterBuffer field_D;
     int field_F;
     static String field_H;
@@ -39,7 +39,7 @@ final class md extends SingleChildContainer {
           try {
             try {
               java.net.URL var3 = new java.net.URL(param0.getCodeBase(), param2);
-              var3 = sh.a((byte) 95, param0, var3);
+              var3 = WeightedCacheEntry.withSessionParameters((byte) 95, param0, var3);
               Bzip2State.a(true, true, param0, var3.toString());
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,6 +123,6 @@ final class md extends SingleChildContainer {
 
     static {
         field_E = new fk(3);
-        field_G = 0;
+        mouseIdleTicks = 0;
     }
 }

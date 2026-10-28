@@ -3,10 +3,10 @@
  */
 final class PcmResampler {
     private int field_i;
-    static ll field_h;
+    static ArchiveKeyRequest field_h;
     static h field_d;
     static PcmSample field_g;
-    static volatile int field_c;
+    static volatile int pendingClickY;
     static String field_b;
     private int field_f;
     static Sprite[] field_a;
@@ -103,7 +103,7 @@ final class PcmResampler {
         if (param1 == param0) {
           return;
         }
-        int var3 = im.a(param1, param0, 62);
+        int var3 = ProxyAuthenticationException.greatestCommonDivisor(param1, param0, 62);
         param1 = param1 / var3;
         param0 = param0 / var3;
         this.field_f = param1;
@@ -195,6 +195,6 @@ final class PcmResampler {
     static {
         field_b = "Five rock busters -  'ENTER' or 'R' or 'ALT' to fire";
         field_a = new Sprite[7];
-        field_c = 0;
+        pendingClickY = 0;
     }
 }

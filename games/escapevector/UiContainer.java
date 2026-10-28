@@ -15,14 +15,14 @@ class UiContainer extends UiComponent implements UiContainerMarker {
 
     private final void f(byte param0) {
         int var4 = EscapeVector.obfuscationControl;
-        wf var2 = new wf(this.field_A);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_A);
         if (param0 != 6) {
           UiContainer.e((byte) -76);
         }
-        UiComponent var3 = (UiComponent) (var2.c(param0 ^ 9));
+        UiComponent var3 = (UiComponent) (var2.first(param0 ^ 9));
         while (var3 != null) {
           var3.refreshLayout(0);
-          var3 = (UiComponent) (var2.a(53));
+          var3 = (UiComponent) (var2.next(53));
         }
     }
 
@@ -55,11 +55,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           null != this.painter) {
           this.painter.drawWidget(screenX, screenY, -42, (UiComponent) (this), true);
         }
-        wf var5 = new wf(this.field_A);
-        UiComponent var6 = (UiComponent) (var5.b(-31616));
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_A);
+        UiComponent var6 = (UiComponent) (var5.last(-31616));
         while (var6 != null) {
           var6.drawLayer(screenY + this.y, (byte) 127, layer, this.x + screenX);
-          var6 = (UiComponent) (var5.a((byte) 59));
+          var6 = (UiComponent) (var5.previous((byte) 59));
         }
     }
 
@@ -77,35 +77,35 @@ class UiContainer extends UiComponent implements UiContainerMarker {
     final int maximumRenderLayer(int guard) {
         int var6 = EscapeVector.obfuscationControl;
         int var2 = 0;
-        wf var3 = new wf(this.field_A);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_A);
         if (guard != 12050) {
           return 121;
         }
-        UiComponent var4 = (UiComponent) (var3.c(15));
+        UiComponent var4 = (UiComponent) (var3.first(15));
         while (var4 != null) {
           int var5 = var4.maximumRenderLayer(12050);
           if (var5 > var2) {
             var2 = var5;
           }
-          var4 = (UiComponent) (var3.a(56));
+          var4 = (UiComponent) (var3.next(56));
         }
         return var2;
     }
 
     final String getTooltip(int guard) {
         int var5 = EscapeVector.obfuscationControl;
-        wf var2 = new wf(this.field_A);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_A);
         if (guard != 1) {
           Hashtable var6 = (Hashtable) null;
           this.a((StringBuilder) null, -16, (Hashtable) null, 72);
         }
-        UiComponent var3 = (UiComponent) (var2.c(15));
+        UiComponent var3 = (UiComponent) (var2.first(15));
         while (var3 != null) {
           String var4 = var3.getTooltip(1);
           if (var4 != null) {
             return var4;
           }
-          var3 = (UiComponent) (var2.a(guard + 57));
+          var3 = (UiComponent) (var2.next(guard + 57));
         }
         return null;
     }
@@ -117,12 +117,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (guard != 3) {
             return false;
           }
-          wf var8 = new wf(this.field_A);
-          UiComponent var9 = (UiComponent) (var8.c(guard ^ 12));
+          IntrusiveDequeCursor var8 = new IntrusiveDequeCursor(this.field_A);
+          UiComponent var9 = (UiComponent) (var8.first(guard ^ 12));
           while (var9 != null) {
             if (var9.isLinked((byte) 48)) {
               if (!var9.onPointerPressed(this.y + offsetY, pointerX, (byte) 3, pointerY, this.x + offsetX, root, button)) {
-                var9 = (UiComponent) (var8.a(108));
+                var9 = (UiComponent) (var8.next(108));
                 continue;
               }
               return true;
@@ -149,8 +149,8 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         String stackIn_20_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          wf var5 = new wf(this.field_A);
-          UiComponent var8 = (UiComponent) (var5.c(15));
+          IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_A);
+          UiComponent var8 = (UiComponent) (var5.first(15));
           if (guard <= 0) {
             return false;
           }
@@ -160,7 +160,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
                 var8.onFocusedKey(root, character, keyCode, 37)) {
                 return true;
               }
-              var8 = (UiComponent) (var5.a(54));
+              var8 = (UiComponent) (var5.next(54));
               continue;
             }
             break;
@@ -169,7 +169,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (80 != var6) {
             return false;
           }
-          if (!ik.field_h[81]) {
+          if (!ScoreSubmission.field_h[81]) {
             stackIn_16_0 = this.a(root, true);
           } else {
             stackIn_16_0 = this.a((byte) 22, root);
@@ -204,15 +204,15 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (guard >= -103) {
             field_B = (ResourceArchive) null;
           }
-          wf var8 = new wf(this.field_A);
-          UiComponent var9 = (UiComponent) (var8.c(15));
+          IntrusiveDequeCursor var8 = new IntrusiveDequeCursor(this.field_A);
+          UiComponent var9 = (UiComponent) (var8.first(15));
           while (var9 != null) {
             if (var9.isLinked((byte) 48)) {
               if (var9.isFocused(0) &&
                 var9.onMouseWheel(offsetX, rotation, (byte) -127, pointerY, pointerX, root, offsetY)) {
                 return true;
               }
-              var9 = (UiComponent) (var8.a(102));
+              var9 = (UiComponent) (var8.next(102));
               continue;
             }
             break;
@@ -237,12 +237,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var7 = EscapeVector.obfuscationControl;
         try {
           super.updateHover(guard, offsetY, offsetX, root);
-          wf var5 = new wf(this.field_A);
-          UiComponent var6 = (UiComponent) (var5.c(15));
+          IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_A);
+          UiComponent var6 = (UiComponent) (var5.first(15));
           while (var6 != null) {
             if (var6.isLinked((byte) 48)) {
               var6.updateHover(-14472, this.y + offsetY, offsetX + this.x, root);
-              var6 = (UiComponent) (var5.a(57));
+              var6 = (UiComponent) (var5.next(57));
               continue;
             }
             break;
@@ -264,11 +264,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
 
     final void clearFocus(int guard) {
         int var4 = EscapeVector.obfuscationControl;
-        wf var2 = new wf(this.field_A);
-        UiComponent var3 = (UiComponent) (var2.c(15));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_A);
+        UiComponent var3 = (UiComponent) (var2.first(15));
         while (var3 != null) {
           var3.clearFocus(111);
-          var3 = (UiComponent) (var2.a(25));
+          var3 = (UiComponent) (var2.next(25));
         }
         if (guard < 46) {
           UiComponent var5 = (UiComponent) null;
@@ -290,24 +290,24 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (this.field_A.isEmpty(param0 ^ -106)) {
             return false;
           }
-          wf var8 = new wf(this.field_A);
+          IntrusiveDequeCursor var8 = new IntrusiveDequeCursor(this.field_A);
           if (param0 != 22) {
             return true;
           }
-          UiComponent var4 = (UiComponent) (var8.b(-31616));
+          UiComponent var4 = (UiComponent) (var8.last(-31616));
           while (var4 != null) {
             if (var4.isFocused(0)) {
-              wf var5 = new wf(this.field_A);
-              var5.a((byte) 55, (IntrusiveNode) (var4));
-              UiComponent var6 = (UiComponent) (var5.a((byte) 47));
+              IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_A);
+              var5.lastFrom((byte) 55, (IntrusiveNode) (var4));
+              UiComponent var6 = (UiComponent) (var5.previous((byte) 47));
               while (var6 != null) {
                 if (var6.focusNext(-4659, param1)) {
                   return true;
                 }
-                var6 = (UiComponent) (var5.a((byte) 80));
+                var6 = (UiComponent) (var5.previous((byte) 80));
               }
             }
-            var4 = (UiComponent) (var8.a((byte) 74));
+            var4 = (UiComponent) (var8.previous((byte) 74));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -331,26 +331,26 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (this.field_A.isEmpty(-97)) {
             return false;
           }
-          wf var9 = new wf(this.field_A);
+          IntrusiveDequeCursor var9 = new IntrusiveDequeCursor(this.field_A);
           if (!param1) {
             UiComponent var8 = (UiComponent) null;
             this.onPointerPressed(31, -112, (byte) -74, 114, -25, (UiComponent) null, -91);
           }
-          UiComponent var4 = (UiComponent) (var9.c(15));
+          UiComponent var4 = (UiComponent) (var9.first(15));
           while (var4 != null) {
             if (var4.isFocused(0)) {
-              wf var5 = new wf(this.field_A);
-              var5.a(-12818, var4);
-              UiComponent var6 = (UiComponent) (var5.a(125));
+              IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_A);
+              var5.firstFrom(-12818, var4);
+              UiComponent var6 = (UiComponent) (var5.next(125));
               while (var6 != null) {
                 if (!var6.focusNext(-4659, param0)) {
-                  var6 = (UiComponent) (var5.a(80));
+                  var6 = (UiComponent) (var5.next(80));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (UiComponent) (var9.a(98));
+            var4 = (UiComponent) (var9.next(98));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -371,16 +371,16 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         String stackIn_15_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          wf var3 = new wf(this.field_A);
+          IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_A);
           if (guard != -4659) {
             UiContainer.e((byte) 13);
           }
-          UiComponent var4 = (UiComponent) (var3.c(15));
+          UiComponent var4 = (UiComponent) (var3.first(15));
           while (var4 != null) {
             if (var4.focusNext(-4659, root)) {
               return true;
             }
-            var4 = (UiComponent) (var3.a(guard + 4779));
+            var4 = (UiComponent) (var3.next(guard + 4779));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -399,16 +399,16 @@ class UiContainer extends UiComponent implements UiContainerMarker {
 
     UiComponent a(boolean param0) {
         int var4 = EscapeVector.obfuscationControl;
-        wf var2 = new wf(this.field_A);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_A);
         if (!param0) {
           field_y = 52;
         }
-        UiComponent var3 = (UiComponent) (var2.c(15));
+        UiComponent var3 = (UiComponent) (var2.first(15));
         while (var3 != null) {
           if (var3.isFocused(0)) {
             return var3;
           }
-          var3 = (UiComponent) (var2.a(78));
+          var3 = (UiComponent) (var2.next(78));
         }
         return null;
     }
@@ -418,18 +418,18 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         String stackIn_16_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          wf var5 = new wf(this.field_A);
+          IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_A);
           if (param3 <= 95) {
             field_D = (String) null;
           }
-          UiComponent var6 = (UiComponent) (var5.c(15));
+          UiComponent var6 = (UiComponent) (var5.first(15));
           while (var6 != null) {
             StringBuilder discarded$3 = param0.append('\n');
             for (int var7 = 0; param1 >= var7; var7++) {
               StringBuilder discarded$4 = param0.append(' ');
             }
             var6.appendDebugTree(0, param2, param0, param1 + 1);
-            var6 = (UiComponent) (var5.a(31));
+            var6 = (UiComponent) (var5.next(31));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -468,12 +468,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         String stackIn_10_2 = null;
         int var9 = EscapeVector.obfuscationControl;
         try {
-          wf var7 = new wf(this.field_A);
-          UiComponent var8_ref_hm = (UiComponent) (var7.c(15));
+          IntrusiveDequeCursor var7 = new IntrusiveDequeCursor(this.field_A);
+          UiComponent var8_ref_hm = (UiComponent) (var7.first(15));
           while (var8_ref_hm != null) {
             if (var8_ref_hm.isLinked((byte) 48)) {
               var8_ref_hm.onPointerReleased(pointerY, this.x + offsetY, pointerX, offsetX + this.y, root, (byte) -113);
-              var8_ref_hm = (UiComponent) (var7.a(29));
+              var8_ref_hm = (UiComponent) (var7.next(29));
               continue;
             }
             break;

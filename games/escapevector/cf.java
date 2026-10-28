@@ -37,9 +37,9 @@ final class cf {
           int var21Lifetime1 = param1[0] - param3[0];
           int var22Lifetime1 = -param3[1] + param1[1];
           int var23Lifetime1 = param1[2] - param3[2];
-          int var9 = var23Lifetime1 * param3[5] + (var22Lifetime1 * param3[4] + param3[3] * var21Lifetime1) >> -ij.field_i + 16;
+          int var9 = var23Lifetime1 * param3[5] + (var22Lifetime1 * param3[4] + param3[3] * var21Lifetime1) >> -HighscoreQuery.field_i + 16;
           int var11 = param3[10] * var22Lifetime1 + (param3[9] * var21Lifetime1 + var23Lifetime1 * param3[11]) >> 16;
-          int var10 = param3[7] * var22Lifetime1 + (param3[6] * var21Lifetime1 + var23Lifetime1 * param3[8]) >> 16 - ij.field_i;
+          int var10 = param3[7] * var22Lifetime1 + (param3[6] * var21Lifetime1 + var23Lifetime1 * param3[8]) >> 16 - HighscoreQuery.field_i;
           int var21Lifetime2 = bi.field_b;
           int var22Lifetime2 = bi.field_i;
           int var23Lifetime2 = 0;
@@ -49,8 +49,8 @@ final class cf {
               int var24Lifetime1 = param6.vertexX[var23Lifetime2];
               int var25Lifetime1 = param6.vertexY[var23Lifetime2];
               int var26Lifetime1 = param6.vertexZ[var23Lifetime2];
-              int var27Lifetime1 = (var18 * var26Lifetime1 + (var24Lifetime1 * var12 + var15 * var25Lifetime1) >> 16 - ij.field_i) + var9;
-              int var28Lifetime1 = var10 + (var16 * var25Lifetime1 + var13 * var24Lifetime1 + var19 * var26Lifetime1 >> -ij.field_i + 16);
+              int var27Lifetime1 = (var18 * var26Lifetime1 + (var24Lifetime1 * var12 + var15 * var25Lifetime1) >> 16 - HighscoreQuery.field_i) + var9;
+              int var28Lifetime1 = var10 + (var16 * var25Lifetime1 + var13 * var24Lifetime1 + var19 * var26Lifetime1 >> -HighscoreQuery.field_i + 16);
               int var29Lifetime1 = (var24Lifetime1 * var14 - (-(var17 * var25Lifetime1) - var26Lifetime1 * var20) >> 16) + var11;
               int stackIn_60_0 = 50;
               int stackIn_60_1 = var29Lifetime1;
@@ -77,8 +77,8 @@ final class cf {
                   km.field_j[var23Lifetime2] = -2147483648;
                 }
                 if (param2) {
-                  mg.field_a[var23Lifetime2] = var27Lifetime1 >> ij.field_i;
-                  tm.field_bb[var23Lifetime2] = var28Lifetime1 >> ij.field_i;
+                  mg.field_a[var23Lifetime2] = var27Lifetime1 >> HighscoreQuery.field_i;
+                  tm.field_bb[var23Lifetime2] = var28Lifetime1 >> HighscoreQuery.field_i;
                   jl.field_p[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -102,7 +102,7 @@ final class cf {
                   int var25Lifetime1Lifetime1 = param6.field_d[var23Lifetime2];
                   int var26Lifetime1Lifetime1 = param6.field_E[var23Lifetime2];
                   UiComponent.field_w[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 >> 16);
-                  hd.field_d[var23Lifetime2] = var10 + (var13 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var16 + var26Lifetime1Lifetime1 * var19 >> 16);
+                  DelegatingCanvas.field_d[var23Lifetime2] = var10 + (var13 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var16 + var26Lifetime1Lifetime1 * var19 >> 16);
                   UiComponent.field_h[var23Lifetime2] = (var24Lifetime1Lifetime1 * var14 + var25Lifetime1Lifetime1 * var17 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param6.field_C[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param6.field_P[var23Lifetime2];
@@ -211,7 +211,7 @@ final class cf {
 
     final static void a(byte param0) {
         try {
-          jb.field_l = new ci[32];
+          ProxySocketConnector.field_l = new ci[32];
           if (param0 != -76) {
             field_a = (String) null;
           }
@@ -219,11 +219,11 @@ final class cf {
             int var2 = var1_int;
             boolean var3 = (dh.a(var1_int, (byte) 33));
             boolean var4 = (ug.a(var1_int, 0));
-            int var5 = jb.field_q[var1_int];
-            int var6 = jb.field_s[var1_int];
-            int var7 = jb.field_t[var1_int];
+            int var5 = ProxySocketConnector.field_q[var1_int];
+            int var6 = ProxySocketConnector.field_s[var1_int];
+            int var7 = ProxySocketConnector.field_t[var1_int];
             ci var8 = new ci(var2, (var3), (var4), var5, var6, var7);
-            jb.field_l[var1_int] = var8;
+            ProxySocketConnector.field_l[var1_int] = var8;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

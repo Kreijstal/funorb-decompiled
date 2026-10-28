@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends IntrusiveNode {
-    boolean field_l;
-    String[][] field_m;
+final class HighscoreQuery extends IntrusiveNode {
+    boolean complete;
+    String[][] stringColumns;
     int field_h;
-    int field_n;
+    int boardId;
     static int field_i;
-    int[][] field_o;
+    int[][] intColumns;
     int field_j;
-    long[][] field_k;
+    long[][] longColumns;
     static Sprite field_g;
     private static String field_z;
 
-    ij() {
+    HighscoreQuery() {
     }
 
     public static void releaseStatics(int guard) {
         if (guard >= -67) {
-          ij.releaseStatics(-72);
+          HighscoreQuery.releaseStatics(-72);
           field_g = null;
           return;
         }

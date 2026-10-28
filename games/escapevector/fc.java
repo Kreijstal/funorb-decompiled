@@ -5,23 +5,23 @@ final class fc {
     static int field_a;
 
     final static void a(boolean param0) {
-        if (kb.field_d == 0 - hb.field_h) {
-          kb.field_d = kb.field_d + 1;
+        if (SocketConnector.field_d == 0 - NodeHashTableIterator.field_h) {
+          SocketConnector.field_d = SocketConnector.field_d + 1;
           if (param0) {
             return;
           }
           fc.a(74, -19);
           return;
         }
-        if (kb.field_d != 250 - hb.field_h) {
-          kb.field_d = kb.field_d + 1;
+        if (SocketConnector.field_d != 250 - NodeHashTableIterator.field_h) {
+          SocketConnector.field_d = SocketConnector.field_d + 1;
           if (param0) {
             return;
           }
           fc.a(74, -19);
           return;
         }
-        kb.field_d = kb.field_d + 1;
+        SocketConnector.field_d = SocketConnector.field_d + 1;
         if (param0) {
           return;
         }

@@ -102,7 +102,7 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
             field_N = (String) null;
           }
           int var6 = param4.findFileId(var5_int, param3, true);
-          ih stackIn_3_0 = fa.a(param0 - 3, param1, var5_int, param4, var6);
+          ih stackIn_3_0 = WeightedLruCache.loadBitmapFont(param0 - 3, param1, var5_int, param4, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

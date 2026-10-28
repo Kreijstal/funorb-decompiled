@@ -398,7 +398,7 @@ final class pf {
           return;
         }
         int var3 = 100;
-        int var4 = 1536 * qm.field_c / 64;
+        int var4 = 1536 * IterableNodeHashTable.field_c / 64;
         Object var5 = ObjectSpriteSet.field_e;
         synchronized (var5) {
           this.a(this.field_c, (byte) -23, var3, var4);
@@ -664,7 +664,7 @@ final class pf {
           if (this.b((byte) 89) == var4) {
             TextLayout.field_b = false;
             int var5 = l.a(-8462, var4);
-            ll.a(0, var5, param0, this.field_f);
+            ArchiveKeyRequest.a(0, var5, param0, this.field_f);
             return true;
           }
           if (param1 == 91) {
@@ -723,7 +723,7 @@ final class pf {
           sj.a(8192, (byte) 51);
         }
         IntValueNode.field_j = true;
-        int var2 = 6144 * qm.field_c / 64;
+        int var2 = 6144 * IterableNodeHashTable.field_c / 64;
         int var3 = 100;
         int var4 = 10;
         if (param0 < 4) {

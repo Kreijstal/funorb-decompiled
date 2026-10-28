@@ -9,18 +9,18 @@ final class aj {
     static String field_b;
     static Sprite field_c;
 
-    final static void a(int param0, int param1, ij param2) {
+    final static void writeHighscoreQuery(int guard, int opcode, HighscoreQuery query) {
         try {
-          CipherPacketBuffer var3 = QuickChatDynamicCommand.field_c;
-          var3.writeCipheredOpcode(param1, true);
+          CipherPacketBuffer var3 = QuickChatDynamicCommand.outgoingPackets;
+          var3.writeCipheredOpcode(opcode, true);
           var3.writeByte(5, -123);
           var3.writeByte(0, -123);
-          var3.writeShort(-123, param2.field_n);
-          var3.writeByte(param2.field_h, -123);
-          var3.writeByte(param2.field_j, -123);
-          int var4 = 58 % ((param0 + 64) / 39);
+          var3.writeShort(-123, query.boardId);
+          var3.writeByte(query.field_h, -123);
+          var3.writeByte(query.field_j, -123);
+          int var4 = 58 % ((guard + 64) / 39);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "aj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "aj.B(" + guard + ',' + opcode + ',' + (query != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,8 +33,8 @@ final class aj {
           field_c = null;
           return;
         }
-        ij var2 = (ij) null;
-        aj.a(45, 15, (ij) null);
+        HighscoreQuery var2 = (HighscoreQuery) null;
+        aj.writeHighscoreQuery(45, 15, (HighscoreQuery) null);
         field_f = null;
         field_c = null;
     }

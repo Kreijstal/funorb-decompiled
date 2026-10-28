@@ -195,23 +195,23 @@ class ld extends vj {
         return ja.field_a;
     }
 
-    final static int a(ik param0, int param1, int param2, ij param3) {
+    final static int a(ScoreSubmission param0, int param1, int param2, HighscoreQuery param3) {
         String stackIn_27_2 = null;
         String stackIn_30_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
           if (param3 != null &&
-            param3.field_o != null &&
+            param3.intColumns != null &&
             param0 != null &&
-            param3.field_n == param0.field_j) {
+            param3.boardId == param0.boardId) {
             int var4_int = param0.field_q.length;
-            int var5 = param3.field_o[param1].length / var4_int;
+            int var5 = param3.intColumns[param1].length / var4_int;
             for (int var6 = param2; var6 < var5; var6++) {
               boolean decompiledFrameCompleted0 = true;
-              if (~param3.field_k[param1][var6] == ~param0.field_l &&
-                SeekerMine.a(param3.field_m[param1][var6], (byte) 120)) {
+              if (~param3.longColumns[param1][var6] == ~param0.field_l &&
+                SeekerMine.a(param3.stringColumns[param1][var6], (byte) 120)) {
                 for (int var7 = 0; var7 < var4_int; var7++) {
-                  if (param0.field_q[var7] != param3.field_o[param1][var7 + var4_int * var6]) {
+                  if (param0.field_q[var7] != param3.intColumns[param1][var7 + var4_int * var6]) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }

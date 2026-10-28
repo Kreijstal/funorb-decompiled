@@ -255,7 +255,7 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
               this.field_N = new TextButton(pc.field_g, (UiListener) (this));
             }
           } else {
-            this.field_G = new TextButton(sh.field_s, (UiListener) null);
+            this.field_G = new TextButton(WeightedCacheEntry.field_s, (UiListener) null);
             this.field_I = new TextButton(EmailAvailabilityRequest.field_d, (UiListener) null);
             this.field_L.enabled = false;
           }
@@ -287,7 +287,7 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
             this.y = this.y + (var7.b(this.field_H, -40 + this.width, var7.field_r) + 5);
           }
           String var8 = lh.field_b;
-          ee var9 = sh.a((byte) -1, PointCloudEffect.d((byte) -107));
+          ee var9 = WeightedCacheEntry.readLastLoginMethod((byte) -1, PointCloudEffect.d((byte) -107));
           if (var9 == NameAvailabilityValidator.field_q) {
             var8 = kg.field_b;
           } else if (var9 == oh.field_n) {

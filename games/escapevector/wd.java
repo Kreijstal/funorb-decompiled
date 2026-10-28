@@ -5,7 +5,7 @@ final class wd extends jl {
     private String[] field_t;
     private int field_s;
     static int[] field_u;
-    private tc[] field_r;
+    private SpriteStrip[] field_r;
     static String field_q;
 
     private final void a(byte param0, String[] param1, int param2, int param3, int param4) {
@@ -77,7 +77,7 @@ final class wd extends jl {
         this.a((byte) -95, this.field_t, param0, this.field_s, -1);
     }
 
-    private final void a(int param0, tc[] param1, byte param2) {
+    private final void a(int param0, SpriteStrip[] param1, byte param2) {
         String stackIn_19_2 = null;
         int var9 = EscapeVector.obfuscationControl;
         try {
@@ -92,12 +92,12 @@ final class wd extends jl {
           }
           int var4_int = this.field_h.field_r;
           param0 = param0 - var4_int;
-          tc[] var5 = param1;
+          SpriteStrip[] var5 = param1;
           int var6 = 101 / ((param2 + 57) / 55);
           for (int var7 = 0; var5.length > var7; var7++) {
-            tc var8 = var5[var7];
+            SpriteStrip var8 = var5[var7];
             if (var8 != null) {
-              var8.a(103, this.field_d - var8.d(11384), param0);
+              var8.draw(103, this.field_d - var8.width(11384), param0);
             }
             param0 = param0 + this.field_f;
           }
@@ -127,7 +127,7 @@ final class wd extends jl {
         }
     }
 
-    private final int a(tc[] param0, int param1) {
+    private final int a(SpriteStrip[] param0, int param1) {
         String stackIn_20_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
@@ -141,9 +141,9 @@ final class wd extends jl {
           }
           int var3_int = param1;
           for (int var4 = 0; var4 < param0.length; var4++) {
-            tc var5 = param0[var4];
+            SpriteStrip var5 = param0[var4];
             if (var5 != null) {
-              var3_int = t.a(var5.d(11384), var3_int, 41);
+              var3_int = t.a(var5.width(11384), var3_int, 41);
             }
           }
           int stackIn_16_0 = var3_int;
@@ -170,7 +170,7 @@ final class wd extends jl {
         }
     }
 
-    wd(String param0, tc[] param1, String[] param2) {
+    wd(String param0, SpriteStrip[] param1, String[] param2) {
         super(param0, param2);
         try {
           this.field_t = param2;

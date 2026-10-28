@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm extends IntrusiveNode {
-    byte[] field_j;
-    int field_i;
+final class DelayedServerPacket extends IntrusiveNode {
+    byte[] payload;
+    int opcode;
     static int field_h;
-    long field_g;
+    long readyAtMillis;
 
-    final static void a(byte param0) {
+    final static void detectMaximumHeap(byte guard) {
         try {
           Throwable decompiledCaughtException = null;
           try {
@@ -23,8 +23,8 @@ final class dm extends IntrusiveNode {
                 Throwable var2_ref = decompiledCaughtException;
               }
             }
-            if (param0 >= -24) {
-              dm.a((byte) 69);
+            if (guard >= -24) {
+              DelayedServerPacket.detectMaximumHeap((byte) 69);
               return;
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -38,21 +38,21 @@ final class dm extends IntrusiveNode {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1, boolean param2) {
+    final static void loadSkyLayers(ResourceArchive archive, int theme, boolean guard) {
         String stackIn_12_2 = null;
         int var4 = EscapeVector.obfuscationControl;
         try {
           int var3_int = 0;
-          if (param2) {
+          if (guard) {
             field_h = -2;
           }
           while (4 > var3_int) {
-            Sprite[] stackIn_6_0 = sl.field_b[param1];
+            Sprite[] stackIn_6_0 = sl.field_b[theme];
             int stackIn_6_1 = var3_int;
-            String stackIn_6_2 = da.field_d[param1];
-            ResourceArchive stackIn_6_3 = (ResourceArchive) (param0);
+            String stackIn_6_2 = da.field_d[theme];
+            ResourceArchive stackIn_6_3 = (ResourceArchive) (archive);
             String stackIn_6_4 = "layer" + var3_int;
-            boolean stackIn_7_5 = !(param2);
+            boolean stackIn_7_5 = !(guard);
             stackIn_6_0[stackIn_6_1] = fe.a(stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
             var3_int++;
           }
@@ -62,29 +62,29 @@ final class dm extends IntrusiveNode {
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_11_0 = var3;
           StringBuilder stackIn_11_1 = new StringBuilder().append("dm.A(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(theme).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openSupportPage(int guard, java.applet.Applet applet) {
         try {
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              java.net.URL var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-              param1.getAppletContext().showDocument(sh.a((byte) 52, param1, var2), "_top");
+              java.net.URL var2 = new java.net.URL(applet.getCodeBase(), "tosupport.ws");
+              applet.getAppletContext().showDocument(WeightedCacheEntry.withSessionParameters((byte) 52, applet, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Exception var2_ref2 = (Exception) (Object) decompiledCaughtException;
               var2_ref2.printStackTrace();
             }
-            if (param0 == 4) {
+            if (guard == 4) {
               return;
             }
             field_h = -125;
@@ -93,8 +93,8 @@ final class dm extends IntrusiveNode {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var2_ref = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_8_0 = var2_ref;
-            StringBuilder stackIn_8_1 = new StringBuilder().append("dm.C(").append(param0).append(',');
-            if (param1 == null) {
+            StringBuilder stackIn_8_1 = new StringBuilder().append("dm.C(").append(guard).append(',');
+            if (applet == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";
@@ -108,13 +108,13 @@ final class dm extends IntrusiveNode {
         }
     }
 
-    dm(long param0, int param1, byte[] param2) {
+    DelayedServerPacket(long readyAtMillis, int opcode, byte[] payload) {
         try {
-          this.field_i = param1;
-          this.field_j = param2;
-          this.field_g = param0;
+          this.opcode = opcode;
+          this.payload = payload;
+          this.readyAtMillis = readyAtMillis;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "dm.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "dm.<init>(" + readyAtMillis + ',' + opcode + ',' + (payload != null ? "{...}" : "null") + ')');
         }
     }
 

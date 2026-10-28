@@ -31,7 +31,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (var2 == 0 ||
           var2 == 1) {
           if (sn.field_b[1]) {
-            di.a(-83, 2);
+            di.resendArchiveKeyRequests(-83, 2);
           }
           if (sn.field_b[2]) {
             ck.a(3, (byte) 105);
@@ -40,7 +40,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             tk.a(26, 4);
           }
           if (sn.field_b[4]) {
-            im.a((byte) 88, 5);
+            ProxyAuthenticationException.resendProgressRequests((byte) 88, 5);
           }
           if (sn.field_b[5]) {
             be.a(6, 17205);
@@ -150,7 +150,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             for (int var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = qk.field_f[ae.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new Sprite(on.field_e, hd.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var21);
+            var1[var2] = new Sprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var21);
           } else {
             byte[] var22 = CheckboxPainter.field_b[var2];
             int[] var16 = new int[var3];
@@ -159,7 +159,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             for (int var7 = 0; var7 < var3; var7++) {
               var6[var7] = MatchingTextValidator.a(ae.a(255, (int) var22[var7]) << 24, qk.field_f[ae.a(255, (int) var20[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new uh(on.field_e, hd.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var16));
+            var1[var2] = (Sprite) ((Object) new uh(on.field_e, DelegatingCanvas.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var16));
           }
         }
         if (param0 != 15556) {
@@ -256,7 +256,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            int var5_intLifetime1 = kh.a(DualLinkNode.e(0), this.field_w, TrackerMusicDefinition.c(31069), uf.a(30519), jh.d(param0 ^ -4157), oi.k(-99), 0);
+            int var5_intLifetime1 = kh.a(DualLinkNode.e(0), this.field_w, TrackerMusicDefinition.c(31069), uf.a(30519), AchievementQuery.d(param0 ^ -4157), oi.k(-99), 0);
             if (var5_intLifetime1 != -1) {
               j.a(jf.field_I, MouseWheelInput.field_a, (byte) -72, var5_intLifetime1);
               jf.field_I = null;
@@ -276,7 +276,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (var5_intLifetime2 != -1) {
                 if (0 == var5_intLifetime2) {
                   eb.field_J = mg.field_d;
-                  qd.a(true);
+                  AchievementRecord.a(true);
                   ff.field_e = 10;
                   SpriteState.field_u = false;
                 } else {
@@ -308,10 +308,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             DiskCacheRequest.a(PointCloudEffect.d((byte) -127), param0 ^ 21212);
           }
           if (var4 == 9) {
-            dm.a(param0 - 251, PointCloudEffect.d((byte) -89));
+            DelayedServerPacket.openSupportPage(param0 - 251, PointCloudEffect.d((byte) -89));
           }
           if (var4 == 10) {
-            QuickChatDynamicCommand.field_c.writeCipheredOpcode(17, true);
+            QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(17, true);
           }
           if (param0 != 255) {
             this.field_m = -32L;
@@ -382,11 +382,11 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void c(boolean param0) {
-        int var2 = QuickChatDynamicCommand.field_g.readUnsignedByte(0);
+        int var2 = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
         boolean var3 = ((1 & var2) != 0);
         int var4 = -1 + EmailSyntaxValidator.field_r;
         byte[] var5 = new byte[var4];
-        QuickChatDynamicCommand.field_g.readCipheredBytes(var5, 19583, var4, 0);
+        QuickChatDynamicCommand.incomingPackets.readCipheredBytes(var5, 19583, var4, 0);
         Bzip2State.a(param0, (var3), PointCloudEffect.d((byte) -122), RasterSnapshot.a(var5, 117));
     }
 
@@ -413,7 +413,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             return;
           }
           if (var2 == 1) {
-            ll.b(false);
+            ArchiveKeyRequest.decodeArchiveKeyResponse(false);
           } else if (2 == var2) {
             ja.a((byte) -120);
           } else if (3 == var2) {
@@ -427,9 +427,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else if (7 == var2) {
             this.h((byte) 108);
           } else if (var2 == 8) {
-            km.a(QuickChatDynamicCommand.field_g, field_r, EmailSyntaxValidator.field_r, -24183);
+            km.a(QuickChatDynamicCommand.incomingPackets, field_r, EmailSyntaxValidator.field_r, -24183);
           } else if (var2 == 16) {
-            ll.a(true);
+            ArchiveKeyRequest.decodeAccountName(true);
           } else {
             if (11 != var2 &&
               12 != var2) {
@@ -568,7 +568,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (11 == ff.field_e &&
           0 == IntKeyLookup.field_b) {
-          qd.a(true);
+          AchievementRecord.a(true);
         }
         return var2;
     }
@@ -615,7 +615,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             0 == IntKeyLookup.field_b &&
             ff.field_e == 11 &&
             !um.a(17830)) {
-            qd.a(true);
+            AchievementRecord.a(true);
           }
           if (IntKeyLookup.field_b != -1 &&
             IntKeyLookup.field_b != 0) {
@@ -703,14 +703,14 @@ abstract class NetworkGameClient extends GameAppletShell {
           PasswordValidator.h(-8055);
           on.b(-87);
           CipherPacketBuffer.field_u = false;
-          hd.field_e = um.field_a;
+          DelegatingCanvas.field_e = um.field_a;
           dh.a(ej.field_d, (byte) -124, pl.field_j, ii.field_a, w.field_ab);
-          if (jb.field_p ||
+          if (ProxySocketConnector.field_p ||
             ac.field_d != null) {
             String stackIn_98_0 = ac.field_d;
-            boolean stackIn_99_1 = !(jb.field_p);
+            boolean stackIn_99_1 = !(ProxySocketConnector.field_p);
             int stackIn_101_2 = 64;
-            boolean stackIn_102_3 = !(jb.field_p);
+            boolean stackIn_102_3 = !(ProxySocketConnector.field_p);
             ff.a(stackIn_98_0, stackIn_99_1, stackIn_101_2, stackIn_102_3);
           }
           if (bc.field_e) {

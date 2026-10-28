@@ -84,18 +84,18 @@ final class ea {
           if (this.e((byte) -7)) {
             this.field_b = this.field_e;
           }
-          this.field_c = dc.a(256, this.field_e, 0, this.field_b, 64);
-          this.field_j.field_a = dc.a(this.field_h.field_a, this.field_e, this.field_k.field_a, this.field_b, 64);
-          this.field_j.field_c = dc.a(this.field_h.field_c, this.field_e, this.field_k.field_c, this.field_b, 64);
+          this.field_c = ProgressQuery.a(256, this.field_e, 0, this.field_b, 64);
+          this.field_j.field_a = ProgressQuery.a(this.field_h.field_a, this.field_e, this.field_k.field_a, this.field_b, 64);
+          this.field_j.field_c = ProgressQuery.a(this.field_h.field_c, this.field_e, this.field_k.field_c, this.field_b, 64);
           return;
         }
         this.field_c = -19;
         if (this.e((byte) -7)) {
           this.field_b = this.field_e;
         }
-        this.field_c = dc.a(256, this.field_e, 0, this.field_b, 64);
-        this.field_j.field_a = dc.a(this.field_h.field_a, this.field_e, this.field_k.field_a, this.field_b, 64);
-        this.field_j.field_c = dc.a(this.field_h.field_c, this.field_e, this.field_k.field_c, this.field_b, 64);
+        this.field_c = ProgressQuery.a(256, this.field_e, 0, this.field_b, 64);
+        this.field_j.field_a = ProgressQuery.a(this.field_h.field_a, this.field_e, this.field_k.field_a, this.field_b, 64);
+        this.field_j.field_c = ProgressQuery.a(this.field_h.field_c, this.field_e, this.field_k.field_c, this.field_b, 64);
     }
 
     final static boolean c(byte param0) {

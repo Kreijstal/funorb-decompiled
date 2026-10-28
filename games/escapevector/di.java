@@ -22,7 +22,7 @@ final class di {
           MatchingTextValidator.c(true);
           ac.d(-16802);
           if (ClientException.a(-31879)) {
-            QuickChatDynamicCommand.field_c.writeCipheredOpcode(1, true);
+            QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(1, true);
             ClientException.a(0, 30785);
             nm.a(16);
             return;
@@ -37,27 +37,27 @@ final class di {
           nm.a(16);
           return;
         }
-        QuickChatDynamicCommand.field_c.writeCipheredOpcode(1, true);
+        QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(1, true);
         ClientException.a(0, 30785);
         nm.a(16);
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendArchiveKeyRequests(int guard, int opcode) {
         int var3 = EscapeVector.obfuscationControl;
         try {
-          if (param0 >= -75) {
+          if (guard >= -75) {
             field_c = (String) null;
           }
-          ll var4 = (ll) (jl.field_n.first(false));
+          ArchiveKeyRequest var4 = (ArchiveKeyRequest) (jl.field_n.first(false));
           while (var4 != null) {
-            BoundedRandomAccessFile.a(-109, param1, var4);
-            var4 = (ll) (jl.field_n.next((byte) 70));
+            BoundedRandomAccessFile.writeArchiveKeyRequest(-109, opcode, var4);
+            var4 = (ArchiveKeyRequest) (jl.field_n.next((byte) 70));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "di.A(" + param0 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) var2), "di.A(" + guard + ',' + opcode + ')');
         }
     }
 

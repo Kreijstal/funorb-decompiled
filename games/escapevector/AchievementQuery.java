@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jh extends IntrusiveNode {
-    boolean field_h;
-    boolean field_g;
+final class AchievementQuery extends IntrusiveNode {
+    boolean complete;
+    boolean unavailable;
     static PcmSample field_k;
     static String field_j;
-    int[] field_i;
+    int[] achievementWords;
 
     public static void releaseStatics(boolean guard) {
         if (guard) {
-          jh.d(71);
+          AchievementQuery.d(71);
           field_k = null;
           field_j = null;
           return;
@@ -22,7 +22,7 @@ final class jh extends IntrusiveNode {
     final static boolean d(int param0) {
         if (param0 != -4292) {
           String var2 = (String) null;
-          jh.a(false, (String) null, true, (String) null);
+          AchievementQuery.a(false, (String) null, true, (String) null);
           return hf.field_a;
         }
         return hf.field_a;
@@ -31,19 +31,19 @@ final class jh extends IntrusiveNode {
     final static void a(boolean param0, String param1, boolean param2, String param3) {
         try {
           bm.field_g = param3;
-          vk.field_v = param1;
+          StrongCacheEntry.field_v = param1;
           uf.a((byte) 71, mm.field_a, param0);
           if (param2) {
-            jh.releaseStatics(true);
+            AchievementQuery.releaseStatics(true);
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "jh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    jh() {
-        this.field_h = false;
-        this.field_g = true;
+    AchievementQuery() {
+        this.complete = false;
+        this.unavailable = true;
     }
 
     static {

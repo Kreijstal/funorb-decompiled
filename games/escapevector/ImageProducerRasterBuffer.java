@@ -131,22 +131,22 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final static void d(int param0) {
         bo.field_F.l(17415);
-        if (jb.field_r == null) {
-          jb.field_r = new w(bo.field_F, dj.field_b);
+        if (ProxySocketConnector.field_r == null) {
+          ProxySocketConnector.field_r = new w(bo.field_F, dj.field_b);
           if (param0 != 32) {
             field_l = (java.awt.Font) null;
-            bo.field_F.b(jb.field_r, 61);
+            bo.field_F.b(ProxySocketConnector.field_r, 61);
             return;
           }
-          bo.field_F.b(jb.field_r, 61);
+          bo.field_F.b(ProxySocketConnector.field_r, 61);
           return;
         }
         if (param0 == 32) {
-          bo.field_F.b(jb.field_r, 61);
+          bo.field_F.b(ProxySocketConnector.field_r, 61);
           return;
         }
         field_l = (java.awt.Font) null;
-        bo.field_F.b(jb.field_r, 61);
+        bo.field_F.b(ProxySocketConnector.field_r, 61);
     }
 
     final static void c(int param0) {
@@ -155,7 +155,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (param0 <= 68) {
             return;
           }
-          CipherPacketBuffer var14 = QuickChatDynamicCommand.field_g;
+          CipherPacketBuffer var14 = QuickChatDynamicCommand.incomingPackets;
           int var2 = var14.readUnsignedByte(0);
           if (var2 == 0) {
             int[] var11 = v.a(-84);
@@ -167,19 +167,19 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             for (int var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(-5053);
             }
-            jh var13 = (jh) (bc.field_b.first(false));
+            AchievementQuery var13 = (AchievementQuery) (bc.field_b.first(false));
             if (var13 == null) {
               nm.a(16);
               return;
             }
-            var13.field_i = var3;
-            var13.field_g = false;
-            var13.field_h = true;
+            var13.achievementWords = var3;
+            var13.unavailable = false;
+            var13.complete = true;
             var13.unlink((byte) -86);
             return;
           }
           if (var2 == 1) {
-            qd var12 = (qd) (RasterSnapshot.field_l.first(false));
+            AchievementRecord var12 = (AchievementRecord) (RasterSnapshot.field_l.first(false));
             if (var12 == null) {
               nm.a(16);
               return;
@@ -192,14 +192,14 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             nm.a(16);
             return;
           }
-          jh var15 = (jh) (bc.field_b.first(false));
+          AchievementQuery var15 = (AchievementQuery) (bc.field_b.first(false));
           if (var15 == null) {
             nm.a(16);
             return;
           }
-          var15.field_i = v.a(-92);
-          var15.field_g = true;
-          var15.field_h = true;
+          var15.achievementWords = v.a(-92);
+          var15.unavailable = true;
+          var15.complete = true;
           var15.unlink((byte) -77);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

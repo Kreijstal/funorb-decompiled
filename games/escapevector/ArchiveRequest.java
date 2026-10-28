@@ -10,18 +10,18 @@ abstract class ArchiveRequest extends DualLinkNode {
     boolean field_r;
     boolean field_s;
 
-    final static void a(int param0, dc param1, int param2) {
-        if (param2 != -755) {
+    final static void writeProgressQuery(int opcode, ProgressQuery query, int guard) {
+        if (guard != -755) {
           return;
         }
         try {
-          CipherPacketBuffer var3 = QuickChatDynamicCommand.field_c;
-          var3.writeCipheredOpcode(param0, true);
+          CipherPacketBuffer var3 = QuickChatDynamicCommand.outgoingPackets;
+          var3.writeCipheredOpcode(opcode, true);
           var3.writeByte(2, -123);
           var3.writeByte(0, -123);
-          var3.writeByte(param1.field_j, -123);
+          var3.writeByte(query.campaignId, -123);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "oa.E(" + opcode + ',' + (query != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

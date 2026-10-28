@@ -350,67 +350,67 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime67 = ki.a("originalLevelNames,0", 10592);
           if (null != var2Lifetime67) {
-            jb.field_o[0] = RasterSnapshot.a(var2Lifetime67, 110);
+            ProxySocketConnector.field_o[0] = RasterSnapshot.a(var2Lifetime67, 110);
           }
           byte[] var2Lifetime68 = ki.a("originalLevelNames,1", 10592);
           if (null != var2Lifetime68) {
-            jb.field_o[1] = RasterSnapshot.a(var2Lifetime68, 125);
+            ProxySocketConnector.field_o[1] = RasterSnapshot.a(var2Lifetime68, 125);
           }
           byte[] var2Lifetime69 = ki.a("originalLevelNames,2", param0 ^ 10600);
           if (null != var2Lifetime69) {
-            jb.field_o[2] = RasterSnapshot.a(var2Lifetime69, 115);
+            ProxySocketConnector.field_o[2] = RasterSnapshot.a(var2Lifetime69, 115);
           }
           byte[] var2Lifetime70 = ki.a("originalLevelNames,3", 10592);
           if (var2Lifetime70 != null) {
-            jb.field_o[3] = RasterSnapshot.a(var2Lifetime70, 126);
+            ProxySocketConnector.field_o[3] = RasterSnapshot.a(var2Lifetime70, 126);
           }
           byte[] var2Lifetime71 = ki.a("originalLevelNames,4", 10592);
           if (var2Lifetime71 != null) {
-            jb.field_o[4] = RasterSnapshot.a(var2Lifetime71, 126);
+            ProxySocketConnector.field_o[4] = RasterSnapshot.a(var2Lifetime71, 126);
           }
           byte[] var2Lifetime72 = ki.a("originalLevelNames,5", 10592);
           if (null != var2Lifetime72) {
-            jb.field_o[5] = RasterSnapshot.a(var2Lifetime72, 124);
+            ProxySocketConnector.field_o[5] = RasterSnapshot.a(var2Lifetime72, 124);
           }
           byte[] var2Lifetime73 = ki.a("originalLevelNames,6", 10592);
           if (null != var2Lifetime73) {
-            jb.field_o[6] = RasterSnapshot.a(var2Lifetime73, PacketBuffer.xor(param0, 121));
+            ProxySocketConnector.field_o[6] = RasterSnapshot.a(var2Lifetime73, PacketBuffer.xor(param0, 121));
           }
           byte[] var2Lifetime74 = ki.a("originalLevelNames,7", param0 ^ 10600);
           if (null != var2Lifetime74) {
-            jb.field_o[7] = RasterSnapshot.a(var2Lifetime74, 119);
+            ProxySocketConnector.field_o[7] = RasterSnapshot.a(var2Lifetime74, 119);
           }
           byte[] var2Lifetime75 = ki.a("originalLevelNames,8", 10592);
           if (var2Lifetime75 != null) {
-            jb.field_o[8] = RasterSnapshot.a(var2Lifetime75, 126);
+            ProxySocketConnector.field_o[8] = RasterSnapshot.a(var2Lifetime75, 126);
           }
           byte[] var2Lifetime76 = ki.a("originalLevelNames,9", 10592);
           if (var2Lifetime76 != null) {
-            jb.field_o[9] = RasterSnapshot.a(var2Lifetime76, 111);
+            ProxySocketConnector.field_o[9] = RasterSnapshot.a(var2Lifetime76, 111);
           }
           byte[] var2Lifetime77 = ki.a("originalLevelNames,10", 10592);
           if (var2Lifetime77 != null) {
-            jb.field_o[10] = RasterSnapshot.a(var2Lifetime77, PacketBuffer.xor(param0, 123));
+            ProxySocketConnector.field_o[10] = RasterSnapshot.a(var2Lifetime77, PacketBuffer.xor(param0, 123));
           }
           byte[] var2Lifetime78 = ki.a("originalLevelNames,11", param0 + 10584);
           if (null != var2Lifetime78) {
-            jb.field_o[11] = RasterSnapshot.a(var2Lifetime78, 113);
+            ProxySocketConnector.field_o[11] = RasterSnapshot.a(var2Lifetime78, 113);
           }
           byte[] var2Lifetime79 = ki.a("originalLevelNames,12", param0 + 10584);
           if (var2Lifetime79 != null) {
-            jb.field_o[12] = RasterSnapshot.a(var2Lifetime79, 121);
+            ProxySocketConnector.field_o[12] = RasterSnapshot.a(var2Lifetime79, 121);
           }
           byte[] var2Lifetime80 = ki.a("originalLevelNames,13", param0 + 10584);
           if (null != var2Lifetime80) {
-            jb.field_o[13] = RasterSnapshot.a(var2Lifetime80, 118);
+            ProxySocketConnector.field_o[13] = RasterSnapshot.a(var2Lifetime80, 118);
           }
           byte[] var2Lifetime81 = ki.a("originalLevelNames,14", 10592);
           if (null != var2Lifetime81) {
-            jb.field_o[14] = RasterSnapshot.a(var2Lifetime81, 121);
+            ProxySocketConnector.field_o[14] = RasterSnapshot.a(var2Lifetime81, 121);
           }
           byte[] var2Lifetime82 = ki.a("originalLevelNames,15", 10592);
           if (var2Lifetime82 != null) {
-            jb.field_o[15] = RasterSnapshot.a(var2Lifetime82, 116);
+            ProxySocketConnector.field_o[15] = RasterSnapshot.a(var2Lifetime82, 116);
           }
           byte[] var2Lifetime83 = ki.a("vengenceLevelNames,0", 10592);
           if (var2Lifetime83 != null) {
@@ -546,7 +546,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime116 = ki.a("rightarrow", 10592);
           if (null != var2Lifetime116) {
-            dc.field_i = RasterSnapshot.a(var2Lifetime116, 124);
+            ProgressQuery.field_i = RasterSnapshot.a(var2Lifetime116, 124);
           }
           byte[] var2Lifetime117 = ki.a("uparrow", 10592);
           if (var2Lifetime117 != null) {
@@ -558,11 +558,11 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime119 = ki.a("shieldkeys", 10592);
           if (null != var2Lifetime119) {
-            tc.field_h = RasterSnapshot.a(var2Lifetime119, 116);
+            SpriteStrip.field_h = RasterSnapshot.a(var2Lifetime119, 116);
           }
           byte[] var2Lifetime120 = ki.a("rockbusterkeys", param0 ^ 10600);
           if (null != var2Lifetime120) {
-            ll.field_h = RasterSnapshot.a(var2Lifetime120, 114);
+            ArchiveKeyRequest.field_h = RasterSnapshot.a(var2Lifetime120, 114);
           }
           byte[] var2Lifetime121 = ki.a("minimapkey", param0 + 10584);
           if (var2Lifetime121 != null) {
@@ -694,11 +694,11 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime153 = ki.a("warning_highgravity", 10592);
           if (var2Lifetime153 != null) {
-            fa.field_e = RasterSnapshot.a(var2Lifetime153, param0 ^ 124);
+            WeightedLruCache.field_e = RasterSnapshot.a(var2Lifetime153, param0 ^ 124);
           }
           byte[] var2Lifetime154 = ki.a("outoffuel", 10592);
           if (null != var2Lifetime154) {
-            rl.field_l = RasterSnapshot.a(var2Lifetime154, param0 ^ 119);
+            RatingQuery.field_l = RasterSnapshot.a(var2Lifetime154, param0 ^ 119);
           }
           byte[] var2Lifetime155 = ki.a("outofshield", 10592);
           if (null != var2Lifetime155) {
@@ -730,7 +730,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime162 = ki.a("tripleshot", 10592);
           if (var2Lifetime162 != null) {
-            hd.field_a = RasterSnapshot.a(var2Lifetime162, 124);
+            DelegatingCanvas.field_a = RasterSnapshot.a(var2Lifetime162, 124);
           }
           byte[] var2Lifetime163 = ki.a("extrathrust", param0 + 10584);
           if (null != var2Lifetime163) {
@@ -770,7 +770,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime172 = ki.a("powerup_fiverockbusters", 10592);
           if (var2Lifetime172 != null) {
-            hb.field_a = RasterSnapshot.a(var2Lifetime172, 111);
+            NodeHashTableIterator.field_a = RasterSnapshot.a(var2Lifetime172, 111);
           }
           byte[] var2Lifetime173 = ki.a("crate", 10592);
           if (null != var2Lifetime173) {
@@ -1170,7 +1170,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime272 = ki.a("titleMembersExpansion", 10592);
           if (var2Lifetime272 != null) {
-            sh.field_r = RasterSnapshot.a(var2Lifetime272, 118);
+            WeightedCacheEntry.field_r = RasterSnapshot.a(var2Lifetime272, 118);
           }
           byte[] var2Lifetime273 = ki.a("textMembersExpansion", 10592);
           if (null != var2Lifetime273) {
@@ -1242,7 +1242,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime290 = ki.a("collectables", 10592);
           if (null != var2Lifetime290) {
-            vb.field_a = RasterSnapshot.a(var2Lifetime290, 127);
+            IterableDualLinkDeque.field_a = RasterSnapshot.a(var2Lifetime290, 127);
           }
           byte[] var2Lifetime291 = ki.a("ellipsis", 10592);
           if (null != var2Lifetime291) {

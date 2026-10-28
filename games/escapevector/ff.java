@@ -3,7 +3,7 @@
  */
 final class ff {
     private ResourceArchive field_d;
-    private fa field_c;
+    private WeightedLruCache field_c;
     static int field_h;
     private ResourceArchive field_j;
     static TerrainMaskSupport field_b;
@@ -20,7 +20,7 @@ final class ff {
           }
           fc.a(3161);
           bo.field_F.l(param2 ^ 17479);
-          PcmResampler.field_d = new h(vk.field_v, (String) null, eb.field_H, param3, param1);
+          PcmResampler.field_d = new h(StrongCacheEntry.field_v, (String) null, eb.field_H, param3, param1);
           rd.field_c = new ng(bo.field_F, PcmResampler.field_d);
           bo.field_F.b(rd.field_c, 40);
         } catch (RuntimeException runtimeException) {
@@ -42,7 +42,7 @@ final class ff {
 
     final QuickChatPhraseDefinition a(int param0, byte param1) {
         byte[] var4 = null;
-        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_c.a((long)param0, (byte) -54));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_c.get((long)param0, (byte) -54));
         if (var3 != null) {
           return var3;
         }
@@ -59,11 +59,11 @@ final class ff {
           var3.markGlobalResponses((byte) 88);
         }
         if (param1 <= -118) {
-          this.field_c.a(var3, (long)param0, (byte) 100);
+          this.field_c.put(var3, (long)param0, (byte) 100);
           return var3;
         }
         field_e = -127;
-        this.field_c.a(var3, (long)param0, (byte) 100);
+        this.field_c.put(var3, (long)param0, (byte) 100);
         return var3;
     }
 
@@ -88,7 +88,7 @@ final class ff {
         if (dj.field_c != null) {
           dj.field_c.fadeOut(2048);
         } else {
-          dj.field_c = PcmSampleStream.createAtRatePercentQ6(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
+          dj.field_c = PcmSampleStream.createAtRatePercentQ6(nn.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
           ObjectSpriteSet.field_e.addSubstream(dj.field_c);
           sj.a(8192, (byte) 51);
           if (mj.field_d < 1000) {
@@ -103,7 +103,7 @@ final class ff {
           IntValueNode.field_j = true;
           return;
         }
-        dj.field_c = PcmSampleStream.createAtRatePercentQ6(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
+        dj.field_c = PcmSampleStream.createAtRatePercentQ6(nn.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
         ObjectSpriteSet.field_e.addSubstream(dj.field_c);
         sj.a(8192, (byte) 51);
         if (mj.field_d < 1000) {

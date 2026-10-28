@@ -3,7 +3,7 @@
  */
 final class fk {
     static String field_c;
-    static volatile int field_b;
+    static volatile int pendingClickX;
     static Sprite[] field_f;
     int field_d;
     static String field_e;
@@ -72,7 +72,7 @@ final class fk {
           if (param0) {
             field_a = (ResourceArchive) null;
           }
-          boolean stackIn_3_0 = rl.a(10, (byte) 84, true, param1);
+          boolean stackIn_3_0 = RatingQuery.a(10, (byte) 84, true, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -154,7 +154,7 @@ final class fk {
     }
 
     static {
-        field_b = 0;
+        pendingClickX = 0;
         field_c = "If you have an account, log in to start at any level you've reached.";
         field_e = "If you are ever unsure what to do, press 'ESC' in-game<br>and select 'Instructions' to view your current objective.";
     }

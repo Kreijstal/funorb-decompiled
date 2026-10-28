@@ -116,17 +116,17 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static void a(int param0, int param1, ll param2) {
-        CipherPacketBuffer var3 = QuickChatDynamicCommand.field_c;
-        var3.writeCipheredOpcode(param1, true);
-        var3.writeByte(param2.field_g, -123);
-        if (param0 >= -42) {
+    final static void writeArchiveKeyRequest(int guard, int opcode, ArchiveKeyRequest request) {
+        CipherPacketBuffer var3 = QuickChatDynamicCommand.outgoingPackets;
+        var3.writeCipheredOpcode(opcode, true);
+        var3.writeByte(request.archiveId, -123);
+        if (guard >= -42) {
           return;
         }
         try {
-          var3.writeShort(75, param2.field_i);
+          var3.writeShort(75, request.groupId);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ma.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ma.C(" + guard + ',' + opcode + ',' + (request != null ? "{...}" : "null") + ')');
         }
     }
 

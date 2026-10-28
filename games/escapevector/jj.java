@@ -33,14 +33,14 @@ final class jj {
 
     final static void a(boolean param0) {
         try {
-          int var1_int = jb.field_j.length;
-          jb.field_i = new mb[var1_int];
+          int var1_int = ProxySocketConnector.field_j.length;
+          ProxySocketConnector.field_i = new mb[var1_int];
           for (int var2 = 0; var2 < var1_int; var2++) {
-            int var3 = jb.field_j[var2];
-            int var4 = jb.field_y[var2];
-            int var5 = jb.field_x[var2];
+            int var3 = ProxySocketConnector.field_j[var2];
+            int var4 = ProxySocketConnector.field_y[var2];
+            int var5 = ProxySocketConnector.field_x[var2];
             mb var6 = new mb(var3, var4, var5);
-            jb.field_i[var2] = var6;
+            ProxySocketConnector.field_i[var2] = var6;
           }
           if (param0) {
             field_b = 97;

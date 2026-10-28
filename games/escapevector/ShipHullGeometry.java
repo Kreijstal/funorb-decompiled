@@ -18,8 +18,8 @@ final class ShipHullGeometry {
         if (bo.field_F != null) {
           bo.field_F.p(0);
         }
-        if (jb.field_r != null) {
-          jb.field_r.d(true);
+        if (ProxySocketConnector.field_r != null) {
+          ProxySocketConnector.field_r.d(true);
         }
         if (param0 != 0) {
           TriangleMesh var2 = (TriangleMesh) null;

@@ -21,10 +21,10 @@ final class be {
           if (param1 != 17205) {
             be.releaseStatics((byte) 71);
           }
-          bd var4 = (bd) (rd.field_b.first(false));
+          SavedDataWrite var4 = (SavedDataWrite) (rd.field_b.first(false));
           while (var4 != null) {
-            SingleChildContainer.a(-118, var4, param0);
-            var4 = (bd) (rd.field_b.next((byte) 70));
+            SingleChildContainer.writeSavedData(-118, var4, param0);
+            var4 = (SavedDataWrite) (rd.field_b.next((byte) 70));
           }
           IntrusiveNode var2 = SpriteState.field_w.first(false);
           while (var2 != null) {

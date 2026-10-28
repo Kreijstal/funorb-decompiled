@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static String field_a;
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         String stackIn_7_2 = null;
         try {
-          if (QuickChatDynamicCommand.field_b == null) {
+          if (QuickChatDynamicCommand.mouseHandler == null) {
             return;
           }
-          md.field_G = 0;
-          vb.field_b = param0.getX();
-          jk.field_b = param0.getY();
-          ke.field_a = true;
+          md.mouseIdleTicks = 0;
+          IterableDualLinkDeque.pendingMouseX = param0.getX();
+          jk.pendingMouseY = param0.getY();
+          ke.mouseInputChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -32,13 +32,13 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         String stackIn_7_2 = null;
         try {
-          if (null == QuickChatDynamicCommand.field_b) {
+          if (null == QuickChatDynamicCommand.mouseHandler) {
             return;
           }
-          md.field_G = 0;
-          vb.field_b = -1;
-          jk.field_b = -1;
-          ke.field_a = true;
+          md.mouseIdleTicks = 0;
+          IterableDualLinkDeque.pendingMouseX = -1;
+          jk.pendingMouseY = -1;
+          ke.mouseInputChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,15 +76,15 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static PointCloudEffect a(int param0, int param1, boolean param2, boolean param3, PcmSample param4) {
+    final static PointCloudEffect createExplosionCloud(int yQ16, int xQ16, boolean indexedRendering, boolean guard, PcmSample sound) {
         String stackIn_10_2 = null;
         try {
-          PointCloudEffect var5 = new PointCloudEffect(param1, param0, param4);
-          if (!param3) {
+          PointCloudEffect var5 = new PointCloudEffect(xQ16, yQ16, sound);
+          if (!guard) {
             field_a = (String) null;
           }
           PointCloudEffect stackIn_4_0 = var5;
-          boolean stackIn_5_1 = (param2);
+          boolean stackIn_5_1 = (indexedRendering);
           stackIn_4_0.field_q = stackIn_5_1;
           PointCloudEffect stackIn_6_0 = var5;
           return stackIn_6_0;
@@ -92,8 +92,8 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5_ref = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var5_ref;
-          StringBuilder stackIn_9_1 = new StringBuilder().append("eg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          StringBuilder stackIn_9_1 = new StringBuilder().append("eg.B(").append(yQ16).append(',').append(xQ16).append(',').append(indexedRendering).append(',').append(guard).append(',');
+          if (sound == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -105,10 +105,10 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         String stackIn_7_2 = null;
         try {
-          if (null == QuickChatDynamicCommand.field_b) {
+          if (null == QuickChatDynamicCommand.mouseHandler) {
             return;
           }
-          vj.field_b = 0;
+          vj.heldMouseButton = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,11 +126,11 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (null != QuickChatDynamicCommand.field_b) {
-            md.field_G = 0;
-            vb.field_b = param0.getX();
-            jk.field_b = param0.getY();
-            ke.field_a = true;
+          if (null != QuickChatDynamicCommand.mouseHandler) {
+            md.mouseIdleTicks = 0;
+            IterableDualLinkDeque.pendingMouseX = param0.getX();
+            jk.pendingMouseY = param0.getY();
+            ke.mouseInputChanged = true;
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "eg.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
@@ -140,10 +140,10 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseReleased(java.awt.event.MouseEvent param0) {
         String stackIn_10_2 = null;
         try {
-          if (QuickChatDynamicCommand.field_b != null) {
-            md.field_G = 0;
-            vj.field_b = 0;
-            ke.field_a = true;
+          if (QuickChatDynamicCommand.mouseHandler != null) {
+            md.mouseIdleTicks = 0;
+            vj.heldMouseButton = 0;
+            ke.mouseInputChanged = true;
             int var2_int = param0.getModifiers();
             if ((8 & var2_int) == 0) {
             }
@@ -173,11 +173,11 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-          if (null != QuickChatDynamicCommand.field_b) {
-            md.field_G = 0;
-            vb.field_b = param0.getX();
-            jk.field_b = param0.getY();
-            ke.field_a = true;
+          if (null != QuickChatDynamicCommand.mouseHandler) {
+            md.mouseIdleTicks = 0;
+            IterableDualLinkDeque.pendingMouseX = param0.getX();
+            jk.pendingMouseY = param0.getY();
+            ke.mouseInputChanged = true;
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "eg.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
@@ -187,24 +187,24 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mousePressed(java.awt.event.MouseEvent param0) {
         String stackIn_13_2 = null;
         try {
-          if (QuickChatDynamicCommand.field_b != null) {
-            md.field_G = 0;
-            fk.field_b = param0.getX();
-            PcmResampler.field_c = param0.getY();
+          if (QuickChatDynamicCommand.mouseHandler != null) {
+            md.mouseIdleTicks = 0;
+            fk.pendingClickX = param0.getX();
+            PcmResampler.pendingClickY = param0.getY();
             td.b(128);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              kb.field_f = 1;
-              vj.field_b = 1;
+              SocketConnector.pendingClickButton = 1;
+              vj.heldMouseButton = 1;
             } else {
-              kb.field_f = 2;
-              vj.field_b = 2;
+              SocketConnector.pendingClickButton = 2;
+              vj.heldMouseButton = 2;
             }
             int var2_int = param0.getModifiers();
             if ((var2_int & 4) == 0) {
             }
             if ((16 & var2_int) == 0) {
             }
-            ke.field_a = true;
+            ke.mouseInputChanged = true;
             if ((var2_int & 8) != 0) {
             }
           }

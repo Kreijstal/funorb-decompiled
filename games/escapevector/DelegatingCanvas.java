@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hd extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static String field_a;
-    private java.awt.Component field_b;
+    private java.awt.Component delegate;
     static String field_e;
     static int[] field_d;
     static int field_c;
@@ -17,38 +17,38 @@ final class hd extends java.awt.Canvas {
 
     public final void update(java.awt.Graphics param0) {
         try {
-          this.field_b.update(param0);
+          this.delegate.update(param0);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "hd.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(String param0, boolean param1, String param2) {
+    final static boolean isPasswordAcceptable(String password, boolean guard, String accountName) {
         String stackIn_32_2 = null;
         String stackIn_35_2 = null;
         try {
-          if (MatchingTextValidator.b((byte) -35, param0)) {
+          if (MatchingTextValidator.b((byte) -35, password)) {
             return false;
           }
-          if (aa.a(1, param0)) {
+          if (aa.a(1, password)) {
             return false;
           }
-          if (ol.a((byte) -7, param0)) {
+          if (ol.a((byte) -7, password)) {
             return false;
           }
-          if (param2.length() == 0) {
+          if (accountName.length() == 0) {
             return true;
           }
-          if (lg.a(0, param0, param2)) {
+          if (lg.a(0, password, accountName)) {
             return false;
           }
-          if (lf.a(param0, (byte) 37, param2)) {
+          if (lf.a(password, (byte) 37, accountName)) {
             return false;
           }
-          if (param1) {
+          if (guard) {
             return false;
           }
-          if (!RockBuster.a(-91, param0, param2)) {
+          if (!RockBuster.a(-91, password, accountName)) {
             return true;
           }
           return false;
@@ -57,13 +57,13 @@ final class hd extends java.awt.Canvas {
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_31_0 = var3;
           StringBuilder stackIn_31_1 = new StringBuilder().append("hd.B(");
-          if (param0 == null) {
+          if (password == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
           }
-          StringBuilder stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(guard).append(',');
+          if (accountName == null) {
             stackIn_35_2 = "null";
           } else {
             stackIn_35_2 = "{...}";
@@ -74,17 +74,17 @@ final class hd extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-          this.field_b.paint(param0);
+          this.delegate.paint(param0);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "hd.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    hd(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component delegate) {
         try {
-          this.field_b = param0;
+          this.delegate = delegate;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "hd.<init>(" + (delegate != null ? "{...}" : "null") + ')');
         }
     }
 

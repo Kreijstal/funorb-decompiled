@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rl extends IntrusiveNode {
-    int field_g;
+final class RatingQuery extends IntrusiveNode {
+    int rowCount;
     static String field_l;
     static IndexedSprite field_k;
     static int field_h;
-    int field_i;
+    int requestId;
     static boolean field_j;
 
     public static void releaseStatics(int guard) {
@@ -23,7 +23,7 @@ final class rl extends IntrusiveNode {
         }
         IntValueNode.field_j = true;
         if (param0 != -46) {
-          rl.e(-10);
+          RatingQuery.e(-10);
         }
         if (20 <= mj.field_d) {
           IntValueNode.field_j = false;
@@ -101,7 +101,7 @@ final class rl extends IntrusiveNode {
         }
     }
 
-    private rl() throws Throwable {
+    private RatingQuery() throws Throwable {
         throw new Error();
     }
 

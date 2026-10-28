@@ -197,7 +197,7 @@ final class wc {
         int var13 = EscapeVector.obfuscationControl;
         nn.field_a = kh.a(param2, (byte) 126, "commonui", "frame_top");
         bn.field_d = kh.a(param2, (byte) -114, "commonui", "frame_bottom");
-        cc.field_j = fe.a("commonui", param2, "jagex_logo_grey", true);
+        ProgressRecord.field_j = fe.a("commonui", param2, "jagex_logo_grey", true);
         fk.field_f = kh.a(param2, (byte) -81, "commonui", "button");
         EditableTextWidget.field_E = ui.a("validation", param2, "commonui", (byte) 77);
         ke.field_c = (BitmapFont) ((Object) ac.a("arezzo12", -110, param2, "commonui", param3));
@@ -266,18 +266,18 @@ final class wc {
         return this.field_c == 102 ? true : false;
     }
 
-    final static dc a(int param0, int param1, int param2, byte param3) {
-        dc var4 = new dc();
-        var4.field_h = new int[param2];
-        var4.field_j = param0;
+    final static ProgressQuery a(int param0, int param1, int param2, byte param3) {
+        ProgressQuery var4 = new ProgressQuery();
+        var4.progressWords = new int[param2];
+        var4.campaignId = param0;
         if (param3 == -51) {
           en.field_i.addLast(-12328, var4);
-          ArchiveRequest.a(param1, var4, -755);
+          ArchiveRequest.writeProgressQuery(param1, var4, -755);
           return var4;
         }
         field_d = (TrackerMusicDefinition) null;
         en.field_i.addLast(-12328, var4);
-        ArchiveRequest.a(param1, var4, -755);
+        ArchiveRequest.writeProgressQuery(param1, var4, -755);
         return var4;
     }
 

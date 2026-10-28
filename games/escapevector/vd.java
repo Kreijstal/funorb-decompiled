@@ -75,8 +75,8 @@ final class vd {
         if (var4 == null) {
           return;
         }
-        bd var3 = new bd(var4);
-        MouseWheelInput.a(1, 6, var3);
+        SavedDataWrite var3 = new SavedDataWrite(var4);
+        MouseWheelInput.enqueueSavedDataWrite(1, 6, var3);
     }
 
     public static void releaseStatics(byte guard) {
@@ -259,7 +259,7 @@ final class vd {
     final static void a(byte param0) {
         int var1 = -124 % ((param0 + 86) / 37);
         dl.field_a = false;
-        QuickChatDynamicCommand.field_g.readUnsignedByte(0);
+        QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
     }
 
     private final BitSet a(byte param0, int param1, BitSet param2, int param3, int param4) {

@@ -80,7 +80,7 @@ final class dh {
 
     final static boolean a(int param0, byte param1) {
         try {
-          int[] var2 = jb.field_m;
+          int[] var2 = ProxySocketConnector.field_m;
           int var3 = 0;
           if (param1 < 26) {
             dh.releaseStatics((byte) -79);

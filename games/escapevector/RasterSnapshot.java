@@ -34,7 +34,7 @@ final class RasterSnapshot extends IntrusiveNode {
 
     final static void a(int param0, String param1, String param2) {
         try {
-          jh.a(false, param2, false, param1);
+          AchievementQuery.a(false, param2, false, param1);
           if (param0 != 0) {
             field_k = (int[]) null;
           }

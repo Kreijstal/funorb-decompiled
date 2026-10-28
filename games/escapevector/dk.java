@@ -332,20 +332,20 @@ final class dk {
     final static void e(int param0) {
         int var8 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var10 = QuickChatDynamicCommand.field_g;
+          CipherPacketBuffer var10 = QuickChatDynamicCommand.incomingPackets;
           int var2 = var10.readUnsignedByte(0);
           int var3 = var10.readUnsignedByte(0);
           if (param0 != 108457410) {
             return;
           }
           if (var2 == 0) {
-            dc var4 = (dc) (en.field_i.first(false));
+            ProgressQuery var4 = (ProgressQuery) (en.field_i.first(false));
             if (var4 == null) {
               nm.a(16);
               return;
             }
             int var5 = -var10.position + EmailSyntaxValidator.field_r;
-            int[] var12 = var4.field_h;
+            int[] var12 = var4.progressWords;
             int[] var11 = var12;
             int[] var6 = var11;
             if (var12.length << 2 < var5) {
@@ -354,17 +354,17 @@ final class dk {
             for (int var7 = 0; var5 > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(0) << (ae.a(3, var7) << 8));
             }
-            var4.field_g = true;
+            var4.complete = true;
             var4.unlink((byte) -105);
             return;
           }
           if (var2 == 1) {
             int var4_int = var10.readSignedSmart((byte) 106);
-            cc var5_ref_cc = (cc) (RasterBuffer.field_e.first(false));
+            ProgressRecord var5_ref_cc = (ProgressRecord) (RasterBuffer.field_e.first(false));
             while (var5_ref_cc != null) {
-              if (var5_ref_cc.field_i != var3 ||
-                var4_int != var5_ref_cc.field_m) {
-                var5_ref_cc = (cc) (RasterBuffer.field_e.next((byte) 70));
+              if (var5_ref_cc.campaignId != var3 ||
+                var4_int != var5_ref_cc.levelIndex) {
+                var5_ref_cc = (ProgressRecord) (RasterBuffer.field_e.next((byte) 70));
                 continue;
               }
               break;

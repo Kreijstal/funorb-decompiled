@@ -301,11 +301,11 @@ final class SystemTaskService implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (im) null;
-                      var8.field_b = he.a((String) (var8.field_d), var8.field_c, (byte) 85).a(0);
-                    } catch (im decompiledCaughtParameter2) {
+                      if (false) throw (ProxyAuthenticationException) null;
+                      var8.field_b = he.a((String) (var8.field_d), var8.field_c, (byte) 85).connect(0);
+                    } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      im var3_ref3 = (im) (Object) decompiledCaughtException;
+                      ProxyAuthenticationException var3_ref3 = (ProxyAuthenticationException) (Object) decompiledCaughtException;
                       var8.field_b = var3_ref3.getMessage();
                       throw var3_ref3;
                     }

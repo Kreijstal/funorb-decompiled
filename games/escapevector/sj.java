@@ -13,7 +13,7 @@ final class sj extends IntrusiveNode {
         if (mb.field_a != null) {
           mb.field_a.fadeOut(2048);
         }
-        mb.field_a = PcmSampleStream.createAtRatePercentQ6(uf.field_g, 100, qm.field_c * 6144 / 64, param0);
+        mb.field_a = PcmSampleStream.createAtRatePercentQ6(uf.field_g, 100, IterableNodeHashTable.field_c * 6144 / 64, param0);
         if (param1 == 51) {
           ObjectSpriteSet.field_e.addSubstream(mb.field_a);
           return;

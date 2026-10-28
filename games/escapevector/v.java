@@ -25,7 +25,7 @@ final class v {
                 v.a(-34, 33);
               }
               java.net.URL var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-              param0.getAppletContext().showDocument(sh.a((byte) 29, param0, var2), "_top");
+              param0.getAppletContext().showDocument(WeightedCacheEntry.withSessionParameters((byte) 29, param0, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

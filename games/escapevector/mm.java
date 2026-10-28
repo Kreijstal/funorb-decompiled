@@ -18,10 +18,10 @@ final class mm {
             field_a = (String) null;
           }
           if (0 == mj.field_d) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
           }
           if (10 == mj.field_d) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
           }
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
@@ -53,7 +53,7 @@ final class mm {
         int var5 = -76 % ((-35 - param0) / 47);
         ok.field_a = param4;
         je.field_b = param1;
-        vk.field_t = param3;
+        StrongCacheEntry.field_t = param3;
     }
 
     final static int a(int param0, boolean param1, int param2, int param3) {
@@ -69,7 +69,7 @@ final class mm {
         if (param0 != 4) {
           return false;
         }
-        if (fa.field_c[param1]) {
+        if (WeightedLruCache.field_c[param1]) {
           return true;
         }
         ResourceArchive var4 = IndexedSpriteState.field_j;
@@ -83,8 +83,8 @@ final class mm {
             tk.field_a[param1] = fe.a(da.field_d[param1], var4, "texture", true);
             PcmResampler.field_a[param1] = fe.a(da.field_d[param1], var4, "frosting", true);
             PcmResampler.field_a[param1].c();
-            dm.a(var4, param1, false);
-            fa.field_c[param1] = true;
+            DelayedServerPacket.loadSkyLayers(var4, param1, false);
+            WeightedLruCache.field_c[param1] = true;
             SpriteOffset.a((byte) 53);
             return true;
           }
@@ -93,7 +93,7 @@ final class mm {
         if (se.field_b != null) {
           sl.field_b[param1] = se.field_b.field_g;
           pf.field_g[param1] = se.field_b.field_d;
-          fa.field_c[param1] = true;
+          WeightedLruCache.field_c[param1] = true;
           SpriteOffset.a((byte) 53);
           return true;
         }

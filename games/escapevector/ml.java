@@ -8,8 +8,8 @@ final class ml {
 
     final static boolean a(char param0, int param1) {
         if (param1 != 21654) {
-          ik var3 = (ik) null;
-          ml.a((ik) null, -66, (byte) -72);
+          ScoreSubmission var3 = (ScoreSubmission) null;
+          ml.a((ScoreSubmission) null, -66, (byte) -72);
           return EmailAvailabilityRequest.a(param0, -11217);
         }
         return EmailAvailabilityRequest.a(param0, -11217);
@@ -59,10 +59,10 @@ final class ml {
         }
     }
 
-    final static void a(ik param0, int param1, byte param2) {
+    final static void a(ScoreSubmission param0, int param1, byte param2) {
         try {
           vj.field_d.addLast(-12328, param0);
-          ig.a(-75, param1, param0);
+          ig.writeScoreSubmission(-75, param1, param0);
           if (param2 != 101) {
             ml.releaseStatics(-42);
           }

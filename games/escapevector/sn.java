@@ -17,7 +17,7 @@ final class sn {
         if (var1 != SelfDestructEffects.field_q ||
           CheckboxPainter.field_l.field_h != var2) {
           boolean var3 = (di.field_d.field_j);
-          ll.a(0, var1, (var3), var2);
+          ArchiveKeyRequest.a(0, var1, (var3), var2);
         }
     }
 
@@ -118,7 +118,7 @@ final class sn {
               if (5 != ArchiveIndex.field_j) {
                 throw new IllegalArgumentException();
               }
-              var3_int = un.a(pf.field_e, 122, nb.field_a, Js5Transport.field_h, eg.field_a);
+              var3_int = un.a(pf.field_e, 122, nb.field_a, Js5Transport.field_h, MouseInputHandler.field_a);
               var4 = 3 + var3_int;
               Js5NetworkRequest.field_I = new String[var4];
               jj.field_a = new int[var4];
@@ -166,12 +166,12 @@ final class sn {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            qm.field_f = new String[var4];
-            qg.a(pf.field_e, 0, qm.field_f, 0, var4);
+            IterableNodeHashTable.field_f = new String[var4];
+            qg.a(pf.field_e, 0, IterableNodeHashTable.field_f, 0, var4);
             tb.field_G = new String[var3_int - var4 - 1];
             qg.a(pf.field_e, 1 + var4, tb.field_G, 0, -1 + var3_int - var4);
-            if (qm.field_f.length > tg.field_nb.length) {
-              stackIn_52_0 = qm.field_f.length;
+            if (IterableNodeHashTable.field_f.length > tg.field_nb.length) {
+              stackIn_52_0 = IterableNodeHashTable.field_f.length;
             } else {
               stackIn_52_0 = tg.field_nb.length;
             }
@@ -190,7 +190,7 @@ final class sn {
             }
             CachedTextLayout.field_j = new int[2];
             jj.field_a[1] = 0;
-            Js5NetworkRequest.field_I[1] = jh.field_j;
+            Js5NetworkRequest.field_I[1] = AchievementQuery.field_j;
             Js5NetworkRequest.field_I[0] = td.field_a;
             Js5NetworkRequest.field_I[2] = bb.field_I;
             CachedTextLayout.field_j[0] = 5;
@@ -202,10 +202,10 @@ final class sn {
             for (int var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               String[] stackIn_62_0 = Js5NetworkRequest.field_I;
               int stackIn_62_1 = 6 + var8Lifetime2;
-              if (qm.field_f.length + var8Lifetime2 - var5 < 0) {
+              if (IterableNodeHashTable.field_f.length + var8Lifetime2 - var5 < 0) {
                 stackIn_63_2 = "";
               } else {
-                stackIn_63_2 = qm.field_f[-var5 + (qm.field_f.length + var8Lifetime2)];
+                stackIn_63_2 = IterableNodeHashTable.field_f[-var5 + (IterableNodeHashTable.field_f.length + var8Lifetime2)];
               }
               stackIn_62_0[stackIn_62_1] = stackIn_63_2;
             }
@@ -223,7 +223,7 @@ final class sn {
               }
               stackIn_67_0[stackIn_67_1] = stackIn_70_2;
             }
-            bd.field_k = td.b(128);
+            SavedDataWrite.field_k = td.b(128);
           }
           cb.field_c.field_k = CachedTextLayout.field_j.length;
           int var3_intLifetime1 = 0;

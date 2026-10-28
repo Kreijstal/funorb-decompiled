@@ -17,14 +17,14 @@ final class tg extends ol {
         field_nb = null;
     }
 
-    final static jh b(int param0, int param1) {
+    final static AchievementQuery b(int param0, int param1) {
         if (param1 >= 89) {
-          jh var2 = new jh();
+          AchievementQuery var2 = new AchievementQuery();
           bc.field_b.addLast(-12328, var2);
           km.a(param0, -22);
           return var2;
         }
-        return (jh) null;
+        return (AchievementQuery) null;
     }
 
     tg() {

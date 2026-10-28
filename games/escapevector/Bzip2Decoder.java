@@ -103,7 +103,7 @@ final class Bzip2Decoder {
         int var3 = param0.field_b;
         int var4 = param0.field_u;
         int var5 = param0.field_l;
-        int[] var15 = bd.field_l;
+        int[] var15 = SavedDataWrite.field_l;
         int[] var14 = var15;
         int[] var6 = var14;
         int var7 = param0.field_k;
@@ -205,7 +205,7 @@ final class Bzip2Decoder {
         param0.field_b = var3;
         param0.field_u = var4;
         param0.field_l = var5;
-        bd.field_l = var6;
+        SavedDataWrite.field_l = var6;
         param0.field_k = var7;
         param0.field_D = var8;
         param0.field_C = var9;
@@ -226,8 +226,8 @@ final class Bzip2Decoder {
         Object var24 = null;
         Object var25 = null;
         param0.field_i = 1;
-        if (bd.field_l == null) {
-          bd.field_l = new int[param0.field_i * 100000];
+        if (SavedDataWrite.field_l == null) {
+          SavedDataWrite.field_l = new int[param0.field_i * 100000];
         }
         boolean var26 = true;
         while (true) {
@@ -398,14 +398,14 @@ final class Bzip2Decoder {
                 param0.field_B[var4] = param0.field_B[var4] + param0.field_B[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(bd.field_l[var4] & 255);
+                var1 = (byte)(SavedDataWrite.field_l[var4] & 255);
                 int dupTemp$1 = param0.field_B[var1 & 255];
-                bd.field_l[dupTemp$1] = bd.field_l[dupTemp$1] | var4 << 8;
+                SavedDataWrite.field_l[dupTemp$1] = SavedDataWrite.field_l[dupTemp$1] | var4 << 8;
                 param0.field_B[var1 & 255] = param0.field_B[var1 & 255] + 1;
               }
-              param0.field_k = bd.field_l[param0.field_g] >> 8;
+              param0.field_k = SavedDataWrite.field_l[param0.field_g] >> 8;
               param0.field_u = 0;
-              param0.field_k = bd.field_l[param0.field_k];
+              param0.field_k = SavedDataWrite.field_l[param0.field_k];
               param0.field_l = (byte)(param0.field_k & 255);
               param0.field_k = param0.field_k >> 8;
               param0.field_u = param0.field_u + 1;
@@ -469,7 +469,7 @@ final class Bzip2Decoder {
               }
               int dupTemp$0 = param0.field_w[var1 & 255] & 255;
               param0.field_j[dupTemp$0] = param0.field_j[dupTemp$0] + 1;
-              bd.field_l[var14] = param0.field_w[var1 & 255] & 255;
+              SavedDataWrite.field_l[var14] = param0.field_w[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -524,7 +524,7 @@ final class Bzip2Decoder {
             var1 = param0.field_w[param0.field_o[param0.field_r[0]] & 255];
             param0.field_j[var1 & 255] = param0.field_j[var1 & 255] + var15;
             while (var15 > 0) {
-              bd.field_l[var14] = var1 & 255;
+              SavedDataWrite.field_l[var14] = var1 & 255;
               var14++;
               var15--;
             }

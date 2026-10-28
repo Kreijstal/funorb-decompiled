@@ -33,7 +33,7 @@ final class da {
 
     final static IndexedSprite b(byte param0) {
         int var2 = 85 % ((param0 + 46) / 39);
-        IndexedSprite var1 = new IndexedSprite(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], qe.field_a[0], qk.field_f);
+        IndexedSprite var1 = new IndexedSprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], qe.field_a[0], qk.field_f);
         of.a(false);
         return var1;
     }

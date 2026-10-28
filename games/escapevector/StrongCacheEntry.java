@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk extends sh {
+final class StrongCacheEntry extends WeightedCacheEntry {
     static String field_v;
     static int field_t;
-    private Object field_u;
+    private Object value;
 
-    final Object e(byte param0) {
-        if (param0 != 97) {
-          vk.releaseStatics(24);
+    final Object getValue(byte guard) {
+        if (guard != 97) {
+          StrongCacheEntry.releaseStatics(24);
         }
-        return this.field_u;
+        return this.value;
     }
 
     public static void releaseStatics(int guard) {
@@ -18,19 +18,19 @@ final class vk extends sh {
         field_v = null;
     }
 
-    final static char a(byte param0, int param1, ih param2, int param3) {
+    final static char widestAllowedGlyph(byte guard, int firstCharacter, ih font, int lastCharacter) {
         String stackIn_15_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
           int var4_int = 119;
-          int var5 = param2.a((char) var4_int);
-          int var6 = param1;
-          if (param0 > -47) {
-            vk.releaseStatics(-66);
+          int var5 = font.a((char) var4_int);
+          int var6 = firstCharacter;
+          if (guard > -47) {
+            StrongCacheEntry.releaseStatics(-66);
           }
-          while (param3 >= var6) {
+          while (lastCharacter >= var6) {
             if (ml.a((char)var6, 21654)) {
-              int var7 = param2.a((char)var6);
+              int var7 = font.a((char)var6);
               if (var5 < var7) {
                 var4_int = (char)var6;
                 var5 = var7;
@@ -44,30 +44,30 @@ final class vk extends sh {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_14_0 = var4;
-          StringBuilder stackIn_14_1 = new StringBuilder().append("vk.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_14_1 = new StringBuilder().append("vk.F(").append(guard).append(',').append(firstCharacter).append(',');
+          if (font == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(lastCharacter).append(')').toString());
         }
     }
 
-    vk(Object param0, int param1) {
-        super(param1);
+    StrongCacheEntry(Object value, int weight) {
+        super(weight);
         try {
-          this.field_u = param0;
+          this.value = value;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (value != null ? "{...}" : "null") + ',' + weight + ')');
         }
     }
 
-    final static tk a(String param0, int param1) {
+    final static tk validateDomainLabel(String label, int guard) {
         String stackIn_28_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          int var2_int = param0.length();
+          int var2_int = label.length();
           if (var2_int == 0) {
             tk stackIn_4_0 = ResourceArchive.field_d;
             return stackIn_4_0;
@@ -76,12 +76,12 @@ final class vk extends sh {
             tk stackIn_7_0 = EmailAvailabilityRequest.field_c;
             return stackIn_7_0;
           }
-          if (param1 >= -8) {
+          if (guard >= -8) {
             tk stackIn_10_0 = (tk) null;
             return stackIn_10_0;
           }
           for (int var3 = 0; var3 < var2_int; var3++) {
-            int var4 = param0.charAt(var3);
+            int var4 = label.charAt(var3);
             if (45 == var4) {
               if (0 == var3 ||
                 var3 == -1 + var2_int) {
@@ -99,17 +99,17 @@ final class vk extends sh {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_27_0 = var2;
           StringBuilder stackIn_27_1 = new StringBuilder().append("vk.G(");
-          if (param0 == null) {
+          if (label == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final boolean d(byte param0) {
-        if (param0 != 120) {
+    final boolean isSoft(byte guard) {
+        if (guard != 120) {
           field_v = (String) null;
           return false;
         }

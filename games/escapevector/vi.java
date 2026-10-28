@@ -31,8 +31,8 @@ final class vi {
             ResourceArchive.field_l[var2_int] = 0;
           }
           for (int var2_intLifetime1 = 0; var2_intLifetime1 < hf.field_b; var2_intLifetime1++) {
-            if (qm.field_d[var2_intLifetime1].field_a == param0.field_a) {
-              int dupTemp$3 = qm.field_d[var2_intLifetime1].b(param1 ^ 83);
+            if (IterableNodeHashTable.field_d[var2_intLifetime1].field_a == param0.field_a) {
+              int dupTemp$3 = IterableNodeHashTable.field_d[var2_intLifetime1].b(param1 ^ 83);
               ResourceArchive.field_l[dupTemp$3] = ResourceArchive.field_l[dupTemp$3] + 1;
             }
           }
@@ -41,8 +41,8 @@ final class vi {
           int var2_intLifetime2 = 0;
           for (int var3 = 0; hf.field_b > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (qm.field_d[var3].field_a == param0.field_a) {
-              int var4 = qm.field_d[var3].b(47);
+            if (IterableNodeHashTable.field_d[var3].field_a == param0.field_a) {
+              int var4 = IterableNodeHashTable.field_d[var3].b(47);
               if (ResourceArchive.field_l[var4] > ReflectionCheck.field_k) {
                 ResourceArchive.field_l[var4] = ResourceArchive.field_l[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -51,13 +51,13 @@ final class vi {
             if (decompiledFrameRemainder0) {
               int incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              qm.field_d[incrementValue$2] = qm.field_d[var3];
+              IterableNodeHashTable.field_d[incrementValue$2] = IterableNodeHashTable.field_d[var3];
             }
           }
           hf.field_b = var2_intLifetime2;
           int fieldTemp$1 = hf.field_b;
           hf.field_b = hf.field_b + 1;
-          qm.field_d[fieldTemp$1] = param0;
+          IterableNodeHashTable.field_d[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

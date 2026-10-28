@@ -27,7 +27,7 @@ final class co {
         try {
           int var2_int = 119;
           int var3 = param0.a((char) var2_int);
-          char[] var11 = tc.field_k[0];
+          char[] var11 = SpriteStrip.field_k[0];
           char[] var10 = var11;
           char[] var9 = var10;
           char[] var4_ref_char__ = var9;
@@ -45,7 +45,7 @@ final class co {
               }
             }
           }
-          char[] var4_ref_char__Lifetime1 = tc.field_k[1];
+          char[] var4_ref_char__Lifetime1 = SpriteStrip.field_k[1];
           for (int var5Lifetime1 = 0; var4_ref_char__Lifetime1.length > var5Lifetime1; var5Lifetime1++) {
             int var6Lifetime1 = var4_ref_char__Lifetime1[var5Lifetime1];
             int var7Lifetime1 = param0.a((char) var6Lifetime1);
@@ -55,13 +55,13 @@ final class co {
               var3 = var7Lifetime1;
             }
           }
-          int var4 = vk.a((byte) -89, bb.field_R[0], param0, uj.field_f[0]);
+          int var4 = StrongCacheEntry.widestAllowedGlyph((byte) -89, bb.field_R[0], param0, uj.field_f[0]);
           int var5Lifetime2 = param0.a((char) var4);
           if (var5Lifetime2 > var3) {
             var3 = var5Lifetime2;
             var2_int = var4;
           }
-          int var4Lifetime1 = vk.a((byte) -63, bb.field_R[1], param0, uj.field_f[1]);
+          int var4Lifetime1 = StrongCacheEntry.widestAllowedGlyph((byte) -63, bb.field_R[1], param0, uj.field_f[1]);
           int var5Lifetime3 = param0.a((char) var4Lifetime1);
           if (var5Lifetime3 > var3) {
             var3 = var5Lifetime3;

@@ -122,11 +122,11 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           if (guard != 14) {
             field_t = (PcmSample) null;
           }
-          if (null == jb.field_r) {
-            jb.field_r = new w(bo.field_F, dj.field_b);
-            bo.field_F.b(jb.field_r, guard + 102);
+          if (null == ProxySocketConnector.field_r) {
+            ProxySocketConnector.field_r = new w(bo.field_F, dj.field_b);
+            bo.field_F.b(ProxySocketConnector.field_r, guard + 102);
           }
-          jb.field_r.a(-100, text, percent, alternateStyle);
+          ProxySocketConnector.field_r.a(-100, text, percent, alternateStyle);
           SoftwareRasterizer.clearFramebuffer();
           se.a(true, guard ^ 17111);
         } catch (RuntimeException runtimeException) {

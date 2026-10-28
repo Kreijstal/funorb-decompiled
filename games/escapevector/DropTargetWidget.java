@@ -1187,7 +1187,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(56, "retry");
                 if (null != var2) {
-                  sh.field_s = RasterSnapshot.a(var2, 122);
+                  WeightedCacheEntry.field_s = RasterSnapshot.a(var2, 122);
                 }
                 var2 = IntKeyLookup.a(103, "back");
                 if (var2 != null) {
@@ -1482,7 +1482,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(108, "create_age");
                 if (null != var2) {
-                  qm.field_a = RasterSnapshot.a(var2, 110);
+                  IterableNodeHashTable.field_a = RasterSnapshot.a(var2, 110);
                 }
                 var2 = IntKeyLookup.a(26, "create_u13_email");
                 if (null != var2) {
@@ -1594,7 +1594,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(86, "create_password_hint");
                 if (var2 != null) {
-                  rm.field_a = RasterSnapshot.a(var2, 124);
+                  DualLinkDequeIterator.field_a = RasterSnapshot.a(var2, 124);
                 }
                 var2 = IntKeyLookup.a(74, "create_password_confirm_tooltip");
                 if (var2 != null) {
@@ -1834,7 +1834,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(69, "waitingfor_soundeffects");
                 if (null != var2) {
-                  bd.field_g = RasterSnapshot.a(var2, 115);
+                  SavedDataWrite.field_g = RasterSnapshot.a(var2, 115);
                 }
                 var2 = IntKeyLookup.a(81, "waitingfor_music");
                 if (var2 != null) {
@@ -1894,7 +1894,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(91, "loading_extradata");
                 if (var2 != null) {
-                  wf.field_b = RasterSnapshot.a(var2, 116);
+                  IntrusiveDequeCursor.field_b = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(35, "loading_languages");
                 if (null != var2) {
@@ -2010,7 +2010,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(119, "returntopausemenu");
                 if (var2 != null) {
-                  fa.field_f = RasterSnapshot.a(var2, 112);
+                  WeightedLruCache.field_f = RasterSnapshot.a(var2, 112);
                 }
                 var2 = IntKeyLookup.a(60, "returntooptionsmenu_notpaused");
                 if (var2 != null) {
@@ -2050,7 +2050,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(51, "resumegame");
                 if (null != var2) {
-                  kb.field_g = RasterSnapshot.a(var2, 112);
+                  SocketConnector.field_g = RasterSnapshot.a(var2, 112);
                 }
                 var2 = IntKeyLookup.a(39, "resumetutorial");
                 if (null != var2) {
@@ -2062,7 +2062,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(42, "skiptutorial");
                 if (null != var2) {
-                  tc.field_o = RasterSnapshot.a(var2, 114);
+                  SpriteStrip.field_o = RasterSnapshot.a(var2, 114);
                 }
                 var2 = IntKeyLookup.a(96, "skipending");
                 if (var2 != null) {
@@ -2712,7 +2712,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(69, "fs_button_accept");
                 if (null != var2) {
-                  jh.field_j = RasterSnapshot.a(var2, 113);
+                  AchievementQuery.field_j = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(50, "fs_accept_afteraccept");
                 if (null != var2) {
@@ -2764,7 +2764,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(14, "fs_timeout");
                 if (null != var2) {
-                  eg.field_a = RasterSnapshot.a(var2, 120);
+                  MouseInputHandler.field_a = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(78, "fs_button_tryagain");
                 if (var2 != null) {
@@ -2884,7 +2884,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(46, "serviceunavailable");
                 if (var2 != null) {
-                  bd.field_m = RasterSnapshot.a(var2, 124);
+                  SavedDataWrite.field_m = RasterSnapshot.a(var2, 124);
                 }
                 var2 = IntKeyLookup.a(55, "createtouse");
                 if (var2 != null) {
@@ -2892,7 +2892,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(21, "achievementsoffline");
                 if (var2 != null) {
-                  cc.field_l = RasterSnapshot.a(var2, 120);
+                  ProgressRecord.field_l = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(47, "warning");
                 if (var2 != null) {
@@ -2968,31 +2968,31 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(69, "mustlogin4,1");
                 if (null != var2) {
-                  wf.field_c[1] = RasterSnapshot.a(var2, 117);
+                  IntrusiveDequeCursor.field_c[1] = RasterSnapshot.a(var2, 117);
                 }
                 var2 = IntKeyLookup.a(98, "mustlogin4,2");
                 if (null != var2) {
-                  wf.field_c[2] = RasterSnapshot.a(var2, 117);
+                  IntrusiveDequeCursor.field_c[2] = RasterSnapshot.a(var2, 117);
                 }
                 var2 = IntKeyLookup.a(111, "mustlogin4,3");
                 if (var2 != null) {
-                  wf.field_c[3] = RasterSnapshot.a(var2, 126);
+                  IntrusiveDequeCursor.field_c[3] = RasterSnapshot.a(var2, 126);
                 }
                 var2 = IntKeyLookup.a(111, "mustlogin4,4");
                 if (null != var2) {
-                  wf.field_c[4] = RasterSnapshot.a(var2, 120);
+                  IntrusiveDequeCursor.field_c[4] = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(86, "mustlogin4,5");
                 if (null != var2) {
-                  wf.field_c[5] = RasterSnapshot.a(var2, 127);
+                  IntrusiveDequeCursor.field_c[5] = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(48, "mustlogin4,6");
                 if (var2 != null) {
-                  wf.field_c[6] = RasterSnapshot.a(var2, 122);
+                  IntrusiveDequeCursor.field_c[6] = RasterSnapshot.a(var2, 122);
                 }
                 var2 = IntKeyLookup.a(99, "mustlogin4,7");
                 if (var2 != null) {
-                  wf.field_c[7] = RasterSnapshot.a(var2, 123);
+                  IntrusiveDequeCursor.field_c[7] = RasterSnapshot.a(var2, 123);
                 }
                 var2 = IntKeyLookup.a(101, "mustlogin_notloggedin");
                 if (null != var2) {

@@ -26,7 +26,7 @@ final class pa {
         int var4 = EscapeVector.obfuscationControl;
         try {
           bi.b();
-          ij.field_i = 11;
+          HighscoreQuery.field_i = 11;
           pb.field_c = new int[260];
           for (int var1_int = 0; var1_int < 256; var1_int++) {
             double var2 = 15.0;

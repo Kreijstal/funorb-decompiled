@@ -80,7 +80,7 @@ final class SeekerMine extends IntrusiveNode {
             SeekerMine.releaseStatics(true);
           }
           CharSequence var3 = (CharSequence) ((Object) param0);
-          boolean stackIn_3_0 = cc.field_k.equals(sf.a(-67, var3));
+          boolean stackIn_3_0 = ProgressRecord.field_k.equals(sf.a(-67, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

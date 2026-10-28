@@ -25,13 +25,13 @@ final class je {
             for (int var6 = 0; var1 > var6; var6++) {
               var5_ref_int__[var6] = MatchingTextValidator.a(ae.a(var20[var6] << 24, -16777216), qk.field_f[ae.a((int) var21[var6], 255)]);
             }
-            var3 = new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var13);
+            var3 = new uh(on.field_e, DelegatingCanvas.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var13);
           } else {
             int[] var9 = new int[var1];
             for (int var5 = 0; var1 > var5; var5++) {
               var9[var5] = qk.field_f[ae.a((int) var21[var5], 255)];
             }
-            var3 = new Sprite(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var9);
+            var3 = new Sprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var9);
           }
           of.a(false);
           return (Sprite) (var3);
@@ -47,13 +47,13 @@ final class je {
           for (int var6Lifetime1 = 0; var1Lifetime1 > var6Lifetime1; var6Lifetime1++) {
             var5_ref_int__Lifetime1[var6Lifetime1] = MatchingTextValidator.a(ae.a(var18[var6Lifetime1] << 24, -16777216), qk.field_f[ae.a((int) var19[var6Lifetime1], 255)]);
           }
-          var3Lifetime1 = new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var13Lifetime1);
+          var3Lifetime1 = new uh(on.field_e, DelegatingCanvas.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var13Lifetime1);
         } else {
           int[] var9Lifetime1 = new int[var1Lifetime1];
           for (int var5Lifetime1 = 0; var1Lifetime1 > var5Lifetime1; var5Lifetime1++) {
             var9Lifetime1[var5Lifetime1] = qk.field_f[ae.a((int) var19[var5Lifetime1], 255)];
           }
-          var3Lifetime1 = new Sprite(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var9Lifetime1);
+          var3Lifetime1 = new Sprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var9Lifetime1);
         }
         of.a(false);
         return (Sprite) (var3Lifetime1);
@@ -62,12 +62,12 @@ final class je {
     final static int a(boolean param0, int param1) {
         if (param0) {
           je.b(13);
-          if (qd.a(param1, -102)) {
+          if (AchievementRecord.a(param1, -102)) {
             return pc.a(2513, param1);
           }
           return 0;
         }
-        if (qd.a(param1, -102)) {
+        if (AchievementRecord.a(param1, -102)) {
           return pc.a(2513, param1);
         }
         return 0;
@@ -75,7 +75,7 @@ final class je {
 
     final static void a(ResourceArchive param0, PcmStreamMixer param1, int param2, byte param3) {
         try {
-          hb.field_h = se.a(0) * param2 / 1000;
+          NodeHashTableIterator.field_h = se.a(0) * param2 / 1000;
           on.a(param0, -58);
           h.a(param0, (byte) 110);
           cj.a(0, param0);
@@ -85,7 +85,7 @@ final class je {
             je.a(false, (String) null);
           }
           id.c(120);
-          kb.field_d = 0 - hb.field_h;
+          SocketConnector.field_d = 0 - NodeHashTableIterator.field_h;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "je.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

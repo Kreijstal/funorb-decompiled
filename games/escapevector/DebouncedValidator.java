@@ -88,23 +88,23 @@ abstract class DebouncedValidator implements ValidationSource {
         field_d = null;
     }
 
-    final static void a(qd param0, int param1, boolean param2) {
+    final static void writeAchievementRecord(AchievementRecord record, int opcode, boolean guard) {
         try {
-          CipherPacketBuffer var3 = QuickChatDynamicCommand.field_c;
-          var3.writeCipheredOpcode(param1, param2);
+          CipherPacketBuffer var3 = QuickChatDynamicCommand.outgoingPackets;
+          var3.writeCipheredOpcode(opcode, guard);
           var3.position = var3.position + 1;
           int var4 = var3.position;
           var3.writeByte(1, -123);
-          var3.writeByte(param0.field_m, -123);
-          var3.writeByte(param0.field_h, -123);
-          var3.writeInt((byte) 124, param0.field_k);
-          var3.writeInt((byte) 127, param0.field_i);
-          var3.writeInt((byte) 125, param0.field_j);
-          var3.writeInt((byte) 127, param0.field_g);
+          var3.writeByte(record.field_m, -123);
+          var3.writeByte(record.field_h, -123);
+          var3.writeInt((byte) 124, record.field_k);
+          var3.writeInt((byte) 127, record.field_i);
+          var3.writeInt((byte) 125, record.field_j);
+          var3.writeInt((byte) 127, record.field_g);
           var3.appendCrc32(var4, -76);
           var3.backpatchByteLength(86, var3.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "sm.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "sm.O(" + (record != null ? "{...}" : "null") + ',' + opcode + ',' + guard + ')');
         }
     }
 
@@ -224,7 +224,7 @@ abstract class DebouncedValidator implements ValidationSource {
     }
 
     final static void b(byte param0) {
-        jh.a(true, AgeValidator.field_o, false, ResourceArchive.field_b);
+        AchievementQuery.a(true, AgeValidator.field_o, false, ResourceArchive.field_b);
         if (param0 > -45) {
           return;
         }

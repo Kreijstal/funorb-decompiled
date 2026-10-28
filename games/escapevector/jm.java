@@ -173,10 +173,10 @@ final class jm extends UiComponent {
           try {
             byte[] var6 = new byte[24];
             byte[] var2 = var6;
-            if (bd.field_h != null) {
+            if (SavedDataWrite.field_h != null) {
               try {
-                bd.field_h.a(0, 0L);
-                bd.field_h.a((byte) 94, var6);
+                SavedDataWrite.field_h.a(0, 0L);
+                SavedDataWrite.field_h.a((byte) 94, var6);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (var6[var3_int] == 0) {
                     continue;

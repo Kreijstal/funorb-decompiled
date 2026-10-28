@@ -66,7 +66,7 @@ class EditableTextWidget extends TextButton {
                   if (this.field_L >= this.text.length()) {
                     return false;
                   }
-                  if (ik.field_h[82]) {
+                  if (ScoreSubmission.field_h[82]) {
                     stackIn_49_1 = this.o(1);
                   } else {
                     stackIn_49_1 = this.field_L + 1;
@@ -86,23 +86,23 @@ class EditableTextWidget extends TextButton {
                   this.notifySubmit(0);
                   return true;
                 }
-                if (ik.field_h[82] &&
+                if (ScoreSubmission.field_h[82] &&
                   keyCode == 65) {
                   this.g((byte) 8);
                   return true;
                 }
-                if (ik.field_h[82] &&
+                if (ScoreSubmission.field_h[82] &&
                   66 == keyCode) {
                   this.e((byte) 104);
                   return true;
                 }
-                if (ik.field_h[82] &&
+                if (ScoreSubmission.field_h[82] &&
                   keyCode == 67) {
                   this.q(87);
                   return true;
                 }
               } else if (this.field_L > 0) {
-                if (!ik.field_h[82]) {
+                if (!ScoreSubmission.field_h[82]) {
                   stackIn_55_1 = -1 + this.field_L;
                 } else {
                   stackIn_55_1 = this.p(-94);
@@ -400,14 +400,14 @@ class EditableTextWidget extends TextButton {
         if (param1 < 17) {
           EditableTextWidget.releaseStatics((byte) -102);
           this.field_L = param0;
-          if (!ik.field_h[81]) {
+          if (!ScoreSubmission.field_h[81]) {
             this.field_P = this.field_L;
             return;
           }
           return;
         }
         this.field_L = param0;
-        if (ik.field_h[81]) {
+        if (ScoreSubmission.field_h[81]) {
           return;
         }
         this.field_P = this.field_L;
@@ -506,14 +506,14 @@ class EditableTextWidget extends TextButton {
           return param0 / 2;
         }
         if (param1 == 2) {
-          param0 = dc.a(-110, 100, param0) * 100;
+          param0 = ProgressQuery.ceilDivide(-110, 100, param0) * 100;
           return param0;
         }
         if (param2 < 24) {
           return 31;
         }
         if (3 == param1) {
-          param0 = dc.a(-74, 100, param0) * 100;
+          param0 = ProgressQuery.ceilDivide(-74, 100, param0) * 100;
           return param0;
         }
         return 0;

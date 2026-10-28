@@ -13,10 +13,10 @@ final class sc implements WidgetPainter {
     static int[] field_h;
     static Boolean field_g;
 
-    final static void a(qd param0, int param1, int param2) {
+    final static void a(AchievementRecord param0, int param1, int param2) {
         try {
           RasterSnapshot.field_l.addLast(-12328, param0);
-          DebouncedValidator.a(param0, param1, true);
+          DebouncedValidator.writeAchievementRecord(param0, param1, true);
           if (param2 != 1) {
             sc.b((byte) 98);
           }

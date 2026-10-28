@@ -45,7 +45,7 @@ final class km extends fh {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = QuickChatDynamicCommand.field_c;
+        CipherPacketBuffer var2 = QuickChatDynamicCommand.outgoingPackets;
         var2.writeCipheredOpcode(param0, true);
         var2.writeByte(1, -123);
         int var3 = -50 % ((61 - param1) / 57);

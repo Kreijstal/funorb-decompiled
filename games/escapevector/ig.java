@@ -52,31 +52,31 @@ final class ig {
         }
     }
 
-    final static void a(int param0, int param1, ik param2) {
+    final static void writeScoreSubmission(int guard, int opcode, ScoreSubmission submission) {
         int var7 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var8 = QuickChatDynamicCommand.field_c;
+          CipherPacketBuffer var8 = QuickChatDynamicCommand.outgoingPackets;
           CipherPacketBuffer var9 = var8;
-          var9.writeCipheredOpcode(param1, true);
+          var9.writeCipheredOpcode(opcode, true);
           var9.position = var9.position + 1;
           int var4 = var9.position;
           var9.writeByte(1, -123);
-          var9.writeShort(-113, param2.field_i);
-          var9.writeShort(-107, param2.field_j);
-          var9.writeShort(110, param2.field_k);
-          var9.writeInt((byte) 124, param2.field_o);
-          var9.writeInt((byte) 123, param2.field_m);
-          var9.writeInt((byte) 127, param2.field_n);
-          var9.writeInt((byte) 127, param2.field_g);
-          var9.writeByte(param2.field_q.length, -123);
-          int var5 = -65 / ((87 - param0) / 35);
-          for (int var6 = 0; param2.field_q.length > var6; var6++) {
-            var8.writeInt((byte) 123, param2.field_q[var6]);
+          var9.writeShort(-113, submission.requestId);
+          var9.writeShort(-107, submission.boardId);
+          var9.writeShort(110, submission.boardIdComplement);
+          var9.writeInt((byte) 124, submission.field_o);
+          var9.writeInt((byte) 123, submission.field_m);
+          var9.writeInt((byte) 127, submission.field_n);
+          var9.writeInt((byte) 127, submission.field_g);
+          var9.writeByte(submission.field_q.length, -123);
+          int var5 = -65 / ((87 - guard) / 35);
+          for (int var6 = 0; submission.field_q.length > var6; var6++) {
+            var8.writeInt((byte) 123, submission.field_q[var6]);
           }
           var9.appendCrc32(var4, -39);
           var9.backpatchByteLength(-56, -var4 + var9.position);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ig.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ig.N(" + guard + ',' + opcode + ',' + (submission != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -491,7 +491,7 @@ final class ig {
         if (di.field_d.field_e) {
           Object var2 = ObjectSpriteSet.field_e;
           synchronized (var2) {
-            int var3 = 1536 * qm.field_c / 64;
+            int var3 = 1536 * IterableNodeHashTable.field_c / 64;
             int var4 = 100;
             int var5 = di.field_d.field_h;
             this.a(this.field_j, var3, var4, 3);
@@ -845,7 +845,7 @@ final class ig {
         if (param0 != 0) {
           return;
         }
-        int var3 = qm.field_c * 6144 / 64;
+        int var3 = IterableNodeHashTable.field_c * 6144 / 64;
         int var4 = 100;
         this.a(var4, param0 + 9355, var3, this.field_b);
         this.a(var4, param0 ^ 9355, var3, this.field_q);

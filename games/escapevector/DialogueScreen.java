@@ -180,7 +180,7 @@ final class DialogueScreen extends IntrusiveNode {
           }
           SoftwareRasterizer.a(15, 240, 610, 62, 0, var8Lifetime2);
         }
-        ll.a(244, 182, 8, this.field_v);
+        ArchiveKeyRequest.a(244, 182, 8, this.field_v);
     }
 
     DialogueScreen(int[] param0, Sprite[] param1, String[] param2, boolean param3) {
@@ -237,10 +237,10 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void k(int param0) {
         if (this.field_v == 80) {
-          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, 3072 * qm.field_c / 64, 10240);
+          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, 3072 * IterableNodeHashTable.field_c / 64, 10240);
         }
         if (this.field_v == 30) {
-          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
+          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 6144);
         }
         this.field_v = this.field_v - 1;
         if (param0 <= 102) {
@@ -308,10 +308,10 @@ final class DialogueScreen extends IntrusiveNode {
           return param2;
         }
         if (param0 == 2) {
-          return dc.a(-7, 100, param2);
+          return ProgressQuery.ceilDivide(-7, 100, param2);
         }
         if (param0 == 3) {
-          return dc.a(-25, 100, param2);
+          return ProgressQuery.ceilDivide(-25, 100, param2);
         }
         return param2;
     }
@@ -372,7 +372,7 @@ final class DialogueScreen extends IntrusiveNode {
           return;
         }
         if (this.field_w.field_e) {
-          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, this.g(2));
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, this.g(2));
         }
         if (qi.field_N != 0) {
           this.i(2048);
@@ -385,7 +385,7 @@ final class DialogueScreen extends IntrusiveNode {
             if (pn.p(-82)) {
               this.field_w.c((byte) 6);
               if (this.field_w.field_e) {
-                ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, this.g(2));
+                ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, this.g(2));
               }
               if (PasswordValidator.field_n != 13 &&
                 PasswordValidator.field_n != 84 &&
@@ -411,12 +411,12 @@ final class DialogueScreen extends IntrusiveNode {
                 sj.a(this.d(8192), (byte) 51);
               }
               if (23 == this.field_s) {
-                ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 3072 * qm.field_c / 64, this.g(2));
+                ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 3072 * IterableNodeHashTable.field_c / 64, this.g(2));
               }
               this.field_s = this.field_s + 1;
               if (this.field_s == 43 &&
                 this.field_A == null) {
-                this.field_A = PcmSampleStream.createAtRatePercentQ6(en.field_d, 100, qm.field_c * 768 / 64, this.g((byte) 111));
+                this.field_A = PcmSampleStream.createAtRatePercentQ6(en.field_d, 100, IterableNodeHashTable.field_c * 768 / 64, this.g((byte) 111));
                 this.field_A.setLoopCount(-1);
                 ObjectSpriteSet.field_e.addSubstream(this.field_A);
               }
@@ -518,7 +518,7 @@ final class DialogueScreen extends IntrusiveNode {
                       if (var4 == 32) {
                         this.field_u.rampVolume(AudioOutput.sampleRate / 200, 0);
                       } else {
-                        this.field_u.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, 3072 * qm.field_c / 64, this.g((byte) 111));
+                        this.field_u.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, 3072 * IterableNodeHashTable.field_c / 64, this.g((byte) 111));
                       }
                     }
                     this.field_t = 2;
@@ -555,7 +555,7 @@ final class DialogueScreen extends IntrusiveNode {
               }
             }
             if (this.field_A != null) {
-              this.field_A.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, 768 * qm.field_c / 64, this.g((byte) 111));
+              this.field_A.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, 768 * IterableNodeHashTable.field_c / 64, this.g((byte) 111));
             }
             IntValueNode.field_j = true;
             return;
@@ -651,7 +651,7 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void f(byte param0) {
         if (this.field_p == 30) {
-          PcmSampleStream var2 = PcmSampleStream.createAtRatePercentQ6(vd.field_g, 100, 3072 * qm.field_c / 64, this.d(8192));
+          PcmSampleStream var2 = PcmSampleStream.createAtRatePercentQ6(vd.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, this.d(8192));
           var2.playBackwardFromEnd();
           ObjectSpriteSet.field_e.addSubstream(var2);
         }
@@ -659,7 +659,7 @@ final class DialogueScreen extends IntrusiveNode {
           this.field_v = -93;
         }
         if (20 == this.field_p) {
-          PcmSampleStream var2Lifetime1 = PcmSampleStream.createAtRatePercentQ6(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
+          PcmSampleStream var2Lifetime1 = PcmSampleStream.createAtRatePercentQ6(QuickChatPhraseDefinition.field_t, 100, 3072 * IterableNodeHashTable.field_c / 64, this.d(8192));
           ObjectSpriteSet.field_e.addSubstream(var2Lifetime1);
         }
         this.field_p = this.field_p - 1;
@@ -684,7 +684,7 @@ final class DialogueScreen extends IntrusiveNode {
         if (param0 != 2048) {
           DialogueScreen.a(-3, (byte) -83, 42);
         }
-        ik.field_p = true;
+        ScoreSubmission.field_p = true;
     }
 
     private final void d(byte param0) {
@@ -692,10 +692,10 @@ final class DialogueScreen extends IntrusiveNode {
           int discarded$0 = this.a(3, 15, -89);
         }
         if (this.field_v == 0) {
-          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
+          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 6144);
         }
         if (this.field_v == 50) {
-          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 10240);
+          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 10240);
         }
         this.field_v = this.field_v + 1;
         mm.a(param0 + 25, 4);
@@ -798,10 +798,10 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void f(int param0) {
         if (this.field_p == 0) {
-          ObjectSpriteSet.field_e.playSampleWithPan(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
+          ObjectSpriteSet.field_e.playSampleWithPan(QuickChatPhraseDefinition.field_t, 100, 3072 * IterableNodeHashTable.field_c / 64, this.d(8192));
         }
         if (this.field_p == 20) {
-          ObjectSpriteSet.field_e.playSampleWithPan(vd.field_g, 100, qm.field_c * 3072 / 64, this.d(8192));
+          ObjectSpriteSet.field_e.playSampleWithPan(vd.field_g, 100, IterableNodeHashTable.field_c * 3072 / 64, this.d(8192));
         }
         if (param0 != 100) {
           return;

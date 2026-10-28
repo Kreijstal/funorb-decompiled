@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bd extends IntrusiveNode {
+final class SavedDataWrite extends IntrusiveNode {
     static long field_k;
     static int[] field_l;
-    int field_i;
+    int crc32;
     static String field_m;
     static BufferedRandomAccessFile field_h;
-    byte[] field_j;
+    byte[] payload;
     static String field_g;
 
     public static void releaseStatics(int guard) {
@@ -20,11 +20,11 @@ final class bd extends IntrusiveNode {
         field_l = null;
     }
 
-    bd(byte[] param0) {
+    SavedDataWrite(byte[] payload) {
         try {
-          this.field_j = param0;
+          this.payload = payload;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "bd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bd.<init>(" + (payload != null ? "{...}" : "null") + ')');
         }
     }
 

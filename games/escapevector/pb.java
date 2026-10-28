@@ -55,7 +55,7 @@ final class pb {
     }
 
     final static void a(int param0) {
-        ll.a(70, 8, param0 ^ 12, LaserGateSpan.field_k);
+        ArchiveKeyRequest.a(70, 8, param0 ^ 12, LaserGateSpan.field_k);
         if (LaserGateSpan.field_k >= 95) {
           if (LaserGateSpan.field_k < 110) {
             ResourceArchive.drawSpriteWithRowJitter(fg.field_b, (-EmailAvailabilityValidator.field_t.fullWidth + 640) / 2, -(LaserGateSpan.field_k * 4) + 440, EmailAvailabilityValidator.field_t, -122);

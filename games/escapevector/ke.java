@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ke {
-    static volatile boolean field_a;
+    static volatile boolean mouseInputChanged;
     static int field_b;
     static BitmapFont field_c;
 
@@ -117,6 +117,6 @@ final class ke {
     }
 
     static {
-        field_a = false;
+        mouseInputChanged = false;
     }
 }

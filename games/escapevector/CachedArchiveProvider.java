@@ -196,15 +196,15 @@ final class CachedArchiveProvider extends ArchiveProvider {
           return;
         }
         if (PcmResampler.field_h == null) {
-          PcmResampler.field_h = ci.a(5, 0, -1, 2);
+          PcmResampler.field_h = ci.requestArchiveKey(5, 0, -1, 2);
           return;
         }
-        if (PcmResampler.field_h.field_j == null) {
+        if (PcmResampler.field_h.key == null) {
           return;
         }
-        ld.field_h = pn.a(PcmResampler.field_h.field_j, he.field_u, ld.field_h, UiContainer.field_B, (byte) 112);
+        ld.field_h = pn.a(PcmResampler.field_h.key, he.field_u, ld.field_h, UiContainer.field_B, (byte) 112);
         if (se.field_b == null) {
-          se.field_b = ve.a(1, he.field_u, IndexedSpriteState.field_j, PcmResampler.field_h.field_j);
+          se.field_b = ve.a(1, he.field_u, IndexedSpriteState.field_j, PcmResampler.field_h.key);
         }
         if (null != se.field_b) {
           PcmResampler.field_h = null;

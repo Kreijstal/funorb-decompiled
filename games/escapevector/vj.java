@@ -4,7 +4,7 @@
 abstract class vj {
     static IntrusiveDeque field_d;
     static String[] field_c;
-    static volatile int field_b;
+    static volatile int heldMouseButton;
     static int field_a;
 
     public static void releaseStatics(int guard) {
@@ -91,7 +91,7 @@ abstract class vj {
 
     static {
         field_d = new IntrusiveDeque();
-        field_b = 0;
+        heldMouseButton = 0;
         field_c = new String[]{"An explosive new campaign, with a compelling storyline", "Destroy the aliens' military infrastructure", "Challenge your piloting skills in Simulator mode"};
         field_a = 0;
     }

@@ -402,7 +402,7 @@ final class DynamicTerrainRenderer {
             param1.field_h != 0) {
             int var2_int = 0;
             while (!(hf.field_b <= var2_int)) {
-              gi var3 = qm.field_d[var2_int];
+              gi var3 = IterableNodeHashTable.field_d[var2_int];
               stackIn_17_0 = var3.field_a;
               stackIn_17_1 = 2;
               if (var4 != 0) {

@@ -12,7 +12,7 @@ final class id {
           eo.a(var1, (byte) -7);
           bi.b();
           SoftwareRasterizer.clearFramebuffer();
-          kb.field_d = 0;
+          SocketConnector.field_d = 0;
           IndexedSpriteState.a(-124);
           if (param0 < 115) {
             id.releaseStatics(109);

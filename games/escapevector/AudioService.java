@@ -205,7 +205,7 @@ final class AudioService implements Runnable {
                 return;
               }
               java.net.URL var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-              param1.getAppletContext().showDocument(sh.a((byte) 119, param1, var2), "_top");
+              param1.getAppletContext().showDocument(WeightedCacheEntry.withSessionParameters((byte) 119, param1, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Exception var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -239,7 +239,7 @@ final class AudioService implements Runnable {
           if (param0 != 124) {
             field_a = (String) null;
           }
-          CipherPacketBuffer var9 = QuickChatDynamicCommand.field_g;
+          CipherPacketBuffer var9 = QuickChatDynamicCommand.incomingPackets;
           int var2 = var9.readUnsignedByte(param0 ^ 124);
           if (var2 != 0) {
             if (var2 != 1) {
@@ -250,15 +250,15 @@ final class AudioService implements Runnable {
               }
             }
             int var3 = var9.readInt(-5053);
-            bd var4_ref_bd = (bd) (rd.field_b.first(false));
+            SavedDataWrite var4_ref_bd = (SavedDataWrite) (rd.field_b.first(false));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var4_ref_bd != null) {
-                stackIn_15_0 = var4_ref_bd.field_i;
+                stackIn_15_0 = var4_ref_bd.crc32;
                 decompiledFrameRemainder0 = (var6 == 0);
                 if (decompiledFrameRemainder0 &&
                   stackIn_15_0 != var3) {
-                  var4_ref_bd = (bd) (rd.field_b.next((byte) 70));
+                  var4_ref_bd = (SavedDataWrite) (rd.field_b.next((byte) 70));
                   continue;
                 }
               }

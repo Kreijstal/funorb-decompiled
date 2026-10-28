@@ -12,7 +12,7 @@ class ol extends cd {
     private int field_C;
     private Sprite[] field_A;
     private int field_R;
-    static ij[] field_N;
+    static HighscoreQuery[] field_N;
     private Sprite field_x;
     private int field_bb;
     private boolean field_ib;
@@ -109,7 +109,7 @@ class ol extends cd {
         String stackIn_13_2 = null;
         try {
           if (param0 != -7) {
-            field_N = (ij[]) null;
+            field_N = (HighscoreQuery[]) null;
           }
           if (param1 != null &&
             param1.length() >= ArchiveRequest.field_v) {

@@ -96,10 +96,10 @@ final class tf {
         }
         Object var3 = null;
         if (param0 == 0) {
-          var3 = kb.field_g;
+          var3 = SocketConnector.field_g;
         }
         if (this.field_l == param0) {
-          var3 = tc.field_o;
+          var3 = SpriteStrip.field_o;
         }
         if (this.field_b == param0) {
           var3 = mc.field_a;
@@ -142,7 +142,7 @@ final class tf {
     private final boolean a(boolean param0, int param1) {
         int var9 = EscapeVector.obfuscationControl;
         if (ch.field_a.field_e) {
-          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, 8192);
         }
         if (ch.field_a.field_h == 0 &&
           ch.field_a.b((byte) -18)) {
@@ -174,27 +174,27 @@ final class tf {
         }
         if (ch.field_a.field_h == this.field_j) {
           if (ch.field_a.g(13) &&
-            qm.field_c > 0) {
-            qm.field_c = qm.field_c - 8;
-            if (qm.field_c < 0) {
-              qm.field_c = 0;
+            IterableNodeHashTable.field_c > 0) {
+            IterableNodeHashTable.field_c = IterableNodeHashTable.field_c - 8;
+            if (IterableNodeHashTable.field_c < 0) {
+              IterableNodeHashTable.field_c = 0;
             }
             TrackerMusicDefinition.d(8192);
           }
           if (ch.field_a.b(-98) &&
-            64 > qm.field_c) {
-            qm.field_c = qm.field_c + 8;
-            if (qm.field_c > 64) {
-              qm.field_c = 64;
+            64 > IterableNodeHashTable.field_c) {
+            IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 8;
+            if (IterableNodeHashTable.field_c > 64) {
+              IterableNodeHashTable.field_c = 64;
             }
             TrackerMusicDefinition.d(8192);
           }
           if (ch.field_a.d(-10809)) {
-            qm.field_c = 0;
+            IterableNodeHashTable.field_c = 0;
             TrackerMusicDefinition.d(8192);
           }
           if (ch.field_a.e(0)) {
-            qm.field_c = 64;
+            IterableNodeHashTable.field_c = 64;
             TrackerMusicDefinition.d(8192);
           }
           if (ch.field_a.a(false)) {
@@ -210,8 +210,8 @@ final class tf {
               var7 = 64;
             }
             if (ch.field_a.b((byte) -18) ||
-              var7 != qm.field_c) {
-              qm.field_c = var7;
+              var7 != IterableNodeHashTable.field_c) {
+              IterableNodeHashTable.field_c = var7;
               TrackerMusicDefinition.d(8192);
             }
           } else if (ch.field_a.b((byte) -18)) {
@@ -290,7 +290,7 @@ final class tf {
           ch.field_a.f(23518))) {
           boolean stackIn_99_0 = !(SpriteState.field_r);
           SpriteState.field_r = stackIn_99_0;
-          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, qm.field_c * 1536 / 64, 8192);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, IterableNodeHashTable.field_c * 1536 / 64, 8192);
         }
         if (this.field_e != ch.field_a.field_h) {
           return false;
@@ -434,7 +434,7 @@ final class tf {
         if (param0 != 0) {
           tf.releaseStatics(-60);
         }
-        return QuickChatDynamicCommand.field_g.readString(false);
+        return QuickChatDynamicCommand.incomingPackets.readString(false);
     }
 
     private final void a(int param0, int param1, boolean param2, int param3) {
@@ -448,10 +448,10 @@ final class tf {
           return;
         }
         if (0 == param3) {
-          fh.field_g.c(kb.field_g, var6, 22, var5, -1);
+          fh.field_g.c(SocketConnector.field_g, var6, 22, var5, -1);
         }
         if (param3 == this.field_l) {
-          fh.field_g.c(tc.field_o, var6, 22, var5, -1);
+          fh.field_g.c(SpriteStrip.field_o, var6, 22, var5, -1);
         }
         if (param3 == this.field_b) {
           fh.field_g.c(mc.field_a, var6, 22, var5, -1);
@@ -466,7 +466,7 @@ final class tf {
           int var9 = stackIn_19_0;
           int var10 = var6 + (var9 - 68) / 2;
           fh.field_g.b(oi.field_N, var10, 22, var5, -1);
-          SingleChildContainer.a(var10, 13202, 4, qm.field_c, var5);
+          SingleChildContainer.a(var10, 13202, 4, IterableNodeHashTable.field_c, var5);
         }
         if (param3 == this.field_c) {
           int var7Lifetime1 = fh.field_g.b(oi.field_N);

@@ -189,20 +189,20 @@ final class ak {
         }
     }
 
-    private final void a(int param0, ij param1, ij param2, int param3, int param4) {
+    private final void a(int param0, HighscoreQuery param1, HighscoreQuery param2, int param3, int param4) {
         if (param3 != 6144) {
           return;
         }
         try {
-          int var6_int = jb.a(102, param4);
-          int var7 = jb.a(param3 - 6045, param0);
+          int var6_int = ProxySocketConnector.a(102, param4);
+          int var7 = ProxySocketConnector.a(param3 - 6045, param0);
           int[] var21 = this.a(var7, param2, param1, this.field_c, -17, this.field_c, var6_int);
-          int[] var22 = this.a(param2.field_o[this.field_c], 10, var21, param1.field_o[this.field_c]);
-          param1.field_o[this.field_c] = var22;
-          String[] var10 = this.a((byte) 56, param2.field_m[this.field_c], var21, param1.field_m[this.field_c]);
-          param1.field_m[this.field_c] = var10;
-          long[] var23 = this.a(param2.field_k[this.field_c], param1.field_k[this.field_c], var21, true);
-          param1.field_k[this.field_c] = var23;
+          int[] var22 = this.a(param2.intColumns[this.field_c], 10, var21, param1.intColumns[this.field_c]);
+          param1.intColumns[this.field_c] = var22;
+          String[] var10 = this.a((byte) 56, param2.stringColumns[this.field_c], var21, param1.stringColumns[this.field_c]);
+          param1.stringColumns[this.field_c] = var10;
+          long[] var23 = this.a(param2.longColumns[this.field_c], param1.longColumns[this.field_c], var21, true);
+          param1.longColumns[this.field_c] = var23;
           this.a((byte) 69, param4, var21, param0);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ak.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -279,8 +279,8 @@ final class ak {
         if (param0 >= -52) {
           return;
         }
-        ij[] var5 = ol.field_N;
-        ij[] var2 = var5;
+        HighscoreQuery[] var5 = ol.field_N;
+        HighscoreQuery[] var2 = var5;
         if (var2 != null) {
           if (var5.length == 0) {
             return;
@@ -311,17 +311,17 @@ final class ak {
 
     private final boolean e(int param0) {
         int var6 = EscapeVector.obfuscationControl;
-        ij[] var7 = ol.field_N;
-        ij[] var2 = var7;
+        HighscoreQuery[] var7 = ol.field_N;
+        HighscoreQuery[] var2 = var7;
         if (var2 != null &&
           var7.length != 0) {
-          ij[] var3 = var7;
+          HighscoreQuery[] var3 = var7;
           for (int var4 = param0; var4 < var3.length; var4++) {
-            ij var5 = var3[var4];
+            HighscoreQuery var5 = var3[var4];
             if (var5 == null) {
               return false;
             }
-            if (!var5.field_l) {
+            if (!var5.complete) {
               return false;
             }
           }
@@ -411,7 +411,7 @@ final class ak {
           if (param0 > -66) {
             this.field_b = (int[][]) null;
           }
-          if (bd.field_m == param1 && (this.field_g == null ||
+          if (SavedDataWrite.field_m == param1 && (this.field_g == null ||
             0 != this.field_g.field_o)) {
             this.field_g = new gj(this.field_e, var3_int, this.field_h);
             this.field_g.a(3, var4, var5);
@@ -441,7 +441,7 @@ final class ak {
         if (di.field_d.field_e) {
           dk var2 = this.j((byte) 82);
           int var3 = PasswordValidator.a(-122, var2);
-          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, var3);
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, var3);
         }
         if (param0) {
           String discarded$0 = this.g((byte) 4);
@@ -451,22 +451,22 @@ final class ak {
     private final String a(int param0) {
         int var13 = EscapeVector.obfuscationControl;
         Object var2 = wk.field_f;
-        String var3 = bd.field_m;
-        ij[] var4 = ol.field_N;
+        String var3 = SavedDataWrite.field_m;
+        HighscoreQuery[] var4 = ol.field_N;
         if (var4 != null &&
           var4.length != 0) {
-          ij[] var5 = var4;
+          HighscoreQuery[] var5 = var4;
           int var6 = 0;
           int var7 = 80 / ((param0 + 34) / 35);
           while (true) {
             if (var6 >= var5.length) {
               return (String) (var2);
             }
-            ij var8 = var5[var6];
+            HighscoreQuery var8 = var5[var6];
             if (var8 == null) {
               return var3;
             }
-            String[][] var9 = var8.field_m;
+            String[][] var9 = var8.stringColumns;
             if (var9 == null) {
               return var3;
             }
@@ -512,7 +512,7 @@ final class ak {
         return var3;
     }
 
-    private final int[] a(int param0, ij param1, ij param2, int param3, int param4, int param5, int param6) {
+    private final int[] a(int param0, HighscoreQuery param1, HighscoreQuery param2, int param3, int param4, int param5, int param6) {
         String stackIn_9_2 = null;
         String stackIn_12_2 = null;
         int var15 = EscapeVector.obfuscationControl;
@@ -579,23 +579,23 @@ final class ak {
         }
         if (!aj.b(-122)) {
           if (mj.field_d == 0) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 5120);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 5120);
           }
           if (10 == mj.field_d) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
           }
           if (mj.field_d == 20) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 11264);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * IterableNodeHashTable.field_c / 64, 11264);
           }
           if (30 == mj.field_d) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
           }
         } else {
           if (mj.field_d == 0) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
           }
           if (mj.field_d == 10) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
           }
         }
         if (mj.field_d < 1000) {
@@ -854,22 +854,22 @@ final class ak {
 
     private final String g(byte param0) {
         int var9 = EscapeVector.obfuscationControl;
-        String var2 = bd.field_m;
-        ij[] var3 = ol.field_N;
+        String var2 = SavedDataWrite.field_m;
+        HighscoreQuery[] var3 = ol.field_N;
         if (var3 != null &&
           var3.length != 0) {
-          ij[] var4 = var3;
+          HighscoreQuery[] var4 = var3;
           int var5 = 73 / ((-1 - param0) / 44);
           int var6 = 0;
           while (true) {
             if (var4.length <= var6) {
               return null;
             }
-            ij var7 = var4[var6];
+            HighscoreQuery var7 = var4[var6];
             if (var7 == null) {
               return var2;
             }
-            int[][] var11 = var7.field_o;
+            int[][] var11 = var7.intColumns;
             int[][] var10 = var11;
             int[][] var8 = var10;
             if (var8 == null) {
@@ -896,15 +896,15 @@ final class ak {
           if (null == this.field_b[this.field_c]) {
             this.i((byte) -107);
           }
-          ij[] var8 = ol.field_N;
-          ij[] var5 = var8;
+          HighscoreQuery[] var8 = ol.field_N;
+          HighscoreQuery[] var5 = var8;
           if (var5 != null &&
             var8.length != 0) {
-            ij var6 = var8[0];
+            HighscoreQuery var6 = var8[0];
             if (var6 == null) {
               return;
             }
-            ik var7 = IntValueNode.field_i;
+            ScoreSubmission var7 = IntValueNode.field_i;
             if (param3 != -10) {
               return;
             }
@@ -1125,7 +1125,7 @@ final class ak {
           return;
         }
         int[] var3 = RasterBuffer.field_a[var2];
-        ij[] var4 = new ij[var3.length];
+        HighscoreQuery[] var4 = new HighscoreQuery[var3.length];
         for (int var5 = 0; var5 < var4.length; var5++) {
           var4[var5] = bk.a(var3[var5], true, 10, 3, 1);
           this.m(0);
@@ -1151,7 +1151,7 @@ final class ak {
 
     private final String j(int param0) {
         String var2 = wk.field_f;
-        ij[] var3 = ol.field_N;
+        HighscoreQuery[] var3 = ol.field_N;
         if (aj.b(-123)) {
           return var2;
         }
