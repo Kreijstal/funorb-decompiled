@@ -8,8 +8,8 @@ final class hd extends java.awt.Canvas {
     static int[] field_d;
     static int field_c;
 
-    public static void a(int param0) {
-        int var1 = 26 / ((param0 - 55) / 60);
+    public static void releaseStatics(int guard) {
+        int var1 = 26 / ((guard - 55) / 60);
         field_a = null;
         field_e = null;
         field_d = null;
@@ -27,7 +27,7 @@ final class hd extends java.awt.Canvas {
         String stackIn_32_2 = null;
         String stackIn_35_2 = null;
         try {
-          if (lb.b((byte) -35, param0)) {
+          if (MatchingTextValidator.b((byte) -35, param0)) {
             return false;
           }
           if (aa.a(1, param0)) {

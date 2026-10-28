@@ -66,7 +66,7 @@ class TextButton extends UiComponent {
           }
           if (this.isFocused(0) && (keyCode == 84 ||
             83 == keyCode)) {
-            this.a(-19646, -1, -1, 1);
+            this.notifyAction(-19646, -1, -1, 1);
             return true;
           }
           return false;
@@ -96,7 +96,7 @@ class TextButton extends UiComponent {
             }
             if (this.hitTest(dh.field_d, UiContainer.field_y, offsetX, (byte) 97, offsetY) &&
               eb.field_K == 0) {
-              this.a(-19646, UiContainer.field_y - offsetY, -offsetX + dh.field_d, this.field_t);
+              this.notifyAction(-19646, UiContainer.field_y - offsetY, -offsetX + dh.field_d, this.field_t);
             }
             this.onPointerReleased(UiContainer.field_y, offsetX, dh.field_d, offsetY, root, (byte) 15);
           }
@@ -231,20 +231,20 @@ class TextButton extends UiComponent {
 
     final static int a(int param0, byte param1) {
         if (param1 <= 64) {
-          TextButton.j(54);
+          TextButton.releaseStatics(54);
           return EditableTextWidget.a(500, param0, 123);
         }
         return EditableTextWidget.a(500, param0, 123);
     }
 
-    void a(int param0, int param1, int param2, int param3) {
-        if (param0 != -19646) {
+    void notifyAction(int guard, int localY, int localX, int buttonCode) {
+        if (guard != -19646) {
           this.tabStop = false;
           if (null == this.listener) {
             return;
           }
           if (this.listener instanceof ButtonListener) {
-            ((ButtonListener) (this.listener)).onAction(this, param3, param1, 1, param2);
+            ((ButtonListener) (this.listener)).onAction(this, buttonCode, localY, 1, localX);
             return;
           }
           return;
@@ -253,15 +253,15 @@ class TextButton extends UiComponent {
           return;
         }
         if (this.listener instanceof ButtonListener) {
-          ((ButtonListener) (this.listener)).onAction(this, param3, param1, 1, param2);
+          ((ButtonListener) (this.listener)).onAction(this, buttonCode, localY, 1, localX);
           return;
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int guard) {
         field_C = null;
-        if (param0 != 1) {
-          TextButton.j(-28);
+        if (guard != 1) {
+          TextButton.releaseStatics(-28);
         }
     }
 
@@ -289,7 +289,7 @@ class TextButton extends UiComponent {
             return true;
           }
           if (guard != 3) {
-            TextButton.j(15);
+            TextButton.releaseStatics(15);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

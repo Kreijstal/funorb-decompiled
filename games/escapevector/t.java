@@ -107,7 +107,7 @@ final class t {
                   int var9 = stackIn_31_0;
                   int var10 = (var9 - 68) / 2 + var6;
                   fh.field_g.b(oi.field_N, var10, 22, var5_int, -1);
-                  r.a(var10, 13202, 4, qm.field_c, var5_int);
+                  SingleChildContainer.a(var10, 13202, 4, qm.field_c, var5_int);
                 }
                 if (param0 != 3 ||
                   var11 != 0) {
@@ -138,7 +138,7 @@ final class t {
                           var9Lifetime1 = stackIn_63_0;
                           var10Lifetime1 = (-68 + var9Lifetime1) / 2 + var6;
                           fh.field_g.b(ee.field_d, var10Lifetime1, 22, var5_int, -1);
-                          r.a(var10Lifetime1, 13202, 4, kc.field_b, var5_int);
+                          SingleChildContainer.a(var10Lifetime1, 13202, 4, kc.field_b, var5_int);
                           fh.field_g.c(EscapeVector.field_z, var6, 22, var5_int, -1);
                         }
                       }
@@ -149,7 +149,7 @@ final class t {
                     var9Lifetime1 = stackIn_63_0;
                     var10Lifetime1 = (-68 + var9Lifetime1) / 2 + var6;
                     fh.field_g.b(ee.field_d, var10Lifetime1, 22, var5_int, -1);
-                    r.a(var10Lifetime1, 13202, 4, kc.field_b, var5_int);
+                    SingleChildContainer.a(var10Lifetime1, 13202, 4, kc.field_b, var5_int);
                     if (var11 != 0) {
                       fh.field_g.c(EscapeVector.field_z, var6, 22, var5_int, -1);
                     }
@@ -189,21 +189,21 @@ final class t {
         return var2;
     }
 
-    public static void b(byte param0) {
-        if (param0 >= -24) {
+    public static void releaseStatics(byte guard) {
+        if (guard >= -24) {
           return;
         }
         try {
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "t.D(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "t.D(" + guard + ')');
         }
     }
 
     private final int b(int param0) {
         try {
           if (param0 < 52) {
-            t.b((byte) -84);
+            t.releaseStatics((byte) -84);
           }
           if (this.field_b.field_h >= 0 &&
             this.field_e.length > this.field_b.field_h) {
@@ -418,7 +418,7 @@ final class t {
               if (kc.field_b < 0) {
                 kc.field_b = 0;
               }
-              TrackerMusicPlayer var4_ref_o = ni.field_N;
+              TrackerMusicPlayer var4_ref_o = DraggableWidget.field_N;
               if (null != var4_ref_o) {
                 var4_ref_o.d(kn.field_b * kc.field_b / 64);
               }
@@ -429,21 +429,21 @@ final class t {
               if (64 < kc.field_b) {
                 kc.field_b = 64;
               }
-              TrackerMusicPlayer var4_ref_oLifetime1 = ni.field_N;
+              TrackerMusicPlayer var4_ref_oLifetime1 = DraggableWidget.field_N;
               if (null != var4_ref_oLifetime1) {
                 var4_ref_oLifetime1.d(kn.field_b * kc.field_b / 64);
               }
             }
             if (this.field_b.d(-10809)) {
               kc.field_b = 0;
-              TrackerMusicPlayer var4_ref_oLifetime2 = ni.field_N;
+              TrackerMusicPlayer var4_ref_oLifetime2 = DraggableWidget.field_N;
               if (var4_ref_oLifetime2 != null) {
                 var4_ref_oLifetime2.d(kc.field_b * kn.field_b / 64);
               }
             }
             if (this.field_b.e(0)) {
               kc.field_b = 64;
-              TrackerMusicPlayer var4_ref_oLifetime3 = ni.field_N;
+              TrackerMusicPlayer var4_ref_oLifetime3 = DraggableWidget.field_N;
               if (var4_ref_oLifetime3 != null) {
                 var4_ref_oLifetime3.d(kn.field_b * kc.field_b / 64);
               }
@@ -465,7 +465,7 @@ final class t {
                 var8Lifetime1 = 64;
               }
               kc.field_b = var8Lifetime1;
-              TrackerMusicPlayer var9 = ni.field_N;
+              TrackerMusicPlayer var9 = DraggableWidget.field_N;
               if (var9 != null) {
                 var9.d(kn.field_b * kc.field_b / 64);
               }

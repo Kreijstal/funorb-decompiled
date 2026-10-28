@@ -105,9 +105,9 @@ final class jd {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_c = null;
-        int var1 = 19 % ((-6 - param0) / 50);
+        int var1 = 19 % ((-6 - guard) / 50);
         field_a = null;
         field_b = null;
     }

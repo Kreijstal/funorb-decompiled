@@ -31,9 +31,9 @@ final class kg {
         return this.a(param0 - 9887);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int guard) {
         field_a = null;
-        int var1 = 91 % ((param0 + 58) / 38);
+        int var1 = 91 % ((guard + 58) / 38);
         field_b = null;
     }
 
@@ -284,7 +284,7 @@ final class kg {
             var4 = 1;
           }
           int var5 = DualLinkNode.field_m[var2];
-          boolean var6 = (nk.a(1, var2) == 2);
+          boolean var6 = (PasswordValidator.a(1, var2) == 2);
           this.field_d[var2] = new gn(var2, var3, var4, var5, (var6), this);
         }
         int var2Lifetime1 = 2;

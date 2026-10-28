@@ -41,7 +41,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               pd.field_b = param3;
               j.field_b = param3;
               BoundedUrlRequest.field_d = param4;
-              qa.field_G = param4;
+              DropTargetWidget.field_G = param4;
               he.field_r = this;
               Js5NetworkRequest.field_D = 0;
               pb.field_b = 0;
@@ -129,10 +129,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte guard) {
         try {
           field_g = null;
-          if (param0 != -111) {
+          if (guard != -111) {
             field_k = false;
           }
           field_f = null;
@@ -140,7 +140,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "eh.Q(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "eh.Q(" + guard + ')');
         }
     }
 
@@ -167,9 +167,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     private final void a(int param0) {
         try {
           long var2_long = td.b(128);
-          long var4 = CipherPacketBuffer.field_t[r.field_z];
-          CipherPacketBuffer.field_t[r.field_z] = var2_long;
-          r.field_z = 31 & r.field_z + 1;
+          long var4 = CipherPacketBuffer.field_t[SingleChildContainer.field_z];
+          CipherPacketBuffer.field_t[SingleChildContainer.field_z] = var2_long;
+          SingleChildContainer.field_z = 31 & SingleChildContainer.field_z + 1;
           if (param0 != 48) {
             field_a = -22;
           }
@@ -511,7 +511,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           QuickChatPhraseDefinition.field_r = QuickChatPhraseDefinition.field_r + 1;
           if (fieldTemp$0 > 50) {
             QuickChatPhraseDefinition.field_r = QuickChatPhraseDefinition.field_r - 50;
-            rh.field_H = true;
+            NameSuggestionsPanel.field_H = true;
             of.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
             of.field_d.setVisible(true);
             if (null != qj.field_i &&
@@ -539,7 +539,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         try {
           qd.field_l = true;
-          rh.field_H = true;
+          NameSuggestionsPanel.field_H = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -597,7 +597,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           IntValueNode.a("", (String) null, 63);
           if (param0 >= -12) {
-            GameAppletShell.d((byte) 116);
+            GameAppletShell.releaseStatics((byte) 116);
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "eh.A(" + param0 + ')');
@@ -615,7 +615,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           SoftwareRasterizer.a(param1 + 1, param2 + 1, -2 - param1 + param7, -2 - param2 + param5, 0, param0);
           qi.a(param3, param7, param8, param4, param2, -28, param1, param5, param10);
           if (param6 != -3) {
-            GameAppletShell.d((byte) 59);
+            GameAppletShell.releaseStatics((byte) 59);
           }
           if (0 <= param9) {
             qi.a(param9, param7 - 3, param3, -1, param2 + 3, 110, 3 + param1, -3 + param5, param10);
@@ -673,7 +673,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (he.field_r == this &&
             !rl.field_j) {
-            rh.field_H = true;
+            NameSuggestionsPanel.field_H = true;
             if (dh.field_c &&
               -bn.field_c + td.b(128) > 1000L) {
               java.awt.Rectangle var2 = param0.getClipBounds();
@@ -681,7 +681,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (var2.width < j.field_b) {
                   return;
                 }
-                if (var2.height < qa.field_G) {
+                if (var2.height < DropTargetWidget.field_G) {
                   return;
                 }
               }
@@ -774,7 +774,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           of.field_d.requestFocus();
           ObjectSpriteSet.field_b = true;
           qd.field_l = true;
-          rh.field_H = true;
+          NameSuggestionsPanel.field_H = true;
           PacketBuffer.field_i = false;
           bn.field_c = td.b(128);
           return;

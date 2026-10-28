@@ -251,7 +251,7 @@ final class pf {
           if (param1 < 62) {
             field_e = (String[]) null;
           }
-          int[] var21 = vl.a(param2, param3, var11, (byte) -17);
+          int[] var21 = TextLayoutLine.a(param2, param3, var11, (byte) -17);
           this.field_a = DynamicTerrainRenderer.a(var6, var20, var7, var5_int, param0, var9, var10, false, var21);
           int[] stackIn_6_0 = var8;
           return stackIn_6_0;
@@ -306,8 +306,8 @@ final class pf {
         int var3 = -14 % ((param0 - 15) / 58);
         while (pn.p(-98)) {
           this.field_b.a(113);
-          if (nk.field_n == 97 ||
-            nk.field_n == 99) {
+          if (PasswordValidator.field_n == 97 ||
+            PasswordValidator.field_n == 99) {
             boolean var4 = (this.a(-101, this.field_c, this.field_a));
             if (!var4) {
               var4 = (this.a(-101, this.field_a, this.field_c));
@@ -316,8 +316,8 @@ final class pf {
               this.field_b.a(false, 0);
             }
           }
-          if (96 == nk.field_n ||
-            nk.field_n == 98) {
+          if (96 == PasswordValidator.field_n ||
+            PasswordValidator.field_n == 98) {
             boolean var4Lifetime1 = (this.b(33, this.field_c, this.field_a));
             if (!var4Lifetime1) {
               var4Lifetime1 = (this.b(84, this.field_a, this.field_c));
@@ -326,7 +326,7 @@ final class pf {
               this.field_b.a(false, 0);
             }
           }
-          if (nk.field_n == 13) {
+          if (PasswordValidator.field_n == 13) {
             TextLayout.field_b = false;
             qk.a((var2), -87);
           }
@@ -939,11 +939,11 @@ final class pf {
         this.field_b.a(125, param0, var4, 0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_e = null;
         field_h = null;
         field_g = null;
-        if (param0 != 459) {
+        if (guard != 459) {
           Throwable var2 = (Throwable) null;
           pf.a(false, (String) null, (Throwable) null);
         }

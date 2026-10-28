@@ -157,7 +157,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             int[] var13 = var16;
             int[] var6 = var13;
             for (int var7 = 0; var7 < var3; var7++) {
-              var6[var7] = lb.a(ae.a(255, (int) var22[var7]) << 24, qk.field_f[ae.a(255, (int) var20[var7])]);
+              var6[var7] = MatchingTextValidator.a(ae.a(255, (int) var22[var7]) << 24, qk.field_f[ae.a(255, (int) var20[var7])]);
             }
             var1[var2] = (Sprite) ((Object) new uh(on.field_e, hd.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var16));
           }
@@ -280,7 +280,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   ff.field_e = 10;
                   SpriteState.field_u = false;
                 } else {
-                  hi.a(var5_intLifetime2, (byte) 83, MouseWheelInput.field_a);
+                  EmailSyntaxValidator.a(var5_intLifetime2, (byte) 83, MouseWheelInput.field_a);
                   MouseWheelInput.field_a = null;
                 }
               }
@@ -320,15 +320,15 @@ abstract class NetworkGameClient extends GameAppletShell {
             IntValueNode.a(false, PointCloudEffect.d((byte) -102));
           }
           if (var4 == 12) {
-            md.a(PointCloudEffect.d((byte) -86), (byte) -123, dg.c((byte) -31));
+            md.a(PointCloudEffect.d((byte) -86), (byte) -123, EmailAvailabilityValidator.c((byte) -31));
           }
           if (var4 == 13) {
             try {
-              if (pk.field_m == null) {
-                pk.field_m = new BoundedUrlRequest(field_r, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (ViewportController.field_m == null) {
+                ViewportController.field_m = new BoundedUrlRequest(field_r, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (pk.field_m.a(17)) {
-                PacketBuffer var12 = pk.field_m.c(-43);
+              if (ViewportController.field_m.a(17)) {
+                PacketBuffer var12 = ViewportController.field_m.c(-43);
                 if (var12 != null) {
                   String var7 = qi.a(var12.position, 0, var12.payload, (byte) 117);
                   jk.a(var7, (byte) -6);
@@ -336,7 +336,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   String var9 = (String) null;
                   jk.a((String) null, (byte) -6);
                 }
-                pk.field_m = null;
+                ViewportController.field_m = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;
@@ -344,7 +344,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               pf.a(false, "S1", (Throwable) ((Object) var5));
               String var10 = (String) null;
               jk.a((String) null, (byte) -6);
-              pk.field_m = null;
+              ViewportController.field_m = null;
             }
           }
           if (15 == var4) {
@@ -384,7 +384,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     private final void c(boolean param0) {
         int var2 = om.field_g.readUnsignedByte(0);
         boolean var3 = ((1 & var2) != 0);
-        int var4 = -1 + hi.field_r;
+        int var4 = -1 + EmailSyntaxValidator.field_r;
         byte[] var5 = new byte[var4];
         om.field_g.readCipheredBytes(var5, 19583, var4, 0);
         Bzip2State.a(param0, (var3), PointCloudEffect.d((byte) -122), RasterSnapshot.a(var5, 117));
@@ -427,7 +427,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else if (7 == var2) {
             this.h((byte) 108);
           } else if (var2 == 8) {
-            km.a(om.field_g, field_r, hi.field_r, -24183);
+            km.a(om.field_g, field_r, EmailSyntaxValidator.field_r, -24183);
           } else if (var2 == 16) {
             ll.a(true);
           } else {
@@ -516,9 +516,9 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3 = 59 % ((param0 - 41) / 61);
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_r = null;
-        if (param0 != -73) {
+        if (guard != -73) {
           NetworkGameClient.a(-56, 26);
         }
     }
@@ -558,7 +558,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.a(-1, "reconnect");
           }
           sc.b((byte) -123);
-          hi.a(var2, (byte) 83, MouseWheelInput.field_a);
+          EmailSyntaxValidator.a(var2, (byte) 83, MouseWheelInput.field_a);
           if (param0 != 117) {
             this.field_s = (String) null;
           }
@@ -577,11 +577,11 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var5 = EscapeVector.obfuscationControl;
         if (km.field_n != null) {
           if (null == IsaacRandom.field_d) {
-            java.awt.Container var6 = TextLayout.a(-1);
+            java.awt.Container var6 = TextLayout.gameContainer(-1);
             java.awt.Dimension var4 = var6.getSize();
-            km.field_n.a(var4.height, var4.width, 18705);
+            km.field_n.setDesiredSize(var4.height, var4.width, 18705);
           }
-          km.field_n.b(9477);
+          km.field_n.updateViewport(9477);
         }
         ac.a(28087);
         SpriteState.g(-3657);
@@ -600,7 +600,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_v = false;
             nm.a(param0 ^ -17);
             sc.b((byte) -87);
-            hi.a(2, (byte) 83, TextFieldValidator.field_g);
+            EmailSyntaxValidator.a(2, (byte) 83, TextFieldValidator.field_g);
             IntrusiveNode.a(12);
             q.field_P = true;
             tg.field_mb = td.b(param0 + 129) + 15000L;
@@ -639,15 +639,15 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else if (ff.field_e >= 10) {
             sc.b((byte) -103);
             if (IntKeyLookup.field_b == 3) {
-              hi.a(256, (byte) 83, GameKeyHandler.field_b);
+              EmailSyntaxValidator.a(256, (byte) 83, GameKeyHandler.field_b);
             } else if (IntKeyLookup.field_b == 4) {
-              hi.a(256, (byte) 83, nn.field_e);
+              EmailSyntaxValidator.a(256, (byte) 83, nn.field_e);
             } else if (IntKeyLookup.field_b == 2) {
-              hi.a(256, (byte) 83, km.field_l);
+              EmailSyntaxValidator.a(256, (byte) 83, km.field_l);
             } else if (IntKeyLookup.field_b != 5) {
-              hi.a(256, (byte) 83, gm.field_f);
+              EmailSyntaxValidator.a(256, (byte) 83, gm.field_f);
             } else {
-              hi.a(5, (byte) 83, gj.field_a);
+              EmailSyntaxValidator.a(5, (byte) 83, gj.field_a);
             }
             q.field_P = true;
           }
@@ -673,7 +673,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (fc.field_a == 1) {
           if (ff.field_h != 0) {
-            nk.field_p = mj.a(dn.field_a, param0 - 127);
+            PasswordValidator.field_p = mj.a(dn.field_a, param0 - 127);
           }
           ii.field_a = ve.a(ve.field_k, 0, false, 1, true);
           w.field_ab = ve.a(gi.field_l, 0, false, 1, true);
@@ -683,24 +683,24 @@ abstract class NetworkGameClient extends GameAppletShell {
           ei.field_m = w.field_ab;
         }
         if (fc.field_a == 2) {
-          if (null != nk.field_p &&
-            nk.field_p.b(~param0)) {
-            if (!nk.field_p.a("", (byte) -119)) {
-              nk.field_p = null;
-            } else if (nk.field_p.a(0, "")) {
-              qa.a(true, nk.field_p);
-              nk.field_p = null;
+          if (null != PasswordValidator.field_p &&
+            PasswordValidator.field_p.b(~param0)) {
+            if (!PasswordValidator.field_p.a("", (byte) -119)) {
+              PasswordValidator.field_p = null;
+            } else if (PasswordValidator.field_p.a(0, "")) {
+              DropTargetWidget.a(true, PasswordValidator.field_p);
+              PasswordValidator.field_p = null;
               SpriteOffset.a((byte) 62);
             }
           }
-          if (nk.field_p == null) {
+          if (PasswordValidator.field_p == null) {
             fc.field_a = 3;
           }
         }
         if (3 == fc.field_a &&
           of.a(ii.field_a, w.field_ab, pl.field_j, (byte) -90) &&
           cf.a(11, pl.field_j)) {
-          nk.h(-8055);
+          PasswordValidator.h(-8055);
           on.b(-87);
           CipherPacketBuffer.field_u = false;
           hd.field_e = um.field_a;

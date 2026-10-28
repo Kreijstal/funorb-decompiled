@@ -68,11 +68,11 @@ class re extends TextWidgetPainter {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int guard) {
         field_r = null;
         field_s = null;
         field_q = null;
-        if (param0 != -11967) {
+        if (guard != -11967) {
           field_s = (ValidationState) null;
         }
     }

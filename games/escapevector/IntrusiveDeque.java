@@ -80,9 +80,9 @@ final class IntrusiveDeque {
         return null;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_e = null;
-        if (!param0) {
+        if (!guard) {
           return;
         }
         field_f = null;

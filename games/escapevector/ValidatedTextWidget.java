@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends EditableTextWidget implements og {
+final class ValidatedTextWidget extends EditableTextWidget implements ValidationProvider {
     static String field_Z;
     private static int[][] field_F;
     static PcmSampleStream[] field_K;
     private static int field_Y;
     static int field_X;
     private static int[][] field_Q;
-    private ValidationSource field_T;
+    private ValidationSource validator;
     private static int[][] field_V;
     static String[] field_R;
     private int field_W;
     static int[][][] field_U;
     private static int[][] field_S;
 
-    public final ValidationSource a(byte param0) {
-        if (param0 != -89) {
+    public final ValidationSource validator(byte guard) {
+        if (guard != -89) {
           return (ValidationSource) null;
         }
-        return this.field_T;
+        return this.validator;
     }
 
     final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
@@ -31,41 +31,41 @@ final class gd extends EditableTextWidget implements og {
         }
     }
 
-    final void a(boolean param0) {
-        super.a(param0);
-        if (null != this.field_T) {
-          this.field_T.markChanged(false);
+    final void notifyTextChanged(boolean guard) {
+        super.notifyTextChanged(guard);
+        if (null != this.validator) {
+          this.validator.markChanged(false);
         }
     }
 
-    gd(String param0, UiListener param1, int param2) {
+    ValidatedTextWidget(String param0, UiListener param1, int param2) {
         super(param0, param1, param2);
     }
 
-    final void a(ValidationSource param0, byte param1) {
+    final void setValidator(ValidationSource validator, byte guard) {
         try {
-          this.field_T = param0;
-          if (param1 != 63) {
-            gd.i((byte) 31);
+          this.validator = validator;
+          if (guard != 63) {
+            ValidatedTextWidget.releaseStatics((byte) 31);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "gd.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "gd.KA(" + (validator != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_F = (int[][]) null;
         field_V = (int[][]) null;
         field_R = null;
         field_Q = (int[][]) null;
         field_K = null;
         field_U = (int[][][]) null;
-        if (param0 < -39) {
+        if (guard < -39) {
           field_Z = null;
           field_S = (int[][]) null;
           return;
         }
-        gd.i((byte) 82);
+        ValidatedTextWidget.releaseStatics((byte) 82);
         field_Z = null;
         field_S = (int[][]) null;
     }

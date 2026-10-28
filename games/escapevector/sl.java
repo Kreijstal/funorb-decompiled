@@ -9,9 +9,9 @@ final class sl {
     static long field_a;
     static Sprite[][] field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
-        if (param0 == 127) {
+        if (guard == 127) {
           field_b = (Sprite[][]) null;
           field_d = null;
           return;
@@ -127,7 +127,7 @@ final class sl {
         }
         int var5 = var2.readUnsignedShort(1952);
         try {
-          QuickChatPhraseDefinition var8 = hi.field_s.a(var5, (byte) -126);
+          QuickChatPhraseDefinition var8 = EmailSyntaxValidator.field_s.a(var5, (byte) -126);
           SelfDestructEffects.field_d = var8.g(-4);
           if (rm.field_g.equals(ck.field_r)) {
             stackIn_26_0 = null;
@@ -178,7 +178,7 @@ final class sl {
               NetworkGameClient.field_q = stackIn_11_0;
               ArchiveIndex.field_t = stackIn_11_0;
               jj.field_b = stackIn_11_0;
-              wc.a(rd.field_a, ac.field_b, true, qa.field_D, om.field_c);
+              wc.a(rd.field_a, ac.field_b, true, DropTargetWidget.field_D, om.field_c);
               ClientException.a(-1, 30785);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;

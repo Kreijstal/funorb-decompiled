@@ -52,11 +52,11 @@ final class cj {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_a = null;
         field_b = null;
         field_c = null;
-        if (param0 == 17159) {
+        if (guard == 17159) {
           field_d = (int[][]) null;
           return;
         }

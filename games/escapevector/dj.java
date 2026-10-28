@@ -14,18 +14,18 @@ final class dj {
           oh var3 = (oh) (wa.field_c.first(false));
           while (var3 != null) {
             if (var3.field_m < 0) {
-              SoftwareRasterizer.drawHorizontalLine(var3.field_i - var3.field_s + param2, param0 + var3.field_q, var3.field_s, hi.field_q);
+              SoftwareRasterizer.drawHorizontalLine(var3.field_i - var3.field_s + param2, param0 + var3.field_q, var3.field_s, EmailSyntaxValidator.field_q);
             } else {
-              SoftwareRasterizer.drawHorizontalLine(param2 + var3.field_i, param0 + var3.field_q, var3.field_s, hi.field_q);
+              SoftwareRasterizer.drawHorizontalLine(param2 + var3.field_i, param0 + var3.field_q, var3.field_s, EmailSyntaxValidator.field_q);
             }
             var3 = (oh) (wa.field_c.next((byte) 70));
           }
           oh var3Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.first(false));
           while (var3Lifetime1 != null) {
             if (var3Lifetime1.field_m >= 0) {
-              SoftwareRasterizer.g(param2 + var3Lifetime1.field_i, param0 + var3Lifetime1.field_q, var3Lifetime1.field_s, hi.field_q);
+              SoftwareRasterizer.g(param2 + var3Lifetime1.field_i, param0 + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
             } else {
-              SoftwareRasterizer.g(var3Lifetime1.field_i + param2, param0 - var3Lifetime1.field_s + var3Lifetime1.field_q, var3Lifetime1.field_s, hi.field_q);
+              SoftwareRasterizer.g(var3Lifetime1.field_i + param2, param0 - var3Lifetime1.field_s + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
             }
             var3Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.next((byte) 70));
           }
@@ -81,10 +81,10 @@ final class dj {
     final static int a(int param0) {
         int var2 = EscapeVector.obfuscationControl;
         try {
-          bo.field_F.handlePointerFrame(true, (byte) -33, oj.field_G, ph.field_a);
+          bo.field_F.handlePointerFrame(true, (byte) -33, ValidationIndicator.field_G, ph.field_a);
           bo.field_F.m(0);
           while (pn.p(-116)) {
-            bo.field_F.handleKey(jc.field_c, nk.field_n, (byte) -116);
+            bo.field_F.handleKey(jc.field_c, PasswordValidator.field_n, (byte) -116);
           }
           if (param0 != 6445) {
             int stackIn_6_0 = -79;
@@ -100,15 +100,15 @@ final class dj {
             int stackIn_13_0 = 3;
             return stackIn_13_0;
           }
-          if (ui.field_b == dg.field_o) {
+          if (ui.field_b == EmailAvailabilityValidator.field_o) {
             int stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (!di.field_g.b(0)) {
+          if (!di.field_g.isComplete(0)) {
             int stackIn_20_0 = 1;
             return stackIn_20_0;
           }
-          if (dg.field_o != dn.field_q) {
+          if (EmailAvailabilityValidator.field_o != dn.field_q) {
             int stackIn_25_0 = -1;
             return stackIn_25_0;
           }
@@ -121,11 +121,11 @@ final class dj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_d = null;
         field_c = null;
         field_a = null;
-        int var1 = 22 % ((param0 - 83) / 40);
+        int var1 = 22 % ((guard - 83) / 40);
         field_b = null;
     }
 

@@ -8,13 +8,13 @@ final class vk extends sh {
 
     final Object e(byte param0) {
         if (param0 != 97) {
-          vk.g(24);
+          vk.releaseStatics(24);
         }
         return this.field_u;
     }
 
-    public static void g(int param0) {
-        int var1 = 93 % ((param0 + 35) / 38);
+    public static void releaseStatics(int guard) {
+        int var1 = 93 % ((guard + 35) / 38);
         field_v = null;
     }
 
@@ -26,7 +26,7 @@ final class vk extends sh {
           int var5 = param2.a((char) var4_int);
           int var6 = param1;
           if (param0 > -47) {
-            vk.g(-66);
+            vk.releaseStatics(-66);
           }
           while (param3 >= var6) {
             if (ml.a((char)var6, 21654)) {
@@ -73,7 +73,7 @@ final class vk extends sh {
             return stackIn_4_0;
           }
           if (var2_int > 63) {
-            tk stackIn_7_0 = d.field_c;
+            tk stackIn_7_0 = EmailAvailabilityRequest.field_c;
             return stackIn_7_0;
           }
           if (param1 >= -8) {
@@ -85,11 +85,11 @@ final class vk extends sh {
             if (45 == var4) {
               if (0 == var3 ||
                 var3 == -1 + var2_int) {
-                tk stackIn_19_0 = wh.field_p;
+                tk stackIn_19_0 = CachedTextLayout.field_p;
                 return stackIn_19_0;
               }
             } else if (jd.field_b.indexOf(var4) == -1) {
-              tk stackIn_22_0 = wh.field_p;
+              tk stackIn_22_0 = CachedTextLayout.field_p;
               return stackIn_22_0;
             }
           }

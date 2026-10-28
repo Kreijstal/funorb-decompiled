@@ -15,7 +15,7 @@ final class pl extends ld {
     static String[] field_k;
     static String field_p;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int guard) {
         field_q = null;
         field_p = null;
         field_k = null;
@@ -23,7 +23,7 @@ final class pl extends ld {
         field_o = null;
         field_m = null;
         field_i = null;
-        if (param0 != 256) {
+        if (guard != 256) {
           return;
         }
         field_s = null;

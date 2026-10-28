@@ -15,9 +15,9 @@ final class eb extends TextButton {
 
     final static void k(int param0) {
         String var2 = (String) null;
-        IntValueNode.a(kl.field_o, (String) null, 63);
+        IntValueNode.a(AgeValidator.field_o, (String) null, 63);
         if (param0 != 0) {
-          eb.a(true);
+          eb.releaseStatics(true);
         }
     }
 
@@ -173,8 +173,8 @@ final class eb extends TextButton {
         }
     }
 
-    public static void a(boolean param0) {
-        if (!param0) {
+    public static void releaseStatics(boolean guard) {
+        if (!guard) {
           return;
         }
         field_L = null;

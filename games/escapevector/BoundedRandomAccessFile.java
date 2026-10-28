@@ -35,7 +35,7 @@ final class BoundedRandomAccessFile {
         String stackIn_10_2 = null;
         try {
           if (param1 <= 124) {
-            BoundedRandomAccessFile.b(103);
+            BoundedRandomAccessFile.releaseStatics(103);
           }
           int var5_int = this.file.read(param2, param3, param0);
           if (var5_int > 0) {
@@ -77,8 +77,8 @@ final class BoundedRandomAccessFile {
         return (PointCloudEffect) null;
     }
 
-    public static void b(int param0) {
-        if (param0 == 1) {
+    public static void releaseStatics(int guard) {
+        if (guard == 1) {
           field_b = null;
           activeSession = null;
           field_c = null;
@@ -93,10 +93,10 @@ final class BoundedRandomAccessFile {
 
     final static ee[] a(boolean param0) {
         if (!param0) {
-          return new ee[]{kf.field_q, oh.field_n, qj.field_g};
+          return new ee[]{NameAvailabilityValidator.field_q, oh.field_n, qj.field_g};
         }
         field_b = (ReverbPcmStream) null;
-        return new ee[]{kf.field_q, oh.field_n, qj.field_g};
+        return new ee[]{NameAvailabilityValidator.field_q, oh.field_n, qj.field_g};
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {

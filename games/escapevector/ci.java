@@ -11,10 +11,10 @@ final class ci {
     static om field_d;
     static PcmSample field_a;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_d = null;
         field_a = null;
-        if (param0 != 4) {
+        if (guard != 4) {
           ci.a(-111, 38, 24, -46);
         }
     }
@@ -25,7 +25,7 @@ final class ci {
         try {
           PointCloudEffect var6 = new PointCloudEffect(param3, param5, param2, param1);
           if (param0 != -43) {
-            ci.b(68);
+            ci.releaseStatics(68);
           }
           PointCloudEffect stackIn_4_0 = var6;
           boolean stackIn_5_1 = (param4);

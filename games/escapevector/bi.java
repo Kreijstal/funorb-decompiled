@@ -12,7 +12,7 @@ final class bi {
     static int field_b;
     static int[] field_a;
 
-    public static void c() {
+    public static void releaseStatics() {
         field_a = null;
         field_e = null;
         field_h = null;

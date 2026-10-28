@@ -45,11 +45,11 @@ final class pb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_e = null;
         field_a = null;
         field_c = null;
-        if (param0) {
+        if (guard) {
           field_c = (int[]) null;
         }
     }
@@ -58,14 +58,14 @@ final class pb {
         ll.a(70, 8, param0 ^ 12, LaserGateSpan.field_k);
         if (LaserGateSpan.field_k >= 95) {
           if (LaserGateSpan.field_k < 110) {
-            ResourceArchive.a(fg.field_b, (-dg.field_t.fullWidth + 640) / 2, -(LaserGateSpan.field_k * 4) + 440, dg.field_t, -122);
+            ResourceArchive.a(fg.field_b, (-EmailAvailabilityValidator.field_t.fullWidth + 640) / 2, -(LaserGateSpan.field_k * 4) + 440, EmailAvailabilityValidator.field_t, -122);
             if (param0 != 4) {
               field_b = -65;
               return;
             }
             return;
           }
-          dg.field_t.e((640 - dg.field_t.fullWidth) / 2, fg.field_b);
+          EmailAvailabilityValidator.field_t.e((640 - EmailAvailabilityValidator.field_t.fullWidth) / 2, fg.field_b);
           if (param0 != 4) {
             field_b = -65;
             return;

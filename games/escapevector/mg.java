@@ -18,9 +18,9 @@ final class mg {
         return ui.field_e;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_e = null;
-        if (param0) {
+        if (guard) {
           field_h = null;
           field_c = null;
           field_a = null;

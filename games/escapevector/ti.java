@@ -4,8 +4,8 @@
 final class ti {
     static int[] field_a;
 
-    public static void a(byte param0) {
-        if (param0 <= -61) {
+    public static void releaseStatics(byte guard) {
+        if (guard <= -61) {
           field_a = null;
           return;
         }

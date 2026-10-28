@@ -68,8 +68,8 @@ final class uc {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 != -59) {
+    public static void releaseStatics(byte guard) {
+        if (guard != -59) {
           return;
         }
         field_h = null;

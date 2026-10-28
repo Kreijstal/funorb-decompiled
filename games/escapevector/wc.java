@@ -15,10 +15,10 @@ final class wc {
     static int field_l;
     private int field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_b = null;
         field_d = null;
-        if (param0 != 49) {
+        if (guard != 49) {
           wc.a(false, -49, true);
         }
     }
@@ -51,9 +51,9 @@ final class wc {
     final static int c(int param0) {
         if (param0 != -31119) {
           wc.a(97, -30, 91, (byte) 54);
-          return bl.field_h;
+          return TextHotspotRegion.field_h;
         }
-        return bl.field_h;
+        return TextHotspotRegion.field_h;
     }
 
     final boolean b(byte param0) {
@@ -122,12 +122,12 @@ final class wc {
         this.field_i = 0;
         if (this.field_a != 0) {
           if (0 == this.field_a) {
-            this.field_c = nk.field_n;
+            this.field_c = PasswordValidator.field_n;
           }
-        } else if (nk.field_n != 98) {
+        } else if (PasswordValidator.field_n != 98) {
           if (0 != this.field_a) {
             if (0 == this.field_a &&
-              nk.field_n == 99) {
+              PasswordValidator.field_n == 99) {
               this.field_h = this.field_h + 1;
               this.field_j = false;
               this.field_e = true;
@@ -137,15 +137,15 @@ final class wc {
             }
             return;
           }
-          this.field_c = nk.field_n;
+          this.field_c = PasswordValidator.field_n;
         } else if (this.field_h > 0) {
           this.field_e = true;
           this.field_j = false;
           this.field_h = this.field_h - 1;
           if (0 == this.field_a) {
-            this.field_c = nk.field_n;
+            this.field_c = PasswordValidator.field_n;
             if (0 == this.field_a &&
-              nk.field_n == 99) {
+              PasswordValidator.field_n == 99) {
               this.field_h = this.field_h + 1;
               this.field_j = false;
               this.field_e = true;
@@ -161,13 +161,13 @@ final class wc {
           this.field_j = false;
           this.field_h = this.field_h - 1;
           if (0 == this.field_a) {
-            this.field_c = nk.field_n;
+            this.field_c = PasswordValidator.field_n;
           }
         }
         if (0 != this.field_a) {
           return;
         }
-        if (nk.field_n != 99) {
+        if (PasswordValidator.field_n != 99) {
           return;
         }
         this.field_h = this.field_h + 1;
@@ -390,7 +390,7 @@ final class wc {
         this.field_c = 0;
         this.field_g = 0;
         if (this.field_a == 0) {
-          this.field_c = nk.field_n;
+          this.field_c = PasswordValidator.field_n;
         }
         if (param0 >= 69) {
           return;

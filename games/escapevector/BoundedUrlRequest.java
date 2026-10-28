@@ -35,10 +35,10 @@ final class BoundedUrlRequest implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
         field_h = null;
-        if (param0 != -1) {
+        if (guard != -1) {
           field_d = -109;
         }
     }

@@ -6,10 +6,10 @@ final class td {
     static String field_a;
     static int[] field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
         field_b = null;
-        if (param0 != 128) {
+        if (guard != 128) {
           return;
         }
         field_a = null;

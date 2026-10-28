@@ -15,9 +15,9 @@ final class RockBuster extends IntrusiveNode {
     int velocityXQ16;
     int remainingFlightTicks;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_j = null;
-        int var1 = -26 / ((param0 - 26) / 58);
+        int var1 = -26 / ((guard - 26) / 58);
     }
 
     final static boolean a(int param0, String param1, String param2) {

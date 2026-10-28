@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends TextButton {
+final class ValidationIndicator extends TextButton {
     static PcmSample field_N;
     private static int[] field_K;
     static int[][] field_E;
@@ -24,7 +24,7 @@ final class oj extends TextButton {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_K = null;
         field_N = null;
         field_O = null;
@@ -32,7 +32,7 @@ final class oj extends TextButton {
         field_E = (int[][]) null;
         field_P = null;
         field_I = null;
-        if (param0 == 113) {
+        if (guard == 113) {
           field_L = null;
           return;
         }
@@ -206,7 +206,7 @@ final class oj extends TextButton {
         return this.field_F.validationMessage(guard ^ 64);
     }
 
-    oj(ValidationSource param0) {
+    ValidationIndicator(ValidationSource param0) {
         try {
           this.field_F = param0;
         } catch (RuntimeException runtimeException) {

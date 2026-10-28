@@ -11,11 +11,11 @@ final class mh {
     static int field_e;
     static int field_f;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_b = null;
         field_g = null;
         field_a = null;
-        if (!param0) {
+        if (!guard) {
           mh.b((byte) 81);
         }
         field_d = null;

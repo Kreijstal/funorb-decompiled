@@ -19,7 +19,7 @@ final class SectorCacheStore {
         if (var1.field_c) {
           pl.field_q = new t();
           if (param0 <= 117) {
-            SectorCacheStore.a(true);
+            SectorCacheStore.releaseStatics(true);
           }
           mj.field_d = 0;
           GameplaySession.c((byte) -9);
@@ -28,7 +28,7 @@ final class SectorCacheStore {
         if (UiContainer.e((byte) 97)) {
           pl.field_q = new t();
           if (param0 <= 117) {
-            SectorCacheStore.a(true);
+            SectorCacheStore.releaseStatics(true);
           }
           mj.field_d = 0;
           GameplaySession.c((byte) -9);
@@ -194,8 +194,8 @@ final class SectorCacheStore {
         }
     }
 
-    public static void a(boolean param0) {
-        if (!param0) {
+    public static void releaseStatics(boolean guard) {
+        if (!guard) {
           return;
         }
         field_c = (int[][]) null;
@@ -400,7 +400,7 @@ final class SectorCacheStore {
         StringWriter var15 = new StringWriter();
         PrintWriter var4 = new PrintWriter((Writer) ((Object) var15));
         if (param1 != 41) {
-          SectorCacheStore.a(true);
+          SectorCacheStore.releaseStatics(true);
         }
         param0.printStackTrace(var4);
         var4.close();

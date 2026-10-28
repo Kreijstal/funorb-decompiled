@@ -5,9 +5,9 @@ final class b {
     static String field_a;
     static PcmSample field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_b = null;
-        if (param0 != 118) {
+        if (guard != 118) {
           return;
         }
         field_a = null;
@@ -27,7 +27,7 @@ final class b {
           pn.field_pb.handlePointerFrame(true, (byte) -33, on.field_a, DebouncedValidator.field_b);
           pn.field_pb.m(0);
           while (pn.p(-104)) {
-            pn.field_pb.handleKey(jc.field_c, nk.field_n, (byte) -121);
+            pn.field_pb.handleKey(jc.field_c, PasswordValidator.field_n, (byte) -121);
           }
           if (param0 < -31) {
             return;

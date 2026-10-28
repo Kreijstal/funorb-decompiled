@@ -101,7 +101,7 @@ final class ig {
             var10 = new int[]{1};
           }
           int var11 = var9.length;
-          int[] var16 = vl.a(param2, param1, var11, (byte) -17);
+          int[] var16 = TextLayoutLine.a(param2, param1, var11, (byte) -17);
           this.field_q = DynamicTerrainRenderer.a(var8, var5, var7, var6, param3, var9, var10, false, var16);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ig.S(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -136,7 +136,7 @@ final class ig {
           int var9 = 89;
           int var10 = 402;
           int var11 = var6.length;
-          int[] var17 = vl.a(param3, param0, var11, (byte) -17);
+          int[] var17 = TextLayoutLine.a(param3, param0, var11, (byte) -17);
           this.field_b = DynamicTerrainRenderer.a(var10, var13, var9, var8, param2, var6, var7, false, var17);
           if (param1 != -9079) {
             this.field_b = (dk[]) null;
@@ -486,7 +486,7 @@ final class ig {
         Throwable decompiledCaughtException = null;
         int var11 = EscapeVector.obfuscationControl;
         if (param0 != 6620) {
-          ig.h(-11);
+          ig.releaseStatics(-11);
         }
         if (di.field_d.field_e) {
           Object var2 = ObjectSpriteSet.field_e;
@@ -652,8 +652,8 @@ final class ig {
         int var4 = je.a(false, this.field_a);
         while (pn.p(-113)) {
           var6.a(100);
-          if (nk.field_n == 96 ||
-            nk.field_n == 98) {
+          if (PasswordValidator.field_n == 96 ||
+            PasswordValidator.field_n == 98) {
             if (this.field_e == var3 &&
               this.field_n >= 0) {
               var6.a(false, this.field_n);
@@ -683,8 +683,8 @@ final class ig {
               var6.a(false, this.field_e);
             }
           }
-          if (nk.field_n == 97 ||
-            nk.field_n == 99) {
+          if (PasswordValidator.field_n == 97 ||
+            PasswordValidator.field_n == 99) {
             if (this.field_s == var3) {
               var6.a(false, 0);
             } else if (var3 >= 0 &&
@@ -714,7 +714,7 @@ final class ig {
               var6.a(false, 0);
             }
           }
-          if (nk.field_n == 13) {
+          if (PasswordValidator.field_n == 13) {
             SelfDestructEffects.field_q = -1;
             GameplaySession.c(false, param0 ^ 989);
             return;
@@ -783,7 +783,7 @@ final class ig {
           int var9 = 625;
           int var10 = -var8 + var9 + 1;
           int var11 = 30;
-          int[] var12 = oj.field_E[this.field_a];
+          int[] var12 = ValidationIndicator.field_E[this.field_a];
           int var13 = var12.length;
           int var14 = je.a(false, this.field_a);
           int var15 = ki.field_M[this.field_a];
@@ -857,7 +857,7 @@ final class ig {
               PcmSample var8 = b.field_b;
               int var9 = 16384 * var7.field_f.field_h / 640;
               PcmSampleStream var10 = PcmSampleStream.c(var8, var4, var3, var9);
-              gd.field_K[var7.field_d] = var10;
+              ValidatedTextWidget.field_K[var7.field_d] = var10;
             }
           }
         }
@@ -920,12 +920,12 @@ final class ig {
         this.b(-4);
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int guard) {
         field_l = null;
         field_g = null;
         field_i = null;
-        if (param0 > -33) {
-          ig.h(-58);
+        if (guard > -33) {
+          ig.releaseStatics(-58);
         }
         field_c = null;
     }

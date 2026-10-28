@@ -23,7 +23,7 @@ final class ResourceArchive {
         if (param2 != -2) {
           return 21;
         }
-        return ni.a(param0, param1, false, TerrainMaskSupport.field_b);
+        return DraggableWidget.a(param0, param1, false, TerrainMaskSupport.field_b);
     }
 
     final int b(int param0, String param1) {
@@ -457,13 +457,13 @@ final class ResourceArchive {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int guard) {
         field_m = null;
         field_d = null;
         field_a = null;
         field_b = null;
         field_f = null;
-        if (param0 <= 119) {
+        if (guard <= 119) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
           ResourceArchive.a(84, (CipherPacketBuffer) null);
         }
@@ -766,7 +766,7 @@ final class ResourceArchive {
 
     final synchronized int b(int param0, int param1) {
         if (param0 != 3210) {
-          ResourceArchive.c(69);
+          ResourceArchive.releaseStatics(69);
         }
         if (!this.a(param1, (byte) 48)) {
           return 0;

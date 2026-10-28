@@ -9,9 +9,9 @@ final class wk {
     static boolean[] field_b;
     static boolean field_c;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_f = null;
-        if (param0) {
+        if (guard) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
           wk.a(10, (CipherPacketBuffer) null);
         }
@@ -60,7 +60,7 @@ final class wk {
         jf.field_J = 0;
         ArchiveRequest.field_t = -2147483648;
         TextLayout.field_d = 2147483647;
-        vl.field_e = 2147483647;
+        TextLayoutLine.field_e = 2147483647;
     }
 
     final static int a(boolean param0, int param1, CharSequence param2, int param3) {

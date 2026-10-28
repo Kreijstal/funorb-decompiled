@@ -95,10 +95,10 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_b = (byte[][]) null;
         field_f = null;
-        if (param0 != -44) {
+        if (guard != -44) {
           return;
         }
         field_h = null;

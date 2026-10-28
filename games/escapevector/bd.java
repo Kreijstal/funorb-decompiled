@@ -10,10 +10,10 @@ final class bd extends IntrusiveNode {
     byte[] field_j;
     static String field_g;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int guard) {
         field_m = null;
         field_h = null;
-        if (param0 >= -45) {
+        if (guard >= -45) {
           return;
         }
         field_g = null;

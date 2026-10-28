@@ -60,9 +60,9 @@ final class SoundCache {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_a = null;
-        int var1 = 78 / ((param0 - 56) / 54);
+        int var1 = 78 / ((guard - 56) / 54);
         field_c = null;
         field_f = null;
     }

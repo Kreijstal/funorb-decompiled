@@ -12,7 +12,7 @@ final class ej {
 
     final static void a(byte param0, String param1) {
         try {
-          lb.b(-10002, param1);
+          MatchingTextValidator.b(-10002, param1);
           uf.a((byte) 125, mm.field_a, false);
           if (param0 > -113) {
             String var3 = (String) null;
@@ -32,12 +32,12 @@ final class ej {
         return param1 & 255;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_e = null;
         field_a = null;
         field_f = null;
         field_g = null;
-        if (param0 >= 13) {
+        if (guard >= 13) {
           field_c = null;
           return;
         }

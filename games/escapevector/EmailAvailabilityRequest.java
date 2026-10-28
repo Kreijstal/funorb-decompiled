@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class d {
-    private String field_a;
-    private boolean field_e;
-    private boolean field_b;
+final class EmailAvailabilityRequest {
+    private String email;
+    private boolean available;
+    private boolean complete;
     static tk field_c;
     static String field_d;
     static String[] field_f;
 
-    final void a(byte param0, boolean param1) {
-        this.field_e = param1 ? true : false;
-        if (param0 != -128) {
+    final void complete(byte guard, boolean available) {
+        this.available = available ? true : false;
+        if (guard != -128) {
           return;
         }
-        this.field_b = true;
+        this.complete = true;
     }
 
     final static boolean a(char param0, int param1) {
@@ -23,7 +23,7 @@ final class d {
           if (Character.isISOControl(param0)) {
             return false;
           }
-          if (TextWidgetPainter.a(true, param0)) {
+          if (TextWidgetPainter.isAsciiAlphanumeric(true, param0)) {
             return true;
           }
           char[] var6 = pb.field_a;
@@ -52,41 +52,41 @@ final class d {
         }
     }
 
-    final boolean b(int param0) {
-        if (param0 != 0) {
+    final boolean isComplete(int guard) {
+        if (guard != 0) {
           return false;
         }
-        return this.field_b;
+        return this.complete;
     }
 
-    final String a(int param0) {
-        if (param0 > -24) {
+    final String email(int guard) {
+        if (guard > -24) {
           return (String) null;
         }
-        return this.field_a;
+        return this.email;
     }
 
-    final boolean c(int param0) {
-        if (param0 != 14668) {
+    final boolean isAvailable(int guard) {
+        if (guard != 14668) {
           return false;
         }
-        return this.field_e;
+        return this.available;
     }
 
-    d(String param0) {
-        this.field_b = false;
-        this.field_e = false;
+    EmailAvailabilityRequest(String param0) {
+        this.complete = false;
+        this.available = false;
         try {
-          this.field_a = param0;
+          this.email = param0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "d.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_c = null;
         field_d = null;
-        if (param0 != 65) {
+        if (guard != 65) {
           field_f = (String[]) null;
           field_f = null;
           return;

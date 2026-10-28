@@ -46,24 +46,24 @@ final class TrackerMusicDefinition {
     }
 
     final static String c(int param0) {
-        if (dn.field_q == dg.field_o) {
-          return kl.field_o;
+        if (dn.field_q == EmailAvailabilityValidator.field_o) {
+          return AgeValidator.field_o;
         }
-        if (!di.field_g.b(0)) {
-          return di.field_g.a(-84);
+        if (!di.field_g.isComplete(0)) {
+          return di.field_g.email(-84);
         }
-        if (ui.field_b == dg.field_o) {
-          return di.field_g.a(-52);
+        if (ui.field_b == EmailAvailabilityValidator.field_o) {
+          return di.field_g.email(-52);
         }
         if (param0 != 31069) {
-          TrackerMusicDefinition.b(-82);
+          TrackerMusicDefinition.releaseStatics(-82);
         }
         return vk.field_v;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_f = null;
-        if (param0 != -32408) {
+        if (guard != -32408) {
           field_j = -49;
         }
     }

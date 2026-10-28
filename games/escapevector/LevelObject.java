@@ -206,7 +206,7 @@ final class LevelObject extends IntrusiveNode {
                         tileRows = newTileRows;
                         session.terrainMasks[tileX + tileY * session.tilesWide] = newTileRows;
                       }
-                      tileRows[rowY] = lb.a(tileRows[rowY], 1 << bitColumn);
+                      tileRows[rowY] = MatchingTextValidator.a(tileRows[rowY], 1 << bitColumn);
                     }
                   }
                   sourcePixelIndex++;
@@ -361,7 +361,7 @@ final class LevelObject extends IntrusiveNode {
     final static void a(int param0, byte param1) {
         try {
           try {
-            if (hi.a(param0, -2)) {
+            if (EmailSyntaxValidator.a(param0, -2)) {
               DialogueScreen var2 = new DialogueScreen(SeekerMine.field_n, ae.field_c, qh.field_j, true);
               re.a(1820, var2);
             }
@@ -487,16 +487,16 @@ final class LevelObject extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         try {
-          if (param0) {
+          if (guard) {
             LevelObject.a(77, 13, true, (Sprite[]) null, -108, -59, (Sprite[]) null, -14, -30, (BitmapFont) null, -40, true);
           }
           field_q = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var1 = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var1), "sa.G(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "sa.G(" + guard + ')');
         }
     }
 

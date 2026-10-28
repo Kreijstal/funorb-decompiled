@@ -12,7 +12,7 @@ final class gf {
     private int field_l;
     private int field_d;
     private int field_f;
-    static ni field_b;
+    static DraggableWidget field_b;
     static int field_a;
     int field_g;
     private boolean field_n;
@@ -28,10 +28,10 @@ final class gf {
     final static int a(byte param0, int param1) {
         int var3 = EscapeVector.obfuscationControl;
         qk.field_g = null;
-        rh.field_I = null;
+        NameSuggestionsPanel.field_I = null;
         ke.field_b = 0;
-        int var2 = kl.field_n;
-        kl.field_n = SeekerPulseStream.field_l;
+        int var2 = AgeValidator.field_n;
+        AgeValidator.field_n = SeekerPulseStream.field_l;
         SeekerPulseStream.field_l = var2;
         if (param0 != -78) {
           String var4 = (String) null;
@@ -278,9 +278,9 @@ final class gf {
         GameAppletShell.a(var5Lifetime1, this.field_j, this.field_k, this.field_i, this.field_f, var3Lifetime1, -3, var2, this.field_d, this.field_c, var4Lifetime1);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_e = null;
-        if (param0 != 12474) {
+        if (guard != 12474) {
           field_a = -26;
           field_b = null;
           return;

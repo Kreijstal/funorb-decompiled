@@ -16,9 +16,9 @@ final class ij extends IntrusiveNode {
     ij() {
     }
 
-    public static void d(int param0) {
-        if (param0 >= -67) {
-          ij.d(-72);
+    public static void releaseStatics(int guard) {
+        if (guard >= -67) {
+          ij.releaseStatics(-72);
           field_g = null;
           return;
         }

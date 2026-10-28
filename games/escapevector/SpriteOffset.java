@@ -39,9 +39,9 @@ final class SpriteOffset {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_a = null;
-        if (param0 > 120) {
+        if (guard > 120) {
           field_d = null;
           field_f = null;
           field_e = null;
@@ -66,7 +66,7 @@ final class SpriteOffset {
             if (cb.field_c.b((byte) -18)) {
               var1_int = true;
             }
-            if (nk.field_n != 13) {
+            if (PasswordValidator.field_n != 13) {
               continue;
             }
             var2 = true;
@@ -78,7 +78,7 @@ final class SpriteOffset {
           int var3 = 0;
           if (var1_int &&
             cb.field_c.field_h >= 0) {
-            var3 = wh.field_j[cb.field_c.field_h];
+            var3 = CachedTextLayout.field_j[cb.field_c.field_h];
             if (2 == var3) {
               TextFieldValidator.e(0);
             } else if (var3 == 5) {
@@ -151,7 +151,7 @@ final class SpriteOffset {
         if (Character.isISOControl(param0)) {
           return false;
         }
-        if (TextWidgetPainter.a(true, param0)) {
+        if (TextWidgetPainter.isAsciiAlphanumeric(true, param0)) {
           return true;
         }
         if (param1 != -124) {

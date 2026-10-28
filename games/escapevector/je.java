@@ -5,8 +5,8 @@ final class je {
     static int field_b;
     static IntrusiveDeque field_a;
 
-    public static void a(int param0) {
-        int var1 = 86 / ((-10 - param0) / 57);
+    public static void releaseStatics(int guard) {
+        int var1 = 86 / ((-10 - guard) / 57);
         field_a = null;
     }
 
@@ -23,7 +23,7 @@ final class je {
             int[] var11 = var13;
             int[] var5_ref_int__ = var11;
             for (int var6 = 0; var1 > var6; var6++) {
-              var5_ref_int__[var6] = lb.a(ae.a(var20[var6] << 24, -16777216), qk.field_f[ae.a((int) var21[var6], 255)]);
+              var5_ref_int__[var6] = MatchingTextValidator.a(ae.a(var20[var6] << 24, -16777216), qk.field_f[ae.a((int) var21[var6], 255)]);
             }
             var3 = new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var13);
           } else {
@@ -36,7 +36,7 @@ final class je {
           of.a(false);
           return (Sprite) (var3);
         }
-        je.a(24);
+        je.releaseStatics(24);
         int var1Lifetime1 = qh.field_k[0] * bc.field_a[0];
         byte[] var19 = qe.field_a[0];
         if (UiContainer.field_E[0]) {
@@ -45,7 +45,7 @@ final class je {
           int[] var11Lifetime1 = var13Lifetime1;
           int[] var5_ref_int__Lifetime1 = var11Lifetime1;
           for (int var6Lifetime1 = 0; var1Lifetime1 > var6Lifetime1; var6Lifetime1++) {
-            var5_ref_int__Lifetime1[var6Lifetime1] = lb.a(ae.a(var18[var6Lifetime1] << 24, -16777216), qk.field_f[ae.a((int) var19[var6Lifetime1], 255)]);
+            var5_ref_int__Lifetime1[var6Lifetime1] = MatchingTextValidator.a(ae.a(var18[var6Lifetime1] << 24, -16777216), qk.field_f[ae.a((int) var19[var6Lifetime1], 255)]);
           }
           var3Lifetime1 = new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var13Lifetime1);
         } else {

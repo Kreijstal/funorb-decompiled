@@ -4,8 +4,8 @@
 final class nl {
     static String field_a;
 
-    public static void a(int param0) {
-        if (param0 != 16558) {
+    public static void releaseStatics(int guard) {
+        if (guard != 16558) {
           return;
         }
         field_a = null;

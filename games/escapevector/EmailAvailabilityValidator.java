@@ -1,38 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends TextFieldValidator {
+final class EmailAvailabilityValidator extends TextFieldValidator {
     static Sprite field_t;
     private boolean field_q;
     static Sprite field_r;
-    private lb field_p;
+    private MatchingTextValidator field_p;
     static String field_s;
     static al field_o;
     private String field_n;
 
     final static String c(byte param0) {
         if (param0 > -8) {
-          dg.g(7);
+          EmailAvailabilityValidator.releaseStatics(7);
         }
         return MouseWheelInput.field_d;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int guard) {
         field_o = null;
         field_s = null;
-        if (param0 != 0) {
-          dg.c((byte) 98);
+        if (guard != 0) {
+          EmailAvailabilityValidator.c((byte) 98);
         }
         field_t = null;
         field_r = null;
     }
 
-    dg(EditableTextWidget param0, EditableTextWidget param1) {
+    EmailAvailabilityValidator(EditableTextWidget param0, EditableTextWidget param1) {
         super(param0);
         this.field_q = false;
         this.field_n = "";
         try {
-          this.field_p = new lb(param0, param1);
+          this.field_p = new MatchingTextValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -47,13 +47,13 @@ final class dg extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!text.equals(this.field_n)) {
-            d var3 = ja.a(text, true);
-            if (!var3.b(0)) {
+            EmailAvailabilityRequest var3 = ja.a(text, true);
+            if (!var3.isComplete(0)) {
               ValidationState stackIn_7_0 = ug.field_c;
               return stackIn_7_0;
             }
             this.field_n = text;
-            this.field_q = var3.c(guard + 14669);
+            this.field_q = var3.isAvailable(guard + 14669);
           }
           if (this.field_q) {
             stackIn_12_0 = IsaacRandom.field_h;
@@ -111,7 +111,7 @@ final class dg extends TextFieldValidator {
           int var6_int = -param5 + param0;
           int var7 = 0;
           if (param2 != 19409) {
-            dg.c((byte) -94);
+            EmailAvailabilityValidator.c((byte) -94);
           }
           while (var6_int > var7) {
             {

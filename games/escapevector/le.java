@@ -6,8 +6,8 @@ final class le {
     static String field_b;
     static long field_c;
 
-    public static void a(int param0) {
-        if (param0 < 40) {
+    public static void releaseStatics(int guard) {
+        if (guard < 40) {
           field_b = (String) null;
           field_a = null;
           field_b = null;
@@ -21,8 +21,8 @@ final class le {
         if (fc.field_a < 2) {
           return ee.field_a;
         }
-        if (nk.field_p != null) {
-          if (!nk.field_p.b(0)) {
+        if (PasswordValidator.field_p != null) {
+          if (!PasswordValidator.field_p.b(0)) {
             return md.field_H;
           }
           return gj.field_g;

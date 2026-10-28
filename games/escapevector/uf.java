@@ -38,7 +38,7 @@ final class uf {
         if (param0 < 2) {
           return false;
         }
-        return dg.field_o == ui.field_b ? true : false;
+        return EmailAvailabilityValidator.field_o == ui.field_b ? true : false;
     }
 
     private final void a(int param0, int param1, int param2, String param3) {
@@ -107,7 +107,7 @@ final class uf {
     }
 
     final static String a(int param0) {
-        if (dn.field_q == dg.field_o) {
+        if (dn.field_q == EmailAvailabilityValidator.field_o) {
           return ResourceArchive.field_b;
         }
         if (param0 == 30519) {
@@ -146,12 +146,12 @@ final class uf {
         try {
           TextWidgetPainter var17 = new TextWidgetPainter(param1, 2, 2, 2236962, 1, 1, 1, param1.field_x + param1.field_r + 2);
           this.field_i = (WidgetPainter) ((Object) var17);
-          var17.field_h = 16777215;
+          var17.textColor = 16777215;
           he var4 = new he();
           if (param0 != -31476) {
             field_n = 115;
           }
-          var17.a(var4, 77);
+          var17.copyStyleTo(var4, 77);
           this.field_c = 15658734;
           this.field_r = 3;
           this.field_a = 5592405;
@@ -160,8 +160,8 @@ final class uf {
           this.field_h = 15658734;
           this.field_q = -1;
           this.field_f = 3;
-          var4.field_i = 11711154;
-          var4.field_g = 15658734;
+          var4.selectionColor = 11711154;
+          var4.caretColor = 15658734;
           this.field_d = param1;
           var4.a(0, (byte) -53).a(15658734, -22572).a(2, ph.a(8947848, 1, 10066329, 7829367));
           var4.a(1, (byte) -53).a(2, ph.a(11184810, 1, 10066329, 13421772));
@@ -177,16 +177,16 @@ final class uf {
           var4.a(5, (byte) -53).a(2, vd.a(65793, 0, 0, 0, 1317)).a(param0 + 31367, true).a(-1, -22572);
           this.field_o = (WidgetPainter) ((Object) var4);
           he var6 = new he(var4, true);
-          var6.field_m = 0;
+          var6.horizontalAlignment = 0;
           he var7 = new he(var4, true);
-          var7.field_m = 0;
+          var7.horizontalAlignment = 0;
           var7.a(jj.a(8947848, 46), param0 + 31482);
           var7.a(1, (byte) -53).a(2, jj.a(11184810, 51)).a(2236962, -22572);
           this.field_k = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           sc discarded$0 = new sc(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           ve discarded$1 = new ve(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           he var8 = new he();
-          var17.a(var8, 111);
+          var17.copyStyleTo(var8, 111);
           var8.a(0, (byte) -53).a(2, ph.a(15658734, 1, 7829367, 10066329)).a(1118481, -22572).b(-93, -1);
           var8.a(4, (byte) -53).a(-121, true).a(param0 + 31478, var5);
           this.field_p = (WidgetPainter) ((Object) var8);
@@ -287,8 +287,8 @@ final class uf {
         }
     }
 
-    public static void b(int param0) {
-        if (param0 == -27204) {
+    public static void releaseStatics(int guard) {
+        if (guard == -27204) {
           field_g = null;
           field_e = null;
           field_s = null;

@@ -105,7 +105,7 @@ final class TrackerMusicPlayer extends PcmMixerListener {
         }
     }
 
-    public static void d() {
+    public static void releaseStatics() {
         field_o = null;
         field_D = null;
     }

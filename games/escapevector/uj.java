@@ -10,8 +10,8 @@ final class uj {
     static int[] field_f;
     private static String field_z;
 
-    public static void a(byte param0) {
-        if (param0 <= -6) {
+    public static void releaseStatics(byte guard) {
+        if (guard <= -6) {
           field_f = null;
           field_b = null;
           field_e = null;
@@ -19,7 +19,7 @@ final class uj {
           field_a = null;
           return;
         }
-        uj.a((byte) 111);
+        uj.releaseStatics((byte) 111);
         field_f = null;
         field_b = null;
         field_e = null;

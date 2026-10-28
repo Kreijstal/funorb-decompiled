@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bl extends IntrusiveNode {
-    bl field_k;
-    int field_i;
+final class TextHotspotRegion extends IntrusiveNode {
+    TextHotspotRegion nextFragment;
+    int x;
     static String[] field_l;
     static int field_h;
-    int field_n;
-    int field_g;
-    int field_j;
-    int field_m;
+    int height;
+    int y;
+    int width;
+    int hotspotId;
 
     final static IndexedSprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         String stackIn_10_2 = null;
@@ -19,7 +19,7 @@ final class bl extends IntrusiveNode {
           }
           if (param1 != 255) {
             ResourceArchive var5 = (ResourceArchive) null;
-            bl.a(49, -40, (ResourceArchive) null, 15);
+            TextHotspotRegion.a(49, -40, (ResourceArchive) null, 15);
           }
           IndexedSprite[] stackIn_6_0 = fg.a(13029);
           return stackIn_6_0;
@@ -37,19 +37,19 @@ final class bl extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int guard) {
         field_l = null;
-        if (param0 != 255) {
-          bl.d(125);
+        if (guard != 255) {
+          TextHotspotRegion.releaseStatics(125);
         }
     }
 
-    bl(int param0, int param1, int param2, int param3, int param4) {
-        this.field_i = param1;
-        this.field_g = param2;
-        this.field_j = param3;
-        this.field_m = param0;
-        this.field_n = param4;
+    TextHotspotRegion(int param0, int param1, int param2, int param3, int param4) {
+        this.x = param1;
+        this.y = param2;
+        this.width = param3;
+        this.hotspotId = param0;
+        this.height = param4;
     }
 
     static {

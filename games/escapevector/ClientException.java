@@ -12,8 +12,8 @@ final class ClientException extends RuntimeException {
     static int[] field_d;
     static int field_e;
 
-    public static void a(boolean param0) {
-        if (param0) {
+    public static void releaseStatics(boolean guard) {
+        if (guard) {
           return;
         }
         field_b = null;
@@ -58,7 +58,7 @@ final class ClientException extends RuntimeException {
             return stackIn_4_0;
           }
           if (var2_int > 255) {
-            tk stackIn_7_0 = d.field_c;
+            tk stackIn_7_0 = EmailAvailabilityRequest.field_c;
             return stackIn_7_0;
           }
           String[] var3 = bb.a(-128, param0, '.');
@@ -119,7 +119,7 @@ final class ClientException extends RuntimeException {
             if (param1 == 30785) {
               return;
             }
-            ClientException.a(true);
+            ClientException.releaseStatics(true);
             return;
           }
           om.field_c.position = 0;

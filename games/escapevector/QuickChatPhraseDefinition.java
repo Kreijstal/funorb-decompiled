@@ -37,7 +37,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               this.field_x = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
                 int var6 = param1.readUnsignedShort(1952);
-                om var7 = kf.a((byte) -57, var6);
+                om var7 = NameAvailabilityValidator.a((byte) -57, var6);
                 if (var7 != null) {
                   this.field_x[var5] = var6;
                   int[] array$0 = new int[var7.field_d];
@@ -101,16 +101,16 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var2 = 46 / ((-16 - param0) / 44);
         if (this.field_z != null) {
           for (int var3 = 0; var3 < this.field_z.length; var3++) {
-            this.field_z[var3] = lb.a(this.field_z[var3], 32768);
+            this.field_z[var3] = MatchingTextValidator.a(this.field_z[var3], 32768);
           }
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int guard) {
         field_t = null;
         field_w = null;
-        if (param0 < 74) {
-          QuickChatPhraseDefinition.f(-4);
+        if (guard < 74) {
+          QuickChatPhraseDefinition.releaseStatics(-4);
         }
         fullTileMask = null;
         field_y = null;
@@ -173,7 +173,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           StringBuilder discarded$2 = var5.append(this.field_s[var3]);
         }
         if (param0 != -4) {
-          QuickChatPhraseDefinition.f(100);
+          QuickChatPhraseDefinition.releaseStatics(100);
         }
         return var2.toString();
     }

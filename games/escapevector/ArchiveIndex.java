@@ -23,8 +23,8 @@ final class ArchiveIndex {
     int[][] field_a;
     private byte[] field_f;
 
-    public static void a(byte param0) {
-        if (param0 != 18) {
+    public static void releaseStatics(byte guard) {
+        if (guard != 18) {
           field_m = (vj) null;
         }
         field_o = null;

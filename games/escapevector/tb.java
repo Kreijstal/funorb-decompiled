@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tb extends r {
+final class tb extends SingleChildContainer {
     static String[] field_G;
     private IntrusiveDeque field_H;
     static String field_E;
@@ -46,24 +46,24 @@ final class tb extends r {
           var3.field_G = false;
           var3 = (bb) (var2.a(25));
         }
-        this.field_C = null;
+        this.child = null;
         if (param0 != 17415) {
           field_D = true;
         }
     }
 
-    final UiComponent j(int param0) {
+    final UiComponent focusedChild(int guard) {
         int var4 = EscapeVector.obfuscationControl;
         wf var2 = new wf(this.field_H);
-        bb var3 = (bb) (var2.c(param0 ^ 15));
-        if (param0 != 0) {
+        bb var3 = (bb) (var2.c(guard ^ 15));
+        if (guard != 0) {
           field_G = (String[]) null;
         }
         while (var3 != null) {
           if (var3.field_G) {
             return var3.a(true);
           }
-          var3 = (bb) (var2.a(param0 + 36));
+          var3 = (bb) (var2.a(guard + 36));
         }
         return null;
     }
@@ -93,11 +93,11 @@ final class tb extends r {
         return stackIn_6_0;
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int guard) {
         field_G = null;
         field_E = null;
-        if (param0 != 0) {
-          tb.o(-104);
+        if (guard != 0) {
+          tb.releaseStatics(-104);
         }
     }
 
@@ -127,11 +127,11 @@ final class tb extends r {
           }
           var3 = (bb) (var2.a(param0 ^ 91));
         }
-        this.field_C = (UiComponent) ((Object) this.n(param0));
+        this.child = (UiComponent) ((Object) this.n(param0));
     }
 
     public tb() {
-        super(0, 0, dm.field_h, r.field_B, (WidgetPainter) null, (UiListener) null);
+        super(0, 0, dm.field_h, SingleChildContainer.field_B, (WidgetPainter) null, (UiListener) null);
         this.field_H = new IntrusiveDeque();
     }
 

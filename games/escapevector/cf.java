@@ -65,7 +65,7 @@ final class cf {
               else {
                 if (stackIn_60_0 <= stackIn_60_1) {
                   on.field_g[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
-                  ni.field_D[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
+                  DraggableWidget.field_D[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   if (var29Lifetime1 < var7_int) {
                     var7_int = var29Lifetime1;
                   }
@@ -113,7 +113,7 @@ final class cf {
                   var24Lifetime1Lifetime1 = param6.field_H[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param6.field_l[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param6.field_t[var23Lifetime2];
-                  hi.field_p[var23Lifetime2] = var9 + (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var18 * var26Lifetime1Lifetime1) >> 16);
+                  EmailSyntaxValidator.field_p[var23Lifetime2] = var9 + (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var18 * var26Lifetime1Lifetime1) >> 16);
                   Bzip2State.field_y[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var25Lifetime1Lifetime1 * var16 + var13 * var24Lifetime1Lifetime1) >> 16) + var10;
                   gm.field_c[var23Lifetime2] = var11 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1 >> 16);
                   var23Lifetime2++;
@@ -167,7 +167,7 @@ final class cf {
             break;
           }
           if (stackIn_69_0 != stackIn_69_1) {
-            cf.a(23);
+            cf.releaseStatics(23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -196,16 +196,16 @@ final class cf {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         try {
           field_b = null;
           field_c = null;
           field_a = null;
-          if (param0 != 3) {
+          if (guard != 3) {
             cf.a(true, -127, (CharSequence) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "cf.A(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "cf.A(" + guard + ')');
         }
     }
 
@@ -324,7 +324,7 @@ final class cf {
         int var8 = EscapeVector.obfuscationControl;
         try {
           if (null == param2) {
-            String stackIn_5_0 = kl.field_p;
+            String stackIn_5_0 = AgeValidator.field_p;
             return stackIn_5_0;
           }
           int var3_int = param2.length();
@@ -376,10 +376,10 @@ final class cf {
               String stackIn_25_0 = kn.field_c;
               return stackIn_25_0;
             }
-            String stackIn_19_0 = kl.field_p;
+            String stackIn_19_0 = AgeValidator.field_p;
             return stackIn_19_0;
           }
-          String stackIn_13_0 = kl.field_p;
+          String stackIn_13_0 = AgeValidator.field_p;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

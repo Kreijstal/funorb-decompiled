@@ -52,7 +52,7 @@ final class tm extends vg implements ButtonListener {
         int var6 = 16777215;
         int var7 = 1;
         ih var8 = fh.field_g;
-        int[][] var18 = gd.field_U[param2];
+        int[][] var18 = ValidatedTextWidget.field_U[param2];
         int var10 = je.a(false, param2);
         if (1 + param1 < var10) {
           var10 = 1 + param1;
@@ -124,11 +124,11 @@ final class tm extends vg implements ButtonListener {
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int guard) {
         field_ab = null;
         field_cb = null;
         field_db = (long[][]) null;
-        if (param0 != -23008) {
+        if (guard != -23008) {
           tm.c(105, -33, -63);
         }
         field_Z = null;

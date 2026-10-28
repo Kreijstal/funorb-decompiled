@@ -95,10 +95,10 @@ final class gn {
         int var2 = -18 / ((73 - param0) / 34);
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_e = null;
         field_l = null;
-        if (param0) {
+        if (guard) {
           return;
         }
         field_k = null;
@@ -219,7 +219,7 @@ final class gn {
         String stackIn_7_2 = null;
         try {
           if (param0 != 16777215) {
-            gn.b(true);
+            gn.releaseStatics(true);
           }
           int stackIn_3_0 = wk.a(true, 10, param1, 97);
           return stackIn_3_0;

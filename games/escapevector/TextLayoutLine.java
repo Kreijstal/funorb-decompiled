@@ -1,39 +1,39 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vl {
+final class TextLayoutLine {
     static int field_e;
     static boolean[] field_f;
-    int field_a;
-    int[] field_b;
-    int field_d;
+    int bottom;
+    int[] insertionX;
+    int top;
     static int[] field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_f = null;
         field_c = null;
-        if (param0 != -19467) {
-          vl.a(42);
+        if (guard != -19467) {
+          TextLayoutLine.releaseStatics(42);
         }
     }
 
-    final int b(int param0) {
+    final int width(int guard) {
         int stackIn_5_0 = 0;
-        int var2 = -117 % ((param0 - 60) / 52);
-        if (this.field_b != null &&
-          this.field_b.length != 0) {
-          stackIn_5_0 = this.field_b[-1 + this.field_b.length];
+        int var2 = -117 % ((guard - 60) / 52);
+        if (this.insertionX != null &&
+          this.insertionX.length != 0) {
+          stackIn_5_0 = this.insertionX[-1 + this.insertionX.length];
         } else {
           stackIn_5_0 = 0;
         }
         return stackIn_5_0;
     }
 
-    final static int a(int param0, int param1) {
-        if (param1 >= -113) {
+    final static int sineQ16(int angle, int guard) {
+        if (guard >= -113) {
           return -7;
         }
-        return bi.field_d[param0 & 2047];
+        return bi.field_d[angle & 2047];
     }
 
     final static void b(int param0, int param1) {
@@ -60,7 +60,7 @@ final class vl {
             var3 = v.field_a;
           }
           if (param0 != 1) {
-            vl.a(98);
+            TextLayoutLine.releaseStatics(98);
           }
           Sprite[] var4 = qi.field_M[param1];
           for (int var5 = 0; 3 > var5; var5++) {
@@ -88,31 +88,31 @@ final class vl {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int characterIndexAtX(byte guard, int x) {
         int var4 = EscapeVector.obfuscationControl;
-        if (this.field_b == null) {
+        if (this.insertionX == null) {
           return 0;
         }
-        if (0 == this.field_b.length) {
+        if (0 == this.insertionX.length) {
           return 0;
         }
         int var3 = 1;
-        if (param0 != 52) {
-          this.a((byte) -102, -12);
+        if (guard != 52) {
+          this.characterIndexAtX((byte) -102, -12);
         }
-        while (this.field_b.length > var3) {
-          if (this.field_b[var3] + this.field_b[-1 + var3] >> 1 > param1) {
+        while (this.insertionX.length > var3) {
+          if (this.insertionX[var3] + this.insertionX[-1 + var3] >> 1 > x) {
             return -1 + var3;
           }
           var3++;
         }
-        return this.field_b.length - 1;
+        return this.insertionX.length - 1;
     }
 
-    vl(int param0, int param1, int param2) {
-        this.field_a = param1;
-        this.field_d = param0;
-        this.field_b = new int[1 + param2];
+    TextLayoutLine(int param0, int param1, int param2) {
+        this.bottom = param1;
+        this.top = param0;
+        this.insertionX = new int[1 + param2];
     }
 
     final static int[] a(int param0, int param1, int param2, byte param3) {

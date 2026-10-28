@@ -216,11 +216,11 @@ final class Minimap {
         SoftwareRasterizer.pixels[param3] = var15;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_u = null;
         field_p = null;
         field_O = null;
-        int var1 = 30 / ((param0 + 2) / 47);
+        int var1 = 30 / ((guard + 2) / 47);
         field_r = null;
     }
 
@@ -629,7 +629,7 @@ final class Minimap {
     final void a(byte param0) {
         this.b(0, true, 0, 0);
         if (param0 != -120) {
-          Minimap.a(80);
+          Minimap.releaseStatics(80);
         }
     }
 

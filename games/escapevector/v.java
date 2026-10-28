@@ -59,10 +59,10 @@ final class v {
         return new int[8];
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_a = null;
         field_b = null;
-        if (param0 != -87) {
+        if (guard != -87) {
           v.a(79);
         }
     }

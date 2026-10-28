@@ -237,8 +237,8 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
             this.field_P)) {
             throw new IllegalStateException();
           }
-          this.field_L = (EditableTextWidget) ((Object) new gd(param0, (UiListener) (this), 100));
-          this.field_J = (EditableTextWidget) ((Object) new gd("", (UiListener) (this), 20));
+          this.field_L = (EditableTextWidget) ((Object) new ValidatedTextWidget(param0, (UiListener) (this), 100));
+          this.field_J = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (UiListener) (this), 20));
           if (!this.field_K) {
             this.field_G = new TextButton(ta.field_g, (UiListener) null);
             TextButton stackIn_18_1 = null;
@@ -256,7 +256,7 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
             }
           } else {
             this.field_G = new TextButton(sh.field_s, (UiListener) null);
-            this.field_I = new TextButton(d.field_d, (UiListener) null);
+            this.field_I = new TextButton(EmailAvailabilityRequest.field_d, (UiListener) null);
             this.field_L.enabled = false;
           }
           this.field_L.painter = (WidgetPainter) ((Object) new re(10000536));
@@ -274,7 +274,7 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
             this.field_N.tooltip = mm.field_c;
           }
           if (this.field_K) {
-            this.field_I.tooltip = gd.field_Z;
+            this.field_I.tooltip = ValidatedTextWidget.field_Z;
           } else if (!this.field_P) {
             this.field_I.painter = (WidgetPainter) ((Object) new ha());
           } else {
@@ -288,7 +288,7 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
           }
           String var8 = lh.field_b;
           ee var9 = sh.a((byte) -1, PointCloudEffect.d((byte) -107));
-          if (var9 == kf.field_q) {
+          if (var9 == NameAvailabilityValidator.field_q) {
             var8 = kg.field_b;
           } else if (var9 == oh.field_n) {
             var8 = wi.field_c;
@@ -358,8 +358,8 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
         }
     }
 
-    public static void k(int param0) {
-        if (param0 <= 94) {
+    public static void releaseStatics(int guard) {
+        if (guard <= 94) {
           field_O = (String) null;
         }
         field_O = null;
@@ -372,7 +372,7 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
         try {
           EditableTextWidget var3 = this.field_L;
           String var4 = param0;
-          var3.a(var4, false, -33);
+          var3.setText(var4, false, -33);
           this.field_J.h((byte) -29);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "h.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

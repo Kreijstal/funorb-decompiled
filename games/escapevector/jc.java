@@ -8,12 +8,12 @@ final class jc {
 
     final static boolean c(int param0) {
         int var1 = 51 % ((param0 + 13) / 37);
-        return !di.field_g.b(0) ? true : false;
+        return !di.field_g.isComplete(0) ? true : false;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_a = null;
-        if (param0 != -1) {
+        if (guard != -1) {
           field_b = true;
         }
     }
@@ -23,7 +23,7 @@ final class jc {
           bk.field_r.a((byte) -122);
         }
         if (param0 != 1) {
-          jc.b(-49);
+          jc.releaseStatics(-49);
           return;
         }
     }

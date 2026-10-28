@@ -10,9 +10,9 @@ final class vi {
     static int field_a;
     static PcmSampleStream field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_d = null;
-        if (param0 < 115) {
+        if (guard < 115) {
           gi var2 = (gi) null;
           vi.a((gi) null, 47);
         }
@@ -73,29 +73,29 @@ final class vi {
         }
     }
 
-    final static void a(int param0, String param1, vl param2, BitmapFont param3, boolean param4) {
+    final static void a(int param0, String param1, TextLayoutLine param2, BitmapFont param3, boolean param4) {
         String stackIn_23_2 = null;
         String stackIn_26_2 = null;
         String stackIn_29_2 = null;
         int var9 = EscapeVector.obfuscationControl;
         try {
           if (param4) {
-            vi.a(-80);
+            vi.releaseStatics(-80);
           }
           int var5_int = 0;
           int var6 = -1;
           for (int var7 = 1; param1.length() > var7; var7++) {
             int var8 = param1.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + param2.field_b[0] + param3.b(param1.substring(0, var7));
+              var6 = (var5_int >> 8) + param2.insertionX[0] + param3.b(param1.substring(0, var7));
             }
             if (var6 == -1) {
               if (var8 == 32) {
                 var5_int = var5_int + param0;
               }
-              param2.field_b[var7] = param2.field_b[0] + ((var5_int >> 8) + param3.b(param1.substring(0, 1 + var7))) - param3.a((char) var8);
+              param2.insertionX[var7] = param2.insertionX[0] + ((var5_int >> 8) + param3.b(param1.substring(0, 1 + var7))) - param3.a((char) var8);
             } else {
-              param2.field_b[var7] = var6;
+              param2.insertionX[var7] = var6;
             }
             if (var8 == 62) {
               var6 = -1;

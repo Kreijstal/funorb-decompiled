@@ -73,12 +73,12 @@ final class on {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_d = null;
         field_b = null;
         field_g = null;
         field_c = null;
-        if (param0 <= 72) {
+        if (guard <= 72) {
           ResourceArchive var2 = (ResourceArchive) null;
           on.a((ResourceArchive) null, -94);
         }

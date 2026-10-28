@@ -80,7 +80,7 @@ final class Bzip2Decoder {
         }
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
     }
 

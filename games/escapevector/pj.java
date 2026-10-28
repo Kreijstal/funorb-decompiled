@@ -65,7 +65,7 @@ final class pj implements Runnable {
           return;
         }
         if (param0 != 123) {
-          pj.b((byte) 28);
+          pj.releaseStatics((byte) 28);
           if (this.field_c) {
             this.field_c = false;
             throw new IOException();
@@ -139,13 +139,13 @@ final class pj implements Runnable {
         this(param0, param1, 5000);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_g = null;
         field_k = null;
-        if (param0 == 6) {
+        if (guard == 6) {
           return;
         }
-        pj.b((byte) -119);
+        pj.releaseStatics((byte) -119);
     }
 
     final int a(int param0) throws IOException {

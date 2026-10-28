@@ -49,7 +49,7 @@ final class TerrainMaskSupport {
         if (1 == quadrantCode) {
           int var8_int = -(1 << left) + (2 << -1 + right);
           for (int var9 = top; bottom > var9; var9++) {
-            rows[var9] = lb.a(rows[var9], var8_int);
+            rows[var9] = MatchingTextValidator.a(rows[var9], var8_int);
           }
           return;
         }
@@ -63,10 +63,10 @@ final class TerrainMaskSupport {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_c = null;
         field_d = null;
-        int var1 = 23 % ((param0 - 60) / 46);
+        int var1 = 23 % ((guard - 60) / 46);
         field_b = null;
         field_a = null;
         field_e = null;

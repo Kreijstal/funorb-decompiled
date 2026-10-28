@@ -144,11 +144,11 @@ final class PointCloudEffect extends DualLinkNode {
         return true;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int guard) {
         field_z = null;
         field_D = null;
         field_r = null;
-        if (param0 <= 66) {
+        if (guard <= 66) {
           PointCloudEffect.d((byte) 25);
         }
         field_v = null;
@@ -252,7 +252,7 @@ final class PointCloudEffect extends DualLinkNode {
           if (var2 < 128) {
             var6 = var6 + (var2 * 128 - var2 * var2 >> 5);
           }
-          rl.field_k.field_l[var2] = lb.a(lb.a(var4 << 16, var5 << 8), var6);
+          rl.field_k.field_l[var2] = MatchingTextValidator.a(MatchingTextValidator.a(var4 << 16, var5 << 8), var6);
         }
     }
 

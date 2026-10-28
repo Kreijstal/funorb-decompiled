@@ -149,9 +149,9 @@ final class qj {
 
     final static int a(byte param0, int param1, int param2) {
         if (param0 != -38) {
-          qj.b(69);
+          qj.releaseStatics(69);
         }
-        return ni.a(param2, param1, false, TerrainMaskSupport.field_d);
+        return DraggableWidget.a(param2, param1, false, TerrainMaskSupport.field_d);
     }
 
     qj(int param0, int param1) {
@@ -159,11 +159,11 @@ final class qj {
         this.field_h = param0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_i = null;
         field_g = null;
         field_e = null;
-        if (param0 != -10497) {
+        if (guard != -10497) {
           field_c = -87;
         }
         field_f = null;

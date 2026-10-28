@@ -28,7 +28,7 @@ final class qf extends eo {
             om.field_g = new CipherPacketBuffer(param1);
             om.field_c = new CipherPacketBuffer(param0);
             if (param8 != 84) {
-              qf.b(-106);
+              qf.releaseStatics(-106);
             }
             MouseWheelInput.field_c = param5;
             jc.field_b = param7;
@@ -38,7 +38,7 @@ final class qf extends eo {
             ej.field_d = param3;
             ck.field_q = param10;
             ej.field_b = param9;
-            qa.field_D = param4;
+            DropTargetWidget.field_D = param4;
             ac.field_b = param12;
             rd.field_a = param2;
             if (MouseWheelInput.field_c.field_j == null) {
@@ -77,12 +77,12 @@ final class qf extends eo {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_d = null;
         field_n = null;
         field_m = null;
         field_o = null;
-        if (param0 > 89) {
+        if (guard > 89) {
           field_h = null;
           return;
         }

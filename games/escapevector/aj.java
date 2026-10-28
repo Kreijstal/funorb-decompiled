@@ -24,11 +24,11 @@ final class aj {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_b = null;
         field_a = null;
         field_e = null;
-        if (param0 == 0) {
+        if (guard == 0) {
           field_f = null;
           field_c = null;
           return;

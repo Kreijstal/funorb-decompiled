@@ -18,9 +18,9 @@ final class ke {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
-        if (param0 >= -13) {
+        if (guard >= -13) {
           BitmapFont var2 = (BitmapFont) null;
           ke.a((BitmapFont) null, -2, 75, (BitmapFont) null);
         }

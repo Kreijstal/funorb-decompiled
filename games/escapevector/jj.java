@@ -23,9 +23,9 @@ final class jj {
         rd.field_c.b(false);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_a = null;
-        if (param0 != 9) {
+        if (guard != 9) {
           field_b = 96;
         }
         field_c = null;

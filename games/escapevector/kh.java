@@ -64,10 +64,10 @@ final class kh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_a = null;
         field_c = null;
-        if (param0 != 65) {
+        if (guard != 65) {
           field_b = -91;
         }
     }
@@ -118,7 +118,7 @@ final class kh {
           }
           return new String(var6);
         }
-        kh.a((byte) -54);
+        kh.releaseStatics((byte) -54);
         for (int var4Lifetime1 = 0; param0 > var4Lifetime1; var4Lifetime1++) {
           var6[var4Lifetime1] = param1;
         }
@@ -127,7 +127,7 @@ final class kh {
 
     final static void a(byte param0, int param1, int param2) {
         int var3 = (255 & rl.field_k.field_k[param2]) + param1;
-        rl.field_k.field_k[param2] = (byte)lb.a(var3, var3 << 23 >> 31);
+        rl.field_k.field_k[param2] = (byte)MatchingTextValidator.a(var3, var3 << 23 >> 31);
         int var4 = -46 % ((-11 - param0) / 34);
     }
 

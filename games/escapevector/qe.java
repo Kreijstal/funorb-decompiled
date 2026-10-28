@@ -15,7 +15,7 @@ final class qe {
 
     private final void a(boolean param0, byte param1) {
         int var5 = 0;
-        PcmSampleStream[] var8 = gd.field_K;
+        PcmSampleStream[] var8 = ValidatedTextWidget.field_K;
         PcmSampleStream[] var3 = var8;
         if (0 > this.field_d ||
           var8.length <= this.field_d) {
@@ -203,8 +203,8 @@ final class qe {
         }
     }
 
-    public static void b(int param0) {
-        if (param0 != 0) {
+    public static void releaseStatics(int guard) {
+        if (guard != 0) {
           field_a = (byte[][]) null;
         }
         field_a = (byte[][]) null;
@@ -261,14 +261,14 @@ final class qe {
           return 0;
         }
         if (ff.field_h != 0) {
-          if (null != nk.field_p) {
-            if (!nk.field_p.b(0)) {
+          if (null != PasswordValidator.field_p) {
+            if (!PasswordValidator.field_p.b(0)) {
               return 14;
             }
-            if (!nk.field_p.a("", (byte) -111)) {
+            if (!PasswordValidator.field_p.a("", (byte) -111)) {
               return 29;
             }
-            if (!nk.field_p.a(0, "")) {
+            if (!PasswordValidator.field_p.a(0, "")) {
               return 29;
             }
           }

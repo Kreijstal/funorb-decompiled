@@ -7,10 +7,10 @@ final class an {
     static String field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
         field_b = null;
-        if (param0 <= 17) {
+        if (guard <= 17) {
           field_a = false;
         }
     }

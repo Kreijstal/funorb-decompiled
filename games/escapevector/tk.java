@@ -5,8 +5,8 @@ final class tk {
     static Sprite[] field_a;
     static qh field_b;
 
-    public static void b(int param0) {
-        if (param0 != 31167) {
+    public static void releaseStatics(int guard) {
+        if (guard != 31167) {
           qh[] var2 = (qh[]) null;
           tk.a(false, (qh[]) null);
         }
@@ -16,7 +16,7 @@ final class tk {
 
     final static boolean a(int param0) {
         if (param0 != 23403) {
-          tk.b(-66);
+          tk.releaseStatics(-66);
         }
         return FullscreenFocusCanvas.field_e.a(false);
     }

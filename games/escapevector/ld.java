@@ -19,8 +19,8 @@ class ld extends vj {
         }
     }
 
-    public static void b(byte param0) {
-        if (param0 != -71) {
+    public static void releaseStatics(byte guard) {
+        if (guard != -71) {
           Sprite[] var2 = (Sprite[]) null;
           ld.a(9, (Sprite[]) null, 60, -23, 39, -65);
         }
@@ -83,26 +83,26 @@ class ld extends vj {
               var19 = param0 * var8 / (var9 + var8) + param3;
               var18 = param0 * var8 / (var9 + var8) + param3;
             }
-            SoftwareRasterizer.a(kf.field_o);
+            SoftwareRasterizer.a(NameAvailabilityValidator.field_o);
             if (null != param1[0]) {
               SoftwareRasterizer.h(param4, param3, var16, var18);
               param1[0].e(param4, param3);
-              SoftwareRasterizer.b(kf.field_o);
+              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
             if (param1[2] != null) {
               SoftwareRasterizer.h(var17, param3, var10, var18);
               param1[2].e(var13, param3);
-              SoftwareRasterizer.b(kf.field_o);
+              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
             if (param1[6] != null) {
               SoftwareRasterizer.h(param4, var19, var16, var11);
               param1[6].e(param4, var15);
-              SoftwareRasterizer.b(kf.field_o);
+              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
             if (null != param1[8]) {
               SoftwareRasterizer.h(var17, var19, var10, var11);
               param1[8].e(var13, var15);
-              SoftwareRasterizer.b(kf.field_o);
+              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
             if (null != param1[1] &&
               0 != param1[1].fullWidth) {
@@ -110,7 +110,7 @@ class ld extends vj {
               for (int var20 = var12; var20 < var13; var20 = var20 + param1[1].fullWidth) {
                 param1[1].e(var20, param3);
               }
-              SoftwareRasterizer.b(kf.field_o);
+              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
             if (null != param1[7] &&
               param1[7].fullWidth != 0) {
@@ -118,7 +118,7 @@ class ld extends vj {
               for (int var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param1[7].fullWidth) {
                 param1[7].e(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.b(kf.field_o);
+              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
             if (null != param1[3] &&
               param1[3].fullHeight != 0) {
@@ -126,7 +126,7 @@ class ld extends vj {
               for (int var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param1[3].fullHeight) {
                 param1[3].e(param4, var20Lifetime2);
               }
-              SoftwareRasterizer.b(kf.field_o);
+              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
             if (param1[5] != null &&
               param1[5].fullHeight != 0) {
@@ -134,7 +134,7 @@ class ld extends vj {
               for (int var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param1[5].fullHeight) {
                 param1[5].e(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.b(kf.field_o);
+              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
             if (param1[param2] != null &&
               0 != param1[4].fullWidth &&
@@ -145,7 +145,7 @@ class ld extends vj {
                   param1[4].e(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.b(kf.field_o);
+              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
               return;
             }
             return;

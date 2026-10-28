@@ -46,10 +46,10 @@ final class w extends vg {
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int guard) {
         field_fb = null;
         field_hb = null;
-        if (param0 == 300) {
+        if (guard == 300) {
           field_ab = null;
           field_bb = null;
           return;

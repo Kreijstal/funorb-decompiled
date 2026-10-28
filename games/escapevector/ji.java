@@ -50,11 +50,11 @@ final class ji {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (param0 != 2097152) {
+        if (guard != 2097152) {
           field_a = (String) null;
         }
     }

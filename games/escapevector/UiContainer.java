@@ -26,12 +26,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_C = null;
         field_z = null;
         field_D = null;
         field_F = null;
-        if (param0 != -68) {
+        if (guard != -68) {
           field_F = (int[]) null;
         }
         field_B = null;
@@ -279,7 +279,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
     final static int a(int param0, int param1, int param2) {
         int var4 = -53 / ((param0 - 70) / 45);
         int var3 = param2 / 2500;
-        var3 = kf.a(106, param1, var3);
+        var3 = NameAvailabilityValidator.a(106, param1, var3);
         return var3;
     }
 

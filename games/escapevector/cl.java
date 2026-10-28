@@ -56,7 +56,7 @@ final class cl {
         return cl.a(var4);
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_e = (float[][]) null;
         field_b = (int[][]) null;
     }

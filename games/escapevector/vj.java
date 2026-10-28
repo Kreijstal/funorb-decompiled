@@ -7,8 +7,8 @@ abstract class vj {
     static volatile int field_b;
     static int field_a;
 
-    public static void a(int param0) {
-        if (param0 > -99) {
+    public static void releaseStatics(int guard) {
+        if (guard > -99) {
           return;
         }
         field_c = null;

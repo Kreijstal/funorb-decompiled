@@ -20,7 +20,7 @@ final class gl extends jl {
               JavaScriptBridge.callWindowFunctionWithArguments((byte) 119, param1, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
               JavaScriptBridge.callWindowFunctionWithArguments((byte) 107, param1, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
               if (param0 != 15) {
-                gl.b(true);
+                gl.releaseStatics(true);
               }
               JavaScriptBridge.callWindowFunctionWithArguments((byte) 112, param1, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
               JavaScriptBridge.callWindowFunctionWithArguments((byte) 110, param1, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
@@ -50,9 +50,9 @@ final class gl extends jl {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_s = null;
-        if (param0) {
+        if (guard) {
           return;
         }
         field_r = null;
@@ -115,7 +115,7 @@ final class gl extends jl {
             return;
           }
           if (param0 != -1) {
-            gl.b(true);
+            gl.releaseStatics(true);
           }
           String[] var10 = param3;
           String[] var6 = var10;
@@ -152,7 +152,7 @@ final class gl extends jl {
           return;
         }
         if (param1 != 3) {
-          gl.b(false);
+          gl.releaseStatics(false);
         }
         int var3 = this.field_h.field_r;
         param0 = param0 + var3;

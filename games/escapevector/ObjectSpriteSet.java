@@ -24,7 +24,7 @@ final class ObjectSpriteSet {
           SpriteOffset var13 = rc.a(param1, (byte) 120, var9, var12);
           SpriteOffset var10 = this.a(param1, param2.fullHeight, -29295, param2.fullWidth);
           if (param0 <= 21) {
-            ObjectSpriteSet.a(104);
+            ObjectSpriteSet.releaseStatics(104);
           }
           Sprite var11 = new Sprite(var10.x, var10.y);
           SoftwareRasterizer.a(oi.field_M);
@@ -82,12 +82,12 @@ final class ObjectSpriteSet {
         return new SpriteOffset(var5, var6);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_d = null;
         field_c = null;
         field_e = null;
-        if (param0 < 120) {
-          ObjectSpriteSet.a(53);
+        if (guard < 120) {
+          ObjectSpriteSet.releaseStatics(53);
         }
     }
 

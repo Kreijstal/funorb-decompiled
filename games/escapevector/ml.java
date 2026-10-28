@@ -10,13 +10,13 @@ final class ml {
         if (param1 != 21654) {
           ik var3 = (ik) null;
           ml.a((ik) null, -66, (byte) -72);
-          return d.a(param0, -11217);
+          return EmailAvailabilityRequest.a(param0, -11217);
         }
-        return d.a(param0, -11217);
+        return EmailAvailabilityRequest.a(param0, -11217);
     }
 
-    public static void a(int param0) {
-        if (param0 >= -112) {
+    public static void releaseStatics(int guard) {
+        if (guard >= -112) {
           return;
         }
         field_c = null;
@@ -64,7 +64,7 @@ final class ml {
           vj.field_d.addLast(-12328, param0);
           ig.a(-75, param1, param0);
           if (param2 != 101) {
-            ml.a(-42);
+            ml.releaseStatics(-42);
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ml.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

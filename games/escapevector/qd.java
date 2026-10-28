@@ -56,8 +56,8 @@ final class qd extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
-        if (param0) {
+    public static void releaseStatics(boolean guard) {
+        if (guard) {
           return;
         }
         field_n = null;
@@ -96,9 +96,9 @@ final class qd extends IntrusiveNode {
             if (var1 == 1) {
               dj.field_b = cf.field_a;
             } else {
-              dj.field_b = r.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
+              dj.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }
-            dj.field_b = Js5NetworkRequest.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
+            dj.field_b = Js5NetworkRequest.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }
           be.field_b.o(-18861);
           ImageProducerRasterBuffer.d(32);
@@ -114,9 +114,9 @@ final class qd extends IntrusiveNode {
             if (var1 == 1) {
               dj.field_b = cf.field_a;
             } else {
-              dj.field_b = r.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
+              dj.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }
-            dj.field_b = Js5NetworkRequest.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
+            dj.field_b = Js5NetworkRequest.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }
           be.field_b.o(-18861);
           ImageProducerRasterBuffer.d(32);

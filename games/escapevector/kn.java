@@ -36,11 +36,11 @@ final class kn {
         this.field_a[param0] = param1;
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_f = null;
         field_c = null;
         field_h = null;
-        if (!param0) {
+        if (!guard) {
           kn.a((byte) 76);
         }
     }
@@ -74,7 +74,7 @@ final class kn {
     }
 
     final static void a(byte param0) {
-        mb.field_g = hi.c(false);
+        mb.field_g = EmailSyntaxValidator.c(false);
         bo.field_F = new tb();
         if (param0 > -21) {
           return;

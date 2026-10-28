@@ -15,7 +15,7 @@ final class id {
           kb.field_d = 0;
           IndexedSpriteState.a(-124);
           if (param0 < 115) {
-            id.b(109);
+            id.releaseStatics(109);
           }
           Sprite var2 = var1.copy();
           for (int var3 = 0; var3 < 15; var3++) {
@@ -36,9 +36,9 @@ final class id {
         IntKeyLookup.field_e = param0 * param1 / 150;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_b = (byte[][]) null;
-        if (param0 != -17129) {
+        if (guard != -17129) {
           return;
         }
         field_a = null;

@@ -12,10 +12,10 @@ abstract class fh {
     static String[][] field_c;
     static ih field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_i = null;
         field_f = null;
-        if (param0 == 86) {
+        if (guard == 86) {
           field_b = null;
           field_h = null;
           field_d = null;
@@ -30,7 +30,7 @@ abstract class fh {
 
     final static void b(int param0) {
         if (param0 > -27) {
-          fh.a((byte) 2);
+          fh.releaseStatics((byte) 2);
           WhirlpoolHasher.a(17, 27);
           return;
         }

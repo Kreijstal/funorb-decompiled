@@ -133,7 +133,7 @@ final class he extends TextWidgetPainter {
             }
           }
           if (guard >= -14) {
-            he.a(true);
+            he.releaseStatics(true);
           }
           this.field_t.a(this, component, originX, originY, (byte) 21);
           dl.a((byte) -8);
@@ -167,7 +167,7 @@ final class he extends TextWidgetPainter {
           if (param1 > 65) {
             return;
           }
-          he.a(true);
+          he.releaseStatics(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -215,11 +215,11 @@ final class he extends TextWidgetPainter {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_v = null;
         field_u = null;
         field_q = null;
-        if (!param0) {
+        if (!guard) {
           return;
         }
         field_s = null;
@@ -239,7 +239,7 @@ final class he extends TextWidgetPainter {
         String stackIn_19_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          super.a(param2, 127);
+          super.copyStyleTo(param2, 127);
           if (param0) {
             for (int var4_int = 0; var4_int < 6; var4_int++) {
               ef var5 = this.field_w[var4_int];

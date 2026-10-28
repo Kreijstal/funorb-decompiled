@@ -59,8 +59,8 @@ final class rd {
         }
     }
 
-    public static void a(int param0) {
-        int var1 = -2 % ((param0 - 10) / 48);
+    public static void releaseStatics(int guard) {
+        int var1 = -2 % ((guard - 10) / 48);
         field_b = null;
         field_c = null;
     }

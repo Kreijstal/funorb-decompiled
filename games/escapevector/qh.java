@@ -68,7 +68,7 @@ final class qh {
           hb.field_b = new Sprite[7][3];
           qi.field_M = new Sprite[7][3];
           if (param1 != -23) {
-            qh.a(-112);
+            qh.releaseStatics(-112);
           }
           for (int var2_int = 0; on.field_f.length > var2_int; var2_int++) {
             String var3 = on.field_f[var2_int];
@@ -76,7 +76,7 @@ final class qh {
               var3.length() != 0) {
               String var4 = "";
               hb.field_b[var2_int] = kh.a(param0, (byte) -112, var4, var3);
-              String var5 = lm.field_b[var2_int];
+              String var5 = NameAvailabilityResult.field_b[var2_int];
               if (var5 != null &&
                 var5.length() != 0) {
                 qi.field_M[var2_int] = kh.a(param0, (byte) -10, var4, var5);
@@ -109,8 +109,8 @@ final class qh {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 7) {
+    public static void releaseStatics(int guard) {
+        if (guard != 7) {
           return;
         }
         field_j = null;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb extends TextFieldValidator {
+final class MatchingTextValidator extends TextFieldValidator {
     static String[] field_n;
     private EditableTextWidget field_o;
 
-    public static void g(int param0) {
-        if (param0 != -17318) {
+    public static void releaseStatics(int guard) {
+        if (guard != -17318) {
           return;
         }
         field_n = null;
@@ -15,8 +15,8 @@ final class lb extends TextFieldValidator {
     final String messageForText(byte guard, String text) {
         String stackIn_18_2 = null;
         try {
-          if (this.field_o instanceof og) {
-            ValidationSource var3 = ((og) ((Object) this.field_o)).a((byte) -89);
+          if (this.field_o instanceof ValidationProvider) {
+            ValidationSource var3 = ((ValidationProvider) ((Object) this.field_o)).validator((byte) -89);
             if (var3 != null) {
               if (var3.validationState(17124) == IsaacRandom.field_h &&
                 !text.equals(this.field_o.text)) {
@@ -54,8 +54,8 @@ final class lb extends TextFieldValidator {
           if (guard != -1) {
             field_n = (String[]) null;
           }
-          if (this.field_o instanceof og) {
-            ValidationSource var3 = ((og) ((Object) this.field_o)).a((byte) -89);
+          if (this.field_o instanceof ValidationProvider) {
+            ValidationSource var3 = ((ValidationProvider) ((Object) this.field_o)).validator((byte) -89);
             if (var3 != null &&
               var3.validationState(17124) != IsaacRandom.field_h) {
               ValidationState stackIn_6_0 = ArchiveProvider.field_a;
@@ -115,7 +115,7 @@ final class lb extends TextFieldValidator {
         }
     }
 
-    lb(EditableTextWidget param0, EditableTextWidget param1) {
+    MatchingTextValidator(EditableTextWidget param0, EditableTextWidget param1) {
         super(param0);
         try {
           this.field_o = param1;

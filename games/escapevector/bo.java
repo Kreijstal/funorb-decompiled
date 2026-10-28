@@ -10,15 +10,15 @@ final class bo extends TextButton {
     static int[] field_H;
     static byte[] field_G;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void notifyAction(int guard, int localY, int localX, int buttonCode) {
         this.field_z = !this.field_z ? true : false;
-        if (param0 == -19646) {
-          super.a(param0 ^ 0, param1, param2, param3);
+        if (guard == -19646) {
+          super.notifyAction(guard ^ 0, localY, localX, buttonCode);
           return;
         }
         java.awt.Canvas var6 = (java.awt.Canvas) null;
         bo.a((java.awt.Canvas) null, (byte) 126);
-        super.a(param0 ^ 0, param1, param2, param3);
+        super.notifyAction(guard ^ 0, localY, localX, buttonCode);
     }
 
     private bo(String param0, WidgetPainter param1, UiListener param2) {
@@ -30,11 +30,11 @@ final class bo extends TextButton {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_H = null;
         field_F = null;
         field_D = null;
-        if (param0 <= 17) {
+        if (guard <= 17) {
           return;
         }
         field_G = null;

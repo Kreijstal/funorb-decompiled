@@ -11,8 +11,8 @@ final class sk {
     private Js5Transport field_f;
     private java.math.BigInteger field_g;
 
-    public static void b(boolean param0) {
-        if (!param0) {
+    public static void releaseStatics(boolean guard) {
+        if (!guard) {
           field_d = (SystemTask) null;
           field_d = null;
           return;

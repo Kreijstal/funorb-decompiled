@@ -1170,7 +1170,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         pixels = null;
         field_c = null;
         field_f = null;

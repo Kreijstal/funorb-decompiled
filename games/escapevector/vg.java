@@ -36,8 +36,8 @@ abstract class vg extends bb {
         int var2 = 15 / ((param0 - 45) / 53);
     }
 
-    public static void i(byte param0) {
-        if (param0 != -112) {
+    public static void releaseStatics(byte guard) {
+        if (guard != -112) {
           return;
         }
         field_T = null;

@@ -8,10 +8,10 @@ final class gk {
     static String field_b;
     static boolean field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_b = null;
         field_a = null;
-        int var1 = -1 / ((-32 - param0) / 60);
+        int var1 = -1 / ((-32 - guard) / 60);
     }
 
     final static void a(int param0, java.applet.Applet param1) {

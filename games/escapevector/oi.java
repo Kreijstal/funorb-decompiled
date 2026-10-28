@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi extends UiContainer implements qn, ButtonListener {
-    private gd field_I;
+final class oi extends UiContainer implements NameSuggestionListener, ButtonListener {
+    private ValidatedTextWidget field_I;
     static Sprite field_O;
-    rh field_K;
+    NameSuggestionsPanel field_K;
     private TextButton field_G;
     static int[] field_M;
     private TextButton field_H;
@@ -23,10 +23,10 @@ final class oi extends UiContainer implements qn, ButtonListener {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_N = null;
         field_O = null;
-        if (param0 > 61) {
+        if (guard > 61) {
           field_J = null;
           field_L = null;
           field_M = null;
@@ -60,7 +60,7 @@ final class oi extends UiContainer implements qn, ButtonListener {
           }
           ki var10 = new ki(20, param3, 120 + param6, 25, param4, false, 120, 3, Js5Transport.field_a, 16777215, param1);
           this.b(var10, false);
-          lf var9 = new lf(((og) ((Object) param4)).a((byte) -89), param5, 126, var10.height + param3, 25 + param6, param2);
+          lf var9 = new lf(((ValidationProvider) ((Object) param4)).validator((byte) -89), param5, 126, var10.height + param3, 25 + param6, param2);
           var9.listener = (UiListener) (this);
           this.b(var9, false);
           int stackIn_3_0 = var10.height + var9.height;
@@ -136,11 +136,11 @@ final class oi extends UiContainer implements qn, ButtonListener {
         }
     }
 
-    public final void a(byte param0) {
-        if (param0 != -61) {
+    public final void onMoreSuggestions(byte guard) {
+        if (guard != -61) {
           return;
         }
-        ((kf) (this.field_I.a((byte) -89))).g(param0 + 22247);
+        ((NameAvailabilityValidator) (this.field_I.validator((byte) -89))).g(guard + 22247);
     }
 
     final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
@@ -152,10 +152,10 @@ final class oi extends UiContainer implements qn, ButtonListener {
         }
     }
 
-    private final boolean a(og param0, int param1) {
+    private final boolean a(ValidationProvider param0, int param1) {
         String stackIn_13_2 = null;
         try {
-          ValidationSource var3 = param0.a((byte) -89);
+          ValidationSource var3 = param0.validator((byte) -89);
           if (var3 == null) {
             return true;
           }
@@ -215,16 +215,16 @@ final class oi extends UiContainer implements qn, ButtonListener {
         }
     }
 
-    public final void a(byte param0, String param1) {
+    public final void onNameSelected(byte guard, String name) {
         try {
-          if (param0 >= -49) {
-            this.a((byte) -79);
+          if (guard >= -49) {
+            this.onMoreSuggestions((byte) -79);
           }
-          gd var3 = this.field_I;
-          String var4 = param1;
-          ((EditableTextWidget) ((Object) var3)).a(var4, false, -33);
+          ValidatedTextWidget var3 = this.field_I;
+          String var4 = name;
+          ((EditableTextWidget) ((Object) var3)).setText(var4, false, -33);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oi.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "oi.J(" + guard + ',' + (name != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -299,13 +299,13 @@ final class oi extends UiContainer implements qn, ButtonListener {
 
     public oi() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_I = new gd("", (UiListener) null, 12);
+        this.field_I = new ValidatedTextWidget("", (UiListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(ke.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.field_r, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(DebouncedValidator.field_a, var1, (UiListener) null);
         this.field_G = new TextButton(TextFieldValidator.field_i, (UiListener) null);
         this.field_H = new TextButton(cf.field_b, (UiListener) null);
         this.field_I.tooltip = bb.field_K;
-        this.field_I.a(new kf(this.field_I), (byte) 63);
+        this.field_I.setValidator(new NameAvailabilityValidator(this.field_I), (byte) 63);
         this.field_G.enabled = false;
         this.field_G.painter = (WidgetPainter) ((Object) new ck());
         this.field_H.painter = (WidgetPainter) ((Object) new ha());
@@ -323,7 +323,7 @@ final class oi extends UiContainer implements qn, ButtonListener {
         this.field_G.listener = (UiListener) (this);
         this.b(this.field_G, false);
         this.b(this.field_H, false);
-        this.field_K = new rh((qn) (this));
+        this.field_K = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_K.setBounds(-this.field_I.width + this.width + (-this.field_I.x - 60), 20, this.field_I.x + (this.field_I.width + 60), true, 150);
         this.b(this.field_K, false);
         this.setBounds(496, 0, 0, true, var4 + var3 + 55);

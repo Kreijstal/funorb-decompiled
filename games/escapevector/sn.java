@@ -21,10 +21,10 @@ final class sn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_b = null;
         field_c = null;
-        if (param0 > -66) {
+        if (guard > -66) {
           field_c = (ResourceArchive) null;
         }
     }
@@ -50,17 +50,17 @@ final class sn {
             for (var5 = 0; var5 < var4; var5++) {
               jj.field_a[var5] = -1;
             }
-            wh.field_j = new int[2];
+            CachedTextLayout.field_j = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
               Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
             }
             Js5NetworkRequest.field_I[var4 - 3] = "";
             Js5NetworkRequest.field_I[var4 - 2] = lh.field_a;
             jj.field_a[-2 + var4] = 0;
-            wh.field_j[0] = 4;
+            CachedTextLayout.field_j[0] = 4;
             Js5NetworkRequest.field_I[var4 - 1] = TextFieldValidator.field_k;
             jj.field_a[-1 + var4] = 1;
-            wh.field_j[1] = 5;
+            CachedTextLayout.field_j[1] = 5;
           } else if (ArchiveIndex.field_j == 1) {
             var3_int = un.a(pf.field_e, -126, nb.field_a, Js5Transport.field_h, ac.field_a);
             var4 = 2 + var3_int;
@@ -69,14 +69,14 @@ final class sn {
             for (var5 = 0; var4 > var5; var5++) {
               jj.field_a[var5] = -1;
             }
-            wh.field_j = new int[1];
+            CachedTextLayout.field_j = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
             }
             Js5NetworkRequest.field_I[-2 + var4] = "";
             Js5NetworkRequest.field_I[-1 + var4] = TextFieldValidator.field_k;
             jj.field_a[var4 - 1] = 0;
-            wh.field_j[0] = 5;
+            CachedTextLayout.field_j[0] = 5;
           } else if (ArchiveIndex.field_j != 2) {
             if (ArchiveIndex.field_j == 3) {
               if (!NetworkGameClient.field_r.field_f) {
@@ -90,14 +90,14 @@ final class sn {
               for (var5 = 0; var4 > var5; var5++) {
                 jj.field_a[var5] = -1;
               }
-              wh.field_j = new int[1];
+              CachedTextLayout.field_j = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
               }
               Js5NetworkRequest.field_I[-2 + var4] = "";
               Js5NetworkRequest.field_I[-1 + var4] = TextFieldValidator.field_k;
               jj.field_a[var4 - 1] = 0;
-              wh.field_j[0] = 5;
+              CachedTextLayout.field_j[0] = 5;
             } else if (ArchiveIndex.field_j == 4) {
               var3_int = un.a(pf.field_e, -110, nb.field_a, Js5Transport.field_h, ol.field_K);
               var4 = var3_int + 2;
@@ -106,14 +106,14 @@ final class sn {
               for (var5 = 0; var4 > var5; var5++) {
                 jj.field_a[var5] = -1;
               }
-              wh.field_j = new int[1];
+              CachedTextLayout.field_j = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
               }
               Js5NetworkRequest.field_I[var4 - 2] = "";
               Js5NetworkRequest.field_I[-1 + var4] = TextFieldValidator.field_k;
               jj.field_a[var4 - 1] = 0;
-              wh.field_j[0] = 5;
+              CachedTextLayout.field_j[0] = 5;
             } else {
               if (5 != ArchiveIndex.field_j) {
                 throw new IllegalArgumentException();
@@ -125,20 +125,20 @@ final class sn {
               for (var5 = 0; var4 > var5; var5++) {
                 jj.field_a[var5] = -1;
               }
-              wh.field_j = new int[2];
+              CachedTextLayout.field_j = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
                 Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
               }
               Js5NetworkRequest.field_I[var4 - 3] = "";
               Js5NetworkRequest.field_I[-2 + var4] = ve.field_f;
               jj.field_a[var4 - 2] = 0;
-              wh.field_j[0] = 3;
+              CachedTextLayout.field_j[0] = 3;
               Js5NetworkRequest.field_I[-1 + var4] = TextFieldValidator.field_k;
               jj.field_a[-1 + var4] = 1;
-              wh.field_j[1] = 5;
+              CachedTextLayout.field_j[1] = 5;
             }
           } else {
-            var3_int = un.a(pf.field_e, -101, nb.field_a, Js5Transport.field_h, r.a(SpriteOffset.field_d, -63, new String[]{"<br><%0><br>"}));
+            var3_int = un.a(pf.field_e, -101, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(SpriteOffset.field_d, -63, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(pf.field_e[var5])) {
@@ -155,7 +155,7 @@ final class sn {
             nn.field_i = new String[-1 - var4 + var3_int];
             qg.a(pf.field_e, 1 + var4, nn.field_i, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = un.a(pf.field_e, param1 ^ 71, nb.field_a, Js5Transport.field_h, r.a(al.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
+            var3_int = un.a(pf.field_e, param1 ^ 71, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(al.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(pf.field_e[var5])) {
                 continue;
@@ -188,17 +188,17 @@ final class sn {
             for (int var8 = 0; var8 < var7; var8++) {
               jj.field_a[var8] = -1;
             }
-            wh.field_j = new int[2];
+            CachedTextLayout.field_j = new int[2];
             jj.field_a[1] = 0;
             Js5NetworkRequest.field_I[1] = jh.field_j;
             Js5NetworkRequest.field_I[0] = td.field_a;
             Js5NetworkRequest.field_I[2] = bb.field_I;
-            wh.field_j[0] = 5;
+            CachedTextLayout.field_j[0] = 5;
             jj.field_a[3] = 1;
             Js5NetworkRequest.field_I[5] = "";
             Js5NetworkRequest.field_I[4] = p.field_e;
             Js5NetworkRequest.field_I[3] = bb.field_J;
-            wh.field_j[1] = 2;
+            CachedTextLayout.field_j[1] = 2;
             for (int var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               String[] stackIn_62_0 = Js5NetworkRequest.field_I;
               int stackIn_62_1 = 6 + var8Lifetime2;
@@ -225,7 +225,7 @@ final class sn {
             }
             bd.field_k = td.b(128);
           }
-          cb.field_c.field_k = wh.field_j.length;
+          cb.field_c.field_k = CachedTextLayout.field_j.length;
           int var3_intLifetime1 = 0;
           for (int var4Lifetime1 = 0; var4Lifetime1 < Js5NetworkRequest.field_I.length; var4Lifetime1++) {
             int stackIn_90_0 = 25;
@@ -267,10 +267,10 @@ final class sn {
             }
             mh.field_f = stackIn_112_0 + stackIn_113_1;
           }
-          hi.field_o = ng.field_nb - (mh.field_f >> 1);
+          EmailSyntaxValidator.field_o = ng.field_nb - (mh.field_f >> 1);
           cj.field_d = new int[Js5NetworkRequest.field_I.length][];
           int var4Lifetime3 = 0;
-          int var5Lifetime3 = hi.field_o;
+          int var5Lifetime3 = EmailSyntaxValidator.field_o;
           while (Js5NetworkRequest.field_I.length > var4Lifetime3) {
             int var6Lifetime1 = jj.field_a[var4Lifetime3];
             if (var6Lifetime1 >= 0) {

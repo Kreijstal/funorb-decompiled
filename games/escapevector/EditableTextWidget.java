@@ -42,7 +42,7 @@ class EditableTextWidget extends TextButton {
                   this.field_L = this.field_L + 1;
                   this.field_P = this.field_L;
                 }
-                this.a(false);
+                this.notifyTextChanged(false);
               }
               return true;
             }
@@ -83,7 +83,7 @@ class EditableTextWidget extends TextButton {
                   return true;
                 }
                 if (keyCode == 84) {
-                  this.n(0);
+                  this.notifySubmit(0);
                   return true;
                 }
                 if (ik.field_h[82] &&
@@ -138,25 +138,25 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    private final String l(int param0) {
+    private final String selectedText(int guard) {
         int var2 = this.field_P < this.field_L ? this.field_P : this.field_L;
-        if (param0 == 100) {
+        if (guard == 100) {
           int var3 = this.field_L > this.field_P ? this.field_L : this.field_P;
           return this.text.substring(var2, var3);
         }
         return (String) null;
     }
 
-    void a(boolean param0) {
+    void notifyTextChanged(boolean guard) {
         if (this.listener instanceof TextInputListener) {
           ((TextInputListener) (this.listener)).onTextChanged(this, 0);
-          if (param0) {
+          if (guard) {
             field_O = (TrackerMusicDefinition) null;
             return;
           }
           return;
         }
-        if (!param0) {
+        if (!guard) {
           return;
         }
         field_O = (TrackerMusicDefinition) null;
@@ -216,32 +216,32 @@ class EditableTextWidget extends TextButton {
         return stackIn_5_0;
     }
 
-    private final void n(int param0) {
+    private final void notifySubmit(int guard) {
         if (this.listener instanceof TextInputListener) {
           ((TextInputListener) (this.listener)).onSubmit(true, this);
-          if (param0 != 0) {
+          if (guard != 0) {
             EditableTextWidget.a(-65, 47, 47);
             return;
           }
           return;
         }
-        if (param0 == 0) {
+        if (guard == 0) {
           return;
         }
         EditableTextWidget.a(-65, 47, 47);
     }
 
-    final void a(String param0, boolean param1, int param2) {
+    final void setText(String text, boolean suppressNotification, int guard) {
         String stackIn_15_2 = null;
         try {
-          if (param2 != -33) {
+          if (guard != -33) {
             this.h((byte) 111);
           }
-          if (param0 == null) {
-            param0 = "";
+          if (text == null) {
+            text = "";
           }
-          this.text = param0;
-          int var4_int = param0.length();
+          this.text = text;
+          int var4_int = text.length();
           if (this.field_H != -1 &&
             var4_int > this.field_H) {
             this.text = this.text.substring(0, this.field_H);
@@ -249,22 +249,22 @@ class EditableTextWidget extends TextButton {
           int dupTemp$1 = this.text.length();
           this.field_P = dupTemp$1;
           this.field_L = dupTemp$1;
-          if (param1) {
+          if (suppressNotification) {
             return;
           }
-          this.a(false);
+          this.notifyTextChanged(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_14_0 = var4;
           StringBuilder stackIn_14_1 = new StringBuilder().append("ul.DA(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(suppressNotification).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ class EditableTextWidget extends TextButton {
           }
           this.field_L = this.field_L + param1.length();
           this.field_P = this.field_L;
-          this.a(false);
+          this.notifyTextChanged(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -314,7 +314,7 @@ class EditableTextWidget extends TextButton {
           if (!(this.painter instanceof WidgetTextLayout)) {
             return false;
           }
-          int var8_int = ((WidgetTextLayout) ((Object) this.painter)).a(offsetX, offsetY, UiContainer.field_y, dh.field_d, 118, (UiComponent) (this));
+          int var8_int = ((WidgetTextLayout) ((Object) this.painter)).characterIndexAtPosition(offsetX, offsetY, UiContainer.field_y, dh.field_d, 118, (UiComponent) (this));
           stackIn_6_1 = (var8_int == -1) ? (0) : (var8_int);
           this.b(stackIn_6_1, 61);
           long var8_long = td.b(guard + 125);
@@ -349,7 +349,7 @@ class EditableTextWidget extends TextButton {
         String stackIn_9_2 = null;
         try {
           if (param3 <= 3) {
-            EditableTextWidget.f((byte) -115);
+            EditableTextWidget.releaseStatics((byte) -115);
           }
           if (uc.a(param2, 105, param0, param1)) {
             return al.a((byte) 108);
@@ -384,9 +384,9 @@ class EditableTextWidget extends TextButton {
         return var2;
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_O = null;
-        if (param0 > -52) {
+        if (guard > -52) {
           field_O = (TrackerMusicDefinition) null;
           field_E = null;
           field_I = null;
@@ -398,7 +398,7 @@ class EditableTextWidget extends TextButton {
 
     private final void b(int param0, int param1) {
         if (param1 < 17) {
-          EditableTextWidget.f((byte) -102);
+          EditableTextWidget.releaseStatics((byte) -102);
           this.field_L = param0;
           if (!ik.field_h[81]) {
             this.field_P = this.field_L;
@@ -424,10 +424,10 @@ class EditableTextWidget extends TextButton {
           return;
         }
         WidgetTextLayout var9 = (WidgetTextLayout) ((Object) this.painter);
-        TextLayout var3 = var9.b((UiComponent) (this), 90);
-        int var4 = var3.a((byte) -112);
-        int var5 = var9.a((UiComponent) (this), -25033);
-        int var6 = var9.a(115) >> 1;
+        TextLayout var3 = var9.ensureTextLayout((UiComponent) (this), 90);
+        int var4 = var3.maximumLineWidth((byte) -112);
+        int var5 = var9.contentWidth((UiComponent) (this), -25033);
+        int var6 = var9.lineHeight(115) >> 1;
         if (var5 - var6 > var4) {
           this.field_n = 0;
           this.field_v = 0;
@@ -436,7 +436,7 @@ class EditableTextWidget extends TextButton {
         if (param0 != -22686) {
           return;
         }
-        int var7 = this.field_n + var3.a((byte) -79, this.field_L);
+        int var7 = this.field_n + var3.characterX((byte) -79, this.field_L);
         if (var5 - var6 < var7) {
           this.field_n = this.field_n - (var7 + (-var5 + var6));
         } else if (var7 < var6) {
@@ -464,7 +464,7 @@ class EditableTextWidget extends TextButton {
           if (param0 >= 34) {
             return;
           }
-          EditableTextWidget.f((byte) 49);
+          EditableTextWidget.releaseStatics((byte) 49);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -490,7 +490,7 @@ class EditableTextWidget extends TextButton {
           this.field_L = var2;
           this.field_P = var2;
           this.text = this.text.substring(0, var2) + this.text.substring(var3, this.text.length());
-          this.a(false);
+          this.notifyTextChanged(false);
         }
         if (param0 == 0) {
           return;
@@ -527,7 +527,7 @@ class EditableTextWidget extends TextButton {
         try {
           this.painter = mb.field_g.field_p;
           this.field_H = param2;
-          this.a(param0, true, -33);
+          this.setText(param0, true, -33);
           this.field_J = true;
           this.field_G = td.b(128);
         } catch (RuntimeException runtimeException) {
@@ -545,7 +545,7 @@ class EditableTextWidget extends TextButton {
           if (this.field_t == 1) {
             if (this.painter instanceof WidgetTextLayout) {
               WidgetTextLayout var7 = (WidgetTextLayout) ((Object) this.painter);
-              int var6 = var7.a(offsetX, offsetY, UiContainer.field_y, dh.field_d, guard + 14560, (UiComponent) (this));
+              int var6 = var7.characterIndexAtPosition(offsetX, offsetY, UiContainer.field_y, dh.field_d, guard + 14560, (UiComponent) (this));
               if (var6 != -1) {
                 if (this.field_M && this.field_N > var6 &&
                   var6 > this.field_P) {
@@ -566,27 +566,27 @@ class EditableTextWidget extends TextButton {
         this.field_P = 0;
         this.field_L = 0;
         if (param0 == -29) {
-          this.a(false);
+          this.notifyTextChanged(false);
           return;
         }
         UiComponent var3 = (UiComponent) null;
         this.onPointerPressed(-33, 14, (byte) 69, 46, -80, (UiComponent) null, 28);
-        this.a(false);
+        this.notifyTextChanged(false);
     }
 
     private final void e(byte param0) {
         try {
           if (param0 > 86) {
-            String var2 = this.l(100);
+            String var2 = this.selectedText(100);
             if (!(var2.length() <= 0)) {
-              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.l(100))), (java.awt.datatransfer.ClipboardOwner) null);
+              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.selectedText(100))), (java.awt.datatransfer.ClipboardOwner) null);
             }
             return;
           }
           this.field_L = -80;
-          String var2Lifetime1 = this.l(100);
+          String var2Lifetime1 = this.selectedText(100);
           if (!(var2Lifetime1.length() <= 0)) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.l(100))), (java.awt.datatransfer.ClipboardOwner) null);
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.selectedText(100))), (java.awt.datatransfer.ClipboardOwner) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -609,13 +609,13 @@ class EditableTextWidget extends TextButton {
           }
           WidgetTextLayout var10 = (WidgetTextLayout) ((Object) this.painter);
           if (this.field_P != this.field_L) {
-            var10.a(screenX, this.field_L, (UiComponent) (this), this.field_P, -613528456, screenY);
+            var10.drawSelection(screenX, this.field_L, (UiComponent) (this), this.field_P, -613528456, screenY);
           }
           long var6 = td.b(128);
           if (500L <= (-this.field_G + var6) % 1000L) {
             return;
           }
-          var10.a((UiComponent) (this), this.field_L, screenX, screenY, true);
+          var10.drawCaret((UiComponent) (this), this.field_L, screenX, screenY, true);
           return;
         }
         this.field_H = -76;
@@ -632,13 +632,13 @@ class EditableTextWidget extends TextButton {
         WidgetTextLayout var9 = (WidgetTextLayout) ((Object) this.painter);
         WidgetTextLayout var8 = var9;
         if (this.field_P != this.field_L) {
-          var9.a(screenX, this.field_L, (UiComponent) (this), this.field_P, -613528456, screenY);
+          var9.drawSelection(screenX, this.field_L, (UiComponent) (this), this.field_P, -613528456, screenY);
         }
         long var6Lifetime1 = td.b(128);
         if (500L <= (-this.field_G + var6Lifetime1) % 1000L) {
           return;
         }
-        var9.a((UiComponent) (this), this.field_L, screenX, screenY, true);
+        var9.drawCaret((UiComponent) (this), this.field_L, screenX, screenY, true);
         return;
     }
 

@@ -13,8 +13,8 @@ final class qk {
     static int[] field_f;
     String field_c;
 
-    public static void a(byte param0) {
-        int var1 = -8 / ((4 - param0) / 38);
+    public static void releaseStatics(byte guard) {
+        int var1 = -8 / ((4 - guard) / 38);
         field_e = null;
         field_f = null;
         field_a = null;
@@ -32,8 +32,8 @@ final class qk {
     final static void a(int[] param0, int param1) {
         String stackIn_19_2 = null;
         try {
-          if (nk.field_n == 97 ||
-            nk.field_n == 99) {
+          if (PasswordValidator.field_n == 97 ||
+            PasswordValidator.field_n == 99) {
             int var2_int = di.field_d.field_h;
             var2_int++;
             if (var2_int >= param0.length) {
@@ -44,8 +44,8 @@ final class qk {
           if (param1 != 0) {
             field_e = (dn) null;
           }
-          if (96 != nk.field_n &&
-            98 != nk.field_n) {
+          if (96 != PasswordValidator.field_n &&
+            98 != PasswordValidator.field_n) {
             return;
           }
           int var2_intLifetime1 = di.field_d.field_h;

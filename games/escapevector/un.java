@@ -15,21 +15,21 @@ final class un extends re {
         super(param0, param1);
     }
 
-    final String b(byte param0, UiComponent param1) {
+    final String displayText(byte guard, UiComponent component) {
         String stackIn_7_2 = null;
         try {
-          if (param0 != 39) {
+          if (guard != 39) {
             CharSequence var4 = (CharSequence) null;
             un.a((CharSequence) null, 116, 'ﾤ');
           }
-          String stackIn_3_0 = kh.a(param1.text.length(), '*', (byte) 53);
+          String stackIn_3_0 = kh.a(component.text.length(), '*', (byte) 53);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var3;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("un.N(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("un.N(").append(guard).append(',');
+          if (component == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -111,8 +111,8 @@ final class un extends re {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 != -93) {
+    public static void releaseStatics(byte guard) {
+        if (guard != -93) {
           field_u = true;
           field_t = null;
           return;
@@ -165,7 +165,7 @@ final class un extends re {
           }
           try {
             if (ke.field_b == 0) {
-              qk.field_g = IntPoint.field_d.a(kl.field_n, 4, kh.field_c);
+              qk.field_g = IntPoint.field_d.a(AgeValidator.field_n, 4, kh.field_c);
               ke.field_b = ke.field_b + 1;
             }
             if (ke.field_b == 1) {
@@ -178,18 +178,18 @@ final class un extends re {
               }
             }
             if (ke.field_b == 2) {
-              rh.field_I = new pj((java.net.Socket) (qk.field_g.field_b), IntPoint.field_d);
+              NameSuggestionsPanel.field_I = new pj((java.net.Socket) (qk.field_g.field_b), IntPoint.field_d);
               PacketBuffer var2 = new PacketBuffer(13);
-              wc.a(TrackerMusicDefinition.field_j, he.field_y, true, rh.field_N, var2);
+              wc.a(TrackerMusicDefinition.field_j, he.field_y, true, NameSuggestionsPanel.field_N, var2);
               var2.f(15, -123);
               var2.a((byte) 123, mn.field_n);
-              rh.field_I.a(13, 0, var2.payload, 5000);
+              NameSuggestionsPanel.field_I.a(13, 0, var2.payload, 5000);
               ke.field_b = ke.field_b + 1;
               BoundedRandomAccessFile.field_g = 30000L + td.b(128);
             }
             if (ke.field_b == 3) {
-              if (!(rh.field_I.b(-117) <= 0)) {
-                int var1_int = rh.field_I.a(-16650);
+              if (!(NameSuggestionsPanel.field_I.b(-117) <= 0)) {
+                int var1_int = NameSuggestionsPanel.field_I.a(-16650);
                 if (var1_int != 0) {
                   int stackIn_27_0 = gf.a((byte) -78, var1_int);
                   return stackIn_27_0;
@@ -204,10 +204,10 @@ final class un extends re {
               int stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            SelfDestructEffects.field_j.a(rh.field_I, PointCloudEffect.field_t, (byte) -99);
+            SelfDestructEffects.field_j.a(NameSuggestionsPanel.field_I, PointCloudEffect.field_t, (byte) -99);
             qk.field_g = null;
             ke.field_b = 0;
-            rh.field_I = null;
+            NameSuggestionsPanel.field_I = null;
             int stackIn_35_0 = 0;
             return stackIn_35_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

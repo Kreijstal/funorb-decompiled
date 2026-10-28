@@ -171,7 +171,7 @@ final class BufferedRandomAccessFile {
 
     final long a(int param0) {
         if (param0 != 16034) {
-          BufferedRandomAccessFile.b((byte) -75);
+          BufferedRandomAccessFile.releaseStatics((byte) -75);
         }
         return this.field_e;
     }
@@ -201,9 +201,9 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_c = null;
-        int var1 = -78 / ((-11 - param0) / 41);
+        int var1 = -78 / ((-11 - guard) / 41);
     }
 
     final void a(int param0, int param1, byte param2, byte[] param3) throws IOException {
@@ -407,9 +407,9 @@ final class BufferedRandomAccessFile {
             if (var4_ref_dm != null &&
               var4_ref_dm.field_g < var2_long) {
               var4_ref_dm.unlink((byte) -67);
-              hi.field_r = var4_ref_dm.field_j.length;
+              EmailSyntaxValidator.field_r = var4_ref_dm.field_j.length;
               om.field_g.position = 0;
-              for (int var5_int = 0; var5_int < hi.field_r; var5_int++) {
+              for (int var5_int = 0; var5_int < EmailSyntaxValidator.field_r; var5_int++) {
                 om.field_g.payload[var5_int] = var4_ref_dm.field_j[var5_int];
               }
               NetworkGameClient.field_q = ArchiveIndex.field_t;
@@ -441,7 +441,7 @@ final class BufferedRandomAccessFile {
               }
               GameAppletShell.field_a = om.field_g.readCipheredOpcode(8);
               om.field_g.position = 0;
-              hi.field_r = param0[GameAppletShell.field_a];
+              EmailSyntaxValidator.field_r = param0[GameAppletShell.field_a];
             }
             if (!ll.d(10550)) {
               return false;
@@ -461,8 +461,8 @@ final class BufferedRandomAccessFile {
                 var4 = 0;
               }
             }
-            dm var5 = new dm(var2_long + (long)var4, GameAppletShell.field_a, new byte[hi.field_r]);
-            for (int var6 = 0; var6 < hi.field_r; var6++) {
+            dm var5 = new dm(var2_long + (long)var4, GameAppletShell.field_a, new byte[EmailSyntaxValidator.field_r]);
+            for (int var6 = 0; var6 < EmailSyntaxValidator.field_r; var6++) {
               var5.field_j[var6] = om.field_g.payload[var6];
             }
             bb.field_L.addLast(-12328, var5);
@@ -511,16 +511,16 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final static lm a(String[] args, byte param1) {
+    final static NameAvailabilityResult a(String[] args, byte param1) {
         String stackIn_8_2 = null;
         try {
           if (param1 > -53) {
-            lm stackIn_2_0 = (lm) null;
+            NameAvailabilityResult stackIn_2_0 = (NameAvailabilityResult) null;
             return stackIn_2_0;
           }
-          lm var2 = new lm(false);
+          NameAvailabilityResult var2 = new NameAvailabilityResult(false);
           var2.field_c = args;
-          lm stackIn_4_0 = var2;
+          NameAvailabilityResult stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

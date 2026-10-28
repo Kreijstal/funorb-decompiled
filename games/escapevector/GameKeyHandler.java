@@ -6,11 +6,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static String field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_a = null;
         field_b = null;
         field_c = null;
-        int var1 = 20 % ((param0 + 75) / 40);
+        int var1 = 20 % ((guard + 75) / 40);
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {

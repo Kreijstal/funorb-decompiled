@@ -221,7 +221,7 @@ final class SelfDestructEffects {
                 sc.field_g = new Boolean(SecondaryIntrusiveDeque.a(om.field_g, true));
                 om.field_g.position = 0;
               } else {
-                hi.field_r = -1;
+                EmailSyntaxValidator.field_r = -1;
                 cd.field_v = var9Lifetime1;
                 al.field_d = mh.field_h;
               }
@@ -435,11 +435,11 @@ final class SelfDestructEffects {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int guard) {
         field_d = null;
         field_j = null;
         field_b = null;
-        if (param0 != -12548) {
+        if (guard != -12548) {
           field_d = (String) null;
         }
     }

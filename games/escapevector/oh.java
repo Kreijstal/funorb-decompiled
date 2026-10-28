@@ -19,15 +19,15 @@ final class oh extends IntrusiveNode {
     final static void a(vj param0, boolean param1, int param2, boolean param3, byte param4) {
         String stackIn_25_2 = null;
         try {
-          rh.field_O[0] = gk.field_a.nextInt();
-          rh.field_O[1] = gk.field_a.nextInt();
+          NameSuggestionsPanel.field_O[0] = gk.field_a.nextInt();
+          NameSuggestionsPanel.field_O[1] = gk.field_a.nextInt();
           qj.field_a.position = 0;
-          rh.field_O[2] = (int)(SecondaryIntrusiveDeque.field_b >> 32);
-          rh.field_O[3] = (int)SecondaryIntrusiveDeque.field_b;
-          qj.field_a.a((byte) 126, rh.field_O[0]);
-          qj.field_a.a((byte) 123, rh.field_O[1]);
-          qj.field_a.a((byte) 124, rh.field_O[2]);
-          qj.field_a.a((byte) 126, rh.field_O[3]);
+          NameSuggestionsPanel.field_O[2] = (int)(SecondaryIntrusiveDeque.field_b >> 32);
+          NameSuggestionsPanel.field_O[3] = (int)SecondaryIntrusiveDeque.field_b;
+          qj.field_a.a((byte) 126, NameSuggestionsPanel.field_O[0]);
+          qj.field_a.a((byte) 123, NameSuggestionsPanel.field_O[1]);
+          qj.field_a.a((byte) 124, NameSuggestionsPanel.field_O[2]);
+          qj.field_a.a((byte) 126, NameSuggestionsPanel.field_O[3]);
           jm.a(0, qj.field_a);
           qj.field_a.h(13, param2);
           param0.a(qj.field_a, (byte) -121);
@@ -84,8 +84,8 @@ final class oh extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 == -20) {
+    public static void releaseStatics(byte guard) {
+        if (guard == -20) {
           field_p = null;
           field_k = null;
           field_n = null;

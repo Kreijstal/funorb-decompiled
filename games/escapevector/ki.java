@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends r {
+final class ki extends SingleChildContainer {
     private int field_F;
     private String field_G;
     private int field_K;
@@ -16,7 +16,7 @@ final class ki extends r {
         String stackIn_7_2 = null;
         try {
           if (param1 != 10592) {
-            ki.l(-55);
+            ki.releaseStatics(-55);
           }
           byte[] stackIn_3_0 = wk.field_e.a(param1 ^ -10596, param0, "");
           return stackIn_3_0;
@@ -34,10 +34,10 @@ final class ki extends r {
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int guard) {
         field_M = null;
         field_H = null;
-        if (param0 < 67) {
+        if (guard < 67) {
           field_M = (int[]) null;
           field_I = null;
           return;
@@ -46,10 +46,10 @@ final class ki extends r {
     }
 
     final String getTooltip(int guard) {
-        boolean var2 = (this.field_C.hovered);
-        this.field_C.hovered = this.hovered;
-        String var3 = this.field_C.getTooltip(guard);
-        this.field_C.hovered = (var2) ? true : false;
+        boolean var2 = (this.child.hovered);
+        this.child.hovered = this.hovered;
+        String var3 = this.child.getTooltip(guard);
+        this.child.hovered = (var2) ? true : false;
         return var3;
     }
 
@@ -75,7 +75,7 @@ final class ki extends r {
         String stackIn_18_2 = null;
         String stackIn_21_2 = null;
         try {
-          this.field_C = param4;
+          this.child = param4;
           this.field_D = param6;
           this.field_F = param9;
           boolean stackIn_4_1 = (param5);
@@ -96,7 +96,7 @@ final class ki extends r {
             stackIn_10_0 = 2 * this.field_K + this.field_D;
           }
           int var14 = stackIn_10_0;
-          this.field_C.setBounds(-(3 * this.field_K) + (-this.field_D + param2), this.field_K + (var13 - param3 >> 1), var14, true, param3 - 2 * this.field_K);
+          this.child.setBounds(-(3 * this.field_K) + (-this.field_D + param2), this.field_K + (var13 - param3 >> 1), var14, true, param3 - 2 * this.field_K);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

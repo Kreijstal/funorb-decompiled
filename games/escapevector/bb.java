@@ -190,8 +190,8 @@ abstract class bb extends UiContainer {
         }
     }
 
-    public static void h(byte param0) {
-        if (param0 != 127) {
+    public static void releaseStatics(byte guard) {
+        if (guard != 127) {
           field_H = -93;
         }
         field_P = null;
@@ -204,7 +204,7 @@ abstract class bb extends UiContainer {
     }
 
     bb(tb param0, int param1, int param2) {
-        super(dm.field_h - param1 >> 1, r.field_B - param2 >> 1, param1, param2, (WidgetPainter) null);
+        super(dm.field_h - param1 >> 1, SingleChildContainer.field_B - param2 >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_G = false;
           this.field_N = 0;
@@ -273,7 +273,7 @@ abstract class bb extends UiContainer {
         if (param0 != 255) {
           field_K = (String) null;
         }
-        this.setBounds(param2, -param1 + r.field_B >> 1, -param2 + dm.field_h >> 1, true, param1);
+        this.setBounds(param2, -param1 + SingleChildContainer.field_B >> 1, -param2 + dm.field_h >> 1, true, param1);
     }
 
     static {

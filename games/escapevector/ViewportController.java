@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk {
+final class ViewportController {
     private int field_c;
     private int field_i;
     private int field_j;
@@ -18,46 +18,46 @@ final class pk {
     private int field_f;
     private int field_r;
     private int field_b;
-    private tn field_l;
+    private ViewportResizeListener field_l;
     private int field_p;
     private float field_k;
 
-    public static void b(boolean param0) {
-        if (param0) {
+    public static void releaseStatics(boolean guard) {
+        if (guard) {
           return;
         }
         field_m = null;
     }
 
-    final void a(int param0) {
-        if (param0 != 0) {
+    final void restoreWindowedSize(int guard) {
+        if (guard != 0) {
           return;
         }
-        this.field_l.a(true, this.field_r, this.field_p);
+        this.field_l.onResize(true, this.field_r, this.field_p);
     }
 
-    final FullscreenFocusCanvas a(boolean param0) {
+    final FullscreenFocusCanvas enterFullscreen(boolean windowed) {
         this.field_p = pd.field_b;
-        if (!param0) {
-          this.b(12);
+        if (!windowed) {
+          this.updateViewport(12);
           this.field_r = BoundedUrlRequest.field_d;
-          this.field_l.a(param0, this.field_o, this.field_j);
+          this.field_l.onResize(windowed, this.field_o, this.field_j);
           PacketBuffer.field_i = false;
           FullscreenFocusCanvas var2 = al.a(this.field_j, -16493, NetworkGameClient.field_r, this.field_o, 0, 0);
           if (var2 == null) {
-            this.a(0);
+            this.restoreWindowedSize(0);
             return var2;
           }
           return var2;
         }
         this.field_r = BoundedUrlRequest.field_d;
-        this.field_l.a(param0, this.field_o, this.field_j);
+        this.field_l.onResize(windowed, this.field_o, this.field_j);
         PacketBuffer.field_i = false;
         FullscreenFocusCanvas var2Lifetime1 = al.a(this.field_j, -16493, NetworkGameClient.field_r, this.field_o, 0, 0);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }
-        this.a(0);
+        this.restoreWindowedSize(0);
         return var2Lifetime1;
     }
 
@@ -139,9 +139,9 @@ final class pk {
           }
         }
         if (pd.field_b != var2) {
-          this.field_l.a(true, var3, var2);
+          this.field_l.onResize(true, var3, var2);
         } else if (var3 != BoundedUrlRequest.field_d) {
-          this.field_l.a(true, var3, var2);
+          this.field_l.onResize(true, var3, var2);
         }
         if (param0 != 13) {
           return;
@@ -151,7 +151,7 @@ final class pk {
         }
     }
 
-    final void b(int param0) {
+    final void updateViewport(int guard) {
         if (null != IsaacRandom.field_d) {
           return;
         }
@@ -168,10 +168,10 @@ final class pk {
             this.field_i == BoundedUrlRequest.field_d) {
             return;
           }
-          this.field_l.a(true, this.field_i, this.field_q);
+          this.field_l.onResize(true, this.field_i, this.field_q);
           return;
         }
-        if (param0 != 9477) {
+        if (guard != 9477) {
           return;
         }
         int fieldTemp$0 = this.field_d - 1;
@@ -188,15 +188,15 @@ final class pk {
         return;
     }
 
-    final void a(int param0, int param1, int param2) {
-        this.field_n = param0;
-        if (param2 != 18705) {
+    final void setDesiredSize(int width, int height, int guard) {
+        this.field_n = width;
+        if (guard != 18705) {
           return;
         }
-        this.field_h = param1;
+        this.field_h = height;
     }
 
-    private pk() throws Throwable {
+    private ViewportController() throws Throwable {
         throw new Error();
     }
 

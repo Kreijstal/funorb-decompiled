@@ -51,11 +51,11 @@ final class hb implements Iterator {
         return true;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_d = null;
         field_a = null;
-        if (param0) {
-          hb.a(true);
+        if (guard) {
+          hb.releaseStatics(true);
         }
         field_b = (Sprite[][]) null;
     }

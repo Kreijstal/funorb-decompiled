@@ -40,7 +40,7 @@ final class WhirlpoolHasher {
             int var8 = 255 & input[var5_int] << var6 | (255 & input[1 + var5_int]) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_h[this.field_b] = (byte)lb.a((int) this.field_h[this.field_b], var8 >>> var7);
+              this.field_h[this.field_b] = (byte)MatchingTextValidator.a((int) this.field_h[this.field_b], var8 >>> var7);
               this.field_b = this.field_b + 1;
               this.field_c = this.field_c + (8 - var7);
               if (this.field_c == 512) {
@@ -60,7 +60,7 @@ final class WhirlpoolHasher {
             int stackIn_17_0 = 255;
             int stackIn_17_1 = input[var5_int] << var6;
             var8Lifetime1 = stackIn_17_0 & stackIn_17_1;
-            this.field_h[this.field_b] = (byte)lb.a((int) this.field_h[this.field_b], var8Lifetime1 >>> var7);
+            this.field_h[this.field_b] = (byte)MatchingTextValidator.a((int) this.field_h[this.field_b], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -129,7 +129,7 @@ final class WhirlpoolHasher {
         String stackIn_16_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          this.field_h[this.field_b] = (byte)lb.a((int) this.field_h[this.field_b], 128 >>> ae.a(this.field_c, 7));
+          this.field_h[this.field_b] = (byte)MatchingTextValidator.a((int) this.field_h[this.field_b], 128 >>> ae.a(this.field_c, 7));
           this.field_b = this.field_b + 1;
           if (32 < this.field_b) {
             while (this.field_b < 64) {

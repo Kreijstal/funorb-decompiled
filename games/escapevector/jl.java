@@ -88,14 +88,14 @@ class jl {
     final static void b(int param0) {
         se.a((byte) 86, PointCloudEffect.d((byte) -91));
         if (param0 != 2) {
-          jl.a(8);
+          jl.releaseStatics(8);
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_n = null;
-        if (param0 != -30082) {
-          jl.a(113);
+        if (guard != -30082) {
+          jl.releaseStatics(113);
         }
         field_l = null;
         field_p = null;

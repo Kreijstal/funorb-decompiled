@@ -47,7 +47,7 @@ final class rc {
           ha.a(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
           return;
         }
-        rc.a(-25);
+        rc.releaseStatics(-25);
         if (param7 > param5) {
           if (param2 > param7) {
             ha.a(param6, param7, param5, param1, param0, 41, param3, param2, SoftwareRasterizer.pixels);
@@ -71,8 +71,8 @@ final class rc {
         ha.a(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
     }
 
-    public static void a(int param0) {
-        if (param0 == -49153) {
+    public static void releaseStatics(int guard) {
+        if (guard == -49153) {
           field_a = null;
           field_c = null;
           field_b = null;

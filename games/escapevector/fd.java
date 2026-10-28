@@ -16,13 +16,13 @@ final class fd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_d = null;
         field_e = null;
         field_b = null;
         field_a = null;
         field_f = null;
-        if (param0 != 86) {
+        if (guard != 86) {
           fd.a(true, 'ﾩ');
         }
     }
@@ -37,7 +37,7 @@ final class fd {
 
     final static boolean a(boolean param0, char param1) {
         if (!param0) {
-          fd.a((byte) 47);
+          fd.releaseStatics((byte) 47);
           if (160 == param1) {
             return true;
           }

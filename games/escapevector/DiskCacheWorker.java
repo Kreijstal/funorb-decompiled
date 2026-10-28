@@ -9,8 +9,8 @@ final class DiskCacheWorker implements Runnable {
     private boolean field_e;
     int field_f;
 
-    public static void b(int param0) {
-        if (param0 != -4) {
+    public static void releaseStatics(int guard) {
+        if (guard != -4) {
           return;
         }
         field_a = null;

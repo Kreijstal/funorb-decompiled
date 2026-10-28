@@ -216,10 +216,10 @@ final class gj {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_u = null;
         field_a = null;
-        if (param0 != 3355) {
+        if (guard != 3355) {
           return;
         }
         field_g = null;

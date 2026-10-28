@@ -19,16 +19,16 @@ final class wi {
         this.field_g = true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
         field_h = null;
-        if (param0 == 64) {
+        if (guard == 64) {
           field_i = null;
           field_f = null;
           field_d = null;
           return;
         }
-        wi.a(66);
+        wi.releaseStatics(66);
         field_i = null;
         field_f = null;
         field_d = null;

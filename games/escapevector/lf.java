@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lf extends ue {
+final class lf extends TextHotspotWidget {
     static String field_G;
     private Sprite field_M;
     static Sprite field_I;
@@ -33,13 +33,13 @@ final class lf extends ue {
           String var17 = fj.field_bb;
           if (!var17.equals(this.text)) {
             this.text = var17;
-            this.k(0);
+            this.rebuildHotspots(0);
           }
           super.drawLayer(screenY, (byte) 109, layer, screenX);
           var6 = this.field_N.validationState(17124);
           WidgetTextLayout var28 = (WidgetTextLayout) ((Object) this.painter);
           int var9 = screenX + this.x;
-          int var10 = var28.a((UiComponent) (this), screenY, -16956) + (var28.b((UiComponent) (this), 90).c(0) >> 1);
+          int var10 = var28.textOriginY((UiComponent) (this), screenY, -16956) + (var28.ensureTextLayout((UiComponent) (this), 90).height(0) >> 1);
           if (guard <= 85) {
             return;
           }
@@ -114,13 +114,13 @@ final class lf extends ue {
             }
           }
           this.text = var5;
-          this.k(0);
+          this.rebuildHotspots(0);
         }
         super.drawLayer(screenY, (byte) 109, layer, screenX);
         ValidationState var6Lifetime1 = this.field_N.validationState(17124);
         WidgetTextLayout var29 = (WidgetTextLayout) ((Object) this.painter);
         int var9Lifetime1 = screenX + this.x;
-        int var10Lifetime1 = var29.a((UiComponent) (this), screenY, -16956) + (var29.b((UiComponent) (this), 90).c(0) >> 1);
+        int var10Lifetime1 = var29.textOriginY((UiComponent) (this), screenY, -16956) + (var29.ensureTextLayout((UiComponent) (this), 90).height(0) >> 1);
         if (guard <= 85) {
           return;
         }
@@ -222,10 +222,10 @@ final class lf extends ue {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_J = null;
         field_K = null;
-        int var1 = -35 % ((param0 - 34) / 58);
+        int var1 = -35 % ((guard - 34) / 58);
         field_I = null;
         field_G = null;
     }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends UiContainer implements ButtonListener {
+final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
     static int field_N;
     private TextButton[] field_K;
     static pj field_I;
     static String field_J;
-    private qn field_L;
+    private NameSuggestionListener field_L;
     private String[] field_M;
     static int[] field_O;
     static volatile boolean field_H;
@@ -25,20 +25,20 @@ final class rh extends UiContainer implements ButtonListener {
         }
     }
 
-    final void a(String[] param0, byte param1) {
+    final void setSuggestions(String[] suggestions, byte guard) {
         String stackIn_19_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
           this.field_A.clear((byte) 127);
-          if (param0 != null &&
-            0 != param0.length) {
-            int var3_int = param0.length;
+          if (suggestions != null &&
+            0 != suggestions.length) {
+            int var3_int = suggestions.length;
             this.field_M = new String[var3_int];
-            if (param1 != -103) {
+            if (guard != -103) {
               return;
             }
             for (int var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_M[var4_int] = pc.a(param1 + 103, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
+              this.field_M[var4_int] = pc.a(guard + 103, (CharSequence) ((Object) suggestions[var4_int])).replace(' ', ' ');
             }
             ha var4 = new ha(Js5Transport.field_a, 0, 1);
             this.field_K = new TextButton[1 + var3_int];
@@ -62,16 +62,16 @@ final class rh extends UiContainer implements ButtonListener {
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_18_0 = var3;
           StringBuilder stackIn_18_1 = new StringBuilder().append("rh.A(");
-          if (param0 == null) {
+          if (suggestions == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    rh(qn param0) {
+    NameSuggestionsPanel(NameSuggestionListener param0) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_L = param0;
@@ -112,11 +112,11 @@ final class rh extends UiContainer implements ButtonListener {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int guard) {
         field_O = null;
         field_I = null;
         field_J = null;
-        if (param0 != -24896) {
+        if (guard != -24896) {
           field_J = (String) null;
         }
     }
@@ -211,11 +211,11 @@ final class rh extends UiContainer implements ButtonListener {
           }
           for (int var6_int = 0; var6_int < this.field_M.length; var6_int++) {
             if (this.field_K[var6_int] == button) {
-              this.field_L.a((byte) -98, this.field_M[var6_int]);
+              this.field_L.onNameSelected((byte) -98, this.field_M[var6_int]);
             }
           }
           if (button == this.field_K[this.field_M.length]) {
-            this.field_L.a((byte) -61);
+            this.field_L.onMoreSuggestions((byte) -61);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -10,15 +10,15 @@ final class bg {
     static String field_b;
     static String[] field_g;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_e = null;
         field_c = null;
         field_a = null;
         field_b = null;
         field_d = null;
         field_g = null;
-        if (param0 != 13) {
-          bg.a(76);
+        if (guard != 13) {
+          bg.releaseStatics(76);
         }
     }
 
@@ -28,7 +28,7 @@ final class bg {
         String stackIn_13_2 = null;
         try {
           if (param3 != 0) {
-            bg.a(-94);
+            bg.releaseStatics(-94);
           }
           byte[][][] stackIn_3_0 = sl.a(param2, param0, (int[]) null, param1, 1, param3 + 0);
           return stackIn_3_0;

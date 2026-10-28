@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md extends r {
+final class md extends SingleChildContainer {
     static fk field_E;
     static volatile int field_G;
     static RasterBuffer field_D;
@@ -23,7 +23,7 @@ final class md extends r {
           param1 = param1 | param1 >>> 16;
           return 1 + param1;
         }
-        md.l(60);
+        md.releaseStatics(60);
         param1 = param1 | param1 >>> 2;
         param1 = param1 | param1 >>> 4;
         param1 = param1 | param1 >>> 8;
@@ -80,15 +80,15 @@ final class md extends r {
         super(param0.x, param0.y, param0.width, param0.height, (WidgetPainter) null, (UiListener) null);
         try {
           param0.setBounds(this.width, 0, 0, true, this.height);
-          this.field_C = param0;
+          this.child = param0;
           this.field_F = 256;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "md.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void l(int param0) {
-        int var1 = -26 / ((param0 + 6) / 58);
+    public static void releaseStatics(int guard) {
+        int var1 = -26 / ((guard + 6) / 58);
         field_D = null;
         field_E = null;
         field_H = null;
@@ -98,19 +98,19 @@ final class md extends r {
         if (layer != 0) {
           return;
         }
-        if (null == this.field_C) {
+        if (null == this.child) {
           return;
         }
         if (this.field_F == 0) {
           return;
         }
         if (this.field_F == 256) {
-          this.field_C.drawLayer(this.y + screenY, (byte) 95, layer, this.x + screenX);
+          this.child.drawLayer(this.y + screenY, (byte) 95, layer, this.x + screenX);
           return;
         }
-        Sprite var6 = new Sprite(this.field_C.width, this.field_C.height);
+        Sprite var6 = new Sprite(this.child.width, this.child.height);
         eo.a(var6, (byte) -105);
-        this.field_C.drawLayer(0, (byte) 91, layer, 0);
+        this.child.drawLayer(0, (byte) 91, layer, 0);
         if (guard >= 85) {
           dl.a((byte) 107);
           var6.d(this.x + screenX, this.y + screenY, this.field_F);

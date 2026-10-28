@@ -14,16 +14,16 @@ final class om {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
         field_b = null;
         field_g = null;
-        if (param0 == 5468) {
+        if (guard == 5468) {
           field_e = null;
           field_a = null;
           return;
         }
-        om.a(-50);
+        om.releaseStatics(-50);
         field_e = null;
         field_a = null;
     }

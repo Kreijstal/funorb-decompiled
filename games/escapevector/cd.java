@@ -12,11 +12,11 @@ class cd extends DualLinkNode {
     cd() {
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int guard) {
         field_r = null;
         field_s = null;
         field_q = null;
-        if (param0 != -1) {
+        if (guard != -1) {
           field_q = (int[]) null;
           field_u = null;
           return;

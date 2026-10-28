@@ -23,9 +23,9 @@ final class e {
             hf.field_a = param5;
             SpriteState.field_y = null;
             ResourceArchive.field_b = param4;
-            dn.field_q = dg.field_o;
+            dn.field_q = EmailAvailabilityValidator.field_o;
             tf.field_h = param6;
-            kl.field_o = param2;
+            AgeValidator.field_o = param2;
           } else {
             var8.s(248);
           }
@@ -65,16 +65,16 @@ final class e {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_b = null;
-        if (param0 != 32153) {
+        if (guard != 32153) {
           field_a = false;
         }
     }
 
-    final static lm a(int param0) {
+    final static NameAvailabilityResult a(int param0) {
         if (param0 != -16055) {
-          e.b(108);
+          e.releaseStatics(108);
           if (dn.field_q == RasterBuffer.field_g) {
             throw new IllegalStateException();
           }

@@ -50,11 +50,11 @@ final class ea {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_g = null;
         field_i = null;
         field_d = null;
-        if (param0 <= 114) {
+        if (guard <= 114) {
           field_f = (Sprite) null;
           field_f = null;
           return;
@@ -64,7 +64,7 @@ final class ea {
 
     final static int d(byte param0) {
         if (param0 > -95) {
-          ea.b((byte) -6);
+          ea.releaseStatics((byte) -6);
           return mh.field_f;
         }
         return mh.field_f;

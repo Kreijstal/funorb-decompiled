@@ -15,16 +15,16 @@ final class bm {
         WhirlpoolHasher.a(param0, 30);
     }
 
-    final static lm a(String param0, int param1, int param2) {
+    final static NameAvailabilityResult a(String param0, int param1, int param2) {
         String stackIn_7_2 = null;
         try {
-          lm var3 = new lm(false);
+          NameAvailabilityResult var3 = new NameAvailabilityResult(false);
           var3.field_g = param1;
           if (param2 != 4) {
             field_g = (String) null;
           }
           var3.field_f = param0;
-          lm stackIn_3_0 = var3;
+          NameAvailabilityResult stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,9 +40,9 @@ final class bm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_d = null;
-        if (param0 == 110) {
+        if (guard == 110) {
           field_b = null;
           field_f = null;
           field_g = null;
@@ -60,7 +60,7 @@ final class bm {
 
     final static void b(byte param0) {
         if (param0 != 62) {
-          bm.a((byte) -121);
+          bm.releaseStatics((byte) -121);
         }
     }
 

@@ -10,8 +10,8 @@ final class pc {
     static String field_g;
     static ResourceArchive field_e;
 
-    public static void a(boolean param0) {
-        if (param0) {
+    public static void releaseStatics(boolean guard) {
+        if (guard) {
           field_f = null;
           field_g = null;
           field_e = null;

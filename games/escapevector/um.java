@@ -27,8 +27,8 @@ final class um {
         return false;
     }
 
-    public static void a(boolean param0) {
-        if (param0) {
+    public static void releaseStatics(boolean guard) {
+        if (guard) {
           return;
         }
         field_c = null;

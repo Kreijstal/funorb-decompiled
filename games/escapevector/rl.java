@@ -9,10 +9,10 @@ final class rl extends IntrusiveNode {
     int field_i;
     static boolean field_j;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int guard) {
         field_l = null;
         field_k = null;
-        if (param0 != 29152) {
+        if (guard != 29152) {
           field_l = (String) null;
         }
     }

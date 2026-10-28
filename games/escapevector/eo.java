@@ -7,7 +7,7 @@ abstract class eo {
 
     final static String a(byte param0) {
         if (param0 != 46) {
-          eo.b((byte) -64);
+          eo.releaseStatics((byte) -64);
           if (un.field_u) {
             return null;
           }
@@ -57,13 +57,13 @@ abstract class eo {
           eo.a((byte) 53);
           if (null != BoundedRandomAccessFile.activeSession) {
             pc.field_d = 16777215;
-            gd.field_X = 7899280;
+            ValidatedTextWidget.field_X = 7899280;
             lh.field_e = 12110032;
             Sprite[] var6 = (Sprite[]) null;
             Sprite[] var5 = (Sprite[]) null;
             LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, fh.field_g, 240, param1);
           } else {
-            gd.field_X = 6340704;
+            ValidatedTextWidget.field_X = 6340704;
             lh.field_e = 10551200;
             pc.field_d = 16777215;
             Sprite[] var4 = (Sprite[]) null;
@@ -76,7 +76,7 @@ abstract class eo {
         }
         if (null != BoundedRandomAccessFile.activeSession) {
           pc.field_d = 16777215;
-          gd.field_X = 7899280;
+          ValidatedTextWidget.field_X = 7899280;
           lh.field_e = 12110032;
           Sprite[] var6Lifetime1 = (Sprite[]) null;
           Sprite[] var5Lifetime1 = (Sprite[]) null;
@@ -85,7 +85,7 @@ abstract class eo {
           gi.a((byte) -71);
           return;
         }
-        gd.field_X = 6340704;
+        ValidatedTextWidget.field_X = 6340704;
         lh.field_e = 10551200;
         pc.field_d = 16777215;
         Sprite[] var4Lifetime1 = (Sprite[]) null;
@@ -109,9 +109,9 @@ abstract class eo {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_b = null;
-        if (param0 != -72) {
+        if (guard != -72) {
           field_b = (String) null;
           field_a = null;
           return;
@@ -239,7 +239,7 @@ abstract class eo {
           }
           return '_';
         }
-        eo.b((byte) -68);
+        eo.releaseStatics((byte) -68);
         int var2Lifetime1 = param1;
         if (var2Lifetime1 == 32) {
           return '_';

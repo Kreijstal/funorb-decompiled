@@ -9,9 +9,9 @@ final class ha implements WidgetPainter {
     static int[] field_e;
     static boolean field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_c = null;
-        if (param0 <= 94) {
+        if (guard <= 94) {
           return;
         }
         field_e = null;

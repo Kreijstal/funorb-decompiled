@@ -56,11 +56,11 @@ final class fa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_f = null;
         field_e = null;
         field_c = null;
-        if (!param0) {
+        if (!guard) {
           field_e = (String) null;
         }
     }
@@ -124,10 +124,10 @@ final class fa {
         String stackIn_13_2 = null;
         try {
           if (param0 != 1) {
-            fa.a(true);
+            fa.releaseStatics(true);
           }
           if (uc.a(param3, 121, param2, param4)) {
-            ih stackIn_6_0 = qa.a(16826, param1.a(param2, (byte) -97, param4));
+            ih stackIn_6_0 = DropTargetWidget.a(16826, param1.a(param2, (byte) -97, param4));
             return stackIn_6_0;
           }
           Object stackIn_4_0 = null;

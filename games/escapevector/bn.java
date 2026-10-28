@@ -7,9 +7,9 @@ final class bn {
     static Sprite[] field_d;
     static int field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_a = null;
-        if (param0) {
+        if (guard) {
           field_d = null;
           return;
         }

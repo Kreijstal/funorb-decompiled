@@ -38,9 +38,9 @@ final class da {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_b = null;
-        if (param0 != 0) {
+        if (guard != 0) {
           return;
         }
         field_d = null;

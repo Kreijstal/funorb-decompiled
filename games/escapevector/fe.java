@@ -73,7 +73,7 @@ final class fe {
           ml.field_c.c(558, 257);
           if (UiContainer.field_y > 257 &&
             UiContainer.field_y < 290) {
-            int var2Lifetime2 = 40 + (40 * vl.a(this.field_m << 4, -124) >> 16);
+            int var2Lifetime2 = 40 + (40 * TextLayoutLine.sineQ16(this.field_m << 4, -124) >> 16);
             if (var2Lifetime2 > 0) {
               if (dh.field_d > 9 &&
                 dh.field_d < 82) {
@@ -96,9 +96,9 @@ final class fe {
         this.field_c.e(16, 302);
         ac.field_c.a(this.field_d[this.field_i], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
         wf.field_e.e(30, 330);
-        ac.field_c.a(lb.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        ac.field_c.a(lb.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        ac.field_c.a(lb.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        ac.field_c.a(MatchingTextValidator.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        ac.field_c.a(MatchingTextValidator.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        ac.field_c.a(MatchingTextValidator.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ee.field_c.e(508 + (127 - ee.field_c.fullWidth) / 2, 315);
         if (this.field_a.field_h == 0) {
           om.field_a[0].e(508, 299);
@@ -228,7 +228,7 @@ final class fe {
             return 1;
           }
         }
-        if (nk.field_n == 13) {
+        if (PasswordValidator.field_n == 13) {
           return 1;
         }
         return 0;
@@ -452,7 +452,7 @@ final class fe {
     final static void a(int param0) {
         fc.a(3161);
         int var1 = -82 % ((param0 + 5) / 57);
-        ni.field_F = true;
+        DraggableWidget.field_F = true;
         eb.field_H = true;
         bo.field_F.l(17415);
         uf.a((byte) 119, DualLinkNode.field_h, false);

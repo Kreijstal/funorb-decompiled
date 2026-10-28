@@ -44,9 +44,9 @@ final class fg {
         return var1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_a = null;
-        if (param0 >= -113) {
+        if (guard >= -113) {
           field_a = (PcmSample) null;
         }
     }

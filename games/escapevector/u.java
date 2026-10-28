@@ -149,7 +149,7 @@ final class u {
         return var3;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_l = null;
         field_j = null;
         field_c = null;

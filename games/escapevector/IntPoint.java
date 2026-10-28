@@ -15,8 +15,8 @@ final class IntPoint {
         this.x = x;
     }
 
-    public static void a(int param0) {
-        if (param0 != -3217) {
+    public static void releaseStatics(int guard) {
+        if (guard != -3217) {
           return;
         }
         field_d = null;

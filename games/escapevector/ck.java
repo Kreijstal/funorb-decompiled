@@ -38,15 +38,15 @@ final class ck extends TextWidgetPainter {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_r = null;
         field_u = null;
         field_v = null;
         field_x = null;
         field_A = null;
         field_t = null;
-        if (param0 != -31) {
-          ck.a((byte) 116);
+        if (guard != -31) {
+          ck.releaseStatics((byte) 116);
         }
     }
 
@@ -78,7 +78,7 @@ final class ck extends TextWidgetPainter {
             this.field_w = -93;
           }
           qe.a(-100, component.y + (originY + (-this.field_s[0].fullHeight + component.height >> 1)), component.width, this.field_s, var7, originX + component.x);
-          this.field_l.a(component.text, originX + component.x, component.y + originY - 2, component.width, component.height, var8, -1, 1, 1, this.field_l.field_r);
+          this.font.a(component.text, originX + component.x, component.y + originY - 2, component.width, component.height, var8, -1, 1, 1, this.font.field_r);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -102,7 +102,7 @@ final class ck extends TextWidgetPainter {
         this.field_z = param2;
         this.field_w = param1;
         this.field_s = fk.field_f;
-        this.field_l = dl.field_b;
+        this.font = dl.field_b;
         this.field_y = param0;
     }
 

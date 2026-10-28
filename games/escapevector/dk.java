@@ -84,7 +84,7 @@ final class dk {
         } else {
           var8Lifetime1 = this.c(-18641);
           var9_int = this.field_p / 2 + this.field_f;
-          lb.a(var8Lifetime1, this.field_o, this.field_r[var6], -128, var9_int);
+          MatchingTextValidator.a(var8Lifetime1, this.field_o, this.field_r[var6], -128, var9_int);
         }
         return;
     }
@@ -344,7 +344,7 @@ final class dk {
               nm.a(16);
               return;
             }
-            int var5 = -var10.position + hi.field_r;
+            int var5 = -var10.position + EmailSyntaxValidator.field_r;
             int[] var12 = var4.field_h;
             int[] var11 = var12;
             int[] var6 = var11;
@@ -450,8 +450,8 @@ final class dk {
         return mj.field_d < this.field_q ? (this.field_q - mj.field_d) * 2 : 0;
     }
 
-    public static void g(int param0) {
-        if (param0 != 1) {
+    public static void releaseStatics(int guard) {
+        if (guard != 1) {
           return;
         }
         field_h = null;

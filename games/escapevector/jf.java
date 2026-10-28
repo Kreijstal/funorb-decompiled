@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends UiContainer implements sg, ButtonListener {
+final class jf extends UiContainer implements TextHotspotListener, ButtonListener {
     static Sprite field_H;
     static String field_M;
     static int field_J;
@@ -10,14 +10,14 @@ final class jf extends UiContainer implements sg, ButtonListener {
     private TextButton field_N;
     private qc field_G;
     static String[] field_I;
-    private ue field_L;
+    private TextHotspotWidget field_L;
 
-    public static void j(int param0) {
+    public static void releaseStatics(int guard) {
         field_K = null;
         field_H = null;
         field_I = null;
         field_O = null;
-        if (param0 == 1) {
+        if (guard == 1) {
           field_M = null;
           return;
         }
@@ -40,16 +40,16 @@ final class jf extends UiContainer implements sg, ButtonListener {
           this.field_G = param0;
           this.field_N = new TextButton(bm.field_d, (UiListener) null);
           this.field_N.painter = (WidgetPainter) ((Object) new ck());
-          String var7 = r.a(mh.field_c, -63, new String[]{this.k(-102), this.a((byte) 126)});
+          String var7 = SingleChildContainer.a(mh.field_c, -63, new String[]{this.k(-102), this.a((byte) 126)});
           int var3 = 20;
           TextWidgetPainter var4 = new TextWidgetPainter(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.field_r, -1, 2147483647, true);
-          this.field_L = new ue(var7, var4);
+          this.field_L = new TextHotspotWidget(var7, var4);
           this.field_L.tooltip = "";
-          this.field_L.a(TextFieldValidator.field_m, (byte) 102, 0);
-          this.field_L.a(TextFieldValidator.field_m, (byte) 104, 1);
+          this.field_L.setHotspotTooltip(TextFieldValidator.field_m, (byte) 102, 0);
+          this.field_L.setHotspotTooltip(TextFieldValidator.field_m, (byte) 104, 1);
           this.field_L.listener = (UiListener) (this);
           this.field_L.width = this.width - 40;
-          this.field_L.b(2463, 26, -40 + this.width, var3);
+          this.field_L.setBoundsToTextHeight(2463, 26, -40 + this.width, var3);
           var3 = var3 + (15 + this.field_L.height);
           this.b(this.field_L, false);
           int var5 = 4;
@@ -71,18 +71,18 @@ final class jf extends UiContainer implements sg, ButtonListener {
         return kb.field_d > 250 ? true : false;
     }
 
-    public final void a(int param0, ue param1, int param2, int param3) {
+    public final void onHotspotAction(int guard, TextHotspotWidget widget, int hotspotId, int buttonCode) {
         String stackIn_14_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          if (param2 == 0) {
-            qd.a(param0 ^ -2849, "terms.ws");
-          } else if (1 == param2) {
+          if (hotspotId == 0) {
+            qd.a(guard ^ -2849, "terms.ws");
+          } else if (1 == hotspotId) {
             qd.a(12, "privacy.ws");
-          } else if (param2 == 2) {
+          } else if (hotspotId == 2) {
             qd.a(12, "conduct.ws");
           }
-          if (param0 == -2861) {
+          if (guard == -2861) {
             return;
           }
           field_H = (Sprite) null;
@@ -91,13 +91,13 @@ final class jf extends UiContainer implements sg, ButtonListener {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var5;
-          StringBuilder stackIn_13_1 = new StringBuilder().append("jf.A(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_13_1 = new StringBuilder().append("jf.A(").append(guard).append(',');
+          if (widget == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(hotspotId).append(',').append(buttonCode).append(')').toString());
         }
     }
 
@@ -144,8 +144,8 @@ final class jf extends UiContainer implements sg, ButtonListener {
         String stackIn_9_2 = null;
         try {
           if (guard != 1) {
-            ue var7 = (ue) null;
-            this.a(-113, (ue) null, -113, -16);
+            TextHotspotWidget var7 = (TextHotspotWidget) null;
+            this.onHotspotAction(-113, (TextHotspotWidget) null, -113, -16);
           }
           if (button != this.field_N) {
             return;

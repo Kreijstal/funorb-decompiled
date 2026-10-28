@@ -10,10 +10,10 @@ abstract class sh extends DualLinkNode {
 
     abstract Object e(byte param0);
 
-    public static void f(int param0) {
+    public static void releaseStatics(int guard) {
         field_s = null;
         field_r = null;
-        if (param0 != 0) {
+        if (guard != 0) {
           java.net.URL var2 = (java.net.URL) null;
           sh.a((byte) -113, (java.applet.Applet) null, (java.net.URL) null);
         }

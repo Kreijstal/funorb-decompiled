@@ -16,8 +16,8 @@ final class tf {
     private int field_d;
     private int field_m;
 
-    public static void a(int param0) {
-        if (param0 >= -85) {
+    public static void releaseStatics(int guard) {
+        if (guard >= -85) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           tf.a(101, (java.applet.Applet) null);
         }
@@ -86,10 +86,10 @@ final class tf {
           return -(-fh.field_g.b(ee.field_d) + var4Lifetime1) * 2;
         }
         if (param0 == this.field_k) {
-          int var3_intLifetime2 = fh.field_g.b(nk.field_s);
-          int var4Lifetime2 = (fh.field_g.b(rh.field_J) + fh.field_g.b(nb.field_d)) / 2;
+          int var3_intLifetime2 = fh.field_g.b(PasswordValidator.field_s);
+          int var4Lifetime2 = (fh.field_g.b(NameSuggestionsPanel.field_J) + fh.field_g.b(nb.field_d)) / 2;
           int var5 = (var3_intLifetime2 - var4Lifetime2) / 2;
-          int var6 = (var5 + fh.field_g.b(rh.field_J)) * 2;
+          int var6 = (var5 + fh.field_g.b(NameSuggestionsPanel.field_J)) * 2;
           int var7 = 2 * (fh.field_g.b(nb.field_d) + var5);
           int stackIn_10_0 = (var7 >= var6) ? var7 : var6;
           return stackIn_10_0;
@@ -130,7 +130,7 @@ final class tf {
             boolean discarded$1 = this.a(true, 123);
             return;
           }
-          if (nk.field_n == 13) {
+          if (PasswordValidator.field_n == 13) {
             da.field_c = null;
             return;
           }
@@ -228,7 +228,7 @@ final class tf {
             if (0 > kc.field_b) {
               kc.field_b = 0;
             }
-            TrackerMusicPlayer var10 = ni.field_N;
+            TrackerMusicPlayer var10 = DraggableWidget.field_N;
             if (var10 != null) {
               var10.d(kc.field_b * kn.field_b / 64);
             }
@@ -239,21 +239,21 @@ final class tf {
             if (64 < kc.field_b) {
               kc.field_b = 64;
             }
-            TrackerMusicPlayer var11 = ni.field_N;
+            TrackerMusicPlayer var11 = DraggableWidget.field_N;
             if (var11 != null) {
               var11.d(kn.field_b * kc.field_b / 64);
             }
           }
           if (ch.field_a.d(-10809)) {
             kc.field_b = 0;
-            TrackerMusicPlayer var12 = ni.field_N;
+            TrackerMusicPlayer var12 = DraggableWidget.field_N;
             if (var12 != null) {
               var12.d(kn.field_b * kc.field_b / 64);
             }
           }
           if (ch.field_a.e(0)) {
             kc.field_b = 64;
-            TrackerMusicPlayer var13 = ni.field_N;
+            TrackerMusicPlayer var13 = DraggableWidget.field_N;
             if (var13 != null) {
               var13.d(kc.field_b * kn.field_b / 64);
             }
@@ -271,7 +271,7 @@ final class tf {
               var7Lifetime1 = 64;
             }
             kc.field_b = var7Lifetime1;
-            TrackerMusicPlayer var8 = ni.field_N;
+            TrackerMusicPlayer var8 = DraggableWidget.field_N;
             if (var8 != null) {
               var8.d(kn.field_b * kc.field_b / 64);
             }
@@ -432,7 +432,7 @@ final class tf {
 
     final static String b(byte param0) {
         if (param0 != 0) {
-          tf.a(-60);
+          tf.releaseStatics(-60);
         }
         return om.field_g.c(false);
     }
@@ -466,7 +466,7 @@ final class tf {
           int var9 = stackIn_19_0;
           int var10 = var6 + (var9 - 68) / 2;
           fh.field_g.b(oi.field_N, var10, 22, var5, -1);
-          r.a(var10, 13202, 4, qm.field_c, var5);
+          SingleChildContainer.a(var10, 13202, 4, qm.field_c, var5);
         }
         if (param3 == this.field_c) {
           int var7Lifetime1 = fh.field_g.b(oi.field_N);
@@ -475,19 +475,19 @@ final class tf {
           int var9Lifetime1 = stackIn_24_0;
           int var10Lifetime1 = (-68 + var9Lifetime1) / 2 + var6;
           fh.field_g.b(ee.field_d, var10Lifetime1, 22, var5, -1);
-          r.a(var10Lifetime1, 13202, 4, kc.field_b, var5);
+          SingleChildContainer.a(var10Lifetime1, 13202, 4, kc.field_b, var5);
         }
         if (this.field_m == param3) {
           fh.field_g.c(an.field_b, var6, 22, var5, -1);
         }
         if (param3 == this.field_k) {
-          int var7Lifetime2 = fh.field_g.b(nk.field_s);
-          int var8Lifetime2 = (fh.field_g.b(rh.field_J) + fh.field_g.b(nb.field_d)) / 2;
+          int var7Lifetime2 = fh.field_g.b(PasswordValidator.field_s);
+          int var8Lifetime2 = (fh.field_g.b(NameSuggestionsPanel.field_J) + fh.field_g.b(nb.field_d)) / 2;
           int var9Lifetime2 = var6 + (var7Lifetime2 - var8Lifetime2) / 2;
-          fh.field_g.b(nk.field_s, var9Lifetime2, 22, var5, -1);
+          fh.field_g.b(PasswordValidator.field_s, var9Lifetime2, 22, var5, -1);
           ih stackIn_31_0 = fh.field_g;
           if (SpriteState.field_r) {
-            stackIn_32_1 = rh.field_J;
+            stackIn_32_1 = NameSuggestionsPanel.field_J;
           } else {
             stackIn_32_1 = nb.field_d;
           }

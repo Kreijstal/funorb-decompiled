@@ -8,9 +8,9 @@ final class ui {
     static al field_b;
     static volatile int field_e;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_a = null;
-        if (!param0) {
+        if (!guard) {
           return;
         }
         field_d = null;
@@ -97,7 +97,7 @@ final class ui {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        gd.field_X = param0;
+        ValidatedTextWidget.field_X = param0;
         pc.field_d = param1;
         lh.field_e = param2;
         if (param3 != -11997) {

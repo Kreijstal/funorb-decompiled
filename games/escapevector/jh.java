@@ -8,8 +8,8 @@ final class jh extends IntrusiveNode {
     static String field_j;
     int[] field_i;
 
-    public static void a(boolean param0) {
-        if (param0) {
+    public static void releaseStatics(boolean guard) {
+        if (guard) {
           jh.d(71);
           field_k = null;
           field_j = null;
@@ -34,7 +34,7 @@ final class jh extends IntrusiveNode {
           vk.field_v = param1;
           uf.a((byte) 71, mm.field_a, param0);
           if (param2) {
-            jh.a(true);
+            jh.releaseStatics(true);
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "jh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

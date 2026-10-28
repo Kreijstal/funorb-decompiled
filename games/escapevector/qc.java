@@ -658,15 +658,15 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime144 = ki.a("objective_flyawayintact,0", 10592);
           if (var2Lifetime144 != null) {
-            d.field_f[0] = RasterSnapshot.a(var2Lifetime144, 119);
+            EmailAvailabilityRequest.field_f[0] = RasterSnapshot.a(var2Lifetime144, 119);
           }
           byte[] var2Lifetime145 = ki.a("objective_flyawayintact,1", param0 ^ 10600);
           if (null != var2Lifetime145) {
-            d.field_f[1] = RasterSnapshot.a(var2Lifetime145, 120);
+            EmailAvailabilityRequest.field_f[1] = RasterSnapshot.a(var2Lifetime145, 120);
           }
           byte[] var2Lifetime146 = ki.a("objective_flyawayintact,2", 10592);
           if (null != var2Lifetime146) {
-            d.field_f[2] = RasterSnapshot.a(var2Lifetime146, param0 + 108);
+            EmailAvailabilityRequest.field_f[2] = RasterSnapshot.a(var2Lifetime146, param0 + 108);
           }
           byte[] var2Lifetime147 = ki.a("objective_infrastructure", 10592);
           if (var2Lifetime147 != null) {
@@ -782,7 +782,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime175 = ki.a("containerdestroyed", 10592);
           if (var2Lifetime175 != null) {
-            hi.field_n = RasterSnapshot.a(var2Lifetime175, param0 + 117);
+            EmailSyntaxValidator.field_n = RasterSnapshot.a(var2Lifetime175, param0 + 117);
           }
           byte[] var2Lifetime176 = ki.a("containerdestroyed_tutorial", 10592);
           if (var2Lifetime176 != null) {
@@ -962,7 +962,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime220 = ki.a("fuelbonus_colon", 10592);
           if (var2Lifetime220 != null) {
-            dg.field_s = RasterSnapshot.a(var2Lifetime220, 121);
+            EmailAvailabilityValidator.field_s = RasterSnapshot.a(var2Lifetime220, 121);
           }
           byte[] var2Lifetime221 = ki.a("shieldbonus_colon", 10592);
           if (null != var2Lifetime221) {
@@ -990,7 +990,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime227 = ki.a("showelapsedtime_colon", 10592);
           if (var2Lifetime227 != null) {
-            nk.field_s = RasterSnapshot.a(var2Lifetime227, param0 + 115);
+            PasswordValidator.field_s = RasterSnapshot.a(var2Lifetime227, param0 + 115);
           }
           byte[] var2Lifetime228 = ki.a("startforscore1", 10592);
           if (null != var2Lifetime228) {
@@ -1278,7 +1278,7 @@ final class qc extends pn implements ButtonListener {
           }
           if (this.field_G &&
             !this.field_wb) {
-            lm var2 = e.a(-16055);
+            NameAvailabilityResult var2 = e.a(-16055);
             if (null != var2) {
               this.a(param0 + 9093, var2, false);
             }
@@ -1292,7 +1292,7 @@ final class qc extends pn implements ButtonListener {
         }
     }
 
-    private final void a(int param0, lm param1, boolean param2) {
+    private final void a(int param0, NameAvailabilityResult param1, boolean param2) {
         String stackIn_54_2 = null;
         String var4 = null;
         int var6 = EscapeVector.obfuscationControl;
@@ -1303,7 +1303,7 @@ final class qc extends pn implements ButtonListener {
           }
           boolean decompiledFrameRemainder1 = true;
           if (param1.field_a) {
-            var4 = ni.field_G;
+            var4 = DraggableWidget.field_G;
             decompiledFrameRemainder1 = (var6 != 0);
           }
           if (decompiledFrameRemainder1) {
@@ -1318,14 +1318,14 @@ final class qc extends pn implements ButtonListener {
                 if (var6 != 0) {
                   var4 = RasterBuffer.field_b;
                   if (null != this.field_ub) {
-                    this.field_ub.a((byte) -61);
+                    this.field_ub.onMoreSuggestions((byte) -61);
                   }
                 }
               }
             } else {
               var4 = RasterBuffer.field_b;
               if (null != this.field_ub) {
-                this.field_ub.a((byte) -61);
+                this.field_ub.onMoreSuggestions((byte) -61);
               }
             }
           }
@@ -1345,7 +1345,7 @@ final class qc extends pn implements ButtonListener {
               if (var6 != 0) {
                 if (param1.field_g == 5) {
                   var5.a(false, TerrainMap.field_i, 11);
-                  var5.a(false, d.field_d, 17);
+                  var5.a(false, EmailAvailabilityRequest.field_d, 17);
                   var5.a(false, Minimap.field_O, -1);
                 } else {
                   var5.a(false, Minimap.field_O, -1);
@@ -1353,7 +1353,7 @@ final class qc extends pn implements ButtonListener {
               }
             } else if (param1.field_g == 5) {
               var5.a(false, TerrainMap.field_i, 11);
-              var5.a(false, d.field_d, 17);
+              var5.a(false, EmailAvailabilityRequest.field_d, 17);
               if (var6 != 0) {
                 var5.a(false, Minimap.field_O, -1);
               }
@@ -1385,14 +1385,14 @@ final class qc extends pn implements ButtonListener {
         }
     }
 
-    public static void t(int param0) {
+    public static void releaseStatics(int guard) {
         try {
           field_yb = null;
-          int var1_int = 91 % ((param0 + 21) / 42);
+          int var1_int = 91 % ((guard + 21) / 42);
           field_vb = null;
           field_xb = null;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qc.UB(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "qc.UB(" + guard + ')');
         }
     }
 

@@ -36,9 +36,9 @@ final class cc extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int guard) {
         field_k = null;
-        if (param0 <= 26) {
+        if (guard <= 26) {
           field_k = (String) null;
           field_l = null;
           field_j = null;

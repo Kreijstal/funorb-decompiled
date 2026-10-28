@@ -21,35 +21,35 @@ final class gb {
           int[] var12 = var13;
           int[] var8 = var12;
           if (param1) {
-            gb.b(43);
+            gb.releaseStatics(43);
           }
           for (int var9 = 0; var9 < 4; var9++) {
             var8[var9] = ae.field_d.nextInt();
           }
-          if (null == kf.field_r ||
-            !(var7_int <= kf.field_r.payload.length)) {
-            kf.field_r = new PacketBuffer(var7_int);
+          if (null == NameAvailabilityValidator.field_r ||
+            !(var7_int <= NameAvailabilityValidator.field_r.payload.length)) {
+            NameAvailabilityValidator.field_r = new PacketBuffer(var7_int);
           }
-          kf.field_r.position = 0;
-          kf.field_r.a(param5, (byte) 21, param6, param3);
-          kf.field_r.g(-1, var7_int);
-          kf.field_r.a(1527987844, var13);
-          if (null == oj.field_L ||
-            !(100 <= oj.field_L.payload.length)) {
-            oj.field_L = new PacketBuffer(100);
+          NameAvailabilityValidator.field_r.position = 0;
+          NameAvailabilityValidator.field_r.a(param5, (byte) 21, param6, param3);
+          NameAvailabilityValidator.field_r.g(-1, var7_int);
+          NameAvailabilityValidator.field_r.a(1527987844, var13);
+          if (null == ValidationIndicator.field_L ||
+            !(100 <= ValidationIndicator.field_L.payload.length)) {
+            ValidationIndicator.field_L = new PacketBuffer(100);
           }
-          oj.field_L.position = 0;
-          oj.field_L.f(10, -123);
+          ValidationIndicator.field_L.position = 0;
+          ValidationIndicator.field_L.f(10, -123);
           int var11 = 0;
           int var9Lifetime1 = var11;
           while (var11 < 4) {
-            oj.field_L.a((byte) 127, var13[var11]);
+            ValidationIndicator.field_L.a((byte) 127, var13[var11]);
             var11++;
           }
-          oj.field_L.h(48, param5);
-          oj.field_L.a((byte) -94, param0, param2);
-          param4.a(oj.field_L.position, (byte) 21, 0, oj.field_L.payload);
-          param4.a(kf.field_r.position, (byte) 21, 0, kf.field_r.payload);
+          ValidationIndicator.field_L.h(48, param5);
+          ValidationIndicator.field_L.a((byte) -94, param0, param2);
+          param4.a(ValidationIndicator.field_L.position, (byte) 21, 0, ValidationIndicator.field_L.payload);
+          param4.a(NameAvailabilityValidator.field_r.position, (byte) 21, 0, NameAvailabilityValidator.field_r.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,11 +97,11 @@ final class gb {
         try {
           if (fc.field_a < 10) {
             boolean var3_int = false;
-            if (rh.field_H) {
-              rh.field_H = false;
+            if (NameSuggestionsPanel.field_H) {
+              NameSuggestionsPanel.field_H = false;
               var3_int = true;
             }
-            rh.a((byte) 9, (var3_int), wi.field_f, qe.a(-111), le.b(1));
+            NameSuggestionsPanel.a((byte) 9, (var3_int), wi.field_f, qe.a(-111), le.b(1));
           } else if (!jf.l(param1 - 89)) {
             SoftwareRasterizer.clearFramebuffer();
             ok.a(240, 320, param1 ^ 72);
@@ -115,7 +115,7 @@ final class gb {
           if (param1 == 92) {
             return;
           }
-          gb.b(90);
+          gb.releaseStatics(90);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,8 +131,8 @@ final class gb {
         }
     }
 
-    public static void b(int param0) {
-        if (param0 != -5) {
+    public static void releaseStatics(int guard) {
+        if (guard != -5) {
           return;
         }
         field_b = null;

@@ -172,10 +172,10 @@ final class ee {
         TerrainMaskSupport.field_c = DialogueScreen.a((byte) 82, var2 * var5Lifetime1, var2 * var4Lifetime1);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_c = null;
-        if (param0) {
-          ee.a(true);
+        if (guard) {
+          ee.releaseStatics(true);
           field_a = null;
           field_d = null;
           return;

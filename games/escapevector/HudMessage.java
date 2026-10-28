@@ -8,8 +8,8 @@ final class HudMessage extends IntrusiveNode {
     String text;
     int durationTicks;
 
-    public static void a(byte param0) {
-        if (param0 != -85) {
+    public static void releaseStatics(byte guard) {
+        if (guard != -85) {
           return;
         }
         field_h = null;
@@ -19,7 +19,7 @@ final class HudMessage extends IntrusiveNode {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          HudMessage.a((byte) -76);
+          HudMessage.releaseStatics((byte) -76);
           if (TextLayout.field_c == null) {
             return false;
           }

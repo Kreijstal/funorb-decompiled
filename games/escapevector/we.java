@@ -263,7 +263,7 @@ final class we {
         return field_y;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_y = null;
         field_h = null;
         field_m = null;

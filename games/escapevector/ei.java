@@ -113,10 +113,10 @@ final class ei extends IntrusiveNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int guard) {
         field_m = null;
         field_k = null;
-        if (param0 >= -44) {
+        if (guard >= -44) {
           return;
         }
         field_l = (byte[][]) null;

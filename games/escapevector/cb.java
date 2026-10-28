@@ -7,12 +7,12 @@ final class cb {
     static Sprite field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_b = null;
         field_a = null;
         field_c = null;
-        if (param0 != -13379) {
-          cb.a(-126);
+        if (guard != -13379) {
+          cb.releaseStatics(-126);
         }
     }
 

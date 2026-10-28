@@ -34,7 +34,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           CharSequence var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + dg.a(param1.length(), this.position, 19409, var4, this.payload, 0);
+          this.position = this.position + EmailAvailabilityValidator.a(param1.length(), this.position, 19409, var4, this.payload, 0);
           int fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -118,7 +118,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         try {
           CharSequence var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + dg.a(param0.length(), this.position, 19409, var4, this.payload, 0);
+          this.position = this.position + EmailAvailabilityValidator.a(param0.length(), this.position, 19409, var4, this.payload, 0);
           int fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -232,11 +232,11 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_l = null;
         field_j = null;
-        if (param0 != 70) {
-          PacketBuffer.a((byte) -107);
+        if (guard != 70) {
+          PacketBuffer.releaseStatics((byte) -107);
         }
         field_k = null;
     }

@@ -8,9 +8,9 @@ final class wa {
     static Sprite field_e;
     static String field_a;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_e = null;
-        if (!param0) {
+        if (!guard) {
           field_a = null;
           field_d = null;
           field_c = null;
@@ -25,17 +25,17 @@ final class wa {
     }
 
     final static void a(int param0, int param1) {
-        if (null == ni.field_N) {
+        if (null == DraggableWidget.field_N) {
           return;
         }
         if (!(kn.field_b <= param0)) {
           kn.field_b = param0;
-          ni.field_N.d(kc.field_b * kn.field_b / 64);
+          DraggableWidget.field_N.d(kc.field_b * kn.field_b / 64);
         }
         if (param1 == 32471) {
           return;
         }
-        wa.a(false);
+        wa.releaseStatics(false);
     }
 
     static {

@@ -13,11 +13,11 @@ abstract class IndexedSpriteState {
     int field_a;
     int field_f;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
         field_j = null;
         field_e = null;
-        if (param0 != -26317) {
+        if (guard != -26317) {
           field_c = (String) null;
         }
         field_b = null;

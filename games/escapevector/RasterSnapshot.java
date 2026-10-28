@@ -66,11 +66,11 @@ final class RasterSnapshot extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_l = null;
         field_j = null;
         field_m = null;
-        if (param0 <= 65) {
+        if (guard <= 65) {
           field_m = (Sprite[]) null;
           field_k = null;
           return;

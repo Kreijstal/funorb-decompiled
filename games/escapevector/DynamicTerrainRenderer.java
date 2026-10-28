@@ -138,12 +138,12 @@ final class DynamicTerrainRenderer {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int guard) {
         field_t = null;
         field_i = null;
         field_m = null;
         field_w = null;
-        if (param0 != 3) {
+        if (guard != 3) {
           DynamicTerrainRenderer.a(-86, (int[]) null, 29, -25, (ih) null, (String[]) null, (int[]) null, false, (int[]) null);
         }
     }
@@ -940,7 +940,7 @@ final class DynamicTerrainRenderer {
     final static void b(int param0, int param1) {
         int var3 = EscapeVector.obfuscationControl;
         try {
-          vj.a((byte) -116, jf.field_J, param0, ArchiveRequest.field_t, true, vl.field_e, param1);
+          vj.a((byte) -116, jf.field_J, param0, ArchiveRequest.field_t, true, TextLayoutLine.field_e, param1);
           int var2_int = 0;
           do {
             if (!(jf.field_J > var2_int)) {

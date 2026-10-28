@@ -45,9 +45,9 @@ abstract class Js5Transport {
         return this.field_j.c(0) + this.field_n.c(0);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int guard) {
         field_i = null;
-        if (param0 != -4470) {
+        if (guard != -4470) {
           field_b = 100;
           field_a = null;
           return;

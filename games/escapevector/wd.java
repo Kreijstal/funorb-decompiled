@@ -162,11 +162,11 @@ final class wd extends jl {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int guard) {
         field_u = null;
         field_q = null;
-        if (param0 < 85) {
-          wd.d(-128);
+        if (guard < 85) {
+          wd.releaseStatics(-128);
         }
     }
 

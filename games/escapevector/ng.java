@@ -20,11 +20,11 @@ final class ng extends fj {
         }
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_mb = null;
         field_lb = null;
-        if (param0 != 124) {
-          ng.j((byte) -12);
+        if (guard != 124) {
+          ng.releaseStatics((byte) -12);
         }
     }
 

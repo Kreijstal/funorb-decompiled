@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends TextFieldValidator {
+final class EmailSyntaxValidator extends TextFieldValidator {
     static int field_r;
     static int field_o;
     static String field_n;
@@ -15,7 +15,7 @@ final class hi extends TextFieldValidator {
             field_q = -5;
           }
           ei.field_i = false;
-          ni.field_F = false;
+          DraggableWidget.field_F = false;
           if (be.field_b != null) {
             if (!be.field_b.field_G) {
               return;
@@ -36,8 +36,8 @@ final class hi extends TextFieldValidator {
               var3_int = false;
             }
             if (var3_int) {
-              if (ni.field_F) {
-                param2 = r.a(QuickChatPhraseDefinition.field_y, param1 - 146, new String[]{param2});
+              if (DraggableWidget.field_F) {
+                param2 = SingleChildContainer.a(QuickChatPhraseDefinition.field_y, param1 - 146, new String[]{param2});
               }
               if (ha.field_a) {
                 param2 = jl.field_l;
@@ -82,12 +82,12 @@ final class hi extends TextFieldValidator {
         return (uf) null;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int guard) {
         field_s = null;
         field_n = null;
         field_p = null;
-        if (param0 != 14) {
-          hi.c(false);
+        if (guard != 14) {
+          EmailSyntaxValidator.c(false);
         }
     }
 
@@ -140,7 +140,7 @@ final class hi extends TextFieldValidator {
         }
     }
 
-    hi(EditableTextWidget param0) {
+    EmailSyntaxValidator(EditableTextWidget param0) {
         super(param0);
     }
 

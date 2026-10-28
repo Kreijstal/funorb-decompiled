@@ -25,7 +25,7 @@ final class nn {
           param1.secondaryNext.secondaryPrevious = param1;
           param1.secondaryKey = param0;
           if (param2 <= 24) {
-            nn.b((byte) -113);
+            nn.releaseStatics((byte) -113);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -42,9 +42,9 @@ final class nn {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_c = null;
-        if (param0 <= 48) {
+        if (guard <= 48) {
           field_g = (PcmSample) null;
           field_g = null;
           field_a = null;

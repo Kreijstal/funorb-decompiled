@@ -5,9 +5,9 @@ final class be {
     static String field_a;
     static pn field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_a = null;
-        if (param0 > -103) {
+        if (guard > -103) {
           field_a = (String) null;
           field_b = null;
           return;
@@ -19,11 +19,11 @@ final class be {
         int var3 = EscapeVector.obfuscationControl;
         try {
           if (param1 != 17205) {
-            be.a((byte) 71);
+            be.releaseStatics((byte) 71);
           }
           bd var4 = (bd) (rd.field_b.first(false));
           while (var4 != null) {
-            r.a(-118, var4, param0);
+            SingleChildContainer.a(-118, var4, param0);
             var4 = (bd) (rd.field_b.next((byte) 70));
           }
           IntrusiveNode var2 = SpriteState.field_w.first(false);

@@ -54,11 +54,11 @@ final class sf {
           }
           StringBuilder var5 = new StringBuilder(var4);
           if (param0 > -65) {
-            sf.a(true);
+            sf.releaseStatics(true);
           }
           for (int var6 = var2_int; var6 < var3; var6++) {
             int var7 = param1.charAt(var6);
-            if (d.a((char) var7, -11217)) {
+            if (EmailAvailabilityRequest.a((char) var7, -11217)) {
               int var8 = eo.a(227, (char) var7);
               if (0 != var8) {
                 StringBuilder discarded$0 = var5.append((char) var8);
@@ -172,12 +172,12 @@ final class sf {
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            tk stackIn_8_0 = d.field_c;
+            tk stackIn_8_0 = EmailAvailabilityRequest.field_c;
             return stackIn_8_0;
           }
           if (34 == param0.charAt(0)) {
             if (param0.charAt(var2_int - 1) != 34) {
-              tk stackIn_13_0 = wh.field_p;
+              tk stackIn_13_0 = CachedTextLayout.field_p;
               return stackIn_13_0;
             }
             boolean var3 = false;
@@ -189,7 +189,7 @@ final class sf {
               } else {
                 if (34 == var5 &&
                   !var3) {
-                  tk stackIn_27_0 = wh.field_p;
+                  tk stackIn_27_0 = CachedTextLayout.field_p;
                   return stackIn_27_0;
                 }
                 var3 = false;
@@ -213,13 +213,13 @@ final class sf {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                tk stackIn_44_0 = wh.field_p;
+                tk stackIn_44_0 = CachedTextLayout.field_p;
                 return stackIn_44_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (en.field_g.indexOf(var5Lifetime1) == -1) {
-                tk stackIn_49_0 = wh.field_p;
+                tk stackIn_49_0 = CachedTextLayout.field_p;
                 return stackIn_49_0;
               }
               var3Lifetime1 = false;
@@ -246,11 +246,11 @@ final class sf {
         return new int[]{this.field_r, this.field_h, this.field_f, this.field_a};
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_e = null;
         field_b = null;
         field_d = null;
-        if (param0) {
+        if (guard) {
           CharSequence var2 = (CharSequence) null;
           sf.a(27, (CharSequence) null);
         }

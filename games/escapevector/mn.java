@@ -98,9 +98,9 @@ final class mn extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_h = null;
-        if (param0 < 70) {
+        if (guard < 70) {
           mn.a(86, -71, -62, 90, 61);
           field_q = null;
           return;

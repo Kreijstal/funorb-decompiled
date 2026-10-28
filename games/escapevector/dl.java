@@ -20,7 +20,7 @@ final class dl {
     final static void a(boolean param0) {
         un.field_u = param0 ? true : false;
         ei.field_j = 0;
-        ni.field_O = -1;
+        DraggableWidget.field_O = -1;
         on.field_b = null;
         ci.field_g = -1;
     }
@@ -68,9 +68,9 @@ final class dl {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_b = null;
-        if (param0 != -96) {
+        if (guard != -96) {
           field_b = (BitmapFont) null;
         }
     }

@@ -364,8 +364,8 @@ final class AudioService implements Runnable {
         }
     }
 
-    public static void b(byte param0) {
-        if (param0 >= -11) {
+    public static void releaseStatics(byte guard) {
+        if (guard >= -11) {
           AudioService.a((byte) -77, (java.applet.Applet) null);
         }
         field_b = (String[][]) null;

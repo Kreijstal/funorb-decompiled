@@ -59,7 +59,7 @@ final class dn {
 
     final static int a(int param0) {
         if (param0 != 0) {
-          dn.h(-11);
+          dn.releaseStatics(-11);
         }
         return vi.field_a - ia.field_x;
     }
@@ -251,7 +251,7 @@ final class dn {
         dk[] var4 = this.field_l;
         int var5 = 0;
         if (param0 < 2) {
-          dn.h(-72);
+          dn.releaseStatics(-72);
         }
         while (var5 < var4.length) {
           dk var6 = var4[var5];
@@ -302,7 +302,7 @@ final class dn {
     }
 
     private final Sprite[] a(int param0, int param1) {
-        if (hi.a(param1, -2)) {
+        if (EmailSyntaxValidator.a(param1, -2)) {
           Sprite[] var3 = mb.field_f;
           return this.a(var3, param0 + 4802);
         }
@@ -510,7 +510,7 @@ final class dn {
               } else if (1 == var6.tetheredObjectType) {
                 var3_ref = pn.field_qb[var5.m((byte) -84)];
               } else if (var6.field_ec) {
-                var3_ref = d.field_f[var5.m((byte) -84)];
+                var3_ref = EmailAvailabilityRequest.field_f[var5.m((byte) -84)];
               } else if (var6.objectiveType != 1) {
                 var3_ref = LevelObject.field_q;
               } else {
@@ -758,7 +758,7 @@ final class dn {
           if (this.field_d.field_e) {
             this.l(1536);
           }
-          if (nk.field_n == 13) {
+          if (PasswordValidator.field_n == 13) {
             int var4 = this.field_e;
             if (this.field_w) {
               var4 = this.field_g;
@@ -803,8 +803,8 @@ final class dn {
         return (var3Lifetime1);
     }
 
-    public static void h(int param0) {
-        if (param0 != -1) {
+    public static void releaseStatics(int guard) {
+        if (guard != -1) {
           field_C = (String[]) null;
         }
         field_q = null;

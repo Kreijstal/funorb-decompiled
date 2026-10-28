@@ -347,7 +347,7 @@ final class GameplaySession {
 
     private final void loadTerrain(boolean headerOnly, int formatVersion, int guard, DataInputStream input) throws IOException {
         TerrainMap terrain = new TerrainMap(input, formatVersion);
-        vl.b(1, terrain.terrainTheme);
+        TextLayoutLine.b(1, terrain.terrainTheme);
         if (guard != 640) {
           this.x(-13);
         }
@@ -916,7 +916,7 @@ final class GameplaySession {
 
     private final void x(int param0) {
         if (ua.field_c.b(15954, this.gameMode, this.levelIndex)) {
-          ua.field_c.a(-15748, this.gameMode, this.levelIndex, oj.k(64));
+          ua.field_c.a(-15748, this.gameMode, this.levelIndex, ValidationIndicator.k(64));
         }
         if (param0 != 6324320) {
           this.b((byte) 87, 37);
@@ -1225,7 +1225,7 @@ final class GameplaySession {
     }
 
     private final void m(int param0) {
-        if (!hi.a(this.gameMode, -2)) {
+        if (!EmailSyntaxValidator.a(this.gameMode, -2)) {
           return;
         }
         if (this.levelIndex == 0) {
@@ -1248,7 +1248,7 @@ final class GameplaySession {
           re.a(param0 + 1829, var6);
         }
         if (this.levelIndex == 12) {
-          DialogueScreen var7 = new DialogueScreen(vl.field_c, ae.field_c, SeekerPulseStream.field_t, false);
+          DialogueScreen var7 = new DialogueScreen(TextLayoutLine.field_c, ae.field_c, SeekerPulseStream.field_t, false);
           re.a(1820, var7);
         }
     }
@@ -1618,7 +1618,7 @@ final class GameplaySession {
 
     private final void e(byte param0) {
         int var4 = EscapeVector.obfuscationControl;
-        if (!hi.a(this.gameMode, -2)) {
+        if (!EmailSyntaxValidator.a(this.gameMode, -2)) {
           return;
         }
         int var2 = 95 / ((51 - param0) / 36);
@@ -1635,7 +1635,7 @@ final class GameplaySession {
           DialogueScreen var8 = new DialogueScreen(UiContainer.field_F, ae.field_c, me.field_g, false);
           re.a(1820, var8);
         } else {
-          DialogueScreen var9 = new DialogueScreen(vl.field_c, ae.field_c, SeekerPulseStream.field_t, false);
+          DialogueScreen var9 = new DialogueScreen(TextLayoutLine.field_c, ae.field_c, SeekerPulseStream.field_t, false);
           re.a(1820, var9);
         }
     }
@@ -1939,7 +1939,7 @@ final class GameplaySession {
     }
 
     private final void E(int param0) {
-        if (hi.a(this.gameMode, -2)) {
+        if (EmailSyntaxValidator.a(this.gameMode, -2)) {
           DialogueScreen var2 = new DialogueScreen(SpriteOffset.field_e, ae.field_c, mb.field_b, true);
           var2.field_m = false;
           re.a(1820, var2);
@@ -3028,9 +3028,9 @@ final class GameplaySession {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_xb = null;
-        if (param0 != 69) {
+        if (guard != 69) {
           field_cc = (String) null;
         }
         field_cc = null;
@@ -3083,7 +3083,7 @@ final class GameplaySession {
         wa.field_c = new IntrusiveDeque();
         QuickChatPhraseDefinition.field_u = new IntrusiveDeque();
         mh.field_e = 0;
-        hi.field_q = 6324320;
+        EmailSyntaxValidator.field_q = 6324320;
         int var1 = -7 / ((70 - param0) / 32);
     }
 
@@ -3313,18 +3313,18 @@ final class GameplaySession {
               0 <= this.levelIndex) {
               IntPoint.field_b.e(640 - IntPoint.field_b.fullWidth >> 1, -IntPoint.field_b.fullHeight + 212);
               if (-100 > this.field_c) {
-                oj.a(266, 340, (byte) -106, en.field_e);
+                ValidationIndicator.a(266, 340, (byte) -106, en.field_e);
                 EscapeVector.a(Integer.toString(this.levelScore), 340, 266, (byte) 110);
               }
               if (this.field_c < -75) {
-                oj.a(286, 340, (byte) -102, dg.field_s);
+                ValidationIndicator.a(286, 340, (byte) -102, EmailAvailabilityValidator.field_s);
                 EscapeVector.a(Integer.toString(this.fuel), 340, 286, (byte) -5);
               }
               if (this.field_c < -50) {
-                oj.a(306, 340, (byte) -116, DualLinkNode.field_g);
+                ValidationIndicator.a(306, 340, (byte) -116, DualLinkNode.field_g);
                 EscapeVector.a(Integer.toString(this.shieldEnergy + this.shieldEnergy), 340, 306, (byte) -43);
               }
-              oj.a(336, 340, (byte) 85, BoundedUrlRequest.field_c);
+              ValidationIndicator.a(336, 340, (byte) 85, BoundedUrlRequest.field_c);
               EscapeVector.a(Integer.toString(this.score), 340, 336, (byte) 119);
             } else {
               IntPoint.field_b.e(640 - IntPoint.field_b.fullWidth >> 1, 480 - IntPoint.field_b.fullHeight >> 1);
@@ -3488,7 +3488,7 @@ final class GameplaySession {
             SoftwareRasterizer.c();
             ej.field_e.e(var4 + 224, 1024 - param2);
             for (int var5Lifetime5 = 256; var5Lifetime5 < 768; var5Lifetime5 += 32) {
-              dg.field_r.e(var5Lifetime5 + var4, -param2 + 1024);
+              EmailAvailabilityValidator.field_r.e(var5Lifetime5 + var4, -param2 + 1024);
             }
             q.field_G.e(768 + var4, -param2 + 1024);
             var4 += 1024;
@@ -3512,7 +3512,7 @@ final class GameplaySession {
           return;
         }
         try {
-          ua.field_c.a((byte) -64, this.gameMode, oj.k(64), this.levelIndex);
+          ua.field_c.a((byte) -64, this.gameMode, ValidationIndicator.k(64), this.levelIndex);
           int var3_int = 90 % ((42 - guard) / 62);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oe.VF(" + guard + ',' + (object != null ? "{...}" : "null") + ')');
@@ -3604,7 +3604,7 @@ final class GameplaySession {
         if ((!this.shipDestroyed ||
           this.livesRemaining != 0) &&
           (!this.isMissionComplete((byte) -113) ||
-          !kl.a(this.levelIndex + 1, this.gameMode, true))) {
+          !AgeValidator.a(this.levelIndex + 1, this.gameMode, true))) {
           if ((this.field_Jb ||
             this.field_Cb) && this.field_c >= 0 && 32 >= this.field_c) {
             wa.a((32 - this.field_c) * this.field_sc / 32, 32471);
@@ -3877,7 +3877,7 @@ final class GameplaySession {
         }
         scanLoop1: while (true) {
           if (pn.p(-116)) {
-            if (~nk.field_n == ~of.field_c &&
+            if (~PasswordValidator.field_n == ~of.field_c &&
               this.minimap != null) {
               this.minimap.e((byte) -101);
               if (this.minimap.b((byte) -107)) {
@@ -3886,10 +3886,10 @@ final class GameplaySession {
             }
             if (this.minimap != null &&
               this.minimap.b((byte) -114) &&
-              nk.field_n == 13) {
+              PasswordValidator.field_n == 13) {
               this.minimap.e((byte) -101);
             }
-            if (nk.field_n == 13 && (!this.shipDestroyed ||
+            if (PasswordValidator.field_n == 13 && (!this.shipDestroyed ||
               this.livesRemaining != 0) && !this.field_Jb) {
               if (this.minimap.b((byte) -122)) {
                 this.minimap.e((byte) -101);
@@ -3901,7 +3901,7 @@ final class GameplaySession {
               return;
             }
             if (SelfDestructEffects.field_k &&
-              nk.field_n == 12) {
+              PasswordValidator.field_n == 12) {
               this.field_c = 63;
               this.tetheredObjectType = 1;
               this.field_Ib = true;
@@ -3910,7 +3910,7 @@ final class GameplaySession {
               System.out.println("Level skip cheat activated");
             }
             if (SelfDestructEffects.field_k &&
-              nk.field_n == 11) {
+              PasswordValidator.field_n == 11) {
               boolean stackIn_35_1 = !(this.easyMode);
               this.easyMode = stackIn_35_1;
               boolean stackIn_38_1 = !(this.easyMode);
@@ -3920,7 +3920,7 @@ final class GameplaySession {
             if (!SelfDestructEffects.field_k) {
               continue;
             }
-            int stackIn_82_0 = ~nk.field_n;
+            int stackIn_82_0 = ~PasswordValidator.field_n;
             int stackIn_82_1 = -11;
             if (stackIn_82_0 != stackIn_82_1) {
               continue;
@@ -3955,7 +3955,7 @@ final class GameplaySession {
                 break scanLoop1;
               }
               this.elapsedTicks = this.elapsedTicks + 1;
-              hi.d(false);
+              EmailSyntaxValidator.d(false);
               break scanLoop1;
             }
             if (this.field_c == 64) {
@@ -4588,9 +4588,9 @@ final class GameplaySession {
                     ((PcmSampleStream) (var4_ref)).f(6144 * qm.field_c / 64);
                     this.field_R.f(6144 * qm.field_c / 64);
                   } else {
-                    this.field_R = PcmSampleStream.c(qa.field_E, 100, 6144 * qm.field_c / 64, 8192);
+                    this.field_R = PcmSampleStream.c(DropTargetWidget.field_E, 100, 6144 * qm.field_c / 64, 8192);
                     pl.field_n.addSubstream(this.field_R);
-                    PcmSampleStream var36 = PcmSampleStream.c(lm.field_d, 100, qm.field_c * 6144 / 64, 8192);
+                    PcmSampleStream var36 = PcmSampleStream.c(NameAvailabilityResult.field_d, 100, qm.field_c * 6144 / 64, 8192);
                     var4_ref = var36;
                     var36.h(-1);
                     pl.field_n.addSubstream(var36);
@@ -5141,7 +5141,7 @@ final class GameplaySession {
             int var9Lifetime7 = -(int)(Math.cos(var6_double) * 131072.0);
             this.b(this.shipYQ16 + 5 * var9Lifetime7, this.shipXQ16 + 5 * var8, this.shipVelocityYQ16 + var9Lifetime7, 256, 0, var8 + this.shipVelocityXQ16);
             if (!this.triShotEnabled) {
-              pl.field_n.playSampleWithPan(ni.field_M, 100, qm.field_c * 6144 / 64, 8192);
+              pl.field_n.playSampleWithPan(DraggableWidget.field_M, 100, qm.field_c * 6144 / 64, 8192);
             } else {
               this.b(this.shipYQ16 + var9Lifetime7 * 5, this.shipXQ16 + var8 * 5, (var8 >> 3) - (var9Lifetime7 >> 3) + (this.shipVelocityYQ16 + var9Lifetime7), 256, 0, this.shipVelocityXQ16 + (var8 - ((var8 >> 3) + (var9Lifetime7 >> 3))));
               this.b(this.shipYQ16 + var9Lifetime7 * 5, 5 * var8 + this.shipXQ16, -(var8 >> 3) - (var9Lifetime7 >> 3) + (var9Lifetime7 + this.shipVelocityYQ16), 256, 0, (var9Lifetime7 >> 3) + this.shipVelocityXQ16 + (var8 - (var8 >> 3)));
@@ -5164,7 +5164,7 @@ final class GameplaySession {
             launchedRockBuster.velocityXQ16 = this.shipVelocityXQ16 + var8;
             launchedRockBuster.yQ16 = this.shipYQ16 + 5 * var9Lifetime7Lifetime1;
             launchedRockBuster.exhaustParticles = this.i(256, -22944);
-            launchedRockBuster.flightSound = PcmSampleStream.c(kf.field_p, 100, this.b(2097152, launchedRockBuster.xQ16, 96, launchedRockBuster.yQ16), this.c(launchedRockBuster.xQ16, 116));
+            launchedRockBuster.flightSound = PcmSampleStream.c(NameAvailabilityValidator.field_p, 100, this.b(2097152, launchedRockBuster.xQ16, 96, launchedRockBuster.yQ16), this.c(launchedRockBuster.xQ16, 116));
             pl.field_n.addSubstream(launchedRockBuster.flightSound);
             this.rockBusters.addLast(-12328, launchedRockBuster);
             this.rockBusterAmmo = this.rockBusterAmmo - 1;
@@ -5640,7 +5640,7 @@ final class GameplaySession {
         }
         this.field_ec = true;
         if (!this.shipDestroyed) {
-          this.a(50, 0 > this.levelIndex ? qc.field_xb : hi.field_n);
+          this.a(50, 0 > this.levelIndex ? qc.field_xb : EmailSyntaxValidator.field_n);
         }
     }
 
@@ -6029,7 +6029,7 @@ final class GameplaySession {
         this.worldHeight = this.tilesHigh << 5;
         this.secondaryTheme = 5;
         this.terrainTheme = 5;
-        vl.b(1, 0);
+        TextLayoutLine.b(1, 0);
         this.terrainMasks = new int[this.tilesHigh * this.tilesWide][];
         for (int var2 = 0; 4 > var2; var2++) {
           for (int var3 = 0; var3 < 15; var3++) {
@@ -6244,7 +6244,7 @@ final class GameplaySession {
             if (SelfDestructEffects.field_k) {
               System.out.println("Mod logged in: Cheats activated");
             }
-            this.field_jb = PcmSampleStream.a(oj.field_N, 100, 0);
+            this.field_jb = PcmSampleStream.a(ValidationIndicator.field_N, 100, 0);
             this.field_jb.h(-1);
             pl.field_n.addSubstream(this.field_jb);
             this.field_Z = PcmSampleStream.a(ng.field_mb, 100, 0);

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ni extends r {
+final class DraggableWidget extends SingleChildContainer {
     private int field_J;
     static PcmSample field_M;
     private int field_L;
@@ -28,8 +28,8 @@ final class ni extends r {
         }
     }
 
-    public static void l(int param0) {
-        if (param0 < -90) {
+    public static void releaseStatics(int guard) {
+        if (guard < -90) {
           field_M = null;
           field_K = null;
           field_D = null;
@@ -45,13 +45,13 @@ final class ni extends r {
         field_N = null;
     }
 
-    private ni(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5, UiComponent param6, boolean param7, boolean param8) {
+    private DraggableWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5, UiComponent param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_H = 2147483647;
         this.field_I = 2147483647;
         try {
           this.field_P = param8 ? true : false;
-          this.field_C = param6;
+          this.child = param6;
           this.field_E = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ni.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
@@ -67,7 +67,7 @@ final class ni extends r {
           }
           if (this.beginDebugDescription(depth, visited, output, false)) {
             this.appendDebugBody(visited, output, depth, 1);
-            this.a(depth, (byte) 95, visited, output);
+            this.appendChildDebugTree(depth, (byte) 95, visited, output);
             StringBuilder discarded$62 = output.append(" revert=").append(this.field_E);
             if (this.field_H != 2147483647 &&
               2147483647 != this.field_I) {
@@ -96,10 +96,10 @@ final class ni extends r {
         }
     }
 
-    final void k(int param0) {
-        if (param0 == -6844) {
-          super.k(param0 + 0);
-          this.field_C.setBounds(this.width, 0, 0, true, this.height);
+    final void layoutChild(int guard) {
+        if (guard == -6844) {
+          super.layoutChild(guard + 0);
+          this.child.setBounds(this.width, 0, 0, true, this.height);
           this.field_I = this.y;
           this.field_H = this.x;
           return;
@@ -146,8 +146,8 @@ final class ni extends r {
         String stackIn_30_2 = null;
         int var5_int = 0;
         try {
-          if ((!(this.field_C instanceof TextButton) ||
-            ((TextButton) (this.field_C)).enabled) &&
+          if ((!(this.child instanceof TextButton) ||
+            ((TextButton) (this.child)).enabled) &&
             this.field_t == 1) {
             var5_int = -this.field_J + dh.field_d - offsetX;
             int var6 = -offsetY - this.field_L + UiContainer.field_y;
@@ -155,8 +155,8 @@ final class ni extends r {
               this.y != var6) {
               this.y = var6;
               this.x = var5_int;
-              if (this.listener instanceof nd) {
-                ((nd) (this.listener)).a(this, offsetY, offsetX, 32468);
+              if (this.listener instanceof WidgetDragListener) {
+                ((WidgetDragListener) (this.listener)).onDragged(this, offsetY, offsetX, 32468);
               }
             }
           } else if (this.field_E) {

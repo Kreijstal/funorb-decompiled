@@ -8,12 +8,12 @@ final class mc {
     static String field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_d = null;
         field_c = null;
         field_b = null;
         field_a = null;
-        if (param0 != 8123) {
+        if (guard != 8123) {
           field_d = (Sprite[]) null;
         }
     }

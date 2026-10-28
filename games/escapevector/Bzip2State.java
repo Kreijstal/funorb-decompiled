@@ -39,10 +39,10 @@ final class Bzip2State {
     int field_i;
     byte[] field_s;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_y = null;
         field_G = null;
-        if (param0 != 8192) {
+        if (guard != 8192) {
           field_y = (int[]) null;
           field_v = null;
           return;

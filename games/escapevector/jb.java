@@ -200,10 +200,10 @@ final class jb extends kb {
         throw jb.<RuntimeException>rethrowUnchecked((Throwable) var7);
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_m = null;
         field_j = null;
-        if (!param0) {
+        if (!guard) {
           jb.a(48L, (byte) -107);
         }
         field_x = null;

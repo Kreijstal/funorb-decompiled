@@ -7,7 +7,7 @@ final class km extends fh {
     static int[] field_j;
     static String field_l;
     private java.nio.ByteBuffer field_m;
-    static pk field_n;
+    static ViewportController field_n;
 
     final byte[] a(int param0) {
         if (param0 != 4) {
@@ -20,13 +20,13 @@ final class km extends fh {
         return var3;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int guard) {
         field_j = null;
         field_k = null;
         field_o = null;
         field_n = null;
         field_l = null;
-        if (param0 != -4) {
+        if (guard != -4) {
           km.a(111, 74);
         }
     }

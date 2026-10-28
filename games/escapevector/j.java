@@ -5,9 +5,9 @@ final class j {
     static int field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_a = null;
-        int var1 = 26 % ((65 - param0) / 59);
+        int var1 = 26 % ((65 - guard) / 59);
     }
 
     final static void a(String[] args, String param1, byte param2, int param3) {

@@ -14,9 +14,9 @@ final class ik extends IntrusiveNode {
     int field_k;
     int field_i;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int guard) {
         field_h = null;
-        if (param0 != 65535) {
+        if (guard != 65535) {
           ik.a(false, false, (byte) -31, false);
         }
     }

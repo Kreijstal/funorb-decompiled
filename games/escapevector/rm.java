@@ -29,9 +29,9 @@ final class rm implements Iterator {
         return this.field_f.field_c != this.field_b;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_a = null;
-        if (!param0) {
+        if (!guard) {
           field_c = false;
           field_e = null;
           field_g = null;

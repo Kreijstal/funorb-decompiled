@@ -36,8 +36,8 @@ final class uk {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != -1) {
+    public static void releaseStatics(int guard) {
+        if (guard != -1) {
           field_j = (PcmSample) null;
         }
         field_j = null;
@@ -137,11 +137,11 @@ final class uk {
             }
             ui var21 = stackIn_40_0;
             int var22 = on.field_g[var15Lifetime1];
-            int var23 = ni.field_D[var15Lifetime1];
+            int var23 = DraggableWidget.field_D[var15Lifetime1];
             int var24 = on.field_g[var16];
-            int var25 = ni.field_D[var16];
+            int var25 = DraggableWidget.field_D[var16];
             int var26 = on.field_g[var17];
-            int var27 = ni.field_D[var17];
+            int var27 = DraggableWidget.field_D[var17];
             if (var19 == var18 &&
               var20 == var19) {
               var28 = var54[var18];

@@ -55,20 +55,20 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         if (guard < -60) {
           return this.validateText(-1, this.field.text);
         }
-        TextFieldValidator.f(-116);
+        TextFieldValidator.releaseStatics(-116);
         return this.validateText(-1, this.field.text);
     }
 
     abstract String messageForText(byte guard, String text);
 
-    public static void f(int param0) {
+    public static void releaseStatics(int guard) {
         field_j = null;
         field_m = null;
         field_g = null;
         field_l = null;
         field_k = null;
         field_i = null;
-        if (param0 != -16187) {
+        if (guard != -16187) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
           TextFieldValidator.a((java.awt.Canvas) null, -55);
         }

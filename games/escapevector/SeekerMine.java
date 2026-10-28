@@ -55,9 +55,9 @@ final class SeekerMine extends IntrusiveNode {
         ve.a(-58, param1, false);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_k = null;
-        if (param0) {
+        if (guard) {
           SeekerMine.a(false, 19, -31, -11, -87);
           field_n = null;
           return;
@@ -70,14 +70,14 @@ final class SeekerMine extends IntrusiveNode {
           return;
         }
         GameplaySession.c((byte) -14);
-        hi.field_q = param1;
+        EmailSyntaxValidator.field_q = param1;
     }
 
     final static boolean a(String param0, byte param1) {
         String stackIn_7_2 = null;
         try {
           if (param1 <= 108) {
-            SeekerMine.a(true);
+            SeekerMine.releaseStatics(true);
           }
           CharSequence var3 = (CharSequence) ((Object) param0);
           boolean stackIn_3_0 = cc.field_k.equals(sf.a(-67, var3));

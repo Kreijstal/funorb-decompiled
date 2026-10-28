@@ -95,10 +95,10 @@ class ol extends cd {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int guard) {
         field_E = null;
         field_ab = null;
-        if (param0 != 4095) {
+        if (guard != 4095) {
           return;
         }
         field_N = null;
@@ -137,7 +137,7 @@ class ol extends cd {
         String stackIn_101_2 = null;
         try {
           if (param0 != -1680) {
-            ol.g(-110);
+            ol.releaseStatics(-110);
           }
           if (param1 != null) {
             if (!param1.field_W) {

@@ -142,8 +142,8 @@ final class mm {
         }
     }
 
-    public static void b(int param0) {
-        int var1 = -15 % ((param0 + 35) / 55);
+    public static void releaseStatics(int guard) {
+        int var1 = -15 % ((guard + 35) / 55);
         field_c = null;
         field_b = null;
         field_a = null;

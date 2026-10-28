@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends TextFieldValidator {
+final class PasswordValidator extends TextFieldValidator {
     static int field_n;
     private EditableTextWidget field_o;
     private EditableTextWidget field_q;
@@ -22,7 +22,7 @@ final class nk extends TextFieldValidator {
             String stackIn_6_0 = TerrainMap.field_e;
             return stackIn_6_0;
           }
-          if (lb.b((byte) -78, var5)) {
+          if (MatchingTextValidator.b((byte) -78, var5)) {
             String stackIn_10_0 = gn.field_b;
             return stackIn_10_0;
           }
@@ -187,9 +187,9 @@ final class nk extends TextFieldValidator {
         return bc.field_g[param1];
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int guard) {
         field_p = null;
-        if (param0 != 29779) {
+        if (guard != 29779) {
           field_s = (String) null;
           field_s = null;
           field_r = null;
@@ -204,12 +204,12 @@ final class nk extends TextFieldValidator {
           bk.field_r.a(param0, 3748);
         }
         if (param1 > -121) {
-          nk.a(-97, -50);
+          PasswordValidator.a(-97, -50);
           return;
         }
     }
 
-    nk(EditableTextWidget param0, EditableTextWidget param1, EditableTextWidget param2) {
+    PasswordValidator(EditableTextWidget param0, EditableTextWidget param1, EditableTextWidget param2) {
         super(param0);
         try {
           this.field_q = param1;

@@ -8,10 +8,10 @@ final class wf {
     private IntrusiveDeque field_a;
     private IntrusiveNode field_d;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_e = null;
         field_c = null;
-        if (param0) {
+        if (guard) {
           return;
         }
         field_b = null;

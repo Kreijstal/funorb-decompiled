@@ -110,10 +110,10 @@ final class ia {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_z = null;
         field_y = null;
-        if (!param0) {
+        if (!guard) {
           field_p = (String) null;
         }
         field_p = null;

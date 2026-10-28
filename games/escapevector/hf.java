@@ -20,9 +20,9 @@ final class hf {
         int var5 = EscapeVector.obfuscationControl;
         String var6 = "(" + NetworkGameClient.field_q + " " + ArchiveIndex.field_t + " " + jj.field_b + ") " + cd.field_v;
         String var1 = var6;
-        if (hi.field_r > 0) {
+        if (EmailSyntaxValidator.field_r > 0) {
           var1 = var6 + ":";
-          for (int var2 = 0; var2 < hi.field_r; var2++) {
+          for (int var2 = 0; var2 < EmailSyntaxValidator.field_r; var2++) {
             String var7 = var1 + ' ';
             var1 = var7;
             int var3 = 255 & om.field_g.payload[var2];

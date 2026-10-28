@@ -76,7 +76,7 @@ final class ae implements WidgetPainter {
           }
           int var4_int = param3.b(-1, param0);
           int var5 = param3.a(var4_int, param1, true);
-          IndexedSprite[] stackIn_4_0 = bl.a(var5, 255, param3, var4_int);
+          IndexedSprite[] stackIn_4_0 = TextHotspotRegion.a(var5, 255, param3, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,14 +104,14 @@ final class ae implements WidgetPainter {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_e = null;
         field_c = null;
         field_a = null;
         field_b = null;
         field_d = null;
-        if (param0 != 1) {
-          ae.a(-128);
+        if (guard != 1) {
+          ae.releaseStatics(-128);
         }
     }
 

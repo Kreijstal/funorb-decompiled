@@ -182,7 +182,7 @@ final class ph {
         if (param1 == 1) {
           return ArchiveProvider.a(param2, param3, 1, 1, param0);
         }
-        ph.a((byte) 124);
+        ph.releaseStatics((byte) 124);
         return ArchiveProvider.a(param2, param3, 1, 1, param0);
     }
 
@@ -190,8 +190,8 @@ final class ph {
         throw new Error();
     }
 
-    public static void a(byte param0) {
-        if (param0 != 106) {
+    public static void releaseStatics(byte guard) {
+        if (guard != 106) {
           field_b = (SpriteOffset) null;
           field_b = null;
           return;

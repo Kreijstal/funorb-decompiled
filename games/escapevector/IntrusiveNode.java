@@ -24,7 +24,7 @@ class IntrusiveNode {
 
     final boolean isLinked(byte guard) {
         if (guard != 48) {
-          IntrusiveNode.c(-37);
+          IntrusiveNode.releaseStatics(-37);
           if (this.previous != null) {
             return true;
           }
@@ -106,18 +106,18 @@ class IntrusiveNode {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
         field_a = null;
         field_f = null;
-        if (param0 > -26) {
-          IntrusiveNode.c(6);
+        if (guard > -26) {
+          IntrusiveNode.releaseStatics(6);
         }
     }
 
     final static void a(int param0) {
         if (param0 != 12) {
-          IntrusiveNode.c(-66);
+          IntrusiveNode.releaseStatics(-66);
         }
     }
 

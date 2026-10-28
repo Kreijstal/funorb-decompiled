@@ -154,7 +154,7 @@ final class ta {
           int var7 = ((this.field_n.field_m - param1.fullHeight) / param0 - var5) / 3;
           int var8 = var7 + this.field_n.field_k + var4.field_r;
           int var9 = 320;
-          lb.a(var8, var6, 16777215, -110, var9);
+          MatchingTextValidator.a(var8, var6, 16777215, -110, var9);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ta.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -198,7 +198,7 @@ final class ta {
 
     final static void m(int param0) {
         if (param0 != 2) {
-          ta.f(-84);
+          ta.releaseStatics(-84);
         }
         WhirlpoolHasher.a(4, 43);
     }
@@ -392,11 +392,11 @@ final class ta {
         if (pn.p(-98)) {
           di.field_d.a(118);
           qk.a(this.field_t, 0);
-          if (nk.field_n == 13) {
+          if (PasswordValidator.field_n == 13) {
             di.field_d.a(false, this.field_d);
           }
           this.a(20364);
-          var2 = (this.a((byte) -91, false, Js5NetworkRequest.a((byte) 15, nk.field_n)));
+          var2 = (this.a((byte) -91, false, Js5NetworkRequest.a((byte) 15, PasswordValidator.field_n)));
           return (var2);
         }
         if (param0 >= -60) {
@@ -812,7 +812,7 @@ final class ta {
         }
         if (di.field_d.field_e) {
           dk var2 = this.d(true);
-          int var3 = nk.a(-93, var2);
+          int var3 = PasswordValidator.a(-93, var2);
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, qm.field_c * 1536 / 64, var3);
         }
     }
@@ -1018,8 +1018,8 @@ final class ta {
         }
     }
 
-    public static void f(int param0) {
-        if (param0 != 0) {
+    public static void releaseStatics(int guard) {
+        if (guard != 0) {
           field_k = (String) null;
         }
         field_k = null;
@@ -1102,7 +1102,7 @@ final class ta {
           return;
         }
         try {
-          int var4 = nk.a(-87, param1);
+          int var4 = PasswordValidator.a(-87, param1);
           ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / param0, var4);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ta.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

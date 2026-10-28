@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lm {
+final class NameAvailabilityResult {
     boolean field_a;
     String field_f;
     String[] field_c;
@@ -10,10 +10,10 @@ final class lm {
     boolean field_e;
     static PcmSample field_d;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_b = null;
         field_d = null;
-        if (param0 != -10) {
+        if (guard != -10) {
           field_b = (String[]) null;
         }
     }
@@ -34,7 +34,7 @@ final class lm {
             if (!decompiledRegionSelector0) {
               om.field_g.position = om.field_g.position + 24;
               if (param0 > -44) {
-                lm.a((byte) -105);
+                NameAvailabilityResult.a((byte) -105);
               }
               return;
             }
@@ -43,7 +43,7 @@ final class lm {
           if (param0 <= -44) {
             return;
           }
-          lm.a((byte) -105);
+          NameAvailabilityResult.a((byte) -105);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -51,7 +51,7 @@ final class lm {
         }
     }
 
-    lm(boolean param0) {
+    NameAvailabilityResult(boolean param0) {
         this.field_a = param0 ? true : false;
     }
 

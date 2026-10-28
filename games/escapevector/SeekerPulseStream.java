@@ -73,10 +73,10 @@ final class SeekerPulseStream extends PcmStream {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_t = null;
-        if (param0 != -43) {
-          SeekerPulseStream.a((byte) -61);
+        if (guard != -43) {
+          SeekerPulseStream.releaseStatics((byte) -61);
         }
     }
 

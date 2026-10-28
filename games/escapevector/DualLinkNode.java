@@ -25,13 +25,13 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     final static String e(int param0) {
-        if (dg.field_o == dn.field_q) {
+        if (EmailAvailabilityValidator.field_o == dn.field_q) {
           return tf.field_h;
         }
-        if (dg.field_o == ui.field_b) {
+        if (EmailAvailabilityValidator.field_o == ui.field_b) {
           return tc.field_j;
         }
-        if (!di.field_g.b(param0)) {
+        if (!di.field_g.isComplete(param0)) {
           return tc.field_j;
         }
         return vk.field_v;
@@ -81,12 +81,12 @@ class DualLinkNode extends IntrusiveNode {
     final static void a(String param0, SystemTaskService param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         IntPoint.field_d = param1;
         SeekerPulseStream.field_l = param7;
-        kl.field_n = param8;
+        AgeValidator.field_n = param8;
         if (param3 != -22183) {
           return;
         }
         try {
-          rh.field_N = param2;
+          NameSuggestionsPanel.field_N = param2;
           he.field_y = param4;
           TrackerMusicDefinition.field_j = param5;
           mn.field_n = param6;
@@ -102,9 +102,9 @@ class DualLinkNode extends IntrusiveNode {
     protected DualLinkNode() {
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_h = null;
-        int var1 = 126 % ((param0 - 50) / 35);
+        int var1 = 126 % ((guard - 50) / 35);
         field_n = null;
         field_m = null;
         field_k = null;

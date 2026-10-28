@@ -8,7 +8,7 @@ abstract class SpriteState extends DualLinkNode {
     static IntrusiveDeque field_w;
     int height;
     int offsetX;
-    static lm field_y;
+    static NameAvailabilityResult field_y;
     int fullHeight;
     static boolean field_u;
     static boolean field_r;
@@ -23,7 +23,7 @@ abstract class SpriteState extends DualLinkNode {
           gj.field_g = jj.field_c[param0];
           return;
         }
-        field_y = (lm) null;
+        field_y = (NameAvailabilityResult) null;
         md.field_H = tc.field_i[param0];
         gj.field_g = jj.field_c[param0];
     }
@@ -48,10 +48,10 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int guard) {
         field_t = null;
-        if (param0 != -363232252) {
-          field_y = (lm) null;
+        if (guard != -363232252) {
+          field_y = (NameAvailabilityResult) null;
           field_y = null;
           field_w = null;
           return;

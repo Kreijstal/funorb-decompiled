@@ -89,7 +89,7 @@ final class q extends TextButton {
         return this.field_K.a(-109, param0);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_Q = null;
         field_H = null;
         field_L = null;
@@ -97,7 +97,7 @@ final class q extends TextButton {
         field_I = null;
         field_G = null;
         field_N = null;
-        if (param0 > 6) {
+        if (guard > 6) {
           field_F = null;
           field_E = (boolean[][]) null;
           return;

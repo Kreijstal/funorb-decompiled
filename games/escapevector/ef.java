@@ -120,9 +120,9 @@ final class ef {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
-        if (param0 <= 38) {
+        if (guard <= 38) {
           return;
         }
         field_k = null;
@@ -150,43 +150,43 @@ final class ef {
           ld.a(param1.height, this.field_i, 4, param3 + param1.y, param2 + param1.x, param1.width);
           if (null != this.field_g) {
             int var6_int = param2 - (-param1.x - this.field_h);
-            if (param0.field_m == 1) {
+            if (param0.horizontalAlignment == 1) {
               var6_int = var6_int + (param1.width - this.field_g.fullWidth) / 2;
             }
             int var7 = this.field_f + param1.y + param3;
-            if (param0.field_c == 1) {
+            if (param0.verticalAlignment == 1) {
               var7 = var7 + (-this.field_g.fullHeight + param1.height) / 2;
             }
-            if (param0.field_m == 2) {
+            if (param0.horizontalAlignment == 2) {
               var6_int = var6_int + (param1.width - this.field_g.fullWidth);
             }
-            if (param0.field_c == 2) {
+            if (param0.verticalAlignment == 2) {
               var7 = var7 + (-this.field_g.fullHeight + param1.height);
             }
             this.field_g.e(var6_int, var7);
           }
-          String var6 = param0.b((byte) 39, param1);
+          String var6 = param0.displayText((byte) 39, param1);
           if (var6 != null &&
-            param0.field_l != null) {
+            param0.font != null) {
             if (this.field_a < 0) {
               return;
             }
-            BitmapFont stackIn_20_0 = param0.field_l;
+            BitmapFont stackIn_20_0 = param0.font;
             String stackIn_20_1 = var6;
             if (this.field_h == -2147483648) {
               stackIn_21_2 = 0;
             } else {
               stackIn_21_2 = this.field_h;
             }
-            int stackIn_23_2 = stackIn_21_2 + (param2 + param1.x + param0.field_n);
+            int stackIn_23_2 = stackIn_21_2 + (param2 + param1.x + param0.leftInset);
             if (this.field_f != -2147483648) {
               stackIn_24_3 = this.field_f;
             } else {
               stackIn_24_3 = 0;
             }
-            int stackIn_26_3 = stackIn_24_3 + param0.field_f + (param1.y + param3);
-            int stackIn_26_4 = -param0.field_n + param1.width - param0.field_b;
-            int stackIn_26_5 = -param0.field_o - param0.field_f + param1.height;
+            int stackIn_26_3 = stackIn_24_3 + param0.topInset + (param1.y + param3);
+            int stackIn_26_4 = -param0.leftInset + param1.width - param0.rightInset;
+            int stackIn_26_5 = -param0.bottomInset - param0.topInset + param1.height;
             int stackIn_26_6 = this.field_a;
             int stackIn_26_7 = this.field_b;
             if (this.field_e != -2147483648) {
@@ -194,7 +194,7 @@ final class ef {
             } else {
               stackIn_27_8 = 256;
             }
-            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.field_m, param0.field_c, param0.field_k);
+            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.horizontalAlignment, param0.verticalAlignment, param0.lineSpacing);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

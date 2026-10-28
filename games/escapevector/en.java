@@ -74,11 +74,11 @@ final class en {
         return var4.a(param0, (byte) -100);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_d = null;
         field_e = null;
         field_a = null;
-        if (param0 != 1) {
+        if (guard != 1) {
           return;
         }
         field_i = null;
@@ -437,7 +437,7 @@ final class en {
         }
         this.a((byte) -47, 1, param2);
         this.a((byte) -47, 0, param2);
-        nk.b(param2, -128);
+        PasswordValidator.b(param2, -128);
         if (param0 != 54) {
           return true;
         }
@@ -511,7 +511,7 @@ final class en {
           sl.field_b[var2_int][2] = fe.a("tutorial", param0, "layer2", true);
           uf.field_e = fe.a("tutorial", param0, "edge_exit_left", true);
           wa.field_b = fe.a("tutorial", param0, "edge_exit_right", true);
-          dg.field_r = fe.a("tutorial", param0, "edge_inner_bottom", true);
+          EmailAvailabilityValidator.field_r = fe.a("tutorial", param0, "edge_inner_bottom", true);
           ej.field_e = fe.a("tutorial", param0, "edge_inner_bottom_left", true);
           q.field_G = fe.a("tutorial", param0, "edge_inner_bottom_right", true);
           PacketBuffer.field_l = fe.a("tutorial", param0, "edge_inner_left", true);
@@ -744,7 +744,7 @@ final class en {
         int var5 = 0;
         int var10 = EscapeVector.obfuscationControl;
         try {
-          int var1_int = hi.field_o;
+          int var1_int = EmailSyntaxValidator.field_o;
           int var2 = param0;
           if (2 == ArchiveIndex.field_j) {
             long var3_long = -bd.field_k + td.b(128);
@@ -758,7 +758,7 @@ final class en {
             if (!(var4 >= 0)) {
               var5 = lh.field_e;
             } else if (var4 != cb.field_c.field_h) {
-              var5 = gd.field_X;
+              var5 = ValidatedTextWidget.field_X;
             } else {
               var5 = pc.field_d;
             }

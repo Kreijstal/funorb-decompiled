@@ -43,11 +43,11 @@ final class gm {
         return eb.field_H;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_b = null;
         field_d = null;
         field_f = null;
-        if (param0 == 8192) {
+        if (guard == 8192) {
           field_e = null;
           field_c = null;
           field_a = null;

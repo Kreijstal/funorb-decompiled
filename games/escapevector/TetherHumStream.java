@@ -22,10 +22,10 @@ final class TetherHumStream extends PcmStream {
         return null;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int guard) {
         field_n = null;
-        if (param0 != -1600199832) {
-          TetherHumStream.e(1);
+        if (guard != -1600199832) {
+          TetherHumStream.releaseStatics(1);
         }
     }
 

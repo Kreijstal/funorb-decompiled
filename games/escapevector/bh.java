@@ -12,7 +12,7 @@ final class bh extends vj {
         if (param1 != -19503) {
           return;
         }
-        di.field_g.a((byte) -128, param0);
+        di.field_g.complete((byte) -128, param0);
     }
 
     final static void c(int param0) {
@@ -34,8 +34,8 @@ final class bh extends vj {
         }
     }
 
-    public static void d(int param0) {
-        if (param0 != 11) {
+    public static void releaseStatics(int guard) {
+        if (guard != 11) {
           return;
         }
         field_e = null;
@@ -59,7 +59,7 @@ final class bh extends vj {
           int var7 = he.field_s.get(11);
           int var8 = he.field_s.get(12);
           int var9 = he.field_s.get(13);
-          return r.field_A[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + bg.field_g[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return SingleChildContainer.field_A[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + bg.field_g[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }

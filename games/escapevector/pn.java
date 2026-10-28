@@ -30,7 +30,7 @@ class pn extends fj implements ButtonListener {
           qi var6 = new qi(this, this.field_sb, param0);
           if (param2 == 5) {
             var6.a(false, TerrainMap.field_i, 11);
-            var6.a(false, d.field_d, 17);
+            var6.a(false, EmailAvailabilityRequest.field_d, 17);
           } else if (param2 == 256) {
             var6.a((UiListener) (this), (byte) -67, sh.field_s);
           } else {
@@ -85,7 +85,7 @@ class pn extends fj implements ButtonListener {
           if (ta.field_w == ve.field_l) {
             return false;
           }
-          nk.field_n = td.field_b[ve.field_l];
+          PasswordValidator.field_n = td.field_b[ve.field_l];
           jc.field_c = ek.field_a[ve.field_l];
           ve.field_l = 127 & 1 + ve.field_l;
           stackIn_7_0 = true;
@@ -96,14 +96,14 @@ class pn extends fj implements ButtonListener {
     final void r(int param0) {
         int var3 = -15 / ((26 - param0) / 47);
         this.field_rb.a(4210752, 2121792, -127);
-        qi var2 = new qi(this, this.field_sb, ni.field_K);
+        qi var2 = new qi(this, this.field_sb, DraggableWidget.field_K);
         var2.a(false, gj.field_u, 15);
         this.a(var2, 30);
     }
 
-    public static void q(int param0) {
+    public static void releaseStatics(int guard) {
         field_nb = null;
-        if (param0 != -5) {
+        if (guard != -5) {
           return;
         }
         field_qb = null;

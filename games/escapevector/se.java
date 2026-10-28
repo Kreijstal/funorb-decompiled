@@ -5,8 +5,8 @@ final class se {
     static String[] field_a;
     static p field_b;
 
-    public static void a(byte param0) {
-        if (param0 != 23) {
+    public static void releaseStatics(byte guard) {
+        if (guard != 23) {
           field_a = (String[]) null;
           field_a = null;
           field_b = null;

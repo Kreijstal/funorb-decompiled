@@ -22,11 +22,11 @@ final class sj extends IntrusiveNode {
         ObjectSpriteSet.field_e.addSubstream(mb.field_a);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_j = null;
         field_k = null;
         field_l = null;
-        if (param0 != 123) {
+        if (guard != 123) {
           field_l = (om) null;
         }
     }

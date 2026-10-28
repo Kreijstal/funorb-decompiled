@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wm implements ub {
+final class LegacyDirectSoundBackend implements NativeAudioBackend {
     private com.ms.directX.DSBufferDesc[] field_b;
     private com.ms.directX.DSCursors[] field_a;
 
-    public wm() throws Exception {
+    public LegacyDirectSoundBackend() throws Exception {
         this.field_b = new com.ms.directX.DSBufferDesc[2];
         this.field_a = new com.ms.directX.DSCursors[2];
         com.ms.directX.DirectSound discarded$0 = new com.ms.directX.DirectSound();

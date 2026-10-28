@@ -22,7 +22,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
         if (param0 == 15) {
           return di.field_d.b((byte) -18);
         }
-        Js5NetworkRequest.d((byte) 54);
+        Js5NetworkRequest.releaseStatics((byte) 54);
         return di.field_d.b((byte) -18);
     }
 
@@ -80,8 +80,8 @@ final class Js5NetworkRequest extends ArchiveRequest {
         }
     }
 
-    public static void d(byte param0) {
-        if (param0 != 34) {
+    public static void releaseStatics(byte guard) {
+        if (guard != 34) {
           return;
         }
         field_B = null;

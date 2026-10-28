@@ -4,20 +4,20 @@
 final class co {
     static PcmSample field_d;
     static om field_b;
-    static lm field_a;
+    static NameAvailabilityResult field_a;
     static String[] field_c;
     static String field_f;
     static String[] field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_b = null;
         field_d = null;
         field_e = null;
         field_a = null;
         field_f = null;
         field_c = null;
-        if (param0 != 63) {
-          co.a((byte) -70);
+        if (guard != 63) {
+          co.releaseStatics((byte) -70);
         }
     }
 
@@ -91,7 +91,7 @@ final class co {
           int var3 = param1;
           while (true) {
             if (var3 >= var2_int) {
-              tk stackIn_10_0 = wh.field_p;
+              tk stackIn_10_0 = CachedTextLayout.field_p;
               return stackIn_10_0;
             }
             int var4 = param0.charAt(var3);

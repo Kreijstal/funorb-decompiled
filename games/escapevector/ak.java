@@ -182,9 +182,9 @@ final class ak {
         return -1;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_d = null;
-        if (param0 != 77) {
+        if (guard != 77) {
           field_d = (hf) null;
         }
     }
@@ -440,7 +440,7 @@ final class ak {
     private final void c(boolean param0) {
         if (di.field_d.field_e) {
           dk var2 = this.j((byte) 82);
-          int var3 = nk.a(-122, var2);
+          int var3 = PasswordValidator.a(-122, var2);
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, var3);
         }
         if (param0) {
@@ -791,11 +791,11 @@ final class ak {
         while (pn.p(-110)) {
           di.field_d.a(127);
           qk.a(this.field_a, param0 ^ 3);
-          if (nk.field_n == 13) {
+          if (PasswordValidator.field_n == 13) {
             int var3 = this.a(1, 0);
             di.field_d.a(false, var3);
           }
-          boolean stackIn_10_0 = !(!this.a(false, Js5NetworkRequest.a((byte) 15, nk.field_n), (byte) 96));
+          boolean stackIn_10_0 = !(!this.a(false, Js5NetworkRequest.a((byte) 15, PasswordValidator.field_n), (byte) 96));
           var2 = stackIn_10_0;
           if (var2) {
             return (var2);
@@ -1057,7 +1057,7 @@ final class ak {
 
     private final void a(boolean param0, int param1) {
         this.field_e = 5;
-        if (hi.a(param1, -2)) {
+        if (EmailSyntaxValidator.a(param1, -2)) {
           this.field_e = 5;
         }
         if (!UiContainer.e((byte) 98)) {

@@ -82,26 +82,26 @@ final class of {
         }
     }
 
-    final static lm a(int param0, String param1) {
+    final static NameAvailabilityResult a(int param0, String param1) {
         String stackIn_14_2 = null;
         try {
           if (param0 != 122) {
             of.a('o', (byte) -83);
           }
-          if (ui.field_b == dg.field_o) {
+          if (ui.field_b == EmailAvailabilityValidator.field_o) {
             return null;
           }
           if (ia.field_y == ui.field_b &&
             param1.equals(tc.field_j)) {
             ui.field_b = RasterBuffer.field_g;
-            lm stackIn_8_0 = co.field_a;
+            NameAvailabilityResult stackIn_8_0 = co.field_a;
             return stackIn_8_0;
           }
           tc.field_j = param1;
           co.field_a = null;
-          ui.field_b = dg.field_o;
+          ui.field_b = EmailAvailabilityValidator.field_o;
           Object stackIn_10_0 = null;
-          return (lm) (stackIn_10_0);
+          return (NameAvailabilityResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
@@ -118,7 +118,7 @@ final class of {
 
     final static void a(boolean param0) {
         if (param0) {
-          of.a(89);
+          of.releaseStatics(89);
         }
         gi.field_e = null;
         gn.field_k = null;
@@ -130,13 +130,13 @@ final class of {
 
     final static int a(byte param0) {
         if (param0 >= -72) {
-          of.a(-52);
+          of.releaseStatics(-52);
         }
         return md.field_G;
     }
 
-    public static void a(int param0) {
-        if (param0 != 122) {
+    public static void releaseStatics(int guard) {
+        if (guard != 122) {
           return;
         }
         field_e = null;

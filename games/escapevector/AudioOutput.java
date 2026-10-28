@@ -245,7 +245,7 @@ class AudioOutput {
         param0.schedulerPriority = param1;
     }
 
-    public static void e() {
+    public static void releaseStatics() {
         field_j = null;
     }
 

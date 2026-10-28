@@ -99,8 +99,8 @@ final class nm {
         }
     }
 
-    public static void a(boolean param0) {
-        if (param0) {
+    public static void releaseStatics(boolean guard) {
+        if (guard) {
           nm.a(-36, (byte) -52);
         }
         field_a = null;

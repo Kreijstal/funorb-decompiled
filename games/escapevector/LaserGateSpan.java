@@ -33,9 +33,9 @@ final class LaserGateSpan extends IntrusiveNode {
         this.leftX = leftX;
     }
 
-    public static void a(byte param0) {
-        if (param0 > -67) {
-          LaserGateSpan.a((byte) -101);
+    public static void releaseStatics(byte guard) {
+        if (guard > -67) {
+          LaserGateSpan.releaseStatics((byte) -101);
           field_l = null;
           return;
         }

@@ -20,10 +20,10 @@ final class qi extends UiContainer implements ButtonListener {
         sn.field_d = 1000000000L / (long)param0;
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int guard) {
         field_P = null;
         field_J = null;
-        if (param0 != 8) {
+        if (guard != 8) {
           return;
         }
         field_M = (Sprite[][]) null;

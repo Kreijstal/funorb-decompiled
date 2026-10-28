@@ -227,8 +227,8 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != -1) {
+    public static void releaseStatics(int guard) {
+        if (guard != -1) {
           field_a = (String) null;
           field_a = null;
           return;

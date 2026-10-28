@@ -3,32 +3,32 @@
  */
 import java.util.*;
 
-abstract class r extends UiComponent implements UiContainerMarker {
+abstract class SingleChildContainer extends UiComponent implements UiContainerMarker {
     static String[] field_A;
     static int field_B;
-    UiComponent field_C;
+    UiComponent child;
     static boolean field_y;
     static int field_z;
 
-    private final boolean a(UiComponent param0, int param1) {
+    private final boolean focusChildIfUnfocused(UiComponent root, int guard) {
         String stackIn_12_2 = null;
         try {
-          if (param1 != -812) {
+          if (guard != -812) {
             return false;
           }
-          boolean stackIn_8_0 = (null != this.field_C) && (!this.field_C.isFocused(param1 + 812)) && (this.field_C.focusNext(-4659, param0));
+          boolean stackIn_8_0 = (null != this.child) && (!this.child.isFocused(guard + 812)) && (this.child.focusNext(-4659, root));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_11_0 = var3;
           StringBuilder stackIn_11_1 = new StringBuilder().append("r.CA(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -36,8 +36,8 @@ abstract class r extends UiComponent implements UiContainerMarker {
         String stackIn_7_2 = null;
         try {
           int var7_int = 76 / ((guard + 39) / 45);
-          if (this.field_C != null) {
-            this.field_C.onPointerReleased(pointerY, offsetY + this.x, pointerX, offsetX + this.y, root, (byte) 117);
+          if (this.child != null) {
+            this.child.onPointerReleased(pointerY, offsetY + this.x, pointerX, offsetX + this.y, root, (byte) 117);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,21 +54,21 @@ abstract class r extends UiComponent implements UiContainerMarker {
         }
     }
 
-    private final boolean b(int param0, UiComponent param1) {
+    private final boolean focusChildIfUnfocused(int guard, UiComponent root) {
         String stackIn_11_2 = null;
         try {
-          if (param0 > -67) {
+          if (guard > -67) {
             UiComponent var4 = (UiComponent) null;
-            boolean discarded$1 = this.a((UiComponent) null, -59);
+            boolean discarded$1 = this.focusChildIfUnfocused((UiComponent) null, -59);
           }
-          boolean stackIn_7_0 = (null != this.field_C) && (!this.field_C.isFocused(0)) && (this.field_C.focusNext(-4659, param1));
+          boolean stackIn_7_0 = (null != this.child) && (!this.child.isFocused(0)) && (this.child.focusNext(-4659, root));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var3;
-          StringBuilder stackIn_10_1 = new StringBuilder().append("r.OA(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_10_1 = new StringBuilder().append("r.OA(").append(guard).append(',');
+          if (root == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -77,36 +77,36 @@ abstract class r extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final void a(int param0, byte param1, Hashtable param2, StringBuilder param3) {
+    final void appendChildDebugTree(int depth, byte guard, Hashtable visited, StringBuilder output) {
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          StringBuilder discarded$4 = param3.append('\n');
-          for (int var5_int = 0; param0 >= var5_int; var5_int++) {
-            StringBuilder discarded$6 = param3.append(' ');
+          StringBuilder discarded$4 = output.append('\n');
+          for (int var5_int = 0; depth >= var5_int; var5_int++) {
+            StringBuilder discarded$6 = output.append(' ');
           }
-          if (param1 < 61) {
-            this.field_C = (UiComponent) null;
+          if (guard < 61) {
+            this.child = (UiComponent) null;
           }
-          if (this.field_C != null) {
-            this.field_C.appendDebugTree(0, param2, param3, 1 + param0);
+          if (this.child != null) {
+            this.child.appendDebugTree(0, visited, output, 1 + depth);
           } else {
-            StringBuilder discarded$5 = param3.append("null");
+            StringBuilder discarded$5 = output.append("null");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var5;
-          StringBuilder stackIn_12_1 = new StringBuilder().append("r.FA(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_12_1 = new StringBuilder().append("r.FA(").append(depth).append(',').append(guard).append(',');
+          if (visited == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param3 == null) {
+          if (output == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -115,16 +115,16 @@ abstract class r extends UiComponent implements UiContainerMarker {
         }
     }
 
-    void k(int param0) {
-        if (param0 != -6844) {
+    void layoutChild(int guard) {
+        if (guard != -6844) {
           return;
         }
-        if (null != this.field_C) {
-          this.field_C.refreshLayout(param0 ^ -6844);
+        if (null != this.child) {
+          this.child.refreshLayout(guard ^ -6844);
         }
     }
 
-    r(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5) {
+    SingleChildContainer(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
@@ -133,16 +133,16 @@ abstract class r extends UiComponent implements UiContainerMarker {
           UiComponent var3 = (UiComponent) null;
           this.focusNext(-87, (UiComponent) null);
         }
-        return null != this.field_C ? this.field_C.maximumRenderLayer(12050) : 0;
+        return null != this.child ? this.child.maximumRenderLayer(12050) : 0;
     }
 
     boolean onPointerPressed(int offsetY, int pointerX, byte guard, int pointerY, int offsetX, UiComponent root, int button) {
         String stackIn_10_2 = null;
         try {
           if (guard != 3) {
-            this.field_C = (UiComponent) null;
+            this.child = (UiComponent) null;
           }
-          boolean stackIn_6_0 = (null != this.field_C) && (this.field_C.onPointerPressed(this.y + offsetY, pointerX, (byte) 3, pointerY, offsetX + this.x, root, button));
+          boolean stackIn_6_0 = (null != this.child) && (this.child.onPointerPressed(this.y + offsetY, pointerX, (byte) 3, pointerY, offsetX + this.x, root, button));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,7 +164,7 @@ abstract class r extends UiComponent implements UiContainerMarker {
           if (guard != -4659) {
             return true;
           }
-          boolean stackIn_7_0 = (null != this.field_C) && (this.field_C.focusNext(-4659, root));
+          boolean stackIn_7_0 = (null != this.child) && (this.child.focusNext(-4659, root));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,11 +186,11 @@ abstract class r extends UiComponent implements UiContainerMarker {
         try {
           if (guard != 0) {
             UiComponent var6 = (UiComponent) null;
-            boolean discarded$1 = this.b(71, (UiComponent) null);
+            boolean discarded$1 = this.focusChildIfUnfocused(71, (UiComponent) null);
           }
           if (this.beginDebugDescription(depth, visited, output, false)) {
             this.appendDebugBody(visited, output, depth, 1);
-            this.a(depth, (byte) 91, visited, output);
+            this.appendChildDebugTree(depth, (byte) 91, visited, output);
           }
           StringBuilder stackIn_5_0 = (StringBuilder) (output);
           return stackIn_5_0;
@@ -222,7 +222,7 @@ abstract class r extends UiComponent implements UiContainerMarker {
           int var3_int = param0.length();
           if (param1 != -63) {
             bd var12 = (bd) null;
-            r.a(-19, (bd) null, 121);
+            SingleChildContainer.a(-19, (bd) null, 121);
           }
           int var4 = var3_int;
           int var5 = 0;
@@ -306,7 +306,7 @@ abstract class r extends UiComponent implements UiContainerMarker {
 
     final void setBounds(int width, int y, int x, boolean guard, int height) {
         super.setBounds(width, y, x, guard, height);
-        this.k(-6844);
+        this.layoutChild(-6844);
     }
 
     final boolean onMouseWheel(int offsetX, int rotation, byte guard, int pointerY, int pointerX, UiComponent root, int offsetY) {
@@ -314,9 +314,9 @@ abstract class r extends UiComponent implements UiContainerMarker {
         try {
           if (guard > -103) {
             String[] var9 = (String[]) null;
-            r.a((String) null, -44, (String[]) null);
+            SingleChildContainer.a((String) null, -44, (String[]) null);
           }
-          boolean stackIn_7_0 = (null != this.field_C) && (this.field_C.isFocused(0)) && (this.field_C.onMouseWheel(offsetX, rotation, (byte) -115, pointerY, pointerX, root, offsetY));
+          boolean stackIn_7_0 = (null != this.child) && (this.child.isFocused(0)) && (this.child.onMouseWheel(offsetX, rotation, (byte) -115, pointerY, pointerX, root, offsetY));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -336,12 +336,12 @@ abstract class r extends UiComponent implements UiContainerMarker {
         String stackIn_9_2 = null;
         try {
           super.updateHover(guard ^ 0, offsetY, offsetX, root);
-          if (this.field_C != null) {
-            this.field_C.updateHover(guard + 0, this.y + offsetY, this.x + offsetX, root);
+          if (this.child != null) {
+            this.child.updateHover(guard + 0, this.y + offsetY, this.x + offsetX, root);
           }
           if (guard != -14472) {
             String[] var6 = (String[]) null;
-            r.a((String) null, 17, (String[]) null);
+            SingleChildContainer.a((String) null, 17, (String[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -363,21 +363,21 @@ abstract class r extends UiComponent implements UiContainerMarker {
           null != this.painter) {
           this.painter.drawWidget(screenX, screenY, -33, (UiComponent) (this), true);
         }
-        if (null != this.field_C) {
-          this.field_C.drawLayer(screenY + this.y, (byte) 112, layer, screenX + this.x);
+        if (null != this.child) {
+          this.child.drawLayer(screenY + this.y, (byte) 112, layer, screenX + this.x);
         }
         if (guard <= 85) {
           field_y = false;
         }
     }
 
-    UiComponent j(int param0) {
-        UiComponent var2 = this.field_C;
+    UiComponent focusedChild(int guard) {
+        UiComponent var2 = this.child;
         if (var2 != null &&
           var2.isFocused(0)) {
           return var2;
         }
-        if (param0 == 0) {
+        if (guard == 0) {
           return null;
         }
         return (UiComponent) null;
@@ -402,7 +402,7 @@ abstract class r extends UiComponent implements UiContainerMarker {
           param1.field_i = var5.readInt(-5053);
           var5.e(-80, -var4 + var5.position);
           if (param0 >= -80) {
-            r.a((byte) 12);
+            SingleChildContainer.releaseStatics((byte) 12);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -421,8 +421,8 @@ abstract class r extends UiComponent implements UiContainerMarker {
 
     String getTooltip(int guard) {
         String var2 = super.getTooltip(guard);
-        if (this.field_C != null) {
-          String var3 = this.field_C.getTooltip(1);
+        if (this.child != null) {
+          String var3 = this.child.getTooltip(1);
           if (var3 != null) {
             return var3;
           }
@@ -430,17 +430,17 @@ abstract class r extends UiComponent implements UiContainerMarker {
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_A = null;
-        if (param0 != 58) {
+        if (guard != 58) {
           bd var2 = (bd) null;
-          r.a(-124, (bd) null, 82);
+          SingleChildContainer.a(-124, (bd) null, 82);
         }
     }
 
     final void clearFocus(int guard) {
-        if (this.field_C != null) {
-          this.field_C.clearFocus(61);
+        if (this.child != null) {
+          this.child.clearFocus(61);
         }
         if (guard <= 46) {
           this.drawLayer(-54, (byte) 0, -102, 84);
@@ -452,11 +452,11 @@ abstract class r extends UiComponent implements UiContainerMarker {
         String stackIn_16_2 = null;
         try {
           if (guard < 0) {
-            this.field_C = (UiComponent) null;
+            this.child = (UiComponent) null;
           }
-          if (this.field_C != null &&
-            this.field_C.isFocused(0) &&
-            this.field_C.onFocusedKey(root, character, keyCode, 35)) {
+          if (this.child != null &&
+            this.child.isFocused(0) &&
+            this.child.onFocusedKey(root, character, keyCode, 35)) {
             return true;
           }
           int var5_int = keyCode;
@@ -464,9 +464,9 @@ abstract class r extends UiComponent implements UiContainerMarker {
             return false;
           }
           if (ik.field_h[81]) {
-            stackIn_12_0 = this.b(-106, root);
+            stackIn_12_0 = this.focusChildIfUnfocused(-106, root);
           } else {
-            stackIn_12_0 = this.a(root, -812);
+            stackIn_12_0 = this.focusChildIfUnfocused(root, -812);
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -486,9 +486,9 @@ abstract class r extends UiComponent implements UiContainerMarker {
     final boolean isFocused(int guard) {
         if (guard != 0) {
           UiComponent var3 = (UiComponent) null;
-          boolean discarded$0 = this.b(-85, (UiComponent) null);
+          boolean discarded$0 = this.focusChildIfUnfocused(-85, (UiComponent) null);
         }
-        return null != this.j(0) ? true : false;
+        return null != this.focusedChild(0) ? true : false;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

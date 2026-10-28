@@ -10,8 +10,8 @@ final class bc {
     static IntrusiveDeque field_b;
     static boolean field_d;
 
-    public static void a(int param0) {
-        if (param0 != 0) {
+    public static void releaseStatics(int guard) {
+        if (guard != 0) {
           return;
         }
         field_c = null;

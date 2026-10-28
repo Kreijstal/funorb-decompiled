@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ue extends TextButton {
+class TextHotspotWidget extends TextButton {
     private IntrusiveDeque field_D;
     private String[] field_F;
-    private bl field_E;
+    private TextHotspotRegion field_E;
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
-        int var5 = param2 - this.x;
-        int var6 = param1 - this.y;
-        bl var7 = this.a(var6, (byte) -110, var5);
+    final void notifyAction(int guard, int localY, int localX, int buttonCode) {
+        super.notifyAction(guard, localY, localX, buttonCode);
+        int var5 = localX - this.x;
+        int var6 = localY - this.y;
+        TextHotspotRegion var7 = this.hotspotAt(var6, (byte) -110, var5);
         if (var7 != null &&
           null != this.listener) {
-          ((sg) ((Object) this.listener)).a(param0 ^ 18321, this, var7.field_m, param3);
+          ((TextHotspotListener) ((Object) this.listener)).onHotspotAction(guard ^ 18321, this, var7.hotspotId, buttonCode);
         }
     }
 
@@ -26,25 +26,25 @@ class ue extends TextButton {
           return;
         }
         WidgetTextLayout var9 = (WidgetTextLayout) ((Object) this.painter);
-        bl var6 = this.field_E;
+        TextHotspotRegion var6 = this.field_E;
         if (var6 == null) {
         } else {
-          int var7 = var9.a((byte) -113, (UiComponent) (this), screenX);
-          int var8 = var9.a((UiComponent) (this), screenY, -16956);
+          int var7 = var9.textOriginX((byte) -113, (UiComponent) (this), screenX);
+          int var8 = var9.textOriginY((UiComponent) (this), screenY, -16956);
           do {
-            SeekerMine.a(false, 2 + var6.field_j, var6.field_i + var7 - 2, var6.field_n + 2, -2 + var8 + var6.field_g);
-            var6 = var6.field_k;
+            SeekerMine.a(false, 2 + var6.width, var6.x + var7 - 2, var6.height + 2, -2 + var8 + var6.y);
+            var6 = var6.nextFragment;
           } while (var6 != null);
         }
     }
 
-    final void a(String param0, byte param1, int param2) {
+    final void setHotspotTooltip(String tooltip, byte guard, int hotspotId) {
         String stackIn_17_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
           if (this.field_F == null ||
-            param2 >= this.field_F.length) {
-            String[] var7 = new String[1 + param2];
+            hotspotId >= this.field_F.length) {
+            String[] var7 = new String[1 + hotspotId];
             String[] var8 = var7;
             String[] var4 = var8;
             if (this.field_F != null) {
@@ -54,33 +54,33 @@ class ue extends TextButton {
             }
             this.field_F = var8;
           }
-          if (param1 < 51) {
-            ue.b(-38, (byte) -110);
+          if (guard < 51) {
+            TextHotspotWidget.b(-38, (byte) -110);
           }
-          this.field_F[param2] = param0;
+          this.field_F[hotspotId] = tooltip;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
           RuntimeException stackIn_16_0 = runtimeException;
           StringBuilder stackIn_16_1 = new StringBuilder().append("ue.I(");
-          if (param0 == null) {
+          if (tooltip == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(',').append(hotspotId).append(')').toString());
         }
     }
 
-    final void k(int param0) {
+    final void rebuildHotspots(int searchStart) {
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         int var16 = EscapeVector.obfuscationControl;
         this.field_D = new IntrusiveDeque();
-        int var2 = param0;
+        int var2 = searchStart;
         WidgetTextLayout var3 = (WidgetTextLayout) ((Object) this.painter);
-        TextLayout var4 = var3.b((UiComponent) (this), 90);
+        TextLayout var4 = var3.ensureTextLayout((UiComponent) (this), 90);
         while (true) {
           int var5 = this.text.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -90,28 +90,28 @@ class ue extends TextButton {
           String var6 = this.text.substring(9 + var5, var7);
           int var7Lifetime1 = Integer.parseInt(var6);
           var2 = this.text.indexOf("</hotspot>", var5);
-          int var8 = var4.a(var5, 0);
-          int var9 = var4.a(var2, 0);
+          int var8 = var4.lineForCharacter(var5, 0);
+          int var9 = var4.lineForCharacter(var2, 0);
           Object var10 = null;
           for (int var11 = var8; var11 <= var9; var11++) {
-            vl var12 = var4.field_a[var11];
+            TextLayoutLine var12 = var4.lines[var11];
             if (var8 == var11) {
-              stackIn_7_0 = var4.a((byte) 122, var5);
+              stackIn_7_0 = var4.characterX((byte) 122, var5);
             } else {
-              stackIn_7_0 = var12.field_b[0];
+              stackIn_7_0 = var12.insertionX[0];
             }
             int var13 = stackIn_7_0;
             if (var11 == var9) {
-              stackIn_12_0 = var4.a((byte) 125, var2);
+              stackIn_12_0 = var4.characterX((byte) 125, var2);
             } else if (var12 == null) {
               stackIn_12_0 = 0;
             } else {
-              stackIn_12_0 = var12.field_b[-1 + var12.field_b.length];
+              stackIn_12_0 = var12.insertionX[-1 + var12.insertionX.length];
             }
             int var14 = stackIn_12_0;
-            bl var15 = new bl(var7Lifetime1, var13, var12.field_d, -var13 + var14, Math.max(var3.a(109), var12.field_a - var12.field_d));
+            TextHotspotRegion var15 = new TextHotspotRegion(var7Lifetime1, var13, var12.top, -var13 + var14, Math.max(var3.lineHeight(109), var12.bottom - var12.top));
             if (var10 != null) {
-              ((bl) (var10)).field_k = var15;
+              ((TextHotspotRegion) (var10)).nextFragment = var15;
             }
             this.field_D.addLast(-12328, var15);
             var10 = var15;
@@ -121,13 +121,13 @@ class ue extends TextButton {
 
     final void setBounds(int width, int y, int x, boolean guard, int height) {
         if (!guard) {
-          ue.b(-85, (byte) -78);
+          TextHotspotWidget.b(-85, (byte) -78);
         }
         super.setBounds(width, y, x, guard, height);
-        this.k(0);
+        this.rebuildHotspots(0);
     }
 
-    ue(String param0, WidgetPainter param1) {
+    TextHotspotWidget(String param0, WidgetPainter param1) {
         super(param0, (UiListener) null);
         this.field_E = null;
         try {
@@ -137,24 +137,24 @@ class ue extends TextButton {
         }
     }
 
-    private final bl a(int param0, byte param1, int param2) {
+    private final TextHotspotRegion hotspotAt(int textY, byte guard, int textX) {
         int var6 = EscapeVector.obfuscationControl;
-        bl var4 = (bl) (this.field_D.first(false));
-        if (param1 > -83) {
-          return (bl) null;
+        TextHotspotRegion var4 = (TextHotspotRegion) (this.field_D.first(false));
+        if (guard > -83) {
+          return (TextHotspotRegion) null;
         }
         while (var4 != null) {
-          bl var5 = var4;
+          TextHotspotRegion var5 = var4;
           while (var5 != null) {
-            if (param2 >= var5.field_i &&
-              var5.field_g <= param0 &&
-              var5.field_i + var5.field_j > param2 &&
-              var5.field_g + var5.field_n >= param0) {
+            if (textX >= var5.x &&
+              var5.y <= textY &&
+              var5.x + var5.width > textX &&
+              var5.y + var5.height >= textY) {
               return var4;
             }
-            var5 = var5.field_k;
+            var5 = var5.nextFragment;
           }
-          var4 = (bl) (this.field_D.next((byte) 70));
+          var4 = (TextHotspotRegion) (this.field_D.next((byte) 70));
         }
         return null;
     }
@@ -175,9 +175,9 @@ class ue extends TextButton {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
-        this.setBounds(param2, param3, param1, true, ((WidgetTextLayout) ((Object) this.painter)).a(-106, (UiComponent) (this)));
-        if (param0 != 2463) {
+    final void setBoundsToTextHeight(int guard, int x, int width, int y) {
+        this.setBounds(width, y, x, true, ((WidgetTextLayout) ((Object) this.painter)).preferredHeight(-106, (UiComponent) (this)));
+        if (guard != 2463) {
           this.field_F = (String[]) null;
         }
     }
@@ -188,7 +188,7 @@ class ue extends TextButton {
           if (guard == -4659) {
             return false;
           }
-          this.field_E = (bl) null;
+          this.field_E = (TextHotspotRegion) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -211,7 +211,7 @@ class ue extends TextButton {
           if (this.hovered) {
             int var5_int = -offsetX + (dh.field_d - this.x);
             int var6 = -offsetY + UiContainer.field_y - this.y;
-            this.field_E = this.a(var6, (byte) -111, var5_int);
+            this.field_E = this.hotspotAt(var6, (byte) -111, var5_int);
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ue.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
@@ -228,10 +228,10 @@ class ue extends TextButton {
         if (guard != 1) {
           return (String) null;
         }
-        if (this.field_E.field_m >= this.field_F.length) {
+        if (this.field_E.hotspotId >= this.field_F.length) {
           return null;
         }
-        return this.field_F[this.field_E.field_m];
+        return this.field_F[this.field_E.hotspotId];
     }
 
     static {

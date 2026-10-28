@@ -92,8 +92,8 @@ final class sc implements WidgetPainter {
         sc.a((byte) -55, (java.awt.Component) null);
     }
 
-    public static void a(byte param0) {
-        if (param0 >= -15) {
+    public static void releaseStatics(byte guard) {
+        if (guard >= -15) {
           return;
         }
         field_g = null;

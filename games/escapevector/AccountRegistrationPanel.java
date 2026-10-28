@@ -3,22 +3,22 @@
  */
 import java.io.*;
 
-final class AccountRegistrationPanel extends UiContainer implements sg, ButtonListener, qn {
-    private gd field_R;
+final class AccountRegistrationPanel extends UiContainer implements TextHotspotListener, ButtonListener, NameSuggestionListener {
+    private ValidatedTextWidget field_R;
     static ObjectSpriteSet[] field_M;
     private bo field_J;
-    private ue field_H;
-    rh field_G;
+    private TextHotspotWidget field_H;
+    NameSuggestionsPanel field_G;
     static String field_O;
     private TextButton field_P;
     static om field_L;
-    private gd field_I;
+    private ValidatedTextWidget field_I;
     private TextButton field_K;
-    private gd field_N;
+    private ValidatedTextWidget field_N;
     static Sprite field_T;
-    private gd field_Q;
-    private gd field_U;
-    private gd field_S;
+    private ValidatedTextWidget field_Q;
+    private ValidatedTextWidget field_U;
+    private ValidatedTextWidget field_S;
 
     private final int a(int param0, UiComponent param1, String param2, int param3, int param4) {
         String stackIn_7_2 = null;
@@ -62,7 +62,7 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
           if (guard == 1) {
             return;
           }
-          this.field_N = (gd) null;
+          this.field_N = (ValidatedTextWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,23 +114,23 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
         }
     }
 
-    public final void a(byte param0, String param1) {
+    public final void onNameSelected(byte guard, String name) {
         String stackIn_6_2 = null;
         try {
-          gd var3 = this.field_S;
-          String var4 = param1;
-          ((EditableTextWidget) ((Object) var3)).a(var4, false, -33);
-          if (param0 < -49) {
+          ValidatedTextWidget var3 = this.field_S;
+          String var4 = name;
+          ((EditableTextWidget) ((Object) var3)).setText(var4, false, -33);
+          if (guard < -49) {
             return;
           }
-          this.field_U = (gd) null;
+          this.field_U = (ValidatedTextWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_5_0 = var3_ref;
-          StringBuilder stackIn_5_1 = new StringBuilder().append("bf.J(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_5_1 = new StringBuilder().append("bf.J(").append(guard).append(',');
+          if (name == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
@@ -159,10 +159,10 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int guard) {
         field_T = null;
         field_L = null;
-        if (param0 >= -118) {
+        if (guard >= -118) {
           return;
         }
         field_O = null;
@@ -171,12 +171,12 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
 
     public AccountRegistrationPanel() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_S = new gd("", (UiListener) null, 12);
-        this.field_I = new gd("", (UiListener) null, 100);
-        this.field_R = new gd("", (UiListener) null, 100);
-        this.field_Q = new gd("", (UiListener) null, 20);
-        this.field_U = new gd("", (UiListener) null, 20);
-        this.field_N = new gd("", (UiListener) null, 3);
+        this.field_S = new ValidatedTextWidget("", (UiListener) null, 12);
+        this.field_I = new ValidatedTextWidget("", (UiListener) null, 100);
+        this.field_R = new ValidatedTextWidget("", (UiListener) null, 100);
+        this.field_Q = new ValidatedTextWidget("", (UiListener) null, 20);
+        this.field_U = new ValidatedTextWidget("", (UiListener) null, 20);
+        this.field_N = new ValidatedTextWidget("", (UiListener) null, 3);
         boolean var1 = true;
         this.field_J = new bo("", (UiListener) null, (var1));
         this.field_K = new TextButton(GameKeyHandler.field_c, (UiListener) null);
@@ -188,12 +188,12 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
         this.field_U.tooltip = pl.field_i;
         this.field_N.tooltip = ta.field_k;
         this.field_J.tooltip = BoundedUrlRequest.field_h;
-        this.field_S.a(new kf(this.field_S), (byte) 63);
-        this.field_I.a(new hi(this.field_I), (byte) 63);
-        this.field_R.a(new dg(this.field_R, this.field_I), (byte) 63);
-        this.field_Q.a(new nk(this.field_Q, this.field_S, this.field_I), (byte) 63);
-        this.field_U.a(new lb(this.field_U, this.field_Q), (byte) 63);
-        this.field_N.a(new kl(this.field_N), (byte) 63);
+        this.field_S.setValidator(new NameAvailabilityValidator(this.field_S), (byte) 63);
+        this.field_I.setValidator(new EmailSyntaxValidator(this.field_I), (byte) 63);
+        this.field_R.setValidator(new EmailAvailabilityValidator(this.field_R, this.field_I), (byte) 63);
+        this.field_Q.setValidator(new PasswordValidator(this.field_Q, this.field_S, this.field_I), (byte) 63);
+        this.field_U.setValidator(new MatchingTextValidator(this.field_U, this.field_Q), (byte) 63);
+        this.field_N.setValidator(new AgeValidator(this.field_N), (byte) 63);
         this.field_K.enabled = false;
         this.field_K.painter = (WidgetPainter) ((Object) new ck());
         this.field_P.painter = (WidgetPainter) ((Object) new ha());
@@ -206,7 +206,7 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
         un dupTemp$1 = new un(10000536);
         this.field_U.painter = (WidgetPainter) ((Object) dupTemp$1);
         this.field_Q.painter = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = r.a(aj.field_b, -63, new String[]{this.j(66), this.k(3674)});
+        String var2 = SingleChildContainer.a(aj.field_b, -63, new String[]{this.j(66), this.k(3674)});
         int var3 = 20;
         var3 = var3 + this.a(170, this.field_I, tm.field_Z, var3, 100);
         var3 = var3 + (this.a(20, this.field_R, 170, ri.field_a, 25, "", var3) + 5);
@@ -218,12 +218,12 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
         this.b(var4, false);
         var3 = var3 + var4.height;
         TextWidgetPainter var5 = new TextWidgetPainter(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, Js5Transport.field_a.field_r, -1, 2147483647, true);
-        this.field_H = new ue(var2, var5);
+        this.field_H = new TextHotspotWidget(var2, var5);
         this.field_H.tooltip = "";
-        this.field_H.a(TextFieldValidator.field_m, (byte) 65, 0);
-        this.field_H.a(TextFieldValidator.field_m, (byte) 97, 1);
+        this.field_H.setHotspotTooltip(TextFieldValidator.field_m, (byte) 65, 0);
+        this.field_H.setHotspotTooltip(TextFieldValidator.field_m, (byte) 97, 1);
         this.field_H.listener = (UiListener) (this);
-        this.field_H.b(2463, 46, this.width - 90, var3);
+        this.field_H.setBoundsToTextHeight(2463, 46, this.width - 90, var3);
         var3 = var3 + (15 + this.field_H.height);
         this.b(this.field_H, false);
         int var6 = 4;
@@ -234,7 +234,7 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
         this.field_K.listener = (UiListener) (this);
         this.b(this.field_K, false);
         this.b(this.field_P, false);
-        this.field_G = new rh((qn) (this));
+        this.field_G = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_G.setBounds(-60 - this.field_S.x + (this.width - this.field_S.width), 20 + this.field_S.y, 60 + this.field_S.x + this.field_S.width, true, 150);
         this.b(this.field_G, false);
         this.setBounds(496, 0, 0, true, var6 + (var3 + 55));
@@ -248,20 +248,20 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
         return "</col></u>";
     }
 
-    public final void a(byte param0) {
-        ((kf) (this.field_S.a((byte) -89))).g(22186);
-        if (param0 != -61) {
+    public final void onMoreSuggestions(byte guard) {
+        ((NameAvailabilityValidator) (this.field_S.validator((byte) -89))).g(22186);
+        if (guard != -61) {
           field_T = (Sprite) null;
         }
     }
 
-    private final boolean a(boolean param0, og param1) {
+    private final boolean a(boolean param0, ValidationProvider param1) {
         String stackIn_21_2 = null;
         try {
           if (param0) {
             return false;
           }
-          ValidationSource var3 = param1.a((byte) -89);
+          ValidationSource var3 = param1.validator((byte) -89);
           if (var3 == null) {
             return true;
           }
@@ -337,7 +337,7 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
           if (param1 != 123) {
             this.field_J = (bo) null;
           }
-          oj var7 = new oj(((og) ((Object) param3)).a((byte) -89));
+          ValidationIndicator var7 = new ValidationIndicator(((ValidationProvider) ((Object) param3)).validator((byte) -89));
           this.b(var7, false);
           var7.setBounds(15, (-15 + var8.height >> 1) + var8.y, 3 + var8.width + var8.x, true, 15);
           int stackIn_3_0 = var8.height;
@@ -420,7 +420,7 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
             return stackIn_7_0;
           }
           if (guard <= 0) {
-            this.field_I = (gd) null;
+            this.field_I = (ValidatedTextWidget) null;
           }
           if (keyCode != 99) {
             return false;
@@ -448,7 +448,7 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
         try {
           ki var10 = new ki(20, param6, 120 + param2, param4, param1, false, 120, 3, Js5Transport.field_a, 16777215, param3);
           this.b(var10, false);
-          lf var9 = new lf(((og) ((Object) param1)).a((byte) -89), param5, 126, var10.height + param6, param2 + 50, param0);
+          lf var9 = new lf(((ValidationProvider) ((Object) param1)).validator((byte) -89), param5, 126, var10.height + param6, param2 + 50, param0);
           var9.listener = (UiListener) (this);
           this.b(var9, false);
           int stackIn_1_0 = var9.height + var10.height;
@@ -492,22 +492,22 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
         return e.a(this, false, this.field_I.text, var2, this.field_Q.text, this.field_J.field_z, this.field_S.text);
     }
 
-    public final void a(int param0, ue param1, int param2, int param3) {
+    public final void onHotspotAction(int guard, TextHotspotWidget widget, int hotspotId, int buttonCode) {
         String stackIn_13_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          if (param0 != -2861) {
+          if (guard != -2861) {
             field_M = (ObjectSpriteSet[]) null;
           }
-          if (0 == param2) {
+          if (0 == hotspotId) {
             qd.a(12, "terms.ws");
             return;
           }
-          if (1 == param2) {
+          if (1 == hotspotId) {
             qd.a(12, "privacy.ws");
             return;
           }
-          if (2 != param2) {
+          if (2 != hotspotId) {
             return;
           }
           qd.a(12, "conduct.ws");
@@ -516,13 +516,13 @@ final class AccountRegistrationPanel extends UiContainer implements sg, ButtonLi
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var5;
-          StringBuilder stackIn_12_1 = new StringBuilder().append("bf.A(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_12_1 = new StringBuilder().append("bf.A(").append(guard).append(',');
+          if (widget == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(hotspotId).append(',').append(buttonCode).append(')').toString());
         }
     }
 

@@ -97,10 +97,10 @@ final class dc extends IntrusiveNode {
     dc() {
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_i = null;
-        if (param0) {
-          dc.a(true);
+        if (guard) {
+          dc.releaseStatics(true);
         }
     }
 

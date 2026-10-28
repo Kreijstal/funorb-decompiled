@@ -47,10 +47,10 @@ final class vb implements Iterable {
         return (Iterator) ((Object) new rm(this));
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_a = null;
-        if (param0 <= 39) {
-          vb.b((byte) -113);
+        if (guard <= 39) {
+          vb.releaseStatics((byte) -113);
         }
     }
 

@@ -7,10 +7,10 @@ final class nb {
     static BitmapFont field_a;
     static PcmStreamMixer field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_a = null;
         field_c = null;
-        if (param0 >= -38) {
+        if (guard >= -38) {
           field_d = (String) null;
           field_d = null;
           field_b = null;

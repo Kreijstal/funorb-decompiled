@@ -12,10 +12,10 @@ abstract class RasterBuffer {
     java.awt.Image field_f;
     int[] field_i;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_a = (int[][]) null;
         field_g = null;
-        if (param0 < 72) {
+        if (guard < 72) {
           return;
         }
         field_b = null;
@@ -25,7 +25,7 @@ abstract class RasterBuffer {
 
     final void a(int param0) {
         if (param0 <= 105) {
-          RasterBuffer.a((byte) -18);
+          RasterBuffer.releaseStatics((byte) -18);
         }
         SoftwareRasterizer.a(this.field_i, this.field_d, this.field_h);
     }
@@ -73,13 +73,13 @@ abstract class RasterBuffer {
         }
     }
 
-    final static d a(byte param0, String param1) {
+    final static EmailAvailabilityRequest a(byte param0, String param1) {
         String stackIn_7_2 = null;
         try {
           if (param0 < 24) {
             field_g = (al) null;
           }
-          d stackIn_3_0 = new d(param1);
+          EmailAvailabilityRequest stackIn_3_0 = new EmailAvailabilityRequest(param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -41,8 +41,8 @@ final class aa {
         }
     }
 
-    public static void b(byte param0) {
-        if (param0 != -96) {
+    public static void releaseStatics(byte guard) {
+        if (guard != -96) {
           String var2 = (String) null;
           aa.a(-12, (String) null);
           field_b = null;

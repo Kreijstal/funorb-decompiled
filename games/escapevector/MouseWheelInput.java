@@ -23,7 +23,7 @@ abstract class MouseWheelInput {
     final static void a(int param0, int param1, bd param2) {
         try {
           rd.field_b.addLast(-12328, param2);
-          r.a(-110, param2, param1);
+          SingleChildContainer.a(-110, param2, param1);
           if (param0 != 1) {
             field_a = (String) null;
           }
@@ -32,9 +32,9 @@ abstract class MouseWheelInput {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_b = null;
-        if (param0 == 104) {
+        if (guard == 104) {
           field_c = null;
           field_d = null;
           field_a = null;

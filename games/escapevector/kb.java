@@ -12,10 +12,10 @@ abstract class kb {
     static Sprite field_c;
     String field_a;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_g = null;
         field_c = null;
-        if (!param0) {
+        if (!guard) {
           field_e = -18;
         }
     }

@@ -10,10 +10,10 @@ final class ja {
     int field_g;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_b = null;
         field_a = null;
-        if (param0 <= 113) {
+        if (guard <= 113) {
           field_b = (String) null;
         }
         field_e = null;
@@ -151,18 +151,18 @@ final class ja {
         }
     }
 
-    final static d a(String param0, boolean param1) {
+    final static EmailAvailabilityRequest a(String param0, boolean param1) {
         String stackIn_12_2 = null;
         try {
-          if (di.field_g.b(0) &&
-            !param0.equals(di.field_g.a(-100))) {
+          if (di.field_g.isComplete(0) &&
+            !param0.equals(di.field_g.email(-100))) {
             di.field_g = RasterBuffer.a((byte) 83, param0);
           }
           if (param1) {
-            d stackIn_8_0 = di.field_g;
+            EmailAvailabilityRequest stackIn_8_0 = di.field_g;
             return stackIn_8_0;
           }
-          d stackIn_6_0 = (d) null;
+          EmailAvailabilityRequest stackIn_6_0 = (EmailAvailabilityRequest) null;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -90,11 +90,11 @@ final class qm implements Iterable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_d = null;
         field_a = null;
         field_f = null;
-        if (param0 < 86) {
+        if (guard < 86) {
           field_d = (gi[]) null;
         }
     }

@@ -78,9 +78,9 @@ abstract class DebouncedValidator implements ValidationSource {
 
     abstract ValidationState evaluateState(int guard);
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_a = null;
-        if (!param0) {
+        if (!guard) {
           DebouncedValidator.a(false, false);
           field_d = null;
           return;
@@ -140,8 +140,8 @@ abstract class DebouncedValidator implements ValidationSource {
             return;
           }
           if (km.field_n != null) {
-            IsaacRandom.field_d = km.field_n.a(!param0 ? true : false);
-            ue.b(2, (byte) 101);
+            IsaacRandom.field_d = km.field_n.enterFullscreen(!param0 ? true : false);
+            TextHotspotWidget.b(2, (byte) 101);
             if (null == IsaacRandom.field_d) {
               var2Lifetime4 = 3;
             } else {
@@ -194,8 +194,8 @@ abstract class DebouncedValidator implements ValidationSource {
           return;
         }
         if (km.field_n != null) {
-          IsaacRandom.field_d = km.field_n.a(!param0 ? true : false);
-          ue.b(2, (byte) 101);
+          IsaacRandom.field_d = km.field_n.enterFullscreen(!param0 ? true : false);
+          TextHotspotWidget.b(2, (byte) 101);
           if (null == IsaacRandom.field_d) {
             var2Lifetime2 = 3;
           } else {
@@ -224,7 +224,7 @@ abstract class DebouncedValidator implements ValidationSource {
     }
 
     final static void b(byte param0) {
-        jh.a(true, kl.field_o, false, ResourceArchive.field_b);
+        jh.a(true, AgeValidator.field_o, false, ResourceArchive.field_b);
         if (param0 > -45) {
           return;
         }

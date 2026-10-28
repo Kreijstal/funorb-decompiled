@@ -60,9 +60,9 @@ final class ll extends IntrusiveNode {
         ResourceArchive.a(param0, -ArchiveIndex.field_o.fullWidth + 632, (param3 - 80) * 4, ArchiveIndex.field_o, param2 ^ -108);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_h = null;
-        if (param0 != -77) {
+        if (guard != -77) {
           field_h = (String) null;
         }
     }
@@ -83,25 +83,25 @@ final class ll extends IntrusiveNode {
     }
 
     final static boolean d(int param0) {
-        if (hi.field_r == -1) {
+        if (EmailSyntaxValidator.field_r == -1) {
           if (!bo.a(30000, 1)) {
             return false;
           }
-          hi.field_r = om.field_g.readUnsignedByte(param0 ^ 10550);
+          EmailSyntaxValidator.field_r = om.field_g.readUnsignedByte(param0 ^ 10550);
           om.field_g.position = 0;
         }
-        if (hi.field_r == -2) {
+        if (EmailSyntaxValidator.field_r == -2) {
           if (!bo.a(30000, 2)) {
             return false;
           }
-          hi.field_r = om.field_g.readUnsignedShort(1952);
+          EmailSyntaxValidator.field_r = om.field_g.readUnsignedShort(1952);
           om.field_g.position = 0;
         }
         if (param0 == 10550) {
-          return bo.a(30000, hi.field_r);
+          return bo.a(30000, EmailSyntaxValidator.field_r);
         }
         field_h = (String) null;
-        return bo.a(30000, hi.field_r);
+        return bo.a(30000, EmailSyntaxValidator.field_r);
     }
 
     static {

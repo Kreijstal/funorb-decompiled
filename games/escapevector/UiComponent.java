@@ -98,10 +98,10 @@ class UiComponent extends IntrusiveNode {
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
-            ni var9 = gf.field_b;
+            DraggableWidget var9 = gf.field_b;
             if (var9 != null) {
-              if (var9.listener instanceof mk) {
-                ((mk) (var9.listener)).a((qa) null, var9, (byte) -124);
+              if (var9.listener instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var9.listener)).onDropped((DropTargetWidget) null, var9, (byte) -124);
               }
               gf.field_b = null;
             }
@@ -133,12 +133,12 @@ class UiComponent extends IntrusiveNode {
                 return inputAvailable;
               }
               this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
-              ni var10 = gf.field_b;
+              DraggableWidget var10 = gf.field_b;
               if (var10 != null) {
-                if (!(var10.listener instanceof mk)) {
+                if (!(var10.listener instanceof WidgetDropListener)) {
                   gf.field_b = null;
                 } else {
-                  ((mk) (var10.listener)).a((qa) null, var10, (byte) -124);
+                  ((WidgetDropListener) (var10.listener)).onDropped((DropTargetWidget) null, var10, (byte) -124);
                   gf.field_b = null;
                 }
               }
@@ -164,10 +164,10 @@ class UiComponent extends IntrusiveNode {
             return inputAvailable;
           }
           this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
-          ni var11 = gf.field_b;
+          DraggableWidget var11 = gf.field_b;
           if (var11 != null) {
-            if (var11.listener instanceof mk) {
-              ((mk) (var11.listener)).a((qa) null, var11, (byte) -124);
+            if (var11.listener instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var11.listener)).onDropped((DropTargetWidget) null, var11, (byte) -124);
             }
             gf.field_b = null;
           }
@@ -197,10 +197,10 @@ class UiComponent extends IntrusiveNode {
                 return inputAvailable;
               }
               this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
-              ni var12 = gf.field_b;
+              DraggableWidget var12 = gf.field_b;
               if (var12 != null) {
-                if (var12.listener instanceof mk) {
-                  ((mk) (var12.listener)).a((qa) null, var12, (byte) -124);
+                if (var12.listener instanceof WidgetDropListener) {
+                  ((WidgetDropListener) (var12.listener)).onDropped((DropTargetWidget) null, var12, (byte) -124);
                 }
                 gf.field_b = null;
               }
@@ -232,12 +232,12 @@ class UiComponent extends IntrusiveNode {
                   return inputAvailable;
                 }
                 this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
-                ni var13 = gf.field_b;
+                DraggableWidget var13 = gf.field_b;
                 if (var13 != null) {
-                  if (!(var13.listener instanceof mk)) {
+                  if (!(var13.listener instanceof WidgetDropListener)) {
                     gf.field_b = null;
                   } else {
-                    ((mk) (var13.listener)).a((qa) null, var13, (byte) -124);
+                    ((WidgetDropListener) (var13.listener)).onDropped((DropTargetWidget) null, var13, (byte) -124);
                     gf.field_b = null;
                   }
                 }
@@ -263,10 +263,10 @@ class UiComponent extends IntrusiveNode {
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
-            ni var14 = gf.field_b;
+            DraggableWidget var14 = gf.field_b;
             if (var14 != null) {
-              if (var14.listener instanceof mk) {
-                ((mk) (var14.listener)).a((qa) null, var14, (byte) -124);
+              if (var14.listener instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var14.listener)).onDropped((DropTargetWidget) null, var14, (byte) -124);
               }
               gf.field_b = null;
             }
@@ -294,10 +294,10 @@ class UiComponent extends IntrusiveNode {
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
-            ni var15 = gf.field_b;
+            DraggableWidget var15 = gf.field_b;
             if (var15 != null) {
-              if (var15.listener instanceof mk) {
-                ((mk) (var15.listener)).a((qa) null, var15, (byte) -124);
+              if (var15.listener instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var15.listener)).onDropped((DropTargetWidget) null, var15, (byte) -124);
               }
               gf.field_b = null;
             }
@@ -329,7 +329,7 @@ class UiComponent extends IntrusiveNode {
                 return inputAvailable;
               }
               this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
-              ni var16 = gf.field_b;
+              DraggableWidget var16 = gf.field_b;
               if (var16 == null) {
                 if (var7 == 0) {
                   bb.field_H = eb.field_K;
@@ -340,7 +340,7 @@ class UiComponent extends IntrusiveNode {
                 ve.a((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
-              if (!(var16.listener instanceof mk)) {
+              if (!(var16.listener instanceof WidgetDropListener)) {
                 gf.field_b = null;
                 if (var7 != 0 &&
                   var5Lifetime1 &&
@@ -351,7 +351,7 @@ class UiComponent extends IntrusiveNode {
                 ve.a((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
-              ((mk) (var16.listener)).a((qa) null, var16, (byte) -124);
+              ((WidgetDropListener) (var16.listener)).onDropped((DropTargetWidget) null, var16, (byte) -124);
               gf.field_b = null;
               if (var7 != 0 &&
                 var5Lifetime1 &&
@@ -371,10 +371,10 @@ class UiComponent extends IntrusiveNode {
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
-            ni var17 = gf.field_b;
+            DraggableWidget var17 = gf.field_b;
             if (var17 != null) {
-              if (var17.listener instanceof mk) {
-                ((mk) (var17.listener)).a((qa) null, var17, (byte) -124);
+              if (var17.listener instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var17.listener)).onDropped((DropTargetWidget) null, var17, (byte) -124);
               }
               gf.field_b = null;
             }
@@ -421,7 +421,7 @@ class UiComponent extends IntrusiveNode {
         }
         String var5 = eo.a((byte) 46);
         if (var5 != null) {
-          mb.field_g.a((byte) -44, var5, ni.field_O, ci.field_g);
+          mb.field_g.a((byte) -44, var5, DraggableWidget.field_O, ci.field_g);
         }
     }
 
@@ -798,8 +798,8 @@ class UiComponent extends IntrusiveNode {
           this.text = param0;
           if (this.painter instanceof WidgetTextLayout) {
             WidgetTextLayout var4 = (WidgetTextLayout) ((Object) this.painter);
-            this.width = var4.a((byte) -46, this);
-            this.height = var4.a(-127, this);
+            this.width = var4.preferredWidth((byte) -46, this);
+            this.height = var4.preferredHeight(-127, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

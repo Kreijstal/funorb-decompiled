@@ -35,9 +35,9 @@ final class ua {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
-        if (param0 != 0) {
+        if (guard != 0) {
           field_a = 95;
           field_b = null;
           return;

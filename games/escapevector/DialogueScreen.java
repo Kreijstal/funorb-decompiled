@@ -85,7 +85,7 @@ final class DialogueScreen extends IntrusiveNode {
             int stackIn_47_0 = 405;
             String stackIn_47_1 = this.field_r;
             int stackIn_48_2 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
-            lb.a(stackIn_47_0, stackIn_47_1, stackIn_48_2, -113, var4 + (-8 - var2 / 2 - var3 * 16));
+            MatchingTextValidator.a(stackIn_47_0, stackIn_47_1, stackIn_48_2, -113, var4 + (-8 - var2 / 2 - var3 * 16));
           } else {
             int stackIn_25_0 = 0;
             int stackIn_25_1 = 409;
@@ -100,7 +100,7 @@ final class DialogueScreen extends IntrusiveNode {
             int stackIn_34_0 = 405;
             String stackIn_34_1 = this.field_r;
             int stackIn_35_2 = (this.field_w.field_h != 0) ? 6340704 : 16777215;
-            lb.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, -120, 16 * var3 + (632 - var2 / 2));
+            MatchingTextValidator.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, -120, 16 * var3 + (632 - var2 / 2));
           }
         } else {
           var7 = 420;
@@ -120,7 +120,7 @@ final class DialogueScreen extends IntrusiveNode {
           int stackIn_14_0 = 471;
           String stackIn_14_1 = this.field_r;
           int stackIn_15_2 = (this.field_w.field_h != 0) ? 6340704 : 16777215;
-          lb.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, -122, 16 * var3 + (-6 + (var5 - var2 / 2)));
+          MatchingTextValidator.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, -122, 16 * var3 + (-6 + (var5 - var2 / 2)));
         }
         qi.a(3162160, var5 - 3, 6324320, -1, 3 + var6, -108, 3 + var4, var7 - 3, var3);
         qi.a(5275728, var5, 10551200, 1, var6, 99, var4, var7, var3);
@@ -193,7 +193,7 @@ final class DialogueScreen extends IntrusiveNode {
           this.field_h = new String[this.field_D.length];
           this.field_i = new String[this.field_D.length];
           for (int var5_int = 0; var5_int < this.field_D.length; var5_int++) {
-            this.field_h[var5_int] = "photos_" + gd.field_R[this.field_D[var5_int]];
+            this.field_h[var5_int] = "photos_" + ValidatedTextWidget.field_R[this.field_D[var5_int]];
             this.field_i[var5_int] = "";
             boolean discarded$2 = this.a((byte) 124, var5_int);
           }
@@ -316,10 +316,10 @@ final class DialogueScreen extends IntrusiveNode {
         return param2;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_k = null;
         field_G = null;
-        if (!param0) {
+        if (!guard) {
           DialogueScreen.a((byte) -30, -21, 96);
         }
         field_y = null;
@@ -387,10 +387,10 @@ final class DialogueScreen extends IntrusiveNode {
               if (this.field_w.field_e) {
                 ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, this.g(2));
               }
-              if (nk.field_n != 13 &&
-                nk.field_n != 84 &&
-                nk.field_n != 83 &&
-                82 != nk.field_n) {
+              if (PasswordValidator.field_n != 13 &&
+                PasswordValidator.field_n != 84 &&
+                PasswordValidator.field_n != 83 &&
+                82 != PasswordValidator.field_n) {
                 continue;
               }
               this.i(2048);

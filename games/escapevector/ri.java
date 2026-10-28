@@ -7,7 +7,7 @@ final class ri {
 
     final static void a(int param0, int param1, byte param2) {
         bg.field_f = param1;
-        oj.field_M = param0;
+        ValidationIndicator.field_M = param0;
         if (param2 > -53) {
           ri.a(-74);
         }
@@ -41,10 +41,10 @@ final class ri {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_b = null;
         field_a = null;
-        if (param0 >= -23) {
+        if (guard >= -23) {
           field_b = (PcmSample) null;
         }
     }
@@ -72,9 +72,9 @@ final class ri {
           int var4 = var14.readUnsignedByte(0);
           if (0 != var4) {
             int var5 = var3.field_g;
-            bl.field_l[0] = ck.field_r;
+            TextHotspotRegion.field_l[0] = ck.field_r;
             for (int var6_int = 1; var4 > var6_int; var6_int++) {
-              bl.field_l[var6_int] = var14.c(false);
+              TextHotspotRegion.field_l[var6_int] = var14.c(false);
             }
             wk.a(var4, param0 - 58, var5);
             for (int var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -93,12 +93,12 @@ final class ri {
             int var10 = 0;
             while (var8 > var9) {
               int var11 = cd.field_q[var9];
-              var6[0][var10] = bl.field_l[var11];
+              var6[0][var10] = TextHotspotRegion.field_l[var11];
               var18[0][var10 * 4] = DualLinkNode.field_k[var11];
               var18[0][1 + 4 * var10] = pc.field_c[var11];
               var18[0][var10 * 4 + 2] = RasterSnapshot.field_k[var11];
               var18[0][3 + var10 * 4] = tm.field_fb[var11];
-              if (SeekerMine.a(bl.field_l[var11], (byte) 123) &&
+              if (SeekerMine.a(TextHotspotRegion.field_l[var11], (byte) 123) &&
                 tm.field_fb[var11] + pc.field_c[var11] + RasterSnapshot.field_k[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -111,12 +111,12 @@ final class ri {
             int var10Lifetime1 = var13;
             while (var9Lifetime1 < var8) {
               int var11Lifetime1 = cd.field_q[var9Lifetime1 + var5];
-              var6[1][var13] = bl.field_l[var11Lifetime1];
+              var6[1][var13] = TextHotspotRegion.field_l[var11Lifetime1];
               var18[1][var13 * 4] = DualLinkNode.field_k[var11Lifetime1];
               var18[1][var13 * 4 + 1] = pc.field_c[var11Lifetime1];
               var18[1][var13 * 4 + 2] = RasterSnapshot.field_k[var11Lifetime1];
               var18[1][3 + var13 * 4] = tm.field_fb[var11Lifetime1];
-              if (SeekerMine.a(bl.field_l[var11Lifetime1], (byte) 117) &&
+              if (SeekerMine.a(TextHotspotRegion.field_l[var11Lifetime1], (byte) 117) &&
                 0 == tm.field_fb[var11Lifetime1] + pc.field_c[var11Lifetime1] + RasterSnapshot.field_k[var11Lifetime1]) {
                 var6[1][var13] = null;
                 var13--;
@@ -144,7 +144,7 @@ final class ri {
         IsaacRandom.field_d.a(NetworkGameClient.field_r, true);
         IsaacRandom.field_d = null;
         if (null != km.field_n) {
-          km.field_n.a(param0 ^ -25123);
+          km.field_n.restoreWindowedSize(param0 ^ -25123);
         }
         if (param0 != -25123) {
           field_a = (String) null;

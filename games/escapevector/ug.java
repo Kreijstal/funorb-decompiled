@@ -31,10 +31,10 @@ final class ug {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_a = null;
         field_c = null;
-        if (!param0) {
+        if (!guard) {
           return;
         }
         field_b = null;

@@ -13,7 +13,7 @@ final class ii {
         lh.field_d = 3 & param1 >> 2;
         vi.field_f = 3 & param1;
         if (param0 != 16) {
-          ii.a(17);
+          ii.releaseStatics(17);
         }
         if (lh.field_d > 2) {
           lh.field_d = 2;
@@ -23,8 +23,8 @@ final class ii {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 20) {
+    public static void releaseStatics(int guard) {
+        if (guard != 20) {
           field_a = (ResourceArchive) null;
           field_a = null;
           field_b = null;

@@ -484,7 +484,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         String stackIn_10_2 = null;
         try {
           if (!param1) {
-            CachedArchiveProvider.c((byte) 80);
+            CachedArchiveProvider.releaseStatics((byte) 80);
           }
           if (uc.a(param0, 116, param3, param2)) {
             Sprite stackIn_6_0 = je.b(100);
@@ -506,9 +506,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_r = null;
-        if (param0 != 8) {
+        if (guard != 8) {
           field_r = (String[]) null;
         }
         field_w = null;
@@ -518,7 +518,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         int var8 = EscapeVector.obfuscationControl;
         try {
           int var3_int = 0;
-          int var4 = hi.field_o;
+          int var4 = EmailSyntaxValidator.field_o;
           if (param0 != 122) {
             CachedArchiveProvider.b(91);
           }

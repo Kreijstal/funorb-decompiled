@@ -27,13 +27,13 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           bk.field_r.a((byte) -118);
         }
         if (param0 != 0) {
-          FullscreenFocusCanvas.a((byte) -8);
+          FullscreenFocusCanvas.releaseStatics((byte) -8);
           return;
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 >= 37) {
+    public static void releaseStatics(byte guard) {
+        if (guard >= 37) {
           field_g = null;
           field_b = null;
           field_a = null;
@@ -129,7 +129,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         vi.field_e[jf.field_J] = param4;
         cd.field_q[jf.field_J] = jf.field_J;
         DualLinkNode.field_k[jf.field_J] = param5;
-        if (param5 < vl.field_e) {
+        if (param5 < TextLayoutLine.field_e) {
           TextLayout.field_d = param5;
         }
         if (ArchiveRequest.field_t >= param5) {

@@ -13,7 +13,7 @@ final class dh {
     final static void a(boolean param0, byte param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           di.field_g = RasterBuffer.a((byte) 41, "");
-          di.field_g.a((byte) -128, false);
+          di.field_g.complete((byte) -128, false);
           wc.a(83, param2, param3, param4);
           kn.a((byte) -96);
           dn.field_q = RasterBuffer.field_g;
@@ -83,7 +83,7 @@ final class dh {
           int[] var2 = jb.field_m;
           int var3 = 0;
           if (param1 < 26) {
-            dh.a((byte) -79);
+            dh.releaseStatics((byte) -79);
           }
           while (var3 < var2.length) {
             int var4 = var2[var3];
@@ -100,9 +100,9 @@ final class dh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_e = null;
-        int var1 = 61 % ((46 - param0) / 49);
+        int var1 = 61 % ((46 - guard) / 49);
     }
 
     final void a(int param0, byte[] param1, PacketBuffer param2) {

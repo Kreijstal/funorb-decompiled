@@ -13,10 +13,10 @@ final class p {
     Sprite field_d;
     int field_b;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
         field_j = null;
-        if (param0 <= 39) {
+        if (guard <= 39) {
           field_j = (int[]) null;
         }
         field_e = null;
@@ -295,7 +295,7 @@ final class p {
             return stackIn_9_0;
           }
           if (param3 != 5214) {
-            p.b(43);
+            p.releaseStatics(43);
           }
           param0 = param0 - param2.offsetY;
           if (param2.height <= param0) {

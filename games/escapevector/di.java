@@ -3,7 +3,7 @@
  */
 final class di {
     String field_a;
-    static d field_g;
+    static EmailAvailabilityRequest field_g;
     static wc field_d;
     static String field_f;
     String field_h;
@@ -19,7 +19,7 @@ final class di {
         if (param0 != 1) {
           field_c = (String) null;
           re.d(2);
-          lb.c(true);
+          MatchingTextValidator.c(true);
           ac.d(-16802);
           if (ClientException.a(-31879)) {
             om.field_c.writeCipheredOpcode(1, true);
@@ -31,7 +31,7 @@ final class di {
           return;
         }
         re.d(2);
-        lb.c(true);
+        MatchingTextValidator.c(true);
         ac.d(-16802);
         if (!ClientException.a(-31879)) {
           nm.a(16);
@@ -61,10 +61,10 @@ final class di {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         field_f = null;
         field_d = null;
-        if (param0 == 0) {
+        if (guard == 0) {
           field_g = null;
           field_c = null;
           field_b = null;
@@ -79,10 +79,10 @@ final class di {
     final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7, Sprite[] param8, boolean param9, int param10, int param11, BitmapFont param12, byte param13, int param14) {
         try {
           Sprite[] var16 = (Sprite[]) null;
-          ti.a(param8, param10, param1, param5, param11, 480, 0, param4, param3, lh.field_e, param12, pc.field_d, param2, param7, (Sprite[]) null, 2, param14, 0, gd.field_X, param6, param0);
+          ti.a(param8, param10, param1, param5, param11, 480, 0, param4, param3, lh.field_e, param12, pc.field_d, param2, param7, (Sprite[]) null, 2, param14, 0, ValidatedTextWidget.field_X, param6, param0);
           DebouncedValidator.a(false, param9);
           if (param13 > -5) {
-            field_g = (d) null;
+            field_g = (EmailAvailabilityRequest) null;
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "di.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');

@@ -8,8 +8,8 @@ final class tg extends ol {
     static String[] field_nb;
     int field_pb;
 
-    public static void h(int param0) {
-        if (param0 != 0) {
+    public static void releaseStatics(int guard) {
+        if (guard != 0) {
           tg.b(-28, 85);
           field_nb = null;
           return;

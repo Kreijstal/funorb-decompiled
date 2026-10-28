@@ -197,7 +197,7 @@ final class in extends IntrusiveNode {
         return true;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_j = null;
         field_k = null;
         field_M = null;

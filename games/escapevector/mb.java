@@ -14,7 +14,7 @@ final class mb {
         boolean var2 = false;
         int var3 = EscapeVector.obfuscationControl;
         try {
-          DialogueScreen var4 = qa.f((byte) -49);
+          DialogueScreen var4 = DropTargetWidget.f((byte) -49);
           if (p.field_h != 0) {
             if (!aj.b(-124)) {
               if (1 == p.field_h) {
@@ -166,17 +166,17 @@ final class mb {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         try {
           field_b = null;
           field_g = null;
           field_f = null;
-          if (param0 != 4) {
+          if (guard != 4) {
             mb.b((byte) -110);
           }
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "mb.B(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "mb.B(" + guard + ')');
         }
     }
 
@@ -219,13 +219,13 @@ final class mb {
         String stackIn_13_2 = null;
         try {
           if (null != ol.field_E) {
-            ol.field_E.field_G.a(args, (byte) -103);
+            ol.field_E.field_G.setSuggestions(args, (byte) -103);
           }
           if (param1 != 4) {
             return;
           }
           if (rc.field_b != null) {
-            rc.field_b.field_K.a(args, (byte) -103);
+            rc.field_b.field_K.setSuggestions(args, (byte) -103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

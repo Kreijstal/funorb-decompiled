@@ -14,8 +14,8 @@ final class pa {
         ff.field_e = 0;
     }
 
-    public static void a(byte param0) {
-        if (param0 != 103) {
+    public static void releaseStatics(byte guard) {
+        if (guard != 103) {
           field_a = (PcmSample) null;
         }
         field_a = null;

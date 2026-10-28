@@ -112,8 +112,8 @@ final class kc {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != -28377) {
+    public static void releaseStatics(int guard) {
+        if (guard != -28377) {
           return;
         }
         field_c = null;

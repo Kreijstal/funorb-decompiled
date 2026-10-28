@@ -37,11 +37,11 @@ final class al {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_b = null;
         field_a = null;
         field_d = null;
-        if (param0 > -1) {
+        if (guard > -1) {
           al.a((byte) 104);
         }
         field_f = null;

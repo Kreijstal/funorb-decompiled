@@ -64,8 +64,8 @@ final class me extends IntrusiveNode {
         }
     }
 
-    public static void k(int param0) {
-        if (param0 != 0) {
+    public static void releaseStatics(int guard) {
+        if (guard != 0) {
           field_o = (String[]) null;
         }
         field_g = null;

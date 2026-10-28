@@ -142,13 +142,13 @@ final class fc {
         throw new IllegalStateException();
     }
 
-    final static lm a(boolean param0, byte param1) {
-        lm var2 = new lm(true);
+    final static NameAvailabilityResult a(boolean param0, byte param1) {
+        NameAvailabilityResult var2 = new NameAvailabilityResult(true);
         if (param1 <= -39) {
           var2.field_e = param0 ? true : false;
           return var2;
         }
-        return (lm) null;
+        return (NameAvailabilityResult) null;
     }
 
     final static int a(int param0, int param1) {

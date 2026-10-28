@@ -64,10 +64,10 @@ abstract class fj extends vg {
         return super.a((byte) 112);
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int guard) {
         field_kb = null;
-        if (param0 != -11555) {
-          fj.n(-20);
+        if (guard != -11555) {
+          fj.releaseStatics(-20);
           field_bb = null;
           field_eb = null;
           return;

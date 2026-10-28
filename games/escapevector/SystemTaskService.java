@@ -552,7 +552,7 @@ final class SystemTaskService implements Runnable {
           }
           if (this.field_m) {
             try {
-              Class.forName("wm").newInstance();
+              Class.forName("LegacyDirectSoundBackend").newInstance();
             } catch (java.lang.Throwable decompiledCaughtParameter8) {
               decompiledCaughtException = decompiledCaughtParameter8;
               throwable = decompiledCaughtException;

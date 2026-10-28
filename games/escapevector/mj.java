@@ -47,7 +47,7 @@ final class mj {
               } else {
                 al.field_d = CheckboxPainter.field_q;
                 cd.field_v = var6_int;
-                hi.field_r = -1;
+                EmailSyntaxValidator.field_r = -1;
               }
             }
             if (al.field_d == ha.field_c &&
@@ -68,7 +68,7 @@ final class mj {
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
                   al.field_d = CheckboxPainter.field_q;
-                  hi.field_r = -1;
+                  EmailSyntaxValidator.field_r = -1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -80,7 +80,7 @@ final class mj {
               }
               if (decompiledFrameRemainder0) {
                 al.field_d = ClientException.field_c;
-                hi.field_r = -1;
+                EmailSyntaxValidator.field_r = -1;
               }
             }
             if (al.field_d == ClientException.field_c &&
@@ -92,7 +92,7 @@ final class mj {
               String var6 = om.field_g.d(-15208);
               int var7 = om.field_g.readUnsignedByte(0);
               if ((1 & var7) != 0) {
-                lm.a((byte) -63);
+                NameAvailabilityResult.a((byte) -63);
               }
               if (!param4) {
                 boolean stackIn_48_0 = ((8 & var7) != 0);
@@ -118,7 +118,7 @@ final class mj {
               LaserGateSpan.field_g = om.field_g.readUnsignedByte(param0 - 1);
               al.field_d = ck.field_t;
               if (ArchiveIndex.field_m.a((byte) 32) == md.field_E) {
-                kf.field_q.a(27002, PointCloudEffect.d((byte) -114));
+                NameAvailabilityValidator.field_q.a(27002, PointCloudEffect.d((byte) -114));
               } else if (ArchiveIndex.field_m.a((byte) 32) == ja.field_a) {
                 oh.field_n.a(27002, PointCloudEffect.d((byte) -71));
               }
@@ -145,11 +145,11 @@ final class mj {
               if (Js5NetworkRequest.field_x > 0) {
                 ej.field_d = true;
               }
-              om.field_c.initializeCipher(rh.field_O, (byte) 107);
+              om.field_c.initializeCipher(NameSuggestionsPanel.field_O, (byte) 107);
               for (int var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                rh.field_O[var8Lifetime1] = rh.field_O[var8Lifetime1] + 50;
+                NameSuggestionsPanel.field_O[var8Lifetime1] = NameSuggestionsPanel.field_O[var8Lifetime1] + 50;
               }
-              om.field_g.initializeCipher(rh.field_O, (byte) 85);
+              om.field_g.initializeCipher(NameSuggestionsPanel.field_O, (byte) 85);
               int stackIn_81_0 = cd.field_v;
               return stackIn_81_0;
             }
@@ -213,11 +213,11 @@ final class mj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_a = null;
         field_b = null;
         field_f = null;
-        if (!param0) {
+        if (!guard) {
           field_e = (String[]) null;
         }
         field_e = null;

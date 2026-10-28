@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends TextFieldValidator {
+final class NameAvailabilityValidator extends TextFieldValidator {
     static PcmSample field_p;
     private boolean field_n;
     static ee field_q;
@@ -9,7 +9,7 @@ final class kf extends TextFieldValidator {
     static int[] field_o;
     static PacketBuffer field_r;
 
-    kf(EditableTextWidget param0) {
+    NameAvailabilityValidator(EditableTextWidget param0) {
         super(param0);
         this.field_n = false;
     }
@@ -35,7 +35,7 @@ final class kf extends TextFieldValidator {
             field_p = (PcmSample) null;
           }
           if (!text.equals(this.field_s)) {
-            lm var3 = of.a(122, text);
+            NameAvailabilityResult var3 = of.a(122, text);
             if (var3 != null &&
               null == var3.field_f) {
               this.field_n = var3.field_a;
@@ -108,7 +108,7 @@ final class kf extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!text.equals(this.field_s)) {
-            lm var5 = of.a(122, text);
+            NameAvailabilityResult var5 = of.a(122, text);
             if (var5 == null) {
               return null;
             }
@@ -139,10 +139,10 @@ final class kf extends TextFieldValidator {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_q = null;
         field_r = null;
-        if (param0 == 0) {
+        if (guard == 0) {
           field_p = null;
           field_o = null;
           return;

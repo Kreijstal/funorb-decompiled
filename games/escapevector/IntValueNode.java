@@ -65,9 +65,9 @@ final class IntValueNode extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_h = null;
-        if (!param0) {
+        if (!guard) {
           return;
         }
         field_i = null;
@@ -81,7 +81,7 @@ final class IntValueNode extends IntrusiveNode {
         TrackerMusicDefinition.field_f.a(true);
         gameMode = l.a(-8462, gameMode);
         levelIndex = SectorCacheStore.a(gameMode, 13565, levelIndex);
-        int var3 = nk.a(1, gameMode);
+        int var3 = PasswordValidator.a(1, gameMode);
         BoundedRandomAccessFile.activeSession = new GameplaySession(ld.field_h[gameMode], var3, gameMode, levelIndex);
         BoundedRandomAccessFile.activeSession.startSession((byte) -40);
         if (guard >= 77) {

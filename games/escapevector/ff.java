@@ -28,11 +28,11 @@ final class ff {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_i = null;
         field_b = null;
         field_f = null;
-        if (param0 != 100) {
+        if (guard != 100) {
           field_a = (String) null;
           field_a = null;
           return;
@@ -76,12 +76,12 @@ final class ff {
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
             pl.field_q.a(400);
-            r.field_y = true;
+            SingleChildContainer.field_y = true;
             IntValueNode.field_j = true;
             return;
           }
           pl.field_q.a(400);
-          r.field_y = true;
+          SingleChildContainer.field_y = true;
           IntValueNode.field_j = true;
           return;
         }
@@ -94,12 +94,12 @@ final class ff {
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
             pl.field_q.a(400);
-            r.field_y = true;
+            SingleChildContainer.field_y = true;
             IntValueNode.field_j = true;
             return;
           }
           pl.field_q.a(400);
-          r.field_y = true;
+          SingleChildContainer.field_y = true;
           IntValueNode.field_j = true;
           return;
         }
@@ -109,12 +109,12 @@ final class ff {
         if (mj.field_d < 1000) {
           mj.field_d = mj.field_d + 1;
           pl.field_q.a(400);
-          r.field_y = true;
+          SingleChildContainer.field_y = true;
           IntValueNode.field_j = true;
           return;
         }
         pl.field_q.a(400);
-        r.field_y = true;
+        SingleChildContainer.field_y = true;
         IntValueNode.field_j = true;
     }
 

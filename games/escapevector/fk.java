@@ -9,10 +9,10 @@ final class fk {
     static String field_e;
     static ResourceArchive field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
         field_e = null;
-        int var1 = 22 % ((-65 - param0) / 36);
+        int var1 = 22 % ((-65 - guard) / 36);
         field_f = null;
         field_a = null;
     }
@@ -138,7 +138,7 @@ final class fk {
 
     final static void b(int param0) {
         if (param0 != 0) {
-          fk.a(115);
+          fk.releaseStatics(115);
           if (bk.field_r != null) {
             bk.field_r.a((byte) -127);
           }

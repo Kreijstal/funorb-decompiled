@@ -162,9 +162,9 @@ final class ac {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int guard) {
         field_d = null;
-        int var1 = 76 / ((param0 + 3) / 33);
+        int var1 = 76 / ((guard + 3) / 33);
         field_a = null;
         field_c = null;
     }

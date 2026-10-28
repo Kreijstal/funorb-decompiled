@@ -66,7 +66,7 @@ final class ve implements WidgetPainter {
         String stackIn_20_2 = null;
         try {
           if (null == om.field_e) {
-            kc.field_c = dn.a(0, vl.field_f, ej.field_g, param1, 1, param3, dn.field_C);
+            kc.field_c = dn.a(0, TextLayoutLine.field_f, ej.field_g, param1, 1, param3, dn.field_C);
             int[] var6 = (int[]) null;
             HudMessage.field_k = dn.a(0, ok.field_b, CipherPacketBuffer.field_q, param2, 0, (int[]) null, q.field_L);
             tk.field_b = new qh(param1, bm.field_e, Js5Transport.field_i, 1, SelfDestructEffects.field_n, param3);
@@ -128,8 +128,8 @@ final class ve implements WidgetPainter {
         int var3 = EscapeVector.obfuscationControl;
         try {
           if (-1 == bg.field_f &&
-            oj.field_M == -1) {
-            oj.field_M = UiContainer.field_y;
+            ValidationIndicator.field_M == -1) {
+            ValidationIndicator.field_M = UiContainer.field_y;
             bg.field_f = dh.field_d;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -157,8 +157,8 @@ final class ve implements WidgetPainter {
             } else {
               ei.field_j = ef.field_d;
             }
-            ni.field_O = bg.field_f;
-            ci.field_g = oj.field_M;
+            DraggableWidget.field_O = bg.field_f;
+            ci.field_g = ValidationIndicator.field_M;
             if (param1 != null) {
               un.field_u = false;
             } else if (var2_int) {
@@ -170,8 +170,8 @@ final class ve implements WidgetPainter {
             ei.field_j < ef.field_d &&
             TextFieldValidator.field_h) {
             ei.field_j = 0;
-            ci.field_g = oj.field_M;
-            ni.field_O = bg.field_f;
+            ci.field_g = ValidationIndicator.field_M;
+            DraggableWidget.field_O = bg.field_f;
           }
           if (param0 > -97) {
             ve.a(-81, 8, false, 82, false);
@@ -182,7 +182,7 @@ final class ve implements WidgetPainter {
             ei.field_j = 0;
           }
           bg.field_f = -1;
-          oj.field_M = -1;
+          ValidationIndicator.field_M = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -198,12 +198,12 @@ final class ve implements WidgetPainter {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_n = (byte[][][]) null;
         field_f = null;
         field_h = null;
         field_d = null;
-        if (param0 != 0) {
+        if (guard != 0) {
           field_l = -119;
         }
     }

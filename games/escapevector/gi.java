@@ -24,7 +24,7 @@ final class gi {
             return 1;
           }
           if (RasterSnapshot.field_g == 2 &&
-            kl.a(this.field_j, 0)) {
+            AgeValidator.a(this.field_j, 0)) {
             return 1;
           }
           if (param0 >= 40) {
@@ -138,9 +138,9 @@ final class gi {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int guard) {
         field_c = null;
-        if (param0 != -13885) {
+        if (guard != -13885) {
           return;
         }
         field_i = null;

@@ -14,11 +14,11 @@ final class tc extends IntrusiveNode {
     private int field_m;
     static String field_h;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int guard) {
         field_k = (char[][]) null;
         field_o = null;
         field_j = null;
-        int var1 = -112 % ((-22 - param0) / 61);
+        int var1 = -112 % ((-22 - guard) / 61);
         field_p = null;
         field_g = null;
         field_n = null;
@@ -36,7 +36,7 @@ final class tc extends IntrusiveNode {
           return;
         }
         if (param0 <= 84) {
-          tc.e(-24);
+          tc.releaseStatics(-24);
         }
         for (int var2 = 0; this.field_l.length > var2; var2++) {
           Sprite var3 = this.field_l[var2];

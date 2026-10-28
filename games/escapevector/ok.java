@@ -151,10 +151,10 @@ final class ok {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_d = (byte[][]) null;
         field_b = null;
-        if (!param0) {
+        if (!guard) {
           field_c = 85;
         }
     }

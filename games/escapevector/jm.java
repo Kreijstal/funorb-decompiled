@@ -69,10 +69,10 @@ final class jm extends UiComponent {
         return var3;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_I = null;
         field_M = null;
-        if (param0 != 127) {
+        if (guard != 127) {
           return;
         }
         field_K = null;

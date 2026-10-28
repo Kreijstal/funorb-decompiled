@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl extends TextFieldValidator {
+final class AgeValidator extends TextFieldValidator {
     static int field_n;
     static String field_o;
     static String field_p;
 
-    public static void g(int param0) {
-        if (param0 != -17) {
+    public static void releaseStatics(int guard) {
+        if (guard != -17) {
           field_o = (String) null;
           field_p = null;
           field_o = null;
@@ -17,7 +17,7 @@ final class kl extends TextFieldValidator {
         field_o = null;
     }
 
-    kl(EditableTextWidget param0) {
+    AgeValidator(EditableTextWidget param0) {
         super(param0);
     }
 
@@ -47,7 +47,7 @@ final class kl extends TextFieldValidator {
         if (!param2) {
           return false;
         }
-        if (!hi.a(param1, -2)) {
+        if (!EmailSyntaxValidator.a(param1, -2)) {
           if (2 != param1) {
             return false;
           }

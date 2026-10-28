@@ -15,14 +15,14 @@ final class ek {
           qk.field_e = new dn(param0);
           return;
         }
-        ek.a(-110);
+        ek.releaseStatics(-110);
         gi.a((byte) -58);
         qk.field_e = new dn(param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_a = null;
-        int var1 = 34 % ((param0 + 63) / 45);
+        int var1 = 34 % ((guard + 63) / 45);
         field_c = null;
         field_b = null;
     }

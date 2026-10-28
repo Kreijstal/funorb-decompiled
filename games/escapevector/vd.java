@@ -79,13 +79,13 @@ final class vd {
         MouseWheelInput.a(1, 6, var3);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_g = null;
         field_d = null;
         field_f = null;
         field_c = null;
         field_i = null;
-        if (param0 < 5) {
+        if (guard < 5) {
           field_d = (String[]) null;
         }
     }

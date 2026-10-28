@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends r {
+final class DropTargetWidget extends SingleChildContainer {
     static int field_G;
     static int field_D;
     static String field_I;
@@ -12,17 +12,17 @@ final class qa extends r {
         String stackIn_21_2 = null;
         try {
           super.onPointerReleased(pointerY, offsetY, pointerX, offsetX, root, (byte) -97);
-          ni var7 = gf.field_b;
+          DraggableWidget var7 = gf.field_b;
           if (var7 != null &&
             this.hitTest(pointerX, pointerY, offsetY, (byte) 66, offsetX)) {
-            if (this.listener instanceof mk) {
-              ((mk) (this.listener)).a(this, var7, (byte) 41);
+            if (this.listener instanceof WidgetDropListener) {
+              ((WidgetDropListener) (this.listener)).onDropped(this, var7, (byte) 41);
               gf.field_b = null;
-            } else if (var7.listener instanceof mk) {
-              ((mk) (var7.listener)).a(this, var7, (byte) -115);
+            } else if (var7.listener instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var7.listener)).onDropped(this, var7, (byte) -115);
               gf.field_b = null;
               if (EscapeVector.obfuscationControl != 0) {
-                ((mk) (this.listener)).a(this, var7, (byte) 41);
+                ((WidgetDropListener) (this.listener)).onDropped(this, var7, (byte) 41);
                 gf.field_b = null;
               }
             }
@@ -43,14 +43,14 @@ final class qa extends r {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte guard) {
         try {
           field_E = null;
           field_H = null;
-          int var1_int = -40 / ((17 - param0) / 42);
+          int var1_int = -40 / ((17 - guard) / 42);
           field_I = null;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qa.C(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "qa.C(" + guard + ')');
         }
     }
 
@@ -1202,15 +1202,15 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(108, "quittowebsite");
                 if (var2 != null) {
-                  d.field_d = RasterSnapshot.a(var2, 116);
+                  EmailAvailabilityRequest.field_d = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(93, "connectionrestored");
                 if (null != var2) {
-                  ni.field_K = RasterSnapshot.a(var2, 112);
+                  DraggableWidget.field_K = RasterSnapshot.a(var2, 112);
                 }
                 var2 = IntKeyLookup.a(93, "warning_ifyouquit");
                 if (null != var2) {
-                  gd.field_Z = RasterSnapshot.a(var2, 122);
+                  ValidatedTextWidget.field_Z = RasterSnapshot.a(var2, 122);
                 }
                 var2 = IntKeyLookup.a(59, "warning_ifyouquitorleavepage");
                 if (null != var2) {
@@ -1650,7 +1650,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(59, "create_alert_namelength");
                 if (null != var2) {
-                  kl.field_p = RasterSnapshot.a(var2, 126);
+                  AgeValidator.field_p = RasterSnapshot.a(var2, 126);
                 }
                 var2 = IntKeyLookup.a(73, "create_alert_namechars");
                 if (var2 != null) {
@@ -1726,7 +1726,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(68, "create_account_success");
                 if (var2 != null) {
-                  ni.field_G = RasterSnapshot.a(var2, 118);
+                  DraggableWidget.field_G = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(67, "invalid_name");
                 if (var2 != null) {
@@ -2090,7 +2090,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(53, "on");
                 if (null != var2) {
-                  rh.field_J = RasterSnapshot.a(var2, 117);
+                  NameSuggestionsPanel.field_J = RasterSnapshot.a(var2, 117);
                 }
                 var2 = IntKeyLookup.a(42, "off");
                 if (var2 != null) {
@@ -2624,15 +2624,15 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(69, "members_expansion_benefits,0");
                 if (var2 != null) {
-                  lb.field_n[0] = RasterSnapshot.a(var2, 116);
+                  MatchingTextValidator.field_n[0] = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(25, "members_expansion_benefits,1");
                 if (var2 != null) {
-                  lb.field_n[1] = RasterSnapshot.a(var2, 121);
+                  MatchingTextValidator.field_n[1] = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(20, "members_expansion_benefits,2");
                 if (null != var2) {
-                  lb.field_n[2] = RasterSnapshot.a(var2, 120);
+                  MatchingTextValidator.field_n[2] = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(55, "members_expansion_price_top");
                 if (var2 != null) {
@@ -2904,7 +2904,7 @@ final class qa extends r {
                 }
                 var2 = IntKeyLookup.a(37, "mustlogin1");
                 if (var2 != null) {
-                  nk.field_r = RasterSnapshot.a(var2, 111);
+                  PasswordValidator.field_r = RasterSnapshot.a(var2, 111);
                 }
                 var2 = IntKeyLookup.a(105, "mustlogin2,1");
                 if (null != var2) {
@@ -3115,13 +3115,13 @@ final class qa extends r {
         decompiledBody.run();
     }
 
-    private qa(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5, UiComponent param6) {
+    private DropTargetWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5, UiComponent param6) {
         super(param0, param1, param2, param3, param4, param5);
         String stackIn_7_2 = null;
         String stackIn_11_2 = null;
         String stackIn_15_2 = null;
         try {
-          this.field_C = param6;
+          this.child = param6;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -110,10 +110,10 @@ final class bk extends Js5Transport {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int guard) {
         try {
           field_q = null;
-          if (param0 != -24811) {
+          if (guard != -24811) {
             field_q = (String[]) null;
           }
           field_r = null;
@@ -121,7 +121,7 @@ final class bk extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "bk.Q(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "bk.Q(" + guard + ')');
         }
     }
 
@@ -222,7 +222,7 @@ final class bk extends Js5Transport {
           }
           this.field_g = this.field_g + 1;
           if (param0 >= -108) {
-            bk.h(-33);
+            bk.releaseStatics(-33);
           }
           this.field_d = -1;
           this.field_t = null;
