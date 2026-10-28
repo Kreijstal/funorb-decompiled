@@ -32,7 +32,7 @@ final class AchievementQuery extends IntrusiveNode {
         try {
           NameAvailabilityResultSupport.field_g = param3;
           StrongCacheEntry.field_v = param1;
-          UiTheme.a((byte) 71, mm.field_a, param0);
+          UiTheme.a((byte) 71, ThemeAssetSupport.field_a, param0);
           if (param2) {
             AchievementQuery.releaseStatics(true);
           }

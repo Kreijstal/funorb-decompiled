@@ -22,8 +22,8 @@ final class ArchiveLoadTask {
     }
 
     final static void a(boolean param0, int param1) {
-        di.field_d = null;
-        mj.field_d = 0;
+        HighscorePlayerRecord.field_d = null;
+        LoginHandshakeSupport.field_d = 0;
         int var2 = -17 % ((-17 - param1) / 39);
         AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, param0);
         ChatMessage.clearFrameOffsets((byte) -123);
@@ -34,12 +34,12 @@ final class ArchiveLoadTask {
         try {
           if (PasswordValidator.field_n == 97 ||
             PasswordValidator.field_n == 99) {
-            int var2_int = di.field_d.selectedIndex;
+            int var2_int = HighscorePlayerRecord.field_d.selectedIndex;
             var2_int++;
             if (var2_int >= choices.length) {
               var2_int = 0;
             }
-            di.field_d.selectFromKeyboard(false, var2_int);
+            HighscorePlayerRecord.field_d.selectFromKeyboard(false, var2_int);
           }
           if (guard != 0) {
             field_e = (InstructionsScreen) null;
@@ -48,12 +48,12 @@ final class ArchiveLoadTask {
             98 != PasswordValidator.field_n) {
             return;
           }
-          int var2_intLifetime1 = di.field_d.selectedIndex;
+          int var2_intLifetime1 = HighscorePlayerRecord.field_d.selectedIndex;
           var2_intLifetime1--;
           if (0 > var2_intLifetime1) {
             var2_intLifetime1 = -1 + choices.length;
           }
-          di.field_d.selectFromKeyboard(false, var2_intLifetime1);
+          HighscorePlayerRecord.field_d.selectFromKeyboard(false, var2_intLifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

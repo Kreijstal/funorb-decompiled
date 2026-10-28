@@ -158,7 +158,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           CipherPacketBuffer var14 = QuickChatDynamicCommand.incomingPackets;
           int var2 = var14.readUnsignedByte(0);
           if (var2 == 0) {
-            int[] var11 = v.a(-84);
+            int[] var11 = ServerListNavigationSupport.createScratchWords(-84);
             int[] var3 = var11;
             int[] var10 = var11;
             int[] var4 = var10;
@@ -169,7 +169,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             }
             AchievementQuery var13 = (AchievementQuery) (SavedDataQuerySupport.field_b.first(false));
             if (var13 == null) {
-              nm.a(16);
+              ConnectionSupport.closeTransport(16);
               return;
             }
             var13.achievementWords = var3;
@@ -181,7 +181,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (var2 == 1) {
             AchievementRecord var12 = (AchievementRecord) (RasterSnapshot.field_l.first(false));
             if (var12 == null) {
-              nm.a(16);
+              ConnectionSupport.closeTransport(16);
               return;
             }
             var12.unlink((byte) -64);
@@ -189,15 +189,15 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           if (var2 != 2) {
             GameModeSelectScreen.reportClientError(false, "A1: " + LoginStage.formatPacketDiagnostic((byte) 58), (Throwable) null);
-            nm.a(16);
+            ConnectionSupport.closeTransport(16);
             return;
           }
           AchievementQuery var15 = (AchievementQuery) (SavedDataQuerySupport.field_b.first(false));
           if (var15 == null) {
-            nm.a(16);
+            ConnectionSupport.closeTransport(16);
             return;
           }
-          var15.achievementWords = v.a(-92);
+          var15.achievementWords = ServerListNavigationSupport.createScratchWords(-92);
           var15.unavailable = true;
           var15.complete = true;
           var15.unlink((byte) -77);

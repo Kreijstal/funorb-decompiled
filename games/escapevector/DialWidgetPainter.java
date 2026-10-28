@@ -78,13 +78,13 @@ final class DialWidgetPainter implements WidgetPainter {
 
     final static void b(byte param0) {
         if (QuickChatPhraseCache.field_e == 10) {
-          fe.a(-84);
+          MembershipPromotionScreen.beginAlternateLoginFlow(-84);
           QuickChatPhraseCache.field_e = 11;
         } else if (!NetworkGameClient.i(56)) {
-          fe.a(-84);
+          MembershipPromotionScreen.beginAlternateLoginFlow(-84);
           QuickChatPhraseCache.field_e = 11;
         }
-        pb.field_d = true;
+        MenuTitleRenderSupport.field_d = true;
         if (param0 < -81) {
           return;
         }

@@ -82,7 +82,7 @@ final class PairedTextColumns extends LegacyTextBlock {
           return (TextWidgetPainter) null;
         }
         if (null == ResizableModalPanel.field_U) {
-          ResizableModalPanel.field_U = new TextWidgetPainter(ke.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, ke.field_c.maxAscent, -1, 2147483647, true);
+          ResizableModalPanel.field_U = new TextWidgetPainter(LegacyMenuFontSupport.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, LegacyMenuFontSupport.field_c.maxAscent, -1, 2147483647, true);
         }
         return ResizableModalPanel.field_U;
     }

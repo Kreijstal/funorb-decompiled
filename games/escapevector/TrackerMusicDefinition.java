@@ -42,18 +42,18 @@ final class TrackerMusicDefinition {
     int field_B;
 
     final static void d(int param0) {
-        AlternateUsernameCredentials.field_n.playSampleWithPan(!(0.5 <= Math.random()) ? TerrainMaskSupport.field_e : ri.field_b, 100, 6144 * IterableNodeHashTable.field_c / 64, param0);
+        AlternateUsernameCredentials.field_n.playSampleWithPan(!(0.5 <= Math.random()) ? TerrainMaskSupport.field_e : DisplayAndRatingSupport.field_b, 100, 6144 * IterableNodeHashTable.field_c / 64, param0);
     }
 
     final static String c(int param0) {
         if (InstructionsScreen.field_q == EmailAvailabilityValidator.field_o) {
           return AgeValidator.field_o;
         }
-        if (!di.field_g.isComplete(0)) {
-          return di.field_g.email(-84);
+        if (!HighscorePlayerRecord.field_g.isComplete(0)) {
+          return HighscorePlayerRecord.field_g.email(-84);
         }
         if (MeshMaterial.field_b == EmailAvailabilityValidator.field_o) {
-          return di.field_g.email(-52);
+          return HighscorePlayerRecord.field_g.email(-52);
         }
         if (param0 != 31069) {
           TrackerMusicDefinition.releaseStatics(-82);
@@ -115,8 +115,8 @@ final class TrackerMusicDefinition {
           return "";
         }
         if (null == AudioService.field_b) {
-          mj.field_e = ProxySocketConnector.field_o;
-          AudioService.field_b = new String[][]{mj.field_e, ProxySocketConnector.field_o, SavedCompletionFlags.field_d, ThreeSliceButtonPainter.field_u};
+          LoginHandshakeSupport.field_e = ProxySocketConnector.field_o;
+          AudioService.field_b = new String[][]{LoginHandshakeSupport.field_e, ProxySocketConnector.field_o, SavedCompletionFlags.field_d, ThreeSliceButtonPainter.field_u};
         }
         return AudioService.field_b[param1][param2];
     }

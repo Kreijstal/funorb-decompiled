@@ -27,18 +27,18 @@ final class GuestLoginSupport {
         try {
           MeshRasterState.useRasterClip();
           HighscoreQuery.field_i = 11;
-          pb.field_c = new int[260];
+          MenuTitleRenderSupport.field_c = new int[260];
           for (int var1_int = 0; var1_int < 256; var1_int++) {
             double var2 = 15.0;
-            pb.field_c[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+            MenuTitleRenderSupport.field_c[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
           if (guard >= -19) {
             field_b = (PcmSample) null;
           }
           int var5 = 256;
           int var1_intLifetime1 = var5;
-          while (var5 < pb.field_c.length) {
-            pb.field_c[var5] = 255;
+          while (var5 < MenuTitleRenderSupport.field_c.length) {
+            MenuTitleRenderSupport.field_c[var5] = 255;
             var5++;
           }
           return;

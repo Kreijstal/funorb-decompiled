@@ -33,7 +33,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             field_v = (String) null;
           }
           if (ArchivePreloader.loadSpriteSheet(param0, 96, param3, param2)) {
-            IndexedSprite stackIn_6_0 = da.b((byte) 8);
+            IndexedSprite stackIn_6_0 = SessionMenuSupport.takeFirstIndexedSprite((byte) 8);
             return stackIn_6_0;
           }
           Object stackIn_4_0 = null;

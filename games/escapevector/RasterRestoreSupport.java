@@ -21,7 +21,7 @@ final class RasterRestoreSupport {
         PasswordFieldPainter.field_u = disabled ? true : false;
         SavedDataQuery.field_j = 0;
         DraggableWidget.field_O = -1;
-        on.field_b = null;
+        IntroAudioSupport.field_b = null;
         AchievementDefinition.field_g = -1;
     }
 

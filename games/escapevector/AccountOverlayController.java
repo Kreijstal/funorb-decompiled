@@ -19,12 +19,12 @@ final class AccountOverlayController {
           if (!IntrusiveNode.b(12)) {
             if (null != IsaacRandom.field_d &&
               IsaacRandom.field_d.field_c) {
-              ri.a(-25123);
+              DisplayAndRatingSupport.exitFullscreen(-25123);
               AccountRequestDialog.field_pb.pushPanel(new AccountNoticeDialog(AccountRequestDialog.field_pb, ThreeSliceButtonPainter.field_A), 69);
             }
             return;
           }
-          AccountRequestDialog.field_pb.handlePointerFrame(true, (byte) -33, on.field_a, DebouncedValidator.field_b);
+          AccountRequestDialog.field_pb.handlePointerFrame(true, (byte) -33, IntroAudioSupport.field_a, DebouncedValidator.field_b);
           AccountRequestDialog.field_pb.updatePanels(0);
           while (AccountRequestDialog.pollKeyEvent(-104)) {
             AccountRequestDialog.field_pb.handleKey(KeyCodeSupport.currentKeyCharacter, PasswordValidator.field_n, (byte) -121);

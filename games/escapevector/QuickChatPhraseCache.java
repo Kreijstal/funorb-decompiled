@@ -72,9 +72,9 @@ final class QuickChatPhraseCache {
           QuickChatPhraseCache.advanceMenuTransition((byte) -15);
         }
         SectorCacheStore.a((byte) 123);
-        if (mj.field_d != 0) {
-          if (mj.field_d < 1000) {
-            mj.field_d = mj.field_d + 1;
+        if (LoginHandshakeSupport.field_d != 0) {
+          if (LoginHandshakeSupport.field_d < 1000) {
+            LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
             AlternateUsernameCredentials.field_q.update(400);
             SingleChildContainer.field_y = true;
             IntValueNode.field_j = true;
@@ -91,8 +91,8 @@ final class QuickChatPhraseCache {
           AccountPanelInputSupport.field_c = PcmSampleStream.createAtRatePercentQ6(SecondaryNodeHashTable.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
           ObjectSpriteSet.field_e.addSubstream(AccountPanelInputSupport.field_c);
           StringNode.playFrameAppearSound(8192, (byte) 51);
-          if (mj.field_d < 1000) {
-            mj.field_d = mj.field_d + 1;
+          if (LoginHandshakeSupport.field_d < 1000) {
+            LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
             AlternateUsernameCredentials.field_q.update(400);
             SingleChildContainer.field_y = true;
             IntValueNode.field_j = true;
@@ -106,8 +106,8 @@ final class QuickChatPhraseCache {
         AccountPanelInputSupport.field_c = PcmSampleStream.createAtRatePercentQ6(SecondaryNodeHashTable.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
         ObjectSpriteSet.field_e.addSubstream(AccountPanelInputSupport.field_c);
         StringNode.playFrameAppearSound(8192, (byte) 51);
-        if (mj.field_d < 1000) {
-          mj.field_d = mj.field_d + 1;
+        if (LoginHandshakeSupport.field_d < 1000) {
+          LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
           AlternateUsernameCredentials.field_q.update(400);
           SingleChildContainer.field_y = true;
           IntValueNode.field_j = true;

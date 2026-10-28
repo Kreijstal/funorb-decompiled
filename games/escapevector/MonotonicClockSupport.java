@@ -17,7 +17,7 @@ final class MonotonicClockSupport {
 
     final static void addSessionCounterOffset(int offset, int guard) {
         if (null != SocketJs5Transport.field_r) {
-          SocketJs5Transport.field_r.b(guard ^ -129, offset);
+          SocketJs5Transport.field_r.addOffset(guard ^ -129, offset);
         }
         if (guard != 128) {
           MonotonicClockSupport.addSessionCounterOffset(112, 55);

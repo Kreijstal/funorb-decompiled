@@ -22,12 +22,12 @@ final class TerrainMaskSupport {
           AccountPanelInputSupport.field_d = new SpriteOffset[DialWidgetPainter.field_h.length];
           for (int var1_int = 0; var1_int < DialWidgetPainter.field_h.length; var1_int++) {
             int var2 = DialWidgetPainter.field_h[var1_int];
-            SpriteOffset var3 = ph.field_b;
+            SpriteOffset var3 = HuffmanDecoder.field_b;
             Sprite var4 = TextWidgetPainter.a(var2, (byte) -39, 2);
             int var5 = var4.fullWidth - var3.x;
             int var6 = -var3.y + var4.fullHeight;
             SpriteOffset var7 = new SpriteOffset(var5, var6);
-            AccountPanelInputSupport.field_d[var1_int] = rc.a(var2, (byte) 121, var7, var3);
+            AccountPanelInputSupport.field_d[var1_int] = CanvasRenderSupport.selectQuarterTurnOffset(var2, (byte) 121, var7, var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

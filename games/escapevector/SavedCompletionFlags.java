@@ -165,7 +165,7 @@ final class SavedCompletionFlags {
         if (guard != -106) {
           return;
         }
-        this.retributionLevelCount = pc.levelNameCount(2513, 2);
+        this.retributionLevelCount = ModeProgressSupport.levelNameCount(2513, 2);
         this.retributionCompleted = new BitSet(this.retributionLevelCount);
     }
 
@@ -484,7 +484,7 @@ final class SavedCompletionFlags {
         if (guard < 103) {
           this.simulatorLevelCount = -109;
         }
-        this.simulatorLevelCount = pc.levelNameCount(2513, 3);
+        this.simulatorLevelCount = ModeProgressSupport.levelNameCount(2513, 3);
         this.simulatorCompleted = new BitSet(this.simulatorLevelCount);
     }
 

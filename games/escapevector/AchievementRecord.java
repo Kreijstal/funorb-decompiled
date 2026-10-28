@@ -94,7 +94,7 @@ final class AchievementRecord extends IntrusiveNode {
           var1 = LaserGateSpan.field_g;
           if (var1 > 0) {
             if (var1 == 1) {
-              AccountPanelInputSupport.field_b = cf.field_a;
+              AccountPanelInputSupport.field_b = MeshProjectionSupport.field_a;
             } else {
               AccountPanelInputSupport.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }
@@ -112,7 +112,7 @@ final class AchievementRecord extends IntrusiveNode {
           var1 = LaserGateSpan.field_g;
           if (var1 > 0) {
             if (var1 == 1) {
-              AccountPanelInputSupport.field_b = cf.field_a;
+              AccountPanelInputSupport.field_b = MeshProjectionSupport.field_a;
             } else {
               AccountPanelInputSupport.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }

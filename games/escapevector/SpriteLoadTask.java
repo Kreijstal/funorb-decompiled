@@ -25,7 +25,7 @@ final class SpriteLoadTask {
         if (!this.waitForGroup) {
           int var2 = 5 % ((-30 - guard) / 48);
           if (this.format == 0) {
-            this.sprite = fe.a(this.groupName, this.archive, this.fileName, true);
+            this.sprite = MembershipPromotionScreen.loadNamedSprite(this.groupName, this.archive, this.fileName, true);
             return this.sprite;
           }
           if (this.format == 1) {
@@ -45,7 +45,7 @@ final class SpriteLoadTask {
         }
         int var2Lifetime1 = 5 % ((-30 - guard) / 48);
         if (this.format == 0) {
-          this.sprite = fe.a(this.groupName, this.archive, this.fileName, true);
+          this.sprite = MembershipPromotionScreen.loadNamedSprite(this.groupName, this.archive, this.fileName, true);
           return this.sprite;
         }
         if (this.format != 1) {
@@ -70,16 +70,16 @@ final class SpriteLoadTask {
           if (guard != -23) {
             SpriteLoadTask.releaseStatics(-112);
           }
-          for (int var2_int = 0; on.field_f.length > var2_int; var2_int++) {
-            String var3 = on.field_f[var2_int];
+          for (int var2_int = 0; IntroAudioSupport.field_f.length > var2_int; var2_int++) {
+            String var3 = IntroAudioSupport.field_f[var2_int];
             if (var3 != null &&
               var3.length() != 0) {
               String var4 = "";
-              NodeHashTableIterator.field_b[var2_int] = kh.a(archive, (byte) -112, var4, var3);
+              NodeHashTableIterator.field_b[var2_int] = SpriteArchiveSupport.loadNamedSprites(archive, (byte) -112, var4, var3);
               String var5 = NameAvailabilityResult.field_b[var2_int];
               if (var5 != null &&
                 var5.length() != 0) {
-                AccountMessagePanel.field_M[var2_int] = kh.a(archive, (byte) -10, var4, var5);
+                AccountMessagePanel.field_M[var2_int] = SpriteArchiveSupport.loadNamedSprites(archive, (byte) -10, var4, var5);
               }
             }
           }

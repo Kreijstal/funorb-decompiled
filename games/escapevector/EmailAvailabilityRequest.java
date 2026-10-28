@@ -26,7 +26,7 @@ final class EmailAvailabilityRequest {
           if (TextWidgetPainter.isAsciiAlphanumeric(true, param0)) {
             return true;
           }
-          char[] var6 = pb.field_a;
+          char[] var6 = MenuTitleRenderSupport.field_a;
           char[] var2 = var6;
           for (int var3 = 0; var6.length > var3; var3++) {
             int var4 = var6[var3];

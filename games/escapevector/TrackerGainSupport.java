@@ -30,7 +30,7 @@ final class TrackerGainSupport {
         }
         if (!(GrowableIntList.field_b <= maximumGain)) {
           GrowableIntList.field_b = maximumGain;
-          DraggableWidget.field_N.d(kc.field_b * GrowableIntList.field_b / 64);
+          DraggableWidget.field_N.d(MembershipPromotionSupport.field_b * GrowableIntList.field_b / 64);
         }
         if (guard == 32471) {
           return;

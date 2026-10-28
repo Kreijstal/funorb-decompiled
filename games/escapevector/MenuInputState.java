@@ -89,7 +89,7 @@ final class MenuInputState {
     final void updateVerticalList(int guard, int left, int top, int rowHeight, int right) {
         if (guard == 0) {
           int var6 = this.hitVerticalList((byte) 113, top, GzipDecoder.field_d, rowHeight, right, UiContainer.field_y, left);
-          int var7 = this.hitVerticalList((byte) 124, top, sf.field_c, rowHeight, right, LoginDialog.field_ob, left);
+          int var7 = this.hitVerticalList((byte) 124, top, SessionCounterState.field_c, rowHeight, right, LoginDialog.field_ob, left);
           this.updatePointer(var7, (byte) 118, var6);
           return;
         }
@@ -195,12 +195,12 @@ final class MenuInputState {
     final static void loadCommonUiAssets(int guard, ResourceArchive legacyArchive, ResourceArchive spriteArchive, ResourceArchive fontArchive) {
         int var9 = 0;
         int var13 = EscapeVector.obfuscationControl;
-        SecondaryNodeHashTable.field_a = kh.a(spriteArchive, (byte) 126, "commonui", "frame_top");
-        AccountPayloadSupport.field_d = kh.a(spriteArchive, (byte) -114, "commonui", "frame_bottom");
-        ProgressRecord.field_j = fe.a("commonui", spriteArchive, "jagex_logo_grey", true);
-        LoginCredentialType.field_f = kh.a(spriteArchive, (byte) -81, "commonui", "button");
+        SecondaryNodeHashTable.field_a = SpriteArchiveSupport.loadNamedSprites(spriteArchive, (byte) 126, "commonui", "frame_top");
+        AccountPayloadSupport.field_d = SpriteArchiveSupport.loadNamedSprites(spriteArchive, (byte) -114, "commonui", "frame_bottom");
+        ProgressRecord.field_j = MembershipPromotionScreen.loadNamedSprite("commonui", spriteArchive, "jagex_logo_grey", true);
+        LoginCredentialType.field_f = SpriteArchiveSupport.loadNamedSprites(spriteArchive, (byte) -81, "commonui", "button");
         EditableTextWidget.field_E = MeshMaterial.loadSpritesByName("validation", spriteArchive, "commonui", (byte) 77);
-        ke.field_c = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo12", -110, spriteArchive, "commonui", fontArchive));
+        LegacyMenuFontSupport.field_c = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo12", -110, spriteArchive, "commonui", fontArchive));
         Js5Transport.field_a = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo14", -124, spriteArchive, "commonui", fontArchive));
         RasterRestoreSupport.field_b = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo14bold", -93, spriteArchive, "commonui", fontArchive));
         Sprite var17 = new Sprite(legacyArchive.getNamedFile(-4, "", "button.gif"), (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));

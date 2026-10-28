@@ -489,7 +489,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (text == null) {
           return 0;
         }
-        ri.a(0, ' ', wrapBuffer, (byte) 56);
+        DisplayAndRatingSupport.resizeAndPad(0, ' ', wrapBuffer, (byte) 56);
         int var4 = 0;
         int var5 = 0;
         int var6 = -1;

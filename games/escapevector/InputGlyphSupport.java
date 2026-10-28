@@ -37,7 +37,7 @@ final class InputGlyphSupport {
           }
           for (int var5 = 0; var5 < var11.length; var5++) {
             int var6 = var11[var5];
-            if (ml.a((char) var6, 21654)) {
+            if (TrackerMusicLoader.isAccountCharacter((char) var6, 21654)) {
               int var7 = font.charAdvance((char) var6);
               if (var3 < var7) {
                 var3 = var7;
@@ -49,19 +49,19 @@ final class InputGlyphSupport {
           for (int var5Lifetime1 = 0; var4_ref_char__Lifetime1.length > var5Lifetime1; var5Lifetime1++) {
             int var6Lifetime1 = var4_ref_char__Lifetime1[var5Lifetime1];
             int var7Lifetime1 = font.charAdvance((char) var6Lifetime1);
-            if (ml.a((char) var6Lifetime1, 21654) &&
+            if (TrackerMusicLoader.isAccountCharacter((char) var6Lifetime1, 21654) &&
               var7Lifetime1 > var3) {
               var2_int = var6Lifetime1;
               var3 = var7Lifetime1;
             }
           }
-          int var4 = StrongCacheEntry.widestAllowedGlyph((byte) -89, ModalPanel.field_R[0], font, uj.field_f[0]);
+          int var4 = StrongCacheEntry.widestAllowedGlyph((byte) -89, ModalPanel.field_R[0], font, SharedSpriteAssets.field_f[0]);
           int var5Lifetime2 = font.charAdvance((char) var4);
           if (var5Lifetime2 > var3) {
             var3 = var5Lifetime2;
             var2_int = var4;
           }
-          int var4Lifetime1 = StrongCacheEntry.widestAllowedGlyph((byte) -63, ModalPanel.field_R[1], font, uj.field_f[1]);
+          int var4Lifetime1 = StrongCacheEntry.widestAllowedGlyph((byte) -63, ModalPanel.field_R[1], font, SharedSpriteAssets.field_f[1]);
           int var5Lifetime3 = font.charAdvance((char) var4Lifetime1);
           if (var5Lifetime3 > var3) {
             var3 = var5Lifetime3;

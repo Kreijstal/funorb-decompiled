@@ -36,7 +36,7 @@ class LegacyStyleNode extends DualLinkNode {
             }
             String var3 = email.substring(0, var2_int);
             String var4 = email.substring(1 + var2_int);
-            EmailValidationError var5 = sf.a(var3, (byte) 119);
+            EmailValidationError var5 = SessionCounterState.validateEmailLocalPart(var3, (byte) 119);
             if (var5 != null) {
               EmailValidationError stackIn_12_0 = var5;
               return stackIn_12_0;

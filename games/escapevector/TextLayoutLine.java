@@ -57,7 +57,7 @@ final class TextLayoutLine {
           }
           Sprite[] var3 = NodeHashTableIterator.field_b[param1];
           if (var2_int) {
-            var3 = v.field_a;
+            var3 = ServerListNavigationSupport.field_a;
           }
           if (param0 != 1) {
             TextLayoutLine.releaseStatics(98);

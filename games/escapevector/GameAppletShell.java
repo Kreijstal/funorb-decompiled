@@ -44,7 +44,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               DropTargetWidget.field_G = param4;
               StatefulTextPainter.field_r = this;
               Js5NetworkRequest.field_D = 0;
-              pb.field_b = 0;
+              MenuTitleRenderSupport.field_b = 0;
               UiTheme.field_n = param0;
               IntrusiveNode.field_c = PointCloudEffect.activeApplet((byte) -109);
               SystemTaskService dupTemp$1 = new SystemTaskService(param5, param6, param1, true);
@@ -375,7 +375,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     var2.startsWith("1.6.0_")) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_66_0 = on.a(var2.charAt(var3), false);
+                      stackIn_66_0 = IntroAudioSupport.isAsciiDigit(var2.charAt(var3), false);
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -461,7 +461,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    Js5NetworkRequest.field_z = IntrusiveNodeHashTable.field_f.waitAndAdvance(sn.field_d, 97);
+                    Js5NetworkRequest.field_z = IntrusiveNodeHashTable.field_f.waitAndAdvance(LoginText.field_d, 97);
                     stackIn_98_0 = 0;
                   }
                   var3 = stackIn_98_0;
@@ -517,12 +517,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             if (null != PathPoint.field_i &&
               null == PathPoint.field_f) {
               java.awt.Insets var6_ref_java_awt_Insets = PathPoint.field_i.getInsets();
-              SpriteDecodeSupport.field_d.setLocation(var6_ref_java_awt_Insets.left + pb.field_b, Js5NetworkRequest.field_D + var6_ref_java_awt_Insets.top);
+              SpriteDecodeSupport.field_d.setLocation(var6_ref_java_awt_Insets.left + MenuTitleRenderSupport.field_b, Js5NetworkRequest.field_D + var6_ref_java_awt_Insets.top);
               if (EscapeVector.obfuscationControl != 0) {
-                SpriteDecodeSupport.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
+                SpriteDecodeSupport.field_d.setLocation(MenuTitleRenderSupport.field_b, Js5NetworkRequest.field_D);
               }
             } else {
-              SpriteDecodeSupport.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
+              SpriteDecodeSupport.field_d.setLocation(MenuTitleRenderSupport.field_b, Js5NetworkRequest.field_D);
             }
           }
           this.renderClient((byte) 26);
@@ -763,12 +763,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           SpriteDecodeSupport.field_d.setVisible(true);
           if (var3 == PathPoint.field_i) {
             java.awt.Insets var4 = PathPoint.field_i.getInsets();
-            SpriteDecodeSupport.field_d.setLocation(var4.left + pb.field_b, var4.top + Js5NetworkRequest.field_D);
+            SpriteDecodeSupport.field_d.setLocation(var4.left + MenuTitleRenderSupport.field_b, var4.top + Js5NetworkRequest.field_D);
             if (var5 != 0) {
-              SpriteDecodeSupport.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
+              SpriteDecodeSupport.field_d.setLocation(MenuTitleRenderSupport.field_b, Js5NetworkRequest.field_D);
             }
           } else {
-            SpriteDecodeSupport.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
+            SpriteDecodeSupport.field_d.setLocation(MenuTitleRenderSupport.field_b, Js5NetworkRequest.field_D);
           }
           SpriteDecodeSupport.field_d.addFocusListener((java.awt.event.FocusListener) (this));
           SpriteDecodeSupport.field_d.requestFocus();
@@ -794,7 +794,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param1 != 27672) {
             GameAppletShell.a(31, -73, -54, 36, 120, -37, -8, -46, 86, 6, -127);
           }
-          int stackIn_4_0 = wk.a(true, param0, param2, 97);
+          int stackIn_4_0 = IntegerParseSupport.parseInt(true, param0, param2, 97);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

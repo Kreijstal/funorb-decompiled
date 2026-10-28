@@ -82,6 +82,6 @@ final class IntKeyLookup {
     }
 
     static {
-        id.a(400, 50);
+        IntroRasterSupport.configureIntroScale(400, 50);
     }
 }

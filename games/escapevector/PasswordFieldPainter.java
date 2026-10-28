@@ -22,7 +22,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
             CharSequence var4 = (CharSequence) null;
             PasswordFieldPainter.countCharacter((CharSequence) null, 116, 'ﾤ');
           }
-          String stackIn_3_0 = kh.a(component.text.length(), '*', (byte) 53);
+          String stackIn_3_0 = SpriteArchiveSupport.repeatCharacter(component.text.length(), '*', (byte) 53);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,49 +164,49 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
             field_t = (int[]) null;
           }
           try {
-            if (ke.field_b == 0) {
-              ArchiveLoadTask.field_g = IntPoint.field_d.a(AgeValidator.field_n, 4, kh.field_c);
-              ke.field_b = ke.field_b + 1;
+            if (LegacyMenuFontSupport.field_b == 0) {
+              ArchiveLoadTask.field_g = IntPoint.field_d.a(AgeValidator.field_n, 4, SpriteArchiveSupport.field_c);
+              LegacyMenuFontSupport.field_b = LegacyMenuFontSupport.field_b + 1;
             }
-            if (ke.field_b == 1) {
+            if (LegacyMenuFontSupport.field_b == 1) {
               if (2 == ArchiveLoadTask.field_g.field_f) {
                 int stackIn_15_0 = AnimatedPanelFrame.handleAccountConnectionFailure((byte) -78, -1);
                 return stackIn_15_0;
               }
               if (1 == ArchiveLoadTask.field_g.field_f) {
-                ke.field_b = ke.field_b + 1;
+                LegacyMenuFontSupport.field_b = LegacyMenuFontSupport.field_b + 1;
               }
             }
-            if (ke.field_b == 2) {
+            if (LegacyMenuFontSupport.field_b == 2) {
               NameSuggestionsPanel.field_I = new BufferedSocket((java.net.Socket) (ArchiveLoadTask.field_g.field_b), IntPoint.field_d);
               PacketBuffer var2 = new PacketBuffer(13);
               MenuInputState.writeAccountHandshake(TrackerMusicDefinition.field_j, StatefulTextPainter.field_y, true, NameSuggestionsPanel.field_N, var2);
               var2.writeByte(15, -123);
               var2.writeInt((byte) 123, ReflectionCheck.field_n);
               NameSuggestionsPanel.field_I.write(13, 0, var2.payload, 5000);
-              ke.field_b = ke.field_b + 1;
+              LegacyMenuFontSupport.field_b = LegacyMenuFontSupport.field_b + 1;
               BoundedRandomAccessFile.field_g = 30000L + MonotonicClockSupport.monotonicMillis(128);
             }
-            if (ke.field_b == 3) {
+            if (LegacyMenuFontSupport.field_b == 3) {
               if (!(NameSuggestionsPanel.field_I.available(-117) <= 0)) {
                 int var1_int = NameSuggestionsPanel.field_I.readUnsignedByte(-16650);
                 if (var1_int != 0) {
                   int stackIn_27_0 = AnimatedPanelFrame.handleAccountConnectionFailure((byte) -78, var1_int);
                   return stackIn_27_0;
                 }
-                ke.field_b = ke.field_b + 1;
+                LegacyMenuFontSupport.field_b = LegacyMenuFontSupport.field_b + 1;
               } else if (MonotonicClockSupport.monotonicMillis(128) > BoundedRandomAccessFile.field_g) {
                 int stackIn_32_0 = AnimatedPanelFrame.handleAccountConnectionFailure((byte) -78, -2);
                 return stackIn_32_0;
               }
             }
-            if (4 != ke.field_b) {
+            if (4 != LegacyMenuFontSupport.field_b) {
               int stackIn_37_0 = -1;
               return stackIn_37_0;
             }
             SelfDestructEffects.field_j.attachConnection(NameSuggestionsPanel.field_I, PointCloudEffect.field_t, (byte) -99);
             ArchiveLoadTask.field_g = null;
-            ke.field_b = 0;
+            LegacyMenuFontSupport.field_b = 0;
             NameSuggestionsPanel.field_I = null;
             int stackIn_35_0 = 0;
             return stackIn_35_0;

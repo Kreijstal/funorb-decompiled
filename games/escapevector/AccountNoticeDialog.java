@@ -85,7 +85,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               this.height = this.height + 10;
               var3 = LegacyWidgetStyle.field_K;
               if (ModalStack.a(false)) {
-                var3 = e.field_b;
+                var3 = RegistrationFlowSupport.field_b;
                 this.height = this.height + 20;
               }
             } else {
@@ -100,7 +100,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           var4.height = 80;
           var4.width = this.width;
           var4.x = 0;
-          var4.painter = (WidgetPainter) ((Object) new TextWidgetPainter(ke.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.painter = (WidgetPainter) ((Object) new TextWidgetPainter(LegacyMenuFontSupport.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, false);
           this.closeButton = this.appendButton(-1, TextFieldValidator.field_k, (UiListener) (this));
           return;

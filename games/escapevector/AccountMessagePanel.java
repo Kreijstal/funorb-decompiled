@@ -17,7 +17,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         if (!guard) {
           field_M = (Sprite[][]) null;
         }
-        sn.field_d = 1000000000L / (long)ticksPerSecond;
+        LoginText.field_d = 1000000000L / (long)ticksPerSecond;
     }
 
     public static void releaseStatics(int guard) {
@@ -151,15 +151,15 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
 
     final static void drawUnevenFrame(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param3 >= 0 &&
-          mh.frameOffsets[param3 * 8] == 0) {
-          mh.frameOffsets[param3 * 8] = (int)(Math.random() * (double)(param1 + (10 - param6)) * 0.06) + 2;
-          mh.frameOffsets[1 + param3 * 8] = 2 + (int)((double)(param1 + 10 - param6) * Math.random() * 0.06) + mh.frameOffsets[8 * param3];
-          mh.frameOffsets[2 + 8 * param3] = (int)(0.06 * ((double)(param1 + (10 - param6)) * Math.random())) + 2;
-          mh.frameOffsets[3 + param3 * 8] = (int)((double)(-param6 + param1 + 10) * Math.random() * 0.06) + (2 + mh.frameOffsets[8 * param3 + 2]);
-          mh.frameOffsets[8 * param3 + 4] = (int)(Math.random() * (double)(-param4 + (param7 + 10)) * 0.06) + 2;
-          mh.frameOffsets[8 * param3 + 5] = (int)(Math.random() * (double)(10 + param7 - param4) * 0.06) + 2 + mh.frameOffsets[4 + param3 * 8];
-          mh.frameOffsets[6 + param3 * 8] = 2 + (int)((double)(-param4 + (param7 + 10)) * Math.random() * 0.06);
-          mh.frameOffsets[param3 * 8 + 7] = (int)((double)(-param4 + 10 + param7) * Math.random() * 0.06) + (2 + mh.frameOffsets[6 + 8 * param3]);
+          LoginIdentifierSupport.frameOffsets[param3 * 8] == 0) {
+          LoginIdentifierSupport.frameOffsets[param3 * 8] = (int)(Math.random() * (double)(param1 + (10 - param6)) * 0.06) + 2;
+          LoginIdentifierSupport.frameOffsets[1 + param3 * 8] = 2 + (int)((double)(param1 + 10 - param6) * Math.random() * 0.06) + LoginIdentifierSupport.frameOffsets[8 * param3];
+          LoginIdentifierSupport.frameOffsets[2 + 8 * param3] = (int)(0.06 * ((double)(param1 + (10 - param6)) * Math.random())) + 2;
+          LoginIdentifierSupport.frameOffsets[3 + param3 * 8] = (int)((double)(-param6 + param1 + 10) * Math.random() * 0.06) + (2 + LoginIdentifierSupport.frameOffsets[8 * param3 + 2]);
+          LoginIdentifierSupport.frameOffsets[8 * param3 + 4] = (int)(Math.random() * (double)(-param4 + (param7 + 10)) * 0.06) + 2;
+          LoginIdentifierSupport.frameOffsets[8 * param3 + 5] = (int)(Math.random() * (double)(10 + param7 - param4) * 0.06) + 2 + LoginIdentifierSupport.frameOffsets[4 + param3 * 8];
+          LoginIdentifierSupport.frameOffsets[6 + param3 * 8] = 2 + (int)((double)(-param4 + (param7 + 10)) * Math.random() * 0.06);
+          LoginIdentifierSupport.frameOffsets[param3 * 8 + 7] = (int)((double)(-param4 + 10 + param7) * Math.random() * 0.06) + (2 + LoginIdentifierSupport.frameOffsets[6 + 8 * param3]);
         }
         int var9 = 0;
         int var10 = 0;
@@ -170,14 +170,14 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         int var15 = 0;
         int var16 = 0;
         if (param3 >= 0) {
-          var15 = mh.frameOffsets[param3 * 8 + 6];
-          var13 = mh.frameOffsets[4 + 8 * param3];
-          var11 = mh.frameOffsets[8 * param3 + 2];
-          var10 = mh.frameOffsets[8 * param3 + 1];
-          var9 = mh.frameOffsets[param3 * 8];
-          var14 = mh.frameOffsets[param3 * 8 + 5];
-          var12 = mh.frameOffsets[3 + param3 * 8];
-          var16 = mh.frameOffsets[7 + 8 * param3];
+          var15 = LoginIdentifierSupport.frameOffsets[param3 * 8 + 6];
+          var13 = LoginIdentifierSupport.frameOffsets[4 + 8 * param3];
+          var11 = LoginIdentifierSupport.frameOffsets[8 * param3 + 2];
+          var10 = LoginIdentifierSupport.frameOffsets[8 * param3 + 1];
+          var9 = LoginIdentifierSupport.frameOffsets[param3 * 8];
+          var14 = LoginIdentifierSupport.frameOffsets[param3 * 8 + 5];
+          var12 = LoginIdentifierSupport.frameOffsets[3 + param3 * 8];
+          var16 = LoginIdentifierSupport.frameOffsets[7 + 8 * param3];
         }
         if (param3 == -2) {
           var11 = 8;

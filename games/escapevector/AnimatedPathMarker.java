@@ -100,7 +100,7 @@ final class AnimatedPathMarker {
           int var8 = sprites[1].fullWidth;
           sprites[0].drawShadedTint(x, y, tint);
           sprites[2].drawShadedTint(-var7 + (width + x), y, tint);
-          SoftwareRasterizer.saveClip(sf.field_m);
+          SoftwareRasterizer.saveClip(SessionCounterState.field_m);
           SoftwareRasterizer.intersectClip(var6_int + x, y, -var7 + width + x, sprites[1].fullHeight + y);
           int var9 = x + var6_int;
           int var10 = x + (width - var7);
@@ -110,7 +110,7 @@ final class AnimatedPathMarker {
             sprites[1].drawShadedTint(x, y, tint);
             x = x + var8;
           }
-          SoftwareRasterizer.restoreClip(sf.field_m);
+          SoftwareRasterizer.restoreClip(SessionCounterState.field_m);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qe.A(" + guard + ',' + y + ',' + width + ',' + (sprites != null ? "{...}" : "null") + ',' + tint + ',' + x + ')');
         }
@@ -243,8 +243,8 @@ final class AnimatedPathMarker {
     }
 
     final void draw(boolean alternateStyle, int guard) {
-        int var3 = !alternateStyle ? kh.field_b : Checkbox.field_E;
-        int var4 = mj.field_d;
+        int var3 = !alternateStyle ? SpriteArchiveSupport.field_b : Checkbox.field_E;
+        int var4 = LoginHandshakeSupport.field_d;
         if (this.startTick > var4) {
           return;
         }
@@ -272,10 +272,10 @@ final class AnimatedPathMarker {
               return 29;
             }
           }
-          if (!ii.field_a.ensureIndex(0)) {
+          if (!ChatSettingsSupport.field_a.ensureIndex(0)) {
             return 43;
           }
-          if (!ii.field_a.tryLoadNamedGroup(0, "commonui")) {
+          if (!ChatSettingsSupport.field_a.tryLoadNamedGroup(0, "commonui")) {
             return 57;
           }
           if (!LoadingProgressDialog.field_ab.ensureIndex(0)) {
@@ -291,10 +291,10 @@ final class AnimatedPathMarker {
             return 86;
           }
         } else {
-          if (!ii.field_a.ensureIndex(0)) {
+          if (!ChatSettingsSupport.field_a.ensureIndex(0)) {
             return 20;
           }
-          if (!ii.field_a.tryLoadNamedGroup(0, "commonui")) {
+          if (!ChatSettingsSupport.field_a.tryLoadNamedGroup(0, "commonui")) {
             return 40;
           }
           if (!LoadingProgressDialog.field_ab.ensureIndex(0)) {

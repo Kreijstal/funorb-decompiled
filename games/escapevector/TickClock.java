@@ -15,7 +15,7 @@ abstract class TickClock {
             return null;
           }
           if (SavedDataQuery.field_j < WidgetStyleLayer.field_d + NanoTickClock.field_l) {
-            return on.field_b;
+            return IntroAudioSupport.field_b;
           }
           return null;
         }
@@ -26,7 +26,7 @@ abstract class TickClock {
           return null;
         }
         if (SavedDataQuery.field_j < WidgetStyleLayer.field_d + NanoTickClock.field_l) {
-          return on.field_b;
+          return IntroAudioSupport.field_b;
         }
         return null;
     }
@@ -56,7 +56,7 @@ abstract class TickClock {
         if (param0 != 24) {
           TickClock.a((byte) 53);
           if (null != BoundedRandomAccessFile.activeSession) {
-            pc.field_d = 16777215;
+            ModeProgressSupport.field_d = 16777215;
             ValidatedTextWidget.field_X = 7899280;
             MenuTitleSupport.field_e = 12110032;
             Sprite[] var6 = (Sprite[]) null;
@@ -65,33 +65,33 @@ abstract class TickClock {
           } else {
             ValidatedTextWidget.field_X = 6340704;
             MenuTitleSupport.field_e = 10551200;
-            pc.field_d = 16777215;
+            ModeProgressSupport.field_d = 16777215;
             Sprite[] var4 = (Sprite[]) null;
             Sprite[] var3 = (Sprite[]) null;
             LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 300, param1);
           }
-          mj.field_d = 0;
+          LoginHandshakeSupport.field_d = 0;
           ChatMessage.clearFrameOffsets((byte) -71);
           return;
         }
         if (null != BoundedRandomAccessFile.activeSession) {
-          pc.field_d = 16777215;
+          ModeProgressSupport.field_d = 16777215;
           ValidatedTextWidget.field_X = 7899280;
           MenuTitleSupport.field_e = 12110032;
           Sprite[] var6Lifetime1 = (Sprite[]) null;
           Sprite[] var5Lifetime1 = (Sprite[]) null;
           LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 240, param1);
-          mj.field_d = 0;
+          LoginHandshakeSupport.field_d = 0;
           ChatMessage.clearFrameOffsets((byte) -71);
           return;
         }
         ValidatedTextWidget.field_X = 6340704;
         MenuTitleSupport.field_e = 10551200;
-        pc.field_d = 16777215;
+        ModeProgressSupport.field_d = 16777215;
         Sprite[] var4Lifetime1 = (Sprite[]) null;
         Sprite[] var3Lifetime1 = (Sprite[]) null;
         LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 300, param1);
-        mj.field_d = 0;
+        LoginHandshakeSupport.field_d = 0;
         ChatMessage.clearFrameOffsets((byte) -71);
         return;
     }

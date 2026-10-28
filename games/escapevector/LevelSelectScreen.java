@@ -28,7 +28,7 @@ final class LevelSelectScreen {
           if (guard) {
             this.update(-97);
           }
-          int var5_int = ua.field_c.progressKind(this.gameMode, 0);
+          int var5_int = GameProgressSupport.field_c.progressKind(this.gameMode, 0);
           if (var5_int == 0) {
             boolean stackIn_6_0 = !(levelIndex > unlockedLevel);
             boolean var6 = stackIn_6_0;
@@ -171,16 +171,16 @@ final class LevelSelectScreen {
           this.introTutorialButtons = (LegacyButton[]) null;
         }
         this.playSelectionSounds(6620);
-        if (!di.field_d.isInitialActivation((byte) -18)) {
+        if (!HighscorePlayerRecord.field_d.isInitialActivation((byte) -18)) {
           return false;
         }
-        int var3 = di.field_d.selectedIndex;
+        int var3 = HighscorePlayerRecord.field_d.selectedIndex;
         int var4 = SpriteFactorySupport.levelCount(false, this.gameMode);
         if (var3 >= 0 &&
           var4 > var3) {
-          int var5 = ua.field_c.progressKind(this.gameMode, 0);
+          int var5 = GameProgressSupport.field_c.progressKind(this.gameMode, 0);
           if (var5 == 0) {
-            int var6 = ua.field_c.unlockedLevelIndex(29386, this.gameMode);
+            int var6 = GameProgressSupport.field_c.unlockedLevelIndex(29386, this.gameMode);
             if (!this.isLevelAccessible(var6, var3, true)) {
               return false;
             }
@@ -202,7 +202,7 @@ final class LevelSelectScreen {
         if (var3 == this.loginAction &&
           AccountSessionSupport.isGuestSession(-107)) {
           GuestLoginSupport.beginAccountLogin(true);
-          mj.field_d = 0;
+          LoginHandshakeSupport.field_d = 0;
           ChatMessage.clearFrameOffsets((byte) -90);
           return true;
         }
@@ -215,7 +215,7 @@ final class LevelSelectScreen {
           return false;
         }
         LevelObject.a(this.gameMode, (byte) -128);
-        mj.field_d = 0;
+        LoginHandshakeSupport.field_d = 0;
         LaserGateSpan.field_k = 0;
         GameplaySession.resetSessionMenuState((byte) 30);
         return true;
@@ -229,7 +229,7 @@ final class LevelSelectScreen {
           if (buttons == null) {
             return;
           }
-          int var4 = di.field_d.selectedIndex;
+          int var4 = HighscorePlayerRecord.field_d.selectedIndex;
           LegacyButton[] var5 = buttons;
           for (int var6 = 0; var5.length > var6; var6++) {
             LegacyButton var7 = var5[var6];
@@ -254,7 +254,7 @@ final class LevelSelectScreen {
     }
 
     private final void captureSelectedLevel(byte guard) {
-        MenuInputState var2 = di.field_d;
+        MenuInputState var2 = HighscorePlayerRecord.field_d;
         if (var2 == null) {
           return;
         }
@@ -276,7 +276,7 @@ final class LevelSelectScreen {
         if (guard >= -16) {
           this.drawLevelButtons((byte) 50);
         }
-        int var3 = ua.field_c.progressKind(this.gameMode, 0);
+        int var3 = GameProgressSupport.field_c.progressKind(this.gameMode, 0);
         if (var3 == 0) {
           return null;
         }
@@ -375,13 +375,13 @@ final class LevelSelectScreen {
         int var8 = var3 + var24.height + var24.y;
         int var9 = 1;
         int var10 = 50;
-        int var11 = mj.field_d;
+        int var11 = LoginHandshakeSupport.field_d;
         int var12 = var11 >= var10 ? 0 : -var11 + var10;
         int var13 = 3170352;
         int var14 = 6340704;
         int var15 = -32 / ((12 - guard) / 63);
         AccountNoticeKind.drawAnimatedPanelFrame(var12, var5, var6, var8, true, 29788, false, var14, var13, var9, var7, true);
-        int var16 = di.field_d.selectedIndex;
+        int var16 = HighscorePlayerRecord.field_d.selectedIndex;
         LegacyButton[] var17 = this.levelButtons;
         for (int var18 = 0; var17.length > var18; var18++) {
           var19 = var17[var18];
@@ -437,14 +437,14 @@ final class LevelSelectScreen {
         if (!guard) {
           return true;
         }
-        int var4 = ua.field_c.progressKind(this.gameMode, 0);
+        int var4 = GameProgressSupport.field_c.progressKind(this.gameMode, 0);
         if (var4 == 0) {
           return levelIndex <= unlockedLevel ? true : false;
         }
         if (var4 != 1) {
           return false;
         }
-        int var5 = ua.field_c.levelStatus(true, this.gameMode, levelIndex);
+        int var5 = GameProgressSupport.field_c.levelStatus(true, this.gameMode, levelIndex);
         return LevelAvailabilitySupport.isAccessible((byte) 121, var5);
     }
 
@@ -458,13 +458,13 @@ final class LevelSelectScreen {
           if (guard != 9355) {
             return;
           }
-          int var5_int = mj.field_d;
+          int var5_int = LoginHandshakeSupport.field_d;
           LegacyButton[] var6 = buttons;
           for (int var7 = 0; var7 < var6.length; var7++) {
             LegacyButton var8 = var6[var7];
             int var9 = var8.revealUntilTick;
             if (var5_int == var9) {
-              this.playButtonSound(pc.field_a, 2, var8, volume, ratePercent);
+              this.playButtonSound(ModeProgressSupport.field_a, 2, var8, volume, ratePercent);
             }
           }
           return;
@@ -488,12 +488,12 @@ final class LevelSelectScreen {
         if (guard != 6620) {
           LevelSelectScreen.releaseStatics(-11);
         }
-        if (di.field_d.selectionChanged) {
+        if (HighscorePlayerRecord.field_d.selectionChanged) {
           Object var2 = ObjectSpriteSet.field_e;
           synchronized (var2) {
             int var3 = 1536 * IterableNodeHashTable.field_c / 64;
             int var4 = 100;
-            int var5 = di.field_d.selectedIndex;
+            int var5 = HighscorePlayerRecord.field_d.selectedIndex;
             this.playSelectedButtonSound(this.levelButtons, var3, var4, 3);
             this.playSelectedButtonSound(this.footerButtons, var3, var4, 3);
             int var4Lifetime1 = 102;
@@ -577,7 +577,7 @@ final class LevelSelectScreen {
         boolean var2 = (this.gameMode == 3);
         BinaryBitmapFont var3 = ByteStorage.gameFont;
         this.assignActionCodes(-30234);
-        int var4 = ua.field_c.unlockedLevelIndex(29386, this.gameMode);
+        int var4 = GameProgressSupport.field_c.unlockedLevelIndex(29386, this.gameMode);
         if (!var2) {
           this.pathMarkers = AccountNoticeDialog.c(10, var4, this.gameMode);
         }
@@ -603,18 +603,18 @@ final class LevelSelectScreen {
     final void draw(int guard) {
         SoftwareRasterizer.clearFramebuffer();
         SelfDestructEffects.b(guard ^ 1);
-        int var2 = mj.field_d < 50 ? -mj.field_d + 50 : 0;
+        int var2 = LoginHandshakeSupport.field_d < 50 ? -LoginHandshakeSupport.field_d + 50 : 0;
         if (null != this.background) {
           this.background.drawOpaque(3, 79);
         }
         this.drawPreview(0);
         LoginCredentialType.drawInsetUnevenFrame(404, 3162160, guard ^ 115, 0, 6324320, 76, guard, var2, 430);
         int var3 = SpriteFactorySupport.levelCount(false, this.gameMode);
-        int var4 = di.field_d.selectedIndex;
+        int var4 = HighscorePlayerRecord.field_d.selectedIndex;
         boolean var5 = true;
         if (var4 >= 0 &&
           var3 > var4) {
-          int var6 = ua.field_c.unlockedLevelIndex(guard + 29383, this.gameMode);
+          int var6 = GameProgressSupport.field_c.unlockedLevelIndex(guard + 29383, this.gameMode);
           var5 = (var4 <= var6);
         }
         this.drawButtons(this.introTutorialButtons, 104);
@@ -622,7 +622,7 @@ final class LevelSelectScreen {
         this.drawLevelButtons((byte) 120);
         this.drawPathMarkers(true, var4);
         this.drawLockedNotice(var3, (byte) -59, (var5));
-        pb.a(guard + 1);
+        MenuTitleRenderSupport.drawTitles(guard + 1);
     }
 
     private final void selectBackground(int guard) {
@@ -647,7 +647,7 @@ final class LevelSelectScreen {
           this.selectBackground(-66);
         }
         this.updateRevealEffects(0);
-        MenuInputState var6 = di.field_d;
+        MenuInputState var6 = HighscorePlayerRecord.field_d;
         int var3 = var6.selectedIndex;
         int var4 = SpriteFactorySupport.levelCount(false, this.gameMode);
         while (AccountRequestDialog.pollKeyEvent(-113)) {
@@ -723,7 +723,7 @@ final class LevelSelectScreen {
             return;
           }
         }
-        var6.updatePointer(this.hitTest(LoginDialog.field_ob, 12089, sf.field_c), (byte) 126, this.hitTest(UiContainer.field_y, 12089, GzipDecoder.field_d));
+        var6.updatePointer(this.hitTest(LoginDialog.field_ob, 12089, SessionCounterState.field_c), (byte) 126, this.hitTest(UiContainer.field_y, 12089, GzipDecoder.field_d));
         boolean discarded$0 = this.handleActivation(true, -89);
         this.captureSelectedLevel((byte) 86);
         this.tickPreview(guard ^ -2493);
@@ -788,7 +788,7 @@ final class LevelSelectScreen {
           int var14 = SpriteFactorySupport.levelCount(false, this.gameMode);
           int var15 = LabeledField.field_M[this.gameMode];
           this.levelButtons = new LegacyButton[-var15 + var14];
-          int var16 = ua.field_c.unlockedLevelIndex(29386, this.gameMode);
+          int var16 = GameProgressSupport.field_c.unlockedLevelIndex(29386, this.gameMode);
           int var17 = 0;
           int var18 = var15;
           while (var13 > var17) {
@@ -837,7 +837,7 @@ final class LevelSelectScreen {
 
     private final void updateRevealEffects(int guard) {
         int var11 = EscapeVector.obfuscationControl;
-        int var2 = mj.field_d;
+        int var2 = LoginHandshakeSupport.field_d;
         if (var2 == 0) {
           StringNode.playFrameAppearSound(8192, (byte) 51);
         }
@@ -862,8 +862,8 @@ final class LevelSelectScreen {
           }
         }
         SelfDestructEffects.field_s = true;
-        if (1000 > mj.field_d) {
-          mj.field_d = mj.field_d + 1;
+        if (1000 > LoginHandshakeSupport.field_d) {
+          LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
         }
     }
 
@@ -874,7 +874,7 @@ final class LevelSelectScreen {
           if (buttons == null) {
             return;
           }
-          int var5_int = di.field_d.selectedIndex;
+          int var5_int = HighscorePlayerRecord.field_d.selectedIndex;
           Object var6 = null;
           if (guard != 3) {
             this.configurePreviewMinimap(true);

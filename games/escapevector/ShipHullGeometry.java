@@ -96,7 +96,7 @@ final class ShipHullGeometry {
             }
             int var14Lifetime2 = stackIn_17_0;
             int var15 = param4 * var61[var13] + var62[var13] * param3 + param0 * var63[var13] >> 8;
-            int[] stackIn_19_0 = pb.field_c;
+            int[] stackIn_19_0 = MenuTitleRenderSupport.field_c;
             stackIn_20_1 = (var15 < 0) ? (-var15) : (var15);
             int var15Lifetime2 = stackIn_19_0[stackIn_20_1];
             var14Lifetime2 = (256 - var15Lifetime2) * var14Lifetime2 >>> 8;
@@ -136,11 +136,11 @@ final class ShipHullGeometry {
               stackIn_40_0 = null;
             }
             MeshMaterial var21 = stackIn_40_0;
-            int var22 = on.field_g[var15Lifetime1];
+            int var22 = IntroAudioSupport.field_g[var15Lifetime1];
             int var23 = DraggableWidget.field_D[var15Lifetime1];
-            int var24 = on.field_g[var16];
+            int var24 = IntroAudioSupport.field_g[var16];
             int var25 = DraggableWidget.field_D[var16];
-            int var26 = on.field_g[var17];
+            int var26 = IntroAudioSupport.field_g[var17];
             int var27 = DraggableWidget.field_D[var17];
             if (var19 == var18 &&
               var20 == var19) {
@@ -156,7 +156,7 @@ final class ShipHullGeometry {
               var32 = var30 & 65280;
               var33 = var32 * var28 >>> 8 & -805241088 | -2030108417 & var31 * var28 >>> 8;
               var33 = var33 + 65793 * var29;
-              rc.a(var26, var22, var27, var33 >> 1 & 8355711, true, var23, var24, var25);
+              CanvasRenderSupport.fillTriangle(var26, var22, var27, var33 >> 1 & 8355711, true, var23, var24, var25);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];

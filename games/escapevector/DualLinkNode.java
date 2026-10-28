@@ -31,7 +31,7 @@ class DualLinkNode extends IntrusiveNode {
         if (EmailAvailabilityValidator.field_o == MeshMaterial.field_b) {
           return SpriteStrip.field_j;
         }
-        if (!di.field_g.isComplete(param0)) {
+        if (!HighscorePlayerRecord.field_g.isComplete(param0)) {
           return SpriteStrip.field_j;
         }
         return StrongCacheEntry.field_v;
@@ -90,7 +90,7 @@ class DualLinkNode extends IntrusiveNode {
           StatefulTextPainter.field_y = param4;
           TrackerMusicDefinition.field_j = param5;
           ReflectionCheck.field_n = param6;
-          kh.field_c = param0;
+          SpriteArchiveSupport.field_c = param0;
           SelfDestructEffects.field_j = (Js5Transport) ((Object) new SocketJs5Transport());
           ShipHullGeometry.field_b = new DiskCacheWorker(param1);
           FullscreenFocusCanvas.field_e = new Js5ArchiveManager(SelfDestructEffects.field_j, ShipHullGeometry.field_b);

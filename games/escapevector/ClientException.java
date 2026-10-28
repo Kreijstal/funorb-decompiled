@@ -112,7 +112,7 @@ final class ClientException extends RuntimeException {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 Throwable decompiledCaughtException = decompiledCaughtParameter0;
                 IOException iOException = (IOException) (Object) decompiledCaughtException;
-                nm.a(16);
+                ConnectionSupport.closeTransport(16);
               }
               QuickChatDynamicCommand.outgoingPackets.position = 0;
             }

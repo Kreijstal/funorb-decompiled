@@ -92,10 +92,10 @@ final class Checkbox extends TextButton {
           DialWidgetPainter.detachKeyboardInput((byte) -58, (java.awt.Component) ((Object) canvas));
           int var2_int = 120 / ((guard - 54) / 57);
           SelfDestructEffects.a((java.awt.Component) ((Object) canvas), (byte) 9);
-          if (null == ji.field_b) {
+          if (null == ArchiveFactorySupport.field_b) {
             return;
           }
-          ji.field_b.detach(-5070, (java.awt.Component) ((Object) canvas));
+          ArchiveFactorySupport.field_b.detach(-5070, (java.awt.Component) ((Object) canvas));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,13 +135,13 @@ final class Checkbox extends TextButton {
             int var2_int = TextLayout.field_c.available(-124);
             if (var2_int <= 0) {
               if (0 > var2_int) {
-                nm.a(16);
+                ConnectionSupport.closeTransport(16);
                 return false;
               }
               if (PasswordFieldPainter.millisecondsSinceLastReceive(guard + 34655) <= 30000L) {
                 return false;
               }
-              nm.a(16);
+              ConnectionSupport.closeTransport(16);
               return false;
             }
             if (var2_int > requiredBytes - QuickChatDynamicCommand.incomingPackets.position) {
@@ -158,7 +158,7 @@ final class Checkbox extends TextButton {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             Throwable decompiledCaughtException = decompiledCaughtParameter0;
             IOException var2 = (IOException) (Object) decompiledCaughtException;
-            nm.a(16);
+            ConnectionSupport.closeTransport(16);
             return false;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

@@ -300,10 +300,10 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.nameField = new ValidatedTextWidget("", (UiListener) null, 12);
-        TextWidgetPainter var1 = new TextWidgetPainter(ke.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.maxAscent, -1, 2147483647, true);
+        TextWidgetPainter var1 = new TextWidgetPainter(LegacyMenuFontSupport.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.maxAscent, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(DebouncedValidator.field_a, var1, (UiListener) null);
         this.submitButton = new TextButton(TextFieldValidator.field_i, (UiListener) null);
-        this.cancelButton = new TextButton(cf.field_b, (UiListener) null);
+        this.cancelButton = new TextButton(MeshProjectionSupport.field_b, (UiListener) null);
         this.nameField.tooltip = ModalPanel.field_K;
         this.nameField.setValidator(new NameAvailabilityValidator(this.nameField), (byte) 63);
         this.submitButton.enabled = false;

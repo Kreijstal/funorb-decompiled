@@ -18,7 +18,7 @@ final class KeyboardStateSupport {
 
     final static void advanceSessionCounters(int guard) {
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.a((byte) -124);
+          SocketJs5Transport.field_r.advanceCounters((byte) -124);
           if (guard != 112) {
             KeyboardStateSupport.closeCacheServices(-21);
             return;
@@ -53,13 +53,13 @@ final class KeyboardStateSupport {
                 IOException var1 = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (bg.field_e == null) {
+            if (CampaignLoadingSupport.field_e == null) {
               return;
             }
-            for (int var1_int = 0; bg.field_e.length > var1_int; var1_int++) {
-              if (bg.field_e[var1_int] != null) {
+            for (int var1_int = 0; CampaignLoadingSupport.field_e.length > var1_int; var1_int++) {
+              if (CampaignLoadingSupport.field_e[var1_int] != null) {
                 try {
-                  bg.field_e[var1_int].a((byte) -111);
+                  CampaignLoadingSupport.field_e[var1_int].a((byte) -111);
                 } catch (java.io.IOException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   IOException var2 = (IOException) (Object) decompiledCaughtException;

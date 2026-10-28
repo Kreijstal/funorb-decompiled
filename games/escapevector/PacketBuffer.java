@@ -53,7 +53,7 @@ class PacketBuffer extends IntrusiveNode {
           int var3_int = text.length();
           if (1 <= var3_int &&
             var3_int <= 12) {
-            String var4 = sf.a(-93, text);
+            String var4 = SessionCounterState.normalizeAccountName(-93, text);
             if (var4 == null) {
               return false;
             }
@@ -570,7 +570,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = jd.a(param0, true);
+        this.payload = ByteArrayPoolSupport.acquire(param0, true);
     }
 
     private final void writeLong56(int guard, long value) {

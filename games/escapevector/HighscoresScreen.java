@@ -46,8 +46,8 @@ final class HighscoresScreen {
         LegacyWidgetStyle.field_N = null;
         CheckboxPainter.field_n = false;
         AlternateUsernameCredentials.field_q.updatePointerSelection(guard - 26357, pointerDriven);
-        di.field_d = null;
-        mj.field_d = 0;
+        HighscorePlayerRecord.field_d = null;
+        LoginHandshakeSupport.field_d = 0;
         if (guard != -123) {
           return;
         }
@@ -121,10 +121,10 @@ final class HighscoresScreen {
         for (int var3 = 0; var3 < ByteStorage.field_d.length; var3++) {
           int var4 = ByteStorage.field_d[var3];
           if (var4 == var2) {
-            if (var3 >= ti.field_a.length) {
+            if (var3 >= LegacyMenuThemeSupport.field_a.length) {
               return false;
             }
-            int var5 = ti.field_a[var3];
+            int var5 = LegacyMenuThemeSupport.field_a[var3];
             this.queryColumn = var5;
             return true;
           }
@@ -151,8 +151,8 @@ final class HighscoresScreen {
         if (var2 < 0) {
           return false;
         }
-        for (int var3 = 0; v.field_b.length > var3; var3++) {
-          int var4 = v.field_b[var3];
+        for (int var3 = 0; ServerListNavigationSupport.field_b.length > var3; var3++) {
+          int var4 = ServerListNavigationSupport.field_b[var3];
           if (var4 == var2) {
             if (var4 == this.categoryCode) {
               return false;
@@ -172,8 +172,8 @@ final class HighscoresScreen {
         if (guard > -60) {
           this.mainMenuButtons = (LegacyButton[]) null;
         }
-        while (var2 < v.field_b.length) {
-          int var3 = v.field_b[var2];
+        while (var2 < ServerListNavigationSupport.field_b.length) {
+          int var3 = ServerListNavigationSupport.field_b[var2];
           if (this.categoryCode == var3) {
             return var2;
           }
@@ -250,10 +250,10 @@ final class HighscoresScreen {
     private final int selectedRankingAction(int guard) {
         int var5 = EscapeVector.obfuscationControl;
         if (0 <= this.queryColumn &&
-          ti.field_a.length > this.queryColumn) {
+          LegacyMenuThemeSupport.field_a.length > this.queryColumn) {
           int var3 = -38 / ((29 - guard) / 43);
-          for (int var2 = 0; var2 < ti.field_a.length; var2++) {
-            if (this.queryColumn == ti.field_a[var2] &&
+          for (int var2 = 0; var2 < LegacyMenuThemeSupport.field_a.length; var2++) {
+            if (this.queryColumn == LegacyMenuThemeSupport.field_a[var2] &&
               ByteStorage.field_d.length >= var2) {
               int var4 = ByteStorage.field_d[var2];
               return var4;
@@ -268,7 +268,7 @@ final class HighscoresScreen {
         SoftwareRasterizer.clearFramebuffer();
         SelfDestructEffects.b(2);
         this.drawTableAndStatus(-1);
-        pb.a(4);
+        MenuTitleRenderSupport.drawTitles(4);
         if (guard) {
           return;
         }
@@ -297,7 +297,7 @@ final class HighscoresScreen {
     }
 
     private final int selectedActionCode(int guard) {
-        int var2 = di.field_d.selectedIndex;
+        int var2 = HighscorePlayerRecord.field_d.selectedIndex;
         if (var2 >= 0 &&
           var2 < this.actionCodes.length) {
           if (guard > -77) {
@@ -398,7 +398,7 @@ final class HighscoresScreen {
           String var4 = stackIn_3_0;
           int stackIn_6_0 = (AccountSessionSupport.isGuestSession(-104)) ? 10551200 : 6340704;
           int var5 = stackIn_6_0;
-          if (statusText == wk.field_f && (this.table == null ||
+          if (statusText == IntegerParseSupport.field_f && (this.table == null ||
             this.table.dataState != 0)) {
             this.table = new HighscoreTable(this.categoryCode, var3_int, this.showSubmittedScore);
             this.table.configureFooter(3, var4, var5);
@@ -438,7 +438,7 @@ final class HighscoresScreen {
     }
 
     private final void playSelectionSound(boolean guard) {
-        if (di.field_d.selectionChanged) {
+        if (HighscorePlayerRecord.field_d.selectionChanged) {
           LegacyButton var2 = this.selectedButton((byte) 82);
           int var3 = PasswordValidator.a(-122, var2);
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, var3);
@@ -450,7 +450,7 @@ final class HighscoresScreen {
 
     private final String nameColumnStatus(int guard) {
         int var13 = EscapeVector.obfuscationControl;
-        Object var2 = wk.field_f;
+        Object var2 = IntegerParseSupport.field_f;
         String var3 = SavedDataWrite.field_m;
         HighscoreQuery[] var4 = LegacyWidgetStyle.field_N;
         if (var4 != null &&
@@ -493,7 +493,7 @@ final class HighscoresScreen {
     }
 
     private final LegacyButton selectedButton(byte guard) {
-        int var2 = di.field_d.selectedIndex;
+        int var2 = HighscorePlayerRecord.field_d.selectedIndex;
         LegacyButton var3 = TetherHumStream.a(this.categoryButtons, var2, 0);
         if (var3 != null) {
           return var3;
@@ -518,10 +518,10 @@ final class HighscoresScreen {
         int var15 = EscapeVector.obfuscationControl;
         try {
           int var10 = -77 / ((guard - 78) / 43);
-          int[] var21 = ua.queryScoreValues(leftMode, true, leftColumn, leftQuery);
+          int[] var21 = GameProgressSupport.queryScoreValues(leftMode, true, leftColumn, leftQuery);
           int[] var17 = var21;
           int[] var8 = var17;
-          int[] var22 = ua.queryScoreValues(rightMode, true, rightColumn, rightQuery);
+          int[] var22 = GameProgressSupport.queryScoreValues(rightMode, true, rightColumn, rightQuery);
           int[] var18 = var22;
           int[] var9 = var18;
           int var11 = var21.length + var22.length;
@@ -570,7 +570,7 @@ final class HighscoresScreen {
     }
 
     private final void updateRevealEffects(int guard) {
-        if (mj.field_d == 0) {
+        if (LoginHandshakeSupport.field_d == 0) {
           StringNode.playFrameAppearSound(8192, (byte) 51);
         }
         IntValueNode.field_j = true;
@@ -578,28 +578,28 @@ final class HighscoresScreen {
           this.mainMenuButtons = (LegacyButton[]) null;
         }
         if (!AccountSessionSupport.isGuestSession(-122)) {
-          if (mj.field_d == 0) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 5120);
+          if (LoginHandshakeSupport.field_d == 0) {
+            ObjectSpriteSet.field_e.playSampleWithPan(ModeProgressSupport.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 5120);
           }
-          if (10 == mj.field_d) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
+          if (10 == LoginHandshakeSupport.field_d) {
+            ObjectSpriteSet.field_e.playSampleWithPan(ModeProgressSupport.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
           }
-          if (mj.field_d == 20) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * IterableNodeHashTable.field_c / 64, 11264);
+          if (LoginHandshakeSupport.field_d == 20) {
+            ObjectSpriteSet.field_e.playSampleWithPan(ModeProgressSupport.field_a, 100, 6144 * IterableNodeHashTable.field_c / 64, 11264);
           }
-          if (30 == mj.field_d) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
+          if (30 == LoginHandshakeSupport.field_d) {
+            ObjectSpriteSet.field_e.playSampleWithPan(ModeProgressSupport.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
           }
         } else {
-          if (mj.field_d == 0) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
+          if (LoginHandshakeSupport.field_d == 0) {
+            ObjectSpriteSet.field_e.playSampleWithPan(ModeProgressSupport.field_a, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
           }
-          if (mj.field_d == 10) {
-            ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
+          if (LoginHandshakeSupport.field_d == 10) {
+            ObjectSpriteSet.field_e.playSampleWithPan(ModeProgressSupport.field_a, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
           }
         }
-        if (mj.field_d < 1000) {
-          mj.field_d = mj.field_d + 1;
+        if (LoginHandshakeSupport.field_d < 1000) {
+          LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
         }
     }
 
@@ -626,7 +626,7 @@ final class HighscoresScreen {
         if (var3) {
           return (var3);
         }
-        di.field_d.updatePointer(this.hitTest(sf.field_c, -1, LoginDialog.field_ob), (byte) 120, this.hitTest(GzipDecoder.field_d, -1, UiContainer.field_y));
+        HighscorePlayerRecord.field_d.updatePointer(this.hitTest(SessionCounterState.field_c, -1, LoginDialog.field_ob), (byte) 120, this.hitTest(GzipDecoder.field_d, -1, UiContainer.field_y));
         this.playSelectionSound(false);
         boolean var3Lifetime1 = (this.handleActivation(true, Js5NetworkRequest.a((byte) 15, -1), (byte) 79));
         return (var3Lifetime1);
@@ -670,7 +670,7 @@ final class HighscoresScreen {
           return;
         }
         GuestLoginSupport.beginAccountLogin(true);
-        mj.field_d = 0;
+        LoginHandshakeSupport.field_d = 0;
         ChatMessage.clearFrameOffsets((byte) -94);
     }
 
@@ -789,11 +789,11 @@ final class HighscoresScreen {
         }
         boolean var2 = false;
         while (AccountRequestDialog.pollKeyEvent(-110)) {
-          di.field_d.handleKeyWithoutNavigation(127);
+          HighscorePlayerRecord.field_d.handleKeyWithoutNavigation(127);
           ArchiveLoadTask.cycleSelectionFromArrowKey(this.actionCodes, guard ^ 3);
           if (PasswordValidator.field_n == 13) {
             int var3 = this.actionIndex(1, 0);
-            di.field_d.selectFromKeyboard(false, var3);
+            HighscorePlayerRecord.field_d.selectFromKeyboard(false, var3);
           }
           boolean stackIn_10_0 = !(!this.handleActivation(false, Js5NetworkRequest.a((byte) 15, PasswordValidator.field_n), (byte) 96));
           var2 = stackIn_10_0;
@@ -814,7 +814,7 @@ final class HighscoresScreen {
             var10 = new int[]{5};
             var11 = new String[]{var12[0]};
           } else {
-            var10 = v.field_b;
+            var10 = ServerListNavigationSupport.field_b;
             var11 = var12;
           }
           int var13 = var10.length;
@@ -1036,7 +1036,7 @@ final class HighscoresScreen {
                 this.rankingButtons[0] != null) {
                 LegacyButton var16 = this.rankingButtons[0];
                 int var9 = var16.y + var16.height + var4;
-                int var10 = mj.field_d;
+                int var10 = LoginHandshakeSupport.field_d;
                 stackIn_15_0 = (var10 < 40) ? (40 - var10) : (0);
                 int var11 = stackIn_15_0;
                 int var12 = 0;
@@ -1143,14 +1143,14 @@ final class HighscoresScreen {
         }
         int var3 = this.selectedRankingAction(-74);
         int var4 = this.actionIndex(1, var3);
-        int var5 = di.field_d.selectedIndex;
+        int var5 = HighscorePlayerRecord.field_d.selectedIndex;
         HudMessage.a(this.categoryButtons, var2, var5, (byte) -55);
         HudMessage.a(this.rankingButtons, var4, var5, (byte) -114);
         HudMessage.a(this.mainMenuButtons, -1, var5, (byte) -97);
     }
 
     private final String queryStatusText(int start) {
-        String var2 = wk.field_f;
+        String var2 = IntegerParseSupport.field_f;
         HighscoreQuery[] var3 = LegacyWidgetStyle.field_N;
         if (AccountSessionSupport.isGuestSession(-123)) {
           return var2;
@@ -1173,7 +1173,7 @@ final class HighscoresScreen {
     }
 
     HighscoresScreen(boolean showSubmittedScore, int gameMode) {
-        this.rowBoardIdsByColumn = new int[ti.field_a.length][];
+        this.rowBoardIdsByColumn = new int[LegacyMenuThemeSupport.field_a.length][];
         this.showSubmittedScore = showSubmittedScore ? true : false;
         this.queryColumn = 0;
         this.selectInitialCategory(true, gameMode);

@@ -18,20 +18,20 @@ final class RatingQuery extends IntrusiveNode {
     }
 
     final static void e(int param0) {
-        if (mj.field_d == 0) {
+        if (LoginHandshakeSupport.field_d == 0) {
           StringNode.playFrameAppearSound(8192, (byte) 51);
         }
         IntValueNode.field_j = true;
         if (param0 != -46) {
           RatingQuery.e(-10);
         }
-        if (20 <= mj.field_d) {
+        if (20 <= LoginHandshakeSupport.field_d) {
           IntValueNode.field_j = false;
         }
-        if (mj.field_d < 1000) {
-          mj.field_d = mj.field_d + 1;
+        if (LoginHandshakeSupport.field_d < 1000) {
+          LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
         }
-        da.field_c.update((byte) -75);
+        SessionMenuSupport.field_c.update((byte) -75);
     }
 
     final static boolean a(int param0, byte param1, boolean param2, CharSequence param3) {

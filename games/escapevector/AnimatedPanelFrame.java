@@ -18,7 +18,7 @@ final class AnimatedPanelFrame {
     private boolean hasAccent;
 
     private final int remainingOpenTicks(int guard) {
-        int var2 = mj.field_d >= this.openDurationTicks ? 0 : -mj.field_d + this.openDurationTicks;
+        int var2 = LoginHandshakeSupport.field_d >= this.openDurationTicks ? 0 : -LoginHandshakeSupport.field_d + this.openDurationTicks;
         if (guard < -40) {
           return var2;
         }
@@ -29,7 +29,7 @@ final class AnimatedPanelFrame {
         int var3 = EscapeVector.obfuscationControl;
         ArchiveLoadTask.field_g = null;
         NameSuggestionsPanel.field_I = null;
-        ke.field_b = 0;
+        LegacyMenuFontSupport.field_b = 0;
         int var2 = AgeValidator.field_n;
         AgeValidator.field_n = SeekerPulseStream.field_l;
         SeekerPulseStream.field_l = var2;
@@ -211,16 +211,16 @@ final class AnimatedPanelFrame {
         String stackIn_21_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          if (null == ml.field_a) {
+          if (null == TrackerMusicLoader.field_a) {
             Object stackIn_3_0 = null;
             return (ContactEntry) (stackIn_3_0);
           }
           CharSequence var6 = (CharSequence) ((Object) name);
-          String var2 = sf.a(-104, var6);
+          String var2 = SessionCounterState.normalizeAccountName(-104, var6);
           if (var2 == null) {
             var2 = name;
           }
-          ContactEntry var3 = (ContactEntry) (ml.field_a.get(-82, (long)var2.hashCode()));
+          ContactEntry var3 = (ContactEntry) (TrackerMusicLoader.field_a.get(-82, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               int var4 = -98 / ((guard + 63) / 57);
@@ -228,12 +228,12 @@ final class AnimatedPanelFrame {
               return (ContactEntry) (stackIn_17_0);
             }
             CharSequence var7 = (CharSequence) ((Object) var3.displayName);
-            String var4_ref_String = sf.a(-75, var7);
+            String var4_ref_String = SessionCounterState.normalizeAccountName(-75, var7);
             if (var4_ref_String == null) {
               var4_ref_String = var3.displayName;
             }
             if (!var4_ref_String.equals(var2)) {
-              var3 = (ContactEntry) (ml.field_a.nextMatch((byte) -36));
+              var3 = (ContactEntry) (TrackerMusicLoader.field_a.nextMatch((byte) -36));
               continue;
             }
             break;

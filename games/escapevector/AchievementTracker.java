@@ -502,28 +502,28 @@ final class AchievementTracker {
 
     final static void loadTutorialSprites(ResourceArchive archive, int themeIndex) {
         int var2_int = themeIndex;
-        if (!archive.tryLoadNamedGroup(0, da.field_d[var2_int])) {
+        if (!archive.tryLoadNamedGroup(0, SessionMenuSupport.field_d[var2_int])) {
           return;
         }
         try {
-          ChatMessageDecoder.field_b[var2_int][0] = fe.a("tutorial", archive, "layer0", true);
-          uj.field_a = ChatMessageDecoder.field_b[var2_int][0];
-          ChatMessageDecoder.field_b[var2_int][2] = fe.a("tutorial", archive, "layer2", true);
-          UiTheme.field_e = fe.a("tutorial", archive, "edge_exit_left", true);
-          TrackerGainSupport.field_b = fe.a("tutorial", archive, "edge_exit_right", true);
-          EmailAvailabilityValidator.field_r = fe.a("tutorial", archive, "edge_inner_bottom", true);
-          BitCountSupport.field_e = fe.a("tutorial", archive, "edge_inner_bottom_left", true);
-          MarkerSlider.field_G = fe.a("tutorial", archive, "edge_inner_bottom_right", true);
-          PacketBuffer.field_l = fe.a("tutorial", archive, "edge_inner_left", true);
-          IntroFinalFrameSupport.field_a = fe.a("tutorial", archive, "edge_inner_right", true);
-          mj.field_f = fe.a("tutorial", archive, "edge_inner_top", true);
-          AccountRegistrationPanel.field_T = fe.a("tutorial", archive, "edge_inner_top_left", true);
-          GrowableIntList.field_h = fe.a("tutorial", archive, "edge_inner_top_right", true);
-          TrackerGainSupport.field_e = fe.a("tutorial", archive, "edge_outer", true);
-          NanoTickClock.field_d = fe.a("tutorial", archive, "exitbg", true);
-          CipherPacketBuffer.field_n = fe.a("tutorial", archive, "panel", true);
-          ArchiveSpriteLoader.field_a = fe.a("tutorial", archive, "platform", true);
-          EmailValidationError.field_a[var2_int] = fe.a("tutorial", archive, "texture", true);
+          ChatMessageDecoder.field_b[var2_int][0] = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "layer0", true);
+          SharedSpriteAssets.field_a = ChatMessageDecoder.field_b[var2_int][0];
+          ChatMessageDecoder.field_b[var2_int][2] = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "layer2", true);
+          UiTheme.field_e = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "edge_exit_left", true);
+          TrackerGainSupport.field_b = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "edge_exit_right", true);
+          EmailAvailabilityValidator.field_r = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "edge_inner_bottom", true);
+          BitCountSupport.field_e = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "edge_inner_bottom_left", true);
+          MarkerSlider.field_G = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "edge_inner_bottom_right", true);
+          PacketBuffer.field_l = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "edge_inner_left", true);
+          IntroFinalFrameSupport.field_a = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "edge_inner_right", true);
+          LoginHandshakeSupport.field_f = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "edge_inner_top", true);
+          AccountRegistrationPanel.field_T = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "edge_inner_top_left", true);
+          GrowableIntList.field_h = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "edge_inner_top_right", true);
+          TrackerGainSupport.field_e = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "edge_outer", true);
+          NanoTickClock.field_d = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "exitbg", true);
+          CipherPacketBuffer.field_n = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "panel", true);
+          ArchiveSpriteLoader.field_a = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "platform", true);
+          EmailValidationError.field_a[var2_int] = MembershipPromotionScreen.loadNamedSprite("tutorial", archive, "texture", true);
           WeightedLruCache.field_c[var2_int] = true;
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "en.PA(" + (archive != null ? "{...}" : "null") + ',' + themeIndex + ')');
@@ -760,7 +760,7 @@ final class AchievementTracker {
             } else if (var4 != LegacyMenuState.input.selectedIndex) {
               var5 = ValidatedTextWidget.field_X;
             } else {
-              var5 = pc.field_d;
+              var5 = ModeProgressSupport.field_d;
             }
             String var6 = Js5NetworkRequest.field_I[var3];
             if (2 == ArchiveIndex.field_j &&
@@ -813,15 +813,15 @@ final class AchievementTracker {
               }
               NineSliceFrame var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.draw(-fe.field_k + var8Lifetime1, var1_int, -96, var7Lifetime1 + (fe.field_k << 1), (field_k << 1) + ok.field_a);
+                var9.draw(-MembershipPromotionScreen.field_k + var8Lifetime1, var1_int, -96, var7Lifetime1 + (MembershipPromotionScreen.field_k << 1), (field_k << 1) + IntroFrameRenderer.field_a);
               }
               var1_int = var1_int + field_k;
             }
             if (0 <= var4) {
-              pb.field_e.drawLeft(var6, var8Lifetime1, var1_int + StatefulTextPainter.field_x, var5, -1);
-              var1_int = var1_int + (ok.field_a + (CheckboxPainter.field_s + field_k));
+              MenuTitleRenderSupport.field_e.drawLeft(var6, var8Lifetime1, var1_int + StatefulTextPainter.field_x, var5, -1);
+              var1_int = var1_int + (IntroFrameRenderer.field_a + (CheckboxPainter.field_s + field_k));
             } else {
-              nb.field_a.drawLeft(var6, var8Lifetime1, var1_int + StrongCacheEntry.field_t, var5, -1);
+              MembershipAssetSupport.field_a.drawLeft(var6, var8Lifetime1, var1_int + StrongCacheEntry.field_t, var5, -1);
               var1_int = var1_int + SpriteFactorySupport.field_b;
             }
           }

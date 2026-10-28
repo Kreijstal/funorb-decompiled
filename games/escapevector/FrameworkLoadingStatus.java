@@ -27,11 +27,11 @@ final class FrameworkLoadingStatus {
           }
           return HighscoreTable.field_g;
         }
-        if (!ii.field_a.ensureIndex(0)) {
+        if (!ChatSettingsSupport.field_a.ensureIndex(0)) {
           return TextFieldValidator.field_l;
         }
-        if (!ii.field_a.tryLoadNamedGroup(0, "commonui")) {
-          return DebouncedValidator.field_d + " - " + ii.field_a.namedGroupProgress("commonui", 0) + "%";
+        if (!ChatSettingsSupport.field_a.tryLoadNamedGroup(0, "commonui")) {
+          return DebouncedValidator.field_d + " - " + ChatSettingsSupport.field_a.namedGroupProgress("commonui", 0) + "%";
         }
         if (!LoadingProgressDialog.field_ab.ensureIndex(0)) {
           return CipherPacketBuffer.field_o;

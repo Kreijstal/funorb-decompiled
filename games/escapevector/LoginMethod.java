@@ -200,10 +200,10 @@ final class LoginMethod {
         try {
           int var3_int = 74 % ((param0 + 43) / 47);
           if (!param2) {
-            int stackIn_4_0 = nb.field_a.stringWidth(param1);
+            int stackIn_4_0 = MembershipAssetSupport.field_a.stringWidth(param1);
             return stackIn_4_0;
           }
-          int stackIn_2_0 = pb.field_e.stringWidth(param1);
+          int stackIn_2_0 = MenuTitleRenderSupport.field_e.stringWidth(param1);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -257,14 +257,14 @@ final class LoginMethod {
             int var7 = sprites[1].fullWidth;
             sprites[0].drawTransparent(x, y);
             sprites[2].drawTransparent(-var6 + x + width, y);
-            SoftwareRasterizer.saveClip(sf.field_m);
+            SoftwareRasterizer.saveClip(SessionCounterState.field_m);
             SoftwareRasterizer.intersectClip(var5_int + x, y, x - (-width + var6), sprites[1].fullHeight + y);
             int var8 = var5_int + x;
             int var9 = -var6 + (width + x);
             for (x = var8; x < var9; x = x + var7) {
               sprites[1].drawTransparent(x, y);
             }
-            SoftwareRasterizer.restoreClip(sf.field_m);
+            SoftwareRasterizer.restoreClip(SessionCounterState.field_m);
             return;
           }
           return;
@@ -289,7 +289,7 @@ final class LoginMethod {
             Sprite[] var4 = (Sprite[]) null;
             LoginMethod.drawThreeSlice(30, -124, true, (Sprite[]) null, -14);
           }
-          PointCloudEffect stackIn_3_0 = AchievementDefinition.createSpriteDebris((byte) -43, sf.objectExplosionSamples[param0.objectType], param0.y, param0.collisionSprite, param2, param0.x);
+          PointCloudEffect stackIn_3_0 = AchievementDefinition.createSpriteDebris((byte) -43, SessionCounterState.objectExplosionSamples[param0.objectType], param0.y, param0.collisionSprite, param2, param0.x);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

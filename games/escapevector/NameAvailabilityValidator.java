@@ -101,7 +101,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         String stackIn_19_2 = null;
         try {
           CharSequence var6 = (CharSequence) ((Object) text);
-          String var3 = ok.a(0, var6);
+          String var3 = IntroFrameRenderer.accountNameValidationMessage(0, var6);
           int var4 = 4 / ((guard - 10) / 51);
           if (var3 != null) {
             String stackIn_2_0 = var3;

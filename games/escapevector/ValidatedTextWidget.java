@@ -77,7 +77,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         if (this.tooltip == null) {
           return null;
         }
-        ri.a(UiContainer.field_y, GzipDecoder.field_d + this.width - this.field_W, (byte) -62);
+        DisplayAndRatingSupport.setPointerAnchor(UiContainer.field_y, GzipDecoder.field_d + this.width - this.field_W, (byte) -62);
         if (guard == 1) {
           return this.tooltip;
         }

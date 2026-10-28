@@ -65,9 +65,9 @@ final class SlidingSpriteTransition {
     final static int legacyMenuHeight(byte guard) {
         if (guard > -95) {
           SlidingSpriteTransition.releaseStatics((byte) -6);
-          return mh.legacyMenuHeight;
+          return LoginIdentifierSupport.legacyMenuHeight;
         }
-        return mh.legacyMenuHeight;
+        return LoginIdentifierSupport.legacyMenuHeight;
     }
 
     final boolean isComplete(byte guard) {

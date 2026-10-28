@@ -221,7 +221,7 @@ final class ModeProgress {
           if (guard != 16777215) {
             ModeProgress.releaseStatics(true);
           }
-          int stackIn_3_0 = wk.a(true, 10, text, 97);
+          int stackIn_3_0 = IntegerParseSupport.parseInt(true, 10, text, 97);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

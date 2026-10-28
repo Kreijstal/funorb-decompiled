@@ -768,7 +768,7 @@ final class Minimap {
     }
 
     private final void buildLegend(boolean guard) {
-        String var2 = sf.field_n;
+        String var2 = SessionCounterState.field_n;
         IntrusiveDeque var3 = new IntrusiveDeque();
         IntrusiveDeque var4 = new IntrusiveDeque();
         var3.addLast(-12328, new StringNode(PathPoint.field_d));

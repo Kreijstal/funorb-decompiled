@@ -56,7 +56,7 @@ final class AccountFormStage {
         for (int var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var3);
+        Sprite var4 = new Sprite(IntroAudioSupport.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var3);
         SpriteDecodeSupport.releaseSpriteSheet(false);
         if (guard < 98) {
           field_a = (int[]) null;

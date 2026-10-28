@@ -17,7 +17,7 @@ final class DelayedServerPacket extends IntrusiveNode {
                 Runtime var2 = Runtime.getRuntime();
                 Object[] var4 = (Object[]) null;
                 Long var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                ok.field_c = (int)(var3.longValue() / 1048576L) + 1;
+                IntroFrameRenderer.field_c = (int)(var3.longValue() / 1048576L) + 1;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 Throwable var2_ref = decompiledCaughtException;
@@ -49,11 +49,11 @@ final class DelayedServerPacket extends IntrusiveNode {
           while (4 > var3_int) {
             Sprite[] stackIn_6_0 = ChatMessageDecoder.field_b[theme];
             int stackIn_6_1 = var3_int;
-            String stackIn_6_2 = da.field_d[theme];
+            String stackIn_6_2 = SessionMenuSupport.field_d[theme];
             ResourceArchive stackIn_6_3 = (ResourceArchive) (archive);
             String stackIn_6_4 = "layer" + var3_int;
             boolean stackIn_7_5 = !(guard);
-            stackIn_6_0[stackIn_6_1] = fe.a(stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
+            stackIn_6_0[stackIn_6_1] = MembershipPromotionScreen.loadNamedSprite(stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
             var3_int++;
           }
           return;

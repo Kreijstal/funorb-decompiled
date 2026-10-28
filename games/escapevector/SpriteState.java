@@ -36,10 +36,10 @@ abstract class SpriteState extends DualLinkNode {
           DialWidget.field_K = LoginCredentials.heldMouseButton;
           GzipDecoder.field_d = IterableDualLinkDeque.pendingMouseX;
           UiContainer.field_y = AchievementGrantRule.pendingMouseY;
-          TextFieldValidator.field_h = ke.mouseInputChanged;
-          ke.mouseInputChanged = false;
+          TextFieldValidator.field_h = LegacyMenuFontSupport.mouseInputChanged;
+          LegacyMenuFontSupport.mouseInputChanged = false;
           AccountMessagePanel.field_N = SocketConnector.pendingClickButton;
-          sf.field_c = LoginCredentialType.pendingClickX;
+          SessionCounterState.field_c = LoginCredentialType.pendingClickX;
           LoginDialog.field_ob = PcmResampler.pendingClickY;
           if (guard != -3657) {
             SpriteState.b(30, 39);
@@ -61,14 +61,14 @@ abstract class SpriteState extends DualLinkNode {
     }
 
     final static void a(int param0, boolean param1) {
-        e.field_a = true;
-        da.field_b = new AchievementsScreen();
+        RegistrationFlowSupport.field_a = true;
+        SessionMenuSupport.field_b = new AchievementsScreen();
         int var2 = -121 / ((param0 + 63) / 34);
-        int var3 = da.field_b.actionCount((byte) -73);
-        di.field_d = new MenuInputState(var3);
-        int var4 = da.field_b.defaultActionId(5201);
-        int var5 = da.field_b.hitTest(-3, GzipDecoder.field_d, UiContainer.field_y);
-        di.field_d.initializeSelection(95, param1, var5, var4);
+        int var3 = SessionMenuSupport.field_b.actionCount((byte) -73);
+        HighscorePlayerRecord.field_d = new MenuInputState(var3);
+        int var4 = SessionMenuSupport.field_b.defaultActionId(5201);
+        int var5 = SessionMenuSupport.field_b.hitTest(-3, GzipDecoder.field_d, UiContainer.field_y);
+        HighscorePlayerRecord.field_d.initializeSelection(95, param1, var5, var4);
     }
 
     final void drawCenteredRotatedScaled(int centerX, byte guard, int scaleQ12, int angle65536, int centerY) {

@@ -21,7 +21,7 @@ final class SectorCacheStore {
           if (param0 <= 117) {
             SectorCacheStore.releaseStatics(true);
           }
-          mj.field_d = 0;
+          LoginHandshakeSupport.field_d = 0;
           GameplaySession.resetSessionMenuState((byte) -9);
           return;
         }
@@ -30,7 +30,7 @@ final class SectorCacheStore {
           if (param0 <= 117) {
             SectorCacheStore.releaseStatics(true);
           }
-          mj.field_d = 0;
+          LoginHandshakeSupport.field_d = 0;
           GameplaySession.resetSessionMenuState((byte) -9);
           return;
         }

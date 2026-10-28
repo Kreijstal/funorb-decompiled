@@ -209,12 +209,12 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String var2 = SingleChildContainer.a(AccountSessionSupport.field_b, -63, new String[]{this.j(66), this.k(3674)});
         int var3 = 20;
         var3 = var3 + this.a(170, this.field_I, AccountNoticeDialog.field_Z, var3, 100);
-        var3 = var3 + (this.a(20, this.field_R, 170, ri.field_a, 25, "", var3) + 5);
+        var3 = var3 + (this.a(20, this.field_R, 170, DisplayAndRatingSupport.field_a, 25, "", var3) + 5);
         var3 = var3 + this.a(170, this.field_Q, RegistrationRequestDialog.field_vb, var3, 100);
-        var3 = var3 + (this.a(170, mh.field_d, var3, this.field_U, DualLinkDequeIterator.field_a, 170) + 5);
+        var3 = var3 + (this.a(170, LoginIdentifierSupport.field_d, var3, this.field_U, DualLinkDequeIterator.field_a, 170) + 5);
         var3 = var3 + (5 + this.a(170, ValidationHelpWidget.field_J, var3, this.field_S, LevelSelectScreen.field_i, 170));
         var3 = var3 + this.a(IterableNodeHashTable.field_a, (byte) 123, var3, this.field_N, 170);
-        LabeledField var4 = new LabeledField(46, var3, -90 + this.width, 25, this.field_J, true, -120 + this.width, 5, ke.field_c, 11579568, ii.field_b);
+        LabeledField var4 = new LabeledField(46, var3, -90 + this.width, 25, this.field_J, true, -120 + this.width, 5, LegacyMenuFontSupport.field_c, 11579568, ChatSettingsSupport.field_b);
         this.addChild(var4, false);
         var3 = var3 + var4.height;
         TextWidgetPainter var5 = new TextWidgetPainter(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, Js5Transport.field_a.maxAscent, -1, 2147483647, true);
@@ -489,7 +489,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           var2 = Integer.parseInt(this.field_N.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return e.a(this, false, this.field_I.text, var2, this.field_Q.text, this.field_J.selected, this.field_S.text);
+        return RegistrationFlowSupport.beginRegistration(this, false, this.field_I.text, var2, this.field_Q.text, this.field_J.selected, this.field_S.text);
     }
 
     public final void onHotspotAction(int guard, TextHotspotWidget widget, int hotspotId, int buttonCode) {
@@ -531,7 +531,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           return;
         }
         if (null != SocketJs5Transport.field_r) {
-          SocketJs5Transport.field_r.b(-1, param0);
+          SocketJs5Transport.field_r.addOffset(-1, param0);
         }
     }
 

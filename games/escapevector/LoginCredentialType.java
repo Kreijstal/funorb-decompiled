@@ -106,7 +106,7 @@ final class LoginCredentialType {
             field_c = (String) null;
           }
           CharSequence var6 = (CharSequence) ((Object) name);
-          String var2 = sf.a(guard ^ 1499, var6);
+          String var2 = SessionCounterState.normalizeAccountName(guard ^ 1499, var6);
           if (var2 == null) {
             Object stackIn_12_0 = null;
             return (ContactEntry) (stackIn_12_0);
@@ -114,7 +114,7 @@ final class LoginCredentialType {
           ContactEntry var3 = (ContactEntry) (NameAvailabilityResultSupport.field_b.get(-76, (long)var2.hashCode()));
           while (var3 != null) {
             CharSequence var7 = (CharSequence) ((Object) var3.displayName);
-            String var4 = sf.a(-79, var7);
+            String var4 = SessionCounterState.normalizeAccountName(-79, var7);
             if (var4.equals(var2)) {
               ContactEntry stackIn_19_0 = var3;
               return stackIn_19_0;
@@ -140,12 +140,12 @@ final class LoginCredentialType {
         if (param0 != 0) {
           LoginCredentialType.releaseStatics(115);
           if (SocketJs5Transport.field_r != null) {
-            SocketJs5Transport.field_r.a((byte) -127);
+            SocketJs5Transport.field_r.advanceCounters((byte) -127);
           }
           return;
         }
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.a((byte) -127);
+          SocketJs5Transport.field_r.advanceCounters((byte) -127);
         }
     }
 

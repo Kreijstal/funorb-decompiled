@@ -60,28 +60,28 @@ final class MarkerSliderPainter implements WidgetPainter {
         }
     }
 
-    final static p a(int param0, ResourceArchive param1, ResourceArchive param2, int[] param3) {
+    final static SimulatorSpriteAssets a(int param0, ResourceArchive param1, ResourceArchive param2, int[] param3) {
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
         try {
           if (null == QuickChatDynamicCommand.field_e) {
-            kc.field_c = InstructionsScreen.createSpriteLoadTasks(0, TextLayoutLine.field_f, BitCountSupport.field_g, param1, 1, param3, InstructionsScreen.simulatorBackgroundNames);
+            MembershipPromotionSupport.field_c = InstructionsScreen.createSpriteLoadTasks(0, TextLayoutLine.field_f, BitCountSupport.field_g, param1, 1, param3, InstructionsScreen.simulatorBackgroundNames);
             int[] var6 = (int[]) null;
-            HudMessage.field_k = InstructionsScreen.createSpriteLoadTasks(0, ok.field_b, CipherPacketBuffer.field_q, param2, 0, (int[]) null, MarkerSlider.field_L);
+            HudMessage.field_k = InstructionsScreen.createSpriteLoadTasks(0, IntroFrameRenderer.field_b, CipherPacketBuffer.field_q, param2, 0, (int[]) null, MarkerSlider.field_L);
             EmailValidationError.field_b = new SpriteLoadTask(param1, NameAvailabilityResultSupport.field_e, Js5Transport.field_i, 1, SelfDestructEffects.field_n, param3);
-            QuickChatDynamicCommand.field_e = new p();
+            QuickChatDynamicCommand.field_e = new SimulatorSpriteAssets();
             Object stackIn_3_0 = null;
-            return (p) (stackIn_3_0);
+            return (SimulatorSpriteAssets) (stackIn_3_0);
           }
           if (param0 != 1) {
             String var5 = (String) null;
             MarkerSliderPainter.updateHoverText((byte) 82, (String) null);
           }
-          if (!QuickChatDynamicCommand.field_e.a(23389)) {
+          if (!QuickChatDynamicCommand.field_e.load(23389)) {
             return null;
           }
-          p stackIn_9_0 = QuickChatDynamicCommand.field_e;
+          SimulatorSpriteAssets stackIn_9_0 = QuickChatDynamicCommand.field_e;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,7 +119,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         if (param1 != 0) {
           return (ResourceArchive) null;
         }
-        return ji.a(param2, param0, false, param3, param4, (byte) 114);
+        return ArchiveFactorySupport.createArchive(param2, param0, false, param3, param4, (byte) 114);
     }
 
     final static void updateHoverText(byte guard, String text) {
@@ -127,17 +127,17 @@ final class MarkerSliderPainter implements WidgetPainter {
         String stackIn_44_2 = null;
         int var3 = EscapeVector.obfuscationControl;
         try {
-          if (-1 == bg.field_f &&
+          if (-1 == CampaignLoadingSupport.field_f &&
             ValidationIndicator.field_M == -1) {
             ValidationIndicator.field_M = UiContainer.field_y;
-            bg.field_f = GzipDecoder.field_d;
+            CampaignLoadingSupport.field_f = GzipDecoder.field_d;
           }
           boolean decompiledFrameRemainder0 = true;
           SavedDataQuery.field_j = SavedDataQuery.field_j + 1;
           if (text != null) {
-            decompiledFrameRemainder0 = !(text.equals(on.field_b));
+            decompiledFrameRemainder0 = !(text.equals(IntroAudioSupport.field_b));
           } else {
-            decompiledFrameRemainder0 = (on.field_b == null);
+            decompiledFrameRemainder0 = (IntroAudioSupport.field_b == null);
           }
           if (decompiledFrameRemainder0) {
             if (PasswordFieldPainter.field_u) {
@@ -157,7 +157,7 @@ final class MarkerSliderPainter implements WidgetPainter {
             } else {
               SavedDataQuery.field_j = WidgetStyleLayer.field_d;
             }
-            DraggableWidget.field_O = bg.field_f;
+            DraggableWidget.field_O = CampaignLoadingSupport.field_f;
             AchievementDefinition.field_g = ValidationIndicator.field_M;
             if (text != null) {
               PasswordFieldPainter.field_u = false;
@@ -165,13 +165,13 @@ final class MarkerSliderPainter implements WidgetPainter {
               PasswordFieldPainter.field_u = true;
             }
           }
-          on.field_b = text;
+          IntroAudioSupport.field_b = text;
           if (!PasswordFieldPainter.field_u &&
             SavedDataQuery.field_j < WidgetStyleLayer.field_d &&
             TextFieldValidator.field_h) {
             SavedDataQuery.field_j = 0;
             AchievementDefinition.field_g = ValidationIndicator.field_M;
-            DraggableWidget.field_O = bg.field_f;
+            DraggableWidget.field_O = CampaignLoadingSupport.field_f;
           }
           if (guard > -97) {
             MarkerSliderPainter.createArchive(-81, 8, false, 82, false);
@@ -181,7 +181,7 @@ final class MarkerSliderPainter implements WidgetPainter {
             PasswordFieldPainter.field_u = false;
             SavedDataQuery.field_j = 0;
           }
-          bg.field_f = -1;
+          CampaignLoadingSupport.field_f = -1;
           ValidationIndicator.field_M = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

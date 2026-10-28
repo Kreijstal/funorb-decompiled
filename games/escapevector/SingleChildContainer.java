@@ -230,7 +230,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             int var6_int = param0.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (on.a(param0.charAt(var5), false)) {
+                if (IntroAudioSupport.isAsciiDigit(param0.charAt(var5), false)) {
                   continue;
                 }
                 break;
@@ -263,7 +263,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               return stackIn_25_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (on.a(param0.charAt(var5Lifetime1), false)) {
+              if (IntroAudioSupport.isAsciiDigit(param0.charAt(var5Lifetime1), false)) {
                 continue;
               }
               break;

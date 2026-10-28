@@ -79,7 +79,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           if (QuickChatPhraseCache.field_e == 11) {
             NameAvailabilityResultSupport.loadingRenderHook((byte) 62);
           }
-          QuickChatPhraseDefinition.showLoadingProgress(AlternateUsernameCredentials.field_t, DelegatingCanvas.field_e, pb.field_d, (byte) 14);
+          QuickChatPhraseDefinition.showLoadingProgress(AlternateUsernameCredentials.field_t, DelegatingCanvas.field_e, MenuTitleRenderSupport.field_d, (byte) 14);
           SecondaryNodeHashTable.presentRaster(param0, param1, param1 - 1, 0);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ah.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

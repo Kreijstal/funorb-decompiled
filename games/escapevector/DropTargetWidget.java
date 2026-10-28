@@ -105,7 +105,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(41, "loginm2");
                 if (null != var2) {
-                  wk.field_a = RasterSnapshot.a(var2, 122);
+                  IntegerParseSupport.field_a = RasterSnapshot.a(var2, 122);
                 }
                 var2 = IntKeyLookup.a(42, "loginm1");
                 if (null != var2) {
@@ -141,7 +141,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(52, "create_ineligible");
                 if (null != var2) {
-                  mj.field_a = RasterSnapshot.a(var2, 119);
+                  LoginHandshakeSupport.field_a = RasterSnapshot.a(var2, 119);
                 }
                 var2 = IntKeyLookup.a(81, "usernameprompt");
                 if (null != var2) {
@@ -165,7 +165,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(114, "ticketing_oneunread");
                 if (var2 != null) {
-                  cf.field_a = RasterSnapshot.a(var2, 125);
+                  MeshProjectionSupport.field_a = RasterSnapshot.a(var2, 125);
                 }
                 var2 = IntKeyLookup.a(84, "ticketing_xunread");
                 if (var2 != null) {
@@ -1065,7 +1065,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(56, "cancel");
                 if (null != var2) {
-                  cf.field_b = RasterSnapshot.a(var2, 124);
+                  MeshProjectionSupport.field_b = RasterSnapshot.a(var2, 124);
                 }
                 var2 = IntKeyLookup.a(85, "pleaselogintoplay");
                 if (null != var2) {
@@ -1149,7 +1149,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(60, "logging_in");
                 if (var2 != null) {
-                  mm.field_a = RasterSnapshot.a(var2, 112);
+                  ThemeAssetSupport.field_a = RasterSnapshot.a(var2, 112);
                 }
                 var2 = IntKeyLookup.a(53, "reconnect");
                 if (null != var2) {
@@ -1454,7 +1454,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(32, "create_createanaccount");
                 if (var2 != null) {
-                  pc.field_g = RasterSnapshot.a(var2, 111);
+                  ModeProgressSupport.field_g = RasterSnapshot.a(var2, 111);
                 }
                 var2 = IntKeyLookup.a(87, "create_username");
                 if (var2 != null) {
@@ -1470,7 +1470,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(74, "create_password_confirm");
                 if (null != var2) {
-                  mh.field_d = RasterSnapshot.a(var2, 114);
+                  LoginIdentifierSupport.field_d = RasterSnapshot.a(var2, 114);
                 }
                 var2 = IntKeyLookup.a(14, "create_email");
                 if (null != var2) {
@@ -1478,7 +1478,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(57, "create_email_confirm");
                 if (null != var2) {
-                  ri.field_a = RasterSnapshot.a(var2, 120);
+                  DisplayAndRatingSupport.field_a = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(108, "create_age");
                 if (null != var2) {
@@ -1514,7 +1514,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(90, "create_more_suggestions");
                 if (var2 != null) {
-                  uj.field_c = RasterSnapshot.a(var2, 127);
+                  SharedSpriteAssets.field_c = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(123, "create_select_alternative");
                 if (null != var2) {
@@ -1522,7 +1522,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(94, "create_optin_news");
                 if (var2 != null) {
-                  ii.field_b = RasterSnapshot.a(var2, 113);
+                  ChatSettingsSupport.field_b = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(73, "create_agreeterms");
                 if (null != var2) {
@@ -1530,7 +1530,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(81, "create_u13terms");
                 if (var2 != null) {
-                  mh.field_c = RasterSnapshot.a(var2, 117);
+                  LoginIdentifierSupport.field_c = RasterSnapshot.a(var2, 117);
                 }
                 var2 = IntKeyLookup.a(16, "login_username_email");
                 if (var2 != null) {
@@ -1558,7 +1558,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(31, "login_create_tooltip");
                 if (null != var2) {
-                  mm.field_c = RasterSnapshot.a(var2, 124);
+                  ThemeAssetSupport.field_c = RasterSnapshot.a(var2, 124);
                 }
                 var2 = IntKeyLookup.a(79, "login_justplay_tooltip");
                 if (null != var2) {
@@ -1682,7 +1682,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(18, "create_alert_passcontainsemail");
                 if (null != var2) {
-                  bg.field_b = RasterSnapshot.a(var2, 118);
+                  CampaignLoadingSupport.field_b = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(109, "create_alert_passcontainsname_partial");
                 if (null != var2) {
@@ -1718,7 +1718,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(91, "create_passwordvalid");
                 if (null != var2) {
-                  ml.field_b = RasterSnapshot.a(var2, 114);
+                  TrackerMusicLoader.field_b = RasterSnapshot.a(var2, 114);
                 }
                 var2 = IntKeyLookup.a(76, "create_emailvalid");
                 if (null != var2) {
@@ -1978,7 +1978,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(111, "achievements");
                 if (var2 != null) {
-                  da.field_a = RasterSnapshot.a(var2, 127);
+                  SessionMenuSupport.field_a = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(31, "achievementsthisgame");
                 if (var2 != null) {
@@ -2094,7 +2094,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(42, "off");
                 if (var2 != null) {
-                  nb.field_d = RasterSnapshot.a(var2, 119);
+                  MembershipAssetSupport.field_d = RasterSnapshot.a(var2, 119);
                 }
                 var2 = IntKeyLookup.a(69, "previous");
                 if (var2 != null) {
@@ -2224,7 +2224,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(89, "currentobjective");
                 if (var2 != null) {
-                  ua.field_b = RasterSnapshot.a(var2, 116);
+                  GameProgressSupport.field_b = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(99, "pressescforpausemenu");
                 if (null != var2) {
@@ -2328,7 +2328,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(63, "achieved");
                 if (null != var2) {
-                  bg.field_d = RasterSnapshot.a(var2, 112);
+                  CampaignLoadingSupport.field_d = RasterSnapshot.a(var2, 112);
                 }
                 var2 = IntKeyLookup.a(14, "orbpoints");
                 if (null != var2) {
@@ -2356,7 +2356,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(107, "no_highscores");
                 if (var2 != null) {
-                  wk.field_f = RasterSnapshot.a(var2, 113);
+                  IntegerParseSupport.field_f = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(45, "hs_name");
                 if (null != var2) {
@@ -2372,7 +2372,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(110, "hs_tolevel");
                 if (var2 != null) {
-                  jd.field_c = RasterSnapshot.a(var2, 113);
+                  ByteArrayPoolSupport.field_c = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(66, "hs_score");
                 if (null != var2) {
@@ -2640,7 +2640,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(42, "members_expansion_price_bottom");
                 if (var2 != null) {
-                  mh.field_b = RasterSnapshot.a(var2, 110);
+                  LoginIdentifierSupport.field_b = RasterSnapshot.a(var2, 110);
                 }
                 var2 = IntKeyLookup.a(40, "reconnect_lost_seq,0");
                 if (var2 != null) {
@@ -2724,7 +2724,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(83, "fs_accept_aftercancel");
                 if (null != var2) {
-                  p.field_e = RasterSnapshot.a(var2, 115);
+                  SimulatorSpriteAssets.field_e = RasterSnapshot.a(var2, 115);
                 }
                 var2 = IntKeyLookup.a(111, "fs_accept_countdown_sing");
                 if (var2 != null) {
@@ -2760,7 +2760,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(42, "fs_focus_or_resolution");
                 if (var2 != null) {
-                  e.field_b = RasterSnapshot.a(var2, 118);
+                  RegistrationFlowSupport.field_b = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(14, "fs_timeout");
                 if (null != var2) {
@@ -3028,55 +3028,55 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(121, "subscription_cost_monthly,0");
                 if (var2 != null) {
-                  p.field_f[0] = RasterSnapshot.a(var2, 120);
+                  SimulatorSpriteAssets.field_f[0] = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(82, "subscription_cost_monthly,1");
                 if (var2 != null) {
-                  p.field_f[1] = RasterSnapshot.a(var2, 113);
+                  SimulatorSpriteAssets.field_f[1] = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(108, "subscription_cost_monthly,2");
                 if (var2 != null) {
-                  p.field_f[2] = RasterSnapshot.a(var2, 115);
+                  SimulatorSpriteAssets.field_f[2] = RasterSnapshot.a(var2, 115);
                 }
                 var2 = IntKeyLookup.a(127, "subscription_cost_monthly,3");
                 if (var2 != null) {
-                  p.field_f[3] = RasterSnapshot.a(var2, 125);
+                  SimulatorSpriteAssets.field_f[3] = RasterSnapshot.a(var2, 125);
                 }
                 var2 = IntKeyLookup.a(87, "subscription_cost_monthly,4");
                 if (null != var2) {
-                  p.field_f[4] = RasterSnapshot.a(var2, 110);
+                  SimulatorSpriteAssets.field_f[4] = RasterSnapshot.a(var2, 110);
                 }
                 var2 = IntKeyLookup.a(59, "subscription_cost_monthly,5");
                 if (var2 != null) {
-                  p.field_f[5] = RasterSnapshot.a(var2, 125);
+                  SimulatorSpriteAssets.field_f[5] = RasterSnapshot.a(var2, 125);
                 }
                 var2 = IntKeyLookup.a(117, "subscription_cost_monthly,6");
                 if (null != var2) {
-                  p.field_f[6] = RasterSnapshot.a(var2, 113);
+                  SimulatorSpriteAssets.field_f[6] = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(118, "subscription_cost_monthly,7");
                 if (null != var2) {
-                  p.field_f[7] = RasterSnapshot.a(var2, 127);
+                  SimulatorSpriteAssets.field_f[7] = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(37, "subscription_cost_monthly,8");
                 if (null != var2) {
-                  p.field_f[8] = RasterSnapshot.a(var2, 112);
+                  SimulatorSpriteAssets.field_f[8] = RasterSnapshot.a(var2, 112);
                 }
                 var2 = IntKeyLookup.a(123, "subscription_cost_monthly,9");
                 if (var2 != null) {
-                  p.field_f[9] = RasterSnapshot.a(var2, 111);
+                  SimulatorSpriteAssets.field_f[9] = RasterSnapshot.a(var2, 111);
                 }
                 var2 = IntKeyLookup.a(43, "subscription_cost_monthly,10");
                 if (var2 != null) {
-                  p.field_f[10] = RasterSnapshot.a(var2, 119);
+                  SimulatorSpriteAssets.field_f[10] = RasterSnapshot.a(var2, 119);
                 }
                 var2 = IntKeyLookup.a(122, "subscription_cost_monthly,11");
                 if (null != var2) {
-                  p.field_f[11] = RasterSnapshot.a(var2, 114);
+                  SimulatorSpriteAssets.field_f[11] = RasterSnapshot.a(var2, 114);
                 }
                 var2 = IntKeyLookup.a(100, "subscription_cost_monthly,12");
                 if (var2 != null) {
-                  p.field_f[12] = RasterSnapshot.a(var2, 121);
+                  SimulatorSpriteAssets.field_f[12] = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(36, "sentence_separator");
                 if (null != var2) {

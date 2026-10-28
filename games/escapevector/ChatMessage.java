@@ -153,8 +153,8 @@ final class ChatMessage {
           if (guard >= -49) {
             return;
           }
-          for (int var1_int = 0; var1_int < mh.frameOffsets.length; var1_int++) {
-            mh.frameOffsets[var1_int] = 0;
+          for (int var1_int = 0; var1_int < LoginIdentifierSupport.frameOffsets.length; var1_int++) {
+            LoginIdentifierSupport.frameOffsets[var1_int] = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

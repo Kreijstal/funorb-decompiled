@@ -118,12 +118,12 @@ final class SelfDestructEffects {
         if (var7 >= var8) {
           var7 = -this.field_l.fullHeight + (-1 + var8);
         }
-        PcmSample var9 = sf.objectExplosionSamples[0];
+        PcmSample var9 = SessionCounterState.objectExplosionSamples[0];
         PointCloudEffect var10 = new PointCloudEffect(this.field_l, var6, var7, var9);
         this.field_o.addLast(-12328, var10);
     }
 
-    final static int a(byte param0, boolean param1, String param2, sn param3, sn param4, int param5, int param6) {
+    final static int a(byte param0, boolean param1, String param2, LoginText param3, LoginText param4, int param5, int param6) {
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         String stackIn_68_2 = null;
@@ -132,8 +132,8 @@ final class SelfDestructEffects {
         int var9 = 0;
         int var13 = EscapeVector.obfuscationControl;
         try {
-          String var14 = param4.a(-106);
-          String var8 = param3.a(-78);
+          String var14 = param4.text(-106);
+          String var8 = param3.text(-78);
           if (param0 != -32) {
             field_s = false;
           }
@@ -142,7 +142,7 @@ final class SelfDestructEffects {
             int stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (AccountFormStage.field_d == sf.field_d) {
+          if (AccountFormStage.field_d == SessionCounterState.field_d) {
             DialWidgetPainter.field_g = null;
             QuickChatDynamicCommand.outgoingPackets.position = 0;
             if (param2 != null) {
@@ -156,7 +156,7 @@ final class SelfDestructEffects {
               PathPoint.field_a.writeCircumfixedString((byte) 100, var14);
               PathPoint.field_a.writeCircumfixedString((byte) 100, var8);
               CharSequence var15 = (CharSequence) ((Object) param2);
-              PathPoint.field_a.writeCircumfixedString((byte) 100, mm.a(0, var15));
+              PathPoint.field_a.writeCircumfixedString((byte) 100, ThemeAssetSupport.normalizeAsciiName(0, var15));
               PathPoint.field_a.writeShort(-116, param5);
               PathPoint.field_a.writeByte(param6, -123);
               PathPoint.field_a.writeByte(var9, -123);
@@ -168,7 +168,7 @@ final class SelfDestructEffects {
                 var11_ref_String = "";
               }
               QuickChatDynamicCommand.outgoingPackets.writeString(var11_ref_String, 105);
-              AccountPayloadSupport.writeEncryptedPayload(param0 ^ -32, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
+              AccountPayloadSupport.writeEncryptedPayload(param0 ^ -32, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, MeshProjectionSupport.field_c);
               QuickChatDynamicCommand.outgoingPackets.backpatchShortLength(QuickChatDynamicCommand.outgoingPackets.position - var10, 32614);
             } else {
               PathPoint.field_a.position = 0;
@@ -176,7 +176,7 @@ final class SelfDestructEffects {
               PathPoint.field_a.writeInt((byte) 127, QuitPageSupport.field_a.nextInt());
               PacketBuffer stackIn_12_0 = PathPoint.field_a;
               int stackIn_12_1 = 100;
-              if (!param4.b(114)) {
+              if (!param4.isFlagged(114)) {
                 stackIn_13_2 = "";
               } else {
                 stackIn_13_2 = var14;
@@ -184,7 +184,7 @@ final class SelfDestructEffects {
               ((PacketBuffer) (Object) stackIn_12_0).writeCircumfixedString((byte) stackIn_12_1, stackIn_13_2);
               PacketBuffer stackIn_15_0 = PathPoint.field_a;
               int stackIn_15_1 = 100;
-              if (param3.b(88)) {
+              if (param3.isFlagged(88)) {
                 stackIn_16_2 = var8;
               } else {
                 stackIn_16_2 = "";
@@ -193,7 +193,7 @@ final class SelfDestructEffects {
               QuickChatDynamicCommand.outgoingPackets.writeByte(16, -123);
               QuickChatDynamicCommand.outgoingPackets.position = QuickChatDynamicCommand.outgoingPackets.position + 1;
               var9 = QuickChatDynamicCommand.outgoingPackets.position;
-              AccountPayloadSupport.writeEncryptedPayload(0, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
+              AccountPayloadSupport.writeEncryptedPayload(0, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, MeshProjectionSupport.field_c);
               QuickChatDynamicCommand.outgoingPackets.backpatchByteLength(-38, -var9 + QuickChatDynamicCommand.outgoingPackets.position);
             }
             ClientException.a(-1, 30785);
@@ -211,8 +211,8 @@ final class SelfDestructEffects {
               if (var9Lifetime1 == 248) {
                 FrameCadenceSupport.writeBrowserSessionMarker((byte) 81, PointCloudEffect.activeApplet((byte) -108));
                 MouseWheelInput.field_a = LoadingProgressDialog.field_fb;
-                nm.a(param0 ^ -16);
-                e.field_c = false;
+                ConnectionSupport.closeTransport(param0 ^ -16);
+                RegistrationFlowSupport.field_c = false;
                 int stackIn_34_0 = var9Lifetime1;
                 return stackIn_34_0;
               }
@@ -223,7 +223,7 @@ final class SelfDestructEffects {
               } else {
                 EmailSyntaxValidator.field_r = -1;
                 LegacyStyleNode.field_v = var9Lifetime1;
-                AccountFormStage.field_d = mh.field_h;
+                AccountFormStage.field_d = LoginIdentifierSupport.field_h;
               }
             }
           }
@@ -237,14 +237,14 @@ final class SelfDestructEffects {
                 for (int var12 = 0; var12 < var11; var12++) {
                   AccountTermsPanel.field_I[var12] = QuickChatDynamicCommand.incomingPackets.readCircumfixedString((byte) 125);
                 }
-                nm.a(16);
-                e.field_c = false;
+                ConnectionSupport.closeTransport(16);
+                RegistrationFlowSupport.field_c = false;
                 int stackIn_44_0 = var11 + 100;
                 return stackIn_44_0;
               }
             }
           }
-          if (AccountFormStage.field_d == mh.field_h &&
+          if (AccountFormStage.field_d == LoginIdentifierSupport.field_h &&
             ArchiveKeyRequest.hasCompletePacket(param0 ^ -10538)) {
             if (LegacyStyleNode.field_v != 255) {
               MouseWheelInput.field_a = QuickChatDynamicCommand.incomingPackets.readString(false);
@@ -254,26 +254,26 @@ final class SelfDestructEffects {
                 GameKeyHandler.a(var9_ref_String, (byte) 30, PointCloudEffect.activeApplet((byte) -83));
               }
             }
-            nm.a(16);
-            e.field_c = false;
+            ConnectionSupport.closeTransport(16);
+            RegistrationFlowSupport.field_c = false;
             int stackIn_53_0 = LegacyStyleNode.field_v;
             return stackIn_53_0;
           }
           if (TextLayout.field_c == null) {
-            if (e.field_c) {
+            if (RegistrationFlowSupport.field_c) {
               if (30000L < PasswordFieldPainter.millisecondsSinceLastReceive(64655)) {
                 MouseWheelInput.field_a = DualLinkNode.field_l;
               } else {
-                MouseWheelInput.field_a = wk.field_a;
+                MouseWheelInput.field_a = IntegerParseSupport.field_a;
               }
-              e.field_c = false;
+              RegistrationFlowSupport.field_c = false;
               int stackIn_61_0 = 249;
               return stackIn_61_0;
             }
             int var9Lifetime3 = BitCountSupport.field_b;
             BitCountSupport.field_b = StringNode.field_i;
             StringNode.field_i = var9Lifetime3;
-            e.field_c = true;
+            RegistrationFlowSupport.field_c = true;
           }
           int stackIn_64_0 = -1;
           return stackIn_64_0;

@@ -115,7 +115,7 @@ class UiComponent extends IntrusiveNode {
             return inputAvailable;
           }
           regionExit1: {
-            if (this.onPointerPressed(offsetX, sf.field_c, (byte) 3, LoginDialog.field_ob, offsetY, this, AccountMessagePanel.field_N)) {
+            if (this.onPointerPressed(offsetX, SessionCounterState.field_c, (byte) 3, LoginDialog.field_ob, offsetY, this, AccountMessagePanel.field_N)) {
               inputAvailable = false;
               if (var7 == 0) {
                 break regionExit1;
@@ -214,7 +214,7 @@ class UiComponent extends IntrusiveNode {
               return inputAvailable;
             }
             regionExit2: {
-              if (this.onPointerPressed(offsetX, sf.field_c, (byte) 3, LoginDialog.field_ob, offsetY, this, AccountMessagePanel.field_N)) {
+              if (this.onPointerPressed(offsetX, SessionCounterState.field_c, (byte) 3, LoginDialog.field_ob, offsetY, this, AccountMessagePanel.field_N)) {
                 inputAvailable = false;
                 if (var7 == 0) {
                   break regionExit2;
@@ -311,7 +311,7 @@ class UiComponent extends IntrusiveNode {
             return inputAvailable;
           }
           regionExit3: {
-            if (this.onPointerPressed(offsetX, sf.field_c, (byte) 3, LoginDialog.field_ob, offsetY, this, AccountMessagePanel.field_N)) {
+            if (this.onPointerPressed(offsetX, SessionCounterState.field_c, (byte) 3, LoginDialog.field_ob, offsetY, this, AccountMessagePanel.field_N)) {
               inputAvailable = false;
               if (var7 == 0) {
                 break regionExit3;

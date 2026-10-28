@@ -107,7 +107,7 @@ final class LevelObject extends IntrusiveNode {
         String stackIn_11_2 = null;
         String stackIn_15_2 = null;
         try {
-          di.a(param3, param8, param5, param10, param0, param5, param9, param1, param6, param11, param8, param4, param9, (byte) -41, param7);
+          HighscorePlayerRecord.configureLegacyMenuTheme(param3, param8, param5, param10, param0, param5, param9, param1, param6, param11, param8, param4, param9, (byte) -41, param7);
           if (param2) {
             field_q = (String) null;
           }

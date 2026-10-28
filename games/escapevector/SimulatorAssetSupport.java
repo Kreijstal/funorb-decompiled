@@ -21,8 +21,8 @@ final class SimulatorAssetSupport {
     }
 
     final static boolean c(int param0) {
-        boolean var1 = (mm.a(4, 5));
-        ChatMessageDecoder.field_b[6][param0] = uj.field_a;
+        boolean var1 = (ThemeAssetSupport.loadTheme(4, 5));
+        ChatMessageDecoder.field_b[6][param0] = SharedSpriteAssets.field_a;
         return (var1);
     }
 
@@ -31,14 +31,14 @@ final class SimulatorAssetSupport {
         IndexedSprite[] var1 = new IndexedSprite[ArchiveLoadTask.spriteCount];
         if (guard == 13029) {
           for (int var2 = 0; ArchiveLoadTask.spriteCount > var2; var2++) {
-            var1[var2] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], SpriteLoadTask.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], AnimatedPathMarker.spriteIndices[var2], ArchiveLoadTask.spritePalette);
+            var1[var2] = new IndexedSprite(IntroAudioSupport.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], SpriteLoadTask.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], AnimatedPathMarker.spriteIndices[var2], ArchiveLoadTask.spritePalette);
           }
           SpriteDecodeSupport.releaseSpriteSheet(false);
           return var1;
         }
         SimulatorAssetSupport.loadSimulatorSprites(16);
         for (int var2Lifetime1 = 0; ArchiveLoadTask.spriteCount > var2Lifetime1; var2Lifetime1++) {
-          var1[var2Lifetime1] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[var2Lifetime1], ChatMessage.spriteOffsetYs[var2Lifetime1], SpriteLoadTask.spriteWidths[var2Lifetime1], SavedDataQuerySupport.spriteHeights[var2Lifetime1], AnimatedPathMarker.spriteIndices[var2Lifetime1], ArchiveLoadTask.spritePalette);
+          var1[var2Lifetime1] = new IndexedSprite(IntroAudioSupport.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[var2Lifetime1], ChatMessage.spriteOffsetYs[var2Lifetime1], SpriteLoadTask.spriteWidths[var2Lifetime1], SavedDataQuerySupport.spriteHeights[var2Lifetime1], AnimatedPathMarker.spriteIndices[var2Lifetime1], ArchiveLoadTask.spritePalette);
         }
         SpriteDecodeSupport.releaseSpriteSheet(false);
         return var1;
@@ -65,15 +65,15 @@ final class SimulatorAssetSupport {
           String[] var2 = AlternateUsernameCredentials.field_k;
           for (int var3_int = 0; var2.length > var3_int; var3_int++) {
             String var4 = var2[var3_int];
-            Sprite var5 = fe.a(var1, IndexedSpriteState.field_j, var4, true);
+            Sprite var5 = MembershipPromotionScreen.loadNamedSprite(var1, IndexedSpriteState.field_j, var4, true);
             ArchiveProvider.field_b[var3_int] = var5;
           }
           String var3 = "infrastructure_virtual";
-          v.field_a = kh.a(IndexedSpriteState.field_j, (byte) 126, var1, var3);
+          ServerListNavigationSupport.field_a = SpriteArchiveSupport.loadNamedSprites(IndexedSpriteState.field_j, (byte) 126, var1, var3);
           String var3Lifetime1 = "seeker_mine";
-          TerrainMaskSupport.field_a = fe.a(var1, IndexedSpriteState.field_j, var3Lifetime1, true);
+          TerrainMaskSupport.field_a = MembershipPromotionScreen.loadNamedSprite(var1, IndexedSpriteState.field_j, var3Lifetime1, true);
           String var3Lifetime2 = "rock_buster";
-          BitCountSupport.field_a = fe.a(var1, IndexedSpriteState.field_j, var3Lifetime2, true);
+          BitCountSupport.field_a = MembershipPromotionScreen.loadNamedSprite(var1, IndexedSpriteState.field_j, var3Lifetime2, true);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fg.B(" + guard + ')');
         }

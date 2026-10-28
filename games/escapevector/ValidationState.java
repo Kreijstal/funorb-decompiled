@@ -27,7 +27,7 @@ final class ValidationState {
     final static void a(NineSliceFrame param0, int param1, int param2, int param3, NineSliceFrame param4, int param5) {
         CheckboxPainter.field_s = param2;
         AnimatedPanelFrame.field_e = param4;
-        fe.field_k = param5;
+        MembershipPromotionScreen.field_k = param5;
         AchievementTracker.field_k = param1;
         if (param3 != 3) {
           return;

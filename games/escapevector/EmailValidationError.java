@@ -25,7 +25,7 @@ final class EmailValidationError {
         String stackIn_15_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          if (!nm.a((byte) -73, param1)) {
+          if (!ConnectionSupport.loadAllSpriteTasks((byte) -73, param1)) {
             Object stackIn_3_0 = null;
             return (Sprite[]) (stackIn_3_0);
           }

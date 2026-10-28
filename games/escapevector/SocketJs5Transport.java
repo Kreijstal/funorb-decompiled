@@ -5,7 +5,7 @@ import java.io.*;
 
 final class SocketJs5Transport extends Js5Transport {
     static String[] field_q;
-    static sf field_r;
+    static SessionCounterState field_r;
     static int field_s;
     private BufferedSocket socket;
 
@@ -276,8 +276,8 @@ final class SocketJs5Transport extends Js5Transport {
           CipherPacketBuffer var1 = QuickChatDynamicCommand.incomingPackets;
           int var2 = var1.readUnsignedByte(guard ^ 0);
           if (guard == var2) {
-            if (null == ml.field_a) {
-              ml.field_a = new SecondaryNodeHashTable(128);
+            if (null == TrackerMusicLoader.field_a) {
+              TrackerMusicLoader.field_a = new SecondaryNodeHashTable(128);
               RegistrationRequestDialog.field_Ab = 0;
             }
             boolean stackIn_12_0 = !(var1.readUnsignedByte(0) != 1);
@@ -288,23 +288,23 @@ final class SocketJs5Transport extends Js5Transport {
             }
             ContactEntry var5 = AnimatedPanelFrame.findContactByName(var4_ref_String, (byte) -125);
             String var6 = var1.readString(false);
-            String var7 = sf.a(-123, (CharSequence) ((Object) var4_ref_String));
+            String var7 = SessionCounterState.normalizeAccountName(-123, (CharSequence) ((Object) var4_ref_String));
             if (null == var7) {
               var7 = var4_ref_String;
             }
             if (var5 == null) {
               var5 = AnimatedPanelFrame.findContactByName(var6, (byte) 114);
               if (null != var5) {
-                ml.field_a.put((long)var7.hashCode(), var5, 26);
+                TrackerMusicLoader.field_a.put((long)var7.hashCode(), var5, 26);
               }
             }
             if (null == var5) {
               var5 = new ContactEntry();
-              ml.field_a.put((long)var7.hashCode(), var5, 37);
+              TrackerMusicLoader.field_a.put((long)var7.hashCode(), var5, 37);
               int fieldTemp$0 = RegistrationRequestDialog.field_Ab;
               RegistrationRequestDialog.field_Ab = RegistrationRequestDialog.field_Ab + 1;
               var5.insertionOrder = fieldTemp$0;
-              jd.field_a.addLast(-12328, var5);
+              ByteArrayPoolSupport.field_a.addLast(-12328, var5);
             }
             var5.displayName = var4_ref_String;
             return;
@@ -324,19 +324,19 @@ final class SocketJs5Transport extends Js5Transport {
             }
             if (4 != var2) {
               GameModeSelectScreen.reportClientError(false, "F1: " + LoginStage.formatPacketDiagnostic((byte) -76), (Throwable) null);
-              nm.a(16);
+              ConnectionSupport.closeTransport(16);
               return;
             }
             RasterSnapshot.field_g = 1;
             Object var3 = var1.readString(false);
-            di.field_f = ((String) (var3)).intern();
+            HighscorePlayerRecord.field_f = ((String) (var3)).intern();
             int var4 = var1.readUnsignedByte(0);
-            ii.a((byte) 16, var4);
+            ChatSettingsSupport.unpackChatSettings((byte) 16, var4);
             return;
           }
           if (NameAvailabilityResultSupport.field_b == null) {
             NameAvailabilityResultSupport.field_b = new SecondaryNodeHashTable(128);
-            ua.field_a = 0;
+            GameProgressSupport.field_a = 0;
           }
           Object var3Lifetime1 = var1.readString(false);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -348,16 +348,16 @@ final class SocketJs5Transport extends Js5Transport {
           if (var6_ref == null) {
             var6_ref = LoginCredentialType.findFriendByName(-1465, var5_ref);
             if (var6_ref != null) {
-              NameAvailabilityResultSupport.field_b.put((long)sf.a(-88, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, 25);
+              NameAvailabilityResultSupport.field_b.put((long)SessionCounterState.normalizeAccountName(-88, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, 25);
             }
           }
           if (null == var6_ref) {
             var6_ref = new ContactEntry();
-            NameAvailabilityResultSupport.field_b.put((long)sf.a(-109, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, guard ^ 123);
-            int fieldTemp$1 = ua.field_a;
-            ua.field_a = ua.field_a + 1;
+            NameAvailabilityResultSupport.field_b.put((long)SessionCounterState.normalizeAccountName(-109, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, guard ^ 123);
+            int fieldTemp$1 = GameProgressSupport.field_a;
+            GameProgressSupport.field_a = GameProgressSupport.field_a + 1;
             var6_ref.insertionOrder = fieldTemp$1;
-            ji.field_c.addLast(-12328, var6_ref);
+            ArchiveFactorySupport.field_c.addLast(-12328, var6_ref);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -365,7 +365,7 @@ final class SocketJs5Transport extends Js5Transport {
           var6_ref.displayName = var4_ref_StringLifetime1;
           var6_ref.location = (String) (var3Lifetime1);
           var6_ref.unlink((byte) -14);
-          ContactEntry var7_ref = (ContactEntry) (ji.field_c.first(false));
+          ContactEntry var7_ref = (ContactEntry) (ArchiveFactorySupport.field_c.first(false));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != var7_ref) {
@@ -375,7 +375,7 @@ final class SocketJs5Transport extends Js5Transport {
               decompiledFrameRemainder0 = (var8 == 0);
               if (decompiledFrameRemainder0 &&
                 EscapeVector.isContactAfter(stackIn_63_0, stackIn_63_1, stackIn_63_2)) {
-                var7_ref = (ContactEntry) (ji.field_c.next((byte) 70));
+                var7_ref = (ContactEntry) (ArchiveFactorySupport.field_c.next((byte) 70));
                 continue;
               }
             }
@@ -393,7 +393,7 @@ final class SocketJs5Transport extends Js5Transport {
             }
             break;
           }
-          ji.field_c.addLast(guard ^ -12328, var6_ref);
+          ArchiveFactorySupport.field_c.addLast(guard ^ -12328, var6_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

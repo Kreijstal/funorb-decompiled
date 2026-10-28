@@ -77,10 +77,10 @@ final class MainMenuScreen {
         int var7Lifetime2;
         int var11 = EscapeVector.obfuscationControl;
         try {
-          if (5 * actionCode > mj.field_d) {
+          if (5 * actionCode > LoginHandshakeSupport.field_d) {
             return;
           }
-          mj.field_b.bindAsFramebuffer();
+          LoginHandshakeSupport.field_b.bindAsFramebuffer();
           SoftwareRasterizer.clearFramebuffer();
           int stackIn_8_0 = (!selected) ? 6340704 : 16777215;
           int var5_int = stackIn_8_0;
@@ -88,7 +88,7 @@ final class MainMenuScreen {
             this.actionCodes = (int[]) null;
           }
           boolean decompiledFrameRemainder0 = true;
-          int var6 = mj.field_b.fullWidth / 2;
+          int var6 = LoginHandshakeSupport.field_b.fullWidth / 2;
           if (actionCode == 0) {
             ByteStorage.gameFont.drawCentered(SpriteDecodeSupport.field_e, var6, 22, var5_int, -1);
           }
@@ -124,7 +124,7 @@ final class MainMenuScreen {
                           decompiledFrameRemainder0 = (var11 != 0);
                         }
                         if (decompiledFrameRemainder0) {
-                          ByteStorage.gameFont.drawCentered(da.field_a, var6, 22, var5_int, -1);
+                          ByteStorage.gameFont.drawCentered(SessionMenuSupport.field_a, var6, 22, var5_int, -1);
                         }
                       }
                       if (decompiledFrameRemainder0 &&
@@ -138,7 +138,7 @@ final class MainMenuScreen {
                           var9Lifetime1 = stackIn_63_0;
                           var10Lifetime1 = (-68 + var9Lifetime1) / 2 + var6;
                           ByteStorage.gameFont.drawRight(LoginMethod.field_d, var10Lifetime1, 22, var5_int, -1);
-                          SingleChildContainer.a(var10Lifetime1, 13202, 4, kc.field_b, var5_int);
+                          SingleChildContainer.a(var10Lifetime1, 13202, 4, MembershipPromotionSupport.field_b, var5_int);
                           ByteStorage.gameFont.drawCentered(EscapeVector.field_z, var6, 22, var5_int, -1);
                         }
                       }
@@ -149,7 +149,7 @@ final class MainMenuScreen {
                     var9Lifetime1 = stackIn_63_0;
                     var10Lifetime1 = (-68 + var9Lifetime1) / 2 + var6;
                     ByteStorage.gameFont.drawRight(LoginMethod.field_d, var10Lifetime1, 22, var5_int, -1);
-                    SingleChildContainer.a(var10Lifetime1, 13202, 4, kc.field_b, var5_int);
+                    SingleChildContainer.a(var10Lifetime1, 13202, 4, MembershipPromotionSupport.field_b, var5_int);
                     if (var11 != 0) {
                       ByteStorage.gameFont.drawCentered(EscapeVector.field_z, var6, 22, var5_int, -1);
                     }
@@ -159,16 +159,16 @@ final class MainMenuScreen {
             }
           }
           AlphaContainer.field_D.a(112);
-          cf.a(mj.field_b, true, 1);
-          mj.field_b.addOutline(5267536);
-          int var7Lifetime1 = -mj.field_d + 30 + 5 * actionCode;
+          MeshProjectionSupport.markSpriteEdges(LoginHandshakeSupport.field_b, true, 1);
+          LoginHandshakeSupport.field_b.addOutline(5267536);
+          int var7Lifetime1 = -LoginHandshakeSupport.field_d + 30 + 5 * actionCode;
           if (var7Lifetime1 > 0) {
-            ResourceArchive.drawSpriteWithRowJitter(y, (-mj.field_b.fullWidth + 640) / 2, var7Lifetime1, mj.field_b, guard ^ 120);
+            ResourceArchive.drawSpriteWithRowJitter(y, (-LoginHandshakeSupport.field_b.fullWidth + 640) / 2, var7Lifetime1, LoginHandshakeSupport.field_b, guard ^ 120);
             if (var11 == 0) {
               return;
             }
           }
-          mj.field_b.drawTransparent((-mj.field_b.fullWidth + 640) / 2, y);
+          LoginHandshakeSupport.field_b.drawTransparent((-LoginHandshakeSupport.field_b.fullWidth + 640) / 2, y);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -247,26 +247,26 @@ final class MainMenuScreen {
         try {
           SoftwareRasterizer.clearFramebuffer();
           SelfDestructEffects.b(2);
-          if (mj.a((byte) 117)) {
+          if (LoginHandshakeSupport.isLegacyMenuVisible((byte) 117)) {
             int var2_int = InstructionsScreen.legacyMenuWidth(0) / 2 + 20;
             int var3 = 15 + SlidingSpriteTransition.legacyMenuHeight((byte) -122) / 2;
-            if (mj.field_d >= 40) {
+            if (LoginHandshakeSupport.field_d >= 40) {
               stackIn_8_0 = 0;
             } else {
-              stackIn_8_0 = -mj.field_d + 40;
+              stackIn_8_0 = -LoginHandshakeSupport.field_d + 40;
             }
             AccountNoticeKind.drawAnimatedPanelFrame(stackIn_8_0, -var2_int + 320, var2_int + 321, 301 + var3, true, 29788, true, 6324320, 3162160, 0, 300 - var3, true);
             AchievementTracker.drawLegacyMenu(guard ^ -16);
-            pb.a(4);
+            MenuTitleRenderSupport.drawTitles(4);
             return;
           }
-          if (mj.field_d >= 40) {
+          if (LoginHandshakeSupport.field_d >= 40) {
             stackIn_14_0 = 0;
           } else {
-            stackIn_14_0 = -mj.field_d + 40;
+            stackIn_14_0 = -LoginHandshakeSupport.field_d + 40;
           }
           AccountNoticeKind.drawAnimatedPanelFrame(stackIn_14_0, 240, 400, 16 + (192 + this.actionCount * 24), true, 29788, true, 6324320, 3162160, 0, 176, true);
-          pb.a(guard ^ -12);
+          MenuTitleRenderSupport.drawTitles(guard ^ -12);
           int var2_intLifetime1 = 0;
           int var3Lifetime1 = 192;
           boolean decompiledNaturalLoopExit0 = false;
@@ -349,9 +349,9 @@ final class MainMenuScreen {
           }
           if (var3_int == 1 &&
             this.input.isInitialActivation((byte) -18)) {
-            wk.field_c = true;
-            AccountSessionSupport.field_a.a(pointerDriven, (byte) 47);
-            mj.field_d = 0;
+            IntegerParseSupport.field_c = true;
+            AccountSessionSupport.field_a.open(pointerDriven, (byte) 47);
+            LoginHandshakeSupport.field_d = 0;
           }
           if (var3_int == 2 &&
             this.input.isInitialActivation((byte) -18)) {
@@ -413,39 +413,39 @@ final class MainMenuScreen {
           }
           if (var3_int == 4) {
             if (this.input.isLeftPressed(116) &&
-              kc.field_b > 0) {
-              kc.field_b = kc.field_b - 8;
-              if (kc.field_b < 0) {
-                kc.field_b = 0;
+              MembershipPromotionSupport.field_b > 0) {
+              MembershipPromotionSupport.field_b = MembershipPromotionSupport.field_b - 8;
+              if (MembershipPromotionSupport.field_b < 0) {
+                MembershipPromotionSupport.field_b = 0;
               }
               TrackerMusicPlayer var4_ref_o = DraggableWidget.field_N;
               if (null != var4_ref_o) {
-                var4_ref_o.d(GrowableIntList.field_b * kc.field_b / 64);
+                var4_ref_o.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
               }
             }
             if (this.input.isRightPressed(-98) &&
-              kc.field_b < 64) {
-              kc.field_b = kc.field_b + 8;
-              if (64 < kc.field_b) {
-                kc.field_b = 64;
+              MembershipPromotionSupport.field_b < 64) {
+              MembershipPromotionSupport.field_b = MembershipPromotionSupport.field_b + 8;
+              if (64 < MembershipPromotionSupport.field_b) {
+                MembershipPromotionSupport.field_b = 64;
               }
               TrackerMusicPlayer var4_ref_oLifetime1 = DraggableWidget.field_N;
               if (null != var4_ref_oLifetime1) {
-                var4_ref_oLifetime1.d(GrowableIntList.field_b * kc.field_b / 64);
+                var4_ref_oLifetime1.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
               }
             }
             if (this.input.isHomePressed(-10809)) {
-              kc.field_b = 0;
+              MembershipPromotionSupport.field_b = 0;
               TrackerMusicPlayer var4_ref_oLifetime2 = DraggableWidget.field_N;
               if (var4_ref_oLifetime2 != null) {
-                var4_ref_oLifetime2.d(kc.field_b * GrowableIntList.field_b / 64);
+                var4_ref_oLifetime2.d(MembershipPromotionSupport.field_b * GrowableIntList.field_b / 64);
               }
             }
             if (this.input.isEndPressed(0)) {
-              kc.field_b = 64;
+              MembershipPromotionSupport.field_b = 64;
               TrackerMusicPlayer var4_ref_oLifetime3 = DraggableWidget.field_N;
               if (var4_ref_oLifetime3 != null) {
-                var4_ref_oLifetime3.d(GrowableIntList.field_b * kc.field_b / 64);
+                var4_ref_oLifetime3.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
               }
             }
             if (this.input.isPointerHeld(false)) {
@@ -464,17 +464,17 @@ final class MainMenuScreen {
               } else if (var8Lifetime1 > 64) {
                 var8Lifetime1 = 64;
               }
-              kc.field_b = var8Lifetime1;
+              MembershipPromotionSupport.field_b = var8Lifetime1;
               TrackerMusicPlayer var9 = DraggableWidget.field_N;
               if (var9 != null) {
-                var9.d(GrowableIntList.field_b * kc.field_b / 64);
+                var9.d(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
               }
             }
           }
           if (var3_int == 5 &&
             this.input.isInitialActivation((byte) -18)) {
             if (null != IsaacRandom.field_d) {
-              ri.a(guard - 11954);
+              DisplayAndRatingSupport.exitFullscreen(guard - 11954);
               if (var10 != 0) {
                 TickClock.a(24, pointerDriven);
               }
@@ -485,15 +485,15 @@ final class MainMenuScreen {
           }
           if (var3_int == 6 &&
             this.input.isInitialActivation((byte) -18)) {
-            kh.showHighscoresScreen(this.input.pointerDriven, -1230, false);
-            mj.field_d = 0;
+            SpriteArchiveSupport.showHighscoresScreen(this.input.pointerDriven, -1230, false);
+            LoginHandshakeSupport.field_d = 0;
             ChatMessage.clearFrameOffsets((byte) -96);
             return true;
           }
           if (var3_int == 7 &&
             this.input.isInitialActivation((byte) -18)) {
             SpriteState.a(guard + 13193, this.input.pointerDriven);
-            mj.field_d = 0;
+            LoginHandshakeSupport.field_d = 0;
             ChatMessage.clearFrameOffsets((byte) -94);
             return true;
           }
@@ -503,7 +503,7 @@ final class MainMenuScreen {
           if (8 == var3_int &&
             this.input.isInitialActivation((byte) -18)) {
             if (IsaacRandom.field_d != null) {
-              ri.a(-25123);
+              DisplayAndRatingSupport.exitFullscreen(-25123);
             }
             QuitPageSupport.openQuitPage(-9787, PointCloudEffect.activeApplet((byte) -122));
           }

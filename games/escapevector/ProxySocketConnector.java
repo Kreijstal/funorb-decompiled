@@ -342,7 +342,7 @@ final class ProxySocketConnector extends SocketConnector {
         achievementModes = new int[]{3, 7, 11, 15, 3, 7, 11, 15, 3, 7, 11, 15, 0, 10};
         achievementModeMasks = new int[]{1, 1, 1, 1, 3, 3, 3, 1, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 8, 8, 8};
         achievementOrbCoins = new int[]{1, 1, 2, 3, 2, 5, 1, 3, 1, 5, 10, 5, 5, 3, 5, 5, 5, 3, 1, 1, 1, 1, 1, 2, 3, 5, 2, 5, 5, 10, 5, 1};
-        cf.initializeAchievementDefinitions((byte) -76);
+        MeshProjectionSupport.initializeAchievementDefinitions((byte) -76);
         ChatMessage.initializeAchievementRules(0);
         LoginPromptSupport.initializeAchievementRules(false);
     }

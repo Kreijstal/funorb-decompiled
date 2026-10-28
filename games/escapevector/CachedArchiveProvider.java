@@ -528,11 +528,11 @@ final class CachedArchiveProvider extends ArchiveProvider {
               int var6 = LoginMethod.a(98, Js5NetworkRequest.field_I[var3_int], true);
               var4 = var4 + CheckboxPainter.field_s;
               int var7 = -(var6 >> 1) + ClientException.field_e;
-              if (DualLinkNode.a(param1, (AchievementTracker.field_k << 1) + ok.field_a, param0 ^ -123, var4, -fe.field_k + var7, (fe.field_k << 1) + var6, param2)) {
+              if (DualLinkNode.a(param1, (AchievementTracker.field_k << 1) + IntroFrameRenderer.field_a, param0 ^ -123, var4, -MembershipPromotionScreen.field_k + var7, (MembershipPromotionScreen.field_k << 1) + var6, param2)) {
                 int stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
-              var4 = var4 + (CheckboxPainter.field_s + (AchievementTracker.field_k << 1) + ok.field_a);
+              var4 = var4 + (CheckboxPainter.field_s + (AchievementTracker.field_k << 1) + IntroFrameRenderer.field_a);
             } else {
               var4 = var4 + SpriteFactorySupport.field_b;
             }

@@ -181,16 +181,16 @@ final class ValidationIndicator extends TextButton {
           return (int[]) null;
         }
         if (null != SocketJs5Transport.field_r) {
-          return SocketJs5Transport.field_r.d(param0 + 31240);
+          return SocketJs5Transport.field_r.progressWords(param0 + 31240);
         }
         return null;
     }
 
     final static void a(byte param0) {
-        if (!mj.a((byte) 93)) {
+        if (!LoginHandshakeSupport.isLegacyMenuVisible((byte) 93)) {
           return;
         }
-        sn.a(4, 0, false);
+        LoginText.buildLegacyMenu(4, 0, false);
         if (param0 < 79) {
           field_Q = (Sprite) null;
         }

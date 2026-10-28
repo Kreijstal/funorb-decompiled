@@ -64,8 +64,8 @@ final class DirectByteStorage extends ByteStorage {
           TrackerMusicDefinition.field_f.requestAccountAchievements((byte) -126);
           TrackerMusicDefinition.field_f.pollAccountQuery(param0 ^ 19593);
         }
-        if (!ua.field_c.isLoaded(-19836)) {
-          ua.field_c.pollLoad(-9949);
+        if (!GameProgressSupport.field_c.isLoaded(-19836)) {
+          GameProgressSupport.field_c.pollLoad(-9949);
         }
         CachedArchiveProvider.b(param0 ^ -57);
         SimulatorAssetSupport.loadSimulatorSprites(0);
@@ -193,10 +193,10 @@ final class DirectByteStorage extends ByteStorage {
           CachedArchiveProvider.field_n = param0.readUnsignedShort(param1 - 1238557701) << 5;
           int var2_int = param0.readUnsignedByte(0);
           CachedArchiveProvider.field_n = CachedArchiveProvider.field_n + (var2_int >> 3);
-          wk.field_d = 1835008 & var2_int << 18;
-          wk.field_d = wk.field_d + (param0.readUnsignedShort(1952) << 2);
+          IntegerParseSupport.field_d = 1835008 & var2_int << 18;
+          IntegerParseSupport.field_d = IntegerParseSupport.field_d + (param0.readUnsignedShort(1952) << 2);
           int var2_intLifetime1 = param0.readUnsignedByte(param1 - 1238559653);
-          wk.field_d = wk.field_d + (var2_intLifetime1 >> 6);
+          IntegerParseSupport.field_d = IntegerParseSupport.field_d + (var2_intLifetime1 >> 6);
           PointCloudEffect.field_u = (63 & var2_intLifetime1) << 15;
           PointCloudEffect.field_u = PointCloudEffect.field_u + (param0.readUnsignedByte(param1 - 1238559653) << 7);
           int var2_intLifetime2 = param0.readUnsignedByte(param1 ^ param1);

@@ -25,7 +25,7 @@ final class UiTheme {
     final static void a(ResourceArchive param0, ResourceArchive param1, byte param2) {
         try {
           ThreeSliceButtonPainter.field_x = param0;
-          pc.field_e = param1;
+          ModeProgressSupport.field_e = param1;
           if (param2 != -96) {
             UiTheme.a(-27);
           }
@@ -163,9 +163,9 @@ final class UiTheme {
           var4.selectionColor = 11711154;
           var4.caretColor = 15658734;
           this.tooltipFont = font;
-          var4.createStateLayer(0, (byte) -53).setTextColor(15658734, -22572).setFrameSprites(2, ph.a(8947848, 1, 10066329, 7829367));
-          var4.createStateLayer(1, (byte) -53).setFrameSprites(2, ph.a(11184810, 1, 10066329, 13421772));
-          var4.createStateLayer(3, (byte) -53).setFrameSprites(2, ph.a(8947848, 1, 7829367, 10066329)).setOffsetX(101, 1).setOffsetY(1, (byte) 102);
+          var4.createStateLayer(0, (byte) -53).setTextColor(15658734, -22572).setFrameSprites(2, HuffmanDecoder.createFlatFrameTiles(8947848, 1, 10066329, 7829367));
+          var4.createStateLayer(1, (byte) -53).setFrameSprites(2, HuffmanDecoder.createFlatFrameTiles(11184810, 1, 10066329, 13421772));
+          var4.createStateLayer(3, (byte) -53).setFrameSprites(2, HuffmanDecoder.createFlatFrameTiles(8947848, 1, 7829367, 10066329)).setOffsetX(101, 1).setOffsetY(1, (byte) 102);
           Sprite[] var5 = new Sprite[9];
           ArgbSprite var16 = new ArgbSprite(32, 32);
           ArgbSprite var18 = var16;
@@ -187,7 +187,7 @@ final class UiTheme {
           MarkerSliderPainter discarded$1 = new MarkerSliderPainter(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
           StatefulTextPainter var8 = new StatefulTextPainter();
           var17.copyStyleTo(var8, 111);
-          var8.createStateLayer(0, (byte) -53).setFrameSprites(2, ph.a(15658734, 1, 7829367, 10066329)).setTextColor(1118481, -22572).setShadowColor(-93, -1);
+          var8.createStateLayer(0, (byte) -53).setFrameSprites(2, HuffmanDecoder.createFlatFrameTiles(15658734, 1, 7829367, 10066329)).setTextColor(1118481, -22572).setShadowColor(-93, -1);
           var8.createStateLayer(4, (byte) -53).setFlushBeforeApply(-121, true).setFrameSprites(guard + 31478, var5);
           this.editableTextPainter = (WidgetPainter) ((Object) var8);
           Sprite[] var9 = new Sprite[9];

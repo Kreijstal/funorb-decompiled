@@ -10,7 +10,7 @@ public final class EscapeVector extends NetworkGameClient {
           int var2_int = -74 / ((-71 - guard) / 55);
           GameAppletShell.field_k = false;
           this.renderFrame(-27273);
-          jd.a((byte) -54);
+          ByteArrayPoolSupport.updateMenuGridSounds((byte) -54);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "EscapeVector.O(" + guard + ')');
         }
@@ -28,7 +28,7 @@ public final class EscapeVector extends NetworkGameClient {
           int var2_int = 119 % ((guard + 39) / 33);
           if (null != IsaacRandom.field_d &&
             IsaacRandom.field_d.field_c) {
-            ri.a(-25123);
+            DisplayAndRatingSupport.exitFullscreen(-25123);
             ValidationIndicator.a((byte) 97);
           }
           UiContainer.field_C.serviceOutput();
@@ -43,24 +43,24 @@ public final class EscapeVector extends NetworkGameClient {
           SelfDestructEffects.field_s = false;
           IntValueNode.field_j = false;
           SingleChildContainer.field_y = false;
-          if (!ii.b(16836)) {
+          if (!ChatSettingsSupport.needsFrameworkPreparation(16836)) {
             boolean decompiledFrameRemainder0 = true;
             if (!ShipHullGeometry.field_h) {
               this.advanceAssetLoading((byte) -96);
             } else if (AchievementThresholdRule.isAccountStateReady((byte) -120)) {
-              if (!mj.a((byte) 79)) {
-                if (da.c((byte) -127)) {
+              if (!LoginHandshakeSupport.isLegacyMenuVisible((byte) 79)) {
+                if (SessionMenuSupport.startRequestTimeout((byte) -127)) {
                   if (BoundedRandomAccessFile.activeSession != null) {
                     BoundedRandomAccessFile.activeSession.stopSessionAudio((byte) -41);
                   }
                   boolean stackIn_42_1 = (IsaacRandom.field_d != null);
                   int var3 = this.a(stackIn_42_1, -556);
                   if (var3 == 1) {
-                    ri.a(-25123);
+                    DisplayAndRatingSupport.exitFullscreen(-25123);
                   }
                   if (var3 == 2) {
                     if (IsaacRandom.field_d != null) {
-                      ri.a(-25123);
+                      DisplayAndRatingSupport.exitFullscreen(-25123);
                     }
                     QuitPageSupport.openQuitPage(-9787, PointCloudEffect.activeApplet((byte) -119));
                   }
@@ -76,37 +76,37 @@ public final class EscapeVector extends NetworkGameClient {
                 if (BoundedRandomAccessFile.activeSession == null) {
                   GameModeSelectScreen.advanceMenuEdgeSegments((byte) -125);
                 }
-                if (mj.field_d == 0) {
+                if (LoginHandshakeSupport.field_d == 0) {
                   StringNode.playFrameAppearSound(8192, (byte) 51);
                 }
                 IntValueNode.field_j = true;
                 if (null != BoundedRandomAccessFile.activeSession &&
-                  20 <= mj.field_d) {
+                  20 <= LoginHandshakeSupport.field_d) {
                   IntValueNode.field_j = false;
                 }
-                if (1000 > mj.field_d) {
-                  mj.field_d = mj.field_d + 1;
+                if (1000 > LoginHandshakeSupport.field_d) {
+                  LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
                 }
                 int var3Lifetime2 = SpriteOffset.b(-14);
                 if (var3Lifetime2 == 2) {
-                  ri.a(-25123);
+                  DisplayAndRatingSupport.exitFullscreen(-25123);
                 }
                 if (var3Lifetime2 == 3) {
                   TickClock.a(24, true);
                 }
                 if (var3Lifetime2 == 4) {
-                  da.a((byte) -112);
+                  SessionMenuSupport.beginKeyboardAccountLogin((byte) -112);
                 }
-                if (!mj.a((byte) 92)) {
+                if (!LoginHandshakeSupport.isLegacyMenuVisible((byte) 92)) {
                   if (null != BoundedRandomAccessFile.activeSession) {
-                    da.field_c.updatePointerSelection(PauseMenuState.input.pointerDriven, 320);
+                    SessionMenuSupport.field_c.updatePointerSelection(PauseMenuState.input.pointerDriven, 320);
                     if (var4 != 0) {
                       AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, AlternateUsernameCredentials.field_q.input.pointerDriven);
                     }
                   } else {
                     AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, AlternateUsernameCredentials.field_q.input.pointerDriven);
                   }
-                  mj.field_d = 0;
+                  LoginHandshakeSupport.field_d = 0;
                   ChatMessage.clearFrameOffsets((byte) -67);
                 }
                 if (var4 != 0) {
@@ -137,16 +137,16 @@ public final class EscapeVector extends NetworkGameClient {
               this.k((byte) -67);
               if (var4 != 0) {
                 this.j(-9926);
-                if (!ii.b(16836) &&
-                  mj.a((byte) 125)) {
+                if (!ChatSettingsSupport.needsFrameworkPreparation(16836) &&
+                  LoginHandshakeSupport.isLegacyMenuVisible((byte) 125)) {
                   TickClock.a(24, true);
                 }
               }
             }
           } else {
             this.j(-9926);
-            if (!ii.b(16836) &&
-              mj.a((byte) 125)) {
+            if (!ChatSettingsSupport.needsFrameworkPreparation(16836) &&
+              LoginHandshakeSupport.isLegacyMenuVisible((byte) 125)) {
               TickClock.a(24, true);
             }
           }
@@ -196,7 +196,7 @@ public final class EscapeVector extends NetworkGameClient {
         try {
           EscapeVector.releaseStatics((byte) -95);
           GameKeyHandler.releaseStatics(47);
-          nm.releaseStatics(false);
+          ConnectionSupport.releaseStatics(false);
           InstructionsNavigationSupport.releaseStatics(69);
           AccountPanelInputSupport.releaseStatics((byte) -116);
           NetworkGameClient.releaseStatics((byte) -73);
@@ -208,22 +208,22 @@ public final class EscapeVector extends NetworkGameClient {
           SoftwareRasterizer.releaseStatics();
           ResourceArchive.releaseStatics(124);
           BitmapFont.releaseStatics();
-          nb.releaseStatics(-111);
+          MembershipAssetSupport.releaseStatics(-111);
           PacketBuffer.releaseStatics((byte) 70);
           MonotonicClockSupport.releaseStatics(128);
           RasterRestoreSupport.releaseStatics((byte) -96);
-          bg.releaseStatics(13);
-          rc.releaseStatics(-49153);
+          CampaignLoadingSupport.releaseStatics(13);
+          CanvasRenderSupport.releaseStatics(-49153);
           BrowserSessionMarkerState.releaseStatics(18);
           ArchiveSpriteLoader.releaseStatics(8192);
           SavedDataRequestSupport.releaseStatics((byte) -127);
           NameAvailabilityResultSupport.releaseStatics((byte) 110);
-          ii.releaseStatics(20);
+          ChatSettingsSupport.releaseStatics(20);
           ChatMessage.releaseStatics(-13885);
           KeyboardIdleSupport.releaseStatics(true);
           AccountSessionStatusSupport.releaseStatics(false);
           NameAvailabilityResponseSupport.releaseStatics(-76);
-          ok.releaseStatics(true);
+          IntroFrameRenderer.releaseStatics(true);
           TickClock.releaseStatics((byte) -72);
           RasterBuffer.releaseStatics((byte) 107);
           ArchivePreloader.releaseStatics((byte) -59);
@@ -234,7 +234,7 @@ public final class EscapeVector extends NetworkGameClient {
           AchievementsScreen.releaseStatics(0);
           AchievementTracker.releaseStatics(1);
           GameProgressTracker.releaseStatics(80);
-          p.releaseStatics(99);
+          SimulatorSpriteAssets.releaseStatics(99);
           Js5Transport.releaseStatics(-4470);
           DiskCacheWorker.releaseStatics(-4);
           Js5ArchiveManager.releaseStatics(true);
@@ -251,14 +251,14 @@ public final class EscapeVector extends NetworkGameClient {
           PauseMenuScreen.releaseStatics(-92);
           MenuInputState.releaseStatics((byte) 49);
           PcmResampler.releaseStatics(104);
-          uj.releaseStatics((byte) -106);
+          SharedSpriteAssets.releaseStatics((byte) -106);
           LoginPromptSupport.releaseStatics(9);
           LevelObject.releaseStatics(false);
           IntrusiveNode.releaseStatics(-71);
           SpriteState.releaseStatics(-363232252);
           DualLinkNode.releaseStatics((byte) -11);
           IndexedSpriteState.releaseStatics(-26317);
-          ji.releaseStatics(2097152);
+          ArchiveFactorySupport.releaseStatics(2097152);
           AudioService.releaseStatics((byte) -58);
           ModeProgress.releaseStatics(false);
           SavedCompletionFlags.releaseStatics((byte) 80);
@@ -267,14 +267,14 @@ public final class EscapeVector extends NetworkGameClient {
           ArchiveIndex.releaseStatics((byte) 18);
           GzipDecoder.releaseStatics((byte) 124);
           ArchiveProvider.releaseStatics((byte) 123);
-          mj.releaseStatics(true);
+          LoginHandshakeSupport.releaseStatics(true);
           KeyCodeSupport.releaseStatics(-1);
           QuitPageSupport.releaseStatics((byte) -98);
           AchievementFlagSupport.releaseStatics(true);
-          ke.releaseStatics(-71);
-          wk.releaseStatics(false);
-          da.releaseStatics(0);
-          kc.releaseStatics(-28377);
+          LegacyMenuFontSupport.releaseStatics(-71);
+          IntegerParseSupport.releaseStatics(false);
+          SessionMenuSupport.releaseStatics(0);
+          MembershipPromotionSupport.releaseStatics(-28377);
           ModalStack.releaseStatics(0);
           RegistrationRequestDialog.releaseStatics(-106);
           LoadingProgressDialog.releaseStatics(300);
@@ -283,7 +283,7 @@ public final class EscapeVector extends NetworkGameClient {
           AccountRegistrationPanel.releaseStatics(-125);
           LoginForm.releaseStatics(96);
           DisplayNameForm.releaseStatics((byte) 95);
-          sn.releaseStatics((byte) -118);
+          LoginText.releaseStatics((byte) -118);
           UiTheme.releaseStatics(-27204);
           GuestLoginSupport.releaseStatics((byte) 103);
           LegacyButton.releaseStatics(1);
@@ -293,7 +293,7 @@ public final class EscapeVector extends NetworkGameClient {
           VorbisFloor.releaseStatics();
           SoundCache.releaseStatics((byte) -72);
           IntrusiveNodeHashTable.releaseStatics(0);
-          kh.releaseStatics((byte) 65);
+          SpriteArchiveSupport.releaseStatics((byte) 65);
           KeyboardStateSupport.releaseStatics(105);
           DynamicTerrainRenderer.releaseStatics(3);
           SelfDestructEffects.releaseStatics(-12548);
@@ -322,32 +322,32 @@ public final class EscapeVector extends NetworkGameClient {
           SectorCacheStore.releaseStatics(true);
           CachedArchiveProvider.releaseStatics((byte) 8);
           BoundedRandomAccessFile.releaseStatics(1);
-          e.releaseStatics(32153);
+          RegistrationFlowSupport.releaseStatics(32153);
           ArchiveRequest.releaseStatics(5);
-          on.releaseStatics(127);
+          IntroAudioSupport.releaseStatics(127);
           AccountNoticeDialog.releaseStatics(-23008);
           TextWidgetPainter.releaseStatics(-24239);
           MeshRasterState.releaseStatics();
-          ri.releaseStatics(-117);
+          DisplayAndRatingSupport.releaseStatics(-117);
           MeshMaterial.releaseStatics(true);
           TriangleMesh.releaseStatics(true);
-          ml.releaseStatics(-117);
+          TrackerMusicLoader.releaseStatics(-117);
           RepeatedCharacterSupport.releaseStatics((byte) -96);
-          mm.releaseStatics(56);
-          cf.releaseStatics(3);
+          ThemeAssetSupport.releaseStatics(56);
+          MeshProjectionSupport.releaseStatics(3);
           SpaceCompactionSupport.releaseStatics(-56);
           SavedDataQuerySupport.releaseStatics(0);
-          ua.releaseStatics(0);
-          pc.releaseStatics(true);
+          GameProgressSupport.releaseStatics(0);
+          ModeProgressSupport.releaseStatics(true);
           LegacyWidgetStyle.releaseStatics(4095);
           SecondaryNodeHashTable.releaseStatics((byte) 103);
           DelegatingCanvas.releaseStatics(127);
-          mh.releaseStatics(true);
+          LoginIdentifierSupport.releaseStatics(true);
           ByteStorage.releaseStatics((byte) 86);
           Bzip2Decoder.releaseStatics();
           Bzip2State.releaseStatics(8192);
           ReflectionCheck.releaseStatics((byte) 96);
-          jd.releaseStatics((byte) 77);
+          ByteArrayPoolSupport.releaseStatics((byte) 77);
           BitCountSupport.releaseStatics(26);
           CheckboxPainter.releaseStatics((byte) -44);
           StatefulTextPainter.releaseStatics(true);
@@ -364,26 +364,26 @@ public final class EscapeVector extends NetworkGameClient {
           PauseMenuState.releaseStatics(-5691);
           TrackerGainSupport.releaseStatics(false);
           QuickChatPhraseDefinition.releaseStatics(95);
-          v.releaseStatics((byte) -87);
+          ServerListNavigationSupport.releaseStatics((byte) -87);
           QuickChatPhraseCache.releaseStatics(100);
           WeightedLruCache.releaseStatics(true);
           AccountOverlayController.releaseStatics((byte) 118);
-          ph.releaseStatics((byte) 106);
+          HuffmanDecoder.releaseStatics((byte) 106);
           AccountSessionSupport.releaseStatics(0);
-          ti.releaseStatics((byte) -101);
+          LegacyMenuThemeSupport.releaseStatics((byte) -101);
           SocketConnector.releaseStatics(true);
           NanoTickClock.releaseStatics(116);
           ImageProducerRasterBuffer.releaseStatics(-1);
           ChatHistorySupport.releaseStatics(119);
           DisplayModeInfo.releaseStatics(123);
-          id.releaseStatics(-17129);
-          sf.releaseStatics(false);
+          IntroRasterSupport.releaseStatics(-17129);
+          SessionCounterState.releaseStatics(false);
           SimulatorAssetSupport.releaseStatics((byte) -119);
           IntValueNode.releaseStatics(true);
           WhirlpoolHasher.releaseStatics(true);
           StringNode.releaseStatics((byte) 123);
           SpriteDecodeSupport.releaseStatics(122);
-          pb.releaseStatics(false);
+          MenuTitleRenderSupport.releaseStatics(false);
           PathPoint.releaseStatics(-10497);
           LabeledField.releaseStatics(88);
           ValidatedTextWidget.releaseStatics((byte) -87);
@@ -416,7 +416,7 @@ public final class EscapeVector extends NetworkGameClient {
           DualLinkDequeIterator.releaseStatics(true);
           HighscoreQuery.releaseStatics(-83);
           ScoreSubmission.releaseStatics(65535);
-          di.releaseStatics(0);
+          HighscorePlayerRecord.releaseStatics(0);
           ArchiveKeyRequest.releaseStatics((byte) -77);
           ThreeSliceButtonPainter.releaseStatics((byte) -31);
           LinkButtonPainter.releaseStatics((byte) 97);
@@ -495,32 +495,32 @@ public final class EscapeVector extends NetworkGameClient {
             ModeProgress.refreshAccountUi(-122);
             InstructionsScreen.setLoadingProgress(TextLayout.field_f, guard ^ -17595, 70.0f);
             this.renderClient((byte) -128);
-            ByteStorage.gameFont = DisplayNameForm.loadBinaryFont(guard ^ -92, sn.field_c, "", "fonts_squarish16", IndexedSpriteState.field_j);
-            sn.field_c = null;
-            SlidingSpriteTransition.field_f = fe.a("", IndexedSpriteState.field_j, "titles_escape", true);
-            ArchiveIndex.field_o = fe.a("", IndexedSpriteState.field_j, "titles_vector", true);
-            DisplayNameForm.field_O = fe.a("", IndexedSpriteState.field_j, "titles_achievements", true);
-            ValidationHelpWidget.field_I = fe.a("", IndexedSpriteState.field_j, "titles_achievements_this_game", true);
-            DynamicTerrainRenderer.field_w = fe.a("", IndexedSpriteState.field_j, "titles_highscores", true);
-            AccountTermsPanel.field_H = fe.a("", IndexedSpriteState.field_j, "titles_instructions", true);
-            SocketConnector.field_c = fe.a("", IndexedSpriteState.field_j, "titles_retrieval_levels", true);
-            p.field_c = fe.a("", IndexedSpriteState.field_j, "titles_retribution_levels", true);
-            ValidationIndicator.field_Q = fe.a("", IndexedSpriteState.field_j, "titles_simulator_levels", true);
-            TextWidgetPainter.field_j = fe.a("", IndexedSpriteState.field_j, "titles_select_level_set", true);
-            BufferedSocket.field_g = kh.a(IndexedSpriteState.field_j, (byte) 123, "", "level_set_icons");
+            ByteStorage.gameFont = DisplayNameForm.loadBinaryFont(guard ^ -92, LoginText.field_c, "", "fonts_squarish16", IndexedSpriteState.field_j);
+            LoginText.field_c = null;
+            SlidingSpriteTransition.field_f = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "titles_escape", true);
+            ArchiveIndex.field_o = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "titles_vector", true);
+            DisplayNameForm.field_O = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "titles_achievements", true);
+            ValidationHelpWidget.field_I = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "titles_achievements_this_game", true);
+            DynamicTerrainRenderer.field_w = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "titles_highscores", true);
+            AccountTermsPanel.field_H = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "titles_instructions", true);
+            SocketConnector.field_c = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "titles_retrieval_levels", true);
+            SimulatorSpriteAssets.field_c = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "titles_retribution_levels", true);
+            ValidationIndicator.field_Q = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "titles_simulator_levels", true);
+            TextWidgetPainter.field_j = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "titles_select_level_set", true);
+            BufferedSocket.field_g = SpriteArchiveSupport.loadNamedSprites(IndexedSpriteState.field_j, (byte) 123, "", "level_set_icons");
             this.loadLevelObjectAssets((byte) 125);
-            Js5NetworkRequest.field_H = fe.a("", IndexedSpriteState.field_j, "seeker_mine", true);
-            SelfDestructEffects.field_b = fe.a("", IndexedSpriteState.field_j, "seeker_mine_glow", true);
-            ResourceArchive.field_m = fe.a("", IndexedSpriteState.field_j, "rock_buster", true);
-            IntPoint.field_b = fe.a("", IndexedSpriteState.field_j, "interface_level_complete", true);
-            HighscoreQuery.field_g = fe.a("", IndexedSpriteState.field_j, "interface_game_over", true);
-            LoginHandshakeState.achievementIcons = kh.a(IndexedSpriteState.field_j, (byte) 124, "", "achievements");
+            Js5NetworkRequest.field_H = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "seeker_mine", true);
+            SelfDestructEffects.field_b = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "seeker_mine_glow", true);
+            ResourceArchive.field_m = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "rock_buster", true);
+            IntPoint.field_b = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "interface_level_complete", true);
+            HighscoreQuery.field_g = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "interface_game_over", true);
+            LoginHandshakeState.achievementIcons = SpriteArchiveSupport.loadNamedSprites(IndexedSpriteState.field_j, (byte) 124, "", "achievements");
             AccountPayloadSupport.installAchievementIcons(LoginHandshakeState.achievementIcons, 0);
-            CheckboxPainter.field_c = fe.a("basic", MarkerSliderPainter.field_h, "unachieved", true);
-            DualLinkDequeIterator.field_e = fe.a("basic", MarkerSliderPainter.field_h, "locked", true);
+            CheckboxPainter.field_c = MembershipPromotionScreen.loadNamedSprite("basic", MarkerSliderPainter.field_h, "unachieved", true);
+            DualLinkDequeIterator.field_e = MembershipPromotionScreen.loadNamedSprite("basic", MarkerSliderPainter.field_h, "locked", true);
             SpriteLoadTask.field_l = new Sprite(CheckboxPainter.field_c.fullWidth, CheckboxPainter.field_c.fullHeight);
             SpriteLoadTask.field_l.trimTransparentEdges();
-            AchievementThresholdRule.setMirroredPanelBackground(fe.a("", IndexedSpriteState.field_j, "achievements_next_page_button", true), -84);
+            AchievementThresholdRule.setMirroredPanelBackground(MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "achievements_next_page_button", true), -84);
             RasterSnapshot.field_m = new Sprite[LoginHandshakeState.achievementIcons.length];
             int var2_int = 0;
             while (LoginHandshakeState.achievementIcons.length > var2_int) {
@@ -532,15 +532,15 @@ public final class EscapeVector extends NetworkGameClient {
                 return;
               }
             }
-            id.field_a = new Sprite(32, 32);
-            id.field_a.bindAsFramebuffer();
+            IntroRasterSupport.field_a = new Sprite(32, 32);
+            IntroRasterSupport.field_a.bindAsFramebuffer();
             CheckboxPainter.field_c.drawDownscaled(0, 0, 32, 32);
-            uj.field_b = new Sprite(32, 32);
-            uj.field_b.bindAsFramebuffer();
+            SharedSpriteAssets.field_b = new Sprite(32, 32);
+            SharedSpriteAssets.field_b.bindAsFramebuffer();
             DualLinkDequeIterator.field_e.drawDownscaled(0, 0, 32, 32);
             AlphaContainer.field_D.a(guard ^ -35);
             this.loadLevelSelectBackgrounds(false);
-            SavedCompletionFlags.field_f = kh.a(IndexedSpriteState.field_j, (byte) 123, "", "level_complete_tick");
+            SavedCompletionFlags.field_f = SpriteArchiveSupport.loadNamedSprites(IndexedSpriteState.field_j, (byte) 123, "", "level_complete_tick");
             FullscreenFocusCanvas.field_a = SpriteCheckboxPainter.loadIndexedSprites("scrshots", "", (byte) -48, IndexedSpriteState.field_j);
             MarkerSliderPainter.field_h = null;
             SpriteOffset.a((byte) 92);
@@ -553,15 +553,15 @@ public final class EscapeVector extends NetworkGameClient {
               SoundCache var2_ref = new SoundCache(CheckboxPainter.field_h, StripedProgressBar.field_I);
               StripedProgressBar.field_I = null;
               CheckboxPainter.field_h = null;
-              ContentTransitionDialog.field_eb = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/menu");
-              EditableTextWidget.field_O = nm.a(guard ^ -94, "", var2_ref, PointCloudEffect.field_D, "music/briefing");
-              MenuInputState.field_d = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/panic");
+              ContentTransitionDialog.field_eb = ConnectionSupport.loadNamedTrackerMusic(2, "", var2_ref, PointCloudEffect.field_D, "music/menu");
+              EditableTextWidget.field_O = ConnectionSupport.loadNamedTrackerMusic(guard ^ -94, "", var2_ref, PointCloudEffect.field_D, "music/briefing");
+              MenuInputState.field_d = ConnectionSupport.loadNamedTrackerMusic(2, "", var2_ref, PointCloudEffect.field_D, "music/panic");
               ObjectSpriteSet.field_d = new TrackerMusicDefinition[5];
-              ObjectSpriteSet.field_d[0] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_1");
-              ObjectSpriteSet.field_d[1] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_2");
-              ObjectSpriteSet.field_d[2] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_3");
-              ObjectSpriteSet.field_d[3] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_4");
-              ObjectSpriteSet.field_d[4] = nm.a(PacketBuffer.xor((int) guard, -94), "", var2_ref, PointCloudEffect.field_D, "music/simulator");
+              ObjectSpriteSet.field_d[0] = ConnectionSupport.loadNamedTrackerMusic(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_1");
+              ObjectSpriteSet.field_d[1] = ConnectionSupport.loadNamedTrackerMusic(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_2");
+              ObjectSpriteSet.field_d[2] = ConnectionSupport.loadNamedTrackerMusic(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_3");
+              ObjectSpriteSet.field_d[3] = ConnectionSupport.loadNamedTrackerMusic(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_4");
+              ObjectSpriteSet.field_d[4] = ConnectionSupport.loadNamedTrackerMusic(PacketBuffer.xor((int) guard, -94), "", var2_ref, PointCloudEffect.field_D, "music/simulator");
               PointCloudEffect.field_D = null;
               SpriteOffset.a((byte) 93);
               return;
@@ -569,7 +569,7 @@ public final class EscapeVector extends NetworkGameClient {
             if (null == UsernameCredentials.field_h) {
               InstructionsScreen.setLoadingProgress(DropTargetWidget.field_H, guard ^ -17595, 100.0f);
               this.renderClient((byte) -127);
-              UsernameCredentials.field_h = bg.a(UiContainer.field_B, UsernameCredentials.field_h, StatefulTextPainter.field_u, 0);
+              UsernameCredentials.field_h = CampaignLoadingSupport.loadCampaigns(UiContainer.field_B, UsernameCredentials.field_h, StatefulTextPainter.field_u, 0);
               UiContainer.field_B = null;
               SpriteOffset.a((byte) 51);
               return;
@@ -578,11 +578,11 @@ public final class EscapeVector extends NetworkGameClient {
             AlternateUsernameCredentials.field_q = new MainMenuScreen();
             CheckboxPainter.field_l = new LevelSelectScreen(1, Bullet.accountStateIndex(guard ^ -35));
             UiComponent.field_o = new GameModeSelectScreen(true);
-            rc.field_a = new HighscoresScreen(false, 1);
+            CanvasRenderSupport.field_a = new HighscoresScreen(false, 1);
             if (guard != -96) {
               field_z = (String) null;
             }
-            da.field_b = new AchievementsScreen();
+            SessionMenuSupport.field_b = new AchievementsScreen();
             ArchiveLoadTask.field_e = new InstructionsScreen(true);
             GameplaySession.resetSessionMenuState((byte) 115);
             SimulatorAssetSupport.c(0);
@@ -601,7 +601,7 @@ public final class EscapeVector extends NetworkGameClient {
           SecondaryNodeHashTable.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mainmenu_formation").toPcmSample().resample(var2);
           ArchiveRequest.field_w = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mouseover").toPcmSample().resample(var2);
           AccountOverlayController.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "level_indicator").toPcmSample().resample(var2);
-          pc.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "button_formation").toPcmSample().resample(var2);
+          ModeProgressSupport.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "button_formation").toPcmSample().resample(var2);
           UiTheme.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "frame-appear").toPcmSample().resample(var2);
           QuickChatPhraseDefinition.field_t = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "photo-blob-grow").toPcmSample().resample(var2);
           SavedCompletionFlags.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "photo-body-explode").toPcmSample().resample(var2);
@@ -611,7 +611,7 @@ public final class EscapeVector extends NetworkGameClient {
           ValidationIndicator.field_N = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "gas-pump").toPcmSample().resample(var2);
           LoginDialog.field_mb = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "gas-burn").toPcmSample().resample(var2);
           TerrainMaskSupport.field_e = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "left-foot-down").toPcmSample().resample(var2);
-          ri.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "right-foot-down").toPcmSample().resample(var2);
+          DisplayAndRatingSupport.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "right-foot-down").toPcmSample().resample(var2);
           DraggableWidget.field_M = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "ship-fire").toPcmSample().resample(var2);
           ModeProgress.field_e = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "ship-fire-three").toPcmSample().resample(var2);
           ShipHullGeometry.field_j = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "alien-fire").toPcmSample().resample(var2);
@@ -625,7 +625,7 @@ public final class EscapeVector extends NetworkGameClient {
           SimulatorAssetSupport.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "crate-attach").toPcmSample().resample(var2);
           ObjectSpriteSet.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "tether-tighten").toPcmSample().resample(var2);
           SavedDataQuerySupport.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "tether-release").toPcmSample().resample(var2);
-          nm.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "powerup-collect").toPcmSample().resample(var2);
+          ConnectionSupport.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "powerup-collect").toPcmSample().resample(var2);
           ChatHistorySupport.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "repeller-active").toPcmSample().resample(var2);
           LoadingProgressDialog.field_hb = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "magnet-active").toPcmSample().resample(var2);
           SpriteDecodeSupport.field_h = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "laser").toPcmSample().resample(var2);
@@ -654,8 +654,8 @@ public final class EscapeVector extends NetworkGameClient {
           if (guard != -1) {
             field_z = (String) null;
           }
-          nb.a((java.applet.Applet) (this), 1585176, (byte) -125, 6340704, LoginCredentials.field_c, 192);
-          AccountSessionSupport.field_a = new fe((java.applet.Applet) (this), WeightedCacheEntry.field_r, FullscreenFocusCanvas.field_a, LoginCredentials.field_c);
+          MembershipAssetSupport.initializePromotionAssets((java.applet.Applet) (this), 1585176, (byte) -125, 6340704, LoginCredentials.field_c, 192);
+          AccountSessionSupport.field_a = new MembershipPromotionScreen((java.applet.Applet) (this), WeightedCacheEntry.field_r, FullscreenFocusCanvas.field_a, LoginCredentials.field_c);
           FullscreenFocusCanvas.field_a = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -702,10 +702,10 @@ public final class EscapeVector extends NetworkGameClient {
 
     private final void loadObjectGlowSprites(int fuelIndex) {
         try {
-          StripedProgressBar.objectGlowSprites[fuelIndex] = fe.a("", IndexedSpriteState.field_j, "sprites_fuel_glow", true);
-          StripedProgressBar.objectGlowSprites[2] = fe.a("", IndexedSpriteState.field_j, "sprites_turret_glow", true);
-          StripedProgressBar.objectGlowSprites[3] = fe.a("", IndexedSpriteState.field_j, "sprites_magnet_glow", true);
-          StripedProgressBar.objectGlowSprites[4] = fe.a("", IndexedSpriteState.field_j, "sprites_repeller_glow", true);
+          StripedProgressBar.objectGlowSprites[fuelIndex] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_fuel_glow", true);
+          StripedProgressBar.objectGlowSprites[2] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_turret_glow", true);
+          StripedProgressBar.objectGlowSprites[3] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_magnet_glow", true);
+          StripedProgressBar.objectGlowSprites[4] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_repeller_glow", true);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "EscapeVector.DB(" + fuelIndex + ')');
         }
@@ -743,7 +743,7 @@ public final class EscapeVector extends NetworkGameClient {
     final void shutdownClientServices(boolean guard) {
         try {
           if (IsaacRandom.field_d != null) {
-            ri.a(-25123);
+            DisplayAndRatingSupport.exitFullscreen(-25123);
           }
           if (!guard) {
             field_z = (String) null;
@@ -754,7 +754,7 @@ public final class EscapeVector extends NetworkGameClient {
           if (LevelSelectScreen.field_l != null) {
             LevelSelectScreen.field_l.shutdown();
           }
-          di.a(1);
+          HighscorePlayerRecord.shutdownClient(1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -771,19 +771,19 @@ public final class EscapeVector extends NetworkGameClient {
             SpriteOffset.a((byte) 57);
           }
           IndexedSpriteState.field_j = MarkerSliderPainter.createArchive(1, 0, guard, 1, true);
-          sn.field_c = mj.a(6, -125);
-          CheckboxPainter.field_h = mj.a(2, -126);
-          StripedProgressBar.field_I = mj.a(3, -127);
-          PointCloudEffect.field_D = mj.a(4, -126);
-          UiContainer.field_B = mj.a(10, -124);
-          StatefulTextPainter.field_u = mj.a(5, -128);
+          LoginText.field_c = LoginHandshakeSupport.createDefaultArchive(6, -125);
+          CheckboxPainter.field_h = LoginHandshakeSupport.createDefaultArchive(2, -126);
+          StripedProgressBar.field_I = LoginHandshakeSupport.createDefaultArchive(3, -127);
+          PointCloudEffect.field_D = LoginHandshakeSupport.createDefaultArchive(4, -126);
+          UiContainer.field_B = LoginHandshakeSupport.createDefaultArchive(10, -124);
+          StatefulTextPainter.field_u = LoginHandshakeSupport.createDefaultArchive(5, -128);
           HighscoreTable.archiveInitializationHook((byte) 57, SavedDataQuery.field_m, MarkerSliderPainter.field_h);
           UiTheme.a(MarkerSliderPainter.field_h, SavedDataQuery.field_m, (byte) -96);
           DualLinkNode.field_n = new ArchivePreloader(70);
           DualLinkNode.field_n.addNamedGroup(MarkerSliderPainter.field_h, TextFieldValidator.field_l, DebouncedValidator.field_d, "basic", 14826);
           DualLinkNode.field_n.addNamedGroup(IndexedSpriteState.field_j, TextFieldValidator.field_l, DebouncedValidator.field_d, "", 14826);
           DualLinkNode.field_n.addNamedGroup(IndexedSpriteState.field_j, TextFieldValidator.field_l, DebouncedValidator.field_d, "scrshots", 14826);
-          DualLinkNode.field_n.addNamedGroup(sn.field_c, CipherPacketBuffer.field_o, NanoTickClock.field_h, "", 14826);
+          DualLinkNode.field_n.addNamedGroup(LoginText.field_c, CipherPacketBuffer.field_o, NanoTickClock.field_h, "", 14826);
           DualLinkNode.field_n.addWholeArchive(SavedDataWrite.field_g, (byte) -125, ArchiveSpriteLoader.field_d, CheckboxPainter.field_h);
           DualLinkNode.field_n.addWholeArchive(SavedDataWrite.field_g, (byte) -115, ArchiveSpriteLoader.field_d, StripedProgressBar.field_I);
           DualLinkNode.field_n.addWholeArchive(NameAvailabilityResultSupport.field_f, (byte) -119, ArchivePreloader.field_d, PointCloudEffect.field_D);
@@ -805,7 +805,7 @@ public final class EscapeVector extends NetworkGameClient {
             field_z = (String) null;
           }
           int var3_int = -right.insertionOrder + left.insertionOrder;
-          if (left.location == di.field_f) {
+          if (left.location == HighscorePlayerRecord.field_f) {
             var3_int -= 200;
           } else if (null == left.location) {
             var3_int += 200;
@@ -813,7 +813,7 @@ public final class EscapeVector extends NetworkGameClient {
               var3_int -= 200;
             }
           }
-          if (di.field_f == right.location) {
+          if (HighscorePlayerRecord.field_f == right.location) {
             var3_int += 200;
           } else if (right.location == null) {
             var3_int -= 200;
@@ -845,25 +845,25 @@ public final class EscapeVector extends NetworkGameClient {
     private final void loadObjectExplosionSamples(int crateIndex, PcmResampler resampler) {
         String stackIn_6_2 = null;
         try {
-          sf.objectExplosionSamples[0] = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-fuel-tank").toPcmSample().resample(resampler);
-          sf.objectExplosionSamples[crateIndex] = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-crate").toPcmSample().resample(resampler);
+          SessionCounterState.objectExplosionSamples[0] = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-fuel-tank").toPcmSample().resample(resampler);
+          SessionCounterState.objectExplosionSamples[crateIndex] = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-crate").toPcmSample().resample(resampler);
           PcmSample dupTemp$8 = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-magnet-repeller").toPcmSample().resample(resampler);
-          sf.objectExplosionSamples[4] = dupTemp$8;
-          sf.objectExplosionSamples[3] = dupTemp$8;
-          sf.objectExplosionSamples[2] = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-turret").toPcmSample().resample(resampler);
+          SessionCounterState.objectExplosionSamples[4] = dupTemp$8;
+          SessionCounterState.objectExplosionSamples[3] = dupTemp$8;
+          SessionCounterState.objectExplosionSamples[2] = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-turret").toPcmSample().resample(resampler);
           PcmSample dupTemp$9 = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-tnt").toPcmSample().resample(resampler);
-          sf.objectExplosionSamples[8] = dupTemp$9;
-          sf.objectExplosionSamples[5] = dupTemp$9;
+          SessionCounterState.objectExplosionSamples[8] = dupTemp$9;
+          SessionCounterState.objectExplosionSamples[5] = dupTemp$9;
           PcmSample dupTemp$10 = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-laser").toPcmSample().resample(resampler);
-          sf.objectExplosionSamples[7] = dupTemp$10;
-          sf.objectExplosionSamples[6] = dupTemp$10;
+          SessionCounterState.objectExplosionSamples[7] = dupTemp$10;
+          SessionCounterState.objectExplosionSamples[6] = dupTemp$10;
           PcmSample dupTemp$11 = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-powerup").toPcmSample().resample(resampler);
-          sf.objectExplosionSamples[13] = dupTemp$11;
-          sf.objectExplosionSamples[12] = dupTemp$11;
-          sf.objectExplosionSamples[11] = dupTemp$11;
-          sf.objectExplosionSamples[10] = dupTemp$11;
-          sf.objectExplosionSamples[9] = dupTemp$11;
-          this.setExtraObjectExplosionSamples((byte) -60, sf.objectExplosionSamples[0]);
+          SessionCounterState.objectExplosionSamples[13] = dupTemp$11;
+          SessionCounterState.objectExplosionSamples[12] = dupTemp$11;
+          SessionCounterState.objectExplosionSamples[11] = dupTemp$11;
+          SessionCounterState.objectExplosionSamples[10] = dupTemp$11;
+          SessionCounterState.objectExplosionSamples[9] = dupTemp$11;
+          this.setExtraObjectExplosionSamples((byte) -60, SessionCounterState.objectExplosionSamples[0]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -888,7 +888,7 @@ public final class EscapeVector extends NetworkGameClient {
             field_z = (String) null;
           }
           boolean var4 = (UiComponent.g(11187));
-          if (ii.b(16836)) {
+          if (ChatSettingsSupport.needsFrameworkPreparation(16836)) {
             TransitionPoint.renderAccountLayer((var4), (byte) 92, var3);
             return;
           }
@@ -910,9 +910,9 @@ public final class EscapeVector extends NetworkGameClient {
             if (BoundedRandomAccessFile.activeSession != null) {
               BoundedRandomAccessFile.activeSession.renderSession(0);
             }
-            if (wk.field_c) {
+            if (IntegerParseSupport.field_c) {
               SoftwareRasterizer.clearFramebuffer();
-              AccountSessionSupport.field_a.c(-76);
+              AccountSessionSupport.field_a.draw(-76);
               decompiledFrameRemainder0 = (var9 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -923,13 +923,13 @@ public final class EscapeVector extends NetworkGameClient {
                 }
                 if (decompiledFrameRemainder0) {
                   if (!PacketBuffer.field_h) {
-                    if (e.field_a) {
-                      da.field_b.draw(3);
+                    if (RegistrationFlowSupport.field_a) {
+                      SessionMenuSupport.field_b.draw(3);
                       decompiledFrameRemainder0 = (var9 != 0);
                     }
                     if (decompiledFrameRemainder0) {
                       if (CheckboxPainter.field_n) {
-                        rc.field_a.draw(false);
+                        CanvasRenderSupport.field_a.draw(false);
                         decompiledFrameRemainder0 = (var9 != 0);
                       }
                       if (decompiledFrameRemainder0) {
@@ -938,8 +938,8 @@ public final class EscapeVector extends NetworkGameClient {
                           decompiledFrameRemainder0 = (var9 != 0);
                         }
                         if (decompiledFrameRemainder0) {
-                          if (null != da.field_c) {
-                            da.field_c.draw((byte) 126);
+                          if (null != SessionMenuSupport.field_c) {
+                            SessionMenuSupport.field_c.draw((byte) 126);
                             decompiledFrameRemainder0 = (var9 != 0);
                           }
                           if (decompiledFrameRemainder0 &&
@@ -983,9 +983,9 @@ public final class EscapeVector extends NetworkGameClient {
             long var7 = Runtime.getRuntime().freeMemory();
             ByteStorage.gameFont.drawRight((var5 - var7) / 1000L + " kB / " + var5 / 1000L + " kB", 636, 140, 16777215, 0);
           }
-          if (da.c((byte) -106) &&
-            !mj.a((byte) 122)) {
-            mh.a((byte) -111, (var4));
+          if (SessionMenuSupport.startRequestTimeout((byte) -106) &&
+            !LoginHandshakeSupport.isLegacyMenuVisible((byte) 122)) {
+            LoginIdentifierSupport.drawAccountOverlay((byte) -111, (var4));
           }
           SecondaryNodeHashTable.presentRaster(var3, 0, -1, 0);
           return;
@@ -1014,15 +1014,15 @@ public final class EscapeVector extends NetworkGameClient {
           boolean stackIn_3_0 = var3;
           int stackIn_3_1 = 4;
           boolean stackIn_4_2 = (null != IntValueNode.field_i);
-          String var4 = InstructionsScreen.loginRequirementText((stackIn_3_0), stackIn_3_1, stackIn_4_2, ua.field_c.hasPendingProgress(17523));
+          String var4 = InstructionsScreen.loginRequirementText((stackIn_3_0), stackIn_3_1, stackIn_4_2, GameProgressSupport.field_c.hasPendingProgress(17523));
           boolean stackIn_7_0 = var3;
-          boolean stackIn_7_1 = ua.field_c.hasPendingProgress(17523);
+          boolean stackIn_7_1 = GameProgressSupport.field_c.hasPendingProgress(17523);
           int stackIn_7_2 = -8;
           boolean stackIn_8_3 = (null != IntValueNode.field_i);
           String var5 = AchievementRecord.chooseAlternateClickPromptWithIntGuard((stackIn_7_0), stackIn_7_1, stackIn_7_2, stackIn_8_3);
           boolean stackIn_11_0 = var3;
           boolean stackIn_12_1 = (IntValueNode.field_i != null);
-          String var6 = ScoreSubmission.a((stackIn_11_0), stackIn_12_1, (byte) -112, ua.field_c.hasPendingProgress(17523));
+          String var6 = ScoreSubmission.a((stackIn_11_0), stackIn_12_1, (byte) -112, GameProgressSupport.field_c.hasPendingProgress(17523));
           int var7 = ByteStorage.gameFont.stringWidth(var2);
           int var8 = ByteStorage.gameFont.stringWidth(var4);
           if (var8 > var7) {
@@ -1037,16 +1037,16 @@ public final class EscapeVector extends NetworkGameClient {
             var7 = var8Lifetime2;
           }
           int var8Lifetime3 = var7 / 2 + 25;
-          if (40 > mj.field_d) {
-            stackIn_26_0 = -mj.field_d + 40;
+          if (40 > LoginHandshakeSupport.field_d) {
+            stackIn_26_0 = -LoginHandshakeSupport.field_d + 40;
           } else {
             stackIn_26_0 = 0;
           }
           AccountNoticeKind.drawAnimatedPanelFrame(stackIn_26_0, -var8Lifetime3 + 320, var8Lifetime3 + 321, 405, true, 29788, true, 6324320, 3162160, 0, 195, true);
-          if (20 <= mj.field_d) {
+          if (20 <= LoginHandshakeSupport.field_d) {
             stackIn_30_0 = 0;
           } else {
-            stackIn_30_0 = (20 - mj.field_d) * 2;
+            stackIn_30_0 = (20 - LoginHandshakeSupport.field_d) * 2;
           }
           int stackIn_33_1 = 240;
           int stackIn_33_2 = 400;
@@ -1054,13 +1054,13 @@ public final class EscapeVector extends NetworkGameClient {
           boolean stackIn_33_4 = true;
           int stackIn_33_5 = 29788;
           boolean stackIn_33_6 = false;
-          stackIn_34_7 = (di.field_d.selectedIndex == 0) ? (16777215) : (6340704);
-          stackIn_38_8 = (di.field_d.selectedIndex == 0) ? (8421504) : (3170352);
+          stackIn_34_7 = (HighscorePlayerRecord.field_d.selectedIndex == 0) ? (16777215) : (6340704);
+          stackIn_38_8 = (HighscorePlayerRecord.field_d.selectedIndex == 0) ? (8421504) : (3170352);
           AccountNoticeKind.drawAnimatedPanelFrame(stackIn_30_0, stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_33_4, stackIn_33_5, stackIn_33_6, stackIn_34_7, stackIn_38_8, 1, 262, doubleBorder);
-          if (mj.field_d >= 30) {
+          if (LoginHandshakeSupport.field_d >= 30) {
             stackIn_42_0 = 0;
           } else {
-            stackIn_42_0 = 2 * (30 - mj.field_d);
+            stackIn_42_0 = 2 * (30 - LoginHandshakeSupport.field_d);
           }
           int stackIn_45_1 = 280;
           int stackIn_45_2 = 360;
@@ -1068,20 +1068,20 @@ public final class EscapeVector extends NetworkGameClient {
           boolean stackIn_45_4 = true;
           int stackIn_45_5 = 29788;
           boolean stackIn_45_6 = false;
-          stackIn_46_7 = (di.field_d.selectedIndex == 1) ? (16777215) : (6340704);
-          stackIn_50_8 = (di.field_d.selectedIndex == 1) ? (8421504) : (3170352);
+          stackIn_46_7 = (HighscorePlayerRecord.field_d.selectedIndex == 1) ? (16777215) : (6340704);
+          stackIn_50_8 = (HighscorePlayerRecord.field_d.selectedIndex == 1) ? (8421504) : (3170352);
           AccountNoticeKind.drawAnimatedPanelFrame(stackIn_42_0, stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_45_4, stackIn_45_5, stackIn_45_6, stackIn_46_7, stackIn_50_8, 2, 332, false);
-          pb.a(4);
+          MenuTitleRenderSupport.drawTitles(4);
           ByteStorage.gameFont.drawCentered(var2, 320, 235, 10551200, -1);
           ByteStorage.gameFont.drawCentered(var4, 320, 255, 10551200, -1);
           int stackIn_53_0 = 285;
           String stackIn_53_1 = IntrusiveDeque.field_e;
-          stackIn_54_2 = (di.field_d.selectedIndex != 0) ? (6340704) : (16777215);
+          stackIn_54_2 = (HighscorePlayerRecord.field_d.selectedIndex != 0) ? (6340704) : (16777215);
           MatchingTextValidator.a(stackIn_53_0, stackIn_53_1, stackIn_54_2, -128, 320);
           ByteStorage.gameFont.drawCentered(var5, 320, 325, 10551200, -1);
           int stackIn_57_0 = 355;
           String stackIn_57_1 = StringNode.field_j;
-          stackIn_58_2 = (di.field_d.selectedIndex == 1) ? (16777215) : (6340704);
+          stackIn_58_2 = (HighscorePlayerRecord.field_d.selectedIndex == 1) ? (16777215) : (6340704);
           MatchingTextValidator.a(stackIn_57_0, stackIn_57_1, stackIn_58_2, -118, 320);
           ByteStorage.gameFont.drawCentered(var6, 320, 385, 10551200, -1);
           return;
@@ -1113,8 +1113,8 @@ public final class EscapeVector extends NetworkGameClient {
           SoundCache.field_a.setFeedback(0.9399999976158142f);
           SoundCache.field_a.setDampingTimeMicros(14.826103210449219f);
           ObjectSpriteSet.field_e.addSubstream(SoundCache.field_a);
-          nb.field_c = new PcmStreamMixer();
-          BoundedRandomAccessFile.field_b = new ReverbPcmStream(nb.field_c);
+          MembershipAssetSupport.field_c = new PcmStreamMixer();
+          BoundedRandomAccessFile.field_b = new ReverbPcmStream(MembershipAssetSupport.field_c);
           if (guard != -97) {
             EscapeVector.drawOutlinedText((String) null, 31, 49, (byte) 88);
           }
@@ -1122,7 +1122,7 @@ public final class EscapeVector extends NetworkGameClient {
           BoundedRandomAccessFile.field_b.setDampingTimeMicros(14.826103210449219f);
           LevelSelectScreen.field_l.setStream(BoundedRandomAccessFile.field_b);
           this.a(true, (byte) -35, true, true, true);
-          ua.field_c = new GameProgressTracker();
+          GameProgressSupport.field_c = new GameProgressTracker();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -1136,21 +1136,21 @@ public final class EscapeVector extends NetworkGameClient {
 
     private final void loadObjectSprites(int guard) {
         try {
-          AchievementThresholdRule.objectSprites[0] = fe.a("", IndexedSpriteState.field_j, "sprites_fuel", true);
-          AchievementThresholdRule.objectSprites[1] = fe.a("", IndexedSpriteState.field_j, "sprites_crate", true);
-          AchievementThresholdRule.objectSprites[2] = fe.a("", IndexedSpriteState.field_j, "sprites_turret", true);
-          AchievementThresholdRule.objectSprites[3] = fe.a("", IndexedSpriteState.field_j, "sprites_magnet", true);
-          AchievementThresholdRule.objectSprites[4] = fe.a("", IndexedSpriteState.field_j, "sprites_repeller", true);
-          AchievementThresholdRule.objectSprites[5] = fe.a("", IndexedSpriteState.field_j, "sprites_tnt", true);
-          AchievementThresholdRule.objectSprites[6] = fe.a("", IndexedSpriteState.field_j, "sprites_laser_left", true);
+          AchievementThresholdRule.objectSprites[0] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_fuel", true);
+          AchievementThresholdRule.objectSprites[1] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_crate", true);
+          AchievementThresholdRule.objectSprites[2] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_turret", true);
+          AchievementThresholdRule.objectSprites[3] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_magnet", true);
+          AchievementThresholdRule.objectSprites[4] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_repeller", true);
+          AchievementThresholdRule.objectSprites[5] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_tnt", true);
+          AchievementThresholdRule.objectSprites[6] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_laser_left", true);
           int var2_int = -111 / ((60 - guard) / 58);
-          AchievementThresholdRule.objectSprites[7] = fe.a("", IndexedSpriteState.field_j, "sprites_laser_right", true);
-          AchievementThresholdRule.objectSprites[8] = fe.a("", IndexedSpriteState.field_j, "sprites_barrier", true);
-          AchievementThresholdRule.objectSprites[9] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_shield", true);
-          AchievementThresholdRule.objectSprites[10] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_triple_shot", true);
-          AchievementThresholdRule.objectSprites[11] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_thrust", true);
-          AchievementThresholdRule.objectSprites[12] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_one_rockbuster", true);
-          AchievementThresholdRule.objectSprites[13] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_five_rockbusters", true);
+          AchievementThresholdRule.objectSprites[7] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_laser_right", true);
+          AchievementThresholdRule.objectSprites[8] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_barrier", true);
+          AchievementThresholdRule.objectSprites[9] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_powerup_shield", true);
+          AchievementThresholdRule.objectSprites[10] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_powerup_triple_shot", true);
+          AchievementThresholdRule.objectSprites[11] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_powerup_thrust", true);
+          AchievementThresholdRule.objectSprites[12] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_powerup_one_rockbuster", true);
+          AchievementThresholdRule.objectSprites[13] = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "sprites_powerup_five_rockbusters", true);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "EscapeVector.MB(" + guard + ')');
         }
@@ -1234,8 +1234,8 @@ public final class EscapeVector extends NetworkGameClient {
           if (guard) {
             this.loadLevelObjectAssets((byte) 29);
           }
-          DirectByteStorage.field_k = fe.a("", IndexedSpriteState.field_j, "classic_level_select_bg", true);
-          AccountSessionSupport.field_c = fe.a("", IndexedSpriteState.field_j, "vengeance_level_select_bg", true);
+          DirectByteStorage.field_k = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "classic_level_select_bg", true);
+          AccountSessionSupport.field_c = MembershipPromotionScreen.loadNamedSprite("", IndexedSpriteState.field_j, "vengeance_level_select_bg", true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -1254,7 +1254,7 @@ public final class EscapeVector extends NetworkGameClient {
           }
           while (3 > var3_int) {
             int var4 = var3_int + 14;
-            sf.objectExplosionSamples[var4] = sample;
+            SessionCounterState.objectExplosionSamples[var4] = sample;
             var3_int++;
             if (var5 != 0) {
               return;

@@ -38,7 +38,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
               return;
             }
             for (int var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_M[var4_int] = pc.a(guard + 103, (CharSequence) ((Object) suggestions[var4_int])).replace(' ', ' ');
+              this.field_M[var4_int] = ModeProgressSupport.canonicalizeBase37Name(guard + 103, (CharSequence) ((Object) suggestions[var4_int])).replace(' ', ' ');
             }
             LinkButtonPainter var4 = new LinkButtonPainter(Js5Transport.field_a, 0, 1);
             this.field_K = new TextButton[1 + var3_int];
@@ -49,7 +49,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
               this.field_K[var5].setBounds(80, 16 * var5 + 20, 0, true, 15);
               this.addChild(this.field_K[var5], false);
             }
-            this.field_K[var3_int] = new TextButton(uj.field_c, (UiListener) (this));
+            this.field_K[var3_int] = new TextButton(SharedSpriteAssets.field_c, (UiListener) (this));
             this.field_K[var3_int].painter = (WidgetPainter) ((Object) var4);
             this.field_K[var3_int].setBounds(100, 16 * (1 + var3_int) + 20, 0, true, 15);
             this.addChild(this.field_K[var3_int], false);

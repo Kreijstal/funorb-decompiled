@@ -117,11 +117,11 @@ final class GrowableIntList {
         throw new Error();
     }
 
-    final static sn b(boolean param0) {
+    final static LoginText b(boolean param0) {
         if (!param0) {
-          return (sn) null;
+          return (LoginText) null;
         }
-        return new sn(TrackerMusicDefinition.c(31069), KeyCodeSupport.c(-89));
+        return new LoginText(TrackerMusicDefinition.c(31069), KeyCodeSupport.c(-89));
     }
 
     final int size(boolean guard) {

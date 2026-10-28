@@ -20,7 +20,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           if (this.submitButton == button) {
             this.submitLogin((byte) 103);
           } else if (this.createAccountButton == button) {
-            fe.a((byte) -83);
+            MembershipPromotionScreen.showRegistrationPanel((byte) -83);
           } else if (this.secondaryButton == button) {
             if (this.field_K) {
               ByteStorage.b(-54);
@@ -136,7 +136,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             LoginForm.a(82, (byte) -78);
           }
           for (int var4 = 0; var3 > var4; var4++) {
-            ByteStorage.logoMeshes[var4] = wk.a(-127, var8);
+            ByteStorage.logoMeshes[var4] = IntegerParseSupport.decodePackedMesh(-127, var8);
           }
           var10.endBitReading(-3879);
           int var9 = 0;
@@ -177,7 +177,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
     }
 
     final static int a(int param0, byte param1) {
-        int var2 = ua.field_c.unlockedLevelIndex(29386, param0);
+        int var2 = GameProgressSupport.field_c.unlockedLevelIndex(29386, param0);
         if (param1 != 121) {
           field_O = (String) null;
         }
@@ -252,7 +252,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             }
             this.secondaryButton = new TextButton(stackIn_19_3, (UiListener) null);
             if (this.field_M) {
-              this.createAccountButton = new TextButton(pc.field_g, (UiListener) (this));
+              this.createAccountButton = new TextButton(ModeProgressSupport.field_g, (UiListener) (this));
             }
           } else {
             this.submitButton = new TextButton(WeightedCacheEntry.field_s, (UiListener) null);
@@ -271,7 +271,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           }
           this.identifierField.tooltip = LegacyStyleNode.field_u;
           if (this.createAccountButton != null) {
-            this.createAccountButton.tooltip = mm.field_c;
+            this.createAccountButton.tooltip = ThemeAssetSupport.field_c;
           }
           if (this.field_K) {
             this.secondaryButton.tooltip = ValidatedTextWidget.field_Z;

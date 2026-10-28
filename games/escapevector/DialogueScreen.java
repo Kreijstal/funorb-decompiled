@@ -367,7 +367,7 @@ final class DialogueScreen extends IntrusiveNode {
 
     final void advanceDialogue(byte guard) {
         int var7 = EscapeVector.obfuscationControl;
-        this.input.updatePointer(this.hitActionButton(-84, sf.field_c, LoginDialog.field_ob), (byte) 126, this.hitActionButton(-97, GzipDecoder.field_d, UiContainer.field_y));
+        this.input.updatePointer(this.hitActionButton(-84, SessionCounterState.field_c, LoginDialog.field_ob), (byte) 126, this.hitActionButton(-97, GzipDecoder.field_d, UiContainer.field_y));
         if (guard < 10) {
           return;
         }
@@ -376,8 +376,8 @@ final class DialogueScreen extends IntrusiveNode {
         }
         if (AccountMessagePanel.field_N != 0) {
           this.closeDialogue(2048);
-          if (da.field_c != null) {
-            da.field_c.updatePointerSelection(true, 320);
+          if (SessionMenuSupport.field_c != null) {
+            SessionMenuSupport.field_c.updatePointerSelection(true, 320);
             return;
           }
         } else {
@@ -394,10 +394,10 @@ final class DialogueScreen extends IntrusiveNode {
                 continue;
               }
               this.closeDialogue(2048);
-              if (null == da.field_c) {
+              if (null == SessionMenuSupport.field_c) {
                 break;
               }
-              da.field_c.updatePointerSelection(false, 320);
+              SessionMenuSupport.field_c.updatePointerSelection(false, 320);
               return;
             }
             if (!this.transitioningDialogue &&
@@ -411,7 +411,7 @@ final class DialogueScreen extends IntrusiveNode {
                 StringNode.playFrameAppearSound(this.photoPan(8192), (byte) 51);
               }
               if (23 == this.frameOpenTicks) {
-                ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 3072 * IterableNodeHashTable.field_c / 64, this.actionButtonPan(2));
+                ObjectSpriteSet.field_e.playSampleWithPan(ModeProgressSupport.field_a, 100, 3072 * IterableNodeHashTable.field_c / 64, this.actionButtonPan(2));
               }
               this.frameOpenTicks = this.frameOpenTicks + 1;
               if (this.frameOpenTicks == 43 &&
@@ -634,8 +634,8 @@ final class DialogueScreen extends IntrusiveNode {
     private final void drawBackground(int guard) {
         int var5 = EscapeVector.obfuscationControl;
         if (this.backgroundFadeTicks > 0 &&
-          uj.field_a != null) {
-          Sprite var2 = uj.field_a;
+          SharedSpriteAssets.field_a != null) {
+          Sprite var2 = SharedSpriteAssets.field_a;
           for (int var3 = 0; var3 < 480; var3 = var3 + var2.fullHeight) {
             for (int var4 = 0; var4 < 640; var4 = var4 + var2.fullWidth) {
               var2.drawWithBrightness(var4, var3, this.backgroundFadeTicks * 256 / 80);
@@ -698,7 +698,7 @@ final class DialogueScreen extends IntrusiveNode {
           ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 10240);
         }
         this.backgroundFadeTicks = this.backgroundFadeTicks + 1;
-        mm.a(guard + 25, 4);
+        ThemeAssetSupport.loadTheme(guard + 25, 4);
     }
 
     final static void writeCookie(byte guard, java.applet.Applet applet, String name, String value, long lifetimeSeconds) {
@@ -766,7 +766,7 @@ final class DialogueScreen extends IntrusiveNode {
         String stackIn_17_2 = null;
         try {
           if (null == this.photos[photoSlot]) {
-            this.photos[photoSlot] = fe.a(groupName, IndexedSpriteState.field_j, fileName, true);
+            this.photos[photoSlot] = MembershipPromotionScreen.loadNamedSprite(groupName, IndexedSpriteState.field_j, fileName, true);
             if (this.photos[photoSlot] == null) {
               return false;
             }

@@ -64,7 +64,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           ChatMessageDecoder.field_d = new UiTheme();
           ChatMessageDecoder.field_d.initializePainters(-31476, Js5Transport.field_a);
           ChatMessageDecoder.field_d.tooltipBorderColor = 7697781;
-          ChatMessageDecoder.field_d.tooltipFont = ke.field_c;
+          ChatMessageDecoder.field_d.tooltipFont = LegacyMenuFontSupport.field_c;
           ChatMessageDecoder.field_d.tooltipRightPadding = 5;
           ChatMessageDecoder.field_d.tooltipLineSpacing = 14;
           ChatMessageDecoder.field_d.tooltipBackgroundColor = 2763306;
@@ -127,7 +127,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
 
     final static void d(boolean param0) {
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.a((byte) -126);
+          SocketJs5Transport.field_r.advanceCounters((byte) -126);
           if (!param0) {
             return;
           }

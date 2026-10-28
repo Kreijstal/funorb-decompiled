@@ -81,7 +81,7 @@ final class AccountPanelInputSupport {
     final static int serviceAccountPanelInput(int guard) {
         int var2 = EscapeVector.obfuscationControl;
         try {
-          Checkbox.field_F.handlePointerFrame(true, (byte) -33, ValidationIndicator.field_G, ph.field_a);
+          Checkbox.field_F.handlePointerFrame(true, (byte) -33, ValidationIndicator.field_G, HuffmanDecoder.field_a);
           Checkbox.field_F.updatePanels(0);
           while (AccountRequestDialog.pollKeyEvent(-116)) {
             Checkbox.field_F.handleKey(KeyCodeSupport.currentKeyCharacter, PasswordValidator.field_n, (byte) -116);
@@ -104,7 +104,7 @@ final class AccountPanelInputSupport {
             int stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (!di.field_g.isComplete(0)) {
+          if (!HighscorePlayerRecord.field_g.isComplete(0)) {
             int stackIn_20_0 = 1;
             return stackIn_20_0;
           }

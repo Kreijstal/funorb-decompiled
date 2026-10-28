@@ -8,8 +8,8 @@ final class InstructionsNavigationSupport {
 
     final static void openInstructions(boolean pointerDriven, boolean guard) {
         PauseMenuState.instructionsVisible = true;
-        mj.field_d = 0;
-        di.field_d = null;
+        LoginHandshakeSupport.field_d = 0;
+        HighscorePlayerRecord.field_d = null;
         if (!guard) {
           ChatMessage.clearFrameOffsets((byte) -58);
           ArchiveLoadTask.field_e = new InstructionsScreen(pointerDriven);

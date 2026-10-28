@@ -66,7 +66,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
 
     final void s(int param0) {
         try {
-          this.a(-4814, NameAvailabilityResultSupport.createTextResponse(mj.field_a, param0, param0 ^ 252), true);
+          this.a(-4814, NameAvailabilityResultSupport.createTextResponse(LoginHandshakeSupport.field_a, param0, param0 ^ 252), true);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qc.WB(" + param0 + ')');
         }
@@ -76,7 +76,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         String stackIn_1028_2 = null;
         int var3 = EscapeVector.obfuscationControl;
         try {
-          wk.field_e = param1;
+          IntegerParseSupport.field_e = param1;
           byte[] var2 = LabeledField.loadNamedAsset("benefits_captions,0", 10592);
           if (null != var2) {
             LoginCredentials.field_c[0] = RasterSnapshot.a(var2, PacketBuffer.xor(param0, 124));
@@ -590,7 +590,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime127 = LabeledField.loadNamedAsset("thrust", 10592);
           if (var2Lifetime127 != null) {
-            mj.field_c = RasterSnapshot.a(var2Lifetime127, param0 + 116);
+            LoginHandshakeSupport.field_c = RasterSnapshot.a(var2Lifetime127, param0 + 116);
           }
           byte[] var2Lifetime128 = LabeledField.loadNamedAsset("shoot", 10592);
           if (null != var2Lifetime128) {
@@ -610,7 +610,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime132 = LabeledField.loadNamedAsset("objectivetext1", 10592);
           if (var2Lifetime132 != null) {
-            on.field_c = RasterSnapshot.a(var2Lifetime132, param0 + 117);
+            IntroAudioSupport.field_c = RasterSnapshot.a(var2Lifetime132, param0 + 117);
           }
           byte[] var2Lifetime133 = LabeledField.loadNamedAsset("objectivetext2", param0 ^ 10600);
           if (var2Lifetime133 != null) {
@@ -626,7 +626,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime136 = LabeledField.loadNamedAsset("objective_retribution", 10592);
           if (var2Lifetime136 != null) {
-            mh.field_g = RasterSnapshot.a(var2Lifetime136, param0 ^ 122);
+            LoginIdentifierSupport.field_g = RasterSnapshot.a(var2Lifetime136, param0 ^ 122);
           }
           byte[] var2Lifetime137 = LabeledField.loadNamedAsset("objective_simulator", 10592);
           if (null != var2Lifetime137) {
@@ -678,7 +678,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime149 = LabeledField.loadNamedAsset("autodestruct_warning", 10592);
           if (var2Lifetime149 != null) {
-            di.field_c = RasterSnapshot.a(var2Lifetime149, 122);
+            HighscorePlayerRecord.field_c = RasterSnapshot.a(var2Lifetime149, 122);
           }
           byte[] var2Lifetime150 = LabeledField.loadNamedAsset("target_destroyed", 10592);
           if (var2Lifetime150 != null) {
@@ -702,11 +702,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime155 = LabeledField.loadNamedAsset("outofshield", 10592);
           if (null != var2Lifetime155) {
-            rc.field_c = RasterSnapshot.a(var2Lifetime155, param0 ^ 117);
+            CanvasRenderSupport.field_c = RasterSnapshot.a(var2Lifetime155, param0 ^ 117);
           }
           byte[] var2Lifetime156 = LabeledField.loadNamedAsset("cannotloadpowerup", 10592);
           if (null != var2Lifetime156) {
-            on.field_d = RasterSnapshot.a(var2Lifetime156, 127);
+            IntroAudioSupport.field_d = RasterSnapshot.a(var2Lifetime156, 127);
           }
           byte[] var2Lifetime157 = LabeledField.loadNamedAsset("containerisonhill", param0 + 10584);
           if (null != var2Lifetime157) {
@@ -758,7 +758,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime169 = LabeledField.loadNamedAsset("powerup_tripleshot", 10592);
           if (null != var2Lifetime169) {
-            kc.field_a = RasterSnapshot.a(var2Lifetime169, 124);
+            MembershipPromotionSupport.field_a = RasterSnapshot.a(var2Lifetime169, 124);
           }
           byte[] var2Lifetime170 = LabeledField.loadNamedAsset("powerup_extrathrust", 10592);
           if (var2Lifetime170 != null) {
@@ -926,7 +926,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime211 = LabeledField.loadNamedAsset("fuel_colon", 10592);
           if (var2Lifetime211 != null) {
-            di.field_b = RasterSnapshot.a(var2Lifetime211, 127);
+            HighscorePlayerRecord.field_b = RasterSnapshot.a(var2Lifetime211, 127);
           }
           byte[] var2Lifetime212 = LabeledField.loadNamedAsset("shield_colon", param0 + 10584);
           if (null != var2Lifetime212) {
@@ -1154,11 +1154,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime268 = LabeledField.loadNamedAsset("vengeanceIceMessage,0", 10592);
           if (var2Lifetime268 != null) {
-            pc.field_b[0] = RasterSnapshot.a(var2Lifetime268, 111);
+            ModeProgressSupport.field_b[0] = RasterSnapshot.a(var2Lifetime268, 111);
           }
           byte[] var2Lifetime269 = LabeledField.loadNamedAsset("vengeanceIceMessage,1", 10592);
           if (null != var2Lifetime269) {
-            pc.field_b[1] = RasterSnapshot.a(var2Lifetime269, 125);
+            ModeProgressSupport.field_b[1] = RasterSnapshot.a(var2Lifetime269, 125);
           }
           byte[] var2Lifetime270 = LabeledField.loadNamedAsset("vengeanceAlienMessage,0", 10592);
           if (var2Lifetime270 != null) {
@@ -1230,7 +1230,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime287 = LabeledField.loadNamedAsset("legend", param0 ^ 10600);
           if (null != var2Lifetime287) {
-            sf.field_n = RasterSnapshot.a(var2Lifetime287, 116);
+            SessionCounterState.field_n = RasterSnapshot.a(var2Lifetime287, 116);
           }
           byte[] var2Lifetime288 = LabeledField.loadNamedAsset("ship", 10592);
           if (null != var2Lifetime288) {
@@ -1252,7 +1252,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           if (var2Lifetime292 != null) {
             AccountOverlayController.field_a = RasterSnapshot.a(var2Lifetime292, 112);
           }
-          wk.field_e = null;
+          IntegerParseSupport.field_e = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
@@ -1278,7 +1278,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           if (this.open &&
             !this.field_wb) {
-            NameAvailabilityResult var2 = e.a(-16055);
+            NameAvailabilityResult var2 = RegistrationFlowSupport.takeRegistrationResult(-16055);
             if (null != var2) {
               this.a(guard + 9093, var2, false);
             }
@@ -1313,7 +1313,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
                 if (!param2) {
                   LegacyTextBlock.writeBrowserSessionMarker(param0 + 4816);
                 }
-                var4 = mj.field_a;
+                var4 = LoginHandshakeSupport.field_a;
                 this.field_zb = true;
                 if (var6 != 0) {
                   var4 = RasterBuffer.field_b;

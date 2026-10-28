@@ -20,10 +20,10 @@ final class Js5NetworkRequest extends ArchiveRequest {
           return true;
         }
         if (param0 == 15) {
-          return di.field_d.isInitialActivation((byte) -18);
+          return HighscorePlayerRecord.field_d.isInitialActivation((byte) -18);
         }
         Js5NetworkRequest.releaseStatics((byte) 54);
-        return di.field_d.isInitialActivation((byte) -18);
+        return HighscorePlayerRecord.field_d.isInitialActivation((byte) -18);
     }
 
     final static byte[] decompressGroup(byte guard, byte[] bytes) {
@@ -129,7 +129,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
             CharSequence[] var3 = (CharSequence[]) null;
             Js5NetworkRequest.joinText((byte) -12, (CharSequence[]) null);
           }
-          String stackIn_3_0 = ua.a(0, parts.length, parts, 4);
+          String stackIn_3_0 = GameProgressSupport.joinRange(0, parts.length, parts, 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

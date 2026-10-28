@@ -29,7 +29,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
             StrongCacheEntry.releaseStatics(-66);
           }
           while (lastCharacter >= var6) {
-            if (ml.a((char)var6, 21654)) {
+            if (TrackerMusicLoader.isAccountCharacter((char)var6, 21654)) {
               int var7 = font.charAdvance((char)var6);
               if (var5 < var7) {
                 var4_int = (char)var6;
@@ -88,7 +88,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
                 EmailValidationError stackIn_19_0 = CachedTextLayout.field_p;
                 return stackIn_19_0;
               }
-            } else if (jd.field_b.indexOf(var4) == -1) {
+            } else if (ByteArrayPoolSupport.field_b.indexOf(var4) == -1) {
               EmailValidationError stackIn_22_0 = CachedTextLayout.field_p;
               return stackIn_22_0;
             }

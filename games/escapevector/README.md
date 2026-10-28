@@ -2,9 +2,9 @@
 
 This is the only published Java tree. Reviewed rules and the reproducer live in dekobloko-work/readable. The current reverse dictionary is ../../decompilation/escapevector-naming.json.
 
-This pass names 311 reviewed classes and 8969 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
+This pass names 347 reviewed classes and 9442 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
 
-Coverage: 313/349 class declarations and 2296/2781 methods have readable names; 277 constructors follow their owning class. 36 classes and 485 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
+Coverage: 349/349 class declarations and 2422/2781 methods have readable names; 277 constructors follow their owning class. 0 classes and 359 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
 
 ## Entry points
 
@@ -71,6 +71,8 @@ Every HighscoresScreen, HighscoreTable, InstructionsScreen and GameModeSelectScr
 Every MainMenuScreen, LevelSelectScreen, GameProgressTracker, ModeProgress, SavedCompletionFlags and LevelAvailabilitySupport method has a reviewed name. Menu actions distinguish membership promotion, sound/music controls, fullscreen and account screens. Level selection retains introduction/tutorial actions, grouped mission rows, path markers and the Simulator minimap preview. Progress separates sequential queries, pending updates and all-infrastructure completion. Saved flags use version-one Retribution/Simulator sections; read-group zero means Simulator while write-group zero means Retribution. Bitset merges retain their original mutation/aliasing, final-level clamps and payload bounds. MainMenuScreen.wrapClientException preserves the same cause and accumulated context.
 
 PauseMenuScreen and PauseMenuState expose context-dependent resume/tutorial/briefing/end actions, audio controls, fullscreen and the Show elapsed time toggle. MenuTitleSupport retains the original sprite choices, phase thresholds and reveal/retire sounds. CursorController retains its public showcursor/setcustomcursor/movemouse spellings for reflection; owned Class.forName literals follow the class rename. Shared loading/status/request utilities now expose their roles, including URL/JAGGRAB completion, pending saved-data/rating writes, rollback-compensated time, forward/reversed password substrings, integer bit counts and clipped/tinted pixel blocks. Original cookie precedence, whitespace-compaction bounds, scratch-array clearing and unrelated static ownership remain unchanged.
+
+Every owned class now has a reviewed descriptive name. The remaining-class pass exposes HighscorePlayerRecord, MembershipPromotionScreen, SimulatorSpriteAssets, MeshProjectionSupport, HuffmanDecoder, LoginText and the native Microsoft cursor/display helpers. It names every method in those remaining owners, including archive/music factories, login/registration phases, legacy themes, intro layers, result/rating packets and session counter payloads. awaitingLoginReplyStage explicitly follows login-request writing. Original masks/arrays, native-peer failures, throwing constructors, callbacks, cipher initialization and counter-word ordering remain. Names for opaque helpers in previously named classes are still in progress; the coverage command reports the remaining declarations.
 
 `IterableNodeHashTable` and `NodeHashTableIterator` own primary-link buckets; `IterableDualLinkDeque` and `DualLinkDequeIterator` traverse secondary links independently. `IntrusiveDequeCursor` supports independent forward/backward scans. `WeightedLruCache` combines hash lookup, secondary recency links and entry weights; `StrongCacheEntry` is the concrete retained-value implementation. Original null-at-exhaustion behavior and throwing constructor stubs remain.
 

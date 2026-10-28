@@ -62,7 +62,7 @@ abstract class LoginCredentials {
             for (int var8Lifetime1 = param6; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
               int var9Lifetime1 = LegacyStyleNode.field_q[var8Lifetime1];
               int var10Lifetime1 = LegacyStyleNode.field_q[var8Lifetime1 + 1];
-              if (ke.isRatingRowAfter(var9Lifetime1, 2, var10Lifetime1, param4)) {
+              if (LegacyMenuFontSupport.isRatingRowAfter(var9Lifetime1, 2, var10Lifetime1, param4)) {
                 LegacyStyleNode.field_q[var8Lifetime1] = var10Lifetime1;
                 LegacyStyleNode.field_q[var8Lifetime1 + 1] = var9Lifetime1;
               }
@@ -81,7 +81,7 @@ abstract class LoginCredentials {
           return;
         }
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.a((byte) -121);
+          SocketJs5Transport.field_r.advanceCounters((byte) -121);
         }
     }
 

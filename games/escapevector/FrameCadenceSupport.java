@@ -3,7 +3,7 @@
  */
 final class FrameCadenceSupport {
     static String[] field_a;
-    static p field_b;
+    static SimulatorSpriteAssets field_b;
 
     public static void releaseStatics(byte guard) {
         if (guard != 23) {
@@ -18,10 +18,10 @@ final class FrameCadenceSupport {
 
     final static int ticksPerSecond(int guard) {
         if (guard != 0) {
-          field_b = (p) null;
-          return (int)(1000000000L / sn.field_d);
+          field_b = (SimulatorSpriteAssets) null;
+          return (int)(1000000000L / LoginText.field_d);
         }
-        return (int)(1000000000L / sn.field_d);
+        return (int)(1000000000L / LoginText.field_d);
     }
 
     final static void renderAccountPanels(boolean unusedFlag, int guard) {

@@ -36,23 +36,23 @@ final class DisplayModeInfo {
               break;
             }
             if (var4 == null) {
-              nm.a(16);
+              ConnectionSupport.closeTransport(16);
               return;
             }
             int var5 = var28.readUnsignedByte(0);
             if (var5 != 0) {
               int var6 = var4.field_h;
               int var7 = var4.field_j;
-              bg.field_a[0].field_h = ThreeSliceButtonPainter.field_r;
-              bg.field_a[0].field_e = false;
-              bg.field_a[0].field_a = null;
+              CampaignLoadingSupport.field_a[0].playerName = ThreeSliceButtonPainter.field_r;
+              CampaignLoadingSupport.field_a[0].selectedForBest = false;
+              CampaignLoadingSupport.field_a[0].label = null;
               for (int var8_int = 1; var5 > var8_int; var8_int++) {
-                bg.field_a[var8_int].field_h = var28.readString(false);
-                bg.field_a[var8_int].field_e = false;
+                CampaignLoadingSupport.field_a[var8_int].playerName = var28.readString(false);
+                CampaignLoadingSupport.field_a[var8_int].selectedForBest = false;
                 if (var28.readUnsignedByte(0) != 1) {
-                  bg.field_a[var8_int].field_a = null;
+                  CampaignLoadingSupport.field_a[var8_int].label = null;
                 } else {
-                  bg.field_a[var8_int].field_a = var28.readString(false);
+                  CampaignLoadingSupport.field_a[var8_int].label = var28.readString(false);
                 }
               }
               String[][] dupTemp$0 = new String[3][var6];
@@ -75,12 +75,12 @@ final class DisplayModeInfo {
               if (var18 > 0) {
                 for (int var19 = 0; var18 > var19; var19++) {
                   int var20 = var28.readUnsignedByte(0);
-                  String var21 = bg.field_a[var20].field_h;
+                  String var21 = CampaignLoadingSupport.field_a[var20].playerName;
                   long var22 = var28.readLong(-800509813);
                   int var24 = var28.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = bg.field_a[var20].field_a;
+                    var9[0][var12] = CampaignLoadingSupport.field_a[var20].label;
                     var10[0][var12] = var22;
                     for (int var25 = 0; var7 > var25; var25++) {
                       int incrementValue$3 = var15;
@@ -103,10 +103,10 @@ final class DisplayModeInfo {
                     }
                   }
                   if (var14 < var6 &&
-                    !bg.field_a[var20].field_e) {
-                    bg.field_a[var20].field_e = true;
+                    !CampaignLoadingSupport.field_a[var20].selectedForBest) {
+                    CampaignLoadingSupport.field_a[var20].selectedForBest = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = bg.field_a[var20].field_a;
+                    var9[2][var14] = CampaignLoadingSupport.field_a[var20].label;
                     var10[2][var14] = var22;
                     var28.position = var24;
                     var14++;
@@ -133,14 +133,14 @@ final class DisplayModeInfo {
               break;
             }
             if (var6_ref_ik == null) {
-              nm.a(16);
+              ConnectionSupport.closeTransport(16);
               return;
             }
             var6_ref_ik.field_l = var4_long;
             var6_ref_ik.unlink((byte) -85);
           } else {
             GameModeSelectScreen.reportClientError(false, "HS1: " + LoginStage.formatPacketDiagnostic((byte) 115), (Throwable) null);
-            nm.a(16);
+            ConnectionSupport.closeTransport(16);
           }
           int var3Lifetime1 = -111 / ((-41 - param0) / 43);
           return;
@@ -154,12 +154,12 @@ final class DisplayModeInfo {
     final static EmailAvailabilityRequest a(String param0, boolean param1) {
         String stackIn_12_2 = null;
         try {
-          if (di.field_g.isComplete(0) &&
-            !param0.equals(di.field_g.email(-100))) {
-            di.field_g = RasterBuffer.a((byte) 83, param0);
+          if (HighscorePlayerRecord.field_g.isComplete(0) &&
+            !param0.equals(HighscorePlayerRecord.field_g.email(-100))) {
+            HighscorePlayerRecord.field_g = RasterBuffer.a((byte) 83, param0);
           }
           if (param1) {
-            EmailAvailabilityRequest stackIn_8_0 = di.field_g;
+            EmailAvailabilityRequest stackIn_8_0 = HighscorePlayerRecord.field_g;
             return stackIn_8_0;
           }
           EmailAvailabilityRequest stackIn_6_0 = (EmailAvailabilityRequest) null;

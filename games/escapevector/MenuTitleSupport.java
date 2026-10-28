@@ -23,7 +23,7 @@ final class MenuTitleSupport {
           }
           Object var2 = null;
           int var3 = 0;
-          if (!wk.field_c) {
+          if (!IntegerParseSupport.field_c) {
             if (TextLayout.field_b) {
               Sprite var18 = TextWidgetPainter.field_j;
               var2 = var18;
@@ -57,7 +57,7 @@ final class MenuTitleSupport {
                 var2 = var12;
                 var3 = (77 - var12.fullHeight) / 2;
               } else if (SelfDestructEffects.field_q == 2) {
-                Sprite var13 = p.field_c;
+                Sprite var13 = SimulatorSpriteAssets.field_c;
                 var2 = var13;
                 var3 = (77 - var13.fullHeight) / 2;
               } else if (SelfDestructEffects.field_q == 3) {
@@ -65,7 +65,7 @@ final class MenuTitleSupport {
                 var2 = var14;
                 var3 = (77 - var14.fullHeight) / 2;
               } else if (!PacketBuffer.field_h) {
-                if (e.field_a) {
+                if (RegistrationFlowSupport.field_a) {
                   if (TrackerMusicDefinition.field_f.hasSessionAchievements(123)) {
                     var2 = ValidationHelpWidget.field_I;
                   } else {
@@ -134,7 +134,7 @@ final class MenuTitleSupport {
         if (var1 != null) {
           Object var2Lifetime1 = null;
           int var3Lifetime1 = 0;
-          if (!wk.field_c) {
+          if (!IntegerParseSupport.field_c) {
             if (TextLayout.field_b) {
               Sprite var25 = TextWidgetPainter.field_j;
               var2Lifetime1 = var25;
@@ -168,7 +168,7 @@ final class MenuTitleSupport {
                 var2Lifetime1 = var19;
                 var3Lifetime1 = (77 - var19.fullHeight) / 2;
               } else if (SelfDestructEffects.field_q == 2) {
-                Sprite var20 = p.field_c;
+                Sprite var20 = SimulatorSpriteAssets.field_c;
                 var2Lifetime1 = var20;
                 var3Lifetime1 = (77 - var20.fullHeight) / 2;
               } else if (SelfDestructEffects.field_q == 3) {
@@ -176,7 +176,7 @@ final class MenuTitleSupport {
                 var2Lifetime1 = var21;
                 var3Lifetime1 = (77 - var21.fullHeight) / 2;
               } else if (!PacketBuffer.field_h) {
-                if (e.field_a) {
+                if (RegistrationFlowSupport.field_a) {
                   if (TrackerMusicDefinition.field_f.hasSessionAchievements(123)) {
                     var2Lifetime1 = ValidationHelpWidget.field_I;
                   } else {
@@ -243,7 +243,7 @@ final class MenuTitleSupport {
         }
         Object var2Lifetime2 = null;
         int var3Lifetime2 = 0;
-        if (wk.field_c) {
+        if (IntegerParseSupport.field_c) {
           if (var2Lifetime2 == null) {
             if (LaserGateSpan.field_k == 110) {
               ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
@@ -329,7 +329,7 @@ final class MenuTitleSupport {
                 LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                 return;
               }
-              if (e.field_a) {
+              if (RegistrationFlowSupport.field_a) {
                 if (TrackerMusicDefinition.field_f.hasSessionAchievements(123)) {
                   var2Lifetime2 = ValidationHelpWidget.field_I;
                 } else {
@@ -440,7 +440,7 @@ final class MenuTitleSupport {
             var2Lifetime2 = var28;
             var3Lifetime2 = (77 - var28.fullHeight) / 2;
           } else {
-            Sprite var27 = p.field_c;
+            Sprite var27 = SimulatorSpriteAssets.field_c;
             var2Lifetime2 = var27;
             var3Lifetime2 = (77 - var27.fullHeight) / 2;
           }
@@ -471,7 +471,7 @@ final class MenuTitleSupport {
 
     final static void incrementSessionCounter(byte guard, int amount) {
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.d(amount, 136);
+          SocketJs5Transport.field_r.addSubmittedScore(amount, 136);
           if (guard != 99) {
             MenuTitleSupport.releaseStatics((byte) -88);
             return;
@@ -487,7 +487,7 @@ final class MenuTitleSupport {
     final static boolean isPointerDriven(byte guard) {
         boolean var1 = true;
         int var3 = 116 / ((guard + 18) / 46);
-        MenuInputState var2 = di.field_d;
+        MenuInputState var2 = HighscorePlayerRecord.field_d;
         if (var2 != null) {
           var1 = (var2.pointerDriven);
         }

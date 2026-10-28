@@ -1638,7 +1638,7 @@ final class DynamicTerrainRenderer {
         try {
           int var9_int = 3;
           int var10 = param1.length;
-          int var11 = jd.totalButtonTextWidth(param4, (byte) -121, param5);
+          int var11 = ByteArrayPoolSupport.totalButtonTextWidth(param4, (byte) -121, param5);
           int var12 = DynamicTerrainRenderer.calculateButtonGap(1, var10, param0, var11);
           int var13 = PcmResampler.a(var11, (byte) 122, param0, var10, var12);
           LegacyButton[] var14 = new LegacyButton[var10];
@@ -1648,7 +1648,7 @@ final class DynamicTerrainRenderer {
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var15 >= var10))) {
-            int var16 = ji.a(var12, param4, param5, var13, var15, param3, 0);
+            int var16 = ArchiveFactorySupport.buttonRowWidth(var12, param4, param5, var13, var15, param3, 0);
             LegacyButton var17 = new LegacyButton(var9_int, param1[var15], param5[var15], param8[var15], param6[var15], param4);
             var17.setPosition((byte) 114, var16, param2);
             stackIn_8_0 = var14;

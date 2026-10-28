@@ -218,7 +218,7 @@ final class ArchiveIndex {
 
     ArchiveIndex(byte[] encoded, int expectedCrc32, byte[] expectedDigest) {
         try {
-          this.encodedCrc32 = ji.a(255, encoded.length, encoded);
+          this.encodedCrc32 = ArchiveFactorySupport.crc32Prefix(255, encoded.length, encoded);
           if (expectedCrc32 != this.encodedCrc32) {
             throw new RuntimeException();
           }

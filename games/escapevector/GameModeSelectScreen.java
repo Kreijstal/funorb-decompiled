@@ -105,7 +105,7 @@ final class GameModeSelectScreen {
         }
         SoftwareRasterizer.clearFramebuffer();
         SelfDestructEffects.b(guard - 98);
-        pb.a(4);
+        MenuTitleRenderSupport.drawTitles(4);
         this.drawButtons(this.modeButtons, (byte) -116);
         this.drawButtons(this.footerButtons, (byte) -109);
     }
@@ -346,7 +346,7 @@ final class GameModeSelectScreen {
           field_h = (String) null;
         }
         int var2 = this.hitTest(1, UiContainer.field_y, GzipDecoder.field_d);
-        int var3 = this.hitTest(1, LoginDialog.field_ob, sf.field_c);
+        int var3 = this.hitTest(1, LoginDialog.field_ob, SessionCounterState.field_c);
         this.input.updatePointer(var3, (byte) 121, var2);
         boolean discarded$0 = this.handleActivation(true, (byte) 91);
     }
@@ -409,7 +409,7 @@ final class GameModeSelectScreen {
 
     private final void openGuestLogin(int guard) {
         GuestLoginSupport.beginAccountLogin(true);
-        mj.field_d = 0;
+        LoginHandshakeSupport.field_d = 0;
         ChatMessage.clearFrameOffsets((byte) -113);
         if (guard != -15268) {
           return;
@@ -421,8 +421,8 @@ final class GameModeSelectScreen {
         boolean stackIn_84_0 = false;
         int var9 = EscapeVector.obfuscationControl;
         try {
-          if (mh.field_e < 100 &&
-            Math.random() < 0.05 * (double)(100 - mh.field_e) / 100.0) {
+          if (LoginIdentifierSupport.field_e < 100 &&
+            Math.random() < 0.05 * (double)(100 - LoginIdentifierSupport.field_e) / 100.0) {
             MenuEdgeSegment var10 = new MenuEdgeSegment();
             MenuEdgeSegment var11 = var10;
             if (Math.random() < 0.5) {
@@ -445,7 +445,7 @@ final class GameModeSelectScreen {
             var11.upperBranchBudget = var2;
             TrackerGainSupport.field_c.addLast(-12328, var11);
             if (var11.lifetimeTicks >= 100) {
-              mh.field_e = mh.field_e + 1;
+              LoginIdentifierSupport.field_e = LoginIdentifierSupport.field_e + 1;
             }
           }
           if (guard > -94) {
@@ -476,7 +476,7 @@ final class GameModeSelectScreen {
             }
             if (!var1.isLinked((byte) 48) &&
               100 <= var1.lifetimeTicks) {
-              mh.field_e = mh.field_e - 1;
+              LoginIdentifierSupport.field_e = LoginIdentifierSupport.field_e - 1;
             }
             int var2Lifetime1 = (var1.lifetimeTicks - 50) / 20;
             for (int var3 = 0; var3 < var2Lifetime1; var3++) {
@@ -542,14 +542,14 @@ final class GameModeSelectScreen {
               var1Lifetime1.unlink((byte) -113);
             }
             if (var2Lifetime2) {
-              if (mh.field_e < 100) {
-                stackIn_78_0 = (Math.random() < (double)((500 - mh.field_e * 5) / 100));
+              if (LoginIdentifierSupport.field_e < 100) {
+                stackIn_78_0 = (Math.random() < (double)((500 - LoginIdentifierSupport.field_e * 5) / 100));
               } else {
                 stackIn_78_0 = false;
               }
               boolean var3Lifetime1 = stackIn_78_0;
-              if (mh.field_e < 100) {
-                stackIn_84_0 = (Math.random() < (double)((100 - mh.field_e) * 5 / 100));
+              if (LoginIdentifierSupport.field_e < 100) {
+                stackIn_84_0 = (Math.random() < (double)((100 - LoginIdentifierSupport.field_e) * 5 / 100));
               } else {
                 stackIn_84_0 = false;
               }
@@ -578,7 +578,7 @@ final class GameModeSelectScreen {
               }
               TrackerGainSupport.field_c.addLast(-12328, var6);
               if (100 <= var6.lifetimeTicks) {
-                mh.field_e = mh.field_e + 1;
+                LoginIdentifierSupport.field_e = LoginIdentifierSupport.field_e + 1;
               }
               MenuEdgeSegment var12 = new MenuEdgeSegment();
               var12.x = var1Lifetime1.x;
@@ -600,7 +600,7 @@ final class GameModeSelectScreen {
               }
               TrackerGainSupport.field_c.addLast(-12328, var12);
               if (100 <= var12.lifetimeTicks) {
-                mh.field_e = mh.field_e + 1;
+                LoginIdentifierSupport.field_e = LoginIdentifierSupport.field_e + 1;
               }
             }
             var1Lifetime1 = (MenuEdgeSegment) (QuickChatPhraseDefinition.field_u.next((byte) 70));
@@ -614,7 +614,7 @@ final class GameModeSelectScreen {
     }
 
     private final void playButtonRevealSound(int interval, int guard, LegacyButton[] buttons, int firstTick, int ratePercent, int volume) {
-        int var7_int = mj.field_d;
+        int var7_int = LoginHandshakeSupport.field_d;
         if (firstTick > var7_int) {
           return;
         }
@@ -636,7 +636,7 @@ final class GameModeSelectScreen {
         try {
           LegacyButton var10 = buttons[var9];
           int var11 = this.buttonPan((byte) 120, var10);
-          ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, ratePercent, volume, var11);
+          ObjectSpriteSet.field_e.playSampleWithPan(ModeProgressSupport.field_a, ratePercent, volume, var11);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "pf.V(" + interval + ',' + guard + ',' + (buttons != null ? "{...}" : "null") + ',' + firstTick + ',' + ratePercent + ',' + volume + ')');
         }
@@ -719,7 +719,7 @@ final class GameModeSelectScreen {
     }
 
     private final void updateRevealEffects(byte guard) {
-        if (mj.field_d == 0) {
+        if (LoginHandshakeSupport.field_d == 0) {
           StringNode.playFrameAppearSound(8192, (byte) 51);
         }
         IntValueNode.field_j = true;
@@ -733,8 +733,8 @@ final class GameModeSelectScreen {
         this.playButtonRevealSound(var4, 6, this.modeButtons, var5, var3, var2);
         var5 = var5 + var4 * this.modeButtons.length;
         this.playButtonRevealSound(var4, 6, this.footerButtons, var5, var3, var2);
-        if (!(mj.field_d >= 1000)) {
-          mj.field_d = mj.field_d + 1;
+        if (!(LoginHandshakeSupport.field_d >= 1000)) {
+          LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
         }
     }
 

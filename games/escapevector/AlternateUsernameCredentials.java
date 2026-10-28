@@ -44,7 +44,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
 
     final static int[] d(int param0) {
         if (null != SocketJs5Transport.field_r) {
-          return SocketJs5Transport.field_r.c(0);
+          return SocketJs5Transport.field_r.achievementWords(0);
         }
         int var1 = -48 % ((param0 - 76) / 47);
         return null;

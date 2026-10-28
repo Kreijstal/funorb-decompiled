@@ -244,7 +244,7 @@ final class AudioService implements Runnable {
           if (var2 != 0) {
             if (var2 != 1) {
               GameModeSelectScreen.reportClientError(false, "A1: " + LoginStage.formatPacketDiagnostic((byte) -65), (Throwable) null);
-              nm.a(16);
+              ConnectionSupport.closeTransport(16);
               if (var6 == 0) {
                 return;
               }
@@ -272,13 +272,13 @@ final class AudioService implements Runnable {
                 }
                 stackIn_15_0 = 16;
               }
-              nm.a(stackIn_15_0);
+              ConnectionSupport.closeTransport(stackIn_15_0);
               return;
             }
           }
           SavedDataQuery var8 = (SavedDataQuery) (SpriteState.field_w.first(false));
           if (var8 == null) {
-            nm.a(16);
+            ConnectionSupport.closeTransport(16);
             return;
           }
           int var4 = var9.readUnsignedByte(0);
@@ -295,7 +295,7 @@ final class AudioService implements Runnable {
           }
           var9.position = var9.position + 4;
           if (!var9.verifyCrc32(guard ^ 124)) {
-            nm.a(16);
+            ConnectionSupport.closeTransport(16);
             return;
           }
           var8.complete = true;

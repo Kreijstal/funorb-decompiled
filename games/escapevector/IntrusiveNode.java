@@ -71,7 +71,7 @@ class IntrusiveNode {
           int var3 = input.readBits(12, 8);
           MeshMaterial[] var4 = new MeshMaterial[var3];
           for (int var5 = 0; var3 > var5; var5++) {
-            if (da.a(input, (byte) -116)) {
+            if (SessionMenuSupport.readBitFlag(input, (byte) -116)) {
               MeshMaterial var6 = new MeshMaterial();
               input.readBits(24, guard ^ 22186);
               input.readBits(24, 8);

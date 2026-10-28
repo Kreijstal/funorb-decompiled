@@ -191,7 +191,7 @@ final class VorbisFloor {
         int var2 = this.controlPointX.length;
         System.arraycopy(this.controlPointX, 0, workX, 0, var2);
         int var3 = rangeTable[this.multiplier - 1];
-        int var4 = nm.a(var3 - 1, (byte) 78);
+        int var4 = ConnectionSupport.bitLength(var3 - 1, (byte) 78);
         workY[0] = VorbisSample.readBits(var4);
         workY[1] = VorbisSample.readBits(var4);
         int var5 = 2;

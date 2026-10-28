@@ -70,15 +70,15 @@ final class AchievementsScreen {
     }
 
     private final void updateRevealEffects(boolean redraw) {
-        if (mj.field_d == 0) {
+        if (LoginHandshakeSupport.field_d == 0) {
           StringNode.playFrameAppearSound(8192, (byte) 51);
         }
         IntValueNode.field_j = redraw;
         this.playButtonRevealSound(64, this.accountButton);
         this.playButtonRevealSound(64, this.highscoresButton);
         this.playButtonRevealSound(64, this.mainMenuButton);
-        if (1000 > mj.field_d) {
-          mj.field_d = mj.field_d + 1;
+        if (1000 > LoginHandshakeSupport.field_d) {
+          LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
         }
     }
 
@@ -98,7 +98,7 @@ final class AchievementsScreen {
 
     private final boolean updateHoveredAchievement(byte guard) {
         int var2 = -93 % ((56 - guard) / 44);
-        MenuInputState var3 = di.field_d;
+        MenuInputState var3 = HighscorePlayerRecord.field_d;
         int var4 = var3.selectedIndex;
         if (var4 < 0 ||
           var4 >= this.pageAchievementIds[this.currentPage].length) {
@@ -177,15 +177,15 @@ final class AchievementsScreen {
             GuestLoginSupport.beginAccountLogin(true);
           }
           if (this.highscoresActionId == var6) {
-            kh.showHighscoresScreen(MenuTitleSupport.isPointerDriven((byte) -116), -1230, true);
+            SpriteArchiveSupport.showHighscoresScreen(MenuTitleSupport.isPointerDriven((byte) -116), -1230, true);
           }
           if (this.mainMenuActionId == var6) {
             AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, pointerDriven);
-            di.field_d = null;
+            HighscorePlayerRecord.field_d = null;
           }
-          e.field_a = false;
+          RegistrationFlowSupport.field_a = false;
           TrackerMusicDefinition.field_f.clearSessionAchievements(true);
-          mj.field_d = 0;
+          LoginHandshakeSupport.field_d = 0;
           ChatMessage.clearFrameOffsets((byte) -71);
           var4 = true;
           return (var4);
@@ -326,14 +326,14 @@ final class AchievementsScreen {
         if (guard != 16317) {
           this.currentPage = -83;
         }
-        int var2 = di.field_d.selectedIndex;
+        int var2 = HighscorePlayerRecord.field_d.selectedIndex;
         if (!this.gridTransition.isComplete((byte) -7)) {
           this.gridTransition.draw(256);
         } else {
-          nm.a((byte) -77, var2, this.gridButtons[this.currentPage]);
+          ConnectionSupport.drawButtons((byte) -77, var2, this.gridButtons[this.currentPage]);
         }
         if (null != this.pageButtons) {
-          nm.a((byte) -115, var2, this.pageButtons);
+          ConnectionSupport.drawButtons((byte) -115, var2, this.pageButtons);
         }
     }
 
@@ -390,10 +390,10 @@ final class AchievementsScreen {
     private final boolean handleNextKey(int guard) {
         boolean var2 = false;
         if (AccountRequestDialog.pollKeyEvent(-98)) {
-          di.field_d.handleKeyWithoutNavigation(118);
+          HighscorePlayerRecord.field_d.handleKeyWithoutNavigation(118);
           ArchiveLoadTask.cycleSelectionFromArrowKey(this.actionOrder, 0);
           if (PasswordValidator.field_n == 13) {
-            di.field_d.selectFromKeyboard(false, this.mainMenuActionId);
+            HighscorePlayerRecord.field_d.selectFromKeyboard(false, this.mainMenuActionId);
           }
           this.playSelectionSound(20364);
           var2 = (this.handleActivation((byte) -91, false, Js5NetworkRequest.a((byte) 15, PasswordValidator.field_n)));
@@ -621,7 +621,7 @@ final class AchievementsScreen {
     }
 
     private final boolean handlePointer(byte guard) {
-        di.field_d.updatePointer(this.hitTest(-3, sf.field_c, LoginDialog.field_ob), (byte) 119, this.hitTest(-3, GzipDecoder.field_d, UiContainer.field_y));
+        HighscorePlayerRecord.field_d.updatePointer(this.hitTest(-3, SessionCounterState.field_c, LoginDialog.field_ob), (byte) 119, this.hitTest(-3, GzipDecoder.field_d, UiContainer.field_y));
         this.playSelectionSound(20364);
         boolean var2 = (this.handleActivation((byte) -91, true, Js5NetworkRequest.a((byte) 15, -1)));
         int var3 = -122 / ((guard - 73) / 47);
@@ -647,7 +647,7 @@ final class AchievementsScreen {
     }
 
     private final LegacyButton selectedButton(boolean guard) {
-        int var2 = di.field_d.selectedIndex;
+        int var2 = HighscorePlayerRecord.field_d.selectedIndex;
         if (!guard) {
           Sprite discarded$0 = this.displayedIcon(74, -122);
         }
@@ -730,14 +730,14 @@ final class AchievementsScreen {
           int discarded$1 = this.selectedActionId(122);
         }
         var5.bindAsFramebuffer();
-        nm.a((byte) -103, -1, var7);
+        ConnectionSupport.drawButtons((byte) -103, -1, var7);
         AlphaContainer.field_D.a(124);
         SoftwareRasterizer.restoreClip(var20);
         var5.trimTransparentEdges();
         int var8 = IterableNodeHashTable.minimumButtonX(var7, (byte) 26);
-        int var9 = on.a(var7, -49);
+        int var9 = IntroAudioSupport.rightmostButtonEdge(var7, -49);
         int var10 = ResizableModalPanel.minimumButtonY(var7, (byte) -122);
-        int var11 = pb.a((byte) 2, var7);
+        int var11 = MenuTitleRenderSupport.bottommostButtonEdge((byte) 2, var7);
         var5.fullHeight = var11 - var10;
         var5.offsetX = var5.offsetX - var8;
         var5.fullWidth = var9 - var8;
@@ -788,7 +788,7 @@ final class AchievementsScreen {
     }
 
     private final void drawFooterButtons(int guard) {
-        int var2 = di.field_d.selectedIndex;
+        int var2 = HighscorePlayerRecord.field_d.selectedIndex;
         if (null != this.accountButton) {
           boolean var3 = (this.accountButton.actionId == var2);
           this.accountButton.draw(-16383, (var3));
@@ -810,7 +810,7 @@ final class AchievementsScreen {
         if (guard != 20364) {
           boolean discarded$0 = this.handleNextKey(2);
         }
-        if (di.field_d.selectionChanged) {
+        if (HighscorePlayerRecord.field_d.selectionChanged) {
           LegacyButton var2 = this.selectedButton(true);
           int var3 = PasswordValidator.a(-93, var2);
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, IterableNodeHashTable.field_c * 1536 / 64, var3);
@@ -918,7 +918,7 @@ final class AchievementsScreen {
           if (!this.isEarned(var3_int, 6144)) {
             stackIn_9_0 = StatefulTextPainter.field_q;
           } else {
-            stackIn_9_0 = bg.field_d;
+            stackIn_9_0 = CampaignLoadingSupport.field_d;
           }
           String var8 = stackIn_9_0;
           String var9 = var7 + "<br>" + "<col=" + Integer.toHexString(var6) + ">" + var8;
@@ -1029,7 +1029,7 @@ final class AchievementsScreen {
     final void draw(int guard) {
         SoftwareRasterizer.clearFramebuffer();
         SelfDestructEffects.b(2);
-        pb.a(4);
+        MenuTitleRenderSupport.drawTitles(4);
         if (guard != 3) {
           this.pageButtons = (LegacyButton[]) null;
         }
@@ -1097,20 +1097,20 @@ final class AchievementsScreen {
         if (button == null) {
           return;
         }
-        int var3_int = mj.field_d;
+        int var3_int = LoginHandshakeSupport.field_d;
         if (var3_int != button.revealUntilTick) {
           return;
         }
         try {
           int var4 = PasswordValidator.a(-87, button);
-          ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, IterableNodeHashTable.field_c * 6144 / volumeDivisor, var4);
+          ObjectSpriteSet.field_e.playSampleWithPan(ModeProgressSupport.field_a, 100, IterableNodeHashTable.field_c * 6144 / volumeDivisor, var4);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ta.P(" + volumeDivisor + ',' + (button != null ? "{...}" : "null") + ')');
         }
     }
 
     private final int selectedActionId(int guard) {
-        int var2 = di.field_d.selectedIndex;
+        int var2 = HighscorePlayerRecord.field_d.selectedIndex;
         if (0 > var2 ||
           this.actionOrder.length <= var2) {
           return -1;
@@ -1205,11 +1205,11 @@ final class AchievementsScreen {
         this.buildLayout((byte) -60);
         int var4 = this.actionCount((byte) -128);
         this.buildActionOrder(var4, 0);
-        di.field_d = new MenuInputState(var4);
-        int var5 = da.field_b.defaultActionId(5201);
-        int var6 = da.field_b.hitTest(-3, GzipDecoder.field_d, UiContainer.field_y);
-        di.field_d.initializeSelection(117, true, var6, var5);
-        mj.field_d = 0;
+        HighscorePlayerRecord.field_d = new MenuInputState(var4);
+        int var5 = SessionMenuSupport.field_b.defaultActionId(5201);
+        int var6 = SessionMenuSupport.field_b.hitTest(-3, GzipDecoder.field_d, UiContainer.field_y);
+        HighscorePlayerRecord.field_d.initializeSelection(117, true, var6, var5);
+        LoginHandshakeSupport.field_d = 0;
         ChatMessage.clearFrameOffsets((byte) -70);
         int var7 = -97 % ((guard + 21) / 32);
         this.startGridSlide(4551, var3);

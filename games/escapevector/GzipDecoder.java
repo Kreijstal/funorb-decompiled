@@ -12,8 +12,8 @@ final class GzipDecoder {
 
     final static void initializeAccountUi(boolean guard, byte byteGuard, ResourceArchive sprites, ResourceArchive fonts, ResourceArchive buttons) {
         try {
-          di.field_g = RasterBuffer.a((byte) 41, "");
-          di.field_g.complete((byte) -128, false);
+          HighscorePlayerRecord.field_g = RasterBuffer.a((byte) 41, "");
+          HighscorePlayerRecord.field_g.complete((byte) -128, false);
           MenuInputState.loadCommonUiAssets(83, sprites, fonts, buttons);
           GrowableIntList.a((byte) -96);
           InstructionsScreen.field_q = RasterBuffer.field_g;

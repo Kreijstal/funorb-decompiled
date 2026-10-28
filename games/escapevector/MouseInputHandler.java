@@ -13,7 +13,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           AlphaContainer.mouseIdleTicks = 0;
           IterableDualLinkDeque.pendingMouseX = param0.getX();
           AchievementGrantRule.pendingMouseY = param0.getY();
-          ke.mouseInputChanged = true;
+          LegacyMenuFontSupport.mouseInputChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -38,7 +38,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           AlphaContainer.mouseIdleTicks = 0;
           IterableDualLinkDeque.pendingMouseX = -1;
           AchievementGrantRule.pendingMouseY = -1;
-          ke.mouseInputChanged = true;
+          LegacyMenuFontSupport.mouseInputChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,7 +130,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             AlphaContainer.mouseIdleTicks = 0;
             IterableDualLinkDeque.pendingMouseX = param0.getX();
             AchievementGrantRule.pendingMouseY = param0.getY();
-            ke.mouseInputChanged = true;
+            LegacyMenuFontSupport.mouseInputChanged = true;
           }
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "eg.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
@@ -143,7 +143,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (QuickChatDynamicCommand.mouseHandler != null) {
             AlphaContainer.mouseIdleTicks = 0;
             LoginCredentials.heldMouseButton = 0;
-            ke.mouseInputChanged = true;
+            LegacyMenuFontSupport.mouseInputChanged = true;
             int var2_int = param0.getModifiers();
             if ((8 & var2_int) == 0) {
             }
@@ -177,7 +177,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             AlphaContainer.mouseIdleTicks = 0;
             IterableDualLinkDeque.pendingMouseX = param0.getX();
             AchievementGrantRule.pendingMouseY = param0.getY();
-            ke.mouseInputChanged = true;
+            LegacyMenuFontSupport.mouseInputChanged = true;
           }
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "eg.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
@@ -204,7 +204,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             if ((16 & var2_int) == 0) {
             }
-            ke.mouseInputChanged = true;
+            LegacyMenuFontSupport.mouseInputChanged = true;
             if ((var2_int & 8) != 0) {
             }
           }

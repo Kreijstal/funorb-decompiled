@@ -32,11 +32,11 @@ final class PasswordValidator extends TextFieldValidator {
           }
           int var6 = 78 / ((guard - 10) / 51);
           if (this.b((byte) 53, text)) {
-            String stackIn_17_0 = bg.field_b;
+            String stackIn_17_0 = CampaignLoadingSupport.field_b;
             return stackIn_17_0;
           }
           if (var7.length() <= 0) {
-            String stackIn_33_0 = ml.field_b;
+            String stackIn_33_0 = TrackerMusicLoader.field_b;
             return stackIn_33_0;
           }
           if (PasswordSubstringSupport.containsForwardOrReversed(0, var5, var7)) {
@@ -201,7 +201,7 @@ final class PasswordValidator extends TextFieldValidator {
 
     final static void b(int param0, int param1) {
         if (null != SocketJs5Transport.field_r) {
-          SocketJs5Transport.field_r.a(param0, 3748);
+          SocketJs5Transport.field_r.setAchievementBit(param0, 3748);
         }
         if (param1 > -121) {
           PasswordValidator.a(-97, -50);

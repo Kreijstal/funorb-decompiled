@@ -24,7 +24,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final static void a(int param0) {
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.a((byte) -118);
+          SocketJs5Transport.field_r.advanceCounters((byte) -118);
         }
         if (param0 != 0) {
           FullscreenFocusCanvas.releaseStatics((byte) -8);
@@ -133,7 +133,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           TextLayout.field_d = param5;
         }
         if (ArchiveRequest.field_t >= param5) {
-          pc.field_c[AccountTermsPanel.field_J] = param1;
+          ModeProgressSupport.field_c[AccountTermsPanel.field_J] = param1;
           if (param0 == 1) {
             RasterSnapshot.field_k[AccountTermsPanel.field_J] = param2;
             AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = param3;
@@ -166,7 +166,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var7 = stackIn_35_0;
         } else {
           AlternateUsernameCredentials.field_r = param5;
-          pc.field_c[AccountTermsPanel.field_J] = param1;
+          ModeProgressSupport.field_c[AccountTermsPanel.field_J] = param1;
           if (param0 == 1) {
             RasterSnapshot.field_k[AccountTermsPanel.field_J] = param2;
             AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = param3;

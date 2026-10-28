@@ -278,7 +278,7 @@ final class GameProgressTracker {
         int var1 = 4;
         this.modes = new ModeProgress[var1];
         for (int var2 = 0; var1 > var2; var2++) {
-          int var3 = pc.field_f[var2];
+          int var3 = ModeProgressSupport.field_f[var2];
           int var4 = -1;
           if (var3 == 1) {
             var4 = 1;

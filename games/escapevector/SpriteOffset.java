@@ -10,27 +10,27 @@ final class SpriteOffset {
     int y;
 
     final static boolean a(boolean param0, int param1) {
-        if (di.field_d.selectionChanged) {
+        if (HighscorePlayerRecord.field_d.selectionChanged) {
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, 8192);
         }
         if (param1 != 0) {
           return false;
         }
-        if (!di.field_d.isInitialActivation((byte) -18)) {
+        if (!HighscorePlayerRecord.field_d.isInitialActivation((byte) -18)) {
           return false;
         }
-        if (di.field_d.selectedIndex == 0) {
+        if (HighscorePlayerRecord.field_d.selectedIndex == 0) {
           GuestLoginSupport.beginAccountLogin(true);
-          mj.field_d = 0;
-          p.field_h = 2;
+          LoginHandshakeSupport.field_d = 0;
+          SimulatorSpriteAssets.field_h = 2;
           ChatMessage.clearFrameOffsets((byte) -74);
           return true;
         }
-        if (di.field_d.selectedIndex == 1) {
+        if (HighscorePlayerRecord.field_d.selectedIndex == 1) {
           IntValueNode.field_i = null;
           TrackerMusicDefinition.field_f = new AchievementTracker();
-          ua.field_c = new GameProgressTracker();
-          mj.field_d = 0;
+          GameProgressSupport.field_c = new GameProgressTracker();
+          LoginHandshakeSupport.field_d = 0;
           PacketBuffer.field_h = false;
           AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, param0);
           ChatMessage.clearFrameOffsets((byte) -66);
@@ -71,7 +71,7 @@ final class SpriteOffset {
             }
             var2 = true;
           }
-          LegacyMenuState.input.updatePointer(CachedArchiveProvider.a((byte) 122, sf.field_c, LoginDialog.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y));
+          LegacyMenuState.input.updatePointer(CachedArchiveProvider.a((byte) 122, SessionCounterState.field_c, LoginDialog.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y));
           if (LegacyMenuState.input.isInitialActivation((byte) -18)) {
             var1_int = true;
           }
@@ -93,7 +93,7 @@ final class SpriteOffset {
             long var4 = -SavedDataWrite.field_k + MonotonicClockSupport.monotonicMillis(param0 + 142);
             int var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
-              sn.a(5, 0, true);
+              LoginText.buildLegacyMenu(5, 0, true);
               var3 = 2;
             }
           }
@@ -123,7 +123,7 @@ final class SpriteOffset {
               var3_int = param2;
             }
             byte[] var4 = new byte[var3_int];
-            param0.position = param0.position + ReflectionCheck.field_q.a(var4, true, 0, param0.position, var3_int, param0.payload);
+            param0.position = param0.position + ReflectionCheck.field_q.decode(var4, true, 0, param0.position, var3_int, param0.payload);
             String var5 = AccountMessagePanel.decodeCp1252(var3_int, 0, var4, (byte) -94);
             String stackIn_5_0 = var5;
             return stackIn_5_0;

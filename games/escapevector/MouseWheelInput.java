@@ -16,7 +16,7 @@ abstract class MouseWheelInput {
           return;
         }
         if (null != SocketJs5Transport.field_r) {
-          SocketJs5Transport.field_r.a((byte) -34);
+          SocketJs5Transport.field_r.advanceCounters((byte) -34);
         }
     }
 

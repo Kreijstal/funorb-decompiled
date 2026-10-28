@@ -35,7 +35,7 @@ final class InstructionsScreen {
 
     private final void buildPickupLegend(byte guard) {
         SpriteStrip[] var2 = this.buildPickupSpriteStrips(false);
-        String[] var3 = new String[]{QuitPageSupport.field_b, UiContainer.field_D, LevelAvailabilitySupport.field_a, kc.field_a, ArchiveProvider.field_c, ModeProgress.field_l, NodeHashTableIterator.field_a};
+        String[] var3 = new String[]{QuitPageSupport.field_b, UiContainer.field_D, LevelAvailabilitySupport.field_a, MembershipPromotionSupport.field_a, ArchiveProvider.field_c, ModeProgress.field_l, NodeHashTableIterator.field_a};
         this.prefixBullets(var3, (byte) -10);
         BinaryBitmapFont var4 = ByteStorage.gameFont;
         int var5 = 16777215;
@@ -234,15 +234,15 @@ final class InstructionsScreen {
     }
 
     private final void close(boolean visible, int actionCode) {
-        di.field_d = null;
+        HighscorePlayerRecord.field_d = null;
         PauseMenuState.instructionsVisible = visible ? true : false;
         if (this.resumeCode == actionCode) {
-          da.field_c.updatePointerSelection(false, 320);
+          SessionMenuSupport.field_c.updatePointerSelection(false, 320);
         }
         if (this.mainMenuCode == actionCode) {
           AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, false);
         }
-        mj.field_d = 0;
+        LoginHandshakeSupport.field_d = 0;
         ChatMessage.clearFrameOffsets((byte) -118);
     }
 
@@ -269,7 +269,7 @@ final class InstructionsScreen {
     }
 
     private final void updateRevealEffects(int guard) {
-        int var2 = mj.field_d;
+        int var2 = LoginHandshakeSupport.field_d;
         if (var2 == 0) {
           int var3_int = 8192;
           StringNode.playFrameAppearSound(var3_int, (byte) 51);
@@ -280,7 +280,7 @@ final class InstructionsScreen {
           IntValueNode.field_j = false;
         }
         if (guard == ~var2) {
-          PcmSample var3 = pc.field_a;
+          PcmSample var3 = ModeProgressSupport.field_a;
           int var4 = 100;
           int var5 = 6144 * IterableNodeHashTable.field_c / 64;
           int var6 = 8192;
@@ -288,7 +288,7 @@ final class InstructionsScreen {
           var7.playSampleWithPan(var3, var4, var5, var6);
         }
         if (var2 < 1000) {
-          mj.field_d = mj.field_d + 1;
+          LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
         }
     }
 
@@ -495,7 +495,7 @@ final class InstructionsScreen {
         GameplaySession var5 = BoundedRandomAccessFile.activeSession;
         GameplaySession var6 = var5;
         if (var6 == null) {
-          String[] var3 = new String[]{on.field_c, LoginCredentialType.field_e};
+          String[] var3 = new String[]{IntroAudioSupport.field_c, LoginCredentialType.field_e};
           return var3;
         }
         regionExit1: {
@@ -598,10 +598,10 @@ final class InstructionsScreen {
 
     private final void buildModeInstructions(int guard) {
         String var2 = DirectByteStorage.field_o;
-        String[] var3 = new String[]{on.field_c};
+        String[] var3 = new String[]{IntroAudioSupport.field_c};
         this.retrievalText = new LegacyTextBlock(var2, var3);
         this.configureTextBlock(this.retrievalText, guard ^ 16762243);
-        var3 = new String[]{mh.field_g};
+        var3 = new String[]{LoginIdentifierSupport.field_g};
         var2 = PairedTextColumns.field_s;
         this.retributionText = new LegacyTextBlock(var2, var3);
         this.configureTextBlock(this.retributionText, 16777215);
@@ -643,7 +643,7 @@ final class InstructionsScreen {
         if (var2 == null) {
           return PointCloudEffect.field_v;
         }
-        return ua.field_b;
+        return GameProgressSupport.field_b;
     }
 
     private final SpriteStrip[] buildPickupSpriteStrips(boolean guard) {
@@ -738,7 +738,7 @@ final class InstructionsScreen {
           SoftwareRasterizer.clearFramebuffer();
           SelfDestructEffects.b(2);
           this.frame.draw(105);
-          pb.a(4);
+          MenuTitleRenderSupport.drawTitles(4);
         } else {
           int var2 = 640;
           int var3 = 480;
@@ -906,7 +906,7 @@ final class InstructionsScreen {
         if (guard != -22600) {
           this.exitButton = (LegacyButton) null;
         }
-        int var3 = this.hitTest(guard + 22723, sf.field_c, LoginDialog.field_ob);
+        int var3 = this.hitTest(guard + 22723, SessionCounterState.field_c, LoginDialog.field_ob);
         this.input.updatePointer(var3, (byte) 118, var2);
         if (this.input.selectionChanged) {
           this.playSelectionSound(1536);
@@ -1051,7 +1051,7 @@ final class InstructionsScreen {
         if (!guard) {
           return;
         }
-        String[] var3 = new String[]{AchievementFlagSupport.field_b, QuickChatPhraseDefinition.field_w, mj.field_c, PathPoint.field_e, MenuEdgeSegment.field_k, DynamicTerrainRenderer.field_t, IntroFinalFrameSupport.field_b};
+        String[] var3 = new String[]{AchievementFlagSupport.field_b, QuickChatPhraseDefinition.field_w, LoginHandshakeSupport.field_c, PathPoint.field_e, MenuEdgeSegment.field_k, DynamicTerrainRenderer.field_t, IntroFinalFrameSupport.field_b};
         int var4 = 16777215;
         int var5 = this.highlightColor((byte) 70);
         int var6 = this.headingColor((byte) 115);

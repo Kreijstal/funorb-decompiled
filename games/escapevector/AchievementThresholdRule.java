@@ -15,23 +15,23 @@ final class AchievementThresholdRule {
         int var3 = EscapeVector.obfuscationControl;
         try {
           DialogueScreen var4 = DropTargetWidget.f((byte) -49);
-          if (p.field_h != 0) {
+          if (SimulatorSpriteAssets.field_h != 0) {
             if (!AccountSessionSupport.isGuestSession(-124)) {
-              if (1 == p.field_h) {
-                kh.showHighscoresScreen(true, -1230, true);
+              if (1 == SimulatorSpriteAssets.field_h) {
+                SpriteArchiveSupport.showHighscoresScreen(true, -1230, true);
               }
-              if (p.field_h == 2) {
+              if (SimulatorSpriteAssets.field_h == 2) {
                 PacketBuffer.field_h = false;
                 ChatMessage.clearFrameOffsets((byte) -126);
-                di.field_d = null;
+                HighscorePlayerRecord.field_d = null;
                 if (null != IntValueNode.field_i) {
-                  ml.a(IntValueNode.field_i, 3, (byte) 101);
+                  TrackerMusicLoader.enqueueScoreSubmission(IntValueNode.field_i, 3, (byte) 101);
                 }
                 AchievementDefinition.a(0);
               }
             }
-            p.field_h = 0;
-            mj.field_d = 0;
+            SimulatorSpriteAssets.field_h = 0;
+            LoginHandshakeSupport.field_d = 0;
             ChatMessage.clearFrameOffsets((byte) -105);
           }
           if (guard >= -47) {
@@ -39,26 +39,26 @@ final class AchievementThresholdRule {
           }
           if (var4 == null) {
             if (null == BoundedRandomAccessFile.activeSession &&
-              !wk.field_c) {
+              !IntegerParseSupport.field_c) {
               GameModeSelectScreen.advanceMenuEdgeSegments((byte) -111);
             }
-            if (wk.field_c) {
-              kc.a((byte) -75);
+            if (IntegerParseSupport.field_c) {
+              MembershipPromotionSupport.updatePromotion((byte) -75);
             } else if (TextLayout.field_b) {
               PathPoint.refreshScreenForAccountState(-883);
               UiComponent.field_o.update(117);
             } else if (0 <= SelfDestructEffects.field_q) {
-              sn.c(-1);
+              LoginText.refreshLevelSelection(-1);
               CheckboxPainter.field_l.update(2525);
             } else if (!PacketBuffer.field_h) {
-              if (e.field_a) {
-                var2 = (da.field_b.update(-122));
+              if (RegistrationFlowSupport.field_a) {
+                var2 = (SessionMenuSupport.field_b.update(-122));
                 if (var2) {
                   return;
                 }
               } else if (CheckboxPainter.field_n) {
                 ReflectionCheck.d((byte) -120);
-                var2 = (rc.field_a.update(-91));
+                var2 = (CanvasRenderSupport.field_a.update(-91));
                 if (var2) {
                   return;
                 }
@@ -69,15 +69,15 @@ final class AchievementThresholdRule {
                 }
               } else if (AlternateUsernameCredentials.field_q != null) {
                 QuickChatPhraseCache.advanceMenuTransition((byte) 127);
-              } else if (null != da.field_c) {
+              } else if (null != SessionMenuSupport.field_c) {
                 RatingQuery.e(-46);
               } else {
-                if (mj.field_d < 1000) {
-                  mj.field_d = mj.field_d + 1;
+                if (LoginHandshakeSupport.field_d < 1000) {
+                  LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
                 }
                 BoundedRandomAccessFile.activeSession.updateSession(-41);
               }
-            } else if (mm.a(-59)) {
+            } else if (ThemeAssetSupport.updateLoginOrDiscardPrompt(-59)) {
               return;
             }
             MenuTitleSupport.updateTitleBanner(72);
@@ -88,7 +88,7 @@ final class AchievementThresholdRule {
             return;
           }
           TrackerMusicDefinition.field_f.serviceAccountAchievements(-32464);
-          ua.field_c.flushPendingUpdates(126);
+          GameProgressSupport.field_c.flushPendingUpdates(126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +107,7 @@ final class AchievementThresholdRule {
             return false;
           }
           if (var1_int &&
-            !ua.field_c.isLoaded(-19836)) {
+            !GameProgressSupport.field_c.isLoaded(-19836)) {
             return false;
           }
           if (var1_int &&
@@ -224,8 +224,8 @@ final class AchievementThresholdRule {
           if (guard != 4) {
             return;
           }
-          if (rc.field_b != null) {
-            rc.field_b.suggestions.setSuggestions(suggestions, (byte) -103);
+          if (CanvasRenderSupport.field_b != null) {
+            CanvasRenderSupport.field_b.suggestions.setSuggestions(suggestions, (byte) -103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

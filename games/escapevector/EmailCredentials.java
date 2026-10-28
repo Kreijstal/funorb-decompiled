@@ -12,13 +12,13 @@ final class EmailCredentials extends LoginCredentials {
         if (guard != -19503) {
           return;
         }
-        di.field_g.complete((byte) -128, available);
+        HighscorePlayerRecord.field_g.complete((byte) -128, available);
     }
 
     final static void c(int param0) {
         int var1 = -59 / ((-15 - param0) / 40);
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.a((byte) 87);
+          SocketJs5Transport.field_r.advanceCounters((byte) 87);
         }
     }
 
@@ -59,7 +59,7 @@ final class EmailCredentials extends LoginCredentials {
           int var7 = StatefulTextPainter.field_s.get(11);
           int var8 = StatefulTextPainter.field_s.get(12);
           int var9 = StatefulTextPainter.field_s.get(13);
-          return SingleChildContainer.field_A[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + bg.field_g[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return SingleChildContainer.field_A[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + CampaignLoadingSupport.field_g[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }

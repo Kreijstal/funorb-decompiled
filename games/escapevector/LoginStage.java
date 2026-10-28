@@ -50,7 +50,7 @@ final class LoginStage {
         if (guard < 62) {
           return false;
         }
-        boolean stackIn_8_0 = (this == LoginHandshakeState.keyExchangeStage) || (ClientException.field_c == this) || (this == ThreeSliceButtonPainter.field_t);
+        boolean stackIn_8_0 = (this == LoginHandshakeState.awaitingLoginReplyStage) || (ClientException.field_c == this) || (this == ThreeSliceButtonPainter.field_t);
         return stackIn_8_0;
     }
 
@@ -131,7 +131,7 @@ final class LoginStage {
           for (int var6 = 0; var6 < var3; var6++) {
             var5[var6] = ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], SpriteLoadTask.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var5);
+          var1[var2] = new Sprite(IntroAudioSupport.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], SpriteLoadTask.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var5);
         }
         SpriteDecodeSupport.releaseSpriteSheet(false);
         return var1;

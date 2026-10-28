@@ -38,7 +38,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           CharSequence var4 = (CharSequence) ((Object) groupName);
-          int var3_int = this.index.groupNameLookup.find(mh.a(guard + 1, var4), 1);
+          int var3_int = this.index.groupNameLookup.find(LoginIdentifierSupport.hashCp1252(guard + 1, var4), 1);
           if (this.isValidGroup(var3_int, (byte) -124)) {
             int stackIn_10_0 = var3_int;
             return stackIn_10_0;
@@ -84,7 +84,7 @@ final class ResourceArchive {
         String stackIn_18_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          String var3 = cf.a(allowRepeatedSeparators, 81, text);
+          String var3 = MeshProjectionSupport.accountNameValidationMessage(allowRepeatedSeparators, 81, text);
           if (var3 != null) {
             String stackIn_3_0 = var3;
             return stackIn_3_0;
@@ -124,7 +124,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           CharSequence var4 = (CharSequence) ((Object) groupName);
-          int var3_int = this.index.groupNameLookup.find(mh.a(guard, var4), 1);
+          int var3_int = this.index.groupNameLookup.find(LoginIdentifierSupport.hashCp1252(guard, var4), 1);
           boolean stackIn_4_0 = this.tryLoadGroup(118, var3_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -151,13 +151,13 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           CharSequence var7 = (CharSequence) ((Object) groupName);
-          int var4_int = this.index.groupNameLookup.find(mh.a(0, var7), 1);
+          int var4_int = this.index.groupNameLookup.find(LoginIdentifierSupport.hashCp1252(0, var7), 1);
           if (!this.isValidGroup(var4_int, (byte) 48)) {
             return false;
           }
           int var6 = 10 / ((-13 - guard) / 52);
           CharSequence var8 = (CharSequence) ((Object) fileName);
-          int var5 = this.index.fileNameLookups[var4_int].find(mh.a(0, var8), 1);
+          int var5 = this.index.fileNameLookups[var4_int].find(LoginIdentifierSupport.hashCp1252(0, var8), 1);
           boolean stackIn_9_0 = this.tryLoadFile(true, var4_int, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -194,12 +194,12 @@ final class ResourceArchive {
             this.tryLoadAllGroups(((byte[]) (this.packedGroups[3]))[3]);
           }
           CharSequence var6 = (CharSequence) ((Object) groupName);
-          int var4_int = this.index.groupNameLookup.find(mh.a(guard + 4, var6), 1);
+          int var4_int = this.index.groupNameLookup.find(LoginIdentifierSupport.hashCp1252(guard + 4, var6), 1);
           if (!this.isValidGroup(var4_int, (byte) -113)) {
             return null;
           }
           CharSequence var7 = (CharSequence) ((Object) fileName);
-          int var5 = this.index.fileNameLookups[var4_int].find(mh.a(0, var7), 1);
+          int var5 = this.index.fileNameLookups[var4_int].find(LoginIdentifierSupport.hashCp1252(0, var7), 1);
           byte[] stackIn_9_0 = this.getFile(var4_int, (byte) -97, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -233,14 +233,14 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           CharSequence var8 = (CharSequence) ((Object) groupName);
-          int var5_int = this.index.groupNameLookup.find(mh.a(0, var8), 1);
+          int var5_int = this.index.groupNameLookup.find(LoginIdentifierSupport.hashCp1252(0, var8), 1);
           if (!this.isValidGroup(var5_int, (byte) 91)) {
             Object stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
           }
           int var6 = -115 / ((1 - guard) / 58);
           CharSequence var9 = (CharSequence) ((Object) fileName);
-          int var7 = this.index.fileNameLookups[var5_int].find(mh.a(0, var9), 1);
+          int var7 = this.index.fileNameLookups[var5_int].find(LoginIdentifierSupport.hashCp1252(0, var9), 1);
           byte[] stackIn_7_0 = this.getFileWithKey((byte) 75, key, var7, var5_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -557,7 +557,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           CharSequence var4 = (CharSequence) ((Object) groupName);
-          int var3_int = this.index.groupNameLookup.find(mh.a(guard + 0, var4), 1);
+          int var3_int = this.index.groupNameLookup.find(LoginIdentifierSupport.hashCp1252(guard + 0, var4), 1);
           int stackIn_5_0 = this.groupProgress(guard ^ 3210, var3_int);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -586,7 +586,7 @@ final class ResourceArchive {
           }
           fileName = fileName.toLowerCase();
           CharSequence var5 = (CharSequence) ((Object) fileName);
-          int var4_int = this.index.fileNameLookups[groupId].find(mh.a(0, var5), 1);
+          int var4_int = this.index.fileNameLookups[groupId].find(LoginIdentifierSupport.hashCp1252(0, var5), 1);
           if (this.isValidFileSlot(var4_int, 11315, groupId)) {
             int stackIn_10_0 = var4_int;
             return stackIn_10_0;
@@ -673,7 +673,7 @@ final class ResourceArchive {
           0 != this.index.groupFileCapacities[groupId]) {
           return true;
         }
-        if (uj.field_d) {
+        if (SharedSpriteAssets.field_d) {
           throw new IllegalArgumentException(Integer.toString(groupId));
         }
         return false;
@@ -706,7 +706,7 @@ final class ResourceArchive {
           fileId < this.index.groupFileCapacities[groupId]) {
           return true;
         }
-        if (uj.field_d) {
+        if (SharedSpriteAssets.field_d) {
           throw new IllegalArgumentException(groupId + " " + fileId);
         }
         return false;
@@ -723,7 +723,7 @@ final class ResourceArchive {
             return false;
           }
           CharSequence var4 = (CharSequence) ((Object) groupName);
-          int var3_int = this.index.groupNameLookup.find(mh.a(0, var4), 1);
+          int var3_int = this.index.groupNameLookup.find(LoginIdentifierSupport.hashCp1252(0, var4), 1);
           if (var3_int >= 0) {
             return true;
           }
@@ -850,7 +850,7 @@ final class ResourceArchive {
             RuntimeException stackIn_36_0 = var11_ref_RuntimeException;
             StringBuilder stackIn_36_1 = new StringBuilder();
             boolean stackIn_37_2 = (key != null);
-            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(groupId).append(" ").append(var9.length).append(" ").append(ji.a(255, var9.length, var9)).append(" ").append(ji.a(255, -2 + var9.length, var9)).append(" ").append(this.index.groupCrc32s[groupId]).append(" ").append(this.index.encodedCrc32).toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(groupId).append(" ").append(var9.length).append(" ").append(ArchiveFactorySupport.crc32Prefix(255, var9.length, var9)).append(" ").append(ArchiveFactorySupport.crc32Prefix(255, -2 + var9.length, var9)).append(" ").append(this.index.groupCrc32s[groupId]).append(" ").append(this.index.encodedCrc32).toString());
           }
           if (this.discardPackedGroups) {
             this.packedGroups[groupId] = null;

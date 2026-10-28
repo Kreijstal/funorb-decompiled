@@ -8,7 +8,7 @@ final class KeyCodeSupport {
 
     final static boolean c(int param0) {
         int var1 = 51 % ((param0 + 13) / 37);
-        return !di.field_g.isComplete(0) ? true : false;
+        return !HighscorePlayerRecord.field_g.isComplete(0) ? true : false;
     }
 
     public static void releaseStatics(int guard) {
@@ -20,7 +20,7 @@ final class KeyCodeSupport {
 
     final static void a(int param0) {
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.a((byte) -122);
+          SocketJs5Transport.field_r.advanceCounters((byte) -122);
         }
         if (param0 != 1) {
           KeyCodeSupport.releaseStatics(-49);

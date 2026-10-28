@@ -21,7 +21,7 @@ final class ObjectSpriteSet {
           var6_int = -param2.fullWidth + (param3.fullWidth - var6_int);
           var7 = -param2.fullHeight + (param3.fullHeight - var7);
           SpriteOffset var9 = new SpriteOffset(var6_int, var7);
-          SpriteOffset var13 = rc.a(param1, (byte) 120, var9, var12);
+          SpriteOffset var13 = CanvasRenderSupport.selectQuarterTurnOffset(param1, (byte) 120, var9, var12);
           SpriteOffset var10 = this.a(param1, param2.fullHeight, -29295, param2.fullWidth);
           if (param0 <= 21) {
             ObjectSpriteSet.releaseStatics(104);
@@ -268,7 +268,7 @@ final class ObjectSpriteSet {
             this.field_a[var4_int] = this.a(param0, -67, var5);
             this.field_f[var4_int] = this.a(param1, -53, var5);
             SpriteOffset var6 = this.a(param1, -1, param0, param2);
-            this.field_g[var4_int] = rc.a(var5, (byte) 124, var6, param2);
+            this.field_g[var4_int] = CanvasRenderSupport.selectQuarterTurnOffset(var5, (byte) 124, var6, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

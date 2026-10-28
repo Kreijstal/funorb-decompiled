@@ -63,7 +63,7 @@ final class ViewportController {
 
     final boolean c(int param0) {
         int var2 = 71 / ((-20 - param0) / 62);
-        if (this.field_s > ok.field_c) {
+        if (this.field_s > IntroFrameRenderer.field_c) {
           return false;
         }
         if (Js5NetworkRequest.field_x > 0) {
@@ -147,7 +147,7 @@ final class ViewportController {
           return;
         }
         if (this.field_h > 0) {
-          pb.field_b = (this.field_h - AppletViewportState.canvasWidth) / 2;
+          MenuTitleRenderSupport.field_b = (this.field_h - AppletViewportState.canvasWidth) / 2;
         }
     }
 
@@ -160,9 +160,9 @@ final class ViewportController {
         }
         if (!this.field_a) {
           if (AppletViewportState.canvasWidth < this.field_h) {
-            pb.field_b = (-AppletViewportState.canvasWidth + this.field_h) / 2;
+            MenuTitleRenderSupport.field_b = (-AppletViewportState.canvasWidth + this.field_h) / 2;
           } else if (0 < this.field_h) {
-            pb.field_b = 0;
+            MenuTitleRenderSupport.field_b = 0;
           }
           if (this.field_q == AppletViewportState.canvasWidth &&
             this.field_i == BoundedUrlRequest.field_d) {
@@ -180,7 +180,7 @@ final class ViewportController {
           return;
         }
         this.field_d = this.field_b;
-        if (ok.field_c < this.field_s) {
+        if (IntroFrameRenderer.field_c < this.field_s) {
           this.field_a = false;
         } else {
           this.a((byte) 13);

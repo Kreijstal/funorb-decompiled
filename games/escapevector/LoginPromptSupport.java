@@ -16,7 +16,7 @@ final class LoginPromptSupport {
         if (SavedDataRequestSupport.requestDialog != null) {
           SavedDataRequestSupport.requestDialog.closeDialog(guard ^ -18861);
         }
-        String var1 = mh.b((byte) 105);
+        String var1 = LoginIdentifierSupport.currentIdentifier((byte) 105);
         PcmResampler.field_d = new LoginForm(var1, (String) null, true, false, false);
         Checkbox.field_F.pushPanel(SpaceCompactionSupport.loginDialog, 97);
         SpaceCompactionSupport.loginDialog.transitionToContent(PcmResampler.field_d, 30);

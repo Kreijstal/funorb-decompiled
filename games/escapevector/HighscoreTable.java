@@ -524,7 +524,7 @@ final class HighscoreTable {
           this.fromLevelColumn = new LegacyMenuColumn(Checkbox.field_D, var24);
           this.columns.addLast(-12328, this.fromLevelColumn);
           int[] var25 = this.toLevelValues((byte) 127);
-          this.toLevelColumn = new LegacyMenuColumn(jd.field_c, var25);
+          this.toLevelColumn = new LegacyMenuColumn(ByteArrayPoolSupport.field_c, var25);
           this.columns.addLast(-12328, this.toLevelColumn);
           int[] var26 = this.scoreValues(true, this.query.intColumns[this.queryColumn], ProxySocketConnector.a(90, this.query.boardId));
           this.scoreColumn = new LegacyMenuColumn(GrowableIntList.field_f, var26);
@@ -583,7 +583,7 @@ final class HighscoreTable {
         this.fromLevelColumn = new LegacyMenuColumn(Checkbox.field_D, var20);
         this.columns.addLast(-12328, this.fromLevelColumn);
         int[] var21 = this.missingValues(-27531, this.rowCount);
-        this.toLevelColumn = new LegacyMenuColumn(jd.field_c, var21);
+        this.toLevelColumn = new LegacyMenuColumn(ByteArrayPoolSupport.field_c, var21);
         this.columns.addLast(-12328, this.toLevelColumn);
         int[] var22 = this.missingValues(-27531, this.rowCount);
         this.scoreColumn = new LegacyMenuColumn(GrowableIntList.field_f, var22);

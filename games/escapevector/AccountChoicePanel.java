@@ -9,7 +9,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
 
     public AccountChoicePanel() {
         super(0, 0, 476, 225, (WidgetPainter) null);
-        this.createAccountButton = new TextButton(pc.field_g, (UiListener) null);
+        this.createAccountButton = new TextButton(ModeProgressSupport.field_g, (UiListener) null);
         this.backButton = new TextButton(CipherPacketBuffer.field_p, (UiListener) null);
         this.guestButton = new TextButton(IntroFinalFrameSupport.field_c, (UiListener) null);
         ThreeSliceButtonPainter var1 = new ThreeSliceButtonPainter();
@@ -25,7 +25,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         this.backButton.listener = (UiListener) (this);
         this.createAccountButton.listener = (UiListener) (this);
         this.guestButton.listener = (UiListener) (this);
-        this.createAccountButton.tooltip = mm.field_c;
+        this.createAccountButton.tooltip = ThemeAssetSupport.field_c;
         this.guestButton.tooltip = ValidationHelpWidget.field_G;
         this.addChild(this.backButton, false);
         this.addChild(this.createAccountButton, false);
@@ -74,7 +74,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           if (this.backButton == button) {
             GameAppletShell.b(-74);
           } else if (this.createAccountButton == button) {
-            fe.a((byte) -83);
+            MembershipPromotionScreen.showRegistrationPanel((byte) -83);
           } else if (this.guestButton == button) {
             NameAvailabilityResultSupport.chooseGuestSession(4);
           }

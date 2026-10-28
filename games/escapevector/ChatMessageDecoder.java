@@ -172,7 +172,7 @@ final class ChatMessageDecoder {
               QuickChatDynamicCommand.outgoingPackets.position = 0;
               CipherPacketBuffer var4 = QuickChatDynamicCommand.incomingPackets;
               CipherPacketBuffer var5 = var4;
-              AccountFormStage.field_d = sf.field_d;
+              AccountFormStage.field_d = SessionCounterState.field_d;
               var5.position = 0;
               int stackIn_11_0 = (!param0) ? -1 : -2;
               NetworkGameClient.field_q = stackIn_11_0;

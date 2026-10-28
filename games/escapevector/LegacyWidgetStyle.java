@@ -113,7 +113,7 @@ class LegacyWidgetStyle extends LegacyStyleNode {
           }
           if (password != null &&
             password.length() >= ArchiveRequest.field_v) {
-            if (password.length() > p.field_a) {
+            if (password.length() > SimulatorSpriteAssets.field_a) {
               return true;
             }
             return false;

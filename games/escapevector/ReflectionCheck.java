@@ -11,7 +11,7 @@ final class ReflectionCheck extends IntrusiveNode {
     SystemTask[] methodTasks;
     static CoverageBitmapFont field_h;
     int[] operations;
-    static ph field_q;
+    static HuffmanDecoder field_q;
     static int field_k;
     int[] replacementValues;
 
@@ -30,27 +30,27 @@ final class ReflectionCheck extends IntrusiveNode {
         if (param0 >= -112) {
           ReflectionCheck.a(81, (byte) 59);
           boolean var1 = (MenuTitleSupport.isPointerDriven((byte) 71));
-          if (rc.field_a == null) {
-            kh.showHighscoresScreen((var1), -1230, false);
+          if (CanvasRenderSupport.field_a == null) {
+            SpriteArchiveSupport.showHighscoresScreen((var1), -1230, false);
             return;
           }
           int var2 = Bullet.accountStateIndex(98);
-          if (rc.field_a.accountStateIndex != var2) {
-            boolean var3 = (rc.field_a.showSubmittedScore);
-            kh.showHighscoresScreen((var1), -1230, (var3));
+          if (CanvasRenderSupport.field_a.accountStateIndex != var2) {
+            boolean var3 = (CanvasRenderSupport.field_a.showSubmittedScore);
+            SpriteArchiveSupport.showHighscoresScreen((var1), -1230, (var3));
             return;
           }
           return;
         }
         boolean var1Lifetime1 = (MenuTitleSupport.isPointerDriven((byte) 71));
-        if (rc.field_a == null) {
-          kh.showHighscoresScreen((var1Lifetime1), -1230, false);
+        if (CanvasRenderSupport.field_a == null) {
+          SpriteArchiveSupport.showHighscoresScreen((var1Lifetime1), -1230, false);
           return;
         }
         int var2Lifetime1 = Bullet.accountStateIndex(98);
-        if (rc.field_a.accountStateIndex != var2Lifetime1) {
-          boolean var3Lifetime1 = (rc.field_a.showSubmittedScore);
-          kh.showHighscoresScreen((var1Lifetime1), -1230, (var3Lifetime1));
+        if (CanvasRenderSupport.field_a.accountStateIndex != var2Lifetime1) {
+          boolean var3Lifetime1 = (CanvasRenderSupport.field_a.showSubmittedScore);
+          SpriteArchiveSupport.showHighscoresScreen((var1Lifetime1), -1230, (var3Lifetime1));
           return;
         }
     }
@@ -58,13 +58,13 @@ final class ReflectionCheck extends IntrusiveNode {
     final static void a(int param0, byte param1) {
         if (param1 == 44) {
           if (SocketJs5Transport.field_r != null) {
-            SocketJs5Transport.field_r.b(-1, param0);
+            SocketJs5Transport.field_r.addOffset(-1, param0);
           }
           return;
         }
         field_n = -42;
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.b(-1, param0);
+          SocketJs5Transport.field_r.addOffset(-1, param0);
         }
     }
 

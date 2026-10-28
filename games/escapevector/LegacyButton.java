@@ -341,7 +341,7 @@ final class LegacyButton {
           if (var2 == 0) {
             ProgressQuery var4 = (ProgressQuery) (AchievementTracker.field_i.first(false));
             if (var4 == null) {
-              nm.a(16);
+              ConnectionSupport.closeTransport(16);
               return;
             }
             int var5 = -var10.position + EmailSyntaxValidator.field_r;
@@ -375,11 +375,11 @@ final class LegacyButton {
             }
             int stackIn_13_0 = guard;
             int stackIn_13_1 = 108457426;
-            nm.a(stackIn_13_0 ^ stackIn_13_1);
+            ConnectionSupport.closeTransport(stackIn_13_0 ^ stackIn_13_1);
             return;
           }
           GameModeSelectScreen.reportClientError(false, "LR1: " + LoginStage.formatPacketDiagnostic((byte) 36), (Throwable) null);
-          nm.a(16);
+          ConnectionSupport.closeTransport(16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -447,7 +447,7 @@ final class LegacyButton {
         if (1 == this.style) {
           return 0;
         }
-        return mj.field_d < this.revealUntilTick ? (this.revealUntilTick - mj.field_d) * 2 : 0;
+        return LoginHandshakeSupport.field_d < this.revealUntilTick ? (this.revealUntilTick - LoginHandshakeSupport.field_d) * 2 : 0;
     }
 
     public static void releaseStatics(int guard) {

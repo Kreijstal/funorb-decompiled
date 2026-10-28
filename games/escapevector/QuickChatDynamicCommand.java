@@ -5,7 +5,7 @@ final class QuickChatDynamicCommand {
     int id;
     int parameterCount;
     static MouseInputHandler mouseHandler;
-    static p field_e;
+    static SimulatorSpriteAssets field_e;
     static CipherPacketBuffer incomingPackets;
     static CipherPacketBuffer outgoingPackets;
     static Sprite[] field_a;

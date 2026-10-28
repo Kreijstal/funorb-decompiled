@@ -17,7 +17,7 @@ final class MeshMaterial {
         field_b = null;
     }
 
-    final static int pollAccountFormRequest(sn firstText, sn secondText, int guard) {
+    final static int pollAccountFormRequest(LoginText firstText, LoginText secondText, int guard) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         try {
@@ -86,19 +86,19 @@ final class MeshMaterial {
     final static void showDisplayNameForm(int guard) {
         if (SavedDataRequestSupport.requestDialog == null) {
           int var1 = -22 / ((guard - 26) / 51);
-          rc.field_b = new DisplayNameForm();
-          SpaceCompactionSupport.loginDialog.transitionToContent(rc.field_b, 30);
+          CanvasRenderSupport.field_b = new DisplayNameForm();
+          SpaceCompactionSupport.loginDialog.transitionToContent(CanvasRenderSupport.field_b, 30);
           return;
         }
         SavedDataRequestSupport.requestDialog.closeDialog(-18861);
         int var1Lifetime1 = -22 / ((guard - 26) / 51);
-        rc.field_b = new DisplayNameForm();
-        SpaceCompactionSupport.loginDialog.transitionToContent(rc.field_b, 30);
+        CanvasRenderSupport.field_b = new DisplayNameForm();
+        SpaceCompactionSupport.loginDialog.transitionToContent(CanvasRenderSupport.field_b, 30);
     }
 
     final static void setLegacyMenuColors(int normal, int selected, int disabled, int guard) {
         ValidatedTextWidget.field_X = normal;
-        pc.field_d = selected;
+        ModeProgressSupport.field_d = selected;
         MenuTitleSupport.field_e = disabled;
         if (guard != -11997) {
           keyboardIdleTicks = 84;

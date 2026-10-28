@@ -10,11 +10,11 @@ final class ArchiveKeyRequest extends IntrusiveNode {
     final static void a(int param0, int param1, boolean param2, int param3) {
         param1 = AccountChoicePanel.a(-8462, param1);
         CheckboxPainter.field_l = new LevelSelectScreen(param1, param3);
-        mj.field_d = param0;
+        LoginHandshakeSupport.field_d = param0;
         SelfDestructEffects.field_q = param1;
-        di.field_d = new MenuInputState(CheckboxPainter.field_l.actionCount);
+        HighscorePlayerRecord.field_d = new MenuInputState(CheckboxPainter.field_l.actionCount);
         int var4 = LoginForm.a(param1, (byte) 121);
-        di.field_d.initializeSelection(102, param2, CheckboxPainter.field_l.hitTest(UiContainer.field_y, 12089, GzipDecoder.field_d), var4);
+        HighscorePlayerRecord.field_d.initializeSelection(102, param2, CheckboxPainter.field_l.hitTest(UiContainer.field_y, 12089, GzipDecoder.field_d), var4);
         ChatMessage.clearFrameOffsets((byte) -70);
     }
 
@@ -26,7 +26,7 @@ final class ArchiveKeyRequest extends IntrusiveNode {
           var1.unlink((byte) -66);
           return;
         }
-        nm.a(16);
+        ConnectionSupport.closeTransport(16);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -74,12 +74,12 @@ final class ArchiveKeyRequest extends IntrusiveNode {
         ThreeSliceButtonPainter.field_r = QuickChatDynamicCommand.incomingPackets.readString(!guard ? true : false);
         if (guard) {
           CharSequence var3 = (CharSequence) ((Object) ThreeSliceButtonPainter.field_r);
-          ProgressRecord.field_k = sf.a(-101, var3);
+          ProgressRecord.field_k = SessionCounterState.normalizeAccountName(-101, var3);
           return;
         }
         field_h = (String) null;
         CharSequence var2 = (CharSequence) ((Object) ThreeSliceButtonPainter.field_r);
-        ProgressRecord.field_k = sf.a(-101, var2);
+        ProgressRecord.field_k = SessionCounterState.normalizeAccountName(-101, var2);
     }
 
     final static boolean hasCompletePacket(int guard) {

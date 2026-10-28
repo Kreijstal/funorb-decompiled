@@ -104,7 +104,7 @@ final class TransitionPoint {
             NameSuggestionsPanel.a((byte) 9, (var3_int), TileSpriteCacheEntry.field_f, AnimatedPathMarker.commonUiLoadProgress(-111), FrameworkLoadingStatus.loadingMessage(1));
           } else if (!AccountTermsPanel.l(guard - 89)) {
             SoftwareRasterizer.clearFramebuffer();
-            ok.a(240, 320, guard ^ 72);
+            IntroFrameRenderer.drawIntroFrame(240, 320, guard ^ 72);
             SecondaryNodeHashTable.presentRaster(canvas, 0, -1, 0);
           } else if (QuickChatPhraseCache.field_e != 0) {
             TextFieldValidator.a(canvas, 0);

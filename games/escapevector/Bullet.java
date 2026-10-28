@@ -161,7 +161,7 @@ final class Bullet extends IntrusiveNode {
         int var17 = 0;
         int var19 = EscapeVector.obfuscationControl;
         try {
-          int var5_int = nm.a(3 * (-nearDepth + farDepth), (byte) 78);
+          int var5_int = ConnectionSupport.bitLength(3 * (-nearDepth + farDepth), (byte) 78);
           if (guard != 4198) {
             collisionLaserCount = 9;
           }
@@ -184,10 +184,10 @@ final class Bullet extends IntrusiveNode {
             boolean stackIn_14_0 = stackOut_13_0;
             if (var19 == 0) {
               if (stackIn_14_0) {
-                int var12 = on.field_g[var9];
+                int var12 = IntroAudioSupport.field_g[var9];
                 int var13 = DraggableWidget.field_D[var9];
-                var14 = on.field_g[var10] - var12;
-                var15 = on.field_g[var11] - var12;
+                var14 = IntroAudioSupport.field_g[var10] - var12;
+                var15 = IntroAudioSupport.field_g[var11] - var12;
                 var16 = -var13 + DraggableWidget.field_D[var10];
                 var17 = DraggableWidget.field_D[var11] - var13;
               }

@@ -108,7 +108,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
 
     final static void a(int param0, int param1) {
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.b(-1, param1);
+          SocketJs5Transport.field_r.addOffset(-1, param1);
         }
         if (param0 < 42) {
           field_q = -72L;

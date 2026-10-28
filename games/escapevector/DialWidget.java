@@ -45,7 +45,7 @@ final class DialWidget extends TextButton {
           AnimatedPathMarker.spriteIndices = new byte[ArchiveLoadTask.spriteCount][];
           SpriteLoadTask.spriteWidths = new int[ArchiveLoadTask.spriteCount];
           var18.position = -(ArchiveLoadTask.spriteCount * 8) + (-7 + encoded.length);
-          on.spriteSheetWidth = var18.readUnsignedShort(1952);
+          IntroAudioSupport.spriteSheetWidth = var18.readUnsignedShort(1952);
           DelegatingCanvas.spriteSheetHeight = var18.readUnsignedShort(1952);
           int var3 = 1 + (var18.readUnsignedByte(0) & 255);
           for (int var4 = 0; var4 < ArchiveLoadTask.spriteCount; var4++) {

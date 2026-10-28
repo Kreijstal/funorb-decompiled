@@ -3,7 +3,7 @@
  */
 final class AccountSessionSupport {
     static int field_d;
-    static fe field_a;
+    static MembershipPromotionScreen field_a;
     static PcmStreamMixer field_f;
     static String field_e;
     static String field_b;
@@ -41,7 +41,7 @@ final class AccountSessionSupport {
 
     final static boolean isGuestSession(int guard) {
         if (guard > -88) {
-          field_a = (fe) null;
+          field_a = (MembershipPromotionScreen) null;
           return SpriteState.guestSession;
         }
         return SpriteState.guestSession;

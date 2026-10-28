@@ -96,7 +96,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           for (int var2_int = 0; var2_int < param1.length(); var2_int++) {
             int var3 = param1.charAt(var2_int);
             if (!SpriteDecodeSupport.isAsciiLetter((char) var3, (byte) 103) &&
-              !on.a((char) var3, false)) {
+              !IntroAudioSupport.isAsciiDigit((char) var3, false)) {
               return true;
             }
           }
@@ -139,7 +139,7 @@ final class MatchingTextValidator extends TextFieldValidator {
 
     final static void b(int param0, String param1) {
         try {
-          p.field_i = param1;
+          SimulatorSpriteAssets.field_i = param1;
           if (param0 != -10002) {
             field_n = (String[]) null;
           }
@@ -149,17 +149,17 @@ final class MatchingTextValidator extends TextFieldValidator {
     }
 
     final static void a(int param0, String param1, int param2, int param3, int param4) {
-        mj.field_b.bindAsFramebuffer();
+        LoginHandshakeSupport.field_b.bindAsFramebuffer();
         SoftwareRasterizer.clearFramebuffer();
         ByteStorage.gameFont.drawCentered(param1, 160, 22, param2, -1);
         AlphaContainer.field_D.a(122);
-        cf.a(mj.field_b, true, 1);
+        MeshProjectionSupport.markSpriteEdges(LoginHandshakeSupport.field_b, true, 1);
         if (param3 > -109) {
           return;
         }
         try {
-          mj.field_b.addOutline(5267536);
-          mj.field_b.drawTransparent(param4 - 160, -22 + param0);
+          LoginHandshakeSupport.field_b.addOutline(5267536);
+          LoginHandshakeSupport.field_b.drawTransparent(param4 - 160, -22 + param0);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "lb.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

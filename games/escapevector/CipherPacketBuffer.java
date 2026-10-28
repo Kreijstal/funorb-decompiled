@@ -40,7 +40,7 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final static void m(int param0) {
         if (null != SocketJs5Transport.field_r) {
-          SocketJs5Transport.field_r.a((byte) 33);
+          SocketJs5Transport.field_r.advanceCounters((byte) 33);
         }
         int var1 = -128 / ((param0 - 16) / 38);
     }

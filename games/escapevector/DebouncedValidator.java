@@ -123,20 +123,20 @@ abstract class DebouncedValidator implements ValidationSource {
               if (null != DirectByteStorage.field_n) {
                 return;
               }
-              if (!e.field_d) {
+              if (!RegistrationFlowSupport.field_d) {
                 return;
               }
-              sn.a(var2, 0, param1);
+              LoginText.buildLegacyMenu(var2, 0, param1);
               return;
             }
             var2 = 0;
             if (null != DirectByteStorage.field_n) {
               return;
             }
-            if (!e.field_d) {
+            if (!RegistrationFlowSupport.field_d) {
               return;
             }
-            sn.a(var2, 0, param1);
+            LoginText.buildLegacyMenu(var2, 0, param1);
             return;
           }
           if (DirectByteStorage.field_n != null) {
@@ -146,15 +146,15 @@ abstract class DebouncedValidator implements ValidationSource {
               var2Lifetime4 = 3;
             } else {
               var2Lifetime4 = 2;
-              rc.a(IsaacRandom.field_d, true);
+              CanvasRenderSupport.attachCanvasInput(IsaacRandom.field_d, true);
             }
             if (null != DirectByteStorage.field_n) {
               return;
             }
-            if (!e.field_d) {
+            if (!RegistrationFlowSupport.field_d) {
               return;
             }
-            sn.a(var2Lifetime4, 0, param1);
+            LoginText.buildLegacyMenu(var2Lifetime4, 0, param1);
             return;
           }
           IsaacRandom.field_d = AccountFormStage.createFullscreenCanvas(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
@@ -162,23 +162,23 @@ abstract class DebouncedValidator implements ValidationSource {
             var2Lifetime5 = 3;
           } else {
             var2Lifetime5 = 2;
-            rc.a(IsaacRandom.field_d, true);
+            CanvasRenderSupport.attachCanvasInput(IsaacRandom.field_d, true);
           }
           if (null != DirectByteStorage.field_n) {
             return;
           }
-          if (!e.field_d) {
+          if (!RegistrationFlowSupport.field_d) {
             return;
           }
-          sn.a(var2Lifetime5, 0, param1);
+          LoginText.buildLegacyMenu(var2Lifetime5, 0, param1);
           return;
         }
         if (Js5NetworkRequest.field_x <= 0) {
           if (!AccountSessionSupport.isGuestSession(-104)) {
             int var2Lifetime1 = 1;
             if (null == DirectByteStorage.field_n &&
-              e.field_d) {
-              sn.a(var2Lifetime1, 0, param1);
+              RegistrationFlowSupport.field_d) {
+              LoginText.buildLegacyMenu(var2Lifetime1, 0, param1);
               return;
             }
             return;
@@ -187,10 +187,10 @@ abstract class DebouncedValidator implements ValidationSource {
           if (null != DirectByteStorage.field_n) {
             return;
           }
-          if (!e.field_d) {
+          if (!RegistrationFlowSupport.field_d) {
             return;
           }
-          sn.a(var2Lifetime1Lifetime1, 0, param1);
+          LoginText.buildLegacyMenu(var2Lifetime1Lifetime1, 0, param1);
           return;
         }
         if (DirectByteStorage.field_n != null) {
@@ -200,11 +200,11 @@ abstract class DebouncedValidator implements ValidationSource {
             var2Lifetime2 = 3;
           } else {
             var2Lifetime2 = 2;
-            rc.a(IsaacRandom.field_d, true);
+            CanvasRenderSupport.attachCanvasInput(IsaacRandom.field_d, true);
           }
           if (null == DirectByteStorage.field_n &&
-            e.field_d) {
-            sn.a(var2Lifetime2, 0, param1);
+            RegistrationFlowSupport.field_d) {
+            LoginText.buildLegacyMenu(var2Lifetime2, 0, param1);
             return;
           }
           return;
@@ -214,11 +214,11 @@ abstract class DebouncedValidator implements ValidationSource {
           var2Lifetime3 = 3;
         } else {
           var2Lifetime3 = 2;
-          rc.a(IsaacRandom.field_d, true);
+          CanvasRenderSupport.attachCanvasInput(IsaacRandom.field_d, true);
         }
         if (null == DirectByteStorage.field_n &&
-          e.field_d) {
-          sn.a(var2Lifetime3, 0, param1);
+          RegistrationFlowSupport.field_d) {
+          LoginText.buildLegacyMenu(var2Lifetime3, 0, param1);
           return;
         }
     }

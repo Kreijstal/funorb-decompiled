@@ -26,7 +26,7 @@ abstract class IndexedSpriteState {
     final static void a(int param0) {
         int var19 = EscapeVector.obfuscationControl;
         try {
-          kh.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          SpriteArchiveSupport.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           int var1_int = ByteStorage.logoMeshes.length;
           int[] var21 = new int[var1_int];
           int[] var20 = var21;
@@ -38,17 +38,17 @@ abstract class IndexedSpriteState {
             int var5 = var4_ref_ia.maxX + var4_ref_ia.minX >> 1;
             int var6 = var4_ref_ia.minY + var4_ref_ia.maxY >> 1;
             int var7 = var4_ref_ia.minZ + var4_ref_ia.maxZ >> 1;
-            int var8 = kh.field_a[9] >> 2;
-            int var9 = kh.field_a[10] >> 2;
-            int var10_int = kh.field_a[11] >> 2;
+            int var8 = SpriteArchiveSupport.field_a[9] >> 2;
+            int var9 = SpriteArchiveSupport.field_a[10] >> 2;
+            int var10_int = SpriteArchiveSupport.field_a[11] >> 2;
             int var11 = var8 * TerrainMaskSupport.field_c[3] + (var9 * TerrainMaskSupport.field_c[4] + var10_int * TerrainMaskSupport.field_c[5]) >> 14;
             int var12 = var10_int * TerrainMaskSupport.field_c[8] + TerrainMaskSupport.field_c[6] * var8 + TerrainMaskSupport.field_c[7] * var9 >> 14;
             int var13 = var8 * TerrainMaskSupport.field_c[9] + var9 * TerrainMaskSupport.field_c[10] + TerrainMaskSupport.field_c[11] * var10_int >> 14;
             var2[var3] = var7 * var13 + (var12 * var6 + var11 * var5) >> 16;
           }
-          int var3Lifetime1 = kh.field_a[9] >> 8;
-          int var4 = kh.field_a[10] >> 8;
-          int var5Lifetime1 = kh.field_a[11] >> 8;
+          int var3Lifetime1 = SpriteArchiveSupport.field_a[9] >> 8;
+          int var4 = SpriteArchiveSupport.field_a[10] >> 8;
+          int var5Lifetime1 = SpriteArchiveSupport.field_a[11] >> 8;
           int var6Lifetime1 = SocketConnector.field_d << 4;
           int var7Lifetime1 = 0;
           int var8Lifetime1 = AccountNoticeKind.sinQ16(10758, var6Lifetime1) >> 8;
@@ -86,7 +86,7 @@ abstract class IndexedSpriteState {
             for (int var18 = 0; 3 > var18; var18++) {
               TerrainMaskSupport.field_c[var18] = TerrainMaskSupport.field_c[var18] + SectorCacheStore.field_c[var15][var18];
             }
-            cf.a(true, TerrainMaskSupport.field_c, false, kh.field_a, false, true, var17);
+            MeshProjectionSupport.projectAndBucketMesh(true, TerrainMaskSupport.field_c, false, SpriteArchiveSupport.field_a, false, true, var17);
             ShipHullGeometry.a(var13Lifetime1, -16711760, var7Lifetime1, var12Lifetime1, var14, var17, var9Lifetime1, var8Lifetime1);
           }
           return;

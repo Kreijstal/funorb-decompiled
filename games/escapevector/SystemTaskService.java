@@ -7,7 +7,7 @@ final class SystemTaskService implements Runnable {
     private boolean field_a;
     java.awt.EventQueue field_k;
     BoundedRandomAccessFile field_b;
-    private ra field_i;
+    private MicrosoftDisplayController field_i;
     private SystemTask field_c;
     private static volatile long field_n;
     boolean field_f;
@@ -21,7 +21,7 @@ final class SystemTaskService implements Runnable {
     static String field_s;
     private SystemTask field_p;
     static String field_v;
-    private fb field_d;
+    private MicrosoftCursorController field_d;
     private static int field_q;
     BoundedRandomAccessFile field_x;
     static java.lang.reflect.Method field_r;
@@ -185,7 +185,7 @@ final class SystemTaskService implements Runnable {
                         var8.field_b = var14;
                         var14.setResizable(false);
                         if (this.field_m) {
-                          this.field_i.a(var14, var8.field_c & 65535, var8.field_a & 65535, var8.field_c >>> 16, -7976, var8.field_a >> 16);
+                          this.field_i.enterFullscreen(var14, var8.field_c & 65535, var8.field_a & 65535, var8.field_c >>> 16, -7976, var8.field_a >> 16);
                         } else {
                           Class.forName("FullscreenDisplayController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_t, new Object[]{var14, new Integer(var8.field_c >>> 16), new Integer(65535 & var8.field_c), new Integer(var8.field_a >> 16), new Integer(65535 & var8.field_a)});
                         }
@@ -205,7 +205,7 @@ final class SystemTaskService implements Runnable {
                           var3_int = var8.field_c;
                           int var4 = var8.field_a;
                           if (this.field_m) {
-                            this.field_d.a(var4, var3_int, -11154);
+                            this.field_d.movePointer(var4, var3_int, -11154);
                           } else {
                             Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_h, new Object[]{new Integer(var3_int), new Integer(var4)});
                           }
@@ -217,7 +217,7 @@ final class SystemTaskService implements Runnable {
                           var3_int = stackIn_85_0;
                           java.awt.Component var13 = (java.awt.Component) (var8.field_d);
                           if (this.field_m) {
-                            this.field_d.a(var13, var3_int != 0, (byte) 110);
+                            this.field_d.setCursorVisible(var13, var3_int != 0, (byte) 110);
                           } else {
                             Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_h, new Object[]{var13, new Boolean(var3_int != 0)});
                           }
@@ -260,12 +260,12 @@ final class SystemTaskService implements Runnable {
                         if (!this.field_m) {
                           Class.forName("FullscreenDisplayController").getMethod("exit", new Class[]{}).invoke(this.field_t, new Object[]{});
                         } else {
-                          this.field_i.a(8, (java.awt.Frame) (var8.field_d));
+                          this.field_i.restoreDisplay(8, (java.awt.Frame) (var8.field_d));
                         }
                         break;
                       case 5:
                         if (this.field_m) {
-                          var8.field_b = this.field_i.a(-2147483648);
+                          var8.field_b = this.field_i.enumerateModes(-2147483648);
                         } else {
                           var8.field_b = Class.forName("FullscreenDisplayController").getMethod("listmodes", new Class[]{}).invoke(this.field_t, new Object[]{});
                         }
@@ -352,7 +352,7 @@ final class SystemTaskService implements Runnable {
         Throwable decompiledCaughtException = null;
         SystemTask var6 = new SystemTask();
         if (param2 != -14572) {
-          this.field_i = (ra) null;
+          this.field_i = (MicrosoftDisplayController) null;
         }
         var6.field_c = param0;
         var6.field_e = param3;
@@ -562,7 +562,7 @@ final class SystemTaskService implements Runnable {
             if (!this.field_m) {
               this.field_t = Class.forName("FullscreenDisplayController").newInstance();
             } else {
-              ra var6 = new ra();
+              MicrosoftDisplayController var6 = new MicrosoftDisplayController();
               this.field_i = var6;
             }
           } catch (java.lang.Throwable decompiledCaughtParameter9) {
@@ -571,7 +571,7 @@ final class SystemTaskService implements Runnable {
           }
           try {
             if (this.field_m) {
-              this.field_d = new fb();
+              this.field_d = new MicrosoftCursorController();
             } else {
               this.field_h = Class.forName("CursorController").newInstance();
             }
