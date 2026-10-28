@@ -20,11 +20,11 @@ final class BoundedRandomAccessFile {
         return this.file.length();
     }
 
-    final static void a(int param0, int param1, fd param2, int param3) {
+    final static void a(int param0, int param1, NineSliceFrame param2, int param3) {
         try {
           if (param0 != 25398) {
-            fd var5 = (fd) null;
-            BoundedRandomAccessFile.a(-36, 48, (fd) null, -113);
+            NineSliceFrame var5 = (NineSliceFrame) null;
+            BoundedRandomAccessFile.a(-36, 48, (NineSliceFrame) null, -113);
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ma.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -84,19 +84,19 @@ final class BoundedRandomAccessFile {
           field_c = null;
           return;
         }
-        fd var2 = (fd) null;
-        BoundedRandomAccessFile.a(-114, -57, (fd) null, 13);
+        NineSliceFrame var2 = (NineSliceFrame) null;
+        BoundedRandomAccessFile.a(-114, -57, (NineSliceFrame) null, 13);
         field_b = null;
         activeSession = null;
         field_c = null;
     }
 
-    final static ee[] a(boolean param0) {
+    final static LoginMethod[] a(boolean param0) {
         if (!param0) {
-          return new ee[]{NameAvailabilityValidator.field_q, oh.field_n, qj.field_g};
+          return new LoginMethod[]{NameAvailabilityValidator.field_q, oh.field_n, qj.field_g};
         }
         field_b = (ReverbPcmStream) null;
-        return new ee[]{NameAvailabilityValidator.field_q, oh.field_n, qj.field_g};
+        return new LoginMethod[]{NameAvailabilityValidator.field_q, oh.field_n, qj.field_g};
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {

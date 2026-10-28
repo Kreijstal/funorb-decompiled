@@ -89,7 +89,7 @@ final class sl {
         DualLinkNode.field_o = var3 & 127;
         boolean stackIn_3_0 = (0 != (128 & var3));
         DualLinkDequeIterator.field_c = stackIn_3_0;
-        ve.field_g = var2.readUnsignedByte(0);
+        MarkerSliderPainter.field_g = var2.readUnsignedByte(0);
         TextFieldValidator.field_e = var2.readLong(-800509813);
         if (DualLinkNode.field_o != 2) {
           ProxyAuthenticationException.field_a = 0;
@@ -129,7 +129,7 @@ final class sl {
         try {
           QuickChatPhraseDefinition var8 = EmailSyntaxValidator.field_s.a(var5, (byte) -126);
           SelfDestructEffects.field_d = var8.previewText(-4);
-          if (DualLinkDequeIterator.field_g.equals(ck.field_r)) {
+          if (DualLinkDequeIterator.field_g.equals(ThreeSliceButtonPainter.field_r)) {
             stackIn_26_0 = null;
           } else {
             stackIn_26_0 = var8.responseIds;

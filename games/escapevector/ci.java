@@ -79,7 +79,7 @@ final class ci {
         ArchiveKeyRequest var4 = new ArchiveKeyRequest();
         var4.groupId = groupId;
         var4.archiveId = archiveId;
-        jl.field_n.addLast(-12328, var4);
+        LegacyTextBlock.field_n.addLast(-12328, var4);
         if (guard == -1) {
           BoundedRandomAccessFile.writeArchiveKeyRequest(-100, opcode, var4);
           return var4;

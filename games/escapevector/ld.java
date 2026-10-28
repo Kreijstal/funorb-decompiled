@@ -22,13 +22,13 @@ class ld extends vj {
     public static void releaseStatics(byte guard) {
         if (guard != -71) {
           Sprite[] var2 = (Sprite[]) null;
-          ld.a(9, (Sprite[]) null, 60, -23, 39, -65);
+          ld.drawNineSlice(9, (Sprite[]) null, 60, -23, 39, -65);
         }
         field_h = (byte[][][]) null;
         field_g = null;
     }
 
-    final static void a(int param0, Sprite[] param1, int param2, int param3, int param4, int param5) {
+    final static void drawNineSlice(int height, Sprite[] sprites, int guard, int y, int x, int width) {
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -36,113 +36,113 @@ class ld extends vj {
         String stackIn_71_2 = null;
         int var22 = EscapeVector.obfuscationControl;
         try {
-          if (param1 == null) {
+          if (sprites == null) {
             return;
           }
-          if (0 < param5 &&
-            0 < param0) {
-            if (null != param1[3]) {
-              stackIn_9_0 = param1[3].fullWidth;
+          if (0 < width &&
+            0 < height) {
+            if (null != sprites[3]) {
+              stackIn_9_0 = sprites[3].fullWidth;
             } else {
               stackIn_9_0 = 0;
             }
             int var6_int = stackIn_9_0;
-            if (null == param1[5]) {
+            if (null == sprites[5]) {
               stackIn_12_0 = 0;
             } else {
-              stackIn_12_0 = param1[5].fullWidth;
+              stackIn_12_0 = sprites[5].fullWidth;
             }
             int var7 = stackIn_12_0;
-            if (param1[1] != null) {
-              stackIn_15_0 = param1[1].fullHeight;
+            if (sprites[1] != null) {
+              stackIn_15_0 = sprites[1].fullHeight;
             } else {
               stackIn_15_0 = 0;
             }
             int var8 = stackIn_15_0;
-            if (param1[7] == null) {
+            if (sprites[7] == null) {
               stackIn_18_0 = 0;
             } else {
-              stackIn_18_0 = param1[7].fullHeight;
+              stackIn_18_0 = sprites[7].fullHeight;
             }
             int var9 = stackIn_18_0;
-            int var10 = param5 + param4;
-            int var11 = param0 + param3;
-            int var12 = var6_int + param4;
+            int var10 = width + x;
+            int var11 = height + y;
+            int var12 = var6_int + x;
             int var13 = var10 - var7;
-            int var14 = var8 + param3;
+            int var14 = var8 + y;
             int var15 = var11 - var9;
             int var16 = var12;
             int var17 = var13;
             if (var16 > var17) {
-              var17 = param5 * var6_int / (var6_int + var7) + param4;
-              var16 = param5 * var6_int / (var6_int + var7) + param4;
+              var17 = width * var6_int / (var6_int + var7) + x;
+              var16 = width * var6_int / (var6_int + var7) + x;
             }
             int var18 = var14;
             int var19 = var15;
             if (var19 < var18) {
-              var19 = param0 * var8 / (var9 + var8) + param3;
-              var18 = param0 * var8 / (var9 + var8) + param3;
+              var19 = height * var8 / (var9 + var8) + y;
+              var18 = height * var8 / (var9 + var8) + y;
             }
             SoftwareRasterizer.a(NameAvailabilityValidator.field_o);
-            if (null != param1[0]) {
-              SoftwareRasterizer.h(param4, param3, var16, var18);
-              param1[0].e(param4, param3);
+            if (null != sprites[0]) {
+              SoftwareRasterizer.h(x, y, var16, var18);
+              sprites[0].e(x, y);
               SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
-            if (param1[2] != null) {
-              SoftwareRasterizer.h(var17, param3, var10, var18);
-              param1[2].e(var13, param3);
+            if (sprites[2] != null) {
+              SoftwareRasterizer.h(var17, y, var10, var18);
+              sprites[2].e(var13, y);
               SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
-            if (param1[6] != null) {
-              SoftwareRasterizer.h(param4, var19, var16, var11);
-              param1[6].e(param4, var15);
+            if (sprites[6] != null) {
+              SoftwareRasterizer.h(x, var19, var16, var11);
+              sprites[6].e(x, var15);
               SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
-            if (null != param1[8]) {
+            if (null != sprites[8]) {
               SoftwareRasterizer.h(var17, var19, var10, var11);
-              param1[8].e(var13, var15);
+              sprites[8].e(var13, var15);
               SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
-            if (null != param1[1] &&
-              0 != param1[1].fullWidth) {
-              SoftwareRasterizer.h(var16, param3, var17, var18);
-              for (int var20 = var12; var20 < var13; var20 = var20 + param1[1].fullWidth) {
-                param1[1].e(var20, param3);
+            if (null != sprites[1] &&
+              0 != sprites[1].fullWidth) {
+              SoftwareRasterizer.h(var16, y, var17, var18);
+              for (int var20 = var12; var20 < var13; var20 = var20 + sprites[1].fullWidth) {
+                sprites[1].e(var20, y);
               }
               SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
-            if (null != param1[7] &&
-              param1[7].fullWidth != 0) {
+            if (null != sprites[7] &&
+              sprites[7].fullWidth != 0) {
               SoftwareRasterizer.h(var16, var19, var17, var11);
-              for (int var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param1[7].fullWidth) {
-                param1[7].e(var20Lifetime1, var15);
+              for (int var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + sprites[7].fullWidth) {
+                sprites[7].e(var20Lifetime1, var15);
               }
               SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
-            if (null != param1[3] &&
-              param1[3].fullHeight != 0) {
-              SoftwareRasterizer.h(param4, var18, var16, var19);
-              for (int var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param1[3].fullHeight) {
-                param1[3].e(param4, var20Lifetime2);
+            if (null != sprites[3] &&
+              sprites[3].fullHeight != 0) {
+              SoftwareRasterizer.h(x, var18, var16, var19);
+              for (int var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + sprites[3].fullHeight) {
+                sprites[3].e(x, var20Lifetime2);
               }
               SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
-            if (param1[5] != null &&
-              param1[5].fullHeight != 0) {
+            if (sprites[5] != null &&
+              sprites[5].fullHeight != 0) {
               SoftwareRasterizer.h(var17, var18, var10, var19);
-              for (int var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param1[5].fullHeight) {
-                param1[5].e(var13, var20Lifetime3);
+              for (int var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + sprites[5].fullHeight) {
+                sprites[5].e(var13, var20Lifetime3);
               }
               SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
             }
-            if (param1[param2] != null &&
-              0 != param1[4].fullWidth &&
-              param1[4].fullHeight != 0) {
+            if (sprites[guard] != null &&
+              0 != sprites[4].fullWidth &&
+              sprites[4].fullHeight != 0) {
               SoftwareRasterizer.h(var16, var18, var17, var19);
-              for (int var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param1[4].fullHeight) {
-                for (int var21 = var12; var21 < var13; var21 = var21 + param1[4].fullWidth) {
-                  param1[4].e(var21, var20Lifetime4);
+              for (int var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + sprites[4].fullHeight) {
+                for (int var21 = var12; var21 < var13; var21 = var21 + sprites[4].fullWidth) {
+                  sprites[4].e(var21, var20Lifetime4);
                 }
               }
               SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
@@ -155,13 +155,13 @@ class ld extends vj {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_70_0 = var6;
-          StringBuilder stackIn_70_1 = new StringBuilder().append("ld.H(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_70_1 = new StringBuilder().append("ld.H(").append(height).append(',');
+          if (sprites == null) {
             stackIn_71_2 = "null";
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(guard).append(',').append(y).append(',').append(x).append(',').append(width).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ class ld extends vj {
     final static PcmStreamMixer c(byte param0) {
         if (param0 <= 104) {
           Sprite[] var2 = (Sprite[]) null;
-          ld.a(-62, (Sprite[]) null, -58, -40, -5, -81);
+          ld.drawNineSlice(-62, (Sprite[]) null, -58, -40, -5, -81);
         }
         return aj.field_f;
     }

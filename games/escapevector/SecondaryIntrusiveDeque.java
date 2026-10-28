@@ -406,7 +406,7 @@ final class SecondaryIntrusiveDeque {
               JavaScriptBridge.evaluateScript((byte) -111, param2, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
-            gl.a((byte) 15, param2);
+            PairedTextColumns.updateBrowserLinks((byte) 15, param2);
           } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "va.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

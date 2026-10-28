@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ve implements WidgetPainter {
+final class MarkerSliderPainter implements WidgetPainter {
     private int field_m;
     static int field_l;
     private BitmapFont field_e;
@@ -22,21 +22,21 @@ final class ve implements WidgetPainter {
         String stackIn_16_2 = null;
         int var11 = EscapeVector.obfuscationControl;
         try {
-          if (!(component instanceof q)) {
+          if (!(component instanceof MarkerSlider)) {
             stackIn_4_0 = null;
           } else {
             stackIn_4_0 = (UiComponent) (component);
           }
-          q var12 = (q) (stackIn_4_0);
+          MarkerSlider var12 = (MarkerSlider) (stackIn_4_0);
           if (var12 != null) {
           }
           SoftwareRasterizer.a(component.x + originX, originY + component.y, component.width, component.height, this.field_b);
-          int var7 = component.width - 2 * var12.field_M;
-          int var8 = originX - (-component.x - var12.field_M);
-          int var9 = var12.field_J + (originY + component.y);
+          int var7 = component.width - 2 * var12.horizontalInset;
+          int var8 = originX - (-component.x - var12.horizontalInset);
+          int var9 = var12.trackY + (originY + component.y);
           SoftwareRasterizer.d(var8, var9, var8 + var7, var9, this.field_m);
-          for (int var10 = -1 + var12.e((byte) 98); var10 >= 0; var10--) {
-            SoftwareRasterizer.d(var8 + var7 * var12.b(var10, (byte) 97) / var12.k(-1), var9, this.field_j, this.field_c);
+          for (int var10 = -1 + var12.markerCount((byte) 98); var10 >= 0; var10--) {
+            SoftwareRasterizer.d(var8 + var7 * var12.markerValue(var10, (byte) 97) / var12.maximumValue(-1), var9, this.field_j, this.field_c);
           }
           if (guard > -14) {
             this.field_j = -58;
@@ -44,7 +44,7 @@ final class ve implements WidgetPainter {
           if (this.field_e == null) {
             return;
           }
-          this.field_e.c(var12.text, var8 + var7 / 2, var12.field_J + this.field_e.field_y + var9, this.field_i, this.field_a);
+          this.field_e.drawCentered(var12.text, var8 + var7 / 2, var12.trackY + this.field_e.lineHeight + var9, this.field_i, this.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,15 +68,15 @@ final class ve implements WidgetPainter {
           if (null == QuickChatDynamicCommand.field_e) {
             kc.field_c = dn.a(0, TextLayoutLine.field_f, ej.field_g, param1, 1, param3, dn.field_C);
             int[] var6 = (int[]) null;
-            HudMessage.field_k = dn.a(0, ok.field_b, CipherPacketBuffer.field_q, param2, 0, (int[]) null, q.field_L);
-            tk.field_b = new qh(param1, bm.field_e, Js5Transport.field_i, 1, SelfDestructEffects.field_n, param3);
+            HudMessage.field_k = dn.a(0, ok.field_b, CipherPacketBuffer.field_q, param2, 0, (int[]) null, MarkerSlider.field_L);
+            EmailValidationError.field_b = new qh(param1, bm.field_e, Js5Transport.field_i, 1, SelfDestructEffects.field_n, param3);
             QuickChatDynamicCommand.field_e = new p();
             Object stackIn_3_0 = null;
             return (p) (stackIn_3_0);
           }
           if (param0 != 1) {
             String var5 = (String) null;
-            ve.a((byte) 82, (String) null);
+            MarkerSliderPainter.updateHoverText((byte) 82, (String) null);
           }
           if (!QuickChatDynamicCommand.field_e.a(23389)) {
             return null;
@@ -115,14 +115,14 @@ final class ve implements WidgetPainter {
         int var3 = 104 / ((31 - param0) / 61);
     }
 
-    final static ResourceArchive a(int param0, int param1, boolean param2, int param3, boolean param4) {
+    final static ResourceArchive createArchive(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param1 != 0) {
           return (ResourceArchive) null;
         }
         return ji.a(param2, param0, false, param3, param4, (byte) 114);
     }
 
-    final static void a(byte param0, String param1) {
+    final static void updateHoverText(byte guard, String text) {
         boolean stackIn_17_0 = false;
         String stackIn_44_2 = null;
         int var3 = EscapeVector.obfuscationControl;
@@ -134,8 +134,8 @@ final class ve implements WidgetPainter {
           }
           boolean decompiledFrameRemainder0 = true;
           ei.field_j = ei.field_j + 1;
-          if (param1 != null) {
-            decompiledFrameRemainder0 = !(param1.equals(on.field_b));
+          if (text != null) {
+            decompiledFrameRemainder0 = !(text.equals(on.field_b));
           } else {
             decompiledFrameRemainder0 = (on.field_b == null);
           }
@@ -148,7 +148,7 @@ final class ve implements WidgetPainter {
               stackIn_17_0 = false;
             }
             boolean var2_int = stackIn_17_0;
-            if (param1 == null) {
+            if (text == null) {
               ei.field_j = 0;
             } else if (un.field_u) {
               ei.field_j = ef.field_d;
@@ -159,13 +159,13 @@ final class ve implements WidgetPainter {
             }
             DraggableWidget.field_O = bg.field_f;
             ci.field_g = ValidationIndicator.field_M;
-            if (param1 != null) {
+            if (text != null) {
               un.field_u = false;
             } else if (var2_int) {
               un.field_u = true;
             }
           }
-          on.field_b = param1;
+          on.field_b = text;
           if (!un.field_u &&
             ei.field_j < ef.field_d &&
             TextFieldValidator.field_h) {
@@ -173,8 +173,8 @@ final class ve implements WidgetPainter {
             ci.field_g = ValidationIndicator.field_M;
             DraggableWidget.field_O = bg.field_f;
           }
-          if (param0 > -97) {
-            ve.a(-81, 8, false, 82, false);
+          if (guard > -97) {
+            MarkerSliderPainter.createArchive(-81, 8, false, 82, false);
           }
           if (un.field_u &&
             ei.field_j == fj.field_jb) {
@@ -188,8 +188,8 @@ final class ve implements WidgetPainter {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_43_0 = var2;
-          StringBuilder stackIn_43_1 = new StringBuilder().append("ve.C(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_43_1 = new StringBuilder().append("ve.C(").append(guard).append(',');
+          if (text == null) {
             stackIn_44_2 = "null";
           } else {
             stackIn_44_2 = "{...}";
@@ -208,7 +208,7 @@ final class ve implements WidgetPainter {
         }
     }
 
-    ve(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    MarkerSliderPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_j = param5;
           this.field_e = param0;

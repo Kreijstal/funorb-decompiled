@@ -24,7 +24,7 @@ final class ValidationState {
         return null;
     }
 
-    final static void a(fd param0, int param1, int param2, int param3, fd param4, int param5) {
+    final static void a(NineSliceFrame param0, int param1, int param2, int param3, NineSliceFrame param4, int param5) {
         CheckboxPainter.field_s = param2;
         gf.field_e = param4;
         fe.field_k = param5;

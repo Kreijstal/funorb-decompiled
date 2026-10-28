@@ -165,11 +165,11 @@ final class ValidationIndicator extends TextButton {
 
     final static void a(int param0, int param1, byte param2, String param3) {
         try {
-          fh.field_g.a(param3, param1 - 1, -1 + param0, 0, -1, 64);
-          fh.field_g.a(param3, param1 + 1, -1 + param0, 0, -1, 64);
-          fh.field_g.a(param3, -1 + param1, param0 + 1, 0, -1, 64);
-          fh.field_g.a(param3, 1 + param1, param0 + 1, 0, -1, 64);
-          fh.field_g.b(param3, param1, param0, 16777215, -1);
+          fh.field_g.drawRightAlpha(param3, param1 - 1, -1 + param0, 0, -1, 64);
+          fh.field_g.drawRightAlpha(param3, param1 + 1, -1 + param0, 0, -1, 64);
+          fh.field_g.drawRightAlpha(param3, -1 + param1, param0 + 1, 0, -1, 64);
+          fh.field_g.drawRightAlpha(param3, 1 + param1, param0 + 1, 0, -1, 64);
+          fh.field_g.drawRight(param3, param1, param0, 16777215, -1);
           int var4_int = -103 / ((param2 - 7) / 46);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

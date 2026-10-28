@@ -6,7 +6,7 @@ final class gn {
     boolean field_i;
     private int field_c;
     private ProgressQuery field_m;
-    static int[] field_k;
+    static int[] spriteOffsetXs;
     private kg field_f;
     int field_j;
     static String field_b;
@@ -101,7 +101,7 @@ final class gn {
         if (guard) {
           return;
         }
-        field_k = null;
+        spriteOffsetXs = null;
         field_b = null;
     }
 
@@ -112,7 +112,7 @@ final class gn {
         }
     }
 
-    final static void a(dk[] param0, boolean param1, byte param2) {
+    final static void a(LegacyButton[] param0, boolean param1, byte param2) {
         String stackIn_18_2 = null;
         int[] var4 = null;
         int[] var5 = null;
@@ -133,11 +133,11 @@ final class gn {
             CharSequence var10 = (CharSequence) null;
             gn.a(126, (CharSequence) null);
           }
-          dk[] var6 = param0;
+          LegacyButton[] var6 = param0;
           for (int var7 = 0; var6.length > var7; var7++) {
-            dk var8 = var6[var7];
+            LegacyButton var8 = var6[var7];
             if (var8 != null) {
-              var8.a(var4, var11, (byte) -123, var5);
+              var8.setColors(var4, var11, (byte) -123, var5);
             }
           }
           return;
@@ -316,8 +316,8 @@ final class gn {
 
     final static void a(int param0) {
         if (param0 > -107) {
-          dk[] var2 = (dk[]) null;
-          gn.a((dk[]) null, false, (byte) -37);
+          LegacyButton[] var2 = (LegacyButton[]) null;
+          gn.a((LegacyButton[]) null, false, (byte) -37);
           ShipHullGeometry.b(0);
           return;
         }

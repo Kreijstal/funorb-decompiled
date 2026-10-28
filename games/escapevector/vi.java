@@ -87,13 +87,13 @@ final class vi {
           for (int var7 = 1; param1.length() > var7; var7++) {
             int var8 = param1.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + param2.insertionX[0] + param3.b(param1.substring(0, var7));
+              var6 = (var5_int >> 8) + param2.insertionX[0] + param3.stringWidth(param1.substring(0, var7));
             }
             if (var6 == -1) {
               if (var8 == 32) {
                 var5_int = var5_int + param0;
               }
-              param2.insertionX[var7] = param2.insertionX[0] + ((var5_int >> 8) + param3.b(param1.substring(0, 1 + var7))) - param3.a((char) var8);
+              param2.insertionX[var7] = param2.insertionX[0] + ((var5_int >> 8) + param3.stringWidth(param1.substring(0, 1 + var7))) - param3.charAdvance((char) var8);
             } else {
               param2.insertionX[var7] = var6;
             }

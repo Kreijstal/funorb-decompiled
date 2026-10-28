@@ -19,7 +19,7 @@ final class le {
 
     final static String b(int param0) {
         if (fc.field_a < 2) {
-          return ee.field_a;
+          return LoginMethod.field_a;
         }
         if (PasswordValidator.field_p != null) {
           if (!PasswordValidator.field_p.ensureIndex(0)) {

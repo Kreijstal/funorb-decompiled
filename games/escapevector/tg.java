@@ -58,10 +58,10 @@ final class tg extends ol {
         if (param0 != 0) {
           return (String) null;
         }
-        if (null == ck.field_r) {
+        if (null == ThreeSliceButtonPainter.field_r) {
           return "";
         }
-        return ck.field_r;
+        return ThreeSliceButtonPainter.field_r;
     }
 
     static {

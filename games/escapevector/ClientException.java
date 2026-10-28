@@ -47,30 +47,30 @@ final class ClientException extends RuntimeException {
         this.cause = param0;
     }
 
-    final static tk a(String param0, int param1) {
-        tk var7 = null;
+    final static EmailValidationError a(String param0, int param1) {
+        EmailValidationError var7 = null;
         String stackIn_22_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
           int var2_int = param0.length();
           if (var2_int == 0) {
-            tk stackIn_4_0 = ResourceArchive.field_d;
+            EmailValidationError stackIn_4_0 = ResourceArchive.field_d;
             return stackIn_4_0;
           }
           if (var2_int > 255) {
-            tk stackIn_7_0 = EmailAvailabilityRequest.field_c;
+            EmailValidationError stackIn_7_0 = EmailAvailabilityRequest.field_c;
             return stackIn_7_0;
           }
           String[] var3 = bb.a(-128, param0, '.');
           if (var3.length < 2) {
-            tk stackIn_10_0 = ResourceArchive.field_d;
+            EmailValidationError stackIn_10_0 = ResourceArchive.field_d;
             return stackIn_10_0;
           }
           String[] var4 = var3;
           int var5 = param1;
           while (true) {
             if (var4.length <= var5) {
-              tk stackIn_18_0 = co.a(var3[var3.length - 1], 0);
+              EmailValidationError stackIn_18_0 = co.a(var3[var3.length - 1], 0);
               return stackIn_18_0;
             }
             String var6 = var4[var5];
@@ -81,7 +81,7 @@ final class ClientException extends RuntimeException {
             }
             break;
           }
-          tk stackIn_15_0 = var7;
+          EmailValidationError stackIn_15_0 = var7;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,7 +100,7 @@ final class ClientException extends RuntimeException {
     final static void a(int param0, int param1) {
         try {
           if (TextLayout.field_c != null && (0 > param0 ||
-            al.field_d == ck.field_t)) {
+            al.field_d == ThreeSliceButtonPainter.field_t)) {
             if (QuickChatDynamicCommand.outgoingPackets.position == 0 &&
               (10000L + le.field_c) < td.b(128)) {
               QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(param0, true);

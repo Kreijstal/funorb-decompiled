@@ -19,9 +19,9 @@ final class TerrainMaskSupport {
           if (param0 <= 48) {
             return;
           }
-          dj.field_d = new SpriteOffset[sc.field_h.length];
-          for (int var1_int = 0; var1_int < sc.field_h.length; var1_int++) {
-            int var2 = sc.field_h[var1_int];
+          dj.field_d = new SpriteOffset[DialWidgetPainter.field_h.length];
+          for (int var1_int = 0; var1_int < DialWidgetPainter.field_h.length; var1_int++) {
+            int var2 = DialWidgetPainter.field_h[var1_int];
             SpriteOffset var3 = ph.field_b;
             Sprite var4 = TextWidgetPainter.a(var2, (byte) -39, 2);
             int var5 = var4.fullWidth - var3.x;

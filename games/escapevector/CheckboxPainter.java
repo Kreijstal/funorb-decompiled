@@ -21,16 +21,16 @@ final class CheckboxPainter implements WidgetPainter {
     static Sprite field_c;
     private int field_r;
     private int field_t;
-    static byte[][] field_b;
+    static byte[][] spriteAlphas;
 
-    final static int a(ih param0, int param1) {
+    final static int a(BinaryBitmapFont param0, int param1) {
         String stackIn_7_2 = null;
         try {
           if (param1 != 0) {
-            field_b = (byte[][]) null;
+            spriteAlphas = (byte[][]) null;
           }
           String var2 = " ";
-          int var3 = param0.b(var2);
+          int var3 = param0.stringWidth(var2);
           int stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,7 +78,7 @@ final class CheckboxPainter implements WidgetPainter {
           }
           if (this.field_o != null) {
             int var10 = this.field_e + (this.field_a + this.field_g);
-            this.field_o.a(component.text, var10 + originX + component.x, this.field_m + component.y + originY, component.width - (var10 + this.field_g), -(this.field_g << 1) + component.height, this.field_i, this.field_d, this.field_p, this.field_j, 0);
+            this.field_o.drawParagraph(component.text, var10 + originX + component.x, this.field_m + component.y + originY, component.width - (var10 + this.field_g), -(this.field_g << 1) + component.height, this.field_i, this.field_d, this.field_p, this.field_j, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -96,7 +96,7 @@ final class CheckboxPainter implements WidgetPainter {
     }
 
     public static void releaseStatics(byte guard) {
-        field_b = (byte[][]) null;
+        spriteAlphas = (byte[][]) null;
         field_f = null;
         if (guard != -44) {
           return;

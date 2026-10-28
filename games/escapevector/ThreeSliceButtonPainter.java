@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ck extends TextWidgetPainter {
+final class ThreeSliceButtonPainter extends TextWidgetPainter {
     static fc field_A;
     private int field_w;
     private Sprite[] field_s;
@@ -14,27 +14,27 @@ final class ck extends TextWidgetPainter {
     static String field_r;
     static long field_q;
 
-    final static void a(int param0, byte param1) {
+    final static void resendScoreRequests(int opcode, byte guard) {
         int var3 = EscapeVector.obfuscationControl;
         try {
           ScoreSubmission var4 = (ScoreSubmission) (vj.field_d.first(false));
           while (var4 != null) {
-            ig.writeScoreSubmission(param1 - 209, param0, var4);
+            ig.writeScoreSubmission(guard - 209, opcode, var4);
             var4 = (ScoreSubmission) (vj.field_d.next((byte) 70));
           }
-          if (param1 != 105) {
+          if (guard != 105) {
             field_q = -25L;
           }
           HighscoreQuery var5 = (HighscoreQuery) (AchievementRecord.field_n.first(false));
           while (var5 != null) {
-            aj.writeHighscoreQuery(42, param0, var5);
+            aj.writeHighscoreQuery(42, opcode, var5);
             var5 = (HighscoreQuery) (AchievementRecord.field_n.next((byte) 70));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2), "ck.K(" + param0 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) var2), "ck.K(" + opcode + ',' + guard + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class ck extends TextWidgetPainter {
         field_A = null;
         field_t = null;
         if (guard != -31) {
-          ck.releaseStatics((byte) 116);
+          ThreeSliceButtonPainter.releaseStatics((byte) 116);
         }
     }
 
@@ -78,7 +78,7 @@ final class ck extends TextWidgetPainter {
             this.field_w = -93;
           }
           qe.a(-100, component.y + (originY + (-this.field_s[0].fullHeight + component.height >> 1)), component.width, this.field_s, var7, originX + component.x);
-          this.font.a(component.text, originX + component.x, component.y + originY - 2, component.width, component.height, var8, -1, 1, 1, this.font.field_r);
+          this.font.drawParagraph(component.text, originX + component.x, component.y + originY - 2, component.width, component.height, var8, -1, 1, 1, this.font.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,11 +94,11 @@ final class ck extends TextWidgetPainter {
         }
     }
 
-    public ck() {
+    public ThreeSliceButtonPainter() {
         this(2188450, 2591221, 9543);
     }
 
-    private ck(int param0, int param1, int param2) {
+    private ThreeSliceButtonPainter(int param0, int param1, int param2) {
         this.field_z = param2;
         this.field_w = param1;
         this.field_s = fk.field_f;

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class q extends TextButton {
-    int field_M;
-    private int field_D;
+final class MarkerSlider extends TextButton {
+    int horizontalInset;
+    private int maximumValue;
     static java.math.BigInteger field_O;
     static String field_F;
     static boolean field_P;
@@ -13,9 +13,9 @@ final class q extends TextButton {
     private static boolean[] field_I;
     static boolean[][] field_E;
     static String[] field_L;
-    int field_J;
+    int trackY;
     static Sprite field_G;
-    private kn field_K;
+    private GrowableIntList markers;
 
     final boolean onPointerPressed(int offsetY, int pointerX, byte guard, int pointerY, int offsetX, UiComponent root, int button) {
         String stackIn_29_2 = null;
@@ -24,23 +24,23 @@ final class q extends TextButton {
           if (!super.onPointerPressed(offsetY, pointerX, guard, pointerY, offsetX, root, button)) {
             return false;
           }
-          int var8_int = -this.field_M + (pointerX - offsetX);
-          int var9 = -(2 * this.field_M) + this.width;
+          int var8_int = -this.horizontalInset + (pointerX - offsetX);
+          int var9 = -(2 * this.horizontalInset) + this.width;
           if (var8_int > var9) {
             var8_int = var9;
           }
           if (var8_int < 0) {
             var8_int = 0;
           }
-          var8_int = var8_int * this.field_D / var9;
+          var8_int = var8_int * this.maximumValue / var9;
           if (button != 1) {
             if (button != 2) {
               return true;
             }
             int var10 = 2147483647;
             int var11 = -1;
-            for (int var12 = 0; this.field_K.a(true) > var12; var12++) {
-              int var13 = -var8_int + this.field_K.a(-49, var12);
+            for (int var12 = 0; this.markers.size(true) > var12; var12++) {
+              int var13 = -var8_int + this.markers.get(-49, var12);
               var13 = var13 * var13;
               if (var13 < var10) {
                 var10 = var13;
@@ -48,10 +48,10 @@ final class q extends TextButton {
               }
             }
             if (var11 >= 0) {
-              this.field_K.c(0, var11);
+              this.markers.removeAt(0, var11);
             }
           } else {
-            this.field_K.a(var8_int, (byte) -51);
+            this.markers.add(var8_int, (byte) -51);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,25 +68,25 @@ final class q extends TextButton {
         }
     }
 
-    final int e(byte param0) {
-        if (param0 != 98) {
+    final int markerCount(byte guard) {
+        if (guard != 98) {
           return 116;
         }
-        return this.field_K.a(true);
+        return this.markers.size(true);
     }
 
-    final int b(int param0, byte param1) {
-        if (param0 < 0) {
+    final int markerValue(int index, byte guard) {
+        if (index < 0) {
           return -1;
         }
-        if (this.field_K.a(true) <= param0) {
+        if (this.markers.size(true) <= index) {
           return -1;
         }
-        if (param1 == 97) {
-          return this.field_K.a(-109, param0);
+        if (guard == 97) {
+          return this.markers.get(-109, index);
         }
-        this.field_D = 112;
-        return this.field_K.a(-109, param0);
+        this.maximumValue = 112;
+        return this.markers.get(-109, index);
     }
 
     public static void releaseStatics(byte guard) {
@@ -107,31 +107,31 @@ final class q extends TextButton {
         field_E = (boolean[][]) null;
     }
 
-    final int k(int param0) {
-        if (param0 == -1) {
-          return this.field_D;
+    final int maximumValue(int guard) {
+        if (guard == -1) {
+          return this.maximumValue;
         }
         UiComponent var3 = (UiComponent) null;
         this.onPointerPressed(-27, -35, (byte) -19, -117, -67, (UiComponent) null, 21);
-        return this.field_D;
+        return this.maximumValue;
     }
 
-    final static void c(int param0, byte param1) {
-        if (param1 < -60) {
+    final static void writeSavedDataQuery(int opcode, byte guard) {
+        if (guard < -60) {
           CipherPacketBuffer var2 = QuickChatDynamicCommand.outgoingPackets;
-          var2.writeCipheredOpcode(param0, true);
+          var2.writeCipheredOpcode(opcode, true);
           var2.writeByte(1, -123);
           var2.writeByte(0, -123);
           return;
         }
         field_P = true;
         CipherPacketBuffer var2Lifetime1 = QuickChatDynamicCommand.outgoingPackets;
-        var2Lifetime1.writeCipheredOpcode(param0, true);
+        var2Lifetime1.writeCipheredOpcode(opcode, true);
         var2Lifetime1.writeByte(1, -123);
         var2Lifetime1.writeByte(0, -123);
     }
 
-    private q() throws Throwable {
+    private MarkerSlider() throws Throwable {
         throw new Error();
     }
 

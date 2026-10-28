@@ -16,7 +16,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         String stackIn_7_2 = null;
         try {
-          if (null == ck.field_v) {
+          if (null == ThreeSliceButtonPainter.field_v) {
             return;
           }
           Js5Transport.field_b = -1;
@@ -37,12 +37,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     public final void keyTyped(java.awt.event.KeyEvent param0) {
         try {
-          if (ck.field_v != null) {
+          if (ThreeSliceButtonPainter.field_v != null) {
             int var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
               GameAppletShell.a(0, (char) var2_int)) {
               int var3 = 1 + bn.field_b & 127;
-              if (var3 != ve.field_l) {
+              if (var3 != MarkerSliderPainter.field_l) {
                 td.field_b[bn.field_b] = -1;
                 ek.field_a[bn.field_b] = (char)var2_int;
                 bn.field_b = var3;
@@ -65,7 +65,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
         String stackIn_26_2 = null;
         try {
-          if (null == ck.field_v) {
+          if (null == ThreeSliceButtonPainter.field_v) {
             return;
           }
           ui.field_e = 0;
@@ -89,7 +89,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           if (0 <= var2_int) {
             int var3 = bn.field_b + 1 & 127;
-            if (var3 != ve.field_l) {
+            if (var3 != MarkerSliderPainter.field_l) {
               td.field_b[bn.field_b] = var2_int;
               ek.field_a[bn.field_b] = (char)0;
               bn.field_b = var3;
@@ -120,7 +120,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
         String stackIn_15_2 = null;
         try {
-          if (ck.field_v != null) {
+          if (ThreeSliceButtonPainter.field_v != null) {
             ui.field_e = 0;
             int var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
@@ -185,7 +185,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var3 = decompiledCaughtException;
             }
-            gl.a((byte) 15, param2);
+            PairedTextColumns.updateBrowserLinks((byte) 15, param2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

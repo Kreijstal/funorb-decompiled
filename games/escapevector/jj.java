@@ -7,7 +7,7 @@ final class jj {
     static int field_b;
 
     final static void a(int param0) {
-        if (!eb.field_H) {
+        if (!DialWidget.field_H) {
           throw new IllegalStateException();
         }
         if (param0 != 0) {

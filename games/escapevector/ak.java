@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ak {
-    private dk[] field_k;
+    private LegacyButton[] field_k;
     private int[] field_a;
     static hf field_d;
     private int[][] field_b;
-    private dk[] field_i;
-    private dk[] field_j;
+    private LegacyButton[] field_i;
+    private LegacyButton[] field_j;
     private gj field_g;
     boolean field_h;
     int field_f;
@@ -38,7 +38,7 @@ final class ak {
           int var3 = 320;
           int var4 = 240;
           int var5 = 6340704;
-          fh.field_g.c(var2, var3, var4, var5, -1);
+          fh.field_g.drawCentered(var2, var3, var4, var5, -1);
         }
     }
 
@@ -146,7 +146,7 @@ final class ak {
         int var5 = EscapeVector.obfuscationControl;
         int var2 = this.k(param0 ^ -17654);
         if (param0 != 17592) {
-          this.field_k = (dk[]) null;
+          this.field_k = (LegacyButton[]) null;
         }
         if (var2 < 0) {
           return false;
@@ -170,7 +170,7 @@ final class ak {
         int var4 = EscapeVector.obfuscationControl;
         int var2 = 0;
         if (param0 > -60) {
-          this.field_j = (dk[]) null;
+          this.field_j = (LegacyButton[]) null;
         }
         while (var2 < v.field_b.length) {
           int var3 = v.field_b[var2];
@@ -235,11 +235,11 @@ final class ak {
           this.field_k.length == 0) {
           return var2;
         }
-        dk var3 = this.field_k[0];
+        LegacyButton var3 = this.field_k[0];
         if (var3 == null) {
           return var2;
         }
-        int var2Lifetime1 = 3 + var3.field_l + var3.field_i;
+        int var2Lifetime1 = 3 + var3.y + var3.height;
         if (param0 <= 29) {
           String[] var4 = (String[]) null;
           String[] discarded$0 = this.a((byte) -18, (String[]) null, (int[]) null, (String[]) null);
@@ -439,7 +439,7 @@ final class ak {
 
     private final void c(boolean param0) {
         if (di.field_d.field_e) {
-          dk var2 = this.j((byte) 82);
+          LegacyButton var2 = this.j((byte) 82);
           int var3 = PasswordValidator.a(-122, var2);
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, var3);
         }
@@ -492,9 +492,9 @@ final class ak {
         return var3;
     }
 
-    private final dk j(byte param0) {
+    private final LegacyButton j(byte param0) {
         int var2 = di.field_d.field_h;
-        dk var3 = TetherHumStream.a(this.field_k, var2, 0);
+        LegacyButton var3 = TetherHumStream.a(this.field_k, var2, 0);
         if (var3 != null) {
           return var3;
         }
@@ -575,7 +575,7 @@ final class ak {
         }
         IntValueNode.field_j = true;
         if (param0 != 100) {
-          this.field_j = (dk[]) null;
+          this.field_j = (LegacyButton[]) null;
         }
         if (!aj.b(-122)) {
           if (mj.field_d == 0) {
@@ -632,7 +632,7 @@ final class ak {
         return (var3Lifetime1);
     }
 
-    private final int[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, ih param7, int param8) {
+    private final int[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BinaryBitmapFont param7, int param8) {
         String stackIn_7_2 = null;
         try {
           if (param5 >= -27) {
@@ -675,7 +675,7 @@ final class ak {
     }
 
     private final void h(byte param0) {
-        ih var18 = fh.field_g;
+        BinaryBitmapFont var18 = fh.field_g;
         int var3 = 640;
         int var4 = 0;
         int var5 = 10;
@@ -684,8 +684,8 @@ final class ak {
         int var8 = 78;
         int var9 = var8;
         int[] var10 = this.a(var7, 0, var9, 0, var5, var6, var18, var3 - 1, var4);
-        dk var19 = this.field_k[0];
-        var9 = var9 + (var19.field_i + 3);
+        LegacyButton var19 = this.field_k[0];
+        var9 = var9 + (var19.height + 3);
         this.field_g = new gj(this.field_e, var9, this.field_h);
         int var12 = (var3 - this.field_g.field_m) / 2;
         var9 = var9 + (3 + this.field_g.field_c);
@@ -696,8 +696,8 @@ final class ak {
         int[] var29 = this.a(var18, var6, var5, var13, var12, 98, var4, var7, var9);
         var5 = var5 + var29.length;
         var4 = var4 + var29.length;
-        dk var21 = this.field_i[0];
-        var9 = var9 + (var21.field_i + 20);
+        LegacyButton var21 = this.field_i[0];
+        var9 = var9 + (var21.height + 20);
         int[] var30 = this.a(var6, var7, var3 - 1, var4, var5, -28, var9, var18, 0);
         int var16 = var28.length - (-var29.length - var30.length);
         int var4Lifetime1 = 0;
@@ -804,7 +804,7 @@ final class ak {
         return (var2);
     }
 
-    private final int[] a(int param0, int param1, int param2, int param3, int param4, int param5, ih param6, int param7, int param8) {
+    private final int[] a(int param0, int param1, int param2, int param3, int param4, int param5, BinaryBitmapFont param6, int param7, int param8) {
         int[] var10 = null;
         String[] var11 = null;
         String stackIn_8_2 = null;
@@ -979,7 +979,7 @@ final class ak {
         }
     }
 
-    private final int[] a(ih param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final int[] a(BinaryBitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int[] var10 = null;
         String[] var11 = null;
         String stackIn_8_2 = null;
@@ -1025,17 +1025,17 @@ final class ak {
         if (this.field_k != null) {
           if (this.field_k.length >= 1 &&
             null != this.field_k[0]) {
-            dk var15 = this.field_k[0];
+            LegacyButton var15 = this.field_k[0];
             if (param0 >= -81) {
               this.field_c = -52;
             }
-            int var8 = -var3 + var15.field_l;
+            int var8 = -var3 + var15.y;
             decompiledFrameRemainder0 = (this.field_i != null);
             if (decompiledFrameRemainder0) {
               if (this.field_i.length >= 1 &&
                 this.field_i[0] != null) {
-                dk var16 = this.field_i[0];
-                int var9 = var16.field_l + var16.field_i + var4;
+                LegacyButton var16 = this.field_i[0];
+                int var9 = var16.y + var16.height + var4;
                 int var10 = mj.field_d;
                 stackIn_15_0 = (var10 < 40) ? (40 - var10) : (0);
                 int var11 = stackIn_15_0;
@@ -1067,7 +1067,7 @@ final class ak {
           this.field_e = 6;
         }
         if (!param0) {
-          this.field_i = (dk[]) null;
+          this.field_i = (LegacyButton[]) null;
         }
         if (3 == param1) {
           this.field_e = 7;
@@ -1082,8 +1082,8 @@ final class ak {
           var8[var5] = var5 + param1;
         }
         if (param2 != 10) {
-          ih var7 = (ih) null;
-          int[] discarded$0 = this.a(-63, -54, -8, -112, -7, -16, (ih) null, -12, -123);
+          BinaryBitmapFont var7 = (BinaryBitmapFont) null;
+          int[] discarded$0 = this.a(-63, -54, -8, -112, -7, -16, (BinaryBitmapFont) null, -12, -123);
         }
         return var4;
     }
@@ -1132,7 +1132,7 @@ final class ak {
         }
         ol.field_N = var4;
         if (param0 >= -74) {
-          this.field_i = (dk[]) null;
+          this.field_i = (LegacyButton[]) null;
         }
     }
 

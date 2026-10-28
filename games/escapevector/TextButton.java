@@ -91,11 +91,11 @@ class TextButton extends UiComponent {
           }
           super.updateHover(guard ^ 0, offsetY, offsetX, root);
           if (this.field_t != 0) {
-            if (eb.field_K == this.field_t) {
+            if (DialWidget.field_K == this.field_t) {
               return;
             }
             if (this.hitTest(dh.field_d, UiContainer.field_y, offsetX, (byte) 97, offsetY) &&
-              eb.field_K == 0) {
+              DialWidget.field_K == 0) {
               this.notifyAction(-19646, UiContainer.field_y - offsetY, -offsetX + dh.field_d, this.field_t);
             }
             this.onPointerReleased(UiContainer.field_y, offsetX, dh.field_d, offsetY, root, (byte) 15);

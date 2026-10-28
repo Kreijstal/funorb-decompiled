@@ -5,18 +5,18 @@ final class qk {
     static dn field_e;
     String field_i;
     int field_b;
-    static int field_j;
+    static int spriteCount;
     String field_d;
     ResourceArchive field_h;
     static String field_a;
     static SystemTask field_g;
-    static int[] field_f;
+    static int[] spritePalette;
     String field_c;
 
     public static void releaseStatics(byte guard) {
         int var1 = -8 / ((4 - guard) / 38);
         field_e = null;
-        field_f = null;
+        spritePalette = null;
         field_a = null;
         field_g = null;
     }

@@ -28,17 +28,17 @@ final class fg {
 
     final static IndexedSprite[] a(int param0) {
         int var3 = EscapeVector.obfuscationControl;
-        IndexedSprite[] var1 = new IndexedSprite[qk.field_j];
+        IndexedSprite[] var1 = new IndexedSprite[qk.spriteCount];
         if (param0 == 13029) {
-          for (int var2 = 0; qk.field_j > var2; var2++) {
-            var1[var2] = new IndexedSprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], qe.field_a[var2], qk.field_f);
+          for (int var2 = 0; qk.spriteCount > var2; var2++) {
+            var1[var2] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], gi.spriteOffsetYs[var2], qh.spriteWidths[var2], bc.spriteHeights[var2], qe.spriteIndices[var2], qk.spritePalette);
           }
           of.a(false);
           return var1;
         }
         fg.b(16);
-        for (int var2Lifetime1 = 0; qk.field_j > var2Lifetime1; var2Lifetime1++) {
-          var1[var2Lifetime1] = new IndexedSprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[var2Lifetime1], gi.field_e[var2Lifetime1], qh.field_k[var2Lifetime1], bc.field_a[var2Lifetime1], qe.field_a[var2Lifetime1], qk.field_f);
+        for (int var2Lifetime1 = 0; qk.spriteCount > var2Lifetime1; var2Lifetime1++) {
+          var1[var2Lifetime1] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2Lifetime1], gi.spriteOffsetYs[var2Lifetime1], qh.spriteWidths[var2Lifetime1], bc.spriteHeights[var2Lifetime1], qe.spriteIndices[var2Lifetime1], qk.spritePalette);
         }
         of.a(false);
         return var1;

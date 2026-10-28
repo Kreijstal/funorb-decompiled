@@ -178,14 +178,14 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         return var2.toString();
     }
 
-    final static void applyGrayButtonPalette(int guard, dk button) {
+    final static void applyGrayButtonPalette(int guard, LegacyButton button) {
         try {
           if (guard >= -60) {
             field_r = -70;
           }
           int[] var2 = new int[]{3170352, 3170352, 3170352};
           int[] var3 = new int[]{6340704, 16777215, 16777215};
-          button.a(var2, var3, -2);
+          button.setBackgroundColors(var2, var3, -2);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "si.E(" + guard + ',' + (button != null ? "{...}" : "null") + ')');
         }

@@ -144,7 +144,7 @@ final class DynamicTerrainRenderer {
         field_m = null;
         field_w = null;
         if (guard != 3) {
-          DynamicTerrainRenderer.a(-86, (int[]) null, 29, -25, (ih) null, (String[]) null, (int[]) null, false, (int[]) null);
+          DynamicTerrainRenderer.a(-86, (int[]) null, 29, -25, (BinaryBitmapFont) null, (String[]) null, (int[]) null, false, (int[]) null);
         }
     }
 
@@ -1399,7 +1399,7 @@ final class DynamicTerrainRenderer {
         int var10 = var8 * var9;
         int var11 = 0;
         while (var10 > var11) {
-          var6[var11] = var13[ae.a(var11, 1)];
+          var6[var11] = var13[SpriteCheckboxPainter.bitwiseAnd(var11, 1)];
           var11++;
           if (var12 == 0) {
             continue;
@@ -1627,8 +1627,8 @@ final class DynamicTerrainRenderer {
         this.c(param1, -1, param2);
     }
 
-    final static dk[] a(int param0, int[] param1, int param2, int param3, ih param4, String[] param5, int[] param6, boolean param7, int[] param8) {
-        dk[] stackIn_8_0 = null;
+    final static LegacyButton[] a(int param0, int[] param1, int param2, int param3, BinaryBitmapFont param4, String[] param5, int[] param6, boolean param7, int[] param8) {
+        LegacyButton[] stackIn_8_0 = null;
         String stackIn_12_2 = null;
         String stackIn_15_2 = null;
         String stackIn_18_2 = null;
@@ -1641,7 +1641,7 @@ final class DynamicTerrainRenderer {
           int var11 = jd.a(param4, (byte) -121, param5);
           int var12 = DynamicTerrainRenderer.a(1, var10, param0, var11);
           int var13 = PcmResampler.a(var11, (byte) 122, param0, var10, var12);
-          dk[] var14 = new dk[var10];
+          LegacyButton[] var14 = new LegacyButton[var10];
           int var15 = 0;
           if (param7) {
             field_w = (Sprite) null;
@@ -1649,8 +1649,8 @@ final class DynamicTerrainRenderer {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var15 >= var10))) {
             int var16 = ji.a(var12, param4, param5, var13, var15, param3, 0);
-            dk var17 = new dk(var9_int, param1[var15], param5[var15], param8[var15], param6[var15], param4);
-            var17.b((byte) 114, var16, param2);
+            LegacyButton var17 = new LegacyButton(var9_int, param1[var15], param5[var15], param8[var15], param6[var15], param4);
+            var17.setPosition((byte) 114, var16, param2);
             stackIn_8_0 = var14;
             if (var18 == 0) {
               stackIn_8_0[var15] = var17;

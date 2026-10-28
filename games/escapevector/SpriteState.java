@@ -17,7 +17,7 @@ abstract class SpriteState extends DualLinkNode {
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final static void b(int param0, int param1) {
-        ee.field_a = cb.field_b[param0];
+        LoginMethod.field_a = cb.field_b[param0];
         if (param1 == 15) {
           md.field_H = SpriteStrip.field_i[param0];
           gj.field_g = jj.field_c[param0];
@@ -33,7 +33,7 @@ abstract class SpriteState extends DualLinkNode {
         Object var1 = QuickChatDynamicCommand.mouseHandler;
         synchronized (var1) {
           md.mouseIdleTicks = md.mouseIdleTicks + 1;
-          eb.field_K = vj.heldMouseButton;
+          DialWidget.field_K = vj.heldMouseButton;
           dh.field_d = IterableDualLinkDeque.pendingMouseX;
           UiContainer.field_y = jk.pendingMouseY;
           TextFieldValidator.field_h = ke.mouseInputChanged;

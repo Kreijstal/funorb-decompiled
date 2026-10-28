@@ -50,7 +50,7 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
 
     final void drawLayer(int screenY, byte guard, int layer, int screenX) {
         if (null != this.field_H) {
-          Js5Transport.field_a.a(this.field_H, 20 + (this.x + screenX), this.y + (screenY + 15), -40 + this.width, this.height, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
+          Js5Transport.field_a.drawParagraph(this.field_H, 20 + (this.x + screenX), this.y + (screenY + 15), -40 + this.width, this.height, 16777215, -1, 1, 0, Js5Transport.field_a.maxAscent);
         }
         if (null != this.field_N) {
           SoftwareRasterizer.drawHorizontalLine(10 + screenX, 134 + screenY, this.width - 20, 4210752);
@@ -259,9 +259,9 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
             this.field_I = new TextButton(EmailAvailabilityRequest.field_d, (UiListener) null);
             this.field_L.enabled = false;
           }
-          this.field_L.painter = (WidgetPainter) ((Object) new re(10000536));
+          this.field_L.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
           this.field_J.painter = (WidgetPainter) ((Object) new un(10000536));
-          ck var6 = new ck();
+          ThreeSliceButtonPainter var6 = new ThreeSliceButtonPainter();
           this.field_G.painter = (WidgetPainter) ((Object) var6);
           if (this.field_I != null) {
             this.field_I.painter = (WidgetPainter) ((Object) var6);
@@ -284,10 +284,10 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
           this.y = 15;
           BitmapFont var7 = Js5Transport.field_a;
           if (null != this.field_H) {
-            this.y = this.y + (var7.b(this.field_H, -40 + this.width, var7.field_r) + 5);
+            this.y = this.y + (var7.paragraphHeight(this.field_H, -40 + this.width, var7.maxAscent) + 5);
           }
           String var8 = lh.field_b;
-          ee var9 = WeightedCacheEntry.readLastLoginMethod((byte) -1, PointCloudEffect.d((byte) -107));
+          LoginMethod var9 = WeightedCacheEntry.readLastLoginMethod((byte) -1, PointCloudEffect.d((byte) -107));
           if (var9 == NameAvailabilityValidator.field_q) {
             var8 = kg.field_b;
           } else if (var9 == oh.field_n) {

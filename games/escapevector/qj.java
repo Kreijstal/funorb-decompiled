@@ -4,7 +4,7 @@
 final class qj {
     int field_h;
     int field_b;
-    static ee field_g;
+    static LoginMethod field_g;
     static String field_d;
     static int field_c;
     static java.awt.Frame field_f;
@@ -84,7 +84,7 @@ final class qj {
                       int var18 = param4.pixels[incrementValue$1];
                       int incrementValue$2 = var14;
                       var14++;
-                      SoftwareRasterizer.pixels[incrementValue$2] = var18 - ae.a(4144959, var18 >> 2);
+                      SoftwareRasterizer.pixels[incrementValue$2] = var18 - SpriteCheckboxPainter.bitwiseAnd(4144959, var18 >> 2);
                     }
                   }
                 }
@@ -172,7 +172,7 @@ final class qj {
     }
 
     static {
-        field_g = new ee("");
+        field_g = new LoginMethod("");
         field_d = "Ship";
         field_c = 0;
         field_a = new PacketBuffer(256);

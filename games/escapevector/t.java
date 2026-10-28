@@ -90,72 +90,72 @@ final class t {
           boolean decompiledFrameRemainder0 = true;
           int var6 = mj.field_b.fullWidth / 2;
           if (param0 == 0) {
-            fh.field_g.c(of.field_e, var6, 22, var5_int, -1);
+            fh.field_g.drawCentered(of.field_e, var6, 22, var5_int, -1);
           }
           if (param0 != 0 ||
             var11 != 0) {
             if (param0 != 1) {
               if (param0 == 2) {
-                fh.field_g.c(mc.field_a, var6, 22, var5_int, -1);
+                fh.field_g.drawCentered(mc.field_a, var6, 22, var5_int, -1);
               }
               if (param0 != 2 ||
                 var11 != 0) {
                 if (param0 == 3) {
-                  int var7 = fh.field_g.b(oi.field_N);
-                  int var8 = fh.field_g.b(ee.field_d);
+                  int var7 = fh.field_g.stringWidth(oi.field_N);
+                  int var8 = fh.field_g.stringWidth(LoginMethod.field_d);
                   int stackIn_31_0 = (var8 < var7) ? var7 : var8;
                   int var9 = stackIn_31_0;
                   int var10 = (var9 - 68) / 2 + var6;
-                  fh.field_g.b(oi.field_N, var10, 22, var5_int, -1);
+                  fh.field_g.drawRight(oi.field_N, var10, 22, var5_int, -1);
                   SingleChildContainer.a(var10, 13202, 4, IterableNodeHashTable.field_c, var5_int);
                 }
                 if (param0 != 3 ||
                   var11 != 0) {
                   if (4 != param0) {
                     if (5 == param0) {
-                      fh.field_g.c(an.field_b, var6, 22, var5_int, -1);
+                      fh.field_g.drawCentered(an.field_b, var6, 22, var5_int, -1);
                     }
                     if (5 != param0 ||
                       var11 != 0) {
                       if (param0 != 6) {
                         if (param0 != 7 &&
                           (decompiledFrameRemainder0 = (param0 == 8))) {
-                          fh.field_g.c(uf.field_s, var6, 22, var5_int, -1);
+                          fh.field_g.drawCentered(uf.field_s, var6, 22, var5_int, -1);
                           decompiledFrameRemainder0 = (var11 != 0);
                         }
                         if (decompiledFrameRemainder0) {
-                          fh.field_g.c(da.field_a, var6, 22, var5_int, -1);
+                          fh.field_g.drawCentered(da.field_a, var6, 22, var5_int, -1);
                         }
                       }
                       if (decompiledFrameRemainder0 &&
                         (param0 == 6 ||
                         var11 != 0)) {
-                        fh.field_g.c(DynamicTerrainRenderer.field_m, var6, 22, var5_int, -1);
+                        fh.field_g.drawCentered(DynamicTerrainRenderer.field_m, var6, 22, var5_int, -1);
                         if (var11 != 0) {
-                          var7Lifetime2 = fh.field_g.b(oi.field_N);
-                          var8Lifetime1 = fh.field_g.b(ee.field_d);
+                          var7Lifetime2 = fh.field_g.stringWidth(oi.field_N);
+                          var8Lifetime1 = fh.field_g.stringWidth(LoginMethod.field_d);
                           stackIn_63_0 = (var8Lifetime1 >= var7Lifetime2) ? var8Lifetime1 : var7Lifetime2;
                           var9Lifetime1 = stackIn_63_0;
                           var10Lifetime1 = (-68 + var9Lifetime1) / 2 + var6;
-                          fh.field_g.b(ee.field_d, var10Lifetime1, 22, var5_int, -1);
+                          fh.field_g.drawRight(LoginMethod.field_d, var10Lifetime1, 22, var5_int, -1);
                           SingleChildContainer.a(var10Lifetime1, 13202, 4, kc.field_b, var5_int);
-                          fh.field_g.c(EscapeVector.field_z, var6, 22, var5_int, -1);
+                          fh.field_g.drawCentered(EscapeVector.field_z, var6, 22, var5_int, -1);
                         }
                       }
                     }} else {
-                    var7Lifetime2 = fh.field_g.b(oi.field_N);
-                    var8Lifetime1 = fh.field_g.b(ee.field_d);
+                    var7Lifetime2 = fh.field_g.stringWidth(oi.field_N);
+                    var8Lifetime1 = fh.field_g.stringWidth(LoginMethod.field_d);
                     stackIn_63_0 = (var8Lifetime1 >= var7Lifetime2) ? var8Lifetime1 : var7Lifetime2;
                     var9Lifetime1 = stackIn_63_0;
                     var10Lifetime1 = (-68 + var9Lifetime1) / 2 + var6;
-                    fh.field_g.b(ee.field_d, var10Lifetime1, 22, var5_int, -1);
+                    fh.field_g.drawRight(LoginMethod.field_d, var10Lifetime1, 22, var5_int, -1);
                     SingleChildContainer.a(var10Lifetime1, 13202, 4, kc.field_b, var5_int);
                     if (var11 != 0) {
-                      fh.field_g.c(EscapeVector.field_z, var6, 22, var5_int, -1);
+                      fh.field_g.drawCentered(EscapeVector.field_z, var6, 22, var5_int, -1);
                     }
                   }
                 }}} else {
-              fh.field_g.c(EscapeVector.field_z, var6, 22, var5_int, -1);
+              fh.field_g.drawCentered(EscapeVector.field_z, var6, 22, var5_int, -1);
             }
           }
           md.field_D.a(112);
@@ -390,8 +390,8 @@ final class t {
               decompiledFrameRemainder0 = (var10 != 0);
             }
             if (decompiledFrameRemainder0) {
-              int var4 = fh.field_g.b(oi.field_N);
-              int var5 = fh.field_g.b(ee.field_d);
+              int var4 = fh.field_g.stringWidth(oi.field_N);
+              int var5 = fh.field_g.stringWidth(LoginMethod.field_d);
               int stackIn_68_0 = (var4 <= var5) ? var5 : var4;
               int var6 = stackIn_68_0;
               int var7 = 320 + (var6 - 68) / 2;
@@ -420,7 +420,7 @@ final class t {
               }
               TrackerMusicPlayer var4_ref_o = DraggableWidget.field_N;
               if (null != var4_ref_o) {
-                var4_ref_o.d(kn.field_b * kc.field_b / 64);
+                var4_ref_o.d(GrowableIntList.field_b * kc.field_b / 64);
               }
             }
             if (this.field_b.b(-98) &&
@@ -431,26 +431,26 @@ final class t {
               }
               TrackerMusicPlayer var4_ref_oLifetime1 = DraggableWidget.field_N;
               if (null != var4_ref_oLifetime1) {
-                var4_ref_oLifetime1.d(kn.field_b * kc.field_b / 64);
+                var4_ref_oLifetime1.d(GrowableIntList.field_b * kc.field_b / 64);
               }
             }
             if (this.field_b.d(-10809)) {
               kc.field_b = 0;
               TrackerMusicPlayer var4_ref_oLifetime2 = DraggableWidget.field_N;
               if (var4_ref_oLifetime2 != null) {
-                var4_ref_oLifetime2.d(kc.field_b * kn.field_b / 64);
+                var4_ref_oLifetime2.d(kc.field_b * GrowableIntList.field_b / 64);
               }
             }
             if (this.field_b.e(0)) {
               kc.field_b = 64;
               TrackerMusicPlayer var4_ref_oLifetime3 = DraggableWidget.field_N;
               if (var4_ref_oLifetime3 != null) {
-                var4_ref_oLifetime3.d(kn.field_b * kc.field_b / 64);
+                var4_ref_oLifetime3.d(GrowableIntList.field_b * kc.field_b / 64);
               }
             }
             if (this.field_b.a(false)) {
-              int var4Lifetime1 = fh.field_g.b(oi.field_N);
-              int var5Lifetime1 = fh.field_g.b(ee.field_d);
+              int var4Lifetime1 = fh.field_g.stringWidth(oi.field_N);
+              int var5Lifetime1 = fh.field_g.stringWidth(LoginMethod.field_d);
               int stackIn_129_0 = (var4Lifetime1 <= var5Lifetime1) ? var5Lifetime1 : var4Lifetime1;
               int var6Lifetime1 = stackIn_129_0;
               int var7Lifetime1 = 320 + (-68 + var6Lifetime1) / 2;
@@ -467,7 +467,7 @@ final class t {
               kc.field_b = var8Lifetime1;
               TrackerMusicPlayer var9 = DraggableWidget.field_N;
               if (var9 != null) {
-                var9.d(kn.field_b * kc.field_b / 64);
+                var9.d(GrowableIntList.field_b * kc.field_b / 64);
               }
             }
           }

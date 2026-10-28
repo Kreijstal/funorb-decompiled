@@ -64,7 +64,7 @@ final class w extends vg {
         try {
           this.field_Z = param1;
           if (null != this.field_Z) {
-            int var3_int = dl.field_b.b(this.field_Z, 260, dl.field_b.field_r);
+            int var3_int = dl.field_b.paragraphHeight(this.field_Z, 260, dl.field_b.maxAscent);
             this.b(255, 150 + var3_int, 300);
           }
           this.field_cb = new jm(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -79,12 +79,12 @@ final class w extends vg {
 
     final void b(int param0, int param1, byte param2) {
         super.b(param0, param1, (byte) 109);
-        dl.field_b.c(this.field_db, param1 + (this.width >> 1), 103 + param0, 16777215, -1);
+        dl.field_b.drawCentered(this.field_db, param1 + (this.width >> 1), 103 + param0, 16777215, -1);
         if (param2 < 80) {
           this.field_eb = true;
           if (this.field_Z != null) {
             SoftwareRasterizer.drawHorizontalLine(param1 + 20, -7 + (120 + param0), 260, 8421504);
-            dl.field_b.a(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.field_r);
+            dl.field_b.drawParagraph(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.maxAscent);
             return;
           }
           return;
@@ -93,7 +93,7 @@ final class w extends vg {
           return;
         }
         SoftwareRasterizer.drawHorizontalLine(param1 + 20, -7 + (120 + param0), 260, 8421504);
-        dl.field_b.a(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.field_r);
+        dl.field_b.drawParagraph(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.maxAscent);
     }
 
     static {

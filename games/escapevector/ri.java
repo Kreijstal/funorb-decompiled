@@ -72,7 +72,7 @@ final class ri {
           int var4 = var14.readUnsignedByte(0);
           if (0 != var4) {
             int var5 = var3.rowCount;
-            TextHotspotRegion.field_l[0] = ck.field_r;
+            TextHotspotRegion.field_l[0] = ThreeSliceButtonPainter.field_r;
             for (int var6_int = 1; var4 > var6_int; var6_int++) {
               TextHotspotRegion.field_l[var6_int] = var14.readString(false);
             }

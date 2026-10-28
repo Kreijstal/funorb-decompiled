@@ -163,7 +163,7 @@ final class BoundedUrlRequest implements Runnable {
               OutputStream var3 = var4.getOutputStream();
               var3.write(17);
               CharSequence var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_j.getFile() + "\n\n"));
-              var3.write(dk.a((byte) -14, var5));
+              var3.write(LegacyButton.encodeCp1252((byte) -14, var5));
               this.field_b = new DataInputStream(var4.getInputStream());
             }
             this.field_i.position = 0;

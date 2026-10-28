@@ -147,7 +147,7 @@ final class ef {
           if (param4 < 0) {
             this.field_g = (Sprite) null;
           }
-          ld.a(param1.height, this.field_i, 4, param3 + param1.y, param2 + param1.x, param1.width);
+          ld.drawNineSlice(param1.height, this.field_i, 4, param3 + param1.y, param2 + param1.x, param1.width);
           if (null != this.field_g) {
             int var6_int = param2 - (-param1.x - this.field_h);
             if (param0.horizontalAlignment == 1) {
@@ -194,7 +194,7 @@ final class ef {
             } else {
               stackIn_27_8 = 256;
             }
-            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.horizontalAlignment, param0.verticalAlignment, param0.lineSpacing);
+            ((BitmapFont) (Object) stackIn_20_0).drawParagraphAlpha(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.horizontalAlignment, param0.verticalAlignment, param0.lineSpacing);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

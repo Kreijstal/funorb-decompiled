@@ -13,7 +13,7 @@ final class lf extends TextHotspotWidget {
     static byte[] field_K;
 
     lf(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, gl.c(true));
+        super(param1, PairedTextColumns.defaultTextPainter(true));
         try {
           this.field_L = param1;
           this.field_N = param0;

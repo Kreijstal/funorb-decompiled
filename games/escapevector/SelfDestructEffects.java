@@ -143,7 +143,7 @@ final class SelfDestructEffects {
             return stackIn_6_0;
           }
           if (al.field_d == sf.field_d) {
-            sc.field_g = null;
+            DialWidgetPainter.field_g = null;
             QuickChatDynamicCommand.outgoingPackets.position = 0;
             if (param2 != null) {
               var9 = 0;
@@ -168,7 +168,7 @@ final class SelfDestructEffects {
                 var11_ref_String = "";
               }
               QuickChatDynamicCommand.outgoingPackets.writeString(var11_ref_String, 105);
-              bn.a(param0 ^ -32, QuickChatDynamicCommand.outgoingPackets, qj.field_a, q.field_O, cf.field_c);
+              bn.a(param0 ^ -32, QuickChatDynamicCommand.outgoingPackets, qj.field_a, MarkerSlider.field_O, cf.field_c);
               QuickChatDynamicCommand.outgoingPackets.backpatchShortLength(QuickChatDynamicCommand.outgoingPackets.position - var10, 32614);
             } else {
               qj.field_a.position = 0;
@@ -193,7 +193,7 @@ final class SelfDestructEffects {
               QuickChatDynamicCommand.outgoingPackets.writeByte(16, -123);
               QuickChatDynamicCommand.outgoingPackets.position = QuickChatDynamicCommand.outgoingPackets.position + 1;
               var9 = QuickChatDynamicCommand.outgoingPackets.position;
-              bn.a(0, QuickChatDynamicCommand.outgoingPackets, qj.field_a, q.field_O, cf.field_c);
+              bn.a(0, QuickChatDynamicCommand.outgoingPackets, qj.field_a, MarkerSlider.field_O, cf.field_c);
               QuickChatDynamicCommand.outgoingPackets.backpatchByteLength(-38, -var9 + QuickChatDynamicCommand.outgoingPackets.position);
             }
             ClientException.a(-1, 30785);
@@ -209,7 +209,7 @@ final class SelfDestructEffects {
               al.field_d = ResourceArchive.field_k;
             } else {
               if (var9Lifetime1 == 248) {
-                se.a((byte) 81, PointCloudEffect.d((byte) -108));
+                se.writeBrowserSessionMarker((byte) 81, PointCloudEffect.d((byte) -108));
                 MouseWheelInput.field_a = w.field_fb;
                 nm.a(param0 ^ -16);
                 e.field_c = false;
@@ -218,7 +218,7 @@ final class SelfDestructEffects {
               }
               if (var9Lifetime1 == 99) {
                 bo.a(30000, uc.b(92));
-                sc.field_g = new Boolean(SecondaryIntrusiveDeque.a(QuickChatDynamicCommand.incomingPackets, true));
+                DialWidgetPainter.field_g = new Boolean(SecondaryIntrusiveDeque.a(QuickChatDynamicCommand.incomingPackets, true));
                 QuickChatDynamicCommand.incomingPackets.position = 0;
               } else {
                 EmailSyntaxValidator.field_r = -1;

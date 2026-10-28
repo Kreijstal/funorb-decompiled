@@ -80,7 +80,7 @@ final class mm {
         }
         if (param1 != 4) {
           if (var4.tryLoadNamedGroup(param0 - 4, da.field_d[param1])) {
-            tk.field_a[param1] = fe.a(da.field_d[param1], var4, "texture", true);
+            EmailValidationError.field_a[param1] = fe.a(da.field_d[param1], var4, "texture", true);
             PcmResampler.field_a[param1] = fe.a(da.field_d[param1], var4, "frosting", true);
             PcmResampler.field_a[param1].c();
             DelayedServerPacket.loadSkyLayers(var4, param1, false);

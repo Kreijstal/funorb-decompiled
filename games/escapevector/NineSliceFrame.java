@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fd {
-    private Sprite[] field_c;
+final class NineSliceFrame {
+    private Sprite[] sprites;
     static String[] field_f;
     static String field_d;
     static String field_a;
     static String field_b;
     static String field_e;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        ld.a(param4, this.field_c, 4, param1, param0, param3);
-        if (param2 != -96) {
-          this.a(45, 104, 124, -52, 19);
+    final void draw(int x, int y, int guard, int width, int height) {
+        ld.drawNineSlice(height, this.sprites, 4, y, x, width);
+        if (guard != -96) {
+          this.draw(45, 104, 124, -52, 19);
         }
     }
 
@@ -23,45 +23,45 @@ final class fd {
         field_a = null;
         field_f = null;
         if (guard != 86) {
-          fd.a(true, 'ﾩ');
+          NineSliceFrame.isNameSeparator(true, 'ﾩ');
         }
     }
 
-    fd(Sprite[] param0) {
+    NineSliceFrame(Sprite[] sprites) {
         try {
-          this.field_c = param0;
+          this.sprites = sprites;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "fd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "fd.<init>(" + (sprites != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(boolean param0, char param1) {
-        if (!param0) {
-          fd.releaseStatics((byte) 47);
-          if (160 == param1) {
+    final static boolean isNameSeparator(boolean guard, char character) {
+        if (!guard) {
+          NineSliceFrame.releaseStatics((byte) 47);
+          if (160 == character) {
             return true;
           }
-          if (param1 == 32) {
+          if (character == 32) {
             return true;
           }
-          if (param1 == 95) {
+          if (character == 95) {
             return true;
           }
-          if (param1 != 45) {
+          if (character != 45) {
             return false;
           }
           return true;
         }
-        if (160 == param1) {
+        if (160 == character) {
           return true;
         }
-        if (param1 == 32) {
+        if (character == 32) {
           return true;
         }
-        if (param1 == 95) {
+        if (character == 95) {
           return true;
         }
-        if (param1 != 45) {
+        if (character != 45) {
           return false;
         }
         return true;

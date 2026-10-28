@@ -4,7 +4,7 @@
 final class NameAvailabilityValidator extends TextFieldValidator {
     static PcmSample field_p;
     private boolean field_n;
-    static ee field_q;
+    static LoginMethod field_q;
     private String field_s;
     static int[] field_o;
     static PacketBuffer field_r;
@@ -120,7 +120,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             this.field_s = text;
           }
           if (this.field_n) {
-            String stackIn_15_0 = fd.field_b;
+            String stackIn_15_0 = NineSliceFrame.field_b;
             return stackIn_15_0;
           }
           String stackIn_13_0 = RasterBuffer.field_b;
@@ -147,13 +147,13 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           field_o = null;
           return;
         }
-        field_q = (ee) null;
+        field_q = (LoginMethod) null;
         field_p = null;
         field_o = null;
     }
 
     static {
         field_o = new int[4];
-        field_q = new ee("email");
+        field_q = new LoginMethod("email");
     }
 }

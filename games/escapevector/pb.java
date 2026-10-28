@@ -8,7 +8,7 @@ final class pb {
     static int[] field_c;
     static BitmapFont field_e;
 
-    final static int a(byte param0, dk[] param1) {
+    final static int a(byte param0, LegacyButton[] param1) {
         String stackIn_21_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
@@ -17,10 +17,10 @@ final class pb {
             return stackIn_3_0;
           }
           int var2_int = -2147483648;
-          dk[] var3 = param1;
+          LegacyButton[] var3 = param1;
           for (int var4 = 0; var3.length > var4; var4++) {
-            dk var5 = var3[var4];
-            int var6 = var5.field_i + var5.field_l;
+            LegacyButton var5 = var3[var4];
+            int var6 = var5.height + var5.y;
             if (var2_int < var6) {
               var2_int = var6;
             }

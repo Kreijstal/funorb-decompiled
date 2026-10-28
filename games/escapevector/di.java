@@ -18,7 +18,7 @@ final class di {
         }
         if (param0 != 1) {
           field_c = (String) null;
-          re.d(2);
+          GradientOutlineTextPainter.clearSharedKeyHandler(2);
           MatchingTextValidator.c(true);
           ac.d(-16802);
           if (ClientException.a(-31879)) {
@@ -30,7 +30,7 @@ final class di {
           nm.a(16);
           return;
         }
-        re.d(2);
+        GradientOutlineTextPainter.clearSharedKeyHandler(2);
         MatchingTextValidator.c(true);
         ac.d(-16802);
         if (!ClientException.a(-31879)) {
@@ -48,10 +48,10 @@ final class di {
           if (guard >= -75) {
             field_c = (String) null;
           }
-          ArchiveKeyRequest var4 = (ArchiveKeyRequest) (jl.field_n.first(false));
+          ArchiveKeyRequest var4 = (ArchiveKeyRequest) (LegacyTextBlock.field_n.first(false));
           while (var4 != null) {
             BoundedRandomAccessFile.writeArchiveKeyRequest(-109, opcode, var4);
-            var4 = (ArchiveKeyRequest) (jl.field_n.next((byte) 70));
+            var4 = (ArchiveKeyRequest) (LegacyTextBlock.field_n.next((byte) 70));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

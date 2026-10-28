@@ -91,7 +91,7 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
         }
     }
 
-    final static ih a(int param0, ResourceArchive param1, String param2, String param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(int param0, ResourceArchive param1, String param2, String param3, ResourceArchive param4) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -102,7 +102,7 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
             field_N = (String) null;
           }
           int var6 = param4.findFileId(var5_int, param3, true);
-          ih stackIn_3_0 = WeightedLruCache.loadBitmapFont(param0 - 3, param1, var5_int, param4, var6);
+          BinaryBitmapFont stackIn_3_0 = WeightedLruCache.loadBitmapFont(param0 - 3, param1, var5_int, param4, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -300,16 +300,16 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
     public oi() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_I = new ValidatedTextWidget("", (UiListener) null, 12);
-        TextWidgetPainter var1 = new TextWidgetPainter(ke.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.field_r, -1, 2147483647, true);
+        TextWidgetPainter var1 = new TextWidgetPainter(ke.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.maxAscent, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(DebouncedValidator.field_a, var1, (UiListener) null);
         this.field_G = new TextButton(TextFieldValidator.field_i, (UiListener) null);
         this.field_H = new TextButton(cf.field_b, (UiListener) null);
         this.field_I.tooltip = bb.field_K;
         this.field_I.setValidator(new NameAvailabilityValidator(this.field_I), (byte) 63);
         this.field_G.enabled = false;
-        this.field_G.painter = (WidgetPainter) ((Object) new ck());
+        this.field_G.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
         this.field_H.painter = (WidgetPainter) ((Object) new ha());
-        this.field_I.painter = (WidgetPainter) ((Object) new re(10000536));
+        this.field_I.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;

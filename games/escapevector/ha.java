@@ -28,10 +28,10 @@ final class ha implements WidgetPainter {
           if (guard > -14) {
             return;
           }
-          this.field_f.a("<u=" + Integer.toString(var6_int, 16) + ">" + component.text + "</u>", component.x + originX, component.y + originY, component.width, component.height, var6_int, -1, this.field_b, this.field_d, this.field_f.field_r + this.field_f.field_x);
+          this.field_f.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + component.text + "</u>", component.x + originX, component.y + originY, component.width, component.height, var6_int, -1, this.field_b, this.field_d, this.field_f.maxAscent + this.field_f.maxDescent);
           if (component.isFocused(0)) {
-            int var7 = this.field_f.b(component.text);
-            int var8 = this.field_f.field_x + this.field_f.field_r;
+            int var7 = this.field_f.stringWidth(component.text);
+            int var8 = this.field_f.maxDescent + this.field_f.maxAscent;
             int var9 = originX + component.x;
             int var10 = component.y + originY;
             if (this.field_b == 2) {
@@ -332,7 +332,7 @@ final class ha implements WidgetPainter {
             int var13 = param0;
             int var14 = param4;
             int var15 = 8355711 & var18[var11] >> 1;
-            var10[var11] = ae.a(var13 >> 9, 65280) + (ae.a(33423360, var12) >> 1) - (-(ae.a(var14, 33532346) >> 17) - var15);
+            var10[var11] = SpriteCheckboxPainter.bitwiseAnd(var13 >> 9, 65280) + (SpriteCheckboxPainter.bitwiseAnd(33423360, var12) >> 1) - (-(SpriteCheckboxPainter.bitwiseAnd(var14, 33532346) >> 17) - var15);
             param4 = param4 + param2;
             param9 = param9 + param5;
             param0 = param0 + param6;

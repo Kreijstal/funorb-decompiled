@@ -48,7 +48,7 @@ final class WhirlpoolHasher {
                 this.field_c = 0;
                 this.field_b = 0;
               }
-              this.field_h[this.field_b] = (byte)ae.a(255, var8 << -var7 + 8);
+              this.field_h[this.field_b] = (byte)SpriteCheckboxPainter.bitwiseAnd(255, var8 << -var7 + 8);
               bitCount = bitCount - 8L;
               this.field_c = this.field_c + var7;
               var5_int++;
@@ -75,7 +75,7 @@ final class WhirlpoolHasher {
               this.field_c = 0;
               this.field_b = 0;
             }
-            this.field_h[this.field_b] = (byte)ae.a(var8Lifetime1 << 8 - var7, 255);
+            this.field_h[this.field_b] = (byte)SpriteCheckboxPainter.bitwiseAnd(var8Lifetime1 << 8 - var7, 255);
             this.field_c = this.field_c + (int)bitCount;
           }
           return;
@@ -129,7 +129,7 @@ final class WhirlpoolHasher {
         String stackIn_16_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          this.field_h[this.field_b] = (byte)MatchingTextValidator.a((int) this.field_h[this.field_b], 128 >>> ae.a(this.field_c, 7));
+          this.field_h[this.field_b] = (byte)MatchingTextValidator.a((int) this.field_h[this.field_b], 128 >>> SpriteCheckboxPainter.bitwiseAnd(this.field_c, 7));
           this.field_b = this.field_b + 1;
           if (32 < this.field_b) {
             while (this.field_b < 64) {
@@ -205,7 +205,7 @@ final class WhirlpoolHasher {
             int var4 = 0;
             int var5 = 56;
             while (var4 < 8) {
-              this.field_a[var3Lifetime1] = ja.a(this.field_a[var3Lifetime1], tm.field_db[var4][ae.a((int)(this.field_e[ae.a(7, var3Lifetime1 - var4)] >>> var5), 255)]);
+              this.field_a[var3Lifetime1] = ja.a(this.field_a[var3Lifetime1], tm.field_db[var4][SpriteCheckboxPainter.bitwiseAnd((int)(this.field_e[SpriteCheckboxPainter.bitwiseAnd(7, var3Lifetime1 - var4)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -220,7 +220,7 @@ final class WhirlpoolHasher {
             int var4Lifetime1 = var7;
             int var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_a[var3Lifetime1Lifetime2] = ja.a(this.field_a[var3Lifetime1Lifetime2], tm.field_db[var7][ae.a((int)(this.field_d[ae.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_a[var3Lifetime1Lifetime2] = ja.a(this.field_a[var3Lifetime1Lifetime2], tm.field_db[var7][SpriteCheckboxPainter.bitwiseAnd((int)(this.field_d[SpriteCheckboxPainter.bitwiseAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }

@@ -33,15 +33,15 @@ final class se {
         bo.field_F.render(0, 0, (byte) -55);
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void writeBrowserSessionMarker(byte guard, java.applet.Applet applet) {
         String stackIn_6_2 = null;
         try {
           an.field_a = true;
           String var2 = "tuhstatbut";
           String var3 = "rvnadlm";
           long var4 = -1L;
-          DialogueScreen.a((byte) 71, param1, var2, var3, var4);
-          if (param0 > 1) {
+          DialogueScreen.writeCookie((byte) 71, applet, var2, var3, var4);
+          if (guard > 1) {
             return;
           }
           field_a = (String[]) null;
@@ -50,8 +50,8 @@ final class se {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
           RuntimeException stackIn_5_0 = var2_ref;
-          StringBuilder stackIn_5_1 = new StringBuilder().append("se.D(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_5_1 = new StringBuilder().append("se.D(").append(guard).append(',');
+          if (applet == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";

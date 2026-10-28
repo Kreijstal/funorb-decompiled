@@ -31,7 +31,7 @@ final class TetherHumStream extends PcmStream {
 
     private final int a(int param0, int param1, int param2, int param3) {
         if (param2 == 2) {
-          return param1 * dk.field_h[param0 & 32767] >> 3;
+          return param1 * LegacyButton.field_h[param0 & 32767] >> 3;
         }
         if (param3 > -6) {
           return 63;
@@ -42,16 +42,16 @@ final class TetherHumStream extends PcmStream {
         return -param1 + (param1 * (32767 & param0) >> 14);
     }
 
-    final static dk a(dk[] param0, int param1, int param2) {
+    final static LegacyButton a(LegacyButton[] param0, int param1, int param2) {
         String stackIn_13_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          dk[] var7 = param0;
-          dk[] var3 = var7;
+          LegacyButton[] var7 = param0;
+          LegacyButton[] var3 = var7;
           for (int var4 = param2; var4 < var7.length; var4++) {
-            dk var5 = var7[var4];
-            if (param1 == var5.field_c) {
-              dk stackIn_7_0 = var5;
+            LegacyButton var5 = var7[var4];
+            if (param1 == var5.actionId) {
+              LegacyButton stackIn_7_0 = var5;
               return stackIn_7_0;
             }
           }

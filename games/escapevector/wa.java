@@ -28,9 +28,9 @@ final class wa {
         if (null == DraggableWidget.field_N) {
           return;
         }
-        if (!(kn.field_b <= param0)) {
-          kn.field_b = param0;
-          DraggableWidget.field_N.d(kc.field_b * kn.field_b / 64);
+        if (!(GrowableIntList.field_b <= param0)) {
+          GrowableIntList.field_b = param0;
+          DraggableWidget.field_N.d(kc.field_b * GrowableIntList.field_b / 64);
         }
         if (param1 == 32471) {
           return;

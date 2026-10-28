@@ -16,7 +16,7 @@ final class Bullet extends IntrusiveNode {
           if (guard > -90) {
             collisionLaserCount = -121;
           }
-          QuickChatDynamicCommand[] stackIn_4_0 = new QuickChatDynamicCommand[]{co.field_b, qi.field_P, eb.field_L, pl.field_m, ci.field_d, pj.field_k, sj.field_l, ea.field_g, ki.field_H, AccountRegistrationPanel.field_L, le.field_a, an.field_c, mg.field_g, wa.field_d};
+          QuickChatDynamicCommand[] stackIn_4_0 = new QuickChatDynamicCommand[]{co.field_b, qi.field_P, DialWidget.quickChatCommand, pl.field_m, ci.field_d, pj.field_k, sj.field_l, ea.field_g, ki.field_H, AccountRegistrationPanel.field_L, le.field_a, an.field_c, mg.field_g, wa.field_d};
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -8,7 +8,7 @@ final class CachedTextLayout extends TextLayout {
     private String field_g;
     private int field_m;
     private int field_l;
-    static tk field_p;
+    static EmailValidationError field_p;
     private int field_k;
     private int field_o;
     private int field_h;
@@ -38,7 +38,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_i = font;
           TextLayoutLine var9 = this.createSingleLine(text, baselineY, 116, font);
           TextLayoutLine var10 = var9;
-          var10.insertionX[0] = -font.b(text) + rightX;
+          var10.insertionX[0] = -font.stringWidth(text) + rightX;
           var10.insertionX[text.length()] = rightX;
           vi.a(0, text, var10, font, false);
           return;
@@ -66,7 +66,7 @@ final class CachedTextLayout extends TextLayout {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
-          TextLayoutLine var6 = new TextLayoutLine(-font.field_r + baselineY, baselineY + font.field_x, text.length());
+          TextLayoutLine var6 = new TextLayoutLine(-font.maxAscent + baselineY, baselineY + font.maxDescent, text.length());
           TextLayoutLine var5 = var6;
           if (guard <= 112) {
             field_j = (int[]) null;
@@ -103,7 +103,7 @@ final class CachedTextLayout extends TextLayout {
         int var16 = EscapeVector.obfuscationControl;
         try {
           if (lineSpacing == 0) {
-            lineSpacing = font.field_y;
+            lineSpacing = font.lineHeight;
           }
           if (text == null) {
             this.lines = null;
@@ -128,9 +128,9 @@ final class CachedTextLayout extends TextLayout {
           this.field_l = horizontalAlignment;
           this.field_o = width;
           this.field_n = false;
-          String[] var17 = new String[font.a(text, width) + 1];
+          String[] var17 = new String[font.wrappedLineCount(text, width) + 1];
           String[] var18 = var17;
-          int var10 = Math.max(1, font.a(text, new int[]{width}, var18));
+          int var10 = Math.max(1, font.wrapLines(text, new int[]{width}, var18));
           int var12 = 55 / ((guard - 65) / 32);
           if (this.field_h == 3 &&
             var10 == 1) {
@@ -138,25 +138,25 @@ final class CachedTextLayout extends TextLayout {
           }
           this.lines = new TextLayoutLine[var10];
           if (this.field_h == 0) {
-            var11 = font.field_r;
+            var11 = font.maxAscent;
           } else if (this.field_h == 1) {
-            var11 = (-(this.field_k * var10) + this.field_m >> 1) + font.field_r;
+            var11 = (-(this.field_k * var10) + this.field_m >> 1) + font.maxAscent;
           } else if (2 != this.field_h) {
             int var13 = (-(var10 * this.field_k) + this.field_m) / (var10 + 1);
             if (0 > var13) {
               var13 = 0;
             }
             this.field_k = this.field_k + var13;
-            var11 = font.field_r + var13;
+            var11 = font.maxAscent + var13;
           } else {
-            var11 = -font.field_x + (this.field_m - var10 * this.field_k);
+            var11 = -font.maxDescent + (this.field_m - var10 * this.field_k);
           }
           for (int var13Lifetime1 = 0; var10 > var13Lifetime1; var13Lifetime1++) {
             String var14 = var17[var13Lifetime1];
             TextLayoutLine stackIn_35_0 = null;
             TextLayoutLine stackIn_35_1 = null;
-            int stackIn_35_2 = var11 - font.field_r;
-            int stackIn_35_3 = var11 + font.field_x;
+            int stackIn_35_2 = var11 - font.maxAscent;
+            int stackIn_35_3 = var11 + font.maxDescent;
             if (var14 != null) {
               stackIn_36_4 = var14.length();
             } else {
@@ -167,11 +167,11 @@ final class CachedTextLayout extends TextLayout {
             TextLayoutLine var15 = new TextLayoutLine(stackIn_35_2, stackIn_35_3, stackIn_36_4);
             var15.insertionX[0] = 0;
             if (var14 != null) {
-              var15.insertionX[var14.length()] = font.b(var14);
+              var15.insertionX[var14.length()] = font.stringWidth(var14);
               if (3 != horizontalAlignment) {
                 stackIn_40_0 = 0;
               } else {
-                stackIn_40_0 = this.justificationSpacingQ8(-21446, font.b(var14), var14, width);
+                stackIn_40_0 = this.justificationSpacingQ8(-21446, font.stringWidth(var14), var14, width);
               }
               vi.a(stackIn_40_0, var14, var15, font, false);
             }
@@ -216,7 +216,7 @@ final class CachedTextLayout extends TextLayout {
           TextLayoutLine var7 = this.createSingleLine(text, baselineY, guard + 117, font);
           TextLayoutLine var8 = var7;
           var7.insertionX[0] = leftX;
-          var8.insertionX[text.length()] = leftX + font.b(text);
+          var8.insertionX[text.length()] = leftX + font.stringWidth(text);
           vi.a(guard, text, var8, font, false);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "wh.A(" + (text != null ? "{...}" : "null") + ',' + guard + ',' + leftX + ',' + baselineY + ',' + (font != null ? "{...}" : "null") + ')');
@@ -250,7 +250,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_n = guard ? true : false;
           this.field_l = 1;
           TextLayoutLine var8 = this.createSingleLine(text, baselineY, 117, font);
-          int var7 = font.b(text);
+          int var7 = font.stringWidth(text);
           var8.insertionX[0] = -(var7 >> 1) + centerX;
           var8.insertionX[text.length()] = (var7 >> 1) + centerX;
           vi.a(0, text, var8, font, false);
@@ -263,6 +263,6 @@ final class CachedTextLayout extends TextLayout {
     }
 
     static {
-        field_p = new tk();
+        field_p = new EmailValidationError();
     }
 }

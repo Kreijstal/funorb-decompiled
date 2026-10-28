@@ -68,7 +68,7 @@ final class qi extends UiContainer implements ButtonListener {
         String stackIn_10_2 = null;
         try {
           TextButton var4 = new TextButton(param2, param0);
-          var4.painter = (WidgetPainter) ((Object) new ck());
+          var4.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           int var5 = this.height - 2;
           if (param1 != -67) {
             byte[] var6 = (byte[]) null;
@@ -106,7 +106,7 @@ final class qi extends UiContainer implements ButtonListener {
           this.field_G = param2;
           this.field_L = param1;
           this.field_K = param0;
-          int var4_int = this.field_G == null ? 0 : this.field_L.b(this.field_G, 260, this.field_L.field_r);
+          int var4_int = this.field_G == null ? 0 : this.field_L.paragraphHeight(this.field_G, 260, this.field_L.maxAscent);
           this.setBounds(288, 0, 0, true, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -205,7 +205,7 @@ final class qi extends UiContainer implements ButtonListener {
           qi.a(-30, 97, 116, 20, 118, -63, -60, -67, 114);
         }
         super.drawLayer(screenY, (byte) 103, layer, screenX);
-        this.field_L.a(this.field_G, 14 + (this.x + screenX), 10 + screenY + this.y, -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_L.field_r);
+        this.field_L.drawParagraph(this.field_G, 14 + (this.x + screenX), 10 + screenY + this.y, -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_L.maxAscent);
     }
 
     final static String a(int param0, int param1, byte[] param2, byte param3) {

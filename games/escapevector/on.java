@@ -4,7 +4,7 @@
 final class on {
     static int field_a;
     static String field_b;
-    static int field_e;
+    static int spriteSheetWidth;
     static int[] field_g;
     static String field_c;
     static String field_d;
@@ -23,18 +23,18 @@ final class on {
         }
     }
 
-    final static int a(dk[] param0, int param1) {
+    final static int a(LegacyButton[] param0, int param1) {
         String stackIn_18_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
           int var2_int = -2147483648;
-          dk[] var3 = param0;
+          LegacyButton[] var3 = param0;
           if (param1 != -49) {
             on.a('\030', true);
           }
           for (int var4 = 0; var4 < var3.length; var4++) {
-            dk var5 = var3[var4];
-            int var6 = var5.field_f + var5.field_p;
+            LegacyButton var5 = var3[var4];
+            int var6 = var5.x + var5.width;
             if (var6 > var2_int) {
               var2_int = var6;
             }

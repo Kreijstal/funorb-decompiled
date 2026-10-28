@@ -6,7 +6,7 @@ final class gf {
     private int field_h;
     int field_k;
     private int field_i;
-    static fd field_e;
+    static NineSliceFrame field_e;
     int field_m;
     private int field_c;
     private int field_l;

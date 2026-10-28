@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee {
+final class LoginMethod {
     static Sprite field_c;
     static String field_a;
     static String field_d;
-    private String field_b;
+    private String name;
 
     final static void a(int param0, int param1) {
         int var6 = EscapeVector.obfuscationControl;
@@ -175,7 +175,7 @@ final class ee {
     public static void releaseStatics(boolean guard) {
         field_c = null;
         if (guard) {
-          ee.releaseStatics(true);
+          LoginMethod.releaseStatics(true);
           field_a = null;
           field_d = null;
           return;
@@ -189,7 +189,7 @@ final class ee {
           if (param0 != 27002) {
             field_a = (String) null;
           }
-          DialogueScreen.a((byte) 70, param1, "jagex-last-login-method", this.field_b, 31536000L);
+          DialogueScreen.writeCookie((byte) 70, param1, "jagex-last-login-method", this.name, 31536000L);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ee.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -200,10 +200,10 @@ final class ee {
         try {
           int var3_int = 74 % ((param0 + 43) / 47);
           if (!param2) {
-            int stackIn_4_0 = nb.field_a.b(param1);
+            int stackIn_4_0 = nb.field_a.stringWidth(param1);
             return stackIn_4_0;
           }
-          int stackIn_2_0 = pb.field_e.b(param1);
+          int stackIn_2_0 = pb.field_e.stringWidth(param1);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -223,46 +223,46 @@ final class ee {
         throw new IllegalStateException();
     }
 
-    final boolean a(String param0, byte param1) {
+    final boolean matchesName(String name, byte guard) {
         String stackIn_5_2 = null;
         try {
-          int var3_int = 50 % ((param1 - 55) / 61);
-          boolean stackIn_1_0 = this.field_b.equals(param0);
+          int var3_int = 50 % ((guard - 55) / 61);
+          boolean stackIn_1_0 = this.name.equals(name);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_4_0 = var3;
           StringBuilder stackIn_4_1 = new StringBuilder().append("ee.A(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, Sprite[] param3, int param4) {
+    final static void drawThreeSlice(int x, int width, boolean guard, Sprite[] sprites, int y) {
         String stackIn_14_2 = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
-          if (param3 != null &&
-            param1 > 0) {
-            int var5_int = param3[0].fullWidth;
-            if (!param2) {
+          if (sprites != null &&
+            width > 0) {
+            int var5_int = sprites[0].fullWidth;
+            if (!guard) {
               field_d = (String) null;
             }
-            int var6 = param3[2].fullWidth;
-            int var7 = param3[1].fullWidth;
-            param3[0].e(param0, param4);
-            param3[2].e(-var6 + param0 + param1, param4);
+            int var6 = sprites[2].fullWidth;
+            int var7 = sprites[1].fullWidth;
+            sprites[0].e(x, y);
+            sprites[2].e(-var6 + x + width, y);
             SoftwareRasterizer.a(sf.field_m);
-            SoftwareRasterizer.h(var5_int + param0, param4, param0 - (-param1 + var6), param3[1].fullHeight + param4);
-            int var8 = var5_int + param0;
-            int var9 = -var6 + (param1 + param0);
-            for (param0 = var8; param0 < var9; param0 = param0 + var7) {
-              param3[1].e(param0, param4);
+            SoftwareRasterizer.h(var5_int + x, y, x - (-width + var6), sprites[1].fullHeight + y);
+            int var8 = var5_int + x;
+            int var9 = -var6 + (width + x);
+            for (x = var8; x < var9; x = x + var7) {
+              sprites[1].e(x, y);
             }
             SoftwareRasterizer.b(sf.field_m);
             return;
@@ -272,13 +272,13 @@ final class ee {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var5;
-          StringBuilder stackIn_13_1 = new StringBuilder().append("ee.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_13_1 = new StringBuilder().append("ee.F(").append(x).append(',').append(width).append(',').append(guard).append(',');
+          if (sprites == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(y).append(')').toString());
         }
     }
 
@@ -287,7 +287,7 @@ final class ee {
         try {
           if (param1 != 14) {
             Sprite[] var4 = (Sprite[]) null;
-            ee.a(30, -124, true, (Sprite[]) null, -14);
+            LoginMethod.drawThreeSlice(30, -124, true, (Sprite[]) null, -14);
           }
           PointCloudEffect stackIn_3_0 = ci.a((byte) -43, sf.field_e[param0.objectType], param0.y, param0.collisionSprite, param2, param0.x);
           return stackIn_3_0;
@@ -305,11 +305,11 @@ final class ee {
         }
     }
 
-    ee(String param0) {
+    LoginMethod(String name) {
         try {
-          this.field_b = param0;
+          this.name = name;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ee.<init>(" + (name != null ? "{...}" : "null") + ')');
         }
     }
 

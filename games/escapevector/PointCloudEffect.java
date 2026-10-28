@@ -294,12 +294,12 @@ final class PointCloudEffect extends DualLinkNode {
 
     final static void a(byte param0, java.awt.Component param1) {
         param1.setFocusTraversalKeysEnabled(false);
-        param1.addKeyListener(ck.field_v);
+        param1.addKeyListener(ThreeSliceButtonPainter.field_v);
         if (param0 != -38) {
           return;
         }
         try {
-          param1.addFocusListener(ck.field_v);
+          param1.addFocusListener(ThreeSliceButtonPainter.field_v);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oc.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

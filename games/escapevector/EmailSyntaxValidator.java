@@ -24,8 +24,8 @@ final class EmailSyntaxValidator extends TextFieldValidator {
             if (8 != param0) {
             } else {
               param0 = 2;
-              if (!eb.field_H) {
-                param2 = fd.field_a;
+              if (!DialWidget.field_H) {
+                param2 = NineSliceFrame.field_a;
               } else {
                 param2 = IndexedSpriteState.field_c;
               }
@@ -40,7 +40,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
                 param2 = SingleChildContainer.a(QuickChatPhraseDefinition.field_y, param1 - 146, new String[]{param2});
               }
               if (ha.field_a) {
-                param2 = jl.field_l;
+                param2 = LegacyTextBlock.field_l;
               }
               be.field_b.a(param2, -1, param0);
             }
@@ -48,7 +48,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               if (param0 == 10) {
                 return;
               }
-              if (!eb.field_H) {
+              if (!DialWidget.field_H) {
                 PcmResampler.field_d.h((byte) -128);
                 return;
               }

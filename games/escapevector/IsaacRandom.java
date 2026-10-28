@@ -174,10 +174,10 @@ final class IsaacRandom {
             this.field_b = this.field_b ^ this.field_b << 13;
           }
           this.field_b = this.field_b + this.field_i[255 & var2 + 128];
-          int dupTemp$1 = this.field_b + (this.field_i[ae.a(var3, 1020) >> 2] + this.field_e);
+          int dupTemp$1 = this.field_b + (this.field_i[SpriteCheckboxPainter.bitwiseAnd(var3, 1020) >> 2] + this.field_e);
           int var4 = dupTemp$1;
           this.field_i[var2] = dupTemp$1;
-          int dupTemp$2 = var3 + this.field_i[ae.a(var4 >> 8, 1020) >> 2];
+          int dupTemp$2 = var3 + this.field_i[SpriteCheckboxPainter.bitwiseAnd(var4 >> 8, 1020) >> 2];
           this.field_e = dupTemp$2;
           this.field_c[var2] = dupTemp$2;
         }

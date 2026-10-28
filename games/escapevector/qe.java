@@ -6,7 +6,7 @@ final class qe {
     private int[] field_j;
     qj field_f;
     private qj[] field_e;
-    static byte[][] field_a;
+    static byte[][] spriteIndices;
     int field_d;
     private int[] field_i;
     private int field_g;
@@ -125,11 +125,11 @@ final class qe {
           this.field_j = (int[]) null;
         }
         String var4 = Integer.toString(this.field_d + 1);
-        fh.field_g.c(var4, 1 + (this.field_f.field_h - 1), -2 + this.field_f.field_b + this.field_b, this.field_g, -1);
-        fh.field_g.c(var4, 1 + this.field_f.field_h + 1, -2 + (this.field_f.field_b + this.field_b), this.field_g, -1);
-        fh.field_g.c(var4, this.field_f.field_h + 1, -1 + this.field_b + (this.field_f.field_b - 2), this.field_g, -1);
-        fh.field_g.c(var4, 1 + this.field_f.field_h, -1 + (this.field_b + this.field_f.field_b), this.field_g, -1);
-        fh.field_g.c(var4, 1 + this.field_f.field_h, -2 + (this.field_b + this.field_f.field_b), this.field_c, -1);
+        fh.field_g.drawCentered(var4, 1 + (this.field_f.field_h - 1), -2 + this.field_f.field_b + this.field_b, this.field_g, -1);
+        fh.field_g.drawCentered(var4, 1 + this.field_f.field_h + 1, -2 + (this.field_f.field_b + this.field_b), this.field_g, -1);
+        fh.field_g.drawCentered(var4, this.field_f.field_h + 1, -1 + this.field_b + (this.field_f.field_b - 2), this.field_g, -1);
+        fh.field_g.drawCentered(var4, 1 + this.field_f.field_h, -1 + (this.field_b + this.field_f.field_b), this.field_g, -1);
+        fh.field_g.drawCentered(var4, 1 + this.field_f.field_h, -2 + (this.field_b + this.field_f.field_b), this.field_c, -1);
     }
 
     private final int a(boolean param0, int param1, int param2) {
@@ -205,9 +205,9 @@ final class qe {
 
     public static void releaseStatics(int guard) {
         if (guard != 0) {
-          field_a = (byte[][]) null;
+          spriteIndices = (byte[][]) null;
         }
-        field_a = (byte[][]) null;
+        spriteIndices = (byte[][]) null;
     }
 
     final static int a(int[] param0, int param1, boolean param2, int[] param3) {
@@ -360,12 +360,12 @@ final class qe {
 
     final static void a(boolean param0) {
         if (!param0) {
-          field_a = (byte[][]) null;
+          spriteIndices = (byte[][]) null;
         }
         rd.field_c.a(new l(), 30);
     }
 
-    qe(int param0, int[] param1, int param2, int[] param3, int[] param4, int param5, int param6, ih param7) {
+    qe(int param0, int[] param1, int param2, int[] param3, int[] param4, int param5, int param6, BinaryBitmapFont param7) {
         try {
           this.field_d = param0;
           this.a(param1, (byte) 121);

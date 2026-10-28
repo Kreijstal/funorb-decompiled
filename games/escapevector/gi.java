@@ -13,7 +13,7 @@ final class gi {
     private int field_m;
     private String field_j;
     private boolean field_g;
-    static int[] field_e;
+    static int[] spriteOffsetYs;
     int field_f;
     static int field_l;
 
@@ -113,13 +113,13 @@ final class gi {
         }
     }
 
-    final static int a(byte param0, ih param1) {
+    final static int a(byte param0, BinaryBitmapFont param1) {
         String stackIn_8_2 = null;
         try {
           int var2_int = co.a(param1, (byte) -127);
           String var3 = ReflectionCheck.repeatChar(param0 ^ 16, (char) var2_int, 20);
           if (param0 == -96) {
-            int stackIn_4_0 = param1.b(var3);
+            int stackIn_4_0 = param1.stringWidth(var3);
             return stackIn_4_0;
           }
           int stackIn_2_0 = 21;
@@ -144,7 +144,7 @@ final class gi {
           return;
         }
         field_i = null;
-        field_e = null;
+        spriteOffsetYs = null;
     }
 
     final static void a(byte param0) {
@@ -169,7 +169,7 @@ final class gi {
         this.field_g = DualLinkDequeIterator.field_c;
         this.field_h = ProxyAuthenticationException.field_a;
         this.field_f = IntKeyLookup.field_d;
-        this.field_m = ve.field_g;
+        this.field_m = MarkerSliderPainter.field_g;
         this.field_n = SelfDestructEffects.field_d;
         this.field_a = DualLinkNode.field_o;
         this.field_b = TextFieldValidator.field_e;

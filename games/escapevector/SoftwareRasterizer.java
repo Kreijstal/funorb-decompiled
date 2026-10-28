@@ -3,7 +3,7 @@
  */
 final class SoftwareRasterizer {
     static int height;
-    static int[] field_c;
+    static int[] maskStarts;
     static int clipBottom;
     private static int[] field_h;
     static int clipRight;
@@ -11,7 +11,7 @@ final class SoftwareRasterizer {
     static int clipTop;
     static int width;
     static int clipLeft;
-    static int[] field_f;
+    static int[] maskWidths;
     private static int[] field_e;
     static int[] pixels;
 
@@ -320,8 +320,8 @@ final class SoftwareRasterizer {
     }
 
     private final static void b() {
-        field_c = null;
-        field_f = null;
+        maskStarts = null;
+        maskWidths = null;
     }
 
     final static void h(int param0, int param1, int param2, int param3) {
@@ -1172,8 +1172,8 @@ final class SoftwareRasterizer {
 
     public static void releaseStatics() {
         pixels = null;
-        field_c = null;
-        field_f = null;
+        maskStarts = null;
+        maskWidths = null;
         field_h = null;
         field_e = null;
         field_g = null;

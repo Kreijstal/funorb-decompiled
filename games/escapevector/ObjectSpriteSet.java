@@ -260,11 +260,11 @@ final class ObjectSpriteSet {
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
-          this.field_a = new Sprite[sc.field_h.length];
-          this.field_f = new Sprite[sc.field_h.length];
-          this.field_g = new SpriteOffset[sc.field_h.length];
+          this.field_a = new Sprite[DialWidgetPainter.field_h.length];
+          this.field_f = new Sprite[DialWidgetPainter.field_h.length];
+          this.field_g = new SpriteOffset[DialWidgetPainter.field_h.length];
           for (int var4_int = 0; this.field_a.length > var4_int; var4_int++) {
-            int var5 = sc.field_h[var4_int];
+            int var5 = DialWidgetPainter.field_h[var4_int];
             this.field_a[var4_int] = this.a(param0, -67, var5);
             this.field_f[var4_int] = this.a(param1, -53, var5);
             SpriteOffset var6 = this.a(param1, -1, param0, param2);

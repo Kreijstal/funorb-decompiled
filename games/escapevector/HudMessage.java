@@ -23,7 +23,7 @@ final class HudMessage extends IntrusiveNode {
           if (TextLayout.field_c == null) {
             return false;
           }
-          if (al.field_d == ck.field_t) {
+          if (al.field_d == ThreeSliceButtonPainter.field_t) {
             return true;
           }
           return false;
@@ -31,30 +31,30 @@ final class HudMessage extends IntrusiveNode {
         if (TextLayout.field_c == null) {
           return false;
         }
-        if (al.field_d == ck.field_t) {
+        if (al.field_d == ThreeSliceButtonPainter.field_t) {
           return true;
         }
         return false;
     }
 
-    final static void a(dk[] param0, int param1, int param2, byte param3) {
+    final static void a(LegacyButton[] param0, int param1, int param2, byte param3) {
         String stackIn_21_2 = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
           if (param0 == null) {
             return;
           }
-          dk[] var11 = param0;
-          dk[] var4 = var11;
+          LegacyButton[] var11 = param0;
+          LegacyButton[] var4 = var11;
           for (int var5 = 0; var11.length > var5; var5++) {
-            dk var6 = var11[var5];
+            LegacyButton var6 = var11[var5];
             if (var6 != null) {
-              int var7 = var6.field_c;
+              int var7 = var6.actionId;
               boolean stackIn_9_0 = !(param2 != var7);
               boolean var8 = stackIn_9_0;
               boolean stackIn_12_0 = !(var7 != param1);
               boolean var9 = stackIn_12_0;
-              var6.a((var8), (var9), (byte) 81);
+              var6.drawState((var8), (var9), (byte) 81);
             }
           }
           if (param3 > -5) {

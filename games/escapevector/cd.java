@@ -24,27 +24,27 @@ class cd extends DualLinkNode {
         field_u = null;
     }
 
-    final static tk a(int param0, String param1) {
+    final static EmailValidationError a(int param0, String param1) {
         String stackIn_18_2 = null;
         try {
           if (param1 != null &&
             param1.length() != 0) {
             int var2_int = param1.indexOf('@');
             if (param0 == var2_int) {
-              tk stackIn_8_0 = ResourceArchive.field_d;
+              EmailValidationError stackIn_8_0 = ResourceArchive.field_d;
               return stackIn_8_0;
             }
             String var3 = param1.substring(0, var2_int);
             String var4 = param1.substring(1 + var2_int);
-            tk var5 = sf.a(var3, (byte) 119);
+            EmailValidationError var5 = sf.a(var3, (byte) 119);
             if (var5 != null) {
-              tk stackIn_12_0 = var5;
+              EmailValidationError stackIn_12_0 = var5;
               return stackIn_12_0;
             }
-            tk stackIn_14_0 = ClientException.a(var4, ~param0);
+            EmailValidationError stackIn_14_0 = ClientException.a(var4, ~param0);
             return stackIn_14_0;
           }
-          tk stackIn_4_0 = ig.field_g;
+          EmailValidationError stackIn_4_0 = ig.field_g;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

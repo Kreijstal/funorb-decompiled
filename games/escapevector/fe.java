@@ -42,23 +42,23 @@ final class fe {
           var3Lifetime1 += 91;
         }
         this.b(-122);
-        if (null != ck.field_x &&
-          ck.field_x.ensureIndex(0) &&
-          ck.field_x.tryLoadNamedGroup(0, "members_expansion_screen") &&
-          ck.field_x.tryLoadNamedGroup(0, "arialish12") &&
-          ck.field_x.tryLoadNamedGroup(0, "pump32") &&
+        if (null != ThreeSliceButtonPainter.field_x &&
+          ThreeSliceButtonPainter.field_x.ensureIndex(0) &&
+          ThreeSliceButtonPainter.field_x.tryLoadNamedGroup(0, "members_expansion_screen") &&
+          ThreeSliceButtonPainter.field_x.tryLoadNamedGroup(0, "arialish12") &&
+          ThreeSliceButtonPainter.field_x.tryLoadNamedGroup(0, "pump32") &&
           pc.field_e != null &&
           pc.field_e.ensureIndex(0) &&
           pc.field_e.tryLoadNamedGroup(0, "arialish12") &&
           pc.field_e.tryLoadNamedGroup(0, "pump32")) {
-          TriangleMesh.field_z = AccountRegistrationPanel.a(ck.field_x, 54, "frame", "members_expansion_screen");
-          ml.field_c = fe.a("members_expansion_screen", ck.field_x, "arrow", true);
-          ac.field_c = oi.a(4, pc.field_e, "arialish12", "", ck.field_x);
-          ReflectionCheck.field_h = ac.a("", -73, ck.field_x, "pump32", pc.field_e);
-          IntrusiveDequeCursor.field_e = p.a((byte) 8, "benefit_orbs", ck.field_x, "members_expansion_screen");
-          ee.field_c = p.a((byte) 8, "button_text", ck.field_x, "members_expansion_screen");
-          QuickChatDynamicCommand.field_a = ui.a("button_highlights", ck.field_x, "members_expansion_screen", (byte) 71);
-          ck.field_x = null;
+          TriangleMesh.field_z = AccountRegistrationPanel.a(ThreeSliceButtonPainter.field_x, 54, "frame", "members_expansion_screen");
+          ml.field_c = fe.a("members_expansion_screen", ThreeSliceButtonPainter.field_x, "arrow", true);
+          ac.field_c = oi.a(4, pc.field_e, "arialish12", "", ThreeSliceButtonPainter.field_x);
+          ReflectionCheck.field_h = ac.a("", -73, ThreeSliceButtonPainter.field_x, "pump32", pc.field_e);
+          IntrusiveDequeCursor.field_e = p.a((byte) 8, "benefit_orbs", ThreeSliceButtonPainter.field_x, "members_expansion_screen");
+          LoginMethod.field_c = p.a((byte) 8, "button_text", ThreeSliceButtonPainter.field_x, "members_expansion_screen");
+          QuickChatDynamicCommand.field_a = ui.a("button_highlights", ThreeSliceButtonPainter.field_x, "members_expansion_screen", (byte) 71);
+          ThreeSliceButtonPainter.field_x = null;
           pc.field_e = null;
         }
         this.b((byte) 87);
@@ -94,12 +94,12 @@ final class fe {
           }
         }
         this.field_c.e(16, 302);
-        ac.field_c.a(this.field_d[this.field_i], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+        ac.field_c.drawParagraph(this.field_d[this.field_i], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
         IntrusiveDequeCursor.field_e.e(30, 330);
-        ac.field_c.a(MatchingTextValidator.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        ac.field_c.a(MatchingTextValidator.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        ac.field_c.a(MatchingTextValidator.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        ee.field_c.e(508 + (127 - ee.field_c.fullWidth) / 2, 315);
+        ac.field_c.drawParagraph(MatchingTextValidator.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        ac.field_c.drawParagraph(MatchingTextValidator.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        ac.field_c.drawParagraph(MatchingTextValidator.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        LoginMethod.field_c.e(508 + (127 - LoginMethod.field_c.fullWidth) / 2, 315);
         if (this.field_a.field_h == 0) {
           QuickChatDynamicCommand.field_a[0].e(508, 299);
         } else if (this.field_a.field_h == 1) {
@@ -283,7 +283,7 @@ final class fe {
           if (ac.field_c == null) {
             return;
           }
-          ac.field_c.a(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+          ac.field_c.drawParagraph(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           return;
         }
         IndexedSprite var6 = this.field_b[this.field_i];
@@ -291,7 +291,7 @@ final class fe {
         if (var2 != null) {
           var6.draw(9, 58);
         } else if (null != ac.field_c) {
-          ac.field_c.a(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+          ac.field_c.drawParagraph(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
         }
         if (param0 > -109) {
           return;
@@ -395,7 +395,7 @@ final class fe {
           this.a(ReflectionCheck.field_h, 0, 0, 47, 622, 0, this.field_f, var17);
           dl.a((byte) 107);
           this.field_c = new Sprite(475, 24);
-          this.a(0, ReflectionCheck.field_h, fd.field_d, 24, 0, this.field_c, -4, 0.75f, var17, 475);
+          this.a(0, ReflectionCheck.field_h, NineSliceFrame.field_d, 24, 0, this.field_c, -4, 0.75f, var17, 475);
           int[] var18 = ug.a(1746055568, 526344, 526344);
           Sprite var5 = new Sprite(121, 122);
           eo.a(var5, (byte) -40);
@@ -409,7 +409,7 @@ final class fe {
           String var7 = mh.field_b;
           this.a(0, ReflectionCheck.field_h, var6, var5.height, 0, var5, -16, 0.5f, var18, var5.width);
           this.a(0, ReflectionCheck.field_h, var7, var5.height, 0, var5, 20, 0.5f, var18, var5.width);
-          this.a(0, ReflectionCheck.field_h, p.field_f[this.field_o], var5.height / 3, 0, var5, -ReflectionCheck.field_h.field_r + (var5.height / 2 + 12), 0.699999988079071f, var18, var5.width);
+          this.a(0, ReflectionCheck.field_h, p.field_f[this.field_o], var5.height / 3, 0, var5, -ReflectionCheck.field_h.maxAscent + (var5.height / 2 + 12), 0.699999988079071f, var18, var5.width);
           dl.a((byte) -54);
           this.field_h = new Sprite(121, 122);
           eo.a(this.field_h, (byte) -104);
@@ -427,7 +427,7 @@ final class fe {
             SoftwareRasterizer.setClip(param5, var9_int, param4, 1 + var9_int);
             int var10 = var9_int * param7.length / param3;
             int var11 = param7[param7.length + (-var10 - 1)];
-            param0.a(param6, param5, param1, param4, param3, var11, -1, 1, 1, 0);
+            param0.drawParagraph(param6, param5, param1, param4, param3, var11, -1, 1, 1, 0);
           }
           if (param2 != 0) {
             this.field_d = (String[]) null;
@@ -453,7 +453,7 @@ final class fe {
         fc.a(3161);
         int var1 = -82 % ((param0 + 5) / 57);
         DraggableWidget.field_F = true;
-        eb.field_H = true;
+        DialWidget.field_H = true;
         bo.field_F.l(17415);
         uf.a((byte) 119, DualLinkNode.field_h, false);
     }

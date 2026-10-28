@@ -362,8 +362,8 @@ final class LevelObject extends IntrusiveNode {
         try {
           try {
             if (EmailSyntaxValidator.a(param0, -2)) {
-              DialogueScreen var2 = new DialogueScreen(SeekerMine.field_n, ae.field_c, qh.field_j, true);
-              re.a(1820, var2);
+              DialogueScreen var2 = new DialogueScreen(SeekerMine.field_n, SpriteCheckboxPainter.field_c, qh.field_j, true);
+              GradientOutlineTextPainter.enqueueDialogue(1820, var2);
             }
             if (param1 >= -69) {
               return;
@@ -372,9 +372,9 @@ final class LevelObject extends IntrusiveNode {
               String var2_ref = "vengeance_intro";
               String var3 = "scene";
               Sprite[] var4 = tm.field_cb;
-              String[] var5 = me.field_o;
+              String[] var5 = LegacyMenuColumn.field_o;
               DialogueScreen var6 = new DialogueScreen(var2_ref, var3, var4, var5, true);
-              re.a(1820, var6);
+              GradientOutlineTextPainter.enqueueDialogue(1820, var6);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -462,7 +462,7 @@ final class LevelObject extends IntrusiveNode {
                         fillRow++;
                       }
                     }
-                    tileRows[rowY] = ae.a(tileRows[rowY], ~(1 << bitColumn));
+                    tileRows[rowY] = SpriteCheckboxPainter.bitwiseAnd(tileRows[rowY], ~(1 << bitColumn));
                   }
                 }
                 sourcePixelIndex++;

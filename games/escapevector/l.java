@@ -12,7 +12,7 @@ final class l extends UiContainer implements ButtonListener {
         this.field_I = new TextButton(pc.field_g, (UiListener) null);
         this.field_G = new TextButton(CipherPacketBuffer.field_p, (UiListener) null);
         this.field_J = new TextButton(cj.field_c, (UiListener) null);
-        ck var1 = new ck();
+        ThreeSliceButtonPainter var1 = new ThreeSliceButtonPainter();
         this.field_I.painter = (WidgetPainter) ((Object) var1);
         this.field_G.painter = (WidgetPainter) ((Object) var1);
         this.field_J.painter = (WidgetPainter) ((Object) var1);
@@ -36,14 +36,14 @@ final class l extends UiContainer implements ButtonListener {
         if (guard > 85) {
           int var5 = this.x + screenX;
           int var6 = screenY + this.y;
-          Js5Transport.field_a.a(q.field_F, var5 + 20, var6 + 20, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
+          Js5Transport.field_a.drawParagraph(MarkerSlider.field_F, var5 + 20, var6 + 20, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Js5Transport.field_a.maxAscent);
           super.drawLayer(screenY, (byte) 99, layer, screenX);
           return;
         }
         this.field_J = (TextButton) null;
         int var5Lifetime1 = this.x + screenX;
         int var6Lifetime1 = screenY + this.y;
-        Js5Transport.field_a.a(q.field_F, var5Lifetime1 + 20, var6Lifetime1 + 20, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
+        Js5Transport.field_a.drawParagraph(MarkerSlider.field_F, var5Lifetime1 + 20, var6Lifetime1 + 20, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Js5Transport.field_a.maxAscent);
         super.drawLayer(screenY, (byte) 99, layer, screenX);
     }
 

@@ -26,8 +26,8 @@ final class p {
 
     final boolean a(int param0) {
         if (null == this.field_g) {
-          Sprite[] var2 = tk.a(false, kc.field_c);
-          Sprite[] var3 = tk.a(false, HudMessage.field_k);
+          Sprite[] var2 = EmailValidationError.a(false, kc.field_c);
+          Sprite[] var3 = EmailValidationError.a(false, HudMessage.field_k);
           if (var2 != null &&
             var3 != null) {
             this.field_g = this.a((byte) -28, var2, var3);
@@ -37,7 +37,7 @@ final class p {
           this.a(-100);
         }
         if (null == this.field_d) {
-          this.field_d = tk.field_b.b(-100);
+          this.field_d = EmailValidationError.field_b.b(-100);
         }
         if (null == this.field_g) {
           return false;

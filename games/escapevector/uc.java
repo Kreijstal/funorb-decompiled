@@ -11,14 +11,14 @@ final class uc {
     static BufferedRandomAccessFile field_h;
     private qk[] field_c;
 
-    final static int a(int param0, ih param1) {
+    final static int a(int param0, BinaryBitmapFont param1) {
         String stackIn_7_2 = null;
         try {
           if (param0 != -1) {
-            ih var3 = (ih) null;
-            uc.a(88, (ih) null);
+            BinaryBitmapFont var3 = (BinaryBitmapFont) null;
+            uc.a(88, (BinaryBitmapFont) null);
           }
-          int stackIn_3_0 = param1.field_r;
+          int stackIn_3_0 = param1.maxAscent;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class uc {
           if (var6 == null) {
             return false;
           }
-          eb.a(var6, true);
+          DialWidget.decodeSpriteSheet(var6, true);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

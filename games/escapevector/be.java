@@ -28,7 +28,7 @@ final class be {
           }
           IntrusiveNode var2 = SpriteState.field_w.first(false);
           while (var2 != null) {
-            q.c(param0, (byte) -63);
+            MarkerSlider.writeSavedDataQuery(param0, (byte) -63);
             var2 = SpriteState.field_w.next((byte) 70);
           }
           return;

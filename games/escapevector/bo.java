@@ -89,7 +89,7 @@ final class bo extends TextButton {
     final static void a(java.awt.Canvas param0, byte param1) {
         String stackIn_6_2 = null;
         try {
-          sc.a((byte) -58, (java.awt.Component) ((Object) param0));
+          DialWidgetPainter.detachKeyboardInput((byte) -58, (java.awt.Component) ((Object) param0));
           int var2_int = 120 / ((param1 - 54) / 57);
           SelfDestructEffects.a((java.awt.Component) ((Object) param0), (byte) 9);
           if (null == ji.field_b) {

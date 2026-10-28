@@ -6,7 +6,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     private java.awt.Component delegate;
     static String field_e;
     static int[] field_d;
-    static int field_c;
+    static int spriteSheetHeight;
 
     public static void releaseStatics(int guard) {
         int var1 = 26 / ((guard - 55) / 60);

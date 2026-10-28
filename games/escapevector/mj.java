@@ -112,11 +112,11 @@ final class mj {
                   lf.field_K[var8] = QuickChatDynamicCommand.incomingPackets.readByte(false);
                 }
               }
-              ck.field_r = QuickChatDynamicCommand.incomingPackets.readString(false);
-              CharSequence var11 = (CharSequence) ((Object) ck.field_r);
+              ThreeSliceButtonPainter.field_r = QuickChatDynamicCommand.incomingPackets.readString(false);
+              CharSequence var11 = (CharSequence) ((Object) ThreeSliceButtonPainter.field_r);
               ProgressRecord.field_k = sf.a(-83, var11);
               LaserGateSpan.field_g = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(param0 - 1);
-              al.field_d = ck.field_t;
+              al.field_d = ThreeSliceButtonPainter.field_t;
               if (ArchiveIndex.field_m.a((byte) 32) == md.field_E) {
                 NameAvailabilityValidator.field_q.a(27002, PointCloudEffect.d((byte) -114));
               } else if (ArchiveIndex.field_m.a((byte) 32) == ja.field_a) {

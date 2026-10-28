@@ -140,15 +140,15 @@ final class jd {
           id.field_b[bm.field_c] = null;
           return var2_ref_byte__Lifetime2;
         }
-        if (ve.field_n != null) {
+        if (MarkerSliderPainter.field_n != null) {
           for (int var2 = 0; var2 < HudMessage.field_h.length; var2++) {
             if (HudMessage.field_h[var2] == param0 &&
               0 < nb.field_b[var2]) {
               int dupTemp$6 = nb.field_b[var2] - 1;
-              byte[][] arrayValue$7 = ve.field_n[var2];
+              byte[][] arrayValue$7 = MarkerSliderPainter.field_n[var2];
               nb.field_b[var2] = dupTemp$6;
               byte[] var3 = arrayValue$7[dupTemp$6];
-              ve.field_n[var2][nb.field_b[var2]] = null;
+              MarkerSliderPainter.field_n[var2][nb.field_b[var2]] = null;
               return var3;
             }
           }
@@ -168,7 +168,7 @@ final class jd {
         return new sn(DualLinkNode.e(0), uf.c(62));
     }
 
-    final static int a(ih param0, byte param1, String[] param2) {
+    final static int a(BinaryBitmapFont param0, byte param1, String[] param2) {
         String stackIn_12_2 = null;
         String stackIn_15_2 = null;
         int var7 = EscapeVector.obfuscationControl;

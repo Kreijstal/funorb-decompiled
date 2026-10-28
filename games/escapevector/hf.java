@@ -13,7 +13,7 @@ final class hf {
         }
         var1.a(SoftwareRasterizer.clipBottom, (byte) 29, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipLeft, SoftwareRasterizer.height, SoftwareRasterizer.pixels, SoftwareRasterizer.width);
         int var2 = 28 % ((param0 + 72) / 49);
-        re.field_q.addLast(-12328, var1);
+        GradientOutlineTextPainter.field_q.addLast(-12328, var1);
     }
 
     final static String b(byte param0) {
@@ -50,7 +50,7 @@ final class hf {
         if (param0 < 62) {
           return false;
         }
-        boolean stackIn_8_0 = (this == mc.field_b) || (ClientException.field_c == this) || (this == ck.field_t);
+        boolean stackIn_8_0 = (this == mc.field_b) || (ClientException.field_c == this) || (this == ThreeSliceButtonPainter.field_t);
         return stackIn_8_0;
     }
 
@@ -123,15 +123,15 @@ final class hf {
         if (param0 < 63) {
           field_c = -0.8853374871854307;
         }
-        Sprite[] var1 = new Sprite[qk.field_j];
-        for (int var2 = 0; var2 < qk.field_j; var2++) {
-          int var3 = bc.field_a[var2] * qh.field_k[var2];
-          byte[] var4 = qe.field_a[var2];
+        Sprite[] var1 = new Sprite[qk.spriteCount];
+        for (int var2 = 0; var2 < qk.spriteCount; var2++) {
+          int var3 = bc.spriteHeights[var2] * qh.spriteWidths[var2];
+          byte[] var4 = qe.spriteIndices[var2];
           int[] var5 = new int[var3];
           for (int var6 = 0; var6 < var3; var6++) {
-            var5[var6] = qk.field_f[ae.a((int) var4[var6], 255)];
+            var5[var6] = qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[var2], gi.field_e[var2], qh.field_k[var2], bc.field_a[var2], var5);
+          var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], gi.spriteOffsetYs[var2], qh.spriteWidths[var2], bc.spriteHeights[var2], var5);
         }
         of.a(false);
         return var1;

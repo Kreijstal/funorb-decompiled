@@ -21,7 +21,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         }
         BitmapFont var5 = Js5Transport.field_a;
         if (this.field_M != null) {
-          var5.a(UiComponent.field_m, screenX + this.x, screenY + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_r + var5.field_x);
+          var5.drawParagraph(UiComponent.field_m, screenX + this.x, screenY + this.y, this.width, 20, 16777215, -1, 0, 0, var5.maxAscent + var5.maxDescent);
         }
     }
 

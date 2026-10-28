@@ -41,7 +41,7 @@ final class qc extends pn implements ButtonListener {
         String stackIn_13_2 = null;
         try {
           if (this.field_zb) {
-            ve.a(122, false, true);
+            MarkerSliderPainter.a(122, false, true);
             return;
           }
           DebouncedValidator.b((byte) -51);
@@ -478,67 +478,67 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime99 = ki.a("simulatorLevelNames,0", 10592);
           if (var2Lifetime99 != null) {
-            ck.field_u[0] = RasterSnapshot.a(var2Lifetime99, 112);
+            ThreeSliceButtonPainter.field_u[0] = RasterSnapshot.a(var2Lifetime99, 112);
           }
           byte[] var2Lifetime100 = ki.a("simulatorLevelNames,1", 10592);
           if (var2Lifetime100 != null) {
-            ck.field_u[1] = RasterSnapshot.a(var2Lifetime100, param0 + 114);
+            ThreeSliceButtonPainter.field_u[1] = RasterSnapshot.a(var2Lifetime100, param0 + 114);
           }
           byte[] var2Lifetime101 = ki.a("simulatorLevelNames,2", 10592);
           if (var2Lifetime101 != null) {
-            ck.field_u[2] = RasterSnapshot.a(var2Lifetime101, 114);
+            ThreeSliceButtonPainter.field_u[2] = RasterSnapshot.a(var2Lifetime101, 114);
           }
           byte[] var2Lifetime102 = ki.a("simulatorLevelNames,3", param0 + 10584);
           if (var2Lifetime102 != null) {
-            ck.field_u[3] = RasterSnapshot.a(var2Lifetime102, 112);
+            ThreeSliceButtonPainter.field_u[3] = RasterSnapshot.a(var2Lifetime102, 112);
           }
           byte[] var2Lifetime103 = ki.a("simulatorLevelNames,4", 10592);
           if (null != var2Lifetime103) {
-            ck.field_u[4] = RasterSnapshot.a(var2Lifetime103, 125);
+            ThreeSliceButtonPainter.field_u[4] = RasterSnapshot.a(var2Lifetime103, 125);
           }
           byte[] var2Lifetime104 = ki.a("simulatorLevelNames,5", 10592);
           if (null != var2Lifetime104) {
-            ck.field_u[5] = RasterSnapshot.a(var2Lifetime104, 115);
+            ThreeSliceButtonPainter.field_u[5] = RasterSnapshot.a(var2Lifetime104, 115);
           }
           byte[] var2Lifetime105 = ki.a("simulatorLevelNames,6", 10592);
           if (null != var2Lifetime105) {
-            ck.field_u[6] = RasterSnapshot.a(var2Lifetime105, 114);
+            ThreeSliceButtonPainter.field_u[6] = RasterSnapshot.a(var2Lifetime105, 114);
           }
           byte[] var2Lifetime106 = ki.a("simulatorLevelNames,7", 10592);
           if (var2Lifetime106 != null) {
-            ck.field_u[7] = RasterSnapshot.a(var2Lifetime106, 121);
+            ThreeSliceButtonPainter.field_u[7] = RasterSnapshot.a(var2Lifetime106, 121);
           }
           byte[] var2Lifetime107 = ki.a("simulatorLevelNames,8", 10592);
           if (var2Lifetime107 != null) {
-            ck.field_u[8] = RasterSnapshot.a(var2Lifetime107, 125);
+            ThreeSliceButtonPainter.field_u[8] = RasterSnapshot.a(var2Lifetime107, 125);
           }
           byte[] var2Lifetime108 = ki.a("simulatorLevelNames,9", 10592);
           if (null != var2Lifetime108) {
-            ck.field_u[9] = RasterSnapshot.a(var2Lifetime108, PacketBuffer.xor(param0, 114));
+            ThreeSliceButtonPainter.field_u[9] = RasterSnapshot.a(var2Lifetime108, PacketBuffer.xor(param0, 114));
           }
           byte[] var2Lifetime109 = ki.a("simulatorLevelNames,10", 10592);
           if (var2Lifetime109 != null) {
-            ck.field_u[10] = RasterSnapshot.a(var2Lifetime109, 114);
+            ThreeSliceButtonPainter.field_u[10] = RasterSnapshot.a(var2Lifetime109, 114);
           }
           byte[] var2Lifetime110 = ki.a("simulatorLevelNames,11", 10592);
           if (null != var2Lifetime110) {
-            ck.field_u[11] = RasterSnapshot.a(var2Lifetime110, PacketBuffer.xor(param0, 117));
+            ThreeSliceButtonPainter.field_u[11] = RasterSnapshot.a(var2Lifetime110, PacketBuffer.xor(param0, 117));
           }
           byte[] var2Lifetime111 = ki.a("simulatorLevelNames,12", param0 ^ 10600);
           if (null != var2Lifetime111) {
-            ck.field_u[12] = RasterSnapshot.a(var2Lifetime111, 124);
+            ThreeSliceButtonPainter.field_u[12] = RasterSnapshot.a(var2Lifetime111, 124);
           }
           byte[] var2Lifetime112 = ki.a("simulatorLevelNames,13", 10592);
           if (var2Lifetime112 != null) {
-            ck.field_u[13] = RasterSnapshot.a(var2Lifetime112, 117);
+            ThreeSliceButtonPainter.field_u[13] = RasterSnapshot.a(var2Lifetime112, 117);
           }
           byte[] var2Lifetime113 = ki.a("simulatorLevelNames,14", 10592);
           if (var2Lifetime113 != null) {
-            ck.field_u[14] = RasterSnapshot.a(var2Lifetime113, 125);
+            ThreeSliceButtonPainter.field_u[14] = RasterSnapshot.a(var2Lifetime113, 125);
           }
           byte[] var2Lifetime114 = ki.a("simulatorLevelNames,15", param0 + 10584);
           if (null != var2Lifetime114) {
-            ck.field_u[15] = RasterSnapshot.a(var2Lifetime114, param0 + 119);
+            ThreeSliceButtonPainter.field_u[15] = RasterSnapshot.a(var2Lifetime114, param0 + 119);
           }
           byte[] var2Lifetime115 = ki.a("leftarrow", 10592);
           if (null != var2Lifetime115) {
@@ -578,7 +578,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime124 = ki.a("keycode_rockbuster", param0 ^ 10600);
           if (var2Lifetime124 != null) {
-            jl.field_a = 255 & var2Lifetime124[0];
+            LegacyTextBlock.field_a = 255 & var2Lifetime124[0];
           }
           byte[] var2Lifetime125 = ki.a("rotateshipleft", 10592);
           if (var2Lifetime125 != null) {
@@ -638,7 +638,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime139 = ki.a("title_objective_retribution", 10592);
           if (var2Lifetime139 != null) {
-            gl.field_s = RasterSnapshot.a(var2Lifetime139, 127);
+            PairedTextColumns.field_s = RasterSnapshot.a(var2Lifetime139, 127);
           }
           byte[] var2Lifetime140 = ki.a("title_objective_simulator", param0 ^ 10600);
           if (var2Lifetime140 != null) {
@@ -670,7 +670,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime147 = ki.a("objective_infrastructure", 10592);
           if (var2Lifetime147 != null) {
-            gl.field_r = RasterSnapshot.a(var2Lifetime147, param0 ^ 116);
+            PairedTextColumns.field_r = RasterSnapshot.a(var2Lifetime147, param0 ^ 116);
           }
           byte[] var2Lifetime148 = ki.a("objective_crate", 10592);
           if (null != var2Lifetime148) {
@@ -722,7 +722,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime160 = ki.a("tetherwillnotreach", param0 + 10584);
           if (var2Lifetime160 != null) {
-            fd.field_e = RasterSnapshot.a(var2Lifetime160, param0 + 112);
+            NineSliceFrame.field_e = RasterSnapshot.a(var2Lifetime160, param0 + 112);
           }
           byte[] var2Lifetime161 = ki.a("shieldrecharged", 10592);
           if (var2Lifetime161 != null) {
@@ -794,7 +794,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime178 = ki.a("restartinglevel", 10592);
           if (var2Lifetime178 != null) {
-            jl.field_c = RasterSnapshot.a(var2Lifetime178, 126);
+            LegacyTextBlock.field_c = RasterSnapshot.a(var2Lifetime178, 126);
           }
           byte[] var2Lifetime179 = ki.a("autoshield_off", 10592);
           if (var2Lifetime179 != null) {
@@ -1026,23 +1026,23 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime236 = ki.a("vengeanceIntroMessage,0", 10592);
           if (null != var2Lifetime236) {
-            me.field_o[0] = RasterSnapshot.a(var2Lifetime236, 125);
+            LegacyMenuColumn.field_o[0] = RasterSnapshot.a(var2Lifetime236, 125);
           }
           byte[] var2Lifetime237 = ki.a("vengeanceIntroMessage,1", 10592);
           if (null != var2Lifetime237) {
-            me.field_o[1] = RasterSnapshot.a(var2Lifetime237, 115);
+            LegacyMenuColumn.field_o[1] = RasterSnapshot.a(var2Lifetime237, 115);
           }
           byte[] var2Lifetime238 = ki.a("vengeanceIntroMessage,2", param0 ^ 10600);
           if (null != var2Lifetime238) {
-            me.field_o[2] = RasterSnapshot.a(var2Lifetime238, PacketBuffer.xor(param0, 103));
+            LegacyMenuColumn.field_o[2] = RasterSnapshot.a(var2Lifetime238, PacketBuffer.xor(param0, 103));
           }
           byte[] var2Lifetime239 = ki.a("vengeanceIntroMessage,3", 10592);
           if (var2Lifetime239 != null) {
-            me.field_o[3] = RasterSnapshot.a(var2Lifetime239, 113);
+            LegacyMenuColumn.field_o[3] = RasterSnapshot.a(var2Lifetime239, 113);
           }
           byte[] var2Lifetime240 = ki.a("vengeanceIntroMessage,4", 10592);
           if (var2Lifetime240 != null) {
-            me.field_o[4] = RasterSnapshot.a(var2Lifetime240, 122);
+            LegacyMenuColumn.field_o[4] = RasterSnapshot.a(var2Lifetime240, 122);
           }
           byte[] var2Lifetime241 = ki.a("startGameMessage,0", 10592);
           if (null != var2Lifetime241) {
@@ -1054,15 +1054,15 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime243 = ki.a("firstDefencesMessage,0", 10592);
           if (null != var2Lifetime243) {
-            ae.field_e[0] = RasterSnapshot.a(var2Lifetime243, 124);
+            SpriteCheckboxPainter.field_e[0] = RasterSnapshot.a(var2Lifetime243, 124);
           }
           byte[] var2Lifetime244 = ki.a("firstDefencesMessage,1", 10592);
           if (var2Lifetime244 != null) {
-            ae.field_e[1] = RasterSnapshot.a(var2Lifetime244, param0 + 118);
+            SpriteCheckboxPainter.field_e[1] = RasterSnapshot.a(var2Lifetime244, param0 + 118);
           }
           byte[] var2Lifetime245 = ki.a("firstDefencesMessage,2", param0 ^ 10600);
           if (null != var2Lifetime245) {
-            ae.field_e[2] = RasterSnapshot.a(var2Lifetime245, param0 + 109);
+            SpriteCheckboxPainter.field_e[2] = RasterSnapshot.a(var2Lifetime245, param0 + 109);
           }
           byte[] var2Lifetime246 = ki.a("freeEndMessage,0", 10592);
           if (var2Lifetime246 != null) {
@@ -1086,11 +1086,11 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime251 = ki.a("icyMoonMessage,0", 10592);
           if (var2Lifetime251 != null) {
-            me.field_g[0] = RasterSnapshot.a(var2Lifetime251, param0 + 106);
+            LegacyMenuColumn.field_g[0] = RasterSnapshot.a(var2Lifetime251, param0 + 106);
           }
           byte[] var2Lifetime252 = ki.a("icyMoonMessage,1", param0 ^ 10600);
           if (var2Lifetime252 != null) {
-            me.field_g[1] = RasterSnapshot.a(var2Lifetime252, 125);
+            LegacyMenuColumn.field_g[1] = RasterSnapshot.a(var2Lifetime252, 125);
           }
           byte[] var2Lifetime253 = ki.a("alienWorldMessage,0", 10592);
           if (var2Lifetime253 != null) {
@@ -1238,7 +1238,7 @@ final class qc extends pn implements ButtonListener {
           }
           byte[] var2Lifetime289 = ki.a("targets", 10592);
           if (var2Lifetime289 != null) {
-            wd.field_q = RasterSnapshot.a(var2Lifetime289, 120);
+            SpriteLabelColumns.field_q = RasterSnapshot.a(var2Lifetime289, 120);
           }
           byte[] var2Lifetime290 = ki.a("collectables", 10592);
           if (null != var2Lifetime290) {
@@ -1311,7 +1311,7 @@ final class qc extends pn implements ButtonListener {
               var4 = param1.field_f;
               if (param1.field_g == 248) {
                 if (!param2) {
-                  jl.b(param0 + 4816);
+                  LegacyTextBlock.writeBrowserSessionMarker(param0 + 4816);
                 }
                 var4 = mj.field_a;
                 this.field_zb = true;

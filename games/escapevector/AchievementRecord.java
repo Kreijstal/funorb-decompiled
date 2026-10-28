@@ -75,10 +75,10 @@ final class AchievementRecord extends IntrusiveNode {
           var4 += 2;
         }
         if (!param1) {
-          return fd.field_f[var4];
+          return NineSliceFrame.field_f[var4];
         }
         var4++;
-        return fd.field_f[var4];
+        return NineSliceFrame.field_f[var4];
     }
 
     final static void a(boolean param0) {
@@ -87,7 +87,7 @@ final class AchievementRecord extends IntrusiveNode {
         dj.field_b = null;
         if (param0) {
           ei.field_i = false;
-          if (eb.field_H) {
+          if (DialWidget.field_H) {
             be.field_b.r(94);
             return;
           }
@@ -106,7 +106,7 @@ final class AchievementRecord extends IntrusiveNode {
         }
         field_n = (IntrusiveDeque) null;
         ei.field_i = false;
-        if (eb.field_H) {
+        if (DialWidget.field_H) {
           be.field_b.r(94);
         } else {
           var1 = LaserGateSpan.field_g;
@@ -150,9 +150,9 @@ final class AchievementRecord extends IntrusiveNode {
           var4 += 2;
         }
         if (!secondFlag) {
-          return fd.field_f[var4];
+          return NineSliceFrame.field_f[var4];
         }
         var4++;
-        return fd.field_f[var4];
+        return NineSliceFrame.field_f[var4];
     }
 }

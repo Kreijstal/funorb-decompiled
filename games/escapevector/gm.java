@@ -38,9 +38,9 @@ final class gm {
     final static boolean b(int param0) {
         if (param0 != 8192) {
           field_d = (String) null;
-          return eb.field_H;
+          return DialWidget.field_H;
         }
-        return eb.field_H;
+        return DialWidget.field_H;
     }
 
     public static void releaseStatics(int guard) {

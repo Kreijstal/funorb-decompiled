@@ -50,13 +50,13 @@ final class al {
 
     final static Sprite a(byte param0) {
         int var5 = EscapeVector.obfuscationControl;
-        int var1 = bc.field_a[0] * qh.field_k[0];
-        byte[] var2 = qe.field_a[0];
+        int var1 = bc.spriteHeights[0] * qh.spriteWidths[0];
+        byte[] var2 = qe.spriteIndices[0];
         int[] var3 = new int[var1];
         for (int var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = qk.field_f[ae.a((int) var2[var4_int], 255)];
+          var3[var4_int] = qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var3);
+        Sprite var4 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], bc.spriteHeights[0], var3);
         of.a(false);
         if (param0 < 98) {
           field_a = (int[]) null;

@@ -51,7 +51,7 @@ final class tm extends vg implements ButtonListener {
         }
         int var6 = 16777215;
         int var7 = 1;
-        ih var8 = fh.field_g;
+        BinaryBitmapFont var8 = fh.field_g;
         int[][] var18 = ValidatedTextWidget.field_U[param2];
         int var10 = je.a(false, param2);
         if (1 + param1 < var10) {
@@ -81,7 +81,7 @@ final class tm extends vg implements ButtonListener {
           if (AudioService.field_h == param1) {
             var3 = DialogueScreen.field_k;
           } else {
-            if (param1 == ck.field_A) {
+            if (param1 == ThreeSliceButtonPainter.field_A) {
               this.height = this.height + 10;
               var3 = ol.field_K;
               if (tb.a(false)) {
@@ -155,7 +155,7 @@ final class tm extends vg implements ButtonListener {
             var6 = (UiListener) null;
             discarded$1 = this.a(36, (String) null, (UiListener) null);
           }
-          var4.painter = (WidgetPainter) ((Object) new ck());
+          var4.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(-16 + this.width - 14, var5, 15, true, 30);

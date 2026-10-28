@@ -27,8 +27,8 @@ abstract class vg extends bb {
         if (param0 != -9878) {
           vg.l(-90);
         }
-        Boolean var1 = sc.field_g;
-        sc.field_g = null;
+        Boolean var1 = DialWidgetPainter.field_g;
+        DialWidgetPainter.field_g = null;
         return var1;
     }
 
@@ -44,7 +44,7 @@ abstract class vg extends bb {
         field_U = null;
     }
 
-    final static int a(dk[] param0, byte param1) {
+    final static int a(LegacyButton[] param0, byte param1) {
         String stackIn_17_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
@@ -53,11 +53,11 @@ abstract class vg extends bb {
             String var7 = (String) null;
             vg.a((String) null, (String) null, (byte) -76, (String) null);
           }
-          dk[] var3 = param0;
+          LegacyButton[] var3 = param0;
           for (int var4 = 0; var3.length > var4; var4++) {
-            dk var5 = var3[var4];
-            if (var5.field_l < var2_int) {
-              var2_int = var5.field_l;
+            LegacyButton var5 = var3[var4];
+            if (var5.y < var2_int) {
+              var2_int = var5.y;
             }
           }
           if (2147483647 != var2_int) {
@@ -148,8 +148,8 @@ abstract class vg extends bb {
           var8Lifetime1++;
         }
         ProgressRecord.field_j.e(-90 + (param1 + this.width), 10 + param0);
-        ee.a(5 + param1, -10 + this.width, true, nn.field_a, 35 + param0);
-        ee.a(param1, this.width, true, bn.field_d, param0 + this.height - 22);
+        LoginMethod.drawThreeSlice(5 + param1, -10 + this.width, true, nn.field_a, 35 + param0);
+        LoginMethod.drawThreeSlice(param1, this.width, true, bn.field_d, param0 + this.height - 22);
         int var5Lifetime2 = 169;
         int var4Lifetime2 = -79 + this.height;
         int var6Lifetime2 = 127;

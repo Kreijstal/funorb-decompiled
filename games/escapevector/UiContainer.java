@@ -4,7 +4,7 @@
 import java.util.*;
 
 class UiContainer extends UiComponent implements UiContainerMarker {
-    static boolean[] field_E;
+    static boolean[] spriteHasAlpha;
     static java.awt.Image field_z;
     static ResourceArchive field_B;
     static String field_D;
@@ -35,7 +35,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           field_F = (int[]) null;
         }
         field_B = null;
-        field_E = null;
+        spriteHasAlpha = null;
     }
 
     final boolean isFocused(int guard) {

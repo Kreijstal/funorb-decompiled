@@ -5,7 +5,7 @@ final class bc {
     static PcmSample field_c;
     static int[] field_g;
     static boolean field_e;
-    static int[] field_a;
+    static int[] spriteHeights;
     static int[] field_f;
     static IntrusiveDeque field_b;
     static boolean field_d;
@@ -15,7 +15,7 @@ final class bc {
           return;
         }
         field_c = null;
-        field_a = null;
+        spriteHeights = null;
         field_b = null;
         field_g = null;
         field_f = null;
@@ -25,7 +25,7 @@ final class bc {
         ei var2 = new ei();
         SpriteState.field_w.addLast(-12328, var2);
         if (param1 > 61) {
-          q.c(param0, (byte) -71);
+          MarkerSlider.writeSavedDataQuery(param0, (byte) -71);
           return var2;
         }
         return (ei) null;

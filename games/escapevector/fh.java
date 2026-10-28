@@ -10,7 +10,7 @@ abstract class fh {
     private static String[] field_b;
     private static String[] field_i;
     static String[][] field_c;
-    static ih field_g;
+    static BinaryBitmapFont field_g;
 
     public static void releaseStatics(byte guard) {
         field_i = null;

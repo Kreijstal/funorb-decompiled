@@ -39,10 +39,10 @@ final class jf extends UiContainer implements TextHotspotListener, ButtonListene
         try {
           this.field_G = param0;
           this.field_N = new TextButton(bm.field_d, (UiListener) null);
-          this.field_N.painter = (WidgetPainter) ((Object) new ck());
+          this.field_N.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           String var7 = SingleChildContainer.a(mh.field_c, -63, new String[]{this.k(-102), this.a((byte) 126)});
           int var3 = 20;
-          TextWidgetPainter var4 = new TextWidgetPainter(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.field_r, -1, 2147483647, true);
+          TextWidgetPainter var4 = new TextWidgetPainter(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.maxAscent, -1, 2147483647, true);
           this.field_L = new TextHotspotWidget(var7, var4);
           this.field_L.tooltip = "";
           this.field_L.setHotspotTooltip(TextFieldValidator.field_m, (byte) 102, 0);

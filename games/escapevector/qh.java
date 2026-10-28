@@ -6,7 +6,7 @@ final class qh {
     static String field_e;
     static int field_m;
     private boolean field_b;
-    static int[] field_k;
+    static int[] spriteWidths;
     static Sprite field_l;
     static String[] field_j;
     private int field_f;
@@ -115,7 +115,7 @@ final class qh {
         }
         field_j = null;
         field_i = null;
-        field_k = null;
+        spriteWidths = null;
         field_e = null;
         field_l = null;
     }

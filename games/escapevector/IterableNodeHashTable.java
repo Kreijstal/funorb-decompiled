@@ -31,21 +31,21 @@ final class IterableNodeHashTable implements Iterable {
         return null;
     }
 
-    final static int minimumButtonX(dk[] buttons, byte guard) {
+    final static int minimumButtonX(LegacyButton[] buttons, byte guard) {
         String stackIn_18_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
           int var2_int = 2147483647;
-          dk[] var3 = buttons;
+          LegacyButton[] var3 = buttons;
           for (int var4 = 0; var4 < var3.length; var4++) {
-            dk var5 = var3[var4];
-            if (var5.field_f < var2_int) {
-              var2_int = var5.field_f;
+            LegacyButton var5 = var3[var4];
+            if (var5.x < var2_int) {
+              var2_int = var5.x;
             }
           }
           if (guard <= 9) {
-            dk[] var7 = (dk[]) null;
-            IterableNodeHashTable.minimumButtonX((dk[]) null, (byte) 66);
+            LegacyButton[] var7 = (LegacyButton[]) null;
+            IterableNodeHashTable.minimumButtonX((LegacyButton[]) null, (byte) 66);
           }
           if (var2_int != 2147483647) {
             int stackIn_14_0 = var2_int;

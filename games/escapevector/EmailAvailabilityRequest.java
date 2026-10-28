@@ -5,7 +5,7 @@ final class EmailAvailabilityRequest {
     private String email;
     private boolean available;
     private boolean complete;
-    static tk field_c;
+    static EmailValidationError field_c;
     static String field_d;
     static String[] field_f;
 
@@ -95,7 +95,7 @@ final class EmailAvailabilityRequest {
     }
 
     static {
-        field_c = new tk();
+        field_c = new EmailValidationError();
         field_d = "Quit to website";
         field_f = new String[]{"Fly away from the asteroid intact<br>to avoid losing a life.", "Fly away from the moon intact<br>to avoid losing a life.", "Fly away from the planet intact<br>to avoid losing a life."};
     }

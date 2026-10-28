@@ -1,180 +1,180 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk {
-    private int field_j;
-    int field_l;
-    private int[] field_k;
+final class LegacyButton {
+    private int textOffsetX;
+    int y;
+    private int[] scaledWidths;
     static int[] field_h;
-    int field_i;
-    int field_q;
-    private int[] field_e;
-    private ih field_s;
-    private int field_d;
-    int field_f;
-    private String field_o;
-    private int[] field_m;
-    private int field_b;
-    int field_p;
-    private int[] field_r;
+    int height;
+    int revealUntilTick;
+    private int[] foregroundColors;
+    private BinaryBitmapFont font;
+    private int style;
+    int x;
+    private String text;
+    private int[] backgroundColors;
+    private int prefixNumber;
+    int width;
+    private int[] textColors;
     private int field_g;
-    private int[] field_a;
-    private Sprite field_n;
-    int field_c;
+    private int[] scaledHeights;
+    private Sprite sprite;
+    int actionId;
 
-    final void a(boolean param0, boolean param1, byte param2) {
+    final void drawState(boolean highlighted, boolean alternateState, byte guard) {
         int stackIn_19_0 = 0;
         int stackIn_22_0 = 0;
         int var9_int;
         int var8Lifetime1;
         int var12 = EscapeVector.obfuscationControl;
-        int var4 = this.field_f + this.field_p;
-        if (param2 <= 16) {
+        int var4 = this.x + this.width;
+        if (guard <= 16) {
           return;
         }
-        int var5 = this.field_l + this.field_i;
+        int var5 = this.y + this.height;
         int var6 = 0;
-        if (param1) {
+        if (alternateState) {
           var6 = 2;
         }
-        if (param0) {
+        if (highlighted) {
           var6 = 1;
         }
-        int var7 = this.b((byte) -102);
-        if (this.field_d == 2) {
-          if (!param0) {
+        int var7 = this.revealOffset((byte) -102);
+        if (this.style == 2) {
+          if (!highlighted) {
             int var8 = 1;
-            SoftwareRasterizer.a(1 + this.field_f, 1 + this.field_n.fullHeight + this.field_l, -2 + this.field_p, -2 + this.field_i - this.field_n.fullHeight, var8);
+            SoftwareRasterizer.a(1 + this.x, 1 + this.sprite.fullHeight + this.y, -2 + this.width, -2 + this.height - this.sprite.fullHeight, var8);
           } else {
-            fc.a(var7, this.field_f - 2, var4 + 2, 2 + var5, true, 29788, false, this.field_e[1], this.field_m[1], this.field_g, -2 + this.field_l, false);
+            fc.a(var7, this.x - 2, var4 + 2, 2 + var5, true, 29788, false, this.foregroundColors[1], this.backgroundColors[1], this.field_g, -2 + this.y, false);
           }
-          this.field_n.d(this.field_f, this.field_l);
+          this.sprite.d(this.x, this.y);
         }
-        if (this.field_d == 3) {
-          fc.a(var7, this.field_f, var4, var5, true, 29788, false, this.field_e[var6], this.field_m[var6], this.field_g, this.field_l, false);
+        if (this.style == 3) {
+          fc.a(var7, this.x, var4, var5, true, 29788, false, this.foregroundColors[var6], this.backgroundColors[var6], this.field_g, this.y, false);
         }
-        if (this.field_d == 0) {
+        if (this.style == 0) {
           var8Lifetime1 = 1;
-          SoftwareRasterizer.c(this.field_f, this.field_l, this.field_n.fullWidth, this.field_n.fullHeight, this.field_m[var6], var8Lifetime1);
-          this.field_n.a(this.field_f, this.field_l, this.field_e[var6]);
-        } else if (this.field_d == 1) {
-          if (param0) {
-            stackIn_19_0 = this.field_k[1];
+          SoftwareRasterizer.c(this.x, this.y, this.sprite.fullWidth, this.sprite.fullHeight, this.backgroundColors[var6], var8Lifetime1);
+          this.sprite.a(this.x, this.y, this.foregroundColors[var6]);
+        } else if (this.style == 1) {
+          if (highlighted) {
+            stackIn_19_0 = this.scaledWidths[1];
           } else {
-            stackIn_19_0 = this.field_k[0];
+            stackIn_19_0 = this.scaledWidths[0];
           }
           var8Lifetime1 = stackIn_19_0;
-          if (param0) {
-            stackIn_22_0 = this.field_a[1];
+          if (highlighted) {
+            stackIn_22_0 = this.scaledHeights[1];
           } else {
-            stackIn_22_0 = this.field_a[0];
+            stackIn_22_0 = this.scaledHeights[0];
           }
           var9_int = stackIn_22_0;
-          int var10 = this.field_f + (this.field_p - var8Lifetime1) / 2;
-          int var11 = this.field_l + (-var9_int + this.field_i) / 2;
-          this.field_n.a(var10, var11, var8Lifetime1, var9_int);
-        } else if (this.field_d == 4) {
-          var8Lifetime1 = this.c(-18641);
-          String var9 = this.field_b + " - ";
-          this.field_s.b(var9, this.field_f + this.field_j, var8Lifetime1, this.field_r[1], -1);
-          this.field_s.a(this.field_o, this.field_f + this.field_j, var8Lifetime1, this.field_r[var6], -1);
-          if (this.field_n != null) {
-            this.field_n.e(var4 - this.field_n.fullWidth, this.field_l);
+          int var10 = this.x + (this.width - var8Lifetime1) / 2;
+          int var11 = this.y + (-var9_int + this.height) / 2;
+          this.sprite.a(var10, var11, var8Lifetime1, var9_int);
+        } else if (this.style == 4) {
+          var8Lifetime1 = this.labelBaseline(-18641);
+          String var9 = this.prefixNumber + " - ";
+          this.font.drawRight(var9, this.x + this.textOffsetX, var8Lifetime1, this.textColors[1], -1);
+          this.font.drawLeft(this.text, this.x + this.textOffsetX, var8Lifetime1, this.textColors[var6], -1);
+          if (this.sprite != null) {
+            this.sprite.e(var4 - this.sprite.fullWidth, this.y);
           }
         } else {
-          var8Lifetime1 = this.c(-18641);
-          var9_int = this.field_p / 2 + this.field_f;
-          MatchingTextValidator.a(var8Lifetime1, this.field_o, this.field_r[var6], -128, var9_int);
+          var8Lifetime1 = this.labelBaseline(-18641);
+          var9_int = this.width / 2 + this.x;
+          MatchingTextValidator.a(var8Lifetime1, this.text, this.textColors[var6], -128, var9_int);
         }
         return;
     }
 
-    private final void h(int param0) {
+    private final void truncateLabel(int guard) {
         int var7 = EscapeVector.obfuscationControl;
-        if (this.field_d != 4) {
+        if (this.style != 4) {
           return;
         }
-        int var2 = this.field_f + this.field_j;
-        int var3 = this.field_p + this.field_f;
+        int var2 = this.x + this.textOffsetX;
+        int var3 = this.width + this.x;
         int var4 = 1 + var3 - var2;
-        int var5 = this.field_s.b(this.field_o);
+        int var5 = this.font.stringWidth(this.text);
         if (var5 <= var4) {
           return;
         }
-        for (int var6_int = this.field_o.length(); var6_int >= 0; var6_int--) {
-          this.field_o = this.field_o.substring(0, var6_int);
-          int var5Lifetime1 = this.field_s.b(this.field_o);
+        for (int var6_int = this.text.length(); var6_int >= 0; var6_int--) {
+          this.text = this.text.substring(0, var6_int);
+          int var5Lifetime1 = this.font.stringWidth(this.text);
           if (var4 < var5Lifetime1) {
             continue;
           }
           break;
         }
         String var6 = GameplaySession.field_cc;
-        if (this.field_o.length() <= var6.length()) {
+        if (this.text.length() <= var6.length()) {
           return;
         }
-        this.field_o = this.field_o.substring(0, this.field_o.length() - var6.length()) + var6;
-        if (param0 != 160) {
-          this.a(true, false, (byte) 77);
+        this.text = this.text.substring(0, this.text.length() - var6.length()) + var6;
+        if (guard != 160) {
+          this.drawState(true, false, (byte) 77);
         }
     }
 
-    dk(int param0, int param1, String param2, int param3, Sprite param4, int param5, ih param6) {
+    LegacyButton(int param0, int param1, String param2, int param3, Sprite param4, int param5, BinaryBitmapFont param6) {
         this(param0, param1, param2, param3, param6);
         try {
-          this.field_n = param4;
+          this.sprite = param4;
           this.field_g = param5;
-          this.field_p = this.d(-1);
-          this.field_i = this.a((byte) -16);
+          this.width = this.preferredWidth(-1);
+          this.height = this.preferredHeight((byte) -16);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int a(boolean param0) {
-        if (param0) {
+    private final int spriteWidth(boolean guard) {
+        if (guard) {
           return -31;
         }
-        if (this.field_n == null) {
+        if (this.sprite == null) {
           return 0;
         }
-        return this.field_n.fullWidth;
+        return this.sprite.fullWidth;
     }
 
-    private final int d(int param0) {
-        if (param0 != -1) {
+    private final int preferredWidth(int guard) {
+        if (guard != -1) {
           int[] var4 = (int[]) null;
-          this.a((int[]) null, (int[]) null, -13);
+          this.setBackgroundColors((int[]) null, (int[]) null, -13);
         }
-        int var2 = this.b(0);
-        int var3 = this.a(false);
+        int var2 = this.textWidthWithPadding(0);
+        int var3 = this.spriteWidth(false);
         return var3 > var2 ? var3 : var2;
     }
 
-    final void a(int[] param0, int[] param1, int param2) {
+    final void setBackgroundColors(int[] backgroundColors, int[] foregroundColors, int guard) {
         try {
-          if (param2 != -2) {
-            this.field_d = -77;
+          if (guard != -2) {
+            this.style = -77;
           }
-          this.field_m = param0;
-          this.field_e = param1;
+          this.backgroundColors = backgroundColors;
+          this.foregroundColors = foregroundColors;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "dk.I(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "dk.I(" + (backgroundColors != null ? "{...}" : "null") + ',' + (foregroundColors != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final static byte[] a(byte param0, CharSequence param1) {
+    final static byte[] encodeCp1252(byte guard, CharSequence text) {
         String stackIn_73_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          int var2_int = param1.length();
+          int var2_int = text.length();
           byte[] var3 = new byte[var2_int];
-          if (param0 != -14) {
+          if (guard != -14) {
             field_h = (int[]) null;
           }
           for (int var4 = 0; var4 < var2_int; var4++) {
             {
-              int var5 = param1.charAt(var4);
+              int var5 = text.charAt(var4);
               if ((var5 <= 0 ||
                 var5 >= 128) && (160 > var5 ||
                 var5 > 255)) {
@@ -275,8 +275,8 @@ final class dk {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_72_0 = var2;
-          StringBuilder stackIn_72_1 = new StringBuilder().append("dk.K(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_72_1 = new StringBuilder().append("dk.K(").append(guard).append(',');
+          if (text == null) {
             stackIn_73_2 = "null";
           } else {
             stackIn_73_2 = "{...}";
@@ -285,57 +285,57 @@ final class dk {
         }
     }
 
-    final void a(int[] param0, int[] param1, byte param2, int[] param3) {
-        this.a(param1, param0, -2);
-        if (param2 > -120) {
+    final void setColors(int[] foregroundColors, int[] backgroundColors, byte guard, int[] textColors) {
+        this.setBackgroundColors(backgroundColors, foregroundColors, -2);
+        if (guard > -120) {
           return;
         }
         try {
-          this.field_r = param3;
+          this.textColors = textColors;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "dk.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "dk.L(" + (foregroundColors != null ? "{...}" : "null") + ',' + (backgroundColors != null ? "{...}" : "null") + ',' + guard + ',' + (textColors != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int a(byte param0) {
-        if (this.field_d == 1) {
+    private final int preferredHeight(byte guard) {
+        if (this.style == 1) {
           return 0;
         }
-        int var2 = this.f(-95);
-        if (param0 != -16) {
-          this.field_q = 0;
+        int var2 = this.textHeightWithPadding(-95);
+        if (guard != -16) {
+          this.revealUntilTick = 0;
         }
-        int var3 = this.a(param0 + 16);
+        int var3 = this.spriteHeight(guard + 16);
         return var3 + var2;
     }
 
-    dk(int param0, int param1, String param2, int param3, int param4, ih param5) {
+    LegacyButton(int param0, int param1, String param2, int param3, int param4, BinaryBitmapFont param5) {
         this(param0, param1, param2, param3, param5);
         try {
           this.field_g = param4;
-          this.field_p = this.d(-1);
-          this.field_i = this.a((byte) -16);
+          this.width = this.preferredWidth(-1);
+          this.height = this.preferredHeight((byte) -16);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int c(int param0) {
-        int var2 = this.field_i + this.field_l;
-        if (param0 != -18641) {
-          this.field_e = (int[]) null;
+    private final int labelBaseline(int guard) {
+        int var2 = this.height + this.y;
+        if (guard != -18641) {
+          this.foregroundColors = (int[]) null;
         }
-        int var3 = -3 + var2 - this.field_s.field_x;
+        int var3 = -3 + var2 - this.font.maxDescent;
         return var3;
     }
 
-    final static void e(int param0) {
+    final static void decodeProgressResponse(int guard) {
         int var8 = EscapeVector.obfuscationControl;
         try {
           CipherPacketBuffer var10 = QuickChatDynamicCommand.incomingPackets;
           int var2 = var10.readUnsignedByte(0);
           int var3 = var10.readUnsignedByte(0);
-          if (param0 != 108457410) {
+          if (guard != 108457410) {
             return;
           }
           if (var2 == 0) {
@@ -352,7 +352,7 @@ final class dk {
               var5 = var12.length << 2;
             }
             for (int var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(0) << (ae.a(3, var7) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(0) << (SpriteCheckboxPainter.bitwiseAnd(3, var7) << 8));
             }
             var4.complete = true;
             var4.unlink((byte) -105);
@@ -373,7 +373,7 @@ final class dk {
               var5_ref_cc.unlink((byte) -62);
               return;
             }
-            int stackIn_13_0 = param0;
+            int stackIn_13_0 = guard;
             int stackIn_13_1 = 108457426;
             nm.a(stackIn_13_0 ^ stackIn_13_1);
             return;
@@ -384,20 +384,20 @@ final class dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "dk.H(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "dk.H(" + guard + ')');
         }
     }
 
-    final boolean a(byte param0, int param1, int param2) {
-        int var4 = this.field_p + this.field_f;
-        if (this.field_f <= param1 &&
-          param1 < var4) {
-          if (param0 != 65) {
+    final boolean hitTest(byte guard, int x, int y) {
+        int var4 = this.width + this.x;
+        if (this.x <= x &&
+          x < var4) {
+          if (guard != 65) {
             return true;
           }
-          int var5 = this.field_l + this.field_i;
-          if (this.field_l <= param2 &&
-            param2 < var5) {
+          int var5 = this.y + this.height;
+          if (this.y <= y &&
+            y < var5) {
             return true;
           }
           return false;
@@ -405,49 +405,49 @@ final class dk {
         return false;
     }
 
-    private final int f(int param0) {
-        int var2 = this.field_s.field_r + this.field_s.field_x;
+    private final int textHeightWithPadding(int guard) {
+        int var2 = this.font.maxAscent + this.font.maxDescent;
         int var3 = var2 + 3 + 3;
-        int var4 = -101 / ((param0 - 47) / 63);
+        int var4 = -101 / ((guard - 47) / 63);
         return var3;
     }
 
-    private final int b(int param0) {
-        if (this.field_d == 1) {
+    private final int textWidthWithPadding(int guard) {
+        if (this.style == 1) {
           return 0;
         }
         String var2 = " ";
-        if (param0 != 0) {
-          this.h(-121);
+        if (guard != 0) {
+          this.truncateLabel(-121);
         }
-        int var3 = this.field_s.b(var2);
-        int var4 = this.field_s.b(this.field_o);
+        int var3 = this.font.stringWidth(var2);
+        int var4 = this.font.stringWidth(this.text);
         var4 = var4 + 4 * var3;
         return var4;
     }
 
-    private final int a(int param0) {
-        if (null == this.field_n) {
+    private final int spriteHeight(int guard) {
+        if (null == this.sprite) {
           return 0;
         }
-        if (param0 != 0) {
-          int discarded$0 = this.a(true);
+        if (guard != 0) {
+          int discarded$0 = this.spriteWidth(true);
         }
-        return this.field_n.fullHeight;
+        return this.sprite.fullHeight;
     }
 
-    final void b(byte param0, int param1, int param2) {
-        int var4 = 126 / ((78 - param0) / 36);
-        this.field_l = param2;
-        this.field_f = param1;
+    final void setPosition(byte guard, int x, int y) {
+        int var4 = 126 / ((78 - guard) / 36);
+        this.y = y;
+        this.x = x;
     }
 
-    private final int b(byte param0) {
-        int var2 = 87 % ((-24 - param0) / 41);
-        if (1 == this.field_d) {
+    private final int revealOffset(byte guard) {
+        int var2 = 87 % ((-24 - guard) / 41);
+        if (1 == this.style) {
           return 0;
         }
-        return mj.field_d < this.field_q ? (this.field_q - mj.field_d) * 2 : 0;
+        return mj.field_d < this.revealUntilTick ? (this.revealUntilTick - mj.field_d) * 2 : 0;
     }
 
     public static void releaseStatics(int guard) {
@@ -457,65 +457,65 @@ final class dk {
         field_h = null;
     }
 
-    final void a(int param0, boolean param1) {
-        if (param0 != -16383) {
-          this.field_s = (ih) null;
+    final void draw(int guard, boolean highlighted) {
+        if (guard != -16383) {
+          this.font = (BinaryBitmapFont) null;
         }
         boolean var3 = false;
-        this.a(param1, (var3), (byte) 27);
+        this.drawState(highlighted, (var3), (byte) 27);
     }
 
-    final void a(int param0, int param1, int param2) {
-        this.field_i = param0;
-        if (param1 != 0) {
-          this.field_d = -53;
+    final void setSize(int height, int guard, int width) {
+        this.height = height;
+        if (guard != 0) {
+          this.style = -53;
         }
-        this.field_p = param2;
-        this.h(160);
+        this.width = width;
+        this.truncateLabel(160);
     }
 
-    dk(int param0, int param1, int param2, String param3, int param4, Sprite param5, int param6, ih param7) {
+    LegacyButton(int param0, int param1, int param2, String param3, int param4, Sprite param5, int param6, BinaryBitmapFont param7) {
         this(param0, param1, param3, param6, param7);
         try {
-          this.field_n = param5;
-          this.field_b = param2;
-          this.field_j = param4;
-          this.field_p = this.d(-1);
-          this.field_i = this.a((byte) -16);
+          this.sprite = param5;
+          this.prefixNumber = param2;
+          this.textOffsetX = param4;
+          this.width = this.preferredWidth(-1);
+          this.height = this.preferredHeight((byte) -16);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private dk(int param0, int param1, String param2, int param3, ih param4) {
+    private LegacyButton(int param0, int param1, String param2, int param3, BinaryBitmapFont param4) {
         try {
-          this.field_s = param4;
-          this.field_d = param0;
-          this.field_c = param1;
-          this.field_q = param3;
-          this.field_o = param2;
+          this.font = param4;
+          this.style = param0;
+          this.actionId = param1;
+          this.revealUntilTick = param3;
+          this.text = param2;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    dk(int param0, int param1, Sprite param2, int[] param3, int[] param4) {
+    LegacyButton(int param0, int param1, Sprite param2, int[] param3, int[] param4) {
         try {
-          this.field_d = param0;
-          this.field_c = param1;
-          this.field_a = param4;
-          this.field_k = param3;
-          this.field_n = param2;
+          this.style = param0;
+          this.actionId = param1;
+          this.scaledHeights = param4;
+          this.scaledWidths = param3;
+          this.sprite = param2;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    dk(int param0, int param1, Sprite param2) {
+    LegacyButton(int param0, int param1, Sprite param2) {
         try {
-          this.field_d = param0;
-          this.field_n = param2;
-          this.field_c = param1;
+          this.style = param0;
+          this.sprite = param2;
+          this.actionId = param1;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -513,17 +513,17 @@ final class en {
           wa.field_b = fe.a("tutorial", param0, "edge_exit_right", true);
           EmailAvailabilityValidator.field_r = fe.a("tutorial", param0, "edge_inner_bottom", true);
           ej.field_e = fe.a("tutorial", param0, "edge_inner_bottom_left", true);
-          q.field_G = fe.a("tutorial", param0, "edge_inner_bottom_right", true);
+          MarkerSlider.field_G = fe.a("tutorial", param0, "edge_inner_bottom_right", true);
           PacketBuffer.field_l = fe.a("tutorial", param0, "edge_inner_left", true);
           cj.field_a = fe.a("tutorial", param0, "edge_inner_right", true);
           mj.field_f = fe.a("tutorial", param0, "edge_inner_top", true);
           AccountRegistrationPanel.field_T = fe.a("tutorial", param0, "edge_inner_top_left", true);
-          kn.field_h = fe.a("tutorial", param0, "edge_inner_top_right", true);
+          GrowableIntList.field_h = fe.a("tutorial", param0, "edge_inner_top_right", true);
           wa.field_e = fe.a("tutorial", param0, "edge_outer", true);
           qf.field_d = fe.a("tutorial", param0, "exitbg", true);
           CipherPacketBuffer.field_n = fe.a("tutorial", param0, "panel", true);
           gm.field_a = fe.a("tutorial", param0, "platform", true);
-          tk.field_a[var2_int] = fe.a("tutorial", param0, "texture", true);
+          EmailValidationError.field_a[var2_int] = fe.a("tutorial", param0, "texture", true);
           WeightedLruCache.field_c[var2_int] = true;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "en.PA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -547,10 +547,10 @@ final class en {
           return;
         }
         if (param1 % 10L == 0L) {
-          ae.a(-1L + param1, (byte) 118);
-          ae.a(1L, (byte) 118);
+          SpriteCheckboxPainter.sleepMillis(-1L + param1, (byte) 118);
+          SpriteCheckboxPainter.sleepMillis(1L, (byte) 118);
         } else {
-          ae.a(param1, (byte) 118);
+          SpriteCheckboxPainter.sleepMillis(param1, (byte) 118);
         }
     }
 
@@ -740,7 +740,7 @@ final class en {
         int stackIn_22_0 = 0;
         String stackIn_27_0 = null;
         String stackIn_33_0 = null;
-        fd stackIn_44_0 = null;
+        NineSliceFrame stackIn_44_0 = null;
         int var5 = 0;
         int var10 = EscapeVector.obfuscationControl;
         try {
@@ -802,7 +802,7 @@ final class en {
             int stackIn_38_0 = param0 ^ 94;
             String stackIn_38_1 = var6;
             boolean stackIn_39_2 = !(var4 < 0);
-            int var7Lifetime1 = ee.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
+            int var7Lifetime1 = LoginMethod.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
             int var8Lifetime1 = ClientException.field_e - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + CheckboxPainter.field_s;
@@ -811,17 +811,17 @@ final class en {
               } else {
                 stackIn_44_0 = gf.field_e;
               }
-              fd var9 = stackIn_44_0;
+              NineSliceFrame var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a(-fe.field_k + var8Lifetime1, var1_int, -96, var7Lifetime1 + (fe.field_k << 1), (field_k << 1) + ok.field_a);
+                var9.draw(-fe.field_k + var8Lifetime1, var1_int, -96, var7Lifetime1 + (fe.field_k << 1), (field_k << 1) + ok.field_a);
               }
               var1_int = var1_int + field_k;
             }
             if (0 <= var4) {
-              pb.field_e.a(var6, var8Lifetime1, var1_int + he.field_x, var5, -1);
+              pb.field_e.drawLeft(var6, var8Lifetime1, var1_int + he.field_x, var5, -1);
               var1_int = var1_int + (ok.field_a + (CheckboxPainter.field_s + field_k));
             } else {
-              nb.field_a.a(var6, var8Lifetime1, var1_int + StrongCacheEntry.field_t, var5, -1);
+              nb.field_a.drawLeft(var6, var8Lifetime1, var1_int + StrongCacheEntry.field_t, var5, -1);
               var1_int = var1_int + je.field_b;
             }
           }
@@ -879,7 +879,7 @@ final class en {
         while (true) {
           AchievementRecord var2 = (AchievementRecord) (this.field_f.removeFirst(-20245));
           if (var2 != null) {
-            sc.a(var2, 4, 1);
+            DialWidgetPainter.enqueueAchievementRecord(var2, 4, 1);
             continue;
           }
           break;

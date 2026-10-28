@@ -20,7 +20,7 @@ final class b {
             if (null != IsaacRandom.field_d &&
               IsaacRandom.field_d.field_c) {
               ri.a(-25123);
-              pn.field_pb.b(new tm(pn.field_pb, ck.field_A), 69);
+              pn.field_pb.b(new tm(pn.field_pb, ThreeSliceButtonPainter.field_A), 69);
             }
             return;
           }

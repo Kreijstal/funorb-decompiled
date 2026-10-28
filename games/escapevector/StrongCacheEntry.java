@@ -18,19 +18,19 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         field_v = null;
     }
 
-    final static char widestAllowedGlyph(byte guard, int firstCharacter, ih font, int lastCharacter) {
+    final static char widestAllowedGlyph(byte guard, int firstCharacter, BinaryBitmapFont font, int lastCharacter) {
         String stackIn_15_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
           int var4_int = 119;
-          int var5 = font.a((char) var4_int);
+          int var5 = font.charAdvance((char) var4_int);
           int var6 = firstCharacter;
           if (guard > -47) {
             StrongCacheEntry.releaseStatics(-66);
           }
           while (lastCharacter >= var6) {
             if (ml.a((char)var6, 21654)) {
-              int var7 = font.a((char)var6);
+              int var7 = font.charAdvance((char)var6);
               if (var5 < var7) {
                 var4_int = (char)var6;
                 var5 = var7;
@@ -63,21 +63,21 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         }
     }
 
-    final static tk validateDomainLabel(String label, int guard) {
+    final static EmailValidationError validateDomainLabel(String label, int guard) {
         String stackIn_28_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
           int var2_int = label.length();
           if (var2_int == 0) {
-            tk stackIn_4_0 = ResourceArchive.field_d;
+            EmailValidationError stackIn_4_0 = ResourceArchive.field_d;
             return stackIn_4_0;
           }
           if (var2_int > 63) {
-            tk stackIn_7_0 = EmailAvailabilityRequest.field_c;
+            EmailValidationError stackIn_7_0 = EmailAvailabilityRequest.field_c;
             return stackIn_7_0;
           }
           if (guard >= -8) {
-            tk stackIn_10_0 = (tk) null;
+            EmailValidationError stackIn_10_0 = (EmailValidationError) null;
             return stackIn_10_0;
           }
           for (int var3 = 0; var3 < var2_int; var3++) {
@@ -85,11 +85,11 @@ final class StrongCacheEntry extends WeightedCacheEntry {
             if (45 == var4) {
               if (0 == var3 ||
                 var3 == -1 + var2_int) {
-                tk stackIn_19_0 = CachedTextLayout.field_p;
+                EmailValidationError stackIn_19_0 = CachedTextLayout.field_p;
                 return stackIn_19_0;
               }
             } else if (jd.field_b.indexOf(var4) == -1) {
-              tk stackIn_22_0 = CachedTextLayout.field_p;
+              EmailValidationError stackIn_22_0 = CachedTextLayout.field_p;
               return stackIn_22_0;
             }
           }

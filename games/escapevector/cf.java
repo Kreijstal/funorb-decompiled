@@ -79,7 +79,7 @@ final class cf {
                 if (param2) {
                   mg.field_a[var23Lifetime2] = var27Lifetime1 >> HighscoreQuery.field_i;
                   tm.field_bb[var23Lifetime2] = var28Lifetime1 >> HighscoreQuery.field_i;
-                  jl.field_p[var23Lifetime2] = var29Lifetime1;
+                  LegacyTextBlock.field_p[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -333,8 +333,8 @@ final class cf {
             String var4 = sf.a(-96, param2);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!fd.a(true, var4.charAt(0)) &&
-                !fd.a(true, var4.charAt(-1 + var4.length()))) {
+              if (!NineSliceFrame.isNameSeparator(true, var4.charAt(0)) &&
+                !NineSliceFrame.isNameSeparator(true, var4.charAt(-1 + var4.length()))) {
                 int var5 = 0;
                 if (param1 <= 9) {
                   String stackIn_28_0 = (String) null;
@@ -344,7 +344,7 @@ final class cf {
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (!(var6 < param2.length())))) {
                   int var7 = param2.charAt(var6);
-                  boolean stackOut_31_0 = fd.a(true, (char) var7);
+                  boolean stackOut_31_0 = NineSliceFrame.isNameSeparator(true, (char) var7);
                   stackIn_48_0 = stackOut_31_0 ? 1 : 0;
                   boolean stackIn_32_0 = stackOut_31_0;
                   if (var8 == 0) {
@@ -370,10 +370,10 @@ final class cf {
                   Object stackIn_52_0 = null;
                   return (String) (stackIn_52_0);
                 }
-                String stackIn_50_0 = kn.field_c;
+                String stackIn_50_0 = GrowableIntList.field_c;
                 return stackIn_50_0;
               }
-              String stackIn_25_0 = kn.field_c;
+              String stackIn_25_0 = GrowableIntList.field_c;
               return stackIn_25_0;
             }
             String stackIn_19_0 = AgeValidator.field_p;

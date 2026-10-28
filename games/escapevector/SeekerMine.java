@@ -14,12 +14,12 @@ final class SeekerMine extends IntrusiveNode {
     PcmSampleStream flightSound;
     int velocityXQ16;
 
-    final static int a(String param0, int param1, ih param2) {
+    final static int a(String param0, int param1, BinaryBitmapFont param2) {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
           int var3_int = CheckboxPainter.a(param2, param1 - 16777215);
-          int var4 = 4 * var3_int + param2.b(param0);
+          int var4 = 4 * var3_int + param2.stringWidth(param0);
           if (param1 == 16777215) {
             int stackIn_4_0 = var4;
             return stackIn_4_0;
@@ -49,10 +49,10 @@ final class SeekerMine extends IntrusiveNode {
     final static void a(byte param0, boolean param1) {
         if (param0 > -97) {
           SeekerMine.a((byte) 51, false);
-          ve.a(-58, param1, false);
+          MarkerSliderPainter.a(-58, param1, false);
           return;
         }
-        ve.a(-58, param1, false);
+        MarkerSliderPainter.a(-58, param1, false);
     }
 
     public static void releaseStatics(boolean guard) {

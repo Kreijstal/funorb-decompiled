@@ -195,14 +195,14 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_U.setValidator(new MatchingTextValidator(this.field_U, this.field_Q), (byte) 63);
         this.field_N.setValidator(new AgeValidator(this.field_N), (byte) 63);
         this.field_K.enabled = false;
-        this.field_K.painter = (WidgetPainter) ((Object) new ck());
+        this.field_K.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
         this.field_P.painter = (WidgetPainter) ((Object) new ha());
-        this.field_S.painter = (WidgetPainter) ((Object) new re(10000536));
-        re dupTemp$0 = new re(10000536);
+        this.field_S.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
+        GradientOutlineTextPainter dupTemp$0 = new GradientOutlineTextPainter(10000536);
         this.field_R.painter = (WidgetPainter) ((Object) dupTemp$0);
         this.field_I.painter = (WidgetPainter) ((Object) dupTemp$0);
-        this.field_N.painter = (WidgetPainter) ((Object) new re(10000536));
-        this.field_J.painter = (WidgetPainter) ((Object) new ae());
+        this.field_N.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
+        this.field_J.painter = (WidgetPainter) ((Object) new SpriteCheckboxPainter());
         un dupTemp$1 = new un(10000536);
         this.field_U.painter = (WidgetPainter) ((Object) dupTemp$1);
         this.field_Q.painter = (WidgetPainter) ((Object) dupTemp$1);
@@ -217,7 +217,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         ki var4 = new ki(46, var3, -90 + this.width, 25, this.field_J, true, -120 + this.width, 5, ke.field_c, 11579568, ii.field_b);
         this.b(var4, false);
         var3 = var3 + var4.height;
-        TextWidgetPainter var5 = new TextWidgetPainter(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, Js5Transport.field_a.field_r, -1, 2147483647, true);
+        TextWidgetPainter var5 = new TextWidgetPainter(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, Js5Transport.field_a.maxAscent, -1, 2147483647, true);
         this.field_H = new TextHotspotWidget(var2, var5);
         this.field_H.tooltip = "";
         this.field_H.setHotspotTooltip(TextFieldValidator.field_m, (byte) 65, 0);
@@ -272,7 +272,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           if (var4 == of.field_f) {
             return false;
           }
-          if (var4 != re.field_s) {
+          if (var4 != GradientOutlineTextPainter.field_s) {
             return true;
           }
           return false;

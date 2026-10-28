@@ -36,9 +36,9 @@ final class TerrainMap {
               if (DraggableWidget.field_N != null) {
                 nb.field_c.removeListener((PcmMixerListener) ((Object) DraggableWidget.field_N));
               }
-              kn.field_b = param0;
+              GrowableIntList.field_b = param0;
               DraggableWidget.field_N = new TrackerMusicPlayer(param1);
-              DraggableWidget.field_N.d(kn.field_b * kc.field_b / 64);
+              DraggableWidget.field_N.d(GrowableIntList.field_b * kc.field_b / 64);
               DraggableWidget.field_N.a(param2);
               ig.field_l.flush();
               nb.field_c.scheduleListener((PcmMixerListener) ((Object) DraggableWidget.field_N));

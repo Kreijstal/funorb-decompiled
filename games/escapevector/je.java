@@ -15,45 +15,45 @@ final class je {
         int var7 = EscapeVector.obfuscationControl;
         Object var3Lifetime1;
         if (param0 > 44) {
-          int var1 = qh.field_k[0] * bc.field_a[0];
-          byte[] var21 = qe.field_a[0];
-          if (UiContainer.field_E[0]) {
-            byte[] var20 = CheckboxPainter.field_b[0];
+          int var1 = qh.spriteWidths[0] * bc.spriteHeights[0];
+          byte[] var21 = qe.spriteIndices[0];
+          if (UiContainer.spriteHasAlpha[0]) {
+            byte[] var20 = CheckboxPainter.spriteAlphas[0];
             int[] var13 = new int[var1];
             int[] var11 = var13;
             int[] var5_ref_int__ = var11;
             for (int var6 = 0; var1 > var6; var6++) {
-              var5_ref_int__[var6] = MatchingTextValidator.a(ae.a(var20[var6] << 24, -16777216), qk.field_f[ae.a((int) var21[var6], 255)]);
+              var5_ref_int__[var6] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(var20[var6] << 24, -16777216), qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var21[var6], 255)]);
             }
-            var3 = new uh(on.field_e, DelegatingCanvas.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var13);
+            var3 = new uh(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], bc.spriteHeights[0], var13);
           } else {
             int[] var9 = new int[var1];
             for (int var5 = 0; var1 > var5; var5++) {
-              var9[var5] = qk.field_f[ae.a((int) var21[var5], 255)];
+              var9[var5] = qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var21[var5], 255)];
             }
-            var3 = new Sprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var9);
+            var3 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], bc.spriteHeights[0], var9);
           }
           of.a(false);
           return (Sprite) (var3);
         }
         je.releaseStatics(24);
-        int var1Lifetime1 = qh.field_k[0] * bc.field_a[0];
-        byte[] var19 = qe.field_a[0];
-        if (UiContainer.field_E[0]) {
-          byte[] var18 = CheckboxPainter.field_b[0];
+        int var1Lifetime1 = qh.spriteWidths[0] * bc.spriteHeights[0];
+        byte[] var19 = qe.spriteIndices[0];
+        if (UiContainer.spriteHasAlpha[0]) {
+          byte[] var18 = CheckboxPainter.spriteAlphas[0];
           int[] var13Lifetime1 = new int[var1Lifetime1];
           int[] var11Lifetime1 = var13Lifetime1;
           int[] var5_ref_int__Lifetime1 = var11Lifetime1;
           for (int var6Lifetime1 = 0; var1Lifetime1 > var6Lifetime1; var6Lifetime1++) {
-            var5_ref_int__Lifetime1[var6Lifetime1] = MatchingTextValidator.a(ae.a(var18[var6Lifetime1] << 24, -16777216), qk.field_f[ae.a((int) var19[var6Lifetime1], 255)]);
+            var5_ref_int__Lifetime1[var6Lifetime1] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(var18[var6Lifetime1] << 24, -16777216), qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var19[var6Lifetime1], 255)]);
           }
-          var3Lifetime1 = new uh(on.field_e, DelegatingCanvas.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var13Lifetime1);
+          var3Lifetime1 = new uh(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], bc.spriteHeights[0], var13Lifetime1);
         } else {
           int[] var9Lifetime1 = new int[var1Lifetime1];
           for (int var5Lifetime1 = 0; var1Lifetime1 > var5Lifetime1; var5Lifetime1++) {
-            var9Lifetime1[var5Lifetime1] = qk.field_f[ae.a((int) var19[var5Lifetime1], 255)];
+            var9Lifetime1[var5Lifetime1] = qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var19[var5Lifetime1], 255)];
           }
-          var3Lifetime1 = new Sprite(on.field_e, DelegatingCanvas.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var9Lifetime1);
+          var3Lifetime1 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], bc.spriteHeights[0], var9Lifetime1);
         }
         of.a(false);
         return (Sprite) (var3Lifetime1);

@@ -32,14 +32,14 @@ final class sf {
           int var2_int = 0;
           int var3 = param1.length();
           while (var2_int < var3) {
-            if (fd.a(true, param1.charAt(var2_int))) {
+            if (NineSliceFrame.isNameSeparator(true, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (fd.a(true, param1.charAt(var3 - 1))) {
+            if (NineSliceFrame.isNameSeparator(true, param1.charAt(var3 - 1))) {
               var3--;
               continue;
             }
@@ -162,22 +162,22 @@ final class sf {
         this.field_o = this.field_o + this.field_k;
     }
 
-    final static tk a(String param0, byte param1) {
+    final static EmailValidationError a(String param0, byte param1) {
         String stackIn_56_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
           int var2_int = param0.length();
           if (var2_int == 0) {
-            tk stackIn_4_0 = ResourceArchive.field_d;
+            EmailValidationError stackIn_4_0 = ResourceArchive.field_d;
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            tk stackIn_8_0 = EmailAvailabilityRequest.field_c;
+            EmailValidationError stackIn_8_0 = EmailAvailabilityRequest.field_c;
             return stackIn_8_0;
           }
           if (34 == param0.charAt(0)) {
             if (param0.charAt(var2_int - 1) != 34) {
-              tk stackIn_13_0 = CachedTextLayout.field_p;
+              EmailValidationError stackIn_13_0 = CachedTextLayout.field_p;
               return stackIn_13_0;
             }
             boolean var3 = false;
@@ -189,7 +189,7 @@ final class sf {
               } else {
                 if (34 == var5 &&
                   !var3) {
-                  tk stackIn_27_0 = CachedTextLayout.field_p;
+                  EmailValidationError stackIn_27_0 = CachedTextLayout.field_p;
                   return stackIn_27_0;
                 }
                 var3 = false;
@@ -198,7 +198,7 @@ final class sf {
             return null;
           }
           if (param1 != 119) {
-            tk stackIn_33_0 = (tk) null;
+            EmailValidationError stackIn_33_0 = (EmailValidationError) null;
             return stackIn_33_0;
           }
           boolean var3Lifetime1 = false;
@@ -213,13 +213,13 @@ final class sf {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                tk stackIn_44_0 = CachedTextLayout.field_p;
+                EmailValidationError stackIn_44_0 = CachedTextLayout.field_p;
                 return stackIn_44_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (en.field_g.indexOf(var5Lifetime1) == -1) {
-                tk stackIn_49_0 = CachedTextLayout.field_p;
+                EmailValidationError stackIn_49_0 = CachedTextLayout.field_p;
                 return stackIn_49_0;
               }
               var3Lifetime1 = false;

@@ -20,7 +20,7 @@ final class ff {
           }
           fc.a(3161);
           bo.field_F.l(param2 ^ 17479);
-          PcmResampler.field_d = new h(StrongCacheEntry.field_v, (String) null, eb.field_H, param3, param1);
+          PcmResampler.field_d = new h(StrongCacheEntry.field_v, (String) null, DialWidget.field_H, param3, param1);
           rd.field_c = new ng(bo.field_F, PcmResampler.field_d);
           bo.field_F.b(rd.field_c, 40);
         } catch (RuntimeException runtimeException) {

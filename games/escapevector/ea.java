@@ -32,7 +32,7 @@ final class ea {
           if (param0 == null) {
             return null;
           }
-          CoverageBitmapFont var2 = new CoverageBitmapFont(param0, gn.field_k, gi.field_e, qh.field_k, bc.field_a, qk.field_f, qe.field_a);
+          CoverageBitmapFont var2 = new CoverageBitmapFont(param0, gn.spriteOffsetXs, gi.spriteOffsetYs, qh.spriteWidths, bc.spriteHeights, qk.spritePalette, qe.spriteIndices);
           of.a(false);
           CoverageBitmapFont stackIn_6_0 = var2;
           return stackIn_6_0;

@@ -14,8 +14,8 @@ final class gb {
         int var10 = EscapeVector.obfuscationControl;
         try {
           int var7_int = LaserGateSpan.a((byte) 57, param5);
-          if (null == ae.field_d) {
-            ae.field_d = new java.security.SecureRandom();
+          if (null == SpriteCheckboxPainter.field_d) {
+            SpriteCheckboxPainter.field_d = new java.security.SecureRandom();
           }
           int[] var13 = new int[4];
           int[] var12 = var13;
@@ -24,7 +24,7 @@ final class gb {
             gb.releaseStatics(43);
           }
           for (int var9 = 0; var9 < 4; var9++) {
-            var8[var9] = ae.field_d.nextInt();
+            var8[var9] = SpriteCheckboxPainter.field_d.nextInt();
           }
           if (null == NameAvailabilityValidator.field_r ||
             !(var7_int <= NameAvailabilityValidator.field_r.payload.length)) {

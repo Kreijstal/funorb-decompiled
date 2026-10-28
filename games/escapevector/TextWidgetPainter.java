@@ -246,31 +246,31 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           int var9_int = this.contentWidth(component, -25033);
           int var10 = this.contentHeight(-14072, component);
           if (this.wrapText) {
-            this.font.a(this.displayText((byte) 39, component), this.textXForOffset(offsetX, component, -18079, originX), this.textYForOffset(component, 0, offsetY, originY), var9_int, var10, textColor, shadowColor, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
+            this.font.drawParagraph(this.displayText((byte) 39, component), this.textXForOffset(offsetX, component, -18079, originX), this.textYForOffset(component, 0, offsetY, originY), var9_int, var10, textColor, shadowColor, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
           } else {
             int var12 = this.verticalAlignment;
             if (var12 == 0) {
-              var11 = this.font.field_r;
+              var11 = this.font.maxAscent;
             } else if (var12 == 2) {
-              var11 = -this.font.field_x + var10;
+              var11 = -this.font.maxDescent + var10;
             } else {
               if (var12 != 3 &&
                 var12 == 1) {
               }
-              var11 = this.font.field_r + (var10 - this.font.field_r - this.font.field_x >> 1);
+              var11 = this.font.maxAscent + (var10 - this.font.maxAscent - this.font.maxDescent >> 1);
             }
             int var12Lifetime1 = this.horizontalAlignment;
             if (0 != var12Lifetime1 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.font.c(this.displayText((byte) 39, component), this.textXForOffset(offsetX, component, -18079, originX) + (var9_int >> 1), this.textYForOffset(component, 0, offsetY, originY) + var11, textColor, shadowColor);
+                this.font.drawCentered(this.displayText((byte) 39, component), this.textXForOffset(offsetX, component, -18079, originX) + (var9_int >> 1), this.textYForOffset(component, 0, offsetY, originY) + var11, textColor, shadowColor);
               } else if (2 == var12Lifetime1) {
-                this.font.b(this.displayText((byte) 39, component), this.textXForOffset(offsetX, component, -18079, originX) + var9_int, var11 + this.textYForOffset(component, 0, offsetY, originY), textColor, shadowColor);
+                this.font.drawRight(this.displayText((byte) 39, component), this.textXForOffset(offsetX, component, -18079, originX) + var9_int, var11 + this.textYForOffset(component, 0, offsetY, originY), textColor, shadowColor);
               }
               boolean decompiledFrameRemainder0 = false;
             }
             else {
-              this.font.a(this.displayText((byte) 39, component), this.textXForOffset(offsetX, component, -18079, originX), var11 + this.textYForOffset(component, 0, offsetY, originY), textColor, shadowColor);
+              this.font.drawLeft(this.displayText((byte) 39, component), this.textXForOffset(offsetX, component, -18079, originX), var11 + this.textYForOffset(component, 0, offsetY, originY), textColor, shadowColor);
             }
           }
           if (!guard) {
@@ -362,10 +362,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
 
     public final int lineHeight(int guard) {
         if (guard >= 96) {
-          return this.font.field_r + this.font.field_x;
+          return this.font.maxAscent + this.font.maxDescent;
         }
         field_p = (String) null;
-        return this.font.field_r + this.font.field_x;
+        return this.font.maxAscent + this.font.maxDescent;
     }
 
     public static void releaseStatics(int guard) {
@@ -544,14 +544,14 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           int var4 = this.contentHeight(-14072, component);
           int var6 = this.verticalAlignment;
           if (var6 == 0) {
-            var5 = this.font.field_r;
+            var5 = this.font.maxAscent;
           } else if (2 != var6) {
             if (var6 != 3 &&
               var6 == 1) {
             }
-            var5 = this.font.field_r + (-this.font.field_r + var4 - this.font.field_x >> 1);
+            var5 = this.font.maxAscent + (-this.font.maxAscent + var4 - this.font.maxDescent >> 1);
           } else {
-            var5 = var4 - this.font.field_x;
+            var5 = var4 - this.font.maxDescent;
           }
           int var6Lifetime1 = this.horizontalAlignment;
           if (var6Lifetime1 != 0 &&

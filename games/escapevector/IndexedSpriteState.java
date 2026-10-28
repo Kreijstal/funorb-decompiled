@@ -34,7 +34,7 @@ abstract class IndexedSpriteState {
           for (int var3 = 0; var3 < var1_int; var3++) {
             TriangleMesh var4_ref_ia = fh.field_e[var3];
             var4_ref_ia.updateBounds((byte) 49);
-            ee.a(var3, 103);
+            LoginMethod.a(var3, 103);
             int var5 = var4_ref_ia.maxX + var4_ref_ia.minX >> 1;
             int var6 = var4_ref_ia.minY + var4_ref_ia.maxY >> 1;
             int var7 = var4_ref_ia.minZ + var4_ref_ia.maxZ >> 1;
@@ -82,7 +82,7 @@ abstract class IndexedSpriteState {
             }
             var21[var16] = -2147483648;
             TriangleMesh var17 = fh.field_e[var16];
-            ee.a(var16, 61);
+            LoginMethod.a(var16, 61);
             for (int var18 = 0; 3 > var18; var18++) {
               TerrainMaskSupport.field_c[var18] = TerrainMaskSupport.field_c[var18] + SectorCacheStore.field_c[var15][var18];
             }
@@ -97,7 +97,7 @@ abstract class IndexedSpriteState {
         }
     }
 
-    final static void a(dk[] param0, int param1) {
+    final static void a(LegacyButton[] param0, int param1) {
         String stackIn_13_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
@@ -107,11 +107,11 @@ abstract class IndexedSpriteState {
           int[] var9 = new int[]{3170352, 8421504, 8421504};
           int[] var3 = new int[]{6340704, 16777215, 16777215};
           int[] var4 = new int[]{6340704, 16777215, 16777215};
-          dk[] var5 = param0;
+          LegacyButton[] var5 = param0;
           for (int var6 = param1; var6 < var5.length; var6++) {
-            dk var7 = var5[var6];
+            LegacyButton var7 = var5[var6];
             if (var7 != null) {
-              var7.a(var3, var9, (byte) -122, var4);
+              var7.setColors(var3, var9, (byte) -122, var4);
             }
           }
           return;

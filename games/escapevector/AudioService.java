@@ -334,7 +334,7 @@ final class AudioService implements Runnable {
                 param2 = param8[param9];
                 int incrementValue$1 = param9;
                 param9++;
-                param8[incrementValue$1] = -(ae.a(param2, 16579836) >> 2) + param2;
+                param8[incrementValue$1] = -(SpriteCheckboxPainter.bitwiseAnd(param2, 16579836) >> 2) + param2;
               }
               param5++;
             }

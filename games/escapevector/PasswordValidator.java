@@ -117,14 +117,14 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static int a(int param0, dk param1) {
+    final static int a(int param0, LegacyButton param1) {
         String stackIn_10_2 = null;
         try {
           if (param1 == null) {
             int stackIn_2_0 = 8192;
             return stackIn_2_0;
           }
-          int var2_int = param1.field_f + param1.field_p / 2;
+          int var2_int = param1.x + param1.width / 2;
           if (param0 >= -83) {
             field_p = (ResourceArchive) null;
           }

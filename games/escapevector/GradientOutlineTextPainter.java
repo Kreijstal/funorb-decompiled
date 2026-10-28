@@ -1,44 +1,44 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class re extends TextWidgetPainter {
+class GradientOutlineTextPainter extends TextWidgetPainter {
     static ValidationState field_s;
     static IntrusiveDeque field_q;
     static String[] field_r;
 
-    re(int param0) {
+    GradientOutlineTextPainter(int param0) {
         this(Js5Transport.field_a, param0);
     }
 
-    final static void d(int param0) {
+    final static void clearSharedKeyHandler(int guard) {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (null == ck.field_v) {
-          if (param0 == 2) {
+        if (null == ThreeSliceButtonPainter.field_v) {
+          if (guard == 2) {
             return;
           }
           DialogueScreen var3 = (DialogueScreen) null;
-          re.a(68, (DialogueScreen) null);
+          GradientOutlineTextPainter.enqueueDialogue(68, (DialogueScreen) null);
           return;
         }
-        Object var1 = ck.field_v;
+        Object var1 = ThreeSliceButtonPainter.field_v;
         synchronized (var1) {
-          ck.field_v = null;
+          ThreeSliceButtonPainter.field_v = null;
         }
-        if (param0 != 2) {
+        if (guard != 2) {
           DialogueScreen var3Lifetime1 = (DialogueScreen) null;
-          re.a(68, (DialogueScreen) null);
+          GradientOutlineTextPainter.enqueueDialogue(68, (DialogueScreen) null);
         }
     }
 
-    final static void a(int param0, DialogueScreen param1) {
+    final static void enqueueDialogue(int guard, DialogueScreen dialogue) {
         try {
-          mg.field_e.addLast(-12328, param1);
-          if (param0 != 1820) {
+          mg.field_e.addLast(-12328, dialogue);
+          if (guard != 1820) {
             field_r = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "re.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "re.S(" + guard + ',' + (dialogue != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -77,8 +77,8 @@ class re extends TextWidgetPainter {
         }
     }
 
-    re(BitmapFont param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_r, -1, 2147483647, false);
+    GradientOutlineTextPainter(BitmapFont param0, int param1) {
+        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
     }
 
     static {

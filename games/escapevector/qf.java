@@ -36,7 +36,7 @@ final class qf extends eo {
             sj.field_i = param13;
             jm.field_L = param6;
             ej.field_d = param3;
-            ck.field_q = param10;
+            ThreeSliceButtonPainter.field_q = param10;
             ej.field_b = param9;
             DropTargetWidget.field_D = param4;
             ac.field_b = param12;

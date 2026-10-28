@@ -19,7 +19,7 @@ final class ArchiveKeyRequest extends IntrusiveNode {
     }
 
     final static void decodeArchiveKeyResponse(boolean guard) {
-        ArchiveKeyRequest var1 = (ArchiveKeyRequest) (jl.field_n.first(guard));
+        ArchiveKeyRequest var1 = (ArchiveKeyRequest) (LegacyTextBlock.field_n.first(guard));
         if (var1 != null) {
           CipherPacketBuffer var2 = QuickChatDynamicCommand.incomingPackets;
           var1.key = new int[]{var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053)};
@@ -71,14 +71,14 @@ final class ArchiveKeyRequest extends IntrusiveNode {
     }
 
     final static void decodeAccountName(boolean guard) {
-        ck.field_r = QuickChatDynamicCommand.incomingPackets.readString(!guard ? true : false);
+        ThreeSliceButtonPainter.field_r = QuickChatDynamicCommand.incomingPackets.readString(!guard ? true : false);
         if (guard) {
-          CharSequence var3 = (CharSequence) ((Object) ck.field_r);
+          CharSequence var3 = (CharSequence) ((Object) ThreeSliceButtonPainter.field_r);
           ProgressRecord.field_k = sf.a(-101, var3);
           return;
         }
         field_h = (String) null;
-        CharSequence var2 = (CharSequence) ((Object) ck.field_r);
+        CharSequence var2 = (CharSequence) ((Object) ThreeSliceButtonPainter.field_r);
         ProgressRecord.field_k = sf.a(-101, var2);
     }
 

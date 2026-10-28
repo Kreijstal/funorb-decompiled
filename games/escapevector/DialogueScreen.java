@@ -141,7 +141,7 @@ final class DialogueScreen extends IntrusiveNode {
               var11 = stackIn_63_0;
               var12 = 88 + var10 * 20;
             } else {
-              int var14 = fh.field_g.b(var16);
+              int var14 = fh.field_g.stringWidth(var16);
               var11 = (-var14 + 640) / 2;
               if (var10 == 1 &&
                 614 - var2 < var11 + var14) {
@@ -158,7 +158,7 @@ final class DialogueScreen extends IntrusiveNode {
                 var13Lifetime2 = var17 + "_";
               }
             }
-            fh.field_g.a(var13Lifetime2, var11, var12, 8454016, -1);
+            fh.field_g.drawLeft(var13Lifetime2, var11, var12, 8454016, -1);
             if (var8 == var10) {
               break;
             }
@@ -334,7 +334,7 @@ final class DialogueScreen extends IntrusiveNode {
           }
           int stackIn_6_0 = (!this.fullWidthScene) ? 154 : 614;
           int var3_int = stackIn_6_0;
-          this.field_C = fh.field_g.a(param1, new int[]{var3_int}, this.field_x);
+          this.field_C = fh.field_g.wrapLines(param1, new int[]{var3_int}, this.field_x);
           for (int var4 = 0; this.field_C > var4; var4++) {
             if (this.field_x[var4].endsWith("<br>")) {
               this.field_x[var4] = this.field_x[var4].substring(0, -4 + this.field_x[var4].length());
@@ -580,7 +580,7 @@ final class DialogueScreen extends IntrusiveNode {
           var2 = stackIn_12_0;
         } else {
           int var6 = this.a((byte) 67);
-          int var7 = fh.field_g.b(var8);
+          int var7 = fh.field_g.stringWidth(var8);
           var2 = (640 - var7) / 2;
           if (1 == var3 &&
             626 - var6 - 12 < var7 + var2) {
@@ -588,7 +588,7 @@ final class DialogueScreen extends IntrusiveNode {
           }
         }
         String var9 = var8.substring(0, var4);
-        var2 = var2 + (fh.field_g.b(var9) + fh.field_g.a('_') / 2);
+        var2 = var2 + (fh.field_g.stringWidth(var9) + fh.field_g.charAdvance('_') / 2);
         return var2 * 12288 / 640 + 2048;
     }
 
@@ -597,11 +597,11 @@ final class DialogueScreen extends IntrusiveNode {
         if (param0 != 67) {
           boolean discarded$0 = this.a((byte) 12, 65);
         }
-        int var3 = fh.field_g.b(ig.field_c) + 9;
+        int var3 = fh.field_g.stringWidth(ig.field_c) + 9;
         if (var2 < var3) {
           var2 = var3;
         }
-        var3 = 9 + fh.field_g.b(TextFieldValidator.field_i);
+        var3 = 9 + fh.field_g.stringWidth(TextFieldValidator.field_i);
         if (var2 < var3) {
           var2 = var3;
         }
@@ -701,7 +701,7 @@ final class DialogueScreen extends IntrusiveNode {
         mm.a(param0 + 25, 4);
     }
 
-    final static void a(byte param0, java.applet.Applet param1, String param2, String param3, long param4) {
+    final static void writeCookie(byte guard, java.applet.Applet applet, String name, String value, long lifetimeSeconds) {
         try {
           String stackIn_12_2 = null;
           String stackIn_15_2 = null;
@@ -710,21 +710,21 @@ final class DialogueScreen extends IntrusiveNode {
           String var7Lifetime4;
           try {
             try {
-              String var8 = param1.getParameter("cookiehost");
+              String var8 = applet.getParameter("cookiehost");
               String var7 = var8;
               String var7Lifetime1 = var8;
-              if (param0 <= 59) {
+              if (guard <= 59) {
                 return;
               }
-              String var9 = param2 + "=" + param3 + "; version=1; path=/; domain=" + var8;
+              String var9 = name + "=" + value + "; version=1; path=/; domain=" + var8;
               String var7Lifetime2 = var9;
               String var7Lifetime3 = var9;
-              if (param4 >= 0L) {
-                var7Lifetime4 = var9 + "; Expires=" + bh.a(-100, td.b(128) + param4 * 1000L) + "; Max-Age=" + param4;
+              if (lifetimeSeconds >= 0L) {
+                var7Lifetime4 = var9 + "; Expires=" + bh.a(-100, td.b(128) + lifetimeSeconds * 1000L) + "; Max-Age=" + lifetimeSeconds;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              JavaScriptBridge.evaluateScript((byte) -111, param1, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.evaluateScript((byte) -111, applet, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var6 = decompiledCaughtException;
@@ -734,25 +734,25 @@ final class DialogueScreen extends IntrusiveNode {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_11_0 = var6_ref;
-            StringBuilder stackIn_11_1 = new StringBuilder().append("tj.G(").append(param0).append(',');
-            if (param1 == null) {
+            StringBuilder stackIn_11_1 = new StringBuilder().append("tj.G(").append(guard).append(',');
+            if (applet == null) {
               stackIn_12_2 = "null";
             } else {
               stackIn_12_2 = "{...}";
             }
             StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-            if (param2 == null) {
+            if (name == null) {
               stackIn_15_2 = "null";
             } else {
               stackIn_15_2 = "{...}";
             }
             StringBuilder stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-            if (param3 == null) {
+            if (value == null) {
               stackIn_18_2 = "null";
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+            throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(lifetimeSeconds).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

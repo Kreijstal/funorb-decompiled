@@ -119,7 +119,7 @@ final class WeightedLruCache {
         return var5;
     }
 
-    final static ih loadBitmapFont(int guard, ResourceArchive metricsArchive, int groupId, ResourceArchive glyphArchive, int fileId) {
+    final static BinaryBitmapFont loadBitmapFont(int guard, ResourceArchive metricsArchive, int groupId, ResourceArchive glyphArchive, int fileId) {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
@@ -127,11 +127,11 @@ final class WeightedLruCache {
             WeightedLruCache.releaseStatics(true);
           }
           if (uc.a(glyphArchive, 121, groupId, fileId)) {
-            ih stackIn_6_0 = DropTargetWidget.a(16826, metricsArchive.getFile(groupId, (byte) -97, fileId));
+            BinaryBitmapFont stackIn_6_0 = DropTargetWidget.a(16826, metricsArchive.getFile(groupId, (byte) -97, fileId));
             return stackIn_6_0;
           }
           Object stackIn_4_0 = null;
-          return (ih) (stackIn_4_0);
+          return (BinaryBitmapFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;

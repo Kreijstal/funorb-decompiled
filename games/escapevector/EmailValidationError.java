@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tk {
+final class EmailValidationError {
     static Sprite[] field_a;
     static qh field_b;
 
     public static void releaseStatics(int guard) {
         if (guard != 31167) {
           qh[] var2 = (qh[]) null;
-          tk.a(false, (qh[]) null);
+          EmailValidationError.a(false, (qh[]) null);
         }
         field_b = null;
         field_a = null;
@@ -16,7 +16,7 @@ final class tk {
 
     final static boolean a(int param0) {
         if (param0 != 23403) {
-          tk.releaseStatics(-66);
+          EmailValidationError.releaseStatics(-66);
         }
         return FullscreenFocusCanvas.field_e.a(false);
     }
@@ -57,25 +57,25 @@ final class tk {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendAchievementRequests(int guard, int opcode) {
         int var4 = EscapeVector.obfuscationControl;
         try {
           AchievementRecord var5 = (AchievementRecord) (RasterSnapshot.field_l.first(false));
-          int var3 = -57 / ((-46 - param0) / 51);
+          int var3 = -57 / ((-46 - guard) / 51);
           while (var5 != null) {
-            DebouncedValidator.writeAchievementRecord(var5, param1, true);
+            DebouncedValidator.writeAchievementRecord(var5, opcode, true);
             var5 = (AchievementRecord) (RasterSnapshot.field_l.next((byte) 70));
           }
           IntrusiveNode var2 = bc.field_b.first(false);
           while (var2 != null) {
-            km.a(param1, 122);
+            km.a(opcode, 122);
             var2 = bc.field_b.next((byte) 70);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "tk.A(" + param0 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) var2_ref), "tk.A(" + guard + ',' + opcode + ')');
         }
     }
 

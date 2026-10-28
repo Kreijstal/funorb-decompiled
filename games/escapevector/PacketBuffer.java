@@ -60,12 +60,12 @@ class PacketBuffer extends IntrusiveNode {
             if (var4.length() < 1) {
               return false;
             }
-            if (!fd.a(true, var4.charAt(0)) &&
-              !fd.a(true, var4.charAt(var4.length() - 1))) {
+            if (!NineSliceFrame.isNameSeparator(true, var4.charAt(0)) &&
+              !NineSliceFrame.isNameSeparator(true, var4.charAt(var4.length() - 1))) {
               int var5 = 0;
               for (int var6 = 0; var6 < text.length(); var6++) {
                 int var7 = text.charAt(var6);
-                if (fd.a(true, (char) var7)) {
+                if (NineSliceFrame.isNameSeparator(true, (char) var7)) {
                   var5++;
                 } else {
                   var5 = 0;
@@ -182,7 +182,7 @@ class PacketBuffer extends IntrusiveNode {
         if (guard >= -6) {
           field_l = (Sprite) null;
         }
-        int var3 = ae.a(this.payload, (byte) -72, this.position, start);
+        int var3 = SpriteCheckboxPainter.crc32(this.payload, (byte) -72, this.position, start);
         this.writeInt((byte) 126, var3);
         return var3;
     }
@@ -560,7 +560,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyCrc32(int start) {
         this.position = this.position - 4;
-        int var2 = ae.a(this.payload, (byte) -50, this.position, start);
+        int var2 = SpriteCheckboxPainter.crc32(this.payload, (byte) -50, this.position, start);
         int var3 = this.readInt(-5053);
         if (var3 != var2) {
           return false;

@@ -31,14 +31,14 @@ final class fc {
     final static void a(int param0) {
         ei.field_i = false;
         if (param0 == 3161) {
-          eb.field_H = false;
+          DialWidget.field_H = false;
           WhirlpoolHasher.a(-1, param0 - 3109);
           dn.field_q = RasterBuffer.field_g;
           ui.field_b = RasterBuffer.field_g;
           return;
         }
         field_a = -26;
-        eb.field_H = false;
+        DialWidget.field_H = false;
         WhirlpoolHasher.a(-1, param0 - 3109);
         dn.field_q = RasterBuffer.field_g;
         ui.field_b = RasterBuffer.field_g;

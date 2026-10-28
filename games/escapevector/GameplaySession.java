@@ -1124,7 +1124,7 @@ final class GameplaySession {
             if (var18 == null) {
               param0 = param0 + 640 * (-param6 + param4);
               for (int var12 = param5; param2 > var12; var12++) {
-                param8[var12] = ae.a(255, (param7 << 5) + var12);
+                param8[var12] = SpriteCheckboxPainter.bitwiseAnd(255, (param7 << 5) + var12);
               }
             } else {
               int[] var12_ref_int__ = PcmResampler.field_a[this.terrainTheme].pixels;
@@ -1180,7 +1180,7 @@ final class GameplaySession {
                     int stackIn_28_1Lifetime1 = ~(1 & var14Lifetime1 >>> var19);
                     boolean decompiledFrameRemainder0 = true;
                     if (stackIn_28_0Lifetime1 == stackIn_28_1Lifetime1) {
-                      param8[var19] = ae.a(var19 + (param7 << 5), 255);
+                      param8[var19] = SpriteCheckboxPainter.bitwiseAnd(var19 + (param7 << 5), 255);
                     } else if (param8[var19] < 3840) {
                       if (param0 + var19 >= 0 &&
                         var11 != null) {
@@ -1232,24 +1232,24 @@ final class GameplaySession {
           LevelObject.a(1, (byte) -86);
         }
         if (this.levelIndex == 0) {
-          DialogueScreen var3 = new DialogueScreen(BoundedRandomAccessFile.field_c, ae.field_c, se.field_a, false);
-          re.a(1820, var3);
+          DialogueScreen var3 = new DialogueScreen(BoundedRandomAccessFile.field_c, SpriteCheckboxPainter.field_c, se.field_a, false);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var3);
         }
         if (2 == this.levelIndex) {
-          DialogueScreen var4 = new DialogueScreen(bg.field_c, ae.field_c, ae.field_e, false);
-          re.a(1820, var4);
+          DialogueScreen var4 = new DialogueScreen(bg.field_c, SpriteCheckboxPainter.field_c, SpriteCheckboxPainter.field_e, false);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var4);
         }
         if (4 == this.levelIndex) {
-          DialogueScreen var5 = new DialogueScreen(DynamicTerrainRenderer.field_i, ae.field_c, co.field_e, false);
-          re.a(1820, var5);
+          DialogueScreen var5 = new DialogueScreen(DynamicTerrainRenderer.field_i, SpriteCheckboxPainter.field_c, co.field_e, false);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var5);
         }
         if (guard == ~this.levelIndex) {
-          DialogueScreen var6 = new DialogueScreen(UiContainer.field_F, ae.field_c, me.field_g, false);
-          re.a(guard + 1829, var6);
+          DialogueScreen var6 = new DialogueScreen(UiContainer.field_F, SpriteCheckboxPainter.field_c, LegacyMenuColumn.field_g, false);
+          GradientOutlineTextPainter.enqueueDialogue(guard + 1829, var6);
         }
         if (this.levelIndex == 12) {
-          DialogueScreen var7 = new DialogueScreen(TextLayoutLine.field_c, ae.field_c, SeekerPulseStream.field_t, false);
-          re.a(1820, var7);
+          DialogueScreen var7 = new DialogueScreen(TextLayoutLine.field_c, SpriteCheckboxPainter.field_c, SeekerPulseStream.field_t, false);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var7);
         }
     }
 
@@ -1495,7 +1495,7 @@ final class GameplaySession {
         String stackIn_7_2 = null;
         try {
           boolean var3_int = (this.usesDynamicTerrain(8192));
-          PointCloudEffect var4 = ee.a(object, 14, (var3_int));
+          PointCloudEffect var4 = LoginMethod.a(object, 14, (var3_int));
           this.pointCloudEffects.addLast(-12328, var4);
           if (guard != 42) {
             field_xb = (int[]) null;
@@ -1623,20 +1623,20 @@ final class GameplaySession {
         }
         int var2 = 95 / ((51 - guard) / 36);
         if (this.levelIndex < 2) {
-          DialogueScreen var5 = new DialogueScreen(BoundedRandomAccessFile.field_c, ae.field_c, se.field_a, false);
-          re.a(1820, var5);
+          DialogueScreen var5 = new DialogueScreen(BoundedRandomAccessFile.field_c, SpriteCheckboxPainter.field_c, se.field_a, false);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var5);
         } else if (this.levelIndex < 4) {
-          DialogueScreen var6 = new DialogueScreen(bg.field_c, ae.field_c, ae.field_e, false);
-          re.a(1820, var6);
+          DialogueScreen var6 = new DialogueScreen(bg.field_c, SpriteCheckboxPainter.field_c, SpriteCheckboxPainter.field_e, false);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var6);
         } else if (this.levelIndex < 8) {
-          DialogueScreen var7 = new DialogueScreen(DynamicTerrainRenderer.field_i, ae.field_c, co.field_e, false);
-          re.a(1820, var7);
+          DialogueScreen var7 = new DialogueScreen(DynamicTerrainRenderer.field_i, SpriteCheckboxPainter.field_c, co.field_e, false);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var7);
         } else if (this.levelIndex < 12) {
-          DialogueScreen var8 = new DialogueScreen(UiContainer.field_F, ae.field_c, me.field_g, false);
-          re.a(1820, var8);
+          DialogueScreen var8 = new DialogueScreen(UiContainer.field_F, SpriteCheckboxPainter.field_c, LegacyMenuColumn.field_g, false);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var8);
         } else {
-          DialogueScreen var9 = new DialogueScreen(TextLayoutLine.field_c, ae.field_c, SeekerPulseStream.field_t, false);
-          re.a(1820, var9);
+          DialogueScreen var9 = new DialogueScreen(TextLayoutLine.field_c, SpriteCheckboxPainter.field_c, SeekerPulseStream.field_t, false);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var9);
         }
     }
 
@@ -1678,7 +1678,7 @@ final class GameplaySession {
         if (var17 == null) {
           param5 = param5 + (-param2 + param6) * 640;
         } else {
-          Sprite var10 = tk.field_a[this.terrainTheme];
+          Sprite var10 = EmailValidationError.field_a[this.terrainTheme];
           int[] var11 = var10.pixels;
           int var12 = (param1 << 5) % var10.width + (param2 + (param3 << 5)) % var10.height * var10.width;
           if (QuickChatPhraseDefinition.fullTileMask == var17) {
@@ -1838,7 +1838,7 @@ final class GameplaySession {
           } else if (this.hasShipReachedExit(true)) {
             this.levelEnded = true;
             pl.field_n.playSampleWithPan(gm.field_b, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
-            this.showHudMessage(objectiveType ^ -101, jl.field_c);
+            this.showHudMessage(objectiveType ^ -101, LegacyTextBlock.field_c);
           }
         }
     }
@@ -1940,9 +1940,9 @@ final class GameplaySession {
 
     private final void queueCampaignConclusion(int guard) {
         if (EmailSyntaxValidator.a(this.gameMode, -2)) {
-          DialogueScreen var2 = new DialogueScreen(SpriteOffset.field_e, ae.field_c, mb.field_b, true);
+          DialogueScreen var2 = new DialogueScreen(SpriteOffset.field_e, SpriteCheckboxPainter.field_c, mb.field_b, true);
           var2.field_m = false;
-          re.a(1820, var2);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var2);
         }
         if (~this.gameMode == guard) {
           String var2_ref = "vengeance_concl";
@@ -1950,7 +1950,7 @@ final class GameplaySession {
           Sprite[] var4 = ug.field_a;
           String[] var5 = IntValueNode.field_h;
           DialogueScreen var6 = new DialogueScreen(var2_ref, var3, var4, var5, true);
-          re.a(1820, var6);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var6);
         }
     }
 
@@ -2188,9 +2188,9 @@ final class GameplaySession {
                 var3_ref_ed.height = 60;
                 this.noticeSprite.g();
                 SoftwareRasterizer.clearFramebuffer();
-                fh.field_g.c(SeekerMine.field_k[3 * this.tutorialStep], 319, 20, 16777215, -1);
-                fh.field_g.c(SeekerMine.field_k[this.tutorialStep * 3 + 1], 319, 40, 16777215, -1);
-                fh.field_g.c(SeekerMine.field_k[2 + this.tutorialStep * 3], 319, 60, 16777215, -1);
+                fh.field_g.drawCentered(SeekerMine.field_k[3 * this.tutorialStep], 319, 20, 16777215, -1);
+                fh.field_g.drawCentered(SeekerMine.field_k[this.tutorialStep * 3 + 1], 319, 40, 16777215, -1);
+                fh.field_g.drawCentered(SeekerMine.field_k[2 + this.tutorialStep * 3], 319, 60, 16777215, -1);
                 md.field_D.a(126);
               }
             }
@@ -2240,8 +2240,8 @@ final class GameplaySession {
             for (int var4 = 0; var4 < this.displayedAchievementCount; var4++) {
               int var5 = this.displayedAchievementIds[var4];
               RasterSnapshot.field_m[var5].e(var3, 4);
-              int var6 = 39 - fh.field_g.a(CachedArchiveProvider.field_r[var5], 100) * 10;
-              fh.field_g.a(CachedArchiveProvider.field_r[var5], var3 + 40, var6 - fh.field_g.field_r, 100, 1000, 16777215, -1, 0, 0, 20);
+              int var6 = 39 - fh.field_g.wrappedLineCount(CachedArchiveProvider.field_r[var5], 100) * 10;
+              fh.field_g.drawParagraph(CachedArchiveProvider.field_r[var5], var3 + 40, var6 - fh.field_g.maxAscent, 100, 1000, 16777215, -1, 0, 0, 20);
               var3 += 160;
             }
             md.field_D.a(113);
@@ -2474,7 +2474,7 @@ final class GameplaySession {
 
     private final void drawTerrainBase(int cameraY, int cameraX, byte guard) {
         int var10 = EscapeVector.obfuscationControl;
-        if (tk.field_a[this.terrainTheme] == null) {
+        if (EmailValidationError.field_a[this.terrainTheme] == null) {
           return;
         }
         if (guard >= -53) {
@@ -2637,11 +2637,11 @@ final class GameplaySession {
         if (this.timeHackMode) {
           this.elapsedTicks = this.levelStartTicks;
         }
-        ck.a(111, -this.collectedPowerupCount);
+        ThreeSliceButtonPainter.a(111, -this.collectedPowerupCount);
         ReflectionCheck.a(-this.destructionAchievementCount, (byte) 44);
         this.destructionAchievementCount = this.previousLevelDestructionCount;
         this.collectedPowerupCount = this.previousLevelPowerupCount;
-        ck.a(77, this.previousLevelPowerupCount);
+        ThreeSliceButtonPainter.a(77, this.previousLevelPowerupCount);
         ReflectionCheck.a(this.previousLevelDestructionCount, (byte) 44);
         if (0 <= this.levelIndex) {
           this.shieldUsedThisLevel = false;
@@ -2677,7 +2677,7 @@ final class GameplaySession {
           if (guard != 5) {
             this.bullets = (IntrusiveDeque) null;
           }
-          this.spawnExplosion(125, mine.yQ16, ve.field_d, mine.xQ16);
+          this.spawnExplosion(125, mine.yQ16, MarkerSliderPainter.field_d, mine.xQ16);
           mine.unlink((byte) -11);
           this.recordDestructionForAchievement((byte) -128);
         } catch (RuntimeException runtimeException) {
@@ -2829,7 +2829,7 @@ final class GameplaySession {
         if (this.gameMode != 2) {
           return;
         }
-        Sprite[] var12 = ae.field_c;
+        Sprite[] var12 = SpriteCheckboxPainter.field_c;
         if (this.levelIndex == 0) {
           LevelObject.a(2, (byte) -116);
         }
@@ -2841,25 +2841,25 @@ final class GameplaySession {
           int[] var32 = uj.field_e;
           String[] var13 = lh.field_c;
           DialogueScreen var14 = new DialogueScreen(var32, var12, var13, false);
-          re.a(1820, var14);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var14);
         }
         if (4 == this.levelIndex) {
           int[] var33 = p.field_j;
           String[] var16 = HudMessage.field_j;
           DialogueScreen var17 = new DialogueScreen(var33, var12, var16, false);
-          re.a(1820, var17);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var17);
         }
         if (this.levelIndex == 8) {
           int[] var34 = ha.field_e;
           String[] var19 = pc.field_b;
           DialogueScreen var20 = new DialogueScreen(var34, var12, var19, false);
-          re.a(1820, var20);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var20);
         }
         if (this.levelIndex == 12) {
           int[] var35 = w.field_bb;
           String[] var22 = vd.field_i;
           DialogueScreen var23 = new DialogueScreen(var35, var12, var22, false);
-          re.a(1820, var23);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var23);
         }
     }
 
@@ -3055,7 +3055,7 @@ final class GameplaySession {
         mj.field_b.g();
         SoftwareRasterizer.clearFramebuffer();
         String var3 = TrackerMusicDefinition.a((byte) 120, this.gameMode, this.levelIndex);
-        fh.field_g.c(var3, 160, 22, 7899280, -1);
+        fh.field_g.drawCentered(var3, 160, 22, 7899280, -1);
         md.field_D.a(126);
         cf.a(mj.field_b, true, 1);
         mj.field_b.h(5267536);
@@ -3206,7 +3206,7 @@ final class GameplaySession {
         int var11 = EscapeVector.obfuscationControl;
         if (!this.areTerrainAssetsReady((byte) 59)) {
           SoftwareRasterizer.clearFramebuffer();
-          fh.field_g.c(this.terrainLoadingMessage(4251), 320, 250, 16777215, -1);
+          fh.field_g.drawCentered(this.terrainLoadingMessage(4251), 320, 250, 16777215, -1);
           return;
         }
         int var2 = this.usesDynamicTerrain(8192) ? 1 : 0;
@@ -3333,7 +3333,7 @@ final class GameplaySession {
           this.drawGameOverOverlay((byte) -76);
           if (0 < this.hudMessageTicks &&
             this.hudMessageTicks <= 100) {
-            fh.field_g.b(this.hudMessageText, 320, 174 + (this.hudMessageTicks >> 1), 16777215, -1, (this.hudMessageTicks << 8) / 100);
+            fh.field_g.drawCenteredAlpha(this.hudMessageText, 320, 174 + (this.hudMessageTicks >> 1), 16777215, -1, (this.hudMessageTicks << 8) / 100);
           }
         }
         if (this.transitionTicks > 0) {
@@ -3474,7 +3474,7 @@ final class GameplaySession {
             for (int var5Lifetime3 = 512; var5Lifetime3 < 768; var5Lifetime3 += 32) {
               mj.field_f.e(var5Lifetime3 + var4, 96 - cameraY);
             }
-            kn.field_h.e(var4 + 768, 96 - cameraY);
+            GrowableIntList.field_h.e(var4 + 768, 96 - cameraY);
             SoftwareRasterizer.c();
             uf.field_e.e(var4 + 448, -cameraY);
             wa.field_b.e(544 + var4, -cameraY);
@@ -3490,7 +3490,7 @@ final class GameplaySession {
             for (int var5Lifetime5 = 256; var5Lifetime5 < 768; var5Lifetime5 += 32) {
               EmailAvailabilityValidator.field_r.e(var5Lifetime5 + var4, -cameraY + 1024);
             }
-            q.field_G.e(768 + var4, -cameraY + 1024);
+            MarkerSlider.field_G.e(768 + var4, -cameraY + 1024);
             var4 += 1024;
           }
         }
@@ -3623,7 +3623,7 @@ final class GameplaySession {
         int[] var14 = new int[32];
         int[] var18 = var14;
         for (int var10 = param4; param7 > var10; var10++) {
-          var14[var10] = ae.a((param0 << 5) + var10, 255);
+          var14[var10] = SpriteCheckboxPainter.bitwiseAnd((param0 << 5) + var10, 255);
         }
         int var10Lifetime1 = 15 - param2 + (param1 << 5);
         int var11 = -param5 + ((param0 << 5) - 9600);
@@ -4757,7 +4757,7 @@ final class GameplaySession {
                     15 >= var13_int &&
                     var12 >= -64 &&
                     var12 <= 64) {
-                    var4_refLifetime1 = fd.field_e;
+                    var4_refLifetime1 = NineSliceFrame.field_e;
                   }
                 }
               }
@@ -5314,17 +5314,17 @@ final class GameplaySession {
         int stackIn_16_0 = 0;
         int stackIn_44_0 = 0;
         int stackIn_48_4 = 0;
-        ih var13 = fh.field_g;
-        int var3 = var13.b(di.field_b);
-        int var4 = var13.b(TextWidgetPainter.field_p);
+        BinaryBitmapFont var13 = fh.field_g;
+        int var3 = var13.stringWidth(di.field_b);
+        int var4 = var13.stringWidth(TextWidgetPainter.field_p);
         if (var4 > var3) {
           var3 = var4;
         }
-        int var5 = var13.b("0000");
+        int var5 = var13.stringWidth("0000");
         int var6 = 40;
         int var7 = 18;
         if (0 < this.rockBusterAmmo) {
-          int var4Lifetime1 = var13.b(FullscreenFocusCanvas.field_f);
+          int var4Lifetime1 = var13.stringWidth(FullscreenFocusCanvas.field_f);
           var6 = var6 + var7;
           if (var3 < var4Lifetime1) {
             var3 = var4Lifetime1;
@@ -5332,7 +5332,7 @@ final class GameplaySession {
         }
         if (this.objectiveType == 1) {
           var6 = var6 + var7;
-          int var4Lifetime2 = var13.b(IntrusiveNode.field_f);
+          int var4Lifetime2 = var13.stringWidth(IntrusiveNode.field_f);
           if (var3 < var4Lifetime2) {
             var3 = var4Lifetime2;
           }
@@ -5349,15 +5349,15 @@ final class GameplaySession {
         }
         GameAppletShell.a(var9, -4, -4, 6320248, -2, var6 + 6, guard ^ -2, var5 + var3 + 6 + 10, 12110032, 3160124, 2 * var8);
         int var10 = 22;
-        var13.b(di.field_b, var3 + 6, var10, 10004656, -1);
-        var13.a(Integer.toString(this.fuel), 6 + var3, var10, 16777215, -1);
+        var13.drawRight(di.field_b, var3 + 6, var10, 10004656, -1);
+        var13.drawLeft(Integer.toString(this.fuel), 6 + var3, var10, 16777215, -1);
         var10 = var10 + var7;
-        var13.b(TextWidgetPainter.field_p, var3 + 6, var10, 10004656, -1);
-        var13.a(Integer.toString(this.shieldEnergy + this.shieldEnergy), 6 + var3, var10, 16777215, -1);
+        var13.drawRight(TextWidgetPainter.field_p, var3 + 6, var10, 10004656, -1);
+        var13.drawLeft(Integer.toString(this.shieldEnergy + this.shieldEnergy), 6 + var3, var10, 16777215, -1);
         var10 = var10 + var7;
         if (this.rockBusterAmmo > 0) {
-          var13.b(FullscreenFocusCanvas.field_f, var3 + 6, var10, 10004656, -1);
-          var13.a(Integer.toString(this.rockBusterAmmo), 6 + var3, var10, 16777215, -1);
+          var13.drawRight(FullscreenFocusCanvas.field_f, var3 + 6, var10, 10004656, -1);
+          var13.drawLeft(Integer.toString(this.rockBusterAmmo), 6 + var3, var10, 16777215, -1);
           var10 = var10 + var7;
         }
         if (this.objectiveType == 1) {
@@ -5365,39 +5365,39 @@ final class GameplaySession {
           if (this.missionTargets != null) {
             var11_int = this.missionTargets.size((byte) 49);
           }
-          var13.b(IntrusiveNode.field_f, 6 + var3, var10, 10004656, -1);
-          var13.a(Integer.toString(var11_int), var3 + 6, var10, 16777215, -1);
+          var13.drawRight(IntrusiveNode.field_f, 6 + var3, var10, 10004656, -1);
+          var13.drawLeft(Integer.toString(var11_int), var3 + 6, var10, 16777215, -1);
           var10 = var10 + var7;
         }
-        int var3Lifetime1 = var13.b(jf.field_K);
-        int var4Lifetime3 = var13.b(vd.field_c);
-        int var5Lifetime1 = var13.b(Integer.toString(this.levelIndex + 1));
+        int var3Lifetime1 = var13.stringWidth(jf.field_K);
+        int var4Lifetime3 = var13.stringWidth(vd.field_c);
+        int var5Lifetime1 = var13.stringWidth(Integer.toString(this.levelIndex + 1));
         if (var3Lifetime1 < var4Lifetime3) {
           var3Lifetime1 = var4Lifetime3;
         }
-        int var4Lifetime4 = var13.b(Integer.toString(this.livesRemaining));
+        int var4Lifetime4 = var13.stringWidth(Integer.toString(this.livesRemaining));
         if (var5Lifetime1 < var4Lifetime4) {
           var5Lifetime1 = var4Lifetime4;
         }
         int var6Lifetime1 = 40;
         String var11 = this.formatSessionTime(true);
         var6Lifetime1 += 18;
-        int var4Lifetime5 = var13.b(ShipHullGeometry.field_a);
+        int var4Lifetime5 = var13.stringWidth(ShipHullGeometry.field_a);
         if (var4Lifetime5 > var3Lifetime1) {
           var3Lifetime1 = var4Lifetime5;
         }
-        int var4Lifetime6 = var13.b(Integer.toString(this.levelScore + this.score));
+        int var4Lifetime6 = var13.stringWidth(Integer.toString(this.levelScore + this.score));
         if (var5Lifetime1 < var4Lifetime6) {
           var5Lifetime1 = var4Lifetime6;
         }
         if (SpriteState.field_r ||
           this.countdownActive) {
           var6Lifetime1 += 18;
-          int var4Lifetime7 = var13.b(CheckboxPainter.field_f);
+          int var4Lifetime7 = var13.stringWidth(CheckboxPainter.field_f);
           if (var3Lifetime1 < var4Lifetime7) {
             var3Lifetime1 = var4Lifetime7;
           }
-          int var4Lifetime7Lifetime1 = var13.b(var11);
+          int var4Lifetime7Lifetime1 = var13.stringWidth(var11);
           if (var5Lifetime1 < var4Lifetime7Lifetime1) {
             var5Lifetime1 = var4Lifetime7Lifetime1;
           }
@@ -5410,23 +5410,23 @@ final class GameplaySession {
         }
         int var9Lifetime1 = stackIn_44_0;
         GameAppletShell.a(var9Lifetime1, 634 - var5Lifetime1 - var3Lifetime1 - 10, -4, 6320248, -2, var6Lifetime1 + 6, -3, 644, 12110032, 3160124, var8Lifetime1 * 2);
-        var13.b(jf.field_K, -var5Lifetime1 + 634, 22, 10004656, -1);
-        var13.a(Integer.toString(this.levelIndex + 1), -var5Lifetime1 + 634, 22, 16777215, -1);
-        var13.b(vd.field_c, -var5Lifetime1 + 634, 40, 10004656, -1);
-        var13.a(Integer.toString(this.livesRemaining), -var5Lifetime1 + 634, 40, 16777215, -1);
-        var13.b(ShipHullGeometry.field_a, -var5Lifetime1 + 634, 58, 10004656, -1);
-        ih stackIn_47_0 = var13;
+        var13.drawRight(jf.field_K, -var5Lifetime1 + 634, 22, 10004656, -1);
+        var13.drawLeft(Integer.toString(this.levelIndex + 1), -var5Lifetime1 + 634, 22, 16777215, -1);
+        var13.drawRight(vd.field_c, -var5Lifetime1 + 634, 40, 10004656, -1);
+        var13.drawLeft(Integer.toString(this.livesRemaining), -var5Lifetime1 + 634, 40, 16777215, -1);
+        var13.drawRight(ShipHullGeometry.field_a, -var5Lifetime1 + 634, 58, 10004656, -1);
+        BinaryBitmapFont stackIn_47_0 = var13;
         String stackIn_47_1 = Integer.toString(this.score + this.levelScore);
         int stackIn_47_2 = -var5Lifetime1 + 634;
         int stackIn_47_3 = 58;
         stackIn_48_4 = (!this.timeHackMode &&
           !this.scoringEnabled) ? (4227327) : (16777215);
-        ((ih) (Object) stackIn_47_0).a(stackIn_47_1, stackIn_47_2, stackIn_47_3, stackIn_48_4, -1);
+        ((BinaryBitmapFont) (Object) stackIn_47_0).drawLeft(stackIn_47_1, stackIn_47_2, stackIn_47_3, stackIn_48_4, -1);
         if (SpriteState.field_r ||
           this.countdownActive) {
           int var12 = this.countdownColor((byte) 114, 50, 16777215, 16711680);
-          var13.b(CheckboxPainter.field_f, -var5Lifetime1 + 634, 76, 10004656, -1);
-          var13.a(var11, -var5Lifetime1 + 634, 76, var12, -1);
+          var13.drawRight(CheckboxPainter.field_f, -var5Lifetime1 + 634, 76, 10004656, -1);
+          var13.drawLeft(var11, -var5Lifetime1 + 634, 76, var12, -1);
         }
     }
 
@@ -5459,7 +5459,7 @@ final class GameplaySession {
           ScoreSubmission.field_h[84]) {
           return true;
         }
-        if (ScoreSubmission.field_h[jl.field_a]) {
+        if (ScoreSubmission.field_h[LegacyTextBlock.field_a]) {
           return true;
         }
         if (ScoreSubmission.field_h[86]) {
@@ -5662,27 +5662,27 @@ final class GameplaySession {
         if (guard != 10974) {
           this.queueCampaignConclusion(-55);
         }
-        Sprite[] var12 = ae.field_c;
+        Sprite[] var12 = SpriteCheckboxPainter.field_c;
         if (this.levelIndex < 4) {
           int[] var35 = uj.field_e;
           String[] var22 = lh.field_c;
           DialogueScreen var23 = new DialogueScreen(var35, var12, var22, false);
-          re.a(1820, var23);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var23);
         } else if (this.levelIndex < 8) {
           int[] var34 = p.field_j;
           String[] var19 = HudMessage.field_j;
           DialogueScreen var20 = new DialogueScreen(var34, var12, var19, false);
-          re.a(1820, var20);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var20);
         } else if (this.levelIndex < 12) {
           int[] var33 = ha.field_e;
           String[] var16 = pc.field_b;
           DialogueScreen var17 = new DialogueScreen(var33, var12, var16, false);
-          re.a(1820, var17);
+          GradientOutlineTextPainter.enqueueDialogue(1820, var17);
         } else {
           int[] var32 = w.field_bb;
           String[] var13 = vd.field_i;
           DialogueScreen var14 = new DialogueScreen(var32, var12, var13, false);
-          re.a(guard - 9154, var14);
+          GradientOutlineTextPainter.enqueueDialogue(guard - 9154, var14);
         }
     }
 
@@ -5862,7 +5862,7 @@ final class GameplaySession {
           this.queueHudMessage(164, (byte) 127, tf.field_i);
         }
         if (1 == this.objectiveType) {
-          this.queueHudMessage(164, (byte) 92, gl.field_r);
+          this.queueHudMessage(164, (byte) 92, PairedTextColumns.field_r);
         }
         if (guard) {
           this.destroyLevelObjectAtPoint(70, -118, 0);
@@ -6190,7 +6190,7 @@ final class GameplaySession {
             var30 = se.field_b.field_b;
             var29 = se.field_b.field_b;
           }
-          ShipHullGeometry var32 = ae.field_b;
+          ShipHullGeometry var32 = SpriteCheckboxPainter.field_b;
           var32.cameraOrigin.set(cameraX, color ^ 65913, cameraY);
           var32.nose.set(var13, 126, var15);
           var32.centerNotch.set(var14, color ^ 65914, var16);

@@ -8,7 +8,7 @@ final class of {
     static ValidationState field_f;
     static boolean field_b;
     static Sprite field_a;
-    static fd field_g;
+    static NineSliceFrame field_g;
     static PcmSample field_h;
 
     final static Sprite a(int param0, byte param1, int param2) {
@@ -120,12 +120,12 @@ final class of {
         if (param0) {
           of.releaseStatics(89);
         }
-        gi.field_e = null;
-        gn.field_k = null;
-        qe.field_a = (byte[][]) null;
-        bc.field_a = null;
-        qk.field_f = null;
-        qh.field_k = null;
+        gi.spriteOffsetYs = null;
+        gn.spriteOffsetXs = null;
+        qe.spriteIndices = (byte[][]) null;
+        bc.spriteHeights = null;
+        qk.spritePalette = null;
+        qh.spriteWidths = null;
     }
 
     final static int a(byte param0) {

@@ -9,7 +9,7 @@ abstract class DebouncedValidator implements ValidationSource {
 
     public final ValidationState validationState(int guard) {
         if (this.isEmpty(-107)) {
-          return re.field_s;
+          return GradientOutlineTextPainter.field_s;
         }
         if (guard != 17124) {
           DebouncedValidator.a(false, true);
@@ -35,7 +35,7 @@ abstract class DebouncedValidator implements ValidationSource {
         return this.evaluateMessage((byte) 125);
     }
 
-    final static int a(int param0, int param1, dk[] param2, int param3) {
+    final static int a(int param0, int param1, LegacyButton[] param2, int param3) {
         String stackIn_17_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
@@ -43,13 +43,13 @@ abstract class DebouncedValidator implements ValidationSource {
             int stackIn_3_0 = -1;
             return stackIn_3_0;
           }
-          dk[] var4 = param2;
+          LegacyButton[] var4 = param2;
           int var6 = -90 % ((param1 + 58) / 32);
           for (int var5 = 0; var4.length > var5; var5++) {
-            dk var7 = var4[var5];
+            LegacyButton var7 = var4[var5];
             if (var7 != null &&
-              var7.a((byte) 65, param3, param0)) {
-              int stackIn_10_0 = var7.field_c;
+              var7.hitTest((byte) 65, param3, param0)) {
+              int stackIn_10_0 = var7.actionId;
               return stackIn_10_0;
             }
           }

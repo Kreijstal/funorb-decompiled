@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class un extends re {
+final class un extends GradientOutlineTextPainter {
     static int[] field_t;
     static boolean field_u;
 
@@ -44,7 +44,7 @@ final class un extends re {
         String stackIn_34_2 = null;
         int var13 = EscapeVector.obfuscationControl;
         try {
-          int var5_int = param2.b(param4);
+          int var5_int = param2.stringWidth(param4);
           if (param3 >= var5_int &&
             -1 == param4.indexOf("<br>")) {
             args[0] = param4;
@@ -61,7 +61,7 @@ final class un extends re {
             if (var10 == 32 ||
               var10 == 45) {
               String var11 = param4.substring(var7, 1 + var9).trim();
-              int var12 = param2.b(var11);
+              int var12 = param2.stringWidth(var11);
               if (var12 >= param3) {
                 var7 = 1 + var9;
                 int incrementValue$1 = var6Lifetime1;
@@ -127,13 +127,13 @@ final class un extends re {
         return -sl.field_a + td.b(128);
     }
 
-    final static int a(ih param0, int param1) {
+    final static int a(BinaryBitmapFont param0, int param1) {
         String stackIn_7_2 = null;
         try {
           if (param1 != 31512) {
             field_u = false;
           }
-          int stackIn_3_0 = param0.field_r + param0.field_x;
+          int stackIn_3_0 = param0.maxAscent + param0.maxDescent;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

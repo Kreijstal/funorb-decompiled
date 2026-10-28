@@ -20,7 +20,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             if (var3 != null) {
               if (var3.validationState(17124) == IsaacRandom.field_h &&
                 !text.equals(this.field_o.text)) {
-                String stackIn_7_0 = me.field_n;
+                String stackIn_7_0 = LegacyMenuColumn.field_n;
                 return stackIn_7_0;
               }
               String stackIn_9_0 = var3.validationMessage(54);
@@ -31,7 +31,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (text.equals(this.field_o.text)) {
             return null;
           }
-          String stackIn_13_0 = me.field_n;
+          String stackIn_13_0 = LegacyMenuColumn.field_n;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -151,7 +151,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     final static void a(int param0, String param1, int param2, int param3, int param4) {
         mj.field_b.g();
         SoftwareRasterizer.clearFramebuffer();
-        fh.field_g.c(param1, 160, 22, param2, -1);
+        fh.field_g.drawCentered(param1, 160, 22, param2, -1);
         md.field_D.a(122);
         cf.a(mj.field_b, true, 1);
         if (param3 > -109) {

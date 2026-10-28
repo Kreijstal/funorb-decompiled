@@ -6,13 +6,13 @@ import java.io.*;
 final class ac {
     static String field_a;
     static String field_d;
-    static ih field_c;
+    static BinaryBitmapFont field_c;
     static int field_b;
 
     final static void a(int param0, int param1) {
         dj.a(6445);
         if (param0 != 25972) {
-          field_c = (ih) null;
+          field_c = (BinaryBitmapFont) null;
         }
     }
 
@@ -83,13 +83,13 @@ final class ac {
         int var2 = 0;
         int var4 = EscapeVector.obfuscationControl;
         try {
-          Object var1 = ck.field_v;
+          Object var1 = ThreeSliceButtonPainter.field_v;
           synchronized (var1) {
             if (param0 != 28087) {
               field_b = -95;
             }
             ui.field_e = ui.field_e + 1;
-            ve.field_l = ta.field_w;
+            MarkerSliderPainter.field_l = ta.field_w;
             if (Js5Transport.field_b < 0) {
               int var5 = 0;
               var2 = var5;

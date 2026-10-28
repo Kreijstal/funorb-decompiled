@@ -24,7 +24,7 @@ final class uf {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, byte param2) {
         try {
-          ck.field_x = param0;
+          ThreeSliceButtonPainter.field_x = param0;
           pc.field_e = param1;
           if (param2 != -96) {
             uf.a(-27);
@@ -50,11 +50,11 @@ final class uf {
           int var6 = this.field_l + this.field_r;
           int var7 = this.field_q;
           if (var7 == -1) {
-            var7 = this.field_d.field_x + this.field_d.field_r;
+            var7 = this.field_d.maxDescent + this.field_d.maxAscent;
           }
           int var8 = SoftwareRasterizer.width >> 2;
-          int var9 = this.field_d.b(param3);
-          int var10 = this.field_d.field_x + this.field_d.field_r;
+          int var9 = this.field_d.stringWidth(param3);
+          int var10 = this.field_d.maxDescent + this.field_d.maxAscent;
           int var11 = 1;
           if (var8 < var9 ||
             param3.indexOf("<br>") != -1) {
@@ -67,11 +67,11 @@ final class uf {
             if (null == co.field_c) {
               co.field_c = new String[16];
             }
-            int var11Lifetime1 = this.field_d.a(param3, new int[]{var12}, co.field_c);
+            int var11Lifetime1 = this.field_d.wrapLines(param3, new int[]{var12}, co.field_c);
             var9 = 0;
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             for (int var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              int var14 = this.field_d.b(co.field_c[var13Lifetime2]);
+              int var14 = this.field_d.stringWidth(co.field_c[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -81,7 +81,7 @@ final class uf {
           if (var9 + var12 + var5_int > SoftwareRasterizer.width) {
             var12 = SoftwareRasterizer.width - var9 - var5_int;
           }
-          int var13Lifetime1 = 32 + (-this.field_d.field_N + param2);
+          int var13Lifetime1 = 32 + (-this.field_d.capHeight + param2);
           if (var6 + (var13Lifetime1 + var10) > SoftwareRasterizer.height) {
             var13Lifetime1 = -var10 + (param2 - var6);
           }
@@ -90,7 +90,7 @@ final class uf {
           if (param1 <= 2) {
             return;
           }
-          this.field_d.a(param3, var12 + this.field_f, this.field_l + var13Lifetime1, var9, var10, this.field_c, -1, 0, 0, var7);
+          this.field_d.drawParagraph(param3, var12 + this.field_f, this.field_l + var13Lifetime1, var9, var10, this.field_c, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,7 +125,7 @@ final class uf {
         try {
           ha.field_a = param2;
           ei.field_i = true;
-          be.field_b = new pn(bo.field_F, dl.field_b, param1, eb.field_H, ha.field_a);
+          be.field_b = new pn(bo.field_F, dl.field_b, param1, DialWidget.field_H, ha.field_a);
           bo.field_F.b(be.field_b, 77);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "uf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -144,7 +144,7 @@ final class uf {
     final void a(int param0, BitmapFont param1) {
         int var15 = EscapeVector.obfuscationControl;
         try {
-          TextWidgetPainter var17 = new TextWidgetPainter(param1, 2, 2, 2236962, 1, 1, 1, param1.field_x + param1.field_r + 2);
+          TextWidgetPainter var17 = new TextWidgetPainter(param1, 2, 2, 2236962, 1, 1, 1, param1.maxDescent + param1.maxAscent + 2);
           this.field_i = (WidgetPainter) ((Object) var17);
           var17.textColor = 16777215;
           he var4 = new he();
@@ -183,8 +183,8 @@ final class uf {
           var7.a(jj.a(8947848, 46), param0 + 31482);
           var7.a(1, (byte) -53).a(2, jj.a(11184810, 51)).a(2236962, -22572);
           this.field_k = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          sc discarded$0 = new sc(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          ve discarded$1 = new ve(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          DialWidgetPainter discarded$0 = new DialWidgetPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          MarkerSliderPainter discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           he var8 = new he();
           var17.copyStyleTo(var8, 111);
           var8.a(0, (byte) -53).a(2, ph.a(15658734, 1, 7829367, 10066329)).a(1118481, -22572).b(-93, -1);
@@ -256,8 +256,8 @@ final class uf {
     private final void a(String param0, int param1, int param2, int param3) {
         String stackIn_12_2 = null;
         try {
-          int var5_int = this.field_d.b(param0);
-          int var6 = this.field_d.field_x + this.field_d.field_N;
+          int var5_int = this.field_d.stringWidth(param0);
+          int var6 = this.field_d.maxDescent + this.field_d.capHeight;
           int var7 = param2;
           if (SoftwareRasterizer.width < 6 + var7 + var5_int) {
             var7 = -6 - var5_int + SoftwareRasterizer.width;
@@ -265,13 +265,13 @@ final class uf {
           if (param3 != 16777215) {
             return;
           }
-          int var8 = param1 + (-this.field_d.field_N + 32);
+          int var8 = param1 + (-this.field_d.capHeight + 32);
           if (SoftwareRasterizer.height < var6 + (var8 + 6)) {
             var8 = SoftwareRasterizer.height - var6 - 6;
           }
           SoftwareRasterizer.b(var7, var8, var5_int + 6, var6 + 6, this.field_c);
           SoftwareRasterizer.a(1 + var7, 1 + var8, 4 + var5_int, 4 + var6, this.field_a);
-          this.field_d.a(param0, 3 + var7, var8 + 3 + this.field_d.field_N, this.field_c, -1);
+          this.field_d.drawLeft(param0, 3 + var7, var8 + 3 + this.field_d.capHeight, this.field_c, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -9,12 +9,12 @@ final class ti {
           field_a = null;
           return;
         }
-        fd var2 = (fd) null;
-        ti.a(125, -91, -121, 39, 71, -77, 39, (BitmapFont) null, 103, -82, -2, (fd) null, 98, (byte) 43, 106, -68, (BitmapFont) null, -15, -43, (fd) null, (fd) null);
+        NineSliceFrame var2 = (NineSliceFrame) null;
+        ti.a(125, -91, -121, 39, 71, -77, 39, (BitmapFont) null, 103, -82, -2, (NineSliceFrame) null, 98, (byte) 43, 106, -68, (BitmapFont) null, -15, -43, (NineSliceFrame) null, (NineSliceFrame) null);
         field_a = null;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, fd param11, int param12, byte param13, int param14, int param15, BitmapFont param16, int param17, int param18, fd param19, fd param20) {
+    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, NineSliceFrame param11, int param12, byte param13, int param14, int param15, BitmapFont param16, int param17, int param18, NineSliceFrame param19, NineSliceFrame param20) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -76,7 +76,7 @@ final class ti {
         String stackIn_15_2 = null;
         String stackIn_18_2 = null;
         try {
-          ti.a(param8, param1, param9, param11, param12, param17, param13, param10, param4, param5, param16, new fd(param20), param2, (byte) 90, param7, param3, param19, param18, param6, new fd(param14), new fd(param0));
+          ti.a(param8, param1, param9, param11, param12, param17, param13, param10, param4, param5, param16, new NineSliceFrame(param20), param2, (byte) 90, param7, param3, param19, param18, param6, new NineSliceFrame(param14), new NineSliceFrame(param0));
           if (param15 != 2) {
             field_a = (int[]) null;
           }

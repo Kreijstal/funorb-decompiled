@@ -6,7 +6,7 @@ final class dl {
     static BitmapFont field_b;
 
     final static void a(byte param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (re.field_q.removeLast(-8980));
+        RasterSnapshot var1 = (RasterSnapshot) (GradientOutlineTextPainter.field_q.removeLast(-8980));
         if (var1 == null) {
           throw new IllegalStateException();
         }

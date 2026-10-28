@@ -10,7 +10,7 @@ final class oh extends IntrusiveNode {
     int field_q;
     int field_i;
     int field_h;
-    static ee field_n;
+    static LoginMethod field_n;
     int field_o;
     int field_m;
     static String field_k;
@@ -40,7 +40,7 @@ final class oh extends IntrusiveNode {
           QuickChatDynamicCommand.outgoingPackets.position = QuickChatDynamicCommand.outgoingPackets.position + 2;
           int var5_int = QuickChatDynamicCommand.outgoingPackets.position;
           QuickChatDynamicCommand.outgoingPackets.writeInt((byte) 123, jm.field_L);
-          QuickChatDynamicCommand.outgoingPackets.writeLong(ck.field_q, (byte) -23);
+          QuickChatDynamicCommand.outgoingPackets.writeLong(ThreeSliceButtonPainter.field_q, (byte) -23);
           int var6 = 0;
           if (ej.field_d) {
             var6 = var6 | 1;
@@ -66,7 +66,7 @@ final class oh extends IntrusiveNode {
           if (p.field_i != null) {
             QuickChatDynamicCommand.outgoingPackets.writeCircumfixedString((byte) 100, p.field_i);
           }
-          bn.a(param4 ^ -99, QuickChatDynamicCommand.outgoingPackets, qj.field_a, q.field_O, cf.field_c);
+          bn.a(param4 ^ -99, QuickChatDynamicCommand.outgoingPackets, qj.field_a, MarkerSlider.field_O, cf.field_c);
           QuickChatDynamicCommand.outgoingPackets.backpatchShortLength(-var5_int + QuickChatDynamicCommand.outgoingPackets.position, 32614);
           ClientException.a(-1, param4 + 30884);
           return;
@@ -105,7 +105,7 @@ final class oh extends IntrusiveNode {
 
     static {
         field_g = "Extra thrust";
-        field_n = new ee("usename");
+        field_n = new LoginMethod("usename");
         field_k = " - activate shield";
     }
 }

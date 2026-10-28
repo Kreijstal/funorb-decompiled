@@ -49,7 +49,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               IntrusiveNode.field_c = PointCloudEffect.d((byte) -109);
               SystemTaskService dupTemp$1 = new SystemTaskService(param5, param6, param1, true);
               NetworkGameClient.field_r = dupTemp$1;
-              ae.field_a = dupTemp$1;
+              SpriteCheckboxPainter.field_a = dupTemp$1;
               SystemTask var8 = NetworkGameClient.field_r.a(true, param2, (Runnable) (this));
               while (true) {
                 if (var8.field_f == 0) {
@@ -197,7 +197,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          me.field_p = 4000L + td.b(128);
+          LegacyMenuColumn.field_p = 4000L + td.b(128);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "eh.stop()");
         }
@@ -292,9 +292,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (this == he.field_r &&
             !RatingQuery.field_j) {
-            me.field_p = td.b(128);
+            LegacyMenuColumn.field_p = td.b(128);
             en.a((byte) 100, 5000L);
-            ae.field_a = null;
+            SpriteCheckboxPainter.field_a = null;
             this.a((byte) 107, false);
             return;
           }
@@ -452,8 +452,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 IntrusiveNodeHashTable.field_f = pe.a(18863);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (0L != me.field_p) {
-                    stackIn_98_0 = compareLongs(me.field_p, td.b(128));
+                  if (0L != LegacyMenuColumn.field_p) {
+                    stackIn_98_0 = compareLongs(LegacyMenuColumn.field_p, td.b(128));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if (decompiledFrameRemainder0 &&
                       stackIn_98_0 <= 0) {
@@ -635,7 +635,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (he.field_r == this &&
             !RatingQuery.field_j) {
-            me.field_p = 0L;
+            LegacyMenuColumn.field_p = 0L;
             return;
           }
           return;

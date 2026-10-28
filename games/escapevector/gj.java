@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gj {
-    private me field_i;
-    private me field_s;
+    private LegacyMenuColumn field_i;
+    private LegacyMenuColumn field_s;
     private int field_f;
-    private me field_k;
+    private LegacyMenuColumn field_k;
     private HighscoreQuery field_y;
     static String field_u;
-    private me field_d;
-    private me field_l;
+    private LegacyMenuColumn field_d;
+    private LegacyMenuColumn field_l;
     private int field_j;
     private int field_e;
     int field_t;
@@ -19,7 +19,7 @@ final class gj {
     private IntrusiveDeque field_n;
     int field_m;
     int field_p;
-    private me field_x;
+    private LegacyMenuColumn field_x;
     static String field_a;
     private boolean field_r;
     private int field_h;
@@ -32,7 +32,7 @@ final class gj {
         int var4 = EscapeVector.obfuscationControl;
         IntrusiveNode var2_ref_hg = this.field_n.first(false);
         while (var2_ref_hg != null) {
-          me var3 = (me) (var2_ref_hg);
+          LegacyMenuColumn var3 = (LegacyMenuColumn) (var2_ref_hg);
           this.a(-23672, var3);
           var2_ref_hg = this.field_n.next((byte) 70);
         }
@@ -124,27 +124,27 @@ final class gj {
         int var2 = 640;
         int var3 = var2 / 2;
         int var4 = this.field_f + this.field_c - 2;
-        ih var5 = fh.field_g;
+        BinaryBitmapFont var5 = fh.field_g;
         int var7 = -42 % ((45 - param0) / 61);
         int var6 = un.a(var5, 31512);
         var4 = var4 - var6;
         int var8 = uc.a(-1, var5);
         var4 = var4 + var8;
         if (this.field_v != null) {
-          var5.c(this.field_v, var3, var4, this.field_j, -1);
+          var5.drawCentered(this.field_v, var3, var4, this.field_j, -1);
         }
     }
 
-    private final void a(int param0, me param1) {
+    private final void a(int param0, LegacyMenuColumn param1) {
         String stackIn_9_2 = null;
         try {
           if (param1 == null) {
             return;
           }
-          ih var3 = fh.field_g;
+          BinaryBitmapFont var3 = fh.field_g;
           int var4 = 10551200;
           int var5 = 16777215;
-          param1.a(var3, var5, (byte) -107, var4);
+          param1.configure(var3, var5, (byte) -107, var4);
           if (param0 != -23672) {
             int[] discarded$1 = this.b(58, -116);
           }
@@ -168,7 +168,7 @@ final class gj {
         int var7 = EscapeVector.obfuscationControl;
         try {
           if (param1 >= -105) {
-            this.field_l = (me) null;
+            this.field_l = (LegacyMenuColumn) null;
           }
           this.field_q = new boolean[this.field_h];
           if (param0 == null) {
@@ -206,11 +206,11 @@ final class gj {
         int var2 = -64 / ((param0 + 50) / 50);
         IntrusiveNode var3 = this.field_n.first(false);
         while (var3 != null) {
-          me var4 = (me) (var3);
+          LegacyMenuColumn var4 = (LegacyMenuColumn) (var3);
           if (this.field_q != null) {
-            var4.a(this.field_e, this.field_q, (byte) 48);
+            var4.drawVisibleRows(this.field_e, this.field_q, (byte) 48);
           } else {
-            var4.a(-6131, this.field_e);
+            var4.draw(-6131, this.field_e);
           }
           var3 = this.field_n.next((byte) 70);
         }
@@ -226,8 +226,8 @@ final class gj {
     }
 
     private final int d(int param0) {
-        int var2 = this.field_k.f((byte) 87);
-        ih var3 = fh.field_g;
+        int var2 = this.field_k.height((byte) 87);
+        BinaryBitmapFont var3 = fh.field_g;
         if (param0 > -33) {
           int discarded$0 = this.a(-73);
         }
@@ -251,7 +251,7 @@ final class gj {
         if (param1 < 0) {
           return false;
         }
-        if (!(q.field_E.length > param1)) {
+        if (!(MarkerSlider.field_E.length > param1)) {
           return false;
         }
         if (param0 < 0) {
@@ -260,10 +260,10 @@ final class gj {
         if (param2 < 23) {
           return true;
         }
-        if (!(param0 < q.field_E[param1].length)) {
+        if (!(param0 < MarkerSlider.field_E[param1].length)) {
           return false;
         }
-        return q.field_E[param1][param0];
+        return MarkerSlider.field_E[param1][param0];
     }
 
     private final void e(byte param0) {
@@ -275,9 +275,9 @@ final class gj {
         }
         IntrusiveNode var4 = this.field_n.first(false);
         while (var4 != null) {
-          me var5 = (me) (var4);
-          var5.a(var2, var3, 0);
-          var2 = var2 + var5.e((byte) -127);
+          LegacyMenuColumn var5 = (LegacyMenuColumn) (var4);
+          var5.setPosition(var2, var3, 0);
+          var2 = var2 + var5.width((byte) -127);
           var4 = this.field_n.next((byte) 70);
         }
     }
@@ -343,7 +343,7 @@ final class gj {
         int var6 = EscapeVector.obfuscationControl;
         try {
           if (!param1) {
-            this.field_k = (me) null;
+            this.field_k = (LegacyMenuColumn) null;
           }
           String[] var7 = new String[this.field_h];
           String[] var3 = var7;
@@ -382,7 +382,7 @@ final class gj {
           }
           qg.a(param0, 0, var3, 0, param0.length);
           if (this.field_r) {
-            var4[-1 + this.field_h] = ck.field_r;
+            var4[-1 + this.field_h] = ThreeSliceButtonPainter.field_r;
           }
           String[] stackIn_6_0 = var3;
           return stackIn_6_0;
@@ -441,8 +441,8 @@ final class gj {
           this.c(117);
         }
         while (var3 != null) {
-          me var4 = (me) (var3);
-          var2 = var2 + var4.e((byte) -127);
+          LegacyMenuColumn var4 = (LegacyMenuColumn) (var3);
+          var2 = var2 + var4.width((byte) -127);
           var3 = this.field_n.next((byte) 70);
         }
         return var2;
@@ -508,26 +508,26 @@ final class gj {
           }
           this.field_n = new IntrusiveDeque();
           int var8_int = this.field_y.stringColumns[this.field_p].length;
-          this.field_x = new me(var8_int);
+          this.field_x = new LegacyMenuColumn(var8_int);
           this.field_n.addLast(-12328, this.field_x);
           String[] var9 = this.a(this.field_y.stringColumns[this.field_p], -1);
           this.b(var9, -117);
-          this.field_k = new me(IndexedSpriteState.field_b, var9, 1);
+          this.field_k = new LegacyMenuColumn(IndexedSpriteState.field_b, var9, 1);
           this.field_n.addLast(-12328, this.field_k);
           String[] var10 = new String[this.field_h];
           if (5 == this.field_w) {
             var10 = this.a(param1, true);
           }
-          this.field_l = new me(qf.field_o, var10, 2);
+          this.field_l = new LegacyMenuColumn(qf.field_o, var10, 2);
           this.field_n.addLast(-12328, this.field_l);
           int[] var24 = this.c((byte) 39);
-          this.field_s = new me(bo.field_D, var24);
+          this.field_s = new LegacyMenuColumn(bo.field_D, var24);
           this.field_n.addLast(-12328, this.field_s);
           int[] var25 = this.b((byte) 127);
-          this.field_i = new me(jd.field_c, var25);
+          this.field_i = new LegacyMenuColumn(jd.field_c, var25);
           this.field_n.addLast(-12328, this.field_i);
           int[] var26 = this.a(true, this.field_y.intColumns[this.field_p], ProxySocketConnector.a(90, this.field_y.boardId));
-          this.field_d = new me(kn.field_f, var26);
+          this.field_d = new LegacyMenuColumn(GrowableIntList.field_f, var26);
           this.field_n.addLast(-12328, this.field_d);
           this.a((byte) -113);
           int var14 = 640;
@@ -571,22 +571,22 @@ final class gj {
           this.field_h = this.field_h + 1;
         }
         this.field_n = new IntrusiveDeque();
-        this.field_x = new me(this.field_h);
+        this.field_x = new LegacyMenuColumn(this.field_h);
         this.field_n.addLast(-12328, this.field_x);
         String[] var10 = new String[this.field_h];
-        this.field_k = new me(IndexedSpriteState.field_b, var10, 1);
+        this.field_k = new LegacyMenuColumn(IndexedSpriteState.field_b, var10, 1);
         this.field_n.addLast(-12328, this.field_k);
         String[] var5 = new String[this.field_h];
-        this.field_l = new me(qf.field_o, var5, 2);
+        this.field_l = new LegacyMenuColumn(qf.field_o, var5, 2);
         this.field_n.addLast(-12328, this.field_l);
         int[] var20 = this.b(-27531, this.field_h);
-        this.field_s = new me(bo.field_D, var20);
+        this.field_s = new LegacyMenuColumn(bo.field_D, var20);
         this.field_n.addLast(-12328, this.field_s);
         int[] var21 = this.b(-27531, this.field_h);
-        this.field_i = new me(jd.field_c, var21);
+        this.field_i = new LegacyMenuColumn(jd.field_c, var21);
         this.field_n.addLast(-12328, this.field_i);
         int[] var22 = this.b(-27531, this.field_h);
-        this.field_d = new me(kn.field_f, var22);
+        this.field_d = new LegacyMenuColumn(GrowableIntList.field_f, var22);
         this.field_n.addLast(-12328, this.field_d);
         this.a((byte) -41);
         int var9 = 640;

@@ -19,35 +19,35 @@ abstract class WeightedCacheEntry extends DualLinkNode {
         }
     }
 
-    final static ee readLastLoginMethod(byte guard, java.applet.Applet applet) {
-        ee var5 = null;
+    final static LoginMethod readLastLoginMethod(byte guard, java.applet.Applet applet) {
+        LoginMethod var5 = null;
         String stackIn_18_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
           String var2 = ProgressQuery.readCookie((byte) 90, "jagex-last-login-method", applet);
           if (guard != -1) {
-            ee stackIn_3_0 = (ee) null;
+            LoginMethod stackIn_3_0 = (LoginMethod) null;
             return stackIn_3_0;
           }
           if (var2 == null) {
-            ee stackIn_6_0 = qj.field_g;
+            LoginMethod stackIn_6_0 = qj.field_g;
             return stackIn_6_0;
           }
-          ee[] var3 = BoundedRandomAccessFile.a(false);
+          LoginMethod[] var3 = BoundedRandomAccessFile.a(false);
           int var4 = 0;
           while (true) {
             if (var3.length <= var4) {
-              ee stackIn_14_0 = qj.field_g;
+              LoginMethod stackIn_14_0 = qj.field_g;
               return stackIn_14_0;
             }
             var5 = var3[var4];
-            if (!var5.a(var2, (byte) 119)) {
+            if (!var5.matchesName(var2, (byte) 119)) {
               var4++;
               continue;
             }
             break;
           }
-          ee stackIn_11_0 = var5;
+          LoginMethod stackIn_11_0 = var5;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

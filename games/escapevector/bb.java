@@ -129,7 +129,7 @@ abstract class bb extends UiContainer {
                     if (255 >= var15) {
                       int var18 = SoftwareRasterizer.pixels[var8];
                       int var19 = 16711935 & var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 8;
-                      SoftwareRasterizer.pixels[var8] = (ae.a(ae.a(var17, 65280) * var15 + var16 * ae.a(var18, 65280), 16711906) >> 8) + var19;
+                      SoftwareRasterizer.pixels[var8] = (SpriteCheckboxPainter.bitwiseAnd(SpriteCheckboxPainter.bitwiseAnd(var17, 65280) * var15 + var16 * SpriteCheckboxPainter.bitwiseAnd(var18, 65280), 16711906) >> 8) + var19;
                     } else {
                       SoftwareRasterizer.pixels[var8] = var17;
                     }
@@ -173,7 +173,7 @@ abstract class bb extends UiContainer {
             int[] var5 = var9;
             int var6 = param1;
             int var7 = param2;
-            var9[var6] = ae.a(var9[var6] >> 1, 8355711) + var7;
+            var9[var6] = SpriteCheckboxPainter.bitwiseAnd(var9[var6] >> 1, 8355711) + var7;
             param1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

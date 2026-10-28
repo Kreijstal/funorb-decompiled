@@ -4,13 +4,13 @@
 final class ta {
     static int field_w;
     private ea field_s;
-    private dk field_a;
+    private LegacyButton field_a;
     private int field_m;
     private int field_v;
     private int field_j;
     private int field_d;
     static String field_k;
-    private dk field_f;
+    private LegacyButton field_f;
     private int field_y;
     private int field_h;
     private int[][] field_x;
@@ -18,13 +18,13 @@ final class ta {
     private int field_c;
     private gf field_o;
     private int[] field_u;
-    private dk[][] field_p;
-    private dk field_r;
+    private LegacyButton[][] field_p;
+    private LegacyButton field_r;
     private int field_e;
     private int field_b;
     private int[] field_l;
     private int field_q;
-    private dk[] field_i;
+    private LegacyButton[] field_i;
     static String field_g;
     private int field_z;
     private gf field_n;
@@ -44,19 +44,19 @@ final class ta {
         if (var2 == null) {
           return;
         }
-        ih var4 = fh.field_g;
-        int var5 = var4.field_x + var4.field_r;
-        int var6 = -var5 + this.field_q - 3 + var4.field_r;
+        BinaryBitmapFont var4 = fh.field_g;
+        int var5 = var4.maxDescent + var4.maxAscent;
+        int var6 = -var5 + this.field_q - 3 + var4.maxAscent;
         int var7 = 320;
         int var8 = 10551200;
-        var4.c((String) (var2), var7, var6, var8, -1);
+        var4.drawCentered((String) (var2), var7, var6, var8, -1);
     }
 
     private final void g(byte param0) {
         int var2 = 10;
         int var3 = var2;
         int var4 = 2;
-        ih var5 = fh.field_g;
+        BinaryBitmapFont var5 = fh.field_g;
         int var7 = 8 / ((18 - param0) / 59);
         int var6 = this.e(-108);
         var6 = this.a(var5, 117, var3, var4, this.field_q, var6);
@@ -148,11 +148,11 @@ final class ta {
           return;
         }
         try {
-          ih var4 = fh.field_g;
-          int var5 = var4.field_r + var4.field_x;
+          BinaryBitmapFont var4 = fh.field_g;
+          int var5 = var4.maxAscent + var4.maxDescent;
           String var6 = CachedArchiveProvider.field_r[var3_int];
           int var7 = ((this.field_n.field_m - param1.fullHeight) / param0 - var5) / 3;
-          int var8 = var7 + this.field_n.field_k + var4.field_r;
+          int var8 = var7 + this.field_n.field_k + var4.maxAscent;
           int var9 = 320;
           MatchingTextValidator.a(var8, var6, 16777215, -110, var9);
         } catch (RuntimeException runtimeException) {
@@ -191,7 +191,7 @@ final class ta {
           return (var4);
         }
         if (param0 != -91) {
-          this.field_r = (dk) null;
+          this.field_r = (LegacyButton) null;
         }
         return (var4);
     }
@@ -222,7 +222,7 @@ final class ta {
         return var5;
     }
 
-    private final int a(int param0, int param1, ih param2, int param3) {
+    private final int a(int param0, int param1, BinaryBitmapFont param2, int param3) {
         String stackIn_17_2 = null;
         try {
           int var5_int = this.g(true);
@@ -230,11 +230,11 @@ final class ta {
             int stackIn_3_0 = param3 / 2 + param0;
             return stackIn_3_0;
           }
-          int var6 = param2.b(kg.field_a + " ");
-          int var7 = param2.b("" + ProxySocketConnector.field_t[var5_int]);
+          int var6 = param2.stringWidth(kg.field_a + " ");
+          int var7 = param2.stringWidth("" + ProxySocketConnector.field_t[var5_int]);
           int var8 = var6 + var7;
-          int var9 = param2.b(vg.field_T + " ");
-          int var10 = param2.b("" + ProxySocketConnector.field_s[var5_int]);
+          int var9 = param2.stringWidth(vg.field_T + " ");
+          int var10 = param2.stringWidth("" + ProxySocketConnector.field_s[var5_int]);
           int var11 = var10 + var9;
           int stackIn_7_0 = (var11 > var8) ? var11 : var8;
           int var12 = stackIn_7_0;
@@ -268,13 +268,13 @@ final class ta {
         int var5 = -39 % ((-64 - param0) / 32);
         int[] var4 = new int[]{6340704, 16777215, 16777215};
         if (null != this.field_f) {
-          this.field_f.a(var3, var6, (byte) -123, var4);
+          this.field_f.setColors(var3, var6, (byte) -123, var4);
         }
         if (this.field_r != null) {
-          this.field_r.a(var3, var6, (byte) -126, var4);
+          this.field_r.setColors(var3, var6, (byte) -126, var4);
         }
         if (this.field_a != null) {
-          this.field_a.a(var3, var6, (byte) -126, var4);
+          this.field_a.setColors(var3, var6, (byte) -126, var4);
         }
     }
 
@@ -293,7 +293,7 @@ final class ta {
         int[] var6 = new int[]{36, 40};
         this.a((byte) -105);
         int[] var7 = new int[]{36, 40};
-        this.field_p = new dk[this.field_y][];
+        this.field_p = new LegacyButton[this.field_y][];
         for (int var8 = 0; this.field_y > var8; var8++) {
           int var9 = this.field_u[var8];
           int var10 = this.a((byte) 89, var9);
@@ -302,7 +302,7 @@ final class ta {
           int[] var39 = this.a(var38, (byte) -115);
           int[] var40 = this.a((byte) -99, var3, var5, var10);
           Sprite[] var15 = this.a(var8, (byte) -116);
-          dk[] array$0 = new dk[var9];
+          LegacyButton[] array$0 = new LegacyButton[var9];
           this.field_p[var8] = array$0;
           for (int var16 = 0; var10 > var16; var16++) {
             int var17 = var37[var16];
@@ -311,9 +311,9 @@ final class ta {
               Sprite var20 = var15[var19];
               int var21 = var18 * var4 + var39[var16];
               int var22 = var40[var16];
-              dk var23 = new dk(var2, var19, var20, var6, var7);
-              var23.a(var5, 0, var4);
-              var23.b((byte) 22, var21, var22);
+              LegacyButton var23 = new LegacyButton(var2, var19, var20, var6, var7);
+              var23.setSize(var5, 0, var4);
+              var23.setPosition((byte) 22, var21, var22);
               this.field_p[var8][var19] = var23;
             }
           }
@@ -343,19 +343,19 @@ final class ta {
           return var4;
         }
         if (this.field_f != null &&
-          this.field_f.a((byte) 65, param1, param2)) {
-          return this.field_f.field_c;
+          this.field_f.hitTest((byte) 65, param1, param2)) {
+          return this.field_f.actionId;
         }
         if (null != this.field_r &&
-          this.field_r.a((byte) 65, param1, param2)) {
-          return this.field_r.field_c;
+          this.field_r.hitTest((byte) 65, param1, param2)) {
+          return this.field_r.actionId;
         }
         if (param0 != -3) {
           return 57;
         }
         if (this.field_a != null &&
-          this.field_a.a((byte) 65, param1, param2)) {
-          return this.field_a.field_c;
+          this.field_a.hitTest((byte) 65, param1, param2)) {
+          return this.field_a.actionId;
         }
         if (this.field_i != null) {
           var4 = DebouncedValidator.a(param2, 57, this.field_i, param1);
@@ -443,14 +443,14 @@ final class ta {
     }
 
     private final void c(boolean param0) {
-        ih var2 = fh.field_g;
+        BinaryBitmapFont var2 = fh.field_g;
         if (!param0) {
           return;
         }
         int var3 = 320;
         int var4 = 10;
-        int var5 = this.field_n.field_k + var4 + var2.field_r;
-        var2.c(Js5NetworkRequest.field_C, var3, var5, 10551200, -1);
+        int var5 = this.field_n.field_k + var4 + var2.maxAscent;
+        var2.drawCentered(Js5NetworkRequest.field_C, var3, var5, 10551200, -1);
     }
 
     private final int[] b(int param0) {
@@ -487,7 +487,7 @@ final class ta {
         }
         int stackIn_6_0 = (this.field_y > 2) ? 2 : 1;
         int var3 = stackIn_6_0;
-        this.field_i = new dk[var3];
+        this.field_i = new LegacyButton[var3];
         if (param1 != 8) {
           this.c(46);
         }
@@ -499,9 +499,9 @@ final class ta {
           param0++;
           this.field_c = incrementValue$0;
           int var7 = this.field_o.field_j - TextFieldValidator.field_j.fullWidth / 2;
-          this.field_i[var4] = new dk(var5, this.field_c, of.field_a);
-          this.field_i[var4].b((byte) 127, var7, var6);
-          this.field_i[var4].a(TextFieldValidator.field_j.fullHeight, 0, TextFieldValidator.field_j.fullWidth);
+          this.field_i[var4] = new LegacyButton(var5, this.field_c, of.field_a);
+          this.field_i[var4].setPosition((byte) 127, var7, var6);
+          this.field_i[var4].setSize(TextFieldValidator.field_j.fullHeight, 0, TextFieldValidator.field_j.fullWidth);
           QuickChatPhraseDefinition.applyGrayButtonPalette(-92, this.field_i[var4]);
           var4++;
         }
@@ -510,9 +510,9 @@ final class ta {
           param0++;
           this.field_e = incrementValue$1;
           int var7Lifetime1 = this.field_o.field_j + (this.field_o.field_g - TextFieldValidator.field_j.fullWidth / 2);
-          this.field_i[var4] = new dk(var5, this.field_e, TextFieldValidator.field_j);
-          this.field_i[var4].b((byte) 122, var7Lifetime1, var6);
-          this.field_i[var4].a(TextFieldValidator.field_j.fullHeight, 0, TextFieldValidator.field_j.fullWidth);
+          this.field_i[var4] = new LegacyButton(var5, this.field_e, TextFieldValidator.field_j);
+          this.field_i[var4].setPosition((byte) 122, var7Lifetime1, var6);
+          this.field_i[var4].setSize(TextFieldValidator.field_j.fullHeight, 0, TextFieldValidator.field_j.fullWidth);
           QuickChatPhraseDefinition.applyGrayButtonPalette(-110, this.field_i[var4]);
         }
         return param0;
@@ -646,7 +646,7 @@ final class ta {
         this.field_n.a(15135, param0, param1, param3);
     }
 
-    private final dk d(boolean param0) {
+    private final LegacyButton d(boolean param0) {
         int var2 = di.field_d.field_h;
         if (!param0) {
           Sprite discarded$0 = this.f(74, -122);
@@ -654,7 +654,7 @@ final class ta {
         if (var2 < 0) {
           return null;
         }
-        dk var3 = TetherHumStream.a(this.field_p[this.field_h], var2, 0);
+        LegacyButton var3 = TetherHumStream.a(this.field_p[this.field_h], var2, 0);
         if (var3 != null) {
           return var3;
         }
@@ -681,8 +681,8 @@ final class ta {
           return;
         }
         try {
-          ih var4 = fh.field_g;
-          int var5 = var4.field_r + var4.field_x;
+          BinaryBitmapFont var4 = fh.field_g;
+          int var5 = var4.maxAscent + var4.maxDescent;
           int var6 = 6340704;
           int var7 = 10551200;
           String var8 = kg.field_a + " ";
@@ -693,12 +693,12 @@ final class ta {
           int var13 = -var12 + (this.field_n.field_g + this.field_n.field_j);
           int var14 = this.a(var12, 15930, var4, var13);
           int var15 = var5 * 2;
-          int var16 = this.field_n.field_k - (-((-var15 + this.field_n.field_m) / 2) - var4.field_r);
-          var4.b(var8, var14, var16, var6, -1);
-          var4.a(var9, var14, var16, var7, -1);
+          int var16 = this.field_n.field_k - (-((-var15 + this.field_n.field_m) / 2) - var4.maxAscent);
+          var4.drawRight(var8, var14, var16, var6, -1);
+          var4.drawLeft(var9, var14, var16, var7, -1);
           var16 = var16 + var5;
-          var4.b(var10, var14, var16, var6, -1);
-          var4.a(var11, var14, var16, var7, -1);
+          var4.drawRight(var10, var14, var16, var6, -1);
+          var4.drawLeft(var11, var14, var16, var7, -1);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ta.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -724,7 +724,7 @@ final class ta {
         int var4 = 480;
         Sprite var5 = new Sprite(var3, var4);
         int[] var20 = new int[4];
-        dk[] var7 = this.field_p[this.field_h];
+        LegacyButton[] var7 = this.field_p[this.field_h];
         SoftwareRasterizer.a(var20);
         if (param0 != 4551) {
           int discarded$1 = this.l(122);
@@ -755,7 +755,7 @@ final class ta {
         this.field_s = new ea(var15, var16, var5, var12);
     }
 
-    private final int a(int param0, ih param1, int param2, int param3, int param4, int param5) {
+    private final int a(int param0, BinaryBitmapFont param1, int param2, int param3, int param4, int param5) {
         String stackIn_9_2 = null;
         try {
           if (~this.field_b != param0) {
@@ -768,8 +768,8 @@ final class ta {
           String var8 = DynamicTerrainRenderer.field_m;
           int var9 = SeekerMine.a(var8, 16777215, param1);
           int var10 = (-var9 + 640) / 2;
-          this.field_r = new dk(var7_int, param2, var8, param3, param5, param1);
-          this.field_r.b((byte) 124, var10, param4);
+          this.field_r = new LegacyButton(var7_int, param2, var8, param3, param5, param1);
+          this.field_r.setPosition((byte) 124, var10, param4);
           this.field_v = param2;
           int stackIn_5_0 = this.field_v + 1;
           return stackIn_5_0;
@@ -790,19 +790,19 @@ final class ta {
     private final void h(int param0) {
         int var2 = di.field_d.field_h;
         if (null != this.field_f) {
-          boolean var3 = (this.field_f.field_c == var2);
-          this.field_f.a(-16383, (var3));
+          boolean var3 = (this.field_f.actionId == var2);
+          this.field_f.draw(-16383, (var3));
         }
         if (param0 != -1) {
           int discarded$0 = this.b(72, 122);
         }
         if (null != this.field_r) {
-          boolean var3Lifetime1 = (var2 == this.field_r.field_c);
-          this.field_r.a(-16383, (var3Lifetime1));
+          boolean var3Lifetime1 = (var2 == this.field_r.actionId);
+          this.field_r.draw(-16383, (var3Lifetime1));
         }
         if (this.field_a != null) {
-          boolean var3Lifetime2 = (var2 == this.field_a.field_c);
-          this.field_a.a(param0 - 16382, (var3Lifetime2));
+          boolean var3Lifetime2 = (var2 == this.field_a.actionId);
+          this.field_a.draw(param0 - 16382, (var3Lifetime2));
         }
     }
 
@@ -811,7 +811,7 @@ final class ta {
           boolean discarded$0 = this.k(2);
         }
         if (di.field_d.field_e) {
-          dk var2 = this.d(true);
+          LegacyButton var2 = this.d(true);
           int var3 = PasswordValidator.a(-93, var2);
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, IterableNodeHashTable.field_c * 1536 / 64, var3);
         }
@@ -831,7 +831,7 @@ final class ta {
         return var3;
     }
 
-    private final int a(int param0, ih param1, byte param2, int param3, int param4, int param5) {
+    private final int a(int param0, BinaryBitmapFont param1, byte param2, int param3, int param4, int param5) {
         String stackIn_8_2 = null;
         try {
           int var7_int = 3;
@@ -842,8 +842,8 @@ final class ta {
           }
           int var9 = SeekerMine.a(var8, 16777215, param1);
           int var10 = (640 - var9) / 2;
-          this.field_a = new dk(var7_int, param3, var8, param5, param4, param1);
-          this.field_a.b((byte) 121, var10, param0);
+          this.field_a = new LegacyButton(var7_int, param3, var8, param5, param4, param1);
+          this.field_a.setPosition((byte) 121, var10, param0);
           this.field_d = param3;
           int stackIn_4_0 = 1 + this.field_d;
           return stackIn_4_0;
@@ -911,7 +911,7 @@ final class ta {
           if (0 > var3_int) {
             return;
           }
-          ih var4 = fh.field_g;
+          BinaryBitmapFont var4 = fh.field_g;
           int var5 = 10551200;
           int var6 = 6340704;
           String var7 = ResourceArchive.field_f[var3_int];
@@ -928,9 +928,9 @@ final class ta {
           }
           int var11 = var10 + this.field_n.field_j;
           int var12 = -var11 - var10 + (-param0.fullWidth + 640) / 2;
-          int var13 = var4.b(var9, var12, 0);
+          int var13 = var4.paragraphHeight(var9, var12, 0);
           int var14 = this.field_n.field_k + (this.field_n.field_m - var13) / 2;
-          var4.a(var9, var11, var14, var12, var13, var5, -1, 0, 0, 0);
+          var4.drawParagraph(var9, var11, var14, var12, var13, var5, -1, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -948,7 +948,7 @@ final class ta {
 
     private final void e(byte param0) {
         if (param0 != 111) {
-          this.field_r = (dk) null;
+          this.field_r = (LegacyButton) null;
         }
         en var2 = TrackerMusicDefinition.field_f;
         if (var2.b(-106)) {
@@ -1031,7 +1031,7 @@ final class ta {
         SelfDestructEffects.b(2);
         pb.a(4);
         if (param0 != 3) {
-          this.field_i = (dk[]) null;
+          this.field_i = (LegacyButton[]) null;
         }
         this.g(16317);
         this.d(-3);
@@ -1093,12 +1093,12 @@ final class ta {
         return this.field_y;
     }
 
-    private final void a(int param0, dk param1) {
+    private final void a(int param0, LegacyButton param1) {
         if (param1 == null) {
           return;
         }
         int var3_int = mj.field_d;
-        if (var3_int != param1.field_q) {
+        if (var3_int != param1.revealUntilTick) {
           return;
         }
         try {
@@ -1131,7 +1131,7 @@ final class ta {
           var3 = DualLinkDequeIterator.field_e;
         }
         if (param0 != -4343) {
-          this.field_a = (dk) null;
+          this.field_a = (LegacyButton) null;
         }
         return var3;
     }
@@ -1153,7 +1153,7 @@ final class ta {
         return false;
     }
 
-    private final int a(ih param0, int param1, int param2, int param3, int param4, int param5) {
+    private final int a(BinaryBitmapFont param0, int param1, int param2, int param3, int param4, int param5) {
         String stackIn_9_2 = null;
         try {
           if (!aj.b(-122)) {
@@ -1165,10 +1165,10 @@ final class ta {
           int var7_int = 3;
           String var8 = IntrusiveDeque.field_e;
           int var9 = SeekerMine.a(var8, 16777215, param0);
-          this.field_f = new dk(var7_int, param5, var8, param2, param3, param0);
+          this.field_f = new LegacyButton(var7_int, param5, var8, param2, param3, param0);
           int var10 = (640 - var9) / 2;
           int var11 = -57 / ((param1 - 65) / 52);
-          this.field_f.b((byte) 13, var10, param4);
+          this.field_f.setPosition((byte) 13, var10, param4);
           this.field_j = param5;
           int stackIn_5_0 = this.field_j + 1;
           return stackIn_5_0;

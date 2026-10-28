@@ -87,7 +87,7 @@ final class ji {
         field_a = (String) null;
     }
 
-    final static int a(int param0, ih param1, String[] param2, int param3, int param4, int param5, int param6) {
+    final static int a(int param0, BinaryBitmapFont param1, String[] param2, int param3, int param4, int param5, int param6) {
         String stackIn_9_2 = null;
         String stackIn_12_2 = null;
         int var11 = EscapeVector.obfuscationControl;
@@ -124,7 +124,7 @@ final class ji {
         String stackIn_8_2 = null;
         try {
           if (param0 == 255) {
-            int stackIn_4_0 = ae.a(param2, (byte) -95, param1, 0);
+            int stackIn_4_0 = SpriteCheckboxPainter.crc32(param2, (byte) -95, param1, 0);
             return stackIn_4_0;
           }
           int stackIn_2_0 = 72;

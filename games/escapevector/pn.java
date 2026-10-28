@@ -77,17 +77,17 @@ class pn extends fj implements ButtonListener {
         Throwable var2 = null;
         boolean stackIn_7_0 = false;
         Throwable decompiledCaughtException = null;
-        Object var1_ref = ck.field_v;
+        Object var1_ref = ThreeSliceButtonPainter.field_v;
         synchronized (var1_ref) {
           if (param0 >= -66) {
             field_nb = (char[]) null;
           }
-          if (ta.field_w == ve.field_l) {
+          if (ta.field_w == MarkerSliderPainter.field_l) {
             return false;
           }
-          PasswordValidator.field_n = td.field_b[ve.field_l];
-          jc.field_c = ek.field_a[ve.field_l];
-          ve.field_l = 127 & 1 + ve.field_l;
+          PasswordValidator.field_n = td.field_b[MarkerSliderPainter.field_l];
+          jc.field_c = ek.field_a[MarkerSliderPainter.field_l];
+          MarkerSliderPainter.field_l = 127 & 1 + MarkerSliderPainter.field_l;
           stackIn_7_0 = true;
         }
         return stackIn_7_0;
@@ -220,7 +220,7 @@ class pn extends fj implements ButtonListener {
           return;
         }
         if (this.field_lb) {
-          eb.k(0);
+          DialWidget.k(0);
           return;
         }
     }

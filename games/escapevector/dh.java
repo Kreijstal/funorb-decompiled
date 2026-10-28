@@ -15,7 +15,7 @@ final class dh {
           di.field_g = RasterBuffer.a((byte) 41, "");
           di.field_g.complete((byte) -128, false);
           wc.a(83, param2, param3, param4);
-          kn.a((byte) -96);
+          GrowableIntList.a((byte) -96);
           dn.field_q = RasterBuffer.field_g;
           if (param1 > -111) {
             dh.a(13, (byte) 34);

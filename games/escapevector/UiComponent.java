@@ -78,8 +78,8 @@ class UiComponent extends IntrusiveNode {
               0 != qi.field_N) {
               this.clearFocus(84);
             }
-            bb.field_H = eb.field_K;
-            ve.a((byte) -112, this.getTooltip(1));
+            bb.field_H = DialWidget.field_K;
+            MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
           if (mg.field_f != 0 &&
@@ -87,14 +87,14 @@ class UiComponent extends IntrusiveNode {
             this.onMouseWheel(offsetX, mg.field_f, (byte) -109, UiContainer.field_y, dh.field_d, this, offsetY);
           }
           if (qi.field_N == 0) {
-            if (0 != eb.field_K) {
-              bb.field_H = eb.field_K;
-              ve.a((byte) -112, this.getTooltip(1));
+            if (0 != DialWidget.field_K) {
+              bb.field_H = DialWidget.field_K;
+              MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             if (bb.field_H == 0) {
-              bb.field_H = eb.field_K;
-              ve.a((byte) -112, this.getTooltip(1));
+              bb.field_H = DialWidget.field_K;
+              MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
@@ -110,8 +110,8 @@ class UiComponent extends IntrusiveNode {
               0 != qi.field_N) {
               this.clearFocus(84);
             }
-            bb.field_H = eb.field_K;
-            ve.a((byte) -112, this.getTooltip(1));
+            bb.field_H = DialWidget.field_K;
+            MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
           regionExit1: {
@@ -122,14 +122,14 @@ class UiComponent extends IntrusiveNode {
               }
             }
             if (!var5) {
-              if (0 != eb.field_K) {
-                bb.field_H = eb.field_K;
-                ve.a((byte) -112, this.getTooltip(1));
+              if (0 != DialWidget.field_K) {
+                bb.field_H = DialWidget.field_K;
+                MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
               if (bb.field_H == 0) {
-                bb.field_H = eb.field_K;
-                ve.a((byte) -112, this.getTooltip(1));
+                bb.field_H = DialWidget.field_K;
+                MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
               this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
@@ -147,20 +147,20 @@ class UiComponent extends IntrusiveNode {
                 0 != qi.field_N) {
                 this.clearFocus(84);
               }
-              bb.field_H = eb.field_K;
-              ve.a((byte) -112, this.getTooltip(1));
+              bb.field_H = DialWidget.field_K;
+              MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             this.clearFocus(122);
           }
-          if (0 != eb.field_K) {
-            bb.field_H = eb.field_K;
-            ve.a((byte) -112, this.getTooltip(1));
+          if (0 != DialWidget.field_K) {
+            bb.field_H = DialWidget.field_K;
+            MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
           if (bb.field_H == 0) {
-            bb.field_H = eb.field_K;
-            ve.a((byte) -112, this.getTooltip(1));
+            bb.field_H = DialWidget.field_K;
+            MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
           this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
@@ -176,8 +176,8 @@ class UiComponent extends IntrusiveNode {
             0 != qi.field_N) {
             this.clearFocus(84);
           }
-          bb.field_H = eb.field_K;
-          ve.a((byte) -112, this.getTooltip(1));
+          bb.field_H = DialWidget.field_K;
+          MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
           return inputAvailable;
         }
         UiComponent var8 = (UiComponent) null;
@@ -186,14 +186,14 @@ class UiComponent extends IntrusiveNode {
         if (inputAvailable) {
           if (mg.field_f == 0) {
             if (qi.field_N == 0) {
-              if (0 != eb.field_K) {
-                bb.field_H = eb.field_K;
-                ve.a((byte) -112, this.getTooltip(1));
+              if (0 != DialWidget.field_K) {
+                bb.field_H = DialWidget.field_K;
+                MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
               if (bb.field_H == 0) {
-                bb.field_H = eb.field_K;
-                ve.a((byte) -112, this.getTooltip(1));
+                bb.field_H = DialWidget.field_K;
+                MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
               this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
@@ -209,8 +209,8 @@ class UiComponent extends IntrusiveNode {
                 0 != qi.field_N) {
                 this.clearFocus(84);
               }
-              bb.field_H = eb.field_K;
-              ve.a((byte) -112, this.getTooltip(1));
+              bb.field_H = DialWidget.field_K;
+              MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             regionExit2: {
@@ -221,14 +221,14 @@ class UiComponent extends IntrusiveNode {
                 }
               }
               if (!var5Lifetime1) {
-                if (0 != eb.field_K) {
-                  bb.field_H = eb.field_K;
-                  ve.a((byte) -112, this.getTooltip(1));
+                if (0 != DialWidget.field_K) {
+                  bb.field_H = DialWidget.field_K;
+                  MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                   return inputAvailable;
                 }
                 if (bb.field_H == 0) {
-                  bb.field_H = eb.field_K;
-                  ve.a((byte) -112, this.getTooltip(1));
+                  bb.field_H = DialWidget.field_K;
+                  MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                   return inputAvailable;
                 }
                 this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
@@ -246,20 +246,20 @@ class UiComponent extends IntrusiveNode {
                   0 != qi.field_N) {
                   this.clearFocus(84);
                 }
-                bb.field_H = eb.field_K;
-                ve.a((byte) -112, this.getTooltip(1));
+                bb.field_H = DialWidget.field_K;
+                MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
               this.clearFocus(122);
             }
-            if (0 != eb.field_K) {
-              bb.field_H = eb.field_K;
-              ve.a((byte) -112, this.getTooltip(1));
+            if (0 != DialWidget.field_K) {
+              bb.field_H = DialWidget.field_K;
+              MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             if (bb.field_H == 0) {
-              bb.field_H = eb.field_K;
-              ve.a((byte) -112, this.getTooltip(1));
+              bb.field_H = DialWidget.field_K;
+              MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
@@ -275,22 +275,22 @@ class UiComponent extends IntrusiveNode {
               0 != qi.field_N) {
               this.clearFocus(84);
             }
-            bb.field_H = eb.field_K;
-            ve.a((byte) -112, this.getTooltip(1));
+            bb.field_H = DialWidget.field_K;
+            MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
           if (var5Lifetime1) {
             this.onMouseWheel(offsetX, mg.field_f, (byte) -109, UiContainer.field_y, dh.field_d, this, offsetY);
           }
           if (qi.field_N == 0) {
-            if (0 != eb.field_K) {
-              bb.field_H = eb.field_K;
-              ve.a((byte) -112, this.getTooltip(1));
+            if (0 != DialWidget.field_K) {
+              bb.field_H = DialWidget.field_K;
+              MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             if (bb.field_H == 0) {
-              bb.field_H = eb.field_K;
-              ve.a((byte) -112, this.getTooltip(1));
+              bb.field_H = DialWidget.field_K;
+              MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
@@ -306,8 +306,8 @@ class UiComponent extends IntrusiveNode {
               0 != qi.field_N) {
               this.clearFocus(84);
             }
-            bb.field_H = eb.field_K;
-            ve.a((byte) -112, this.getTooltip(1));
+            bb.field_H = DialWidget.field_K;
+            MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
           regionExit3: {
@@ -318,26 +318,26 @@ class UiComponent extends IntrusiveNode {
               }
             }
             if (!var5Lifetime1) {
-              if (0 != eb.field_K) {
-                bb.field_H = eb.field_K;
-                ve.a((byte) -112, this.getTooltip(1));
+              if (0 != DialWidget.field_K) {
+                bb.field_H = DialWidget.field_K;
+                MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
               if (bb.field_H == 0) {
-                bb.field_H = eb.field_K;
-                ve.a((byte) -112, this.getTooltip(1));
+                bb.field_H = DialWidget.field_K;
+                MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
               this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
               DraggableWidget var16 = gf.field_b;
               if (var16 == null) {
                 if (var7 == 0) {
-                  bb.field_H = eb.field_K;
-                  ve.a((byte) -112, this.getTooltip(1));
+                  bb.field_H = DialWidget.field_K;
+                  MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                   return inputAvailable;
                 }
-                bb.field_H = eb.field_K;
-                ve.a((byte) -112, this.getTooltip(1));
+                bb.field_H = DialWidget.field_K;
+                MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
               if (!(var16.listener instanceof WidgetDropListener)) {
@@ -347,8 +347,8 @@ class UiComponent extends IntrusiveNode {
                   0 != qi.field_N) {
                   this.clearFocus(84);
                 }
-                bb.field_H = eb.field_K;
-                ve.a((byte) -112, this.getTooltip(1));
+                bb.field_H = DialWidget.field_K;
+                MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
               ((WidgetDropListener) (var16.listener)).onDropped((DropTargetWidget) null, var16, (byte) -124);
@@ -358,16 +358,16 @@ class UiComponent extends IntrusiveNode {
                 0 != qi.field_N) {
                 this.clearFocus(84);
               }
-              bb.field_H = eb.field_K;
-              ve.a((byte) -112, this.getTooltip(1));
+              bb.field_H = DialWidget.field_K;
+              MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             this.clearFocus(122);
           }
-          if (0 == eb.field_K) {
+          if (0 == DialWidget.field_K) {
             if (bb.field_H == 0) {
-              bb.field_H = eb.field_K;
-              ve.a((byte) -112, this.getTooltip(1));
+              bb.field_H = DialWidget.field_K;
+              MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
@@ -383,19 +383,19 @@ class UiComponent extends IntrusiveNode {
               0 != qi.field_N) {
               this.clearFocus(84);
             }
-            bb.field_H = eb.field_K;
-            ve.a((byte) -112, this.getTooltip(1));
+            bb.field_H = DialWidget.field_K;
+            MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
         } else if (var5Lifetime1 &&
           0 != qi.field_N) {
           this.clearFocus(84);
-          bb.field_H = eb.field_K;
-          ve.a((byte) -112, this.getTooltip(1));
+          bb.field_H = DialWidget.field_K;
+          MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
           return inputAvailable;
         }
-        bb.field_H = eb.field_K;
-        ve.a((byte) -112, this.getTooltip(1));
+        bb.field_H = DialWidget.field_K;
+        MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
         return inputAvailable;
     }
 

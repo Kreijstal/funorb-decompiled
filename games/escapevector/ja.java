@@ -43,7 +43,7 @@ final class ja {
             if (var5 != 0) {
               int var6 = var4.field_h;
               int var7 = var4.field_j;
-              bg.field_a[0].field_h = ck.field_r;
+              bg.field_a[0].field_h = ThreeSliceButtonPainter.field_r;
               bg.field_a[0].field_e = false;
               bg.field_a[0].field_a = null;
               for (int var8_int = 1; var5 > var8_int; var8_int++) {
@@ -91,7 +91,7 @@ final class ja {
                   }
                   if (var21 != null &&
                     SeekerMine.a(var21, (byte) 112)) {
-                    var8[1][var13] = ck.field_r;
+                    var8[1][var13] = ThreeSliceButtonPainter.field_r;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var28.position = var24;

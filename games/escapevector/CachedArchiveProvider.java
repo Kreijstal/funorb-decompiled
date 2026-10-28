@@ -204,7 +204,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
         ld.field_h = pn.a(PcmResampler.field_h.key, he.field_u, ld.field_h, UiContainer.field_B, (byte) 112);
         if (se.field_b == null) {
-          se.field_b = ve.a(1, he.field_u, IndexedSpriteState.field_j, PcmResampler.field_h.key);
+          se.field_b = MarkerSliderPainter.a(1, he.field_u, IndexedSpriteState.field_j, PcmResampler.field_h.key);
         }
         if (null != se.field_b) {
           PcmResampler.field_h = null;
@@ -525,7 +525,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           while (Js5NetworkRequest.field_I.length > var3_int) {
             int var5 = jj.field_a[var3_int];
             if (0 <= var5) {
-              int var6 = ee.a(98, Js5NetworkRequest.field_I[var3_int], true);
+              int var6 = LoginMethod.a(98, Js5NetworkRequest.field_I[var3_int], true);
               var4 = var4 + CheckboxPainter.field_s;
               int var7 = -(var6 >> 1) + ClientException.field_e;
               if (DualLinkNode.a(param1, (en.field_k << 1) + ok.field_a, param0 ^ -123, var4, -fe.field_k + var7, (fe.field_k << 1) + var6, param2)) {

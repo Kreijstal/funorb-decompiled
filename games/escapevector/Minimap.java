@@ -24,7 +24,7 @@ final class Minimap {
     private int[] field_e;
     boolean field_L;
     private int field_g;
-    private wd field_j;
+    private SpriteLabelColumns field_j;
     private int field_x;
     private boolean[] field_s;
     int pixelsPerTile;
@@ -168,8 +168,8 @@ final class Minimap {
     }
 
     private final Sprite a(int param0, int param1) {
-        ih var3 = fh.field_g;
-        int var4 = var3.field_r + var3.field_x;
+        BinaryBitmapFont var3 = fh.field_g;
+        int var4 = var3.maxAscent + var3.maxDescent;
         int var5 = var4 / 2;
         int var6 = (-var5 + var4) / 2;
         if (param1 != -5425) {
@@ -225,7 +225,7 @@ final class Minimap {
     }
 
     private final void e(int param0) {
-        int var2 = (this.field_f - this.field_j.a(true)) / 2;
+        int var2 = (this.field_f - this.field_j.contentWidth(true)) / 2;
         int var3 = (this.field_f - this.pixelsPerTile * this.session.tilesWide) / 2;
         int var4 = this.session.tilesWide * this.pixelsPerTile;
         if (param0 <= 118) {
@@ -234,7 +234,7 @@ final class Minimap {
         int var5 = 8;
         int var6 = var5 + var3 + var4;
         int var7 = var6 - var2;
-        this.field_j.a((byte) -93, var7);
+        this.field_j.translateX((byte) -93, var7);
     }
 
     final boolean b(byte param0) {
@@ -475,15 +475,15 @@ final class Minimap {
         int var7 = param2 + param4;
         int var8 = 6;
         fk.a(var6 + var8, this.field_F, 73, 0, this.field_g, -var8 + param4, param0 - var8, 0, var7 + var8);
-        ih var9 = fh.field_g;
-        int var10 = var9.field_x + var9.field_r;
+        BinaryBitmapFont var9 = fh.field_g;
+        int var10 = var9.maxDescent + var9.maxAscent;
         if (param1 != 104) {
           this.field_E = false;
         }
-        int var11 = -var8 + (param4 - (var10 + var9.field_x));
+        int var11 = -var8 + (param4 - (var10 + var9.maxDescent));
         int var12 = 15658734;
         String var13 = null == this.field_D ? sj.field_k : FullscreenFocusCanvas.field_b;
-        var9.c(var13, this.field_f / 2, var11, var12, -1);
+        var9.drawCentered(var13, this.field_f / 2, var11, var12, -1);
         this.d(111);
     }
 
@@ -494,9 +494,9 @@ final class Minimap {
         int var3 = -40 / ((param0 + 5) / 37);
         int var2 = (this.field_H - this.pixelsPerTile * this.session.tilesHigh) / 2;
         int var4 = this.pixelsPerTile * this.session.tilesHigh;
-        int var5 = this.field_j.b((byte) -90);
+        int var5 = this.field_j.height((byte) -90);
         int var6 = (-var5 + var4) / 2 + var2;
-        this.field_j.a(var6, 3);
+        this.field_j.draw(var6, 3);
     }
 
     private final boolean c(int param0, int param1, int param2) {
@@ -564,13 +564,13 @@ final class Minimap {
     }
 
     private final void c(byte param0) {
-        ih var2 = fh.field_g;
+        BinaryBitmapFont var2 = fh.field_g;
         int var3 = 16777215;
         int var4 = 16777215;
         if (param0 != -112) {
           this.field_b = 95;
         }
-        this.field_j.a(var4, var2, var3, 125);
+        this.field_j.configure(var4, var2, var3, 125);
     }
 
     private final String[] b(IntrusiveDeque param0, int param1) {
@@ -783,7 +783,7 @@ final class Minimap {
         IntrusiveDeque var5 = this.session.missionTargets;
         if (var5 != null &&
           !var5.isEmpty(-103)) {
-          var3.addLast(-12328, new sj(wd.field_q));
+          var3.addLast(-12328, new sj(SpriteLabelColumns.field_q));
           var4.addLast(-12328, new SpriteStrip(new Sprite[]{this.a(this.field_l, -5425)}, 0));
         }
         if (this.field_C != null &&
@@ -791,7 +791,7 @@ final class Minimap {
           var3.addLast(-12328, new sj(IterableDualLinkDeque.field_a));
           var4.addLast(-12328, new SpriteStrip(new Sprite[]{this.a(this.field_G, -5425)}, 0));
         }
-        this.field_j = new wd(var2, this.a(var4, 0), this.b(var3, 11125));
+        this.field_j = new SpriteLabelColumns(var2, this.a(var4, 0), this.b(var3, 11125));
         this.c((byte) -112);
         this.e(126);
         return;

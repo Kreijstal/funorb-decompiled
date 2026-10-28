@@ -88,7 +88,7 @@ final class nm {
         return var2 + param0;
     }
 
-    final static void a(byte param0, int param1, dk[] param2) {
+    final static void a(byte param0, int param1, LegacyButton[] param2) {
         try {
           HudMessage.a(param2, -1, param1, (byte) -28);
           if (param0 > -50) {

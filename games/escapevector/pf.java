@@ -5,16 +5,16 @@ import java.io.*;
 
 final class pf {
     static int field_i;
-    private dk[] field_c;
+    private LegacyButton[] field_c;
     wc field_b;
     static Sprite[] field_g;
     private int[] field_d;
     static String[] field_e;
     static String field_h;
-    private dk[] field_a;
+    private LegacyButton[] field_a;
     int field_f;
 
-    private final int a(int param0, dk[] param1) {
+    private final int a(int param0, LegacyButton[] param1) {
         String stackIn_15_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
@@ -29,8 +29,8 @@ final class pf {
               int stackIn_11_0 = -1;
               return stackIn_11_0;
             }
-            dk var5 = param1[var4];
-            if (var5.field_c != var3_int) {
+            LegacyButton var5 = param1[var4];
+            if (var5.actionId != var3_int) {
               var4++;
               continue;
             }
@@ -52,12 +52,12 @@ final class pf {
         }
     }
 
-    private final int a(int param0, int param1, dk[] param2, int param3) {
+    private final int a(int param0, int param1, LegacyButton[] param2, int param3) {
         String stackIn_7_2 = null;
         try {
           if (param0 != 4) {
-            dk[] var9 = (dk[]) null;
-            int discarded$1 = this.a(-84, (dk[]) null);
+            LegacyButton[] var9 = (LegacyButton[]) null;
+            int discarded$1 = this.a(-84, (LegacyButton[]) null);
           }
           int var5_int = param3 - param1;
           int var6 = this.a((byte) -106, param2);
@@ -101,7 +101,7 @@ final class pf {
 
     final void d(int param0) {
         if (param0 != 100) {
-          this.field_a = (dk[]) null;
+          this.field_a = (LegacyButton[]) null;
         }
         SoftwareRasterizer.clearFramebuffer();
         SelfDestructEffects.b(param0 - 98);
@@ -125,7 +125,7 @@ final class pf {
         return -1;
     }
 
-    private final boolean b(int param0, dk[] param1, dk[] param2) {
+    private final boolean b(int param0, LegacyButton[] param1, LegacyButton[] param2) {
         int var5 = 0;
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
@@ -138,10 +138,10 @@ final class pf {
             return false;
           }
           if (var4_int == 0) {
-            var5 = param2[param2.length - 1].field_c;
+            var5 = param2[param2.length - 1].actionId;
             this.field_b.a(false, var5);
           } else {
-            var5 = param1[var4_int - 1].field_c;
+            var5 = param1[var4_int - 1].actionId;
             this.field_b.a(false, var5);
           }
           return true;
@@ -165,10 +165,10 @@ final class pf {
         }
     }
 
-    private final int a(byte param0, dk param1) {
+    private final int a(byte param0, LegacyButton param1) {
         String stackIn_5_2 = null;
         try {
-          int var3_int = param1.field_p / 2 + param1.field_f;
+          int var3_int = param1.width / 2 + param1.x;
           int var4 = 16384 * var3_int / 640;
           int var5 = 51 % ((param0 - 56) / 58);
           int stackIn_1_0 = var4;
@@ -187,7 +187,7 @@ final class pf {
         }
     }
 
-    private final int[] a(int param0, int param1, ih param2, byte param3) {
+    private final int[] a(int param0, int param1, BinaryBitmapFont param2, byte param3) {
         String[] var5 = null;
         int[] var6 = null;
         Sprite[] var7 = null;
@@ -195,8 +195,8 @@ final class pf {
         String stackIn_10_2 = null;
         try {
           if (param3 < 91) {
-            ih var11 = (ih) null;
-            int[] discarded$1 = this.a(20, -91, (ih) null, (byte) -102);
+            BinaryBitmapFont var11 = (BinaryBitmapFont) null;
+            int[] discarded$1 = this.a(20, -91, (BinaryBitmapFont) null, (byte) -102);
           }
           if (UiContainer.e((byte) 127)) {
             var5 = pl.field_s;
@@ -228,7 +228,7 @@ final class pf {
         }
     }
 
-    private final int[] a(ih param0, int param1, int param2, int param3) {
+    private final int[] a(BinaryBitmapFont param0, int param1, int param2, int param3) {
         int[] var8 = null;
         String[] var9 = null;
         int[] var10 = null;
@@ -269,21 +269,21 @@ final class pf {
         }
     }
 
-    private final void a(dk[] param0, byte param1) {
+    private final void a(LegacyButton[] param0, byte param1) {
         String stackIn_13_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          dk[] var9 = param0;
-          dk[] var3 = var9;
+          LegacyButton[] var9 = param0;
+          LegacyButton[] var3 = var9;
           for (int var4 = 0; var4 < var9.length; var4++) {
-            dk var5 = var9[var4];
-            boolean stackIn_6_0 = !(~this.field_b.field_h != ~var5.field_c);
+            LegacyButton var5 = var9[var4];
+            boolean stackIn_6_0 = !(~this.field_b.field_h != ~var5.actionId);
             boolean var6 = stackIn_6_0;
-            var5.a(-16383, (var6));
+            var5.draw(-16383, (var6));
           }
           if (param1 > -39) {
-            ih var8 = (ih) null;
-            int[] discarded$1 = this.a(28, -16, (ih) null, (byte) 69);
+            BinaryBitmapFont var8 = (BinaryBitmapFont) null;
+            int[] discarded$1 = this.a(28, -16, (BinaryBitmapFont) null, (byte) 69);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -351,31 +351,31 @@ final class pf {
         boolean discarded$0 = this.a(true, (byte) 91);
     }
 
-    private final int a(int param0, dk[] param1, int param2, int param3) {
-        dk var7 = null;
+    private final int a(int param0, LegacyButton[] param1, int param2, int param3) {
+        LegacyButton var7 = null;
         String stackIn_14_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          dk[] var10 = param1;
-          dk[] var5 = var10;
+          LegacyButton[] var10 = param1;
+          LegacyButton[] var5 = var10;
           int var6 = 0;
           while (true) {
             if (var6 >= var10.length) {
               if (param3 != 3) {
-                dk[] var9 = (dk[]) null;
-                int discarded$1 = this.a(-122, (dk[]) null);
+                LegacyButton[] var9 = (LegacyButton[]) null;
+                int discarded$1 = this.a(-122, (LegacyButton[]) null);
               }
               int stackIn_10_0 = -1;
               return stackIn_10_0;
             }
             var7 = var10[var6];
-            if (!var7.a((byte) 65, param2, param0)) {
+            if (!var7.hitTest((byte) 65, param2, param0)) {
               var6++;
               continue;
             }
             break;
           }
-          int stackIn_5_0 = var7.field_c;
+          int stackIn_5_0 = var7.actionId;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -613,7 +613,7 @@ final class pf {
         }
     }
 
-    private final void a(int param0, int param1, dk[] param2, int param3, int param4, int param5) {
+    private final void a(int param0, int param1, LegacyButton[] param2, int param3, int param4, int param5) {
         int var7_int = mj.field_d;
         if (param3 > var7_int) {
           return;
@@ -634,7 +634,7 @@ final class pf {
           return;
         }
         try {
-          dk var10 = param2[var9];
+          LegacyButton var10 = param2[var9];
           int var11 = this.a((byte) 120, var10);
           ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, param4, param5, var11);
         } catch (RuntimeException runtimeException) {
@@ -676,7 +676,7 @@ final class pf {
         return false;
     }
 
-    private final boolean a(int param0, dk[] param1, dk[] param2) {
+    private final boolean a(int param0, LegacyButton[] param1, LegacyButton[] param2) {
         int var5 = 0;
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
@@ -687,10 +687,10 @@ final class pf {
             return false;
           }
           if (param1.length - 1 > var4_int) {
-            var5 = param1[var4_int + 1].field_c;
+            var5 = param1[var4_int + 1].actionId;
             this.field_b.a(false, var5);
           } else {
-            var5 = param2[0].field_c;
+            var5 = param2[0].actionId;
             this.field_b.a(false, var5);
           }
           if (param0 == -101) {
@@ -751,20 +751,20 @@ final class pf {
         return var4;
     }
 
-    private final int a(byte param0, dk[] param1) {
+    private final int a(byte param0, LegacyButton[] param1) {
         String stackIn_14_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
           int var3_int = 0;
           if (param0 > -105) {
-            dk[] var8 = (dk[]) null;
-            this.a((dk[]) null, (byte) 115, 95, -46);
+            LegacyButton[] var8 = (LegacyButton[]) null;
+            this.a((LegacyButton[]) null, (byte) 115, 95, -46);
           }
-          dk[] var4 = param1;
+          LegacyButton[] var4 = param1;
           for (int var5 = 0; var5 < var4.length; var5++) {
-            dk var6 = var4[var5];
-            if (var6.field_i > var3_int) {
-              var3_int = var6.field_i;
+            LegacyButton var6 = var4[var5];
+            if (var6.height > var3_int) {
+              var3_int = var6.height;
             }
           }
           int stackIn_10_0 = var3_int;
@@ -783,7 +783,7 @@ final class pf {
         }
     }
 
-    private final void a(int param0, int param1, String[] param2, Sprite[] param3, int[] param4, ih param5, int[] param6) {
+    private final void a(int param0, int param1, String[] param2, Sprite[] param3, int[] param4, BinaryBitmapFont param5, int[] param6) {
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         String stackIn_19_2 = null;
@@ -793,12 +793,12 @@ final class pf {
         try {
           int var8_int = 2;
           int var9 = param2.length;
-          this.field_c = new dk[var9];
+          this.field_c = new LegacyButton[var9];
           int var10 = 0;
           for (int var11 = 0; var11 < var9; var11++) {
-            dk var12_ref_dk = new dk(var8_int, param4[var11], param2[var11], param1, param3[var11], param6[var11], param5);
+            LegacyButton var12_ref_dk = new LegacyButton(var8_int, param4[var11], param2[var11], param1, param3[var11], param6[var11], param5);
             this.field_c[var11] = var12_ref_dk;
-            var10 = var10 + var12_ref_dk.field_p;
+            var10 = var10 + var12_ref_dk.width;
           }
           int var11Lifetime1 = 640;
           int var12 = DynamicTerrainRenderer.a(1, var9, var11Lifetime1, var10);
@@ -811,12 +811,12 @@ final class pf {
           int var16 = TextWidgetPainter.field_j.fullHeight / 2 + 77;
           int var17 = 442;
           int var18 = this.a(4, var16, this.field_c, var17);
-          dk[] var19 = this.field_c;
+          LegacyButton[] var19 = this.field_c;
           for (int var20 = 0; var19.length > var20; var20++) {
-            dk var21 = var19[var20];
-            int var22 = var18 - var21.field_i;
-            var21.b((byte) 39, var15, var22);
-            var15 = var15 + (var12 + var21.field_p);
+            LegacyButton var21 = var19[var20];
+            int var22 = var18 - var21.height;
+            var21.setPosition((byte) 39, var15, var22);
+            var15 = var15 + (var12 + var21.width);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -858,7 +858,7 @@ final class pf {
     }
 
     private final void d(byte param0) {
-        ih var2 = fh.field_g;
+        BinaryBitmapFont var2 = fh.field_g;
         int var3 = 10;
         int[] var4 = this.a(0, var3, var2, (byte) 102);
         int[] var5 = this.a(var2, 84, var3, var4.length);
@@ -894,7 +894,7 @@ final class pf {
             if (IntrusiveNode.field_c == null) {
               return;
             }
-            SystemTaskService stackIn_13_0 = ae.field_a;
+            SystemTaskService stackIn_13_0 = SpriteCheckboxPainter.field_a;
             int stackIn_13_1 = -12;
             java.net.URL stackIn_13_2 = null;
             java.net.URL stackIn_13_3 = null;
@@ -905,7 +905,7 @@ final class pf {
             } else {
               java.net.URL stackIn_14_2 = null;
               java.net.URL stackIn_14_3 = null;
-              stackIn_14_6 = "" + eb.field_J;
+              stackIn_14_6 = "" + DialWidget.field_J;
             }
             SystemTask var4 = ((SystemTaskService) (Object) stackIn_13_0).a((byte) stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(SystemTaskService.field_s).append("&v2=").append(SystemTaskService.field_v).append("&e=").append(var7).toString()));
             while (var4.field_f == 0) {
@@ -949,13 +949,13 @@ final class pf {
         }
     }
 
-    private final void a(dk[] param0, byte param1, int param2, int param3) {
+    private final void a(LegacyButton[] param0, byte param1, int param2, int param3) {
         int var5_int = this.a(6481, param0);
         if (var5_int < 0) {
           return;
         }
-        dk var6 = param0[var5_int];
-        int var7 = var6.field_c;
+        LegacyButton var6 = param0[var5_int];
+        int var7 = var6.actionId;
         int var8 = this.field_b.field_h;
         if (param1 != -23) {
           field_e = (String[]) null;

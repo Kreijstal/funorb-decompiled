@@ -61,7 +61,7 @@ final class ki extends SingleChildContainer {
           return;
         }
         int var7 = this.field_E ? this.width - (this.field_D + this.field_K * 2) : 0;
-        this.field_L.a(this.field_G, this.field_K + var5 + var7, var6 + this.field_K, -this.field_K + this.field_D, -(this.field_K * 2) + this.height, this.field_F, -1, this.field_E ? 0 : 2, 1, this.field_L.field_r);
+        this.field_L.drawParagraph(this.field_G, this.field_K + var5 + var7, var6 + this.field_K, -this.field_K + this.field_D, -(this.field_K * 2) + this.height, this.field_F, -1, this.field_E ? 0 : 2, 1, this.field_L.maxAscent);
         if (guard >= 85) {
           return;
         }
@@ -84,7 +84,7 @@ final class ki extends SingleChildContainer {
           this.field_L = param8;
           this.field_G = param10;
           int var12_int = -this.field_K + this.field_D;
-          int var13 = this.field_L.b(param10, var12_int, this.field_L.field_r) + 2 * this.field_K;
+          int var13 = this.field_L.paragraphHeight(param10, var12_int, this.field_L.maxAscent) + 2 * this.field_K;
           if (param3 >= var13) {
             var13 = param3;
           } else {

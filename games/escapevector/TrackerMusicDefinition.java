@@ -88,7 +88,7 @@ final class TrackerMusicDefinition {
             if (var4 == null) {
               var2 = false;
             } else {
-              this.field_E[var3] = ae.a(this.field_E[var3], 15);
+              this.field_E[var3] = SpriteCheckboxPainter.bitwiseAnd(this.field_E[var3], 15);
               this.field_s[var3] = var4;
             }
           }
@@ -116,7 +116,7 @@ final class TrackerMusicDefinition {
         }
         if (null == AudioService.field_b) {
           mj.field_e = ProxySocketConnector.field_o;
-          AudioService.field_b = new String[][]{mj.field_e, ProxySocketConnector.field_o, vd.field_d, ck.field_u};
+          AudioService.field_b = new String[][]{mj.field_e, ProxySocketConnector.field_o, vd.field_d, ThreeSliceButtonPainter.field_u};
         }
         return AudioService.field_b[param1][param2];
     }
@@ -138,7 +138,7 @@ final class TrackerMusicDefinition {
           for (int var5 = 0; var5 < this.field_w; var5++) {
             int dupTemp$0 = var4 + param0.readUnsignedByte(0);
             var4 = dupTemp$0;
-            this.field_x[var5] = ae.a(255, dupTemp$0);
+            this.field_x[var5] = SpriteCheckboxPainter.bitwiseAnd(255, dupTemp$0);
           }
           this.field_C = new byte[256][];
           this.field_l = new int[256];
@@ -189,7 +189,7 @@ final class TrackerMusicDefinition {
               for (int var8 = 0; var8 < 96; var8++) {
                 int dupTemp$1 = var4Lifetime1 + param0.readUnsignedByte(0);
                 var4Lifetime1 = dupTemp$1;
-                this.field_d[var6Lifetime1][var8] = var5Lifetime4 + ae.a(255, dupTemp$1);
+                this.field_d[var6Lifetime1][var8] = var5Lifetime4 + SpriteCheckboxPainter.bitwiseAnd(255, dupTemp$1);
               }
               this.field_u[var6Lifetime1] = param0.readUnsignedByte(0);
               int var8Lifetime1 = param0.readUnsignedByte(0);
@@ -218,7 +218,7 @@ final class TrackerMusicDefinition {
               for (int var11Lifetime1 = 0; var11Lifetime1 < var8Lifetime1; var11Lifetime1++) {
                 int dupTemp$6 = var4Lifetime1Lifetime2 + param0.readUnsignedByte(0);
                 var4Lifetime1Lifetime2 = dupTemp$6;
-                this.field_g[var6Lifetime1][var11Lifetime1] = ae.a(255, dupTemp$6);
+                this.field_g[var6Lifetime1][var11Lifetime1] = SpriteCheckboxPainter.bitwiseAnd(255, dupTemp$6);
               }
               int[] array$7 = new int[var9];
               this.field_I[var6Lifetime1] = array$7;
@@ -237,7 +237,7 @@ final class TrackerMusicDefinition {
               for (int var11Lifetime3 = 0; var9 > var11Lifetime3; var11Lifetime3++) {
                 int dupTemp$11 = var4Lifetime1Lifetime4 + param0.readUnsignedByte(0);
                 var4Lifetime1Lifetime4 = dupTemp$11;
-                this.field_t[var6Lifetime1][var11Lifetime3] = ae.a(255, dupTemp$11);
+                this.field_t[var6Lifetime1][var11Lifetime3] = SpriteCheckboxPainter.bitwiseAnd(255, dupTemp$11);
               }
               this.field_H[var6Lifetime1] = param0.readUnsignedShort(1952);
               for (int var11Lifetime4 = 0; var11Lifetime4 < var7; var11Lifetime4++) {

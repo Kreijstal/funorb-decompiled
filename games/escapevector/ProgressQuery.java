@@ -73,14 +73,14 @@ final class ProgressQuery extends IntrusiveNode {
 
     final static void a(byte param0, String param1, int param2, int param3) {
         try {
-          fh.field_g.b(param1, param2 - 1, -1 + param3, 0, -1, 64);
+          fh.field_g.drawCenteredAlpha(param1, param2 - 1, -1 + param3, 0, -1, 64);
           if (param0 < 19) {
             field_i = (String) null;
           }
-          fh.field_g.b(param1, 1 + param2, -1 + param3, 0, -1, 64);
-          fh.field_g.b(param1, param2 - 1, 1 + param3, 0, -1, 64);
-          fh.field_g.b(param1, 1 + param2, 1 + param3, 0, -1, 64);
-          fh.field_g.c(param1, param2, param3, 16777215, -1);
+          fh.field_g.drawCenteredAlpha(param1, 1 + param2, -1 + param3, 0, -1, 64);
+          fh.field_g.drawCenteredAlpha(param1, param2 - 1, 1 + param3, 0, -1, 64);
+          fh.field_g.drawCenteredAlpha(param1, 1 + param2, 1 + param3, 0, -1, 64);
+          fh.field_g.drawCentered(param1, param2, param3, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

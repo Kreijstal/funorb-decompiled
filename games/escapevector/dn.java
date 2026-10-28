@@ -7,29 +7,29 @@ final class dn {
     private int field_v;
     private int field_p;
     private boolean field_r;
-    private gl field_c;
+    private PairedTextColumns field_c;
     private int field_h;
     private boolean field_b;
-    private jl field_B;
+    private LegacyTextBlock field_B;
     private int field_g;
     private int[] field_A;
     private int field_k;
-    private jl field_f;
-    private jl field_s;
+    private LegacyTextBlock field_f;
+    private LegacyTextBlock field_s;
     private int field_u;
     private boolean field_w;
     static al field_q;
     private boolean field_x;
     private int field_t;
-    private wd field_o;
+    private SpriteLabelColumns field_o;
     private wc field_d;
     private gf field_y;
     private boolean field_j;
-    private dk field_z;
+    private LegacyButton field_z;
     private int field_e;
     static int field_a;
-    private dk[] field_l;
-    private jl field_n;
+    private LegacyButton[] field_l;
+    private LegacyTextBlock field_n;
     private int field_m;
     private int field_D;
 
@@ -37,20 +37,20 @@ final class dn {
         SpriteStrip[] var2 = this.b(false);
         String[] var3 = new String[]{gk.field_b, UiContainer.field_D, nl.field_a, kc.field_a, ArchiveProvider.field_c, gn.field_l, NodeHashTableIterator.field_a};
         this.a(var3, (byte) -10);
-        ih var4 = fh.field_g;
+        BinaryBitmapFont var4 = fh.field_g;
         int var5 = 16777215;
         int var6 = this.g((byte) 49);
-        this.field_o = new wd(IterableDualLinkDeque.field_a, var2, var3);
+        this.field_o = new SpriteLabelColumns(IterableDualLinkDeque.field_a, var2, var3);
         if (param0 <= 111) {
           return;
         }
-        this.field_o.a(var6, var4, var5, 117);
+        this.field_o.configure(var6, var4, var5, 117);
     }
 
     private final void k(int param0) {
         String var2 = this.i((byte) 114);
         String[] var3 = this.j(27679);
-        this.field_n = new jl(var2, var3);
+        this.field_n = new LegacyTextBlock(var2, var3);
         if (param0 > -63) {
           this.field_m = -57;
         }
@@ -67,13 +67,13 @@ final class dn {
     private final void e(byte param0) {
         int var2 = 107 % ((11 - param0) / 36);
         this.field_k = 0;
-        this.field_k = t.a(this.field_c.a(true), this.field_k, 63);
-        this.field_k = t.a(this.field_o.a(true), this.field_k, 37);
-        this.field_k = t.a(this.field_n.a(true), this.field_k, 54);
-        this.field_k = t.a(this.field_f.a(true), this.field_k, 24);
+        this.field_k = t.a(this.field_c.contentWidth(true), this.field_k, 63);
+        this.field_k = t.a(this.field_o.contentWidth(true), this.field_k, 37);
+        this.field_k = t.a(this.field_n.contentWidth(true), this.field_k, 54);
+        this.field_k = t.a(this.field_f.contentWidth(true), this.field_k, 24);
         if (this.field_b) {
-          this.field_k = t.a(this.field_B.a(true), this.field_k, 89);
-          this.field_k = t.a(this.field_s.a(true), this.field_k, 14);
+          this.field_k = t.a(this.field_B.contentWidth(true), this.field_k, 89);
+          this.field_k = t.a(this.field_s.contentWidth(true), this.field_k, 14);
         }
     }
 
@@ -131,10 +131,10 @@ final class dn {
         }
     }
 
-    private final int[] a(int param0, boolean param1, int param2, int param3, int param4, ih param5) {
+    private final int[] a(int param0, boolean param1, int param2, int param3, int param4, BinaryBitmapFont param5) {
         String stackIn_17_2 = null;
         try {
-          this.field_l = new dk[2];
+          this.field_l = new LegacyButton[2];
           int var7_int = 3;
           int var8 = param2;
           if (!param1) {
@@ -219,17 +219,17 @@ final class dn {
         }
         var5 = 75 / ((-81 - param0) / 43);
         if (null != this.field_l) {
-          dk[] var6 = this.field_l;
+          LegacyButton[] var6 = this.field_l;
           for (int var7 = 0; var7 < var6.length; var7++) {
-            dk var8 = var6[var7];
+            LegacyButton var8 = var6[var7];
             if (var8 != null) {
-              var8.a(var3, var2, (byte) -128, var4);
+              var8.setColors(var3, var2, (byte) -128, var4);
             }
           }
         }
         if (null != this.field_z) {
-          dk stackIn_15_0 = this.field_z;
-          ((dk) (Object) stackIn_15_0).a(var3, var2, (byte) -125, var4);
+          LegacyButton stackIn_15_0 = this.field_z;
+          ((LegacyButton) (Object) stackIn_15_0).setColors(var3, var2, (byte) -125, var4);
         }
     }
 
@@ -248,22 +248,22 @@ final class dn {
 
     private final int a(int param0, int param1, int param2) {
         int var7 = EscapeVector.obfuscationControl;
-        dk[] var4 = this.field_l;
+        LegacyButton[] var4 = this.field_l;
         int var5 = 0;
         if (param0 < 2) {
           dn.releaseStatics(-72);
         }
         while (var5 < var4.length) {
-          dk var6 = var4[var5];
+          LegacyButton var6 = var4[var5];
           if (var6 != null &&
-            var6.a((byte) 65, param1, param2)) {
-            return var6.field_c;
+            var6.hitTest((byte) 65, param1, param2)) {
+            return var6.actionId;
           }
           var5++;
         }
         if (null != this.field_z &&
-          this.field_z.a((byte) 65, param1, param2)) {
-          return this.field_z.field_c;
+          this.field_z.hitTest((byte) 65, param1, param2)) {
+          return this.field_z.actionId;
         }
         return -1;
     }
@@ -370,15 +370,15 @@ final class dn {
 
     private final void e(int param0) {
         this.field_h = param0;
-        this.field_h = this.field_h + this.field_c.b((byte) -90);
-        this.field_h = t.a(this.field_o.b((byte) -90), this.field_h, 76);
-        this.field_h = t.a(this.field_n.b((byte) -90), this.field_h, 62);
-        int var2 = this.field_f.b((byte) -90);
-        var2 = var2 + this.field_f.c((byte) 124);
+        this.field_h = this.field_h + this.field_c.height((byte) -90);
+        this.field_h = t.a(this.field_o.height((byte) -90), this.field_h, 76);
+        this.field_h = t.a(this.field_n.height((byte) -90), this.field_h, 62);
+        int var2 = this.field_f.height((byte) -90);
+        var2 = var2 + this.field_f.fontHeight((byte) 124);
         if (this.field_b) {
-          var2 = var2 + this.field_B.b((byte) -90);
-          var2 = var2 + this.field_B.c((byte) 109);
-          var2 = var2 + this.field_s.b((byte) -90);
+          var2 = var2 + this.field_B.height((byte) -90);
+          var2 = var2 + this.field_B.fontHeight((byte) 109);
+          var2 = var2 + this.field_s.height((byte) -90);
         }
         this.field_h = t.a(var2, this.field_h, 81);
     }
@@ -433,18 +433,18 @@ final class dn {
         return (var2Lifetime1);
     }
 
-    private final void a(String param0, int param1, int param2, int param3, int param4, int param5, ih param6, int param7, int param8, int param9, int param10) {
+    private final void a(String param0, int param1, int param2, int param3, int param4, int param5, BinaryBitmapFont param6, int param7, int param8, int param9, int param10) {
         try {
           if (param9 != 10551200) {
             int discarded$0 = this.b(36);
           }
-          dk var13 = new dk(param3, param10, param0, param4, param2, param6);
-          dk var14 = var13;
-          param1 = param1 - var14.field_i / 2;
+          LegacyButton var13 = new LegacyButton(param3, param10, param0, param4, param2, param6);
+          LegacyButton var14 = var13;
+          param1 = param1 - var14.height / 2;
           if (1 == param8) {
-            param5 = param5 - var14.field_p;
+            param5 = param5 - var14.width;
           }
-          var14.b((byte) 125, param5, param1);
+          var14.setPosition((byte) 125, param5, param1);
           this.field_l[param8] = var13;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dn.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
@@ -457,7 +457,7 @@ final class dn {
         int var5 = this.field_t - this.field_h / 2;
         int var6 = 0;
         int var7 = 10;
-        ih var8 = fh.field_g;
+        BinaryBitmapFont var8 = fh.field_g;
         int[] var16 = this.a(var7, true, var6, var4, var5, var8);
         var6 = var6 + var16.length;
         int var10 = this.field_t + this.field_h / 2;
@@ -514,7 +514,7 @@ final class dn {
               } else if (var6.objectiveType != 1) {
                 var3_ref = LevelObject.field_q;
               } else {
-                var3_ref = gl.field_r;
+                var3_ref = PairedTextColumns.field_r;
               }
               break regionExit1;
             }
@@ -533,14 +533,14 @@ final class dn {
         int var7 = EscapeVector.obfuscationControl;
         this.k((byte) 117);
         int var2 = 0;
-        dk[] var3_ref_dk__ = this.field_l;
+        LegacyButton[] var3_ref_dk__ = this.field_l;
         for (int var4 = 0; var3_ref_dk__.length > var4; var4++) {
-          dk var5 = var3_ref_dk__[var4];
+          LegacyButton var5 = var3_ref_dk__[var4];
           if (null != var5) {
-            boolean stackIn_8_0 = !(this.field_d.field_h != var5.field_c);
+            boolean stackIn_8_0 = !(this.field_d.field_h != var5.actionId);
             boolean var6 = stackIn_8_0;
-            var5.a(-16383, (var6));
-            var2 = var5.field_l + var5.field_i / 2;
+            var5.draw(-16383, (var6));
+            var2 = var5.y + var5.height / 2;
           }
         }
         if (this.field_j &&
@@ -563,10 +563,10 @@ final class dn {
           }
         }
         if (null != this.field_z) {
-          boolean stackIn_31_0 = !(this.field_d.field_h != this.field_z.field_c);
+          boolean stackIn_31_0 = !(this.field_d.field_h != this.field_z.actionId);
           boolean var3 = stackIn_31_0;
-          this.field_z.a(-16383, (var3));
-          int var2Lifetime1 = this.field_z.field_i + this.field_z.field_l;
+          this.field_z.draw(-16383, (var3));
+          int var2Lifetime1 = this.field_z.height + this.field_z.y;
         }
         if (param0 <= 104) {
           this.a((byte) 11, 95);
@@ -585,41 +585,41 @@ final class dn {
     }
 
     private final void b(byte param0) {
-        ih var2 = fh.field_g;
+        BinaryBitmapFont var2 = fh.field_g;
         if (param0 != 88) {
           return;
         }
         int var3 = 16777215;
         int var4 = this.field_y.field_g + this.field_y.field_j - this.field_v;
-        int var5 = this.field_y.field_k + (this.field_y.field_m - this.field_v - var2.field_x);
+        int var5 = this.field_y.field_k + (this.field_y.field_m - this.field_v - var2.maxDescent);
         String var6 = 1 + this.field_m + "/" + this.field_D;
-        var2.b(var6, var4, var5, var3, -1);
+        var2.drawRight(var6, var4, var5, var3, -1);
     }
 
     private final void c(int param0) {
         String var2 = km.field_o;
         String[] var3 = new String[]{on.field_c};
-        this.field_f = new jl(var2, var3);
+        this.field_f = new LegacyTextBlock(var2, var3);
         this.a(this.field_f, param0 ^ 16762243);
         var3 = new String[]{mh.field_g};
-        var2 = gl.field_s;
-        this.field_B = new jl(var2, var3);
+        var2 = PairedTextColumns.field_s;
+        this.field_B = new LegacyTextBlock(var2, var3);
         this.a(this.field_B, 16777215);
         var2 = pl.field_p;
         var3 = new String[]{TriangleMesh.field_p + "<br>" + "<br>", fk.field_e};
-        this.field_s = new jl(var2, var3);
+        this.field_s = new LegacyTextBlock(var2, var3);
         if (param0 != 14972) {
           return;
         }
         this.a(this.field_s, 16777215);
     }
 
-    private final void a(jl param0, int param1) {
+    private final void a(LegacyTextBlock param0, int param1) {
         try {
           int var3_int = param1;
           int var4 = this.g((byte) 84);
-          ih var5 = fh.field_g;
-          param0.a(var4, var5, var3_int, -87);
+          BinaryBitmapFont var5 = fh.field_g;
+          param0.configure(var4, var5, var3_int, -87);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dn.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -811,7 +811,7 @@ final class dn {
         field_C = null;
     }
 
-    private final int[] a(int param0, int param1, int param2, ih param3, int param4) {
+    private final int[] a(int param0, int param1, int param2, BinaryBitmapFont param3, int param4) {
         String stackIn_11_2 = null;
         try {
           GameplaySession var6 = BoundedRandomAccessFile.activeSession;
@@ -846,18 +846,18 @@ final class dn {
         }
     }
 
-    private final int[] a(String param0, int param1, int param2, int param3, int param4, int param5, ih param6, int param7, int param8) {
+    private final int[] a(String param0, int param1, int param2, int param3, int param4, int param5, BinaryBitmapFont param6, int param7, int param8) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
-          this.field_z = new dk(param7, param8, param0, param5, param2, param6);
+          this.field_z = new LegacyButton(param7, param8, param0, param5, param2, param6);
           int var10_int = 640;
-          int var11 = this.field_z.field_p;
+          int var11 = this.field_z.width;
           int var12 = 480;
           int var13 = (-var11 + var10_int) / 2;
-          int var14 = -this.field_z.field_i + (var12 - param1);
+          int var14 = -this.field_z.height + (var12 - param1);
           param1 = param1 + var14 / 2;
-          this.field_z.b((byte) 114, var13, param1);
+          this.field_z.setPosition((byte) 114, var13, param1);
           if (param4 != 10551200) {
             this.field_d = (wc) null;
           }
@@ -904,7 +904,7 @@ final class dn {
     private final void d(int param0) {
         int var2 = this.a(103, dh.field_d, UiContainer.field_y);
         if (param0 != -22600) {
-          this.field_z = (dk) null;
+          this.field_z = (LegacyButton) null;
         }
         int var3 = this.a(param0 + 22723, sf.field_c, ng.field_ob);
         this.field_d.a(var3, (byte) 118, var2);
@@ -939,7 +939,7 @@ final class dn {
         }
     }
 
-    private final int a(int param0, jl param1, int param2) {
+    private final int a(int param0, LegacyTextBlock param1, int param2) {
         String stackIn_10_2 = null;
         try {
           if (param1 == null) {
@@ -947,12 +947,12 @@ final class dn {
             return stackIn_2_0;
           }
           if (param2 != 0) {
-            jl var5 = (jl) null;
-            int discarded$1 = this.a(115, (jl) null, 41);
+            LegacyTextBlock var5 = (LegacyTextBlock) null;
+            int discarded$1 = this.a(115, (LegacyTextBlock) null, 41);
           }
-          param1.a(param0, 3);
-          int var4_int = param1.b((byte) -90);
-          var4_int = var4_int + param1.c((byte) 99);
+          param1.draw(param0, 3);
+          int var4_int = param1.height((byte) -90);
+          var4_int = var4_int + param1.fontHeight((byte) 99);
           int stackIn_6_0 = var4_int;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -972,22 +972,22 @@ final class dn {
     private final void j(byte param0) {
         int var2 = 640;
         if (param0 != 87) {
-          ih var15 = (ih) null;
-          this.a((String) null, -33, 46, -86, -58, -49, (ih) null, -14, -115, 10, -82);
+          BinaryBitmapFont var15 = (BinaryBitmapFont) null;
+          this.a((String) null, -33, 46, -86, -58, -49, (BinaryBitmapFont) null, -14, -115, 10, -82);
         }
         int var3 = -this.field_v + (-this.field_k + var2) / 2;
         int var4 = 0;
-        dk var5 = this.field_l[0];
+        LegacyButton var5 = this.field_l[0];
         if (var5 == null) {
           var5 = this.field_l[1];
         }
         if (var5 != null) {
-          var4 = var5.field_l - this.field_v;
+          var4 = var5.y - this.field_v;
         }
         int var6 = this.field_k + this.field_v * 2;
         int var7 = 0;
         if (var5 != null) {
-          var7 = this.field_h + (var5.field_i / 2 + var5.field_l) + this.field_v;
+          var7 = this.field_h + (var5.height / 2 + var5.y) + this.field_v;
         }
         int var8 = var7 - var4;
         int var9 = 20;
@@ -1055,9 +1055,9 @@ final class dn {
         int var4 = 16777215;
         int var5 = this.f((byte) 70);
         int var6 = this.g((byte) 115);
-        ih var7 = fh.field_g;
-        this.field_c = new gl(qc.field_yb, var8, var3);
-        this.field_c.a(var6, var5, var4, (byte) -92, var7);
+        BinaryBitmapFont var7 = fh.field_g;
+        this.field_c = new PairedTextColumns(qc.field_yb, var8, var3);
+        this.field_c.configureColumns(var6, var5, var4, (byte) -92, var7);
     }
 
     dn(boolean param0) {
@@ -1071,7 +1071,7 @@ final class dn {
         this.field_g = 3;
         this.field_p = 0;
         this.field_t = 260;
-        this.field_l = new dk[2];
+        this.field_l = new LegacyButton[2];
         this.field_j = true;
         this.field_e = 2;
         this.field_D = 3;

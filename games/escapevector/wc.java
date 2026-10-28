@@ -205,7 +205,7 @@ final class wc {
         dl.field_b = (BitmapFont) ((Object) ac.a("arezzo14bold", -93, param2, "commonui", param3));
         Sprite var17 = new Sprite(param1.getNamedFile(-4, "", "button.gif"), (java.awt.Component) ((Object) of.field_d));
         AccountRegistrationPanel.a(param2, 50, "dropdown", "commonui");
-        IndexedSprite[] var5 = ae.a("commonui", "screen_options", (byte) -65, param2);
+        IndexedSprite[] var5 = SpriteCheckboxPainter.loadIndexedSprites("commonui", "screen_options", (byte) -65, param2);
         SoundCache.field_f = new IndexedSprite[4];
         CachedArchiveProvider.field_w = new IndexedSprite[4];
         ej.field_f = new IndexedSprite[4];
@@ -302,7 +302,7 @@ final class wc {
         }
         if (this.field_a == 0) {
           if (qi.field_N == 0) {
-            if (eb.field_K != 0) {
+            if (DialWidget.field_K != 0) {
               if (param1 < 116) {
                 return;
               }
@@ -331,18 +331,18 @@ final class wc {
             }
             this.field_a = 0;
           }
-        } else if (eb.field_K != 0) {
+        } else if (DialWidget.field_K != 0) {
           if (0 >= this.field_f) {
             this.field_f = l.field_H;
             this.field_g = this.field_a;
           }
           this.field_f = this.field_f - 1;
           if (qi.field_N == 0 &&
-            eb.field_K == 0) {
+            DialWidget.field_K == 0) {
             this.field_a = 0;
           }
         } else if (qi.field_N == 0 &&
-          eb.field_K == 0) {
+          DialWidget.field_K == 0) {
           this.field_a = 0;
         }
         if (param1 < 116) {
