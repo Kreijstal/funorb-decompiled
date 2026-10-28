@@ -41,7 +41,7 @@ class LegacyStyleNode extends DualLinkNode {
               EmailValidationError stackIn_12_0 = var5;
               return stackIn_12_0;
             }
-            EmailValidationError stackIn_14_0 = ClientException.a(var4, ~missingSeparator);
+            EmailValidationError stackIn_14_0 = ClientException.validateDomain(var4, ~missingSeparator);
             return stackIn_14_0;
           }
           EmailValidationError stackIn_4_0 = LevelSelectScreen.field_g;

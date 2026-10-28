@@ -38,51 +38,51 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
         }
     }
 
-    final static int a(String[] args, int param1, BitmapFont param2, int param3, String param4) {
+    final static int wrapBalancedText(String[] lines, int guard, BitmapFont font, int width, String text) {
         String stackIn_28_2 = null;
         String stackIn_31_2 = null;
         String stackIn_34_2 = null;
         int var13 = EscapeVector.obfuscationControl;
         try {
-          int var5_int = param2.stringWidth(param4);
-          if (param3 >= var5_int &&
-            -1 == param4.indexOf("<br>")) {
-            args[0] = param4;
+          int var5_int = font.stringWidth(text);
+          if (width >= var5_int &&
+            -1 == text.indexOf("<br>")) {
+            lines[0] = text;
             int stackIn_4_0 = 1;
             return stackIn_4_0;
           }
-          int var6 = (param3 + (var5_int - 1)) / param3;
-          param3 = var5_int / var6;
+          int var6 = (width + (var5_int - 1)) / width;
+          width = var5_int / var6;
           int var6Lifetime1 = 0;
           int var7 = 0;
-          int var8 = param4.length();
+          int var8 = text.length();
           for (int var9 = 0; var8 > var9; var9++) {
-            int var10 = param4.charAt(var9);
+            int var10 = text.charAt(var9);
             if (var10 == 32 ||
               var10 == 45) {
-              String var11 = param4.substring(var7, 1 + var9).trim();
-              int var12 = param2.stringWidth(var11);
-              if (var12 >= param3) {
+              String var11 = text.substring(var7, 1 + var9).trim();
+              int var12 = font.stringWidth(var11);
+              if (var12 >= width) {
                 var7 = 1 + var9;
                 int incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;
-                args[incrementValue$1] = var11;
+                lines[incrementValue$1] = var11;
               }
             }
             if (var10 == 62 &&
-              param4.regionMatches(-3 + var9, "<br>", 0, 4)) {
+              text.regionMatches(-3 + var9, "<br>", 0, 4)) {
               int incrementValue$2 = var6Lifetime1;
               var6Lifetime1++;
-              args[incrementValue$2] = param4.substring(var7, -3 + var9).trim();
+              lines[incrementValue$2] = text.substring(var7, -3 + var9).trim();
               var7 = var9 + 1;
             }
           }
           if (var8 > var7) {
             int incrementValue$0 = var6Lifetime1;
             var6Lifetime1++;
-            args[incrementValue$0] = param4.substring(var7, var8).trim();
+            lines[incrementValue$0] = text.substring(var7, var8).trim();
           }
-          int var9Lifetime1 = -120 % ((-41 - param1) / 59);
+          int var9Lifetime1 = -120 % ((-41 - guard) / 59);
           int stackIn_24_0 = var6Lifetime1;
           return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -90,19 +90,19 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_27_0 = var5;
           StringBuilder stackIn_27_1 = new StringBuilder().append("un.R(");
-          if (args == null) {
+          if (lines == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
-          StringBuilder stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(guard).append(',');
+          if (font == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
-          StringBuilder stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          StringBuilder stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(width).append(',');
+          if (text == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
@@ -149,7 +149,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
         }
     }
 
-    final static int f(int param0) {
+    final static int pollJs5Connection(int guard) {
         try {
           if (4 <= SelfDestructEffects.field_j.failureCount) {
             if (-1 == SelfDestructEffects.field_j.lastErrorCode) {
@@ -160,7 +160,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
             }
             return 1;
           }
-          if (param0 >= -11) {
+          if (guard >= -11) {
             field_t = (int[]) null;
           }
           try {

@@ -18,7 +18,7 @@ final class DialWidgetPainter implements WidgetPainter {
           RasterSnapshot.field_l.addLast(-12328, record);
           DebouncedValidator.writeAchievementRecord(record, opcode, true);
           if (guard != 1) {
-            DialWidgetPainter.b((byte) 98);
+            DialWidgetPainter.beginConnectionRecovery((byte) 98);
           }
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "sc.B(" + (record != null ? "{...}" : "null") + ',' + opcode + ',' + guard + ')');
@@ -76,7 +76,7 @@ final class DialWidgetPainter implements WidgetPainter {
         }
     }
 
-    final static void b(byte param0) {
+    final static void beginConnectionRecovery(byte guard) {
         if (QuickChatPhraseCache.field_e == 10) {
           MembershipPromotionScreen.beginAlternateLoginFlow(-84);
           QuickChatPhraseCache.field_e = 11;
@@ -85,7 +85,7 @@ final class DialWidgetPainter implements WidgetPainter {
           QuickChatPhraseCache.field_e = 11;
         }
         MenuTitleRenderSupport.field_d = true;
-        if (param0 < -81) {
+        if (guard < -81) {
           return;
         }
         java.awt.Component var2 = (java.awt.Component) null;

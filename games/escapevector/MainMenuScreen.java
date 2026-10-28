@@ -107,7 +107,7 @@ final class MainMenuScreen {
                   int var9 = stackIn_31_0;
                   int var10 = (var9 - 68) / 2 + var6;
                   ByteStorage.gameFont.drawRight(DisplayNameForm.field_N, var10, 22, var5_int, -1);
-                  SingleChildContainer.a(var10, 13202, 4, IterableNodeHashTable.field_c, var5_int);
+                  SingleChildContainer.drawSliderTrack(var10, 13202, 4, IterableNodeHashTable.field_c, var5_int);
                 }
                 if (actionCode != 3 ||
                   var11 != 0) {
@@ -138,7 +138,7 @@ final class MainMenuScreen {
                           var9Lifetime1 = stackIn_63_0;
                           var10Lifetime1 = (-68 + var9Lifetime1) / 2 + var6;
                           ByteStorage.gameFont.drawRight(LoginMethod.field_d, var10Lifetime1, 22, var5_int, -1);
-                          SingleChildContainer.a(var10Lifetime1, 13202, 4, MembershipPromotionSupport.field_b, var5_int);
+                          SingleChildContainer.drawSliderTrack(var10Lifetime1, 13202, 4, MembershipPromotionSupport.field_b, var5_int);
                           ByteStorage.gameFont.drawCentered(EscapeVector.field_z, var6, 22, var5_int, -1);
                         }
                       }
@@ -149,7 +149,7 @@ final class MainMenuScreen {
                     var9Lifetime1 = stackIn_63_0;
                     var10Lifetime1 = (-68 + var9Lifetime1) / 2 + var6;
                     ByteStorage.gameFont.drawRight(LoginMethod.field_d, var10Lifetime1, 22, var5_int, -1);
-                    SingleChildContainer.a(var10Lifetime1, 13202, 4, MembershipPromotionSupport.field_b, var5_int);
+                    SingleChildContainer.drawSliderTrack(var10Lifetime1, 13202, 4, MembershipPromotionSupport.field_b, var5_int);
                     if (var11 != 0) {
                       ByteStorage.gameFont.drawCentered(EscapeVector.field_z, var6, 22, var5_int, -1);
                     }
@@ -476,10 +476,10 @@ final class MainMenuScreen {
             if (null != IsaacRandom.field_d) {
               DisplayAndRatingSupport.exitFullscreen(guard - 11954);
               if (var10 != 0) {
-                TickClock.a(24, pointerDriven);
+                TickClock.configureDefaultMenuStyle(24, pointerDriven);
               }
             } else {
-              TickClock.a(24, pointerDriven);
+              TickClock.configureDefaultMenuStyle(24, pointerDriven);
             }
             return true;
           }
@@ -492,7 +492,7 @@ final class MainMenuScreen {
           }
           if (var3_int == 7 &&
             this.input.isInitialActivation((byte) -18)) {
-            SpriteState.a(guard + 13193, this.input.pointerDriven);
+            SpriteState.showAchievementsScreen(guard + 13193, this.input.pointerDriven);
             LoginHandshakeSupport.field_d = 0;
             ChatMessage.clearFrameOffsets((byte) -94);
             return true;

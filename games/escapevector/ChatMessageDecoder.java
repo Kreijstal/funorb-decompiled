@@ -150,12 +150,12 @@ final class ChatMessageDecoder {
         return new ChatMessage(quickChat);
     }
 
-    final static boolean a(boolean param0, byte param1) {
+    final static boolean pollAccountConnection(boolean alternateHistory, byte guard) {
         try {
           if (Js5ArchiveManager.field_d == null) {
             Js5ArchiveManager.field_d = MouseWheelInput.field_c.openSocket(BitCountSupport.field_b, 4, IntrusiveDeque.field_h);
           }
-          if (param1 != 0) {
+          if (guard != 0) {
             field_b = (Sprite[][]) null;
           }
           if (Js5ArchiveManager.field_d.status == 0) {
@@ -174,12 +174,12 @@ final class ChatMessageDecoder {
               CipherPacketBuffer var5 = var4;
               AccountFormStage.field_d = SessionCounterState.field_d;
               var5.position = 0;
-              int stackIn_11_0 = (!param0) ? -1 : -2;
+              int stackIn_11_0 = (!alternateHistory) ? -1 : -2;
               NetworkGameClient.oldestIncomingOpcode = stackIn_11_0;
               ArchiveIndex.field_t = stackIn_11_0;
               LoginPromptSupport.field_b = stackIn_11_0;
               MenuInputState.writeAccountHandshake(SpaceCompactionSupport.field_a, KeyboardStateSupport.field_b, true, DropTargetWidget.field_D, QuickChatDynamicCommand.outgoingPackets);
-              ClientException.a(-1, 30785);
+              ClientException.flushAccountPackets(-1, 30785);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;
               IOException var2 = (IOException) (Object) decompiledCaughtException;

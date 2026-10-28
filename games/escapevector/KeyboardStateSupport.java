@@ -128,7 +128,7 @@ final class KeyboardStateSupport {
           int var5_int = 4 % ((50 - guard) / 60);
           int var6 = spriteArchive.findGroupId(-1, groupName);
           int var7 = spriteArchive.findFileId(var6, fileName, true);
-          CoverageBitmapFont stackIn_1_0 = LinkButtonPainter.a(var6, -198630768, fontArchive, var7, spriteArchive);
+          CoverageBitmapFont stackIn_1_0 = LinkButtonPainter.loadCoverageFont(var6, -198630768, fontArchive, var7, spriteArchive);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

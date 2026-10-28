@@ -29,28 +29,28 @@ final class TetherHumStream extends PcmStream {
         }
     }
 
-    private final int a(int param0, int param1, int param2, int param3) {
-        if (param2 == 2) {
-          return param1 * LegacyButton.field_h[param0 & 32767] >> 3;
+    private final int waveformValue(int phase, int amplitude, int waveform, int guard) {
+        if (waveform == 2) {
+          return amplitude * LegacyButton.field_h[phase & 32767] >> 3;
         }
-        if (param3 > -6) {
+        if (guard > -6) {
           return 63;
         }
-        if (param2 != 3) {
+        if (waveform != 3) {
           return 0;
         }
-        return -param1 + (param1 * (32767 & param0) >> 14);
+        return -amplitude + (amplitude * (32767 & phase) >> 14);
     }
 
-    final static LegacyButton a(LegacyButton[] param0, int param1, int param2) {
+    final static LegacyButton findLegacyButton(LegacyButton[] buttons, int actionId, int startIndex) {
         String stackIn_13_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          LegacyButton[] var7 = param0;
+          LegacyButton[] var7 = buttons;
           LegacyButton[] var3 = var7;
-          for (int var4 = param2; var4 < var7.length; var4++) {
+          for (int var4 = startIndex; var4 < var7.length; var4++) {
             LegacyButton var5 = var7[var4];
-            if (param1 == var5.actionId) {
+            if (actionId == var5.actionId) {
               LegacyButton stackIn_7_0 = var5;
               return stackIn_7_0;
             }
@@ -61,12 +61,12 @@ final class TetherHumStream extends PcmStream {
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var3_ref;
           StringBuilder stackIn_12_1 = new StringBuilder().append("m.J(");
-          if (param0 == null) {
+          if (buttons == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(actionId).append(',').append(startIndex).append(')').toString());
         }
     }
 
@@ -102,9 +102,9 @@ final class TetherHumStream extends PcmStream {
             int var14 = var9;
             int var15 = 32768;
             int var16 = 65536 - var13;
-            var13 = var13 + (this.a(this.field_m, var16, 3, -60) >> 1);
+            var13 = var13 + (this.waveformValue(this.field_m, var16, 3, -60) >> 1);
             this.field_m = this.field_m + (var15 * var8 >> 16);
-            int var17 = this.a(this.field_p, var14, 2, -68);
+            int var17 = this.waveformValue(this.field_p, var14, 2, -68);
             int incrementValue$0 = var12;
             var12++;
             samples[incrementValue$0] = samples[incrementValue$0] + var17;

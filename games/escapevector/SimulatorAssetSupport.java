@@ -20,9 +20,9 @@ final class SimulatorAssetSupport {
         return var4Lifetime1 * var5Lifetime1 + right * var3 + (var6Lifetime1 * var4Lifetime1 >> 16);
     }
 
-    final static boolean c(int param0) {
+    final static boolean loadSimulatorTheme(int slot) {
         boolean var1 = (ThemeAssetSupport.loadTheme(4, 5));
-        ChatMessageDecoder.field_b[6][param0] = SharedSpriteAssets.field_a;
+        ChatMessageDecoder.field_b[6][slot] = SharedSpriteAssets.field_a;
         return (var1);
     }
 

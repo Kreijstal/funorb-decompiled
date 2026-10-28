@@ -110,14 +110,14 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         field_pb = null;
     }
 
-    final static byte[][][] a(int[] param0, ResourceArchive param1, byte[][][] param2, ResourceArchive param3, byte param4) {
+    final static byte[][][] loadMemberCampaigns(int[] key, ResourceArchive archive, byte[][][] retained, ResourceArchive plainArchive, byte guard) {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         try {
-          if (param4 > 53) {
-            byte[][][] stackIn_4_0 = ChatMessageDecoder.loadCampaignsByArchiveKind(param1, param3, param0, param2, 2, 0);
+          if (guard > 53) {
+            byte[][][] stackIn_4_0 = ChatMessageDecoder.loadCampaignsByArchiveKind(archive, plainArchive, key, retained, 2, 0);
             return stackIn_4_0;
           }
           byte[][][] stackIn_2_0 = (byte[][][]) null;
@@ -127,30 +127,30 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_7_0 = var5;
           StringBuilder stackIn_7_1 = new StringBuilder().append("pn.J(");
-          if (param0 == null) {
+          if (key == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param1 == null) {
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (retained == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param3 == null) {
+          if (plainArchive == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             AlphaContainer.openRelativeUrl(PointCloudEffect.activeApplet((byte) -85), (byte) -96, "tochangedisplayname.ws");
             return;
           }
-          WhirlpoolHasher.a(3, guard + 106);
+          WhirlpoolHasher.setAccountAction(3, guard + 106);
           this.closeDialog(-18861);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -220,7 +220,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           return;
         }
         if (this.field_lb) {
-          DialWidget.k(0);
+          DialWidget.showRegistrationEmailLogin(0);
           return;
         }
     }

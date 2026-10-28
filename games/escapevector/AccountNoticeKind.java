@@ -32,14 +32,14 @@ final class AccountNoticeKind {
         SavedDataQuery.field_i = false;
         if (guard == 3161) {
           DialWidget.field_H = false;
-          WhirlpoolHasher.a(-1, guard - 3109);
+          WhirlpoolHasher.setAccountAction(-1, guard - 3109);
           InstructionsScreen.field_q = RasterBuffer.field_g;
           MeshMaterial.field_b = RasterBuffer.field_g;
           return;
         }
         frameworkLoadingStage = -26;
         DialWidget.field_H = false;
-        WhirlpoolHasher.a(-1, guard - 3109);
+        WhirlpoolHasher.setAccountAction(-1, guard - 3109);
         InstructionsScreen.field_q = RasterBuffer.field_g;
         MeshMaterial.field_b = RasterBuffer.field_g;
     }
@@ -145,7 +145,7 @@ final class AccountNoticeKind {
     final static NameAvailabilityResult createBooleanResponse(boolean value, byte guard) {
         NameAvailabilityResult var2 = new NameAvailabilityResult(true);
         if (guard <= -39) {
-          var2.field_e = value ? true : false;
+          var2.requiresTerms = value ? true : false;
           return var2;
         }
         return (NameAvailabilityResult) null;

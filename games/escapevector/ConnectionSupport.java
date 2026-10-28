@@ -90,7 +90,7 @@ final class ConnectionSupport {
 
     final static void drawButtons(byte guard, int selectedAction, LegacyButton[] buttons) {
         try {
-          HudMessage.a(buttons, -1, selectedAction, (byte) -28);
+          HudMessage.drawLegacyButtons(buttons, -1, selectedAction, (byte) -28);
           if (guard > -50) {
             field_a = (PcmSample) null;
           }

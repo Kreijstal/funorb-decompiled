@@ -304,20 +304,20 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static int a(int param0, int param1) {
-        if (param0 < 88) {
+    final static int validModeIndex(int guard, int mode) {
+        if (guard < 88) {
           achievementOrbPoints = (int[]) null;
         }
-        if (param1 == 0) {
+        if (mode == 0) {
           return 0;
         }
-        if (1 == param1) {
+        if (1 == mode) {
           return 1;
         }
-        if (param1 == 2) {
+        if (mode == 2) {
           return 2;
         }
-        if (param1 == 3) {
+        if (mode == 3) {
           return 3;
         }
         return -1;

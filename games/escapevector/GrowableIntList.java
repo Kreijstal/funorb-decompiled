@@ -41,7 +41,7 @@ final class GrowableIntList {
         field_c = null;
         field_h = null;
         if (!guard) {
-          GrowableIntList.a((byte) 76);
+          GrowableIntList.initializeAccountPanels((byte) 76);
         }
     }
 
@@ -73,13 +73,13 @@ final class GrowableIntList {
         this.values = var4;
     }
 
-    final static void a(byte param0) {
-        AchievementThresholdRule.field_g = EmailSyntaxValidator.c(false);
+    final static void initializeAccountPanels(byte guard) {
+        AchievementThresholdRule.field_g = EmailSyntaxValidator.sharedUiTheme(false);
         Checkbox.field_F = new ModalStack();
-        if (param0 > -21) {
+        if (guard > -21) {
           return;
         }
-        MarkerSliderPainter.a(-43, true, true);
+        MarkerSliderPainter.showLoginDialog(-43, true, true);
     }
 
     final int get(int guard, int index) {
@@ -89,7 +89,7 @@ final class GrowableIntList {
         if (guard < -5) {
           return this.values[index];
         }
-        GrowableIntList.b(false);
+        GrowableIntList.currentEmailText(false);
         return this.values[index];
     }
 
@@ -117,11 +117,11 @@ final class GrowableIntList {
         throw new Error();
     }
 
-    final static LoginText b(boolean param0) {
-        if (!param0) {
+    final static LoginText currentEmailText(boolean guard) {
+        if (!guard) {
           return (LoginText) null;
         }
-        return new LoginText(TrackerMusicDefinition.currentEmailOrLoginName(31069), KeyCodeSupport.c(-89));
+        return new LoginText(TrackerMusicDefinition.currentEmailOrLoginName(31069), KeyCodeSupport.emailAvailabilityPending(-89));
     }
 
     final int size(boolean guard) {

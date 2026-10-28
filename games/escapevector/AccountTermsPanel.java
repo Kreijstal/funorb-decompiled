@@ -21,7 +21,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           field_M = null;
           return;
         }
-        AccountTermsPanel.l(51);
+        AccountTermsPanel.introFinished(51);
         field_M = null;
     }
 
@@ -40,7 +40,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           this.registrationDialog = param0;
           this.continueButton = new TextButton(NameAvailabilityResultSupport.field_d, (UiListener) null);
           this.continueButton.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
-          String var7 = SingleChildContainer.a(LoginIdentifierSupport.field_c, -63, new String[]{this.linkOpenMarkup(-102), this.linkCloseMarkup((byte) 126)});
+          String var7 = SingleChildContainer.formatPlaceholders(LoginIdentifierSupport.field_c, -63, new String[]{this.linkOpenMarkup(-102), this.linkCloseMarkup((byte) 126)});
           int var3 = 20;
           TextWidgetPainter var4 = new TextWidgetPainter(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.maxAscent, -1, 2147483647, true);
           this.termsText = new TextHotspotWidget(var7, var4);
@@ -63,8 +63,8 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         }
     }
 
-    final static boolean l(int param0) {
-        if (param0 == 3) {
+    final static boolean introFinished(int guard) {
+        if (guard == 3) {
           return SocketConnector.field_d > 250 ? true : false;
         }
         field_M = (String) null;
@@ -76,11 +76,11 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         int var6 = EscapeVector.obfuscationControl;
         try {
           if (hotspotId == 0) {
-            AchievementRecord.a(guard ^ -2849, "terms.ws");
+            AchievementRecord.requestPolicyPage(guard ^ -2849, "terms.ws");
           } else if (1 == hotspotId) {
-            AchievementRecord.a(12, "privacy.ws");
+            AchievementRecord.requestPolicyPage(12, "privacy.ws");
           } else if (hotspotId == 2) {
-            AchievementRecord.a(12, "conduct.ws");
+            AchievementRecord.requestPolicyPage(12, "conduct.ws");
           }
           if (guard == -2861) {
             return;
@@ -150,7 +150,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           if (button != this.continueButton) {
             return;
           }
-          DebouncedValidator.b((byte) -125);
+          DebouncedValidator.requestRegistrationLogin((byte) -125);
           this.registrationDialog.closeDialog(-18861);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

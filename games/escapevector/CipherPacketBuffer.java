@@ -38,11 +38,11 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static void m(int param0) {
+    final static void advanceSessionCounters(int guard) {
         if (null != SocketJs5Transport.field_r) {
           SocketJs5Transport.field_r.advanceCounters((byte) 33);
         }
-        int var1 = -128 / ((param0 - 16) / 38);
+        int var1 = -128 / ((guard - 16) / 38);
     }
 
     final void beginBitReading(int guard) {
@@ -70,7 +70,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           field_n = null;
           return;
         }
-        CipherPacketBuffer.m(19);
+        CipherPacketBuffer.advanceSessionCounters(19);
         field_n = null;
     }
 
@@ -83,7 +83,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static void p(int param0) {
+    final static void writeReadyReflectionChecks(int guard) {
         int var3 = EscapeVector.obfuscationControl;
         try {
           CipherPacketBuffer var1 = QuickChatDynamicCommand.outgoingPackets;
@@ -92,18 +92,18 @@ final class CipherPacketBuffer extends PacketBuffer {
             int fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             int var2 = fieldTemp$0;
-            ResourceArchive.writeReflectionCheckResults(param0 ^ -25858, var1);
+            ResourceArchive.writeReflectionCheckResults(guard ^ -25858, var1);
             QuickChatDynamicCommand.outgoingPackets.backpatchByteLength(82, var1.position - var2);
           }
-          if (param0 == 11197) {
+          if (guard == 11197) {
             return;
           }
-          CipherPacketBuffer.p(-41);
+          CipherPacketBuffer.writeReadyReflectionChecks(-41);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "c.DB(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "c.DB(" + guard + ')');
         }
     }
 

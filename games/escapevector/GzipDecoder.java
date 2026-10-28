@@ -15,7 +15,7 @@ final class GzipDecoder {
           HighscorePlayerRecord.field_g = RasterBuffer.createEmailAvailabilityRequest((byte) 41, "");
           HighscorePlayerRecord.field_g.complete((byte) -128, false);
           MenuInputState.loadCommonUiAssets(83, sprites, fonts, buttons);
-          GrowableIntList.a((byte) -96);
+          GrowableIntList.initializeAccountPanels((byte) -96);
           InstructionsScreen.field_q = RasterBuffer.field_g;
           if (byteGuard > -111) {
             GzipDecoder.isMembersAchievement(13, (byte) 34);

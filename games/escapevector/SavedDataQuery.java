@@ -11,71 +11,71 @@ final class SavedDataQuery extends IntrusiveNode {
     byte[] payload;
     static boolean field_i;
 
-    final static boolean d(int param0) {
-        if (param0 == 1000) {
-          return TextButton.a(false, PointCloudEffect.activeApplet((byte) -110));
+    final static boolean browserSessionMarkerSet(int guard) {
+        if (guard == 1000) {
+          return TextButton.hasBrowserSessionMarker(false, PointCloudEffect.activeApplet((byte) -110));
         }
         String var2 = (String) null;
         SavedDataQuery.createCredentials(10, true, 83L, (String) null, (String) null);
-        return TextButton.a(false, PointCloudEffect.activeApplet((byte) -110));
+        return TextButton.hasBrowserSessionMarker(false, PointCloudEffect.activeApplet((byte) -110));
     }
 
-    final static int a(int param0, int param1, int param2) {
-        if (param0 != 0) {
+    final static int scaleScoreForMode(int guard, int value, int mode) {
+        if (guard != 0) {
           field_n = (String) null;
-          return EditableTextWidget.a(param1, param2, 96);
+          return EditableTextWidget.scaleScoreForMode(value, mode, 96);
         }
-        return EditableTextWidget.a(param1, param2, 96);
+        return EditableTextWidget.scaleScoreForMode(value, mode, 96);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void fillHalfBlendGouraudTriangle(int xB, int yA, int xA, int greenC, int redB, int yC, int redC, int xC, int yB, int guard, int blueC, int blueA, int redA, int blueB, int greenA, int greenB) {
         int var17 = EscapeVector.obfuscationControl;
-        if (param9 == -15733) {
-          if (param1 < param8) {
-            if (param5 > param8) {
-              SecondaryIntrusiveDeque.a(param6, param4, param11, param13, SoftwareRasterizer.pixels, param0, param15, param2, param1, param8, param5, true, param12, param7, param14, param3, param10);
+        if (guard == -15733) {
+          if (yA < yB) {
+            if (yC > yB) {
+              SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redC, redB, blueA, blueB, SoftwareRasterizer.pixels, xB, greenB, xA, yA, yB, yC, true, redA, xC, greenA, greenC, blueC);
               return;
             }
-            if (param5 > param1) {
-              SecondaryIntrusiveDeque.a(param4, param6, param11, param10, SoftwareRasterizer.pixels, param7, param3, param2, param1, param5, param8, true, param12, param0, param14, param15, param13);
+            if (yC > yA) {
+              SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redB, redC, blueA, blueC, SoftwareRasterizer.pixels, xC, greenC, xA, yA, yC, yB, true, redA, xB, greenA, greenB, blueB);
               return;
             }
-            SecondaryIntrusiveDeque.a(param4, param12, param10, param11, SoftwareRasterizer.pixels, param2, param14, param7, param5, param1, param8, true, param6, param0, param3, param15, param13);
+            SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redB, redA, blueC, blueA, SoftwareRasterizer.pixels, xA, greenA, xC, yC, yA, yB, true, redC, xB, greenC, greenB, blueB);
             return;
           }
-          if (param1 < param5) {
-            SecondaryIntrusiveDeque.a(param6, param12, param13, param11, SoftwareRasterizer.pixels, param2, param14, param0, param8, param1, param5, true, param4, param7, param15, param3, param10);
+          if (yA < yC) {
+            SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redC, redA, blueB, blueA, SoftwareRasterizer.pixels, xA, greenA, xB, yB, yA, yC, true, redB, xC, greenB, greenC, blueC);
             return;
           }
-          if (param8 >= param5) {
-            SecondaryIntrusiveDeque.a(param12, param4, param10, param13, SoftwareRasterizer.pixels, param0, param15, param7, param5, param8, param1, true, param6, param2, param3, param14, param11);
+          if (yB >= yC) {
+            SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redA, redB, blueC, blueB, SoftwareRasterizer.pixels, xB, greenB, xC, yC, yB, yA, true, redC, xA, greenC, greenA, blueA);
             return;
           }
-          SecondaryIntrusiveDeque.a(param12, param6, param13, param10, SoftwareRasterizer.pixels, param7, param3, param0, param8, param5, param1, true, param4, param2, param15, param14, param11);
+          SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redA, redC, blueB, blueC, SoftwareRasterizer.pixels, xC, greenC, xB, yB, yC, yA, true, redB, xA, greenB, greenA, blueA);
           return;
         }
         field_n = (String) null;
-        if (param1 < param8) {
-          if (param5 > param8) {
-            SecondaryIntrusiveDeque.a(param6, param4, param11, param13, SoftwareRasterizer.pixels, param0, param15, param2, param1, param8, param5, true, param12, param7, param14, param3, param10);
+        if (yA < yB) {
+          if (yC > yB) {
+            SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redC, redB, blueA, blueB, SoftwareRasterizer.pixels, xB, greenB, xA, yA, yB, yC, true, redA, xC, greenA, greenC, blueC);
             return;
           }
-          if (param5 > param1) {
-            SecondaryIntrusiveDeque.a(param4, param6, param11, param10, SoftwareRasterizer.pixels, param7, param3, param2, param1, param5, param8, true, param12, param0, param14, param15, param13);
+          if (yC > yA) {
+            SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redB, redC, blueA, blueC, SoftwareRasterizer.pixels, xC, greenC, xA, yA, yC, yB, true, redA, xB, greenA, greenB, blueB);
             return;
           }
-          SecondaryIntrusiveDeque.a(param4, param12, param10, param11, SoftwareRasterizer.pixels, param2, param14, param7, param5, param1, param8, true, param6, param0, param3, param15, param13);
+          SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redB, redA, blueC, blueA, SoftwareRasterizer.pixels, xA, greenA, xC, yC, yA, yB, true, redC, xB, greenC, greenB, blueB);
           return;
         }
-        if (param1 < param5) {
-          SecondaryIntrusiveDeque.a(param6, param12, param13, param11, SoftwareRasterizer.pixels, param2, param14, param0, param8, param1, param5, true, param4, param7, param15, param3, param10);
+        if (yA < yC) {
+          SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redC, redA, blueB, blueA, SoftwareRasterizer.pixels, xA, greenA, xB, yB, yA, yC, true, redB, xC, greenB, greenC, blueC);
           return;
         }
-        if (param8 >= param5) {
-          SecondaryIntrusiveDeque.a(param12, param4, param10, param13, SoftwareRasterizer.pixels, param0, param15, param7, param5, param8, param1, true, param6, param2, param3, param14, param11);
+        if (yB >= yC) {
+          SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redA, redB, blueC, blueB, SoftwareRasterizer.pixels, xB, greenB, xC, yC, yB, yA, true, redC, xA, greenC, greenA, blueA);
           return;
         }
-        SecondaryIntrusiveDeque.a(param12, param6, param13, param10, SoftwareRasterizer.pixels, param7, param3, param0, param8, param5, param1, true, param4, param2, param15, param14, param11);
+        SecondaryIntrusiveDeque.fillSortedHalfBlendGouraudTriangle(redA, redC, blueB, blueC, SoftwareRasterizer.pixels, xC, greenC, xB, yB, yC, yA, true, redB, xA, greenB, greenA, blueA);
     }
 
     final static LoginCredentials createCredentials(int emailUsernameSentinel, boolean alternateType, long encodedUsername, String email, String password) {

@@ -10,7 +10,7 @@ final class AccountFormStage {
     static String field_c;
 
     final static int availableGameMode(int mode, int guard) {
-        mode = AccountChoicePanel.a(guard - 34966, mode);
+        mode = AccountChoicePanel.availableModeIndex(guard - 34966, mode);
         if (mode < 0) {
           return -1;
         }
@@ -67,7 +67,7 @@ final class AccountFormStage {
     final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, SystemTaskService param2, int param3, int param4, int param5) {
         String stackIn_10_2 = null;
         try {
-          java.awt.Frame var8 = IntrusiveNodeHashTable.a((byte) 93, param0, param3, param2, param4, param5);
+          java.awt.Frame var8 = IntrusiveNodeHashTable.enterFullscreen((byte) 93, param0, param3, param2, param4, param5);
           java.awt.Frame var6 = var8;
           if (var8 == null) {
             return null;

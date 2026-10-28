@@ -10,7 +10,7 @@ final class AchievementQuery extends IntrusiveNode {
 
     public static void releaseStatics(boolean guard) {
         if (guard) {
-          AchievementQuery.d(71);
+          AchievementQuery.receiveNewsSelected(71);
           field_k = null;
           field_j = null;
           return;
@@ -19,25 +19,25 @@ final class AchievementQuery extends IntrusiveNode {
         field_j = null;
     }
 
-    final static boolean d(int param0) {
-        if (param0 != -4292) {
+    final static boolean receiveNewsSelected(int guard) {
+        if (guard != -4292) {
           String var2 = (String) null;
-          AchievementQuery.a(false, (String) null, true, (String) null);
+          AchievementQuery.requestLogin(false, (String) null, true, (String) null);
           return LoginStage.field_a;
         }
         return LoginStage.field_a;
     }
 
-    final static void a(boolean param0, String param1, boolean param2, String param3) {
+    final static void requestLogin(boolean option, String identifier, boolean guard, String password) {
         try {
-          NameAvailabilityResultSupport.field_g = param3;
-          StrongCacheEntry.field_v = param1;
-          UiTheme.a((byte) 71, ThemeAssetSupport.field_a, param0);
-          if (param2) {
+          NameAvailabilityResultSupport.field_g = password;
+          StrongCacheEntry.field_v = identifier;
+          UiTheme.showAccountRequest((byte) 71, ThemeAssetSupport.field_a, option);
+          if (guard) {
             AchievementQuery.releaseStatics(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "jh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "jh.B(" + option + ',' + (identifier != null ? "{...}" : "null") + ',' + guard + ',' + (password != null ? "{...}" : "null") + ')');
         }
     }
 

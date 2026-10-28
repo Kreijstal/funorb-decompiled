@@ -26,49 +26,49 @@ final class CanvasRenderSupport {
         if (param4) {
           if (param7 > param5) {
             if (param2 > param7) {
-              LinkButtonPainter.a(param6, param7, param5, param1, param0, 41, param3, param2, SoftwareRasterizer.pixels);
+              LinkButtonPainter.fillSortedHalfBlendTriangle(param6, param7, param5, param1, param0, 41, param3, param2, SoftwareRasterizer.pixels);
               return;
             }
             if (param5 < param2) {
-              LinkButtonPainter.a(param0, param2, param5, param1, param6, 38, param3, param7, SoftwareRasterizer.pixels);
+              LinkButtonPainter.fillSortedHalfBlendTriangle(param0, param2, param5, param1, param6, 38, param3, param7, SoftwareRasterizer.pixels);
               return;
             }
-            LinkButtonPainter.a(param1, param5, param2, param0, param6, 127, param3, param7, SoftwareRasterizer.pixels);
+            LinkButtonPainter.fillSortedHalfBlendTriangle(param1, param5, param2, param0, param6, 127, param3, param7, SoftwareRasterizer.pixels);
             return;
           }
           if (param5 < param2) {
-            LinkButtonPainter.a(param1, param5, param7, param6, param0, 42, param3, param2, SoftwareRasterizer.pixels);
+            LinkButtonPainter.fillSortedHalfBlendTriangle(param1, param5, param7, param6, param0, 42, param3, param2, SoftwareRasterizer.pixels);
             return;
           }
           if (param2 <= param7) {
-            LinkButtonPainter.a(param6, param7, param2, param0, param1, 66, param3, param5, SoftwareRasterizer.pixels);
+            LinkButtonPainter.fillSortedHalfBlendTriangle(param6, param7, param2, param0, param1, 66, param3, param5, SoftwareRasterizer.pixels);
             return;
           }
-          LinkButtonPainter.a(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
+          LinkButtonPainter.fillSortedHalfBlendTriangle(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
           return;
         }
         CanvasRenderSupport.releaseStatics(-25);
         if (param7 > param5) {
           if (param2 > param7) {
-            LinkButtonPainter.a(param6, param7, param5, param1, param0, 41, param3, param2, SoftwareRasterizer.pixels);
+            LinkButtonPainter.fillSortedHalfBlendTriangle(param6, param7, param5, param1, param0, 41, param3, param2, SoftwareRasterizer.pixels);
             return;
           }
           if (param5 < param2) {
-            LinkButtonPainter.a(param0, param2, param5, param1, param6, 38, param3, param7, SoftwareRasterizer.pixels);
+            LinkButtonPainter.fillSortedHalfBlendTriangle(param0, param2, param5, param1, param6, 38, param3, param7, SoftwareRasterizer.pixels);
             return;
           }
-          LinkButtonPainter.a(param1, param5, param2, param0, param6, 127, param3, param7, SoftwareRasterizer.pixels);
+          LinkButtonPainter.fillSortedHalfBlendTriangle(param1, param5, param2, param0, param6, 127, param3, param7, SoftwareRasterizer.pixels);
           return;
         }
         if (param5 < param2) {
-          LinkButtonPainter.a(param1, param5, param7, param6, param0, 42, param3, param2, SoftwareRasterizer.pixels);
+          LinkButtonPainter.fillSortedHalfBlendTriangle(param1, param5, param7, param6, param0, 42, param3, param2, SoftwareRasterizer.pixels);
           return;
         }
         if (param2 <= param7) {
-          LinkButtonPainter.a(param6, param7, param2, param0, param1, 66, param3, param5, SoftwareRasterizer.pixels);
+          LinkButtonPainter.fillSortedHalfBlendTriangle(param6, param7, param2, param0, param1, 66, param3, param5, SoftwareRasterizer.pixels);
           return;
         }
-        LinkButtonPainter.a(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
+        LinkButtonPainter.fillSortedHalfBlendTriangle(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
     }
 
     public static void releaseStatics(int guard) {

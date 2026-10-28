@@ -81,7 +81,7 @@ final class DialogueScreen extends IntrusiveNode {
             int stackIn_41_6 = -8 + var4;
             boolean stackIn_42_7 = (var3 != 0) ? false : true;
             int stackIn_45_8 = (0 != this.input.selectedIndex) ? 6340704 : 16777215;
-            TickClock.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_41_5, stackIn_41_6, stackIn_42_7, stackIn_45_8, var3);
+            TickClock.drawMenuFrame(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_41_5, stackIn_41_6, stackIn_42_7, stackIn_45_8, var3);
             int stackIn_47_0 = 405;
             String stackIn_47_1 = this.actionLabel;
             int stackIn_48_2 = (this.input.selectedIndex == 0) ? 16777215 : 6340704;
@@ -96,7 +96,7 @@ final class DialogueScreen extends IntrusiveNode {
             int stackIn_28_6 = 632;
             boolean stackIn_29_7 = (0 != var3) ? false : true;
             int stackIn_32_8 = (this.input.selectedIndex == 0) ? 16777215 : 6340704;
-            TickClock.a(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_26_4, stackIn_28_5, stackIn_28_6, stackIn_29_7, stackIn_32_8, var3);
+            TickClock.drawMenuFrame(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_26_4, stackIn_28_5, stackIn_28_6, stackIn_29_7, stackIn_32_8, var3);
             int stackIn_34_0 = 405;
             String stackIn_34_1 = this.actionLabel;
             int stackIn_35_2 = (this.input.selectedIndex != 0) ? 6340704 : 16777215;
@@ -116,7 +116,7 @@ final class DialogueScreen extends IntrusiveNode {
           int stackIn_8_6 = var5 - 6;
           boolean stackIn_9_7 = (var3 != 0) ? false : true;
           int stackIn_12_8 = (this.input.selectedIndex == 0) ? 16777215 : 6340704;
-          TickClock.a(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, stackIn_8_5, stackIn_8_6, stackIn_9_7, stackIn_12_8, var3);
+          TickClock.drawMenuFrame(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, stackIn_8_5, stackIn_8_6, stackIn_9_7, stackIn_12_8, var3);
           int stackIn_14_0 = 471;
           String stackIn_14_1 = this.actionLabel;
           int stackIn_15_2 = (this.input.selectedIndex != 0) ? 6340704 : 16777215;
@@ -180,7 +180,7 @@ final class DialogueScreen extends IntrusiveNode {
           }
           SoftwareRasterizer.fillRectangleAlpha(15, 240, 610, 62, 0, var8Lifetime2);
         }
-        ArchiveKeyRequest.a(244, 182, 8, this.backgroundFadeTicks);
+        ArchiveKeyRequest.drawCornerTitles(244, 182, 8, this.backgroundFadeTicks);
     }
 
     DialogueScreen(int[] photoIndices, Sprite[] photos, String[] dialogueLines, boolean fullWidthScene) {
@@ -860,7 +860,7 @@ final class DialogueScreen extends IntrusiveNode {
         this.revealedLine = 0;
         this.revealDelayTicks = 40;
         int stackIn_2_1 = 17;
-        stackIn_3_2 = (!SelfDestructEffects.field_k) ? (0) : (10);
+        stackIn_3_2 = (!SelfDestructEffects.moderatorCheats) ? (0) : (10);
         this.wrappedLines = new String[stackIn_2_1 + stackIn_3_2];
         this.animationTicks = 0;
         this.backgroundFadeTicks = 0;

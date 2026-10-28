@@ -23,7 +23,7 @@ final class ResourceArchive {
         if (guard != -2) {
           return 21;
         }
-        return DraggableWidget.a(gameMode, objectType, false, TerrainMaskSupport.field_b);
+        return DraggableWidget.scaledScoreAt(gameMode, objectType, false, TerrainMaskSupport.field_b);
     }
 
     final int findGroupId(int guard, String groupName) {

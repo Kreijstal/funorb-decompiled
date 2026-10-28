@@ -23,14 +23,14 @@ final class CheckboxPainter implements WidgetPainter {
     private int field_t;
     static byte[][] spriteAlphas;
 
-    final static int a(BinaryBitmapFont param0, int param1) {
+    final static int spaceWidth(BinaryBitmapFont font, int guard) {
         String stackIn_7_2 = null;
         try {
-          if (param1 != 0) {
+          if (guard != 0) {
             spriteAlphas = (byte[][]) null;
           }
           String var2 = " ";
-          int var3 = param0.stringWidth(var2);
+          int var3 = font.stringWidth(var2);
           int stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -38,12 +38,12 @@ final class CheckboxPainter implements WidgetPainter {
           RuntimeException var2_ref = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var2_ref;
           StringBuilder stackIn_6_1 = new StringBuilder().append("hn.A(");
-          if (param0 == null) {
+          if (font == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 

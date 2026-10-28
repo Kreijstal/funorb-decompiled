@@ -11,15 +11,15 @@ final class TextHotspotRegion extends IntrusiveNode {
     int width;
     int hotspotId;
 
-    final static IndexedSprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static IndexedSprite[] loadIndexedSpriteSheet(int fileId, int guard, ResourceArchive archive, int groupId) {
         String stackIn_10_2 = null;
         try {
-          if (!ArchivePreloader.loadSpriteSheet(param2, 100, param3, param0)) {
+          if (!ArchivePreloader.loadSpriteSheet(archive, 100, groupId, fileId)) {
             return null;
           }
-          if (param1 != 255) {
+          if (guard != 255) {
             ResourceArchive var5 = (ResourceArchive) null;
-            TextHotspotRegion.a(49, -40, (ResourceArchive) null, 15);
+            TextHotspotRegion.loadIndexedSpriteSheet(49, -40, (ResourceArchive) null, 15);
           }
           IndexedSprite[] stackIn_6_0 = SimulatorAssetSupport.buildIndexedSpritesFromSheet(13029);
           return stackIn_6_0;
@@ -27,13 +27,13 @@ final class TextHotspotRegion extends IntrusiveNode {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var4;
-          StringBuilder stackIn_9_1 = new StringBuilder().append("bl.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_9_1 = new StringBuilder().append("bl.A(").append(fileId).append(',').append(guard).append(',');
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(groupId).append(')').toString());
         }
     }
 

@@ -55,7 +55,7 @@ class TextHotspotWidget extends TextButton {
             this.field_F = var8;
           }
           if (guard < 51) {
-            TextHotspotWidget.b(-38, (byte) -110);
+            TextHotspotWidget.notifyBrowserResize(-38, (byte) -110);
           }
           this.field_F[hotspotId] = tooltip;
           return;
@@ -121,7 +121,7 @@ class TextHotspotWidget extends TextButton {
 
     final void setBounds(int width, int y, int x, boolean guard, int height) {
         if (!guard) {
-          TextHotspotWidget.b(-85, (byte) -78);
+          TextHotspotWidget.notifyBrowserResize(-85, (byte) -78);
         }
         super.setBounds(width, y, x, guard, height);
         this.rebuildHotspots(0);
@@ -159,13 +159,13 @@ class TextHotspotWidget extends TextButton {
         return null;
     }
 
-    final static void b(int param0, byte param1) {
+    final static void notifyBrowserResize(int value, byte guard) {
         try {
           try {
-            JavaScriptBridge.callWindowFunctionWithArguments((byte) 106, PointCloudEffect.activeApplet((byte) -62), new Object[]{new Integer(param0)}, "resizing");
+            JavaScriptBridge.callWindowFunctionWithArguments((byte) 106, PointCloudEffect.activeApplet((byte) -62), new Object[]{new Integer(value)}, "resizing");
           } catch (Throwable throwable) {
           }
-          if (param1 <= 93) {
+          if (guard <= 93) {
             return;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

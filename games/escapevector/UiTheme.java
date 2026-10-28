@@ -22,20 +22,20 @@ final class UiTheme {
     int tooltipBottomPadding;
     static PcmSample field_g;
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2) {
+    final static void setPromotionArchives(ResourceArchive spriteArchive, ResourceArchive fontArchive, byte guard) {
         try {
-          ThreeSliceButtonPainter.field_x = param0;
-          ModeProgressSupport.field_e = param1;
-          if (param2 != -96) {
-            UiTheme.a(-27);
+          ThreeSliceButtonPainter.field_x = spriteArchive;
+          ModeProgressSupport.field_e = fontArchive;
+          if (guard != -96) {
+            UiTheme.currentAccountPassword(-27);
           }
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uf.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uf.K(" + (spriteArchive != null ? "{...}" : "null") + ',' + (fontArchive != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final static boolean c(int param0) {
-        if (param0 < 2) {
+    final static boolean emailLoginSelected(int guard) {
+        if (guard < 2) {
           return false;
         }
         return EmailAvailabilityValidator.field_o == MeshMaterial.field_b ? true : false;
@@ -106,29 +106,29 @@ final class UiTheme {
         }
     }
 
-    final static String a(int param0) {
+    final static String currentAccountPassword(int guard) {
         if (InstructionsScreen.field_q == EmailAvailabilityValidator.field_o) {
           return ResourceArchive.field_b;
         }
-        if (param0 == 30519) {
+        if (guard == 30519) {
           return NameAvailabilityResultSupport.field_g;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        UiTheme.a((ResourceArchive) null, (ResourceArchive) null, (byte) 91);
+        UiTheme.setPromotionArchives((ResourceArchive) null, (ResourceArchive) null, (byte) 91);
         return NameAvailabilityResultSupport.field_g;
     }
 
-    final static void a(byte param0, String param1, boolean param2) {
-        if (param0 <= 42) {
+    final static void showAccountRequest(byte guard, String message, boolean option) {
+        if (guard <= 42) {
           return;
         }
         try {
-          LinkButtonPainter.field_a = param2;
+          LinkButtonPainter.field_a = option;
           SavedDataQuery.field_i = true;
-          SavedDataRequestSupport.requestDialog = new AccountRequestDialog(Checkbox.field_F, RasterRestoreSupport.field_b, param1, DialWidget.field_H, LinkButtonPainter.field_a);
+          SavedDataRequestSupport.requestDialog = new AccountRequestDialog(Checkbox.field_F, RasterRestoreSupport.field_b, message, DialWidget.field_H, LinkButtonPainter.field_a);
           Checkbox.field_F.pushPanel(SavedDataRequestSupport.requestDialog, 77);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uf.H(" + guard + ',' + (message != null ? "{...}" : "null") + ',' + option + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class UiTheme {
           SoftwareRasterizer.drawLine(startX, startY, endX, endY, color);
           return;
         }
-        UiTheme.a(15);
+        UiTheme.currentAccountPassword(15);
         SoftwareRasterizer.drawLine(startX, startY, endX, endY, color);
     }
 
@@ -295,7 +295,7 @@ final class UiTheme {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        UiTheme.a((ResourceArchive) null, (ResourceArchive) null, (byte) 55);
+        UiTheme.setPromotionArchives((ResourceArchive) null, (ResourceArchive) null, (byte) 55);
         field_g = null;
         field_e = null;
         field_s = null;

@@ -289,8 +289,8 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         }
     }
 
-    final static int k(int param0) {
-        if (param0 != -99) {
+    final static int registrationAge(int guard) {
+        if (guard != -99) {
           field_M = (int[]) null;
           return AnimatedPanelFrame.field_a;
         }

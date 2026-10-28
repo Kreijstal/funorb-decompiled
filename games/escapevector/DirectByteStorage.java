@@ -55,19 +55,19 @@ final class DirectByteStorage extends ByteStorage {
     DirectByteStorage() {
     }
 
-    final static void b(byte param0) {
-        if (param0 != -59) {
+    final static void serviceAccountAssets(byte guard) {
+        if (guard != -59) {
           return;
         }
         if (!TrackerMusicDefinition.field_f.accountAchievementsLoaded &&
           !TrackerMusicDefinition.field_f.queryFailed) {
           TrackerMusicDefinition.field_f.requestAccountAchievements((byte) -126);
-          TrackerMusicDefinition.field_f.pollAccountQuery(param0 ^ 19593);
+          TrackerMusicDefinition.field_f.pollAccountQuery(guard ^ 19593);
         }
         if (!GameProgressSupport.field_c.isLoaded(-19836)) {
           GameProgressSupport.field_c.pollLoad(-9949);
         }
-        CachedArchiveProvider.loadMemberCampaignAssets(param0 ^ -57);
+        CachedArchiveProvider.loadMemberCampaignAssets(guard ^ -57);
         SimulatorAssetSupport.loadSimulatorSprites(0);
     }
 

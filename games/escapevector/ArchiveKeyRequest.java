@@ -7,14 +7,14 @@ final class ArchiveKeyRequest extends IntrusiveNode {
     int groupId;
     static String field_h;
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
-        param1 = AccountChoicePanel.a(-8462, param1);
-        CheckboxPainter.field_l = new LevelSelectScreen(param1, param3);
-        LoginHandshakeSupport.field_d = param0;
-        SelfDestructEffects.field_q = param1;
+    final static void showLevelSelect(int openingTick, int mode, boolean pointerDriven, int accountStateIndex) {
+        mode = AccountChoicePanel.availableModeIndex(-8462, mode);
+        CheckboxPainter.field_l = new LevelSelectScreen(mode, accountStateIndex);
+        LoginHandshakeSupport.field_d = openingTick;
+        SelfDestructEffects.field_q = mode;
         HighscorePlayerRecord.field_d = new MenuInputState(CheckboxPainter.field_l.actionCount);
-        int var4 = LoginForm.a(param1, (byte) 121);
-        HighscorePlayerRecord.field_d.initializeSelection(102, param2, CheckboxPainter.field_l.hitTest(UiContainer.field_y, 12089, GzipDecoder.field_d), var4);
+        int var4 = LoginForm.initialLevelSelection(mode, (byte) 121);
+        HighscorePlayerRecord.field_d.initializeSelection(102, pointerDriven, CheckboxPainter.field_l.hitTest(UiContainer.field_y, 12089, GzipDecoder.field_d), var4);
         ChatMessage.clearFrameOffsets((byte) -70);
     }
 
@@ -29,35 +29,35 @@ final class ArchiveKeyRequest extends IntrusiveNode {
         ConnectionSupport.closeTransport(16);
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void drawCornerTitles(int rightY, int leftY, int guard, int phase) {
         int var5 = EscapeVector.obfuscationControl;
-        if (param3 > 0) {
-          if (!(30 <= param3)) {
-            ResourceArchive.drawSpriteWithRowJitter(param1, 8, 60 - param3 * 2, SlidingSpriteTransition.field_f, param2 ^ -97);
-          } else if (param3 <= 80) {
-            SlidingSpriteTransition.field_f.drawTransparent(8, param1);
-          } else if (param3 < 95) {
-            ResourceArchive.drawSpriteWithRowJitter(param1, 8, (param3 - 80) * 4, SlidingSpriteTransition.field_f, param2 - 115);
+        if (phase > 0) {
+          if (!(30 <= phase)) {
+            ResourceArchive.drawSpriteWithRowJitter(leftY, 8, 60 - phase * 2, SlidingSpriteTransition.field_f, guard ^ -97);
+          } else if (phase <= 80) {
+            SlidingSpriteTransition.field_f.drawTransparent(8, leftY);
+          } else if (phase < 95) {
+            ResourceArchive.drawSpriteWithRowJitter(leftY, 8, (phase - 80) * 4, SlidingSpriteTransition.field_f, guard - 115);
           }
         }
-        if (param2 != 8) {
-          ArchiveKeyRequest.a(114, -28, -15, 125);
+        if (guard != 8) {
+          ArchiveKeyRequest.drawCornerTitles(114, -28, -15, 125);
         }
-        if (param3 <= 50) {
+        if (phase <= 50) {
           return;
         }
-        if (80 > param3) {
-          ResourceArchive.drawSpriteWithRowJitter(param0, -ArchiveIndex.field_o.fullWidth + 632, 2 * (-param3 + 80), ArchiveIndex.field_o, param2 ^ -112);
+        if (80 > phase) {
+          ResourceArchive.drawSpriteWithRowJitter(rightY, -ArchiveIndex.field_o.fullWidth + 632, 2 * (-phase + 80), ArchiveIndex.field_o, guard ^ -112);
           return;
         }
-        if (param3 <= 80) {
-          ArchiveIndex.field_o.drawTransparent(632 - ArchiveIndex.field_o.fullWidth, param0);
+        if (phase <= 80) {
+          ArchiveIndex.field_o.drawTransparent(632 - ArchiveIndex.field_o.fullWidth, rightY);
           return;
         }
-        if (95 <= param3) {
+        if (95 <= phase) {
           return;
         }
-        ResourceArchive.drawSpriteWithRowJitter(param0, -ArchiveIndex.field_o.fullWidth + 632, (param3 - 80) * 4, ArchiveIndex.field_o, param2 ^ -108);
+        ResourceArchive.drawSpriteWithRowJitter(rightY, -ArchiveIndex.field_o.fullWidth + 632, (phase - 80) * 4, ArchiveIndex.field_o, guard ^ -108);
     }
 
     public static void releaseStatics(byte guard) {

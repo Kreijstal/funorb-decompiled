@@ -24,21 +24,21 @@ final class IntKeyLookup {
         }
     }
 
-    final static byte[] a(int param0, String param1) {
+    final static byte[] loadLanguageAsset(int guard, String name) {
         String stackIn_7_2 = null;
         try {
-          if (param0 < 13) {
+          if (guard < 13) {
             String var3 = (String) null;
-            IntKeyLookup.a(-106, (String) null);
+            IntKeyLookup.loadLanguageAsset(-106, (String) null);
           }
-          byte[] stackIn_3_0 = LoginCredentialType.field_a.getNamedFile(-4, param1, "");
+          byte[] stackIn_3_0 = LoginCredentialType.languageArchive.getNamedFile(-4, name, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var2;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("jn.A(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("jn.A(").append(guard).append(',');
+          if (name == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

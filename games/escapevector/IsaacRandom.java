@@ -193,8 +193,8 @@ final class IsaacRandom {
         field_h = null;
     }
 
-    static boolean a(boolean param0, boolean param1) {
-        return param0 | param1;
+    static boolean booleanOr(boolean left, boolean right) {
+        return left | right;
     }
 
     IsaacRandom(int[] param0) {

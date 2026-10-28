@@ -123,17 +123,17 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static Sprite a(int param0, byte param1, int param2) {
+    final static Sprite objectSprite(int angle, byte guard, int objectType) {
         ObjectSpriteSet[] var5 = LoadingProgressDialog.objectSpriteSets(false);
         var5 = var5;
         if (var5 == null) {
           return null;
         }
-        if (param1 == -39) {
-          return var5[param2].sprite(false, param0);
+        if (guard == -39) {
+          return var5[objectType].sprite(false, angle);
         }
         TextWidgetPainter.isAsciiAlphanumeric(true, '￾');
-        return var5[param2].sprite(false, param0);
+        return var5[objectType].sprite(false, angle);
     }
 
     public void drawWidget(int originX, int originY, int guard, UiComponent component, boolean enabled) {

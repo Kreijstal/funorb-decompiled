@@ -73,13 +73,13 @@ final class AchievementGrantRule {
         var5.awardAchievement(achievement, false, this.awardCategory, this.awardCategory ^ 255);
     }
 
-    final static void a(String param0, byte param1) {
+    final static void countryListHook(String response, byte guard) {
         try {
-          if (param1 != -6) {
+          if (guard != -6) {
             pendingMouseY = 86;
           }
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "jk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "jk.C(" + (response != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

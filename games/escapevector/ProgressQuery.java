@@ -71,27 +71,27 @@ final class ProgressQuery extends IntrusiveNode {
         return var3;
     }
 
-    final static void a(byte param0, String param1, int param2, int param3) {
+    final static void drawOutlinedText(byte guard, String text, int x, int y) {
         try {
-          ByteStorage.gameFont.drawCenteredAlpha(param1, param2 - 1, -1 + param3, 0, -1, 64);
-          if (param0 < 19) {
+          ByteStorage.gameFont.drawCenteredAlpha(text, x - 1, -1 + y, 0, -1, 64);
+          if (guard < 19) {
             field_i = (String) null;
           }
-          ByteStorage.gameFont.drawCenteredAlpha(param1, 1 + param2, -1 + param3, 0, -1, 64);
-          ByteStorage.gameFont.drawCenteredAlpha(param1, param2 - 1, 1 + param3, 0, -1, 64);
-          ByteStorage.gameFont.drawCenteredAlpha(param1, 1 + param2, 1 + param3, 0, -1, 64);
-          ByteStorage.gameFont.drawCentered(param1, param2, param3, 16777215, -1);
+          ByteStorage.gameFont.drawCenteredAlpha(text, 1 + x, -1 + y, 0, -1, 64);
+          ByteStorage.gameFont.drawCenteredAlpha(text, x - 1, 1 + y, 0, -1, 64);
+          ByteStorage.gameFont.drawCenteredAlpha(text, 1 + x, 1 + y, 0, -1, 64);
+          ByteStorage.gameFont.drawCentered(text, x, y, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "dc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "dc.E(" + guard + ',' + (text != null ? "{...}" : "null") + ',' + x + ',' + y + ')');
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4) {
-        if (param4 == 64) {
-          return param3 * (-param2 + param0) / param1 + param2;
+    final static int interpolateInt(int end, int duration, int start, int elapsed, int guard) {
+        if (guard == 64) {
+          return elapsed * (-start + end) / duration + start;
         }
         field_i = (String) null;
-        return param3 * (-param2 + param0) / param1 + param2;
+        return elapsed * (-start + end) / duration + start;
     }
 
     ProgressQuery() {

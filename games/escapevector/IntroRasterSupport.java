@@ -13,7 +13,7 @@ final class IntroRasterSupport {
           MeshRasterState.useRasterClip();
           SoftwareRasterizer.clearFramebuffer();
           SocketConnector.field_d = 0;
-          IndexedSpriteState.a(-124);
+          IndexedSpriteState.renderLogoMeshes(-124);
           if (guard < 115) {
             IntroRasterSupport.releaseStatics(109);
           }

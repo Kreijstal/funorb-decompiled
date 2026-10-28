@@ -18,7 +18,7 @@ final class LabeledField extends SingleChildContainer {
           if (guard != 10592) {
             LabeledField.releaseStatics(-55);
           }
-          byte[] stackIn_3_0 = IntegerParseSupport.field_e.getNamedFile(guard ^ -10596, name, "");
+          byte[] stackIn_3_0 = IntegerParseSupport.gameTextArchive.getNamedFile(guard ^ -10596, name, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

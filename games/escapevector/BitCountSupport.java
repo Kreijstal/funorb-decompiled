@@ -13,7 +13,7 @@ final class BitCountSupport {
     final static void submitDisplayName(byte guard, String displayName) {
         try {
           MatchingTextValidator.setPendingDisplayName(-10002, displayName);
-          UiTheme.a((byte) 125, ThemeAssetSupport.field_a, false);
+          UiTheme.showAccountRequest((byte) 125, ThemeAssetSupport.field_a, false);
           if (guard > -113) {
             String var3 = (String) null;
             BitCountSupport.submitDisplayName((byte) -29, (String) null);

@@ -34,7 +34,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           CharSequence var4 = (CharSequence) ((Object) text);
-          this.position = this.position + EmailAvailabilityValidator.a(text.length(), this.position, 19409, var4, this.payload, 0);
+          this.position = this.position + EmailAvailabilityValidator.encodeCp1252Range(text.length(), this.position, 19409, var4, this.payload, 0);
           int fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -118,7 +118,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         try {
           CharSequence var4 = (CharSequence) ((Object) text);
-          this.position = this.position + EmailAvailabilityValidator.a(text.length(), this.position, 19409, var4, this.payload, 0);
+          this.position = this.position + EmailAvailabilityValidator.encodeCp1252Range(text.length(), this.position, 19409, var4, this.payload, 0);
           int fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;

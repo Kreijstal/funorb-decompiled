@@ -10,7 +10,7 @@ class TextButton extends UiComponent {
     boolean enabled;
     private boolean tabStop;
 
-    final static boolean a(boolean param0, java.applet.Applet param1) {
+    final static boolean hasBrowserSessionMarker(boolean guard, java.applet.Applet applet) {
         try {
           String stackIn_23_2 = null;
           Throwable decompiledCaughtException = null;
@@ -21,10 +21,10 @@ class TextButton extends UiComponent {
             }
             try {
               String var2 = "tuhstatbut";
-              if (param0) {
+              if (guard) {
                 return false;
               }
-              String var3 = (String) (JavaScriptBridge.callWindowFunction(param1, "getcookies", -29155));
+              String var3 = (String) (JavaScriptBridge.callWindowFunction(applet, "getcookies", -29155));
               String[] var4 = ModalPanel.splitString(-128, var3, ';');
               for (int var5 = 0; var4.length > var5; var5++) {
                 int var6 = var4[var5].indexOf('=');
@@ -37,14 +37,14 @@ class TextButton extends UiComponent {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var2_ref = decompiledCaughtException;
             }
-            boolean stackIn_19_0 = (null != param1.getParameter("tuhstatbut"));
+            boolean stackIn_19_0 = (null != applet.getParameter("tuhstatbut"));
             return stackIn_19_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_22_0 = var2_ref2;
-            StringBuilder stackIn_22_1 = new StringBuilder().append("hc.IA(").append(param0).append(',');
-            if (param1 == null) {
+            StringBuilder stackIn_22_1 = new StringBuilder().append("hc.IA(").append(guard).append(',');
+            if (applet == null) {
               stackIn_23_2 = "null";
             } else {
               stackIn_23_2 = "{...}";
@@ -229,12 +229,12 @@ class TextButton extends UiComponent {
         this(param0, AchievementThresholdRule.field_g.buttonPainter, param1);
     }
 
-    final static int a(int param0, byte param1) {
-        if (param1 <= 64) {
+    final static int seekerKillScore(int mode, byte guard) {
+        if (guard <= 64) {
           TextButton.releaseStatics(54);
-          return EditableTextWidget.a(500, param0, 123);
+          return EditableTextWidget.scaleScoreForMode(500, mode, 123);
         }
-        return EditableTextWidget.a(500, param0, 123);
+        return EditableTextWidget.scaleScoreForMode(500, mode, 123);
     }
 
     void notifyAction(int guard, int localY, int localX, int buttonCode) {

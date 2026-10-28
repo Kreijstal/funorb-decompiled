@@ -52,24 +52,24 @@ final class AchievementDefinition {
         }
     }
 
-    final static void a(int param0) {
-        if (!TrackerMusicDefinition.field_f.hasSessionAchievements(param0 + 117)) {
+    final static void showPendingSessionResults(int guard) {
+        if (!TrackerMusicDefinition.field_f.hasSessionAchievements(guard + 117)) {
           if (null == IntValueNode.field_i) {
-            if (param0 != 0) {
+            if (guard != 0) {
               field_d = (QuickChatDynamicCommand) null;
               return;
             }
             return;
           }
-          SpriteArchiveSupport.showHighscoresScreen(MenuTitleSupport.isPointerDriven((byte) 116), param0 - 1230, true);
-          if (param0 != 0) {
+          SpriteArchiveSupport.showHighscoresScreen(MenuTitleSupport.isPointerDriven((byte) 116), guard - 1230, true);
+          if (guard != 0) {
             field_d = (QuickChatDynamicCommand) null;
             return;
           }
           return;
         }
-        SpriteState.a(-106, true);
-        if (param0 == 0) {
+        SpriteState.showAchievementsScreen(-106, true);
+        if (guard == 0) {
           return;
         }
         field_d = (QuickChatDynamicCommand) null;

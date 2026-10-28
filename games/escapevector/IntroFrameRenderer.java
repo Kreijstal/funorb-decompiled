@@ -28,7 +28,7 @@ final class IntroFrameRenderer {
           TickClock.pushSpriteRaster(LaserGateSpan.field_l, (byte) -107);
           MeshRasterState.useRasterClip();
           SoftwareRasterizer.clearFramebuffer();
-          IndexedSpriteState.a(-111);
+          IndexedSpriteState.renderLogoMeshes(-111);
           if (var5 < 256) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
           }
@@ -42,7 +42,7 @@ final class IntroFrameRenderer {
           TickClock.pushSpriteRaster(LaserGateSpan.field_l, (byte) -107);
           MeshRasterState.useRasterClip();
           SoftwareRasterizer.clearFramebuffer();
-          IndexedSpriteState.a(-111);
+          IndexedSpriteState.renderLogoMeshes(-111);
           if (var5 < 256) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
           }

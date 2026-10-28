@@ -9,9 +9,9 @@ final class EmailSyntaxValidator extends TextFieldValidator {
     static int[] field_p;
     static int menuEdgeColor;
 
-    final static void a(int param0, byte param1, String param2) {
+    final static void handleLoginResponse(int status, byte guard, String message) {
         try {
-          if (param1 != 83) {
+          if (guard != 83) {
             menuEdgeColor = -5;
           }
           SavedDataQuery.field_i = false;
@@ -21,31 +21,31 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               return;
             }
             boolean var3_int = true;
-            if (8 != param0) {
+            if (8 != status) {
             } else {
-              param0 = 2;
+              status = 2;
               if (!DialWidget.field_H) {
-                param2 = NineSliceFrame.field_a;
+                message = NineSliceFrame.field_a;
               } else {
-                param2 = IndexedSpriteState.field_c;
+                message = IndexedSpriteState.field_c;
               }
               PcmResampler.field_d.setIdentifier(StrongCacheEntry.field_v, (byte) 106);
             }
-            if (param0 == 10) {
+            if (status == 10) {
               MeshMaterial.showDisplayNameForm(90);
               var3_int = false;
             }
             if (var3_int) {
               if (DraggableWidget.field_F) {
-                param2 = SingleChildContainer.a(QuickChatPhraseDefinition.field_y, param1 - 146, new String[]{param2});
+                message = SingleChildContainer.formatPlaceholders(QuickChatPhraseDefinition.field_y, guard - 146, new String[]{message});
               }
               if (LinkButtonPainter.field_a) {
-                param2 = LegacyTextBlock.field_l;
+                message = LegacyTextBlock.field_l;
               }
-              SavedDataRequestSupport.requestDialog.showResponseMessage(param2, -1, param0);
+              SavedDataRequestSupport.requestDialog.showResponseMessage(message, -1, status);
             }
-            if (256 != param0) {
-              if (param0 == 10) {
+            if (256 != status) {
+              if (status == 10) {
                 return;
               }
               if (!DialWidget.field_H) {
@@ -55,11 +55,11 @@ final class EmailSyntaxValidator extends TextFieldValidator {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "hi.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "hi.F(" + status + ',' + guard + ',' + (message != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static UiTheme c(boolean param0) {
+    final static UiTheme sharedUiTheme(boolean guard) {
         if (ChatMessageDecoder.field_d == null) {
           ChatMessageDecoder.field_d = new UiTheme();
           ChatMessageDecoder.field_d.initializePainters(-31476, Js5Transport.field_a);
@@ -71,12 +71,12 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           ChatMessageDecoder.field_d.tooltipLeftPadding = 6;
           ChatMessageDecoder.field_d.tooltipTopPadding = 0;
           ChatMessageDecoder.field_d.tooltipBottomPadding = 4;
-          if (!param0) {
+          if (!guard) {
             return ChatMessageDecoder.field_d;
           }
           return (UiTheme) null;
         }
-        if (!param0) {
+        if (!guard) {
           return ChatMessageDecoder.field_d;
         }
         return (UiTheme) null;
@@ -87,7 +87,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         field_n = null;
         field_p = null;
         if (guard != 14) {
-          EmailSyntaxValidator.c(false);
+          EmailSyntaxValidator.sharedUiTheme(false);
         }
     }
 
@@ -115,26 +115,26 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         }
     }
 
-    final static boolean a(int param0, int param1) {
-        if (param0 == 0) {
+    final static boolean acceptsPrimaryButton(int buttonCode, int guard) {
+        if (buttonCode == 0) {
           return true;
         }
-        if (~param0 != param1) {
+        if (~buttonCode != guard) {
           return false;
         }
         return true;
     }
 
-    final static void d(boolean param0) {
+    final static void advanceSessionCounters(boolean guard) {
         if (SocketJs5Transport.field_r != null) {
           SocketJs5Transport.field_r.advanceCounters((byte) -126);
-          if (!param0) {
+          if (!guard) {
             return;
           }
           menuEdgeColor = -4;
           return;
         }
-        if (param0) {
+        if (guard) {
           menuEdgeColor = -4;
           return;
         }

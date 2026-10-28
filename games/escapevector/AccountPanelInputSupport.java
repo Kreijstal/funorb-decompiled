@@ -92,7 +92,7 @@ final class AccountPanelInputSupport {
           }
           if (-1 != ValidationState.field_a) {
             int var1_int = ValidationState.field_a;
-            WhirlpoolHasher.a(-1, guard - 6378);
+            WhirlpoolHasher.setAccountAction(-1, guard - 6378);
             int stackIn_10_0 = var1_int;
             return stackIn_10_0;
           }

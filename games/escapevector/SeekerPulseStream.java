@@ -38,7 +38,7 @@ final class SeekerPulseStream extends PcmStream {
             this.field_q.process(samples, offset, this.field_m);
             offset = offset + this.field_m;
             length = length - this.field_m;
-            this.e(117);
+            this.updatePulseGain(117);
           }
           this.field_k.process(samples, offset, length);
           this.field_q.process(samples, offset, length);
@@ -48,7 +48,7 @@ final class SeekerPulseStream extends PcmStream {
         }
     }
 
-    private final void e(int param0) {
+    private final void updatePulseGain(int guard) {
         int var2 = this.field_p;
         if (0 != var2) {
           this.field_r = this.field_r - var2;
@@ -56,7 +56,7 @@ final class SeekerPulseStream extends PcmStream {
           int var4 = this.field_n;
           this.field_k.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, var3, var4);
           this.field_q.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, var3 >> 2, var4);
-          if (param0 >= 96) {
+          if (guard >= 96) {
             this.field_m = AudioOutput.sampleRate / 100;
             return;
           }
@@ -67,7 +67,7 @@ final class SeekerPulseStream extends PcmStream {
         int var4Lifetime1 = this.field_n;
         this.field_k.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, var3Lifetime1, var4Lifetime1);
         this.field_q.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, var3Lifetime1 >> 2, var4Lifetime1);
-        if (param0 >= 96) {
+        if (guard >= 96) {
           this.field_m = AudioOutput.sampleRate / 100;
           return;
         }
@@ -86,7 +86,7 @@ final class SeekerPulseStream extends PcmStream {
           this.field_k.skip(this.field_m);
           this.field_q.skip(this.field_m);
           length = length - this.field_m;
-          this.e(122);
+          this.updatePulseGain(122);
         }
         this.field_k.skip(length);
         this.field_q.skip(length);

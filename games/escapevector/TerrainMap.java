@@ -24,22 +24,22 @@ final class TerrainMap {
         }
     }
 
-    final static void a(int param0, TrackerMusicDefinition param1, boolean param2, byte param3) {
+    final static void playTrackerMusic(int volume, TrackerMusicDefinition song, boolean looping, byte guard) {
         try {
           String stackIn_16_2 = null;
           try {
             Object var4 = LevelSelectScreen.field_l;
             synchronized (var4) {
-              if (param3 > -61) {
+              if (guard > -61) {
                 field_e = (String) null;
               }
               if (DraggableWidget.field_N != null) {
                 MembershipAssetSupport.field_c.removeListener((PcmMixerListener) ((Object) DraggableWidget.field_N));
               }
-              GrowableIntList.field_b = param0;
-              DraggableWidget.field_N = new TrackerMusicPlayer(param1);
+              GrowableIntList.field_b = volume;
+              DraggableWidget.field_N = new TrackerMusicPlayer(song);
               DraggableWidget.field_N.setMasterVolume(GrowableIntList.field_b * MembershipPromotionSupport.field_b / 64);
-              DraggableWidget.field_N.setLooping(param2);
+              DraggableWidget.field_N.setLooping(looping);
               LevelSelectScreen.field_l.flush();
               MembershipAssetSupport.field_c.scheduleListener((PcmMixerListener) ((Object) DraggableWidget.field_N));
             }
@@ -48,13 +48,13 @@ final class TerrainMap {
             Throwable decompiledCaughtException = decompiledCaughtParameter0;
             RuntimeException var4_ref = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_15_0 = var4_ref;
-            StringBuilder stackIn_15_1 = new StringBuilder().append("vc.B(").append(param0).append(',');
-            if (param1 == null) {
+            StringBuilder stackIn_15_1 = new StringBuilder().append("vc.B(").append(volume).append(',');
+            if (song == null) {
               stackIn_16_2 = "null";
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(looping).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

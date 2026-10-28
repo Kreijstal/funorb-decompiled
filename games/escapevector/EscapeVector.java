@@ -29,7 +29,7 @@ public final class EscapeVector extends NetworkGameClient {
           if (null != IsaacRandom.field_d &&
             IsaacRandom.field_d.focusLost) {
             DisplayAndRatingSupport.exitFullscreen(-25123);
-            ValidationIndicator.a((byte) 97);
+            ValidationIndicator.refreshLegacyMenu((byte) 97);
           }
           UiContainer.field_C.serviceOutput();
           LevelSelectScreen.field_l.serviceOutput();
@@ -92,7 +92,7 @@ public final class EscapeVector extends NetworkGameClient {
                   DisplayAndRatingSupport.exitFullscreen(-25123);
                 }
                 if (var3Lifetime2 == 3) {
-                  TickClock.a(24, true);
+                  TickClock.configureDefaultMenuStyle(24, true);
                 }
                 if (var3Lifetime2 == 4) {
                   SessionMenuSupport.beginKeyboardAccountLogin((byte) -112);
@@ -111,13 +111,13 @@ public final class EscapeVector extends NetworkGameClient {
                 }
                 if (var4 != 0) {
                   KeyboardStateSupport.serviceAccountInput(25972, KeyboardIdleSupport.field_f);
-                  DirectByteStorage.b((byte) -59);
+                  DirectByteStorage.serviceAccountAssets((byte) -59);
                   this.advanceAssetLoading((byte) -96);
                 }
               }
             } else {
               KeyboardStateSupport.serviceAccountInput(25972, KeyboardIdleSupport.field_f);
-              DirectByteStorage.b((byte) -59);
+              DirectByteStorage.serviceAccountAssets((byte) -59);
               if (var4 != 0) {
                 this.advanceAssetLoading((byte) -96);
               }
@@ -129,7 +129,7 @@ public final class EscapeVector extends NetworkGameClient {
                   continue;
                 }
               } else {
-                ClientException.a(0, 30785);
+                ClientException.flushAccountPackets(0, 30785);
               }
               break;
             }
@@ -139,7 +139,7 @@ public final class EscapeVector extends NetworkGameClient {
                 this.serviceAccountFlow(-9926);
                 if (!ChatSettingsSupport.needsFrameworkPreparation(16836) &&
                   LoginHandshakeSupport.isLegacyMenuVisible((byte) 125)) {
-                  TickClock.a(24, true);
+                  TickClock.configureDefaultMenuStyle(24, true);
                 }
               }
             }
@@ -147,7 +147,7 @@ public final class EscapeVector extends NetworkGameClient {
             this.serviceAccountFlow(-9926);
             if (!ChatSettingsSupport.needsFrameworkPreparation(16836) &&
               LoginHandshakeSupport.isLegacyMenuVisible((byte) 125)) {
-              TickClock.a(24, true);
+              TickClock.configureDefaultMenuStyle(24, true);
             }
           }
           if (AccountPanelInputSupport.field_c != null &&
@@ -585,10 +585,10 @@ public final class EscapeVector extends NetworkGameClient {
             SessionMenuSupport.field_b = new AchievementsScreen();
             ArchiveLoadTask.field_e = new InstructionsScreen(true);
             GameplaySession.resetSessionMenuState((byte) 115);
-            SimulatorAssetSupport.c(0);
+            SimulatorAssetSupport.loadSimulatorTheme(0);
             this.initializeMembershipPromotion(guard + 95);
             ShipHullGeometry.field_h = true;
-            TextLayoutLine.b(1, 0);
+            TextLayoutLine.installThemeObjectSprites(1, 0);
             return;
           }
           InstructionsScreen.setLoadingProgress(NanoTickClock.field_n, 17637, 80.0f);
@@ -766,7 +766,7 @@ public final class EscapeVector extends NetworkGameClient {
     private final void initializeGameArchives(boolean guard) {
         try {
           if (null != KeyboardIdleSupport.field_c) {
-            RegistrationRequestDialog.a(8, KeyboardIdleSupport.field_c);
+            RegistrationRequestDialog.loadGameLocalization(8, KeyboardIdleSupport.field_c);
             KeyboardIdleSupport.field_c = null;
             SpriteOffset.resetFrameTiming((byte) 57);
           }
@@ -778,7 +778,7 @@ public final class EscapeVector extends NetworkGameClient {
           UiContainer.field_B = LoginHandshakeSupport.createDefaultArchive(10, -124);
           StatefulTextPainter.field_u = LoginHandshakeSupport.createDefaultArchive(5, -128);
           HighscoreTable.archiveInitializationHook((byte) 57, SavedDataQuery.field_m, MarkerSliderPainter.field_h);
-          UiTheme.a(MarkerSliderPainter.field_h, SavedDataQuery.field_m, (byte) -96);
+          UiTheme.setPromotionArchives(MarkerSliderPainter.field_h, SavedDataQuery.field_m, (byte) -96);
           DualLinkNode.field_n = new ArchivePreloader(70);
           DualLinkNode.field_n.addNamedGroup(MarkerSliderPainter.field_h, TextFieldValidator.field_l, DebouncedValidator.field_d, "basic", 14826);
           DualLinkNode.field_n.addNamedGroup(IndexedSpriteState.field_j, TextFieldValidator.field_l, DebouncedValidator.field_d, "", 14826);
@@ -882,12 +882,12 @@ public final class EscapeVector extends NetworkGameClient {
     private final void renderFrame(int guard) {
         int var9 = obfuscationControl;
         try {
-          DialogueScreen var2 = DropTargetWidget.f((byte) -49);
+          DialogueScreen var2 = DropTargetWidget.firstDialogue((byte) -49);
           java.awt.Canvas var3 = AccountRegistrationPanel.currentCanvas((byte) 10);
           if (guard != -27273) {
             field_z = (String) null;
           }
-          boolean var4 = (UiComponent.g(11187));
+          boolean var4 = (UiComponent.hasInputFocus(11187));
           if (ChatSettingsSupport.needsFrameworkPreparation(16836)) {
             TransitionPoint.renderAccountLayer((var4), (byte) 92, var3);
             return;
@@ -965,12 +965,12 @@ public final class EscapeVector extends NetworkGameClient {
               }
             }
           }
-          if (SelfDestructEffects.field_k &&
+          if (SelfDestructEffects.moderatorCheats &&
             null != BoundedRandomAccessFile.activeSession &&
             BoundedRandomAccessFile.activeSession.easyMode) {
             ByteStorage.gameFont.drawCentered("EASY PEASY MODE IS ON", 320, 40, 16744576, -1);
           }
-          if (SelfDestructEffects.field_k &&
+          if (SelfDestructEffects.moderatorCheats &&
             null != BoundedRandomAccessFile.activeSession &&
             BoundedRandomAccessFile.activeSession.timeHackMode) {
             ByteStorage.gameFont.drawCentered("TIME HACK MODE IS ON", 320, 40, 16744576, -1);
@@ -1022,7 +1022,7 @@ public final class EscapeVector extends NetworkGameClient {
           String var5 = AchievementRecord.chooseAlternateClickPromptWithIntGuard((stackIn_7_0), stackIn_7_1, stackIn_7_2, stackIn_8_3);
           boolean stackIn_11_0 = var3;
           boolean stackIn_12_1 = (IntValueNode.field_i != null);
-          String var6 = ScoreSubmission.a((stackIn_11_0), stackIn_12_1, (byte) -112, GameProgressSupport.field_c.hasPendingProgress(17523));
+          String var6 = ScoreSubmission.discardPendingDataText((stackIn_11_0), stackIn_12_1, (byte) -112, GameProgressSupport.field_c.hasPendingProgress(17523));
           int var7 = ByteStorage.gameFont.stringWidth(var2);
           int var8 = ByteStorage.gameFont.stringWidth(var4);
           if (var8 > var7) {
@@ -1159,14 +1159,14 @@ public final class EscapeVector extends NetworkGameClient {
     private final void updateSessionMusic(int guard) {
         int var4 = obfuscationControl;
         try {
-          DialogueScreen var2 = DropTargetWidget.f((byte) -49);
+          DialogueScreen var2 = DropTargetWidget.firstDialogue((byte) -49);
           if (guard != 1) {
             return;
           }
           if (var2 != null &&
             !var2.fullWidthScene) {
             if (ValidationHelpWidget.field_H != 1) {
-              TerrainMap.a(40, EditableTextWidget.field_O, true, (byte) -101);
+              TerrainMap.playTrackerMusic(40, EditableTextWidget.field_O, true, (byte) -101);
               ValidationHelpWidget.field_H = 1;
             }
             if (-1 + var2.dialogueLines.length > var2.dialogueIndex) {
@@ -1185,7 +1185,7 @@ public final class EscapeVector extends NetworkGameClient {
             if (0 == ValidationHelpWidget.field_H) {
               return;
             }
-            TerrainMap.a(64, ContentTransitionDialog.field_eb, true, (byte) -63);
+            TerrainMap.playTrackerMusic(64, ContentTransitionDialog.field_eb, true, (byte) -63);
             ValidationHelpWidget.field_H = 0;
             if (var4 == 0) {
               return;

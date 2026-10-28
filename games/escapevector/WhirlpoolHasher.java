@@ -118,9 +118,9 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(int param0, int param1) {
-        ValidationState.field_a = param0;
-        if (param1 <= 11) {
+    final static void setAccountAction(int action, int guard) {
+        ValidationState.field_a = action;
+        if (guard <= 11) {
           WhirlpoolHasher.releaseStatics(false);
         }
     }

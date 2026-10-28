@@ -206,7 +206,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         PasswordFieldPainter dupTemp$1 = new PasswordFieldPainter(10000536);
         this.confirmPasswordField.painter = (WidgetPainter) ((Object) dupTemp$1);
         this.passwordField.painter = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = SingleChildContainer.a(AccountSessionSupport.field_b, -63, new String[]{this.linkStartMarkup(66), this.linkEndMarkup(3674)});
+        String var2 = SingleChildContainer.formatPlaceholders(AccountSessionSupport.field_b, -63, new String[]{this.linkStartMarkup(66), this.linkEndMarkup(3674)});
         int var3 = 20;
         var3 = var3 + this.addLabeledField(170, this.emailField, AccountNoticeDialog.field_Z, var3, 100);
         var3 = var3 + (this.addFieldWithHelp(20, this.confirmEmailField, 170, DisplayAndRatingSupport.field_a, 25, "", var3) + 5);
@@ -500,17 +500,17 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             objectSpriteSets = (ObjectSpriteSet[]) null;
           }
           if (0 == hotspotId) {
-            AchievementRecord.a(12, "terms.ws");
+            AchievementRecord.requestPolicyPage(12, "terms.ws");
             return;
           }
           if (1 == hotspotId) {
-            AchievementRecord.a(12, "privacy.ws");
+            AchievementRecord.requestPolicyPage(12, "privacy.ws");
             return;
           }
           if (2 != hotspotId) {
             return;
           }
-          AchievementRecord.a(12, "conduct.ws");
+          AchievementRecord.requestPolicyPage(12, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

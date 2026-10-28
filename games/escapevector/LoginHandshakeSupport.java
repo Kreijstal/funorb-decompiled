@@ -18,7 +18,7 @@ final class LoginHandshakeSupport {
           int var9 = EscapeVector.obfuscationControl;
           try {
             if (null == TextLayout.field_c &&
-              !ChatMessageDecoder.a(reconnect, (byte) 0)) {
+              !ChatMessageDecoder.pollAccountConnection(reconnect, (byte) 0)) {
               int stackIn_5_0 = -1;
               return stackIn_5_0;
             }
@@ -35,7 +35,7 @@ final class LoginHandshakeSupport {
               QuickChatDynamicCommand.outgoingPackets.position = 0;
               QuickChatDynamicCommand.outgoingPackets.writeByte(14, -123);
               QuickChatDynamicCommand.outgoingPackets.writeByte(ArchiveIndex.field_m.type((byte) 32).wireId, -123);
-              ClientException.a(-1, 30785);
+              ClientException.flushAccountPackets(-1, 30785);
               AccountFormStage.field_d = SpriteStrip.field_p;
             }
             if (AccountFormStage.field_d == SpriteStrip.field_p &&
@@ -92,7 +92,7 @@ final class LoginHandshakeSupport {
               String var6 = QuickChatDynamicCommand.incomingPackets.readNullableString(-15208);
               int var7 = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
               if ((1 & var7) != 0) {
-                NameAvailabilityResult.a((byte) -63);
+                NameAvailabilityResult.readAndStoreInstallationSeed((byte) -63);
               }
               if (!reconnect) {
                 boolean stackIn_48_0 = ((8 & var7) != 0);

@@ -178,14 +178,14 @@ final class PcmResampler {
         }
     }
 
-    final static int a(int param0, byte param1, int param2, int param3, int param4) {
-        int var5 = param4;
-        int var6 = 1 + param3;
-        int var7 = -param0 + param2;
-        int var8 = var7 - param4 * var6;
+    final static int centeredButtonStart(int totalButtonWidth, byte guard, int width, int count, int gap) {
+        int var5 = gap;
+        int var6 = 1 + count;
+        int var7 = -totalButtonWidth + width;
+        int var8 = var7 - gap * var6;
         var5 = var5 + var8 / 2;
-        var8 = -(var8 / 2 * 2) + (-(var6 * param4) + var7);
-        if (param1 <= 75) {
+        var8 = -(var8 / 2 * 2) + (-(var6 * gap) + var7);
+        if (guard <= 75) {
           return 19;
         }
         var5 = var5 + var8;

@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NameAvailabilityResult {
-    boolean field_a;
-    String field_f;
-    String[] field_c;
+    boolean success;
+    String message;
+    String[] nameSuggestions;
     static String[] field_b;
-    int field_g;
-    boolean field_e;
+    int status;
+    boolean requiresTerms;
     static PcmSample field_d;
 
     public static void releaseStatics(byte guard) {
@@ -18,7 +18,7 @@ final class NameAvailabilityResult {
         }
     }
 
-    final static void a(byte param0) {
+    final static void readAndStoreInstallationSeed(byte guard) {
         try {
           boolean decompiledRegionSelector0 = false;
           if (SavedDataWrite.field_h != null) {
@@ -33,17 +33,17 @@ final class NameAvailabilityResult {
             }
             if (!decompiledRegionSelector0) {
               QuickChatDynamicCommand.incomingPackets.position = QuickChatDynamicCommand.incomingPackets.position + 24;
-              if (param0 > -44) {
-                NameAvailabilityResult.a((byte) -105);
+              if (guard > -44) {
+                NameAvailabilityResult.readAndStoreInstallationSeed((byte) -105);
               }
               return;
             }
           }
           QuickChatDynamicCommand.incomingPackets.position = QuickChatDynamicCommand.incomingPackets.position + 24;
-          if (param0 <= -44) {
+          if (guard <= -44) {
             return;
           }
-          NameAvailabilityResult.a((byte) -105);
+          NameAvailabilityResult.readAndStoreInstallationSeed((byte) -105);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -52,7 +52,7 @@ final class NameAvailabilityResult {
     }
 
     NameAvailabilityResult(boolean param0) {
-        this.field_a = param0 ? true : false;
+        this.success = param0 ? true : false;
     }
 
     static {

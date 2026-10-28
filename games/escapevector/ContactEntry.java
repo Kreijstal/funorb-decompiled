@@ -54,8 +54,8 @@ final class ContactEntry extends LegacyWidgetStyle {
         }
     }
 
-    final static String i(int param0) {
-        if (param0 != 0) {
+    final static String currentDisplayName(int guard) {
+        if (guard != 0) {
           return (String) null;
         }
         if (null == ThreeSliceButtonPainter.field_r) {

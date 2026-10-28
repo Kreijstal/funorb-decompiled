@@ -12,7 +12,7 @@ abstract class DebouncedValidator implements ValidationSource {
           return GradientOutlineTextPainter.field_s;
         }
         if (guard != 17124) {
-          DebouncedValidator.a(false, true);
+          DebouncedValidator.requestFullscreen(false, true);
           if (MonotonicClockSupport.monotonicMillis(guard - 16996) < (this.lastChangeMillis + 350L)) {
             return SpriteDecodeSupport.field_f;
           }
@@ -35,20 +35,20 @@ abstract class DebouncedValidator implements ValidationSource {
         return this.evaluateMessage((byte) 125);
     }
 
-    final static int a(int param0, int param1, LegacyButton[] param2, int param3) {
+    final static int hitLegacyButtons(int y, int guard, LegacyButton[] buttons, int x) {
         String stackIn_17_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          if (param2 == null) {
+          if (buttons == null) {
             int stackIn_3_0 = -1;
             return stackIn_3_0;
           }
-          LegacyButton[] var4 = param2;
-          int var6 = -90 % ((param1 + 58) / 32);
+          LegacyButton[] var4 = buttons;
+          int var6 = -90 % ((guard + 58) / 32);
           for (int var5 = 0; var4.length > var5; var5++) {
             LegacyButton var7 = var4[var5];
             if (var7 != null &&
-              var7.hitTest((byte) 65, param3, param0)) {
+              var7.hitTest((byte) 65, x, y)) {
               int stackIn_10_0 = var7.actionId;
               return stackIn_10_0;
             }
@@ -59,13 +59,13 @@ abstract class DebouncedValidator implements ValidationSource {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4_ref = decompiledCaughtException;
           RuntimeException stackIn_16_0 = var4_ref;
-          StringBuilder stackIn_16_1 = new StringBuilder().append("sm.R(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_16_1 = new StringBuilder().append("sm.R(").append(y).append(',').append(guard).append(',');
+          if (buttons == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(x).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ abstract class DebouncedValidator implements ValidationSource {
     public static void releaseStatics(boolean guard) {
         field_a = null;
         if (!guard) {
-          DebouncedValidator.a(false, false);
+          DebouncedValidator.requestFullscreen(false, false);
           field_d = null;
           return;
         }
@@ -108,14 +108,14 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void requestFullscreen(boolean guard, boolean pointerDriven) {
         int var2 = 0;
         int var3 = EscapeVector.obfuscationControl;
         int var2Lifetime2;
         int var2Lifetime3;
         int var2Lifetime4;
         int var2Lifetime5;
-        if (param0) {
+        if (guard) {
           field_a = (String) null;
           if (Js5NetworkRequest.field_x <= 0) {
             if (!AccountSessionSupport.isGuestSession(-104)) {
@@ -126,7 +126,7 @@ abstract class DebouncedValidator implements ValidationSource {
               if (!RegistrationFlowSupport.field_d) {
                 return;
               }
-              LoginText.buildLegacyMenu(var2, 0, param1);
+              LoginText.buildLegacyMenu(var2, 0, pointerDriven);
               return;
             }
             var2 = 0;
@@ -136,12 +136,12 @@ abstract class DebouncedValidator implements ValidationSource {
             if (!RegistrationFlowSupport.field_d) {
               return;
             }
-            LoginText.buildLegacyMenu(var2, 0, param1);
+            LoginText.buildLegacyMenu(var2, 0, pointerDriven);
             return;
           }
           if (DirectByteStorage.field_n != null) {
-            IsaacRandom.field_d = DirectByteStorage.field_n.enterFullscreen(!param0 ? true : false);
-            TextHotspotWidget.b(2, (byte) 101);
+            IsaacRandom.field_d = DirectByteStorage.field_n.enterFullscreen(!guard ? true : false);
+            TextHotspotWidget.notifyBrowserResize(2, (byte) 101);
             if (null == IsaacRandom.field_d) {
               var2Lifetime4 = 3;
             } else {
@@ -154,7 +154,7 @@ abstract class DebouncedValidator implements ValidationSource {
             if (!RegistrationFlowSupport.field_d) {
               return;
             }
-            LoginText.buildLegacyMenu(var2Lifetime4, 0, param1);
+            LoginText.buildLegacyMenu(var2Lifetime4, 0, pointerDriven);
             return;
           }
           IsaacRandom.field_d = AccountFormStage.createFullscreenCanvas(640, -16493, NetworkGameClient.taskService, 480, 0, 0);
@@ -170,7 +170,7 @@ abstract class DebouncedValidator implements ValidationSource {
           if (!RegistrationFlowSupport.field_d) {
             return;
           }
-          LoginText.buildLegacyMenu(var2Lifetime5, 0, param1);
+          LoginText.buildLegacyMenu(var2Lifetime5, 0, pointerDriven);
           return;
         }
         if (Js5NetworkRequest.field_x <= 0) {
@@ -178,7 +178,7 @@ abstract class DebouncedValidator implements ValidationSource {
             int var2Lifetime1 = 1;
             if (null == DirectByteStorage.field_n &&
               RegistrationFlowSupport.field_d) {
-              LoginText.buildLegacyMenu(var2Lifetime1, 0, param1);
+              LoginText.buildLegacyMenu(var2Lifetime1, 0, pointerDriven);
               return;
             }
             return;
@@ -190,12 +190,12 @@ abstract class DebouncedValidator implements ValidationSource {
           if (!RegistrationFlowSupport.field_d) {
             return;
           }
-          LoginText.buildLegacyMenu(var2Lifetime1Lifetime1, 0, param1);
+          LoginText.buildLegacyMenu(var2Lifetime1Lifetime1, 0, pointerDriven);
           return;
         }
         if (DirectByteStorage.field_n != null) {
-          IsaacRandom.field_d = DirectByteStorage.field_n.enterFullscreen(!param0 ? true : false);
-          TextHotspotWidget.b(2, (byte) 101);
+          IsaacRandom.field_d = DirectByteStorage.field_n.enterFullscreen(!guard ? true : false);
+          TextHotspotWidget.notifyBrowserResize(2, (byte) 101);
           if (null == IsaacRandom.field_d) {
             var2Lifetime2 = 3;
           } else {
@@ -204,7 +204,7 @@ abstract class DebouncedValidator implements ValidationSource {
           }
           if (null == DirectByteStorage.field_n &&
             RegistrationFlowSupport.field_d) {
-            LoginText.buildLegacyMenu(var2Lifetime2, 0, param1);
+            LoginText.buildLegacyMenu(var2Lifetime2, 0, pointerDriven);
             return;
           }
           return;
@@ -218,14 +218,14 @@ abstract class DebouncedValidator implements ValidationSource {
         }
         if (null == DirectByteStorage.field_n &&
           RegistrationFlowSupport.field_d) {
-          LoginText.buildLegacyMenu(var2Lifetime3, 0, param1);
+          LoginText.buildLegacyMenu(var2Lifetime3, 0, pointerDriven);
           return;
         }
     }
 
-    final static void b(byte param0) {
-        AchievementQuery.a(true, AgeValidator.field_o, false, ResourceArchive.field_b);
-        if (param0 > -45) {
+    final static void requestRegistrationLogin(byte guard) {
+        AchievementQuery.requestLogin(true, AgeValidator.field_o, false, ResourceArchive.field_b);
+        if (guard > -45) {
           return;
         }
         LinkButtonPainter.field_a = true;

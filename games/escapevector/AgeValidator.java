@@ -21,11 +21,11 @@ final class AgeValidator extends TextFieldValidator {
         super(param0);
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isFriend(String name, int guard) {
         String stackIn_10_2 = null;
         try {
-          if (param1 == 0) {
-            boolean stackIn_6_0 = (LoginCredentialType.findFriendByName(-1465, param0) != null);
+          if (guard == 0) {
+            boolean stackIn_6_0 = (LoginCredentialType.findFriendByName(-1465, name) != null);
             return stackIn_6_0;
           }
           return true;
@@ -34,65 +34,65 @@ final class AgeValidator extends TextFieldValidator {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var2;
           StringBuilder stackIn_9_1 = new StringBuilder().append("kl.F(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static boolean a(int param0, int param1, boolean param2) {
-        if (!param2) {
+    final static boolean isCampaignMilestone(int levelNumber, int mode, boolean guard) {
+        if (!guard) {
           return false;
         }
-        if (!EmailSyntaxValidator.a(param1, -2)) {
-          if (2 != param1) {
+        if (!EmailSyntaxValidator.acceptsPrimaryButton(mode, -2)) {
+          if (2 != mode) {
             return false;
           }
-          if (4 == param0) {
+          if (4 == levelNumber) {
             return true;
           }
-          if (param0 == 8) {
+          if (levelNumber == 8) {
             return true;
           }
-          if (param0 == 12) {
+          if (levelNumber == 12) {
             return true;
           }
-          if (param0 == 16) {
+          if (levelNumber == 16) {
             return true;
           }
           return false;
         }
-        if (param0 == 2) {
+        if (levelNumber == 2) {
           return true;
         }
-        if (4 == param0) {
+        if (4 == levelNumber) {
           return true;
         }
-        if (param0 == 8) {
+        if (levelNumber == 8) {
           return true;
         }
-        if (param0 == 12) {
+        if (levelNumber == 12) {
           return true;
         }
-        if (16 == param0) {
+        if (16 == levelNumber) {
           return true;
         }
-        if (2 != param1) {
+        if (2 != mode) {
           return false;
         }
-        if (4 == param0) {
+        if (4 == levelNumber) {
           return true;
         }
-        if (param0 == 8) {
+        if (levelNumber == 8) {
           return true;
         }
-        if (param0 == 12) {
+        if (levelNumber == 12) {
           return true;
         }
-        if (param0 == 16) {
+        if (levelNumber == 16) {
           return true;
         }
         return false;

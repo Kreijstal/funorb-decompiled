@@ -151,7 +151,7 @@ final class PathPoint {
         if (guard != -38) {
           PathPoint.releaseStatics(69);
         }
-        return DraggableWidget.a(gameMode, objectType, false, TerrainMaskSupport.field_d);
+        return DraggableWidget.scaledScoreAt(gameMode, objectType, false, TerrainMaskSupport.field_d);
     }
 
     PathPoint(int x, int y) {

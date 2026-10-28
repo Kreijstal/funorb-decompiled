@@ -5,8 +5,8 @@ abstract class TickClock {
     static String field_a;
     static String field_b;
 
-    final static String a(byte param0) {
-        if (param0 != 46) {
+    final static String visibleTooltip(byte guard) {
+        if (guard != 46) {
           TickClock.releaseStatics((byte) -64);
           if (PasswordFieldPainter.field_u) {
             return null;
@@ -33,42 +33,42 @@ abstract class TickClock {
 
     abstract int advanceTicks(byte guard, long tickNanos);
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, int param8, int param9) {
-        if (!param5) {
+    final static void drawMenuFrame(int frameId, int bottom, int top, int left, int darkColor, boolean guard, int right, boolean animated, int lightColor, int openingOffset) {
+        if (!guard) {
           TickClock.normalizeAccountCharacter(-21, '7');
-          if (!param7) {
-            AccountMessagePanel.drawUnevenFrame(param4, param6, param8, param0, param2, 73, param3, param1, param9);
+          if (!animated) {
+            AccountMessagePanel.drawUnevenFrame(darkColor, right, lightColor, frameId, top, 73, left, bottom, openingOffset);
             return;
           }
-          AccountNoticeKind.drawAnimatedPanelFrame(param9, param3, param6, param1, true, 29788, false, param8, param4, param0, param2, false);
+          AccountNoticeKind.drawAnimatedPanelFrame(openingOffset, left, right, bottom, true, 29788, false, lightColor, darkColor, frameId, top, false);
           return;
         }
-        if (!param7) {
-          AccountMessagePanel.drawUnevenFrame(param4, param6, param8, param0, param2, 73, param3, param1, param9);
+        if (!animated) {
+          AccountMessagePanel.drawUnevenFrame(darkColor, right, lightColor, frameId, top, 73, left, bottom, openingOffset);
           return;
         }
-        AccountNoticeKind.drawAnimatedPanelFrame(param9, param3, param6, param1, true, 29788, false, param8, param4, param0, param2, false);
+        AccountNoticeKind.drawAnimatedPanelFrame(openingOffset, left, right, bottom, true, 29788, false, lightColor, darkColor, frameId, top, false);
     }
 
     abstract long delayMillis(byte guard);
 
-    final static void a(int param0, boolean param1) {
-        if (param0 != 24) {
-          TickClock.a((byte) 53);
+    final static void configureDefaultMenuStyle(int guard, boolean pointerDriven) {
+        if (guard != 24) {
+          TickClock.visibleTooltip((byte) 53);
           if (null != BoundedRandomAccessFile.activeSession) {
             ModeProgressSupport.field_d = 16777215;
             ValidatedTextWidget.field_X = 7899280;
             MenuTitleSupport.field_e = 12110032;
             Sprite[] var6 = (Sprite[]) null;
             Sprite[] var5 = (Sprite[]) null;
-            LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 240, param1);
+            LevelObject.configureSimpleMenuTheme(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 240, pointerDriven);
           } else {
             ValidatedTextWidget.field_X = 6340704;
             MenuTitleSupport.field_e = 10551200;
             ModeProgressSupport.field_d = 16777215;
             Sprite[] var4 = (Sprite[]) null;
             Sprite[] var3 = (Sprite[]) null;
-            LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 300, param1);
+            LevelObject.configureSimpleMenuTheme(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 300, pointerDriven);
           }
           LoginHandshakeSupport.field_d = 0;
           ChatMessage.clearFrameOffsets((byte) -71);
@@ -80,7 +80,7 @@ abstract class TickClock {
           MenuTitleSupport.field_e = 12110032;
           Sprite[] var6Lifetime1 = (Sprite[]) null;
           Sprite[] var5Lifetime1 = (Sprite[]) null;
-          LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 240, param1);
+          LevelObject.configureSimpleMenuTheme(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 240, pointerDriven);
           LoginHandshakeSupport.field_d = 0;
           ChatMessage.clearFrameOffsets((byte) -71);
           return;
@@ -90,7 +90,7 @@ abstract class TickClock {
         ModeProgressSupport.field_d = 16777215;
         Sprite[] var4Lifetime1 = (Sprite[]) null;
         Sprite[] var3Lifetime1 = (Sprite[]) null;
-        LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 300, param1);
+        LevelObject.configureSimpleMenuTheme(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 300, pointerDriven);
         LoginHandshakeSupport.field_d = 0;
         ChatMessage.clearFrameOffsets((byte) -71);
         return;

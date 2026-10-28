@@ -13,10 +13,10 @@ final class DialWidget extends TextButton {
     static long field_J;
     static int field_K;
 
-    final static void k(int param0) {
+    final static void showRegistrationEmailLogin(int guard) {
         String var2 = (String) null;
         IntValueNode.showLoginForm(AgeValidator.field_o, (String) null, 63);
-        if (param0 != 0) {
+        if (guard != 0) {
           DialWidget.releaseStatics(true);
         }
     }

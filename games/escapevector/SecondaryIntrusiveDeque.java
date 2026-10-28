@@ -13,14 +13,14 @@ final class SecondaryIntrusiveDeque {
         return this.sentinel.secondaryNext == this.sentinel ? true : false;
     }
 
-    final static void d(int param0) {
-        SelfDestructEffects.field_j.failureCount = param0;
+    final static void resetJs5Errors(int failureCount) {
+        SelfDestructEffects.field_j.failureCount = failureCount;
         SelfDestructEffects.field_j.lastErrorCode = 0;
     }
 
-    final int c(int param0) {
+    final int size(int initialCount) {
         int var4 = EscapeVector.obfuscationControl;
-        int var2 = param0;
+        int var2 = initialCount;
         DualLinkNode var3 = this.sentinel.secondaryNext;
         while (this.sentinel != var3) {
           var3 = var3.secondaryNext;
@@ -58,11 +58,11 @@ final class SecondaryIntrusiveDeque {
         }
     }
 
-    final static boolean a(PacketBuffer param0, boolean param1) {
+    final static boolean readBoolean(PacketBuffer input, boolean guard) {
         String stackIn_11_2 = null;
         try {
-          int var2_int = param0.readUnsignedByte(0);
-          if (!param1) {
+          int var2_int = input.readUnsignedByte(0);
+          if (!guard) {
             return true;
           }
           boolean stackIn_6_0 = !(var2_int != 1);
@@ -74,16 +74,16 @@ final class SecondaryIntrusiveDeque {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var2;
           StringBuilder stackIn_10_1 = new StringBuilder().append("va.H(");
-          if (param0 == null) {
+          if (input == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, boolean param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void fillSortedHalfBlendGouraudTriangle(int bottomRed, int middleRed, int topBlue, int middleBlue, int[] pixels, int middleX, int middleGreen, int topX, int topY, int middleY, int bottomY, boolean guard, int topRed, int bottomX, int topGreen, int bottomGreen, int bottomBlue) {
         String stackIn_82_2 = null;
         int var17_int = 0;
         int var18 = 0;
@@ -105,154 +105,154 @@ final class SecondaryIntrusiveDeque {
         int var35 = 0;
         int var42 = EscapeVector.obfuscationControl;
         try {
-          if (param10 >= 0 &&
-            param8 < MeshRasterState.clipHeight) {
-            if (param7 < 0 &&
-              0 > param5 &&
-              0 > param13) {
+          if (bottomY >= 0 &&
+            topY < MeshRasterState.clipHeight) {
+            if (topX < 0 &&
+              0 > middleX &&
+              0 > bottomX) {
               return;
             }
-            if (MeshRasterState.clipWidth <= param7 &&
-              MeshRasterState.clipWidth <= param5 &&
-              MeshRasterState.clipWidth <= param13) {
+            if (MeshRasterState.clipWidth <= topX &&
+              MeshRasterState.clipWidth <= middleX &&
+              MeshRasterState.clipWidth <= bottomX) {
               return;
             }
-            if (!param11) {
-              SecondaryIntrusiveDeque.d(-74);
+            if (!guard) {
+              SecondaryIntrusiveDeque.resetJs5Errors(-74);
             }
-            int var34 = param10 - param8;
-            if (param9 == param8) {
-              if (param10 != param8) {
-                var35 = param10 - param9;
-                if (param5 <= param7) {
-                  var21 = param1 << 16;
-                  var25 = param6 << 16;
-                  var20 = (-param7 + param13 << 16) / var34;
-                  var19 = (-param5 + param13 << 16) / var35;
-                  var30 = param2 << 16;
-                  var18 = param7 << 16;
-                  var17_int = param5 << 16;
-                  var27 = (param15 - param6 << 16) / var35;
-                  var23 = (param0 - param1 << 16) / var35;
-                  var22 = param12 << 16;
-                  var31 = (-param3 + param16 << 16) / var35;
-                  var26 = param14 << 16;
-                  var32 = (param16 - param2 << 16) / var34;
-                  var29 = param3 << 16;
-                  var24 = (-param12 + param0 << 16) / var34;
-                  var28 = (-param14 + param15 << 16) / var34;
+            int var34 = bottomY - topY;
+            if (middleY == topY) {
+              if (bottomY != topY) {
+                var35 = bottomY - middleY;
+                if (middleX <= topX) {
+                  var21 = middleRed << 16;
+                  var25 = middleGreen << 16;
+                  var20 = (-topX + bottomX << 16) / var34;
+                  var19 = (-middleX + bottomX << 16) / var35;
+                  var30 = topBlue << 16;
+                  var18 = topX << 16;
+                  var17_int = middleX << 16;
+                  var27 = (bottomGreen - middleGreen << 16) / var35;
+                  var23 = (bottomRed - middleRed << 16) / var35;
+                  var22 = topRed << 16;
+                  var31 = (-middleBlue + bottomBlue << 16) / var35;
+                  var26 = topGreen << 16;
+                  var32 = (bottomBlue - topBlue << 16) / var34;
+                  var29 = middleBlue << 16;
+                  var24 = (-topRed + bottomRed << 16) / var34;
+                  var28 = (-topGreen + bottomGreen << 16) / var34;
                 } else {
-                  var26 = param6 << 16;
-                  var31 = (param16 - param2 << 16) / var34;
-                  var30 = param3 << 16;
-                  var17_int = param7 << 16;
-                  var28 = (-param6 + param15 << 16) / var35;
-                  var27 = (-param14 + param15 << 16) / var34;
-                  var19 = (param13 - param7 << 16) / var34;
-                  var21 = param12 << 16;
-                  var18 = param5 << 16;
-                  var22 = param1 << 16;
-                  var25 = param14 << 16;
-                  var29 = param2 << 16;
-                  var32 = (-param3 + param16 << 16) / var35;
-                  var23 = (-param12 + param0 << 16) / var34;
-                  var24 = (param0 - param1 << 16) / var35;
-                  var20 = (-param5 + param13 << 16) / var35;
+                  var26 = middleGreen << 16;
+                  var31 = (bottomBlue - topBlue << 16) / var34;
+                  var30 = middleBlue << 16;
+                  var17_int = topX << 16;
+                  var28 = (-middleGreen + bottomGreen << 16) / var35;
+                  var27 = (-topGreen + bottomGreen << 16) / var34;
+                  var19 = (bottomX - topX << 16) / var34;
+                  var21 = topRed << 16;
+                  var18 = middleX << 16;
+                  var22 = middleRed << 16;
+                  var25 = topGreen << 16;
+                  var29 = topBlue << 16;
+                  var32 = (-middleBlue + bottomBlue << 16) / var35;
+                  var23 = (-topRed + bottomRed << 16) / var34;
+                  var24 = (bottomRed - middleRed << 16) / var35;
+                  var20 = (-middleX + bottomX << 16) / var35;
                 }
               } else {
-                var22 = param1;
-                var30 = param3;
+                var22 = middleRed;
+                var30 = middleBlue;
                 var27 = 0;
                 var32 = 0;
-                var18 = param5 << 16;
+                var18 = middleX << 16;
                 var28 = 0;
-                var17_int = param7 << 16;
+                var17_int = topX << 16;
                 var23 = 0;
                 var20 = 0;
                 var24 = 0;
                 var19 = 0;
                 var31 = 0;
-                var26 = param6;
-                var25 = param14;
-                var29 = param2;
-                var21 = param12;
+                var26 = middleGreen;
+                var25 = topGreen;
+                var29 = topBlue;
+                var21 = topRed;
               }
-              if (param8 < 0) {
-                param8 = Math.min(-param8, -param8 + param9);
-                var21 = var21 + param8 * var23;
-                var25 = var25 + param8 * var27;
-                var17_int = var17_int + var19 * param8;
-                var29 = var29 + param8 * var31;
-                var26 = var26 + var28 * param8;
-                var22 = var22 + param8 * var24;
-                var30 = var30 + var32 * param8;
-                var18 = var18 + param8 * var20;
-                param8 = 0;
+              if (topY < 0) {
+                topY = Math.min(-topY, -topY + middleY);
+                var21 = var21 + topY * var23;
+                var25 = var25 + topY * var27;
+                var17_int = var17_int + var19 * topY;
+                var29 = var29 + topY * var31;
+                var26 = var26 + var28 * topY;
+                var22 = var22 + topY * var24;
+                var30 = var30 + var32 * topY;
+                var18 = var18 + topY * var20;
+                topY = 0;
               }
               var33 = false;
             } else {
-              var22 = param12 << 16;
-              var21 = param12 << 16;
-              var30 = param2 << 16;
-              var29 = param2 << 16;
-              var26 = param14 << 16;
-              var25 = param14 << 16;
-              var18 = param7 << 16;
-              var17_int = param7 << 16;
-              var35 = param9 - param8;
-              var20 = (param13 - param7 << 16) / var34;
-              var19 = (-param7 + param5 << 16) / var35;
+              var22 = topRed << 16;
+              var21 = topRed << 16;
+              var30 = topBlue << 16;
+              var29 = topBlue << 16;
+              var26 = topGreen << 16;
+              var25 = topGreen << 16;
+              var18 = topX << 16;
+              var17_int = topX << 16;
+              var35 = middleY - topY;
+              var20 = (bottomX - topX << 16) / var34;
+              var19 = (-topX + middleX << 16) / var35;
               if (var20 <= var19) {
-                var23 = (-param12 + param0 << 16) / var34;
-                var27 = (-param14 + param15 << 16) / var34;
-                var24 = (param1 - param12 << 16) / var35;
+                var23 = (-topRed + bottomRed << 16) / var34;
+                var27 = (-topGreen + bottomGreen << 16) / var34;
+                var24 = (middleRed - topRed << 16) / var35;
                 var33 = true;
                 int var36 = var19;
                 var19 = var20;
                 var20 = var36;
-                var32 = (param3 - param2 << 16) / var35;
-                var28 = (param6 - param14 << 16) / var35;
-                var31 = (-param2 + param16 << 16) / var34;
+                var32 = (middleBlue - topBlue << 16) / var35;
+                var28 = (middleGreen - topGreen << 16) / var35;
+                var31 = (-topBlue + bottomBlue << 16) / var34;
               } else {
-                var23 = (param1 - param12 << 16) / var35;
-                var24 = (param0 - param12 << 16) / var34;
-                var32 = (-param2 + param16 << 16) / var34;
-                var27 = (-param14 + param6 << 16) / var35;
-                var31 = (-param2 + param3 << 16) / var35;
+                var23 = (middleRed - topRed << 16) / var35;
+                var24 = (bottomRed - topRed << 16) / var34;
+                var32 = (-topBlue + bottomBlue << 16) / var34;
+                var27 = (-topGreen + middleGreen << 16) / var35;
+                var31 = (-topBlue + middleBlue << 16) / var35;
                 var33 = false;
-                var28 = (-param14 + param15 << 16) / var34;
+                var28 = (-topGreen + bottomGreen << 16) / var34;
               }
               boolean decompiledFrameRemainder0 = true;
-              if (param8 < 0) {
-                if (0 > param9) {
-                  param8 = param9 - param8;
-                  var30 = var30 + param8 * var32;
-                  var25 = var25 + param8 * var27;
-                  var22 = var22 + var24 * param8;
-                  var26 = var26 + var28 * param8;
-                  var29 = var29 + var31 * param8;
-                  var18 = var18 + var20 * param8;
-                  var21 = var21 + param8 * var23;
-                  var17_int = var17_int + var19 * param8;
-                  param8 = param9;
+              if (topY < 0) {
+                if (0 > middleY) {
+                  topY = middleY - topY;
+                  var30 = var30 + topY * var32;
+                  var25 = var25 + topY * var27;
+                  var22 = var22 + var24 * topY;
+                  var26 = var26 + var28 * topY;
+                  var29 = var29 + var31 * topY;
+                  var18 = var18 + var20 * topY;
+                  var21 = var21 + topY * var23;
+                  var17_int = var17_int + var19 * topY;
+                  topY = middleY;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  param8 = -param8;
-                  var29 = var29 + param8 * var31;
-                  var25 = var25 + param8 * var27;
-                  var26 = var26 + param8 * var28;
-                  var22 = var22 + var24 * param8;
-                  var30 = var30 + var32 * param8;
-                  var18 = var18 + var20 * param8;
-                  var21 = var21 + param8 * var23;
-                  var17_int = var17_int + var19 * param8;
-                  param8 = 0;
+                  topY = -topY;
+                  var29 = var29 + topY * var31;
+                  var25 = var25 + topY * var27;
+                  var26 = var26 + topY * var28;
+                  var22 = var22 + var24 * topY;
+                  var30 = var30 + var32 * topY;
+                  var18 = var18 + var20 * topY;
+                  var21 = var21 + topY * var23;
+                  var17_int = var17_int + var19 * topY;
+                  topY = 0;
                 }
               }
               if (decompiledFrameRemainder0) {
-                int var36Lifetime2 = MeshRasterState.rowOffsets[param8];
-                while (param8 < param9) {
+                int var36Lifetime2 = MeshRasterState.rowOffsets[topY];
+                while (topY < middleY) {
                   int var37 = var17_int >> 16;
                   if (MeshRasterState.clipWidth > var37) {
                     int var38 = -(var17_int >> 16) + (var18 >> 16);
@@ -264,17 +264,17 @@ final class SecondaryIntrusiveDeque {
                         var38 = -1 + MeshRasterState.clipWidth - var37;
                       }
                       if (var37 < 0) {
-                        LinkButtonPainter.a(var25 - var40 * var37, var36Lifetime2, var41, (byte) -114, var29 - var37 * var41, var39, var40, var38 + var37, param4, var21 - var39 * var37);
+                        LinkButtonPainter.blendHalfGradientSpan(var25 - var40 * var37, var36Lifetime2, var41, (byte) -114, var29 - var37 * var41, var39, var40, var38 + var37, pixels, var21 - var39 * var37);
                       } else {
-                        LinkButtonPainter.a(var25, var37 + var36Lifetime2, var41, (byte) -121, var29, var39, var40, var38, param4, var21);
+                        LinkButtonPainter.blendHalfGradientSpan(var25, var37 + var36Lifetime2, var41, (byte) -121, var29, var39, var40, var38, pixels, var21);
                       }
                     } else if (var37 >= 0 &&
                       MeshRasterState.clipWidth > var37) {
-                      LinkButtonPainter.a(var25, var37 + var36Lifetime2, 0, (byte) -116, var29, 0, 0, var38, param4, var21);
+                      LinkButtonPainter.blendHalfGradientSpan(var25, var37 + var36Lifetime2, 0, (byte) -116, var29, 0, 0, var38, pixels, var21);
                     }
                   }
-                  param8++;
-                  if (param8 >= MeshRasterState.clipHeight) {
+                  topY++;
+                  if (topY >= MeshRasterState.clipHeight) {
                     return;
                   }
                   var25 = var25 + var27;
@@ -288,7 +288,7 @@ final class SecondaryIntrusiveDeque {
                   var22 = var22 + var24;
                 }
               }
-              int var36Lifetime3 = -param9 + param10;
+              int var36Lifetime3 = -middleY + bottomY;
               if (var36Lifetime3 == 0) {
                 var20 = 0;
                 var27 = 0;
@@ -299,20 +299,20 @@ final class SecondaryIntrusiveDeque {
                 var28 = 0;
                 var24 = 0;
               } else {
-                int var37Lifetime2 = param13 << 16;
-                int var38Lifetime2 = param0 << 16;
-                int var39Lifetime2 = param15 << 16;
-                int var40Lifetime2 = param16 << 16;
+                int var37Lifetime2 = bottomX << 16;
+                int var38Lifetime2 = bottomRed << 16;
+                int var39Lifetime2 = bottomGreen << 16;
+                int var40Lifetime2 = bottomBlue << 16;
                 if (var33) {
-                  var18 = param5 << 16;
-                  var26 = param6 << 16;
-                  var22 = param1 << 16;
-                  var30 = param3 << 16;
+                  var18 = middleX << 16;
+                  var26 = middleGreen << 16;
+                  var22 = middleRed << 16;
+                  var30 = middleBlue << 16;
                 } else {
-                  var25 = param6 << 16;
-                  var17_int = param5 << 16;
-                  var29 = param3 << 16;
-                  var21 = param1 << 16;
+                  var25 = middleGreen << 16;
+                  var17_int = middleX << 16;
+                  var29 = middleBlue << 16;
+                  var21 = middleRed << 16;
                 }
                 var27 = (var39Lifetime2 - var25) / var36Lifetime3;
                 var31 = (var40Lifetime2 - var29) / var36Lifetime3;
@@ -324,20 +324,20 @@ final class SecondaryIntrusiveDeque {
                 var24 = (var38Lifetime2 - var22) / var36Lifetime3;
               }
             }
-            if (param8 < 0) {
-              param8 = -param8;
-              var17_int = var17_int + var19 * param8;
-              var25 = var25 + param8 * var27;
-              var29 = var29 + param8 * var31;
-              var21 = var21 + var23 * param8;
-              var18 = var18 + var20 * param8;
-              var26 = var26 + param8 * var28;
-              var30 = var30 + var32 * param8;
-              var22 = var22 + var24 * param8;
-              param8 = 0;
+            if (topY < 0) {
+              topY = -topY;
+              var17_int = var17_int + var19 * topY;
+              var25 = var25 + topY * var27;
+              var29 = var29 + topY * var31;
+              var21 = var21 + var23 * topY;
+              var18 = var18 + var20 * topY;
+              var26 = var26 + topY * var28;
+              var30 = var30 + var32 * topY;
+              var22 = var22 + var24 * topY;
+              topY = 0;
             }
-            int var35Lifetime1 = MeshRasterState.rowOffsets[param8];
-            while (param8 < param10) {
+            int var35Lifetime1 = MeshRasterState.rowOffsets[topY];
+            while (topY < bottomY) {
               int var36Lifetime1 = var17_int >> 16;
               if (MeshRasterState.clipWidth > var36Lifetime1) {
                 int var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
@@ -349,17 +349,17 @@ final class SecondaryIntrusiveDeque {
                     var37Lifetime1 = -1 + (MeshRasterState.clipWidth - var36Lifetime1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    LinkButtonPainter.a(var25, var36Lifetime1 + var35Lifetime1, var40Lifetime1, (byte) -109, var29, var38Lifetime1, var39Lifetime1, var37Lifetime1, param4, var21);
+                    LinkButtonPainter.blendHalfGradientSpan(var25, var36Lifetime1 + var35Lifetime1, var40Lifetime1, (byte) -109, var29, var38Lifetime1, var39Lifetime1, var37Lifetime1, pixels, var21);
                   } else {
-                    LinkButtonPainter.a(var25 - var39Lifetime1 * var36Lifetime1, var35Lifetime1, var40Lifetime1, (byte) -103, -(var40Lifetime1 * var36Lifetime1) + var29, var38Lifetime1, var39Lifetime1, var36Lifetime1 + var37Lifetime1, param4, -(var38Lifetime1 * var36Lifetime1) + var21);
+                    LinkButtonPainter.blendHalfGradientSpan(var25 - var39Lifetime1 * var36Lifetime1, var35Lifetime1, var40Lifetime1, (byte) -103, -(var40Lifetime1 * var36Lifetime1) + var29, var38Lifetime1, var39Lifetime1, var36Lifetime1 + var37Lifetime1, pixels, -(var38Lifetime1 * var36Lifetime1) + var21);
                   }
                 } else if (0 <= var36Lifetime1 &&
                   var36Lifetime1 < MeshRasterState.clipWidth) {
-                  LinkButtonPainter.a(var25, var35Lifetime1 + var36Lifetime1, 0, (byte) -114, var29, 0, 0, var37Lifetime1, param4, var21);
+                  LinkButtonPainter.blendHalfGradientSpan(var25, var35Lifetime1 + var36Lifetime1, 0, (byte) -114, var29, 0, 0, var37Lifetime1, pixels, var21);
                 }
               }
-              param8++;
-              if (param8 >= MeshRasterState.clipHeight) {
+              topY++;
+              if (topY >= MeshRasterState.clipHeight) {
                 return;
               }
               var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.width;
@@ -379,13 +379,13 @@ final class SecondaryIntrusiveDeque {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var17 = decompiledCaughtException;
           RuntimeException stackIn_81_0 = var17;
-          StringBuilder stackIn_81_1 = new StringBuilder().append("va.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          StringBuilder stackIn_81_1 = new StringBuilder().append("va.E(").append(bottomRed).append(',').append(middleRed).append(',').append(topBlue).append(',').append(middleBlue).append(',');
+          if (pixels == null) {
             stackIn_82_2 = "null";
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(middleX).append(',').append(middleGreen).append(',').append(topX).append(',').append(topY).append(',').append(middleY).append(',').append(bottomY).append(',').append(guard).append(',').append(topRed).append(',').append(bottomX).append(',').append(topGreen).append(',').append(bottomGreen).append(',').append(bottomBlue).append(')').toString());
         }
     }
 

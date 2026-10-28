@@ -64,17 +64,17 @@ final class LevelObject extends IntrusiveNode {
         }
     }
 
-    final static void d(byte param0) {
+    final static void clearReflectionChecks(byte guard) {
         try {
           try {
-            if (param0 != 27) {
-              LevelObject.d((byte) -32);
+            if (guard != 27) {
+              LevelObject.clearReflectionChecks((byte) -32);
             }
             SpriteFactorySupport.field_a = new IntrusiveDeque();
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             RuntimeException var1 = decompiledCaughtParameter0;
-            throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "sa.B(" + param0 + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "sa.B(" + guard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -102,7 +102,7 @@ final class LevelObject extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, Sprite[] param3, int param4, int param5, Sprite[] param6, int param7, int param8, BitmapFont param9, int param10, boolean param11) {
+    final static void configureSimpleMenuTheme(int param0, int param1, boolean param2, Sprite[] param3, int param4, int param5, Sprite[] param6, int param7, int param8, BitmapFont param9, int param10, boolean param11) {
         String stackIn_7_2 = null;
         String stackIn_11_2 = null;
         String stackIn_15_2 = null;
@@ -141,7 +141,7 @@ final class LevelObject extends IntrusiveNode {
     private final Sprite getDisplaySprite(int guard) {
         try {
           if (guard != 0) {
-            LevelObject.a(22, (byte) 101);
+            LevelObject.enqueueCampaignIntroduction(22, (byte) 101);
           }
           ObjectSpriteSet[] var2 = LoadingProgressDialog.objectSpriteSets(false);
           if (null == var2) {
@@ -331,7 +331,7 @@ final class LevelObject extends IntrusiveNode {
     }
 
     private final void refreshSprites(int guard) {
-        this.collisionSprite = TextWidgetPainter.a(this.spriteFrame, (byte) -39, this.objectType);
+        this.collisionSprite = TextWidgetPainter.objectSprite(this.spriteFrame, (byte) -39, this.objectType);
         this.displaySprite = this.getDisplaySprite(0);
         SpriteOffset var2 = this.getDisplayOffset(true);
         if (guard != -7012) {
@@ -358,17 +358,17 @@ final class LevelObject extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void enqueueCampaignIntroduction(int mode, byte guard) {
         try {
           try {
-            if (EmailSyntaxValidator.a(param0, -2)) {
+            if (EmailSyntaxValidator.acceptsPrimaryButton(mode, -2)) {
               DialogueScreen var2 = new DialogueScreen(SeekerMine.field_n, SpriteCheckboxPainter.field_c, SpriteLoadTask.field_j, true);
               GradientOutlineTextPainter.enqueueDialogue(1820, var2);
             }
-            if (param1 >= -69) {
+            if (guard >= -69) {
               return;
             }
-            if (param0 == 2) {
+            if (mode == 2) {
               String var2_ref = "vengeance_intro";
               String var3 = "scene";
               Sprite[] var4 = AccountNoticeDialog.field_cb;
@@ -379,7 +379,7 @@ final class LevelObject extends IntrusiveNode {
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             RuntimeException var2_ref2 = decompiledCaughtParameter0;
-            throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref2), "sa.D(" + param0 + ',' + param1 + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref2), "sa.D(" + mode + ',' + guard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -490,7 +490,7 @@ final class LevelObject extends IntrusiveNode {
     public static void releaseStatics(boolean guard) {
         try {
           if (guard) {
-            LevelObject.a(77, 13, true, (Sprite[]) null, -108, -59, (Sprite[]) null, -14, -30, (BitmapFont) null, -40, true);
+            LevelObject.configureSimpleMenuTheme(77, 13, true, (Sprite[]) null, -108, -59, (Sprite[]) null, -14, -30, (BitmapFont) null, -40, true);
           }
           field_q = null;
           return;

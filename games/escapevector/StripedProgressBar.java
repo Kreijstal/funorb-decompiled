@@ -25,11 +25,11 @@ final class StripedProgressBar extends UiComponent {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
     }
 
-    final static int[] j(int param0) {
+    final static int[] scoreSubmissionWords(int guard) {
         if (SocketJs5Transport.field_r != null) {
           return SocketJs5Transport.field_r.scoreSubmissionWords(37);
         }
-        if (param0 == -3282) {
+        if (guard == -3282) {
           return null;
         }
         return (int[]) null;

@@ -9,7 +9,7 @@ final class LoginText {
     private String value;
 
     final static void refreshLevelSelection(int guard) {
-        int var1 = AccountChoicePanel.a(-8462, SelfDestructEffects.field_q);
+        int var1 = AccountChoicePanel.availableModeIndex(-8462, SelfDestructEffects.field_q);
         int var2 = Bullet.accountStateIndex(127);
         if (guard != -1) {
           field_b = (boolean[]) null;
@@ -17,7 +17,7 @@ final class LoginText {
         if (var1 != SelfDestructEffects.field_q ||
           CheckboxPainter.field_l.accountStateIndex != var2) {
           boolean var3 = (HighscorePlayerRecord.field_d.pointerDriven);
-          ArchiveKeyRequest.a(0, var1, (var3), var2);
+          ArchiveKeyRequest.showLevelSelect(0, var1, (var3), var2);
         }
     }
 
@@ -43,7 +43,7 @@ final class LoginText {
           ModalStack.field_D = true;
           ArchiveIndex.field_j = kind;
           if (ArchiveIndex.field_j == 0) {
-            var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, -118, MembershipAssetSupport.field_a, Js5Transport.field_h, KeyboardStateSupport.field_a);
+            var3_int = PasswordFieldPainter.wrapBalancedText(GameModeSelectScreen.field_e, -118, MembershipAssetSupport.field_a, Js5Transport.field_h, KeyboardStateSupport.field_a);
             var4 = var3_int + 3;
             LoginPromptSupport.field_a = new int[var4];
             Js5NetworkRequest.field_I = new String[var4];
@@ -62,7 +62,7 @@ final class LoginText {
             LoginPromptSupport.field_a[-1 + var4] = 1;
             CachedTextLayout.field_j[1] = 5;
           } else if (ArchiveIndex.field_j == 1) {
-            var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, -126, MembershipAssetSupport.field_a, Js5Transport.field_h, KeyboardStateSupport.field_a);
+            var3_int = PasswordFieldPainter.wrapBalancedText(GameModeSelectScreen.field_e, -126, MembershipAssetSupport.field_a, Js5Transport.field_h, KeyboardStateSupport.field_a);
             var4 = 2 + var3_int;
             Js5NetworkRequest.field_I = new String[var4];
             LoginPromptSupport.field_a = new int[var4];
@@ -80,9 +80,9 @@ final class LoginText {
           } else if (ArchiveIndex.field_j != 2) {
             if (ArchiveIndex.field_j == 3) {
               if (!NetworkGameClient.taskService.extendedServicesEnabled) {
-                var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, guard ^ 114, MembershipAssetSupport.field_a, Js5Transport.field_h, DialogueScreen.field_k);
+                var3_int = PasswordFieldPainter.wrapBalancedText(GameModeSelectScreen.field_e, guard ^ 114, MembershipAssetSupport.field_a, Js5Transport.field_h, DialogueScreen.field_k);
               } else {
-                var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, -122, MembershipAssetSupport.field_a, Js5Transport.field_h, AccountSessionSupport.field_e);
+                var3_int = PasswordFieldPainter.wrapBalancedText(GameModeSelectScreen.field_e, -122, MembershipAssetSupport.field_a, Js5Transport.field_h, AccountSessionSupport.field_e);
               }
               var4 = 2 + var3_int;
               Js5NetworkRequest.field_I = new String[var4];
@@ -99,7 +99,7 @@ final class LoginText {
               LoginPromptSupport.field_a[var4 - 1] = 0;
               CachedTextLayout.field_j[0] = 5;
             } else if (ArchiveIndex.field_j == 4) {
-              var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, -110, MembershipAssetSupport.field_a, Js5Transport.field_h, LegacyWidgetStyle.field_K);
+              var3_int = PasswordFieldPainter.wrapBalancedText(GameModeSelectScreen.field_e, -110, MembershipAssetSupport.field_a, Js5Transport.field_h, LegacyWidgetStyle.field_K);
               var4 = var3_int + 2;
               Js5NetworkRequest.field_I = new String[var4];
               LoginPromptSupport.field_a = new int[var4];
@@ -118,7 +118,7 @@ final class LoginText {
               if (5 != ArchiveIndex.field_j) {
                 throw new IllegalArgumentException();
               }
-              var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, 122, MembershipAssetSupport.field_a, Js5Transport.field_h, MouseInputHandler.field_a);
+              var3_int = PasswordFieldPainter.wrapBalancedText(GameModeSelectScreen.field_e, 122, MembershipAssetSupport.field_a, Js5Transport.field_h, MouseInputHandler.field_a);
               var4 = 3 + var3_int;
               Js5NetworkRequest.field_I = new String[var4];
               LoginPromptSupport.field_a = new int[var4];
@@ -138,7 +138,7 @@ final class LoginText {
               CachedTextLayout.field_j[1] = 5;
             }
           } else {
-            var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, -101, MembershipAssetSupport.field_a, Js5Transport.field_h, SingleChildContainer.a(SpriteOffset.field_d, -63, new String[]{"<br><%0><br>"}));
+            var3_int = PasswordFieldPainter.wrapBalancedText(GameModeSelectScreen.field_e, -101, MembershipAssetSupport.field_a, Js5Transport.field_h, SingleChildContainer.formatPlaceholders(SpriteOffset.field_d, -63, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(GameModeSelectScreen.field_e[var5])) {
@@ -155,7 +155,7 @@ final class LoginText {
             SecondaryNodeHashTable.field_i = new String[-1 - var4 + var3_int];
             ArraySupport.copy(GameModeSelectScreen.field_e, 1 + var4, SecondaryNodeHashTable.field_i, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, guard ^ 71, MembershipAssetSupport.field_a, Js5Transport.field_h, SingleChildContainer.a(AccountFormStage.field_c, guard ^ -63, new String[]{"<br><%0><br>"}));
+            var3_int = PasswordFieldPainter.wrapBalancedText(GameModeSelectScreen.field_e, guard ^ 71, MembershipAssetSupport.field_a, Js5Transport.field_h, SingleChildContainer.formatPlaceholders(AccountFormStage.field_c, guard ^ -63, new String[]{"<br><%0><br>"}));
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(GameModeSelectScreen.field_e[var5])) {
                 continue;

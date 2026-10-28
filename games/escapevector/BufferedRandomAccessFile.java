@@ -519,7 +519,7 @@ final class BufferedRandomAccessFile {
             return stackIn_2_0;
           }
           NameAvailabilityResult var2 = new NameAvailabilityResult(false);
-          var2.field_c = suggestions;
+          var2.nameSuggestions = suggestions;
           NameAvailabilityResult stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

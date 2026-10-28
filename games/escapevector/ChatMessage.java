@@ -24,7 +24,7 @@ final class ChatMessage {
             return 1;
           }
           if (RasterSnapshot.field_g == 2 &&
-            AgeValidator.a(this.senderName, 0)) {
+            AgeValidator.isFriend(this.senderName, 0)) {
             return 1;
           }
           if (guard >= 40) {

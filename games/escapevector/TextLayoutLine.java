@@ -36,10 +36,10 @@ final class TextLayoutLine {
         return MeshRasterState.sineQ16[angle & 2047];
     }
 
-    final static void b(int param0, int param1) {
+    final static void installThemeObjectSprites(int guard, int theme) {
         int var10 = EscapeVector.obfuscationControl;
         try {
-          boolean stackIn_4_0 = !(param1 != 4);
+          boolean stackIn_4_0 = !(theme != 4);
           boolean var2_int = stackIn_4_0;
           if (NodeHashTableIterator.field_b == null) {
             return;
@@ -47,27 +47,27 @@ final class TextLayoutLine {
           if (null == AccountMessagePanel.field_M) {
             return;
           }
-          if (param1 < 0 ||
-            param1 >= 7) {
-            param1 = 0;
+          if (theme < 0 ||
+            theme >= 7) {
+            theme = 0;
           }
-          if (param1 == 5 ||
-            param1 == 6) {
-            param1 = 0;
+          if (theme == 5 ||
+            theme == 6) {
+            theme = 0;
           }
-          Sprite[] var3 = NodeHashTableIterator.field_b[param1];
+          Sprite[] var3 = NodeHashTableIterator.field_b[theme];
           if (var2_int) {
             var3 = ServerListNavigationSupport.field_a;
           }
-          if (param0 != 1) {
+          if (guard != 1) {
             TextLayoutLine.releaseStatics(98);
           }
-          Sprite[] var4 = AccountMessagePanel.field_M[param1];
+          Sprite[] var4 = AccountMessagePanel.field_M[theme];
           for (int var5 = 0; 3 > var5; var5++) {
             if (var3 == null) {
-              param1 = 0;
-              var3 = NodeHashTableIterator.field_b[param1];
-              var4 = AccountMessagePanel.field_M[param1];
+              theme = 0;
+              var3 = NodeHashTableIterator.field_b[theme];
+              var4 = AccountMessagePanel.field_M[theme];
             }
             Sprite var6 = var3[var5];
             int var7 = var5 + 14;
@@ -79,12 +79,12 @@ final class TextLayoutLine {
             Sprite var9 = var4[var5];
             StripedProgressBar.objectGlowSprites[var7] = var9;
           }
-          DualLinkNode.a(-1, param1);
+          DualLinkNode.initializeObjectSpriteSets(-1, theme);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "vl.B(" + param0 + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2), "vl.B(" + guard + ',' + theme + ')');
         }
     }
 
@@ -115,14 +115,14 @@ final class TextLayoutLine {
         this.insertionX = new int[1 + param2];
     }
 
-    final static int[] a(int param0, int param1, int param2, byte param3) {
+    final static int[] createSpacedPositions(int step, int offset, int count, byte guard) {
         int var6 = EscapeVector.obfuscationControl;
-        int[] var7 = new int[param2];
+        int[] var7 = new int[count];
         int[] var4 = var7;
-        for (int var5 = 0; var5 < param2; var5++) {
-          var7[var5] = (var5 + (param1 + 1)) * param0;
+        for (int var5 = 0; var5 < count; var5++) {
+          var7[var5] = (var5 + (offset + 1)) * step;
         }
-        if (param3 != -17) {
+        if (guard != -17) {
           field_f = (boolean[]) null;
         }
         return var4;

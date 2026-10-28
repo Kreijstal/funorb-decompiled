@@ -220,7 +220,7 @@ class EditableTextWidget extends TextButton {
         if (this.listener instanceof TextInputListener) {
           ((TextInputListener) (this.listener)).onSubmit(true, this);
           if (guard != 0) {
-            EditableTextWidget.a(-65, 47, 47);
+            EditableTextWidget.scaleScoreForMode(-65, 47, 47);
             return;
           }
           return;
@@ -228,7 +228,7 @@ class EditableTextWidget extends TextButton {
         if (guard == 0) {
           return;
         }
-        EditableTextWidget.a(-65, 47, 47);
+        EditableTextWidget.scaleScoreForMode(-65, 47, 47);
     }
 
     final void setText(String text, boolean suppressNotification, int guard) {
@@ -345,13 +345,13 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    final static Sprite a(int param0, int param1, ResourceArchive param2, byte param3) {
+    final static Sprite loadRgbSprite(int groupId, int fileId, ResourceArchive archive, byte guard) {
         String stackIn_9_2 = null;
         try {
-          if (param3 <= 3) {
+          if (guard <= 3) {
             EditableTextWidget.releaseStatics((byte) -115);
           }
-          if (ArchivePreloader.loadSpriteSheet(param2, 105, param0, param1)) {
+          if (ArchivePreloader.loadSpriteSheet(archive, 105, groupId, fileId)) {
             return AccountFormStage.buildRgbSpriteFromSheet((byte) 108);
           }
           return null;
@@ -359,13 +359,13 @@ class EditableTextWidget extends TextButton {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_8_0 = var4;
-          StringBuilder stackIn_8_1 = new StringBuilder().append("ul.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_8_1 = new StringBuilder().append("ul.T(").append(groupId).append(',').append(fileId).append(',');
+          if (archive == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -413,7 +413,7 @@ class EditableTextWidget extends TextButton {
         this.selectionAnchor = this.caretIndex;
     }
 
-    private final void m(int param0) {
+    private final void ensureCaretVisible(int guard) {
         int var8 = EscapeVector.obfuscationControl;
         if (!this.field_J) {
           this.field_n = 0;
@@ -433,7 +433,7 @@ class EditableTextWidget extends TextButton {
           this.field_v = 0;
           return;
         }
-        if (param0 != -22686) {
+        if (guard != -22686) {
           return;
         }
         int var7 = this.field_n + var3.characterX((byte) -79, this.caretIndex);
@@ -498,23 +498,23 @@ class EditableTextWidget extends TextButton {
         this.selectionAnchor = 46;
     }
 
-    final static int a(int param0, int param1, int param2) {
-        if (0 == param1) {
-          return param0;
+    final static int scaleScoreForMode(int value, int mode, int guard) {
+        if (0 == mode) {
+          return value;
         }
-        if (param1 == 1) {
-          return param0 / 2;
+        if (mode == 1) {
+          return value / 2;
         }
-        if (param1 == 2) {
-          param0 = ProgressQuery.ceilDivide(-110, 100, param0) * 100;
-          return param0;
+        if (mode == 2) {
+          value = ProgressQuery.ceilDivide(-110, 100, value) * 100;
+          return value;
         }
-        if (param2 < 24) {
+        if (guard < 24) {
           return 31;
         }
-        if (3 == param1) {
-          param0 = ProgressQuery.ceilDivide(-74, 100, param0) * 100;
-          return param0;
+        if (3 == mode) {
+          value = ProgressQuery.ceilDivide(-74, 100, value) * 100;
+          return value;
         }
         return 0;
     }
@@ -541,7 +541,7 @@ class EditableTextWidget extends TextButton {
           if (guard != -14472) {
             facePriorityCursors = (int[]) null;
           }
-          this.m(-22686);
+          this.ensureCaretVisible(-22686);
           if (this.field_t == 1) {
             if (this.painter instanceof WidgetTextLayout) {
               WidgetTextLayout var7 = (WidgetTextLayout) ((Object) this.painter);

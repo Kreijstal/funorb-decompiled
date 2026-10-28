@@ -54,13 +54,13 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static int b(int param0) {
+    final static int serviceJs5(int guard) {
         FullscreenFocusCanvas.field_e.serviceProviders((byte) 12);
-        if (param0 != -1021831775) {
+        if (guard != -1021831775) {
           field_b = (ShipHullGeometry) null;
         }
         if (!SelfDestructEffects.field_j.processNetwork(-3994)) {
-          return PasswordFieldPainter.f(param0 + 1021831755);
+          return PasswordFieldPainter.pollJs5Connection(guard + 1021831755);
         }
         return 0;
     }
@@ -76,7 +76,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           }
           int var4_int = archive.findGroupId(-1, groupName);
           int var5 = archive.findFileId(var4_int, fileName, true);
-          IndexedSprite[] stackIn_4_0 = TextHotspotRegion.a(var5, 255, archive, var4_int);
+          IndexedSprite[] stackIn_4_0 = TextHotspotRegion.loadIndexedSpriteSheet(var5, 255, archive, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

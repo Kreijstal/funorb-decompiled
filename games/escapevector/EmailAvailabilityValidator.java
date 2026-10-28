@@ -10,8 +10,8 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
     static AccountFormStage field_o;
     private String field_n;
 
-    final static String c(byte param0) {
-        if (param0 > -8) {
+    final static String pendingPolicyPage(byte guard) {
+        if (guard > -8) {
           EmailAvailabilityValidator.releaseStatics(7);
         }
         return MouseWheelInput.field_d;
@@ -21,7 +21,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         field_o = null;
         field_s = null;
         if (guard != 0) {
-          EmailAvailabilityValidator.c((byte) 98);
+          EmailAvailabilityValidator.pendingPolicyPage((byte) 98);
         }
         field_t = null;
         field_r = null;
@@ -47,7 +47,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!text.equals(this.field_n)) {
-            EmailAvailabilityRequest var3 = DisplayModeInfo.a(text, true);
+            EmailAvailabilityRequest var3 = DisplayModeInfo.requestEmailAvailability(text, true);
             if (!var3.isComplete(0)) {
               ValidationState stackIn_7_0 = AchievementFlagSupport.field_c;
               return stackIn_7_0;
@@ -103,110 +103,110 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static int a(int param0, int param1, int param2, CharSequence param3, byte[] param4, int param5) {
+    final static int encodeCp1252Range(int end, int outputOffset, int guard, CharSequence text, byte[] output, int start) {
         String stackIn_72_2 = null;
         String stackIn_75_2 = null;
         int var9 = EscapeVector.obfuscationControl;
         try {
-          int var6_int = -param5 + param0;
+          int var6_int = -start + end;
           int var7 = 0;
-          if (param2 != 19409) {
-            EmailAvailabilityValidator.c((byte) -94);
+          if (guard != 19409) {
+            EmailAvailabilityValidator.pendingPolicyPage((byte) -94);
           }
           while (var6_int > var7) {
             {
-              int var8 = param3.charAt(param5 + var7);
+              int var8 = text.charAt(start + var7);
               if ((var8 <= 0 ||
                 var8 >= 128) && (160 > var8 ||
                 var8 > 255)) {
                 switch (var8) {
                   case 8364:
-                    param4[var7 + param1] = (byte)-128;
+                    output[var7 + outputOffset] = (byte)-128;
                     break;
                   case 8218:
-                    param4[param1 + var7] = (byte)-126;
+                    output[outputOffset + var7] = (byte)-126;
                     break;
                   case 402:
-                    param4[var7 + param1] = (byte)-125;
+                    output[var7 + outputOffset] = (byte)-125;
                     break;
                   case 8222:
-                    param4[param1 + var7] = (byte)-124;
+                    output[outputOffset + var7] = (byte)-124;
                     break;
                   case 8230:
-                    param4[param1 + var7] = (byte)-123;
+                    output[outputOffset + var7] = (byte)-123;
                     break;
                   case 8224:
-                    param4[var7 + param1] = (byte)-122;
+                    output[var7 + outputOffset] = (byte)-122;
                     break;
                   case 8225:
-                    param4[var7 + param1] = (byte)-121;
+                    output[var7 + outputOffset] = (byte)-121;
                     break;
                   case 710:
-                    param4[var7 + param1] = (byte)-120;
+                    output[var7 + outputOffset] = (byte)-120;
                     break;
                   case 8240:
-                    param4[var7 + param1] = (byte)-119;
+                    output[var7 + outputOffset] = (byte)-119;
                     break;
                   case 352:
-                    param4[var7 + param1] = (byte)-118;
+                    output[var7 + outputOffset] = (byte)-118;
                     break;
                   case 8249:
-                    param4[param1 + var7] = (byte)-117;
+                    output[outputOffset + var7] = (byte)-117;
                     break;
                   case 338:
-                    param4[param1 + var7] = (byte)-116;
+                    output[outputOffset + var7] = (byte)-116;
                     break;
                   case 381:
-                    param4[param1 + var7] = (byte)-114;
+                    output[outputOffset + var7] = (byte)-114;
                     break;
                   case 8216:
-                    param4[param1 + var7] = (byte)-111;
+                    output[outputOffset + var7] = (byte)-111;
                     break;
                   case 8217:
-                    param4[param1 + var7] = (byte)-110;
+                    output[outputOffset + var7] = (byte)-110;
                     break;
                   case 8220:
-                    param4[var7 + param1] = (byte)-109;
+                    output[var7 + outputOffset] = (byte)-109;
                     break;
                   case 8221:
-                    param4[var7 + param1] = (byte)-108;
+                    output[var7 + outputOffset] = (byte)-108;
                     break;
                   case 8226:
-                    param4[var7 + param1] = (byte)-107;
+                    output[var7 + outputOffset] = (byte)-107;
                     break;
                   case 8211:
-                    param4[var7 + param1] = (byte)-106;
+                    output[var7 + outputOffset] = (byte)-106;
                     break;
                   case 8212:
-                    param4[param1 + var7] = (byte)-105;
+                    output[outputOffset + var7] = (byte)-105;
                     break;
                   case 732:
-                    param4[param1 + var7] = (byte)-104;
+                    output[outputOffset + var7] = (byte)-104;
                     break;
                   case 8482:
-                    param4[var7 + param1] = (byte)-103;
+                    output[var7 + outputOffset] = (byte)-103;
                     break;
                   case 353:
-                    param4[var7 + param1] = (byte)-102;
+                    output[var7 + outputOffset] = (byte)-102;
                     break;
                   case 8250:
-                    param4[param1 + var7] = (byte)-101;
+                    output[outputOffset + var7] = (byte)-101;
                     break;
                   case 339:
-                    param4[param1 + var7] = (byte)-100;
+                    output[outputOffset + var7] = (byte)-100;
                     break;
                   case 382:
-                    param4[var7 + param1] = (byte)-98;
+                    output[var7 + outputOffset] = (byte)-98;
                     break;
                   case 376:
-                    param4[var7 + param1] = (byte)-97;
+                    output[var7 + outputOffset] = (byte)-97;
                     break;
                   default:
-                    param4[var7 + param1] = (byte)63;
+                    output[var7 + outputOffset] = (byte)63;
                     break;
                 }
               } else {
-                param4[param1 + var7] = (byte)var8;
+                output[outputOffset + var7] = (byte)var8;
               }
             }
             var7++;
@@ -217,19 +217,19 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_71_0 = var6;
-          StringBuilder stackIn_71_1 = new StringBuilder().append("dg.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_71_1 = new StringBuilder().append("dg.H(").append(end).append(',').append(outputOffset).append(',').append(guard).append(',');
+          if (text == null) {
             stackIn_72_2 = "null";
           } else {
             stackIn_72_2 = "{...}";
           }
           StringBuilder stackIn_74_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',');
-          if (param4 == null) {
+          if (output == null) {
             stackIn_75_2 = "null";
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(start).append(')').toString());
         }
     }
 

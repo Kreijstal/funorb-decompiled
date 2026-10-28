@@ -1640,7 +1640,7 @@ final class DynamicTerrainRenderer {
           int var10 = param1.length;
           int var11 = ByteArrayPoolSupport.totalButtonTextWidth(param4, (byte) -121, param5);
           int var12 = DynamicTerrainRenderer.calculateButtonGap(1, var10, param0, var11);
-          int var13 = PcmResampler.a(var11, (byte) 122, param0, var10, var12);
+          int var13 = PcmResampler.centeredButtonStart(var11, (byte) 122, param0, var10, var12);
           LegacyButton[] var14 = new LegacyButton[var10];
           int var15 = 0;
           if (param7) {

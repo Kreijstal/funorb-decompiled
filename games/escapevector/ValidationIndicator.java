@@ -163,35 +163,35 @@ final class ValidationIndicator extends TextButton {
         RockBuster.field_j.drawAdditive(var5Lifetime1 - var16.fullWidth, -var16.fullHeight + var6Lifetime1, 256);
     }
 
-    final static void a(int param0, int param1, byte param2, String param3) {
+    final static void drawOutlinedRightText(int y, int x, byte guard, String text) {
         try {
-          ByteStorage.gameFont.drawRightAlpha(param3, param1 - 1, -1 + param0, 0, -1, 64);
-          ByteStorage.gameFont.drawRightAlpha(param3, param1 + 1, -1 + param0, 0, -1, 64);
-          ByteStorage.gameFont.drawRightAlpha(param3, -1 + param1, param0 + 1, 0, -1, 64);
-          ByteStorage.gameFont.drawRightAlpha(param3, 1 + param1, param0 + 1, 0, -1, 64);
-          ByteStorage.gameFont.drawRight(param3, param1, param0, 16777215, -1);
-          int var4_int = -103 / ((param2 - 7) / 46);
+          ByteStorage.gameFont.drawRightAlpha(text, x - 1, -1 + y, 0, -1, 64);
+          ByteStorage.gameFont.drawRightAlpha(text, x + 1, -1 + y, 0, -1, 64);
+          ByteStorage.gameFont.drawRightAlpha(text, -1 + x, y + 1, 0, -1, 64);
+          ByteStorage.gameFont.drawRightAlpha(text, 1 + x, y + 1, 0, -1, 64);
+          ByteStorage.gameFont.drawRight(text, x, y, 16777215, -1);
+          int var4_int = -103 / ((guard - 7) / 46);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oj.D(" + y + ',' + x + ',' + guard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int[] k(int param0) {
-        if (param0 != 64) {
+    final static int[] progressWords(int guard) {
+        if (guard != 64) {
           return (int[]) null;
         }
         if (null != SocketJs5Transport.field_r) {
-          return SocketJs5Transport.field_r.progressWords(param0 + 31240);
+          return SocketJs5Transport.field_r.progressWords(guard + 31240);
         }
         return null;
     }
 
-    final static void a(byte param0) {
+    final static void refreshLegacyMenu(byte guard) {
         if (!LoginHandshakeSupport.isLegacyMenuVisible((byte) 93)) {
           return;
         }
         LoginText.buildLegacyMenu(4, 0, false);
-        if (param0 < 79) {
+        if (guard < 79) {
           field_Q = (Sprite) null;
         }
     }

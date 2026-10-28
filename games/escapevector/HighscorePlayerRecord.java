@@ -21,9 +21,9 @@ final class HighscorePlayerRecord {
           GradientOutlineTextPainter.clearSharedKeyHandler(2);
           MatchingTextValidator.releaseMouseHandler(true);
           KeyboardStateSupport.closeCacheServices(-16802);
-          if (ClientException.a(-31879)) {
+          if (ClientException.hasResponseConnection(-31879)) {
             QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(1, true);
-            ClientException.a(0, 30785);
+            ClientException.flushAccountPackets(0, 30785);
             ConnectionSupport.closeTransport(16);
             return;
           }
@@ -33,12 +33,12 @@ final class HighscorePlayerRecord {
         GradientOutlineTextPainter.clearSharedKeyHandler(2);
         MatchingTextValidator.releaseMouseHandler(true);
         KeyboardStateSupport.closeCacheServices(-16802);
-        if (!ClientException.a(-31879)) {
+        if (!ClientException.hasResponseConnection(-31879)) {
           ConnectionSupport.closeTransport(16);
           return;
         }
         QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(1, true);
-        ClientException.a(0, 30785);
+        ClientException.flushAccountPackets(0, 30785);
         ConnectionSupport.closeTransport(16);
     }
 
@@ -80,7 +80,7 @@ final class HighscorePlayerRecord {
         try {
           Sprite[] var16 = (Sprite[]) null;
           LegacyMenuThemeSupport.configureFromSprites(param8, param10, param1, param5, param11, 480, 0, param4, param3, MenuTitleSupport.field_e, param12, ModeProgressSupport.field_d, param2, param7, (Sprite[]) null, 2, param14, 0, ValidatedTextWidget.field_X, param6, param0);
-          DebouncedValidator.a(false, param9);
+          DebouncedValidator.requestFullscreen(false, param9);
           if (param13 > -5) {
             field_g = (EmailAvailabilityRequest) null;
           }

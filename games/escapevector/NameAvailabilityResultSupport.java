@@ -12,18 +12,18 @@ final class NameAvailabilityResultSupport {
 
     final static void chooseGuestSession(int action) {
         ImageProducerRasterBuffer.showLoadingProgressDialog(action ^ 36);
-        WhirlpoolHasher.a(action, 30);
+        WhirlpoolHasher.setAccountAction(action, 30);
     }
 
     final static NameAvailabilityResult createTextResponse(String message, int responseCode, int guard) {
         String stackIn_7_2 = null;
         try {
           NameAvailabilityResult var3 = new NameAvailabilityResult(false);
-          var3.field_g = responseCode;
+          var3.status = responseCode;
           if (guard != 4) {
             field_g = (String) null;
           }
-          var3.field_f = message;
+          var3.message = message;
           NameAvailabilityResult stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

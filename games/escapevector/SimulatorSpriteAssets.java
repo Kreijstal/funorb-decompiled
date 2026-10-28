@@ -26,8 +26,8 @@ final class SimulatorSpriteAssets {
 
     final boolean load(int guard) {
         if (null == this.sprites) {
-          Sprite[] var2 = EmailValidationError.a(false, MembershipPromotionSupport.field_c);
-          Sprite[] var3 = EmailValidationError.a(false, HudMessage.field_k);
+          Sprite[] var2 = EmailValidationError.spritesFromTasks(false, MembershipPromotionSupport.field_c);
+          Sprite[] var3 = EmailValidationError.spritesFromTasks(false, HudMessage.field_k);
           if (var2 != null &&
             var3 != null) {
             this.sprites = this.prepareMaskedSprites((byte) -28, var2, var3);

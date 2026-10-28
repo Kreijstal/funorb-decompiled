@@ -101,7 +101,7 @@ final class LevelSelectScreen {
             var10 = new int[]{1};
           }
           int var11 = var9.length;
-          int[] var16 = TextLayoutLine.a(revealInterval, firstRevealTick, var11, (byte) -17);
+          int[] var16 = TextLayoutLine.createSpacedPositions(revealInterval, firstRevealTick, var11, (byte) -17);
           this.footerButtons = DynamicTerrainRenderer.createButtonRow(var8, var5, var7, var6, font, var9, var10, false, var16);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ig.S(" + guard + ',' + firstRevealTick + ',' + revealInterval + ',' + (font != null ? "{...}" : "null") + ')');
@@ -136,7 +136,7 @@ final class LevelSelectScreen {
           int var9 = 89;
           int var10 = 402;
           int var11 = var6.length;
-          int[] var17 = TextLayoutLine.a(revealInterval, firstRevealTick, var11, (byte) -17);
+          int[] var17 = TextLayoutLine.createSpacedPositions(revealInterval, firstRevealTick, var11, (byte) -17);
           this.introTutorialButtons = DynamicTerrainRenderer.createButtonRow(var10, var13, var9, var8, font, var6, var7, false, var17);
           if (guard != -9079) {
             this.introTutorialButtons = (LegacyButton[]) null;
@@ -214,7 +214,7 @@ final class LevelSelectScreen {
         if (this.introductionAction != var3) {
           return false;
         }
-        LevelObject.a(this.gameMode, (byte) -128);
+        LevelObject.enqueueCampaignIntroduction(this.gameMode, (byte) -128);
         LoginHandshakeSupport.field_d = 0;
         LaserGateSpan.field_k = 0;
         GameplaySession.resetSessionMenuState((byte) 30);
@@ -579,7 +579,7 @@ final class LevelSelectScreen {
         this.assignActionCodes(-30234);
         int var4 = GameProgressSupport.field_c.unlockedLevelIndex(29386, this.gameMode);
         if (!var2) {
-          this.pathMarkers = AccountNoticeDialog.c(10, var4, this.gameMode);
+          this.pathMarkers = AccountNoticeDialog.createPathMarkers(10, var4, this.gameMode);
         }
         int var5 = 10;
         this.createLevelButtons((byte) 51, var3, var5);
@@ -589,11 +589,11 @@ final class LevelSelectScreen {
         }
         int var6Lifetime1 = 5;
         this.createFooterButtons((byte) -12, var6Lifetime1, var5, var3);
-        IndexedSpriteState.a(this.levelButtons, 0);
+        IndexedSpriteState.setLegacyButtonColors(this.levelButtons, 0);
         if (!var2) {
-          IndexedSpriteState.a(this.introTutorialButtons, 0);
+          IndexedSpriteState.setLegacyButtonColors(this.introTutorialButtons, 0);
         }
-        IndexedSpriteState.a(this.footerButtons, 0);
+        IndexedSpriteState.setLegacyButtonColors(this.footerButtons, 0);
         if (guard <= 8) {
           BinaryBitmapFont var7 = (BinaryBitmapFont) null;
           this.createLevelButtons((byte) -115, (BinaryBitmapFont) null, 37);
@@ -678,7 +678,7 @@ final class LevelSelectScreen {
             } else if (this.tutorialAction == var3) {
               var6.selectFromKeyboard(false, this.backAction);
             } else if (var3 != this.introductionAction) {
-              var6.selectFromKeyboard(false, LoginForm.a(this.gameMode, (byte) 121));
+              var6.selectFromKeyboard(false, LoginForm.initialLevelSelection(this.gameMode, (byte) 121));
             } else {
               var6.selectFromKeyboard(false, this.backAction);
             }
@@ -709,7 +709,7 @@ final class LevelSelectScreen {
               this.tutorialAction >= 0) {
               var6.selectFromKeyboard(false, this.tutorialAction);
             } else if (this.introductionAction != var3) {
-              var6.selectFromKeyboard(false, LoginForm.a(this.gameMode, (byte) 121));
+              var6.selectFromKeyboard(false, LoginForm.initialLevelSelection(this.gameMode, (byte) 121));
             } else {
               var6.selectFromKeyboard(false, 0);
             }

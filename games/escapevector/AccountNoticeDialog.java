@@ -18,7 +18,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         RuntimeException var6 = null;
         try {
           if (guard != 1) {
-            AccountNoticeDialog.c(-26, 47, -12);
+            AccountNoticeDialog.createPathMarkers(-26, 47, -12);
           }
           if (button == this.closeButton) {
             this.closeDialog(127);
@@ -38,7 +38,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         }
     }
 
-    final static AnimatedPathMarker[] c(int param0, int param1, int param2) {
+    final static AnimatedPathMarker[] createPathMarkers(int guard, int lastLevel, int mode) {
         int var12 = 0;
         int[] var19 = null;
         AnimatedPathMarker var14 = null;
@@ -46,16 +46,16 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         int var3 = 12;
         int[] var4 = new int[]{3170352, 6332512};
         int[] var5 = new int[]{6340704, 16777215};
-        if (param0 != 10) {
+        if (guard != 10) {
           field_bb = (int[]) null;
         }
         int var6 = 16777215;
         int var7 = 1;
         BinaryBitmapFont var8 = ByteStorage.gameFont;
-        int[][] var18 = ValidatedTextWidget.field_U[param2];
-        int var10 = SpriteFactorySupport.levelCount(false, param2);
-        if (1 + param1 < var10) {
-          var10 = 1 + param1;
+        int[][] var18 = ValidatedTextWidget.field_U[mode];
+        int var10 = SpriteFactorySupport.levelCount(false, mode);
+        if (1 + lastLevel < var10) {
+          var10 = 1 + lastLevel;
         }
         AnimatedPathMarker[] var11 = new AnimatedPathMarker[var10];
         for (var12 = 0; var12 < var10; var12++) {
@@ -84,7 +84,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
             if (param1 == ThreeSliceButtonPainter.field_A) {
               this.height = this.height + 10;
               var3 = LegacyWidgetStyle.field_K;
-              if (ModalStack.a(false)) {
+              if (ModalStack.canResizeViewport(false)) {
                 var3 = RegistrationFlowSupport.field_b;
                 this.height = this.height + 20;
               }
@@ -129,7 +129,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         field_cb = null;
         field_db = (long[][]) null;
         if (guard != -23008) {
-          AccountNoticeDialog.c(105, -33, -63);
+          AccountNoticeDialog.createPathMarkers(105, -33, -63);
         }
         field_Z = null;
         field_fb = null;
@@ -189,7 +189,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         }
         this.open = false;
         if (guard <= 120) {
-          AccountNoticeDialog.c(-66, -5, 40);
+          AccountNoticeDialog.createPathMarkers(-66, -5, 40);
         }
     }
 

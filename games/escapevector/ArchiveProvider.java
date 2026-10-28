@@ -21,21 +21,21 @@ abstract class ArchiveProvider {
 
     abstract int groupProgress(int guard, int groupId);
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] createBeveledFrameSprites(int darkColor, int lightColor, int edgeIndex, int tileSize, int fillColor) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
-        Sprite dupTemp$0 = SpriteDecodeSupport.solidSprite(param0, (byte) -87, param3);
+        Sprite dupTemp$0 = SpriteDecodeSupport.solidSprite(darkColor, (byte) -87, tileSize);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
-        var5[param2] = dupTemp$0;
+        var5[edgeIndex] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = SpriteDecodeSupport.solidSprite(param1, (byte) 104, param3);
+        Sprite dupTemp$1 = SpriteDecodeSupport.solidSprite(lightColor, (byte) 104, tileSize);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        if (param4 != 0) {
-          var6[4] = SpriteDecodeSupport.solidSprite(param4, (byte) 97, 64);
+        if (fillColor != 0) {
+          var6[4] = SpriteDecodeSupport.solidSprite(fillColor, (byte) 97, 64);
         }
         return var5;
     }

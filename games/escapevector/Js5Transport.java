@@ -29,20 +29,20 @@ abstract class Js5Transport {
 
     final int urgentCount(boolean guard) {
         if (guard) {
-          return this.urgentPending.c(0) + this.urgentInFlight.c(0);
+          return this.urgentPending.size(0) + this.urgentInFlight.size(0);
         }
         this.close(-59);
-        return this.urgentPending.c(0) + this.urgentInFlight.c(0);
+        return this.urgentPending.size(0) + this.urgentInFlight.size(0);
     }
 
     abstract void close(int guard);
 
     final int prefetchCount(byte guard) {
         if (guard == 88) {
-          return this.prefetchPending.c(0) + this.prefetchInFlight.c(0);
+          return this.prefetchPending.size(0) + this.prefetchInFlight.size(0);
         }
         this.outgoingControl = (PacketBuffer) null;
-        return this.prefetchPending.c(0) + this.prefetchInFlight.c(0);
+        return this.prefetchPending.size(0) + this.prefetchInFlight.size(0);
     }
 
     public static void releaseStatics(int guard) {

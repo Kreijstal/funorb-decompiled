@@ -4,7 +4,7 @@
 final class IntegerParseSupport {
     static String field_f;
     static String field_a;
-    static ResourceArchive field_e;
+    static ResourceArchive gameTextArchive;
     static int field_d;
     static boolean[] field_b;
     static boolean field_c;
@@ -15,7 +15,7 @@ final class IntegerParseSupport {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
           IntegerParseSupport.decodePackedMesh(10, (CipherPacketBuffer) null);
         }
-        field_e = null;
+        gameTextArchive = null;
         field_a = null;
         field_b = null;
     }

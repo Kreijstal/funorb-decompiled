@@ -19,7 +19,7 @@ final class DisplayModeInfo {
         field_e = null;
     }
 
-    final static void a(byte param0) {
+    final static void decodeHighscoreResponse(byte guard) {
         int var3 = 0;
         int var26 = EscapeVector.obfuscationControl;
         try {
@@ -142,23 +142,23 @@ final class DisplayModeInfo {
             GameModeSelectScreen.reportClientError(false, "HS1: " + LoginStage.formatPacketDiagnostic((byte) 115), (Throwable) null);
             ConnectionSupport.closeTransport(16);
           }
-          int var3Lifetime1 = -111 / ((-41 - param0) / 43);
+          int var3Lifetime1 = -111 / ((-41 - guard) / 43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "ja.C(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "ja.C(" + guard + ')');
         }
     }
 
-    final static EmailAvailabilityRequest a(String param0, boolean param1) {
+    final static EmailAvailabilityRequest requestEmailAvailability(String email, boolean guard) {
         String stackIn_12_2 = null;
         try {
           if (HighscorePlayerRecord.field_g.isComplete(0) &&
-            !param0.equals(HighscorePlayerRecord.field_g.email(-100))) {
-            HighscorePlayerRecord.field_g = RasterBuffer.createEmailAvailabilityRequest((byte) 83, param0);
+            !email.equals(HighscorePlayerRecord.field_g.email(-100))) {
+            HighscorePlayerRecord.field_g = RasterBuffer.createEmailAvailabilityRequest((byte) 83, email);
           }
-          if (param1) {
+          if (guard) {
             EmailAvailabilityRequest stackIn_8_0 = HighscorePlayerRecord.field_g;
             return stackIn_8_0;
           }
@@ -169,12 +169,12 @@ final class DisplayModeInfo {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_11_0 = var2;
           StringBuilder stackIn_11_1 = new StringBuilder().append("ja.A(");
-          if (param0 == null) {
+          if (email == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(')').toString());
         }
     }
 

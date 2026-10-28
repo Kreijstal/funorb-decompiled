@@ -85,38 +85,38 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final static java.awt.Frame a(byte param0, int param1, int param2, SystemTaskService param3, int param4, int param5) {
+    final static java.awt.Frame enterFullscreen(byte guard, int width, int height, SystemTaskService taskService, int bitDepth, int refreshRate) {
         String stackIn_45_2 = null;
         int var9 = EscapeVector.obfuscationControl;
         try {
-          if (!param3.supportsFullscreen(0)) {
+          if (!taskService.supportsFullscreen(0)) {
             return null;
           }
-          if (param4 == 0) {
-            DisplayModeInfo[] var10 = GzipDecoder.enumerateDisplayModes(6629, param3);
+          if (bitDepth == 0) {
+            DisplayModeInfo[] var10 = GzipDecoder.enumerateDisplayModes(6629, taskService);
             DisplayModeInfo[] var6 = var10;
             if (var6 == null) {
               return null;
             }
             boolean var7_int = false;
             for (int var8 = 0; var8 < var10.length; var8++) {
-              if (var10[var8].width == param1 &&
-                param2 == var10[var8].height && ((0 == param5 ||
-                var10[var8].refreshRate == param5) &&
+              if (var10[var8].width == width &&
+                height == var10[var8].height && ((0 == refreshRate ||
+                var10[var8].refreshRate == refreshRate) &&
                 (!var7_int ||
-                !(param4 >= var10[var8].bitDepth)))) {
+                !(bitDepth >= var10[var8].bitDepth)))) {
                 var7_int = true;
-                param4 = var10[var8].bitDepth;
+                bitDepth = var10[var8].bitDepth;
               }
             }
             if (!var7_int) {
               return null;
             }
           }
-          if (param0 != 93) {
+          if (guard != 93) {
             field_a = (PcmSample) null;
           }
-          SystemTask var11 = param3.enterFullscreen(-103, param4, param2, param5, param1);
+          SystemTask var11 = taskService.enterFullscreen(-103, bitDepth, height, refreshRate, width);
           while (var11.status == 0) {
             AchievementTracker.sleepMillis((byte) -31, 10L);
           }
@@ -128,20 +128,20 @@ final class IntrusiveNodeHashTable {
             java.awt.Frame stackIn_41_0 = var7;
             return stackIn_41_0;
           }
-          FullscreenFocusCanvas.exitFullscreenAndDispose(param3, var7, false);
+          FullscreenFocusCanvas.exitFullscreenAndDispose(taskService, var7, false);
           Object stackIn_39_0 = null;
           return (java.awt.Frame) (stackIn_39_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6_ref = decompiledCaughtException;
           RuntimeException stackIn_44_0 = var6_ref;
-          StringBuilder stackIn_44_1 = new StringBuilder().append("ib.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_44_1 = new StringBuilder().append("ib.A(").append(guard).append(',').append(width).append(',').append(height).append(',');
+          if (taskService == null) {
             stackIn_45_2 = "null";
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(bitDepth).append(',').append(refreshRate).append(')').toString());
         }
     }
 

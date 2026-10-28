@@ -17,38 +17,38 @@ final class EmailAvailabilityRequest {
         this.complete = true;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isExtendedAccountNameCharacter(char character, int guard) {
         int var5 = EscapeVector.obfuscationControl;
         try {
-          if (Character.isISOControl(param0)) {
+          if (Character.isISOControl(character)) {
             return false;
           }
-          if (TextWidgetPainter.isAsciiAlphanumeric(true, param0)) {
+          if (TextWidgetPainter.isAsciiAlphanumeric(true, character)) {
             return true;
           }
           char[] var6 = MenuTitleRenderSupport.field_a;
           char[] var2 = var6;
           for (int var3 = 0; var6.length > var3; var3++) {
             int var4 = var6[var3];
-            if (~var4 == ~param0) {
+            if (~var4 == ~character) {
               return true;
             }
           }
           char[] var2Lifetime1 = AccountRequestDialog.field_nb;
           for (int var3Lifetime1 = 0; var2Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
             int var4Lifetime1 = var2Lifetime1[var3Lifetime1];
-            if (var4Lifetime1 == param0) {
+            if (var4Lifetime1 == character) {
               return true;
             }
           }
-          if (param1 == -11217) {
+          if (guard == -11217) {
             return false;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "d.E(" + param0 + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var2_ref), "d.E(" + character + ',' + guard + ')');
         }
     }
 

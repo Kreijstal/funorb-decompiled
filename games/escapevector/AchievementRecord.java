@@ -47,12 +47,12 @@ final class AchievementRecord extends IntrusiveNode {
         return true;
     }
 
-    final static void a(int param0, String param1) {
+    final static void requestPolicyPage(int action, String page) {
         try {
-          MouseWheelInput.field_d = param1;
-          WhirlpoolHasher.a(param0, 39);
+          MouseWheelInput.field_d = page;
+          WhirlpoolHasher.setAccountAction(action, 39);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "qd.D(" + action + ',' + (page != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,29 +63,29 @@ final class AchievementRecord extends IntrusiveNode {
         field_n = null;
     }
 
-    final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
+    final static String chooseAlternateClickPrompt(boolean achievements, boolean progress, byte guard, boolean score) {
         int var4 = 0;
-        if (param2 != -8) {
+        if (guard != -8) {
           field_l = false;
         }
-        if (param0) {
+        if (achievements) {
           var4 += 4;
         }
-        if (param3) {
+        if (score) {
           var4 += 2;
         }
-        if (!param1) {
+        if (!progress) {
           return NineSliceFrame.field_f[var4];
         }
         var4++;
         return NineSliceFrame.field_f[var4];
     }
 
-    final static void a(boolean param0) {
+    final static void handleLoginSuccess(boolean guard) {
         int var1;
         int var2 = EscapeVector.obfuscationControl;
         AccountPanelInputSupport.field_b = null;
-        if (param0) {
+        if (guard) {
           SavedDataQuery.field_i = false;
           if (DialWidget.field_H) {
             SavedDataRequestSupport.requestDialog.showConnectionRestoredMessage(94);
@@ -96,7 +96,7 @@ final class AchievementRecord extends IntrusiveNode {
             if (var1 == 1) {
               AccountPanelInputSupport.field_b = MeshProjectionSupport.field_a;
             } else {
-              AccountPanelInputSupport.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
+              AccountPanelInputSupport.field_b = SingleChildContainer.formatPlaceholders(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }
             AccountPanelInputSupport.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) AccountPanelInputSupport.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }
@@ -114,7 +114,7 @@ final class AchievementRecord extends IntrusiveNode {
             if (var1 == 1) {
               AccountPanelInputSupport.field_b = MeshProjectionSupport.field_a;
             } else {
-              AccountPanelInputSupport.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
+              AccountPanelInputSupport.field_b = SingleChildContainer.formatPlaceholders(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }
             AccountPanelInputSupport.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) AccountPanelInputSupport.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }

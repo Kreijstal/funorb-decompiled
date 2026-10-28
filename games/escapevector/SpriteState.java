@@ -16,16 +16,16 @@ abstract class SpriteState extends DualLinkNode {
 
     abstract void drawRotatedScaled(int pivotXQ4, int pivotYQ4, int destinationXQ4, int destinationYQ4, int angle65536, int scaleQ12);
 
-    final static void b(int param0, int param1) {
-        LoginMethod.field_a = LegacyMenuState.updateServerMessages[param0];
-        if (param1 == 15) {
-          AlphaContainer.field_H = SpriteStrip.field_i[param0];
-          HighscoreTable.field_g = LoginPromptSupport.field_c[param0];
+    final static void selectLanguageLoadingLabels(int language, int guard) {
+        LoginMethod.field_a = LegacyMenuState.updateServerMessages[language];
+        if (guard == 15) {
+          AlphaContainer.field_H = SpriteStrip.field_i[language];
+          HighscoreTable.field_g = LoginPromptSupport.field_c[language];
           return;
         }
         field_y = (NameAvailabilityResult) null;
-        AlphaContainer.field_H = SpriteStrip.field_i[param0];
-        HighscoreTable.field_g = LoginPromptSupport.field_c[param0];
+        AlphaContainer.field_H = SpriteStrip.field_i[language];
+        HighscoreTable.field_g = LoginPromptSupport.field_c[language];
     }
 
     final static void pollMouseState(int guard) {
@@ -42,7 +42,7 @@ abstract class SpriteState extends DualLinkNode {
           SessionCounterState.field_c = LoginCredentialType.pendingClickX;
           LoginDialog.field_ob = PcmResampler.pendingClickY;
           if (guard != -3657) {
-            SpriteState.b(30, 39);
+            SpriteState.selectLanguageLoadingLabels(30, 39);
           }
           SocketConnector.pendingClickButton = 0;
         }
@@ -60,15 +60,15 @@ abstract class SpriteState extends DualLinkNode {
         field_w = null;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void showAchievementsScreen(int guard, boolean pointerDriven) {
         RegistrationFlowSupport.field_a = true;
         SessionMenuSupport.field_b = new AchievementsScreen();
-        int var2 = -121 / ((param0 + 63) / 34);
+        int var2 = -121 / ((guard + 63) / 34);
         int var3 = SessionMenuSupport.field_b.actionCount((byte) -73);
         HighscorePlayerRecord.field_d = new MenuInputState(var3);
         int var4 = SessionMenuSupport.field_b.defaultActionId(5201);
         int var5 = SessionMenuSupport.field_b.hitTest(-3, GzipDecoder.field_d, UiContainer.field_y);
-        HighscorePlayerRecord.field_d.initializeSelection(95, param1, var5, var4);
+        HighscorePlayerRecord.field_d.initializeSelection(95, pointerDriven, var5, var4);
     }
 
     final void drawCenteredRotatedScaled(int centerX, byte guard, int scaleQ12, int angle65536, int centerY) {

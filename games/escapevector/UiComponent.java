@@ -419,7 +419,7 @@ class UiComponent extends IntrusiveNode {
           }
           break;
         }
-        String var5 = TickClock.a((byte) 46);
+        String var5 = TickClock.visibleTooltip((byte) 46);
         if (var5 != null) {
           AchievementThresholdRule.field_g.drawTooltip((byte) -44, var5, DraggableWidget.field_O, AchievementDefinition.field_g);
         }
@@ -527,7 +527,7 @@ class UiComponent extends IntrusiveNode {
           field_w = null;
           return;
         }
-        UiComponent.g(80);
+        UiComponent.hasInputFocus(80);
         field_r = null;
         field_m = null;
         field_h = null;
@@ -774,11 +774,11 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final static boolean g(int param0) {
-        if (param0 != 11187) {
+    final static boolean hasInputFocus(int guard) {
+        if (guard != 11187) {
           return false;
         }
-        return IsaacRandom.field_d == null ? ObjectSpriteSet.field_b : true;
+        return IsaacRandom.field_d == null ? ObjectSpriteSet.canvasFocused : true;
     }
 
     protected UiComponent() {

@@ -16,7 +16,7 @@ final class AccountOverlayController {
     final static void updateAccountOverlay(int guard) {
         int var2 = EscapeVector.obfuscationControl;
         try {
-          if (!IntrusiveNode.b(12)) {
+          if (!IntrusiveNode.hasAccountOverlay(12)) {
             if (null != IsaacRandom.field_d &&
               IsaacRandom.field_d.focusLost) {
               DisplayAndRatingSupport.exitFullscreen(-25123);

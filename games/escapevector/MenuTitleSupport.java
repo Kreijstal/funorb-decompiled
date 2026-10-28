@@ -10,7 +10,7 @@ final class MenuTitleSupport {
 
     final static void updateTitleBanner(int guard) {
         int var4 = EscapeVector.obfuscationControl;
-        DialogueScreen var1 = DropTargetWidget.f((byte) -49);
+        DialogueScreen var1 = DropTargetWidget.firstDialogue((byte) -49);
         if (guard >= 60) {
           if (null != BoundedRandomAccessFile.activeSession) {
             LaserGateSpan.field_k = 0;

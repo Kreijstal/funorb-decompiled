@@ -19,28 +19,28 @@ final class NanoTickClock extends TickClock {
     static Sprite field_d;
     static int field_j;
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, SystemTaskService param5, int param6, boolean param7, byte param8, int param9, long param10, String param11, int param12, int param13) {
+    final static void initializeAccountTransport(int outputCapacity, int inputCapacity, int serverNumber, boolean member, int handshakeValue, SystemTaskService taskService, int gameCrc, boolean option, byte guard, int primaryPort, long instanceId, String serverHost, int language, int secondaryPort) {
         try {
           String stackIn_16_2 = null;
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            QuickChatDynamicCommand.incomingPackets = new CipherPacketBuffer(param1);
-            QuickChatDynamicCommand.outgoingPackets = new CipherPacketBuffer(param0);
-            if (param8 != 84) {
+            QuickChatDynamicCommand.incomingPackets = new CipherPacketBuffer(inputCapacity);
+            QuickChatDynamicCommand.outgoingPackets = new CipherPacketBuffer(outputCapacity);
+            if (guard != 84) {
               NanoTickClock.releaseStatics(-106);
             }
-            MouseWheelInput.field_c = param5;
-            KeyCodeSupport.field_b = param7;
-            IntrusiveDeque.field_h = param11;
-            StringNode.field_i = param13;
-            StripedProgressBar.field_L = param6;
-            BitCountSupport.field_d = param3;
-            ThreeSliceButtonPainter.field_q = param10;
-            BitCountSupport.field_b = param9;
-            DropTargetWidget.field_D = param4;
-            KeyboardStateSupport.field_b = param12;
-            SpaceCompactionSupport.field_a = param2;
+            MouseWheelInput.field_c = taskService;
+            KeyCodeSupport.field_b = option;
+            IntrusiveDeque.field_h = serverHost;
+            StringNode.field_i = secondaryPort;
+            StripedProgressBar.field_L = gameCrc;
+            BitCountSupport.field_d = member;
+            ThreeSliceButtonPainter.field_q = instanceId;
+            BitCountSupport.field_b = primaryPort;
+            DropTargetWidget.field_D = handshakeValue;
+            KeyboardStateSupport.field_b = language;
+            SpaceCompactionSupport.field_a = serverNumber;
             if (MouseWheelInput.field_c.randomFile == null) {
               return;
             }
@@ -56,19 +56,19 @@ final class NanoTickClock extends TickClock {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var15_ref = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_15_0 = var15_ref;
-            StringBuilder stackIn_15_1 = new StringBuilder().append("qf.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            if (param5 == null) {
+            StringBuilder stackIn_15_1 = new StringBuilder().append("qf.K(").append(outputCapacity).append(',').append(inputCapacity).append(',').append(serverNumber).append(',').append(member).append(',').append(handshakeValue).append(',');
+            if (taskService == null) {
               stackIn_16_2 = "null";
             } else {
               stackIn_16_2 = "{...}";
             }
-            StringBuilder stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
-            if (param11 == null) {
+            StringBuilder stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(gameCrc).append(',').append(option).append(',').append(guard).append(',').append(primaryPort).append(',').append(instanceId).append(',');
+            if (serverHost == null) {
               stackIn_19_2 = "null";
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(language).append(',').append(secondaryPort).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

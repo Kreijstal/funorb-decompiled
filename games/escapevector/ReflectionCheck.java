@@ -26,9 +26,9 @@ final class ReflectionCheck extends IntrusiveNode {
         return new String(var7);
     }
 
-    final static void d(byte param0) {
-        if (param0 >= -112) {
-          ReflectionCheck.a(81, (byte) 59);
+    final static void refreshHighscoresScreen(byte guard) {
+        if (guard >= -112) {
+          ReflectionCheck.addSessionCounterOffset(81, (byte) 59);
           boolean var1 = (MenuTitleSupport.isPointerDriven((byte) 71));
           if (CanvasRenderSupport.field_a == null) {
             SpriteArchiveSupport.showHighscoresScreen((var1), -1230, false);
@@ -55,16 +55,16 @@ final class ReflectionCheck extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, byte param1) {
-        if (param1 == 44) {
+    final static void addSessionCounterOffset(int offset, byte guard) {
+        if (guard == 44) {
           if (SocketJs5Transport.field_r != null) {
-            SocketJs5Transport.field_r.addOffset(-1, param0);
+            SocketJs5Transport.field_r.addOffset(-1, offset);
           }
           return;
         }
         field_n = -42;
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.addOffset(-1, param0);
+          SocketJs5Transport.field_r.addOffset(-1, offset);
         }
     }
 

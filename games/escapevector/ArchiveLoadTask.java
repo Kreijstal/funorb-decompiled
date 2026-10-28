@@ -21,11 +21,11 @@ final class ArchiveLoadTask {
         field_g = null;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void showMainMenu(boolean pointerDriven, int guard) {
         HighscorePlayerRecord.field_d = null;
         LoginHandshakeSupport.field_d = 0;
-        int var2 = -17 % ((-17 - param1) / 39);
-        AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, param0);
+        int var2 = -17 % ((-17 - guard) / 39);
+        AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, pointerDriven);
         ChatMessage.clearFrameOffsets((byte) -123);
     }
 

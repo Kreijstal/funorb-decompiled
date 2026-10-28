@@ -37,8 +37,8 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           if (!text.equals(this.field_s)) {
             NameAvailabilityResult var3 = SpriteDecodeSupport.pollNameAvailability(122, text);
             if (var3 != null &&
-              null == var3.field_f) {
-              this.field_n = var3.field_a;
+              null == var3.message) {
+              this.field_n = var3.success;
               this.field_s = text;
             } else {
               ValidationState stackIn_12_0 = AchievementFlagSupport.field_c;
@@ -112,11 +112,11 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             if (var5 == null) {
               return null;
             }
-            if (var5.field_f != null) {
+            if (var5.message != null) {
               Object stackIn_9_0 = null;
               return (String) (stackIn_9_0);
             }
-            this.field_n = var5.field_a;
+            this.field_n = var5.success;
             this.field_s = text;
           }
           if (this.field_n) {

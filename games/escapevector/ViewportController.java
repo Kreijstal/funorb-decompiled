@@ -2,25 +2,25 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ViewportController {
-    private int field_c;
+    private int maximumHeight;
     private int field_i;
     private int field_j;
-    private int field_n;
-    private int field_e;
+    private int containerHeight;
+    private int maximumWidth;
     static BoundedUrlRequest field_m;
-    private int field_g;
+    private int minimumHeight;
     private int field_o;
     private int field_d;
-    private int field_s;
+    private int minimumHeapMiB;
     private int field_q;
-    private boolean field_a;
-    private int field_h;
-    private int field_f;
+    private boolean autoResizeEnabled;
+    private int containerWidth;
+    private int minimumWidth;
     private int field_r;
     private int field_b;
     private ViewportResizeListener field_l;
     private int field_p;
-    private float field_k;
+    private float aspectRatio;
 
     public static void releaseStatics(boolean guard) {
         if (guard) {
@@ -61,9 +61,9 @@ final class ViewportController {
         return var2Lifetime1;
     }
 
-    final boolean c(int param0) {
-        int var2 = 71 / ((-20 - param0) / 62);
-        if (this.field_s > IntroFrameRenderer.field_c) {
+    final boolean canResizeViewport(int guard) {
+        int var2 = 71 / ((-20 - guard) / 62);
+        if (this.minimumHeapMiB > IntroFrameRenderer.field_c) {
           return false;
         }
         if (Js5NetworkRequest.field_x > 0) {
@@ -72,27 +72,27 @@ final class ViewportController {
         return false;
     }
 
-    private final void a(byte param0) {
+    private final void applyDesiredSize(byte guard) {
         int var5 = EscapeVector.obfuscationControl;
-        int var2 = this.field_h;
-        int var3 = this.field_n;
-        if (!this.c(-109)) {
-          this.field_a = false;
+        int var2 = this.containerWidth;
+        int var3 = this.containerHeight;
+        if (!this.canResizeViewport(-109)) {
+          this.autoResizeEnabled = false;
           return;
         }
         boolean decompiledFrameRemainder2 = true;
-        if (this.field_c < var3) {
-          var3 = this.field_c;
-        } else if (this.field_g <= var3) {
+        if (this.maximumHeight < var3) {
+          var3 = this.maximumHeight;
+        } else if (this.minimumHeight <= var3) {
           boolean decompiledFrameRemainder1 = true;
-          if (this.field_e < var2) {
-            var2 = this.field_e;
-          } else if (this.field_f > var2) {
-            var2 = this.field_f;
-            if (0.0f < this.field_k) {
-              int var4 = (int)(0.5f + (float)var3 * this.field_k);
+          if (this.maximumWidth < var2) {
+            var2 = this.maximumWidth;
+          } else if (this.minimumWidth > var2) {
+            var2 = this.minimumWidth;
+            if (0.0f < this.aspectRatio) {
+              int var4 = (int)(0.5f + (float)var3 * this.aspectRatio);
               if (var2 < var4) {
-                var3 = (int)((float)var2 / this.field_k);
+                var3 = (int)((float)var2 / this.aspectRatio);
               } else if (var4 < var2) {
                 var2 = var4;
               }
@@ -100,28 +100,28 @@ final class ViewportController {
             decompiledFrameRemainder1 = false;
           }
           if (decompiledFrameRemainder1 &&
-            0.0f < this.field_k) {
-            int var4Lifetime2 = (int)(0.5f + (float)var3 * this.field_k);
+            0.0f < this.aspectRatio) {
+            int var4Lifetime2 = (int)(0.5f + (float)var3 * this.aspectRatio);
             if (var2 < var4Lifetime2) {
-              var3 = (int)((float)var2 / this.field_k);
+              var3 = (int)((float)var2 / this.aspectRatio);
             } else if (var4Lifetime2 < var2) {
               var2 = var4Lifetime2;
             }
           }
           decompiledFrameRemainder2 = false;
         } else {
-          var3 = this.field_g;
+          var3 = this.minimumHeight;
         }
         if (decompiledFrameRemainder2) {
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_e < var2) {
-            var2 = this.field_e;
-          } else if (this.field_f > var2) {
-            var2 = this.field_f;
-            if (0.0f < this.field_k) {
-              int var4Lifetime1 = (int)(0.5f + (float)var3 * this.field_k);
+          if (this.maximumWidth < var2) {
+            var2 = this.maximumWidth;
+          } else if (this.minimumWidth > var2) {
+            var2 = this.minimumWidth;
+            if (0.0f < this.aspectRatio) {
+              int var4Lifetime1 = (int)(0.5f + (float)var3 * this.aspectRatio);
               if (var2 < var4Lifetime1) {
-                var3 = (int)((float)var2 / this.field_k);
+                var3 = (int)((float)var2 / this.aspectRatio);
               } else if (var4Lifetime1 < var2) {
                 var2 = var4Lifetime1;
               }
@@ -129,10 +129,10 @@ final class ViewportController {
             decompiledFrameRemainder0 = false;
           }
           if (decompiledFrameRemainder0 &&
-            0.0f < this.field_k) {
-            int var4Lifetime1Lifetime1 = (int)(0.5f + (float)var3 * this.field_k);
+            0.0f < this.aspectRatio) {
+            int var4Lifetime1Lifetime1 = (int)(0.5f + (float)var3 * this.aspectRatio);
             if (var2 < var4Lifetime1Lifetime1) {
-              var3 = (int)((float)var2 / this.field_k);
+              var3 = (int)((float)var2 / this.aspectRatio);
             } else if (var4Lifetime1Lifetime1 < var2) {
               var2 = var4Lifetime1Lifetime1;
             }
@@ -143,11 +143,11 @@ final class ViewportController {
         } else if (var3 != BoundedUrlRequest.field_d) {
           this.field_l.onResize(true, var3, var2);
         }
-        if (param0 != 13) {
+        if (guard != 13) {
           return;
         }
-        if (this.field_h > 0) {
-          MenuTitleRenderSupport.field_b = (this.field_h - AppletViewportState.canvasWidth) / 2;
+        if (this.containerWidth > 0) {
+          MenuTitleRenderSupport.field_b = (this.containerWidth - AppletViewportState.canvasWidth) / 2;
         }
     }
 
@@ -156,12 +156,12 @@ final class ViewportController {
           return;
         }
         if (Js5NetworkRequest.field_x <= 0) {
-          this.field_a = false;
+          this.autoResizeEnabled = false;
         }
-        if (!this.field_a) {
-          if (AppletViewportState.canvasWidth < this.field_h) {
-            MenuTitleRenderSupport.field_b = (-AppletViewportState.canvasWidth + this.field_h) / 2;
-          } else if (0 < this.field_h) {
+        if (!this.autoResizeEnabled) {
+          if (AppletViewportState.canvasWidth < this.containerWidth) {
+            MenuTitleRenderSupport.field_b = (-AppletViewportState.canvasWidth + this.containerWidth) / 2;
+          } else if (0 < this.containerWidth) {
             MenuTitleRenderSupport.field_b = 0;
           }
           if (this.field_q == AppletViewportState.canvasWidth &&
@@ -180,20 +180,20 @@ final class ViewportController {
           return;
         }
         this.field_d = this.field_b;
-        if (IntroFrameRenderer.field_c < this.field_s) {
-          this.field_a = false;
+        if (IntroFrameRenderer.field_c < this.minimumHeapMiB) {
+          this.autoResizeEnabled = false;
         } else {
-          this.a((byte) 13);
+          this.applyDesiredSize((byte) 13);
         }
         return;
     }
 
-    final void setDesiredSize(int width, int height, int guard) {
-        this.field_n = width;
+    final void setDesiredSize(int height, int width, int guard) {
+        this.containerHeight = height;
         if (guard != 18705) {
           return;
         }
-        this.field_h = height;
+        this.containerWidth = width;
     }
 
     private ViewportController() throws Throwable {

@@ -29,7 +29,7 @@ final class LoginIdentifierSupport {
           var1 = PcmResampler.field_d.identifier(35);
         }
         if (var1.length() == 0) {
-          var1 = ContactEntry.i(0);
+          var1 = ContactEntry.currentDisplayName(0);
         }
         if (guard <= 50) {
           field_d = (String) null;

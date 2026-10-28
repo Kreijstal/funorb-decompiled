@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class SelfDestructEffects {
-    static boolean field_k;
+    static boolean moderatorCheats;
     static boolean field_s;
     static String field_d;
     static Js5Transport field_j;
@@ -138,7 +138,7 @@ final class SelfDestructEffects {
             field_s = false;
           }
           if (null == TextLayout.field_c &&
-            !ChatMessageDecoder.a(false, (byte) 0)) {
+            !ChatMessageDecoder.pollAccountConnection(false, (byte) 0)) {
             int stackIn_6_0 = -1;
             return stackIn_6_0;
           }
@@ -196,7 +196,7 @@ final class SelfDestructEffects {
               AccountPayloadSupport.writeEncryptedPayload(0, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, MeshProjectionSupport.field_c);
               QuickChatDynamicCommand.outgoingPackets.backpatchByteLength(-38, -var9 + QuickChatDynamicCommand.outgoingPackets.position);
             }
-            ClientException.a(-1, 30785);
+            ClientException.flushAccountPackets(-1, 30785);
             AccountFormStage.field_d = IntrusiveDeque.field_a;
           }
           if (IntrusiveDeque.field_a == AccountFormStage.field_d &&
@@ -218,7 +218,7 @@ final class SelfDestructEffects {
               }
               if (var9Lifetime1 == 99) {
                 Checkbox.readIncomingBytes(30000, ArchivePreloader.booleanReplyLength(92));
-                DialWidgetPainter.field_g = new Boolean(SecondaryIntrusiveDeque.a(QuickChatDynamicCommand.incomingPackets, true));
+                DialWidgetPainter.field_g = new Boolean(SecondaryIntrusiveDeque.readBoolean(QuickChatDynamicCommand.incomingPackets, true));
                 QuickChatDynamicCommand.incomingPackets.position = 0;
               } else {
                 EmailSyntaxValidator.field_r = -1;
@@ -464,7 +464,7 @@ final class SelfDestructEffects {
     }
 
     static {
-        field_k = false;
+        moderatorCheats = false;
         field_n = false;
         field_q = -1;
     }

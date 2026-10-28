@@ -441,7 +441,7 @@ final class AchievementTracker {
         if (guard != 54) {
           return true;
         }
-        int[] var8 = AlternateUsernameCredentials.d(126);
+        int[] var8 = AlternateUsernameCredentials.achievementWords(126);
         int[] var7 = var8;
         int[] var6 = var7;
         if (var6 != null &&

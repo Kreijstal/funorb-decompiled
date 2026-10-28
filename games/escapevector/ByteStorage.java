@@ -28,13 +28,13 @@ abstract class ByteStorage {
 
     abstract byte[] toByteArray(int guard);
 
-    final static void b(int param0) {
-        if (param0 > -27) {
+    final static void requestQuit(int guard) {
+        if (guard > -27) {
           ByteStorage.releaseStatics((byte) 2);
-          WhirlpoolHasher.a(17, 27);
+          WhirlpoolHasher.setAccountAction(17, 27);
           return;
         }
-        WhirlpoolHasher.a(17, 27);
+        WhirlpoolHasher.setAccountAction(17, 27);
     }
 
     abstract void setBytes(boolean guard, byte[] bytes);

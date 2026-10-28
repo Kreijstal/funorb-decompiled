@@ -180,7 +180,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           Object var6 = this;
           synchronized (var6) {
-            ObjectSpriteSet.field_b = AchievementRecord.field_l;
+            ObjectSpriteSet.canvasFocused = AchievementRecord.field_l;
           }
           this.updateClient(-111);
           return;
@@ -772,7 +772,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           SpriteDecodeSupport.field_d.addFocusListener((java.awt.event.FocusListener) (this));
           SpriteDecodeSupport.field_d.requestFocus();
-          ObjectSpriteSet.field_b = true;
+          ObjectSpriteSet.canvasFocused = true;
           AchievementRecord.field_l = true;
           NameSuggestionsPanel.field_H = true;
           PacketBuffer.field_i = false;

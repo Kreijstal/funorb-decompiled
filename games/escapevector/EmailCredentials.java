@@ -15,8 +15,8 @@ final class EmailCredentials extends LoginCredentials {
         HighscorePlayerRecord.field_g.complete((byte) -128, available);
     }
 
-    final static void c(int param0) {
-        int var1 = -59 / ((-15 - param0) / 40);
+    final static void advanceSessionCountersWithDivisionGuard(int guard) {
+        int var1 = -59 / ((-15 - guard) / 40);
         if (SocketJs5Transport.field_r != null) {
           SocketJs5Transport.field_r.advanceCounters((byte) 87);
         }

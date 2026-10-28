@@ -9,8 +9,8 @@ class IntrusiveNode {
     IntrusiveNode next;
     static String field_f;
 
-    final static boolean b(int param0) {
-        if (param0 != 12) {
+    final static boolean hasAccountOverlay(int guard) {
+        if (guard != 12) {
           return false;
         }
         if (null == AccountRequestDialog.field_pb) {
@@ -115,8 +115,8 @@ class IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
-        if (param0 != 12) {
+    final static void checkIdleDisconnectGuard(int guard) {
+        if (guard != 12) {
           IntrusiveNode.releaseStatics(-66);
         }
     }
@@ -132,7 +132,7 @@ class IntrusiveNode {
           this.previous = null;
           return;
         }
-        IntrusiveNode.b(-128);
+        IntrusiveNode.hasAccountOverlay(-128);
         this.previous.next = this.next;
         this.next.previous = this.previous;
         this.next = null;

@@ -160,12 +160,12 @@ final class ByteArrayPoolSupport {
         if (guard) {
           ByteArrayPoolSupport.updateMenuGridSounds((byte) -80);
         }
-        String var1 = DualLinkNode.e(0);
+        String var1 = DualLinkNode.currentAccountIdentifier(0);
         if (var1 != null &&
           !(0 > var1.indexOf('@'))) {
           var1 = "";
         }
-        return new LoginText(DualLinkNode.e(0), UiTheme.c(62));
+        return new LoginText(DualLinkNode.currentAccountIdentifier(0), UiTheme.emailLoginSelected(62));
     }
 
     final static int totalButtonTextWidth(BinaryBitmapFont font, byte guard, String[] labels) {

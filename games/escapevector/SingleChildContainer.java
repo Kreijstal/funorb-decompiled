@@ -214,40 +214,40 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    final static String a(String param0, int param1, String[] param2) {
+    final static String formatPlaceholders(String template, int guard, String[] arguments) {
         String stackIn_29_2 = null;
         String stackIn_32_2 = null;
         int var11 = EscapeVector.obfuscationControl;
         try {
-          int var3_int = param0.length();
-          if (param1 != -63) {
+          int var3_int = template.length();
+          if (guard != -63) {
             SavedDataWrite var12 = (SavedDataWrite) null;
             SingleChildContainer.writeSavedData(-19, (SavedDataWrite) null, 121);
           }
           int var4 = var3_int;
           int var5 = 0;
           while (true) {
-            int var6_int = param0.indexOf("<%", var5);
+            int var6_int = template.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (IntroAudioSupport.isAsciiDigit(param0.charAt(var5), false)) {
+                if (IntroAudioSupport.isAsciiDigit(template.charAt(var5), false)) {
                   continue;
                 }
                 break;
               }
-              String var7_ref_String = param0.substring(var6_int + 2, var5);
+              String var7_ref_String = template.substring(var6_int + 2, var5);
               if (!LoginCredentialType.isDecimalText(false, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var3_int <= var5) {
                 continue;
               }
-              if (param0.charAt(var5) != 62) {
+              if (template.charAt(var5) != 62) {
                 continue;
               }
               var5++;
               int var8 = ModeProgress.parseDecimal(16777215, (CharSequence) ((Object) var7_ref_String));
-              var4 = var4 + (param2[var8].length() - (var5 - var6_int));
+              var4 = var4 + (arguments[var8].length() - (var5 - var6_int));
               continue;
             }
             break;
@@ -256,32 +256,32 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           int var7 = 0;
           int var5Lifetime1 = 0;
           while (true) {
-            int var8Lifetime1 = param0.indexOf("<%", var5Lifetime1);
+            int var8Lifetime1 = template.indexOf("<%", var5Lifetime1);
             if (var8Lifetime1 < 0) {
-              StringBuilder discarded$0 = var6.append(param0.substring(var7));
+              StringBuilder discarded$0 = var6.append(template.substring(var7));
               String stackIn_25_0 = var6.toString();
               return stackIn_25_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (IntroAudioSupport.isAsciiDigit(param0.charAt(var5Lifetime1), false)) {
+              if (IntroAudioSupport.isAsciiDigit(template.charAt(var5Lifetime1), false)) {
                 continue;
               }
               break;
             }
-            String var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
+            String var9 = template.substring(2 + var8Lifetime1, var5Lifetime1);
             if (!LoginCredentialType.isDecimalText(false, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
               continue;
             }
-            if (param0.charAt(var5Lifetime1) != 62) {
+            if (template.charAt(var5Lifetime1) != 62) {
               continue;
             }
             var5Lifetime1++;
             int var10 = ModeProgress.parseDecimal(16777215, (CharSequence) ((Object) var9));
-            StringBuilder discarded$1 = var6.append(param0.substring(var7, var8Lifetime1));
-            StringBuilder discarded$2 = var6.append(param2[var10]);
+            StringBuilder discarded$1 = var6.append(template.substring(var7, var8Lifetime1));
+            StringBuilder discarded$2 = var6.append(arguments[var10]);
             var7 = var5Lifetime1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -289,13 +289,13 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_28_0 = var3;
           StringBuilder stackIn_28_1 = new StringBuilder().append("r.KA(");
-          if (param0 == null) {
+          if (template == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          StringBuilder stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(guard).append(',');
+          if (arguments == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
@@ -314,7 +314,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         try {
           if (guard > -103) {
             String[] var9 = (String[]) null;
-            SingleChildContainer.a((String) null, -44, (String[]) null);
+            SingleChildContainer.formatPlaceholders((String) null, -44, (String[]) null);
           }
           boolean stackIn_7_0 = (null != this.child) && (this.child.isFocused(0)) && (this.child.onMouseWheel(offsetX, rotation, (byte) -115, pointerY, pointerX, root, offsetY));
           return stackIn_7_0;
@@ -341,7 +341,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           }
           if (guard != -14472) {
             String[] var6 = (String[]) null;
-            SingleChildContainer.a((String) null, 17, (String[]) null);
+            SingleChildContainer.formatPlaceholders((String) null, 17, (String[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -491,13 +491,13 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         return null != this.focusedChild(0) ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param1 != 13202) {
+    final static void drawSliderTrack(int x, int guard, int y, int position, int color) {
+        if (guard != 13202) {
           return;
         }
-        SoftwareRasterizer.fillRectangle(param0, param2 + 7, param3 - 1, 2, param4);
-        SoftwareRasterizer.fillRectangle(param3 + param0, param2, 4, 16, param4);
-        SoftwareRasterizer.fillRectangle(param3 + (param0 + 5), 7 + param2, 63 - param3, 2, param4);
+        SoftwareRasterizer.fillRectangle(x, y + 7, position - 1, 2, color);
+        SoftwareRasterizer.fillRectangle(position + x, y, 4, 16, color);
+        SoftwareRasterizer.fillRectangle(position + (x + 5), 7 + y, 63 - position, 2, color);
     }
 
     static {

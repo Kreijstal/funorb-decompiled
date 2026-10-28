@@ -194,8 +194,8 @@ final class HighscoresScreen {
           return;
         }
         try {
-          int var6_int = ProxySocketConnector.a(102, leftBoardId);
-          int var7 = ProxySocketConnector.a(guard - 6045, rightBoardId);
+          int var6_int = ProxySocketConnector.validModeIndex(102, leftBoardId);
+          int var7 = ProxySocketConnector.validModeIndex(guard - 6045, rightBoardId);
           int[] var21 = this.mergedRowOrder(var7, right, left, this.queryColumn, -17, this.queryColumn, var6_int);
           int[] var22 = this.selectMergedInts(right.intColumns[this.queryColumn], 10, var21, left.intColumns[this.queryColumn]);
           left.intColumns[this.queryColumn] = var22;
@@ -494,18 +494,18 @@ final class HighscoresScreen {
 
     private final LegacyButton selectedButton(byte guard) {
         int var2 = HighscorePlayerRecord.field_d.selectedIndex;
-        LegacyButton var3 = TetherHumStream.a(this.categoryButtons, var2, 0);
+        LegacyButton var3 = TetherHumStream.findLegacyButton(this.categoryButtons, var2, 0);
         if (var3 != null) {
           return var3;
         }
         if (guard <= 65) {
           boolean discarded$0 = this.handleCategoryAction(-122);
         }
-        var3 = TetherHumStream.a(this.rankingButtons, var2, 0);
+        var3 = TetherHumStream.findLegacyButton(this.rankingButtons, var2, 0);
         if (var3 != null) {
           return var3;
         }
-        var3 = TetherHumStream.a(this.mainMenuButtons, var2, 0);
+        var3 = TetherHumStream.findLegacyButton(this.mainMenuButtons, var2, 0);
         if (var3 == null) {
           return null;
         }
@@ -534,7 +534,7 @@ final class HighscoresScreen {
           for (int var14 = 0; var14 < var26.length; var14++) {
             var26[var14] = var14;
           }
-          ShipHullGeometry.a(-1, var24, var26);
+          ShipHullGeometry.sortIntPairs(-1, var24, var26);
           int[] var16 = this.reverseIndices(var26, 12);
           int[] stackIn_5_0 = var16;
           return stackIn_5_0;
@@ -604,15 +604,15 @@ final class HighscoresScreen {
     }
 
     final int hitTest(int x, int guard, int y) {
-        int var4 = DebouncedValidator.a(y, -121, this.categoryButtons, x);
+        int var4 = DebouncedValidator.hitLegacyButtons(y, -121, this.categoryButtons, x);
         if (0 <= var4) {
           return var4;
         }
-        var4 = DebouncedValidator.a(y, -94, this.rankingButtons, x);
+        var4 = DebouncedValidator.hitLegacyButtons(y, -94, this.rankingButtons, x);
         if (0 <= var4) {
           return var4;
         }
-        var4 = DebouncedValidator.a(y, guard ^ 108, this.mainMenuButtons, x);
+        var4 = DebouncedValidator.hitLegacyButtons(y, guard ^ 108, this.mainMenuButtons, x);
         if (guard >= ~var4) {
           return var4;
         }
@@ -628,7 +628,7 @@ final class HighscoresScreen {
         }
         HighscorePlayerRecord.field_d.updatePointer(this.hitTest(SessionCounterState.field_c, -1, LoginDialog.field_ob), (byte) 120, this.hitTest(GzipDecoder.field_d, -1, UiContainer.field_y));
         this.playSelectionSound(false);
-        boolean var3Lifetime1 = (this.handleActivation(true, Js5NetworkRequest.a((byte) 15, -1), (byte) 79));
+        boolean var3Lifetime1 = (this.handleActivation(true, Js5NetworkRequest.isMenuActionTriggered((byte) 15, -1), (byte) 79));
         return (var3Lifetime1);
     }
 
@@ -795,7 +795,7 @@ final class HighscoresScreen {
             int var3 = this.actionIndex(1, 0);
             HighscorePlayerRecord.field_d.selectFromKeyboard(false, var3);
           }
-          boolean stackIn_10_0 = !(!this.handleActivation(false, Js5NetworkRequest.a((byte) 15, PasswordValidator.field_n), (byte) 96));
+          boolean stackIn_10_0 = !(!this.handleActivation(false, Js5NetworkRequest.isMenuActionTriggered((byte) 15, PasswordValidator.field_n), (byte) 96));
           var2 = stackIn_10_0;
           if (var2) {
             return (var2);
@@ -1057,7 +1057,7 @@ final class HighscoresScreen {
 
     private final void selectInitialCategory(boolean guard, int gameMode) {
         this.categoryCode = 5;
-        if (EmailSyntaxValidator.a(gameMode, -2)) {
+        if (EmailSyntaxValidator.acceptsPrimaryButton(gameMode, -2)) {
           this.categoryCode = 5;
         }
         if (!UiContainer.hasMembership((byte) 98)) {
@@ -1144,9 +1144,9 @@ final class HighscoresScreen {
         int var3 = this.selectedRankingAction(-74);
         int var4 = this.actionIndex(1, var3);
         int var5 = HighscorePlayerRecord.field_d.selectedIndex;
-        HudMessage.a(this.categoryButtons, var2, var5, (byte) -55);
-        HudMessage.a(this.rankingButtons, var4, var5, (byte) -114);
-        HudMessage.a(this.mainMenuButtons, -1, var5, (byte) -97);
+        HudMessage.drawLegacyButtons(this.categoryButtons, var2, var5, (byte) -55);
+        HudMessage.drawLegacyButtons(this.rankingButtons, var4, var5, (byte) -114);
+        HudMessage.drawLegacyButtons(this.mainMenuButtons, -1, var5, (byte) -97);
     }
 
     private final String queryStatusText(int start) {

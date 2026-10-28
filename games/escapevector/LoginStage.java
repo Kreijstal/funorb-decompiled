@@ -11,7 +11,7 @@ final class LoginStage {
         if (var1 == null) {
           var1 = new RasterSnapshot();
         }
-        var1.a(SoftwareRasterizer.clipBottom, (byte) 29, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipLeft, SoftwareRasterizer.height, SoftwareRasterizer.pixels, SoftwareRasterizer.width);
+        var1.setRasterState(SoftwareRasterizer.clipBottom, (byte) 29, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipLeft, SoftwareRasterizer.height, SoftwareRasterizer.pixels, SoftwareRasterizer.width);
         int var2 = 28 % ((guard + 72) / 49);
         GradientOutlineTextPainter.field_q.addLast(-12328, var1);
     }

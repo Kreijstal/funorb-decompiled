@@ -106,11 +106,11 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         this.field_y = param0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void addSessionCounterOffset(int guard, int offset) {
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.addOffset(-1, param1);
+          SocketJs5Transport.field_r.addOffset(-1, offset);
         }
-        if (param0 < 42) {
+        if (guard < 42) {
           field_q = -72L;
           return;
         }

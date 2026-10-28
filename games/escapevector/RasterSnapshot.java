@@ -2,52 +2,52 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RasterSnapshot extends IntrusiveNode {
-    int[] field_p;
-    int field_h;
-    int field_i;
+    int[] pixels;
+    int clipBottom;
+    int height;
     static IntrusiveDeque field_l;
-    int field_r;
-    int field_n;
+    int clipRight;
+    int clipTop;
     static String field_j;
-    int field_q;
+    int width;
     static int[] field_k;
-    int field_o;
+    int clipLeft;
     static int field_g;
     static Sprite[] field_m;
 
-    final void a(int param0, byte param1, int param2, int param3, int param4, int param5, int[] param6, int param7) {
-        if (param1 != 29) {
+    final void setRasterState(int clipBottom, byte guard, int clipTop, int clipRight, int clipLeft, int height, int[] pixels, int width) {
+        if (guard != 29) {
           return;
         }
         try {
-          this.field_q = param7;
-          this.field_n = param2;
-          this.field_h = param0;
-          this.field_r = param3;
-          this.field_i = param5;
-          this.field_p = param6;
-          this.field_o = param4;
+          this.width = width;
+          this.clipTop = clipTop;
+          this.clipBottom = clipBottom;
+          this.clipRight = clipRight;
+          this.height = height;
+          this.pixels = pixels;
+          this.clipLeft = clipLeft;
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "mi.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "mi.D(" + clipBottom + ',' + guard + ',' + clipTop + ',' + clipRight + ',' + clipLeft + ',' + height + ',' + (pixels != null ? "{...}" : "null") + ',' + width + ')');
         }
     }
 
-    final static void a(int param0, String param1, String param2) {
+    final static void requestLogin(int guard, String password, String identifier) {
         try {
-          AchievementQuery.a(false, param2, false, param1);
-          if (param0 != 0) {
+          AchievementQuery.requestLogin(false, identifier, false, password);
+          if (guard != 0) {
             field_k = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "mi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "mi.C(" + guard + ',' + (password != null ? "{...}" : "null") + ',' + (identifier != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static String a(byte[] param0, int param1) {
+    final static String decodeCp1252(byte[] bytes, int guard) {
         String stackIn_8_2 = null;
         try {
-          if (param1 > 109) {
-            String stackIn_4_0 = AccountMessagePanel.decodeCp1252(param0.length, 0, param0, (byte) -109);
+          if (guard > 109) {
+            String stackIn_4_0 = AccountMessagePanel.decodeCp1252(bytes.length, 0, bytes, (byte) -109);
             return stackIn_4_0;
           }
           String stackIn_2_0 = (String) null;
@@ -57,12 +57,12 @@ final class RasterSnapshot extends IntrusiveNode {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_7_0 = var2;
           StringBuilder stackIn_7_1 = new StringBuilder().append("mi.B(");
-          if (param0 == null) {
+          if (bytes == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(')').toString());
         }
     }
 

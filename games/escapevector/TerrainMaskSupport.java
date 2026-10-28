@@ -10,20 +10,20 @@ final class TerrainMaskSupport {
     static int[] field_c;
     static int[] field_d;
 
-    final static void a(int param0) {
+    final static void initializeRotatedObjectOffsets(int guard) {
         int var8 = EscapeVector.obfuscationControl;
         try {
           if (AccountPanelInputSupport.field_d != null) {
             return;
           }
-          if (param0 <= 48) {
+          if (guard <= 48) {
             return;
           }
           AccountPanelInputSupport.field_d = new SpriteOffset[DialWidgetPainter.field_h.length];
           for (int var1_int = 0; var1_int < DialWidgetPainter.field_h.length; var1_int++) {
             int var2 = DialWidgetPainter.field_h[var1_int];
             SpriteOffset var3 = HuffmanDecoder.field_b;
-            Sprite var4 = TextWidgetPainter.a(var2, (byte) -39, 2);
+            Sprite var4 = TextWidgetPainter.objectSprite(var2, (byte) -39, 2);
             int var5 = var4.fullWidth - var3.x;
             int var6 = -var3.y + var4.fullHeight;
             SpriteOffset var7 = new SpriteOffset(var5, var6);
@@ -33,7 +33,7 @@ final class TerrainMaskSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "ka.A(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "ka.A(" + guard + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class TerrainMaskSupport {
         }
         try {
           if (guard != -74) {
-            TerrainMaskSupport.a(1);
+            TerrainMaskSupport.initializeRotatedObjectOffsets(1);
           }
           AccountRegistrationPanel.decodeTerrainQuadrants(top, bottom, input, left, right, rows, 2147483647);
         } catch (RuntimeException runtimeException) {

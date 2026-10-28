@@ -68,7 +68,7 @@ final class MenuEdgeSegment extends IntrusiveNode {
           }
           AccountPayloadSupport.writeEncryptedPayload(guard ^ -99, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, MeshProjectionSupport.field_c);
           QuickChatDynamicCommand.outgoingPackets.backpatchShortLength(-var5_int + QuickChatDynamicCommand.outgoingPackets.position, 32614);
-          ClientException.a(-1, guard + 30884);
+          ClientException.flushAccountPackets(-1, guard + 30884);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -251,7 +251,7 @@ final class GameModeSelectScreen {
           if (guard < 62) {
             field_e = (String[]) null;
           }
-          int[] var21 = TextLayoutLine.a(revealTick, firstAction, var11, (byte) -17);
+          int[] var21 = TextLayoutLine.createSpacedPositions(revealTick, firstAction, var11, (byte) -17);
           this.footerButtons = DynamicTerrainRenderer.createButtonRow(var6, var20, var7, var5_int, font, var9, var10, false, var21);
           int[] stackIn_6_0 = var8;
           return stackIn_6_0;
@@ -328,7 +328,7 @@ final class GameModeSelectScreen {
           }
           if (PasswordValidator.field_n == 13) {
             TextLayout.field_b = false;
-            ArchiveLoadTask.a((var2), -87);
+            ArchiveLoadTask.showMainMenu((var2), -87);
           }
           if (this.handleActivation((var2), (byte) 91)) {
             return true;
@@ -658,13 +658,13 @@ final class GameModeSelectScreen {
           }
           if (4 == var4) {
             TextLayout.field_b = false;
-            ArchiveLoadTask.a(pointerDriven, guard + 34);
+            ArchiveLoadTask.showMainMenu(pointerDriven, guard + 34);
             return true;
           }
           if (this.selectedGameMode((byte) 89) == var4) {
             TextLayout.field_b = false;
-            int var5 = AccountChoicePanel.a(-8462, var4);
-            ArchiveKeyRequest.a(0, var5, pointerDriven, this.accountStateIndex);
+            int var5 = AccountChoicePanel.availableModeIndex(-8462, var4);
+            ArchiveKeyRequest.showLevelSelect(0, var5, pointerDriven, this.accountStateIndex);
             return true;
           }
           if (guard == 91) {
@@ -802,7 +802,7 @@ final class GameModeSelectScreen {
           }
           int var11Lifetime1 = 640;
           int var12 = DynamicTerrainRenderer.calculateButtonGap(1, var9, var11Lifetime1, var10);
-          int var13 = PcmResampler.a(var10, (byte) 86, var11Lifetime1, var9, var12);
+          int var13 = PcmResampler.centeredButtonStart(var10, (byte) 86, var11Lifetime1, var9, var12);
           int var14 = 0;
           int var15 = var14 + var13;
           if (guard != 3390) {
@@ -867,8 +867,8 @@ final class GameModeSelectScreen {
         this.actionCodes = new int[var6];
         ArraySupport.copy(var4, 0, this.actionCodes, 0, var4.length);
         ArraySupport.copy(var5, 0, this.actionCodes, var4.length, var5.length);
-        IndexedSpriteState.a(this.modeButtons, 0);
-        IndexedSpriteState.a(this.footerButtons, 0);
+        IndexedSpriteState.setLegacyButtonColors(this.modeButtons, 0);
+        IndexedSpriteState.setLegacyButtonColors(this.footerButtons, 0);
     }
 
     final static void reportClientError(boolean guard, String message, Throwable failure) {

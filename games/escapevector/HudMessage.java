@@ -17,8 +17,8 @@ final class HudMessage extends IntrusiveNode {
         field_j = null;
     }
 
-    final static boolean a(boolean param0) {
-        if (!param0) {
+    final static boolean hasLoggedInConnection(boolean guard) {
+        if (!guard) {
           HudMessage.releaseStatics((byte) -76);
           if (TextLayout.field_c == null) {
             return false;
@@ -37,27 +37,27 @@ final class HudMessage extends IntrusiveNode {
         return false;
     }
 
-    final static void a(LegacyButton[] param0, int param1, int param2, byte param3) {
+    final static void drawLegacyButtons(LegacyButton[] buttons, int alternateAction, int highlightedAction, byte guard) {
         String stackIn_21_2 = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
-          if (param0 == null) {
+          if (buttons == null) {
             return;
           }
-          LegacyButton[] var11 = param0;
+          LegacyButton[] var11 = buttons;
           LegacyButton[] var4 = var11;
           for (int var5 = 0; var11.length > var5; var5++) {
             LegacyButton var6 = var11[var5];
             if (var6 != null) {
               int var7 = var6.actionId;
-              boolean stackIn_9_0 = !(param2 != var7);
+              boolean stackIn_9_0 = !(highlightedAction != var7);
               boolean var8 = stackIn_9_0;
-              boolean stackIn_12_0 = !(var7 != param1);
+              boolean stackIn_12_0 = !(var7 != alternateAction);
               boolean var9 = stackIn_12_0;
               var6.drawState((var8), (var9), (byte) 81);
             }
           }
-          if (param3 > -5) {
+          if (guard > -5) {
             field_k = (SpriteLoadTask[]) null;
           }
           return;
@@ -66,12 +66,12 @@ final class HudMessage extends IntrusiveNode {
           RuntimeException var4_ref = decompiledCaughtException;
           RuntimeException stackIn_20_0 = var4_ref;
           StringBuilder stackIn_20_1 = new StringBuilder().append("rb.A(");
-          if (param0 == null) {
+          if (buttons == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(alternateAction).append(',').append(highlightedAction).append(',').append(guard).append(')').toString());
         }
     }
 

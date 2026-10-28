@@ -100,7 +100,7 @@ final class Minimap {
                   for (int var16 = 0; var5_int > var16; var16++) {
                     int var17 = var16 + var11;
                     if (var17 < this.tileWidth) {
-                      this.scaledMask[var15] = IsaacRandom.a(this.scaledMask[var15], this.isBitSet(var14, var17, -2));
+                      this.scaledMask[var15] = IsaacRandom.booleanOr(this.scaledMask[var15], this.isBitSet(var14, var17, -2));
                       continue;
                     }
                     break;

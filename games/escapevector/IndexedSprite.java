@@ -43,7 +43,7 @@ final class IndexedSprite extends IndexedSpriteState {
           var5 <= 0) {
           return;
         }
-        IndexedSprite.b(SoftwareRasterizer.pixels, this.field_k, this.field_l, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.blitTransparent(SoftwareRasterizer.pixels, this.field_k, this.field_l, 0, var4, var3, var6, var5, var7, var8);
     }
 
     IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
@@ -95,7 +95,7 @@ final class IndexedSprite extends IndexedSpriteState {
           var6 <= 0) {
           return;
         }
-        IndexedSprite.a(SoftwareRasterizer.pixels, this.field_k, this.field_l, var5, var4, var7, var6, var8, var9, alpha);
+        IndexedSprite.blitAlpha(SoftwareRasterizer.pixels, this.field_k, this.field_l, var5, var4, var7, var6, var8, var9, alpha);
     }
 
     IndexedSprite(int param0, int param1, int param2) {
@@ -109,76 +109,76 @@ final class IndexedSprite extends IndexedSpriteState {
         this.field_l = new int[param2];
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var10 = 256 - param9;
-        for (int var11 = -param6; var11 < 0; var11++) {
-          for (int var12 = -param5; var12 < 0; var12++) {
-            int var13 = param1[param3++];
+    private final static void blitAlpha(int[] destination, byte[] indices, int[] palette, int sourceIndex, int destinationIndex, int width, int height, int destinationSkip, int sourceSkip, int alpha) {
+        int var10 = 256 - alpha;
+        for (int var11 = -height; var11 < 0; var11++) {
+          for (int var12 = -width; var12 < 0; var12++) {
+            int var13 = indices[sourceIndex++];
             if (var13 == 0) {
-              param4++;
+              destinationIndex++;
             } else {
-              var13 = param2[var13 & 255];
-              int var14 = param0[param4];
-              int incrementValue$12 = param4;
-              param4++;
-              param0[incrementValue$12] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
+              var13 = palette[var13 & 255];
+              int var14 = destination[destinationIndex];
+              int incrementValue$12 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$12] = ((var13 & 16711935) * alpha + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * alpha + (var14 & 65280) * var10 & 16711680) >> 8;
             }
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          destinationIndex = destinationIndex + destinationSkip;
+          sourceIndex = sourceIndex + sourceSkip;
         }
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var10 = -(param6 >> 2);
-        param6 = -(param6 & 3);
-        for (int var11 = -param7; var11 < 0; var11++) {
+    private final static void blitTransparent(int[] destination, byte[] indices, int[] palette, int pixelScratch, int sourceIndex, int destinationIndex, int width, int height, int destinationSkip, int sourceSkip) {
+        int var10 = -(width >> 2);
+        width = -(width & 3);
+        for (int var11 = -height; var11 < 0; var11++) {
           for (int var12 = var10; var12 < 0; var12++) {
-            param3 = param1[param4++];
-            if (param3 == 0) {
-              param5++;
+            pixelScratch = indices[sourceIndex++];
+            if (pixelScratch == 0) {
+              destinationIndex++;
             } else {
-              int incrementValue$3 = param5;
-              param5++;
-              param0[incrementValue$3] = param2[param3 & 255];
+              int incrementValue$3 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$3] = palette[pixelScratch & 255];
             }
-            param3 = param1[param4++];
-            if (param3 == 0) {
-              param5++;
+            pixelScratch = indices[sourceIndex++];
+            if (pixelScratch == 0) {
+              destinationIndex++;
             } else {
-              int incrementValue$5 = param5;
-              param5++;
-              param0[incrementValue$5] = param2[param3 & 255];
+              int incrementValue$5 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$5] = palette[pixelScratch & 255];
             }
-            param3 = param1[param4++];
-            if (param3 == 0) {
-              param5++;
+            pixelScratch = indices[sourceIndex++];
+            if (pixelScratch == 0) {
+              destinationIndex++;
             } else {
-              int incrementValue$7 = param5;
-              param5++;
-              param0[incrementValue$7] = param2[param3 & 255];
+              int incrementValue$7 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$7] = palette[pixelScratch & 255];
             }
-            param3 = param1[param4++];
-            if (param3 == 0) {
-              param5++;
+            pixelScratch = indices[sourceIndex++];
+            if (pixelScratch == 0) {
+              destinationIndex++;
             } else {
-              int incrementValue$9 = param5;
-              param5++;
-              param0[incrementValue$9] = param2[param3 & 255];
-            }
-          }
-          for (int var12Lifetime1 = param6; var12Lifetime1 < 0; var12Lifetime1++) {
-            param3 = param1[param4++];
-            if (param3 == 0) {
-              param5++;
-            } else {
-              int incrementValue$1 = param5;
-              param5++;
-              param0[incrementValue$1] = param2[param3 & 255];
+              int incrementValue$9 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$9] = palette[pixelScratch & 255];
             }
           }
-          param5 = param5 + param8;
-          param4 = param4 + param9;
+          for (int var12Lifetime1 = width; var12Lifetime1 < 0; var12Lifetime1++) {
+            pixelScratch = indices[sourceIndex++];
+            if (pixelScratch == 0) {
+              destinationIndex++;
+            } else {
+              int incrementValue$1 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$1] = palette[pixelScratch & 255];
+            }
+          }
+          destinationIndex = destinationIndex + destinationSkip;
+          sourceIndex = sourceIndex + sourceSkip;
         }
     }
 }

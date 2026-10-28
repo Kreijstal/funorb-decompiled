@@ -282,7 +282,7 @@ final class PauseMenuScreen {
           if (IsaacRandom.field_d != null) {
             DisplayAndRatingSupport.exitFullscreen(-25123);
           } else {
-            TickClock.a(24, pointerDriven);
+            TickClock.configureDefaultMenuStyle(24, pointerDriven);
           }
           PauseMenuState.input.setPointerSelection(-1, true, 4767999);
         }
@@ -466,7 +466,7 @@ final class PauseMenuScreen {
           int var9 = stackIn_19_0;
           int var10 = var6 + (var9 - 68) / 2;
           ByteStorage.gameFont.drawRight(DisplayNameForm.field_N, var10, 22, var5, -1);
-          SingleChildContainer.a(var10, 13202, 4, IterableNodeHashTable.field_c, var5);
+          SingleChildContainer.drawSliderTrack(var10, 13202, 4, IterableNodeHashTable.field_c, var5);
         }
         if (action == this.musicAction) {
           int var7Lifetime1 = ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N);
@@ -475,7 +475,7 @@ final class PauseMenuScreen {
           int var9Lifetime1 = stackIn_24_0;
           int var10Lifetime1 = (-68 + var9Lifetime1) / 2 + var6;
           ByteStorage.gameFont.drawRight(LoginMethod.field_d, var10Lifetime1, 22, var5, -1);
-          SingleChildContainer.a(var10Lifetime1, 13202, 4, MembershipPromotionSupport.field_b, var5);
+          SingleChildContainer.drawSliderTrack(var10Lifetime1, 13202, 4, MembershipPromotionSupport.field_b, var5);
         }
         if (this.fullscreenAction == action) {
           ByteStorage.gameFont.drawCentered(BrowserSessionMarkerState.field_b, var6, 22, var5, -1);

@@ -79,7 +79,7 @@ final class IntValueNode extends IntrusiveNode {
 
     final static void startSelectedLevel(int gameMode, int levelIndex, int guard) {
         TrackerMusicDefinition.field_f.clearSessionAchievements(true);
-        gameMode = AccountChoicePanel.a(-8462, gameMode);
+        gameMode = AccountChoicePanel.availableModeIndex(-8462, gameMode);
         levelIndex = SectorCacheStore.validLevelIndex(gameMode, 13565, levelIndex);
         int var3 = PasswordValidator.modeSessionOption(1, gameMode);
         BoundedRandomAccessFile.activeSession = new GameplaySession(UsernameCredentials.field_h[gameMode], var3, gameMode, levelIndex);

@@ -201,29 +201,29 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2, int[] param3) {
+    final static int scaledScoreAt(int mode, int index, boolean guard, int[] scores) {
         String stackIn_15_2 = null;
         try {
-          if (0 > param1) {
+          if (0 > index) {
             int stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          if (param2) {
+          if (guard) {
             field_O = 75;
           }
-          if (param3.length <= param1) {
+          if (scores.length <= index) {
             int stackIn_9_0 = 0;
             return stackIn_9_0;
           }
-          int var4_int = param3[param1];
-          int stackIn_11_0 = EditableTextWidget.a(var4_int, param0, 112);
+          int var4_int = scores[index];
+          int stackIn_11_0 = EditableTextWidget.scaleScoreForMode(var4_int, mode, 112);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_14_0 = var4;
-          StringBuilder stackIn_14_1 = new StringBuilder().append("ni.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_14_1 = new StringBuilder().append("ni.A(").append(mode).append(',').append(index).append(',').append(guard).append(',');
+          if (scores == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

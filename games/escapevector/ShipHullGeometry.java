@@ -23,16 +23,16 @@ final class ShipHullGeometry {
         }
         if (guard != 0) {
           TriangleMesh var2 = (TriangleMesh) null;
-          ShipHullGeometry.a(19, -90, 62, -122, 5, (TriangleMesh) null, -13, -75);
+          ShipHullGeometry.drawLitMesh(19, -90, 62, -122, 5, (TriangleMesh) null, -13, -75);
         }
         RasterRestoreSupport.resetTooltipState(false);
     }
 
-    final static void a(int param0, int[] param1, int[] param2) {
+    final static void sortIntPairs(int endOffset, int[] keys, int[] values) {
         try {
-          ChatMessage.sortIntPairs(param0 + param1.length, param2, 1, 0, param1);
+          ChatMessage.sortIntPairs(endOffset + keys.length, values, 1, 0, keys);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uk.B(" + endOffset + ',' + (keys != null ? "{...}" : "null") + ',' + (values != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class ShipHullGeometry {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, TriangleMesh param5, int param6, int param7) {
+    final static void drawLitMesh(int highlightY, int guard, int lightX, int highlightX, int highlightZ, TriangleMesh mesh, int lightZ, int lightY) {
         int stackIn_17_0 = 0;
         int stackIn_20_1 = 0;
         int stackIn_26_0 = 0;
@@ -63,10 +63,10 @@ final class ShipHullGeometry {
         int var33 = 0;
         int var40 = EscapeVector.obfuscationControl;
         try {
-          if (param1 != -16711760) {
+          if (guard != -16711760) {
             return;
           }
-          TriangleMesh var44 = param5;
+          TriangleMesh var44 = mesh;
           if (var44.facePriorities != null &&
             var44.facePriorityCount > 1) {
             byte[] var60 = var44.facePriorities;
@@ -74,16 +74,16 @@ final class ShipHullGeometry {
           } else {
             SelfDestructEffects.flattenFaceDepthBuckets(46);
           }
-          int[] var54 = new int[param5.normalCount];
+          int[] var54 = new int[mesh.normalCount];
           int[] var49 = var54;
           int[] var41 = var49;
           int[] var8 = var41;
-          int[] var64 = new int[param5.normalCount];
+          int[] var64 = new int[mesh.normalCount];
           int[] var62 = DisplayNameForm.field_L;
           int[] var63 = IsaacRandom.field_f;
           int[] var61 = GameplaySession.field_xb;
-          for (int var13 = 0; param5.normalCount > var13; var13++) {
-            int var14 = param6 * var61[var13] + param2 * var62[var13] + param7 * var63[var13] >> 8;
+          for (int var13 = 0; mesh.normalCount > var13; var13++) {
+            int var14 = lightZ * var61[var13] + lightX * var62[var13] + lightY * var63[var13] >> 8;
             if (0 > var14) {
               var14 = -var14;
             }
@@ -95,7 +95,7 @@ final class ShipHullGeometry {
               stackIn_17_0 = 128 + var14;
             }
             int var14Lifetime2 = stackIn_17_0;
-            int var15 = param4 * var61[var13] + var62[var13] * param3 + param0 * var63[var13] >> 8;
+            int var15 = highlightZ * var61[var13] + var62[var13] * highlightX + highlightY * var63[var13] >> 8;
             int[] stackIn_19_0 = MenuTitleRenderSupport.field_c;
             stackIn_20_1 = (var15 < 0) ? (-var15) : (var15);
             int var15Lifetime2 = stackIn_19_0[stackIn_20_1];
@@ -105,33 +105,33 @@ final class ShipHullGeometry {
           }
           for (int var13Lifetime1 = 0; var13Lifetime1 < AccountSessionSupport.field_d; var13Lifetime1++) {
             int var14Lifetime1 = SavedDataQuerySupport.bucketedFaceIndices[var13Lifetime1];
-            int var15Lifetime1 = param5.faceVertexA[var14Lifetime1];
-            int var16 = param5.faceVertexB[var14Lifetime1];
-            int var17 = param5.faceVertexC[var14Lifetime1];
-            if (param5.faceNormalA[var14Lifetime1] >= DisplayNameForm.field_L.length) {
+            int var15Lifetime1 = mesh.faceVertexA[var14Lifetime1];
+            int var16 = mesh.faceVertexB[var14Lifetime1];
+            int var17 = mesh.faceVertexC[var14Lifetime1];
+            if (mesh.faceNormalA[var14Lifetime1] >= DisplayNameForm.field_L.length) {
               stackIn_26_0 = -1;
             } else {
-              stackIn_26_0 = param5.faceNormalA[var14Lifetime1];
+              stackIn_26_0 = mesh.faceNormalA[var14Lifetime1];
             }
             int var18 = stackIn_26_0;
-            if (param5.faceNormalB[var14Lifetime1] >= DisplayNameForm.field_L.length) {
+            if (mesh.faceNormalB[var14Lifetime1] >= DisplayNameForm.field_L.length) {
               stackIn_29_0 = -1;
             } else {
-              stackIn_29_0 = param5.faceNormalB[var14Lifetime1];
+              stackIn_29_0 = mesh.faceNormalB[var14Lifetime1];
             }
             int var19 = stackIn_29_0;
-            if (param5.faceNormalC[var14Lifetime1] < DisplayNameForm.field_L.length) {
-              stackIn_32_0 = param5.faceNormalC[var14Lifetime1];
+            if (mesh.faceNormalC[var14Lifetime1] < DisplayNameForm.field_L.length) {
+              stackIn_32_0 = mesh.faceNormalC[var14Lifetime1];
             } else {
               stackIn_32_0 = -1;
             }
             int var20 = stackIn_32_0;
             if (DialogueScreen.meshMaterials != null &&
-              param5.field_m != null &&
-              var14Lifetime1 < param5.field_m.length &&
-              param5.field_m[var14Lifetime1] != -1 &&
-              param5.field_m[var14Lifetime1] < DialogueScreen.meshMaterials.length) {
-              stackIn_40_0 = DialogueScreen.meshMaterials[param5.field_m[var14Lifetime1]];
+              mesh.field_m != null &&
+              var14Lifetime1 < mesh.field_m.length &&
+              mesh.field_m[var14Lifetime1] != -1 &&
+              mesh.field_m[var14Lifetime1] < DialogueScreen.meshMaterials.length) {
+              stackIn_40_0 = DialogueScreen.meshMaterials[mesh.field_m[var14Lifetime1]];
             } else {
               stackIn_40_0 = null;
             }
@@ -178,7 +178,7 @@ final class ShipHullGeometry {
               int var39 = (16711870 & var30 * var36) >>> 8 | (var35 * var30 & -16711760) >>> 8;
               var38 = var38 + 65793 * var32;
               var39 = var39 + 65793 * var33;
-              SavedDataQuery.a(var24, var23, var22, 255 & var39 >> 8, var38 >> 16, var27, var39 >> 16, var26, var25, -15733, 255 & var39, 255 & var37, var37 >> 16, var38 & 255, (var37 & 65293) >> 8, 255 & var38 >> 8);
+              SavedDataQuery.fillHalfBlendGouraudTriangle(var24, var23, var22, 255 & var39 >> 8, var38 >> 16, var27, var39 >> 16, var26, var25, -15733, 255 & var39, 255 & var37, var37 >> 16, var38 & 255, (var37 & 65293) >> 8, 255 & var38 >> 8);
             }
           }
           return;
@@ -186,13 +186,13 @@ final class ShipHullGeometry {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8_ref = decompiledCaughtException;
           RuntimeException stackIn_55_0 = var8_ref;
-          StringBuilder stackIn_55_1 = new StringBuilder().append("uk.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          StringBuilder stackIn_55_1 = new StringBuilder().append("uk.A(").append(highlightY).append(',').append(guard).append(',').append(lightX).append(',').append(highlightX).append(',').append(highlightZ).append(',');
+          if (mesh == null) {
             stackIn_56_2 = "null";
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(lightZ).append(',').append(lightY).append(')').toString());
         }
     }
 

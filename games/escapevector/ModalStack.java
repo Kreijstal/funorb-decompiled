@@ -85,11 +85,11 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final static boolean a(boolean param0) {
-        if (param0) {
+    final static boolean canResizeViewport(boolean guard) {
+        if (guard) {
           return false;
         }
-        boolean stackIn_6_0 = (DirectByteStorage.field_n != null) && (DirectByteStorage.field_n.c(124));
+        boolean stackIn_6_0 = (DirectByteStorage.field_n != null) && (DirectByteStorage.field_n.canResizeViewport(124));
         return stackIn_6_0;
     }
 

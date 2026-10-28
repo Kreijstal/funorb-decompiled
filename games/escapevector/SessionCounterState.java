@@ -58,7 +58,7 @@ final class SessionCounterState {
           }
           for (int var6 = var2_int; var6 < var3; var6++) {
             int var7 = text.charAt(var6);
-            if (EmailAvailabilityRequest.a((char) var7, -11217)) {
+            if (EmailAvailabilityRequest.isExtendedAccountNameCharacter((char) var7, -11217)) {
               int var8 = TickClock.normalizeAccountCharacter(227, (char) var7);
               if (0 != var8) {
                 StringBuilder discarded$0 = var5.append((char) var8);

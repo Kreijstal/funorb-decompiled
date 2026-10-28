@@ -11,8 +11,8 @@ abstract class MouseWheelInput {
 
     abstract int pollRotation(int guard);
 
-    final static void b(byte param0) {
-        if (param0 != 76) {
+    final static void advanceSessionCounters(byte guard) {
+        if (guard != 76) {
           return;
         }
         if (null != SocketJs5Transport.field_r) {

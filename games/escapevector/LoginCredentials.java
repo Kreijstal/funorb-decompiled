@@ -76,8 +76,8 @@ abstract class LoginCredentials {
         }
     }
 
-    final static void b(int param0) {
-        if (param0 < 82) {
+    final static void advanceSessionCounters(int guard) {
+        if (guard < 82) {
           return;
         }
         if (SocketJs5Transport.field_r != null) {

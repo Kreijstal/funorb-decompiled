@@ -23,7 +23,7 @@ abstract class IndexedSpriteState {
         field_b = null;
     }
 
-    final static void a(int param0) {
+    final static void renderLogoMeshes(int guard) {
         int var19 = EscapeVector.obfuscationControl;
         try {
           SpriteArchiveSupport.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
@@ -53,8 +53,8 @@ abstract class IndexedSpriteState {
           int var7Lifetime1 = 0;
           int var8Lifetime1 = AccountNoticeKind.sinQ16(10758, var6Lifetime1) >> 8;
           int var9Lifetime1 = EditableTextWidget.cosQ16(-127, var6Lifetime1) >> 8;
-          if (param0 >= -107) {
-            IndexedSpriteState.a(56);
+          if (guard >= -107) {
+            IndexedSpriteState.renderLogoMeshes(56);
           }
           if (GzipDecoder.field_d != -1 &&
             -1 != UiContainer.field_y) {
@@ -87,28 +87,28 @@ abstract class IndexedSpriteState {
               TerrainMaskSupport.field_c[var18] = TerrainMaskSupport.field_c[var18] + SectorCacheStore.field_c[var15][var18];
             }
             MeshProjectionSupport.projectAndBucketMesh(true, TerrainMaskSupport.field_c, false, SpriteArchiveSupport.field_a, false, true, var17);
-            ShipHullGeometry.a(var13Lifetime1, -16711760, var7Lifetime1, var12Lifetime1, var14, var17, var9Lifetime1, var8Lifetime1);
+            ShipHullGeometry.drawLitMesh(var13Lifetime1, -16711760, var7Lifetime1, var12Lifetime1, var14, var17, var9Lifetime1, var8Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "fi.F(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "fi.F(" + guard + ')');
         }
     }
 
-    final static void a(LegacyButton[] param0, int param1) {
+    final static void setLegacyButtonColors(LegacyButton[] buttons, int startIndex) {
         String stackIn_13_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          if (param0 == null) {
+          if (buttons == null) {
             return;
           }
           int[] var9 = new int[]{3170352, 8421504, 8421504};
           int[] var3 = new int[]{6340704, 16777215, 16777215};
           int[] var4 = new int[]{6340704, 16777215, 16777215};
-          LegacyButton[] var5 = param0;
-          for (int var6 = param1; var6 < var5.length; var6++) {
+          LegacyButton[] var5 = buttons;
+          for (int var6 = startIndex; var6 < var5.length; var6++) {
             LegacyButton var7 = var5[var6];
             if (var7 != null) {
               var7.setColors(var3, var9, (byte) -122, var4);
@@ -120,12 +120,12 @@ abstract class IndexedSpriteState {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var2;
           StringBuilder stackIn_12_1 = new StringBuilder().append("fi.E(");
-          if (param0 == null) {
+          if (buttons == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(startIndex).append(')').toString());
         }
     }
 

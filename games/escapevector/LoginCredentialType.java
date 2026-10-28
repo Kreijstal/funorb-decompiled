@@ -7,14 +7,14 @@ final class LoginCredentialType {
     static Sprite[] field_f;
     int wireId;
     static String field_e;
-    static ResourceArchive field_a;
+    static ResourceArchive languageArchive;
 
     public static void releaseStatics(int guard) {
         field_c = null;
         field_e = null;
         int var1 = 22 % ((-65 - guard) / 36);
         field_f = null;
-        field_a = null;
+        languageArchive = null;
     }
 
     public final String toString() {
@@ -70,9 +70,9 @@ final class LoginCredentialType {
         String stackIn_7_2 = null;
         try {
           if (guard) {
-            field_a = (ResourceArchive) null;
+            languageArchive = (ResourceArchive) null;
           }
-          boolean stackIn_3_0 = RatingQuery.a(10, (byte) 84, true, text);
+          boolean stackIn_3_0 = RatingQuery.isIntText(10, (byte) 84, true, text);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,8 +136,8 @@ final class LoginCredentialType {
         }
     }
 
-    final static void b(int param0) {
-        if (param0 != 0) {
+    final static void advanceSessionCounters(int guard) {
+        if (guard != 0) {
           LoginCredentialType.releaseStatics(115);
           if (SocketJs5Transport.field_r != null) {
             SocketJs5Transport.field_r.advanceCounters((byte) -127);

@@ -17,27 +17,27 @@ final class ScoreSubmission extends IntrusiveNode {
     public static void releaseStatics(int guard) {
         field_h = null;
         if (guard != 65535) {
-          ScoreSubmission.a(false, false, (byte) -31, false);
+          ScoreSubmission.discardPendingDataText(false, false, (byte) -31, false);
         }
     }
 
-    final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
-        if (param2 != -112) {
+    final static String discardPendingDataText(boolean achievements, boolean score, byte guard, boolean progress) {
+        if (guard != -112) {
           return (String) null;
         }
         int var4 = 0;
-        if (param0) {
+        if (achievements) {
           var4 += 4;
         }
-        if (param1) {
+        if (score) {
           var4 += 2;
-          if (param3) {
+          if (progress) {
             var4++;
             return IntrusiveDequeCursor.field_c[var4];
           }
           return IntrusiveDequeCursor.field_c[var4];
         }
-        if (!param3) {
+        if (!progress) {
           return IntrusiveDequeCursor.field_c[var4];
         }
         var4++;

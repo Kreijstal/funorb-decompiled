@@ -60,21 +60,21 @@ final class MarkerSliderPainter implements WidgetPainter {
         }
     }
 
-    final static SimulatorSpriteAssets a(int param0, ResourceArchive param1, ResourceArchive param2, int[] param3) {
+    final static SimulatorSpriteAssets loadSimulatorAssets(int guard, ResourceArchive memberArchive, ResourceArchive plainArchive, int[] key) {
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
         try {
           if (null == QuickChatDynamicCommand.field_e) {
-            MembershipPromotionSupport.field_c = InstructionsScreen.createSpriteLoadTasks(0, TextLayoutLine.field_f, BitCountSupport.field_g, param1, 1, param3, InstructionsScreen.simulatorBackgroundNames);
+            MembershipPromotionSupport.field_c = InstructionsScreen.createSpriteLoadTasks(0, TextLayoutLine.field_f, BitCountSupport.field_g, memberArchive, 1, key, InstructionsScreen.simulatorBackgroundNames);
             int[] var6 = (int[]) null;
-            HudMessage.field_k = InstructionsScreen.createSpriteLoadTasks(0, IntroFrameRenderer.field_b, CipherPacketBuffer.field_q, param2, 0, (int[]) null, MarkerSlider.field_L);
-            EmailValidationError.field_b = new SpriteLoadTask(param1, NameAvailabilityResultSupport.field_e, Js5Transport.field_i, 1, SelfDestructEffects.field_n, param3);
+            HudMessage.field_k = InstructionsScreen.createSpriteLoadTasks(0, IntroFrameRenderer.field_b, CipherPacketBuffer.field_q, plainArchive, 0, (int[]) null, MarkerSlider.field_L);
+            EmailValidationError.field_b = new SpriteLoadTask(memberArchive, NameAvailabilityResultSupport.field_e, Js5Transport.field_i, 1, SelfDestructEffects.field_n, key);
             QuickChatDynamicCommand.field_e = new SimulatorSpriteAssets();
             Object stackIn_3_0 = null;
             return (SimulatorSpriteAssets) (stackIn_3_0);
           }
-          if (param0 != 1) {
+          if (guard != 1) {
             String var5 = (String) null;
             MarkerSliderPainter.updateHoverText((byte) 82, (String) null);
           }
@@ -87,20 +87,20 @@ final class MarkerSliderPainter implements WidgetPainter {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var4;
-          StringBuilder stackIn_13_1 = new StringBuilder().append("ve.D(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_13_1 = new StringBuilder().append("ve.D(").append(guard).append(',');
+          if (memberArchive == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param2 == null) {
+          if (plainArchive == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
           StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
-          if (param3 == null) {
+          if (key == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
@@ -109,10 +109,10 @@ final class MarkerSliderPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void showLoginDialog(int guard, boolean showCreateAccount, boolean allowGuest) {
         String var4 = (String) null;
-        QuickChatPhraseCache.showLoginDialog((String) null, param2, 64, param1);
-        int var3 = 104 / ((31 - param0) / 61);
+        QuickChatPhraseCache.showLoginDialog((String) null, allowGuest, 64, showCreateAccount);
+        int var3 = 104 / ((31 - guard) / 61);
     }
 
     final static ResourceArchive createArchive(int param0, int param1, boolean param2, int param3, boolean param4) {

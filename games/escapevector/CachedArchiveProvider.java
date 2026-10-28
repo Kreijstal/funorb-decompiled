@@ -202,9 +202,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (PcmResampler.field_h.key == null) {
           return;
         }
-        UsernameCredentials.field_h = AccountRequestDialog.a(PcmResampler.field_h.key, StatefulTextPainter.field_u, UsernameCredentials.field_h, UiContainer.field_B, (byte) 112);
+        UsernameCredentials.field_h = AccountRequestDialog.loadMemberCampaigns(PcmResampler.field_h.key, StatefulTextPainter.field_u, UsernameCredentials.field_h, UiContainer.field_B, (byte) 112);
         if (FrameCadenceSupport.field_b == null) {
-          FrameCadenceSupport.field_b = MarkerSliderPainter.a(1, StatefulTextPainter.field_u, IndexedSpriteState.field_j, PcmResampler.field_h.key);
+          FrameCadenceSupport.field_b = MarkerSliderPainter.loadSimulatorAssets(1, StatefulTextPainter.field_u, IndexedSpriteState.field_j, PcmResampler.field_h.key);
         }
         if (null != FrameCadenceSupport.field_b) {
           PcmResampler.field_h = null;
@@ -528,7 +528,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               int var6 = LoginMethod.legacyMenuTextWidth(98, Js5NetworkRequest.field_I[var3_int], true);
               var4 = var4 + CheckboxPainter.field_s;
               int var7 = -(var6 >> 1) + ClientException.field_e;
-              if (DualLinkNode.a(x, (AchievementTracker.field_k << 1) + IntroFrameRenderer.field_a, guard ^ -123, var4, -MembershipPromotionScreen.field_k + var7, (MembershipPromotionScreen.field_k << 1) + var6, y)) {
+              if (DualLinkNode.pointInRectangle(x, (AchievementTracker.field_k << 1) + IntroFrameRenderer.field_a, guard ^ -123, var4, -MembershipPromotionScreen.field_k + var7, (MembershipPromotionScreen.field_k << 1) + var6, y)) {
                 int stackIn_8_0 = var5;
                 return stackIn_8_0;
               }

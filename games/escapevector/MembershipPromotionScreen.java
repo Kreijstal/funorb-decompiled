@@ -241,7 +241,7 @@ final class MembershipPromotionScreen {
         try {
           int var4_int = archive.findGroupId(-1, groupName);
           int var5 = archive.findFileId(var4_int, fileName, guard);
-          Sprite stackIn_1_0 = EditableTextWidget.a(var4_int, var5, archive, (byte) 9);
+          Sprite stackIn_1_0 = EditableTextWidget.loadRgbSprite(var4_int, var5, archive, (byte) 9);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -455,7 +455,7 @@ final class MembershipPromotionScreen {
         DraggableWidget.field_F = true;
         DialWidget.field_H = true;
         Checkbox.field_F.closeAllPanels(17415);
-        UiTheme.a((byte) 119, DualLinkNode.field_h, false);
+        UiTheme.showAccountRequest((byte) 119, DualLinkNode.field_h, false);
     }
 
     private final int hitTest(int x, int y, int guard) {

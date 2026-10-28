@@ -22,9 +22,9 @@ final class ClientException extends RuntimeException {
         field_d = null;
     }
 
-    final static boolean a(int param0) {
-        if (param0 != -31879) {
-          ClientException.a(21, -45);
+    final static boolean hasResponseConnection(int guard) {
+        if (guard != -31879) {
+          ClientException.flushAccountPackets(21, -45);
           if (TextLayout.field_c == null) {
             return false;
           }
@@ -47,12 +47,12 @@ final class ClientException extends RuntimeException {
         this.cause = param0;
     }
 
-    final static EmailValidationError a(String param0, int param1) {
+    final static EmailValidationError validateDomain(String domain, int startIndex) {
         EmailValidationError var7 = null;
         String stackIn_22_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          int var2_int = param0.length();
+          int var2_int = domain.length();
           if (var2_int == 0) {
             EmailValidationError stackIn_4_0 = ResourceArchive.field_d;
             return stackIn_4_0;
@@ -61,20 +61,20 @@ final class ClientException extends RuntimeException {
             EmailValidationError stackIn_7_0 = EmailAvailabilityRequest.field_c;
             return stackIn_7_0;
           }
-          String[] var3 = ModalPanel.splitString(-128, param0, '.');
+          String[] var3 = ModalPanel.splitString(-128, domain, '.');
           if (var3.length < 2) {
             EmailValidationError stackIn_10_0 = ResourceArchive.field_d;
             return stackIn_10_0;
           }
           String[] var4 = var3;
-          int var5 = param1;
+          int var5 = startIndex;
           while (true) {
             if (var4.length <= var5) {
               EmailValidationError stackIn_18_0 = InputGlyphSupport.rejectNumericDomainSuffix(var3[var3.length - 1], 0);
               return stackIn_18_0;
             }
             String var6 = var4[var5];
-            var7 = StrongCacheEntry.validateDomainLabel(var6, param1 - 116);
+            var7 = StrongCacheEntry.validateDomainLabel(var6, startIndex - 116);
             if (var7 == null) {
               var5++;
               continue;
@@ -88,22 +88,22 @@ final class ClientException extends RuntimeException {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_21_0 = var2;
           StringBuilder stackIn_21_1 = new StringBuilder().append("rn.B(");
-          if (param0 == null) {
+          if (domain == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(startIndex).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void flushAccountPackets(int keepaliveOpcode, int guard) {
         try {
-          if (TextLayout.field_c != null && (0 > param0 ||
+          if (TextLayout.field_c != null && (0 > keepaliveOpcode ||
             AccountFormStage.field_d == ThreeSliceButtonPainter.field_t)) {
             if (QuickChatDynamicCommand.outgoingPackets.position == 0 &&
               (10000L + FrameworkLoadingStatus.field_c) < MonotonicClockSupport.monotonicMillis(128)) {
-              QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(param0, true);
+              QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(keepaliveOpcode, true);
             }
             if (0 < QuickChatDynamicCommand.outgoingPackets.position) {
               try {
@@ -116,7 +116,7 @@ final class ClientException extends RuntimeException {
               }
               QuickChatDynamicCommand.outgoingPackets.position = 0;
             }
-            if (param1 == 30785) {
+            if (guard == 30785) {
               return;
             }
             ClientException.releaseStatics(true);

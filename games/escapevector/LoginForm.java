@@ -23,7 +23,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             MembershipPromotionScreen.showRegistrationPanel((byte) -83);
           } else if (this.secondaryButton == button) {
             if (this.field_K) {
-              ByteStorage.b(-54);
+              ByteStorage.requestQuit(-54);
             } else if (this.field_P) {
               AnimatedPathMarker.showAccountChoice(true);
             } else {
@@ -133,7 +133,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           ByteStorage.logoMeshes = new TriangleMesh[var3];
           SectorCacheStore.field_c = new int[var3][];
           if (guard < 41) {
-            LoginForm.a(82, (byte) -78);
+            LoginForm.initialLevelSelection(82, (byte) -78);
           }
           for (int var4 = 0; var3 > var4; var4++) {
             ByteStorage.logoMeshes[var4] = IntegerParseSupport.decodePackedMesh(-127, var8);
@@ -176,12 +176,12 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         return "";
     }
 
-    final static int a(int param0, byte param1) {
-        int var2 = GameProgressSupport.field_c.unlockedLevelIndex(29386, param0);
-        if (param1 != 121) {
+    final static int initialLevelSelection(int mode, byte guard) {
+        int var2 = GameProgressSupport.field_c.unlockedLevelIndex(29386, mode);
+        if (guard != 121) {
           field_O = (String) null;
         }
-        int var3 = SpriteFactorySupport.levelCount(false, param0);
+        int var3 = SpriteFactorySupport.levelCount(false, mode);
         if (var2 >= var3) {
           var2 = 0;
         } else if (var2 == 0) {
@@ -216,7 +216,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         if (ArchiveSpriteLoader.isAlternateLoginFlow(8192) ||
           !(this.identifierField.text.length() <= 0) &&
           !(this.passwordField.text.length() <= 0)) {
-          RasterSnapshot.a(0, this.passwordField.text, this.identifierField.text);
+          RasterSnapshot.requestLogin(0, this.passwordField.text, this.identifierField.text);
         }
     }
 

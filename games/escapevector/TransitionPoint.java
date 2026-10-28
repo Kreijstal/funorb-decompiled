@@ -13,7 +13,7 @@ final class TransitionPoint {
         String stackIn_33_2 = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
-          int var7_int = LaserGateSpan.a((byte) 57, length);
+          int var7_int = LaserGateSpan.roundUpToEight((byte) 57, length);
           if (null == SpriteCheckboxPainter.field_d) {
             SpriteCheckboxPainter.field_d = new java.security.SecureRandom();
           }
@@ -101,8 +101,8 @@ final class TransitionPoint {
               NameSuggestionsPanel.field_H = false;
               var3_int = true;
             }
-            NameSuggestionsPanel.a((byte) 9, (var3_int), TileSpriteCacheEntry.field_f, AnimatedPathMarker.commonUiLoadProgress(-111), FrameworkLoadingStatus.loadingMessage(1));
-          } else if (!AccountTermsPanel.l(guard - 89)) {
+            NameSuggestionsPanel.drawLoadingBar((byte) 9, (var3_int), TileSpriteCacheEntry.field_f, AnimatedPathMarker.commonUiLoadProgress(-111), FrameworkLoadingStatus.loadingMessage(1));
+          } else if (!AccountTermsPanel.introFinished(guard - 89)) {
             SoftwareRasterizer.clearFramebuffer();
             IntroFrameRenderer.drawIntroFrame(240, 320, guard ^ 72);
             SecondaryNodeHashTable.presentRaster(canvas, 0, -1, 0);

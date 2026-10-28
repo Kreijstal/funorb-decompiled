@@ -9,21 +9,21 @@ final class LaserGateSpan extends IntrusiveNode {
     int y;
     int leftX;
 
-    final static int a(byte param0, int param1) {
-        if (param0 == 57) {
+    final static int roundUpToEight(byte guard, int value) {
+        if (guard == 57) {
           int var2 = 0;
-          if ((param1 & 7) != 0) {
-            var2 = -(param1 & 7) + 8;
+          if ((value & 7) != 0) {
+            var2 = -(value & 7) + 8;
           }
-          int var3 = var2 + param1;
+          int var3 = var2 + value;
           return var3;
         }
-        LaserGateSpan.a((byte) 123, -70);
+        LaserGateSpan.roundUpToEight((byte) 123, -70);
         int var2Lifetime1 = 0;
-        if ((param1 & 7) != 0) {
-          var2Lifetime1 = -(param1 & 7) + 8;
+        if ((value & 7) != 0) {
+          var2Lifetime1 = -(value & 7) + 8;
         }
-        int var3Lifetime1 = var2Lifetime1 + param1;
+        int var3Lifetime1 = var2Lifetime1 + value;
         return var3Lifetime1;
     }
 

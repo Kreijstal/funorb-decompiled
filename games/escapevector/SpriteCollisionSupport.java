@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SpriteCollisionSupport {
-    final static boolean a(Sprite param0, int param1, int param2, Sprite param3, int param4, int param5) {
-        param1 = param1 + param0.offsetX;
-        param4 = param4 + param3.offsetX;
-        int var6 = param4 - param1;
-        int var7 = param0.width;
-        if (var6 < param0.width) {
-          int var8 = param3.width;
-          if (var6 > -param3.width) {
-            param2 = param2 + param0.offsetY;
-            param5 = param5 + param3.offsetY;
-            int var9 = param5 - param2;
-            int var10 = param0.height;
-            if (var9 < param0.height) {
-              int var11 = param3.height;
-              if (var9 > -param3.height) {
+    final static boolean spritesOverlap(Sprite first, int firstX, int firstY, Sprite second, int secondX, int secondY) {
+        firstX = firstX + first.offsetX;
+        secondX = secondX + second.offsetX;
+        int var6 = secondX - firstX;
+        int var7 = first.width;
+        if (var6 < first.width) {
+          int var8 = second.width;
+          if (var6 > -second.width) {
+            firstY = firstY + first.offsetY;
+            secondY = secondY + second.offsetY;
+            int var9 = secondY - firstY;
+            int var10 = first.height;
+            if (var9 < first.height) {
+              int var11 = second.height;
+              if (var9 > -second.height) {
                 int stackIn_9_0 = (var6 > 0) ? var6 : 0;
                 int var12 = stackIn_9_0;
                 int var13 = var6 + var8;
@@ -35,8 +35,8 @@ final class SpriteCollisionSupport {
                 int var17 = var7 - var13;
                 int var18 = (var14 - var9) * var8 + (var12 - var6);
                 int var19 = var8 - var13;
-                int[] var30 = param0.pixels;
-                int[] var31 = param3.pixels;
+                int[] var30 = first.pixels;
+                int[] var31 = second.pixels;
                 for (int var22 = var15; var22 > 0; var22--) {
                   for (int var23 = var13; var23 > 0; var23--) {
                     if (var30[var16] != 0 &&

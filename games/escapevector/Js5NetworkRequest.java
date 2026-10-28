@@ -15,11 +15,11 @@ final class Js5NetworkRequest extends ArchiveRequest {
     static String field_B;
     static int field_x;
 
-    final static boolean a(byte param0, int param1) {
-        if (param1 == 13) {
+    final static boolean isMenuActionTriggered(byte guard, int keyCode) {
+        if (keyCode == 13) {
           return true;
         }
-        if (param0 == 15) {
+        if (guard == 15) {
           return HighscorePlayerRecord.field_d.isInitialActivation((byte) -18);
         }
         Js5NetworkRequest.releaseStatics((byte) 54);

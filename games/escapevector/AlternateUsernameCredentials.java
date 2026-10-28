@@ -42,11 +42,11 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         super(param0, param1);
     }
 
-    final static int[] d(int param0) {
+    final static int[] achievementWords(int guard) {
         if (null != SocketJs5Transport.field_r) {
           return SocketJs5Transport.field_r.achievementWords(0);
         }
-        int var1 = -48 % ((param0 - 76) / 47);
+        int var1 = -48 % ((guard - 76) / 47);
         return null;
     }
 

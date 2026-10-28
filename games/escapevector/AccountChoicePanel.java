@@ -47,8 +47,8 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         super.drawLayer(screenY, (byte) 99, layer, screenX);
     }
 
-    final static boolean a(byte param0) {
-        if (param0 >= -30) {
+    final static boolean canUseModeratorCheats(byte guard) {
+        if (guard >= -30) {
           field_H = -87;
           if (AccountSessionSupport.isGuestSession(-127)) {
             return false;
@@ -81,7 +81,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           if (guard == 1) {
             return;
           }
-          AccountChoicePanel.a((byte) -64);
+          AccountChoicePanel.canUseModeratorCheats((byte) -64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,14 +129,14 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         }
     }
 
-    final static int a(int param0, int param1) {
-        if (param0 != -8462) {
+    final static int availableModeIndex(int guard, int mode) {
+        if (guard != -8462) {
           return -107;
         }
-        if (!AchievementRecord.isModeAvailable(param1, -99)) {
+        if (!AchievementRecord.isModeAvailable(mode, -99)) {
           return -1;
         }
-        return param1;
+        return mode;
     }
 
     static {

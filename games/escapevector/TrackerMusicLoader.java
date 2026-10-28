@@ -10,9 +10,9 @@ final class TrackerMusicLoader {
         if (guard != 21654) {
           ScoreSubmission var3 = (ScoreSubmission) null;
           TrackerMusicLoader.enqueueScoreSubmission((ScoreSubmission) null, -66, (byte) -72);
-          return EmailAvailabilityRequest.a(character, -11217);
+          return EmailAvailabilityRequest.isExtendedAccountNameCharacter(character, -11217);
         }
-        return EmailAvailabilityRequest.a(character, -11217);
+        return EmailAvailabilityRequest.isExtendedAccountNameCharacter(character, -11217);
     }
 
     public static void releaseStatics(int guard) {

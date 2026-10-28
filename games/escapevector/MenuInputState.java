@@ -225,7 +225,7 @@ final class MenuInputState {
           IndexedSprite[] var14 = var6[var9];
           IndexedSprite[] var10 = var14;
           for (int var11_int = 0; var14.length > var11_int; var11_int++) {
-            var14[var11_int] = ValidationState.a(-50, var5[var9], var19[var11_int]);
+            var14[var11_int] = ValidationState.copyIndexedSpriteWithPalette(-50, var5[var9], var19[var11_int]);
           }
         }
         var9 = var17.height;

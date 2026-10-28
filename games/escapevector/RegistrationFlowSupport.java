@@ -18,7 +18,7 @@ final class RegistrationFlowSupport {
           }
           RegistrationRequestDialog var8 = new RegistrationRequestDialog(Checkbox.field_F, param0);
           Checkbox.field_F.pushPanel(var8, 48);
-          if (!SavedDataQuery.d(1000)) {
+          if (!SavedDataQuery.browserSessionMarkerSet(1000)) {
             AnimatedPanelFrame.field_a = param3;
             LoginStage.field_a = param5;
             SpriteState.field_y = null;
@@ -27,7 +27,7 @@ final class RegistrationFlowSupport {
             PauseMenuScreen.field_h = param6;
             AgeValidator.field_o = param2;
           } else {
-            var8.s(248);
+            var8.showRegistrationError(248);
           }
           if (!param1) {
             return true;

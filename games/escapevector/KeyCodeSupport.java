@@ -6,8 +6,8 @@ final class KeyCodeSupport {
     static int[] awtToGameKeyCodes;
     static char currentKeyCharacter;
 
-    final static boolean c(int param0) {
-        int var1 = 51 % ((param0 + 13) / 37);
+    final static boolean emailAvailabilityPending(int guard) {
+        int var1 = 51 % ((guard + 13) / 37);
         return !HighscorePlayerRecord.field_g.isComplete(0) ? true : false;
     }
 
@@ -18,11 +18,11 @@ final class KeyCodeSupport {
         }
     }
 
-    final static void a(int param0) {
+    final static void advanceSessionCounters(int guard) {
         if (SocketJs5Transport.field_r != null) {
           SocketJs5Transport.field_r.advanceCounters((byte) -122);
         }
-        if (param0 != 1) {
+        if (guard != 1) {
           KeyCodeSupport.releaseStatics(-49);
           return;
         }

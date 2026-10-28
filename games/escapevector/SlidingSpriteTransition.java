@@ -84,18 +84,18 @@ final class SlidingSpriteTransition {
           if (this.isComplete((byte) -7)) {
             this.elapsedTicks = this.durationTicks;
           }
-          this.alpha = ProgressQuery.a(256, this.durationTicks, 0, this.elapsedTicks, 64);
-          this.current.x = ProgressQuery.a(this.end.x, this.durationTicks, this.start.x, this.elapsedTicks, 64);
-          this.current.y = ProgressQuery.a(this.end.y, this.durationTicks, this.start.y, this.elapsedTicks, 64);
+          this.alpha = ProgressQuery.interpolateInt(256, this.durationTicks, 0, this.elapsedTicks, 64);
+          this.current.x = ProgressQuery.interpolateInt(this.end.x, this.durationTicks, this.start.x, this.elapsedTicks, 64);
+          this.current.y = ProgressQuery.interpolateInt(this.end.y, this.durationTicks, this.start.y, this.elapsedTicks, 64);
           return;
         }
         this.alpha = -19;
         if (this.isComplete((byte) -7)) {
           this.elapsedTicks = this.durationTicks;
         }
-        this.alpha = ProgressQuery.a(256, this.durationTicks, 0, this.elapsedTicks, 64);
-        this.current.x = ProgressQuery.a(this.end.x, this.durationTicks, this.start.x, this.elapsedTicks, 64);
-        this.current.y = ProgressQuery.a(this.end.y, this.durationTicks, this.start.y, this.elapsedTicks, 64);
+        this.alpha = ProgressQuery.interpolateInt(256, this.durationTicks, 0, this.elapsedTicks, 64);
+        this.current.x = ProgressQuery.interpolateInt(this.end.x, this.durationTicks, this.start.x, this.elapsedTicks, 64);
+        this.current.y = ProgressQuery.interpolateInt(this.end.y, this.durationTicks, this.start.y, this.elapsedTicks, 64);
     }
 
     final static boolean isReflectionCheckReady(byte guard) {

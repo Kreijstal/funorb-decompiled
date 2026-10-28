@@ -302,7 +302,7 @@ final class InstructionsScreen {
     }
 
     private final Sprite[] spriteSetForMode(int guard, int mode) {
-        if (EmailSyntaxValidator.a(mode, -2)) {
+        if (EmailSyntaxValidator.acceptsPrimaryButton(mode, -2)) {
           Sprite[] var3 = AchievementThresholdRule.objectSprites;
           return this.powerupSprites(var3, guard + 4802);
         }

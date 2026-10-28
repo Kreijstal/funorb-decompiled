@@ -14,7 +14,7 @@ final class AccountSessionStatusSupport {
             return false;
           }
           if (!SpriteState.guestSession) {
-            return !HudMessage.a(true) ? true : false;
+            return !HudMessage.hasLoggedInConnection(true) ? true : false;
           }
           return false;
         }
@@ -22,7 +22,7 @@ final class AccountSessionStatusSupport {
           return false;
         }
         if (!SpriteState.guestSession) {
-          return !HudMessage.a(true) ? true : false;
+          return !HudMessage.hasLoggedInConnection(true) ? true : false;
         }
         return false;
     }

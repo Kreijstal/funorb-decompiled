@@ -10,9 +10,9 @@ final class RasterRestoreSupport {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer.bind(var1.field_p, var1.field_q, var1.field_i);
-        SoftwareRasterizer.setClip(var1.field_o, var1.field_n, var1.field_r, var1.field_h);
-        var1.field_p = null;
+        SoftwareRasterizer.bind(var1.pixels, var1.width, var1.height);
+        SoftwareRasterizer.setClip(var1.clipLeft, var1.clipTop, var1.clipRight, var1.clipBottom);
+        var1.pixels = null;
         TextWidgetPainter.field_d.addLast(-12328, var1);
         int var2 = 108 % ((guard - 69) / 38);
     }

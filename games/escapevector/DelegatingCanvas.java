@@ -48,7 +48,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (guard) {
             return false;
           }
-          if (!RockBuster.a(-91, password, accountName)) {
+          if (!RockBuster.containsIdentifierIgnoringUnderscores(-91, password, accountName)) {
             return true;
           }
           return false;

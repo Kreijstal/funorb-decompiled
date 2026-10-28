@@ -24,30 +24,30 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryNext = null;
     }
 
-    final static String e(int param0) {
+    final static String currentAccountIdentifier(int guard) {
         if (EmailAvailabilityValidator.field_o == InstructionsScreen.field_q) {
           return PauseMenuScreen.field_h;
         }
         if (EmailAvailabilityValidator.field_o == MeshMaterial.field_b) {
           return SpriteStrip.field_j;
         }
-        if (!HighscorePlayerRecord.field_g.isComplete(param0)) {
+        if (!HighscorePlayerRecord.field_g.isComplete(guard)) {
           return SpriteStrip.field_j;
         }
         return StrongCacheEntry.field_v;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param2 != -1) {
+    final static boolean pointInRectangle(int x, int height, int guard, int top, int left, int width, int y) {
+        if (guard != -1) {
           field_k = (int[]) null;
         }
-        boolean stackIn_8_0 = (param0 >= param4) && (param5 + param4 > param0) && (param6 >= param3) && (param3 + param1 > param6);
+        boolean stackIn_8_0 = (x >= left) && (width + left > x) && (y >= top) && (top + height > y);
         return stackIn_8_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void initializeObjectSpriteSets(int guard, int theme) {
         int var9 = EscapeVector.obfuscationControl;
-        boolean var2_int = (4 == param1);
+        boolean var2_int = (4 == theme);
         Sprite[] var3 = AchievementThresholdRule.objectSprites;
         if (var2_int) {
           var3 = ArchiveProvider.field_b;
@@ -56,7 +56,7 @@ class DualLinkNode extends IntrusiveNode {
           return;
         }
         Sprite[] var4 = StripedProgressBar.objectGlowSprites;
-        if (param0 != -1) {
+        if (guard != -1) {
           field_h = (String) null;
         }
         if (var4 == null) {
@@ -72,30 +72,30 @@ class DualLinkNode extends IntrusiveNode {
             SpriteOffset var8 = new SpriteOffset(ClientException.field_b[var5], ClientException.field_f[var5]);
             AccountRegistrationPanel.objectSpriteSets[var5] = new ObjectSpriteSet(var6, var7, var8);
           }
-          TerrainMaskSupport.a(105);
+          TerrainMaskSupport.initializeRotatedObjectOffsets(105);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fl.CA(" + param0 + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fl.CA(" + guard + ',' + theme + ')');
         }
     }
 
-    final static void a(String param0, SystemTaskService param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        IntPoint.field_d = param1;
-        SeekerPulseStream.field_l = param7;
-        AgeValidator.field_n = param8;
-        if (param3 != -22183) {
+    final static void initializeJs5(String serverHost, SystemTaskService taskService, int handshakeValue, int guard, int language, int serverNumber, int gameCrc, int secondaryPort, int primaryPort) {
+        IntPoint.field_d = taskService;
+        SeekerPulseStream.field_l = secondaryPort;
+        AgeValidator.field_n = primaryPort;
+        if (guard != -22183) {
           return;
         }
         try {
-          NameSuggestionsPanel.field_N = param2;
-          StatefulTextPainter.field_y = param4;
-          TrackerMusicDefinition.field_j = param5;
-          ReflectionCheck.field_n = param6;
-          SpriteArchiveSupport.field_c = param0;
+          NameSuggestionsPanel.field_N = handshakeValue;
+          StatefulTextPainter.field_y = language;
+          TrackerMusicDefinition.field_j = serverNumber;
+          ReflectionCheck.field_n = gameCrc;
+          SpriteArchiveSupport.field_c = serverHost;
           SelfDestructEffects.field_j = (Js5Transport) ((Object) new SocketJs5Transport());
-          ShipHullGeometry.field_b = new DiskCacheWorker(param1);
+          ShipHullGeometry.field_b = new DiskCacheWorker(taskService);
           FullscreenFocusCanvas.field_e = new Js5ArchiveManager(SelfDestructEffects.field_j, ShipHullGeometry.field_b);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fl.W(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fl.W(" + (serverHost != null ? "{...}" : "null") + ',' + (taskService != null ? "{...}" : "null") + ',' + handshakeValue + ',' + guard + ',' + language + ',' + serverNumber + ',' + gameCrc + ',' + secondaryPort + ',' + primaryPort + ')');
         }
     }
 

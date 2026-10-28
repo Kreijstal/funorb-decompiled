@@ -18,7 +18,7 @@ final class SeekerMine extends IntrusiveNode {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
-          int var3_int = CheckboxPainter.a(font, guard - 16777215);
+          int var3_int = CheckboxPainter.spaceWidth(font, guard - 16777215);
           int var4 = 4 * var3_int + font.stringWidth(text);
           if (guard == 16777215) {
             int stackIn_4_0 = var4;
@@ -49,10 +49,10 @@ final class SeekerMine extends IntrusiveNode {
     final static void showAccountLogin(byte guard, boolean showCreateAccount) {
         if (guard > -97) {
           SeekerMine.showAccountLogin((byte) 51, false);
-          MarkerSliderPainter.a(-58, showCreateAccount, false);
+          MarkerSliderPainter.showLoginDialog(-58, showCreateAccount, false);
           return;
         }
-        MarkerSliderPainter.a(-58, showCreateAccount, false);
+        MarkerSliderPainter.showLoginDialog(-58, showCreateAccount, false);
     }
 
     public static void releaseStatics(boolean guard) {

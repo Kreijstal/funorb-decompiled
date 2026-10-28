@@ -8,7 +8,7 @@ final class ObjectSpriteSet {
     private Sprite[] glowSprites;
     private SpriteOffset[] glowOffsets;
     static TrackerMusicDefinition[] field_d;
-    static boolean field_b;
+    static boolean canvasFocused;
 
     private final Sprite cropRotatedSprite(byte guard, int angle, Sprite original, Sprite padded, Sprite rotated) {
         String stackIn_7_2 = null;

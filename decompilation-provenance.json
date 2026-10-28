@@ -6035,17 +6035,17 @@
       "inputTreeSha256": "82b7291a0348217948a2570cdb137b669e6eac075c4ee17a3d81d9ca9e38e18d",
       "sources": {
         "files": 348,
-        "sha256": "b9d7db0d8d138ea33cedb90e660d8663530069b454be2183eb59a3e4323d83d7"
+        "sha256": "2cb7493ca9183f6bb7a43b2accf244947f9c06e4f5186c2ddb3e0283040687ec"
       },
       "dictionary": {
         "path": "decompilation/escapevector-naming.json",
-        "sha256": "4985ca61bce012bbc1e032f37083f67b2393c09956e2cbdb6b3e40e4d16df1d6"
+        "sha256": "18d34128fad455d5f1e65f997c3a2791e50651235b3394699ee9373748979f71"
       },
       "readingGuide": {
         "path": "games/escapevector/README.md",
-        "sha256": "acbfb176d9b48a3a1faf63ffd2e6c5ef331534dc929ebc03ebb6bea29cb1c269"
+        "sha256": "56ea8e4122ff0da8623929a1232661fb88fec65fdb0a6f19946eb96991fa7345"
       },
-      "rulesSha256": "6cb88108698e0863643edf174826cb7316ac89e1cd0923ea657ae37c6f7678bb",
+      "rulesSha256": "5f981fc5943f0e73d6deecc6ecc27a033b046869673e137e1e84a87b1d1a986b",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       },
@@ -11342,7 +11342,7 @@
         },
         "publishedSources": {
           "files": 348,
-          "sha256": "b9d7db0d8d138ea33cedb90e660d8663530069b454be2183eb59a3e4323d83d7"
+          "sha256": "2cb7493ca9183f6bb7a43b2accf244947f9c06e4f5186c2ddb3e0283040687ec"
         }
       },
       "fleacircus": {

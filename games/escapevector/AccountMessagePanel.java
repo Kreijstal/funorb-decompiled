@@ -128,7 +128,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
             }
             int var7 = this.buttonActions[var6_int];
             if (var7 != -1) {
-              WhirlpoolHasher.a(this.buttonActions[var6_int], 57);
+              WhirlpoolHasher.setAccountAction(this.buttonActions[var6_int], 57);
             } else {
               this.requestDialog.closeDialog(-18861);
             }

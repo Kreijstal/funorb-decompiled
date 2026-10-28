@@ -43,7 +43,7 @@ final class HighscoreTable {
         int var8 = EscapeVector.obfuscationControl;
         int[] var10 = this.query.intColumns[this.queryColumn];
         int[] var2 = var10;
-        int var3 = ProxySocketConnector.a(92, this.query.boardId);
+        int var3 = ProxySocketConnector.validModeIndex(92, this.query.boardId);
         if (guard <= 19) {
           int[] var9 = (int[]) null;
           int[] discarded$0 = this.scoreValues(false, (int[]) null, 43);
@@ -75,7 +75,7 @@ final class HighscoreTable {
         int var8 = EscapeVector.obfuscationControl;
         int[] var10 = this.query.intColumns[this.queryColumn];
         int[] var2 = var10;
-        int var3 = ProxySocketConnector.a(105, this.query.boardId);
+        int var3 = ProxySocketConnector.validModeIndex(105, this.query.boardId);
         if (guard <= 120) {
           int[] var9 = (int[]) null;
           int[] discarded$0 = this.scoreValues(true, (int[]) null, -69);
@@ -348,11 +348,11 @@ final class HighscoreTable {
           String[] var7 = new String[this.rowCount];
           String[] var3 = var7;
           for (int var4 = 0; var4 < boardIds.length; var4++) {
-            int var5 = ProxySocketConnector.a(107, boardIds[var4]);
+            int var5 = ProxySocketConnector.validModeIndex(107, boardIds[var4]);
             var7[var4] = this.difficultyLabel(-17651, var5);
           }
           if (this.appendSubmittedScore) {
-            int var4Lifetime1 = ProxySocketConnector.a(115, this.submittedScore.boardId);
+            int var4Lifetime1 = ProxySocketConnector.validModeIndex(115, this.submittedScore.boardId);
             var3[this.rowCount - 1] = this.difficultyLabel(-17651, var4Lifetime1);
           }
           String[] stackIn_10_0 = var3;
@@ -526,7 +526,7 @@ final class HighscoreTable {
           int[] var25 = this.toLevelValues((byte) 127);
           this.toLevelColumn = new LegacyMenuColumn(ByteArrayPoolSupport.field_c, var25);
           this.columns.addLast(-12328, this.toLevelColumn);
-          int[] var26 = this.scoreValues(true, this.query.intColumns[this.queryColumn], ProxySocketConnector.a(90, this.query.boardId));
+          int[] var26 = this.scoreValues(true, this.query.intColumns[this.queryColumn], ProxySocketConnector.validModeIndex(90, this.query.boardId));
           this.scoreColumn = new LegacyMenuColumn(GrowableIntList.field_f, var26);
           this.columns.addLast(-12328, this.scoreColumn);
           this.configureColumns((byte) -113);

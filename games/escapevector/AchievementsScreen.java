@@ -200,7 +200,7 @@ final class AchievementsScreen {
         if (guard != 2) {
           AchievementsScreen.releaseStatics(-84);
         }
-        WhirlpoolHasher.a(4, 43);
+        WhirlpoolHasher.setAccountAction(4, 43);
     }
 
     private final int[] layoutRowCenters(byte guard, int startY, int spacing, int rowCount) {
@@ -338,7 +338,7 @@ final class AchievementsScreen {
     }
 
     final int hitTest(int guard, int x, int y) {
-        int var4 = DebouncedValidator.a(y, 31, this.gridButtons[this.currentPage], x);
+        int var4 = DebouncedValidator.hitLegacyButtons(y, 31, this.gridButtons[this.currentPage], x);
         if (var4 >= 0) {
           return var4;
         }
@@ -358,7 +358,7 @@ final class AchievementsScreen {
           return this.mainMenuButton.actionId;
         }
         if (this.pageButtons != null) {
-          var4 = DebouncedValidator.a(y, 57, this.pageButtons, x);
+          var4 = DebouncedValidator.hitLegacyButtons(y, 57, this.pageButtons, x);
           if (var4 >= 0) {
             return var4;
           }
@@ -396,7 +396,7 @@ final class AchievementsScreen {
             HighscorePlayerRecord.field_d.selectFromKeyboard(false, this.mainMenuActionId);
           }
           this.playSelectionSound(20364);
-          var2 = (this.handleActivation((byte) -91, false, Js5NetworkRequest.a((byte) 15, PasswordValidator.field_n)));
+          var2 = (this.handleActivation((byte) -91, false, Js5NetworkRequest.isMenuActionTriggered((byte) 15, PasswordValidator.field_n)));
           return (var2);
         }
         if (guard >= -60) {
@@ -623,7 +623,7 @@ final class AchievementsScreen {
     private final boolean handlePointer(byte guard) {
         HighscorePlayerRecord.field_d.updatePointer(this.hitTest(-3, SessionCounterState.field_c, LoginDialog.field_ob), (byte) 119, this.hitTest(-3, GzipDecoder.field_d, UiContainer.field_y));
         this.playSelectionSound(20364);
-        boolean var2 = (this.handleActivation((byte) -91, true, Js5NetworkRequest.a((byte) 15, -1)));
+        boolean var2 = (this.handleActivation((byte) -91, true, Js5NetworkRequest.isMenuActionTriggered((byte) 15, -1)));
         int var3 = -122 / ((guard - 73) / 47);
         if (var2) {
           return (var2);
@@ -654,7 +654,7 @@ final class AchievementsScreen {
         if (var2 < 0) {
           return null;
         }
-        LegacyButton var3 = TetherHumStream.a(this.gridButtons[this.currentPage], var2, 0);
+        LegacyButton var3 = TetherHumStream.findLegacyButton(this.gridButtons[this.currentPage], var2, 0);
         if (var3 != null) {
           return var3;
         }

@@ -8,34 +8,34 @@ final class EmailValidationError {
     public static void releaseStatics(int guard) {
         if (guard != 31167) {
           SpriteLoadTask[] var2 = (SpriteLoadTask[]) null;
-          EmailValidationError.a(false, (SpriteLoadTask[]) null);
+          EmailValidationError.spritesFromTasks(false, (SpriteLoadTask[]) null);
         }
         field_b = null;
         field_a = null;
     }
 
-    final static boolean a(int param0) {
-        if (param0 != 23403) {
+    final static boolean ensureMasterIndex(int guard) {
+        if (guard != 23403) {
           EmailValidationError.releaseStatics(-66);
         }
         return FullscreenFocusCanvas.field_e.ensureMasterIndex(false);
     }
 
-    final static Sprite[] a(boolean param0, SpriteLoadTask[] param1) {
+    final static Sprite[] spritesFromTasks(boolean guard, SpriteLoadTask[] tasks) {
         String stackIn_15_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          if (!ConnectionSupport.loadAllSpriteTasks((byte) -73, param1)) {
+          if (!ConnectionSupport.loadAllSpriteTasks((byte) -73, tasks)) {
             Object stackIn_3_0 = null;
             return (Sprite[]) (stackIn_3_0);
           }
-          Sprite[] var3 = new Sprite[param1.length];
-          if (param0) {
+          Sprite[] var3 = new Sprite[tasks.length];
+          if (guard) {
             Sprite[] stackIn_6_0 = (Sprite[]) null;
             return stackIn_6_0;
           }
-          for (int var4 = 0; var4 < param1.length; var4++) {
-            var3[var4] = param1[var4].loadSprite(94);
+          for (int var4 = 0; var4 < tasks.length; var4++) {
+            var3[var4] = tasks[var4].loadSprite(94);
           }
           Sprite[] stackIn_11_0 = var3;
           return stackIn_11_0;
@@ -43,8 +43,8 @@ final class EmailValidationError {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_14_0 = var2;
-          StringBuilder stackIn_14_1 = new StringBuilder().append("tk.D(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_14_1 = new StringBuilder().append("tk.D(").append(guard).append(',');
+          if (tasks == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

@@ -20,29 +20,29 @@ final class RockBuster extends IntrusiveNode {
         int var1 = -26 / ((guard - 26) / 58);
     }
 
-    final static boolean a(int param0, String param1, String param2) {
+    final static boolean containsIdentifierIgnoringUnderscores(int guard, String password, String identifier) {
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
-          param2 = MouseWheelInput.replaceCharacter(-1, '_', param2, "");
-          String var3 = DynamicTerrainRenderer.reverseString(param2, false);
-          if (param0 >= -77) {
+          identifier = MouseWheelInput.replaceCharacter(-1, '_', identifier, "");
+          String var3 = DynamicTerrainRenderer.reverseString(identifier, false);
+          if (guard >= -77) {
             field_j = (Sprite) null;
           }
-          boolean stackIn_7_0 = (param1.indexOf(param2) != -1) || (param1.indexOf(var3) != -1);
+          boolean stackIn_7_0 = (password.indexOf(identifier) != -1) || (password.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var3_ref;
-          StringBuilder stackIn_10_1 = new StringBuilder().append("pi.B(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_10_1 = new StringBuilder().append("pi.B(").append(guard).append(',');
+          if (password == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (identifier == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

@@ -180,10 +180,10 @@ final class HuffmanDecoder {
 
     final static Sprite[] createFlatFrameTiles(int backgroundColor, int guard, int topLeftColor, int bottomRightColor) {
         if (guard == 1) {
-          return ArchiveProvider.a(topLeftColor, bottomRightColor, 1, 1, backgroundColor);
+          return ArchiveProvider.createBeveledFrameSprites(topLeftColor, bottomRightColor, 1, 1, backgroundColor);
         }
         HuffmanDecoder.releaseStatics((byte) 124);
-        return ArchiveProvider.a(topLeftColor, bottomRightColor, 1, 1, backgroundColor);
+        return ArchiveProvider.createBeveledFrameSprites(topLeftColor, bottomRightColor, 1, 1, backgroundColor);
     }
 
     private HuffmanDecoder() throws Throwable {

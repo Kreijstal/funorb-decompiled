@@ -14,7 +14,7 @@ final class AchievementThresholdRule {
         boolean var2 = false;
         int var3 = EscapeVector.obfuscationControl;
         try {
-          DialogueScreen var4 = DropTargetWidget.f((byte) -49);
+          DialogueScreen var4 = DropTargetWidget.firstDialogue((byte) -49);
           if (SimulatorSpriteAssets.field_h != 0) {
             if (!AccountSessionSupport.isGuestSession(-124)) {
               if (1 == SimulatorSpriteAssets.field_h) {
@@ -27,7 +27,7 @@ final class AchievementThresholdRule {
                 if (null != IntValueNode.field_i) {
                   TrackerMusicLoader.enqueueScoreSubmission(IntValueNode.field_i, 3, (byte) 101);
                 }
-                AchievementDefinition.a(0);
+                AchievementDefinition.showPendingSessionResults(0);
               }
             }
             SimulatorSpriteAssets.field_h = 0;
@@ -57,7 +57,7 @@ final class AchievementThresholdRule {
                   return;
                 }
               } else if (CheckboxPainter.field_n) {
-                ReflectionCheck.d((byte) -120);
+                ReflectionCheck.refreshHighscoresScreen((byte) -120);
                 var2 = (CanvasRenderSupport.field_a.update(-91));
                 if (var2) {
                   return;
@@ -70,7 +70,7 @@ final class AchievementThresholdRule {
               } else if (AlternateUsernameCredentials.field_q != null) {
                 QuickChatPhraseCache.advanceMenuTransition((byte) 127);
               } else if (null != SessionMenuSupport.field_c) {
-                RatingQuery.e(-46);
+                RatingQuery.updatePauseMenu(-46);
               } else {
                 if (LoginHandshakeSupport.field_d < 1000) {
                   LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;
