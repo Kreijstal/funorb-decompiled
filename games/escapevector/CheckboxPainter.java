@@ -61,7 +61,7 @@ final class CheckboxPainter implements WidgetPainter {
             enabled = enabled & var11.enabled;
           }
           int var7 = 5592405;
-          SoftwareRasterizer.a(originX + component.x, originY + component.y, component.width, component.height, this.field_t);
+          SoftwareRasterizer.fillRectangle(originX + component.x, originY + component.y, component.width, component.height, this.field_t);
           if (enabled) {
             var7 = 16777215;
           }
@@ -70,11 +70,11 @@ final class CheckboxPainter implements WidgetPainter {
             return;
           }
           int var9 = this.field_r + (component.y + originY);
-          SoftwareRasterizer.e(var8, var9, this.field_a, this.field_k, 5592405);
-          SoftwareRasterizer.a(var8, var9, this.field_a, this.field_k, var7);
+          SoftwareRasterizer.drawDropShadow(var8, var9, this.field_a, this.field_k, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_a, this.field_k, var7);
           if (var11.field_z) {
-            SoftwareRasterizer.d(var8, var9, var8 + this.field_a, this.field_k + var9, 1);
-            SoftwareRasterizer.d(var8 + this.field_a, var9, var8, this.field_k + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_a, this.field_k + var9, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_a, var9, var8, this.field_k + var9, 1);
           }
           if (this.field_o != null) {
             int var10 = this.field_e + (this.field_a + this.field_g);

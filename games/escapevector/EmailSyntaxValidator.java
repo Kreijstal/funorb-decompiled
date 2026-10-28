@@ -59,27 +59,27 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         }
     }
 
-    final static uf c(boolean param0) {
+    final static UiTheme c(boolean param0) {
         if (sl.field_d == null) {
-          sl.field_d = new uf();
-          sl.field_d.a(-31476, Js5Transport.field_a);
-          sl.field_d.field_h = 7697781;
-          sl.field_d.field_d = ke.field_c;
-          sl.field_d.field_j = 5;
-          sl.field_d.field_q = 14;
-          sl.field_d.field_a = 2763306;
-          sl.field_d.field_f = 6;
-          sl.field_d.field_l = 0;
-          sl.field_d.field_r = 4;
+          sl.field_d = new UiTheme();
+          sl.field_d.initializePainters(-31476, Js5Transport.field_a);
+          sl.field_d.tooltipBorderColor = 7697781;
+          sl.field_d.tooltipFont = ke.field_c;
+          sl.field_d.tooltipRightPadding = 5;
+          sl.field_d.tooltipLineSpacing = 14;
+          sl.field_d.tooltipBackgroundColor = 2763306;
+          sl.field_d.tooltipLeftPadding = 6;
+          sl.field_d.tooltipTopPadding = 0;
+          sl.field_d.tooltipBottomPadding = 4;
           if (!param0) {
             return sl.field_d;
           }
-          return (uf) null;
+          return (UiTheme) null;
         }
         if (!param0) {
           return sl.field_d;
         }
-        return (uf) null;
+        return (UiTheme) null;
     }
 
     public static void releaseStatics(int guard) {

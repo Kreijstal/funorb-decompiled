@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uf {
-    int field_f;
+final class UiTheme {
+    int tooltipLeftPadding;
     static int field_n;
-    WidgetPainter field_p;
-    WidgetPainter field_k;
-    int field_a;
+    WidgetPainter editableTextPainter;
+    WidgetPainter checkboxPainter;
+    int tooltipBackgroundColor;
     static String field_s;
-    WidgetPainter field_o;
-    private boolean field_m;
-    int field_l;
-    BitmapFont field_d;
-    int field_h;
-    int field_q;
-    private int field_c;
+    WidgetPainter buttonPainter;
+    private boolean wrapTooltips;
+    int tooltipTopPadding;
+    BitmapFont tooltipFont;
+    int tooltipBorderColor;
+    int tooltipLineSpacing;
+    private int tooltipTextColor;
     WidgetPainter field_b;
-    WidgetPainter field_i;
+    WidgetPainter componentPainter;
     static Sprite field_e;
-    int field_j;
-    int field_r;
+    int tooltipRightPadding;
+    int tooltipBottomPadding;
     static PcmSample field_g;
 
     final static void a(ResourceArchive param0, ResourceArchive param1, byte param2) {
@@ -27,7 +27,7 @@ final class uf {
           ThreeSliceButtonPainter.field_x = param0;
           pc.field_e = param1;
           if (param2 != -96) {
-            uf.a(-27);
+            UiTheme.a(-27);
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "uf.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -41,23 +41,23 @@ final class uf {
         return EmailAvailabilityValidator.field_o == ui.field_b ? true : false;
     }
 
-    private final void a(int param0, int param1, int param2, String param3) {
+    private final void drawWrappedTooltip(int x, int guard, int y, String text) {
         String stackIn_32_2 = null;
         int var12 = 0;
         int var15 = EscapeVector.obfuscationControl;
         try {
-          int var5_int = this.field_j + this.field_f;
-          int var6 = this.field_l + this.field_r;
-          int var7 = this.field_q;
+          int var5_int = this.tooltipRightPadding + this.tooltipLeftPadding;
+          int var6 = this.tooltipTopPadding + this.tooltipBottomPadding;
+          int var7 = this.tooltipLineSpacing;
           if (var7 == -1) {
-            var7 = this.field_d.maxDescent + this.field_d.maxAscent;
+            var7 = this.tooltipFont.maxDescent + this.tooltipFont.maxAscent;
           }
           int var8 = SoftwareRasterizer.width >> 2;
-          int var9 = this.field_d.stringWidth(param3);
-          int var10 = this.field_d.maxDescent + this.field_d.maxAscent;
+          int var9 = this.tooltipFont.stringWidth(text);
+          int var10 = this.tooltipFont.maxDescent + this.tooltipFont.maxAscent;
           int var11 = 1;
           if (var8 < var9 ||
-            param3.indexOf("<br>") != -1) {
+            text.indexOf("<br>") != -1) {
             if (var8 >= var9) {
               var12 = var8;
             } else {
@@ -67,37 +67,37 @@ final class uf {
             if (null == co.field_c) {
               co.field_c = new String[16];
             }
-            int var11Lifetime1 = this.field_d.wrapLines(param3, new int[]{var12}, co.field_c);
+            int var11Lifetime1 = this.tooltipFont.wrapLines(text, new int[]{var12}, co.field_c);
             var9 = 0;
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             for (int var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              int var14 = this.field_d.stringWidth(co.field_c[var13Lifetime2]);
+              int var14 = this.tooltipFont.stringWidth(co.field_c[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
             }
           }
-          var12 = param0;
+          var12 = x;
           if (var9 + var12 + var5_int > SoftwareRasterizer.width) {
             var12 = SoftwareRasterizer.width - var9 - var5_int;
           }
-          int var13Lifetime1 = 32 + (-this.field_d.capHeight + param2);
+          int var13Lifetime1 = 32 + (-this.tooltipFont.capHeight + y);
           if (var6 + (var13Lifetime1 + var10) > SoftwareRasterizer.height) {
-            var13Lifetime1 = -var10 + (param2 - var6);
+            var13Lifetime1 = -var10 + (y - var6);
           }
-          SoftwareRasterizer.b(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_h);
-          SoftwareRasterizer.a(1 + var12, var13Lifetime1 + 1, -2 + (var9 + var5_int), -2 + var6 + var10, this.field_a);
-          if (param1 <= 2) {
+          SoftwareRasterizer.drawRectangle(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.tooltipBorderColor);
+          SoftwareRasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, -2 + (var9 + var5_int), -2 + var6 + var10, this.tooltipBackgroundColor);
+          if (guard <= 2) {
             return;
           }
-          this.field_d.drawParagraph(param3, var12 + this.field_f, this.field_l + var13Lifetime1, var9, var10, this.field_c, -1, 0, 0, var7);
+          this.tooltipFont.drawParagraph(text, var12 + this.tooltipLeftPadding, this.tooltipTopPadding + var13Lifetime1, var9, var10, this.tooltipTextColor, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_31_0 = var5;
-          StringBuilder stackIn_31_1 = new StringBuilder().append("uf.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_31_1 = new StringBuilder().append("uf.E(").append(x).append(',').append(guard).append(',').append(y).append(',');
+          if (text == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
@@ -114,7 +114,7 @@ final class uf {
           return bm.field_g;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        uf.a((ResourceArchive) null, (ResourceArchive) null, (byte) 91);
+        UiTheme.a((ResourceArchive) null, (ResourceArchive) null, (byte) 91);
         return bm.field_g;
     }
 
@@ -132,64 +132,64 @@ final class uf {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        if (param2 == -29666) {
-          SoftwareRasterizer.d(param3, param4, param0, param1, param5);
+    final void drawLine(int endX, int endY, int guard, int startX, int startY, int color) {
+        if (guard == -29666) {
+          SoftwareRasterizer.drawLine(startX, startY, endX, endY, color);
           return;
         }
-        uf.a(15);
-        SoftwareRasterizer.d(param3, param4, param0, param1, param5);
+        UiTheme.a(15);
+        SoftwareRasterizer.drawLine(startX, startY, endX, endY, color);
     }
 
-    final void a(int param0, BitmapFont param1) {
+    final void initializePainters(int guard, BitmapFont font) {
         int var15 = EscapeVector.obfuscationControl;
         try {
-          TextWidgetPainter var17 = new TextWidgetPainter(param1, 2, 2, 2236962, 1, 1, 1, param1.maxDescent + param1.maxAscent + 2);
-          this.field_i = (WidgetPainter) ((Object) var17);
+          TextWidgetPainter var17 = new TextWidgetPainter(font, 2, 2, 2236962, 1, 1, 1, font.maxDescent + font.maxAscent + 2);
+          this.componentPainter = (WidgetPainter) ((Object) var17);
           var17.textColor = 16777215;
           he var4 = new he();
-          if (param0 != -31476) {
+          if (guard != -31476) {
             field_n = 115;
           }
           var17.copyStyleTo(var4, 77);
-          this.field_c = 15658734;
-          this.field_r = 3;
-          this.field_a = 5592405;
-          this.field_j = 3;
-          this.field_l = 3;
-          this.field_h = 15658734;
-          this.field_q = -1;
-          this.field_f = 3;
+          this.tooltipTextColor = 15658734;
+          this.tooltipBottomPadding = 3;
+          this.tooltipBackgroundColor = 5592405;
+          this.tooltipRightPadding = 3;
+          this.tooltipTopPadding = 3;
+          this.tooltipBorderColor = 15658734;
+          this.tooltipLineSpacing = -1;
+          this.tooltipLeftPadding = 3;
           var4.selectionColor = 11711154;
           var4.caretColor = 15658734;
-          this.field_d = param1;
+          this.tooltipFont = font;
           var4.a(0, (byte) -53).a(15658734, -22572).a(2, ph.a(8947848, 1, 10066329, 7829367));
           var4.a(1, (byte) -53).a(2, ph.a(11184810, 1, 10066329, 13421772));
           var4.a(3, (byte) -53).a(2, ph.a(8947848, 1, 7829367, 10066329)).c(101, 1).a(1, (byte) 102);
           Sprite[] var5 = new Sprite[9];
-          uh var16 = new uh(32, 32);
-          uh var18 = var16;
+          ArgbSprite var16 = new ArgbSprite(32, 32);
+          ArgbSprite var18 = var16;
           for (int var7_int = 0; var18.pixels.length > var7_int; var7_int++) {
             var16.pixels[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var18);
-          var4.a(4, (byte) -53).a(param0 ^ 31367, true).a(2, var5);
-          var4.a(5, (byte) -53).a(2, vd.a(65793, 0, 0, 0, 1317)).a(param0 + 31367, true).a(-1, -22572);
-          this.field_o = (WidgetPainter) ((Object) var4);
+          var4.a(4, (byte) -53).a(guard ^ 31367, true).a(2, var5);
+          var4.a(5, (byte) -53).a(2, vd.a(65793, 0, 0, 0, 1317)).a(guard + 31367, true).a(-1, -22572);
+          this.buttonPainter = (WidgetPainter) ((Object) var4);
           he var6 = new he(var4, true);
           var6.horizontalAlignment = 0;
           he var7 = new he(var4, true);
           var7.horizontalAlignment = 0;
-          var7.a(jj.a(8947848, 46), param0 + 31482);
+          var7.a(jj.a(8947848, 46), guard + 31482);
           var7.a(1, (byte) -53).a(2, jj.a(11184810, 51)).a(2236962, -22572);
-          this.field_k = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          DialWidgetPainter discarded$0 = new DialWidgetPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          MarkerSliderPainter discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          this.checkboxPainter = (WidgetPainter) ((Object) new CheckboxPainter(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          DialWidgetPainter discarded$0 = new DialWidgetPainter(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          MarkerSliderPainter discarded$1 = new MarkerSliderPainter(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
           he var8 = new he();
           var17.copyStyleTo(var8, 111);
           var8.a(0, (byte) -53).a(2, ph.a(15658734, 1, 7829367, 10066329)).a(1118481, -22572).b(-93, -1);
-          var8.a(4, (byte) -53).a(-121, true).a(param0 + 31478, var5);
-          this.field_p = (WidgetPainter) ((Object) var8);
+          var8.a(4, (byte) -53).a(-121, true).a(guard + 31478, var5);
+          this.editableTextPainter = (WidgetPainter) ((Object) var8);
           Sprite[] var9 = new Sprite[9];
           Sprite[] var10 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
@@ -215,75 +215,75 @@ final class uf {
           he var19 = new he(var4, true);
           var19.a(var13, (byte) 87);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "uf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "uf.A(" + guard + ',' + (font != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param1 != 1) {
+    final void fillRectangleAlpha(int rectangleHeight, int guard, int alpha, int y, int rectangleWidth, int color, int x) {
+        if (guard != 1) {
           return;
         }
-        SoftwareRasterizer.a(param6, param3, param4, param0, param5, param2);
+        SoftwareRasterizer.fillRectangleAlpha(x, y, rectangleWidth, rectangleHeight, color, alpha);
     }
 
-    final void a(byte param0, String param1, int param2, int param3) {
+    final void drawTooltip(byte guard, String text, int x, int y) {
         String stackIn_9_2 = null;
         try {
-          if (!this.field_m) {
-            this.a(param1, param3, param2, 16777215);
+          if (!this.wrapTooltips) {
+            this.drawSingleLineTooltip(text, y, x, 16777215);
           } else {
-            this.a(param2, 29, param3, param1);
+            this.drawWrappedTooltip(x, 29, y, text);
           }
-          if (param0 < -29) {
+          if (guard < -29) {
             return;
           }
-          this.a(-88, -91, 122, 46, 47, -59, -12);
+          this.fillRectangleAlpha(-88, -91, 122, 46, 47, -59, -12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_8_0 = var5;
-          StringBuilder stackIn_8_1 = new StringBuilder().append("uf.F(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_8_1 = new StringBuilder().append("uf.F(").append(guard).append(',');
+          if (text == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(x).append(',').append(y).append(')').toString());
         }
     }
 
-    private final void a(String param0, int param1, int param2, int param3) {
+    private final void drawSingleLineTooltip(String text, int y, int x, int guard) {
         String stackIn_12_2 = null;
         try {
-          int var5_int = this.field_d.stringWidth(param0);
-          int var6 = this.field_d.maxDescent + this.field_d.capHeight;
-          int var7 = param2;
+          int var5_int = this.tooltipFont.stringWidth(text);
+          int var6 = this.tooltipFont.maxDescent + this.tooltipFont.capHeight;
+          int var7 = x;
           if (SoftwareRasterizer.width < 6 + var7 + var5_int) {
             var7 = -6 - var5_int + SoftwareRasterizer.width;
           }
-          if (param3 != 16777215) {
+          if (guard != 16777215) {
             return;
           }
-          int var8 = param1 + (-this.field_d.capHeight + 32);
+          int var8 = y + (-this.tooltipFont.capHeight + 32);
           if (SoftwareRasterizer.height < var6 + (var8 + 6)) {
             var8 = SoftwareRasterizer.height - var6 - 6;
           }
-          SoftwareRasterizer.b(var7, var8, var5_int + 6, var6 + 6, this.field_c);
-          SoftwareRasterizer.a(1 + var7, 1 + var8, 4 + var5_int, 4 + var6, this.field_a);
-          this.field_d.drawLeft(param0, 3 + var7, var8 + 3 + this.field_d.capHeight, this.field_c, -1);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5_int + 6, var6 + 6, this.tooltipTextColor);
+          SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, 4 + var5_int, 4 + var6, this.tooltipBackgroundColor);
+          this.tooltipFont.drawLeft(text, 3 + var7, var8 + 3 + this.tooltipFont.capHeight, this.tooltipTextColor, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_11_0 = var5;
           StringBuilder stackIn_11_1 = new StringBuilder().append("uf.C(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(y).append(',').append(x).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -295,14 +295,14 @@ final class uf {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        uf.a((ResourceArchive) null, (ResourceArchive) null, (byte) 55);
+        UiTheme.a((ResourceArchive) null, (ResourceArchive) null, (byte) 55);
         field_g = null;
         field_e = null;
         field_s = null;
     }
 
-    public uf() {
-        this.field_m = true;
+    public UiTheme() {
+        this.wrapTooltips = true;
     }
 
     static {

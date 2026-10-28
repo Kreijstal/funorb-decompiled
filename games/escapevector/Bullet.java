@@ -109,15 +109,15 @@ final class Bullet extends IntrusiveNode {
                 var7 = (-16711936 & var10 * (16711935 & var7) | 16711680 & (65280 & var7) * var10) >>> 8;
                 var9 = (-16711936 & var10 * (var9 & 16711935) | 16711680 & var10 * (65280 & var9)) >>> 8;
               }
-              SoftwareRasterizer.a(var6, var5, var7);
-              SoftwareRasterizer.a(-1 + var6, var5, var8);
-              SoftwareRasterizer.a(var6 + 1, var5, var8);
-              SoftwareRasterizer.a(var6, -1 + var5, var8);
-              SoftwareRasterizer.a(var6, var5 + 1, var8);
-              SoftwareRasterizer.a(-1 + var6, -1 + var5, var9);
-              SoftwareRasterizer.a(var6 + 1, -1 + var5, var9);
-              SoftwareRasterizer.a(var6 - 1, 1 + var5, var9);
-              SoftwareRasterizer.a(1 + var6, 1 + var5, var9);
+              SoftwareRasterizer.addPixel(var6, var5, var7);
+              SoftwareRasterizer.addPixel(-1 + var6, var5, var8);
+              SoftwareRasterizer.addPixel(var6 + 1, var5, var8);
+              SoftwareRasterizer.addPixel(var6, -1 + var5, var8);
+              SoftwareRasterizer.addPixel(var6, var5 + 1, var8);
+              SoftwareRasterizer.addPixel(-1 + var6, -1 + var5, var9);
+              SoftwareRasterizer.addPixel(var6 + 1, -1 + var5, var9);
+              SoftwareRasterizer.addPixel(var6 - 1, 1 + var5, var9);
+              SoftwareRasterizer.addPixel(1 + var6, 1 + var5, var9);
               var6 = var6 + var4_int;
             }
           }

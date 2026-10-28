@@ -899,7 +899,7 @@ final class pf {
             java.net.URL stackIn_13_2 = null;
             java.net.URL stackIn_13_3 = null;
             java.net.URL stackIn_13_4 = IntrusiveNode.field_c.getCodeBase();
-            StringBuilder stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(uf.field_n).append("&u=");
+            StringBuilder stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(UiTheme.field_n).append("&u=");
             if (null != GameAppletShell.field_g) {
               stackIn_14_6 = GameAppletShell.field_g;
             } else {

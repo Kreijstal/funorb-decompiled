@@ -82,7 +82,7 @@ abstract class vg extends bb {
 
     void b(int param0, int param1, byte param2) {
         int var16 = EscapeVector.obfuscationControl;
-        SoftwareRasterizer.c(param1 + 6, param0 + 35, -12 + this.width, -40 + this.height, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(param1 + 6, param0 + 35, -12 + this.width, -40 + this.height, 2105376, 0);
         int var4 = 35;
         int var5 = 211;
         int var6 = 194;
@@ -147,7 +147,7 @@ abstract class vg extends bb {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        ProgressRecord.field_j.e(-90 + (param1 + this.width), 10 + param0);
+        ProgressRecord.field_j.drawTransparent(-90 + (param1 + this.width), 10 + param0);
         LoginMethod.drawThreeSlice(5 + param1, -10 + this.width, true, nn.field_a, 35 + param0);
         LoginMethod.drawThreeSlice(param1, this.width, true, bn.field_d, param0 + this.height - 22);
         int var5Lifetime2 = 169;

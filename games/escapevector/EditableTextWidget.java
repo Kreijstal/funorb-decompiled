@@ -525,7 +525,7 @@ class EditableTextWidget extends TextButton {
         this.field_M = false;
         this.field_D = 0L;
         try {
-          this.painter = mb.field_g.field_p;
+          this.painter = mb.field_g.editableTextPainter;
           this.field_H = param2;
           this.setText(param0, true, -33);
           this.field_J = true;

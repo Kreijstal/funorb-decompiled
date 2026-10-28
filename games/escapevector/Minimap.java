@@ -176,8 +176,8 @@ final class Minimap {
           this.a(85, false, 28, 3);
         }
         Sprite var7 = new Sprite(var4, var4);
-        var7.g();
-        SoftwareRasterizer.a(var6, var6, var5, var5, param0);
+        var7.bindAsFramebuffer();
+        SoftwareRasterizer.fillRectangle(var6, var6, var5, var5, param0);
         md.field_D.a(param1 + 5535);
         return var7;
     }
@@ -249,7 +249,7 @@ final class Minimap {
           return;
         }
         if (this.field_L) {
-          SoftwareRasterizer.b(0, 0, this.field_f, this.field_H);
+          SoftwareRasterizer.darkenRectangle(0, 0, this.field_f, this.field_H);
         }
         this.a(param2, -32279, param0);
         if (!this.field_E) {

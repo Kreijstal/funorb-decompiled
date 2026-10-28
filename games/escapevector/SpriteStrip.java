@@ -61,7 +61,7 @@ final class SpriteStrip extends IntrusiveNode {
         for (int var4 = 0; var4 < this.sprites.length; var4++) {
           Sprite var5 = this.sprites[var4];
           if (var5 != null) {
-            var5.e(x, y);
+            var5.drawTransparent(x, y);
             x = x + var5.fullWidth;
             x = x + this.spacing;
           }

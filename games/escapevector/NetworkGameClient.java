@@ -159,7 +159,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             for (int var7 = 0; var7 < var3; var7++) {
               var6[var7] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(255, (int) var22[var7]) << 24, qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd(255, (int) var20[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new uh(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], gi.spriteOffsetYs[var2], qh.spriteWidths[var2], bc.spriteHeights[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], gi.spriteOffsetYs[var2], qh.spriteWidths[var2], bc.spriteHeights[var2], var16));
           }
         }
         if (param0 != 15556) {
@@ -256,7 +256,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            int var5_intLifetime1 = kh.a(DualLinkNode.e(0), this.field_w, TrackerMusicDefinition.c(31069), uf.a(30519), AchievementQuery.d(param0 ^ -4157), oi.k(-99), 0);
+            int var5_intLifetime1 = kh.a(DualLinkNode.e(0), this.field_w, TrackerMusicDefinition.c(31069), UiTheme.a(30519), AchievementQuery.d(param0 ^ -4157), oi.k(-99), 0);
             if (var5_intLifetime1 != -1) {
               j.a(jf.field_I, MouseWheelInput.field_a, (byte) -72, var5_intLifetime1);
               jf.field_I = null;
@@ -272,7 +272,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (param1) {
               MarkerSlider.field_P = false;
             } else {
-              int var5_intLifetime2 = mj.a(1, this.field_w, uf.a(30519), DualLinkNode.e(0), false, this.field_x);
+              int var5_intLifetime2 = mj.a(1, this.field_w, UiTheme.a(30519), DualLinkNode.e(0), false, this.field_x);
               if (var5_intLifetime2 != -1) {
                 if (0 == var5_intLifetime2) {
                   DialWidget.field_J = mg.field_d;
@@ -548,7 +548,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (MarkerSlider.field_P) {
           return -1;
         }
-        int var2 = mj.a(1, this.field_w, uf.a(param0 ^ 30530), DualLinkNode.e(param0 - 117), true, this.field_x);
+        int var2 = mj.a(1, this.field_w, UiTheme.a(param0 ^ 30530), DualLinkNode.e(param0 - 117), true, this.field_x);
         if (var2 == -1) {
           return -1;
         }
@@ -584,7 +584,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           km.field_n.updateViewport(9477);
         }
         ac.a(28087);
-        SpriteState.g(-3657);
+        SpriteState.pollMouseState(-3657);
         if (!ii.b(16836) &&
           11 != ff.field_e) {
           b.a(-103);

@@ -3,7 +3,7 @@
  */
 final class mb {
     static Sprite[] field_f;
-    static uf field_g;
+    static UiTheme field_g;
     static String[] field_b;
     private int field_e;
     private int field_c;
@@ -146,11 +146,11 @@ final class mb {
           }
           int[] var3 = new int[4];
           int[] var2 = var3;
-          SoftwareRasterizer.a(var3);
-          of.field_a.g();
-          param0.c(0, 0);
+          SoftwareRasterizer.saveClip(var3);
+          of.field_a.bindAsFramebuffer();
+          param0.drawMirrored(0, 0);
           md.field_D.a(107);
-          SoftwareRasterizer.b(var3);
+          SoftwareRasterizer.restoreClip(var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -16,11 +16,11 @@ final class ea {
 
     final void a(int param0) {
         if (param0 == 256) {
-          this.field_a.d(this.field_j.field_a, this.field_j.field_c, this.field_c);
+          this.field_a.drawAlpha(this.field_j.field_a, this.field_j.field_c, this.field_c);
           return;
         }
         ea.c((byte) -28);
-        this.field_a.d(this.field_j.field_a, this.field_j.field_c, this.field_c);
+        this.field_a.drawAlpha(this.field_j.field_a, this.field_j.field_c, this.field_c);
     }
 
     final static CoverageBitmapFont a(byte[] param0, int param1) {

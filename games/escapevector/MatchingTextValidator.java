@@ -149,7 +149,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     }
 
     final static void a(int param0, String param1, int param2, int param3, int param4) {
-        mj.field_b.g();
+        mj.field_b.bindAsFramebuffer();
         SoftwareRasterizer.clearFramebuffer();
         fh.field_g.drawCentered(param1, 160, 22, param2, -1);
         md.field_D.a(122);
@@ -158,8 +158,8 @@ final class MatchingTextValidator extends TextFieldValidator {
           return;
         }
         try {
-          mj.field_b.h(5267536);
-          mj.field_b.e(param4 - 160, -22 + param0);
+          mj.field_b.addOutline(5267536);
+          mj.field_b.drawTransparent(param4 - 160, -22 + param0);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "lb.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

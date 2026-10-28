@@ -41,7 +41,7 @@ final class LevelObject extends IntrusiveNode {
             int screenLeft = -cameraX + this.x - (highlightWidth - spriteWidth) / 2;
             int screenRight = highlightWidth + screenLeft;
             int worldWidth = BoundedRandomAccessFile.activeSession.worldWidth;
-            SoftwareRasterizer.b(screenLeft, screenTop, highlightWidth, highlightHeight, color, alpha);
+            SoftwareRasterizer.drawRectangleAlpha(screenLeft, screenTop, highlightWidth, highlightHeight, color, alpha);
             if (screenLeft > 0 &&
               worldWidth <= screenRight) {
               return;
@@ -54,7 +54,7 @@ final class LevelObject extends IntrusiveNode {
             } else {
               screenLeft = screenLeft + worldWidth;
             }
-            SoftwareRasterizer.b(screenLeft, screenTop, highlightWidth, highlightHeight, color, alpha);
+            SoftwareRasterizer.drawRectangleAlpha(screenLeft, screenTop, highlightWidth, highlightHeight, color, alpha);
             return;
           }
           return;
@@ -276,10 +276,10 @@ final class LevelObject extends IntrusiveNode {
             while (!(decompiledNaturalLoopExit0 = (screenX >= 640))) {
               if (obfuscationControl == 0) {
                 if (null != var4) {
-                  this.collisionSprite.e(screenX + leftPadding, screenY);
-                  ((Sprite) (var4)).c(glowOffsetX + screenX + leftPadding, screenY + glowOffsetY, this.glowAlpha((byte) 122));
+                  this.collisionSprite.drawTransparent(screenX + leftPadding, screenY);
+                  ((Sprite) (var4)).drawAdditive(glowOffsetX + screenX + leftPadding, screenY + glowOffsetY, this.glowAlpha((byte) 122));
                 } else {
-                  this.collisionSprite.e(screenX, screenY);
+                  this.collisionSprite.drawTransparent(screenX, screenY);
                 }
                 screenX = screenX + BoundedRandomAccessFile.activeSession.worldWidth;
                 continue;

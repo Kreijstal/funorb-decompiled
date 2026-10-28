@@ -60,22 +60,22 @@ final class lf extends TextHotspotWidget {
               this.field_M = new Sprite(var11, var12);
               eo.a(this.field_M, (byte) -84);
             }
-            var20.b(112, 144, var20.fullWidth << 4, var20.fullHeight << 4, -this.field_O << 10, 4096);
+            var20.drawRotatedScaledBilinear(112, 144, var20.fullWidth << 4, var20.fullHeight << 4, -this.field_O << 10, 4096);
             dl.a((byte) 120);
-            this.field_M.c(-(var20.fullWidth >> 1) + var9, -var20.fullHeight + var10, 256);
+            this.field_M.drawAdditive(-(var20.fullWidth >> 1) + var9, -var20.fullHeight + var10, 256);
             return;
           }
           if (var6 != ug.field_c) {
             if (ArchiveProvider.field_a == var6) {
               Sprite var22 = EditableTextWidget.field_E[2];
-              var22.c(var9, -(var22.height >> 1) + var10, 256);
+              var22.drawAdditive(var9, -(var22.height >> 1) + var10, 256);
               return;
             }
             if (IsaacRandom.field_h != var6) {
               return;
             }
             Sprite var21 = EditableTextWidget.field_E[1];
-            var21.c(var9, -(var21.height >> 1) + var10, 256);
+            var21.drawAdditive(var9, -(var21.height >> 1) + var10, 256);
             return;
           }
           Sprite var19 = EditableTextWidget.field_E[0];
@@ -90,9 +90,9 @@ final class lf extends TextHotspotWidget {
             this.field_M = new Sprite(var11Lifetime3, var12Lifetime3);
             eo.a(this.field_M, (byte) -84);
           }
-          var19.b(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_O << 10, 4096);
+          var19.drawRotatedScaledBilinear(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_O << 10, 4096);
           dl.a((byte) 120);
-          this.field_M.c(-(var19.fullWidth >> 1) + var9, -var19.fullHeight + var10, 256);
+          this.field_M.drawAdditive(-(var19.fullWidth >> 1) + var9, -var19.fullHeight + var10, 256);
           return;
         }
         regionExit1: {
@@ -141,22 +141,22 @@ final class lf extends TextHotspotWidget {
             this.field_M = new Sprite(var11Lifetime1, var12Lifetime1);
             eo.a(this.field_M, (byte) -84);
           }
-          var25.b(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_O << 10, 4096);
+          var25.drawRotatedScaledBilinear(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_O << 10, 4096);
           dl.a((byte) 120);
-          this.field_M.c(-(var25.fullWidth >> 1) + var9Lifetime1, -var25.fullHeight + var10Lifetime1, 256);
+          this.field_M.drawAdditive(-(var25.fullWidth >> 1) + var9Lifetime1, -var25.fullHeight + var10Lifetime1, 256);
           return;
         }
         if (var6Lifetime1 != ug.field_c) {
           if (ArchiveProvider.field_a == var6Lifetime1) {
             Sprite var27 = EditableTextWidget.field_E[2];
-            var27.c(var9Lifetime1, -(var27.height >> 1) + var10Lifetime1, 256);
+            var27.drawAdditive(var9Lifetime1, -(var27.height >> 1) + var10Lifetime1, 256);
             return;
           }
           if (IsaacRandom.field_h != var6Lifetime1) {
             return;
           }
           Sprite var26 = EditableTextWidget.field_E[1];
-          var26.c(var9Lifetime1, -(var26.height >> 1) + var10Lifetime1, 256);
+          var26.drawAdditive(var9Lifetime1, -(var26.height >> 1) + var10Lifetime1, 256);
           return;
         }
         Sprite var24 = EditableTextWidget.field_E[0];
@@ -173,9 +173,9 @@ final class lf extends TextHotspotWidget {
           this.field_M = new Sprite(var11Lifetime2, var12Lifetime2);
           eo.a(this.field_M, (byte) -84);
         }
-        var24.b(112, 144, var24.fullWidth << 4, var24.fullHeight << 4, -this.field_O << 10, 4096);
+        var24.drawRotatedScaledBilinear(112, 144, var24.fullWidth << 4, var24.fullHeight << 4, -this.field_O << 10, 4096);
         dl.a((byte) 120);
-        this.field_M.c(-(var24.fullWidth >> 1) + var9Lifetime1, -var24.fullHeight + var10Lifetime1, 256);
+        this.field_M.drawAdditive(-(var24.fullWidth >> 1) + var9Lifetime1, -var24.fullHeight + var10Lifetime1, 256);
         return;
     }
 

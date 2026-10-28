@@ -98,19 +98,19 @@ final class qe {
           int var6_int = param3[0].fullWidth;
           int var7 = param3[2].fullWidth;
           int var8 = param3[1].fullWidth;
-          param3[0].f(param5, param1, param4);
-          param3[2].f(-var7 + (param2 + param5), param1, param4);
-          SoftwareRasterizer.a(sf.field_m);
-          SoftwareRasterizer.h(var6_int + param5, param1, -var7 + param2 + param5, param3[1].fullHeight + param1);
+          param3[0].drawShadedTint(param5, param1, param4);
+          param3[2].drawShadedTint(-var7 + (param2 + param5), param1, param4);
+          SoftwareRasterizer.saveClip(sf.field_m);
+          SoftwareRasterizer.intersectClip(var6_int + param5, param1, -var7 + param2 + param5, param3[1].fullHeight + param1);
           int var9 = param5 + var6_int;
           int var10 = param5 + (param2 - var7);
           param5 = var9;
           int var11 = -59 / ((11 - param0) / 32);
           while (param5 < var10) {
-            param3[1].f(param5, param1, param4);
+            param3[1].drawShadedTint(param5, param1, param4);
             param5 = param5 + var8;
           }
-          SoftwareRasterizer.b(sf.field_m);
+          SoftwareRasterizer.restoreClip(sf.field_m);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "qe.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -118,9 +118,9 @@ final class qe {
 
     private final void a(int param0, byte param1) {
         int var3 = this.field_i[param0];
-        SoftwareRasterizer.d(this.field_f.field_h, this.field_f.field_b, this.field_b, var3);
+        SoftwareRasterizer.fillCircle(this.field_f.field_h, this.field_f.field_b, this.field_b, var3);
         var3 = this.field_j[param0];
-        SoftwareRasterizer.a(this.field_f.field_h, this.field_f.field_b, this.field_b, var3);
+        SoftwareRasterizer.drawCircle(this.field_f.field_h, this.field_f.field_b, this.field_b, var3);
         if (param1 != -92) {
           this.field_j = (int[]) null;
         }
@@ -149,7 +149,7 @@ final class qe {
             int var9 = this.a(var11, var12, (byte) -128);
             qj var13 = this.a(var12, true, param2, var11, var9);
             param2 = param2 - var9;
-            SoftwareRasterizer.d(var11.field_h, var11.field_b, var13.field_h, var13.field_b, var8);
+            SoftwareRasterizer.drawLine(var11.field_h, var11.field_b, var13.field_h, var13.field_b, var8);
             if (param2 > 0) {
               var5++;
               continue;
@@ -161,7 +161,7 @@ final class qe {
         boolean var9Lifetime1 = stackIn_13_0;
         if (var9Lifetime1) {
           qj var14 = this.field_e[var4 - 1];
-          SoftwareRasterizer.a(-1 + var14.field_h, -1 + var14.field_b, 3, 3, var8);
+          SoftwareRasterizer.fillRectangle(-1 + var14.field_h, -1 + var14.field_b, 3, 3, var8);
         }
         this.a((var9Lifetime1), (byte) -66);
         return param2;

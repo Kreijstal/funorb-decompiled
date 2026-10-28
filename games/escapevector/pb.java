@@ -65,7 +65,7 @@ final class pb {
             }
             return;
           }
-          EmailAvailabilityValidator.field_t.e((640 - EmailAvailabilityValidator.field_t.fullWidth) / 2, fg.field_b);
+          EmailAvailabilityValidator.field_t.drawTransparent((640 - EmailAvailabilityValidator.field_t.fullWidth) / 2, fg.field_b);
           if (param0 != 4) {
             field_b = -65;
             return;

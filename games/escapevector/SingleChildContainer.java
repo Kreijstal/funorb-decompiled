@@ -495,9 +495,9 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         if (param1 != 13202) {
           return;
         }
-        SoftwareRasterizer.a(param0, param2 + 7, param3 - 1, 2, param4);
-        SoftwareRasterizer.a(param3 + param0, param2, 4, 16, param4);
-        SoftwareRasterizer.a(param3 + (param0 + 5), 7 + param2, 63 - param3, 2, param4);
+        SoftwareRasterizer.fillRectangle(param0, param2 + 7, param3 - 1, 2, param4);
+        SoftwareRasterizer.fillRectangle(param3 + param0, param2, 4, 16, param4);
+        SoftwareRasterizer.fillRectangle(param3 + (param0 + 5), 7 + param2, 63 - param3, 2, param4);
     }
 
     static {

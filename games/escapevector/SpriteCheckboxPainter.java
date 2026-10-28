@@ -128,7 +128,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           Sprite var8 = EditableTextWidget.field_E[1];
           if (component instanceof TextButton &&
             ((TextButton) (component)).field_z) {
-            var8.c((-var8.fullWidth + component.width >> 1) + 1 + var6_int, var7 - (-1 - (component.height - var8.fullHeight >> 1)), 256);
+            var8.drawAdditive((-var8.fullWidth + component.width >> 1) + 1 + var6_int, var7 - (-1 - (component.height - var8.fullHeight >> 1)), 256);
           }
           if (component.isFocused(0)) {
             SeekerMine.a(false, component.width - 4, 2 + var6_int, -4 + component.height, 2 + var7);

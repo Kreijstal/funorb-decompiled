@@ -12,7 +12,7 @@ final class rd {
           rd.a((byte) -74, (String) null);
         }
         hf.a(108);
-        SoftwareRasterizer.h(param1, param4, param0, param2);
+        SoftwareRasterizer.intersectClip(param1, param4, param0, param2);
     }
 
     final static String a(byte param0, String param1) {

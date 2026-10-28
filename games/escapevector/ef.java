@@ -163,7 +163,7 @@ final class ef {
             if (param0.verticalAlignment == 2) {
               var7 = var7 + (-this.field_g.fullHeight + param1.height);
             }
-            this.field_g.e(var6_int, var7);
+            this.field_g.drawTransparent(var6_int, var7);
           }
           String var6 = param0.displayText((byte) 39, param1);
           if (var6 != null &&

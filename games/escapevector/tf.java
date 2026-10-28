@@ -31,7 +31,7 @@ final class tf {
         Object stackIn_14_0;
         boolean stackIn_14_3;
         int var6 = EscapeVector.obfuscationControl;
-        SoftwareRasterizer.a(0, 0, 640, 480, 0, 64);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 64);
         if (mj.field_d >= 20) {
           stackIn_3_0 = 0;
         } else {
@@ -439,7 +439,7 @@ final class tf {
 
     private final void a(int param0, int param1, boolean param2, int param3) {
         String stackIn_32_1 = null;
-        mj.field_b.g();
+        mj.field_b.bindAsFramebuffer();
         SoftwareRasterizer.clearFramebuffer();
         int stackIn_3_0 = (!param2) ? 7899280 : 16777215;
         int var5 = stackIn_3_0;
@@ -498,8 +498,8 @@ final class tf {
         }
         md.field_D.a(107);
         cf.a(mj.field_b, true, 1);
-        mj.field_b.h(5267536);
-        mj.field_b.e((-mj.field_b.fullWidth + 640) / 2, param1);
+        mj.field_b.addOutline(5267536);
+        mj.field_b.drawTransparent((-mj.field_b.fullWidth + 640) / 2, param1);
     }
 
     static {

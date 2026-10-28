@@ -90,7 +90,7 @@ final class qj {
                 }
               }
             } else {
-              param4.e(param7, param2);
+              param4.drawTransparent(param7, param2);
             }
           }
           if (param0 != -1276284702) {

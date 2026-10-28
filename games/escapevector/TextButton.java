@@ -226,7 +226,7 @@ class TextButton extends UiComponent {
     }
 
     TextButton(String param0, UiListener param1) {
-        this(param0, mb.field_g.field_o, param1);
+        this(param0, mb.field_g.buttonPainter, param1);
     }
 
     final static int a(int param0, byte param1) {

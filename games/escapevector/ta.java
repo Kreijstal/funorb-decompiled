@@ -725,15 +725,15 @@ final class ta {
         Sprite var5 = new Sprite(var3, var4);
         int[] var20 = new int[4];
         LegacyButton[] var7 = this.field_p[this.field_h];
-        SoftwareRasterizer.a(var20);
+        SoftwareRasterizer.saveClip(var20);
         if (param0 != 4551) {
           int discarded$1 = this.l(122);
         }
-        var5.g();
+        var5.bindAsFramebuffer();
         nm.a((byte) -103, -1, var7);
         md.field_D.a(124);
-        SoftwareRasterizer.b(var20);
-        var5.f();
+        SoftwareRasterizer.restoreClip(var20);
+        var5.trimTransparentEdges();
         int var8 = IterableNodeHashTable.minimumButtonX(var7, (byte) 26);
         int var9 = on.a(var7, -49);
         int var10 = vg.a(var7, (byte) -122);
@@ -826,7 +826,7 @@ final class ta {
         if (var3 != null) {
           int var4 = (640 - var3.fullWidth) / 2;
           int var5 = this.field_n.field_k + (this.field_n.field_m - var3.fullHeight) / 2;
-          var3.e(var4, var5);
+          var3.drawTransparent(var4, var5);
         }
         return var3;
     }

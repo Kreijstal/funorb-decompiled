@@ -190,14 +190,14 @@ final class qi extends UiContainer implements ButtonListener {
         int var17 = -30 % ((param5 - 20) / 45);
         SoftwareRasterizer.drawHorizontalLine(-(16 * param8) - var11 + param6, -1 + param7, -param6 + (param1 + var12), param0);
         SoftwareRasterizer.drawHorizontalLine(-var11 + param6 + param8 * 16, param7 - 1, var12 + (-param6 + param1), param0);
-        SoftwareRasterizer.g(param6, -(12 * param8) + (-var13 + param4), param7 + (-param4 + var14), param0);
-        SoftwareRasterizer.g(param6, -var13 + (param4 + 12 * param8), var14 - param4 + param7, param0);
-        SoftwareRasterizer.g(-1 + param1, -(12 * param8) + (param4 - var15), param7 + (-param4 + var16), param0);
-        SoftwareRasterizer.g(param1 - 1, 12 * param8 + (-var15 + param4), -param4 + (param7 + var16), param0);
+        SoftwareRasterizer.drawVerticalLine(param6, -(12 * param8) + (-var13 + param4), param7 + (-param4 + var14), param0);
+        SoftwareRasterizer.drawVerticalLine(param6, -var13 + (param4 + 12 * param8), var14 - param4 + param7, param0);
+        SoftwareRasterizer.drawVerticalLine(-1 + param1, -(12 * param8) + (param4 - var15), param7 + (-param4 + var16), param0);
+        SoftwareRasterizer.drawVerticalLine(param1 - 1, 12 * param8 + (-var15 + param4), -param4 + (param7 + var16), param0);
         SoftwareRasterizer.drawHorizontalLine(-var9 + param6 + param8 * 16, param4, -param6 + (param1 + var10) - param8 * 32, param2);
         SoftwareRasterizer.drawHorizontalLine(-var11 + param6 + param8 * 16, param7 - 1, -(32 * param8) + (var12 - param6) + param1, param2);
-        SoftwareRasterizer.g(param6, param8 * 12 + (param4 - var13), -(24 * param8) - param4 + (param7 + var14), param2);
-        SoftwareRasterizer.g(-1 + param1, 12 * param8 + (param4 - var15), var16 + (-param4 + (param7 - param8 * 24)), param2);
+        SoftwareRasterizer.drawVerticalLine(param6, param8 * 12 + (param4 - var13), -(24 * param8) - param4 + (param7 + var14), param2);
+        SoftwareRasterizer.drawVerticalLine(-1 + param1, 12 * param8 + (param4 - var15), var16 + (-param4 + (param7 - param8 * 24)), param2);
     }
 
     final void drawLayer(int screenY, byte guard, int layer, int screenX) {

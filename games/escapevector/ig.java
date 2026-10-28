@@ -605,7 +605,7 @@ final class ig {
         SelfDestructEffects.b(param0 ^ 1);
         int var2 = mj.field_d < 50 ? -mj.field_d + 50 : 0;
         if (null != this.field_k) {
-          this.field_k.d(3, 79);
+          this.field_k.drawOpaque(3, 79);
         }
         this.d(0);
         fk.a(404, 3162160, param0 ^ 115, 0, 6324320, 76, param0, var2, 430);
@@ -744,7 +744,7 @@ final class ig {
         if (var4 != null) {
           int var5 = 8 + fh.field_g.paragraphHeight((String) (var4), 387, 20);
           SoftwareRasterizer.drawHorizontalLine(7, 426 + (-var5 - 1), 393, 3162160);
-          SoftwareRasterizer.a(7, -var5 + 426, 393, var5, 0);
+          SoftwareRasterizer.fillRectangle(7, -var5 + 426, 393, var5, 0);
           fh.field_g.drawParagraph((String) (var4), 10, 128, 387, 294, 6340704, -1, 1, 2, 20);
         }
     }

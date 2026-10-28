@@ -80,7 +80,7 @@ final class t {
           if (5 * param0 > mj.field_d) {
             return;
           }
-          mj.field_b.g();
+          mj.field_b.bindAsFramebuffer();
           SoftwareRasterizer.clearFramebuffer();
           int stackIn_8_0 = (!param3) ? 6340704 : 16777215;
           int var5_int = stackIn_8_0;
@@ -120,7 +120,7 @@ final class t {
                       if (param0 != 6) {
                         if (param0 != 7 &&
                           (decompiledFrameRemainder0 = (param0 == 8))) {
-                          fh.field_g.drawCentered(uf.field_s, var6, 22, var5_int, -1);
+                          fh.field_g.drawCentered(UiTheme.field_s, var6, 22, var5_int, -1);
                           decompiledFrameRemainder0 = (var11 != 0);
                         }
                         if (decompiledFrameRemainder0) {
@@ -160,7 +160,7 @@ final class t {
           }
           md.field_D.a(112);
           cf.a(mj.field_b, true, 1);
-          mj.field_b.h(5267536);
+          mj.field_b.addOutline(5267536);
           int var7Lifetime1 = -mj.field_d + 30 + 5 * param0;
           if (var7Lifetime1 > 0) {
             ResourceArchive.drawSpriteWithRowJitter(param1, (-mj.field_b.fullWidth + 640) / 2, var7Lifetime1, mj.field_b, param2 ^ 120);
@@ -168,7 +168,7 @@ final class t {
               return;
             }
           }
-          mj.field_b.e((-mj.field_b.fullWidth + 640) / 2, param1);
+          mj.field_b.drawTransparent((-mj.field_b.fullWidth + 640) / 2, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

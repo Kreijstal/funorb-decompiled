@@ -76,14 +76,14 @@ final class ValidationIndicator extends TextButton {
             ug.field_c != var8) {
             if (ArchiveProvider.field_a == var8) {
               Sprite var24 = EditableTextWidget.field_E[2];
-              var24.c(var5 - (var24.width >> 1), var6 - (var24.height >> 1), 256);
+              var24.drawAdditive(var5 - (var24.width >> 1), var6 - (var24.height >> 1), 256);
               return;
             }
             if (IsaacRandom.field_h != var8) {
               return;
             }
             Sprite var23 = EditableTextWidget.field_E[1];
-            var23.c(-(var23.width >> 1) + var5, var6 - (var23.height >> 1), 256);
+            var23.drawAdditive(-(var23.width >> 1) + var5, var6 - (var23.height >> 1), 256);
             return;
           }
           Sprite var25 = EditableTextWidget.field_E[0];
@@ -102,9 +102,9 @@ final class ValidationIndicator extends TextButton {
             RockBuster.field_j = new Sprite(var9, var10);
             eo.a(RockBuster.field_j, (byte) -111);
           }
-          var25.b(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_R << 10, 4096);
+          var25.drawRotatedScaledBilinear(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_R << 10, 4096);
           dl.a((byte) 116);
-          RockBuster.field_j.c(var5 - var25.fullWidth, -var25.fullHeight + var6, 256);
+          RockBuster.field_j.drawAdditive(var5 - var25.fullWidth, -var25.fullHeight + var6, 256);
           return;
         }
         field_I = (int[]) null;
@@ -127,22 +127,22 @@ final class ValidationIndicator extends TextButton {
             RockBuster.field_j = new Sprite(var9Lifetime1, var10Lifetime1);
             eo.a(RockBuster.field_j, (byte) -111);
           }
-          var15.b(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_R << 10, 4096);
+          var15.drawRotatedScaledBilinear(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_R << 10, 4096);
           dl.a((byte) 116);
-          RockBuster.field_j.c(var5Lifetime1 - var15.fullWidth, -var15.fullHeight + var6Lifetime1, 256);
+          RockBuster.field_j.drawAdditive(var5Lifetime1 - var15.fullWidth, -var15.fullHeight + var6Lifetime1, 256);
           return;
         }
         if (ug.field_c != var8Lifetime1) {
           if (ArchiveProvider.field_a == var8Lifetime1) {
             Sprite var18 = EditableTextWidget.field_E[2];
-            var18.c(var5Lifetime1 - (var18.width >> 1), var6Lifetime1 - (var18.height >> 1), 256);
+            var18.drawAdditive(var5Lifetime1 - (var18.width >> 1), var6Lifetime1 - (var18.height >> 1), 256);
             return;
           }
           if (IsaacRandom.field_h != var8Lifetime1) {
             return;
           }
           Sprite var17 = EditableTextWidget.field_E[1];
-          var17.c(-(var17.width >> 1) + var5Lifetime1, var6Lifetime1 - (var17.height >> 1), 256);
+          var17.drawAdditive(-(var17.width >> 1) + var5Lifetime1, var6Lifetime1 - (var17.height >> 1), 256);
           return;
         }
         Sprite var16 = EditableTextWidget.field_E[0];
@@ -158,9 +158,9 @@ final class ValidationIndicator extends TextButton {
           RockBuster.field_j = new Sprite(var9Lifetime2, var10Lifetime2);
           eo.a(RockBuster.field_j, (byte) -111);
         }
-        var16.b(112, 144, var16.fullWidth << 4, var16.fullHeight << 4, -this.field_R << 10, 4096);
+        var16.drawRotatedScaledBilinear(112, 144, var16.fullWidth << 4, var16.fullHeight << 4, -this.field_R << 10, 4096);
         dl.a((byte) 116);
-        RockBuster.field_j.c(var5Lifetime1 - var16.fullWidth, -var16.fullHeight + var6Lifetime1, 256);
+        RockBuster.field_j.drawAdditive(var5Lifetime1 - var16.fullWidth, -var16.fullHeight + var6Lifetime1, 256);
     }
 
     final static void a(int param0, int param1, byte param2, String param3) {

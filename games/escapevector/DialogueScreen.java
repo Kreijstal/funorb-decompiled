@@ -170,7 +170,7 @@ final class DialogueScreen extends IntrusiveNode {
           if (30 > this.field_v) {
             var8Lifetime1 = this.field_v * var8Lifetime1 / 30;
           }
-          SoftwareRasterizer.a(15, 178, 610, 62, 0, var8Lifetime1);
+          SoftwareRasterizer.fillRectangleAlpha(15, 178, 610, 62, 0, var8Lifetime1);
         }
         if (30 <= this.field_p &&
           this.field_v > 50) {
@@ -178,7 +178,7 @@ final class DialogueScreen extends IntrusiveNode {
           if (this.field_v < 80) {
             var8Lifetime2 = var8Lifetime2 * (-50 + this.field_v) / 30;
           }
-          SoftwareRasterizer.a(15, 240, 610, 62, 0, var8Lifetime2);
+          SoftwareRasterizer.fillRectangleAlpha(15, 240, 610, 62, 0, var8Lifetime2);
         }
         ArchiveKeyRequest.a(244, 182, 8, this.field_v);
     }
@@ -638,7 +638,7 @@ final class DialogueScreen extends IntrusiveNode {
           Sprite var2 = uj.field_a;
           for (int var3 = 0; var3 < 480; var3 = var3 + var2.fullHeight) {
             for (int var4 = 0; var4 < 640; var4 = var4 + var2.fullWidth) {
-              var2.b(var4, var3, this.field_v * 256 / 80);
+              var2.drawWithBrightness(var4, var3, this.field_v * 256 / 80);
             }
           }
         } else {

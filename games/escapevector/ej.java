@@ -13,7 +13,7 @@ final class ej {
     final static void a(byte param0, String param1) {
         try {
           MatchingTextValidator.b(-10002, param1);
-          uf.a((byte) 125, mm.field_a, false);
+          UiTheme.a((byte) 125, mm.field_a, false);
           if (param0 > -113) {
             String var3 = (String) null;
             ej.a((byte) -29, (String) null);

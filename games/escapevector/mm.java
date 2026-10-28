@@ -82,7 +82,7 @@ final class mm {
           if (var4.tryLoadNamedGroup(param0 - 4, da.field_d[param1])) {
             EmailValidationError.field_a[param1] = fe.a(da.field_d[param1], var4, "texture", true);
             PcmResampler.field_a[param1] = fe.a(da.field_d[param1], var4, "frosting", true);
-            PcmResampler.field_a[param1].c();
+            PcmResampler.field_a[param1].expandToFullSize();
             DelayedServerPacket.loadSkyLayers(var4, param1, false);
             WeightedLruCache.field_c[param1] = true;
             SpriteOffset.a((byte) 53);

@@ -284,7 +284,7 @@ public final class EscapeVector extends NetworkGameClient {
           h.releaseStatics(96);
           oi.releaseStatics((byte) 95);
           sn.releaseStatics((byte) -118);
-          uf.releaseStatics(-27204);
+          UiTheme.releaseStatics(-27204);
           pa.releaseStatics((byte) 103);
           LegacyButton.releaseStatics(1);
           qe.releaseStatics(0);
@@ -519,25 +519,25 @@ public final class EscapeVector extends NetworkGameClient {
             CheckboxPainter.field_c = fe.a("basic", MarkerSliderPainter.field_h, "unachieved", true);
             DualLinkDequeIterator.field_e = fe.a("basic", MarkerSliderPainter.field_h, "locked", true);
             qh.field_l = new Sprite(CheckboxPainter.field_c.fullWidth, CheckboxPainter.field_c.fullHeight);
-            qh.field_l.f();
+            qh.field_l.trimTransparentEdges();
             mb.a(fe.a("", IndexedSpriteState.field_j, "achievements_next_page_button", true), -84);
             RasterSnapshot.field_m = new Sprite[mc.field_d.length];
             int var2_int = 0;
             while (mc.field_d.length > var2_int) {
               RasterSnapshot.field_m[var2_int] = new Sprite(32, 32);
-              RasterSnapshot.field_m[var2_int].g();
-              mc.field_d[var2_int].a(0, 0, 32, 32);
+              RasterSnapshot.field_m[var2_int].bindAsFramebuffer();
+              mc.field_d[var2_int].drawDownscaled(0, 0, 32, 32);
               var2_int++;
               if (var3 != 0) {
                 return;
               }
             }
             id.field_a = new Sprite(32, 32);
-            id.field_a.g();
-            CheckboxPainter.field_c.a(0, 0, 32, 32);
+            id.field_a.bindAsFramebuffer();
+            CheckboxPainter.field_c.drawDownscaled(0, 0, 32, 32);
             uj.field_b = new Sprite(32, 32);
-            uj.field_b.g();
-            DualLinkDequeIterator.field_e.a(0, 0, 32, 32);
+            uj.field_b.bindAsFramebuffer();
+            DualLinkDequeIterator.field_e.drawDownscaled(0, 0, 32, 32);
             md.field_D.a(param0 ^ -35);
             this.g(false);
             vd.field_f = kh.a(IndexedSpriteState.field_j, (byte) 123, "", "level_complete_tick");
@@ -602,7 +602,7 @@ public final class EscapeVector extends NetworkGameClient {
           ArchiveRequest.field_w = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mouseover").toPcmSample().resample(var2);
           b.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "level_indicator").toPcmSample().resample(var2);
           pc.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "button_formation").toPcmSample().resample(var2);
-          uf.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "frame-appear").toPcmSample().resample(var2);
+          UiTheme.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "frame-appear").toPcmSample().resample(var2);
           QuickChatPhraseDefinition.field_t = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "photo-blob-grow").toPcmSample().resample(var2);
           vd.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "photo-body-explode").toPcmSample().resample(var2);
           ArchiveProvider.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "grid_effect_1").toPcmSample().resample(var2);
@@ -778,7 +778,7 @@ public final class EscapeVector extends NetworkGameClient {
           UiContainer.field_B = mj.a(10, -124);
           he.field_u = mj.a(5, -128);
           gj.a((byte) 57, ei.field_m, MarkerSliderPainter.field_h);
-          uf.a(MarkerSliderPainter.field_h, ei.field_m, (byte) -96);
+          UiTheme.a(MarkerSliderPainter.field_h, ei.field_m, (byte) -96);
           DualLinkNode.field_n = new uc(70);
           DualLinkNode.field_n.a(MarkerSliderPainter.field_h, TextFieldValidator.field_l, DebouncedValidator.field_d, "basic", 14826);
           DualLinkNode.field_n.a(IndexedSpriteState.field_j, TextFieldValidator.field_l, DebouncedValidator.field_d, "", 14826);

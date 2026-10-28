@@ -30,13 +30,13 @@ final class ok {
           SoftwareRasterizer.clearFramebuffer();
           IndexedSpriteState.a(-111);
           if (var5 < 256) {
-            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
           }
           dl.a((byte) 116);
           if (SocketConnector.field_d >= 150) {
-            cb.field_a.d(15 + var3, var4 + 10, var5);
+            cb.field_a.drawAlpha(15 + var3, var4 + 10, var5);
           } else {
-            LaserGateSpan.field_l.g(var3, var4);
+            LaserGateSpan.field_l.drawHalfSize(var3, var4);
           }
         } else {
           eo.a(LaserGateSpan.field_l, (byte) -107);
@@ -44,11 +44,11 @@ final class ok {
           SoftwareRasterizer.clearFramebuffer();
           IndexedSpriteState.a(-111);
           if (var5 < 256) {
-            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
           }
           dl.a((byte) 116);
           if (SocketConnector.field_d >= 150) {
-            cb.field_a.d(15 + var3, var4 + 10, var5);
+            cb.field_a.drawAlpha(15 + var3, var4 + 10, var5);
             int var6 = -125 + SocketConnector.field_d;
             if (var6 <= 0) {
               var6 = SocketConnector.field_d - 140;
@@ -57,7 +57,7 @@ final class ok {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
+                Js5NetworkRequest.field_G.drawAlpha(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
             } else if (var6 >= 50) {
               var6 = SocketConnector.field_d - 140;
@@ -66,56 +66,56 @@ final class ok {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
+                Js5NetworkRequest.field_G.drawAlpha(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
             } else if (var6 < 20) {
               var7 = var6 * 256 / 20;
-              ea.field_d.c(var3, var4, var7);
+              ea.field_d.drawAdditive(var3, var4, var7);
               var6 = SocketConnector.field_d - 140;
               if (0 < var6) {
                 var7 = 256;
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
+                Js5NetworkRequest.field_G.drawAlpha(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
             } else if (30 > var6) {
-              ea.field_d.c(var3, var4, 256);
+              ea.field_d.drawAdditive(var3, var4, 256);
               var6 = SocketConnector.field_d - 140;
               if (0 < var6) {
                 var7 = 256;
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
+                Js5NetworkRequest.field_G.drawAlpha(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
             } else {
               var7 = 256 * (50 - var6) / 20;
-              ea.field_d.c(var3, var4, var7);
+              ea.field_d.drawAdditive(var3, var4, var7);
               var6 = SocketConnector.field_d - 140;
               if (0 < var6) {
                 var7 = 256;
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
+                Js5NetworkRequest.field_G.drawAlpha(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
             }
             return;
           }
-          LaserGateSpan.field_l.g(var3, var4);
+          LaserGateSpan.field_l.drawHalfSize(var3, var4);
         }
         int var6Lifetime1 = -125 + SocketConnector.field_d;
         if (var6Lifetime1 > 0 &&
           var6Lifetime1 < 50) {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
-            ea.field_d.c(var3, var4, var7Lifetime1);
+            ea.field_d.drawAdditive(var3, var4, var7Lifetime1);
           } else if (30 > var6Lifetime1) {
-            ea.field_d.c(var3, var4, 256);
+            ea.field_d.drawAdditive(var3, var4, 256);
           } else {
             var7Lifetime1 = 256 * (50 - var6Lifetime1) / 20;
-            ea.field_d.c(var3, var4, var7Lifetime1);
+            ea.field_d.drawAdditive(var3, var4, var7Lifetime1);
           }
         }
         int var6Lifetime2 = SocketConnector.field_d - 140;
@@ -124,7 +124,7 @@ final class ok {
           if (var6Lifetime2 < 20) {
             var7Lifetime2 = 256 * var6Lifetime2 / 20;
           }
-          Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7Lifetime2 >> 8);
+          Js5NetworkRequest.field_G.drawAlpha(15 + var3, 10 + var4, var5 * var7Lifetime2 >> 8);
         }
         return;
     }

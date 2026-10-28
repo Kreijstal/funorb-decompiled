@@ -509,7 +509,7 @@ final class en {
           sl.field_b[var2_int][0] = fe.a("tutorial", param0, "layer0", true);
           uj.field_a = sl.field_b[var2_int][0];
           sl.field_b[var2_int][2] = fe.a("tutorial", param0, "layer2", true);
-          uf.field_e = fe.a("tutorial", param0, "edge_exit_left", true);
+          UiTheme.field_e = fe.a("tutorial", param0, "edge_exit_left", true);
           wa.field_b = fe.a("tutorial", param0, "edge_exit_right", true);
           EmailAvailabilityValidator.field_r = fe.a("tutorial", param0, "edge_inner_bottom", true);
           ej.field_e = fe.a("tutorial", param0, "edge_inner_bottom_left", true);

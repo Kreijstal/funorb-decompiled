@@ -103,7 +103,7 @@ abstract class eo {
             Sprite var3 = (Sprite) null;
             eo.a((Sprite) null, (byte) -40);
           }
-          SoftwareRasterizer.a(param0.pixels, param0.fullWidth, param0.fullHeight);
+          SoftwareRasterizer.bind(param0.pixels, param0.fullWidth, param0.fullHeight);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "eo.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

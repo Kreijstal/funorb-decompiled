@@ -55,7 +55,7 @@ final class fc {
           field_a = -100;
           if (!param4 ||
             param0 >= 16) {
-            SoftwareRasterizer.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
+            SoftwareRasterizer.fillRectangle(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
             qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
             if (param11) {
               qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
@@ -69,23 +69,23 @@ final class fc {
           int var16 = param2;
           int var17 = param3;
           if (param11) {
-            SoftwareRasterizer.a(param1 + 1, param10 + 1, -2 + param2 - param1, 3, 0);
-            SoftwareRasterizer.a(1 + param1, 4 + param10, 3, param3 + (-param10 - 8), 0);
-            SoftwareRasterizer.a(param2 - 4, param10 + 4, 3, param3 - param10 - 8, 0);
+            SoftwareRasterizer.fillRectangle(param1 + 1, param10 + 1, -2 + param2 - param1, 3, 0);
+            SoftwareRasterizer.fillRectangle(1 + param1, 4 + param10, 3, param3 + (-param10 - 8), 0);
+            SoftwareRasterizer.fillRectangle(param2 - 4, param10 + 4, 3, param3 - param10 - 8, 0);
             var14 += 3;
             var15 += 3;
             var17 -= 3;
             var16 -= 3;
-            SoftwareRasterizer.a(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
+            SoftwareRasterizer.fillRectangle(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
           } else {
-            SoftwareRasterizer.c(var14 + 1, var15 + 1, var16 + (-var14 - 2), -2 + (-var15 + var17), var12, var13);
+            SoftwareRasterizer.fillVerticalGradient(var14 + 1, var15 + 1, var16 + (-var14 - 2), -2 + (-var15 + var17), var12, var13);
             qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
             if (param11) {
               qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
             }
             return;
           }
-          SoftwareRasterizer.c(var14 + 1, var15 + 1, var16 + (-var14 - 2), -2 + (-var15 + var17), var12, var13);
+          SoftwareRasterizer.fillVerticalGradient(var14 + 1, var15 + 1, var16 + (-var14 - 2), -2 + (-var15 + var17), var12, var13);
           qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
             qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
@@ -93,7 +93,7 @@ final class fc {
           return;
         }
         if (!param4) {
-          SoftwareRasterizer.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
+          SoftwareRasterizer.fillRectangle(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
           qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
             qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
@@ -101,7 +101,7 @@ final class fc {
           return;
         }
         if (param0 >= 16) {
-          SoftwareRasterizer.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
+          SoftwareRasterizer.fillRectangle(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
           qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
             qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
@@ -115,23 +115,23 @@ final class fc {
         int var16Lifetime1 = param2;
         int var17Lifetime1 = param3;
         if (param11) {
-          SoftwareRasterizer.a(param1 + 1, param10 + 1, -2 + param2 - param1, 3, 0);
-          SoftwareRasterizer.a(1 + param1, 4 + param10, 3, param3 + (-param10 - 8), 0);
-          SoftwareRasterizer.a(param2 - 4, param10 + 4, 3, param3 - param10 - 8, 0);
+          SoftwareRasterizer.fillRectangle(param1 + 1, param10 + 1, -2 + param2 - param1, 3, 0);
+          SoftwareRasterizer.fillRectangle(1 + param1, 4 + param10, 3, param3 + (-param10 - 8), 0);
+          SoftwareRasterizer.fillRectangle(param2 - 4, param10 + 4, 3, param3 - param10 - 8, 0);
           var14Lifetime1 += 3;
           var15Lifetime1 += 3;
           var17Lifetime1 -= 3;
           var16Lifetime1 -= 3;
-          SoftwareRasterizer.a(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
+          SoftwareRasterizer.fillRectangle(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
         } else {
-          SoftwareRasterizer.c(var14Lifetime1 + 1, var15Lifetime1 + 1, var16Lifetime1 + (-var14Lifetime1 - 2), -2 + (-var15Lifetime1 + var17Lifetime1), var12Lifetime1, var13Lifetime1);
+          SoftwareRasterizer.fillVerticalGradient(var14Lifetime1 + 1, var15Lifetime1 + 1, var16Lifetime1 + (-var14Lifetime1 - 2), -2 + (-var15Lifetime1 + var17Lifetime1), var12Lifetime1, var13Lifetime1);
           qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
             qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
           }
           return;
         }
-        SoftwareRasterizer.c(var14Lifetime1 + 1, var15Lifetime1 + 1, var16Lifetime1 + (-var14Lifetime1 - 2), -2 + (-var15Lifetime1 + var17Lifetime1), var12Lifetime1, var13Lifetime1);
+        SoftwareRasterizer.fillVerticalGradient(var14Lifetime1 + 1, var15Lifetime1 + 1, var16Lifetime1 + (-var14Lifetime1 - 2), -2 + (-var15Lifetime1 + var17Lifetime1), var12Lifetime1, var13Lifetime1);
         qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
         if (param11) {
           qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);

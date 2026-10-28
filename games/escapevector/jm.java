@@ -59,7 +59,7 @@ final class jm extends UiComponent {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(var6 >= 1.0) ? (int)(var6 * 255.0) : 255;
             }
-            SoftwareRasterizer.b(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         dl.a((byte) 127);
@@ -116,26 +116,26 @@ final class jm extends UiComponent {
           int var5_int = this.width + param3;
           rd.a(var5_int - this.field_N.width, param3 + this.field_N.width, param1 + this.height, 19807, param1);
           for (int var6 = -this.field_C + param3; var6 < var5_int; var6 = var6 + param2.width) {
-            param2.e(var6, param1);
+            param2.drawTransparent(var6, param1);
           }
           dl.a((byte) -125);
           if (param3 + this.field_N.width >= SoftwareRasterizer.clipLeft) {
             eo.a(this.field_E, (byte) -35);
-            param2.e(-this.field_C, 0);
-            param2.e(-this.field_C + this.field_z * 2, 0);
-            this.field_D.f(0, 0);
+            param2.drawTransparent(-this.field_C, 0);
+            param2.drawTransparent(-this.field_C + this.field_z * 2, 0);
+            this.field_D.drawMultiply(0, 0);
             dl.a((byte) 124);
-            this.field_E.e(param3, param1);
+            this.field_E.drawTransparent(param3, param1);
           }
           if (SoftwareRasterizer.clipRight >= -this.field_N.width + var5_int) {
             eo.a(this.field_E, (byte) -29);
             for (var7 = this.field_C + (this.width - this.field_N.width); 2 * this.field_z < var7; var7 = var7 - this.field_z * 2) {
             }
-            param2.e(-var7, 0);
-            param2.e(2 * this.field_z - var7, 0);
-            this.field_N.f(0, 0);
+            param2.drawTransparent(-var7, 0);
+            param2.drawTransparent(2 * this.field_z - var7, 0);
+            this.field_N.drawMultiply(0, 0);
             dl.a((byte) -65);
-            this.field_E.e(var5_int - this.field_N.width, param1);
+            this.field_E.drawTransparent(var5_int - this.field_N.width, param1);
             return;
           }
           return;

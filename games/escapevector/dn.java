@@ -743,7 +743,7 @@ final class dn {
           int var2 = 640;
           int var3 = 480;
           int var4 = 64;
-          SoftwareRasterizer.a(0, 0, var2, var3, 0, var4);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, var2, var3, 0, var4);
           this.field_y.c(116);
         }
         this.b((byte) 88);

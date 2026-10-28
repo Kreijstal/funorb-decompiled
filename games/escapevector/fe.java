@@ -20,13 +20,13 @@ final class fe {
 
     final void c(int param0) {
         int var4 = EscapeVector.obfuscationControl;
-        SoftwareRasterizer.c(9, 9, 622, 47, 4540749, 65793);
-        SoftwareRasterizer.a(9, 257, 622, 33, 2585);
-        SoftwareRasterizer.c(9, 265, 622, 11, 2585, 1515566);
+        SoftwareRasterizer.fillVerticalGradient(9, 9, 622, 47, 4540749, 65793);
+        SoftwareRasterizer.fillRectangle(9, 257, 622, 33, 2585);
+        SoftwareRasterizer.fillVerticalGradient(9, 265, 622, 11, 2585, 1515566);
         int var2 = 0;
         int var3 = 14;
         while (var2 < 4) {
-          SoftwareRasterizer.c(var3, 331, 117, 90, 460551, 3881787);
+          SoftwareRasterizer.fillVerticalGradient(var3, 331, 117, 90, 460551, 3881787);
           var3 += 121;
           var2++;
         }
@@ -36,8 +36,8 @@ final class fe {
           this.field_b = (IndexedSprite[]) null;
         }
         while (var2Lifetime1 < 2) {
-          SoftwareRasterizer.c(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-          SoftwareRasterizer.a(508, var3Lifetime1 + 42, 127, 42, 12410);
+          SoftwareRasterizer.fillVerticalGradient(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+          SoftwareRasterizer.fillRectangle(508, var3Lifetime1 + 42, 127, 42, 12410);
           var2Lifetime1++;
           var3Lifetime1 += 91;
         }
@@ -65,45 +65,45 @@ final class fe {
         if (null == TriangleMesh.field_z) {
           return;
         }
-        this.field_h.e(376, 339);
-        this.field_g.e(9, 9);
+        this.field_h.drawTransparent(376, 339);
+        this.field_g.drawTransparent(9, 9);
         TriangleMesh.field_z.draw(0, 0);
         if (null != ml.field_c) {
-          ml.field_c.e(9, 257);
-          ml.field_c.c(558, 257);
+          ml.field_c.drawTransparent(9, 257);
+          ml.field_c.drawMirrored(558, 257);
           if (UiContainer.field_y > 257 &&
             UiContainer.field_y < 290) {
             int var2Lifetime2 = 40 + (40 * TextLayoutLine.sineQ16(this.field_m << 4, -124) >> 16);
             if (var2Lifetime2 > 0) {
               if (dh.field_d > 9 &&
                 dh.field_d < 82) {
-                ml.field_c.c(8, 256, var2Lifetime2);
-                ml.field_c.c(10, 256, var2Lifetime2);
-                ml.field_c.c(8, 258, var2Lifetime2);
-                ml.field_c.c(10, 258, var2Lifetime2);
+                ml.field_c.drawAdditive(8, 256, var2Lifetime2);
+                ml.field_c.drawAdditive(10, 256, var2Lifetime2);
+                ml.field_c.drawAdditive(8, 258, var2Lifetime2);
+                ml.field_c.drawAdditive(10, 258, var2Lifetime2);
               } else if (dh.field_d > 558 &&
                 dh.field_d < 631) {
-                ml.field_c.e();
-                ml.field_c.c(557, 256, var2Lifetime2);
-                ml.field_c.c(559, 256, var2Lifetime2);
-                ml.field_c.c(557, 258, var2Lifetime2);
-                ml.field_c.c(559, 258, var2Lifetime2);
-                ml.field_c.e();
+                ml.field_c.flipHorizontally();
+                ml.field_c.drawAdditive(557, 256, var2Lifetime2);
+                ml.field_c.drawAdditive(559, 256, var2Lifetime2);
+                ml.field_c.drawAdditive(557, 258, var2Lifetime2);
+                ml.field_c.drawAdditive(559, 258, var2Lifetime2);
+                ml.field_c.flipHorizontally();
               }
             }
           }
         }
-        this.field_c.e(16, 302);
+        this.field_c.drawTransparent(16, 302);
         ac.field_c.drawParagraph(this.field_d[this.field_i], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-        IntrusiveDequeCursor.field_e.e(30, 330);
+        IntrusiveDequeCursor.field_e.drawTransparent(30, 330);
         ac.field_c.drawParagraph(MatchingTextValidator.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ac.field_c.drawParagraph(MatchingTextValidator.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ac.field_c.drawParagraph(MatchingTextValidator.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        LoginMethod.field_c.e(508 + (127 - LoginMethod.field_c.fullWidth) / 2, 315);
+        LoginMethod.field_c.drawTransparent(508 + (127 - LoginMethod.field_c.fullWidth) / 2, 315);
         if (this.field_a.field_h == 0) {
-          QuickChatDynamicCommand.field_a[0].e(508, 299);
+          QuickChatDynamicCommand.field_a[0].drawTransparent(508, 299);
         } else if (this.field_a.field_h == 1) {
-          QuickChatDynamicCommand.field_a[1].e(508, 387);
+          QuickChatDynamicCommand.field_a[1].drawTransparent(508, 387);
         }
     }
 
@@ -388,7 +388,7 @@ final class fe {
           }
           this.field_g = new Sprite(622, 47);
           eo.a(this.field_g, (byte) -90);
-          SoftwareRasterizer.c(0, 0, 622, 47, 4540749, 65793);
+          SoftwareRasterizer.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           int var2 = 16448250;
           int var3 = 10068666;
           int[] var17 = ug.a(1746055568, var3, var2);
@@ -399,12 +399,12 @@ final class fe {
           int[] var18 = ug.a(1746055568, 526344, 526344);
           Sprite var5 = new Sprite(121, 122);
           eo.a(var5, (byte) -40);
-          SoftwareRasterizer.c(0, 0, var5.width, var5.height / 2, 16180917, 16306250);
+          SoftwareRasterizer.fillVerticalGradient(0, 0, var5.width, var5.height / 2, 16180917, 16306250);
           if (param0 <= 63) {
             String var8 = (String) null;
             this.a(false, (String[]) null, (IndexedSprite[]) null, (java.applet.Applet) null, (String) null, 46);
           }
-          SoftwareRasterizer.c(0, var5.height / 2, var5.width, var5.height, 16306250, 15568919);
+          SoftwareRasterizer.fillVerticalGradient(0, var5.height / 2, var5.width, var5.height, 16306250, 15568919);
           String var6 = UiComponent.field_r;
           String var7 = mh.field_b;
           this.a(0, ReflectionCheck.field_h, var6, var5.height, 0, var5, -16, 0.5f, var18, var5.width);
@@ -413,7 +413,7 @@ final class fe {
           dl.a((byte) -54);
           this.field_h = new Sprite(121, 122);
           eo.a(this.field_h, (byte) -104);
-          var5.c(this.field_h.width / 2, this.field_h.height / 2, -2048, 4096);
+          var5.drawCenteredRotatedScaledBilinear(this.field_h.width / 2, this.field_h.height / 2, -2048, 4096);
           dl.a((byte) -12);
           return;
         }
@@ -455,7 +455,7 @@ final class fe {
         DraggableWidget.field_F = true;
         DialWidget.field_H = true;
         bo.field_F.l(17415);
-        uf.a((byte) 119, DualLinkNode.field_h, false);
+        UiTheme.a((byte) 119, DualLinkNode.field_h, false);
     }
 
     private final int a(int param0, int param1, int param2) {
@@ -497,11 +497,11 @@ final class fe {
           int var12 = (int)((float)param3 / param7);
           Sprite var13 = new Sprite(var11_int, var12);
           eo.a(var13, (byte) -125);
-          param5.b((int)((float)(-param4) / param7), (int)((float)(-param6) / param7), (int)((float)param5.width / param7), (int)((float)param5.height / param7));
+          param5.drawScaled((int)((float)(-param4) / param7), (int)((float)(-param6) / param7), (int)((float)param5.width / param7), (int)((float)param5.height / param7));
           this.a(param1, param0, 0, var12, var11_int, 0, param2, param8);
           dl.a((byte) -81);
           eo.a(param5, (byte) -105);
-          var13.a(param4, param6, param9, param3);
+          var13.drawDownscaled(param4, param6, param9, param3);
           dl.a((byte) 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

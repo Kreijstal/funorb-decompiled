@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh extends Sprite {
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 > 0) {
-          if (param3 <= 0) {
+final class ArgbSprite extends Sprite {
+    final void drawScaledAlpha(int x, int y, int targetWidth, int targetHeight, int alpha) {
+        if (targetWidth > 0) {
+          if (targetHeight <= 0) {
             return;
           }
           int var6 = this.width;
@@ -13,53 +13,53 @@ final class uh extends Sprite {
           int var9 = 0;
           int var10 = this.fullWidth;
           int var11 = this.fullHeight;
-          int var12 = (var10 << 16) / param2;
-          int var13 = (var11 << 16) / param3;
+          int var12 = (var10 << 16) / targetWidth;
+          int var13 = (var11 << 16) / targetHeight;
           if (this.offsetX > 0) {
             int var14 = ((this.offsetX << 16) + var12 - 1) / var12;
-            param0 = param0 + var14;
+            x = x + var14;
             var8 = var8 + (var14 * var12 - (this.offsetX << 16));
           }
           if (this.offsetY > 0) {
             int var14Lifetime1 = ((this.offsetY << 16) + var13 - 1) / var13;
-            param1 = param1 + var14Lifetime1;
+            y = y + var14Lifetime1;
             var9 = var9 + (var14Lifetime1 * var13 - (this.offsetY << 16));
           }
           if (var6 < var10) {
-            param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
+            targetWidth = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
           if (var7 < var11) {
-            param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
+            targetHeight = ((var7 << 16) - var9 + var13 - 1) / var13;
           }
-          int var14Lifetime2 = param0 + param1 * SoftwareRasterizer.width;
-          int var15 = SoftwareRasterizer.width - param2;
-          if (param1 + param3 > SoftwareRasterizer.clipBottom) {
-            param3 = param3 - (param1 + param3 - SoftwareRasterizer.clipBottom);
+          int var14Lifetime2 = x + y * SoftwareRasterizer.width;
+          int var15 = SoftwareRasterizer.width - targetWidth;
+          if (y + targetHeight > SoftwareRasterizer.clipBottom) {
+            targetHeight = targetHeight - (y + targetHeight - SoftwareRasterizer.clipBottom);
           }
-          if (param1 < SoftwareRasterizer.clipTop) {
-            int var16 = SoftwareRasterizer.clipTop - param1;
-            param3 = param3 - var16;
+          if (y < SoftwareRasterizer.clipTop) {
+            int var16 = SoftwareRasterizer.clipTop - y;
+            targetHeight = targetHeight - var16;
             var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRasterizer.width;
             var9 = var9 + var13 * var16;
           }
-          if (param0 + param2 > SoftwareRasterizer.clipRight) {
-            int var16Lifetime1 = param0 + param2 - SoftwareRasterizer.clipRight;
-            param2 = param2 - var16Lifetime1;
+          if (x + targetWidth > SoftwareRasterizer.clipRight) {
+            int var16Lifetime1 = x + targetWidth - SoftwareRasterizer.clipRight;
+            targetWidth = targetWidth - var16Lifetime1;
             var15 = var15 + var16Lifetime1;
           }
-          if (param0 < SoftwareRasterizer.clipLeft) {
-            int var16Lifetime2 = SoftwareRasterizer.clipLeft - param0;
-            param2 = param2 - var16Lifetime2;
+          if (x < SoftwareRasterizer.clipLeft) {
+            int var16Lifetime2 = SoftwareRasterizer.clipLeft - x;
+            targetWidth = targetWidth - var16Lifetime2;
             var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          uh.b(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          ArgbSprite.blitArgbScaledAlpha(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, targetWidth, targetHeight, var12, var13, var6, alpha);
           return;
         }
     }
 
-    final void g(int param0, int param1) {
+    final void drawHalfSize(int x, int y) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -67,35 +67,35 @@ final class uh extends Sprite {
         int stackIn_21_2 = 0;
         int var3 = this.width >> 1;
         int var4 = this.height >> 1;
-        param0 = param0 + this.offsetX / 2;
-        param1 = param1 + this.offsetY / 2;
-        if (param0 >= SoftwareRasterizer.clipLeft) {
+        x = x + this.offsetX / 2;
+        y = y + this.offsetY / 2;
+        if (x >= SoftwareRasterizer.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = SoftwareRasterizer.clipLeft - param0 << 1;
+          stackIn_3_0 = SoftwareRasterizer.clipLeft - x << 1;
         }
         int var5 = stackIn_3_0;
-        if (param0 + var3 <= SoftwareRasterizer.clipRight) {
+        if (x + var3 <= SoftwareRasterizer.clipRight) {
           stackIn_6_0 = this.width - 2;
         } else {
-          stackIn_6_0 = (SoftwareRasterizer.clipRight - param0 << 1) - 2;
+          stackIn_6_0 = (SoftwareRasterizer.clipRight - x << 1) - 2;
         }
         int var6 = stackIn_6_0;
-        if (param1 >= SoftwareRasterizer.clipTop) {
+        if (y >= SoftwareRasterizer.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = SoftwareRasterizer.clipTop - param1 << 1;
+          stackIn_9_0 = SoftwareRasterizer.clipTop - y << 1;
         }
         int var7 = stackIn_9_0;
-        if (param1 + var4 <= SoftwareRasterizer.clipBottom) {
+        if (y + var4 <= SoftwareRasterizer.clipBottom) {
           stackIn_12_0 = this.height - 2;
         } else {
-          stackIn_12_0 = (SoftwareRasterizer.clipBottom - param1 << 1) - 2;
+          stackIn_12_0 = (SoftwareRasterizer.clipBottom - y << 1) - 2;
         }
         int var8 = stackIn_12_0;
         for (int var9 = var7; var9 <= var8; var9 += 2) {
           int var10 = var9 * this.width + var5;
-          int var11 = (param1 + (var9 >> 1)) * SoftwareRasterizer.width + (param0 + (var5 >> 1));
+          int var11 = (y + (var9 >> 1)) * SoftwareRasterizer.width + (x + (var5 >> 1));
           int var12 = var5;
           while (var12 <= var6) {
             int var13 = 0;
@@ -134,36 +134,36 @@ final class uh extends Sprite {
         }
     }
 
-    final void d(int param0, int param1) {
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var3 = param0 + param1 * SoftwareRasterizer.width;
+    final void drawOpaque(int x, int y) {
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var3 = x + y * SoftwareRasterizer.width;
         int var4 = 0;
         int var5 = this.height;
         int var6 = this.width;
         int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          int var9 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          int var9 = SoftwareRasterizer.clipTop - y;
           var5 = var5 - var9;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * SoftwareRasterizer.width;
         }
-        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
-          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
+        if (y + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (y + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          int var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          int var9Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRasterizer.clipRight) {
-          int var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
+        if (x + var6 > SoftwareRasterizer.clipRight) {
+          int var9Lifetime2 = x + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -172,18 +172,18 @@ final class uh extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          uh.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.blitArgb(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    uh(int param0, int param1) {
+    ArgbSprite(int param0, int param1) {
         super(param0, param1);
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
-        if (param2 > 0) {
-          if (param3 <= 0) {
+    final void drawScaled(int x, int y, int targetWidth, int targetHeight) {
+        if (targetWidth > 0) {
+          if (targetHeight <= 0) {
             return;
           }
           int var5 = this.width;
@@ -192,86 +192,86 @@ final class uh extends Sprite {
           int var8 = 0;
           int var9 = this.fullWidth;
           int var10 = this.fullHeight;
-          int var11 = (var9 << 16) / param2;
-          int var12 = (var10 << 16) / param3;
+          int var11 = (var9 << 16) / targetWidth;
+          int var12 = (var10 << 16) / targetHeight;
           if (this.offsetX > 0) {
             int var13 = ((this.offsetX << 16) + var11 - 1) / var11;
-            param0 = param0 + var13;
+            x = x + var13;
             var7 = var7 + (var13 * var11 - (this.offsetX << 16));
           }
           if (this.offsetY > 0) {
             int var13Lifetime1 = ((this.offsetY << 16) + var12 - 1) / var12;
-            param1 = param1 + var13Lifetime1;
+            y = y + var13Lifetime1;
             var8 = var8 + (var13Lifetime1 * var12 - (this.offsetY << 16));
           }
           if (var5 < var9) {
-            param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
+            targetWidth = ((var5 << 16) - var7 + var11 - 1) / var11;
           }
           if (var6 < var10) {
-            param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
+            targetHeight = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
-          int var13Lifetime2 = param0 + param1 * SoftwareRasterizer.width;
-          int var14 = SoftwareRasterizer.width - param2;
-          if (param1 + param3 > SoftwareRasterizer.clipBottom) {
-            param3 = param3 - (param1 + param3 - SoftwareRasterizer.clipBottom);
+          int var13Lifetime2 = x + y * SoftwareRasterizer.width;
+          int var14 = SoftwareRasterizer.width - targetWidth;
+          if (y + targetHeight > SoftwareRasterizer.clipBottom) {
+            targetHeight = targetHeight - (y + targetHeight - SoftwareRasterizer.clipBottom);
           }
-          if (param1 < SoftwareRasterizer.clipTop) {
-            int var15 = SoftwareRasterizer.clipTop - param1;
-            param3 = param3 - var15;
+          if (y < SoftwareRasterizer.clipTop) {
+            int var15 = SoftwareRasterizer.clipTop - y;
+            targetHeight = targetHeight - var15;
             var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRasterizer.width;
             var8 = var8 + var12 * var15;
           }
-          if (param0 + param2 > SoftwareRasterizer.clipRight) {
-            int var15Lifetime1 = param0 + param2 - SoftwareRasterizer.clipRight;
-            param2 = param2 - var15Lifetime1;
+          if (x + targetWidth > SoftwareRasterizer.clipRight) {
+            int var15Lifetime1 = x + targetWidth - SoftwareRasterizer.clipRight;
+            targetWidth = targetWidth - var15Lifetime1;
             var14 = var14 + var15Lifetime1;
           }
-          if (param0 < SoftwareRasterizer.clipLeft) {
-            int var15Lifetime2 = SoftwareRasterizer.clipLeft - param0;
-            param2 = param2 - var15Lifetime2;
+          if (x < SoftwareRasterizer.clipLeft) {
+            int var15Lifetime2 = SoftwareRasterizer.clipLeft - x;
+            targetWidth = targetWidth - var15Lifetime2;
             var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          uh.c(SoftwareRasterizer.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          ArgbSprite.blitArgbScaled(SoftwareRasterizer.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, targetWidth, targetHeight, var11, var12, var5);
           return;
         }
     }
 
-    final void b(int param0, int param1, int param2) {
-        if (param2 == 256) {
-          this.e(param0, param1);
+    final void drawWithBrightness(int x, int y, int brightness) {
+        if (brightness == 256) {
+          this.drawTransparent(x, y);
           return;
         }
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * SoftwareRasterizer.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * SoftwareRasterizer.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          int var10 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          int var10 = SoftwareRasterizer.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRasterizer.width;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          int var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          int var10Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-          int var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
+        if (x + var7 > SoftwareRasterizer.clipRight) {
+          int var10Lifetime2 = x + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -280,41 +280,41 @@ final class uh extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          uh.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbBrightness(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, brightness);
           return;
         }
     }
 
-    final void c(int param0, int param1, int param2) {
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * SoftwareRasterizer.width;
+    final void drawAdditive(int x, int y, int intensity) {
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * SoftwareRasterizer.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          int var10 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          int var10 = SoftwareRasterizer.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRasterizer.width;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          int var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          int var10Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-          int var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
+        if (x + var7 > SoftwareRasterizer.clipRight) {
+          int var10Lifetime2 = x + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -323,93 +323,93 @@ final class uh extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          uh.b(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbAdditive(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, intensity);
           return;
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitArgbTinted(int[] destination, int[] source, int sourceColor, int sourceIndex, int destinationIndex, int column, int row, int rowWidth, int rowCount, int destinationRowSkip, int sourceRowSkip, int tint) {
         int var15Lifetime1;
-        int var12 = param11 & 16711935;
-        int var13 = param11 >> 8 & 255;
-        for (param6 = -param8; param6 < 0; param6++) {
-          for (param5 = -param7; param5 < 0; param5++) {
-            param2 = param1[param3++];
-            int var14 = param2 >>> 24;
-            param2 = param2 & 16777215;
+        int var12 = tint & 16711935;
+        int var13 = tint >> 8 & 255;
+        for (row = -rowCount; row < 0; row++) {
+          for (column = -rowWidth; column < 0; column++) {
+            sourceColor = source[sourceIndex++];
+            int var14 = sourceColor >>> 24;
+            sourceColor = sourceColor & 16777215;
             if (var14 == 0) {
-              param4++;
+              destinationIndex++;
             } else {
               int var15 = 0;
-              if (param2 >> 8 != (param2 & 65535)) {
-                var15Lifetime1 = param2;
+              if (sourceColor >> 8 != (sourceColor & 65535)) {
+                var15Lifetime1 = sourceColor;
               } else {
-                param2 = param2 & 255;
-                var15Lifetime1 = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
+                sourceColor = sourceColor & 255;
+                var15Lifetime1 = (sourceColor * var12 >> 8 & 16711934) + (sourceColor * var13 & 65280) + 1;
               }
               int var16 = 256 - var14;
-              int var17 = param0[param4];
-              int incrementValue$1 = param4;
-              param4++;
-              param0[incrementValue$1] = ((var15Lifetime1 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15Lifetime1 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
+              int var17 = destination[destinationIndex];
+              int incrementValue$1 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$1] = ((var15Lifetime1 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15Lifetime1 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
             }
           }
-          param4 = param4 + param9;
-          param3 = param3 + param10;
+          destinationIndex = destinationIndex + destinationRowSkip;
+          sourceIndex = sourceIndex + sourceRowSkip;
         }
     }
 
-    private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = -param5;
-        for (int var10 = -param6; var10 < 0; var10++) {
+    private final static void blitArgbMirrored(int[] destination, int[] source, int sourceColor, int sourceIndex, int destinationIndex, int rowWidth, int rowCount, int destinationRowSkip, int sourceRowSkip) {
+        int var9 = -rowWidth;
+        for (int var10 = -rowCount; var10 < 0; var10++) {
           for (int var11 = var9; var11 < 0; var11++) {
-            param2 = param1[param3--];
-            int var12 = param2 >>> 24;
+            sourceColor = source[sourceIndex--];
+            int var12 = sourceColor >>> 24;
             if (var12 == 0) {
-              param4++;
+              destinationIndex++;
             } else {
               int var13 = 256 - var12;
-              int var14 = param0[param4];
-              int incrementValue$12 = param4;
-              param4++;
-              param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+              int var14 = destination[destinationIndex];
+              int incrementValue$12 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$12] = ((sourceColor & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((sourceColor & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
             }
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          destinationIndex = destinationIndex + destinationRowSkip;
+          sourceIndex = sourceIndex + sourceRowSkip;
         }
     }
 
-    final void a(int param0, int param1, int param2) {
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * SoftwareRasterizer.width;
+    final void drawTinted(int x, int y, int tint) {
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * SoftwareRasterizer.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          int var10 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          int var10 = SoftwareRasterizer.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRasterizer.width;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          int var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          int var10Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-          int var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
+        if (x + var7 > SoftwareRasterizer.clipRight) {
+          int var10Lifetime2 = x + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -418,62 +418,62 @@ final class uh extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          uh.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbTinted(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, tint);
           return;
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = -param5;
-        for (int var10 = -param6; var10 < 0; var10++) {
+    private final static void blitArgb(int[] destination, int[] source, int sourceColor, int sourceIndex, int destinationIndex, int rowWidth, int rowCount, int destinationRowSkip, int sourceRowSkip) {
+        int var9 = -rowWidth;
+        for (int var10 = -rowCount; var10 < 0; var10++) {
           for (int var11 = var9; var11 < 0; var11++) {
-            param2 = param1[param3++];
-            int var12 = param2 >>> 24;
+            sourceColor = source[sourceIndex++];
+            int var12 = sourceColor >>> 24;
             if (var12 == 0) {
-              param4++;
+              destinationIndex++;
             } else {
               int var13 = 256 - var12;
-              int var14 = param0[param4];
-              int incrementValue$12 = param4;
-              param4++;
-              param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+              int var14 = destination[destinationIndex];
+              int incrementValue$12 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$12] = ((sourceColor & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((sourceColor & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
             }
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          destinationIndex = destinationIndex + destinationRowSkip;
+          sourceIndex = sourceIndex + sourceRowSkip;
         }
     }
 
-    final void c(int param0, int param1) {
-        param0 = param0 + (this.fullWidth - this.width - this.offsetX);
-        param1 = param1 + this.offsetY;
-        int var3 = param0 + param1 * SoftwareRasterizer.width;
+    final void drawMirrored(int x, int y) {
+        x = x + (this.fullWidth - this.width - this.offsetX);
+        y = y + this.offsetY;
+        int var3 = x + y * SoftwareRasterizer.width;
         int var4 = this.width - 1;
         int var5 = this.height;
         int var6 = this.width;
         int var7 = SoftwareRasterizer.width - var6;
         int var8 = var6 + var6;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          int var9 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          int var9 = SoftwareRasterizer.clipTop - y;
           var5 = var5 - var9;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * SoftwareRasterizer.width;
         }
-        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
-          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
+        if (y + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (y + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          int var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          int var9Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var4 = var4 - var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 - var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRasterizer.clipRight) {
-          int var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
+        if (x + var6 > SoftwareRasterizer.clipRight) {
+          int var9Lifetime2 = x + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 - var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -482,61 +482,61 @@ final class uh extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          uh.e(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.blitArgbMirrored(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
-        int var13 = param3;
-        for (int var14 = -param8; var14 < 0; var14++) {
-          int var15 = (param4 >> 16) * param11;
-          for (int var16 = -param7; var16 < 0; var16++) {
-            int var17 = param1[(param3 >> 16) + var15];
-            int var18 = param0[param5];
-            int var19 = (var17 >>> 24) * param12 >> 8;
+    private final static void blitArgbScaledAlpha(int[] destination, int[] source, int sourceColor, int sourceXQ16, int sourceYQ16, int destinationIndex, int destinationRowSkip, int rowWidth, int rowCount, int stepXQ16, int stepYQ16, int sourceWidth, int alpha) {
+        int var13 = sourceXQ16;
+        for (int var14 = -rowCount; var14 < 0; var14++) {
+          int var15 = (sourceYQ16 >> 16) * sourceWidth;
+          for (int var16 = -rowWidth; var16 < 0; var16++) {
+            int var17 = source[(sourceXQ16 >> 16) + var15];
+            int var18 = destination[destinationIndex];
+            int var19 = (var17 >>> 24) * alpha >> 8;
             int var20 = 256 - var19;
-            int incrementValue$0 = param5;
-            param5++;
-            param0[incrementValue$0] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
-            param3 = param3 + param9;
+            int incrementValue$0 = destinationIndex;
+            destinationIndex++;
+            destination[incrementValue$0] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
+            sourceXQ16 = sourceXQ16 + stepXQ16;
           }
-          param4 = param4 + param10;
-          param3 = var13;
-          param5 = param5 + param6;
+          sourceYQ16 = sourceYQ16 + stepYQ16;
+          sourceXQ16 = var13;
+          destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 
-    final void e(int param0, int param1) {
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var3 = param0 + param1 * SoftwareRasterizer.width;
+    final void drawTransparent(int x, int y) {
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var3 = x + y * SoftwareRasterizer.width;
         int var4 = 0;
         int var5 = this.height;
         int var6 = this.width;
         int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          int var9 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          int var9 = SoftwareRasterizer.clipTop - y;
           var5 = var5 - var9;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * SoftwareRasterizer.width;
         }
-        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
-          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
+        if (y + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (y + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          int var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          int var9Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRasterizer.clipRight) {
-          int var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
+        if (x + var6 > SoftwareRasterizer.clipRight) {
+          int var9Lifetime2 = x + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -545,95 +545,95 @@ final class uh extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          uh.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.blitArgb(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        for (int var10 = -param6; var10 < 0; var10++) {
-          for (int var11 = -param5; var11 < 0; var11++) {
-            int var12 = (param1[param3] >>> 24) * param9 >> 8;
+    private final static void blitArgbAlpha(int[] destination, int[] source, int sourceColor, int sourceIndex, int destinationIndex, int rowWidth, int rowCount, int destinationRowSkip, int sourceRowSkip, int alpha) {
+        for (int var10 = -rowCount; var10 < 0; var10++) {
+          for (int var11 = -rowWidth; var11 < 0; var11++) {
+            int var12 = (source[sourceIndex] >>> 24) * alpha >> 8;
             int var13 = 256 - var12;
-            int var14 = param1[param3++];
-            int var15 = param0[param4];
-            int incrementValue$1 = param4;
-            param4++;
-            param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
+            int var14 = source[sourceIndex++];
+            int var15 = destination[destinationIndex];
+            int incrementValue$1 = destinationIndex;
+            destinationIndex++;
+            destination[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          destinationIndex = destinationIndex + destinationRowSkip;
+          sourceIndex = sourceIndex + sourceRowSkip;
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int var12 = param3;
-        for (int var13 = -param8; var13 < 0; var13++) {
-          int var14 = (param4 >> 16) * param11;
-          for (int var15 = -param7; var15 < 0; var15++) {
-            param2 = param1[(param3 >> 16) + var14];
-            int var16 = param2 >>> 24;
+    private final static void blitArgbScaled(int[] destination, int[] source, int sourceColor, int sourceXQ16, int sourceYQ16, int destinationIndex, int destinationRowSkip, int rowWidth, int rowCount, int stepXQ16, int stepYQ16, int sourceWidth) {
+        int var12 = sourceXQ16;
+        for (int var13 = -rowCount; var13 < 0; var13++) {
+          int var14 = (sourceYQ16 >> 16) * sourceWidth;
+          for (int var15 = -rowWidth; var15 < 0; var15++) {
+            sourceColor = source[(sourceXQ16 >> 16) + var14];
+            int var16 = sourceColor >>> 24;
             if (var16 != 0) {
               int var17 = 256 - var16;
-              int var18 = param0[param5];
-              int incrementValue$0 = param5;
-              param5++;
-              param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
+              int var18 = destination[destinationIndex];
+              int incrementValue$0 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$0] = ((sourceColor & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((sourceColor & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
             } else {
-              param5++;
+              destinationIndex++;
             }
-            param3 = param3 + param9;
+            sourceXQ16 = sourceXQ16 + stepXQ16;
           }
-          param4 = param4 + param10;
-          param3 = var12;
-          param5 = param5 + param6;
+          sourceYQ16 = sourceYQ16 + stepYQ16;
+          sourceXQ16 = var12;
+          destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        for (int var10 = -param6; var10 < 0; var10++) {
-          for (int var11 = -param5; var11 < 0; var11++) {
-            param2 = param1[param3++];
-            int var12 = param2 >>> 24;
+    private final static void blitArgbBrightness(int[] destination, int[] source, int sourceColor, int sourceIndex, int destinationIndex, int rowWidth, int rowCount, int destinationRowSkip, int sourceRowSkip, int brightness) {
+        for (int var10 = -rowCount; var10 < 0; var10++) {
+          for (int var11 = -rowWidth; var11 < 0; var11++) {
+            sourceColor = source[sourceIndex++];
+            int var12 = sourceColor >>> 24;
             if (var12 == 0) {
-              param4++;
+              destinationIndex++;
             } else {
-              int var13 = param0[param4];
+              int var13 = destination[destinationIndex];
               int var14 = 256 - var12;
-              int var15 = (param2 & 16711935) * param9 & -16711936;
-              int var16 = (param2 & 65280) * param9 & 16711680;
-              param2 = (var15 | var16) >>> 8;
-              int incrementValue$12 = param4;
-              param4++;
-              param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
+              int var15 = (sourceColor & 16711935) * brightness & -16711936;
+              int var16 = (sourceColor & 65280) * brightness & 16711680;
+              sourceColor = (var15 | var16) >>> 8;
+              int incrementValue$12 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$12] = ((sourceColor & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((sourceColor & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
             }
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          destinationIndex = destinationIndex + destinationRowSkip;
+          sourceIndex = sourceIndex + sourceRowSkip;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRotatedScaled(int pivotXQ4, int pivotYQ4, int destinationXQ4, int destinationYQ4, int angle65536, int scaleQ12) {
         int var19;
         int var20;
         int var21;
         int var22;
-        if (param5 == 0) {
+        if (scaleQ12 == 0) {
           return;
         }
-        param0 = param0 - (this.offsetX << 4);
-        param1 = param1 - (this.offsetY << 4);
-        double var7 = (double)(param4 & 65535) * 0.00009587379924285257;
-        int var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
-        int var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
-        int var11 = -param0 * var10 + -param1 * var9;
-        int var12 = -(-param0) * var9 + -param1 * var10;
-        int var13 = ((this.width << 4) - param0) * var10 + -param1 * var9;
-        int var14 = -((this.width << 4) - param0) * var9 + -param1 * var10;
-        int var15 = -param0 * var10 + ((this.height << 4) - param1) * var9;
-        int var16 = -(-param0) * var9 + ((this.height << 4) - param1) * var10;
-        int var17 = ((this.width << 4) - param0) * var10 + ((this.height << 4) - param1) * var9;
-        int var18 = -((this.width << 4) - param0) * var9 + ((this.height << 4) - param1) * var10;
+        pivotXQ4 = pivotXQ4 - (this.offsetX << 4);
+        pivotYQ4 = pivotYQ4 - (this.offsetY << 4);
+        double var7 = (double)(angle65536 & 65535) * 0.00009587379924285257;
+        int var9 = (int)Math.floor(Math.sin(var7) * (double)scaleQ12 + 0.5);
+        int var10 = (int)Math.floor(Math.cos(var7) * (double)scaleQ12 + 0.5);
+        int var11 = -pivotXQ4 * var10 + -pivotYQ4 * var9;
+        int var12 = -(-pivotXQ4) * var9 + -pivotYQ4 * var10;
+        int var13 = ((this.width << 4) - pivotXQ4) * var10 + -pivotYQ4 * var9;
+        int var14 = -((this.width << 4) - pivotXQ4) * var9 + -pivotYQ4 * var10;
+        int var15 = -pivotXQ4 * var10 + ((this.height << 4) - pivotYQ4) * var9;
+        int var16 = -(-pivotXQ4) * var9 + ((this.height << 4) - pivotYQ4) * var10;
+        int var17 = ((this.width << 4) - pivotXQ4) * var10 + ((this.height << 4) - pivotYQ4) * var9;
+        int var18 = -((this.width << 4) - pivotXQ4) * var9 + ((this.height << 4) - pivotYQ4) * var10;
         if (var11 >= var13) {
           var19 = var13;
           var20 = var11;
@@ -676,10 +676,10 @@ final class uh extends Sprite {
         var20 = var20 + 4095 >> 12;
         var21 = var21 >> 12;
         var22 = var22 + 4095 >> 12;
-        var19 = var19 + param2;
-        var20 = var20 + param2;
-        var21 = var21 + param3;
-        var22 = var22 + param3;
+        var19 = var19 + destinationXQ4;
+        var20 = var20 + destinationXQ4;
+        var21 = var21 + destinationYQ4;
+        var22 = var22 + destinationYQ4;
         var19 = var19 >> 4;
         var20 = var20 + 15 >> 4;
         var21 = var21 >> 4;
@@ -705,13 +705,13 @@ final class uh extends Sprite {
           return;
         }
         int var23 = var21 * SoftwareRasterizer.width + var19;
-        double var24 = 16777216.0 / (double)param5;
+        double var24 = 16777216.0 / (double)scaleQ12;
         int var26 = (int)Math.floor(Math.sin(var7) * var24 + 0.5);
         int var27 = (int)Math.floor(Math.cos(var7) * var24 + 0.5);
-        int var28 = (var19 << 4) + 8 - param2;
-        int var29 = (var21 << 4) + 8 - param3;
-        int var30 = (param0 << 8) - (var29 * var26 >> 4);
-        int var31 = (param1 << 8) + (var29 * var27 >> 4);
+        int var28 = (var19 << 4) + 8 - destinationXQ4;
+        int var29 = (var21 << 4) + 8 - destinationYQ4;
+        int var30 = (pivotXQ4 << 8) - (var29 * var26 >> 4);
+        int var31 = (pivotYQ4 << 8) + (var29 * var27 >> 4);
         if (var27 == 0) {
           if (var26 == 0) {
             int var33 = var22;
@@ -1085,60 +1085,60 @@ final class uh extends Sprite {
         return;
     }
 
-    private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        for (param8 = -param10; param8 < 0; param8++) {
-          for (param6 = -param9; param6 < 0; param6++) {
-            param0 = param4[param5++];
-            if (param0 == 0) {
-              param7++;
+    private final static void blitArgbAdditive(int sourceColor, int destinationColor, int sum, int[] destination, int[] source, int sourceIndex, int column, int destinationIndex, int row, int rowWidth, int rowCount, int destinationRowSkip, int sourceRowSkip, int intensity) {
+        for (row = -rowCount; row < 0; row++) {
+          for (column = -rowWidth; column < 0; column++) {
+            sourceColor = source[sourceIndex++];
+            if (sourceColor == 0) {
+              destinationIndex++;
             } else {
-              int var14 = param13 * (param0 >>> 24) >> 8 & 255;
-              param1 = (param0 & 16711935) * var14;
-              param0 = (param1 & -16711936) + (param0 * var14 - param1 & 16711680) >>> 8;
-              param1 = param3[param7];
-              param2 = param0 + param1;
-              param0 = (param0 & 16711935) + (param1 & 16711935);
-              param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-              int incrementValue$12 = param7;
-              param7++;
-              param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
+              int var14 = intensity * (sourceColor >>> 24) >> 8 & 255;
+              destinationColor = (sourceColor & 16711935) * var14;
+              sourceColor = (destinationColor & -16711936) + (sourceColor * var14 - destinationColor & 16711680) >>> 8;
+              destinationColor = destination[destinationIndex];
+              sum = sourceColor + destinationColor;
+              sourceColor = (sourceColor & 16711935) + (destinationColor & 16711935);
+              destinationColor = (sourceColor & 16777472) + (sum - sourceColor & 65536);
+              int incrementValue$12 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$12] = sum - destinationColor | destinationColor - (destinationColor >>> 8);
             }
           }
-          param7 = param7 + param11;
-          param5 = param5 + param12;
+          destinationIndex = destinationIndex + destinationRowSkip;
+          sourceIndex = sourceIndex + sourceRowSkip;
         }
     }
 
-    final void f(int param0, int param1, int param2) {
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * SoftwareRasterizer.width;
+    final void drawShadedTint(int x, int y, int tint) {
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * SoftwareRasterizer.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          int var10 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          int var10 = SoftwareRasterizer.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRasterizer.width;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          int var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          int var10Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-          int var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
+        if (x + var7 > SoftwareRasterizer.clipRight) {
+          int var10Lifetime2 = x + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1147,83 +1147,83 @@ final class uh extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          uh.f(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbShadedTint(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, tint);
           return;
         }
     }
 
-    private final static void f(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbShadedTint(int[] destination, int[] source, int sourceColor, int sourceIndex, int destinationIndex, int rowWidth, int rowCount, int destinationRowSkip, int sourceRowSkip, int tint) {
         int var18;
-        int var10 = param9 >> 16 & 255;
-        int var11 = param9 >> 8 & 255;
-        int var12 = param9 & 255;
-        int var13 = -(param5 >> 2);
-        param5 = -(param5 & 3);
-        int var14 = var13 + var13 + var13 + var13 + param5;
-        for (int var15 = -param6; var15 < 0; var15++) {
+        int var10 = tint >> 16 & 255;
+        int var11 = tint >> 8 & 255;
+        int var12 = tint & 255;
+        int var13 = -(rowWidth >> 2);
+        rowWidth = -(rowWidth & 3);
+        int var14 = var13 + var13 + var13 + var13 + rowWidth;
+        for (int var15 = -rowCount; var15 < 0; var15++) {
           for (int var16 = var14; var16 < 0; var16++) {
-            param2 = param1[param3++];
-            int var17 = param2 >>> 24;
+            sourceColor = source[sourceIndex++];
+            int var17 = sourceColor >>> 24;
             if (var17 == 0) {
-              param4++;
+              destinationIndex++;
             } else {
-              int var19 = param2 >> 16 & 255;
-              int var20 = param2 >> 8 & 255;
-              int var21 = param2 & 255;
+              int var19 = sourceColor >> 16 & 255;
+              int var20 = sourceColor >> 8 & 255;
+              int var21 = sourceColor & 255;
               if (var19 != var20 ||
                 var20 != var21) {
-                var18 = param2;
+                var18 = sourceColor;
               } else if (var19 > 128) {
                 var18 = (var10 * (256 - var19) + 255 * (var19 - 128) >> 7 << 16) + (var11 * (256 - var20) + 255 * (var20 - 128) >> 7 << 8) + (var12 * (256 - var21) + 255 * (var21 - 128) >> 7);
               } else {
                 var18 = (var19 * var10 >> 7 << 16) + (var20 * var11 >> 7 << 8) + (var21 * var12 >> 7);
               }
               int var22 = 256 - var17;
-              int var23 = param0[param4];
-              int incrementValue$6 = param4;
-              param4++;
-              param0[incrementValue$6] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
+              int var23 = destination[destinationIndex];
+              int incrementValue$6 = destinationIndex;
+              destinationIndex++;
+              destination[incrementValue$6] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
             }
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          destinationIndex = destinationIndex + destinationRowSkip;
+          sourceIndex = sourceIndex + sourceRowSkip;
         }
     }
 
-    uh(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    ArgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final void d(int param0, int param1, int param2) {
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * SoftwareRasterizer.width;
+    final void drawAlpha(int x, int y, int alpha) {
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * SoftwareRasterizer.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          int var10 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          int var10 = SoftwareRasterizer.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRasterizer.width;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          int var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          int var10Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-          int var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
+        if (x + var7 > SoftwareRasterizer.clipRight) {
+          int var10Lifetime2 = x + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1232,7 +1232,7 @@ final class uh extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          uh.e(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbAlpha(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, alpha);
           return;
         }
     }

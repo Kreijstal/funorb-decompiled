@@ -83,69 +83,69 @@ class ld extends vj {
               var19 = height * var8 / (var9 + var8) + y;
               var18 = height * var8 / (var9 + var8) + y;
             }
-            SoftwareRasterizer.a(NameAvailabilityValidator.field_o);
+            SoftwareRasterizer.saveClip(NameAvailabilityValidator.field_o);
             if (null != sprites[0]) {
-              SoftwareRasterizer.h(x, y, var16, var18);
-              sprites[0].e(x, y);
-              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
+              SoftwareRasterizer.intersectClip(x, y, var16, var18);
+              sprites[0].drawTransparent(x, y);
+              SoftwareRasterizer.restoreClip(NameAvailabilityValidator.field_o);
             }
             if (sprites[2] != null) {
-              SoftwareRasterizer.h(var17, y, var10, var18);
-              sprites[2].e(var13, y);
-              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
+              SoftwareRasterizer.intersectClip(var17, y, var10, var18);
+              sprites[2].drawTransparent(var13, y);
+              SoftwareRasterizer.restoreClip(NameAvailabilityValidator.field_o);
             }
             if (sprites[6] != null) {
-              SoftwareRasterizer.h(x, var19, var16, var11);
-              sprites[6].e(x, var15);
-              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
+              SoftwareRasterizer.intersectClip(x, var19, var16, var11);
+              sprites[6].drawTransparent(x, var15);
+              SoftwareRasterizer.restoreClip(NameAvailabilityValidator.field_o);
             }
             if (null != sprites[8]) {
-              SoftwareRasterizer.h(var17, var19, var10, var11);
-              sprites[8].e(var13, var15);
-              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
+              SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
+              sprites[8].drawTransparent(var13, var15);
+              SoftwareRasterizer.restoreClip(NameAvailabilityValidator.field_o);
             }
             if (null != sprites[1] &&
               0 != sprites[1].fullWidth) {
-              SoftwareRasterizer.h(var16, y, var17, var18);
+              SoftwareRasterizer.intersectClip(var16, y, var17, var18);
               for (int var20 = var12; var20 < var13; var20 = var20 + sprites[1].fullWidth) {
-                sprites[1].e(var20, y);
+                sprites[1].drawTransparent(var20, y);
               }
-              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
+              SoftwareRasterizer.restoreClip(NameAvailabilityValidator.field_o);
             }
             if (null != sprites[7] &&
               sprites[7].fullWidth != 0) {
-              SoftwareRasterizer.h(var16, var19, var17, var11);
+              SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (int var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + sprites[7].fullWidth) {
-                sprites[7].e(var20Lifetime1, var15);
+                sprites[7].drawTransparent(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
+              SoftwareRasterizer.restoreClip(NameAvailabilityValidator.field_o);
             }
             if (null != sprites[3] &&
               sprites[3].fullHeight != 0) {
-              SoftwareRasterizer.h(x, var18, var16, var19);
+              SoftwareRasterizer.intersectClip(x, var18, var16, var19);
               for (int var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + sprites[3].fullHeight) {
-                sprites[3].e(x, var20Lifetime2);
+                sprites[3].drawTransparent(x, var20Lifetime2);
               }
-              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
+              SoftwareRasterizer.restoreClip(NameAvailabilityValidator.field_o);
             }
             if (sprites[5] != null &&
               sprites[5].fullHeight != 0) {
-              SoftwareRasterizer.h(var17, var18, var10, var19);
+              SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (int var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + sprites[5].fullHeight) {
-                sprites[5].e(var13, var20Lifetime3);
+                sprites[5].drawTransparent(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
+              SoftwareRasterizer.restoreClip(NameAvailabilityValidator.field_o);
             }
             if (sprites[guard] != null &&
               0 != sprites[4].fullWidth &&
               sprites[4].fullHeight != 0) {
-              SoftwareRasterizer.h(var16, var18, var17, var19);
+              SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (int var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + sprites[4].fullHeight) {
                 for (int var21 = var12; var21 < var13; var21 = var21 + sprites[4].fullWidth) {
-                  sprites[4].e(var21, var20Lifetime4);
+                  sprites[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.b(NameAvailabilityValidator.field_o);
+              SoftwareRasterizer.restoreClip(NameAvailabilityValidator.field_o);
               return;
             }
             return;

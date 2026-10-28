@@ -165,7 +165,7 @@ final class jd {
           !(0 > var1.indexOf('@'))) {
           var1 = "";
         }
-        return new sn(DualLinkNode.e(0), uf.c(62));
+        return new sn(DualLinkNode.e(0), UiTheme.c(62));
     }
 
     final static int a(BinaryBitmapFont param0, byte param1, String[] param2) {

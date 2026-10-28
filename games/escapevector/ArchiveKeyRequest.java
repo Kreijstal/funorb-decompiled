@@ -35,7 +35,7 @@ final class ArchiveKeyRequest extends IntrusiveNode {
           if (!(30 <= param3)) {
             ResourceArchive.drawSpriteWithRowJitter(param1, 8, 60 - param3 * 2, ea.field_f, param2 ^ -97);
           } else if (param3 <= 80) {
-            ea.field_f.e(8, param1);
+            ea.field_f.drawTransparent(8, param1);
           } else if (param3 < 95) {
             ResourceArchive.drawSpriteWithRowJitter(param1, 8, (param3 - 80) * 4, ea.field_f, param2 - 115);
           }
@@ -51,7 +51,7 @@ final class ArchiveKeyRequest extends IntrusiveNode {
           return;
         }
         if (param3 <= 80) {
-          ArchiveIndex.field_o.e(632 - ArchiveIndex.field_o.fullWidth, param0);
+          ArchiveIndex.field_o.drawTransparent(632 - ArchiveIndex.field_o.fullWidth, param0);
           return;
         }
         if (95 <= param3) {

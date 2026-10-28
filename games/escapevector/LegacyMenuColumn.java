@@ -216,7 +216,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
         int var3 = this.y - (-2 - uc.a(-1, this.font));
         this.font.drawLeft(this.header, var2, var3, this.textColor, -1);
         int var4 = this.font.stringWidth(this.header);
-        SoftwareRasterizer.a(var2, var3, var4, 2, this.textColor);
+        SoftwareRasterizer.fillRectangle(var2, var3, var4, 2, this.textColor);
     }
 
     private final int textWidth(byte guard) {

@@ -63,7 +63,7 @@ abstract class bb extends UiContainer {
           field_L = (IntrusiveDeque) null;
         }
         dl.a((byte) 125);
-        Minimap.field_r.d(this.x + screenX, this.y + screenY, this.field_N);
+        Minimap.field_r.drawAlpha(this.x + screenX, this.y + screenY, this.field_N);
     }
 
     final static void a(int param0, int param1, int param2, IndexedSprite param3, int param4, int param5) {

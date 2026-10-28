@@ -255,16 +255,16 @@ final class LoginMethod {
             }
             int var6 = sprites[2].fullWidth;
             int var7 = sprites[1].fullWidth;
-            sprites[0].e(x, y);
-            sprites[2].e(-var6 + x + width, y);
-            SoftwareRasterizer.a(sf.field_m);
-            SoftwareRasterizer.h(var5_int + x, y, x - (-width + var6), sprites[1].fullHeight + y);
+            sprites[0].drawTransparent(x, y);
+            sprites[2].drawTransparent(-var6 + x + width, y);
+            SoftwareRasterizer.saveClip(sf.field_m);
+            SoftwareRasterizer.intersectClip(var5_int + x, y, x - (-width + var6), sprites[1].fullHeight + y);
             int var8 = var5_int + x;
             int var9 = -var6 + (width + x);
             for (x = var8; x < var9; x = x + var7) {
-              sprites[1].e(x, y);
+              sprites[1].drawTransparent(x, y);
             }
-            SoftwareRasterizer.b(sf.field_m);
+            SoftwareRasterizer.restoreClip(sf.field_m);
             return;
           }
           return;

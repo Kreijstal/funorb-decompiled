@@ -635,9 +635,9 @@ final class GameplaySession {
           if (this.countdownActive &&
             this.countdownTicks < 0) {
             int var5 = 1;
-            var2_ref_ed.a(var3, var4, var5);
+            var2_ref_ed.drawTinted(var3, var4, var5);
           } else {
-            var2_ref_ed.e(var3, var4);
+            var2_ref_ed.drawTransparent(var3, var4);
           }
         }
         int var2 = -51 % ((-2 - guard) / 46);
@@ -1527,7 +1527,7 @@ final class GameplaySession {
           for (var5 = -cameraX; var5 > -1024; var5 -= 1024) {
           }
           while (var5 < 640) {
-            var4.e(480 + var5, -cameraY);
+            var4.drawTransparent(480 + var5, -cameraY);
             var5 += 1024;
           }
         }
@@ -2003,10 +2003,10 @@ final class GameplaySession {
         int var2 = 124 % ((guard - 56) / 62);
         if (this.shieldActive) {
           int var3 = 10053375;
-          SoftwareRasterizer.g(319, 239, 10, var3, 48);
-          SoftwareRasterizer.g(320, 239, 10, var3, 48);
-          SoftwareRasterizer.g(319, 240, 10, var3, 48);
-          SoftwareRasterizer.g(320, 240, 10, var3, 48);
+          SoftwareRasterizer.fillCircleAlpha(319, 239, 10, var3, 48);
+          SoftwareRasterizer.fillCircleAlpha(320, 239, 10, var3, 48);
+          SoftwareRasterizer.fillCircleAlpha(319, 240, 10, var3, 48);
+          SoftwareRasterizer.fillCircleAlpha(320, 240, 10, var3, 48);
         }
     }
 
@@ -2186,7 +2186,7 @@ final class GameplaySession {
                 Sprite var3_ref_ed = this.noticeSprite;
                 this.noticeSprite.fullHeight = 60;
                 var3_ref_ed.height = 60;
-                this.noticeSprite.g();
+                this.noticeSprite.bindAsFramebuffer();
                 SoftwareRasterizer.clearFramebuffer();
                 fh.field_g.drawCentered(SeekerMine.field_k[3 * this.tutorialStep], 319, 20, 16777215, -1);
                 fh.field_g.drawCentered(SeekerMine.field_k[this.tutorialStep * 3 + 1], 319, 40, 16777215, -1);
@@ -2234,12 +2234,12 @@ final class GameplaySession {
             this.noticeSprite.fullHeight = 40;
             Sprite var2Lifetime1 = this.noticeSprite;
             var2Lifetime1.height = 40;
-            this.noticeSprite.g();
+            this.noticeSprite.bindAsFramebuffer();
             SoftwareRasterizer.clearFramebuffer();
             int var3 = 0;
             for (int var4 = 0; var4 < this.displayedAchievementCount; var4++) {
               int var5 = this.displayedAchievementIds[var4];
-              RasterSnapshot.field_m[var5].e(var3, 4);
+              RasterSnapshot.field_m[var5].drawTransparent(var3, 4);
               int var6 = 39 - fh.field_g.wrappedLineCount(CachedArchiveProvider.field_r[var5], 100) * 10;
               fh.field_g.drawParagraph(CachedArchiveProvider.field_r[var5], var3 + 40, var6 - fh.field_g.maxAscent, 100, 1000, 16777215, -1, 0, 0, 20);
               var3 += 160;
@@ -2386,9 +2386,9 @@ final class GameplaySession {
               null != TerrainMaskSupport.field_a) {
               var9 = TerrainMaskSupport.field_a;
             }
-            var9.e(8 + var7, var8 + 8);
+            var9.drawTransparent(8 + var7, var8 + 8);
             if (var6) {
-              SelfDestructEffects.field_b.c(var7, var8, 128);
+              SelfDestructEffects.field_b.drawAdditive(var7, var8, 128);
             }
           }
           var5 = (SeekerMine) (this.seekerMines.next((byte) 70));
@@ -2529,7 +2529,7 @@ final class GameplaySession {
                 continue;
               }
               while (x < 640) {
-                sprite.e(x, y);
+                sprite.drawTransparent(x, y);
                 x = x + sprite.fullWidth;
               }
               y = y + sprite.fullHeight;
@@ -2543,7 +2543,7 @@ final class GameplaySession {
           if (fillBottom &&
             480 > y) {
             int var7_int = sprite.pixels[(-1 + sprite.height) * sprite.width];
-            SoftwareRasterizer.a(0, y, 640, 480 - y, var7_int);
+            SoftwareRasterizer.fillRectangle(0, y, 640, 480 - y, var7_int);
           }
           int stackIn_17_0Lifetime1 = guard;
           int stackIn_17_1Lifetime1 = 66;
@@ -2962,7 +2962,7 @@ final class GameplaySession {
               var6 = var6 - var10.fullHeight / 2;
             }
             while (var6 < 480) {
-              var10.e(var5, var6);
+              var10.drawTransparent(var5, var6);
               var6 = var6 + var10.fullHeight;
             }
             var5 = var5 + var10.fullWidth;
@@ -2970,7 +2970,7 @@ final class GameplaySession {
             var7 = stackIn_28_0;
             var6 = var8;
           }
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.resetClip();
         }
     }
 
@@ -3052,18 +3052,18 @@ final class GameplaySession {
         if (guard <= ~this.levelTitleTicks) {
           return;
         }
-        mj.field_b.g();
+        mj.field_b.bindAsFramebuffer();
         SoftwareRasterizer.clearFramebuffer();
         String var3 = TrackerMusicDefinition.a((byte) 120, this.gameMode, this.levelIndex);
         fh.field_g.drawCentered(var3, 160, 22, 7899280, -1);
         md.field_D.a(126);
         cf.a(mj.field_b, true, 1);
-        mj.field_b.h(5267536);
+        mj.field_b.addOutline(5267536);
         int var4 = this.levelTitleTicks;
         if (var4 > 128) {
           var4 = 128;
         }
-        mj.field_b.a(-mj.field_b.fullWidth + 320, (-cameraY >> 3) + 40 - 44, 2 * mj.field_b.fullWidth, mj.field_b.fullHeight * 2, var4);
+        mj.field_b.drawScaledAlpha(-mj.field_b.fullWidth + 320, (-cameraY >> 3) + 40 - 44, 2 * mj.field_b.fullWidth, mj.field_b.fullHeight * 2, var4);
     }
 
     private final void removeLaserGateSpan(LaserGateSpan gate, byte guard) {
@@ -3249,7 +3249,7 @@ final class GameplaySession {
                 ej.field_a != null) {
                 var8_ref_ed = ej.field_a;
               }
-              var8_ref_ed.a(var6, (byte) 34, 4096, -var5_ref_piLifetime1.angle256 << 8, var7);
+              var8_ref_ed.drawCenteredRotatedScaled(var6, (byte) 34, 4096, -var5_ref_piLifetime1.angle256 << 8, var7);
             }
           }
           var5_ref_piLifetime1 = (RockBuster) (this.rockBusters.next((byte) 70));
@@ -3282,12 +3282,12 @@ final class GameplaySession {
               this.dynamicTerrain != null) {
               var10 = this.dynamicTerrain.field_z;
             }
-            SoftwareRasterizer.d(320, 240, var6Lifetime1 + (var8 >> 1), var7Lifetime1 + (var9 >> 1), var10);
+            SoftwareRasterizer.drawLine(320, 240, var6Lifetime1 + (var8 >> 1), var7Lifetime1 + (var9 >> 1), var10);
           }
           if (this.pickupAnimationTicks > 0) {
-            var5_ref_ed.b(var6Lifetime1, var7Lifetime1, var8, var9);
+            var5_ref_ed.drawScaled(var6Lifetime1, var7Lifetime1, var8, var9);
           } else {
-            var5_ref_ed.e(var6Lifetime1, var7Lifetime1);
+            var5_ref_ed.drawTransparent(var6Lifetime1, var7Lifetime1);
           }
         }
         if (!this.shipDestroyed) {
@@ -3311,7 +3311,7 @@ final class GameplaySession {
           if (this.isMissionComplete((byte) -91)) {
             if (this.scoringEnabled &&
               0 <= this.levelIndex) {
-              IntPoint.field_b.e(640 - IntPoint.field_b.fullWidth >> 1, -IntPoint.field_b.fullHeight + 212);
+              IntPoint.field_b.drawTransparent(640 - IntPoint.field_b.fullWidth >> 1, -IntPoint.field_b.fullHeight + 212);
               if (-100 > this.transitionTicks) {
                 ValidationIndicator.a(266, 340, (byte) -106, en.field_e);
                 EscapeVector.a(Integer.toString(this.levelScore), 340, 266, (byte) 110);
@@ -3327,7 +3327,7 @@ final class GameplaySession {
               ValidationIndicator.a(336, 340, (byte) 85, BoundedUrlRequest.field_c);
               EscapeVector.a(Integer.toString(this.score), 340, 336, (byte) 119);
             } else {
-              IntPoint.field_b.e(640 - IntPoint.field_b.fullWidth >> 1, 480 - IntPoint.field_b.fullHeight >> 1);
+              IntPoint.field_b.drawTransparent(640 - IntPoint.field_b.fullWidth >> 1, 480 - IntPoint.field_b.fullHeight >> 1);
             }
           }
           this.drawGameOverOverlay((byte) -76);
@@ -3458,39 +3458,39 @@ final class GameplaySession {
           for (var4 = -cameraX; var4 > -1024; var4 -= 1024) {
           }
           while (var4 < 640) {
-            SoftwareRasterizer.h(0, 0, 448 + var4, 480);
+            SoftwareRasterizer.intersectClip(0, 0, 448 + var4, 480);
             for (int var5 = 0; var5 < 512; var5 += 32) {
-              wa.field_e.e(var4 + var5, -cameraY);
+              wa.field_e.drawTransparent(var4 + var5, -cameraY);
             }
-            AccountRegistrationPanel.field_T.e(var4 + 224, -cameraY + 96);
+            AccountRegistrationPanel.field_T.drawTransparent(var4 + 224, -cameraY + 96);
             for (int var5Lifetime1 = 256; 512 > var5Lifetime1; var5Lifetime1 += 32) {
-              mj.field_f.e(var5Lifetime1 + var4, 96 - cameraY);
+              mj.field_f.drawTransparent(var5Lifetime1 + var4, 96 - cameraY);
             }
-            SoftwareRasterizer.c();
-            SoftwareRasterizer.h(var4 + 576, 0, 640, 480);
+            SoftwareRasterizer.resetClip();
+            SoftwareRasterizer.intersectClip(var4 + 576, 0, 640, 480);
             for (int var5Lifetime2 = 512; 1024 > var5Lifetime2; var5Lifetime2 += 32) {
-              wa.field_e.e(var5Lifetime2 + var4, -cameraY);
+              wa.field_e.drawTransparent(var5Lifetime2 + var4, -cameraY);
             }
             for (int var5Lifetime3 = 512; var5Lifetime3 < 768; var5Lifetime3 += 32) {
-              mj.field_f.e(var5Lifetime3 + var4, 96 - cameraY);
+              mj.field_f.drawTransparent(var5Lifetime3 + var4, 96 - cameraY);
             }
-            GrowableIntList.field_h.e(var4 + 768, 96 - cameraY);
-            SoftwareRasterizer.c();
-            uf.field_e.e(var4 + 448, -cameraY);
-            wa.field_b.e(544 + var4, -cameraY);
-            gm.field_a.e(448 + var4, 288 - cameraY);
-            gm.field_a.e(448 + var4, -cameraY + 480);
-            SoftwareRasterizer.h(0, 128 - cameraY, 640, 480);
+            GrowableIntList.field_h.drawTransparent(var4 + 768, 96 - cameraY);
+            SoftwareRasterizer.resetClip();
+            UiTheme.field_e.drawTransparent(var4 + 448, -cameraY);
+            wa.field_b.drawTransparent(544 + var4, -cameraY);
+            gm.field_a.drawTransparent(448 + var4, 288 - cameraY);
+            gm.field_a.drawTransparent(448 + var4, -cameraY + 480);
+            SoftwareRasterizer.intersectClip(0, 128 - cameraY, 640, 480);
             for (int var5Lifetime4 = 128; var5Lifetime4 < 1024; var5Lifetime4 += 32) {
-              PacketBuffer.field_l.e(var4 + 224, -cameraY + var5Lifetime4);
-              cj.field_a.e(768 + var4, -cameraY + var5Lifetime4);
+              PacketBuffer.field_l.drawTransparent(var4 + 224, -cameraY + var5Lifetime4);
+              cj.field_a.drawTransparent(768 + var4, -cameraY + var5Lifetime4);
             }
-            SoftwareRasterizer.c();
-            ej.field_e.e(var4 + 224, 1024 - cameraY);
+            SoftwareRasterizer.resetClip();
+            ej.field_e.drawTransparent(var4 + 224, 1024 - cameraY);
             for (int var5Lifetime5 = 256; var5Lifetime5 < 768; var5Lifetime5 += 32) {
-              EmailAvailabilityValidator.field_r.e(var5Lifetime5 + var4, -cameraY + 1024);
+              EmailAvailabilityValidator.field_r.drawTransparent(var5Lifetime5 + var4, -cameraY + 1024);
             }
-            MarkerSlider.field_G.e(768 + var4, -cameraY + 1024);
+            MarkerSlider.field_G.drawTransparent(768 + var4, -cameraY + 1024);
             var4 += 1024;
           }
         }
@@ -3690,9 +3690,9 @@ final class GameplaySession {
                 int stackIn_20_0 = (var9 > 640) ? 640 : var9;
                 int var11 = stackIn_20_0;
                 while (var10 < var11) {
-                  SoftwareRasterizer.a(var10, var7, 16744512);
-                  SoftwareRasterizer.a(var10, var7 - 1, 8396804);
-                  SoftwareRasterizer.a(var10, 1 + var7, 8396804);
+                  SoftwareRasterizer.addPixel(var10, var7, 16744512);
+                  SoftwareRasterizer.addPixel(var10, var7 - 1, 8396804);
+                  SoftwareRasterizer.addPixel(var10, 1 + var7, 8396804);
                   var10++;
                 }
                 var8 = var8 + this.worldWidth;
@@ -3795,7 +3795,7 @@ final class GameplaySession {
             AudioService.a(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, -this.noticeSprite.fullWidth + SoftwareRasterizer.width, (byte) -84, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, var2 + 1 + 3 * SoftwareRasterizer.width);
             AudioService.a(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, -this.noticeSprite.fullWidth + SoftwareRasterizer.width, (byte) -100, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, -1 + (var2 + 5 * SoftwareRasterizer.width));
             AudioService.a(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, SoftwareRasterizer.width - this.noticeSprite.fullWidth, (byte) -81, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, 1 + (var2 + 5 * SoftwareRasterizer.width));
-            this.noticeSprite.e(var2, 4);
+            this.noticeSprite.drawTransparent(var2, 4);
           } else if (da.field_c == null &&
             !this.quitRequested) {
             ResourceArchive.drawSpriteWithRowJitter(4, var2, -120 + this.noticeTicks, this.noticeSprite, -123);
@@ -5014,9 +5014,9 @@ final class GameplaySession {
                 var9_ref_ed.fullWidth = 7;
                 var11_ref_ed.width = 7;
                 var10_ref_ed.fullHeight = 7;
-                ResourceArchive.field_a.g();
+                ResourceArchive.field_a.bindAsFramebuffer();
                 SoftwareRasterizer.clearFramebuffer();
-                ResourceArchive.field_m.a(4, (byte) 34, 4096, -rockBuster.angle256 << 8, 4);
+                ResourceArchive.field_m.drawCenteredRotatedScaled(4, (byte) 34, 4096, -rockBuster.angle256 << 8, 4);
                 md.field_D.a(120);
                 var12 = (int)Math.sqrt((double)rockBuster.velocityYQ16 * (double)rockBuster.velocityYQ16 + (double)rockBuster.velocityXQ16 * (double)rockBuster.velocityXQ16);
                 var13_int = var12 / 196608 + 1;

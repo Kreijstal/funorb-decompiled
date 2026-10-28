@@ -421,7 +421,7 @@ class UiComponent extends IntrusiveNode {
         }
         String var5 = eo.a((byte) 46);
         if (var5 != null) {
-          mb.field_g.a((byte) -44, var5, DraggableWidget.field_O, ci.field_g);
+          mb.field_g.drawTooltip((byte) -44, var5, DraggableWidget.field_O, ci.field_g);
         }
     }
 
@@ -461,7 +461,7 @@ class UiComponent extends IntrusiveNode {
     }
 
     UiComponent(String param0, UiListener param1) {
-        this(param0, mb.field_g.field_i, param1);
+        this(param0, mb.field_g.componentPainter, param1);
     }
 
     StringBuilder appendDebugTree(int guard, Hashtable visited, StringBuilder output, int depth) {

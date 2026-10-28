@@ -25,7 +25,7 @@ final class je {
             for (int var6 = 0; var1 > var6; var6++) {
               var5_ref_int__[var6] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(var20[var6] << 24, -16777216), qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var21[var6], 255)]);
             }
-            var3 = new uh(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], bc.spriteHeights[0], var13);
+            var3 = new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], bc.spriteHeights[0], var13);
           } else {
             int[] var9 = new int[var1];
             for (int var5 = 0; var1 > var5; var5++) {
@@ -47,7 +47,7 @@ final class je {
           for (int var6Lifetime1 = 0; var1Lifetime1 > var6Lifetime1; var6Lifetime1++) {
             var5_ref_int__Lifetime1[var6Lifetime1] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(var18[var6Lifetime1] << 24, -16777216), qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var19[var6Lifetime1], 255)]);
           }
-          var3Lifetime1 = new uh(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], bc.spriteHeights[0], var13Lifetime1);
+          var3Lifetime1 = new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], bc.spriteHeights[0], var13Lifetime1);
         } else {
           int[] var9Lifetime1 = new int[var1Lifetime1];
           for (int var5Lifetime1 = 0; var1Lifetime1 > var5Lifetime1; var5Lifetime1++) {

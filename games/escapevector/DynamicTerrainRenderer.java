@@ -98,7 +98,7 @@ final class DynamicTerrainRenderer {
         if (0 >= var8) {
           return;
         }
-        SoftwareRasterizer.c(0, var4, 640, var8, var6, var7);
+        SoftwareRasterizer.fillVerticalGradient(0, var4, 640, var8, var6, var7);
         this.a(var4, (byte) 104);
         return;
     }
@@ -376,7 +376,7 @@ final class DynamicTerrainRenderer {
                 stackIn_18_1 = !(this.field_n == var12);
                 boolean var11Lifetime1 = stackIn_17_0 & stackIn_18_1;
                 if (var11Lifetime1) {
-                  var10.field_e.e(var8, var6);
+                  var10.field_e.drawTransparent(var8, var6);
                 }
                 var9++;
               }
@@ -543,13 +543,13 @@ final class DynamicTerrainRenderer {
     }
 
     private final void a(int param0, byte param1) {
-        SoftwareRasterizer.a(this.field_c);
+        SoftwareRasterizer.saveClip(this.field_c);
         SoftwareRasterizer.setClip(0, param0, 639, 479);
-        this.field_y[0].e(0, 0);
+        this.field_y[0].drawTransparent(0, 0);
         if (param1 != 104) {
           field_w = (Sprite) null;
         }
-        SoftwareRasterizer.b(this.field_c);
+        SoftwareRasterizer.restoreClip(this.field_c);
     }
 
     private final boolean f(int param0) {
@@ -1118,9 +1118,9 @@ final class DynamicTerrainRenderer {
         int var3 = 640;
         int var4 = 480;
         int var5 = (BoundedRandomAccessFile.activeSession.field_M >> 16) % var3;
-        SoftwareRasterizer.a(this.field_c);
+        SoftwareRasterizer.saveClip(this.field_c);
         int var6 = param1 % var4;
-        this.field_y[0].g();
+        this.field_y[0].bindAsFramebuffer();
         this.b(-126, var5, var6);
         if (param0) {
           this.invalidateTileNeighborhood(98, 82, true);
@@ -1143,7 +1143,7 @@ final class DynamicTerrainRenderer {
         SoftwareRasterizer.setClip(var9 + var7 * var15, var11 + var8, var10 + var5 * var15, var12 + var6);
         dj.a(var14 + var4, -94, var3 * var15 + var13);
         md.field_D.a(107);
-        SoftwareRasterizer.b(this.field_c);
+        SoftwareRasterizer.restoreClip(this.field_c);
     }
 
     private final void a(int[][] param0, byte param1, boolean[][] param2) {
@@ -1778,9 +1778,9 @@ final class DynamicTerrainRenderer {
         int stackIn_14_0 = 0;
         int var14 = EscapeVector.obfuscationControl;
         int var4 = 640;
-        SoftwareRasterizer.a(this.field_c);
+        SoftwareRasterizer.saveClip(this.field_c);
         int var5 = 480;
-        this.field_y[1].g();
+        this.field_y[1].bindAsFramebuffer();
         SoftwareRasterizer.setClip(0, 0, var4, var5);
         SoftwareRasterizer.clearFramebuffer();
         int var6 = this.field_p.length;
@@ -1801,9 +1801,9 @@ final class DynamicTerrainRenderer {
               int[] stackIn_17_0 = this.field_n;
               if (stackIn_17_0 != var13) {
                 if (var13 == this.fullTileMask) {
-                  SoftwareRasterizer.a(var10, var8, this.tileWidth, this.tileHeight, 1);
+                  SoftwareRasterizer.fillRectangle(var10, var8, this.tileWidth, this.tileHeight, 1);
                 } else {
-                  var12.field_e.d(var10, var8);
+                  var12.field_e.drawOpaque(var10, var8);
                 }
               }
               var11++;
@@ -1821,9 +1821,9 @@ final class DynamicTerrainRenderer {
         }
         md.field_D.a(126);
         int[] stackIn_17_0Lifetime1 = this.field_c;
-        SoftwareRasterizer.b(stackIn_17_0Lifetime1);
+        SoftwareRasterizer.restoreClip(stackIn_17_0Lifetime1);
         this.a(this.field_y[1].pixels, true, this.field_y[0].pixels);
-        this.field_y[0].e(0, 0);
+        this.field_y[0].drawTransparent(0, 0);
         return;
     }
 

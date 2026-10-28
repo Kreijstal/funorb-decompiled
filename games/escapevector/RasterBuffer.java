@@ -27,7 +27,7 @@ abstract class RasterBuffer {
         if (param0 <= 105) {
           RasterBuffer.releaseStatics((byte) -18);
         }
-        SoftwareRasterizer.a(this.field_i, this.field_d, this.field_h);
+        SoftwareRasterizer.bind(this.field_i, this.field_d, this.field_h);
     }
 
     abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);

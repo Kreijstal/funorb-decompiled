@@ -5,7 +5,7 @@ import java.io.*;
 
 final class sl {
     static String[] field_c;
-    static uf field_d;
+    static UiTheme field_d;
     static long field_a;
     static Sprite[][] field_b;
 

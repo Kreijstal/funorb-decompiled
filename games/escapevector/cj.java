@@ -14,11 +14,11 @@ final class cj {
           int var4 = var2.height;
           hf.a(param0 ^ 58);
           cb.field_a = new Sprite(var3, 3 * var4 / 4);
-          cb.field_a.g();
-          var2.d(0, param0);
+          cb.field_a.bindAsFramebuffer();
+          var2.drawOpaque(0, param0);
           Js5NetworkRequest.field_G = new Sprite(var3, -cb.field_a.height + var4);
-          Js5NetworkRequest.field_G.g();
-          var2.d(0, -cb.field_a.height);
+          Js5NetworkRequest.field_G.bindAsFramebuffer();
+          var2.drawOpaque(0, -cb.field_a.height);
           Js5NetworkRequest.field_G.offsetY = cb.field_a.height;
           dl.a((byte) 120);
         } catch (RuntimeException runtimeException) {

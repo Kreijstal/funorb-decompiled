@@ -23,9 +23,9 @@ final class dj {
           oh var3Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.first(false));
           while (var3Lifetime1 != null) {
             if (var3Lifetime1.field_m >= 0) {
-              SoftwareRasterizer.g(param2 + var3Lifetime1.field_i, param0 + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawVerticalLine(param2 + var3Lifetime1.field_i, param0 + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
             } else {
-              SoftwareRasterizer.g(var3Lifetime1.field_i + param2, param0 - var3Lifetime1.field_s + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawVerticalLine(var3Lifetime1.field_i + param2, param0 - var3Lifetime1.field_s + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
             }
             var3Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.next((byte) 70));
           }

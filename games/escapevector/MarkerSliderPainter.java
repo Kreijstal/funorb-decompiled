@@ -30,13 +30,13 @@ final class MarkerSliderPainter implements WidgetPainter {
           MarkerSlider var12 = (MarkerSlider) (stackIn_4_0);
           if (var12 != null) {
           }
-          SoftwareRasterizer.a(component.x + originX, originY + component.y, component.width, component.height, this.field_b);
+          SoftwareRasterizer.fillRectangle(component.x + originX, originY + component.y, component.width, component.height, this.field_b);
           int var7 = component.width - 2 * var12.horizontalInset;
           int var8 = originX - (-component.x - var12.horizontalInset);
           int var9 = var12.trackY + (originY + component.y);
-          SoftwareRasterizer.d(var8, var9, var8 + var7, var9, this.field_m);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_m);
           for (int var10 = -1 + var12.markerCount((byte) 98); var10 >= 0; var10--) {
-            SoftwareRasterizer.d(var8 + var7 * var12.markerValue(var10, (byte) 97) / var12.maximumValue(-1), var9, this.field_j, this.field_c);
+            SoftwareRasterizer.fillCircle(var8 + var7 * var12.markerValue(var10, (byte) 97) / var12.maximumValue(-1), var9, this.field_j, this.field_c);
           }
           if (guard > -14) {
             this.field_j = -58;

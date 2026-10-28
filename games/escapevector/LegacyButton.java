@@ -44,19 +44,19 @@ final class LegacyButton {
         if (this.style == 2) {
           if (!highlighted) {
             int var8 = 1;
-            SoftwareRasterizer.a(1 + this.x, 1 + this.sprite.fullHeight + this.y, -2 + this.width, -2 + this.height - this.sprite.fullHeight, var8);
+            SoftwareRasterizer.fillRectangle(1 + this.x, 1 + this.sprite.fullHeight + this.y, -2 + this.width, -2 + this.height - this.sprite.fullHeight, var8);
           } else {
             fc.a(var7, this.x - 2, var4 + 2, 2 + var5, true, 29788, false, this.foregroundColors[1], this.backgroundColors[1], this.field_g, -2 + this.y, false);
           }
-          this.sprite.d(this.x, this.y);
+          this.sprite.drawOpaque(this.x, this.y);
         }
         if (this.style == 3) {
           fc.a(var7, this.x, var4, var5, true, 29788, false, this.foregroundColors[var6], this.backgroundColors[var6], this.field_g, this.y, false);
         }
         if (this.style == 0) {
           var8Lifetime1 = 1;
-          SoftwareRasterizer.c(this.x, this.y, this.sprite.fullWidth, this.sprite.fullHeight, this.backgroundColors[var6], var8Lifetime1);
-          this.sprite.a(this.x, this.y, this.foregroundColors[var6]);
+          SoftwareRasterizer.fillVerticalGradient(this.x, this.y, this.sprite.fullWidth, this.sprite.fullHeight, this.backgroundColors[var6], var8Lifetime1);
+          this.sprite.drawTinted(this.x, this.y, this.foregroundColors[var6]);
         } else if (this.style == 1) {
           if (highlighted) {
             stackIn_19_0 = this.scaledWidths[1];
@@ -72,14 +72,14 @@ final class LegacyButton {
           var9_int = stackIn_22_0;
           int var10 = this.x + (this.width - var8Lifetime1) / 2;
           int var11 = this.y + (-var9_int + this.height) / 2;
-          this.sprite.a(var10, var11, var8Lifetime1, var9_int);
+          this.sprite.drawDownscaled(var10, var11, var8Lifetime1, var9_int);
         } else if (this.style == 4) {
           var8Lifetime1 = this.labelBaseline(-18641);
           String var9 = this.prefixNumber + " - ";
           this.font.drawRight(var9, this.x + this.textOffsetX, var8Lifetime1, this.textColors[1], -1);
           this.font.drawLeft(this.text, this.x + this.textOffsetX, var8Lifetime1, this.textColors[var6], -1);
           if (this.sprite != null) {
-            this.sprite.e(var4 - this.sprite.fullWidth, this.y);
+            this.sprite.drawTransparent(var4 - this.sprite.fullWidth, this.y);
           }
         } else {
           var8Lifetime1 = this.labelBaseline(-18641);

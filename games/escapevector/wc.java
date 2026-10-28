@@ -230,22 +230,22 @@ final class wc {
         }
         var9 = var17.height;
         hf.a(-123);
-        var17.g();
-        SoftwareRasterizer.c(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
+        var17.bindAsFramebuffer();
+        SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
         Sprite var15 = new Sprite(var9, var9);
         Sprite var18 = var15;
-        var18.g();
-        var17.d(0, 0);
+        var18.bindAsFramebuffer();
+        var17.drawOpaque(0, 0);
         if (param0 != 83) {
           return;
         }
         try {
           Sprite var11 = new Sprite(var9, var9);
-          var11.g();
-          var17.d(-var17.width + var9, 0);
+          var11.bindAsFramebuffer();
+          var17.drawOpaque(-var17.width + var9, 0);
           Sprite var12 = new Sprite(-(var9 * 2) + var17.width, var9);
-          var12.g();
-          var17.d(-var9, 0);
+          var12.bindAsFramebuffer();
+          var17.drawOpaque(-var9, 0);
           dl.a((byte) -109);
           fk.field_f = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
@@ -400,7 +400,7 @@ final class wc {
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (param2) {
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           if (param1 != 1983) {
             wc.a(97, 35, -50, (byte) 98);
             se.a(param2, param1 + 15130);

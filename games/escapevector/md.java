@@ -113,12 +113,12 @@ final class md extends SingleChildContainer {
         this.child.drawLayer(0, (byte) 91, layer, 0);
         if (guard >= 85) {
           dl.a((byte) 107);
-          var6.d(this.x + screenX, this.y + screenY, this.field_F);
+          var6.drawAlpha(this.x + screenX, this.y + screenY, this.field_F);
           return;
         }
         field_H = (String) null;
         dl.a((byte) 107);
-        var6.d(this.x + screenX, this.y + screenY, this.field_F);
+        var6.drawAlpha(this.x + screenX, this.y + screenY, this.field_F);
     }
 
     static {

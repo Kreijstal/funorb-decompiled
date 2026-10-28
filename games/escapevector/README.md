@@ -2,9 +2,9 @@
 
 This is the only published Java tree. Reviewed rules and the reproducer live in dekobloko-work/readable. The current reverse dictionary is ../../decompilation/escapevector-naming.json.
 
-This pass names 188 reviewed classes and 4832 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
+This pass names 190 reviewed classes and 5428 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
 
-Coverage: 190/349 class declarations and 1328/2781 methods have readable names; 277 constructors follow their owning class. 159 classes and 1453 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
+Coverage: 192/349 class declarations and 1422/2781 methods have readable names; 277 constructors follow their owning class. 157 classes and 1359 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
 
 ## Entry points
 
@@ -59,6 +59,8 @@ Every PacketBuffer, ResourceArchive and TriangleMesh method has a reviewed name.
 `UiComponent` separates hitTest, hover updates, keyboard focus, pointer routing, rendering and layout. UiContainer owns children; SingleChildContainer forwards to one child; DraggableWidget and DropTargetWidget expose drag/drop roles. TextButton adds focus and actions; EditableTextWidget adds caret/selection and edit/submit notifications. TextHotspotWidget parses clickable spans into TextHotspotRegion line fragments. WidgetPainter and WidgetTextLayout retain separate drawing/layout contracts; TextLayoutLine and CachedTextLayout expose character insertion coordinates, wrapping and alignment. ButtonListener, ButtonPointerListener, WidgetHoverListener, WidgetFocusListener and TextInputListener expose callback families. The debounced validators distinguish matching text, email syntax/availability, name availability, password and age checks.
 
 `BitmapFont` names glyph advances, string widths, markup/style state, wrapping, paragraph alignment and glyph dispatch. `BinaryBitmapFont` treats any nonzero mask byte as solid; `CoverageBitmapFont` blends byte coverage and uses binary masks for shadows. Native probes retain exact signed pixel integers, including high-byte differences between solid and alpha paths. `DialWidget.decodeSpriteSheet` names the shared footer/palette/index/alpha decoder and its global decode arrays.
+
+Every SoftwareRasterizer, Sprite and ArgbSprite method has a reviewed name. Raster operations distinguish outlines/fills, alpha, gradients, clipping, darkening, grayscale and separable blur. Sprite paths distinguish transparent-zero copies, brightness, destination alpha, additive blending, silhouette, multiplication and two grayscale tint modes. Scaling distinguishes nearest-neighbor, area downsampling and bilinear rotation; Q4 pivots/destinations, the 65536-angle cycle and Q12 scale are explicit in transform parameters. ArgbSprite retains per-pixel high-byte coverage. UiTheme identifies default widget painters and single-line/wrapped tooltip layout. These names preserve the original equations and guard paths; they do not claim whole-renderer pixel equivalence beyond the existing focused probes.
 
 `LegacyTextBlock`, `PairedTextColumns`, `SpriteLabelColumns`, `LegacyMenuColumn` and `LegacyButton` expose the older fixed-viewport layout path. They retain original spacing, width-mode, truncation and guard behavior. `NineSliceFrame`, `ThreeSliceButtonPainter`, `GradientOutlineTextPainter`, `SpriteCheckboxPainter`, `MarkerSliderPainter` and `DialWidgetPainter` identify distinct drawing roles. `MarkerSlider` edits values in `GrowableIntList`; `DialWidget` quantizes pointer angles. `LoginMethod` and `EmailValidationError` distinguish cookie identity from validation error tokens.
 

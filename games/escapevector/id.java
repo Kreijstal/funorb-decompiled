@@ -19,11 +19,11 @@ final class id {
           }
           Sprite var2 = var1.copy();
           for (int var3 = 0; var3 < 15; var3++) {
-            var2.e(-2, -2, 16777215);
-            SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
+            var2.drawSilhouette(-2, -2, 16777215);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          ea.field_d.g();
-          var1.g(0, 0);
+          ea.field_d.bindAsFramebuffer();
+          var1.drawHalfSize(0, 0);
           dl.a((byte) 116);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "id.D(" + param0 + ')');

@@ -39,23 +39,23 @@ final class DialWidgetPainter implements WidgetPainter {
             stackIn_5_0 = (UiComponent) (component);
           }
           DialWidget var15 = (DialWidget) (stackIn_5_0);
-          SoftwareRasterizer.a(component.x + originX, component.y + originY, component.width, component.height, this.field_a);
+          SoftwareRasterizer.fillRectangle(component.x + originX, component.y + originY, component.width, component.height, this.field_a);
           if (var15 != null) {
           }
           int var7 = var15.centerX + (originX + component.x);
           int var8 = component.y + (originY + var15.centerY);
-          SoftwareRasterizer.d(var7, var8, var15.radius, this.field_c);
+          SoftwareRasterizer.fillCircle(var7, var8, var15.radius, this.field_c);
           if (var15.markerValue != -1) {
             double var9 = 2.0 * (3.141592653589793 * (double)var15.markerValue) / (double)var15.stepCount;
             int var11 = (int)(-Math.sin(var9) * (double)var15.radius);
             int var12 = (int)(Math.cos(var9) * (double)var15.radius);
-            SoftwareRasterizer.d(var7 + var11, var12 + var8, 1, this.field_b);
+            SoftwareRasterizer.fillCircle(var7 + var11, var12 + var8, 1, this.field_b);
           }
-          SoftwareRasterizer.d(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           double var9Lifetime1 = 3.141592653589793 * (double)var15.value * 2.0 / (double)var15.stepCount;
           int var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.radius);
           int var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.radius);
-          SoftwareRasterizer.d(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (null == this.field_e) {
             return;
           }

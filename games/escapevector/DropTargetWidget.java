@@ -1994,7 +1994,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(51, "quit");
                 if (null != var2) {
-                  uf.field_s = RasterSnapshot.a(var2, 119);
+                  UiTheme.field_s = RasterSnapshot.a(var2, 119);
                 }
                 var2 = IntKeyLookup.a(17, "login_createaccount");
                 if (null != var2) {

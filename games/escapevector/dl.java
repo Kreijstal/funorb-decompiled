@@ -10,7 +10,7 @@ final class dl {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer.a(var1.field_p, var1.field_q, var1.field_i);
+        SoftwareRasterizer.bind(var1.field_p, var1.field_q, var1.field_i);
         SoftwareRasterizer.setClip(var1.field_o, var1.field_n, var1.field_r, var1.field_h);
         var1.field_p = null;
         TextWidgetPainter.field_d.addLast(-12328, var1);

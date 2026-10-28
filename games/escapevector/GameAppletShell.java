@@ -45,7 +45,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               he.field_r = this;
               Js5NetworkRequest.field_D = 0;
               pb.field_b = 0;
-              uf.field_n = param0;
+              UiTheme.field_n = param0;
               IntrusiveNode.field_c = PointCloudEffect.d((byte) -109);
               SystemTaskService dupTemp$1 = new SystemTaskService(param5, param6, param1, true);
               NetworkGameClient.field_r = dupTemp$1;
@@ -612,7 +612,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         try {
-          SoftwareRasterizer.a(param1 + 1, param2 + 1, -2 - param1 + param7, -2 - param2 + param5, 0, param0);
+          SoftwareRasterizer.fillRectangleAlpha(param1 + 1, param2 + 1, -2 - param1 + param7, -2 - param2 + param5, 0, param0);
           qi.a(param3, param7, param8, param4, param2, -28, param1, param5, param10);
           if (param6 != -3) {
             GameAppletShell.releaseStatics((byte) 59);

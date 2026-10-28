@@ -63,18 +63,18 @@ final class SelfDestructEffects {
         this.field_l = new Sprite(this.field_m, this.field_m);
         int[] var8 = new int[4];
         int[] var2 = var8;
-        SoftwareRasterizer.a(var8);
-        this.field_l.g();
+        SoftwareRasterizer.saveClip(var8);
+        this.field_l.bindAsFramebuffer();
         int var3 = this.field_m / 2;
         int var4 = this.field_m / 2;
         int var5 = this.field_m / 2;
         int var6 = 1;
-        SoftwareRasterizer.d(var3, var4, var5, var6);
+        SoftwareRasterizer.fillCircle(var3, var4, var5, var6);
         if (md.field_D != null) {
           md.field_D.a(125);
         }
         int var7 = -25 / ((param0 + 25) / 58);
-        SoftwareRasterizer.b(var8);
+        SoftwareRasterizer.restoreClip(var8);
     }
 
     final static void b(int param0) {
@@ -386,7 +386,7 @@ final class SelfDestructEffects {
         int var6 = 640;
         int var7 = 480;
         int var8 = 16777215;
-        SoftwareRasterizer.a(0, 0, var6, var7, var8, var5);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, var6, var7, var8, var5);
     }
 
     final TrackerMusicDefinition b(boolean param0) {
