@@ -187,7 +187,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             return;
           }
           if (!this.field_tb) {
-            AlphaContainer.openRelativeUrl(PointCloudEffect.d((byte) -85), (byte) -96, "tochangedisplayname.ws");
+            AlphaContainer.openRelativeUrl(PointCloudEffect.activeApplet((byte) -85), (byte) -96, "tochangedisplayname.ws");
             return;
           }
           WhirlpoolHasher.a(3, guard + 106);

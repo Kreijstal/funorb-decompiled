@@ -10,16 +10,16 @@ final class StringNode extends IntrusiveNode {
     static int field_i;
 
     final static void playFrameAppearSound(int pan, byte guard) {
-        if (mb.field_a != null) {
-          mb.field_a.fadeOut(2048);
+        if (AchievementThresholdRule.field_a != null) {
+          AchievementThresholdRule.field_a.fadeOut(2048);
         }
-        mb.field_a = PcmSampleStream.createAtRatePercentQ6(UiTheme.field_g, 100, IterableNodeHashTable.field_c * 6144 / 64, pan);
+        AchievementThresholdRule.field_a = PcmSampleStream.createAtRatePercentQ6(UiTheme.field_g, 100, IterableNodeHashTable.field_c * 6144 / 64, pan);
         if (guard == 51) {
-          ObjectSpriteSet.field_e.addSubstream(mb.field_a);
+          ObjectSpriteSet.field_e.addSubstream(AchievementThresholdRule.field_a);
           return;
         }
         field_l = (QuickChatDynamicCommand) null;
-        ObjectSpriteSet.field_e.addSubstream(mb.field_a);
+        ObjectSpriteSet.field_e.addSubstream(AchievementThresholdRule.field_a);
     }
 
     public static void releaseStatics(byte guard) {

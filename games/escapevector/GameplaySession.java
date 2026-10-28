@@ -370,7 +370,7 @@ final class GameplaySession {
 
     private final void recordLevelCompletion(int guard) {
         int var5 = EscapeVector.obfuscationControl;
-        TrackerMusicDefinition.field_f.c(0, this.gameMode, this.levelIndex);
+        TrackerMusicDefinition.field_f.applyGrantRules(0, this.gameMode, this.levelIndex);
         this.checkCampaignAchievements(0);
         if (this.levelIndex == 15 &&
           this.firstLevelIndex <= 0) {
@@ -470,7 +470,7 @@ final class GameplaySession {
         this.stopSessionAudio((byte) -41);
         this.pointCloudEffects.clear((byte) 118);
         this.selfDestructEffects = new SelfDestructEffects(this);
-        this.exhaustParticles.f((byte) -125);
+        this.exhaustParticles.clearActiveParticles((byte) -125);
         if (guard != 24661) {
           PcmSample var4 = (PcmSample) null;
           this.spawnSpriteDebris(-10, -80, (Sprite) null, 116, (PcmSample) null);
@@ -1090,7 +1090,7 @@ final class GameplaySession {
         }
         try {
           boolean var6_int = (this.usesDynamicTerrain(8192));
-          PointCloudEffect var7 = ci.a((byte) -43, sound, y, sprite, (var6_int), x);
+          PointCloudEffect var7 = AchievementDefinition.createSpriteDebris((byte) -43, sound, y, sprite, (var6_int), x);
           this.pointCloudEffects.addLast(-12328, var7);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oe.D(" + x + ',' + guard + ',' + (sprite != null ? "{...}" : "null") + ',' + y + ',' + (sound != null ? "{...}" : "null") + ')');
@@ -1389,7 +1389,7 @@ final class GameplaySession {
         int var7 = EscapeVector.obfuscationControl;
         if (this.tetheredObjectType >= 0 &&
           0 == this.pickupAnimationTicks) {
-          Sprite var8 = mb.objectSprites[this.tetheredObjectType];
+          Sprite var8 = AchievementThresholdRule.objectSprites[this.tetheredObjectType];
           int var5 = this.worldWidth + ((this.tetheredXQ16 - (var8.fullWidth << 15) >> 16) + var8.offsetX);
           int var6 = (-(var8.fullHeight << 15) + this.tetheredYQ16 >> 16) + var8.offsetY;
           while (x < var5) {
@@ -1610,7 +1610,7 @@ final class GameplaySession {
 
     private final void updateCampaignBestScore(boolean guard) {
         int var2 = this.score + this.levelScore;
-        TrackerMusicDefinition.field_f.d((byte) -101, this.gameMode, var2);
+        TrackerMusicDefinition.field_f.applyThresholdRules((byte) -101, this.gameMode, var2);
         if (guard) {
           this.tilesWide = -77;
         }
@@ -1940,14 +1940,14 @@ final class GameplaySession {
 
     private final void queueCampaignConclusion(int guard) {
         if (EmailSyntaxValidator.a(this.gameMode, -2)) {
-          DialogueScreen var2 = new DialogueScreen(SpriteOffset.field_e, SpriteCheckboxPainter.field_c, mb.field_b, true);
+          DialogueScreen var2 = new DialogueScreen(SpriteOffset.field_e, SpriteCheckboxPainter.field_c, AchievementThresholdRule.field_b, true);
           var2.field_m = false;
           GradientOutlineTextPainter.enqueueDialogue(1820, var2);
         }
         if (~this.gameMode == guard) {
           String var2_ref = "vengeance_concl";
           String var3 = "scene";
-          Sprite[] var4 = ug.field_a;
+          Sprite[] var4 = AchievementFlagSupport.field_a;
           String[] var5 = IntValueNode.field_h;
           DialogueScreen var6 = new DialogueScreen(var2_ref, var3, var4, var5, true);
           GradientOutlineTextPainter.enqueueDialogue(1820, var6);
@@ -2659,9 +2659,9 @@ final class GameplaySession {
         LevelObject var4 = this.findCargoContainer(false);
         this.minimap = new Minimap(this, var4, gj.a(this.levelIndex, this.gameMode, (byte) 54));
         this.applyInitialPowerups((byte) 0);
-        en var5 = TrackerMusicDefinition.field_f;
+        AchievementTracker var5 = TrackerMusicDefinition.field_f;
         if (var5 != null) {
-          var5.a((byte) 36);
+          var5.grantNormalRetrievalAwards((byte) 36);
         }
         return;
     }
@@ -2689,7 +2689,7 @@ final class GameplaySession {
         if (guard) {
           this.noticeSprite = (Sprite) null;
         }
-        if (TrackerMusicDefinition.field_f.a((byte) 54, checksum, achievementId, gameMode)) {
+        if (TrackerMusicDefinition.field_f.awardAchievement((byte) 54, checksum, achievementId, gameMode)) {
           int fieldTemp$0 = this.pendingAchievementCount;
           this.pendingAchievementCount = this.pendingAchievementCount + 1;
           this.pendingAchievementIds[fieldTemp$0] = achievementId;
@@ -2870,8 +2870,8 @@ final class GameplaySession {
         }
         PointCloudEffect var2 = (PointCloudEffect) (this.pointCloudEffects.first(false));
         while (var2 != null) {
-          if (!var2.field_B) {
-            var2.a();
+          if (!var2.finished) {
+            var2.updateParticles();
           } else {
             var2.unlink((byte) -71);
           }
@@ -2888,7 +2888,7 @@ final class GameplaySession {
         GameplaySession.resetSessionMenuState((byte) -28);
         mj.field_d = guard;
         if (aj.b(-89) && (null != IntValueNode.field_i ||
-          TrackerMusicDefinition.field_f.b(-49) ||
+          TrackerMusicDefinition.field_f.hasSessionAchievements(-49) ||
           ua.field_c.d(17523))) {
           PacketBuffer.field_h = true;
           di.field_d = new wc(2);
@@ -2896,7 +2896,7 @@ final class GameplaySession {
           boolean decompiledFrameRemainder0 = false;
         }
         else {
-          ci.a(0);
+          AchievementDefinition.a(0);
         }
         ChatMessage.clearFrameOffsets((byte) -77);
     }
@@ -3219,13 +3219,13 @@ final class GameplaySession {
         this.drawTutorialForeground(var3, var4, (byte) -14);
         RockBuster var5_ref_pi = (RockBuster) (this.rockBusters.first(false));
         while (var5_ref_pi != null) {
-          var5_ref_pi.exhaustParticles.a(guard ^ 97, var3, var4);
+          var5_ref_pi.exhaustParticles.draw(guard ^ 97, var3, var4);
           var5_ref_pi = (RockBuster) (this.rockBusters.next((byte) 70));
         }
-        this.exhaustParticles.a(82, var3, var4);
+        this.exhaustParticles.draw(82, var3, var4);
         PointCloudEffect var12 = (PointCloudEffect) (this.pointCloudEffects.first(false));
         while (var12 != null) {
-          var12.a(99, var3, var4);
+          var12.draw(99, var3, var4);
           var12 = (PointCloudEffect) (this.pointCloudEffects.next((byte) 70));
         }
         if (null == this.dynamicTerrain) {
@@ -3256,7 +3256,7 @@ final class GameplaySession {
         }
         int stackIn_31_0Lifetime1 = -1;
         if (stackIn_31_0Lifetime1 >= ~this.tetheredObjectType) {
-          Sprite var5_ref_ed = mb.objectSprites[this.tetheredObjectType];
+          Sprite var5_ref_ed = AchievementThresholdRule.objectSprites[this.tetheredObjectType];
           if (var2 != 0 &&
             ArchiveProvider.field_b[this.tetheredObjectType] != null) {
             var5_ref_ed = ArchiveProvider.field_b[this.tetheredObjectType];
@@ -3313,7 +3313,7 @@ final class GameplaySession {
               0 <= this.levelIndex) {
               IntPoint.field_b.drawTransparent(640 - IntPoint.field_b.fullWidth >> 1, -IntPoint.field_b.fullHeight + 212);
               if (-100 > this.transitionTicks) {
-                ValidationIndicator.a(266, 340, (byte) -106, en.field_e);
+                ValidationIndicator.a(266, 340, (byte) -106, AchievementTracker.field_e);
                 EscapeVector.drawOutlinedText(Integer.toString(this.levelScore), 340, 266, (byte) 110);
               }
               if (this.transitionTicks < -75) {
@@ -4056,14 +4056,14 @@ final class GameplaySession {
         }
         var2 = 0;
         while (var2 < 64) {
-          boolean stackIn_137_0 = this.exhaustParticles.field_E[this.exhaustWriteIndex + var2];
+          boolean stackIn_137_0 = this.exhaustParticles.activeParticles[this.exhaustWriteIndex + var2];
           if (stackIn_137_0) {
             this.activeExhaustParticles = this.activeExhaustParticles - 1;
-            this.exhaustParticles.field_E[this.exhaustWriteIndex + var2] = false;
+            this.exhaustParticles.activeParticles[this.exhaustWriteIndex + var2] = false;
           }
           var2++;
         }
-        this.exhaustParticles.a();
+        this.exhaustParticles.updateParticles();
         this.shieldPulsePhase = 15 & 1 + this.shieldPulsePhase;
         this.updatePointCloudEffects(true);
         boolean stackIn_137_0Lifetime1 = this.shipDestroyed;
@@ -4107,20 +4107,20 @@ final class GameplaySession {
               this.showHudMessage(-111, RatingQuery.field_l);
             }
             for (var4 = 0; var4 < 64; var4++) {
-              this.exhaustParticles.field_E[this.exhaustWriteIndex + var4] = true;
+              this.exhaustParticles.activeParticles[this.exhaustWriteIndex + var4] = true;
               double var5_double = var2_double + 0.2 * Math.random() - 0.1;
               double var7_double = (double)this.thrustAccelerationQ16 * 616.8094117647058 * (0.5 + Math.random());
               int var9 = -(int)(var7_double * Math.sin(var5_double));
               int var10 = (int)(var7_double * Math.cos(var5_double));
-              this.exhaustParticles.field_x[this.exhaustWriteIndex + var4] = this.shipXQ16 + this.shipVelocityXQ16;
-              this.exhaustParticles.field_A[this.exhaustWriteIndex + var4] = this.shipYQ16 + this.shipVelocityYQ16;
+              this.exhaustParticles.positionXQ16[this.exhaustWriteIndex + var4] = this.shipXQ16 + this.shipVelocityXQ16;
+              this.exhaustParticles.positionYQ16[this.exhaustWriteIndex + var4] = this.shipYQ16 + this.shipVelocityYQ16;
               double var11_double = Math.random();
-              this.exhaustParticles.field_y[var4 + this.exhaustWriteIndex] = (int)((double)var9 * var11_double);
-              this.exhaustParticles.field_C[this.exhaustWriteIndex + var4] = (int)(var11_double * (double)var10);
-              this.exhaustParticles.field_w[this.exhaustWriteIndex + var4] = 0;
-              this.exhaustParticles.i(var4 + this.exhaustWriteIndex);
-              this.exhaustParticles.field_y[this.exhaustWriteIndex + var4] = var9 + this.shipVelocityXQ16;
-              this.exhaustParticles.field_C[var4 + this.exhaustWriteIndex] = var10 + this.shipVelocityYQ16;
+              this.exhaustParticles.velocityXQ16[var4 + this.exhaustWriteIndex] = (int)((double)var9 * var11_double);
+              this.exhaustParticles.velocityYQ16[this.exhaustWriteIndex + var4] = (int)(var11_double * (double)var10);
+              this.exhaustParticles.auxiliaryVelocityQ16[this.exhaustWriteIndex + var4] = 0;
+              this.exhaustParticles.integratePointWithTerrain(var4 + this.exhaustWriteIndex);
+              this.exhaustParticles.velocityXQ16[this.exhaustWriteIndex + var4] = var9 + this.shipVelocityXQ16;
+              this.exhaustParticles.velocityYQ16[var4 + this.exhaustWriteIndex] = var10 + this.shipVelocityYQ16;
             }
             this.activeExhaustParticles = this.activeExhaustParticles + 64;
           } else {
@@ -4284,13 +4284,13 @@ final class GameplaySession {
         while (seekerMine != null) {
           if (null == seekerMine.flightSound) {
             seekerMine.proximitySound = new SeekerPulseStream();
-            seekerMine.flightSound = PcmSampleStream.createAtStepQ8(ci.field_a, 256, 0, 8192);
+            seekerMine.flightSound = PcmSampleStream.createAtStepQ8(AchievementDefinition.field_a, 256, 0, 8192);
             seekerMine.proximitySound.field_k = PcmSampleStream.createAtStepQ8(AccountMessagePanel.field_J, 256, 0, 8192);
             seekerMine.proximitySound.field_q = PcmSampleStream.createAtStepQ8(AccountMessagePanel.field_J, 256, 0, 8192);
             seekerMine.flightSound.setLoopCount(-1);
             seekerMine.proximitySound.field_k.setLoopCount(-1);
             seekerMine.proximitySound.field_q.setLoopCount(-1);
-            seekerMine.flightSound.setPosition((int)(Math.random() * (double)ci.field_a.samples.length));
+            seekerMine.flightSound.setPosition((int)(Math.random() * (double)AchievementDefinition.field_a.samples.length));
             AlternateUsernameCredentials.field_n.addSubstream(seekerMine.flightSound);
             AlternateUsernameCredentials.field_n.addSubstream(seekerMine.proximitySound);
           }
@@ -4410,7 +4410,7 @@ final class GameplaySession {
           if (decompiledFrameRemainder0) {
             if (0 <= this.tetheredObjectType &&
               this.pickupAnimationTicks == 0) {
-              Sprite tetheredSprite = mb.objectSprites[this.tetheredObjectType];
+              Sprite tetheredSprite = AchievementThresholdRule.objectSprites[this.tetheredObjectType];
               for (var19 = -var16 + (this.tetheredXQ16 - (tetheredSprite.fullWidth << 15) >> 16); -this.worldWidth >> 1 > var19; var19 = var19 + this.worldWidth) {
               }
               while (var19 >= this.worldWidth >> 1) {
@@ -4853,7 +4853,7 @@ final class GameplaySession {
             this.tetheredXQ16 = (this.tetheredXQ16 + (this.worldWidth << 16)) % (this.worldWidth << 16);
             this.tetheredVelocityYQ16 = this.tetheredVelocityYQ16 - this.tetheredVelocityYQ16 / 256;
             this.tetheredVelocityXQ16 = this.tetheredVelocityXQ16 - this.tetheredVelocityXQ16 / 256;
-            Sprite var39 = mb.objectSprites[this.tetheredObjectType];
+            Sprite var39 = AchievementThresholdRule.objectSprites[this.tetheredObjectType];
             var5 = (-(var39.fullWidth << 15) + this.tetheredXQ16 >> 16) + this.worldWidth;
             var6 = this.tetheredYQ16 - (var39.fullHeight << 15) >> 16;
             if (this.spriteOverlapsTerrainOrLasers(var5, var39, var6, -1)) {
@@ -4961,36 +4961,36 @@ final class GameplaySession {
         scanLoop3: while (rockBuster != null) {
           var7 = 0;
           while (var7 < 32) {
-            boolean stackOut_612_0 = rockBuster.exhaustParticles.field_E[var7 + rockBuster.exhaustWriteIndex];
+            boolean stackOut_612_0 = rockBuster.exhaustParticles.activeParticles[var7 + rockBuster.exhaustWriteIndex];
             int stackIn_618_0 = stackOut_612_0 ? 1 : 0;
             boolean stackIn_613_0 = stackOut_612_0;
             if (stackIn_613_0) {
               rockBuster.activeExhaustParticles = rockBuster.activeExhaustParticles - 1;
-              rockBuster.exhaustParticles.field_E[rockBuster.exhaustWriteIndex + var7] = false;
+              rockBuster.exhaustParticles.activeParticles[rockBuster.exhaustWriteIndex + var7] = false;
             }
             var7++;
           }
-          rockBuster.exhaustParticles.a();
+          rockBuster.exhaustParticles.updateParticles();
           int stackIn_618_0Lifetime1 = -1;
           if (stackIn_618_0Lifetime1 > ~rockBuster.remainingFlightTicks) {
             double var7_doubleLifetime1 = 0.02454369260617026 * (double)rockBuster.angle256;
             rockBuster.velocityXQ16 = rockBuster.velocityXQ16 + (int)(2000.0 * Math.sin(var7_doubleLifetime1));
             rockBuster.velocityYQ16 = rockBuster.velocityYQ16 - (int)(2000.0 * Math.cos(var7_doubleLifetime1));
             for (int var9Lifetime6 = 0; 32 > var9Lifetime6; var9Lifetime6++) {
-              rockBuster.exhaustParticles.field_E[var9Lifetime6 + rockBuster.exhaustWriteIndex] = true;
+              rockBuster.exhaustParticles.activeParticles[var9Lifetime6 + rockBuster.exhaustWriteIndex] = true;
               var10_double = Math.random() * 0.2 + var7_doubleLifetime1 - 0.1;
               double var12_double = (0.5 + Math.random()) * 524288.0;
               int var14Lifetime3 = -(int)(Math.sin(var10_double) * var12_double);
               int var15_intLifetime1 = (int)(var12_double * Math.cos(var10_double));
-              rockBuster.exhaustParticles.field_x[var9Lifetime6 + rockBuster.exhaustWriteIndex] = rockBuster.xQ16 + rockBuster.velocityXQ16;
-              rockBuster.exhaustParticles.field_A[var9Lifetime6 + rockBuster.exhaustWriteIndex] = rockBuster.yQ16 + rockBuster.velocityYQ16;
+              rockBuster.exhaustParticles.positionXQ16[var9Lifetime6 + rockBuster.exhaustWriteIndex] = rockBuster.xQ16 + rockBuster.velocityXQ16;
+              rockBuster.exhaustParticles.positionYQ16[var9Lifetime6 + rockBuster.exhaustWriteIndex] = rockBuster.yQ16 + rockBuster.velocityYQ16;
               double var16_double = Math.random();
-              rockBuster.exhaustParticles.field_y[rockBuster.exhaustWriteIndex + var9Lifetime6] = (int)(var16_double * (double)var14Lifetime3);
-              rockBuster.exhaustParticles.field_C[rockBuster.exhaustWriteIndex + var9Lifetime6] = (int)(var16_double * (double)var15_intLifetime1);
-              rockBuster.exhaustParticles.field_w[var9Lifetime6 + rockBuster.exhaustWriteIndex] = 0;
-              rockBuster.exhaustParticles.i(var9Lifetime6 + rockBuster.exhaustWriteIndex);
-              rockBuster.exhaustParticles.field_y[rockBuster.exhaustWriteIndex + var9Lifetime6] = rockBuster.velocityXQ16 + var14Lifetime3;
-              rockBuster.exhaustParticles.field_C[rockBuster.exhaustWriteIndex + var9Lifetime6] = var15_intLifetime1 + rockBuster.velocityYQ16;
+              rockBuster.exhaustParticles.velocityXQ16[rockBuster.exhaustWriteIndex + var9Lifetime6] = (int)(var16_double * (double)var14Lifetime3);
+              rockBuster.exhaustParticles.velocityYQ16[rockBuster.exhaustWriteIndex + var9Lifetime6] = (int)(var16_double * (double)var15_intLifetime1);
+              rockBuster.exhaustParticles.auxiliaryVelocityQ16[var9Lifetime6 + rockBuster.exhaustWriteIndex] = 0;
+              rockBuster.exhaustParticles.integratePointWithTerrain(var9Lifetime6 + rockBuster.exhaustWriteIndex);
+              rockBuster.exhaustParticles.velocityXQ16[rockBuster.exhaustWriteIndex + var9Lifetime6] = rockBuster.velocityXQ16 + var14Lifetime3;
+              rockBuster.exhaustParticles.velocityYQ16[rockBuster.exhaustWriteIndex + var9Lifetime6] = var15_intLifetime1 + rockBuster.velocityYQ16;
             }
             rockBuster.activeExhaustParticles = rockBuster.activeExhaustParticles + 32;
           }
@@ -5579,7 +5579,7 @@ final class GameplaySession {
           this.levelScore = this.levelScore + var2_int;
           v.a(8, var2_int);
         }
-        Sprite var3 = mb.objectSprites[this.tetheredObjectType];
+        Sprite var3 = AchievementThresholdRule.objectSprites[this.tetheredObjectType];
         Sprite var2 = var3;
         this.spawnSpriteDebris(-(var3.fullWidth << 15) + this.tetheredXQ16 >> 16, -28311553, var2, -(var3.fullHeight << 15) + this.tetheredYQ16 >> 16, sf.objectExplosionSamples[this.tetheredObjectType]);
         if (this.tetheredObjectType == 1) {
@@ -5968,7 +5968,7 @@ final class GameplaySession {
         DualLinkNode var2 = this.pendingTargetEffects.first(0);
         while (var2 != null) {
           PointCloudEffect var3 = (PointCloudEffect) (var2);
-          boolean stackOut_5_0 = var3.field_B;
+          boolean stackOut_5_0 = var3.finished;
           int stackIn_10_0 = stackOut_5_0 ? 1 : 0;
           boolean stackIn_6_0 = stackOut_5_0;
           if (!stackIn_6_0) {
@@ -6062,11 +6062,11 @@ final class GameplaySession {
         this.levelObjects.setSize(var2Lifetime4);
         int incrementValue$0 = var3Lifetime2;
         var3Lifetime2++;
-        LevelObject var6 = new LevelObject(incrementValue$0, 8, 480, -mb.objectSprites[8].fullHeight + 128);
+        LevelObject var6 = new LevelObject(incrementValue$0, 8, 480, -AchievementThresholdRule.objectSprites[8].fullHeight + 128);
         this.levelObjects.setElementAt(var6, 0);
         int incrementValue$1 = var3Lifetime2;
         var3Lifetime2++;
-        LevelObject var7 = new LevelObject(incrementValue$1, 1, 512 - mb.objectSprites[1].fullWidth / 2, 480 - mb.objectSprites[1].fullHeight);
+        LevelObject var7 = new LevelObject(incrementValue$1, 1, 512 - AchievementThresholdRule.objectSprites[1].fullWidth / 2, 480 - AchievementThresholdRule.objectSprites[1].fullHeight);
         this.levelObjects.setElementAt(var7, 1);
         this.seekerMines = new IntrusiveDeque();
         this.spawnYQ16 = 66715648;

@@ -375,7 +375,7 @@ class AudioOutput {
           if (var1) {
             service.stopRequested = true;
             while (service.running) {
-              en.a((byte) -46, 50L);
+              AchievementTracker.sleepMillis((byte) -46, 50L);
             }
             service = null;
           }

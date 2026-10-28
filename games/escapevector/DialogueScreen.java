@@ -416,7 +416,7 @@ final class DialogueScreen extends IntrusiveNode {
               this.field_s = this.field_s + 1;
               if (this.field_s == 43 &&
                 this.field_A == null) {
-                this.field_A = PcmSampleStream.createAtRatePercentQ6(en.field_d, 100, IterableNodeHashTable.field_c * 768 / 64, this.g((byte) 111));
+                this.field_A = PcmSampleStream.createAtRatePercentQ6(AchievementTracker.field_d, 100, IterableNodeHashTable.field_c * 768 / 64, this.g((byte) 111));
                 this.field_A.setLoopCount(-1);
                 ObjectSpriteSet.field_e.addSubstream(this.field_A);
               }

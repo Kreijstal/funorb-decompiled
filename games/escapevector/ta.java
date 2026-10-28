@@ -37,8 +37,8 @@ final class ta {
         if (!param0) {
           this.j(48);
         }
-        en var3 = TrackerMusicDefinition.field_f;
-        if (var3.field_c) {
+        AchievementTracker var3 = TrackerMusicDefinition.field_f;
+        if (var3.queryFailed) {
           var2 = ProgressRecord.field_l;
         }
         if (var2 == null) {
@@ -184,7 +184,7 @@ final class ta {
             di.field_d = null;
           }
           e.field_a = false;
-          TrackerMusicDefinition.field_f.a(true);
+          TrackerMusicDefinition.field_f.clearSessionAchievements(true);
           mj.field_d = 0;
           ChatMessage.clearFrameOffsets((byte) -71);
           var4 = true;
@@ -231,10 +231,10 @@ final class ta {
             return stackIn_3_0;
           }
           int var6 = param2.stringWidth(kg.field_a + " ");
-          int var7 = param2.stringWidth("" + ProxySocketConnector.field_t[var5_int]);
+          int var7 = param2.stringWidth("" + ProxySocketConnector.achievementOrbPoints[var5_int]);
           int var8 = var6 + var7;
           int var9 = param2.stringWidth(ResizableModalPanel.field_T + " ");
-          int var10 = param2.stringWidth("" + ProxySocketConnector.field_s[var5_int]);
+          int var10 = param2.stringWidth("" + ProxySocketConnector.achievementOrbCoins[var5_int]);
           int var11 = var10 + var9;
           int stackIn_7_0 = (var11 > var8) ? var11 : var8;
           int var12 = stackIn_7_0;
@@ -439,7 +439,7 @@ final class ta {
         if (UiContainer.e((byte) -119)) {
           return false;
         }
-        return TrackerMusicDefinition.field_f.f(param1, 1);
+        return TrackerMusicDefinition.field_f.isMembersOnly(param1, 1);
     }
 
     private final void c(boolean param0) {
@@ -457,15 +457,15 @@ final class ta {
         int[] var2;
         int var9 = EscapeVector.obfuscationControl;
         if (this.field_b != param0) {
-          int var3 = TrackerMusicDefinition.field_f.a(this.field_b, true);
-          int var4 = TrackerMusicDefinition.field_f.c(this.field_b, 1);
+          int var3 = TrackerMusicDefinition.field_f.totalCount(this.field_b, true);
+          int var4 = TrackerMusicDefinition.field_f.visibleCount(this.field_b, 1);
           int[] var10 = new int[var4];
           var2 = var10;
           int var5 = 0;
           int var6 = 0;
           while (var5 < var3) {
-            boolean var7 = (TrackerMusicDefinition.field_f.b(var5, (byte) 55));
-            boolean var8 = (TrackerMusicDefinition.field_f.a(var5, (byte) -126, this.field_b));
+            boolean var7 = (TrackerMusicDefinition.field_f.isHidden(var5, (byte) 55));
+            boolean var8 = (TrackerMusicDefinition.field_f.isEarned(var5, (byte) -126, this.field_b));
             if ((!var7 ||
               var8) && var10.length > var6) {
               var10[var6++] = var5;
@@ -686,9 +686,9 @@ final class ta {
           int var6 = 6340704;
           int var7 = 10551200;
           String var8 = kg.field_a + " ";
-          String var9 = "" + ProxySocketConnector.field_t[var3_int];
+          String var9 = "" + ProxySocketConnector.achievementOrbPoints[var3_int];
           String var10 = ResizableModalPanel.field_T + " ";
-          String var11 = "" + ProxySocketConnector.field_s[var3_int];
+          String var11 = "" + ProxySocketConnector.achievementOrbCoins[var3_int];
           int var12 = (640 + param1.fullWidth) / param0;
           int var13 = -var12 + (this.field_n.field_g + this.field_n.field_j);
           int var14 = this.a(var12, 15930, var4, var13);
@@ -706,11 +706,11 @@ final class ta {
 
     private final void f(byte param0) {
         int var6 = EscapeVector.obfuscationControl;
-        en var2 = TrackerMusicDefinition.field_f;
+        AchievementTracker var2 = TrackerMusicDefinition.field_f;
         if (param0 > -72) {
           int discarded$0 = this.g(true);
         }
-        int var3 = var2.c(this.field_b, 1);
+        int var3 = var2.visibleCount(this.field_b, 1);
         this.field_y = this.b(var3, (byte) 123);
         this.field_u = new int[this.field_y];
         for (int var4 = 0; var4 < this.field_y; var4++) {
@@ -950,8 +950,8 @@ final class ta {
         if (param0 != 111) {
           this.field_r = (LegacyButton) null;
         }
-        en var2 = TrackerMusicDefinition.field_f;
-        if (var2.b(-106)) {
+        AchievementTracker var2 = TrackerMusicDefinition.field_f;
+        if (var2.hasSessionAchievements(-106)) {
           this.field_b = 0;
         } else {
           this.field_b = 1;
@@ -1125,7 +1125,7 @@ final class ta {
     private final Sprite f(int param0, int param1) {
         Sprite var3 = CheckboxPainter.field_c;
         if (this.a(param1, param0 ^ -2295)) {
-          var3 = TrackerMusicDefinition.field_f.b(param1, 117);
+          var3 = TrackerMusicDefinition.field_f.achievementIcon(param1, 117);
         }
         if (this.c(73, param1)) {
           var3 = DualLinkDequeIterator.field_e;
@@ -1221,7 +1221,7 @@ final class ta {
         this.field_h = 0;
         this.field_m = -1;
         this.e((byte) 111);
-        this.field_l = TrackerMusicDefinition.field_f.a(this.field_b, (byte) -32);
+        this.field_l = TrackerMusicDefinition.field_f.earnedAchievementIds(this.field_b, (byte) -32);
         this.f((byte) -128);
         this.g((byte) 102);
         this.d(4551, pf.field_i);

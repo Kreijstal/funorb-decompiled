@@ -22,7 +22,7 @@ final class RasterRestoreSupport {
         SavedDataQuery.field_j = 0;
         DraggableWidget.field_O = -1;
         on.field_b = null;
-        ci.field_g = -1;
+        AchievementDefinition.field_g = -1;
     }
 
     final static boolean openWindowsUrl(byte guard, String url) {

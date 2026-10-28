@@ -86,7 +86,7 @@ class LegacyTextBlock {
     }
 
     final static void writeBrowserSessionMarker(int guard) {
-        se.writeBrowserSessionMarker((byte) 86, PointCloudEffect.d((byte) -91));
+        se.writeBrowserSessionMarker((byte) 86, PointCloudEffect.activeApplet((byte) -91));
         if (guard != 2) {
           LegacyTextBlock.releaseStatics(8);
         }

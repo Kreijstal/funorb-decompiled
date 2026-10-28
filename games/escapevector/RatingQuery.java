@@ -4,14 +4,14 @@
 final class RatingQuery extends IntrusiveNode {
     int rowCount;
     static String field_l;
-    static IndexedSprite field_k;
+    static IndexedSprite pointCloudRasterSprite;
     static int field_h;
     int requestId;
     static boolean field_j;
 
     public static void releaseStatics(int guard) {
         field_l = null;
-        field_k = null;
+        pointCloudRasterSprite = null;
         if (guard != 29152) {
           field_l = (String) null;
         }

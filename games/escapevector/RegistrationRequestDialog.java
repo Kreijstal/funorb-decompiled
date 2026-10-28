@@ -582,7 +582,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime125 = LabeledField.loadNamedAsset("rotateshipleft", 10592);
           if (var2Lifetime125 != null) {
-            ug.field_b = RasterSnapshot.a(var2Lifetime125, 120);
+            AchievementFlagSupport.field_b = RasterSnapshot.a(var2Lifetime125, 120);
           }
           byte[] var2Lifetime126 = LabeledField.loadNamedAsset("rotateshipright", 10592);
           if (null != var2Lifetime126) {
@@ -958,7 +958,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime219 = LabeledField.loadNamedAsset("levelscore_colon", 10592);
           if (var2Lifetime219 != null) {
-            en.field_e = RasterSnapshot.a(var2Lifetime219, 117);
+            AchievementTracker.field_e = RasterSnapshot.a(var2Lifetime219, 117);
           }
           byte[] var2Lifetime220 = LabeledField.loadNamedAsset("fuelbonus_colon", 10592);
           if (var2Lifetime220 != null) {
@@ -1102,15 +1102,15 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime255 = LabeledField.loadNamedAsset("classicEndMessage,0", param0 + 10584);
           if (var2Lifetime255 != null) {
-            mb.field_b[0] = RasterSnapshot.a(var2Lifetime255, 113);
+            AchievementThresholdRule.field_b[0] = RasterSnapshot.a(var2Lifetime255, 113);
           }
           byte[] var2Lifetime256 = LabeledField.loadNamedAsset("classicEndMessage,1", param0 ^ 10600);
           if (var2Lifetime256 != null) {
-            mb.field_b[1] = RasterSnapshot.a(var2Lifetime256, param0 + 119);
+            AchievementThresholdRule.field_b[1] = RasterSnapshot.a(var2Lifetime256, param0 + 119);
           }
           byte[] var2Lifetime257 = LabeledField.loadNamedAsset("classicEndMessage,2", 10592);
           if (null != var2Lifetime257) {
-            mb.field_b[2] = RasterSnapshot.a(var2Lifetime257, 115);
+            AchievementThresholdRule.field_b[2] = RasterSnapshot.a(var2Lifetime257, 115);
           }
           byte[] var2Lifetime258 = LabeledField.loadNamedAsset("vengeanceEndMessage,0", 10592);
           if (var2Lifetime258 != null) {

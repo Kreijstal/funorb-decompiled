@@ -55,7 +55,7 @@ final class oh extends IntrusiveNode {
             var6 = var6 | 16;
           }
           QuickChatDynamicCommand.outgoingPackets.writeByte(var6, param4 - 24);
-          String var7 = tf.a(param4 ^ 98, PointCloudEffect.d((byte) -120));
+          String var7 = tf.a(param4 ^ 98, PointCloudEffect.activeApplet((byte) -120));
           if (var7 == null) {
             var7 = "";
           }

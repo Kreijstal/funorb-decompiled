@@ -34,7 +34,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.writerTask != null) {
             while (0 == this.writerTask.field_f) {
-              en.a((byte) 81, 1L);
+              AchievementTracker.sleepMillis((byte) 81, 1L);
             }
             if (this.writerTask.field_f == 1) {
               try {

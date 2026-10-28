@@ -219,7 +219,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               stackIn_20_0 = var13.insertionX[var13.insertionX.length - 1];
             }
             int var15 = stackIn_20_0;
-            mb.field_g.fillRectangleAlpha(var13.bottom, 1, this.selectionColor >>> 24, var13.top + (originY + component.y) - (-this.topInset - component.field_v), var15 - var14, this.selectionColor, this.textXForOffset(var14, component, -18079, originX));
+            AchievementThresholdRule.field_g.fillRectangleAlpha(var13.bottom, 1, this.selectionColor >>> 24, var13.top + (originY + component.y) - (-this.topInset - component.field_v), var15 - var14, this.selectionColor, this.textXForOffset(var14, component, -18079, originX));
           }
           RasterRestoreSupport.popRasterState((byte) -59);
           return;
@@ -483,7 +483,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             int var11 = this.textOriginY(component, originY, -16956) + Math.max(0, var8.top);
             int var12 = this.textOriginY(component, originY, -16956) + Math.min(this.contentHeight(-14072, component), Math.min(var8.bottom, var7 + 1 < var14.lines.length ? var13.lines[1 + var7].top : var8.bottom));
             rd.a(component.width + originX + component.x, component.x + originX, originY + (component.y + component.height), 19807, component.y + originY);
-            mb.field_g.drawLine(var10, var12, -29666, var10, var11, this.caretColor);
+            AchievementThresholdRule.field_g.drawLine(var10, var12, -29666, var10, var11, this.caretColor);
             RasterRestoreSupport.popRasterState((byte) 122);
           }
         } catch (RuntimeException runtimeException) {

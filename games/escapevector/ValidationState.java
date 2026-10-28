@@ -28,7 +28,7 @@ final class ValidationState {
         CheckboxPainter.field_s = param2;
         gf.field_e = param4;
         fe.field_k = param5;
-        en.field_k = param1;
+        AchievementTracker.field_k = param1;
         if (param3 != 3) {
           return;
         }

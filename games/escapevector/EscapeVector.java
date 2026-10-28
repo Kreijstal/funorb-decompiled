@@ -47,7 +47,7 @@ public final class EscapeVector extends NetworkGameClient {
             boolean decompiledFrameRemainder0 = true;
             if (!ShipHullGeometry.field_h) {
               this.advanceAssetLoading((byte) -96);
-            } else if (mb.b((byte) -120)) {
+            } else if (AchievementThresholdRule.isAccountStateReady((byte) -120)) {
               if (!mj.a((byte) 79)) {
                 if (da.c((byte) -127)) {
                   if (BoundedRandomAccessFile.activeSession != null) {
@@ -62,12 +62,12 @@ public final class EscapeVector extends NetworkGameClient {
                     if (IsaacRandom.field_d != null) {
                       ri.a(-25123);
                     }
-                    gk.a(-9787, PointCloudEffect.d((byte) -119));
+                    gk.a(-9787, PointCloudEffect.activeApplet((byte) -119));
                   }
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  mb.a((byte) -90);
+                  AchievementThresholdRule.advanceScreensAndAccountState((byte) -90);
                   this.updateSessionMusic(1);
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
@@ -155,10 +155,10 @@ public final class EscapeVector extends NetworkGameClient {
             dj.field_c.fadeOut(2048);
             dj.field_c = null;
           }
-          if (null != mb.field_a &&
+          if (null != AchievementThresholdRule.field_a &&
             !IntValueNode.field_j) {
-            mb.field_a.fadeOut(2048);
-            mb.field_a = null;
+            AchievementThresholdRule.field_a.fadeOut(2048);
+            AchievementThresholdRule.field_a = null;
           }
           if (!SelfDestructEffects.field_s) {
             int var3Lifetime1 = 0;
@@ -232,7 +232,7 @@ public final class EscapeVector extends NetworkGameClient {
           ak.releaseStatics((byte) 77);
           dn.releaseStatics(-1);
           ta.releaseStatics(0);
-          en.releaseStatics(1);
+          AchievementTracker.releaseStatics(1);
           kg.releaseStatics(80);
           p.releaseStatics(99);
           Js5Transport.releaseStatics(-4470);
@@ -270,7 +270,7 @@ public final class EscapeVector extends NetworkGameClient {
           mj.releaseStatics(true);
           jc.releaseStatics(-1);
           gk.releaseStatics((byte) -98);
-          ug.releaseStatics(true);
+          AchievementFlagSupport.releaseStatics(true);
           ke.releaseStatics(-71);
           wk.releaseStatics(false);
           da.releaseStatics(0);
@@ -437,8 +437,8 @@ public final class EscapeVector extends NetworkGameClient {
           gf.releaseStatics(12474);
           gb.releaseStatics(-5);
           ea.releaseStatics((byte) 118);
-          ci.releaseStatics(4);
-          mb.releaseStatics(4);
+          AchievementDefinition.releaseStatics(4);
+          AchievementThresholdRule.releaseStatics(4);
           qh.releaseStatics(7);
           TerrainMap.releaseStatics(-126);
           ShipHullGeometry.releaseStatics(-1);
@@ -515,12 +515,12 @@ public final class EscapeVector extends NetworkGameClient {
             IntPoint.field_b = fe.a("", IndexedSpriteState.field_j, "interface_level_complete", true);
             HighscoreQuery.field_g = fe.a("", IndexedSpriteState.field_j, "interface_game_over", true);
             mc.field_d = kh.a(IndexedSpriteState.field_j, (byte) 124, "", "achievements");
-            bn.a(mc.field_d, 0);
+            bn.installAchievementIcons(mc.field_d, 0);
             CheckboxPainter.field_c = fe.a("basic", MarkerSliderPainter.field_h, "unachieved", true);
             DualLinkDequeIterator.field_e = fe.a("basic", MarkerSliderPainter.field_h, "locked", true);
             qh.field_l = new Sprite(CheckboxPainter.field_c.fullWidth, CheckboxPainter.field_c.fullHeight);
             qh.field_l.trimTransparentEdges();
-            mb.a(fe.a("", IndexedSpriteState.field_j, "achievements_next_page_button", true), -84);
+            AchievementThresholdRule.setMirroredPanelBackground(fe.a("", IndexedSpriteState.field_j, "achievements_next_page_button", true), -84);
             RasterSnapshot.field_m = new Sprite[mc.field_d.length];
             int var2_int = 0;
             while (mc.field_d.length > var2_int) {
@@ -595,7 +595,7 @@ public final class EscapeVector extends NetworkGameClient {
           this.renderClient((byte) 7);
           PcmResampler var2 = new PcmResampler(22050, AudioOutput.sampleRate);
           QuickChatPhraseCache.field_i = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "write-text").toPcmSample().resample(var2);
-          en.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "cursor").toPcmSample().resample(var2);
+          AchievementTracker.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "cursor").toPcmSample().resample(var2);
           bm.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "interference").toPcmSample().resample(var2);
           qh.field_i = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "interference_300ms").toPcmSample().resample(var2);
           SecondaryNodeHashTable.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mainmenu_formation").toPcmSample().resample(var2);
@@ -633,7 +633,7 @@ public final class EscapeVector extends NetworkGameClient {
           RasterBuffer.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion_5_seconds").toPcmSample().resample(var2);
           pa.field_a = VorbisSample.loadNamed(StripedProgressBar.field_I, "", "beeping").decodeToPcm().resample(var2);
           this.loadObjectExplosionSamples(guard + 97, var2);
-          ci.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mine_inactive_hum_2").toPcmSample().resample(var2);
+          AchievementDefinition.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mine_inactive_hum_2").toPcmSample().resample(var2);
           AccountMessagePanel.field_J = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "100Hz square").toPcmSample();
           MarkerSliderPainter.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-seeker-mine").toPcmSample().resample(var2);
           NameAvailabilityValidator.field_p = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "rockbuster").toPcmSample().resample(var2);
@@ -896,7 +896,7 @@ public final class EscapeVector extends NetworkGameClient {
             TextFieldValidator.a(var3, 0);
             return;
           }
-          if (!mb.b((byte) -64)) {
+          if (!AchievementThresholdRule.isAccountStateReady((byte) -64)) {
             dn.a(QuickChatPhraseCache.field_a, 17637, 100.0f);
             TextFieldValidator.a(var3, 0);
             return;
@@ -1010,7 +1010,7 @@ public final class EscapeVector extends NetworkGameClient {
           SoftwareRasterizer.clearFramebuffer();
           SelfDestructEffects.b(2);
           String var2 = PasswordValidator.field_r;
-          boolean var3 = (TrackerMusicDefinition.field_f.b(110));
+          boolean var3 = (TrackerMusicDefinition.field_f.hasSessionAchievements(110));
           boolean stackIn_3_0 = var3;
           int stackIn_3_1 = 4;
           boolean stackIn_4_2 = (null != IntValueNode.field_i);
@@ -1136,21 +1136,21 @@ public final class EscapeVector extends NetworkGameClient {
 
     private final void loadObjectSprites(int guard) {
         try {
-          mb.objectSprites[0] = fe.a("", IndexedSpriteState.field_j, "sprites_fuel", true);
-          mb.objectSprites[1] = fe.a("", IndexedSpriteState.field_j, "sprites_crate", true);
-          mb.objectSprites[2] = fe.a("", IndexedSpriteState.field_j, "sprites_turret", true);
-          mb.objectSprites[3] = fe.a("", IndexedSpriteState.field_j, "sprites_magnet", true);
-          mb.objectSprites[4] = fe.a("", IndexedSpriteState.field_j, "sprites_repeller", true);
-          mb.objectSprites[5] = fe.a("", IndexedSpriteState.field_j, "sprites_tnt", true);
-          mb.objectSprites[6] = fe.a("", IndexedSpriteState.field_j, "sprites_laser_left", true);
+          AchievementThresholdRule.objectSprites[0] = fe.a("", IndexedSpriteState.field_j, "sprites_fuel", true);
+          AchievementThresholdRule.objectSprites[1] = fe.a("", IndexedSpriteState.field_j, "sprites_crate", true);
+          AchievementThresholdRule.objectSprites[2] = fe.a("", IndexedSpriteState.field_j, "sprites_turret", true);
+          AchievementThresholdRule.objectSprites[3] = fe.a("", IndexedSpriteState.field_j, "sprites_magnet", true);
+          AchievementThresholdRule.objectSprites[4] = fe.a("", IndexedSpriteState.field_j, "sprites_repeller", true);
+          AchievementThresholdRule.objectSprites[5] = fe.a("", IndexedSpriteState.field_j, "sprites_tnt", true);
+          AchievementThresholdRule.objectSprites[6] = fe.a("", IndexedSpriteState.field_j, "sprites_laser_left", true);
           int var2_int = -111 / ((60 - guard) / 58);
-          mb.objectSprites[7] = fe.a("", IndexedSpriteState.field_j, "sprites_laser_right", true);
-          mb.objectSprites[8] = fe.a("", IndexedSpriteState.field_j, "sprites_barrier", true);
-          mb.objectSprites[9] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_shield", true);
-          mb.objectSprites[10] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_triple_shot", true);
-          mb.objectSprites[11] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_thrust", true);
-          mb.objectSprites[12] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_one_rockbuster", true);
-          mb.objectSprites[13] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_five_rockbusters", true);
+          AchievementThresholdRule.objectSprites[7] = fe.a("", IndexedSpriteState.field_j, "sprites_laser_right", true);
+          AchievementThresholdRule.objectSprites[8] = fe.a("", IndexedSpriteState.field_j, "sprites_barrier", true);
+          AchievementThresholdRule.objectSprites[9] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_shield", true);
+          AchievementThresholdRule.objectSprites[10] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_triple_shot", true);
+          AchievementThresholdRule.objectSprites[11] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_thrust", true);
+          AchievementThresholdRule.objectSprites[12] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_one_rockbuster", true);
+          AchievementThresholdRule.objectSprites[13] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_five_rockbusters", true);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.MB(" + guard + ')');
         }

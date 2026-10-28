@@ -303,14 +303,14 @@ final class dn {
 
     private final Sprite[] a(int param0, int param1) {
         if (EmailSyntaxValidator.a(param1, -2)) {
-          Sprite[] var3 = mb.objectSprites;
+          Sprite[] var3 = AchievementThresholdRule.objectSprites;
           return this.a(var3, param0 + 4802);
         }
         if (!UiContainer.e((byte) -75)) {
           return null;
         }
         if (param1 == 2) {
-          Sprite[] var3Lifetime1 = mb.objectSprites;
+          Sprite[] var3Lifetime1 = AchievementThresholdRule.objectSprites;
           return this.a(var3Lifetime1, -126);
         }
         if (param1 == 3) {
@@ -1051,7 +1051,7 @@ final class dn {
         if (!param0) {
           return;
         }
-        String[] var3 = new String[]{ug.field_b, QuickChatPhraseDefinition.field_w, mj.field_c, qj.field_e, oh.field_k, DynamicTerrainRenderer.field_t, cj.field_b};
+        String[] var3 = new String[]{AchievementFlagSupport.field_b, QuickChatPhraseDefinition.field_w, mj.field_c, qj.field_e, oh.field_k, DynamicTerrainRenderer.field_t, cj.field_b};
         int var4 = 16777215;
         int var5 = this.f((byte) 70);
         int var6 = this.g((byte) 115);

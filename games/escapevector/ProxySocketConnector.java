@@ -15,15 +15,15 @@ final class ProxySocketConnector extends SocketConnector {
     static int[] achievementCategories;
     static AchievementGrantRule[] achievementRules;
     static int[] achievementMasks;
-    static int[] field_z;
-    static int[] field_t;
-    static mb[] field_i;
+    static int[] hiddenAchievementIds;
+    static int[] achievementOrbPoints;
+    static AchievementThresholdRule[] achievementThresholdRules;
     static int[] achievementModes;
-    static ci[] field_l;
-    static int[] field_q;
+    static AchievementDefinition[] achievementDefinitions;
+    static int[] achievementModeMasks;
     static int[] field_j;
-    static int[] field_m;
-    static int[] field_s;
+    static int[] membersAchievementIds;
+    static int[] achievementOrbCoins;
 
     private final java.net.Socket connectViaProxy(java.net.Proxy proxy, int guard) throws IOException {
         String stackIn_28_2 = null;
@@ -201,7 +201,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     public static void releaseStatics(boolean guard) {
-        field_m = null;
+        membersAchievementIds = null;
         field_j = null;
         if (!guard) {
           ProxySocketConnector.decodeBase37Name(48L, (byte) -107);
@@ -209,16 +209,16 @@ final class ProxySocketConnector extends SocketConnector {
         field_x = null;
         field_w = null;
         field_o = null;
-        field_l = null;
-        field_q = null;
+        achievementDefinitions = null;
+        achievementModeMasks = null;
         field_y = null;
-        field_s = null;
+        achievementOrbCoins = null;
         achievementModes = null;
         achievementMasks = null;
-        field_i = null;
+        achievementThresholdRules = null;
         field_r = null;
-        field_t = null;
-        field_z = null;
+        achievementOrbPoints = null;
+        hiddenAchievementIds = null;
         achievementCategories = null;
         achievementRules = null;
     }
@@ -306,7 +306,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     final static int a(int param0, int param1) {
         if (param0 < 88) {
-          field_t = (int[]) null;
+          achievementOrbPoints = (int[]) null;
         }
         if (param1 == 0) {
           return 0;
@@ -331,18 +331,18 @@ final class ProxySocketConnector extends SocketConnector {
         field_o = new String[]{"Low-security Facility", "Deep Excavation", "Blue Defence", "Pod Defence", "Attractor Tunnel", "Moon Fuel Depot", "TNT Storage Cavern", "Force Matrix Defence", "Ice Labyrinth", "Seeker Caves", "High-security Stronghold", "Rock Buster Twister", "Small Ship Fuel Depot", "The Shafts", "Seeker Prison Cell", "Central Munition Cavern"};
         field_p = false;
         field_w = new Sprite(1, 1);
-        field_z = new int[]{8, 17};
+        hiddenAchievementIds = new int[]{8, 17};
         achievementCategories = new int[]{18, 19, 20, 21, 0, 1, 2, 3, 22, 23, 24, 25, 31, 30};
         achievementMasks = new int[]{3, 3, 3, 3, 1, 1, 1, 1, 4, 4, 4, 4, 8, 8};
-        field_t = new int[]{100, 100, 200, 300, 200, 500, 100, 300, 100, 500, 1000, 500, 500, 300, 500, 500, 500, 300, 50, 50, 100, 150, 100, 200, 300, 500, 200, 500, 500, 1000, 500, 100};
+        achievementOrbPoints = new int[]{100, 100, 200, 300, 200, 500, 100, 300, 100, 500, 1000, 500, 500, 300, 500, 500, 500, 300, 50, 50, 100, 150, 100, 200, 300, 500, 200, 500, 500, 1000, 500, 100};
         field_j = new int[]{25000, 100000, 350000, 800000};
         field_x = new int[]{4, 5, 26, 27};
         field_y = new int[]{0, 0, 2, 2};
-        field_m = new int[]{22, 23, 24, 25, 26, 27, 28, 29, 30, 31};
+        membersAchievementIds = new int[]{22, 23, 24, 25, 26, 27, 28, 29, 30, 31};
         achievementModes = new int[]{3, 7, 11, 15, 3, 7, 11, 15, 3, 7, 11, 15, 0, 10};
-        field_q = new int[]{1, 1, 1, 1, 3, 3, 3, 1, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 8, 8, 8};
-        field_s = new int[]{1, 1, 2, 3, 2, 5, 1, 3, 1, 5, 10, 5, 5, 3, 5, 5, 5, 3, 1, 1, 1, 1, 1, 2, 3, 5, 2, 5, 5, 10, 5, 1};
-        cf.a((byte) -76);
+        achievementModeMasks = new int[]{1, 1, 1, 1, 3, 3, 3, 1, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 8, 8, 8};
+        achievementOrbCoins = new int[]{1, 1, 2, 3, 2, 5, 1, 3, 1, 5, 10, 5, 5, 3, 5, 5, 5, 3, 1, 1, 1, 1, 1, 2, 3, 5, 2, 5, 5, 10, 5, 1};
+        cf.initializeAchievementDefinitions((byte) -76);
         ChatMessage.initializeAchievementRules(0);
         jj.a(false);
     }

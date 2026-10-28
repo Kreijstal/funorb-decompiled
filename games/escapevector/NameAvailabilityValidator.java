@@ -41,7 +41,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
               this.field_n = var3.field_a;
               this.field_s = text;
             } else {
-              ValidationState stackIn_12_0 = ug.field_c;
+              ValidationState stackIn_12_0 = AchievementFlagSupport.field_c;
               return stackIn_12_0;
             }
           }

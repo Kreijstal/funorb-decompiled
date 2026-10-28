@@ -5,10 +5,10 @@ final class ChatMessage {
     int messageIdLow24;
     String text;
     int messageType;
-    static IndexedSprite field_i;
+    static IndexedSprite effectOutlineSprite;
     private static int field_d;
     int[] quickChatResponses;
-    static IndexedSprite field_c;
+    static IndexedSprite effectSprite;
     private long senderId;
     private int senderRank;
     private String senderName;
@@ -20,7 +20,7 @@ final class ChatMessage {
     final int displayPriority(int guard) {
         if (!this.priorityOverride && (2 != this.messageType ||
           this.senderRank <= 0)) {
-          if (this.senderId == en.field_l) {
+          if (this.senderId == AchievementTracker.field_l) {
             return 1;
           }
           if (RasterSnapshot.field_g == 2 &&
@@ -139,11 +139,11 @@ final class ChatMessage {
     }
 
     public static void releaseStatics(int guard) {
-        field_c = null;
+        effectSprite = null;
         if (guard != -13885) {
           return;
         }
-        field_i = null;
+        effectOutlineSprite = null;
         spriteOffsetYs = null;
     }
 
@@ -182,12 +182,12 @@ final class ChatMessage {
 
     static {
         field_d = 398339;
-        field_c = new IndexedSprite(1, 1, 256);
+        effectSprite = new IndexedSprite(1, 1, 256);
         for (int var0 = 0; var0 < 256; var0++) {
-          field_c.field_l[var0] = field_d;
+          effectSprite.field_l[var0] = field_d;
         }
-        field_c.field_l[0] = 0;
-        field_i = new IndexedSprite(3, 3, 256);
-        field_i.field_l[1] = 2917671;
+        effectSprite.field_l[0] = 0;
+        effectOutlineSprite = new IndexedSprite(3, 3, 256);
+        effectOutlineSprite.field_l[1] = 2917671;
     }
 }

@@ -65,7 +65,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             this.indicatorScratch.drawAdditive(-(var20.fullWidth >> 1) + var9, -var20.fullHeight + var10, 256);
             return;
           }
-          if (var6 != ug.field_c) {
+          if (var6 != AchievementFlagSupport.field_c) {
             if (ArchiveProvider.field_a == var6) {
               Sprite var22 = EditableTextWidget.field_E[2];
               var22.drawAdditive(var9, -(var22.height >> 1) + var10, 256);
@@ -97,7 +97,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
         regionExit1: {
           regionExit2: {
-            if (ug.field_c != var6) {
+            if (AchievementFlagSupport.field_c != var6) {
               var5 = this.validation.validationMessage(44);
               if (var5 != null) {
                 if (!var5.equals(this.text)) {
@@ -146,7 +146,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           this.indicatorScratch.drawAdditive(-(var25.fullWidth >> 1) + var9Lifetime1, -var25.fullHeight + var10Lifetime1, 256);
           return;
         }
-        if (var6Lifetime1 != ug.field_c) {
+        if (var6Lifetime1 != AchievementFlagSupport.field_c) {
           if (ArchiveProvider.field_a == var6Lifetime1) {
             Sprite var27 = EditableTextWidget.field_E[2];
             var27.drawAdditive(var9Lifetime1, -(var27.height >> 1) + var10Lifetime1, 256);

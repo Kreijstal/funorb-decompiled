@@ -73,7 +73,7 @@ final class ValidationIndicator extends TextButton {
           int var6 = this.y + screenY + (this.height >> 1);
           ValidationState var8 = this.field_F.validationState(17124);
           if (var8 != SpriteDecodeSupport.field_f &&
-            ug.field_c != var8) {
+            AchievementFlagSupport.field_c != var8) {
             if (ArchiveProvider.field_a == var8) {
               Sprite var24 = EditableTextWidget.field_E[2];
               var24.drawAdditive(var5 - (var24.width >> 1), var6 - (var24.height >> 1), 256);
@@ -132,7 +132,7 @@ final class ValidationIndicator extends TextButton {
           RockBuster.field_j.drawAdditive(var5Lifetime1 - var15.fullWidth, -var15.fullHeight + var6Lifetime1, 256);
           return;
         }
-        if (ug.field_c != var8Lifetime1) {
+        if (AchievementFlagSupport.field_c != var8Lifetime1) {
           if (ArchiveProvider.field_a == var8Lifetime1) {
             Sprite var18 = EditableTextWidget.field_E[2];
             var18.drawAdditive(var5Lifetime1 - (var18.width >> 1), var6Lifetime1 - (var18.height >> 1), 256);

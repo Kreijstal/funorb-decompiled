@@ -209,27 +209,27 @@ final class cf {
         }
     }
 
-    final static void a(byte param0) {
+    final static void initializeAchievementDefinitions(byte guard) {
         try {
-          ProxySocketConnector.field_l = new ci[32];
-          if (param0 != -76) {
+          ProxySocketConnector.achievementDefinitions = new AchievementDefinition[32];
+          if (guard != -76) {
             field_a = (String) null;
           }
           for (int var1_int = 0; var1_int < 32; var1_int++) {
             int var2 = var1_int;
-            boolean var3 = (GzipDecoder.a(var1_int, (byte) 33));
-            boolean var4 = (ug.a(var1_int, 0));
-            int var5 = ProxySocketConnector.field_q[var1_int];
-            int var6 = ProxySocketConnector.field_s[var1_int];
-            int var7 = ProxySocketConnector.field_t[var1_int];
-            ci var8 = new ci(var2, (var3), (var4), var5, var6, var7);
-            ProxySocketConnector.field_l[var1_int] = var8;
+            boolean var3 = (GzipDecoder.isMembersAchievement(var1_int, (byte) 33));
+            boolean var4 = (AchievementFlagSupport.isHiddenAchievement(var1_int, 0));
+            int var5 = ProxySocketConnector.achievementModeMasks[var1_int];
+            int var6 = ProxySocketConnector.achievementOrbCoins[var1_int];
+            int var7 = ProxySocketConnector.achievementOrbPoints[var1_int];
+            AchievementDefinition var8 = new AchievementDefinition(var2, (var3), (var4), var5, var6, var7);
+            ProxySocketConnector.achievementDefinitions[var1_int] = var8;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "cf.B(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "cf.B(" + guard + ')');
         }
     }
 

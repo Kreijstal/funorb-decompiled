@@ -24,7 +24,7 @@ final class Checkbox extends TextButton {
     private Checkbox(String param0, WidgetPainter param1, UiListener param2) {
         super(param0, param1, param2);
         try {
-          this.painter = mb.field_g.checkboxPainter;
+          this.painter = AchievementThresholdRule.field_g.checkboxPainter;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "bo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -41,9 +41,9 @@ final class Checkbox extends TextButton {
     }
 
     private Checkbox(String param0, UiListener param1) {
-        this(param0, mb.field_g.buttonPainter, param1);
+        this(param0, AchievementThresholdRule.field_g.buttonPainter, param1);
         try {
-          this.painter = mb.field_g.checkboxPainter;
+          this.painter = AchievementThresholdRule.field_g.checkboxPainter;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "bo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

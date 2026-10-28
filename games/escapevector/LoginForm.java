@@ -287,7 +287,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             this.y = this.y + (var7.paragraphHeight(this.message, -40 + this.width, var7.maxAscent) + 5);
           }
           String var8 = lh.field_b;
-          LoginMethod var9 = WeightedCacheEntry.readLastLoginMethod((byte) -1, PointCloudEffect.d((byte) -107));
+          LoginMethod var9 = WeightedCacheEntry.readLastLoginMethod((byte) -1, PointCloudEffect.activeApplet((byte) -107));
           if (var9 == NameAvailabilityValidator.field_q) {
             var8 = kg.field_b;
           } else if (var9 == oh.field_n) {

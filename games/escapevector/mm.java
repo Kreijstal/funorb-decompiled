@@ -74,7 +74,7 @@ final class mm {
         }
         ResourceArchive var4 = IndexedSpriteState.field_j;
         if (5 == param1) {
-          en.a(var4, 5);
+          AchievementTracker.loadTutorialSprites(var4, 5);
           SpriteOffset.a((byte) 53);
           return true;
         }

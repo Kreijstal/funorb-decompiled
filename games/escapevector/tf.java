@@ -48,7 +48,7 @@ final class tf {
           int var4 = 20 + dn.a(0) / 2;
           int var5 = 15 + ea.d((byte) -96) / 2;
           GameAppletShell.a(var3, 320 - var4, 240 - var5, 6320248, 0, var5 + 241, -3, 321 + var4, 12110032, 3160124, 2 * var2);
-          en.c(0);
+          AchievementTracker.drawLegacyMenu(0);
           return;
         }
         GameAppletShell.a(var3, this.field_d - 6, this.field_f - 12, 6320248, 0, 24 * ch.field_a.field_k + this.field_f + 12, -3, 6 + this.field_a, 12110032, 3160124, var2 * 2);

@@ -63,7 +63,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           for (int var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param1.field_k.peekEvent()) {
-              en.a((byte) -15, 1L);
+              AchievementTracker.sleepMillis((byte) -15, 1L);
               continue;
             }
             break;
@@ -208,10 +208,10 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           while (true) {
             SystemTask var3 = param0.a((byte) 45, param1);
             while (var3.field_f == 0) {
-              en.a((byte) 93, 10L);
+              AchievementTracker.sleepMillis((byte) 93, 10L);
             }
             if (var3.field_f != 1) {
-              en.a((byte) -10, 100L);
+              AchievementTracker.sleepMillis((byte) -10, 100L);
               continue;
             }
             break;

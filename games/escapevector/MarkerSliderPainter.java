@@ -158,7 +158,7 @@ final class MarkerSliderPainter implements WidgetPainter {
               SavedDataQuery.field_j = WidgetStyleLayer.field_d;
             }
             DraggableWidget.field_O = bg.field_f;
-            ci.field_g = ValidationIndicator.field_M;
+            AchievementDefinition.field_g = ValidationIndicator.field_M;
             if (text != null) {
               PasswordFieldPainter.field_u = false;
             } else if (var2_int) {
@@ -170,7 +170,7 @@ final class MarkerSliderPainter implements WidgetPainter {
             SavedDataQuery.field_j < WidgetStyleLayer.field_d &&
             TextFieldValidator.field_h) {
             SavedDataQuery.field_j = 0;
-            ci.field_g = ValidationIndicator.field_M;
+            AchievementDefinition.field_g = ValidationIndicator.field_M;
             DraggableWidget.field_O = bg.field_f;
           }
           if (guard > -97) {

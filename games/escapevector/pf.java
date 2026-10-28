@@ -909,7 +909,7 @@ final class pf {
             }
             SystemTask var4 = ((SystemTaskService) (Object) stackIn_13_0).a((byte) stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(SystemTaskService.field_s).append("&v2=").append(SystemTaskService.field_v).append("&e=").append(var7).toString()));
             while (var4.field_f == 0) {
-              en.a((byte) 105, 1L);
+              AchievementTracker.sleepMillis((byte) 105, 1L);
             }
             if (var4.field_f == 1) {
               DataInputStream var5 = (DataInputStream) (var4.field_b);

@@ -71,7 +71,7 @@ final class TextLayoutLine {
             }
             Sprite var6 = var3[var5];
             int var7 = var5 + 14;
-            Sprite[] var8 = mb.objectSprites;
+            Sprite[] var8 = AchievementThresholdRule.objectSprites;
             if (var2_int) {
               var8 = ArchiveProvider.field_b;
             }

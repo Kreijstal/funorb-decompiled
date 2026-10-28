@@ -123,14 +123,14 @@ abstract class TickClock {
         if (guard >= 34) {
           long var4 = this.delayMillis((byte) 96);
           if (var4 > 0L) {
-            en.a((byte) -86, var4);
+            AchievementTracker.sleepMillis((byte) -86, var4);
           }
           return this.advanceTicks((byte) -95, tickNanos);
         }
         field_a = (String) null;
         long var4Lifetime1 = this.delayMillis((byte) 96);
         if (var4Lifetime1 > 0L) {
-          en.a((byte) -86, var4Lifetime1);
+          AchievementTracker.sleepMillis((byte) -86, var4Lifetime1);
         }
         return this.advanceTicks((byte) -95, tickNanos);
     }

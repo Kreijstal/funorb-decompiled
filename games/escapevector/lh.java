@@ -66,7 +66,7 @@ final class lh {
                 var3 = (77 - var14.fullHeight) / 2;
               } else if (!PacketBuffer.field_h) {
                 if (e.field_a) {
-                  if (TrackerMusicDefinition.field_f.b(123)) {
+                  if (TrackerMusicDefinition.field_f.hasSessionAchievements(123)) {
                     var2 = ValidationHelpWidget.field_I;
                   } else {
                     var2 = DisplayNameForm.field_O;
@@ -177,7 +177,7 @@ final class lh {
                 var3Lifetime1 = (77 - var21.fullHeight) / 2;
               } else if (!PacketBuffer.field_h) {
                 if (e.field_a) {
-                  if (TrackerMusicDefinition.field_f.b(123)) {
+                  if (TrackerMusicDefinition.field_f.hasSessionAchievements(123)) {
                     var2Lifetime1 = ValidationHelpWidget.field_I;
                   } else {
                     var2Lifetime1 = DisplayNameForm.field_O;
@@ -330,7 +330,7 @@ final class lh {
                 return;
               }
               if (e.field_a) {
-                if (TrackerMusicDefinition.field_f.b(123)) {
+                if (TrackerMusicDefinition.field_f.hasSessionAchievements(123)) {
                   var2Lifetime2 = ValidationHelpWidget.field_I;
                 } else {
                   var2Lifetime2 = DisplayNameForm.field_O;

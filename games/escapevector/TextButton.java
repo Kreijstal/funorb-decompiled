@@ -226,7 +226,7 @@ class TextButton extends UiComponent {
     }
 
     TextButton(String param0, UiListener param1) {
-        this(param0, mb.field_g.buttonPainter, param1);
+        this(param0, AchievementThresholdRule.field_g.buttonPainter, param1);
     }
 
     final static int a(int param0, byte param1) {
@@ -310,7 +310,7 @@ class TextButton extends UiComponent {
         this.focused = false;
         this.tabStop = true;
         this.enabled = true;
-        this.painter = mb.field_g.field_b;
+        this.painter = AchievementThresholdRule.field_g.field_b;
     }
 
     static {

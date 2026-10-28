@@ -257,7 +257,7 @@ final class sn {
           }
           ChatHistorySupport.field_a = -(var3_intLifetime1 >> 1) + ClientException.field_e + var3_intLifetime1;
           TriangleMesh.field_x = ClientException.field_e - (var3_intLifetime1 >> 1);
-          mh.field_f = cb.field_c.field_k * (CheckboxPainter.field_s + en.field_k << 1);
+          mh.field_f = cb.field_c.field_k * (CheckboxPainter.field_s + AchievementTracker.field_k << 1);
           for (int var4Lifetime2 = param1; Js5NetworkRequest.field_I.length > var4Lifetime2; var4Lifetime2++) {
             int stackIn_112_0 = mh.field_f;
             if (jj.field_a[var4Lifetime2] < 0) {
@@ -281,8 +281,8 @@ final class sn {
               cj.field_d[var4Lifetime3][0] = var8Lifetime1 - fe.field_k;
               cj.field_d[var4Lifetime3][1] = var5Lifetime3;
               cj.field_d[var4Lifetime3][2] = (fe.field_k << 1) + var7Lifetime2;
-              cj.field_d[var4Lifetime3][3] = (en.field_k << 1) + ok.field_a;
-              var5Lifetime3 = var5Lifetime3 + (CheckboxPainter.field_s + (en.field_k << 1) + ok.field_a);
+              cj.field_d[var4Lifetime3][3] = (AchievementTracker.field_k << 1) + ok.field_a;
+              var5Lifetime3 = var5Lifetime3 + (CheckboxPainter.field_s + (AchievementTracker.field_k << 1) + ok.field_a);
             } else {
               var5Lifetime3 = var5Lifetime3 + SpriteFactorySupport.field_b;
             }

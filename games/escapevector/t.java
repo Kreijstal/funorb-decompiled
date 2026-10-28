@@ -256,7 +256,7 @@ final class t {
               stackIn_8_0 = -mj.field_d + 40;
             }
             fc.a(stackIn_8_0, -var2_int + 320, var2_int + 321, 301 + var3, true, 29788, true, 6324320, 3162160, 0, 300 - var3, true);
-            en.c(param0 ^ -16);
+            AchievementTracker.drawLegacyMenu(param0 ^ -16);
             pb.a(4);
             return;
           }
@@ -505,7 +505,7 @@ final class t {
             if (IsaacRandom.field_d != null) {
               ri.a(-25123);
             }
-            gk.a(-9787, PointCloudEffect.d((byte) -122));
+            gk.a(-9787, PointCloudEffect.activeApplet((byte) -122));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

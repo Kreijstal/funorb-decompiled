@@ -70,7 +70,7 @@ final class BoundedRandomAccessFile {
 
     final static PointCloudEffect a(int param0, boolean param1, int param2) {
         PointCloudEffect var3 = new PointCloudEffect(param0);
-        var3.field_q = param1 ? true : false;
+        var3.indexedRendering = param1 ? true : false;
         if (param2 == 8) {
           return var3;
         }

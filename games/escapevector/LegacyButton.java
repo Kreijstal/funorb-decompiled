@@ -339,7 +339,7 @@ final class LegacyButton {
             return;
           }
           if (var2 == 0) {
-            ProgressQuery var4 = (ProgressQuery) (en.field_i.first(false));
+            ProgressQuery var4 = (ProgressQuery) (AchievementTracker.field_i.first(false));
             if (var4 == null) {
               nm.a(16);
               return;

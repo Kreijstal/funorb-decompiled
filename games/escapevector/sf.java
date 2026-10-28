@@ -218,7 +218,7 @@ final class sf {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (en.field_g.indexOf(var5Lifetime1) == -1) {
+              if (AchievementTracker.field_g.indexOf(var5Lifetime1) == -1) {
                 EmailValidationError stackIn_49_0 = CachedTextLayout.field_p;
                 return stackIn_49_0;
               }

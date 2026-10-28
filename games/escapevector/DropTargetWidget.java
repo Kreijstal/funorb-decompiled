@@ -1602,7 +1602,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(93, "create_email_tooltip");
                 if (null != var2) {
-                  en.field_a = RasterSnapshot.a(var2, 121);
+                  AchievementTracker.field_a = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(101, "create_email_confirm_tooltip");
                 if (var2 != null) {
@@ -2644,19 +2644,19 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(40, "reconnect_lost_seq,0");
                 if (var2 != null) {
-                  ug.field_d[0] = RasterSnapshot.a(var2, 125);
+                  AchievementFlagSupport.field_d[0] = RasterSnapshot.a(var2, 125);
                 }
                 var2 = IntKeyLookup.a(22, "reconnect_lost_seq,1");
                 if (null != var2) {
-                  ug.field_d[1] = RasterSnapshot.a(var2, 111);
+                  AchievementFlagSupport.field_d[1] = RasterSnapshot.a(var2, 111);
                 }
                 var2 = IntKeyLookup.a(95, "reconnect_lost_seq,2");
                 if (var2 != null) {
-                  ug.field_d[2] = RasterSnapshot.a(var2, 110);
+                  AchievementFlagSupport.field_d[2] = RasterSnapshot.a(var2, 110);
                 }
                 var2 = IntKeyLookup.a(55, "reconnect_lost_seq,3");
                 if (var2 != null) {
-                  ug.field_d[3] = RasterSnapshot.a(var2, 118);
+                  AchievementFlagSupport.field_d[3] = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(80, "reconnect_lost");
                 if (null != var2) {

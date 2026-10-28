@@ -391,12 +391,12 @@ final class fe {
           SoftwareRasterizer.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           int var2 = 16448250;
           int var3 = 10068666;
-          int[] var17 = ug.a(1746055568, var3, var2);
+          int[] var17 = AchievementFlagSupport.blendPalette256(1746055568, var3, var2);
           this.a(ReflectionCheck.field_h, 0, 0, 47, 622, 0, this.field_f, var17);
           RasterRestoreSupport.popRasterState((byte) 107);
           this.field_c = new Sprite(475, 24);
           this.a(0, ReflectionCheck.field_h, NineSliceFrame.field_d, 24, 0, this.field_c, -4, 0.75f, var17, 475);
-          int[] var18 = ug.a(1746055568, 526344, 526344);
+          int[] var18 = AchievementFlagSupport.blendPalette256(1746055568, 526344, 526344);
           Sprite var5 = new Sprite(121, 122);
           TickClock.pushSpriteRaster(var5, (byte) -40);
           SoftwareRasterizer.fillVerticalGradient(0, 0, var5.width, var5.height / 2, 16180917, 16306250);
@@ -440,7 +440,7 @@ final class fe {
 
     private final void b(boolean param0) {
         try {
-          AudioService.a((byte) 53, PointCloudEffect.d((byte) -90));
+          AudioService.a((byte) 53, PointCloudEffect.activeApplet((byte) -90));
         } catch (Exception exception) {
           exception.printStackTrace();
         }

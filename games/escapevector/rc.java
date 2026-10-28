@@ -7,7 +7,7 @@ final class rc {
     static String field_c;
 
     final static void a(java.awt.Canvas param0, boolean param1) {
-        PointCloudEffect.a((byte) -38, (java.awt.Component) ((Object) param0));
+        PointCloudEffect.attachKeyboardInput((byte) -38, (java.awt.Component) ((Object) param0));
         if (!param1) {
           return;
         }

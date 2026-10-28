@@ -289,7 +289,7 @@ final class LoginMethod {
             Sprite[] var4 = (Sprite[]) null;
             LoginMethod.drawThreeSlice(30, -124, true, (Sprite[]) null, -14);
           }
-          PointCloudEffect stackIn_3_0 = ci.a((byte) -43, sf.objectExplosionSamples[param0.objectType], param0.y, param0.collisionSprite, param2, param0.x);
+          PointCloudEffect stackIn_3_0 = AchievementDefinition.createSpriteDebris((byte) -43, sf.objectExplosionSamples[param0.objectType], param0.y, param0.collisionSprite, param2, param0.x);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -112,7 +112,7 @@ abstract class TextLayout {
         if (qj.field_i != null) {
           return (java.awt.Container) ((Object) qj.field_i);
         }
-        return (java.awt.Container) ((Object) PointCloudEffect.d((byte) -119));
+        return (java.awt.Container) ((Object) PointCloudEffect.activeApplet((byte) -119));
     }
 
     final int characterX(byte guard, int characterIndex) {

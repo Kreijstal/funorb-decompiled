@@ -46,14 +46,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               Js5NetworkRequest.field_D = 0;
               pb.field_b = 0;
               UiTheme.field_n = param0;
-              IntrusiveNode.field_c = PointCloudEffect.d((byte) -109);
+              IntrusiveNode.field_c = PointCloudEffect.activeApplet((byte) -109);
               SystemTaskService dupTemp$1 = new SystemTaskService(param5, param6, param1, true);
               NetworkGameClient.field_r = dupTemp$1;
               SpriteCheckboxPainter.field_a = dupTemp$1;
               SystemTask var8 = NetworkGameClient.field_r.a(true, param2, (Runnable) (this));
               while (true) {
                 if (var8.field_f == 0) {
-                  en.a((byte) 100, 10L);
+                  AchievementTracker.sleepMillis((byte) 100, 10L);
                   if (var9 == 0) {
                     continue;
                   }
@@ -257,7 +257,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.field_b = true;
             System.out.println("error_game_" + param1);
             try {
-              JavaScriptBridge.callWindowFunction(PointCloudEffect.d((byte) -87), "loggedout", -29155);
+              JavaScriptBridge.callWindowFunction(PointCloudEffect.activeApplet((byte) -87), "loggedout", -29155);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var3 = decompiledCaughtException;
@@ -293,7 +293,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (this == StatefulTextPainter.field_r &&
             !RatingQuery.field_j) {
             LegacyMenuColumn.field_p = td.b(128);
-            en.a((byte) 100, 5000L);
+            AchievementTracker.sleepMillis((byte) 100, 5000L);
             SpriteCheckboxPainter.field_a = null;
             this.a((byte) 107, false);
             return;

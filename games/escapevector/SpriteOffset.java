@@ -28,7 +28,7 @@ final class SpriteOffset {
         }
         if (di.field_d.field_h == 1) {
           IntValueNode.field_i = null;
-          TrackerMusicDefinition.field_f = new en();
+          TrackerMusicDefinition.field_f = new AchievementTracker();
           ua.field_c = new kg();
           mj.field_d = 0;
           PacketBuffer.field_h = false;

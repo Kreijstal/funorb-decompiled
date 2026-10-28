@@ -221,7 +221,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           SystemTask var2 = param0.a(true, 5, (Runnable) (this));
           while (var2.field_f == 0) {
-            en.a((byte) 121, 10L);
+            AchievementTracker.sleepMillis((byte) 121, 10L);
           }
           if (var2.field_f == 2) {
             throw new RuntimeException();

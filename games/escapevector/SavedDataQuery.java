@@ -13,11 +13,11 @@ final class SavedDataQuery extends IntrusiveNode {
 
     final static boolean d(int param0) {
         if (param0 == 1000) {
-          return TextButton.a(false, PointCloudEffect.d((byte) -110));
+          return TextButton.a(false, PointCloudEffect.activeApplet((byte) -110));
         }
         String var2 = (String) null;
         SavedDataQuery.createCredentials(10, true, 83L, (String) null, (String) null);
-        return TextButton.a(false, PointCloudEffect.d((byte) -110));
+        return TextButton.a(false, PointCloudEffect.activeApplet((byte) -110));
     }
 
     final static int a(int param0, int param1, int param2) {

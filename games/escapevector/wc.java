@@ -271,12 +271,12 @@ final class wc {
         var4.progressWords = new int[param2];
         var4.campaignId = param0;
         if (param3 == -51) {
-          en.field_i.addLast(-12328, var4);
+          AchievementTracker.field_i.addLast(-12328, var4);
           ArchiveRequest.writeProgressQuery(param1, var4, -755);
           return var4;
         }
         field_d = (TrackerMusicDefinition) null;
-        en.field_i.addLast(-12328, var4);
+        AchievementTracker.field_i.addLast(-12328, var4);
         ArchiveRequest.writeProgressQuery(param1, var4, -755);
         return var4;
     }

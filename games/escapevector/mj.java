@@ -118,25 +118,25 @@ final class mj {
               LaserGateSpan.field_g = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(param0 - 1);
               al.field_d = ThreeSliceButtonPainter.field_t;
               if (ArchiveIndex.field_m.type((byte) 32) == AlphaContainer.field_E) {
-                NameAvailabilityValidator.field_q.a(27002, PointCloudEffect.d((byte) -114));
+                NameAvailabilityValidator.field_q.a(27002, PointCloudEffect.activeApplet((byte) -114));
               } else if (ArchiveIndex.field_m.type((byte) 32) == DisplayModeInfo.field_a) {
-                oh.field_n.a(27002, PointCloudEffect.d((byte) -71));
+                oh.field_n.a(27002, PointCloudEffect.activeApplet((byte) -71));
               }
               e.field_c = false;
               if (var6 != null) {
-                GameKeyHandler.a(var6, (byte) 30, PointCloudEffect.d((byte) -119));
+                GameKeyHandler.a(var6, (byte) 30, PointCloudEffect.activeApplet((byte) -119));
               }
               if (Js5NetworkRequest.field_x <= 0 &&
                 !QuickChatPhraseCache.field_g) {
                 try {
-                  JavaScriptBridge.callWindowFunction(PointCloudEffect.d((byte) -107), "unzap", param0 - 29156);
+                  JavaScriptBridge.callWindowFunction(PointCloudEffect.activeApplet((byte) -107), "unzap", param0 - 29156);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWindowFunctionWithArguments((byte) 116, PointCloudEffect.d((byte) -128), new Object[]{ProxySocketConnector.decodeBase37Name(mg.field_d, (byte) 29)}, "zap");
+                  JavaScriptBridge.callWindowFunctionWithArguments((byte) 116, PointCloudEffect.activeApplet((byte) -128), new Object[]{ProxySocketConnector.decodeBase37Name(mg.field_d, (byte) 29)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

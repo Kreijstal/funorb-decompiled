@@ -40,10 +40,10 @@ final class ProxyAuthenticationException extends IOException {
             IntrusiveNode.writeProgressRecord(-121, opcode, var4);
             var4 = (ProgressRecord) (RasterBuffer.field_e.next((byte) 70));
           }
-          ProgressQuery var5 = (ProgressQuery) (en.field_i.first(false));
+          ProgressQuery var5 = (ProgressQuery) (AchievementTracker.field_i.first(false));
           while (var5 != null) {
             ArchiveRequest.writeProgressQuery(opcode, var5, -755);
-            var5 = (ProgressQuery) (en.field_i.next((byte) 70));
+            var5 = (ProgressQuery) (AchievementTracker.field_i.next((byte) 70));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

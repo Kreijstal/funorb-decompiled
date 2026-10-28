@@ -182,7 +182,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_K = new TextButton(GameKeyHandler.field_c, (UiListener) null);
         this.field_P = new TextButton(CipherPacketBuffer.field_p, (UiListener) null);
         this.field_S.tooltip = ModalPanel.field_K;
-        this.field_I.tooltip = en.field_a;
+        this.field_I.tooltip = AchievementTracker.field_a;
         this.field_R.tooltip = InputGlyphSupport.field_f;
         this.field_Q.tooltip = RepeatedCharacterSupport.field_b;
         this.field_U.tooltip = AlternateUsernameCredentials.field_i;

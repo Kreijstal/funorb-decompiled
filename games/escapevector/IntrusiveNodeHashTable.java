@@ -118,7 +118,7 @@ final class IntrusiveNodeHashTable {
           }
           SystemTask var11 = param3.a(-103, param4, param2, param5, param1);
           while (var11.field_f == 0) {
-            en.a((byte) -31, 10L);
+            AchievementTracker.sleepMillis((byte) -31, 10L);
           }
           java.awt.Frame var7 = (java.awt.Frame) (var11.field_b);
           if (var7 == null) {

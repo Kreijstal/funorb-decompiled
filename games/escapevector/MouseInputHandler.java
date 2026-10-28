@@ -85,7 +85,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           PointCloudEffect stackIn_4_0 = var5;
           boolean stackIn_5_1 = (indexedRendering);
-          stackIn_4_0.field_q = stackIn_5_1;
+          stackIn_4_0.indexedRendering = stackIn_5_1;
           PointCloudEffect stackIn_6_0 = var5;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

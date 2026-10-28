@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ci {
-    boolean field_h;
-    Sprite field_e;
+final class AchievementDefinition {
+    boolean membersOnly;
+    Sprite icon;
     static int field_g;
-    boolean field_f;
-    int field_b;
-    private int field_c;
+    boolean hidden;
+    int achievementId;
+    private int allowedGameModes;
     static QuickChatDynamicCommand field_d;
     static PcmSample field_a;
 
@@ -15,45 +15,45 @@ final class ci {
         field_d = null;
         field_a = null;
         if (guard != 4) {
-          ci.requestArchiveKey(-111, 38, 24, -46);
+          AchievementDefinition.requestArchiveKey(-111, 38, 24, -46);
         }
     }
 
-    final static PointCloudEffect a(byte param0, PcmSample param1, int param2, Sprite param3, boolean param4, int param5) {
+    final static PointCloudEffect createSpriteDebris(byte guard, PcmSample sound, int y, Sprite sprite, boolean indexedRendering, int x) {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
-          PointCloudEffect var6 = new PointCloudEffect(param3, param5, param2, param1);
-          if (param0 != -43) {
-            ci.releaseStatics(68);
+          PointCloudEffect var6 = new PointCloudEffect(sprite, x, y, sound);
+          if (guard != -43) {
+            AchievementDefinition.releaseStatics(68);
           }
           PointCloudEffect stackIn_4_0 = var6;
-          boolean stackIn_5_1 = (param4);
-          stackIn_4_0.field_q = stackIn_5_1;
+          boolean stackIn_5_1 = (indexedRendering);
+          stackIn_4_0.indexedRendering = stackIn_5_1;
           PointCloudEffect stackIn_6_0 = var6;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6_ref = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var6_ref;
-          StringBuilder stackIn_9_1 = new StringBuilder().append("ci.B(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_9_1 = new StringBuilder().append("ci.B(").append(guard).append(',');
+          if (sound == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(y).append(',');
+          if (sprite == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(indexedRendering).append(',').append(x).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        if (!TrackerMusicDefinition.field_f.b(param0 + 117)) {
+        if (!TrackerMusicDefinition.field_f.hasSessionAchievements(param0 + 117)) {
           if (null == IntValueNode.field_i) {
             if (param0 != 0) {
               field_d = (QuickChatDynamicCommand) null;
@@ -89,29 +89,29 @@ final class ci {
         return var4;
     }
 
-    final boolean a(int param0, byte param1) {
-        if (param1 > -56) {
+    final boolean isAllowedInMode(int mode, byte guard) {
+        if (guard > -56) {
           return false;
         }
         if (UiContainer.e((byte) -52)) {
-          int var3 = 1 << param0;
-          boolean var4 = (0 != (this.field_c & var3));
+          int var3 = 1 << mode;
+          boolean var4 = (0 != (this.allowedGameModes & var3));
           return (var4);
         }
-        if (this.field_h) {
+        if (this.membersOnly) {
           return false;
         }
-        int var3Lifetime1 = 1 << param0;
-        boolean var4Lifetime1 = (0 != (this.field_c & var3Lifetime1));
+        int var3Lifetime1 = 1 << mode;
+        boolean var4Lifetime1 = (0 != (this.allowedGameModes & var3Lifetime1));
         return (var4Lifetime1);
     }
 
-    ci(int param0, boolean param1, boolean param2, int param3, int param4, int param5) {
-        this.field_e = ProxySocketConnector.field_w;
-        this.field_h = param1 ? true : false;
-        this.field_b = param0;
-        this.field_f = param2 ? true : false;
-        this.field_c = param3;
+    AchievementDefinition(int achievementId, boolean membersOnly, boolean hidden, int allowedGameModes, int orbCoins, int orbPoints) {
+        this.icon = ProxySocketConnector.field_w;
+        this.membersOnly = membersOnly ? true : false;
+        this.achievementId = achievementId;
+        this.hidden = hidden ? true : false;
+        this.allowedGameModes = allowedGameModes;
     }
 
     static {

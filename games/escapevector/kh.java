@@ -126,8 +126,8 @@ final class kh {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        int var3 = (255 & RatingQuery.field_k.field_k[param2]) + param1;
-        RatingQuery.field_k.field_k[param2] = (byte)MatchingTextValidator.a(var3, var3 << 23 >> 31);
+        int var3 = (255 & RatingQuery.pointCloudRasterSprite.field_k[param2]) + param1;
+        RatingQuery.pointCloudRasterSprite.field_k[param2] = (byte)MatchingTextValidator.a(var3, var3 << 23 >> 31);
         int var4 = -46 % ((-11 - param0) / 34);
     }
 

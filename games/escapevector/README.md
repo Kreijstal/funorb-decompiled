@@ -2,9 +2,9 @@
 
 This is the only published Java tree. Reviewed rules and the reproducer live in dekobloko-work/readable. The current reverse dictionary is ../../decompilation/escapevector-naming.json.
 
-This pass names 257 reviewed classes and 6950 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
+This pass names 261 reviewed classes and 7235 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
 
-Coverage: 259/349 class declarations and 1786/2781 methods have readable names; 277 constructors follow their owning class. 90 classes and 995 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
+Coverage: 263/349 class declarations and 1856/2781 methods have readable names; 277 constructors follow their owning class. 86 classes and 925 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
 
 ## Entry points
 
@@ -38,6 +38,8 @@ Every GameplaySession method has a reviewed name. `updateMissionOutcome`, `recor
 
 Every Minimap and DynamicTerrainRenderer method has a reviewed name. Minimap separates terrain scaling, wrapped views, pulsing cargo/objective/pickup markers and legend layout. DynamicTerrainRenderer separates padded masks, orthogonal boundary detection, solid/boundary sprite caches, cache rotation and compositing. TileSpriteCacheEntry retains its sprite and coordinates across reuse. Unrelated button, rating and chat helpers retain their original owners.
 
+Every PointCloudEffect method has a reviewed name. Position/velocity arrays use Q16; an auxiliary velocity contributes to drag without a third position array. Particle integration distinguishes terrain occupancy from object coverage and retains the original terrain-edit path. Persistent exhaust particles use an active mask; fading debris uses the indexed glow raster and optional extrema outline. Sprite caches and completion checks remain unchanged.
+
 ## Dialogue and shared engine
 
 `PcmStream` defines process/mixInto/skip, firstSubstream/nextSubstream, activity and priority for all concrete audio streams. PcmStreamMixer owns its substreams and timed PcmMixerListener queue. PcmSample/PcmSampleStream/PcmResampler expose PCM bytes, loops, interpolation and resampling. AudioOutput and JavaSoundAudioOutput distinguish device lifecycle hooks from stream mixing. ReverbPcmStream uses separate ReverbCombFilter and ReverbAllPassFilter rings.
@@ -49,6 +51,8 @@ Every Minimap and DynamicTerrainRenderer method has a reviewed name. Minimap sep
 `ArchivePreloader` polls ArchiveLoadTask records and retains the original progress ceiling. Js5ArchiveManager validates the master index and creates/services providers. GzipDecoder owns the raw inflater and preserves header/footer handling and reset paths. SpriteDecodeSupport, SpriteFactorySupport and SimulatorAssetSupport distinguish sheet lifetime, sprite construction and simulator assets. ArraySupport names the original fill/clear/overlap-safe copy loops.
 
 `ChatMessageDecoder` reads plain or quick-chat messages, including sender identity, rank and split message IDs. ChatMessage exposes display priority; ChatHistorySupport appends and trims history. QuickChatPhraseCache separates local and global phrase archives. AchievementGrantRule retains the original mode/mask/category checks. Static helpers outside these roles remain on their original classes, without inferred module relocation.
+
+`AchievementDefinition` exposes ID, icon, member/hidden flags and allowed modes. AchievementTracker names all its methods and distinguishes session bits, combined account bits, pending query and queued award records. Account-query merges and session subtraction remain separate; the definition constructor still discards its coin/point arguments. AchievementThresholdRule requires a mode and minimum value before granting. Unrelated menu, tutorial-asset and reflection helpers remain on their original owners.
 
 Every PacketBuffer, ResourceArchive and TriangleMesh method has a reviewed name. Buffer methods distinguish fixed widths, signed smarts, CP1252 string delimiters, length backpatches, CRC32, XTEA ranges, RSA and base-38 password packing. ArchiveIndex distinguishes group/file counts from sparse slot capacities; ResourceArchive separates loading, validity, named lookup and unpacking. File retention policy zero retains files, one discards the returned slot and two builds only the requested file before discarding its unpacked group. Packed-group retention is independent. TriangleMesh transforms invalidate lazy axis bounds.
 

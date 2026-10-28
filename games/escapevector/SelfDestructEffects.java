@@ -32,7 +32,7 @@ final class SelfDestructEffects {
         IntrusiveNode var4 = this.field_o.first(false);
         while (var4 != null) {
           PointCloudEffect var5 = (PointCloudEffect) (var4);
-          var5.a(99, param2, param1);
+          var5.draw(99, param2, param1);
           var4 = this.field_o.next((byte) 70);
         }
         if (!param0) {
@@ -163,7 +163,7 @@ final class SelfDestructEffects {
               QuickChatDynamicCommand.outgoingPackets.writeByte(18, param0 ^ 101);
               QuickChatDynamicCommand.outgoingPackets.position = QuickChatDynamicCommand.outgoingPackets.position + 2;
               int var10 = QuickChatDynamicCommand.outgoingPackets.position;
-              String var11_ref_String = tf.a(-1, PointCloudEffect.d((byte) -110));
+              String var11_ref_String = tf.a(-1, PointCloudEffect.activeApplet((byte) -110));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -209,7 +209,7 @@ final class SelfDestructEffects {
               al.field_d = ResourceArchive.field_k;
             } else {
               if (var9Lifetime1 == 248) {
-                se.writeBrowserSessionMarker((byte) 81, PointCloudEffect.d((byte) -108));
+                se.writeBrowserSessionMarker((byte) 81, PointCloudEffect.activeApplet((byte) -108));
                 MouseWheelInput.field_a = LoadingProgressDialog.field_fb;
                 nm.a(param0 ^ -16);
                 e.field_c = false;
@@ -251,7 +251,7 @@ final class SelfDestructEffects {
             } else {
               String var9_ref_String = QuickChatDynamicCommand.incomingPackets.readNullableString(param0 - 15176);
               if (var9_ref_String != null) {
-                GameKeyHandler.a(var9_ref_String, (byte) 30, PointCloudEffect.d((byte) -83));
+                GameKeyHandler.a(var9_ref_String, (byte) 30, PointCloudEffect.activeApplet((byte) -83));
               }
             }
             nm.a(16);
@@ -350,13 +350,13 @@ final class SelfDestructEffects {
         }
         while (var2 != null) {
           PointCloudEffect var3_ref = (PointCloudEffect) (var2);
-          var3_ref.a();
+          var3_ref.updateParticles();
           var2 = this.field_o.next((byte) 70);
         }
         var2 = this.field_o.first(false);
         while (var2 != null) {
           PointCloudEffect var3_refLifetime1 = (PointCloudEffect) (var2);
-          if (var3_refLifetime1.field_B) {
+          if (var3_refLifetime1.finished) {
             var3_refLifetime1.unlink((byte) -119);
             break;
           }

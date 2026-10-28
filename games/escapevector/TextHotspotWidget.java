@@ -162,7 +162,7 @@ class TextHotspotWidget extends TextButton {
     final static void b(int param0, byte param1) {
         try {
           try {
-            JavaScriptBridge.callWindowFunctionWithArguments((byte) 106, PointCloudEffect.d((byte) -62), new Object[]{new Integer(param0)}, "resizing");
+            JavaScriptBridge.callWindowFunctionWithArguments((byte) 106, PointCloudEffect.activeApplet((byte) -62), new Object[]{new Integer(param0)}, "resizing");
           } catch (Throwable throwable) {
           }
           if (param1 <= 93) {

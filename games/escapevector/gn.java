@@ -39,7 +39,7 @@ final class gn {
           while (true) {
             ProgressRecord var2_ref = (ProgressRecord) (this.field_h.removeFirst(-20245));
             if (var2_ref != null) {
-              PointCloudEffect.a(5, (byte) -107, var2_ref);
+              PointCloudEffect.enqueueProgressRecord(5, (byte) -107, var2_ref);
               continue;
             }
             break;
@@ -74,7 +74,7 @@ final class gn {
         while (true) {
           ProgressRecord var4 = (ProgressRecord) (this.field_h.removeFirst(-20245));
           if (var4 != null) {
-            PointCloudEffect.a(5, (byte) -107, var4);
+            PointCloudEffect.enqueueProgressRecord(5, (byte) -107, var4);
             continue;
           }
           break;

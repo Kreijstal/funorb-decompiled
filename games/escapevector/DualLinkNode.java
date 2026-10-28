@@ -48,7 +48,7 @@ class DualLinkNode extends IntrusiveNode {
     final static void a(int param0, int param1) {
         int var9 = EscapeVector.obfuscationControl;
         boolean var2_int = (4 == param1);
-        Sprite[] var3 = mb.objectSprites;
+        Sprite[] var3 = AchievementThresholdRule.objectSprites;
         if (var2_int) {
           var3 = ArchiveProvider.field_b;
         }

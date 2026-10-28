@@ -15,7 +15,7 @@ final class VorbisCodebook {
 
     private final static int lookup1ValueCount(int entries, int dimensions) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)entries, 1.0 / (double)dimensions) + 1; en.b(dimensions, var2, -1) > entries; var2--) {
+        for (var2 = (int)Math.pow((double)entries, 1.0 / (double)dimensions) + 1; AchievementTracker.integerPower(dimensions, var2, -1) > entries; var2--) {
         }
         return var2;
     }

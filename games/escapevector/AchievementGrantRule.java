@@ -16,11 +16,11 @@ final class AchievementGrantRule {
           if (responseCode == 255) {
             boolean stackIn_5_0 = !(gf.field_a >= 13);
             InputGlyphSupport.field_a = fc.a(stackIn_5_0, (byte) -79);
-            mb.a((String[]) null, guard + 105);
+            AchievementThresholdRule.setAccountNameSuggestions((String[]) null, guard + 105);
           } else if (responseCode >= 100 &&
             responseCode <= 105) {
             String[] var4 = suggestions;
-            mb.a(var4, 4);
+            AchievementThresholdRule.setAccountNameSuggestions(var4, 4);
             InputGlyphSupport.field_a = BufferedRandomAccessFile.a(suggestions, (byte) -63);
           } else {
             InputGlyphSupport.field_a = bm.a(message, responseCode, guard ^ -97);

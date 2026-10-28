@@ -18,7 +18,7 @@ final class GzipDecoder {
           GrowableIntList.a((byte) -96);
           dn.field_q = RasterBuffer.field_g;
           if (byteGuard > -111) {
-            GzipDecoder.a(13, (byte) 34);
+            GzipDecoder.isMembersAchievement(13, (byte) 34);
           }
           ui.field_b = RasterBuffer.field_g;
         } catch (RuntimeException runtimeException) {
@@ -36,7 +36,7 @@ final class GzipDecoder {
           }
           SystemTask var8 = taskService.a(5);
           while (var8.field_f == 0) {
-            en.a((byte) 101, 10L);
+            AchievementTracker.sleepMillis((byte) 101, 10L);
           }
           if (var8.field_f == 2) {
             DisplayModeInfo[] stackIn_10_0 = new DisplayModeInfo[]{};
@@ -78,16 +78,16 @@ final class GzipDecoder {
         this(-1, 1000000, 1000000);
     }
 
-    final static boolean a(int param0, byte param1) {
+    final static boolean isMembersAchievement(int achievementId, byte guard) {
         try {
-          int[] var2 = ProxySocketConnector.field_m;
+          int[] var2 = ProxySocketConnector.membersAchievementIds;
           int var3 = 0;
-          if (param1 < 26) {
+          if (guard < 26) {
             GzipDecoder.releaseStatics((byte) -79);
           }
           while (var3 < var2.length) {
             int var4 = var2[var3];
-            if (param0 == var4) {
+            if (achievementId == var4) {
               return true;
             }
             var3++;
@@ -96,7 +96,7 @@ final class GzipDecoder {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "dh.B(" + param0 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) var2_ref), "dh.B(" + achievementId + ',' + guard + ')');
         }
     }
 

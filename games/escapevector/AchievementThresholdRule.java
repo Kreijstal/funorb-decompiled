@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mb {
+final class AchievementThresholdRule {
     static Sprite[] objectSprites;
     static UiTheme field_g;
     static String[] field_b;
-    private int field_e;
-    private int field_c;
-    private int field_d;
+    private int achievementId;
+    private int requiredMode;
+    private int minimumValue;
     static PcmSampleStream field_a;
 
-    final static void a(byte param0) {
+    final static void advanceScreensAndAccountState(byte guard) {
         boolean var2 = false;
         int var3 = EscapeVector.obfuscationControl;
         try {
@@ -27,14 +27,14 @@ final class mb {
                 if (null != IntValueNode.field_i) {
                   ml.a(IntValueNode.field_i, 3, (byte) 101);
                 }
-                ci.a(0);
+                AchievementDefinition.a(0);
               }
             }
             p.field_h = 0;
             mj.field_d = 0;
             ChatMessage.clearFrameOffsets((byte) -105);
           }
-          if (param0 >= -47) {
+          if (guard >= -47) {
             return;
           }
           if (var4 == null) {
@@ -87,23 +87,23 @@ final class mb {
           if (aj.b(-102)) {
             return;
           }
-          TrackerMusicDefinition.field_f.d(-32464);
+          TrackerMusicDefinition.field_f.serviceAccountAchievements(-32464);
           ua.field_c.b(126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "mb.F(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "mb.F(" + guard + ')');
         }
     }
 
-    final static boolean b(byte param0) {
+    final static boolean isAccountStateReady(byte guard) {
         try {
           boolean stackIn_4_0 = !(aj.b(-96));
           boolean var1_int = stackIn_4_0;
           if (var1_int &&
-            !TrackerMusicDefinition.field_f.field_h &&
-            !TrackerMusicDefinition.field_f.field_c) {
+            !TrackerMusicDefinition.field_f.accountAchievementsLoaded &&
+            !TrackerMusicDefinition.field_f.queryFailed) {
             return false;
           }
           if (var1_int &&
@@ -125,30 +125,30 @@ final class mb {
             null != StatefulTextPainter.field_u) {
             return false;
           }
-          if (param0 <= -61) {
+          if (guard <= -61) {
             return true;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "mb.A(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "mb.A(" + guard + ')');
         }
     }
 
-    final static void a(Sprite param0, int param1) {
+    final static void setMirroredPanelBackground(Sprite sprite, int guard) {
         String stackIn_8_2 = null;
         try {
-          TextFieldValidator.field_j = param0;
-          SpriteDecodeSupport.field_a = new Sprite(param0.fullWidth, param0.fullHeight);
-          if (param1 > -11) {
+          TextFieldValidator.field_j = sprite;
+          SpriteDecodeSupport.field_a = new Sprite(sprite.fullWidth, sprite.fullHeight);
+          if (guard > -11) {
             field_a = (PcmSampleStream) null;
           }
           int[] var3 = new int[4];
           int[] var2 = var3;
           SoftwareRasterizer.saveClip(var3);
           SpriteDecodeSupport.field_a.bindAsFramebuffer();
-          param0.drawMirrored(0, 0);
+          sprite.drawMirrored(0, 0);
           AlphaContainer.field_D.a(107);
           SoftwareRasterizer.restoreClip(var3);
           return;
@@ -157,12 +157,12 @@ final class mb {
           RuntimeException runtimeException = decompiledCaughtException;
           RuntimeException stackIn_7_0 = runtimeException;
           StringBuilder stackIn_7_1 = new StringBuilder().append("mb.C(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class mb {
           field_g = null;
           objectSprites = null;
           if (guard != 4) {
-            mb.b((byte) -110);
+            AchievementThresholdRule.isAccountStateReady((byte) -110);
           }
           field_a = null;
         } catch (RuntimeException runtimeException) {
@@ -180,52 +180,52 @@ final class mb {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void grantIfThresholdReached(int guard, int mode, int value) {
         try {
-          if (this.field_c != param1) {
+          if (this.requiredMode != mode) {
             return;
           }
-          if (this.field_d > param2) {
+          if (this.minimumValue > value) {
             return;
           }
           GameplaySession var4 = BoundedRandomAccessFile.activeSession;
-          if (param0 != 11827) {
+          if (guard != 11827) {
             String[] var5 = (String[]) null;
-            mb.a((String[]) null, 86);
+            AchievementThresholdRule.setAccountNameSuggestions((String[]) null, 86);
           }
           if (var4 == null) {
             return;
           }
-          var4.awardAchievement(param1, false, this.field_e, 255 ^ this.field_e);
+          var4.awardAchievement(mode, false, this.achievementId, 255 ^ this.achievementId);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var4_ref), "mb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) var4_ref), "mb.D(" + guard + ',' + mode + ',' + value + ')');
         }
     }
 
-    mb(int param0, int param1, int param2) {
+    AchievementThresholdRule(int minimumValue, int requiredMode, int achievementId) {
         try {
-          this.field_c = param1;
-          this.field_d = param0;
-          this.field_e = param2;
+          this.requiredMode = requiredMode;
+          this.minimumValue = minimumValue;
+          this.achievementId = achievementId;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "mb.<init>(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "mb.<init>(" + minimumValue + ',' + requiredMode + ',' + achievementId + ')');
         }
     }
 
-    final static void a(String[] args, int param1) {
+    final static void setAccountNameSuggestions(String[] suggestions, int guard) {
         String stackIn_13_2 = null;
         try {
           if (null != LegacyWidgetStyle.field_E) {
-            LegacyWidgetStyle.field_E.field_G.setSuggestions(args, (byte) -103);
+            LegacyWidgetStyle.field_E.field_G.setSuggestions(suggestions, (byte) -103);
           }
-          if (param1 != 4) {
+          if (guard != 4) {
             return;
           }
           if (rc.field_b != null) {
-            rc.field_b.suggestions.setSuggestions(args, (byte) -103);
+            rc.field_b.suggestions.setSuggestions(suggestions, (byte) -103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -233,12 +233,12 @@ final class mb {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var2;
           StringBuilder stackIn_12_1 = new StringBuilder().append("mb.E(");
-          if (args == null) {
+          if (suggestions == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 

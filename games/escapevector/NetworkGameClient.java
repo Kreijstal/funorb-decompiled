@@ -288,27 +288,27 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (var4 == 4) {
             if (ej.field_d) {
-              DiskCacheRequest.a(PointCloudEffect.d((byte) -113), 21027);
+              DiskCacheRequest.a(PointCloudEffect.activeApplet((byte) -113), 21027);
             } else {
               SpriteState.field_u = true;
               QuickChatPhraseCache.field_e = 10;
             }
           }
           if (var4 == 5) {
-            gk.a(param0 - 10042, PointCloudEffect.d((byte) -72));
+            gk.a(param0 - 10042, PointCloudEffect.activeApplet((byte) -72));
           }
           if (var4 == 6 &&
             CipherPacketBuffer.field_u) {
             QuickChatPhraseCache.field_e = 10;
           }
           if (var4 == 7) {
-            v.a(PointCloudEffect.d((byte) -120), (byte) -99);
+            v.a(PointCloudEffect.activeApplet((byte) -120), (byte) -99);
           }
           if (var4 == 8) {
-            DiskCacheRequest.a(PointCloudEffect.d((byte) -127), param0 ^ 21212);
+            DiskCacheRequest.a(PointCloudEffect.activeApplet((byte) -127), param0 ^ 21212);
           }
           if (var4 == 9) {
-            DelayedServerPacket.openSupportPage(param0 - 251, PointCloudEffect.d((byte) -89));
+            DelayedServerPacket.openSupportPage(param0 - 251, PointCloudEffect.activeApplet((byte) -89));
           }
           if (var4 == 10) {
             QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(17, true);
@@ -317,10 +317,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_m = -32L;
           }
           if (var4 == 11) {
-            IntValueNode.a(false, PointCloudEffect.d((byte) -102));
+            IntValueNode.a(false, PointCloudEffect.activeApplet((byte) -102));
           }
           if (var4 == 12) {
-            AlphaContainer.openRelativeUrl(PointCloudEffect.d((byte) -86), (byte) -123, EmailAvailabilityValidator.c((byte) -31));
+            AlphaContainer.openRelativeUrl(PointCloudEffect.activeApplet((byte) -86), (byte) -123, EmailAvailabilityValidator.c((byte) -31));
           }
           if (var4 == 13) {
             try {
@@ -387,7 +387,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4 = -1 + EmailSyntaxValidator.field_r;
         byte[] var5 = new byte[var4];
         QuickChatDynamicCommand.incomingPackets.readCipheredBytes(var5, 19583, var4, 0);
-        Bzip2State.a(param0, (var3), PointCloudEffect.d((byte) -122), RasterSnapshot.a(var5, 117));
+        Bzip2State.a(param0, (var3), PointCloudEffect.activeApplet((byte) -122), RasterSnapshot.a(var5, 117));
     }
 
     final void a(String param0, int param1, int param2) {
@@ -512,7 +512,7 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     private final void h(byte param0) {
         String var2 = tf.b((byte) 0);
-        SecondaryIntrusiveDeque.a(var2, -112, PointCloudEffect.d((byte) -59));
+        SecondaryIntrusiveDeque.a(var2, -112, PointCloudEffect.activeApplet((byte) -59));
         int var3 = 59 % ((param0 - 41) / 61);
     }
 

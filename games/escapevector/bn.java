@@ -26,20 +26,20 @@ final class bn {
         }
     }
 
-    final static void a(Sprite[] param0, int param1) {
+    final static void installAchievementIcons(Sprite[] icons, int start) {
         String stackIn_11_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (ProxySocketConnector.field_l == null) {
+          if (ProxySocketConnector.achievementDefinitions == null) {
             return;
           }
-          ci[] var8 = ProxySocketConnector.field_l;
-          ci[] var2 = var8;
-          for (int var3 = param1; var8.length > var3; var3++) {
-            ci var4 = var8[var3];
-            int var5 = var4.field_b;
-            Sprite var6 = param0[var5];
-            var4.field_e = var6;
+          AchievementDefinition[] var8 = ProxySocketConnector.achievementDefinitions;
+          AchievementDefinition[] var2 = var8;
+          for (int var3 = start; var8.length > var3; var3++) {
+            AchievementDefinition var4 = var8[var3];
+            int var5 = var4.achievementId;
+            Sprite var6 = icons[var5];
+            var4.icon = var6;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -47,12 +47,12 @@ final class bn {
           RuntimeException var2_ref = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var2_ref;
           StringBuilder stackIn_10_1 = new StringBuilder().append("bn.C(");
-          if (param0 == null) {
+          if (icons == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(start).append(')').toString());
         }
     }
 

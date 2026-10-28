@@ -59,10 +59,10 @@ final class DirectByteStorage extends ByteStorage {
         if (param0 != -59) {
           return;
         }
-        if (!TrackerMusicDefinition.field_f.field_h &&
-          !TrackerMusicDefinition.field_f.field_c) {
-          TrackerMusicDefinition.field_f.b((byte) -126);
-          TrackerMusicDefinition.field_f.e(param0 ^ 19593);
+        if (!TrackerMusicDefinition.field_f.accountAchievementsLoaded &&
+          !TrackerMusicDefinition.field_f.queryFailed) {
+          TrackerMusicDefinition.field_f.requestAccountAchievements((byte) -126);
+          TrackerMusicDefinition.field_f.pollAccountQuery(param0 ^ 19593);
         }
         if (!ua.field_c.a(-19836)) {
           ua.field_c.g(-9949);
@@ -107,7 +107,7 @@ final class DirectByteStorage extends ByteStorage {
                   }
                   var17.operations[var5] = var6_int;
                   var17.replacementValues[var5] = var9;
-                  var17.fieldTasks[var5] = taskService.a(var8, en.a(var15, (byte) 38), PacketBuffer.xor(guard, 24120));
+                  var17.fieldTasks[var5] = taskService.a(var8, AchievementTracker.classForReflectionType(var15, (byte) 38), PacketBuffer.xor(guard, 24120));
                 } else if (var6_int == 3 ||
                   var6_int == 4) {
                   String var19 = buffer.readString(false);
@@ -133,10 +133,10 @@ final class DirectByteStorage extends ByteStorage {
                   int var16 = 0;
                   int var13Lifetime1 = var16;
                   while (var16 < var9) {
-                    var12[var16] = en.a(var10[var16], (byte) 38);
+                    var12[var16] = AchievementTracker.classForReflectionType(var10[var16], (byte) 38);
                     var16++;
                   }
-                  var17.methodTasks[var5] = taskService.a(var8, PacketBuffer.xor(guard, -24074), en.a(var19, (byte) 38), var12);
+                  var17.methodTasks[var5] = taskService.a(var8, PacketBuffer.xor(guard, -24074), AchievementTracker.classForReflectionType(var19, (byte) 38), var12);
                   var17.serializedArguments[var5] = var20;
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {

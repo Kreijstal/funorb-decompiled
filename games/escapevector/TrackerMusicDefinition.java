@@ -10,7 +10,7 @@ final class TrackerMusicDefinition {
     int[] field_G;
     private int[] field_c;
     int[] field_z;
-    static en field_f;
+    static AchievementTracker field_f;
     int[][] field_d;
     int[] field_E;
     int[] field_y;
@@ -109,7 +109,7 @@ final class TrackerMusicDefinition {
         }
         int var3 = SpriteFactorySupport.levelCount(false, param1);
         if (param0 <= 75) {
-          field_f = (en) null;
+          field_f = (AchievementTracker) null;
         }
         if (var3 <= param2) {
           return "";
@@ -262,6 +262,6 @@ final class TrackerMusicDefinition {
     }
 
     static {
-        field_f = new en();
+        field_f = new AchievementTracker();
     }
 }
