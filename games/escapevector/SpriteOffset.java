@@ -61,7 +61,7 @@ final class SpriteOffset {
           if (param0 != -14) {
             field_a = (String) null;
           }
-          while (pn.p(-108)) {
+          while (AccountRequestDialog.pollKeyEvent(-108)) {
             cb.field_c.c((byte) 6);
             if (cb.field_c.b((byte) -18)) {
               var1_int = true;
@@ -71,7 +71,7 @@ final class SpriteOffset {
             }
             var2 = true;
           }
-          cb.field_c.a(CachedArchiveProvider.a((byte) 122, sf.field_c, ng.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, dh.field_d, UiContainer.field_y));
+          cb.field_c.a(CachedArchiveProvider.a((byte) 122, sf.field_c, LoginDialog.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, dh.field_d, UiContainer.field_y));
           if (cb.field_c.b((byte) -18)) {
             var1_int = true;
           }
@@ -124,7 +124,7 @@ final class SpriteOffset {
             }
             byte[] var4 = new byte[var3_int];
             param0.position = param0.position + ReflectionCheck.field_q.a(var4, true, 0, param0.position, var3_int, param0.payload);
-            String var5 = qi.a(var3_int, 0, var4, (byte) -94);
+            String var5 = AccountMessagePanel.decodeCp1252(var3_int, 0, var4, (byte) -94);
             String stackIn_5_0 = var5;
             return stackIn_5_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

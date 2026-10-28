@@ -3,15 +3,15 @@
  */
 import java.io.*;
 
-final class un extends GradientOutlineTextPainter {
+final class PasswordFieldPainter extends GradientOutlineTextPainter {
     static int[] field_t;
     static boolean field_u;
 
-    un(int param0) {
+    PasswordFieldPainter(int param0) {
         this(Js5Transport.field_a, param0);
     }
 
-    private un(BitmapFont param0, int param1) {
+    private PasswordFieldPainter(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -20,7 +20,7 @@ final class un extends GradientOutlineTextPainter {
         try {
           if (guard != 39) {
             CharSequence var4 = (CharSequence) null;
-            un.a((CharSequence) null, 116, 'ﾤ');
+            PasswordFieldPainter.countCharacter((CharSequence) null, 116, 'ﾤ');
           }
           String stackIn_3_0 = kh.a(component.text.length(), '*', (byte) 53);
           return stackIn_3_0;
@@ -120,32 +120,32 @@ final class un extends GradientOutlineTextPainter {
         field_t = null;
     }
 
-    final static long e(int param0) {
-        if (param0 != 64655) {
+    final static long millisecondsSinceLastReceive(int guard) {
+        if (guard != 64655) {
           return 25L;
         }
         return -sl.field_a + td.b(128);
     }
 
-    final static int a(BinaryBitmapFont param0, int param1) {
+    final static int fontLineHeight(BinaryBitmapFont font, int guard) {
         String stackIn_7_2 = null;
         try {
-          if (param1 != 31512) {
+          if (guard != 31512) {
             field_u = false;
           }
-          int stackIn_3_0 = param0.maxAscent + param0.maxDescent;
+          int stackIn_3_0 = font.maxAscent + font.maxDescent;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var2;
           StringBuilder stackIn_6_1 = new StringBuilder().append("un.L(");
-          if (param0 == null) {
+          if (font == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class un extends GradientOutlineTextPainter {
             if (ke.field_b == 2) {
               NameSuggestionsPanel.field_I = new pj((java.net.Socket) (qk.field_g.field_b), IntPoint.field_d);
               PacketBuffer var2 = new PacketBuffer(13);
-              wc.a(TrackerMusicDefinition.field_j, he.field_y, true, NameSuggestionsPanel.field_N, var2);
+              wc.a(TrackerMusicDefinition.field_j, StatefulTextPainter.field_y, true, NameSuggestionsPanel.field_N, var2);
               var2.writeByte(15, -123);
               var2.writeInt((byte) 123, ReflectionCheck.field_n);
               NameSuggestionsPanel.field_I.a(13, 0, var2.payload, 5000);
@@ -222,18 +222,18 @@ final class un extends GradientOutlineTextPainter {
         }
     }
 
-    final static int a(CharSequence param0, int param1, char param2) {
+    final static int countCharacter(CharSequence text, int guard, char character) {
         String stackIn_16_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
           int var3_int = 0;
-          int var4 = param0.length();
+          int var4 = text.length();
           for (int var5 = 0; var4 > var5; var5++) {
-            if (~param2 == ~param0.charAt(var5)) {
+            if (~character == ~text.charAt(var5)) {
               var3_int++;
             }
           }
-          if (param1 != 4277) {
+          if (guard != 4277) {
             field_t = (int[]) null;
           }
           int stackIn_12_0 = var3_int;
@@ -243,12 +243,12 @@ final class un extends GradientOutlineTextPainter {
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_15_0 = var3;
           StringBuilder stackIn_15_1 = new StringBuilder().append("un.P(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(',').append(character).append(')').toString());
         }
     }
 

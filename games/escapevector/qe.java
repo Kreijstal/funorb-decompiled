@@ -243,7 +243,7 @@ final class qe {
     }
 
     final void a(boolean param0, int param1) {
-        int var3 = !param0 ? kh.field_b : bo.field_E;
+        int var3 = !param0 ? kh.field_b : Checkbox.field_E;
         int var4 = mj.field_d;
         if (this.field_h > var4) {
           return;
@@ -278,10 +278,10 @@ final class qe {
           if (!ii.field_a.tryLoadNamedGroup(0, "commonui")) {
             return 57;
           }
-          if (!w.field_ab.ensureIndex(0)) {
+          if (!LoadingProgressDialog.field_ab.ensureIndex(0)) {
             return 71;
           }
-          if (!w.field_ab.tryLoadNamedGroup(0, "commonui")) {
+          if (!LoadingProgressDialog.field_ab.tryLoadNamedGroup(0, "commonui")) {
             return 80;
           }
           if (!pl.field_j.ensureIndex(0)) {
@@ -297,10 +297,10 @@ final class qe {
           if (!ii.field_a.tryLoadNamedGroup(0, "commonui")) {
             return 40;
           }
-          if (!w.field_ab.ensureIndex(0)) {
+          if (!LoadingProgressDialog.field_ab.ensureIndex(0)) {
             return 50;
           }
-          if (!w.field_ab.tryLoadNamedGroup(0, "commonui")) {
+          if (!LoadingProgressDialog.field_ab.tryLoadNamedGroup(0, "commonui")) {
             return 60;
           }
           if (!pl.field_j.ensureIndex(0)) {
@@ -362,7 +362,7 @@ final class qe {
         if (!param0) {
           spriteIndices = (byte[][]) null;
         }
-        rd.field_c.a(new l(), 30);
+        rd.field_c.transitionToContent(new AccountChoicePanel(), 30);
     }
 
     qe(int param0, int[] param1, int param2, int[] param3, int[] param4, int param5, int param6, BinaryBitmapFont param7) {

@@ -137,7 +137,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(38, "create_unable");
                 if (var2 != null) {
-                  w.field_fb = RasterSnapshot.a(var2, 115);
+                  LoadingProgressDialog.field_fb = RasterSnapshot.a(var2, 115);
                 }
                 var2 = IntKeyLookup.a(52, "create_ineligible");
                 if (null != var2) {
@@ -1298,7 +1298,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(105, "checking");
                 if (null != var2) {
-                  fj.field_bb = RasterSnapshot.a(var2, 124);
+                  ContentTransitionDialog.field_bb = RasterSnapshot.a(var2, 124);
                 }
                 var2 = IntKeyLookup.a(100, "create_namealreadytaken");
                 if (null != var2) {
@@ -1398,51 +1398,51 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(29, "monthnames,0");
                 if (var2 != null) {
-                  ef.field_c[0] = RasterSnapshot.a(var2, 115);
+                  WidgetStyleLayer.field_c[0] = RasterSnapshot.a(var2, 115);
                 }
                 var2 = IntKeyLookup.a(66, "monthnames,1");
                 if (var2 != null) {
-                  ef.field_c[1] = RasterSnapshot.a(var2, 125);
+                  WidgetStyleLayer.field_c[1] = RasterSnapshot.a(var2, 125);
                 }
                 var2 = IntKeyLookup.a(76, "monthnames,2");
                 if (var2 != null) {
-                  ef.field_c[2] = RasterSnapshot.a(var2, 118);
+                  WidgetStyleLayer.field_c[2] = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(117, "monthnames,3");
                 if (var2 != null) {
-                  ef.field_c[3] = RasterSnapshot.a(var2, 113);
+                  WidgetStyleLayer.field_c[3] = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(62, "monthnames,4");
                 if (var2 != null) {
-                  ef.field_c[4] = RasterSnapshot.a(var2, 123);
+                  WidgetStyleLayer.field_c[4] = RasterSnapshot.a(var2, 123);
                 }
                 var2 = IntKeyLookup.a(42, "monthnames,5");
                 if (var2 != null) {
-                  ef.field_c[5] = RasterSnapshot.a(var2, 113);
+                  WidgetStyleLayer.field_c[5] = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(104, "monthnames,6");
                 if (var2 != null) {
-                  ef.field_c[6] = RasterSnapshot.a(var2, 118);
+                  WidgetStyleLayer.field_c[6] = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(41, "monthnames,7");
                 if (var2 != null) {
-                  ef.field_c[7] = RasterSnapshot.a(var2, 117);
+                  WidgetStyleLayer.field_c[7] = RasterSnapshot.a(var2, 117);
                 }
                 var2 = IntKeyLookup.a(124, "monthnames,8");
                 if (null != var2) {
-                  ef.field_c[8] = RasterSnapshot.a(var2, 110);
+                  WidgetStyleLayer.field_c[8] = RasterSnapshot.a(var2, 110);
                 }
                 var2 = IntKeyLookup.a(118, "monthnames,9");
                 if (var2 != null) {
-                  ef.field_c[9] = RasterSnapshot.a(var2, 120);
+                  WidgetStyleLayer.field_c[9] = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(123, "monthnames,10");
                 if (var2 != null) {
-                  ef.field_c[10] = RasterSnapshot.a(var2, 119);
+                  WidgetStyleLayer.field_c[10] = RasterSnapshot.a(var2, 119);
                 }
                 var2 = IntKeyLookup.a(61, "monthnames,11");
                 if (var2 != null) {
-                  ef.field_c[11] = RasterSnapshot.a(var2, 118);
+                  WidgetStyleLayer.field_c[11] = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(75, "create_welcome");
                 if (var2 != null) {
@@ -1462,11 +1462,11 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(42, "create_displayname");
                 if (var2 != null) {
-                  lf.field_J = RasterSnapshot.a(var2, 120);
+                  ValidationHelpWidget.field_J = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(74, "create_password");
                 if (var2 != null) {
-                  qc.field_vb = RasterSnapshot.a(var2, 113);
+                  RegistrationRequestDialog.field_vb = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(74, "create_password_confirm");
                 if (null != var2) {
@@ -1474,7 +1474,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(14, "create_email");
                 if (null != var2) {
-                  tm.field_Z = RasterSnapshot.a(var2, 118);
+                  AccountNoticeDialog.field_Z = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(57, "create_email_confirm");
                 if (null != var2) {
@@ -1562,7 +1562,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(79, "login_justplay_tooltip");
                 if (null != var2) {
-                  lf.field_G = RasterSnapshot.a(var2, 126);
+                  ValidationHelpWidget.field_G = RasterSnapshot.a(var2, 126);
                 }
                 var2 = IntKeyLookup.a(102, "login_back_tooltip");
                 if (null != var2) {
@@ -1582,7 +1582,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(121, "create_displayname_tooltip");
                 if (var2 != null) {
-                  bb.field_K = RasterSnapshot.a(var2, 127);
+                  ModalPanel.field_K = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(45, "create_displayname_hint");
                 if (null != var2) {
@@ -1706,7 +1706,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(87, "create_alert_invalidage");
                 if (null != var2) {
-                  tb.field_E = RasterSnapshot.a(var2, 112);
+                  ModalStack.field_E = RasterSnapshot.a(var2, 112);
                 }
                 var2 = IntKeyLookup.a(73, "create_alert_yearrange");
                 if (null != var2) {
@@ -1946,7 +1946,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(100, "tutorial");
                 if (null != var2) {
-                  he.field_v = RasterSnapshot.a(var2, 126);
+                  StatefulTextPainter.field_v = RasterSnapshot.a(var2, 126);
                 }
                 var2 = IntKeyLookup.a(46, "playtutorial");
                 if (null != var2) {
@@ -1954,7 +1954,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(96, "sound_colon");
                 if (null != var2) {
-                  oi.field_N = RasterSnapshot.a(var2, 125);
+                  DisplayNameForm.field_N = RasterSnapshot.a(var2, 125);
                 }
                 var2 = IntKeyLookup.a(58, "music_colon");
                 if (null != var2) {
@@ -2106,7 +2106,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(81, "next");
                 if (null != var2) {
-                  fj.field_kb = RasterSnapshot.a(var2, 117);
+                  ContentTransitionDialog.field_kb = RasterSnapshot.a(var2, 117);
                 }
                 var2 = IntKeyLookup.a(82, "graphics_colon");
                 if (var2 != null) {
@@ -2216,7 +2216,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(40, "keys");
                 if (var2 != null) {
-                  qc.field_yb = RasterSnapshot.a(var2, 116);
+                  RegistrationRequestDialog.field_yb = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(99, "objective");
                 if (null != var2) {
@@ -2252,7 +2252,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(71, "unreachedlevel_name");
                 if (null != var2) {
-                  jm.field_M = RasterSnapshot.a(var2, 121);
+                  StripedProgressBar.field_M = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(109, "unreachedlevel_cannotplayreason");
                 if (var2 != null) {
@@ -2280,7 +2280,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(87, "unreachedlevel_createtip");
                 if (var2 != null) {
-                  jf.field_O = RasterSnapshot.a(var2, 127);
+                  AccountTermsPanel.field_O = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(26, "unreachedlevel_createtip_line1");
                 if (null != var2) {
@@ -2324,7 +2324,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(85, "notyetachieved");
                 if (var2 != null) {
-                  he.field_q = RasterSnapshot.a(var2, 123);
+                  StatefulTextPainter.field_q = RasterSnapshot.a(var2, 123);
                 }
                 var2 = IntKeyLookup.a(63, "achieved");
                 if (null != var2) {
@@ -2344,7 +2344,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(20, "orbcoins_colon");
                 if (var2 != null) {
-                  vg.field_T = RasterSnapshot.a(var2, 123);
+                  ResizableModalPanel.field_T = RasterSnapshot.a(var2, 123);
                 }
                 var2 = IntKeyLookup.a(114, "achieved_colon_description");
                 if (var2 != null) {
@@ -2368,7 +2368,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(82, "hs_fromlevel");
                 if (null != var2) {
-                  bo.field_D = RasterSnapshot.a(var2, 110);
+                  Checkbox.field_D = RasterSnapshot.a(var2, 110);
                 }
                 var2 = IntKeyLookup.a(110, "hs_tolevel");
                 if (var2 != null) {
@@ -2716,11 +2716,11 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(50, "fs_accept_afteraccept");
                 if (null != var2) {
-                  bb.field_I = RasterSnapshot.a(var2, 127);
+                  ModalPanel.field_I = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(47, "fs_button_cancel");
                 if (var2 != null) {
-                  bb.field_J = RasterSnapshot.a(var2, 119);
+                  ModalPanel.field_J = RasterSnapshot.a(var2, 119);
                 }
                 var2 = IntKeyLookup.a(83, "fs_accept_aftercancel");
                 if (null != var2) {

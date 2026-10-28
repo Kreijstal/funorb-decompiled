@@ -4,7 +4,7 @@
 final class PcmResampler {
     private int field_i;
     static ArchiveKeyRequest field_h;
-    static h field_d;
+    static LoginForm field_d;
     static PcmSample field_g;
     static volatile int pendingClickY;
     static String field_b;

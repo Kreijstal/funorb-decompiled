@@ -19,12 +19,12 @@ abstract class SpriteState extends DualLinkNode {
     final static void b(int param0, int param1) {
         LoginMethod.field_a = cb.field_b[param0];
         if (param1 == 15) {
-          md.field_H = SpriteStrip.field_i[param0];
+          AlphaContainer.field_H = SpriteStrip.field_i[param0];
           gj.field_g = jj.field_c[param0];
           return;
         }
         field_y = (NameAvailabilityResult) null;
-        md.field_H = SpriteStrip.field_i[param0];
+        AlphaContainer.field_H = SpriteStrip.field_i[param0];
         gj.field_g = jj.field_c[param0];
     }
 
@@ -32,15 +32,15 @@ abstract class SpriteState extends DualLinkNode {
         Throwable decompiledCaughtException = null;
         Object var1 = QuickChatDynamicCommand.mouseHandler;
         synchronized (var1) {
-          md.mouseIdleTicks = md.mouseIdleTicks + 1;
+          AlphaContainer.mouseIdleTicks = AlphaContainer.mouseIdleTicks + 1;
           DialWidget.field_K = vj.heldMouseButton;
           dh.field_d = IterableDualLinkDeque.pendingMouseX;
           UiContainer.field_y = jk.pendingMouseY;
           TextFieldValidator.field_h = ke.mouseInputChanged;
           ke.mouseInputChanged = false;
-          qi.field_N = SocketConnector.pendingClickButton;
+          AccountMessagePanel.field_N = SocketConnector.pendingClickButton;
           sf.field_c = fk.pendingClickX;
-          ng.field_ob = PcmResampler.pendingClickY;
+          LoginDialog.field_ob = PcmResampler.pendingClickY;
           if (guard != -3657) {
             SpriteState.b(30, 39);
           }

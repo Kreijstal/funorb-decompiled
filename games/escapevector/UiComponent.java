@@ -75,10 +75,10 @@ class UiComponent extends IntrusiveNode {
           boolean var5 = (this.isFocused(0));
           if (!inputAvailable) {
             if (var5 &&
-              0 != qi.field_N) {
+              0 != AccountMessagePanel.field_N) {
               this.clearFocus(84);
             }
-            bb.field_H = DialWidget.field_K;
+            ModalPanel.field_H = DialWidget.field_K;
             MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
@@ -86,14 +86,14 @@ class UiComponent extends IntrusiveNode {
             var5) {
             this.onMouseWheel(offsetX, mg.field_f, (byte) -109, UiContainer.field_y, dh.field_d, this, offsetY);
           }
-          if (qi.field_N == 0) {
+          if (AccountMessagePanel.field_N == 0) {
             if (0 != DialWidget.field_K) {
-              bb.field_H = DialWidget.field_K;
+              ModalPanel.field_H = DialWidget.field_K;
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
-            if (bb.field_H == 0) {
-              bb.field_H = DialWidget.field_K;
+            if (ModalPanel.field_H == 0) {
+              ModalPanel.field_H = DialWidget.field_K;
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
@@ -107,15 +107,15 @@ class UiComponent extends IntrusiveNode {
             }
             if (var7 != 0 &&
               var5 &&
-              0 != qi.field_N) {
+              0 != AccountMessagePanel.field_N) {
               this.clearFocus(84);
             }
-            bb.field_H = DialWidget.field_K;
+            ModalPanel.field_H = DialWidget.field_K;
             MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
           regionExit1: {
-            if (this.onPointerPressed(offsetX, sf.field_c, (byte) 3, ng.field_ob, offsetY, this, qi.field_N)) {
+            if (this.onPointerPressed(offsetX, sf.field_c, (byte) 3, LoginDialog.field_ob, offsetY, this, AccountMessagePanel.field_N)) {
               inputAvailable = false;
               if (var7 == 0) {
                 break regionExit1;
@@ -123,12 +123,12 @@ class UiComponent extends IntrusiveNode {
             }
             if (!var5) {
               if (0 != DialWidget.field_K) {
-                bb.field_H = DialWidget.field_K;
+                ModalPanel.field_H = DialWidget.field_K;
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
-              if (bb.field_H == 0) {
-                bb.field_H = DialWidget.field_K;
+              if (ModalPanel.field_H == 0) {
+                ModalPanel.field_H = DialWidget.field_K;
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
@@ -144,22 +144,22 @@ class UiComponent extends IntrusiveNode {
               }
               if (var7 != 0 &&
                 var5 &&
-                0 != qi.field_N) {
+                0 != AccountMessagePanel.field_N) {
                 this.clearFocus(84);
               }
-              bb.field_H = DialWidget.field_K;
+              ModalPanel.field_H = DialWidget.field_K;
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             this.clearFocus(122);
           }
           if (0 != DialWidget.field_K) {
-            bb.field_H = DialWidget.field_K;
+            ModalPanel.field_H = DialWidget.field_K;
             MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
-          if (bb.field_H == 0) {
-            bb.field_H = DialWidget.field_K;
+          if (ModalPanel.field_H == 0) {
+            ModalPanel.field_H = DialWidget.field_K;
             MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
@@ -173,10 +173,10 @@ class UiComponent extends IntrusiveNode {
           }
           if (var7 != 0 &&
             var5 &&
-            0 != qi.field_N) {
+            0 != AccountMessagePanel.field_N) {
             this.clearFocus(84);
           }
-          bb.field_H = DialWidget.field_K;
+          ModalPanel.field_H = DialWidget.field_K;
           MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
           return inputAvailable;
         }
@@ -185,14 +185,14 @@ class UiComponent extends IntrusiveNode {
         boolean var5Lifetime1 = (this.isFocused(0));
         if (inputAvailable) {
           if (mg.field_f == 0) {
-            if (qi.field_N == 0) {
+            if (AccountMessagePanel.field_N == 0) {
               if (0 != DialWidget.field_K) {
-                bb.field_H = DialWidget.field_K;
+                ModalPanel.field_H = DialWidget.field_K;
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
-              if (bb.field_H == 0) {
-                bb.field_H = DialWidget.field_K;
+              if (ModalPanel.field_H == 0) {
+                ModalPanel.field_H = DialWidget.field_K;
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
@@ -206,15 +206,15 @@ class UiComponent extends IntrusiveNode {
               }
               if (var7 != 0 &&
                 var5Lifetime1 &&
-                0 != qi.field_N) {
+                0 != AccountMessagePanel.field_N) {
                 this.clearFocus(84);
               }
-              bb.field_H = DialWidget.field_K;
+              ModalPanel.field_H = DialWidget.field_K;
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             regionExit2: {
-              if (this.onPointerPressed(offsetX, sf.field_c, (byte) 3, ng.field_ob, offsetY, this, qi.field_N)) {
+              if (this.onPointerPressed(offsetX, sf.field_c, (byte) 3, LoginDialog.field_ob, offsetY, this, AccountMessagePanel.field_N)) {
                 inputAvailable = false;
                 if (var7 == 0) {
                   break regionExit2;
@@ -222,12 +222,12 @@ class UiComponent extends IntrusiveNode {
               }
               if (!var5Lifetime1) {
                 if (0 != DialWidget.field_K) {
-                  bb.field_H = DialWidget.field_K;
+                  ModalPanel.field_H = DialWidget.field_K;
                   MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                   return inputAvailable;
                 }
-                if (bb.field_H == 0) {
-                  bb.field_H = DialWidget.field_K;
+                if (ModalPanel.field_H == 0) {
+                  ModalPanel.field_H = DialWidget.field_K;
                   MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                   return inputAvailable;
                 }
@@ -243,22 +243,22 @@ class UiComponent extends IntrusiveNode {
                 }
                 if (var7 != 0 &&
                   var5Lifetime1 &&
-                  0 != qi.field_N) {
+                  0 != AccountMessagePanel.field_N) {
                   this.clearFocus(84);
                 }
-                bb.field_H = DialWidget.field_K;
+                ModalPanel.field_H = DialWidget.field_K;
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
               this.clearFocus(122);
             }
             if (0 != DialWidget.field_K) {
-              bb.field_H = DialWidget.field_K;
+              ModalPanel.field_H = DialWidget.field_K;
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
-            if (bb.field_H == 0) {
-              bb.field_H = DialWidget.field_K;
+            if (ModalPanel.field_H == 0) {
+              ModalPanel.field_H = DialWidget.field_K;
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
@@ -272,24 +272,24 @@ class UiComponent extends IntrusiveNode {
             }
             if (var7 != 0 &&
               var5Lifetime1 &&
-              0 != qi.field_N) {
+              0 != AccountMessagePanel.field_N) {
               this.clearFocus(84);
             }
-            bb.field_H = DialWidget.field_K;
+            ModalPanel.field_H = DialWidget.field_K;
             MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
           if (var5Lifetime1) {
             this.onMouseWheel(offsetX, mg.field_f, (byte) -109, UiContainer.field_y, dh.field_d, this, offsetY);
           }
-          if (qi.field_N == 0) {
+          if (AccountMessagePanel.field_N == 0) {
             if (0 != DialWidget.field_K) {
-              bb.field_H = DialWidget.field_K;
+              ModalPanel.field_H = DialWidget.field_K;
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
-            if (bb.field_H == 0) {
-              bb.field_H = DialWidget.field_K;
+            if (ModalPanel.field_H == 0) {
+              ModalPanel.field_H = DialWidget.field_K;
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
@@ -303,15 +303,15 @@ class UiComponent extends IntrusiveNode {
             }
             if (var7 != 0 &&
               var5Lifetime1 &&
-              0 != qi.field_N) {
+              0 != AccountMessagePanel.field_N) {
               this.clearFocus(84);
             }
-            bb.field_H = DialWidget.field_K;
+            ModalPanel.field_H = DialWidget.field_K;
             MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
           regionExit3: {
-            if (this.onPointerPressed(offsetX, sf.field_c, (byte) 3, ng.field_ob, offsetY, this, qi.field_N)) {
+            if (this.onPointerPressed(offsetX, sf.field_c, (byte) 3, LoginDialog.field_ob, offsetY, this, AccountMessagePanel.field_N)) {
               inputAvailable = false;
               if (var7 == 0) {
                 break regionExit3;
@@ -319,12 +319,12 @@ class UiComponent extends IntrusiveNode {
             }
             if (!var5Lifetime1) {
               if (0 != DialWidget.field_K) {
-                bb.field_H = DialWidget.field_K;
+                ModalPanel.field_H = DialWidget.field_K;
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
-              if (bb.field_H == 0) {
-                bb.field_H = DialWidget.field_K;
+              if (ModalPanel.field_H == 0) {
+                ModalPanel.field_H = DialWidget.field_K;
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
@@ -332,11 +332,11 @@ class UiComponent extends IntrusiveNode {
               DraggableWidget var16 = gf.field_b;
               if (var16 == null) {
                 if (var7 == 0) {
-                  bb.field_H = DialWidget.field_K;
+                  ModalPanel.field_H = DialWidget.field_K;
                   MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                   return inputAvailable;
                 }
-                bb.field_H = DialWidget.field_K;
+                ModalPanel.field_H = DialWidget.field_K;
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
@@ -344,10 +344,10 @@ class UiComponent extends IntrusiveNode {
                 gf.field_b = null;
                 if (var7 != 0 &&
                   var5Lifetime1 &&
-                  0 != qi.field_N) {
+                  0 != AccountMessagePanel.field_N) {
                   this.clearFocus(84);
                 }
-                bb.field_H = DialWidget.field_K;
+                ModalPanel.field_H = DialWidget.field_K;
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
@@ -355,18 +355,18 @@ class UiComponent extends IntrusiveNode {
               gf.field_b = null;
               if (var7 != 0 &&
                 var5Lifetime1 &&
-                0 != qi.field_N) {
+                0 != AccountMessagePanel.field_N) {
                 this.clearFocus(84);
               }
-              bb.field_H = DialWidget.field_K;
+              ModalPanel.field_H = DialWidget.field_K;
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
             this.clearFocus(122);
           }
           if (0 == DialWidget.field_K) {
-            if (bb.field_H == 0) {
-              bb.field_H = DialWidget.field_K;
+            if (ModalPanel.field_H == 0) {
+              ModalPanel.field_H = DialWidget.field_K;
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
@@ -380,21 +380,21 @@ class UiComponent extends IntrusiveNode {
             }
             if (var7 != 0 &&
               var5Lifetime1 &&
-              0 != qi.field_N) {
+              0 != AccountMessagePanel.field_N) {
               this.clearFocus(84);
             }
-            bb.field_H = DialWidget.field_K;
+            ModalPanel.field_H = DialWidget.field_K;
             MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
         } else if (var5Lifetime1 &&
-          0 != qi.field_N) {
+          0 != AccountMessagePanel.field_N) {
           this.clearFocus(84);
-          bb.field_H = DialWidget.field_K;
+          ModalPanel.field_H = DialWidget.field_K;
           MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
           return inputAvailable;
         }
-        bb.field_H = DialWidget.field_K;
+        ModalPanel.field_H = DialWidget.field_K;
         MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
         return inputAvailable;
     }

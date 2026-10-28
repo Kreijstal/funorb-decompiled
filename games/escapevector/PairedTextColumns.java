@@ -81,10 +81,10 @@ final class PairedTextColumns extends LegacyTextBlock {
         if (!guard) {
           return (TextWidgetPainter) null;
         }
-        if (null == vg.field_U) {
-          vg.field_U = new TextWidgetPainter(ke.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, ke.field_c.maxAscent, -1, 2147483647, true);
+        if (null == ResizableModalPanel.field_U) {
+          ResizableModalPanel.field_U = new TextWidgetPainter(ke.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, ke.field_c.maxAscent, -1, 2147483647, true);
         }
-        return vg.field_U;
+        return ResizableModalPanel.field_U;
     }
 
     final void configureColumns(int rightColor, int leftColor, int titleColor, byte guard, BinaryBitmapFont font) {

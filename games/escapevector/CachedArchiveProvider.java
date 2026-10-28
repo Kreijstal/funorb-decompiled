@@ -183,16 +183,16 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (!UiContainer.e((byte) 113)) {
           return;
         }
-        if (he.field_u == null) {
+        if (StatefulTextPainter.field_u == null) {
           return;
         }
         if (param0 != 2) {
           return;
         }
-        if (!he.field_u.ensureIndex(0)) {
+        if (!StatefulTextPainter.field_u.ensureIndex(0)) {
           return;
         }
-        if (!he.field_u.tryLoadAllGroups((byte) -119)) {
+        if (!StatefulTextPainter.field_u.tryLoadAllGroups((byte) -119)) {
           return;
         }
         if (PcmResampler.field_h == null) {
@@ -202,13 +202,13 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (PcmResampler.field_h.key == null) {
           return;
         }
-        ld.field_h = pn.a(PcmResampler.field_h.key, he.field_u, ld.field_h, UiContainer.field_B, (byte) 112);
+        ld.field_h = AccountRequestDialog.a(PcmResampler.field_h.key, StatefulTextPainter.field_u, ld.field_h, UiContainer.field_B, (byte) 112);
         if (se.field_b == null) {
-          se.field_b = MarkerSliderPainter.a(1, he.field_u, IndexedSpriteState.field_j, PcmResampler.field_h.key);
+          se.field_b = MarkerSliderPainter.a(1, StatefulTextPainter.field_u, IndexedSpriteState.field_j, PcmResampler.field_h.key);
         }
         if (null != se.field_b) {
           PcmResampler.field_h = null;
-          he.field_u = null;
+          StatefulTextPainter.field_u = null;
         }
     }
 

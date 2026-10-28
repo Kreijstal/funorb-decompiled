@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends UiContainer implements TextInputListener, ButtonListener {
+final class LoginForm extends UiContainer implements TextInputListener, ButtonListener {
     private boolean field_K;
-    private TextButton field_N;
+    private TextButton createAccountButton;
     private boolean field_M;
     static String field_O;
     private boolean field_P;
-    private EditableTextWidget field_L;
-    private EditableTextWidget field_J;
-    private TextButton field_G;
-    private String field_H;
-    private TextButton field_I;
+    private EditableTextWidget identifierField;
+    private EditableTextWidget passwordField;
+    private TextButton submitButton;
+    private String message;
+    private TextButton secondaryButton;
 
     public final void onAction(TextButton button, int buttonCode, int localY, int guard, int localX) {
         String stackIn_18_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (this.field_G == button) {
-            this.a((byte) 103);
-          } else if (this.field_N == button) {
+          if (this.submitButton == button) {
+            this.submitLogin((byte) 103);
+          } else if (this.createAccountButton == button) {
             fe.a((byte) -83);
-          } else if (this.field_I == button) {
+          } else if (this.secondaryButton == button) {
             if (this.field_K) {
               fh.b(-54);
             } else if (this.field_P) {
@@ -31,7 +31,7 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
             }
           }
           if (guard != 1) {
-            this.field_H = (String) null;
+            this.message = (String) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,14 +49,14 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
     }
 
     final void drawLayer(int screenY, byte guard, int layer, int screenX) {
-        if (null != this.field_H) {
-          Js5Transport.field_a.drawParagraph(this.field_H, 20 + (this.x + screenX), this.y + (screenY + 15), -40 + this.width, this.height, 16777215, -1, 1, 0, Js5Transport.field_a.maxAscent);
+        if (null != this.message) {
+          Js5Transport.field_a.drawParagraph(this.message, 20 + (this.x + screenX), this.y + (screenY + 15), -40 + this.width, this.height, 16777215, -1, 1, 0, Js5Transport.field_a.maxAscent);
         }
-        if (null != this.field_N) {
+        if (null != this.createAccountButton) {
           SoftwareRasterizer.drawHorizontalLine(10 + screenX, 134 + screenY, this.width - 20, 4210752);
         }
         if (guard < 85) {
-          this.field_H = (String) null;
+          this.message = (String) null;
         }
         super.drawLayer(screenY, (byte) 87, layer, screenX);
     }
@@ -68,11 +68,11 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
             return true;
           }
           if (keyCode == 98) {
-            boolean stackIn_7_0 = this.a((byte) 22, root);
+            boolean stackIn_7_0 = this.focusPreviousChild((byte) 22, root);
             return stackIn_7_0;
           }
           if (keyCode == 99) {
-            boolean stackIn_10_0 = this.a(root, true);
+            boolean stackIn_10_0 = this.focusNextChild(root, true);
             return stackIn_10_0;
           }
           if (guard <= 0) {
@@ -97,14 +97,14 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
     public final void onSubmit(boolean guard, EditableTextWidget field) {
         String stackIn_11_2 = null;
         try {
-          if (field == this.field_L) {
-            this.field_J.focusNext(-4659, (UiComponent) (this));
+          if (field == this.identifierField) {
+            this.passwordField.focusNext(-4659, (UiComponent) (this));
           }
-          if (this.field_J == field) {
-            this.a((byte) 100);
+          if (this.passwordField == field) {
+            this.submitLogin((byte) 100);
           }
           if (!guard) {
-            this.field_H = (String) null;
+            this.message = (String) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -121,19 +121,19 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
         }
     }
 
-    final static void a(ResourceArchive param0, byte param1) {
+    final static void loadLogoMeshes(ResourceArchive archive, byte guard) {
         String stackIn_13_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var8 = new CipherPacketBuffer(param0.getNamedFile(-4, "", "logo.fo3d"));
+          CipherPacketBuffer var8 = new CipherPacketBuffer(archive.getNamedFile(-4, "", "logo.fo3d"));
           CipherPacketBuffer var10 = var8;
           int var3 = var10.readUnsignedByte(0);
           var10.beginBitReading(-17928);
           DialogueScreen.field_y = IntrusiveNode.a(var10, 22178);
           fh.field_e = new TriangleMesh[var3];
           SectorCacheStore.field_c = new int[var3][];
-          if (param1 < 41) {
-            h.a(82, (byte) -78);
+          if (guard < 41) {
+            LoginForm.a(82, (byte) -78);
           }
           for (int var4 = 0; var3 > var4; var4++) {
             fh.field_e[var4] = wk.a(-127, var8);
@@ -156,22 +156,22 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var2;
           StringBuilder stackIn_12_1 = new StringBuilder().append("h.D(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final String j(int param0) {
-        if (param0 != 35) {
+    final String identifier(int guard) {
+        if (guard != 35) {
           TextButton var3 = (TextButton) null;
           this.onAction((TextButton) null, 35, 44, 83, 31);
         }
-        if (null != this.field_L.text) {
-          return this.field_L.text;
+        if (null != this.identifierField.text) {
+          return this.identifierField.text;
         }
         return "";
     }
@@ -193,34 +193,34 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
     public final void onTextChanged(EditableTextWidget field, int guard) {
         try {
           if (guard != 0) {
-            this.field_J = (EditableTextWidget) null;
+            this.passwordField = (EditableTextWidget) null;
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "h.W(" + (field != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final void h(byte param0) {
-        if (param0 >= -127) {
-          this.field_N = (TextButton) null;
+    final void clearCredentials(byte guard) {
+        if (guard >= -127) {
+          this.createAccountButton = (TextButton) null;
         }
-        this.field_L.h((byte) -29);
-        this.field_J.h((byte) -29);
+        this.identifierField.clearText((byte) -29);
+        this.passwordField.clearText((byte) -29);
     }
 
-    private final void a(byte param0) {
-        if (param0 <= 88) {
+    private final void submitLogin(byte guard) {
+        if (guard <= 88) {
           EditableTextWidget var3 = (EditableTextWidget) null;
           this.onSubmit(true, (EditableTextWidget) null);
         }
         if (gm.b(8192) ||
-          !(this.field_L.text.length() <= 0) &&
-          !(this.field_J.text.length() <= 0)) {
-          RasterSnapshot.a(0, this.field_J.text, this.field_L.text);
+          !(this.identifierField.text.length() <= 0) &&
+          !(this.passwordField.text.length() <= 0)) {
+          RasterSnapshot.a(0, this.passwordField.text, this.identifierField.text);
         }
     }
 
-    h(String param0, String param1, boolean param2, boolean param3, boolean param4) {
+    LoginForm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (WidgetPainter) null);
         String stackIn_19_3 = null;
         String stackIn_60_2 = null;
@@ -230,17 +230,17 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
           this.field_P = stackIn_4_1;
           boolean stackIn_7_1 = (param3);
           this.field_M = stackIn_7_1;
-          this.field_H = param1;
+          this.message = param1;
           boolean stackIn_10_1 = (param2);
           this.field_K = stackIn_10_1;
           if (this.field_K && (this.field_M ||
             this.field_P)) {
             throw new IllegalStateException();
           }
-          this.field_L = (EditableTextWidget) ((Object) new ValidatedTextWidget(param0, (UiListener) (this), 100));
-          this.field_J = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (UiListener) (this), 20));
+          this.identifierField = (EditableTextWidget) ((Object) new ValidatedTextWidget(param0, (UiListener) (this), 100));
+          this.passwordField = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (UiListener) (this), 20));
           if (!this.field_K) {
-            this.field_G = new TextButton(ta.field_g, (UiListener) null);
+            this.submitButton = new TextButton(ta.field_g, (UiListener) null);
             TextButton stackIn_18_1 = null;
             TextButton stackIn_18_2 = null;
             if (this.field_P) {
@@ -250,41 +250,41 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
               TextButton stackIn_19_2 = null;
               stackIn_19_3 = Minimap.field_O;
             }
-            this.field_I = new TextButton(stackIn_19_3, (UiListener) null);
+            this.secondaryButton = new TextButton(stackIn_19_3, (UiListener) null);
             if (this.field_M) {
-              this.field_N = new TextButton(pc.field_g, (UiListener) (this));
+              this.createAccountButton = new TextButton(pc.field_g, (UiListener) (this));
             }
           } else {
-            this.field_G = new TextButton(WeightedCacheEntry.field_s, (UiListener) null);
-            this.field_I = new TextButton(EmailAvailabilityRequest.field_d, (UiListener) null);
-            this.field_L.enabled = false;
+            this.submitButton = new TextButton(WeightedCacheEntry.field_s, (UiListener) null);
+            this.secondaryButton = new TextButton(EmailAvailabilityRequest.field_d, (UiListener) null);
+            this.identifierField.enabled = false;
           }
-          this.field_L.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
-          this.field_J.painter = (WidgetPainter) ((Object) new un(10000536));
+          this.identifierField.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
+          this.passwordField.painter = (WidgetPainter) ((Object) new PasswordFieldPainter(10000536));
           ThreeSliceButtonPainter var6 = new ThreeSliceButtonPainter();
-          this.field_G.painter = (WidgetPainter) ((Object) var6);
-          if (this.field_I != null) {
-            this.field_I.painter = (WidgetPainter) ((Object) var6);
+          this.submitButton.painter = (WidgetPainter) ((Object) var6);
+          if (this.secondaryButton != null) {
+            this.secondaryButton.painter = (WidgetPainter) ((Object) var6);
           }
-          if (null != this.field_N) {
-            this.field_N.painter = (WidgetPainter) ((Object) var6);
+          if (null != this.createAccountButton) {
+            this.createAccountButton.painter = (WidgetPainter) ((Object) var6);
           }
-          this.field_L.tooltip = cd.field_u;
-          if (this.field_N != null) {
-            this.field_N.tooltip = mm.field_c;
+          this.identifierField.tooltip = cd.field_u;
+          if (this.createAccountButton != null) {
+            this.createAccountButton.tooltip = mm.field_c;
           }
           if (this.field_K) {
-            this.field_I.tooltip = ValidatedTextWidget.field_Z;
+            this.secondaryButton.tooltip = ValidatedTextWidget.field_Z;
           } else if (!this.field_P) {
-            this.field_I.painter = (WidgetPainter) ((Object) new ha());
+            this.secondaryButton.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
           } else {
-            this.field_I.tooltip = lf.field_G;
-            this.field_I.painter = (WidgetPainter) ((Object) new ha());
+            this.secondaryButton.tooltip = ValidationHelpWidget.field_G;
+            this.secondaryButton.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
           }
           this.y = 15;
           BitmapFont var7 = Js5Transport.field_a;
-          if (null != this.field_H) {
-            this.y = this.y + (var7.paragraphHeight(this.field_H, -40 + this.width, var7.maxAscent) + 5);
+          if (null != this.message) {
+            this.y = this.y + (var7.paragraphHeight(this.message, -40 + this.width, var7.maxAscent) + 5);
           }
           String var8 = lh.field_b;
           LoginMethod var9 = WeightedCacheEntry.readLastLoginMethod((byte) -1, PointCloudEffect.d((byte) -107));
@@ -293,49 +293,49 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
           } else if (var9 == oh.field_n) {
             var8 = wi.field_c;
           }
-          ki dupTemp$0 = new ki(10, this.y, -20 + this.width, 25, this.field_L, false, 80, 3, var7, 16777215, var8);
-          ki var12 = dupTemp$0;
-          this.b(dupTemp$0, false);
+          LabeledField dupTemp$0 = new LabeledField(10, this.y, -20 + this.width, 25, this.identifierField, false, 80, 3, var7, 16777215, var8);
+          LabeledField var12 = dupTemp$0;
+          this.addChild(dupTemp$0, false);
           this.y = this.y + (((UiComponent) ((Object) var12)).height + 5);
-          ki dupTemp$1 = new ki(10, this.y, this.width - 20, 25, this.field_J, false, 80, 3, var7, 16777215, qc.field_vb);
-          ki var13 = dupTemp$1;
-          this.b(dupTemp$1, false);
+          LabeledField dupTemp$1 = new LabeledField(10, this.y, this.width - 20, 25, this.passwordField, false, 80, 3, var7, 16777215, RegistrationRequestDialog.field_vb);
+          LabeledField var13 = dupTemp$1;
+          this.addChild(dupTemp$1, false);
           this.y = this.y + (((UiComponent) ((Object) var13)).height + 5);
-          this.field_G.listener = (UiListener) (this);
-          if (this.field_N != null) {
-            this.field_N.listener = (UiListener) (this);
+          this.submitButton.listener = (UiListener) (this);
+          if (this.createAccountButton != null) {
+            this.createAccountButton.listener = (UiListener) (this);
           }
-          if (null != this.field_I) {
-            this.field_I.listener = (UiListener) (this);
+          if (null != this.secondaryButton) {
+            this.secondaryButton.listener = (UiListener) (this);
           }
-          if (this.field_N == null) {
-            this.field_G.setBounds(-10 + (-6 + this.width), this.y, 8, true, 30);
+          if (this.createAccountButton == null) {
+            this.submitButton.setBounds(-10 + (-6 + this.width), this.y, 8, true, 30);
             this.y = this.y + 35;
           } else {
-            this.field_G.setBounds(-95 + this.width, this.y, 85, true, 30);
+            this.submitButton.setBounds(-95 + this.width, this.y, 85, true, 30);
             this.y = this.y + 60;
           }
-          if (this.field_N != null) {
-            this.field_N.setBounds(this.width - 6 - 10, this.y, 8, true, 30);
+          if (this.createAccountButton != null) {
+            this.createAccountButton.setBounds(this.width - 6 - 10, this.y, 8, true, 30);
             this.y = this.y + 35;
           }
-          if (null != this.field_I) {
+          if (null != this.secondaryButton) {
             if (!this.field_K &&
               !this.field_P) {
-              this.field_I.setBounds(40, this.y, 8, true, 20);
+              this.secondaryButton.setBounds(40, this.y, 8, true, 20);
               this.y = this.y + 25;
             } else {
-              this.field_I.setBounds(-6 + (this.width - 10), this.y, 8, true, 30);
+              this.secondaryButton.setBounds(-6 + (this.width - 10), this.y, 8, true, 30);
               this.y = this.y + 35;
             }
           }
           this.setBounds(this.width, 0, 0, true, 3 + this.y);
-          this.b(this.field_G, false);
-          if (this.field_N != null) {
-            this.b(this.field_N, false);
+          this.addChild(this.submitButton, false);
+          if (this.createAccountButton != null) {
+            this.addChild(this.createAccountButton, false);
           }
-          if (null != this.field_I) {
-            this.b(this.field_I, false);
+          if (null != this.secondaryButton) {
+            this.addChild(this.secondaryButton, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -365,17 +365,17 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
         field_O = null;
     }
 
-    final void a(String param0, byte param1) {
-        if (param1 <= 105) {
+    final void setIdentifier(String identifier, byte guard) {
+        if (guard <= 105) {
           return;
         }
         try {
-          EditableTextWidget var3 = this.field_L;
-          String var4 = param0;
+          EditableTextWidget var3 = this.identifierField;
+          String var4 = identifier;
           var3.setText(var4, false, -33);
-          this.field_J.h((byte) -29);
+          this.passwordField.clearText((byte) -29);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "h.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "h.F(" + (identifier != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

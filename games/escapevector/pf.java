@@ -304,7 +304,7 @@ final class pf {
         int var5 = EscapeVector.obfuscationControl;
         boolean var2 = false;
         int var3 = -14 % ((param0 - 15) / 58);
-        while (pn.p(-98)) {
+        while (AccountRequestDialog.pollKeyEvent(-98)) {
           this.field_b.a(113);
           if (PasswordValidator.field_n == 97 ||
             PasswordValidator.field_n == 99) {
@@ -346,7 +346,7 @@ final class pf {
           field_h = (String) null;
         }
         int var2 = this.a(1, UiContainer.field_y, dh.field_d);
-        int var3 = this.a(1, ng.field_ob, sf.field_c);
+        int var3 = this.a(1, LoginDialog.field_ob, sf.field_c);
         this.field_b.a(var3, (byte) 121, var2);
         boolean discarded$0 = this.a(true, (byte) 91);
     }
@@ -663,7 +663,7 @@ final class pf {
           }
           if (this.b((byte) 89) == var4) {
             TextLayout.field_b = false;
-            int var5 = l.a(-8462, var4);
+            int var5 = AccountChoicePanel.a(-8462, var4);
             ArchiveKeyRequest.a(0, var5, param0, this.field_f);
             return true;
           }
@@ -887,10 +887,10 @@ final class pf {
               var3 = var3 + param1;
             }
             je.a(param0, var3);
-            var3 = vg.a(var3, ":", (byte) 111, "%3a");
-            var3 = vg.a(var3, "@", (byte) 111, "%40");
-            var3 = vg.a(var3, "&", (byte) 111, "%26");
-            String var7 = vg.a(var3, "#", (byte) 111, "%23");
+            var3 = ResizableModalPanel.replaceAllLiteral(var3, ":", (byte) 111, "%3a");
+            var3 = ResizableModalPanel.replaceAllLiteral(var3, "@", (byte) 111, "%40");
+            var3 = ResizableModalPanel.replaceAllLiteral(var3, "&", (byte) 111, "%26");
+            String var7 = ResizableModalPanel.replaceAllLiteral(var3, "#", (byte) 111, "%23");
             if (IntrusiveNode.field_c == null) {
               return;
             }

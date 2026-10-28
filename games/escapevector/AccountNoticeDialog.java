@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tm extends vg implements ButtonListener {
-    private TextButton field_eb;
+final class AccountNoticeDialog extends ResizableModalPanel implements ButtonListener {
+    private TextButton closeButton;
     static long[][] field_db;
     static int[] field_bb;
     static String field_Z;
@@ -18,10 +18,10 @@ final class tm extends vg implements ButtonListener {
         RuntimeException var6 = null;
         try {
           if (guard != 1) {
-            tm.c(-26, 47, -12);
+            AccountNoticeDialog.c(-26, 47, -12);
           }
-          if (button == this.field_eb) {
-            this.o(127);
+          if (button == this.closeButton) {
+            this.closeDialog(127);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -66,7 +66,7 @@ final class tm extends vg implements ButtonListener {
         return var11;
     }
 
-    tm(tb param0, fc param1) {
+    AccountNoticeDialog(ModalStack param0, fc param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -84,7 +84,7 @@ final class tm extends vg implements ButtonListener {
             if (param1 == ThreeSliceButtonPainter.field_A) {
               this.height = this.height + 10;
               var3 = ol.field_K;
-              if (tb.a(false)) {
+              if (ModalStack.a(false)) {
                 var3 = e.field_b;
                 this.height = this.height + 20;
               }
@@ -101,8 +101,8 @@ final class tm extends vg implements ButtonListener {
           var4.width = this.width;
           var4.x = 0;
           var4.painter = (WidgetPainter) ((Object) new TextWidgetPainter(ke.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b(var4, false);
-          this.field_eb = this.a(-1, TextFieldValidator.field_k, (UiListener) (this));
+          this.addChild(var4, false);
+          this.closeButton = this.appendButton(-1, TextFieldValidator.field_k, (UiListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,14 +129,14 @@ final class tm extends vg implements ButtonListener {
         field_cb = null;
         field_db = (long[][]) null;
         if (guard != -23008) {
-          tm.c(105, -33, -63);
+          AccountNoticeDialog.c(105, -33, -63);
         }
         field_Z = null;
         field_fb = null;
         field_bb = null;
     }
 
-    private final TextButton a(int param0, String param1, UiListener param2) {
+    private final TextButton appendButton(int guard, String label, UiListener listener) {
         TextButton discarded$1 = null;
         TextButton var4 = null;
         RuntimeException var4_ref = null;
@@ -150,31 +150,31 @@ final class tm extends vg implements ButtonListener {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new TextButton(param1, param2);
-          if (param0 != -1) {
+          var4 = new TextButton(label, listener);
+          if (guard != -1) {
             var6 = (UiListener) null;
-            discarded$1 = this.a(36, (String) null, (UiListener) null);
+            discarded$1 = this.appendButton(36, (String) null, (UiListener) null);
           }
           var4.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(-16 + this.width - 14, var5, 15, true, 30);
-          this.b(var4, false);
-          this.refreshLayout(param0 + 1);
+          this.addChild(var4, false);
+          this.refreshLayout(guard + 1);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_6_0 = var4_ref;
-          stackIn_6_1 = new StringBuilder().append("tm.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("tm.D(").append(guard).append(',');
+          if (label == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param2 == null) {
+          if (listener == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -183,18 +183,18 @@ final class tm extends vg implements ButtonListener {
         }
     }
 
-    private final void o(int param0) {
-        if (!this.field_G) {
+    private final void closeDialog(int guard) {
+        if (!this.open) {
           return;
         }
-        this.field_G = false;
-        if (param0 <= 120) {
-          tm.c(-66, -5, 40);
+        this.open = false;
+        if (guard <= 120) {
+          AccountNoticeDialog.c(-66, -5, 40);
         }
     }
 
-    private static long a(long param0, long param1) {
-        return param0 | param1;
+    private static long bitwiseOr(long left, long right) {
+        return left | right;
     }
 
     static {
@@ -229,9 +229,9 @@ final class tm extends vg implements ButtonListener {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_db[0][var0] = tm.a(tm.a(tm.a(var8 << 16, tm.a(tm.a(tm.a(var6 << 40, tm.a(var2 << 56, var2 << 48)), var2 << 32), var10 << 24)), var4 << 8), var12);
+            field_db[0][var0] = AccountNoticeDialog.bitwiseOr(AccountNoticeDialog.bitwiseOr(AccountNoticeDialog.bitwiseOr(var8 << 16, AccountNoticeDialog.bitwiseOr(AccountNoticeDialog.bitwiseOr(AccountNoticeDialog.bitwiseOr(var6 << 40, AccountNoticeDialog.bitwiseOr(var2 << 56, var2 << 48)), var2 << 32), var10 << 24)), var4 << 8), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_db[var14][var0] = tm.a(field_db[-1 + var14][var0] >>> 8, field_db[-1 + var14][var0] << 56);
+                field_db[var14][var0] = AccountNoticeDialog.bitwiseOr(field_db[-1 + var14][var0] >>> 8, field_db[-1 + var14][var0] << 56);
             }
             var0++;
         }

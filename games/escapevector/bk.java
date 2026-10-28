@@ -278,7 +278,7 @@ final class bk extends Js5Transport {
           if (param0 == var2) {
             if (null == ml.field_a) {
               ml.field_a = new nn(128);
-              qc.field_Ab = 0;
+              RegistrationRequestDialog.field_Ab = 0;
             }
             boolean stackIn_12_0 = !(var1.readUnsignedByte(0) != 1);
             boolean var3_int = stackIn_12_0;
@@ -301,8 +301,8 @@ final class bk extends Js5Transport {
             if (null == var5) {
               var5 = new tg();
               ml.field_a.a((long)var7.hashCode(), var5, 37);
-              int fieldTemp$0 = qc.field_Ab;
-              qc.field_Ab = qc.field_Ab + 1;
+              int fieldTemp$0 = RegistrationRequestDialog.field_Ab;
+              RegistrationRequestDialog.field_Ab = RegistrationRequestDialog.field_Ab + 1;
               var5.field_pb = fieldTemp$0;
               jd.field_a.addLast(-12328, var5);
             }
@@ -750,7 +750,7 @@ final class bk extends Js5Transport {
             return stackIn_8_0;
           }
           if (param0) {
-            byte[] stackIn_13_0 = pn.a(param2 - 9, param1);
+            byte[] stackIn_13_0 = AccountRequestDialog.copyByteArray(param2 - 9, param1);
             return stackIn_13_0;
           }
           byte[] stackIn_11_0 = (byte[]) (param1);

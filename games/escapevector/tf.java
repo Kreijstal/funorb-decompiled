@@ -76,12 +76,12 @@ final class tf {
 
     private final int a(int param0, boolean param1) {
         if (this.field_j == param0) {
-          int var3_int = (fh.field_g.stringWidth(oi.field_N) + fh.field_g.stringWidth(LoginMethod.field_d)) / 2;
+          int var3_int = (fh.field_g.stringWidth(DisplayNameForm.field_N) + fh.field_g.stringWidth(LoginMethod.field_d)) / 2;
           int var4 = (-68 + var3_int) / 2;
-          return 2 * -(var4 - fh.field_g.stringWidth(oi.field_N));
+          return 2 * -(var4 - fh.field_g.stringWidth(DisplayNameForm.field_N));
         }
         if (this.field_c == param0) {
-          int var3_intLifetime1 = (fh.field_g.stringWidth(oi.field_N) + fh.field_g.stringWidth(LoginMethod.field_d)) / 2;
+          int var3_intLifetime1 = (fh.field_g.stringWidth(DisplayNameForm.field_N) + fh.field_g.stringWidth(LoginMethod.field_d)) / 2;
           int var4Lifetime1 = (-68 + var3_intLifetime1) / 2;
           return -(-fh.field_g.stringWidth(LoginMethod.field_d) + var4Lifetime1) * 2;
         }
@@ -105,7 +105,7 @@ final class tf {
           var3 = mc.field_a;
         }
         if (param0 == this.field_g) {
-          var3 = h.field_O;
+          var3 = LoginForm.field_O;
         }
         if (param0 == this.field_m) {
           var3 = an.field_b;
@@ -122,7 +122,7 @@ final class tf {
     final void a(byte param0) {
         int var3 = EscapeVector.obfuscationControl;
         do {
-          if (!pn.p(-105)) {
+          if (!AccountRequestDialog.pollKeyEvent(-105)) {
             if (param0 != -75) {
               this.b(true, -119);
             }
@@ -198,7 +198,7 @@ final class tf {
             TrackerMusicDefinition.d(8192);
           }
           if (ch.field_a.a(false)) {
-            int var3 = fh.field_g.stringWidth(oi.field_N);
+            int var3 = fh.field_g.stringWidth(DisplayNameForm.field_N);
             int var4 = fh.field_g.stringWidth(LoginMethod.field_d);
             int stackIn_39_0 = (var3 > var4) ? var3 : var4;
             int var5 = stackIn_39_0;
@@ -259,7 +259,7 @@ final class tf {
             }
           }
           if (ch.field_a.a(false)) {
-            int var3Lifetime1 = fh.field_g.stringWidth(oi.field_N);
+            int var3Lifetime1 = fh.field_g.stringWidth(DisplayNameForm.field_N);
             int var4Lifetime1 = fh.field_g.stringWidth(LoginMethod.field_d);
             int stackIn_79_0 = (var3Lifetime1 <= var4Lifetime1) ? var4Lifetime1 : var3Lifetime1;
             int var5Lifetime1 = stackIn_79_0;
@@ -316,7 +316,7 @@ final class tf {
               String var9 = param1.getParameter("cookieprefix");
               String var3 = var9 + "settings";
               String var4 = (String) (JavaScriptBridge.callWindowFunction(param1, "getcookies", -29155));
-              String[] var5 = bb.a(-128, var4, ';');
+              String[] var5 = ModalPanel.splitString(-128, var4, ';');
               for (int var6 = 0; var6 < var5.length; var6++) {
                 int var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&
@@ -457,19 +457,19 @@ final class tf {
           fh.field_g.drawCentered(mc.field_a, var6, 22, var5, -1);
         }
         if (param3 == this.field_g) {
-          fh.field_g.drawCentered(h.field_O, var6, 22, var5, -1);
+          fh.field_g.drawCentered(LoginForm.field_O, var6, 22, var5, -1);
         }
         if (param3 == this.field_j) {
-          int var7 = fh.field_g.stringWidth(oi.field_N);
+          int var7 = fh.field_g.stringWidth(DisplayNameForm.field_N);
           int var8 = fh.field_g.stringWidth(LoginMethod.field_d);
           int stackIn_19_0 = (var8 < var7) ? var7 : var8;
           int var9 = stackIn_19_0;
           int var10 = var6 + (var9 - 68) / 2;
-          fh.field_g.drawRight(oi.field_N, var10, 22, var5, -1);
+          fh.field_g.drawRight(DisplayNameForm.field_N, var10, 22, var5, -1);
           SingleChildContainer.a(var10, 13202, 4, IterableNodeHashTable.field_c, var5);
         }
         if (param3 == this.field_c) {
-          int var7Lifetime1 = fh.field_g.stringWidth(oi.field_N);
+          int var7Lifetime1 = fh.field_g.stringWidth(DisplayNameForm.field_N);
           int var8Lifetime1 = fh.field_g.stringWidth(LoginMethod.field_d);
           int stackIn_24_0 = (var8Lifetime1 >= var7Lifetime1) ? var8Lifetime1 : var7Lifetime1;
           int var9Lifetime1 = stackIn_24_0;
@@ -496,7 +496,7 @@ final class tf {
         if (param3 == this.field_e) {
           fh.field_g.drawCentered(ArchiveRequest.field_q, var6, 22, var5, -1);
         }
-        md.field_D.a(107);
+        AlphaContainer.field_D.a(107);
         cf.a(mj.field_b, true, 1);
         mj.field_b.addOutline(5267536);
         mj.field_b.drawTransparent((-mj.field_b.fullWidth + 640) / 2, param1);

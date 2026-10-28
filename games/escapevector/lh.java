@@ -67,9 +67,9 @@ final class lh {
               } else if (!PacketBuffer.field_h) {
                 if (e.field_a) {
                   if (TrackerMusicDefinition.field_f.b(123)) {
-                    var2 = lf.field_I;
+                    var2 = ValidationHelpWidget.field_I;
                   } else {
-                    var2 = oi.field_O;
+                    var2 = DisplayNameForm.field_O;
                   }
                   var3 = (-((Sprite) (var2)).fullHeight + 90) / 2;
                   if (var2 == null) {
@@ -96,7 +96,7 @@ final class lh {
                   var2 = var15;
                   var3 = (66 - var15.fullHeight) / 2;
                 } else if (ch.field_b) {
-                  Sprite var16 = jf.field_H;
+                  Sprite var16 = AccountTermsPanel.field_H;
                   var2 = var16;
                   var3 = (100 - var16.fullHeight) / 2;
                 }
@@ -178,9 +178,9 @@ final class lh {
               } else if (!PacketBuffer.field_h) {
                 if (e.field_a) {
                   if (TrackerMusicDefinition.field_f.b(123)) {
-                    var2Lifetime1 = lf.field_I;
+                    var2Lifetime1 = ValidationHelpWidget.field_I;
                   } else {
-                    var2Lifetime1 = oi.field_O;
+                    var2Lifetime1 = DisplayNameForm.field_O;
                   }
                   var3Lifetime1 = (-((Sprite) (var2Lifetime1)).fullHeight + 90) / 2;
                   if (var2Lifetime1 == null) {
@@ -207,7 +207,7 @@ final class lh {
                   var2Lifetime1 = var22;
                   var3Lifetime1 = (66 - var22.fullHeight) / 2;
                 } else if (ch.field_b) {
-                  Sprite var23 = jf.field_H;
+                  Sprite var23 = AccountTermsPanel.field_H;
                   var2Lifetime1 = var23;
                   var3Lifetime1 = (100 - var23.fullHeight) / 2;
                 }
@@ -331,9 +331,9 @@ final class lh {
               }
               if (e.field_a) {
                 if (TrackerMusicDefinition.field_f.b(123)) {
-                  var2Lifetime2 = lf.field_I;
+                  var2Lifetime2 = ValidationHelpWidget.field_I;
                 } else {
-                  var2Lifetime2 = oi.field_O;
+                  var2Lifetime2 = DisplayNameForm.field_O;
                 }
                 var3Lifetime2 = (-((Sprite) (var2Lifetime2)).fullHeight + 90) / 2;
                 if (var2Lifetime2 == null) {
@@ -410,7 +410,7 @@ final class lh {
                 }
                 return;
               }
-              Sprite var30 = jf.field_H;
+              Sprite var30 = AccountTermsPanel.field_H;
               var2Lifetime2 = var30;
               var3Lifetime2 = (100 - var30.fullHeight) / 2;
               if (var2Lifetime2 == null) {

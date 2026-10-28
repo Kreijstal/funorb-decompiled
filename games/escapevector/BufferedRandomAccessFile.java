@@ -403,7 +403,7 @@ final class BufferedRandomAccessFile {
           }
           if (vj.field_a != 0 &&
             GameAppletShell.field_a < 0) {
-            DelayedServerPacket var4_ref_dm = (DelayedServerPacket) (bb.field_L.first(false));
+            DelayedServerPacket var4_ref_dm = (DelayedServerPacket) (ModalPanel.field_L.first(false));
             if (var4_ref_dm != null &&
               var4_ref_dm.readyAtMillis < var2_long) {
               var4_ref_dm.unlink((byte) -67);
@@ -436,7 +436,7 @@ final class BufferedRandomAccessFile {
           while (true) {
             if (stackIn_22_0 < 0) {
               QuickChatDynamicCommand.incomingPackets.position = 0;
-              if (!bo.a(30000, 1)) {
+              if (!Checkbox.readIncomingBytes(30000, 1)) {
                 return false;
               }
               GameAppletShell.field_a = QuickChatDynamicCommand.incomingPackets.readCipheredOpcode(8);
@@ -465,7 +465,7 @@ final class BufferedRandomAccessFile {
             for (int var6 = 0; var6 < EmailSyntaxValidator.field_r; var6++) {
               var5.payload[var6] = QuickChatDynamicCommand.incomingPackets.payload[var6];
             }
-            bb.field_L.addLast(-12328, var5);
+            ModalPanel.field_L.addLast(-12328, var5);
             GameAppletShell.field_a = -1;
             stackIn_22_0 = GameAppletShell.field_a;
           }

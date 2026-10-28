@@ -70,8 +70,8 @@ final class SelfDestructEffects {
         int var5 = this.field_m / 2;
         int var6 = 1;
         SoftwareRasterizer.fillCircle(var3, var4, var5, var6);
-        if (md.field_D != null) {
-          md.field_D.a(125);
+        if (AlphaContainer.field_D != null) {
+          AlphaContainer.field_D.a(125);
         }
         int var7 = -25 / ((param0 + 25) / 58);
         SoftwareRasterizer.restoreClip(var8);
@@ -200,24 +200,24 @@ final class SelfDestructEffects {
             al.field_d = IntrusiveDeque.field_a;
           }
           if (IntrusiveDeque.field_a == al.field_d &&
-            bo.a(30000, 1)) {
+            Checkbox.readIncomingBytes(30000, 1)) {
             int var9Lifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
             QuickChatDynamicCommand.incomingPackets.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
-              jf.field_I = new String[-100 + var9Lifetime1];
+              AccountTermsPanel.field_I = new String[-100 + var9Lifetime1];
               al.field_d = ResourceArchive.field_k;
             } else {
               if (var9Lifetime1 == 248) {
                 se.writeBrowserSessionMarker((byte) 81, PointCloudEffect.d((byte) -108));
-                MouseWheelInput.field_a = w.field_fb;
+                MouseWheelInput.field_a = LoadingProgressDialog.field_fb;
                 nm.a(param0 ^ -16);
                 e.field_c = false;
                 int stackIn_34_0 = var9Lifetime1;
                 return stackIn_34_0;
               }
               if (var9Lifetime1 == 99) {
-                bo.a(30000, uc.b(92));
+                Checkbox.readIncomingBytes(30000, uc.b(92));
                 DialWidgetPainter.field_g = new Boolean(SecondaryIntrusiveDeque.a(QuickChatDynamicCommand.incomingPackets, true));
                 QuickChatDynamicCommand.incomingPackets.position = 0;
               } else {
@@ -229,13 +229,13 @@ final class SelfDestructEffects {
           }
           if (al.field_d == ResourceArchive.field_k) {
             int var9Lifetime2 = 2;
-            if (bo.a(param0 + 30032, var9Lifetime2)) {
+            if (Checkbox.readIncomingBytes(param0 + 30032, var9Lifetime2)) {
               int var10Lifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedShort(param0 + 1984);
               QuickChatDynamicCommand.incomingPackets.position = 0;
-              if (bo.a(param0 + 30032, var10Lifetime1)) {
-                int var11 = jf.field_I.length;
+              if (Checkbox.readIncomingBytes(param0 + 30032, var10Lifetime1)) {
+                int var11 = AccountTermsPanel.field_I.length;
                 for (int var12 = 0; var12 < var11; var12++) {
-                  jf.field_I[var12] = QuickChatDynamicCommand.incomingPackets.readCircumfixedString((byte) 125);
+                  AccountTermsPanel.field_I[var12] = QuickChatDynamicCommand.incomingPackets.readCircumfixedString((byte) 125);
                 }
                 nm.a(16);
                 e.field_c = false;
@@ -261,7 +261,7 @@ final class SelfDestructEffects {
           }
           if (TextLayout.field_c == null) {
             if (e.field_c) {
-              if (30000L < un.e(64655)) {
+              if (30000L < PasswordFieldPainter.millisecondsSinceLastReceive(64655)) {
                 MouseWheelInput.field_a = DualLinkNode.field_l;
               } else {
                 MouseWheelInput.field_a = wk.field_a;

@@ -53,7 +53,7 @@ final class fe {
           pc.field_e.tryLoadNamedGroup(0, "pump32")) {
           TriangleMesh.field_z = AccountRegistrationPanel.a(ThreeSliceButtonPainter.field_x, 54, "frame", "members_expansion_screen");
           ml.field_c = fe.a("members_expansion_screen", ThreeSliceButtonPainter.field_x, "arrow", true);
-          ac.field_c = oi.a(4, pc.field_e, "arialish12", "", ThreeSliceButtonPainter.field_x);
+          ac.field_c = DisplayNameForm.loadBinaryFont(4, pc.field_e, "arialish12", "", ThreeSliceButtonPainter.field_x);
           ReflectionCheck.field_h = ac.a("", -73, ThreeSliceButtonPainter.field_x, "pump32", pc.field_e);
           IntrusiveDequeCursor.field_e = p.a((byte) 8, "benefit_orbs", ThreeSliceButtonPainter.field_x, "members_expansion_screen");
           LoginMethod.field_c = p.a((byte) 8, "button_text", ThreeSliceButtonPainter.field_x, "members_expansion_screen");
@@ -154,9 +154,9 @@ final class fe {
         }
         if (null != ml.field_c) {
           boolean var4 = false;
-          if (qi.field_N != 0 &&
-            ng.field_ob > 257 &&
-            ng.field_ob < 290) {
+          if (AccountMessagePanel.field_N != 0 &&
+            LoginDialog.field_ob > 257 &&
+            LoginDialog.field_ob < 290) {
             if (sf.field_c > 9 &&
               82 > sf.field_c) {
               var4 = true;
@@ -172,8 +172,8 @@ final class fe {
           }
           if (!var4 &&
             this.field_l > IntKeyLookup.field_c &&
-            ng.field_ob > 257 &&
-            290 > ng.field_ob) {
+            LoginDialog.field_ob > 257 &&
+            290 > LoginDialog.field_ob) {
             if (dh.field_d > 9 &&
               dh.field_d < 82) {
               this.field_l = IntKeyLookup.field_c;
@@ -187,7 +187,7 @@ final class fe {
         if (!param1) {
           return 0;
         }
-        this.field_a.a(this.a(sf.field_c, ng.field_ob, -16311), (byte) 122, this.a(dh.field_d, UiContainer.field_y, -16311));
+        this.field_a.a(this.a(sf.field_c, LoginDialog.field_ob, -16311), (byte) 122, this.a(dh.field_d, UiContainer.field_y, -16311));
         boolean var4Lifetime1 = false;
         if (this.field_a.b((byte) -18)) {
           if (this.field_a.field_h == 0) {
@@ -198,7 +198,7 @@ final class fe {
           }
         }
         if (ValidationState.field_b) {
-          while (pn.p(-71)) {
+          while (AccountRequestDialog.pollKeyEvent(-71)) {
             int var5 = this.a(false);
             if (var5 == 0) {
               continue;
@@ -274,7 +274,7 @@ final class fe {
           field_k = 94;
         }
         ol.field_E = new AccountRegistrationPanel();
-        rd.field_c.a(ol.field_E, 30);
+        rd.field_c.transitionToContent(ol.field_E, 30);
     }
 
     private final void b(int param0) {
@@ -303,9 +303,9 @@ final class fe {
             int var3 = this.field_l * (var7.field_a + 60) / IntKeyLookup.field_c;
             int var4 = -30 + var3;
             if (this.field_n) {
-              bb.a(9, (-var4 + var7.field_a) * 256 / 30, 4163, var7, 58, -256 * var4 / 30);
+              ModalPanel.drawIndexedSpriteAlphaGradient(9, (-var4 + var7.field_a) * 256 / 30, 4163, var7, 58, -256 * var4 / 30);
             } else {
-              bb.a(9, -256 * var4 / 30, 4163, var2Lifetime1, 58, 256 * (var7.field_a - var4) / 30);
+              ModalPanel.drawIndexedSpriteAlphaGradient(9, -256 * var4 / 30, 4163, var2Lifetime1, 58, 256 * (var7.field_a - var4) / 30);
             }
           }
         }
@@ -454,7 +454,7 @@ final class fe {
         int var1 = -82 % ((param0 + 5) / 57);
         DraggableWidget.field_F = true;
         DialWidget.field_H = true;
-        bo.field_F.l(17415);
+        Checkbox.field_F.closeAllPanels(17415);
         UiTheme.a((byte) 119, DualLinkNode.field_h, false);
     }
 

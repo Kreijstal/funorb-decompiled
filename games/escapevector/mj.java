@@ -28,7 +28,7 @@ final class mj {
             }
             if (sf.field_d == al.field_d) {
               if (!param4) {
-                ArchiveIndex.field_m = bo.a(param3, false, 24564, param2);
+                ArchiveIndex.field_m = Checkbox.createLoginCredentials(param3, false, 24564, param2);
               } else {
                 ArchiveIndex.field_m = ei.a(param0 - 1, false, mg.field_d, (String) null, param2);
               }
@@ -39,19 +39,19 @@ final class mj {
               al.field_d = SpriteStrip.field_p;
             }
             if (al.field_d == SpriteStrip.field_p &&
-              bo.a(30000, 1)) {
+              Checkbox.readIncomingBytes(30000, 1)) {
               int var6_int = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
               QuickChatDynamicCommand.incomingPackets.position = 0;
               if (0 == var6_int) {
-                al.field_d = ha.field_c;
+                al.field_d = LinkButtonPainter.field_c;
               } else {
                 al.field_d = CheckboxPainter.field_q;
                 cd.field_v = var6_int;
                 EmailSyntaxValidator.field_r = -1;
               }
             }
-            if (al.field_d == ha.field_c &&
-              bo.a(30000, 8)) {
+            if (al.field_d == LinkButtonPainter.field_c &&
+              Checkbox.readIncomingBytes(30000, 8)) {
               SecondaryIntrusiveDeque.field_b = QuickChatDynamicCommand.incomingPackets.readLong(param0 - 800509814);
               QuickChatDynamicCommand.incomingPackets.position = 0;
               oh.a(ArchiveIndex.field_m, param4, param1, param5, (byte) -99);
@@ -59,7 +59,7 @@ final class mj {
             }
             boolean decompiledFrameRemainder0 = true;
             if (mc.field_b == al.field_d &&
-              bo.a(30000, 1)) {
+              Checkbox.readIncomingBytes(30000, 1)) {
               int var6_intLifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
               cd.field_v = var6_intLifetime1;
               p.field_i = null;
@@ -107,9 +107,9 @@ final class mj {
                 QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
                 QuickChatDynamicCommand.incomingPackets.readInt(param0 - 5054);
                 SocketConnector.field_e = QuickChatDynamicCommand.incomingPackets.readUnsignedShort(1952);
-                lf.field_K = new byte[SocketConnector.field_e];
+                ValidationHelpWidget.field_K = new byte[SocketConnector.field_e];
                 for (int var8 = 0; var8 < SocketConnector.field_e; var8++) {
-                  lf.field_K[var8] = QuickChatDynamicCommand.incomingPackets.readByte(false);
+                  ValidationHelpWidget.field_K[var8] = QuickChatDynamicCommand.incomingPackets.readByte(false);
                 }
               }
               ThreeSliceButtonPainter.field_r = QuickChatDynamicCommand.incomingPackets.readString(false);
@@ -117,7 +117,7 @@ final class mj {
               ProgressRecord.field_k = sf.a(-83, var11);
               LaserGateSpan.field_g = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(param0 - 1);
               al.field_d = ThreeSliceButtonPainter.field_t;
-              if (ArchiveIndex.field_m.a((byte) 32) == md.field_E) {
+              if (ArchiveIndex.field_m.a((byte) 32) == AlphaContainer.field_E) {
                 NameAvailabilityValidator.field_q.a(27002, PointCloudEffect.d((byte) -114));
               } else if (ArchiveIndex.field_m.a((byte) 32) == ja.field_a) {
                 oh.field_n.a(27002, PointCloudEffect.d((byte) -71));
@@ -172,7 +172,7 @@ final class mj {
             }
             if (null == TextLayout.field_c) {
               if (e.field_c) {
-                if (un.e(64655) > 30000L) {
+                if (PasswordFieldPainter.millisecondsSinceLastReceive(64655) > 30000L) {
                   MouseWheelInput.field_a = DualLinkNode.field_l;
                 } else {
                   MouseWheelInput.field_a = wk.field_a;
@@ -236,7 +236,7 @@ final class mj {
           String var2 = (String) null;
           mj.a(100, -96, (String) null, (String) null, false, true);
         }
-        return tb.field_D;
+        return ModalStack.field_D;
     }
 
     static {

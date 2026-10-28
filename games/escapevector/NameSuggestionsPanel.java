@@ -29,7 +29,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         String stackIn_19_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          this.field_A.clear((byte) 127);
+          this.children.clear((byte) 127);
           if (suggestions != null &&
             0 != suggestions.length) {
             int var3_int = suggestions.length;
@@ -40,19 +40,19 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             for (int var4_int = 0; var4_int < var3_int; var4_int++) {
               this.field_M[var4_int] = pc.a(guard + 103, (CharSequence) ((Object) suggestions[var4_int])).replace(' ', ' ');
             }
-            ha var4 = new ha(Js5Transport.field_a, 0, 1);
+            LinkButtonPainter var4 = new LinkButtonPainter(Js5Transport.field_a, 0, 1);
             this.field_K = new TextButton[1 + var3_int];
             for (int var5 = 0; var5 < var3_int; var5++) {
               this.field_K[var5] = new TextButton(this.field_M[var5], (UiListener) (this));
               this.field_K[var5].painter = (WidgetPainter) ((Object) var4);
               this.field_K[var5].tooltip = ei.field_n;
               this.field_K[var5].setBounds(80, 16 * var5 + 20, 0, true, 15);
-              this.b(this.field_K[var5], false);
+              this.addChild(this.field_K[var5], false);
             }
             this.field_K[var3_int] = new TextButton(uj.field_c, (UiListener) (this));
             this.field_K[var3_int].painter = (WidgetPainter) ((Object) var4);
             this.field_K[var3_int].setBounds(100, 16 * (1 + var3_int) + 20, 0, true, 15);
-            this.b(this.field_K[var3_int], false);
+            this.addChild(this.field_K[var3_int], false);
             return;
           }
           this.field_M = null;
@@ -87,7 +87,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             return true;
           }
           if (keyCode == 98) {
-            boolean stackIn_6_0 = this.a((byte) 22, root);
+            boolean stackIn_6_0 = this.focusPreviousChild((byte) 22, root);
             return stackIn_6_0;
           }
           if (guard < 0) {
@@ -96,7 +96,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           if (99 != keyCode) {
             return false;
           }
-          boolean stackIn_12_0 = this.a(root, true);
+          boolean stackIn_12_0 = this.focusNextChild(root, true);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -132,7 +132,7 @@ final class of {
         if (param0 >= -72) {
           of.releaseStatics(-52);
         }
-        return md.mouseIdleTicks;
+        return AlphaContainer.mouseIdleTicks;
     }
 
     public static void releaseStatics(int guard) {

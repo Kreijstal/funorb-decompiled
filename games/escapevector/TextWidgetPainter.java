@@ -124,7 +124,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
     }
 
     final static Sprite a(int param0, byte param1, int param2) {
-        ObjectSpriteSet[] var5 = w.c(false);
+        ObjectSpriteSet[] var5 = LoadingProgressDialog.objectSpriteSets(false);
         var5 = var5;
         if (var5 == null) {
           return null;

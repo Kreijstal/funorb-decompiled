@@ -3,7 +3,7 @@
  */
 final class rd {
     static IntrusiveDeque field_b;
-    static ng field_c;
+    static LoginDialog field_c;
     static int field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

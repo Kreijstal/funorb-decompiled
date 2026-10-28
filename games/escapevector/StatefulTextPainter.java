@@ -3,30 +3,30 @@
  */
 import java.util.*;
 
-final class he extends TextWidgetPainter {
+final class StatefulTextPainter extends TextWidgetPainter {
     static String field_q;
     static Calendar field_s;
     static String field_v;
-    private ef[] field_w;
+    private WidgetStyleLayer[] stateLayers;
     static GameAppletShell field_r;
     static int field_y;
-    private ef field_t;
+    private WidgetStyleLayer workingLayer;
     static ResourceArchive field_u;
     static int field_x;
 
-    final ef a(int param0, byte param1) {
-        if (param1 == -53) {
-          ef dupTemp$0 = new ef();
-          this.field_w[param0] = dupTemp$0;
+    final WidgetStyleLayer createStateLayer(int state, byte guard) {
+        if (guard == -53) {
+          WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
+          this.stateLayers[state] = dupTemp$0;
           return dupTemp$0;
         }
-        this.field_t = (ef) null;
-        ef dupTemp$1 = new ef();
-        this.field_w[param0] = dupTemp$1;
+        this.workingLayer = (WidgetStyleLayer) null;
+        WidgetStyleLayer dupTemp$1 = new WidgetStyleLayer();
+        this.stateLayers[state] = dupTemp$1;
         return dupTemp$1;
     }
 
-    final static IndexedSprite a(ResourceArchive param0, int param1, int param2, int param3) {
+    final static IndexedSprite loadIndexedSprite(ResourceArchive param0, int param1, int param2, int param3) {
         String stackIn_10_2 = null;
         try {
           if (param1 != -18109) {
@@ -52,19 +52,19 @@ final class he extends TextWidgetPainter {
         }
     }
 
-    final void a(Sprite[] param0, int param1) {
+    final void setFrameSpritesForAllStates(Sprite[] sprites, int guard) {
         String stackIn_14_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          ef[] var7 = this.field_w;
-          ef[] var3 = var7;
+          WidgetStyleLayer[] var7 = this.stateLayers;
+          WidgetStyleLayer[] var3 = var7;
           for (int var4 = 0; var7.length > var4; var4++) {
-            ef var5 = var7[var4];
+            WidgetStyleLayer var5 = var7[var4];
             if (var5 != null) {
-              var5.field_i = param0;
+              var5.frameSprites = sprites;
             }
           }
-          if (param1 == 6) {
+          if (guard == 6) {
             return;
           }
           field_v = (String) null;
@@ -74,12 +74,12 @@ final class he extends TextWidgetPainter {
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var3_ref;
           StringBuilder stackIn_13_1 = new StringBuilder().append("he.O(");
-          if (param0 == null) {
+          if (sprites == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -97,45 +97,45 @@ final class he extends TextWidgetPainter {
           if (var10 != null) {
             enabled = enabled & var10.enabled;
           }
-          ef var7 = this.field_w[0];
-          this.field_t.a(true);
-          var7.a(originX, this.field_t, component, originY, 63, this);
+          WidgetStyleLayer var7 = this.stateLayers[0];
+          this.workingLayer.reset(true);
+          var7.applyTo(originX, this.workingLayer, component, originY, 63, this);
           if (var10 != null) {
-            if (var10.field_z) {
-              ef var11 = this.field_w[1];
+            if (var10.selected) {
+              WidgetStyleLayer var11 = this.stateLayers[1];
               if (var11 != null) {
-                var11.a(originX, this.field_t, component, originY, -106, this);
+                var11.applyTo(originX, this.workingLayer, component, originY, -106, this);
               }
             }
             if (var10.hovered) {
-              ef var12 = this.field_w[3];
+              WidgetStyleLayer var12 = this.stateLayers[3];
               if (0 != var10.field_t &&
                 var12 != null) {
-                var12.a(originX, this.field_t, component, originY, -124, this);
+                var12.applyTo(originX, this.workingLayer, component, originY, -124, this);
               } else {
-                ef var9 = this.field_w[2];
+                WidgetStyleLayer var9 = this.stateLayers[2];
                 if (var9 != null) {
-                  var9.a(originX, this.field_t, component, originY, -101, this);
+                  var9.applyTo(originX, this.workingLayer, component, originY, -101, this);
                 }
               }
             }
           }
           if (component.isFocused(0)) {
-            ef var13 = this.field_w[5];
+            WidgetStyleLayer var13 = this.stateLayers[5];
             if (var13 != null) {
-              var13.a(originX, this.field_t, component, originY, 51, this);
+              var13.applyTo(originX, this.workingLayer, component, originY, 51, this);
             }
           }
           if (!enabled) {
-            ef var14 = this.field_w[4];
+            WidgetStyleLayer var14 = this.stateLayers[4];
             if (var14 != null) {
-              var14.a(originX, this.field_t, component, originY, -94, this);
+              var14.applyTo(originX, this.workingLayer, component, originY, -94, this);
             }
           }
           if (guard >= -14) {
-            he.releaseStatics(true);
+            StatefulTextPainter.releaseStatics(true);
           }
-          this.field_t.a(this, component, originX, originY, (byte) 21);
+          this.workingLayer.draw(this, component, originX, originY, (byte) 21);
           dl.a((byte) -8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,53 +152,53 @@ final class he extends TextWidgetPainter {
         }
     }
 
-    final void a(Sprite param0, byte param1) {
+    final void setSpriteForAllStates(Sprite sprite, byte guard) {
         String stackIn_14_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          ef[] var7 = this.field_w;
-          ef[] var3 = var7;
+          WidgetStyleLayer[] var7 = this.stateLayers;
+          WidgetStyleLayer[] var3 = var7;
           for (int var4 = 0; var7.length > var4; var4++) {
-            ef var5 = var7[var4];
+            WidgetStyleLayer var5 = var7[var4];
             if (var5 != null) {
-              var5.field_g = param0;
+              var5.sprite = sprite;
             }
           }
-          if (param1 > 65) {
+          if (guard > 65) {
             return;
           }
-          he.releaseStatics(true);
+          StatefulTextPainter.releaseStatics(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var3_ref;
           StringBuilder stackIn_13_1 = new StringBuilder().append("he.R(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    he(he param0, boolean param1) {
+    StatefulTextPainter(StatefulTextPainter param0, boolean param1) {
         this();
         try {
-          param0.a(param1, 123, this);
+          param0.copyStatesTo(param1, 123, this);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static SocketConnector a(String param0, int param1, byte param2) {
+    final static SocketConnector createProxySocketConnector(String host, int port, byte guard) {
         String stackIn_5_2 = null;
         try {
           ProxySocketConnector var3 = new ProxySocketConnector();
-          int var4 = -90 / ((param2 + 5) / 40);
-          ((SocketConnector) ((Object) var3)).port = param1;
-          ((SocketConnector) ((Object) var3)).host = param0;
+          int var4 = -90 / ((guard + 5) / 40);
+          ((SocketConnector) ((Object) var3)).port = port;
+          ((SocketConnector) ((Object) var3)).host = host;
           ProxySocketConnector stackIn_1_0 = var3;
           return (SocketConnector) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,12 +206,12 @@ final class he extends TextWidgetPainter {
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_4_0 = var3_ref;
           StringBuilder stackIn_4_1 = new StringBuilder().append("he.S(");
-          if (param0 == null) {
+          if (host == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(port).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -225,44 +225,44 @@ final class he extends TextWidgetPainter {
         field_s = null;
     }
 
-    public he() {
-        this.field_w = new ef[6];
-        this.field_t = new ef();
-        ef dupTemp$0 = new ef();
-        this.field_w[0] = dupTemp$0;
-        ef var1 = dupTemp$0;
-        var1.a(true);
+    public StatefulTextPainter() {
+        this.stateLayers = new WidgetStyleLayer[6];
+        this.workingLayer = new WidgetStyleLayer();
+        WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
+        this.stateLayers[0] = dupTemp$0;
+        WidgetStyleLayer var1 = dupTemp$0;
+        var1.reset(true);
     }
 
-    private final void a(boolean param0, int param1, he param2) {
-        ef stackIn_9_2 = null;
+    private final void copyStatesTo(boolean deepCopy, int guard, StatefulTextPainter target) {
+        WidgetStyleLayer stackIn_9_2 = null;
         String stackIn_19_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          super.copyStyleTo(param2, 127);
-          if (param0) {
+          super.copyStyleTo(target, 127);
+          if (deepCopy) {
             for (int var4_int = 0; var4_int < 6; var4_int++) {
-              ef var5 = this.field_w[var4_int];
+              WidgetStyleLayer var5 = this.stateLayers[var4_int];
               if (var5 != null) {
-                ef var6 = param2.field_w[var4_int];
-                ef stackIn_8_0 = var5;
+                WidgetStyleLayer var6 = target.stateLayers[var4_int];
+                WidgetStyleLayer stackIn_8_0 = var5;
                 int stackIn_8_1 = -2;
                 if (var6 == null) {
-                  ef dupTemp$0 = new ef();
-                  param2.field_w[var4_int] = dupTemp$0;
+                  WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
+                  target.stateLayers[var4_int] = dupTemp$0;
                   stackIn_9_2 = dupTemp$0;
                 } else {
                   stackIn_9_2 = var6;
                 }
-                ((ef) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2);
+                ((WidgetStyleLayer) (Object) stackIn_8_0).copyTo(stackIn_8_1, stackIn_9_2);
               } else {
-                param2.field_w[var4_int] = null;
+                target.stateLayers[var4_int] = null;
               }
             }
           } else {
-            qg.a(this.field_w, 0, param2.field_w, 0, 6);
+            qg.a(this.stateLayers, 0, target.stateLayers, 0, 6);
           }
-          if (param1 > 120) {
+          if (guard > 120) {
             return;
           }
           field_r = (GameAppletShell) null;
@@ -271,8 +271,8 @@ final class he extends TextWidgetPainter {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_18_0 = var4;
-          StringBuilder stackIn_18_1 = new StringBuilder().append("he.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_18_1 = new StringBuilder().append("he.T(").append(deepCopy).append(',').append(guard).append(',');
+          if (target == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -281,19 +281,19 @@ final class he extends TextWidgetPainter {
         }
     }
 
-    final void a(Sprite[] param0, int param1, byte param2) {
+    final void setStateFrameSprites(Sprite[] sprites, int state, byte guard) {
         try {
-          int var4_int = param1;
-          if (param2 != -117) {
-            he var5 = (he) null;
-            this.a(false, -105, (he) null);
+          int var4_int = state;
+          if (guard != -117) {
+            StatefulTextPainter var5 = (StatefulTextPainter) null;
+            this.copyStatesTo(false, -105, (StatefulTextPainter) null);
           }
-          if (this.field_w[var4_int] == null) {
-            this.field_w[var4_int] = new ef();
+          if (this.stateLayers[var4_int] == null) {
+            this.stateLayers[var4_int] = new WidgetStyleLayer();
           }
-          this.field_w[param1].field_i = param0;
+          this.stateLayers[state].frameSprites = sprites;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "he.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "he.L(" + (sprites != null ? "{...}" : "null") + ',' + state + ',' + guard + ')');
         }
     }
 

@@ -29,7 +29,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           int var9 = EscapeVector.obfuscationControl;
           try {
             try {
-              if (null != he.field_r) {
+              if (null != StatefulTextPainter.field_r) {
                 DynamicTerrainRenderer.field_b = DynamicTerrainRenderer.field_b + 1;
                 if (DynamicTerrainRenderer.field_b < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -42,7 +42,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               j.field_b = param3;
               BoundedUrlRequest.field_d = param4;
               DropTargetWidget.field_G = param4;
-              he.field_r = this;
+              StatefulTextPainter.field_r = this;
               Js5NetworkRequest.field_D = 0;
               pb.field_b = 0;
               UiTheme.field_n = param0;
@@ -92,9 +92,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             Object stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if (null != bb.field_P &&
-            bb.field_P != this) {
-            java.net.URL stackIn_10_0 = bb.field_P.getDocumentBase();
+          if (null != ModalPanel.field_P &&
+            ModalPanel.field_P != this) {
+            java.net.URL stackIn_10_0 = ModalPanel.field_P.getDocumentBase();
             return stackIn_10_0;
           }
           java.net.URL stackIn_12_0 = super.getDocumentBase();
@@ -150,9 +150,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             Object stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if (null != bb.field_P &&
-            this != bb.field_P) {
-            java.applet.AppletContext stackIn_10_0 = bb.field_P.getAppletContext();
+          if (null != ModalPanel.field_P &&
+            this != ModalPanel.field_P) {
+            java.applet.AppletContext stackIn_10_0 = ModalPanel.field_P.getAppletContext();
             return stackIn_10_0;
           }
           java.applet.AppletContext stackIn_12_0 = super.getAppletContext();
@@ -192,7 +192,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     }
 
     public final void stop() {
-        if (he.field_r != this ||
+        if (StatefulTextPainter.field_r != this ||
           RatingQuery.field_j) {
           return;
         }
@@ -290,7 +290,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void destroy() {
         try {
-          if (this == he.field_r &&
+          if (this == StatefulTextPainter.field_r &&
             !RatingQuery.field_j) {
             LegacyMenuColumn.field_p = td.b(128);
             en.a((byte) 100, 5000L);
@@ -313,9 +313,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             Object stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
-          if (bb.field_P != null &&
-            this != bb.field_P) {
-            String stackIn_10_0 = bb.field_P.getParameter(param0);
+          if (ModalPanel.field_P != null &&
+            this != ModalPanel.field_P) {
+            String stackIn_10_0 = ModalPanel.field_P.getParameter(param0);
             return stackIn_10_0;
           }
           String stackIn_12_0 = super.getParameter(param0);
@@ -432,9 +432,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = he.field_r;
-                if (bb.field_P != null) {
-                  var1 = bb.field_P;
+                var1 = StatefulTextPainter.field_r;
+                if (ModalPanel.field_P != null) {
+                  var1 = ModalPanel.field_P;
                 }
                 java.lang.reflect.Method var2_ref = SystemTaskService.field_r;
                 if (var2_ref != null) {
@@ -447,7 +447,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 DelayedServerPacket.detectMaximumHeap((byte) -61);
                 this.d(2);
-                md.field_D = PcmResampler.createRasterBuffer((java.awt.Component) ((Object) of.field_d), BoundedUrlRequest.field_d, (byte) 125, pd.field_b);
+                AlphaContainer.field_D = PcmResampler.createRasterBuffer((java.awt.Component) ((Object) of.field_d), BoundedUrlRequest.field_d, (byte) 125, pd.field_b);
                 this.initializeClient((byte) -97);
                 IntrusiveNodeHashTable.field_f = pe.a(18863);
                 do {
@@ -581,9 +581,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         if (qj.field_i != null) {
           return null;
         }
-        if (null != bb.field_P &&
-          bb.field_P != this) {
-          return bb.field_P.getCodeBase();
+        if (null != ModalPanel.field_P &&
+          ModalPanel.field_P != this) {
+          return ModalPanel.field_P.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -613,12 +613,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         try {
           SoftwareRasterizer.fillRectangleAlpha(param1 + 1, param2 + 1, -2 - param1 + param7, -2 - param2 + param5, 0, param0);
-          qi.a(param3, param7, param8, param4, param2, -28, param1, param5, param10);
+          AccountMessagePanel.drawUnevenFrame(param3, param7, param8, param4, param2, -28, param1, param5, param10);
           if (param6 != -3) {
             GameAppletShell.releaseStatics((byte) 59);
           }
           if (0 <= param9) {
-            qi.a(param9, param7 - 3, param3, -1, param2 + 3, 110, 3 + param1, -3 + param5, param10);
+            AccountMessagePanel.drawUnevenFrame(param9, param7 - 3, param3, -1, param2 + 3, 110, 3 + param1, -3 + param5, param10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -633,7 +633,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void start() {
         try {
-          if (he.field_r == this &&
+          if (StatefulTextPainter.field_r == this &&
             !RatingQuery.field_j) {
             LegacyMenuColumn.field_p = 0L;
             return;
@@ -671,7 +671,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final synchronized void paint(java.awt.Graphics param0) {
         String stackIn_24_2 = null;
         try {
-          if (he.field_r == this &&
+          if (StatefulTextPainter.field_r == this &&
             !RatingQuery.field_j) {
             NameSuggestionsPanel.field_H = true;
             if (dh.field_c &&
@@ -707,7 +707,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final static void provideLoaderApplet(java.applet.Applet param0) {
         String stackIn_6_2 = null;
         try {
-          bb.field_P = param0;
+          ModalPanel.field_P = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -740,14 +740,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (bb.field_P != null) {
-                var3 = bb.field_P;
+              if (ModalPanel.field_P != null) {
+                var3 = ModalPanel.field_P;
                 if (var5 != 0) {
-                  var3 = he.field_r;
+                  var3 = StatefulTextPainter.field_r;
                   var3 = qj.field_f;
                 }
               } else {
-                var3 = he.field_r;
+                var3 = StatefulTextPainter.field_r;
                 if (var5 != 0) {
                   var3 = qj.field_f;
                 }
@@ -822,8 +822,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
             RatingQuery.field_j = true;
           }
-          if (null != bb.field_P) {
-            bb.field_P.destroy();
+          if (null != ModalPanel.field_P) {
+            ModalPanel.field_P.destroy();
           }
           try {
             if (param0 < 100) {

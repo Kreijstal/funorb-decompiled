@@ -66,7 +66,7 @@ final class qh {
         int var6 = EscapeVector.obfuscationControl;
         try {
           NodeHashTableIterator.field_b = new Sprite[7][3];
-          qi.field_M = new Sprite[7][3];
+          AccountMessagePanel.field_M = new Sprite[7][3];
           if (param1 != -23) {
             qh.releaseStatics(-112);
           }
@@ -79,7 +79,7 @@ final class qh {
               String var5 = NameAvailabilityResult.field_b[var2_int];
               if (var5 != null &&
                 var5.length() != 0) {
-                qi.field_M[var2_int] = kh.a(param0, (byte) -10, var4, var5);
+                AccountMessagePanel.field_M[var2_int] = kh.a(param0, (byte) -10, var4, var5);
               }
             }
           }

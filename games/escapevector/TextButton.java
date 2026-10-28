@@ -5,7 +5,7 @@ import java.util.*;
 
 class TextButton extends UiComponent {
     static int[] field_C;
-    boolean field_z;
+    boolean selected;
     private boolean focused;
     boolean enabled;
     private boolean tabStop;
@@ -25,7 +25,7 @@ class TextButton extends UiComponent {
                 return false;
               }
               String var3 = (String) (JavaScriptBridge.callWindowFunction(param1, "getcookies", -29155));
-              String[] var4 = bb.a(-128, var3, ';');
+              String[] var4 = ModalPanel.splitString(-128, var3, ';');
               for (int var5 = 0; var4.length > var5; var5++) {
                 int var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -126,7 +126,7 @@ class TextButton extends UiComponent {
             root.clearFocus(93);
             this.focused = true;
             if (guard != -4659) {
-              this.field_z = true;
+              this.selected = true;
             }
             if (this.listener != null &&
               this.listener instanceof WidgetFocusListener) {
@@ -196,7 +196,7 @@ class TextButton extends UiComponent {
           }
           if (this.beginDebugDescription(depth, visited, output, false)) {
             this.appendDebugBody(visited, output, depth, 1);
-            if (this.field_z) {
+            if (this.selected) {
               StringBuilder discarded$2 = output.append(" active");
             }
             if (!this.enabled) {

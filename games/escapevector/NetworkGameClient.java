@@ -128,7 +128,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           int discarded$1 = this.a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
         } else if (fc.field_a >= 10) {
-          if (!jf.l(3)) {
+          if (!AccountTermsPanel.l(3)) {
             fc.a(true);
           } else if (ff.field_e == 0) {
             int discarded$2 = this.a(255, false, false);
@@ -246,20 +246,20 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 1) {
             int var5_int = ui.a(GrowableIntList.b(true), jd.a(false), 55);
             if (var5_int != -1) {
-              jk.a(jf.field_I, MouseWheelInput.field_a, param0 ^ -156, var5_int);
-              jf.field_I = null;
+              jk.a(AccountTermsPanel.field_I, MouseWheelInput.field_a, param0 ^ -156, var5_int);
+              AccountTermsPanel.field_I = null;
               MouseWheelInput.field_a = null;
             }
-            Boolean var11 = vg.l(-9878);
+            Boolean var11 = ResizableModalPanel.takeEmailAvailabilityResponse(-9878);
             if (var11 != null) {
               bh.a(var11.booleanValue(), -19503);
             }
           }
           if (var4 == 2) {
-            int var5_intLifetime1 = kh.a(DualLinkNode.e(0), this.field_w, TrackerMusicDefinition.c(31069), UiTheme.a(30519), AchievementQuery.d(param0 ^ -4157), oi.k(-99), 0);
+            int var5_intLifetime1 = kh.a(DualLinkNode.e(0), this.field_w, TrackerMusicDefinition.c(31069), UiTheme.a(30519), AchievementQuery.d(param0 ^ -4157), DisplayNameForm.k(-99), 0);
             if (var5_intLifetime1 != -1) {
-              j.a(jf.field_I, MouseWheelInput.field_a, (byte) -72, var5_intLifetime1);
-              jf.field_I = null;
+              j.a(AccountTermsPanel.field_I, MouseWheelInput.field_a, (byte) -72, var5_intLifetime1);
+              AccountTermsPanel.field_I = null;
               MouseWheelInput.field_a = null;
             }
           }
@@ -320,7 +320,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             IntValueNode.a(false, PointCloudEffect.d((byte) -102));
           }
           if (var4 == 12) {
-            md.a(PointCloudEffect.d((byte) -86), (byte) -123, EmailAvailabilityValidator.c((byte) -31));
+            AlphaContainer.openRelativeUrl(PointCloudEffect.d((byte) -86), (byte) -123, EmailAvailabilityValidator.c((byte) -31));
           }
           if (var4 == 13) {
             try {
@@ -330,7 +330,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (ViewportController.field_m.a(17)) {
                 PacketBuffer var12 = ViewportController.field_m.c(-43);
                 if (var12 != null) {
-                  String var7 = qi.a(var12.position, 0, var12.payload, (byte) 117);
+                  String var7 = AccountMessagePanel.decodeCp1252(var12.position, 0, var12.payload, (byte) 117);
                   jk.a(var7, (byte) -6);
                 } else {
                   String var9 = (String) null;
@@ -676,11 +676,11 @@ abstract class NetworkGameClient extends GameAppletShell {
             PasswordValidator.field_p = mj.a(dn.field_a, param0 - 127);
           }
           ii.field_a = MarkerSliderPainter.createArchive(MarkerSliderPainter.field_k, 0, false, 1, true);
-          w.field_ab = MarkerSliderPainter.createArchive(gi.field_l, 0, false, 1, true);
+          LoadingProgressDialog.field_ab = MarkerSliderPainter.createArchive(gi.field_l, 0, false, 1, true);
           pl.field_j = MarkerSliderPainter.createArchive(vi.field_g, 0, false, 1, true);
           MarkerSliderPainter.field_h = ii.field_a;
           fc.field_a = 2;
-          ei.field_m = w.field_ab;
+          ei.field_m = LoadingProgressDialog.field_ab;
         }
         if (fc.field_a == 2) {
           if (null != PasswordValidator.field_p &&
@@ -698,13 +698,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (3 == fc.field_a &&
-          of.a(ii.field_a, w.field_ab, pl.field_j, (byte) -90) &&
+          of.a(ii.field_a, LoadingProgressDialog.field_ab, pl.field_j, (byte) -90) &&
           cf.a(11, pl.field_j)) {
           PasswordValidator.h(-8055);
           on.b(-87);
           CipherPacketBuffer.field_u = false;
           DelegatingCanvas.field_e = um.field_a;
-          dh.a(ej.field_d, (byte) -124, pl.field_j, ii.field_a, w.field_ab);
+          dh.a(ej.field_d, (byte) -124, pl.field_j, ii.field_a, LoadingProgressDialog.field_ab);
           if (ProxySocketConnector.field_p ||
             ac.field_d != null) {
             String stackIn_98_0 = ac.field_d;
@@ -723,7 +723,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           je.a(pl.field_j, gb.field_b, sj.field_h, (byte) 103);
           ii.field_a = null;
           pl.field_j = null;
-          w.field_ab = null;
+          LoadingProgressDialog.field_ab = null;
           QuickChatPhraseDefinition.inspectAppletUsername(82, (java.applet.Applet) (this));
           SpriteOffset.a((byte) 126);
           fc.field_a = 10;
@@ -737,7 +737,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (fc.field_a == 11) {
           if (mg.field_c != null && (!mg.field_c.ensureIndex(0) ||
             !mg.field_c.tryLoadAllGroups((byte) -119))) {
-            dn.a(Bullet.formatArchiveProgress(md.field_H, mg.field_c, gj.field_g, -12920), 17637, 0.0f);
+            dn.a(Bullet.formatArchiveProgress(AlphaContainer.field_H, mg.field_c, gj.field_g, -12920), 17637, 0.0f);
             boolean decompiledFrameRemainder0 = false;
           }
           else {
@@ -762,7 +762,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (!param1 &&
           PacketBuffer.field_i) {
-          bo.a(of.field_d, (byte) -127);
+          Checkbox.detachCanvasInput(of.field_d, (byte) -127);
           this.d(-32);
           rc.a(of.field_d, true);
         }

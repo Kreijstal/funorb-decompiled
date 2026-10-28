@@ -130,23 +130,23 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     }
 
     final static void d(int param0) {
-        bo.field_F.l(17415);
+        Checkbox.field_F.closeAllPanels(17415);
         if (ProxySocketConnector.field_r == null) {
-          ProxySocketConnector.field_r = new w(bo.field_F, dj.field_b);
+          ProxySocketConnector.field_r = new LoadingProgressDialog(Checkbox.field_F, dj.field_b);
           if (param0 != 32) {
             field_l = (java.awt.Font) null;
-            bo.field_F.b(ProxySocketConnector.field_r, 61);
+            Checkbox.field_F.pushPanel(ProxySocketConnector.field_r, 61);
             return;
           }
-          bo.field_F.b(ProxySocketConnector.field_r, 61);
+          Checkbox.field_F.pushPanel(ProxySocketConnector.field_r, 61);
           return;
         }
         if (param0 == 32) {
-          bo.field_F.b(ProxySocketConnector.field_r, 61);
+          Checkbox.field_F.pushPanel(ProxySocketConnector.field_r, 61);
           return;
         }
         field_l = (java.awt.Font) null;
-        bo.field_F.b(ProxySocketConnector.field_r, 61);
+        Checkbox.field_F.pushPanel(ProxySocketConnector.field_r, 61);
     }
 
     final static void c(int param0) {

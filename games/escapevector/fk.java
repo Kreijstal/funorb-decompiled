@@ -41,7 +41,7 @@ final class fk {
             byte[] stackIn_8_0 = var3;
             return stackIn_8_0;
           }
-          byte[] stackIn_6_0 = pn.a(0, var3);
+          byte[] stackIn_6_0 = AccountRequestDialog.copyByteArray(0, var3);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,8 +58,8 @@ final class fk {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        qi.a(param1, param0, param4, param3, param5, -90, param6, param8, param7);
-        qi.a(param1, -3 + param0, param4, -1, 3 + param5, 67, param6 + 3, -3 + param8, param7);
+        AccountMessagePanel.drawUnevenFrame(param1, param0, param4, param3, param5, -90, param6, param8, param7);
+        AccountMessagePanel.drawUnevenFrame(param1, -3 + param0, param4, -1, 3 + param5, 67, param6 + 3, -3 + param8, param7);
         if (param2 <= 52) {
           String var10 = (String) null;
           fk.a(104, (String) null);

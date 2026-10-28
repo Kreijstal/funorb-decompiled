@@ -3,7 +3,7 @@
  */
 final class be {
     static String field_a;
-    static pn field_b;
+    static AccountRequestDialog field_b;
 
     public static void releaseStatics(byte guard) {
         field_a = null;

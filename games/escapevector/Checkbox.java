@@ -3,25 +3,25 @@
  */
 import java.io.*;
 
-final class bo extends TextButton {
-    static tb field_F;
+final class Checkbox extends TextButton {
+    static ModalStack field_F;
     static int field_E;
     static String field_D;
     static int[] field_H;
     static byte[] field_G;
 
     final void notifyAction(int guard, int localY, int localX, int buttonCode) {
-        this.field_z = !this.field_z ? true : false;
+        this.selected = !this.selected ? true : false;
         if (guard == -19646) {
           super.notifyAction(guard ^ 0, localY, localX, buttonCode);
           return;
         }
         java.awt.Canvas var6 = (java.awt.Canvas) null;
-        bo.a((java.awt.Canvas) null, (byte) 126);
+        Checkbox.detachCanvasInput((java.awt.Canvas) null, (byte) 126);
         super.notifyAction(guard ^ 0, localY, localX, buttonCode);
     }
 
-    private bo(String param0, WidgetPainter param1, UiListener param2) {
+    private Checkbox(String param0, WidgetPainter param1, UiListener param2) {
         super(param0, param1, param2);
         try {
           this.painter = mb.field_g.checkboxPainter;
@@ -40,7 +40,7 @@ final class bo extends TextButton {
         field_G = null;
     }
 
-    private bo(String param0, UiListener param1) {
+    private Checkbox(String param0, UiListener param1) {
         this(param0, mb.field_g.buttonPainter, param1);
         try {
           this.painter = mb.field_g.checkboxPainter;
@@ -49,35 +49,35 @@ final class bo extends TextButton {
         }
     }
 
-    final static vj a(String param0, boolean param1, int param2, String param3) {
+    final static vj createLoginCredentials(String identifier, boolean alternateType, int guard, String password) {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
           long var4_long = 0L;
-          if (param2 != 24564) {
-            field_F = (tb) null;
+          if (guard != 24564) {
+            field_F = (ModalStack) null;
           }
           Object var6 = null;
-          if (param0.indexOf('@') == -1) {
-            CharSequence var7 = (CharSequence) ((Object) param0);
+          if (identifier.indexOf('@') == -1) {
+            CharSequence var7 = (CharSequence) ((Object) identifier);
             var4_long = RasterBuffer.a((byte) 88, var7);
           } else {
-            var6 = param0;
+            var6 = identifier;
           }
-          vj stackIn_6_0 = ei.a(0, param1, var4_long, (String) (var6), param3);
+          vj stackIn_6_0 = ei.a(0, alternateType, var4_long, (String) (var6), password);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var4;
           StringBuilder stackIn_9_1 = new StringBuilder().append("bo.C(");
-          if (param0 == null) {
+          if (identifier == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(alternateType).append(',').append(guard).append(',');
+          if (password == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -86,46 +86,46 @@ final class bo extends TextButton {
         }
     }
 
-    final static void a(java.awt.Canvas param0, byte param1) {
+    final static void detachCanvasInput(java.awt.Canvas canvas, byte guard) {
         String stackIn_6_2 = null;
         try {
-          DialWidgetPainter.detachKeyboardInput((byte) -58, (java.awt.Component) ((Object) param0));
-          int var2_int = 120 / ((param1 - 54) / 57);
-          SelfDestructEffects.a((java.awt.Component) ((Object) param0), (byte) 9);
+          DialWidgetPainter.detachKeyboardInput((byte) -58, (java.awt.Component) ((Object) canvas));
+          int var2_int = 120 / ((guard - 54) / 57);
+          SelfDestructEffects.a((java.awt.Component) ((Object) canvas), (byte) 9);
           if (null == ji.field_b) {
             return;
           }
-          ji.field_b.detach(-5070, (java.awt.Component) ((Object) param0));
+          ji.field_b.detach(-5070, (java.awt.Component) ((Object) canvas));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_5_0 = var2;
           StringBuilder stackIn_5_1 = new StringBuilder().append("bo.D(");
-          if (param0 == null) {
+          if (canvas == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    bo(String param0, UiListener param1, boolean param2) {
+    Checkbox(String param0, UiListener param1, boolean param2) {
         this(param0, param1);
         try {
-          this.field_z = param2 ? true : false;
+          this.selected = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "bo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean readIncomingBytes(int guard, int requiredBytes) {
         try {
-          if (param0 != 30000) {
+          if (guard != 30000) {
             return false;
           }
-          if (param1 <= QuickChatDynamicCommand.incomingPackets.position) {
+          if (requiredBytes <= QuickChatDynamicCommand.incomingPackets.position) {
             return true;
           }
           if (null == TextLayout.field_c) {
@@ -138,19 +138,19 @@ final class bo extends TextButton {
                 nm.a(16);
                 return false;
               }
-              if (un.e(param0 + 34655) <= 30000L) {
+              if (PasswordFieldPainter.millisecondsSinceLastReceive(guard + 34655) <= 30000L) {
                 return false;
               }
               nm.a(16);
               return false;
             }
-            if (var2_int > param1 - QuickChatDynamicCommand.incomingPackets.position) {
-              var2_int = param1 - QuickChatDynamicCommand.incomingPackets.position;
+            if (var2_int > requiredBytes - QuickChatDynamicCommand.incomingPackets.position) {
+              var2_int = requiredBytes - QuickChatDynamicCommand.incomingPackets.position;
             }
             TextLayout.field_c.a(QuickChatDynamicCommand.incomingPackets.position, var2_int, QuickChatDynamicCommand.incomingPackets.payload, (byte) -49);
             sl.field_a = td.b(128);
             QuickChatDynamicCommand.incomingPackets.position = QuickChatDynamicCommand.incomingPackets.position + var2_int;
-            if (param1 > QuickChatDynamicCommand.incomingPackets.position) {
+            if (requiredBytes > QuickChatDynamicCommand.incomingPackets.position) {
               return false;
             }
             QuickChatDynamicCommand.incomingPackets.position = 0;

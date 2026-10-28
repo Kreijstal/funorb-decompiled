@@ -8,24 +8,24 @@ abstract class eo {
     final static String a(byte param0) {
         if (param0 != 46) {
           eo.releaseStatics((byte) -64);
-          if (un.field_u) {
+          if (PasswordFieldPainter.field_u) {
             return null;
           }
-          if (ei.field_j < ef.field_d) {
+          if (ei.field_j < WidgetStyleLayer.field_d) {
             return null;
           }
-          if (ei.field_j < ef.field_d + qf.field_l) {
+          if (ei.field_j < WidgetStyleLayer.field_d + qf.field_l) {
             return on.field_b;
           }
           return null;
         }
-        if (un.field_u) {
+        if (PasswordFieldPainter.field_u) {
           return null;
         }
-        if (ei.field_j < ef.field_d) {
+        if (ei.field_j < WidgetStyleLayer.field_d) {
           return null;
         }
-        if (ei.field_j < ef.field_d + qf.field_l) {
+        if (ei.field_j < WidgetStyleLayer.field_d + qf.field_l) {
           return on.field_b;
         }
         return null;
@@ -37,14 +37,14 @@ abstract class eo {
         if (!param5) {
           eo.a(-21, '7');
           if (!param7) {
-            qi.a(param4, param6, param8, param0, param2, 73, param3, param1, param9);
+            AccountMessagePanel.drawUnevenFrame(param4, param6, param8, param0, param2, 73, param3, param1, param9);
             return;
           }
           fc.a(param9, param3, param6, param1, true, 29788, false, param8, param4, param0, param2, false);
           return;
         }
         if (!param7) {
-          qi.a(param4, param6, param8, param0, param2, 73, param3, param1, param9);
+          AccountMessagePanel.drawUnevenFrame(param4, param6, param8, param0, param2, 73, param3, param1, param9);
           return;
         }
         fc.a(param9, param3, param6, param1, true, 29788, false, param8, param4, param0, param2, false);

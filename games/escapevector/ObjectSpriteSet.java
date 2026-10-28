@@ -27,11 +27,11 @@ final class ObjectSpriteSet {
             ObjectSpriteSet.releaseStatics(104);
           }
           Sprite var11 = new Sprite(var10.x, var10.y);
-          SoftwareRasterizer.saveClip(oi.field_M);
+          SoftwareRasterizer.saveClip(DisplayNameForm.field_M);
           var11.bindAsFramebuffer();
           param4.drawTransparent(-var13.x, -var13.y);
-          md.field_D.a(124);
-          SoftwareRasterizer.restoreClip(oi.field_M);
+          AlphaContainer.field_D.a(124);
+          SoftwareRasterizer.restoreClip(DisplayNameForm.field_M);
           Sprite stackIn_3_0 = var11;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,11 +202,11 @@ final class ObjectSpriteSet {
           Sprite var4 = new Sprite(var3_int, var3_int);
           int var5 = (var3_int - param0.fullWidth) / 2;
           int var6 = (-param0.fullHeight + var3_int) / param1;
-          SoftwareRasterizer.saveClip(oi.field_M);
+          SoftwareRasterizer.saveClip(DisplayNameForm.field_M);
           var4.bindAsFramebuffer();
           param0.drawTransparent(var5, var6);
-          md.field_D.a(param1 ^ 126);
-          SoftwareRasterizer.restoreClip(oi.field_M);
+          AlphaContainer.field_D.a(param1 ^ 126);
+          SoftwareRasterizer.restoreClip(DisplayNameForm.field_M);
           Sprite stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -302,7 +302,7 @@ final class ObjectSpriteSet {
           return;
         }
         ClientException.field_e = param1;
-        ng.field_nb = param0;
+        LoginDialog.field_nb = param0;
     }
 
     private final Sprite a(Sprite param0, int param1, int param2) {
@@ -322,11 +322,11 @@ final class ObjectSpriteSet {
           int var8 = var6 / 2;
           int var9 = var7 / 2;
           Sprite var10 = new Sprite(var6, var7);
-          SoftwareRasterizer.saveClip(oi.field_M);
+          SoftwareRasterizer.saveClip(DisplayNameForm.field_M);
           var10.bindAsFramebuffer();
           var5.drawCenteredRotatedScaled(var8, (byte) 34, var4_int, param2, var9);
-          md.field_D.a(124);
-          SoftwareRasterizer.restoreClip(oi.field_M);
+          AlphaContainer.field_D.a(124);
+          SoftwareRasterizer.restoreClip(DisplayNameForm.field_M);
           Sprite var11 = this.a((byte) 100, param2, param0, var5, var10);
           Sprite stackIn_7_0 = var11;
           return stackIn_7_0;

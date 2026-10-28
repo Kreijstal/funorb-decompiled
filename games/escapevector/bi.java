@@ -34,7 +34,7 @@ final class bi {
         field_f = param3 - param1;
         bi.a();
         if (field_a.length < field_f) {
-          field_a = new int[md.a((byte) 127, field_f)];
+          field_a = new int[AlphaContainer.nextPowerOfTwo((byte) 127, field_f)];
         }
         int var4 = param1 * SoftwareRasterizer.width + param0;
         for (int var5 = 0; var5 < field_f; var5++) {

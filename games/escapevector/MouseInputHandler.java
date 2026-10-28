@@ -10,7 +10,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (QuickChatDynamicCommand.mouseHandler == null) {
             return;
           }
-          md.mouseIdleTicks = 0;
+          AlphaContainer.mouseIdleTicks = 0;
           IterableDualLinkDeque.pendingMouseX = param0.getX();
           jk.pendingMouseY = param0.getY();
           ke.mouseInputChanged = true;
@@ -35,7 +35,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == QuickChatDynamicCommand.mouseHandler) {
             return;
           }
-          md.mouseIdleTicks = 0;
+          AlphaContainer.mouseIdleTicks = 0;
           IterableDualLinkDeque.pendingMouseX = -1;
           jk.pendingMouseY = -1;
           ke.mouseInputChanged = true;
@@ -127,7 +127,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
           if (null != QuickChatDynamicCommand.mouseHandler) {
-            md.mouseIdleTicks = 0;
+            AlphaContainer.mouseIdleTicks = 0;
             IterableDualLinkDeque.pendingMouseX = param0.getX();
             jk.pendingMouseY = param0.getY();
             ke.mouseInputChanged = true;
@@ -141,7 +141,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_10_2 = null;
         try {
           if (QuickChatDynamicCommand.mouseHandler != null) {
-            md.mouseIdleTicks = 0;
+            AlphaContainer.mouseIdleTicks = 0;
             vj.heldMouseButton = 0;
             ke.mouseInputChanged = true;
             int var2_int = param0.getModifiers();
@@ -174,7 +174,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
           if (null != QuickChatDynamicCommand.mouseHandler) {
-            md.mouseIdleTicks = 0;
+            AlphaContainer.mouseIdleTicks = 0;
             IterableDualLinkDeque.pendingMouseX = param0.getX();
             jk.pendingMouseY = param0.getY();
             ke.mouseInputChanged = true;
@@ -188,7 +188,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_13_2 = null;
         try {
           if (QuickChatDynamicCommand.mouseHandler != null) {
-            md.mouseIdleTicks = 0;
+            AlphaContainer.mouseIdleTicks = 0;
             fk.pendingClickX = param0.getX();
             PcmResampler.pendingClickY = param0.getY();
             td.b(128);

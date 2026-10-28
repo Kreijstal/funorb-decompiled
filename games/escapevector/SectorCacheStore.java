@@ -66,9 +66,9 @@ final class SectorCacheStore {
                 return null;
               }
               this.field_d.a(param1 - 26296, (long)(6 * param0));
-              this.field_d.a(0, 6, (byte) 101, bo.field_G);
-              int var4_int = (bo.field_G[2] & 255) + ((65280 & bo.field_G[1] << 8) + (16711680 & bo.field_G[0] << 16));
-              int var5 = ((255 & bo.field_G[3]) << 16) + (bo.field_G[4] << 8 & 65280) + (bo.field_G[5] & 255);
+              this.field_d.a(0, 6, (byte) 101, Checkbox.field_G);
+              int var4_int = (Checkbox.field_G[2] & 255) + ((65280 & Checkbox.field_G[1] << 8) + (16711680 & Checkbox.field_G[0] << 16));
+              int var5 = ((255 & Checkbox.field_G[3]) << 16) + (Checkbox.field_G[4] << 8 & 65280) + (Checkbox.field_G[5] & 255);
               if (var4_int < 0) {
                 return null;
               }
@@ -101,21 +101,21 @@ final class SectorCacheStore {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_a.a(0, var9 + var14, (byte) 101, bo.field_G);
-                  var13 = bo.field_G[9] & 255;
-                  var12 = (255 & bo.field_G[8]) + (bo.field_G[6] << 16 & 16711680) + ((255 & bo.field_G[7]) << 8);
-                  var11 = (255 & bo.field_G[5]) + ((255 & bo.field_G[4]) << 8);
-                  var10 = ((255 & bo.field_G[1]) << 16) + ((bo.field_G[0] & 255) << 24) + (((255 & bo.field_G[2]) << 8) + (255 & bo.field_G[3]));
+                  this.field_a.a(0, var9 + var14, (byte) 101, Checkbox.field_G);
+                  var13 = Checkbox.field_G[9] & 255;
+                  var12 = (255 & Checkbox.field_G[8]) + (Checkbox.field_G[6] << 16 & 16711680) + ((255 & Checkbox.field_G[7]) << 8);
+                  var11 = (255 & Checkbox.field_G[5]) + ((255 & Checkbox.field_G[4]) << 8);
+                  var10 = ((255 & Checkbox.field_G[1]) << 16) + ((Checkbox.field_G[0] & 255) << 24) + (((255 & Checkbox.field_G[2]) << 8) + (255 & Checkbox.field_G[3]));
                 } else {
                   var14 = 8;
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_a.a(0, var9 + var14, (byte) 101, bo.field_G);
-                  var12 = (255 & bo.field_G[6]) + ((16711680 & bo.field_G[4] << 16) + ((255 & bo.field_G[5]) << 8));
-                  var11 = (bo.field_G[3] & 255) + (bo.field_G[2] << 8 & 65280);
-                  var10 = (65280 & bo.field_G[0] << 8) + (255 & bo.field_G[1]);
-                  var13 = bo.field_G[7] & 255;
+                  this.field_a.a(0, var9 + var14, (byte) 101, Checkbox.field_G);
+                  var12 = (255 & Checkbox.field_G[6]) + ((16711680 & Checkbox.field_G[4] << 16) + ((255 & Checkbox.field_G[5]) << 8));
+                  var11 = (Checkbox.field_G[3] & 255) + (Checkbox.field_G[2] << 8 & 65280);
+                  var10 = (65280 & Checkbox.field_G[0] << 8) + (255 & Checkbox.field_G[1]);
+                  var13 = Checkbox.field_G[7] & 255;
                 }
                 if (param0 != var10) {
                   return null;
@@ -139,7 +139,7 @@ final class SectorCacheStore {
                 for (int var16 = var14; var15 > var16; var16++) {
                   int incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = bo.field_G[var16];
+                  var6[incrementValue$2] = Checkbox.field_G[var16];
                 }
               }
               byte[] stackIn_50_0 = var6;
@@ -226,8 +226,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_d.a(param0 - 512, (long)(param1 * 6));
-                  this.field_d.a(0, 6, (byte) 101, bo.field_G);
-                  var7_int = (bo.field_G[5] & 255) + (((255 & bo.field_G[3]) << 16) + ((bo.field_G[4] & 255) << 8));
+                  this.field_d.a(0, 6, (byte) 101, Checkbox.field_G);
+                  var7_int = (Checkbox.field_G[5] & 255) + (((255 & Checkbox.field_G[3]) << 16) + ((Checkbox.field_G[4] & 255) << 8));
                   if (var7_int <= 0 ||
                     !((long)var7_int <= (this.field_a.a(param0 + 15522) / 520L))) {
                     return false;
@@ -238,17 +238,17 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                bo.field_G[4] = (byte)(var7_int >> 8);
-                bo.field_G[5] = (byte)var7_int;
-                bo.field_G[1] = (byte)(param3 >> 8);
-                bo.field_G[0] = (byte)(param3 >> 16);
-                bo.field_G[3] = (byte)(var7_int >> 16);
-                bo.field_G[2] = (byte)param3;
+                Checkbox.field_G[4] = (byte)(var7_int >> 8);
+                Checkbox.field_G[5] = (byte)var7_int;
+                Checkbox.field_G[1] = (byte)(param3 >> 8);
+                Checkbox.field_G[0] = (byte)(param3 >> 16);
+                Checkbox.field_G[3] = (byte)(var7_int >> 16);
+                Checkbox.field_G[2] = (byte)param3;
                 if (param0 != 512) {
                   this.a(21, -91);
                 }
                 this.field_d.a(0, (long)(param1 * 6));
-                this.field_d.a(true, 0, bo.field_G, 6);
+                this.field_d.a(true, 0, Checkbox.field_G, 6);
                 int var8 = 0;
                 int var9 = 0;
                 scanLoop1: while (true) {
@@ -259,7 +259,7 @@ final class SectorCacheStore {
                       this.field_a.a(0, (long)(var7_int * 520));
                       if (param1 > 65535) {
                         try {
-                          this.field_a.a(0, 10, (byte) 101, bo.field_G);
+                          this.field_a.a(0, 10, (byte) 101, Checkbox.field_G);
                           decompiledRegionSelector0 = false;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,13 +269,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0) {
                           break scanLoop1;
                         }
-                        var11 = (bo.field_G[1] << 16 & 16711680) + ((bo.field_G[0] << 24 & -16777216) + ((bo.field_G[2] & 255) << 8) + (bo.field_G[3] & 255));
-                        var12 = ((bo.field_G[4] & 255) << 8) + (bo.field_G[5] & 255);
-                        var10 = ((255 & bo.field_G[7]) << 8) + ((bo.field_G[6] << 16 & 16711680) + (255 & bo.field_G[8]));
-                        var13 = 255 & bo.field_G[9];
+                        var11 = (Checkbox.field_G[1] << 16 & 16711680) + ((Checkbox.field_G[0] << 24 & -16777216) + ((Checkbox.field_G[2] & 255) << 8) + (Checkbox.field_G[3] & 255));
+                        var12 = ((Checkbox.field_G[4] & 255) << 8) + (Checkbox.field_G[5] & 255);
+                        var10 = ((255 & Checkbox.field_G[7]) << 8) + ((Checkbox.field_G[6] << 16 & 16711680) + (255 & Checkbox.field_G[8]));
+                        var13 = 255 & Checkbox.field_G[9];
                       } else {
                         try {
-                          this.field_a.a(0, 8, (byte) 101, bo.field_G);
+                          this.field_a.a(0, 8, (byte) 101, Checkbox.field_G);
                           decompiledRegionSelector1 = false;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -285,10 +285,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1) {
                           break scanLoop1;
                         }
-                        var13 = 255 & bo.field_G[7];
-                        var12 = (255 & bo.field_G[3]) + (bo.field_G[2] << 8 & 65280);
-                        var11 = (255 & bo.field_G[1]) + (bo.field_G[0] << 8 & 65280);
-                        var10 = (bo.field_G[6] & 255) + (16711680 & bo.field_G[4] << 16) + (bo.field_G[5] << 8 & 65280);
+                        var13 = 255 & Checkbox.field_G[7];
+                        var12 = (255 & Checkbox.field_G[3]) + (Checkbox.field_G[2] << 8 & 65280);
+                        var11 = (255 & Checkbox.field_G[1]) + (Checkbox.field_G[0] << 8 & 65280);
+                        var10 = (Checkbox.field_G[6] & 255) + (16711680 & Checkbox.field_G[4] << 16) + (Checkbox.field_G[5] << 8 & 65280);
                       }
                       if (var11 == param1 &&
                         var12 == var9 &&
@@ -315,16 +315,16 @@ final class SectorCacheStore {
                       var10 = 0;
                     }
                     if (param1 <= 65535) {
-                      bo.field_G[6] = (byte)var10;
-                      bo.field_G[5] = (byte)(var10 >> 8);
-                      bo.field_G[7] = (byte)this.field_b;
-                      bo.field_G[0] = (byte)(param1 >> 8);
-                      bo.field_G[3] = (byte)var9;
-                      bo.field_G[4] = (byte)(var10 >> 16);
-                      bo.field_G[1] = (byte)param1;
-                      bo.field_G[2] = (byte)(var9 >> 8);
+                      Checkbox.field_G[6] = (byte)var10;
+                      Checkbox.field_G[5] = (byte)(var10 >> 8);
+                      Checkbox.field_G[7] = (byte)this.field_b;
+                      Checkbox.field_G[0] = (byte)(param1 >> 8);
+                      Checkbox.field_G[3] = (byte)var9;
+                      Checkbox.field_G[4] = (byte)(var10 >> 16);
+                      Checkbox.field_G[1] = (byte)param1;
+                      Checkbox.field_G[2] = (byte)(var9 >> 8);
                       this.field_a.a(0, (long)(520 * var7_int));
-                      this.field_a.a(true, 0, bo.field_G, 8);
+                      this.field_a.a(true, 0, Checkbox.field_G, 8);
                       var11 = -var8 + param3;
                       if (var11 > 512) {
                         var11 = 512;
@@ -332,18 +332,18 @@ final class SectorCacheStore {
                       this.field_a.a(true, var8, param2, var11);
                       var8 = var8 + var11;
                     } else {
-                      bo.field_G[9] = (byte)this.field_b;
-                      bo.field_G[6] = (byte)(var10 >> 16);
-                      bo.field_G[3] = (byte)param1;
-                      bo.field_G[5] = (byte)var9;
-                      bo.field_G[2] = (byte)(param1 >> 8);
-                      bo.field_G[7] = (byte)(var10 >> 8);
-                      bo.field_G[8] = (byte)var10;
-                      bo.field_G[0] = (byte)(param1 >> 24);
-                      bo.field_G[4] = (byte)(var9 >> 8);
-                      bo.field_G[1] = (byte)(param1 >> 16);
+                      Checkbox.field_G[9] = (byte)this.field_b;
+                      Checkbox.field_G[6] = (byte)(var10 >> 16);
+                      Checkbox.field_G[3] = (byte)param1;
+                      Checkbox.field_G[5] = (byte)var9;
+                      Checkbox.field_G[2] = (byte)(param1 >> 8);
+                      Checkbox.field_G[7] = (byte)(var10 >> 8);
+                      Checkbox.field_G[8] = (byte)var10;
+                      Checkbox.field_G[0] = (byte)(param1 >> 24);
+                      Checkbox.field_G[4] = (byte)(var9 >> 8);
+                      Checkbox.field_G[1] = (byte)(param1 >> 16);
                       this.field_a.a(param0 - 512, (long)(520 * var7_int));
-                      this.field_a.a(true, 0, bo.field_G, 10);
+                      this.field_a.a(true, 0, Checkbox.field_G, 10);
                       var11 = param3 - var8;
                       if (var11 > 510) {
                         var11 = 510;

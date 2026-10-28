@@ -14,7 +14,7 @@ final class di {
     final static void a(int param0) {
         ri.a(param0 ^ -25124);
         if (null != of.field_d) {
-          bo.a(of.field_d, (byte) 118);
+          Checkbox.detachCanvasInput(of.field_d, (byte) 118);
         }
         if (param0 != 1) {
           field_c = (String) null;

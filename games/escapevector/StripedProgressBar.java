@@ -3,25 +3,25 @@
  */
 import java.io.*;
 
-final class jm extends UiComponent {
+final class StripedProgressBar extends UiComponent {
     static int field_L;
-    private int field_z;
-    private int field_C;
-    private Sprite[] field_J;
+    private int stripeWidth;
+    private int stripeOffset;
+    private Sprite[] stripeSprites;
     static String field_M;
-    int field_B;
-    private Sprite field_N;
+    int progressQ16;
+    private Sprite rightCapMask;
     private int field_y;
     static Sprite[] field_K;
     private int field_A;
     static ResourceArchive field_I;
     private int field_H;
-    boolean field_G;
-    private Sprite field_D;
+    boolean animateStripes;
+    private Sprite leftCapMask;
     private int field_F;
-    private Sprite field_E;
+    private Sprite capScratch;
 
-    jm(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    StripedProgressBar(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
     }
 
@@ -35,18 +35,18 @@ final class jm extends UiComponent {
         return (int[]) null;
     }
 
-    final void a(int param0, int param1, int param2) {
-        this.field_y = (16711422 & param1) >> 1;
-        this.field_A = param0;
-        this.field_H = param1;
-        if (param2 >= -124) {
-          this.field_E = (Sprite) null;
+    final void setColors(int secondColor, int firstColor, int guard) {
+        this.field_y = (16711422 & firstColor) >> 1;
+        this.field_A = secondColor;
+        this.field_H = firstColor;
+        if (guard >= -124) {
+          this.capScratch = (Sprite) null;
         }
-        this.field_F = (16711422 & param0) >> 1;
-        this.k(-27800);
+        this.field_F = (16711422 & secondColor) >> 1;
+        this.rebuildSprites(-27800);
     }
 
-    private final Sprite e(byte param0) {
+    private final Sprite createCapMask(byte guard) {
         int var9 = EscapeVector.obfuscationControl;
         int var2 = this.height >> 1;
         Sprite var3 = new Sprite(var2, this.height);
@@ -63,7 +63,7 @@ final class jm extends UiComponent {
           }
         }
         dl.a((byte) 127);
-        if (param0 >= -112) {
+        if (guard >= -112) {
           return (Sprite) null;
         }
         return var3;
@@ -81,14 +81,14 @@ final class jm extends UiComponent {
     final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
         String stackIn_9_2 = null;
         try {
-          if (this.field_G) {
-            this.field_C = this.field_C + 1;
-            if (this.field_C > 2 * this.field_z) {
-              this.field_C = this.field_C - 2 * this.field_z;
+          if (this.animateStripes) {
+            this.stripeOffset = this.stripeOffset + 1;
+            if (this.stripeOffset > 2 * this.stripeWidth) {
+              this.stripeOffset = this.stripeOffset - 2 * this.stripeWidth;
             }
           }
           if (guard != -14472) {
-            Sprite discarded$1 = this.e((byte) 105);
+            Sprite discarded$1 = this.createCapMask((byte) 105);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,37 +105,37 @@ final class jm extends UiComponent {
         }
     }
 
-    private final void a(int param0, int param1, Sprite param2, int param3) {
+    private final void drawStripedBar(int guard, int y, Sprite stripes, int x) {
         String stackIn_18_2 = null;
         int var7 = 0;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          if (param0 > -23) {
+          if (guard > -23) {
             field_K = (Sprite[]) null;
           }
-          int var5_int = this.width + param3;
-          rd.a(var5_int - this.field_N.width, param3 + this.field_N.width, param1 + this.height, 19807, param1);
-          for (int var6 = -this.field_C + param3; var6 < var5_int; var6 = var6 + param2.width) {
-            param2.drawTransparent(var6, param1);
+          int var5_int = this.width + x;
+          rd.a(var5_int - this.rightCapMask.width, x + this.rightCapMask.width, y + this.height, 19807, y);
+          for (int var6 = -this.stripeOffset + x; var6 < var5_int; var6 = var6 + stripes.width) {
+            stripes.drawTransparent(var6, y);
           }
           dl.a((byte) -125);
-          if (param3 + this.field_N.width >= SoftwareRasterizer.clipLeft) {
-            eo.a(this.field_E, (byte) -35);
-            param2.drawTransparent(-this.field_C, 0);
-            param2.drawTransparent(-this.field_C + this.field_z * 2, 0);
-            this.field_D.drawMultiply(0, 0);
+          if (x + this.rightCapMask.width >= SoftwareRasterizer.clipLeft) {
+            eo.a(this.capScratch, (byte) -35);
+            stripes.drawTransparent(-this.stripeOffset, 0);
+            stripes.drawTransparent(-this.stripeOffset + this.stripeWidth * 2, 0);
+            this.leftCapMask.drawMultiply(0, 0);
             dl.a((byte) 124);
-            this.field_E.drawTransparent(param3, param1);
+            this.capScratch.drawTransparent(x, y);
           }
-          if (SoftwareRasterizer.clipRight >= -this.field_N.width + var5_int) {
-            eo.a(this.field_E, (byte) -29);
-            for (var7 = this.field_C + (this.width - this.field_N.width); 2 * this.field_z < var7; var7 = var7 - this.field_z * 2) {
+          if (SoftwareRasterizer.clipRight >= -this.rightCapMask.width + var5_int) {
+            eo.a(this.capScratch, (byte) -29);
+            for (var7 = this.stripeOffset + (this.width - this.rightCapMask.width); 2 * this.stripeWidth < var7; var7 = var7 - this.stripeWidth * 2) {
             }
-            param2.drawTransparent(-var7, 0);
-            param2.drawTransparent(2 * this.field_z - var7, 0);
-            this.field_N.drawMultiply(0, 0);
+            stripes.drawTransparent(-var7, 0);
+            stripes.drawTransparent(2 * this.stripeWidth - var7, 0);
+            this.rightCapMask.drawMultiply(0, 0);
             dl.a((byte) -65);
-            this.field_E.drawTransparent(var5_int - this.field_N.width, param1);
+            this.capScratch.drawTransparent(var5_int - this.rightCapMask.width, y);
             return;
           }
           return;
@@ -143,27 +143,27 @@ final class jm extends UiComponent {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_17_0 = var5;
-          StringBuilder stackIn_17_1 = new StringBuilder().append("jm.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_17_1 = new StringBuilder().append("jm.C(").append(guard).append(',').append(y).append(',');
+          if (stripes == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(x).append(')').toString());
         }
     }
 
-    private final void k(int param0) {
-        this.field_J = new Sprite[]{this.a(true, this.field_H, this.field_A), this.a(true, this.field_y, this.field_F)};
-        this.field_N = this.e((byte) -122);
-        this.field_D = this.field_N.copyMirroredHorizontally();
-        if (param0 != -27800) {
+    private final void rebuildSprites(int guard) {
+        this.stripeSprites = new Sprite[]{this.createStripeSprite(true, this.field_H, this.field_A), this.createStripeSprite(true, this.field_y, this.field_F)};
+        this.rightCapMask = this.createCapMask((byte) -122);
+        this.leftCapMask = this.rightCapMask.copyMirroredHorizontally();
+        if (guard != -27800) {
           return;
         }
-        this.field_E = new Sprite(this.height >> 1, this.height);
+        this.capScratch = new Sprite(this.height >> 1, this.height);
     }
 
-    final static void a(int param0, PacketBuffer param1) {
+    final static void writeInstallationSeed(int sourceOffset, PacketBuffer buffer) {
         try {
           int var3_int = 0;
           String stackIn_19_2 = null;
@@ -186,7 +186,7 @@ final class jm extends UiComponent {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param1.writeBytes(24, (byte) 21, param0, var2);
+                buffer.writeBytes(24, (byte) 21, sourceOffset, var2);
                 decompiledRegionSelector0 = false;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -200,14 +200,14 @@ final class jm extends UiComponent {
                 return;
               }
             }
-            param1.writeBytes(24, (byte) 21, param0, var2);
+            buffer.writeBytes(24, (byte) 21, sourceOffset, var2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var2_ref = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_18_0 = var2_ref;
-            StringBuilder stackIn_18_1 = new StringBuilder().append("jm.I(").append(param0).append(',');
-            if (param1 == null) {
+            StringBuilder stackIn_18_1 = new StringBuilder().append("jm.I(").append(sourceOffset).append(',');
+            if (buffer == null) {
               stackIn_19_2 = "null";
             } else {
               stackIn_19_2 = "{...}";
@@ -223,7 +223,7 @@ final class jm extends UiComponent {
 
     final void setBounds(int width, int y, int x, boolean guard, int height) {
         super.setBounds(width, y, x, guard, height);
-        this.k(-27800);
+        this.rebuildSprites(-27800);
     }
 
     final void drawLayer(int screenY, byte guard, int layer, int screenX) {
@@ -232,89 +232,89 @@ final class jm extends UiComponent {
         }
         int var5 = this.x + screenX;
         int var6 = screenY + this.y;
-        this.a(-32, var6, this.field_J[0], var5);
-        if (65536 > this.field_B) {
-          rd.a(this.width + var5, var5 + (this.field_B * this.width >> 16), var6 + this.height, 19807, var6);
-          this.a(-81, var6, this.field_J[1], var5);
+        this.drawStripedBar(-32, var6, this.stripeSprites[0], var5);
+        if (65536 > this.progressQ16) {
+          rd.a(this.width + var5, var5 + (this.progressQ16 * this.width >> 16), var6 + this.height, 19807, var6);
+          this.drawStripedBar(-81, var6, this.stripeSprites[1], var5);
           dl.a((byte) 119);
         }
         if (guard <= 85) {
-          this.field_D = (Sprite) null;
+          this.leftCapMask = (Sprite) null;
         }
     }
 
-    private final Sprite a(boolean param0, int param1, int param2) {
+    private final Sprite createStripeSprite(boolean guard, int firstColor, int secondColor) {
         int var13 = EscapeVector.obfuscationControl;
-        Sprite var14 = new Sprite(2 * this.field_z, this.height);
+        Sprite var14 = new Sprite(2 * this.stripeWidth, this.height);
         eo.a(var14, (byte) -90);
         int var5 = this.height >> 1;
         int var6 = 0;
-        if (!param0) {
-          this.field_B = 60;
+        if (!guard) {
+          this.progressQ16 = 60;
         }
         while (var6 < this.height) {
-          int var7 = (var6 >> 1) * (2 * this.field_z - 1) % (this.field_z * 2);
-          int var8 = 16711935 & param1;
-          int var9 = 65280 & param1;
+          int var7 = (var6 >> 1) * (2 * this.stripeWidth - 1) % (this.stripeWidth * 2);
+          int var8 = 16711935 & firstColor;
+          int var9 = 65280 & firstColor;
           int var10 = -var5 + var6;
           int var11 = 128 + (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0);
           int var12 = var11 >= 256 ? var9 | var8 : (var11 * var8 & -16711936 | 16711680 & var11 * var9) >>> 8;
-          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_z, var12);
-          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_z * 2, var6, this.field_z, var12);
-          int var8Lifetime1 = param2 & 16711935;
-          int var9Lifetime1 = 65280 & param2;
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.stripeWidth, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.stripeWidth * 2, var6, this.stripeWidth, var12);
+          int var8Lifetime1 = secondColor & 16711935;
+          int var9Lifetime1 = 65280 & secondColor;
           int var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (-16711936 & var11 * var8Lifetime1 | 16711680 & var11 * var9Lifetime1) >>> 8;
-          SoftwareRasterizer.drawHorizontalLine(this.field_z + var7, var6, this.field_z, var12Lifetime1);
-          SoftwareRasterizer.drawHorizontalLine(-this.field_z + var7, var6, this.field_z, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + var7, var6, this.stripeWidth, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + var7, var6, this.stripeWidth, var12Lifetime1);
           var6++;
         }
         dl.a((byte) 127);
         return var14;
     }
 
-    final static byte[] a(int param0, int param1, CipherPacketBuffer param2, byte[] param3) {
+    final static byte[] readPackedByteArray(int lengthBits, int guard, CipherPacketBuffer buffer, byte[] destination) {
         int var7 = 0;
         String stackIn_22_2 = null;
         String stackIn_25_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          int var4_int = param2.readBits(param0, 8);
+          int var4_int = buffer.readBits(lengthBits, 8);
           if (0 == var4_int) {
             Object stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
           }
-          if (param3 == null ||
-            var4_int != param3.length) {
-            param3 = new byte[var4_int];
+          if (destination == null ||
+            var4_int != destination.length) {
+            destination = new byte[var4_int];
           }
-          if (param1 <= 113) {
+          if (guard <= 113) {
             field_I = (ResourceArchive) null;
           }
-          int var5 = param2.readBits(3, 8);
-          int var6 = (byte)param2.readBits(8, 8);
+          int var5 = buffer.readBits(3, 8);
+          int var6 = (byte)buffer.readBits(8, 8);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (byte)var6;
+              destination[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (byte)(var6 + param2.readBits(var5, 8));
+              destination[var7] = (byte)(var6 + buffer.readBits(var5, 8));
             }
           }
-          byte[] stackIn_18_0 = (byte[]) (param3);
+          byte[] stackIn_18_0 = (byte[]) (destination);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_21_0 = var4;
-          StringBuilder stackIn_21_1 = new StringBuilder().append("jm.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_21_1 = new StringBuilder().append("jm.A(").append(lengthBits).append(',').append(guard).append(',');
+          if (buffer == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
           StringBuilder stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
-          if (param3 == null) {
+          if (destination == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
@@ -323,8 +323,8 @@ final class jm extends UiComponent {
         }
     }
 
-    private jm(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        this.field_z = param4;
+    private StripedProgressBar(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        this.stripeWidth = param4;
         this.field_A = param6;
         this.field_H = param5;
         this.field_F = param8;

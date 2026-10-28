@@ -27,8 +27,8 @@ final class mm {
             mj.field_d = mj.field_d + 1;
           }
           do {
-            if (!pn.p(-126)) {
-              di.field_d.a(gb.a(sf.field_c, ng.field_ob, 8158), (byte) 126, gb.a(dh.field_d, UiContainer.field_y, 8158));
+            if (!AccountRequestDialog.pollKeyEvent(-126)) {
+              di.field_d.a(gb.a(sf.field_c, LoginDialog.field_ob, 8158), (byte) 126, gb.a(dh.field_d, UiContainer.field_y, 8158));
               if (!SpriteOffset.a(true, 0)) {
                 return (var1_int);
               }
@@ -49,7 +49,7 @@ final class mm {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        he.field_x = param2;
+        StatefulTextPainter.field_x = param2;
         int var5 = -76 % ((-35 - param0) / 47);
         ok.field_a = param4;
         je.field_b = param1;

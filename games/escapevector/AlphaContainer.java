@@ -1,52 +1,52 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md extends SingleChildContainer {
+final class AlphaContainer extends SingleChildContainer {
     static fk field_E;
     static volatile int mouseIdleTicks;
     static RasterBuffer field_D;
-    int field_F;
+    int alpha;
     static String field_H;
 
-    public md() {
+    public AlphaContainer() {
         super(0, 0, 0, 0, (WidgetPainter) null, (UiListener) null);
-        this.field_F = 256;
+        this.alpha = 256;
     }
 
-    final static int a(byte param0, int param1) {
-        param1--;
-        param1 = param1 | param1 >>> 1;
-        if (param0 == 127) {
-          param1 = param1 | param1 >>> 2;
-          param1 = param1 | param1 >>> 4;
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
-          return 1 + param1;
+    final static int nextPowerOfTwo(byte guard, int value) {
+        value--;
+        value = value | value >>> 1;
+        if (guard == 127) {
+          value = value | value >>> 2;
+          value = value | value >>> 4;
+          value = value | value >>> 8;
+          value = value | value >>> 16;
+          return 1 + value;
         }
-        md.releaseStatics(60);
-        param1 = param1 | param1 >>> 2;
-        param1 = param1 | param1 >>> 4;
-        param1 = param1 | param1 >>> 8;
-        param1 = param1 | param1 >>> 16;
-        return 1 + param1;
+        AlphaContainer.releaseStatics(60);
+        value = value | value >>> 2;
+        value = value | value >>> 4;
+        value = value | value >>> 8;
+        value = value | value >>> 16;
+        return 1 + value;
     }
 
-    final static void a(java.applet.Applet param0, byte param1, String param2) {
+    final static void openRelativeUrl(java.applet.Applet applet, byte guard, String relativeUrl) {
         try {
           String stackIn_9_2 = null;
           String stackIn_12_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              java.net.URL var3 = new java.net.URL(param0.getCodeBase(), param2);
-              var3 = WeightedCacheEntry.withSessionParameters((byte) 95, param0, var3);
-              Bzip2State.a(true, true, param0, var3.toString());
+              java.net.URL var3 = new java.net.URL(applet.getCodeBase(), relativeUrl);
+              var3 = WeightedCacheEntry.withSessionParameters((byte) 95, applet, var3);
+              Bzip2State.a(true, true, applet, var3.toString());
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Exception var3_ref2 = (Exception) (Object) decompiledCaughtException;
               var3_ref2.printStackTrace();
             }
-            if (param1 < -91) {
+            if (guard < -91) {
               return;
             }
             field_H = (String) null;
@@ -56,13 +56,13 @@ final class md extends SingleChildContainer {
             RuntimeException var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_8_0 = var3_ref;
             StringBuilder stackIn_8_1 = new StringBuilder().append("md.B(");
-            if (param0 == null) {
+            if (applet == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";
             }
-            StringBuilder stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',');
-            if (param2 == null) {
+            StringBuilder stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(',');
+            if (relativeUrl == null) {
               stackIn_12_2 = "null";
             } else {
               stackIn_12_2 = "{...}";
@@ -76,12 +76,12 @@ final class md extends SingleChildContainer {
         }
     }
 
-    md(UiComponent param0) {
+    AlphaContainer(UiComponent param0) {
         super(param0.x, param0.y, param0.width, param0.height, (WidgetPainter) null, (UiListener) null);
         try {
           param0.setBounds(this.width, 0, 0, true, this.height);
           this.child = param0;
-          this.field_F = 256;
+          this.alpha = 256;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "md.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -101,10 +101,10 @@ final class md extends SingleChildContainer {
         if (null == this.child) {
           return;
         }
-        if (this.field_F == 0) {
+        if (this.alpha == 0) {
           return;
         }
-        if (this.field_F == 256) {
+        if (this.alpha == 256) {
           this.child.drawLayer(this.y + screenY, (byte) 95, layer, this.x + screenX);
           return;
         }
@@ -113,12 +113,12 @@ final class md extends SingleChildContainer {
         this.child.drawLayer(0, (byte) 91, layer, 0);
         if (guard >= 85) {
           dl.a((byte) 107);
-          var6.drawAlpha(this.x + screenX, this.y + screenY, this.field_F);
+          var6.drawAlpha(this.x + screenX, this.y + screenY, this.alpha);
           return;
         }
         field_H = (String) null;
         dl.a((byte) 107);
-        var6.drawAlpha(this.x + screenX, this.y + screenY, this.field_F);
+        var6.drawAlpha(this.x + screenX, this.y + screenY, this.alpha);
     }
 
     static {

@@ -20,14 +20,14 @@ final class b {
             if (null != IsaacRandom.field_d &&
               IsaacRandom.field_d.field_c) {
               ri.a(-25123);
-              pn.field_pb.b(new tm(pn.field_pb, ThreeSliceButtonPainter.field_A), 69);
+              AccountRequestDialog.field_pb.pushPanel(new AccountNoticeDialog(AccountRequestDialog.field_pb, ThreeSliceButtonPainter.field_A), 69);
             }
             return;
           }
-          pn.field_pb.handlePointerFrame(true, (byte) -33, on.field_a, DebouncedValidator.field_b);
-          pn.field_pb.m(0);
-          while (pn.p(-104)) {
-            pn.field_pb.handleKey(jc.field_c, PasswordValidator.field_n, (byte) -121);
+          AccountRequestDialog.field_pb.handlePointerFrame(true, (byte) -33, on.field_a, DebouncedValidator.field_b);
+          AccountRequestDialog.field_pb.updatePanels(0);
+          while (AccountRequestDialog.pollKeyEvent(-104)) {
+            AccountRequestDialog.field_pb.handleKey(jc.field_c, PasswordValidator.field_n, (byte) -121);
           }
           if (param0 < -31) {
             return;

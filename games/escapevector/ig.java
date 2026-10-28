@@ -33,7 +33,7 @@ final class ig {
             boolean stackIn_6_0 = !(param0 > param1);
             boolean var6 = stackIn_6_0;
             if (!var6) {
-              param2 = jm.field_M;
+              param2 = StripedProgressBar.field_M;
             }
           }
           String stackIn_10_0 = (String) (param2);
@@ -92,12 +92,12 @@ final class ig {
             this.b((byte) 44);
           }
           if (aj.b(-117)) {
-            var9 = new String[]{IntrusiveDeque.field_e, bb.field_O};
+            var9 = new String[]{IntrusiveDeque.field_e, ModalPanel.field_O};
             var10 = new int[]{1, 2};
             var5 = new int[]{this.field_n, this.field_e};
           } else {
             var5 = new int[]{this.field_e};
-            var9 = new String[]{bb.field_O};
+            var9 = new String[]{ModalPanel.field_O};
             var10 = new int[]{1};
           }
           int var11 = var9.length;
@@ -579,7 +579,7 @@ final class ig {
         this.i(-30234);
         int var4 = ua.field_c.a(29386, this.field_a);
         if (!var2) {
-          this.field_d = tm.c(10, var4, this.field_a);
+          this.field_d = AccountNoticeDialog.c(10, var4, this.field_a);
         }
         int var5 = 10;
         this.a((byte) 51, var3, var5);
@@ -650,7 +650,7 @@ final class ig {
         wc var6 = di.field_d;
         int var3 = var6.field_h;
         int var4 = je.a(false, this.field_a);
-        while (pn.p(-113)) {
+        while (AccountRequestDialog.pollKeyEvent(-113)) {
           var6.a(100);
           if (PasswordValidator.field_n == 96 ||
             PasswordValidator.field_n == 98) {
@@ -678,7 +678,7 @@ final class ig {
             } else if (this.field_s == var3) {
               var6.a(false, this.field_e);
             } else if (var3 != this.field_f) {
-              var6.a(false, h.a(this.field_a, (byte) 121));
+              var6.a(false, LoginForm.a(this.field_a, (byte) 121));
             } else {
               var6.a(false, this.field_e);
             }
@@ -709,7 +709,7 @@ final class ig {
               this.field_s >= 0) {
               var6.a(false, this.field_s);
             } else if (this.field_f != var3) {
-              var6.a(false, h.a(this.field_a, (byte) 121));
+              var6.a(false, LoginForm.a(this.field_a, (byte) 121));
             } else {
               var6.a(false, 0);
             }
@@ -723,7 +723,7 @@ final class ig {
             return;
           }
         }
-        var6.a(this.a(ng.field_ob, 12089, sf.field_c), (byte) 126, this.a(UiContainer.field_y, 12089, dh.field_d));
+        var6.a(this.a(LoginDialog.field_ob, 12089, sf.field_c), (byte) 126, this.a(UiContainer.field_y, 12089, dh.field_d));
         boolean discarded$0 = this.a(true, -89);
         this.c((byte) 86);
         this.g(param0 ^ -2493);
@@ -738,7 +738,7 @@ final class ig {
           String var6 = GameAppletShell.field_f;
           var4 = var6;
           if (aj.b(-97)) {
-            var4 = var6 + "<br>" + jf.field_O + " " + fk.field_c;
+            var4 = var6 + "<br>" + AccountTermsPanel.field_O + " " + fk.field_c;
           }
         }
         if (var4 != null) {
@@ -786,7 +786,7 @@ final class ig {
           int[] var12 = ValidationIndicator.field_E[this.field_a];
           int var13 = var12.length;
           int var14 = je.a(false, this.field_a);
-          int var15 = ki.field_M[this.field_a];
+          int var15 = LabeledField.field_M[this.field_a];
           this.field_j = new LegacyButton[-var15 + var14];
           int var16 = ua.field_c.a(29386, this.field_a);
           int var17 = 0;

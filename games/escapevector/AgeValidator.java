@@ -105,7 +105,7 @@ final class AgeValidator extends TextFieldValidator {
           if (this.validateText(-1, text) != ArchiveProvider.field_a) {
             return null;
           }
-          String stackIn_3_0 = tb.field_E;
+          String stackIn_3_0 = ModalStack.field_E;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

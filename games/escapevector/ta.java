@@ -233,7 +233,7 @@ final class ta {
           int var6 = param2.stringWidth(kg.field_a + " ");
           int var7 = param2.stringWidth("" + ProxySocketConnector.field_t[var5_int]);
           int var8 = var6 + var7;
-          int var9 = param2.stringWidth(vg.field_T + " ");
+          int var9 = param2.stringWidth(ResizableModalPanel.field_T + " ");
           int var10 = param2.stringWidth("" + ProxySocketConnector.field_s[var5_int]);
           int var11 = var10 + var9;
           int stackIn_7_0 = (var11 > var8) ? var11 : var8;
@@ -389,7 +389,7 @@ final class ta {
 
     private final boolean k(int param0) {
         boolean var2 = false;
-        if (pn.p(-98)) {
+        if (AccountRequestDialog.pollKeyEvent(-98)) {
           di.field_d.a(118);
           qk.a(this.field_t, 0);
           if (PasswordValidator.field_n == 13) {
@@ -621,7 +621,7 @@ final class ta {
     }
 
     private final boolean h(byte param0) {
-        di.field_d.a(this.a(-3, sf.field_c, ng.field_ob), (byte) 119, this.a(-3, dh.field_d, UiContainer.field_y));
+        di.field_d.a(this.a(-3, sf.field_c, LoginDialog.field_ob), (byte) 119, this.a(-3, dh.field_d, UiContainer.field_y));
         this.a(20364);
         boolean var2 = (this.a((byte) -91, true, Js5NetworkRequest.a((byte) 15, -1)));
         int var3 = -122 / ((param0 - 73) / 47);
@@ -687,7 +687,7 @@ final class ta {
           int var7 = 10551200;
           String var8 = kg.field_a + " ";
           String var9 = "" + ProxySocketConnector.field_t[var3_int];
-          String var10 = vg.field_T + " ";
+          String var10 = ResizableModalPanel.field_T + " ";
           String var11 = "" + ProxySocketConnector.field_s[var3_int];
           int var12 = (640 + param1.fullWidth) / param0;
           int var13 = -var12 + (this.field_n.field_g + this.field_n.field_j);
@@ -731,12 +731,12 @@ final class ta {
         }
         var5.bindAsFramebuffer();
         nm.a((byte) -103, -1, var7);
-        md.field_D.a(124);
+        AlphaContainer.field_D.a(124);
         SoftwareRasterizer.restoreClip(var20);
         var5.trimTransparentEdges();
         int var8 = IterableNodeHashTable.minimumButtonX(var7, (byte) 26);
         int var9 = on.a(var7, -49);
-        int var10 = vg.a(var7, (byte) -122);
+        int var10 = ResizableModalPanel.minimumButtonY(var7, (byte) -122);
         int var11 = pb.a((byte) 2, var7);
         var5.fullHeight = var11 - var10;
         var5.offsetX = var5.offsetX - var8;
@@ -916,7 +916,7 @@ final class ta {
           int var6 = 6340704;
           String var7 = ResourceArchive.field_f[var3_int];
           if (!this.a(var3_int, 6144)) {
-            stackIn_9_0 = he.field_q;
+            stackIn_9_0 = StatefulTextPainter.field_q;
           } else {
             stackIn_9_0 = bg.field_d;
           }

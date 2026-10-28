@@ -61,7 +61,7 @@ final class ClientException extends RuntimeException {
             EmailValidationError stackIn_7_0 = EmailAvailabilityRequest.field_c;
             return stackIn_7_0;
           }
-          String[] var3 = bb.a(-128, param0, '.');
+          String[] var3 = ModalPanel.splitString(-128, param0, '.');
           if (var3.length < 2) {
             EmailValidationError stackIn_10_0 = ResourceArchive.field_d;
             return stackIn_10_0;

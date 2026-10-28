@@ -57,8 +57,8 @@ final class ke {
               return false;
             }
           }
-          int var4 = tm.field_fb[param0] + (pc.field_c[param0] + RasterSnapshot.field_k[param0]);
-          int var5 = pc.field_c[param2] - (-RasterSnapshot.field_k[param2] - tm.field_fb[param2]);
+          int var4 = AccountNoticeDialog.field_fb[param0] + (pc.field_c[param0] + RasterSnapshot.field_k[param0]);
+          int var5 = pc.field_c[param2] - (-RasterSnapshot.field_k[param2] - AccountNoticeDialog.field_fb[param2]);
           if (var4 < var5) {
             return true;
           }
@@ -80,8 +80,8 @@ final class ke {
           if (DualLinkNode.field_k[param0] > DualLinkNode.field_k[param2]) {
             return false;
           }
-          int var4Lifetime1 = tm.field_fb[param0] + (pc.field_c[param0] + RasterSnapshot.field_k[param0]);
-          int var5Lifetime1 = pc.field_c[param2] - (-RasterSnapshot.field_k[param2] - tm.field_fb[param2]);
+          int var4Lifetime1 = AccountNoticeDialog.field_fb[param0] + (pc.field_c[param0] + RasterSnapshot.field_k[param0]);
+          int var5Lifetime1 = pc.field_c[param2] - (-RasterSnapshot.field_k[param2] - AccountNoticeDialog.field_fb[param2]);
           if (var4Lifetime1 < var5Lifetime1) {
             return true;
           }
@@ -102,8 +102,8 @@ final class ke {
         if (Bzip2State.field_v[param2] < Bzip2State.field_v[param0]) {
           return false;
         }
-        int var4Lifetime2 = tm.field_fb[param0] + (pc.field_c[param0] + RasterSnapshot.field_k[param0]);
-        int var5Lifetime2 = pc.field_c[param2] - (-RasterSnapshot.field_k[param2] - tm.field_fb[param2]);
+        int var4Lifetime2 = AccountNoticeDialog.field_fb[param0] + (pc.field_c[param0] + RasterSnapshot.field_k[param0]);
+        int var5Lifetime2 = pc.field_c[param2] - (-RasterSnapshot.field_k[param2] - AccountNoticeDialog.field_fb[param2]);
         if (var4Lifetime2 < var5Lifetime2) {
           return true;
         }

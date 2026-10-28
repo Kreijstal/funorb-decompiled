@@ -34,7 +34,7 @@ final class EmailAvailabilityRequest {
               return true;
             }
           }
-          char[] var2Lifetime1 = pn.field_nb;
+          char[] var2Lifetime1 = AccountRequestDialog.field_nb;
           for (int var3Lifetime1 = 0; var2Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
             int var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (var4Lifetime1 == param0) {

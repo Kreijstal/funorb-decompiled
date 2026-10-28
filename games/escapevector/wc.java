@@ -89,7 +89,7 @@ final class wc {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 == 0) {
           int var6 = this.a((byte) 113, param2, dh.field_d, param3, param4, UiContainer.field_y, param1);
-          int var7 = this.a((byte) 124, param2, sf.field_c, param3, param4, ng.field_ob, param1);
+          int var7 = this.a((byte) 124, param2, sf.field_c, param3, param4, LoginDialog.field_ob, param1);
           this.a(var7, (byte) 118, var6);
           return;
         }
@@ -292,16 +292,16 @@ final class wc {
         this.field_i = 0;
         this.field_e = false;
         this.field_c = 0;
-        if (0 != qi.field_N) {
-          this.field_a = qi.field_N;
-          this.field_g = qi.field_N;
-          this.field_i = qi.field_N;
+        if (0 != AccountMessagePanel.field_N) {
+          this.field_a = AccountMessagePanel.field_N;
+          this.field_g = AccountMessagePanel.field_N;
+          this.field_i = AccountMessagePanel.field_N;
           this.field_j = true;
           this.field_h = param0;
           this.field_f = FullscreenFocusCanvas.field_h;
         }
         if (this.field_a == 0) {
-          if (qi.field_N == 0) {
+          if (AccountMessagePanel.field_N == 0) {
             if (DialWidget.field_K != 0) {
               if (param1 < 116) {
                 return;
@@ -333,15 +333,15 @@ final class wc {
           }
         } else if (DialWidget.field_K != 0) {
           if (0 >= this.field_f) {
-            this.field_f = l.field_H;
+            this.field_f = AccountChoicePanel.field_H;
             this.field_g = this.field_a;
           }
           this.field_f = this.field_f - 1;
-          if (qi.field_N == 0 &&
+          if (AccountMessagePanel.field_N == 0 &&
             DialWidget.field_K == 0) {
             this.field_a = 0;
           }
-        } else if (qi.field_N == 0 &&
+        } else if (AccountMessagePanel.field_N == 0 &&
           DialWidget.field_K == 0) {
           this.field_a = 0;
         }

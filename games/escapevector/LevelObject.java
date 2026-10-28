@@ -85,7 +85,7 @@ final class LevelObject extends IntrusiveNode {
 
     private final SpriteOffset getDisplayOffset(boolean guard) {
         try {
-          ObjectSpriteSet[] var2 = w.c(false);
+          ObjectSpriteSet[] var2 = LoadingProgressDialog.objectSpriteSets(false);
           if (!guard) {
             SpriteOffset stackIn_2_0 = (SpriteOffset) null;
             return stackIn_2_0;
@@ -143,7 +143,7 @@ final class LevelObject extends IntrusiveNode {
           if (guard != 0) {
             LevelObject.a(22, (byte) 101);
           }
-          ObjectSpriteSet[] var2 = w.c(false);
+          ObjectSpriteSet[] var2 = LoadingProgressDialog.objectSpriteSets(false);
           if (null == var2) {
             Object stackIn_7_0 = null;
             return (Sprite) (stackIn_7_0);
@@ -371,7 +371,7 @@ final class LevelObject extends IntrusiveNode {
             if (param0 == 2) {
               String var2_ref = "vengeance_intro";
               String var3 = "scene";
-              Sprite[] var4 = tm.field_cb;
+              Sprite[] var4 = AccountNoticeDialog.field_cb;
               String[] var5 = LegacyMenuColumn.field_o;
               DialogueScreen var6 = new DialogueScreen(var2_ref, var3, var4, var5, true);
               GradientOutlineTextPainter.enqueueDialogue(1820, var6);

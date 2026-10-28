@@ -626,7 +626,7 @@ final class ak {
         if (var3) {
           return (var3);
         }
-        di.field_d.a(this.c(sf.field_c, -1, ng.field_ob), (byte) 120, this.c(dh.field_d, -1, UiContainer.field_y));
+        di.field_d.a(this.c(sf.field_c, -1, LoginDialog.field_ob), (byte) 120, this.c(dh.field_d, -1, UiContainer.field_y));
         this.c(false);
         boolean var3Lifetime1 = (this.a(true, Js5NetworkRequest.a((byte) 15, -1), (byte) 79));
         return (var3Lifetime1);
@@ -788,7 +788,7 @@ final class ak {
           this.a(-127, 66, (String) null, (byte) -74);
         }
         boolean var2 = false;
-        while (pn.p(-110)) {
+        while (AccountRequestDialog.pollKeyEvent(-110)) {
           di.field_d.a(127);
           qk.a(this.field_a, param0 ^ 3);
           if (PasswordValidator.field_n == 13) {

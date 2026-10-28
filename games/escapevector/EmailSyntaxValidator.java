@@ -17,7 +17,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           ei.field_i = false;
           DraggableWidget.field_F = false;
           if (be.field_b != null) {
-            if (!be.field_b.field_G) {
+            if (!be.field_b.open) {
               return;
             }
             boolean var3_int = true;
@@ -29,7 +29,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               } else {
                 param2 = IndexedSpriteState.field_c;
               }
-              PcmResampler.field_d.a(StrongCacheEntry.field_v, (byte) 106);
+              PcmResampler.field_d.setIdentifier(StrongCacheEntry.field_v, (byte) 106);
             }
             if (param0 == 10) {
               ui.a(90);
@@ -39,17 +39,17 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               if (DraggableWidget.field_F) {
                 param2 = SingleChildContainer.a(QuickChatPhraseDefinition.field_y, param1 - 146, new String[]{param2});
               }
-              if (ha.field_a) {
+              if (LinkButtonPainter.field_a) {
                 param2 = LegacyTextBlock.field_l;
               }
-              be.field_b.a(param2, -1, param0);
+              be.field_b.showResponseMessage(param2, -1, param0);
             }
             if (256 != param0) {
               if (param0 == 10) {
                 return;
               }
               if (!DialWidget.field_H) {
-                PcmResampler.field_d.h((byte) -128);
+                PcmResampler.field_d.clearCredentials((byte) -128);
                 return;
               }
             }

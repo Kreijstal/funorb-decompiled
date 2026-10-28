@@ -15,11 +15,11 @@ final class ShipHullGeometry {
     static boolean field_h;
 
     final static void b(int param0) {
-        if (bo.field_F != null) {
-          bo.field_F.p(0);
+        if (Checkbox.field_F != null) {
+          Checkbox.field_F.refreshPanelVisibility(0);
         }
         if (ProxySocketConnector.field_r != null) {
-          ProxySocketConnector.field_r.d(true);
+          ProxySocketConnector.field_r.setStopAnimatingWhenNormal(true);
         }
         if (param0 != 0) {
           TriangleMesh var2 = (TriangleMesh) null;
@@ -79,7 +79,7 @@ final class ShipHullGeometry {
           int[] var41 = var49;
           int[] var8 = var41;
           int[] var64 = new int[param5.normalCount];
-          int[] var62 = oi.field_L;
+          int[] var62 = DisplayNameForm.field_L;
           int[] var63 = IsaacRandom.field_f;
           int[] var61 = GameplaySession.field_xb;
           for (int var13 = 0; param5.normalCount > var13; var13++) {
@@ -108,19 +108,19 @@ final class ShipHullGeometry {
             int var15Lifetime1 = param5.faceVertexA[var14Lifetime1];
             int var16 = param5.faceVertexB[var14Lifetime1];
             int var17 = param5.faceVertexC[var14Lifetime1];
-            if (param5.faceNormalA[var14Lifetime1] >= oi.field_L.length) {
+            if (param5.faceNormalA[var14Lifetime1] >= DisplayNameForm.field_L.length) {
               stackIn_26_0 = -1;
             } else {
               stackIn_26_0 = param5.faceNormalA[var14Lifetime1];
             }
             int var18 = stackIn_26_0;
-            if (param5.faceNormalB[var14Lifetime1] >= oi.field_L.length) {
+            if (param5.faceNormalB[var14Lifetime1] >= DisplayNameForm.field_L.length) {
               stackIn_29_0 = -1;
             } else {
               stackIn_29_0 = param5.faceNormalB[var14Lifetime1];
             }
             int var19 = stackIn_29_0;
-            if (param5.faceNormalC[var14Lifetime1] < oi.field_L.length) {
+            if (param5.faceNormalC[var14Lifetime1] < DisplayNameForm.field_L.length) {
               stackIn_32_0 = param5.faceNormalC[var14Lifetime1];
             } else {
               stackIn_32_0 = -1;

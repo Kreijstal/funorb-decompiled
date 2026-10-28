@@ -6,7 +6,7 @@ import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
     static boolean field_p;
-    static w field_r;
+    static LoadingProgressDialog field_r;
     static Sprite field_w;
     static String[] field_o;
     private java.net.ProxySelector proxySelector;

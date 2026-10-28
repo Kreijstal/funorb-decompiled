@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends UiContainer implements ButtonListener {
+final class AccountMessagePanel extends UiContainer implements ButtonListener {
     static Sprite[][] field_M;
     static PcmSample field_J;
-    private int field_H;
+    private int buttonCount;
     static QuickChatDynamicCommand field_P;
-    private pn field_K;
+    private AccountRequestDialog requestDialog;
     static int field_N;
-    private String field_G;
-    private TextButton[] field_I;
-    private int[] field_O;
-    private BitmapFont field_L;
+    private String message;
+    private TextButton[] buttons;
+    private int[] buttonActions;
+    private BitmapFont messageFont;
 
-    final static void a(int param0, boolean param1) {
-        if (!param1) {
+    final static void setTickRate(int ticksPerSecond, boolean guard) {
+        if (!guard) {
           field_M = (Sprite[][]) null;
         }
-        sn.field_d = 1000000000L / (long)param0;
+        sn.field_d = 1000000000L / (long)ticksPerSecond;
     }
 
     public static void releaseStatics(int guard) {
@@ -29,54 +29,54 @@ final class qi extends UiContainer implements ButtonListener {
         field_M = (Sprite[][]) null;
     }
 
-    final void a(boolean param0, String param1, int param2) {
-        if (param0) {
+    final void appendActionButton(boolean guard, String label, int action) {
+        if (guard) {
           return;
         }
         try {
-          int var4_int = this.field_H;
-          this.a(1 + var4_int, 106);
-          this.field_I[var4_int] = this.a((UiListener) (this), (byte) -67, param1);
-          this.field_O[var4_int] = param2;
+          int var4_int = this.buttonCount;
+          this.ensureButtonCapacity(1 + var4_int, 106);
+          this.buttons[var4_int] = this.appendButton((UiListener) (this), (byte) -67, label);
+          this.buttonActions[var4_int] = action;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "qi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "qi.F(" + guard + ',' + (label != null ? "{...}" : "null") + ',' + action + ')');
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void ensureButtonCapacity(int capacity, int guard) {
         int var6 = EscapeVector.obfuscationControl;
-        if (param0 <= this.field_H) {
+        if (capacity <= this.buttonCount) {
           return;
         }
-        TextButton[] var7 = new TextButton[param0];
+        TextButton[] var7 = new TextButton[capacity];
         TextButton[] var3 = var7;
-        int[] var4 = new int[param0];
-        for (int var5 = 0; this.field_H > var5; var5++) {
-          var7[var5] = this.field_I[var5];
-          var4[var5] = this.field_O[var5];
+        int[] var4 = new int[capacity];
+        for (int var5 = 0; this.buttonCount > var5; var5++) {
+          var7[var5] = this.buttons[var5];
+          var4[var5] = this.buttonActions[var5];
         }
-        this.field_I = var3;
-        this.field_O = var4;
-        this.field_H = param0;
-        if (param1 < 98) {
+        this.buttons = var3;
+        this.buttonActions = var4;
+        this.buttonCount = capacity;
+        if (guard < 98) {
           field_N = -54;
         }
     }
 
-    final TextButton a(UiListener param0, byte param1, String param2) {
+    final TextButton appendButton(UiListener listener, byte guard, String label) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
-          TextButton var4 = new TextButton(param2, param0);
+          TextButton var4 = new TextButton(label, listener);
           var4.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           int var5 = this.height - 2;
-          if (param1 != -67) {
+          if (guard != -67) {
             byte[] var6 = (byte[]) null;
-            qi.a(114, 51, (byte[]) null, (byte) 116);
+            AccountMessagePanel.decodeCp1252(114, 51, (byte[]) null, (byte) 116);
           }
           this.setBounds(this.width, 0, 0, true, this.height + 34);
           var4.setBounds(this.width - 14, var5, 7, true, 30);
-          this.b(var4, false);
+          this.addChild(var4, false);
           TextButton stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,13 +84,13 @@ final class qi extends UiContainer implements ButtonListener {
           RuntimeException var4_ref = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var4_ref;
           StringBuilder stackIn_6_1 = new StringBuilder().append("qi.B(");
-          if (param0 == null) {
+          if (listener == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(',');
+          if (label == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -99,14 +99,14 @@ final class qi extends UiContainer implements ButtonListener {
         }
     }
 
-    qi(pn param0, BitmapFont param1, String param2) {
+    AccountMessagePanel(AccountRequestDialog param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (WidgetPainter) null);
-        this.field_H = 0;
+        this.buttonCount = 0;
         try {
-          this.field_G = param2;
-          this.field_L = param1;
-          this.field_K = param0;
-          int var4_int = this.field_G == null ? 0 : this.field_L.paragraphHeight(this.field_G, 260, this.field_L.maxAscent);
+          this.message = param2;
+          this.messageFont = param1;
+          this.requestDialog = param0;
+          int var4_int = this.message == null ? 0 : this.messageFont.paragraphHeight(this.message, 260, this.messageFont.maxAscent);
           this.setBounds(288, 0, 0, true, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -121,16 +121,16 @@ final class qi extends UiContainer implements ButtonListener {
           if (guard != 1) {
             return;
           }
-          while (var6_int < this.field_H) {
-            if (this.field_I[var6_int] != button) {
+          while (var6_int < this.buttonCount) {
+            if (this.buttons[var6_int] != button) {
               var6_int++;
               continue;
             }
-            int var7 = this.field_O[var6_int];
+            int var7 = this.buttonActions[var6_int];
             if (var7 != -1) {
-              WhirlpoolHasher.a(this.field_O[var6_int], 57);
+              WhirlpoolHasher.a(this.buttonActions[var6_int], 57);
             } else {
-              this.field_K.o(-18861);
+              this.requestDialog.closeDialog(-18861);
             }
             break;
           }
@@ -149,7 +149,7 @@ final class qi extends UiContainer implements ButtonListener {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawUnevenFrame(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param3 >= 0 &&
           mh.field_a[param3 * 8] == 0) {
           mh.field_a[param3 * 8] = (int)(Math.random() * (double)(param1 + (10 - param6)) * 0.06) + 2;
@@ -202,23 +202,23 @@ final class qi extends UiContainer implements ButtonListener {
 
     final void drawLayer(int screenY, byte guard, int layer, int screenX) {
         if (guard <= 85) {
-          qi.a(-30, 97, 116, 20, 118, -63, -60, -67, 114);
+          AccountMessagePanel.drawUnevenFrame(-30, 97, 116, 20, 118, -63, -60, -67, 114);
         }
         super.drawLayer(screenY, (byte) 103, layer, screenX);
-        this.field_L.drawParagraph(this.field_G, 14 + (this.x + screenX), 10 + screenY + this.y, -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_L.maxAscent);
+        this.messageFont.drawParagraph(this.message, 14 + (this.x + screenX), 10 + screenY + this.y, -28 + this.width, this.height, 16777215, -1, 0, 0, this.messageFont.maxAscent);
     }
 
-    final static String a(int param0, int param1, byte[] param2, byte param3) {
+    final static String decodeCp1252(int length, int offset, byte[] bytes, byte guard) {
         String stackIn_18_2 = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
-          char[] var12 = new char[param0];
+          char[] var12 = new char[length];
           char[] var11 = var12;
           char[] var4 = var11;
           int var5 = 0;
-          int var7 = -38 / ((61 - param3) / 36);
-          for (int var6 = 0; var6 < param0; var6++) {
-            int var8 = param2[param1 + var6] & 255;
+          int var7 = -38 / ((61 - guard) / 36);
+          for (int var6 = 0; var6 < length; var6++) {
+            int var8 = bytes[offset + var6] & 255;
             if (var8 != 0) {
               if (var8 >= 128 &&
                 var8 < 160) {
@@ -239,13 +239,13 @@ final class qi extends UiContainer implements ButtonListener {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4_ref = decompiledCaughtException;
           RuntimeException stackIn_17_0 = var4_ref;
-          StringBuilder stackIn_17_1 = new StringBuilder().append("qi.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_17_1 = new StringBuilder().append("qi.C(").append(length).append(',').append(offset).append(',');
+          if (bytes == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(guard).append(')').toString());
         }
     }
 

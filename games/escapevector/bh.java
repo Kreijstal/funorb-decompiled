@@ -44,21 +44,21 @@ final class bh extends vj {
     final fk a(byte param0) {
         if (param0 != 32) {
           bh.a(true, 70);
-          return md.field_E;
+          return AlphaContainer.field_E;
         }
-        return md.field_E;
+        return AlphaContainer.field_E;
     }
 
     final static String a(int param0, long param1) {
         if (param0 < -73) {
-          he.field_s.setTime(new Date(param1));
-          int var3 = he.field_s.get(7);
-          int var4 = he.field_s.get(5);
-          int var5 = he.field_s.get(2);
-          int var6 = he.field_s.get(1);
-          int var7 = he.field_s.get(11);
-          int var8 = he.field_s.get(12);
-          int var9 = he.field_s.get(13);
+          StatefulTextPainter.field_s.setTime(new Date(param1));
+          int var3 = StatefulTextPainter.field_s.get(7);
+          int var4 = StatefulTextPainter.field_s.get(5);
+          int var5 = StatefulTextPainter.field_s.get(2);
+          int var6 = StatefulTextPainter.field_s.get(1);
+          int var7 = StatefulTextPainter.field_s.get(11);
+          int var8 = StatefulTextPainter.field_s.get(12);
+          int var9 = StatefulTextPainter.field_s.get(13);
           return SingleChildContainer.field_A[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + bg.field_g[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;

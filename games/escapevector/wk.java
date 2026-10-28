@@ -40,9 +40,9 @@ final class wk {
           !(RasterSnapshot.field_k.length >= param0)) {
           RasterSnapshot.field_k = new int[2 * param0];
         }
-        if (tm.field_fb == null ||
-          !(tm.field_fb.length >= param0)) {
-          tm.field_fb = new int[2 * param0];
+        if (AccountNoticeDialog.field_fb == null ||
+          !(AccountNoticeDialog.field_fb.length >= param0)) {
+          AccountNoticeDialog.field_fb = new int[2 * param0];
         }
         if (null == Bzip2State.field_v ||
           !(param0 <= Bzip2State.field_v.length)) {
@@ -57,7 +57,7 @@ final class wk {
           dj.field_a = new boolean[2 * param0];
         }
         pl.field_r = -2147483648;
-        jf.field_J = 0;
+        AccountTermsPanel.field_J = 0;
         ArchiveRequest.field_t = -2147483648;
         TextLayout.field_d = 2147483647;
         TextLayoutLine.field_e = 2147483647;
@@ -175,7 +175,7 @@ final class wk {
             var6.field_m = BufferedRandomAccessFile.a(param1, 16, var6.field_m, -1);
           }
           if (da.a(param1, (byte) -102)) {
-            var6.field_n = jm.a(16, 118, param1, var6.field_n);
+            var6.field_n = StripedProgressBar.readPackedByteArray(16, 118, param1, var6.field_n);
             int var7 = 0;
             for (int var8 = 0; var8 < var6.field_n.length; var8++) {
               if ((255 & var6.field_n[var8]) > var7) {

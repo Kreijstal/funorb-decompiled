@@ -86,14 +86,14 @@ final class ui {
     final static void a(int param0) {
         if (be.field_b == null) {
           int var1 = -22 / ((param0 - 26) / 51);
-          rc.field_b = new oi();
-          rd.field_c.a(rc.field_b, 30);
+          rc.field_b = new DisplayNameForm();
+          rd.field_c.transitionToContent(rc.field_b, 30);
           return;
         }
-        be.field_b.o(-18861);
+        be.field_b.closeDialog(-18861);
         int var1Lifetime1 = -22 / ((param0 - 26) / 51);
-        rc.field_b = new oi();
-        rd.field_c.a(rc.field_b, 30);
+        rc.field_b = new DisplayNameForm();
+        rd.field_c.transitionToContent(rc.field_b, 30);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {

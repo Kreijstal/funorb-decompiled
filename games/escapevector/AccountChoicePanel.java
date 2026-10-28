@@ -1,35 +1,35 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class l extends UiContainer implements ButtonListener {
-    private TextButton field_J;
+final class AccountChoicePanel extends UiContainer implements ButtonListener {
+    private TextButton guestButton;
     static int field_H;
-    private TextButton field_G;
-    private TextButton field_I;
+    private TextButton backButton;
+    private TextButton createAccountButton;
 
-    public l() {
+    public AccountChoicePanel() {
         super(0, 0, 476, 225, (WidgetPainter) null);
-        this.field_I = new TextButton(pc.field_g, (UiListener) null);
-        this.field_G = new TextButton(CipherPacketBuffer.field_p, (UiListener) null);
-        this.field_J = new TextButton(cj.field_c, (UiListener) null);
+        this.createAccountButton = new TextButton(pc.field_g, (UiListener) null);
+        this.backButton = new TextButton(CipherPacketBuffer.field_p, (UiListener) null);
+        this.guestButton = new TextButton(cj.field_c, (UiListener) null);
         ThreeSliceButtonPainter var1 = new ThreeSliceButtonPainter();
-        this.field_I.painter = (WidgetPainter) ((Object) var1);
-        this.field_G.painter = (WidgetPainter) ((Object) var1);
-        this.field_J.painter = (WidgetPainter) ((Object) var1);
+        this.createAccountButton.painter = (WidgetPainter) ((Object) var1);
+        this.backButton.painter = (WidgetPainter) ((Object) var1);
+        this.guestButton.painter = (WidgetPainter) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_G.setBounds(var4, this.height - (48 + var2), -var3 + this.width >> 1, true, 30);
-        this.field_J.setBounds(var4, -48 + (this.height - var2), (this.width - var3 >> 1) + (var4 + var2), true, 30);
-        this.field_I.setBounds(var3, -78 + (this.height - 2 * var2), -var3 + this.width >> 1, true, 30);
-        this.field_G.listener = (UiListener) (this);
-        this.field_I.listener = (UiListener) (this);
-        this.field_J.listener = (UiListener) (this);
-        this.field_I.tooltip = mm.field_c;
-        this.field_J.tooltip = lf.field_G;
-        this.b(this.field_G, false);
-        this.b(this.field_I, false);
-        this.b(this.field_J, false);
+        this.backButton.setBounds(var4, this.height - (48 + var2), -var3 + this.width >> 1, true, 30);
+        this.guestButton.setBounds(var4, -48 + (this.height - var2), (this.width - var3 >> 1) + (var4 + var2), true, 30);
+        this.createAccountButton.setBounds(var3, -78 + (this.height - 2 * var2), -var3 + this.width >> 1, true, 30);
+        this.backButton.listener = (UiListener) (this);
+        this.createAccountButton.listener = (UiListener) (this);
+        this.guestButton.listener = (UiListener) (this);
+        this.createAccountButton.tooltip = mm.field_c;
+        this.guestButton.tooltip = ValidationHelpWidget.field_G;
+        this.addChild(this.backButton, false);
+        this.addChild(this.createAccountButton, false);
+        this.addChild(this.guestButton, false);
     }
 
     final void drawLayer(int screenY, byte guard, int layer, int screenX) {
@@ -40,7 +40,7 @@ final class l extends UiContainer implements ButtonListener {
           super.drawLayer(screenY, (byte) 99, layer, screenX);
           return;
         }
-        this.field_J = (TextButton) null;
+        this.guestButton = (TextButton) null;
         int var5Lifetime1 = this.x + screenX;
         int var6Lifetime1 = screenY + this.y;
         Js5Transport.field_a.drawParagraph(MarkerSlider.field_F, var5Lifetime1 + 20, var6Lifetime1 + 20, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Js5Transport.field_a.maxAscent);
@@ -71,17 +71,17 @@ final class l extends UiContainer implements ButtonListener {
         String stackIn_14_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (this.field_G == button) {
+          if (this.backButton == button) {
             GameAppletShell.b(-74);
-          } else if (this.field_I == button) {
+          } else if (this.createAccountButton == button) {
             fe.a((byte) -83);
-          } else if (this.field_J == button) {
+          } else if (this.guestButton == button) {
             bm.a(4);
           }
           if (guard == 1) {
             return;
           }
-          l.a((byte) -64);
+          AccountChoicePanel.a((byte) -64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,7 +104,7 @@ final class l extends UiContainer implements ButtonListener {
             return true;
           }
           if (keyCode == 98) {
-            boolean stackIn_6_0 = this.a((byte) 22, root);
+            boolean stackIn_6_0 = this.focusPreviousChild((byte) 22, root);
             return stackIn_6_0;
           }
           if (guard < 0) {
@@ -113,7 +113,7 @@ final class l extends UiContainer implements ButtonListener {
           if (keyCode != 99) {
             return false;
           }
-          boolean stackIn_13_0 = this.a(root, true);
+          boolean stackIn_13_0 = this.focusNextChild(root, true);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

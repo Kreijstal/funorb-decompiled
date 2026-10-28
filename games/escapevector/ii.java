@@ -6,9 +6,9 @@ final class ii {
     static String field_b;
 
     final static void a(byte param0, int param1) {
-        ng.field_pb = 3 & param1 >> 4;
-        if (2 < ng.field_pb) {
-          ng.field_pb = 2;
+        LoginDialog.field_pb = 3 & param1 >> 4;
+        if (2 < LoginDialog.field_pb) {
+          LoginDialog.field_pb = 2;
         }
         lh.field_d = 3 & param1 >> 2;
         vi.field_f = 3 & param1;

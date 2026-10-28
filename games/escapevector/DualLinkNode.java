@@ -55,7 +55,7 @@ class DualLinkNode extends IntrusiveNode {
         if (var3 == null) {
           return;
         }
-        Sprite[] var4 = jm.field_K;
+        Sprite[] var4 = StripedProgressBar.field_K;
         if (param0 != -1) {
           field_h = (String) null;
         }
@@ -87,7 +87,7 @@ class DualLinkNode extends IntrusiveNode {
         }
         try {
           NameSuggestionsPanel.field_N = param2;
-          he.field_y = param4;
+          StatefulTextPainter.field_y = param4;
           TrackerMusicDefinition.field_j = param5;
           ReflectionCheck.field_n = param6;
           kh.field_c = param0;

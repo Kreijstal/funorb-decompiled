@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi extends UiContainer implements NameSuggestionListener, ButtonListener {
-    private ValidatedTextWidget field_I;
+final class DisplayNameForm extends UiContainer implements NameSuggestionListener, ButtonListener {
+    private ValidatedTextWidget nameField;
     static Sprite field_O;
-    NameSuggestionsPanel field_K;
-    private TextButton field_G;
+    NameSuggestionsPanel suggestions;
+    private TextButton submitButton;
     static int[] field_M;
-    private TextButton field_H;
+    private TextButton cancelButton;
     static String field_J;
     static int[] field_L;
     static String field_N;
 
-    private final void j(int param0) {
-        if (!this.l(84)) {
+    private final void submitName(int guard) {
+        if (!this.canSubmit(84)) {
           return;
         }
-        ej.a((byte) -116, this.field_I.text);
-        if (param0 >= -118) {
+        ej.a((byte) -116, this.nameField.text);
+        if (guard >= -118) {
           String var3 = (String) null;
-          int discarded$0 = this.a(125, (String) null, 33, 115, (UiComponent) null, (String) null, 107);
+          int discarded$0 = this.appendValidatedField(125, (String) null, 33, 115, (UiComponent) null, (String) null, 107);
         }
     }
 
@@ -38,60 +38,60 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
         field_M = null;
     }
 
-    private final boolean l(int param0) {
-        if (!this.a(this.field_I, -95)) {
+    private final boolean canSubmit(int guard) {
+        if (!this.isValidField(this.nameField, -95)) {
           return false;
         }
-        if (param0 > 47) {
+        if (guard > 47) {
           return true;
         }
         String var3 = (String) null;
-        int discarded$0 = this.a(-69, (String) null, (UiComponent) null, -35, (byte) 72, (String) null);
+        int discarded$0 = this.appendStandardValidatedField(-69, (String) null, (UiComponent) null, -35, (byte) 72, (String) null);
         return true;
     }
 
-    private final int a(int param0, String param1, int param2, int param3, UiComponent param4, String param5, int param6) {
+    private final int appendValidatedField(int guard, String label, int helpHeight, int y, UiComponent field, String helpText, int fieldWidth) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
-          if (param0 != 23273) {
+          if (guard != 23273) {
             field_N = (String) null;
           }
-          ki var10 = new ki(20, param3, 120 + param6, 25, param4, false, 120, 3, Js5Transport.field_a, 16777215, param1);
-          this.b(var10, false);
-          lf var9 = new lf(((ValidationProvider) ((Object) param4)).validator((byte) -89), param5, 126, var10.height + param3, 25 + param6, param2);
+          LabeledField var10 = new LabeledField(20, y, 120 + fieldWidth, 25, field, false, 120, 3, Js5Transport.field_a, 16777215, label);
+          this.addChild(var10, false);
+          ValidationHelpWidget var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) field)).validator((byte) -89), helpText, 126, var10.height + y, 25 + fieldWidth, helpHeight);
           var9.listener = (UiListener) (this);
-          this.b(var9, false);
+          this.addChild(var9, false);
           int stackIn_3_0 = var10.height + var9.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var8;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("oi.E(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("oi.E(").append(guard).append(',');
+          if (label == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(helpHeight).append(',').append(y).append(',');
+          if (field == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param5 == null) {
+          if (helpText == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(fieldWidth).append(')').toString());
         }
     }
 
-    final static BinaryBitmapFont a(int param0, ResourceArchive param1, String param2, String param3, ResourceArchive param4) {
+    final static BinaryBitmapFont loadBinaryFont(int param0, ResourceArchive param1, String param2, String param3, ResourceArchive param4) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -140,26 +140,26 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
         if (guard != -61) {
           return;
         }
-        ((NameAvailabilityValidator) (this.field_I.validator((byte) -89))).clearCachedName(guard + 22247);
+        ((NameAvailabilityValidator) (this.nameField.validator((byte) -89))).clearCachedName(guard + 22247);
     }
 
     final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
         try {
           super.updateHover(guard, offsetY, offsetX, root);
-          this.field_G.enabled = this.l(guard + 14569);
+          this.submitButton.enabled = this.canSubmit(guard + 14569);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oi.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final boolean a(ValidationProvider param0, int param1) {
+    private final boolean isValidField(ValidationProvider field, int guard) {
         String stackIn_13_2 = null;
         try {
-          ValidationSource var3 = param0.validator((byte) -89);
+          ValidationSource var3 = field.validator((byte) -89);
           if (var3 == null) {
             return true;
           }
-          if (param1 > -92) {
+          if (guard > -92) {
             return true;
           }
           ValidationState var4 = var3.validationState(17124);
@@ -170,43 +170,43 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var3_ref;
           StringBuilder stackIn_12_1 = new StringBuilder().append("oi.F(");
-          if (param0 == null) {
+          if (field == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final int a(int param0, String param1, UiComponent param2, int param3, byte param4, String param5) {
+    private final int appendStandardValidatedField(int fieldWidth, String label, UiComponent field, int y, byte guard, String helpText) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
-          if (param4 != -5) {
+          if (guard != -5) {
             field_J = (String) null;
           }
-          int stackIn_3_0 = this.a(param4 + 23278, param1, 35, param3, param2, param5, param0);
+          int stackIn_3_0 = this.appendValidatedField(guard + 23278, label, 35, y, field, helpText, fieldWidth);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var7 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var7;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("oi.N(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("oi.N(").append(fieldWidth).append(',');
+          if (label == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param2 == null) {
+          if (field == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(y).append(',').append(guard).append(',');
+          if (helpText == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -220,7 +220,7 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
           if (guard >= -49) {
             this.onMoreSuggestions((byte) -79);
           }
-          ValidatedTextWidget var3 = this.field_I;
+          ValidatedTextWidget var3 = this.nameField;
           String var4 = name;
           ((EditableTextWidget) ((Object) var3)).setText(var4, false, -33);
         } catch (RuntimeException runtimeException) {
@@ -234,14 +234,14 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
           if (guard != 1) {
             return;
           }
-          if (this.field_H == button) {
+          if (this.cancelButton == button) {
             GameAppletShell.b(guard ^ -104);
             return;
           }
-          if (button != this.field_G) {
+          if (button != this.submitButton) {
             return;
           }
-          this.j(-125);
+          this.submitName(-125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -264,7 +264,7 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
             return true;
           }
           if (keyCode == 98) {
-            boolean stackIn_6_0 = this.a((byte) 22, root);
+            boolean stackIn_6_0 = this.focusPreviousChild((byte) 22, root);
             return stackIn_6_0;
           }
           if (guard <= 0) {
@@ -273,7 +273,7 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
           if (keyCode != 99) {
             return false;
           }
-          boolean stackIn_12_0 = this.a(root, true);
+          boolean stackIn_12_0 = this.focusNextChild(root, true);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -297,35 +297,35 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
         return gf.field_a;
     }
 
-    public oi() {
+    public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_I = new ValidatedTextWidget("", (UiListener) null, 12);
+        this.nameField = new ValidatedTextWidget("", (UiListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(ke.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.maxAscent, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(DebouncedValidator.field_a, var1, (UiListener) null);
-        this.field_G = new TextButton(TextFieldValidator.field_i, (UiListener) null);
-        this.field_H = new TextButton(cf.field_b, (UiListener) null);
-        this.field_I.tooltip = bb.field_K;
-        this.field_I.setValidator(new NameAvailabilityValidator(this.field_I), (byte) 63);
-        this.field_G.enabled = false;
-        this.field_G.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
-        this.field_H.painter = (WidgetPainter) ((Object) new ha());
-        this.field_I.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
+        this.submitButton = new TextButton(TextFieldValidator.field_i, (UiListener) null);
+        this.cancelButton = new TextButton(cf.field_b, (UiListener) null);
+        this.nameField.tooltip = ModalPanel.field_K;
+        this.nameField.setValidator(new NameAvailabilityValidator(this.nameField), (byte) 63);
+        this.submitButton.enabled = false;
+        this.submitButton.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
+        this.cancelButton.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
+        this.nameField.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
         var2.setBounds(270, var3, 20, true, 50);
         var3 += 50;
-        this.b(var2, false);
-        var3 = var3 + (5 + this.a(170, lf.field_J, this.field_I, var3, (byte) -5, ig.field_i));
-        this.field_G.setBounds(var5, var3, 496 - var5 >> 1, true, 40);
-        this.field_H.setBounds(60, 15 + var3, 3 + var4, true, 40);
-        this.field_H.listener = (UiListener) (this);
-        this.field_G.listener = (UiListener) (this);
-        this.b(this.field_G, false);
-        this.b(this.field_H, false);
-        this.field_K = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_K.setBounds(-this.field_I.width + this.width + (-this.field_I.x - 60), 20, this.field_I.x + (this.field_I.width + 60), true, 150);
-        this.b(this.field_K, false);
+        this.addChild(var2, false);
+        var3 = var3 + (5 + this.appendStandardValidatedField(170, ValidationHelpWidget.field_J, this.nameField, var3, (byte) -5, ig.field_i));
+        this.submitButton.setBounds(var5, var3, 496 - var5 >> 1, true, 40);
+        this.cancelButton.setBounds(60, 15 + var3, 3 + var4, true, 40);
+        this.cancelButton.listener = (UiListener) (this);
+        this.submitButton.listener = (UiListener) (this);
+        this.addChild(this.submitButton, false);
+        this.addChild(this.cancelButton, false);
+        this.suggestions = new NameSuggestionsPanel((NameSuggestionListener) (this));
+        this.suggestions.setBounds(-this.nameField.width + this.width + (-this.nameField.x - 60), 20, this.nameField.x + (this.nameField.width + 60), true, 150);
+        this.addChild(this.suggestions, false);
         this.setBounds(496, 0, 0, true, var4 + var3 + 55);
     }
 

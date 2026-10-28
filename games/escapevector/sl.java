@@ -122,7 +122,7 @@ final class sl {
         }
         if (!param0) {
           SelfDestructEffects.field_d = SpriteOffset.a(var2, 10241, 80);
-          bo.field_H = null;
+          Checkbox.field_H = null;
           return new gi(param0);
         }
         int var5 = var2.readUnsignedShort(1952);
@@ -134,19 +134,19 @@ final class sl {
           } else {
             stackIn_26_0 = var8.responseIds;
           }
-          bo.field_H = stackIn_26_0;
+          Checkbox.field_H = stackIn_26_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           Throwable decompiledCaughtException = decompiledCaughtParameter0;
           Exception var6 = (Exception) (Object) decompiledCaughtException;
           pf.a(false, "CC1", (Throwable) ((Object) var6));
-          bo.field_H = null;
+          Checkbox.field_H = null;
           SelfDestructEffects.field_d = null;
         }
         if (var7 == 0) {
           return new gi(param0);
         }
         SelfDestructEffects.field_d = SpriteOffset.a(var2, 10241, 80);
-        bo.field_H = null;
+        Checkbox.field_H = null;
         return new gi(param0);
     }
 

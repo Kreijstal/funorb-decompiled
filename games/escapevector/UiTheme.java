@@ -123,10 +123,10 @@ final class UiTheme {
           return;
         }
         try {
-          ha.field_a = param2;
+          LinkButtonPainter.field_a = param2;
           ei.field_i = true;
-          be.field_b = new pn(bo.field_F, dl.field_b, param1, DialWidget.field_H, ha.field_a);
-          bo.field_F.b(be.field_b, 77);
+          be.field_b = new AccountRequestDialog(Checkbox.field_F, dl.field_b, param1, DialWidget.field_H, LinkButtonPainter.field_a);
+          Checkbox.field_F.pushPanel(be.field_b, 77);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "uf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -147,7 +147,7 @@ final class UiTheme {
           TextWidgetPainter var17 = new TextWidgetPainter(font, 2, 2, 2236962, 1, 1, 1, font.maxDescent + font.maxAscent + 2);
           this.componentPainter = (WidgetPainter) ((Object) var17);
           var17.textColor = 16777215;
-          he var4 = new he();
+          StatefulTextPainter var4 = new StatefulTextPainter();
           if (guard != -31476) {
             field_n = 115;
           }
@@ -163,9 +163,9 @@ final class UiTheme {
           var4.selectionColor = 11711154;
           var4.caretColor = 15658734;
           this.tooltipFont = font;
-          var4.a(0, (byte) -53).a(15658734, -22572).a(2, ph.a(8947848, 1, 10066329, 7829367));
-          var4.a(1, (byte) -53).a(2, ph.a(11184810, 1, 10066329, 13421772));
-          var4.a(3, (byte) -53).a(2, ph.a(8947848, 1, 7829367, 10066329)).c(101, 1).a(1, (byte) 102);
+          var4.createStateLayer(0, (byte) -53).setTextColor(15658734, -22572).setFrameSprites(2, ph.a(8947848, 1, 10066329, 7829367));
+          var4.createStateLayer(1, (byte) -53).setFrameSprites(2, ph.a(11184810, 1, 10066329, 13421772));
+          var4.createStateLayer(3, (byte) -53).setFrameSprites(2, ph.a(8947848, 1, 7829367, 10066329)).setOffsetX(101, 1).setOffsetY(1, (byte) 102);
           Sprite[] var5 = new Sprite[9];
           ArgbSprite var16 = new ArgbSprite(32, 32);
           ArgbSprite var18 = var16;
@@ -173,22 +173,22 @@ final class UiTheme {
             var16.pixels[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var18);
-          var4.a(4, (byte) -53).a(guard ^ 31367, true).a(2, var5);
-          var4.a(5, (byte) -53).a(2, vd.a(65793, 0, 0, 0, 1317)).a(guard + 31367, true).a(-1, -22572);
+          var4.createStateLayer(4, (byte) -53).setFlushBeforeApply(guard ^ 31367, true).setFrameSprites(2, var5);
+          var4.createStateLayer(5, (byte) -53).setFrameSprites(2, vd.a(65793, 0, 0, 0, 1317)).setFlushBeforeApply(guard + 31367, true).setTextColor(-1, -22572);
           this.buttonPainter = (WidgetPainter) ((Object) var4);
-          he var6 = new he(var4, true);
+          StatefulTextPainter var6 = new StatefulTextPainter(var4, true);
           var6.horizontalAlignment = 0;
-          he var7 = new he(var4, true);
+          StatefulTextPainter var7 = new StatefulTextPainter(var4, true);
           var7.horizontalAlignment = 0;
-          var7.a(jj.a(8947848, 46), guard + 31482);
-          var7.a(1, (byte) -53).a(2, jj.a(11184810, 51)).a(2236962, -22572);
+          var7.setFrameSpritesForAllStates(jj.a(8947848, 46), guard + 31482);
+          var7.createStateLayer(1, (byte) -53).setFrameSprites(2, jj.a(11184810, 51)).setTextColor(2236962, -22572);
           this.checkboxPainter = (WidgetPainter) ((Object) new CheckboxPainter(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           DialWidgetPainter discarded$0 = new DialWidgetPainter(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           MarkerSliderPainter discarded$1 = new MarkerSliderPainter(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
-          he var8 = new he();
+          StatefulTextPainter var8 = new StatefulTextPainter();
           var17.copyStyleTo(var8, 111);
-          var8.a(0, (byte) -53).a(2, ph.a(15658734, 1, 7829367, 10066329)).a(1118481, -22572).b(-93, -1);
-          var8.a(4, (byte) -53).a(-121, true).a(guard + 31478, var5);
+          var8.createStateLayer(0, (byte) -53).setFrameSprites(2, ph.a(15658734, 1, 7829367, 10066329)).setTextColor(1118481, -22572).setShadowColor(-93, -1);
+          var8.createStateLayer(4, (byte) -53).setFlushBeforeApply(-121, true).setFrameSprites(guard + 31478, var5);
           this.editableTextPainter = (WidgetPainter) ((Object) var8);
           Sprite[] var9 = new Sprite[9];
           Sprite[] var10 = new Sprite[9];
@@ -197,23 +197,23 @@ final class UiTheme {
           Sprite dupTemp$2 = var9[4];
           dupTemp$2.pixels = new int[]{6710886, 7829367};
           var10[4].pixels = new int[]{6710886, 7829367};
-          he var11 = new he();
-          he var12 = new he();
-          var11.a(var9, 0, (byte) -117);
-          var12.a(var10, 0, (byte) -117);
+          StatefulTextPainter var11 = new StatefulTextPainter();
+          StatefulTextPainter var12 = new StatefulTextPainter();
+          var11.setStateFrameSprites(var9, 0, (byte) -117);
+          var12.setStateFrameSprites(var10, 0, (byte) -117);
           Sprite var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
-          he var14 = new he(var4, true);
-          var14.a(var13.copy(), (byte) 74);
+          StatefulTextPainter var14 = new StatefulTextPainter(var4, true);
+          var14.setSpriteForAllStates(var13.copy(), (byte) 74);
           var13.rotateClockwise();
-          he var14Lifetime1 = new he(var4, true);
-          var14Lifetime1.a(var13.copy(), (byte) 118);
+          StatefulTextPainter var14Lifetime1 = new StatefulTextPainter(var4, true);
+          var14Lifetime1.setSpriteForAllStates(var13.copy(), (byte) 118);
           var13.rotateClockwise();
-          he var14Lifetime2 = new he(var4, true);
-          var14Lifetime2.a(var13.copy(), (byte) 78);
+          StatefulTextPainter var14Lifetime2 = new StatefulTextPainter(var4, true);
+          var14Lifetime2.setSpriteForAllStates(var13.copy(), (byte) 78);
           var13.rotateClockwise();
-          he var19 = new he(var4, true);
-          var19.a(var13, (byte) 87);
+          StatefulTextPainter var19 = new StatefulTextPainter(var4, true);
+          var19.setSpriteForAllStates(var13, (byte) 87);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "uf.A(" + guard + ',' + (font != null ? "{...}" : "null") + ')');
         }

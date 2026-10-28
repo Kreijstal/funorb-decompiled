@@ -88,7 +88,7 @@ final class ri {
             DynamicTerrainRenderer.b(var5, 0);
             String[][] var6 = new String[2][var5];
             int[][] var18 = new int[2][var5 * 4];
-            int var8 = jf.field_J;
+            int var8 = AccountTermsPanel.field_J;
             int var9 = 0;
             int var10 = 0;
             while (var8 > var9) {
@@ -97,9 +97,9 @@ final class ri {
               var18[0][var10 * 4] = DualLinkNode.field_k[var11];
               var18[0][1 + 4 * var10] = pc.field_c[var11];
               var18[0][var10 * 4 + 2] = RasterSnapshot.field_k[var11];
-              var18[0][3 + var10 * 4] = tm.field_fb[var11];
+              var18[0][3 + var10 * 4] = AccountNoticeDialog.field_fb[var11];
               if (SeekerMine.a(TextHotspotRegion.field_l[var11], (byte) 123) &&
-                tm.field_fb[var11] + pc.field_c[var11] + RasterSnapshot.field_k[var11] == 0) {
+                AccountNoticeDialog.field_fb[var11] + pc.field_c[var11] + RasterSnapshot.field_k[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -115,9 +115,9 @@ final class ri {
               var18[1][var13 * 4] = DualLinkNode.field_k[var11Lifetime1];
               var18[1][var13 * 4 + 1] = pc.field_c[var11Lifetime1];
               var18[1][var13 * 4 + 2] = RasterSnapshot.field_k[var11Lifetime1];
-              var18[1][3 + var13 * 4] = tm.field_fb[var11Lifetime1];
+              var18[1][3 + var13 * 4] = AccountNoticeDialog.field_fb[var11Lifetime1];
               if (SeekerMine.a(TextHotspotRegion.field_l[var11Lifetime1], (byte) 117) &&
-                0 == tm.field_fb[var11Lifetime1] + pc.field_c[var11Lifetime1] + RasterSnapshot.field_k[var11Lifetime1]) {
+                0 == AccountNoticeDialog.field_fb[var11Lifetime1] + pc.field_c[var11Lifetime1] + RasterSnapshot.field_k[var11Lifetime1]) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -140,7 +140,7 @@ final class ri {
         if (null == IsaacRandom.field_d) {
           return;
         }
-        bo.a(IsaacRandom.field_d, (byte) -59);
+        Checkbox.detachCanvasInput(IsaacRandom.field_d, (byte) -59);
         IsaacRandom.field_d.a(NetworkGameClient.field_r, true);
         IsaacRandom.field_d = null;
         if (null != km.field_n) {

@@ -18,7 +18,7 @@ final class dl {
     }
 
     final static void a(boolean param0) {
-        un.field_u = param0 ? true : false;
+        PasswordFieldPainter.field_u = param0 ? true : false;
         ei.field_j = 0;
         DraggableWidget.field_O = -1;
         on.field_b = null;

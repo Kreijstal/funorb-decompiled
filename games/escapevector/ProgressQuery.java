@@ -16,7 +16,7 @@ final class ProgressQuery extends IntrusiveNode {
           try {
             try {
               String var3 = (String) (JavaScriptBridge.callWindowFunction(applet, "getcookies", -29155));
-              String[] var4 = bb.a(-128, var3, ';');
+              String[] var4 = ModalPanel.splitString(-128, var3, ';');
               for (int var5 = 0; var4.length > var5; var5++) {
                 int var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

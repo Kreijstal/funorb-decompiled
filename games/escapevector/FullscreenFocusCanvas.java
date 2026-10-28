@@ -126,17 +126,17 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         int stackIn_48_0 = 0;
         int var6;
         int var7;
-        vi.field_e[jf.field_J] = param4;
-        cd.field_q[jf.field_J] = jf.field_J;
-        DualLinkNode.field_k[jf.field_J] = param5;
+        vi.field_e[AccountTermsPanel.field_J] = param4;
+        cd.field_q[AccountTermsPanel.field_J] = AccountTermsPanel.field_J;
+        DualLinkNode.field_k[AccountTermsPanel.field_J] = param5;
         if (param5 < TextLayoutLine.field_e) {
           TextLayout.field_d = param5;
         }
         if (ArchiveRequest.field_t >= param5) {
-          pc.field_c[jf.field_J] = param1;
+          pc.field_c[AccountTermsPanel.field_J] = param1;
           if (param0 == 1) {
-            RasterSnapshot.field_k[jf.field_J] = param2;
-            tm.field_fb[jf.field_J] = param3;
+            RasterSnapshot.field_k[AccountTermsPanel.field_J] = param2;
+            AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = param3;
             var6 = param3 + param2 + param1;
             if (var6 != 0) {
               stackIn_48_0 = param1 * 1000 / var6;
@@ -144,8 +144,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               stackIn_48_0 = 0;
             }
             var7 = stackIn_48_0;
-            Bzip2State.field_v[jf.field_J] = var7;
-            jf.field_J = jf.field_J + 1;
+            Bzip2State.field_v[AccountTermsPanel.field_J] = var7;
+            AccountTermsPanel.field_J = AccountTermsPanel.field_J + 1;
             if (var7 < TextLayout.field_d) {
               TextLayout.field_d = var7;
             }
@@ -155,8 +155,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             return;
           }
           FullscreenFocusCanvas.a(-7, 8, -13, 15, -127, 46);
-          RasterSnapshot.field_k[jf.field_J] = param2;
-          tm.field_fb[jf.field_J] = param3;
+          RasterSnapshot.field_k[AccountTermsPanel.field_J] = param2;
+          AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = param3;
           var6 = param3 + param2 + param1;
           if (var6 != 0) {
             stackIn_35_0 = param1 * 1000 / var6;
@@ -166,10 +166,10 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var7 = stackIn_35_0;
         } else {
           pl.field_r = param5;
-          pc.field_c[jf.field_J] = param1;
+          pc.field_c[AccountTermsPanel.field_J] = param1;
           if (param0 == 1) {
-            RasterSnapshot.field_k[jf.field_J] = param2;
-            tm.field_fb[jf.field_J] = param3;
+            RasterSnapshot.field_k[AccountTermsPanel.field_J] = param2;
+            AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = param3;
             var6 = param3 + param2 + param1;
             if (var6 != 0) {
               stackIn_8_0 = param1 * 1000 / var6;
@@ -179,8 +179,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             var7 = stackIn_8_0;
           } else {
             FullscreenFocusCanvas.a(-7, 8, -13, 15, -127, 46);
-            RasterSnapshot.field_k[jf.field_J] = param2;
-            tm.field_fb[jf.field_J] = param3;
+            RasterSnapshot.field_k[AccountTermsPanel.field_J] = param2;
+            AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = param3;
             var6 = param3 + param2 + param1;
             if (var6 != 0) {
               stackIn_21_0 = param1 * 1000 / var6;
@@ -190,8 +190,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             var7 = stackIn_21_0;
           }
         }
-        Bzip2State.field_v[jf.field_J] = var7;
-        jf.field_J = jf.field_J + 1;
+        Bzip2State.field_v[AccountTermsPanel.field_J] = var7;
+        AccountTermsPanel.field_J = AccountTermsPanel.field_J + 1;
         if (var7 < TextLayout.field_d) {
           TextLayout.field_d = var7;
         }

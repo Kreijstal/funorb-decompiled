@@ -264,13 +264,13 @@ final class SecondaryIntrusiveDeque {
                         var38 = -1 + bi.field_c - var37;
                       }
                       if (var37 < 0) {
-                        ha.a(var25 - var40 * var37, var36Lifetime2, var41, (byte) -114, var29 - var37 * var41, var39, var40, var38 + var37, param4, var21 - var39 * var37);
+                        LinkButtonPainter.a(var25 - var40 * var37, var36Lifetime2, var41, (byte) -114, var29 - var37 * var41, var39, var40, var38 + var37, param4, var21 - var39 * var37);
                       } else {
-                        ha.a(var25, var37 + var36Lifetime2, var41, (byte) -121, var29, var39, var40, var38, param4, var21);
+                        LinkButtonPainter.a(var25, var37 + var36Lifetime2, var41, (byte) -121, var29, var39, var40, var38, param4, var21);
                       }
                     } else if (var37 >= 0 &&
                       bi.field_c > var37) {
-                      ha.a(var25, var37 + var36Lifetime2, 0, (byte) -116, var29, 0, 0, var38, param4, var21);
+                      LinkButtonPainter.a(var25, var37 + var36Lifetime2, 0, (byte) -116, var29, 0, 0, var38, param4, var21);
                     }
                   }
                   param8++;
@@ -349,13 +349,13 @@ final class SecondaryIntrusiveDeque {
                     var37Lifetime1 = -1 + (bi.field_c - var36Lifetime1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    ha.a(var25, var36Lifetime1 + var35Lifetime1, var40Lifetime1, (byte) -109, var29, var38Lifetime1, var39Lifetime1, var37Lifetime1, param4, var21);
+                    LinkButtonPainter.a(var25, var36Lifetime1 + var35Lifetime1, var40Lifetime1, (byte) -109, var29, var38Lifetime1, var39Lifetime1, var37Lifetime1, param4, var21);
                   } else {
-                    ha.a(var25 - var39Lifetime1 * var36Lifetime1, var35Lifetime1, var40Lifetime1, (byte) -103, -(var40Lifetime1 * var36Lifetime1) + var29, var38Lifetime1, var39Lifetime1, var36Lifetime1 + var37Lifetime1, param4, -(var38Lifetime1 * var36Lifetime1) + var21);
+                    LinkButtonPainter.a(var25 - var39Lifetime1 * var36Lifetime1, var35Lifetime1, var40Lifetime1, (byte) -103, -(var40Lifetime1 * var36Lifetime1) + var29, var38Lifetime1, var39Lifetime1, var36Lifetime1 + var37Lifetime1, param4, -(var38Lifetime1 * var36Lifetime1) + var21);
                   }
                 } else if (0 <= var36Lifetime1 &&
                   var36Lifetime1 < bi.field_c) {
-                  ha.a(var25, var35Lifetime1 + var36Lifetime1, 0, (byte) -114, var29, 0, 0, var37Lifetime1, param4, var21);
+                  LinkButtonPainter.a(var25, var35Lifetime1 + var36Lifetime1, 0, (byte) -114, var29, 0, 0, var37Lifetime1, param4, var21);
                 }
               }
               param8++;

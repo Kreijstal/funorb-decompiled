@@ -228,7 +228,7 @@ abstract class DebouncedValidator implements ValidationSource {
         if (param0 > -45) {
           return;
         }
-        ha.field_a = true;
+        LinkButtonPainter.field_a = true;
     }
 
     abstract String evaluateMessage(byte guard);

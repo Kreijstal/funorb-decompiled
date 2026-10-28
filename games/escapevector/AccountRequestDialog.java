@@ -1,85 +1,85 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pn extends fj implements ButtonListener {
+class AccountRequestDialog extends ContentTransitionDialog implements ButtonListener {
     private boolean field_lb;
     private boolean field_ob;
     private boolean field_tb;
     static char[] field_nb;
-    static tb field_pb;
-    private BitmapFont field_sb;
-    private boolean field_mb;
-    private jm field_rb;
+    static ModalStack field_pb;
+    private BitmapFont messageFont;
+    private boolean responseShown;
+    private StripedProgressBar progressBar;
     static String[] field_qb;
 
-    final void a(String param0, int param1, int param2) {
+    final void showResponseMessage(String message, int guard, int responseCode) {
         String stackIn_15_2 = null;
         String stackIn_31_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          if (this.field_mb) {
+          if (this.responseShown) {
             return;
           }
-          boolean stackIn_7_1 = (param2 == 256);
+          boolean stackIn_7_1 = (responseCode == 256);
           this.field_tb = stackIn_7_1;
-          if (param1 != -1) {
+          if (guard != -1) {
             return;
           }
-          this.field_mb = true;
-          this.field_rb.a(4210752, 8405024, -127);
-          qi var6 = new qi(this, this.field_sb, param0);
-          if (param2 == 5) {
-            var6.a(false, TerrainMap.field_i, 11);
-            var6.a(false, EmailAvailabilityRequest.field_d, 17);
-          } else if (param2 == 256) {
-            var6.a((UiListener) (this), (byte) -67, WeightedCacheEntry.field_s);
+          this.responseShown = true;
+          this.progressBar.setColors(4210752, 8405024, -127);
+          AccountMessagePanel var6 = new AccountMessagePanel(this, this.messageFont, message);
+          if (responseCode == 5) {
+            var6.appendActionButton(false, TerrainMap.field_i, 11);
+            var6.appendActionButton(false, EmailAvailabilityRequest.field_d, 17);
+          } else if (responseCode == 256) {
+            var6.appendButton((UiListener) (this), (byte) -67, WeightedCacheEntry.field_s);
           } else {
-            qi stackIn_14_0 = var6;
+            AccountMessagePanel stackIn_14_0 = var6;
             boolean stackIn_14_1 = false;
             if (this.field_ob) {
               stackIn_15_2 = WeightedCacheEntry.field_s;
             } else {
               stackIn_15_2 = Minimap.field_O;
             }
-            ((qi) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2, -1);
+            ((AccountMessagePanel) (Object) stackIn_14_0).appendActionButton(stackIn_14_1, stackIn_15_2, -1);
           }
-          if (param2 == 3) {
-            var6.a(false, qk.field_a, 7);
-          } else if (param2 == 4) {
-            var6.a(false, ei.field_k, 8);
-          } else if (6 != param2) {
-            if (9 != param2) {
-              this.a(var6, 30);
+          if (responseCode == 3) {
+            var6.appendActionButton(false, qk.field_a, 7);
+          } else if (responseCode == 4) {
+            var6.appendActionButton(false, ei.field_k, 8);
+          } else if (6 != responseCode) {
+            if (9 != responseCode) {
+              this.transitionToContent(var6, 30);
               return;
             }
-            var6.a((UiListener) (this), (byte) -67, WhirlpoolHasher.field_g);
+            var6.appendButton((UiListener) (this), (byte) -67, WhirlpoolHasher.field_g);
           } else {
-            var6.a(false, ej.field_c, 9);
+            var6.appendActionButton(false, ej.field_c, 9);
           }
-          this.a(var6, 30);
+          this.transitionToContent(var6, 30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_30_0 = var4;
           StringBuilder stackIn_30_1 = new StringBuilder().append("pn.MB(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(guard).append(',').append(responseCode).append(')').toString());
         }
     }
 
-    final static boolean p(int param0) {
+    final static boolean pollKeyEvent(int guard) {
         Object var1 = null;
         Throwable var2 = null;
         boolean stackIn_7_0 = false;
         Throwable decompiledCaughtException = null;
         Object var1_ref = ThreeSliceButtonPainter.field_v;
         synchronized (var1_ref) {
-          if (param0 >= -66) {
+          if (guard >= -66) {
             field_nb = (char[]) null;
           }
           if (ta.field_w == MarkerSliderPainter.field_l) {
@@ -93,12 +93,12 @@ class pn extends fj implements ButtonListener {
         return stackIn_7_0;
     }
 
-    final void r(int param0) {
-        int var3 = -15 / ((26 - param0) / 47);
-        this.field_rb.a(4210752, 2121792, -127);
-        qi var2 = new qi(this, this.field_sb, DraggableWidget.field_K);
-        var2.a(false, gj.field_u, 15);
-        this.a(var2, 30);
+    final void showConnectionRestoredMessage(int guard) {
+        int var3 = -15 / ((26 - guard) / 47);
+        this.progressBar.setColors(4210752, 2121792, -127);
+        AccountMessagePanel var2 = new AccountMessagePanel(this, this.messageFont, DraggableWidget.field_K);
+        var2.appendActionButton(false, gj.field_u, 15);
+        this.transitionToContent(var2, 30);
     }
 
     public static void releaseStatics(int guard) {
@@ -164,7 +164,7 @@ class pn extends fj implements ButtonListener {
             boolean stackIn_7_0 = super.onFocusedKey(root, character, keyCode, 117);
             return stackIn_7_0;
           }
-          this.o(-18861);
+          this.closeDialog(-18861);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,11 +187,11 @@ class pn extends fj implements ButtonListener {
             return;
           }
           if (!this.field_tb) {
-            md.a(PointCloudEffect.d((byte) -85), (byte) -96, "tochangedisplayname.ws");
+            AlphaContainer.openRelativeUrl(PointCloudEffect.d((byte) -85), (byte) -96, "tochangedisplayname.ws");
             return;
           }
           WhirlpoolHasher.a(3, guard + 106);
-          this.o(-18861);
+          this.closeDialog(-18861);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -207,14 +207,14 @@ class pn extends fj implements ButtonListener {
         }
     }
 
-    final void o(int param0) {
-        if (!this.field_G) {
+    final void closeDialog(int guard) {
+        if (!this.open) {
           return;
         }
-        if (param0 != -18861) {
+        if (guard != -18861) {
           return;
         }
-        this.field_G = false;
+        this.open = false;
         if (this.field_ob) {
           jj.a(0);
           return;
@@ -225,36 +225,36 @@ class pn extends fj implements ButtonListener {
         }
     }
 
-    pn(tb param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
-        super(param0, new qi((pn) null, param1, param2), 77, 10, 10);
+    AccountRequestDialog(ModalStack param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+        super(param0, new AccountMessagePanel((AccountRequestDialog) null, param1, param2), 77, 10, 10);
         try {
-          this.field_mb = false;
+          this.responseShown = false;
           this.field_lb = param4 ? true : false;
           this.field_tb = false;
-          this.field_sb = param1;
+          this.messageFont = param1;
           this.field_ob = param3 ? true : false;
-          this.field_rb = new jm(13, 50, 274, 30, 15, 2113632, 4210752);
-          this.field_rb.field_G = true;
-          this.b(this.field_rb, false);
+          this.progressBar = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.progressBar.animateStripes = true;
+          this.addChild(this.progressBar, false);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyByteArray(int sourceOffset, byte[] source) {
         String stackIn_5_2 = null;
         try {
-          int var2_int = param1.length;
+          int var2_int = source.length;
           byte[] var3 = new byte[var2_int];
-          qg.a(param1, param0, var3, 0, var2_int);
+          qg.a(source, sourceOffset, var3, 0, var2_int);
           byte[] stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_4_0 = var2;
-          StringBuilder stackIn_4_1 = new StringBuilder().append("pn.I(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_4_1 = new StringBuilder().append("pn.I(").append(sourceOffset).append(',');
+          if (source == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";

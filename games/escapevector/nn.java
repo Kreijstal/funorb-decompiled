@@ -105,7 +105,7 @@ final class nn {
         try {
           try {
             java.awt.Graphics var4 = param0.getGraphics();
-            md.field_D.a(param1, param2 ^ param2, param3, var4);
+            AlphaContainer.field_D.a(param1, param2 ^ param2, param3, var4);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

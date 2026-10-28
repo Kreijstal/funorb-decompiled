@@ -302,7 +302,7 @@ final class SystemTaskService implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationException) null;
-                      var8.field_b = he.a((String) (var8.field_d), var8.field_c, (byte) 85).connect(0);
+                      var8.field_b = StatefulTextPainter.createProxySocketConnector((String) (var8.field_d), var8.field_c, (byte) 85).connect(0);
                     } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       ProxyAuthenticationException var3_ref3 = (ProxyAuthenticationException) (Object) decompiledCaughtException;

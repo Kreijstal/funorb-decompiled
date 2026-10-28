@@ -28,7 +28,7 @@ final class oh extends IntrusiveNode {
           qj.field_a.writeInt((byte) 123, NameSuggestionsPanel.field_O[1]);
           qj.field_a.writeInt((byte) 124, NameSuggestionsPanel.field_O[2]);
           qj.field_a.writeInt((byte) 126, NameSuggestionsPanel.field_O[3]);
-          jm.a(0, qj.field_a);
+          StripedProgressBar.writeInstallationSeed(0, qj.field_a);
           qj.field_a.writeShort(13, param2);
           param0.a(qj.field_a, (byte) -121);
           QuickChatDynamicCommand.outgoingPackets.position = 0;
@@ -39,7 +39,7 @@ final class oh extends IntrusiveNode {
           }
           QuickChatDynamicCommand.outgoingPackets.position = QuickChatDynamicCommand.outgoingPackets.position + 2;
           int var5_int = QuickChatDynamicCommand.outgoingPackets.position;
-          QuickChatDynamicCommand.outgoingPackets.writeInt((byte) 123, jm.field_L);
+          QuickChatDynamicCommand.outgoingPackets.writeInt((byte) 123, StripedProgressBar.field_L);
           QuickChatDynamicCommand.outgoingPackets.writeLong(ThreeSliceButtonPainter.field_q, (byte) -23);
           int var6 = 0;
           if (ej.field_d) {

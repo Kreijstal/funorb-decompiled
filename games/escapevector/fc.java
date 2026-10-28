@@ -56,9 +56,9 @@ final class fc {
           if (!param4 ||
             param0 >= 16) {
             SoftwareRasterizer.fillRectangle(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
-            qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+            AccountMessagePanel.drawUnevenFrame(param8, param2, param7, param9, param10, -29, param1, param3, param0);
             if (param11) {
-              qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
+              AccountMessagePanel.drawUnevenFrame(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
             }
             return;
           }
@@ -79,32 +79,32 @@ final class fc {
             SoftwareRasterizer.fillRectangle(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
           } else {
             SoftwareRasterizer.fillVerticalGradient(var14 + 1, var15 + 1, var16 + (-var14 - 2), -2 + (-var15 + var17), var12, var13);
-            qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+            AccountMessagePanel.drawUnevenFrame(param8, param2, param7, param9, param10, -29, param1, param3, param0);
             if (param11) {
-              qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
+              AccountMessagePanel.drawUnevenFrame(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
             }
             return;
           }
           SoftwareRasterizer.fillVerticalGradient(var14 + 1, var15 + 1, var16 + (-var14 - 2), -2 + (-var15 + var17), var12, var13);
-          qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+          AccountMessagePanel.drawUnevenFrame(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
-            qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
+            AccountMessagePanel.drawUnevenFrame(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
           }
           return;
         }
         if (!param4) {
           SoftwareRasterizer.fillRectangle(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
-          qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+          AccountMessagePanel.drawUnevenFrame(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
-            qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
+            AccountMessagePanel.drawUnevenFrame(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
           }
           return;
         }
         if (param0 >= 16) {
           SoftwareRasterizer.fillRectangle(1 + param1, 1 + param10, -2 + (param2 - param1), param3 - param10 - 2, 0);
-          qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+          AccountMessagePanel.drawUnevenFrame(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
-            qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
+            AccountMessagePanel.drawUnevenFrame(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
           }
           return;
         }
@@ -125,16 +125,16 @@ final class fc {
           SoftwareRasterizer.fillRectangle(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
         } else {
           SoftwareRasterizer.fillVerticalGradient(var14Lifetime1 + 1, var15Lifetime1 + 1, var16Lifetime1 + (-var14Lifetime1 - 2), -2 + (-var15Lifetime1 + var17Lifetime1), var12Lifetime1, var13Lifetime1);
-          qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+          AccountMessagePanel.drawUnevenFrame(param8, param2, param7, param9, param10, -29, param1, param3, param0);
           if (param11) {
-            qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
+            AccountMessagePanel.drawUnevenFrame(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
           }
           return;
         }
         SoftwareRasterizer.fillVerticalGradient(var14Lifetime1 + 1, var15Lifetime1 + 1, var16Lifetime1 + (-var14Lifetime1 - 2), -2 + (-var15Lifetime1 + var17Lifetime1), var12Lifetime1, var13Lifetime1);
-        qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+        AccountMessagePanel.drawUnevenFrame(param8, param2, param7, param9, param10, -29, param1, param3, param0);
         if (param11) {
-          qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
+          AccountMessagePanel.drawUnevenFrame(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 + 3, param3 - 3, param0);
         }
     }
 
@@ -160,16 +160,16 @@ final class fc {
           param1 = param1 & 8191;
           if (param1 < 4096) {
             if (param1 >= 2048) {
-              stackIn_19_0 = un.field_t[-param1 + 4096];
+              stackIn_19_0 = PasswordFieldPainter.field_t[-param1 + 4096];
             } else {
-              stackIn_19_0 = un.field_t[param1];
+              stackIn_19_0 = PasswordFieldPainter.field_t[param1];
             }
             return stackIn_19_0;
           }
           if (param1 >= 6144) {
-            stackIn_15_0 = -un.field_t[-param1 + 8192];
+            stackIn_15_0 = -PasswordFieldPainter.field_t[-param1 + 8192];
           } else {
-            stackIn_15_0 = -un.field_t[param1 - 4096];
+            stackIn_15_0 = -PasswordFieldPainter.field_t[param1 - 4096];
           }
           return stackIn_15_0;
         }
@@ -177,16 +177,16 @@ final class fc {
         param1 = param1 & 8191;
         if (param1 < 4096) {
           if (param1 >= 2048) {
-            stackIn_9_0 = un.field_t[-param1 + 4096];
+            stackIn_9_0 = PasswordFieldPainter.field_t[-param1 + 4096];
           } else {
-            stackIn_9_0 = un.field_t[param1];
+            stackIn_9_0 = PasswordFieldPainter.field_t[param1];
           }
           return stackIn_9_0;
         }
         if (param1 >= 6144) {
-          stackIn_5_0 = -un.field_t[-param1 + 8192];
+          stackIn_5_0 = -PasswordFieldPainter.field_t[-param1 + 8192];
         } else {
-          stackIn_5_0 = -un.field_t[param1 - 4096];
+          stackIn_5_0 = -PasswordFieldPainter.field_t[param1 - 4096];
         }
         return stackIn_5_0;
     }

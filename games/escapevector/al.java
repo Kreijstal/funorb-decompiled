@@ -10,7 +10,7 @@ final class al {
     static String field_c;
 
     final static int a(int param0, int param1) {
-        param0 = l.a(param1 - 34966, param0);
+        param0 = AccountChoicePanel.a(param1 - 34966, param0);
         if (param0 < 0) {
           return -1;
         }

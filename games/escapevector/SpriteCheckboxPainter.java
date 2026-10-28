@@ -60,7 +60,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           field_b = (ShipHullGeometry) null;
         }
         if (!SelfDestructEffects.field_j.d(-3994)) {
-          return un.f(param0 + 1021831755);
+          return PasswordFieldPainter.f(param0 + 1021831755);
         }
         return 0;
     }
@@ -127,7 +127,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           ReflectionCheck.drawGradientOutline(-27951, var6_int, var7, component.width, component.height);
           Sprite var8 = EditableTextWidget.field_E[1];
           if (component instanceof TextButton &&
-            ((TextButton) (component)).field_z) {
+            ((TextButton) (component)).selected) {
             var8.drawAdditive((-var8.fullWidth + component.width >> 1) + 1 + var6_int, var7 - (-1 - (component.height - var8.fullHeight >> 1)), 256);
           }
           if (component.isFocused(0)) {

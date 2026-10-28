@@ -81,10 +81,10 @@ final class dj {
     final static int a(int param0) {
         int var2 = EscapeVector.obfuscationControl;
         try {
-          bo.field_F.handlePointerFrame(true, (byte) -33, ValidationIndicator.field_G, ph.field_a);
-          bo.field_F.m(0);
-          while (pn.p(-116)) {
-            bo.field_F.handleKey(jc.field_c, PasswordValidator.field_n, (byte) -116);
+          Checkbox.field_F.handlePointerFrame(true, (byte) -33, ValidationIndicator.field_G, ph.field_a);
+          Checkbox.field_F.updatePanels(0);
+          while (AccountRequestDialog.pollKeyEvent(-116)) {
+            Checkbox.field_F.handleKey(jc.field_c, PasswordValidator.field_n, (byte) -116);
           }
           if (param0 != 6445) {
             int stackIn_6_0 = -79;

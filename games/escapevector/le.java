@@ -23,7 +23,7 @@ final class le {
         }
         if (PasswordValidator.field_p != null) {
           if (!PasswordValidator.field_p.ensureIndex(0)) {
-            return md.field_H;
+            return AlphaContainer.field_H;
           }
           return gj.field_g;
         }
@@ -33,11 +33,11 @@ final class le {
         if (!ii.field_a.tryLoadNamedGroup(0, "commonui")) {
           return DebouncedValidator.field_d + " - " + ii.field_a.namedGroupProgress("commonui", 0) + "%";
         }
-        if (!w.field_ab.ensureIndex(0)) {
+        if (!LoadingProgressDialog.field_ab.ensureIndex(0)) {
           return CipherPacketBuffer.field_o;
         }
-        if (!w.field_ab.tryLoadNamedGroup(0, "commonui")) {
-          return qf.field_h + " - " + w.field_ab.namedGroupProgress("commonui", param0 ^ 1) + "%";
+        if (!LoadingProgressDialog.field_ab.tryLoadNamedGroup(0, "commonui")) {
+          return qf.field_h + " - " + LoadingProgressDialog.field_ab.namedGroupProgress("commonui", param0 ^ 1) + "%";
         }
         if (param0 != 1) {
           field_a = (QuickChatDynamicCommand) null;

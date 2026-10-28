@@ -13,10 +13,10 @@ class IntrusiveNode {
         if (param0 != 12) {
           return false;
         }
-        if (null == pn.field_pb) {
+        if (null == AccountRequestDialog.field_pb) {
           return false;
         }
-        if (pn.field_pb.n(0) == null) {
+        if (AccountRequestDialog.field_pb.topOpenPanel(0) == null) {
           return false;
         }
         return true;

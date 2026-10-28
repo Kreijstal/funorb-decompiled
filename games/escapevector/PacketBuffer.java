@@ -258,7 +258,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$0]);
         int var3 = this.position - var2 - 1;
         if (var3 != 0) {
-          return qi.a(var3, var2, this.payload, (byte) 20);
+          return AccountMessagePanel.decodeCp1252(var3, var2, this.payload, (byte) 20);
         }
         return "";
     }
@@ -654,7 +654,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         int var5 = this.position - (var3 + 1);
         if (var5 != 0) {
-          return qi.a(var5, var3, this.payload, (byte) -68);
+          return AccountMessagePanel.decodeCp1252(var5, var3, this.payload, (byte) -68);
         }
         return "";
     }

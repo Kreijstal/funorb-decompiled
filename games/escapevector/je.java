@@ -77,7 +77,7 @@ final class je {
         try {
           NodeHashTableIterator.field_h = se.a(0) * param2 / 1000;
           on.a(param0, -58);
-          h.a(param0, (byte) 110);
+          LoginForm.loadLogoMeshes(param0, (byte) 110);
           cj.a(0, param0);
           pa.a(-83);
           if (param3 < 80) {
@@ -92,7 +92,7 @@ final class je {
     }
 
     final static void a(boolean param0, String param1) {
-        System.out.println("Error: " + vg.a(param1, "%0a", (byte) 111, "\n"));
+        System.out.println("Error: " + ResizableModalPanel.replaceAllLiteral(param1, "%0a", (byte) 111, "\n"));
         if (param0) {
           String var3 = (String) null;
           je.a(false, (String) null);

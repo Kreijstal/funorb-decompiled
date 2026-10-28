@@ -75,7 +75,7 @@ final class GrowableIntList {
 
     final static void a(byte param0) {
         mb.field_g = EmailSyntaxValidator.c(false);
-        bo.field_F = new tb();
+        Checkbox.field_F = new ModalStack();
         if (param0 > -21) {
           return;
         }

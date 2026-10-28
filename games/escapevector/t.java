@@ -46,7 +46,7 @@ final class t {
         int var3 = EscapeVector.obfuscationControl;
         try {
           while (true) {
-            if (pn.p(-111)) {
+            if (AccountRequestDialog.pollKeyEvent(-111)) {
               this.field_b.c((byte) 6);
               boolean stackIn_11_0 = this.a(param0 - 13569, false);
               if (var3 == 0) {
@@ -101,12 +101,12 @@ final class t {
               if (param0 != 2 ||
                 var11 != 0) {
                 if (param0 == 3) {
-                  int var7 = fh.field_g.stringWidth(oi.field_N);
+                  int var7 = fh.field_g.stringWidth(DisplayNameForm.field_N);
                   int var8 = fh.field_g.stringWidth(LoginMethod.field_d);
                   int stackIn_31_0 = (var8 < var7) ? var7 : var8;
                   int var9 = stackIn_31_0;
                   int var10 = (var9 - 68) / 2 + var6;
-                  fh.field_g.drawRight(oi.field_N, var10, 22, var5_int, -1);
+                  fh.field_g.drawRight(DisplayNameForm.field_N, var10, 22, var5_int, -1);
                   SingleChildContainer.a(var10, 13202, 4, IterableNodeHashTable.field_c, var5_int);
                 }
                 if (param0 != 3 ||
@@ -132,7 +132,7 @@ final class t {
                         var11 != 0)) {
                         fh.field_g.drawCentered(DynamicTerrainRenderer.field_m, var6, 22, var5_int, -1);
                         if (var11 != 0) {
-                          var7Lifetime2 = fh.field_g.stringWidth(oi.field_N);
+                          var7Lifetime2 = fh.field_g.stringWidth(DisplayNameForm.field_N);
                           var8Lifetime1 = fh.field_g.stringWidth(LoginMethod.field_d);
                           stackIn_63_0 = (var8Lifetime1 >= var7Lifetime2) ? var8Lifetime1 : var7Lifetime2;
                           var9Lifetime1 = stackIn_63_0;
@@ -143,7 +143,7 @@ final class t {
                         }
                       }
                     }} else {
-                    var7Lifetime2 = fh.field_g.stringWidth(oi.field_N);
+                    var7Lifetime2 = fh.field_g.stringWidth(DisplayNameForm.field_N);
                     var8Lifetime1 = fh.field_g.stringWidth(LoginMethod.field_d);
                     stackIn_63_0 = (var8Lifetime1 >= var7Lifetime2) ? var8Lifetime1 : var7Lifetime2;
                     var9Lifetime1 = stackIn_63_0;
@@ -158,7 +158,7 @@ final class t {
               fh.field_g.drawCentered(EscapeVector.field_z, var6, 22, var5_int, -1);
             }
           }
-          md.field_D.a(112);
+          AlphaContainer.field_D.a(112);
           cf.a(mj.field_b, true, 1);
           mj.field_b.addOutline(5267536);
           int var7Lifetime1 = -mj.field_d + 30 + 5 * param0;
@@ -390,7 +390,7 @@ final class t {
               decompiledFrameRemainder0 = (var10 != 0);
             }
             if (decompiledFrameRemainder0) {
-              int var4 = fh.field_g.stringWidth(oi.field_N);
+              int var4 = fh.field_g.stringWidth(DisplayNameForm.field_N);
               int var5 = fh.field_g.stringWidth(LoginMethod.field_d);
               int stackIn_68_0 = (var4 <= var5) ? var5 : var4;
               int var6 = stackIn_68_0;
@@ -449,7 +449,7 @@ final class t {
               }
             }
             if (this.field_b.a(false)) {
-              int var4Lifetime1 = fh.field_g.stringWidth(oi.field_N);
+              int var4Lifetime1 = fh.field_g.stringWidth(DisplayNameForm.field_N);
               int var5Lifetime1 = fh.field_g.stringWidth(LoginMethod.field_d);
               int stackIn_129_0 = (var4Lifetime1 <= var5Lifetime1) ? var5Lifetime1 : var4Lifetime1;
               int var6Lifetime1 = stackIn_129_0;

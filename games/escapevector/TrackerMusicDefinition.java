@@ -105,7 +105,7 @@ final class TrackerMusicDefinition {
           return "";
         }
         if (-1 == param2) {
-          return he.field_v;
+          return StatefulTextPainter.field_v;
         }
         int var3 = je.a(false, param1);
         if (param0 <= 75) {

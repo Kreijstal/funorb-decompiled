@@ -10,13 +10,13 @@ final class IntValueNode extends IntrusiveNode {
     final static void a(String param0, String param1, int param2) {
         try {
           if (be.field_b != null) {
-            be.field_b.o(-18861);
+            be.field_b.closeDialog(-18861);
           }
-          PcmResampler.field_d = new h(param0, param1, false, true, true);
+          PcmResampler.field_d = new LoginForm(param0, param1, false, true, true);
           if (param2 != 63) {
             field_h = (String[]) null;
           }
-          rd.field_c.a(PcmResampler.field_d, 30);
+          rd.field_c.transitionToContent(PcmResampler.field_d, 30);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "de.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -79,7 +79,7 @@ final class IntValueNode extends IntrusiveNode {
 
     final static void startSelectedLevel(int gameMode, int levelIndex, int guard) {
         TrackerMusicDefinition.field_f.a(true);
-        gameMode = l.a(-8462, gameMode);
+        gameMode = AccountChoicePanel.a(-8462, gameMode);
         levelIndex = SectorCacheStore.a(gameMode, 13565, levelIndex);
         int var3 = PasswordValidator.a(1, gameMode);
         BoundedRandomAccessFile.activeSession = new GameplaySession(ld.field_h[gameMode], var3, gameMode, levelIndex);

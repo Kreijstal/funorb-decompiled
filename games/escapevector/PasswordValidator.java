@@ -43,7 +43,7 @@ final class PasswordValidator extends TextFieldValidator {
             String stackIn_22_0 = IntrusiveDeque.field_b;
             return stackIn_22_0;
           }
-          if (lf.a(var5, (byte) 37, var7)) {
+          if (ValidationHelpWidget.containsIdentifierVariant(var5, (byte) 37, var7)) {
             String stackIn_26_0 = DiskCacheWorker.field_a;
             return stackIn_26_0;
           }

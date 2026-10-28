@@ -19,10 +19,10 @@ final class ff {
             field_i = (PcmSample) null;
           }
           fc.a(3161);
-          bo.field_F.l(param2 ^ 17479);
-          PcmResampler.field_d = new h(StrongCacheEntry.field_v, (String) null, DialWidget.field_H, param3, param1);
-          rd.field_c = new ng(bo.field_F, PcmResampler.field_d);
-          bo.field_F.b(rd.field_c, 40);
+          Checkbox.field_F.closeAllPanels(param2 ^ 17479);
+          PcmResampler.field_d = new LoginForm(StrongCacheEntry.field_v, (String) null, DialWidget.field_H, param3, param1);
+          rd.field_c = new LoginDialog(Checkbox.field_F, PcmResampler.field_d);
+          Checkbox.field_F.pushPanel(rd.field_c, 40);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ff.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

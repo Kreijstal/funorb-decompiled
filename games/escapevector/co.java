@@ -55,13 +55,13 @@ final class co {
               var3 = var7Lifetime1;
             }
           }
-          int var4 = StrongCacheEntry.widestAllowedGlyph((byte) -89, bb.field_R[0], param0, uj.field_f[0]);
+          int var4 = StrongCacheEntry.widestAllowedGlyph((byte) -89, ModalPanel.field_R[0], param0, uj.field_f[0]);
           int var5Lifetime2 = param0.charAdvance((char) var4);
           if (var5Lifetime2 > var3) {
             var3 = var5Lifetime2;
             var2_int = var4;
           }
-          int var4Lifetime1 = StrongCacheEntry.widestAllowedGlyph((byte) -63, bb.field_R[1], param0, uj.field_f[1]);
+          int var4Lifetime1 = StrongCacheEntry.widestAllowedGlyph((byte) -63, ModalPanel.field_R[1], param0, uj.field_f[1]);
           int var5Lifetime3 = param0.charAdvance((char) var4Lifetime1);
           if (var5Lifetime3 > var3) {
             var3 = var5Lifetime3;

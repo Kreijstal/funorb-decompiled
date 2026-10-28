@@ -98,8 +98,8 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         tg.field_nb = null;
         IterableNodeHashTable.field_f = null;
         nn.field_i = null;
-        tb.field_G = null;
-        tb.field_D = false;
+        ModalStack.field_G = null;
+        ModalStack.field_D = false;
         if (param0 != 0) {
           field_e = -59L;
         }

@@ -126,7 +126,7 @@ final class gj {
         int var4 = this.field_f + this.field_c - 2;
         BinaryBitmapFont var5 = fh.field_g;
         int var7 = -42 % ((45 - param0) / 61);
-        int var6 = un.a(var5, 31512);
+        int var6 = PasswordFieldPainter.fontLineHeight(var5, 31512);
         var4 = var4 - var6;
         int var8 = uc.a(-1, var5);
         var4 = var4 + var8;
@@ -231,7 +231,7 @@ final class gj {
         if (param0 > -33) {
           int discarded$0 = this.a(-73);
         }
-        int var4 = un.a(var3, 31512);
+        int var4 = PasswordFieldPainter.fontLineHeight(var3, 31512);
         var2 = var2 + (2 + var4);
         return var2;
     }
@@ -284,7 +284,7 @@ final class gj {
 
     private final String a(int param0, int param1) {
         if (param1 == 1) {
-          return ng.field_lb;
+          return LoginDialog.field_lb;
         }
         if (param0 != -17651) {
           this.field_b = (ScoreSubmission) null;
@@ -293,12 +293,12 @@ final class gj {
           return wc.field_b;
         }
         if (param1 == 2) {
-          return ng.field_lb;
+          return LoginDialog.field_lb;
         }
         if (param1 == 3) {
-          return ng.field_lb;
+          return LoginDialog.field_lb;
         }
-        return ng.field_lb;
+        return LoginDialog.field_lb;
     }
 
     final void a(int param0, String param1, int param2) {
@@ -521,7 +521,7 @@ final class gj {
           this.field_l = new LegacyMenuColumn(qf.field_o, var10, 2);
           this.field_n.addLast(-12328, this.field_l);
           int[] var24 = this.c((byte) 39);
-          this.field_s = new LegacyMenuColumn(bo.field_D, var24);
+          this.field_s = new LegacyMenuColumn(Checkbox.field_D, var24);
           this.field_n.addLast(-12328, this.field_s);
           int[] var25 = this.b((byte) 127);
           this.field_i = new LegacyMenuColumn(jd.field_c, var25);
@@ -580,7 +580,7 @@ final class gj {
         this.field_l = new LegacyMenuColumn(qf.field_o, var5, 2);
         this.field_n.addLast(-12328, this.field_l);
         int[] var20 = this.b(-27531, this.field_h);
-        this.field_s = new LegacyMenuColumn(bo.field_D, var20);
+        this.field_s = new LegacyMenuColumn(Checkbox.field_D, var20);
         this.field_n.addLast(-12328, this.field_s);
         int[] var21 = this.b(-27531, this.field_h);
         this.field_i = new LegacyMenuColumn(jd.field_c, var21);

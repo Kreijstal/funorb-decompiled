@@ -122,7 +122,7 @@ final class mb {
           }
           if (var1_int &&
             UiContainer.e((byte) 111) &&
-            null != he.field_u) {
+            null != StatefulTextPainter.field_u) {
             return false;
           }
           if (param0 <= -61) {
@@ -149,7 +149,7 @@ final class mb {
           SoftwareRasterizer.saveClip(var3);
           of.field_a.bindAsFramebuffer();
           param0.drawMirrored(0, 0);
-          md.field_D.a(107);
+          AlphaContainer.field_D.a(107);
           SoftwareRasterizer.restoreClip(var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -225,7 +225,7 @@ final class mb {
             return;
           }
           if (rc.field_b != null) {
-            rc.field_b.field_K.setSuggestions(args, (byte) -103);
+            rc.field_b.suggestions.setSuggestions(args, (byte) -103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -16,8 +16,8 @@ final class e {
           if (dn.field_q != RasterBuffer.field_g) {
             return false;
           }
-          qc var8 = new qc(bo.field_F, param0);
-          bo.field_F.b(var8, 48);
+          RegistrationRequestDialog var8 = new RegistrationRequestDialog(Checkbox.field_F, param0);
+          Checkbox.field_F.pushPanel(var8, 48);
           if (!ei.d(1000)) {
             gf.field_a = param3;
             hf.field_a = param5;

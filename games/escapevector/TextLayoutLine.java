@@ -44,7 +44,7 @@ final class TextLayoutLine {
           if (NodeHashTableIterator.field_b == null) {
             return;
           }
-          if (null == qi.field_M) {
+          if (null == AccountMessagePanel.field_M) {
             return;
           }
           if (param1 < 0 ||
@@ -62,12 +62,12 @@ final class TextLayoutLine {
           if (param0 != 1) {
             TextLayoutLine.releaseStatics(98);
           }
-          Sprite[] var4 = qi.field_M[param1];
+          Sprite[] var4 = AccountMessagePanel.field_M[param1];
           for (int var5 = 0; 3 > var5; var5++) {
             if (var3 == null) {
               param1 = 0;
               var3 = NodeHashTableIterator.field_b[param1];
-              var4 = qi.field_M[param1];
+              var4 = AccountMessagePanel.field_M[param1];
             }
             Sprite var6 = var3[var5];
             int var7 = var5 + 14;
@@ -77,7 +77,7 @@ final class TextLayoutLine {
             }
             var8[var7] = var6;
             Sprite var9 = var4[var5];
-            jm.field_K[var7] = var9;
+            StripedProgressBar.field_K[var7] = var9;
           }
           DualLinkNode.a(-1, param1);
           return;

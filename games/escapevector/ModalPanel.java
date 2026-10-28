@@ -1,37 +1,37 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bb extends UiContainer {
+abstract class ModalPanel extends UiContainer {
     static String field_O;
     static java.applet.Applet field_P;
     static IntrusiveDeque field_L;
     static int field_H;
-    private int field_N;
+    private int alpha;
     static String field_J;
     static String field_K;
     static int[] field_R;
-    private tb field_Q;
-    boolean field_G;
+    private ModalStack modalStack;
+    boolean open;
     static String field_I;
 
-    boolean j(int param0) {
-        if (param0 != -13907) {
+    boolean updateAnimationsAndCheckClosed(int guard) {
+        if (guard != -13907) {
           return false;
         }
-        int var2 = this.k(-1);
-        int var3 = var2 - this.field_N;
+        int var2 = this.targetAlpha(-1);
+        int var3 = var2 - this.alpha;
         if (0 < var3) {
-          this.field_N = this.field_N + (8 + var3 - 1) / 8;
+          this.alpha = this.alpha + (8 + var3 - 1) / 8;
         }
         if (var3 < 0) {
-          this.field_N = this.field_N + (1 + (var3 - 16)) / 16;
+          this.alpha = this.alpha + (1 + (var3 - 16)) / 16;
         }
-        boolean stackIn_12_0 = (0 == this.field_N) && (0 == var2) && (!this.field_G);
+        boolean stackIn_12_0 = (0 == this.alpha) && (0 == var2) && (!this.open);
         return stackIn_12_0;
     }
 
-    final UiComponent a(boolean param0) {
-        UiComponent var2 = super.a(param0);
+    final UiComponent findFocusedChild(boolean guard) {
+        UiComponent var2 = super.findFocusedChild(guard);
         if (var2 != null) {
           return var2;
         }
@@ -39,14 +39,14 @@ abstract class bb extends UiContainer {
     }
 
     final void drawLayer(int screenY, byte guard, int layer, int screenX) {
-        if (0 == this.field_N) {
+        if (0 == this.alpha) {
           return;
         }
-        if (this.field_N >= 256) {
+        if (this.alpha >= 256) {
           if (layer != 0) {
             return;
           }
-          this.b(this.y + screenY, screenX + this.x, (byte) 89);
+          this.drawPanelBackground(this.y + screenY, screenX + this.x, (byte) 89);
           super.drawLayer(screenY, (byte) 87, layer, screenX);
           return;
         }
@@ -57,64 +57,64 @@ abstract class bb extends UiContainer {
         }
         eo.a(Minimap.field_r, (byte) -76);
         SoftwareRasterizer.clearFramebuffer();
-        this.b(0, 0, (byte) 87);
+        this.drawPanelBackground(0, 0, (byte) 87);
         super.drawLayer(-this.y - screenY, (byte) 118, layer, -this.x - screenX);
         if (guard <= 85) {
           field_L = (IntrusiveDeque) null;
         }
         dl.a((byte) 125);
-        Minimap.field_r.drawAlpha(this.x + screenX, this.y + screenY, this.field_N);
+        Minimap.field_r.drawAlpha(this.x + screenX, this.y + screenY, this.alpha);
     }
 
-    final static void a(int param0, int param1, int param2, IndexedSprite param3, int param4, int param5) {
+    final static void drawIndexedSpriteAlphaGradient(int x, int leftAlpha, int guard, IndexedSprite sprite, int y, int rightAlpha) {
         String stackIn_36_2 = null;
         int var20 = EscapeVector.obfuscationControl;
         try {
-          if (param2 != 4163) {
+          if (guard != 4163) {
             String var21 = (String) null;
-            bb.a(-7, (String) null, 'ﾱ');
+            ModalPanel.splitString(-7, (String) null, 'ﾱ');
           }
-          int var6_int = (param5 - param1 << 8) / param3.field_a;
-          param0 = param0 + param3.field_f;
-          param4 = param4 + param3.field_i;
-          int var7 = var6_int * param3.field_f + (param1 << 8);
-          int var8 = param4 * SoftwareRasterizer.width + param0;
+          int var6_int = (rightAlpha - leftAlpha << 8) / sprite.field_a;
+          x = x + sprite.field_f;
+          y = y + sprite.field_i;
+          int var7 = var6_int * sprite.field_f + (leftAlpha << 8);
+          int var8 = y * SoftwareRasterizer.width + x;
           int var9 = 0;
-          int var10 = param3.field_d;
-          int var11 = param3.field_g;
+          int var10 = sprite.field_d;
+          int var11 = sprite.field_g;
           int var12 = -var11 + SoftwareRasterizer.width;
           int var13 = 0;
-          if (SoftwareRasterizer.clipTop > param4) {
-            int var14 = SoftwareRasterizer.clipTop - param4;
+          if (SoftwareRasterizer.clipTop > y) {
+            int var14 = SoftwareRasterizer.clipTop - y;
             var10 = var10 - var14;
             var8 = var8 + SoftwareRasterizer.width * var14;
-            param4 = SoftwareRasterizer.clipTop;
+            y = SoftwareRasterizer.clipTop;
             var9 = var9 + var14 * var11;
           }
-          if (param4 + var10 > SoftwareRasterizer.clipBottom) {
-            var10 = var10 - (var10 + param4 - SoftwareRasterizer.clipBottom);
+          if (y + var10 > SoftwareRasterizer.clipBottom) {
+            var10 = var10 - (var10 + y - SoftwareRasterizer.clipBottom);
           }
-          if (param0 < SoftwareRasterizer.clipLeft) {
-            int var14Lifetime1 = -param0 + SoftwareRasterizer.clipLeft;
+          if (x < SoftwareRasterizer.clipLeft) {
+            int var14Lifetime1 = -x + SoftwareRasterizer.clipLeft;
             var8 = var8 + var14Lifetime1;
             var7 = var7 + var6_int * var14Lifetime1;
-            param0 = SoftwareRasterizer.clipLeft;
+            x = SoftwareRasterizer.clipLeft;
             var11 = var11 - var14Lifetime1;
             var9 = var9 + var14Lifetime1;
             var12 = var12 + var14Lifetime1;
             var13 = var13 + var14Lifetime1;
           }
-          if (var11 + param0 > SoftwareRasterizer.clipRight) {
-            int var14Lifetime2 = -SoftwareRasterizer.clipRight + var11 + param0;
+          if (var11 + x > SoftwareRasterizer.clipRight) {
+            int var14Lifetime2 = -SoftwareRasterizer.clipRight + var11 + x;
             var13 = var13 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
             var12 = var12 + var14Lifetime2;
           }
           if (var11 > 0 &&
             var10 > 0) {
-            for (param4 = -var10; 0 > param4; param4++) {
+            for (y = -var10; 0 > y; y++) {
               int var14Lifetime3 = var7;
-              for (param0 = -var11; 0 > param0; param0++) {
+              for (x = -var11; 0 > x; x++) {
                 int var15 = var14Lifetime3 >> 8;
                 int var16 = 256 - var15;
                 var14Lifetime3 = var14Lifetime3 + var6_int;
@@ -124,7 +124,7 @@ abstract class bb extends UiContainer {
                 } else {
                   int incrementValue$0 = var9;
                   var9++;
-                  int var17 = param3.field_l[param3.field_k[incrementValue$0] & 255];
+                  int var17 = sprite.field_l[sprite.field_k[incrementValue$0] & 255];
                   if (var17 != 0) {
                     if (255 >= var15) {
                       int var18 = SoftwareRasterizer.pixels[var8];
@@ -147,41 +147,41 @@ abstract class bb extends UiContainer {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_35_0 = var6;
-          StringBuilder stackIn_35_1 = new StringBuilder().append("bb.DA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_35_1 = new StringBuilder().append("bb.DA(").append(x).append(',').append(leftAlpha).append(',').append(guard).append(',');
+          if (sprite == null) {
             stackIn_36_2 = "null";
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(y).append(',').append(rightAlpha).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4) {
+    final static void halveAndAddPixels(int guard, int offset, int color, int length, int[] destination) {
         String stackIn_9_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          if (param0 != -23466) {
+          if (guard != -23466) {
             return;
           }
           while (true) {
-            param3--;
-            if (0 > param3) {
+            length--;
+            if (0 > length) {
               return;
             }
-            int[] var9 = param4;
+            int[] var9 = destination;
             int[] var5 = var9;
-            int var6 = param1;
-            int var7 = param2;
+            int var6 = offset;
+            int var7 = color;
             var9[var6] = SpriteCheckboxPainter.bitwiseAnd(var9[var6] >> 1, 8355711) + var7;
-            param1++;
+            offset++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5_ref = decompiledCaughtException;
           RuntimeException stackIn_8_0 = var5_ref;
-          StringBuilder stackIn_8_1 = new StringBuilder().append("bb.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          StringBuilder stackIn_8_1 = new StringBuilder().append("bb.L(").append(guard).append(',').append(offset).append(',').append(color).append(',').append(length).append(',');
+          if (destination == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -203,77 +203,77 @@ abstract class bb extends UiContainer {
         field_K = null;
     }
 
-    bb(tb param0, int param1, int param2) {
+    ModalPanel(ModalStack param0, int param1, int param2) {
         super(DelayedServerPacket.field_h - param1 >> 1, SingleChildContainer.field_B - param2 >> 1, param1, param2, (WidgetPainter) null);
         try {
-          this.field_G = false;
-          this.field_N = 0;
-          this.field_Q = param0;
+          this.open = false;
+          this.alpha = 0;
+          this.modalStack = param0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    abstract void b(int param0, int param1, byte param2);
+    abstract void drawPanelBackground(int screenY, int screenX, byte guard);
 
-    private final int k(int param0) {
-        if (param0 != -1) {
+    private final int targetAlpha(int guard) {
+        if (guard != -1) {
           field_J = (String) null;
         }
-        return this.field_G ? this.field_Q.n(0) != this ? 0 : 256 : 0;
+        return this.open ? this.modalStack.topOpenPanel(0) != this ? 0 : 256 : 0;
     }
 
-    final static String[] a(int param0, String param1, char param2) {
+    final static String[] splitString(int guard, String text, char separator) {
         int var8 = 0;
         String stackIn_14_2 = null;
         int var9 = EscapeVector.obfuscationControl;
         try {
-          CharSequence var11 = (CharSequence) ((Object) param1);
-          int var3_int = un.a(var11, 4277, param2);
+          CharSequence var11 = (CharSequence) ((Object) text);
+          int var3_int = PasswordFieldPainter.countCharacter(var11, 4277, separator);
           String[] var4 = new String[var3_int + 1];
-          if (param0 > -127) {
+          if (guard > -127) {
             String var10 = (String) null;
-            bb.a(119, (String) null, 'e');
+            ModalPanel.splitString(119, (String) null, 'e');
           }
           int var5 = 0;
           int var6 = 0;
           for (int var7 = 0; var7 < var3_int; var7++) {
-            for (var8 = var6; param1.charAt(var8) != param2; var8++) {
+            for (var8 = var6; text.charAt(var8) != separator; var8++) {
             }
             int incrementValue$1 = var5;
             var5++;
-            var4[incrementValue$1] = param1.substring(var6, var8);
+            var4[incrementValue$1] = text.substring(var6, var8);
             var6 = var8 + 1;
           }
-          var4[var3_int] = param1.substring(var6);
+          var4[var3_int] = text.substring(var6);
           String[] stackIn_10_0 = var4;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var3;
-          StringBuilder stackIn_13_1 = new StringBuilder().append("bb.U(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_13_1 = new StringBuilder().append("bb.U(").append(guard).append(',');
+          if (text == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(separator).append(')').toString());
         }
     }
 
-    boolean a(byte param0) {
-        int var2 = -106 / ((param0 - 7) / 55);
-        this.field_N = this.k(-1);
-        boolean stackIn_4_0 = (this.field_N == 0) && (!this.field_G);
+    boolean refreshVisibilityAndCheckClosed(byte guard) {
+        int var2 = -106 / ((guard - 7) / 55);
+        this.alpha = this.targetAlpha(-1);
+        boolean stackIn_4_0 = (this.alpha == 0) && (!this.open);
         return stackIn_4_0;
     }
 
-    final void b(int param0, int param1, int param2) {
-        if (param0 != 255) {
+    final void resizeAndCenter(int guard, int panelHeight, int panelWidth) {
+        if (guard != 255) {
           field_K = (String) null;
         }
-        this.setBounds(param2, -param1 + SingleChildContainer.field_B >> 1, -param2 + DelayedServerPacket.field_h >> 1, true, param1);
+        this.setBounds(panelWidth, -panelHeight + SingleChildContainer.field_B >> 1, -panelWidth + DelayedServerPacket.field_h >> 1, true, panelHeight);
     }
 
     static {

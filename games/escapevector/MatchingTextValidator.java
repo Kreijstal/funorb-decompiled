@@ -152,7 +152,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         mj.field_b.bindAsFramebuffer();
         SoftwareRasterizer.clearFramebuffer();
         fh.field_g.drawCentered(param1, 160, 22, param2, -1);
-        md.field_D.a(122);
+        AlphaContainer.field_D.a(122);
         cf.a(mj.field_b, true, 1);
         if (param3 > -109) {
           return;

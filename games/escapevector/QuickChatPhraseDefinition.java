@@ -23,7 +23,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             return;
           }
           if (opcode == 1) {
-            this.textFragments = bb.a(-128, input.readString(false), '<');
+            this.textFragments = ModalPanel.splitString(-128, input.readString(false), '<');
           } else {
             if (opcode == 2) {
               var4_int = input.readUnsignedByte(guard ^ 10691);
@@ -123,10 +123,10 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             field_t = (PcmSample) null;
           }
           if (null == ProxySocketConnector.field_r) {
-            ProxySocketConnector.field_r = new w(bo.field_F, dj.field_b);
-            bo.field_F.b(ProxySocketConnector.field_r, guard + 102);
+            ProxySocketConnector.field_r = new LoadingProgressDialog(Checkbox.field_F, dj.field_b);
+            Checkbox.field_F.pushPanel(ProxySocketConnector.field_r, guard + 102);
           }
-          ProxySocketConnector.field_r.a(-100, text, percent, alternateStyle);
+          ProxySocketConnector.field_r.setProgress(-100, text, percent, alternateStyle);
           SoftwareRasterizer.clearFramebuffer();
           se.a(true, guard ^ 17111);
         } catch (RuntimeException runtimeException) {

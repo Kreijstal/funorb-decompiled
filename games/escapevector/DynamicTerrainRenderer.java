@@ -940,18 +940,18 @@ final class DynamicTerrainRenderer {
     final static void b(int param0, int param1) {
         int var3 = EscapeVector.obfuscationControl;
         try {
-          vj.a((byte) -116, jf.field_J, param0, ArchiveRequest.field_t, true, TextLayoutLine.field_e, param1);
+          vj.a((byte) -116, AccountTermsPanel.field_J, param0, ArchiveRequest.field_t, true, TextLayoutLine.field_e, param1);
           int var2_int = 0;
           do {
-            if (!(jf.field_J > var2_int)) {
-              vj.a((byte) -128, jf.field_J + param0, param0 + param0, pl.field_r, false, TextLayout.field_d, param0);
+            if (!(AccountTermsPanel.field_J > var2_int)) {
+              vj.a((byte) -128, AccountTermsPanel.field_J + param0, param0 + param0, pl.field_r, false, TextLayout.field_d, param0);
               break;
             }
             cd.field_q[var2_int + param0] = var2_int;
             var2_int++;
           } while (var3 == 0);
-          if (jf.field_J > param0) {
-            jf.field_J = param0;
+          if (AccountTermsPanel.field_J > param0) {
+            AccountTermsPanel.field_J = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1142,7 +1142,7 @@ final class DynamicTerrainRenderer {
         dj.a(var14 + var4, -127, var13);
         SoftwareRasterizer.setClip(var9 + var7 * var15, var11 + var8, var10 + var5 * var15, var12 + var6);
         dj.a(var14 + var4, -94, var3 * var15 + var13);
-        md.field_D.a(107);
+        AlphaContainer.field_D.a(107);
         SoftwareRasterizer.restoreClip(this.field_c);
     }
 
@@ -1819,7 +1819,7 @@ final class DynamicTerrainRenderer {
         if (stackIn_14_0 <= 102) {
           this.a((int[][]) null, (byte) 106, (boolean[][]) null);
         }
-        md.field_D.a(126);
+        AlphaContainer.field_D.a(126);
         int[] stackIn_17_0Lifetime1 = this.field_c;
         SoftwareRasterizer.restoreClip(stackIn_17_0Lifetime1);
         this.a(this.field_y[1].pixels, true, this.field_y[0].pixels);

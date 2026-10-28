@@ -47,7 +47,7 @@ final class RasterSnapshot extends IntrusiveNode {
         String stackIn_8_2 = null;
         try {
           if (param1 > 109) {
-            String stackIn_4_0 = qi.a(param0.length, 0, param0, (byte) -109);
+            String stackIn_4_0 = AccountMessagePanel.decodeCp1252(param0.length, 0, param0, (byte) -109);
             return stackIn_4_0;
           }
           String stackIn_2_0 = (String) null;

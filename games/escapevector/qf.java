@@ -34,7 +34,7 @@ final class qf extends eo {
             jc.field_b = param7;
             IntrusiveDeque.field_h = param11;
             sj.field_i = param13;
-            jm.field_L = param6;
+            StripedProgressBar.field_L = param6;
             ej.field_d = param3;
             ThreeSliceButtonPainter.field_q = param10;
             ej.field_b = param9;

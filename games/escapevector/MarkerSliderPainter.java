@@ -140,34 +140,34 @@ final class MarkerSliderPainter implements WidgetPainter {
             decompiledFrameRemainder0 = (on.field_b == null);
           }
           if (decompiledFrameRemainder0) {
-            if (un.field_u) {
+            if (PasswordFieldPainter.field_u) {
               stackIn_17_0 = false;
-            } else if (ei.field_j >= ef.field_d) {
-              stackIn_17_0 = (ei.field_j < ef.field_d + qf.field_l);
+            } else if (ei.field_j >= WidgetStyleLayer.field_d) {
+              stackIn_17_0 = (ei.field_j < WidgetStyleLayer.field_d + qf.field_l);
             } else {
               stackIn_17_0 = false;
             }
             boolean var2_int = stackIn_17_0;
             if (text == null) {
               ei.field_j = 0;
-            } else if (un.field_u) {
-              ei.field_j = ef.field_d;
+            } else if (PasswordFieldPainter.field_u) {
+              ei.field_j = WidgetStyleLayer.field_d;
             } else if (!var2_int) {
               ei.field_j = 0;
             } else {
-              ei.field_j = ef.field_d;
+              ei.field_j = WidgetStyleLayer.field_d;
             }
             DraggableWidget.field_O = bg.field_f;
             ci.field_g = ValidationIndicator.field_M;
             if (text != null) {
-              un.field_u = false;
+              PasswordFieldPainter.field_u = false;
             } else if (var2_int) {
-              un.field_u = true;
+              PasswordFieldPainter.field_u = true;
             }
           }
           on.field_b = text;
-          if (!un.field_u &&
-            ei.field_j < ef.field_d &&
+          if (!PasswordFieldPainter.field_u &&
+            ei.field_j < WidgetStyleLayer.field_d &&
             TextFieldValidator.field_h) {
             ei.field_j = 0;
             ci.field_g = ValidationIndicator.field_M;
@@ -176,9 +176,9 @@ final class MarkerSliderPainter implements WidgetPainter {
           if (guard > -97) {
             MarkerSliderPainter.createArchive(-81, 8, false, 82, false);
           }
-          if (un.field_u &&
-            ei.field_j == fj.field_jb) {
-            un.field_u = false;
+          if (PasswordFieldPainter.field_u &&
+            ei.field_j == ContentTransitionDialog.field_jb) {
+            PasswordFieldPainter.field_u = false;
             ei.field_j = 0;
           }
           bg.field_f = -1;

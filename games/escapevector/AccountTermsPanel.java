@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends UiContainer implements TextHotspotListener, ButtonListener {
+final class AccountTermsPanel extends UiContainer implements TextHotspotListener, ButtonListener {
     static Sprite field_H;
     static String field_M;
     static int field_J;
     static String field_K;
     static String field_O;
-    private TextButton field_N;
-    private qc field_G;
+    private TextButton continueButton;
+    private RegistrationRequestDialog registrationDialog;
     static String[] field_I;
-    private TextHotspotWidget field_L;
+    private TextHotspotWidget termsText;
 
     public static void releaseStatics(int guard) {
         field_K = null;
@@ -21,12 +21,12 @@ final class jf extends UiContainer implements TextHotspotListener, ButtonListene
           field_M = null;
           return;
         }
-        jf.l(51);
+        AccountTermsPanel.l(51);
         field_M = null;
     }
 
-    private final String a(byte param0) {
-        if (param0 <= 113) {
+    private final String linkCloseMarkup(byte guard) {
+        if (guard <= 113) {
           TextButton var3 = (TextButton) null;
           this.onAction((TextButton) null, -9, -71, 98, 16);
           return "</col></u>";
@@ -34,29 +34,29 @@ final class jf extends UiContainer implements TextHotspotListener, ButtonListene
         return "</col></u>";
     }
 
-    jf(qc param0) {
+    AccountTermsPanel(RegistrationRequestDialog param0) {
         super(0, 0, 288, 0, (WidgetPainter) null);
         try {
-          this.field_G = param0;
-          this.field_N = new TextButton(bm.field_d, (UiListener) null);
-          this.field_N.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
-          String var7 = SingleChildContainer.a(mh.field_c, -63, new String[]{this.k(-102), this.a((byte) 126)});
+          this.registrationDialog = param0;
+          this.continueButton = new TextButton(bm.field_d, (UiListener) null);
+          this.continueButton.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
+          String var7 = SingleChildContainer.a(mh.field_c, -63, new String[]{this.linkOpenMarkup(-102), this.linkCloseMarkup((byte) 126)});
           int var3 = 20;
           TextWidgetPainter var4 = new TextWidgetPainter(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.maxAscent, -1, 2147483647, true);
-          this.field_L = new TextHotspotWidget(var7, var4);
-          this.field_L.tooltip = "";
-          this.field_L.setHotspotTooltip(TextFieldValidator.field_m, (byte) 102, 0);
-          this.field_L.setHotspotTooltip(TextFieldValidator.field_m, (byte) 104, 1);
-          this.field_L.listener = (UiListener) (this);
-          this.field_L.width = this.width - 40;
-          this.field_L.setBoundsToTextHeight(2463, 26, -40 + this.width, var3);
-          var3 = var3 + (15 + this.field_L.height);
-          this.b(this.field_L, false);
+          this.termsText = new TextHotspotWidget(var7, var4);
+          this.termsText.tooltip = "";
+          this.termsText.setHotspotTooltip(TextFieldValidator.field_m, (byte) 102, 0);
+          this.termsText.setHotspotTooltip(TextFieldValidator.field_m, (byte) 104, 1);
+          this.termsText.listener = (UiListener) (this);
+          this.termsText.width = this.width - 40;
+          this.termsText.setBoundsToTextHeight(2463, 26, -40 + this.width, var3);
+          var3 = var3 + (15 + this.termsText.height);
+          this.addChild(this.termsText, false);
           int var5 = 4;
           int var6 = 200;
-          this.field_N.setBounds(var6, var3, -var6 + 300 >> 1, true, 40);
-          this.field_N.listener = (UiListener) (this);
-          this.b(this.field_N, false);
+          this.continueButton.setBounds(var6, var3, -var6 + 300 >> 1, true, 40);
+          this.continueButton.listener = (UiListener) (this);
+          this.addChild(this.continueButton, false);
           this.setBounds(300, 0, 0, true, var5 + (var3 + 55));
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -111,13 +111,13 @@ final class jf extends UiContainer implements TextHotspotListener, ButtonListene
             return false;
           }
           if (98 == keyCode) {
-            boolean stackIn_9_0 = this.a((byte) 22, root);
+            boolean stackIn_9_0 = this.focusPreviousChild((byte) 22, root);
             return stackIn_9_0;
           }
           if (keyCode != 99) {
             return false;
           }
-          boolean stackIn_13_0 = this.a(root, true);
+          boolean stackIn_13_0 = this.focusNextChild(root, true);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,8 +133,8 @@ final class jf extends UiContainer implements TextHotspotListener, ButtonListene
         }
     }
 
-    private final String k(int param0) {
-        if (param0 >= -90) {
+    private final String linkOpenMarkup(int guard) {
+        if (guard >= -90) {
           return (String) null;
         }
         return "<u=2164A2><col=2164A2>";
@@ -147,11 +147,11 @@ final class jf extends UiContainer implements TextHotspotListener, ButtonListene
             TextHotspotWidget var7 = (TextHotspotWidget) null;
             this.onHotspotAction(-113, (TextHotspotWidget) null, -113, -16);
           }
-          if (button != this.field_N) {
+          if (button != this.continueButton) {
             return;
           }
           DebouncedValidator.b((byte) -125);
-          this.field_G.o(-18861);
+          this.registrationDialog.closeDialog(-18861);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ha implements WidgetPainter {
-    private BitmapFont field_f;
+final class LinkButtonPainter implements WidgetPainter {
+    private BitmapFont font;
     static hf field_c;
-    private int field_b;
-    private int field_d;
+    private int horizontalAlignment;
+    private int verticalAlignment;
     static int[] field_e;
     static boolean field_a;
 
@@ -28,20 +28,20 @@ final class ha implements WidgetPainter {
           if (guard > -14) {
             return;
           }
-          this.field_f.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + component.text + "</u>", component.x + originX, component.y + originY, component.width, component.height, var6_int, -1, this.field_b, this.field_d, this.field_f.maxAscent + this.field_f.maxDescent);
+          this.font.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + component.text + "</u>", component.x + originX, component.y + originY, component.width, component.height, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.font.maxAscent + this.font.maxDescent);
           if (component.isFocused(0)) {
-            int var7 = this.field_f.stringWidth(component.text);
-            int var8 = this.field_f.maxDescent + this.field_f.maxAscent;
+            int var7 = this.font.stringWidth(component.text);
+            int var8 = this.font.maxDescent + this.font.maxAscent;
             int var9 = originX + component.x;
             int var10 = component.y + originY;
-            if (this.field_b == 2) {
+            if (this.horizontalAlignment == 2) {
               var9 = var9 + (-var7 + component.width);
-            } else if (1 == this.field_b) {
+            } else if (1 == this.horizontalAlignment) {
               var9 = var9 + (component.width - var7 >> 1);
             }
-            if (this.field_d == 2) {
+            if (this.verticalAlignment == 2) {
               var10 = var10 + (component.height - var8);
-            } else if (this.field_d == 1) {
+            } else if (this.verticalAlignment == 1) {
               var10 = var10 + (-var8 + component.height >> 1);
             }
             SeekerMine.a(false, 4 + var7, var9 - 2, var8, var10 + 2);
@@ -139,13 +139,13 @@ final class ha implements WidgetPainter {
                         var18 = -1 - var17 + bi.field_c;
                       }
                       if (var17 < 0) {
-                        bb.a(-23466, var16Lifetime2, param6, var17 + var18, param8);
+                        ModalPanel.halveAndAddPixels(-23466, var16Lifetime2, param6, var17 + var18, param8);
                       } else {
-                        bb.a(-23466, var17 + var16Lifetime2, param6, var18, param8);
+                        ModalPanel.halveAndAddPixels(-23466, var17 + var16Lifetime2, param6, var18, param8);
                       }
                     } else if (0 <= var17 &&
                       bi.field_c > var17) {
-                      bb.a(-23466, var17 + var16Lifetime2, param6, var18, param8);
+                      ModalPanel.halveAndAddPixels(-23466, var17 + var16Lifetime2, param6, var18, param8);
                     }
                   }
                   param2++;
@@ -171,13 +171,13 @@ final class ha implements WidgetPainter {
                         var18 = -1 - var17 + bi.field_c;
                       }
                       if (var17 < 0) {
-                        bb.a(-23466, var16Lifetime2, param6, var17 + var18, param8);
+                        ModalPanel.halveAndAddPixels(-23466, var16Lifetime2, param6, var17 + var18, param8);
                       } else {
-                        bb.a(-23466, var17 + var16Lifetime2, param6, var18, param8);
+                        ModalPanel.halveAndAddPixels(-23466, var17 + var16Lifetime2, param6, var18, param8);
                       }
                     } else if (0 <= var17 &&
                       bi.field_c > var17) {
-                      bb.a(-23466, var17 + var16Lifetime2, param6, var18, param8);
+                      ModalPanel.halveAndAddPixels(-23466, var17 + var16Lifetime2, param6, var18, param8);
                     }
                   }
                   param2++;
@@ -225,13 +225,13 @@ final class ha implements WidgetPainter {
                     var17Lifetime1 = -1 + (-var16Lifetime1 + bi.field_c);
                   }
                   if (var16Lifetime1 < 0) {
-                    bb.a(-23466, var15Lifetime1, param6, var16Lifetime1 + var17Lifetime1, param8);
+                    ModalPanel.halveAndAddPixels(-23466, var15Lifetime1, param6, var16Lifetime1 + var17Lifetime1, param8);
                   } else {
-                    bb.a(-23466, var15Lifetime1 + var16Lifetime1, param6, var17Lifetime1, param8);
+                    ModalPanel.halveAndAddPixels(-23466, var15Lifetime1 + var16Lifetime1, param6, var17Lifetime1, param8);
                   }
                 } else if (0 <= var16Lifetime1 &&
                   bi.field_c > var16Lifetime1) {
-                  bb.a(-23466, var16Lifetime1 + var15Lifetime1, param6, var17Lifetime1, param8);
+                  ModalPanel.halveAndAddPixels(-23466, var16Lifetime1 + var15Lifetime1, param6, var17Lifetime1, param8);
                 }
               }
               param2++;
@@ -244,7 +244,7 @@ final class ha implements WidgetPainter {
             }
             if (param5 <= 33) {
               int[] var20 = (int[]) null;
-              ha.a(96, -39, -128, (byte) 0, -4, 16, -43, 90, (int[]) null, -115);
+              LinkButtonPainter.a(96, -39, -128, (byte) 0, -4, 16, -43, 90, (int[]) null, -115);
             }
             return;
           }
@@ -296,17 +296,17 @@ final class ha implements WidgetPainter {
         }
     }
 
-    public ha() {
-        this.field_b = 1;
-        this.field_d = 1;
-        this.field_f = Js5Transport.field_a;
+    public LinkButtonPainter() {
+        this.horizontalAlignment = 1;
+        this.verticalAlignment = 1;
+        this.font = Js5Transport.field_a;
     }
 
-    ha(BitmapFont param0, int param1, int param2) {
+    LinkButtonPainter(BitmapFont param0, int param1, int param2) {
         try {
-          this.field_b = param1;
-          this.field_d = param2;
-          this.field_f = param0;
+          this.horizontalAlignment = param1;
+          this.verticalAlignment = param2;
+          this.font = param0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -318,7 +318,7 @@ final class ha implements WidgetPainter {
         try {
           if (param3 > -75) {
             ResourceArchive var17 = (ResourceArchive) null;
-            ha.a(-4, -41, (ResourceArchive) null, 73, (ResourceArchive) null);
+            LinkButtonPainter.a(-4, -41, (ResourceArchive) null, 73, (ResourceArchive) null);
           }
           while (true) {
             param7--;

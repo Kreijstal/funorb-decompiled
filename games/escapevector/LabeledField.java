@@ -1,36 +1,36 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends SingleChildContainer {
-    private int field_F;
-    private String field_G;
-    private int field_K;
+final class LabeledField extends SingleChildContainer {
+    private int labelColor;
+    private String label;
+    private int padding;
     static QuickChatDynamicCommand field_H;
-    private int field_D;
-    private boolean field_E;
-    private BitmapFont field_L;
+    private int labelWidth;
+    private boolean labelOnRight;
+    private BitmapFont labelFont;
     static int[] field_M;
     static String field_I;
 
-    final static byte[] a(String param0, int param1) {
+    final static byte[] loadNamedAsset(String name, int guard) {
         String stackIn_7_2 = null;
         try {
-          if (param1 != 10592) {
-            ki.releaseStatics(-55);
+          if (guard != 10592) {
+            LabeledField.releaseStatics(-55);
           }
-          byte[] stackIn_3_0 = wk.field_e.getNamedFile(param1 ^ -10596, param0, "");
+          byte[] stackIn_3_0 = wk.field_e.getNamedFile(guard ^ -10596, name, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var2;
           StringBuilder stackIn_6_1 = new StringBuilder().append("ki.A(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -60,15 +60,15 @@ final class ki extends SingleChildContainer {
         if (layer != 0) {
           return;
         }
-        int var7 = this.field_E ? this.width - (this.field_D + this.field_K * 2) : 0;
-        this.field_L.drawParagraph(this.field_G, this.field_K + var5 + var7, var6 + this.field_K, -this.field_K + this.field_D, -(this.field_K * 2) + this.height, this.field_F, -1, this.field_E ? 0 : 2, 1, this.field_L.maxAscent);
+        int var7 = this.labelOnRight ? this.width - (this.labelWidth + this.padding * 2) : 0;
+        this.labelFont.drawParagraph(this.label, this.padding + var5 + var7, var6 + this.padding, -this.padding + this.labelWidth, -(this.padding * 2) + this.height, this.labelColor, -1, this.labelOnRight ? 0 : 2, 1, this.labelFont.maxAscent);
         if (guard >= 85) {
           return;
         }
-        this.field_E = false;
+        this.labelOnRight = false;
     }
 
-    ki(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+    LabeledField(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (WidgetPainter) null, (UiListener) null);
         int stackIn_10_0 = 0;
         String stackIn_15_2 = null;
@@ -76,27 +76,27 @@ final class ki extends SingleChildContainer {
         String stackIn_21_2 = null;
         try {
           this.child = param4;
-          this.field_D = param6;
-          this.field_F = param9;
+          this.labelWidth = param6;
+          this.labelColor = param9;
           boolean stackIn_4_1 = (param5);
-          this.field_E = stackIn_4_1;
-          this.field_K = param7;
-          this.field_L = param8;
-          this.field_G = param10;
-          int var12_int = -this.field_K + this.field_D;
-          int var13 = this.field_L.paragraphHeight(param10, var12_int, this.field_L.maxAscent) + 2 * this.field_K;
+          this.labelOnRight = stackIn_4_1;
+          this.padding = param7;
+          this.labelFont = param8;
+          this.label = param10;
+          int var12_int = -this.padding + this.labelWidth;
+          int var13 = this.labelFont.paragraphHeight(param10, var12_int, this.labelFont.maxAscent) + 2 * this.padding;
           if (param3 >= var13) {
             var13 = param3;
           } else {
             this.setBounds(param2, param1, param0, true, var13);
           }
-          if (this.field_E) {
+          if (this.labelOnRight) {
             stackIn_10_0 = 0;
           } else {
-            stackIn_10_0 = 2 * this.field_K + this.field_D;
+            stackIn_10_0 = 2 * this.padding + this.labelWidth;
           }
           int var14 = stackIn_10_0;
-          this.child.setBounds(-(3 * this.field_K) + (-this.field_D + param2), this.field_K + (var13 - param3 >> 1), var14, true, param3 - 2 * this.field_K);
+          this.child.setBounds(-(3 * this.padding) + (-this.labelWidth + param2), this.padding + (var13 - param3 >> 1), var14, true, param3 - 2 * this.padding);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

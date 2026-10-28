@@ -122,8 +122,8 @@ final class DialogueScreen extends IntrusiveNode {
           int stackIn_15_2 = (this.field_w.field_h != 0) ? 6340704 : 16777215;
           MatchingTextValidator.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, -122, 16 * var3 + (-6 + (var5 - var2 / 2)));
         }
-        qi.a(3162160, var5 - 3, 6324320, -1, 3 + var6, -108, 3 + var4, var7 - 3, var3);
-        qi.a(5275728, var5, 10551200, 1, var6, 99, var4, var7, var3);
+        AccountMessagePanel.drawUnevenFrame(3162160, var5 - 3, 6324320, -1, 3 + var6, -108, 3 + var4, var7 - 3, var3);
+        AccountMessagePanel.drawUnevenFrame(5275728, var5, 10551200, 1, var6, 99, var4, var7, var3);
         if (this.field_C > 0) {
           int var8 = this.revealedLine;
           int var9 = this.revealedCharacters;
@@ -367,14 +367,14 @@ final class DialogueScreen extends IntrusiveNode {
 
     final void advanceDialogue(byte guard) {
         int var7 = EscapeVector.obfuscationControl;
-        this.field_w.a(this.a(-84, sf.field_c, ng.field_ob), (byte) 126, this.a(-97, dh.field_d, UiContainer.field_y));
+        this.field_w.a(this.a(-84, sf.field_c, LoginDialog.field_ob), (byte) 126, this.a(-97, dh.field_d, UiContainer.field_y));
         if (guard < 10) {
           return;
         }
         if (this.field_w.field_e) {
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, this.g(2));
         }
-        if (qi.field_N != 0) {
+        if (AccountMessagePanel.field_N != 0) {
           this.i(2048);
           if (da.field_c != null) {
             da.field_c.b(true, 320);
@@ -382,7 +382,7 @@ final class DialogueScreen extends IntrusiveNode {
           }
         } else {
           while (true) {
-            if (pn.p(-82)) {
+            if (AccountRequestDialog.pollKeyEvent(-82)) {
               this.field_w.c((byte) 6);
               if (this.field_w.field_e) {
                 ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, this.g(2));

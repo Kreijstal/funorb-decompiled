@@ -3,7 +3,7 @@
  */
 final class rc {
     static ak field_a;
-    static oi field_b;
+    static DisplayNameForm field_b;
     static String field_c;
 
     final static void a(java.awt.Canvas param0, boolean param1) {
@@ -26,49 +26,49 @@ final class rc {
         if (param4) {
           if (param7 > param5) {
             if (param2 > param7) {
-              ha.a(param6, param7, param5, param1, param0, 41, param3, param2, SoftwareRasterizer.pixels);
+              LinkButtonPainter.a(param6, param7, param5, param1, param0, 41, param3, param2, SoftwareRasterizer.pixels);
               return;
             }
             if (param5 < param2) {
-              ha.a(param0, param2, param5, param1, param6, 38, param3, param7, SoftwareRasterizer.pixels);
+              LinkButtonPainter.a(param0, param2, param5, param1, param6, 38, param3, param7, SoftwareRasterizer.pixels);
               return;
             }
-            ha.a(param1, param5, param2, param0, param6, 127, param3, param7, SoftwareRasterizer.pixels);
+            LinkButtonPainter.a(param1, param5, param2, param0, param6, 127, param3, param7, SoftwareRasterizer.pixels);
             return;
           }
           if (param5 < param2) {
-            ha.a(param1, param5, param7, param6, param0, 42, param3, param2, SoftwareRasterizer.pixels);
+            LinkButtonPainter.a(param1, param5, param7, param6, param0, 42, param3, param2, SoftwareRasterizer.pixels);
             return;
           }
           if (param2 <= param7) {
-            ha.a(param6, param7, param2, param0, param1, 66, param3, param5, SoftwareRasterizer.pixels);
+            LinkButtonPainter.a(param6, param7, param2, param0, param1, 66, param3, param5, SoftwareRasterizer.pixels);
             return;
           }
-          ha.a(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
+          LinkButtonPainter.a(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
           return;
         }
         rc.releaseStatics(-25);
         if (param7 > param5) {
           if (param2 > param7) {
-            ha.a(param6, param7, param5, param1, param0, 41, param3, param2, SoftwareRasterizer.pixels);
+            LinkButtonPainter.a(param6, param7, param5, param1, param0, 41, param3, param2, SoftwareRasterizer.pixels);
             return;
           }
           if (param5 < param2) {
-            ha.a(param0, param2, param5, param1, param6, 38, param3, param7, SoftwareRasterizer.pixels);
+            LinkButtonPainter.a(param0, param2, param5, param1, param6, 38, param3, param7, SoftwareRasterizer.pixels);
             return;
           }
-          ha.a(param1, param5, param2, param0, param6, 127, param3, param7, SoftwareRasterizer.pixels);
+          LinkButtonPainter.a(param1, param5, param2, param0, param6, 127, param3, param7, SoftwareRasterizer.pixels);
           return;
         }
         if (param5 < param2) {
-          ha.a(param1, param5, param7, param6, param0, 42, param3, param2, SoftwareRasterizer.pixels);
+          LinkButtonPainter.a(param1, param5, param7, param6, param0, 42, param3, param2, SoftwareRasterizer.pixels);
           return;
         }
         if (param2 <= param7) {
-          ha.a(param6, param7, param2, param0, param1, 66, param3, param5, SoftwareRasterizer.pixels);
+          LinkButtonPainter.a(param6, param7, param2, param0, param1, 66, param3, param5, SoftwareRasterizer.pixels);
           return;
         }
-        ha.a(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
+        LinkButtonPainter.a(param0, param2, param7, param6, param1, 120, param3, param5, SoftwareRasterizer.pixels);
     }
 
     public static void releaseStatics(int guard) {
@@ -78,7 +78,7 @@ final class rc {
           field_b = null;
           return;
         }
-        field_b = (oi) null;
+        field_b = (DisplayNameForm) null;
         field_a = null;
         field_c = null;
         field_b = null;
@@ -103,7 +103,7 @@ final class rc {
             var4_int = param2.y;
           }
           if (param1 <= 119) {
-            field_b = (oi) null;
+            field_b = (DisplayNameForm) null;
           }
           SpriteOffset stackIn_12_0 = new SpriteOffset(var4_int, var5);
           return stackIn_12_0;

@@ -174,7 +174,7 @@ final class gi {
         this.field_a = DualLinkNode.field_o;
         this.field_b = TextFieldValidator.field_e;
         if (param0) {
-          this.field_k = bo.field_H;
+          this.field_k = Checkbox.field_H;
         } else {
           this.field_k = null;
         }

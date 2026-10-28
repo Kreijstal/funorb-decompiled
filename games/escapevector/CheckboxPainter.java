@@ -51,12 +51,12 @@ final class CheckboxPainter implements WidgetPainter {
         UiComponent stackIn_3_0 = null;
         String stackIn_20_2 = null;
         try {
-          if (!(component instanceof bo)) {
+          if (!(component instanceof Checkbox)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (UiComponent) (component);
           }
-          bo var11 = (bo) (stackIn_3_0);
+          Checkbox var11 = (Checkbox) (stackIn_3_0);
           if (var11 != null) {
             enabled = enabled & var11.enabled;
           }
@@ -72,7 +72,7 @@ final class CheckboxPainter implements WidgetPainter {
           int var9 = this.field_r + (component.y + originY);
           SoftwareRasterizer.drawDropShadow(var8, var9, this.field_a, this.field_k, 5592405);
           SoftwareRasterizer.fillRectangle(var8, var9, this.field_a, this.field_k, var7);
-          if (var11.field_z) {
+          if (var11.selected) {
             SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_a, this.field_k + var9, 1);
             SoftwareRasterizer.drawLine(var8 + this.field_a, var9, var8, this.field_k + var9, 1);
           }

@@ -9,7 +9,7 @@ final class sn {
     private String field_a;
 
     final static void c(int param0) {
-        int var1 = l.a(-8462, SelfDestructEffects.field_q);
+        int var1 = AccountChoicePanel.a(-8462, SelfDestructEffects.field_q);
         int var2 = Bullet.accountStateIndex(127);
         if (param0 != -1) {
           field_b = (boolean[]) null;
@@ -40,10 +40,10 @@ final class sn {
         int var5 = 0;
         int var9 = EscapeVector.obfuscationControl;
         try {
-          tb.field_D = true;
+          ModalStack.field_D = true;
           ArchiveIndex.field_j = param0;
           if (ArchiveIndex.field_j == 0) {
-            var3_int = un.a(pf.field_e, -118, nb.field_a, Js5Transport.field_h, ac.field_a);
+            var3_int = PasswordFieldPainter.a(pf.field_e, -118, nb.field_a, Js5Transport.field_h, ac.field_a);
             var4 = var3_int + 3;
             jj.field_a = new int[var4];
             Js5NetworkRequest.field_I = new String[var4];
@@ -62,7 +62,7 @@ final class sn {
             jj.field_a[-1 + var4] = 1;
             CachedTextLayout.field_j[1] = 5;
           } else if (ArchiveIndex.field_j == 1) {
-            var3_int = un.a(pf.field_e, -126, nb.field_a, Js5Transport.field_h, ac.field_a);
+            var3_int = PasswordFieldPainter.a(pf.field_e, -126, nb.field_a, Js5Transport.field_h, ac.field_a);
             var4 = 2 + var3_int;
             Js5NetworkRequest.field_I = new String[var4];
             jj.field_a = new int[var4];
@@ -80,9 +80,9 @@ final class sn {
           } else if (ArchiveIndex.field_j != 2) {
             if (ArchiveIndex.field_j == 3) {
               if (!NetworkGameClient.field_r.field_f) {
-                var3_int = un.a(pf.field_e, param1 ^ 114, nb.field_a, Js5Transport.field_h, DialogueScreen.field_k);
+                var3_int = PasswordFieldPainter.a(pf.field_e, param1 ^ 114, nb.field_a, Js5Transport.field_h, DialogueScreen.field_k);
               } else {
-                var3_int = un.a(pf.field_e, -122, nb.field_a, Js5Transport.field_h, aj.field_e);
+                var3_int = PasswordFieldPainter.a(pf.field_e, -122, nb.field_a, Js5Transport.field_h, aj.field_e);
               }
               var4 = 2 + var3_int;
               Js5NetworkRequest.field_I = new String[var4];
@@ -99,7 +99,7 @@ final class sn {
               jj.field_a[var4 - 1] = 0;
               CachedTextLayout.field_j[0] = 5;
             } else if (ArchiveIndex.field_j == 4) {
-              var3_int = un.a(pf.field_e, -110, nb.field_a, Js5Transport.field_h, ol.field_K);
+              var3_int = PasswordFieldPainter.a(pf.field_e, -110, nb.field_a, Js5Transport.field_h, ol.field_K);
               var4 = var3_int + 2;
               Js5NetworkRequest.field_I = new String[var4];
               jj.field_a = new int[var4];
@@ -118,7 +118,7 @@ final class sn {
               if (5 != ArchiveIndex.field_j) {
                 throw new IllegalArgumentException();
               }
-              var3_int = un.a(pf.field_e, 122, nb.field_a, Js5Transport.field_h, MouseInputHandler.field_a);
+              var3_int = PasswordFieldPainter.a(pf.field_e, 122, nb.field_a, Js5Transport.field_h, MouseInputHandler.field_a);
               var4 = 3 + var3_int;
               Js5NetworkRequest.field_I = new String[var4];
               jj.field_a = new int[var4];
@@ -138,7 +138,7 @@ final class sn {
               CachedTextLayout.field_j[1] = 5;
             }
           } else {
-            var3_int = un.a(pf.field_e, -101, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(SpriteOffset.field_d, -63, new String[]{"<br><%0><br>"}));
+            var3_int = PasswordFieldPainter.a(pf.field_e, -101, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(SpriteOffset.field_d, -63, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(pf.field_e[var5])) {
@@ -155,7 +155,7 @@ final class sn {
             nn.field_i = new String[-1 - var4 + var3_int];
             qg.a(pf.field_e, 1 + var4, nn.field_i, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = un.a(pf.field_e, param1 ^ 71, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(al.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
+            var3_int = PasswordFieldPainter.a(pf.field_e, param1 ^ 71, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(al.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(pf.field_e[var5])) {
                 continue;
@@ -168,18 +168,18 @@ final class sn {
             }
             IterableNodeHashTable.field_f = new String[var4];
             qg.a(pf.field_e, 0, IterableNodeHashTable.field_f, 0, var4);
-            tb.field_G = new String[var3_int - var4 - 1];
-            qg.a(pf.field_e, 1 + var4, tb.field_G, 0, -1 + var3_int - var4);
+            ModalStack.field_G = new String[var3_int - var4 - 1];
+            qg.a(pf.field_e, 1 + var4, ModalStack.field_G, 0, -1 + var3_int - var4);
             if (IterableNodeHashTable.field_f.length > tg.field_nb.length) {
               stackIn_52_0 = IterableNodeHashTable.field_f.length;
             } else {
               stackIn_52_0 = tg.field_nb.length;
             }
             var5 = stackIn_52_0;
-            if (nn.field_i.length >= tb.field_G.length) {
+            if (nn.field_i.length >= ModalStack.field_G.length) {
               stackIn_55_0 = nn.field_i.length;
             } else {
-              stackIn_55_0 = tb.field_G.length;
+              stackIn_55_0 = ModalStack.field_G.length;
             }
             int var6 = stackIn_55_0;
             int var7 = var5 + 7 + var6;
@@ -192,12 +192,12 @@ final class sn {
             jj.field_a[1] = 0;
             Js5NetworkRequest.field_I[1] = AchievementQuery.field_j;
             Js5NetworkRequest.field_I[0] = td.field_a;
-            Js5NetworkRequest.field_I[2] = bb.field_I;
+            Js5NetworkRequest.field_I[2] = ModalPanel.field_I;
             CachedTextLayout.field_j[0] = 5;
             jj.field_a[3] = 1;
             Js5NetworkRequest.field_I[5] = "";
             Js5NetworkRequest.field_I[4] = p.field_e;
-            Js5NetworkRequest.field_I[3] = bb.field_J;
+            Js5NetworkRequest.field_I[3] = ModalPanel.field_J;
             CachedTextLayout.field_j[1] = 2;
             for (int var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               String[] stackIn_62_0 = Js5NetworkRequest.field_I;
@@ -215,9 +215,9 @@ final class sn {
               String[] stackIn_67_0 = Js5NetworkRequest.field_I;
               int stackIn_67_1 = var8Lifetime3 + var5 + 7;
               int stackIn_67_2 = ~var8Lifetime3;
-              int stackIn_67_3 = ~tb.field_G.length;
+              int stackIn_67_3 = ~ModalStack.field_G.length;
               if (stackIn_67_2 > stackIn_67_3) {
-                stackIn_70_2 = tb.field_G[var8Lifetime3];
+                stackIn_70_2 = ModalStack.field_G[var8Lifetime3];
               } else {
                 stackIn_70_2 = "";
               }
@@ -267,7 +267,7 @@ final class sn {
             }
             mh.field_f = stackIn_112_0 + stackIn_113_1;
           }
-          EmailSyntaxValidator.field_o = ng.field_nb - (mh.field_f >> 1);
+          EmailSyntaxValidator.field_o = LoginDialog.field_nb - (mh.field_f >> 1);
           cj.field_d = new int[Js5NetworkRequest.field_I.length][];
           int var4Lifetime3 = 0;
           int var5Lifetime3 = EmailSyntaxValidator.field_o;

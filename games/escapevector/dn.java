@@ -165,7 +165,7 @@ final class dn {
           }
           if (this.field_m < this.field_D - 1) {
             int var16Lifetime1 = -var11 + this.field_k + param3;
-            String var17Lifetime1 = fj.field_kb;
+            String var17Lifetime1 = ContentTransitionDialog.field_kb;
             int incrementValue$3 = var8;
             var8++;
             this.a(var17Lifetime1, var12, var10, var7_int, var9, var16Lifetime1, param5, this.field_u, 1, 10551200, incrementValue$3);
@@ -508,7 +508,7 @@ final class dn {
               if (var6.levelIndex < 0) {
                 var3_ref = AccountRegistrationPanel.field_O;
               } else if (1 == var6.tetheredObjectType) {
-                var3_ref = pn.field_qb[var5.missionDialogueTier((byte) -84)];
+                var3_ref = AccountRequestDialog.field_qb[var5.missionDialogueTier((byte) -84)];
               } else if (var6.cargoLost) {
                 var3_ref = EmailAvailabilityRequest.field_f[var5.missionDialogueTier((byte) -84)];
               } else if (var6.objectiveType != 1) {
@@ -518,7 +518,7 @@ final class dn {
               }
               break regionExit1;
             }
-            var3_ref = jf.field_M;
+            var3_ref = AccountTermsPanel.field_M;
           }
         }
         if (12 <= var6.levelIndex) {
@@ -753,7 +753,7 @@ final class dn {
         int var5 = EscapeVector.obfuscationControl;
         int var3 = -33 / ((param0 + 47) / 45);
         boolean var2 = false;
-        while (pn.p(-73)) {
+        while (AccountRequestDialog.pollKeyEvent(-73)) {
           this.field_d.c((byte) 6);
           if (this.field_d.field_e) {
             this.l(1536);
@@ -906,7 +906,7 @@ final class dn {
         if (param0 != -22600) {
           this.field_z = (LegacyButton) null;
         }
-        int var3 = this.a(param0 + 22723, sf.field_c, ng.field_ob);
+        int var3 = this.a(param0 + 22723, sf.field_c, LoginDialog.field_ob);
         this.field_d.a(var3, (byte) 118, var2);
         if (this.field_d.field_e) {
           this.l(1536);
@@ -1056,7 +1056,7 @@ final class dn {
         int var5 = this.f((byte) 70);
         int var6 = this.g((byte) 115);
         BinaryBitmapFont var7 = fh.field_g;
-        this.field_c = new PairedTextColumns(qc.field_yb, var8, var3);
+        this.field_c = new PairedTextColumns(RegistrationRequestDialog.field_yb, var8, var3);
         this.field_c.configureColumns(var6, var5, var4, (byte) -92, var7);
     }
 

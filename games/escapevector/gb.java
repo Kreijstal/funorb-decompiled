@@ -102,7 +102,7 @@ final class gb {
               var3_int = true;
             }
             NameSuggestionsPanel.a((byte) 9, (var3_int), wi.field_f, qe.a(-111), le.b(1));
-          } else if (!jf.l(param1 - 89)) {
+          } else if (!AccountTermsPanel.l(param1 - 89)) {
             SoftwareRasterizer.clearFramebuffer();
             ok.a(240, 320, param1 ^ 72);
             nn.a(param2, 0, -1, 0);

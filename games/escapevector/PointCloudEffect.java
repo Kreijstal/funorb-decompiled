@@ -349,10 +349,10 @@ final class PointCloudEffect extends DualLinkNode {
           ProgressRecord var2 = (ProgressRecord) null;
           PointCloudEffect.a(56, (byte) 48, (ProgressRecord) null);
         }
-        if (null != bb.field_P) {
-          return bb.field_P;
+        if (null != ModalPanel.field_P) {
+          return ModalPanel.field_P;
         }
-        return (java.applet.Applet) ((Object) he.field_r);
+        return (java.applet.Applet) ((Object) StatefulTextPainter.field_r);
     }
 
     final void i(int param0) {

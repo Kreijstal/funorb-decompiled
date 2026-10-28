@@ -41,7 +41,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
     }
 
     private final int rowHeight(int guard) {
-        int var2 = un.a(this.font, 31512);
+        int var2 = PasswordFieldPainter.fontLineHeight(this.font, 31512);
         int var3 = 0;
         if (guard != -1) {
           return -113;
@@ -96,7 +96,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
     }
 
     private final int headerAreaHeight(int topPadding) {
-        int var2 = un.a(this.font, 31512);
+        int var2 = PasswordFieldPainter.fontLineHeight(this.font, 31512);
         int var3 = 0;
         var3 = var3 + topPadding;
         var3 = var3 + var2;

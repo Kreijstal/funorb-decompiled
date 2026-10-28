@@ -56,7 +56,7 @@ final class cf {
               int stackIn_60_1 = var29Lifetime1;
               if (var30 != 0) {
                 if (stackIn_60_0 > stackIn_60_1) {
-                  stackIn_69_0 = oi.field_L.length;
+                  stackIn_69_0 = DisplayNameForm.field_L.length;
                   stackIn_69_1 = var18;
                   break scanLoop1;
                 }
@@ -78,7 +78,7 @@ final class cf {
                 }
                 if (param2) {
                   mg.field_a[var23Lifetime2] = var27Lifetime1 >> HighscoreQuery.field_i;
-                  tm.field_bb[var23Lifetime2] = var28Lifetime1 >> HighscoreQuery.field_i;
+                  AccountNoticeDialog.field_bb[var23Lifetime2] = var28Lifetime1 >> HighscoreQuery.field_i;
                   LegacyTextBlock.field_p[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -143,7 +143,7 @@ final class cf {
                   if (stackIn_60_0Lifetime1 <= stackIn_60_1Lifetime1) {
                     break;
                   }
-                  stackIn_69_0 = oi.field_L.length;
+                  stackIn_69_0 = DisplayNameForm.field_L.length;
                   stackIn_69_1 = var18;
                   if (var30 != 0) {
                     break scanLoop1;
@@ -154,7 +154,7 @@ final class cf {
                   var19 = param6.field_N[var18];
                   var20 = param6.field_q[var18];
                   var21Lifetime2 = param6.field_w[var18];
-                  oi.field_L[var18] = var19 * var9 - (-(var20 * var12) - var15 * var21Lifetime2) >> 16;
+                  DisplayNameForm.field_L[var18] = var19 * var9 - (-(var20 * var12) - var15 * var21Lifetime2) >> 16;
                   IsaacRandom.field_f[var18] = var19 * var10 + var13 * var20 + var21Lifetime2 * var16 >> 16;
                   GameplaySession.field_xb[var18] = var11 * var19 + (var14 * var20 + var21Lifetime2 * var17) >> 16;
                   var18++;

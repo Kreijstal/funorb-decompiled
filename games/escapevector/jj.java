@@ -14,13 +14,13 @@ final class jj {
           return;
         }
         if (be.field_b != null) {
-          be.field_b.o(param0 ^ -18861);
+          be.field_b.closeDialog(param0 ^ -18861);
         }
         String var1 = mh.b((byte) 105);
-        PcmResampler.field_d = new h(var1, (String) null, true, false, false);
-        bo.field_F.b(rd.field_c, 97);
-        rd.field_c.a(PcmResampler.field_d, 30);
-        rd.field_c.b(false);
+        PcmResampler.field_d = new LoginForm(var1, (String) null, true, false, false);
+        Checkbox.field_F.pushPanel(rd.field_c, 97);
+        rd.field_c.transitionToContent(PcmResampler.field_d, 30);
+        rd.field_c.finishTransition(false);
     }
 
     public static void releaseStatics(int guard) {

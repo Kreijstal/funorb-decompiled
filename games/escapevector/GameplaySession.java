@@ -454,7 +454,7 @@ final class GameplaySession {
         String var3 = "";
         if (this.rockBusterAmmo == 0 &&
           count == 1) {
-          var3 = ef.field_k;
+          var3 = WidgetStyleLayer.field_k;
         } else if (count == 1) {
           var3 = Minimap.field_p;
         } else if (this.rockBusterAmmo == 0 &&
@@ -1815,7 +1815,7 @@ final class GameplaySession {
           } else if (0 <= this.levelIndex ||
             !this.cargoLost) {
             pl.field_n.playSampleWithPan(gm.field_b, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
-            this.showHudMessage(-98, ki.field_I);
+            this.showHudMessage(-98, LabeledField.field_I);
           }
         }
         if (this.objectiveType == 1) {
@@ -2191,7 +2191,7 @@ final class GameplaySession {
                 fh.field_g.drawCentered(SeekerMine.field_k[3 * this.tutorialStep], 319, 20, 16777215, -1);
                 fh.field_g.drawCentered(SeekerMine.field_k[this.tutorialStep * 3 + 1], 319, 40, 16777215, -1);
                 fh.field_g.drawCentered(SeekerMine.field_k[2 + this.tutorialStep * 3], 319, 60, 16777215, -1);
-                md.field_D.a(126);
+                AlphaContainer.field_D.a(126);
               }
             }
             if (~this.displayedTutorialStep == ~this.tutorialStep &&
@@ -2244,7 +2244,7 @@ final class GameplaySession {
               fh.field_g.drawParagraph(CachedArchiveProvider.field_r[var5], var3 + 40, var6 - fh.field_g.maxAscent, 100, 1000, 16777215, -1, 0, 0, 20);
               var3 += 160;
             }
-            md.field_D.a(113);
+            AlphaContainer.field_D.a(113);
           }
           if (this.noticeTicks == 0) {
             int stackIn_86_0Lifetime1 = ~this.pendingAchievementCount;
@@ -2850,13 +2850,13 @@ final class GameplaySession {
           GradientOutlineTextPainter.enqueueDialogue(1820, var17);
         }
         if (this.levelIndex == 8) {
-          int[] var34 = ha.field_e;
+          int[] var34 = LinkButtonPainter.field_e;
           String[] var19 = pc.field_b;
           DialogueScreen var20 = new DialogueScreen(var34, var12, var19, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var20);
         }
         if (this.levelIndex == 12) {
-          int[] var35 = w.field_bb;
+          int[] var35 = LoadingProgressDialog.field_bb;
           String[] var22 = vd.field_i;
           DialogueScreen var23 = new DialogueScreen(var35, var12, var22, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var23);
@@ -3056,7 +3056,7 @@ final class GameplaySession {
         SoftwareRasterizer.clearFramebuffer();
         String var3 = TrackerMusicDefinition.a((byte) 120, this.gameMode, this.levelIndex);
         fh.field_g.drawCentered(var3, 160, 22, 7899280, -1);
-        md.field_D.a(126);
+        AlphaContainer.field_D.a(126);
         cf.a(mj.field_b, true, 1);
         mj.field_b.addOutline(5267536);
         int var4 = this.levelTitleTicks;
@@ -3876,7 +3876,7 @@ final class GameplaySession {
           this.minimap.field_c = this.minimap.field_c + 1;
         }
         scanLoop1: while (true) {
-          if (pn.p(-116)) {
+          if (AccountRequestDialog.pollKeyEvent(-116)) {
             if (~PasswordValidator.field_n == ~of.field_c &&
               this.minimap != null) {
               this.minimap.e((byte) -101);
@@ -4285,8 +4285,8 @@ final class GameplaySession {
           if (null == seekerMine.flightSound) {
             seekerMine.proximitySound = new SeekerPulseStream();
             seekerMine.flightSound = PcmSampleStream.createAtStepQ8(ci.field_a, 256, 0, 8192);
-            seekerMine.proximitySound.field_k = PcmSampleStream.createAtStepQ8(qi.field_J, 256, 0, 8192);
-            seekerMine.proximitySound.field_q = PcmSampleStream.createAtStepQ8(qi.field_J, 256, 0, 8192);
+            seekerMine.proximitySound.field_k = PcmSampleStream.createAtStepQ8(AccountMessagePanel.field_J, 256, 0, 8192);
+            seekerMine.proximitySound.field_q = PcmSampleStream.createAtStepQ8(AccountMessagePanel.field_J, 256, 0, 8192);
             seekerMine.flightSound.setLoopCount(-1);
             seekerMine.proximitySound.field_k.setLoopCount(-1);
             seekerMine.proximitySound.field_q.setLoopCount(-1);
@@ -5017,7 +5017,7 @@ final class GameplaySession {
                 ResourceArchive.field_a.bindAsFramebuffer();
                 SoftwareRasterizer.clearFramebuffer();
                 ResourceArchive.field_m.drawCenteredRotatedScaled(4, (byte) 34, 4096, -rockBuster.angle256 << 8, 4);
-                md.field_D.a(120);
+                AlphaContainer.field_D.a(120);
                 var12 = (int)Math.sqrt((double)rockBuster.velocityYQ16 * (double)rockBuster.velocityYQ16 + (double)rockBuster.velocityXQ16 * (double)rockBuster.velocityXQ16);
                 var13_int = var12 / 196608 + 1;
                 int var14Lifetime3Lifetime1 = rockBuster.velocityXQ16;
@@ -5369,7 +5369,7 @@ final class GameplaySession {
           var13.drawLeft(Integer.toString(var11_int), var3 + 6, var10, 16777215, -1);
           var10 = var10 + var7;
         }
-        int var3Lifetime1 = var13.stringWidth(jf.field_K);
+        int var3Lifetime1 = var13.stringWidth(AccountTermsPanel.field_K);
         int var4Lifetime3 = var13.stringWidth(vd.field_c);
         int var5Lifetime1 = var13.stringWidth(Integer.toString(this.levelIndex + 1));
         if (var3Lifetime1 < var4Lifetime3) {
@@ -5410,7 +5410,7 @@ final class GameplaySession {
         }
         int var9Lifetime1 = stackIn_44_0;
         GameAppletShell.a(var9Lifetime1, 634 - var5Lifetime1 - var3Lifetime1 - 10, -4, 6320248, -2, var6Lifetime1 + 6, -3, 644, 12110032, 3160124, var8Lifetime1 * 2);
-        var13.drawRight(jf.field_K, -var5Lifetime1 + 634, 22, 10004656, -1);
+        var13.drawRight(AccountTermsPanel.field_K, -var5Lifetime1 + 634, 22, 10004656, -1);
         var13.drawLeft(Integer.toString(this.levelIndex + 1), -var5Lifetime1 + 634, 22, 16777215, -1);
         var13.drawRight(vd.field_c, -var5Lifetime1 + 634, 40, 10004656, -1);
         var13.drawLeft(Integer.toString(this.livesRemaining), -var5Lifetime1 + 634, 40, 16777215, -1);
@@ -5640,7 +5640,7 @@ final class GameplaySession {
         }
         this.cargoLost = true;
         if (!this.shipDestroyed) {
-          this.showHudMessage(50, 0 > this.levelIndex ? qc.field_xb : EmailSyntaxValidator.field_n);
+          this.showHudMessage(50, 0 > this.levelIndex ? RegistrationRequestDialog.field_xb : EmailSyntaxValidator.field_n);
         }
     }
 
@@ -5674,12 +5674,12 @@ final class GameplaySession {
           DialogueScreen var20 = new DialogueScreen(var34, var12, var19, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var20);
         } else if (this.levelIndex < 12) {
-          int[] var33 = ha.field_e;
+          int[] var33 = LinkButtonPainter.field_e;
           String[] var16 = pc.field_b;
           DialogueScreen var17 = new DialogueScreen(var33, var12, var16, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var17);
         } else {
-          int[] var32 = w.field_bb;
+          int[] var32 = LoadingProgressDialog.field_bb;
           String[] var13 = vd.field_i;
           DialogueScreen var14 = new DialogueScreen(var32, var12, var13, false);
           GradientOutlineTextPainter.enqueueDialogue(guard - 9154, var14);
@@ -5810,7 +5810,7 @@ final class GameplaySession {
           }
           var4.unlink((byte) -101);
           this.pendingTargetEffects.addLast(guard + 1, effect);
-          this.showHudMessage(-111, oi.field_J);
+          this.showHudMessage(-111, DisplayNameForm.field_J);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -5939,7 +5939,7 @@ final class GameplaySession {
               return;
             }
             lh.a((byte) 99, score);
-            int[] var11 = jm.j(-3282);
+            int[] var11 = StripedProgressBar.j(-3282);
             int[] var10 = var11;
             int[] var8 = var10;
             if (var8 == null) {
@@ -6240,14 +6240,14 @@ final class GameplaySession {
           this.initialPowerups = new IntrusiveDeque();
           this.laserGateSpans = new IntrusiveDeque();
           try {
-            SelfDestructEffects.field_k = l.a((byte) -111);
+            SelfDestructEffects.field_k = AccountChoicePanel.a((byte) -111);
             if (SelfDestructEffects.field_k) {
               System.out.println("Mod logged in: Cheats activated");
             }
             this.field_jb = PcmSampleStream.createAtRatePercent(ValidationIndicator.field_N, 100, 0);
             this.field_jb.setLoopCount(-1);
             pl.field_n.addSubstream(this.field_jb);
-            this.field_Z = PcmSampleStream.createAtRatePercent(ng.field_mb, 100, 0);
+            this.field_Z = PcmSampleStream.createAtRatePercent(LoginDialog.field_mb, 100, 0);
             this.field_Z.setLoopCount(-1);
             pl.field_n.addSubstream(this.field_Z);
             this.field_v = PcmSampleStream.createAtRatePercent(Bzip2State.field_G, 100, 0);
@@ -6256,7 +6256,7 @@ final class GameplaySession {
             this.field_Wb = PcmSampleStream.createAtRatePercent(vi.field_c, 100, 0);
             this.field_Wb.setLoopCount(-1);
             pl.field_n.addSubstream(this.field_Wb);
-            this.field_wb = PcmSampleStream.createAtRatePercent(w.field_hb, 100, 0);
+            this.field_wb = PcmSampleStream.createAtRatePercent(LoadingProgressDialog.field_hb, 100, 0);
             this.field_wb.setLoopCount(-1);
             pl.field_n.addSubstream(this.field_wb);
             this.field_r = PcmSampleStream.createAtRatePercent(of.field_h, 100, 0);

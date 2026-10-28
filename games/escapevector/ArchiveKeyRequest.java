@@ -8,12 +8,12 @@ final class ArchiveKeyRequest extends IntrusiveNode {
     static String field_h;
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        param1 = l.a(-8462, param1);
+        param1 = AccountChoicePanel.a(-8462, param1);
         CheckboxPainter.field_l = new ig(param1, param3);
         mj.field_d = param0;
         SelfDestructEffects.field_q = param1;
         di.field_d = new wc(CheckboxPainter.field_l.field_p);
-        int var4 = h.a(param1, (byte) 121);
+        int var4 = LoginForm.a(param1, (byte) 121);
         di.field_d.a(102, param2, CheckboxPainter.field_l.a(UiContainer.field_y, 12089, dh.field_d), var4);
         gi.a((byte) -70);
     }
@@ -84,24 +84,24 @@ final class ArchiveKeyRequest extends IntrusiveNode {
 
     final static boolean hasCompletePacket(int guard) {
         if (EmailSyntaxValidator.field_r == -1) {
-          if (!bo.a(30000, 1)) {
+          if (!Checkbox.readIncomingBytes(30000, 1)) {
             return false;
           }
           EmailSyntaxValidator.field_r = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(guard ^ 10550);
           QuickChatDynamicCommand.incomingPackets.position = 0;
         }
         if (EmailSyntaxValidator.field_r == -2) {
-          if (!bo.a(30000, 2)) {
+          if (!Checkbox.readIncomingBytes(30000, 2)) {
             return false;
           }
           EmailSyntaxValidator.field_r = QuickChatDynamicCommand.incomingPackets.readUnsignedShort(1952);
           QuickChatDynamicCommand.incomingPackets.position = 0;
         }
         if (guard == 10550) {
-          return bo.a(30000, EmailSyntaxValidator.field_r);
+          return Checkbox.readIncomingBytes(30000, EmailSyntaxValidator.field_r);
         }
         field_h = (String) null;
-        return bo.a(30000, EmailSyntaxValidator.field_r);
+        return Checkbox.readIncomingBytes(30000, EmailSyntaxValidator.field_r);
     }
 
     static {

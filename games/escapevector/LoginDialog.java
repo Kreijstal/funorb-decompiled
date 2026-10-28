@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ng extends fj {
+final class LoginDialog extends ContentTransitionDialog {
     static int field_ob;
     static int field_pb;
     static PcmSample field_mb;
     static String field_lb;
     static int field_nb;
 
-    ng(tb param0, UiComponent param1) {
+    LoginDialog(ModalStack param0, UiComponent param1) {
         super(param0, param1, 33, 20, 30);
     }
 
-    final void a(UiComponent param0, int param1) {
+    final void transitionToContent(UiComponent content, int guard) {
         try {
-          super.a(param0, param1);
+          super.transitionToContent(content, guard);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ng.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ng.D(" + (content != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -24,7 +24,7 @@ final class ng extends fj {
         field_mb = null;
         field_lb = null;
         if (guard != 124) {
-          ng.releaseStatics((byte) -12);
+          LoginDialog.releaseStatics((byte) -12);
         }
     }
 

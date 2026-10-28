@@ -771,8 +771,8 @@ final class en {
                 stackIn_19_0 = IterableNodeHashTable.field_f.length;
               }
               int var7 = stackIn_19_0;
-              if (tb.field_G.length > nn.field_i.length) {
-                stackIn_22_0 = tb.field_G.length;
+              if (ModalStack.field_G.length > nn.field_i.length) {
+                stackIn_22_0 = ModalStack.field_G.length;
               } else {
                 stackIn_22_0 = nn.field_i.length;
               }
@@ -818,7 +818,7 @@ final class en {
               var1_int = var1_int + field_k;
             }
             if (0 <= var4) {
-              pb.field_e.drawLeft(var6, var8Lifetime1, var1_int + he.field_x, var5, -1);
+              pb.field_e.drawLeft(var6, var8Lifetime1, var1_int + StatefulTextPainter.field_x, var5, -1);
               var1_int = var1_int + (ok.field_a + (CheckboxPainter.field_s + field_k));
             } else {
               nb.field_a.drawLeft(var6, var8Lifetime1, var1_int + StrongCacheEntry.field_t, var5, -1);
