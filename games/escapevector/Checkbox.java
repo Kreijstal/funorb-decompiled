@@ -60,7 +60,7 @@ final class Checkbox extends TextButton {
           Object var6 = null;
           if (identifier.indexOf('@') == -1) {
             CharSequence var7 = (CharSequence) ((Object) identifier);
-            var4_long = RasterBuffer.a((byte) 88, var7);
+            var4_long = RasterBuffer.encodeBase37Name((byte) 88, var7);
           } else {
             var6 = identifier;
           }

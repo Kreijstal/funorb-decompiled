@@ -27,14 +27,14 @@ final class Js5ArchiveManager {
         }
         for (int var2 = 0; this.providers.length > var2; var2++) {
           if (null != this.providers[var2]) {
-            this.providers[var2].d(guard - 13);
+            this.providers[var2].servicePrefetchQueue(guard - 13);
           }
         }
         int var4 = 0;
         int var2Lifetime1 = var4;
         while (this.providers.length > var4) {
           if (this.providers[var4] != null) {
-            this.providers[var4].c(-26);
+            this.providers[var4].serviceBackgroundRequests(-26);
           }
           var4++;
         }
@@ -109,7 +109,7 @@ final class Js5ArchiveManager {
           }
           this.masterRequest = this.transport.requestGroup(255, true, (byte) 0, 255, (byte) 0);
         }
-        if (this.masterRequest.field_u) {
+        if (this.masterRequest.pending) {
           return false;
         }
         PacketBuffer var10 = new PacketBuffer(this.masterRequest.getBytes(true));
@@ -131,7 +131,7 @@ final class Js5ArchiveManager {
             if (guard) {
               return true;
             }
-            byte[] var16 = RasterBuffer.a(var10.payload, 5, -5 + (-var13.length + var10.position), 0);
+            byte[] var16 = RasterBuffer.whirlpoolDigest(var10.payload, 5, -5 + (-var13.length + var10.position), 0);
             for (int var7 = 0; var7 < 64; var7++) {
               if (var5[1 + var7] != var16[var7]) {
                 throw new RuntimeException();
@@ -151,7 +151,7 @@ final class Js5ArchiveManager {
         if (guard) {
           return true;
         }
-        byte[] var17 = RasterBuffer.a(var10.payload, 5, -5 + (-var13.length + var10.position), 0);
+        byte[] var17 = RasterBuffer.whirlpoolDigest(var10.payload, 5, -5 + (-var13.length + var10.position), 0);
         for (int var7Lifetime1 = 0; var7Lifetime1 < 64; var7Lifetime1++) {
           if (var5[1 + var7Lifetime1] != var17[var7Lifetime1]) {
             throw new RuntimeException();

@@ -21,7 +21,7 @@ final class AchievementGrantRule {
             responseCode <= 105) {
             String[] var4 = suggestions;
             AchievementThresholdRule.setAccountNameSuggestions(var4, 4);
-            InputGlyphSupport.field_a = BufferedRandomAccessFile.a(suggestions, (byte) -63);
+            InputGlyphSupport.field_a = BufferedRandomAccessFile.nameAvailabilitySuggestions(suggestions, (byte) -63);
           } else {
             InputGlyphSupport.field_a = NameAvailabilityResultSupport.createTextResponse(message, responseCode, guard ^ -97);
           }

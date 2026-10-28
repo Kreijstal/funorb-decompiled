@@ -24,7 +24,7 @@ final class NameAvailabilityResponseSupport {
           } else if (105 < responseCode) {
             SpriteState.field_y = NameAvailabilityResultSupport.createTextResponse(message, responseCode, 4);
           } else {
-            SpriteState.field_y = BufferedRandomAccessFile.a(suggestions, (byte) -103);
+            SpriteState.field_y = BufferedRandomAccessFile.nameAvailabilitySuggestions(suggestions, (byte) -103);
           }
           if (guard == -72) {
             return;

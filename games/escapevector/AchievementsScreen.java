@@ -731,7 +731,7 @@ final class AchievementsScreen {
         }
         var5.bindAsFramebuffer();
         ConnectionSupport.drawButtons((byte) -103, -1, var7);
-        AlphaContainer.field_D.a(124);
+        AlphaContainer.field_D.bindRaster(124);
         SoftwareRasterizer.restoreClip(var20);
         var5.trimTransparentEdges();
         int var8 = IterableNodeHashTable.minimumButtonX(var7, (byte) 26);

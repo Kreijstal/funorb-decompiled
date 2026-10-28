@@ -33,12 +33,12 @@ final class BufferedSocket implements Runnable {
             this.socket = (java.net.Socket) null;
           }
           if (this.writerTask != null) {
-            while (0 == this.writerTask.field_f) {
+            while (0 == this.writerTask.status) {
               AchievementTracker.sleepMillis((byte) 81, 1L);
             }
-            if (this.writerTask.field_f == 1) {
+            if (this.writerTask.status == 1) {
               try {
-                ((Thread) (this.writerTask.field_b)).join();
+                ((Thread) (this.writerTask.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 Throwable decompiledCaughtException = decompiledCaughtParameter0;
                 InterruptedException var2_ref = (InterruptedException) (Object) decompiledCaughtException;
@@ -102,7 +102,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (this.writerTask == null) {
-              this.writerTask = this.taskService.a(true, 3, (Runnable) (this));
+              this.writerTask = this.taskService.startThread(true, 3, (Runnable) (this));
             }
             if (guard != 5000) {
               return;

@@ -101,7 +101,7 @@ final class AchievementRecord extends IntrusiveNode {
             AccountPanelInputSupport.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) AccountPanelInputSupport.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }
           SavedDataRequestSupport.requestDialog.closeDialog(-18861);
-          ImageProducerRasterBuffer.d(32);
+          ImageProducerRasterBuffer.showLoadingProgressDialog(32);
           return;
         }
         field_n = (IntrusiveDeque) null;
@@ -119,7 +119,7 @@ final class AchievementRecord extends IntrusiveNode {
             AccountPanelInputSupport.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) AccountPanelInputSupport.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }
           SavedDataRequestSupport.requestDialog.closeDialog(-18861);
-          ImageProducerRasterBuffer.d(32);
+          ImageProducerRasterBuffer.showLoadingProgressDialog(32);
         }
     }
 

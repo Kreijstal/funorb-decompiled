@@ -94,7 +94,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         SpriteState.b(QuickChatPhraseCache.field_h, 15);
         NanoTickClock.a(5000, 5000, this.field_t, this.field_n, param4, field_r, this.field_p, param6, (byte) 84, this.field_o, this.field_m, this.field_s, QuickChatPhraseCache.field_h, this.field_y);
         DualLinkNode.a(this.field_s, field_r, param4, param5 ^ 22212, QuickChatPhraseCache.field_h, this.field_t, this.field_p, this.field_y, this.field_o);
-        ImageProducerRasterBuffer.e(param5 + 213);
+        ImageProducerRasterBuffer.configurePunctuationKeyCodes(param5 + 213);
         ArchiveFactorySupport.field_b = EscapeVector.createMouseWheelInput(13);
         CanvasRenderSupport.attachCanvasInput(SpriteDecodeSupport.field_d, true);
         ChatHistorySupport.field_g = param1;
@@ -288,7 +288,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (var4 == 4) {
             if (BitCountSupport.field_d) {
-              DiskCacheRequest.a(PointCloudEffect.activeApplet((byte) -113), 21027);
+              DiskCacheRequest.clearSessionAndReload(PointCloudEffect.activeApplet((byte) -113), 21027);
             } else {
               SpriteState.guestSession = true;
               QuickChatPhraseCache.field_e = 10;
@@ -305,7 +305,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             ServerListNavigationSupport.openServerList(PointCloudEffect.activeApplet((byte) -120), (byte) -99);
           }
           if (var4 == 8) {
-            DiskCacheRequest.a(PointCloudEffect.activeApplet((byte) -127), param0 ^ 21212);
+            DiskCacheRequest.clearSessionAndReload(PointCloudEffect.activeApplet((byte) -127), param0 ^ 21212);
           }
           if (var4 == 9) {
             DelayedServerPacket.openSupportPage(param0 - 251, PointCloudEffect.activeApplet((byte) -89));
@@ -317,7 +317,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_m = -32L;
           }
           if (var4 == 11) {
-            IntValueNode.a(false, PointCloudEffect.activeApplet((byte) -102));
+            IntValueNode.reloadAppletPage(false, PointCloudEffect.activeApplet((byte) -102));
           }
           if (var4 == 12) {
             AlphaContainer.openRelativeUrl(PointCloudEffect.activeApplet((byte) -86), (byte) -123, EmailAvailabilityValidator.c((byte) -31));
@@ -417,7 +417,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else if (2 == var2) {
             DisplayModeInfo.a((byte) -120);
           } else if (3 == var2) {
-            ImageProducerRasterBuffer.c(103);
+            ImageProducerRasterBuffer.readAchievementResponse(103);
           } else if (var2 == 4) {
             LegacyButton.decodeProgressResponse(108457410);
           } else if (var2 == 5) {
@@ -512,7 +512,7 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     private final void h(byte param0) {
         String var2 = PauseMenuScreen.readIncomingString((byte) 0);
-        SecondaryIntrusiveDeque.a(var2, -112, PointCloudEffect.activeApplet((byte) -59));
+        SecondaryIntrusiveDeque.setSessionCookie(var2, -112, PointCloudEffect.activeApplet((byte) -59));
         int var3 = 59 % ((param0 - 41) / 61);
     }
 

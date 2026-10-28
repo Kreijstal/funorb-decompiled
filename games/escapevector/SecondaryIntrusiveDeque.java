@@ -389,26 +389,26 @@ final class SecondaryIntrusiveDeque {
         }
     }
 
-    final static void a(String param0, int param1, java.applet.Applet param2) {
+    final static void setSessionCookie(String session, int guard, java.applet.Applet applet) {
         try {
           try {
-            TileSpriteCacheEntry.field_i = param0;
+            TileSpriteCacheEntry.field_i = session;
             try {
-              if (param1 > -110) {
+              if (guard > -110) {
                 field_b = 2L;
               }
-              String var3 = param2.getParameter("cookieprefix");
-              String var4 = param2.getParameter("cookiehost");
-              String var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-              if (0 == param0.length()) {
+              String var3 = applet.getParameter("cookieprefix");
+              String var4 = applet.getParameter("cookiehost");
+              String var5 = var3 + "session=" + session + "; version=1; path=/; domain=" + var4;
+              if (0 == session.length()) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              JavaScriptBridge.evaluateScript((byte) -111, param2, "document.cookie=\"" + var5 + "\"");
+              JavaScriptBridge.evaluateScript((byte) -111, applet, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
-            PairedTextColumns.updateBrowserLinks((byte) 15, param2);
+            PairedTextColumns.updateBrowserLinks((byte) 15, applet);
           } catch (RuntimeException runtimeException) {
-            throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "va.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "va.A(" + (session != null ? "{...}" : "null") + ',' + guard + ',' + (applet != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

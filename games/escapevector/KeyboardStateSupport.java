@@ -40,14 +40,14 @@ final class KeyboardStateSupport {
               SelfDestructEffects.field_j.close(guard ^ -16802);
             }
             if (ShipHullGeometry.field_b != null) {
-              ShipHullGeometry.field_b.a(-24580);
+              ShipHullGeometry.field_b.shutdown(-24580);
             }
             if (guard != -16802) {
               return;
             }
             if (ArchivePreloader.field_h != null) {
               try {
-                ArchivePreloader.field_h.a((byte) -111);
+                ArchivePreloader.field_h.close((byte) -111);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 IOException var1 = (IOException) (Object) decompiledCaughtException;
@@ -59,7 +59,7 @@ final class KeyboardStateSupport {
             for (int var1_int = 0; CampaignLoadingSupport.field_e.length > var1_int; var1_int++) {
               if (CampaignLoadingSupport.field_e[var1_int] != null) {
                 try {
-                  CampaignLoadingSupport.field_e[var1_int].a((byte) -111);
+                  CampaignLoadingSupport.field_e[var1_int].close((byte) -111);
                 } catch (java.io.IOException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   IOException var2 = (IOException) (Object) decompiledCaughtException;

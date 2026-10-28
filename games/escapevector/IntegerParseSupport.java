@@ -147,32 +147,32 @@ final class IntegerParseSupport {
           boolean var5 = (SessionMenuSupport.readBitFlag(input, (byte) -114));
           TriangleMesh var6 = new TriangleMesh();
           var6.vertexCount = (short)input.readBits(16, 8);
-          var6.vertexX = BufferedRandomAccessFile.a(input, 16, var6.vertexX, -1);
-          var6.vertexY = BufferedRandomAccessFile.a(input, 16, var6.vertexY, -1);
-          var6.vertexZ = BufferedRandomAccessFile.a(input, 16, var6.vertexZ, -1);
+          var6.vertexX = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.vertexX, -1);
+          var6.vertexY = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.vertexY, -1);
+          var6.vertexZ = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.vertexZ, -1);
           var6.faceCount = (short)input.readBits(16, 8);
-          var6.faceVertexA = BufferedRandomAccessFile.a(input, 16, var6.faceVertexA, -1);
-          var6.faceVertexB = BufferedRandomAccessFile.a(input, 16, var6.faceVertexB, -1);
-          var6.faceVertexC = BufferedRandomAccessFile.a(input, 16, var6.faceVertexC, -1);
+          var6.faceVertexA = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.faceVertexA, -1);
+          var6.faceVertexB = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.faceVertexB, -1);
+          var6.faceVertexC = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.faceVertexC, -1);
           if (var4) {
             var6.normalCount = (short)input.readBits(16, 8);
-            var6.field_N = BufferedRandomAccessFile.a(input, 16, var6.field_N, -1);
-            var6.field_q = BufferedRandomAccessFile.a(input, 16, var6.field_q, -1);
-            var6.field_w = BufferedRandomAccessFile.a(input, 16, var6.field_w, -1);
-            var6.faceNormalA = BufferedRandomAccessFile.a(input, 16, var6.faceNormalA, -1);
-            var6.faceNormalB = BufferedRandomAccessFile.a(input, 16, var6.faceNormalB, -1);
-            var6.faceNormalC = BufferedRandomAccessFile.a(input, 16, var6.faceNormalC, -1);
+            var6.field_N = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.field_N, -1);
+            var6.field_q = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.field_q, -1);
+            var6.field_w = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.field_w, -1);
+            var6.faceNormalA = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.faceNormalA, -1);
+            var6.faceNormalB = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.faceNormalB, -1);
+            var6.faceNormalC = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.faceNormalC, -1);
           }
           if (var5) {
             input.readBits(16, 8);
-            var6.field_v = BufferedRandomAccessFile.a(input, 16, var6.field_v, -1);
-            var6.field_c = BufferedRandomAccessFile.a(input, 16, var6.field_c, -1);
-            var6.field_Q = BufferedRandomAccessFile.a(input, 16, var6.field_Q, -1);
-            var6.field_G = BufferedRandomAccessFile.a(input, 16, var6.field_G, -1);
-            var6.field_F = BufferedRandomAccessFile.a(input, 16, var6.field_F, -1);
+            var6.field_v = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.field_v, -1);
+            var6.field_c = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.field_c, -1);
+            var6.field_Q = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.field_Q, -1);
+            var6.field_G = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.field_G, -1);
+            var6.field_F = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.field_F, -1);
           }
           if (SessionMenuSupport.readBitFlag(input, (byte) -104)) {
-            var6.field_m = BufferedRandomAccessFile.a(input, 16, var6.field_m, -1);
+            var6.field_m = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.field_m, -1);
           }
           if (SessionMenuSupport.readBitFlag(input, (byte) -102)) {
             var6.field_n = StripedProgressBar.readPackedByteArray(16, 118, input, var6.field_n);

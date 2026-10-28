@@ -105,7 +105,7 @@ final class SecondaryNodeHashTable {
         try {
           try {
             java.awt.Graphics var4 = canvas.getGraphics();
-            AlphaContainer.field_D.a(y, guard ^ guard, x, var4);
+            AlphaContainer.field_D.drawImage(y, guard ^ guard, x, var4);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

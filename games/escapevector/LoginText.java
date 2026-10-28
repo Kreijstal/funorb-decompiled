@@ -79,7 +79,7 @@ final class LoginText {
             CachedTextLayout.field_j[0] = 5;
           } else if (ArchiveIndex.field_j != 2) {
             if (ArchiveIndex.field_j == 3) {
-              if (!NetworkGameClient.field_r.field_f) {
+              if (!NetworkGameClient.field_r.extendedServicesEnabled) {
                 var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, guard ^ 114, MembershipAssetSupport.field_a, Js5Transport.field_h, DialogueScreen.field_k);
               } else {
                 var3_int = PasswordFieldPainter.a(GameModeSelectScreen.field_e, -122, MembershipAssetSupport.field_a, Js5Transport.field_h, AccountSessionSupport.field_e);
@@ -289,7 +289,7 @@ final class LoginText {
             var4Lifetime3++;
           }
           if (2 != ArchiveIndex.field_j) {
-            LegacyMenuState.input.initializeSelection(guard ^ 90, pointerDriven, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y), 0);
+            LegacyMenuState.input.initializeSelection(guard ^ 90, pointerDriven, CachedArchiveProvider.hitTestLegacyMenuAction((byte) 122, GzipDecoder.field_d, UiContainer.field_y), 0);
           } else {
             LegacyMenuState.input.initializeSelection(guard + 91, pointerDriven, -1, -1);
           }

@@ -5,7 +5,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     static int field_t;
     static int field_v;
     static String field_q;
-    volatile boolean field_u;
+    volatile boolean pending;
     static PcmSample field_w;
     boolean field_r;
     boolean field_s;
@@ -41,7 +41,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     abstract byte[] getBytes(boolean guard);
 
     ArchiveRequest() {
-        this.field_u = true;
+        this.pending = true;
     }
 
     static {

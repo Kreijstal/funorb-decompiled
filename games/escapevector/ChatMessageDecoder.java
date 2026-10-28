@@ -153,22 +153,22 @@ final class ChatMessageDecoder {
     final static boolean a(boolean param0, byte param1) {
         try {
           if (Js5ArchiveManager.field_d == null) {
-            Js5ArchiveManager.field_d = MouseWheelInput.field_c.a(BitCountSupport.field_b, 4, IntrusiveDeque.field_h);
+            Js5ArchiveManager.field_d = MouseWheelInput.field_c.openSocket(BitCountSupport.field_b, 4, IntrusiveDeque.field_h);
           }
           if (param1 != 0) {
             field_b = (Sprite[][]) null;
           }
-          if (Js5ArchiveManager.field_d.field_f == 0) {
+          if (Js5ArchiveManager.field_d.status == 0) {
             return false;
           }
           long dupTemp$1 = MonotonicClockSupport.monotonicMillis(128);
           FrameworkLoadingStatus.field_c = dupTemp$1;
           field_a = dupTemp$1;
-          if (Js5ArchiveManager.field_d.field_f != 1) {
+          if (Js5ArchiveManager.field_d.status != 1) {
             AccountFormStage.field_d = HighscoresScreen.field_d;
           } else {
             try {
-              TextLayout.field_c = new BufferedSocket((java.net.Socket) (Js5ArchiveManager.field_d.field_b), MouseWheelInput.field_c);
+              TextLayout.field_c = new BufferedSocket((java.net.Socket) (Js5ArchiveManager.field_d.result), MouseWheelInput.field_c);
               QuickChatDynamicCommand.outgoingPackets.position = 0;
               CipherPacketBuffer var4 = QuickChatDynamicCommand.incomingPackets;
               CipherPacketBuffer var5 = var4;

@@ -71,7 +71,7 @@ final class SelfDestructEffects {
         int var6 = 1;
         SoftwareRasterizer.fillCircle(var3, var4, var5, var6);
         if (AlphaContainer.field_D != null) {
-          AlphaContainer.field_D.a(125);
+          AlphaContainer.field_D.bindRaster(125);
         }
         int var7 = -25 / ((param0 + 25) / 58);
         SoftwareRasterizer.restoreClip(var8);

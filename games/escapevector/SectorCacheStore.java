@@ -4,13 +4,13 @@
 import java.io.*;
 
 final class SectorCacheStore {
-    private int field_b;
+    private int storeId;
     static int[][] field_c;
-    private BufferedRandomAccessFile field_a;
-    private int field_e;
-    private BufferedRandomAccessFile field_d;
+    private BufferedRandomAccessFile dataFile;
+    private int maximumLength;
+    private BufferedRandomAccessFile indexFile;
 
-    final static void a(byte param0) {
+    final static void refreshMembershipMenu(byte guard) {
         MainMenuScreen var1 = AlternateUsernameCredentials.field_q;
         if (var1.members &&
           UiContainer.hasMembership((byte) -39)) {
@@ -18,7 +18,7 @@ final class SectorCacheStore {
         }
         if (var1.members) {
           AlternateUsernameCredentials.field_q = new MainMenuScreen();
-          if (param0 <= 117) {
+          if (guard <= 117) {
             SectorCacheStore.releaseStatics(true);
           }
           LoginHandshakeSupport.field_d = 0;
@@ -27,7 +27,7 @@ final class SectorCacheStore {
         }
         if (UiContainer.hasMembership((byte) 97)) {
           AlternateUsernameCredentials.field_q = new MainMenuScreen();
-          if (param0 <= 117) {
+          if (guard <= 117) {
             SectorCacheStore.releaseStatics(true);
           }
           LoginHandshakeSupport.field_d = 0;
@@ -36,21 +36,21 @@ final class SectorCacheStore {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
-        int var3 = SpriteFactorySupport.levelCount(false, param0);
-        if (param2 < -1) {
+    final static int validLevelIndex(int gameMode, int guard, int levelIndex) {
+        int var3 = SpriteFactorySupport.levelCount(false, gameMode);
+        if (levelIndex < -1) {
           return -1;
         }
-        if (var3 > param2) {
-          if (param1 != 13565) {
-            SectorCacheStore.a(-18, -9, 48);
+        if (var3 > levelIndex) {
+          if (guard != 13565) {
+            SectorCacheStore.validLevelIndex(-18, -9, 48);
           }
-          return param2;
+          return levelIndex;
         }
         return -1;
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] read(int groupId, int guard) {
         try {
           Object var3 = null;
           int var10 = 0;
@@ -59,31 +59,31 @@ final class SectorCacheStore {
           int var13 = 0;
           int var14 = 0;
           int var18 = EscapeVector.obfuscationControl;
-          Object var3_ref = this.field_a;
+          Object var3_ref = this.dataFile;
           synchronized (var3_ref) {
             try {
-              if ((long)(6 + param0 * 6) > this.field_d.a(param1 ^ 22554)) {
+              if ((long)(6 + groupId * 6) > this.indexFile.length(guard ^ 22554)) {
                 return null;
               }
-              this.field_d.a(param1 - 26296, (long)(6 * param0));
-              this.field_d.a(0, 6, (byte) 101, Checkbox.field_G);
+              this.indexFile.seek(guard - 26296, (long)(6 * groupId));
+              this.indexFile.readFully(0, 6, (byte) 101, Checkbox.field_G);
               int var4_int = (Checkbox.field_G[2] & 255) + ((65280 & Checkbox.field_G[1] << 8) + (16711680 & Checkbox.field_G[0] << 16));
               int var5 = ((255 & Checkbox.field_G[3]) << 16) + (Checkbox.field_G[4] << 8 & 65280) + (Checkbox.field_G[5] & 255);
               if (var4_int < 0) {
                 return null;
               }
-              if (var4_int > this.field_e) {
+              if (var4_int > this.maximumLength) {
                 Object stackIn_9_0 = null;
                 return (byte[]) (stackIn_9_0);
               }
               if (var5 <= 0) {
                 return null;
               }
-              if (this.field_a.a(16034) / 520L < (long)var5) {
+              if (this.dataFile.length(16034) / 520L < (long)var5) {
                 Object stackIn_15_0 = null;
                 return (byte[]) (stackIn_15_0);
               }
-              if (param1 != 26296) {
+              if (guard != 26296) {
                 this.toString();
               }
               byte[] var6 = new byte[var4_int];
@@ -94,14 +94,14 @@ final class SectorCacheStore {
                   Object stackIn_23_0 = null;
                   return (byte[]) (stackIn_23_0);
                 }
-                this.field_a.a(param1 ^ 26296, (long)(520 * var5));
+                this.dataFile.seek(guard ^ 26296, (long)(520 * var5));
                 int var9 = var4_int - var7;
-                if (param0 > 65535) {
+                if (groupId > 65535) {
                   if (var9 > 510) {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_a.a(0, var9 + var14, (byte) 101, Checkbox.field_G);
+                  this.dataFile.readFully(0, var9 + var14, (byte) 101, Checkbox.field_G);
                   var13 = Checkbox.field_G[9] & 255;
                   var12 = (255 & Checkbox.field_G[8]) + (Checkbox.field_G[6] << 16 & 16711680) + ((255 & Checkbox.field_G[7]) << 8);
                   var11 = (255 & Checkbox.field_G[5]) + ((255 & Checkbox.field_G[4]) << 8);
@@ -111,25 +111,25 @@ final class SectorCacheStore {
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_a.a(0, var9 + var14, (byte) 101, Checkbox.field_G);
+                  this.dataFile.readFully(0, var9 + var14, (byte) 101, Checkbox.field_G);
                   var12 = (255 & Checkbox.field_G[6]) + ((16711680 & Checkbox.field_G[4] << 16) + ((255 & Checkbox.field_G[5]) << 8));
                   var11 = (Checkbox.field_G[3] & 255) + (Checkbox.field_G[2] << 8 & 65280);
                   var10 = (65280 & Checkbox.field_G[0] << 8) + (255 & Checkbox.field_G[1]);
                   var13 = Checkbox.field_G[7] & 255;
                 }
-                if (param0 != var10) {
+                if (groupId != var10) {
                   return null;
                 }
                 if (var11 != var8) {
                   return null;
                 }
-                if (this.field_b != var13) {
+                if (this.storeId != var13) {
                   return null;
                 }
                 if (var12 < 0) {
                   return null;
                 }
-                if ((long)var12 > (this.field_a.a(16034) / 520L)) {
+                if ((long)var12 > (this.dataFile.length(16034) / 520L)) {
                   Object stackIn_44_0 = null;
                   return (byte[]) (stackIn_44_0);
                 }
@@ -158,21 +158,21 @@ final class SectorCacheStore {
         }
     }
 
-    final boolean a(byte param0, int param1, int param2, byte[] param3) {
+    final boolean write(byte guard, int groupId, int length, byte[] data) {
         Throwable var7 = null;
         boolean stackIn_10_0 = false;
         String stackIn_16_2 = null;
         try {
-          Object var5 = this.field_a;
+          Object var5 = this.dataFile;
           synchronized (var5) {
-            if (param2 >= 0 &&
-              this.field_e >= param2) {
-              if (param0 != 18) {
-                this.field_b = -93;
+            if (length >= 0 &&
+              this.maximumLength >= length) {
+              if (guard != 18) {
+                this.storeId = -93;
               }
-              boolean var6 = (this.a(512, param1, param3, param2, true));
+              boolean var6 = (this.writeSectors(512, groupId, data, length, true));
               if (!var6) {
-                var6 = (this.a(param0 ^ 530, param1, param3, param2, false));
+                var6 = (this.writeSectors(guard ^ 530, groupId, data, length, false));
               }
               stackIn_10_0 = var6;
             } else {
@@ -184,8 +184,8 @@ final class SectorCacheStore {
           Throwable decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
           RuntimeException stackIn_15_0 = var5_ref;
-          StringBuilder stackIn_15_1 = new StringBuilder().append("jg.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_15_1 = new StringBuilder().append("jg.F(").append(guard).append(',').append(groupId).append(',').append(length).append(',');
+          if (data == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -202,10 +202,10 @@ final class SectorCacheStore {
     }
 
     public final String toString() {
-        return "" + this.field_b;
+        return "" + this.storeId;
     }
 
-    private final boolean a(int param0, int param1, byte[] param2, int param3, boolean param4) {
+    private final boolean writeSectors(int guard, int groupId, byte[] data, int length, boolean reuseExisting) {
         try {
           String stackIn_70_2 = null;
           boolean decompiledRegionSelector0 = false;
@@ -218,48 +218,48 @@ final class SectorCacheStore {
           EOFException var14 = null;
           int var16 = EscapeVector.obfuscationControl;
           try {
-            Object var6 = this.field_a;
+            Object var6 = this.dataFile;
             synchronized (var6) {
               try {
-                if (param4) {
-                  if ((long)(6 * param1 + 6) > this.field_d.a(16034)) {
+                if (reuseExisting) {
+                  if ((long)(6 * groupId + 6) > this.indexFile.length(16034)) {
                     return false;
                   }
-                  this.field_d.a(param0 - 512, (long)(param1 * 6));
-                  this.field_d.a(0, 6, (byte) 101, Checkbox.field_G);
+                  this.indexFile.seek(guard - 512, (long)(groupId * 6));
+                  this.indexFile.readFully(0, 6, (byte) 101, Checkbox.field_G);
                   var7_int = (Checkbox.field_G[5] & 255) + (((255 & Checkbox.field_G[3]) << 16) + ((Checkbox.field_G[4] & 255) << 8));
                   if (var7_int <= 0 ||
-                    !((long)var7_int <= (this.field_a.a(param0 + 15522) / 520L))) {
+                    !((long)var7_int <= (this.dataFile.length(guard + 15522) / 520L))) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((519L + this.field_a.a(16034)) / 520L);
+                  var7_int = (int)((519L + this.dataFile.length(16034)) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
                 }
                 Checkbox.field_G[4] = (byte)(var7_int >> 8);
                 Checkbox.field_G[5] = (byte)var7_int;
-                Checkbox.field_G[1] = (byte)(param3 >> 8);
-                Checkbox.field_G[0] = (byte)(param3 >> 16);
+                Checkbox.field_G[1] = (byte)(length >> 8);
+                Checkbox.field_G[0] = (byte)(length >> 16);
                 Checkbox.field_G[3] = (byte)(var7_int >> 16);
-                Checkbox.field_G[2] = (byte)param3;
-                if (param0 != 512) {
-                  this.a(21, -91);
+                Checkbox.field_G[2] = (byte)length;
+                if (guard != 512) {
+                  this.read(21, -91);
                 }
-                this.field_d.a(0, (long)(param1 * 6));
-                this.field_d.a(true, 0, Checkbox.field_G, 6);
+                this.indexFile.seek(0, (long)(groupId * 6));
+                this.indexFile.write(true, 0, Checkbox.field_G, 6);
                 int var8 = 0;
                 int var9 = 0;
                 scanLoop1: while (true) {
-                  if (var8 < param3) {
+                  if (var8 < length) {
                     boolean decompiledFrameRemainder0 = true;
                     int var10 = 0;
-                    if (param4) {
-                      this.field_a.a(0, (long)(var7_int * 520));
-                      if (param1 > 65535) {
+                    if (reuseExisting) {
+                      this.dataFile.seek(0, (long)(var7_int * 520));
+                      if (groupId > 65535) {
                         try {
-                          this.field_a.a(0, 10, (byte) 101, Checkbox.field_G);
+                          this.dataFile.readFully(0, 10, (byte) 101, Checkbox.field_G);
                           decompiledRegionSelector0 = false;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -275,7 +275,7 @@ final class SectorCacheStore {
                         var13 = 255 & Checkbox.field_G[9];
                       } else {
                         try {
-                          this.field_a.a(0, 8, (byte) 101, Checkbox.field_G);
+                          this.dataFile.readFully(0, 8, (byte) 101, Checkbox.field_G);
                           decompiledRegionSelector1 = false;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -290,11 +290,11 @@ final class SectorCacheStore {
                         var11 = (255 & Checkbox.field_G[1]) + (Checkbox.field_G[0] << 8 & 65280);
                         var10 = (Checkbox.field_G[6] & 255) + (16711680 & Checkbox.field_G[4] << 16) + (Checkbox.field_G[5] << 8 & 65280);
                       }
-                      if (var11 == param1 &&
+                      if (var11 == groupId &&
                         var12 == var9 &&
-                        this.field_b == var13 &&
+                        this.storeId == var13 &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                        !((long)var10 <= this.field_a.a(16034) / 520L)))) {
+                        !((long)var10 <= this.dataFile.length(16034) / 520L)))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -302,8 +302,8 @@ final class SectorCacheStore {
                       }
                     }
                     if (0 == var10) {
-                      var10 = (int)((519L + this.field_a.a(param0 + 15522)) / 520L);
-                      param4 = false;
+                      var10 = (int)((519L + this.dataFile.length(guard + 15522)) / 520L);
+                      reuseExisting = false;
                       if (var10 == 0) {
                         var10++;
                       }
@@ -311,44 +311,44 @@ final class SectorCacheStore {
                         var10++;
                       }
                     }
-                    if (-var8 + param3 <= 512) {
+                    if (-var8 + length <= 512) {
                       var10 = 0;
                     }
-                    if (param1 <= 65535) {
+                    if (groupId <= 65535) {
                       Checkbox.field_G[6] = (byte)var10;
                       Checkbox.field_G[5] = (byte)(var10 >> 8);
-                      Checkbox.field_G[7] = (byte)this.field_b;
-                      Checkbox.field_G[0] = (byte)(param1 >> 8);
+                      Checkbox.field_G[7] = (byte)this.storeId;
+                      Checkbox.field_G[0] = (byte)(groupId >> 8);
                       Checkbox.field_G[3] = (byte)var9;
                       Checkbox.field_G[4] = (byte)(var10 >> 16);
-                      Checkbox.field_G[1] = (byte)param1;
+                      Checkbox.field_G[1] = (byte)groupId;
                       Checkbox.field_G[2] = (byte)(var9 >> 8);
-                      this.field_a.a(0, (long)(520 * var7_int));
-                      this.field_a.a(true, 0, Checkbox.field_G, 8);
-                      var11 = -var8 + param3;
+                      this.dataFile.seek(0, (long)(520 * var7_int));
+                      this.dataFile.write(true, 0, Checkbox.field_G, 8);
+                      var11 = -var8 + length;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_a.a(true, var8, param2, var11);
+                      this.dataFile.write(true, var8, data, var11);
                       var8 = var8 + var11;
                     } else {
-                      Checkbox.field_G[9] = (byte)this.field_b;
+                      Checkbox.field_G[9] = (byte)this.storeId;
                       Checkbox.field_G[6] = (byte)(var10 >> 16);
-                      Checkbox.field_G[3] = (byte)param1;
+                      Checkbox.field_G[3] = (byte)groupId;
                       Checkbox.field_G[5] = (byte)var9;
-                      Checkbox.field_G[2] = (byte)(param1 >> 8);
+                      Checkbox.field_G[2] = (byte)(groupId >> 8);
                       Checkbox.field_G[7] = (byte)(var10 >> 8);
                       Checkbox.field_G[8] = (byte)var10;
-                      Checkbox.field_G[0] = (byte)(param1 >> 24);
+                      Checkbox.field_G[0] = (byte)(groupId >> 24);
                       Checkbox.field_G[4] = (byte)(var9 >> 8);
-                      Checkbox.field_G[1] = (byte)(param1 >> 16);
-                      this.field_a.a(param0 - 512, (long)(520 * var7_int));
-                      this.field_a.a(true, 0, Checkbox.field_G, 10);
-                      var11 = param3 - var8;
+                      Checkbox.field_G[1] = (byte)(groupId >> 16);
+                      this.dataFile.seek(guard - 512, (long)(520 * var7_int));
+                      this.dataFile.write(true, 0, Checkbox.field_G, 10);
+                      var11 = length - var8;
                       if (var11 > 510) {
                         var11 = 510;
                       }
-                      this.field_a.a(true, var8, param2, var11);
+                      this.dataFile.write(true, var8, data, var11);
                       var8 = var8 + var11;
                     }
                     var9++;
@@ -368,13 +368,13 @@ final class SectorCacheStore {
             decompiledCaughtException = decompiledCaughtParameter3;
             RuntimeException var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_69_0 = var6_ref;
-            StringBuilder stackIn_69_1 = new StringBuilder().append("jg.A(").append(param0).append(',').append(param1).append(',');
-            if (param2 == null) {
+            StringBuilder stackIn_69_1 = new StringBuilder().append("jg.A(").append(guard).append(',').append(groupId).append(',');
+            if (data == null) {
               stackIn_70_2 = "null";
             } else {
               stackIn_70_2 = "{...}";
             }
-            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(length).append(',').append(reuseExisting).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -383,26 +383,26 @@ final class SectorCacheStore {
         }
     }
 
-    final static String a(Throwable param0, int param1) throws IOException {
+    final static String formatCompactStackTrace(Throwable failure, int guard) throws IOException {
         String var2;
         String var11Lifetime5Lifetime2;
         int var13 = EscapeVector.obfuscationControl;
-        if (!(param0 instanceof ClientException)) {
+        if (!(failure instanceof ClientException)) {
           var2 = "";
           String var11 = var2;
           var2 = var11;
           String var11Lifetime6 = var2;
         } else {
-          ClientException var14 = (ClientException) ((Object) param0);
-          param0 = var14.cause;
+          ClientException var14 = (ClientException) ((Object) failure);
+          failure = var14.cause;
           var2 = var14.context + " | ";
         }
         StringWriter var15 = new StringWriter();
         PrintWriter var4 = new PrintWriter((Writer) ((Object) var15));
-        if (param1 != 41) {
+        if (guard != 41) {
           SectorCacheStore.releaseStatics(true);
         }
-        param0.printStackTrace(var4);
+        failure.printStackTrace(var4);
         var4.close();
         String var5 = var15.toString();
         String var11Lifetime1 = var5;
@@ -458,17 +458,17 @@ final class SectorCacheStore {
         }
     }
 
-    SectorCacheStore(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {
-        this.field_e = 65000;
-        this.field_d = null;
-        this.field_a = null;
+    SectorCacheStore(int storeId, BufferedRandomAccessFile dataFile, BufferedRandomAccessFile indexFile, int maximumLength) {
+        this.maximumLength = 65000;
+        this.indexFile = null;
+        this.dataFile = null;
         try {
-          this.field_d = param2;
-          this.field_b = param0;
-          this.field_e = param3;
-          this.field_a = param1;
+          this.indexFile = indexFile;
+          this.storeId = storeId;
+          this.maximumLength = maximumLength;
+          this.dataFile = dataFile;
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "jg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "jg.<init>(" + storeId + ',' + (dataFile != null ? "{...}" : "null") + ',' + (indexFile != null ? "{...}" : "null") + ',' + maximumLength + ')');
         }
     }
 

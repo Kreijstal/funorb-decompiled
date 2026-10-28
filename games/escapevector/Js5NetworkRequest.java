@@ -95,7 +95,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     }
 
     final byte[] getBytes(boolean guard) {
-        if (this.field_u) {
+        if (this.pending) {
           throw new RuntimeException();
         }
         if (this.responseBuffer.position < this.responseBuffer.payload.length - this.paddingBytes) {

@@ -148,14 +148,14 @@ final class PcmResampler {
               }
               Class var4 = Class.forName("BufferedImageRasterBuffer");
               RasterBuffer var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(1018, width, component, height);
+              var5.initialize(1018, width, component, height);
               RasterBuffer stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var4_ref = decompiledCaughtException;
               ImageProducerRasterBuffer var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(1018, width, component, height);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(1018, width, component, height);
               ImageProducerRasterBuffer stackIn_6_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_6_0);
             }

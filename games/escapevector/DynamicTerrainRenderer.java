@@ -1142,7 +1142,7 @@ final class DynamicTerrainRenderer {
         AccountPanelInputSupport.drawCachedEdgeSegments(var14 + var4, -127, var13);
         SoftwareRasterizer.setClip(var9 + var7 * var15, var11 + var8, var10 + var5 * var15, var12 + var6);
         AccountPanelInputSupport.drawCachedEdgeSegments(var14 + var4, -94, var3 * var15 + var13);
-        AlphaContainer.field_D.a(107);
+        AlphaContainer.field_D.bindRaster(107);
         SoftwareRasterizer.restoreClip(this.savedClip);
     }
 
@@ -1819,7 +1819,7 @@ final class DynamicTerrainRenderer {
         if (stackIn_14_0 <= 102) {
           this.fillPaddedEdges((int[][]) null, (byte) 106, (boolean[][]) null);
         }
-        AlphaContainer.field_D.a(126);
+        AlphaContainer.field_D.bindRaster(126);
         int[] stackIn_17_0Lifetime1 = this.savedClip;
         SoftwareRasterizer.restoreClip(stackIn_17_0Lifetime1);
         this.applyRasterMask(this.compositeSurfaces[1].pixels, true, this.compositeSurfaces[0].pixels);

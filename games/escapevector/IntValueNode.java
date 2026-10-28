@@ -7,29 +7,29 @@ final class IntValueNode extends IntrusiveNode {
     int value;
     static boolean field_j;
 
-    final static void a(String param0, String param1, int param2) {
+    final static void showLoginForm(String identifier, String message, int guard) {
         try {
           if (SavedDataRequestSupport.requestDialog != null) {
             SavedDataRequestSupport.requestDialog.closeDialog(-18861);
           }
-          PcmResampler.field_d = new LoginForm(param0, param1, false, true, true);
-          if (param2 != 63) {
+          PcmResampler.field_d = new LoginForm(identifier, message, false, true, true);
+          if (guard != 63) {
             field_h = (String[]) null;
           }
           SpaceCompactionSupport.loginDialog.transitionToContent(PcmResampler.field_d, 30);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "de.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "de.D(" + (identifier != null ? "{...}" : "null") + ',' + (message != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final static void a(boolean param0, java.applet.Applet param1) {
+    final static void reloadAppletPage(boolean guard, java.applet.Applet applet) {
         try {
           String stackIn_12_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              String var2 = param1.getDocumentBase().getFile();
-              if (param0) {
+              String var2 = applet.getDocumentBase().getFile();
+              if (guard) {
                 return;
               }
               int var3 = var2.indexOf('?');
@@ -37,8 +37,8 @@ final class IntValueNode extends IntrusiveNode {
               if (var3 >= 0) {
                 var4 = var4 + var2.substring(var3);
               }
-              java.net.URL var5 = new java.net.URL(param1.getCodeBase(), var4);
-              param1.getAppletContext().showDocument(WeightedCacheEntry.withSessionParameters((byte) 12, param1, var5), "_self");
+              java.net.URL var5 = new java.net.URL(applet.getCodeBase(), var4);
+              applet.getAppletContext().showDocument(WeightedCacheEntry.withSessionParameters((byte) 12, applet, var5), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,8 +50,8 @@ final class IntValueNode extends IntrusiveNode {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_11_0 = var2_ref2;
-            StringBuilder stackIn_11_1 = new StringBuilder().append("de.C(").append(param0).append(',');
-            if (param1 == null) {
+            StringBuilder stackIn_11_1 = new StringBuilder().append("de.C(").append(guard).append(',');
+            if (applet == null) {
               stackIn_12_2 = "null";
             } else {
               stackIn_12_2 = "{...}";
@@ -80,7 +80,7 @@ final class IntValueNode extends IntrusiveNode {
     final static void startSelectedLevel(int gameMode, int levelIndex, int guard) {
         TrackerMusicDefinition.field_f.clearSessionAchievements(true);
         gameMode = AccountChoicePanel.a(-8462, gameMode);
-        levelIndex = SectorCacheStore.a(gameMode, 13565, levelIndex);
+        levelIndex = SectorCacheStore.validLevelIndex(gameMode, 13565, levelIndex);
         int var3 = PasswordValidator.a(1, gameMode);
         BoundedRandomAccessFile.activeSession = new GameplaySession(UsernameCredentials.field_h[gameMode], var3, gameMode, levelIndex);
         BoundedRandomAccessFile.activeSession.startSession((byte) -40);

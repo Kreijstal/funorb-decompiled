@@ -13,10 +13,10 @@ final class ArchiveFactorySupport {
           Object var6 = null;
           try {
             var6 = null;
-            if (null != IntPoint.field_d.field_b) {
-              ArchivePreloader.field_h = new BufferedRandomAccessFile(IntPoint.field_d.field_b, 5200, 0);
-              IntPoint.field_d.field_b = null;
-              var6 = new SectorCacheStore(255, ArchivePreloader.field_h, new BufferedRandomAccessFile(IntPoint.field_d.field_x, 12000, 0), 2097152);
+            if (null != IntPoint.field_d.cacheDataFile) {
+              ArchivePreloader.field_h = new BufferedRandomAccessFile(IntPoint.field_d.cacheDataFile, 5200, 0);
+              IntPoint.field_d.cacheDataFile = null;
+              var6 = new SectorCacheStore(255, ArchivePreloader.field_h, new BufferedRandomAccessFile(IntPoint.field_d.masterIndexFile, 12000, 0), 2097152);
             }
             if (param5 != 114) {
               field_a = (String) null;
@@ -24,17 +24,17 @@ final class ArchiveFactorySupport {
             Object var7 = null;
             if (ArchivePreloader.field_h != null) {
               if (CampaignLoadingSupport.field_e == null) {
-                CampaignLoadingSupport.field_e = new BufferedRandomAccessFile[IntPoint.field_d.field_u.length];
+                CampaignLoadingSupport.field_e = new BufferedRandomAccessFile[IntPoint.field_d.cacheIndexFiles.length];
               }
               if (CampaignLoadingSupport.field_e[param1] == null) {
-                CampaignLoadingSupport.field_e[param1] = new BufferedRandomAccessFile(IntPoint.field_d.field_u[param1], 12000, 0);
-                IntPoint.field_d.field_u[param1] = null;
+                CampaignLoadingSupport.field_e[param1] = new BufferedRandomAccessFile(IntPoint.field_d.cacheIndexFiles[param1], 12000, 0);
+                IntPoint.field_d.cacheIndexFiles[param1] = null;
               }
               var7 = new SectorCacheStore(param1, ArchivePreloader.field_h, CampaignLoadingSupport.field_e[param1], 2097152);
             }
             CachedArchiveProvider var8 = FullscreenFocusCanvas.field_e.archiveProvider(param2, 255, (SectorCacheStore) (var6), param1, (SectorCacheStore) (var7));
             if (param0) {
-              var8.b((byte) -49);
+              var8.startPrefetch((byte) -49);
             }
             ResourceArchive stackIn_17_0 = new ResourceArchive(var8, param4, param3);
             return stackIn_17_0;

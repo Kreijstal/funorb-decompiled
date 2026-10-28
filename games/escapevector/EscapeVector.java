@@ -123,7 +123,7 @@ public final class EscapeVector extends NetworkGameClient {
               }
             }
             while (true) {
-              if (BufferedRandomAccessFile.a(SpriteLabelColumns.field_u, 109)) {
+              if (BufferedRandomAccessFile.pollIncomingPacket(SpriteLabelColumns.field_u, 109)) {
                 this.f(127);
                 if (var4 == 0) {
                   continue;
@@ -538,7 +538,7 @@ public final class EscapeVector extends NetworkGameClient {
             SharedSpriteAssets.field_b = new Sprite(32, 32);
             SharedSpriteAssets.field_b.bindAsFramebuffer();
             DualLinkDequeIterator.field_e.drawDownscaled(0, 0, 32, 32);
-            AlphaContainer.field_D.a(guard ^ -35);
+            AlphaContainer.field_D.bindRaster(guard ^ -35);
             this.loadLevelSelectBackgrounds(false);
             SavedCompletionFlags.field_f = SpriteArchiveSupport.loadNamedSprites(IndexedSpriteState.field_j, (byte) 123, "", "level_complete_tick");
             FullscreenFocusCanvas.field_a = SpriteCheckboxPainter.loadIndexedSprites("scrshots", "", (byte) -48, IndexedSpriteState.field_j);

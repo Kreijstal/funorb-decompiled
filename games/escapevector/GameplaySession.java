@@ -1456,7 +1456,7 @@ final class GameplaySession {
         if (guard != -22944) {
           return (PointCloudEffect) null;
         }
-        return BoundedRandomAccessFile.a(count, (var3), 8);
+        return BoundedRandomAccessFile.createPointCloud(count, (var3), 8);
     }
 
     private final boolean maskPixelIsSolid(int[] rows, int bitX, byte guard, int rowY) {
@@ -2191,7 +2191,7 @@ final class GameplaySession {
                 ByteStorage.gameFont.drawCentered(SeekerMine.field_k[3 * this.tutorialStep], 319, 20, 16777215, -1);
                 ByteStorage.gameFont.drawCentered(SeekerMine.field_k[this.tutorialStep * 3 + 1], 319, 40, 16777215, -1);
                 ByteStorage.gameFont.drawCentered(SeekerMine.field_k[2 + this.tutorialStep * 3], 319, 60, 16777215, -1);
-                AlphaContainer.field_D.a(126);
+                AlphaContainer.field_D.bindRaster(126);
               }
             }
             if (~this.displayedTutorialStep == ~this.tutorialStep &&
@@ -2244,7 +2244,7 @@ final class GameplaySession {
               ByteStorage.gameFont.drawParagraph(CachedArchiveProvider.field_r[var5], var3 + 40, var6 - ByteStorage.gameFont.maxAscent, 100, 1000, 16777215, -1, 0, 0, 20);
               var3 += 160;
             }
-            AlphaContainer.field_D.a(113);
+            AlphaContainer.field_D.bindRaster(113);
           }
           if (this.noticeTicks == 0) {
             int stackIn_86_0Lifetime1 = ~this.pendingAchievementCount;
@@ -3056,7 +3056,7 @@ final class GameplaySession {
         SoftwareRasterizer.clearFramebuffer();
         String var3 = TrackerMusicDefinition.a((byte) 120, this.gameMode, this.levelIndex);
         ByteStorage.gameFont.drawCentered(var3, 160, 22, 7899280, -1);
-        AlphaContainer.field_D.a(126);
+        AlphaContainer.field_D.bindRaster(126);
         MeshProjectionSupport.markSpriteEdges(LoginHandshakeSupport.field_b, true, 1);
         LoginHandshakeSupport.field_b.addOutline(5267536);
         int var4 = this.levelTitleTicks;
@@ -5017,7 +5017,7 @@ final class GameplaySession {
                 ResourceArchive.field_a.bindAsFramebuffer();
                 SoftwareRasterizer.clearFramebuffer();
                 ResourceArchive.field_m.drawCenteredRotatedScaled(4, (byte) 34, 4096, -rockBuster.angle256 << 8, 4);
-                AlphaContainer.field_D.a(120);
+                AlphaContainer.field_D.bindRaster(120);
                 var12 = (int)Math.sqrt((double)rockBuster.velocityYQ16 * (double)rockBuster.velocityYQ16 + (double)rockBuster.velocityXQ16 * (double)rockBuster.velocityXQ16);
                 var13_int = var12 / 196608 + 1;
                 int var14Lifetime3Lifetime1 = rockBuster.velocityXQ16;

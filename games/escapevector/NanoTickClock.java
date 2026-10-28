@@ -41,11 +41,11 @@ final class NanoTickClock extends TickClock {
             DropTargetWidget.field_D = param4;
             KeyboardStateSupport.field_b = param12;
             SpaceCompactionSupport.field_a = param2;
-            if (MouseWheelInput.field_c.field_j == null) {
+            if (MouseWheelInput.field_c.randomFile == null) {
               return;
             }
             try {
-              SavedDataWrite.field_h = new BufferedRandomAccessFile(MouseWheelInput.field_c.field_j, 64, 0);
+              SavedDataWrite.field_h = new BufferedRandomAccessFile(MouseWheelInput.field_c.randomFile, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

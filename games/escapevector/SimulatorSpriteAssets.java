@@ -162,7 +162,7 @@ final class SimulatorSpriteAssets {
             String var6 = (String) null;
             SimulatorSpriteAssets.loadNamedSprite((byte) -89, (String) null, (ResourceArchive) null, (String) null);
           }
-          Sprite stackIn_3_0 = CachedArchiveProvider.a(archive, true, var5, var4_int);
+          Sprite stackIn_3_0 = CachedArchiveProvider.loadSpriteFromArchive(archive, true, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

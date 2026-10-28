@@ -33,7 +33,7 @@ abstract class WeightedCacheEntry extends DualLinkNode {
             LoginMethod stackIn_6_0 = PathPoint.field_g;
             return stackIn_6_0;
           }
-          LoginMethod[] var3 = BoundedRandomAccessFile.a(false);
+          LoginMethod[] var3 = BoundedRandomAccessFile.loginMethods(false);
           int var4 = 0;
           while (true) {
             if (var3.length <= var4) {
@@ -88,7 +88,7 @@ abstract class WeightedCacheEntry extends DualLinkNode {
             !TileSpriteCacheEntry.field_i.equals(applet.getParameter("session"))) {
             var4 = TileSpriteCacheEntry.field_i;
           }
-          java.net.URL stackIn_10_0 = RasterBuffer.a((String) (var4), -1, (String) (var3), url, 1);
+          java.net.URL stackIn_10_0 = RasterBuffer.withUrlParameters((String) (var4), -1, (String) (var3), url, 1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

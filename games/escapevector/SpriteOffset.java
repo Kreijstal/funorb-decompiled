@@ -71,7 +71,7 @@ final class SpriteOffset {
             }
             var2 = true;
           }
-          LegacyMenuState.input.updatePointer(CachedArchiveProvider.a((byte) 122, SessionCounterState.field_c, LoginDialog.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y));
+          LegacyMenuState.input.updatePointer(CachedArchiveProvider.hitTestLegacyMenuAction((byte) 122, SessionCounterState.field_c, LoginDialog.field_ob), (byte) 120, CachedArchiveProvider.hitTestLegacyMenuAction((byte) 122, GzipDecoder.field_d, UiContainer.field_y));
           if (LegacyMenuState.input.isInitialActivation((byte) -18)) {
             var1_int = true;
           }

@@ -11,7 +11,7 @@ final class NameAvailabilityResultSupport {
     static SecondaryNodeHashTable field_b;
 
     final static void chooseGuestSession(int action) {
-        ImageProducerRasterBuffer.d(action ^ 36);
+        ImageProducerRasterBuffer.showLoadingProgressDialog(action ^ 36);
         WhirlpoolHasher.a(action, 30);
     }
 

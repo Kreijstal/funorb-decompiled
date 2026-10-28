@@ -36,7 +36,7 @@ final class ModeProgressSupport {
           if (guard != 0) {
             field_a = (PcmSample) null;
           }
-          String var2 = ProxySocketConnector.decodeBase37Name(RasterBuffer.a((byte) 122, text), (byte) 29);
+          String var2 = ProxySocketConnector.decodeBase37Name(RasterBuffer.encodeBase37Name((byte) 122, text), (byte) 29);
           if (var2 == null) {
             var2 = "";
           }

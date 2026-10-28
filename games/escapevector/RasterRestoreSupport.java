@@ -31,7 +31,7 @@ final class RasterRestoreSupport {
         int var4 = EscapeVector.obfuscationControl;
         try {
           try {
-            if (!SystemTaskService.field_e.startsWith("win")) {
+            if (!SystemTaskService.osNameLowerCase.startsWith("win")) {
               return false;
             }
             if (!url.startsWith("http://") &&

@@ -55,14 +55,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         Throwable decompiledCaughtException = null;
         int var4 = EscapeVector.obfuscationControl;
         try {
-          if (param1.field_k == null) {
+          if (param1.eventQueue == null) {
             return;
           }
           if (param0 != -61) {
             return;
           }
           for (int var3_int = 0; 50 > var3_int; var3_int++) {
-            if (null != param1.field_k.peekEvent()) {
+            if (null != param1.eventQueue.peekEvent()) {
               AchievementTracker.sleepMillis((byte) -15, 1L);
               continue;
             }
@@ -72,7 +72,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (param2 == null) {
               return;
             }
-            param1.field_k.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
+            param1.eventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -206,11 +206,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         int var4 = EscapeVector.obfuscationControl;
         try {
           while (true) {
-            SystemTask var3 = param0.a((byte) 45, param1);
-            while (var3.field_f == 0) {
+            SystemTask var3 = param0.exitFullscreen((byte) 45, param1);
+            while (var3.status == 0) {
               AchievementTracker.sleepMillis((byte) 93, 10L);
             }
-            if (var3.field_f != 1) {
+            if (var3.status != 1) {
               AchievementTracker.sleepMillis((byte) -10, 100L);
               continue;
             }

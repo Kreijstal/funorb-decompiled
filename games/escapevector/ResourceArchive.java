@@ -315,18 +315,18 @@ final class ResourceArchive {
             }
             for (var4 = 0; var17.operationCount > var4; var4++) {
               if (null != var13.fieldTasks[var4]) {
-                if (var13.fieldTasks[var4].field_f == 2) {
+                if (var13.fieldTasks[var4].status == 2) {
                   var13.errors[var4] = -5;
                 }
-                if (var13.fieldTasks[var4].field_f == 0) {
+                if (var13.fieldTasks[var4].status == 0) {
                   var3 = true;
                 }
               }
               if (null != var13.methodTasks[var4]) {
-                if (2 == var13.methodTasks[var4].field_f) {
+                if (2 == var13.methodTasks[var4].status) {
                   var13.errors[var4] = -6;
                 }
-                if (var13.methodTasks[var4].field_f == 0) {
+                if (var13.methodTasks[var4].status == 0) {
                   var3 = true;
                 }
               }
@@ -343,23 +343,23 @@ final class ResourceArchive {
                 try {
                   int var6_int = var17.operations[var5];
                   if (var6_int == 0) {
-                    java.lang.reflect.Field var26 = (java.lang.reflect.Field) (var17.fieldTasks[var5].field_b);
+                    java.lang.reflect.Field var26 = (java.lang.reflect.Field) (var17.fieldTasks[var5].result);
                     var8 = var26.getInt((Object) null);
                     output.writeByte(0, -123);
                     output.writeInt((byte) 123, var8);
                   } else if (var6_int == 1) {
-                    java.lang.reflect.Field var16_ref = (java.lang.reflect.Field) (var17.fieldTasks[var5].field_b);
+                    java.lang.reflect.Field var16_ref = (java.lang.reflect.Field) (var17.fieldTasks[var5].result);
                     java.lang.reflect.Field var19 = var16_ref;
                     var19.setInt((Object) null, var17.replacementValues[var5]);
                     output.writeByte(0, -123);
                   } else if (var6_int == 2) {
-                    java.lang.reflect.Field var15 = (java.lang.reflect.Field) (var17.fieldTasks[var5].field_b);
+                    java.lang.reflect.Field var15 = (java.lang.reflect.Field) (var17.fieldTasks[var5].result);
                     var8 = var15.getModifiers();
                     output.writeByte(0, -123);
                     output.writeInt((byte) 125, var8);
                   }
                   if (var6_int == 3) {
-                    java.lang.reflect.Method var28 = (java.lang.reflect.Method) (var17.methodTasks[var5].field_b);
+                    java.lang.reflect.Method var28 = (java.lang.reflect.Method) (var17.methodTasks[var5].result);
                     byte[][] var25 = var17.serializedArguments[var5];
                     Object[] var9 = new Object[var25.length];
                     for (int var10_int = 0; var10_int < var25.length; var10_int++) {
@@ -379,7 +379,7 @@ final class ResourceArchive {
                       output.writeString((String) (var10), 77);
                     }
                   } else if (var6_int == 4) {
-                    java.lang.reflect.Method var27 = (java.lang.reflect.Method) (var17.methodTasks[var5].field_b);
+                    java.lang.reflect.Method var27 = (java.lang.reflect.Method) (var17.methodTasks[var5].result);
                     int var8Lifetime1 = var27.getModifiers();
                     output.writeByte(0, guard ^ 20166);
                     output.writeInt((byte) 124, var8Lifetime1);

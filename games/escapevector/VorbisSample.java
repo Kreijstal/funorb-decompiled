@@ -278,7 +278,7 @@ final class VorbisSample extends IntrusiveNode {
           int[] var9 = new int[var5];
           int var10 = ConnectionSupport.bitLength(var5 - 1, (byte) 78);
           for (int var11 = 0; var11 < var5; var11++) {
-            var9[var11] = DiskCacheRequest.a(var11, var10, (byte) 96);
+            var9[var11] = DiskCacheRequest.reverseBits(var11, var10, (byte) 96);
           }
           if (var1 == 0) {
             shortTrigA = var6_ref_float__;

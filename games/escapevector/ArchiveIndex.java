@@ -226,7 +226,7 @@ final class ArchiveIndex {
             if (expectedDigest.length != 64) {
               throw new RuntimeException();
             }
-            this.encodedDigest = RasterBuffer.a(encoded, 0, encoded.length, 0);
+            this.encodedDigest = RasterBuffer.whirlpoolDigest(encoded, 0, encoded.length, 0);
             for (int var4_int = 0; var4_int < 64; var4_int++) {
               if (expectedDigest[var4_int] != this.encodedDigest[var4_int]) {
                 throw new RuntimeException();

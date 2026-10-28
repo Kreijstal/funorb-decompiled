@@ -67,7 +67,7 @@ final class DirectByteStorage extends ByteStorage {
         if (!GameProgressSupport.field_c.isLoaded(-19836)) {
           GameProgressSupport.field_c.pollLoad(-9949);
         }
-        CachedArchiveProvider.b(param0 ^ -57);
+        CachedArchiveProvider.loadMemberCampaignAssets(param0 ^ -57);
         SimulatorAssetSupport.loadSimulatorSprites(0);
     }
 
@@ -107,7 +107,7 @@ final class DirectByteStorage extends ByteStorage {
                   }
                   var17.operations[var5] = var6_int;
                   var17.replacementValues[var5] = var9;
-                  var17.fieldTasks[var5] = taskService.a(var8, AchievementTracker.classForReflectionType(var15, (byte) 38), PacketBuffer.xor(guard, 24120));
+                  var17.fieldTasks[var5] = taskService.lookupDeclaredField(var8, AchievementTracker.classForReflectionType(var15, (byte) 38), PacketBuffer.xor(guard, 24120));
                 } else if (var6_int == 3 ||
                   var6_int == 4) {
                   String var19 = buffer.readString(false);
@@ -136,7 +136,7 @@ final class DirectByteStorage extends ByteStorage {
                     var12[var16] = AchievementTracker.classForReflectionType(var10[var16], (byte) 38);
                     var16++;
                   }
-                  var17.methodTasks[var5] = taskService.a(var8, PacketBuffer.xor(guard, -24074), AchievementTracker.classForReflectionType(var19, (byte) 38), var12);
+                  var17.methodTasks[var5] = taskService.lookupDeclaredMethod(var8, PacketBuffer.xor(guard, -24074), AchievementTracker.classForReflectionType(var19, (byte) 38), var12);
                   var17.serializedArguments[var5] = var20;
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {

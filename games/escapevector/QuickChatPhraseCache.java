@@ -71,7 +71,7 @@ final class QuickChatPhraseCache {
         if (guard <= 50) {
           QuickChatPhraseCache.advanceMenuTransition((byte) -15);
         }
-        SectorCacheStore.a((byte) 123);
+        SectorCacheStore.refreshMembershipMenu((byte) 123);
         if (LoginHandshakeSupport.field_d != 0) {
           if (LoginHandshakeSupport.field_d < 1000) {
             LoginHandshakeSupport.field_d = LoginHandshakeSupport.field_d + 1;

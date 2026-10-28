@@ -337,7 +337,7 @@ class AudioOutput {
                 service == null) {
                 service = new AudioService();
                 service.tasks = tasks;
-                tasks.a(true, threadPriority, (Runnable) ((Object) service));
+                tasks.startThread(true, threadPriority, (Runnable) ((Object) service));
               }
               if (service != null) {
                 if (service.outputs[slot] != null) {

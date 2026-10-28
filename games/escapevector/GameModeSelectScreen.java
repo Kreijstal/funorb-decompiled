@@ -878,7 +878,7 @@ final class GameModeSelectScreen {
           try {
             String var3 = "";
             if (failure != null) {
-              var3 = SectorCacheStore.a(failure, 41);
+              var3 = SectorCacheStore.formatCompactStackTrace(failure, 41);
             }
             if (message != null) {
               if (failure != null) {
@@ -907,12 +907,12 @@ final class GameModeSelectScreen {
               java.net.URL stackIn_14_3 = null;
               stackIn_14_6 = "" + DialWidget.field_J;
             }
-            SystemTask var4 = ((SystemTaskService) (Object) stackIn_13_0).a((byte) stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(SystemTaskService.field_s).append("&v2=").append(SystemTaskService.field_v).append("&e=").append(var7).toString()));
-            while (var4.field_f == 0) {
+            SystemTask var4 = ((SystemTaskService) (Object) stackIn_13_0).openUrlStream((byte) stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(SystemTaskService.javaVendor).append("&v2=").append(SystemTaskService.javaVersion).append("&e=").append(var7).toString()));
+            while (var4.status == 0) {
               AchievementTracker.sleepMillis((byte) 105, 1L);
             }
-            if (var4.field_f == 1) {
-              DataInputStream var5 = (DataInputStream) (var4.field_b);
+            if (var4.status == 1) {
+              DataInputStream var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

@@ -565,7 +565,7 @@ final class SocketJs5Transport extends Js5Transport {
                       }
                       if (~var5 == ~this.currentRequest.responseBuffer.position) {
                         this.currentRequest.unlinkSecondary(-110);
-                        this.currentRequest.field_u = false;
+                        this.currentRequest.pending = false;
                         this.currentRequest = null;
                         decompiledFrameRemainder1 = (var16 != 0);
                       }

@@ -56,7 +56,7 @@ final class Bzip2State {
           String stackIn_17_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (SystemTaskService.field_e.startsWith("win") &&
+            if (SystemTaskService.osNameLowerCase.startsWith("win") &&
               RasterRestoreSupport.openWindowsUrl((byte) 38, param3)) {
               return;
             }

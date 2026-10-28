@@ -95,18 +95,18 @@ final class BoundedUrlRequest implements Runnable {
 
     protected final void finalize() {
         if (null != this.urlTask) {
-          if (null != this.urlTask.field_b) {
+          if (null != this.urlTask.result) {
             try {
-              ((DataInputStream) (this.urlTask.field_b)).close();
+              ((DataInputStream) (this.urlTask.result)).close();
             } catch (Exception exception) {
             }
           }
           this.urlTask = null;
         }
         if (this.socketTask != null) {
-          if (this.socketTask.field_b != null) {
+          if (this.socketTask.result != null) {
             try {
-              ((java.net.Socket) (this.socketTask.field_b)).close();
+              ((java.net.Socket) (this.socketTask.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -128,12 +128,12 @@ final class BoundedUrlRequest implements Runnable {
         }
         if (0 == this.stage) {
           if (null == this.urlTask) {
-            this.urlTask = this.tasks.a((byte) -12, this.url);
+            this.urlTask = this.tasks.openUrlStream((byte) -12, this.url);
           }
-          if (this.urlTask.field_f == 0) {
+          if (this.urlTask.status == 0) {
             return false;
           }
-          if (this.urlTask.field_f != 1) {
+          if (this.urlTask.status != 1) {
             this.urlTask = null;
             this.stage = this.stage + 1;
             return false;
@@ -141,12 +141,12 @@ final class BoundedUrlRequest implements Runnable {
         }
         if (1 == this.stage) {
           if (this.socketTask == null) {
-            this.socketTask = this.tasks.a(443, 4, this.url.getHost());
+            this.socketTask = this.tasks.openSocket(443, 4, this.url.getHost());
           }
-          if (this.socketTask.field_f == 0) {
+          if (this.socketTask.status == 0) {
             return false;
           }
-          if (1 != this.socketTask.field_f) {
+          if (1 != this.socketTask.status) {
             this.socketTask = null;
             this.stage = this.stage + 1;
             return false;
@@ -155,10 +155,10 @@ final class BoundedUrlRequest implements Runnable {
         if (null == this.input) {
           try {
             if (this.stage == 0) {
-              this.input = (DataInputStream) (this.urlTask.field_b);
+              this.input = (DataInputStream) (this.urlTask.result);
             }
             if (1 == this.stage) {
-              java.net.Socket var4 = (java.net.Socket) (this.socketTask.field_b);
+              java.net.Socket var4 = (java.net.Socket) (this.socketTask.result);
               var4.setSoTimeout(10000);
               OutputStream var3 = var4.getOutputStream();
               var3.write(17);
@@ -173,10 +173,10 @@ final class BoundedUrlRequest implements Runnable {
             this.finalize();
             this.stage = this.stage + 1;
             if (this.readerTask != null) {
-              if (this.readerTask.field_f == 0) {
+              if (this.readerTask.status == 0) {
                 return false;
               }
-              if (1 == this.readerTask.field_f) {
+              if (1 == this.readerTask.status) {
                 if (guard == 17) {
                   return false;
                 }
@@ -191,11 +191,11 @@ final class BoundedUrlRequest implements Runnable {
               BoundedUrlRequest.writePendingRatings(49, -88);
               return false;
             }
-            this.readerTask = this.tasks.a(true, 5, (Runnable) (this));
-            if (this.readerTask.field_f == 0) {
+            this.readerTask = this.tasks.startThread(true, 5, (Runnable) (this));
+            if (this.readerTask.status == 0) {
               return false;
             }
-            if (1 == this.readerTask.field_f) {
+            if (1 == this.readerTask.status) {
               if (guard == 17) {
                 return false;
               }
@@ -212,12 +212,12 @@ final class BoundedUrlRequest implements Runnable {
           }
         }
         if (this.readerTask == null) {
-          this.readerTask = this.tasks.a(true, 5, (Runnable) (this));
+          this.readerTask = this.tasks.startThread(true, 5, (Runnable) (this));
         }
-        if (this.readerTask.field_f == 0) {
+        if (this.readerTask.status == 0) {
           return false;
         }
-        if (1 != this.readerTask.field_f) {
+        if (1 != this.readerTask.status) {
           this.finalize();
           this.stage = this.stage + 1;
         }

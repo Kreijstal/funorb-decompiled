@@ -4,19 +4,19 @@
 import java.util.*;
 
 final class BufferedImageRasterBuffer extends RasterBuffer {
-    private java.awt.Component field_j;
+    private java.awt.Component component;
 
-    final void a(int param0, int param1, java.awt.Component param2, int param3) {
-        this.field_h = param3;
-        this.field_d = param1;
-        this.field_i = new int[param3 * param1 + 1];
-        java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(this.field_i, this.field_i.length);
+    final void initialize(int guard, int width, java.awt.Component component, int height) {
+        this.height = height;
+        this.width = width;
+        this.pixels = new int[height * width + 1];
+        java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(this.pixels, this.pixels.length);
         java.awt.image.DirectColorModel var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-        java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_d, this.field_h), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
-        this.field_f = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
-        this.field_j = param2;
-        if (param0 == 1018) {
-          this.a(108);
+        java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.width, this.height), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+        this.image = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
+        this.component = component;
+        if (guard == 1018) {
+          this.bindRaster(108);
           return;
         }
     }
@@ -24,10 +24,10 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
     public BufferedImageRasterBuffer() {
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
-        param3.drawImage(this.field_f, param0, param2, (java.awt.image.ImageObserver) ((Object) this.field_j));
-        if (param1 != 0) {
-          this.field_j = (java.awt.Component) null;
+    final void drawImage(int x, int guard, int y, java.awt.Graphics graphics) {
+        graphics.drawImage(this.image, x, y, (java.awt.image.ImageObserver) ((Object) this.component));
+        if (guard != 0) {
+          this.component = (java.awt.Component) null;
         }
     }
 }

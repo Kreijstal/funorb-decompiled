@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class RasterBuffer {
-    int field_d;
+    int width;
     static AccountFormStage field_g;
     static PcmSample field_c;
     static IntrusiveDeque field_e;
-    int field_h;
+    int height;
     static String field_b;
     static int[][] field_a;
-    java.awt.Image field_f;
-    int[] field_i;
+    java.awt.Image image;
+    int[] pixels;
 
     public static void releaseStatics(byte guard) {
         field_a = (int[][]) null;
@@ -23,39 +23,39 @@ abstract class RasterBuffer {
         field_e = null;
     }
 
-    final void a(int param0) {
-        if (param0 <= 105) {
+    final void bindRaster(int guard) {
+        if (guard <= 105) {
           RasterBuffer.releaseStatics((byte) -18);
         }
-        SoftwareRasterizer.bind(this.field_i, this.field_d, this.field_h);
+        SoftwareRasterizer.bind(this.pixels, this.width, this.height);
     }
 
-    abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
+    abstract void drawImage(int x, int guard, int y, java.awt.Graphics graphics);
 
-    abstract void a(int param0, int param1, java.awt.Component param2, int param3);
+    abstract void initialize(int guard, int width, java.awt.Component component, int height);
 
-    final static byte[] a(byte[] param0, int param1, int param2, int param3) {
+    final static byte[] whirlpoolDigest(byte[] data, int offset, int length, int guard) {
         byte[] var4 = null;
         String stackIn_13_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (0 < param1) {
-            byte[] var9 = new byte[param2];
+          if (0 < offset) {
+            byte[] var9 = new byte[length];
             var4 = var9;
-            for (int var5_int = 0; var5_int < param2; var5_int++) {
-              var9[var5_int] = param0[param1 + var5_int];
+            for (int var5_int = 0; var5_int < length; var5_int++) {
+              var9[var5_int] = data[offset + var5_int];
             }
           } else {
-            var4 = param0;
+            var4 = data;
           }
           WhirlpoolHasher var5 = new WhirlpoolHasher();
           var5.reset(false);
-          var5.updateBits((long)(8 * param2), var4, 2);
+          var5.updateBits((long)(8 * length), var4, 2);
           byte[] var6 = new byte[64];
           var5.finish(0, var6, false);
-          if (param3 != 0) {
+          if (guard != 0) {
             String var8 = (String) null;
-            RasterBuffer.a((byte) 62, (String) null);
+            RasterBuffer.createEmailAvailabilityRequest((byte) 62, (String) null);
           }
           byte[] stackIn_9_0 = var6;
           return stackIn_9_0;
@@ -64,29 +64,29 @@ abstract class RasterBuffer {
           RuntimeException var4_ref = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var4_ref;
           StringBuilder stackIn_12_1 = new StringBuilder().append("vn.D(");
-          if (param0 == null) {
+          if (data == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(offset).append(',').append(length).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static EmailAvailabilityRequest a(byte param0, String param1) {
+    final static EmailAvailabilityRequest createEmailAvailabilityRequest(byte guard, String email) {
         String stackIn_7_2 = null;
         try {
-          if (param0 < 24) {
+          if (guard < 24) {
             field_g = (AccountFormStage) null;
           }
-          EmailAvailabilityRequest stackIn_3_0 = new EmailAvailabilityRequest(param1);
+          EmailAvailabilityRequest stackIn_3_0 = new EmailAvailabilityRequest(email);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var2;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("vn.F(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("vn.F(").append(guard).append(',');
+          if (email == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -95,7 +95,7 @@ abstract class RasterBuffer {
         }
     }
 
-    final static java.net.URL a(String param0, int param1, String param2, java.net.URL param3, int param4) {
+    final static java.net.URL withUrlParameters(String session, int language, String settings, java.net.URL url, int guard) {
         try {
           String stackIn_49_2 = null;
           String stackIn_52_2 = null;
@@ -104,13 +104,13 @@ abstract class RasterBuffer {
           int var7_int = 0;
           int var9 = EscapeVector.obfuscationControl;
           try {
-            String var5 = param3.getFile();
+            String var5 = url.getFile();
             int var6 = 0;
             while (true) {
               if (var5.regionMatches(var6, "/l=", 0, 3)) {
                 var7_int = var5.indexOf('/', var6 + 1);
                 if (var7_int >= 0) {
-                  if (param1 >= 0) {
+                  if (language >= 0) {
                     var5 = var5.substring(0, var6) + var5.substring(var7_int);
                     continue;
                   }
@@ -127,7 +127,7 @@ abstract class RasterBuffer {
                 if (var5.regionMatches(var6, "/p=", 0, 3)) {
                   var7_int = var5.indexOf('/', var6 + 1);
                   if (var7_int >= 0 &&
-                    (decompiledFrameRemainder0 = (param2 != null))) {
+                    (decompiledFrameRemainder0 = (settings != null))) {
                     var5 = var5.substring(0, var6) + var5.substring(var7_int);
                     continue;
                   }
@@ -137,7 +137,7 @@ abstract class RasterBuffer {
                     var5.regionMatches(var6, "/c=", 0, 3)) {
                     var7_int = var5.indexOf('/', 1 + var6);
                     if (var7_int >= 0) {
-                      if (param0 != null) {
+                      if (session != null) {
                         var5 = var5.substring(0, var6) + var5.substring(var7_int);
                         continue;
                       }
@@ -146,24 +146,24 @@ abstract class RasterBuffer {
                     }
                   }
                   StringBuilder var7 = new StringBuilder(var6);
-                  if (param4 != 1) {
+                  if (guard != 1) {
                     java.net.URL stackIn_29_0 = (java.net.URL) null;
                     return stackIn_29_0;
                   }
                   StringBuilder discarded$0 = var7.append(var5.substring(0, var6));
-                  if (param1 > 0) {
+                  if (language > 0) {
                     StringBuilder discarded$1 = var7.append("/l=");
-                    StringBuilder discarded$2 = var7.append(Integer.toString(param1));
+                    StringBuilder discarded$2 = var7.append(Integer.toString(language));
                   }
-                  if (param2 != null &&
-                    param2.length() > 0) {
+                  if (settings != null &&
+                    settings.length() > 0) {
                     StringBuilder discarded$3 = var7.append("/p=");
-                    StringBuilder discarded$4 = var7.append(param2);
+                    StringBuilder discarded$4 = var7.append(settings);
                   }
-                  if (param0 != null &&
-                    param0.length() > 0) {
+                  if (session != null &&
+                    session.length() > 0) {
                     StringBuilder discarded$5 = var7.append("/s=");
-                    StringBuilder discarded$6 = var7.append(param0);
+                    StringBuilder discarded$6 = var7.append(session);
                   }
                   if (var6 >= var5.length()) {
                     StringBuilder discarded$7 = var7.append('/');
@@ -171,13 +171,13 @@ abstract class RasterBuffer {
                     StringBuilder discarded$8 = var7.append(var5.substring(var6, var5.length()));
                   }
                   try {
-                    java.net.URL stackIn_43_0 = new java.net.URL(param3, var7.toString());
+                    java.net.URL stackIn_43_0 = new java.net.URL(url, var7.toString());
                     return stackIn_43_0;
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     Exception var8 = (Exception) (Object) decompiledCaughtException;
                     var8.printStackTrace();
-                    java.net.URL stackIn_45_0 = (java.net.URL) (param3);
+                    java.net.URL stackIn_45_0 = (java.net.URL) (url);
                     return stackIn_45_0;
                   }
                 }
@@ -189,24 +189,24 @@ abstract class RasterBuffer {
             RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_48_0 = var5_ref;
             StringBuilder stackIn_48_1 = new StringBuilder().append("vn.H(");
-            if (param0 == null) {
+            if (session == null) {
               stackIn_49_2 = "null";
             } else {
               stackIn_49_2 = "{...}";
             }
-            StringBuilder stackIn_51_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(',');
-            if (param2 == null) {
+            StringBuilder stackIn_51_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(language).append(',');
+            if (settings == null) {
               stackIn_52_2 = "null";
             } else {
               stackIn_52_2 = "{...}";
             }
             StringBuilder stackIn_54_1 = ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',');
-            if (param3 == null) {
+            if (url == null) {
               stackIn_55_2 = "null";
             } else {
               stackIn_55_2 = "{...}";
             }
-            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param4).append(')').toString());
+            throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -215,18 +215,18 @@ abstract class RasterBuffer {
         }
     }
 
-    final static long a(byte param0, CharSequence param1) {
+    final static long encodeBase37Name(byte guard, CharSequence text) {
         String stackIn_27_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
           long var2_long = 0L;
-          int var4 = param1.length();
-          if (param0 < 47) {
+          int var4 = text.length();
+          if (guard < 47) {
             field_g = (AccountFormStage) null;
           }
           for (int var5 = 0; var5 < var4; var5++) {
             var2_long = var2_long * 37L;
-            int var6 = param1.charAt(var5);
+            int var6 = text.charAt(var5);
             if (var6 >= 65 &&
               var6 <= 90) {
               var2_long = var2_long + (long)(-64 + var6);
@@ -257,8 +257,8 @@ abstract class RasterBuffer {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_26_0 = var2;
-          StringBuilder stackIn_26_1 = new StringBuilder().append("vn.E(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_26_1 = new StringBuilder().append("vn.E(").append(guard).append(',');
+          if (text == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";

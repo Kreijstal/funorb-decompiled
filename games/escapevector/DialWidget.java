@@ -15,7 +15,7 @@ final class DialWidget extends TextButton {
 
     final static void k(int param0) {
         String var2 = (String) null;
-        IntValueNode.a(AgeValidator.field_o, (String) null, 63);
+        IntValueNode.showLoginForm(AgeValidator.field_o, (String) null, 63);
         if (param0 != 0) {
           DialWidget.releaseStatics(true);
         }

@@ -178,7 +178,7 @@ final class Minimap {
         Sprite var7 = new Sprite(var4, var4);
         var7.bindAsFramebuffer();
         SoftwareRasterizer.fillRectangle(var6, var6, var5, var5, color);
-        AlphaContainer.field_D.a(guard + 5535);
+        AlphaContainer.field_D.bindRaster(guard + 5535);
         return var7;
     }
 

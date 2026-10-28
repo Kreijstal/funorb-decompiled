@@ -30,7 +30,7 @@ final class ObjectSpriteSet {
           SoftwareRasterizer.saveClip(DisplayNameForm.field_M);
           var11.bindAsFramebuffer();
           param4.drawTransparent(-var13.x, -var13.y);
-          AlphaContainer.field_D.a(124);
+          AlphaContainer.field_D.bindRaster(124);
           SoftwareRasterizer.restoreClip(DisplayNameForm.field_M);
           Sprite stackIn_3_0 = var11;
           return stackIn_3_0;
@@ -205,7 +205,7 @@ final class ObjectSpriteSet {
           SoftwareRasterizer.saveClip(DisplayNameForm.field_M);
           var4.bindAsFramebuffer();
           param0.drawTransparent(var5, var6);
-          AlphaContainer.field_D.a(param1 ^ 126);
+          AlphaContainer.field_D.bindRaster(param1 ^ 126);
           SoftwareRasterizer.restoreClip(DisplayNameForm.field_M);
           Sprite stackIn_4_0 = var4;
           return stackIn_4_0;
@@ -325,7 +325,7 @@ final class ObjectSpriteSet {
           SoftwareRasterizer.saveClip(DisplayNameForm.field_M);
           var10.bindAsFramebuffer();
           var5.drawCenteredRotatedScaled(var8, (byte) 34, var4_int, param2, var9);
-          AlphaContainer.field_D.a(124);
+          AlphaContainer.field_D.bindRaster(124);
           SoftwareRasterizer.restoreClip(DisplayNameForm.field_M);
           Sprite var11 = this.a((byte) 100, param2, param0, var5, var10);
           Sprite stackIn_7_0 = var11;

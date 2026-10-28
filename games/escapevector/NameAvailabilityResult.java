@@ -23,8 +23,8 @@ final class NameAvailabilityResult {
           boolean decompiledRegionSelector0 = false;
           if (SavedDataWrite.field_h != null) {
             try {
-              SavedDataWrite.field_h.a(0, 0L);
-              SavedDataWrite.field_h.a(true, QuickChatDynamicCommand.incomingPackets.position, QuickChatDynamicCommand.incomingPackets.payload, 24);
+              SavedDataWrite.field_h.seek(0, 0L);
+              SavedDataWrite.field_h.write(true, QuickChatDynamicCommand.incomingPackets.position, QuickChatDynamicCommand.incomingPackets.payload, 24);
               decompiledRegionSelector0 = false;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;

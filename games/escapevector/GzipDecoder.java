@@ -12,7 +12,7 @@ final class GzipDecoder {
 
     final static void initializeAccountUi(boolean guard, byte byteGuard, ResourceArchive sprites, ResourceArchive fonts, ResourceArchive buttons) {
         try {
-          HighscorePlayerRecord.field_g = RasterBuffer.a((byte) 41, "");
+          HighscorePlayerRecord.field_g = RasterBuffer.createEmailAvailabilityRequest((byte) 41, "");
           HighscorePlayerRecord.field_g.complete((byte) -128, false);
           MenuInputState.loadCommonUiAssets(83, sprites, fonts, buttons);
           GrowableIntList.a((byte) -96);
@@ -30,15 +30,15 @@ final class GzipDecoder {
         String stackIn_22_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (!taskService.c(0)) {
+          if (!taskService.supportsFullscreen(0)) {
             DisplayModeInfo[] stackIn_4_0 = new DisplayModeInfo[]{};
             return stackIn_4_0;
           }
-          SystemTask var8 = taskService.a(5);
-          while (var8.field_f == 0) {
+          SystemTask var8 = taskService.listDisplayModes(5);
+          while (var8.status == 0) {
             AchievementTracker.sleepMillis((byte) 101, 10L);
           }
-          if (var8.field_f == 2) {
+          if (var8.status == 2) {
             DisplayModeInfo[] stackIn_10_0 = new DisplayModeInfo[]{};
             return stackIn_10_0;
           }
@@ -46,7 +46,7 @@ final class GzipDecoder {
             DisplayModeInfo[] stackIn_13_0 = (DisplayModeInfo[]) null;
             return stackIn_13_0;
           }
-          int[] var10 = (int[]) (var8.field_b);
+          int[] var10 = (int[]) (var8.result);
           int[] var9 = var10;
           int[] var3 = var9;
           DisplayModeInfo[] var4 = new DisplayModeInfo[var10.length >> 2];

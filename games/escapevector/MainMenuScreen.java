@@ -158,7 +158,7 @@ final class MainMenuScreen {
               ByteStorage.gameFont.drawCentered(EscapeVector.field_z, var6, 22, var5_int, -1);
             }
           }
-          AlphaContainer.field_D.a(112);
+          AlphaContainer.field_D.bindRaster(112);
           MeshProjectionSupport.markSpriteEdges(LoginHandshakeSupport.field_b, true, 1);
           LoginHandshakeSupport.field_b.addOutline(5267536);
           int var7Lifetime1 = -LoginHandshakeSupport.field_d + 30 + 5 * actionCode;

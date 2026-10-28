@@ -175,8 +175,8 @@ final class StripedProgressBar extends UiComponent {
             byte[] var2 = var6;
             if (SavedDataWrite.field_h != null) {
               try {
-                SavedDataWrite.field_h.a(0, 0L);
-                SavedDataWrite.field_h.a((byte) 94, var6);
+                SavedDataWrite.field_h.seek(0, 0L);
+                SavedDataWrite.field_h.readFully((byte) 94, var6);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (var6[var3_int] == 0) {
                     continue;

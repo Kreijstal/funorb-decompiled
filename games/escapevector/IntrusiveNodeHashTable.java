@@ -89,7 +89,7 @@ final class IntrusiveNodeHashTable {
         String stackIn_45_2 = null;
         int var9 = EscapeVector.obfuscationControl;
         try {
-          if (!param3.c(0)) {
+          if (!param3.supportsFullscreen(0)) {
             return null;
           }
           if (param4 == 0) {
@@ -116,15 +116,15 @@ final class IntrusiveNodeHashTable {
           if (param0 != 93) {
             field_a = (PcmSample) null;
           }
-          SystemTask var11 = param3.a(-103, param4, param2, param5, param1);
-          while (var11.field_f == 0) {
+          SystemTask var11 = param3.enterFullscreen(-103, param4, param2, param5, param1);
+          while (var11.status == 0) {
             AchievementTracker.sleepMillis((byte) -31, 10L);
           }
-          java.awt.Frame var7 = (java.awt.Frame) (var11.field_b);
+          java.awt.Frame var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             return null;
           }
-          if (var11.field_f != 2) {
+          if (var11.status != 2) {
             java.awt.Frame stackIn_41_0 = var7;
             return stackIn_41_0;
           }

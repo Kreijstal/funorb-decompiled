@@ -4,30 +4,30 @@
 import java.util.*;
 
 final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
-    private java.awt.image.ImageConsumer field_k;
+    private java.awt.image.ImageConsumer consumer;
     static java.awt.Font field_l;
-    private java.awt.image.ColorModel field_j;
+    private java.awt.image.ColorModel colorModel;
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return param0 == this.field_k;
+        return param0 == this.consumer;
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
         try {
-          if (param0 == this.field_k) {
-            this.field_k = null;
+          if (param0 == this.consumer) {
+            this.consumer = null;
           }
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cg.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final synchronized void b(int param0) {
-        if (this.field_k == null) {
+    private final synchronized void pushPixels(int completionStatus) {
+        if (this.consumer == null) {
           return;
         }
-        this.field_k.setPixels(0, 0, this.field_d, this.field_h, this.field_j, this.field_i, 0, this.field_d);
-        this.field_k.imageComplete(param0);
+        this.consumer.setPixels(0, 0, this.width, this.height, this.colorModel, this.pixels, 0, this.width);
+        this.consumer.imageComplete(completionStatus);
     }
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
@@ -55,26 +55,26 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(int param0, int param1, java.awt.Component param2, int param3) {
+    final void initialize(int guard, int width, java.awt.Component component, int height) {
         try {
-          this.field_i = new int[1 + param3 * param1];
-          this.field_h = param3;
-          this.field_d = param1;
-          this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-          this.field_f = param2.createImage((java.awt.image.ImageProducer) (this));
-          this.b(2);
-          param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
-          this.b(2);
-          param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
-          if (param0 != 1018) {
+          this.pixels = new int[1 + height * width];
+          this.height = height;
+          this.width = width;
+          this.colorModel = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+          this.image = component.createImage((java.awt.image.ImageProducer) (this));
+          this.pushPixels(2);
+          component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.pushPixels(2);
+          component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          if (guard != 1018) {
             java.awt.Image var6 = (java.awt.Image) null;
             this.imageUpdate((java.awt.Image) null, 84, -46, -64, -30, -50);
           }
-          this.b(2);
-          param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
-          this.a(param0 - 895);
+          this.pushPixels(2);
+          component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.bindRaster(guard - 895);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cg.A(" + guard + ',' + width + ',' + (component != null ? "{...}" : "null") + ',' + height + ')');
         }
     }
 
@@ -83,10 +83,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-          this.field_k = param0;
-          param0.setDimensions(this.field_d, this.field_h);
+          this.consumer = param0;
+          param0.setDimensions(this.width, this.height);
           param0.setProperties((Hashtable) null);
-          param0.setColorModel(this.field_j);
+          param0.setColorModel(this.colorModel);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cg.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
@@ -101,13 +101,13 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static void e(int param0) {
+    final static void configurePunctuationKeyCodes(int guard) {
         KeyCodeSupport.awtToGameKeyCodes[46] = 72;
         KeyCodeSupport.awtToGameKeyCodes[47] = 73;
         KeyCodeSupport.awtToGameKeyCodes[92] = 74;
         KeyCodeSupport.awtToGameKeyCodes[45] = 26;
         KeyCodeSupport.awtToGameKeyCodes[93] = 43;
-        int var1 = -51 / ((46 - param0) / 32);
+        int var1 = -51 / ((46 - guard) / 32);
         KeyCodeSupport.awtToGameKeyCodes[59] = 57;
         KeyCodeSupport.awtToGameKeyCodes[61] = 27;
         KeyCodeSupport.awtToGameKeyCodes[44] = 71;
@@ -117,23 +117,23 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         KeyCodeSupport.awtToGameKeyCodes[222] = 58;
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
-        this.b(2);
-        if (param1 != 0) {
+    final void drawImage(int x, int guard, int y, java.awt.Graphics graphics) {
+        this.pushPixels(2);
+        if (guard != 0) {
           return;
         }
         try {
-          param3.drawImage(this.field_f, param0, param2, (java.awt.image.ImageObserver) (this));
+          graphics.drawImage(this.image, x, y, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cg.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cg.B(" + x + ',' + guard + ',' + y + ',' + (graphics != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void d(int param0) {
+    final static void showLoadingProgressDialog(int guard) {
         Checkbox.field_F.closeAllPanels(17415);
         if (ProxySocketConnector.field_r == null) {
           ProxySocketConnector.field_r = new LoadingProgressDialog(Checkbox.field_F, AccountPanelInputSupport.field_b);
-          if (param0 != 32) {
+          if (guard != 32) {
             field_l = (java.awt.Font) null;
             Checkbox.field_F.pushPanel(ProxySocketConnector.field_r, 61);
             return;
@@ -141,7 +141,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           Checkbox.field_F.pushPanel(ProxySocketConnector.field_r, 61);
           return;
         }
-        if (param0 == 32) {
+        if (guard == 32) {
           Checkbox.field_F.pushPanel(ProxySocketConnector.field_r, 61);
           return;
         }
@@ -149,10 +149,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         Checkbox.field_F.pushPanel(ProxySocketConnector.field_r, 61);
     }
 
-    final static void c(int param0) {
+    final static void readAchievementResponse(int guard) {
         int var8 = EscapeVector.obfuscationControl;
         try {
-          if (param0 <= 68) {
+          if (guard <= 68) {
             return;
           }
           CipherPacketBuffer var14 = QuickChatDynamicCommand.incomingPackets;
@@ -205,7 +205,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "cg.J(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "cg.J(" + guard + ')');
         }
     }
 

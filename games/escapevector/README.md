@@ -2,9 +2,9 @@
 
 This is the only published Java tree. Reviewed rules and the reproducer live in dekobloko-work/readable. The current reverse dictionary is ../../decompilation/escapevector-naming.json.
 
-This pass names 347 reviewed classes and 9442 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
+This pass names 347 reviewed classes and 9814 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
 
-Coverage: 349/349 class declarations and 2422/2781 methods have readable names; 277 constructors follow their owning class. 0 classes and 359 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
+Coverage: 349/349 class declarations and 2495/2781 methods have readable names; 277 constructors follow their owning class. 0 classes and 286 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
 
 ## Entry points
 
@@ -47,6 +47,10 @@ Every PointCloudEffect method has a reviewed name. Position/velocity arrays use 
 `VorbisSample` separates shared setup/bitstream tables from per-sample packets, overlap and resumable PCM output. VorbisCodebook, VorbisFloor, VorbisResidue and VorbisMapping expose the compressed-audio stages. SynthInstrument and AudioFilter synthesize envelope-controlled oscillators; SoundEffect mixes up to ten delayed instruments. SoundCache separates completed PCM from pending Vorbis decoders. PcmSampleStream names every control and all sixteen specialized mixing kernels by direction, channel count, interpolation and gain ramp. AudioOutput names scheduling, device service and shutdown; ReverbPcmStream separates wet/dry/input gains, feedback, damping and stereo width.
 
 `ResourceArchive` consumes ArchiveProvider; CachedArchiveProvider combines Js5Transport with SectorCacheStore, BufferedRandomAccessFile and DiskCacheWorker. ArchiveIndex holds reference metadata; ArchiveRequest has separate network/disk implementations. SystemTaskService owns operating-system work represented by SystemTask. CipherPacketBuffer/IsaacRandom distinguish opcode encryption from ordinary PacketBuffer byte encodings; WhirlpoolHasher and Bzip2Decoder/Bzip2State identify archive digest and decompression work.
+
+Every BoundedRandomAccessFile, BufferedRandomAccessFile, SectorCacheStore, DiskCacheWorker, DiskCacheRequest, CacheFileLocator, CachedArchiveProvider and SystemTaskService method has a reviewed name. Buffered I/O separates logical position/length, backing-file position/length and read/write ranges. Immediate disk reads can consume a queued write without copying; queued operations retain their data and completion ownership. Sector reads/writes preserve the original short/long group-ID headers, chain reuse, EOF and failure paths. Archive polling separates urgent, cache-verification and prefetch modes, integrity retries, scan queues and timed cleanup. SystemTask retains dispatch arguments, result, volatile status and next link; its worker exposes sockets, threads, reflection, display and preferences operations without changing native or platform gates.
+
+Every RasterBuffer, BufferedImageRasterBuffer and ImageProducerRasterBuffer method has a reviewed name. The shared contract initializes, binds and presents one pixel array; the producer backend pushes pixels to its consumer before drawing. Static helpers remain on their original owners: Whirlpool digests, base-37 names, URL path parameters, session-cookie expiry/reload and achievement-response acknowledgements are separate operations. The original URL precedence, key-code assignments, guards and protocol bytes remain.
 
 `ArchivePreloader` polls ArchiveLoadTask records and retains the original progress ceiling. Js5ArchiveManager validates the master index and creates/services providers. GzipDecoder owns the raw inflater and preserves header/footer handling and reset paths. SpriteDecodeSupport, SpriteFactorySupport and SimulatorAssetSupport distinguish sheet lifetime, sprite construction and simulator assets. ArraySupport names the original fill/clear/overlap-safe copy loops.
 

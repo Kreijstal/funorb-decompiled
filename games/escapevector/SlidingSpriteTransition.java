@@ -111,11 +111,11 @@ final class SlidingSpriteTransition {
           }
           for (int var2 = 0; var1.operationCount > var2; var2++) {
             if (var4.fieldTasks[var2] != null &&
-              0 == var4.fieldTasks[var2].field_f) {
+              0 == var4.fieldTasks[var2].status) {
               return false;
             }
             if (null != var4.methodTasks[var2] &&
-              var4.methodTasks[var2].field_f == 0) {
+              var4.methodTasks[var2].status == 0) {
               return false;
             }
           }

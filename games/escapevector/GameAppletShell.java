@@ -50,9 +50,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               SystemTaskService dupTemp$1 = new SystemTaskService(param5, param6, param1, true);
               NetworkGameClient.field_r = dupTemp$1;
               SpriteCheckboxPainter.field_a = dupTemp$1;
-              SystemTask var8 = NetworkGameClient.field_r.a(true, param2, (Runnable) (this));
+              SystemTask var8 = NetworkGameClient.field_r.startThread(true, param2, (Runnable) (this));
               while (true) {
-                if (var8.field_f == 0) {
+                if (var8.status == 0) {
                   AchievementTracker.sleepMillis((byte) 100, 10L);
                   if (var9 == 0) {
                     continue;
@@ -352,11 +352,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (SystemTaskService.field_s != null) {
-                var1 = SystemTaskService.field_s.toLowerCase();
+              if (SystemTaskService.javaVendor != null) {
+                var1 = SystemTaskService.javaVendor.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   -1 != ((String) (var1)).indexOf("apple")) {
-                  String var2 = SystemTaskService.field_v;
+                  String var2 = SystemTaskService.javaVersion;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -398,8 +398,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3 && decompiledFrameCompleted0 &&
-                (decompiledFrameRemainder2 = (null != SystemTaskService.field_v))) {
-                stackIn_66_0 = SystemTaskService.field_v.startsWith("1.");
+                (decompiledFrameRemainder2 = (null != SystemTaskService.javaVersion))) {
+                stackIn_66_0 = SystemTaskService.javaVersion.startsWith("1.");
               }
               if (decompiledFrameRemainder3 &&
                 decompiledFrameRemainder2 &&
@@ -408,8 +408,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 int var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (SystemTaskService.field_v.length() > var1_int) {
-                    var3 = SystemTaskService.field_v.charAt(var1_int);
+                  if (SystemTaskService.javaVersion.length() > var1_int) {
+                    var3 = SystemTaskService.javaVersion.charAt(var1_int);
                     stackIn_79_0 = ~var3;
                     stackIn_79_1 = -49;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -436,7 +436,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (ModalPanel.field_P != null) {
                   var1 = ModalPanel.field_P;
                 }
-                java.lang.reflect.Method var2_ref = SystemTaskService.field_r;
+                java.lang.reflect.Method var2_ref = SystemTaskService.setFocusCycleRootMethod;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -595,7 +595,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     final static void b(int param0) {
         try {
-          IntValueNode.a("", (String) null, 63);
+          IntValueNode.showLoginForm("", (String) null, 63);
           if (param0 >= -12) {
             GameAppletShell.releaseStatics((byte) 116);
           }
@@ -845,7 +845,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           if (NetworkGameClient.field_r != null) {
             try {
-              NetworkGameClient.field_r.b(0);
+              NetworkGameClient.field_r.shutdown(0);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3_ref2 = (Exception) (Object) decompiledCaughtException;

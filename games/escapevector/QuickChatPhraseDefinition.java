@@ -141,7 +141,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           String var3 = applet.getParameter("username");
           if (var3 != null) {
             CharSequence var4 = (CharSequence) ((Object) var3);
-            if (RasterBuffer.a((byte) 91, var4) != 0L) {
+            if (RasterBuffer.encodeBase37Name((byte) 91, var4) != 0L) {
               return;
             }
           }

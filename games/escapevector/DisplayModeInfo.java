@@ -156,7 +156,7 @@ final class DisplayModeInfo {
         try {
           if (HighscorePlayerRecord.field_g.isComplete(0) &&
             !param0.equals(HighscorePlayerRecord.field_g.email(-100))) {
-            HighscorePlayerRecord.field_g = RasterBuffer.a((byte) 83, param0);
+            HighscorePlayerRecord.field_g = RasterBuffer.createEmailAvailabilityRequest((byte) 83, param0);
           }
           if (param1) {
             EmailAvailabilityRequest stackIn_8_0 = HighscorePlayerRecord.field_g;

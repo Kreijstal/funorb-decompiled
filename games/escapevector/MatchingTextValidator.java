@@ -152,7 +152,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         LoginHandshakeSupport.field_b.bindAsFramebuffer();
         SoftwareRasterizer.clearFramebuffer();
         ByteStorage.gameFont.drawCentered(param1, 160, 22, param2, -1);
-        AlphaContainer.field_D.a(122);
+        AlphaContainer.field_D.bindRaster(122);
         MeshProjectionSupport.markSpriteEdges(LoginHandshakeSupport.field_b, true, 1);
         if (param3 > -109) {
           return;

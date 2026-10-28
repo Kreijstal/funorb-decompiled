@@ -4,200 +4,200 @@
 import java.io.*;
 
 final class BufferedRandomAccessFile {
-    private long field_f;
-    private long field_d;
+    private long readStart;
+    private long position;
     static String field_c;
-    private long field_i;
-    private long field_k;
-    private long field_a;
-    private byte[] field_h;
-    private long field_e;
-    private byte[] field_g;
-    private int field_l;
-    private int field_j;
-    private BoundedRandomAccessFile field_b;
+    private long physicalLength;
+    private long filePosition;
+    private long writeStart;
+    private byte[] writeBuffer;
+    private long length;
+    private byte[] readBuffer;
+    private int writeLength;
+    private int readLength;
+    private BoundedRandomAccessFile file;
 
-    final void a(boolean param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(boolean guard, int sourceOffset, byte[] source, int length) throws IOException {
         String stackIn_55_2 = null;
         Throwable decompiledCaughtException = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
           try {
-            if (this.field_e < (this.field_d + (long)param3)) {
-              this.field_e = (long)param3 + this.field_d;
+            if (this.length < (this.position + (long)length)) {
+              this.length = (long)length + this.position;
             }
-            if (this.field_a != -1L) {
-              if (!(this.field_a <= this.field_d)) {
-                this.b(118);
-              } else if (((long)this.field_l + this.field_a) < this.field_d) {
-                this.b(118);
+            if (this.writeStart != -1L) {
+              if (!(this.writeStart <= this.position)) {
+                this.flush(118);
+              } else if (((long)this.writeLength + this.writeStart) < this.position) {
+                this.flush(118);
               }
             }
-            if (this.field_a != -1L &&
-              this.field_d + (long)param3 > this.field_a + (long)this.field_h.length) {
-              int var5_int = (int)(this.field_a - this.field_d + (long)this.field_h.length);
-              ArraySupport.copy(param2, param1, this.field_h, (int)(this.field_d - this.field_a), var5_int);
-              param1 = param1 + var5_int;
-              this.field_d = this.field_d + (long)var5_int;
-              param3 = param3 - var5_int;
-              this.field_l = this.field_h.length;
-              this.b(115);
+            if (this.writeStart != -1L &&
+              this.position + (long)length > this.writeStart + (long)this.writeBuffer.length) {
+              int var5_int = (int)(this.writeStart - this.position + (long)this.writeBuffer.length);
+              ArraySupport.copy(source, sourceOffset, this.writeBuffer, (int)(this.position - this.writeStart), var5_int);
+              sourceOffset = sourceOffset + var5_int;
+              this.position = this.position + (long)var5_int;
+              length = length - var5_int;
+              this.writeLength = this.writeBuffer.length;
+              this.flush(115);
             }
-            if (this.field_h.length < param3) {
-              if (~this.field_k != ~this.field_d) {
-                this.field_b.a(this.field_d, 1);
-                this.field_k = this.field_d;
+            if (this.writeBuffer.length < length) {
+              if (~this.filePosition != ~this.position) {
+                this.file.seek(this.position, 1);
+                this.filePosition = this.position;
               }
-              this.field_b.a(param2, param3, param1, -15814);
-              this.field_k = this.field_k + (long)param3;
-              if (this.field_i < this.field_k) {
-                this.field_i = this.field_k;
+              this.file.write(source, length, sourceOffset, -15814);
+              this.filePosition = this.filePosition + (long)length;
+              if (this.physicalLength < this.filePosition) {
+                this.physicalLength = this.filePosition;
               }
               long var5_long = -1L;
-              if (this.field_f <= this.field_d &&
-                this.field_f + (long)this.field_j > this.field_d) {
-                var5_long = this.field_d;
-              } else if (this.field_f >= this.field_d &&
-                this.field_f < ((long)param3 + this.field_d)) {
-                var5_long = this.field_f;
+              if (this.readStart <= this.position &&
+                this.readStart + (long)this.readLength > this.position) {
+                var5_long = this.position;
+              } else if (this.readStart >= this.position &&
+                this.readStart < ((long)length + this.position)) {
+                var5_long = this.readStart;
               }
               long var7 = -1L;
-              if ((this.field_d + (long)param3) > this.field_f &&
-                ((long)this.field_j + this.field_f) >= (this.field_d + (long)param3)) {
-                var7 = (long)param3 + this.field_d;
-              } else if ((this.field_f + (long)this.field_j) > this.field_d &&
-                ((long)this.field_j + this.field_f) <= ((long)param3 + this.field_d)) {
-                var7 = this.field_f + (long)this.field_j;
+              if ((this.position + (long)length) > this.readStart &&
+                ((long)this.readLength + this.readStart) >= (this.position + (long)length)) {
+                var7 = (long)length + this.position;
+              } else if ((this.readStart + (long)this.readLength) > this.position &&
+                ((long)this.readLength + this.readStart) <= ((long)length + this.position)) {
+                var7 = this.readStart + (long)this.readLength;
               }
               if (var5_long > -1L &&
                 var5_long < var7) {
                 int var9 = (int)(var7 - var5_long);
-                ArraySupport.copy(param2, (int)(var5_long + (long)param1 - this.field_d), this.field_g, (int)(var5_long - this.field_f), var9);
+                ArraySupport.copy(source, (int)(var5_long + (long)sourceOffset - this.position), this.readBuffer, (int)(var5_long - this.readStart), var9);
               }
-              this.field_d = this.field_d + (long)param3;
+              this.position = this.position + (long)length;
               return;
             }
-            if (param3 > 0) {
-              if (this.field_a == -1L) {
-                this.field_a = this.field_d;
+            if (length > 0) {
+              if (this.writeStart == -1L) {
+                this.writeStart = this.position;
               }
-              ArraySupport.copy(param2, param1, this.field_h, (int)(this.field_d - this.field_a), param3);
-              this.field_d = this.field_d + (long)param3;
-              if (this.field_d - this.field_a > (long)this.field_l) {
-                this.field_l = (int)(this.field_d - this.field_a);
+              ArraySupport.copy(source, sourceOffset, this.writeBuffer, (int)(this.position - this.writeStart), length);
+              this.position = this.position + (long)length;
+              if (this.position - this.writeStart > (long)this.writeLength) {
+                this.writeLength = (int)(this.position - this.writeStart);
               }
               return;
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             IOException var5 = (IOException) (Object) decompiledCaughtException;
-            this.field_k = -1L;
+            this.filePosition = -1L;
             throw var5;
           }
-          if (!param0) {
-            this.field_g = (byte[]) null;
+          if (!guard) {
+            this.readBuffer = (byte[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
           RuntimeException stackIn_54_0 = var5_ref;
-          StringBuilder stackIn_54_1 = new StringBuilder().append("rg.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_54_1 = new StringBuilder().append("rg.B(").append(guard).append(',').append(sourceOffset).append(',');
+          if (source == null) {
             stackIn_55_2 = "null";
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(length).append(')').toString());
         }
     }
 
-    final void a(byte param0) throws IOException {
-        if (param0 != -111) {
+    final void close(byte guard) throws IOException {
+        if (guard != -111) {
           field_c = (String) null;
         }
-        this.b(125);
-        this.field_b.a(0);
+        this.flush(125);
+        this.file.close(0);
     }
 
-    private final void b(int param0) throws IOException {
+    private final void flush(int guard) throws IOException {
         int var7 = EscapeVector.obfuscationControl;
-        if (this.field_a != -1L) {
-          if (this.field_a != this.field_k) {
-            this.field_b.a(this.field_a, 1);
-            this.field_k = this.field_a;
+        if (this.writeStart != -1L) {
+          if (this.writeStart != this.filePosition) {
+            this.file.seek(this.writeStart, 1);
+            this.filePosition = this.writeStart;
           }
-          this.field_b.a(this.field_h, this.field_l, 0, -15814);
-          this.field_k = this.field_k + (long)this.field_l;
-          if (this.field_i < this.field_k) {
-            this.field_i = this.field_k;
+          this.file.write(this.writeBuffer, this.writeLength, 0, -15814);
+          this.filePosition = this.filePosition + (long)this.writeLength;
+          if (this.physicalLength < this.filePosition) {
+            this.physicalLength = this.filePosition;
           }
           long var2_long = -1L;
-          if (this.field_a >= this.field_f &&
-            this.field_f + (long)this.field_j > this.field_a) {
-            var2_long = this.field_a;
-          } else if (this.field_f >= this.field_a &&
-            this.field_f < (this.field_a + (long)this.field_l)) {
-            var2_long = this.field_f;
+          if (this.writeStart >= this.readStart &&
+            this.readStart + (long)this.readLength > this.writeStart) {
+            var2_long = this.writeStart;
+          } else if (this.readStart >= this.writeStart &&
+            this.readStart < (this.writeStart + (long)this.writeLength)) {
+            var2_long = this.readStart;
           }
           long var4 = -1L;
-          if (((long)this.field_l + this.field_a) > this.field_f &&
-            (long)this.field_j + this.field_f >= this.field_a + (long)this.field_l) {
-            var4 = (long)this.field_l + this.field_a;
-          } else if (this.field_a < (this.field_f + (long)this.field_j) &&
-            (this.field_f + (long)this.field_j) <= (this.field_a + (long)this.field_l)) {
-            var4 = this.field_f + (long)this.field_j;
+          if (((long)this.writeLength + this.writeStart) > this.readStart &&
+            (long)this.readLength + this.readStart >= this.writeStart + (long)this.writeLength) {
+            var4 = (long)this.writeLength + this.writeStart;
+          } else if (this.writeStart < (this.readStart + (long)this.readLength) &&
+            (this.readStart + (long)this.readLength) <= (this.writeStart + (long)this.writeLength)) {
+            var4 = this.readStart + (long)this.readLength;
           }
           if (var2_long > -1L &&
             var2_long < var4) {
             int var6 = (int)(-var2_long + var4);
-            ArraySupport.copy(this.field_h, (int)(-this.field_a + var2_long), this.field_g, (int)(-this.field_f + var2_long), var6);
+            ArraySupport.copy(this.writeBuffer, (int)(-this.writeStart + var2_long), this.readBuffer, (int)(-this.readStart + var2_long), var6);
           }
-          this.field_l = 0;
-          this.field_a = -1L;
+          this.writeLength = 0;
+          this.writeStart = -1L;
         }
-        int var2 = 81 / ((56 - param0) / 50);
+        int var2 = 81 / ((56 - guard) / 50);
     }
 
-    final void a(int param0, long param1) throws IOException {
-        if (param0 != 0) {
+    final void seek(int guard, long position) throws IOException {
+        if (guard != 0) {
           return;
         }
-        if (param1 < 0L) {
+        if (position < 0L) {
           throw new IOException();
         }
-        this.field_d = param1;
+        this.position = position;
     }
 
-    final long a(int param0) {
-        if (param0 != 16034) {
+    final long length(int guard) {
+        if (guard != 16034) {
           BufferedRandomAccessFile.releaseStatics((byte) -75);
         }
-        return this.field_e;
+        return this.length;
     }
 
-    private final void a(boolean param0) throws IOException {
+    private final void fillReadBuffer(boolean guard) throws IOException {
         int var4 = EscapeVector.obfuscationControl;
-        this.field_j = 0;
-        if (this.field_d != this.field_k) {
-          this.field_b.a(this.field_d, 1);
-          this.field_k = this.field_d;
+        this.readLength = 0;
+        if (this.position != this.filePosition) {
+          this.file.seek(this.position, 1);
+          this.filePosition = this.position;
         }
-        this.field_f = this.field_d;
-        if (!param0) {
+        this.readStart = this.position;
+        if (!guard) {
           return;
         }
-        while (this.field_g.length > this.field_j) {
-          int var2 = this.field_g.length - this.field_j;
+        while (this.readBuffer.length > this.readLength) {
+          int var2 = this.readBuffer.length - this.readLength;
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          int var3 = this.field_b.a(var2, (byte) 127, this.field_g, this.field_j);
+          int var3 = this.file.read(var2, (byte) 127, this.readBuffer, this.readLength);
           if (var3 == -1) {
             break;
           }
-          this.field_j = this.field_j + var3;
-          this.field_k = this.field_k + (long)var3;
+          this.readLength = this.readLength + var3;
+          this.filePosition = this.filePosition + (long)var3;
         }
     }
 
@@ -206,121 +206,121 @@ final class BufferedRandomAccessFile {
         int var1 = -78 / ((-11 - guard) / 41);
     }
 
-    final void a(int param0, int param1, byte param2, byte[] param3) throws IOException {
+    final void readFully(int destinationOffset, int length, byte guard, byte[] destination) throws IOException {
         String stackIn_61_2 = null;
         Throwable decompiledCaughtException = null;
         int var14 = EscapeVector.obfuscationControl;
         try {
           try {
-            if (param2 != 101) {
+            if (guard != 101) {
               return;
             }
-            if (param0 + param1 > param3.length) {
-              throw new ArrayIndexOutOfBoundsException(param1 + (param0 - param3.length));
+            if (destinationOffset + length > destination.length) {
+              throw new ArrayIndexOutOfBoundsException(length + (destinationOffset - destination.length));
             }
-            if (this.field_a != -1L &&
-              this.field_d >= this.field_a &&
-              (long)this.field_l + this.field_a >= (long)param1 + this.field_d) {
-              ArraySupport.copy(this.field_h, (int)(-this.field_a + this.field_d), param3, param0, param1);
-              this.field_d = this.field_d + (long)param1;
+            if (this.writeStart != -1L &&
+              this.position >= this.writeStart &&
+              (long)this.writeLength + this.writeStart >= (long)length + this.position) {
+              ArraySupport.copy(this.writeBuffer, (int)(-this.writeStart + this.position), destination, destinationOffset, length);
+              this.position = this.position + (long)length;
               return;
             }
-            long var5_long = this.field_d;
-            int var7 = param0;
-            int var8 = param1;
-            if (this.field_f <= this.field_d &&
-              this.field_d < this.field_f + (long)this.field_j) {
-              int var9_int = (int)(-this.field_d + this.field_f + (long)this.field_j);
-              if (param1 < var9_int) {
-                var9_int = param1;
+            long var5_long = this.position;
+            int var7 = destinationOffset;
+            int var8 = length;
+            if (this.readStart <= this.position &&
+              this.position < this.readStart + (long)this.readLength) {
+              int var9_int = (int)(-this.position + this.readStart + (long)this.readLength);
+              if (length < var9_int) {
+                var9_int = length;
               }
-              ArraySupport.copy(this.field_g, (int)(this.field_d - this.field_f), param3, param0, var9_int);
-              param0 = param0 + var9_int;
-              param1 = param1 - var9_int;
-              this.field_d = this.field_d + (long)var9_int;
+              ArraySupport.copy(this.readBuffer, (int)(this.position - this.readStart), destination, destinationOffset, var9_int);
+              destinationOffset = destinationOffset + var9_int;
+              length = length - var9_int;
+              this.position = this.position + (long)var9_int;
             }
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
-            if (param1 > this.field_g.length) {
-              this.field_b.a(this.field_d, 1);
-              this.field_k = this.field_d;
-              while (param1 > 0) {
-                int var9_intLifetime1 = this.field_b.a(param1, (byte) 125, param3, param0);
+            if (length > this.readBuffer.length) {
+              this.file.seek(this.position, 1);
+              this.filePosition = this.position;
+              while (length > 0) {
+                int var9_intLifetime1 = this.file.read(length, (byte) 125, destination, destinationOffset);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
-                param0 = param0 + var9_intLifetime1;
-                this.field_d = this.field_d + (long)var9_intLifetime1;
-                param1 = param1 - var9_intLifetime1;
-                this.field_k = this.field_k + (long)var9_intLifetime1;
+                destinationOffset = destinationOffset + var9_intLifetime1;
+                this.position = this.position + (long)var9_intLifetime1;
+                length = length - var9_intLifetime1;
+                this.filePosition = this.filePosition + (long)var9_intLifetime1;
               }
               decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
             }
             if (decompiledFrameRemainder0 &&
               decompiledFrameCompleted0 &&
-              param1 > 0) {
-              this.a(true);
-              int var9_intLifetime1Lifetime1 = param1;
-              if (var9_intLifetime1Lifetime1 > this.field_j) {
-                var9_intLifetime1Lifetime1 = this.field_j;
+              length > 0) {
+              this.fillReadBuffer(true);
+              int var9_intLifetime1Lifetime1 = length;
+              if (var9_intLifetime1Lifetime1 > this.readLength) {
+                var9_intLifetime1Lifetime1 = this.readLength;
               }
-              ArraySupport.copy(this.field_g, 0, param3, param0, var9_intLifetime1Lifetime1);
-              this.field_d = this.field_d + (long)var9_intLifetime1Lifetime1;
-              param1 = param1 - var9_intLifetime1Lifetime1;
-              param0 = param0 + var9_intLifetime1Lifetime1;
+              ArraySupport.copy(this.readBuffer, 0, destination, destinationOffset, var9_intLifetime1Lifetime1);
+              this.position = this.position + (long)var9_intLifetime1Lifetime1;
+              length = length - var9_intLifetime1Lifetime1;
+              destinationOffset = destinationOffset + var9_intLifetime1Lifetime1;
             }
-            if (this.field_a != -1L) {
-              if (this.field_a > this.field_d) {
+            if (this.writeStart != -1L) {
+              if (this.writeStart > this.position) {
                 int stackIn_29_0 = 0;
-                int stackIn_29_1 = param1;
+                int stackIn_29_1 = length;
                 if (stackIn_29_0 < stackIn_29_1) {
-                  int var9_intLifetime2 = param0 + (int)(this.field_a - this.field_d);
-                  if (var9_intLifetime2 > param0 + param1) {
-                    var9_intLifetime2 = param1 + param0;
+                  int var9_intLifetime2 = destinationOffset + (int)(this.writeStart - this.position);
+                  if (var9_intLifetime2 > destinationOffset + length) {
+                    var9_intLifetime2 = length + destinationOffset;
                   }
-                  while (param0 < var9_intLifetime2) {
-                    int incrementValue$0 = param0;
-                    param0++;
-                    param3[incrementValue$0] = (byte) 0;
-                    param1--;
-                    this.field_d = this.field_d + 1L;
+                  while (destinationOffset < var9_intLifetime2) {
+                    int incrementValue$0 = destinationOffset;
+                    destinationOffset++;
+                    destination[incrementValue$0] = (byte) 0;
+                    length--;
+                    this.position = this.position + 1L;
                   }
                 }
               }
               long var9 = -1L;
               long var11 = -1L;
-              if (var5_long <= this.field_a &&
-                this.field_a < var5_long + (long)var8) {
-                var9 = this.field_a;
-              } else if (this.field_a <= var5_long &&
-                var5_long < ((long)this.field_l + this.field_a)) {
+              if (var5_long <= this.writeStart &&
+                this.writeStart < var5_long + (long)var8) {
+                var9 = this.writeStart;
+              } else if (this.writeStart <= var5_long &&
+                var5_long < ((long)this.writeLength + this.writeStart)) {
                 var9 = var5_long;
               }
-              if (var5_long < ((long)this.field_l + this.field_a) &&
-                this.field_a + (long)this.field_l <= var5_long + (long)var8) {
-                var11 = (long)this.field_l + this.field_a;
-              } else if (var5_long + (long)var8 > this.field_a &&
-                (this.field_a + (long)this.field_l) >= ((long)var8 + var5_long)) {
+              if (var5_long < ((long)this.writeLength + this.writeStart) &&
+                this.writeStart + (long)this.writeLength <= var5_long + (long)var8) {
+                var11 = (long)this.writeLength + this.writeStart;
+              } else if (var5_long + (long)var8 > this.writeStart &&
+                (this.writeStart + (long)this.writeLength) >= ((long)var8 + var5_long)) {
                 var11 = var5_long + (long)var8;
               }
               if (var9 > -1L &&
                 var11 > var9) {
                 int var13 = (int)(var11 - var9);
-                ArraySupport.copy(this.field_h, (int)(-this.field_a + var9), param3, var7 + (int)(var9 - var5_long), var13);
-                if (this.field_d < var11) {
-                  param1 = (int)((long)param1 - (var11 - this.field_d));
-                  this.field_d = var11;
+                ArraySupport.copy(this.writeBuffer, (int)(-this.writeStart + var9), destination, var7 + (int)(var9 - var5_long), var13);
+                if (this.position < var11) {
+                  length = (int)((long)length - (var11 - this.position));
+                  this.position = var11;
                 }
               }
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             IOException var5 = (IOException) (Object) decompiledCaughtException;
-            this.field_k = -1L;
+            this.filePosition = -1L;
             throw var5;
           }
-          if (param1 > 0) {
+          if (length > 0) {
             throw new EOFException();
           }
           return;
@@ -328,8 +328,8 @@ final class BufferedRandomAccessFile {
           decompiledCaughtException = decompiledCaughtParameter1;
           RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
           RuntimeException stackIn_60_0 = var5_ref;
-          StringBuilder stackIn_60_1 = new StringBuilder().append("rg.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_60_1 = new StringBuilder().append("rg.J(").append(destinationOffset).append(',').append(length).append(',').append(guard).append(',');
+          if (destination == null) {
             stackIn_61_2 = "null";
           } else {
             stackIn_61_2 = "{...}";
@@ -338,54 +338,54 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final static short[] a(CipherPacketBuffer param0, int param1, short[] param2, int param3) {
+    final static short[] readPackedShortArray(CipherPacketBuffer input, int countBits, short[] retained, int complementedNullCount) {
         int var7 = 0;
         String stackIn_20_2 = null;
         String stackIn_23_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          int var4_int = param0.readBits(param1, 8);
-          if (~var4_int == param3) {
+          int var4_int = input.readBits(countBits, 8);
+          if (~var4_int == complementedNullCount) {
             return null;
           }
-          if (param2 == null ||
-            var4_int != param2.length) {
-            param2 = new short[var4_int];
+          if (retained == null ||
+            var4_int != retained.length) {
+            retained = new short[var4_int];
           }
-          int var5 = param0.readBits(4, 8);
-          int var6 = (short)param0.readBits(16, 8);
+          int var5 = input.readBits(4, 8);
+          int var6 = (short)input.readBits(16, 8);
           if (0 < var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param2[var7] = (short)(var6 + param0.readBits(var5, 8));
+              retained[var7] = (short)(var6 + input.readBits(var5, 8));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param2[var7] = (short)var6;
+              retained[var7] = (short)var6;
             }
           }
-          short[] stackIn_16_0 = (short[]) (param2);
+          short[] stackIn_16_0 = (short[]) (retained);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_19_0 = var4;
           StringBuilder stackIn_19_1 = new StringBuilder().append("rg.H(");
-          if (param0 == null) {
+          if (input == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          StringBuilder stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(countBits).append(',');
+          if (retained == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(complementedNullCount).append(')').toString());
         }
     }
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean pollIncomingPacket(int[] packetLengths, int guard) {
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         String stackIn_43_2 = null;
@@ -398,7 +398,7 @@ final class BufferedRandomAccessFile {
             return false;
           }
           var2_long = MonotonicClockSupport.monotonicMillis(128);
-          if (param1 < 101) {
+          if (guard < 101) {
             return true;
           }
           if (LoginCredentials.field_a != 0 &&
@@ -424,12 +424,12 @@ final class BufferedRandomAccessFile {
           var2 = decompiledCaughtException;
           stackIn_42_0 = var2;
           stackIn_42_1 = new StringBuilder().append("rg.A(");
-          if (param0 == null) {
+          if (packetLengths == null) {
             stackIn_43_2 = "null";
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(guard).append(')').toString());
         }
         int stackIn_22_0 = GameAppletShell.field_a;
         try {
@@ -441,7 +441,7 @@ final class BufferedRandomAccessFile {
               }
               GameAppletShell.field_a = QuickChatDynamicCommand.incomingPackets.readCipheredOpcode(8);
               QuickChatDynamicCommand.incomingPackets.position = 0;
-              EmailSyntaxValidator.field_r = param0[GameAppletShell.field_a];
+              EmailSyntaxValidator.field_r = packetLengths[GameAppletShell.field_a];
             }
             if (!ArchiveKeyRequest.hasCompletePacket(10550)) {
               return false;
@@ -474,52 +474,52 @@ final class BufferedRandomAccessFile {
           var2 = decompiledCaughtException;
           stackIn_42_0 = var2;
           stackIn_42_1 = new StringBuilder().append("rg.A(");
-          if (param0 == null) {
+          if (packetLengths == null) {
             stackIn_43_2 = "null";
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void a(byte param0, byte[] param1) throws IOException {
+    final void readFully(byte guard, byte[] destination) throws IOException {
         try {
-          if (param0 < 31) {
-            this.a(-37);
+          if (guard < 31) {
+            this.length(-37);
           }
-          this.a(0, param1.length, (byte) 101, param1);
+          this.readFully(0, destination.length, (byte) 101, destination);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "rg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "rg.G(" + guard + ',' + (destination != null ? "{...}" : "null") + ')');
         }
     }
 
-    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
-        this.field_f = -1L;
-        this.field_a = -1L;
-        this.field_l = 0;
+    BufferedRandomAccessFile(BoundedRandomAccessFile file, int readCapacity, int writeCapacity) throws IOException {
+        this.readStart = -1L;
+        this.writeStart = -1L;
+        this.writeLength = 0;
         try {
-          this.field_b = param0;
-          long dupTemp$0 = param0.c(-26510);
-          this.field_i = dupTemp$0;
-          this.field_e = dupTemp$0;
-          this.field_d = 0L;
-          this.field_g = new byte[param1];
-          this.field_h = new byte[param2];
+          this.file = file;
+          long dupTemp$0 = file.length(-26510);
+          this.physicalLength = dupTemp$0;
+          this.length = dupTemp$0;
+          this.position = 0L;
+          this.readBuffer = new byte[readCapacity];
+          this.writeBuffer = new byte[writeCapacity];
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "rg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "rg.<init>(" + (file != null ? "{...}" : "null") + ',' + readCapacity + ',' + writeCapacity + ')');
         }
     }
 
-    final static NameAvailabilityResult a(String[] args, byte param1) {
+    final static NameAvailabilityResult nameAvailabilitySuggestions(String[] suggestions, byte guard) {
         String stackIn_8_2 = null;
         try {
-          if (param1 > -53) {
+          if (guard > -53) {
             NameAvailabilityResult stackIn_2_0 = (NameAvailabilityResult) null;
             return stackIn_2_0;
           }
           NameAvailabilityResult var2 = new NameAvailabilityResult(false);
-          var2.field_c = args;
+          var2.field_c = suggestions;
           NameAvailabilityResult stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -527,12 +527,12 @@ final class BufferedRandomAccessFile {
           RuntimeException var2_ref = decompiledCaughtException;
           RuntimeException stackIn_7_0 = var2_ref;
           StringBuilder stackIn_7_1 = new StringBuilder().append("rg.F(");
-          if (args == null) {
+          if (suggestions == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(')').toString());
         }
     }
 

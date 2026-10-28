@@ -165,20 +165,20 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
           }
           try {
             if (LegacyMenuFontSupport.field_b == 0) {
-              ArchiveLoadTask.field_g = IntPoint.field_d.a(AgeValidator.field_n, 4, SpriteArchiveSupport.field_c);
+              ArchiveLoadTask.field_g = IntPoint.field_d.openSocket(AgeValidator.field_n, 4, SpriteArchiveSupport.field_c);
               LegacyMenuFontSupport.field_b = LegacyMenuFontSupport.field_b + 1;
             }
             if (LegacyMenuFontSupport.field_b == 1) {
-              if (2 == ArchiveLoadTask.field_g.field_f) {
+              if (2 == ArchiveLoadTask.field_g.status) {
                 int stackIn_15_0 = AnimatedPanelFrame.handleAccountConnectionFailure((byte) -78, -1);
                 return stackIn_15_0;
               }
-              if (1 == ArchiveLoadTask.field_g.field_f) {
+              if (1 == ArchiveLoadTask.field_g.status) {
                 LegacyMenuFontSupport.field_b = LegacyMenuFontSupport.field_b + 1;
               }
             }
             if (LegacyMenuFontSupport.field_b == 2) {
-              NameSuggestionsPanel.field_I = new BufferedSocket((java.net.Socket) (ArchiveLoadTask.field_g.field_b), IntPoint.field_d);
+              NameSuggestionsPanel.field_I = new BufferedSocket((java.net.Socket) (ArchiveLoadTask.field_g.result), IntPoint.field_d);
               PacketBuffer var2 = new PacketBuffer(13);
               MenuInputState.writeAccountHandshake(TrackerMusicDefinition.field_j, StatefulTextPainter.field_y, true, NameSuggestionsPanel.field_N, var2);
               var2.writeByte(15, -123);

@@ -12,32 +12,32 @@ final class BoundedRandomAccessFile {
     private long maximumLength;
     static GameplaySession activeSession;
 
-    final long c(int param0) throws IOException {
-        if (param0 != -26510) {
+    final long length(int guard) throws IOException {
+        if (guard != -26510) {
           activeSession = (GameplaySession) null;
           return this.file.length();
         }
         return this.file.length();
     }
 
-    final static void a(int param0, int param1, NineSliceFrame param2, int param3) {
+    final static void legacyFrameHook(int guard, int unusedFirstMetric, NineSliceFrame unusedFrame, int unusedSecondMetric) {
         try {
-          if (param0 != 25398) {
+          if (guard != 25398) {
             NineSliceFrame var5 = (NineSliceFrame) null;
-            BoundedRandomAccessFile.a(-36, 48, (NineSliceFrame) null, -113);
+            BoundedRandomAccessFile.legacyFrameHook(-36, 48, (NineSliceFrame) null, -113);
           }
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ma.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ma.G(" + guard + ',' + unusedFirstMetric + ',' + (unusedFrame != null ? "{...}" : "null") + ',' + unusedSecondMetric + ')');
         }
     }
 
-    final int a(int param0, byte param1, byte[] param2, int param3) throws IOException {
+    final int read(int length, byte guard, byte[] destination, int offset) throws IOException {
         String stackIn_10_2 = null;
         try {
-          if (param1 <= 124) {
+          if (guard <= 124) {
             BoundedRandomAccessFile.releaseStatics(103);
           }
-          int var5_int = this.file.read(param2, param3, param0);
+          int var5_int = this.file.read(destination, offset, length);
           if (var5_int > 0) {
             this.position = this.position + (long)var5_int;
           }
@@ -47,31 +47,31 @@ final class BoundedRandomAccessFile {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var5;
-          StringBuilder stackIn_9_1 = new StringBuilder().append("ma.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_9_1 = new StringBuilder().append("ma.E(").append(length).append(',').append(guard).append(',');
+          if (destination == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(offset).append(')').toString());
         }
     }
 
-    final void a(long param0, int param1) throws IOException {
-        if (param1 == 1) {
-          this.file.seek(param0);
-          this.position = param0;
+    final void seek(long position, int guard) throws IOException {
+        if (guard == 1) {
+          this.file.seek(position);
+          this.position = position;
           return;
         }
         this.position = -21L;
-        this.file.seek(param0);
-        this.position = param0;
+        this.file.seek(position);
+        this.position = position;
     }
 
-    final static PointCloudEffect a(int param0, boolean param1, int param2) {
-        PointCloudEffect var3 = new PointCloudEffect(param0);
-        var3.indexedRendering = param1 ? true : false;
-        if (param2 == 8) {
+    final static PointCloudEffect createPointCloud(int count, boolean indexedRendering, int guard) {
+        PointCloudEffect var3 = new PointCloudEffect(count);
+        var3.indexedRendering = indexedRendering ? true : false;
+        if (guard == 8) {
           return var3;
         }
         return (PointCloudEffect) null;
@@ -85,34 +85,34 @@ final class BoundedRandomAccessFile {
           return;
         }
         NineSliceFrame var2 = (NineSliceFrame) null;
-        BoundedRandomAccessFile.a(-114, -57, (NineSliceFrame) null, 13);
+        BoundedRandomAccessFile.legacyFrameHook(-114, -57, (NineSliceFrame) null, 13);
         field_b = null;
         activeSession = null;
         field_c = null;
     }
 
-    final static LoginMethod[] a(boolean param0) {
-        if (!param0) {
+    final static LoginMethod[] loginMethods(boolean guard) {
+        if (!guard) {
           return new LoginMethod[]{NameAvailabilityValidator.field_q, MenuEdgeSegment.field_n, PathPoint.field_g};
         }
         field_b = (ReverbPcmStream) null;
         return new LoginMethod[]{NameAvailabilityValidator.field_q, MenuEdgeSegment.field_n, PathPoint.field_g};
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void write(byte[] source, int length, int offset, int guard) throws IOException {
         try {
-          if (param3 != -15814) {
+          if (guard != -15814) {
             field_c = (int[]) null;
           }
-          if (this.maximumLength < this.position + (long)param1) {
+          if (this.maximumLength < this.position + (long)length) {
             this.file.seek(this.maximumLength);
             this.file.write(1);
             throw new EOFException();
           }
-          this.file.write(param0, param2, param1);
-          this.position = this.position + (long)param1;
+          this.file.write(source, offset, length);
+          this.position = this.position + (long)length;
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ma.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ma.A(" + (source != null ? "{...}" : "null") + ',' + length + ',' + offset + ',' + guard + ')');
         }
     }
 
@@ -130,8 +130,8 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final void a(int param0) throws IOException {
-        if (param0 != 0) {
+    final void close(int guard) throws IOException {
+        if (guard != 0) {
           return;
         }
         if (null != this.file) {
@@ -140,33 +140,33 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File path, String mode, long maximumLength) throws IOException {
         try {
-          if (param2 == -1L) {
-            param2 = 9223372036854775807L;
+          if (maximumLength == -1L) {
+            maximumLength = 9223372036854775807L;
           }
-          if (param2 < param0.length()) {
-            param0.delete();
+          if (maximumLength < path.length()) {
+            path.delete();
           }
-          this.file = new RandomAccessFile(param0, param1);
-          this.maximumLength = param2;
+          this.file = new RandomAccessFile(path, mode);
+          this.maximumLength = maximumLength;
           this.position = 0L;
           int var5_int = this.file.read();
           if (var5_int != -1 &&
-            !param1.equals("r")) {
+            !mode.equals("r")) {
             this.file.seek(0L);
             this.file.write(var5_int);
           }
           this.file.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ma.<init>(" + (path != null ? "{...}" : "null") + ',' + (mode != null ? "{...}" : "null") + ',' + maximumLength + ')');
         }
     }
 
     protected final void finalize() throws Throwable {
         if (null != this.file) {
           System.out.println("");
-          this.a(0);
+          this.close(0);
         }
     }
 

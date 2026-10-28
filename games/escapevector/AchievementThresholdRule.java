@@ -149,7 +149,7 @@ final class AchievementThresholdRule {
           SoftwareRasterizer.saveClip(var3);
           SpriteDecodeSupport.field_a.bindAsFramebuffer();
           sprite.drawMirrored(0, 0);
-          AlphaContainer.field_D.a(107);
+          AlphaContainer.field_D.bindRaster(107);
           SoftwareRasterizer.restoreClip(var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

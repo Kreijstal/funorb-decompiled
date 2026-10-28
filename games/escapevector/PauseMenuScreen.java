@@ -496,7 +496,7 @@ final class PauseMenuScreen {
         if (action == this.endGameAction) {
           ByteStorage.gameFont.drawCentered(ArchiveRequest.field_q, var6, 22, var5, -1);
         }
-        AlphaContainer.field_D.a(107);
+        AlphaContainer.field_D.bindRaster(107);
         MeshProjectionSupport.markSpriteEdges(LoginHandshakeSupport.field_b, true, 1);
         LoginHandshakeSupport.field_b.addOutline(5267536);
         LoginHandshakeSupport.field_b.drawTransparent((-LoginHandshakeSupport.field_b.fullWidth + 640) / 2, y);
