@@ -86,9 +86,9 @@ final class ff {
           return;
         }
         if (dj.field_c != null) {
-          dj.field_c.g(2048);
+          dj.field_c.fadeOut(2048);
         } else {
-          dj.field_c = PcmSampleStream.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
+          dj.field_c = PcmSampleStream.createAtRatePercentQ6(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
           ObjectSpriteSet.field_e.addSubstream(dj.field_c);
           sj.a(8192, (byte) 51);
           if (mj.field_d < 1000) {
@@ -103,7 +103,7 @@ final class ff {
           IntValueNode.field_j = true;
           return;
         }
-        dj.field_c = PcmSampleStream.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
+        dj.field_c = PcmSampleStream.createAtRatePercentQ6(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
         ObjectSpriteSet.field_e.addSubstream(dj.field_c);
         sj.a(8192, (byte) 51);
         if (mj.field_d < 1000) {

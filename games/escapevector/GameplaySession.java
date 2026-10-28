@@ -656,7 +656,7 @@ final class GameplaySession {
           pl.field_n.removeSubstream(this.field_f);
         }
         if (this.field_Eb != null) {
-          this.field_Eb.h(0);
+          this.field_Eb.setLoopCount(0);
         }
         pl.field_n.removeSubstream(this.field_Wb);
         pl.field_n.removeSubstream(this.field_wb);
@@ -1658,7 +1658,7 @@ final class GameplaySession {
             Sprite var4 = (Sprite) null;
             boolean discarded$0 = this.a((Sprite) null, -82, -79, -108, -58, 107, 91, -47);
           }
-          param1.f(0);
+          param1.setVolumeQ6(0);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oe.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -3977,8 +3977,8 @@ final class GameplaySession {
             int stackIn_82_0Lifetime1 = -1;
             int stackIn_82_1Lifetime1 = ~this.field_c;
             if (stackIn_82_0Lifetime1 == stackIn_82_1Lifetime1) {
-              PcmSampleStream var31 = PcmSampleStream.c(PcmResampler.field_g, 100, qm.field_c * 1024 / 64, 8192);
-              var31.e();
+              PcmSampleStream var31 = PcmSampleStream.createAtRatePercentQ6(PcmResampler.field_g, 100, qm.field_c * 1024 / 64, 8192);
+              var31.playBackwardFromEnd();
               pl.field_n.addSubstream(var31);
             }
             this.field_c = this.field_c + 1;
@@ -4090,7 +4090,7 @@ final class GameplaySession {
           if (ik.field_h[98] &&
             this.fuel > 0 &&
             0 == this.pickupAnimationTicks) {
-            this.field_jb.f(1024 * qm.field_c / 64);
+            this.field_jb.setVolumeQ6(1024 * qm.field_c / 64);
             this.field_kc = false;
             this.shipLanded = false;
             this.field_jc = false;
@@ -4124,10 +4124,10 @@ final class GameplaySession {
             }
             this.activeExhaustParticles = this.activeExhaustParticles + 64;
           } else {
-            this.field_jb.j(0);
+            this.field_jb.setVolume(0);
           }
         } else {
-          this.field_jb.j(0);
+          this.field_jb.setVolume(0);
         }
         var2 = 0;
         if (this.levelIndex < 0) {
@@ -4170,12 +4170,12 @@ final class GameplaySession {
           }
           this.shieldActive = true;
           this.shipLanded = false;
-          this.field_v.f(qm.field_c * 16384 / 64);
+          this.field_v.setVolumeQ6(qm.field_c * 16384 / 64);
           boolean decompiledFrameRemainder1 = false;
         }
         else {
           this.shieldActive = false;
-          this.field_v.f(0);
+          this.field_v.setVolumeQ6(0);
         }
         this.a(true);
         int var3Lifetime1 = 0;
@@ -4235,7 +4235,7 @@ final class GameplaySession {
         } else {
           stackIn_228_2 = (int)(var5_long / (long)var3Lifetime1);
         }
-        ((PcmSampleStream) (Object) stackIn_227_0).f(stackIn_227_1, stackIn_228_2);
+        ((PcmSampleStream) (Object) stackIn_227_0).setVolumeAndPanQ6(stackIn_227_1, stackIn_228_2);
         PcmSampleStream stackIn_230_0 = this.field_wb;
         int stackIn_230_1 = (int)Math.sqrt((double)var4 + 0.5);
         if (var4 != 0) {
@@ -4243,7 +4243,7 @@ final class GameplaySession {
         } else {
           stackIn_231_2 = 8192;
         }
-        ((PcmSampleStream) (Object) stackIn_230_0).f(stackIn_230_1, stackIn_231_2);
+        ((PcmSampleStream) (Object) stackIn_230_0).setVolumeAndPanQ6(stackIn_230_1, stackIn_231_2);
         int var3Lifetime2 = 0;
         long var4_long = 0L;
         if (this.field_oc < 50) {
@@ -4272,25 +4272,25 @@ final class GameplaySession {
           }
         }
         PcmSampleStream stackIn_246_0 = this.field_r;
-        int stackIn_246_1 = AudioOutput.field_q / 100;
+        int stackIn_246_1 = AudioOutput.sampleRate / 100;
         int stackIn_246_2 = (int)Math.sqrt(0.5 + (double)var3Lifetime2);
         if (var3Lifetime2 == 0) {
           stackIn_247_3 = 8192;
         } else {
           stackIn_247_3 = (int)(var4_long / (long)var3Lifetime2);
         }
-        ((PcmSampleStream) (Object) stackIn_246_0).a(stackIn_246_1, stackIn_246_2, stackIn_247_3);
+        ((PcmSampleStream) (Object) stackIn_246_0).rampVolumeAndPanQ6(stackIn_246_1, stackIn_246_2, stackIn_247_3);
         SeekerMine seekerMine = (SeekerMine) (this.seekerMines.first(false));
         while (seekerMine != null) {
           if (null == seekerMine.flightSound) {
             seekerMine.proximitySound = new SeekerPulseStream();
-            seekerMine.flightSound = PcmSampleStream.a(ci.field_a, 256, 0, 8192);
-            seekerMine.proximitySound.field_k = PcmSampleStream.a(qi.field_J, 256, 0, 8192);
-            seekerMine.proximitySound.field_q = PcmSampleStream.a(qi.field_J, 256, 0, 8192);
-            seekerMine.flightSound.h(-1);
-            seekerMine.proximitySound.field_k.h(-1);
-            seekerMine.proximitySound.field_q.h(-1);
-            seekerMine.flightSound.e((int)(Math.random() * (double)ci.field_a.samples.length));
+            seekerMine.flightSound = PcmSampleStream.createAtStepQ8(ci.field_a, 256, 0, 8192);
+            seekerMine.proximitySound.field_k = PcmSampleStream.createAtStepQ8(qi.field_J, 256, 0, 8192);
+            seekerMine.proximitySound.field_q = PcmSampleStream.createAtStepQ8(qi.field_J, 256, 0, 8192);
+            seekerMine.flightSound.setLoopCount(-1);
+            seekerMine.proximitySound.field_k.setLoopCount(-1);
+            seekerMine.proximitySound.field_q.setLoopCount(-1);
+            seekerMine.flightSound.setPosition((int)(Math.random() * (double)ci.field_a.samples.length));
             pl.field_n.addSubstream(seekerMine.flightSound);
             pl.field_n.addSubstream(seekerMine.proximitySound);
           }
@@ -4326,8 +4326,8 @@ final class GameplaySession {
             var9Lifetime3 = 30000 - (seekerMine.velocityYQ16 >> 6);
           } else {
             var6_double = Math.sqrt(var6_double);
-            seekerMine.proximitySound.field_k.i((int)(Math.pow(0.8464491362763915, var6_double / 13107200.0) * 6668800.0) / AudioOutput.field_q);
-            seekerMine.proximitySound.field_q.i((int)(Math.pow(0.5646606914212549, var6_double / 13107200.0) * 59980800.0) / AudioOutput.field_q);
+            seekerMine.proximitySound.field_k.setSpeed((int)(Math.pow(0.8464491362763915, var6_double / 13107200.0) * 6668800.0) / AudioOutput.sampleRate);
+            seekerMine.proximitySound.field_q.setSpeed((int)(Math.pow(0.5646606914212549, var6_double / 13107200.0) * 59980800.0) / AudioOutput.sampleRate);
             seekerMine.proximitySound.field_p = (int)(Math.pow(0.1, var6_double / 13107200.0) * 26214.4);
             seekerMine.homeYQ16 = seekerMine.yQ16;
             var6_double = 2949.12 / var6_double;
@@ -4341,7 +4341,7 @@ final class GameplaySession {
           } else {
             seekerMine.soundPlaybackRate = seekerMine.soundPlaybackRate + (4 - seekerMine.soundPlaybackRate + var9Lifetime3 >> 3);
           }
-          seekerMine.flightSound.i(seekerMine.soundPlaybackRate * 256 / AudioOutput.field_q);
+          seekerMine.flightSound.setSpeed(seekerMine.soundPlaybackRate * 256 / AudioOutput.sampleRate);
           seekerMine.velocityYQ16 = seekerMine.velocityYQ16 + var5;
           seekerMine.velocityXQ16 = seekerMine.velocityXQ16 + var4;
           if (var8 == 0) {
@@ -4364,7 +4364,7 @@ final class GameplaySession {
           seekerMine.xQ16 = ((this.worldWidth << 16) + (seekerMine.xQ16 + seekerMine.velocityXQ16)) % (this.worldWidth << 16);
           var12 = this.b(4194304, seekerMine.xQ16, 96, seekerMine.yQ16);
           var13_int = this.c(seekerMine.xQ16, 117);
-          seekerMine.flightSound.f(var12 >> 1, var13_int);
+          seekerMine.flightSound.setVolumeAndPanQ6(var12 >> 1, var13_int);
           seekerMine.proximitySound.field_s = var12;
           seekerMine.proximitySound.field_n = var13_int;
           int var14 = this.worldWidth + (seekerMine.xQ16 >> 16);
@@ -4585,14 +4585,14 @@ final class GameplaySession {
                     this.fuel = 5000;
                   }
                   if (var4_ref != null) {
-                    ((PcmSampleStream) (var4_ref)).f(6144 * qm.field_c / 64);
-                    this.field_R.f(6144 * qm.field_c / 64);
+                    ((PcmSampleStream) (var4_ref)).setVolumeQ6(6144 * qm.field_c / 64);
+                    this.field_R.setVolumeQ6(6144 * qm.field_c / 64);
                   } else {
-                    this.field_R = PcmSampleStream.c(DropTargetWidget.field_E, 100, 6144 * qm.field_c / 64, 8192);
+                    this.field_R = PcmSampleStream.createAtRatePercentQ6(DropTargetWidget.field_E, 100, 6144 * qm.field_c / 64, 8192);
                     pl.field_n.addSubstream(this.field_R);
-                    PcmSampleStream var36 = PcmSampleStream.c(NameAvailabilityResult.field_d, 100, qm.field_c * 6144 / 64, 8192);
+                    PcmSampleStream var36 = PcmSampleStream.createAtRatePercentQ6(NameAvailabilityResult.field_d, 100, qm.field_c * 6144 / 64, 8192);
                     var4_ref = var36;
-                    var36.h(-1);
+                    var36.setLoopCount(-1);
                     pl.field_n.addSubstream(var36);
                   }
                   this.field_f = (PcmSampleStream) (var4_ref);
@@ -4604,9 +4604,9 @@ final class GameplaySession {
                     this.field_R = null;
                   }
                   if (var5_ref_hl == null) {
-                    PcmSampleStream var35 = PcmSampleStream.c(SpriteOffset.field_f, 100, 3584 * qm.field_c / 64, 8192);
+                    PcmSampleStream var35 = PcmSampleStream.createAtRatePercentQ6(SpriteOffset.field_f, 100, 3584 * qm.field_c / 64, 8192);
                     var5_ref_hl = var35;
-                    var35.h(-1);
+                    var35.setLoopCount(-1);
                     pl.field_n.addSubstream(var35);
                   }
                   this.field_Eb = var5_ref_hl;
@@ -4645,7 +4645,7 @@ final class GameplaySession {
         }
         if (var5_ref_hl != null &&
           null == this.field_Eb) {
-          var5_ref_hl.h(0);
+          var5_ref_hl.setLoopCount(0);
         }
         if (!this.shipDestroyed &&
           this.shipLanded &&
@@ -5029,7 +5029,7 @@ final class GameplaySession {
                       rockBuster.field_h = false;
                       pl.field_n.addSubstream(rockBuster.flightSound);
                     }
-                    rockBuster.flightSound.f(this.b(2097152, rockBuster.xQ16, 96, rockBuster.yQ16), this.c(rockBuster.xQ16, 125));
+                    rockBuster.flightSound.setVolumeAndPanQ6(this.b(2097152, rockBuster.xQ16, 96, rockBuster.yQ16), this.c(rockBuster.xQ16, 125));
                     break regionExit4;
                   }
                   var17_int = var14Lifetime3Lifetime1 / var16;
@@ -5164,7 +5164,7 @@ final class GameplaySession {
             launchedRockBuster.velocityXQ16 = this.shipVelocityXQ16 + var8;
             launchedRockBuster.yQ16 = this.shipYQ16 + 5 * var9Lifetime7Lifetime1;
             launchedRockBuster.exhaustParticles = this.i(256, -22944);
-            launchedRockBuster.flightSound = PcmSampleStream.c(NameAvailabilityValidator.field_p, 100, this.b(2097152, launchedRockBuster.xQ16, 96, launchedRockBuster.yQ16), this.c(launchedRockBuster.xQ16, 116));
+            launchedRockBuster.flightSound = PcmSampleStream.createAtRatePercentQ6(NameAvailabilityValidator.field_p, 100, this.b(2097152, launchedRockBuster.xQ16, 96, launchedRockBuster.yQ16), this.c(launchedRockBuster.xQ16, 116));
             pl.field_n.addSubstream(launchedRockBuster.flightSound);
             this.rockBusters.addLast(-12328, launchedRockBuster);
             this.rockBusterAmmo = this.rockBusterAmmo - 1;
@@ -5228,7 +5228,7 @@ final class GameplaySession {
         } else {
           stackIn_718_2 = var5 / var4;
         }
-        ((PcmSampleStream) (Object) stackIn_717_0).f(stackIn_717_1, stackIn_718_2);
+        ((PcmSampleStream) (Object) stackIn_717_0).setVolumeAndPanQ6(stackIn_717_1, stackIn_718_2);
         this.exhaustWriteIndex = (64 + this.exhaustWriteIndex) % 512;
         if (this.field_rc &&
           this.levelIndex >= 0) {
@@ -5480,13 +5480,13 @@ final class GameplaySession {
         this.a(4, this.field_R);
         this.a(4, this.field_f);
         if (null != this.field_Eb) {
-          this.field_Eb.h(0);
+          this.field_Eb.setLoopCount(0);
           this.field_Eb = null;
         }
         this.a(4, this.field_Wb);
         this.a(4, this.field_wb);
         if (this.field_r != null) {
-          this.field_r.c(AudioOutput.field_q / 100, 0);
+          this.field_r.rampVolumeQ6(AudioOutput.sampleRate / 100, 0);
         }
         if (this.field_lc != null) {
           this.a(guard ^ -45, this.field_lc);
@@ -6244,26 +6244,26 @@ final class GameplaySession {
             if (SelfDestructEffects.field_k) {
               System.out.println("Mod logged in: Cheats activated");
             }
-            this.field_jb = PcmSampleStream.a(ValidationIndicator.field_N, 100, 0);
-            this.field_jb.h(-1);
+            this.field_jb = PcmSampleStream.createAtRatePercent(ValidationIndicator.field_N, 100, 0);
+            this.field_jb.setLoopCount(-1);
             pl.field_n.addSubstream(this.field_jb);
-            this.field_Z = PcmSampleStream.a(ng.field_mb, 100, 0);
-            this.field_Z.h(-1);
+            this.field_Z = PcmSampleStream.createAtRatePercent(ng.field_mb, 100, 0);
+            this.field_Z.setLoopCount(-1);
             pl.field_n.addSubstream(this.field_Z);
-            this.field_v = PcmSampleStream.a(Bzip2State.field_G, 100, 0);
-            this.field_v.h(-1);
+            this.field_v = PcmSampleStream.createAtRatePercent(Bzip2State.field_G, 100, 0);
+            this.field_v.setLoopCount(-1);
             pl.field_n.addSubstream(this.field_v);
-            this.field_Wb = PcmSampleStream.a(vi.field_c, 100, 0);
-            this.field_Wb.h(-1);
+            this.field_Wb = PcmSampleStream.createAtRatePercent(vi.field_c, 100, 0);
+            this.field_Wb.setLoopCount(-1);
             pl.field_n.addSubstream(this.field_Wb);
-            this.field_wb = PcmSampleStream.a(w.field_hb, 100, 0);
-            this.field_wb.h(-1);
+            this.field_wb = PcmSampleStream.createAtRatePercent(w.field_hb, 100, 0);
+            this.field_wb.setLoopCount(-1);
             pl.field_n.addSubstream(this.field_wb);
-            this.field_r = PcmSampleStream.a(of.field_h, 100, 0);
-            this.field_r.h(-1);
+            this.field_r = PcmSampleStream.createAtRatePercent(of.field_h, 100, 0);
+            this.field_r.setLoopCount(-1);
             pl.field_n.addSubstream(this.field_r);
-            this.field_lc = PcmSampleStream.a(pa.field_a, 100, 0);
-            this.field_lc.h(-1);
+            this.field_lc = PcmSampleStream.createAtRatePercent(pa.field_a, 100, 0);
+            this.field_lc.setLoopCount(-1);
             pl.field_n.addSubstream(this.field_lc);
             this.field_fb = new TetherHumStream();
             pl.field_n.addSubstream(this.field_fb);

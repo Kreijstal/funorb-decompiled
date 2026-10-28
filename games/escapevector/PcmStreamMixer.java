@@ -50,7 +50,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final void playSampleWithPan(PcmSample sample, int ratePercent, int volume, int pan) {
-        this.addSubstream(PcmSampleStream.c(sample, ratePercent, volume, pan));
+        this.addSubstream(PcmSampleStream.createAtRatePercentQ6(sample, ratePercent, volume, pan));
     }
 
     final synchronized void removeListener(PcmMixerListener listener) {
@@ -160,7 +160,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final void playSample(PcmSample sample, int ratePercent, int volume) {
-        this.addSubstream(PcmSampleStream.a(sample, ratePercent, volume));
+        this.addSubstream(PcmSampleStream.createAtRatePercent(sample, ratePercent, volume));
     }
 
     final PcmStream nextSubstream() {

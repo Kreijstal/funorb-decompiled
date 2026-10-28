@@ -2,45 +2,45 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class AudioOutput {
-    private static int field_g;
-    int[] field_f;
-    private long field_s;
-    private static AudioService field_j;
-    static boolean field_o;
-    private int field_a;
-    static int field_q;
-    private boolean field_i;
-    private PcmStream field_u;
-    private int field_r;
-    private PcmStream[] field_c;
-    private int field_b;
-    private long field_t;
-    private int field_h;
-    private int field_d;
-    private long field_n;
-    private int field_p;
-    private boolean field_e;
-    private PcmStream[] field_l;
-    private int field_k;
-    private int field_m;
+    private static int threadPriority;
+    int[] mixBuffer;
+    private long lastMixTimeMillis;
+    private static AudioService service;
+    static boolean stereo;
+    private int activityLimit;
+    static int sampleRate;
+    private boolean closed;
+    private PcmStream rootStream;
+    private int maxBufferDrain;
+    private PcmStream[] priorityHeads;
+    private int schedulerCountdown;
+    private long nextAdjustmentMillis;
+    private int previousBufferDrain;
+    private int capacity;
+    private long reopenAtMillis;
+    private int desiredBufferedSamples;
+    private boolean deviceRecentlyReset;
+    private PcmStream[] priorityTails;
+    private int lastBufferedSamples;
+    private int latencyCorrection;
 
     void closeDevice() {
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void mixBlock(int[] samples, int length) {
         int var7_int;
         int var8_int;
-        int var3 = param1;
-        if (field_o) {
+        int var3 = length;
+        if (stereo) {
           var3 = var3 << 1;
         }
-        qg.a(param0, 0, var3);
-        this.field_b = this.field_b - param1;
-        if (this.field_u != null &&
-          this.field_b <= 0) {
-          this.field_b = this.field_b + (field_q >> 4);
-          AudioOutput.a(this.field_u);
-          this.a(this.field_u, this.field_u.priority());
+        qg.a(samples, 0, var3);
+        this.schedulerCountdown = this.schedulerCountdown - length;
+        if (this.rootStream != null &&
+          this.schedulerCountdown <= 0) {
+          this.schedulerCountdown = this.schedulerCountdown + (sampleRate >> 4);
+          AudioOutput.deactivateTree(this.rootStream);
+          this.enqueueByPriority(this.rootStream, this.rootStream.priority());
           int var4 = 0;
           int var5 = 255;
           int var6 = 7;
@@ -58,7 +58,7 @@ class AudioOutput {
                 if ((var9 & 1) != 0) {
                   var5 = var5 & ~(1 << var7_int);
                   Object var10 = null;
-                  PcmStream var11 = this.field_c[var7_int];
+                  PcmStream var11 = this.priorityHeads[var7_int];
                   PcmStream var14 = var11;
                   PcmStream var14Lifetime1 = var11;
                   while (var11 != null) {
@@ -76,14 +76,14 @@ class AudioOutput {
                     if (var12 != null) {
                       var12.schedulerPosition = var12.schedulerPosition + var13;
                     }
-                    if (var4 >= this.field_a) {
+                    if (var4 >= this.activityLimit) {
                       break scanLoop1;
                     }
                     PcmStream var14Lifetime2 = var11.firstSubstream();
                     if (var14Lifetime2 != null) {
                       int var15_int = var11.schedulerPriority;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.priority() >> 8);
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.priority() >> 8);
                         var14Lifetime2 = var11.nextSubstream();
                       }
                     }
@@ -92,10 +92,10 @@ class AudioOutput {
                     if (var10 != null) {
                       ((PcmStream) (var10)).schedulerNext = var15;
                     } else {
-                      this.field_c[var7_int] = var15;
+                      this.priorityHeads[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_l[var7_int] = (PcmStream) (var10);
+                      this.priorityTails[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -110,10 +110,10 @@ class AudioOutput {
             break;
           }
           for (int var6Lifetime1 = 0; var6Lifetime1 < 8; var6Lifetime1++) {
-            Object var7 = this.field_c[var6Lifetime1];
-            PcmStream[] var8 = this.field_c;
+            Object var7 = this.priorityHeads[var6Lifetime1];
+            PcmStream[] var8 = this.priorityHeads;
             int var9Lifetime1 = var6Lifetime1;
-            this.field_l[var6Lifetime1] = null;
+            this.priorityTails[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
               Object var10Lifetime1 = ((PcmStream) (var7)).schedulerNext;
@@ -122,108 +122,108 @@ class AudioOutput {
             }
           }
         }
-        if (this.field_b < 0) {
-          this.field_b = 0;
+        if (this.schedulerCountdown < 0) {
+          this.schedulerCountdown = 0;
         }
-        if (this.field_u != null) {
-          this.field_u.mixInto(param0, 0, param1);
+        if (this.rootStream != null) {
+          this.rootStream.mixInto(samples, 0, length);
         }
-        this.field_s = td.b(128);
+        this.lastMixTimeMillis = td.b(128);
     }
 
-    final static void a(int param0, boolean param1, int param2) {
-        if (param0 < 8000 ||
-          param0 > 48000) {
+    final static void configure(int newSampleRate, boolean newStereo, int newThreadPriority) {
+        if (newSampleRate < 8000 ||
+          newSampleRate > 48000) {
           throw new IllegalArgumentException();
         }
-        field_q = param0;
-        field_o = param1 ? true : false;
-        field_g = param2;
+        sampleRate = newSampleRate;
+        stereo = newStereo ? true : false;
+        threadPriority = newThreadPriority;
     }
 
-    final synchronized void d() {
+    final synchronized void serviceOutput() {
         try {
           Throwable decompiledCaughtException = null;
           Exception var3 = null;
-          if (this.field_i) {
+          if (this.closed) {
             return;
           }
           long var1 = td.b(128);
           try {
-            if (var1 > this.field_s + 6000L) {
-              this.field_s = var1 - 6000L;
+            if (var1 > this.lastMixTimeMillis + 6000L) {
+              this.lastMixTimeMillis = var1 - 6000L;
             }
-            while (var1 > this.field_s + 5000L) {
-              this.a(256);
-              this.field_s = this.field_s + (long)(256000 / field_q);
+            while (var1 > this.lastMixTimeMillis + 5000L) {
+              this.skipSamples(256);
+              this.lastMixTimeMillis = this.lastMixTimeMillis + (long)(256000 / sampleRate);
               var1 = td.b(128);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = (Exception) (Object) decompiledCaughtException;
-            this.field_s = var1;
+            this.lastMixTimeMillis = var1;
           }
-          if (this.field_f == null) {
+          if (this.mixBuffer == null) {
             return;
           }
           try {
-            if (this.field_n != 0L) {
-              if (var1 < this.field_n) {
+            if (this.reopenAtMillis != 0L) {
+              if (var1 < this.reopenAtMillis) {
                 return;
               }
-              this.openDevice(this.field_d);
-              this.field_n = 0L;
-              this.field_e = true;
+              this.openDevice(this.capacity);
+              this.reopenAtMillis = 0L;
+              this.deviceRecentlyReset = true;
             }
             int var3_int = this.bufferedSamples();
-            if (this.field_k - var3_int > this.field_r) {
-              this.field_r = this.field_k - var3_int;
+            if (this.lastBufferedSamples - var3_int > this.maxBufferDrain) {
+              this.maxBufferDrain = this.lastBufferedSamples - var3_int;
             }
-            int var4 = this.field_p + this.field_m;
+            int var4 = this.desiredBufferedSamples + this.latencyCorrection;
             if (var4 + 256 > 16384) {
               var4 = 16128;
             }
-            if (var4 + 256 > this.field_d) {
-              this.field_d = this.field_d + 1024;
-              if (this.field_d > 16384) {
-                this.field_d = 16384;
+            if (var4 + 256 > this.capacity) {
+              this.capacity = this.capacity + 1024;
+              if (this.capacity > 16384) {
+                this.capacity = 16384;
               }
               this.closeDevice();
-              this.openDevice(this.field_d);
+              this.openDevice(this.capacity);
               var3_int = 0;
-              this.field_e = true;
-              if (var4 + 256 > this.field_d) {
-                var4 = this.field_d - 256;
-                this.field_m = var4 - this.field_p;
+              this.deviceRecentlyReset = true;
+              if (var4 + 256 > this.capacity) {
+                var4 = this.capacity - 256;
+                this.latencyCorrection = var4 - this.desiredBufferedSamples;
               }
             }
             while (var3_int < var4) {
-              this.a(this.field_f, 256);
+              this.mixBlock(this.mixBuffer, 256);
               this.writeDeviceBlock();
               var3_int += 256;
             }
-            if (var1 > this.field_t) {
-              if (this.field_e) {
-                this.field_e = false;
+            if (var1 > this.nextAdjustmentMillis) {
+              if (this.deviceRecentlyReset) {
+                this.deviceRecentlyReset = false;
               } else {
-                if (this.field_r == 0 &&
-                  this.field_h == 0) {
+                if (this.maxBufferDrain == 0 &&
+                  this.previousBufferDrain == 0) {
                   this.closeDevice();
-                  this.field_n = var1 + 2000L;
+                  this.reopenAtMillis = var1 + 2000L;
                   return;
                 }
-                this.field_m = Math.min(this.field_h, this.field_r);
-                this.field_h = this.field_r;
+                this.latencyCorrection = Math.min(this.previousBufferDrain, this.maxBufferDrain);
+                this.previousBufferDrain = this.maxBufferDrain;
               }
-              this.field_r = 0;
-              this.field_t = var1 + 2000L;
+              this.maxBufferDrain = 0;
+              this.nextAdjustmentMillis = var1 + 2000L;
             }
-            this.field_k = var3_int;
+            this.lastBufferedSamples = var3_int;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = (Exception) (Object) decompiledCaughtException;
             this.closeDevice();
-            this.field_n = var1 + 2000L;
+            this.reopenAtMillis = var1 + 2000L;
           }
           return;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -233,43 +233,43 @@ class AudioOutput {
         }
     }
 
-    private final void a(PcmStream param0, int param1) {
-        int var3 = param1 >> 5;
-        PcmStream var4 = this.field_l[var3];
+    private final void enqueueByPriority(PcmStream stream, int priority) {
+        int var3 = priority >> 5;
+        PcmStream var4 = this.priorityTails[var3];
         if (var4 == null) {
-          this.field_c[var3] = param0;
+          this.priorityHeads[var3] = stream;
         } else {
-          var4.schedulerNext = param0;
+          var4.schedulerNext = stream;
         }
-        this.field_l[var3] = param0;
-        param0.schedulerPriority = param1;
+        this.priorityTails[var3] = stream;
+        stream.schedulerPriority = priority;
     }
 
     public static void releaseStatics() {
-        field_j = null;
+        service = null;
     }
 
     void flushDevice() throws Exception {
     }
 
-    private final static void a(PcmStream param0) {
-        param0.active = false;
-        if (param0.sample != null) {
-          param0.sample.schedulerPosition = 0;
+    private final static void deactivateTree(PcmStream stream) {
+        stream.active = false;
+        if (stream.sample != null) {
+          stream.sample.schedulerPosition = 0;
         }
-        PcmStream var1 = param0.firstSubstream();
+        PcmStream var1 = stream.firstSubstream();
         while (var1 != null) {
-          AudioOutput.a(var1);
-          var1 = param0.nextSubstream();
+          AudioOutput.deactivateTree(var1);
+          var1 = stream.nextSubstream();
         }
     }
 
     int bufferedSamples() throws Exception {
-        return this.field_d;
+        return this.capacity;
     }
 
-    final synchronized void b(PcmStream param0) {
-        this.field_u = param0;
+    final synchronized void setStream(PcmStream stream) {
+        this.rootStream = stream;
     }
 
     void openDevice(int capacity) throws Exception {
@@ -281,25 +281,25 @@ class AudioOutput {
     void writeDeviceBlock() throws Exception {
     }
 
-    private final void a(int param0) {
-        this.field_b = this.field_b - param0;
-        if (this.field_b < 0) {
-          this.field_b = 0;
+    private final void skipSamples(int length) {
+        this.schedulerCountdown = this.schedulerCountdown - length;
+        if (this.schedulerCountdown < 0) {
+          this.schedulerCountdown = 0;
         }
-        if (this.field_u != null) {
-          this.field_u.skip(param0);
+        if (this.rootStream != null) {
+          this.rootStream.skip(length);
           return;
         }
     }
 
-    final synchronized void b() {
+    final synchronized void flush() {
         try {
-          this.field_e = true;
+          this.deviceRecentlyReset = true;
           try {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_n = td.b(128) + 2000L;
+            this.reopenAtMillis = td.b(128) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -308,42 +308,42 @@ class AudioOutput {
         }
     }
 
-    final static AudioOutput a(SystemTaskService param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput create(SystemTaskService tasks, java.awt.Component component, int slot, int bufferedSamples) {
         try {
           int stackIn_11_2 = 0;
-          if (field_q == 0) {
+          if (sampleRate == 0) {
             throw new IllegalStateException();
           }
-          if (param2 >= 0 &&
-            param2 < 2) {
-            if (param3 < 256) {
-              param3 = 256;
+          if (slot >= 0 &&
+            slot < 2) {
+            if (bufferedSamples < 256) {
+              bufferedSamples = 256;
             }
             try {
               JavaSoundAudioOutput var5 = new JavaSoundAudioOutput();
               JavaSoundAudioOutput var4 = var5;
               JavaSoundAudioOutput stackIn_10_0 = var4;
               int stackIn_10_1 = 256;
-              stackIn_11_2 = (!field_o) ? (1) : (2);
-              ((AudioOutput) ((Object) stackIn_10_0)).field_f = new int[stackIn_10_1 * stackIn_11_2];
-              ((AudioOutput) ((Object) var4)).field_p = param3;
-              ((AudioOutput) ((Object) var4)).initializeDevice(param1);
-              ((AudioOutput) ((Object) var4)).field_d = (param3 & -1024) + 1024;
-              if (((AudioOutput) ((Object) var4)).field_d > 16384) {
-                ((AudioOutput) ((Object) var4)).field_d = 16384;
+              stackIn_11_2 = (!stereo) ? (1) : (2);
+              ((AudioOutput) ((Object) stackIn_10_0)).mixBuffer = new int[stackIn_10_1 * stackIn_11_2];
+              ((AudioOutput) ((Object) var4)).desiredBufferedSamples = bufferedSamples;
+              ((AudioOutput) ((Object) var4)).initializeDevice(component);
+              ((AudioOutput) ((Object) var4)).capacity = (bufferedSamples & -1024) + 1024;
+              if (((AudioOutput) ((Object) var4)).capacity > 16384) {
+                ((AudioOutput) ((Object) var4)).capacity = 16384;
               }
-              ((AudioOutput) ((Object) var4)).openDevice(((AudioOutput) ((Object) var4)).field_d);
-              if (field_g > 0 &&
-                field_j == null) {
-                field_j = new AudioService();
-                field_j.field_e = param0;
-                param0.a(true, field_g, (Runnable) ((Object) field_j));
+              ((AudioOutput) ((Object) var4)).openDevice(((AudioOutput) ((Object) var4)).capacity);
+              if (threadPriority > 0 &&
+                service == null) {
+                service = new AudioService();
+                service.tasks = tasks;
+                tasks.a(true, threadPriority, (Runnable) ((Object) service));
               }
-              if (field_j != null) {
-                if (field_j.field_f[param2] != null) {
+              if (service != null) {
+                if (service.outputs[slot] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_j.field_f[param2] = (AudioOutput) ((Object) var5);
+                service.outputs[slot] = (AudioOutput) ((Object) var5);
               }
               JavaSoundAudioOutput stackIn_21_0 = var4;
               return (AudioOutput) ((Object) stackIn_21_0);
@@ -361,42 +361,42 @@ class AudioOutput {
         }
     }
 
-    final synchronized void c() {
-        if (field_j != null) {
+    final synchronized void shutdown() {
+        if (service != null) {
           boolean var1 = true;
           for (int var2 = 0; var2 < 2; var2++) {
-            if (field_j.field_f[var2] == this) {
-              field_j.field_f[var2] = null;
+            if (service.outputs[var2] == this) {
+              service.outputs[var2] = null;
             }
-            if (field_j.field_f[var2] != null) {
+            if (service.outputs[var2] != null) {
               var1 = false;
             }
           }
           if (var1) {
-            field_j.field_c = true;
-            while (field_j.field_g) {
+            service.stopRequested = true;
+            while (service.running) {
               en.a((byte) -46, 50L);
             }
-            field_j = null;
+            service = null;
           }
         }
         this.closeDevice();
-        this.field_f = null;
-        this.field_i = true;
+        this.mixBuffer = null;
+        this.closed = true;
     }
 
     AudioOutput() {
-        this.field_a = 32;
-        this.field_i = false;
-        this.field_s = td.b(128);
-        this.field_b = 0;
-        this.field_h = 0;
-        this.field_t = 0L;
-        this.field_c = new PcmStream[8];
-        this.field_r = 0;
-        this.field_n = 0L;
-        this.field_l = new PcmStream[8];
-        this.field_e = true;
-        this.field_k = 0;
+        this.activityLimit = 32;
+        this.closed = false;
+        this.lastMixTimeMillis = td.b(128);
+        this.schedulerCountdown = 0;
+        this.previousBufferDrain = 0;
+        this.nextAdjustmentMillis = 0L;
+        this.priorityHeads = new PcmStream[8];
+        this.maxBufferDrain = 0;
+        this.reopenAtMillis = 0L;
+        this.priorityTails = new PcmStream[8];
+        this.deviceRecentlyReset = true;
+        this.lastBufferedSamples = 0;
     }
 }

@@ -86,13 +86,13 @@ final class TetherHumStream extends PcmStream {
           if (0 == var5) {
             return;
           }
-          double var6 = (double)AudioOutput.field_q / 1000.0;
+          double var6 = (double)AudioOutput.sampleRate / 1000.0;
           int var8 = (int)(25460.736 / var6);
           int var9 = var5;
           int var10 = (int)(196509.696 / var6);
           length = length + offset;
           int var11 = (int)(98.304 / var6);
-          if (AudioOutput.field_o) {
+          if (AudioOutput.stereo) {
             length = length << 1;
             offset = offset << 1;
           }
@@ -108,7 +108,7 @@ final class TetherHumStream extends PcmStream {
             int incrementValue$0 = var12;
             var12++;
             samples[incrementValue$0] = samples[incrementValue$0] + var17;
-            if (AudioOutput.field_o) {
+            if (AudioOutput.stereo) {
               int incrementValue$1 = var12;
               var12++;
               samples[incrementValue$1] = samples[incrementValue$1] + var17;

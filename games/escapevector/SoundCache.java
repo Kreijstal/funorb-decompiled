@@ -3,47 +3,47 @@
  */
 final class SoundCache {
     static ReverbPcmStream field_a;
-    private ResourceArchive field_e;
-    private ResourceArchive field_d;
+    private ResourceArchive vorbisArchive;
+    private ResourceArchive synthesizedArchive;
     static String field_c;
-    private IntrusiveNodeHashTable field_b;
-    private IntrusiveNodeHashTable field_g;
+    private IntrusiveNodeHashTable pendingVorbis;
+    private IntrusiveNodeHashTable pcmCache;
     static IndexedSprite[] field_f;
 
-    private final PcmSample a(int[] param0, byte param1, int param2, int param3) {
+    private final PcmSample getVorbisSample(int[] budget, byte guard, int groupId, int fileId) {
         String stackIn_24_2 = null;
         try {
-          int var5_int = (param2 << 4 & 65522 | param2 >>> 12) ^ param3;
-          if (param1 <= 14) {
+          int var5_int = (groupId << 4 & 65522 | groupId >>> 12) ^ fileId;
+          if (guard <= 14) {
             PcmSample stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
-          var5_int = var5_int | param2 << 16;
+          var5_int = var5_int | groupId << 16;
           long var6 = 4294967296L ^ (long)var5_int;
-          PcmSample var8 = (PcmSample) (this.field_g.get(var6, -1));
+          PcmSample var8 = (PcmSample) (this.pcmCache.get(var6, -1));
           if (var8 != null) {
             PcmSample stackIn_6_0 = var8;
             return stackIn_6_0;
           }
-          if (param0 != null &&
-            0 >= param0[0]) {
+          if (budget != null &&
+            0 >= budget[0]) {
             return null;
           }
-          in var9 = (in) (this.field_b.get(var6, -1));
+          VorbisSample var9 = (VorbisSample) (this.pendingVorbis.get(var6, -1));
           if (var9 == null) {
-            var9 = in.a(this.field_e, param2, param3);
+            var9 = VorbisSample.load(this.vorbisArchive, groupId, fileId);
             if (var9 == null) {
               Object stackIn_14_0 = null;
               return (PcmSample) (stackIn_14_0);
             }
-            this.field_b.put(var9, 10901, var6);
+            this.pendingVorbis.put(var9, 10901, var6);
           }
-          PcmSample var8Lifetime1 = var9.a(param0);
+          PcmSample var8Lifetime1 = var9.decodeToPcm(budget);
           if (var8Lifetime1 == null) {
             return null;
           }
           var9.unlink((byte) -27);
-          this.field_g.put(var8Lifetime1, 10901, var6);
+          this.pcmCache.put(var8Lifetime1, 10901, var6);
           PcmSample stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -51,12 +51,12 @@ final class SoundCache {
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_23_0 = var5;
           StringBuilder stackIn_23_1 = new StringBuilder().append("ec.D(");
-          if (param0 == null) {
+          if (budget == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(guard).append(',').append(groupId).append(',').append(fileId).append(')').toString());
         }
     }
 
@@ -67,36 +67,36 @@ final class SoundCache {
         field_f = null;
     }
 
-    private final PcmSample a(int param0, int param1, int[] param2, int param3) {
+    private final PcmSample getSynthesizedSample(int guard, int groupId, int[] budget, int fileId) {
         String stackIn_21_2 = null;
         try {
-          int var5_int = param3 ^ (param1 << 4 & 65533 | param1 >>> 12);
-          var5_int = var5_int | param1 << 16;
+          int var5_int = fileId ^ (groupId << 4 & 65533 | groupId >>> 12);
+          var5_int = var5_int | groupId << 16;
           long var6 = (long)var5_int;
-          PcmSample var8 = (PcmSample) (this.field_g.get(var6, -1));
+          PcmSample var8 = (PcmSample) (this.pcmCache.get(var6, -1));
           if (var8 != null) {
             PcmSample stackIn_3_0 = var8;
             return stackIn_3_0;
           }
-          if (param2 != null &&
-            param2[0] <= 0) {
+          if (budget != null &&
+            budget[0] <= 0) {
             Object stackIn_7_0 = null;
             return (PcmSample) (stackIn_7_0);
           }
-          kj var9 = kj.a(this.field_d, param1, param3);
+          SoundEffect var9 = SoundEffect.load(this.synthesizedArchive, groupId, fileId);
           if (var9 == null) {
             Object stackIn_10_0 = null;
             return (PcmSample) (stackIn_10_0);
           }
-          if (param0 != 1158948012) {
+          if (guard != 1158948012) {
             int[] var10 = (int[]) null;
-            PcmSample discarded$1 = this.a(-13, 124, (int[]) null, 13);
+            PcmSample discarded$1 = this.getSynthesizedSample(-13, 124, (int[]) null, 13);
           }
-          PcmSample var11 = var9.a();
+          PcmSample var11 = var9.toPcmSample();
           PcmSample var8Lifetime1 = var11;
-          this.field_g.put(var8Lifetime1, 10901, var6);
-          if (param2 != null) {
-            param2[0] = param2[0] - var11.samples.length;
+          this.pcmCache.put(var8Lifetime1, 10901, var6);
+          if (budget != null) {
+            budget[0] = budget[0] - var11.samples.length;
           }
           PcmSample stackIn_17_0 = var8Lifetime1;
           return stackIn_17_0;
@@ -104,38 +104,38 @@ final class SoundCache {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_20_0 = var5;
-          StringBuilder stackIn_20_1 = new StringBuilder().append("ec.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_20_1 = new StringBuilder().append("ec.C(").append(guard).append(',').append(groupId).append(',');
+          if (budget == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(fileId).append(')').toString());
         }
     }
 
-    final PcmSample a(int param0, byte param1, int param2) {
-        if (param1 == -128) {
-          return this.a((int[]) null, (byte) 18, param0, param2);
+    final PcmSample getVorbisSample(int groupId, byte guard, int fileId) {
+        if (guard == -128) {
+          return this.getVorbisSample((int[]) null, (byte) 18, groupId, fileId);
         }
-        this.field_d = (ResourceArchive) null;
-        return this.a((int[]) null, (byte) 18, param0, param2);
+        this.synthesizedArchive = (ResourceArchive) null;
+        return this.getVorbisSample((int[]) null, (byte) 18, groupId, fileId);
     }
 
-    final PcmSample a(byte param0, int param1, int param2) {
-        if (param0 > 44) {
-          return this.a(1158948012, param2, (int[]) null, param1);
+    final PcmSample getSynthesizedSample(byte guard, int fileId, int groupId) {
+        if (guard > 44) {
+          return this.getSynthesizedSample(1158948012, groupId, (int[]) null, fileId);
         }
-        this.field_e = (ResourceArchive) null;
-        return this.a(1158948012, param2, (int[]) null, param1);
+        this.vorbisArchive = (ResourceArchive) null;
+        return this.getSynthesizedSample(1158948012, groupId, (int[]) null, fileId);
     }
 
     SoundCache(ResourceArchive param0, ResourceArchive param1) {
-        this.field_b = new IntrusiveNodeHashTable(256);
-        this.field_g = new IntrusiveNodeHashTable(256);
+        this.pendingVorbis = new IntrusiveNodeHashTable(256);
+        this.pcmCache = new IntrusiveNodeHashTable(256);
         try {
-          this.field_e = param1;
-          this.field_d = param0;
+          this.vorbisArchive = param1;
+          this.synthesizedArchive = param0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

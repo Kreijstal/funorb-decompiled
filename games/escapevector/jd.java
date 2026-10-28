@@ -13,8 +13,8 @@ final class jd {
         try {
           if (!GameAppletShell.field_k) {
             if (null != mm.field_b) {
-              mm.field_b.g(256);
-              vi.field_d.g(256);
+              mm.field_b.fadeOut(256);
+              vi.field_d.fadeOut(256);
               mm.field_b = null;
               vi.field_d = null;
             }
@@ -88,15 +88,15 @@ final class jd {
           }
           int var8Lifetime2 = stackIn_57_0;
           if (mm.field_b == null) {
-            mm.field_b = PcmSampleStream.c(ArchiveProvider.field_d, 100, 0, var6Lifetime2);
-            vi.field_d = PcmSampleStream.c(pa.field_b, 100, 0, var8Lifetime2);
-            mm.field_b.h(-1);
-            vi.field_d.h(-1);
+            mm.field_b = PcmSampleStream.createAtRatePercentQ6(ArchiveProvider.field_d, 100, 0, var6Lifetime2);
+            vi.field_d = PcmSampleStream.createAtRatePercentQ6(pa.field_b, 100, 0, var8Lifetime2);
+            mm.field_b.setLoopCount(-1);
+            vi.field_d.setLoopCount(-1);
             ObjectSpriteSet.field_e.addSubstream(mm.field_b);
             ObjectSpriteSet.field_e.addSubstream(vi.field_d);
           }
-          mm.field_b.a(441, qm.field_c * var5 / 64, var6Lifetime2);
-          vi.field_d.a(441, var7Lifetime2 * qm.field_c / 64, var8Lifetime2);
+          mm.field_b.rampVolumeAndPanQ6(441, qm.field_c * var5 / 64, var6Lifetime2);
+          vi.field_d.rampVolumeAndPanQ6(441, var7Lifetime2 * qm.field_c / 64, var8Lifetime2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

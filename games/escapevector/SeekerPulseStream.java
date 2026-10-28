@@ -54,10 +54,10 @@ final class SeekerPulseStream extends PcmStream {
           this.field_r = this.field_r - var2;
           int var3 = (this.field_r & 65536) != 0 ? this.field_s : 0;
           int var4 = this.field_n;
-          this.field_k.a(AudioOutput.field_q / 200, var3, var4);
-          this.field_q.a(AudioOutput.field_q / 200, var3 >> 2, var4);
+          this.field_k.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, var3, var4);
+          this.field_q.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, var3 >> 2, var4);
           if (param0 >= 96) {
-            this.field_m = AudioOutput.field_q / 100;
+            this.field_m = AudioOutput.sampleRate / 100;
             return;
           }
           return;
@@ -65,10 +65,10 @@ final class SeekerPulseStream extends PcmStream {
         this.field_r = 0;
         int var3Lifetime1 = (this.field_r & 65536) != 0 ? this.field_s : 0;
         int var4Lifetime1 = this.field_n;
-        this.field_k.a(AudioOutput.field_q / 200, var3Lifetime1, var4Lifetime1);
-        this.field_q.a(AudioOutput.field_q / 200, var3Lifetime1 >> 2, var4Lifetime1);
+        this.field_k.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, var3Lifetime1, var4Lifetime1);
+        this.field_q.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, var3Lifetime1 >> 2, var4Lifetime1);
         if (param0 >= 96) {
-          this.field_m = AudioOutput.field_q / 100;
+          this.field_m = AudioOutput.sampleRate / 100;
           return;
         }
     }

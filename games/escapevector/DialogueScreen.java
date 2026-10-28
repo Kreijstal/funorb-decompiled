@@ -416,8 +416,8 @@ final class DialogueScreen extends IntrusiveNode {
               this.field_s = this.field_s + 1;
               if (this.field_s == 43 &&
                 this.field_A == null) {
-                this.field_A = PcmSampleStream.c(en.field_d, 100, qm.field_c * 768 / 64, this.g((byte) 111));
-                this.field_A.h(-1);
+                this.field_A = PcmSampleStream.createAtRatePercentQ6(en.field_d, 100, qm.field_c * 768 / 64, this.g((byte) 111));
+                this.field_A.setLoopCount(-1);
                 ObjectSpriteSet.field_e.addSubstream(this.field_A);
               }
             }
@@ -501,7 +501,7 @@ final class DialogueScreen extends IntrusiveNode {
                     if (this.revealedCharacters >= var3.length()) {
                       this.revealedLine = this.revealedLine + 1;
                       this.revealedCharacters = 0;
-                      this.field_u.e(AudioOutput.field_q / 200, 0);
+                      this.field_u.rampVolume(AudioOutput.sampleRate / 200, 0);
                     } else {
                       int fieldTemp$1 = this.revealedCharacters;
                       this.revealedCharacters = this.revealedCharacters + 1;
@@ -516,9 +516,9 @@ final class DialogueScreen extends IntrusiveNode {
                         }
                       }
                       if (var4 == 32) {
-                        this.field_u.e(AudioOutput.field_q / 200, 0);
+                        this.field_u.rampVolume(AudioOutput.sampleRate / 200, 0);
                       } else {
-                        this.field_u.a(AudioOutput.field_q / 200, 3072 * qm.field_c / 64, this.g((byte) 111));
+                        this.field_u.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, 3072 * qm.field_c / 64, this.g((byte) 111));
                       }
                     }
                     this.field_t = 2;
@@ -555,7 +555,7 @@ final class DialogueScreen extends IntrusiveNode {
               }
             }
             if (this.field_A != null) {
-              this.field_A.a(AudioOutput.field_q / 200, 768 * qm.field_c / 64, this.g((byte) 111));
+              this.field_A.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, 768 * qm.field_c / 64, this.g((byte) 111));
             }
             IntValueNode.field_j = true;
             return;
@@ -651,15 +651,15 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void f(byte param0) {
         if (this.field_p == 30) {
-          PcmSampleStream var2 = PcmSampleStream.c(vd.field_g, 100, 3072 * qm.field_c / 64, this.d(8192));
-          var2.e();
+          PcmSampleStream var2 = PcmSampleStream.createAtRatePercentQ6(vd.field_g, 100, 3072 * qm.field_c / 64, this.d(8192));
+          var2.playBackwardFromEnd();
           ObjectSpriteSet.field_e.addSubstream(var2);
         }
         if (param0 >= -86) {
           this.field_v = -93;
         }
         if (20 == this.field_p) {
-          PcmSampleStream var2Lifetime1 = PcmSampleStream.c(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
+          PcmSampleStream var2Lifetime1 = PcmSampleStream.createAtRatePercentQ6(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
           ObjectSpriteSet.field_e.addSubstream(var2Lifetime1);
         }
         this.field_p = this.field_p - 1;
@@ -674,9 +674,9 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void i(int param0) {
         if (this.field_A != null) {
-          this.field_A.g(AudioOutput.field_q / 200);
+          this.field_A.fadeOut(AudioOutput.sampleRate / 200);
         }
-        this.field_u.g(AudioOutput.field_q / 200);
+        this.field_u.fadeOut(AudioOutput.sampleRate / 200);
         vh.a((byte) -22);
         gi.a((byte) -111);
         Js5NetworkRequest.field_E = true;
@@ -873,8 +873,8 @@ final class DialogueScreen extends IntrusiveNode {
           boolean stackIn_7_1 = (param2);
           this.fullWidthScene = stackIn_7_1;
           this.field_z = param0;
-          this.field_u = PcmSampleStream.a(ff.field_i, 100, 0);
-          this.field_u.h(-1);
+          this.field_u = PcmSampleStream.createAtRatePercent(ff.field_i, 100, 0);
+          this.field_u.setLoopCount(-1);
           ObjectSpriteSet.field_e.addSubstream(this.field_u);
           this.field_w = new wc(1);
           this.field_w.a(this.a(-77, dh.field_d, UiContainer.field_y), true, 4767999);

@@ -65,7 +65,7 @@ final class TrackerMusicPlayer extends PcmMixerListener {
           !this.field_t) {
           return -1;
         }
-        int var3 = AudioOutput.field_q;
+        int var3 = AudioOutput.sampleRate;
         int var4 = (var3 << 9) + (var3 << 7);
         return var4 / (this.field_r * this.field_y);
     }
@@ -86,13 +86,13 @@ final class TrackerMusicPlayer extends PcmMixerListener {
           } else if (param2 > 256) {
             param2 = 256;
           }
-          this.field_T[param0].b(AudioOutput.field_q >> 7, param1 * this.field_i * this.field_jb >> 12, param2);
+          this.field_T[param0].rampVolumeAndPan(AudioOutput.sampleRate >> 7, param1 * this.field_i * this.field_jb >> 12, param2);
         }
     }
 
     private final void e(int param0) {
         if (this.field_T[param0] != null) {
-          this.field_T[param0].g(AudioOutput.field_q >> 7);
+          this.field_T[param0].fadeOut(AudioOutput.sampleRate >> 7);
           this.field_T[param0] = null;
         }
     }
@@ -940,23 +940,23 @@ final class TrackerMusicPlayer extends PcmMixerListener {
             param5 = 255;
           }
           PcmSample stackIn_13_0 = this.field_u.field_s[param1];
-          int stackIn_13_1 = param3 * 256 / AudioOutput.field_q;
+          int stackIn_13_1 = param3 * 256 / AudioOutput.sampleRate;
           if (param2 == 0) {
             stackIn_14_2 = param4 * this.field_i * this.field_jb >> 12;
           } else {
             stackIn_14_2 = 0;
           }
-          PcmSampleStream var7 = PcmSampleStream.b(stackIn_13_0, stackIn_13_1, stackIn_14_2, param5);
-          var7.b(this.field_u.field_h[param1], this.field_u.field_A[param1]);
+          PcmSampleStream var7 = PcmSampleStream.createAtStepScaled(stackIn_13_0, stackIn_13_1, stackIn_14_2, param5);
+          var7.setLoopRange(this.field_u.field_h[param1], this.field_u.field_A[param1]);
           PcmSampleStream stackIn_16_0 = var7;
           int stackIn_17_1 = (this.field_u.field_E[param1] == 0) ? 0 : -1;
-          ((PcmSampleStream) (Object) stackIn_16_0).h(stackIn_17_1);
+          ((PcmSampleStream) (Object) stackIn_16_0).setLoopCount(stackIn_17_1);
           PcmSampleStream stackIn_19_0 = var7;
           boolean stackIn_20_1 = (this.field_u.field_E[param1] != 2) ? false : true;
-          ((PcmSampleStream) (Object) stackIn_19_0).a(stackIn_20_1);
+          ((PcmSampleStream) (Object) stackIn_19_0).setPingPongLoop(stackIn_20_1);
           if (param2 != 0) {
-            var7.e(param2);
-            var7.b(AudioOutput.field_q >> 7, param4 * this.field_i * this.field_jb >> 12, param5);
+            var7.setPosition(param2);
+            var7.rampVolumeAndPan(AudioOutput.sampleRate >> 7, param4 * this.field_i * this.field_jb >> 12, param5);
           }
           this.field_T[param0] = var7;
           if (this.owner != null) {
@@ -983,7 +983,7 @@ final class TrackerMusicPlayer extends PcmMixerListener {
 
     private final void a(int param0, int param1) {
         if (this.field_T[param0] != null) {
-          this.field_T[param0].i(param1 * 256 / AudioOutput.field_q);
+          this.field_T[param0].setSpeed(param1 * 256 / AudioOutput.sampleRate);
         }
     }
 

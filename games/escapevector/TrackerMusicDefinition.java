@@ -81,9 +81,9 @@ final class TrackerMusicDefinition {
         for (int var3 = 0; var3 < this.field_s.length; var3++) {
           if (this.field_s[var3] == null) {
             if (this.field_E[var3] >> 4 != 0) {
-              var4 = this.field_o.a(this.field_e[var3], (byte) -128, this.field_c[var3]);
+              var4 = this.field_o.getVorbisSample(this.field_e[var3], (byte) -128, this.field_c[var3]);
             } else {
-              var4 = this.field_o.a((byte) 55, this.field_c[var3], this.field_e[var3]);
+              var4 = this.field_o.getSynthesizedSample((byte) 55, this.field_c[var3], this.field_e[var3]);
             }
             if (var4 == null) {
               var2 = false;

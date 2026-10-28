@@ -40,7 +40,7 @@ final class TerrainMap {
               DraggableWidget.field_N = new TrackerMusicPlayer(param1);
               DraggableWidget.field_N.d(kn.field_b * kc.field_b / 64);
               DraggableWidget.field_N.a(param2);
-              ig.field_l.b();
+              ig.field_l.flush();
               nb.field_c.scheduleListener((PcmMixerListener) ((Object) DraggableWidget.field_N));
             }
             return;

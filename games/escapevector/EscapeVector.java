@@ -31,8 +31,8 @@ public final class EscapeVector extends NetworkGameClient {
             ri.a(-25123);
             ValidationIndicator.a((byte) 97);
           }
-          UiContainer.field_C.d();
-          ig.field_l.d();
+          UiContainer.field_C.serviceOutput();
+          ig.field_l.serviceOutput();
           int stackIn_16_1 = -1;
           boolean stackIn_17_2 = (null != IsaacRandom.field_d);
           this.a(stackIn_16_1, stackIn_17_2);
@@ -152,12 +152,12 @@ public final class EscapeVector extends NetworkGameClient {
           }
           if (dj.field_c != null &&
             !SingleChildContainer.field_y) {
-            dj.field_c.g(2048);
+            dj.field_c.fadeOut(2048);
             dj.field_c = null;
           }
           if (null != mb.field_a &&
             !IntValueNode.field_j) {
-            mb.field_a.g(2048);
+            mb.field_a.fadeOut(2048);
             mb.field_a = null;
           }
           if (!SelfDestructEffects.field_s) {
@@ -167,7 +167,7 @@ public final class EscapeVector extends NetworkGameClient {
                 return;
               }
               if (ValidatedTextWidget.field_K[var3Lifetime1] != null) {
-                ValidatedTextWidget.field_K[var3Lifetime1].g(256);
+                ValidatedTextWidget.field_K[var3Lifetime1].fadeOut(256);
                 ValidatedTextWidget.field_K[var3Lifetime1] = null;
               }
               var3Lifetime1++;
@@ -288,9 +288,9 @@ public final class EscapeVector extends NetworkGameClient {
           pa.releaseStatics((byte) 103);
           dk.releaseStatics(1);
           qe.releaseStatics(0);
-          we.releaseStatics();
-          in.releaseStatics();
-          u.releaseStatics();
+          SynthInstrument.releaseStatics();
+          VorbisSample.releaseStatics();
+          VorbisFloor.releaseStatics();
           SoundCache.releaseStatics((byte) -72);
           IntrusiveNodeHashTable.releaseStatics(0);
           kh.releaseStatics((byte) 65);
@@ -398,7 +398,7 @@ public final class EscapeVector extends NetworkGameClient {
           jf.releaseStatics(1);
           eb.releaseStatics(true);
           q.releaseStatics((byte) 59);
-          cl.releaseStatics();
+          AudioFilter.releaseStatics();
           cj.releaseStatics(17159);
           CachedTextLayout.releaseStatics(true);
           km.releaseStatics(-4);
@@ -593,53 +593,53 @@ public final class EscapeVector extends NetworkGameClient {
           }
           dn.a(qf.field_n, 17637, 80.0f);
           this.renderClient((byte) 7);
-          PcmResampler var2 = new PcmResampler(22050, AudioOutput.field_q);
-          ff.field_i = kj.a(CheckboxPainter.field_h, "", "write-text").a().resample(var2);
-          en.field_d = kj.a(CheckboxPainter.field_h, "", "cursor").a().resample(var2);
-          bm.field_a = kj.a(CheckboxPainter.field_h, "", "interference").a().resample(var2);
-          qh.field_i = kj.a(CheckboxPainter.field_h, "", "interference_300ms").a().resample(var2);
-          nn.field_g = kj.a(CheckboxPainter.field_h, "", "mainmenu_formation").a().resample(var2);
-          ArchiveRequest.field_w = kj.a(CheckboxPainter.field_h, "", "mouseover").a().resample(var2);
-          b.field_b = kj.a(CheckboxPainter.field_h, "", "level_indicator").a().resample(var2);
-          pc.field_a = kj.a(CheckboxPainter.field_h, "", "button_formation").a().resample(var2);
-          uf.field_g = kj.a(CheckboxPainter.field_h, "", "frame-appear").a().resample(var2);
-          QuickChatPhraseDefinition.field_t = kj.a(CheckboxPainter.field_h, "", "photo-blob-grow").a().resample(var2);
-          vd.field_g = kj.a(CheckboxPainter.field_h, "", "photo-body-explode").a().resample(var2);
-          ArchiveProvider.field_d = kj.a(CheckboxPainter.field_h, "", "grid_effect_1").a().resample(var2);
-          pa.field_b = kj.a(CheckboxPainter.field_h, "", "grid_effect_2").a().resample(var2);
-          PcmResampler.field_g = in.a(jm.field_I, "", "pixelate").b().resample(var2);
-          ValidationIndicator.field_N = kj.a(CheckboxPainter.field_h, "", "gas-pump").a().resample(var2);
-          ng.field_mb = kj.a(CheckboxPainter.field_h, "", "gas-burn").a().resample(var2);
-          TerrainMaskSupport.field_e = kj.a(CheckboxPainter.field_h, "", "left-foot-down").a().resample(var2);
-          ri.field_b = kj.a(CheckboxPainter.field_h, "", "right-foot-down").a().resample(var2);
-          DraggableWidget.field_M = kj.a(CheckboxPainter.field_h, "", "ship-fire").a().resample(var2);
-          gn.field_e = kj.a(CheckboxPainter.field_h, "", "ship-fire-three").a().resample(var2);
-          uk.field_j = kj.a(CheckboxPainter.field_h, "", "alien-fire").a().resample(var2);
-          Bzip2State.field_G = kj.a(CheckboxPainter.field_h, "", "shield").a().resample(var2);
-          co.field_d = kj.a(CheckboxPainter.field_h, "", "shield_impact").a().resample(var2);
-          gm.field_b = kj.a(CheckboxPainter.field_h, "", "shield_empty").a().resample(var2);
-          DropTargetWidget.field_E = kj.a(CheckboxPainter.field_h, "", "fuel-start").a().resample(var2);
-          NameAvailabilityResult.field_d = kj.a(CheckboxPainter.field_h, "", "fuel-filling").a().resample(var2);
-          al.field_b = kj.a(CheckboxPainter.field_h, "", "fuel-stop").a().resample(var2);
-          SpriteOffset.field_f = kj.a(CheckboxPainter.field_h, "", "fuel-full").a().resample(var2);
-          fg.field_a = kj.a(CheckboxPainter.field_h, "", "crate-attach").a().resample(var2);
-          ObjectSpriteSet.field_c = kj.a(CheckboxPainter.field_h, "", "tether-tighten").a().resample(var2);
-          bc.field_c = kj.a(CheckboxPainter.field_h, "", "tether-release").a().resample(var2);
-          nm.field_a = kj.a(CheckboxPainter.field_h, "", "powerup-collect").a().resample(var2);
-          vi.field_c = kj.a(CheckboxPainter.field_h, "", "repeller-active").a().resample(var2);
-          w.field_hb = kj.a(CheckboxPainter.field_h, "", "magnet-active").a().resample(var2);
-          of.field_h = kj.a(CheckboxPainter.field_h, "", "laser").a().resample(var2);
-          IntrusiveNodeHashTable.field_a = kj.a(CheckboxPainter.field_h, "", "explosion-ship").a().resample(var2);
-          RasterBuffer.field_c = kj.a(CheckboxPainter.field_h, "", "explosion_5_seconds").a().resample(var2);
-          pa.field_a = in.a(jm.field_I, "", "beeping").b().resample(var2);
+          PcmResampler var2 = new PcmResampler(22050, AudioOutput.sampleRate);
+          ff.field_i = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "write-text").toPcmSample().resample(var2);
+          en.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "cursor").toPcmSample().resample(var2);
+          bm.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "interference").toPcmSample().resample(var2);
+          qh.field_i = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "interference_300ms").toPcmSample().resample(var2);
+          nn.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mainmenu_formation").toPcmSample().resample(var2);
+          ArchiveRequest.field_w = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mouseover").toPcmSample().resample(var2);
+          b.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "level_indicator").toPcmSample().resample(var2);
+          pc.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "button_formation").toPcmSample().resample(var2);
+          uf.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "frame-appear").toPcmSample().resample(var2);
+          QuickChatPhraseDefinition.field_t = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "photo-blob-grow").toPcmSample().resample(var2);
+          vd.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "photo-body-explode").toPcmSample().resample(var2);
+          ArchiveProvider.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "grid_effect_1").toPcmSample().resample(var2);
+          pa.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "grid_effect_2").toPcmSample().resample(var2);
+          PcmResampler.field_g = VorbisSample.loadNamed(jm.field_I, "", "pixelate").decodeToPcm().resample(var2);
+          ValidationIndicator.field_N = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "gas-pump").toPcmSample().resample(var2);
+          ng.field_mb = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "gas-burn").toPcmSample().resample(var2);
+          TerrainMaskSupport.field_e = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "left-foot-down").toPcmSample().resample(var2);
+          ri.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "right-foot-down").toPcmSample().resample(var2);
+          DraggableWidget.field_M = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "ship-fire").toPcmSample().resample(var2);
+          gn.field_e = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "ship-fire-three").toPcmSample().resample(var2);
+          uk.field_j = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "alien-fire").toPcmSample().resample(var2);
+          Bzip2State.field_G = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield").toPcmSample().resample(var2);
+          co.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield_impact").toPcmSample().resample(var2);
+          gm.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield_empty").toPcmSample().resample(var2);
+          DropTargetWidget.field_E = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-start").toPcmSample().resample(var2);
+          NameAvailabilityResult.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-filling").toPcmSample().resample(var2);
+          al.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-stop").toPcmSample().resample(var2);
+          SpriteOffset.field_f = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-full").toPcmSample().resample(var2);
+          fg.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "crate-attach").toPcmSample().resample(var2);
+          ObjectSpriteSet.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "tether-tighten").toPcmSample().resample(var2);
+          bc.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "tether-release").toPcmSample().resample(var2);
+          nm.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "powerup-collect").toPcmSample().resample(var2);
+          vi.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "repeller-active").toPcmSample().resample(var2);
+          w.field_hb = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "magnet-active").toPcmSample().resample(var2);
+          of.field_h = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "laser").toPcmSample().resample(var2);
+          IntrusiveNodeHashTable.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-ship").toPcmSample().resample(var2);
+          RasterBuffer.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion_5_seconds").toPcmSample().resample(var2);
+          pa.field_a = VorbisSample.loadNamed(jm.field_I, "", "beeping").decodeToPcm().resample(var2);
           this.a(param0 + 97, var2);
-          ci.field_a = kj.a(CheckboxPainter.field_h, "", "mine_inactive_hum_2").a().resample(var2);
-          qi.field_J = kj.a(CheckboxPainter.field_h, "", "100Hz square").a();
-          ve.field_d = kj.a(CheckboxPainter.field_h, "", "explosion-seeker-mine").a().resample(var2);
-          NameAvailabilityValidator.field_p = kj.a(CheckboxPainter.field_h, "", "rockbuster").a().resample(var2);
-          td.field_c = kj.a(CheckboxPainter.field_h, "", "explosion-rock-buster").a().resample(var2);
-          jh.field_k = kj.a(CheckboxPainter.field_h, "", "level_complete").a().resample(var2);
-          pl.field_o = kj.a(CheckboxPainter.field_h, "", "level_complete_score").a().resample(var2);
+          ci.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mine_inactive_hum_2").toPcmSample().resample(var2);
+          qi.field_J = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "100Hz square").toPcmSample();
+          ve.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-seeker-mine").toPcmSample().resample(var2);
+          NameAvailabilityValidator.field_p = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "rockbuster").toPcmSample().resample(var2);
+          td.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-rock-buster").toPcmSample().resample(var2);
+          jh.field_k = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "level_complete").toPcmSample().resample(var2);
+          pl.field_o = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "level_complete_score").toPcmSample().resample(var2);
           SpriteOffset.a((byte) 106);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -749,10 +749,10 @@ public final class EscapeVector extends NetworkGameClient {
             field_z = (String) null;
           }
           if (UiContainer.field_C != null) {
-            UiContainer.field_C.c();
+            UiContainer.field_C.shutdown();
           }
           if (ig.field_l != null) {
-            ig.field_l.c();
+            ig.field_l.shutdown();
           }
           di.a(1);
           return;
@@ -845,19 +845,19 @@ public final class EscapeVector extends NetworkGameClient {
     private final void a(int param0, PcmResampler param1) {
         String stackIn_6_2 = null;
         try {
-          sf.field_e[0] = kj.a(CheckboxPainter.field_h, "", "explosion-fuel-tank").a().resample(param1);
-          sf.field_e[param0] = kj.a(CheckboxPainter.field_h, "", "explosion-crate").a().resample(param1);
-          PcmSample dupTemp$8 = kj.a(CheckboxPainter.field_h, "", "explosion-magnet-repeller").a().resample(param1);
+          sf.field_e[0] = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-fuel-tank").toPcmSample().resample(param1);
+          sf.field_e[param0] = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-crate").toPcmSample().resample(param1);
+          PcmSample dupTemp$8 = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-magnet-repeller").toPcmSample().resample(param1);
           sf.field_e[4] = dupTemp$8;
           sf.field_e[3] = dupTemp$8;
-          sf.field_e[2] = kj.a(CheckboxPainter.field_h, "", "explosion-turret").a().resample(param1);
-          PcmSample dupTemp$9 = kj.a(CheckboxPainter.field_h, "", "explosion-tnt").a().resample(param1);
+          sf.field_e[2] = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-turret").toPcmSample().resample(param1);
+          PcmSample dupTemp$9 = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-tnt").toPcmSample().resample(param1);
           sf.field_e[8] = dupTemp$9;
           sf.field_e[5] = dupTemp$9;
-          PcmSample dupTemp$10 = kj.a(CheckboxPainter.field_h, "", "explosion-laser").a().resample(param1);
+          PcmSample dupTemp$10 = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-laser").toPcmSample().resample(param1);
           sf.field_e[7] = dupTemp$10;
           sf.field_e[6] = dupTemp$10;
-          PcmSample dupTemp$11 = kj.a(CheckboxPainter.field_h, "", "explosion-powerup").a().resample(param1);
+          PcmSample dupTemp$11 = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-powerup").toPcmSample().resample(param1);
           sf.field_e[13] = dupTemp$11;
           sf.field_e[12] = dupTemp$11;
           sf.field_e[11] = dupTemp$11;
@@ -1103,24 +1103,24 @@ public final class EscapeVector extends NetworkGameClient {
     final void initializeClient(byte guard) {
         try {
           this.a(0, 11, 8, 7, 21, (byte) -99, false, 9);
-          AudioOutput.a(22050, true, 10);
-          UiContainer.field_C = AudioOutput.a(NetworkGameClient.field_r, (java.awt.Component) ((Object) of.field_d), 0, 1024);
-          ig.field_l = AudioOutput.a(NetworkGameClient.field_r, (java.awt.Component) ((Object) of.field_d), 1, 22050);
+          AudioOutput.configure(22050, true, 10);
+          UiContainer.field_C = AudioOutput.create(NetworkGameClient.field_r, (java.awt.Component) ((Object) of.field_d), 0, 1024);
+          ig.field_l = AudioOutput.create(NetworkGameClient.field_r, (java.awt.Component) ((Object) of.field_d), 1, 22050);
           ObjectSpriteSet.field_e = new PcmStreamMixer();
-          UiContainer.field_C.b(ObjectSpriteSet.field_e);
+          UiContainer.field_C.setStream(ObjectSpriteSet.field_e);
           pl.field_n = new PcmStreamMixer();
           SoundCache.field_a = new ReverbPcmStream(pl.field_n);
-          SoundCache.field_a.d(0.9399999976158142f);
-          SoundCache.field_a.b(14.826103210449219f);
+          SoundCache.field_a.setFeedback(0.9399999976158142f);
+          SoundCache.field_a.setDampingTimeMicros(14.826103210449219f);
           ObjectSpriteSet.field_e.addSubstream(SoundCache.field_a);
           nb.field_c = new PcmStreamMixer();
           BoundedRandomAccessFile.field_b = new ReverbPcmStream(nb.field_c);
           if (guard != -97) {
             EscapeVector.a((String) null, 31, 49, (byte) 88);
           }
-          BoundedRandomAccessFile.field_b.d(0.9399999976158142f);
-          BoundedRandomAccessFile.field_b.b(14.826103210449219f);
-          ig.field_l.b(BoundedRandomAccessFile.field_b);
+          BoundedRandomAccessFile.field_b.setFeedback(0.9399999976158142f);
+          BoundedRandomAccessFile.field_b.setDampingTimeMicros(14.826103210449219f);
+          ig.field_l.setStream(BoundedRandomAccessFile.field_b);
           this.a(true, (byte) -35, true, true, true);
           ua.field_c = new kg();
           return;

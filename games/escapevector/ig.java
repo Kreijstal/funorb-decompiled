@@ -856,7 +856,7 @@ final class ig {
             if (var7.field_h == var2) {
               PcmSample var8 = b.field_b;
               int var9 = 16384 * var7.field_f.field_h / 640;
-              PcmSampleStream var10 = PcmSampleStream.c(var8, var4, var3, var9);
+              PcmSampleStream var10 = PcmSampleStream.createAtRatePercentQ6(var8, var4, var3, var9);
               ValidatedTextWidget.field_K[var7.field_d] = var10;
             }
           }

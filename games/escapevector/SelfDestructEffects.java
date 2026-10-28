@@ -413,7 +413,7 @@ final class SelfDestructEffects {
         if (var6 == null) {
           return;
         }
-        var6.f(var4, var5);
+        var6.setVolumeAndPanQ6(var4, var5);
     }
 
     final int c(boolean param0) {

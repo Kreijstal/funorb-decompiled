@@ -12,12 +12,12 @@ final class on {
 
     final static void a(ResourceArchive param0, int param1) {
         try {
-          in.a(param0.a(-4, "", "headers.packvorbis"));
-          in var2 = in.a(param0, "jagex logo2.packvorbis", "");
+          VorbisSample.decodeSetup(param0.a(-4, "", "headers.packvorbis"));
+          VorbisSample var2 = VorbisSample.loadNamed(param0, "jagex logo2.packvorbis", "");
           if (param1 != -58) {
             field_c = (String) null;
           }
-          var2.b();
+          var2.decodeToPcm();
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "on.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

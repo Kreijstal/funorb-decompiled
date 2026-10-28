@@ -3,12 +3,12 @@
  */
 final class AudioService implements Runnable {
     static String[][] field_b;
-    volatile boolean field_g;
+    volatile boolean running;
     static String field_a;
     static fc field_h;
-    SystemTaskService field_e;
-    volatile boolean field_c;
-    volatile AudioOutput[] field_f;
+    SystemTaskService tasks;
+    volatile boolean stopRequested;
+    volatile AudioOutput[] outputs;
     static String[] field_d;
 
     public final void run() {
@@ -16,12 +16,12 @@ final class AudioService implements Runnable {
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         int var4 = EscapeVector.obfuscationControl;
-        this.field_g = true;
+        this.running = true;
         try {
           try {
             boolean decompiledFrameCompleted0 = true;
             while (true) {
-              if (!this.field_c) {
+              if (!this.stopRequested) {
                 if (var4 != 0) {
                   decompiledRegionSelector0 = 1;
                   decompiledFrameCompleted0 = false;
@@ -29,14 +29,14 @@ final class AudioService implements Runnable {
                 }
                 int var1_int = 0;
                 while (var1_int < 2) {
-                  AudioOutput var2 = this.field_f[var1_int];
+                  AudioOutput var2 = this.outputs[var1_int];
                   if (var2 != null) {
-                    var2.d();
+                    var2.serviceOutput();
                   }
                   var1_int++;
                 }
                 en.a((byte) -95, 10L);
-                FullscreenFocusCanvas.a((byte) -61, this.field_e, (Object) null);
+                FullscreenFocusCanvas.a((byte) -61, this.tasks, (Object) null);
                 continue;
               }
               break;
@@ -60,13 +60,13 @@ final class AudioService implements Runnable {
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           Throwable var3 = decompiledCaughtException;
-          this.field_g = false;
+          this.running = false;
           throw AudioService.<RuntimeException>rethrowUnchecked(var3);
         }
         if (decompiledRegionSelector1 == 0) {
-          this.field_g = false;
+          this.running = false;
         } else if (decompiledRegionSelector1 != 1) {
-          this.field_g = false;
+          this.running = false;
         }
     }
 
@@ -375,9 +375,9 @@ final class AudioService implements Runnable {
     }
 
     AudioService() {
-        this.field_f = new AudioOutput[2];
-        this.field_c = false;
-        this.field_g = false;
+        this.outputs = new AudioOutput[2];
+        this.stopRequested = false;
+        this.running = false;
     }
 
     static {

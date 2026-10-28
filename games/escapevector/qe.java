@@ -30,13 +30,13 @@ final class qe {
         }
         if (param0) {
           var5 = 256;
-          var4.g(var5);
+          var4.fadeOut(var5);
           var8[this.field_d] = null;
         } else {
           var5 = 256;
           int var6 = qm.field_c * 6144 / 64;
           int var7 = 16384 * this.field_f.field_h / 640;
-          var4.a(var5, var6, var7);
+          var4.rampVolumeAndPanQ6(var5, var6, var7);
         }
     }
 
