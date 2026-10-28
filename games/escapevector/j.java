@@ -24,7 +24,7 @@ final class j {
           } else if (105 < param3) {
             SpriteState.field_y = bm.a(param1, param3, 4);
           } else {
-            SpriteState.field_y = rg.a(args, (byte) -103);
+            SpriteState.field_y = BufferedRandomAccessFile.a(args, (byte) -103);
           }
           if (param2 == -72) {
             return;

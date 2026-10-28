@@ -39,11 +39,11 @@ final class rf {
         }
     }
 
-    final static te a(int param0, te param1, int[] param2) {
+    final static IndexedSprite a(int param0, IndexedSprite param1, int[] param2) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
-          te var3 = new te(0, 0, 0);
+          IndexedSprite var3 = new IndexedSprite(0, 0, 0);
           if (param0 > -15) {
             field_a = 60;
           }
@@ -55,7 +55,7 @@ final class rf {
           var3.field_h = param1.field_h;
           var3.field_f = param1.field_f;
           var3.field_d = param1.field_d;
-          te stackIn_3_0 = var3;
+          IndexedSprite stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

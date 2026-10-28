@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class o extends il {
+final class o extends PcmMixerListener {
     private int[] field_m;
     private int[] field_Y;
     private int[] field_J;
@@ -19,7 +19,7 @@ final class o extends il {
     private int[] field_l;
     private int[] field_S;
     private int field_ib;
-    private hl[] field_T;
+    private PcmSampleStream[] field_T;
     private int field_r;
     private int field_jb;
     private int[] field_K;
@@ -60,12 +60,12 @@ final class o extends il {
     private int field_i;
     private int[] field_V;
 
-    final int a(hj param0) {
+    final int onDeadline(PcmStreamMixer mixer) {
         if (this.c() &&
           !this.field_t) {
           return -1;
         }
-        int var3 = ie.field_q;
+        int var3 = AudioOutput.field_q;
         int var4 = (var3 << 9) + (var3 << 7);
         return var4 / (this.field_r * this.field_y);
     }
@@ -86,21 +86,21 @@ final class o extends il {
           } else if (param2 > 256) {
             param2 = 256;
           }
-          this.field_T[param0].b(ie.field_q >> 7, param1 * this.field_i * this.field_jb >> 12, param2);
+          this.field_T[param0].b(AudioOutput.field_q >> 7, param1 * this.field_i * this.field_jb >> 12, param2);
         }
     }
 
     private final void e(int param0) {
         if (this.field_T[param0] != null) {
-          this.field_T[param0].g(ie.field_q >> 7);
+          this.field_T[param0].g(AudioOutput.field_q >> 7);
           this.field_T[param0] = null;
         }
     }
 
-    final void b() {
+    final void onRemoved() {
         for (int var1 = 0; var1 < this.field_u.field_B; var1++) {
           if (this.field_T[var1] != null) {
-            this.field_h.b(this.field_T[var1]);
+            this.owner.removeSubstream(this.field_T[var1]);
           }
         }
     }
@@ -205,7 +205,7 @@ final class o extends il {
         this.field_lb = new int[this.field_u.field_B];
         this.field_w = new int[this.field_u.field_B];
         this.field_X = new boolean[this.field_u.field_B];
-        this.field_T = new hl[this.field_u.field_B];
+        this.field_T = new PcmSampleStream[this.field_u.field_B];
         this.e();
     }
 
@@ -939,30 +939,30 @@ final class o extends il {
           } else if (param5 > 255) {
             param5 = 255;
           }
-          hh stackIn_13_0 = this.field_u.field_s[param1];
-          int stackIn_13_1 = param3 * 256 / ie.field_q;
+          PcmSample stackIn_13_0 = this.field_u.field_s[param1];
+          int stackIn_13_1 = param3 * 256 / AudioOutput.field_q;
           if (param2 == 0) {
             stackIn_14_2 = param4 * this.field_i * this.field_jb >> 12;
           } else {
             stackIn_14_2 = 0;
           }
-          hl var7 = hl.b(stackIn_13_0, stackIn_13_1, stackIn_14_2, param5);
+          PcmSampleStream var7 = PcmSampleStream.b(stackIn_13_0, stackIn_13_1, stackIn_14_2, param5);
           var7.b(this.field_u.field_h[param1], this.field_u.field_A[param1]);
-          hl stackIn_16_0 = var7;
+          PcmSampleStream stackIn_16_0 = var7;
           int stackIn_17_1 = (this.field_u.field_E[param1] == 0) ? 0 : -1;
-          ((hl) (Object) stackIn_16_0).h(stackIn_17_1);
-          hl stackIn_19_0 = var7;
+          ((PcmSampleStream) (Object) stackIn_16_0).h(stackIn_17_1);
+          PcmSampleStream stackIn_19_0 = var7;
           boolean stackIn_20_1 = (this.field_u.field_E[param1] != 2) ? false : true;
-          ((hl) (Object) stackIn_19_0).a(stackIn_20_1);
+          ((PcmSampleStream) (Object) stackIn_19_0).a(stackIn_20_1);
           if (param2 != 0) {
             var7.e(param2);
-            var7.b(ie.field_q >> 7, param4 * this.field_i * this.field_jb >> 12, param5);
+            var7.b(AudioOutput.field_q >> 7, param4 * this.field_i * this.field_jb >> 12, param5);
           }
           this.field_T[param0] = var7;
-          if (this.field_h != null) {
-            Object var8 = this.field_h;
+          if (this.owner != null) {
+            Object var8 = this.owner;
             synchronized (var8) {
-              this.field_h.a(var7);
+              this.owner.addSubstream(var7);
             }
           }
           return;
@@ -973,17 +973,17 @@ final class o extends il {
         this.field_jb = param0;
     }
 
-    final void a() {
+    final void onScheduled() {
         for (int var1 = 0; var1 < this.field_u.field_B; var1++) {
           if (this.field_T[var1] != null) {
-            this.field_h.a(this.field_T[var1]);
+            this.owner.addSubstream(this.field_T[var1]);
           }
         }
     }
 
     private final void a(int param0, int param1) {
         if (this.field_T[param0] != null) {
-          this.field_T[param0].i(param1 * 256 / ie.field_q);
+          this.field_T[param0].i(param1 * 256 / AudioOutput.field_q);
         }
     }
 

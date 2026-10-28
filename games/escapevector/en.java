@@ -13,7 +13,7 @@ final class en {
     static int field_k;
     static IntrusiveDeque field_i;
     static long field_l;
-    static hh field_d;
+    static PcmSample field_d;
     static String field_e;
 
     final int[] a(int param0, byte param1) {
@@ -69,7 +69,7 @@ final class en {
           return false;
         }
         if (param2 != 0) {
-          field_d = (hh) null;
+          field_d = (PcmSample) null;
         }
         return var4.a(param0, (byte) -100);
     }
@@ -500,7 +500,7 @@ final class en {
         }
     }
 
-    final static void a(mf param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         int var2_int = param1;
         if (!param0.a(0, da.field_d[var2_int])) {
           return;
@@ -521,7 +521,7 @@ final class en {
           kn.field_h = fe.a("tutorial", param0, "edge_inner_top_right", true);
           wa.field_e = fe.a("tutorial", param0, "edge_outer", true);
           qf.field_d = fe.a("tutorial", param0, "exitbg", true);
-          c.field_n = fe.a("tutorial", param0, "panel", true);
+          CipherPacketBuffer.field_n = fe.a("tutorial", param0, "panel", true);
           gm.field_a = fe.a("tutorial", param0, "platform", true);
           tk.field_a[var2_int] = fe.a("tutorial", param0, "texture", true);
           fa.field_c[var2_int] = true;
@@ -746,14 +746,14 @@ final class en {
         try {
           int var1_int = hi.field_o;
           int var2 = param0;
-          if (2 == f.field_j) {
+          if (2 == ArchiveIndex.field_j) {
             long var3_long = -bd.field_k + td.b(128);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (0 > var2) {
               var2 = 0;
             }
           }
-          for (int var3 = 0; s.field_I.length > var3; var3++) {
+          for (int var3 = 0; Js5NetworkRequest.field_I.length > var3; var3++) {
             int var4 = jj.field_a[var3];
             if (!(var4 >= 0)) {
               var5 = lh.field_e;
@@ -762,8 +762,8 @@ final class en {
             } else {
               var5 = pc.field_d;
             }
-            String var6 = s.field_I[var3];
-            if (2 == f.field_j &&
+            String var6 = Js5NetworkRequest.field_I[var3];
+            if (2 == ArchiveIndex.field_j &&
               1 == var2) {
               if (tg.field_nb.length >= qm.field_f.length) {
                 stackIn_19_0 = tg.field_nb.length;
@@ -803,7 +803,7 @@ final class en {
             String stackIn_38_1 = var6;
             boolean stackIn_39_2 = !(var4 < 0);
             int var7Lifetime1 = ee.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
-            int var8Lifetime1 = rn.field_e - (var7Lifetime1 >> 1);
+            int var8Lifetime1 = ClientException.field_e - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + hn.field_s;
               if (var4 != cb.field_c.field_h) {
@@ -854,7 +854,7 @@ final class en {
         }
         int var5 = param0 / 32;
         if (param1 > -124) {
-          field_d = (hh) null;
+          field_d = (PcmSample) null;
         }
         int[] var7Lifetime1 = var4;
         if (0 <= var5 &&

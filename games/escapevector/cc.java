@@ -12,7 +12,7 @@ final class cc extends IntrusiveNode {
     int field_h;
     static String field_l;
 
-    final static Sprite[] a(int param0, mf param1, int param2, byte param3) {
+    final static Sprite[] a(int param0, ResourceArchive param1, int param2, byte param3) {
         String stackIn_8_2 = null;
         try {
           int var4_int = -48 % ((param3 + 38) / 33);

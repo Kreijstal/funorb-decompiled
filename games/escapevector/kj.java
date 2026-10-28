@@ -36,7 +36,7 @@ final class kj {
         return var3;
     }
 
-    final static kj a(mf param0, String param1, String param2) {
+    final static kj a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(-4, param2, param1);
         if (var3 == null) {
           return null;
@@ -44,7 +44,7 @@ final class kj {
         return new kj(new PacketBuffer(var3));
     }
 
-    final static kj a(mf param0, int param1, int param2) {
+    final static kj a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, (byte) -97, param2);
         if (var3 == null) {
           return null;
@@ -52,9 +52,9 @@ final class kj {
         return new kj(new PacketBuffer(var3));
     }
 
-    final hh a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new hh(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
     private kj(PacketBuffer param0) {

@@ -24,7 +24,7 @@ final class ml {
         field_a = null;
     }
 
-    final static ce a(int param0, mf param1, ec param2, int param3, int param4) {
+    final static ce a(int param0, ResourceArchive param1, SoundCache param2, int param3, int param4) {
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {

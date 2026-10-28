@@ -31,7 +31,7 @@ class cd extends DualLinkNode {
             param1.length() != 0) {
             int var2_int = param1.indexOf('@');
             if (param0 == var2_int) {
-              tk stackIn_8_0 = mf.field_d;
+              tk stackIn_8_0 = ResourceArchive.field_d;
               return stackIn_8_0;
             }
             String var3 = param1.substring(0, var2_int);
@@ -41,7 +41,7 @@ class cd extends DualLinkNode {
               tk stackIn_12_0 = var5;
               return stackIn_12_0;
             }
-            tk stackIn_14_0 = rn.a(var4, ~param0);
+            tk stackIn_14_0 = ClientException.a(var4, ~param0);
             return stackIn_14_0;
           }
           tk stackIn_4_0 = ig.field_g;

@@ -18,7 +18,7 @@ final class lb extends ah {
           if (this.field_o instanceof og) {
             el var3 = ((og) ((Object) this.field_o)).a((byte) -89);
             if (var3 != null) {
-              if (var3.a(17124) == df.field_h &&
+              if (var3.a(17124) == IsaacRandom.field_h &&
                 !param1.equals(this.field_o.field_l)) {
                 String stackIn_7_0 = me.field_n;
                 return stackIn_7_0;
@@ -57,15 +57,15 @@ final class lb extends ah {
           if (this.field_o instanceof og) {
             el var3 = ((og) ((Object) this.field_o)).a((byte) -89);
             if (var3 != null &&
-              var3.a(17124) != df.field_h) {
-              rf stackIn_6_0 = ob.field_a;
+              var3.a(17124) != IsaacRandom.field_h) {
+              rf stackIn_6_0 = ArchiveProvider.field_a;
               return stackIn_6_0;
             }
           }
           if (param1.equals(this.field_o.field_l)) {
-            stackIn_10_0 = df.field_h;
+            stackIn_10_0 = IsaacRandom.field_h;
           } else {
-            stackIn_10_0 = ob.field_a;
+            stackIn_10_0 = ArchiveProvider.field_a;
           }
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

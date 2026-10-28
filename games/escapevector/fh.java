@@ -31,10 +31,10 @@ abstract class fh {
     final static void b(int param0) {
         if (param0 > -27) {
           fh.a((byte) 2);
-          lj.a(17, 27);
+          WhirlpoolHasher.a(17, 27);
           return;
         }
-        lj.a(17, 27);
+        WhirlpoolHasher.a(17, 27);
     }
 
     abstract void a(boolean param0, byte[] param1);

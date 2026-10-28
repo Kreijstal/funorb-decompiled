@@ -10,9 +10,9 @@ final class pj implements Runnable {
     private int field_j;
     private int field_d;
     private boolean field_c;
-    private la field_m;
+    private SystemTask field_m;
     private byte[] field_l;
-    private lk field_e;
+    private SystemTaskService field_e;
     static Sprite[] field_g;
     private InputStream field_h;
     private OutputStream field_b;
@@ -135,7 +135,7 @@ final class pj implements Runnable {
         return this.field_h.available();
     }
 
-    pj(java.net.Socket param0, lk param1) throws IOException {
+    pj(java.net.Socket param0, SystemTaskService param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -280,7 +280,7 @@ final class pj implements Runnable {
         }
     }
 
-    private pj(java.net.Socket param0, lk param1, int param2) throws IOException {
+    private pj(java.net.Socket param0, SystemTaskService param1, int param2) throws IOException {
         this.field_f = false;
         this.field_d = 0;
         this.field_c = false;

@@ -4,15 +4,15 @@
 final class aj {
     static int field_d;
     static fe field_a;
-    static hj field_f;
+    static PcmStreamMixer field_f;
     static String field_e;
     static String field_b;
     static Sprite field_c;
 
     final static void a(int param0, int param1, ij param2) {
         try {
-          c var3 = om.field_c;
-          var3.a(param1, true);
+          CipherPacketBuffer var3 = om.field_c;
+          var3.writeCipheredOpcode(param1, true);
           var3.f(5, -123);
           var3.f(0, -123);
           var3.h(-123, param2.field_n);

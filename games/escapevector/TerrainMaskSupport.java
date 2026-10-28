@@ -5,7 +5,7 @@ import java.io.*;
 
 final class TerrainMaskSupport {
     static Sprite field_a;
-    static hh field_e;
+    static PcmSample field_e;
     static int[] field_b;
     static int[] field_c;
     static int[] field_d;

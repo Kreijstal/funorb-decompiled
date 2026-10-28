@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ii {
-    static mf field_a;
+    static ResourceArchive field_a;
     static String field_b;
 
     final static void a(byte param0, int param1) {
@@ -25,7 +25,7 @@ final class ii {
 
     public static void a(int param0) {
         if (param0 != 20) {
-          field_a = (mf) null;
+          field_a = (ResourceArchive) null;
           field_a = null;
           field_b = null;
           return;

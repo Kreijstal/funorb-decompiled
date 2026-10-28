@@ -11,7 +11,7 @@ final class he extends k {
     static GameAppletShell field_r;
     static int field_y;
     private ef field_t;
-    static mf field_u;
+    static ResourceArchive field_u;
     static int field_x;
 
     final ef a(int param0, byte param1) {
@@ -26,18 +26,18 @@ final class he extends k {
         return dupTemp$1;
     }
 
-    final static te a(mf param0, int param1, int param2, int param3) {
+    final static IndexedSprite a(ResourceArchive param0, int param1, int param2, int param3) {
         String stackIn_10_2 = null;
         try {
           if (param1 != -18109) {
             field_v = (String) null;
           }
           if (uc.a(param0, 96, param3, param2)) {
-            te stackIn_6_0 = da.b((byte) 8);
+            IndexedSprite stackIn_6_0 = da.b((byte) 8);
             return stackIn_6_0;
           }
           Object stackIn_4_0 = null;
-          return (te) (stackIn_4_0);
+          return (IndexedSprite) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;

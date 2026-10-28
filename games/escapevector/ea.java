@@ -23,7 +23,7 @@ final class ea {
         this.field_a.d(this.field_j.field_a, this.field_j.field_c, this.field_c);
     }
 
-    final static ab a(byte[] param0, int param1) {
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
         String stackIn_10_2 = null;
         try {
           if (param1 != -1) {
@@ -32,9 +32,9 @@ final class ea {
           if (param0 == null) {
             return null;
           }
-          ab var2 = new ab(param0, gn.field_k, gi.field_e, qh.field_k, bc.field_a, qk.field_f, qe.field_a);
+          CoverageBitmapFont var2 = new CoverageBitmapFont(param0, gn.field_k, gi.field_e, qh.field_k, bc.field_a, qk.field_f, qe.field_a);
           of.a(false);
-          ab stackIn_6_0 = var2;
+          CoverageBitmapFont stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -39,7 +39,7 @@ abstract class vj {
               if (param4) {
                 stackIn_25_0 = DualLinkNode.field_k[var12];
               } else {
-                stackIn_25_0 = th.field_v[var12];
+                stackIn_25_0 = Bzip2State.field_v[var12];
               }
               int var13 = stackIn_25_0;
               if (var7_int < var13) {

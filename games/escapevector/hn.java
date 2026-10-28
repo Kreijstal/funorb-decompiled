@@ -6,7 +6,7 @@ final class hn implements db {
     private int field_p;
     private int field_m;
     private int field_j;
-    static mf field_h;
+    static ResourceArchive field_h;
     static ig field_l;
     private int field_g;
     static hf field_q;
@@ -14,7 +14,7 @@ final class hn implements db {
     private int field_e;
     static boolean field_n;
     private int field_k;
-    private wl field_o;
+    private BitmapFont field_o;
     private int field_d;
     private int field_i;
     static int field_s;
@@ -107,7 +107,7 @@ final class hn implements db {
         field_c = null;
     }
 
-    hn(wl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    hn(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_p = 1;
         this.field_j = 1;
         try {

@@ -42,7 +42,7 @@ final class jf extends bj implements sg, qb {
           this.field_N.field_s = (db) ((Object) new ck());
           String var7 = r.a(mh.field_c, -63, new String[]{this.k(-102), this.a((byte) 126)});
           int var3 = 20;
-          k var4 = new k(sb.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, sb.field_a.field_r, -1, 2147483647, true);
+          k var4 = new k(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.field_r, -1, 2147483647, true);
           this.field_L = new ue(var7, var4);
           this.field_L.field_i = "";
           this.field_L.a(ah.field_m, (byte) 102, 0);

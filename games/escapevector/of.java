@@ -9,7 +9,7 @@ final class of {
     static boolean field_b;
     static Sprite field_a;
     static fd field_g;
-    static hh field_h;
+    static PcmSample field_h;
 
     final static Sprite a(int param0, byte param1, int param2) {
         int var6 = EscapeVector.obfuscationControl;
@@ -33,7 +33,7 @@ final class of {
         return stackIn_10_0;
     }
 
-    final static boolean a(mf param0, mf param1, mf param2, byte param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3) {
         String stackIn_22_2 = null;
         String stackIn_25_2 = null;
         String stackIn_28_2 = null;
@@ -49,7 +49,7 @@ final class of {
             if (param2.b(0) &&
               param2.a(0, "button.gif")) {
               if (param3 > -1) {
-                field_h = (hh) null;
+                field_h = (PcmSample) null;
               }
               return true;
             }
@@ -93,7 +93,7 @@ final class of {
           }
           if (ia.field_y == ui.field_b &&
             param1.equals(tc.field_j)) {
-            ui.field_b = vn.field_g;
+            ui.field_b = RasterBuffer.field_g;
             lm stackIn_8_0 = co.field_a;
             return stackIn_8_0;
           }

@@ -10,7 +10,7 @@ final class ig {
     private dk[] field_q;
     private boolean field_o;
     private int field_e;
-    static ie field_l;
+    static AudioOutput field_l;
     int field_h;
     private dk[] field_j;
     private int field_f;
@@ -55,9 +55,9 @@ final class ig {
     final static void a(int param0, int param1, ik param2) {
         int var7 = EscapeVector.obfuscationControl;
         try {
-          c var8 = om.field_c;
-          c var9 = var8;
-          var9.a(param1, true);
+          CipherPacketBuffer var8 = om.field_c;
+          CipherPacketBuffer var9 = var8;
+          var9.writeCipheredOpcode(param1, true);
           var9.position = var9.position + 1;
           int var4 = var9.position;
           var9.f(1, -123);
@@ -118,7 +118,7 @@ final class ig {
         }
         if (param0 != -98) {
           dk var3 = (dk) null;
-          this.a((hh) null, 19, (dk) null, 55, 2);
+          this.a((PcmSample) null, 19, (dk) null, 55, 2);
         }
         if (this.field_m == this.field_r.levelIndex) {
           return;
@@ -156,11 +156,11 @@ final class ig {
         }
     }
 
-    private final void a(hh param0, int param1, dk param2, int param3, int param4) {
+    private final void a(PcmSample param0, int param1, dk param2, int param3, int param4) {
         try {
           int var6_int = param2.field_p / param1 + param2.field_l;
           int var7 = var6_int * 16384 / 640;
-          rk.field_e.a(param0, param4, param3, var7);
+          rk.field_e.playSampleWithPan(param0, param4, param3, var7);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ig.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -503,7 +503,7 @@ final class ig {
                 qe var8 = var6[var7];
                 if (var8.field_d == var5) {
                   int var9 = var8.field_f.field_h * 16384 / 640;
-                  rk.field_e.a(oa.field_w, var4Lifetime1, var3, var9);
+                  rk.field_e.playSampleWithPan(ArchiveRequest.field_w, var4Lifetime1, var3, var9);
                 }
               }
             }
@@ -589,11 +589,11 @@ final class ig {
         }
         int var6Lifetime1 = 5;
         this.a((byte) -12, var6Lifetime1, var5, var3);
-        fi.a(this.field_j, 0);
+        IndexedSpriteState.a(this.field_j, 0);
         if (!var2) {
-          fi.a(this.field_b, 0);
+          IndexedSpriteState.a(this.field_b, 0);
         }
-        fi.a(this.field_q, 0);
+        IndexedSpriteState.a(this.field_q, 0);
         if (param0 <= 8) {
           ih var7 = (ih) null;
           this.a((byte) -115, (ih) null, 37);
@@ -854,9 +854,9 @@ final class ig {
           for (int var6 = 0; var5.length > var6; var6++) {
             qe var7 = var5[var6];
             if (var7.field_h == var2) {
-              hh var8 = b.field_b;
+              PcmSample var8 = b.field_b;
               int var9 = 16384 * var7.field_f.field_h / 640;
-              hl var10 = hl.c(var8, var4, var3, var9);
+              PcmSampleStream var10 = PcmSampleStream.c(var8, var4, var3, var9);
               gd.field_K[var7.field_d] = var10;
             }
           }
@@ -890,7 +890,7 @@ final class ig {
           if (var6 == null) {
             return;
           }
-          this.a(oa.field_w, 2, (dk) (var6), param1, param2);
+          this.a(ArchiveRequest.field_w, 2, (dk) (var6), param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

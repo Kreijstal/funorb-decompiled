@@ -6,7 +6,7 @@ final class bg {
     static int field_f;
     static String field_d;
     static int[] field_c;
-    static rg[] field_e;
+    static BufferedRandomAccessFile[] field_e;
     static String field_b;
     static String[] field_g;
 
@@ -22,7 +22,7 @@ final class bg {
         }
     }
 
-    final static byte[][][] a(mf param0, byte[][][] param1, mf param2, int param3) {
+    final static byte[][][] a(ResourceArchive param0, byte[][][] param1, ResourceArchive param2, int param3) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;

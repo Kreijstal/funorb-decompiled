@@ -66,12 +66,12 @@ final class lf extends ue {
             return;
           }
           if (var6 != ug.field_c) {
-            if (ob.field_a == var6) {
+            if (ArchiveProvider.field_a == var6) {
               Sprite var22 = ul.field_E[2];
               var22.c(var9, -(var22.height >> 1) + var10, 256);
               return;
             }
-            if (df.field_h != var6) {
+            if (IsaacRandom.field_h != var6) {
               return;
             }
             Sprite var21 = ul.field_E[1];
@@ -147,12 +147,12 @@ final class lf extends ue {
           return;
         }
         if (var6Lifetime1 != ug.field_c) {
-          if (ob.field_a == var6Lifetime1) {
+          if (ArchiveProvider.field_a == var6Lifetime1) {
             Sprite var27 = ul.field_E[2];
             var27.c(var9Lifetime1, -(var27.height >> 1) + var10Lifetime1, 256);
             return;
           }
-          if (df.field_h != var6Lifetime1) {
+          if (IsaacRandom.field_h != var6Lifetime1) {
             return;
           }
           Sprite var26 = ul.field_E[1];
@@ -195,7 +195,7 @@ final class lf extends ue {
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
-          param2 = ca.a(-1, '_', param2, "");
+          param2 = MouseWheelInput.replaceCharacter(-1, '_', param2, "");
           String var3 = DynamicTerrainRenderer.a(param0, false);
           if (param1 != 37) {
             field_J = (String) null;

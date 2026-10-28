@@ -13,7 +13,7 @@ final class id {
           bi.b();
           SoftwareRasterizer.d();
           kb.field_d = 0;
-          fi.a(-124);
+          IndexedSpriteState.a(-124);
           if (param0 < 115) {
             id.b(109);
           }
@@ -31,9 +31,9 @@ final class id {
     }
 
     final static void a(int param0, int param1) {
-        jn.field_c = 100 * param1 / 150;
-        jn.field_a = (param1 << 16) / 150;
-        jn.field_e = param0 * param1 / 150;
+        IntKeyLookup.field_c = 100 * param1 / 150;
+        IntKeyLookup.field_a = (param1 << 16) / 150;
+        IntKeyLookup.field_e = param0 * param1 / 150;
     }
 
     public static void b(int param0) {

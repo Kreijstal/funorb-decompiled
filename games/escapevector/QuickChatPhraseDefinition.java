@@ -11,7 +11,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     int[] field_z;
     private int[] field_x;
     private String[] field_s;
-    static hh field_t;
+    static PcmSample field_t;
 
     private final void a(int param0, PacketBuffer param1, int param2) {
         String stackIn_24_2 = null;
@@ -120,7 +120,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
           if (param3 != 14) {
-            field_t = (hh) null;
+            field_t = (PcmSample) null;
           }
           if (null == jb.field_r) {
             jb.field_r = new w(bo.field_F, dj.field_b);
@@ -141,7 +141,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           String var3 = param1.getParameter("username");
           if (var3 != null) {
             CharSequence var4 = (CharSequence) ((Object) var3);
-            if (vn.a((byte) 91, var4) != 0L) {
+            if (RasterBuffer.a((byte) 91, var4) != 0L) {
               return;
             }
           }

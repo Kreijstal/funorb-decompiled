@@ -66,7 +66,7 @@ final class pk {
         if (this.field_s > ok.field_c) {
           return false;
         }
-        if (s.field_x > 0) {
+        if (Js5NetworkRequest.field_x > 0) {
           return true;
         }
         return false;
@@ -152,10 +152,10 @@ final class pk {
     }
 
     final void b(int param0) {
-        if (null != df.field_d) {
+        if (null != IsaacRandom.field_d) {
           return;
         }
-        if (s.field_x <= 0) {
+        if (Js5NetworkRequest.field_x <= 0) {
           this.field_a = false;
         }
         if (!this.field_a) {

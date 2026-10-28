@@ -4,13 +4,13 @@
 final class pl extends ld {
     private static long[] field_l;
     static float field_t;
-    static hj field_n;
+    static PcmStreamMixer field_n;
     static om field_m;
-    static mf field_j;
+    static ResourceArchive field_j;
     static int field_r;
     static t field_q;
     static String[] field_s;
-    static hh field_o;
+    static PcmSample field_o;
     static String field_i;
     static String[] field_k;
     static String field_p;

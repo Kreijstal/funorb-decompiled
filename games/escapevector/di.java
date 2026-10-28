@@ -21,9 +21,9 @@ final class di {
           re.d(2);
           lb.c(true);
           ac.d(-16802);
-          if (rn.a(-31879)) {
-            om.field_c.a(1, true);
-            rn.a(0, 30785);
+          if (ClientException.a(-31879)) {
+            om.field_c.writeCipheredOpcode(1, true);
+            ClientException.a(0, 30785);
             nm.a(16);
             return;
           }
@@ -33,12 +33,12 @@ final class di {
         re.d(2);
         lb.c(true);
         ac.d(-16802);
-        if (!rn.a(-31879)) {
+        if (!ClientException.a(-31879)) {
           nm.a(16);
           return;
         }
-        om.field_c.a(1, true);
-        rn.a(0, 30785);
+        om.field_c.writeCipheredOpcode(1, true);
+        ClientException.a(0, 30785);
         nm.a(16);
     }
 
@@ -76,7 +76,7 @@ final class di {
         field_b = null;
     }
 
-    final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5, wl param6, int param7, Sprite[] param8, boolean param9, int param10, int param11, wl param12, byte param13, int param14) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7, Sprite[] param8, boolean param9, int param10, int param11, BitmapFont param12, byte param13, int param14) {
         try {
           Sprite[] var16 = (Sprite[]) null;
           ti.a(param8, param10, param1, param5, param11, 480, 0, param4, param3, lh.field_e, param12, pc.field_d, param2, param7, (Sprite[]) null, 2, param14, 0, gd.field_X, param6, param0);

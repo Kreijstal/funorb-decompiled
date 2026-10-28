@@ -45,8 +45,8 @@ final class km extends fh {
     }
 
     final static void a(int param0, int param1) {
-        c var2 = om.field_c;
-        var2.a(param0, true);
+        CipherPacketBuffer var2 = om.field_c;
+        var2.writeCipheredOpcode(param0, true);
         var2.f(1, -123);
         int var3 = -50 % ((61 - param1) / 57);
         var2.f(2, -123);
@@ -67,11 +67,11 @@ final class km extends fh {
         if (!ua.field_c.a(-19836)) {
           ua.field_c.g(-9949);
         }
-        hk.b(param0 ^ -57);
+        CachedArchiveProvider.b(param0 ^ -57);
         fg.b(0);
     }
 
-    final static void a(PacketBuffer param0, lk param1, int param2, int param3) {
+    final static void a(PacketBuffer param0, SystemTaskService param1, int param2, int param3) {
         try {
           String stackIn_39_2 = null;
           String stackIn_42_2 = null;
@@ -86,12 +86,12 @@ final class km extends fh {
             mn var17 = new mn();
             var17.field_i = param0.readUnsignedByte(0);
             var17.field_g = param0.readInt(param3 + 19130);
-            var17.field_p = new la[var17.field_i];
+            var17.field_p = new SystemTask[var17.field_i];
             var17.field_m = new int[var17.field_i];
             var17.field_o = new int[var17.field_i];
             var17.field_j = new int[var17.field_i];
             var17.field_l = new byte[var17.field_i][][];
-            var17.field_r = new la[var17.field_i];
+            var17.field_r = new SystemTask[var17.field_i];
             for (int var5 = 0; var5 < var17.field_i; var5++) {
               try {
                 int var6_int = param0.readUnsignedByte(0);
@@ -190,9 +190,9 @@ final class km extends fh {
 
     final static void a(PacketBuffer param0, int param1) {
         try {
-          hk.field_n = param0.readUnsignedShort(param1 - 1238557701) << 5;
+          CachedArchiveProvider.field_n = param0.readUnsignedShort(param1 - 1238557701) << 5;
           int var2_int = param0.readUnsignedByte(0);
-          hk.field_n = hk.field_n + (var2_int >> 3);
+          CachedArchiveProvider.field_n = CachedArchiveProvider.field_n + (var2_int >> 3);
           wk.field_d = 1835008 & var2_int << 18;
           wk.field_d = wk.field_d + (param0.readUnsignedShort(1952) << 2);
           int var2_intLifetime1 = param0.readUnsignedByte(param1 - 1238559653);

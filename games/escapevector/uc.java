@@ -8,7 +8,7 @@ final class uc {
     private int field_g;
     float field_a;
     String field_b;
-    static rg field_h;
+    static BufferedRandomAccessFile field_h;
     private qk[] field_c;
 
     final static int a(int param0, ih param1) {
@@ -41,7 +41,7 @@ final class uc {
         return 1;
     }
 
-    private final void a(int param0, mf param1, int param2, String param3, String param4, String param5) {
+    private final void a(int param0, ResourceArchive param1, int param2, String param3, String param4, String param5) {
         try {
           if (this.field_c.length <= this.field_f) {
             qk[] var9 = new qk[2 * this.field_f];
@@ -76,7 +76,7 @@ final class uc {
         field_d = null;
     }
 
-    final static boolean a(mf param0, int param1, int param2, int param3) {
+    final static boolean a(ResourceArchive param0, int param1, int param2, int param3) {
         String stackIn_8_2 = null;
         try {
           byte[] var6 = param0.a(param2, (byte) -97, param3);
@@ -134,11 +134,11 @@ final class uc {
         return true;
     }
 
-    final void a(mf param0, String param1, String param2, String param3, int param4) {
+    final void a(ResourceArchive param0, String param1, String param2, String param3, int param4) {
         try {
           this.a(-1, param0, 1, param1, param2, param3);
           if (param4 != 14826) {
-            field_h = (rg) null;
+            field_h = (BufferedRandomAccessFile) null;
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "uc.I(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -162,12 +162,12 @@ final class uc {
         }
     }
 
-    final void a(String param0, byte param1, String param2, mf param3) {
+    final void a(String param0, byte param1, String param2, ResourceArchive param3) {
         try {
           this.a(-1, param3, 1, param0, param2, (String) null);
           if (param1 > -114) {
             String var6 = (String) null;
-            this.a(-32, (mf) null, 21, (String) null, (String) null, (String) null);
+            this.a(-32, (ResourceArchive) null, 21, (String) null, (String) null, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "uc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

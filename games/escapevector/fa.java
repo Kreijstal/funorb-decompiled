@@ -119,7 +119,7 @@ final class fa {
         return var5;
     }
 
-    final static ih a(int param0, mf param1, int param2, mf param3, int param4) {
+    final static ih a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {

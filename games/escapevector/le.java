@@ -34,7 +34,7 @@ final class le {
           return sm.field_d + " - " + ii.field_a.a("commonui", 0) + "%";
         }
         if (!w.field_ab.b(0)) {
-          return c.field_o;
+          return CipherPacketBuffer.field_o;
         }
         if (!w.field_ab.a(0, "commonui")) {
           return qf.field_h + " - " + w.field_ab.a("commonui", param0 ^ 1) + "%";

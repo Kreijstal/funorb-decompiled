@@ -114,7 +114,7 @@ final class tf {
           tf.b((byte) 111);
         }
         if (this.field_e == param0) {
-          var3 = oa.field_q;
+          var3 = ArchiveRequest.field_q;
         }
         return fh.field_g.b((String) (var3));
     }
@@ -142,12 +142,12 @@ final class tf {
     private final boolean a(boolean param0, int param1) {
         int var9 = EscapeVector.obfuscationControl;
         if (ch.field_a.field_e) {
-          rk.field_e.a(oa.field_w, 100, 1536 * qm.field_c / 64, 8192);
+          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
         }
         if (ch.field_a.field_h == 0 &&
           ch.field_a.b((byte) -18)) {
           bc.field_d = true;
-          s.field_E = true;
+          Js5NetworkRequest.field_E = true;
           da.field_c = null;
           return true;
         }
@@ -159,7 +159,7 @@ final class tf {
           BoundedRandomAccessFile.activeSession.x((byte) 68);
           da.field_c = null;
           bc.field_d = true;
-          s.field_E = true;
+          Js5NetworkRequest.field_E = true;
           return true;
         }
         if (ch.field_a.field_h == this.field_b &&
@@ -279,7 +279,7 @@ final class tf {
         }
         if (ch.field_a.field_h == this.field_m &&
           ch.field_a.b((byte) -18)) {
-          if (df.field_d != null) {
+          if (IsaacRandom.field_d != null) {
             ri.a(-25123);
           } else {
             eo.a(24, param0);
@@ -290,7 +290,7 @@ final class tf {
           ch.field_a.f(23518))) {
           boolean stackIn_99_0 = !(SpriteState.field_r);
           SpriteState.field_r = stackIn_99_0;
-          rk.field_e.a(oa.field_w, 100, qm.field_c * 1536 / 64, 8192);
+          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, qm.field_c * 1536 / 64, 8192);
         }
         if (this.field_e != ch.field_a.field_h) {
           return false;
@@ -302,7 +302,7 @@ final class tf {
         BoundedRandomAccessFile.activeSession.x((byte) -48);
         bc.field_d = true;
         da.field_c = null;
-        s.field_E = true;
+        Js5NetworkRequest.field_E = true;
         return true;
     }
 
@@ -404,7 +404,7 @@ final class tf {
         int incrementValue$4 = var2;
         var2++;
         this.field_c = incrementValue$4;
-        if (s.field_x > 0) {
+        if (Js5NetworkRequest.field_x > 0) {
           int incrementValue$5 = var2;
           var2++;
           this.field_m = incrementValue$5;
@@ -494,7 +494,7 @@ final class tf {
           ((ih) (Object) stackIn_31_0).a(stackIn_32_1, var9Lifetime2, 22, var5, -1);
         }
         if (param3 == this.field_e) {
-          fh.field_g.c(oa.field_q, var6, 22, var5, -1);
+          fh.field_g.c(ArchiveRequest.field_q, var6, 22, var5, -1);
         }
         md.field_D.a(107);
         cf.a(mj.field_b, true, 1);

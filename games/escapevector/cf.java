@@ -109,12 +109,12 @@ final class cf {
                   var26Lifetime1Lifetime1 = param6.field_s[var23Lifetime2];
                   Minimap.field_u[var23Lifetime2] = (var12 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15 + var26Lifetime1Lifetime1 * var18 >> 16) + var9;
                   SpriteState.field_t[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + (var16 * var25Lifetime1Lifetime1 + var19 * var26Lifetime1Lifetime1) >> 16);
-                  rn.field_d[var23Lifetime2] = var11 + (var14 * var24Lifetime1Lifetime1 - (-(var25Lifetime1Lifetime1 * var17) - var26Lifetime1Lifetime1 * var20) >> 16);
+                  ClientException.field_d[var23Lifetime2] = var11 + (var14 * var24Lifetime1Lifetime1 - (-(var25Lifetime1Lifetime1 * var17) - var26Lifetime1Lifetime1 * var20) >> 16);
                   var24Lifetime1Lifetime1 = param6.field_H[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param6.field_l[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param6.field_t[var23Lifetime2];
                   hi.field_p[var23Lifetime2] = var9 + (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var18 * var26Lifetime1Lifetime1) >> 16);
-                  th.field_y[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var25Lifetime1Lifetime1 * var16 + var13 * var24Lifetime1Lifetime1) >> 16) + var10;
+                  Bzip2State.field_y[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var25Lifetime1Lifetime1 * var16 + var13 * var24Lifetime1Lifetime1) >> 16) + var10;
                   gm.field_c[var23Lifetime2] = var11 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1 >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
@@ -155,7 +155,7 @@ final class cf {
                   var20 = param6.field_q[var18];
                   var21Lifetime2 = param6.field_w[var18];
                   oi.field_L[var18] = var19 * var9 - (-(var20 * var12) - var15 * var21Lifetime2) >> 16;
-                  df.field_f[var18] = var19 * var10 + var13 * var20 + var21Lifetime2 * var16 >> 16;
+                  IsaacRandom.field_f[var18] = var19 * var10 + var13 * var20 + var21Lifetime2 * var16 >> 16;
                   GameplaySession.field_xb[var18] = var11 * var19 + (var14 * var20 + var21Lifetime2 * var17) >> 16;
                   var18++;
                 }
@@ -355,7 +355,7 @@ final class cf {
                     }
                     if (var5 >= 2 &&
                       !param0) {
-                      String stackIn_45_0 = rg.field_c;
+                      String stackIn_45_0 = BufferedRandomAccessFile.field_c;
                       return stackIn_45_0;
                     }
                     var6++;
@@ -395,7 +395,7 @@ final class cf {
         }
     }
 
-    final static boolean a(int param0, mf param1) {
+    final static boolean a(int param0, ResourceArchive param1) {
         String stackIn_9_2 = null;
         try {
           if (param0 != 11) {

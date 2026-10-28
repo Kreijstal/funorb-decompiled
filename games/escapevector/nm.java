@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nm {
-    static hh field_a;
+    static PcmSample field_a;
 
     final static void a(int param0) {
         if (param0 != 16) {
-          field_a = (hh) null;
+          field_a = (PcmSample) null;
         }
         if (pg.field_c != null) {
           pg.field_c.c(12497);
@@ -14,14 +14,14 @@ final class nm {
         }
     }
 
-    final static ce a(int param0, String param1, ec param2, mf param3, String param4) {
+    final static ce a(int param0, String param1, SoundCache param2, ResourceArchive param3, String param4) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         try {
           if (param0 != 2) {
-            field_a = (hh) null;
+            field_a = (PcmSample) null;
           }
           int var5_int = param3.b(-1, param1);
           int var6 = param3.a(var5_int, param4, true);
@@ -61,7 +61,7 @@ final class nm {
 
     final static int a(int param0, byte param1) {
         if (param1 != 78) {
-          field_a = (hh) null;
+          field_a = (PcmSample) null;
         }
         int var2 = 0;
         if (param0 < 0 ||
@@ -92,7 +92,7 @@ final class nm {
         try {
           HudMessage.a(param2, -1, param1, (byte) -28);
           if (param0 > -50) {
-            field_a = (hh) null;
+            field_a = (PcmSample) null;
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "nm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -112,7 +112,7 @@ final class nm {
         try {
           boolean var2_int = true;
           if (param0 > -71) {
-            field_a = (hh) null;
+            field_a = (PcmSample) null;
           }
           for (int var3 = 0; var3 < param1.length; var3++) {
             Sprite var4 = param1[var3].b(110);

@@ -4,8 +4,8 @@
 final class nb {
     static int[] field_b;
     static String field_d;
-    static wl field_a;
-    static hj field_c;
+    static BitmapFont field_a;
+    static PcmStreamMixer field_c;
 
     public static void a(int param0) {
         field_a = null;
@@ -25,9 +25,9 @@ final class nb {
         String stackIn_22_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          ca.field_b = param0.getParameter("overxgames");
-          if (null == ca.field_b) {
-            ca.field_b = "0";
+          MouseWheelInput.field_b = param0.getParameter("overxgames");
+          if (null == MouseWheelInput.field_b) {
+            MouseWheelInput.field_b = "0";
           }
           ji.field_a = param0.getParameter("overxachievements");
           if (param2 >= -120) {

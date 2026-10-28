@@ -102,7 +102,7 @@ final class LevelObject extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, Sprite[] param3, int param4, int param5, Sprite[] param6, int param7, int param8, wl param9, int param10, boolean param11) {
+    final static void a(int param0, int param1, boolean param2, Sprite[] param3, int param4, int param5, Sprite[] param6, int param7, int param8, BitmapFont param9, int param10, boolean param11) {
         String stackIn_7_2 = null;
         String stackIn_11_2 = null;
         String stackIn_15_2 = null;
@@ -390,7 +390,7 @@ final class LevelObject extends IntrusiveNode {
 
     final boolean countsAsInfrastructure(byte guard) {
         try {
-          if (mf.a(this.objectType, -64)) {
+          if (ResourceArchive.a(this.objectType, -64)) {
             return false;
           }
           if (1 == this.objectType) {
@@ -490,7 +490,7 @@ final class LevelObject extends IntrusiveNode {
     public static void a(boolean param0) {
         try {
           if (param0) {
-            LevelObject.a(77, 13, true, (Sprite[]) null, -108, -59, (Sprite[]) null, -14, -30, (wl) null, -40, true);
+            LevelObject.a(77, 13, true, (Sprite[]) null, -108, -59, (Sprite[]) null, -14, -30, (BitmapFont) null, -40, true);
           }
           field_q = null;
           return;

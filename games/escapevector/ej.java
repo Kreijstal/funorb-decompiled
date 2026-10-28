@@ -8,7 +8,7 @@ final class ej {
     static int field_b;
     static Sprite field_e;
     static String[] field_g;
-    static te[] field_f;
+    static IndexedSprite[] field_f;
 
     final static void a(byte param0, String param1) {
         try {

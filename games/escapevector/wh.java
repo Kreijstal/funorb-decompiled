@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wh extends pg {
-    private wl field_i;
+    private BitmapFont field_i;
     private boolean field_n;
     static int[] field_j;
     private String field_g;
@@ -13,13 +13,13 @@ final class wh extends pg {
     private int field_o;
     private int field_h;
 
-    final void a(wl param0, String param1, int param2, int param3, byte param4) {
+    final void a(BitmapFont param0, String param1, int param2, int param3, byte param4) {
         String stackIn_18_2 = null;
         String stackIn_21_2 = null;
         try {
           if (param4 != 69) {
-            wl var7 = (wl) null;
-            vl discarded$0 = this.a((String) null, 107, 116, (wl) null);
+            BitmapFont var7 = (BitmapFont) null;
+            vl discarded$0 = this.a((String) null, 107, 116, (BitmapFont) null);
           }
           if (param1 == null) {
             this.field_a = null;
@@ -62,7 +62,7 @@ final class wh extends pg {
         }
     }
 
-    private final vl a(String param0, int param1, int param2, wl param3) {
+    private final vl a(String param0, int param1, int param2, BitmapFont param3) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
@@ -94,7 +94,7 @@ final class wh extends pg {
         }
     }
 
-    final void a(int param0, String param1, wl param2, int param3, int param4, int param5, int param6, byte param7) {
+    final void a(int param0, String param1, BitmapFont param2, int param3, int param4, int param5, int param6, byte param7) {
         int stackIn_36_4 = 0;
         int stackIn_40_0 = 0;
         String stackIn_46_2 = null;
@@ -199,7 +199,7 @@ final class wh extends pg {
         }
     }
 
-    final void a(String param0, int param1, int param2, int param3, wl param4) {
+    final void a(String param0, int param1, int param2, int param3, BitmapFont param4) {
         if (param0 == null) {
           this.field_a = null;
           return;
@@ -233,7 +233,7 @@ final class wh extends pg {
         field_j = null;
     }
 
-    final void a(String param0, int param1, wl param2, int param3, boolean param4) {
+    final void a(String param0, int param1, BitmapFont param2, int param3, boolean param4) {
         if (param0 == null) {
           this.field_a = null;
           return;

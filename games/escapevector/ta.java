@@ -150,7 +150,7 @@ final class ta {
         try {
           ih var4 = fh.field_g;
           int var5 = var4.field_r + var4.field_x;
-          String var6 = hk.field_r[var3_int];
+          String var6 = CachedArchiveProvider.field_r[var3_int];
           int var7 = ((this.field_n.field_m - param1.fullHeight) / param0 - var5) / 3;
           int var8 = var7 + this.field_n.field_k + var4.field_r;
           int var9 = 320;
@@ -200,7 +200,7 @@ final class ta {
         if (param0 != 2) {
           ta.f(-84);
         }
-        lj.a(4, 43);
+        WhirlpoolHasher.a(4, 43);
     }
 
     private final int[] a(byte param0, int param1, int param2, int param3) {
@@ -396,7 +396,7 @@ final class ta {
             di.field_d.a(false, this.field_d);
           }
           this.a(20364);
-          var2 = (this.a((byte) -91, false, s.a((byte) 15, nk.field_n)));
+          var2 = (this.a((byte) -91, false, Js5NetworkRequest.a((byte) 15, nk.field_n)));
           return (var2);
         }
         if (param0 >= -60) {
@@ -450,7 +450,7 @@ final class ta {
         int var3 = 320;
         int var4 = 10;
         int var5 = this.field_n.field_k + var4 + var2.field_r;
-        var2.c(s.field_C, var3, var5, 10551200, -1);
+        var2.c(Js5NetworkRequest.field_C, var3, var5, 10551200, -1);
     }
 
     private final int[] b(int param0) {
@@ -623,7 +623,7 @@ final class ta {
     private final boolean h(byte param0) {
         di.field_d.a(this.a(-3, sf.field_c, ng.field_ob), (byte) 119, this.a(-3, dh.field_d, bj.field_y));
         this.a(20364);
-        boolean var2 = (this.a((byte) -91, true, s.a((byte) 15, -1)));
+        boolean var2 = (this.a((byte) -91, true, Js5NetworkRequest.a((byte) 15, -1)));
         int var3 = -122 / ((param0 - 73) / 47);
         if (var2) {
           return (var2);
@@ -654,7 +654,7 @@ final class ta {
         if (var2 < 0) {
           return null;
         }
-        dk var3 = m.a(this.field_p[this.field_h], var2, 0);
+        dk var3 = TetherHumStream.a(this.field_p[this.field_h], var2, 0);
         if (var3 != null) {
           return var3;
         }
@@ -746,7 +746,7 @@ final class ta {
         int var13 = 0;
         if (pf.field_i == param1) {
           var13 = 0;
-        } else if (lj.field_f == param1) {
+        } else if (WhirlpoolHasher.field_f == param1) {
           var13 = -var5.fullWidth + var3 - 1;
         }
         int var14 = var8;
@@ -813,7 +813,7 @@ final class ta {
         if (di.field_d.field_e) {
           dk var2 = this.d(true);
           int var3 = nk.a(-93, var2);
-          rk.field_e.a(oa.field_w, 100, qm.field_c * 1536 / 64, var3);
+          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, qm.field_c * 1536 / 64, var3);
         }
     }
 
@@ -914,7 +914,7 @@ final class ta {
           ih var4 = fh.field_g;
           int var5 = 10551200;
           int var6 = 6340704;
-          String var7 = mf.field_f[var3_int];
+          String var7 = ResourceArchive.field_f[var3_int];
           if (!this.a(var3_int, 6144)) {
             stackIn_9_0 = he.field_q;
           } else {
@@ -1103,7 +1103,7 @@ final class ta {
         }
         try {
           int var4 = nk.a(-87, param1);
-          rk.field_e.a(pc.field_a, 100, qm.field_c * 6144 / param0, var4);
+          rk.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / param0, var4);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ta.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1187,11 +1187,11 @@ final class ta {
     }
 
     private final void c(int param0, byte param1) {
-        int var3 = lj.field_f;
+        int var3 = WhirlpoolHasher.field_f;
         if (param0 < this.field_h) {
           var3 = pf.field_i;
         } else {
-          var3 = lj.field_f;
+          var3 = WhirlpoolHasher.field_f;
         }
         this.field_h = param0;
         if (this.field_h >= this.field_y) {

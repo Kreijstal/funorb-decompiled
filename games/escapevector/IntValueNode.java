@@ -12,11 +12,11 @@ final class IntValueNode extends IntrusiveNode {
           if (be.field_b != null) {
             be.field_b.o(-18861);
           }
-          dd.field_d = new h(param0, param1, false, true, true);
+          PcmResampler.field_d = new h(param0, param1, false, true, true);
           if (param2 != 63) {
             field_h = (String[]) null;
           }
-          rd.field_c.a(dd.field_d, 30);
+          rd.field_c.a(PcmResampler.field_d, 30);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "de.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -80,7 +80,7 @@ final class IntValueNode extends IntrusiveNode {
     final static void startSelectedLevel(int gameMode, int levelIndex, int guard) {
         ce.field_f.a(true);
         gameMode = l.a(-8462, gameMode);
-        levelIndex = jg.a(gameMode, 13565, levelIndex);
+        levelIndex = SectorCacheStore.a(gameMode, 13565, levelIndex);
         int var3 = nk.a(1, gameMode);
         BoundedRandomAccessFile.activeSession = new GameplaySession(ld.field_h[gameMode], var3, gameMode, levelIndex);
         BoundedRandomAccessFile.activeSession.startSession((byte) -40);

@@ -32,16 +32,16 @@ final class fc {
         ei.field_i = false;
         if (param0 == 3161) {
           eb.field_H = false;
-          lj.a(-1, param0 - 3109);
-          dn.field_q = vn.field_g;
-          ui.field_b = vn.field_g;
+          WhirlpoolHasher.a(-1, param0 - 3109);
+          dn.field_q = RasterBuffer.field_g;
+          ui.field_b = RasterBuffer.field_g;
           return;
         }
         field_a = -26;
         eb.field_H = false;
-        lj.a(-1, param0 - 3109);
-        dn.field_q = vn.field_g;
-        ui.field_b = vn.field_g;
+        WhirlpoolHasher.a(-1, param0 - 3109);
+        dn.field_q = RasterBuffer.field_g;
+        ui.field_b = RasterBuffer.field_g;
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11) {

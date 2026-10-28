@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gn {
-    static hh field_e;
+    static PcmSample field_e;
     boolean field_i;
     private int field_c;
     private dc field_m;

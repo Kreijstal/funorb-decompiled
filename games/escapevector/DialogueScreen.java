@@ -7,7 +7,7 @@ final class DialogueScreen extends IntrusiveNode {
     int field_C;
     private int field_s;
     private boolean field_n;
-    private hl field_u;
+    private PcmSampleStream field_u;
     private int field_v;
     static String field_G;
     int dialogueIndex;
@@ -19,7 +19,7 @@ final class DialogueScreen extends IntrusiveNode {
     private boolean field_q;
     boolean fullWidthScene;
     private Sprite[] field_z;
-    private hl field_A;
+    private PcmSampleStream field_A;
     private String[] field_x;
     private boolean field_H;
     int revealedLine;
@@ -237,10 +237,10 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void k(int param0) {
         if (this.field_v == 80) {
-          rk.field_e.a(bm.field_a, 100, 3072 * qm.field_c / 64, 10240);
+          rk.field_e.playSampleWithPan(bm.field_a, 100, 3072 * qm.field_c / 64, 10240);
         }
         if (this.field_v == 30) {
-          rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
+          rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
         }
         this.field_v = this.field_v - 1;
         if (param0 <= 102) {
@@ -372,7 +372,7 @@ final class DialogueScreen extends IntrusiveNode {
           return;
         }
         if (this.field_w.field_e) {
-          rk.field_e.a(oa.field_w, 100, 1536 * qm.field_c / 64, this.g(2));
+          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, this.g(2));
         }
         if (qi.field_N != 0) {
           this.i(2048);
@@ -385,7 +385,7 @@ final class DialogueScreen extends IntrusiveNode {
             if (pn.p(-82)) {
               this.field_w.c((byte) 6);
               if (this.field_w.field_e) {
-                rk.field_e.a(oa.field_w, 100, 1536 * qm.field_c / 64, this.g(2));
+                rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, this.g(2));
               }
               if (nk.field_n != 13 &&
                 nk.field_n != 84 &&
@@ -411,14 +411,14 @@ final class DialogueScreen extends IntrusiveNode {
                 sj.a(this.d(8192), (byte) 51);
               }
               if (23 == this.field_s) {
-                rk.field_e.a(pc.field_a, 100, 3072 * qm.field_c / 64, this.g(2));
+                rk.field_e.playSampleWithPan(pc.field_a, 100, 3072 * qm.field_c / 64, this.g(2));
               }
               this.field_s = this.field_s + 1;
               if (this.field_s == 43 &&
                 this.field_A == null) {
-                this.field_A = hl.c(en.field_d, 100, qm.field_c * 768 / 64, this.g((byte) 111));
+                this.field_A = PcmSampleStream.c(en.field_d, 100, qm.field_c * 768 / 64, this.g((byte) 111));
                 this.field_A.h(-1);
-                rk.field_e.a(this.field_A);
+                rk.field_e.addSubstream(this.field_A);
               }
             }
             if (this.field_n &&
@@ -501,7 +501,7 @@ final class DialogueScreen extends IntrusiveNode {
                     if (this.revealedCharacters >= var3.length()) {
                       this.revealedLine = this.revealedLine + 1;
                       this.revealedCharacters = 0;
-                      this.field_u.e(ie.field_q / 200, 0);
+                      this.field_u.e(AudioOutput.field_q / 200, 0);
                     } else {
                       int fieldTemp$1 = this.revealedCharacters;
                       this.revealedCharacters = this.revealedCharacters + 1;
@@ -516,9 +516,9 @@ final class DialogueScreen extends IntrusiveNode {
                         }
                       }
                       if (var4 == 32) {
-                        this.field_u.e(ie.field_q / 200, 0);
+                        this.field_u.e(AudioOutput.field_q / 200, 0);
                       } else {
-                        this.field_u.a(ie.field_q / 200, 3072 * qm.field_c / 64, this.g((byte) 111));
+                        this.field_u.a(AudioOutput.field_q / 200, 3072 * qm.field_c / 64, this.g((byte) 111));
                       }
                     }
                     this.field_t = 2;
@@ -532,7 +532,7 @@ final class DialogueScreen extends IntrusiveNode {
                   else {
                     this.dialogueIndex = this.dialogueIndex + 1;
                     if (this.dialogueLines.length <= this.dialogueIndex) {
-                      rk.field_e.b(this.field_A);
+                      rk.field_e.removeSubstream(this.field_A);
                       this.field_A = null;
                       this.field_F = 0;
                       if (!this.field_m) {
@@ -555,7 +555,7 @@ final class DialogueScreen extends IntrusiveNode {
               }
             }
             if (this.field_A != null) {
-              this.field_A.a(ie.field_q / 200, 768 * qm.field_c / 64, this.g((byte) 111));
+              this.field_A.a(AudioOutput.field_q / 200, 768 * qm.field_c / 64, this.g((byte) 111));
             }
             IntValueNode.field_j = true;
             return;
@@ -651,16 +651,16 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void f(byte param0) {
         if (this.field_p == 30) {
-          hl var2 = hl.c(vd.field_g, 100, 3072 * qm.field_c / 64, this.d(8192));
+          PcmSampleStream var2 = PcmSampleStream.c(vd.field_g, 100, 3072 * qm.field_c / 64, this.d(8192));
           var2.e();
-          rk.field_e.a(var2);
+          rk.field_e.addSubstream(var2);
         }
         if (param0 >= -86) {
           this.field_v = -93;
         }
         if (20 == this.field_p) {
-          hl var2Lifetime1 = hl.c(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
-          rk.field_e.a(var2Lifetime1);
+          PcmSampleStream var2Lifetime1 = PcmSampleStream.c(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
+          rk.field_e.addSubstream(var2Lifetime1);
         }
         this.field_p = this.field_p - 1;
     }
@@ -674,12 +674,12 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void i(int param0) {
         if (this.field_A != null) {
-          this.field_A.g(ie.field_q / 200);
+          this.field_A.g(AudioOutput.field_q / 200);
         }
-        this.field_u.g(ie.field_q / 200);
+        this.field_u.g(AudioOutput.field_q / 200);
         vh.a((byte) -22);
         gi.a((byte) -111);
-        s.field_E = true;
+        Js5NetworkRequest.field_E = true;
         bc.field_d = true;
         if (param0 != 2048) {
           DialogueScreen.a(-3, (byte) -83, 42);
@@ -692,10 +692,10 @@ final class DialogueScreen extends IntrusiveNode {
           int discarded$0 = this.a(3, 15, -89);
         }
         if (this.field_v == 0) {
-          rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
+          rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 6144);
         }
         if (this.field_v == 50) {
-          rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 10240);
+          rk.field_e.playSampleWithPan(bm.field_a, 100, qm.field_c * 3072 / 64, 10240);
         }
         this.field_v = this.field_v + 1;
         mm.a(param0 + 25, 4);
@@ -766,7 +766,7 @@ final class DialogueScreen extends IntrusiveNode {
         String stackIn_17_2 = null;
         try {
           if (null == this.field_z[param0]) {
-            this.field_z[param0] = fe.a(param3, fi.field_j, param2, true);
+            this.field_z[param0] = fe.a(param3, IndexedSpriteState.field_j, param2, true);
             if (this.field_z[param0] == null) {
               return false;
             }
@@ -798,10 +798,10 @@ final class DialogueScreen extends IntrusiveNode {
 
     private final void f(int param0) {
         if (this.field_p == 0) {
-          rk.field_e.a(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
+          rk.field_e.playSampleWithPan(QuickChatPhraseDefinition.field_t, 100, 3072 * qm.field_c / 64, this.d(8192));
         }
         if (this.field_p == 20) {
-          rk.field_e.a(vd.field_g, 100, qm.field_c * 3072 / 64, this.d(8192));
+          rk.field_e.playSampleWithPan(vd.field_g, 100, qm.field_c * 3072 / 64, this.d(8192));
         }
         if (param0 != 100) {
           return;
@@ -873,9 +873,9 @@ final class DialogueScreen extends IntrusiveNode {
           boolean stackIn_7_1 = (param2);
           this.fullWidthScene = stackIn_7_1;
           this.field_z = param0;
-          this.field_u = hl.a(ff.field_i, 100, 0);
+          this.field_u = PcmSampleStream.a(ff.field_i, 100, 0);
           this.field_u.h(-1);
-          rk.field_e.a(this.field_u);
+          rk.field_e.addSubstream(this.field_u);
           this.field_w = new wc(1);
           this.field_w.a(this.a(-77, dh.field_d, bj.field_y), true, 4767999);
           this.a(43, this.dialogueLines[this.dialogueIndex]);

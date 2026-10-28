@@ -26,15 +26,15 @@ public final class EscapeVector extends NetworkGameClient {
             gk.field_c = true;
           }
           int var2_int = 119 % ((guard + 39) / 33);
-          if (null != df.field_d &&
-            df.field_d.field_c) {
+          if (null != IsaacRandom.field_d &&
+            IsaacRandom.field_d.field_c) {
             ri.a(-25123);
             oj.a((byte) 97);
           }
           bj.field_C.d();
           ig.field_l.d();
           int stackIn_16_1 = -1;
-          boolean stackIn_17_2 = (null != df.field_d);
+          boolean stackIn_17_2 = (null != IsaacRandom.field_d);
           this.a(stackIn_16_1, stackIn_17_2);
           if (of.field_b) {
             this.f(true);
@@ -53,13 +53,13 @@ public final class EscapeVector extends NetworkGameClient {
                   if (BoundedRandomAccessFile.activeSession != null) {
                     BoundedRandomAccessFile.activeSession.stopSessionAudio((byte) -41);
                   }
-                  boolean stackIn_42_1 = (df.field_d != null);
+                  boolean stackIn_42_1 = (IsaacRandom.field_d != null);
                   int var3 = this.a(stackIn_42_1, -556);
                   if (var3 == 1) {
                     ri.a(-25123);
                   }
                   if (var3 == 2) {
-                    if (df.field_d != null) {
+                    if (IsaacRandom.field_d != null) {
                       ri.a(-25123);
                     }
                     gk.a(-9787, PointCloudEffect.d((byte) -119));
@@ -123,13 +123,13 @@ public final class EscapeVector extends NetworkGameClient {
               }
             }
             while (true) {
-              if (rg.a(wd.field_u, 109)) {
+              if (BufferedRandomAccessFile.a(wd.field_u, 109)) {
                 this.f(127);
                 if (var4 == 0) {
                   continue;
                 }
               } else {
-                rn.a(0, 30785);
+                ClientException.a(0, 30785);
               }
               break;
             }
@@ -200,14 +200,14 @@ public final class EscapeVector extends NetworkGameClient {
           ek.a(69);
           dj.a((byte) -116);
           NetworkGameClient.i((byte) -73);
-          rn.a(false);
+          ClientException.a(false);
           GameAppletShell.d((byte) -111);
           ad.b(-1);
           eg.a(-1);
-          ca.a((byte) 104);
+          MouseWheelInput.a((byte) 104);
           SoftwareRasterizer.a();
-          mf.c(124);
-          wl.a();
+          ResourceArchive.c(124);
+          BitmapFont.a();
           nb.a(-111);
           PacketBuffer.a((byte) 70);
           td.a(128);
@@ -225,7 +225,7 @@ public final class EscapeVector extends NetworkGameClient {
           j.a(-76);
           ok.a(true);
           eo.b((byte) -72);
-          vn.a((byte) 107);
+          RasterBuffer.a((byte) 107);
           uc.a((byte) -59);
           af.a((byte) 71);
           pk.b(false);
@@ -235,38 +235,38 @@ public final class EscapeVector extends NetworkGameClient {
           en.a(1);
           kg.f(80);
           p.b(99);
-          sb.e(-4470);
-          kk.b(-4);
+          Js5Transport.e(-4470);
+          DiskCacheWorker.b(-4);
           sk.b(true);
-          rg.b((byte) 123);
+          BufferedRandomAccessFile.b((byte) 123);
           pj.b((byte) 6);
           IntrusiveDeque.b(true);
           ce.b(-32408);
           o.d();
-          ie.e();
+          AudioOutput.e();
           GameplaySession.f((byte) 69);
           t.b((byte) -34);
           ig.h(-60);
           pf.a(459);
           tf.a(-92);
           wc.a((byte) 49);
-          dd.a(104);
+          PcmResampler.releaseStatics(104);
           uj.a((byte) -106);
           jj.b(9);
           LevelObject.a(false);
           IntrusiveNode.c(-71);
           SpriteState.f(-363232252);
           DualLinkNode.a((byte) -11);
-          fi.b(-26317);
+          IndexedSpriteState.b(-26317);
           ji.a(2097152);
-          ge.b((byte) -58);
+          AudioService.b((byte) -58);
           gn.b(false);
           vd.c((byte) 80);
           sl.a(127);
           le.a(91);
-          f.a((byte) 18);
+          ArchiveIndex.a((byte) 18);
           dh.a((byte) 124);
-          ob.a((byte) 123);
+          ArchiveProvider.releaseStatics((byte) 123);
           mj.a(true);
           jc.b(-1);
           gk.a((byte) -98);
@@ -291,15 +291,15 @@ public final class EscapeVector extends NetworkGameClient {
           we.a();
           in.a();
           u.a();
-          ec.a((byte) -72);
-          ib.a(0);
+          SoundCache.a((byte) -72);
+          IntrusiveNodeHashTable.releaseStatics(0);
           kh.a((byte) 65);
           ac.c(105);
           DynamicTerrainRenderer.d(3);
           od.d(-12548);
           PointCloudEffect.h(109);
           Minimap.a(68);
-          m.e(-1600199832);
+          TetherHumStream.e(-1600199832);
           LaserGateSpan.a((byte) -107);
           HudMessage.a((byte) -85);
           RockBuster.a((byte) 102);
@@ -314,16 +314,16 @@ public final class EscapeVector extends NetworkGameClient {
           nl.a(16558);
           fk.a(124);
           vj.a(-102);
-          c.n(106);
+          CipherPacketBuffer.releaseStatics(106);
           DialogueScreen.a(true);
-          df.a((byte) -88);
+          IsaacRandom.releaseStatics((byte) -88);
           bk.h(-24811);
-          s.d((byte) 34);
-          jg.a(true);
-          hk.c((byte) 8);
+          Js5NetworkRequest.d((byte) 34);
+          SectorCacheStore.a(true);
+          CachedArchiveProvider.c((byte) 8);
           BoundedRandomAccessFile.b(1);
           e.b(32153);
-          oa.f(5);
+          ArchiveRequest.releaseStatics(5);
           on.a(127);
           tm.n(-23008);
           k.b(-24239);
@@ -344,8 +344,8 @@ public final class EscapeVector extends NetworkGameClient {
           hd.a(127);
           mh.a(true);
           fh.a((byte) 86);
-          i.a();
-          th.a(8192);
+          Bzip2Decoder.a();
+          Bzip2State.a(8192);
           mn.a((byte) 96);
           jd.b((byte) 77);
           ej.a(26);
@@ -373,14 +373,14 @@ public final class EscapeVector extends NetworkGameClient {
           ti.a((byte) -101);
           kb.a(true);
           qf.b(116);
-          cg.f(-1);
+          ImageProducerRasterBuffer.f(-1);
           vi.a(119);
           ja.a(123);
           id.b(-17129);
           sf.a(false);
           fg.a((byte) -119);
           IntValueNode.a(true);
-          lj.a(true);
+          WhirlpoolHasher.releaseStatics(true);
           sj.a((byte) 123);
           of.a(122);
           pb.a(false);
@@ -447,14 +447,14 @@ public final class EscapeVector extends NetworkGameClient {
           qd.b(false);
           rk.a(122);
           fn.a(122);
-          mi.a((byte) 75);
+          RasterSnapshot.a((byte) 75);
           al.a(-128);
           lm.b((byte) -10);
           d.a((byte) 65);
           qi.j(8);
           oh.a((byte) -20);
           wi.a(64);
-          tl.a((byte) -43);
+          SeekerPulseStream.a((byte) -43);
           ee.a(false);
           ld.b((byte) -71);
           pl.c(256);
@@ -495,37 +495,37 @@ public final class EscapeVector extends NetworkGameClient {
             gn.a(-122);
             dn.a(pg.field_f, param0 ^ -17595, 70.0f);
             this.renderClient((byte) -128);
-            fh.field_g = oi.a(param0 ^ -92, sn.field_c, "", "fonts_squarish16", fi.field_j);
+            fh.field_g = oi.a(param0 ^ -92, sn.field_c, "", "fonts_squarish16", IndexedSpriteState.field_j);
             sn.field_c = null;
-            ea.field_f = fe.a("", fi.field_j, "titles_escape", true);
-            f.field_o = fe.a("", fi.field_j, "titles_vector", true);
-            oi.field_O = fe.a("", fi.field_j, "titles_achievements", true);
-            lf.field_I = fe.a("", fi.field_j, "titles_achievements_this_game", true);
-            DynamicTerrainRenderer.field_w = fe.a("", fi.field_j, "titles_highscores", true);
-            jf.field_H = fe.a("", fi.field_j, "titles_instructions", true);
-            kb.field_c = fe.a("", fi.field_j, "titles_retrieval_levels", true);
-            p.field_c = fe.a("", fi.field_j, "titles_retribution_levels", true);
-            oj.field_Q = fe.a("", fi.field_j, "titles_simulator_levels", true);
-            k.field_j = fe.a("", fi.field_j, "titles_select_level_set", true);
-            pj.field_g = kh.a(fi.field_j, (byte) 123, "", "level_set_icons");
+            ea.field_f = fe.a("", IndexedSpriteState.field_j, "titles_escape", true);
+            ArchiveIndex.field_o = fe.a("", IndexedSpriteState.field_j, "titles_vector", true);
+            oi.field_O = fe.a("", IndexedSpriteState.field_j, "titles_achievements", true);
+            lf.field_I = fe.a("", IndexedSpriteState.field_j, "titles_achievements_this_game", true);
+            DynamicTerrainRenderer.field_w = fe.a("", IndexedSpriteState.field_j, "titles_highscores", true);
+            jf.field_H = fe.a("", IndexedSpriteState.field_j, "titles_instructions", true);
+            kb.field_c = fe.a("", IndexedSpriteState.field_j, "titles_retrieval_levels", true);
+            p.field_c = fe.a("", IndexedSpriteState.field_j, "titles_retribution_levels", true);
+            oj.field_Q = fe.a("", IndexedSpriteState.field_j, "titles_simulator_levels", true);
+            k.field_j = fe.a("", IndexedSpriteState.field_j, "titles_select_level_set", true);
+            pj.field_g = kh.a(IndexedSpriteState.field_j, (byte) 123, "", "level_set_icons");
             this.m((byte) 125);
-            s.field_H = fe.a("", fi.field_j, "seeker_mine", true);
-            od.field_b = fe.a("", fi.field_j, "seeker_mine_glow", true);
-            mf.field_m = fe.a("", fi.field_j, "rock_buster", true);
-            IntPoint.field_b = fe.a("", fi.field_j, "interface_level_complete", true);
-            ij.field_g = fe.a("", fi.field_j, "interface_game_over", true);
-            mc.field_d = kh.a(fi.field_j, (byte) 124, "", "achievements");
+            Js5NetworkRequest.field_H = fe.a("", IndexedSpriteState.field_j, "seeker_mine", true);
+            od.field_b = fe.a("", IndexedSpriteState.field_j, "seeker_mine_glow", true);
+            ResourceArchive.field_m = fe.a("", IndexedSpriteState.field_j, "rock_buster", true);
+            IntPoint.field_b = fe.a("", IndexedSpriteState.field_j, "interface_level_complete", true);
+            ij.field_g = fe.a("", IndexedSpriteState.field_j, "interface_game_over", true);
+            mc.field_d = kh.a(IndexedSpriteState.field_j, (byte) 124, "", "achievements");
             bn.a(mc.field_d, 0);
             hn.field_c = fe.a("basic", ve.field_h, "unachieved", true);
             rm.field_e = fe.a("basic", ve.field_h, "locked", true);
             qh.field_l = new Sprite(hn.field_c.fullWidth, hn.field_c.fullHeight);
             qh.field_l.f();
-            mb.a(fe.a("", fi.field_j, "achievements_next_page_button", true), -84);
-            mi.field_m = new Sprite[mc.field_d.length];
+            mb.a(fe.a("", IndexedSpriteState.field_j, "achievements_next_page_button", true), -84);
+            RasterSnapshot.field_m = new Sprite[mc.field_d.length];
             int var2_int = 0;
             while (mc.field_d.length > var2_int) {
-              mi.field_m[var2_int] = new Sprite(32, 32);
-              mi.field_m[var2_int].g();
+              RasterSnapshot.field_m[var2_int] = new Sprite(32, 32);
+              RasterSnapshot.field_m[var2_int].g();
               mc.field_d[var2_int].a(0, 0, 32, 32);
               var2_int++;
               if (var3 != 0) {
@@ -540,8 +540,8 @@ public final class EscapeVector extends NetworkGameClient {
             rm.field_e.a(0, 0, 32, 32);
             md.field_D.a(param0 ^ -35);
             this.g(false);
-            vd.field_f = kh.a(fi.field_j, (byte) 123, "", "level_complete_tick");
-            af.field_a = ae.a("scrshots", "", (byte) -48, fi.field_j);
+            vd.field_f = kh.a(IndexedSpriteState.field_j, (byte) 123, "", "level_complete_tick");
+            af.field_a = ae.a("scrshots", "", (byte) -48, IndexedSpriteState.field_j);
             ve.field_h = null;
             fn.a((byte) 92);
             return;
@@ -550,7 +550,7 @@ public final class EscapeVector extends NetworkGameClient {
             if (null == fj.field_eb) {
               dn.a(q.field_H, param0 + 17733, 90.0f);
               this.renderClient((byte) 48);
-              ec var2_ref = new ec(hn.field_h, jm.field_I);
+              SoundCache var2_ref = new SoundCache(hn.field_h, jm.field_I);
               jm.field_I = null;
               hn.field_h = null;
               fj.field_eb = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/menu");
@@ -593,53 +593,53 @@ public final class EscapeVector extends NetworkGameClient {
           }
           dn.a(qf.field_n, 17637, 80.0f);
           this.renderClient((byte) 7);
-          dd var2 = new dd(22050, ie.field_q);
-          ff.field_i = kj.a(hn.field_h, "", "write-text").a().a(var2);
-          en.field_d = kj.a(hn.field_h, "", "cursor").a().a(var2);
-          bm.field_a = kj.a(hn.field_h, "", "interference").a().a(var2);
-          qh.field_i = kj.a(hn.field_h, "", "interference_300ms").a().a(var2);
-          nn.field_g = kj.a(hn.field_h, "", "mainmenu_formation").a().a(var2);
-          oa.field_w = kj.a(hn.field_h, "", "mouseover").a().a(var2);
-          b.field_b = kj.a(hn.field_h, "", "level_indicator").a().a(var2);
-          pc.field_a = kj.a(hn.field_h, "", "button_formation").a().a(var2);
-          uf.field_g = kj.a(hn.field_h, "", "frame-appear").a().a(var2);
-          QuickChatPhraseDefinition.field_t = kj.a(hn.field_h, "", "photo-blob-grow").a().a(var2);
-          vd.field_g = kj.a(hn.field_h, "", "photo-body-explode").a().a(var2);
-          ob.field_d = kj.a(hn.field_h, "", "grid_effect_1").a().a(var2);
-          pa.field_b = kj.a(hn.field_h, "", "grid_effect_2").a().a(var2);
-          dd.field_g = in.a(jm.field_I, "", "pixelate").b().a(var2);
-          oj.field_N = kj.a(hn.field_h, "", "gas-pump").a().a(var2);
-          ng.field_mb = kj.a(hn.field_h, "", "gas-burn").a().a(var2);
-          TerrainMaskSupport.field_e = kj.a(hn.field_h, "", "left-foot-down").a().a(var2);
-          ri.field_b = kj.a(hn.field_h, "", "right-foot-down").a().a(var2);
-          ni.field_M = kj.a(hn.field_h, "", "ship-fire").a().a(var2);
-          gn.field_e = kj.a(hn.field_h, "", "ship-fire-three").a().a(var2);
-          uk.field_j = kj.a(hn.field_h, "", "alien-fire").a().a(var2);
-          th.field_G = kj.a(hn.field_h, "", "shield").a().a(var2);
-          co.field_d = kj.a(hn.field_h, "", "shield_impact").a().a(var2);
-          gm.field_b = kj.a(hn.field_h, "", "shield_empty").a().a(var2);
-          qa.field_E = kj.a(hn.field_h, "", "fuel-start").a().a(var2);
-          lm.field_d = kj.a(hn.field_h, "", "fuel-filling").a().a(var2);
-          al.field_b = kj.a(hn.field_h, "", "fuel-stop").a().a(var2);
-          fn.field_f = kj.a(hn.field_h, "", "fuel-full").a().a(var2);
-          fg.field_a = kj.a(hn.field_h, "", "crate-attach").a().a(var2);
-          rk.field_c = kj.a(hn.field_h, "", "tether-tighten").a().a(var2);
-          bc.field_c = kj.a(hn.field_h, "", "tether-release").a().a(var2);
-          nm.field_a = kj.a(hn.field_h, "", "powerup-collect").a().a(var2);
-          vi.field_c = kj.a(hn.field_h, "", "repeller-active").a().a(var2);
-          w.field_hb = kj.a(hn.field_h, "", "magnet-active").a().a(var2);
-          of.field_h = kj.a(hn.field_h, "", "laser").a().a(var2);
-          ib.field_a = kj.a(hn.field_h, "", "explosion-ship").a().a(var2);
-          vn.field_c = kj.a(hn.field_h, "", "explosion_5_seconds").a().a(var2);
-          pa.field_a = in.a(jm.field_I, "", "beeping").b().a(var2);
+          PcmResampler var2 = new PcmResampler(22050, AudioOutput.field_q);
+          ff.field_i = kj.a(hn.field_h, "", "write-text").a().resample(var2);
+          en.field_d = kj.a(hn.field_h, "", "cursor").a().resample(var2);
+          bm.field_a = kj.a(hn.field_h, "", "interference").a().resample(var2);
+          qh.field_i = kj.a(hn.field_h, "", "interference_300ms").a().resample(var2);
+          nn.field_g = kj.a(hn.field_h, "", "mainmenu_formation").a().resample(var2);
+          ArchiveRequest.field_w = kj.a(hn.field_h, "", "mouseover").a().resample(var2);
+          b.field_b = kj.a(hn.field_h, "", "level_indicator").a().resample(var2);
+          pc.field_a = kj.a(hn.field_h, "", "button_formation").a().resample(var2);
+          uf.field_g = kj.a(hn.field_h, "", "frame-appear").a().resample(var2);
+          QuickChatPhraseDefinition.field_t = kj.a(hn.field_h, "", "photo-blob-grow").a().resample(var2);
+          vd.field_g = kj.a(hn.field_h, "", "photo-body-explode").a().resample(var2);
+          ArchiveProvider.field_d = kj.a(hn.field_h, "", "grid_effect_1").a().resample(var2);
+          pa.field_b = kj.a(hn.field_h, "", "grid_effect_2").a().resample(var2);
+          PcmResampler.field_g = in.a(jm.field_I, "", "pixelate").b().resample(var2);
+          oj.field_N = kj.a(hn.field_h, "", "gas-pump").a().resample(var2);
+          ng.field_mb = kj.a(hn.field_h, "", "gas-burn").a().resample(var2);
+          TerrainMaskSupport.field_e = kj.a(hn.field_h, "", "left-foot-down").a().resample(var2);
+          ri.field_b = kj.a(hn.field_h, "", "right-foot-down").a().resample(var2);
+          ni.field_M = kj.a(hn.field_h, "", "ship-fire").a().resample(var2);
+          gn.field_e = kj.a(hn.field_h, "", "ship-fire-three").a().resample(var2);
+          uk.field_j = kj.a(hn.field_h, "", "alien-fire").a().resample(var2);
+          Bzip2State.field_G = kj.a(hn.field_h, "", "shield").a().resample(var2);
+          co.field_d = kj.a(hn.field_h, "", "shield_impact").a().resample(var2);
+          gm.field_b = kj.a(hn.field_h, "", "shield_empty").a().resample(var2);
+          qa.field_E = kj.a(hn.field_h, "", "fuel-start").a().resample(var2);
+          lm.field_d = kj.a(hn.field_h, "", "fuel-filling").a().resample(var2);
+          al.field_b = kj.a(hn.field_h, "", "fuel-stop").a().resample(var2);
+          fn.field_f = kj.a(hn.field_h, "", "fuel-full").a().resample(var2);
+          fg.field_a = kj.a(hn.field_h, "", "crate-attach").a().resample(var2);
+          rk.field_c = kj.a(hn.field_h, "", "tether-tighten").a().resample(var2);
+          bc.field_c = kj.a(hn.field_h, "", "tether-release").a().resample(var2);
+          nm.field_a = kj.a(hn.field_h, "", "powerup-collect").a().resample(var2);
+          vi.field_c = kj.a(hn.field_h, "", "repeller-active").a().resample(var2);
+          w.field_hb = kj.a(hn.field_h, "", "magnet-active").a().resample(var2);
+          of.field_h = kj.a(hn.field_h, "", "laser").a().resample(var2);
+          IntrusiveNodeHashTable.field_a = kj.a(hn.field_h, "", "explosion-ship").a().resample(var2);
+          RasterBuffer.field_c = kj.a(hn.field_h, "", "explosion_5_seconds").a().resample(var2);
+          pa.field_a = in.a(jm.field_I, "", "beeping").b().resample(var2);
           this.a(param0 + 97, var2);
-          ci.field_a = kj.a(hn.field_h, "", "mine_inactive_hum_2").a().a(var2);
+          ci.field_a = kj.a(hn.field_h, "", "mine_inactive_hum_2").a().resample(var2);
           qi.field_J = kj.a(hn.field_h, "", "100Hz square").a();
-          ve.field_d = kj.a(hn.field_h, "", "explosion-seeker-mine").a().a(var2);
-          kf.field_p = kj.a(hn.field_h, "", "rockbuster").a().a(var2);
-          td.field_c = kj.a(hn.field_h, "", "explosion-rock-buster").a().a(var2);
-          jh.field_k = kj.a(hn.field_h, "", "level_complete").a().a(var2);
-          pl.field_o = kj.a(hn.field_h, "", "level_complete_score").a().a(var2);
+          ve.field_d = kj.a(hn.field_h, "", "explosion-seeker-mine").a().resample(var2);
+          kf.field_p = kj.a(hn.field_h, "", "rockbuster").a().resample(var2);
+          td.field_c = kj.a(hn.field_h, "", "explosion-rock-buster").a().resample(var2);
+          jh.field_k = kj.a(hn.field_h, "", "level_complete").a().resample(var2);
+          pl.field_o = kj.a(hn.field_h, "", "level_complete_score").a().resample(var2);
           fn.a((byte) 106);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -702,31 +702,31 @@ public final class EscapeVector extends NetworkGameClient {
 
     private final void o(int param0) {
         try {
-          jm.field_K[param0] = fe.a("", fi.field_j, "sprites_fuel_glow", true);
-          jm.field_K[2] = fe.a("", fi.field_j, "sprites_turret_glow", true);
-          jm.field_K[3] = fe.a("", fi.field_j, "sprites_magnet_glow", true);
-          jm.field_K[4] = fe.a("", fi.field_j, "sprites_repeller_glow", true);
+          jm.field_K[param0] = fe.a("", IndexedSpriteState.field_j, "sprites_fuel_glow", true);
+          jm.field_K[2] = fe.a("", IndexedSpriteState.field_j, "sprites_turret_glow", true);
+          jm.field_K[3] = fe.a("", IndexedSpriteState.field_j, "sprites_magnet_glow", true);
+          jm.field_K[4] = fe.a("", IndexedSpriteState.field_j, "sprites_repeller_glow", true);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.DB(" + param0 + ')');
         }
     }
 
-    final static ca n(int param0) {
+    final static MouseWheelInput n(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 13) {
-              ca stackIn_2_0 = (ca) null;
+              MouseWheelInput stackIn_2_0 = (MouseWheelInput) null;
               return stackIn_2_0;
             }
             try {
-              ca stackIn_4_0 = (ca) (Class.forName("a").newInstance());
+              MouseWheelInput stackIn_4_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var1 = decompiledCaughtException;
               Object stackIn_6_0 = null;
-              return (ca) (stackIn_6_0);
+              return (MouseWheelInput) (stackIn_6_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -742,7 +742,7 @@ public final class EscapeVector extends NetworkGameClient {
 
     final void b(boolean param0) {
         try {
-          if (df.field_d != null) {
+          if (IsaacRandom.field_d != null) {
             ri.a(-25123);
           }
           if (!param0) {
@@ -770,7 +770,7 @@ public final class EscapeVector extends NetworkGameClient {
             mg.field_c = null;
             fn.a((byte) 57);
           }
-          fi.field_j = ve.a(1, 0, param0, 1, true);
+          IndexedSpriteState.field_j = ve.a(1, 0, param0, 1, true);
           sn.field_c = mj.a(6, -125);
           hn.field_h = mj.a(2, -126);
           jm.field_I = mj.a(3, -127);
@@ -781,9 +781,9 @@ public final class EscapeVector extends NetworkGameClient {
           uf.a(ve.field_h, ei.field_m, (byte) -96);
           DualLinkNode.field_n = new uc(70);
           DualLinkNode.field_n.a(ve.field_h, ah.field_l, sm.field_d, "basic", 14826);
-          DualLinkNode.field_n.a(fi.field_j, ah.field_l, sm.field_d, "", 14826);
-          DualLinkNode.field_n.a(fi.field_j, ah.field_l, sm.field_d, "scrshots", 14826);
-          DualLinkNode.field_n.a(sn.field_c, c.field_o, qf.field_h, "", 14826);
+          DualLinkNode.field_n.a(IndexedSpriteState.field_j, ah.field_l, sm.field_d, "", 14826);
+          DualLinkNode.field_n.a(IndexedSpriteState.field_j, ah.field_l, sm.field_d, "scrshots", 14826);
+          DualLinkNode.field_n.a(sn.field_c, CipherPacketBuffer.field_o, qf.field_h, "", 14826);
           DualLinkNode.field_n.a(bd.field_g, (byte) -125, gm.field_d, hn.field_h);
           DualLinkNode.field_n.a(bd.field_g, (byte) -115, gm.field_d, jm.field_I);
           DualLinkNode.field_n.a(bm.field_f, (byte) -119, uc.field_d, PointCloudEffect.field_D);
@@ -842,22 +842,22 @@ public final class EscapeVector extends NetworkGameClient {
         }
     }
 
-    private final void a(int param0, dd param1) {
+    private final void a(int param0, PcmResampler param1) {
         String stackIn_6_2 = null;
         try {
-          sf.field_e[0] = kj.a(hn.field_h, "", "explosion-fuel-tank").a().a(param1);
-          sf.field_e[param0] = kj.a(hn.field_h, "", "explosion-crate").a().a(param1);
-          hh dupTemp$8 = kj.a(hn.field_h, "", "explosion-magnet-repeller").a().a(param1);
+          sf.field_e[0] = kj.a(hn.field_h, "", "explosion-fuel-tank").a().resample(param1);
+          sf.field_e[param0] = kj.a(hn.field_h, "", "explosion-crate").a().resample(param1);
+          PcmSample dupTemp$8 = kj.a(hn.field_h, "", "explosion-magnet-repeller").a().resample(param1);
           sf.field_e[4] = dupTemp$8;
           sf.field_e[3] = dupTemp$8;
-          sf.field_e[2] = kj.a(hn.field_h, "", "explosion-turret").a().a(param1);
-          hh dupTemp$9 = kj.a(hn.field_h, "", "explosion-tnt").a().a(param1);
+          sf.field_e[2] = kj.a(hn.field_h, "", "explosion-turret").a().resample(param1);
+          PcmSample dupTemp$9 = kj.a(hn.field_h, "", "explosion-tnt").a().resample(param1);
           sf.field_e[8] = dupTemp$9;
           sf.field_e[5] = dupTemp$9;
-          hh dupTemp$10 = kj.a(hn.field_h, "", "explosion-laser").a().a(param1);
+          PcmSample dupTemp$10 = kj.a(hn.field_h, "", "explosion-laser").a().resample(param1);
           sf.field_e[7] = dupTemp$10;
           sf.field_e[6] = dupTemp$10;
-          hh dupTemp$11 = kj.a(hn.field_h, "", "explosion-powerup").a().a(param1);
+          PcmSample dupTemp$11 = kj.a(hn.field_h, "", "explosion-powerup").a().resample(param1);
           sf.field_e[13] = dupTemp$11;
           sf.field_e[12] = dupTemp$11;
           sf.field_e[11] = dupTemp$11;
@@ -977,7 +977,7 @@ public final class EscapeVector extends NetworkGameClient {
           }
           if (2 <= mg.field_b &&
             gk.field_c) {
-            fh.field_g.b("FPS: " + th.field_p, 636, 100, 16777215, 0);
+            fh.field_g.b("FPS: " + Bzip2State.field_p, 636, 100, 16777215, 0);
             fh.field_g.b("LPS: " + qf.field_j, 636, 120, 16777215, 0);
             long var5 = Runtime.getRuntime().totalMemory();
             long var7 = Runtime.getRuntime().freeMemory();
@@ -1103,18 +1103,18 @@ public final class EscapeVector extends NetworkGameClient {
     final void initializeClient(byte guard) {
         try {
           this.a(0, 11, 8, 7, 21, (byte) -99, false, 9);
-          ie.a(22050, true, 10);
-          bj.field_C = ie.a(NetworkGameClient.field_r, (java.awt.Component) ((Object) of.field_d), 0, 1024);
-          ig.field_l = ie.a(NetworkGameClient.field_r, (java.awt.Component) ((Object) of.field_d), 1, 22050);
-          rk.field_e = new hj();
+          AudioOutput.a(22050, true, 10);
+          bj.field_C = AudioOutput.a(NetworkGameClient.field_r, (java.awt.Component) ((Object) of.field_d), 0, 1024);
+          ig.field_l = AudioOutput.a(NetworkGameClient.field_r, (java.awt.Component) ((Object) of.field_d), 1, 22050);
+          rk.field_e = new PcmStreamMixer();
           bj.field_C.b(rk.field_e);
-          pl.field_n = new hj();
-          ec.field_a = new wb(pl.field_n);
-          ec.field_a.d(0.9399999976158142f);
-          ec.field_a.b(14.826103210449219f);
-          rk.field_e.a(ec.field_a);
-          nb.field_c = new hj();
-          BoundedRandomAccessFile.field_b = new wb(nb.field_c);
+          pl.field_n = new PcmStreamMixer();
+          SoundCache.field_a = new ReverbPcmStream(pl.field_n);
+          SoundCache.field_a.d(0.9399999976158142f);
+          SoundCache.field_a.b(14.826103210449219f);
+          rk.field_e.addSubstream(SoundCache.field_a);
+          nb.field_c = new PcmStreamMixer();
+          BoundedRandomAccessFile.field_b = new ReverbPcmStream(nb.field_c);
           if (guard != -97) {
             EscapeVector.a((String) null, 31, 49, (byte) 88);
           }
@@ -1136,21 +1136,21 @@ public final class EscapeVector extends NetworkGameClient {
 
     private final void p(int param0) {
         try {
-          mb.field_f[0] = fe.a("", fi.field_j, "sprites_fuel", true);
-          mb.field_f[1] = fe.a("", fi.field_j, "sprites_crate", true);
-          mb.field_f[2] = fe.a("", fi.field_j, "sprites_turret", true);
-          mb.field_f[3] = fe.a("", fi.field_j, "sprites_magnet", true);
-          mb.field_f[4] = fe.a("", fi.field_j, "sprites_repeller", true);
-          mb.field_f[5] = fe.a("", fi.field_j, "sprites_tnt", true);
-          mb.field_f[6] = fe.a("", fi.field_j, "sprites_laser_left", true);
+          mb.field_f[0] = fe.a("", IndexedSpriteState.field_j, "sprites_fuel", true);
+          mb.field_f[1] = fe.a("", IndexedSpriteState.field_j, "sprites_crate", true);
+          mb.field_f[2] = fe.a("", IndexedSpriteState.field_j, "sprites_turret", true);
+          mb.field_f[3] = fe.a("", IndexedSpriteState.field_j, "sprites_magnet", true);
+          mb.field_f[4] = fe.a("", IndexedSpriteState.field_j, "sprites_repeller", true);
+          mb.field_f[5] = fe.a("", IndexedSpriteState.field_j, "sprites_tnt", true);
+          mb.field_f[6] = fe.a("", IndexedSpriteState.field_j, "sprites_laser_left", true);
           int var2_int = -111 / ((60 - param0) / 58);
-          mb.field_f[7] = fe.a("", fi.field_j, "sprites_laser_right", true);
-          mb.field_f[8] = fe.a("", fi.field_j, "sprites_barrier", true);
-          mb.field_f[9] = fe.a("", fi.field_j, "sprites_powerup_shield", true);
-          mb.field_f[10] = fe.a("", fi.field_j, "sprites_powerup_triple_shot", true);
-          mb.field_f[11] = fe.a("", fi.field_j, "sprites_powerup_thrust", true);
-          mb.field_f[12] = fe.a("", fi.field_j, "sprites_powerup_one_rockbuster", true);
-          mb.field_f[13] = fe.a("", fi.field_j, "sprites_powerup_five_rockbusters", true);
+          mb.field_f[7] = fe.a("", IndexedSpriteState.field_j, "sprites_laser_right", true);
+          mb.field_f[8] = fe.a("", IndexedSpriteState.field_j, "sprites_barrier", true);
+          mb.field_f[9] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_shield", true);
+          mb.field_f[10] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_triple_shot", true);
+          mb.field_f[11] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_thrust", true);
+          mb.field_f[12] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_one_rockbuster", true);
+          mb.field_f[13] = fe.a("", IndexedSpriteState.field_j, "sprites_powerup_five_rockbusters", true);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.MB(" + param0 + ')');
         }
@@ -1234,8 +1234,8 @@ public final class EscapeVector extends NetworkGameClient {
           if (param0) {
             this.m((byte) 29);
           }
-          km.field_k = fe.a("", fi.field_j, "classic_level_select_bg", true);
-          aj.field_c = fe.a("", fi.field_j, "vengeance_level_select_bg", true);
+          km.field_k = fe.a("", IndexedSpriteState.field_j, "classic_level_select_bg", true);
+          aj.field_c = fe.a("", IndexedSpriteState.field_j, "vengeance_level_select_bg", true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -1244,7 +1244,7 @@ public final class EscapeVector extends NetworkGameClient {
         }
     }
 
-    private final void a(byte param0, hh param1) {
+    private final void a(byte param0, PcmSample param1) {
         String stackIn_14_2 = null;
         int var5 = obfuscationControl;
         try {
@@ -1280,7 +1280,7 @@ public final class EscapeVector extends NetworkGameClient {
           this.p(-28);
           int var2_int = 116 / ((-30 - param0) / 47);
           this.o(0);
-          qh.a(fi.field_j, (byte) -23);
+          qh.a(IndexedSpriteState.field_j, (byte) -23);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.IB(" + param0 + ')');
         }

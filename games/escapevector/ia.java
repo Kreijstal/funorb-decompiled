@@ -39,7 +39,7 @@ final class ia {
     int[] field_E;
     short[] field_q;
     int field_b;
-    static te field_z;
+    static IndexedSprite field_z;
     int field_g;
     short[] field_j;
     static int field_x;

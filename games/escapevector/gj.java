@@ -110,7 +110,7 @@ final class gj {
         return var3;
     }
 
-    final static void a(byte param0, mf param1, mf param2) {
+    final static void a(byte param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           if (param0 < 55) {
             field_u = (String) null;
@@ -321,10 +321,10 @@ final class gj {
         int var2 = this.field_y.field_n;
         int var3 = this.a(var2, false);
         if (0 > var3 ||
-          vn.field_a.length <= var3) {
+          RasterBuffer.field_a.length <= var3) {
           return -1;
         }
-        int[] var4 = vn.field_a[var3];
+        int[] var4 = RasterBuffer.field_a[var3];
         int[] var5 = var4;
         for (int var6 = 0; var5.length > var6; var6++) {
           int var7 = var5[var6];
@@ -450,8 +450,8 @@ final class gj {
 
     private final int a(int param0, int param1, boolean param2) {
         if (param2) {
-          mf var7 = (mf) null;
-          gj.a((byte) -44, (mf) null, (mf) null);
+          ResourceArchive var7 = (ResourceArchive) null;
+          gj.a((byte) -44, (ResourceArchive) null, (ResourceArchive) null);
         }
         int var4 = this.a(-1, param0, param1);
         int var5 = param0 % 50;
@@ -512,7 +512,7 @@ final class gj {
           this.field_n.addLast(-12328, this.field_x);
           String[] var9 = this.a(this.field_y.field_m[this.field_p], -1);
           this.b(var9, -117);
-          this.field_k = new me(fi.field_b, var9, 1);
+          this.field_k = new me(IndexedSpriteState.field_b, var9, 1);
           this.field_n.addLast(-12328, this.field_k);
           String[] var10 = new String[this.field_h];
           if (5 == this.field_w) {
@@ -574,7 +574,7 @@ final class gj {
         this.field_x = new me(this.field_h);
         this.field_n.addLast(-12328, this.field_x);
         String[] var10 = new String[this.field_h];
-        this.field_k = new me(fi.field_b, var10, 1);
+        this.field_k = new me(IndexedSpriteState.field_b, var10, 1);
         this.field_n.addLast(-12328, this.field_k);
         String[] var5 = new String[this.field_h];
         this.field_l = new me(qf.field_o, var5, 2);

@@ -4,7 +4,7 @@
 final class md extends r {
     static fk field_E;
     static volatile int field_G;
-    static vn field_D;
+    static RasterBuffer field_D;
     int field_F;
     static String field_H;
 
@@ -40,7 +40,7 @@ final class md extends r {
             try {
               java.net.URL var3 = new java.net.URL(param0.getCodeBase(), param2);
               var3 = sh.a((byte) 95, param0, var3);
-              th.a(true, true, param0, var3.toString());
+              Bzip2State.a(true, true, param0, var3.toString());
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Exception var3_ref2 = (Exception) (Object) decompiledCaughtException;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ih extends wl {
+final class ih extends BitmapFont {
     private byte[][] field_O;
 
     ih(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {

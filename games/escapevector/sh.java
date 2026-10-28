@@ -88,7 +88,7 @@ abstract class sh extends DualLinkNode {
             !wi.field_i.equals(param1.getParameter("session"))) {
             var4 = wi.field_i;
           }
-          java.net.URL stackIn_10_0 = vn.a((String) (var4), -1, (String) (var3), param2, 1);
+          java.net.URL stackIn_10_0 = RasterBuffer.a((String) (var4), -1, (String) (var3), param2, 1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

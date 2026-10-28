@@ -25,8 +25,8 @@ final class mh {
 
     final static String b(byte param0) {
         String var1 = "";
-        if (null != dd.field_d) {
-          var1 = dd.field_d.j(35);
+        if (null != PcmResampler.field_d) {
+          var1 = PcmResampler.field_d.j(35);
         }
         if (var1.length() == 0) {
           var1 = tg.i(0);
@@ -35,7 +35,7 @@ final class mh {
           field_d = (String) null;
         }
         if (var1.length() == 0) {
-          var1 = fi.field_e;
+          var1 = IndexedSpriteState.field_e;
         }
         return var1;
     }

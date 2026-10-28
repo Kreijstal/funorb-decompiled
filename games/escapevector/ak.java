@@ -286,7 +286,7 @@ final class ak {
             return;
           }
           int var3 = this.b((byte) -92);
-          int[] var4 = vn.field_a[var3];
+          int[] var4 = RasterBuffer.field_a[var3];
           if (1 == var5.length) {
             this.field_b[this.field_c] = this.d(10, var4[0], 0);
             return;
@@ -441,7 +441,7 @@ final class ak {
         if (di.field_d.field_e) {
           dk var2 = this.j((byte) 82);
           int var3 = nk.a(-122, var2);
-          rk.field_e.a(oa.field_w, 100, 1536 * qm.field_c / 64, var3);
+          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, var3);
         }
         if (param0) {
           String discarded$0 = this.g((byte) 4);
@@ -494,18 +494,18 @@ final class ak {
 
     private final dk j(byte param0) {
         int var2 = di.field_d.field_h;
-        dk var3 = m.a(this.field_k, var2, 0);
+        dk var3 = TetherHumStream.a(this.field_k, var2, 0);
         if (var3 != null) {
           return var3;
         }
         if (param0 <= 65) {
           boolean discarded$0 = this.c(-122);
         }
-        var3 = m.a(this.field_i, var2, 0);
+        var3 = TetherHumStream.a(this.field_i, var2, 0);
         if (var3 != null) {
           return var3;
         }
-        var3 = m.a(this.field_j, var2, 0);
+        var3 = TetherHumStream.a(this.field_j, var2, 0);
         if (var3 == null) {
           return null;
         }
@@ -579,23 +579,23 @@ final class ak {
         }
         if (!aj.b(-122)) {
           if (mj.field_d == 0) {
-            rk.field_e.a(pc.field_a, 100, qm.field_c * 6144 / 64, 5120);
+            rk.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 5120);
           }
           if (10 == mj.field_d) {
-            rk.field_e.a(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
+            rk.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
           }
           if (mj.field_d == 20) {
-            rk.field_e.a(pc.field_a, 100, 6144 * qm.field_c / 64, 11264);
+            rk.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 11264);
           }
           if (30 == mj.field_d) {
-            rk.field_e.a(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
+            rk.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
           }
         } else {
           if (mj.field_d == 0) {
-            rk.field_e.a(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
+            rk.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
           }
           if (mj.field_d == 10) {
-            rk.field_e.a(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
+            rk.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
           }
         }
         if (mj.field_d < 1000) {
@@ -628,7 +628,7 @@ final class ak {
         }
         di.field_d.a(this.c(sf.field_c, -1, ng.field_ob), (byte) 120, this.c(dh.field_d, -1, bj.field_y));
         this.c(false);
-        boolean var3Lifetime1 = (this.a(true, s.a((byte) 15, -1), (byte) 79));
+        boolean var3Lifetime1 = (this.a(true, Js5NetworkRequest.a((byte) 15, -1), (byte) 79));
         return (var3Lifetime1);
     }
 
@@ -795,7 +795,7 @@ final class ak {
             int var3 = this.a(1, 0);
             di.field_d.a(false, var3);
           }
-          boolean stackIn_10_0 = !(!this.a(false, s.a((byte) 15, nk.field_n), (byte) 96));
+          boolean stackIn_10_0 = !(!this.a(false, Js5NetworkRequest.a((byte) 15, nk.field_n), (byte) 96));
           var2 = stackIn_10_0;
           if (var2) {
             return (var2);
@@ -986,7 +986,7 @@ final class ak {
         try {
           if (!aj.b(-99)) {
             var10 = new int[]{2, 3, 4};
-            var11 = ge.field_d;
+            var11 = AudioService.field_d;
           } else {
             var11 = new String[]{IntrusiveDeque.field_e};
             var10 = new int[]{1};
@@ -1121,10 +1121,10 @@ final class ak {
         if (var2 < 0) {
           return;
         }
-        if (!(var2 < vn.field_a.length)) {
+        if (!(var2 < RasterBuffer.field_a.length)) {
           return;
         }
-        int[] var3 = vn.field_a[var2];
+        int[] var3 = RasterBuffer.field_a[var2];
         ij[] var4 = new ij[var3.length];
         for (int var5 = 0; var5 < var4.length; var5++) {
           var4[var5] = bk.a(var3[var5], true, 10, 3, 1);

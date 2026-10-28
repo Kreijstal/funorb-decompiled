@@ -8,7 +8,7 @@ final class ki extends r {
     static om field_H;
     private int field_D;
     private boolean field_E;
-    private wl field_L;
+    private BitmapFont field_L;
     static int[] field_M;
     static String field_I;
 
@@ -68,7 +68,7 @@ final class ki extends r {
         this.field_E = false;
     }
 
-    ki(int param0, int param1, int param2, int param3, hm param4, boolean param5, int param6, int param7, wl param8, int param9, String param10) {
+    ki(int param0, int param1, int param2, int param3, hm param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (db) null, (wn) null);
         int stackIn_10_0 = 0;
         String stackIn_15_2 = null;

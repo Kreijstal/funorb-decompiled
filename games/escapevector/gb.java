@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gb {
-    static hj field_b;
+    static PcmStreamMixer field_b;
     int field_c;
     int field_a;
 
@@ -142,7 +142,7 @@ final class gb {
         if (!(240 > param0)) {
           if (param0 >= 400) {
             if (param2 != 8158) {
-              field_b = (hj) null;
+              field_b = (PcmStreamMixer) null;
             }
             if (param0 < 280) {
               return -1;
@@ -171,9 +171,9 @@ final class gb {
             }
             return -1;
           }
-          field_b = (hj) null;
+          field_b = (PcmStreamMixer) null;
         } else if (param2 != 8158) {
-          field_b = (hj) null;
+          field_b = (PcmStreamMixer) null;
         }
         if (param0 < 280) {
           return -1;

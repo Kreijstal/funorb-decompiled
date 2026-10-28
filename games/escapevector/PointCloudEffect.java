@@ -14,7 +14,7 @@ final class PointCloudEffect extends DualLinkNode {
     int[] field_x;
     boolean field_q;
     private int field_F;
-    static mf field_D;
+    static ResourceArchive field_D;
     int[] field_A;
     int[] field_w;
     private int field_G;
@@ -156,7 +156,7 @@ final class PointCloudEffect extends DualLinkNode {
 
     private final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = 0;
-        te stackIn_8_0 = null;
+        IndexedSprite stackIn_8_0 = null;
         int var10 = EscapeVector.obfuscationControl;
         for (var7 = -param5 + param4; -param2 < var7; var7 = var7 - BoundedRandomAccessFile.activeSession.worldWidth) {
         }
@@ -169,9 +169,9 @@ final class PointCloudEffect extends DualLinkNode {
         } else {
           stackIn_8_0 = rl.field_k;
         }
-        te var8 = stackIn_8_0;
+        IndexedSprite var8 = stackIn_8_0;
         try {
-          te var9 = this.e((byte) 96);
+          IndexedSprite var9 = this.e((byte) 96);
           while (var7 < 640) {
             var8.a(var7, param0 - param3);
             if (var9 != null) {
@@ -189,8 +189,8 @@ final class PointCloudEffect extends DualLinkNode {
     private final void a(int param0, int param1, int param2, int param3) {
         int var11 = EscapeVector.obfuscationControl;
         if (param2 <= 8) {
-          te var12 = (te) null;
-          this.a(-110, (te) null, (te) null);
+          IndexedSprite var12 = (IndexedSprite) null;
+          this.a(-110, (IndexedSprite) null, (IndexedSprite) null);
         }
         for (int var5 = 0; var5 < this.field_F; var5++) {
           if (null == this.field_E ||
@@ -235,7 +235,7 @@ final class PointCloudEffect extends DualLinkNode {
           if (param1 != -107) {
             field_t = true;
           }
-          vn.field_e.addLast(-12328, param2);
+          RasterBuffer.field_e.addLast(-12328, param2);
           IntrusiveNode.a(-97, param0, param2);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -256,7 +256,7 @@ final class PointCloudEffect extends DualLinkNode {
         }
     }
 
-    private final void a(int param0, te param1, te param2) {
+    private final void a(int param0, IndexedSprite param1, IndexedSprite param2) {
         try {
           param2.field_a = param1.field_a;
           param2.field_g = param1.field_g;
@@ -481,7 +481,7 @@ final class PointCloudEffect extends DualLinkNode {
         int var10 = EscapeVector.obfuscationControl;
         int var7 = -100 % ((-7 - param2) / 38);
         if (rl.field_k == null) {
-          rl.field_k = new te(param3 - param5, param4 - param1, 256);
+          rl.field_k = new IndexedSprite(param3 - param5, param4 - param1, 256);
           this.g((byte) -82);
         } else {
           rl.field_k.field_g = param0;
@@ -500,7 +500,7 @@ final class PointCloudEffect extends DualLinkNode {
         this.g(122);
     }
 
-    PointCloudEffect(Sprite param0, int param1, int param2, hh param3) {
+    PointCloudEffect(Sprite param0, int param1, int param2, PcmSample param3) {
         String stackIn_21_2 = null;
         String stackIn_24_2 = null;
         this.field_s = false;
@@ -535,7 +535,7 @@ final class PointCloudEffect extends DualLinkNode {
             this.field_C[var10Lifetime1] = -262144 + (int)(524289.0 * Math.random());
             this.field_w[var10Lifetime1] = -262144 + (int)(Math.random() * 524289.0);
           }
-          pl.field_n.a(param3, 100, BoundedRandomAccessFile.activeSession.b(131072 * (param0.height + param0.width), var5_int, 96, var6), BoundedRandomAccessFile.activeSession.c(var5_int, 112));
+          pl.field_n.playSampleWithPan(param3, 100, BoundedRandomAccessFile.activeSession.b(131072 * (param0.height + param0.width), var5_int, 96, var6), BoundedRandomAccessFile.activeSession.c(var5_int, 112));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -557,7 +557,7 @@ final class PointCloudEffect extends DualLinkNode {
         }
     }
 
-    PointCloudEffect(int param0, int param1, hh param2) {
+    PointCloudEffect(int param0, int param1, PcmSample param2) {
         this.field_s = false;
         this.field_q = false;
         this.field_G = 0;
@@ -573,13 +573,13 @@ final class PointCloudEffect extends DualLinkNode {
             this.field_C[var4_int] = -262144 + (int)(Math.random() * 524289.0);
             this.field_w[var4_int] = -262144 + (int)(524289.0 * Math.random());
           }
-          pl.field_n.a(param2, 100, BoundedRandomAccessFile.activeSession.b(4194304, param0, 96, param1), BoundedRandomAccessFile.activeSession.c(param0, 109));
+          pl.field_n.playSampleWithPan(param2, 100, BoundedRandomAccessFile.activeSession.b(4194304, param0, 96, param1), BoundedRandomAccessFile.activeSession.c(param0, 109));
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final te e(byte param0) {
+    private final IndexedSprite e(byte param0) {
         int var15 = EscapeVector.obfuscationControl;
         if (!this.field_q) {
           return null;

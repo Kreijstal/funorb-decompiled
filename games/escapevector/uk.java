@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uk {
-    static kk field_b;
+    static DiskCacheWorker field_b;
     IntPoint field_g;
     static String field_a;
-    static hh field_j;
+    static PcmSample field_j;
     IntPoint field_e;
     IntPoint field_k;
     IntPoint field_c;
@@ -38,7 +38,7 @@ final class uk {
 
     public static void a(int param0) {
         if (param0 != -1) {
-          field_j = (hh) null;
+          field_j = (PcmSample) null;
         }
         field_j = null;
         field_a = null;
@@ -80,7 +80,7 @@ final class uk {
           int[] var8 = var41;
           int[] var64 = new int[param5.field_M];
           int[] var62 = oi.field_L;
-          int[] var63 = df.field_f;
+          int[] var63 = IsaacRandom.field_f;
           int[] var61 = GameplaySession.field_xb;
           for (int var13 = 0; param5.field_M > var13; var13++) {
             int var14 = param6 * var61[var13] + param2 * var62[var13] + param7 * var63[var13] >> 8;

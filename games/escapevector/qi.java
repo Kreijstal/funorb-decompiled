@@ -3,7 +3,7 @@
  */
 final class qi extends bj implements qb {
     static Sprite[][] field_M;
-    static hh field_J;
+    static PcmSample field_J;
     private int field_H;
     static om field_P;
     private pn field_K;
@@ -11,7 +11,7 @@ final class qi extends bj implements qb {
     private String field_G;
     private hc[] field_I;
     private int[] field_O;
-    private wl field_L;
+    private BitmapFont field_L;
 
     final static void a(int param0, boolean param1) {
         if (!param1) {
@@ -99,7 +99,7 @@ final class qi extends bj implements qb {
         }
     }
 
-    qi(pn param0, wl param1, String param2) {
+    qi(pn param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (db) null);
         this.field_H = 0;
         try {
@@ -128,7 +128,7 @@ final class qi extends bj implements qb {
             }
             int var7 = this.field_O[var6_int];
             if (var7 != -1) {
-              lj.a(this.field_O[var6_int], 57);
+              WhirlpoolHasher.a(this.field_O[var6_int], 57);
             } else {
               this.field_K.o(-18861);
             }

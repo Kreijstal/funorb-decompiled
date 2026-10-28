@@ -3,7 +3,7 @@
  */
 final class bm {
     static String field_g;
-    static hh field_a;
+    static PcmSample field_a;
     static String field_d;
     static String field_f;
     static int field_c;
@@ -11,8 +11,8 @@ final class bm {
     static nn field_b;
 
     final static void a(int param0) {
-        cg.d(param0 ^ 36);
-        lj.a(param0, 30);
+        ImageProducerRasterBuffer.d(param0 ^ 36);
+        WhirlpoolHasher.a(param0, 30);
     }
 
     final static lm a(String param0, int param1, int param2) {

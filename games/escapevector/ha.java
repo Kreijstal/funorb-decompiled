@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ha implements db {
-    private wl field_f;
+    private BitmapFont field_f;
     static hf field_c;
     private int field_b;
     private int field_d;
@@ -263,18 +263,18 @@ final class ha implements db {
         }
     }
 
-    final static ab a(int param0, int param1, mf param2, int param3, mf param4) {
+    final static CoverageBitmapFont a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
           if (!uc.a(param4, param1 ^ 198630719, param0, param3)) {
             Object stackIn_2_0 = null;
-            return (ab) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param1 != -198630768) {
             field_c = (hf) null;
           }
-          ab stackIn_6_0 = ea.a(param2.a(param0, (byte) -97, param3), -1);
+          CoverageBitmapFont stackIn_6_0 = ea.a(param2.a(param0, (byte) -97, param3), -1);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -299,10 +299,10 @@ final class ha implements db {
     public ha() {
         this.field_b = 1;
         this.field_d = 1;
-        this.field_f = sb.field_a;
+        this.field_f = Js5Transport.field_a;
     }
 
-    ha(wl param0, int param1, int param2) {
+    ha(BitmapFont param0, int param1, int param2) {
         try {
           this.field_b = param1;
           this.field_d = param2;
@@ -317,8 +317,8 @@ final class ha implements db {
         int var16 = EscapeVector.obfuscationControl;
         try {
           if (param3 > -75) {
-            mf var17 = (mf) null;
-            ha.a(-4, -41, (mf) null, 73, (mf) null);
+            ResourceArchive var17 = (ResourceArchive) null;
+            ha.a(-4, -41, (ResourceArchive) null, 73, (ResourceArchive) null);
           }
           while (true) {
             param7--;

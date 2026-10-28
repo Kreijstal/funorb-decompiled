@@ -5,7 +5,7 @@ final class qa extends r {
     static int field_G;
     static int field_D;
     static String field_I;
-    static hh field_E;
+    static PcmSample field_E;
     static String field_H;
 
     final void a(int param0, int param1, int param2, int param3, hm param4, byte param5) {
@@ -72,7 +72,7 @@ final class qa extends r {
         }
     }
 
-    final static void a(boolean param0, mf param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2605_0;
             StringBuilder stackIn_2605_1;
@@ -83,9 +83,9 @@ final class qa extends r {
             RuntimeException var2_ref;
             int var3;
             boolean param0;
-            mf param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(boolean initialParam0, mf initialParam1) {
+            $CfrPartitionedBody(boolean initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2605_0 = null;
@@ -99,2988 +99,2988 @@ final class qa extends r {
             }
             void runChunk0() throws java.lang.RuntimeException {
                 fk.field_a = param1;
-                var2 = jn.a(113, "loginm3");
+                var2 = IntKeyLookup.a(113, "loginm3");
                 if (var2 != null) {
-                  DualLinkNode.field_l = mi.a(var2, 113);
+                  DualLinkNode.field_l = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(41, "loginm2");
+                var2 = IntKeyLookup.a(41, "loginm2");
                 if (null != var2) {
-                  wk.field_a = mi.a(var2, 122);
+                  wk.field_a = RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(42, "loginm1");
+                var2 = IntKeyLookup.a(42, "loginm1");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(33, "idlemessage20min");
+                var2 = IntKeyLookup.a(33, "idlemessage20min");
                 if (null != var2) {
-                  ah.field_g = mi.a(var2, 116);
+                  ah.field_g = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(120, "error_js5crc");
+                var2 = IntKeyLookup.a(120, "error_js5crc");
                 if (null != var2) {
-                  ag.field_b = mi.a(var2, 117);
+                  ag.field_b = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(75, "error_js5io");
+                var2 = IntKeyLookup.a(75, "error_js5io");
                 if (var2 != null) {
-                  nn.field_e = mi.a(var2, 118);
+                  nn.field_e = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(120, "error_js5connect_full");
+                var2 = IntKeyLookup.a(120, "error_js5connect_full");
                 if (null != var2) {
-                  km.field_l = mi.a(var2, 115);
+                  km.field_l = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(72, "error_js5connect");
+                var2 = IntKeyLookup.a(72, "error_js5connect");
                 if (null != var2) {
-                  gm.field_f = mi.a(var2, 113);
+                  gm.field_f = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(33, "login_gameupdated");
+                var2 = IntKeyLookup.a(33, "login_gameupdated");
                 if (var2 != null) {
-                  gj.field_a = mi.a(var2, 111);
+                  gj.field_a = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(38, "create_unable");
+                var2 = IntKeyLookup.a(38, "create_unable");
                 if (var2 != null) {
-                  w.field_fb = mi.a(var2, 115);
+                  w.field_fb = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(52, "create_ineligible");
+                var2 = IntKeyLookup.a(52, "create_ineligible");
                 if (null != var2) {
-                  mj.field_a = mi.a(var2, 119);
+                  mj.field_a = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(81, "usernameprompt");
+                var2 = IntKeyLookup.a(81, "usernameprompt");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(90, "passwordprompt");
+                var2 = IntKeyLookup.a(90, "passwordprompt");
                 if (var2 != null) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(61, "andagainprompt");
+                var2 = IntKeyLookup.a(61, "andagainprompt");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(87, "ticketing_read");
+                var2 = IntKeyLookup.a(87, "ticketing_read");
                 if (null != var2) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(122, "ticketing_ignore");
+                var2 = IntKeyLookup.a(122, "ticketing_ignore");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(114, "ticketing_oneunread");
+                var2 = IntKeyLookup.a(114, "ticketing_oneunread");
                 if (var2 != null) {
-                  cf.field_a = mi.a(var2, 125);
+                  cf.field_a = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(84, "ticketing_xunread");
+                var2 = IntKeyLookup.a(84, "ticketing_xunread");
                 if (var2 != null) {
-                  mi.field_j = mi.a(var2, 121);
+                  RasterSnapshot.field_j = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(116, "ticketing_gotowebsite");
+                var2 = IntKeyLookup.a(116, "ticketing_gotowebsite");
                 if (var2 != null) {
-                  field_I = mi.a(var2, 112);
+                  field_I = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(46, "ticketing_waitingformessages");
+                var2 = IntKeyLookup.a(46, "ticketing_waitingformessages");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(20, "mu_chat_on");
+                var2 = IntKeyLookup.a(20, "mu_chat_on");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(51, "mu_chat_friends");
+                var2 = IntKeyLookup.a(51, "mu_chat_friends");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(37, "mu_chat_off");
+                var2 = IntKeyLookup.a(37, "mu_chat_off");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(81, "mu_chat_lobby");
+                var2 = IntKeyLookup.a(81, "mu_chat_lobby");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(109, "mu_chat_public");
+                var2 = IntKeyLookup.a(109, "mu_chat_public");
                 if (null != var2) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(29, "mu_chat_ignore");
+                var2 = IntKeyLookup.a(29, "mu_chat_ignore");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(79, "mu_chat_tips");
+                var2 = IntKeyLookup.a(79, "mu_chat_tips");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(124, "mu_chat_game");
+                var2 = IntKeyLookup.a(124, "mu_chat_game");
                 if (null != var2) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(98, "mu_chat_private");
+                var2 = IntKeyLookup.a(98, "mu_chat_private");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(57, "mu_x_entered_game");
+                var2 = IntKeyLookup.a(57, "mu_x_entered_game");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(102, "mu_x_joined_your_game");
+                var2 = IntKeyLookup.a(102, "mu_x_joined_your_game");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(41, "mu_x_entered_other_game");
+                var2 = IntKeyLookup.a(41, "mu_x_entered_other_game");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(21, "mu_x_left_lobby");
+                var2 = IntKeyLookup.a(21, "mu_x_left_lobby");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(101, "mu_x_lost_con");
+                var2 = IntKeyLookup.a(101, "mu_x_lost_con");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(19, "mu_x_cannot_join_full");
+                var2 = IntKeyLookup.a(19, "mu_x_cannot_join_full");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(125, "mu_x_cannot_join_inprogress");
+                var2 = IntKeyLookup.a(125, "mu_x_cannot_join_inprogress");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(47, "mu_x_declined_invite");
+                var2 = IntKeyLookup.a(47, "mu_x_declined_invite");
                 if (null != var2) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(86, "mu_x_withdrew_request");
+                var2 = IntKeyLookup.a(86, "mu_x_withdrew_request");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(32, "mu_x_removed");
+                var2 = IntKeyLookup.a(32, "mu_x_removed");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(61, "mu_x_dropped_out");
+                var2 = IntKeyLookup.a(61, "mu_x_dropped_out");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(40, "mu_entered_other_game");
+                var2 = IntKeyLookup.a(40, "mu_entered_other_game");
                 if (var2 != null) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(83, "mu_game_is_full");
+                var2 = IntKeyLookup.a(83, "mu_game_is_full");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(61, "mu_game_has_started");
+                var2 = IntKeyLookup.a(61, "mu_game_has_started");
                 if (null != var2) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(86, "mu_you_declined_invite");
+                var2 = IntKeyLookup.a(86, "mu_you_declined_invite");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(59, "mu_invite_withdrawn");
+                var2 = IntKeyLookup.a(59, "mu_invite_withdrawn");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(51, "mu_request_declined");
+                var2 = IntKeyLookup.a(51, "mu_request_declined");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(110, "mu_request_withdrawn");
+                var2 = IntKeyLookup.a(110, "mu_request_withdrawn");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(126, "mu_all_players_have_left");
+                var2 = IntKeyLookup.a(126, "mu_all_players_have_left");
                 if (null != var2) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(99, "mu_lobby_name");
+                var2 = IntKeyLookup.a(99, "mu_lobby_name");
                 if (var2 != null) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(24, "mu_lobby_rating");
+                var2 = IntKeyLookup.a(24, "mu_lobby_rating");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(45, "mu_lobby_friend_add");
+                var2 = IntKeyLookup.a(45, "mu_lobby_friend_add");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(99, "mu_lobby_friend_rm");
+                var2 = IntKeyLookup.a(99, "mu_lobby_friend_rm");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(120, "mu_lobby_name_add");
+                var2 = IntKeyLookup.a(120, "mu_lobby_name_add");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(22, "mu_lobby_name_rm");
+                var2 = IntKeyLookup.a(22, "mu_lobby_name_rm");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(97, "mu_lobby_location");
+                var2 = IntKeyLookup.a(97, "mu_lobby_location");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(81, "mu_gamelist_all_games");
+                var2 = IntKeyLookup.a(81, "mu_gamelist_all_games");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(31, "mu_gamelist_status");
+                var2 = IntKeyLookup.a(31, "mu_gamelist_status");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(48, "mu_gamelist_owner");
+                var2 = IntKeyLookup.a(48, "mu_gamelist_owner");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(56, "mu_gamelist_players");
+                var2 = IntKeyLookup.a(56, "mu_gamelist_players");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(61, "mu_gamelist_avg_rating");
+                var2 = IntKeyLookup.a(61, "mu_gamelist_avg_rating");
                 if (var2 != null) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(31, "mu_gamelist_options");
+                var2 = IntKeyLookup.a(31, "mu_gamelist_options");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(28, "mu_gamelist_elapsed_time");
+                var2 = IntKeyLookup.a(28, "mu_gamelist_elapsed_time");
                 if (null != var2) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(66, "mu_play_rated");
+                var2 = IntKeyLookup.a(66, "mu_play_rated");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(82, "mu_create_unrated");
+                var2 = IntKeyLookup.a(82, "mu_create_unrated");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(14, "mu_options");
+                var2 = IntKeyLookup.a(14, "mu_options");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(104, "mu_options_whocanjoin");
+                var2 = IntKeyLookup.a(104, "mu_options_whocanjoin");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(119, "mu_options_players");
+                var2 = IntKeyLookup.a(119, "mu_options_players");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(58, "mu_options_dontmind");
+                var2 = IntKeyLookup.a(58, "mu_options_dontmind");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(118, "mu_options_allow_spectate");
+                var2 = IntKeyLookup.a(118, "mu_options_allow_spectate");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(42, "mu_options_ratedgametype");
+                var2 = IntKeyLookup.a(42, "mu_options_ratedgametype");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(52, "yes");
+                var2 = IntKeyLookup.a(52, "yes");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(42, "no");
+                var2 = IntKeyLookup.a(42, "no");
                 if (null != var2) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(113, "mu_invite_players");
+                var2 = IntKeyLookup.a(113, "mu_invite_players");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(93, "close");
+                var2 = IntKeyLookup.a(93, "close");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(102, "add_x_to_friends");
+                var2 = IntKeyLookup.a(102, "add_x_to_friends");
                 if (var2 != null) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(81, "add_x_to_ignore");
+                var2 = IntKeyLookup.a(81, "add_x_to_ignore");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(25, "rm_x_from_friends");
+                var2 = IntKeyLookup.a(25, "rm_x_from_friends");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(111, "rm_x_from_ignore");
+                var2 = IntKeyLookup.a(111, "rm_x_from_ignore");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(108, "send_pm_to_x");
+                var2 = IntKeyLookup.a(108, "send_pm_to_x");
                 if (null != var2) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(93, "send_qc_to_x");
+                var2 = IntKeyLookup.a(93, "send_qc_to_x");
                 if (var2 != null) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(93, "send_pm");
+                var2 = IntKeyLookup.a(93, "send_pm");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(100, "invite_accept_xs_game");
+                var2 = IntKeyLookup.a(100, "invite_accept_xs_game");
                 if (null != var2) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(71, "invite_decline_xs_game");
+                var2 = IntKeyLookup.a(71, "invite_decline_xs_game");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(24, "join_xs_game");
+                var2 = IntKeyLookup.a(24, "join_xs_game");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(43, "join_request_xs_game");
+                var2 = IntKeyLookup.a(43, "join_request_xs_game");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(95, "join_withdraw_request_xs_game");
+                var2 = IntKeyLookup.a(95, "join_withdraw_request_xs_game");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(101, "mu_gameopt_kick_x_from_this_game");
+                var2 = IntKeyLookup.a(101, "mu_gameopt_kick_x_from_this_game");
                 if (var2 != null) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(106, "mu_gameopt_withdraw_invite_to_x");
+                var2 = IntKeyLookup.a(106, "mu_gameopt_withdraw_invite_to_x");
                 if (null != var2) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(40, "mu_gameopt_accept_x_into_game");
+                var2 = IntKeyLookup.a(40, "mu_gameopt_accept_x_into_game");
                 if (null != var2) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(66, "mu_gameopt_reject_x_from_game");
+                var2 = IntKeyLookup.a(66, "mu_gameopt_reject_x_from_game");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(29, "mu_gameopt_invite_x_to_game");
+                var2 = IntKeyLookup.a(29, "mu_gameopt_invite_x_to_game");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(99, "report_x_for_abuse");
+                var2 = IntKeyLookup.a(99, "report_x_for_abuse");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(119, "unable_to_send_message_password_a");
+                var2 = IntKeyLookup.a(119, "unable_to_send_message_password_a");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(23, "unable_to_send_message_password_b");
+                var2 = IntKeyLookup.a(23, "unable_to_send_message_password_b");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(25, "mu_chat_lobby_show_all");
+                var2 = IntKeyLookup.a(25, "mu_chat_lobby_show_all");
                 if (var2 != null) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(64, "mu_chat_lobby_friends_only");
+                var2 = IntKeyLookup.a(64, "mu_chat_lobby_friends_only");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(122, "mu_chat_lobby_friends");
+                var2 = IntKeyLookup.a(122, "mu_chat_lobby_friends");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(94, "mu_chat_lobby_hide");
+                var2 = IntKeyLookup.a(94, "mu_chat_lobby_hide");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(91, "mu_chat_game_show_all");
+                var2 = IntKeyLookup.a(91, "mu_chat_game_show_all");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(125, "mu_chat_game_friends_only");
+                var2 = IntKeyLookup.a(125, "mu_chat_game_friends_only");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(21, "mu_chat_game_friends");
+                var2 = IntKeyLookup.a(21, "mu_chat_game_friends");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(66, "mu_chat_game_hide");
+                var2 = IntKeyLookup.a(66, "mu_chat_game_hide");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(24, "mu_chat_pm_show_all");
+                var2 = IntKeyLookup.a(24, "mu_chat_pm_show_all");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(34, "mu_chat_pm_friends_only");
+                var2 = IntKeyLookup.a(34, "mu_chat_pm_friends_only");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(16, "mu_chat_pm_friends");
+                var2 = IntKeyLookup.a(16, "mu_chat_pm_friends");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(23, "mu_chat_invisible_and_silent_mode");
+                var2 = IntKeyLookup.a(23, "mu_chat_invisible_and_silent_mode");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(101, "you_have_been_removed_from_xs_game");
+                var2 = IntKeyLookup.a(101, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(100, "your_rating_is_x");
+                var2 = IntKeyLookup.a(100, "your_rating_is_x");
                 if (null != var2) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(65, "you_are_on_x_server");
+                var2 = IntKeyLookup.a(65, "you_are_on_x_server");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(28, "rated_game");
+                var2 = IntKeyLookup.a(28, "rated_game");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(49, "unrated_game");
+                var2 = IntKeyLookup.a(49, "unrated_game");
                 if (null != var2) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(93, "rated_game_tips");
+                var2 = IntKeyLookup.a(93, "rated_game_tips");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(105, "searching_for_opponent_singular");
+                var2 = IntKeyLookup.a(105, "searching_for_opponent_singular");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(115, "searching_for_opponents_plural");
+                var2 = IntKeyLookup.a(115, "searching_for_opponents_plural");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(21, "find_opponent_singular");
+                var2 = IntKeyLookup.a(21, "find_opponent_singular");
                 if (var2 != null) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(117, "find_opponents_plural");
+                var2 = IntKeyLookup.a(117, "find_opponents_plural");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(112, "rated_game_tips_setup_singular");
+                var2 = IntKeyLookup.a(112, "rated_game_tips_setup_singular");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(96, "rated_game_tips_setup_plural");
+                var2 = IntKeyLookup.a(96, "rated_game_tips_setup_plural");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(40, "waiting_to_start_hint");
+                var2 = IntKeyLookup.a(40, "waiting_to_start_hint");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(61, "your_game");
+                var2 = IntKeyLookup.a(61, "your_game");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(67, "game_full");
+                var2 = IntKeyLookup.a(67, "game_full");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(108, "join_requests_one");
+                var2 = IntKeyLookup.a(108, "join_requests_one");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(41, "join_requests_many");
+                var2 = IntKeyLookup.a(41, "join_requests_many");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(59, "xs_game");
+                var2 = IntKeyLookup.a(59, "xs_game");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(26, "waiting_for_x_to_start_game");
+                var2 = IntKeyLookup.a(26, "waiting_for_x_to_start_game");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(22, "game_options_changed");
+                var2 = IntKeyLookup.a(22, "game_options_changed");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(54, "players_x_of_y");
+                var2 = IntKeyLookup.a(54, "players_x_of_y");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(25, "message_lobby");
+                var2 = IntKeyLookup.a(25, "message_lobby");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(37, "quickchat_lobby");
+                var2 = IntKeyLookup.a(37, "quickchat_lobby");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(94, "message_game");
+                var2 = IntKeyLookup.a(94, "message_game");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(58, "message_team");
+                var2 = IntKeyLookup.a(58, "message_team");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(82, "quickchat_game");
+                var2 = IntKeyLookup.a(82, "quickchat_game");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(101, "kick");
+                var2 = IntKeyLookup.a(101, "kick");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(51, "inviting_x");
+                var2 = IntKeyLookup.a(51, "inviting_x");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(16, "x_wants_to_join");
+                var2 = IntKeyLookup.a(16, "x_wants_to_join");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(104, "accept");
+                var2 = IntKeyLookup.a(104, "accept");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(78, "reject");
+                var2 = IntKeyLookup.a(78, "reject");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(124, "invite");
+                var2 = IntKeyLookup.a(124, "invite");
                 if (null != var2) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(104, "status_concluded");
+                var2 = IntKeyLookup.a(104, "status_concluded");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(38, "status_spectate");
+                var2 = IntKeyLookup.a(38, "status_spectate");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(60, "status_playing");
+                var2 = IntKeyLookup.a(60, "status_playing");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(100, "status_join");
+                var2 = IntKeyLookup.a(100, "status_join");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(23, "status_private");
+                var2 = IntKeyLookup.a(23, "status_private");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(29, "status_full");
+                var2 = IntKeyLookup.a(29, "status_full");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(26, "players_in_game");
+                var2 = IntKeyLookup.a(26, "players_in_game");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(38, "you_are_invited_to_xs_game");
+                var2 = IntKeyLookup.a(38, "you_are_invited_to_xs_game");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(57, "asking_to_join_xs_game");
+                var2 = IntKeyLookup.a(57, "asking_to_join_xs_game");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(94, "who_can_join");
+                var2 = IntKeyLookup.a(94, "who_can_join");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(45, "you_can_join");
+                var2 = IntKeyLookup.a(45, "you_can_join");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(59, "you_can_ask_to_join");
+                var2 = IntKeyLookup.a(59, "you_can_ask_to_join");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(18, "you_cannot_join_in_progress");
+                var2 = IntKeyLookup.a(18, "you_cannot_join_in_progress");
                 if (var2 != null) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(63, "you_can_spectate");
+                var2 = IntKeyLookup.a(63, "you_can_spectate");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(108, "you_can_not_spectate");
+                var2 = IntKeyLookup.a(108, "you_can_not_spectate");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(88, "spectate_xs_game");
+                var2 = IntKeyLookup.a(88, "spectate_xs_game");
                 if (null != var2) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(87, "hide_players_in_xs_game");
+                var2 = IntKeyLookup.a(87, "hide_players_in_xs_game");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(119, "show_players_in_xs_game");
+                var2 = IntKeyLookup.a(119, "show_players_in_xs_game");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(105, "connecting_to_friend_server_twoline");
+                var2 = IntKeyLookup.a(105, "connecting_to_friend_server_twoline");
                 if (null != var2) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(67, "loading");
+                var2 = IntKeyLookup.a(67, "loading");
                 if (var2 != null) {
-                  um.field_a = mi.a(var2, 125);
+                  um.field_a = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(98, "offline");
+                var2 = IntKeyLookup.a(98, "offline");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(87, "multiconst_invite_only");
+                var2 = IntKeyLookup.a(87, "multiconst_invite_only");
                 if (var2 != null) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(85, "multiconst_clan");
+                var2 = IntKeyLookup.a(85, "multiconst_clan");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(73, "multiconst_friends");
+                var2 = IntKeyLookup.a(73, "multiconst_friends");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(44, "multiconst_similar_rating");
+                var2 = IntKeyLookup.a(44, "multiconst_similar_rating");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(85, "multiconst_open");
+                var2 = IntKeyLookup.a(85, "multiconst_open");
                 if (var2 != null) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(18, "no_options_available");
+                var2 = IntKeyLookup.a(18, "no_options_available");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(123, "reportabuse");
+                var2 = IntKeyLookup.a(123, "reportabuse");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(72, "presstabtochat");
+                var2 = IntKeyLookup.a(72, "presstabtochat");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(86, "pressf10toquickchat");
+                var2 = IntKeyLookup.a(86, "pressf10toquickchat");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(43, "dob_chatdisabled");
+                var2 = IntKeyLookup.a(43, "dob_chatdisabled");
                 if (null != var2) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(90, "dob_enterforchat");
+                var2 = IntKeyLookup.a(90, "dob_enterforchat");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(108, "tab_hidechattemporarily");
+                var2 = IntKeyLookup.a(108, "tab_hidechattemporarily");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(115, "esc_cancelprivatemessage");
+                var2 = IntKeyLookup.a(115, "esc_cancelprivatemessage");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(86, "esc_cancelthisline");
+                var2 = IntKeyLookup.a(86, "esc_cancelthisline");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(41, "privatequickchat_from_x");
+                var2 = IntKeyLookup.a(41, "privatequickchat_from_x");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(92, "privatequickchat_to_x");
+                var2 = IntKeyLookup.a(92, "privatequickchat_to_x");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(16, "privatechat_blankarea_explanation");
+                var2 = IntKeyLookup.a(16, "privatechat_blankarea_explanation");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(14, "publicchat_unavailable_ratedgame");
+                var2 = IntKeyLookup.a(14, "publicchat_unavailable_ratedgame");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(93, "privatechat_friend_offline");
+                var2 = IntKeyLookup.a(93, "privatechat_friend_offline");
                 if (null != var2) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(59, "privatechat_friend_notlisted");
+                var2 = IntKeyLookup.a(59, "privatechat_friend_notlisted");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(49, "chatviewscrolledup");
+                var2 = IntKeyLookup.a(49, "chatviewscrolledup");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(88, "thisisrunescapeclan");
+                var2 = IntKeyLookup.a(88, "thisisrunescapeclan");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(22, "thisisrunescapeclan_notowner");
+                var2 = IntKeyLookup.a(22, "thisisrunescapeclan_notowner");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(61, "runescapeclan");
+                var2 = IntKeyLookup.a(61, "runescapeclan");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(100, "rated_membersonly");
+                var2 = IntKeyLookup.a(100, "rated_membersonly");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(19, "gameopt_membersonly");
+                var2 = IntKeyLookup.a(19, "gameopt_membersonly");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(46, "gameopt_1moreratedgame");
+                var2 = IntKeyLookup.a(46, "gameopt_1moreratedgame");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(109, "gameopt_moreratedgames");
+                var2 = IntKeyLookup.a(109, "gameopt_moreratedgames");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(41, "gameopt_needrating");
+                var2 = IntKeyLookup.a(41, "gameopt_needrating");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(118, "gameopt_unratedonly");
+                var2 = IntKeyLookup.a(118, "gameopt_unratedonly");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(33, "gameopt_notunlocked");
+                var2 = IntKeyLookup.a(33, "gameopt_notunlocked");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(19, "gameopt_cannotbecombined1");
+                var2 = IntKeyLookup.a(19, "gameopt_cannotbecombined1");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(22, "gameopt_cannotbecombined2");
+                var2 = IntKeyLookup.a(22, "gameopt_cannotbecombined2");
                 if (null != var2) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(107, "gameopt_playernotmember");
+                var2 = IntKeyLookup.a(107, "gameopt_playernotmember");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(87, "gameopt_younotmember");
+                var2 = IntKeyLookup.a(87, "gameopt_younotmember");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(62, "gameopt_playerneedsrating");
+                var2 = IntKeyLookup.a(62, "gameopt_playerneedsrating");
                 if (null != var2) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(86, "gameopt_youneedrating");
+                var2 = IntKeyLookup.a(86, "gameopt_youneedrating");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(99, "gameopt_playerneedsratedgames");
+                var2 = IntKeyLookup.a(99, "gameopt_playerneedsratedgames");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(34, "gameopt_youneedratedgames");
+                var2 = IntKeyLookup.a(34, "gameopt_youneedratedgames");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(125, "gameopt_playerneeds1ratedgame");
+                var2 = IntKeyLookup.a(125, "gameopt_playerneeds1ratedgame");
                 if (var2 != null) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(22, "gameopt_youneed1ratedgame");
+                var2 = IntKeyLookup.a(22, "gameopt_youneed1ratedgame");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(40, "gameopt_playerhasntunlocked");
+                var2 = IntKeyLookup.a(40, "gameopt_playerhasntunlocked");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(68, "gameopt_youhaventunlocked");
+                var2 = IntKeyLookup.a(68, "gameopt_youhaventunlocked");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(93, "gameopt_trychanging1");
+                var2 = IntKeyLookup.a(93, "gameopt_trychanging1");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(126, "gameopt_trychanging2");
+                var2 = IntKeyLookup.a(126, "gameopt_trychanging2");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(59, "gameopt_needchanging1");
+                var2 = IntKeyLookup.a(59, "gameopt_needchanging1");
                 if (var2 != null) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(40, "gameopt_needchanging2");
+                var2 = IntKeyLookup.a(40, "gameopt_needchanging2");
                 if (var2 != null) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(21, "gameopt_mightchange");
+                var2 = IntKeyLookup.a(21, "gameopt_mightchange");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(26, "gameopt_playersdontqualify");
+                var2 = IntKeyLookup.a(26, "gameopt_playersdontqualify");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(103, "gameopt_playersdontqualify_selectgametab");
+                var2 = IntKeyLookup.a(103, "gameopt_playersdontqualify_selectgametab");
                 if (null != var2) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(88, "gameopt_unselectedoptions");
+                var2 = IntKeyLookup.a(88, "gameopt_unselectedoptions");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(90, "gameopt_pleaseselectoption1");
+                var2 = IntKeyLookup.a(90, "gameopt_pleaseselectoption1");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(102, "gameopt_pleaseselectoption2");
+                var2 = IntKeyLookup.a(102, "gameopt_pleaseselectoption2");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(59, "gameopt_badnumplayers");
+                var2 = IntKeyLookup.a(59, "gameopt_badnumplayers");
                 if (var2 != null) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(76, "gameopt_inviteplayers_or_trychanging1");
+                var2 = IntKeyLookup.a(76, "gameopt_inviteplayers_or_trychanging1");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(14, "gameopt_inviteplayers_or_trychanging2");
+                var2 = IntKeyLookup.a(14, "gameopt_inviteplayers_or_trychanging2");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(36, "gameopt_novalidcombos");
+                var2 = IntKeyLookup.a(36, "gameopt_novalidcombos");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(67, "gameopt_pleasetrychanging");
+                var2 = IntKeyLookup.a(67, "gameopt_pleasetrychanging");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(57, "ra_title");
+                var2 = IntKeyLookup.a(57, "ra_title");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(26, "ra_mutethisplayer");
+                var2 = IntKeyLookup.a(26, "ra_mutethisplayer");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(116, "ra_suggestmute");
+                var2 = IntKeyLookup.a(116, "ra_suggestmute");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(89, "ra_intro");
+                var2 = IntKeyLookup.a(89, "ra_intro");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(102, "ra_intro_no_name");
+                var2 = IntKeyLookup.a(102, "ra_intro_no_name");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(69, "ra_explanation");
+                var2 = IntKeyLookup.a(69, "ra_explanation");
                 if (null != var2) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(111, "rule_pillar_0");
+                var2 = IntKeyLookup.a(111, "rule_pillar_0");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(22, "rule_0_0");
+                var2 = IntKeyLookup.a(22, "rule_0_0");
                 if (var2 != null) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(86, "rule_0_1");
+                var2 = IntKeyLookup.a(86, "rule_0_1");
                 if (null != var2) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(75, "rule_0_2");
+                var2 = IntKeyLookup.a(75, "rule_0_2");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(111, "rule_0_3");
+                var2 = IntKeyLookup.a(111, "rule_0_3");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(37, "rule_0_4");
+                var2 = IntKeyLookup.a(37, "rule_0_4");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(79, "rule_0_5");
+                var2 = IntKeyLookup.a(79, "rule_0_5");
                 if (null != var2) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(123, "rule_pillar_1");
+                var2 = IntKeyLookup.a(123, "rule_pillar_1");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(107, "rule_1_0");
+                var2 = IntKeyLookup.a(107, "rule_1_0");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(76, "rule_1_1");
+                var2 = IntKeyLookup.a(76, "rule_1_1");
                 if (var2 != null) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(75, "rule_1_2");
+                var2 = IntKeyLookup.a(75, "rule_1_2");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(26, "rule_1_3");
+                var2 = IntKeyLookup.a(26, "rule_1_3");
                 if (var2 != null) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(107, "rule_1_4");
+                var2 = IntKeyLookup.a(107, "rule_1_4");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(90, "rule_pillar_2");
+                var2 = IntKeyLookup.a(90, "rule_pillar_2");
                 if (null != var2) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(120, "rule_2_0");
+                var2 = IntKeyLookup.a(120, "rule_2_0");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(39, "rule_2_1");
+                var2 = IntKeyLookup.a(39, "rule_2_1");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(123, "rule_2_2");
+                var2 = IntKeyLookup.a(123, "rule_2_2");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(31, "createafreeaccount");
+                var2 = IntKeyLookup.a(31, "createafreeaccount");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(56, "cancel");
+                var2 = IntKeyLookup.a(56, "cancel");
                 if (null != var2) {
-                  cf.field_b = mi.a(var2, 124);
+                  cf.field_b = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(85, "pleaselogintoplay");
+                var2 = IntKeyLookup.a(85, "pleaselogintoplay");
                 if (null != var2) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(64, "pleaselogin");
+                var2 = IntKeyLookup.a(64, "pleaselogin");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(68, "pleaselogin_member");
+                var2 = IntKeyLookup.a(68, "pleaselogin_member");
                 if (var2 != null) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(93, "invaliduserorpass");
+                var2 = IntKeyLookup.a(93, "invaliduserorpass");
                 if (var2 != null) {
-                  fd.field_a = mi.a(var2, 121);
+                  fd.field_a = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(82, "pleasetryagain");
+                var2 = IntKeyLookup.a(82, "pleasetryagain");
                 if (null != var2) {
-                  jl.field_l = mi.a(var2, 117);
+                  jl.field_l = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(66, "pleasereenterpass");
+                var2 = IntKeyLookup.a(66, "pleasereenterpass");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(21, "playfreeversion");
+                var2 = IntKeyLookup.a(21, "playfreeversion");
                 if (var2 != null) {
-                  ei.field_k = mi.a(var2, 113);
+                  ei.field_k = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(26, "reloadgame");
+                var2 = IntKeyLookup.a(26, "reloadgame");
                 if (var2 != null) {
-                  TerrainMap.field_i = mi.a(var2, 127);
+                  TerrainMap.field_i = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(64, "toserverlist");
+                var2 = IntKeyLookup.a(64, "toserverlist");
                 if (var2 != null) {
-                  qk.field_a = mi.a(var2, 124);
+                  qk.field_a = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(15, "tocustomersupport");
+                var2 = IntKeyLookup.a(15, "tocustomersupport");
                 if (null != var2) {
-                  ej.field_c = mi.a(var2, 115);
+                  ej.field_c = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(96, "changedisplayname");
+                var2 = IntKeyLookup.a(96, "changedisplayname");
                 if (null != var2) {
-                  lj.field_g = mi.a(var2, 126);
+                  WhirlpoolHasher.field_g = RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(55, "returntohomepage");
+                var2 = IntKeyLookup.a(55, "returntohomepage");
                 if (null != var2) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(55, "justplay");
+                var2 = IntKeyLookup.a(55, "justplay");
                 if (var2 != null) {
-                  cj.field_c = mi.a(var2, 112);
+                  cj.field_c = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(21, "justplay_excl");
+                var2 = IntKeyLookup.a(21, "justplay_excl");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(94, "login");
+                var2 = IntKeyLookup.a(94, "login");
                 if (null != var2) {
-                  ta.field_g = mi.a(var2, 122);
+                  ta.field_g = RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(69, "goback");
+                var2 = IntKeyLookup.a(69, "goback");
                 if (var2 != null) {
-                  c.field_p = mi.a(var2, 127);
+                  CipherPacketBuffer.field_p = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(53, "otheroptions");
+                var2 = IntKeyLookup.a(53, "otheroptions");
                 if (null != var2) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(124, "proceed");
+                var2 = IntKeyLookup.a(124, "proceed");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(18, "connectingtoserver");
+                var2 = IntKeyLookup.a(18, "connectingtoserver");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(63, "pleasewait");
+                var2 = IntKeyLookup.a(63, "pleasewait");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(60, "logging_in");
+                var2 = IntKeyLookup.a(60, "logging_in");
                 if (var2 != null) {
-                  mm.field_a = mi.a(var2, 112);
+                  mm.field_a = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(53, "reconnect");
+                var2 = IntKeyLookup.a(53, "reconnect");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(51, "backtoerror");
+                var2 = IntKeyLookup.a(51, "backtoerror");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(67, "pleasecheckinternet");
+                var2 = IntKeyLookup.a(67, "pleasecheckinternet");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(64, "attemptingtoreconnect");
+                var2 = IntKeyLookup.a(64, "attemptingtoreconnect");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(48, "connectionlost_reconnecting");
+                var2 = IntKeyLookup.a(48, "connectionlost_reconnecting");
                 if (null != var2) {
-                  DualLinkNode.field_h = mi.a(var2, 124);
+                  DualLinkNode.field_h = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(114, "connectionlost_withreason");
+                var2 = IntKeyLookup.a(114, "connectionlost_withreason");
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  QuickChatPhraseDefinition.field_y = mi.a(var2, 118);
+                  QuickChatPhraseDefinition.field_y = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(125, "passwordverificationrequired");
+                var2 = IntKeyLookup.a(125, "passwordverificationrequired");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(114, "invalidpass");
+                var2 = IntKeyLookup.a(114, "invalidpass");
                 if (null != var2) {
-                  fi.field_c = mi.a(var2, 114);
+                  IndexedSpriteState.field_c = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(56, "retry");
+                var2 = IntKeyLookup.a(56, "retry");
                 if (null != var2) {
-                  sh.field_s = mi.a(var2, 122);
+                  sh.field_s = RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(103, "back");
+                var2 = IntKeyLookup.a(103, "back");
                 if (var2 != null) {
-                  Minimap.field_O = mi.a(var2, 115);
+                  Minimap.field_O = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(103, "exitfullscreenmode");
+                var2 = IntKeyLookup.a(103, "exitfullscreenmode");
                 if (!param0) {
-                  field_E = (hh) null;
+                  field_E = (PcmSample) null;
                 }
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(108, "quittowebsite");
+                var2 = IntKeyLookup.a(108, "quittowebsite");
                 if (var2 != null) {
-                  d.field_d = mi.a(var2, 116);
+                  d.field_d = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(93, "connectionrestored");
+                var2 = IntKeyLookup.a(93, "connectionrestored");
                 if (null != var2) {
-                  ni.field_K = mi.a(var2, 112);
+                  ni.field_K = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(93, "warning_ifyouquit");
+                var2 = IntKeyLookup.a(93, "warning_ifyouquit");
                 if (null != var2) {
-                  gd.field_Z = mi.a(var2, 122);
+                  gd.field_Z = RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(59, "warning_ifyouquitorleavepage");
+                var2 = IntKeyLookup.a(59, "warning_ifyouquitorleavepage");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(29, "resubscribe_withoutlosing_fs");
+                var2 = IntKeyLookup.a(29, "resubscribe_withoutlosing_fs");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(99, "resubscribe_withoutlosing");
+                var2 = IntKeyLookup.a(99, "resubscribe_withoutlosing");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(81, "customersupport_withoutlosing_fs");
+                var2 = IntKeyLookup.a(81, "customersupport_withoutlosing_fs");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(37, "customersupport_withoutlosing");
+                var2 = IntKeyLookup.a(37, "customersupport_withoutlosing");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(29, "js5help_withoutlosing_fs");
+                var2 = IntKeyLookup.a(29, "js5help_withoutlosing_fs");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(30, "js5help_withoutlosing");
+                var2 = IntKeyLookup.a(30, "js5help_withoutlosing");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(43, "checkinternet_withoutlosing_fs");
+                var2 = IntKeyLookup.a(43, "checkinternet_withoutlosing_fs");
                 if (null != var2) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(79, "checkinternet_withoutlosing");
+                var2 = IntKeyLookup.a(79, "checkinternet_withoutlosing");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(70, "create_intro");
+                var2 = IntKeyLookup.a(70, "create_intro");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(108, "create_sameaccounttip_unnamed");
+                var2 = IntKeyLookup.a(108, "create_sameaccounttip_unnamed");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(63, "dateofbirthprompt");
+                var2 = IntKeyLookup.a(63, "dateofbirthprompt");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(117, "fetchingcountrylist");
+                var2 = IntKeyLookup.a(117, "fetchingcountrylist");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(66, "countryprompt");
+                var2 = IntKeyLookup.a(66, "countryprompt");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(101, "countrylisterror");
+                var2 = IntKeyLookup.a(101, "countrylisterror");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(90, "theonlypersonalquestions");
+                var2 = IntKeyLookup.a(90, "theonlypersonalquestions");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(108, "create_submittingdata");
+                var2 = IntKeyLookup.a(108, "create_submittingdata");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(51, "check");
+                var2 = IntKeyLookup.a(51, "check");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(35, "create_pleasechooseausername");
+                var2 = IntKeyLookup.a(35, "create_pleasechooseausername");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(17, "create_usernameblurb");
+                var2 = IntKeyLookup.a(17, "create_usernameblurb");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(58, "checkingavailability");
+                var2 = IntKeyLookup.a(58, "checkingavailability");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(105, "checking");
+                var2 = IntKeyLookup.a(105, "checking");
                 if (null != var2) {
-                  fj.field_bb = mi.a(var2, 124);
+                  fj.field_bb = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(100, "create_namealreadytaken");
+                var2 = IntKeyLookup.a(100, "create_namealreadytaken");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(99, "create_sameaccounttip_named");
+                var2 = IntKeyLookup.a(99, "create_sameaccounttip_named");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(122, "create_nosuggestions");
+                var2 = IntKeyLookup.a(122, "create_nosuggestions");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(83, "create_alternativelygoback");
+                var2 = IntKeyLookup.a(83, "create_alternativelygoback");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(14, "create_available");
+                var2 = IntKeyLookup.a(14, "create_available");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(106, "create_willnowshowtermsandconditions");
+                var2 = IntKeyLookup.a(106, "create_willnowshowtermsandconditions");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(94, "fetchingterms");
+                var2 = IntKeyLookup.a(94, "fetchingterms");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(123, "termserror");
+                var2 = IntKeyLookup.a(123, "termserror");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(38, "create_iagree");
+                var2 = IntKeyLookup.a(38, "create_iagree");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(25, "create_idisagree");
+                var2 = IntKeyLookup.a(25, "create_idisagree");
                 if (var2 != null) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(125, "create_pleasescrolldowntoaccept");
+                var2 = IntKeyLookup.a(125, "create_pleasescrolldowntoaccept");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(79, "create_linkaddress");
+                var2 = IntKeyLookup.a(79, "create_linkaddress");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(37, "openinpopupwindow");
+                var2 = IntKeyLookup.a(37, "openinpopupwindow");
                 if (var2 != null) {
-                  ah.field_m = mi.a(var2, 120);
+                  ah.field_m = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(117, "create");
+                var2 = IntKeyLookup.a(117, "create");
                 if (null != var2) {
-                  ag.field_c = mi.a(var2, 121);
+                  ag.field_c = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(121, "create_pleasechooseapassword");
+                var2 = IntKeyLookup.a(121, "create_pleasechooseapassword");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(40, "create_passwordblurb");
+                var2 = IntKeyLookup.a(40, "create_passwordblurb");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(121, "create_nevergivepassword");
+                var2 = IntKeyLookup.a(121, "create_nevergivepassword");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(66, "creatingyouraccount");
+                var2 = IntKeyLookup.a(66, "creatingyouraccount");
                 if (null != var2) {
-                  j.field_a = mi.a(var2, 122);
+                  j.field_a = RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(78, "create_youmustaccept");
+                var2 = IntKeyLookup.a(78, "create_youmustaccept");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(100, "create_passwordsdifferent");
+                var2 = IntKeyLookup.a(100, "create_passwordsdifferent");
                 if (var2 != null) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(35, "create_success");
+                var2 = IntKeyLookup.a(35, "create_success");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(30, "day");
+                var2 = IntKeyLookup.a(30, "day");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(78, "month");
+                var2 = IntKeyLookup.a(78, "month");
                 if (null != var2) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(46, "year");
+                var2 = IntKeyLookup.a(46, "year");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(29, "monthnames,0");
+                var2 = IntKeyLookup.a(29, "monthnames,0");
                 if (var2 != null) {
-                  ef.field_c[0] = mi.a(var2, 115);
+                  ef.field_c[0] = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(66, "monthnames,1");
+                var2 = IntKeyLookup.a(66, "monthnames,1");
                 if (var2 != null) {
-                  ef.field_c[1] = mi.a(var2, 125);
+                  ef.field_c[1] = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(76, "monthnames,2");
+                var2 = IntKeyLookup.a(76, "monthnames,2");
                 if (var2 != null) {
-                  ef.field_c[2] = mi.a(var2, 118);
+                  ef.field_c[2] = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(117, "monthnames,3");
+                var2 = IntKeyLookup.a(117, "monthnames,3");
                 if (var2 != null) {
-                  ef.field_c[3] = mi.a(var2, 113);
+                  ef.field_c[3] = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(62, "monthnames,4");
+                var2 = IntKeyLookup.a(62, "monthnames,4");
                 if (var2 != null) {
-                  ef.field_c[4] = mi.a(var2, 123);
+                  ef.field_c[4] = RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(42, "monthnames,5");
+                var2 = IntKeyLookup.a(42, "monthnames,5");
                 if (var2 != null) {
-                  ef.field_c[5] = mi.a(var2, 113);
+                  ef.field_c[5] = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(104, "monthnames,6");
+                var2 = IntKeyLookup.a(104, "monthnames,6");
                 if (var2 != null) {
-                  ef.field_c[6] = mi.a(var2, 118);
+                  ef.field_c[6] = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(41, "monthnames,7");
+                var2 = IntKeyLookup.a(41, "monthnames,7");
                 if (var2 != null) {
-                  ef.field_c[7] = mi.a(var2, 117);
+                  ef.field_c[7] = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(124, "monthnames,8");
+                var2 = IntKeyLookup.a(124, "monthnames,8");
                 if (null != var2) {
-                  ef.field_c[8] = mi.a(var2, 110);
+                  ef.field_c[8] = RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(118, "monthnames,9");
+                var2 = IntKeyLookup.a(118, "monthnames,9");
                 if (var2 != null) {
-                  ef.field_c[9] = mi.a(var2, 120);
+                  ef.field_c[9] = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(123, "monthnames,10");
+                var2 = IntKeyLookup.a(123, "monthnames,10");
                 if (var2 != null) {
-                  ef.field_c[10] = mi.a(var2, 119);
+                  ef.field_c[10] = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(61, "monthnames,11");
+                var2 = IntKeyLookup.a(61, "monthnames,11");
                 if (var2 != null) {
-                  ef.field_c[11] = mi.a(var2, 118);
+                  ef.field_c[11] = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(75, "create_welcome");
+                var2 = IntKeyLookup.a(75, "create_welcome");
                 if (var2 != null) {
-                  q.field_F = mi.a(var2, 118);
+                  q.field_F = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(77, "create_u13_welcome");
+                var2 = IntKeyLookup.a(77, "create_u13_welcome");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(32, "create_createanaccount");
+                var2 = IntKeyLookup.a(32, "create_createanaccount");
                 if (var2 != null) {
-                  pc.field_g = mi.a(var2, 111);
+                  pc.field_g = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(87, "create_username");
+                var2 = IntKeyLookup.a(87, "create_username");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(42, "create_displayname");
+                var2 = IntKeyLookup.a(42, "create_displayname");
                 if (var2 != null) {
-                  lf.field_J = mi.a(var2, 120);
+                  lf.field_J = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(74, "create_password");
+                var2 = IntKeyLookup.a(74, "create_password");
                 if (var2 != null) {
-                  qc.field_vb = mi.a(var2, 113);
+                  qc.field_vb = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(74, "create_password_confirm");
+                var2 = IntKeyLookup.a(74, "create_password_confirm");
                 if (null != var2) {
-                  mh.field_d = mi.a(var2, 114);
+                  mh.field_d = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(14, "create_email");
+                var2 = IntKeyLookup.a(14, "create_email");
                 if (null != var2) {
-                  tm.field_Z = mi.a(var2, 118);
+                  tm.field_Z = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(57, "create_email_confirm");
+                var2 = IntKeyLookup.a(57, "create_email_confirm");
                 if (null != var2) {
-                  ri.field_a = mi.a(var2, 120);
+                  ri.field_a = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(108, "create_age");
+                var2 = IntKeyLookup.a(108, "create_age");
                 if (null != var2) {
-                  qm.field_a = mi.a(var2, 110);
+                  qm.field_a = RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(26, "create_u13_email");
+                var2 = IntKeyLookup.a(26, "create_u13_email");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(126, "create_u13_email_confirm");
+                var2 = IntKeyLookup.a(126, "create_u13_email_confirm");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(97, "create_dob");
+                var2 = IntKeyLookup.a(97, "create_dob");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(38, "create_country");
+                var2 = IntKeyLookup.a(38, "create_country");
                 if (var2 != null) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(28, "create_alternatives_header");
+                var2 = IntKeyLookup.a(28, "create_alternatives_header");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(57, "create_alternatives_select");
+                var2 = IntKeyLookup.a(57, "create_alternatives_select");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(19, "create_suggestions");
+                var2 = IntKeyLookup.a(19, "create_suggestions");
                 if (null != var2) {
-                  hm.field_m = mi.a(var2, 119);
+                  hm.field_m = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(90, "create_more_suggestions");
+                var2 = IntKeyLookup.a(90, "create_more_suggestions");
                 if (var2 != null) {
-                  uj.field_c = mi.a(var2, 127);
+                  uj.field_c = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(123, "create_select_alternative");
+                var2 = IntKeyLookup.a(123, "create_select_alternative");
                 if (null != var2) {
-                  ei.field_n = mi.a(var2, 126);
+                  ei.field_n = RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(94, "create_optin_news");
+                var2 = IntKeyLookup.a(94, "create_optin_news");
                 if (var2 != null) {
-                  ii.field_b = mi.a(var2, 113);
+                  ii.field_b = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(73, "create_agreeterms");
+                var2 = IntKeyLookup.a(73, "create_agreeterms");
                 if (null != var2) {
-                  aj.field_b = mi.a(var2, 116);
+                  aj.field_b = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(81, "create_u13terms");
+                var2 = IntKeyLookup.a(81, "create_u13terms");
                 if (var2 != null) {
-                  mh.field_c = mi.a(var2, 117);
+                  mh.field_c = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(16, "login_username_email");
+                var2 = IntKeyLookup.a(16, "login_username_email");
                 if (var2 != null) {
-                  lh.field_b = mi.a(var2, 123);
+                  lh.field_b = RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(116, "login_username");
+                var2 = IntKeyLookup.a(116, "login_username");
                 if (null != var2) {
-                  wi.field_c = mi.a(var2, 127);
+                  wi.field_c = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(48, "login_email");
+                var2 = IntKeyLookup.a(48, "login_email");
                 if (var2 != null) {
-                  kg.field_b = mi.a(var2, 117);
+                  kg.field_b = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(83, "login_username_tooltip");
+                var2 = IntKeyLookup.a(83, "login_username_tooltip");
                 if (var2 != null) {
-                  cd.field_u = mi.a(var2, 121);
+                  cd.field_u = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(18, "login_password_tooltip");
+                var2 = IntKeyLookup.a(18, "login_password_tooltip");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(89, "login_login_tooltip");
+                var2 = IntKeyLookup.a(89, "login_login_tooltip");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(31, "login_create_tooltip");
+                var2 = IntKeyLookup.a(31, "login_create_tooltip");
                 if (null != var2) {
-                  mm.field_c = mi.a(var2, 124);
+                  mm.field_c = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(79, "login_justplay_tooltip");
+                var2 = IntKeyLookup.a(79, "login_justplay_tooltip");
                 if (null != var2) {
-                  lf.field_G = mi.a(var2, 126);
+                  lf.field_G = RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(102, "login_back_tooltip");
+                var2 = IntKeyLookup.a(102, "login_back_tooltip");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(52, "login_no_displayname");
+                var2 = IntKeyLookup.a(52, "login_no_displayname");
                 if (var2 != null) {
-                  sm.field_a = mi.a(var2, 117);
+                  sm.field_a = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(49, "create_username_tooltip");
+                var2 = IntKeyLookup.a(49, "create_username_tooltip");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(110, "create_username_hint");
+                var2 = IntKeyLookup.a(110, "create_username_hint");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(121, "create_displayname_tooltip");
+                var2 = IntKeyLookup.a(121, "create_displayname_tooltip");
                 if (var2 != null) {
-                  bb.field_K = mi.a(var2, 127);
+                  bb.field_K = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(45, "create_displayname_hint");
+                var2 = IntKeyLookup.a(45, "create_displayname_hint");
                 if (null != var2) {
-                  ig.field_i = mi.a(var2, 122);
+                  ig.field_i = RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(83, "create_password_tooltip");
+                var2 = IntKeyLookup.a(83, "create_password_tooltip");
                 if (var2 != null) {
-                  aa.field_b = mi.a(var2, 114);
+                  aa.field_b = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(86, "create_password_hint");
+                var2 = IntKeyLookup.a(86, "create_password_hint");
                 if (var2 != null) {
-                  rm.field_a = mi.a(var2, 124);
+                  rm.field_a = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(74, "create_password_confirm_tooltip");
+                var2 = IntKeyLookup.a(74, "create_password_confirm_tooltip");
                 if (var2 != null) {
-                  pl.field_i = mi.a(var2, 119);
+                  pl.field_i = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(93, "create_email_tooltip");
+                var2 = IntKeyLookup.a(93, "create_email_tooltip");
                 if (null != var2) {
-                  en.field_a = mi.a(var2, 121);
+                  en.field_a = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(101, "create_email_confirm_tooltip");
+                var2 = IntKeyLookup.a(101, "create_email_confirm_tooltip");
                 if (var2 != null) {
-                  co.field_f = mi.a(var2, 122);
+                  co.field_f = RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(111, "create_age_tooltip");
+                var2 = IntKeyLookup.a(111, "create_age_tooltip");
                 if (var2 != null) {
-                  ta.field_k = mi.a(var2, 121);
+                  ta.field_k = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(116, "create_optin_news_tooltip");
+                var2 = IntKeyLookup.a(116, "create_optin_news_tooltip");
                 if (var2 != null) {
-                  ad.field_h = mi.a(var2, 127);
+                  ad.field_h = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(49, "create_u13_email_tooltip");
+                var2 = IntKeyLookup.a(49, "create_u13_email_tooltip");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(62, "create_u13_email_confirm_tooltip");
+                var2 = IntKeyLookup.a(62, "create_u13_email_confirm_tooltip");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(37, "create_dob_tooltip");
+                var2 = IntKeyLookup.a(37, "create_dob_tooltip");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(98, "create_country_tooltip");
+                var2 = IntKeyLookup.a(98, "create_country_tooltip");
                 if (null != var2) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(100, "create_optin_tooltip");
+                var2 = IntKeyLookup.a(100, "create_optin_tooltip");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(74, "create_continue");
+                var2 = IntKeyLookup.a(74, "create_continue");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(79, "create_username_unavailable");
+                var2 = IntKeyLookup.a(79, "create_username_unavailable");
                 if (null != var2) {
-                  vn.field_b = mi.a(var2, 122);
+                  RasterBuffer.field_b = RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(84, "create_username_available");
+                var2 = IntKeyLookup.a(84, "create_username_available");
                 if (var2 != null) {
-                  fd.field_b = mi.a(var2, 125);
+                  fd.field_b = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(59, "create_alert_namelength");
+                var2 = IntKeyLookup.a(59, "create_alert_namelength");
                 if (null != var2) {
-                  kl.field_p = mi.a(var2, 126);
+                  kl.field_p = RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(73, "create_alert_namechars");
+                var2 = IntKeyLookup.a(73, "create_alert_namechars");
                 if (var2 != null) {
-                  s.field_B = mi.a(var2, 120);
+                  Js5NetworkRequest.field_B = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(121, "create_alert_nameleadingspace");
+                var2 = IntKeyLookup.a(121, "create_alert_nameleadingspace");
                 if (null != var2) {
-                  kn.field_c = mi.a(var2, 126);
+                  kn.field_c = RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(74, "create_alert_doublespace");
+                var2 = IntKeyLookup.a(74, "create_alert_doublespace");
                 if (null != var2) {
-                  rg.field_c = mi.a(var2, 116);
+                  BufferedRandomAccessFile.field_c = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(98, "create_alert_passchars");
+                var2 = IntKeyLookup.a(98, "create_alert_passchars");
                 if (var2 != null) {
-                  gn.field_b = mi.a(var2, 121);
+                  gn.field_b = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(65, "create_alert_passrepeated");
+                var2 = IntKeyLookup.a(65, "create_alert_passrepeated");
                 if (var2 != null) {
-                  PacketBuffer.field_j = mi.a(var2, 125);
+                  PacketBuffer.field_j = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(89, "create_alert_passlength");
+                var2 = IntKeyLookup.a(89, "create_alert_passlength");
                 if (var2 != null) {
-                  TerrainMap.field_e = mi.a(var2, 115);
+                  TerrainMap.field_e = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(17, "create_alert_passcontainsname");
+                var2 = IntKeyLookup.a(17, "create_alert_passcontainsname");
                 if (var2 != null) {
-                  IntrusiveDeque.field_b = mi.a(var2, 125);
+                  IntrusiveDeque.field_b = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(18, "create_alert_passcontainsemail");
+                var2 = IntKeyLookup.a(18, "create_alert_passcontainsemail");
                 if (null != var2) {
-                  bg.field_b = mi.a(var2, 118);
+                  bg.field_b = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(109, "create_alert_passcontainsname_partial");
+                var2 = IntKeyLookup.a(109, "create_alert_passcontainsname_partial");
                 if (null != var2) {
-                  kk.field_a = mi.a(var2, 125);
+                  DiskCacheWorker.field_a = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(64, "create_alert_checkname");
+                var2 = IntKeyLookup.a(64, "create_alert_checkname");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(72, "create_alert_invalidemail");
+                var2 = IntKeyLookup.a(72, "create_alert_invalidemail");
                 if (var2 != null) {
-                  eo.field_a = mi.a(var2, 115);
+                  eo.field_a = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(68, "create_alert_email_unavailable");
+                var2 = IntKeyLookup.a(68, "create_alert_email_unavailable");
                 if (null != var2) {
-                  wa.field_a = mi.a(var2, 121);
+                  wa.field_a = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(35, "create_alert_invaliddate");
+                var2 = IntKeyLookup.a(35, "create_alert_invaliddate");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(87, "create_alert_invalidage");
+                var2 = IntKeyLookup.a(87, "create_alert_invalidage");
                 if (null != var2) {
-                  tb.field_E = mi.a(var2, 112);
+                  tb.field_E = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(73, "create_alert_yearrange");
+                var2 = IntKeyLookup.a(73, "create_alert_yearrange");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(46, "create_alert_mismatch");
+                var2 = IntKeyLookup.a(46, "create_alert_mismatch");
                 if (var2 != null) {
-                  me.field_n = mi.a(var2, 110);
+                  me.field_n = RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(91, "create_passwordvalid");
+                var2 = IntKeyLookup.a(91, "create_passwordvalid");
                 if (null != var2) {
-                  ml.field_b = mi.a(var2, 114);
+                  ml.field_b = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(76, "create_emailvalid");
+                var2 = IntKeyLookup.a(76, "create_emailvalid");
                 if (null != var2) {
-                  ec.field_c = mi.a(var2, 110);
+                  SoundCache.field_c = RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(68, "create_account_success");
+                var2 = IntKeyLookup.a(68, "create_account_success");
                 if (var2 != null) {
-                  ni.field_G = mi.a(var2, 118);
+                  ni.field_G = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(67, "invalid_name");
+                var2 = IntKeyLookup.a(67, "invalid_name");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(115, "cannot_add_yourself");
+                var2 = IntKeyLookup.a(115, "cannot_add_yourself");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(116, "unable_to_add_friend");
+                var2 = IntKeyLookup.a(116, "unable_to_add_friend");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(64, "unable_to_add_ignore");
+                var2 = IntKeyLookup.a(64, "unable_to_add_ignore");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(28, "unable_to_delete_friend");
+                var2 = IntKeyLookup.a(28, "unable_to_delete_friend");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(63, "unable_to_delete_ignore");
+                var2 = IntKeyLookup.a(63, "unable_to_delete_ignore");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(104, "friendlistfull");
+                var2 = IntKeyLookup.a(104, "friendlistfull");
                 if (null != var2) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(124, "friendlistdupe");
+                var2 = IntKeyLookup.a(124, "friendlistdupe");
                 if (var2 != null) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(114, "friendnotfound");
+                var2 = IntKeyLookup.a(114, "friendnotfound");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(20, "ignorelistfull");
+                var2 = IntKeyLookup.a(20, "ignorelistfull");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(74, "ignorelistdupe");
+                var2 = IntKeyLookup.a(74, "ignorelistdupe");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(15, "ignorenotfound");
+                var2 = IntKeyLookup.a(15, "ignorenotfound");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(60, "removeignorefirst");
+                var2 = IntKeyLookup.a(60, "removeignorefirst");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(72, "removefriendfirst");
+                var2 = IntKeyLookup.a(72, "removefriendfirst");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(46, "enterfriend_add");
+                var2 = IntKeyLookup.a(46, "enterfriend_add");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(17, "enterfriend_del");
+                var2 = IntKeyLookup.a(17, "enterfriend_del");
                 if (var2 != null) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(40, "enterignore_add");
+                var2 = IntKeyLookup.a(40, "enterignore_add");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(118, "enterignore_del");
+                var2 = IntKeyLookup.a(118, "enterignore_del");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(40, "text_removed_from_game");
+                var2 = IntKeyLookup.a(40, "text_removed_from_game");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(67, "text_lobby_pleaselogin_free");
+                var2 = IntKeyLookup.a(67, "text_lobby_pleaselogin_free");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(66, "opengl");
+                var2 = IntKeyLookup.a(66, "opengl");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(50, "sse");
+                var2 = IntKeyLookup.a(50, "sse");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(122, "purejava");
+                var2 = IntKeyLookup.a(122, "purejava");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(84, "waitingfor_graphics");
+                var2 = IntKeyLookup.a(84, "waitingfor_graphics");
                 if (var2 != null) {
-                  ah.field_l = mi.a(var2, 127);
+                  ah.field_l = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(45, "waitingfor_models");
+                var2 = IntKeyLookup.a(45, "waitingfor_models");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(48, "waitingfor_fonts");
+                var2 = IntKeyLookup.a(48, "waitingfor_fonts");
                 if (var2 != null) {
-                  c.field_o = mi.a(var2, 115);
+                  CipherPacketBuffer.field_o = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(69, "waitingfor_soundeffects");
+                var2 = IntKeyLookup.a(69, "waitingfor_soundeffects");
                 if (null != var2) {
-                  bd.field_g = mi.a(var2, 115);
+                  bd.field_g = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(81, "waitingfor_music");
+                var2 = IntKeyLookup.a(81, "waitingfor_music");
                 if (var2 != null) {
-                  bm.field_f = mi.a(var2, 111);
+                  bm.field_f = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(105, "waitingfor_instruments");
+                var2 = IntKeyLookup.a(105, "waitingfor_instruments");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(121, "waitingfor_levels");
+                var2 = IntKeyLookup.a(121, "waitingfor_levels");
                 if (null != var2) {
-                  cd.field_r = mi.a(var2, 114);
+                  cd.field_r = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(49, "waitingfor_extradata");
+                var2 = IntKeyLookup.a(49, "waitingfor_extradata");
                 if (var2 != null) {
-                  ff.field_a = mi.a(var2, 121);
+                  ff.field_a = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(31, "waitingfor_languages");
+                var2 = IntKeyLookup.a(31, "waitingfor_languages");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(83, "waitingfor_textures");
+                var2 = IntKeyLookup.a(83, "waitingfor_textures");
                 if (var2 != null) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(58, "waitingfor_animations");
+                var2 = IntKeyLookup.a(58, "waitingfor_animations");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(33, "loading_graphics");
+                var2 = IntKeyLookup.a(33, "loading_graphics");
                 if (null != var2) {
-                  sm.field_d = mi.a(var2, 111);
+                  sm.field_d = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(123, "loading_models");
+                var2 = IntKeyLookup.a(123, "loading_models");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(66, "loading_fonts");
+                var2 = IntKeyLookup.a(66, "loading_fonts");
                 if (null != var2) {
-                  qf.field_h = mi.a(var2, 118);
+                  qf.field_h = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(107, "loading_soundeffects");
+                var2 = IntKeyLookup.a(107, "loading_soundeffects");
                 if (null != var2) {
-                  gm.field_d = mi.a(var2, 113);
+                  gm.field_d = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(84, "loading_music");
+                var2 = IntKeyLookup.a(84, "loading_music");
                 if (null != var2) {
-                  uc.field_d = mi.a(var2, 116);
+                  uc.field_d = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(94, "loading_instruments");
+                var2 = IntKeyLookup.a(94, "loading_instruments");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(63, "loading_levels");
+                var2 = IntKeyLookup.a(63, "loading_levels");
                 if (var2 != null) {
-                  ek.field_b = mi.a(var2, 110);
+                  ek.field_b = RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(91, "loading_extradata");
+                var2 = IntKeyLookup.a(91, "loading_extradata");
                 if (var2 != null) {
-                  wf.field_b = mi.a(var2, 116);
+                  wf.field_b = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(35, "loading_languages");
+                var2 = IntKeyLookup.a(35, "loading_languages");
                 if (null != var2) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(116, "loading_textures");
+                var2 = IntKeyLookup.a(116, "loading_textures");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(95, "loading_animations");
+                var2 = IntKeyLookup.a(95, "loading_animations");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(34, "unpacking_graphics");
+                var2 = IntKeyLookup.a(34, "unpacking_graphics");
                 if (null != var2) {
-                  pg.field_f = mi.a(var2, 120);
+                  pg.field_f = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(93, "unpacking_models");
+                var2 = IntKeyLookup.a(93, "unpacking_models");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(114, "unpacking_soundeffects");
+                var2 = IntKeyLookup.a(114, "unpacking_soundeffects");
                 if (var2 != null) {
-                  qf.field_n = mi.a(var2, 122);
+                  qf.field_n = RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(85, "unpacking_music");
+                var2 = IntKeyLookup.a(85, "unpacking_music");
                 if (null != var2) {
-                  q.field_H = mi.a(var2, 115);
+                  q.field_H = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(53, "unpacking_levels");
+                var2 = IntKeyLookup.a(53, "unpacking_levels");
                 if (var2 != null) {
-                  field_H = mi.a(var2, 110);
+                  field_H = RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(69, "unpacking_languages");
+                var2 = IntKeyLookup.a(69, "unpacking_languages");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(75, "unpacking_animations");
+                var2 = IntKeyLookup.a(75, "unpacking_animations");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(55, "unpacking_toolkit");
+                var2 = IntKeyLookup.a(55, "unpacking_toolkit");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(102, "instructions");
+                var2 = IntKeyLookup.a(102, "instructions");
                 if (var2 != null) {
-                  mc.field_a = mi.a(var2, 114);
+                  mc.field_a = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(100, "tutorial");
+                var2 = IntKeyLookup.a(100, "tutorial");
                 if (null != var2) {
-                  he.field_v = mi.a(var2, 126);
+                  he.field_v = RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(46, "playtutorial");
+                var2 = IntKeyLookup.a(46, "playtutorial");
                 if (null != var2) {
-                  be.field_a = mi.a(var2, 114);
+                  be.field_a = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(96, "sound_colon");
+                var2 = IntKeyLookup.a(96, "sound_colon");
                 if (null != var2) {
-                  oi.field_N = mi.a(var2, 125);
+                  oi.field_N = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(58, "music_colon");
+                var2 = IntKeyLookup.a(58, "music_colon");
                 if (null != var2) {
-                  ee.field_d = mi.a(var2, 119);
+                  ee.field_d = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(38, "fullscreen");
+                var2 = IntKeyLookup.a(38, "fullscreen");
                 if (var2 != null) {
-                  an.field_b = mi.a(var2, 120);
+                  an.field_b = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(74, "screensize");
+                var2 = IntKeyLookup.a(74, "screensize");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(127, "highscores");
+                var2 = IntKeyLookup.a(127, "highscores");
                 if (null != var2) {
-                  DynamicTerrainRenderer.field_m = mi.a(var2, 119);
+                  DynamicTerrainRenderer.field_m = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(77, "rankings");
+                var2 = IntKeyLookup.a(77, "rankings");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(111, "achievements");
+                var2 = IntKeyLookup.a(111, "achievements");
                 if (var2 != null) {
-                  da.field_a = mi.a(var2, 127);
+                  da.field_a = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(31, "achievementsthisgame");
+                var2 = IntKeyLookup.a(31, "achievementsthisgame");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(105, "achievementsthissession");
+                var2 = IntKeyLookup.a(105, "achievementsthissession");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(91, "watchintroduction");
+                var2 = IntKeyLookup.a(91, "watchintroduction");
                 if (null != var2) {
-                  eo.field_b = mi.a(var2, 112);
+                  eo.field_b = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(51, "quit");
+                var2 = IntKeyLookup.a(51, "quit");
                 if (null != var2) {
-                  uf.field_s = mi.a(var2, 119);
+                  uf.field_s = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(17, "login_createaccount");
+                var2 = IntKeyLookup.a(17, "login_createaccount");
                 if (null != var2) {
-                  IntrusiveDeque.field_e = mi.a(var2, 112);
+                  IntrusiveDeque.field_e = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(76, "tohighscores");
+                var2 = IntKeyLookup.a(76, "tohighscores");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(122, "returntomainmenu");
+                var2 = IntKeyLookup.a(122, "returntomainmenu");
                 if (var2 != null) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(119, "returntopausemenu");
+                var2 = IntKeyLookup.a(119, "returntopausemenu");
                 if (var2 != null) {
-                  fa.field_f = mi.a(var2, 112);
+                  fa.field_f = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(60, "returntooptionsmenu_notpaused");
+                var2 = IntKeyLookup.a(60, "returntooptionsmenu_notpaused");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(107, "mainmenu");
+                var2 = IntKeyLookup.a(107, "mainmenu");
                 if (var2 != null) {
-                  ag.field_a = mi.a(var2, 113);
+                  ag.field_a = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(68, "pausemenu");
+                var2 = IntKeyLookup.a(68, "pausemenu");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(18, "optionsmenu_notpaused");
+                var2 = IntKeyLookup.a(18, "optionsmenu_notpaused");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(113, "menu");
+                var2 = IntKeyLookup.a(113, "menu");
                 if (null != var2) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(94, "selectlevel");
+                var2 = IntKeyLookup.a(94, "selectlevel");
                 if (var2 != null) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(119, "nextlevel");
+                var2 = IntKeyLookup.a(119, "nextlevel");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(99, "startgame");
+                var2 = IntKeyLookup.a(99, "startgame");
                 if (var2 != null) {
-                  of.field_e = mi.a(var2, 124);
+                  of.field_e = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(93, "newgame");
+                var2 = IntKeyLookup.a(93, "newgame");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(51, "resumegame");
+                var2 = IntKeyLookup.a(51, "resumegame");
                 if (null != var2) {
-                  kb.field_g = mi.a(var2, 112);
+                  kb.field_g = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(39, "resumetutorial");
+                var2 = IntKeyLookup.a(39, "resumetutorial");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(71, "skip");
+                var2 = IntKeyLookup.a(71, "skip");
                 if (var2 != null) {
-                  ig.field_c = mi.a(var2, 127);
+                  ig.field_c = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(42, "skiptutorial");
+                var2 = IntKeyLookup.a(42, "skiptutorial");
                 if (null != var2) {
-                  tc.field_o = mi.a(var2, 114);
+                  tc.field_o = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(96, "skipending");
+                var2 = IntKeyLookup.a(96, "skipending");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(66, "restartlevel");
+                var2 = IntKeyLookup.a(66, "restartlevel");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(42, "endtest");
+                var2 = IntKeyLookup.a(42, "endtest");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(114, "endgame");
+                var2 = IntKeyLookup.a(114, "endgame");
                 if (null != var2) {
-                  oa.field_q = mi.a(var2, 116);
+                  ArchiveRequest.field_q = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(48, "endtutorial");
+                var2 = IntKeyLookup.a(48, "endtutorial");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(43, "ok");
+                var2 = IntKeyLookup.a(43, "ok");
                 if (null != var2) {
-                  ah.field_i = mi.a(var2, 124);
+                  ah.field_i = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(53, "on");
+                var2 = IntKeyLookup.a(53, "on");
                 if (null != var2) {
-                  rh.field_J = mi.a(var2, 117);
+                  rh.field_J = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(42, "off");
+                var2 = IntKeyLookup.a(42, "off");
                 if (var2 != null) {
-                  nb.field_d = mi.a(var2, 119);
+                  nb.field_d = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(69, "previous");
+                var2 = IntKeyLookup.a(69, "previous");
                 if (var2 != null) {
-                  ja.field_b = mi.a(var2, 115);
+                  ja.field_b = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(71, "prev");
+                var2 = IntKeyLookup.a(71, "prev");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(81, "next");
+                var2 = IntKeyLookup.a(81, "next");
                 if (null != var2) {
-                  fj.field_kb = mi.a(var2, 117);
+                  fj.field_kb = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(82, "graphics_colon");
+                var2 = IntKeyLookup.a(82, "graphics_colon");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(105, "hotseatmultiplayer");
+                var2 = IntKeyLookup.a(105, "hotseatmultiplayer");
                 if (var2 != null) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(83, "entermultiplayerlobby");
+                var2 = IntKeyLookup.a(83, "entermultiplayerlobby");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(69, "singleplayergame");
+                var2 = IntKeyLookup.a(69, "singleplayergame");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(66, "returntogame");
+                var2 = IntKeyLookup.a(66, "returntogame");
                 if (var2 != null) {
-                  gj.field_u = mi.a(var2, 124);
+                  gj.field_u = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(93, "endgameresign");
+                var2 = IntKeyLookup.a(93, "endgameresign");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(40, "offerdraw");
+                var2 = IntKeyLookup.a(40, "offerdraw");
                 if (var2 != null) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(21, "canceldraw");
+                var2 = IntKeyLookup.a(21, "canceldraw");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(94, "acceptdraw");
+                var2 = IntKeyLookup.a(94, "acceptdraw");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(125, "resign");
+                var2 = IntKeyLookup.a(125, "resign");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(94, "returntolobby");
+                var2 = IntKeyLookup.a(94, "returntolobby");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(27, "cont");
+                var2 = IntKeyLookup.a(27, "cont");
                 if (var2 != null) {
-                  bm.field_d = mi.a(var2, 123);
+                  bm.field_d = RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(90, "continue_spectating");
+                var2 = IntKeyLookup.a(90, "continue_spectating");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(16, "messages");
+                var2 = IntKeyLookup.a(16, "messages");
                 if (var2 != null) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(22, "graphics_fastest");
+                var2 = IntKeyLookup.a(22, "graphics_fastest");
                 if (var2 != null) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(40, "graphics_medium");
+                var2 = IntKeyLookup.a(40, "graphics_medium");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(56, "graphics_best");
+                var2 = IntKeyLookup.a(56, "graphics_best");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(47, "graphics_directx");
+                var2 = IntKeyLookup.a(47, "graphics_directx");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(31, "graphics_opengl");
+                var2 = IntKeyLookup.a(31, "graphics_opengl");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(90, "graphics_java");
+                var2 = IntKeyLookup.a(90, "graphics_java");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(32, "graphics_quality_high");
+                var2 = IntKeyLookup.a(32, "graphics_quality_high");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(108, "graphics_quality_low");
+                var2 = IntKeyLookup.a(108, "graphics_quality_low");
                 if (null != var2) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(39, "graphics_mode");
+                var2 = IntKeyLookup.a(39, "graphics_mode");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(102, "graphics_quality");
+                var2 = IntKeyLookup.a(102, "graphics_quality");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(53, "mode");
+                var2 = IntKeyLookup.a(53, "mode");
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(23, "quality");
+                var2 = IntKeyLookup.a(23, "quality");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(40, "keys");
+                var2 = IntKeyLookup.a(40, "keys");
                 if (var2 != null) {
-                  qc.field_yb = mi.a(var2, 116);
+                  qc.field_yb = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(99, "objective");
+                var2 = IntKeyLookup.a(99, "objective");
                 if (null != var2) {
-                  PointCloudEffect.field_v = mi.a(var2, 115);
+                  PointCloudEffect.field_v = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(89, "currentobjective");
+                var2 = IntKeyLookup.a(89, "currentobjective");
                 if (var2 != null) {
-                  ua.field_b = mi.a(var2, 116);
+                  ua.field_b = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(99, "pressescforpausemenu");
+                var2 = IntKeyLookup.a(99, "pressescforpausemenu");
                 if (null != var2) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(127, "pressescforpausemenuortoskiptutorial");
+                var2 = IntKeyLookup.a(127, "pressescforpausemenuortoskiptutorial");
                 if (var2 != null) {
-                  ek.field_c = mi.a(var2, 126);
+                  ek.field_c = RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(36, "pressescforoptionsmenu_doesntpause");
+                var2 = IntKeyLookup.a(36, "pressescforoptionsmenu_doesntpause");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(70, "pressescforoptionsmenu_doesntpause_short");
+                var2 = IntKeyLookup.a(70, "pressescforoptionsmenu_doesntpause_short");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(18, "powerups");
+                var2 = IntKeyLookup.a(18, "powerups");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(123, "latestlevel_suffix");
+                var2 = IntKeyLookup.a(123, "latestlevel_suffix");
                 if (null != var2) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(71, "unreachedlevel_name");
+                var2 = IntKeyLookup.a(71, "unreachedlevel_name");
                 if (null != var2) {
-                  jm.field_M = mi.a(var2, 121);
+                  jm.field_M = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(109, "unreachedlevel_cannotplayreason");
+                var2 = IntKeyLookup.a(109, "unreachedlevel_cannotplayreason");
                 if (var2 != null) {
-                  GameAppletShell.field_f = mi.a(var2, 127);
+                  GameAppletShell.field_f = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(110, "unreachedlevel_cannotplayreason_shorter");
+                var2 = IntKeyLookup.a(110, "unreachedlevel_cannotplayreason_shorter");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(82, "unreachedworld_cannotplayreason");
+                var2 = IntKeyLookup.a(82, "unreachedworld_cannotplayreason");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(55, "memberslevel_name");
+                var2 = IntKeyLookup.a(55, "memberslevel_name");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(98, "memberslevel_cannotplayreason");
+                var2 = IntKeyLookup.a(98, "memberslevel_cannotplayreason");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(70, "membersworld_cannotplayreason");
+                var2 = IntKeyLookup.a(70, "membersworld_cannotplayreason");
                 if (null != var2) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(87, "unreachedlevel_createtip");
+                var2 = IntKeyLookup.a(87, "unreachedlevel_createtip");
                 if (var2 != null) {
-                  jf.field_O = mi.a(var2, 127);
+                  jf.field_O = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(26, "unreachedlevel_createtip_line1");
+                var2 = IntKeyLookup.a(26, "unreachedlevel_createtip_line1");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(26, "unreachedlevel_createtip_line2");
+                var2 = IntKeyLookup.a(26, "unreachedlevel_createtip_line2");
                 if (var2 != null) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(125, "unreachedlevel_logintip");
+                var2 = IntKeyLookup.a(125, "unreachedlevel_logintip");
                 if (var2 != null) {
-                  fk.field_c = mi.a(var2, 127);
+                  fk.field_c = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(78, "memberslevel_logintip");
+                var2 = IntKeyLookup.a(78, "memberslevel_logintip");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(36, "displayname_none");
+                var2 = IntKeyLookup.a(36, "displayname_none");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(86, "levelxofy1");
+                var2 = IntKeyLookup.a(86, "levelxofy1");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(89, "levelxofy2");
+                var2 = IntKeyLookup.a(89, "levelxofy2");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(40, "levelxofy");
+                var2 = IntKeyLookup.a(40, "levelxofy");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(42, "ingame_level");
+                var2 = IntKeyLookup.a(42, "ingame_level");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(113, "mouseoveranicon");
+                var2 = IntKeyLookup.a(113, "mouseoveranicon");
                 if (var2 != null) {
-                  s.field_C = mi.a(var2, 126);
+                  Js5NetworkRequest.field_C = RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(85, "notyetachieved");
+                var2 = IntKeyLookup.a(85, "notyetachieved");
                 if (var2 != null) {
-                  he.field_q = mi.a(var2, 123);
+                  he.field_q = RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(63, "achieved");
+                var2 = IntKeyLookup.a(63, "achieved");
                 if (null != var2) {
-                  bg.field_d = mi.a(var2, 112);
+                  bg.field_d = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(14, "orbpoints");
+                var2 = IntKeyLookup.a(14, "orbpoints");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(34, "orbcoins");
+                var2 = IntKeyLookup.a(34, "orbcoins");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(126, "orbpoints_colon");
+                var2 = IntKeyLookup.a(126, "orbpoints_colon");
                 if (null != var2) {
-                  kg.field_a = mi.a(var2, 121);
+                  kg.field_a = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(20, "orbcoins_colon");
+                var2 = IntKeyLookup.a(20, "orbcoins_colon");
                 if (var2 != null) {
-                  vg.field_T = mi.a(var2, 123);
+                  vg.field_T = RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(114, "achieved_colon_description");
+                var2 = IntKeyLookup.a(114, "achieved_colon_description");
                 if (var2 != null) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(26, "secretachievement");
+                var2 = IntKeyLookup.a(26, "secretachievement");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(107, "no_highscores");
+                var2 = IntKeyLookup.a(107, "no_highscores");
                 if (var2 != null) {
-                  wk.field_f = mi.a(var2, 113);
+                  wk.field_f = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(45, "hs_name");
+                var2 = IntKeyLookup.a(45, "hs_name");
                 if (null != var2) {
-                  fi.field_b = mi.a(var2, 111);
+                  IndexedSpriteState.field_b = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(122, "hs_level");
+                var2 = IntKeyLookup.a(122, "hs_level");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(82, "hs_fromlevel");
+                var2 = IntKeyLookup.a(82, "hs_fromlevel");
                 if (null != var2) {
-                  bo.field_D = mi.a(var2, 110);
+                  bo.field_D = RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(110, "hs_tolevel");
+                var2 = IntKeyLookup.a(110, "hs_tolevel");
                 if (var2 != null) {
-                  jd.field_c = mi.a(var2, 113);
+                  jd.field_c = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(66, "hs_score");
+                var2 = IntKeyLookup.a(66, "hs_score");
                 if (null != var2) {
-                  kn.field_f = mi.a(var2, 118);
+                  kn.field_f = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(51, "hs_end");
+                var2 = IntKeyLookup.a(51, "hs_end");
                 if (var2 != null) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(57, "ingame_score");
+                var2 = IntKeyLookup.a(57, "ingame_score");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(87, "score_colon");
+                var2 = IntKeyLookup.a(87, "score_colon");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(41, "mp_leavegame");
+                var2 = IntKeyLookup.a(41, "mp_leavegame");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(15, "mp_offerrematch");
+                var2 = IntKeyLookup.a(15, "mp_offerrematch");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(15, "mp_offerrematch_unrated");
+                var2 = IntKeyLookup.a(15, "mp_offerrematch_unrated");
                 if (null != var2) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(34, "mp_acceptrematch");
+                var2 = IntKeyLookup.a(34, "mp_acceptrematch");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(118, "mp_acceptrematch_unrated");
+                var2 = IntKeyLookup.a(118, "mp_acceptrematch_unrated");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(29, "mp_cancelrematch");
+                var2 = IntKeyLookup.a(29, "mp_cancelrematch");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(21, "mp_cancelrematch_unrated");
+                var2 = IntKeyLookup.a(21, "mp_cancelrematch_unrated");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(20, "mp_rematchnewgame");
+                var2 = IntKeyLookup.a(20, "mp_rematchnewgame");
                 if (var2 != null) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(17, "mp_rematchnewgame_unrated");
+                var2 = IntKeyLookup.a(17, "mp_rematchnewgame_unrated");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(74, "mp_x_wantstodraw");
+                var2 = IntKeyLookup.a(74, "mp_x_wantstodraw");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(102, "mp_x_offersrematch");
+                var2 = IntKeyLookup.a(102, "mp_x_offersrematch");
                 if (var2 != null) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(73, "mp_x_offersrematch_unrated");
+                var2 = IntKeyLookup.a(73, "mp_x_offersrematch_unrated");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(125, "mp_youofferrematch");
+                var2 = IntKeyLookup.a(125, "mp_youofferrematch");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(101, "mp_youofferrematch_unrated");
+                var2 = IntKeyLookup.a(101, "mp_youofferrematch_unrated");
                 if (null != var2) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(16, "mp_youofferdraw");
+                var2 = IntKeyLookup.a(16, "mp_youofferdraw");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(25, "mp_youresigned");
+                var2 = IntKeyLookup.a(25, "mp_youresigned");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(41, "mp_youresigned_rematch");
+                var2 = IntKeyLookup.a(41, "mp_youresigned_rematch");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(42, "mp_x_hasresignedandleft");
+                var2 = IntKeyLookup.a(42, "mp_x_hasresignedandleft");
                 if (null != var2) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(30, "mp_x_hasresigned_rematch");
+                var2 = IntKeyLookup.a(30, "mp_x_hasresigned_rematch");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(106, "mp_x_hasresigned");
+                var2 = IntKeyLookup.a(106, "mp_x_hasresigned");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(69, "mp_x_hasleft");
+                var2 = IntKeyLookup.a(69, "mp_x_hasleft");
                 if (var2 != null) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(102, "mp_x_haswon");
+                var2 = IntKeyLookup.a(102, "mp_x_haswon");
                 if (var2 != null) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(103, "mp_youhavewon");
+                var2 = IntKeyLookup.a(103, "mp_youhavewon");
                 if (null != var2) {
-                  mi.a(var2, 113);
+                  RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(74, "mp_gamedrawn");
+                var2 = IntKeyLookup.a(74, "mp_gamedrawn");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(95, "mp_timeremaining");
+                var2 = IntKeyLookup.a(95, "mp_timeremaining");
                 if (null != var2) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(41, "mp_x_turn");
+                var2 = IntKeyLookup.a(41, "mp_x_turn");
                 if (var2 != null) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(83, "mp_yourturn");
+                var2 = IntKeyLookup.a(83, "mp_yourturn");
                 if (null != var2) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(126, "gameover");
+                var2 = IntKeyLookup.a(126, "gameover");
                 if (null != var2) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(51, "mp_hidechat");
+                var2 = IntKeyLookup.a(51, "mp_hidechat");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(42, "mp_showchat_nounread");
+                var2 = IntKeyLookup.a(42, "mp_showchat_nounread");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(22, "mp_showchat_unread1");
+                var2 = IntKeyLookup.a(22, "mp_showchat_unread1");
                 if (null != var2) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(49, "mp_showchat_unread2");
+                var2 = IntKeyLookup.a(49, "mp_showchat_unread2");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(91, "click_to_quickchat");
+                var2 = IntKeyLookup.a(91, "click_to_quickchat");
                 if (var2 != null) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(79, "autorespond");
+                var2 = IntKeyLookup.a(79, "autorespond");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(27, "quickchat_help");
+                var2 = IntKeyLookup.a(27, "quickchat_help");
                 if (null != var2) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(19, "quickchat_help_title");
+                var2 = IntKeyLookup.a(19, "quickchat_help_title");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(30, "quickchat_shortcut_help,0");
+                var2 = IntKeyLookup.a(30, "quickchat_shortcut_help,0");
                 if (var2 != null) {
-                  kk.field_d[0] = mi.a(var2, 115);
+                  DiskCacheWorker.field_d[0] = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(57, "quickchat_shortcut_help,1");
+                var2 = IntKeyLookup.a(57, "quickchat_shortcut_help,1");
                 if (var2 != null) {
-                  kk.field_d[1] = mi.a(var2, 114);
+                  DiskCacheWorker.field_d[1] = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(117, "quickchat_shortcut_help,2");
+                var2 = IntKeyLookup.a(117, "quickchat_shortcut_help,2");
                 if (null != var2) {
-                  kk.field_d[2] = mi.a(var2, 114);
+                  DiskCacheWorker.field_d[2] = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(27, "quickchat_shortcut_help,3");
+                var2 = IntKeyLookup.a(27, "quickchat_shortcut_help,3");
                 if (var2 != null) {
-                  kk.field_d[3] = mi.a(var2, 120);
+                  DiskCacheWorker.field_d[3] = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(69, "quickchat_shortcut_help,4");
+                var2 = IntKeyLookup.a(69, "quickchat_shortcut_help,4");
                 if (null != var2) {
-                  kk.field_d[4] = mi.a(var2, 121);
+                  DiskCacheWorker.field_d[4] = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(29, "quickchat_shortcut_help,5");
+                var2 = IntKeyLookup.a(29, "quickchat_shortcut_help,5");
                 if (null != var2) {
-                  kk.field_d[5] = mi.a(var2, 114);
+                  DiskCacheWorker.field_d[5] = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(35, "quickchat_shortcut_keys,0");
+                var2 = IntKeyLookup.a(35, "quickchat_shortcut_keys,0");
                 if (null != var2) {
-                  ld.field_g[0] = mi.a(var2, 119);
+                  ld.field_g[0] = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(86, "quickchat_shortcut_keys,1");
+                var2 = IntKeyLookup.a(86, "quickchat_shortcut_keys,1");
                 if (null != var2) {
-                  ld.field_g[1] = mi.a(var2, 116);
+                  ld.field_g[1] = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(115, "quickchat_shortcut_keys,2");
+                var2 = IntKeyLookup.a(115, "quickchat_shortcut_keys,2");
                 if (var2 != null) {
-                  ld.field_g[2] = mi.a(var2, 120);
+                  ld.field_g[2] = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(16, "quickchat_shortcut_keys,3");
+                var2 = IntKeyLookup.a(16, "quickchat_shortcut_keys,3");
                 if (var2 != null) {
-                  ld.field_g[3] = mi.a(var2, 112);
+                  ld.field_g[3] = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(51, "quickchat_shortcut_keys,4");
+                var2 = IntKeyLookup.a(51, "quickchat_shortcut_keys,4");
                 if (var2 != null) {
-                  ld.field_g[4] = mi.a(var2, 115);
+                  ld.field_g[4] = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(31, "quickchat_shortcut_keys,5");
+                var2 = IntKeyLookup.a(31, "quickchat_shortcut_keys,5");
                 if (null != var2) {
-                  ld.field_g[5] = mi.a(var2, 127);
+                  ld.field_g[5] = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(63, "keychar_the_character_under_questionmark");
+                var2 = IntKeyLookup.a(63, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
                   dj.a(-102, var2[0]);
                 }
-                var2 = jn.a(36, "rating_noratings");
+                var2 = IntKeyLookup.a(36, "rating_noratings");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(24, "rating_rating");
+                var2 = IntKeyLookup.a(24, "rating_rating");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(41, "rating_played");
+                var2 = IntKeyLookup.a(41, "rating_played");
                 if (null != var2) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(119, "rating_won");
+                var2 = IntKeyLookup.a(119, "rating_won");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(44, "rating_lost");
+                var2 = IntKeyLookup.a(44, "rating_lost");
                 if (var2 != null) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(55, "rating_drawn");
+                var2 = IntKeyLookup.a(55, "rating_drawn");
                 if (var2 != null) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(21, "benefits_fullscreen");
+                var2 = IntKeyLookup.a(21, "benefits_fullscreen");
                 if (var2 != null) {
-                  mi.a(var2, 126);
+                  RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(108, "benefits_noadverts");
+                var2 = IntKeyLookup.a(108, "benefits_noadverts");
                 if (null != var2) {
-                  mi.a(var2, 122);
+                  RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(49, "benefits_price");
+                var2 = IntKeyLookup.a(49, "benefits_price");
                 if (null != var2) {
-                  mi.a(var2, 118);
+                  RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(69, "members_expansion_benefits,0");
+                var2 = IntKeyLookup.a(69, "members_expansion_benefits,0");
                 if (var2 != null) {
-                  lb.field_n[0] = mi.a(var2, 116);
+                  lb.field_n[0] = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(25, "members_expansion_benefits,1");
+                var2 = IntKeyLookup.a(25, "members_expansion_benefits,1");
                 if (var2 != null) {
-                  lb.field_n[1] = mi.a(var2, 121);
+                  lb.field_n[1] = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(20, "members_expansion_benefits,2");
+                var2 = IntKeyLookup.a(20, "members_expansion_benefits,2");
                 if (null != var2) {
-                  lb.field_n[2] = mi.a(var2, 120);
+                  lb.field_n[2] = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(55, "members_expansion_price_top");
+                var2 = IntKeyLookup.a(55, "members_expansion_price_top");
                 if (var2 != null) {
-                  hm.field_r = mi.a(var2, 123);
+                  hm.field_r = RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(42, "members_expansion_price_bottom");
+                var2 = IntKeyLookup.a(42, "members_expansion_price_bottom");
                 if (var2 != null) {
-                  mh.field_b = mi.a(var2, 110);
+                  mh.field_b = RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(40, "reconnect_lost_seq,0");
+                var2 = IntKeyLookup.a(40, "reconnect_lost_seq,0");
                 if (var2 != null) {
-                  ug.field_d[0] = mi.a(var2, 125);
+                  ug.field_d[0] = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(22, "reconnect_lost_seq,1");
+                var2 = IntKeyLookup.a(22, "reconnect_lost_seq,1");
                 if (null != var2) {
-                  ug.field_d[1] = mi.a(var2, 111);
+                  ug.field_d[1] = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(95, "reconnect_lost_seq,2");
+                var2 = IntKeyLookup.a(95, "reconnect_lost_seq,2");
                 if (var2 != null) {
-                  ug.field_d[2] = mi.a(var2, 110);
+                  ug.field_d[2] = RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(55, "reconnect_lost_seq,3");
+                var2 = IntKeyLookup.a(55, "reconnect_lost_seq,3");
                 if (var2 != null) {
-                  ug.field_d[3] = mi.a(var2, 118);
+                  ug.field_d[3] = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(80, "reconnect_lost");
+                var2 = IntKeyLookup.a(80, "reconnect_lost");
                 if (null != var2) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(79, "reconnect_restored");
+                var2 = IntKeyLookup.a(79, "reconnect_restored");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(64, "reconnect_please_check");
+                var2 = IntKeyLookup.a(64, "reconnect_please_check");
                 if (var2 != null) {
-                  mi.a(var2, 119);
+                  RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(31, "reconnect_wait");
+                var2 = IntKeyLookup.a(31, "reconnect_wait");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(88, "reconnect_retry");
+                var2 = IntKeyLookup.a(88, "reconnect_retry");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(109, "reconnect_resume");
+                var2 = IntKeyLookup.a(109, "reconnect_resume");
                 if (var2 != null) {
-                  mi.a(var2, 125);
+                  RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(71, "reconnect_or");
+                var2 = IntKeyLookup.a(71, "reconnect_or");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(34, "reconnect_exitfs");
+                var2 = IntKeyLookup.a(34, "reconnect_exitfs");
                 if (null != var2) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(53, "reconnect_exitfs_quit");
+                var2 = IntKeyLookup.a(53, "reconnect_exitfs_quit");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(95, "reconnect_quit");
+                var2 = IntKeyLookup.a(95, "reconnect_quit");
                 if (var2 != null) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(112, "reconnect_check_fs");
+                var2 = IntKeyLookup.a(112, "reconnect_check_fs");
                 if (var2 != null) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(20, "reconnect_check_nonfs");
+                var2 = IntKeyLookup.a(20, "reconnect_check_nonfs");
                 if (null != var2) {
-                  mi.a(var2, 123);
+                  RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(125, "fs_accept_beforeaccept");
+                var2 = IntKeyLookup.a(125, "fs_accept_beforeaccept");
                 if (var2 != null) {
-                  td.field_a = mi.a(var2, 119);
+                  td.field_a = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(69, "fs_button_accept");
+                var2 = IntKeyLookup.a(69, "fs_button_accept");
                 if (null != var2) {
-                  jh.field_j = mi.a(var2, 113);
+                  jh.field_j = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(50, "fs_accept_afteraccept");
+                var2 = IntKeyLookup.a(50, "fs_accept_afteraccept");
                 if (null != var2) {
-                  bb.field_I = mi.a(var2, 127);
+                  bb.field_I = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(47, "fs_button_cancel");
+                var2 = IntKeyLookup.a(47, "fs_button_cancel");
                 if (var2 != null) {
-                  bb.field_J = mi.a(var2, 119);
+                  bb.field_J = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(83, "fs_accept_aftercancel");
+                var2 = IntKeyLookup.a(83, "fs_accept_aftercancel");
                 if (null != var2) {
-                  p.field_e = mi.a(var2, 115);
+                  p.field_e = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(111, "fs_accept_countdown_sing");
+                var2 = IntKeyLookup.a(111, "fs_accept_countdown_sing");
                 if (var2 != null) {
-                  fn.field_d = mi.a(var2, 117);
+                  fn.field_d = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(57, "fs_accept_countdown_pl");
+                var2 = IntKeyLookup.a(57, "fs_accept_countdown_pl");
                 if (var2 != null) {
-                  al.field_c = mi.a(var2, 114);
+                  al.field_c = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(89, "fs_nonmember");
+                var2 = IntKeyLookup.a(89, "fs_nonmember");
                 if (null != var2) {
-                  ac.field_a = mi.a(var2, 113);
+                  ac.field_a = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(22, "fs_button_close");
+                var2 = IntKeyLookup.a(22, "fs_button_close");
                 if (null != var2) {
-                  ah.field_k = mi.a(var2, 116);
+                  ah.field_k = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(102, "fs_button_members");
+                var2 = IntKeyLookup.a(102, "fs_button_members");
                 if (null != var2) {
-                  lh.field_a = mi.a(var2, 116);
+                  lh.field_a = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(103, "fs_unavailable");
+                var2 = IntKeyLookup.a(103, "fs_unavailable");
                 if (var2 != null) {
-                  aj.field_e = mi.a(var2, 110);
+                  aj.field_e = RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(105, "fs_unavailable_try_signed_applet");
+                var2 = IntKeyLookup.a(105, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
-                  DialogueScreen.field_k = mi.a(var2, 127);
+                  DialogueScreen.field_k = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(43, "fs_focus");
+                var2 = IntKeyLookup.a(43, "fs_focus");
                 if (var2 != null) {
-                  ol.field_K = mi.a(var2, 116);
+                  ol.field_K = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(42, "fs_focus_or_resolution");
+                var2 = IntKeyLookup.a(42, "fs_focus_or_resolution");
                 if (var2 != null) {
-                  e.field_b = mi.a(var2, 118);
+                  e.field_b = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(14, "fs_timeout");
+                var2 = IntKeyLookup.a(14, "fs_timeout");
                 if (null != var2) {
-                  eg.field_a = mi.a(var2, 120);
+                  eg.field_a = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(78, "fs_button_tryagain");
+                var2 = IntKeyLookup.a(78, "fs_button_tryagain");
                 if (var2 != null) {
-                  ve.field_f = mi.a(var2, 112);
+                  ve.field_f = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(112, "graphics_ui_fs_countdown");
+                var2 = IntKeyLookup.a(112, "graphics_ui_fs_countdown");
                 if (null != var2) {
-                  mi.a(var2, 127);
+                  RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(31, "mb_caption_title");
+                var2 = IntKeyLookup.a(31, "mb_caption_title");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(103, "mb_including_gamename");
+                var2 = IntKeyLookup.a(103, "mb_including_gamename");
                 if (var2 != null) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(34, "mb_full_access_1");
+                var2 = IntKeyLookup.a(34, "mb_full_access_1");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(14, "mb_full_access_2");
+                var2 = IntKeyLookup.a(14, "mb_full_access_2");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(115, "mb_achievement_count_1");
+                var2 = IntKeyLookup.a(115, "mb_achievement_count_1");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(78, "mb_achievement_count_2");
+                var2 = IntKeyLookup.a(78, "mb_achievement_count_2");
                 if (var2 != null) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(18, "mb_exclusive_1");
+                var2 = IntKeyLookup.a(18, "mb_exclusive_1");
                 if (var2 != null) {
-                  mi.a(var2, 120);
+                  RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(79, "mb_exclusive_2");
+                var2 = IntKeyLookup.a(79, "mb_exclusive_2");
                 if (var2 != null) {
-                  mi.a(var2, 121);
+                  RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(110, "me_extra_benefits");
+                var2 = IntKeyLookup.a(110, "me_extra_benefits");
                 if (var2 != null) {
-                  fd.field_d = mi.a(var2, 111);
+                  fd.field_d = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(86, "hs_friend_tip");
+                var2 = IntKeyLookup.a(86, "hs_friend_tip");
                 if (null != var2) {
-                  DialogueScreen.field_G = mi.a(var2, 115);
+                  DialogueScreen.field_G = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(76, "hs_friend_tip_multi");
+                var2 = IntKeyLookup.a(76, "hs_friend_tip_multi");
                 if (var2 != null) {
-                  mi.a(var2, 115);
+                  RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(66, "hs_mode_name,0");
+                var2 = IntKeyLookup.a(66, "hs_mode_name,0");
                 if (null != var2) {
-                  ge.field_d[0] = mi.a(var2, 124);
+                  AudioService.field_d[0] = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(111, "hs_mode_name,1");
+                var2 = IntKeyLookup.a(111, "hs_mode_name,1");
                 if (var2 != null) {
-                  ge.field_d[1] = mi.a(var2, 121);
+                  AudioService.field_d[1] = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(73, "hs_mode_name,2");
+                var2 = IntKeyLookup.a(73, "hs_mode_name,2");
                 if (var2 != null) {
-                  ge.field_d[2] = mi.a(var2, 111);
+                  AudioService.field_d[2] = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(117, "rating_mode_name,0");
+                var2 = IntKeyLookup.a(117, "rating_mode_name,0");
                 if (var2 != null) {
-                  PointCloudEffect.field_z[0] = mi.a(var2, 111);
+                  PointCloudEffect.field_z[0] = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(27, "rating_mode_name,1");
+                var2 = IntKeyLookup.a(27, "rating_mode_name,1");
                 if (var2 != null) {
-                  PointCloudEffect.field_z[1] = mi.a(var2, 114);
+                  PointCloudEffect.field_z[1] = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(123, "rating_mode_long_name,0");
+                var2 = IntKeyLookup.a(123, "rating_mode_long_name,0");
                 if (null != var2) {
-                  PointCloudEffect.field_r[0] = mi.a(var2, 113);
+                  PointCloudEffect.field_r[0] = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(19, "rating_mode_long_name,1");
+                var2 = IntKeyLookup.a(19, "rating_mode_long_name,1");
                 if (null != var2) {
-                  PointCloudEffect.field_r[1] = mi.a(var2, 112);
+                  PointCloudEffect.field_r[1] = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(50, "graphics_config_fixed_size");
+                var2 = IntKeyLookup.a(50, "graphics_config_fixed_size");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(114, "graphics_config_resizable");
+                var2 = IntKeyLookup.a(114, "graphics_config_resizable");
                 if (null != var2) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(81, "graphics_config_fullscreen");
+                var2 = IntKeyLookup.a(81, "graphics_config_fullscreen");
                 if (var2 != null) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(79, "graphics_config_done");
+                var2 = IntKeyLookup.a(79, "graphics_config_done");
                 if (null != var2) {
-                  mi.a(var2, 117);
+                  RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(62, "graphics_config_apply");
+                var2 = IntKeyLookup.a(62, "graphics_config_apply");
                 if (var2 != null) {
-                  mi.a(var2, 114);
+                  RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(90, "graphics_config_title");
+                var2 = IntKeyLookup.a(90, "graphics_config_title");
                 if (var2 != null) {
-                  mi.a(var2, 124);
+                  RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(98, "graphics_config_instruction");
+                var2 = IntKeyLookup.a(98, "graphics_config_instruction");
                 if (null != var2) {
-                  mi.a(var2, 110);
+                  RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(74, "graphics_config_need_memory");
+                var2 = IntKeyLookup.a(74, "graphics_config_need_memory");
                 if (var2 != null) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(15, "pleasewait_dotdotdot");
+                var2 = IntKeyLookup.a(15, "pleasewait_dotdotdot");
                 if (null != var2) {
-                  le.field_b = mi.a(var2, 118);
+                  le.field_b = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(46, "serviceunavailable");
+                var2 = IntKeyLookup.a(46, "serviceunavailable");
                 if (var2 != null) {
-                  bd.field_m = mi.a(var2, 124);
+                  bd.field_m = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(55, "createtouse");
+                var2 = IntKeyLookup.a(55, "createtouse");
                 if (var2 != null) {
-                  IntrusiveNode.field_a = mi.a(var2, 123);
+                  IntrusiveNode.field_a = RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(21, "achievementsoffline");
+                var2 = IntKeyLookup.a(21, "achievementsoffline");
                 if (var2 != null) {
-                  cc.field_l = mi.a(var2, 120);
+                  cc.field_l = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(47, "warning");
+                var2 = IntKeyLookup.a(47, "warning");
                 if (var2 != null) {
-                  mi.a(var2, 116);
+                  RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(98, "DEFAULT_PLAYER_NAME");
+                var2 = IntKeyLookup.a(98, "DEFAULT_PLAYER_NAME");
                 if (var2 != null) {
-                  fi.field_e = mi.a(var2, 112);
+                  IndexedSpriteState.field_e = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(37, "mustlogin1");
+                var2 = IntKeyLookup.a(37, "mustlogin1");
                 if (var2 != null) {
-                  nk.field_r = mi.a(var2, 111);
+                  nk.field_r = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(105, "mustlogin2,1");
+                var2 = IntKeyLookup.a(105, "mustlogin2,1");
                 if (null != var2) {
-                  sl.field_c[1] = mi.a(var2, 126);
+                  sl.field_c[1] = RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(50, "mustlogin2,2");
+                var2 = IntKeyLookup.a(50, "mustlogin2,2");
                 if (null != var2) {
-                  sl.field_c[2] = mi.a(var2, 116);
+                  sl.field_c[2] = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(73, "mustlogin2,3");
+                var2 = IntKeyLookup.a(73, "mustlogin2,3");
                 if (var2 != null) {
-                  sl.field_c[3] = mi.a(var2, 117);
+                  sl.field_c[3] = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(42, "mustlogin2,4");
+                var2 = IntKeyLookup.a(42, "mustlogin2,4");
                 if (null != var2) {
-                  sl.field_c[4] = mi.a(var2, 112);
+                  sl.field_c[4] = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(58, "mustlogin2,5");
+                var2 = IntKeyLookup.a(58, "mustlogin2,5");
                 if (null != var2) {
-                  sl.field_c[5] = mi.a(var2, 125);
+                  sl.field_c[5] = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(84, "mustlogin2,6");
+                var2 = IntKeyLookup.a(84, "mustlogin2,6");
                 if (null != var2) {
-                  sl.field_c[6] = mi.a(var2, 119);
+                  sl.field_c[6] = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(122, "mustlogin2,7");
+                var2 = IntKeyLookup.a(122, "mustlogin2,7");
                 if (var2 != null) {
-                  sl.field_c[7] = mi.a(var2, 121);
+                  sl.field_c[7] = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(102, "mustlogin3,1");
+                var2 = IntKeyLookup.a(102, "mustlogin3,1");
                 if (var2 != null) {
-                  fd.field_f[1] = mi.a(var2, 125);
+                  fd.field_f[1] = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(81, "mustlogin3,2");
+                var2 = IntKeyLookup.a(81, "mustlogin3,2");
                 if (null != var2) {
-                  fd.field_f[2] = mi.a(var2, 126);
+                  fd.field_f[2] = RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(48, "mustlogin3,3");
+                var2 = IntKeyLookup.a(48, "mustlogin3,3");
                 if (null != var2) {
-                  fd.field_f[3] = mi.a(var2, 124);
+                  fd.field_f[3] = RasterSnapshot.a(var2, 124);
                 }
-                var2 = jn.a(97, "mustlogin3,4");
+                var2 = IntKeyLookup.a(97, "mustlogin3,4");
                 if (null != var2) {
-                  fd.field_f[4] = mi.a(var2, 125);
+                  fd.field_f[4] = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(55, "mustlogin3,5");
+                var2 = IntKeyLookup.a(55, "mustlogin3,5");
                 if (null != var2) {
-                  fd.field_f[5] = mi.a(var2, 115);
+                  fd.field_f[5] = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(108, "mustlogin3,6");
+                var2 = IntKeyLookup.a(108, "mustlogin3,6");
                 if (var2 != null) {
-                  fd.field_f[6] = mi.a(var2, 113);
+                  fd.field_f[6] = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(78, "mustlogin3,7");
+                var2 = IntKeyLookup.a(78, "mustlogin3,7");
                 if (var2 != null) {
-                  fd.field_f[7] = mi.a(var2, 122);
+                  fd.field_f[7] = RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(43, "discard");
+                var2 = IntKeyLookup.a(43, "discard");
                 if (null != var2) {
-                  sj.field_j = mi.a(var2, 118);
+                  sj.field_j = RasterSnapshot.a(var2, 118);
                 }
-                var2 = jn.a(69, "mustlogin4,1");
+                var2 = IntKeyLookup.a(69, "mustlogin4,1");
                 if (null != var2) {
-                  wf.field_c[1] = mi.a(var2, 117);
+                  wf.field_c[1] = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(98, "mustlogin4,2");
+                var2 = IntKeyLookup.a(98, "mustlogin4,2");
                 if (null != var2) {
-                  wf.field_c[2] = mi.a(var2, 117);
+                  wf.field_c[2] = RasterSnapshot.a(var2, 117);
                 }
-                var2 = jn.a(111, "mustlogin4,3");
+                var2 = IntKeyLookup.a(111, "mustlogin4,3");
                 if (var2 != null) {
-                  wf.field_c[3] = mi.a(var2, 126);
+                  wf.field_c[3] = RasterSnapshot.a(var2, 126);
                 }
-                var2 = jn.a(111, "mustlogin4,4");
+                var2 = IntKeyLookup.a(111, "mustlogin4,4");
                 if (null != var2) {
-                  wf.field_c[4] = mi.a(var2, 120);
+                  wf.field_c[4] = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(86, "mustlogin4,5");
+                var2 = IntKeyLookup.a(86, "mustlogin4,5");
                 if (null != var2) {
-                  wf.field_c[5] = mi.a(var2, 127);
+                  wf.field_c[5] = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(48, "mustlogin4,6");
+                var2 = IntKeyLookup.a(48, "mustlogin4,6");
                 if (var2 != null) {
-                  wf.field_c[6] = mi.a(var2, 122);
+                  wf.field_c[6] = RasterSnapshot.a(var2, 122);
                 }
-                var2 = jn.a(99, "mustlogin4,7");
+                var2 = IntKeyLookup.a(99, "mustlogin4,7");
                 if (var2 != null) {
-                  wf.field_c[7] = mi.a(var2, 123);
+                  wf.field_c[7] = RasterSnapshot.a(var2, 123);
                 }
-                var2 = jn.a(101, "mustlogin_notloggedin");
+                var2 = IntKeyLookup.a(101, "mustlogin_notloggedin");
                 if (null != var2) {
-                  mi.a(var2, 111);
+                  RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(87, "mustlogin_alternate,1");
+                var2 = IntKeyLookup.a(87, "mustlogin_alternate,1");
                 if (var2 != null) {
-                  re.field_r[1] = mi.a(var2, 116);
+                  re.field_r[1] = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(36, "mustlogin_alternate,2");
+                var2 = IntKeyLookup.a(36, "mustlogin_alternate,2");
                 if (null != var2) {
-                  re.field_r[2] = mi.a(var2, 119);
+                  re.field_r[2] = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(79, "mustlogin_alternate,3");
+                var2 = IntKeyLookup.a(79, "mustlogin_alternate,3");
                 if (var2 != null) {
-                  re.field_r[3] = mi.a(var2, 121);
+                  re.field_r[3] = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(15, "mustlogin_alternate,4");
+                var2 = IntKeyLookup.a(15, "mustlogin_alternate,4");
                 if (var2 != null) {
-                  re.field_r[4] = mi.a(var2, 111);
+                  re.field_r[4] = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(65, "mustlogin_alternate,5");
+                var2 = IntKeyLookup.a(65, "mustlogin_alternate,5");
                 if (null != var2) {
-                  re.field_r[5] = mi.a(var2, 116);
+                  re.field_r[5] = RasterSnapshot.a(var2, 116);
                 }
-                var2 = jn.a(127, "mustlogin_alternate,6");
+                var2 = IntKeyLookup.a(127, "mustlogin_alternate,6");
                 if (var2 != null) {
-                  re.field_r[6] = mi.a(var2, 115);
+                  re.field_r[6] = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(31, "mustlogin_alternate,7");
+                var2 = IntKeyLookup.a(31, "mustlogin_alternate,7");
                 if (null != var2) {
-                  re.field_r[7] = mi.a(var2, 111);
+                  re.field_r[7] = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(121, "subscription_cost_monthly,0");
+                var2 = IntKeyLookup.a(121, "subscription_cost_monthly,0");
                 if (var2 != null) {
-                  p.field_f[0] = mi.a(var2, 120);
+                  p.field_f[0] = RasterSnapshot.a(var2, 120);
                 }
-                var2 = jn.a(82, "subscription_cost_monthly,1");
+                var2 = IntKeyLookup.a(82, "subscription_cost_monthly,1");
                 if (var2 != null) {
-                  p.field_f[1] = mi.a(var2, 113);
+                  p.field_f[1] = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(108, "subscription_cost_monthly,2");
+                var2 = IntKeyLookup.a(108, "subscription_cost_monthly,2");
                 if (var2 != null) {
-                  p.field_f[2] = mi.a(var2, 115);
+                  p.field_f[2] = RasterSnapshot.a(var2, 115);
                 }
-                var2 = jn.a(127, "subscription_cost_monthly,3");
+                var2 = IntKeyLookup.a(127, "subscription_cost_monthly,3");
                 if (var2 != null) {
-                  p.field_f[3] = mi.a(var2, 125);
+                  p.field_f[3] = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(87, "subscription_cost_monthly,4");
+                var2 = IntKeyLookup.a(87, "subscription_cost_monthly,4");
                 if (null != var2) {
-                  p.field_f[4] = mi.a(var2, 110);
+                  p.field_f[4] = RasterSnapshot.a(var2, 110);
                 }
-                var2 = jn.a(59, "subscription_cost_monthly,5");
+                var2 = IntKeyLookup.a(59, "subscription_cost_monthly,5");
                 if (var2 != null) {
-                  p.field_f[5] = mi.a(var2, 125);
+                  p.field_f[5] = RasterSnapshot.a(var2, 125);
                 }
-                var2 = jn.a(117, "subscription_cost_monthly,6");
+                var2 = IntKeyLookup.a(117, "subscription_cost_monthly,6");
                 if (null != var2) {
-                  p.field_f[6] = mi.a(var2, 113);
+                  p.field_f[6] = RasterSnapshot.a(var2, 113);
                 }
-                var2 = jn.a(118, "subscription_cost_monthly,7");
+                var2 = IntKeyLookup.a(118, "subscription_cost_monthly,7");
                 if (null != var2) {
-                  p.field_f[7] = mi.a(var2, 127);
+                  p.field_f[7] = RasterSnapshot.a(var2, 127);
                 }
-                var2 = jn.a(37, "subscription_cost_monthly,8");
+                var2 = IntKeyLookup.a(37, "subscription_cost_monthly,8");
                 if (null != var2) {
-                  p.field_f[8] = mi.a(var2, 112);
+                  p.field_f[8] = RasterSnapshot.a(var2, 112);
                 }
-                var2 = jn.a(123, "subscription_cost_monthly,9");
+                var2 = IntKeyLookup.a(123, "subscription_cost_monthly,9");
                 if (var2 != null) {
-                  p.field_f[9] = mi.a(var2, 111);
+                  p.field_f[9] = RasterSnapshot.a(var2, 111);
                 }
-                var2 = jn.a(43, "subscription_cost_monthly,10");
+                var2 = IntKeyLookup.a(43, "subscription_cost_monthly,10");
                 if (var2 != null) {
-                  p.field_f[10] = mi.a(var2, 119);
+                  p.field_f[10] = RasterSnapshot.a(var2, 119);
                 }
-                var2 = jn.a(122, "subscription_cost_monthly,11");
+                var2 = IntKeyLookup.a(122, "subscription_cost_monthly,11");
                 if (null != var2) {
-                  p.field_f[11] = mi.a(var2, 114);
+                  p.field_f[11] = RasterSnapshot.a(var2, 114);
                 }
-                var2 = jn.a(100, "subscription_cost_monthly,12");
+                var2 = IntKeyLookup.a(100, "subscription_cost_monthly,12");
                 if (var2 != null) {
-                  p.field_f[12] = mi.a(var2, 121);
+                  p.field_f[12] = RasterSnapshot.a(var2, 121);
                 }
-                var2 = jn.a(36, "sentence_separator");
+                var2 = IntKeyLookup.a(36, "sentence_separator");
                 if (null != var2) {
-                  mi.a(var2, 112);
+                  RasterSnapshot.a(var2, 112);
                 }
                 fk.field_a = null;
             }

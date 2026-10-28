@@ -345,7 +345,7 @@ class ul extends hc {
         }
     }
 
-    final static Sprite a(int param0, int param1, mf param2, byte param3) {
+    final static Sprite a(int param0, int param1, ResourceArchive param2, byte param3) {
         String stackIn_9_2 = null;
         try {
           if (param3 <= 3) {

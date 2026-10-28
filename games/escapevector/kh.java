@@ -72,7 +72,7 @@ final class kh {
         }
     }
 
-    final static Sprite[] a(mf param0, byte param1, String param2, String param3) {
+    final static Sprite[] a(ResourceArchive param0, byte param1, String param2, String param3) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;

@@ -4,7 +4,7 @@
 final class sc implements db {
     private int field_f;
     private int field_i;
-    private wl field_e;
+    private BitmapFont field_e;
     private int field_a;
     private int field_j;
     private int field_c;
@@ -15,7 +15,7 @@ final class sc implements db {
 
     final static void a(qd param0, int param1, int param2) {
         try {
-          mi.field_l.addLast(-12328, param0);
+          RasterSnapshot.field_l.addLast(-12328, param0);
           sm.a(param0, param1, true);
           if (param2 != 1) {
             sc.b((byte) 98);
@@ -100,7 +100,7 @@ final class sc implements db {
         field_h = null;
     }
 
-    sc(wl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    sc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_j = param3;
           this.field_b = param6;
@@ -122,7 +122,7 @@ final class sc implements db {
           return;
         }
         try {
-          sb.field_b = -1;
+          Js5Transport.field_b = -1;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "sc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

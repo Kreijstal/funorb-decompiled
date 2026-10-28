@@ -66,7 +66,7 @@ abstract class bb extends bj {
         Minimap.field_r.d(this.field_k + param3, this.field_j + param0, this.field_N);
     }
 
-    final static void a(int param0, int param1, int param2, te param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, IndexedSprite param3, int param4, int param5) {
         String stackIn_36_2 = null;
         int var20 = EscapeVector.obfuscationControl;
         try {

@@ -37,8 +37,8 @@ class IntrusiveNode {
     }
 
     final static void a(int param0, int param1, cc param2) {
-        c var5 = om.field_c;
-        var5.a(param1, true);
+        CipherPacketBuffer var5 = om.field_c;
+        var5.writeCipheredOpcode(param1, true);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         if (param0 > -20) {
@@ -59,30 +59,30 @@ class IntrusiveNode {
         }
     }
 
-    final static ui[] a(c param0, int param1) {
+    final static ui[] a(CipherPacketBuffer param0, int param1) {
         String stackIn_19_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          int var2_int = param0.j(8, 8);
+          int var2_int = param0.readBits(8, 8);
           if (0 < var2_int) {
             Object stackIn_3_0 = null;
             return (ui[]) (stackIn_3_0);
           }
-          int var3 = param0.j(12, 8);
+          int var3 = param0.readBits(12, 8);
           ui[] var4 = new ui[var3];
           for (int var5 = 0; var3 > var5; var5++) {
             if (da.a(param0, (byte) -116)) {
               ui var6 = new ui();
-              param0.j(24, param1 ^ 22186);
-              param0.j(24, 8);
-              var6.field_c = param0.j(24, param1 ^ 22186);
-              param0.j(9, 8);
-              param0.j(12, param1 ^ 22186);
-              param0.j(12, 8);
-              param0.j(12, 8);
+              param0.readBits(24, param1 ^ 22186);
+              param0.readBits(24, 8);
+              var6.field_c = param0.readBits(24, param1 ^ 22186);
+              param0.readBits(9, 8);
+              param0.readBits(12, param1 ^ 22186);
+              param0.readBits(12, 8);
+              param0.readBits(12, 8);
               var4[var5] = var6;
             } else {
-              int var6_int = param0.j(wf.a(var5 - 1, 24787), 8);
+              int var6_int = param0.readBits(wf.a(var5 - 1, 24787), 8);
               var4[var5] = var4[var6_int];
             }
           }

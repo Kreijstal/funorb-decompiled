@@ -7,7 +7,7 @@ final class ei extends IntrusiveNode {
     static String field_n;
     static String field_k;
     boolean field_g;
-    static mf field_m;
+    static ResourceArchive field_m;
     byte[] field_h;
     static boolean field_i;
 

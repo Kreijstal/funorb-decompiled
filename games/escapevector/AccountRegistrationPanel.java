@@ -27,7 +27,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
           if (param4 != 100) {
             AccountRegistrationPanel.i((byte) -65);
           }
-          ki var6 = new ki(20, param3, param0 + 120, 25, param1, false, 120, 3, sb.field_a, 16777215, param2);
+          ki var6 = new ki(20, param3, param0 + 120, 25, param1, false, 120, 3, Js5Transport.field_a, 16777215, param2);
           this.b(var6, false);
           int stackIn_3_0 = var6.field_x;
           return stackIn_3_0;
@@ -180,7 +180,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         boolean var1 = true;
         this.field_J = new bo("", (wn) null, (var1));
         this.field_K = new hc(ag.field_c, (wn) null);
-        this.field_P = new hc(c.field_p, (wn) null);
+        this.field_P = new hc(CipherPacketBuffer.field_p, (wn) null);
         this.field_S.field_i = bb.field_K;
         this.field_I.field_i = en.field_a;
         this.field_R.field_i = co.field_f;
@@ -217,7 +217,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         ki var4 = new ki(46, var3, -90 + this.field_g, 25, this.field_J, true, -120 + this.field_g, 5, ke.field_c, 11579568, ii.field_b);
         this.b(var4, false);
         var3 = var3 + var4.field_x;
-        k var5 = new k(sb.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, sb.field_a.field_r, -1, 2147483647, true);
+        k var5 = new k(Js5Transport.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, Js5Transport.field_a.field_r, -1, 2147483647, true);
         this.field_H = new ue(var2, var5);
         this.field_H.field_i = "";
         this.field_H.a(ah.field_m, (byte) 65, 0);
@@ -266,7 +266,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
             return true;
           }
           rf var4 = var3.a(17124);
-          if (var4 == ob.field_a) {
+          if (var4 == ArchiveProvider.field_a) {
             return false;
           }
           if (var4 == of.field_f) {
@@ -290,7 +290,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         }
     }
 
-    final static te a(mf param0, int param1, String param2, String param3) {
+    final static IndexedSprite a(ResourceArchive param0, int param1, String param2, String param3) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -300,7 +300,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
             field_L = (om) null;
           }
           int var5 = param0.a(var4_int, param2, true);
-          te stackIn_3_0 = he.a(param0, -18109, var5, var4_int);
+          IndexedSprite stackIn_3_0 = he.a(param0, -18109, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -332,7 +332,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
-          ki var8 = new ki(20, param2, 120 + param4, 25, param3, false, 120, 3, sb.field_a, 16777215, param0);
+          ki var8 = new ki(20, param2, 120 + param4, 25, param3, false, 120, 3, Js5Transport.field_a, 16777215, param0);
           this.b(var8, false);
           if (param1 != 123) {
             this.field_J = (bo) null;
@@ -364,10 +364,10 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
 
     final static java.awt.Canvas i(byte param0) {
         if (param0 == 10) {
-          return null == df.field_d ? of.field_d : (java.awt.Canvas) ((Object) df.field_d);
+          return null == IsaacRandom.field_d ? of.field_d : (java.awt.Canvas) ((Object) IsaacRandom.field_d);
         }
         field_M = (rk[]) null;
-        return null == df.field_d ? of.field_d : (java.awt.Canvas) ((Object) df.field_d);
+        return null == IsaacRandom.field_d ? of.field_d : (java.awt.Canvas) ((Object) IsaacRandom.field_d);
     }
 
     final void a(int param0, int param1, int param2, hm param3) {
@@ -446,7 +446,7 @@ final class AccountRegistrationPanel extends bj implements sg, qb, qn {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
-          ki var10 = new ki(20, param6, 120 + param2, param4, param1, false, 120, 3, sb.field_a, 16777215, param3);
+          ki var10 = new ki(20, param6, 120 + param2, param4, param1, false, 120, 3, Js5Transport.field_a, 16777215, param3);
           this.b(var10, false);
           lf var9 = new lf(((og) ((Object) param1)).a((byte) -89), param5, 126, var10.field_x + param6, param2 + 50, param0);
           var9.field_q = (wn) (this);

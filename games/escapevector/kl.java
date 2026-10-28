@@ -102,7 +102,7 @@ final class kl extends ah {
         String stackIn_8_2 = null;
         try {
           int var3_int = 95 / ((param0 - 10) / 51);
-          if (this.a(-1, param1) != ob.field_a) {
+          if (this.a(-1, param1) != ArchiveProvider.field_a) {
             return null;
           }
           String stackIn_3_0 = tb.field_E;
@@ -126,7 +126,7 @@ final class kl extends ah {
         try {
           CharSequence var5 = (CharSequence) ((Object) param1);
           if (!fk.a(false, var5)) {
-            rf stackIn_2_0 = ob.field_a;
+            rf stackIn_2_0 = ArchiveProvider.field_a;
             return stackIn_2_0;
           }
           CharSequence var6 = (CharSequence) ((Object) param1);
@@ -137,9 +137,9 @@ final class kl extends ah {
           }
           if (0 < var3_int &&
             130 >= var3_int) {
-            return df.field_h;
+            return IsaacRandom.field_h;
           }
-          rf stackIn_9_0 = ob.field_a;
+          rf stackIn_9_0 = ArchiveProvider.field_a;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

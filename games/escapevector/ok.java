@@ -28,7 +28,7 @@ final class ok {
           eo.a(LaserGateSpan.field_l, (byte) -107);
           bi.b();
           SoftwareRasterizer.d();
-          fi.a(-111);
+          IndexedSpriteState.a(-111);
           if (var5 < 256) {
             SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
           }
@@ -42,7 +42,7 @@ final class ok {
           eo.a(LaserGateSpan.field_l, (byte) -107);
           bi.b();
           SoftwareRasterizer.d();
-          fi.a(-111);
+          IndexedSpriteState.a(-111);
           if (var5 < 256) {
             SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
           }
@@ -57,7 +57,7 @@ final class ok {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                s.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
+                Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
             } else if (var6 >= 50) {
               var6 = kb.field_d - 140;
@@ -66,7 +66,7 @@ final class ok {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                s.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
+                Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
             } else if (var6 < 20) {
               var7 = var6 * 256 / 20;
@@ -77,7 +77,7 @@ final class ok {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                s.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
+                Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
             } else if (30 > var6) {
               ea.field_d.c(var3, var4, 256);
@@ -87,7 +87,7 @@ final class ok {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                s.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
+                Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
             } else {
               var7 = 256 * (50 - var6) / 20;
@@ -98,7 +98,7 @@ final class ok {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                s.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
+                Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
             }
             return;
@@ -124,7 +124,7 @@ final class ok {
           if (var6Lifetime2 < 20) {
             var7Lifetime2 = 256 * var6Lifetime2 / 20;
           }
-          s.field_G.d(15 + var3, 10 + var4, var5 * var7Lifetime2 >> 8);
+          Js5NetworkRequest.field_G.d(15 + var3, 10 + var4, var5 * var7Lifetime2 >> 8);
         }
         return;
     }
@@ -135,7 +135,7 @@ final class ok {
           if (param0 != 0) {
             field_d = (byte[][]) null;
           }
-          String stackIn_3_0 = mf.a(true, false, param1);
+          String stackIn_3_0 = ResourceArchive.a(true, false, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

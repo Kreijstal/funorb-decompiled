@@ -6,8 +6,8 @@ final class om {
     int field_d;
     static eg field_b;
     static p field_e;
-    static c field_g;
-    static c field_c;
+    static CipherPacketBuffer field_g;
+    static CipherPacketBuffer field_c;
     static Sprite[] field_a;
 
     public final String toString() {

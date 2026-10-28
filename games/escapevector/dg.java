@@ -14,7 +14,7 @@ final class dg extends ah {
         if (param0 > -8) {
           dg.g(7);
         }
-        return ca.field_d;
+        return MouseWheelInput.field_d;
     }
 
     public static void g(int param0) {
@@ -42,8 +42,8 @@ final class dg extends ah {
         rf stackIn_12_0 = null;
         String stackIn_16_2 = null;
         try {
-          if (this.field_p.a(param0, param1) == ob.field_a) {
-            rf stackIn_2_0 = ob.field_a;
+          if (this.field_p.a(param0, param1) == ArchiveProvider.field_a) {
+            rf stackIn_2_0 = ArchiveProvider.field_a;
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_n)) {
@@ -56,9 +56,9 @@ final class dg extends ah {
             this.field_q = var3.c(param0 + 14669);
           }
           if (this.field_q) {
-            stackIn_12_0 = df.field_h;
+            stackIn_12_0 = IsaacRandom.field_h;
           } else {
-            stackIn_12_0 = ob.field_a;
+            stackIn_12_0 = ArchiveProvider.field_a;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,16 +78,16 @@ final class dg extends ah {
     final String a(byte param0, String param1) {
         String stackIn_13_2 = null;
         try {
-          if (this.field_p.a(-1, param1) == ob.field_a) {
+          if (this.field_p.a(-1, param1) == ArchiveProvider.field_a) {
             String stackIn_3_0 = this.field_p.a((byte) -53, param1);
             return stackIn_3_0;
           }
-          if (this.a(-1, param1) == ob.field_a) {
+          if (this.a(-1, param1) == ArchiveProvider.field_a) {
             String stackIn_7_0 = wa.field_a;
             return stackIn_7_0;
           }
           int var3_int = -120 % ((param0 - 10) / 51);
-          String stackIn_9_0 = ec.field_c;
+          String stackIn_9_0 = SoundCache.field_c;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

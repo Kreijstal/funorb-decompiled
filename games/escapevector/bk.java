@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class bk extends sb {
+final class bk extends Js5Transport {
     static String[] field_q;
     static sf field_r;
     static int field_s;
@@ -35,7 +35,7 @@ final class bk extends sb {
             this.field_o.position = 0;
             scanLoop1: while (true) {
               boolean decompiledFrameRemainder0 = true;
-              s var4_ref = (s) (this.field_l.removeFirst((byte) -75));
+              Js5NetworkRequest var4_ref = (Js5NetworkRequest) (this.field_l.removeFirst((byte) -75));
               if (var4_ref != null) {
                 this.field_p.addLast(-1, var4_ref);
                 if (var6 != 0) {
@@ -51,7 +51,7 @@ final class bk extends sb {
               }
               if (decompiledFrameRemainder0) {
                 while (true) {
-                  s var4_refLifetime1 = (s) (this.field_n.removeFirst((byte) -75));
+                  Js5NetworkRequest var4_refLifetime1 = (Js5NetworkRequest) (this.field_n.removeFirst((byte) -75));
                   if (var4_refLifetime1 == null) {
                     break;
                   }
@@ -273,7 +273,7 @@ final class bk extends sb {
         int stackIn_63_2 = 0;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          c var1 = om.field_g;
+          CipherPacketBuffer var1 = om.field_g;
           int var2 = var1.readUnsignedByte(param0 ^ 0);
           if (param0 == var2) {
             if (null == ml.field_a) {
@@ -311,14 +311,14 @@ final class bk extends sb {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (mi.field_g == 1) {
-                mi.field_g = 2;
+              if (RasterSnapshot.field_g == 1) {
+                RasterSnapshot.field_g = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (mi.field_g == 2) {
-                mi.field_g = 1;
+              if (RasterSnapshot.field_g == 2) {
+                RasterSnapshot.field_g = 1;
               }
               return;
             }
@@ -327,7 +327,7 @@ final class bk extends sb {
               nm.a(16);
               return;
             }
-            mi.field_g = 1;
+            RasterSnapshot.field_g = 1;
             Object var3 = var1.c(false);
             di.field_f = ((String) (var3)).intern();
             int var4 = var1.readUnsignedByte(0);
@@ -448,7 +448,7 @@ final class bk extends sb {
           int stackIn_143_0 = 0;
           Throwable decompiledCaughtException = null;
           int var4 = 0;
-          s var14_ref = null;
+          Js5NetworkRequest var14_ref = null;
           int var16 = EscapeVector.obfuscationControl;
           try {
             if (null != this.field_t) {
@@ -478,7 +478,7 @@ final class bk extends sb {
             }
             try {
               this.field_t.a((byte) 123);
-              s var2 = (s) (this.field_p.first(0));
+              Js5NetworkRequest var2 = (Js5NetworkRequest) (this.field_p.first(0));
               scanLoop1: while (true) {
                 if (var2 != null) {
                   this.field_e.position = 0;
@@ -486,7 +486,7 @@ final class bk extends sb {
                   this.field_e.a(var2.secondaryKey, -118);
                   this.field_t.a(this.field_e.payload.length, 0, this.field_e.payload, 5000);
                   this.field_l.addLast(param0 + 3993, var2);
-                  var2 = (s) (this.field_p.next((byte) -101));
+                  var2 = (Js5NetworkRequest) (this.field_p.next((byte) -101));
                   if (var16 != 0) {
                     break scanLoop1;
                   }
@@ -494,7 +494,7 @@ final class bk extends sb {
                     continue;
                   }
                 }
-                var2 = (s) (this.field_j.first(param0 ^ param0));
+                var2 = (Js5NetworkRequest) (this.field_j.first(param0 ^ param0));
                 break;
               }
               while (var2 != null) {
@@ -503,7 +503,7 @@ final class bk extends sb {
                 this.field_e.a(var2.secondaryKey, -3);
                 this.field_t.a(this.field_e.payload.length, 0, this.field_e.payload, 5000);
                 this.field_n.addLast(-1, var2);
-                var2 = (s) (this.field_j.next((byte) -43));
+                var2 = (Js5NetworkRequest) (this.field_j.next((byte) -43));
                 if (var16 == 0) {
                   continue;
                 }
@@ -618,7 +618,7 @@ final class bk extends sb {
                           long var12 = (long)var7Lifetime1 + ((long)var6Lifetime1Lifetime1 << 32);
                           Object var14 = null;
                           if (var11) {
-                            var14_ref = (s) (this.field_n.first(0));
+                            var14_ref = (Js5NetworkRequest) (this.field_n.first(0));
                             while (var14_ref != null) {
                               stackIn_122_0 = $cfr$lcmp(var12, var14_ref.secondaryKey);
                               if (var16 != 0) {
@@ -630,7 +630,7 @@ final class bk extends sb {
                                 decompiledFrameCompleted1 = false;
                                 break;
                               }
-                              var14_ref = (s) (this.field_n.next((byte) 106));
+                              var14_ref = (Js5NetworkRequest) (this.field_n.next((byte) 106));
                             }
                             if (decompiledFrameCompleted2) {
                               decompiledFrameRemainder0 = !(decompiledFrameCompleted1);
@@ -639,7 +639,7 @@ final class bk extends sb {
                           if (decompiledFrameRemainder0 &&
                             decompiledFrameCompleted2 &&
                             decompiledFrameCompleted1) {
-                            var14_ref = (s) (this.field_l.first(0));
+                            var14_ref = (Js5NetworkRequest) (this.field_l.first(0));
                             while (null != var14_ref) {
                               stackIn_122_0 = $cfr$lcmp(~var12, ~var14_ref.secondaryKey);
                               if (var16 != 0) {
@@ -650,7 +650,7 @@ final class bk extends sb {
                                 var16 == 0) {
                                 break;
                               }
-                              var14_ref = (s) (this.field_l.next((byte) -52));
+                              var14_ref = (Js5NetworkRequest) (this.field_l.next((byte) -52));
                               if (var16 == 0) {
                                 continue;
                               }

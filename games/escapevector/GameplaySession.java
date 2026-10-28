@@ -113,19 +113,19 @@ final class GameplaySession {
     Minimap minimap;
     private IntrusiveDeque initialPowerups;
     private boolean field_zb;
-    private hl field_f;
-    private hl field_wb;
-    private m field_fb;
-    private hl field_v;
-    private hl field_Eb;
-    private hl field_Wb;
-    private hl field_r;
+    private PcmSampleStream field_f;
+    private PcmSampleStream field_wb;
+    private TetherHumStream field_fb;
+    private PcmSampleStream field_v;
+    private PcmSampleStream field_Eb;
+    private PcmSampleStream field_Wb;
+    private PcmSampleStream field_r;
     private IntrusiveDeque laserGateSpans;
-    hl field_lc;
-    private hl field_Z;
+    PcmSampleStream field_lc;
+    private PcmSampleStream field_Z;
     private int laserGateCount;
-    private hl field_jb;
-    private hl field_R;
+    private PcmSampleStream field_jb;
+    private PcmSampleStream field_R;
     private int field_oc;
     private boolean laserGateDestroyed;
 
@@ -459,7 +459,7 @@ final class GameplaySession {
           var3 = Minimap.field_p;
         } else if (this.rockBusterAmmo == 0 &&
           param1 == 5) {
-          var3 = dd.field_b;
+          var3 = PcmResampler.field_b;
         } else if (5 == param1) {
           var3 = af.field_g;
         }
@@ -472,8 +472,8 @@ final class GameplaySession {
         this.field_Db = new od(this);
         this.exhaustParticles.f((byte) -125);
         if (param0 != 24661) {
-          hh var4 = (hh) null;
-          this.a(-10, -80, (Sprite) null, 116, (hh) null);
+          PcmSample var4 = (PcmSample) null;
+          this.a(-10, -80, (Sprite) null, 116, (PcmSample) null);
         }
         ji.a(true);
         this.field_pc = 0;
@@ -646,23 +646,23 @@ final class GameplaySession {
     private final void a(int param0) {
         Throwable decompiledCaughtException = null;
         int var5 = EscapeVector.obfuscationControl;
-        pl.field_n.b(this.field_jb);
-        pl.field_n.b(this.field_Z);
-        pl.field_n.b(this.field_v);
+        pl.field_n.removeSubstream(this.field_jb);
+        pl.field_n.removeSubstream(this.field_Z);
+        pl.field_n.removeSubstream(this.field_v);
         if (null != this.field_R) {
-          pl.field_n.b(this.field_R);
+          pl.field_n.removeSubstream(this.field_R);
         }
         if (null != this.field_f) {
-          pl.field_n.b(this.field_f);
+          pl.field_n.removeSubstream(this.field_f);
         }
         if (this.field_Eb != null) {
           this.field_Eb.h(0);
         }
-        pl.field_n.b(this.field_Wb);
-        pl.field_n.b(this.field_wb);
-        pl.field_n.b(this.field_r);
-        pl.field_n.b(this.field_lc);
-        pl.field_n.b(this.field_fb);
+        pl.field_n.removeSubstream(this.field_Wb);
+        pl.field_n.removeSubstream(this.field_wb);
+        pl.field_n.removeSubstream(this.field_r);
+        pl.field_n.removeSubstream(this.field_lc);
+        pl.field_n.removeSubstream(this.field_fb);
         Object var2 = pl.field_n;
         synchronized (var2) {
           RockBuster var3 = (RockBuster) (this.rockBusters.first(false));
@@ -670,7 +670,7 @@ final class GameplaySession {
             if (var3 != null) {
               int stackIn_15_0 = var3.remainingFlightTicks;
               if (stackIn_15_0 != 0) {
-                pl.field_n.b(var3.flightSound);
+                pl.field_n.removeSubstream(var3.flightSound);
               }
               var3 = (RockBuster) (this.rockBusters.next((byte) 70));
               continue;
@@ -684,8 +684,8 @@ final class GameplaySession {
           SeekerMine var3_ref = (SeekerMine) (this.seekerMines.first(false));
           while (var3_ref != null) {
             if (null != var3_ref.flightSound) {
-              pl.field_n.b(var3_ref.flightSound);
-              pl.field_n.b(var3_ref.proximitySound);
+              pl.field_n.removeSubstream(var3_ref.flightSound);
+              pl.field_n.removeSubstream(var3_ref.proximitySound);
             }
             var3_ref = (SeekerMine) (this.seekerMines.next((byte) 70));
           }
@@ -1084,7 +1084,7 @@ final class GameplaySession {
         return false;
     }
 
-    private final void a(int param0, int param1, Sprite param2, int param3, hh param4) {
+    private final void a(int param0, int param1, Sprite param2, int param3, PcmSample param4) {
         if (param1 != -28311553) {
           return;
         }
@@ -1127,7 +1127,7 @@ final class GameplaySession {
                 param8[var12] = ae.a(255, (param7 << 5) + var12);
               }
             } else {
-              int[] var12_ref_int__ = dd.field_a[this.terrainTheme].pixels;
+              int[] var12_ref_int__ = PcmResampler.field_a[this.terrainTheme].pixels;
               if (var18 == QuickChatPhraseDefinition.fullTileMask) {
                 int var13 = param6;
                 while (true) {
@@ -1248,7 +1248,7 @@ final class GameplaySession {
           re.a(param0 + 1829, var6);
         }
         if (this.levelIndex == 12) {
-          DialogueScreen var7 = new DialogueScreen(vl.field_c, ae.field_c, tl.field_t, false);
+          DialogueScreen var7 = new DialogueScreen(vl.field_c, ae.field_c, SeekerPulseStream.field_t, false);
           re.a(1820, var7);
         }
     }
@@ -1532,7 +1532,7 @@ final class GameplaySession {
           }
         }
         if (param2 != -14) {
-          this.field_fb = (m) null;
+          this.field_fb = (TetherHumStream) null;
         }
     }
 
@@ -1554,7 +1554,7 @@ final class GameplaySession {
 
     private final void e(int param0, int param1, int param2) {
         int var10 = EscapeVector.obfuscationControl;
-        if (dd.field_a[this.terrainTheme] == null) {
+        if (PcmResampler.field_a[this.terrainTheme] == null) {
           return;
         }
         while (0 > param2) {
@@ -1635,7 +1635,7 @@ final class GameplaySession {
           DialogueScreen var8 = new DialogueScreen(bj.field_F, ae.field_c, me.field_g, false);
           re.a(1820, var8);
         } else {
-          DialogueScreen var9 = new DialogueScreen(vl.field_c, ae.field_c, tl.field_t, false);
+          DialogueScreen var9 = new DialogueScreen(vl.field_c, ae.field_c, SeekerPulseStream.field_t, false);
           re.a(1820, var9);
         }
     }
@@ -1649,7 +1649,7 @@ final class GameplaySession {
         }
     }
 
-    private final void a(int param0, hl param1) {
+    private final void a(int param0, PcmSampleStream param1) {
         if (param1 == null) {
           return;
         }
@@ -1717,7 +1717,7 @@ final class GameplaySession {
         if (param0 != 4251) {
           this.q(11);
         }
-        return wk.a(ah.field_l, false, sm.field_d, da.field_d[this.terrainTheme], fi.field_j);
+        return wk.a(ah.field_l, false, sm.field_d, da.field_d[this.terrainTheme], IndexedSpriteState.field_j);
     }
 
     private final void c(int param0, int param1, int param2) {
@@ -1803,7 +1803,7 @@ final class GameplaySession {
           this.field_Ib = true;
           if (1 == this.tetheredObjectType) {
             vj.b(97);
-            pl.field_n.a(jh.field_k, 100, qm.field_c * 6144 / 64, 8192);
+            pl.field_n.playSampleWithPan(jh.field_k, 100, qm.field_c * 6144 / 64, 8192);
             if (this.field_rc) {
               if (this.levelIndex >= 0) {
                 this.field_c = -150;
@@ -1814,7 +1814,7 @@ final class GameplaySession {
             this.b((byte) -109, 1);
           } else if (0 <= this.levelIndex ||
             !this.field_ec) {
-            pl.field_n.a(gm.field_b, 100, qm.field_c * 6144 / 64, 8192);
+            pl.field_n.playSampleWithPan(gm.field_b, 100, qm.field_c * 6144 / 64, 8192);
             this.a(-98, ki.field_I);
           }
         }
@@ -1826,7 +1826,7 @@ final class GameplaySession {
             }
             this.field_Ib = true;
             vj.b(104);
-            pl.field_n.a(jh.field_k, 100, 6144 * qm.field_c / 64, 8192);
+            pl.field_n.playSampleWithPan(jh.field_k, 100, 6144 * qm.field_c / 64, 8192);
             if (this.field_rc) {
               if (0 <= this.levelIndex) {
                 this.field_c = -150;
@@ -1837,7 +1837,7 @@ final class GameplaySession {
             this.b((byte) -124, 1);
           } else if (this.hasShipReachedExit(true)) {
             this.field_Ib = true;
-            pl.field_n.a(gm.field_b, 100, qm.field_c * 6144 / 64, 8192);
+            pl.field_n.playSampleWithPan(gm.field_b, 100, qm.field_c * 6144 / 64, 8192);
             this.a(param0 ^ -101, jl.field_c);
           }
         }
@@ -2050,7 +2050,7 @@ final class GameplaySession {
           this.pickupAnimationTicks = this.pickupAnimationTicks - 1;
           if (this.pickupAnimationTicks == 0) {
             this.k(-123, this.tetheredObjectType);
-            pl.field_n.a(nm.field_a, 100, qm.field_c * 6144 / 64, 8192);
+            pl.field_n.playSampleWithPan(nm.field_a, 100, qm.field_c * 6144 / 64, 8192);
             int var2 = qj.a((byte) -38, this.tetheredObjectType, this.gameMode);
             this.levelScore = this.levelScore + var2;
             v.a(8, var2);
@@ -2239,9 +2239,9 @@ final class GameplaySession {
             int var3 = 0;
             for (int var4 = 0; var4 < this.field_d; var4++) {
               int var5 = this.field_g[var4];
-              mi.field_m[var5].e(var3, 4);
-              int var6 = 39 - fh.field_g.a(hk.field_r[var5], 100) * 10;
-              fh.field_g.a(hk.field_r[var5], var3 + 40, var6 - fh.field_g.field_r, 100, 1000, 16777215, -1, 0, 0, 20);
+              RasterSnapshot.field_m[var5].e(var3, 4);
+              int var6 = 39 - fh.field_g.a(CachedArchiveProvider.field_r[var5], 100) * 10;
+              fh.field_g.a(CachedArchiveProvider.field_r[var5], var3 + 40, var6 - fh.field_g.field_r, 100, 1000, 16777215, -1, 0, 0, 20);
               var3 += 160;
             }
             md.field_D.a(113);
@@ -2324,7 +2324,7 @@ final class GameplaySession {
         if (var3 < 0) {
           return;
         }
-        int var4 = this.field_sb / (th.field_p + 1);
+        int var4 = this.field_sb / (Bzip2State.field_p + 1);
         if (var4 < 0) {
           return;
         }
@@ -2380,7 +2380,7 @@ final class GameplaySession {
             var7 = var7 - this.worldWidth;
           }
           for (var7 = var7 + this.worldWidth; 640 > var7; var7 = var7 + this.worldWidth) {
-            Sprite var9 = s.field_H;
+            Sprite var9 = Js5NetworkRequest.field_H;
             boolean stackIn_9_0Lifetime1 = var4;
             if (stackIn_9_0Lifetime1 &&
               null != TerrainMaskSupport.field_a) {
@@ -2669,8 +2669,8 @@ final class GameplaySession {
     private final void destroySeekerMine(SeekerMine mine, int guard) {
         try {
           if (null != mine.flightSound) {
-            pl.field_n.b(mine.flightSound);
-            pl.field_n.b(mine.proximitySound);
+            pl.field_n.removeSubstream(mine.flightSound);
+            pl.field_n.removeSubstream(mine.proximitySound);
             mine.proximitySound = null;
             mine.flightSound = null;
           }
@@ -2902,7 +2902,7 @@ final class GameplaySession {
     }
 
     private final void detonateRockBuster(RockBuster projectile, int guard) {
-        pl.field_n.b(projectile.flightSound);
+        pl.field_n.removeSubstream(projectile.flightSound);
         projectile.flightSound = null;
         if (guard < 7) {
           return;
@@ -2934,7 +2934,7 @@ final class GameplaySession {
           boolean discarded$1 = this.areMissionTargetsDestroyed(-71);
         }
         if (this.levelIndex < 0) {
-          Sprite var10 = c.field_n;
+          Sprite var10 = CipherPacketBuffer.field_n;
           if (var10 == null) {
             return;
           }
@@ -3087,7 +3087,7 @@ final class GameplaySession {
         int var1 = -7 / ((70 - param0) / 32);
     }
 
-    private final void a(int param0, int param1, hh param2, int param3) {
+    private final void a(int param0, int param1, PcmSample param2, int param3) {
         String stackIn_6_2 = null;
         try {
           boolean var5_int = (this.usesDynamicTerrain(8192));
@@ -3119,7 +3119,7 @@ final class GameplaySession {
           PointCloudEffect var6 = this.a(object, (byte) 42);
           this.levelObjects.removeElementAt(objectIndex);
           if (!this.shipDestroyed) {
-            int var5 = mf.b(this.gameMode, object.objectType, -2);
+            int var5 = ResourceArchive.b(this.gameMode, object.objectType, -2);
             this.levelScore = this.levelScore + var5;
             v.a(8, var5);
           }
@@ -3243,7 +3243,7 @@ final class GameplaySession {
               var6 = var6 - this.worldWidth;
             }
             for (var6 = var6 + this.worldWidth; var6 < 647; var6 = var6 + this.worldWidth) {
-              Sprite var8_ref_ed = mf.field_m;
+              Sprite var8_ref_ed = ResourceArchive.field_m;
               stackIn_31_0 = var2;
               if (stackIn_31_0 != 0 &&
                 ej.field_a != null) {
@@ -3258,8 +3258,8 @@ final class GameplaySession {
         if (stackIn_31_0Lifetime1 >= ~this.tetheredObjectType) {
           Sprite var5_ref_ed = mb.field_f[this.tetheredObjectType];
           if (var2 != 0 &&
-            ob.field_b[this.tetheredObjectType] != null) {
-            var5_ref_ed = ob.field_b[this.tetheredObjectType];
+            ArchiveProvider.field_b[this.tetheredObjectType] != null) {
+            var5_ref_ed = ArchiveProvider.field_b[this.tetheredObjectType];
           }
           int var6Lifetime1 = (this.tetheredXQ16 - (var5_ref_ed.fullWidth << 15) >> 16) - var3;
           int var7Lifetime1 = (this.field_E - (var5_ref_ed.fullHeight << 15) >> 16) - var4;
@@ -3405,14 +3405,14 @@ final class GameplaySession {
         if (this.easyMode) {
           return;
         }
-        this.a(0, mf.field_a, 65793, 0);
-        this.a(0, -28311553, mf.field_a, 0, ib.field_a);
+        this.a(0, ResourceArchive.field_a, 65793, 0);
+        this.a(0, -28311553, ResourceArchive.field_a, 0, IntrusiveNodeHashTable.field_a);
         if (this.tetheredObjectType >= 0) {
           if (this.pickupAnimationTicks > 0) {
             this.pickupAnimationTicks = 0;
             this.tetheredObjectType = -1;
           }
-          pl.field_n.a(bc.field_c, 100, 6144 * qm.field_c / 64, 8192);
+          pl.field_n.playSampleWithPan(bc.field_c, 100, 6144 * qm.field_c / 64, 8192);
         }
         this.shipDestroyed = true;
         if (!this.timeHackMode &&
@@ -3590,7 +3590,7 @@ final class GameplaySession {
           if (var8 > 6144) {
             var8 = 6144;
           }
-          pl.field_n.a(co.field_d, 100, qm.field_c * var8 / 64, 8192);
+          pl.field_n.playSampleWithPan(co.field_d, 100, qm.field_c * var8 / 64, 8192);
         }
     }
 
@@ -3647,7 +3647,7 @@ final class GameplaySession {
           this.levelIndex >= 0 &&
           !this.shipDestroyed) {
           this.field_bc = this.field_bc + 1;
-          c.m(-45);
+          CipherPacketBuffer.m(-45);
           if (this.field_bc == 76) {
             this.a(this.gameMode, false, 12, 243);
           }
@@ -3726,7 +3726,7 @@ final class GameplaySession {
           }
           for (int powerupIndex = 0; powerupIndex < powerupCount; powerupIndex++) {
             int objectType = input.readUnsignedByte();
-            if (mf.a(objectType, -64)) {
+            if (ResourceArchive.a(objectType, -64)) {
               IntValueNode powerup = new IntValueNode(objectType);
               this.initialPowerups.addLast(-12328, powerup);
               this.j(objectType, 101);
@@ -3788,17 +3788,17 @@ final class GameplaySession {
           if (this.field_Qb < 31) {
             if (null == da.field_c &&
               !this.field_Jb) {
-              mf.a(4, var2, 31 - this.field_Qb, this.field_i, -99);
+              ResourceArchive.a(4, var2, 31 - this.field_Qb, this.field_i, -99);
             }
           } else if (this.field_Qb <= 120) {
-            ge.a(-this.field_i.fullWidth, this.field_i.pixels, 0, -this.field_i.fullWidth + SoftwareRasterizer.width, (byte) -126, 0, 0, -this.field_i.fullHeight, SoftwareRasterizer.pixels, 3 * SoftwareRasterizer.width + (-1 + var2));
-            ge.a(-this.field_i.fullWidth, this.field_i.pixels, 0, -this.field_i.fullWidth + SoftwareRasterizer.width, (byte) -84, 0, 0, -this.field_i.fullHeight, SoftwareRasterizer.pixels, var2 + 1 + 3 * SoftwareRasterizer.width);
-            ge.a(-this.field_i.fullWidth, this.field_i.pixels, 0, -this.field_i.fullWidth + SoftwareRasterizer.width, (byte) -100, 0, 0, -this.field_i.fullHeight, SoftwareRasterizer.pixels, -1 + (var2 + 5 * SoftwareRasterizer.width));
-            ge.a(-this.field_i.fullWidth, this.field_i.pixels, 0, SoftwareRasterizer.width - this.field_i.fullWidth, (byte) -81, 0, 0, -this.field_i.fullHeight, SoftwareRasterizer.pixels, 1 + (var2 + 5 * SoftwareRasterizer.width));
+            AudioService.a(-this.field_i.fullWidth, this.field_i.pixels, 0, -this.field_i.fullWidth + SoftwareRasterizer.width, (byte) -126, 0, 0, -this.field_i.fullHeight, SoftwareRasterizer.pixels, 3 * SoftwareRasterizer.width + (-1 + var2));
+            AudioService.a(-this.field_i.fullWidth, this.field_i.pixels, 0, -this.field_i.fullWidth + SoftwareRasterizer.width, (byte) -84, 0, 0, -this.field_i.fullHeight, SoftwareRasterizer.pixels, var2 + 1 + 3 * SoftwareRasterizer.width);
+            AudioService.a(-this.field_i.fullWidth, this.field_i.pixels, 0, -this.field_i.fullWidth + SoftwareRasterizer.width, (byte) -100, 0, 0, -this.field_i.fullHeight, SoftwareRasterizer.pixels, -1 + (var2 + 5 * SoftwareRasterizer.width));
+            AudioService.a(-this.field_i.fullWidth, this.field_i.pixels, 0, SoftwareRasterizer.width - this.field_i.fullWidth, (byte) -81, 0, 0, -this.field_i.fullHeight, SoftwareRasterizer.pixels, 1 + (var2 + 5 * SoftwareRasterizer.width));
             this.field_i.e(var2, 4);
           } else if (da.field_c == null &&
             !this.field_Jb) {
-            mf.a(4, var2, -120 + this.field_Qb, this.field_i, -123);
+            ResourceArchive.a(4, var2, -120 + this.field_Qb, this.field_i, -123);
           }
         }
 
@@ -3959,7 +3959,7 @@ final class GameplaySession {
               break scanLoop1;
             }
             if (this.field_c == 64) {
-              pl.field_n.a(dd.field_g, 100, qm.field_c * 1024 / 64, 8192);
+              pl.field_n.playSampleWithPan(PcmResampler.field_g, 100, qm.field_c * 1024 / 64, 8192);
             }
             this.field_c = this.field_c - 1;
             if (0 == this.field_c) {
@@ -3977,9 +3977,9 @@ final class GameplaySession {
             int stackIn_82_0Lifetime1 = -1;
             int stackIn_82_1Lifetime1 = ~this.field_c;
             if (stackIn_82_0Lifetime1 == stackIn_82_1Lifetime1) {
-              hl var31 = hl.c(dd.field_g, 100, qm.field_c * 1024 / 64, 8192);
+              PcmSampleStream var31 = PcmSampleStream.c(PcmResampler.field_g, 100, qm.field_c * 1024 / 64, 8192);
               var31.e();
-              pl.field_n.a(var31);
+              pl.field_n.addSubstream(var31);
             }
             this.field_c = this.field_c + 1;
           }
@@ -3990,19 +3990,19 @@ final class GameplaySession {
               this.score = this.score + this.levelScore;
               this.levelStartTicks = this.elapsedTicks;
               this.levelScore = 0;
-              pl.field_n.a(pl.field_o, 100, qm.field_c * 6144 / 64, 8192);
+              pl.field_n.playSampleWithPan(pl.field_o, 100, qm.field_c * 6144 / 64, 8192);
             }
             if (this.field_c == -75) {
               var2 = ei.a(0, this.fuel, this.gameMode);
               this.score = this.score + var2;
               v.a(8, var2);
-              pl.field_n.a(pl.field_o, 100, qm.field_c * 6144 / 64, 8192);
+              pl.field_n.playSampleWithPan(pl.field_o, 100, qm.field_c * 6144 / 64, 8192);
             }
             if (this.field_c == -50) {
               var2 = ei.a(0, this.shieldEnergy * 2, this.gameMode);
               this.score = this.score + var2;
               v.a(8, var2);
-              pl.field_n.a(pl.field_o, 100, qm.field_c * 6144 / 64, 8192);
+              pl.field_n.playSampleWithPan(pl.field_o, 100, qm.field_c * 6144 / 64, 8192);
             }
             this.f(false);
           }
@@ -4037,7 +4037,7 @@ final class GameplaySession {
               (this.levelIndex & 3) == 0) {
               if (this.levelIndex == 0) {
                 this.field_Qb = 0;
-                this.queueHudMessage(164, (byte) 55, m.field_n);
+                this.queueHudMessage(164, (byte) 55, TetherHumStream.field_n);
               }
               this.startSession((byte) -40);
             }
@@ -4162,11 +4162,11 @@ final class GameplaySession {
           }
           if (this.levelIndex >= 0) {
             this.shieldEnergy = this.shieldEnergy - 1;
-            ca.b((byte) 76);
+            MouseWheelInput.b((byte) 76);
           }
           if (0 == this.shieldEnergy) {
             this.a(-107, rc.field_c);
-            pl.field_n.a(gm.field_b, 100, qm.field_c * 6144 / 64, 8192);
+            pl.field_n.playSampleWithPan(gm.field_b, 100, qm.field_c * 6144 / 64, 8192);
           }
           this.shieldActive = true;
           this.shipLanded = false;
@@ -4228,22 +4228,22 @@ final class GameplaySession {
           }
           var9Lifetime1++;
         }
-        hl stackIn_227_0 = this.field_Wb;
+        PcmSampleStream stackIn_227_0 = this.field_Wb;
         int stackIn_227_1 = (int)Math.sqrt((double)var3Lifetime1 + 0.5);
         if (0 == var3Lifetime1) {
           stackIn_228_2 = 8192;
         } else {
           stackIn_228_2 = (int)(var5_long / (long)var3Lifetime1);
         }
-        ((hl) (Object) stackIn_227_0).f(stackIn_227_1, stackIn_228_2);
-        hl stackIn_230_0 = this.field_wb;
+        ((PcmSampleStream) (Object) stackIn_227_0).f(stackIn_227_1, stackIn_228_2);
+        PcmSampleStream stackIn_230_0 = this.field_wb;
         int stackIn_230_1 = (int)Math.sqrt((double)var4 + 0.5);
         if (var4 != 0) {
           stackIn_231_2 = (int)(var7_long / (long)var4);
         } else {
           stackIn_231_2 = 8192;
         }
-        ((hl) (Object) stackIn_230_0).f(stackIn_230_1, stackIn_231_2);
+        ((PcmSampleStream) (Object) stackIn_230_0).f(stackIn_230_1, stackIn_231_2);
         int var3Lifetime2 = 0;
         long var4_long = 0L;
         if (this.field_oc < 50) {
@@ -4271,28 +4271,28 @@ final class GameplaySession {
             var6_ref_hg = var6_ref_hg.next;
           }
         }
-        hl stackIn_246_0 = this.field_r;
-        int stackIn_246_1 = ie.field_q / 100;
+        PcmSampleStream stackIn_246_0 = this.field_r;
+        int stackIn_246_1 = AudioOutput.field_q / 100;
         int stackIn_246_2 = (int)Math.sqrt(0.5 + (double)var3Lifetime2);
         if (var3Lifetime2 == 0) {
           stackIn_247_3 = 8192;
         } else {
           stackIn_247_3 = (int)(var4_long / (long)var3Lifetime2);
         }
-        ((hl) (Object) stackIn_246_0).a(stackIn_246_1, stackIn_246_2, stackIn_247_3);
+        ((PcmSampleStream) (Object) stackIn_246_0).a(stackIn_246_1, stackIn_246_2, stackIn_247_3);
         SeekerMine seekerMine = (SeekerMine) (this.seekerMines.first(false));
         while (seekerMine != null) {
           if (null == seekerMine.flightSound) {
-            seekerMine.proximitySound = new tl();
-            seekerMine.flightSound = hl.a(ci.field_a, 256, 0, 8192);
-            seekerMine.proximitySound.field_k = hl.a(qi.field_J, 256, 0, 8192);
-            seekerMine.proximitySound.field_q = hl.a(qi.field_J, 256, 0, 8192);
+            seekerMine.proximitySound = new SeekerPulseStream();
+            seekerMine.flightSound = PcmSampleStream.a(ci.field_a, 256, 0, 8192);
+            seekerMine.proximitySound.field_k = PcmSampleStream.a(qi.field_J, 256, 0, 8192);
+            seekerMine.proximitySound.field_q = PcmSampleStream.a(qi.field_J, 256, 0, 8192);
             seekerMine.flightSound.h(-1);
             seekerMine.proximitySound.field_k.h(-1);
             seekerMine.proximitySound.field_q.h(-1);
-            seekerMine.flightSound.e((int)(Math.random() * (double)ci.field_a.field_h.length));
-            pl.field_n.a(seekerMine.flightSound);
-            pl.field_n.a(seekerMine.proximitySound);
+            seekerMine.flightSound.e((int)(Math.random() * (double)ci.field_a.samples.length));
+            pl.field_n.addSubstream(seekerMine.flightSound);
+            pl.field_n.addSubstream(seekerMine.proximitySound);
           }
           var4 = this.shipXQ16 - seekerMine.xQ16;
           var5 = this.shipYQ16 - seekerMine.yQ16;
@@ -4326,8 +4326,8 @@ final class GameplaySession {
             var9Lifetime3 = 30000 - (seekerMine.velocityYQ16 >> 6);
           } else {
             var6_double = Math.sqrt(var6_double);
-            seekerMine.proximitySound.field_k.i((int)(Math.pow(0.8464491362763915, var6_double / 13107200.0) * 6668800.0) / ie.field_q);
-            seekerMine.proximitySound.field_q.i((int)(Math.pow(0.5646606914212549, var6_double / 13107200.0) * 59980800.0) / ie.field_q);
+            seekerMine.proximitySound.field_k.i((int)(Math.pow(0.8464491362763915, var6_double / 13107200.0) * 6668800.0) / AudioOutput.field_q);
+            seekerMine.proximitySound.field_q.i((int)(Math.pow(0.5646606914212549, var6_double / 13107200.0) * 59980800.0) / AudioOutput.field_q);
             seekerMine.proximitySound.field_p = (int)(Math.pow(0.1, var6_double / 13107200.0) * 26214.4);
             seekerMine.homeYQ16 = seekerMine.yQ16;
             var6_double = 2949.12 / var6_double;
@@ -4341,7 +4341,7 @@ final class GameplaySession {
           } else {
             seekerMine.soundPlaybackRate = seekerMine.soundPlaybackRate + (4 - seekerMine.soundPlaybackRate + var9Lifetime3 >> 3);
           }
-          seekerMine.flightSound.i(seekerMine.soundPlaybackRate * 256 / ie.field_q);
+          seekerMine.flightSound.i(seekerMine.soundPlaybackRate * 256 / AudioOutput.field_q);
           seekerMine.velocityYQ16 = seekerMine.velocityYQ16 + var5;
           seekerMine.velocityXQ16 = seekerMine.velocityXQ16 + var4;
           if (var8 == 0) {
@@ -4375,7 +4375,7 @@ final class GameplaySession {
             if (this.shieldActive) {
               this.field_Hb = 0;
               this.field_pb = 0;
-              this.a(s.field_H, var17_int, var16, (byte) 83);
+              this.a(Js5NetworkRequest.field_H, var17_int, var16, (byte) 83);
               if ((this.field_Hb | this.field_pb) != 0) {
                 int var18 = seekerMine.velocityXQ16 + 3 * this.shipVelocityXQ16 >> 2;
                 this.shipVelocityXQ16 = this.shipVelocityXQ16 - var18;
@@ -4398,10 +4398,10 @@ final class GameplaySession {
                 if (var12 > 6144) {
                   var12 = 6144;
                 }
-                pl.field_n.a(co.field_d, 100, var12 * qm.field_c / 64, 8192);
+                pl.field_n.playSampleWithPan(co.field_d, 100, var12 * qm.field_c / 64, 8192);
                 decompiledFrameRemainder0 = false;
               }
-            } else if (this.a(false, var17_int, var16, s.field_H)) {
+            } else if (this.a(false, var17_int, var16, Js5NetworkRequest.field_H)) {
               this.destroyShip((byte) -62);
               this.destroySeekerMine(seekerMine, 5);
               decompiledFrameRemainder0 = false;
@@ -4416,14 +4416,14 @@ final class GameplaySession {
               while (var19 >= this.worldWidth >> 1) {
                 var19 = var19 - this.worldWidth;
               }
-              if (ln.a(s.field_H, 0, var17_int, tetheredSprite, var19, -(tetheredSprite.fullHeight << 15) + this.field_E >> 16)) {
+              if (SpriteCollisionSupport.a(Js5NetworkRequest.field_H, 0, var17_int, tetheredSprite, var19, -(tetheredSprite.fullHeight << 15) + this.field_E >> 16)) {
                 this.k((byte) 64);
                 this.destroySeekerMine(seekerMine, 5);
                 decompiledFrameRemainder0 = false;
               }
             }
             if (decompiledFrameRemainder0 &&
-              this.b(var16, s.field_H, var17_int, -1)) {
+              this.b(var16, Js5NetworkRequest.field_H, var17_int, -1)) {
               if (!this.shipDestroyed) {
                 int var18Lifetime2 = hc.a(this.gameMode, (byte) 77);
                 this.levelScore = this.levelScore + var18Lifetime2;
@@ -4482,12 +4482,12 @@ final class GameplaySession {
                 if (var5 != 0) {
                   this.field_kc = true;
                 } else if (this.field_kc) {
-                  pl.field_n.a(TerrainMaskSupport.field_e, 100, qm.field_c * 6144 / 64, 8192);
+                  pl.field_n.playSampleWithPan(TerrainMaskSupport.field_e, 100, qm.field_c * 6144 / 64, 8192);
                 }
                 if (var6 != 0) {
                   this.field_jc = true;
                 } else if (this.field_jc) {
-                  pl.field_n.a(ri.field_b, 100, 6144 * qm.field_c / 64, 8192);
+                  pl.field_n.playSampleWithPan(ri.field_b, 100, 6144 * qm.field_c / 64, 8192);
                 }
                 this.shipVelocityXQ16 = this.shipVelocityXQ16 >> 1;
                 if (this.shipVelocityYQ16 > 65536) {
@@ -4530,12 +4530,12 @@ final class GameplaySession {
               if (var4 != 0 &&
                 this.shipYQ16 < 33554432) {
                 this.a(-114, bh.field_e);
-                pl.field_n.a(gm.field_b, 100, qm.field_c * 6144 / 64, 8192);
+                pl.field_n.playSampleWithPan(gm.field_b, 100, qm.field_c * 6144 / 64, 8192);
               }
               if (var4 == 0 &&
                 this.shipYQ16 >= 33554432) {
-                this.a(67, ge.field_a);
-                pl.field_n.a(gm.field_b, 100, 6144 * qm.field_c / 64, 8192);
+                this.a(67, AudioService.field_a);
+                pl.field_n.playSampleWithPan(gm.field_b, 100, 6144 * qm.field_c / 64, 8192);
               }
             }
           } else {
@@ -4555,7 +4555,7 @@ final class GameplaySession {
           }
         }
         Object var4_ref = this.field_f;
-        hl var5_ref_hl = this.field_Eb;
+        PcmSampleStream var5_ref_hl = this.field_Eb;
         this.field_f = null;
         this.field_Eb = null;
         var6 = 0;
@@ -4585,29 +4585,29 @@ final class GameplaySession {
                     this.fuel = 5000;
                   }
                   if (var4_ref != null) {
-                    ((hl) (var4_ref)).f(6144 * qm.field_c / 64);
+                    ((PcmSampleStream) (var4_ref)).f(6144 * qm.field_c / 64);
                     this.field_R.f(6144 * qm.field_c / 64);
                   } else {
-                    this.field_R = hl.c(qa.field_E, 100, 6144 * qm.field_c / 64, 8192);
-                    pl.field_n.a(this.field_R);
-                    hl var36 = hl.c(lm.field_d, 100, qm.field_c * 6144 / 64, 8192);
+                    this.field_R = PcmSampleStream.c(qa.field_E, 100, 6144 * qm.field_c / 64, 8192);
+                    pl.field_n.addSubstream(this.field_R);
+                    PcmSampleStream var36 = PcmSampleStream.c(lm.field_d, 100, qm.field_c * 6144 / 64, 8192);
                     var4_ref = var36;
                     var36.h(-1);
-                    pl.field_n.a(var36);
+                    pl.field_n.addSubstream(var36);
                   }
-                  this.field_f = (hl) (var4_ref);
+                  this.field_f = (PcmSampleStream) (var4_ref);
                 } else {
                   if (var4_ref != null) {
-                    pl.field_n.b((wg) (var4_ref));
-                    pl.field_n.b(this.field_R);
+                    pl.field_n.removeSubstream((PcmStream) (var4_ref));
+                    pl.field_n.removeSubstream(this.field_R);
                     var4_ref = null;
                     this.field_R = null;
                   }
                   if (var5_ref_hl == null) {
-                    hl var35 = hl.c(fn.field_f, 100, 3584 * qm.field_c / 64, 8192);
+                    PcmSampleStream var35 = PcmSampleStream.c(fn.field_f, 100, 3584 * qm.field_c / 64, 8192);
                     var5_ref_hl = var35;
                     var35.h(-1);
-                    pl.field_n.a(var35);
+                    pl.field_n.addSubstream(var35);
                   }
                   this.field_Eb = var5_ref_hl;
                 }
@@ -4638,10 +4638,10 @@ final class GameplaySession {
         }
         if (var4_ref != null &&
           this.field_f == null) {
-          pl.field_n.b((wg) (var4_ref));
-          pl.field_n.b(this.field_R);
+          pl.field_n.removeSubstream((PcmStream) (var4_ref));
+          pl.field_n.removeSubstream(this.field_R);
           this.field_R = null;
-          pl.field_n.a(al.field_b, 100, 6144 * qm.field_c / 64, 8192);
+          pl.field_n.playSampleWithPan(al.field_b, 100, 6144 * qm.field_c / 64, 8192);
         }
         if (var5_ref_hl != null &&
           null == this.field_Eb) {
@@ -4667,7 +4667,7 @@ final class GameplaySession {
               if (var4_refLifetime1 == null) {
                 break scanLoop2;
               }
-              pl.field_n.a(gm.field_b, 100, 6144 * qm.field_c / 64, 8192);
+              pl.field_n.playSampleWithPan(gm.field_b, 100, 6144 * qm.field_c / 64, 8192);
               this.a(127, (String) (var4_refLifetime1));
               break scanLoop2;
             }
@@ -4677,7 +4677,7 @@ final class GameplaySession {
               int stackIn_449_0Lifetime1 = ~var5;
               int stackIn_449_1Lifetime1 = -1;
               if (stackIn_449_0Lifetime1 == stackIn_449_1Lifetime1) {
-                int stackIn_457_0 = (!mf.a(var37_ref.objectType, -64)) ? 0 : 1;
+                int stackIn_457_0 = (!ResourceArchive.a(var37_ref.objectType, -64)) ? 0 : 1;
                 var8 = stackIn_457_0;
               } else if (var5 != 1) {
                 int stackIn_466_0 = (var37_ref.objectType != 1) ? 0 : 1;
@@ -4736,7 +4736,7 @@ final class GameplaySession {
                     } else {
                       this.pickupAnimationTicks = 50;
                     }
-                    pl.field_n.a(fg.field_a, 100, qm.field_c * 6144 / 64, 8192);
+                    pl.field_n.playSampleWithPan(fg.field_a, 100, qm.field_c * 6144 / 64, 8192);
                     break scanLoop2;
                   }
                   if (var4_refLifetime1 != on.field_d &&
@@ -4795,7 +4795,7 @@ final class GameplaySession {
               var12 = ((var6 >> 4) * var4 + var5 * (var7 >> 4)) * qm.field_c / 64 >> 6;
               if (this.pickupAnimationTicks == 0 &&
                 var8 >= 150994944) {
-                pl.field_n.a(rk.field_c, 100, var12 >> 11);
+                pl.field_n.playSample(rk.field_c, 100, var12 >> 11);
                 this.field_W = true;
                 this.field_fb.field_l = 0;
               } else {
@@ -4883,7 +4883,7 @@ final class GameplaySession {
             var8 = var8 >> 16;
             var9Lifetime5 = var9Lifetime5 >> 16;
             if (bullet.field_k == 0) {
-              Sprite var41 = s.field_H;
+              Sprite var41 = Js5NetworkRequest.field_H;
               SeekerMine hitMine = (SeekerMine) (this.seekerMines.first(false));
               while (hitMine != null) {
                 var12 = var41.offsetY + ((hitMine.yQ16 >> 16) - 8);
@@ -5004,19 +5004,19 @@ final class GameplaySession {
               int fieldTemp$1 = rockBuster.remainingFlightTicks - 1;
               rockBuster.remainingFlightTicks = rockBuster.remainingFlightTicks - 1;
               if (fieldTemp$1 != 0) {
-                mf.field_a.offsetY = 0;
-                Sprite var8_ref_ed = mf.field_a;
+                ResourceArchive.field_a.offsetY = 0;
+                Sprite var8_ref_ed = ResourceArchive.field_a;
                 var8_ref_ed.offsetX = 0;
-                Sprite var9_ref_ed = mf.field_a;
-                Sprite var10_ref_ed = mf.field_a;
-                mf.field_a.height = 7;
-                Sprite var11_ref_ed = mf.field_a;
+                Sprite var9_ref_ed = ResourceArchive.field_a;
+                Sprite var10_ref_ed = ResourceArchive.field_a;
+                ResourceArchive.field_a.height = 7;
+                Sprite var11_ref_ed = ResourceArchive.field_a;
                 var9_ref_ed.fullWidth = 7;
                 var11_ref_ed.width = 7;
                 var10_ref_ed.fullHeight = 7;
-                mf.field_a.g();
+                ResourceArchive.field_a.g();
                 SoftwareRasterizer.d();
-                mf.field_m.a(4, (byte) 34, 4096, -rockBuster.angle256 << 8, 4);
+                ResourceArchive.field_m.a(4, (byte) 34, 4096, -rockBuster.angle256 << 8, 4);
                 md.field_D.a(120);
                 var12 = (int)Math.sqrt((double)rockBuster.velocityYQ16 * (double)rockBuster.velocityYQ16 + (double)rockBuster.velocityXQ16 * (double)rockBuster.velocityXQ16);
                 var13_int = var12 / 196608 + 1;
@@ -5027,7 +5027,7 @@ final class GameplaySession {
                   if (0 >= var16) {
                     if (rockBuster.field_h) {
                       rockBuster.field_h = false;
-                      pl.field_n.a(rockBuster.flightSound);
+                      pl.field_n.addSubstream(rockBuster.flightSound);
                     }
                     rockBuster.flightSound.f(this.b(2097152, rockBuster.xQ16, 96, rockBuster.yQ16), this.c(rockBuster.xQ16, 125));
                     break regionExit4;
@@ -5055,7 +5055,7 @@ final class GameplaySession {
                       var22_intLifetime1 = var22_intLifetime1 - this.worldWidth;
                     }
                     int var23_intLifetime1 = var20 + (-(collidedMine.yQ16 >> 16) + 8);
-                    if (!ln.a(s.field_H, 0, 0, mf.field_a, var22_intLifetime1, var23_intLifetime1)) {
+                    if (!SpriteCollisionSupport.a(Js5NetworkRequest.field_H, 0, 0, ResourceArchive.field_a, var22_intLifetime1, var23_intLifetime1)) {
                       collidedMine = (SeekerMine) (this.seekerMines.next((byte) 70));
                       continue;
                     }
@@ -5069,7 +5069,7 @@ final class GameplaySession {
                     rockBuster.remainingFlightTicks = 0;
                     break regionExit4;
                   }
-                  if (!this.b(this.worldWidth + var19, mf.field_a, var20, -1)) {
+                  if (!this.b(this.worldWidth + var19, ResourceArchive.field_a, var20, -1)) {
                     var16--;
                     continue scanLoop5;
                   }
@@ -5093,7 +5093,7 @@ final class GameplaySession {
                     var24Lifetime1 = var24Lifetime1 + this.worldWidth;
                   }
                   int var25 = hitObject.y - var20;
-                  if (ln.a(mf.field_a, 0, 0, var23, var24Lifetime1, var25)) {
+                  if (SpriteCollisionSupport.a(ResourceArchive.field_a, 0, 0, var23, var24Lifetime1, var25)) {
                     this.destroyLevelObject(hitObject, 67, var21);
                     if (hitObject.objectType == 6 ||
                       hitObject.objectType == 7) {
@@ -5141,11 +5141,11 @@ final class GameplaySession {
             int var9Lifetime7 = -(int)(Math.cos(var6_double) * 131072.0);
             this.b(this.shipYQ16 + 5 * var9Lifetime7, this.shipXQ16 + 5 * var8, this.shipVelocityYQ16 + var9Lifetime7, 256, 0, var8 + this.shipVelocityXQ16);
             if (!this.triShotEnabled) {
-              pl.field_n.a(ni.field_M, 100, qm.field_c * 6144 / 64, 8192);
+              pl.field_n.playSampleWithPan(ni.field_M, 100, qm.field_c * 6144 / 64, 8192);
             } else {
               this.b(this.shipYQ16 + var9Lifetime7 * 5, this.shipXQ16 + var8 * 5, (var8 >> 3) - (var9Lifetime7 >> 3) + (this.shipVelocityYQ16 + var9Lifetime7), 256, 0, this.shipVelocityXQ16 + (var8 - ((var8 >> 3) + (var9Lifetime7 >> 3))));
               this.b(this.shipYQ16 + var9Lifetime7 * 5, 5 * var8 + this.shipXQ16, -(var8 >> 3) - (var9Lifetime7 >> 3) + (var9Lifetime7 + this.shipVelocityYQ16), 256, 0, (var9Lifetime7 >> 3) + this.shipVelocityXQ16 + (var8 - (var8 >> 3)));
-              pl.field_n.a(gn.field_e, 100, 6144 * qm.field_c / 64, 8192);
+              pl.field_n.playSampleWithPan(gn.field_e, 100, 6144 * qm.field_c / 64, 8192);
             }
             this.shotCooldownTicks = 9;
           }
@@ -5164,8 +5164,8 @@ final class GameplaySession {
             launchedRockBuster.velocityXQ16 = this.shipVelocityXQ16 + var8;
             launchedRockBuster.yQ16 = this.shipYQ16 + 5 * var9Lifetime7Lifetime1;
             launchedRockBuster.exhaustParticles = this.i(256, -22944);
-            launchedRockBuster.flightSound = hl.c(kf.field_p, 100, this.b(2097152, launchedRockBuster.xQ16, 96, launchedRockBuster.yQ16), this.c(launchedRockBuster.xQ16, 116));
-            pl.field_n.a(launchedRockBuster.flightSound);
+            launchedRockBuster.flightSound = PcmSampleStream.c(kf.field_p, 100, this.b(2097152, launchedRockBuster.xQ16, 96, launchedRockBuster.yQ16), this.c(launchedRockBuster.xQ16, 116));
+            pl.field_n.addSubstream(launchedRockBuster.flightSound);
             this.rockBusters.addLast(-12328, launchedRockBuster);
             this.rockBusterAmmo = this.rockBusterAmmo - 1;
             fk.b(0);
@@ -5203,7 +5203,7 @@ final class GameplaySession {
                   if (this.a((int)var17Lifetime1 >> 17, var12, 5 * var12 + var10Lifetime5, 5 * var11Lifetime4Lifetime1 + var9Lifetime8, var11Lifetime4Lifetime1, 0)) {
                     this.b(var10Lifetime5 + 5 * var12, var11Lifetime4Lifetime1 * 5 + var9Lifetime8, var12, 256, 1, var11Lifetime4Lifetime1);
                     turret.shotCooldownTicks = 49;
-                    pl.field_n.a(uk.field_j, 100, this.b(6553600, var9Lifetime8, 96, var10Lifetime5), this.c(var9Lifetime8, 120));
+                    pl.field_n.playSampleWithPan(uk.field_j, 100, this.b(6553600, var9Lifetime8, 96, var10Lifetime5), this.c(var9Lifetime8, 120));
                   }
                 }
               }
@@ -5221,14 +5221,14 @@ final class GameplaySession {
         if (stackIn_713_0Lifetime1 > stackIn_713_1Lifetime1) {
           return;
         }
-        hl stackIn_717_0 = this.field_Z;
+        PcmSampleStream stackIn_717_0 = this.field_Z;
         int stackIn_717_1 = var4;
         if (var4 == 0) {
           stackIn_718_2 = 8192;
         } else {
           stackIn_718_2 = var5 / var4;
         }
-        ((hl) (Object) stackIn_717_0).f(stackIn_717_1, stackIn_718_2);
+        ((PcmSampleStream) (Object) stackIn_717_0).f(stackIn_717_1, stackIn_718_2);
         this.exhaustWriteIndex = (64 + this.exhaustWriteIndex) % 512;
         if (this.field_rc &&
           this.levelIndex >= 0) {
@@ -5239,7 +5239,7 @@ final class GameplaySession {
           ik.field_p = false;
         }
         if (!ik.field_h[84]) {
-          s.field_E = false;
+          Js5NetworkRequest.field_E = false;
         }
         if (!ik.field_h[83]) {
           bc.field_d = false;
@@ -5455,7 +5455,7 @@ final class GameplaySession {
 
     private final boolean d(byte param0) {
         int var2 = -2 / ((param0 + 28) / 60);
-        if (!s.field_E &&
+        if (!Js5NetworkRequest.field_E &&
           ik.field_h[84]) {
           return true;
         }
@@ -5486,7 +5486,7 @@ final class GameplaySession {
         this.a(4, this.field_Wb);
         this.a(4, this.field_wb);
         if (this.field_r != null) {
-          this.field_r.c(ie.field_q / 100, 0);
+          this.field_r.c(AudioOutput.field_q / 100, 0);
         }
         if (this.field_lc != null) {
           this.a(guard ^ -45, this.field_lc);
@@ -5501,7 +5501,7 @@ final class GameplaySession {
             while (var3 != null) {
               if (var3.remainingFlightTicks != 0 &&
                 var3.flightSound.isLinked((byte) 48)) {
-                pl.field_n.b(var3.flightSound);
+                pl.field_n.removeSubstream(var3.flightSound);
                 var3.field_h = true;
               }
               var3 = (RockBuster) (this.rockBusters.next((byte) 70));
@@ -5509,8 +5509,8 @@ final class GameplaySession {
             SeekerMine var3_ref = (SeekerMine) (this.seekerMines.first(false));
             while (var3_ref != null) {
               if (null != var3_ref.flightSound) {
-                pl.field_n.b(var3_ref.flightSound);
-                pl.field_n.b(var3_ref.proximitySound);
+                pl.field_n.removeSubstream(var3_ref.flightSound);
+                pl.field_n.removeSubstream(var3_ref.proximitySound);
                 var3_ref.flightSound = null;
                 var3_ref.proximitySound = null;
               }
@@ -5575,7 +5575,7 @@ final class GameplaySession {
           return;
         }
         if (!this.shipDestroyed) {
-          int var2_int = mf.b(this.gameMode, this.tetheredObjectType, -2);
+          int var2_int = ResourceArchive.b(this.gameMode, this.tetheredObjectType, -2);
           this.levelScore = this.levelScore + var2_int;
           v.a(8, var2_int);
         }
@@ -5590,7 +5590,7 @@ final class GameplaySession {
         }
         this.tetheredObjectType = -1;
         if (!this.shipDestroyed) {
-          pl.field_n.a(bc.field_c, 100, qm.field_c * 6144 / 64, 8192);
+          pl.field_n.playSampleWithPan(bc.field_c, 100, qm.field_c * 6144 / 64, 8192);
         }
     }
 
@@ -6244,29 +6244,29 @@ final class GameplaySession {
             if (od.field_k) {
               System.out.println("Mod logged in: Cheats activated");
             }
-            this.field_jb = hl.a(oj.field_N, 100, 0);
+            this.field_jb = PcmSampleStream.a(oj.field_N, 100, 0);
             this.field_jb.h(-1);
-            pl.field_n.a(this.field_jb);
-            this.field_Z = hl.a(ng.field_mb, 100, 0);
+            pl.field_n.addSubstream(this.field_jb);
+            this.field_Z = PcmSampleStream.a(ng.field_mb, 100, 0);
             this.field_Z.h(-1);
-            pl.field_n.a(this.field_Z);
-            this.field_v = hl.a(th.field_G, 100, 0);
+            pl.field_n.addSubstream(this.field_Z);
+            this.field_v = PcmSampleStream.a(Bzip2State.field_G, 100, 0);
             this.field_v.h(-1);
-            pl.field_n.a(this.field_v);
-            this.field_Wb = hl.a(vi.field_c, 100, 0);
+            pl.field_n.addSubstream(this.field_v);
+            this.field_Wb = PcmSampleStream.a(vi.field_c, 100, 0);
             this.field_Wb.h(-1);
-            pl.field_n.a(this.field_Wb);
-            this.field_wb = hl.a(w.field_hb, 100, 0);
+            pl.field_n.addSubstream(this.field_Wb);
+            this.field_wb = PcmSampleStream.a(w.field_hb, 100, 0);
             this.field_wb.h(-1);
-            pl.field_n.a(this.field_wb);
-            this.field_r = hl.a(of.field_h, 100, 0);
+            pl.field_n.addSubstream(this.field_wb);
+            this.field_r = PcmSampleStream.a(of.field_h, 100, 0);
             this.field_r.h(-1);
-            pl.field_n.a(this.field_r);
-            this.field_lc = hl.a(pa.field_a, 100, 0);
+            pl.field_n.addSubstream(this.field_r);
+            this.field_lc = PcmSampleStream.a(pa.field_a, 100, 0);
             this.field_lc.h(-1);
-            pl.field_n.a(this.field_lc);
-            this.field_fb = new m();
-            pl.field_n.a(this.field_fb);
+            pl.field_n.addSubstream(this.field_lc);
+            this.field_fb = new TetherHumStream();
+            pl.field_n.addSubstream(this.field_fb);
             NetworkGameClient.a(127, levelIndex);
             this.levelData = levelData;
             this.levelIndex = levelIndex;
@@ -6275,7 +6275,7 @@ final class GameplaySession {
             this.initializeCurrentLevel((byte) -110);
             this.field_c = 64;
             if (levelIndex >= 0) {
-              this.queueHudMessage(164, (byte) 122, m.field_n);
+              this.queueHudMessage(164, (byte) 122, TetherHumStream.field_n);
               this.field_j = 314;
             }
             this.a((byte) 84, option);

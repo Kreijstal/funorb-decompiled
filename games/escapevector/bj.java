@@ -6,11 +6,11 @@ import java.util.*;
 class bj extends hm implements ba {
     static boolean[] field_E;
     static java.awt.Image field_z;
-    static mf field_B;
+    static ResourceArchive field_B;
     static String field_D;
     IntrusiveDeque field_A;
     static int field_y;
-    static ie field_C;
+    static AudioOutput field_C;
     static int[] field_F;
 
     private final void f(byte param0) {
@@ -70,7 +70,7 @@ class bj extends hm implements ba {
 
     final static boolean e(byte param0) {
         int var1 = -82 % ((34 - param0) / 63);
-        boolean stackIn_4_0 = (!aj.b(-105)) && (0 < s.field_x);
+        boolean stackIn_4_0 = (!aj.b(-105)) && (0 < Js5NetworkRequest.field_x);
         return stackIn_4_0;
     }
 
@@ -202,7 +202,7 @@ class bj extends hm implements ba {
         int var10 = EscapeVector.obfuscationControl;
         try {
           if (param2 >= -103) {
-            field_B = (mf) null;
+            field_B = (ResourceArchive) null;
           }
           wf var8 = new wf(this.field_A);
           hm var9 = (hm) (var8.c(15));

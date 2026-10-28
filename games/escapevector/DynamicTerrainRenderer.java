@@ -940,7 +940,7 @@ final class DynamicTerrainRenderer {
     final static void b(int param0, int param1) {
         int var3 = EscapeVector.obfuscationControl;
         try {
-          vj.a((byte) -116, jf.field_J, param0, oa.field_t, true, vl.field_e, param1);
+          vj.a((byte) -116, jf.field_J, param0, ArchiveRequest.field_t, true, vl.field_e, param1);
           int var2_int = 0;
           do {
             if (!(jf.field_J > var2_int)) {
@@ -1640,7 +1640,7 @@ final class DynamicTerrainRenderer {
           int var10 = param1.length;
           int var11 = jd.a(param4, (byte) -121, param5);
           int var12 = DynamicTerrainRenderer.a(1, var10, param0, var11);
-          int var13 = dd.a(var11, (byte) 122, param0, var10, var12);
+          int var13 = PcmResampler.a(var11, (byte) 122, param0, var10, var12);
           dk[] var14 = new dk[var10];
           int var15 = 0;
           if (param7) {

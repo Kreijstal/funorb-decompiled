@@ -171,7 +171,7 @@ final class ef {
             if (this.field_a < 0) {
               return;
             }
-            wl stackIn_20_0 = param0.field_l;
+            BitmapFont stackIn_20_0 = param0.field_l;
             String stackIn_20_1 = var6;
             if (this.field_h == -2147483648) {
               stackIn_21_2 = 0;
@@ -194,7 +194,7 @@ final class ef {
             } else {
               stackIn_27_8 = 256;
             }
-            ((wl) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.field_m, param0.field_c, param0.field_k);
+            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.field_m, param0.field_c, param0.field_k);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

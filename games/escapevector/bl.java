@@ -11,17 +11,17 @@ final class bl extends IntrusiveNode {
     int field_j;
     int field_m;
 
-    final static te[] a(int param0, int param1, mf param2, int param3) {
+    final static IndexedSprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         String stackIn_10_2 = null;
         try {
           if (!uc.a(param2, 100, param3, param0)) {
             return null;
           }
           if (param1 != 255) {
-            mf var5 = (mf) null;
-            bl.a(49, -40, (mf) null, 15);
+            ResourceArchive var5 = (ResourceArchive) null;
+            bl.a(49, -40, (ResourceArchive) null, 15);
           }
-          te[] stackIn_6_0 = fg.a(13029);
+          IndexedSprite[] stackIn_6_0 = fg.a(13029);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

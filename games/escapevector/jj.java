@@ -17,9 +17,9 @@ final class jj {
           be.field_b.o(param0 ^ -18861);
         }
         String var1 = mh.b((byte) 105);
-        dd.field_d = new h(var1, (String) null, true, false, false);
+        PcmResampler.field_d = new h(var1, (String) null, true, false, false);
         bo.field_F.b(rd.field_c, 97);
-        rd.field_c.a(dd.field_d, 30);
+        rd.field_c.a(PcmResampler.field_d, 30);
         rd.field_c.b(false);
     }
 

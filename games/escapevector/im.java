@@ -35,14 +35,14 @@ final class im extends IOException {
           if (param0 <= 48) {
             field_a = 28;
           }
-          cc var4 = (cc) (vn.field_e.first(false));
+          cc var4 = (cc) (RasterBuffer.field_e.first(false));
           while (var4 != null) {
             IntrusiveNode.a(-121, param1, var4);
-            var4 = (cc) (vn.field_e.next((byte) 70));
+            var4 = (cc) (RasterBuffer.field_e.next((byte) 70));
           }
           dc var5 = (dc) (en.field_i.first(false));
           while (var5 != null) {
-            oa.a(param1, var5, -755);
+            ArchiveRequest.a(param1, var5, -755);
             var5 = (dc) (en.field_i.next((byte) 70));
           }
           return;

@@ -10,7 +10,7 @@ final class on {
     static String field_d;
     static String[] field_f;
 
-    final static void a(mf param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         try {
           in.a(param0.a(-4, "", "headers.packvorbis"));
           in var2 = in.a(param0, "jagex logo2.packvorbis", "");
@@ -79,8 +79,8 @@ final class on {
         field_g = null;
         field_c = null;
         if (param0 <= 72) {
-          mf var2 = (mf) null;
-          on.a((mf) null, -94);
+          ResourceArchive var2 = (ResourceArchive) null;
+          on.a((ResourceArchive) null, -94);
         }
         field_f = null;
     }

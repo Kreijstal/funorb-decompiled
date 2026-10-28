@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntPoint {
-    static lk field_d;
+    static SystemTaskService field_d;
     static Sprite field_b;
     int y;
     int x;

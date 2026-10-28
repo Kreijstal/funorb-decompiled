@@ -19,18 +19,18 @@ final class qf extends eo {
     static Sprite field_d;
     static int field_j;
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, lk param5, int param6, boolean param7, byte param8, int param9, long param10, String param11, int param12, int param13) {
+    final static void a(int param0, int param1, int param2, boolean param3, int param4, SystemTaskService param5, int param6, boolean param7, byte param8, int param9, long param10, String param11, int param12, int param13) {
         try {
           String stackIn_16_2 = null;
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            om.field_g = new c(param1);
-            om.field_c = new c(param0);
+            om.field_g = new CipherPacketBuffer(param1);
+            om.field_c = new CipherPacketBuffer(param0);
             if (param8 != 84) {
               qf.b(-106);
             }
-            ca.field_c = param5;
+            MouseWheelInput.field_c = param5;
             jc.field_b = param7;
             IntrusiveDeque.field_h = param11;
             sj.field_i = param13;
@@ -41,11 +41,11 @@ final class qf extends eo {
             qa.field_D = param4;
             ac.field_b = param12;
             rd.field_a = param2;
-            if (ca.field_c.field_j == null) {
+            if (MouseWheelInput.field_c.field_j == null) {
               return;
             }
             try {
-              bd.field_h = new rg(ca.field_c.field_j, 64, 0);
+              bd.field_h = new BufferedRandomAccessFile(MouseWheelInput.field_c.field_j, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

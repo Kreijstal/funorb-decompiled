@@ -9,7 +9,7 @@ final class mg {
     static int[] field_a;
     static int field_f;
     static om field_g;
-    static mf field_c;
+    static ResourceArchive field_c;
 
     final static int a(byte param0) {
         if (param0 != -12) {

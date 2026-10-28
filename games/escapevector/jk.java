@@ -21,7 +21,7 @@ final class jk {
             param3 <= 105) {
             String[] var4 = args;
             mb.a(var4, 4);
-            co.field_a = rg.a(args, (byte) -63);
+            co.field_a = BufferedRandomAccessFile.a(args, (byte) -63);
           } else {
             co.field_a = bm.a(param1, param3, param2 ^ -97);
           }

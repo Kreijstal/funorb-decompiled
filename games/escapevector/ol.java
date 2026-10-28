@@ -34,7 +34,7 @@ class ol extends cd {
     private int field_U;
     private int field_Y;
     private boolean field_W;
-    private wl field_Q;
+    private BitmapFont field_Q;
     private int field_X;
     private int field_kb;
     static int[] field_ab;
@@ -44,7 +44,7 @@ class ol extends cd {
     private boolean field_J;
     private int field_hb;
 
-    final static byte[][] a(int param0, mf param1, int[] param2, int param3, mf param4) {
+    final static byte[][] a(int param0, ResourceArchive param1, int[] param2, int param3, ResourceArchive param4) {
         String stackIn_12_2 = null;
         String stackIn_15_2 = null;
         String stackIn_18_2 = null;
@@ -112,7 +112,7 @@ class ol extends cd {
             field_N = (ij[]) null;
           }
           if (param1 != null &&
-            param1.length() >= oa.field_v) {
+            param1.length() >= ArchiveRequest.field_v) {
             if (param1.length() > p.field_a) {
               return true;
             }

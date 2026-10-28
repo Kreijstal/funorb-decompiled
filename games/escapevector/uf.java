@@ -11,7 +11,7 @@ final class uf {
     db field_o;
     private boolean field_m;
     int field_l;
-    wl field_d;
+    BitmapFont field_d;
     int field_h;
     int field_q;
     private int field_c;
@@ -20,9 +20,9 @@ final class uf {
     static Sprite field_e;
     int field_j;
     int field_r;
-    static hh field_g;
+    static PcmSample field_g;
 
-    final static void a(mf param0, mf param1, byte param2) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2) {
         try {
           ck.field_x = param0;
           pc.field_e = param1;
@@ -108,13 +108,13 @@ final class uf {
 
     final static String a(int param0) {
         if (dn.field_q == dg.field_o) {
-          return mf.field_b;
+          return ResourceArchive.field_b;
         }
         if (param0 == 30519) {
           return bm.field_g;
         }
-        mf var2 = (mf) null;
-        uf.a((mf) null, (mf) null, (byte) 91);
+        ResourceArchive var2 = (ResourceArchive) null;
+        uf.a((ResourceArchive) null, (ResourceArchive) null, (byte) 91);
         return bm.field_g;
     }
 
@@ -141,7 +141,7 @@ final class uf {
         SoftwareRasterizer.d(param3, param4, param0, param1, param5);
     }
 
-    final void a(int param0, wl param1) {
+    final void a(int param0, BitmapFont param1) {
         int var15 = EscapeVector.obfuscationControl;
         try {
           k var17 = new k(param1, 2, 2, 2236962, 1, 1, 1, param1.field_x + param1.field_r + 2);
@@ -294,8 +294,8 @@ final class uf {
           field_s = null;
           return;
         }
-        mf var2 = (mf) null;
-        uf.a((mf) null, (mf) null, (byte) 55);
+        ResourceArchive var2 = (ResourceArchive) null;
+        uf.a((ResourceArchive) null, (ResourceArchive) null, (byte) 55);
         field_g = null;
         field_e = null;
         field_s = null;

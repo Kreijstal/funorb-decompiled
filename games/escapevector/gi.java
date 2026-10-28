@@ -5,10 +5,10 @@ final class gi {
     int field_h;
     String field_n;
     int field_a;
-    static te field_i;
+    static IndexedSprite field_i;
     private static int field_d;
     int[] field_k;
-    static te field_c;
+    static IndexedSprite field_c;
     private long field_b;
     private int field_m;
     private String field_j;
@@ -23,7 +23,7 @@ final class gi {
           if (this.field_b == en.field_l) {
             return 1;
           }
-          if (mi.field_g == 2 &&
+          if (RasterSnapshot.field_g == 2 &&
             kl.a(this.field_j, 0)) {
             return 1;
           }
@@ -168,7 +168,7 @@ final class gi {
         this.field_j = rm.field_g;
         this.field_g = rm.field_c;
         this.field_h = im.field_a;
-        this.field_f = jn.field_d;
+        this.field_f = IntKeyLookup.field_d;
         this.field_m = ve.field_g;
         this.field_n = od.field_d;
         this.field_a = DualLinkNode.field_o;
@@ -182,12 +182,12 @@ final class gi {
 
     static {
         field_d = 398339;
-        field_c = new te(1, 1, 256);
+        field_c = new IndexedSprite(1, 1, 256);
         for (int var0 = 0; var0 < 256; var0++) {
           field_c.field_l[var0] = field_d;
         }
         field_c.field_l[0] = 0;
-        field_i = new te(3, 3, 256);
+        field_i = new IndexedSprite(3, 3, 256);
         field_i.field_l[1] = 2917671;
     }
 }

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vi {
-    static hh field_c;
+    static PcmSample field_c;
     static int field_g;
     static int[] field_e;
     static int field_b;
     static int field_f;
     static int field_a;
-    static hl field_d;
+    static PcmSampleStream field_d;
 
     public static void a(int param0) {
         field_d = null;
@@ -28,23 +28,23 @@ final class vi {
             return;
           }
           for (int var2_int = 0; var2_int < 3; var2_int++) {
-            mf.field_l[var2_int] = 0;
+            ResourceArchive.field_l[var2_int] = 0;
           }
           for (int var2_intLifetime1 = 0; var2_intLifetime1 < hf.field_b; var2_intLifetime1++) {
             if (qm.field_d[var2_intLifetime1].field_a == param0.field_a) {
               int dupTemp$3 = qm.field_d[var2_intLifetime1].b(param1 ^ 83);
-              mf.field_l[dupTemp$3] = mf.field_l[dupTemp$3] + 1;
+              ResourceArchive.field_l[dupTemp$3] = ResourceArchive.field_l[dupTemp$3] + 1;
             }
           }
           int dupTemp$0 = param0.b(108);
-          mf.field_l[dupTemp$0] = mf.field_l[dupTemp$0] + 1;
+          ResourceArchive.field_l[dupTemp$0] = ResourceArchive.field_l[dupTemp$0] + 1;
           int var2_intLifetime2 = 0;
           for (int var3 = 0; hf.field_b > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (qm.field_d[var3].field_a == param0.field_a) {
               int var4 = qm.field_d[var3].b(47);
-              if (mf.field_l[var4] > mn.field_k) {
-                mf.field_l[var4] = mf.field_l[var4] - 1;
+              if (ResourceArchive.field_l[var4] > mn.field_k) {
+                ResourceArchive.field_l[var4] = ResourceArchive.field_l[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
@@ -73,7 +73,7 @@ final class vi {
         }
     }
 
-    final static void a(int param0, String param1, vl param2, wl param3, boolean param4) {
+    final static void a(int param0, String param1, vl param2, BitmapFont param3, boolean param4) {
         String stackIn_23_2 = null;
         String stackIn_26_2 = null;
         String stackIn_29_2 = null;

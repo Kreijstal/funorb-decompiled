@@ -58,7 +58,7 @@ final class oi extends bj implements qn, qb {
           if (param0 != 23273) {
             field_N = (String) null;
           }
-          ki var10 = new ki(20, param3, 120 + param6, 25, param4, false, 120, 3, sb.field_a, 16777215, param1);
+          ki var10 = new ki(20, param3, 120 + param6, 25, param4, false, 120, 3, Js5Transport.field_a, 16777215, param1);
           this.b(var10, false);
           lf var9 = new lf(((og) ((Object) param4)).a((byte) -89), param5, 126, var10.field_x + param3, 25 + param6, param2);
           var9.field_q = (wn) (this);
@@ -91,7 +91,7 @@ final class oi extends bj implements qn, qb {
         }
     }
 
-    final static ih a(int param0, mf param1, String param2, String param3, mf param4) {
+    final static ih a(int param0, ResourceArchive param1, String param2, String param3, ResourceArchive param4) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -163,7 +163,7 @@ final class oi extends bj implements qn, qb {
             return true;
           }
           rf var4 = var3.a(17124);
-          boolean stackIn_9_0 = (df.field_h == var4);
+          boolean stackIn_9_0 = (IsaacRandom.field_h == var4);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -300,7 +300,7 @@ final class oi extends bj implements qn, qb {
     public oi() {
         super(0, 0, 496, 0, (db) null);
         this.field_I = new gd("", (wn) null, 12);
-        k var1 = new k(ke.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, sb.field_a.field_r, -1, 2147483647, true);
+        k var1 = new k(ke.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, Js5Transport.field_a.field_r, -1, 2147483647, true);
         hm var2 = new hm(sm.field_a, var1, (wn) null);
         this.field_G = new hc(ah.field_i, (wn) null);
         this.field_H = new hc(cf.field_b, (wn) null);

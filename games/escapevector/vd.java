@@ -14,7 +14,7 @@ final class vd {
     private boolean field_k;
     private ei field_a;
     private BitSet field_e;
-    static hh field_g;
+    static PcmSample field_g;
     private int field_j;
 
     final boolean a(int param0, int param1) {
@@ -76,7 +76,7 @@ final class vd {
           return;
         }
         bd var3 = new bd(var4);
-        ca.a(1, 6, var3);
+        MouseWheelInput.a(1, 6, var3);
     }
 
     public static void c(byte param0) {
@@ -132,7 +132,7 @@ final class vd {
         if (param4 != 1317) {
           return (Sprite[]) null;
         }
-        return ge.a(1, param0, 1, 1, param1, (byte) 33, param2, param3, 3);
+        return AudioService.a(1, param0, 1, 1, param1, (byte) 33, param2, param3, 3);
     }
 
     private final BitSet a(int param0, DataInputStream param1, int param2, int param3) throws IOException {
@@ -466,7 +466,7 @@ final class vd {
         }
         DataInputStream var3 = new DataInputStream((InputStream) ((Object) new ByteArrayInputStream(param1)));
         if (param0 != -16331) {
-          field_g = (hh) null;
+          field_g = (PcmSample) null;
         }
         int var4 = var3.readUnsignedByte();
         if (var4 != 1) {

@@ -10,23 +10,23 @@ final class dh {
     static int[] field_e;
     private java.util.zip.Inflater field_a;
 
-    final static void a(boolean param0, byte param1, mf param2, mf param3, mf param4) {
+    final static void a(boolean param0, byte param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         try {
-          di.field_g = vn.a((byte) 41, "");
+          di.field_g = RasterBuffer.a((byte) 41, "");
           di.field_g.a((byte) -128, false);
           wc.a(83, param2, param3, param4);
           kn.a((byte) -96);
-          dn.field_q = vn.field_g;
+          dn.field_q = RasterBuffer.field_g;
           if (param1 > -111) {
             dh.a(13, (byte) 34);
           }
-          ui.field_b = vn.field_g;
+          ui.field_b = RasterBuffer.field_g;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dh.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static ja[] a(int param0, lk param1) {
+    final static ja[] a(int param0, SystemTaskService param1) {
         String stackIn_22_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
@@ -34,7 +34,7 @@ final class dh {
             ja[] stackIn_4_0 = new ja[]{};
             return stackIn_4_0;
           }
-          la var8 = param1.a(5);
+          SystemTask var8 = param1.a(5);
           while (var8.field_f == 0) {
             en.a((byte) 101, 10L);
           }

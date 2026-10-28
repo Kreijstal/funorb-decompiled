@@ -3,7 +3,7 @@
  */
 final class fe {
     static int field_k;
-    private te[] field_b;
+    private IndexedSprite[] field_b;
     private int field_o;
     private wc field_a;
     private int field_j;
@@ -33,7 +33,7 @@ final class fe {
         int var2Lifetime1 = 0;
         int var3Lifetime1 = 299;
         if (param0 > -28) {
-          this.field_b = (te[]) null;
+          this.field_b = (IndexedSprite[]) null;
         }
         while (var2Lifetime1 < 2) {
           SoftwareRasterizer.c(508, var3Lifetime1, 127, 42, 1130115, 3365268);
@@ -110,9 +110,9 @@ final class fe {
     final int a(byte param0, boolean param1) {
         int var6 = EscapeVector.obfuscationControl;
         this.field_e = this.field_e + 65536;
-        while (fg.a(false, this.field_e, jn.field_a) >= 65536) {
+        while (fg.a(false, this.field_e, IntKeyLookup.field_a) >= 65536) {
           this.field_m = this.field_m + 1;
-          this.field_e = this.field_e - jn.field_a;
+          this.field_e = this.field_e - IntKeyLookup.field_a;
         }
         int var3 = -1;
         if (param0 != 23) {
@@ -122,20 +122,20 @@ final class fe {
           var3 = this.field_b.length;
         }
         if (var3 != -1) {
-          if (this.field_l < jn.field_e) {
+          if (this.field_l < IntKeyLookup.field_e) {
             this.field_l = this.field_l + 1;
-            if (this.field_l > jn.field_c && (this.field_b == null ||
+            if (this.field_l > IntKeyLookup.field_c && (this.field_b == null ||
               null == this.field_b[this.field_i])) {
               this.field_l = this.field_l - 1;
               boolean decompiledFrameRemainder0 = false;
-            } else if (this.field_l >= jn.field_e &&
+            } else if (this.field_l >= IntKeyLookup.field_e &&
               null == this.field_b[(1 + this.field_i) % var3]) {
               this.field_l = this.field_l - 1;
             }
           }
-          if (this.field_l >= jn.field_e) {
+          if (this.field_l >= IntKeyLookup.field_e) {
             this.field_j = this.field_i;
-            this.field_l = this.field_l - jn.field_e;
+            this.field_l = this.field_l - IntKeyLookup.field_e;
             if (this.field_n) {
               this.field_i = this.field_i + 1;
               if (var3 <= this.field_i) {
@@ -148,7 +148,7 @@ final class fe {
               }
             }
           }
-          if (jn.field_c < this.field_l) {
+          if (IntKeyLookup.field_c < this.field_l) {
             this.field_n = true;
           }
         }
@@ -160,27 +160,27 @@ final class fe {
             if (sf.field_c > 9 &&
               82 > sf.field_c) {
               var4 = true;
-              this.field_l = jn.field_e;
+              this.field_l = IntKeyLookup.field_e;
               this.field_n = false;
             }
             if (sf.field_c > 558 &&
               sf.field_c < 631) {
               this.field_n = true;
               var4 = true;
-              this.field_l = jn.field_e;
+              this.field_l = IntKeyLookup.field_e;
             }
           }
           if (!var4 &&
-            this.field_l > jn.field_c &&
+            this.field_l > IntKeyLookup.field_c &&
             ng.field_ob > 257 &&
             290 > ng.field_ob) {
             if (dh.field_d > 9 &&
               dh.field_d < 82) {
-              this.field_l = jn.field_c;
+              this.field_l = IntKeyLookup.field_c;
             }
             if (558 < dh.field_d &&
               dh.field_d < 631) {
-              this.field_l = jn.field_c;
+              this.field_l = IntKeyLookup.field_c;
             }
           }
         }
@@ -217,7 +217,7 @@ final class fe {
         this.field_a.c((byte) 6);
         if (param0) {
           int[] var3 = (int[]) null;
-          this.a((wl) null, 9, 97, -25, 47, 28, (String) null, (int[]) null);
+          this.a((BitmapFont) null, 9, 97, -25, 47, 28, (String) null, (int[]) null);
         }
         if (this.field_a.b((byte) -18)) {
           if (this.field_a.field_h == 0) {
@@ -234,7 +234,7 @@ final class fe {
         return 0;
     }
 
-    final static Sprite a(String param0, mf param1, String param2, boolean param3) {
+    final static Sprite a(String param0, ResourceArchive param1, String param2, boolean param3) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
@@ -286,8 +286,8 @@ final class fe {
           ac.field_c.a(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           return;
         }
-        te var6 = this.field_b[this.field_i];
-        te var2 = var6;
+        IndexedSprite var6 = this.field_b[this.field_i];
+        IndexedSprite var2 = var6;
         if (var2 != null) {
           var6.a(9, 58);
         } else if (null != ac.field_c) {
@@ -296,11 +296,11 @@ final class fe {
         if (param0 > -109) {
           return;
         }
-        if (jn.field_c > this.field_l) {
-          te var7 = this.field_b[this.field_j];
-          te var2Lifetime1 = var7;
+        if (IntKeyLookup.field_c > this.field_l) {
+          IndexedSprite var7 = this.field_b[this.field_j];
+          IndexedSprite var2Lifetime1 = var7;
           if (var2Lifetime1 != null) {
-            int var3 = this.field_l * (var7.field_a + 60) / jn.field_c;
+            int var3 = this.field_l * (var7.field_a + 60) / IntKeyLookup.field_c;
             int var4 = -30 + var3;
             if (this.field_n) {
               bb.a(9, (-var4 + var7.field_a) * 256 / 30, 4163, var7, 58, -256 * var4 / 30);
@@ -313,7 +313,7 @@ final class fe {
     }
 
     final void a(boolean param0, byte param1) {
-        this.field_l = jn.field_c;
+        this.field_l = IntKeyLookup.field_c;
         if (param1 != 47) {
           this.field_g = (Sprite) null;
         }
@@ -323,7 +323,7 @@ final class fe {
         this.field_a.a(105, param0, this.a(dh.field_d, bj.field_y, -16311), -1);
     }
 
-    private final void a(boolean param0, String[] param1, te[] param2, java.applet.Applet param3, String param4, int param5) {
+    private final void a(boolean param0, String[] param1, IndexedSprite[] param2, java.applet.Applet param3, String param4, int param5) {
         String stackIn_15_2 = null;
         String stackIn_18_2 = null;
         String stackIn_21_2 = null;
@@ -402,7 +402,7 @@ final class fe {
           SoftwareRasterizer.c(0, 0, var5.width, var5.height / 2, 16180917, 16306250);
           if (param0 <= 63) {
             String var8 = (String) null;
-            this.a(false, (String[]) null, (te[]) null, (java.applet.Applet) null, (String) null, 46);
+            this.a(false, (String[]) null, (IndexedSprite[]) null, (java.applet.Applet) null, (String) null, 46);
           }
           SoftwareRasterizer.c(0, var5.height / 2, var5.width, var5.height, 16306250, 15568919);
           String var6 = hm.field_r;
@@ -419,7 +419,7 @@ final class fe {
         }
     }
 
-    private final void a(wl param0, int param1, int param2, int param3, int param4, int param5, String param6, int[] param7) {
+    private final void a(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, String param6, int[] param7) {
         int var12 = EscapeVector.obfuscationControl;
         try {
           hf.a(param2 ^ 26);
@@ -440,7 +440,7 @@ final class fe {
 
     private final void b(boolean param0) {
         try {
-          ge.a((byte) 53, PointCloudEffect.d((byte) -90));
+          AudioService.a((byte) 53, PointCloudEffect.d((byte) -90));
         } catch (Exception exception) {
           exception.printStackTrace();
         }
@@ -476,7 +476,7 @@ final class fe {
         return -1;
     }
 
-    fe(java.applet.Applet param0, String param1, te[] param2, String[] param3) {
+    fe(java.applet.Applet param0, String param1, IndexedSprite[] param2, String[] param3) {
         this.field_n = true;
         this.field_e = 0;
         this.field_m = 0;
@@ -487,7 +487,7 @@ final class fe {
         }
     }
 
-    private final void a(int param0, wl param1, String param2, int param3, int param4, Sprite param5, int param6, float param7, int[] param8, int param9) {
+    private final void a(int param0, BitmapFont param1, String param2, int param3, int param4, Sprite param5, int param6, float param7, int[] param8, int param9) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;

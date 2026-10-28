@@ -4,7 +4,7 @@
 final class ng extends fj {
     static int field_ob;
     static int field_pb;
-    static hh field_mb;
+    static PcmSample field_mb;
     static String field_lb;
     static int field_nb;
 

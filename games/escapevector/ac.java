@@ -90,18 +90,18 @@ final class ac {
             }
             ui.field_e = ui.field_e + 1;
             ve.field_l = ta.field_w;
-            if (sb.field_b < 0) {
+            if (Js5Transport.field_b < 0) {
               int var5 = 0;
               var2 = var5;
               while (112 > var5) {
                 ik.field_h[var5] = false;
                 var5++;
               }
-              sb.field_b = m.field_k;
+              Js5Transport.field_b = TetherHumStream.field_k;
             } else {
-              while (m.field_k != sb.field_b) {
-                var2 = hc.field_C[m.field_k];
-                m.field_k = 127 & 1 + m.field_k;
+              while (TetherHumStream.field_k != Js5Transport.field_b) {
+                var2 = hc.field_C[TetherHumStream.field_k];
+                TetherHumStream.field_k = 127 & 1 + TetherHumStream.field_k;
                 if (0 <= var2) {
                   ik.field_h[var2] = true;
                   continue;
@@ -119,7 +119,7 @@ final class ac {
         }
     }
 
-    final static ab a(String param0, int param1, mf param2, String param3, mf param4) {
+    final static CoverageBitmapFont a(String param0, int param1, ResourceArchive param2, String param3, ResourceArchive param4) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
@@ -128,7 +128,7 @@ final class ac {
           int var5_int = 4 % ((50 - param1) / 60);
           int var6 = param2.b(-1, param3);
           int var7 = param2.a(var6, param0, true);
-          ab stackIn_1_0 = ha.a(var6, -198630768, param4, var7, param2);
+          CoverageBitmapFont stackIn_1_0 = ha.a(var6, -198630768, param4, var7, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

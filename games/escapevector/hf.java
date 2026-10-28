@@ -7,9 +7,9 @@ final class hf {
     static boolean field_a;
 
     final static void a(int param0) {
-        mi var1 = (mi) (k.field_d.removeLast(-8980));
+        RasterSnapshot var1 = (RasterSnapshot) (k.field_d.removeLast(-8980));
         if (var1 == null) {
-          var1 = new mi();
+          var1 = new RasterSnapshot();
         }
         var1.a(SoftwareRasterizer.clipBottom, (byte) 29, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipLeft, SoftwareRasterizer.height, SoftwareRasterizer.pixels, SoftwareRasterizer.width);
         int var2 = 28 % ((param0 + 72) / 49);
@@ -18,7 +18,7 @@ final class hf {
 
     final static String b(byte param0) {
         int var5 = EscapeVector.obfuscationControl;
-        String var6 = "(" + NetworkGameClient.field_q + " " + f.field_t + " " + jj.field_b + ") " + cd.field_v;
+        String var6 = "(" + NetworkGameClient.field_q + " " + ArchiveIndex.field_t + " " + jj.field_b + ") " + cd.field_v;
         String var1 = var6;
         if (hi.field_r > 0) {
           var1 = var6 + ":";
@@ -50,12 +50,12 @@ final class hf {
         if (param0 < 62) {
           return false;
         }
-        boolean stackIn_8_0 = (this == mc.field_b) || (rn.field_c == this) || (this == ck.field_t);
+        boolean stackIn_8_0 = (this == mc.field_b) || (ClientException.field_c == this) || (this == ck.field_t);
         return stackIn_8_0;
     }
 
-    final static byte[] a(mf param0, int[] param1, int param2, int param3, mf param4, byte param5) {
-        mf stackIn_10_0 = null;
+    final static byte[] a(ResourceArchive param0, int[] param1, int param2, int param3, ResourceArchive param4, byte param5) {
+        ResourceArchive stackIn_10_0 = null;
         String stackIn_21_2 = null;
         String stackIn_24_2 = null;
         String stackIn_27_2 = null;
@@ -73,11 +73,11 @@ final class hf {
           }
           int var7 = dh.field_e[param3];
           if (var7 != 2) {
-            stackIn_10_0 = (mf) (param0);
+            stackIn_10_0 = (ResourceArchive) (param0);
           } else {
-            stackIn_10_0 = (mf) (param4);
+            stackIn_10_0 = (ResourceArchive) (param4);
           }
-          mf var8 = stackIn_10_0;
+          ResourceArchive var8 = stackIn_10_0;
           if (var8 == null) {
             return null;
           }

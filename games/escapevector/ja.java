@@ -23,7 +23,7 @@ final class ja {
         int var3 = 0;
         int var26 = EscapeVector.obfuscationControl;
         try {
-          c var28 = om.field_g;
+          CipherPacketBuffer var28 = om.field_g;
           int var2 = var28.readUnsignedByte(0);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort(1952);
@@ -156,7 +156,7 @@ final class ja {
         try {
           if (di.field_g.b(0) &&
             !param0.equals(di.field_g.a(-100))) {
-            di.field_g = vn.a((byte) 83, param0);
+            di.field_g = RasterBuffer.a((byte) 83, param0);
           }
           if (param1) {
             d stackIn_8_0 = di.field_g;

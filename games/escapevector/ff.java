@@ -2,26 +2,26 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ff {
-    private mf field_d;
+    private ResourceArchive field_d;
     private fa field_c;
     static int field_h;
-    private mf field_j;
+    private ResourceArchive field_j;
     static TerrainMaskSupport field_b;
     static int field_e;
     static boolean field_g;
     static String field_f;
     static String field_a;
-    static hh field_i;
+    static PcmSample field_i;
 
     final static void a(String param0, boolean param1, int param2, boolean param3) {
         try {
           if (param2 != 64) {
-            field_i = (hh) null;
+            field_i = (PcmSample) null;
           }
           fc.a(3161);
           bo.field_F.l(param2 ^ 17479);
-          dd.field_d = new h(vk.field_v, (String) null, eb.field_H, param3, param1);
-          rd.field_c = new ng(bo.field_F, dd.field_d);
+          PcmResampler.field_d = new h(vk.field_v, (String) null, eb.field_H, param3, param1);
+          rd.field_c = new ng(bo.field_F, PcmResampler.field_d);
           bo.field_F.b(rd.field_c, 40);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ff.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -71,7 +71,7 @@ final class ff {
         if (param0 <= 50) {
           ff.a((byte) -15);
         }
-        jg.a((byte) 123);
+        SectorCacheStore.a((byte) 123);
         if (mj.field_d != 0) {
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
@@ -88,8 +88,8 @@ final class ff {
         if (dj.field_c != null) {
           dj.field_c.g(2048);
         } else {
-          dj.field_c = hl.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
-          rk.field_e.a(dj.field_c);
+          dj.field_c = PcmSampleStream.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
+          rk.field_e.addSubstream(dj.field_c);
           sj.a(8192, (byte) 51);
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
@@ -103,8 +103,8 @@ final class ff {
           IntValueNode.field_j = true;
           return;
         }
-        dj.field_c = hl.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
-        rk.field_e.a(dj.field_c);
+        dj.field_c = PcmSampleStream.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
+        rk.field_e.addSubstream(dj.field_c);
         sj.a(8192, (byte) 51);
         if (mj.field_d < 1000) {
           mj.field_d = mj.field_d + 1;

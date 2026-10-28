@@ -13,13 +13,13 @@ final class sj extends IntrusiveNode {
         if (mb.field_a != null) {
           mb.field_a.g(2048);
         }
-        mb.field_a = hl.c(uf.field_g, 100, qm.field_c * 6144 / 64, param0);
+        mb.field_a = PcmSampleStream.c(uf.field_g, 100, qm.field_c * 6144 / 64, param0);
         if (param1 == 51) {
-          rk.field_e.a(mb.field_a);
+          rk.field_e.addSubstream(mb.field_a);
           return;
         }
         field_l = (om) null;
-        rk.field_e.a(mb.field_a);
+        rk.field_e.addSubstream(mb.field_a);
     }
 
     public static void a(byte param0) {

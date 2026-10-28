@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class NetworkGameClient extends GameAppletShell {
-    static lk field_r;
+    static SystemTaskService field_r;
     static int field_q;
     private int field_w;
     private int field_u;
@@ -94,7 +94,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         SpriteState.b(ff.field_h, 15);
         qf.a(5000, 5000, this.field_t, this.field_n, param4, field_r, this.field_p, param6, (byte) 84, this.field_o, this.field_m, this.field_s, ff.field_h, this.field_y);
         DualLinkNode.a(this.field_s, field_r, param4, param5 ^ 22212, ff.field_h, this.field_t, this.field_p, this.field_y, this.field_o);
-        cg.e(param5 + 213);
+        ImageProducerRasterBuffer.e(param5 + 213);
         ji.field_b = EscapeVector.n(13);
         rc.a(of.field_d, true);
         vi.field_g = param1;
@@ -119,7 +119,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (aa.a((byte) 102)) {
           int stackIn_11_1 = param0 ^ -9787;
           boolean stackIn_11_2 = false;
-          if (null == df.field_d) {
+          if (null == IsaacRandom.field_d) {
             stackIn_12_0 = this;
             stackIn_12_3 = false;
           } else {
@@ -246,9 +246,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 1) {
             int var5_int = ui.a(kn.b(true), jd.a(false), 55);
             if (var5_int != -1) {
-              jk.a(jf.field_I, ca.field_a, param0 ^ -156, var5_int);
+              jk.a(jf.field_I, MouseWheelInput.field_a, param0 ^ -156, var5_int);
               jf.field_I = null;
-              ca.field_a = null;
+              MouseWheelInput.field_a = null;
             }
             Boolean var11 = vg.l(-9878);
             if (var11 != null) {
@@ -258,15 +258,15 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 2) {
             int var5_intLifetime1 = kh.a(DualLinkNode.e(0), this.field_w, ce.c(31069), uf.a(30519), jh.d(param0 ^ -4157), oi.k(-99), 0);
             if (var5_intLifetime1 != -1) {
-              j.a(jf.field_I, ca.field_a, (byte) -72, var5_intLifetime1);
+              j.a(jf.field_I, MouseWheelInput.field_a, (byte) -72, var5_intLifetime1);
               jf.field_I = null;
-              ca.field_a = null;
+              MouseWheelInput.field_a = null;
             }
           }
           if (3 == var4) {
-            if (jn.field_b != -1 &&
-              0 != jn.field_b) {
-              jn.field_b = -1;
+            if (IntKeyLookup.field_b != -1 &&
+              0 != IntKeyLookup.field_b) {
+              IntKeyLookup.field_b = -1;
               SecondaryIntrusiveDeque.d(0);
             }
             if (param1) {
@@ -280,15 +280,15 @@ abstract class NetworkGameClient extends GameAppletShell {
                   ff.field_e = 10;
                   SpriteState.field_u = false;
                 } else {
-                  hi.a(var5_intLifetime2, (byte) 83, ca.field_a);
-                  ca.field_a = null;
+                  hi.a(var5_intLifetime2, (byte) 83, MouseWheelInput.field_a);
+                  MouseWheelInput.field_a = null;
                 }
               }
             }
           }
           if (var4 == 4) {
             if (ej.field_d) {
-              cm.a(PointCloudEffect.d((byte) -113), 21027);
+              DiskCacheRequest.a(PointCloudEffect.d((byte) -113), 21027);
             } else {
               SpriteState.field_u = true;
               ff.field_e = 10;
@@ -298,20 +298,20 @@ abstract class NetworkGameClient extends GameAppletShell {
             gk.a(param0 - 10042, PointCloudEffect.d((byte) -72));
           }
           if (var4 == 6 &&
-            c.field_u) {
+            CipherPacketBuffer.field_u) {
             ff.field_e = 10;
           }
           if (var4 == 7) {
             v.a(PointCloudEffect.d((byte) -120), (byte) -99);
           }
           if (var4 == 8) {
-            cm.a(PointCloudEffect.d((byte) -127), param0 ^ 21212);
+            DiskCacheRequest.a(PointCloudEffect.d((byte) -127), param0 ^ 21212);
           }
           if (var4 == 9) {
             dm.a(param0 - 251, PointCloudEffect.d((byte) -89));
           }
           if (var4 == 10) {
-            om.field_c.a(17, true);
+            om.field_c.writeCipheredOpcode(17, true);
           }
           if (param0 != 255) {
             this.field_m = -32L;
@@ -386,8 +386,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         boolean var3 = ((1 & var2) != 0);
         int var4 = -1 + hi.field_r;
         byte[] var5 = new byte[var4];
-        om.field_g.a(var5, 19583, var4, 0);
-        th.a(param0, (var3), PointCloudEffect.d((byte) -122), mi.a(var5, 117));
+        om.field_g.readCipheredBytes(var5, 19583, var4, 0);
+        Bzip2State.a(param0, (var3), PointCloudEffect.d((byte) -122), RasterSnapshot.a(var5, 117));
     }
 
     final void a(String param0, int param1, int param2) {
@@ -417,11 +417,11 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else if (2 == var2) {
             ja.a((byte) -120);
           } else if (3 == var2) {
-            cg.c(103);
+            ImageProducerRasterBuffer.c(103);
           } else if (var2 == 4) {
             dk.e(108457410);
           } else if (var2 == 5) {
-            ge.a((byte) 124);
+            AudioService.a((byte) 124);
           } else if (var2 == 6) {
             ri.a((byte) 113);
           } else if (7 == var2) {
@@ -465,7 +465,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var7 = EscapeVector.obfuscationControl;
         try {
           if (param3 <= 113) {
-            field_r = (lk) null;
+            field_r = (SystemTaskService) null;
           }
           int var5_int = 0;
           while (true) {
@@ -558,7 +558,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.a(-1, "reconnect");
           }
           sc.b((byte) -123);
-          hi.a(var2, (byte) 83, ca.field_a);
+          hi.a(var2, (byte) 83, MouseWheelInput.field_a);
           if (param0 != 117) {
             this.field_s = (String) null;
           }
@@ -567,7 +567,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           return var2;
         }
         if (11 == ff.field_e &&
-          0 == jn.field_b) {
+          0 == IntKeyLookup.field_b) {
           qd.a(true);
         }
         return var2;
@@ -576,7 +576,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     final void a(int param0, boolean param1) {
         int var5 = EscapeVector.obfuscationControl;
         if (km.field_n != null) {
-          if (null == df.field_d) {
+          if (null == IsaacRandom.field_d) {
             java.awt.Container var6 = pg.a(-1);
             java.awt.Dimension var4 = var6.getSize();
             km.field_n.a(var4.height, var4.width, 18705);
@@ -590,7 +590,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           b.a(-103);
         }
         if (null != ji.field_b) {
-          mg.field_f = ji.field_b.a(-126);
+          mg.field_f = ji.field_b.pollRotation(-126);
         }
         if (HudMessage.a(true)) {
           int var3 = 1200 * se.a(0);
@@ -606,45 +606,45 @@ abstract class NetworkGameClient extends GameAppletShell {
             tg.field_mb = td.b(param0 + 129) + 15000L;
           }
         }
-        if (jn.field_b == -1 ||
-          jn.field_b == 0) {
-          boolean stackIn_24_0 = !(-1 != jn.field_b);
+        if (IntKeyLookup.field_b == -1 ||
+          IntKeyLookup.field_b == 0) {
+          boolean stackIn_24_0 = !(-1 != IntKeyLookup.field_b);
           boolean var3Lifetime1 = stackIn_24_0;
-          jn.field_b = ae.b(param0 - 1021831774);
+          IntKeyLookup.field_b = ae.b(param0 - 1021831774);
           if (var3Lifetime1 &&
-            0 == jn.field_b &&
+            0 == IntKeyLookup.field_b &&
             ff.field_e == 11 &&
             !um.a(17830)) {
             qd.a(true);
           }
-          if (jn.field_b != -1 &&
-            jn.field_b != 0) {
+          if (IntKeyLookup.field_b != -1 &&
+            IntKeyLookup.field_b != 0) {
             tg.field_mb = 15000L + td.b(128);
           }
         }
-        if (jn.field_b != -1 &&
-          jn.field_b != 0) {
+        if (IntKeyLookup.field_b != -1 &&
+          IntKeyLookup.field_b != 0) {
           if (10 > fc.field_a) {
-            if (jn.field_b == 3) {
+            if (IntKeyLookup.field_b == 3) {
               this.a(param0 + 0, "js5crc");
-            } else if (jn.field_b == 4) {
+            } else if (IntKeyLookup.field_b == 4) {
               this.a(-1, "js5io");
-            } else if (2 == jn.field_b) {
+            } else if (2 == IntKeyLookup.field_b) {
               this.a(-1, "js5connect_full");
-            } else if (jn.field_b != 5) {
+            } else if (IntKeyLookup.field_b != 5) {
               this.a(-1, "js5connect");
             } else {
               this.a(-1, "outofdate");
             }
           } else if (ff.field_e >= 10) {
             sc.b((byte) -103);
-            if (jn.field_b == 3) {
+            if (IntKeyLookup.field_b == 3) {
               hi.a(256, (byte) 83, ag.field_b);
-            } else if (jn.field_b == 4) {
+            } else if (IntKeyLookup.field_b == 4) {
               hi.a(256, (byte) 83, nn.field_e);
-            } else if (jn.field_b == 2) {
+            } else if (IntKeyLookup.field_b == 2) {
               hi.a(256, (byte) 83, km.field_l);
-            } else if (jn.field_b != 5) {
+            } else if (IntKeyLookup.field_b != 5) {
               hi.a(256, (byte) 83, gm.field_f);
             } else {
               hi.a(5, (byte) 83, gj.field_a);
@@ -652,18 +652,18 @@ abstract class NetworkGameClient extends GameAppletShell {
             q.field_P = true;
           }
         }
-        if ((param0 != jn.field_b &&
-          jn.field_b != 0 ||
+        if ((param0 != IntKeyLookup.field_b &&
+          IntKeyLookup.field_b != 0 ||
           um.a(17830)) &&
           tg.field_mb <= td.b(128)) {
           q.field_P = false;
-          if (jn.field_b != -1 &&
-            jn.field_b != 0) {
-            jn.field_b = -1;
+          if (IntKeyLookup.field_b != -1 &&
+            IntKeyLookup.field_b != 0) {
+            IntKeyLookup.field_b = -1;
             SecondaryIntrusiveDeque.d(~param0);
           }
         }
-        if (0 == jn.field_b &&
+        if (0 == IntKeyLookup.field_b &&
           !um.a(param0 ^ -17831)) {
           pb.field_d = false;
         }
@@ -702,7 +702,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           cf.a(11, pl.field_j)) {
           nk.h(-8055);
           on.b(-87);
-          c.field_u = false;
+          CipherPacketBuffer.field_u = false;
           hd.field_e = um.field_a;
           dh.a(ej.field_d, (byte) -124, pl.field_j, ii.field_a, w.field_ab);
           if (jb.field_p ||
@@ -767,7 +767,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           rc.a(of.field_d, true);
         }
         if (sn.field_b[8]) {
-          c.p(11197);
+          CipherPacketBuffer.p(11197);
         }
     }
 

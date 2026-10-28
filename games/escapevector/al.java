@@ -5,7 +5,7 @@ final class al {
     static int[] field_f;
     static int[] field_a;
     static hf field_d;
-    static hh field_b;
+    static PcmSample field_b;
     static long field_e;
     static String field_c;
 
@@ -27,8 +27,8 @@ final class al {
           return 3;
         }
         if (param1 != 26504) {
-          lk var3 = (lk) null;
-          al.a(-101, -4, (lk) null, 127, 70, -30);
+          SystemTaskService var3 = (SystemTaskService) null;
+          al.a(-101, -4, (SystemTaskService) null, 127, 70, -30);
         }
         return -1;
     }
@@ -64,10 +64,10 @@ final class al {
         return var4;
     }
 
-    final static af a(int param0, int param1, lk param2, int param3, int param4, int param5) {
+    final static af a(int param0, int param1, SystemTaskService param2, int param3, int param4, int param5) {
         String stackIn_10_2 = null;
         try {
-          java.awt.Frame var8 = ib.a((byte) 93, param0, param3, param2, param4, param5);
+          java.awt.Frame var8 = IntrusiveNodeHashTable.a((byte) 93, param0, param3, param2, param4, param5);
           java.awt.Frame var6 = var8;
           if (var8 == null) {
             return null;
@@ -76,7 +76,7 @@ final class al {
           var7.field_d = var8;
           var7.field_d.add((java.awt.Component) ((Object) var7));
           if (param1 != -16493) {
-            field_b = (hh) null;
+            field_b = (PcmSample) null;
           }
           var7.setBounds(0, 0, param0, param3);
           var7.addFocusListener(var7);

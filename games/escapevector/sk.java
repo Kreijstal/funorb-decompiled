@@ -3,17 +3,17 @@
  */
 final class sk {
     private java.math.BigInteger field_c;
-    static la field_d;
-    private hk[] field_e;
+    static SystemTask field_d;
+    private CachedArchiveProvider[] field_e;
     private PacketBuffer field_b;
-    private s field_h;
-    private kk field_a;
-    private sb field_f;
+    private Js5NetworkRequest field_h;
+    private DiskCacheWorker field_a;
+    private Js5Transport field_f;
     private java.math.BigInteger field_g;
 
     public static void b(boolean param0) {
         if (!param0) {
-          field_d = (la) null;
+          field_d = (SystemTask) null;
           field_d = null;
           return;
         }
@@ -45,7 +45,7 @@ final class sk {
         return;
     }
 
-    final hk a(boolean param0, int param1, jg param2, int param3, jg param4) {
+    final CachedArchiveProvider a(boolean param0, int param1, SectorCacheStore param2, int param3, SectorCacheStore param4) {
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
         try {
@@ -55,7 +55,7 @@ final class sk {
           if (0 <= param3 &&
             param3 < this.field_e.length) {
             if (this.field_e[param3] != null) {
-              hk stackIn_8_0 = this.field_e[param3];
+              CachedArchiveProvider stackIn_8_0 = this.field_e[param3];
               return stackIn_8_0;
             }
             this.field_b.position = 6 + param3 * 72;
@@ -63,13 +63,13 @@ final class sk {
             int var7 = this.field_b.readInt(-5053);
             byte[] var13 = new byte[64];
             this.field_b.a(var13, (byte) -96, 0, 64);
-            hk var9 = new hk(param3, param4, param2, this.field_f, this.field_a, var6_int, var13, var7, param0);
+            CachedArchiveProvider var9 = new CachedArchiveProvider(param3, param4, param2, this.field_f, this.field_a, var6_int, var13, var7, param0);
             if (param1 != 255) {
-              hk stackIn_11_0 = (hk) null;
+              CachedArchiveProvider stackIn_11_0 = (CachedArchiveProvider) null;
               return stackIn_11_0;
             }
             this.field_e[param3] = var9;
-            hk stackIn_13_0 = var9;
+            CachedArchiveProvider stackIn_13_0 = var9;
             return stackIn_13_0;
           }
           throw new RuntimeException();
@@ -93,7 +93,7 @@ final class sk {
         }
     }
 
-    sk(sb param0, kk param1) {
+    sk(Js5Transport param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -112,7 +112,7 @@ final class sk {
         if (this.field_h.field_u) {
           return false;
         }
-        PacketBuffer var10 = new PacketBuffer(this.field_h.a(true));
+        PacketBuffer var10 = new PacketBuffer(this.field_h.getBytes(true));
         var10.position = 5;
         int var3 = var10.readUnsignedByte(0);
         var10.position = var10.position + 72 * var3;
@@ -131,13 +131,13 @@ final class sk {
             if (param0) {
               return true;
             }
-            byte[] var16 = vn.a(var10.payload, 5, -5 + (-var13.length + var10.position), 0);
+            byte[] var16 = RasterBuffer.a(var10.payload, 5, -5 + (-var13.length + var10.position), 0);
             for (int var7 = 0; var7 < 64; var7++) {
               if (var5[1 + var7] != var16[var7]) {
                 throw new RuntimeException();
               }
             }
-            this.field_e = new hk[var3];
+            this.field_e = new CachedArchiveProvider[var3];
             this.field_b = var10;
             return true;
           }
@@ -151,18 +151,18 @@ final class sk {
         if (param0) {
           return true;
         }
-        byte[] var17 = vn.a(var10.payload, 5, -5 + (-var13.length + var10.position), 0);
+        byte[] var17 = RasterBuffer.a(var10.payload, 5, -5 + (-var13.length + var10.position), 0);
         for (int var7Lifetime1 = 0; var7Lifetime1 < 64; var7Lifetime1++) {
           if (var5[1 + var7Lifetime1] != var17[var7Lifetime1]) {
             throw new RuntimeException();
           }
         }
-        this.field_e = new hk[var3];
+        this.field_e = new CachedArchiveProvider[var3];
         this.field_b = var10;
         return true;
     }
 
-    private sk(sb param0, kk param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private sk(Js5Transport param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;

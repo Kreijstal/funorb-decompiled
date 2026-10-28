@@ -7,11 +7,11 @@ final class SeekerMine extends IntrusiveNode {
     int homeXQ16;
     static int[] field_n;
     int velocityYQ16;
-    tl proximitySound;
+    SeekerPulseStream proximitySound;
     int yQ16;
     static String[] field_k;
     int homeYQ16;
-    hl flightSound;
+    PcmSampleStream flightSound;
     int velocityXQ16;
 
     final static int a(String param0, int param1, ih param2) {

@@ -19,7 +19,7 @@ final class rh extends bj implements qb {
         if (param2 != 0) {
           return;
         }
-        wl var5 = sb.field_a;
+        BitmapFont var5 = Js5Transport.field_a;
         if (this.field_M != null) {
           var5.a(hm.field_m, param3 + this.field_k, param0 + this.field_j, this.field_g, 20, 16777215, -1, 0, 0, var5.field_r + var5.field_x);
         }
@@ -40,7 +40,7 @@ final class rh extends bj implements qb {
             for (int var4_int = 0; var4_int < var3_int; var4_int++) {
               this.field_M[var4_int] = pc.a(param1 + 103, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
-            ha var4 = new ha(sb.field_a, 0, 1);
+            ha var4 = new ha(Js5Transport.field_a, 0, 1);
             this.field_K = new hc[1 + var3_int];
             for (int var5 = 0; var5 < var3_int; var5++) {
               this.field_K[var5] = new hc(this.field_M[var5], (wn) (this));
@@ -128,8 +128,8 @@ final class rh extends bj implements qb {
         try {
           try {
             java.awt.Graphics var9 = of.field_d.getGraphics();
-            if (null == cg.field_l) {
-              cg.field_l = new java.awt.Font("Helvetica", 1, 13);
+            if (null == ImageProducerRasterBuffer.field_l) {
+              ImageProducerRasterBuffer.field_l = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param1) {
               var9.setColor(java.awt.Color.black);
@@ -149,7 +149,7 @@ final class rh extends bj implements qb {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(3 * param3 + 2, 2, -(3 * param3) + 300, 30);
-              var10.setFont(cg.field_l);
+              var10.setFont(ImageProducerRasterBuffer.field_l);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (304 - param4.length() * 6) / 2, 22);
               var9.drawImage(bj.field_z, -152 + pd.field_b / 2, -18 + ad.field_d / 2, (java.awt.image.ImageObserver) null);
@@ -164,12 +164,12 @@ final class rh extends bj implements qb {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, var8 + 1, 301, 31);
               var9.fillRect(2 + (var7 + 3 * param3), 2 + var8, -(3 * param3) + 300, 30);
-              var9.setFont(cg.field_l);
+              var9.setFont(ImageProducerRasterBuffer.field_l);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param4, (-(6 * param4.length()) + 304) / 2 + var7, 22 + var8);
             }
             if (pg.field_e != null) {
-              var9.setFont(cg.field_l);
+              var9.setFont(ImageProducerRasterBuffer.field_l);
               var9.setColor(java.awt.Color.white);
               var9.drawString(pg.field_e, pd.field_b / 2 - 6 * pg.field_e.length() / 2, ad.field_d / 2 - 26);
             }

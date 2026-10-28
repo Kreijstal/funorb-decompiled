@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pc {
-    static hh field_a;
+    static PcmSample field_a;
     static String[] field_b;
     static int field_d;
     static int[] field_c;
     static int[] field_f;
     static String field_g;
-    static mf field_e;
+    static ResourceArchive field_e;
 
     public static void a(boolean param0) {
         if (param0) {
@@ -34,9 +34,9 @@ final class pc {
         String stackIn_10_2 = null;
         try {
           if (param0 != 0) {
-            field_a = (hh) null;
+            field_a = (PcmSample) null;
           }
-          String var2 = jb.a(vn.a((byte) 122, param1), (byte) 29);
+          String var2 = jb.a(RasterBuffer.a((byte) 122, param1), (byte) 29);
           if (var2 == null) {
             var2 = "";
           }

@@ -3,13 +3,13 @@
  */
 final class mn extends IntrusiveNode {
     static int field_n;
-    la[] field_r;
+    SystemTask[] field_r;
     int field_g;
     int field_i;
     byte[][][] field_l;
     int[] field_o;
-    la[] field_p;
-    static ab field_h;
+    SystemTask[] field_p;
+    static CoverageBitmapFont field_h;
     int[] field_m;
     static ph field_q;
     static int field_k;

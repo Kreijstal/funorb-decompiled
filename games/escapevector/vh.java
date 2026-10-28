@@ -25,7 +25,7 @@ final class vh extends IntrusiveNode {
         }
     }
 
-    final static String a(String param0, mf param1, String param2, int param3) {
+    final static String a(String param0, ResourceArchive param1, String param2, int param3) {
         String stackIn_12_2 = null;
         String stackIn_16_2 = null;
         String stackIn_20_2 = null;
@@ -270,7 +270,7 @@ final class vh extends IntrusiveNode {
     final static void a(byte param0) {
         try {
           if (param0 != -22) {
-            vh.a((String) null, (mf) null, (String) null, -6);
+            vh.a((String) null, (ResourceArchive) null, (String) null, -6);
           }
           if (mg.field_e.isEmpty(-107)) {
             return;

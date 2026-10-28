@@ -5,7 +5,7 @@ final class nk extends ah {
     static int field_n;
     private ul field_o;
     private ul field_q;
-    static mf field_p;
+    static ResourceArchive field_p;
     static String field_s;
     static String field_r;
 
@@ -44,7 +44,7 @@ final class nk extends ah {
             return stackIn_22_0;
           }
           if (lf.a(var5, (byte) 37, var7)) {
-            String stackIn_26_0 = kk.field_a;
+            String stackIn_26_0 = DiskCacheWorker.field_a;
             return stackIn_26_0;
           }
           if (!RockBuster.a(-115, var5, var7)) {
@@ -70,11 +70,11 @@ final class nk extends ah {
     final static void h(int param0) {
         if (param0 != -8055) {
           field_n = -37;
-          cg.field_l = null;
+          ImageProducerRasterBuffer.field_l = null;
           bj.field_z = null;
           return;
         }
-        cg.field_l = null;
+        ImageProducerRasterBuffer.field_l = null;
         bj.field_z = null;
     }
 
@@ -126,7 +126,7 @@ final class nk extends ah {
           }
           int var2_int = param1.field_f + param1.field_p / 2;
           if (param0 >= -83) {
-            field_p = (mf) null;
+            field_p = (ResourceArchive) null;
           }
           int stackIn_6_0 = var2_int * 16384 / 640;
           return stackIn_6_0;
@@ -150,17 +150,17 @@ final class nk extends ah {
           String var3 = this.field_q.field_l.toLowerCase();
           String var4 = param1.toLowerCase();
           if (param0 == ~var4.length()) {
-            rf stackIn_2_0 = ob.field_a;
+            rf stackIn_2_0 = ArchiveProvider.field_a;
             return stackIn_2_0;
           }
           if (!hd.a(var4, false, var3)) {
-            rf stackIn_5_0 = ob.field_a;
+            rf stackIn_5_0 = ArchiveProvider.field_a;
             return stackIn_5_0;
           }
           if (!this.b((byte) 53, param1)) {
-            return df.field_h;
+            return IsaacRandom.field_h;
           }
-          rf stackIn_9_0 = ob.field_a;
+          rf stackIn_9_0 = ArchiveProvider.field_a;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -183,7 +183,7 @@ final class nk extends ah {
         if (param0 == 1) {
           return bc.field_g[param1];
         }
-        field_p = (mf) null;
+        field_p = (ResourceArchive) null;
         return bc.field_g[param1];
     }
 

@@ -151,7 +151,7 @@ final class p {
         }
     }
 
-    final static Sprite a(byte param0, String param1, mf param2, String param3) {
+    final static Sprite a(byte param0, String param1, ResourceArchive param2, String param3) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -160,9 +160,9 @@ final class p {
           int var5 = param2.a(var4_int, param1, true);
           if (param0 != 8) {
             String var6 = (String) null;
-            p.a((byte) -89, (String) null, (mf) null, (String) null);
+            p.a((byte) -89, (String) null, (ResourceArchive) null, (String) null);
           }
-          Sprite stackIn_3_0 = hk.a(param2, true, var5, var4_int);
+          Sprite stackIn_3_0 = CachedArchiveProvider.a(param2, true, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

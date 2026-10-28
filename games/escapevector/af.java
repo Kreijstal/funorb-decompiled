@@ -6,7 +6,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_f;
     volatile boolean field_c;
     static String field_g;
-    static te[] field_a;
+    static IndexedSprite[] field_a;
     java.awt.Frame field_d;
     static int field_h;
     static sk field_e;
@@ -41,7 +41,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
           field_f = null;
           return;
         }
-        field_a = (te[]) null;
+        field_a = (IndexedSprite[]) null;
         field_g = null;
         field_b = null;
         field_a = null;
@@ -49,7 +49,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_f = null;
     }
 
-    final static void a(byte param0, lk param1, Object param2) {
+    final static void a(byte param0, SystemTaskService param1, Object param2) {
         String stackIn_20_2 = null;
         String stackIn_23_2 = null;
         Throwable decompiledCaughtException = null;
@@ -102,7 +102,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final void a(lk param0, boolean param1) {
+    final void a(SystemTaskService param0, boolean param1) {
         try {
           af.a(param0, this.field_d, false);
           if (!param1) {
@@ -132,10 +132,10 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
         if (param5 < vl.field_e) {
           pg.field_d = param5;
         }
-        if (oa.field_t >= param5) {
+        if (ArchiveRequest.field_t >= param5) {
           pc.field_c[jf.field_J] = param1;
           if (param0 == 1) {
-            mi.field_k[jf.field_J] = param2;
+            RasterSnapshot.field_k[jf.field_J] = param2;
             tm.field_fb[jf.field_J] = param3;
             var6 = param3 + param2 + param1;
             if (var6 != 0) {
@@ -144,7 +144,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
               stackIn_48_0 = 0;
             }
             var7 = stackIn_48_0;
-            th.field_v[jf.field_J] = var7;
+            Bzip2State.field_v[jf.field_J] = var7;
             jf.field_J = jf.field_J + 1;
             if (var7 < pg.field_d) {
               pg.field_d = var7;
@@ -155,7 +155,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
             return;
           }
           af.a(-7, 8, -13, 15, -127, 46);
-          mi.field_k[jf.field_J] = param2;
+          RasterSnapshot.field_k[jf.field_J] = param2;
           tm.field_fb[jf.field_J] = param3;
           var6 = param3 + param2 + param1;
           if (var6 != 0) {
@@ -168,7 +168,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
           pl.field_r = param5;
           pc.field_c[jf.field_J] = param1;
           if (param0 == 1) {
-            mi.field_k[jf.field_J] = param2;
+            RasterSnapshot.field_k[jf.field_J] = param2;
             tm.field_fb[jf.field_J] = param3;
             var6 = param3 + param2 + param1;
             if (var6 != 0) {
@@ -179,7 +179,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
             var7 = stackIn_8_0;
           } else {
             af.a(-7, 8, -13, 15, -127, 46);
-            mi.field_k[jf.field_J] = param2;
+            RasterSnapshot.field_k[jf.field_J] = param2;
             tm.field_fb[jf.field_J] = param3;
             var6 = param3 + param2 + param1;
             if (var6 != 0) {
@@ -190,7 +190,7 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
             var7 = stackIn_21_0;
           }
         }
-        th.field_v[jf.field_J] = var7;
+        Bzip2State.field_v[jf.field_J] = var7;
         jf.field_J = jf.field_J + 1;
         if (var7 < pg.field_d) {
           pg.field_d = var7;
@@ -200,13 +200,13 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static void a(lk param0, java.awt.Frame param1, boolean param2) {
+    final static void a(SystemTaskService param0, java.awt.Frame param1, boolean param2) {
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         int var4 = EscapeVector.obfuscationControl;
         try {
           while (true) {
-            la var3 = param0.a((byte) 45, param1);
+            SystemTask var3 = param0.a((byte) 45, param1);
             while (var3.field_f == 0) {
               en.a((byte) 93, 10L);
             }

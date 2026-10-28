@@ -8,7 +8,7 @@ final class lm {
     static String[] field_b;
     int field_g;
     boolean field_e;
-    static hh field_d;
+    static PcmSample field_d;
 
     public static void b(byte param0) {
         field_b = null;

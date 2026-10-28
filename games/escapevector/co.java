@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class co {
-    static hh field_d;
+    static PcmSample field_d;
     static om field_b;
     static lm field_a;
     static String[] field_c;

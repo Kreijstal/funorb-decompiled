@@ -4,12 +4,12 @@
 final class gm {
     static String field_d;
     static Sprite field_a;
-    static hh field_b;
+    static PcmSample field_b;
     static String field_e;
     static String field_f;
     static int[] field_c;
 
-    final static Sprite[] a(int param0, int param1, mf param2, int param3) {
+    final static Sprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         String stackIn_10_2 = null;
         try {
           if (param3 != 8192) {
@@ -53,8 +53,8 @@ final class gm {
           field_a = null;
           return;
         }
-        mf var2 = (mf) null;
-        gm.a(13, 47, (mf) null, 3);
+        ResourceArchive var2 = (ResourceArchive) null;
+        gm.a(13, 47, (ResourceArchive) null, 3);
         field_e = null;
         field_c = null;
         field_a = null;

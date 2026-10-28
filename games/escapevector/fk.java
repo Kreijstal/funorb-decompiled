@@ -7,7 +7,7 @@ final class fk {
     static Sprite[] field_f;
     int field_d;
     static String field_e;
-    static mf field_a;
+    static ResourceArchive field_a;
 
     public static void a(int param0) {
         field_c = null;
@@ -70,7 +70,7 @@ final class fk {
         String stackIn_7_2 = null;
         try {
           if (param0) {
-            field_a = (mf) null;
+            field_a = (ResourceArchive) null;
           }
           boolean stackIn_3_0 = rl.a(10, (byte) 84, true, param1);
           return stackIn_3_0;

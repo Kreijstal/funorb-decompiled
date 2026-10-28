@@ -192,7 +192,7 @@ final class wc {
         this.field_h = param3;
     }
 
-    final static void a(int param0, mf param1, mf param2, mf param3) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         int var9 = 0;
         int var13 = EscapeVector.obfuscationControl;
         nn.field_a = kh.a(param2, (byte) 126, "commonui", "frame_top");
@@ -200,16 +200,16 @@ final class wc {
         cc.field_j = fe.a("commonui", param2, "jagex_logo_grey", true);
         fk.field_f = kh.a(param2, (byte) -81, "commonui", "button");
         ul.field_E = ui.a("validation", param2, "commonui", (byte) 77);
-        ke.field_c = (wl) ((Object) ac.a("arezzo12", -110, param2, "commonui", param3));
-        sb.field_a = (wl) ((Object) ac.a("arezzo14", -124, param2, "commonui", param3));
-        dl.field_b = (wl) ((Object) ac.a("arezzo14bold", -93, param2, "commonui", param3));
+        ke.field_c = (BitmapFont) ((Object) ac.a("arezzo12", -110, param2, "commonui", param3));
+        Js5Transport.field_a = (BitmapFont) ((Object) ac.a("arezzo14", -124, param2, "commonui", param3));
+        dl.field_b = (BitmapFont) ((Object) ac.a("arezzo14bold", -93, param2, "commonui", param3));
         Sprite var17 = new Sprite(param1.a(-4, "", "button.gif"), (java.awt.Component) ((Object) of.field_d));
         AccountRegistrationPanel.a(param2, 50, "dropdown", "commonui");
-        te[] var5 = ae.a("commonui", "screen_options", (byte) -65, param2);
-        ec.field_f = new te[4];
-        hk.field_w = new te[4];
-        ej.field_f = new te[4];
-        te[][] var6 = new te[][]{ec.field_f, ej.field_f, hk.field_w};
+        IndexedSprite[] var5 = ae.a("commonui", "screen_options", (byte) -65, param2);
+        SoundCache.field_f = new IndexedSprite[4];
+        CachedArchiveProvider.field_w = new IndexedSprite[4];
+        ej.field_f = new IndexedSprite[4];
+        IndexedSprite[][] var6 = new IndexedSprite[][]{SoundCache.field_f, ej.field_f, CachedArchiveProvider.field_w};
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;
@@ -222,8 +222,8 @@ final class wc {
         var19[1][var8Lifetime1] = 2394342;
         var19[3][var8Lifetime1] = 4767999;
         for (var9 = 0; 3 > var9; var9++) {
-          te[] var14 = var6[var9];
-          te[] var10 = var14;
+          IndexedSprite[] var14 = var6[var9];
+          IndexedSprite[] var10 = var14;
           for (int var11_int = 0; var14.length > var11_int; var11_int++) {
             var14[var11_int] = rf.a(-50, var5[var9], var19[var11_int]);
           }
@@ -272,12 +272,12 @@ final class wc {
         var4.field_j = param0;
         if (param3 == -51) {
           en.field_i.addLast(-12328, var4);
-          oa.a(param1, var4, -755);
+          ArchiveRequest.a(param1, var4, -755);
           return var4;
         }
         field_d = (ce) null;
         en.field_i.addLast(-12328, var4);
-        oa.a(param1, var4, -755);
+        ArchiveRequest.a(param1, var4, -755);
         return var4;
     }
 

@@ -163,7 +163,7 @@ final class t {
           mj.field_b.h(5267536);
           int var7Lifetime1 = -mj.field_d + 30 + 5 * param0;
           if (var7Lifetime1 > 0) {
-            mf.a(param1, (-mj.field_b.fullWidth + 640) / 2, var7Lifetime1, mj.field_b, param2 ^ 120);
+            ResourceArchive.a(param1, (-mj.field_b.fullWidth + 640) / 2, var7Lifetime1, mj.field_b, param2 ^ 120);
             if (var11 == 0) {
               return;
             }
@@ -177,14 +177,14 @@ final class t {
         }
     }
 
-    final static rn a(Throwable param0, String param1) {
-        rn var2;
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2;
         RuntimeException var2_ref;
-        if (param0 instanceof rn) {
-          var2 = (rn) ((Object) param0);
-          var2.field_g = var2.field_g + ' ' + param1;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
+          var2.context = var2.context + ' ' + param1;
         } else {
-          var2 = new rn(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }
@@ -339,7 +339,7 @@ final class t {
         int var10 = EscapeVector.obfuscationControl;
         try {
           if (this.field_b.field_e) {
-            rk.field_e.a(oa.field_w, 100, 1536 * qm.field_c / 64, 8192);
+            rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
           }
           int var3_int = this.b(123);
           if (var3_int == 0 &&
@@ -473,7 +473,7 @@ final class t {
           }
           if (var3_int == 5 &&
             this.field_b.b((byte) -18)) {
-            if (null != df.field_d) {
+            if (null != IsaacRandom.field_d) {
               ri.a(param0 - 11954);
               if (var10 != 0) {
                 eo.a(24, param1);
@@ -502,7 +502,7 @@ final class t {
           }
           if (8 == var3_int &&
             this.field_b.b((byte) -18)) {
-            if (df.field_d != null) {
+            if (IsaacRandom.field_d != null) {
               ri.a(-25123);
             }
             gk.a(-9787, PointCloudEffect.d((byte) -122));

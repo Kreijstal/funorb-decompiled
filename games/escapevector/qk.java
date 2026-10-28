@@ -7,9 +7,9 @@ final class qk {
     int field_b;
     static int field_j;
     String field_d;
-    mf field_h;
+    ResourceArchive field_h;
     static String field_a;
-    static la field_g;
+    static SystemTask field_g;
     static int[] field_f;
     String field_c;
 

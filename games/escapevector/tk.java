@@ -60,11 +60,11 @@ final class tk {
     final static void a(int param0, int param1) {
         int var4 = EscapeVector.obfuscationControl;
         try {
-          qd var5 = (qd) (mi.field_l.first(false));
+          qd var5 = (qd) (RasterSnapshot.field_l.first(false));
           int var3 = -57 / ((-46 - param0) / 51);
           while (var5 != null) {
             sm.a(var5, param1, true);
-            var5 = (qd) (mi.field_l.next((byte) 70));
+            var5 = (qd) (RasterSnapshot.field_l.next((byte) 70));
           }
           IntrusiveNode var2 = bc.field_b.first(false);
           while (var2 != null) {

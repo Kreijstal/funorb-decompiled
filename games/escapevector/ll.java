@@ -21,7 +21,7 @@ final class ll extends IntrusiveNode {
     final static void b(boolean param0) {
         ll var1 = (ll) (jl.field_n.first(param0));
         if (var1 != null) {
-          c var2 = om.field_g;
+          CipherPacketBuffer var2 = om.field_g;
           var1.field_j = new int[]{var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053)};
           var1.unlink((byte) -66);
           return;
@@ -33,11 +33,11 @@ final class ll extends IntrusiveNode {
         int var5 = EscapeVector.obfuscationControl;
         if (param3 > 0) {
           if (!(30 <= param3)) {
-            mf.a(param1, 8, 60 - param3 * 2, ea.field_f, param2 ^ -97);
+            ResourceArchive.a(param1, 8, 60 - param3 * 2, ea.field_f, param2 ^ -97);
           } else if (param3 <= 80) {
             ea.field_f.e(8, param1);
           } else if (param3 < 95) {
-            mf.a(param1, 8, (param3 - 80) * 4, ea.field_f, param2 - 115);
+            ResourceArchive.a(param1, 8, (param3 - 80) * 4, ea.field_f, param2 - 115);
           }
         }
         if (param2 != 8) {
@@ -47,17 +47,17 @@ final class ll extends IntrusiveNode {
           return;
         }
         if (80 > param3) {
-          mf.a(param0, -f.field_o.fullWidth + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
+          ResourceArchive.a(param0, -ArchiveIndex.field_o.fullWidth + 632, 2 * (-param3 + 80), ArchiveIndex.field_o, param2 ^ -112);
           return;
         }
         if (param3 <= 80) {
-          f.field_o.e(632 - f.field_o.fullWidth, param0);
+          ArchiveIndex.field_o.e(632 - ArchiveIndex.field_o.fullWidth, param0);
           return;
         }
         if (95 <= param3) {
           return;
         }
-        mf.a(param0, -f.field_o.fullWidth + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
+        ResourceArchive.a(param0, -ArchiveIndex.field_o.fullWidth + 632, (param3 - 80) * 4, ArchiveIndex.field_o, param2 ^ -108);
     }
 
     public static void a(byte param0) {

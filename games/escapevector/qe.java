@@ -15,8 +15,8 @@ final class qe {
 
     private final void a(boolean param0, byte param1) {
         int var5 = 0;
-        hl[] var8 = gd.field_K;
-        hl[] var3 = var8;
+        PcmSampleStream[] var8 = gd.field_K;
+        PcmSampleStream[] var3 = var8;
         if (0 > this.field_d ||
           var8.length <= this.field_d) {
           return;
@@ -24,7 +24,7 @@ final class qe {
         if (param1 >= -20) {
           return;
         }
-        hl var4 = var8[this.field_d];
+        PcmSampleStream var4 = var8[this.field_d];
         if (var4 == null) {
           return;
         }

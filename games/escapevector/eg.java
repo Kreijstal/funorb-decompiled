@@ -76,7 +76,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static PointCloudEffect a(int param0, int param1, boolean param2, boolean param3, hh param4) {
+    final static PointCloudEffect a(int param0, int param1, boolean param2, boolean param3, PcmSample param4) {
         String stackIn_10_2 = null;
         try {
           PointCloudEffect var5 = new PointCloudEffect(param1, param0, param4);
@@ -190,7 +190,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (om.field_b != null) {
             md.field_G = 0;
             fk.field_b = param0.getX();
-            dd.field_c = param0.getY();
+            PcmResampler.field_c = param0.getY();
             td.b(128);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               kb.field_f = 1;

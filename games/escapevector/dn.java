@@ -35,7 +35,7 @@ final class dn {
 
     private final void a(byte param0) {
         tc[] var2 = this.b(false);
-        String[] var3 = new String[]{gk.field_b, bj.field_D, nl.field_a, kc.field_a, ob.field_c, gn.field_l, hb.field_a};
+        String[] var3 = new String[]{gk.field_b, bj.field_D, nl.field_a, kc.field_a, ArchiveProvider.field_c, gn.field_l, hb.field_a};
         this.a(var3, (byte) -10);
         ih var4 = fh.field_g;
         int var5 = 16777215;
@@ -77,7 +77,7 @@ final class dn {
         }
     }
 
-    final static qh[] a(int param0, boolean[] param1, String[] param2, mf param3, int param4, int[] param5, String[] param6) {
+    final static qh[] a(int param0, boolean[] param1, String[] param2, ResourceArchive param3, int param4, int[] param5, String[] param6) {
         String stackIn_9_2 = null;
         String stackIn_12_2 = null;
         String stackIn_15_2 = null;
@@ -280,12 +280,12 @@ final class dn {
           IntValueNode.field_j = false;
         }
         if (param0 == ~var2) {
-          hh var3 = pc.field_a;
+          PcmSample var3 = pc.field_a;
           int var4 = 100;
           int var5 = 6144 * qm.field_c / 64;
           int var6 = 8192;
-          hj var7 = rk.field_e;
-          var7.a(var3, var4, var5, var6);
+          PcmStreamMixer var7 = rk.field_e;
+          var7.playSampleWithPan(var3, var4, var5, var6);
         }
         if (var2 < 1000) {
           mj.field_d = mj.field_d + 1;
@@ -293,12 +293,12 @@ final class dn {
     }
 
     private final void l(int param0) {
-        hj var2 = rk.field_e;
-        hh var3 = oa.field_w;
+        PcmStreamMixer var2 = rk.field_e;
+        PcmSample var3 = ArchiveRequest.field_w;
         int var4 = 100;
         int var5 = param0 * qm.field_c / 64;
         int var6 = 8192;
-        var2.a(var3, var4, var5, var6);
+        var2.playSampleWithPan(var3, var4, var5, var6);
     }
 
     private final Sprite[] a(int param0, int param1) {
@@ -314,7 +314,7 @@ final class dn {
           return this.a(var3Lifetime1, -126);
         }
         if (param1 == 3) {
-          Sprite[] var3Lifetime2 = ob.field_b;
+          Sprite[] var3Lifetime2 = ArchiveProvider.field_b;
           return this.a(var3Lifetime2, -113);
         }
         if (param0 == -4898) {
@@ -337,7 +337,7 @@ final class dn {
             this.l(-88);
           }
           for (int var6 = 0; param0.length > var6; var6++) {
-            if (mf.a(var6, -64) ||
+            if (ResourceArchive.a(var6, -64) ||
               1 == var6 ||
               5 == var6) {
               Sprite var7 = param0[var6];

@@ -40,7 +40,7 @@ abstract class SpriteState extends DualLinkNode {
           ke.field_a = false;
           qi.field_N = kb.field_f;
           sf.field_c = fk.field_b;
-          ng.field_ob = dd.field_c;
+          ng.field_ob = PcmResampler.field_c;
           if (param0 != -3657) {
             SpriteState.b(30, 39);
           }

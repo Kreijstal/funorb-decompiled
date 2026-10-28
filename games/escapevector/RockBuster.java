@@ -6,7 +6,7 @@ final class RockBuster extends IntrusiveNode {
     PointCloudEffect exhaustParticles;
     static Sprite field_j;
     int exhaustWriteIndex;
-    hl flightSound;
+    PcmSampleStream flightSound;
     int xQ16;
     int angle256;
     int activeExhaustParticles;
@@ -24,7 +24,7 @@ final class RockBuster extends IntrusiveNode {
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
-          param2 = ca.a(-1, '_', param2, "");
+          param2 = MouseWheelInput.replaceCharacter(-1, '_', param2, "");
           String var3 = DynamicTerrainRenderer.a(param2, false);
           if (param0 >= -77) {
             field_j = (Sprite) null;

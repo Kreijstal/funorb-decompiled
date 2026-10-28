@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oj extends hc {
-    static hh field_N;
+    static PcmSample field_N;
     private static int[] field_K;
     static int[][] field_E;
     private static int[] field_P;
@@ -36,7 +36,7 @@ final class oj extends hc {
           field_L = null;
           return;
         }
-        field_N = (hh) null;
+        field_N = (PcmSample) null;
         field_L = null;
     }
 
@@ -74,12 +74,12 @@ final class oj extends hc {
           rf var8 = this.field_F.a(17124);
           if (var8 != of.field_f &&
             ug.field_c != var8) {
-            if (ob.field_a == var8) {
+            if (ArchiveProvider.field_a == var8) {
               Sprite var24 = ul.field_E[2];
               var24.c(var5 - (var24.width >> 1), var6 - (var24.height >> 1), 256);
               return;
             }
-            if (df.field_h != var8) {
+            if (IsaacRandom.field_h != var8) {
               return;
             }
             Sprite var23 = ul.field_E[1];
@@ -133,12 +133,12 @@ final class oj extends hc {
           return;
         }
         if (ug.field_c != var8Lifetime1) {
-          if (ob.field_a == var8Lifetime1) {
+          if (ArchiveProvider.field_a == var8Lifetime1) {
             Sprite var18 = ul.field_E[2];
             var18.c(var5Lifetime1 - (var18.width >> 1), var6Lifetime1 - (var18.height >> 1), 256);
             return;
           }
-          if (df.field_h != var8Lifetime1) {
+          if (IsaacRandom.field_h != var8Lifetime1) {
             return;
           }
           Sprite var17 = ul.field_E[1];

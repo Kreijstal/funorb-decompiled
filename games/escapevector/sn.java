@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sn {
-    static mf field_c;
+    static ResourceArchive field_c;
     private boolean field_e;
     static long field_d;
     static boolean[] field_b;
@@ -25,7 +25,7 @@ final class sn {
         field_b = null;
         field_c = null;
         if (param0 > -66) {
-          field_c = (mf) null;
+          field_c = (ResourceArchive) null;
         }
     }
 
@@ -41,104 +41,104 @@ final class sn {
         int var9 = EscapeVector.obfuscationControl;
         try {
           tb.field_D = true;
-          f.field_j = param0;
-          if (f.field_j == 0) {
-            var3_int = un.a(pf.field_e, -118, nb.field_a, sb.field_h, ac.field_a);
+          ArchiveIndex.field_j = param0;
+          if (ArchiveIndex.field_j == 0) {
+            var3_int = un.a(pf.field_e, -118, nb.field_a, Js5Transport.field_h, ac.field_a);
             var4 = var3_int + 3;
             jj.field_a = new int[var4];
-            s.field_I = new String[var4];
+            Js5NetworkRequest.field_I = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
               jj.field_a[var5] = -1;
             }
             wh.field_j = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              s.field_I[var5] = pf.field_e[var5];
+              Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
             }
-            s.field_I[var4 - 3] = "";
-            s.field_I[var4 - 2] = lh.field_a;
+            Js5NetworkRequest.field_I[var4 - 3] = "";
+            Js5NetworkRequest.field_I[var4 - 2] = lh.field_a;
             jj.field_a[-2 + var4] = 0;
             wh.field_j[0] = 4;
-            s.field_I[var4 - 1] = ah.field_k;
+            Js5NetworkRequest.field_I[var4 - 1] = ah.field_k;
             jj.field_a[-1 + var4] = 1;
             wh.field_j[1] = 5;
-          } else if (f.field_j == 1) {
-            var3_int = un.a(pf.field_e, -126, nb.field_a, sb.field_h, ac.field_a);
+          } else if (ArchiveIndex.field_j == 1) {
+            var3_int = un.a(pf.field_e, -126, nb.field_a, Js5Transport.field_h, ac.field_a);
             var4 = 2 + var3_int;
-            s.field_I = new String[var4];
+            Js5NetworkRequest.field_I = new String[var4];
             jj.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               jj.field_a[var5] = -1;
             }
             wh.field_j = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              s.field_I[var5] = pf.field_e[var5];
+              Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
             }
-            s.field_I[-2 + var4] = "";
-            s.field_I[-1 + var4] = ah.field_k;
+            Js5NetworkRequest.field_I[-2 + var4] = "";
+            Js5NetworkRequest.field_I[-1 + var4] = ah.field_k;
             jj.field_a[var4 - 1] = 0;
             wh.field_j[0] = 5;
-          } else if (f.field_j != 2) {
-            if (f.field_j == 3) {
+          } else if (ArchiveIndex.field_j != 2) {
+            if (ArchiveIndex.field_j == 3) {
               if (!NetworkGameClient.field_r.field_f) {
-                var3_int = un.a(pf.field_e, param1 ^ 114, nb.field_a, sb.field_h, DialogueScreen.field_k);
+                var3_int = un.a(pf.field_e, param1 ^ 114, nb.field_a, Js5Transport.field_h, DialogueScreen.field_k);
               } else {
-                var3_int = un.a(pf.field_e, -122, nb.field_a, sb.field_h, aj.field_e);
+                var3_int = un.a(pf.field_e, -122, nb.field_a, Js5Transport.field_h, aj.field_e);
               }
               var4 = 2 + var3_int;
-              s.field_I = new String[var4];
+              Js5NetworkRequest.field_I = new String[var4];
               jj.field_a = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 jj.field_a[var5] = -1;
               }
               wh.field_j = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                s.field_I[var5] = pf.field_e[var5];
+                Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
               }
-              s.field_I[-2 + var4] = "";
-              s.field_I[-1 + var4] = ah.field_k;
+              Js5NetworkRequest.field_I[-2 + var4] = "";
+              Js5NetworkRequest.field_I[-1 + var4] = ah.field_k;
               jj.field_a[var4 - 1] = 0;
               wh.field_j[0] = 5;
-            } else if (f.field_j == 4) {
-              var3_int = un.a(pf.field_e, -110, nb.field_a, sb.field_h, ol.field_K);
+            } else if (ArchiveIndex.field_j == 4) {
+              var3_int = un.a(pf.field_e, -110, nb.field_a, Js5Transport.field_h, ol.field_K);
               var4 = var3_int + 2;
-              s.field_I = new String[var4];
+              Js5NetworkRequest.field_I = new String[var4];
               jj.field_a = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 jj.field_a[var5] = -1;
               }
               wh.field_j = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                s.field_I[var5] = pf.field_e[var5];
+                Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
               }
-              s.field_I[var4 - 2] = "";
-              s.field_I[-1 + var4] = ah.field_k;
+              Js5NetworkRequest.field_I[var4 - 2] = "";
+              Js5NetworkRequest.field_I[-1 + var4] = ah.field_k;
               jj.field_a[var4 - 1] = 0;
               wh.field_j[0] = 5;
             } else {
-              if (5 != f.field_j) {
+              if (5 != ArchiveIndex.field_j) {
                 throw new IllegalArgumentException();
               }
-              var3_int = un.a(pf.field_e, 122, nb.field_a, sb.field_h, eg.field_a);
+              var3_int = un.a(pf.field_e, 122, nb.field_a, Js5Transport.field_h, eg.field_a);
               var4 = 3 + var3_int;
-              s.field_I = new String[var4];
+              Js5NetworkRequest.field_I = new String[var4];
               jj.field_a = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 jj.field_a[var5] = -1;
               }
               wh.field_j = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                s.field_I[var5] = pf.field_e[var5];
+                Js5NetworkRequest.field_I[var5] = pf.field_e[var5];
               }
-              s.field_I[var4 - 3] = "";
-              s.field_I[-2 + var4] = ve.field_f;
+              Js5NetworkRequest.field_I[var4 - 3] = "";
+              Js5NetworkRequest.field_I[-2 + var4] = ve.field_f;
               jj.field_a[var4 - 2] = 0;
               wh.field_j[0] = 3;
-              s.field_I[-1 + var4] = ah.field_k;
+              Js5NetworkRequest.field_I[-1 + var4] = ah.field_k;
               jj.field_a[-1 + var4] = 1;
               wh.field_j[1] = 5;
             }
           } else {
-            var3_int = un.a(pf.field_e, -101, nb.field_a, sb.field_h, r.a(fn.field_d, -63, new String[]{"<br><%0><br>"}));
+            var3_int = un.a(pf.field_e, -101, nb.field_a, Js5Transport.field_h, r.a(fn.field_d, -63, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(pf.field_e[var5])) {
@@ -155,7 +155,7 @@ final class sn {
             nn.field_i = new String[-1 - var4 + var3_int];
             qg.a(pf.field_e, 1 + var4, nn.field_i, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = un.a(pf.field_e, param1 ^ 71, nb.field_a, sb.field_h, r.a(al.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
+            var3_int = un.a(pf.field_e, param1 ^ 71, nb.field_a, Js5Transport.field_h, r.a(al.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(pf.field_e[var5])) {
                 continue;
@@ -184,23 +184,23 @@ final class sn {
             int var6 = stackIn_55_0;
             int var7 = var5 + 7 + var6;
             jj.field_a = new int[var7];
-            s.field_I = new String[var7];
+            Js5NetworkRequest.field_I = new String[var7];
             for (int var8 = 0; var8 < var7; var8++) {
               jj.field_a[var8] = -1;
             }
             wh.field_j = new int[2];
             jj.field_a[1] = 0;
-            s.field_I[1] = jh.field_j;
-            s.field_I[0] = td.field_a;
-            s.field_I[2] = bb.field_I;
+            Js5NetworkRequest.field_I[1] = jh.field_j;
+            Js5NetworkRequest.field_I[0] = td.field_a;
+            Js5NetworkRequest.field_I[2] = bb.field_I;
             wh.field_j[0] = 5;
             jj.field_a[3] = 1;
-            s.field_I[5] = "";
-            s.field_I[4] = p.field_e;
-            s.field_I[3] = bb.field_J;
+            Js5NetworkRequest.field_I[5] = "";
+            Js5NetworkRequest.field_I[4] = p.field_e;
+            Js5NetworkRequest.field_I[3] = bb.field_J;
             wh.field_j[1] = 2;
             for (int var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
-              String[] stackIn_62_0 = s.field_I;
+              String[] stackIn_62_0 = Js5NetworkRequest.field_I;
               int stackIn_62_1 = 6 + var8Lifetime2;
               if (qm.field_f.length + var8Lifetime2 - var5 < 0) {
                 stackIn_63_2 = "";
@@ -209,10 +209,10 @@ final class sn {
               }
               stackIn_62_0[stackIn_62_1] = stackIn_63_2;
             }
-            s.field_I[6 + var5] = null;
+            Js5NetworkRequest.field_I[6 + var5] = null;
             jj.field_a[var5 + 6] = -2;
             for (int var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
-              String[] stackIn_67_0 = s.field_I;
+              String[] stackIn_67_0 = Js5NetworkRequest.field_I;
               int stackIn_67_1 = var8Lifetime3 + var5 + 7;
               int stackIn_67_2 = ~var8Lifetime3;
               int stackIn_67_3 = ~tb.field_G.length;
@@ -227,16 +227,16 @@ final class sn {
           }
           cb.field_c.field_k = wh.field_j.length;
           int var3_intLifetime1 = 0;
-          for (int var4Lifetime1 = 0; var4Lifetime1 < s.field_I.length; var4Lifetime1++) {
+          for (int var4Lifetime1 = 0; var4Lifetime1 < Js5NetworkRequest.field_I.length; var4Lifetime1++) {
             int stackIn_90_0 = 25;
-            String stackIn_90_1 = s.field_I[var4Lifetime1];
+            String stackIn_90_1 = Js5NetworkRequest.field_I[var4Lifetime1];
             boolean stackIn_91_2 = !(0 > jj.field_a[var4Lifetime1]);
             int var5Lifetime1 = ee.a(stackIn_90_0, stackIn_90_1, stackIn_91_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (2 == f.field_j) {
+          if (2 == ArchiveIndex.field_j) {
             String[] var10 = tg.field_nb;
             String[] var4_ref_String__ = var10;
             for (int var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
@@ -255,10 +255,10 @@ final class sn {
               }
             }
           }
-          vi.field_a = -(var3_intLifetime1 >> 1) + rn.field_e + var3_intLifetime1;
-          ia.field_x = rn.field_e - (var3_intLifetime1 >> 1);
+          vi.field_a = -(var3_intLifetime1 >> 1) + ClientException.field_e + var3_intLifetime1;
+          ia.field_x = ClientException.field_e - (var3_intLifetime1 >> 1);
           mh.field_f = cb.field_c.field_k * (hn.field_s + en.field_k << 1);
-          for (int var4Lifetime2 = param1; s.field_I.length > var4Lifetime2; var4Lifetime2++) {
+          for (int var4Lifetime2 = param1; Js5NetworkRequest.field_I.length > var4Lifetime2; var4Lifetime2++) {
             int stackIn_112_0 = mh.field_f;
             if (jj.field_a[var4Lifetime2] < 0) {
               stackIn_113_1 = je.field_b;
@@ -268,15 +268,15 @@ final class sn {
             mh.field_f = stackIn_112_0 + stackIn_113_1;
           }
           hi.field_o = ng.field_nb - (mh.field_f >> 1);
-          cj.field_d = new int[s.field_I.length][];
+          cj.field_d = new int[Js5NetworkRequest.field_I.length][];
           int var4Lifetime3 = 0;
           int var5Lifetime3 = hi.field_o;
-          while (s.field_I.length > var4Lifetime3) {
+          while (Js5NetworkRequest.field_I.length > var4Lifetime3) {
             int var6Lifetime1 = jj.field_a[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              int var7Lifetime2 = ee.a(param1 ^ 61, s.field_I[var4Lifetime3], true);
+              int var7Lifetime2 = ee.a(param1 ^ 61, Js5NetworkRequest.field_I[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + hn.field_s;
-              int var8Lifetime1 = rn.field_e - (var7Lifetime2 >> 1);
+              int var8Lifetime1 = ClientException.field_e - (var7Lifetime2 >> 1);
               cj.field_d[var4Lifetime3] = new int[4];
               cj.field_d[var4Lifetime3][0] = var8Lifetime1 - fe.field_k;
               cj.field_d[var4Lifetime3][1] = var5Lifetime3;
@@ -288,8 +288,8 @@ final class sn {
             }
             var4Lifetime3++;
           }
-          if (2 != f.field_j) {
-            cb.field_c.a(param1 ^ 90, param2, hk.a((byte) 122, dh.field_d, bj.field_y), 0);
+          if (2 != ArchiveIndex.field_j) {
+            cb.field_c.a(param1 ^ 90, param2, CachedArchiveProvider.a((byte) 122, dh.field_d, bj.field_y), 0);
           } else {
             cb.field_c.a(param1 + 91, param2, -1, -1);
           }

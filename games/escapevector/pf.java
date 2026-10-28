@@ -636,7 +636,7 @@ final class pf {
         try {
           dk var10 = param2[var9];
           int var11 = this.a((byte) 120, var10);
-          rk.field_e.a(pc.field_a, param4, param5, var11);
+          rk.field_e.playSampleWithPan(pc.field_a, param4, param5, var11);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "pf.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -802,7 +802,7 @@ final class pf {
           }
           int var11Lifetime1 = 640;
           int var12 = DynamicTerrainRenderer.a(1, var9, var11Lifetime1, var10);
-          int var13 = dd.a(var10, (byte) 86, var11Lifetime1, var9, var12);
+          int var13 = PcmResampler.a(var10, (byte) 86, var11Lifetime1, var9, var12);
           int var14 = 0;
           int var15 = var14 + var13;
           if (param0 != 3390) {
@@ -867,8 +867,8 @@ final class pf {
         this.field_d = new int[var6];
         qg.a(var4, 0, this.field_d, 0, var4.length);
         qg.a(var5, 0, this.field_d, var4.length, var5.length);
-        fi.a(this.field_c, 0);
-        fi.a(this.field_a, 0);
+        IndexedSpriteState.a(this.field_c, 0);
+        IndexedSpriteState.a(this.field_a, 0);
     }
 
     final static void a(boolean param0, String param1, Throwable param2) {
@@ -878,7 +878,7 @@ final class pf {
           try {
             String var3 = "";
             if (param2 != null) {
-              var3 = jg.a(param2, 41);
+              var3 = SectorCacheStore.a(param2, 41);
             }
             if (param1 != null) {
               if (param2 != null) {
@@ -894,7 +894,7 @@ final class pf {
             if (IntrusiveNode.field_c == null) {
               return;
             }
-            lk stackIn_13_0 = ae.field_a;
+            SystemTaskService stackIn_13_0 = ae.field_a;
             int stackIn_13_1 = -12;
             java.net.URL stackIn_13_2 = null;
             java.net.URL stackIn_13_3 = null;
@@ -907,7 +907,7 @@ final class pf {
               java.net.URL stackIn_14_3 = null;
               stackIn_14_6 = "" + eb.field_J;
             }
-            la var4 = ((lk) (Object) stackIn_13_0).a((byte) stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(lk.field_s).append("&v2=").append(lk.field_v).append("&e=").append(var7).toString()));
+            SystemTask var4 = ((SystemTaskService) (Object) stackIn_13_0).a((byte) stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(SystemTaskService.field_s).append("&v2=").append(SystemTaskService.field_v).append("&e=").append(var7).toString()));
             while (var4.field_f == 0) {
               en.a((byte) 105, 1L);
             }
@@ -965,7 +965,7 @@ final class pf {
         }
         try {
           int var9 = this.a((byte) -97, var6);
-          rk.field_e.a(oa.field_w, param2, param3, var9);
+          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, param2, param3, var9);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "pf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

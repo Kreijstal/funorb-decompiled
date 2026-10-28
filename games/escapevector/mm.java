@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mm {
-    static hl field_b;
+    static PcmSampleStream field_b;
     static String field_c;
     static String field_a;
 
@@ -18,10 +18,10 @@ final class mm {
             field_a = (String) null;
           }
           if (0 == mj.field_d) {
-            rk.field_e.a(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
+            rk.field_e.playSampleWithPan(pc.field_a, 100, 6144 * qm.field_c / 64, 8192);
           }
           if (10 == mj.field_d) {
-            rk.field_e.a(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
+            rk.field_e.playSampleWithPan(pc.field_a, 100, qm.field_c * 6144 / 64, 8192);
           }
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
@@ -58,7 +58,7 @@ final class mm {
 
     final static int a(int param0, boolean param1, int param2, int param3) {
         if (param0 != 64) {
-          field_b = (hl) null;
+          field_b = (PcmSampleStream) null;
           return dj.a(param0 + 6381);
         }
         return dj.a(param0 + 6381);
@@ -72,7 +72,7 @@ final class mm {
         if (fa.field_c[param1]) {
           return true;
         }
-        mf var4 = fi.field_j;
+        ResourceArchive var4 = IndexedSpriteState.field_j;
         if (5 == param1) {
           en.a(var4, 5);
           fn.a((byte) 53);
@@ -81,8 +81,8 @@ final class mm {
         if (param1 != 4) {
           if (var4.a(param0 - 4, da.field_d[param1])) {
             tk.field_a[param1] = fe.a(da.field_d[param1], var4, "texture", true);
-            dd.field_a[param1] = fe.a(da.field_d[param1], var4, "frosting", true);
-            dd.field_a[param1].c();
+            PcmResampler.field_a[param1] = fe.a(da.field_d[param1], var4, "frosting", true);
+            PcmResampler.field_a[param1].c();
             dm.a(var4, param1, false);
             fa.field_c[param1] = true;
             fn.a((byte) 53);

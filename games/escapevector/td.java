@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class td {
-    static hh field_c;
+    static PcmSample field_c;
     static String field_a;
     static int[] field_b;
 

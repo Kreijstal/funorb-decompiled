@@ -6,17 +6,17 @@ import java.io.*;
 final class ji {
     static IntrusiveDeque field_c;
     static String field_a;
-    static ca field_b;
+    static MouseWheelInput field_b;
 
-    final static mf a(boolean param0, int param1, boolean param2, int param3, boolean param4, byte param5) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, boolean param4, byte param5) {
         try {
           Object var6 = null;
           try {
             var6 = null;
             if (null != IntPoint.field_d.field_b) {
-              uc.field_h = new rg(IntPoint.field_d.field_b, 5200, 0);
+              uc.field_h = new BufferedRandomAccessFile(IntPoint.field_d.field_b, 5200, 0);
               IntPoint.field_d.field_b = null;
-              var6 = new jg(255, uc.field_h, new rg(IntPoint.field_d.field_x, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, uc.field_h, new BufferedRandomAccessFile(IntPoint.field_d.field_x, 12000, 0), 2097152);
             }
             if (param5 != 114) {
               field_a = (String) null;
@@ -24,19 +24,19 @@ final class ji {
             Object var7 = null;
             if (uc.field_h != null) {
               if (bg.field_e == null) {
-                bg.field_e = new rg[IntPoint.field_d.field_u.length];
+                bg.field_e = new BufferedRandomAccessFile[IntPoint.field_d.field_u.length];
               }
               if (bg.field_e[param1] == null) {
-                bg.field_e[param1] = new rg(IntPoint.field_d.field_u[param1], 12000, 0);
+                bg.field_e[param1] = new BufferedRandomAccessFile(IntPoint.field_d.field_u[param1], 12000, 0);
                 IntPoint.field_d.field_u[param1] = null;
               }
-              var7 = new jg(param1, uc.field_h, bg.field_e[param1], 2097152);
+              var7 = new SectorCacheStore(param1, uc.field_h, bg.field_e[param1], 2097152);
             }
-            hk var8 = af.field_e.a(param2, 255, (jg) (var6), param1, (jg) (var7));
+            CachedArchiveProvider var8 = af.field_e.a(param2, 255, (SectorCacheStore) (var6), param1, (SectorCacheStore) (var7));
             if (param0) {
               var8.b((byte) -49);
             }
-            mf stackIn_17_0 = new mf(var8, param4, param3);
+            ResourceArchive stackIn_17_0 = new ResourceArchive(var8, param4, param3);
             return stackIn_17_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             Throwable decompiledCaughtException = decompiledCaughtParameter0;

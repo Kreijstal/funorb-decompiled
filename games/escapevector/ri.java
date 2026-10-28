@@ -3,7 +3,7 @@
  */
 final class ri {
     static String field_a;
-    static hh field_b;
+    static PcmSample field_b;
 
     final static void a(int param0, int param1, byte param2) {
         bg.field_f = param1;
@@ -45,17 +45,17 @@ final class ri {
         field_b = null;
         field_a = null;
         if (param0 >= -23) {
-          field_b = (hh) null;
+          field_b = (PcmSample) null;
         }
     }
 
     final static void a(byte param0) {
         int var12 = EscapeVector.obfuscationControl;
         try {
-          c var14 = om.field_g;
+          CipherPacketBuffer var14 = om.field_g;
           int var2 = var14.readUnsignedByte(0);
           if (param0 != 113) {
-            field_b = (hh) null;
+            field_b = (PcmSample) null;
           }
           rl var3 = (rl) (cd.field_s.first(false));
           while (var3 != null) {
@@ -80,9 +80,9 @@ final class ri {
             for (int var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               km.a(var14, 1238559653);
               if (var6_intLifetime1 != 0) {
-                af.a(1, hk.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, bk.field_s);
+                af.a(1, CachedArchiveProvider.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, bk.field_s);
               } else {
-                af.a(param0 - 112, hk.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, bk.field_s);
+                af.a(param0 - 112, CachedArchiveProvider.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, bk.field_s);
               }
             }
             DynamicTerrainRenderer.b(var5, 0);
@@ -96,10 +96,10 @@ final class ri {
               var6[0][var10] = bl.field_l[var11];
               var18[0][var10 * 4] = DualLinkNode.field_k[var11];
               var18[0][1 + 4 * var10] = pc.field_c[var11];
-              var18[0][var10 * 4 + 2] = mi.field_k[var11];
+              var18[0][var10 * 4 + 2] = RasterSnapshot.field_k[var11];
               var18[0][3 + var10 * 4] = tm.field_fb[var11];
               if (SeekerMine.a(bl.field_l[var11], (byte) 123) &&
-                tm.field_fb[var11] + pc.field_c[var11] + mi.field_k[var11] == 0) {
+                tm.field_fb[var11] + pc.field_c[var11] + RasterSnapshot.field_k[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -114,10 +114,10 @@ final class ri {
               var6[1][var13] = bl.field_l[var11Lifetime1];
               var18[1][var13 * 4] = DualLinkNode.field_k[var11Lifetime1];
               var18[1][var13 * 4 + 1] = pc.field_c[var11Lifetime1];
-              var18[1][var13 * 4 + 2] = mi.field_k[var11Lifetime1];
+              var18[1][var13 * 4 + 2] = RasterSnapshot.field_k[var11Lifetime1];
               var18[1][3 + var13 * 4] = tm.field_fb[var11Lifetime1];
               if (SeekerMine.a(bl.field_l[var11Lifetime1], (byte) 117) &&
-                0 == tm.field_fb[var11Lifetime1] + pc.field_c[var11Lifetime1] + mi.field_k[var11Lifetime1]) {
+                0 == tm.field_fb[var11Lifetime1] + pc.field_c[var11Lifetime1] + RasterSnapshot.field_k[var11Lifetime1]) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -137,12 +137,12 @@ final class ri {
     }
 
     final static void a(int param0) {
-        if (null == df.field_d) {
+        if (null == IsaacRandom.field_d) {
           return;
         }
-        bo.a(df.field_d, (byte) -59);
-        df.field_d.a(NetworkGameClient.field_r, true);
-        df.field_d = null;
+        bo.a(IsaacRandom.field_d, (byte) -59);
+        IsaacRandom.field_d.a(NetworkGameClient.field_r, true);
+        IsaacRandom.field_d = null;
         if (null != km.field_n) {
           km.field_n.a(param0 ^ -25123);
         }

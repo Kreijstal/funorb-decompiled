@@ -171,7 +171,7 @@ class ld extends vj {
         }
     }
 
-    final static hj c(byte param0) {
+    final static PcmStreamMixer c(byte param0) {
         if (param0 <= 104) {
           Sprite[] var2 = (Sprite[]) null;
           ld.a(-62, (Sprite[]) null, -58, -40, -5, -81);

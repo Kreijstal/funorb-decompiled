@@ -6,7 +6,7 @@ import java.io.*;
 final class BoundedRandomAccessFile {
     static int[] field_c;
     static long field_g;
-    static wb field_b;
+    static ReverbPcmStream field_b;
     private RandomAccessFile file;
     private long position;
     private long maximumLength;
@@ -95,7 +95,7 @@ final class BoundedRandomAccessFile {
         if (!param0) {
           return new ee[]{kf.field_q, oh.field_n, qj.field_g};
         }
-        field_b = (wb) null;
+        field_b = (ReverbPcmStream) null;
         return new ee[]{kf.field_q, oh.field_n, qj.field_g};
     }
 
@@ -117,8 +117,8 @@ final class BoundedRandomAccessFile {
     }
 
     final static void a(int param0, int param1, ll param2) {
-        c var3 = om.field_c;
-        var3.a(param1, true);
+        CipherPacketBuffer var3 = om.field_c;
+        var3.writeCipheredOpcode(param1, true);
         var3.f(param2.field_g, -123);
         if (param0 >= -42) {
           return;

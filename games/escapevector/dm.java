@@ -38,7 +38,7 @@ final class dm extends IntrusiveNode {
         }
     }
 
-    final static void a(mf param0, int param1, boolean param2) {
+    final static void a(ResourceArchive param0, int param1, boolean param2) {
         String stackIn_12_2 = null;
         int var4 = EscapeVector.obfuscationControl;
         try {
@@ -50,7 +50,7 @@ final class dm extends IntrusiveNode {
             Sprite[] stackIn_6_0 = sl.field_b[param1];
             int stackIn_6_1 = var3_int;
             String stackIn_6_2 = da.field_d[param1];
-            mf stackIn_6_3 = (mf) (param0);
+            ResourceArchive stackIn_6_3 = (ResourceArchive) (param0);
             String stackIn_6_4 = "layer" + var3_int;
             boolean stackIn_7_5 = !(param2);
             stackIn_6_0[stackIn_6_1] = fe.a(stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);

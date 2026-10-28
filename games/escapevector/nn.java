@@ -10,7 +10,7 @@ final class nn {
     static String field_e;
     static String field_c;
     private long field_h;
-    static hh field_g;
+    static PcmSample field_g;
 
     final void a(long param0, DualLinkNode param1, int param2) {
         String stackIn_8_2 = null;
@@ -45,7 +45,7 @@ final class nn {
     public static void b(byte param0) {
         field_c = null;
         if (param0 <= 48) {
-          field_g = (hh) null;
+          field_g = (PcmSample) null;
           field_g = null;
           field_a = null;
           field_i = null;

@@ -34,14 +34,14 @@ final class TerrainMap {
                 field_e = (String) null;
               }
               if (ni.field_N != null) {
-                nb.field_c.b((il) ((Object) ni.field_N));
+                nb.field_c.removeListener((PcmMixerListener) ((Object) ni.field_N));
               }
               kn.field_b = param0;
               ni.field_N = new o(param1);
               ni.field_N.d(kn.field_b * kc.field_b / 64);
               ni.field_N.a(param2);
               ig.field_l.b();
-              nb.field_c.c((il) ((Object) ni.field_N));
+              nb.field_c.scheduleListener((PcmMixerListener) ((Object) ni.field_N));
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

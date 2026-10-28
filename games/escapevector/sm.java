@@ -90,8 +90,8 @@ abstract class sm implements el {
 
     final static void a(qd param0, int param1, boolean param2) {
         try {
-          c var3 = om.field_c;
-          var3.a(param1, param2);
+          CipherPacketBuffer var3 = om.field_c;
+          var3.writeCipheredOpcode(param1, param2);
           var3.position = var3.position + 1;
           int var4 = var3.position;
           var3.f(1, -123);
@@ -117,7 +117,7 @@ abstract class sm implements el {
         int var2Lifetime5;
         if (param0) {
           field_a = (String) null;
-          if (s.field_x <= 0) {
+          if (Js5NetworkRequest.field_x <= 0) {
             if (!aj.b(-104)) {
               var2 = 1;
               if (null != km.field_n) {
@@ -140,13 +140,13 @@ abstract class sm implements el {
             return;
           }
           if (km.field_n != null) {
-            df.field_d = km.field_n.a(!param0 ? true : false);
+            IsaacRandom.field_d = km.field_n.a(!param0 ? true : false);
             ue.b(2, (byte) 101);
-            if (null == df.field_d) {
+            if (null == IsaacRandom.field_d) {
               var2Lifetime4 = 3;
             } else {
               var2Lifetime4 = 2;
-              rc.a(df.field_d, true);
+              rc.a(IsaacRandom.field_d, true);
             }
             if (null != km.field_n) {
               return;
@@ -157,12 +157,12 @@ abstract class sm implements el {
             sn.a(var2Lifetime4, 0, param1);
             return;
           }
-          df.field_d = al.a(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
-          if (null == df.field_d) {
+          IsaacRandom.field_d = al.a(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
+          if (null == IsaacRandom.field_d) {
             var2Lifetime5 = 3;
           } else {
             var2Lifetime5 = 2;
-            rc.a(df.field_d, true);
+            rc.a(IsaacRandom.field_d, true);
           }
           if (null != km.field_n) {
             return;
@@ -173,7 +173,7 @@ abstract class sm implements el {
           sn.a(var2Lifetime5, 0, param1);
           return;
         }
-        if (s.field_x <= 0) {
+        if (Js5NetworkRequest.field_x <= 0) {
           if (!aj.b(-104)) {
             int var2Lifetime1 = 1;
             if (null == km.field_n &&
@@ -194,13 +194,13 @@ abstract class sm implements el {
           return;
         }
         if (km.field_n != null) {
-          df.field_d = km.field_n.a(!param0 ? true : false);
+          IsaacRandom.field_d = km.field_n.a(!param0 ? true : false);
           ue.b(2, (byte) 101);
-          if (null == df.field_d) {
+          if (null == IsaacRandom.field_d) {
             var2Lifetime2 = 3;
           } else {
             var2Lifetime2 = 2;
-            rc.a(df.field_d, true);
+            rc.a(IsaacRandom.field_d, true);
           }
           if (null == km.field_n &&
             e.field_d) {
@@ -209,12 +209,12 @@ abstract class sm implements el {
           }
           return;
         }
-        df.field_d = al.a(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
-        if (null == df.field_d) {
+        IsaacRandom.field_d = al.a(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
+        if (null == IsaacRandom.field_d) {
           var2Lifetime3 = 3;
         } else {
           var2Lifetime3 = 2;
-          rc.a(df.field_d, true);
+          rc.a(IsaacRandom.field_d, true);
         }
         if (null == km.field_n &&
           e.field_d) {
@@ -224,7 +224,7 @@ abstract class sm implements el {
     }
 
     final static void b(byte param0) {
-        jh.a(true, kl.field_o, false, mf.field_b);
+        jh.a(true, kl.field_o, false, ResourceArchive.field_b);
         if (param0 > -45) {
           return;
         }

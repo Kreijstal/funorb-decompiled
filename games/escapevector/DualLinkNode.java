@@ -50,7 +50,7 @@ class DualLinkNode extends IntrusiveNode {
         boolean var2_int = (4 == param1);
         Sprite[] var3 = mb.field_f;
         if (var2_int) {
-          var3 = ob.field_b;
+          var3 = ArchiveProvider.field_b;
         }
         if (var3 == null) {
           return;
@@ -69,7 +69,7 @@ class DualLinkNode extends IntrusiveNode {
           for (int var5 = 0; var5 < var3.length; var5++) {
             Sprite var6 = var3[var5];
             Sprite var7 = var4[var5];
-            fn var8 = new fn(rn.field_b[var5], rn.field_f[var5]);
+            fn var8 = new fn(ClientException.field_b[var5], ClientException.field_f[var5]);
             AccountRegistrationPanel.field_M[var5] = new rk(var6, var7, var8);
           }
           TerrainMaskSupport.a(105);
@@ -78,9 +78,9 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final static void a(String param0, lk param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(String param0, SystemTaskService param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         IntPoint.field_d = param1;
-        tl.field_l = param7;
+        SeekerPulseStream.field_l = param7;
         kl.field_n = param8;
         if (param3 != -22183) {
           return;
@@ -91,8 +91,8 @@ class DualLinkNode extends IntrusiveNode {
           ce.field_j = param5;
           mn.field_n = param6;
           kh.field_c = param0;
-          od.field_j = (sb) ((Object) new bk());
-          uk.field_b = new kk(param1);
+          od.field_j = (Js5Transport) ((Object) new bk());
+          uk.field_b = new DiskCacheWorker(param1);
           af.field_e = new sk(od.field_j, uk.field_b);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "fl.W(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');

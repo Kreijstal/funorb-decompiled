@@ -6,7 +6,7 @@ final class pb {
     static boolean field_d;
     static int field_b;
     static int[] field_c;
-    static wl field_e;
+    static BitmapFont field_e;
 
     final static int a(byte param0, dk[] param1) {
         String stackIn_21_2 = null;
@@ -58,7 +58,7 @@ final class pb {
         ll.a(70, 8, param0 ^ 12, LaserGateSpan.field_k);
         if (LaserGateSpan.field_k >= 95) {
           if (LaserGateSpan.field_k < 110) {
-            mf.a(fg.field_b, (-dg.field_t.fullWidth + 640) / 2, -(LaserGateSpan.field_k * 4) + 440, dg.field_t, -122);
+            ResourceArchive.a(fg.field_b, (-dg.field_t.fullWidth + 640) / 2, -(LaserGateSpan.field_k * 4) + 440, dg.field_t, -122);
             if (param0 != 4) {
               field_b = -65;
               return;

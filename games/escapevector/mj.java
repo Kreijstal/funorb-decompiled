@@ -28,14 +28,14 @@ final class mj {
             }
             if (sf.field_d == al.field_d) {
               if (!param4) {
-                f.field_m = bo.a(param3, false, 24564, param2);
+                ArchiveIndex.field_m = bo.a(param3, false, 24564, param2);
               } else {
-                f.field_m = ei.a(param0 - 1, false, mg.field_d, (String) null, param2);
+                ArchiveIndex.field_m = ei.a(param0 - 1, false, mg.field_d, (String) null, param2);
               }
               om.field_c.position = 0;
               om.field_c.f(14, -123);
-              om.field_c.f(f.field_m.a((byte) 32).field_d, -123);
-              rn.a(-1, 30785);
+              om.field_c.f(ArchiveIndex.field_m.a((byte) 32).field_d, -123);
+              ClientException.a(-1, 30785);
               al.field_d = tc.field_p;
             }
             if (al.field_d == tc.field_p &&
@@ -54,7 +54,7 @@ final class mj {
               bo.a(30000, 8)) {
               SecondaryIntrusiveDeque.field_b = om.field_g.i(param0 - 800509814);
               om.field_g.position = 0;
-              oh.a(f.field_m, param4, param1, param5, (byte) -99);
+              oh.a(ArchiveIndex.field_m, param4, param1, param5, (byte) -99);
               al.field_d = mc.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -79,16 +79,16 @@ final class mj {
                 }
               }
               if (decompiledFrameRemainder0) {
-                al.field_d = rn.field_c;
+                al.field_d = ClientException.field_c;
                 hi.field_r = -1;
               }
             }
-            if (al.field_d == rn.field_c &&
+            if (al.field_d == ClientException.field_c &&
               ll.d(param0 + 10549)) {
               mg.field_d = om.field_g.i(-800509813);
               mg.field_b = om.field_g.readUnsignedByte(0);
               om.field_g.readUnsignedByte(0);
-              s.field_x = om.field_g.readUnsignedShort(1952);
+              Js5NetworkRequest.field_x = om.field_g.readUnsignedShort(1952);
               String var6 = om.field_g.d(-15208);
               int var7 = om.field_g.readUnsignedByte(0);
               if ((1 & var7) != 0) {
@@ -117,16 +117,16 @@ final class mj {
               cc.field_k = sf.a(-83, var11);
               LaserGateSpan.field_g = om.field_g.readUnsignedByte(param0 - 1);
               al.field_d = ck.field_t;
-              if (f.field_m.a((byte) 32) == md.field_E) {
+              if (ArchiveIndex.field_m.a((byte) 32) == md.field_E) {
                 kf.field_q.a(27002, PointCloudEffect.d((byte) -114));
-              } else if (f.field_m.a((byte) 32) == ja.field_a) {
+              } else if (ArchiveIndex.field_m.a((byte) 32) == ja.field_a) {
                 oh.field_n.a(27002, PointCloudEffect.d((byte) -71));
               }
               e.field_c = false;
               if (var6 != null) {
                 ag.a(var6, (byte) 30, PointCloudEffect.d((byte) -119));
               }
-              if (s.field_x <= 0 &&
+              if (Js5NetworkRequest.field_x <= 0 &&
                 !ff.field_g) {
                 try {
                   sd.a(PointCloudEffect.d((byte) -107), "unzap", param0 - 29156);
@@ -142,14 +142,14 @@ final class mj {
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (s.field_x > 0) {
+              if (Js5NetworkRequest.field_x > 0) {
                 ej.field_d = true;
               }
-              om.field_c.a(rh.field_O, (byte) 107);
+              om.field_c.initializeCipher(rh.field_O, (byte) 107);
               for (int var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 rh.field_O[var8Lifetime1] = rh.field_O[var8Lifetime1] + 50;
               }
-              om.field_g.a(rh.field_O, (byte) 85);
+              om.field_g.initializeCipher(rh.field_O, (byte) 85);
               int stackIn_81_0 = cd.field_v;
               return stackIn_81_0;
             }
@@ -165,7 +165,7 @@ final class mj {
               if (cd.field_v == 7) {
                 cd.field_v = 3;
               }
-              ca.field_a = om.field_g.c(false);
+              MouseWheelInput.field_a = om.field_g.c(false);
               e.field_c = false;
               int stackIn_93_0 = cd.field_v;
               return stackIn_93_0;
@@ -173,9 +173,9 @@ final class mj {
             if (null == pg.field_c) {
               if (e.field_c) {
                 if (un.e(64655) > 30000L) {
-                  ca.field_a = DualLinkNode.field_l;
+                  MouseWheelInput.field_a = DualLinkNode.field_l;
                 } else {
-                  ca.field_a = wk.field_a;
+                  MouseWheelInput.field_a = wk.field_a;
                 }
                 e.field_c = false;
                 int stackIn_102_0 = 3;
@@ -224,7 +224,7 @@ final class mj {
         field_c = null;
     }
 
-    final static mf a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param1 >= -122) {
           mj.a((byte) 58);
         }

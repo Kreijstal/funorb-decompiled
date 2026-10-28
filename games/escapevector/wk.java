@@ -4,7 +4,7 @@
 final class wk {
     static String field_f;
     static String field_a;
-    static mf field_e;
+    static ResourceArchive field_e;
     static int field_d;
     static boolean[] field_b;
     static boolean field_c;
@@ -12,8 +12,8 @@ final class wk {
     public static void a(boolean param0) {
         field_f = null;
         if (param0) {
-          c var2 = (c) null;
-          wk.a(10, (c) null);
+          CipherPacketBuffer var2 = (CipherPacketBuffer) null;
+          wk.a(10, (CipherPacketBuffer) null);
         }
         field_e = null;
         field_a = null;
@@ -36,17 +36,17 @@ final class wk {
           !(pc.field_c.length >= param0)) {
           pc.field_c = new int[2 * param0];
         }
-        if (mi.field_k == null ||
-          !(mi.field_k.length >= param0)) {
-          mi.field_k = new int[2 * param0];
+        if (RasterSnapshot.field_k == null ||
+          !(RasterSnapshot.field_k.length >= param0)) {
+          RasterSnapshot.field_k = new int[2 * param0];
         }
         if (tm.field_fb == null ||
           !(tm.field_fb.length >= param0)) {
           tm.field_fb = new int[2 * param0];
         }
-        if (null == th.field_v ||
-          !(param0 <= th.field_v.length)) {
-          th.field_v = new int[2 * param0];
+        if (null == Bzip2State.field_v ||
+          !(param0 <= Bzip2State.field_v.length)) {
+          Bzip2State.field_v = new int[2 * param0];
         }
         if (cd.field_q == null ||
           !(param2 + param0 <= cd.field_q.length)) {
@@ -58,7 +58,7 @@ final class wk {
         }
         pl.field_r = -2147483648;
         jf.field_J = 0;
-        oa.field_t = -2147483648;
+        ArchiveRequest.field_t = -2147483648;
         pg.field_d = 2147483647;
         vl.field_e = 2147483647;
     }
@@ -134,11 +134,11 @@ final class wk {
         }
     }
 
-    final static ia a(int param0, c param1) {
+    final static ia a(int param0, CipherPacketBuffer param1) {
         String stackIn_28_2 = null;
         int var9 = EscapeVector.obfuscationControl;
         try {
-          int var2_int = param1.j(8, 8);
+          int var2_int = param1.readBits(8, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -146,33 +146,33 @@ final class wk {
           boolean var4 = (da.a(param1, (byte) -104));
           boolean var5 = (da.a(param1, (byte) -114));
           ia var6 = new ia();
-          var6.field_K = (short)param1.j(16, 8);
-          var6.field_L = rg.a(param1, 16, var6.field_L, -1);
-          var6.field_r = rg.a(param1, 16, var6.field_r, -1);
-          var6.field_J = rg.a(param1, 16, var6.field_J, -1);
-          var6.field_D = (short)param1.j(16, 8);
-          var6.field_e = rg.a(param1, 16, var6.field_e, -1);
-          var6.field_o = rg.a(param1, 16, var6.field_o, -1);
-          var6.field_f = rg.a(param1, 16, var6.field_f, -1);
+          var6.field_K = (short)param1.readBits(16, 8);
+          var6.field_L = BufferedRandomAccessFile.a(param1, 16, var6.field_L, -1);
+          var6.field_r = BufferedRandomAccessFile.a(param1, 16, var6.field_r, -1);
+          var6.field_J = BufferedRandomAccessFile.a(param1, 16, var6.field_J, -1);
+          var6.field_D = (short)param1.readBits(16, 8);
+          var6.field_e = BufferedRandomAccessFile.a(param1, 16, var6.field_e, -1);
+          var6.field_o = BufferedRandomAccessFile.a(param1, 16, var6.field_o, -1);
+          var6.field_f = BufferedRandomAccessFile.a(param1, 16, var6.field_f, -1);
           if (var4) {
-            var6.field_M = (short)param1.j(16, 8);
-            var6.field_N = rg.a(param1, 16, var6.field_N, -1);
-            var6.field_q = rg.a(param1, 16, var6.field_q, -1);
-            var6.field_w = rg.a(param1, 16, var6.field_w, -1);
-            var6.field_h = rg.a(param1, 16, var6.field_h, -1);
-            var6.field_u = rg.a(param1, 16, var6.field_u, -1);
-            var6.field_j = rg.a(param1, 16, var6.field_j, -1);
+            var6.field_M = (short)param1.readBits(16, 8);
+            var6.field_N = BufferedRandomAccessFile.a(param1, 16, var6.field_N, -1);
+            var6.field_q = BufferedRandomAccessFile.a(param1, 16, var6.field_q, -1);
+            var6.field_w = BufferedRandomAccessFile.a(param1, 16, var6.field_w, -1);
+            var6.field_h = BufferedRandomAccessFile.a(param1, 16, var6.field_h, -1);
+            var6.field_u = BufferedRandomAccessFile.a(param1, 16, var6.field_u, -1);
+            var6.field_j = BufferedRandomAccessFile.a(param1, 16, var6.field_j, -1);
           }
           if (var5) {
-            param1.j(16, 8);
-            var6.field_v = rg.a(param1, 16, var6.field_v, -1);
-            var6.field_c = rg.a(param1, 16, var6.field_c, -1);
-            var6.field_Q = rg.a(param1, 16, var6.field_Q, -1);
-            var6.field_G = rg.a(param1, 16, var6.field_G, -1);
-            var6.field_F = rg.a(param1, 16, var6.field_F, -1);
+            param1.readBits(16, 8);
+            var6.field_v = BufferedRandomAccessFile.a(param1, 16, var6.field_v, -1);
+            var6.field_c = BufferedRandomAccessFile.a(param1, 16, var6.field_c, -1);
+            var6.field_Q = BufferedRandomAccessFile.a(param1, 16, var6.field_Q, -1);
+            var6.field_G = BufferedRandomAccessFile.a(param1, 16, var6.field_G, -1);
+            var6.field_F = BufferedRandomAccessFile.a(param1, 16, var6.field_F, -1);
           }
           if (da.a(param1, (byte) -104)) {
-            var6.field_m = rg.a(param1, 16, var6.field_m, -1);
+            var6.field_m = BufferedRandomAccessFile.a(param1, 16, var6.field_m, -1);
           }
           if (da.a(param1, (byte) -102)) {
             var6.field_n = jm.a(16, 118, param1, var6.field_n);
@@ -204,7 +204,7 @@ final class wk {
         }
     }
 
-    final static String a(String param0, boolean param1, String param2, String param3, mf param4) {
+    final static String a(String param0, boolean param1, String param2, String param3, ResourceArchive param4) {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;

@@ -7,7 +7,7 @@ final class od {
     static boolean field_k;
     static boolean field_s;
     static String field_d;
-    static sb field_j;
+    static Js5Transport field_j;
     static int field_q;
     static boolean field_n;
     static Sprite field_b;
@@ -118,7 +118,7 @@ final class od {
         if (var7 >= var8) {
           var7 = -this.field_l.fullHeight + (-1 + var8);
         }
-        hh var9 = sf.field_e[0];
+        PcmSample var9 = sf.field_e[0];
         PointCloudEffect var10 = new PointCloudEffect(this.field_l, var6, var7, var9);
         this.field_o.addLast(-12328, var10);
     }
@@ -196,7 +196,7 @@ final class od {
               bn.a(0, om.field_c, qj.field_a, q.field_O, cf.field_c);
               om.field_c.e(-38, -var9 + om.field_c.position);
             }
-            rn.a(-1, 30785);
+            ClientException.a(-1, 30785);
             al.field_d = IntrusiveDeque.field_a;
           }
           if (IntrusiveDeque.field_a == al.field_d &&
@@ -206,11 +206,11 @@ final class od {
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
               jf.field_I = new String[-100 + var9Lifetime1];
-              al.field_d = mf.field_k;
+              al.field_d = ResourceArchive.field_k;
             } else {
               if (var9Lifetime1 == 248) {
                 se.a((byte) 81, PointCloudEffect.d((byte) -108));
-                ca.field_a = w.field_fb;
+                MouseWheelInput.field_a = w.field_fb;
                 nm.a(param0 ^ -16);
                 e.field_c = false;
                 int stackIn_34_0 = var9Lifetime1;
@@ -227,7 +227,7 @@ final class od {
               }
             }
           }
-          if (al.field_d == mf.field_k) {
+          if (al.field_d == ResourceArchive.field_k) {
             int var9Lifetime2 = 2;
             if (bo.a(param0 + 30032, var9Lifetime2)) {
               int var10Lifetime1 = om.field_g.readUnsignedShort(param0 + 1984);
@@ -247,7 +247,7 @@ final class od {
           if (al.field_d == mh.field_h &&
             ll.d(param0 ^ -10538)) {
             if (cd.field_v != 255) {
-              ca.field_a = om.field_g.c(false);
+              MouseWheelInput.field_a = om.field_g.c(false);
             } else {
               String var9_ref_String = om.field_g.d(param0 - 15176);
               if (var9_ref_String != null) {
@@ -262,9 +262,9 @@ final class od {
           if (pg.field_c == null) {
             if (e.field_c) {
               if (30000L < un.e(64655)) {
-                ca.field_a = DualLinkNode.field_l;
+                MouseWheelInput.field_a = DualLinkNode.field_l;
               } else {
-                ca.field_a = wk.field_a;
+                MouseWheelInput.field_a = wk.field_a;
               }
               e.field_c = false;
               int stackIn_61_0 = 249;
@@ -329,12 +329,12 @@ final class od {
           this.field_a = this.field_c;
         }
         if (1 == this.field_a) {
-          hj var3 = pl.field_n;
-          hh var4 = vn.field_c;
+          PcmStreamMixer var3 = pl.field_n;
+          PcmSample var4 = RasterBuffer.field_c;
           int var5 = 100;
           int var6 = qm.field_c * 6144 / 64;
           int var7 = 8192;
-          var3.a(var4, var5, var6, var7);
+          var3.playSampleWithPan(var4, var5, var6, var7);
         }
     }
 
@@ -409,7 +409,7 @@ final class od {
           var4 = 0;
           var5 = 0;
         }
-        hl var6 = this.field_f.field_lc;
+        PcmSampleStream var6 = this.field_f.field_lc;
         if (var6 == null) {
           return;
         }

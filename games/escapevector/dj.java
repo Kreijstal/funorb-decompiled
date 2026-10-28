@@ -5,7 +5,7 @@ final class dj {
     static String field_b;
     static boolean[] field_a;
     static fn[] field_d;
-    static hl field_c;
+    static PcmSampleStream field_c;
 
     final static void a(int param0, int param1, int param2) {
         int var4 = EscapeVector.obfuscationControl;
@@ -32,7 +32,7 @@ final class dj {
           if (param1 < -5) {
             return;
           }
-          field_c = (hl) null;
+          field_c = (PcmSampleStream) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -92,7 +92,7 @@ final class dj {
           }
           if (-1 != rf.field_a) {
             int var1_int = rf.field_a;
-            lj.a(-1, param0 - 6378);
+            WhirlpoolHasher.a(-1, param0 - 6378);
             int stackIn_10_0 = var1_int;
             return stackIn_10_0;
           }

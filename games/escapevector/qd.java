@@ -49,8 +49,8 @@ final class qd extends IntrusiveNode {
 
     final static void a(int param0, String param1) {
         try {
-          ca.field_d = param1;
-          lj.a(param0, 39);
+          MouseWheelInput.field_d = param1;
+          WhirlpoolHasher.a(param0, 39);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "qd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -96,12 +96,12 @@ final class qd extends IntrusiveNode {
             if (var1 == 1) {
               dj.field_b = cf.field_a;
             } else {
-              dj.field_b = r.a(mi.field_j, -63, new String[]{Integer.toString(var1)});
+              dj.field_b = r.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }
-            dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
+            dj.field_b = Js5NetworkRequest.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
           }
           be.field_b.o(-18861);
-          cg.d(32);
+          ImageProducerRasterBuffer.d(32);
           return;
         }
         field_n = (IntrusiveDeque) null;
@@ -114,12 +114,12 @@ final class qd extends IntrusiveNode {
             if (var1 == 1) {
               dj.field_b = cf.field_a;
             } else {
-              dj.field_b = r.a(mi.field_j, -63, new String[]{Integer.toString(var1)});
+              dj.field_b = r.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }
-            dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
+            dj.field_b = Js5NetworkRequest.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
           }
           be.field_b.o(-18861);
-          cg.d(32);
+          ImageProducerRasterBuffer.d(32);
         }
     }
 

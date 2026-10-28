@@ -9,7 +9,7 @@ final class ci {
     int field_b;
     private int field_c;
     static om field_d;
-    static hh field_a;
+    static PcmSample field_a;
 
     public static void b(int param0) {
         field_d = null;
@@ -19,7 +19,7 @@ final class ci {
         }
     }
 
-    final static PointCloudEffect a(byte param0, hh param1, int param2, Sprite param3, boolean param4, int param5) {
+    final static PointCloudEffect a(byte param0, PcmSample param1, int param2, Sprite param3, boolean param4, int param5) {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {

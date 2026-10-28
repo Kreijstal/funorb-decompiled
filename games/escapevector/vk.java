@@ -69,7 +69,7 @@ final class vk extends sh {
         try {
           int var2_int = param0.length();
           if (var2_int == 0) {
-            tk stackIn_4_0 = mf.field_d;
+            tk stackIn_4_0 = ResourceArchive.field_d;
             return stackIn_4_0;
           }
           if (var2_int > 63) {

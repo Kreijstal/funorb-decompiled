@@ -3,10 +3,10 @@
  */
 final class dl {
     static boolean field_a;
-    static wl field_b;
+    static BitmapFont field_b;
 
     final static void a(byte param0) {
-        mi var1 = (mi) (re.field_q.removeLast(-8980));
+        RasterSnapshot var1 = (RasterSnapshot) (re.field_q.removeLast(-8980));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -31,7 +31,7 @@ final class dl {
         int var4 = EscapeVector.obfuscationControl;
         try {
           try {
-            if (!lk.field_e.startsWith("win")) {
+            if (!SystemTaskService.field_e.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&
@@ -71,7 +71,7 @@ final class dl {
     public static void b(byte param0) {
         field_b = null;
         if (param0 != -96) {
-          field_b = (wl) null;
+          field_b = (BitmapFont) null;
         }
     }
 

@@ -73,7 +73,7 @@ final class je {
         return 0;
     }
 
-    final static void a(mf param0, hj param1, int param2, byte param3) {
+    final static void a(ResourceArchive param0, PcmStreamMixer param1, int param2, byte param3) {
         try {
           hb.field_h = se.a(0) * param2 / 1000;
           on.a(param0, -58);

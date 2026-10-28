@@ -8,10 +8,10 @@ final class un extends re {
     static boolean field_u;
 
     un(int param0) {
-        this(sb.field_a, param0);
+        this(Js5Transport.field_a, param0);
     }
 
-    private un(wl param0, int param1) {
+    private un(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -38,7 +38,7 @@ final class un extends re {
         }
     }
 
-    final static int a(String[] args, int param1, wl param2, int param3, String param4) {
+    final static int a(String[] args, int param1, BitmapFont param2, int param3, String param4) {
         String stackIn_28_2 = null;
         String stackIn_31_2 = null;
         String stackIn_34_2 = null;

@@ -8,7 +8,7 @@ final class mb {
     private int field_e;
     private int field_c;
     private int field_d;
-    static hl field_a;
+    static PcmSampleStream field_a;
 
     final static void a(byte param0) {
         boolean var2 = false;
@@ -117,7 +117,7 @@ final class mb {
           }
           if (var1_int &&
             bj.e((byte) 116) &&
-            ob.field_b == null) {
+            ArchiveProvider.field_b == null) {
             return false;
           }
           if (var1_int &&
@@ -142,7 +142,7 @@ final class mb {
           ah.field_j = param0;
           of.field_a = new Sprite(param0.fullWidth, param0.fullHeight);
           if (param1 > -11) {
-            field_a = (hl) null;
+            field_a = (PcmSampleStream) null;
           }
           int[] var3 = new int[4];
           int[] var2 = var3;

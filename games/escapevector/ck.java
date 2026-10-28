@@ -7,7 +7,7 @@ final class ck extends k {
     private Sprite[] field_s;
     private int field_z;
     static hf field_t;
-    static mf field_x;
+    static ResourceArchive field_x;
     static ag field_v;
     private int field_y;
     static String[] field_u;

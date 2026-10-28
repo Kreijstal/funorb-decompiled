@@ -118,15 +118,15 @@ final class q extends hc {
 
     final static void c(int param0, byte param1) {
         if (param1 < -60) {
-          c var2 = om.field_c;
-          var2.a(param0, true);
+          CipherPacketBuffer var2 = om.field_c;
+          var2.writeCipheredOpcode(param0, true);
           var2.f(1, -123);
           var2.f(0, -123);
           return;
         }
         field_P = true;
-        c var2Lifetime1 = om.field_c;
-        var2Lifetime1.a(param0, true);
+        CipherPacketBuffer var2Lifetime1 = om.field_c;
+        var2Lifetime1.writeCipheredOpcode(param0, true);
         var2Lifetime1.f(1, -123);
         var2Lifetime1.f(0, -123);
     }

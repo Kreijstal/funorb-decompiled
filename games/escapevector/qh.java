@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qh {
-    static hh field_i;
+    static PcmSample field_i;
     static String field_e;
     static int field_m;
     private boolean field_b;
@@ -11,7 +11,7 @@ final class qh {
     static String[] field_j;
     private int field_f;
     private String field_h;
-    private mf field_d;
+    private ResourceArchive field_d;
     private String field_a;
     private int[] field_g;
     private Sprite field_c;
@@ -61,7 +61,7 @@ final class qh {
         return this.field_c;
     }
 
-    final static void a(mf param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         String stackIn_16_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
@@ -100,8 +100,8 @@ final class qh {
 
     final static void a(rl param0, boolean param1, int param2) {
         try {
-          c var3 = om.field_c;
-          var3.a(param2, param1);
+          CipherPacketBuffer var3 = om.field_c;
+          var3.writeCipheredOpcode(param2, param1);
           var3.f(param0.field_i, -123);
           var3.f(param0.field_g, -123);
         } catch (RuntimeException runtimeException) {
@@ -120,7 +120,7 @@ final class qh {
         field_l = null;
     }
 
-    qh(mf param0, String param1, String param2, int param3, boolean param4, int[] param5) {
+    qh(ResourceArchive param0, String param1, String param2, int param3, boolean param4, int[] param5) {
         try {
           this.field_b = param4 ? true : false;
           this.field_d = param0;

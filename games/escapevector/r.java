@@ -386,8 +386,8 @@ abstract class r extends hm implements ba {
     final static void a(int param0, bd param1, int param2) {
         String stackIn_9_2 = null;
         try {
-          c var5 = om.field_c;
-          var5.a(param2, true);
+          CipherPacketBuffer var5 = om.field_c;
+          var5.writeCipheredOpcode(param2, true);
           var5.position = var5.position + 1;
           int var4 = var5.position;
           var5.f(1, -123);

@@ -49,8 +49,8 @@ final class ua {
         if (aj.b(-127)) {
           return;
         }
-        c var4 = om.field_c;
-        var4.a(16, true);
+        CipherPacketBuffer var4 = om.field_c;
+        var4.writeCipheredOpcode(16, true);
         var4.position = var4.position + 1;
         if (param3 == 1) {
           int var5 = var4.position;

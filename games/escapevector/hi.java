@@ -27,9 +27,9 @@ final class hi extends ah {
               if (!eb.field_H) {
                 param2 = fd.field_a;
               } else {
-                param2 = fi.field_c;
+                param2 = IndexedSpriteState.field_c;
               }
-              dd.field_d.a(vk.field_v, (byte) 106);
+              PcmResampler.field_d.a(vk.field_v, (byte) 106);
             }
             if (param0 == 10) {
               ui.a(90);
@@ -49,7 +49,7 @@ final class hi extends ah {
                 return;
               }
               if (!eb.field_H) {
-                dd.field_d.h((byte) -128);
+                PcmResampler.field_d.h((byte) -128);
                 return;
               }
             }
@@ -62,7 +62,7 @@ final class hi extends ah {
     final static uf c(boolean param0) {
         if (sl.field_d == null) {
           sl.field_d = new uf();
-          sl.field_d.a(-31476, sb.field_a);
+          sl.field_d.a(-31476, Js5Transport.field_a);
           sl.field_d.field_h = 7697781;
           sl.field_d.field_d = ke.field_c;
           sl.field_d.field_j = 5;
@@ -94,12 +94,12 @@ final class hi extends ah {
     final String a(byte param0, String param1) {
         String stackIn_9_2 = null;
         try {
-          if (this.a(-1, param1) == ob.field_a) {
+          if (this.a(-1, param1) == ArchiveProvider.field_a) {
             String stackIn_3_0 = eo.field_a;
             return stackIn_3_0;
           }
           int var3_int = -127 % ((param0 - 10) / 51);
-          String stackIn_5_0 = ec.field_c;
+          String stackIn_5_0 = SoundCache.field_c;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -150,13 +150,13 @@ final class hi extends ah {
           boolean stackIn_3_0 = !(null != cd.a(param0 ^ 0, param1));
           boolean var3_int = stackIn_3_0;
           if (!var3_int) {
-            rf stackIn_6_0 = ob.field_a;
+            rf stackIn_6_0 = ArchiveProvider.field_a;
             return stackIn_6_0;
           }
           if (param0 != -1) {
             field_n = (String) null;
           }
-          rf stackIn_10_0 = df.field_h;
+          rf stackIn_10_0 = IsaacRandom.field_h;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

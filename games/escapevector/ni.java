@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ni extends r {
     private int field_J;
-    static hh field_M;
+    static PcmSample field_M;
     private int field_L;
     static int[] field_D;
     static o field_N;

@@ -6,7 +6,7 @@ final class bd extends IntrusiveNode {
     static int[] field_l;
     int field_i;
     static String field_m;
-    static rg field_h;
+    static BufferedRandomAccessFile field_h;
     byte[] field_j;
     static String field_g;
 

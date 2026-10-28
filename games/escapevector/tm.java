@@ -78,7 +78,7 @@ final class tm extends vg implements qb {
         hm var4 = null;
         try {
           var3 = null;
-          if (ge.field_h == param1) {
+          if (AudioService.field_h == param1) {
             var3 = DialogueScreen.field_k;
           } else {
             if (param1 == ck.field_A) {

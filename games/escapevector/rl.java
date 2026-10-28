@@ -4,7 +4,7 @@
 final class rl extends IntrusiveNode {
     int field_g;
     static String field_l;
-    static te field_k;
+    static IndexedSprite field_k;
     static int field_h;
     int field_i;
     static boolean field_j;

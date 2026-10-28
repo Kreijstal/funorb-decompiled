@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pa {
-    static hh field_b;
-    static hh field_a;
+    static PcmSample field_b;
+    static PcmSample field_a;
 
     final static void a(boolean param0) {
         if (!SpriteState.field_u) {
           throw new IllegalStateException();
         }
-        c.field_u = true;
+        CipherPacketBuffer.field_u = true;
         SeekerMine.a((byte) -126, param0);
         ff.field_e = 0;
     }
 
     public static void a(byte param0) {
         if (param0 != 103) {
-          field_a = (hh) null;
+          field_a = (PcmSample) null;
         }
         field_a = null;
         field_b = null;
@@ -33,7 +33,7 @@ final class pa {
             pb.field_c[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
           if (param0 >= -19) {
-            field_b = (hh) null;
+            field_b = (PcmSample) null;
           }
           int var5 = 256;
           int var1_intLifetime1 = var5;

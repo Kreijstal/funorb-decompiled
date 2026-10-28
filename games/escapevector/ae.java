@@ -3,7 +3,7 @@
  */
 final class ae implements db {
     static uk field_b;
-    static lk field_a;
+    static SystemTaskService field_a;
     static Sprite[] field_c;
     static java.security.SecureRandom field_d;
     static String[] field_e;
@@ -65,18 +65,18 @@ final class ae implements db {
         return 0;
     }
 
-    final static te[] a(String param0, String param1, byte param2, mf param3) {
+    final static IndexedSprite[] a(String param0, String param1, byte param2, ResourceArchive param3) {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
           if (param2 >= -45) {
-            te[] stackIn_2_0 = (te[]) null;
+            IndexedSprite[] stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
           int var4_int = param3.b(-1, param0);
           int var5 = param3.a(var4_int, param1, true);
-          te[] stackIn_4_0 = bl.a(var5, 255, param3, var4_int);
+          IndexedSprite[] stackIn_4_0 = bl.a(var5, 255, param3, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

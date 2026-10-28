@@ -14,7 +14,7 @@ final class rc {
         try {
           rm.a((java.awt.Component) ((Object) param0), (byte) 38);
           if (ji.field_b != null) {
-            ji.field_b.a((java.awt.Component) ((Object) param0), true);
+            ji.field_b.attach((java.awt.Component) ((Object) param0), true);
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "rc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

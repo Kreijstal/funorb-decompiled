@@ -7,7 +7,7 @@ class pn extends fj implements qb {
     private boolean field_tb;
     static char[] field_nb;
     static tb field_pb;
-    private wl field_sb;
+    private BitmapFont field_sb;
     private boolean field_mb;
     private jm field_rb;
     static String[] field_qb;
@@ -52,7 +52,7 @@ class pn extends fj implements qb {
               this.a(var6, 30);
               return;
             }
-            var6.a((wn) (this), (byte) -67, lj.field_g);
+            var6.a((wn) (this), (byte) -67, WhirlpoolHasher.field_g);
           } else {
             var6.a(false, ej.field_c, 9);
           }
@@ -110,7 +110,7 @@ class pn extends fj implements qb {
         field_pb = null;
     }
 
-    final static byte[][][] a(int[] param0, mf param1, byte[][][] param2, mf param3, byte param4) {
+    final static byte[][][] a(int[] param0, ResourceArchive param1, byte[][][] param2, ResourceArchive param3, byte param4) {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
@@ -190,7 +190,7 @@ class pn extends fj implements qb {
             md.a(PointCloudEffect.d((byte) -85), (byte) -96, "tochangedisplayname.ws");
             return;
           }
-          lj.a(3, param3 + 106);
+          WhirlpoolHasher.a(3, param3 + 106);
           this.o(-18861);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -225,7 +225,7 @@ class pn extends fj implements qb {
         }
     }
 
-    pn(tb param0, wl param1, String param2, boolean param3, boolean param4) {
+    pn(tb param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new qi((pn) null, param1, param2), 77, 10, 10);
         try {
           this.field_mb = false;

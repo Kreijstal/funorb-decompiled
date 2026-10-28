@@ -50,7 +50,7 @@ final class h extends bj implements rj, qb {
 
     final void a(int param0, byte param1, int param2, int param3) {
         if (null != this.field_H) {
-          sb.field_a.a(this.field_H, 20 + (this.field_k + param3), this.field_j + (param0 + 15), -40 + this.field_g, this.field_x, 16777215, -1, 1, 0, sb.field_a.field_r);
+          Js5Transport.field_a.a(this.field_H, 20 + (this.field_k + param3), this.field_j + (param0 + 15), -40 + this.field_g, this.field_x, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
         }
         if (null != this.field_N) {
           SoftwareRasterizer.e(10 + param3, 134 + param0, this.field_g - 20, 4210752);
@@ -121,24 +121,24 @@ final class h extends bj implements rj, qb {
         }
     }
 
-    final static void a(mf param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         String stackIn_13_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          c var8 = new c(param0.a(-4, "", "logo.fo3d"));
-          c var10 = var8;
+          CipherPacketBuffer var8 = new CipherPacketBuffer(param0.a(-4, "", "logo.fo3d"));
+          CipherPacketBuffer var10 = var8;
           int var3 = var10.readUnsignedByte(0);
-          var10.l(-17928);
+          var10.beginBitReading(-17928);
           DialogueScreen.field_y = IntrusiveNode.a(var10, 22178);
           fh.field_e = new ia[var3];
-          jg.field_c = new int[var3][];
+          SectorCacheStore.field_c = new int[var3][];
           if (param1 < 41) {
             h.a(82, (byte) -78);
           }
           for (int var4 = 0; var3 > var4; var4++) {
             fh.field_e[var4] = wk.a(-127, var8);
           }
-          var10.o(-3879);
+          var10.endBitReading(-3879);
           int var9 = 0;
           int var4Lifetime1 = var9;
           while (var3 > var9) {
@@ -146,7 +146,7 @@ final class h extends bj implements rj, qb {
             var5.a(6, 1, 6, 6, -72);
             var5.a((byte) 49);
             int[] var6 = new int[]{var5.field_b + var5.field_a >> 1, var5.field_R + var5.field_i >> 1, var5.field_O + var5.field_g >> 1};
-            jg.field_c[var9] = var6;
+            SectorCacheStore.field_c[var9] = var6;
             var5.a(-var6[2], 0, -var6[0], -var6[1]);
             var9++;
           }
@@ -216,7 +216,7 @@ final class h extends bj implements rj, qb {
         if (gm.b(8192) ||
           !(this.field_L.field_l.length() <= 0) &&
           !(this.field_J.field_l.length() <= 0)) {
-          mi.a(0, this.field_J.field_l, this.field_L.field_l);
+          RasterSnapshot.a(0, this.field_J.field_l, this.field_L.field_l);
         }
     }
 
@@ -282,7 +282,7 @@ final class h extends bj implements rj, qb {
             this.field_I.field_s = (db) ((Object) new ha());
           }
           this.field_j = 15;
-          wl var7 = sb.field_a;
+          BitmapFont var7 = Js5Transport.field_a;
           if (null != this.field_H) {
             this.field_j = this.field_j + (var7.b(this.field_H, -40 + this.field_g, var7.field_r) + 5);
           }

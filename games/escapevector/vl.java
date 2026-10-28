@@ -73,7 +73,7 @@ final class vl {
             int var7 = var5 + 14;
             Sprite[] var8 = mb.field_f;
             if (var2_int) {
-              var8 = ob.field_b;
+              var8 = ArchiveProvider.field_b;
             }
             var8[var7] = var6;
             Sprite var9 = var4[var5];

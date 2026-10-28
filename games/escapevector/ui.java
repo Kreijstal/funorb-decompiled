@@ -45,7 +45,7 @@ final class ui {
         }
     }
 
-    final static Sprite[] a(String param0, mf param1, String param2, byte param3) {
+    final static Sprite[] a(String param0, ResourceArchive param1, String param2, byte param3) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kf extends ah {
-    static hh field_p;
+    static PcmSample field_p;
     private boolean field_n;
     static ee field_q;
     private String field_s;
@@ -28,11 +28,11 @@ final class kf extends ah {
         try {
           CharSequence var4 = (CharSequence) ((Object) param1);
           if (!tg.a(87, var4)) {
-            rf stackIn_3_0 = ob.field_a;
+            rf stackIn_3_0 = ArchiveProvider.field_a;
             return stackIn_3_0;
           }
           if (param0 != -1) {
-            field_p = (hh) null;
+            field_p = (PcmSample) null;
           }
           if (!param1.equals(this.field_s)) {
             lm var3 = of.a(122, param1);
@@ -46,9 +46,9 @@ final class kf extends ah {
             }
           }
           if (!this.field_n) {
-            stackIn_17_0 = ob.field_a;
+            stackIn_17_0 = ArchiveProvider.field_a;
           } else {
-            stackIn_17_0 = df.field_h;
+            stackIn_17_0 = IsaacRandom.field_h;
           }
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,7 +123,7 @@ final class kf extends ah {
             String stackIn_15_0 = fd.field_b;
             return stackIn_15_0;
           }
-          String stackIn_13_0 = vn.field_b;
+          String stackIn_13_0 = RasterBuffer.field_b;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

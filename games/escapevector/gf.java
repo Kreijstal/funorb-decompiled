@@ -31,8 +31,8 @@ final class gf {
         rh.field_I = null;
         ke.field_b = 0;
         int var2 = kl.field_n;
-        kl.field_n = tl.field_l;
-        tl.field_l = var2;
+        kl.field_n = SeekerPulseStream.field_l;
+        SeekerPulseStream.field_l = var2;
         if (param0 != -78) {
           String var4 = (String) null;
           gf.a((String) null, (byte) 43);

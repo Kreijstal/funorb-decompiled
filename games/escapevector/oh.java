@@ -68,7 +68,7 @@ final class oh extends IntrusiveNode {
           }
           bn.a(param4 ^ -99, om.field_c, qj.field_a, q.field_O, cf.field_c);
           om.field_c.i(-var5_int + om.field_c.position, 32614);
-          rn.a(-1, param4 + 30884);
+          ClientException.a(-1, param4 + 30884);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

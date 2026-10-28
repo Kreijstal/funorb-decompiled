@@ -3,7 +3,7 @@
  */
 final class b {
     static String field_a;
-    static hh field_b;
+    static PcmSample field_b;
 
     public static void a(byte param0) {
         field_b = null;
@@ -17,8 +17,8 @@ final class b {
         int var2 = EscapeVector.obfuscationControl;
         try {
           if (!IntrusiveNode.b(12)) {
-            if (null != df.field_d &&
-              df.field_d.field_c) {
+            if (null != IsaacRandom.field_d &&
+              IsaacRandom.field_d.field_c) {
               ri.a(-25123);
               pn.field_pb.b(new tm(pn.field_pb, ck.field_A), 69);
             }

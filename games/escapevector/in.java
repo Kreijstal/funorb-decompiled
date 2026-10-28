@@ -39,7 +39,7 @@ final class in extends IntrusiveNode {
     private int field_F;
     private byte[][] field_h;
 
-    final hh a(int[] param0) {
+    final PcmSample a(int[] param0) {
         if (param0 != null &&
           param0[0] <= 0) {
           return null;
@@ -82,10 +82,10 @@ final class in extends IntrusiveNode {
         this.field_s = null;
         byte[] var12 = this.field_K;
         this.field_K = null;
-        return new hh(this.field_v, var12, this.field_L, this.field_F, this.field_A);
+        return new PcmSample(this.field_v, var12, this.field_L, this.field_F, this.field_A);
     }
 
-    final hh b() {
+    final PcmSample b() {
         this.field_J = 0;
         this.field_s = new float[field_m];
         byte[] var1 = new byte[this.field_y];
@@ -109,7 +109,7 @@ final class in extends IntrusiveNode {
           }
         }
         this.field_s = null;
-        return new hh(this.field_v, var1, this.field_L, this.field_F, this.field_A);
+        return new PcmSample(this.field_v, var1, this.field_L, this.field_F, this.field_A);
     }
 
     private final static void a(byte[] param0, int param1) {
@@ -118,7 +118,7 @@ final class in extends IntrusiveNode {
         field_C = 0;
     }
 
-    final static in a(mf param0, int param1, int param2) {
+    final static in a(ResourceArchive param0, int param1, int param2) {
         try {
           in var4_ref = null;
           if (!in.a(param0)) {
@@ -151,7 +151,7 @@ final class in extends IntrusiveNode {
         return var0;
     }
 
-    final static in a(mf param0, String param1, String param2) {
+    final static in a(ResourceArchive param0, String param1, String param2) {
         try {
           in var4_ref = null;
           if (!in.a(param0)) {
@@ -186,7 +186,7 @@ final class in extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    private final static boolean a(mf param0) {
+    private final static boolean a(ResourceArchive param0) {
         if (!field_n) {
           byte[] var1 = param0.a(0, (byte) -97, 0);
           if (var1 == null) {
@@ -278,7 +278,7 @@ final class in extends IntrusiveNode {
           int[] var9 = new int[var5];
           int var10 = nm.a(var5 - 1, (byte) 78);
           for (int var11 = 0; var11 < var5; var11++) {
-            var9[var11] = cm.a(var11, var10, (byte) 96);
+            var9[var11] = DiskCacheRequest.a(var11, var10, (byte) 96);
           }
           if (var1 == 0) {
             field_E = var6_ref_float__;

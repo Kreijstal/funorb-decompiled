@@ -13,7 +13,7 @@ final class e {
         String stackIn_24_2 = null;
         String stackIn_27_2 = null;
         try {
-          if (dn.field_q != vn.field_g) {
+          if (dn.field_q != RasterBuffer.field_g) {
             return false;
           }
           qc var8 = new qc(bo.field_F, param0);
@@ -22,7 +22,7 @@ final class e {
             gf.field_a = param3;
             hf.field_a = param5;
             SpriteState.field_y = null;
-            mf.field_b = param4;
+            ResourceArchive.field_b = param4;
             dn.field_q = dg.field_o;
             tf.field_h = param6;
             kl.field_o = param2;
@@ -75,20 +75,20 @@ final class e {
     final static lm a(int param0) {
         if (param0 != -16055) {
           e.b(108);
-          if (dn.field_q == vn.field_g) {
+          if (dn.field_q == RasterBuffer.field_g) {
             throw new IllegalStateException();
           }
           if (ia.field_y == dn.field_q) {
-            dn.field_q = vn.field_g;
+            dn.field_q = RasterBuffer.field_g;
             return SpriteState.field_y;
           }
           return null;
         }
-        if (dn.field_q == vn.field_g) {
+        if (dn.field_q == RasterBuffer.field_g) {
           throw new IllegalStateException();
         }
         if (ia.field_y == dn.field_q) {
-          dn.field_q = vn.field_g;
+          dn.field_q = RasterBuffer.field_g;
           return SpriteState.field_y;
         }
         return null;

@@ -19,7 +19,7 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (null == ck.field_v) {
             return;
           }
-          sb.field_b = -1;
+          Js5Transport.field_b = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,12 +79,12 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             var2_int = -1;
           }
-          if (0 <= sb.field_b &&
+          if (0 <= Js5Transport.field_b &&
             var2_int >= 0) {
-            hc.field_C[sb.field_b] = var2_int;
-            sb.field_b = 1 + sb.field_b & 127;
-            if (m.field_k == sb.field_b) {
-              sb.field_b = -1;
+            hc.field_C[Js5Transport.field_b] = var2_int;
+            Js5Transport.field_b = 1 + Js5Transport.field_b & 127;
+            if (TetherHumStream.field_k == Js5Transport.field_b) {
+              Js5Transport.field_b = -1;
             }
           }
           if (0 <= var2_int) {
@@ -129,12 +129,12 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
             } else {
               var2_int = -1;
             }
-            if (sb.field_b >= 0 &&
+            if (Js5Transport.field_b >= 0 &&
               var2_int >= 0) {
-              hc.field_C[sb.field_b] = ~var2_int;
-              sb.field_b = sb.field_b + 1 & 127;
-              if (m.field_k == sb.field_b) {
-                sb.field_b = -1;
+              hc.field_C[Js5Transport.field_b] = ~var2_int;
+              Js5Transport.field_b = Js5Transport.field_b + 1 & 127;
+              if (TetherHumStream.field_k == Js5Transport.field_b) {
+                Js5Transport.field_b = -1;
               }
             }
           }

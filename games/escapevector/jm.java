@@ -14,7 +14,7 @@ final class jm extends hm {
     private int field_y;
     static Sprite[] field_K;
     private int field_A;
-    static mf field_I;
+    static ResourceArchive field_I;
     private int field_H;
     boolean field_G;
     private Sprite field_D;
@@ -272,13 +272,13 @@ final class jm extends hm {
         return var14;
     }
 
-    final static byte[] a(int param0, int param1, c param2, byte[] param3) {
+    final static byte[] a(int param0, int param1, CipherPacketBuffer param2, byte[] param3) {
         int var7 = 0;
         String stackIn_22_2 = null;
         String stackIn_25_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          int var4_int = param2.j(param0, 8);
+          int var4_int = param2.readBits(param0, 8);
           if (0 == var4_int) {
             Object stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
@@ -288,17 +288,17 @@ final class jm extends hm {
             param3 = new byte[var4_int];
           }
           if (param1 <= 113) {
-            field_I = (mf) null;
+            field_I = (ResourceArchive) null;
           }
-          int var5 = param2.j(3, 8);
-          int var6 = (byte)param2.j(8, 8);
+          int var5 = param2.readBits(3, 8);
+          int var6 = (byte)param2.readBits(8, 8);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param3[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (byte)(var6 + param2.j(var5, 8));
+              param3[var7] = (byte)(var6 + param2.readBits(var5, 8));
             }
           }
           byte[] stackIn_18_0 = (byte[]) (param3);

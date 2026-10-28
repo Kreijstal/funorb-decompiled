@@ -778,7 +778,7 @@ class hm extends IntrusiveNode {
         if (param0 != 11187) {
           return false;
         }
-        return df.field_d == null ? rk.field_b : true;
+        return IsaacRandom.field_d == null ? rk.field_b : true;
     }
 
     protected hm() {

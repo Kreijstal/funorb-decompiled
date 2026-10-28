@@ -100,7 +100,7 @@ final class Minimap {
                   for (int var16 = 0; var5_int > var16; var16++) {
                     int var17 = var16 + var11;
                     if (var17 < this.field_B) {
-                      this.field_s[var15] = df.a(this.field_s[var15], this.c(var14, var17, -2));
+                      this.field_s[var15] = IsaacRandom.a(this.field_s[var15], this.c(var14, var17, -2));
                       continue;
                     }
                     break;
@@ -676,7 +676,7 @@ final class Minimap {
           LevelObject var5 = (LevelObject) (var2.elementAt(var4));
           if (var5 != null) {
             int var6 = var5.objectType;
-            if ((mf.a(var6, -64) ||
+            if ((ResourceArchive.a(var6, -64) ||
               var6 == 0 ||
               var6 == 5) && var6 != 1) {
               this.field_C.addLast(param0 - 12328, var5);

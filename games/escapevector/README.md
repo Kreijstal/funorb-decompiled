@@ -2,7 +2,9 @@
 
 This is the only published Java tree. Reviewed rules and the reproducer live in dekobloko-work/readable. The current reverse dictionary is ../../decompilation/escapevector-naming.json.
 
-This pass names 28 reviewed classes and 680 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
+This pass names 76 reviewed classes and 1000 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
+
+Coverage: 78/349 class declarations and 312/2781 methods have readable names; 277 constructors follow their owning class. 271 classes and 2469 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
 
 ## Entry points
 
@@ -32,6 +34,10 @@ Objective type is present from version five (zero retrieves cargo; one destroys 
 
 ## Dialogue and shared engine
 
+`PcmStream` defines process/mixInto/skip, firstSubstream/nextSubstream, activity and priority for all concrete audio streams. PcmStreamMixer owns its substreams and timed PcmMixerListener queue. PcmSample/PcmSampleStream/PcmResampler expose PCM bytes, loops, interpolation and resampling. AudioOutput and JavaSoundAudioOutput distinguish device lifecycle hooks from stream mixing. ReverbPcmStream uses separate ReverbCombFilter and ReverbAllPassFilter rings.
+
+`ResourceArchive` consumes ArchiveProvider; CachedArchiveProvider combines Js5Transport with SectorCacheStore, BufferedRandomAccessFile and DiskCacheWorker. ArchiveIndex holds reference metadata; ArchiveRequest has separate network/disk implementations. SystemTaskService owns operating-system work represented by SystemTask. CipherPacketBuffer/IsaacRandom distinguish opcode encryption from ordinary PacketBuffer byte encodings; WhirlpoolHasher and Bzip2Decoder/Bzip2State identify archive digest and decompression work.
+
 `DialogueScreen.advanceDialogue` handles reveal timing, input and scene changes; `drawDialogue` draws the current image/text. IntrusiveNode/IntrusiveDeque expose primary ownership and traversal; DualLinkNode has independent secondary links. Sprite/SpriteState separate RGB pixels, trimmed dimensions and offsets. SoftwareRasterizer holds the shared framebuffer and clipping. PacketBuffer and SoundEnvelope expose byte decoding and envelope interpolation.
 
 ## Reproduce and verify
@@ -43,6 +49,7 @@ node readable/build-escapevector-rules.mjs --check
 node readable/reproduce-escapevector.mjs --update
 node readable/reproduce-escapevector.mjs --check
 node scripts/check-source-catalog.mjs ../funorb-decompiled
+node readable/naming-coverage.mjs escapevector
 node readable/tests/test-escapevector-core.mjs /path/to/original/escapevector.jar
 ```
 

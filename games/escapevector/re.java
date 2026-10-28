@@ -7,7 +7,7 @@ class re extends k {
     static String[] field_r;
 
     re(int param0) {
-        this(sb.field_a, param0);
+        this(Js5Transport.field_a, param0);
     }
 
     final static void d(int param0) {
@@ -77,7 +77,7 @@ class re extends k {
         }
     }
 
-    re(wl param0, int param1) {
+    re(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_r, -1, 2147483647, false);
     }
 

@@ -23,12 +23,12 @@ final class ce {
     private int[] field_e;
     int[] field_m;
     int[] field_l;
-    hh[] field_s;
+    PcmSample[] field_s;
     int[][] field_v;
     int field_i;
     byte[][] field_C;
     int[] field_q;
-    private ec field_o;
+    private SoundCache field_o;
     int[] field_u;
     int[] field_b;
     int field_w;
@@ -42,7 +42,7 @@ final class ce {
     int field_B;
 
     final static void d(int param0) {
-        pl.field_n.a(!(0.5 <= Math.random()) ? TerrainMaskSupport.field_e : ri.field_b, 100, 6144 * qm.field_c / 64, param0);
+        pl.field_n.playSampleWithPan(!(0.5 <= Math.random()) ? TerrainMaskSupport.field_e : ri.field_b, 100, 6144 * qm.field_c / 64, param0);
     }
 
     final static String c(int param0) {
@@ -69,7 +69,7 @@ final class ce {
     }
 
     private final void a(int param0) {
-        hh var4;
+        PcmSample var4;
         int var5 = EscapeVector.obfuscationControl;
         if (this.field_o == null) {
           return;
@@ -114,14 +114,14 @@ final class ce {
         if (var3 <= param2) {
           return "";
         }
-        if (null == ge.field_b) {
+        if (null == AudioService.field_b) {
           mj.field_e = jb.field_o;
-          ge.field_b = new String[][]{mj.field_e, jb.field_o, vd.field_d, ck.field_u};
+          AudioService.field_b = new String[][]{mj.field_e, jb.field_o, vd.field_d, ck.field_u};
         }
-        return ge.field_b[param1][param2];
+        return AudioService.field_b[param1][param2];
     }
 
-    ce(PacketBuffer param0, ec param1) {
+    ce(PacketBuffer param0, SoundCache param1) {
         try {
           this.field_o = param1;
           this.field_w = param0.readUnsignedByte(0) + 1;
@@ -176,7 +176,7 @@ final class ce {
           this.field_e = new int[var5Lifetime3];
           this.field_a = new int[var5Lifetime3];
           this.field_b = new int[var5Lifetime3];
-          this.field_s = new hh[var5Lifetime3];
+          this.field_s = new PcmSample[var5Lifetime3];
           this.field_c = new int[var5Lifetime3];
           this.field_h = new int[var5Lifetime3];
           this.field_z = new int[var5Lifetime3];

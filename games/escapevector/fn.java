@@ -3,7 +3,7 @@
  */
 final class fn {
     static int[] field_e;
-    static hh field_f;
+    static PcmSample field_f;
     static String field_d;
     int field_c;
     static String field_a;
@@ -11,7 +11,7 @@ final class fn {
 
     final static boolean a(boolean param0, int param1) {
         if (di.field_d.field_e) {
-          rk.field_e.a(oa.field_w, 100, 1536 * qm.field_c / 64, 8192);
+          rk.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * qm.field_c / 64, 8192);
         }
         if (param1 != 0) {
           return false;
@@ -71,7 +71,7 @@ final class fn {
             }
             var2 = true;
           }
-          cb.field_c.a(hk.a((byte) 122, sf.field_c, ng.field_ob), (byte) 120, hk.a((byte) 122, dh.field_d, bj.field_y));
+          cb.field_c.a(CachedArchiveProvider.a((byte) 122, sf.field_c, ng.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, dh.field_d, bj.field_y));
           if (cb.field_c.b((byte) -18)) {
             var1_int = true;
           }
@@ -85,11 +85,11 @@ final class fn {
               ah.e(0);
             }
           } else if (var2 &&
-            f.field_j != 2) {
+            ArchiveIndex.field_j != 2) {
             ah.e(0);
           }
           if (var3 == 0 &&
-            f.field_j == 2) {
+            ArchiveIndex.field_j == 2) {
             long var4 = -bd.field_k + td.b(param0 + 142);
             int var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
@@ -196,14 +196,14 @@ final class fn {
           if (param0 <= 30) {
             fn.a((byte) 80);
           }
-          ib.field_f.a(237);
+          IntrusiveNodeHashTable.field_f.a(237);
           for (int var1_int = 0; 32 > var1_int; var1_int++) {
             wi.field_d[var1_int] = 0L;
           }
           for (int var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            c.field_t[var1_intLifetime1] = 0L;
+            CipherPacketBuffer.field_t[var1_intLifetime1] = 0L;
           }
-          s.field_z = 0;
+          Js5NetworkRequest.field_z = 0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "fn.F(" + param0 + ')');
         }

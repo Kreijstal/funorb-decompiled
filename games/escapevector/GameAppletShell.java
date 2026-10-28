@@ -43,14 +43,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               ad.field_d = param4;
               qa.field_G = param4;
               he.field_r = this;
-              s.field_D = 0;
+              Js5NetworkRequest.field_D = 0;
               pb.field_b = 0;
               uf.field_n = param0;
               IntrusiveNode.field_c = PointCloudEffect.d((byte) -109);
-              lk dupTemp$1 = new lk(param5, param6, param1, true);
+              SystemTaskService dupTemp$1 = new SystemTaskService(param5, param6, param1, true);
               NetworkGameClient.field_r = dupTemp$1;
               ae.field_a = dupTemp$1;
-              la var8 = NetworkGameClient.field_r.a(true, param2, (Runnable) (this));
+              SystemTask var8 = NetworkGameClient.field_r.a(true, param2, (Runnable) (this));
               while (true) {
                 if (var8.field_f == 0) {
                   en.a((byte) 100, 10L);
@@ -167,8 +167,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     private final void a(int param0) {
         try {
           long var2_long = td.b(128);
-          long var4 = c.field_t[r.field_z];
-          c.field_t[r.field_z] = var2_long;
+          long var4 = CipherPacketBuffer.field_t[r.field_z];
+          CipherPacketBuffer.field_t[r.field_z] = var2_long;
           r.field_z = 31 & r.field_z + 1;
           if (param0 != 48) {
             field_a = -22;
@@ -352,11 +352,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (lk.field_s != null) {
-                var1 = lk.field_s.toLowerCase();
+              if (SystemTaskService.field_s != null) {
+                var1 = SystemTaskService.field_s.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   -1 != ((String) (var1)).indexOf("apple")) {
-                  String var2 = lk.field_v;
+                  String var2 = SystemTaskService.field_v;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -398,8 +398,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3 && decompiledFrameCompleted0 &&
-                (decompiledFrameRemainder2 = (null != lk.field_v))) {
-                stackIn_66_0 = lk.field_v.startsWith("1.");
+                (decompiledFrameRemainder2 = (null != SystemTaskService.field_v))) {
+                stackIn_66_0 = SystemTaskService.field_v.startsWith("1.");
               }
               if (decompiledFrameRemainder3 &&
                 decompiledFrameRemainder2 &&
@@ -408,8 +408,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 int var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (lk.field_v.length() > var1_int) {
-                    var3 = lk.field_v.charAt(var1_int);
+                  if (SystemTaskService.field_v.length() > var1_int) {
+                    var3 = SystemTaskService.field_v.charAt(var1_int);
                     stackIn_79_0 = ~var3;
                     stackIn_79_1 = -49;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -436,7 +436,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (bb.field_P != null) {
                   var1 = bb.field_P;
                 }
-                java.lang.reflect.Method var2_ref = lk.field_r;
+                java.lang.reflect.Method var2_ref = SystemTaskService.field_r;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -447,9 +447,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 dm.a((byte) -61);
                 this.d(2);
-                md.field_D = dd.a((java.awt.Component) ((Object) of.field_d), ad.field_d, (byte) 125, pd.field_b);
+                md.field_D = PcmResampler.createRasterBuffer((java.awt.Component) ((Object) of.field_d), ad.field_d, (byte) 125, pd.field_b);
                 this.initializeClient((byte) -97);
-                ib.field_f = pe.a(18863);
+                IntrusiveNodeHashTable.field_f = pe.a(18863);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != me.field_p) {
@@ -461,12 +461,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    s.field_z = ib.field_f.a(sn.field_d, 97);
+                    Js5NetworkRequest.field_z = IntrusiveNodeHashTable.field_f.a(sn.field_d, 97);
                     stackIn_98_0 = 0;
                   }
                   var3 = stackIn_98_0;
                   do {
-                    if (!(var3 < s.field_z)) {
+                    if (!(var3 < Js5NetworkRequest.field_z)) {
                       this.c((byte) 92);
                       af.a((byte) -61, NetworkGameClient.field_r, of.field_d);
                       break;
@@ -505,7 +505,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (var4 != 0L &&
             var4 < var2_long) {
             int var6 = (int)(-var4 + var2_long);
-            th.field_p = ((var6 >> 1) + 32000) / var6;
+            Bzip2State.field_p = ((var6 >> 1) + 32000) / var6;
           }
           int fieldTemp$0 = QuickChatPhraseDefinition.field_r;
           QuickChatPhraseDefinition.field_r = QuickChatPhraseDefinition.field_r + 1;
@@ -517,12 +517,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             if (null != qj.field_i &&
               null == qj.field_f) {
               java.awt.Insets var6_ref_java_awt_Insets = qj.field_i.getInsets();
-              of.field_d.setLocation(var6_ref_java_awt_Insets.left + pb.field_b, s.field_D + var6_ref_java_awt_Insets.top);
+              of.field_d.setLocation(var6_ref_java_awt_Insets.left + pb.field_b, Js5NetworkRequest.field_D + var6_ref_java_awt_Insets.top);
               if (EscapeVector.obfuscationControl != 0) {
-                of.field_d.setLocation(pb.field_b, s.field_D);
+                of.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
               }
             } else {
-              of.field_d.setLocation(pb.field_b, s.field_D);
+              of.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
             }
           }
           this.renderClient((byte) 26);
@@ -763,12 +763,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           of.field_d.setVisible(true);
           if (var3 == qj.field_i) {
             java.awt.Insets var4 = qj.field_i.getInsets();
-            of.field_d.setLocation(var4.left + pb.field_b, var4.top + s.field_D);
+            of.field_d.setLocation(var4.left + pb.field_b, var4.top + Js5NetworkRequest.field_D);
             if (var5 != 0) {
-              of.field_d.setLocation(pb.field_b, s.field_D);
+              of.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
             }
           } else {
-            of.field_d.setLocation(pb.field_b, s.field_D);
+            of.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
           }
           of.field_d.addFocusListener((java.awt.event.FocusListener) (this));
           of.field_d.requestFocus();

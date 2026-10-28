@@ -10,7 +10,7 @@ final class l extends bj implements qb {
     public l() {
         super(0, 0, 476, 225, (db) null);
         this.field_I = new hc(pc.field_g, (wn) null);
-        this.field_G = new hc(c.field_p, (wn) null);
+        this.field_G = new hc(CipherPacketBuffer.field_p, (wn) null);
         this.field_J = new hc(cj.field_c, (wn) null);
         ck var1 = new ck();
         this.field_I.field_s = (db) ((Object) var1);
@@ -36,14 +36,14 @@ final class l extends bj implements qb {
         if (param1 > 85) {
           int var5 = this.field_k + param3;
           int var6 = param0 + this.field_j;
-          sb.field_a.a(q.field_F, var5 + 20, var6 + 20, this.field_g - 40, this.field_x - 50, 16777215, -1, 1, 0, sb.field_a.field_r);
+          Js5Transport.field_a.a(q.field_F, var5 + 20, var6 + 20, this.field_g - 40, this.field_x - 50, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
           super.a(param0, (byte) 99, param2, param3);
           return;
         }
         this.field_J = (hc) null;
         int var5Lifetime1 = this.field_k + param3;
         int var6Lifetime1 = param0 + this.field_j;
-        sb.field_a.a(q.field_F, var5Lifetime1 + 20, var6Lifetime1 + 20, this.field_g - 40, this.field_x - 50, 16777215, -1, 1, 0, sb.field_a.field_r);
+        Js5Transport.field_a.a(q.field_F, var5Lifetime1 + 20, var6Lifetime1 + 20, this.field_g - 40, this.field_x - 50, 16777215, -1, 1, 0, Js5Transport.field_a.field_r);
         super.a(param0, (byte) 99, param2, param3);
     }
 

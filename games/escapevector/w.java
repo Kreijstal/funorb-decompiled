@@ -8,9 +8,9 @@ final class w extends vg {
     private String field_db;
     private boolean field_gb;
     private jm field_cb;
-    static mf field_ab;
+    static ResourceArchive field_ab;
     static int[] field_bb;
-    static hh field_hb;
+    static PcmSample field_hb;
 
     final void d(boolean param0) {
         this.field_gb = param0 ? true : false;
@@ -54,7 +54,7 @@ final class w extends vg {
           field_bb = null;
           return;
         }
-        field_hb = (hh) null;
+        field_hb = (PcmSample) null;
         field_ab = null;
         field_bb = null;
     }

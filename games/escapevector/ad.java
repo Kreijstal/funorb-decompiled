@@ -6,14 +6,14 @@ import java.io.*;
 final class ad implements Runnable {
     static String field_c;
     static String field_h;
-    private la field_g;
+    private SystemTask field_g;
     private DataInputStream field_b;
-    private la field_e;
+    private SystemTask field_e;
     private PacketBuffer field_i;
     private java.net.URL field_j;
-    private lk field_f;
+    private SystemTaskService field_f;
     static int field_d;
-    private la field_a;
+    private SystemTask field_a;
     private int field_k;
 
     final static void a(int param0, int param1) {
@@ -227,7 +227,7 @@ final class ad implements Runnable {
         return false;
     }
 
-    ad(lk param0, java.net.URL param1, int param2) {
+    ad(SystemTaskService param0, java.net.URL param1, int param2) {
         try {
           this.field_f = param0;
           this.field_j = param1;

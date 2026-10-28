@@ -19,7 +19,7 @@ final class sf {
     private int field_k;
     static Sprite[] field_b;
     private int field_o;
-    static hh[] field_e;
+    static PcmSample[] field_e;
 
     final static String a(int param0, CharSequence param1) {
         String stackIn_34_2 = null;
@@ -168,7 +168,7 @@ final class sf {
         try {
           int var2_int = param0.length();
           if (var2_int == 0) {
-            tk stackIn_4_0 = mf.field_d;
+            tk stackIn_4_0 = ResourceArchive.field_d;
             return stackIn_4_0;
           }
           if (var2_int > 64) {
@@ -281,6 +281,6 @@ final class sf {
         field_n = "Legend";
         field_c = 0;
         field_m = new int[4];
-        field_e = new hh[17];
+        field_e = new PcmSample[17];
     }
 }

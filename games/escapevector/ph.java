@@ -180,10 +180,10 @@ final class ph {
 
     final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param1 == 1) {
-          return ob.a(param2, param3, 1, 1, param0);
+          return ArchiveProvider.a(param2, param3, 1, 1, param0);
         }
         ph.a((byte) 124);
-        return ob.a(param2, param3, 1, 1, param0);
+        return ArchiveProvider.a(param2, param3, 1, 1, param0);
     }
 
     private ph() throws Throwable {

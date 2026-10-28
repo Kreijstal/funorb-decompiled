@@ -10,11 +10,11 @@ final class ti {
           return;
         }
         fd var2 = (fd) null;
-        ti.a(125, -91, -121, 39, 71, -77, 39, (wl) null, 103, -82, -2, (fd) null, 98, (byte) 43, 106, -68, (wl) null, -15, -43, (fd) null, (fd) null);
+        ti.a(125, -91, -121, 39, 71, -77, 39, (BitmapFont) null, 103, -82, -2, (fd) null, 98, (byte) 43, 106, -68, (BitmapFont) null, -15, -43, (fd) null, (fd) null);
         field_a = null;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, wl param7, int param8, int param9, int param10, fd param11, int param12, byte param13, int param14, int param15, wl param16, int param17, int param18, fd param19, fd param20) {
+    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, fd param11, int param12, byte param13, int param14, int param15, BitmapFont param16, int param17, int param18, fd param19, fd param20) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -69,7 +69,7 @@ final class ti {
         }
     }
 
-    final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, wl param10, int param11, int param12, int param13, Sprite[] param14, int param15, int param16, int param17, int param18, wl param19, Sprite[] param20) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, BitmapFont param10, int param11, int param12, int param13, Sprite[] param14, int param15, int param16, int param17, int param18, BitmapFont param19, Sprite[] param20) {
         String stackIn_6_2 = null;
         String stackIn_9_2 = null;
         String stackIn_12_2 = null;

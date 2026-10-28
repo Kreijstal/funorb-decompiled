@@ -4,7 +4,7 @@
 final class jh extends IntrusiveNode {
     boolean field_h;
     boolean field_g;
-    static hh field_k;
+    static PcmSample field_k;
     static String field_j;
     int[] field_i;
 

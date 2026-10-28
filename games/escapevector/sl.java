@@ -16,12 +16,12 @@ final class sl {
           field_d = null;
           return;
         }
-        sl.a((mf) null, (mf) null, (int[]) null, (byte[][][]) null, -11, 8);
+        sl.a((ResourceArchive) null, (ResourceArchive) null, (int[]) null, (byte[][][]) null, -11, 8);
         field_b = (Sprite[][]) null;
         field_d = null;
     }
 
-    final static byte[][][] a(mf param0, mf param1, int[] param2, byte[][][] param3, int param4, int param5) {
+    final static byte[][][] a(ResourceArchive param0, ResourceArchive param1, int[] param2, byte[][][] param3, int param4, int param5) {
         String stackIn_18_2 = null;
         String stackIn_21_2 = null;
         String stackIn_24_2 = null;
@@ -84,7 +84,7 @@ final class sl {
     final static gi a(boolean param0, int param1) {
         int[] stackIn_26_0 = null;
         int var7 = EscapeVector.obfuscationControl;
-        c var2 = om.field_g;
+        CipherPacketBuffer var2 = om.field_g;
         int var3 = var2.readUnsignedByte(0);
         DualLinkNode.field_o = var3 & 127;
         boolean stackIn_3_0 = (0 != (128 & var3));
@@ -93,13 +93,13 @@ final class sl {
         ah.field_e = var2.i(-800509813);
         if (DualLinkNode.field_o != 2) {
           im.field_a = 0;
-          jn.field_d = 0;
+          IntKeyLookup.field_d = 0;
         } else {
-          jn.field_d = var2.readUnsignedShort(1952);
+          IntKeyLookup.field_d = var2.readUnsignedShort(1952);
           im.field_a = var2.readUnsignedMedium((byte) -119);
           if (var7 != 0) {
             im.field_a = 0;
-            jn.field_d = 0;
+            IntKeyLookup.field_d = 0;
           }
         }
         boolean stackIn_11_0 = !(var2.readUnsignedByte(param1 ^ param1) != 1);
@@ -153,7 +153,7 @@ final class sl {
     final static boolean a(boolean param0, byte param1) {
         try {
           if (sk.field_d == null) {
-            sk.field_d = ca.field_c.a(ej.field_b, 4, IntrusiveDeque.field_h);
+            sk.field_d = MouseWheelInput.field_c.a(ej.field_b, 4, IntrusiveDeque.field_h);
           }
           if (param1 != 0) {
             field_b = (Sprite[][]) null;
@@ -168,18 +168,18 @@ final class sl {
             al.field_d = ak.field_d;
           } else {
             try {
-              pg.field_c = new pj((java.net.Socket) (sk.field_d.field_b), ca.field_c);
+              pg.field_c = new pj((java.net.Socket) (sk.field_d.field_b), MouseWheelInput.field_c);
               om.field_c.position = 0;
-              c var4 = om.field_g;
-              c var5 = var4;
+              CipherPacketBuffer var4 = om.field_g;
+              CipherPacketBuffer var5 = var4;
               al.field_d = sf.field_d;
               var5.position = 0;
               int stackIn_11_0 = (!param0) ? -1 : -2;
               NetworkGameClient.field_q = stackIn_11_0;
-              f.field_t = stackIn_11_0;
+              ArchiveIndex.field_t = stackIn_11_0;
               jj.field_b = stackIn_11_0;
               wc.a(rd.field_a, ac.field_b, true, qa.field_D, om.field_c);
-              rn.a(-1, 30785);
+              ClientException.a(-1, 30785);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;
               IOException var2 = (IOException) (Object) decompiledCaughtException;

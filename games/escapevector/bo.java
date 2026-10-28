@@ -60,7 +60,7 @@ final class bo extends hc {
           Object var6 = null;
           if (param0.indexOf('@') == -1) {
             CharSequence var7 = (CharSequence) ((Object) param0);
-            var4_long = vn.a((byte) 88, var7);
+            var4_long = RasterBuffer.a((byte) 88, var7);
           } else {
             var6 = param0;
           }
@@ -95,7 +95,7 @@ final class bo extends hc {
           if (null == ji.field_b) {
             return;
           }
-          ji.field_b.a(-5070, (java.awt.Component) ((Object) param0));
+          ji.field_b.detach(-5070, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

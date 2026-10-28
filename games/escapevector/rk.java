@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rk {
-    static hh field_c;
-    static hj field_e;
+    static PcmSample field_c;
+    static PcmStreamMixer field_e;
     private Sprite[] field_a;
     private Sprite[] field_f;
     private fn[] field_g;
@@ -225,7 +225,7 @@ final class rk {
 
     final Sprite a(boolean param0, int param1) {
         if (param0) {
-          field_e = (hj) null;
+          field_e = (PcmStreamMixer) null;
           if (0 == param1) {
             return this.field_a[0];
           }
@@ -301,7 +301,7 @@ final class rk {
         if (param2 != 11710) {
           return;
         }
-        rn.field_e = param1;
+        ClientException.field_e = param1;
         ng.field_nb = param0;
     }
 

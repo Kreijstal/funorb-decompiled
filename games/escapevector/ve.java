@@ -4,11 +4,11 @@
 final class ve implements db {
     private int field_m;
     static int field_l;
-    private wl field_e;
-    static hh field_d;
+    private BitmapFont field_e;
+    static PcmSample field_d;
     private int field_c;
     static String field_f;
-    static mf field_h;
+    static ResourceArchive field_h;
     private int field_j;
     private int field_a;
     private int field_b;
@@ -60,7 +60,7 @@ final class ve implements db {
         }
     }
 
-    final static p a(int param0, mf param1, mf param2, int[] param3) {
+    final static p a(int param0, ResourceArchive param1, ResourceArchive param2, int[] param3) {
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
@@ -68,8 +68,8 @@ final class ve implements db {
           if (null == om.field_e) {
             kc.field_c = dn.a(0, vl.field_f, ej.field_g, param1, 1, param3, dn.field_C);
             int[] var6 = (int[]) null;
-            HudMessage.field_k = dn.a(0, ok.field_b, c.field_q, param2, 0, (int[]) null, q.field_L);
-            tk.field_b = new qh(param1, bm.field_e, sb.field_i, 1, od.field_n, param3);
+            HudMessage.field_k = dn.a(0, ok.field_b, CipherPacketBuffer.field_q, param2, 0, (int[]) null, q.field_L);
+            tk.field_b = new qh(param1, bm.field_e, Js5Transport.field_i, 1, od.field_n, param3);
             om.field_e = new p();
             Object stackIn_3_0 = null;
             return (p) (stackIn_3_0);
@@ -115,9 +115,9 @@ final class ve implements db {
         int var3 = 104 / ((31 - param0) / 61);
     }
 
-    final static mf a(int param0, int param1, boolean param2, int param3, boolean param4) {
+    final static ResourceArchive a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param1 != 0) {
-          return (mf) null;
+          return (ResourceArchive) null;
         }
         return ji.a(param2, param0, false, param3, param4, (byte) 114);
     }
@@ -208,7 +208,7 @@ final class ve implements db {
         }
     }
 
-    ve(wl param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    ve(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_j = param5;
           this.field_e = param0;
