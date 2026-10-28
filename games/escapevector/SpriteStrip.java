@@ -4,7 +4,7 @@
 final class SpriteStrip extends IntrusiveNode {
     private Sprite[] sprites;
     private int spacing;
-    static hf field_p;
+    static LoginStage field_p;
     static dh field_g;
     static String field_j;
     static String[] field_i;
@@ -86,7 +86,7 @@ final class SpriteStrip extends IntrusiveNode {
     }
 
     static {
-        field_p = new hf();
+        field_p = new LoginStage();
         field_g = new dh();
         field_n = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
         field_i = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};

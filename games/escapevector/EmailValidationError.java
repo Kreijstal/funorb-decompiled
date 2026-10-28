@@ -66,10 +66,10 @@ final class EmailValidationError {
             DebouncedValidator.writeAchievementRecord(var5, opcode, true);
             var5 = (AchievementRecord) (RasterSnapshot.field_l.next((byte) 70));
           }
-          IntrusiveNode var2 = bc.field_b.first(false);
+          IntrusiveNode var2 = SavedDataQuerySupport.field_b.first(false);
           while (var2 != null) {
-            km.a(opcode, 122);
-            var2 = bc.field_b.next((byte) 70);
+            DirectByteStorage.writeAchievementQuery(opcode, 122);
+            var2 = SavedDataQuerySupport.field_b.next((byte) 70);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

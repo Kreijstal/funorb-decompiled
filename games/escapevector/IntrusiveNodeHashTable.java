@@ -8,7 +8,7 @@ final class IntrusiveNodeHashTable {
     private IntrusiveNode field_b;
     private IntrusiveNode field_g;
     static PcmSample field_a;
-    static eo field_f;
+    static TickClock field_f;
 
     final IntrusiveNode get(long key, int guard) {
         int var6 = EscapeVector.obfuscationControl;

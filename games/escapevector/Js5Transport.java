@@ -4,45 +4,45 @@
 abstract class Js5Transport {
     static BitmapFont field_a;
     static int field_h;
-    SecondaryIntrusiveDeque field_p;
+    SecondaryIntrusiveDeque urgentPending;
     static int field_b;
-    SecondaryIntrusiveDeque field_l;
+    SecondaryIntrusiveDeque urgentInFlight;
     static String field_i;
-    SecondaryIntrusiveDeque field_j;
-    SecondaryIntrusiveDeque field_n;
-    long field_k;
-    PacketBuffer field_e;
-    int field_f;
-    volatile int field_d;
-    byte field_m;
-    volatile int field_g;
-    PacketBuffer field_o;
-    Js5NetworkRequest field_c;
+    SecondaryIntrusiveDeque prefetchPending;
+    SecondaryIntrusiveDeque prefetchInFlight;
+    long lastServiceMillis;
+    PacketBuffer outgoingControl;
+    int idleMillis;
+    volatile int lastErrorCode;
+    byte xorKey;
+    volatile int failureCount;
+    PacketBuffer incomingHeader;
+    Js5NetworkRequest currentRequest;
 
-    final boolean c(int param0) {
-        if (param0 == 20) {
-          return 20 <= this.a(true) ? true : false;
+    final boolean isUrgentCapacityReached(int guard) {
+        if (guard == 20) {
+          return 20 <= this.urgentCount(true) ? true : false;
         }
-        this.field_n = (SecondaryIntrusiveDeque) null;
-        return 20 <= this.a(true) ? true : false;
+        this.prefetchInFlight = (SecondaryIntrusiveDeque) null;
+        return 20 <= this.urgentCount(true) ? true : false;
     }
 
-    final int a(boolean param0) {
-        if (param0) {
-          return this.field_p.c(0) + this.field_l.c(0);
+    final int urgentCount(boolean guard) {
+        if (guard) {
+          return this.urgentPending.c(0) + this.urgentInFlight.c(0);
         }
-        this.a(-59);
-        return this.field_p.c(0) + this.field_l.c(0);
+        this.close(-59);
+        return this.urgentPending.c(0) + this.urgentInFlight.c(0);
     }
 
-    abstract void a(int param0);
+    abstract void close(int guard);
 
-    final int a(byte param0) {
-        if (param0 == 88) {
-          return this.field_j.c(0) + this.field_n.c(0);
+    final int prefetchCount(byte guard) {
+        if (guard == 88) {
+          return this.prefetchPending.c(0) + this.prefetchInFlight.c(0);
         }
-        this.field_e = (PacketBuffer) null;
-        return this.field_j.c(0) + this.field_n.c(0);
+        this.outgoingControl = (PacketBuffer) null;
+        return this.prefetchPending.c(0) + this.prefetchInFlight.c(0);
     }
 
     public static void releaseStatics(int guard) {
@@ -55,73 +55,73 @@ abstract class Js5Transport {
         field_a = null;
     }
 
-    final boolean b(int param0) {
-        if (param0 == 20) {
-          return 20 <= this.a((byte) 88) ? true : false;
+    final boolean isPrefetchCapacityReached(int guard) {
+        if (guard == 20) {
+          return 20 <= this.prefetchCount((byte) 88) ? true : false;
         }
-        this.field_n = (SecondaryIntrusiveDeque) null;
-        return 20 <= this.a((byte) 88) ? true : false;
+        this.prefetchInFlight = (SecondaryIntrusiveDeque) null;
+        return 20 <= this.prefetchCount((byte) 88) ? true : false;
     }
 
-    abstract void b(byte param0);
+    abstract void resetAfterIntegrityFailure(byte guard);
 
-    abstract void a(Object param0, boolean param1, byte param2);
+    abstract void attachConnection(Object connection, boolean loggedIn, byte guard);
 
-    abstract boolean d(int param0);
+    abstract boolean processNetwork(int guard);
 
-    final Js5NetworkRequest a(int param0, boolean param1, byte param2, int param3, byte param4) {
-        long var6 = (long)param3 + ((long)param0 << 32);
-        if (param2 == 0) {
+    final Js5NetworkRequest requestGroup(int archiveId, boolean urgent, byte guard, int groupId, byte padding) {
+        long var6 = (long)groupId + ((long)archiveId << 32);
+        if (guard == 0) {
           Js5NetworkRequest var8 = new Js5NetworkRequest();
-          var8.field_y = param4;
+          var8.paddingBytes = padding;
           Js5NetworkRequest stackIn_16_0 = var8;
-          boolean stackIn_17_1 = (!param1) ? false : true;
+          boolean stackIn_17_1 = (!urgent) ? false : true;
           stackIn_16_0.field_r = stackIn_17_1;
           var8.secondaryKey = var6;
-          if (param1) {
-            if (this.a(true) >= 20) {
+          if (urgent) {
+            if (this.urgentCount(true) >= 20) {
               throw new RuntimeException();
             }
-            this.field_p.addLast(-1, var8);
+            this.urgentPending.addLast(-1, var8);
           } else {
-            if (this.a((byte) 88) >= 20) {
+            if (this.prefetchCount((byte) 88) >= 20) {
               throw new RuntimeException();
             }
-            this.field_j.addLast(~param2, var8);
+            this.prefetchPending.addLast(~guard, var8);
           }
           return var8;
         }
-        this.field_f = -16;
+        this.idleMillis = -16;
         Js5NetworkRequest var8Lifetime1 = new Js5NetworkRequest();
-        var8Lifetime1.field_y = param4;
+        var8Lifetime1.paddingBytes = padding;
         Js5NetworkRequest stackIn_3_0 = var8Lifetime1;
-        boolean stackIn_4_1 = (!param1) ? false : true;
+        boolean stackIn_4_1 = (!urgent) ? false : true;
         stackIn_3_0.field_r = stackIn_4_1;
         var8Lifetime1.secondaryKey = var6;
-        if (param1) {
-          if (this.a(true) >= 20) {
+        if (urgent) {
+          if (this.urgentCount(true) >= 20) {
             throw new RuntimeException();
           }
-          this.field_p.addLast(-1, var8Lifetime1);
+          this.urgentPending.addLast(-1, var8Lifetime1);
         } else {
-          if (this.a((byte) 88) >= 20) {
+          if (this.prefetchCount((byte) 88) >= 20) {
             throw new RuntimeException();
           }
-          this.field_j.addLast(~param2, var8Lifetime1);
+          this.prefetchPending.addLast(~guard, var8Lifetime1);
         }
         return var8Lifetime1;
     }
 
     Js5Transport() {
-        this.field_p = new SecondaryIntrusiveDeque();
-        this.field_l = new SecondaryIntrusiveDeque();
-        this.field_j = new SecondaryIntrusiveDeque();
-        this.field_n = new SecondaryIntrusiveDeque();
-        this.field_e = new PacketBuffer(6);
-        this.field_g = 0;
-        this.field_m = (byte) 0;
-        this.field_d = 0;
-        this.field_o = new PacketBuffer(10);
+        this.urgentPending = new SecondaryIntrusiveDeque();
+        this.urgentInFlight = new SecondaryIntrusiveDeque();
+        this.prefetchPending = new SecondaryIntrusiveDeque();
+        this.prefetchInFlight = new SecondaryIntrusiveDeque();
+        this.outgoingControl = new PacketBuffer(6);
+        this.failureCount = 0;
+        this.xorKey = (byte) 0;
+        this.lastErrorCode = 0;
+        this.incomingHeader = new PacketBuffer(10);
     }
 
     static {

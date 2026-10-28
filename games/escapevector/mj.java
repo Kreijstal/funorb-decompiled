@@ -30,11 +30,11 @@ final class mj {
               if (!param4) {
                 ArchiveIndex.field_m = Checkbox.createLoginCredentials(param3, false, 24564, param2);
               } else {
-                ArchiveIndex.field_m = ei.a(param0 - 1, false, mg.field_d, (String) null, param2);
+                ArchiveIndex.field_m = SavedDataQuery.createCredentials(param0 - 1, false, mg.field_d, (String) null, param2);
               }
               QuickChatDynamicCommand.outgoingPackets.position = 0;
               QuickChatDynamicCommand.outgoingPackets.writeByte(14, -123);
-              QuickChatDynamicCommand.outgoingPackets.writeByte(ArchiveIndex.field_m.a((byte) 32).field_d, -123);
+              QuickChatDynamicCommand.outgoingPackets.writeByte(ArchiveIndex.field_m.type((byte) 32).wireId, -123);
               ClientException.a(-1, 30785);
               al.field_d = SpriteStrip.field_p;
             }
@@ -46,7 +46,7 @@ final class mj {
                 al.field_d = LinkButtonPainter.field_c;
               } else {
                 al.field_d = CheckboxPainter.field_q;
-                cd.field_v = var6_int;
+                LegacyStyleNode.field_v = var6_int;
                 EmailSyntaxValidator.field_r = -1;
               }
             }
@@ -61,7 +61,7 @@ final class mj {
             if (mc.field_b == al.field_d &&
               Checkbox.readIncomingBytes(30000, 1)) {
               int var6_intLifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
-              cd.field_v = var6_intLifetime1;
+              LegacyStyleNode.field_v = var6_intLifetime1;
               p.field_i = null;
               QuickChatDynamicCommand.incomingPackets.position = 0;
               if (0 != var6_intLifetime1 &&
@@ -96,10 +96,10 @@ final class mj {
               }
               if (!param4) {
                 boolean stackIn_48_0 = ((8 & var7) != 0);
-                dl.field_a = stackIn_48_0;
+                RasterRestoreSupport.field_a = stackIn_48_0;
                 boolean stackIn_51_0 = ((4 & var7) != 0);
                 ff.field_g = stackIn_51_0;
-                if (dl.field_a) {
+                if (RasterRestoreSupport.field_a) {
                 }
               }
               if (jc.field_b) {
@@ -117,9 +117,9 @@ final class mj {
               ProgressRecord.field_k = sf.a(-83, var11);
               LaserGateSpan.field_g = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(param0 - 1);
               al.field_d = ThreeSliceButtonPainter.field_t;
-              if (ArchiveIndex.field_m.a((byte) 32) == AlphaContainer.field_E) {
+              if (ArchiveIndex.field_m.type((byte) 32) == AlphaContainer.field_E) {
                 NameAvailabilityValidator.field_q.a(27002, PointCloudEffect.d((byte) -114));
-              } else if (ArchiveIndex.field_m.a((byte) 32) == ja.field_a) {
+              } else if (ArchiveIndex.field_m.type((byte) 32) == ja.field_a) {
                 oh.field_n.a(27002, PointCloudEffect.d((byte) -71));
               }
               e.field_c = false;
@@ -150,24 +150,24 @@ final class mj {
                 NameSuggestionsPanel.field_O[var8Lifetime1] = NameSuggestionsPanel.field_O[var8Lifetime1] + 50;
               }
               QuickChatDynamicCommand.incomingPackets.initializeCipher(NameSuggestionsPanel.field_O, (byte) 85);
-              int stackIn_81_0 = cd.field_v;
+              int stackIn_81_0 = LegacyStyleNode.field_v;
               return stackIn_81_0;
             }
             if (CheckboxPainter.field_q == al.field_d &&
               ArchiveKeyRequest.hasCompletePacket(param0 + 10549)) {
               nm.a(16);
-              if (cd.field_v == 7 &&
+              if (LegacyStyleNode.field_v == 7 &&
                 !e.field_c) {
                 e.field_c = true;
                 int stackIn_88_0 = -1;
                 return stackIn_88_0;
               }
-              if (cd.field_v == 7) {
-                cd.field_v = 3;
+              if (LegacyStyleNode.field_v == 7) {
+                LegacyStyleNode.field_v = 3;
               }
               MouseWheelInput.field_a = QuickChatDynamicCommand.incomingPackets.readString(false);
               e.field_c = false;
-              int stackIn_93_0 = cd.field_v;
+              int stackIn_93_0 = LegacyStyleNode.field_v;
               return stackIn_93_0;
             }
             if (null == TextLayout.field_c) {

@@ -19,8 +19,8 @@ final class jc {
     }
 
     final static void a(int param0) {
-        if (bk.field_r != null) {
-          bk.field_r.a((byte) -122);
+        if (SocketJs5Transport.field_r != null) {
+          SocketJs5Transport.field_r.a((byte) -122);
         }
         if (param0 != 1) {
           jc.releaseStatics(-49);

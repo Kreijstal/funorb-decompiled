@@ -81,7 +81,7 @@ final class DialogueScreen extends IntrusiveNode {
             int stackIn_41_6 = -8 + var4;
             boolean stackIn_42_7 = (var3 != 0) ? false : true;
             int stackIn_45_8 = (0 != this.field_w.field_h) ? 6340704 : 16777215;
-            eo.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_41_5, stackIn_41_6, stackIn_42_7, stackIn_45_8, var3);
+            TickClock.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_41_5, stackIn_41_6, stackIn_42_7, stackIn_45_8, var3);
             int stackIn_47_0 = 405;
             String stackIn_47_1 = this.field_r;
             int stackIn_48_2 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
@@ -96,7 +96,7 @@ final class DialogueScreen extends IntrusiveNode {
             int stackIn_28_6 = 632;
             boolean stackIn_29_7 = (0 != var3) ? false : true;
             int stackIn_32_8 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
-            eo.a(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_26_4, stackIn_28_5, stackIn_28_6, stackIn_29_7, stackIn_32_8, var3);
+            TickClock.a(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_26_4, stackIn_28_5, stackIn_28_6, stackIn_29_7, stackIn_32_8, var3);
             int stackIn_34_0 = 405;
             String stackIn_34_1 = this.field_r;
             int stackIn_35_2 = (this.field_w.field_h != 0) ? 6340704 : 16777215;
@@ -116,7 +116,7 @@ final class DialogueScreen extends IntrusiveNode {
           int stackIn_8_6 = var5 - 6;
           boolean stackIn_9_7 = (var3 != 0) ? false : true;
           int stackIn_12_8 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
-          eo.a(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, stackIn_8_5, stackIn_8_6, stackIn_9_7, stackIn_12_8, var3);
+          TickClock.a(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, stackIn_8_5, stackIn_8_6, stackIn_9_7, stackIn_12_8, var3);
           int stackIn_14_0 = 471;
           String stackIn_14_1 = this.field_r;
           int stackIn_15_2 = (this.field_w.field_h != 0) ? 6340704 : 16777215;
@@ -141,7 +141,7 @@ final class DialogueScreen extends IntrusiveNode {
               var11 = stackIn_63_0;
               var12 = 88 + var10 * 20;
             } else {
-              int var14 = fh.field_g.stringWidth(var16);
+              int var14 = ByteStorage.gameFont.stringWidth(var16);
               var11 = (-var14 + 640) / 2;
               if (var10 == 1 &&
                 614 - var2 < var11 + var14) {
@@ -158,7 +158,7 @@ final class DialogueScreen extends IntrusiveNode {
                 var13Lifetime2 = var17 + "_";
               }
             }
-            fh.field_g.drawLeft(var13Lifetime2, var11, var12, 8454016, -1);
+            ByteStorage.gameFont.drawLeft(var13Lifetime2, var11, var12, 8454016, -1);
             if (var8 == var10) {
               break;
             }
@@ -334,7 +334,7 @@ final class DialogueScreen extends IntrusiveNode {
           }
           int stackIn_6_0 = (!this.fullWidthScene) ? 154 : 614;
           int var3_int = stackIn_6_0;
-          this.field_C = fh.field_g.wrapLines(param1, new int[]{var3_int}, this.field_x);
+          this.field_C = ByteStorage.gameFont.wrapLines(param1, new int[]{var3_int}, this.field_x);
           for (int var4 = 0; this.field_C > var4; var4++) {
             if (this.field_x[var4].endsWith("<br>")) {
               this.field_x[var4] = this.field_x[var4].substring(0, -4 + this.field_x[var4].length());
@@ -580,7 +580,7 @@ final class DialogueScreen extends IntrusiveNode {
           var2 = stackIn_12_0;
         } else {
           int var6 = this.a((byte) 67);
-          int var7 = fh.field_g.stringWidth(var8);
+          int var7 = ByteStorage.gameFont.stringWidth(var8);
           var2 = (640 - var7) / 2;
           if (1 == var3 &&
             626 - var6 - 12 < var7 + var2) {
@@ -588,7 +588,7 @@ final class DialogueScreen extends IntrusiveNode {
           }
         }
         String var9 = var8.substring(0, var4);
-        var2 = var2 + (fh.field_g.stringWidth(var9) + fh.field_g.charAdvance('_') / 2);
+        var2 = var2 + (ByteStorage.gameFont.stringWidth(var9) + ByteStorage.gameFont.charAdvance('_') / 2);
         return var2 * 12288 / 640 + 2048;
     }
 
@@ -597,11 +597,11 @@ final class DialogueScreen extends IntrusiveNode {
         if (param0 != 67) {
           boolean discarded$0 = this.a((byte) 12, 65);
         }
-        int var3 = fh.field_g.stringWidth(ig.field_c) + 9;
+        int var3 = ByteStorage.gameFont.stringWidth(ig.field_c) + 9;
         if (var2 < var3) {
           var2 = var3;
         }
-        var3 = 9 + fh.field_g.stringWidth(TextFieldValidator.field_i);
+        var3 = 9 + ByteStorage.gameFont.stringWidth(TextFieldValidator.field_i);
         if (var2 < var3) {
           var2 = var3;
         }
@@ -680,7 +680,7 @@ final class DialogueScreen extends IntrusiveNode {
         Bullet.removeFirstDialogue((byte) -22);
         gi.a((byte) -111);
         Js5NetworkRequest.field_E = true;
-        bc.field_d = true;
+        SavedDataQuerySupport.field_d = true;
         if (param0 != 2048) {
           DialogueScreen.a(-3, (byte) -83, 42);
         }
@@ -720,7 +720,7 @@ final class DialogueScreen extends IntrusiveNode {
               String var7Lifetime2 = var9;
               String var7Lifetime3 = var9;
               if (lifetimeSeconds >= 0L) {
-                var7Lifetime4 = var9 + "; Expires=" + bh.a(-100, td.b(128) + lifetimeSeconds * 1000L) + "; Max-Age=" + lifetimeSeconds;
+                var7Lifetime4 = var9 + "; Expires=" + EmailCredentials.formatGmtTimestamp(-100, td.b(128) + lifetimeSeconds * 1000L) + "; Max-Age=" + lifetimeSeconds;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

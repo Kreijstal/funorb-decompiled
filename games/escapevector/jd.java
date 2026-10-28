@@ -26,7 +26,7 @@ final class jd {
           if (param0 != -54) {
             jd.a(15, false);
           }
-          oh var5_ref_oh = (oh) (wa.field_c.first(false));
+          oh var5_ref_oh = (oh) (TrackerGainSupport.field_c.first(false));
           while (var5_ref_oh != null) {
             int stackIn_12_0 = var5_ref_oh.field_o;
             int stackIn_12_1 = 100;
@@ -49,7 +49,7 @@ final class jd {
                 }
               }
             }
-            var5_ref_oh = (oh) (wa.field_c.next((byte) 70));
+            var5_ref_oh = (oh) (TrackerGainSupport.field_c.next((byte) 70));
           }
           int var4 = 0;
           oh var5_ref_ohLifetime1 = (oh) (QuickChatPhraseDefinition.field_u.first(false));
@@ -117,8 +117,8 @@ final class jd {
           0 < vi.field_b) {
           int fieldTemp$3 = vi.field_b - 1;
           vi.field_b = vi.field_b - 1;
-          byte[] var2_ref_byte__ = ei.field_l[fieldTemp$3];
-          ei.field_l[vi.field_b] = null;
+          byte[] var2_ref_byte__ = SavedDataQuery.field_l[fieldTemp$3];
+          SavedDataQuery.field_l[vi.field_b] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&

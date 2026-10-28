@@ -11,14 +11,14 @@ final class dj {
         int var4 = EscapeVector.obfuscationControl;
         try {
           GameAppletShell.field_k = true;
-          oh var3 = (oh) (wa.field_c.first(false));
+          oh var3 = (oh) (TrackerGainSupport.field_c.first(false));
           while (var3 != null) {
             if (var3.field_m < 0) {
               SoftwareRasterizer.drawHorizontalLine(var3.field_i - var3.field_s + param2, param0 + var3.field_q, var3.field_s, EmailSyntaxValidator.field_q);
             } else {
               SoftwareRasterizer.drawHorizontalLine(param2 + var3.field_i, param0 + var3.field_q, var3.field_s, EmailSyntaxValidator.field_q);
             }
-            var3 = (oh) (wa.field_c.next((byte) 70));
+            var3 = (oh) (TrackerGainSupport.field_c.next((byte) 70));
           }
           oh var3Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.first(false));
           while (var3Lifetime1 != null) {
@@ -96,7 +96,7 @@ final class dj {
             int stackIn_10_0 = var1_int;
             return stackIn_10_0;
           }
-          if (ei.field_i) {
+          if (SavedDataQuery.field_i) {
             int stackIn_13_0 = 3;
             return stackIn_13_0;
           }

@@ -16,7 +16,7 @@ final class kc {
             if (var1 == 1) {
               wk.field_c = false;
               mj.field_d = 0;
-              t stackIn_54_0 = pl.field_q;
+              t stackIn_54_0 = AlternateUsernameCredentials.field_q;
               int stackIn_54_1 = -26480;
               boolean stackIn_55_2 = (2 != var1) ? false : true;
               ((t) (Object) stackIn_54_0).b(stackIn_54_1, stackIn_55_2);
@@ -26,7 +26,7 @@ final class kc {
               }
               wk.field_c = false;
               mj.field_d = 0;
-              t stackIn_60_0 = pl.field_q;
+              t stackIn_60_0 = AlternateUsernameCredentials.field_q;
               int stackIn_60_1 = -26480;
               boolean stackIn_61_2 = (2 != var1) ? false : true;
               ((t) (Object) stackIn_60_0).b(stackIn_60_1, stackIn_61_2);
@@ -39,7 +39,7 @@ final class kc {
             if (var1 == 1) {
               wk.field_c = false;
               mj.field_d = 0;
-              t stackIn_39_0 = pl.field_q;
+              t stackIn_39_0 = AlternateUsernameCredentials.field_q;
               int stackIn_39_1 = -26480;
               boolean stackIn_40_2 = (2 != var1) ? false : true;
               ((t) (Object) stackIn_39_0).b(stackIn_39_1, stackIn_40_2);
@@ -49,7 +49,7 @@ final class kc {
               }
               wk.field_c = false;
               mj.field_d = 0;
-              t stackIn_45_0 = pl.field_q;
+              t stackIn_45_0 = AlternateUsernameCredentials.field_q;
               int stackIn_45_1 = -26480;
               boolean stackIn_46_2 = (2 != var1) ? false : true;
               ((t) (Object) stackIn_45_0).b(stackIn_45_1, stackIn_46_2);
@@ -68,7 +68,7 @@ final class kc {
           if (var1Lifetime1 == 1) {
             wk.field_c = false;
             mj.field_d = 0;
-            t stackIn_8_0 = pl.field_q;
+            t stackIn_8_0 = AlternateUsernameCredentials.field_q;
             int stackIn_8_1 = -26480;
             boolean stackIn_9_2 = (2 != var1Lifetime1) ? false : true;
             ((t) (Object) stackIn_8_0).b(stackIn_8_1, stackIn_9_2);
@@ -78,7 +78,7 @@ final class kc {
             }
             wk.field_c = false;
             mj.field_d = 0;
-            t stackIn_14_0 = pl.field_q;
+            t stackIn_14_0 = AlternateUsernameCredentials.field_q;
             int stackIn_14_1 = -26480;
             boolean stackIn_15_2 = (2 != var1Lifetime1) ? false : true;
             ((t) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_15_2);
@@ -94,7 +94,7 @@ final class kc {
         if (var1Lifetime1 == 1) {
           wk.field_c = false;
           mj.field_d = 0;
-          t stackIn_29_0 = pl.field_q;
+          t stackIn_29_0 = AlternateUsernameCredentials.field_q;
           int stackIn_29_1 = -26480;
           boolean stackIn_30_2 = (2 != var1Lifetime1) ? false : true;
           ((t) (Object) stackIn_29_0).b(stackIn_29_1, stackIn_30_2);
@@ -103,7 +103,7 @@ final class kc {
         } else if (var1Lifetime1 == 2) {
           wk.field_c = false;
           mj.field_d = 0;
-          t stackIn_24_0 = pl.field_q;
+          t stackIn_24_0 = AlternateUsernameCredentials.field_q;
           int stackIn_24_1 = -26480;
           boolean stackIn_25_2 = (2 != var1Lifetime1) ? false : true;
           ((t) (Object) stackIn_24_0).b(stackIn_24_1, stackIn_25_2);

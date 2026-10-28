@@ -3,7 +3,7 @@
  */
 final class mh {
     static String field_c;
-    static hf field_h;
+    static LoginStage field_h;
     static String field_b;
     static String field_d;
     static String field_g;
@@ -29,7 +29,7 @@ final class mh {
           var1 = PcmResampler.field_d.identifier(35);
         }
         if (var1.length() == 0) {
-          var1 = tg.i(0);
+          var1 = ContactEntry.i(0);
         }
         if (param0 <= 50) {
           field_d = (String) null;
@@ -54,7 +54,7 @@ final class mh {
           int var2_int = param1.length();
           int var3 = 0;
           for (int var4 = param0; var4 < var2_int; var4++) {
-            var3 = hf.a(78, param1.charAt(var4)) + (-var3 + (var3 << 5));
+            var3 = LoginStage.encodeCp1252Character(78, param1.charAt(var4)) + (-var3 + (var3 << 5));
           }
           int stackIn_5_0 = var3;
           return stackIn_5_0;
@@ -73,8 +73,8 @@ final class mh {
     }
 
     final static void a(byte param0) {
-        if (null != bk.field_r) {
-          bk.field_r.a((byte) -109);
+        if (null != SocketJs5Transport.field_r) {
+          SocketJs5Transport.field_r.a((byte) -109);
         }
         if (param0 != 119) {
           field_c = (String) null;
@@ -83,7 +83,7 @@ final class mh {
 
     static {
         field_c = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
-        field_h = new hf();
+        field_h = new LoginStage();
         field_b = "PER MONTH";
         field_d = "Confirm Password: ";
         field_a = new int[48];

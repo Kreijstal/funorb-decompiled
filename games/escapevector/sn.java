@@ -43,7 +43,7 @@ final class sn {
           ModalStack.field_D = true;
           ArchiveIndex.field_j = param0;
           if (ArchiveIndex.field_j == 0) {
-            var3_int = PasswordFieldPainter.a(pf.field_e, -118, nb.field_a, Js5Transport.field_h, ac.field_a);
+            var3_int = PasswordFieldPainter.a(pf.field_e, -118, nb.field_a, Js5Transport.field_h, KeyboardStateSupport.field_a);
             var4 = var3_int + 3;
             jj.field_a = new int[var4];
             Js5NetworkRequest.field_I = new String[var4];
@@ -62,7 +62,7 @@ final class sn {
             jj.field_a[-1 + var4] = 1;
             CachedTextLayout.field_j[1] = 5;
           } else if (ArchiveIndex.field_j == 1) {
-            var3_int = PasswordFieldPainter.a(pf.field_e, -126, nb.field_a, Js5Transport.field_h, ac.field_a);
+            var3_int = PasswordFieldPainter.a(pf.field_e, -126, nb.field_a, Js5Transport.field_h, KeyboardStateSupport.field_a);
             var4 = 2 + var3_int;
             Js5NetworkRequest.field_I = new String[var4];
             jj.field_a = new int[var4];
@@ -99,7 +99,7 @@ final class sn {
               jj.field_a[var4 - 1] = 0;
               CachedTextLayout.field_j[0] = 5;
             } else if (ArchiveIndex.field_j == 4) {
-              var3_int = PasswordFieldPainter.a(pf.field_e, -110, nb.field_a, Js5Transport.field_h, ol.field_K);
+              var3_int = PasswordFieldPainter.a(pf.field_e, -110, nb.field_a, Js5Transport.field_h, LegacyWidgetStyle.field_K);
               var4 = var3_int + 2;
               Js5NetworkRequest.field_I = new String[var4];
               jj.field_a = new int[var4];
@@ -150,10 +150,10 @@ final class sn {
             if (-1 == var4) {
               throw new IllegalStateException();
             }
-            tg.field_nb = new String[var4];
-            qg.a(pf.field_e, 0, tg.field_nb, 0, var4);
-            nn.field_i = new String[-1 - var4 + var3_int];
-            qg.a(pf.field_e, 1 + var4, nn.field_i, 0, -var4 + (var3_int - 1));
+            ContactEntry.field_nb = new String[var4];
+            qg.a(pf.field_e, 0, ContactEntry.field_nb, 0, var4);
+            SecondaryNodeHashTable.field_i = new String[-1 - var4 + var3_int];
+            qg.a(pf.field_e, 1 + var4, SecondaryNodeHashTable.field_i, 0, -var4 + (var3_int - 1));
             var4 = -1;
             var3_int = PasswordFieldPainter.a(pf.field_e, param1 ^ 71, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(al.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
             for (var5 = 0; var3_int > var5; var5++) {
@@ -170,14 +170,14 @@ final class sn {
             qg.a(pf.field_e, 0, IterableNodeHashTable.field_f, 0, var4);
             ModalStack.field_G = new String[var3_int - var4 - 1];
             qg.a(pf.field_e, 1 + var4, ModalStack.field_G, 0, -1 + var3_int - var4);
-            if (IterableNodeHashTable.field_f.length > tg.field_nb.length) {
+            if (IterableNodeHashTable.field_f.length > ContactEntry.field_nb.length) {
               stackIn_52_0 = IterableNodeHashTable.field_f.length;
             } else {
-              stackIn_52_0 = tg.field_nb.length;
+              stackIn_52_0 = ContactEntry.field_nb.length;
             }
             var5 = stackIn_52_0;
-            if (nn.field_i.length >= ModalStack.field_G.length) {
-              stackIn_55_0 = nn.field_i.length;
+            if (SecondaryNodeHashTable.field_i.length >= ModalStack.field_G.length) {
+              stackIn_55_0 = SecondaryNodeHashTable.field_i.length;
             } else {
               stackIn_55_0 = ModalStack.field_G.length;
             }
@@ -237,7 +237,7 @@ final class sn {
             }
           }
           if (2 == ArchiveIndex.field_j) {
-            String[] var10 = tg.field_nb;
+            String[] var10 = ContactEntry.field_nb;
             String[] var4_ref_String__ = var10;
             for (int var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               String var11 = var10[var5Lifetime2];
@@ -246,7 +246,7 @@ final class sn {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            String[] var4_ref_String__Lifetime1 = nn.field_i;
+            String[] var4_ref_String__Lifetime1 = SecondaryNodeHashTable.field_i;
             for (int var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               String var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               int var7Lifetime1Lifetime1 = LoginMethod.a(-104, var12, false);

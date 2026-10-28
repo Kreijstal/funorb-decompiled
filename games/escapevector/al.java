@@ -4,7 +4,7 @@
 final class al {
     static int[] field_f;
     static int[] field_a;
-    static hf field_d;
+    static LoginStage field_d;
     static PcmSample field_b;
     static long field_e;
     static String field_c;
@@ -50,13 +50,13 @@ final class al {
 
     final static Sprite a(byte param0) {
         int var5 = EscapeVector.obfuscationControl;
-        int var1 = bc.spriteHeights[0] * qh.spriteWidths[0];
+        int var1 = SavedDataQuerySupport.spriteHeights[0] * qh.spriteWidths[0];
         byte[] var2 = qe.spriteIndices[0];
         int[] var3 = new int[var1];
         for (int var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], bc.spriteHeights[0], var3);
+        Sprite var4 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var3);
         of.a(false);
         if (param0 < 98) {
           field_a = (int[]) null;

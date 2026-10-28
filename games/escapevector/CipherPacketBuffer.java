@@ -39,8 +39,8 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final static void m(int param0) {
-        if (null != bk.field_r) {
-          bk.field_r.a((byte) 33);
+        if (null != SocketJs5Transport.field_r) {
+          SocketJs5Transport.field_r.a((byte) 33);
         }
         int var1 = -128 / ((param0 - 16) / 38);
     }
@@ -143,14 +143,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (var4 < count) {
           int incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.payload[incrementValue$0] & ol.field_ab[var4]) << -var4 + count);
+          var5 = var5 + ((this.payload[incrementValue$0] & LegacyWidgetStyle.field_ab[var4]) << -var4 + count);
           count = count - var4;
           var4 = 8;
         }
         if (var4 != count) {
-          var5 = var5 + (this.payload[var3] >> var4 - count & ol.field_ab[count]);
+          var5 = var5 + (this.payload[var3] >> var4 - count & LegacyWidgetStyle.field_ab[count]);
         } else {
-          var5 = var5 + (ol.field_ab[var4] & this.payload[var3]);
+          var5 = var5 + (LegacyWidgetStyle.field_ab[var4] & this.payload[var3]);
         }
         return var5;
     }

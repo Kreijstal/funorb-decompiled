@@ -31,14 +31,14 @@ final class fg {
         IndexedSprite[] var1 = new IndexedSprite[qk.spriteCount];
         if (param0 == 13029) {
           for (int var2 = 0; qk.spriteCount > var2; var2++) {
-            var1[var2] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], gi.spriteOffsetYs[var2], qh.spriteWidths[var2], bc.spriteHeights[var2], qe.spriteIndices[var2], qk.spritePalette);
+            var1[var2] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], gi.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], qe.spriteIndices[var2], qk.spritePalette);
           }
           of.a(false);
           return var1;
         }
         fg.b(16);
         for (int var2Lifetime1 = 0; qk.spriteCount > var2Lifetime1; var2Lifetime1++) {
-          var1[var2Lifetime1] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2Lifetime1], gi.spriteOffsetYs[var2Lifetime1], qh.spriteWidths[var2Lifetime1], bc.spriteHeights[var2Lifetime1], qe.spriteIndices[var2Lifetime1], qk.spritePalette);
+          var1[var2Lifetime1] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2Lifetime1], gi.spriteOffsetYs[var2Lifetime1], qh.spriteWidths[var2Lifetime1], SavedDataQuerySupport.spriteHeights[var2Lifetime1], qe.spriteIndices[var2Lifetime1], qk.spritePalette);
         }
         of.a(false);
         return var1;
@@ -62,7 +62,7 @@ final class fg {
         }
         try {
           ArchiveProvider.field_b = new Sprite[17];
-          String[] var2 = pl.field_k;
+          String[] var2 = AlternateUsernameCredentials.field_k;
           for (int var3_int = 0; var2.length > var3_int; var3_int++) {
             String var4 = var2[var3_int];
             Sprite var5 = fe.a(var1, IndexedSpriteState.field_j, var4, true);

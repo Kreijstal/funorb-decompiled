@@ -11,13 +11,13 @@ final class SectorCacheStore {
     private BufferedRandomAccessFile field_d;
 
     final static void a(byte param0) {
-        t var1 = pl.field_q;
+        t var1 = AlternateUsernameCredentials.field_q;
         if (var1.field_c &&
           UiContainer.e((byte) -39)) {
           return;
         }
         if (var1.field_c) {
-          pl.field_q = new t();
+          AlternateUsernameCredentials.field_q = new t();
           if (param0 <= 117) {
             SectorCacheStore.releaseStatics(true);
           }
@@ -26,7 +26,7 @@ final class SectorCacheStore {
           return;
         }
         if (UiContainer.e((byte) 97)) {
-          pl.field_q = new t();
+          AlternateUsernameCredentials.field_q = new t();
           if (param0 <= 117) {
             SectorCacheStore.releaseStatics(true);
           }

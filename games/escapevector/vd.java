@@ -12,7 +12,7 @@ final class vd {
     static Sprite[] field_f;
     static String[] field_d;
     private boolean field_k;
-    private ei field_a;
+    private SavedDataQuery field_a;
     private BitSet field_e;
     static PcmSample field_g;
     private int field_j;
@@ -258,7 +258,7 @@ final class vd {
 
     final static void a(byte param0) {
         int var1 = -124 % ((param0 + 86) / 37);
-        dl.field_a = false;
+        RasterRestoreSupport.field_a = false;
         QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
     }
 
@@ -442,12 +442,12 @@ final class vd {
             return;
           }
           if (this.field_a == null) {
-            this.field_a = bc.a(6, 86);
+            this.field_a = SavedDataQuerySupport.requestSavedData(6, 86);
           }
-          this.field_k = this.field_a.field_g;
+          this.field_k = this.field_a.complete;
           if (this.field_k) {
             try {
-              this.a(-16331, this.field_a.field_h);
+              this.a(-16331, this.field_a.payload);
             } catch (IOException iOException) {
               System.out.println("Error reading game data");
             }

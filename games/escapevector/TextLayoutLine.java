@@ -33,7 +33,7 @@ final class TextLayoutLine {
         if (guard >= -113) {
           return -7;
         }
-        return bi.field_d[angle & 2047];
+        return MeshRasterState.sineQ16[angle & 2047];
     }
 
     final static void b(int param0, int param1) {
@@ -71,13 +71,13 @@ final class TextLayoutLine {
             }
             Sprite var6 = var3[var5];
             int var7 = var5 + 14;
-            Sprite[] var8 = mb.field_f;
+            Sprite[] var8 = mb.objectSprites;
             if (var2_int) {
               var8 = ArchiveProvider.field_b;
             }
             var8[var7] = var6;
             Sprite var9 = var4[var5];
-            StripedProgressBar.field_K[var7] = var9;
+            StripedProgressBar.objectGlowSprites[var7] = var9;
           }
           DualLinkNode.a(-1, param1);
           return;

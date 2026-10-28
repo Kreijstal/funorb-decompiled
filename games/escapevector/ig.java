@@ -130,7 +130,7 @@ final class ig {
         String stackIn_6_2 = null;
         try {
           int[] var13 = new int[]{this.field_f, this.field_s};
-          String[] var6 = new String[]{eo.field_b, be.field_a};
+          String[] var6 = new String[]{TickClock.field_b, be.field_a};
           int[] var7 = new int[]{2, 3};
           int var8 = 3;
           int var9 = 89;
@@ -185,7 +185,7 @@ final class ig {
               return false;
             }
           }
-          pl.field_q = null;
+          AlternateUsernameCredentials.field_q = null;
           IntValueNode.field_i = null;
           SelfDestructEffects.field_q = -1;
           int var6Lifetime1 = var3;
@@ -194,7 +194,7 @@ final class ig {
         }
         if (this.field_s == var3) {
           IntValueNode.field_i = null;
-          pl.field_q = null;
+          AlternateUsernameCredentials.field_q = null;
           SelfDestructEffects.field_q = -1;
           IntValueNode.startSelectedLevel(this.field_a, -1, 101);
           return true;
@@ -517,7 +517,7 @@ final class ig {
           this.field_r = null;
           return;
         }
-        byte[][] var2 = ld.field_h[this.field_a];
+        byte[][] var2 = UsernameCredentials.field_h[this.field_a];
         this.field_r = new GameplaySession(var2);
         this.field_r.gameMode = this.field_a;
         this.field_r.selectLevel(this.field_m, -59);
@@ -575,7 +575,7 @@ final class ig {
 
     private final void b(byte param0) {
         boolean var2 = (this.field_a == 3);
-        BinaryBitmapFont var3 = fh.field_g;
+        BinaryBitmapFont var3 = ByteStorage.gameFont;
         this.i(-30234);
         int var4 = ua.field_c.a(29386, this.field_a);
         if (!var2) {
@@ -608,7 +608,7 @@ final class ig {
           this.field_k.drawOpaque(3, 79);
         }
         this.d(0);
-        fk.a(404, 3162160, param0 ^ 115, 0, 6324320, 76, param0, var2, 430);
+        LoginCredentialType.a(404, 3162160, param0 ^ 115, 0, 6324320, 76, param0, var2, 430);
         int var3 = je.a(false, this.field_a);
         int var4 = di.field_d.field_h;
         boolean var5 = true;
@@ -631,10 +631,10 @@ final class ig {
           return;
         }
         if (this.field_a == 1) {
-          this.field_k = km.field_k;
+          this.field_k = DirectByteStorage.field_k;
         }
         if (this.field_a == 0) {
-          this.field_k = km.field_k;
+          this.field_k = DirectByteStorage.field_k;
         }
         if (this.field_a == 2) {
           this.field_k = aj.field_c;
@@ -738,14 +738,14 @@ final class ig {
           String var6 = GameAppletShell.field_f;
           var4 = var6;
           if (aj.b(-97)) {
-            var4 = var6 + "<br>" + AccountTermsPanel.field_O + " " + fk.field_c;
+            var4 = var6 + "<br>" + AccountTermsPanel.field_O + " " + LoginCredentialType.field_c;
           }
         }
         if (var4 != null) {
-          int var5 = 8 + fh.field_g.paragraphHeight((String) (var4), 387, 20);
+          int var5 = 8 + ByteStorage.gameFont.paragraphHeight((String) (var4), 387, 20);
           SoftwareRasterizer.drawHorizontalLine(7, 426 + (-var5 - 1), 393, 3162160);
           SoftwareRasterizer.fillRectangle(7, -var5 + 426, 393, var5, 0);
-          fh.field_g.drawParagraph((String) (var4), 10, 128, 387, 294, 6340704, -1, 1, 2, 20);
+          ByteStorage.gameFont.drawParagraph((String) (var4), 10, 128, 387, 294, 6340704, -1, 1, 2, 20);
         }
     }
 
@@ -854,7 +854,7 @@ final class ig {
           for (int var6 = 0; var5.length > var6; var6++) {
             qe var7 = var5[var6];
             if (var7.field_h == var2) {
-              PcmSample var8 = b.field_b;
+              PcmSample var8 = AccountOverlayController.field_b;
               int var9 = 16384 * var7.field_f.field_h / 640;
               PcmSampleStream var10 = PcmSampleStream.createAtRatePercentQ6(var8, var4, var3, var9);
               ValidatedTextWidget.field_K[var7.field_d] = var10;

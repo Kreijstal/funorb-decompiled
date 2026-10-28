@@ -48,7 +48,7 @@ final class SelfDestructEffects {
           int var3 = -128 % ((param0 + 36) / 48);
           for (int var2 = 1; al.field_f.length > var2; var2++) {
             int var4 = al.field_f[var2];
-            qg.a(bc.field_f, var2 << 4, bc.field_f, var1_int, var4);
+            qg.a(SavedDataQuerySupport.field_f, var2 << 4, SavedDataQuerySupport.field_f, var1_int, var4);
             var1_int = var1_int + var4;
           }
           return;
@@ -118,7 +118,7 @@ final class SelfDestructEffects {
         if (var7 >= var8) {
           var7 = -this.field_l.fullHeight + (-1 + var8);
         }
-        PcmSample var9 = sf.field_e[0];
+        PcmSample var9 = sf.objectExplosionSamples[0];
         PointCloudEffect var10 = new PointCloudEffect(this.field_l, var6, var7, var9);
         this.field_o.addLast(-12328, var10);
     }
@@ -222,7 +222,7 @@ final class SelfDestructEffects {
                 QuickChatDynamicCommand.incomingPackets.position = 0;
               } else {
                 EmailSyntaxValidator.field_r = -1;
-                cd.field_v = var9Lifetime1;
+                LegacyStyleNode.field_v = var9Lifetime1;
                 al.field_d = mh.field_h;
               }
             }
@@ -246,7 +246,7 @@ final class SelfDestructEffects {
           }
           if (al.field_d == mh.field_h &&
             ArchiveKeyRequest.hasCompletePacket(param0 ^ -10538)) {
-            if (cd.field_v != 255) {
+            if (LegacyStyleNode.field_v != 255) {
               MouseWheelInput.field_a = QuickChatDynamicCommand.incomingPackets.readString(false);
             } else {
               String var9_ref_String = QuickChatDynamicCommand.incomingPackets.readNullableString(param0 - 15176);
@@ -256,7 +256,7 @@ final class SelfDestructEffects {
             }
             nm.a(16);
             e.field_c = false;
-            int stackIn_53_0 = cd.field_v;
+            int stackIn_53_0 = LegacyStyleNode.field_v;
             return stackIn_53_0;
           }
           if (TextLayout.field_c == null) {
@@ -329,7 +329,7 @@ final class SelfDestructEffects {
           this.field_a = this.field_c;
         }
         if (1 == this.field_a) {
-          PcmStreamMixer var3 = pl.field_n;
+          PcmStreamMixer var3 = AlternateUsernameCredentials.field_n;
           PcmSample var4 = RasterBuffer.field_c;
           int var5 = 100;
           int var6 = IterableNodeHashTable.field_c * 6144 / 64;
@@ -429,7 +429,7 @@ final class SelfDestructEffects {
           param0.removeMouseMotionListener(QuickChatDynamicCommand.mouseHandler);
           int var2_int = 100 % ((-57 - param1) / 62);
           param0.removeFocusListener(QuickChatDynamicCommand.mouseHandler);
-          vj.heldMouseButton = 0;
+          LoginCredentials.heldMouseButton = 0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "od.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

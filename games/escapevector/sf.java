@@ -11,7 +11,7 @@ final class sf {
     private int field_f;
     private int field_a;
     private int field_j;
-    static hf field_d;
+    static LoginStage field_d;
     private int field_p;
     static int[] field_m;
     static String field_n;
@@ -19,7 +19,7 @@ final class sf {
     private int field_k;
     static Sprite[] field_b;
     private int field_o;
-    static PcmSample[] field_e;
+    static PcmSample[] objectExplosionSamples;
 
     final static String a(int param0, CharSequence param1) {
         String stackIn_34_2 = null;
@@ -59,7 +59,7 @@ final class sf {
           for (int var6 = var2_int; var6 < var3; var6++) {
             int var7 = param1.charAt(var6);
             if (EmailAvailabilityRequest.a((char) var7, -11217)) {
-              int var8 = eo.a(227, (char) var7);
+              int var8 = TickClock.normalizeAccountCharacter(227, (char) var7);
               if (0 != var8) {
                 StringBuilder discarded$0 = var5.append((char) var8);
               }
@@ -93,7 +93,7 @@ final class sf {
         this.field_f = this.field_f + param1;
         this.field_r = this.field_r + param1;
         if (param0 != -1) {
-          field_d = (hf) null;
+          field_d = (LoginStage) null;
         }
         this.field_o = this.field_o + param1;
         this.field_j = this.field_j + param1;
@@ -247,7 +247,7 @@ final class sf {
     }
 
     public static void releaseStatics(boolean guard) {
-        field_e = null;
+        objectExplosionSamples = null;
         field_b = null;
         field_d = null;
         if (guard) {
@@ -277,10 +277,10 @@ final class sf {
     }
 
     static {
-        field_d = new hf();
+        field_d = new LoginStage();
         field_n = "Legend";
         field_c = 0;
         field_m = new int[4];
-        field_e = new PcmSample[17];
+        objectExplosionSamples = new PcmSample[17];
     }
 }

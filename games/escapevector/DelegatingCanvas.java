@@ -30,10 +30,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (MatchingTextValidator.b((byte) -35, password)) {
             return false;
           }
-          if (aa.a(1, password)) {
+          if (RepeatedCharacterSupport.isRepeatedCharacter(1, password)) {
             return false;
           }
-          if (ol.a((byte) -7, password)) {
+          if (LegacyWidgetStyle.isOutsidePasswordLength((byte) -7, password)) {
             return false;
           }
           if (accountName.length() == 0) {

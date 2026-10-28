@@ -186,7 +186,7 @@ final class en {
         }
         int var2 = 95 / ((-79 - param0) / 45);
         if (null == this.field_m) {
-          this.field_m = tg.b(4, 126);
+          this.field_m = ContactEntry.requestAchievements(4, 126);
           this.field_c = false;
           this.field_h = false;
         }
@@ -441,7 +441,7 @@ final class en {
         if (param0 != 54) {
           return true;
         }
-        int[] var8 = pl.d(126);
+        int[] var8 = AlternateUsernameCredentials.d(126);
         int[] var7 = var8;
         int[] var6 = var7;
         if (var6 != null &&
@@ -510,7 +510,7 @@ final class en {
           uj.field_a = sl.field_b[var2_int][0];
           sl.field_b[var2_int][2] = fe.a("tutorial", param0, "layer2", true);
           UiTheme.field_e = fe.a("tutorial", param0, "edge_exit_left", true);
-          wa.field_b = fe.a("tutorial", param0, "edge_exit_right", true);
+          TrackerGainSupport.field_b = fe.a("tutorial", param0, "edge_exit_right", true);
           EmailAvailabilityValidator.field_r = fe.a("tutorial", param0, "edge_inner_bottom", true);
           ej.field_e = fe.a("tutorial", param0, "edge_inner_bottom_left", true);
           MarkerSlider.field_G = fe.a("tutorial", param0, "edge_inner_bottom_right", true);
@@ -519,8 +519,8 @@ final class en {
           mj.field_f = fe.a("tutorial", param0, "edge_inner_top", true);
           AccountRegistrationPanel.field_T = fe.a("tutorial", param0, "edge_inner_top_left", true);
           GrowableIntList.field_h = fe.a("tutorial", param0, "edge_inner_top_right", true);
-          wa.field_e = fe.a("tutorial", param0, "edge_outer", true);
-          qf.field_d = fe.a("tutorial", param0, "exitbg", true);
+          TrackerGainSupport.field_e = fe.a("tutorial", param0, "edge_outer", true);
+          NanoTickClock.field_d = fe.a("tutorial", param0, "exitbg", true);
           CipherPacketBuffer.field_n = fe.a("tutorial", param0, "panel", true);
           gm.field_a = fe.a("tutorial", param0, "platform", true);
           EmailValidationError.field_a[var2_int] = fe.a("tutorial", param0, "texture", true);
@@ -765,31 +765,31 @@ final class en {
             String var6 = Js5NetworkRequest.field_I[var3];
             if (2 == ArchiveIndex.field_j &&
               1 == var2) {
-              if (tg.field_nb.length >= IterableNodeHashTable.field_f.length) {
-                stackIn_19_0 = tg.field_nb.length;
+              if (ContactEntry.field_nb.length >= IterableNodeHashTable.field_f.length) {
+                stackIn_19_0 = ContactEntry.field_nb.length;
               } else {
                 stackIn_19_0 = IterableNodeHashTable.field_f.length;
               }
               int var7 = stackIn_19_0;
-              if (ModalStack.field_G.length > nn.field_i.length) {
+              if (ModalStack.field_G.length > SecondaryNodeHashTable.field_i.length) {
                 stackIn_22_0 = ModalStack.field_G.length;
               } else {
-                stackIn_22_0 = nn.field_i.length;
+                stackIn_22_0 = SecondaryNodeHashTable.field_i.length;
               }
               int var8 = stackIn_22_0;
               if (6 <= var3 &&
                 var3 < var7 + 6) {
-                if (-var7 + var3 + (-6 + tg.field_nb.length) < 0) {
+                if (-var7 + var3 + (-6 + ContactEntry.field_nb.length) < 0) {
                   stackIn_27_0 = "";
                 } else {
-                  stackIn_27_0 = tg.field_nb[-var7 + (tg.field_nb.length + var3) - 6];
+                  stackIn_27_0 = ContactEntry.field_nb[-var7 + (ContactEntry.field_nb.length + var3) - 6];
                 }
                 var6 = stackIn_27_0;
               }
               if (var7 + 7 <= var3 &&
                 var3 < var7 + 7 + var8) {
-                if (-var7 + (-7 + var3) < nn.field_i.length) {
-                  stackIn_33_0 = nn.field_i[-var7 + (var3 - 7)];
+                if (-var7 + (-7 + var3) < SecondaryNodeHashTable.field_i.length) {
+                  stackIn_33_0 = SecondaryNodeHashTable.field_i[-var7 + (var3 - 7)];
                 } else {
                   stackIn_33_0 = "";
                 }

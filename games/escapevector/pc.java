@@ -60,15 +60,15 @@ final class pc {
         if (param1 < 0) {
           return 0;
         }
-        if (fh.field_c.length <= param1) {
+        if (ByteStorage.levelNamesByMode.length <= param1) {
           return 0;
         }
         if (param0 == 2513) {
-          int var2 = fh.field_c[param1].length;
+          int var2 = ByteStorage.levelNamesByMode[param1].length;
           return var2;
         }
         field_c = (int[]) null;
-        int var2Lifetime1 = fh.field_c[param1].length;
+        int var2Lifetime1 = ByteStorage.levelNamesByMode[param1].length;
         return var2Lifetime1;
     }
 

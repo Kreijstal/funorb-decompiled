@@ -236,7 +236,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
                 break;
               }
               String var7_ref_String = param0.substring(var6_int + 2, var5);
-              if (!fk.a(false, (CharSequence) ((Object) var7_ref_String))) {
+              if (!LoginCredentialType.isDecimalText(false, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -269,7 +269,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               break;
             }
             String var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!fk.a(false, (CharSequence) ((Object) var9))) {
+            if (!LoginCredentialType.isDecimalText(false, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {

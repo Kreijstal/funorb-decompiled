@@ -14,7 +14,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           if (param1 != 83) {
             field_q = -5;
           }
-          ei.field_i = false;
+          SavedDataQuery.field_i = false;
           DraggableWidget.field_F = false;
           if (be.field_b != null) {
             if (!be.field_b.open) {
@@ -95,7 +95,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         String stackIn_9_2 = null;
         try {
           if (this.validateText(-1, text) == ArchiveProvider.field_a) {
-            String stackIn_3_0 = eo.field_a;
+            String stackIn_3_0 = TickClock.field_a;
             return stackIn_3_0;
           }
           int var3_int = -127 % ((guard - 10) / 51);
@@ -126,8 +126,8 @@ final class EmailSyntaxValidator extends TextFieldValidator {
     }
 
     final static void d(boolean param0) {
-        if (bk.field_r != null) {
-          bk.field_r.a((byte) -126);
+        if (SocketJs5Transport.field_r != null) {
+          SocketJs5Transport.field_r.a((byte) -126);
           if (!param0) {
             return;
           }
@@ -147,7 +147,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
     final ValidationState validateText(int guard, String text) {
         String stackIn_14_2 = null;
         try {
-          boolean stackIn_3_0 = !(null != cd.a(guard ^ 0, text));
+          boolean stackIn_3_0 = !(null != LegacyStyleNode.validateEmail(guard ^ 0, text));
           boolean var3_int = stackIn_3_0;
           if (!var3_int) {
             ValidationState stackIn_6_0 = ArchiveProvider.field_a;

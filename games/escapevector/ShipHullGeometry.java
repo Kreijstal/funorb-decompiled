@@ -25,7 +25,7 @@ final class ShipHullGeometry {
           TriangleMesh var2 = (TriangleMesh) null;
           ShipHullGeometry.a(19, -90, 62, -122, 5, (TriangleMesh) null, -13, -75);
         }
-        dl.a(false);
+        RasterRestoreSupport.resetTooltipState(false);
     }
 
     final static void a(int param0, int[] param1, int[] param2) {
@@ -104,7 +104,7 @@ final class ShipHullGeometry {
             var64[var13] = var15Lifetime2;
           }
           for (int var13Lifetime1 = 0; var13Lifetime1 < aj.field_d; var13Lifetime1++) {
-            int var14Lifetime1 = bc.field_f[var13Lifetime1];
+            int var14Lifetime1 = SavedDataQuerySupport.field_f[var13Lifetime1];
             int var15Lifetime1 = param5.faceVertexA[var14Lifetime1];
             int var16 = param5.faceVertexB[var14Lifetime1];
             int var17 = param5.faceVertexC[var14Lifetime1];
@@ -178,7 +178,7 @@ final class ShipHullGeometry {
               int var39 = (16711870 & var30 * var36) >>> 8 | (var35 * var30 & -16711760) >>> 8;
               var38 = var38 + 65793 * var32;
               var39 = var39 + 65793 * var33;
-              ei.a(var24, var23, var22, 255 & var39 >> 8, var38 >> 16, var27, var39 >> 16, var26, var25, -15733, 255 & var39, 255 & var37, var37 >> 16, var38 & 255, (var37 & 65293) >> 8, 255 & var38 >> 8);
+              SavedDataQuery.a(var24, var23, var22, 255 & var39 >> 8, var38 >> 16, var27, var39 >> 16, var26, var25, -15733, 255 & var39, 255 & var37, var37 >> 16, var38 & 255, (var37 & 65293) >> 8, 255 & var38 >> 8);
             }
           }
           return;

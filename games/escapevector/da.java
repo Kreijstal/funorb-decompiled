@@ -23,8 +23,8 @@ final class da {
     }
 
     final static boolean c(byte param0) {
-        fh.field_a = true;
-        tg.field_mb = td.b(128) + 15000L;
+        ByteStorage.field_a = true;
+        ContactEntry.field_mb = td.b(128) + 15000L;
         if (param0 < -19) {
           return 11 == ff.field_e ? true : false;
         }
@@ -33,7 +33,7 @@ final class da {
 
     final static IndexedSprite b(byte param0) {
         int var2 = 85 % ((param0 + 46) / 39);
-        IndexedSprite var1 = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], bc.spriteHeights[0], qe.spriteIndices[0], qk.spritePalette);
+        IndexedSprite var1 = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], qe.spriteIndices[0], qk.spritePalette);
         of.a(false);
         return var1;
     }

@@ -195,14 +195,14 @@ final class wc {
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         int var9 = 0;
         int var13 = EscapeVector.obfuscationControl;
-        nn.field_a = kh.a(param2, (byte) 126, "commonui", "frame_top");
+        SecondaryNodeHashTable.field_a = kh.a(param2, (byte) 126, "commonui", "frame_top");
         bn.field_d = kh.a(param2, (byte) -114, "commonui", "frame_bottom");
         ProgressRecord.field_j = fe.a("commonui", param2, "jagex_logo_grey", true);
-        fk.field_f = kh.a(param2, (byte) -81, "commonui", "button");
+        LoginCredentialType.field_f = kh.a(param2, (byte) -81, "commonui", "button");
         EditableTextWidget.field_E = ui.a("validation", param2, "commonui", (byte) 77);
-        ke.field_c = (BitmapFont) ((Object) ac.a("arezzo12", -110, param2, "commonui", param3));
-        Js5Transport.field_a = (BitmapFont) ((Object) ac.a("arezzo14", -124, param2, "commonui", param3));
-        dl.field_b = (BitmapFont) ((Object) ac.a("arezzo14bold", -93, param2, "commonui", param3));
+        ke.field_c = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo12", -110, param2, "commonui", param3));
+        Js5Transport.field_a = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo14", -124, param2, "commonui", param3));
+        RasterRestoreSupport.field_b = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo14bold", -93, param2, "commonui", param3));
         Sprite var17 = new Sprite(param1.getNamedFile(-4, "", "button.gif"), (java.awt.Component) ((Object) of.field_d));
         AccountRegistrationPanel.a(param2, 50, "dropdown", "commonui");
         IndexedSprite[] var5 = SpriteCheckboxPainter.loadIndexedSprites("commonui", "screen_options", (byte) -65, param2);
@@ -229,7 +229,7 @@ final class wc {
           }
         }
         var9 = var17.height;
-        hf.a(-123);
+        LoginStage.pushRasterState(-123);
         var17.bindAsFramebuffer();
         SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
         Sprite var15 = new Sprite(var9, var9);
@@ -246,8 +246,8 @@ final class wc {
           Sprite var12 = new Sprite(-(var9 * 2) + var17.width, var9);
           var12.bindAsFramebuffer();
           var17.drawOpaque(-var9, 0);
-          dl.a((byte) -109);
-          fk.field_f = new Sprite[]{var15, var12, var11};
+          RasterRestoreSupport.popRasterState((byte) -109);
+          LoginCredentialType.field_f = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "wc.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

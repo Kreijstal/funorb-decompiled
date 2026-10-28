@@ -38,7 +38,7 @@ final class nb {
           }
           String var6 = param0.getParameter("currency");
           if (var6 != null &&
-            fk.a(false, (CharSequence) ((Object) var6))) {
+            LoginCredentialType.isDecimalText(false, (CharSequence) ((Object) var6))) {
             gn.a(16777215, (CharSequence) ((Object) var6));
           }
           sf.field_b = new Sprite[param4.length];

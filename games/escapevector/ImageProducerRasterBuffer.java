@@ -167,7 +167,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             for (int var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(-5053);
             }
-            AchievementQuery var13 = (AchievementQuery) (bc.field_b.first(false));
+            AchievementQuery var13 = (AchievementQuery) (SavedDataQuerySupport.field_b.first(false));
             if (var13 == null) {
               nm.a(16);
               return;
@@ -188,11 +188,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             return;
           }
           if (var2 != 2) {
-            pf.a(false, "A1: " + hf.b((byte) 58), (Throwable) null);
+            pf.a(false, "A1: " + LoginStage.formatPacketDiagnostic((byte) 58), (Throwable) null);
             nm.a(16);
             return;
           }
-          AchievementQuery var15 = (AchievementQuery) (bc.field_b.first(false));
+          AchievementQuery var15 = (AchievementQuery) (SavedDataQuerySupport.field_b.first(false));
           if (var15 == null) {
             nm.a(16);
             return;

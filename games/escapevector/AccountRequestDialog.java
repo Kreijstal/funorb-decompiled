@@ -46,7 +46,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           if (responseCode == 3) {
             var6.appendActionButton(false, qk.field_a, 7);
           } else if (responseCode == 4) {
-            var6.appendActionButton(false, ei.field_k, 8);
+            var6.appendActionButton(false, SavedDataQuery.field_k, 8);
           } else if (6 != responseCode) {
             if (9 != responseCode) {
               this.transitionToContent(var6, 30);

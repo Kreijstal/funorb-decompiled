@@ -148,7 +148,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           var8Lifetime1++;
         }
         ProgressRecord.field_j.drawTransparent(-90 + (screenX + this.width), 10 + screenY);
-        LoginMethod.drawThreeSlice(5 + screenX, -10 + this.width, true, nn.field_a, 35 + screenY);
+        LoginMethod.drawThreeSlice(5 + screenX, -10 + this.width, true, SecondaryNodeHashTable.field_a, 35 + screenY);
         LoginMethod.drawThreeSlice(screenX, this.width, true, bn.field_d, screenY + this.height - 22);
         int var5Lifetime2 = 169;
         int var4Lifetime2 = -79 + this.height;

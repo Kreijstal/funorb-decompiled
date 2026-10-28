@@ -401,7 +401,7 @@ final class BufferedRandomAccessFile {
           if (param1 < 101) {
             return true;
           }
-          if (vj.field_a != 0 &&
+          if (LoginCredentials.field_a != 0 &&
             GameAppletShell.field_a < 0) {
             DelayedServerPacket var4_ref_dm = (DelayedServerPacket) (ModalPanel.field_L.first(false));
             if (var4_ref_dm != null &&
@@ -414,8 +414,8 @@ final class BufferedRandomAccessFile {
               }
               NetworkGameClient.field_q = ArchiveIndex.field_t;
               ArchiveIndex.field_t = jj.field_b;
-              jj.field_b = cd.field_v;
-              cd.field_v = var4_ref_dm.opcode;
+              jj.field_b = LegacyStyleNode.field_v;
+              LegacyStyleNode.field_v = var4_ref_dm.opcode;
               return true;
             }
           }
@@ -446,15 +446,15 @@ final class BufferedRandomAccessFile {
             if (!ArchiveKeyRequest.hasCompletePacket(10550)) {
               return false;
             }
-            if (vj.field_a == 0) {
+            if (LoginCredentials.field_a == 0) {
               NetworkGameClient.field_q = ArchiveIndex.field_t;
               ArchiveIndex.field_t = jj.field_b;
-              jj.field_b = cd.field_v;
-              cd.field_v = GameAppletShell.field_a;
+              jj.field_b = LegacyStyleNode.field_v;
+              LegacyStyleNode.field_v = GameAppletShell.field_a;
               GameAppletShell.field_a = -1;
               return true;
             }
-            int var4 = vj.field_a;
+            int var4 = LoginCredentials.field_a;
             if (pd.field_a != 0.0) {
               var4 = (int)((double)var4 + gk.field_a.nextGaussian() * pd.field_a);
               if (var4 < 0) {

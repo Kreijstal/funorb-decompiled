@@ -38,7 +38,7 @@ final class sl {
             if ((param4 == var8 ||
               var10 != 0) && (param3[var7] == null ||
               var10 != 0)) {
-              byte[][] var12 = ol.a(-51, param1, param2, var7, param0);
+              byte[][] var12 = LegacyWidgetStyle.loadCampaignLevels(-51, param1, param2, var7, param0);
               param3[var7] = var12;
             }
             var7++;
@@ -168,7 +168,7 @@ final class sl {
             al.field_d = ak.field_d;
           } else {
             try {
-              TextLayout.field_c = new pj((java.net.Socket) (sk.field_d.field_b), MouseWheelInput.field_c);
+              TextLayout.field_c = new BufferedSocket((java.net.Socket) (sk.field_d.field_b), MouseWheelInput.field_c);
               QuickChatDynamicCommand.outgoingPackets.position = 0;
               CipherPacketBuffer var4 = QuickChatDynamicCommand.incomingPackets;
               CipherPacketBuffer var5 = var4;
@@ -178,7 +178,7 @@ final class sl {
               NetworkGameClient.field_q = stackIn_11_0;
               ArchiveIndex.field_t = stackIn_11_0;
               jj.field_b = stackIn_11_0;
-              wc.a(rd.field_a, ac.field_b, true, DropTargetWidget.field_D, QuickChatDynamicCommand.outgoingPackets);
+              wc.a(rd.field_a, KeyboardStateSupport.field_b, true, DropTargetWidget.field_D, QuickChatDynamicCommand.outgoingPackets);
               ClientException.a(-1, 30785);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;

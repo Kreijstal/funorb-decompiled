@@ -30,7 +30,7 @@ final class vi {
           for (int var2_int = 0; var2_int < 3; var2_int++) {
             ResourceArchive.field_l[var2_int] = 0;
           }
-          for (int var2_intLifetime1 = 0; var2_intLifetime1 < hf.field_b; var2_intLifetime1++) {
+          for (int var2_intLifetime1 = 0; var2_intLifetime1 < LoginStage.field_b; var2_intLifetime1++) {
             if (IterableNodeHashTable.field_d[var2_intLifetime1].field_a == param0.field_a) {
               int dupTemp$3 = IterableNodeHashTable.field_d[var2_intLifetime1].b(param1 ^ 83);
               ResourceArchive.field_l[dupTemp$3] = ResourceArchive.field_l[dupTemp$3] + 1;
@@ -39,7 +39,7 @@ final class vi {
           int dupTemp$0 = param0.b(108);
           ResourceArchive.field_l[dupTemp$0] = ResourceArchive.field_l[dupTemp$0] + 1;
           int var2_intLifetime2 = 0;
-          for (int var3 = 0; hf.field_b > var3; var3++) {
+          for (int var3 = 0; LoginStage.field_b > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (IterableNodeHashTable.field_d[var3].field_a == param0.field_a) {
               int var4 = IterableNodeHashTable.field_d[var3].b(47);
@@ -54,9 +54,9 @@ final class vi {
               IterableNodeHashTable.field_d[incrementValue$2] = IterableNodeHashTable.field_d[var3];
             }
           }
-          hf.field_b = var2_intLifetime2;
-          int fieldTemp$1 = hf.field_b;
-          hf.field_b = hf.field_b + 1;
+          LoginStage.field_b = var2_intLifetime2;
+          int fieldTemp$1 = LoginStage.field_b;
+          LoginStage.field_b = LoginStage.field_b + 1;
           IterableNodeHashTable.field_d[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

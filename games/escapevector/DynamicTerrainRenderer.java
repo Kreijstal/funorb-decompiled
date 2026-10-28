@@ -401,7 +401,7 @@ final class DynamicTerrainRenderer {
           if (param1.field_f != 0 ||
             param1.field_h != 0) {
             int var2_int = 0;
-            while (!(hf.field_b <= var2_int)) {
+            while (!(LoginStage.field_b <= var2_int)) {
               gi var3 = IterableNodeHashTable.field_d[var2_int];
               stackIn_17_0 = var3.field_a;
               stackIn_17_1 = 2;
@@ -940,14 +940,14 @@ final class DynamicTerrainRenderer {
     final static void b(int param0, int param1) {
         int var3 = EscapeVector.obfuscationControl;
         try {
-          vj.a((byte) -116, AccountTermsPanel.field_J, param0, ArchiveRequest.field_t, true, TextLayoutLine.field_e, param1);
+          LoginCredentials.a((byte) -116, AccountTermsPanel.field_J, param0, ArchiveRequest.field_t, true, TextLayoutLine.field_e, param1);
           int var2_int = 0;
           do {
             if (!(AccountTermsPanel.field_J > var2_int)) {
-              vj.a((byte) -128, AccountTermsPanel.field_J + param0, param0 + param0, pl.field_r, false, TextLayout.field_d, param0);
+              LoginCredentials.a((byte) -128, AccountTermsPanel.field_J + param0, param0 + param0, AlternateUsernameCredentials.field_r, false, TextLayout.field_d, param0);
               break;
             }
-            cd.field_q[var2_int + param0] = var2_int;
+            LegacyStyleNode.field_q[var2_int + param0] = var2_int;
             var2_int++;
           } while (var3 == 0);
           if (AccountTermsPanel.field_J > param0) {

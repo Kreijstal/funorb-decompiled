@@ -9,8 +9,8 @@ final class id {
         int var4 = EscapeVector.obfuscationControl;
         try {
           Sprite var1 = new Sprite(540, 140);
-          eo.a(var1, (byte) -7);
-          bi.b();
+          TickClock.pushSpriteRaster(var1, (byte) -7);
+          MeshRasterState.useRasterClip();
           SoftwareRasterizer.clearFramebuffer();
           SocketConnector.field_d = 0;
           IndexedSpriteState.a(-124);
@@ -24,7 +24,7 @@ final class id {
           }
           ea.field_d.bindAsFramebuffer();
           var1.drawHalfSize(0, 0);
-          dl.a((byte) 116);
+          RasterRestoreSupport.popRasterState((byte) 116);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "id.D(" + param0 + ')');
         }

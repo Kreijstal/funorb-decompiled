@@ -40,8 +40,8 @@ final class cf {
           int var9 = var23Lifetime1 * param3[5] + (var22Lifetime1 * param3[4] + param3[3] * var21Lifetime1) >> -HighscoreQuery.field_i + 16;
           int var11 = param3[10] * var22Lifetime1 + (param3[9] * var21Lifetime1 + var23Lifetime1 * param3[11]) >> 16;
           int var10 = param3[7] * var22Lifetime1 + (param3[6] * var21Lifetime1 + var23Lifetime1 * param3[8]) >> 16 - HighscoreQuery.field_i;
-          int var21Lifetime2 = bi.field_b;
-          int var22Lifetime2 = bi.field_i;
+          int var21Lifetime2 = MeshRasterState.centerX;
+          int var22Lifetime2 = MeshRasterState.centerY;
           int var23Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
@@ -72,9 +72,9 @@ final class cf {
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }
-                  km.field_j[var23Lifetime2] = var29Lifetime1;
+                  DirectByteStorage.field_j[var23Lifetime2] = var29Lifetime1;
                 } else {
-                  km.field_j[var23Lifetime2] = -2147483648;
+                  DirectByteStorage.field_j[var23Lifetime2] = -2147483648;
                 }
                 if (param2) {
                   mg.field_a[var23Lifetime2] = var27Lifetime1 >> HighscoreQuery.field_i;

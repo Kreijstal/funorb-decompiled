@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk {
+final class LoginCredentialType {
     static String field_c;
     static volatile int pendingClickX;
     static Sprite[] field_f;
-    int field_d;
+    int wireId;
     static String field_e;
     static ResourceArchive field_a;
 
@@ -21,23 +21,23 @@ final class fk {
         throw new IllegalStateException();
     }
 
-    final static byte[] a(Object param0, byte param1, boolean param2) {
+    final static byte[] extractBytes(Object storage, byte guard, boolean copy) {
         String stackIn_17_2 = null;
         try {
-          if (param0 == null) {
+          if (storage == null) {
             return null;
           }
-          if (!(param0 instanceof byte[])) {
-            if (!(param0 instanceof fh)) {
-              int var3_int = -100 % ((-31 - param1) / 55);
+          if (!(storage instanceof byte[])) {
+            if (!(storage instanceof ByteStorage)) {
+              int var3_int = -100 % ((-31 - guard) / 55);
               throw new IllegalArgumentException();
             }
-            fh var4 = (fh) (param0);
-            byte[] stackIn_12_0 = var4.a(4);
+            ByteStorage var4 = (ByteStorage) (storage);
+            byte[] stackIn_12_0 = var4.toByteArray(4);
             return stackIn_12_0;
           }
-          byte[] var3 = (byte[]) (param0);
-          if (!param2) {
+          byte[] var3 = (byte[]) (storage);
+          if (!copy) {
             byte[] stackIn_8_0 = var3;
             return stackIn_8_0;
           }
@@ -48,12 +48,12 @@ final class fk {
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_16_0 = var3_ref;
           StringBuilder stackIn_16_1 = new StringBuilder().append("fk.B(");
-          if (param0 == null) {
+          if (storage == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(',').append(copy).append(')').toString());
         }
     }
 
@@ -62,24 +62,24 @@ final class fk {
         AccountMessagePanel.drawUnevenFrame(param1, -3 + param0, param4, -1, 3 + param5, 67, param6 + 3, -3 + param8, param7);
         if (param2 <= 52) {
           String var10 = (String) null;
-          fk.a(104, (String) null);
+          LoginCredentialType.findFriendByName(104, (String) null);
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean isDecimalText(boolean guard, CharSequence text) {
         String stackIn_7_2 = null;
         try {
-          if (param0) {
+          if (guard) {
             field_a = (ResourceArchive) null;
           }
-          boolean stackIn_3_0 = RatingQuery.a(10, (byte) 84, true, param1);
+          boolean stackIn_3_0 = RatingQuery.a(10, (byte) 84, true, text);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var2;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("fk.C(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("fk.C(").append(guard).append(',');
+          if (text == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -88,46 +88,46 @@ final class fk {
         }
     }
 
-    final static tg a(int param0, String param1) {
+    final static ContactEntry findFriendByName(int guard, String name) {
         String stackIn_25_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
           if (null == bm.field_b) {
             return null;
           }
-          if (param1 == null) {
+          if (name == null) {
             return null;
           }
-          if (0 == param1.length()) {
+          if (0 == name.length()) {
             Object stackIn_7_0 = null;
-            return (tg) (stackIn_7_0);
+            return (ContactEntry) (stackIn_7_0);
           }
-          if (param0 != -1465) {
+          if (guard != -1465) {
             field_c = (String) null;
           }
-          CharSequence var6 = (CharSequence) ((Object) param1);
-          String var2 = sf.a(param0 ^ 1499, var6);
+          CharSequence var6 = (CharSequence) ((Object) name);
+          String var2 = sf.a(guard ^ 1499, var6);
           if (var2 == null) {
             Object stackIn_12_0 = null;
-            return (tg) (stackIn_12_0);
+            return (ContactEntry) (stackIn_12_0);
           }
-          tg var3 = (tg) (bm.field_b.a(-76, (long)var2.hashCode()));
+          ContactEntry var3 = (ContactEntry) (bm.field_b.get(-76, (long)var2.hashCode()));
           while (var3 != null) {
-            CharSequence var7 = (CharSequence) ((Object) var3.field_ob);
+            CharSequence var7 = (CharSequence) ((Object) var3.displayName);
             String var4 = sf.a(-79, var7);
             if (var4.equals(var2)) {
-              tg stackIn_19_0 = var3;
+              ContactEntry stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (tg) (bm.field_b.a((byte) -36));
+            var3 = (ContactEntry) (bm.field_b.nextMatch((byte) -36));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
           RuntimeException stackIn_24_0 = var2_ref;
-          StringBuilder stackIn_24_1 = new StringBuilder().append("fk.A(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_24_1 = new StringBuilder().append("fk.A(").append(guard).append(',');
+          if (name == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
@@ -138,19 +138,19 @@ final class fk {
 
     final static void b(int param0) {
         if (param0 != 0) {
-          fk.releaseStatics(115);
-          if (bk.field_r != null) {
-            bk.field_r.a((byte) -127);
+          LoginCredentialType.releaseStatics(115);
+          if (SocketJs5Transport.field_r != null) {
+            SocketJs5Transport.field_r.a((byte) -127);
           }
           return;
         }
-        if (bk.field_r != null) {
-          bk.field_r.a((byte) -127);
+        if (SocketJs5Transport.field_r != null) {
+          SocketJs5Transport.field_r.a((byte) -127);
         }
     }
 
-    fk(int param0) {
-        this.field_d = param0;
+    LoginCredentialType(int param0) {
+        this.wireId = param0;
     }
 
     static {

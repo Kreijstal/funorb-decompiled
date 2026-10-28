@@ -9,7 +9,7 @@ final class kh {
     final static void a(boolean param0, int param1, boolean param2) {
         CheckboxPainter.field_n = true;
         if (param1 == -1230) {
-          ol.field_N = null;
+          LegacyWidgetStyle.field_N = null;
           int var3 = dh.field_b;
           rc.field_a = new ak(param2, var3);
           int var4 = rc.field_a.h(param1 ^ -1209);
@@ -18,7 +18,7 @@ final class kh {
           return;
         }
         field_a = (int[]) null;
-        ol.field_N = null;
+        LegacyWidgetStyle.field_N = null;
         int var3Lifetime1 = dh.field_b;
         rc.field_a = new ak(param2, var3Lifetime1);
         int var4Lifetime1 = rc.field_a.h(param1 ^ -1209);

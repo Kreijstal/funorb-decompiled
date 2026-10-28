@@ -15,7 +15,7 @@ final class ArchiveIndex {
     private int[] groupNameHashes;
     IntKeyLookup groupNameLookup;
     int revision;
-    static vj field_m;
+    static LoginCredentials field_m;
     int encodedCrc32;
     static int field_j;
     IntKeyLookup[] fileNameLookups;
@@ -25,7 +25,7 @@ final class ArchiveIndex {
 
     public static void releaseStatics(byte guard) {
         if (guard != 18) {
-          field_m = (vj) null;
+          field_m = (LoginCredentials) null;
         }
         field_o = null;
         field_m = null;
@@ -45,7 +45,7 @@ final class ArchiveIndex {
         int var15Lifetime1;
         int var17 = EscapeVector.obfuscationControl;
         try {
-          PacketBuffer var18 = new PacketBuffer(Js5NetworkRequest.a((byte) -26, encoded));
+          PacketBuffer var18 = new PacketBuffer(Js5NetworkRequest.decompressGroup((byte) -26, encoded));
           int var4 = var18.readUnsignedByte(0);
           if (5 <= var4 &&
             var4 <= 7) {

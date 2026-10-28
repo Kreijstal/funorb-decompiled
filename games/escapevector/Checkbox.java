@@ -49,7 +49,7 @@ final class Checkbox extends TextButton {
         }
     }
 
-    final static vj createLoginCredentials(String identifier, boolean alternateType, int guard, String password) {
+    final static LoginCredentials createLoginCredentials(String identifier, boolean alternateType, int guard, String password) {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
@@ -64,7 +64,7 @@ final class Checkbox extends TextButton {
           } else {
             var6 = identifier;
           }
-          vj stackIn_6_0 = ei.a(0, alternateType, var4_long, (String) (var6), password);
+          LoginCredentials stackIn_6_0 = SavedDataQuery.createCredentials(0, alternateType, var4_long, (String) (var6), password);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,7 +132,7 @@ final class Checkbox extends TextButton {
             return false;
           }
           try {
-            int var2_int = TextLayout.field_c.b(-124);
+            int var2_int = TextLayout.field_c.available(-124);
             if (var2_int <= 0) {
               if (0 > var2_int) {
                 nm.a(16);
@@ -147,7 +147,7 @@ final class Checkbox extends TextButton {
             if (var2_int > requiredBytes - QuickChatDynamicCommand.incomingPackets.position) {
               var2_int = requiredBytes - QuickChatDynamicCommand.incomingPackets.position;
             }
-            TextLayout.field_c.a(QuickChatDynamicCommand.incomingPackets.position, var2_int, QuickChatDynamicCommand.incomingPackets.payload, (byte) -49);
+            TextLayout.field_c.readFully(QuickChatDynamicCommand.incomingPackets.position, var2_int, QuickChatDynamicCommand.incomingPackets.payload, (byte) -49);
             sl.field_a = td.b(128);
             QuickChatDynamicCommand.incomingPackets.position = QuickChatDynamicCommand.incomingPackets.position + var2_int;
             if (requiredBytes > QuickChatDynamicCommand.incomingPackets.position) {

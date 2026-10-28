@@ -33,13 +33,13 @@ abstract class SpriteState extends DualLinkNode {
         Object var1 = QuickChatDynamicCommand.mouseHandler;
         synchronized (var1) {
           AlphaContainer.mouseIdleTicks = AlphaContainer.mouseIdleTicks + 1;
-          DialWidget.field_K = vj.heldMouseButton;
+          DialWidget.field_K = LoginCredentials.heldMouseButton;
           dh.field_d = IterableDualLinkDeque.pendingMouseX;
           UiContainer.field_y = jk.pendingMouseY;
           TextFieldValidator.field_h = ke.mouseInputChanged;
           ke.mouseInputChanged = false;
           AccountMessagePanel.field_N = SocketConnector.pendingClickButton;
-          sf.field_c = fk.pendingClickX;
+          sf.field_c = LoginCredentialType.pendingClickX;
           LoginDialog.field_ob = PcmResampler.pendingClickY;
           if (guard != -3657) {
             SpriteState.b(30, 39);

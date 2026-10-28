@@ -136,7 +136,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             StatefulTextPainter.releaseStatics(true);
           }
           this.workingLayer.draw(this, component, originX, originY, (byte) 21);
-          dl.a((byte) -8);
+          RasterRestoreSupport.popRasterState((byte) -8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

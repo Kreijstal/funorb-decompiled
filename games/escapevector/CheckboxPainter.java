@@ -9,7 +9,7 @@ final class CheckboxPainter implements WidgetPainter {
     static ResourceArchive field_h;
     static ig field_l;
     private int field_g;
-    static hf field_q;
+    static LoginStage field_q;
     static String field_f;
     private int field_e;
     static boolean field_n;
@@ -128,6 +128,6 @@ final class CheckboxPainter implements WidgetPainter {
 
     static {
         field_f = "Time: ";
-        field_q = new hf();
+        field_q = new LoginStage();
     }
 }

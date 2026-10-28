@@ -104,10 +104,10 @@ final class sk {
           return true;
         }
         if (null == this.field_h) {
-          if (this.field_f.c(20)) {
+          if (this.field_f.isUrgentCapacityReached(20)) {
             return false;
           }
-          this.field_h = this.field_f.a(255, true, (byte) 0, 255, (byte) 0);
+          this.field_h = this.field_f.requestGroup(255, true, (byte) 0, 255, (byte) 0);
         }
         if (this.field_h.field_u) {
           return false;
@@ -172,10 +172,10 @@ final class sk {
           this.field_f = param0;
           this.field_c = param3;
           this.field_g = param2;
-          if (this.field_f.c(20)) {
+          if (this.field_f.isUrgentCapacityReached(20)) {
             return;
           }
-          this.field_h = this.field_f.a(255, true, (byte) 0, 255, (byte) 0);
+          this.field_h = this.field_f.requestGroup(255, true, (byte) 0, 255, (byte) 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

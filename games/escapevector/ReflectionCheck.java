@@ -57,14 +57,14 @@ final class ReflectionCheck extends IntrusiveNode {
 
     final static void a(int param0, byte param1) {
         if (param1 == 44) {
-          if (bk.field_r != null) {
-            bk.field_r.b(-1, param0);
+          if (SocketJs5Transport.field_r != null) {
+            SocketJs5Transport.field_r.b(-1, param0);
           }
           return;
         }
         field_n = -42;
-        if (bk.field_r != null) {
-          bk.field_r.b(-1, param0);
+        if (SocketJs5Transport.field_r != null) {
+          SocketJs5Transport.field_r.b(-1, param0);
         }
     }
 

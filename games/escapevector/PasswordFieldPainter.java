@@ -151,11 +151,11 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
 
     final static int f(int param0) {
         try {
-          if (4 <= SelfDestructEffects.field_j.field_g) {
-            if (-1 == SelfDestructEffects.field_j.field_d) {
+          if (4 <= SelfDestructEffects.field_j.failureCount) {
+            if (-1 == SelfDestructEffects.field_j.lastErrorCode) {
               return 3;
             }
-            if (SelfDestructEffects.field_j.field_d == -2) {
+            if (SelfDestructEffects.field_j.lastErrorCode == -2) {
               return 4;
             }
             return 1;
@@ -178,18 +178,18 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
               }
             }
             if (ke.field_b == 2) {
-              NameSuggestionsPanel.field_I = new pj((java.net.Socket) (qk.field_g.field_b), IntPoint.field_d);
+              NameSuggestionsPanel.field_I = new BufferedSocket((java.net.Socket) (qk.field_g.field_b), IntPoint.field_d);
               PacketBuffer var2 = new PacketBuffer(13);
               wc.a(TrackerMusicDefinition.field_j, StatefulTextPainter.field_y, true, NameSuggestionsPanel.field_N, var2);
               var2.writeByte(15, -123);
               var2.writeInt((byte) 123, ReflectionCheck.field_n);
-              NameSuggestionsPanel.field_I.a(13, 0, var2.payload, 5000);
+              NameSuggestionsPanel.field_I.write(13, 0, var2.payload, 5000);
               ke.field_b = ke.field_b + 1;
               BoundedRandomAccessFile.field_g = 30000L + td.b(128);
             }
             if (ke.field_b == 3) {
-              if (!(NameSuggestionsPanel.field_I.b(-117) <= 0)) {
-                int var1_int = NameSuggestionsPanel.field_I.a(-16650);
+              if (!(NameSuggestionsPanel.field_I.available(-117) <= 0)) {
+                int var1_int = NameSuggestionsPanel.field_I.readUnsignedByte(-16650);
                 if (var1_int != 0) {
                   int stackIn_27_0 = gf.a((byte) -78, var1_int);
                   return stackIn_27_0;
@@ -204,7 +204,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
               int stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            SelfDestructEffects.field_j.a(NameSuggestionsPanel.field_I, PointCloudEffect.field_t, (byte) -99);
+            SelfDestructEffects.field_j.attachConnection(NameSuggestionsPanel.field_I, PointCloudEffect.field_t, (byte) -99);
             qk.field_g = null;
             ke.field_b = 0;
             NameSuggestionsPanel.field_I = null;

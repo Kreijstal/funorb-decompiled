@@ -124,8 +124,8 @@ final class UiTheme {
         }
         try {
           LinkButtonPainter.field_a = param2;
-          ei.field_i = true;
-          be.field_b = new AccountRequestDialog(Checkbox.field_F, dl.field_b, param1, DialWidget.field_H, LinkButtonPainter.field_a);
+          SavedDataQuery.field_i = true;
+          be.field_b = new AccountRequestDialog(Checkbox.field_F, RasterRestoreSupport.field_b, param1, DialWidget.field_H, LinkButtonPainter.field_a);
           Checkbox.field_F.pushPanel(be.field_b, 77);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "uf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

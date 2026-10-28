@@ -49,19 +49,19 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             int var12 = var20.fullHeight << 1;
             if (this.indicatorScratch == null) {
               this.indicatorScratch = new Sprite(var11, var12);
-              eo.a(this.indicatorScratch, (byte) -84);
+              TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -84);
             } else if (var11 > this.indicatorScratch.width) {
               this.indicatorScratch = new Sprite(var11, var12);
-              eo.a(this.indicatorScratch, (byte) -84);
+              TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -84);
             } else if (var12 <= this.indicatorScratch.height) {
-              eo.a(this.indicatorScratch, (byte) -7);
+              TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -7);
               SoftwareRasterizer.clearFramebuffer();
             } else {
               this.indicatorScratch = new Sprite(var11, var12);
-              eo.a(this.indicatorScratch, (byte) -84);
+              TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -84);
             }
             var20.drawRotatedScaledBilinear(112, 144, var20.fullWidth << 4, var20.fullHeight << 4, -this.animationTick << 10, 4096);
-            dl.a((byte) 120);
+            RasterRestoreSupport.popRasterState((byte) 120);
             this.indicatorScratch.drawAdditive(-(var20.fullWidth >> 1) + var9, -var20.fullHeight + var10, 256);
             return;
           }
@@ -84,14 +84,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           if (this.indicatorScratch != null &&
             var11Lifetime3 <= this.indicatorScratch.width &&
             var12Lifetime3 <= this.indicatorScratch.height) {
-            eo.a(this.indicatorScratch, (byte) -7);
+            TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -7);
             SoftwareRasterizer.clearFramebuffer();
           } else {
             this.indicatorScratch = new Sprite(var11Lifetime3, var12Lifetime3);
-            eo.a(this.indicatorScratch, (byte) -84);
+            TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -84);
           }
           var19.drawRotatedScaledBilinear(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.animationTick << 10, 4096);
-          dl.a((byte) 120);
+          RasterRestoreSupport.popRasterState((byte) 120);
           this.indicatorScratch.drawAdditive(-(var19.fullWidth >> 1) + var9, -var19.fullHeight + var10, 256);
           return;
         }
@@ -130,19 +130,19 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           int var12Lifetime1 = var25.fullHeight << 1;
           if (this.indicatorScratch == null) {
             this.indicatorScratch = new Sprite(var11Lifetime1, var12Lifetime1);
-            eo.a(this.indicatorScratch, (byte) -84);
+            TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -84);
           } else if (var11Lifetime1 > this.indicatorScratch.width) {
             this.indicatorScratch = new Sprite(var11Lifetime1, var12Lifetime1);
-            eo.a(this.indicatorScratch, (byte) -84);
+            TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -84);
           } else if (var12Lifetime1 <= this.indicatorScratch.height) {
-            eo.a(this.indicatorScratch, (byte) -7);
+            TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -7);
             SoftwareRasterizer.clearFramebuffer();
           } else {
             this.indicatorScratch = new Sprite(var11Lifetime1, var12Lifetime1);
-            eo.a(this.indicatorScratch, (byte) -84);
+            TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -84);
           }
           var25.drawRotatedScaledBilinear(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.animationTick << 10, 4096);
-          dl.a((byte) 120);
+          RasterRestoreSupport.popRasterState((byte) 120);
           this.indicatorScratch.drawAdditive(-(var25.fullWidth >> 1) + var9Lifetime1, -var25.fullHeight + var10Lifetime1, 256);
           return;
         }
@@ -164,17 +164,17 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         int var12Lifetime2 = var24.fullHeight << 1;
         if (this.indicatorScratch == null) {
           this.indicatorScratch = new Sprite(var11Lifetime2, var12Lifetime2);
-          eo.a(this.indicatorScratch, (byte) -84);
+          TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -84);
         } else if (var11Lifetime2 <= this.indicatorScratch.width &&
           var12Lifetime2 <= this.indicatorScratch.height) {
-          eo.a(this.indicatorScratch, (byte) -7);
+          TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -7);
           SoftwareRasterizer.clearFramebuffer();
         } else {
           this.indicatorScratch = new Sprite(var11Lifetime2, var12Lifetime2);
-          eo.a(this.indicatorScratch, (byte) -84);
+          TickClock.pushSpriteRaster(this.indicatorScratch, (byte) -84);
         }
         var24.drawRotatedScaledBilinear(112, 144, var24.fullWidth << 4, var24.fullHeight << 4, -this.animationTick << 10, 4096);
-        dl.a((byte) 120);
+        RasterRestoreSupport.popRasterState((byte) 120);
         this.indicatorScratch.drawAdditive(-(var24.fullWidth >> 1) + var9Lifetime1, -var24.fullHeight + var10Lifetime1, 256);
         return;
     }

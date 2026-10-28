@@ -124,7 +124,7 @@ final class gj {
         int var2 = 640;
         int var3 = var2 / 2;
         int var4 = this.field_f + this.field_c - 2;
-        BinaryBitmapFont var5 = fh.field_g;
+        BinaryBitmapFont var5 = ByteStorage.gameFont;
         int var7 = -42 % ((45 - param0) / 61);
         int var6 = PasswordFieldPainter.fontLineHeight(var5, 31512);
         var4 = var4 - var6;
@@ -141,7 +141,7 @@ final class gj {
           if (param1 == null) {
             return;
           }
-          BinaryBitmapFont var3 = fh.field_g;
+          BinaryBitmapFont var3 = ByteStorage.gameFont;
           int var4 = 10551200;
           int var5 = 16777215;
           param1.configure(var3, var5, (byte) -107, var4);
@@ -227,7 +227,7 @@ final class gj {
 
     private final int d(int param0) {
         int var2 = this.field_k.height((byte) 87);
-        BinaryBitmapFont var3 = fh.field_g;
+        BinaryBitmapFont var3 = ByteStorage.gameFont;
         if (param0 > -33) {
           int discarded$0 = this.a(-73);
         }
@@ -329,7 +329,7 @@ final class gj {
         for (int var6 = 0; var5.length > var6; var6++) {
           int var7 = var5[var6];
           this.field_y.boardId = var7;
-          int var8 = ld.a(this.field_b, this.field_p, 0, this.field_y);
+          int var8 = UsernameCredentials.findSubmittedScoreRow(this.field_b, this.field_p, 0, this.field_y);
           if (0 <= var8) {
             this.field_y.boardId = var2;
             return var8;
@@ -518,7 +518,7 @@ final class gj {
           if (5 == this.field_w) {
             var10 = this.a(param1, true);
           }
-          this.field_l = new LegacyMenuColumn(qf.field_o, var10, 2);
+          this.field_l = new LegacyMenuColumn(NanoTickClock.field_o, var10, 2);
           this.field_n.addLast(-12328, this.field_l);
           int[] var24 = this.c((byte) 39);
           this.field_s = new LegacyMenuColumn(Checkbox.field_D, var24);
@@ -577,7 +577,7 @@ final class gj {
         this.field_k = new LegacyMenuColumn(IndexedSpriteState.field_b, var10, 1);
         this.field_n.addLast(-12328, this.field_k);
         String[] var5 = new String[this.field_h];
-        this.field_l = new LegacyMenuColumn(qf.field_o, var5, 2);
+        this.field_l = new LegacyMenuColumn(NanoTickClock.field_o, var5, 2);
         this.field_n.addLast(-12328, this.field_l);
         int[] var20 = this.b(-27531, this.field_h);
         this.field_s = new LegacyMenuColumn(Checkbox.field_D, var20);

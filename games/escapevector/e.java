@@ -18,9 +18,9 @@ final class e {
           }
           RegistrationRequestDialog var8 = new RegistrationRequestDialog(Checkbox.field_F, param0);
           Checkbox.field_F.pushPanel(var8, 48);
-          if (!ei.d(1000)) {
+          if (!SavedDataQuery.d(1000)) {
             gf.field_a = param3;
-            hf.field_a = param5;
+            LoginStage.field_a = param5;
             SpriteState.field_y = null;
             ResourceArchive.field_b = param4;
             dn.field_q = EmailAvailabilityValidator.field_o;

@@ -8,7 +8,7 @@ final class ClientException extends RuntimeException {
     static int[] field_f;
     static int[] field_b;
     String context;
-    static hf field_c;
+    static LoginStage field_c;
     static int[] field_d;
     static int field_e;
 
@@ -28,7 +28,7 @@ final class ClientException extends RuntimeException {
           if (TextLayout.field_c == null) {
             return false;
           }
-          if (al.field_d.a((byte) 63)) {
+          if (al.field_d.isResponseStage((byte) 63)) {
             return true;
           }
           return false;
@@ -36,7 +36,7 @@ final class ClientException extends RuntimeException {
         if (TextLayout.field_c == null) {
           return false;
         }
-        if (al.field_d.a((byte) 63)) {
+        if (al.field_d.isResponseStage((byte) 63)) {
           return true;
         }
         return false;
@@ -107,7 +107,7 @@ final class ClientException extends RuntimeException {
             }
             if (0 < QuickChatDynamicCommand.outgoingPackets.position) {
               try {
-                TextLayout.field_c.a(QuickChatDynamicCommand.outgoingPackets.position, 0, QuickChatDynamicCommand.outgoingPackets.payload, 5000);
+                TextLayout.field_c.write(QuickChatDynamicCommand.outgoingPackets.position, 0, QuickChatDynamicCommand.outgoingPackets.payload, 5000);
                 le.field_c = td.b(128);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 Throwable decompiledCaughtException = decompiledCaughtParameter0;
@@ -141,7 +141,7 @@ final class ClientException extends RuntimeException {
         int[] var2 = new int[]{19, 0, -10, -5, -5};
         var0 = var2;
         qg.a(var0, 0, field_f, 0, var2.length);
-        field_c = new hf();
+        field_c = new LoginStage();
         field_d = new int[8192];
     }
 }

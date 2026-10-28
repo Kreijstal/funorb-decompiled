@@ -89,7 +89,7 @@ final class ModalStack extends SingleChildContainer {
         if (param0) {
           return false;
         }
-        boolean stackIn_6_0 = (km.field_n != null) && (km.field_n.c(124));
+        boolean stackIn_6_0 = (DirectByteStorage.field_n != null) && (DirectByteStorage.field_n.c(124));
         return stackIn_6_0;
     }
 

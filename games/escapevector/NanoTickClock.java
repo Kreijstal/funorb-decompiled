@@ -4,13 +4,13 @@
 import java.io.*;
 import java.util.*;
 
-final class qf extends eo {
-    private int field_i;
-    private long field_e;
-    private long[] field_f;
-    private int field_k;
-    private long field_g;
-    private long field_c;
+final class NanoTickClock extends TickClock {
+    private int sampleIndex;
+    private long lastSampleNanos;
+    private long[] sampleDeltas;
+    private int sampleCount;
+    private long nextTickNanos;
+    private long currentNanos;
     static java.util.zip.CRC32 field_m;
     static String field_h;
     static int field_l;
@@ -28,7 +28,7 @@ final class qf extends eo {
             QuickChatDynamicCommand.incomingPackets = new CipherPacketBuffer(param1);
             QuickChatDynamicCommand.outgoingPackets = new CipherPacketBuffer(param0);
             if (param8 != 84) {
-              qf.releaseStatics(-106);
+              NanoTickClock.releaseStatics(-106);
             }
             MouseWheelInput.field_c = param5;
             jc.field_b = param7;
@@ -39,7 +39,7 @@ final class qf extends eo {
             ThreeSliceButtonPainter.field_q = param10;
             ej.field_b = param9;
             DropTargetWidget.field_D = param4;
-            ac.field_b = param12;
+            KeyboardStateSupport.field_b = param12;
             rd.field_a = param2;
             if (MouseWheelInput.field_c.field_j == null) {
               return;
@@ -90,94 +90,94 @@ final class qf extends eo {
         field_h = null;
     }
 
-    final void a(int param0) {
-        if (param0 == 237) {
-          this.field_e = 0L;
-          if (this.field_c < this.field_g) {
-            this.field_c = this.field_c + (-this.field_c + this.field_g);
+    final void resetTiming(int guard) {
+        if (guard == 237) {
+          this.lastSampleNanos = 0L;
+          if (this.currentNanos < this.nextTickNanos) {
+            this.currentNanos = this.currentNanos + (-this.currentNanos + this.nextTickNanos);
           }
           return;
         }
     }
 
-    private final long c(int param0) {
+    private final long sampleInterval(int firstSample) {
         int var9 = EscapeVector.obfuscationControl;
         long var2 = System.nanoTime();
-        long var4 = -this.field_e + var2;
-        this.field_e = var2;
+        long var4 = -this.lastSampleNanos + var2;
+        this.lastSampleNanos = var2;
         if (-5000000000L >= var4) {
           long var6 = 0L;
-          for (int var8 = param0; this.field_k >= var8; var8++) {
-            var6 = var6 + this.field_f[(this.field_i - var8 + 10) % 10];
+          for (int var8 = firstSample; this.sampleCount >= var8; var8++) {
+            var6 = var6 + this.sampleDeltas[(this.sampleIndex - var8 + 10) % 10];
           }
-          return var6 / (long)this.field_k;
+          return var6 / (long)this.sampleCount;
         }
         if (5000000000L <= var4) {
           long var6Lifetime1 = 0L;
-          for (int var8Lifetime1 = param0; this.field_k >= var8Lifetime1; var8Lifetime1++) {
-            var6Lifetime1 = var6Lifetime1 + this.field_f[(this.field_i - var8Lifetime1 + 10) % 10];
+          for (int var8Lifetime1 = firstSample; this.sampleCount >= var8Lifetime1; var8Lifetime1++) {
+            var6Lifetime1 = var6Lifetime1 + this.sampleDeltas[(this.sampleIndex - var8Lifetime1 + 10) % 10];
           }
-          return var6Lifetime1 / (long)this.field_k;
+          return var6Lifetime1 / (long)this.sampleCount;
         }
-        this.field_f[this.field_i] = var4;
-        if (this.field_k >= 1) {
-          this.field_i = (1 + this.field_i) % 10;
+        this.sampleDeltas[this.sampleIndex] = var4;
+        if (this.sampleCount >= 1) {
+          this.sampleIndex = (1 + this.sampleIndex) % 10;
           long var6Lifetime2 = 0L;
-          for (int var8Lifetime2 = param0; this.field_k >= var8Lifetime2; var8Lifetime2++) {
-            var6Lifetime2 = var6Lifetime2 + this.field_f[(this.field_i - var8Lifetime2 + 10) % 10];
+          for (int var8Lifetime2 = firstSample; this.sampleCount >= var8Lifetime2; var8Lifetime2++) {
+            var6Lifetime2 = var6Lifetime2 + this.sampleDeltas[(this.sampleIndex - var8Lifetime2 + 10) % 10];
           }
-          return var6Lifetime2 / (long)this.field_k;
+          return var6Lifetime2 / (long)this.sampleCount;
         }
-        this.field_k = this.field_k + 1;
-        this.field_i = (1 + this.field_i) % 10;
+        this.sampleCount = this.sampleCount + 1;
+        this.sampleIndex = (1 + this.sampleIndex) % 10;
         long var6Lifetime3 = 0L;
-        for (int var8Lifetime3 = param0; this.field_k >= var8Lifetime3; var8Lifetime3++) {
-          var6Lifetime3 = var6Lifetime3 + this.field_f[(this.field_i - var8Lifetime3 + 10) % 10];
+        for (int var8Lifetime3 = firstSample; this.sampleCount >= var8Lifetime3; var8Lifetime3++) {
+          var6Lifetime3 = var6Lifetime3 + this.sampleDeltas[(this.sampleIndex - var8Lifetime3 + 10) % 10];
         }
-        return var6Lifetime3 / (long)this.field_k;
+        return var6Lifetime3 / (long)this.sampleCount;
     }
 
-    final long c(byte param0) {
-        if (param0 <= 70) {
+    final long delayMillis(byte guard) {
+        if (guard <= 70) {
           return -6L;
         }
-        this.field_c = this.field_c + this.c(1);
-        if (this.field_g > this.field_c) {
-          return (-this.field_c + this.field_g) / 1000000L;
+        this.currentNanos = this.currentNanos + this.sampleInterval(1);
+        if (this.nextTickNanos > this.currentNanos) {
+          return (-this.currentNanos + this.nextTickNanos) / 1000000L;
         }
         return 0L;
     }
 
-    final int a(byte param0, long param1) {
+    final int advanceTicks(byte guard, long tickNanos) {
         int var6 = EscapeVector.obfuscationControl;
-        int var4 = 21 % ((param0 + 29) / 51);
-        if (this.field_c < this.field_g) {
-          this.field_e = this.field_e + (-this.field_c + this.field_g);
-          this.field_c = this.field_c + (this.field_g - this.field_c);
-          this.field_g = this.field_g + param1;
+        int var4 = 21 % ((guard + 29) / 51);
+        if (this.currentNanos < this.nextTickNanos) {
+          this.lastSampleNanos = this.lastSampleNanos + (-this.currentNanos + this.nextTickNanos);
+          this.currentNanos = this.currentNanos + (this.nextTickNanos - this.currentNanos);
+          this.nextTickNanos = this.nextTickNanos + tickNanos;
           return 1;
         }
         int var5 = 0;
         do {
-          this.field_g = this.field_g + param1;
+          this.nextTickNanos = this.nextTickNanos + tickNanos;
           var5++;
         } while (var5 < 10 &&
-          this.field_g < this.field_c);
-        if (this.field_c > this.field_g) {
-          this.field_g = this.field_c;
+          this.nextTickNanos < this.currentNanos);
+        if (this.currentNanos > this.nextTickNanos) {
+          this.nextTickNanos = this.currentNanos;
         }
         return var5;
     }
 
-    qf() {
-        this.field_i = 0;
-        this.field_k = 1;
-        this.field_g = 0L;
-        this.field_e = 0L;
-        this.field_f = new long[10];
-        this.field_c = 0L;
-        this.field_c = System.nanoTime();
-        this.field_g = System.nanoTime();
+    NanoTickClock() {
+        this.sampleIndex = 0;
+        this.sampleCount = 1;
+        this.nextTickNanos = 0L;
+        this.lastSampleNanos = 0L;
+        this.sampleDeltas = new long[10];
+        this.currentNanos = 0L;
+        this.currentNanos = System.nanoTime();
+        this.nextTickNanos = System.nanoTime();
     }
 
     static {

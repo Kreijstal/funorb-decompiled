@@ -91,19 +91,19 @@ final class ValidationIndicator extends TextButton {
           int var10 = var25.fullHeight << 1;
           if (RockBuster.field_j == null) {
             RockBuster.field_j = new Sprite(var9, var10);
-            eo.a(RockBuster.field_j, (byte) -111);
+            TickClock.pushSpriteRaster(RockBuster.field_j, (byte) -111);
           } else if (RockBuster.field_j.width < var9) {
             RockBuster.field_j = new Sprite(var9, var10);
-            eo.a(RockBuster.field_j, (byte) -111);
+            TickClock.pushSpriteRaster(RockBuster.field_j, (byte) -111);
           } else if (var10 <= RockBuster.field_j.height) {
-            eo.a(RockBuster.field_j, (byte) -79);
+            TickClock.pushSpriteRaster(RockBuster.field_j, (byte) -79);
             SoftwareRasterizer.clearFramebuffer();
           } else {
             RockBuster.field_j = new Sprite(var9, var10);
-            eo.a(RockBuster.field_j, (byte) -111);
+            TickClock.pushSpriteRaster(RockBuster.field_j, (byte) -111);
           }
           var25.drawRotatedScaledBilinear(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_R << 10, 4096);
-          dl.a((byte) 116);
+          RasterRestoreSupport.popRasterState((byte) 116);
           RockBuster.field_j.drawAdditive(var5 - var25.fullWidth, -var25.fullHeight + var6, 256);
           return;
         }
@@ -121,14 +121,14 @@ final class ValidationIndicator extends TextButton {
           if (RockBuster.field_j != null &&
             RockBuster.field_j.width >= var9Lifetime1 &&
             var10Lifetime1 <= RockBuster.field_j.height) {
-            eo.a(RockBuster.field_j, (byte) -79);
+            TickClock.pushSpriteRaster(RockBuster.field_j, (byte) -79);
             SoftwareRasterizer.clearFramebuffer();
           } else {
             RockBuster.field_j = new Sprite(var9Lifetime1, var10Lifetime1);
-            eo.a(RockBuster.field_j, (byte) -111);
+            TickClock.pushSpriteRaster(RockBuster.field_j, (byte) -111);
           }
           var15.drawRotatedScaledBilinear(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_R << 10, 4096);
-          dl.a((byte) 116);
+          RasterRestoreSupport.popRasterState((byte) 116);
           RockBuster.field_j.drawAdditive(var5Lifetime1 - var15.fullWidth, -var15.fullHeight + var6Lifetime1, 256);
           return;
         }
@@ -152,24 +152,24 @@ final class ValidationIndicator extends TextButton {
         if (RockBuster.field_j != null &&
           RockBuster.field_j.width >= var9Lifetime2 &&
           var10Lifetime2 <= RockBuster.field_j.height) {
-          eo.a(RockBuster.field_j, (byte) -79);
+          TickClock.pushSpriteRaster(RockBuster.field_j, (byte) -79);
           SoftwareRasterizer.clearFramebuffer();
         } else {
           RockBuster.field_j = new Sprite(var9Lifetime2, var10Lifetime2);
-          eo.a(RockBuster.field_j, (byte) -111);
+          TickClock.pushSpriteRaster(RockBuster.field_j, (byte) -111);
         }
         var16.drawRotatedScaledBilinear(112, 144, var16.fullWidth << 4, var16.fullHeight << 4, -this.field_R << 10, 4096);
-        dl.a((byte) 116);
+        RasterRestoreSupport.popRasterState((byte) 116);
         RockBuster.field_j.drawAdditive(var5Lifetime1 - var16.fullWidth, -var16.fullHeight + var6Lifetime1, 256);
     }
 
     final static void a(int param0, int param1, byte param2, String param3) {
         try {
-          fh.field_g.drawRightAlpha(param3, param1 - 1, -1 + param0, 0, -1, 64);
-          fh.field_g.drawRightAlpha(param3, param1 + 1, -1 + param0, 0, -1, 64);
-          fh.field_g.drawRightAlpha(param3, -1 + param1, param0 + 1, 0, -1, 64);
-          fh.field_g.drawRightAlpha(param3, 1 + param1, param0 + 1, 0, -1, 64);
-          fh.field_g.drawRight(param3, param1, param0, 16777215, -1);
+          ByteStorage.gameFont.drawRightAlpha(param3, param1 - 1, -1 + param0, 0, -1, 64);
+          ByteStorage.gameFont.drawRightAlpha(param3, param1 + 1, -1 + param0, 0, -1, 64);
+          ByteStorage.gameFont.drawRightAlpha(param3, -1 + param1, param0 + 1, 0, -1, 64);
+          ByteStorage.gameFont.drawRightAlpha(param3, 1 + param1, param0 + 1, 0, -1, 64);
+          ByteStorage.gameFont.drawRight(param3, param1, param0, 16777215, -1);
           int var4_int = -103 / ((param2 - 7) / 46);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -180,8 +180,8 @@ final class ValidationIndicator extends TextButton {
         if (param0 != 64) {
           return (int[]) null;
         }
-        if (null != bk.field_r) {
-          return bk.field_r.d(param0 + 31240);
+        if (null != SocketJs5Transport.field_r) {
+          return SocketJs5Transport.field_r.d(param0 + 31240);
         }
         return null;
     }

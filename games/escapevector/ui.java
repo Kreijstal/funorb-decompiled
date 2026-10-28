@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ui {
-    static fk field_a;
+    static LoginCredentialType field_a;
     static String field_d;
     int field_c;
     static al field_b;
@@ -106,7 +106,7 @@ final class ui {
     }
 
     static {
-        field_a = new fk(0);
+        field_a = new LoginCredentialType(0);
         field_d = "Explosive is on hill - please land closer";
         field_e = 0;
     }

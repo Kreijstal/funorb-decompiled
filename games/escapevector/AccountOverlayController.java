@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b {
+final class AccountOverlayController {
     static String field_a;
     static PcmSample field_b;
 
@@ -13,7 +13,7 @@ final class b {
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void updateAccountOverlay(int guard) {
         int var2 = EscapeVector.obfuscationControl;
         try {
           if (!IntrusiveNode.b(12)) {
@@ -29,7 +29,7 @@ final class b {
           while (AccountRequestDialog.pollKeyEvent(-104)) {
             AccountRequestDialog.field_pb.handleKey(jc.field_c, PasswordValidator.field_n, (byte) -121);
           }
-          if (param0 < -31) {
+          if (guard < -31) {
             return;
           }
           field_a = (String) null;
@@ -37,7 +37,7 @@ final class b {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "b.B(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "b.B(" + guard + ')');
         }
     }
 

@@ -27,7 +27,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         String stackIn_21_2 = null;
         try {
           CharSequence var4 = (CharSequence) ((Object) text);
-          if (!tg.a(87, var4)) {
+          if (!ContactEntry.isValidAccountName(87, var4)) {
             ValidationState stackIn_3_0 = ArchiveProvider.field_a;
             return stackIn_3_0;
           }

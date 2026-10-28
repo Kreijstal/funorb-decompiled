@@ -25,7 +25,7 @@ final class qk {
         di.field_d = null;
         mj.field_d = 0;
         int var2 = -17 % ((-17 - param1) / 39);
-        pl.field_q.b(-26480, param0);
+        AlternateUsernameCredentials.field_q.b(-26480, param0);
         gi.a((byte) -123);
     }
 

@@ -16,8 +16,8 @@ final class td {
     }
 
     final static void a(int param0, int param1) {
-        if (null != bk.field_r) {
-          bk.field_r.b(param1 ^ -129, param0);
+        if (null != SocketJs5Transport.field_r) {
+          SocketJs5Transport.field_r.b(param1 ^ -129, param0);
         }
         if (param1 != 128) {
           td.a(112, 55);
@@ -30,12 +30,12 @@ final class td {
         if (param0 != 128) {
           return 9L;
         }
-        if (cd.field_t <= var1) {
-          cd.field_t = var1;
+        if (LegacyStyleNode.field_t <= var1) {
+          LegacyStyleNode.field_t = var1;
           return var1 + al.field_e;
         }
-        al.field_e = al.field_e + (cd.field_t - var1);
-        cd.field_t = var1;
+        al.field_e = al.field_e + (LegacyStyleNode.field_t - var1);
+        LegacyStyleNode.field_t = var1;
         return var1 + al.field_e;
     }
 

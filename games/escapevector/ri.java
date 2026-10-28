@@ -57,10 +57,10 @@ final class ri {
           if (param0 != 113) {
             field_b = (PcmSample) null;
           }
-          RatingQuery var3 = (RatingQuery) (cd.field_s.first(false));
+          RatingQuery var3 = (RatingQuery) (LegacyStyleNode.field_s.first(false));
           while (var3 != null) {
             if (var3.requestId != var2) {
-              var3 = (RatingQuery) (cd.field_s.next((byte) 70));
+              var3 = (RatingQuery) (LegacyStyleNode.field_s.next((byte) 70));
               continue;
             }
             break;
@@ -78,11 +78,11 @@ final class ri {
             }
             wk.a(var4, param0 - 58, var5);
             for (int var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              km.a(var14, 1238559653);
+              DirectByteStorage.a(var14, 1238559653);
               if (var6_intLifetime1 != 0) {
-                FullscreenFocusCanvas.a(1, CachedArchiveProvider.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, bk.field_s);
+                FullscreenFocusCanvas.a(1, CachedArchiveProvider.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, SocketJs5Transport.field_s);
               } else {
-                FullscreenFocusCanvas.a(param0 - 112, CachedArchiveProvider.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, bk.field_s);
+                FullscreenFocusCanvas.a(param0 - 112, CachedArchiveProvider.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, SocketJs5Transport.field_s);
               }
             }
             DynamicTerrainRenderer.b(var5, 0);
@@ -92,7 +92,7 @@ final class ri {
             int var9 = 0;
             int var10 = 0;
             while (var8 > var9) {
-              int var11 = cd.field_q[var9];
+              int var11 = LegacyStyleNode.field_q[var9];
               var6[0][var10] = TextHotspotRegion.field_l[var11];
               var18[0][var10 * 4] = DualLinkNode.field_k[var11];
               var18[0][1 + 4 * var10] = pc.field_c[var11];
@@ -110,7 +110,7 @@ final class ri {
             int var13 = 0;
             int var10Lifetime1 = var13;
             while (var9Lifetime1 < var8) {
-              int var11Lifetime1 = cd.field_q[var9Lifetime1 + var5];
+              int var11Lifetime1 = LegacyStyleNode.field_q[var9Lifetime1 + var5];
               var6[1][var13] = TextHotspotRegion.field_l[var11Lifetime1];
               var18[1][var13 * 4] = DualLinkNode.field_k[var11Lifetime1];
               var18[1][var13 * 4 + 1] = pc.field_c[var11Lifetime1];
@@ -143,8 +143,8 @@ final class ri {
         Checkbox.detachCanvasInput(IsaacRandom.field_d, (byte) -59);
         IsaacRandom.field_d.a(NetworkGameClient.field_r, true);
         IsaacRandom.field_d = null;
-        if (null != km.field_n) {
-          km.field_n.restoreWindowedSize(param0 ^ -25123);
+        if (null != DirectByteStorage.field_n) {
+          DirectByteStorage.field_n.restoreWindowedSize(param0 ^ -25123);
         }
         if (param0 != -25123) {
           field_a = (String) null;

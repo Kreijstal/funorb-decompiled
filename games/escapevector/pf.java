@@ -199,15 +199,15 @@ final class pf {
             int[] discarded$1 = this.a(20, -91, (BinaryBitmapFont) null, (byte) -102);
           }
           if (UiContainer.e((byte) 127)) {
-            var5 = pl.field_s;
+            var5 = AlternateUsernameCredentials.field_s;
             var6 = new int[]{1, 0, 2, 3};
-            var7 = pj.field_g;
+            var7 = BufferedSocket.field_g;
             var8 = new int[]{0, 1, 2, 3};
           } else {
             var8 = new int[]{0, 1};
             var6 = new int[]{1, 0};
-            var7 = new Sprite[]{pj.field_g[0], pj.field_g[1]};
-            var5 = new String[]{pl.field_s[0], pl.field_s[1]};
+            var7 = new Sprite[]{BufferedSocket.field_g[0], BufferedSocket.field_g[1]};
+            var5 = new String[]{AlternateUsernameCredentials.field_s[0], AlternateUsernameCredentials.field_s[1]};
           }
           int var9 = var5.length;
           int[] var15 = this.a(param0, true, var9);
@@ -443,7 +443,7 @@ final class pf {
             }
             var11.field_l = -var2 + 6;
             var11.field_j = var2;
-            wa.field_c.addLast(-12328, var11);
+            TrackerGainSupport.field_c.addLast(-12328, var11);
             if (var11.field_o >= 100) {
               mh.field_e = mh.field_e + 1;
             }
@@ -451,7 +451,7 @@ final class pf {
           if (param0 > -94) {
             pf.e((byte) 116);
           }
-          oh var1 = (oh) (wa.field_c.first(false));
+          oh var1 = (oh) (TrackerGainSupport.field_c.first(false));
           while (var1 != null) {
             if (var1.field_o > var1.field_r) {
               var1.field_r = var1.field_r + 1;
@@ -512,7 +512,7 @@ final class pf {
                 }
               }
             }
-            var1 = (oh) (wa.field_c.next((byte) 70));
+            var1 = (oh) (TrackerGainSupport.field_c.next((byte) 70));
           }
           oh var1Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.first(false));
           while (var1Lifetime1 != null) {
@@ -576,7 +576,7 @@ final class pf {
                 var6.field_j = var7Lifetime1;
                 var6.field_l = -var7Lifetime1 + 6;
               }
-              wa.field_c.addLast(-12328, var6);
+              TrackerGainSupport.field_c.addLast(-12328, var6);
               if (100 <= var6.field_o) {
                 mh.field_e = mh.field_e + 1;
               }
@@ -598,7 +598,7 @@ final class pf {
                 var12.field_j = var8;
                 var12.field_l = 6 - var8;
               }
-              wa.field_c.addLast(-12328, var12);
+              TrackerGainSupport.field_c.addLast(-12328, var12);
               if (100 <= var12.field_o) {
                 mh.field_e = mh.field_e + 1;
               }
@@ -858,7 +858,7 @@ final class pf {
     }
 
     private final void d(byte param0) {
-        BinaryBitmapFont var2 = fh.field_g;
+        BinaryBitmapFont var2 = ByteStorage.gameFont;
         int var3 = 10;
         int[] var4 = this.a(0, var3, var2, (byte) 102);
         int[] var5 = this.a(var2, 84, var3, var4.length);

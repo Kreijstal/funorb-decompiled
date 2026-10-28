@@ -48,15 +48,15 @@ final class wk {
           !(param0 <= Bzip2State.field_v.length)) {
           Bzip2State.field_v = new int[2 * param0];
         }
-        if (cd.field_q == null ||
-          !(param2 + param0 <= cd.field_q.length)) {
-          cd.field_q = new int[2 * (param0 + param2)];
+        if (LegacyStyleNode.field_q == null ||
+          !(param2 + param0 <= LegacyStyleNode.field_q.length)) {
+          LegacyStyleNode.field_q = new int[2 * (param0 + param2)];
         }
         if (null == dj.field_a ||
           !(param0 <= dj.field_a.length)) {
           dj.field_a = new boolean[2 * param0];
         }
-        pl.field_r = -2147483648;
+        AlternateUsernameCredentials.field_r = -2147483648;
         AccountTermsPanel.field_J = 0;
         ArchiveRequest.field_t = -2147483648;
         TextLayout.field_d = 2147483647;

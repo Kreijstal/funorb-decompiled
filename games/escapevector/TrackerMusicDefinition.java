@@ -42,7 +42,7 @@ final class TrackerMusicDefinition {
     int field_B;
 
     final static void d(int param0) {
-        pl.field_n.playSampleWithPan(!(0.5 <= Math.random()) ? TerrainMaskSupport.field_e : ri.field_b, 100, 6144 * IterableNodeHashTable.field_c / 64, param0);
+        AlternateUsernameCredentials.field_n.playSampleWithPan(!(0.5 <= Math.random()) ? TerrainMaskSupport.field_e : ri.field_b, 100, 6144 * IterableNodeHashTable.field_c / 64, param0);
     }
 
     final static String c(int param0) {

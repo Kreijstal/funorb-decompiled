@@ -120,7 +120,7 @@ abstract class DebouncedValidator implements ValidationSource {
           if (Js5NetworkRequest.field_x <= 0) {
             if (!aj.b(-104)) {
               var2 = 1;
-              if (null != km.field_n) {
+              if (null != DirectByteStorage.field_n) {
                 return;
               }
               if (!e.field_d) {
@@ -130,7 +130,7 @@ abstract class DebouncedValidator implements ValidationSource {
               return;
             }
             var2 = 0;
-            if (null != km.field_n) {
+            if (null != DirectByteStorage.field_n) {
               return;
             }
             if (!e.field_d) {
@@ -139,8 +139,8 @@ abstract class DebouncedValidator implements ValidationSource {
             sn.a(var2, 0, param1);
             return;
           }
-          if (km.field_n != null) {
-            IsaacRandom.field_d = km.field_n.enterFullscreen(!param0 ? true : false);
+          if (DirectByteStorage.field_n != null) {
+            IsaacRandom.field_d = DirectByteStorage.field_n.enterFullscreen(!param0 ? true : false);
             TextHotspotWidget.b(2, (byte) 101);
             if (null == IsaacRandom.field_d) {
               var2Lifetime4 = 3;
@@ -148,7 +148,7 @@ abstract class DebouncedValidator implements ValidationSource {
               var2Lifetime4 = 2;
               rc.a(IsaacRandom.field_d, true);
             }
-            if (null != km.field_n) {
+            if (null != DirectByteStorage.field_n) {
               return;
             }
             if (!e.field_d) {
@@ -164,7 +164,7 @@ abstract class DebouncedValidator implements ValidationSource {
             var2Lifetime5 = 2;
             rc.a(IsaacRandom.field_d, true);
           }
-          if (null != km.field_n) {
+          if (null != DirectByteStorage.field_n) {
             return;
           }
           if (!e.field_d) {
@@ -176,7 +176,7 @@ abstract class DebouncedValidator implements ValidationSource {
         if (Js5NetworkRequest.field_x <= 0) {
           if (!aj.b(-104)) {
             int var2Lifetime1 = 1;
-            if (null == km.field_n &&
+            if (null == DirectByteStorage.field_n &&
               e.field_d) {
               sn.a(var2Lifetime1, 0, param1);
               return;
@@ -184,7 +184,7 @@ abstract class DebouncedValidator implements ValidationSource {
             return;
           }
           int var2Lifetime1Lifetime1 = 0;
-          if (null != km.field_n) {
+          if (null != DirectByteStorage.field_n) {
             return;
           }
           if (!e.field_d) {
@@ -193,8 +193,8 @@ abstract class DebouncedValidator implements ValidationSource {
           sn.a(var2Lifetime1Lifetime1, 0, param1);
           return;
         }
-        if (km.field_n != null) {
-          IsaacRandom.field_d = km.field_n.enterFullscreen(!param0 ? true : false);
+        if (DirectByteStorage.field_n != null) {
+          IsaacRandom.field_d = DirectByteStorage.field_n.enterFullscreen(!param0 ? true : false);
           TextHotspotWidget.b(2, (byte) 101);
           if (null == IsaacRandom.field_d) {
             var2Lifetime2 = 3;
@@ -202,7 +202,7 @@ abstract class DebouncedValidator implements ValidationSource {
             var2Lifetime2 = 2;
             rc.a(IsaacRandom.field_d, true);
           }
-          if (null == km.field_n &&
+          if (null == DirectByteStorage.field_n &&
             e.field_d) {
             sn.a(var2Lifetime2, 0, param1);
             return;
@@ -216,7 +216,7 @@ abstract class DebouncedValidator implements ValidationSource {
           var2Lifetime3 = 2;
           rc.a(IsaacRandom.field_d, true);
         }
-        if (null == km.field_n &&
+        if (null == DirectByteStorage.field_n &&
           e.field_d) {
           sn.a(var2Lifetime3, 0, param1);
           return;

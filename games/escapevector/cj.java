@@ -12,7 +12,7 @@ final class cj {
           Sprite var2 = new Sprite(param1.getNamedFile(-4, "", "final_frame.jpg"), (java.awt.Component) ((Object) of.field_d));
           int var3 = var2.width;
           int var4 = var2.height;
-          hf.a(param0 ^ 58);
+          LoginStage.pushRasterState(param0 ^ 58);
           cb.field_a = new Sprite(var3, 3 * var4 / 4);
           cb.field_a.bindAsFramebuffer();
           var2.drawOpaque(0, param0);
@@ -20,7 +20,7 @@ final class cj {
           Js5NetworkRequest.field_G.bindAsFramebuffer();
           var2.drawOpaque(0, -cb.field_a.height);
           Js5NetworkRequest.field_G.offsetY = cb.field_a.height;
-          dl.a((byte) 120);
+          RasterRestoreSupport.popRasterState((byte) 120);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "cj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

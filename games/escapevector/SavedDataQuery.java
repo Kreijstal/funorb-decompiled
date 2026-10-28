@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei extends IntrusiveNode {
+final class SavedDataQuery extends IntrusiveNode {
     static byte[][] field_l;
     static int field_j;
     static String field_n;
     static String field_k;
-    boolean field_g;
+    boolean complete;
     static ResourceArchive field_m;
-    byte[] field_h;
+    byte[] payload;
     static boolean field_i;
 
     final static boolean d(int param0) {
@@ -16,7 +16,7 @@ final class ei extends IntrusiveNode {
           return TextButton.a(false, PointCloudEffect.d((byte) -110));
         }
         String var2 = (String) null;
-        ei.a(10, true, 83L, (String) null, (String) null);
+        SavedDataQuery.createCredentials(10, true, 83L, (String) null, (String) null);
         return TextButton.a(false, PointCloudEffect.d((byte) -110));
     }
 
@@ -78,33 +78,33 @@ final class ei extends IntrusiveNode {
         SecondaryIntrusiveDeque.a(param12, param6, param13, param10, SoftwareRasterizer.pixels, param7, param3, param0, param8, param5, param1, true, param4, param2, param15, param14, param11);
     }
 
-    final static vj a(int param0, boolean param1, long param2, String param3, String param4) {
+    final static LoginCredentials createCredentials(int emailUsernameSentinel, boolean alternateType, long encodedUsername, String email, String password) {
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         try {
-          if ((long)param0 == param2 &&
-            param3 != null) {
-            bh stackIn_7_0 = new bh(param3, param4);
-            return (vj) ((Object) stackIn_7_0);
+          if ((long)emailUsernameSentinel == encodedUsername &&
+            email != null) {
+            EmailCredentials stackIn_7_0 = new EmailCredentials(email, password);
+            return (LoginCredentials) ((Object) stackIn_7_0);
           }
-          if (!param1) {
-            ld stackIn_9_0 = new ld(param2, param4);
-            return (vj) ((Object) stackIn_9_0);
+          if (!alternateType) {
+            UsernameCredentials stackIn_9_0 = new UsernameCredentials(encodedUsername, password);
+            return (LoginCredentials) ((Object) stackIn_9_0);
           }
-          pl stackIn_5_0 = new pl(param2, param4);
-          return (vj) ((Object) stackIn_5_0);
+          AlternateUsernameCredentials stackIn_5_0 = new AlternateUsernameCredentials(encodedUsername, password);
+          return (LoginCredentials) ((Object) stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var6;
-          StringBuilder stackIn_12_1 = new StringBuilder().append("ei.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_12_1 = new StringBuilder().append("ei.D(").append(emailUsernameSentinel).append(',').append(alternateType).append(',').append(encodedUsername).append(',');
+          if (email == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param4 == null) {
+          if (password == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -123,7 +123,7 @@ final class ei extends IntrusiveNode {
         field_n = null;
     }
 
-    ei() {
+    SavedDataQuery() {
     }
 
     static {

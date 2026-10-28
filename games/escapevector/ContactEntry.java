@@ -1,51 +1,51 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tg extends ol {
-    String field_ob;
-    String field_lb;
+final class ContactEntry extends LegacyWidgetStyle {
+    String displayName;
+    String location;
     static long field_mb;
     static String[] field_nb;
-    int field_pb;
+    int insertionOrder;
 
     public static void releaseStatics(int guard) {
         if (guard != 0) {
-          tg.b(-28, 85);
+          ContactEntry.requestAchievements(-28, 85);
           field_nb = null;
           return;
         }
         field_nb = null;
     }
 
-    final static AchievementQuery b(int param0, int param1) {
-        if (param1 >= 89) {
+    final static AchievementQuery requestAchievements(int opcode, int guard) {
+        if (guard >= 89) {
           AchievementQuery var2 = new AchievementQuery();
-          bc.field_b.addLast(-12328, var2);
-          km.a(param0, -22);
+          SavedDataQuerySupport.field_b.addLast(-12328, var2);
+          DirectByteStorage.writeAchievementQuery(opcode, -22);
           return var2;
         }
         return (AchievementQuery) null;
     }
 
-    tg() {
-        super(0L, (ol) null);
+    ContactEntry() {
+        super(0L, (LegacyWidgetStyle) null);
     }
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean isValidAccountName(int guard, CharSequence name) {
         String stackIn_7_2 = null;
         try {
-          if (param0 < 51) {
+          if (guard < 51) {
             CharSequence var3 = (CharSequence) null;
-            tg.a(-9, (CharSequence) null);
+            ContactEntry.isValidAccountName(-9, (CharSequence) null);
           }
-          boolean stackIn_3_0 = PacketBuffer.isValidAccountName(false, param1, 113);
+          boolean stackIn_3_0 = PacketBuffer.isValidAccountName(false, name, 113);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var2;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("tg.I(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("tg.I(").append(guard).append(',');
+          if (name == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

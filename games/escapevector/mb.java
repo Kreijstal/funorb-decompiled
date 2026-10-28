@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mb {
-    static Sprite[] field_f;
+    static Sprite[] objectSprites;
     static UiTheme field_g;
     static String[] field_b;
     private int field_e;
@@ -67,7 +67,7 @@ final class mb {
                 if (var2) {
                   return;
                 }
-              } else if (pl.field_q != null) {
+              } else if (AlternateUsernameCredentials.field_q != null) {
                 ff.a((byte) 127);
               } else if (null != da.field_c) {
                 RatingQuery.e(-46);
@@ -170,7 +170,7 @@ final class mb {
         try {
           field_b = null;
           field_g = null;
-          field_f = null;
+          objectSprites = null;
           if (guard != 4) {
             mb.b((byte) -110);
           }
@@ -218,8 +218,8 @@ final class mb {
     final static void a(String[] args, int param1) {
         String stackIn_13_2 = null;
         try {
-          if (null != ol.field_E) {
-            ol.field_E.field_G.setSuggestions(args, (byte) -103);
+          if (null != LegacyWidgetStyle.field_E) {
+            LegacyWidgetStyle.field_E.field_G.setSuggestions(args, (byte) -103);
           }
           if (param1 != 4) {
             return;
@@ -243,7 +243,7 @@ final class mb {
     }
 
     static {
-        field_f = new Sprite[17];
+        objectSprites = new Sprite[17];
         field_b = new String[]{"Congratulations, commander. Thanks to your superb skills, all of our technology has been recovered.", "The aliens will not be happy. It is now only a matter of time before they come back to Earth.", "This time, however, we and our valuable weapons will be ready."};
     }
 }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AlphaContainer extends SingleChildContainer {
-    static fk field_E;
+    static LoginCredentialType field_E;
     static volatile int mouseIdleTicks;
     static RasterBuffer field_D;
     int alpha;
@@ -109,20 +109,20 @@ final class AlphaContainer extends SingleChildContainer {
           return;
         }
         Sprite var6 = new Sprite(this.child.width, this.child.height);
-        eo.a(var6, (byte) -105);
+        TickClock.pushSpriteRaster(var6, (byte) -105);
         this.child.drawLayer(0, (byte) 91, layer, 0);
         if (guard >= 85) {
-          dl.a((byte) 107);
+          RasterRestoreSupport.popRasterState((byte) 107);
           var6.drawAlpha(this.x + screenX, this.y + screenY, this.alpha);
           return;
         }
         field_H = (String) null;
-        dl.a((byte) 107);
+        RasterRestoreSupport.popRasterState((byte) 107);
         var6.drawAlpha(this.x + screenX, this.y + screenY, this.alpha);
     }
 
     static {
-        field_E = new fk(3);
+        field_E = new LoginCredentialType(3);
         mouseIdleTicks = 0;
     }
 }

@@ -51,7 +51,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         }
         int var6 = 16777215;
         int var7 = 1;
-        BinaryBitmapFont var8 = fh.field_g;
+        BinaryBitmapFont var8 = ByteStorage.gameFont;
         int[][] var18 = ValidatedTextWidget.field_U[param2];
         int var10 = je.a(false, param2);
         if (1 + param1 < var10) {
@@ -83,7 +83,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           } else {
             if (param1 == ThreeSliceButtonPainter.field_A) {
               this.height = this.height + 10;
-              var3 = ol.field_K;
+              var3 = LegacyWidgetStyle.field_K;
               if (ModalStack.a(false)) {
                 var3 = e.field_b;
                 this.height = this.height + 20;

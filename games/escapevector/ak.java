@@ -4,7 +4,7 @@
 final class ak {
     private LegacyButton[] field_k;
     private int[] field_a;
-    static hf field_d;
+    static LoginStage field_d;
     private int[][] field_b;
     private LegacyButton[] field_i;
     private LegacyButton[] field_j;
@@ -38,14 +38,14 @@ final class ak {
           int var3 = 320;
           int var4 = 240;
           int var5 = 6340704;
-          fh.field_g.drawCentered(var2, var3, var4, var5, -1);
+          ByteStorage.gameFont.drawCentered(var2, var3, var4, var5, -1);
         }
     }
 
     private final void a(boolean param0, byte param1) {
-        ol.field_N = null;
+        LegacyWidgetStyle.field_N = null;
         CheckboxPainter.field_n = false;
-        pl.field_q.b(param1 - 26357, param0);
+        AlternateUsernameCredentials.field_q.b(param1 - 26357, param0);
         di.field_d = null;
         mj.field_d = 0;
         if (param1 != -123) {
@@ -118,8 +118,8 @@ final class ak {
         if (param0 > -103) {
           this.h((byte) -110);
         }
-        for (int var3 = 0; var3 < fh.field_d.length; var3++) {
-          int var4 = fh.field_d[var3];
+        for (int var3 = 0; var3 < ByteStorage.field_d.length; var3++) {
+          int var4 = ByteStorage.field_d[var3];
           if (var4 == var2) {
             if (var3 >= ti.field_a.length) {
               return false;
@@ -157,7 +157,7 @@ final class ak {
             if (var4 == this.field_e) {
               return false;
             }
-            ol.field_N = null;
+            LegacyWidgetStyle.field_N = null;
             this.field_e = var4;
             this.h((byte) -122);
             return true;
@@ -185,7 +185,7 @@ final class ak {
     public static void releaseStatics(byte guard) {
         field_d = null;
         if (guard != 77) {
-          field_d = (hf) null;
+          field_d = (LoginStage) null;
         }
     }
 
@@ -254,8 +254,8 @@ final class ak {
           int var3 = -38 / ((29 - param0) / 43);
           for (int var2 = 0; var2 < ti.field_a.length; var2++) {
             if (this.field_c == ti.field_a[var2] &&
-              fh.field_d.length >= var2) {
-              int var4 = fh.field_d[var2];
+              ByteStorage.field_d.length >= var2) {
+              int var4 = ByteStorage.field_d[var2];
               return var4;
             }
           }
@@ -279,7 +279,7 @@ final class ak {
         if (param0 >= -52) {
           return;
         }
-        HighscoreQuery[] var5 = ol.field_N;
+        HighscoreQuery[] var5 = LegacyWidgetStyle.field_N;
         HighscoreQuery[] var2 = var5;
         if (var2 != null) {
           if (var5.length == 0) {
@@ -311,7 +311,7 @@ final class ak {
 
     private final boolean e(int param0) {
         int var6 = EscapeVector.obfuscationControl;
-        HighscoreQuery[] var7 = ol.field_N;
+        HighscoreQuery[] var7 = LegacyWidgetStyle.field_N;
         HighscoreQuery[] var2 = var7;
         if (var2 != null &&
           var7.length != 0) {
@@ -452,7 +452,7 @@ final class ak {
         int var13 = EscapeVector.obfuscationControl;
         Object var2 = wk.field_f;
         String var3 = SavedDataWrite.field_m;
-        HighscoreQuery[] var4 = ol.field_N;
+        HighscoreQuery[] var4 = LegacyWidgetStyle.field_N;
         if (var4 != null &&
           var4.length != 0) {
           HighscoreQuery[] var5 = var4;
@@ -675,7 +675,7 @@ final class ak {
     }
 
     private final void h(byte param0) {
-        BinaryBitmapFont var18 = fh.field_g;
+        BinaryBitmapFont var18 = ByteStorage.gameFont;
         int var3 = 640;
         int var4 = 0;
         int var5 = 10;
@@ -855,7 +855,7 @@ final class ak {
     private final String g(byte param0) {
         int var9 = EscapeVector.obfuscationControl;
         String var2 = SavedDataWrite.field_m;
-        HighscoreQuery[] var3 = ol.field_N;
+        HighscoreQuery[] var3 = LegacyWidgetStyle.field_N;
         if (var3 != null &&
           var3.length != 0) {
           HighscoreQuery[] var4 = var3;
@@ -896,7 +896,7 @@ final class ak {
           if (null == this.field_b[this.field_c]) {
             this.i((byte) -107);
           }
-          HighscoreQuery[] var8 = ol.field_N;
+          HighscoreQuery[] var8 = LegacyWidgetStyle.field_N;
           HighscoreQuery[] var5 = var8;
           if (var5 != null &&
             var8.length != 0) {
@@ -1127,10 +1127,10 @@ final class ak {
         int[] var3 = RasterBuffer.field_a[var2];
         HighscoreQuery[] var4 = new HighscoreQuery[var3.length];
         for (int var5 = 0; var5 < var4.length; var5++) {
-          var4[var5] = bk.a(var3[var5], true, 10, 3, 1);
+          var4[var5] = SocketJs5Transport.requestHighscores(var3[var5], true, 10, 3, 1);
           this.m(0);
         }
-        ol.field_N = var4;
+        LegacyWidgetStyle.field_N = var4;
         if (param0 >= -74) {
           this.field_i = (LegacyButton[]) null;
         }
@@ -1151,7 +1151,7 @@ final class ak {
 
     private final String j(int param0) {
         String var2 = wk.field_f;
-        HighscoreQuery[] var3 = ol.field_N;
+        HighscoreQuery[] var3 = LegacyWidgetStyle.field_N;
         if (aj.b(-123)) {
           return var2;
         }
@@ -1182,6 +1182,6 @@ final class ak {
     }
 
     static {
-        field_d = new hf();
+        field_d = new LoginStage();
     }
 }

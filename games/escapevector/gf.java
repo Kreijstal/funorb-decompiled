@@ -36,15 +36,15 @@ final class gf {
         if (param0 != -78) {
           String var4 = (String) null;
           gf.a((String) null, (byte) 43);
-          SelfDestructEffects.field_j.field_g = SelfDestructEffects.field_j.field_g + 1;
+          SelfDestructEffects.field_j.failureCount = SelfDestructEffects.field_j.failureCount + 1;
           if (param1 == 51) {
-            SelfDestructEffects.field_j.field_d = 2;
-            if (SelfDestructEffects.field_j.field_g < 2) {
-              if (SelfDestructEffects.field_j.field_g >= 2 &&
+            SelfDestructEffects.field_j.lastErrorCode = 2;
+            if (SelfDestructEffects.field_j.failureCount < 2) {
+              if (SelfDestructEffects.field_j.failureCount >= 2 &&
                 param1 == 50) {
                 return 5;
               }
-              if (SelfDestructEffects.field_j.field_g < 4) {
+              if (SelfDestructEffects.field_j.failureCount < 4) {
                 return -1;
               }
               return 1;
@@ -52,23 +52,23 @@ final class gf {
             if (param1 == 51) {
               return 2;
             }
-            if (SelfDestructEffects.field_j.field_g >= 2 &&
+            if (SelfDestructEffects.field_j.failureCount >= 2 &&
               param1 == 50) {
               return 5;
             }
-            if (SelfDestructEffects.field_j.field_g < 4) {
+            if (SelfDestructEffects.field_j.failureCount < 4) {
               return -1;
             }
             return 1;
           }
           if (param1 == 50) {
-            SelfDestructEffects.field_j.field_d = 5;
-            if (SelfDestructEffects.field_j.field_g < 2) {
-              if (SelfDestructEffects.field_j.field_g >= 2 &&
+            SelfDestructEffects.field_j.lastErrorCode = 5;
+            if (SelfDestructEffects.field_j.failureCount < 2) {
+              if (SelfDestructEffects.field_j.failureCount >= 2 &&
                 param1 == 50) {
                 return 5;
               }
-              if (SelfDestructEffects.field_j.field_g < 4) {
+              if (SelfDestructEffects.field_j.failureCount < 4) {
                 return -1;
               }
               return 1;
@@ -76,22 +76,22 @@ final class gf {
             if (param1 == 51) {
               return 2;
             }
-            if (SelfDestructEffects.field_j.field_g >= 2 &&
+            if (SelfDestructEffects.field_j.failureCount >= 2 &&
               param1 == 50) {
               return 5;
             }
-            if (SelfDestructEffects.field_j.field_g < 4) {
+            if (SelfDestructEffects.field_j.failureCount < 4) {
               return -1;
             }
             return 1;
           }
-          SelfDestructEffects.field_j.field_d = 1;
-          if (SelfDestructEffects.field_j.field_g < 2) {
-            if (SelfDestructEffects.field_j.field_g >= 2 &&
+          SelfDestructEffects.field_j.lastErrorCode = 1;
+          if (SelfDestructEffects.field_j.failureCount < 2) {
+            if (SelfDestructEffects.field_j.failureCount >= 2 &&
               param1 == 50) {
               return 5;
             }
-            if (SelfDestructEffects.field_j.field_g >= 4) {
+            if (SelfDestructEffects.field_j.failureCount >= 4) {
               return 1;
             }
             return -1;
@@ -99,71 +99,71 @@ final class gf {
           if (param1 == 51) {
             return 2;
           }
-          if (SelfDestructEffects.field_j.field_g >= 2 &&
+          if (SelfDestructEffects.field_j.failureCount >= 2 &&
             param1 == 50) {
             return 5;
           }
-          if (SelfDestructEffects.field_j.field_g < 4) {
+          if (SelfDestructEffects.field_j.failureCount < 4) {
             return -1;
           }
           return 1;
         }
-        SelfDestructEffects.field_j.field_g = SelfDestructEffects.field_j.field_g + 1;
+        SelfDestructEffects.field_j.failureCount = SelfDestructEffects.field_j.failureCount + 1;
         if (param1 == 51) {
-          SelfDestructEffects.field_j.field_d = 2;
-          if (SelfDestructEffects.field_j.field_g >= 2 &&
+          SelfDestructEffects.field_j.lastErrorCode = 2;
+          if (SelfDestructEffects.field_j.failureCount >= 2 &&
             param1 == 51) {
             return 2;
           }
-          if (SelfDestructEffects.field_j.field_g >= 2) {
+          if (SelfDestructEffects.field_j.failureCount >= 2) {
             if (param1 != 50) {
-              if (SelfDestructEffects.field_j.field_g >= 4) {
+              if (SelfDestructEffects.field_j.failureCount >= 4) {
                 return 1;
               }
               return -1;
             }
             return 5;
           }
-          if (SelfDestructEffects.field_j.field_g >= 4) {
+          if (SelfDestructEffects.field_j.failureCount >= 4) {
             return 1;
           }
           return -1;
         }
         if (param1 == 50) {
-          SelfDestructEffects.field_j.field_d = 5;
-          if (SelfDestructEffects.field_j.field_g >= 2 &&
+          SelfDestructEffects.field_j.lastErrorCode = 5;
+          if (SelfDestructEffects.field_j.failureCount >= 2 &&
             param1 == 51) {
             return 2;
           }
-          if (SelfDestructEffects.field_j.field_g >= 2) {
+          if (SelfDestructEffects.field_j.failureCount >= 2) {
             if (param1 != 50) {
-              if (SelfDestructEffects.field_j.field_g >= 4) {
+              if (SelfDestructEffects.field_j.failureCount >= 4) {
                 return 1;
               }
               return -1;
             }
             return 5;
           }
-          if (SelfDestructEffects.field_j.field_g >= 4) {
+          if (SelfDestructEffects.field_j.failureCount >= 4) {
             return 1;
           }
           return -1;
         }
-        SelfDestructEffects.field_j.field_d = 1;
-        if (SelfDestructEffects.field_j.field_g >= 2 &&
+        SelfDestructEffects.field_j.lastErrorCode = 1;
+        if (SelfDestructEffects.field_j.failureCount >= 2 &&
           param1 == 51) {
           return 2;
         }
-        if (SelfDestructEffects.field_j.field_g >= 2) {
+        if (SelfDestructEffects.field_j.failureCount >= 2) {
           if (param1 != 50) {
-            if (SelfDestructEffects.field_j.field_g >= 4) {
+            if (SelfDestructEffects.field_j.failureCount >= 4) {
               return 1;
             }
             return -1;
           }
           return 5;
         }
-        if (SelfDestructEffects.field_j.field_g >= 4) {
+        if (SelfDestructEffects.field_j.failureCount >= 4) {
           return 1;
         }
         return -1;
@@ -207,38 +207,38 @@ final class gf {
         this.field_n = true;
     }
 
-    final static tg a(String param0, byte param1) {
+    final static ContactEntry a(String param0, byte param1) {
         String stackIn_21_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
           if (null == ml.field_a) {
             Object stackIn_3_0 = null;
-            return (tg) (stackIn_3_0);
+            return (ContactEntry) (stackIn_3_0);
           }
           CharSequence var6 = (CharSequence) ((Object) param0);
           String var2 = sf.a(-104, var6);
           if (var2 == null) {
             var2 = param0;
           }
-          tg var3 = (tg) (ml.field_a.a(-82, (long)var2.hashCode()));
+          ContactEntry var3 = (ContactEntry) (ml.field_a.get(-82, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               int var4 = -98 / ((param1 + 63) / 57);
               Object stackIn_17_0 = null;
-              return (tg) (stackIn_17_0);
+              return (ContactEntry) (stackIn_17_0);
             }
-            CharSequence var7 = (CharSequence) ((Object) var3.field_ob);
+            CharSequence var7 = (CharSequence) ((Object) var3.displayName);
             String var4_ref_String = sf.a(-75, var7);
             if (var4_ref_String == null) {
-              var4_ref_String = var3.field_ob;
+              var4_ref_String = var3.displayName;
             }
             if (!var4_ref_String.equals(var2)) {
-              var3 = (tg) (ml.field_a.a((byte) -36));
+              var3 = (ContactEntry) (ml.field_a.nextMatch((byte) -36));
               continue;
             }
             break;
           }
-          tg stackIn_14_0 = var3;
+          ContactEntry stackIn_14_0 = var3;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

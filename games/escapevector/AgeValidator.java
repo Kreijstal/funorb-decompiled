@@ -25,7 +25,7 @@ final class AgeValidator extends TextFieldValidator {
         String stackIn_10_2 = null;
         try {
           if (param1 == 0) {
-            boolean stackIn_6_0 = (fk.a(-1465, param0) != null);
+            boolean stackIn_6_0 = (LoginCredentialType.findFriendByName(-1465, param0) != null);
             return stackIn_6_0;
           }
           return true;
@@ -125,7 +125,7 @@ final class AgeValidator extends TextFieldValidator {
         String stackIn_13_2 = null;
         try {
           CharSequence var5 = (CharSequence) ((Object) text);
-          if (!fk.a(false, var5)) {
+          if (!LoginCredentialType.isDecimalText(false, var5)) {
             ValidationState stackIn_2_0 = ArchiveProvider.field_a;
             return stackIn_2_0;
           }

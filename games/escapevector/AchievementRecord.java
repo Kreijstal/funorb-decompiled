@@ -86,7 +86,7 @@ final class AchievementRecord extends IntrusiveNode {
         int var2 = EscapeVector.obfuscationControl;
         dj.field_b = null;
         if (param0) {
-          ei.field_i = false;
+          SavedDataQuery.field_i = false;
           if (DialWidget.field_H) {
             be.field_b.showConnectionRestoredMessage(94);
             return;
@@ -98,14 +98,14 @@ final class AchievementRecord extends IntrusiveNode {
             } else {
               dj.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }
-            dj.field_b = Js5NetworkRequest.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
+            dj.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }
           be.field_b.closeDialog(-18861);
           ImageProducerRasterBuffer.d(32);
           return;
         }
         field_n = (IntrusiveDeque) null;
-        ei.field_i = false;
+        SavedDataQuery.field_i = false;
         if (DialWidget.field_H) {
           be.field_b.showConnectionRestoredMessage(94);
         } else {
@@ -116,7 +116,7 @@ final class AchievementRecord extends IntrusiveNode {
             } else {
               dj.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }
-            dj.field_b = Js5NetworkRequest.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
+            dj.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }
           be.field_b.closeDialog(-18861);
           ImageProducerRasterBuffer.d(32);

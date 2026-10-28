@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bc {
+final class SavedDataQuerySupport {
     static PcmSample field_c;
     static int[] field_g;
     static boolean field_e;
@@ -21,14 +21,14 @@ final class bc {
         field_f = null;
     }
 
-    final static ei a(int param0, int param1) {
-        ei var2 = new ei();
+    final static SavedDataQuery requestSavedData(int opcode, int guard) {
+        SavedDataQuery var2 = new SavedDataQuery();
         SpriteState.field_w.addLast(-12328, var2);
-        if (param1 > 61) {
-          MarkerSlider.writeSavedDataQuery(param0, (byte) -71);
+        if (guard > 61) {
+          MarkerSlider.writeSavedDataQuery(opcode, (byte) -71);
           return var2;
         }
-        return (ei) null;
+        return (SavedDataQuery) null;
     }
 
     static {

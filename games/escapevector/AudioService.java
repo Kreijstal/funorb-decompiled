@@ -243,7 +243,7 @@ final class AudioService implements Runnable {
           int var2 = var9.readUnsignedByte(param0 ^ 124);
           if (var2 != 0) {
             if (var2 != 1) {
-              pf.a(false, "A1: " + hf.b((byte) -65), (Throwable) null);
+              pf.a(false, "A1: " + LoginStage.formatPacketDiagnostic((byte) -65), (Throwable) null);
               nm.a(16);
               if (var6 == 0) {
                 return;
@@ -276,7 +276,7 @@ final class AudioService implements Runnable {
               return;
             }
           }
-          ei var8 = (ei) (SpriteState.field_w.first(false));
+          SavedDataQuery var8 = (SavedDataQuery) (SpriteState.field_w.first(false));
           if (var8 == null) {
             nm.a(16);
             return;
@@ -298,8 +298,8 @@ final class AudioService implements Runnable {
             nm.a(16);
             return;
           }
-          var8.field_g = true;
-          var8.field_h = var5;
+          var8.complete = true;
+          var8.payload = var5;
           var8.unlink((byte) -126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

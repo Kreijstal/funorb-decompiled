@@ -23,8 +23,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     }
 
     final static void a(int param0) {
-        if (bk.field_r != null) {
-          bk.field_r.a((byte) -118);
+        if (SocketJs5Transport.field_r != null) {
+          SocketJs5Transport.field_r.a((byte) -118);
         }
         if (param0 != 0) {
           FullscreenFocusCanvas.releaseStatics((byte) -8);
@@ -127,7 +127,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         int var6;
         int var7;
         vi.field_e[AccountTermsPanel.field_J] = param4;
-        cd.field_q[AccountTermsPanel.field_J] = AccountTermsPanel.field_J;
+        LegacyStyleNode.field_q[AccountTermsPanel.field_J] = AccountTermsPanel.field_J;
         DualLinkNode.field_k[AccountTermsPanel.field_J] = param5;
         if (param5 < TextLayoutLine.field_e) {
           TextLayout.field_d = param5;
@@ -149,8 +149,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var7 < TextLayout.field_d) {
               TextLayout.field_d = var7;
             }
-            if (pl.field_r < var7) {
-              pl.field_r = var7;
+            if (AlternateUsernameCredentials.field_r < var7) {
+              AlternateUsernameCredentials.field_r = var7;
             }
             return;
           }
@@ -165,7 +165,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var7 = stackIn_35_0;
         } else {
-          pl.field_r = param5;
+          AlternateUsernameCredentials.field_r = param5;
           pc.field_c[AccountTermsPanel.field_J] = param1;
           if (param0 == 1) {
             RasterSnapshot.field_k[AccountTermsPanel.field_J] = param2;
@@ -195,8 +195,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         if (var7 < TextLayout.field_d) {
           TextLayout.field_d = var7;
         }
-        if (pl.field_r < var7) {
-          pl.field_r = var7;
+        if (AlternateUsernameCredentials.field_r < var7) {
+          AlternateUsernameCredentials.field_r = var7;
         }
     }
 

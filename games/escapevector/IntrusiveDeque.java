@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntrusiveDeque {
-    static hf field_a;
+    static LoginStage field_a;
     IntrusiveNode sentinel;
     private IntrusiveNode cursor;
     static String field_h;
@@ -160,7 +160,7 @@ final class IntrusiveDeque {
     }
 
     static {
-        field_a = new hf();
+        field_a = new LoginStage();
         field_c = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
         field_e = "Log in / Create account";
         field_b = "This password contains your Player Name, and would be easy to guess";

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wa {
+final class TrackerGainSupport {
     static QuickChatDynamicCommand field_d;
     static IntrusiveDeque field_c;
     static Sprite field_b;
@@ -24,18 +24,18 @@ final class wa {
         field_b = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void limitTrackerGain(int maximumGain, int guard) {
         if (null == DraggableWidget.field_N) {
           return;
         }
-        if (!(GrowableIntList.field_b <= param0)) {
-          GrowableIntList.field_b = param0;
+        if (!(GrowableIntList.field_b <= maximumGain)) {
+          GrowableIntList.field_b = maximumGain;
           DraggableWidget.field_N.d(kc.field_b * GrowableIntList.field_b / 64);
         }
-        if (param1 == 32471) {
+        if (guard == 32471) {
           return;
         }
-        wa.releaseStatics(false);
+        TrackerGainSupport.releaseStatics(false);
     }
 
     static {

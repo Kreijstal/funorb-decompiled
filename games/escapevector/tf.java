@@ -76,21 +76,21 @@ final class tf {
 
     private final int a(int param0, boolean param1) {
         if (this.field_j == param0) {
-          int var3_int = (fh.field_g.stringWidth(DisplayNameForm.field_N) + fh.field_g.stringWidth(LoginMethod.field_d)) / 2;
+          int var3_int = (ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N) + ByteStorage.gameFont.stringWidth(LoginMethod.field_d)) / 2;
           int var4 = (-68 + var3_int) / 2;
-          return 2 * -(var4 - fh.field_g.stringWidth(DisplayNameForm.field_N));
+          return 2 * -(var4 - ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N));
         }
         if (this.field_c == param0) {
-          int var3_intLifetime1 = (fh.field_g.stringWidth(DisplayNameForm.field_N) + fh.field_g.stringWidth(LoginMethod.field_d)) / 2;
+          int var3_intLifetime1 = (ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N) + ByteStorage.gameFont.stringWidth(LoginMethod.field_d)) / 2;
           int var4Lifetime1 = (-68 + var3_intLifetime1) / 2;
-          return -(-fh.field_g.stringWidth(LoginMethod.field_d) + var4Lifetime1) * 2;
+          return -(-ByteStorage.gameFont.stringWidth(LoginMethod.field_d) + var4Lifetime1) * 2;
         }
         if (param0 == this.field_k) {
-          int var3_intLifetime2 = fh.field_g.stringWidth(PasswordValidator.field_s);
-          int var4Lifetime2 = (fh.field_g.stringWidth(NameSuggestionsPanel.field_J) + fh.field_g.stringWidth(nb.field_d)) / 2;
+          int var3_intLifetime2 = ByteStorage.gameFont.stringWidth(PasswordValidator.field_s);
+          int var4Lifetime2 = (ByteStorage.gameFont.stringWidth(NameSuggestionsPanel.field_J) + ByteStorage.gameFont.stringWidth(nb.field_d)) / 2;
           int var5 = (var3_intLifetime2 - var4Lifetime2) / 2;
-          int var6 = (var5 + fh.field_g.stringWidth(NameSuggestionsPanel.field_J)) * 2;
-          int var7 = 2 * (fh.field_g.stringWidth(nb.field_d) + var5);
+          int var6 = (var5 + ByteStorage.gameFont.stringWidth(NameSuggestionsPanel.field_J)) * 2;
+          int var7 = 2 * (ByteStorage.gameFont.stringWidth(nb.field_d) + var5);
           int stackIn_10_0 = (var7 >= var6) ? var7 : var6;
           return stackIn_10_0;
         }
@@ -108,7 +108,7 @@ final class tf {
           var3 = LoginForm.field_O;
         }
         if (param0 == this.field_m) {
-          var3 = an.field_b;
+          var3 = BrowserSessionMarkerState.field_b;
         }
         if (param1) {
           tf.b((byte) 111);
@@ -116,7 +116,7 @@ final class tf {
         if (this.field_e == param0) {
           var3 = ArchiveRequest.field_q;
         }
-        return fh.field_g.stringWidth((String) (var3));
+        return ByteStorage.gameFont.stringWidth((String) (var3));
     }
 
     final void a(byte param0) {
@@ -146,19 +146,19 @@ final class tf {
         }
         if (ch.field_a.field_h == 0 &&
           ch.field_a.b((byte) -18)) {
-          bc.field_d = true;
+          SavedDataQuerySupport.field_d = true;
           Js5NetworkRequest.field_E = true;
           da.field_c = null;
           return true;
         }
         if (ch.field_a.field_h == this.field_l &&
           ch.field_a.b((byte) -18)) {
-          ac.b(112);
+          KeyboardStateSupport.b(112);
           BoundedRandomAccessFile.activeSession.quitRequested = true;
           BoundedRandomAccessFile.activeSession.advanceLevelRequested = true;
           BoundedRandomAccessFile.activeSession.finishPendingBonuses((byte) 68);
           da.field_c = null;
-          bc.field_d = true;
+          SavedDataQuerySupport.field_d = true;
           Js5NetworkRequest.field_E = true;
           return true;
         }
@@ -198,8 +198,8 @@ final class tf {
             TrackerMusicDefinition.d(8192);
           }
           if (ch.field_a.a(false)) {
-            int var3 = fh.field_g.stringWidth(DisplayNameForm.field_N);
-            int var4 = fh.field_g.stringWidth(LoginMethod.field_d);
+            int var3 = ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N);
+            int var4 = ByteStorage.gameFont.stringWidth(LoginMethod.field_d);
             int stackIn_39_0 = (var3 > var4) ? var3 : var4;
             int var5 = stackIn_39_0;
             int var6 = 320 + (var5 - 68) / 2;
@@ -259,8 +259,8 @@ final class tf {
             }
           }
           if (ch.field_a.a(false)) {
-            int var3Lifetime1 = fh.field_g.stringWidth(DisplayNameForm.field_N);
-            int var4Lifetime1 = fh.field_g.stringWidth(LoginMethod.field_d);
+            int var3Lifetime1 = ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N);
+            int var4Lifetime1 = ByteStorage.gameFont.stringWidth(LoginMethod.field_d);
             int stackIn_79_0 = (var3Lifetime1 <= var4Lifetime1) ? var4Lifetime1 : var3Lifetime1;
             int var5Lifetime1 = stackIn_79_0;
             int var6Lifetime1 = 320 + (var5Lifetime1 - 68) / 2;
@@ -282,7 +282,7 @@ final class tf {
           if (IsaacRandom.field_d != null) {
             ri.a(-25123);
           } else {
-            eo.a(24, param0);
+            TickClock.a(24, param0);
           }
           ch.field_a.a(-1, true, 4767999);
         }
@@ -300,7 +300,7 @@ final class tf {
         }
         BoundedRandomAccessFile.activeSession.quitRequested = true;
         BoundedRandomAccessFile.activeSession.finishPendingBonuses((byte) -48);
-        bc.field_d = true;
+        SavedDataQuerySupport.field_d = true;
         da.field_c = null;
         Js5NetworkRequest.field_E = true;
         return true;
@@ -448,44 +448,44 @@ final class tf {
           return;
         }
         if (0 == param3) {
-          fh.field_g.drawCentered(SocketConnector.field_g, var6, 22, var5, -1);
+          ByteStorage.gameFont.drawCentered(SocketConnector.field_g, var6, 22, var5, -1);
         }
         if (param3 == this.field_l) {
-          fh.field_g.drawCentered(SpriteStrip.field_o, var6, 22, var5, -1);
+          ByteStorage.gameFont.drawCentered(SpriteStrip.field_o, var6, 22, var5, -1);
         }
         if (param3 == this.field_b) {
-          fh.field_g.drawCentered(mc.field_a, var6, 22, var5, -1);
+          ByteStorage.gameFont.drawCentered(mc.field_a, var6, 22, var5, -1);
         }
         if (param3 == this.field_g) {
-          fh.field_g.drawCentered(LoginForm.field_O, var6, 22, var5, -1);
+          ByteStorage.gameFont.drawCentered(LoginForm.field_O, var6, 22, var5, -1);
         }
         if (param3 == this.field_j) {
-          int var7 = fh.field_g.stringWidth(DisplayNameForm.field_N);
-          int var8 = fh.field_g.stringWidth(LoginMethod.field_d);
+          int var7 = ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N);
+          int var8 = ByteStorage.gameFont.stringWidth(LoginMethod.field_d);
           int stackIn_19_0 = (var8 < var7) ? var7 : var8;
           int var9 = stackIn_19_0;
           int var10 = var6 + (var9 - 68) / 2;
-          fh.field_g.drawRight(DisplayNameForm.field_N, var10, 22, var5, -1);
+          ByteStorage.gameFont.drawRight(DisplayNameForm.field_N, var10, 22, var5, -1);
           SingleChildContainer.a(var10, 13202, 4, IterableNodeHashTable.field_c, var5);
         }
         if (param3 == this.field_c) {
-          int var7Lifetime1 = fh.field_g.stringWidth(DisplayNameForm.field_N);
-          int var8Lifetime1 = fh.field_g.stringWidth(LoginMethod.field_d);
+          int var7Lifetime1 = ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N);
+          int var8Lifetime1 = ByteStorage.gameFont.stringWidth(LoginMethod.field_d);
           int stackIn_24_0 = (var8Lifetime1 >= var7Lifetime1) ? var8Lifetime1 : var7Lifetime1;
           int var9Lifetime1 = stackIn_24_0;
           int var10Lifetime1 = (-68 + var9Lifetime1) / 2 + var6;
-          fh.field_g.drawRight(LoginMethod.field_d, var10Lifetime1, 22, var5, -1);
+          ByteStorage.gameFont.drawRight(LoginMethod.field_d, var10Lifetime1, 22, var5, -1);
           SingleChildContainer.a(var10Lifetime1, 13202, 4, kc.field_b, var5);
         }
         if (this.field_m == param3) {
-          fh.field_g.drawCentered(an.field_b, var6, 22, var5, -1);
+          ByteStorage.gameFont.drawCentered(BrowserSessionMarkerState.field_b, var6, 22, var5, -1);
         }
         if (param3 == this.field_k) {
-          int var7Lifetime2 = fh.field_g.stringWidth(PasswordValidator.field_s);
-          int var8Lifetime2 = (fh.field_g.stringWidth(NameSuggestionsPanel.field_J) + fh.field_g.stringWidth(nb.field_d)) / 2;
+          int var7Lifetime2 = ByteStorage.gameFont.stringWidth(PasswordValidator.field_s);
+          int var8Lifetime2 = (ByteStorage.gameFont.stringWidth(NameSuggestionsPanel.field_J) + ByteStorage.gameFont.stringWidth(nb.field_d)) / 2;
           int var9Lifetime2 = var6 + (var7Lifetime2 - var8Lifetime2) / 2;
-          fh.field_g.drawRight(PasswordValidator.field_s, var9Lifetime2, 22, var5, -1);
-          BinaryBitmapFont stackIn_31_0 = fh.field_g;
+          ByteStorage.gameFont.drawRight(PasswordValidator.field_s, var9Lifetime2, 22, var5, -1);
+          BinaryBitmapFont stackIn_31_0 = ByteStorage.gameFont;
           if (SpriteState.field_r) {
             stackIn_32_1 = NameSuggestionsPanel.field_J;
           } else {
@@ -494,7 +494,7 @@ final class tf {
           ((BinaryBitmapFont) (Object) stackIn_31_0).drawLeft(stackIn_32_1, var9Lifetime2, 22, var5, -1);
         }
         if (param3 == this.field_e) {
-          fh.field_g.drawCentered(ArchiveRequest.field_q, var6, 22, var5, -1);
+          ByteStorage.gameFont.drawCentered(ArchiveRequest.field_q, var6, 22, var5, -1);
         }
         AlphaContainer.field_D.a(107);
         cf.a(mj.field_b, true, 1);

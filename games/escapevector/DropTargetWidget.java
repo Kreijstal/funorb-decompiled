@@ -98,7 +98,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                fk.field_a = param1;
+                LoginCredentialType.field_a = param1;
                 var2 = IntKeyLookup.a(113, "loginm3");
                 if (var2 != null) {
                   DualLinkNode.field_l = RasterSnapshot.a(var2, 113);
@@ -121,11 +121,11 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(75, "error_js5io");
                 if (var2 != null) {
-                  nn.field_e = RasterSnapshot.a(var2, 118);
+                  SecondaryNodeHashTable.field_e = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(120, "error_js5connect_full");
                 if (null != var2) {
-                  km.field_l = RasterSnapshot.a(var2, 115);
+                  DirectByteStorage.field_l = RasterSnapshot.a(var2, 115);
                 }
                 var2 = IntKeyLookup.a(72, "error_js5connect");
                 if (null != var2) {
@@ -1093,7 +1093,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(21, "playfreeversion");
                 if (var2 != null) {
-                  ei.field_k = RasterSnapshot.a(var2, 113);
+                  SavedDataQuery.field_k = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(26, "reloadgame");
                 if (var2 != null) {
@@ -1370,7 +1370,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(66, "creatingyouraccount");
                 if (null != var2) {
-                  j.field_a = RasterSnapshot.a(var2, 122);
+                  NameAvailabilityResponseSupport.field_a = RasterSnapshot.a(var2, 122);
                 }
                 var2 = IntKeyLookup.a(78, "create_youmustaccept");
                 if (null != var2) {
@@ -1518,7 +1518,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(123, "create_select_alternative");
                 if (null != var2) {
-                  ei.field_n = RasterSnapshot.a(var2, 126);
+                  SavedDataQuery.field_n = RasterSnapshot.a(var2, 126);
                 }
                 var2 = IntKeyLookup.a(94, "create_optin_news");
                 if (var2 != null) {
@@ -1546,7 +1546,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(83, "login_username_tooltip");
                 if (var2 != null) {
-                  cd.field_u = RasterSnapshot.a(var2, 121);
+                  LegacyStyleNode.field_u = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(18, "login_password_tooltip");
                 if (var2 != null) {
@@ -1590,7 +1590,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(83, "create_password_tooltip");
                 if (var2 != null) {
-                  aa.field_b = RasterSnapshot.a(var2, 114);
+                  RepeatedCharacterSupport.field_b = RasterSnapshot.a(var2, 114);
                 }
                 var2 = IntKeyLookup.a(86, "create_password_hint");
                 if (var2 != null) {
@@ -1598,7 +1598,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(74, "create_password_confirm_tooltip");
                 if (var2 != null) {
-                  pl.field_i = RasterSnapshot.a(var2, 119);
+                  AlternateUsernameCredentials.field_i = RasterSnapshot.a(var2, 119);
                 }
                 var2 = IntKeyLookup.a(93, "create_email_tooltip");
                 if (null != var2) {
@@ -1694,11 +1694,11 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(72, "create_alert_invalidemail");
                 if (var2 != null) {
-                  eo.field_a = RasterSnapshot.a(var2, 115);
+                  TickClock.field_a = RasterSnapshot.a(var2, 115);
                 }
                 var2 = IntKeyLookup.a(68, "create_alert_email_unavailable");
                 if (null != var2) {
-                  wa.field_a = RasterSnapshot.a(var2, 121);
+                  TrackerGainSupport.field_a = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(35, "create_alert_invaliddate");
                 if (null != var2) {
@@ -1846,7 +1846,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(121, "waitingfor_levels");
                 if (null != var2) {
-                  cd.field_r = RasterSnapshot.a(var2, 114);
+                  LegacyStyleNode.field_r = RasterSnapshot.a(var2, 114);
                 }
                 var2 = IntKeyLookup.a(49, "waitingfor_extradata");
                 if (var2 != null) {
@@ -1874,7 +1874,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(66, "loading_fonts");
                 if (null != var2) {
-                  qf.field_h = RasterSnapshot.a(var2, 118);
+                  NanoTickClock.field_h = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(107, "loading_soundeffects");
                 if (null != var2) {
@@ -1918,7 +1918,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(114, "unpacking_soundeffects");
                 if (var2 != null) {
-                  qf.field_n = RasterSnapshot.a(var2, 122);
+                  NanoTickClock.field_n = RasterSnapshot.a(var2, 122);
                 }
                 var2 = IntKeyLookup.a(85, "unpacking_music");
                 if (null != var2) {
@@ -1962,7 +1962,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(38, "fullscreen");
                 if (var2 != null) {
-                  an.field_b = RasterSnapshot.a(var2, 120);
+                  BrowserSessionMarkerState.field_b = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(74, "screensize");
                 if (null != var2) {
@@ -1990,7 +1990,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(91, "watchintroduction");
                 if (null != var2) {
-                  eo.field_b = RasterSnapshot.a(var2, 112);
+                  TickClock.field_b = RasterSnapshot.a(var2, 112);
                 }
                 var2 = IntKeyLookup.a(51, "quit");
                 if (null != var2) {
@@ -2292,7 +2292,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(125, "unreachedlevel_logintip");
                 if (var2 != null) {
-                  fk.field_c = RasterSnapshot.a(var2, 127);
+                  LoginCredentialType.field_c = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(78, "memberslevel_logintip");
                 if (var2 != null) {
@@ -2560,27 +2560,27 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(35, "quickchat_shortcut_keys,0");
                 if (null != var2) {
-                  ld.field_g[0] = RasterSnapshot.a(var2, 119);
+                  UsernameCredentials.field_g[0] = RasterSnapshot.a(var2, 119);
                 }
                 var2 = IntKeyLookup.a(86, "quickchat_shortcut_keys,1");
                 if (null != var2) {
-                  ld.field_g[1] = RasterSnapshot.a(var2, 116);
+                  UsernameCredentials.field_g[1] = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(115, "quickchat_shortcut_keys,2");
                 if (var2 != null) {
-                  ld.field_g[2] = RasterSnapshot.a(var2, 120);
+                  UsernameCredentials.field_g[2] = RasterSnapshot.a(var2, 120);
                 }
                 var2 = IntKeyLookup.a(16, "quickchat_shortcut_keys,3");
                 if (var2 != null) {
-                  ld.field_g[3] = RasterSnapshot.a(var2, 112);
+                  UsernameCredentials.field_g[3] = RasterSnapshot.a(var2, 112);
                 }
                 var2 = IntKeyLookup.a(51, "quickchat_shortcut_keys,4");
                 if (var2 != null) {
-                  ld.field_g[4] = RasterSnapshot.a(var2, 115);
+                  UsernameCredentials.field_g[4] = RasterSnapshot.a(var2, 115);
                 }
                 var2 = IntKeyLookup.a(31, "quickchat_shortcut_keys,5");
                 if (null != var2) {
-                  ld.field_g[5] = RasterSnapshot.a(var2, 127);
+                  UsernameCredentials.field_g[5] = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(63, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
@@ -2736,7 +2736,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(89, "fs_nonmember");
                 if (null != var2) {
-                  ac.field_a = RasterSnapshot.a(var2, 113);
+                  KeyboardStateSupport.field_a = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(22, "fs_button_close");
                 if (null != var2) {
@@ -2756,7 +2756,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(43, "fs_focus");
                 if (var2 != null) {
-                  ol.field_K = RasterSnapshot.a(var2, 116);
+                  LegacyWidgetStyle.field_K = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(42, "fs_focus_or_resolution");
                 if (var2 != null) {
@@ -3082,7 +3082,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 if (null != var2) {
                   RasterSnapshot.a(var2, 112);
                 }
-                fk.field_a = null;
+                LoginCredentialType.field_a = null;
             }
             void run() {
                 var3 = EscapeVector.obfuscationControl;
@@ -3160,7 +3160,7 @@ final class DropTargetWidget extends SingleChildContainer {
             Object stackIn_5_0 = null;
             return (BinaryBitmapFont) (stackIn_5_0);
           }
-          BinaryBitmapFont var2 = new BinaryBitmapFont(param1, gn.spriteOffsetXs, gi.spriteOffsetYs, qh.spriteWidths, bc.spriteHeights, qe.spriteIndices);
+          BinaryBitmapFont var2 = new BinaryBitmapFont(param1, gn.spriteOffsetXs, gi.spriteOffsetYs, qh.spriteWidths, SavedDataQuerySupport.spriteHeights, qe.spriteIndices);
           of.a(false);
           BinaryBitmapFont stackIn_7_0 = var2;
           return stackIn_7_0;

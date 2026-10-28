@@ -105,12 +105,12 @@ final class gb {
           } else if (!AccountTermsPanel.l(param1 - 89)) {
             SoftwareRasterizer.clearFramebuffer();
             ok.a(240, 320, param1 ^ 72);
-            nn.a(param2, 0, -1, 0);
+            SecondaryNodeHashTable.presentRaster(param2, 0, -1, 0);
           } else if (ff.field_e != 0) {
             TextFieldValidator.a(param2, 0);
           } else {
             wc.a(param0, 1983, false);
-            nn.a(param2, 0, -1, 0);
+            SecondaryNodeHashTable.presentRaster(param2, 0, -1, 0);
           }
           if (param1 == 92) {
             return;

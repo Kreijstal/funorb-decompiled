@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ac {
+final class KeyboardStateSupport {
     static String field_a;
     static String field_d;
     static BinaryBitmapFont field_c;
@@ -17,10 +17,10 @@ final class ac {
     }
 
     final static void b(int param0) {
-        if (bk.field_r != null) {
-          bk.field_r.a((byte) -124);
+        if (SocketJs5Transport.field_r != null) {
+          SocketJs5Transport.field_r.a((byte) -124);
           if (param0 != 112) {
-            ac.d(-21);
+            KeyboardStateSupport.closeCacheServices(-21);
             return;
           }
           return;
@@ -28,21 +28,21 @@ final class ac {
         if (param0 == 112) {
           return;
         }
-        ac.d(-21);
+        KeyboardStateSupport.closeCacheServices(-21);
     }
 
-    final static void d(int param0) {
+    final static void closeCacheServices(int guard) {
         try {
           Throwable decompiledCaughtException = null;
           int var3 = EscapeVector.obfuscationControl;
           try {
             if (SelfDestructEffects.field_j != null) {
-              SelfDestructEffects.field_j.a(param0 ^ -16802);
+              SelfDestructEffects.field_j.close(guard ^ -16802);
             }
             if (ShipHullGeometry.field_b != null) {
               ShipHullGeometry.field_b.a(-24580);
             }
-            if (param0 != -16802) {
+            if (guard != -16802) {
               return;
             }
             if (uc.field_h != null) {
@@ -70,7 +70,7 @@ final class ac {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             RuntimeException var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw t.a((Throwable) ((Object) var1_ref), "ac.F(" + param0 + ')');
+            throw t.a((Throwable) ((Object) var1_ref), "ac.F(" + guard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -79,13 +79,13 @@ final class ac {
         }
     }
 
-    final static void a(int param0) {
+    final static void pollKeyboardState(int guard) {
         int var2 = 0;
         int var4 = EscapeVector.obfuscationControl;
         try {
           Object var1 = ThreeSliceButtonPainter.field_v;
           synchronized (var1) {
-            if (param0 != 28087) {
+            if (guard != 28087) {
               field_b = -95;
             }
             ui.field_e = ui.field_e + 1;
@@ -115,45 +115,45 @@ final class ac {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           Throwable decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "ac.B(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1_ref), "ac.B(" + guard + ')');
         }
     }
 
-    final static CoverageBitmapFont a(String param0, int param1, ResourceArchive param2, String param3, ResourceArchive param4) {
+    final static CoverageBitmapFont loadCoverageFont(String fileName, int guard, ResourceArchive spriteArchive, String groupName, ResourceArchive fontArchive) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
-          int var5_int = 4 % ((50 - param1) / 60);
-          int var6 = param2.findGroupId(-1, param3);
-          int var7 = param2.findFileId(var6, param0, true);
-          CoverageBitmapFont stackIn_1_0 = LinkButtonPainter.a(var6, -198630768, param4, var7, param2);
+          int var5_int = 4 % ((50 - guard) / 60);
+          int var6 = spriteArchive.findGroupId(-1, groupName);
+          int var7 = spriteArchive.findFileId(var6, fileName, true);
+          CoverageBitmapFont stackIn_1_0 = LinkButtonPainter.a(var6, -198630768, fontArchive, var7, spriteArchive);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_4_0 = var5;
           StringBuilder stackIn_4_1 = new StringBuilder().append("ac.A(");
-          if (param0 == null) {
+          if (fileName == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(guard).append(',');
+          if (spriteArchive == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param3 == null) {
+          if (groupName == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param4 == null) {
+          if (fontArchive == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

@@ -16,7 +16,7 @@ final class ResourceArchive {
     static int[] field_l;
     static String field_b;
     static String[] field_f;
-    static hf field_k;
+    static LoginStage field_k;
     static Sprite field_m;
 
     final static int objectScore(int gameMode, int objectType, int guard) {
@@ -528,7 +528,7 @@ final class ResourceArchive {
         if (this.discardPackedGroups) {
           this.packedGroups[groupId] = this.provider.getEncodedGroup((byte) -73, groupId);
         } else {
-          this.packedGroups[groupId] = bk.a(false, this.provider.getEncodedGroup((byte) -47, groupId), 9);
+          this.packedGroups[groupId] = SocketJs5Transport.storeBytes(false, this.provider.getEncodedGroup((byte) -47, groupId), 9);
         }
         if (guard != 14) {
           this.index = (ArchiveIndex) null;
@@ -628,7 +628,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.unpackedFiles[groupId][fileId] != null) {
-            byte[] var7 = fk.a(this.unpackedFiles[groupId][fileId], (byte) -126, false);
+            byte[] var7 = LoginCredentialType.extractBytes(this.unpackedFiles[groupId][fileId], (byte) -126, false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -826,7 +826,7 @@ final class ResourceArchive {
             key[1] != 0 ||
             key[2] != 0 ||
             key[3] != 0)) {
-            byte[] var35 = fk.a(this.packedGroups[groupId], (byte) -116, true);
+            byte[] var35 = LoginCredentialType.extractBytes(this.packedGroups[groupId], (byte) -116, true);
             byte[] var25 = var35;
             var9 = var25;
             PacketBuffer var26 = new PacketBuffer(var35);
@@ -834,13 +834,13 @@ final class ResourceArchive {
             boolean decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = fk.a(this.packedGroups[groupId], (byte) -117, false);
+            var9 = LoginCredentialType.extractBytes(this.packedGroups[groupId], (byte) -117, false);
           }
           try {
             if (guard != -7951) {
               this.namedGroupProgress((String) (this.packedGroups[3]), ((int[]) (this.packedGroups[2]))[1]);
             }
-            var36 = Js5NetworkRequest.a((byte) -26, var9);
+            var36 = Js5NetworkRequest.decompressGroup((byte) -26, var9);
             byte[] var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -948,7 +948,7 @@ final class ResourceArchive {
                 var18Lifetime2 = var17Lifetime3;
               }
               if (this.fileRetentionPolicy == 0) {
-                var7[var18Lifetime2] = bk.a(false, var40[var17Lifetime3], PacketBuffer.xor(guard, -7944));
+                var7[var18Lifetime2] = SocketJs5Transport.storeBytes(false, var40[var17Lifetime3], PacketBuffer.xor(guard, -7944));
               } else {
                 var7[var18Lifetime2] = var40[var17Lifetime3];
               }
@@ -962,7 +962,7 @@ final class ResourceArchive {
             if (this.fileRetentionPolicy != 0) {
               var7[var11] = var43;
             } else {
-              var7[var11] = bk.a(false, var36, 9);
+              var7[var11] = SocketJs5Transport.storeBytes(false, var36, 9);
             }
           }
           return true;
@@ -1021,6 +1021,6 @@ final class ResourceArchive {
         field_a = new Sprite(7, 7);
         field_d = new EmailValidationError();
         field_f = new String[]{"Retrieval - Hard: complete the asteroid<nbsp>levels", "Retrieval - Hard: complete the baked moon<nbsp>levels", "Retrieval - Hard: complete the icy moon<nbsp>levels", "Complete <nbsp>Retrieval - Hard", "Retrieval - Hard:<br>get 25,000<nbsp>points", "Retrieval - Hard:<br>get 100,000<nbsp>points", "Retrieval: complete a level with more than 2500<nbsp>fuel", "Retrieval - Hard: destroy an alien laser gate and complete the<nbsp>level", "Blow yourself up at speed in the mothership's auto-shield<nbsp>area", "Retrieval - Hard: complete all levels in under 30<nbsp>minutes", "Retrieval - Hard: complete all levels in under 20<nbsp>minutes", "Retrieval - Hard: collect all power-ups in one<nbsp>session", "Retrieval - Hard: destroy all possible alien infrastructure in one<nbsp>session", "Retrieval - Hard: complete 'Force Matrix Defence', without using the<nbsp>power-up", "Retrieval - Hard: complete 'Seeker Caves', without using your shield or<nbsp>shooting", "Retrieval - Hard: complete 'High-Security Stronghold', destroying no more than four green<nbsp>pods", "Retrieval - Hard: complete 'Seeker Prison Cell', without using your<nbsp>shield", "Land on one of the attractors in 'Force Matrix<nbsp>Defence' in Retrieval", "Retrieval - Normal: complete the asteroid<nbsp>levels", "Retrieval - Normal: complete the baked moon<nbsp>levels", "Retrieval - Normal: complete the icy moon<nbsp>levels", "Complete <nbsp>Retrieval - Normal", "Complete the asteroids stage in Retribution", "Complete the sun-baked moon stage in Retribution", "Complete the icy moon stage on Retribution", "Complete the Retribution level set", "Score 350,000 points in Retribution", "Score 800,000 points in Retribution", "Destroy all alien infrastructure in Retribution", "Complete the Simulator level set", "Complete 'Pinball' on Simulator", "Complete 'Anti-gravity' on Simulator"};
-        field_k = new hf();
+        field_k = new LoginStage();
     }
 }

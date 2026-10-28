@@ -41,7 +41,7 @@ final class ii {
         if (20 > fc.field_a) {
           return true;
         }
-        if (!aa.a((byte) -84)) {
+        if (!RepeatedCharacterSupport.a((byte) -84)) {
           return true;
         }
         if (LaserGateSpan.field_g <= 0) {

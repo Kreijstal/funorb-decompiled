@@ -378,7 +378,7 @@ final class LegacyButton {
             nm.a(stackIn_13_0 ^ stackIn_13_1);
             return;
           }
-          pf.a(false, "LR1: " + hf.b((byte) 36), (Throwable) null);
+          pf.a(false, "LR1: " + LoginStage.formatPacketDiagnostic((byte) 36), (Throwable) null);
           nm.a(16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

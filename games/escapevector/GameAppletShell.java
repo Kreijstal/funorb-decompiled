@@ -39,7 +39,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 return;
               }
               pd.field_b = param3;
-              j.field_b = param3;
+              NameAvailabilityResponseSupport.field_b = param3;
               BoundedUrlRequest.field_d = param4;
               DropTargetWidget.field_G = param4;
               StatefulTextPainter.field_r = this;
@@ -106,7 +106,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void b(boolean param0);
+    abstract void shutdownClientServices(boolean guard);
 
     abstract void releaseClientStatics(byte guard);
 
@@ -176,7 +176,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (var4 != 0L &&
             var2_long > var4) {
             int var6_int = (int)(var2_long - var4);
-            qf.field_j = ((var6_int >> 1) + 32000) / var6_int;
+            NanoTickClock.field_j = ((var6_int >> 1) + 32000) / var6_int;
           }
           Object var6 = this;
           synchronized (var6) {
@@ -388,7 +388,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                     if (decompiledFrameCompleted0) {
                       String var4 = var2.substring(6, var3);
-                      if (fk.a(false, (CharSequence) ((Object) var4)) &&
+                      if (LoginCredentialType.isDecimalText(false, (CharSequence) ((Object) var4)) &&
                         !(gn.a(16777215, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a(-1, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -449,7 +449,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.d(2);
                 AlphaContainer.field_D = PcmResampler.createRasterBuffer((java.awt.Component) ((Object) of.field_d), BoundedUrlRequest.field_d, (byte) 125, pd.field_b);
                 this.initializeClient((byte) -97);
-                IntrusiveNodeHashTable.field_f = pe.a(18863);
+                IntrusiveNodeHashTable.field_f = MinimapPoint.createTickClock(18863);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != LegacyMenuColumn.field_p) {
@@ -461,7 +461,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    Js5NetworkRequest.field_z = IntrusiveNodeHashTable.field_f.a(sn.field_d, 97);
+                    Js5NetworkRequest.field_z = IntrusiveNodeHashTable.field_f.waitAndAdvance(sn.field_d, 97);
                     stackIn_98_0 = 0;
                   }
                   var3 = stackIn_98_0;
@@ -678,7 +678,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               -bn.field_c + td.b(128) > 1000L) {
               java.awt.Rectangle var2 = param0.getClipBounds();
               if (null != var2) {
-                if (var2.width < j.field_b) {
+                if (var2.width < NameAvailabilityResponseSupport.field_b) {
                   return;
                 }
                 if (var2.height < DropTargetWidget.field_G) {
@@ -829,7 +829,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             if (param0 < 100) {
               this.run();
             }
-            this.b(true);
+            this.shutdownClientServices(true);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3_ref2 = (Exception) (Object) decompiledCaughtException;

@@ -55,14 +55,14 @@ abstract class ModalPanel extends UiContainer {
           !(this.height <= Minimap.field_r.height)) {
           Minimap.field_r = new Sprite(this.width, this.height);
         }
-        eo.a(Minimap.field_r, (byte) -76);
+        TickClock.pushSpriteRaster(Minimap.field_r, (byte) -76);
         SoftwareRasterizer.clearFramebuffer();
         this.drawPanelBackground(0, 0, (byte) 87);
         super.drawLayer(-this.y - screenY, (byte) 118, layer, -this.x - screenX);
         if (guard <= 85) {
           field_L = (IntrusiveDeque) null;
         }
-        dl.a((byte) 125);
+        RasterRestoreSupport.popRasterState((byte) 125);
         Minimap.field_r.drawAlpha(this.x + screenX, this.y + screenY, this.alpha);
     }
 

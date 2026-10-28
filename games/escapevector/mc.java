@@ -3,7 +3,7 @@
  */
 final class mc {
     static TerrainMaskSupport field_c;
-    static hf field_b;
+    static LoginStage field_b;
     static Sprite[] field_d;
     static String field_a;
     private static String field_z;
@@ -21,7 +21,7 @@ final class mc {
     static {
         field_z = "mc.A(";
         field_c = new TerrainMaskSupport();
-        field_b = new hf();
+        field_b = new LoginStage();
         field_a = "Instructions";
     }
 }

@@ -61,20 +61,20 @@ final class ji {
 
     final static void a(boolean param0) {
         if (param0) {
-          if (bk.field_r != null) {
-            bk.field_r.a((byte) 33);
+          if (SocketJs5Transport.field_r != null) {
+            SocketJs5Transport.field_r.a((byte) 33);
           }
           return;
         }
         field_a = (String) null;
-        if (bk.field_r != null) {
-          bk.field_r.a((byte) 33);
+        if (SocketJs5Transport.field_r != null) {
+          SocketJs5Transport.field_r.a((byte) 33);
         }
     }
 
     final static void a(boolean param0, int param1) {
-        if (null != bk.field_r) {
-          bk.field_r.b(-1, param1);
+        if (null != SocketJs5Transport.field_r) {
+          SocketJs5Transport.field_r.b(-1, param1);
           if (!param0) {
             field_a = (String) null;
             return;

@@ -147,7 +147,7 @@ final class WidgetStyleLayer {
           if (guard < 0) {
             this.sprite = (Sprite) null;
           }
-          ld.drawNineSlice(component.height, this.frameSprites, 4, originY + component.y, originX + component.x, component.width);
+          UsernameCredentials.drawNineSlice(component.height, this.frameSprites, 4, originY + component.y, originX + component.x, component.width);
           if (null != this.sprite) {
             int var6_int = originX - (-component.x - this.offsetX);
             if (painter.horizontalAlignment == 1) {

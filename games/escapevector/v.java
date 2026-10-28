@@ -6,8 +6,8 @@ final class v {
     static int[] field_b;
 
     final static void a(int param0, int param1) {
-        if (null != bk.field_r) {
-          bk.field_r.b(param0 ^ -9, param1);
+        if (null != SocketJs5Transport.field_r) {
+          SocketJs5Transport.field_r.b(param0 ^ -9, param1);
         }
         if (param0 != 8) {
           v.a(120);

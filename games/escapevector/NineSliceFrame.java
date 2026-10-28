@@ -10,7 +10,7 @@ final class NineSliceFrame {
     static String field_e;
 
     final void draw(int x, int y, int guard, int width, int height) {
-        ld.drawNineSlice(height, this.sprites, 4, y, x, width);
+        UsernameCredentials.drawNineSlice(height, this.sprites, 4, y, x, width);
         if (guard != -96) {
           this.draw(45, 104, 124, -52, 19);
         }

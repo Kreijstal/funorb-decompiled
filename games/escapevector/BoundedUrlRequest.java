@@ -22,10 +22,10 @@ final class BoundedUrlRequest implements Runnable {
           if (param1 < 44) {
             return;
           }
-          RatingQuery var4 = (RatingQuery) (cd.field_s.first(false));
+          RatingQuery var4 = (RatingQuery) (LegacyStyleNode.field_s.first(false));
           while (var4 != null) {
             qh.writeRatingQuery(var4, true, param0);
-            var4 = (RatingQuery) (cd.field_s.next((byte) 70));
+            var4 = (RatingQuery) (LegacyStyleNode.field_s.next((byte) 70));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

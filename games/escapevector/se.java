@@ -36,7 +36,7 @@ final class se {
     final static void writeBrowserSessionMarker(byte guard, java.applet.Applet applet) {
         String stackIn_6_2 = null;
         try {
-          an.field_a = true;
+          BrowserSessionMarkerState.markerSet = true;
           String var2 = "tuhstatbut";
           String var3 = "rvnadlm";
           long var4 = -1L;

@@ -133,7 +133,7 @@ final class MarkerSliderPainter implements WidgetPainter {
             bg.field_f = dh.field_d;
           }
           boolean decompiledFrameRemainder0 = true;
-          ei.field_j = ei.field_j + 1;
+          SavedDataQuery.field_j = SavedDataQuery.field_j + 1;
           if (text != null) {
             decompiledFrameRemainder0 = !(text.equals(on.field_b));
           } else {
@@ -142,20 +142,20 @@ final class MarkerSliderPainter implements WidgetPainter {
           if (decompiledFrameRemainder0) {
             if (PasswordFieldPainter.field_u) {
               stackIn_17_0 = false;
-            } else if (ei.field_j >= WidgetStyleLayer.field_d) {
-              stackIn_17_0 = (ei.field_j < WidgetStyleLayer.field_d + qf.field_l);
+            } else if (SavedDataQuery.field_j >= WidgetStyleLayer.field_d) {
+              stackIn_17_0 = (SavedDataQuery.field_j < WidgetStyleLayer.field_d + NanoTickClock.field_l);
             } else {
               stackIn_17_0 = false;
             }
             boolean var2_int = stackIn_17_0;
             if (text == null) {
-              ei.field_j = 0;
+              SavedDataQuery.field_j = 0;
             } else if (PasswordFieldPainter.field_u) {
-              ei.field_j = WidgetStyleLayer.field_d;
+              SavedDataQuery.field_j = WidgetStyleLayer.field_d;
             } else if (!var2_int) {
-              ei.field_j = 0;
+              SavedDataQuery.field_j = 0;
             } else {
-              ei.field_j = WidgetStyleLayer.field_d;
+              SavedDataQuery.field_j = WidgetStyleLayer.field_d;
             }
             DraggableWidget.field_O = bg.field_f;
             ci.field_g = ValidationIndicator.field_M;
@@ -167,9 +167,9 @@ final class MarkerSliderPainter implements WidgetPainter {
           }
           on.field_b = text;
           if (!PasswordFieldPainter.field_u &&
-            ei.field_j < WidgetStyleLayer.field_d &&
+            SavedDataQuery.field_j < WidgetStyleLayer.field_d &&
             TextFieldValidator.field_h) {
-            ei.field_j = 0;
+            SavedDataQuery.field_j = 0;
             ci.field_g = ValidationIndicator.field_M;
             DraggableWidget.field_O = bg.field_f;
           }
@@ -177,9 +177,9 @@ final class MarkerSliderPainter implements WidgetPainter {
             MarkerSliderPainter.createArchive(-81, 8, false, 82, false);
           }
           if (PasswordFieldPainter.field_u &&
-            ei.field_j == ContentTransitionDialog.field_jb) {
+            SavedDataQuery.field_j == ContentTransitionDialog.field_jb) {
             PasswordFieldPainter.field_u = false;
-            ei.field_j = 0;
+            SavedDataQuery.field_j = 0;
           }
           bg.field_f = -1;
           ValidationIndicator.field_M = -1;

@@ -12,7 +12,7 @@ final class StripedProgressBar extends UiComponent {
     int progressQ16;
     private Sprite rightCapMask;
     private int field_y;
-    static Sprite[] field_K;
+    static Sprite[] objectGlowSprites;
     private int field_A;
     static ResourceArchive field_I;
     private int field_H;
@@ -26,8 +26,8 @@ final class StripedProgressBar extends UiComponent {
     }
 
     final static int[] j(int param0) {
-        if (bk.field_r != null) {
-          return bk.field_r.a(37);
+        if (SocketJs5Transport.field_r != null) {
+          return SocketJs5Transport.field_r.a(37);
         }
         if (param0 == -3282) {
           return null;
@@ -50,7 +50,7 @@ final class StripedProgressBar extends UiComponent {
         int var9 = EscapeVector.obfuscationControl;
         int var2 = this.height >> 1;
         Sprite var3 = new Sprite(var2, this.height);
-        eo.a(var3, (byte) -8);
+        TickClock.pushSpriteRaster(var3, (byte) -8);
         for (int var4 = 0; var4 < this.height; var4++) {
           for (int var5 = 0; var2 > var5; var5++) {
             double var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.height));
@@ -62,7 +62,7 @@ final class StripedProgressBar extends UiComponent {
             SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
-        dl.a((byte) 127);
+        RasterRestoreSupport.popRasterState((byte) 127);
         if (guard >= -112) {
           return (Sprite) null;
         }
@@ -75,7 +75,7 @@ final class StripedProgressBar extends UiComponent {
         if (guard != 127) {
           return;
         }
-        field_K = null;
+        objectGlowSprites = null;
     }
 
     final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
@@ -111,30 +111,30 @@ final class StripedProgressBar extends UiComponent {
         int var8 = EscapeVector.obfuscationControl;
         try {
           if (guard > -23) {
-            field_K = (Sprite[]) null;
+            objectGlowSprites = (Sprite[]) null;
           }
           int var5_int = this.width + x;
           rd.a(var5_int - this.rightCapMask.width, x + this.rightCapMask.width, y + this.height, 19807, y);
           for (int var6 = -this.stripeOffset + x; var6 < var5_int; var6 = var6 + stripes.width) {
             stripes.drawTransparent(var6, y);
           }
-          dl.a((byte) -125);
+          RasterRestoreSupport.popRasterState((byte) -125);
           if (x + this.rightCapMask.width >= SoftwareRasterizer.clipLeft) {
-            eo.a(this.capScratch, (byte) -35);
+            TickClock.pushSpriteRaster(this.capScratch, (byte) -35);
             stripes.drawTransparent(-this.stripeOffset, 0);
             stripes.drawTransparent(-this.stripeOffset + this.stripeWidth * 2, 0);
             this.leftCapMask.drawMultiply(0, 0);
-            dl.a((byte) 124);
+            RasterRestoreSupport.popRasterState((byte) 124);
             this.capScratch.drawTransparent(x, y);
           }
           if (SoftwareRasterizer.clipRight >= -this.rightCapMask.width + var5_int) {
-            eo.a(this.capScratch, (byte) -29);
+            TickClock.pushSpriteRaster(this.capScratch, (byte) -29);
             for (var7 = this.stripeOffset + (this.width - this.rightCapMask.width); 2 * this.stripeWidth < var7; var7 = var7 - this.stripeWidth * 2) {
             }
             stripes.drawTransparent(-var7, 0);
             stripes.drawTransparent(2 * this.stripeWidth - var7, 0);
             this.rightCapMask.drawMultiply(0, 0);
-            dl.a((byte) -65);
+            RasterRestoreSupport.popRasterState((byte) -65);
             this.capScratch.drawTransparent(var5_int - this.rightCapMask.width, y);
             return;
           }
@@ -236,7 +236,7 @@ final class StripedProgressBar extends UiComponent {
         if (65536 > this.progressQ16) {
           rd.a(this.width + var5, var5 + (this.progressQ16 * this.width >> 16), var6 + this.height, 19807, var6);
           this.drawStripedBar(-81, var6, this.stripeSprites[1], var5);
-          dl.a((byte) 119);
+          RasterRestoreSupport.popRasterState((byte) 119);
         }
         if (guard <= 85) {
           this.leftCapMask = (Sprite) null;
@@ -246,7 +246,7 @@ final class StripedProgressBar extends UiComponent {
     private final Sprite createStripeSprite(boolean guard, int firstColor, int secondColor) {
         int var13 = EscapeVector.obfuscationControl;
         Sprite var14 = new Sprite(2 * this.stripeWidth, this.height);
-        eo.a(var14, (byte) -90);
+        TickClock.pushSpriteRaster(var14, (byte) -90);
         int var5 = this.height >> 1;
         int var6 = 0;
         if (!guard) {
@@ -268,7 +268,7 @@ final class StripedProgressBar extends UiComponent {
           SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + var7, var6, this.stripeWidth, var12Lifetime1);
           var6++;
         }
-        dl.a((byte) 127);
+        RasterRestoreSupport.popRasterState((byte) 127);
         return var14;
     }
 
@@ -334,6 +334,6 @@ final class StripedProgressBar extends UiComponent {
 
     static {
         field_M = "?";
-        field_K = new Sprite[17];
+        objectGlowSprites = new Sprite[17];
     }
 }

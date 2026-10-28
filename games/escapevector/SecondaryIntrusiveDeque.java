@@ -14,8 +14,8 @@ final class SecondaryIntrusiveDeque {
     }
 
     final static void d(int param0) {
-        SelfDestructEffects.field_j.field_g = param0;
-        SelfDestructEffects.field_j.field_d = 0;
+        SelfDestructEffects.field_j.failureCount = param0;
+        SelfDestructEffects.field_j.lastErrorCode = 0;
     }
 
     final int c(int param0) {
@@ -106,15 +106,15 @@ final class SecondaryIntrusiveDeque {
         int var42 = EscapeVector.obfuscationControl;
         try {
           if (param10 >= 0 &&
-            param8 < bi.field_f) {
+            param8 < MeshRasterState.clipHeight) {
             if (param7 < 0 &&
               0 > param5 &&
               0 > param13) {
               return;
             }
-            if (bi.field_c <= param7 &&
-              bi.field_c <= param5 &&
-              bi.field_c <= param13) {
+            if (MeshRasterState.clipWidth <= param7 &&
+              MeshRasterState.clipWidth <= param5 &&
+              MeshRasterState.clipWidth <= param13) {
               return;
             }
             if (!param11) {
@@ -251,17 +251,17 @@ final class SecondaryIntrusiveDeque {
                 }
               }
               if (decompiledFrameRemainder0) {
-                int var36Lifetime2 = bi.field_a[param8];
+                int var36Lifetime2 = MeshRasterState.rowOffsets[param8];
                 while (param8 < param9) {
                   int var37 = var17_int >> 16;
-                  if (bi.field_c > var37) {
+                  if (MeshRasterState.clipWidth > var37) {
                     int var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 != 0) {
                       int var39 = (-var21 + var22) / var38;
                       int var40 = (var26 - var25) / var38;
                       int var41 = (var30 - var29) / var38;
-                      if (bi.field_c <= var37 + var38) {
-                        var38 = -1 + bi.field_c - var37;
+                      if (MeshRasterState.clipWidth <= var37 + var38) {
+                        var38 = -1 + MeshRasterState.clipWidth - var37;
                       }
                       if (var37 < 0) {
                         LinkButtonPainter.a(var25 - var40 * var37, var36Lifetime2, var41, (byte) -114, var29 - var37 * var41, var39, var40, var38 + var37, param4, var21 - var39 * var37);
@@ -269,12 +269,12 @@ final class SecondaryIntrusiveDeque {
                         LinkButtonPainter.a(var25, var37 + var36Lifetime2, var41, (byte) -121, var29, var39, var40, var38, param4, var21);
                       }
                     } else if (var37 >= 0 &&
-                      bi.field_c > var37) {
+                      MeshRasterState.clipWidth > var37) {
                       LinkButtonPainter.a(var25, var37 + var36Lifetime2, 0, (byte) -116, var29, 0, 0, var38, param4, var21);
                     }
                   }
                   param8++;
-                  if (param8 >= bi.field_f) {
+                  if (param8 >= MeshRasterState.clipHeight) {
                     return;
                   }
                   var25 = var25 + var27;
@@ -336,17 +336,17 @@ final class SecondaryIntrusiveDeque {
               var22 = var22 + var24 * param8;
               param8 = 0;
             }
-            int var35Lifetime1 = bi.field_a[param8];
+            int var35Lifetime1 = MeshRasterState.rowOffsets[param8];
             while (param8 < param10) {
               int var36Lifetime1 = var17_int >> 16;
-              if (bi.field_c > var36Lifetime1) {
+              if (MeshRasterState.clipWidth > var36Lifetime1) {
                 int var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (var37Lifetime1 != 0) {
                   int var38Lifetime1 = (var22 - var21) / var37Lifetime1;
                   int var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
                   int var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (bi.field_c <= var37Lifetime1 + var36Lifetime1) {
-                    var37Lifetime1 = -1 + (bi.field_c - var36Lifetime1);
+                  if (MeshRasterState.clipWidth <= var37Lifetime1 + var36Lifetime1) {
+                    var37Lifetime1 = -1 + (MeshRasterState.clipWidth - var36Lifetime1);
                   }
                   if (var36Lifetime1 >= 0) {
                     LinkButtonPainter.a(var25, var36Lifetime1 + var35Lifetime1, var40Lifetime1, (byte) -109, var29, var38Lifetime1, var39Lifetime1, var37Lifetime1, param4, var21);
@@ -354,12 +354,12 @@ final class SecondaryIntrusiveDeque {
                     LinkButtonPainter.a(var25 - var39Lifetime1 * var36Lifetime1, var35Lifetime1, var40Lifetime1, (byte) -103, -(var40Lifetime1 * var36Lifetime1) + var29, var38Lifetime1, var39Lifetime1, var36Lifetime1 + var37Lifetime1, param4, -(var38Lifetime1 * var36Lifetime1) + var21);
                   }
                 } else if (0 <= var36Lifetime1 &&
-                  var36Lifetime1 < bi.field_c) {
+                  var36Lifetime1 < MeshRasterState.clipWidth) {
                   LinkButtonPainter.a(var25, var35Lifetime1 + var36Lifetime1, 0, (byte) -114, var29, 0, 0, var37Lifetime1, param4, var21);
                 }
               }
               param8++;
-              if (param8 >= bi.field_f) {
+              if (param8 >= MeshRasterState.clipHeight) {
                 return;
               }
               var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.width;

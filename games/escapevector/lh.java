@@ -470,8 +470,8 @@ final class lh {
     }
 
     final static void a(byte param0, int param1) {
-        if (bk.field_r != null) {
-          bk.field_r.d(param1, 136);
+        if (SocketJs5Transport.field_r != null) {
+          SocketJs5Transport.field_r.d(param1, 136);
           if (param0 != 99) {
             lh.releaseStatics((byte) -88);
             return;

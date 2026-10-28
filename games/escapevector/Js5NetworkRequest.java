@@ -3,10 +3,10 @@
  */
 final class Js5NetworkRequest extends ArchiveRequest {
     static Sprite field_H;
-    byte field_y;
-    int field_F;
+    byte paddingBytes;
+    int blockOffset;
     static int field_D;
-    PacketBuffer field_A;
+    PacketBuffer responseBuffer;
     static boolean field_E;
     static String field_C;
     static int field_z;
@@ -26,14 +26,14 @@ final class Js5NetworkRequest extends ArchiveRequest {
         return di.field_d.b((byte) -18);
     }
 
-    final static byte[] a(byte param0, byte[] param1) {
+    final static byte[] decompressGroup(byte guard, byte[] bytes) {
         String stackIn_27_2 = null;
         try {
-          PacketBuffer var10 = new PacketBuffer(param1);
+          PacketBuffer var10 = new PacketBuffer(bytes);
           int var3 = var10.readUnsignedByte(0);
-          if (param0 != -26) {
+          if (guard != -26) {
             CharSequence[] var9 = (CharSequence[]) null;
-            Js5NetworkRequest.a((byte) 49, (CharSequence[]) null);
+            Js5NetworkRequest.joinText((byte) 49, (CharSequence[]) null);
           }
           int var4 = var10.readInt(-5053);
           if (0 <= var4 && (TetherHumStream.field_q == 0 ||
@@ -58,7 +58,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
                   SpriteStrip.field_g.a(122, var14, var10);
                 }
               } else {
-                Bzip2Decoder.a(var14, var5, param1, var4, 9);
+                Bzip2Decoder.a(var14, var5, bytes, var4, 9);
               }
               byte[] stackIn_23_0 = var6;
               return stackIn_23_0;
@@ -70,8 +70,8 @@ final class Js5NetworkRequest extends ArchiveRequest {
           Throwable decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = (RuntimeException) (Object) decompiledCaughtException;
           RuntimeException stackIn_26_0 = var2;
-          StringBuilder stackIn_26_1 = new StringBuilder().append("s.G(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_26_1 = new StringBuilder().append("s.G(").append(guard).append(',');
+          if (bytes == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
@@ -98,45 +98,45 @@ final class Js5NetworkRequest extends ArchiveRequest {
         if (this.field_u) {
           throw new RuntimeException();
         }
-        if (this.field_A.position < this.field_A.payload.length - this.field_y) {
+        if (this.responseBuffer.position < this.responseBuffer.payload.length - this.paddingBytes) {
           throw new RuntimeException();
         }
         if (guard) {
-          return this.field_A.payload;
+          return this.responseBuffer.payload;
         }
-        this.field_A = (PacketBuffer) null;
-        return this.field_A.payload;
+        this.responseBuffer = (PacketBuffer) null;
+        return this.responseBuffer.payload;
     }
 
     final int progress(int guard) {
         if (guard != 100) {
-          this.field_F = -96;
-          if (null == this.field_A) {
+          this.blockOffset = -96;
+          if (null == this.responseBuffer) {
             return 0;
           }
-          return this.field_A.position * 100 / (-this.field_y + this.field_A.payload.length);
+          return this.responseBuffer.position * 100 / (-this.paddingBytes + this.responseBuffer.payload.length);
         }
-        if (null == this.field_A) {
+        if (null == this.responseBuffer) {
           return 0;
         }
-        return this.field_A.position * 100 / (-this.field_y + this.field_A.payload.length);
+        return this.responseBuffer.position * 100 / (-this.paddingBytes + this.responseBuffer.payload.length);
     }
 
-    final static String a(byte param0, CharSequence[] param1) {
+    final static String joinText(byte guard, CharSequence[] parts) {
         String stackIn_7_2 = null;
         try {
-          if (param0 >= -4) {
+          if (guard >= -4) {
             CharSequence[] var3 = (CharSequence[]) null;
-            Js5NetworkRequest.a((byte) -12, (CharSequence[]) null);
+            Js5NetworkRequest.joinText((byte) -12, (CharSequence[]) null);
           }
-          String stackIn_3_0 = ua.a(0, param1.length, param1, 4);
+          String stackIn_3_0 = ua.a(0, parts.length, parts, 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var2;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("s.B(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("s.B(").append(guard).append(',');
+          if (parts == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

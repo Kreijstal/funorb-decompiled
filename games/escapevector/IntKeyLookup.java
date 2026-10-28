@@ -31,7 +31,7 @@ final class IntKeyLookup {
             String var3 = (String) null;
             IntKeyLookup.a(-106, (String) null);
           }
-          byte[] stackIn_3_0 = fk.field_a.getNamedFile(-4, param1, "");
+          byte[] stackIn_3_0 = LoginCredentialType.field_a.getNamedFile(-4, param1, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

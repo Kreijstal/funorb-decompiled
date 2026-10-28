@@ -95,7 +95,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 this.field_z = this.field_z + 1;
                 continue;
               }
-              if (!this.field_t.b(20)) {
+              if (!this.field_t.isPrefetchCapacityReached(20)) {
                 if (this.field_f[this.field_z] != 1) {
                   ArchiveRequest discarded$0 = this.a(this.field_z, 2, 23874);
                 }
@@ -202,7 +202,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (PcmResampler.field_h.key == null) {
           return;
         }
-        ld.field_h = AccountRequestDialog.a(PcmResampler.field_h.key, StatefulTextPainter.field_u, ld.field_h, UiContainer.field_B, (byte) 112);
+        UsernameCredentials.field_h = AccountRequestDialog.a(PcmResampler.field_h.key, StatefulTextPainter.field_u, UsernameCredentials.field_h, UiContainer.field_B, (byte) 112);
         if (se.field_b == null) {
           se.field_b = MarkerSliderPainter.a(1, StatefulTextPainter.field_u, IndexedSpriteState.field_j, PcmResampler.field_h.key);
         }
@@ -220,10 +220,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
           return this.field_m;
         }
         if (null == this.field_y) {
-          if (this.field_t.c(20)) {
+          if (this.field_t.isUrgentCapacityReached(20)) {
             return null;
           }
-          this.field_y = (ArchiveRequest) ((Object) this.field_t.a(255, true, (byte) 0, this.field_s, (byte) 0));
+          this.field_y = (ArchiveRequest) ((Object) this.field_t.requestGroup(255, true, (byte) 0, this.field_s, (byte) 0));
         }
         if (this.field_y.field_u) {
           return null;
@@ -248,8 +248,8 @@ final class CachedArchiveProvider extends ArchiveProvider {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
             this.field_m = null;
-            if (!this.field_t.c(20)) {
-              this.field_y = (ArchiveRequest) ((Object) this.field_t.a(255, true, (byte) 0, this.field_s, (byte) 0));
+            if (!this.field_t.isUrgentCapacityReached(20)) {
+              this.field_y = (ArchiveRequest) ((Object) this.field_t.requestGroup(255, true, (byte) 0, this.field_s, (byte) 0));
             } else {
               this.field_y = null;
             }
@@ -264,10 +264,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
-            this.field_t.b((byte) -125);
+            this.field_t.resetAfterIntegrityFailure((byte) -125);
             this.field_m = null;
-            if (!this.field_t.c(20)) {
-              this.field_y = (ArchiveRequest) ((Object) this.field_t.a(255, true, (byte) 0, this.field_s, (byte) 0));
+            if (!this.field_t.isUrgentCapacityReached(20)) {
+              this.field_y = (ArchiveRequest) ((Object) this.field_t.requestGroup(255, true, (byte) 0, this.field_s, (byte) 0));
             } else {
               this.field_y = null;
             }
@@ -310,10 +310,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (this.field_f[param0] != -1) {
                 throw new RuntimeException();
               }
-              if (this.field_t.b(20)) {
+              if (this.field_t.isPrefetchCapacityReached(20)) {
                 return null;
               }
-              var4 = this.field_t.a(this.field_s, false, (byte) 0, param0, (byte) 2);
+              var4 = this.field_t.requestGroup(this.field_s, false, (byte) 0, param0, (byte) 2);
             } else {
               if (this.field_x == null) {
                 throw new RuntimeException();
@@ -324,10 +324,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
             -1 != this.field_f[param0]) {
             var4 = this.field_k.a(this.field_x, param2 ^ 23908, param0);
           } else {
-            if (this.field_t.c(20)) {
+            if (this.field_t.isUrgentCapacityReached(20)) {
               return null;
             }
-            var4 = this.field_t.a(this.field_s, true, (byte) 0, param0, (byte) 2);
+            var4 = this.field_t.requestGroup(this.field_s, true, (byte) 0, param0, (byte) 2);
           }
           this.field_q.put((IntrusiveNode) (var4), 10901, (long)param0);
         }
@@ -344,9 +344,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
           try {
             if (var5 != null &&
               2 < var18.length) {
-              qf.field_m.reset();
-              qf.field_m.update(var5, 0, var18.length - 2);
-              var6_int = (int)qf.field_m.getValue();
+              NanoTickClock.field_m.reset();
+              NanoTickClock.field_m.update(var5, 0, var18.length - 2);
+              var6_int = (int)NanoTickClock.field_m.getValue();
               if (var6_int != this.field_m.groupCrc32s[param0]) {
                 throw new RuntimeException();
               }
@@ -382,8 +382,8 @@ final class CachedArchiveProvider extends ArchiveProvider {
             this.field_f[param0] = (byte)-1;
             ((ArchiveRequest) (var4)).unlink((byte) -92);
             if (((ArchiveRequest) (var4)).field_r &&
-              !this.field_t.c(20)) {
-              var4 = this.field_t.a(this.field_s, true, (byte) 0, param0, (byte) 2);
+              !this.field_t.isUrgentCapacityReached(20)) {
+              var4 = this.field_t.requestGroup(this.field_s, true, (byte) 0, param0, (byte) 2);
               this.field_q.put((IntrusiveNode) (var4), 10901, (long)param0);
             }
             return null;
@@ -392,9 +392,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
         try {
           if (var5 != null &&
             var18.length > 2) {
-            qf.field_m.reset();
-            qf.field_m.update(var5, 0, var18.length - 2);
-            var6_int = (int)qf.field_m.getValue();
+            NanoTickClock.field_m.reset();
+            NanoTickClock.field_m.update(var5, 0, var18.length - 2);
+            var6_int = (int)NanoTickClock.field_m.getValue();
             if (var6_int != this.field_m.groupCrc32s[param0]) {
               throw new RuntimeException();
             }
@@ -411,23 +411,23 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 var11++;
               }
             }
-            this.field_t.field_g = 0;
-            this.field_t.field_d = 0;
+            this.field_t.failureCount = 0;
+            this.field_t.lastErrorCode = 0;
           } else {
             throw new RuntimeException();
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_t.b((byte) -110);
+          this.field_t.resetAfterIntegrityFailure((byte) -110);
           ((ArchiveRequest) (var4)).unlink((byte) -86);
           if (!((ArchiveRequest) (var4)).field_r) {
             return null;
           }
-          if (this.field_t.c(param2 - 23854)) {
+          if (this.field_t.isUrgentCapacityReached(param2 - 23854)) {
             return null;
           }
-          var4 = this.field_t.a(this.field_s, true, (byte) 0, param0, (byte) 2);
+          var4 = this.field_t.requestGroup(this.field_s, true, (byte) 0, param0, (byte) 2);
           this.field_q.put((IntrusiveNode) (var4), 10901, (long)param0);
           return null;
         }
@@ -618,6 +618,6 @@ final class CachedArchiveProvider extends ArchiveProvider {
 
     static {
         field_r = new String[]{"Belter Award", "Moon Runner", "Moon Raker", "Hero of Earth", "Star Pilot", "Ace Pilot", "Fuel Filler", "Tough Destroyer", "Speed Nitwit", "Speed Freak", "Speed Demon", "Power Pilot", "Spirit of Vengeance", "Force King", "Seeker Shaker", "Flak Dancer", "Seeker Slingshot", "G Force", "Belter Award (Normal)", "Moon Runner (Normal)", "Moon Raker (Normal)", "Hero of Earth (Normal)", "High Octane", "Ore Crusher", "Cold Fusion", "Saviour of Earth", "Heroic Pilot", "Ultimate Pilot", "Total Annihilation", "Virtual Reality", "Bouncing Around", "Free Fall"};
-        ld.a(50, (byte) -6);
+        UsernameCredentials.cacheCompletionHook(50, (byte) -6);
     }
 }

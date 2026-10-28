@@ -25,7 +25,7 @@ final class pa {
     final static void a(int param0) {
         int var4 = EscapeVector.obfuscationControl;
         try {
-          bi.b();
+          MeshRasterState.useRasterClip();
           HighscoreQuery.field_i = 11;
           pb.field_c = new int[260];
           for (int var1_int = 0; var1_int < 256; var1_int++) {

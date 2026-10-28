@@ -11,7 +11,7 @@ final class rd {
           String var6 = (String) null;
           rd.a((byte) -74, (String) null);
         }
-        hf.a(108);
+        LoginStage.pushRasterState(108);
         SoftwareRasterizer.intersectClip(param1, param4, param0, param2);
     }
 

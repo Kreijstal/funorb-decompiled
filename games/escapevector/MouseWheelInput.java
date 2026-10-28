@@ -15,8 +15,8 @@ abstract class MouseWheelInput {
         if (param0 != 76) {
           return;
         }
-        if (null != bk.field_r) {
-          bk.field_r.a((byte) -34);
+        if (null != SocketJs5Transport.field_r) {
+          SocketJs5Transport.field_r.a((byte) -34);
         }
     }
 

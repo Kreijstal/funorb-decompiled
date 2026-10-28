@@ -37,16 +37,16 @@ final class le {
           return CipherPacketBuffer.field_o;
         }
         if (!LoadingProgressDialog.field_ab.tryLoadNamedGroup(0, "commonui")) {
-          return qf.field_h + " - " + LoadingProgressDialog.field_ab.namedGroupProgress("commonui", param0 ^ 1) + "%";
+          return NanoTickClock.field_h + " - " + LoadingProgressDialog.field_ab.namedGroupProgress("commonui", param0 ^ 1) + "%";
         }
         if (param0 != 1) {
           field_a = (QuickChatDynamicCommand) null;
         }
-        if (!pl.field_j.ensureIndex(0)) {
+        if (!AlternateUsernameCredentials.field_j.ensureIndex(0)) {
           return ff.field_a;
         }
-        if (!pl.field_j.tryLoadAllGroups((byte) -119)) {
-          return IntrusiveDequeCursor.field_b + " - " + pl.field_j.overallProgress(-67) + "%";
+        if (!AlternateUsernameCredentials.field_j.tryLoadAllGroups((byte) -119)) {
+          return IntrusiveDequeCursor.field_b + " - " + AlternateUsernameCredentials.field_j.overallProgress(-67) + "%";
         }
         return field_b;
     }

@@ -29,7 +29,7 @@ final class fc {
     }
 
     final static void a(int param0) {
-        ei.field_i = false;
+        SavedDataQuery.field_i = false;
         if (param0 == 3161) {
           DialWidget.field_H = false;
           WhirlpoolHasher.a(-1, param0 - 3109);
@@ -46,10 +46,10 @@ final class fc {
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11) {
         if (param6) {
-          param1 = 2 - bk.a(6, false, -param1 + 2) * 6;
-          param2 = 3 + 6 * bk.a(6, false, -2 + (param2 - 1));
-          param10 = -(6 * bk.a(6, false, 0 - param10)) + 0;
-          param3 = 1 + bk.a(6, false, param3 - 1) * 6;
+          param1 = 2 - SocketJs5Transport.floorDivideByPositive(6, false, -param1 + 2) * 6;
+          param2 = 3 + 6 * SocketJs5Transport.floorDivideByPositive(6, false, -2 + (param2 - 1));
+          param10 = -(6 * SocketJs5Transport.floorDivideByPositive(6, false, 0 - param10)) + 0;
+          param3 = 1 + SocketJs5Transport.floorDivideByPositive(6, false, param3 - 1) * 6;
         }
         if (param5 != 29788) {
           field_a = -100;

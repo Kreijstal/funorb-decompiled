@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hf {
+final class LoginStage {
     static double field_c;
     static int field_b;
     static boolean field_a;
 
-    final static void a(int param0) {
+    final static void pushRasterState(int guard) {
         RasterSnapshot var1 = (RasterSnapshot) (TextWidgetPainter.field_d.removeLast(-8980));
         if (var1 == null) {
           var1 = new RasterSnapshot();
         }
         var1.a(SoftwareRasterizer.clipBottom, (byte) 29, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipLeft, SoftwareRasterizer.height, SoftwareRasterizer.pixels, SoftwareRasterizer.width);
-        int var2 = 28 % ((param0 + 72) / 49);
+        int var2 = 28 % ((guard + 72) / 49);
         GradientOutlineTextPainter.field_q.addLast(-12328, var1);
     }
 
-    final static String b(byte param0) {
+    final static String formatPacketDiagnostic(byte guard) {
         int var5 = EscapeVector.obfuscationControl;
-        String var6 = "(" + NetworkGameClient.field_q + " " + ArchiveIndex.field_t + " " + jj.field_b + ") " + cd.field_v;
+        String var6 = "(" + NetworkGameClient.field_q + " " + ArchiveIndex.field_t + " " + jj.field_b + ") " + LegacyStyleNode.field_v;
         String var1 = var6;
         if (EmailSyntaxValidator.field_r > 0) {
           var1 = var6 + ":";
@@ -42,171 +42,171 @@ final class hf {
             var1 = var8 + (char)var3;
           }
         }
-        int var2Lifetime1 = 96 / ((-24 - param0) / 38);
+        int var2Lifetime1 = 96 / ((-24 - guard) / 38);
         return var1;
     }
 
-    final boolean a(byte param0) {
-        if (param0 < 62) {
+    final boolean isResponseStage(byte guard) {
+        if (guard < 62) {
           return false;
         }
         boolean stackIn_8_0 = (this == mc.field_b) || (ClientException.field_c == this) || (this == ThreeSliceButtonPainter.field_t);
         return stackIn_8_0;
     }
 
-    final static byte[] a(ResourceArchive param0, int[] param1, int param2, int param3, ResourceArchive param4, byte param5) {
+    final static byte[] loadLevelBytes(ResourceArchive archive, int[] key, int level, int mode, ResourceArchive memberArchive, byte guard) {
         ResourceArchive stackIn_10_0 = null;
         String stackIn_21_2 = null;
         String stackIn_24_2 = null;
         String stackIn_27_2 = null;
         try {
-          if (param5 < 92) {
+          if (guard < 92) {
             field_b = -32;
           }
-          int var6_int = je.a(false, param3);
-          if (param2 < 0) {
+          int var6_int = je.a(false, mode);
+          if (level < 0) {
             return null;
           }
-          if (var6_int <= param2) {
+          if (var6_int <= level) {
             Object stackIn_6_0 = null;
             return (byte[]) (stackIn_6_0);
           }
-          int var7 = dh.field_e[param3];
+          int var7 = dh.field_e[mode];
           if (var7 != 2) {
-            stackIn_10_0 = (ResourceArchive) (param0);
+            stackIn_10_0 = (ResourceArchive) (archive);
           } else {
-            stackIn_10_0 = (ResourceArchive) (param4);
+            stackIn_10_0 = (ResourceArchive) (memberArchive);
           }
           ResourceArchive var8 = stackIn_10_0;
           if (var8 == null) {
             return null;
           }
-          String var12 = ja.field_e[param3].toLowerCase();
-          String var11 = fh.field_c[param3][param2].toLowerCase() + ".lvl";
+          String var12 = ja.field_e[mode].toLowerCase();
+          String var11 = ByteStorage.levelNamesByMode[mode][level].toLowerCase() + ".lvl";
           String var13 = rd.a((byte) 72, var11);
           String var15 = var12 + "_" + var13;
           String var14 = "";
-          if (param1 == null) {
+          if (key == null) {
             byte[] stackIn_17_0 = var8.getNamedFile(-4, var15, var14);
             return stackIn_17_0;
           }
-          byte[] stackIn_15_0 = var8.getNamedFileWithKey((byte) -73, var14, var15, param1);
+          byte[] stackIn_15_0 = var8.getNamedFileWithKey((byte) -73, var14, var15, key);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_20_0 = var6;
           StringBuilder stackIn_20_1 = new StringBuilder().append("hf.D(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
           StringBuilder stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
-          if (param1 == null) {
+          if (key == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          StringBuilder stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          StringBuilder stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(level).append(',').append(mode).append(',');
+          if (memberArchive == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static Sprite[] b(int param0) {
+    final static Sprite[] buildRgbSpritesFromSheet(int guard) {
         int var7 = EscapeVector.obfuscationControl;
-        if (param0 < 63) {
+        if (guard < 63) {
           field_c = -0.8853374871854307;
         }
         Sprite[] var1 = new Sprite[qk.spriteCount];
         for (int var2 = 0; var2 < qk.spriteCount; var2++) {
-          int var3 = bc.spriteHeights[var2] * qh.spriteWidths[var2];
+          int var3 = SavedDataQuerySupport.spriteHeights[var2] * qh.spriteWidths[var2];
           byte[] var4 = qe.spriteIndices[var2];
           int[] var5 = new int[var3];
           for (int var6 = 0; var6 < var3; var6++) {
             var5[var6] = qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], gi.spriteOffsetYs[var2], qh.spriteWidths[var2], bc.spriteHeights[var2], var5);
+          var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], gi.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var5);
         }
         of.a(false);
         return var1;
     }
 
-    final static byte a(int param0, char param1) {
+    final static byte encodeCp1252Character(int guard, char character) {
         int var2;
         int var3 = EscapeVector.obfuscationControl;
-        if (param0 <= 22) {
+        if (guard <= 22) {
           return (byte) -88;
         }
         {
-          if ((param1 <= 0 ||
-            param1 >= 128) &&
-            (param1 < 160 ||
-            param1 > 255)) {
-            if (8364 == param1) {
+          if ((character <= 0 ||
+            character >= 128) &&
+            (character < 160 ||
+            character > 255)) {
+            if (8364 == character) {
               var2 = -128;
-            } else if (param1 == 8218) {
+            } else if (character == 8218) {
               var2 = -126;
-            } else if (param1 == 402) {
+            } else if (character == 402) {
               var2 = -125;
-            } else if (8222 == param1) {
+            } else if (8222 == character) {
               var2 = -124;
-            } else if (param1 == 8230) {
+            } else if (character == 8230) {
               var2 = -123;
-            } else if (param1 == 8224) {
+            } else if (character == 8224) {
               var2 = -122;
-            } else if (8225 == param1) {
+            } else if (8225 == character) {
               var2 = -121;
-            } else if (710 == param1) {
+            } else if (710 == character) {
               var2 = -120;
-            } else if (param1 == 8240) {
+            } else if (character == 8240) {
               var2 = -119;
-            } else if (param1 == 352) {
+            } else if (character == 352) {
               var2 = -118;
-            } else if (param1 == 8249) {
+            } else if (character == 8249) {
               var2 = -117;
-            } else if (param1 == 338) {
+            } else if (character == 338) {
               var2 = -116;
-            } else if (param1 == 381) {
+            } else if (character == 381) {
               var2 = -114;
-            } else if (8216 == param1) {
+            } else if (8216 == character) {
               var2 = -111;
-            } else if (param1 == 8217) {
+            } else if (character == 8217) {
               var2 = -110;
-            } else if (param1 == 8220) {
+            } else if (character == 8220) {
               var2 = -109;
-            } else if (8221 == param1) {
+            } else if (8221 == character) {
               var2 = -108;
-            } else if (param1 == 8226) {
+            } else if (character == 8226) {
               var2 = -107;
-            } else if (8211 == param1) {
+            } else if (8211 == character) {
               var2 = -106;
-            } else if (8212 == param1) {
+            } else if (8212 == character) {
               var2 = -105;
-            } else if (param1 == 732) {
+            } else if (character == 732) {
               var2 = -104;
-            } else if (param1 == 8482) {
+            } else if (character == 8482) {
               var2 = -103;
-            } else if (param1 == 353) {
+            } else if (character == 353) {
               var2 = -102;
-            } else if (8250 == param1) {
+            } else if (8250 == character) {
               var2 = -101;
-            } else if (339 == param1) {
+            } else if (339 == character) {
               var2 = -100;
-            } else if (param1 == 382) {
+            } else if (character == 382) {
               var2 = -98;
-            } else if (param1 != 376) {
+            } else if (character != 376) {
               var2 = 63;
             } else {
               var2 = -97;
             }
           } else {
-            var2 = (byte)param1;
+            var2 = (byte)character;
           }
         }
         return (byte) var2;

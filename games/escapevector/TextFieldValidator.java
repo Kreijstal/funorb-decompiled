@@ -79,8 +79,8 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           if (ff.field_e == 11) {
             bm.b((byte) 62);
           }
-          QuickChatPhraseDefinition.showLoadingProgress(pl.field_t, DelegatingCanvas.field_e, pb.field_d, (byte) 14);
-          nn.a(param0, param1, param1 - 1, 0);
+          QuickChatPhraseDefinition.showLoadingProgress(AlternateUsernameCredentials.field_t, DelegatingCanvas.field_e, pb.field_d, (byte) 14);
+          SecondaryNodeHashTable.presentRaster(param0, param1, param1 - 1, 0);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ah.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -95,9 +95,9 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
     }
 
     final static void e(int param0) {
-        tg.field_nb = null;
+        ContactEntry.field_nb = null;
         IterableNodeHashTable.field_f = null;
-        nn.field_i = null;
+        SecondaryNodeHashTable.field_i = null;
         ModalStack.field_G = null;
         ModalStack.field_D = false;
         if (param0 != 0) {

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class an {
+final class BrowserSessionMarkerState {
     static QuickChatDynamicCommand field_c;
-    static boolean field_a;
+    static boolean markerSet;
     static String field_b;
     private static String field_z;
 
@@ -11,7 +11,7 @@ final class an {
         field_c = null;
         field_b = null;
         if (guard <= 17) {
-          field_a = false;
+          markerSet = false;
         }
     }
 

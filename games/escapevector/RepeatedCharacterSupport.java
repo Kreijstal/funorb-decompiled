@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa {
+final class RepeatedCharacterSupport {
     static String field_b;
     static int field_a;
 
@@ -16,13 +16,13 @@ final class aa {
         return false;
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isRepeatedCharacter(int start, String text) {
         String stackIn_13_2 = null;
         int var4 = EscapeVector.obfuscationControl;
         try {
-          int var2_int = param1.charAt(0);
-          for (int var3 = param0; param1.length() > var3; var3++) {
-            if (param1.charAt(var3) != var2_int) {
+          int var2_int = text.charAt(0);
+          for (int var3 = start; text.length() > var3; var3++) {
+            if (text.charAt(var3) != var2_int) {
               return false;
             }
           }
@@ -31,8 +31,8 @@ final class aa {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var2;
-          StringBuilder stackIn_12_1 = new StringBuilder().append("aa.C(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_12_1 = new StringBuilder().append("aa.C(").append(start).append(',');
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -44,7 +44,7 @@ final class aa {
     public static void releaseStatics(byte guard) {
         if (guard != -96) {
           String var2 = (String) null;
-          aa.a(-12, (String) null);
+          RepeatedCharacterSupport.isRepeatedCharacter(-12, (String) null);
           field_b = null;
           return;
         }

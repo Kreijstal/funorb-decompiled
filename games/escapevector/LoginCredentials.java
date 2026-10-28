@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vj {
+abstract class LoginCredentials {
     static IntrusiveDeque field_d;
     static String[] field_c;
     static volatile int heldMouseButton;
@@ -35,7 +35,7 @@ abstract class vj {
               return;
             }
             for (int var11 = param6; var11 < param1; var11++) {
-              int var12 = cd.field_q[var11];
+              int var12 = LegacyStyleNode.field_q[var11];
               if (param4) {
                 stackIn_25_0 = DualLinkNode.field_k[var12];
               } else {
@@ -43,28 +43,28 @@ abstract class vj {
               }
               int var13 = stackIn_25_0;
               if (var7_int < var13) {
-                cd.field_q[var11] = cd.field_q[var8];
+                LegacyStyleNode.field_q[var11] = LegacyStyleNode.field_q[var8];
                 if (var9 > var13) {
                   var9 = var13;
                 }
                 int incrementValue$0 = var8;
                 var8++;
-                cd.field_q[incrementValue$0] = var12;
+                LegacyStyleNode.field_q[incrementValue$0] = var12;
               } else if (var13 > var10) {
                 var10 = var13;
               }
             }
-            vj.a((byte) -109, var8, param2, param3, param4, var9, param6);
-            vj.a((byte) -96, param1, param2, var10, param4, param5, var8);
+            LoginCredentials.a((byte) -109, var8, param2, param3, param4, var9, param6);
+            LoginCredentials.a((byte) -96, param1, param2, var10, param4, param5, var8);
             return;
           }
           for (int var7_intLifetime1 = -1 + param1; param6 < var7_intLifetime1; var7_intLifetime1--) {
             for (int var8Lifetime1 = param6; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
-              int var9Lifetime1 = cd.field_q[var8Lifetime1];
-              int var10Lifetime1 = cd.field_q[var8Lifetime1 + 1];
+              int var9Lifetime1 = LegacyStyleNode.field_q[var8Lifetime1];
+              int var10Lifetime1 = LegacyStyleNode.field_q[var8Lifetime1 + 1];
               if (ke.a(var9Lifetime1, 2, var10Lifetime1, param4)) {
-                cd.field_q[var8Lifetime1] = var10Lifetime1;
-                cd.field_q[var8Lifetime1 + 1] = var9Lifetime1;
+                LegacyStyleNode.field_q[var8Lifetime1] = var10Lifetime1;
+                LegacyStyleNode.field_q[var8Lifetime1 + 1] = var9Lifetime1;
               }
             }
           }
@@ -80,14 +80,14 @@ abstract class vj {
         if (param0 < 82) {
           return;
         }
-        if (bk.field_r != null) {
-          bk.field_r.a((byte) -121);
+        if (SocketJs5Transport.field_r != null) {
+          SocketJs5Transport.field_r.a((byte) -121);
         }
     }
 
-    abstract void a(PacketBuffer param0, byte param1);
+    abstract void writeTo(PacketBuffer buffer, byte guard);
 
-    abstract fk a(byte param0);
+    abstract LoginCredentialType type(byte guard);
 
     static {
         field_d = new IntrusiveDeque();

@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ld extends vj {
-    private String field_e;
-    private long field_f;
+class UsernameCredentials extends LoginCredentials {
+    private String password;
+    private long encodedUsername;
     static byte[][][] field_h;
     static String[] field_g;
 
-    final void a(PacketBuffer param0, byte param1) {
-        param0.writeLong(this.field_f, (byte) -23);
-        if (param1 > -15) {
+    final void writeTo(PacketBuffer buffer, byte guard) {
+        buffer.writeLong(this.encodedUsername, (byte) -23);
+        if (guard > -15) {
           return;
         }
         try {
-          param0.writeBase38Password(this.field_e, (byte) 111);
+          buffer.writeBase38Password(this.password, (byte) 111);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ld.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ld.G(" + (buffer != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
     public static void releaseStatics(byte guard) {
         if (guard != -71) {
           Sprite[] var2 = (Sprite[]) null;
-          ld.drawNineSlice(9, (Sprite[]) null, 60, -23, 39, -65);
+          UsernameCredentials.drawNineSlice(9, (Sprite[]) null, 60, -23, 39, -65);
         }
         field_h = (byte[][][]) null;
         field_g = null;
@@ -165,53 +165,53 @@ class ld extends vj {
         }
     }
 
-    final static void a(int param0, byte param1) {
-        if (param1 != -6) {
-          ld.a(-16, (byte) 28);
+    final static void cacheCompletionHook(int value, byte guard) {
+        if (guard != -6) {
+          UsernameCredentials.cacheCompletionHook(-16, (byte) 28);
         }
     }
 
-    final static PcmStreamMixer c(byte param0) {
-        if (param0 <= 104) {
+    final static PcmStreamMixer sharedPcmMixer(byte guard) {
+        if (guard <= 104) {
           Sprite[] var2 = (Sprite[]) null;
-          ld.drawNineSlice(-62, (Sprite[]) null, -58, -40, -5, -81);
+          UsernameCredentials.drawNineSlice(-62, (Sprite[]) null, -58, -40, -5, -81);
         }
         return aj.field_f;
     }
 
-    ld(long param0, String param1) {
+    UsernameCredentials(long param0, String param1) {
         try {
-          this.field_f = param0;
-          this.field_e = param1;
+          this.encodedUsername = param0;
+          this.password = param1;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ld.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    fk a(byte param0) {
-        if (param0 != 32) {
-          return (fk) null;
+    LoginCredentialType type(byte guard) {
+        if (guard != 32) {
+          return (LoginCredentialType) null;
         }
         return ja.field_a;
     }
 
-    final static int a(ScoreSubmission param0, int param1, int param2, HighscoreQuery param3) {
+    final static int findSubmittedScoreRow(ScoreSubmission submission, int column, int startRow, HighscoreQuery highscores) {
         String stackIn_27_2 = null;
         String stackIn_30_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          if (param3 != null &&
-            param3.intColumns != null &&
-            param0 != null &&
-            param3.boardId == param0.boardId) {
-            int var4_int = param0.field_q.length;
-            int var5 = param3.intColumns[param1].length / var4_int;
-            for (int var6 = param2; var6 < var5; var6++) {
+          if (highscores != null &&
+            highscores.intColumns != null &&
+            submission != null &&
+            highscores.boardId == submission.boardId) {
+            int var4_int = submission.field_q.length;
+            int var5 = highscores.intColumns[column].length / var4_int;
+            for (int var6 = startRow; var6 < var5; var6++) {
               boolean decompiledFrameCompleted0 = true;
-              if (~param3.longColumns[param1][var6] == ~param0.field_l &&
-                SeekerMine.a(param3.stringColumns[param1][var6], (byte) 120)) {
+              if (~highscores.longColumns[column][var6] == ~submission.field_l &&
+                SeekerMine.a(highscores.stringColumns[column][var6], (byte) 120)) {
                 for (int var7 = 0; var7 < var4_int; var7++) {
-                  if (param0.field_q[var7] != param3.intColumns[param1][var7 + var4_int * var6]) {
+                  if (submission.field_q[var7] != highscores.intColumns[column][var7 + var4_int * var6]) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
@@ -232,13 +232,13 @@ class ld extends vj {
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_26_0 = var4;
           StringBuilder stackIn_26_1 = new StringBuilder().append("ld.I(");
-          if (param0 == null) {
+          if (submission == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          StringBuilder stackIn_29_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          StringBuilder stackIn_29_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(column).append(',').append(startRow).append(',');
+          if (highscores == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";

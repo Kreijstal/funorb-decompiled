@@ -151,7 +151,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     final static void a(int param0, String param1, int param2, int param3, int param4) {
         mj.field_b.bindAsFramebuffer();
         SoftwareRasterizer.clearFramebuffer();
-        fh.field_g.drawCentered(param1, 160, 22, param2, -1);
+        ByteStorage.gameFont.drawCentered(param1, 160, 22, param2, -1);
         AlphaContainer.field_D.a(122);
         cf.a(mj.field_b, true, 1);
         if (param3 > -109) {

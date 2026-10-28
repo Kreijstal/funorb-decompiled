@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class eo {
+abstract class TickClock {
     static String field_a;
     static String field_b;
 
     final static String a(byte param0) {
         if (param0 != 46) {
-          eo.releaseStatics((byte) -64);
+          TickClock.releaseStatics((byte) -64);
           if (PasswordFieldPainter.field_u) {
             return null;
           }
-          if (ei.field_j < WidgetStyleLayer.field_d) {
+          if (SavedDataQuery.field_j < WidgetStyleLayer.field_d) {
             return null;
           }
-          if (ei.field_j < WidgetStyleLayer.field_d + qf.field_l) {
+          if (SavedDataQuery.field_j < WidgetStyleLayer.field_d + NanoTickClock.field_l) {
             return on.field_b;
           }
           return null;
@@ -22,20 +22,20 @@ abstract class eo {
         if (PasswordFieldPainter.field_u) {
           return null;
         }
-        if (ei.field_j < WidgetStyleLayer.field_d) {
+        if (SavedDataQuery.field_j < WidgetStyleLayer.field_d) {
           return null;
         }
-        if (ei.field_j < WidgetStyleLayer.field_d + qf.field_l) {
+        if (SavedDataQuery.field_j < WidgetStyleLayer.field_d + NanoTickClock.field_l) {
           return on.field_b;
         }
         return null;
     }
 
-    abstract int a(byte param0, long param1);
+    abstract int advanceTicks(byte guard, long tickNanos);
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, int param8, int param9) {
         if (!param5) {
-          eo.a(-21, '7');
+          TickClock.normalizeAccountCharacter(-21, '7');
           if (!param7) {
             AccountMessagePanel.drawUnevenFrame(param4, param6, param8, param0, param2, 73, param3, param1, param9);
             return;
@@ -50,25 +50,25 @@ abstract class eo {
         fc.a(param9, param3, param6, param1, true, 29788, false, param8, param4, param0, param2, false);
     }
 
-    abstract long c(byte param0);
+    abstract long delayMillis(byte guard);
 
     final static void a(int param0, boolean param1) {
         if (param0 != 24) {
-          eo.a((byte) 53);
+          TickClock.a((byte) 53);
           if (null != BoundedRandomAccessFile.activeSession) {
             pc.field_d = 16777215;
             ValidatedTextWidget.field_X = 7899280;
             lh.field_e = 12110032;
             Sprite[] var6 = (Sprite[]) null;
             Sprite[] var5 = (Sprite[]) null;
-            LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, fh.field_g, 240, param1);
+            LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 240, param1);
           } else {
             ValidatedTextWidget.field_X = 6340704;
             lh.field_e = 10551200;
             pc.field_d = 16777215;
             Sprite[] var4 = (Sprite[]) null;
             Sprite[] var3 = (Sprite[]) null;
-            LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, fh.field_g, 300, param1);
+            LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 300, param1);
           }
           mj.field_d = 0;
           gi.a((byte) -71);
@@ -80,7 +80,7 @@ abstract class eo {
           lh.field_e = 12110032;
           Sprite[] var6Lifetime1 = (Sprite[]) null;
           Sprite[] var5Lifetime1 = (Sprite[]) null;
-          LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, fh.field_g, 240, param1);
+          LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 240, param1);
           mj.field_d = 0;
           gi.a((byte) -71);
           return;
@@ -90,22 +90,22 @@ abstract class eo {
         pc.field_d = 16777215;
         Sprite[] var4Lifetime1 = (Sprite[]) null;
         Sprite[] var3Lifetime1 = (Sprite[]) null;
-        LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, fh.field_g, 300, param1);
+        LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 300, param1);
         mj.field_d = 0;
         gi.a((byte) -71);
         return;
     }
 
-    final static void a(Sprite param0, byte param1) {
+    final static void pushSpriteRaster(Sprite sprite, byte guard) {
         try {
-          hf.a(-123);
-          if (param1 >= -3) {
+          LoginStage.pushRasterState(-123);
+          if (guard >= -3) {
             Sprite var3 = (Sprite) null;
-            eo.a((Sprite) null, (byte) -40);
+            TickClock.pushSpriteRaster((Sprite) null, (byte) -40);
           }
-          SoftwareRasterizer.bind(param0.pixels, param0.fullWidth, param0.fullHeight);
+          SoftwareRasterizer.bind(sprite.pixels, sprite.fullWidth, sprite.fullHeight);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "eo.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "eo.B(" + (sprite != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -119,26 +119,26 @@ abstract class eo {
         field_a = null;
     }
 
-    final int a(long param0, int param1) {
-        if (param1 >= 34) {
-          long var4 = this.c((byte) 96);
+    final int waitAndAdvance(long tickNanos, int guard) {
+        if (guard >= 34) {
+          long var4 = this.delayMillis((byte) 96);
           if (var4 > 0L) {
             en.a((byte) -86, var4);
           }
-          return this.a((byte) -95, param0);
+          return this.advanceTicks((byte) -95, tickNanos);
         }
         field_a = (String) null;
-        long var4Lifetime1 = this.c((byte) 96);
+        long var4Lifetime1 = this.delayMillis((byte) 96);
         if (var4Lifetime1 > 0L) {
           en.a((byte) -86, var4Lifetime1);
         }
-        return this.a((byte) -95, param0);
+        return this.advanceTicks((byte) -95, tickNanos);
     }
 
-    final static char a(int param0, char param1) {
+    final static char normalizeAccountCharacter(int guard, char character) {
         int var3 = EscapeVector.obfuscationControl;
-        if (param0 == 227) {
-          int var2 = param1;
+        if (guard == 227) {
+          int var2 = character;
           if (var2 == 32) {
             return '_';
           }
@@ -150,7 +150,7 @@ abstract class eo {
             if (var2 != 91 &&
               93 != var2) {
               if (var2 == 35) {
-                return param1;
+                return character;
               }
               if (224 != var2) {
                 if (var2 == 225) {
@@ -219,7 +219,7 @@ abstract class eo {
                               if (223 == var2) {
                                 return 'b';
                               }
-                              return Character.toLowerCase(param1);
+                              return Character.toLowerCase(character);
                             }
                             return 'n';
                           }
@@ -235,12 +235,12 @@ abstract class eo {
               }
               return 'a';
             }
-            return param1;
+            return character;
           }
           return '_';
         }
-        eo.releaseStatics((byte) -68);
-        int var2Lifetime1 = param1;
+        TickClock.releaseStatics((byte) -68);
+        int var2Lifetime1 = character;
         if (var2Lifetime1 == 32) {
           return '_';
         }
@@ -341,7 +341,7 @@ abstract class eo {
                           if (223 == var2Lifetime1) {
                             return 'b';
                           }
-                          return Character.toLowerCase(param1);
+                          return Character.toLowerCase(character);
                         }
                         return 'n';
                       }
@@ -355,12 +355,12 @@ abstract class eo {
             }
             return 'a';
           }
-          return param1;
+          return character;
         }
         return '_';
     }
 
-    abstract void a(int param0);
+    abstract void resetTiming(int guard);
 
     static {
         field_b = "Watch Introduction";

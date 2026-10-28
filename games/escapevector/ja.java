@@ -5,7 +5,7 @@ final class ja {
     static String[] field_e;
     int field_d;
     int field_f;
-    static fk field_a;
+    static LoginCredentialType field_a;
     int field_c;
     int field_g;
     static String field_b;
@@ -124,10 +124,10 @@ final class ja {
           } else if (var2 == 1) {
             var3 = var28.readUnsignedShort(1952);
             long var4_long = var28.readLong(-800509813);
-            ScoreSubmission var6_ref_ik = (ScoreSubmission) (vj.field_d.first(false));
+            ScoreSubmission var6_ref_ik = (ScoreSubmission) (LoginCredentials.field_d.first(false));
             while (var6_ref_ik != null) {
               if (var6_ref_ik.requestId != var3) {
-                var6_ref_ik = (ScoreSubmission) (vj.field_d.next((byte) 70));
+                var6_ref_ik = (ScoreSubmission) (LoginCredentials.field_d.next((byte) 70));
                 continue;
               }
               break;
@@ -139,7 +139,7 @@ final class ja {
             var6_ref_ik.field_l = var4_long;
             var6_ref_ik.unlink((byte) -85);
           } else {
-            pf.a(false, "HS1: " + hf.b((byte) 115), (Throwable) null);
+            pf.a(false, "HS1: " + LoginStage.formatPacketDiagnostic((byte) 115), (Throwable) null);
             nm.a(16);
           }
           int var3Lifetime1 = -111 / ((-41 - param0) / 43);
@@ -185,6 +185,6 @@ final class ja {
     static {
         field_e = new String[]{"original", "classic", "retribution", "simulator"};
         field_b = "Previous";
-        field_a = new fk(2);
+        field_a = new LoginCredentialType(2);
     }
 }

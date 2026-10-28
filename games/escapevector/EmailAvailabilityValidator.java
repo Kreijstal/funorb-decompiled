@@ -83,7 +83,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (this.validateText(-1, text) == ArchiveProvider.field_a) {
-            String stackIn_7_0 = wa.field_a;
+            String stackIn_7_0 = TrackerGainSupport.field_a;
             return stackIn_7_0;
           }
           int var3_int = -120 % ((guard - 10) / 51);

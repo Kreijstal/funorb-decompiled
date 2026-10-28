@@ -23,7 +23,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             fe.a((byte) -83);
           } else if (this.secondaryButton == button) {
             if (this.field_K) {
-              fh.b(-54);
+              ByteStorage.b(-54);
             } else if (this.field_P) {
               qe.a(true);
             } else {
@@ -130,19 +130,19 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           int var3 = var10.readUnsignedByte(0);
           var10.beginBitReading(-17928);
           DialogueScreen.field_y = IntrusiveNode.a(var10, 22178);
-          fh.field_e = new TriangleMesh[var3];
+          ByteStorage.logoMeshes = new TriangleMesh[var3];
           SectorCacheStore.field_c = new int[var3][];
           if (guard < 41) {
             LoginForm.a(82, (byte) -78);
           }
           for (int var4 = 0; var3 > var4; var4++) {
-            fh.field_e[var4] = wk.a(-127, var8);
+            ByteStorage.logoMeshes[var4] = wk.a(-127, var8);
           }
           var10.endBitReading(-3879);
           int var9 = 0;
           int var4Lifetime1 = var9;
           while (var3 > var9) {
-            TriangleMesh var5 = fh.field_e[var9];
+            TriangleMesh var5 = ByteStorage.logoMeshes[var9];
             var5.scaleVertices(6, 1, 6, 6, -72);
             var5.updateBounds((byte) 49);
             int[] var6 = new int[]{var5.minX + var5.maxX >> 1, var5.maxY + var5.minY >> 1, var5.maxZ + var5.minZ >> 1};
@@ -269,7 +269,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           if (null != this.createAccountButton) {
             this.createAccountButton.painter = (WidgetPainter) ((Object) var6);
           }
-          this.identifierField.tooltip = cd.field_u;
+          this.identifierField.tooltip = LegacyStyleNode.field_u;
           if (this.createAccountButton != null) {
             this.createAccountButton.tooltip = mm.field_c;
           }

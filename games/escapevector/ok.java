@@ -25,28 +25,28 @@ final class ok {
         }
         if (param2 != 20) {
           field_c = -87;
-          eo.a(LaserGateSpan.field_l, (byte) -107);
-          bi.b();
+          TickClock.pushSpriteRaster(LaserGateSpan.field_l, (byte) -107);
+          MeshRasterState.useRasterClip();
           SoftwareRasterizer.clearFramebuffer();
           IndexedSpriteState.a(-111);
           if (var5 < 256) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
           }
-          dl.a((byte) 116);
+          RasterRestoreSupport.popRasterState((byte) 116);
           if (SocketConnector.field_d >= 150) {
             cb.field_a.drawAlpha(15 + var3, var4 + 10, var5);
           } else {
             LaserGateSpan.field_l.drawHalfSize(var3, var4);
           }
         } else {
-          eo.a(LaserGateSpan.field_l, (byte) -107);
-          bi.b();
+          TickClock.pushSpriteRaster(LaserGateSpan.field_l, (byte) -107);
+          MeshRasterState.useRasterClip();
           SoftwareRasterizer.clearFramebuffer();
           IndexedSpriteState.a(-111);
           if (var5 < 256) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
           }
-          dl.a((byte) 116);
+          RasterRestoreSupport.popRasterState((byte) 116);
           if (SocketConnector.field_d >= 150) {
             cb.field_a.drawAlpha(15 + var3, var4 + 10, var5);
             int var6 = -125 + SocketConnector.field_d;

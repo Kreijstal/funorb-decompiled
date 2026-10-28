@@ -108,7 +108,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == QuickChatDynamicCommand.mouseHandler) {
             return;
           }
-          vj.heldMouseButton = 0;
+          LoginCredentials.heldMouseButton = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,7 +142,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (QuickChatDynamicCommand.mouseHandler != null) {
             AlphaContainer.mouseIdleTicks = 0;
-            vj.heldMouseButton = 0;
+            LoginCredentials.heldMouseButton = 0;
             ke.mouseInputChanged = true;
             int var2_int = param0.getModifiers();
             if ((8 & var2_int) == 0) {
@@ -189,15 +189,15 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (QuickChatDynamicCommand.mouseHandler != null) {
             AlphaContainer.mouseIdleTicks = 0;
-            fk.pendingClickX = param0.getX();
+            LoginCredentialType.pendingClickX = param0.getX();
             PcmResampler.pendingClickY = param0.getY();
             td.b(128);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               SocketConnector.pendingClickButton = 1;
-              vj.heldMouseButton = 1;
+              LoginCredentials.heldMouseButton = 1;
             } else {
               SocketConnector.pendingClickButton = 2;
-              vj.heldMouseButton = 2;
+              LoginCredentials.heldMouseButton = 2;
             }
             int var2_int = param0.getModifiers();
             if ((var2_int & 4) == 0) {

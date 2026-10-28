@@ -27,12 +27,12 @@ abstract class IndexedSpriteState {
         int var19 = EscapeVector.obfuscationControl;
         try {
           kh.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          int var1_int = fh.field_e.length;
+          int var1_int = ByteStorage.logoMeshes.length;
           int[] var21 = new int[var1_int];
           int[] var20 = var21;
           int[] var2 = var20;
           for (int var3 = 0; var3 < var1_int; var3++) {
-            TriangleMesh var4_ref_ia = fh.field_e[var3];
+            TriangleMesh var4_ref_ia = ByteStorage.logoMeshes[var3];
             var4_ref_ia.updateBounds((byte) 49);
             LoginMethod.a(var3, 103);
             int var5 = var4_ref_ia.maxX + var4_ref_ia.minX >> 1;
@@ -73,15 +73,15 @@ abstract class IndexedSpriteState {
           var14 = (int)((double)var14 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
-          for (int var15 = 0; fh.field_e.length > var15; var15++) {
+          for (int var15 = 0; ByteStorage.logoMeshes.length > var15; var15++) {
             int var16 = 0;
-            for (int var17_int = 1; var17_int < fh.field_e.length; var17_int++) {
+            for (int var17_int = 1; var17_int < ByteStorage.logoMeshes.length; var17_int++) {
               if (var21[var16] < var21[var17_int]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            TriangleMesh var17 = fh.field_e[var16];
+            TriangleMesh var17 = ByteStorage.logoMeshes[var16];
             LoginMethod.a(var16, 61);
             for (int var18 = 0; 3 > var18; var18++) {
               TerrainMaskSupport.field_c[var18] = TerrainMaskSupport.field_c[var18] + SectorCacheStore.field_c[var15][var18];

@@ -419,7 +419,7 @@ class UiComponent extends IntrusiveNode {
           }
           break;
         }
-        String var5 = eo.a((byte) 46);
+        String var5 = TickClock.a((byte) 46);
         if (var5 != null) {
           mb.field_g.drawTooltip((byte) -44, var5, DraggableWidget.field_O, ci.field_g);
         }

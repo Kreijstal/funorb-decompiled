@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pl extends ld {
+final class AlternateUsernameCredentials extends UsernameCredentials {
     private static long[] field_l;
     static float field_t;
     static PcmStreamMixer field_n;
@@ -31,20 +31,20 @@ final class pl extends ld {
         field_l = null;
     }
 
-    final fk a(byte param0) {
-        if (param0 != 32) {
-          return (fk) null;
+    final LoginCredentialType type(byte guard) {
+        if (guard != 32) {
+          return (LoginCredentialType) null;
         }
         return ui.field_a;
     }
 
-    pl(long param0, String param1) {
+    AlternateUsernameCredentials(long param0, String param1) {
         super(param0, param1);
     }
 
     final static int[] d(int param0) {
-        if (null != bk.field_r) {
-          return bk.field_r.c(0);
+        if (null != SocketJs5Transport.field_r) {
+          return SocketJs5Transport.field_r.c(0);
         }
         int var1 = -48 % ((param0 - 76) / 47);
         return null;

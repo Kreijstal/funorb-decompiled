@@ -184,8 +184,8 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_S.tooltip = ModalPanel.field_K;
         this.field_I.tooltip = en.field_a;
         this.field_R.tooltip = co.field_f;
-        this.field_Q.tooltip = aa.field_b;
-        this.field_U.tooltip = pl.field_i;
+        this.field_Q.tooltip = RepeatedCharacterSupport.field_b;
+        this.field_U.tooltip = AlternateUsernameCredentials.field_i;
         this.field_N.tooltip = ta.field_k;
         this.field_J.tooltip = BoundedUrlRequest.field_h;
         this.field_S.setValidator(new NameAvailabilityValidator(this.field_S), (byte) 63);
@@ -530,8 +530,8 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         if (param1 != -15655) {
           return;
         }
-        if (null != bk.field_r) {
-          bk.field_r.b(-1, param0);
+        if (null != SocketJs5Transport.field_r) {
+          SocketJs5Transport.field_r.b(-1, param0);
         }
     }
 

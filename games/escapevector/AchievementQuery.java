@@ -23,9 +23,9 @@ final class AchievementQuery extends IntrusiveNode {
         if (param0 != -4292) {
           String var2 = (String) null;
           AchievementQuery.a(false, (String) null, true, (String) null);
-          return hf.field_a;
+          return LoginStage.field_a;
         }
-        return hf.field_a;
+        return LoginStage.field_a;
     }
 
     final static void a(boolean param0, String param1, boolean param2, String param3) {

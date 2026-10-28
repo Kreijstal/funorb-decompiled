@@ -123,7 +123,7 @@ final class of {
         gi.spriteOffsetYs = null;
         gn.spriteOffsetXs = null;
         qe.spriteIndices = (byte[][]) null;
-        bc.spriteHeights = null;
+        SavedDataQuerySupport.spriteHeights = null;
         qk.spritePalette = null;
         qh.spriteWidths = null;
     }

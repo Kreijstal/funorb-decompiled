@@ -64,7 +64,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         try {
           this.description = param1;
           if (null != this.description) {
-            int var3_int = dl.field_b.paragraphHeight(this.description, 260, dl.field_b.maxAscent);
+            int var3_int = RasterRestoreSupport.field_b.paragraphHeight(this.description, 260, RasterRestoreSupport.field_b.maxAscent);
             this.resizeAndCenter(255, 150 + var3_int, 300);
           }
           this.progressBar = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -79,12 +79,12 @@ final class LoadingProgressDialog extends ResizableModalPanel {
 
     final void drawPanelBackground(int screenY, int screenX, byte guard) {
         super.drawPanelBackground(screenY, screenX, (byte) 109);
-        dl.field_b.drawCentered(this.statusText, screenX + (this.width >> 1), 103 + screenY, 16777215, -1);
+        RasterRestoreSupport.field_b.drawCentered(this.statusText, screenX + (this.width >> 1), 103 + screenY, 16777215, -1);
         if (guard < 80) {
           this.field_eb = true;
           if (this.description != null) {
             SoftwareRasterizer.drawHorizontalLine(screenX + 20, -7 + (120 + screenY), 260, 8421504);
-            dl.field_b.drawParagraph(this.description, 20 + screenX, 8 + (screenY + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.maxAscent);
+            RasterRestoreSupport.field_b.drawParagraph(this.description, 20 + screenX, 8 + (screenY + 120), 260, 100, 16777215, -1, 1, 0, RasterRestoreSupport.field_b.maxAscent);
             return;
           }
           return;
@@ -93,7 +93,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           return;
         }
         SoftwareRasterizer.drawHorizontalLine(screenX + 20, -7 + (120 + screenY), 260, 8421504);
-        dl.field_b.drawParagraph(this.description, 20 + screenX, 8 + (screenY + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.maxAscent);
+        RasterRestoreSupport.field_b.drawParagraph(this.description, 20 + screenX, 8 + (screenY + 120), 260, 100, 16777215, -1, 1, 0, RasterRestoreSupport.field_b.maxAscent);
     }
 
     static {

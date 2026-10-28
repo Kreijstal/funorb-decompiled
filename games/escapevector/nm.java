@@ -9,7 +9,7 @@ final class nm {
           field_a = (PcmSample) null;
         }
         if (TextLayout.field_c != null) {
-          TextLayout.field_c.c(12497);
+          TextLayout.field_c.close(12497);
           TextLayout.field_c = null;
         }
     }

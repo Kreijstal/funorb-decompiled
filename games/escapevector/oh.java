@@ -16,7 +16,7 @@ final class oh extends IntrusiveNode {
     static String field_k;
     int field_j;
 
-    final static void a(vj param0, boolean param1, int param2, boolean param3, byte param4) {
+    final static void a(LoginCredentials param0, boolean param1, int param2, boolean param3, byte param4) {
         String stackIn_25_2 = null;
         try {
           NameSuggestionsPanel.field_O[0] = gk.field_a.nextInt();
@@ -30,7 +30,7 @@ final class oh extends IntrusiveNode {
           qj.field_a.writeInt((byte) 126, NameSuggestionsPanel.field_O[3]);
           StripedProgressBar.writeInstallationSeed(0, qj.field_a);
           qj.field_a.writeShort(13, param2);
-          param0.a(qj.field_a, (byte) -121);
+          param0.writeTo(qj.field_a, (byte) -121);
           QuickChatDynamicCommand.outgoingPackets.position = 0;
           if (!param1) {
             QuickChatDynamicCommand.outgoingPackets.writeByte(16, -123);
@@ -92,8 +92,8 @@ final class oh extends IntrusiveNode {
           field_g = null;
           return;
         }
-        vj var2 = (vj) null;
-        oh.a((vj) null, true, 101, true, (byte) -46);
+        LoginCredentials var2 = (LoginCredentials) null;
+        oh.a((LoginCredentials) null, true, 101, true, (byte) -46);
         field_p = null;
         field_k = null;
         field_n = null;

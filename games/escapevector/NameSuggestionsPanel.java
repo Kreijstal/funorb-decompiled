@@ -4,7 +4,7 @@
 final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
     static int field_N;
     private TextButton[] field_K;
-    static pj field_I;
+    static BufferedSocket field_I;
     static String field_J;
     private NameSuggestionListener field_L;
     private String[] field_M;
@@ -45,7 +45,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             for (int var5 = 0; var5 < var3_int; var5++) {
               this.field_K[var5] = new TextButton(this.field_M[var5], (UiListener) (this));
               this.field_K[var5].painter = (WidgetPainter) ((Object) var4);
-              this.field_K[var5].tooltip = ei.field_n;
+              this.field_K[var5].tooltip = SavedDataQuery.field_n;
               this.field_K[var5].setBounds(80, 16 * var5 + 20, 0, true, 15);
               this.addChild(this.field_K[var5], false);
             }
@@ -207,7 +207,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         int var7 = EscapeVector.obfuscationControl;
         try {
           if (guard != 1) {
-            field_I = (pj) null;
+            field_I = (BufferedSocket) null;
           }
           for (int var6_int = 0; var6_int < this.field_M.length; var6_int++) {
             if (this.field_K[var6_int] == button) {

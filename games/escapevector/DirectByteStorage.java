@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km extends fh {
+final class DirectByteStorage extends ByteStorage {
     static Sprite field_k;
     static String field_o;
     static int[] field_j;
     static String field_l;
-    private java.nio.ByteBuffer field_m;
+    private java.nio.ByteBuffer buffer;
     static ViewportController field_n;
 
-    final byte[] a(int param0) {
-        if (param0 != 4) {
+    final byte[] toByteArray(int guard) {
+        if (guard != 4) {
           field_j = (int[]) null;
         }
-        byte[] var3 = new byte[this.field_m.capacity()];
+        byte[] var3 = new byte[this.buffer.capacity()];
         byte[] var2 = var3;
-        this.field_m.position(0);
-        this.field_m.get(var3);
+        this.buffer.position(0);
+        this.buffer.get(var3);
         return var3;
     }
 
@@ -27,32 +27,32 @@ final class km extends fh {
         field_n = null;
         field_l = null;
         if (guard != -4) {
-          km.a(111, 74);
+          DirectByteStorage.writeAchievementQuery(111, 74);
         }
     }
 
-    final void a(boolean param0, byte[] param1) {
+    final void setBytes(boolean guard, byte[] bytes) {
         try {
-          this.field_m = java.nio.ByteBuffer.allocateDirect(param1.length);
-          this.field_m.position(0);
-          if (!param0) {
-            this.field_m = (java.nio.ByteBuffer) null;
+          this.buffer = java.nio.ByteBuffer.allocateDirect(bytes.length);
+          this.buffer.position(0);
+          if (!guard) {
+            this.buffer = (java.nio.ByteBuffer) null;
           }
-          this.field_m.put(param1);
+          this.buffer.put(bytes);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "km.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "km.B(" + guard + ',' + (bytes != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void writeAchievementQuery(int opcode, int guard) {
         CipherPacketBuffer var2 = QuickChatDynamicCommand.outgoingPackets;
-        var2.writeCipheredOpcode(param0, true);
+        var2.writeCipheredOpcode(opcode, true);
         var2.writeByte(1, -123);
-        int var3 = -50 % ((61 - param1) / 57);
+        int var3 = -50 % ((61 - guard) / 57);
         var2.writeByte(2, -123);
     }
 
-    km() {
+    DirectByteStorage() {
     }
 
     final static void b(byte param0) {
@@ -71,7 +71,7 @@ final class km extends fh {
         fg.b(0);
     }
 
-    final static void a(PacketBuffer param0, SystemTaskService param1, int param2, int param3) {
+    final static void readReflectionCheck(PacketBuffer buffer, SystemTaskService taskService, int unused, int guard) {
         try {
           String stackIn_39_2 = null;
           String stackIn_42_2 = null;
@@ -80,12 +80,12 @@ final class km extends fh {
           int var9 = 0;
           int var14 = EscapeVector.obfuscationControl;
           try {
-            if (param3 != -24183) {
+            if (guard != -24183) {
               return;
             }
             ReflectionCheck var17 = new ReflectionCheck();
-            var17.operationCount = param0.readUnsignedByte(0);
-            var17.id = param0.readInt(param3 + 19130);
+            var17.operationCount = buffer.readUnsignedByte(0);
+            var17.id = buffer.readInt(guard + 19130);
             var17.methodTasks = new SystemTask[var17.operationCount];
             var17.operations = new int[var17.operationCount];
             var17.errors = new int[var17.operationCount];
@@ -94,38 +94,38 @@ final class km extends fh {
             var17.fieldTasks = new SystemTask[var17.operationCount];
             for (int var5 = 0; var5 < var17.operationCount; var5++) {
               try {
-                int var6_int = param0.readUnsignedByte(0);
+                int var6_int = buffer.readUnsignedByte(0);
                 if (0 == var6_int ||
                   var6_int == 1 ||
                   var6_int == 2) {
-                  String var15 = param0.readString(false);
+                  String var15 = buffer.readString(false);
                   String var7 = var15;
-                  var8 = param0.readString(false);
+                  var8 = buffer.readString(false);
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param0.readInt(-5053);
+                    var9 = buffer.readInt(-5053);
                   }
                   var17.operations[var5] = var6_int;
                   var17.replacementValues[var5] = var9;
-                  var17.fieldTasks[var5] = param1.a(var8, en.a(var15, (byte) 38), PacketBuffer.xor(param3, 24120));
+                  var17.fieldTasks[var5] = taskService.a(var8, en.a(var15, (byte) 38), PacketBuffer.xor(guard, 24120));
                 } else if (var6_int == 3 ||
                   var6_int == 4) {
-                  String var19 = param0.readString(false);
-                  var8 = param0.readString(false);
-                  var9 = param0.readUnsignedByte(param3 + 24183);
+                  String var19 = buffer.readString(false);
+                  var8 = buffer.readString(false);
+                  var9 = buffer.readUnsignedByte(guard + 24183);
                   String[] var10 = new String[var9];
                   for (int var11_int = 0; var11_int < var9; var11_int++) {
-                    var10[var11_int] = param0.readString(false);
+                    var10[var11_int] = buffer.readString(false);
                   }
                   byte[][] var20 = new byte[var9][];
                   byte[][] var18 = var20;
                   byte[][] var11 = var18;
                   if (var6_int == 3) {
                     for (int var12_int = 0; var12_int < var9; var12_int++) {
-                      int var13 = param0.readInt(param3 ^ 19914);
+                      int var13 = buffer.readInt(guard ^ 19914);
                       byte[] array$0 = new byte[var13];
                       var11[var12_int] = array$0;
-                      param0.readBytes(var20[var12_int], (byte) -96, 0, var13);
+                      buffer.readBytes(var20[var12_int], (byte) -96, 0, var13);
                     }
                   }
                   var17.operations[var5] = var6_int;
@@ -136,7 +136,7 @@ final class km extends fh {
                     var12[var16] = en.a(var10[var16], (byte) 38);
                     var16++;
                   }
-                  var17.methodTasks[var5] = param1.a(var8, PacketBuffer.xor(param3, -24074), en.a(var19, (byte) 38), var12);
+                  var17.methodTasks[var5] = taskService.a(var8, PacketBuffer.xor(guard, -24074), en.a(var19, (byte) 38), var12);
                   var17.serializedArguments[var5] = var20;
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
@@ -168,18 +168,18 @@ final class km extends fh {
             RuntimeException var4 = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_38_0 = var4;
             StringBuilder stackIn_38_1 = new StringBuilder().append("km.F(");
-            if (param0 == null) {
+            if (buffer == null) {
               stackIn_39_2 = "null";
             } else {
               stackIn_39_2 = "{...}";
             }
             StringBuilder stackIn_41_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',');
-            if (param1 == null) {
+            if (taskService == null) {
               stackIn_42_2 = "null";
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw t.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(unused).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -200,9 +200,9 @@ final class km extends fh {
           PointCloudEffect.field_u = (63 & var2_intLifetime1) << 15;
           PointCloudEffect.field_u = PointCloudEffect.field_u + (param0.readUnsignedByte(param1 - 1238559653) << 7);
           int var2_intLifetime2 = param0.readUnsignedByte(param1 ^ param1);
-          bk.field_s = (var2_intLifetime2 & 1) << 16;
+          SocketJs5Transport.field_s = (var2_intLifetime2 & 1) << 16;
           PointCloudEffect.field_u = PointCloudEffect.field_u + (var2_intLifetime2 >> 1);
-          bk.field_s = bk.field_s + param0.readUnsignedShort(1952);
+          SocketJs5Transport.field_s = SocketJs5Transport.field_s + param0.readUnsignedShort(1952);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "km.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

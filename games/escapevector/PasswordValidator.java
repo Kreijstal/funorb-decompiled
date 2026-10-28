@@ -18,7 +18,7 @@ final class PasswordValidator extends TextFieldValidator {
             return null;
           }
           String var5 = var4;
-          if (ol.a((byte) -7, var5)) {
+          if (LegacyWidgetStyle.isOutsidePasswordLength((byte) -7, var5)) {
             String stackIn_6_0 = TerrainMap.field_e;
             return stackIn_6_0;
           }
@@ -26,7 +26,7 @@ final class PasswordValidator extends TextFieldValidator {
             String stackIn_10_0 = gn.field_b;
             return stackIn_10_0;
           }
-          if (aa.a(1, var5)) {
+          if (RepeatedCharacterSupport.isRepeatedCharacter(1, var5)) {
             String stackIn_14_0 = PacketBuffer.field_j;
             return stackIn_14_0;
           }
@@ -181,10 +181,10 @@ final class PasswordValidator extends TextFieldValidator {
           return 1;
         }
         if (param0 == 1) {
-          return bc.field_g[param1];
+          return SavedDataQuerySupport.field_g[param1];
         }
         field_p = (ResourceArchive) null;
-        return bc.field_g[param1];
+        return SavedDataQuerySupport.field_g[param1];
     }
 
     public static void releaseStatics(int guard) {
@@ -200,8 +200,8 @@ final class PasswordValidator extends TextFieldValidator {
     }
 
     final static void b(int param0, int param1) {
-        if (null != bk.field_r) {
-          bk.field_r.a(param0, 3748);
+        if (null != SocketJs5Transport.field_r) {
+          SocketJs5Transport.field_r.a(param0, 3748);
         }
         if (param1 > -121) {
           PasswordValidator.a(-97, -50);

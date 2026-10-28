@@ -535,7 +535,7 @@ final class PointCloudEffect extends DualLinkNode {
             this.field_C[var10Lifetime1] = -262144 + (int)(524289.0 * Math.random());
             this.field_w[var10Lifetime1] = -262144 + (int)(Math.random() * 524289.0);
           }
-          pl.field_n.playSampleWithPan(param3, 100, BoundedRandomAccessFile.activeSession.spatialVolume(131072 * (param0.height + param0.width), var5_int, 96, var6), BoundedRandomAccessFile.activeSession.spatialPan(var5_int, 112));
+          AlternateUsernameCredentials.field_n.playSampleWithPan(param3, 100, BoundedRandomAccessFile.activeSession.spatialVolume(131072 * (param0.height + param0.width), var5_int, 96, var6), BoundedRandomAccessFile.activeSession.spatialPan(var5_int, 112));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -573,7 +573,7 @@ final class PointCloudEffect extends DualLinkNode {
             this.field_C[var4_int] = -262144 + (int)(Math.random() * 524289.0);
             this.field_w[var4_int] = -262144 + (int)(524289.0 * Math.random());
           }
-          pl.field_n.playSampleWithPan(param2, 100, BoundedRandomAccessFile.activeSession.spatialVolume(4194304, param0, 96, param1), BoundedRandomAccessFile.activeSession.spatialPan(param0, 109));
+          AlternateUsernameCredentials.field_n.playSampleWithPan(param2, 100, BoundedRandomAccessFile.activeSession.spatialVolume(4194304, param0, 96, param1), BoundedRandomAccessFile.activeSession.spatialPan(param0, 109));
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

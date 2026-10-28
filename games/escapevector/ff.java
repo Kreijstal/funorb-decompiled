@@ -75,12 +75,12 @@ final class ff {
         if (mj.field_d != 0) {
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
-            pl.field_q.a(400);
+            AlternateUsernameCredentials.field_q.a(400);
             SingleChildContainer.field_y = true;
             IntValueNode.field_j = true;
             return;
           }
-          pl.field_q.a(400);
+          AlternateUsernameCredentials.field_q.a(400);
           SingleChildContainer.field_y = true;
           IntValueNode.field_j = true;
           return;
@@ -88,32 +88,32 @@ final class ff {
         if (dj.field_c != null) {
           dj.field_c.fadeOut(2048);
         } else {
-          dj.field_c = PcmSampleStream.createAtRatePercentQ6(nn.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
+          dj.field_c = PcmSampleStream.createAtRatePercentQ6(SecondaryNodeHashTable.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
           ObjectSpriteSet.field_e.addSubstream(dj.field_c);
           sj.a(8192, (byte) 51);
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
-            pl.field_q.a(400);
+            AlternateUsernameCredentials.field_q.a(400);
             SingleChildContainer.field_y = true;
             IntValueNode.field_j = true;
             return;
           }
-          pl.field_q.a(400);
+          AlternateUsernameCredentials.field_q.a(400);
           SingleChildContainer.field_y = true;
           IntValueNode.field_j = true;
           return;
         }
-        dj.field_c = PcmSampleStream.createAtRatePercentQ6(nn.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
+        dj.field_c = PcmSampleStream.createAtRatePercentQ6(SecondaryNodeHashTable.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
         ObjectSpriteSet.field_e.addSubstream(dj.field_c);
         sj.a(8192, (byte) 51);
         if (mj.field_d < 1000) {
           mj.field_d = mj.field_d + 1;
-          pl.field_q.a(400);
+          AlternateUsernameCredentials.field_q.a(400);
           SingleChildContainer.field_y = true;
           IntValueNode.field_j = true;
           return;
         }
-        pl.field_q.a(400);
+        AlternateUsernameCredentials.field_q.a(400);
         SingleChildContainer.field_y = true;
         IntValueNode.field_j = true;
     }

@@ -53,8 +53,8 @@ final class fe {
           pc.field_e.tryLoadNamedGroup(0, "pump32")) {
           TriangleMesh.field_z = AccountRegistrationPanel.a(ThreeSliceButtonPainter.field_x, 54, "frame", "members_expansion_screen");
           ml.field_c = fe.a("members_expansion_screen", ThreeSliceButtonPainter.field_x, "arrow", true);
-          ac.field_c = DisplayNameForm.loadBinaryFont(4, pc.field_e, "arialish12", "", ThreeSliceButtonPainter.field_x);
-          ReflectionCheck.field_h = ac.a("", -73, ThreeSliceButtonPainter.field_x, "pump32", pc.field_e);
+          KeyboardStateSupport.field_c = DisplayNameForm.loadBinaryFont(4, pc.field_e, "arialish12", "", ThreeSliceButtonPainter.field_x);
+          ReflectionCheck.field_h = KeyboardStateSupport.loadCoverageFont("", -73, ThreeSliceButtonPainter.field_x, "pump32", pc.field_e);
           IntrusiveDequeCursor.field_e = p.a((byte) 8, "benefit_orbs", ThreeSliceButtonPainter.field_x, "members_expansion_screen");
           LoginMethod.field_c = p.a((byte) 8, "button_text", ThreeSliceButtonPainter.field_x, "members_expansion_screen");
           QuickChatDynamicCommand.field_a = ui.a("button_highlights", ThreeSliceButtonPainter.field_x, "members_expansion_screen", (byte) 71);
@@ -94,11 +94,11 @@ final class fe {
           }
         }
         this.field_c.drawTransparent(16, 302);
-        ac.field_c.drawParagraph(this.field_d[this.field_i], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+        KeyboardStateSupport.field_c.drawParagraph(this.field_d[this.field_i], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
         IntrusiveDequeCursor.field_e.drawTransparent(30, 330);
-        ac.field_c.drawParagraph(MatchingTextValidator.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        ac.field_c.drawParagraph(MatchingTextValidator.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        ac.field_c.drawParagraph(MatchingTextValidator.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        KeyboardStateSupport.field_c.drawParagraph(MatchingTextValidator.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        KeyboardStateSupport.field_c.drawParagraph(MatchingTextValidator.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        KeyboardStateSupport.field_c.drawParagraph(MatchingTextValidator.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
         LoginMethod.field_c.drawTransparent(508 + (127 - LoginMethod.field_c.fullWidth) / 2, 315);
         if (this.field_a.field_h == 0) {
           QuickChatDynamicCommand.field_a[0].drawTransparent(508, 299);
@@ -273,25 +273,25 @@ final class fe {
         if (param0 != -83) {
           field_k = 94;
         }
-        ol.field_E = new AccountRegistrationPanel();
-        rd.field_c.transitionToContent(ol.field_E, 30);
+        LegacyWidgetStyle.field_E = new AccountRegistrationPanel();
+        rd.field_c.transitionToContent(LegacyWidgetStyle.field_E, 30);
     }
 
     private final void b(int param0) {
         int var5 = EscapeVector.obfuscationControl;
         if (this.field_b == null) {
-          if (ac.field_c == null) {
+          if (KeyboardStateSupport.field_c == null) {
             return;
           }
-          ac.field_c.drawParagraph(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+          KeyboardStateSupport.field_c.drawParagraph(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           return;
         }
         IndexedSprite var6 = this.field_b[this.field_i];
         IndexedSprite var2 = var6;
         if (var2 != null) {
           var6.draw(9, 58);
-        } else if (null != ac.field_c) {
-          ac.field_c.drawParagraph(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+        } else if (null != KeyboardStateSupport.field_c) {
+          KeyboardStateSupport.field_c.drawParagraph(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
         }
         if (param0 > -109) {
           return;
@@ -334,7 +334,7 @@ final class fe {
             this.field_m = -71;
           }
           if (var7 != null &&
-            fk.a(false, (CharSequence) ((Object) var7))) {
+            LoginCredentialType.isDecimalText(false, (CharSequence) ((Object) var7))) {
             this.field_o = gn.a(16777215, (CharSequence) ((Object) var7));
           } else {
             this.field_o = 2;
@@ -387,18 +387,18 @@ final class fe {
             return;
           }
           this.field_g = new Sprite(622, 47);
-          eo.a(this.field_g, (byte) -90);
+          TickClock.pushSpriteRaster(this.field_g, (byte) -90);
           SoftwareRasterizer.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           int var2 = 16448250;
           int var3 = 10068666;
           int[] var17 = ug.a(1746055568, var3, var2);
           this.a(ReflectionCheck.field_h, 0, 0, 47, 622, 0, this.field_f, var17);
-          dl.a((byte) 107);
+          RasterRestoreSupport.popRasterState((byte) 107);
           this.field_c = new Sprite(475, 24);
           this.a(0, ReflectionCheck.field_h, NineSliceFrame.field_d, 24, 0, this.field_c, -4, 0.75f, var17, 475);
           int[] var18 = ug.a(1746055568, 526344, 526344);
           Sprite var5 = new Sprite(121, 122);
-          eo.a(var5, (byte) -40);
+          TickClock.pushSpriteRaster(var5, (byte) -40);
           SoftwareRasterizer.fillVerticalGradient(0, 0, var5.width, var5.height / 2, 16180917, 16306250);
           if (param0 <= 63) {
             String var8 = (String) null;
@@ -410,11 +410,11 @@ final class fe {
           this.a(0, ReflectionCheck.field_h, var6, var5.height, 0, var5, -16, 0.5f, var18, var5.width);
           this.a(0, ReflectionCheck.field_h, var7, var5.height, 0, var5, 20, 0.5f, var18, var5.width);
           this.a(0, ReflectionCheck.field_h, p.field_f[this.field_o], var5.height / 3, 0, var5, -ReflectionCheck.field_h.maxAscent + (var5.height / 2 + 12), 0.699999988079071f, var18, var5.width);
-          dl.a((byte) -54);
+          RasterRestoreSupport.popRasterState((byte) -54);
           this.field_h = new Sprite(121, 122);
-          eo.a(this.field_h, (byte) -104);
+          TickClock.pushSpriteRaster(this.field_h, (byte) -104);
           var5.drawCenteredRotatedScaledBilinear(this.field_h.width / 2, this.field_h.height / 2, -2048, 4096);
-          dl.a((byte) -12);
+          RasterRestoreSupport.popRasterState((byte) -12);
           return;
         }
     }
@@ -422,7 +422,7 @@ final class fe {
     private final void a(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, String param6, int[] param7) {
         int var12 = EscapeVector.obfuscationControl;
         try {
-          hf.a(param2 ^ 26);
+          LoginStage.pushRasterState(param2 ^ 26);
           for (int var9_int = param1; var9_int < param3; var9_int++) {
             SoftwareRasterizer.setClip(param5, var9_int, param4, 1 + var9_int);
             int var10 = var9_int * param7.length / param3;
@@ -432,7 +432,7 @@ final class fe {
           if (param2 != 0) {
             this.field_d = (String[]) null;
           }
-          dl.a((byte) -95);
+          RasterRestoreSupport.popRasterState((byte) -95);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "fe.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
@@ -496,13 +496,13 @@ final class fe {
           int var11_int = (int)((float)param9 / param7);
           int var12 = (int)((float)param3 / param7);
           Sprite var13 = new Sprite(var11_int, var12);
-          eo.a(var13, (byte) -125);
+          TickClock.pushSpriteRaster(var13, (byte) -125);
           param5.drawScaled((int)((float)(-param4) / param7), (int)((float)(-param6) / param7), (int)((float)param5.width / param7), (int)((float)param5.height / param7));
           this.a(param1, param0, 0, var12, var11_int, 0, param2, param8);
-          dl.a((byte) -81);
-          eo.a(param5, (byte) -105);
+          RasterRestoreSupport.popRasterState((byte) -81);
+          TickClock.pushSpriteRaster(param5, (byte) -105);
           var13.drawDownscaled(param4, param6, param9, param3);
-          dl.a((byte) 123);
+          RasterRestoreSupport.popRasterState((byte) 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

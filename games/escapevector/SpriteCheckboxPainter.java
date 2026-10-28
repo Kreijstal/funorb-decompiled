@@ -59,7 +59,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         if (param0 != -1021831775) {
           field_b = (ShipHullGeometry) null;
         }
-        if (!SelfDestructEffects.field_j.d(-3994)) {
+        if (!SelfDestructEffects.field_j.processNetwork(-3994)) {
           return PasswordFieldPainter.f(param0 + 1021831755);
         }
         return 0;

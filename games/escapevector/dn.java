@@ -37,7 +37,7 @@ final class dn {
         SpriteStrip[] var2 = this.b(false);
         String[] var3 = new String[]{gk.field_b, UiContainer.field_D, nl.field_a, kc.field_a, ArchiveProvider.field_c, gn.field_l, NodeHashTableIterator.field_a};
         this.a(var3, (byte) -10);
-        BinaryBitmapFont var4 = fh.field_g;
+        BinaryBitmapFont var4 = ByteStorage.gameFont;
         int var5 = 16777215;
         int var6 = this.g((byte) 49);
         this.field_o = new SpriteLabelColumns(IterableDualLinkDeque.field_a, var2, var3);
@@ -240,7 +240,7 @@ final class dn {
           da.field_c.b(false, 320);
         }
         if (this.field_e == param1) {
-          pl.field_q.b(-26480, false);
+          AlternateUsernameCredentials.field_q.b(-26480, false);
         }
         mj.field_d = 0;
         gi.a((byte) -118);
@@ -303,14 +303,14 @@ final class dn {
 
     private final Sprite[] a(int param0, int param1) {
         if (EmailSyntaxValidator.a(param1, -2)) {
-          Sprite[] var3 = mb.field_f;
+          Sprite[] var3 = mb.objectSprites;
           return this.a(var3, param0 + 4802);
         }
         if (!UiContainer.e((byte) -75)) {
           return null;
         }
         if (param1 == 2) {
-          Sprite[] var3Lifetime1 = mb.field_f;
+          Sprite[] var3Lifetime1 = mb.objectSprites;
           return this.a(var3Lifetime1, -126);
         }
         if (param1 == 3) {
@@ -457,7 +457,7 @@ final class dn {
         int var5 = this.field_t - this.field_h / 2;
         int var6 = 0;
         int var7 = 10;
-        BinaryBitmapFont var8 = fh.field_g;
+        BinaryBitmapFont var8 = ByteStorage.gameFont;
         int[] var16 = this.a(var7, true, var6, var4, var5, var8);
         var6 = var6 + var16.length;
         int var10 = this.field_t + this.field_h / 2;
@@ -495,7 +495,7 @@ final class dn {
         GameplaySession var5 = BoundedRandomAccessFile.activeSession;
         GameplaySession var6 = var5;
         if (var6 == null) {
-          String[] var3 = new String[]{on.field_c, fk.field_e};
+          String[] var3 = new String[]{on.field_c, LoginCredentialType.field_e};
           return var3;
         }
         regionExit1: {
@@ -585,7 +585,7 @@ final class dn {
     }
 
     private final void b(byte param0) {
-        BinaryBitmapFont var2 = fh.field_g;
+        BinaryBitmapFont var2 = ByteStorage.gameFont;
         if (param0 != 88) {
           return;
         }
@@ -597,7 +597,7 @@ final class dn {
     }
 
     private final void c(int param0) {
-        String var2 = km.field_o;
+        String var2 = DirectByteStorage.field_o;
         String[] var3 = new String[]{on.field_c};
         this.field_f = new LegacyTextBlock(var2, var3);
         this.a(this.field_f, param0 ^ 16762243);
@@ -605,8 +605,8 @@ final class dn {
         var2 = PairedTextColumns.field_s;
         this.field_B = new LegacyTextBlock(var2, var3);
         this.a(this.field_B, 16777215);
-        var2 = pl.field_p;
-        var3 = new String[]{TriangleMesh.field_p + "<br>" + "<br>", fk.field_e};
+        var2 = AlternateUsernameCredentials.field_p;
+        var3 = new String[]{TriangleMesh.field_p + "<br>" + "<br>", LoginCredentialType.field_e};
         this.field_s = new LegacyTextBlock(var2, var3);
         if (param0 != 14972) {
           return;
@@ -618,7 +618,7 @@ final class dn {
         try {
           int var3_int = param1;
           int var4 = this.g((byte) 84);
-          BinaryBitmapFont var5 = fh.field_g;
+          BinaryBitmapFont var5 = ByteStorage.gameFont;
           param0.configure(var4, var5, var3_int, -87);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dn.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -626,7 +626,7 @@ final class dn {
     }
 
     final static void a(String param0, int param1, float param2) {
-        pl.field_t = param2;
+        AlternateUsernameCredentials.field_t = param2;
         if (param1 != 17637) {
           return;
         }
@@ -1055,7 +1055,7 @@ final class dn {
         int var4 = 16777215;
         int var5 = this.f((byte) 70);
         int var6 = this.g((byte) 115);
-        BinaryBitmapFont var7 = fh.field_g;
+        BinaryBitmapFont var7 = ByteStorage.gameFont;
         this.field_c = new PairedTextColumns(RegistrationRequestDialog.field_yb, var8, var3);
         this.field_c.configureColumns(var6, var5, var4, (byte) -92, var7);
     }

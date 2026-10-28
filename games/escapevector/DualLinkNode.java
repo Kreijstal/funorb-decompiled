@@ -48,14 +48,14 @@ class DualLinkNode extends IntrusiveNode {
     final static void a(int param0, int param1) {
         int var9 = EscapeVector.obfuscationControl;
         boolean var2_int = (4 == param1);
-        Sprite[] var3 = mb.field_f;
+        Sprite[] var3 = mb.objectSprites;
         if (var2_int) {
           var3 = ArchiveProvider.field_b;
         }
         if (var3 == null) {
           return;
         }
-        Sprite[] var4 = StripedProgressBar.field_K;
+        Sprite[] var4 = StripedProgressBar.objectGlowSprites;
         if (param0 != -1) {
           field_h = (String) null;
         }
@@ -91,7 +91,7 @@ class DualLinkNode extends IntrusiveNode {
           TrackerMusicDefinition.field_j = param5;
           ReflectionCheck.field_n = param6;
           kh.field_c = param0;
-          SelfDestructEffects.field_j = (Js5Transport) ((Object) new bk());
+          SelfDestructEffects.field_j = (Js5Transport) ((Object) new SocketJs5Transport());
           ShipHullGeometry.field_b = new DiskCacheWorker(param1);
           FullscreenFocusCanvas.field_e = new sk(SelfDestructEffects.field_j, ShipHullGeometry.field_b);
         } catch (RuntimeException runtimeException) {

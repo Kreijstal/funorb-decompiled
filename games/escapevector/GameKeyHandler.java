@@ -176,7 +176,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               String var5Lifetime4 = var7;
               String var5Lifetime5 = var7;
               if (0 != param0.length()) {
-                var5Lifetime6 = var7 + "; Expires=" + bh.a(-106, 94608000000L + td.b(128)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + EmailCredentials.formatGmtTimestamp(-106, 94608000000L + td.b(128)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

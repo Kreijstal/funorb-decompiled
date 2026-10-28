@@ -32,7 +32,7 @@ final class SpriteOffset {
           ua.field_c = new kg();
           mj.field_d = 0;
           PacketBuffer.field_h = false;
-          pl.field_q.b(-26480, param0);
+          AlternateUsernameCredentials.field_q.b(-26480, param0);
           gi.a((byte) -66);
           return true;
         }
@@ -196,7 +196,7 @@ final class SpriteOffset {
           if (param0 <= 30) {
             SpriteOffset.a((byte) 80);
           }
-          IntrusiveNodeHashTable.field_f.a(237);
+          IntrusiveNodeHashTable.field_f.resetTiming(237);
           for (int var1_int = 0; 32 > var1_int; var1_int++) {
             wi.field_d[var1_int] = 0L;
           }

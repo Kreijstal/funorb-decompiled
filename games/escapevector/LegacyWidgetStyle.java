@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ol extends cd {
+class LegacyWidgetStyle extends LegacyStyleNode {
     private int field_eb;
     static AccountRegistrationPanel field_E;
     private Sprite field_Z;
@@ -44,22 +44,22 @@ class ol extends cd {
     private boolean field_J;
     private int field_hb;
 
-    final static byte[][] a(int param0, ResourceArchive param1, int[] param2, int param3, ResourceArchive param4) {
+    final static byte[][] loadCampaignLevels(int guard, ResourceArchive archive, int[] key, int mode, ResourceArchive memberArchive) {
         String stackIn_12_2 = null;
         String stackIn_15_2 = null;
         String stackIn_18_2 = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
-          int var5_int = je.a(false, param3);
+          int var5_int = je.a(false, mode);
           if (0 >= var5_int) {
             byte[][] stackIn_3_0 = (byte[][]) null;
             return stackIn_3_0;
           }
           byte[][] var6 = new byte[var5_int][];
           int var7 = 0;
-          int var8 = 103 / ((75 - param0) / 49);
+          int var8 = 103 / ((75 - guard) / 49);
           while (var5_int > var7) {
-            byte[] var9 = hf.a(param1, param2, var7, param3, param4, (byte) 97);
+            byte[] var9 = LoginStage.loadLevelBytes(archive, key, var7, mode, memberArchive, (byte) 97);
             var6[var7] = var9;
             var7++;
           }
@@ -69,20 +69,20 @@ class ol extends cd {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_11_0 = var5;
-          StringBuilder stackIn_11_1 = new StringBuilder().append("ol.C(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_11_1 = new StringBuilder().append("ol.C(").append(guard).append(',');
+          if (archive == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param2 == null) {
+          if (key == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          StringBuilder stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          StringBuilder stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(mode).append(',');
+          if (memberArchive == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
@@ -91,7 +91,7 @@ class ol extends cd {
         }
     }
 
-    ol(long param0, ol param1) {
+    LegacyWidgetStyle(long param0, LegacyWidgetStyle param1) {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
@@ -105,15 +105,15 @@ class ol extends cd {
         field_K = null;
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean isOutsidePasswordLength(byte guard, String password) {
         String stackIn_13_2 = null;
         try {
-          if (param0 != -7) {
+          if (guard != -7) {
             field_N = (HighscoreQuery[]) null;
           }
-          if (param1 != null &&
-            param1.length() >= ArchiveRequest.field_v) {
-            if (param1.length() > p.field_a) {
+          if (password != null &&
+            password.length() >= ArchiveRequest.field_v) {
+            if (password.length() > p.field_a) {
               return true;
             }
             return false;
@@ -123,8 +123,8 @@ class ol extends cd {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var2;
-          StringBuilder stackIn_12_1 = new StringBuilder().append("ol.F(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_12_1 = new StringBuilder().append("ol.F(").append(guard).append(',');
+          if (password == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -133,133 +133,133 @@ class ol extends cd {
         }
     }
 
-    private final void a(int param0, ol param1) {
+    private final void inheritOverrides(int guard, LegacyWidgetStyle template) {
         String stackIn_101_2 = null;
         try {
-          if (param0 != -1680) {
-            ol.releaseStatics(-110);
+          if (guard != -1680) {
+            LegacyWidgetStyle.releaseStatics(-110);
           }
-          if (param1 != null) {
-            if (!param1.field_W) {
-              this.field_W = param1.field_W;
+          if (template != null) {
+            if (!template.field_W) {
+              this.field_W = template.field_W;
             }
-            if (null != param1.field_V) {
-              this.field_V = param1.field_V;
+            if (null != template.field_V) {
+              this.field_V = template.field_V;
             }
-            if (-2147483648 != param1.field_C) {
-              this.field_C = param1.field_C;
+            if (-2147483648 != template.field_C) {
+              this.field_C = template.field_C;
             }
-            if (param1.field_gb != 256) {
-              this.field_gb = param1.field_gb;
+            if (template.field_gb != 256) {
+              this.field_gb = template.field_gb;
             }
-            if (param1.field_J) {
-              this.field_J = param1.field_J;
+            if (template.field_J) {
+              this.field_J = template.field_J;
             }
-            if (null != param1.field_A) {
-              this.field_A = param1.field_A;
+            if (null != template.field_A) {
+              this.field_A = template.field_A;
             }
-            if (null != param1.field_x) {
-              this.field_x = param1.field_x;
+            if (null != template.field_x) {
+              this.field_x = template.field_x;
             }
-            if (param1.field_X != 0) {
-              this.field_X = param1.field_X;
+            if (template.field_X != 0) {
+              this.field_X = template.field_X;
             }
-            if (param1.field_R != 0) {
-              this.field_R = param1.field_R;
+            if (template.field_R != 0) {
+              this.field_R = template.field_R;
             }
-            if (-2147483648 != param1.field_U) {
-              this.field_U = param1.field_U;
+            if (-2147483648 != template.field_U) {
+              this.field_U = template.field_U;
             }
-            if (param1.field_O != null) {
-              this.field_O = param1.field_O;
+            if (template.field_O != null) {
+              this.field_O = template.field_O;
             }
-            if (param1.field_G != 0) {
-              this.field_G = param1.field_G;
+            if (template.field_G != 0) {
+              this.field_G = template.field_G;
             }
-            if (param1.field_D != 0) {
-              this.field_D = param1.field_D;
+            if (template.field_D != 0) {
+              this.field_D = template.field_D;
             }
-            if (null != param1.field_Q) {
-              this.field_Q = param1.field_Q;
+            if (null != template.field_Q) {
+              this.field_Q = template.field_Q;
             }
-            if (param1.field_kb >= 0) {
-              this.field_kb = param1.field_kb;
+            if (template.field_kb >= 0) {
+              this.field_kb = template.field_kb;
             }
-            if (param1.field_S != null) {
-              this.field_S = param1.field_S;
+            if (template.field_S != null) {
+              this.field_S = template.field_S;
             }
-            if (-2147483648 != param1.field_H) {
-              this.field_H = param1.field_H;
+            if (-2147483648 != template.field_H) {
+              this.field_H = template.field_H;
             }
-            if (0 != param1.field_L) {
-              this.field_L = param1.field_L;
+            if (0 != template.field_L) {
+              this.field_L = template.field_L;
             }
-            if (param1.field_P != -2147483648) {
-              this.field_P = param1.field_P;
+            if (template.field_P != -2147483648) {
+              this.field_P = template.field_P;
             }
-            if (null != param1.field_w) {
-              this.field_w = param1.field_w;
+            if (null != template.field_w) {
+              this.field_w = template.field_w;
             }
-            if (param1.field_B) {
-              this.field_B = param1.field_B;
+            if (template.field_B) {
+              this.field_B = template.field_B;
             }
-            if (param1.field_eb >= 0) {
-              this.field_eb = param1.field_eb;
+            if (template.field_eb >= 0) {
+              this.field_eb = template.field_eb;
             }
-            if (param1.field_ib) {
-              this.field_ib = param1.field_ib;
+            if (template.field_ib) {
+              this.field_ib = template.field_ib;
             }
-            if (param1.field_Y >= 0) {
-              this.field_Y = param1.field_Y;
+            if (template.field_Y >= 0) {
+              this.field_Y = template.field_Y;
             }
-            if (param1.field_y) {
-              this.field_y = param1.field_y;
+            if (template.field_y) {
+              this.field_y = template.field_y;
             }
-            if (null != param1.field_db) {
-              this.field_db = param1.field_db;
+            if (null != template.field_db) {
+              this.field_db = template.field_db;
             }
-            if (param1.field_I) {
-              this.field_I = param1.field_I;
+            if (template.field_I) {
+              this.field_I = template.field_I;
             }
-            if (param1.field_T != -2147483648) {
-              this.field_T = param1.field_T;
+            if (template.field_T != -2147483648) {
+              this.field_T = template.field_T;
             }
-            if (param1.field_Z != null) {
-              this.field_Z = param1.field_Z;
+            if (template.field_Z != null) {
+              this.field_Z = template.field_Z;
             }
-            if (param1.field_F != 0) {
-              this.field_F = param1.field_F;
+            if (template.field_F != 0) {
+              this.field_F = template.field_F;
             }
-            if (null != param1.field_fb) {
-              this.field_fb = param1.field_fb;
+            if (null != template.field_fb) {
+              this.field_fb = template.field_fb;
             }
-            if (param1.field_jb != null) {
-              this.field_jb = param1.field_jb;
+            if (template.field_jb != null) {
+              this.field_jb = template.field_jb;
             }
-            if (0 != param1.field_bb) {
-              this.field_bb = param1.field_bb;
+            if (0 != template.field_bb) {
+              this.field_bb = template.field_bb;
             }
-            if (null != param1.field_z) {
-              this.field_z = param1.field_z;
+            if (null != template.field_z) {
+              this.field_z = template.field_z;
             }
-            if (0 <= param1.field_hb) {
-              this.field_hb = param1.field_hb;
+            if (0 <= template.field_hb) {
+              this.field_hb = template.field_hb;
             }
-            if (null != param1.field_cb) {
-              this.field_cb = param1.field_cb;
+            if (null != template.field_cb) {
+              this.field_cb = template.field_cb;
             }
-            if (param1.field_M == -2147483648) {
+            if (template.field_M == -2147483648) {
               return;
             }
-            this.field_M = param1.field_M;
+            this.field_M = template.field_M;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_100_0 = var3;
-          StringBuilder stackIn_100_1 = new StringBuilder().append("ol.D(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_100_1 = new StringBuilder().append("ol.D(").append(guard).append(',');
+          if (template == null) {
             stackIn_101_2 = "null";
           } else {
             stackIn_101_2 = "{...}";
@@ -268,7 +268,7 @@ class ol extends cd {
         }
     }
 
-    private ol(long param0, ol param1, int param2, int param3, int param4, int param5, String param6) {
+    private LegacyWidgetStyle(long param0, LegacyWidgetStyle param1, int param2, int param3, int param4, int param5, String param6) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         this.field_H = -2147483648;
@@ -286,7 +286,7 @@ class ol extends cd {
         this.field_hb = -1;
         try {
           this.key = param0;
-          this.a(-1680, param1);
+          this.inheritOverrides(-1680, param1);
           if (param6 != null) {
             this.field_S = param6;
           }

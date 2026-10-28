@@ -35,7 +35,7 @@ final class DialWidget extends TextButton {
           qk.spriteCount = var18.readUnsignedShort(1952);
           gn.spriteOffsetXs = new int[qk.spriteCount];
           UiContainer.spriteHasAlpha = new boolean[qk.spriteCount];
-          bc.spriteHeights = new int[qk.spriteCount];
+          SavedDataQuerySupport.spriteHeights = new int[qk.spriteCount];
           if (!guard) {
             byte[] var16 = (byte[]) null;
             DialWidget.decodeSpriteSheet((byte[]) null, false);
@@ -58,7 +58,7 @@ final class DialWidget extends TextButton {
             qh.spriteWidths[var4Lifetime2] = var18.readUnsignedShort(1952);
           }
           for (int var4Lifetime3 = 0; qk.spriteCount > var4Lifetime3; var4Lifetime3++) {
-            bc.spriteHeights[var4Lifetime3] = var18.readUnsignedShort(1952);
+            SavedDataQuerySupport.spriteHeights[var4Lifetime3] = var18.readUnsignedShort(1952);
           }
           var18.position = -(var3 * 3) - (-3 - (encoded.length - (7 + qk.spriteCount * 8)));
           qk.spritePalette = new int[var3];
@@ -71,7 +71,7 @@ final class DialWidget extends TextButton {
           var18.position = 0;
           for (int var4Lifetime5 = 0; var4Lifetime5 < qk.spriteCount; var4Lifetime5++) {
             int var5 = qh.spriteWidths[var4Lifetime5];
-            int var6 = bc.spriteHeights[var4Lifetime5];
+            int var6 = SavedDataQuerySupport.spriteHeights[var4Lifetime5];
             int var7 = var6 * var5;
             byte[] var21 = new byte[var7];
             byte[] var19 = var21;
@@ -145,7 +145,7 @@ final class DialWidget extends TextButton {
           if (this.radius * this.radius <= var8_int * var8_int + var9 * var9) {
             return true;
           }
-          double var10 = Math.atan2((double)var9, (double)var8_int) - hf.field_c;
+          double var10 = Math.atan2((double)var9, (double)var8_int) - LoginStage.field_c;
           if (0.0 > var10) {
             var10 = var10 - 3.141592653589793 / (double)this.stepCount;
           } else if (var10 > 0.0) {

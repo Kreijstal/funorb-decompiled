@@ -16,7 +16,7 @@ class TextButton extends UiComponent {
           Throwable decompiledCaughtException = null;
           int var7 = EscapeVector.obfuscationControl;
           try {
-            if (an.field_a) {
+            if (BrowserSessionMarkerState.markerSet) {
               return true;
             }
             try {

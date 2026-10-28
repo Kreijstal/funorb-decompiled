@@ -35,13 +35,13 @@ final class Minimap {
     private int[] field_o;
     private int field_l;
     boolean field_d;
-    private pe field_M;
+    private MinimapPoint field_M;
     private int field_b;
     private int field_F;
     private boolean field_I;
     private int field_G;
     private int field_k;
-    private pe field_z;
+    private MinimapPoint field_z;
     private int field_i;
     private boolean field_E;
     private int field_h;
@@ -168,7 +168,7 @@ final class Minimap {
     }
 
     private final Sprite a(int param0, int param1) {
-        BinaryBitmapFont var3 = fh.field_g;
+        BinaryBitmapFont var3 = ByteStorage.gameFont;
         int var4 = var3.maxAscent + var3.maxDescent;
         int var5 = var4 / 2;
         int var6 = (-var5 + var4) / 2;
@@ -395,8 +395,8 @@ final class Minimap {
             boolean var11 = stackIn_13_0;
             for (int var12 = 0; var12 < param7; var12++) {
               int var13 = var12 + param8;
-              if (this.field_M.field_a <= var13 &&
-                var13 < this.field_z.field_a) {
+              if (this.field_M.y <= var13 &&
+                var13 < this.field_z.y) {
                 int var14 = param1 * var12;
                 int var15 = var12 * this.field_f + var10_int;
                 int var16 = param5;
@@ -410,8 +410,8 @@ final class Minimap {
                 }
                 for (int var18 = 0; var18 < param1; var18++) {
                   int var19 = param2 + var18;
-                  if (this.field_M.field_b <= var19 &&
-                    var19 < this.field_z.field_b) {
+                  if (this.field_M.x <= var19 &&
+                    var19 < this.field_z.x) {
                     int var20 = var15 + var18;
                     if (var20 >= 0 &&
                       SoftwareRasterizer.pixels.length > var20) {
@@ -474,8 +474,8 @@ final class Minimap {
         int var6 = param3 + param0;
         int var7 = param2 + param4;
         int var8 = 6;
-        fk.a(var6 + var8, this.field_F, 73, 0, this.field_g, -var8 + param4, param0 - var8, 0, var7 + var8);
-        BinaryBitmapFont var9 = fh.field_g;
+        LoginCredentialType.a(var6 + var8, this.field_F, 73, 0, this.field_g, -var8 + param4, param0 - var8, 0, var7 + var8);
+        BinaryBitmapFont var9 = ByteStorage.gameFont;
         int var10 = var9.maxDescent + var9.maxAscent;
         if (param1 != 104) {
           this.field_E = false;
@@ -564,7 +564,7 @@ final class Minimap {
     }
 
     private final void c(byte param0) {
-        BinaryBitmapFont var2 = fh.field_g;
+        BinaryBitmapFont var2 = ByteStorage.gameFont;
         int var3 = 16777215;
         int var4 = 16777215;
         if (param0 != -112) {
@@ -716,10 +716,10 @@ final class Minimap {
         int var7 = var4 + var6;
         int var8 = (this.field_H - var5) / 2 + param2;
         int var9 = var8 + var5;
-        this.field_M.field_a = var8;
-        this.field_M.field_b = var6;
-        this.field_z.field_b = var7;
-        this.field_z.field_a = var9;
+        this.field_M.y = var8;
+        this.field_M.x = var6;
+        this.field_z.x = var7;
+        this.field_z.y = var9;
     }
 
     private final int a(int param0, byte param1, int param2, int param3) {
@@ -845,8 +845,8 @@ final class Minimap {
         this.field_k = 998158;
         this.field_G = 16776960;
         this.field_b = 3568436;
-        this.field_M = new pe(0, 0);
-        this.field_z = new pe(this.field_f, this.field_H);
+        this.field_M = new MinimapPoint(0, 0);
+        this.field_z = new MinimapPoint(this.field_f, this.field_H);
         this.field_i = 4;
         this.field_h = 4;
         this.field_A = 1138193;

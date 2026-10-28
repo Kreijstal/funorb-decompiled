@@ -7,7 +7,7 @@ abstract class TextLayout {
     static boolean field_b;
     static String field_f;
     TextLayoutLine[] lines;
-    static pj field_c;
+    static BufferedSocket field_c;
 
     final int lineForCharacter(int characterIndex, int firstLine) {
         int var5 = EscapeVector.obfuscationControl;

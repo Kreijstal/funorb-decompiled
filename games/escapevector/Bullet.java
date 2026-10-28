@@ -16,7 +16,7 @@ final class Bullet extends IntrusiveNode {
           if (guard > -90) {
             collisionLaserCount = -121;
           }
-          QuickChatDynamicCommand[] stackIn_4_0 = new QuickChatDynamicCommand[]{co.field_b, AccountMessagePanel.field_P, DialWidget.quickChatCommand, pl.field_m, ci.field_d, pj.field_k, sj.field_l, ea.field_g, LabeledField.field_H, AccountRegistrationPanel.field_L, le.field_a, an.field_c, mg.field_g, wa.field_d};
+          QuickChatDynamicCommand[] stackIn_4_0 = new QuickChatDynamicCommand[]{co.field_b, AccountMessagePanel.field_P, DialWidget.quickChatCommand, AlternateUsernameCredentials.field_m, ci.field_d, BufferedSocket.field_k, sj.field_l, ea.field_g, LabeledField.field_H, AccountRegistrationPanel.field_L, le.field_a, BrowserSessionMarkerState.field_c, mg.field_g, TrackerGainSupport.field_d};
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -193,11 +193,11 @@ final class Bullet extends IntrusiveNode {
               }
               if (!stackIn_14_0 ||
                 !(0 <= var14 * var17 - var16 * var15)) {
-                int var12Lifetime1 = km.field_j[var9];
+                int var12Lifetime1 = DirectByteStorage.field_j[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  int var13Lifetime1 = km.field_j[var10];
+                  int var13Lifetime1 = DirectByteStorage.field_j[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = km.field_j[var11];
+                    var14 = DirectByteStorage.field_j[var11];
                     if (var14 != -2147483648) {
                       var15 = -var6 + var14 + (var12Lifetime1 + var13Lifetime1);
                       stackIn_32_0 = (var7 >= 0) ? (var15 >> var7) : (var15 << -var7);
@@ -216,7 +216,7 @@ final class Bullet extends IntrusiveNode {
                         }
                         int stackIn_43_0Lifetime1 = var17 + (var16 << 4);
                         int var18 = stackIn_43_0Lifetime1;
-                        bc.field_f[var18] = var8;
+                        SavedDataQuerySupport.field_f[var18] = var8;
                         al.field_f[var16] = 1 + var17;
                         if (mesh.field_I > 0 &&
                           mesh.field_n != null) {

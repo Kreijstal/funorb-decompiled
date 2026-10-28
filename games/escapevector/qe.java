@@ -125,11 +125,11 @@ final class qe {
           this.field_j = (int[]) null;
         }
         String var4 = Integer.toString(this.field_d + 1);
-        fh.field_g.drawCentered(var4, 1 + (this.field_f.field_h - 1), -2 + this.field_f.field_b + this.field_b, this.field_g, -1);
-        fh.field_g.drawCentered(var4, 1 + this.field_f.field_h + 1, -2 + (this.field_f.field_b + this.field_b), this.field_g, -1);
-        fh.field_g.drawCentered(var4, this.field_f.field_h + 1, -1 + this.field_b + (this.field_f.field_b - 2), this.field_g, -1);
-        fh.field_g.drawCentered(var4, 1 + this.field_f.field_h, -1 + (this.field_b + this.field_f.field_b), this.field_g, -1);
-        fh.field_g.drawCentered(var4, 1 + this.field_f.field_h, -2 + (this.field_b + this.field_f.field_b), this.field_c, -1);
+        ByteStorage.gameFont.drawCentered(var4, 1 + (this.field_f.field_h - 1), -2 + this.field_f.field_b + this.field_b, this.field_g, -1);
+        ByteStorage.gameFont.drawCentered(var4, 1 + this.field_f.field_h + 1, -2 + (this.field_f.field_b + this.field_b), this.field_g, -1);
+        ByteStorage.gameFont.drawCentered(var4, this.field_f.field_h + 1, -1 + this.field_b + (this.field_f.field_b - 2), this.field_g, -1);
+        ByteStorage.gameFont.drawCentered(var4, 1 + this.field_f.field_h, -1 + (this.field_b + this.field_f.field_b), this.field_g, -1);
+        ByteStorage.gameFont.drawCentered(var4, 1 + this.field_f.field_h, -2 + (this.field_b + this.field_f.field_b), this.field_c, -1);
     }
 
     private final int a(boolean param0, int param1, int param2) {
@@ -284,10 +284,10 @@ final class qe {
           if (!LoadingProgressDialog.field_ab.tryLoadNamedGroup(0, "commonui")) {
             return 80;
           }
-          if (!pl.field_j.ensureIndex(0)) {
+          if (!AlternateUsernameCredentials.field_j.ensureIndex(0)) {
             return 82;
           }
-          if (!pl.field_j.tryLoadAllGroups((byte) -119)) {
+          if (!AlternateUsernameCredentials.field_j.tryLoadAllGroups((byte) -119)) {
             return 86;
           }
         } else {
@@ -303,10 +303,10 @@ final class qe {
           if (!LoadingProgressDialog.field_ab.tryLoadNamedGroup(0, "commonui")) {
             return 60;
           }
-          if (!pl.field_j.ensureIndex(0)) {
+          if (!AlternateUsernameCredentials.field_j.ensureIndex(0)) {
             return 70;
           }
-          if (!pl.field_j.tryLoadAllGroups((byte) -119)) {
+          if (!AlternateUsernameCredentials.field_j.tryLoadAllGroups((byte) -119)) {
             return 80;
           }
         }

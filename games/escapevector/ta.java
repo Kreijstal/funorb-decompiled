@@ -44,7 +44,7 @@ final class ta {
         if (var2 == null) {
           return;
         }
-        BinaryBitmapFont var4 = fh.field_g;
+        BinaryBitmapFont var4 = ByteStorage.gameFont;
         int var5 = var4.maxDescent + var4.maxAscent;
         int var6 = -var5 + this.field_q - 3 + var4.maxAscent;
         int var7 = 320;
@@ -56,7 +56,7 @@ final class ta {
         int var2 = 10;
         int var3 = var2;
         int var4 = 2;
-        BinaryBitmapFont var5 = fh.field_g;
+        BinaryBitmapFont var5 = ByteStorage.gameFont;
         int var7 = 8 / ((18 - param0) / 59);
         int var6 = this.e(-108);
         var6 = this.a(var5, 117, var3, var4, this.field_q, var6);
@@ -148,7 +148,7 @@ final class ta {
           return;
         }
         try {
-          BinaryBitmapFont var4 = fh.field_g;
+          BinaryBitmapFont var4 = ByteStorage.gameFont;
           int var5 = var4.maxAscent + var4.maxDescent;
           String var6 = CachedArchiveProvider.field_r[var3_int];
           int var7 = ((this.field_n.field_m - param1.fullHeight) / param0 - var5) / 3;
@@ -180,7 +180,7 @@ final class ta {
             kh.a(lh.b((byte) -116), -1230, true);
           }
           if (this.field_d == var6) {
-            pl.field_q.b(-26480, param1);
+            AlternateUsernameCredentials.field_q.b(-26480, param1);
             di.field_d = null;
           }
           e.field_a = false;
@@ -443,7 +443,7 @@ final class ta {
     }
 
     private final void c(boolean param0) {
-        BinaryBitmapFont var2 = fh.field_g;
+        BinaryBitmapFont var2 = ByteStorage.gameFont;
         if (!param0) {
           return;
         }
@@ -681,7 +681,7 @@ final class ta {
           return;
         }
         try {
-          BinaryBitmapFont var4 = fh.field_g;
+          BinaryBitmapFont var4 = ByteStorage.gameFont;
           int var5 = var4.maxAscent + var4.maxDescent;
           int var6 = 6340704;
           int var7 = 10551200;
@@ -911,7 +911,7 @@ final class ta {
           if (0 > var3_int) {
             return;
           }
-          BinaryBitmapFont var4 = fh.field_g;
+          BinaryBitmapFont var4 = ByteStorage.gameFont;
           int var5 = 10551200;
           int var6 = 6340704;
           String var7 = ResourceArchive.field_f[var3_int];

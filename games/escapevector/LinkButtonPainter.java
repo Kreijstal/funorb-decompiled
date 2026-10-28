@@ -3,7 +3,7 @@
  */
 final class LinkButtonPainter implements WidgetPainter {
     private BitmapFont font;
-    static hf field_c;
+    static LoginStage field_c;
     private int horizontalAlignment;
     private int verticalAlignment;
     static int[] field_e;
@@ -75,15 +75,15 @@ final class LinkButtonPainter implements WidgetPainter {
         int var19 = EscapeVector.obfuscationControl;
         try {
           if (0 <= param7 &&
-            bi.field_f > param2) {
+            MeshRasterState.clipHeight > param2) {
             if (param3 < 0 &&
               param0 < 0 &&
               param4 < 0) {
               return;
             }
-            if (param3 >= bi.field_c &&
-              bi.field_c <= param0 &&
-              bi.field_c <= param4) {
+            if (param3 >= MeshRasterState.clipWidth &&
+              MeshRasterState.clipWidth <= param0 &&
+              MeshRasterState.clipWidth <= param4) {
               return;
             }
             int var14 = -param2 + param7;
@@ -129,14 +129,14 @@ final class LinkButtonPainter implements WidgetPainter {
                 var13 = true;
               }
               if (param2 >= 0) {
-                var16Lifetime2 = bi.field_a[param2];
+                var16Lifetime2 = MeshRasterState.rowOffsets[param2];
                 while (param2 < param1) {
                   var17 = var9_int >> 16;
-                  if (bi.field_c > var17) {
+                  if (MeshRasterState.clipWidth > var17) {
                     var18 = (var10 >> 16) - (var9_int >> 16);
                     if (var18 != 0) {
-                      if (bi.field_c <= var17 + var18) {
-                        var18 = -1 - var17 + bi.field_c;
+                      if (MeshRasterState.clipWidth <= var17 + var18) {
+                        var18 = -1 - var17 + MeshRasterState.clipWidth;
                       }
                       if (var17 < 0) {
                         ModalPanel.halveAndAddPixels(-23466, var16Lifetime2, param6, var17 + var18, param8);
@@ -144,12 +144,12 @@ final class LinkButtonPainter implements WidgetPainter {
                         ModalPanel.halveAndAddPixels(-23466, var17 + var16Lifetime2, param6, var18, param8);
                       }
                     } else if (0 <= var17 &&
-                      bi.field_c > var17) {
+                      MeshRasterState.clipWidth > var17) {
                       ModalPanel.halveAndAddPixels(-23466, var17 + var16Lifetime2, param6, var18, param8);
                     }
                   }
                   param2++;
-                  if (param2 >= bi.field_f) {
+                  if (param2 >= MeshRasterState.clipHeight) {
                     return;
                   }
                   var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.width;
@@ -161,14 +161,14 @@ final class LinkButtonPainter implements WidgetPainter {
                 var10 = var10 + param2 * var12;
                 var9_int = var9_int + param2 * var11;
                 param2 = 0;
-                var16Lifetime2 = bi.field_a[param2];
+                var16Lifetime2 = MeshRasterState.rowOffsets[param2];
                 while (param2 < param1) {
                   var17 = var9_int >> 16;
-                  if (bi.field_c > var17) {
+                  if (MeshRasterState.clipWidth > var17) {
                     var18 = (var10 >> 16) - (var9_int >> 16);
                     if (var18 != 0) {
-                      if (bi.field_c <= var17 + var18) {
-                        var18 = -1 - var17 + bi.field_c;
+                      if (MeshRasterState.clipWidth <= var17 + var18) {
+                        var18 = -1 - var17 + MeshRasterState.clipWidth;
                       }
                       if (var17 < 0) {
                         ModalPanel.halveAndAddPixels(-23466, var16Lifetime2, param6, var17 + var18, param8);
@@ -176,12 +176,12 @@ final class LinkButtonPainter implements WidgetPainter {
                         ModalPanel.halveAndAddPixels(-23466, var17 + var16Lifetime2, param6, var18, param8);
                       }
                     } else if (0 <= var17 &&
-                      bi.field_c > var17) {
+                      MeshRasterState.clipWidth > var17) {
                       ModalPanel.halveAndAddPixels(-23466, var17 + var16Lifetime2, param6, var18, param8);
                     }
                   }
                   param2++;
-                  if (param2 >= bi.field_f) {
+                  if (param2 >= MeshRasterState.clipHeight) {
                     return;
                   }
                   var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.width;
@@ -215,14 +215,14 @@ final class LinkButtonPainter implements WidgetPainter {
               var9_int = var9_int + param2 * var11;
               param2 = 0;
             }
-            int var15Lifetime1 = bi.field_a[param2];
+            int var15Lifetime1 = MeshRasterState.rowOffsets[param2];
             while (param7 > param2) {
               int var16Lifetime1 = var9_int >> 16;
-              if (bi.field_c > var16Lifetime1) {
+              if (MeshRasterState.clipWidth > var16Lifetime1) {
                 int var17Lifetime1 = -(var9_int >> 16) + (var10 >> 16);
                 if (var17Lifetime1 != 0) {
-                  if (bi.field_c <= var17Lifetime1 + var16Lifetime1) {
-                    var17Lifetime1 = -1 + (-var16Lifetime1 + bi.field_c);
+                  if (MeshRasterState.clipWidth <= var17Lifetime1 + var16Lifetime1) {
+                    var17Lifetime1 = -1 + (-var16Lifetime1 + MeshRasterState.clipWidth);
                   }
                   if (var16Lifetime1 < 0) {
                     ModalPanel.halveAndAddPixels(-23466, var15Lifetime1, param6, var16Lifetime1 + var17Lifetime1, param8);
@@ -230,12 +230,12 @@ final class LinkButtonPainter implements WidgetPainter {
                     ModalPanel.halveAndAddPixels(-23466, var15Lifetime1 + var16Lifetime1, param6, var17Lifetime1, param8);
                   }
                 } else if (0 <= var16Lifetime1 &&
-                  bi.field_c > var16Lifetime1) {
+                  MeshRasterState.clipWidth > var16Lifetime1) {
                   ModalPanel.halveAndAddPixels(-23466, var16Lifetime1 + var15Lifetime1, param6, var17Lifetime1, param8);
                 }
               }
               param2++;
-              if (param2 >= bi.field_f) {
+              if (param2 >= MeshRasterState.clipHeight) {
                 return;
               }
               var9_int = var9_int + var11;
@@ -272,7 +272,7 @@ final class LinkButtonPainter implements WidgetPainter {
             return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param1 != -198630768) {
-            field_c = (hf) null;
+            field_c = (LoginStage) null;
           }
           CoverageBitmapFont stackIn_6_0 = ea.a(param2.getFile(param0, (byte) -97, param3), -1);
           return stackIn_6_0;
@@ -353,7 +353,7 @@ final class LinkButtonPainter implements WidgetPainter {
     }
 
     static {
-        field_c = new hf();
+        field_c = new LoginStage();
         field_e = new int[]{19, 27};
         field_a = false;
     }

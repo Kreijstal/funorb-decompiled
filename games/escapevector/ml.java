@@ -3,7 +3,7 @@
  */
 final class ml {
     static Sprite field_c;
-    static nn field_a;
+    static SecondaryNodeHashTable field_a;
     static String field_b;
 
     final static boolean a(char param0, int param1) {
@@ -61,7 +61,7 @@ final class ml {
 
     final static void a(ScoreSubmission param0, int param1, byte param2) {
         try {
-          vj.field_d.addLast(-12328, param0);
+          LoginCredentials.field_d.addLast(-12328, param0);
           ig.writeScoreSubmission(-75, param1, param0);
           if (param2 != 101) {
             ml.releaseStatics(-42);

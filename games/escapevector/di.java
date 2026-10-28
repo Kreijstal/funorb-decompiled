@@ -20,7 +20,7 @@ final class di {
           field_c = (String) null;
           GradientOutlineTextPainter.clearSharedKeyHandler(2);
           MatchingTextValidator.c(true);
-          ac.d(-16802);
+          KeyboardStateSupport.closeCacheServices(-16802);
           if (ClientException.a(-31879)) {
             QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(1, true);
             ClientException.a(0, 30785);
@@ -32,7 +32,7 @@ final class di {
         }
         GradientOutlineTextPainter.clearSharedKeyHandler(2);
         MatchingTextValidator.c(true);
-        ac.d(-16802);
+        KeyboardStateSupport.closeCacheServices(-16802);
         if (!ClientException.a(-31879)) {
           nm.a(16);
           return;

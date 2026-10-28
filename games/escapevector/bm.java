@@ -8,7 +8,7 @@ final class bm {
     static String field_f;
     static int field_c;
     static String field_e;
-    static nn field_b;
+    static SecondaryNodeHashTable field_b;
 
     final static void a(int param0) {
         ImageProducerRasterBuffer.d(param0 ^ 36);
