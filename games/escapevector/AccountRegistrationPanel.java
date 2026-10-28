@@ -55,7 +55,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String stackIn_10_2 = null;
         try {
           if (button == this.field_P) {
-            qe.a(true);
+            AnimatedPathMarker.showAccountChoice(true);
           } else if (this.field_K == button) {
             boolean discarded$1 = this.h((byte) 123);
           }
@@ -186,7 +186,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_R.tooltip = InputGlyphSupport.field_f;
         this.field_Q.tooltip = RepeatedCharacterSupport.field_b;
         this.field_U.tooltip = AlternateUsernameCredentials.field_i;
-        this.field_N.tooltip = ta.field_k;
+        this.field_N.tooltip = AchievementsScreen.field_k;
         this.field_J.tooltip = BoundedUrlRequest.field_h;
         this.field_S.setValidator(new NameAvailabilityValidator(this.field_S), (byte) 63);
         this.field_I.setValidator(new EmailSyntaxValidator(this.field_I), (byte) 63);
@@ -206,7 +206,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         PasswordFieldPainter dupTemp$1 = new PasswordFieldPainter(10000536);
         this.field_U.painter = (WidgetPainter) ((Object) dupTemp$1);
         this.field_Q.painter = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = SingleChildContainer.a(aj.field_b, -63, new String[]{this.j(66), this.k(3674)});
+        String var2 = SingleChildContainer.a(AccountSessionSupport.field_b, -63, new String[]{this.j(66), this.k(3674)});
         int var3 = 20;
         var3 = var3 + this.a(170, this.field_I, AccountNoticeDialog.field_Z, var3, 100);
         var3 = var3 + (this.a(20, this.field_R, 170, ri.field_a, 25, "", var3) + 5);

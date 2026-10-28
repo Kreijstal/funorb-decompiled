@@ -31,7 +31,7 @@ final class NanoTickClock extends TickClock {
               NanoTickClock.releaseStatics(-106);
             }
             MouseWheelInput.field_c = param5;
-            jc.field_b = param7;
+            KeyCodeSupport.field_b = param7;
             IntrusiveDeque.field_h = param11;
             StringNode.field_i = param13;
             StripedProgressBar.field_L = param6;

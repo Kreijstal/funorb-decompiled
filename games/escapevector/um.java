@@ -3,7 +3,7 @@
  */
 final class um {
     static byte[] field_b;
-    static fc field_d;
+    static AccountNoticeKind field_d;
     static String field_a;
     static String field_c;
 
@@ -13,7 +13,7 @@ final class um {
           if (QuickChatPhraseCache.field_e < 10) {
             return false;
           }
-          if (!SpriteState.field_u) {
+          if (!SpriteState.guestSession) {
             return !HudMessage.a(true) ? true : false;
           }
           return false;
@@ -21,7 +21,7 @@ final class um {
         if (QuickChatPhraseCache.field_e < 10) {
           return false;
         }
-        if (!SpriteState.field_u) {
+        if (!SpriteState.guestSession) {
           return !HudMessage.a(true) ? true : false;
         }
         return false;
@@ -41,7 +41,7 @@ final class um {
         field_b = new byte[65536];
         ArraySupport.fill(field_b, 0, 65536, (byte) -128);
         field_a = "Loading...";
-        field_d = new fc();
+        field_d = new AccountNoticeKind();
         field_c = "LEFT ARROW";
     }
 }

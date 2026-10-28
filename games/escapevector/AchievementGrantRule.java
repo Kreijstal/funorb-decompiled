@@ -12,10 +12,10 @@ final class AchievementGrantRule {
         String stackIn_20_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          ui.field_b = TriangleMesh.field_y;
+          MeshMaterial.field_b = TriangleMesh.field_y;
           if (responseCode == 255) {
-            boolean stackIn_5_0 = !(gf.field_a >= 13);
-            InputGlyphSupport.field_a = fc.a(stackIn_5_0, (byte) -79);
+            boolean stackIn_5_0 = !(AnimatedPanelFrame.field_a >= 13);
+            InputGlyphSupport.field_a = AccountNoticeKind.createBooleanResponse(stackIn_5_0, (byte) -79);
             AchievementThresholdRule.setAccountNameSuggestions((String[]) null, guard + 105);
           } else if (responseCode >= 100 &&
             responseCode <= 105) {
@@ -23,7 +23,7 @@ final class AchievementGrantRule {
             AchievementThresholdRule.setAccountNameSuggestions(var4, 4);
             InputGlyphSupport.field_a = BufferedRandomAccessFile.a(suggestions, (byte) -63);
           } else {
-            InputGlyphSupport.field_a = bm.a(message, responseCode, guard ^ -97);
+            InputGlyphSupport.field_a = NameAvailabilityResultSupport.createTextResponse(message, responseCode, guard ^ -97);
           }
           if (guard == -101) {
             return;

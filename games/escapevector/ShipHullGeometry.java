@@ -51,7 +51,7 @@ final class ShipHullGeometry {
         int stackIn_26_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_32_0 = 0;
-        ui stackIn_40_0 = null;
+        MeshMaterial stackIn_40_0 = null;
         int stackIn_46_0 = 0;
         int stackIn_50_0 = 0;
         String stackIn_56_2 = null;
@@ -103,7 +103,7 @@ final class ShipHullGeometry {
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (int var13Lifetime1 = 0; var13Lifetime1 < aj.field_d; var13Lifetime1++) {
+          for (int var13Lifetime1 = 0; var13Lifetime1 < AccountSessionSupport.field_d; var13Lifetime1++) {
             int var14Lifetime1 = SavedDataQuerySupport.field_f[var13Lifetime1];
             int var15Lifetime1 = param5.faceVertexA[var14Lifetime1];
             int var16 = param5.faceVertexB[var14Lifetime1];
@@ -126,16 +126,16 @@ final class ShipHullGeometry {
               stackIn_32_0 = -1;
             }
             int var20 = stackIn_32_0;
-            if (DialogueScreen.field_y != null &&
+            if (DialogueScreen.meshMaterials != null &&
               param5.field_m != null &&
               var14Lifetime1 < param5.field_m.length &&
               param5.field_m[var14Lifetime1] != -1 &&
-              param5.field_m[var14Lifetime1] < DialogueScreen.field_y.length) {
-              stackIn_40_0 = DialogueScreen.field_y[param5.field_m[var14Lifetime1]];
+              param5.field_m[var14Lifetime1] < DialogueScreen.meshMaterials.length) {
+              stackIn_40_0 = DialogueScreen.meshMaterials[param5.field_m[var14Lifetime1]];
             } else {
               stackIn_40_0 = null;
             }
-            ui var21 = stackIn_40_0;
+            MeshMaterial var21 = stackIn_40_0;
             int var22 = on.field_g[var15Lifetime1];
             int var23 = DraggableWidget.field_D[var15Lifetime1];
             int var24 = on.field_g[var16];
@@ -149,7 +149,7 @@ final class ShipHullGeometry {
               if (var21 == null) {
                 stackIn_50_0 = 8355711;
               } else {
-                stackIn_50_0 = var21.field_c;
+                stackIn_50_0 = var21.colorRgb;
               }
               var30 = stackIn_50_0;
               var31 = var30 & 16711935;
@@ -167,7 +167,7 @@ final class ShipHullGeometry {
               if (var21 == null) {
                 stackIn_46_0 = 8355711;
               } else {
-                stackIn_46_0 = var21.field_c;
+                stackIn_46_0 = var21.colorRgb;
               }
               int var34 = stackIn_46_0;
               int var35 = var34 & 16711935;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj {
+final class AccountSessionSupport {
     static int field_d;
     static fe field_a;
     static PcmStreamMixer field_f;
@@ -34,17 +34,17 @@ final class aj {
           return;
         }
         HighscoreQuery var2 = (HighscoreQuery) null;
-        aj.writeHighscoreQuery(45, 15, (HighscoreQuery) null);
+        AccountSessionSupport.writeHighscoreQuery(45, 15, (HighscoreQuery) null);
         field_f = null;
         field_c = null;
     }
 
-    final static boolean b(int param0) {
-        if (param0 > -88) {
+    final static boolean isGuestSession(int guard) {
+        if (guard > -88) {
           field_a = (fe) null;
-          return SpriteState.field_u;
+          return SpriteState.guestSession;
         }
-        return SpriteState.field_u;
+        return SpriteState.guestSession;
     }
 
     static {

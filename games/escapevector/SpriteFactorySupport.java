@@ -16,7 +16,7 @@ final class SpriteFactorySupport {
         Object var3Lifetime1;
         if (guard > 44) {
           int var1 = qh.spriteWidths[0] * SavedDataQuerySupport.spriteHeights[0];
-          byte[] var21 = qe.spriteIndices[0];
+          byte[] var21 = AnimatedPathMarker.spriteIndices[0];
           if (UiContainer.spriteHasAlpha[0]) {
             byte[] var20 = CheckboxPainter.spriteAlphas[0];
             int[] var13 = new int[var1];
@@ -38,7 +38,7 @@ final class SpriteFactorySupport {
         }
         SpriteFactorySupport.releaseStatics(24);
         int var1Lifetime1 = qh.spriteWidths[0] * SavedDataQuerySupport.spriteHeights[0];
-        byte[] var19 = qe.spriteIndices[0];
+        byte[] var19 = AnimatedPathMarker.spriteIndices[0];
         if (UiContainer.spriteHasAlpha[0]) {
           byte[] var18 = CheckboxPainter.spriteAlphas[0];
           int[] var13Lifetime1 = new int[var1Lifetime1];

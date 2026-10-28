@@ -143,7 +143,7 @@ final class sf {
         }
         int var3 = var2.score;
         int var4 = var2.gameMode;
-        var3 = DialogueScreen.a(var4, (byte) 126, var3);
+        var3 = DialogueScreen.scoreForSubmission(var4, (byte) 126, var3);
         if (param0 != -1) {
           this.b(90, -103);
         }

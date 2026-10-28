@@ -1135,13 +1135,13 @@ final class DynamicTerrainRenderer {
         int var14 = -var6;
         int var15 = var5 >= 0 ? 1 : -1;
         SoftwareRasterizer.setClip(var9, var11, var10, var12);
-        dj.a(var14, -24, var13);
+        AccountPanelInputSupport.drawCachedEdgeSegments(var14, -24, var13);
         SoftwareRasterizer.setClip(var7 * var15 + var9, var11, var10 + var5 * var15, var12);
-        dj.a(var14, -123, var13 + var15 * var3);
+        AccountPanelInputSupport.drawCachedEdgeSegments(var14, -123, var13 + var15 * var3);
         SoftwareRasterizer.setClip(var9, var11 + var8, var10, var6 + var12);
-        dj.a(var14 + var4, -127, var13);
+        AccountPanelInputSupport.drawCachedEdgeSegments(var14 + var4, -127, var13);
         SoftwareRasterizer.setClip(var9 + var7 * var15, var11 + var8, var10 + var5 * var15, var12 + var6);
-        dj.a(var14 + var4, -94, var3 * var15 + var13);
+        AccountPanelInputSupport.drawCachedEdgeSegments(var14 + var4, -94, var3 * var15 + var13);
         AlphaContainer.field_D.a(107);
         SoftwareRasterizer.restoreClip(this.savedClip);
     }

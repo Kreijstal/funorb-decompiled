@@ -5,7 +5,7 @@ final class AudioService implements Runnable {
     static String[][] field_b;
     volatile boolean running;
     static String field_a;
-    static fc field_h;
+    static AccountNoticeKind field_h;
     SystemTaskService tasks;
     volatile boolean stopRequested;
     volatile AudioOutput[] outputs;
@@ -382,7 +382,7 @@ final class AudioService implements Runnable {
 
     static {
         field_a = "Auto-shield reactivated";
-        field_h = new fc();
+        field_h = new AccountNoticeKind();
         field_d = new String[]{"All scores", "My scores", "Best each"};
     }
 

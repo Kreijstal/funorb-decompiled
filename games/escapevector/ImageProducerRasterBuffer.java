@@ -102,19 +102,19 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     }
 
     final static void e(int param0) {
-        jc.field_a[46] = 72;
-        jc.field_a[47] = 73;
-        jc.field_a[92] = 74;
-        jc.field_a[45] = 26;
-        jc.field_a[93] = 43;
+        KeyCodeSupport.awtToGameKeyCodes[46] = 72;
+        KeyCodeSupport.awtToGameKeyCodes[47] = 73;
+        KeyCodeSupport.awtToGameKeyCodes[92] = 74;
+        KeyCodeSupport.awtToGameKeyCodes[45] = 26;
+        KeyCodeSupport.awtToGameKeyCodes[93] = 43;
         int var1 = -51 / ((46 - param0) / 32);
-        jc.field_a[59] = 57;
-        jc.field_a[61] = 27;
-        jc.field_a[44] = 71;
-        jc.field_a[91] = 42;
-        jc.field_a[192] = 28;
-        jc.field_a[520] = 59;
-        jc.field_a[222] = 58;
+        KeyCodeSupport.awtToGameKeyCodes[59] = 57;
+        KeyCodeSupport.awtToGameKeyCodes[61] = 27;
+        KeyCodeSupport.awtToGameKeyCodes[44] = 71;
+        KeyCodeSupport.awtToGameKeyCodes[91] = 42;
+        KeyCodeSupport.awtToGameKeyCodes[192] = 28;
+        KeyCodeSupport.awtToGameKeyCodes[520] = 59;
+        KeyCodeSupport.awtToGameKeyCodes[222] = 58;
     }
 
     final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
@@ -132,7 +132,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     final static void d(int param0) {
         Checkbox.field_F.closeAllPanels(17415);
         if (ProxySocketConnector.field_r == null) {
-          ProxySocketConnector.field_r = new LoadingProgressDialog(Checkbox.field_F, dj.field_b);
+          ProxySocketConnector.field_r = new LoadingProgressDialog(Checkbox.field_F, AccountPanelInputSupport.field_b);
           if (param0 != 32) {
             field_l = (java.awt.Font) null;
             Checkbox.field_F.pushPanel(ProxySocketConnector.field_r, 61);

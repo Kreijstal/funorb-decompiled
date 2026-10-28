@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ThreeSliceButtonPainter extends TextWidgetPainter {
-    static fc field_A;
+    static AccountNoticeKind field_A;
     private int field_w;
     private Sprite[] field_s;
     private int field_z;
@@ -27,7 +27,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           }
           HighscoreQuery var5 = (HighscoreQuery) (AchievementRecord.field_n.first(false));
           while (var5 != null) {
-            aj.writeHighscoreQuery(42, opcode, var5);
+            AccountSessionSupport.writeHighscoreQuery(42, opcode, var5);
             var5 = (HighscoreQuery) (AchievementRecord.field_n.next((byte) 70));
           }
           return;
@@ -77,7 +77,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           if (guard >= -14) {
             this.field_w = -93;
           }
-          qe.a(-100, component.y + (originY + (-this.field_s[0].fullHeight + component.height >> 1)), component.width, this.field_s, var7, originX + component.x);
+          AnimatedPathMarker.drawThreeSliceTinted(-100, component.y + (originY + (-this.field_s[0].fullHeight + component.height >> 1)), component.width, this.field_s, var7, originX + component.x);
           this.font.drawParagraph(component.text, originX + component.x, component.y + originY - 2, component.width, component.height, var8, -1, 1, 1, this.font.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,7 +117,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
     }
 
     static {
-        field_A = new fc();
+        field_A = new AccountNoticeKind();
         field_t = new LoginStage();
         field_u = new String[]{"Anti-gravity", "Breach", "Cataclysm", "Dash", "Deep Vertigo", "Divided", "Explosive Exit", "Gravity Chamber", "Mine Field", "Orb", "Pinball", "Pulse", "Slanted Mines", "Upwards and Onwards", "Asteroids Normal", "Asteroids"};
         field_v = new GameKeyHandler();

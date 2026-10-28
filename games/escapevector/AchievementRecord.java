@@ -84,7 +84,7 @@ final class AchievementRecord extends IntrusiveNode {
     final static void a(boolean param0) {
         int var1;
         int var2 = EscapeVector.obfuscationControl;
-        dj.field_b = null;
+        AccountPanelInputSupport.field_b = null;
         if (param0) {
           SavedDataQuery.field_i = false;
           if (DialWidget.field_H) {
@@ -94,11 +94,11 @@ final class AchievementRecord extends IntrusiveNode {
           var1 = LaserGateSpan.field_g;
           if (var1 > 0) {
             if (var1 == 1) {
-              dj.field_b = cf.field_a;
+              AccountPanelInputSupport.field_b = cf.field_a;
             } else {
-              dj.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
+              AccountPanelInputSupport.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }
-            dj.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
+            AccountPanelInputSupport.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) AccountPanelInputSupport.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }
           be.field_b.closeDialog(-18861);
           ImageProducerRasterBuffer.d(32);
@@ -112,11 +112,11 @@ final class AchievementRecord extends IntrusiveNode {
           var1 = LaserGateSpan.field_g;
           if (var1 > 0) {
             if (var1 == 1) {
-              dj.field_b = cf.field_a;
+              AccountPanelInputSupport.field_b = cf.field_a;
             } else {
-              dj.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
+              AccountPanelInputSupport.field_b = SingleChildContainer.a(RasterSnapshot.field_j, -63, new String[]{Integer.toString(var1)});
             }
-            dj.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
+            AccountPanelInputSupport.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) AccountPanelInputSupport.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }
           be.field_b.closeDialog(-18861);
           ImageProducerRasterBuffer.d(32);

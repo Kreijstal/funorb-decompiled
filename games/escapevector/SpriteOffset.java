@@ -10,23 +10,23 @@ final class SpriteOffset {
     int y;
 
     final static boolean a(boolean param0, int param1) {
-        if (di.field_d.field_e) {
+        if (di.field_d.selectionChanged) {
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, 8192);
         }
         if (param1 != 0) {
           return false;
         }
-        if (!di.field_d.b((byte) -18)) {
+        if (!di.field_d.isInitialActivation((byte) -18)) {
           return false;
         }
-        if (di.field_d.field_h == 0) {
+        if (di.field_d.selectedIndex == 0) {
           pa.a(true);
           mj.field_d = 0;
           p.field_h = 2;
           ChatMessage.clearFrameOffsets((byte) -74);
           return true;
         }
-        if (di.field_d.field_h == 1) {
+        if (di.field_d.selectedIndex == 1) {
           IntValueNode.field_i = null;
           TrackerMusicDefinition.field_f = new AchievementTracker();
           ua.field_c = new kg();
@@ -62,8 +62,8 @@ final class SpriteOffset {
             field_a = (String) null;
           }
           while (AccountRequestDialog.pollKeyEvent(-108)) {
-            cb.field_c.c((byte) 6);
-            if (cb.field_c.b((byte) -18)) {
+            cb.field_c.handleKeyEvent((byte) 6);
+            if (cb.field_c.isInitialActivation((byte) -18)) {
               var1_int = true;
             }
             if (PasswordValidator.field_n != 13) {
@@ -71,14 +71,14 @@ final class SpriteOffset {
             }
             var2 = true;
           }
-          cb.field_c.a(CachedArchiveProvider.a((byte) 122, sf.field_c, LoginDialog.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y));
-          if (cb.field_c.b((byte) -18)) {
+          cb.field_c.updatePointer(CachedArchiveProvider.a((byte) 122, sf.field_c, LoginDialog.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y));
+          if (cb.field_c.isInitialActivation((byte) -18)) {
             var1_int = true;
           }
           int var3 = 0;
           if (var1_int &&
-            cb.field_c.field_h >= 0) {
-            var3 = CachedTextLayout.field_j[cb.field_c.field_h];
+            cb.field_c.selectedIndex >= 0) {
+            var3 = CachedTextLayout.field_j[cb.field_c.selectedIndex];
             if (2 == var3) {
               TextFieldValidator.e(0);
             } else if (var3 == 5) {

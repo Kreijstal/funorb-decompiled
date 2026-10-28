@@ -10,7 +10,7 @@ final class RepeatedCharacterSupport {
         if (10 > QuickChatPhraseCache.field_e) {
           return false;
         }
-        if (fc.field_a >= 13) {
+        if (AccountNoticeKind.frameworkLoadingStage >= 13) {
           return true;
         }
         return false;

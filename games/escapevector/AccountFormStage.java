@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al {
+final class AccountFormStage {
     static int[] field_f;
     static int[] field_a;
     static LoginStage field_d;
@@ -9,26 +9,26 @@ final class al {
     static long field_e;
     static String field_c;
 
-    final static int a(int param0, int param1) {
-        param0 = AccountChoicePanel.a(param1 - 34966, param0);
-        if (param0 < 0) {
+    final static int availableGameMode(int mode, int guard) {
+        mode = AccountChoicePanel.a(guard - 34966, mode);
+        if (mode < 0) {
           return -1;
         }
-        if (param0 == 1) {
+        if (mode == 1) {
           return 1;
         }
-        if (param0 == 0) {
+        if (mode == 0) {
           return 0;
         }
-        if (param0 == 2) {
+        if (mode == 2) {
           return 2;
         }
-        if (param0 == 3) {
+        if (mode == 3) {
           return 3;
         }
-        if (param1 != 26504) {
+        if (guard != 26504) {
           SystemTaskService var3 = (SystemTaskService) null;
-          al.a(-101, -4, (SystemTaskService) null, 127, 70, -30);
+          AccountFormStage.createFullscreenCanvas(-101, -4, (SystemTaskService) null, 127, 70, -30);
         }
         return -1;
     }
@@ -42,29 +42,29 @@ final class al {
         field_a = null;
         field_d = null;
         if (guard > -1) {
-          al.a((byte) 104);
+          AccountFormStage.buildRgbSpriteFromSheet((byte) 104);
         }
         field_f = null;
         field_c = null;
     }
 
-    final static Sprite a(byte param0) {
+    final static Sprite buildRgbSpriteFromSheet(byte guard) {
         int var5 = EscapeVector.obfuscationControl;
         int var1 = SavedDataQuerySupport.spriteHeights[0] * qh.spriteWidths[0];
-        byte[] var2 = qe.spriteIndices[0];
+        byte[] var2 = AnimatedPathMarker.spriteIndices[0];
         int[] var3 = new int[var1];
         for (int var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var2[var4_int], 255)];
         }
         Sprite var4 = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var3);
         SpriteDecodeSupport.releaseSpriteSheet(false);
-        if (param0 < 98) {
+        if (guard < 98) {
           field_a = (int[]) null;
         }
         return var4;
     }
 
-    final static FullscreenFocusCanvas a(int param0, int param1, SystemTaskService param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, SystemTaskService param2, int param3, int param4, int param5) {
         String stackIn_10_2 = null;
         try {
           java.awt.Frame var8 = IntrusiveNodeHashTable.a((byte) 93, param0, param3, param2, param4, param5);

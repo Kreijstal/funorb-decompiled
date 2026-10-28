@@ -2,9 +2,9 @@
 
 This is the only published Java tree. Reviewed rules and the reproducer live in dekobloko-work/readable. The current reverse dictionary is ../../decompilation/escapevector-naming.json.
 
-This pass names 261 reviewed classes and 7235 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
+This pass names 275 reviewed classes and 7855 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
 
-Coverage: 263/349 class declarations and 1856/2781 methods have readable names; 277 constructors follow their owning class. 86 classes and 925 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
+Coverage: 277/349 class declarations and 2004/2781 methods have readable names; 277 constructors follow their owning class. 72 classes and 777 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
 
 ## Entry points
 
@@ -59,6 +59,12 @@ Every PacketBuffer, ResourceArchive and TriangleMesh method has a reviewed name.
 `QuickChatDynamicCommand` contains a command ID and configuration parameter count, not a network opcode. `QuickChatPhraseDefinition.decode` reads text fragments, response IDs and dynamic command parameters; `previewText` joins fragments with ellipses and `markGlobalResponses` sets response bit 15. `ReflectionCheck` retains queued reflection lookup tasks and operation metadata; `writeReflectionCheckResults` waits for pending tasks, writes result/error codes plus CRC and unlinks a completed check. Unrelated static UI helpers stay on their original owners.
 
 `DialogueScreen.advanceDialogue` handles reveal timing, input and scene changes; `drawDialogue` draws the current image/text. IntrusiveNode/IntrusiveDeque expose primary ownership and traversal; DualLinkNode has independent secondary links. Sprite/SpriteState separate RGB pixels, trimmed dimensions and offsets. SoftwareRasterizer holds the shared framebuffer and clipping. PacketBuffer and SoundEnvelope expose byte decoding and envelope interpolation.
+
+Every DialogueScreen and MenuInputState method has a reviewed name. Dialogue separates wrapped lines, reveal delays, photo opening/closing, side changes, background fades and sound panning. Menu input distinguishes initial activation, held/repeated buttons, pointer versus keyboard selection and navigation keys. KeyCodeSupport names the AWT mapping and typed character; the key table confirms that 102/103 mean Home/End, not Page Up/Down. Original phase numbers and guards remain.
+
+`AnimatedPathMarker` reveals a path prefix over time and draws its numbered circle; PathPoint retains pixel coordinates and the original shared interpolation scratch. MeshMaterial retains the RGB word consumed by mesh lighting, without claiming meanings for the discarded material fields. AchievementsScreen identifies the earned/session grid and its metadata. AccountFormStage and AccountNoticeKind remain identity tokens with throwing toString methods; unrelated static helpers stay on those owners.
+
+Every AchievementsScreen method now has a reviewed name. It separates earned snapshots, hidden/member filtering, page partitioning, icon grids, hover/selected slots, action order, page changes and footer actions. AnimatedPanelFrame exposes geometry, colors and opening phase; SlidingSpriteTransition retains its own alpha/time and copied TransitionPoint. The original shared raster, screen clock, member placeholders, account-error notice and interpolation aliasing remain unchanged.
 
 `IterableNodeHashTable` and `NodeHashTableIterator` own primary-link buckets; `IterableDualLinkDeque` and `DualLinkDequeIterator` traverse secondary links independently. `IntrusiveDequeCursor` supports independent forward/backward scans. `WeightedLruCache` combines hash lookup, secondary recency links and entry weights; `StrongCacheEntry` is the concrete retained-value implementation. Original null-at-exhaustion behavior and throwing constructor stubs remain.
 

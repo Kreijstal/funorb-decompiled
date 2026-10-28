@@ -18,7 +18,7 @@ final class QuickChatPhraseCache {
           if (guard != 64) {
             field_i = (PcmSample) null;
           }
-          fc.a(3161);
+          AccountNoticeKind.resetAccountFlow(3161);
           Checkbox.field_F.closeAllPanels(guard ^ 17479);
           PcmResampler.field_d = new LoginForm(StrongCacheEntry.field_v, (String) null, DialWidget.field_H, showCreateAccount, allowGuest);
           rd.field_c = new LoginDialog(Checkbox.field_F, PcmResampler.field_d);
@@ -85,11 +85,11 @@ final class QuickChatPhraseCache {
           IntValueNode.field_j = true;
           return;
         }
-        if (dj.field_c != null) {
-          dj.field_c.fadeOut(2048);
+        if (AccountPanelInputSupport.field_c != null) {
+          AccountPanelInputSupport.field_c.fadeOut(2048);
         } else {
-          dj.field_c = PcmSampleStream.createAtRatePercentQ6(SecondaryNodeHashTable.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
-          ObjectSpriteSet.field_e.addSubstream(dj.field_c);
+          AccountPanelInputSupport.field_c = PcmSampleStream.createAtRatePercentQ6(SecondaryNodeHashTable.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
+          ObjectSpriteSet.field_e.addSubstream(AccountPanelInputSupport.field_c);
           StringNode.playFrameAppearSound(8192, (byte) 51);
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
@@ -103,8 +103,8 @@ final class QuickChatPhraseCache {
           IntValueNode.field_j = true;
           return;
         }
-        dj.field_c = PcmSampleStream.createAtRatePercentQ6(SecondaryNodeHashTable.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
-        ObjectSpriteSet.field_e.addSubstream(dj.field_c);
+        AccountPanelInputSupport.field_c = PcmSampleStream.createAtRatePercentQ6(SecondaryNodeHashTable.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
+        ObjectSpriteSet.field_e.addSubstream(AccountPanelInputSupport.field_c);
         StringNode.playFrameAppearSound(8192, (byte) 51);
         if (mj.field_d < 1000) {
           mj.field_d = mj.field_d + 1;

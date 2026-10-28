@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qj {
-    int field_h;
-    int field_b;
+final class PathPoint {
+    int x;
+    int y;
     static LoginMethod field_g;
     static String field_d;
     static int field_c;
@@ -12,7 +12,7 @@ final class qj {
     static java.awt.Frame field_i;
     static String field_e;
 
-    final static void a(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6, int param7) {
+    final static void drawPhotoTransition(int guard, int tick, int top, int centerX, Sprite photo, int centerY, int phase, int left) {
         String stackIn_47_2 = null;
         int var8_int = 0;
         int var9 = 0;
@@ -23,10 +23,10 @@ final class qj {
         int var14 = 0;
         int var19 = EscapeVector.obfuscationControl;
         try {
-          if (param6 > 0) {
-            if (20 >= param6) {
+          if (phase > 0) {
+            if (20 >= phase) {
               var8_int = 0;
-              var9 = param6;
+              var9 = phase;
               if (var9 > 20) {
                 var9 = 20;
               }
@@ -38,9 +38,9 @@ final class qj {
                 var9 = 20 * var9 / (var8_int + 20);
               }
               var10 = var9 * var9;
-              for (var11 = param5 - var9; param5 + var9 > var11; var11++) {
-                var12 = param3 + (-var8_int + var11 * 640);
-                var13 = (-param5 + var11) * (1 + (var11 - param5));
+              for (var11 = centerY - var9; centerY + var9 > var11; var11++) {
+                var12 = centerX + (-var8_int + var11 * 640);
+                var13 = (-centerY + var11) * (1 + (var11 - centerY));
                 for (var14 = -var9; var14 < 0; var14++) {
                   int var15 = var13 + var14 * (1 + var14);
                   if (var15 < var10) {
@@ -62,26 +62,26 @@ final class qj {
                   }
                 }
               }
-            } else if (param6 < 30) {
-              var8_int = param6 - 20;
-              var8_int = param4.fullHeight / 2 * (var8_int * var8_int) / 100;
+            } else if (phase < 30) {
+              var8_int = phase - 20;
+              var8_int = photo.fullHeight / 2 * (var8_int * var8_int) / 100;
               if (0 < var8_int) {
-                var9 = param4.fullHeight / 2 * 65536 / var8_int;
+                var9 = photo.fullHeight / 2 * 65536 / var8_int;
                 var10 = var9 >> 1;
                 for (var11 = 0; var11 < var8_int + var8_int; var11++) {
                   var12 = var10 >> 16;
                   var10 = var10 + var9;
-                  if (var12 >= param4.offsetY &&
-                    var12 < param4.offsetY + param4.height) {
-                    var13 = param4.width * var12;
-                    var14 = (var11 - var8_int + param5) * 640 + param7 + param4.offsetX;
-                    double var15_double = 8.0 * Math.sin((double)param1 + (double)((param1 & 7) + 8) * ((double)var12 * 0.001));
-                    var15_double = var15_double + Math.sin((double)(param1 + var12) * 0.002 * (double)((5 * param1 & 31) + 16)) * 4.0;
+                  if (var12 >= photo.offsetY &&
+                    var12 < photo.offsetY + photo.height) {
+                    var13 = photo.width * var12;
+                    var14 = (var11 - var8_int + centerY) * 640 + left + photo.offsetX;
+                    double var15_double = 8.0 * Math.sin((double)tick + (double)((tick & 7) + 8) * ((double)var12 * 0.001));
+                    var15_double = var15_double + Math.sin((double)(tick + var12) * 0.002 * (double)((5 * tick & 31) + 16)) * 4.0;
                     var14 = var14 + (int)Math.floor(var15_double + 0.5);
-                    for (int var17 = 0; param4.width > var17; var17++) {
+                    for (int var17 = 0; photo.width > var17; var17++) {
                       int incrementValue$1 = var13;
                       var13++;
-                      int var18 = param4.pixels[incrementValue$1];
+                      int var18 = photo.pixels[incrementValue$1];
                       int incrementValue$2 = var14;
                       var14++;
                       SoftwareRasterizer.pixels[incrementValue$2] = var18 - SpriteCheckboxPainter.bitwiseAnd(4144959, var18 >> 2);
@@ -90,10 +90,10 @@ final class qj {
                 }
               }
             } else {
-              param4.drawTransparent(param7, param2);
+              photo.drawTransparent(left, top);
             }
           }
-          if (param0 != -1276284702) {
+          if (guard != -1276284702) {
             field_a = (PacketBuffer) null;
           }
           return;
@@ -101,28 +101,28 @@ final class qj {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8 = decompiledCaughtException;
           RuntimeException stackIn_46_0 = var8;
-          StringBuilder stackIn_46_1 = new StringBuilder().append("qj.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          StringBuilder stackIn_46_1 = new StringBuilder().append("qj.D(").append(guard).append(',').append(tick).append(',').append(top).append(',').append(centerX).append(',');
+          if (photo == null) {
             stackIn_47_2 = "null";
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(centerY).append(',').append(phase).append(',').append(left).append(')').toString());
         }
     }
 
-    final static void a(int param0) {
+    final static void refreshScreenForAccountState(int guard) {
         regionExit1: {
           int var2 = EscapeVector.obfuscationControl;
-          boolean var1 = (UiComponent.field_o.field_b.field_j);
+          boolean var1 = (UiComponent.field_o.field_b.pointerDriven);
           if (!UiContainer.e((byte) -32) ||
             UiComponent.field_o.field_f == 2) {
-            if (aj.b(-119)) {
+            if (AccountSessionSupport.isGuestSession(-119)) {
               if (UiComponent.field_o.field_f == 0) {
                 if (UiContainer.e((byte) -122)) {
                   break regionExit1;
                 }
-                if (aj.b(-126)) {
+                if (AccountSessionSupport.isGuestSession(-126)) {
                   break regionExit1;
                 }
                 if (1 == UiComponent.field_o.field_f) {
@@ -133,7 +133,7 @@ final class qj {
               break regionExit1;
             }
             if (!UiContainer.e((byte) -122) &&
-              !aj.b(-126) &&
+              !AccountSessionSupport.isGuestSession(-126) &&
               1 != UiComponent.field_o.field_f) {
               UiComponent.field_o = new pf((var1));
             }
@@ -141,22 +141,22 @@ final class qj {
             UiComponent.field_o = new pf((var1));
           }
         }
-        if (param0 != -883) {
+        if (guard != -883) {
           Sprite var3 = (Sprite) null;
-          qj.a(-40, 111, 116, 104, (Sprite) null, -68, -42, 107);
+          PathPoint.drawPhotoTransition(-40, 111, 116, 104, (Sprite) null, -68, -42, 107);
         }
     }
 
-    final static int a(byte param0, int param1, int param2) {
-        if (param0 != -38) {
-          qj.releaseStatics(69);
+    final static int powerupScore(byte guard, int objectType, int gameMode) {
+        if (guard != -38) {
+          PathPoint.releaseStatics(69);
         }
-        return DraggableWidget.a(param2, param1, false, TerrainMaskSupport.field_d);
+        return DraggableWidget.a(gameMode, objectType, false, TerrainMaskSupport.field_d);
     }
 
-    qj(int param0, int param1) {
-        this.field_b = param1;
-        this.field_h = param0;
+    PathPoint(int x, int y) {
+        this.y = y;
+        this.x = x;
     }
 
     public static void releaseStatics(int guard) {

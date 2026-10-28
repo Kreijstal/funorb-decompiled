@@ -297,7 +297,7 @@ final class ak {
     }
 
     private final int k(int param0) {
-        int var2 = di.field_d.field_h;
+        int var2 = di.field_d.selectedIndex;
         if (var2 >= 0 &&
           var2 < this.field_a.length) {
           if (param0 > -77) {
@@ -390,13 +390,13 @@ final class ak {
         String stackIn_35_2 = null;
         try {
           int var3_int = this.d(77);
-          if (aj.b(-123)) {
+          if (AccountSessionSupport.isGuestSession(-123)) {
             stackIn_3_0 = IntrusiveNode.field_a;
           } else {
             stackIn_3_0 = DialogueScreen.field_G;
           }
           String var4 = stackIn_3_0;
-          int stackIn_6_0 = (aj.b(-104)) ? 10551200 : 6340704;
+          int stackIn_6_0 = (AccountSessionSupport.isGuestSession(-104)) ? 10551200 : 6340704;
           int var5 = stackIn_6_0;
           if (param1 == wk.field_f && (this.field_g == null ||
             this.field_g.field_o != 0)) {
@@ -438,7 +438,7 @@ final class ak {
     }
 
     private final void c(boolean param0) {
-        if (di.field_d.field_e) {
+        if (di.field_d.selectionChanged) {
           LegacyButton var2 = this.j((byte) 82);
           int var3 = PasswordValidator.a(-122, var2);
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, var3);
@@ -493,7 +493,7 @@ final class ak {
     }
 
     private final LegacyButton j(byte param0) {
-        int var2 = di.field_d.field_h;
+        int var2 = di.field_d.selectedIndex;
         LegacyButton var3 = TetherHumStream.a(this.field_k, var2, 0);
         if (var3 != null) {
           return var3;
@@ -577,7 +577,7 @@ final class ak {
         if (param0 != 100) {
           this.field_j = (LegacyButton[]) null;
         }
-        if (!aj.b(-122)) {
+        if (!AccountSessionSupport.isGuestSession(-122)) {
           if (mj.field_d == 0) {
             ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 5120);
           }
@@ -626,7 +626,7 @@ final class ak {
         if (var3) {
           return (var3);
         }
-        di.field_d.a(this.c(sf.field_c, -1, LoginDialog.field_ob), (byte) 120, this.c(GzipDecoder.field_d, -1, UiContainer.field_y));
+        di.field_d.updatePointer(this.c(sf.field_c, -1, LoginDialog.field_ob), (byte) 120, this.c(GzipDecoder.field_d, -1, UiContainer.field_y));
         this.c(false);
         boolean var3Lifetime1 = (this.a(true, Js5NetworkRequest.a((byte) 15, -1), (byte) 79));
         return (var3Lifetime1);
@@ -666,7 +666,7 @@ final class ak {
         if (param0 != -1) {
           return;
         }
-        if (!aj.b(-119)) {
+        if (!AccountSessionSupport.isGuestSession(-119)) {
           return;
         }
         pa.a(true);
@@ -702,14 +702,14 @@ final class ak {
         int var16 = var28.length - (-var29.length - var30.length);
         int var4Lifetime1 = 0;
         this.field_a = new int[var16];
-        var4Lifetime1 = qe.a(this.field_a, var4Lifetime1, true, var28);
-        var4Lifetime1 = qe.a(this.field_a, var4Lifetime1, true, var29);
-        qe.a(this.field_a, var4Lifetime1, true, var30);
+        var4Lifetime1 = AnimatedPathMarker.appendInts(this.field_a, var4Lifetime1, true, var28);
+        var4Lifetime1 = AnimatedPathMarker.appendInts(this.field_a, var4Lifetime1, true, var29);
+        AnimatedPathMarker.appendInts(this.field_a, var4Lifetime1, true, var30);
         gn.a(this.field_k, true, (byte) 41);
         if (param0 > -120) {
           this.field_a = (int[]) null;
         }
-        gn.a(this.field_i, !aj.b(-102) ? true : false, (byte) 41);
+        gn.a(this.field_i, !AccountSessionSupport.isGuestSession(-102) ? true : false, (byte) 41);
         gn.a(this.field_j, false, (byte) 41);
         this.field_g = null;
     }
@@ -789,11 +789,11 @@ final class ak {
         }
         boolean var2 = false;
         while (AccountRequestDialog.pollKeyEvent(-110)) {
-          di.field_d.a(127);
+          di.field_d.handleKeyWithoutNavigation(127);
           ArchiveLoadTask.cycleSelectionFromArrowKey(this.field_a, param0 ^ 3);
           if (PasswordValidator.field_n == 13) {
             int var3 = this.a(1, 0);
-            di.field_d.a(false, var3);
+            di.field_d.selectFromKeyboard(false, var3);
           }
           boolean stackIn_10_0 = !(!this.a(false, Js5NetworkRequest.a((byte) 15, PasswordValidator.field_n), (byte) 96));
           var2 = stackIn_10_0;
@@ -984,7 +984,7 @@ final class ak {
         String[] var11 = null;
         String stackIn_8_2 = null;
         try {
-          if (!aj.b(-99)) {
+          if (!AccountSessionSupport.isGuestSession(-99)) {
             var10 = new int[]{2, 3, 4};
             var11 = AudioService.field_d;
           } else {
@@ -1042,7 +1042,7 @@ final class ak {
                 int var12 = 0;
                 int var13 = 3162160;
                 int var14 = 6324320;
-                fc.a(var11, var5, var6, var9, true, 29788, false, var14, var13, var12, var8, true);
+                AccountNoticeKind.drawAnimatedPanelFrame(var11, var5, var6, var9, true, 29788, false, var14, var13, var12, var8, true);
                 return;
               }
               return;
@@ -1143,7 +1143,7 @@ final class ak {
         }
         int var3 = this.i(-74);
         int var4 = this.a(1, var3);
-        int var5 = di.field_d.field_h;
+        int var5 = di.field_d.selectedIndex;
         HudMessage.a(this.field_k, var2, var5, (byte) -55);
         HudMessage.a(this.field_i, var4, var5, (byte) -114);
         HudMessage.a(this.field_j, -1, var5, (byte) -97);
@@ -1152,7 +1152,7 @@ final class ak {
     private final String j(int param0) {
         String var2 = wk.field_f;
         HighscoreQuery[] var3 = LegacyWidgetStyle.field_N;
-        if (aj.b(-123)) {
+        if (AccountSessionSupport.isGuestSession(-123)) {
           return var2;
         }
         if (var3 == null) {

@@ -6,7 +6,7 @@ final class pa {
     static PcmSample field_a;
 
     final static void a(boolean param0) {
-        if (!SpriteState.field_u) {
+        if (!SpriteState.guestSession) {
           throw new IllegalStateException();
         }
         CipherPacketBuffer.field_u = true;

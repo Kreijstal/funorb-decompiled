@@ -14,13 +14,13 @@ final class GzipDecoder {
         try {
           di.field_g = RasterBuffer.a((byte) 41, "");
           di.field_g.complete((byte) -128, false);
-          wc.a(83, sprites, fonts, buttons);
+          MenuInputState.loadCommonUiAssets(83, sprites, fonts, buttons);
           GrowableIntList.a((byte) -96);
           dn.field_q = RasterBuffer.field_g;
           if (byteGuard > -111) {
             GzipDecoder.isMembersAchievement(13, (byte) 34);
           }
-          ui.field_b = RasterBuffer.field_g;
+          MeshMaterial.field_b = RasterBuffer.field_g;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "dh.D(" + guard + ',' + byteGuard + ',' + (sprites != null ? "{...}" : "null") + ',' + (fonts != null ? "{...}" : "null") + ',' + (buttons != null ? "{...}" : "null") + ')');
         }

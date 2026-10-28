@@ -15,7 +15,7 @@ final class mg {
         if (param0 != -12) {
           return 95;
         }
-        return ui.field_e;
+        return MeshMaterial.keyboardIdleTicks;
     }
 
     public static void releaseStatics(boolean guard) {

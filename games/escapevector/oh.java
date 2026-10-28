@@ -21,16 +21,16 @@ final class oh extends IntrusiveNode {
         try {
           NameSuggestionsPanel.field_O[0] = gk.field_a.nextInt();
           NameSuggestionsPanel.field_O[1] = gk.field_a.nextInt();
-          qj.field_a.position = 0;
+          PathPoint.field_a.position = 0;
           NameSuggestionsPanel.field_O[2] = (int)(SecondaryIntrusiveDeque.field_b >> 32);
           NameSuggestionsPanel.field_O[3] = (int)SecondaryIntrusiveDeque.field_b;
-          qj.field_a.writeInt((byte) 126, NameSuggestionsPanel.field_O[0]);
-          qj.field_a.writeInt((byte) 123, NameSuggestionsPanel.field_O[1]);
-          qj.field_a.writeInt((byte) 124, NameSuggestionsPanel.field_O[2]);
-          qj.field_a.writeInt((byte) 126, NameSuggestionsPanel.field_O[3]);
-          StripedProgressBar.writeInstallationSeed(0, qj.field_a);
-          qj.field_a.writeShort(13, param2);
-          param0.writeTo(qj.field_a, (byte) -121);
+          PathPoint.field_a.writeInt((byte) 126, NameSuggestionsPanel.field_O[0]);
+          PathPoint.field_a.writeInt((byte) 123, NameSuggestionsPanel.field_O[1]);
+          PathPoint.field_a.writeInt((byte) 124, NameSuggestionsPanel.field_O[2]);
+          PathPoint.field_a.writeInt((byte) 126, NameSuggestionsPanel.field_O[3]);
+          StripedProgressBar.writeInstallationSeed(0, PathPoint.field_a);
+          PathPoint.field_a.writeShort(13, param2);
+          param0.writeTo(PathPoint.field_a, (byte) -121);
           QuickChatDynamicCommand.outgoingPackets.position = 0;
           if (!param1) {
             QuickChatDynamicCommand.outgoingPackets.writeByte(16, -123);
@@ -45,7 +45,7 @@ final class oh extends IntrusiveNode {
           if (ej.field_d) {
             var6 = var6 | 1;
           }
-          if (jc.field_b) {
+          if (KeyCodeSupport.field_b) {
             var6 = var6 | 4;
           }
           if (param3) {
@@ -66,7 +66,7 @@ final class oh extends IntrusiveNode {
           if (p.field_i != null) {
             QuickChatDynamicCommand.outgoingPackets.writeCircumfixedString((byte) 100, p.field_i);
           }
-          bn.a(param4 ^ -99, QuickChatDynamicCommand.outgoingPackets, qj.field_a, MarkerSlider.field_O, cf.field_c);
+          bn.a(param4 ^ -99, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
           QuickChatDynamicCommand.outgoingPackets.backpatchShortLength(-var5_int + QuickChatDynamicCommand.outgoingPackets.position, 32614);
           ClientException.a(-1, param4 + 30884);
           return;

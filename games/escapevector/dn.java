@@ -18,12 +18,12 @@ final class dn {
     private LegacyTextBlock field_s;
     private int field_u;
     private boolean field_w;
-    static al field_q;
+    static AccountFormStage field_q;
     private boolean field_x;
     private int field_t;
     private SpriteLabelColumns field_o;
-    private wc field_d;
-    private gf field_y;
+    private MenuInputState field_d;
+    private AnimatedPanelFrame field_y;
     private boolean field_j;
     private LegacyButton field_z;
     private int field_e;
@@ -391,9 +391,9 @@ final class dn {
           return -1;
         }
         if (param0 < 57) {
-          field_q = (al) null;
+          field_q = (AccountFormStage) null;
         }
-        int var2 = this.field_d.field_h;
+        int var2 = this.field_d.selectedIndex;
         if (0 > var2) {
           return -1;
         }
@@ -473,7 +473,7 @@ final class dn {
     }
 
     private final void a(boolean param0, boolean param1) {
-        this.field_d = new wc(this.field_A.length);
+        this.field_d = new MenuInputState(this.field_A.length);
         int var3 = -1;
         if (!this.field_w) {
           var3 = this.b(this.field_e, -3844);
@@ -481,7 +481,7 @@ final class dn {
           var3 = this.b(this.field_g, -3844);
         }
         int var4 = this.a(104, GzipDecoder.field_d, UiContainer.field_y);
-        this.field_d.a(121, param0, var4, var3);
+        this.field_d.initializeSelection(121, param0, var4, var3);
         if (param1) {
           SpriteStrip[] discarded$0 = this.b(true);
         }
@@ -537,7 +537,7 @@ final class dn {
         for (int var4 = 0; var3_ref_dk__.length > var4; var4++) {
           LegacyButton var5 = var3_ref_dk__[var4];
           if (null != var5) {
-            boolean stackIn_8_0 = !(this.field_d.field_h != var5.actionId);
+            boolean stackIn_8_0 = !(this.field_d.selectedIndex != var5.actionId);
             boolean var6 = stackIn_8_0;
             var5.draw(-16383, (var6));
             var2 = var5.y + var5.height / 2;
@@ -563,7 +563,7 @@ final class dn {
           }
         }
         if (null != this.field_z) {
-          boolean stackIn_31_0 = !(this.field_d.field_h != this.field_z.actionId);
+          boolean stackIn_31_0 = !(this.field_d.selectedIndex != this.field_z.actionId);
           boolean var3 = stackIn_31_0;
           this.field_z.draw(-16383, (var3));
           int var2Lifetime1 = this.field_z.height + this.field_z.y;
@@ -590,8 +590,8 @@ final class dn {
           return;
         }
         int var3 = 16777215;
-        int var4 = this.field_y.field_g + this.field_y.field_j - this.field_v;
-        int var5 = this.field_y.field_k + (this.field_y.field_m - this.field_v - var2.maxDescent);
+        int var4 = this.field_y.width + this.field_y.x - this.field_v;
+        int var5 = this.field_y.y + (this.field_y.height - this.field_v - var2.maxDescent);
         String var6 = 1 + this.field_m + "/" + this.field_D;
         var2.drawRight(var6, var4, var5, var3, -1);
     }
@@ -692,14 +692,14 @@ final class dn {
         }
         boolean var3 = true;
         if (null != this.field_d) {
-          boolean stackIn_14_0 = !(!this.field_d.field_j);
+          boolean stackIn_14_0 = !(!this.field_d.pointerDriven);
           var3 = stackIn_14_0;
         }
         this.a(108, (var3));
         int var4 = this.b(param1, -3844);
         if (0 <= var4 &&
           null != this.field_d) {
-          this.field_d.a(false, var4);
+          this.field_d.selectFromKeyboard(false, var4);
         }
         int var5 = 119 / ((48 - param0) / 61);
         if (0 == this.field_m) {
@@ -737,14 +737,14 @@ final class dn {
         if (!this.field_w) {
           SoftwareRasterizer.clearFramebuffer();
           SelfDestructEffects.b(2);
-          this.field_y.c(105);
+          this.field_y.draw(105);
           pb.a(4);
         } else {
           int var2 = 640;
           int var3 = 480;
           int var4 = 64;
           SoftwareRasterizer.fillRectangleAlpha(0, 0, var2, var3, 0, var4);
-          this.field_y.c(116);
+          this.field_y.draw(116);
         }
         this.b((byte) 88);
     }
@@ -754,8 +754,8 @@ final class dn {
         int var3 = -33 / ((param0 + 47) / 45);
         boolean var2 = false;
         while (AccountRequestDialog.pollKeyEvent(-73)) {
-          this.field_d.c((byte) 6);
-          if (this.field_d.field_e) {
+          this.field_d.handleKeyEvent((byte) 6);
+          if (this.field_d.selectionChanged) {
             this.l(1536);
           }
           if (PasswordValidator.field_n == 13) {
@@ -763,7 +763,7 @@ final class dn {
             if (this.field_w) {
               var4 = this.field_g;
             }
-            this.field_d.field_h = this.b(var4, -3844);
+            this.field_d.selectedIndex = this.b(var4, -3844);
             boolean stackIn_11_0 = !(!this.b(true, 1));
             var2 = stackIn_11_0;
             if (var2) {
@@ -784,7 +784,7 @@ final class dn {
           this.a(54, true);
         }
         boolean var3 = false;
-        if (!this.field_d.b((byte) -18) &&
+        if (!this.field_d.isInitialActivation((byte) -18) &&
           !param0) {
           return (var3);
         }
@@ -859,7 +859,7 @@ final class dn {
           param1 = param1 + var14 / 2;
           this.field_z.setPosition((byte) 114, var13, param1);
           if (param4 != 10551200) {
-            this.field_d = (wc) null;
+            this.field_d = (MenuInputState) null;
           }
           int[] var15 = new int[]{param3};
           int[] stackIn_3_0 = var15;
@@ -907,8 +907,8 @@ final class dn {
           this.field_z = (LegacyButton) null;
         }
         int var3 = this.a(param0 + 22723, sf.field_c, LoginDialog.field_ob);
-        this.field_d.a(var3, (byte) 118, var2);
-        if (this.field_d.field_e) {
+        this.field_d.updatePointer(var3, (byte) 118, var2);
+        if (this.field_d.selectionChanged) {
           this.l(1536);
         }
     }
@@ -991,7 +991,7 @@ final class dn {
         }
         int var8 = var7 - var4;
         int var9 = 20;
-        this.field_y = new gf(var3, var4, var6, var8, var9);
+        this.field_y = new AnimatedPanelFrame(var3, var4, var6, var8, var9);
         int var10 = 3162160;
         if (this.field_w) {
           var10 = this.g((byte) 76);
@@ -1004,9 +1004,9 @@ final class dn {
         int var13 = 3160124;
         int var14 = 160;
         if (this.field_w) {
-          this.field_y.a(var10, var13, var12, var14, var11, (byte) -128);
+          this.field_y.configureAccent(var10, var13, var12, var14, var11, (byte) -128);
         } else {
-          this.field_y.a(param0 ^ 15176, var11, var12, var10);
+          this.field_y.configureFrame(param0 ^ 15176, var11, var12, var10);
         }
     }
 
@@ -1047,11 +1047,11 @@ final class dn {
     }
 
     private final void a(boolean param0) {
-        String[] var8 = new String[]{um.field_c, ProgressQuery.field_i, PacketBuffer.field_k, SpriteOffset.field_a, SpriteStrip.field_h, ArchiveKeyRequest.field_h, ea.field_i};
+        String[] var8 = new String[]{um.field_c, ProgressQuery.field_i, PacketBuffer.field_k, SpriteOffset.field_a, SpriteStrip.field_h, ArchiveKeyRequest.field_h, SlidingSpriteTransition.field_i};
         if (!param0) {
           return;
         }
-        String[] var3 = new String[]{AchievementFlagSupport.field_b, QuickChatPhraseDefinition.field_w, mj.field_c, qj.field_e, oh.field_k, DynamicTerrainRenderer.field_t, cj.field_b};
+        String[] var3 = new String[]{AchievementFlagSupport.field_b, QuickChatPhraseDefinition.field_w, mj.field_c, PathPoint.field_e, oh.field_k, DynamicTerrainRenderer.field_t, cj.field_b};
         int var4 = 16777215;
         int var5 = this.f((byte) 70);
         int var6 = this.g((byte) 115);

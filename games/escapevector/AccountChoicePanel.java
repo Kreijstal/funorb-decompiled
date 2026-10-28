@@ -50,7 +50,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
     final static boolean a(byte param0) {
         if (param0 >= -30) {
           field_H = -87;
-          if (aj.b(-127)) {
+          if (AccountSessionSupport.isGuestSession(-127)) {
             return false;
           }
           if (mg.field_b >= 2) {
@@ -58,7 +58,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           }
           return false;
         }
-        if (aj.b(-127)) {
+        if (AccountSessionSupport.isGuestSession(-127)) {
           return false;
         }
         if (mg.field_b >= 2) {
@@ -76,7 +76,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           } else if (this.createAccountButton == button) {
             fe.a((byte) -83);
           } else if (this.guestButton == button) {
-            bm.a(4);
+            NameAvailabilityResultSupport.chooseGuestSession(4);
           }
           if (guard == 1) {
             return;

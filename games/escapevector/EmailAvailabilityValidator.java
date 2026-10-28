@@ -7,7 +7,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
     static Sprite field_r;
     private MatchingTextValidator field_p;
     static String field_s;
-    static al field_o;
+    static AccountFormStage field_o;
     private String field_n;
 
     final static String c(byte param0) {
@@ -235,6 +235,6 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
 
     static {
         field_s = "Fuel bonus: ";
-        field_o = new al();
+        field_o = new AccountFormStage();
     }
 }

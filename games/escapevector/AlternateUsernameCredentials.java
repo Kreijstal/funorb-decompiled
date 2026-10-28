@@ -35,7 +35,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         if (guard != 32) {
           return (LoginCredentialType) null;
         }
-        return ui.field_a;
+        return MeshMaterial.field_a;
     }
 
     AlternateUsernameCredentials(long param0, String param1) {

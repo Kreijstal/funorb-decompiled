@@ -118,7 +118,7 @@ abstract class DebouncedValidator implements ValidationSource {
         if (param0) {
           field_a = (String) null;
           if (Js5NetworkRequest.field_x <= 0) {
-            if (!aj.b(-104)) {
+            if (!AccountSessionSupport.isGuestSession(-104)) {
               var2 = 1;
               if (null != DirectByteStorage.field_n) {
                 return;
@@ -157,7 +157,7 @@ abstract class DebouncedValidator implements ValidationSource {
             sn.a(var2Lifetime4, 0, param1);
             return;
           }
-          IsaacRandom.field_d = al.a(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
+          IsaacRandom.field_d = AccountFormStage.createFullscreenCanvas(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
           if (null == IsaacRandom.field_d) {
             var2Lifetime5 = 3;
           } else {
@@ -174,7 +174,7 @@ abstract class DebouncedValidator implements ValidationSource {
           return;
         }
         if (Js5NetworkRequest.field_x <= 0) {
-          if (!aj.b(-104)) {
+          if (!AccountSessionSupport.isGuestSession(-104)) {
             int var2Lifetime1 = 1;
             if (null == DirectByteStorage.field_n &&
               e.field_d) {
@@ -209,7 +209,7 @@ abstract class DebouncedValidator implements ValidationSource {
           }
           return;
         }
-        IsaacRandom.field_d = al.a(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
+        IsaacRandom.field_d = AccountFormStage.createFullscreenCanvas(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
         if (null == IsaacRandom.field_d) {
           var2Lifetime3 = 3;
         } else {

@@ -8,7 +8,7 @@ final class kc {
 
     final static void a(byte param0) {
         if (mj.field_d >= 1000) {
-          int var1 = aj.field_a.a((byte) 23, true);
+          int var1 = AccountSessionSupport.field_a.a((byte) 23, true);
           if (param0 == -75) {
             if (var1 == 3) {
               AudioService.a((byte) 72, PointCloudEffect.activeApplet((byte) -128));
@@ -60,7 +60,7 @@ final class kc {
           return;
         }
         mj.field_d = mj.field_d + 1;
-        int var1Lifetime1 = aj.field_a.a((byte) 23, true);
+        int var1Lifetime1 = AccountSessionSupport.field_a.a((byte) 23, true);
         if (param0 == -75) {
           if (var1Lifetime1 == 3) {
             AudioService.a((byte) 72, PointCloudEffect.activeApplet((byte) -128));

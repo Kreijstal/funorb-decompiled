@@ -123,7 +123,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             field_t = (PcmSample) null;
           }
           if (null == ProxySocketConnector.field_r) {
-            ProxySocketConnector.field_r = new LoadingProgressDialog(Checkbox.field_F, dj.field_b);
+            ProxySocketConnector.field_r = new LoadingProgressDialog(Checkbox.field_F, AccountPanelInputSupport.field_b);
             Checkbox.field_F.pushPanel(ProxySocketConnector.field_r, guard + 102);
           }
           ProxySocketConnector.field_r.setProgress(-100, text, percent, alternateStyle);

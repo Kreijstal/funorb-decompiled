@@ -46,21 +46,21 @@ final class tf {
         int var3 = stackIn_6_0;
         if (mj.a((byte) 122)) {
           int var4 = 20 + dn.a(0) / 2;
-          int var5 = 15 + ea.d((byte) -96) / 2;
+          int var5 = 15 + SlidingSpriteTransition.legacyMenuHeight((byte) -96) / 2;
           GameAppletShell.a(var3, 320 - var4, 240 - var5, 6320248, 0, var5 + 241, -3, 321 + var4, 12110032, 3160124, 2 * var2);
           AchievementTracker.drawLegacyMenu(0);
           return;
         }
-        GameAppletShell.a(var3, this.field_d - 6, this.field_f - 12, 6320248, 0, 24 * ch.field_a.field_k + this.field_f + 12, -3, 6 + this.field_a, 12110032, 3160124, var2 * 2);
+        GameAppletShell.a(var3, this.field_d - 6, this.field_f - 12, 6320248, 0, 24 * ch.field_a.itemCount + this.field_f + 12, -3, 6 + this.field_a, 12110032, 3160124, var2 * 2);
         int var4Lifetime1 = this.field_f;
         int var5Lifetime1 = 0;
         if (param0 <= 124) {
           return;
         }
-        while (var5Lifetime1 < ch.field_a.field_k) {
+        while (var5Lifetime1 < ch.field_a.itemCount) {
           int stackIn_13_1 = -19868;
           int stackIn_13_2 = var4Lifetime1;
-          if (var5Lifetime1 != ch.field_a.field_h) {
+          if (var5Lifetime1 != ch.field_a.selectedIndex) {
             stackIn_14_0 = this;
             stackIn_14_3 = false;
           } else {
@@ -126,7 +126,7 @@ final class tf {
             if (param0 != -75) {
               this.b(true, -119);
             }
-            ch.field_a.a(0, this.field_d, this.field_f, 24, this.field_a);
+            ch.field_a.updateVerticalList(0, this.field_d, this.field_f, 24, this.field_a);
             boolean discarded$1 = this.a(true, 123);
             return;
           }
@@ -134,25 +134,25 @@ final class tf {
             da.field_c = null;
             return;
           }
-          ch.field_a.c((byte) 6);
+          ch.field_a.handleKeyEvent((byte) 6);
         } while (!this.a(false, 122));
         return;
     }
 
     private final boolean a(boolean param0, int param1) {
         int var9 = EscapeVector.obfuscationControl;
-        if (ch.field_a.field_e) {
+        if (ch.field_a.selectionChanged) {
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, 8192);
         }
-        if (ch.field_a.field_h == 0 &&
-          ch.field_a.b((byte) -18)) {
+        if (ch.field_a.selectedIndex == 0 &&
+          ch.field_a.isInitialActivation((byte) -18)) {
           SavedDataQuerySupport.field_d = true;
           Js5NetworkRequest.field_E = true;
           da.field_c = null;
           return true;
         }
-        if (ch.field_a.field_h == this.field_l &&
-          ch.field_a.b((byte) -18)) {
+        if (ch.field_a.selectedIndex == this.field_l &&
+          ch.field_a.isInitialActivation((byte) -18)) {
           KeyboardStateSupport.b(112);
           BoundedRandomAccessFile.activeSession.quitRequested = true;
           BoundedRandomAccessFile.activeSession.advanceLevelRequested = true;
@@ -162,18 +162,18 @@ final class tf {
           Js5NetworkRequest.field_E = true;
           return true;
         }
-        if (ch.field_a.field_h == this.field_b &&
-          ch.field_a.b((byte) -18)) {
-          ek.a(ch.field_a.field_j, false);
+        if (ch.field_a.selectedIndex == this.field_b &&
+          ch.field_a.isInitialActivation((byte) -18)) {
+          ek.a(ch.field_a.pointerDriven, false);
           return true;
         }
-        if (this.field_g == ch.field_a.field_h &&
-          ch.field_a.b((byte) -18)) {
+        if (this.field_g == ch.field_a.selectedIndex &&
+          ch.field_a.isInitialActivation((byte) -18)) {
           BoundedRandomAccessFile.activeSession.replayMissionBriefing(256);
           return true;
         }
-        if (ch.field_a.field_h == this.field_j) {
-          if (ch.field_a.g(13) &&
+        if (ch.field_a.selectedIndex == this.field_j) {
+          if (ch.field_a.isLeftPressed(13) &&
             IterableNodeHashTable.field_c > 0) {
             IterableNodeHashTable.field_c = IterableNodeHashTable.field_c - 8;
             if (IterableNodeHashTable.field_c < 0) {
@@ -181,7 +181,7 @@ final class tf {
             }
             TrackerMusicDefinition.d(8192);
           }
-          if (ch.field_a.b(-98) &&
+          if (ch.field_a.isRightPressed(-98) &&
             64 > IterableNodeHashTable.field_c) {
             IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 8;
             if (IterableNodeHashTable.field_c > 64) {
@@ -189,15 +189,15 @@ final class tf {
             }
             TrackerMusicDefinition.d(8192);
           }
-          if (ch.field_a.d(-10809)) {
+          if (ch.field_a.isHomePressed(-10809)) {
             IterableNodeHashTable.field_c = 0;
             TrackerMusicDefinition.d(8192);
           }
-          if (ch.field_a.e(0)) {
+          if (ch.field_a.isEndPressed(0)) {
             IterableNodeHashTable.field_c = 64;
             TrackerMusicDefinition.d(8192);
           }
-          if (ch.field_a.a(false)) {
+          if (ch.field_a.isPointerHeld(false)) {
             int var3 = ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N);
             int var4 = ByteStorage.gameFont.stringWidth(LoginMethod.field_d);
             int stackIn_39_0 = (var3 > var4) ? var3 : var4;
@@ -209,20 +209,20 @@ final class tf {
             } else if (var7 > 64) {
               var7 = 64;
             }
-            if (ch.field_a.b((byte) -18) ||
+            if (ch.field_a.isInitialActivation((byte) -18) ||
               var7 != IterableNodeHashTable.field_c) {
               IterableNodeHashTable.field_c = var7;
               TrackerMusicDefinition.d(8192);
             }
-          } else if (ch.field_a.b((byte) -18)) {
+          } else if (ch.field_a.isInitialActivation((byte) -18)) {
             TrackerMusicDefinition.d(8192);
           }
         }
         if (param1 < 121) {
           int discarded$0 = this.c((byte) -39);
         }
-        if (this.field_c == ch.field_a.field_h) {
-          if (ch.field_a.g(115) &&
+        if (this.field_c == ch.field_a.selectedIndex) {
+          if (ch.field_a.isLeftPressed(115) &&
             0 < kc.field_b) {
             kc.field_b = kc.field_b - 8;
             if (0 > kc.field_b) {
@@ -233,7 +233,7 @@ final class tf {
               var10.d(kc.field_b * GrowableIntList.field_b / 64);
             }
           }
-          if (ch.field_a.b(-98) &&
+          if (ch.field_a.isRightPressed(-98) &&
             kc.field_b < 64) {
             kc.field_b = kc.field_b + 8;
             if (64 < kc.field_b) {
@@ -244,21 +244,21 @@ final class tf {
               var11.d(GrowableIntList.field_b * kc.field_b / 64);
             }
           }
-          if (ch.field_a.d(-10809)) {
+          if (ch.field_a.isHomePressed(-10809)) {
             kc.field_b = 0;
             TrackerMusicPlayer var12 = DraggableWidget.field_N;
             if (var12 != null) {
               var12.d(GrowableIntList.field_b * kc.field_b / 64);
             }
           }
-          if (ch.field_a.e(0)) {
+          if (ch.field_a.isEndPressed(0)) {
             kc.field_b = 64;
             TrackerMusicPlayer var13 = DraggableWidget.field_N;
             if (var13 != null) {
               var13.d(kc.field_b * GrowableIntList.field_b / 64);
             }
           }
-          if (ch.field_a.a(false)) {
+          if (ch.field_a.isPointerHeld(false)) {
             int var3Lifetime1 = ByteStorage.gameFont.stringWidth(DisplayNameForm.field_N);
             int var4Lifetime1 = ByteStorage.gameFont.stringWidth(LoginMethod.field_d);
             int stackIn_79_0 = (var3Lifetime1 <= var4Lifetime1) ? var4Lifetime1 : var3Lifetime1;
@@ -277,25 +277,25 @@ final class tf {
             }
           }
         }
-        if (ch.field_a.field_h == this.field_m &&
-          ch.field_a.b((byte) -18)) {
+        if (ch.field_a.selectedIndex == this.field_m &&
+          ch.field_a.isInitialActivation((byte) -18)) {
           if (IsaacRandom.field_d != null) {
             ri.a(-25123);
           } else {
             TickClock.a(24, param0);
           }
-          ch.field_a.a(-1, true, 4767999);
+          ch.field_a.setPointerSelection(-1, true, 4767999);
         }
-        if (ch.field_a.field_h == this.field_k && (ch.field_a.b(false) ||
-          ch.field_a.f(23518))) {
+        if (ch.field_a.selectedIndex == this.field_k && (ch.field_a.isBackwardAction(false) ||
+          ch.field_a.isForwardAction(23518))) {
           boolean stackIn_99_0 = !(SpriteState.field_r);
           SpriteState.field_r = stackIn_99_0;
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, IterableNodeHashTable.field_c * 1536 / 64, 8192);
         }
-        if (this.field_e != ch.field_a.field_h) {
+        if (this.field_e != ch.field_a.selectedIndex) {
           return false;
         }
-        if (!ch.field_a.b((byte) -18)) {
+        if (!ch.field_a.isInitialActivation((byte) -18)) {
           return false;
         }
         BoundedRandomAccessFile.activeSession.quitRequested = true;
@@ -361,13 +361,13 @@ final class tf {
         if (param1 != 320) {
           this.a((byte) 11);
         }
-        ch.field_a.a(ch.field_a.a((byte) 119, this.field_f, GzipDecoder.field_d, 24, this.field_a, UiContainer.field_y, this.field_d), param0, param1 + 4767679);
+        ch.field_a.setPointerSelection(ch.field_a.hitVerticalList((byte) 119, this.field_f, GzipDecoder.field_d, 24, this.field_a, UiContainer.field_y, this.field_d), param0, param1 + 4767679);
     }
 
     private final int c(byte param0) {
         int var5 = EscapeVector.obfuscationControl;
         int var2 = 0;
-        for (int var3 = 0; var3 < ch.field_a.field_k; var3++) {
+        for (int var3 = 0; var3 < ch.field_a.itemCount; var3++) {
           int var4 = this.a(var3, false);
           if (var2 < var4) {
             var2 = var4;
@@ -423,7 +423,7 @@ final class tf {
         var2++;
         this.field_e = incrementValue$7;
         this.field_f = 240 - var2 * 12;
-        ch.field_a = new wc(var2);
+        ch.field_a = new MenuInputState(var2);
         this.b(false, 320);
         int var3 = this.c((byte) -56);
         this.field_d = -10 + (-(var3 / 2) + 320);

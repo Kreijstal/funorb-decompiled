@@ -38,10 +38,10 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         }
     }
 
-    final static qe[] c(int param0, int param1, int param2) {
+    final static AnimatedPathMarker[] c(int param0, int param1, int param2) {
         int var12 = 0;
         int[] var19 = null;
-        qe var14 = null;
+        AnimatedPathMarker var14 = null;
         int var15 = EscapeVector.obfuscationControl;
         int var3 = 12;
         int[] var4 = new int[]{3170352, 6332512};
@@ -57,16 +57,16 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         if (1 + param1 < var10) {
           var10 = 1 + param1;
         }
-        qe[] var11 = new qe[var10];
+        AnimatedPathMarker[] var11 = new AnimatedPathMarker[var10];
         for (var12 = 0; var12 < var10; var12++) {
           var19 = var18[var12];
-          var14 = new qe(var12, var19, var3, var4, var5, var6, var7, var8);
+          var14 = new AnimatedPathMarker(var12, var19, var3, var4, var5, var6, var7, var8);
           var11[var12] = var14;
         }
         return var11;
     }
 
-    AccountNoticeDialog(ModalStack param0, fc param1) {
+    AccountNoticeDialog(ModalStack param0, AccountNoticeKind param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;

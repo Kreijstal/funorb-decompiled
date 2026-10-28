@@ -38,7 +38,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         super(0, 0, 288, 0, (WidgetPainter) null);
         try {
           this.registrationDialog = param0;
-          this.continueButton = new TextButton(bm.field_d, (UiListener) null);
+          this.continueButton = new TextButton(NameAvailabilityResultSupport.field_d, (UiListener) null);
           this.continueButton.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           String var7 = SingleChildContainer.a(mh.field_c, -63, new String[]{this.linkOpenMarkup(-102), this.linkCloseMarkup((byte) 126)});
           int var3 = 20;

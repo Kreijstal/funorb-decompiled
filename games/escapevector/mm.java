@@ -28,7 +28,7 @@ final class mm {
           }
           do {
             if (!AccountRequestDialog.pollKeyEvent(-126)) {
-              di.field_d.a(gb.a(sf.field_c, LoginDialog.field_ob, 8158), (byte) 126, gb.a(GzipDecoder.field_d, UiContainer.field_y, 8158));
+              di.field_d.updatePointer(TransitionPoint.hitLoginOrDiscardPrompt(sf.field_c, LoginDialog.field_ob, 8158), (byte) 126, TransitionPoint.hitLoginOrDiscardPrompt(GzipDecoder.field_d, UiContainer.field_y, 8158));
               if (!SpriteOffset.a(true, 0)) {
                 return (var1_int);
               }
@@ -36,7 +36,7 @@ final class mm {
               boolean stackIn_21_0 = var1_int;
               return (stackIn_21_0);
             }
-            di.field_d.c((byte) 6);
+            di.field_d.handleKeyEvent((byte) 6);
           } while (!SpriteOffset.a(false, 0));
           var1_int = true;
           boolean stackIn_17_0 = var1_int;
@@ -59,9 +59,9 @@ final class mm {
     final static int a(int param0, boolean param1, int param2, int param3) {
         if (param0 != 64) {
           field_b = (PcmSampleStream) null;
-          return dj.a(param0 + 6381);
+          return AccountPanelInputSupport.serviceAccountPanelInput(param0 + 6381);
         }
-        return dj.a(param0 + 6381);
+        return AccountPanelInputSupport.serviceAccountPanelInput(param0 + 6381);
     }
 
     final static boolean a(int param0, int param1) {

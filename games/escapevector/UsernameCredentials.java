@@ -176,7 +176,7 @@ class UsernameCredentials extends LoginCredentials {
           Sprite[] var2 = (Sprite[]) null;
           UsernameCredentials.drawNineSlice(-62, (Sprite[]) null, -58, -40, -5, -81);
         }
-        return aj.field_f;
+        return AccountSessionSupport.field_f;
     }
 
     UsernameCredentials(long param0, String param1) {

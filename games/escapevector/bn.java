@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bn {
-    static qj field_a;
+    static PathPoint field_a;
     static volatile long field_c;
     static Sprite[] field_d;
     static int field_b;
@@ -20,7 +20,7 @@ final class bn {
 
     final static void a(int param0, PacketBuffer param1, PacketBuffer param2, java.math.BigInteger param3, java.math.BigInteger param4) {
         try {
-          gb.a(param4, false, param3, param2.payload, param1, param2.position, param0);
+          TransitionPoint.writeEncryptedAccountPayload(param4, false, param3, param2.payload, param1, param2.position, param0);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "bn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -57,7 +57,7 @@ final class bn {
     }
 
     static {
-        field_a = new qj(0, 0);
+        field_a = new PathPoint(0, 0);
         field_c = 0L;
         field_b = 0;
     }

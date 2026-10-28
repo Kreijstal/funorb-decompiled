@@ -17,7 +17,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
             SpriteCheckboxPainter.sleepMillis(45L, (byte) -21);
           }
           for (int var5 = start; var5 < end; var5++) {
-            var4_int = al.field_a[(bytes[var5] ^ var4_int) & 255] ^ var4_int >>> 8;
+            var4_int = AccountFormStage.field_a[(bytes[var5] ^ var4_int) & 255] ^ var4_int >>> 8;
           }
           var4_int = ~var4_int;
           int stackIn_7_0 = var4_int;

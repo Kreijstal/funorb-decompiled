@@ -18,7 +18,7 @@ final class AchievementTracker {
 
     final int[] earnedAchievementIds(int setKind, byte guard) {
         int var12 = EscapeVector.obfuscationControl;
-        boolean stackIn_3_0 = !(aj.b(-101));
+        boolean stackIn_3_0 = !(AccountSessionSupport.isGuestSession(-101));
         boolean var3 = stackIn_3_0;
         if (var3 &&
           !this.accountAchievementsLoaded &&
@@ -178,7 +178,7 @@ final class AchievementTracker {
     }
 
     final void requestAccountAchievements(byte guard) {
-        if (aj.b(-97)) {
+        if (AccountSessionSupport.isGuestSession(-97)) {
           return;
         }
         if (this.accountAchievementsLoaded) {
@@ -422,7 +422,7 @@ final class AchievementTracker {
     }
 
     final boolean awardAchievement(byte guard, int checksum, int achievementId, int gameMode) {
-        boolean stackIn_3_0 = !(aj.b(-116));
+        boolean stackIn_3_0 = !(AccountSessionSupport.isGuestSession(-116));
         boolean var5 = stackIn_3_0;
         if (var5 &&
           !this.accountAchievementsLoaded &&
@@ -472,7 +472,7 @@ final class AchievementTracker {
     }
 
     final void pollAccountQuery(int guard) {
-        if (aj.b(-123)) {
+        if (AccountSessionSupport.isGuestSession(-123)) {
           return;
         }
         if (this.accountAchievementsLoaded) {
@@ -757,7 +757,7 @@ final class AchievementTracker {
             int var4 = jj.field_a[var3];
             if (!(var4 >= 0)) {
               var5 = lh.field_e;
-            } else if (var4 != cb.field_c.field_h) {
+            } else if (var4 != cb.field_c.selectedIndex) {
               var5 = ValidatedTextWidget.field_X;
             } else {
               var5 = pc.field_d;
@@ -806,10 +806,10 @@ final class AchievementTracker {
             int var8Lifetime1 = ClientException.field_e - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + CheckboxPainter.field_s;
-              if (var4 != cb.field_c.field_h) {
+              if (var4 != cb.field_c.selectedIndex) {
                 stackIn_44_0 = SpriteDecodeSupport.field_g;
               } else {
-                stackIn_44_0 = gf.field_e;
+                stackIn_44_0 = AnimatedPanelFrame.field_e;
               }
               NineSliceFrame var9 = stackIn_44_0;
               if (var9 != null) {

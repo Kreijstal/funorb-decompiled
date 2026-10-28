@@ -30,7 +30,7 @@ final class AchievementQuery extends IntrusiveNode {
 
     final static void a(boolean param0, String param1, boolean param2, String param3) {
         try {
-          bm.field_g = param3;
+          NameAvailabilityResultSupport.field_g = param3;
           StrongCacheEntry.field_v = param1;
           UiTheme.a((byte) 71, mm.field_a, param0);
           if (param2) {

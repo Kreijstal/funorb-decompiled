@@ -20,10 +20,10 @@ final class Js5NetworkRequest extends ArchiveRequest {
           return true;
         }
         if (param0 == 15) {
-          return di.field_d.b((byte) -18);
+          return di.field_d.isInitialActivation((byte) -18);
         }
         Js5NetworkRequest.releaseStatics((byte) 54);
-        return di.field_d.b((byte) -18);
+        return di.field_d.isInitialActivation((byte) -18);
     }
 
     final static byte[] decompressGroup(byte guard, byte[] bytes) {

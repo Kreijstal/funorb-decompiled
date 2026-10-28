@@ -28,7 +28,7 @@ class DualLinkNode extends IntrusiveNode {
         if (EmailAvailabilityValidator.field_o == dn.field_q) {
           return tf.field_h;
         }
-        if (EmailAvailabilityValidator.field_o == ui.field_b) {
+        if (EmailAvailabilityValidator.field_o == MeshMaterial.field_b) {
           return SpriteStrip.field_j;
         }
         if (!di.field_g.isComplete(param0)) {

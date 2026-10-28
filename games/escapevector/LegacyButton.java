@@ -46,12 +46,12 @@ final class LegacyButton {
             int var8 = 1;
             SoftwareRasterizer.fillRectangle(1 + this.x, 1 + this.sprite.fullHeight + this.y, -2 + this.width, -2 + this.height - this.sprite.fullHeight, var8);
           } else {
-            fc.a(var7, this.x - 2, var4 + 2, 2 + var5, true, 29788, false, this.foregroundColors[1], this.backgroundColors[1], this.field_g, -2 + this.y, false);
+            AccountNoticeKind.drawAnimatedPanelFrame(var7, this.x - 2, var4 + 2, 2 + var5, true, 29788, false, this.foregroundColors[1], this.backgroundColors[1], this.field_g, -2 + this.y, false);
           }
           this.sprite.drawOpaque(this.x, this.y);
         }
         if (this.style == 3) {
-          fc.a(var7, this.x, var4, var5, true, 29788, false, this.foregroundColors[var6], this.backgroundColors[var6], this.field_g, this.y, false);
+          AccountNoticeKind.drawAnimatedPanelFrame(var7, this.x, var4, var5, true, 29788, false, this.foregroundColors[var6], this.backgroundColors[var6], this.field_g, this.y, false);
         }
         if (this.style == 0) {
           var8Lifetime1 = 1;

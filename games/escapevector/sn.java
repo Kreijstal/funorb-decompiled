@@ -16,7 +16,7 @@ final class sn {
         }
         if (var1 != SelfDestructEffects.field_q ||
           CheckboxPainter.field_l.field_h != var2) {
-          boolean var3 = (di.field_d.field_j);
+          boolean var3 = (di.field_d.pointerDriven);
           ArchiveKeyRequest.a(0, var1, (var3), var2);
         }
     }
@@ -82,7 +82,7 @@ final class sn {
               if (!NetworkGameClient.field_r.field_f) {
                 var3_int = PasswordFieldPainter.a(pf.field_e, param1 ^ 114, nb.field_a, Js5Transport.field_h, DialogueScreen.field_k);
               } else {
-                var3_int = PasswordFieldPainter.a(pf.field_e, -122, nb.field_a, Js5Transport.field_h, aj.field_e);
+                var3_int = PasswordFieldPainter.a(pf.field_e, -122, nb.field_a, Js5Transport.field_h, AccountSessionSupport.field_e);
               }
               var4 = 2 + var3_int;
               Js5NetworkRequest.field_I = new String[var4];
@@ -155,7 +155,7 @@ final class sn {
             SecondaryNodeHashTable.field_i = new String[-1 - var4 + var3_int];
             ArraySupport.copy(pf.field_e, 1 + var4, SecondaryNodeHashTable.field_i, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = PasswordFieldPainter.a(pf.field_e, param1 ^ 71, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(al.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
+            var3_int = PasswordFieldPainter.a(pf.field_e, param1 ^ 71, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(AccountFormStage.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(pf.field_e[var5])) {
                 continue;
@@ -225,7 +225,7 @@ final class sn {
             }
             SavedDataWrite.field_k = td.b(128);
           }
-          cb.field_c.field_k = CachedTextLayout.field_j.length;
+          cb.field_c.itemCount = CachedTextLayout.field_j.length;
           int var3_intLifetime1 = 0;
           for (int var4Lifetime1 = 0; var4Lifetime1 < Js5NetworkRequest.field_I.length; var4Lifetime1++) {
             int stackIn_90_0 = 25;
@@ -257,17 +257,17 @@ final class sn {
           }
           ChatHistorySupport.field_a = -(var3_intLifetime1 >> 1) + ClientException.field_e + var3_intLifetime1;
           TriangleMesh.field_x = ClientException.field_e - (var3_intLifetime1 >> 1);
-          mh.field_f = cb.field_c.field_k * (CheckboxPainter.field_s + AchievementTracker.field_k << 1);
+          mh.legacyMenuHeight = cb.field_c.itemCount * (CheckboxPainter.field_s + AchievementTracker.field_k << 1);
           for (int var4Lifetime2 = param1; Js5NetworkRequest.field_I.length > var4Lifetime2; var4Lifetime2++) {
-            int stackIn_112_0 = mh.field_f;
+            int stackIn_112_0 = mh.legacyMenuHeight;
             if (jj.field_a[var4Lifetime2] < 0) {
               stackIn_113_1 = SpriteFactorySupport.field_b;
             } else {
               stackIn_113_1 = ok.field_a;
             }
-            mh.field_f = stackIn_112_0 + stackIn_113_1;
+            mh.legacyMenuHeight = stackIn_112_0 + stackIn_113_1;
           }
-          EmailSyntaxValidator.field_o = LoginDialog.field_nb - (mh.field_f >> 1);
+          EmailSyntaxValidator.field_o = LoginDialog.field_nb - (mh.legacyMenuHeight >> 1);
           cj.field_d = new int[Js5NetworkRequest.field_I.length][];
           int var4Lifetime3 = 0;
           int var5Lifetime3 = EmailSyntaxValidator.field_o;
@@ -289,9 +289,9 @@ final class sn {
             var4Lifetime3++;
           }
           if (2 != ArchiveIndex.field_j) {
-            cb.field_c.a(param1 ^ 90, param2, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y), 0);
+            cb.field_c.initializeSelection(param1 ^ 90, param2, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y), 0);
           } else {
-            cb.field_c.a(param1 + 91, param2, -1, -1);
+            cb.field_c.initializeSelection(param1 + 91, param2, -1, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

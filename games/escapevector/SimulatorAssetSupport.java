@@ -31,14 +31,14 @@ final class SimulatorAssetSupport {
         IndexedSprite[] var1 = new IndexedSprite[ArchiveLoadTask.spriteCount];
         if (guard == 13029) {
           for (int var2 = 0; ArchiveLoadTask.spriteCount > var2; var2++) {
-            var1[var2] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], qe.spriteIndices[var2], ArchiveLoadTask.spritePalette);
+            var1[var2] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], AnimatedPathMarker.spriteIndices[var2], ArchiveLoadTask.spritePalette);
           }
           SpriteDecodeSupport.releaseSpriteSheet(false);
           return var1;
         }
         SimulatorAssetSupport.loadSimulatorSprites(16);
         for (int var2Lifetime1 = 0; ArchiveLoadTask.spriteCount > var2Lifetime1; var2Lifetime1++) {
-          var1[var2Lifetime1] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2Lifetime1], ChatMessage.spriteOffsetYs[var2Lifetime1], qh.spriteWidths[var2Lifetime1], SavedDataQuerySupport.spriteHeights[var2Lifetime1], qe.spriteIndices[var2Lifetime1], ArchiveLoadTask.spritePalette);
+          var1[var2Lifetime1] = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2Lifetime1], ChatMessage.spriteOffsetYs[var2Lifetime1], qh.spriteWidths[var2Lifetime1], SavedDataQuerySupport.spriteHeights[var2Lifetime1], AnimatedPathMarker.spriteIndices[var2Lifetime1], ArchiveLoadTask.spritePalette);
         }
         SpriteDecodeSupport.releaseSpriteSheet(false);
         return var1;

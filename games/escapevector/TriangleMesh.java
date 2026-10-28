@@ -4,7 +4,7 @@
 final class TriangleMesh {
     short[] faceVertexB;
     short[] field_v;
-    static al field_y;
+    static AccountFormStage field_y;
     short[] vertexX;
     byte[] field_n;
     short[] field_Q;
@@ -136,6 +136,6 @@ final class TriangleMesh {
 
     static {
         field_p = "The simulator is a training environment. Your objectives will be given to you at the beginning of each mission. Be prepared for anything.";
-        field_y = new al();
+        field_y = new AccountFormStage();
     }
 }

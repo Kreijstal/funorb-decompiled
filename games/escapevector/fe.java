@@ -5,7 +5,7 @@ final class fe {
     static int field_k;
     private IndexedSprite[] field_b;
     private int field_o;
-    private wc field_a;
+    private MenuInputState field_a;
     private int field_j;
     private int field_l;
     private boolean field_n;
@@ -57,7 +57,7 @@ final class fe {
           ReflectionCheck.field_h = KeyboardStateSupport.loadCoverageFont("", -73, ThreeSliceButtonPainter.field_x, "pump32", pc.field_e);
           IntrusiveDequeCursor.field_e = p.a((byte) 8, "benefit_orbs", ThreeSliceButtonPainter.field_x, "members_expansion_screen");
           LoginMethod.field_c = p.a((byte) 8, "button_text", ThreeSliceButtonPainter.field_x, "members_expansion_screen");
-          QuickChatDynamicCommand.field_a = ui.a("button_highlights", ThreeSliceButtonPainter.field_x, "members_expansion_screen", (byte) 71);
+          QuickChatDynamicCommand.field_a = MeshMaterial.loadSpritesByName("button_highlights", ThreeSliceButtonPainter.field_x, "members_expansion_screen", (byte) 71);
           ThreeSliceButtonPainter.field_x = null;
           pc.field_e = null;
         }
@@ -100,9 +100,9 @@ final class fe {
         KeyboardStateSupport.field_c.drawParagraph(MatchingTextValidator.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
         KeyboardStateSupport.field_c.drawParagraph(MatchingTextValidator.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
         LoginMethod.field_c.drawTransparent(508 + (127 - LoginMethod.field_c.fullWidth) / 2, 315);
-        if (this.field_a.field_h == 0) {
+        if (this.field_a.selectedIndex == 0) {
           QuickChatDynamicCommand.field_a[0].drawTransparent(508, 299);
-        } else if (this.field_a.field_h == 1) {
+        } else if (this.field_a.selectedIndex == 1) {
           QuickChatDynamicCommand.field_a[1].drawTransparent(508, 387);
         }
     }
@@ -187,13 +187,13 @@ final class fe {
         if (!param1) {
           return 0;
         }
-        this.field_a.a(this.a(sf.field_c, LoginDialog.field_ob, -16311), (byte) 122, this.a(GzipDecoder.field_d, UiContainer.field_y, -16311));
+        this.field_a.updatePointer(this.a(sf.field_c, LoginDialog.field_ob, -16311), (byte) 122, this.a(GzipDecoder.field_d, UiContainer.field_y, -16311));
         boolean var4Lifetime1 = false;
-        if (this.field_a.b((byte) -18)) {
-          if (this.field_a.field_h == 0) {
+        if (this.field_a.isInitialActivation((byte) -18)) {
+          if (this.field_a.selectedIndex == 0) {
             var4Lifetime1 = true;
           }
-          if (1 == this.field_a.field_h) {
+          if (1 == this.field_a.selectedIndex) {
             return 2;
           }
         }
@@ -214,17 +214,17 @@ final class fe {
     }
 
     private final int a(boolean param0) {
-        this.field_a.c((byte) 6);
+        this.field_a.handleKeyEvent((byte) 6);
         if (param0) {
           int[] var3 = (int[]) null;
           this.a((BitmapFont) null, 9, 97, -25, 47, 28, (String) null, (int[]) null);
         }
-        if (this.field_a.b((byte) -18)) {
-          if (this.field_a.field_h == 0) {
+        if (this.field_a.isInitialActivation((byte) -18)) {
+          if (this.field_a.selectedIndex == 0) {
             this.b(true);
             return 3;
           }
-          if (this.field_a.field_h == 1) {
+          if (this.field_a.selectedIndex == 1) {
             return 1;
           }
         }
@@ -320,7 +320,7 @@ final class fe {
         this.field_m = 0;
         this.field_i = 0;
         this.field_e = 0;
-        this.field_a.a(105, param0, this.a(GzipDecoder.field_d, UiContainer.field_y, -16311), -1);
+        this.field_a.initializeSelection(105, param0, this.a(GzipDecoder.field_d, UiContainer.field_y, -16311), -1);
     }
 
     private final void a(boolean param0, String[] param1, IndexedSprite[] param2, java.applet.Applet param3, String param4, int param5) {
@@ -340,7 +340,7 @@ final class fe {
             this.field_o = 2;
           }
           this.field_f = param4;
-          this.field_a = new wc(2);
+          this.field_a = new MenuInputState(2);
           this.field_d = param1;
           this.field_b = param2;
           if (this.field_b != null &&
@@ -450,7 +450,7 @@ final class fe {
     }
 
     final static void a(int param0) {
-        fc.a(3161);
+        AccountNoticeKind.resetAccountFlow(3161);
         int var1 = -82 % ((param0 + 5) / 57);
         DraggableWidget.field_F = true;
         DialWidget.field_H = true;

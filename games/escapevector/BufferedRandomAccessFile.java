@@ -394,7 +394,7 @@ final class BufferedRandomAccessFile {
         RuntimeException var2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (ThreeSliceButtonPainter.field_t != al.field_d) {
+          if (ThreeSliceButtonPainter.field_t != AccountFormStage.field_d) {
             return false;
           }
           var2_long = td.b(128);

@@ -27,7 +27,7 @@ final class AccountOverlayController {
           AccountRequestDialog.field_pb.handlePointerFrame(true, (byte) -33, on.field_a, DebouncedValidator.field_b);
           AccountRequestDialog.field_pb.updatePanels(0);
           while (AccountRequestDialog.pollKeyEvent(-104)) {
-            AccountRequestDialog.field_pb.handleKey(jc.field_c, PasswordValidator.field_n, (byte) -121);
+            AccountRequestDialog.field_pb.handleKey(KeyCodeSupport.currentKeyCharacter, PasswordValidator.field_n, (byte) -121);
           }
           if (guard < -31) {
             return;

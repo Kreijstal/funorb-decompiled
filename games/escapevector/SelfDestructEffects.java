@@ -44,10 +44,10 @@ final class SelfDestructEffects {
     final static void f(int param0) {
         int var5 = EscapeVector.obfuscationControl;
         try {
-          int var1_int = al.field_f[0];
+          int var1_int = AccountFormStage.field_f[0];
           int var3 = -128 % ((param0 + 36) / 48);
-          for (int var2 = 1; al.field_f.length > var2; var2++) {
-            int var4 = al.field_f[var2];
+          for (int var2 = 1; AccountFormStage.field_f.length > var2; var2++) {
+            int var4 = AccountFormStage.field_f[var2];
             ArraySupport.copy(SavedDataQuerySupport.field_f, var2 << 4, SavedDataQuerySupport.field_f, var1_int, var4);
             var1_int = var1_int + var4;
           }
@@ -82,7 +82,7 @@ final class SelfDestructEffects {
           java.awt.Component var2 = (java.awt.Component) null;
           SelfDestructEffects.a((java.awt.Component) null, (byte) -63);
         }
-        dj.a(0, -14, 0);
+        AccountPanelInputSupport.drawCachedEdgeSegments(0, -14, 0);
     }
 
     private final int a(boolean param0, int param1) {
@@ -142,24 +142,24 @@ final class SelfDestructEffects {
             int stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (al.field_d == sf.field_d) {
+          if (AccountFormStage.field_d == sf.field_d) {
             DialWidgetPainter.field_g = null;
             QuickChatDynamicCommand.outgoingPackets.position = 0;
             if (param2 != null) {
               var9 = 0;
-              qj.field_a.position = 0;
+              PathPoint.field_a.position = 0;
               if (param1) {
                 var9 = var9 | 1;
               }
-              qj.field_a.writeInt((byte) 123, gk.field_a.nextInt());
-              qj.field_a.writeInt((byte) 124, gk.field_a.nextInt());
-              qj.field_a.writeCircumfixedString((byte) 100, var14);
-              qj.field_a.writeCircumfixedString((byte) 100, var8);
+              PathPoint.field_a.writeInt((byte) 123, gk.field_a.nextInt());
+              PathPoint.field_a.writeInt((byte) 124, gk.field_a.nextInt());
+              PathPoint.field_a.writeCircumfixedString((byte) 100, var14);
+              PathPoint.field_a.writeCircumfixedString((byte) 100, var8);
               CharSequence var15 = (CharSequence) ((Object) param2);
-              qj.field_a.writeCircumfixedString((byte) 100, mm.a(0, var15));
-              qj.field_a.writeShort(-116, param5);
-              qj.field_a.writeByte(param6, -123);
-              qj.field_a.writeByte(var9, -123);
+              PathPoint.field_a.writeCircumfixedString((byte) 100, mm.a(0, var15));
+              PathPoint.field_a.writeShort(-116, param5);
+              PathPoint.field_a.writeByte(param6, -123);
+              PathPoint.field_a.writeByte(var9, -123);
               QuickChatDynamicCommand.outgoingPackets.writeByte(18, param0 ^ 101);
               QuickChatDynamicCommand.outgoingPackets.position = QuickChatDynamicCommand.outgoingPackets.position + 2;
               int var10 = QuickChatDynamicCommand.outgoingPackets.position;
@@ -168,13 +168,13 @@ final class SelfDestructEffects {
                 var11_ref_String = "";
               }
               QuickChatDynamicCommand.outgoingPackets.writeString(var11_ref_String, 105);
-              bn.a(param0 ^ -32, QuickChatDynamicCommand.outgoingPackets, qj.field_a, MarkerSlider.field_O, cf.field_c);
+              bn.a(param0 ^ -32, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
               QuickChatDynamicCommand.outgoingPackets.backpatchShortLength(QuickChatDynamicCommand.outgoingPackets.position - var10, 32614);
             } else {
-              qj.field_a.position = 0;
-              qj.field_a.writeInt((byte) 124, gk.field_a.nextInt());
-              qj.field_a.writeInt((byte) 127, gk.field_a.nextInt());
-              PacketBuffer stackIn_12_0 = qj.field_a;
+              PathPoint.field_a.position = 0;
+              PathPoint.field_a.writeInt((byte) 124, gk.field_a.nextInt());
+              PathPoint.field_a.writeInt((byte) 127, gk.field_a.nextInt());
+              PacketBuffer stackIn_12_0 = PathPoint.field_a;
               int stackIn_12_1 = 100;
               if (!param4.b(114)) {
                 stackIn_13_2 = "";
@@ -182,7 +182,7 @@ final class SelfDestructEffects {
                 stackIn_13_2 = var14;
               }
               ((PacketBuffer) (Object) stackIn_12_0).writeCircumfixedString((byte) stackIn_12_1, stackIn_13_2);
-              PacketBuffer stackIn_15_0 = qj.field_a;
+              PacketBuffer stackIn_15_0 = PathPoint.field_a;
               int stackIn_15_1 = 100;
               if (param3.b(88)) {
                 stackIn_16_2 = var8;
@@ -193,20 +193,20 @@ final class SelfDestructEffects {
               QuickChatDynamicCommand.outgoingPackets.writeByte(16, -123);
               QuickChatDynamicCommand.outgoingPackets.position = QuickChatDynamicCommand.outgoingPackets.position + 1;
               var9 = QuickChatDynamicCommand.outgoingPackets.position;
-              bn.a(0, QuickChatDynamicCommand.outgoingPackets, qj.field_a, MarkerSlider.field_O, cf.field_c);
+              bn.a(0, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
               QuickChatDynamicCommand.outgoingPackets.backpatchByteLength(-38, -var9 + QuickChatDynamicCommand.outgoingPackets.position);
             }
             ClientException.a(-1, 30785);
-            al.field_d = IntrusiveDeque.field_a;
+            AccountFormStage.field_d = IntrusiveDeque.field_a;
           }
-          if (IntrusiveDeque.field_a == al.field_d &&
+          if (IntrusiveDeque.field_a == AccountFormStage.field_d &&
             Checkbox.readIncomingBytes(30000, 1)) {
             int var9Lifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
             QuickChatDynamicCommand.incomingPackets.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
               AccountTermsPanel.field_I = new String[-100 + var9Lifetime1];
-              al.field_d = ResourceArchive.field_k;
+              AccountFormStage.field_d = ResourceArchive.field_k;
             } else {
               if (var9Lifetime1 == 248) {
                 se.writeBrowserSessionMarker((byte) 81, PointCloudEffect.activeApplet((byte) -108));
@@ -223,11 +223,11 @@ final class SelfDestructEffects {
               } else {
                 EmailSyntaxValidator.field_r = -1;
                 LegacyStyleNode.field_v = var9Lifetime1;
-                al.field_d = mh.field_h;
+                AccountFormStage.field_d = mh.field_h;
               }
             }
           }
-          if (al.field_d == ResourceArchive.field_k) {
+          if (AccountFormStage.field_d == ResourceArchive.field_k) {
             int var9Lifetime2 = 2;
             if (Checkbox.readIncomingBytes(param0 + 30032, var9Lifetime2)) {
               int var10Lifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedShort(param0 + 1984);
@@ -244,7 +244,7 @@ final class SelfDestructEffects {
               }
             }
           }
-          if (al.field_d == mh.field_h &&
+          if (AccountFormStage.field_d == mh.field_h &&
             ArchiveKeyRequest.hasCompletePacket(param0 ^ -10538)) {
             if (LegacyStyleNode.field_v != 255) {
               MouseWheelInput.field_a = QuickChatDynamicCommand.incomingPackets.readString(false);
@@ -310,7 +310,7 @@ final class SelfDestructEffects {
         }
         int var2 = this.field_f.countdownTicks;
         if (this.field_g >= var2) {
-          this.field_e = wc.field_d;
+          this.field_e = MenuInputState.field_d;
           this.field_r = 64;
         }
         if (this.field_p < var2) {

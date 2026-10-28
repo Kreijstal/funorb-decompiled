@@ -65,7 +65,7 @@ final class LoginMethod {
               var5 = 1;
               var4 = 1;
             }
-            TerrainMaskSupport.field_c = DialogueScreen.a((byte) 82, var2 * var5, var2 * var4);
+            TerrainMaskSupport.field_c = DialogueScreen.rotationTransformQ16((byte) 82, var2 * var5, var2 * var4);
             return;
           }
           if (var3 < 120) {
@@ -118,7 +118,7 @@ final class LoginMethod {
               var5Lifetime2 = 1;
               var4Lifetime2 = 1;
             }
-            TerrainMaskSupport.field_c = DialogueScreen.a((byte) 82, var2 * var5Lifetime2, var2 * var4Lifetime2);
+            TerrainMaskSupport.field_c = DialogueScreen.rotationTransformQ16((byte) 82, var2 * var5Lifetime2, var2 * var4Lifetime2);
             return;
           }
         }
@@ -169,7 +169,7 @@ final class LoginMethod {
           var5Lifetime1 = 1;
           var4Lifetime1 = 1;
         }
-        TerrainMaskSupport.field_c = DialogueScreen.a((byte) 82, var2 * var5Lifetime1, var2 * var4Lifetime1);
+        TerrainMaskSupport.field_c = DialogueScreen.rotationTransformQ16((byte) 82, var2 * var5Lifetime1, var2 * var4Lifetime1);
     }
 
     public static void releaseStatics(boolean guard) {

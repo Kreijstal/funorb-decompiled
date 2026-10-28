@@ -38,7 +38,7 @@ final class UiTheme {
         if (param0 < 2) {
           return false;
         }
-        return EmailAvailabilityValidator.field_o == ui.field_b ? true : false;
+        return EmailAvailabilityValidator.field_o == MeshMaterial.field_b ? true : false;
     }
 
     private final void drawWrappedTooltip(int x, int guard, int y, String text) {
@@ -111,11 +111,11 @@ final class UiTheme {
           return ResourceArchive.field_b;
         }
         if (param0 == 30519) {
-          return bm.field_g;
+          return NameAvailabilityResultSupport.field_g;
         }
         ResourceArchive var2 = (ResourceArchive) null;
         UiTheme.a((ResourceArchive) null, (ResourceArchive) null, (byte) 91);
-        return bm.field_g;
+        return NameAvailabilityResultSupport.field_g;
     }
 
     final static void a(byte param0, String param1, boolean param2) {

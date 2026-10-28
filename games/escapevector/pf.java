@@ -6,7 +6,7 @@ import java.io.*;
 final class pf {
     static int field_i;
     private LegacyButton[] field_c;
-    wc field_b;
+    MenuInputState field_b;
     static Sprite[] field_g;
     private int[] field_d;
     static String[] field_e;
@@ -18,7 +18,7 @@ final class pf {
         String stackIn_15_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          int var3_int = this.field_b.field_h;
+          int var3_int = this.field_b.selectedIndex;
           if (param0 != 6481) {
             int stackIn_3_0 = -57;
             return stackIn_3_0;
@@ -139,10 +139,10 @@ final class pf {
           }
           if (var4_int == 0) {
             var5 = param2[param2.length - 1].actionId;
-            this.field_b.a(false, var5);
+            this.field_b.selectFromKeyboard(false, var5);
           } else {
             var5 = param1[var4_int - 1].actionId;
-            this.field_b.a(false, var5);
+            this.field_b.selectFromKeyboard(false, var5);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -237,7 +237,7 @@ final class pf {
           int var5_int = 0;
           int var6 = 640;
           int var7 = 442;
-          if (!aj.b(-96)) {
+          if (!AccountSessionSupport.isGuestSession(-96)) {
             var10 = new int[]{0};
             var8 = new int[]{4};
             var9 = new String[]{GameKeyHandler.field_a};
@@ -277,7 +277,7 @@ final class pf {
           LegacyButton[] var3 = var9;
           for (int var4 = 0; var4 < var9.length; var4++) {
             LegacyButton var5 = var9[var4];
-            boolean stackIn_6_0 = !(~this.field_b.field_h != ~var5.actionId);
+            boolean stackIn_6_0 = !(~this.field_b.selectedIndex != ~var5.actionId);
             boolean var6 = stackIn_6_0;
             var5.draw(-16383, (var6));
           }
@@ -305,7 +305,7 @@ final class pf {
         boolean var2 = false;
         int var3 = -14 % ((param0 - 15) / 58);
         while (AccountRequestDialog.pollKeyEvent(-98)) {
-          this.field_b.a(113);
+          this.field_b.handleKeyWithoutNavigation(113);
           if (PasswordValidator.field_n == 97 ||
             PasswordValidator.field_n == 99) {
             boolean var4 = (this.a(-101, this.field_c, this.field_a));
@@ -313,7 +313,7 @@ final class pf {
               var4 = (this.a(-101, this.field_a, this.field_c));
             }
             if (!var4) {
-              this.field_b.a(false, 0);
+              this.field_b.selectFromKeyboard(false, 0);
             }
           }
           if (96 == PasswordValidator.field_n ||
@@ -323,7 +323,7 @@ final class pf {
               var4Lifetime1 = (this.b(84, this.field_a, this.field_c));
             }
             if (!var4Lifetime1) {
-              this.field_b.a(false, 0);
+              this.field_b.selectFromKeyboard(false, 0);
             }
           }
           if (PasswordValidator.field_n == 13) {
@@ -347,7 +347,7 @@ final class pf {
         }
         int var2 = this.a(1, UiContainer.field_y, GzipDecoder.field_d);
         int var3 = this.a(1, LoginDialog.field_ob, sf.field_c);
-        this.field_b.a(var3, (byte) 121, var2);
+        this.field_b.updatePointer(var3, (byte) 121, var2);
         boolean discarded$0 = this.a(true, (byte) 91);
     }
 
@@ -394,7 +394,7 @@ final class pf {
     private final void c(int param0) {
         Throwable decompiledCaughtException = null;
         int var2 = 84 / ((59 - param0) / 54);
-        if (!this.field_b.field_e) {
+        if (!this.field_b.selectionChanged) {
           return;
         }
         int var3 = 100;
@@ -644,15 +644,15 @@ final class pf {
 
     private final boolean a(boolean param0, byte param1) {
         this.c(113);
-        if (!this.field_b.b((byte) -18)) {
+        if (!this.field_b.isInitialActivation((byte) -18)) {
           return false;
         }
-        int var3 = this.field_b.field_h;
+        int var3 = this.field_b.selectedIndex;
         if (var3 >= 0 &&
           this.field_d.length > var3) {
           int var4 = this.field_d[var3];
           if (var4 == 3 &&
-            aj.b(-100)) {
+            AccountSessionSupport.isGuestSession(-100)) {
             this.b(-15268);
             return true;
           }
@@ -670,7 +670,7 @@ final class pf {
           if (param1 == 91) {
             return false;
           }
-          this.field_b = (wc) null;
+          this.field_b = (MenuInputState) null;
           return false;
         }
         return false;
@@ -688,15 +688,15 @@ final class pf {
           }
           if (param1.length - 1 > var4_int) {
             var5 = param1[var4_int + 1].actionId;
-            this.field_b.a(false, var5);
+            this.field_b.selectFromKeyboard(false, var5);
           } else {
             var5 = param2[0].actionId;
-            this.field_b.a(false, var5);
+            this.field_b.selectFromKeyboard(false, var5);
           }
           if (param0 == -101) {
             return true;
           }
-          this.field_b = (wc) null;
+          this.field_b = (MenuInputState) null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -929,14 +929,14 @@ final class pf {
 
     private final void a(boolean param0, byte param1, int param2) {
         if (param1 != -73) {
-          this.field_b = (wc) null;
+          this.field_b = (MenuInputState) null;
         }
-        this.field_b = new wc(param2);
+        this.field_b = new MenuInputState(param2);
         int var4 = this.a(UiContainer.field_y, this.field_c, GzipDecoder.field_d, 3);
         if (var4 < 0) {
           var4 = this.a(UiContainer.field_y, this.field_a, GzipDecoder.field_d, 3);
         }
-        this.field_b.a(125, param0, var4, 0);
+        this.field_b.initializeSelection(125, param0, var4, 0);
     }
 
     public static void releaseStatics(int guard) {
@@ -956,7 +956,7 @@ final class pf {
         }
         LegacyButton var6 = param0[var5_int];
         int var7 = var6.actionId;
-        int var8 = this.field_b.field_h;
+        int var8 = this.field_b.selectedIndex;
         if (param1 != -23) {
           field_e = (String[]) null;
         }

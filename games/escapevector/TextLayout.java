@@ -109,8 +109,8 @@ abstract class TextLayout {
         if (guard != -1) {
           return (java.awt.Container) null;
         }
-        if (qj.field_i != null) {
-          return (java.awt.Container) ((Object) qj.field_i);
+        if (PathPoint.field_i != null) {
+          return (java.awt.Container) ((Object) PathPoint.field_i);
         }
         return (java.awt.Container) ((Object) PointCloudEffect.activeApplet((byte) -119));
     }

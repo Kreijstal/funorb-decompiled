@@ -21,7 +21,7 @@ final class gn {
         Object var2 = null;
         int var3 = EscapeVector.obfuscationControl;
         if (param0 == 7108) {
-          if (aj.b(-128)) {
+          if (AccountSessionSupport.isGuestSession(-128)) {
             return;
           }
           if (this.field_d != 0) {
@@ -56,7 +56,7 @@ final class gn {
           }
         }
         this.field_j = 78;
-        if (aj.b(-128)) {
+        if (AccountSessionSupport.isGuestSession(-128)) {
           return;
         }
         if (this.field_d != 0) {
@@ -332,7 +332,7 @@ final class gn {
           !UiContainer.e((byte) 104)) {
           return false;
         }
-        if (aj.b(-117) &&
+        if (AccountSessionSupport.isGuestSession(-117) &&
           -1 == this.field_n &&
           0 == param1) {
           return true;
@@ -388,7 +388,7 @@ final class gn {
           if (!this.field_a) {
             if (this.field_d == 0) {
               if (this.field_m == null) {
-                this.field_m = wc.a(this.field_j, 5, 1, (byte) -51);
+                this.field_m = MenuInputState.requestProgress(this.field_j, 5, 1, (byte) -51);
               }
               this.field_i = this.field_m.complete;
               if (this.field_i) {
@@ -421,7 +421,7 @@ final class gn {
             return;
           }
           if (this.field_m == null) {
-            this.field_m = wc.a(this.field_j, 5, 1, (byte) -51);
+            this.field_m = MenuInputState.requestProgress(this.field_j, 5, 1, (byte) -51);
           }
           this.field_i = this.field_m.complete;
           if (!this.field_i) {
@@ -441,7 +441,7 @@ final class gn {
               return;
             }
             if (this.field_m == null) {
-              this.field_m = wc.a(this.field_j, 5, 1, (byte) -51);
+              this.field_m = MenuInputState.requestProgress(this.field_j, 5, 1, (byte) -51);
             }
             this.field_i = this.field_m.complete;
             if (!this.field_i) {
@@ -470,7 +470,7 @@ final class gn {
             return;
           }
           if (this.field_m == null) {
-            this.field_m = wc.a(this.field_j, 5, 1, (byte) -51);
+            this.field_m = MenuInputState.requestProgress(this.field_j, 5, 1, (byte) -51);
           }
           this.field_i = this.field_m.complete;
           if (!this.field_i) {

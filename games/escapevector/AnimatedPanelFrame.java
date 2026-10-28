@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gf {
-    int field_j;
-    private int field_h;
-    int field_k;
-    private int field_i;
+final class AnimatedPanelFrame {
+    int x;
+    private int targetAccentWidth;
+    int y;
+    private int darkColor;
     static NineSliceFrame field_e;
-    int field_m;
-    private int field_c;
-    private int field_l;
-    private int field_d;
-    private int field_f;
+    int height;
+    private int accentColor;
+    private int openDurationTicks;
+    private int lightColor;
+    private int frameId;
     static DraggableWidget field_b;
     static int field_a;
-    int field_g;
-    private boolean field_n;
+    int width;
+    private boolean hasAccent;
 
-    private final int a(int param0) {
-        int var2 = mj.field_d >= this.field_l ? 0 : -mj.field_d + this.field_l;
-        if (param0 < -40) {
+    private final int remainingOpenTicks(int guard) {
+        int var2 = mj.field_d >= this.openDurationTicks ? 0 : -mj.field_d + this.openDurationTicks;
+        if (guard < -40) {
           return var2;
         }
         return 14;
     }
 
-    final static int a(byte param0, int param1) {
+    final static int handleAccountConnectionFailure(byte guard, int responseCode) {
         int var3 = EscapeVector.obfuscationControl;
         ArchiveLoadTask.field_g = null;
         NameSuggestionsPanel.field_I = null;
@@ -33,15 +33,15 @@ final class gf {
         int var2 = AgeValidator.field_n;
         AgeValidator.field_n = SeekerPulseStream.field_l;
         SeekerPulseStream.field_l = var2;
-        if (param0 != -78) {
+        if (guard != -78) {
           String var4 = (String) null;
-          gf.a((String) null, (byte) 43);
+          AnimatedPanelFrame.findContactByName((String) null, (byte) 43);
           SelfDestructEffects.field_j.failureCount = SelfDestructEffects.field_j.failureCount + 1;
-          if (param1 == 51) {
+          if (responseCode == 51) {
             SelfDestructEffects.field_j.lastErrorCode = 2;
             if (SelfDestructEffects.field_j.failureCount < 2) {
               if (SelfDestructEffects.field_j.failureCount >= 2 &&
-                param1 == 50) {
+                responseCode == 50) {
                 return 5;
               }
               if (SelfDestructEffects.field_j.failureCount < 4) {
@@ -49,11 +49,11 @@ final class gf {
               }
               return 1;
             }
-            if (param1 == 51) {
+            if (responseCode == 51) {
               return 2;
             }
             if (SelfDestructEffects.field_j.failureCount >= 2 &&
-              param1 == 50) {
+              responseCode == 50) {
               return 5;
             }
             if (SelfDestructEffects.field_j.failureCount < 4) {
@@ -61,11 +61,11 @@ final class gf {
             }
             return 1;
           }
-          if (param1 == 50) {
+          if (responseCode == 50) {
             SelfDestructEffects.field_j.lastErrorCode = 5;
             if (SelfDestructEffects.field_j.failureCount < 2) {
               if (SelfDestructEffects.field_j.failureCount >= 2 &&
-                param1 == 50) {
+                responseCode == 50) {
                 return 5;
               }
               if (SelfDestructEffects.field_j.failureCount < 4) {
@@ -73,11 +73,11 @@ final class gf {
               }
               return 1;
             }
-            if (param1 == 51) {
+            if (responseCode == 51) {
               return 2;
             }
             if (SelfDestructEffects.field_j.failureCount >= 2 &&
-              param1 == 50) {
+              responseCode == 50) {
               return 5;
             }
             if (SelfDestructEffects.field_j.failureCount < 4) {
@@ -88,7 +88,7 @@ final class gf {
           SelfDestructEffects.field_j.lastErrorCode = 1;
           if (SelfDestructEffects.field_j.failureCount < 2) {
             if (SelfDestructEffects.field_j.failureCount >= 2 &&
-              param1 == 50) {
+              responseCode == 50) {
               return 5;
             }
             if (SelfDestructEffects.field_j.failureCount >= 4) {
@@ -96,11 +96,11 @@ final class gf {
             }
             return -1;
           }
-          if (param1 == 51) {
+          if (responseCode == 51) {
             return 2;
           }
           if (SelfDestructEffects.field_j.failureCount >= 2 &&
-            param1 == 50) {
+            responseCode == 50) {
             return 5;
           }
           if (SelfDestructEffects.field_j.failureCount < 4) {
@@ -109,14 +109,14 @@ final class gf {
           return 1;
         }
         SelfDestructEffects.field_j.failureCount = SelfDestructEffects.field_j.failureCount + 1;
-        if (param1 == 51) {
+        if (responseCode == 51) {
           SelfDestructEffects.field_j.lastErrorCode = 2;
           if (SelfDestructEffects.field_j.failureCount >= 2 &&
-            param1 == 51) {
+            responseCode == 51) {
             return 2;
           }
           if (SelfDestructEffects.field_j.failureCount >= 2) {
-            if (param1 != 50) {
+            if (responseCode != 50) {
               if (SelfDestructEffects.field_j.failureCount >= 4) {
                 return 1;
               }
@@ -129,14 +129,14 @@ final class gf {
           }
           return -1;
         }
-        if (param1 == 50) {
+        if (responseCode == 50) {
           SelfDestructEffects.field_j.lastErrorCode = 5;
           if (SelfDestructEffects.field_j.failureCount >= 2 &&
-            param1 == 51) {
+            responseCode == 51) {
             return 2;
           }
           if (SelfDestructEffects.field_j.failureCount >= 2) {
-            if (param1 != 50) {
+            if (responseCode != 50) {
               if (SelfDestructEffects.field_j.failureCount >= 4) {
                 return 1;
               }
@@ -151,11 +151,11 @@ final class gf {
         }
         SelfDestructEffects.field_j.lastErrorCode = 1;
         if (SelfDestructEffects.field_j.failureCount >= 2 &&
-          param1 == 51) {
+          responseCode == 51) {
           return 2;
         }
         if (SelfDestructEffects.field_j.failureCount >= 2) {
-          if (param1 != 50) {
+          if (responseCode != 50) {
             if (SelfDestructEffects.field_j.failureCount >= 4) {
               return 1;
             }
@@ -169,45 +169,45 @@ final class gf {
         return -1;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        this.field_i = param3;
-        if (param0 == 15135) {
-          this.field_d = param1;
-          this.field_f = param2;
+    final void configureFrame(int guard, int lightColor, int frameId, int darkColor) {
+        this.darkColor = darkColor;
+        if (guard == 15135) {
+          this.lightColor = lightColor;
+          this.frameId = frameId;
           return;
         }
-        this.field_k = 79;
-        this.field_d = param1;
-        this.field_f = param2;
+        this.y = 79;
+        this.lightColor = lightColor;
+        this.frameId = frameId;
     }
 
-    private final int a(byte param0) {
-        int var2 = this.a(-73);
-        if (param0 == -57) {
-          int var3 = this.field_l > var2 ? (-var2 + this.field_l) * this.field_h / this.field_l : 0;
+    private final int accentWidth(byte guard) {
+        int var2 = this.remainingOpenTicks(-73);
+        if (guard == -57) {
+          int var3 = this.openDurationTicks > var2 ? (-var2 + this.openDurationTicks) * this.targetAccentWidth / this.openDurationTicks : 0;
           return var3;
         }
-        this.field_h = 59;
-        int var3Lifetime1 = this.field_l > var2 ? (-var2 + this.field_l) * this.field_h / this.field_l : 0;
+        this.targetAccentWidth = 59;
+        int var3Lifetime1 = this.openDurationTicks > var2 ? (-var2 + this.openDurationTicks) * this.targetAccentWidth / this.openDurationTicks : 0;
         return var3Lifetime1;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
-        if (param5 <= -127) {
-          this.a(15135, param4, param2, param0);
-          this.field_h = param3;
-          this.field_c = param1;
-          this.field_n = true;
+    final void configureAccent(int darkColor, int accentColor, int frameId, int width, int lightColor, byte guard) {
+        if (guard <= -127) {
+          this.configureFrame(15135, lightColor, frameId, darkColor);
+          this.targetAccentWidth = width;
+          this.accentColor = accentColor;
+          this.hasAccent = true;
           return;
         }
-        this.a(98, -122, -22, -60, -56, (byte) -128);
-        this.a(15135, param4, param2, param0);
-        this.field_h = param3;
-        this.field_c = param1;
-        this.field_n = true;
+        this.configureAccent(98, -122, -22, -60, -56, (byte) -128);
+        this.configureFrame(15135, lightColor, frameId, darkColor);
+        this.targetAccentWidth = width;
+        this.accentColor = accentColor;
+        this.hasAccent = true;
     }
 
-    final static ContactEntry a(String param0, byte param1) {
+    final static ContactEntry findContactByName(String name, byte guard) {
         String stackIn_21_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
@@ -215,15 +215,15 @@ final class gf {
             Object stackIn_3_0 = null;
             return (ContactEntry) (stackIn_3_0);
           }
-          CharSequence var6 = (CharSequence) ((Object) param0);
+          CharSequence var6 = (CharSequence) ((Object) name);
           String var2 = sf.a(-104, var6);
           if (var2 == null) {
-            var2 = param0;
+            var2 = name;
           }
           ContactEntry var3 = (ContactEntry) (ml.field_a.get(-82, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
-              int var4 = -98 / ((param1 + 63) / 57);
+              int var4 = -98 / ((guard + 63) / 57);
               Object stackIn_17_0 = null;
               return (ContactEntry) (stackIn_17_0);
             }
@@ -245,37 +245,37 @@ final class gf {
           RuntimeException var2_ref = decompiledCaughtException;
           RuntimeException stackIn_20_0 = var2_ref;
           StringBuilder stackIn_20_1 = new StringBuilder().append("gf.F(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void c(int param0) {
-        int var2 = this.field_g + this.field_j;
-        if (param0 < 32) {
-          this.field_c = -56;
-          int var3 = this.field_m + this.field_k;
-          int var4 = this.a(-41);
-          if (!this.field_n) {
-            fc.a(var4, this.field_j, var2, var3, true, 29788, false, this.field_d, this.field_i, this.field_f, this.field_k, true);
+    final void draw(int guard) {
+        int var2 = this.width + this.x;
+        if (guard < 32) {
+          this.accentColor = -56;
+          int var3 = this.height + this.y;
+          int var4 = this.remainingOpenTicks(-41);
+          if (!this.hasAccent) {
+            AccountNoticeKind.drawAnimatedPanelFrame(var4, this.x, var2, var3, true, 29788, false, this.lightColor, this.darkColor, this.frameId, this.y, true);
             return;
           }
-          int var5 = this.a((byte) -57);
-          GameAppletShell.a(var5, this.field_j, this.field_k, this.field_i, this.field_f, var3, -3, var2, this.field_d, this.field_c, var4);
+          int var5 = this.accentWidth((byte) -57);
+          GameAppletShell.a(var5, this.x, this.y, this.darkColor, this.frameId, var3, -3, var2, this.lightColor, this.accentColor, var4);
           return;
         }
-        int var3Lifetime1 = this.field_m + this.field_k;
-        int var4Lifetime1 = this.a(-41);
-        if (!this.field_n) {
-          fc.a(var4Lifetime1, this.field_j, var2, var3Lifetime1, true, 29788, false, this.field_d, this.field_i, this.field_f, this.field_k, true);
+        int var3Lifetime1 = this.height + this.y;
+        int var4Lifetime1 = this.remainingOpenTicks(-41);
+        if (!this.hasAccent) {
+          AccountNoticeKind.drawAnimatedPanelFrame(var4Lifetime1, this.x, var2, var3Lifetime1, true, 29788, false, this.lightColor, this.darkColor, this.frameId, this.y, true);
           return;
         }
-        int var5Lifetime1 = this.a((byte) -57);
-        GameAppletShell.a(var5Lifetime1, this.field_j, this.field_k, this.field_i, this.field_f, var3Lifetime1, -3, var2, this.field_d, this.field_c, var4Lifetime1);
+        int var5Lifetime1 = this.accentWidth((byte) -57);
+        GameAppletShell.a(var5Lifetime1, this.x, this.y, this.darkColor, this.frameId, var3Lifetime1, -3, var2, this.lightColor, this.accentColor, var4Lifetime1);
     }
 
     public static void releaseStatics(int guard) {
@@ -288,12 +288,12 @@ final class gf {
         field_b = null;
     }
 
-    gf(int param0, int param1, int param2, int param3, int param4) {
-        this.field_k = param1;
-        this.field_j = param0;
-        this.field_l = param4;
-        this.field_g = param2;
-        this.field_m = param3;
+    AnimatedPanelFrame(int x, int y, int width, int height, int openDurationTicks) {
+        this.y = y;
+        this.x = x;
+        this.openDurationTicks = openDurationTicks;
+        this.width = width;
+        this.height = height;
     }
 
     static {

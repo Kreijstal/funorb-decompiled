@@ -201,7 +201,7 @@ final class SocketJs5Transport extends Js5Transport {
           var5Lifetime1.boardId = boardId;
           var5Lifetime1.field_h = queryKind;
           AchievementRecord.field_n.addLast(-12328, var5Lifetime1);
-          aj.writeHighscoreQuery(124, opcode, var5Lifetime1);
+          AccountSessionSupport.writeHighscoreQuery(124, opcode, var5Lifetime1);
           HighscoreQuery stackIn_15_0 = var5Lifetime1;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -286,14 +286,14 @@ final class SocketJs5Transport extends Js5Transport {
             if (var3_int) {
               var1.readString(false);
             }
-            ContactEntry var5 = gf.a(var4_ref_String, (byte) -125);
+            ContactEntry var5 = AnimatedPanelFrame.findContactByName(var4_ref_String, (byte) -125);
             String var6 = var1.readString(false);
             String var7 = sf.a(-123, (CharSequence) ((Object) var4_ref_String));
             if (null == var7) {
               var7 = var4_ref_String;
             }
             if (var5 == null) {
-              var5 = gf.a(var6, (byte) 114);
+              var5 = AnimatedPanelFrame.findContactByName(var6, (byte) 114);
               if (null != var5) {
                 ml.field_a.put((long)var7.hashCode(), var5, 26);
               }
@@ -334,8 +334,8 @@ final class SocketJs5Transport extends Js5Transport {
             ii.a((byte) 16, var4);
             return;
           }
-          if (bm.field_b == null) {
-            bm.field_b = new SecondaryNodeHashTable(128);
+          if (NameAvailabilityResultSupport.field_b == null) {
+            NameAvailabilityResultSupport.field_b = new SecondaryNodeHashTable(128);
             ua.field_a = 0;
           }
           Object var3Lifetime1 = var1.readString(false);
@@ -348,12 +348,12 @@ final class SocketJs5Transport extends Js5Transport {
           if (var6_ref == null) {
             var6_ref = LoginCredentialType.findFriendByName(-1465, var5_ref);
             if (var6_ref != null) {
-              bm.field_b.put((long)sf.a(-88, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, 25);
+              NameAvailabilityResultSupport.field_b.put((long)sf.a(-88, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, 25);
             }
           }
           if (null == var6_ref) {
             var6_ref = new ContactEntry();
-            bm.field_b.put((long)sf.a(-109, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, guard ^ 123);
+            NameAvailabilityResultSupport.field_b.put((long)sf.a(-109, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, guard ^ 123);
             int fieldTemp$1 = ua.field_a;
             ua.field_a = ua.field_a + 1;
             var6_ref.insertionOrder = fieldTemp$1;

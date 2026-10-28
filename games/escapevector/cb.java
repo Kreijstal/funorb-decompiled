@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cb {
-    static wc field_c;
+    static MenuInputState field_c;
     static String[] field_b;
     static Sprite field_a;
     private static String field_z;
@@ -19,6 +19,6 @@ final class cb {
     static {
         field_z = "cb.A(";
         field_b = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
-        field_c = new wc(1);
+        field_c = new MenuInputState(1);
     }
 }

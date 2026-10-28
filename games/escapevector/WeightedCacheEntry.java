@@ -30,14 +30,14 @@ abstract class WeightedCacheEntry extends DualLinkNode {
             return stackIn_3_0;
           }
           if (var2 == null) {
-            LoginMethod stackIn_6_0 = qj.field_g;
+            LoginMethod stackIn_6_0 = PathPoint.field_g;
             return stackIn_6_0;
           }
           LoginMethod[] var3 = BoundedRandomAccessFile.a(false);
           int var4 = 0;
           while (true) {
             if (var3.length <= var4) {
-              LoginMethod stackIn_14_0 = qj.field_g;
+              LoginMethod stackIn_14_0 = PathPoint.field_g;
               return stackIn_14_0;
             }
             var5 = var3[var4];

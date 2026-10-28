@@ -290,7 +290,7 @@ final class gj {
           this.field_b = (ScoreSubmission) null;
         }
         if (param1 == 0) {
-          return wc.field_b;
+          return MenuInputState.field_b;
         }
         if (param1 == 2) {
           return LoginDialog.field_lb;

@@ -124,7 +124,7 @@ final class DraggableWidget extends SingleChildContainer {
           }
           this.field_J = -this.x + (pointerX - offsetX);
           this.field_L = -this.y + (pointerY - offsetY);
-          gf.field_b = this;
+          AnimatedPanelFrame.field_b = this;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

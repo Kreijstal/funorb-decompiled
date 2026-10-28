@@ -38,7 +38,7 @@ final class ii {
         if (param0 != 16836) {
           return false;
         }
-        if (20 > fc.field_a) {
+        if (20 > AccountNoticeKind.frameworkLoadingStage) {
           return true;
         }
         if (!RepeatedCharacterSupport.a((byte) -84)) {

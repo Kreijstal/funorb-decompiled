@@ -35,7 +35,7 @@ final class lh {
                 var3 = (77 - var17.fullHeight) / 2;
                 if (var2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k > 80) {
                     LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -74,7 +74,7 @@ final class lh {
                   var3 = (-((Sprite) (var2)).fullHeight + 90) / 2;
                   if (var2 == null) {
                     if (LaserGateSpan.field_k == 110) {
-                      ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+                      ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                     }
                     if (LaserGateSpan.field_k > 80) {
                       LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -105,7 +105,7 @@ final class lh {
           }
           if (var2 == null) {
             if (LaserGateSpan.field_k == 110) {
-              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+              ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
             }
             if (LaserGateSpan.field_k <= 80) {
               return;
@@ -146,7 +146,7 @@ final class lh {
                 var3Lifetime1 = (77 - var24.fullHeight) / 2;
                 if (var2Lifetime1 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k > 80) {
                     LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -185,7 +185,7 @@ final class lh {
                   var3Lifetime1 = (-((Sprite) (var2Lifetime1)).fullHeight + 90) / 2;
                   if (var2Lifetime1 == null) {
                     if (LaserGateSpan.field_k == 110) {
-                      ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+                      ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                     }
                     if (LaserGateSpan.field_k > 80) {
                       LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
@@ -216,7 +216,7 @@ final class lh {
           }
           if (var2Lifetime1 == null) {
             if (LaserGateSpan.field_k == 110) {
-              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+              ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
             }
             if (LaserGateSpan.field_k <= 80) {
               return;
@@ -246,7 +246,7 @@ final class lh {
         if (wk.field_c) {
           if (var2Lifetime2 == null) {
             if (LaserGateSpan.field_k == 110) {
-              ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+              ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
             }
             if (LaserGateSpan.field_k <= 80) {
               return;
@@ -278,7 +278,7 @@ final class lh {
             var3Lifetime2 = (77 - var31.fullHeight) / 2;
             if (var2Lifetime2 == null) {
               if (LaserGateSpan.field_k == 110) {
-                ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+                ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
               }
               if (LaserGateSpan.field_k <= 80) {
                 return;
@@ -308,7 +308,7 @@ final class lh {
               if (PacketBuffer.field_h) {
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -338,7 +338,7 @@ final class lh {
                 var3Lifetime2 = (-((Sprite) (var2Lifetime2)).fullHeight + 90) / 2;
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -365,7 +365,7 @@ final class lh {
                 var3Lifetime2 = (66 - var29.fullHeight) / 2;
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -389,7 +389,7 @@ final class lh {
               if (!ch.field_b) {
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
-                    ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+                    ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                   }
                   if (LaserGateSpan.field_k <= 80) {
                     return;
@@ -415,7 +415,7 @@ final class lh {
               var3Lifetime2 = (100 - var30.fullHeight) / 2;
               if (var2Lifetime2 == null) {
                 if (LaserGateSpan.field_k == 110) {
-                  ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+                  ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
                 }
                 if (LaserGateSpan.field_k <= 80) {
                   return;
@@ -447,7 +447,7 @@ final class lh {
         }
         if (var2Lifetime2 == null) {
           if (LaserGateSpan.field_k == 110) {
-            ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
+            ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
           }
           if (LaserGateSpan.field_k <= 80) {
             return;
@@ -487,9 +487,9 @@ final class lh {
     final static boolean b(byte param0) {
         boolean var1 = true;
         int var3 = 116 / ((param0 + 18) / 46);
-        wc var2 = di.field_d;
+        MenuInputState var2 = di.field_d;
         if (var2 != null) {
-          var1 = (var2.field_j);
+          var1 = (var2.pointerDriven);
         }
         return (var1);
     }

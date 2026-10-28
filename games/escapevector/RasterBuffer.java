@@ -3,7 +3,7 @@
  */
 abstract class RasterBuffer {
     int field_d;
-    static al field_g;
+    static AccountFormStage field_g;
     static PcmSample field_c;
     static IntrusiveDeque field_e;
     int field_h;
@@ -77,7 +77,7 @@ abstract class RasterBuffer {
         String stackIn_7_2 = null;
         try {
           if (param0 < 24) {
-            field_g = (al) null;
+            field_g = (AccountFormStage) null;
           }
           EmailAvailabilityRequest stackIn_3_0 = new EmailAvailabilityRequest(param1);
           return stackIn_3_0;
@@ -222,7 +222,7 @@ abstract class RasterBuffer {
           long var2_long = 0L;
           int var4 = param1.length();
           if (param0 < 47) {
-            field_g = (al) null;
+            field_g = (AccountFormStage) null;
           }
           for (int var5 = 0; var5 < var4; var5++) {
             var2_long = var2_long * 37L;
@@ -268,7 +268,7 @@ abstract class RasterBuffer {
     }
 
     static {
-        field_g = new al();
+        field_g = new AccountFormStage();
         field_b = "That name is not available";
         field_e = new IntrusiveDeque();
         field_a = new int[][]{new int[]{0, 1}, new int[]{2}, new int[]{3}};

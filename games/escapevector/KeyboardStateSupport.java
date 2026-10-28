@@ -10,7 +10,7 @@ final class KeyboardStateSupport {
     static int field_b;
 
     final static void a(int param0, int param1) {
-        dj.a(6445);
+        AccountPanelInputSupport.serviceAccountPanelInput(6445);
         if (param0 != 25972) {
           field_c = (BinaryBitmapFont) null;
         }
@@ -88,8 +88,8 @@ final class KeyboardStateSupport {
             if (guard != 28087) {
               field_b = -95;
             }
-            ui.field_e = ui.field_e + 1;
-            MarkerSliderPainter.field_l = ta.field_w;
+            MeshMaterial.keyboardIdleTicks = MeshMaterial.keyboardIdleTicks + 1;
+            MarkerSliderPainter.field_l = AchievementsScreen.field_w;
             if (Js5Transport.field_b < 0) {
               int var5 = 0;
               var2 = var5;
@@ -109,7 +109,7 @@ final class KeyboardStateSupport {
                 ScoreSubmission.field_h[~var2] = false;
               }
             }
-            ta.field_w = bn.field_b;
+            AchievementsScreen.field_w = bn.field_b;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

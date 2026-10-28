@@ -52,7 +52,7 @@ final class TrackerMusicDefinition {
         if (!di.field_g.isComplete(0)) {
           return di.field_g.email(-84);
         }
-        if (ui.field_b == EmailAvailabilityValidator.field_o) {
+        if (MeshMaterial.field_b == EmailAvailabilityValidator.field_o) {
           return di.field_g.email(-52);
         }
         if (param0 != 31069) {

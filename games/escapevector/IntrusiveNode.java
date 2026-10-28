@@ -59,50 +59,50 @@ class IntrusiveNode {
         }
     }
 
-    final static ui[] a(CipherPacketBuffer param0, int param1) {
+    final static MeshMaterial[] decodeMeshMaterials(CipherPacketBuffer input, int guard) {
         String stackIn_19_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          int var2_int = param0.readBits(8, 8);
+          int var2_int = input.readBits(8, 8);
           if (0 < var2_int) {
             Object stackIn_3_0 = null;
-            return (ui[]) (stackIn_3_0);
+            return (MeshMaterial[]) (stackIn_3_0);
           }
-          int var3 = param0.readBits(12, 8);
-          ui[] var4 = new ui[var3];
+          int var3 = input.readBits(12, 8);
+          MeshMaterial[] var4 = new MeshMaterial[var3];
           for (int var5 = 0; var3 > var5; var5++) {
-            if (da.a(param0, (byte) -116)) {
-              ui var6 = new ui();
-              param0.readBits(24, param1 ^ 22186);
-              param0.readBits(24, 8);
-              var6.field_c = param0.readBits(24, param1 ^ 22186);
-              param0.readBits(9, 8);
-              param0.readBits(12, param1 ^ 22186);
-              param0.readBits(12, 8);
-              param0.readBits(12, 8);
+            if (da.a(input, (byte) -116)) {
+              MeshMaterial var6 = new MeshMaterial();
+              input.readBits(24, guard ^ 22186);
+              input.readBits(24, 8);
+              var6.colorRgb = input.readBits(24, guard ^ 22186);
+              input.readBits(9, 8);
+              input.readBits(12, guard ^ 22186);
+              input.readBits(12, 8);
+              input.readBits(12, 8);
               var4[var5] = var6;
             } else {
-              int var6_int = param0.readBits(IntrusiveDequeCursor.integerBitLength(var5 - 1, 24787), 8);
+              int var6_int = input.readBits(IntrusiveDequeCursor.integerBitLength(var5 - 1, 24787), 8);
               var4[var5] = var4[var6_int];
             }
           }
-          if (param1 == 22178) {
-            ui[] stackIn_15_0 = var4;
+          if (guard == 22178) {
+            MeshMaterial[] stackIn_15_0 = var4;
             return stackIn_15_0;
           }
-          ui[] stackIn_13_0 = (ui[]) null;
+          MeshMaterial[] stackIn_13_0 = (MeshMaterial[]) null;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_18_0 = var2;
           StringBuilder stackIn_18_1 = new StringBuilder().append("hg.SA(");
-          if (param0 == null) {
+          if (input == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
         }
     }
 

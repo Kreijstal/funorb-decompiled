@@ -40,14 +40,14 @@ abstract class TickClock {
             AccountMessagePanel.drawUnevenFrame(param4, param6, param8, param0, param2, 73, param3, param1, param9);
             return;
           }
-          fc.a(param9, param3, param6, param1, true, 29788, false, param8, param4, param0, param2, false);
+          AccountNoticeKind.drawAnimatedPanelFrame(param9, param3, param6, param1, true, 29788, false, param8, param4, param0, param2, false);
           return;
         }
         if (!param7) {
           AccountMessagePanel.drawUnevenFrame(param4, param6, param8, param0, param2, 73, param3, param1, param9);
           return;
         }
-        fc.a(param9, param3, param6, param1, true, 29788, false, param8, param4, param0, param2, false);
+        AccountNoticeKind.drawAnimatedPanelFrame(param9, param3, param6, param1, true, 29788, false, param8, param4, param0, param2, false);
     }
 
     abstract long delayMillis(byte guard);

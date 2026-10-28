@@ -165,30 +165,30 @@ final class ChatMessageDecoder {
           le.field_c = dupTemp$1;
           field_a = dupTemp$1;
           if (Js5ArchiveManager.field_d.field_f != 1) {
-            al.field_d = ak.field_d;
+            AccountFormStage.field_d = ak.field_d;
           } else {
             try {
               TextLayout.field_c = new BufferedSocket((java.net.Socket) (Js5ArchiveManager.field_d.field_b), MouseWheelInput.field_c);
               QuickChatDynamicCommand.outgoingPackets.position = 0;
               CipherPacketBuffer var4 = QuickChatDynamicCommand.incomingPackets;
               CipherPacketBuffer var5 = var4;
-              al.field_d = sf.field_d;
+              AccountFormStage.field_d = sf.field_d;
               var5.position = 0;
               int stackIn_11_0 = (!param0) ? -1 : -2;
               NetworkGameClient.field_q = stackIn_11_0;
               ArchiveIndex.field_t = stackIn_11_0;
               jj.field_b = stackIn_11_0;
-              wc.a(rd.field_a, KeyboardStateSupport.field_b, true, DropTargetWidget.field_D, QuickChatDynamicCommand.outgoingPackets);
+              MenuInputState.writeAccountHandshake(rd.field_a, KeyboardStateSupport.field_b, true, DropTargetWidget.field_D, QuickChatDynamicCommand.outgoingPackets);
               ClientException.a(-1, 30785);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;
               IOException var2 = (IOException) (Object) decompiledCaughtException;
-              al.field_d = ak.field_d;
+              AccountFormStage.field_d = ak.field_d;
               if (EscapeVector.obfuscationControl == 0) {
                 Js5ArchiveManager.field_d = null;
                 return true;
               }
-              al.field_d = ak.field_d;
+              AccountFormStage.field_d = ak.field_d;
               Js5ArchiveManager.field_d = null;
               return true;
             }

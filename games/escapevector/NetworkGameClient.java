@@ -104,7 +104,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           this.j(28);
         }
         dn.field_a = param2;
-        wc.field_l = param7;
+        MenuInputState.field_l = param7;
         this.f((byte) -14);
         GameKeyHandler.b(79);
     }
@@ -127,9 +127,9 @@ abstract class NetworkGameClient extends GameAppletShell {
             stackIn_12_3 = true;
           }
           int discarded$1 = this.a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
-        } else if (fc.field_a >= 10) {
+        } else if (AccountNoticeKind.frameworkLoadingStage >= 10) {
           if (!AccountTermsPanel.l(3)) {
-            fc.a(true);
+            AccountNoticeKind.advanceIntroClock(true);
           } else if (QuickChatPhraseCache.field_e == 0) {
             int discarded$2 = this.a(255, false, false);
           } else {
@@ -143,7 +143,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         Sprite[] var1 = new Sprite[ArchiveLoadTask.spriteCount];
         for (int var2 = 0; ArchiveLoadTask.spriteCount > var2; var2++) {
           int var3 = qh.spriteWidths[var2] * SavedDataQuerySupport.spriteHeights[var2];
-          byte[] var20 = qe.spriteIndices[var2];
+          byte[] var20 = AnimatedPathMarker.spriteIndices[var2];
           if (!UiContainer.spriteHasAlpha[var2]) {
             int[] var9 = new int[var3];
             int[] var21 = var9;
@@ -244,7 +244,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            int var5_int = ui.a(GrowableIntList.b(true), jd.a(false), 55);
+            int var5_int = MeshMaterial.pollAccountFormRequest(GrowableIntList.b(true), jd.a(false), 55);
             if (var5_int != -1) {
               AchievementGrantRule.completeNameAvailabilityAndSuggestions(AccountTermsPanel.field_I, MouseWheelInput.field_a, param0 ^ -156, var5_int);
               AccountTermsPanel.field_I = null;
@@ -278,7 +278,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   DialWidget.field_J = mg.field_d;
                   AchievementRecord.a(true);
                   QuickChatPhraseCache.field_e = 10;
-                  SpriteState.field_u = false;
+                  SpriteState.guestSession = false;
                 } else {
                   EmailSyntaxValidator.a(var5_intLifetime2, (byte) 83, MouseWheelInput.field_a);
                   MouseWheelInput.field_a = null;
@@ -290,7 +290,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (ej.field_d) {
               DiskCacheRequest.a(PointCloudEffect.activeApplet((byte) -113), 21027);
             } else {
-              SpriteState.field_u = true;
+              SpriteState.guestSession = true;
               QuickChatPhraseCache.field_e = 10;
             }
           }
@@ -469,10 +469,10 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           int var5_int = 0;
           while (true) {
-            if (var5_int >= al.field_f.length) {
+            if (var5_int >= AccountFormStage.field_f.length) {
               return;
             }
-            param4 = al.field_f[var5_int];
+            param4 = AccountFormStage.field_f[var5_int];
             int var6 = var5_int << 4;
             while (true) {
               int incrementValue$0 = param4;
@@ -624,7 +624,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (IntKeyLookup.field_b != -1 &&
           IntKeyLookup.field_b != 0) {
-          if (10 > fc.field_a) {
+          if (10 > AccountNoticeKind.frameworkLoadingStage) {
             if (IntKeyLookup.field_b == 3) {
               this.a(param0 + 0, "js5crc");
             } else if (IntKeyLookup.field_b == 4) {
@@ -667,11 +667,11 @@ abstract class NetworkGameClient extends GameAppletShell {
           !um.a(param0 ^ -17831)) {
           pb.field_d = false;
         }
-        if (0 == fc.field_a &&
+        if (0 == AccountNoticeKind.frameworkLoadingStage &&
           EmailValidationError.a(23403)) {
-          fc.field_a = 1;
+          AccountNoticeKind.frameworkLoadingStage = 1;
         }
-        if (fc.field_a == 1) {
+        if (AccountNoticeKind.frameworkLoadingStage == 1) {
           if (QuickChatPhraseCache.field_h != 0) {
             PasswordValidator.field_p = mj.a(dn.field_a, param0 - 127);
           }
@@ -679,10 +679,10 @@ abstract class NetworkGameClient extends GameAppletShell {
           LoadingProgressDialog.field_ab = MarkerSliderPainter.createArchive(ChatMessage.field_l, 0, false, 1, true);
           AlternateUsernameCredentials.field_j = MarkerSliderPainter.createArchive(ChatHistorySupport.field_g, 0, false, 1, true);
           MarkerSliderPainter.field_h = ii.field_a;
-          fc.field_a = 2;
+          AccountNoticeKind.frameworkLoadingStage = 2;
           SavedDataQuery.field_m = LoadingProgressDialog.field_ab;
         }
-        if (fc.field_a == 2) {
+        if (AccountNoticeKind.frameworkLoadingStage == 2) {
           if (null != PasswordValidator.field_p &&
             PasswordValidator.field_p.ensureIndex(~param0)) {
             if (!PasswordValidator.field_p.hasGroupName("", (byte) -119)) {
@@ -694,10 +694,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (PasswordValidator.field_p == null) {
-            fc.field_a = 3;
+            AccountNoticeKind.frameworkLoadingStage = 3;
           }
         }
-        if (3 == fc.field_a &&
+        if (3 == AccountNoticeKind.frameworkLoadingStage &&
           SpriteDecodeSupport.commonUiReady(ii.field_a, LoadingProgressDialog.field_ab, AlternateUsernameCredentials.field_j, (byte) -90) &&
           cf.a(11, AlternateUsernameCredentials.field_j)) {
           PasswordValidator.h(-8055);
@@ -714,27 +714,27 @@ abstract class NetworkGameClient extends GameAppletShell {
             QuickChatPhraseCache.showLoginDialog(stackIn_98_0, stackIn_99_1, stackIn_101_2, stackIn_102_3);
           }
           if (SavedDataQuerySupport.field_e) {
-            bm.a(4);
+            NameAvailabilityResultSupport.chooseGuestSession(4);
           }
-          if (gb.field_b == null) {
-            gb.field_b = UsernameCredentials.sharedPcmMixer((byte) 117);
-            StringNode.field_h = wc.c(-31119);
+          if (TransitionPoint.field_b == null) {
+            TransitionPoint.field_b = UsernameCredentials.sharedPcmMixer((byte) 117);
+            StringNode.field_h = MenuInputState.introDurationMillis(-31119);
           }
-          SpriteFactorySupport.initializeIntroAssets(AlternateUsernameCredentials.field_j, gb.field_b, StringNode.field_h, (byte) 103);
+          SpriteFactorySupport.initializeIntroAssets(AlternateUsernameCredentials.field_j, TransitionPoint.field_b, StringNode.field_h, (byte) 103);
           ii.field_a = null;
           AlternateUsernameCredentials.field_j = null;
           LoadingProgressDialog.field_ab = null;
           QuickChatPhraseDefinition.inspectAppletUsername(82, (java.applet.Applet) (this));
           SpriteOffset.a((byte) 126);
-          fc.field_a = 10;
+          AccountNoticeKind.frameworkLoadingStage = 10;
         }
-        if (fc.field_a == 10) {
+        if (AccountNoticeKind.frameworkLoadingStage == 10) {
           if (QuickChatPhraseCache.field_h != 0) {
-            mg.field_c = mj.a(wc.field_l, -127);
+            mg.field_c = mj.a(MenuInputState.field_l, -127);
           }
-          fc.field_a = 11;
+          AccountNoticeKind.frameworkLoadingStage = 11;
         }
-        if (fc.field_a == 11) {
+        if (AccountNoticeKind.frameworkLoadingStage == 11) {
           if (mg.field_c != null && (!mg.field_c.ensureIndex(0) ||
             !mg.field_c.tryLoadAllGroups((byte) -119))) {
             dn.a(Bullet.formatArchiveProgress(AlphaContainer.field_H, mg.field_c, gj.field_g, -12920), 17637, 0.0f);
@@ -742,14 +742,14 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           else {
             SpriteDecodeSupport.field_b = true;
-            fc.field_a = 12;
+            AccountNoticeKind.frameworkLoadingStage = 12;
           }
         }
-        if (fc.field_a == 12 &&
+        if (AccountNoticeKind.frameworkLoadingStage == 12 &&
           !SpriteDecodeSupport.field_b) {
-          fc.field_a = 13;
+          AccountNoticeKind.frameworkLoadingStage = 13;
         }
-        if (fc.field_a == 13) {
+        if (AccountNoticeKind.frameworkLoadingStage == 13) {
           boolean var3Lifetime2 = true;
           if (null != DualLinkNode.field_n) {
             boolean stackIn_131_0 = !(!DualLinkNode.field_n.pollComplete(7020));
@@ -757,7 +757,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             dn.a(DualLinkNode.field_n.message, 17637, DualLinkNode.field_n.progressPercent);
           }
           if (var3Lifetime2) {
-            fc.field_a = 20;
+            AccountNoticeKind.frameworkLoadingStage = 20;
           }
         }
         if (!param1 &&
@@ -779,7 +779,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     final static void h(int param0) {
         int var4 = EscapeVector.obfuscationControl;
         try {
-          int[] var5 = al.field_f;
+          int[] var5 = AccountFormStage.field_f;
           int[] var1 = var5;
           int var2 = 0;
           int var3 = var5.length;

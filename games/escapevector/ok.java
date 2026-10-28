@@ -70,7 +70,7 @@ final class ok {
               }
             } else if (var6 < 20) {
               var7 = var6 * 256 / 20;
-              ea.field_d.drawAdditive(var3, var4, var7);
+              SlidingSpriteTransition.field_d.drawAdditive(var3, var4, var7);
               var6 = SocketConnector.field_d - 140;
               if (0 < var6) {
                 var7 = 256;
@@ -80,7 +80,7 @@ final class ok {
                 Js5NetworkRequest.field_G.drawAlpha(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
             } else if (30 > var6) {
-              ea.field_d.drawAdditive(var3, var4, 256);
+              SlidingSpriteTransition.field_d.drawAdditive(var3, var4, 256);
               var6 = SocketConnector.field_d - 140;
               if (0 < var6) {
                 var7 = 256;
@@ -91,7 +91,7 @@ final class ok {
               }
             } else {
               var7 = 256 * (50 - var6) / 20;
-              ea.field_d.drawAdditive(var3, var4, var7);
+              SlidingSpriteTransition.field_d.drawAdditive(var3, var4, var7);
               var6 = SocketConnector.field_d - 140;
               if (0 < var6) {
                 var7 = 256;
@@ -110,12 +110,12 @@ final class ok {
           var6Lifetime1 < 50) {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
-            ea.field_d.drawAdditive(var3, var4, var7Lifetime1);
+            SlidingSpriteTransition.field_d.drawAdditive(var3, var4, var7Lifetime1);
           } else if (30 > var6Lifetime1) {
-            ea.field_d.drawAdditive(var3, var4, 256);
+            SlidingSpriteTransition.field_d.drawAdditive(var3, var4, 256);
           } else {
             var7Lifetime1 = 256 * (50 - var6Lifetime1) / 20;
-            ea.field_d.drawAdditive(var3, var4, var7Lifetime1);
+            SlidingSpriteTransition.field_d.drawAdditive(var3, var4, var7Lifetime1);
           }
         }
         int var6Lifetime2 = SocketConnector.field_d - 140;

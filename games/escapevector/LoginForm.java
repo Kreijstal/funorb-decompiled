@@ -25,9 +25,9 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             if (this.field_K) {
               ByteStorage.b(-54);
             } else if (this.field_P) {
-              qe.a(true);
+              AnimatedPathMarker.showAccountChoice(true);
             } else {
-              ta.m(2);
+              AchievementsScreen.requestGuestEntry(2);
             }
           }
           if (guard != 1) {
@@ -129,7 +129,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           CipherPacketBuffer var10 = var8;
           int var3 = var10.readUnsignedByte(0);
           var10.beginBitReading(-17928);
-          DialogueScreen.field_y = IntrusiveNode.a(var10, 22178);
+          DialogueScreen.meshMaterials = IntrusiveNode.decodeMeshMaterials(var10, 22178);
           ByteStorage.logoMeshes = new TriangleMesh[var3];
           SectorCacheStore.field_c = new int[var3][];
           if (guard < 41) {
@@ -240,7 +240,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           this.identifierField = (EditableTextWidget) ((Object) new ValidatedTextWidget(param0, (UiListener) (this), 100));
           this.passwordField = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (UiListener) (this), 20));
           if (!this.field_K) {
-            this.submitButton = new TextButton(ta.field_g, (UiListener) null);
+            this.submitButton = new TextButton(AchievementsScreen.field_g, (UiListener) null);
             TextButton stackIn_18_1 = null;
             TextButton stackIn_18_2 = null;
             if (this.field_P) {

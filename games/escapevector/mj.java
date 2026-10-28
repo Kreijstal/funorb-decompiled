@@ -26,7 +26,7 @@ final class mj {
               int stackIn_8_0 = 2;
               return stackIn_8_0;
             }
-            if (sf.field_d == al.field_d) {
+            if (sf.field_d == AccountFormStage.field_d) {
               if (!param4) {
                 ArchiveIndex.field_m = Checkbox.createLoginCredentials(param3, false, 24564, param2);
               } else {
@@ -36,29 +36,29 @@ final class mj {
               QuickChatDynamicCommand.outgoingPackets.writeByte(14, -123);
               QuickChatDynamicCommand.outgoingPackets.writeByte(ArchiveIndex.field_m.type((byte) 32).wireId, -123);
               ClientException.a(-1, 30785);
-              al.field_d = SpriteStrip.field_p;
+              AccountFormStage.field_d = SpriteStrip.field_p;
             }
-            if (al.field_d == SpriteStrip.field_p &&
+            if (AccountFormStage.field_d == SpriteStrip.field_p &&
               Checkbox.readIncomingBytes(30000, 1)) {
               int var6_int = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
               QuickChatDynamicCommand.incomingPackets.position = 0;
               if (0 == var6_int) {
-                al.field_d = LinkButtonPainter.field_c;
+                AccountFormStage.field_d = LinkButtonPainter.field_c;
               } else {
-                al.field_d = CheckboxPainter.field_q;
+                AccountFormStage.field_d = CheckboxPainter.field_q;
                 LegacyStyleNode.field_v = var6_int;
                 EmailSyntaxValidator.field_r = -1;
               }
             }
-            if (al.field_d == LinkButtonPainter.field_c &&
+            if (AccountFormStage.field_d == LinkButtonPainter.field_c &&
               Checkbox.readIncomingBytes(30000, 8)) {
               SecondaryIntrusiveDeque.field_b = QuickChatDynamicCommand.incomingPackets.readLong(param0 - 800509814);
               QuickChatDynamicCommand.incomingPackets.position = 0;
               oh.a(ArchiveIndex.field_m, param4, param1, param5, (byte) -99);
-              al.field_d = mc.field_b;
+              AccountFormStage.field_d = mc.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (mc.field_b == al.field_d &&
+            if (mc.field_b == AccountFormStage.field_d &&
               Checkbox.readIncomingBytes(30000, 1)) {
               int var6_intLifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
               LegacyStyleNode.field_v = var6_intLifetime1;
@@ -67,7 +67,7 @@ final class mj {
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
-                  al.field_d = CheckboxPainter.field_q;
+                  AccountFormStage.field_d = CheckboxPainter.field_q;
                   EmailSyntaxValidator.field_r = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -79,11 +79,11 @@ final class mj {
                 }
               }
               if (decompiledFrameRemainder0) {
-                al.field_d = ClientException.field_c;
+                AccountFormStage.field_d = ClientException.field_c;
                 EmailSyntaxValidator.field_r = -1;
               }
             }
-            if (al.field_d == ClientException.field_c &&
+            if (AccountFormStage.field_d == ClientException.field_c &&
               ArchiveKeyRequest.hasCompletePacket(param0 + 10549)) {
               mg.field_d = QuickChatDynamicCommand.incomingPackets.readLong(-800509813);
               mg.field_b = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
@@ -102,7 +102,7 @@ final class mj {
                 if (RasterRestoreSupport.field_a) {
                 }
               }
-              if (jc.field_b) {
+              if (KeyCodeSupport.field_b) {
                 QuickChatDynamicCommand.incomingPackets.readUnsignedByte(param0 ^ 1);
                 QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
                 QuickChatDynamicCommand.incomingPackets.readInt(param0 - 5054);
@@ -116,7 +116,7 @@ final class mj {
               CharSequence var11 = (CharSequence) ((Object) ThreeSliceButtonPainter.field_r);
               ProgressRecord.field_k = sf.a(-83, var11);
               LaserGateSpan.field_g = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(param0 - 1);
-              al.field_d = ThreeSliceButtonPainter.field_t;
+              AccountFormStage.field_d = ThreeSliceButtonPainter.field_t;
               if (ArchiveIndex.field_m.type((byte) 32) == AlphaContainer.field_E) {
                 NameAvailabilityValidator.field_q.a(27002, PointCloudEffect.activeApplet((byte) -114));
               } else if (ArchiveIndex.field_m.type((byte) 32) == DisplayModeInfo.field_a) {
@@ -153,7 +153,7 @@ final class mj {
               int stackIn_81_0 = LegacyStyleNode.field_v;
               return stackIn_81_0;
             }
-            if (CheckboxPainter.field_q == al.field_d &&
+            if (CheckboxPainter.field_q == AccountFormStage.field_d &&
               ArchiveKeyRequest.hasCompletePacket(param0 + 10549)) {
               nm.a(16);
               if (LegacyStyleNode.field_v == 7 &&

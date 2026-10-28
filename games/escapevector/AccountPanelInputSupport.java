@@ -1,35 +1,35 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dj {
+final class AccountPanelInputSupport {
     static String field_b;
     static boolean[] field_a;
     static SpriteOffset[] field_d;
     static PcmSampleStream field_c;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawCachedEdgeSegments(int offsetY, int guard, int offsetX) {
         int var4 = EscapeVector.obfuscationControl;
         try {
           GameAppletShell.field_k = true;
           oh var3 = (oh) (TrackerGainSupport.field_c.first(false));
           while (var3 != null) {
             if (var3.field_m < 0) {
-              SoftwareRasterizer.drawHorizontalLine(var3.field_i - var3.field_s + param2, param0 + var3.field_q, var3.field_s, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawHorizontalLine(var3.field_i - var3.field_s + offsetX, offsetY + var3.field_q, var3.field_s, EmailSyntaxValidator.field_q);
             } else {
-              SoftwareRasterizer.drawHorizontalLine(param2 + var3.field_i, param0 + var3.field_q, var3.field_s, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawHorizontalLine(offsetX + var3.field_i, offsetY + var3.field_q, var3.field_s, EmailSyntaxValidator.field_q);
             }
             var3 = (oh) (TrackerGainSupport.field_c.next((byte) 70));
           }
           oh var3Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.first(false));
           while (var3Lifetime1 != null) {
             if (var3Lifetime1.field_m >= 0) {
-              SoftwareRasterizer.drawVerticalLine(param2 + var3Lifetime1.field_i, param0 + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawVerticalLine(offsetX + var3Lifetime1.field_i, offsetY + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
             } else {
-              SoftwareRasterizer.drawVerticalLine(var3Lifetime1.field_i + param2, param0 - var3Lifetime1.field_s + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawVerticalLine(var3Lifetime1.field_i + offsetX, offsetY - var3Lifetime1.field_s + var3Lifetime1.field_q, var3Lifetime1.field_s, EmailSyntaxValidator.field_q);
             }
             var3Lifetime1 = (oh) (QuickChatPhraseDefinition.field_u.next((byte) 70));
           }
-          if (param1 < -5) {
+          if (guard < -5) {
             return;
           }
           field_c = (PcmSampleStream) null;
@@ -37,14 +37,14 @@ final class dj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var3_ref), "dj.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) var3_ref), "dj.B(" + offsetY + ',' + guard + ',' + offsetX + ')');
         }
     }
 
-    final static char a(int param0, byte param1) {
-        if (param0 > -34) {
-          dj.a(-28, (byte) 6);
-          int var2 = param1 & 255;
+    final static char decodeCp1252Byte(int guard, byte value) {
+        if (guard > -34) {
+          AccountPanelInputSupport.decodeCp1252Byte(-28, (byte) 6);
+          int var2 = value & 255;
           if (0 == var2) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           }
@@ -60,7 +60,7 @@ final class dj {
           }
           return (char)var2;
         }
-        int var2Lifetime1 = param1 & 255;
+        int var2Lifetime1 = value & 255;
         if (0 == var2Lifetime1) {
           throw new IllegalArgumentException("" + Integer.toString(var2Lifetime1, 16));
         }
@@ -78,21 +78,21 @@ final class dj {
         return (char)var2Lifetime2;
     }
 
-    final static int a(int param0) {
+    final static int serviceAccountPanelInput(int guard) {
         int var2 = EscapeVector.obfuscationControl;
         try {
           Checkbox.field_F.handlePointerFrame(true, (byte) -33, ValidationIndicator.field_G, ph.field_a);
           Checkbox.field_F.updatePanels(0);
           while (AccountRequestDialog.pollKeyEvent(-116)) {
-            Checkbox.field_F.handleKey(jc.field_c, PasswordValidator.field_n, (byte) -116);
+            Checkbox.field_F.handleKey(KeyCodeSupport.currentKeyCharacter, PasswordValidator.field_n, (byte) -116);
           }
-          if (param0 != 6445) {
+          if (guard != 6445) {
             int stackIn_6_0 = -79;
             return stackIn_6_0;
           }
           if (-1 != ValidationState.field_a) {
             int var1_int = ValidationState.field_a;
-            WhirlpoolHasher.a(-1, param0 - 6378);
+            WhirlpoolHasher.a(-1, guard - 6378);
             int stackIn_10_0 = var1_int;
             return stackIn_10_0;
           }
@@ -100,7 +100,7 @@ final class dj {
             int stackIn_13_0 = 3;
             return stackIn_13_0;
           }
-          if (ui.field_b == EmailAvailabilityValidator.field_o) {
+          if (MeshMaterial.field_b == EmailAvailabilityValidator.field_o) {
             int stackIn_16_0 = 1;
             return stackIn_16_0;
           }
@@ -117,7 +117,7 @@ final class dj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "dj.C(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "dj.C(" + guard + ')');
         }
     }
 

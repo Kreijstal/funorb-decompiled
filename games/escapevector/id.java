@@ -22,7 +22,7 @@ final class id {
             var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          ea.field_d.bindAsFramebuffer();
+          SlidingSpriteTransition.field_d.bindAsFramebuffer();
           var1.drawHalfSize(0, 0);
           RasterRestoreSupport.popRasterState((byte) 116);
         } catch (RuntimeException runtimeException) {
@@ -49,7 +49,7 @@ final class id {
         if (param0 != 0) {
           field_b = (byte[][]) null;
         }
-        if (aj.b(param0 ^ -126)) {
+        if (AccountSessionSupport.isGuestSession(param0 ^ -126)) {
           return var1.a(1, 0);
         }
         return var1.a(1, 0);

@@ -122,22 +122,22 @@ final class jd {
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&
-          qj.field_c > 0) {
-          int fieldTemp$4 = qj.field_c - 1;
-          qj.field_c = qj.field_c - 1;
+          PathPoint.field_c > 0) {
+          int fieldTemp$4 = PathPoint.field_c - 1;
+          PathPoint.field_c = PathPoint.field_c - 1;
           byte[] var2_ref_byte__Lifetime1 = ok.field_d[fieldTemp$4];
-          ok.field_d[qj.field_c] = null;
+          ok.field_d[PathPoint.field_c] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (!param1) {
           field_a = (IntrusiveDeque) null;
         }
         if (param0 == 30000 &&
-          bm.field_c > 0) {
-          int fieldTemp$5 = bm.field_c - 1;
-          bm.field_c = bm.field_c - 1;
+          NameAvailabilityResultSupport.field_c > 0) {
+          int fieldTemp$5 = NameAvailabilityResultSupport.field_c - 1;
+          NameAvailabilityResultSupport.field_c = NameAvailabilityResultSupport.field_c - 1;
           byte[] var2_ref_byte__Lifetime2 = id.field_b[fieldTemp$5];
-          id.field_b[bm.field_c] = null;
+          id.field_b[NameAvailabilityResultSupport.field_c] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (MarkerSliderPainter.field_n != null) {

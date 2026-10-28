@@ -28,7 +28,7 @@ final class ClientException extends RuntimeException {
           if (TextLayout.field_c == null) {
             return false;
           }
-          if (al.field_d.isResponseStage((byte) 63)) {
+          if (AccountFormStage.field_d.isResponseStage((byte) 63)) {
             return true;
           }
           return false;
@@ -36,7 +36,7 @@ final class ClientException extends RuntimeException {
         if (TextLayout.field_c == null) {
           return false;
         }
-        if (al.field_d.isResponseStage((byte) 63)) {
+        if (AccountFormStage.field_d.isResponseStage((byte) 63)) {
           return true;
         }
         return false;
@@ -100,7 +100,7 @@ final class ClientException extends RuntimeException {
     final static void a(int param0, int param1) {
         try {
           if (TextLayout.field_c != null && (0 > param0 ||
-            al.field_d == ThreeSliceButtonPainter.field_t)) {
+            AccountFormStage.field_d == ThreeSliceButtonPainter.field_t)) {
             if (QuickChatDynamicCommand.outgoingPackets.position == 0 &&
               (10000L + le.field_c) < td.b(128)) {
               QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(param0, true);

@@ -46,7 +46,7 @@ final class ua {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        if (aj.b(-127)) {
+        if (AccountSessionSupport.isGuestSession(-127)) {
           return;
         }
         CipherPacketBuffer var4 = QuickChatDynamicCommand.outgoingPackets;

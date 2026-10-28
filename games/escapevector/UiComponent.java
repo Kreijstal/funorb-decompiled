@@ -98,12 +98,12 @@ class UiComponent extends IntrusiveNode {
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
-            DraggableWidget var9 = gf.field_b;
+            DraggableWidget var9 = AnimatedPanelFrame.field_b;
             if (var9 != null) {
               if (var9.listener instanceof WidgetDropListener) {
                 ((WidgetDropListener) (var9.listener)).onDropped((DropTargetWidget) null, var9, (byte) -124);
               }
-              gf.field_b = null;
+              AnimatedPanelFrame.field_b = null;
             }
             if (var7 != 0 &&
               var5 &&
@@ -133,13 +133,13 @@ class UiComponent extends IntrusiveNode {
                 return inputAvailable;
               }
               this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
-              DraggableWidget var10 = gf.field_b;
+              DraggableWidget var10 = AnimatedPanelFrame.field_b;
               if (var10 != null) {
                 if (!(var10.listener instanceof WidgetDropListener)) {
-                  gf.field_b = null;
+                  AnimatedPanelFrame.field_b = null;
                 } else {
                   ((WidgetDropListener) (var10.listener)).onDropped((DropTargetWidget) null, var10, (byte) -124);
-                  gf.field_b = null;
+                  AnimatedPanelFrame.field_b = null;
                 }
               }
               if (var7 != 0 &&
@@ -164,12 +164,12 @@ class UiComponent extends IntrusiveNode {
             return inputAvailable;
           }
           this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
-          DraggableWidget var11 = gf.field_b;
+          DraggableWidget var11 = AnimatedPanelFrame.field_b;
           if (var11 != null) {
             if (var11.listener instanceof WidgetDropListener) {
               ((WidgetDropListener) (var11.listener)).onDropped((DropTargetWidget) null, var11, (byte) -124);
             }
-            gf.field_b = null;
+            AnimatedPanelFrame.field_b = null;
           }
           if (var7 != 0 &&
             var5 &&
@@ -197,12 +197,12 @@ class UiComponent extends IntrusiveNode {
                 return inputAvailable;
               }
               this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
-              DraggableWidget var12 = gf.field_b;
+              DraggableWidget var12 = AnimatedPanelFrame.field_b;
               if (var12 != null) {
                 if (var12.listener instanceof WidgetDropListener) {
                   ((WidgetDropListener) (var12.listener)).onDropped((DropTargetWidget) null, var12, (byte) -124);
                 }
-                gf.field_b = null;
+                AnimatedPanelFrame.field_b = null;
               }
               if (var7 != 0 &&
                 var5Lifetime1 &&
@@ -232,13 +232,13 @@ class UiComponent extends IntrusiveNode {
                   return inputAvailable;
                 }
                 this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
-                DraggableWidget var13 = gf.field_b;
+                DraggableWidget var13 = AnimatedPanelFrame.field_b;
                 if (var13 != null) {
                   if (!(var13.listener instanceof WidgetDropListener)) {
-                    gf.field_b = null;
+                    AnimatedPanelFrame.field_b = null;
                   } else {
                     ((WidgetDropListener) (var13.listener)).onDropped((DropTargetWidget) null, var13, (byte) -124);
-                    gf.field_b = null;
+                    AnimatedPanelFrame.field_b = null;
                   }
                 }
                 if (var7 != 0 &&
@@ -263,12 +263,12 @@ class UiComponent extends IntrusiveNode {
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
-            DraggableWidget var14 = gf.field_b;
+            DraggableWidget var14 = AnimatedPanelFrame.field_b;
             if (var14 != null) {
               if (var14.listener instanceof WidgetDropListener) {
                 ((WidgetDropListener) (var14.listener)).onDropped((DropTargetWidget) null, var14, (byte) -124);
               }
-              gf.field_b = null;
+              AnimatedPanelFrame.field_b = null;
             }
             if (var7 != 0 &&
               var5Lifetime1 &&
@@ -294,12 +294,12 @@ class UiComponent extends IntrusiveNode {
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
-            DraggableWidget var15 = gf.field_b;
+            DraggableWidget var15 = AnimatedPanelFrame.field_b;
             if (var15 != null) {
               if (var15.listener instanceof WidgetDropListener) {
                 ((WidgetDropListener) (var15.listener)).onDropped((DropTargetWidget) null, var15, (byte) -124);
               }
-              gf.field_b = null;
+              AnimatedPanelFrame.field_b = null;
             }
             if (var7 != 0 &&
               var5Lifetime1 &&
@@ -329,7 +329,7 @@ class UiComponent extends IntrusiveNode {
                 return inputAvailable;
               }
               this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
-              DraggableWidget var16 = gf.field_b;
+              DraggableWidget var16 = AnimatedPanelFrame.field_b;
               if (var16 == null) {
                 if (var7 == 0) {
                   ModalPanel.field_H = DialWidget.field_K;
@@ -341,7 +341,7 @@ class UiComponent extends IntrusiveNode {
                 return inputAvailable;
               }
               if (!(var16.listener instanceof WidgetDropListener)) {
-                gf.field_b = null;
+                AnimatedPanelFrame.field_b = null;
                 if (var7 != 0 &&
                   var5Lifetime1 &&
                   0 != AccountMessagePanel.field_N) {
@@ -352,7 +352,7 @@ class UiComponent extends IntrusiveNode {
                 return inputAvailable;
               }
               ((WidgetDropListener) (var16.listener)).onDropped((DropTargetWidget) null, var16, (byte) -124);
-              gf.field_b = null;
+              AnimatedPanelFrame.field_b = null;
               if (var7 != 0 &&
                 var5Lifetime1 &&
                 0 != AccountMessagePanel.field_N) {
@@ -371,12 +371,12 @@ class UiComponent extends IntrusiveNode {
               return inputAvailable;
             }
             this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
-            DraggableWidget var17 = gf.field_b;
+            DraggableWidget var17 = AnimatedPanelFrame.field_b;
             if (var17 != null) {
               if (var17.listener instanceof WidgetDropListener) {
                 ((WidgetDropListener) (var17.listener)).onDropped((DropTargetWidget) null, var17, (byte) -124);
               }
-              gf.field_b = null;
+              AnimatedPanelFrame.field_b = null;
             }
             if (var7 != 0 &&
               var5Lifetime1 &&

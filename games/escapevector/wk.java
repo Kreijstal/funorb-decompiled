@@ -52,9 +52,9 @@ final class wk {
           !(param2 + param0 <= LegacyStyleNode.field_q.length)) {
           LegacyStyleNode.field_q = new int[2 * (param0 + param2)];
         }
-        if (null == dj.field_a ||
-          !(param0 <= dj.field_a.length)) {
-          dj.field_a = new boolean[2 * param0];
+        if (null == AccountPanelInputSupport.field_a ||
+          !(param0 <= AccountPanelInputSupport.field_a.length)) {
+          AccountPanelInputSupport.field_a = new boolean[2 * param0];
         }
         AlternateUsernameCredentials.field_r = -2147483648;
         AccountTermsPanel.field_J = 0;

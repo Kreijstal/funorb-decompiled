@@ -13,8 +13,8 @@ final class kh {
           int var3 = GzipDecoder.field_b;
           rc.field_a = new ak(param2, var3);
           int var4 = rc.field_a.h(param1 ^ -1209);
-          di.field_d = new wc(var4);
-          di.field_d.a(100, param0, rc.field_a.c(GzipDecoder.field_d, -1, UiContainer.field_y), id.a(0));
+          di.field_d = new MenuInputState(var4);
+          di.field_d.initializeSelection(100, param0, rc.field_a.c(GzipDecoder.field_d, -1, UiContainer.field_y), id.a(0));
           return;
         }
         field_a = (int[]) null;
@@ -22,8 +22,8 @@ final class kh {
         int var3Lifetime1 = GzipDecoder.field_b;
         rc.field_a = new ak(param2, var3Lifetime1);
         int var4Lifetime1 = rc.field_a.h(param1 ^ -1209);
-        di.field_d = new wc(var4Lifetime1);
-        di.field_d.a(100, param0, rc.field_a.c(GzipDecoder.field_d, -1, UiContainer.field_y), id.a(0));
+        di.field_d = new MenuInputState(var4Lifetime1);
+        di.field_d.initializeSelection(100, param0, rc.field_a.c(GzipDecoder.field_d, -1, UiContainer.field_y), id.a(0));
     }
 
     final static int a(String param0, int param1, String param2, String param3, boolean param4, int param5, int param6) {

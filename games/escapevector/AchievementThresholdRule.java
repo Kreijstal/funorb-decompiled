@@ -16,7 +16,7 @@ final class AchievementThresholdRule {
         try {
           DialogueScreen var4 = DropTargetWidget.f((byte) -49);
           if (p.field_h != 0) {
-            if (!aj.b(-124)) {
+            if (!AccountSessionSupport.isGuestSession(-124)) {
               if (1 == p.field_h) {
                 kh.a(true, -1230, true);
               }
@@ -45,14 +45,14 @@ final class AchievementThresholdRule {
             if (wk.field_c) {
               kc.a((byte) -75);
             } else if (TextLayout.field_b) {
-              qj.a(-883);
+              PathPoint.refreshScreenForAccountState(-883);
               UiComponent.field_o.e(117);
             } else if (0 <= SelfDestructEffects.field_q) {
               sn.c(-1);
               CheckboxPainter.field_l.j(2525);
             } else if (!PacketBuffer.field_h) {
               if (e.field_a) {
-                var2 = (da.field_b.j(-122));
+                var2 = (da.field_b.update(-122));
                 if (var2) {
                   return;
                 }
@@ -84,7 +84,7 @@ final class AchievementThresholdRule {
           } else {
             var4.advanceDialogue((byte) 62);
           }
-          if (aj.b(-102)) {
+          if (AccountSessionSupport.isGuestSession(-102)) {
             return;
           }
           TrackerMusicDefinition.field_f.serviceAccountAchievements(-32464);
@@ -99,7 +99,7 @@ final class AchievementThresholdRule {
 
     final static boolean isAccountStateReady(byte guard) {
         try {
-          boolean stackIn_4_0 = !(aj.b(-96));
+          boolean stackIn_4_0 = !(AccountSessionSupport.isGuestSession(-96));
           boolean var1_int = stackIn_4_0;
           if (var1_int &&
             !TrackerMusicDefinition.field_f.accountAchievementsLoaded &&

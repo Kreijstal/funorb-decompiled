@@ -92,7 +92,7 @@ final class LoginCredentialType {
         String stackIn_25_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          if (null == bm.field_b) {
+          if (null == NameAvailabilityResultSupport.field_b) {
             return null;
           }
           if (name == null) {
@@ -111,7 +111,7 @@ final class LoginCredentialType {
             Object stackIn_12_0 = null;
             return (ContactEntry) (stackIn_12_0);
           }
-          ContactEntry var3 = (ContactEntry) (bm.field_b.get(-76, (long)var2.hashCode()));
+          ContactEntry var3 = (ContactEntry) (NameAvailabilityResultSupport.field_b.get(-76, (long)var2.hashCode()));
           while (var3 != null) {
             CharSequence var7 = (CharSequence) ((Object) var3.displayName);
             String var4 = sf.a(-79, var7);
@@ -119,7 +119,7 @@ final class LoginCredentialType {
               ContactEntry stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (ContactEntry) (bm.field_b.nextMatch((byte) -36));
+            var3 = (ContactEntry) (NameAvailabilityResultSupport.field_b.nextMatch((byte) -36));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

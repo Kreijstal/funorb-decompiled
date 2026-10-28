@@ -16,7 +16,7 @@ final class Bullet extends IntrusiveNode {
           if (guard > -90) {
             collisionLaserCount = -121;
           }
-          QuickChatDynamicCommand[] stackIn_4_0 = new QuickChatDynamicCommand[]{InputGlyphSupport.field_b, AccountMessagePanel.field_P, DialWidget.quickChatCommand, AlternateUsernameCredentials.field_m, AchievementDefinition.field_d, BufferedSocket.field_k, StringNode.field_l, ea.field_g, LabeledField.field_H, AccountRegistrationPanel.field_L, le.field_a, BrowserSessionMarkerState.field_c, mg.field_g, TrackerGainSupport.field_d};
+          QuickChatDynamicCommand[] stackIn_4_0 = new QuickChatDynamicCommand[]{InputGlyphSupport.field_b, AccountMessagePanel.field_P, DialWidget.quickChatCommand, AlternateUsernameCredentials.field_m, AchievementDefinition.field_d, BufferedSocket.field_k, StringNode.field_l, SlidingSpriteTransition.field_g, LabeledField.field_H, AccountRegistrationPanel.field_L, le.field_a, BrowserSessionMarkerState.field_c, mg.field_g, TrackerGainSupport.field_d};
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -134,7 +134,7 @@ final class Bullet extends IntrusiveNode {
           if (guard <= 87) {
             Bullet.removeFirstDialogue((byte) 46);
           }
-          if (aj.b(-90)) {
+          if (AccountSessionSupport.isGuestSession(-90)) {
             int stackIn_7_0 = 0;
             return stackIn_7_0;
           }
@@ -172,7 +172,7 @@ final class Bullet extends IntrusiveNode {
             null != mesh.field_n) {
             cj.a((byte) -99);
           }
-          aj.field_d = 0;
+          AccountSessionSupport.field_d = 0;
           int var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var8 < mesh.faceCount)))) {
@@ -201,8 +201,8 @@ final class Bullet extends IntrusiveNode {
                     if (var14 != -2147483648) {
                       var15 = -var6 + var14 + (var12Lifetime1 + var13Lifetime1);
                       stackIn_32_0 = (var7 >= 0) ? (var15 >> var7) : (var15 << -var7);
-                      var16 = -stackIn_32_0 + (al.field_f.length - 1);
-                      var17 = al.field_f[var16];
+                      var16 = -stackIn_32_0 + (AccountFormStage.field_f.length - 1);
+                      var17 = AccountFormStage.field_f[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -211,19 +211,19 @@ final class Bullet extends IntrusiveNode {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = al.field_f[var16];
+                          var17 = AccountFormStage.field_f[var16];
                           continue;
                         }
                         int stackIn_43_0Lifetime1 = var17 + (var16 << 4);
                         int var18 = stackIn_43_0Lifetime1;
                         SavedDataQuerySupport.field_f[var18] = var8;
-                        al.field_f[var16] = 1 + var17;
+                        AccountFormStage.field_f[var16] = 1 + var17;
                         if (mesh.field_I > 0 &&
                           mesh.field_n != null) {
                           byte dupTemp$0 = mesh.field_n[var8];
                           EditableTextWidget.field_I[dupTemp$0] = EditableTextWidget.field_I[dupTemp$0] + 1;
                         }
-                        aj.field_d = aj.field_d + 1;
+                        AccountSessionSupport.field_d = AccountSessionSupport.field_d + 1;
                         break;
                       }
                     }

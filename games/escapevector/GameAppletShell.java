@@ -88,7 +88,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final java.net.URL getDocumentBase() {
         try {
-          if (qj.field_i != null) {
+          if (PathPoint.field_i != null) {
             Object stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
@@ -146,7 +146,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final java.applet.AppletContext getAppletContext() {
         try {
-          if (null != qj.field_i) {
+          if (null != PathPoint.field_i) {
             Object stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
@@ -309,7 +309,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final String getParameter(String param0) {
         String stackIn_17_2 = null;
         try {
-          if (null != qj.field_i) {
+          if (null != PathPoint.field_i) {
             Object stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
@@ -514,9 +514,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             NameSuggestionsPanel.field_H = true;
             SpriteDecodeSupport.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
             SpriteDecodeSupport.field_d.setVisible(true);
-            if (null != qj.field_i &&
-              null == qj.field_f) {
-              java.awt.Insets var6_ref_java_awt_Insets = qj.field_i.getInsets();
+            if (null != PathPoint.field_i &&
+              null == PathPoint.field_f) {
+              java.awt.Insets var6_ref_java_awt_Insets = PathPoint.field_i.getInsets();
               SpriteDecodeSupport.field_d.setLocation(var6_ref_java_awt_Insets.left + pb.field_b, Js5NetworkRequest.field_D + var6_ref_java_awt_Insets.top);
               if (EscapeVector.obfuscationControl != 0) {
                 SpriteDecodeSupport.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
@@ -578,7 +578,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (qj.field_i != null) {
+        if (PathPoint.field_i != null) {
           return null;
         }
         if (null != ModalPanel.field_P &&
@@ -734,9 +734,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           boolean decompiledFrameRemainder0 = true;
           int var2_int = -119 % ((76 - param0) / 49);
-          if (qj.field_f == null) {
-            if (qj.field_i != null) {
-              var3 = qj.field_i;
+          if (PathPoint.field_f == null) {
+            if (PathPoint.field_i != null) {
+              var3 = PathPoint.field_i;
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -744,25 +744,25 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 var3 = ModalPanel.field_P;
                 if (var5 != 0) {
                   var3 = StatefulTextPainter.field_r;
-                  var3 = qj.field_f;
+                  var3 = PathPoint.field_f;
                 }
               } else {
                 var3 = StatefulTextPainter.field_r;
                 if (var5 != 0) {
-                  var3 = qj.field_f;
+                  var3 = PathPoint.field_f;
                 }
               }
             }
           } else {
-            var3 = qj.field_f;
+            var3 = PathPoint.field_f;
           }
           ((java.awt.Container) (var3)).setLayout((java.awt.LayoutManager) null);
           SpriteDecodeSupport.field_d = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var3)).add((java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
           SpriteDecodeSupport.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
           SpriteDecodeSupport.field_d.setVisible(true);
-          if (var3 == qj.field_i) {
-            java.awt.Insets var4 = qj.field_i.getInsets();
+          if (var3 == PathPoint.field_i) {
+            java.awt.Insets var4 = PathPoint.field_i.getInsets();
             SpriteDecodeSupport.field_d.setLocation(var4.left + pb.field_b, var4.top + Js5NetworkRequest.field_D);
             if (var5 != 0) {
               SpriteDecodeSupport.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
@@ -852,7 +852,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           this.releaseClientStatics((byte) -105);
-          if (qj.field_i != null) {
+          if (PathPoint.field_i != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {

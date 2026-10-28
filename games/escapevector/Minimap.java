@@ -771,7 +771,7 @@ final class Minimap {
         String var2 = sf.field_n;
         IntrusiveDeque var3 = new IntrusiveDeque();
         IntrusiveDeque var4 = new IntrusiveDeque();
-        var3.addLast(-12328, new StringNode(qj.field_d));
+        var3.addLast(-12328, new StringNode(PathPoint.field_d));
         if (!guard) {
           return;
         }

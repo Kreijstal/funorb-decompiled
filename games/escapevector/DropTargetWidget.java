@@ -12,18 +12,18 @@ final class DropTargetWidget extends SingleChildContainer {
         String stackIn_21_2 = null;
         try {
           super.onPointerReleased(pointerY, offsetY, pointerX, offsetX, root, (byte) -97);
-          DraggableWidget var7 = gf.field_b;
+          DraggableWidget var7 = AnimatedPanelFrame.field_b;
           if (var7 != null &&
             this.hitTest(pointerX, pointerY, offsetY, (byte) 66, offsetX)) {
             if (this.listener instanceof WidgetDropListener) {
               ((WidgetDropListener) (this.listener)).onDropped(this, var7, (byte) 41);
-              gf.field_b = null;
+              AnimatedPanelFrame.field_b = null;
             } else if (var7.listener instanceof WidgetDropListener) {
               ((WidgetDropListener) (var7.listener)).onDropped(this, var7, (byte) -115);
-              gf.field_b = null;
+              AnimatedPanelFrame.field_b = null;
               if (EscapeVector.obfuscationControl != 0) {
                 ((WidgetDropListener) (this.listener)).onDropped(this, var7, (byte) 41);
-                gf.field_b = null;
+                AnimatedPanelFrame.field_b = null;
               }
             }
           }
@@ -1125,7 +1125,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(94, "login");
                 if (null != var2) {
-                  ta.field_g = RasterSnapshot.a(var2, 122);
+                  AchievementsScreen.field_g = RasterSnapshot.a(var2, 122);
                 }
                 var2 = IntKeyLookup.a(69, "goback");
                 if (var2 != null) {
@@ -1526,7 +1526,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(73, "create_agreeterms");
                 if (null != var2) {
-                  aj.field_b = RasterSnapshot.a(var2, 116);
+                  AccountSessionSupport.field_b = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(81, "create_u13terms");
                 if (var2 != null) {
@@ -1610,7 +1610,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(111, "create_age_tooltip");
                 if (var2 != null) {
-                  ta.field_k = RasterSnapshot.a(var2, 121);
+                  AchievementsScreen.field_k = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(116, "create_optin_news_tooltip");
                 if (var2 != null) {
@@ -1838,7 +1838,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(81, "waitingfor_music");
                 if (var2 != null) {
-                  bm.field_f = RasterSnapshot.a(var2, 111);
+                  NameAvailabilityResultSupport.field_f = RasterSnapshot.a(var2, 111);
                 }
                 var2 = IntKeyLookup.a(105, "waitingfor_instruments");
                 if (var2 != null) {
@@ -2154,7 +2154,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(27, "cont");
                 if (var2 != null) {
-                  bm.field_d = RasterSnapshot.a(var2, 123);
+                  NameAvailabilityResultSupport.field_d = RasterSnapshot.a(var2, 123);
                 }
                 var2 = IntKeyLookup.a(90, "continue_spectating");
                 if (null != var2) {
@@ -2584,7 +2584,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(63, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  dj.a(-102, var2[0]);
+                  AccountPanelInputSupport.decodeCp1252Byte(-102, var2[0]);
                 }
                 var2 = IntKeyLookup.a(36, "rating_noratings");
                 if (null != var2) {
@@ -2732,7 +2732,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(57, "fs_accept_countdown_pl");
                 if (var2 != null) {
-                  al.field_c = RasterSnapshot.a(var2, 114);
+                  AccountFormStage.field_c = RasterSnapshot.a(var2, 114);
                 }
                 var2 = IntKeyLookup.a(89, "fs_nonmember");
                 if (null != var2) {
@@ -2748,7 +2748,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(103, "fs_unavailable");
                 if (var2 != null) {
-                  aj.field_e = RasterSnapshot.a(var2, 110);
+                  AccountSessionSupport.field_e = RasterSnapshot.a(var2, 110);
                 }
                 var2 = IntKeyLookup.a(105, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
@@ -3160,7 +3160,7 @@ final class DropTargetWidget extends SingleChildContainer {
             Object stackIn_5_0 = null;
             return (BinaryBitmapFont) (stackIn_5_0);
           }
-          BinaryBitmapFont var2 = new BinaryBitmapFont(param1, gn.spriteOffsetXs, ChatMessage.spriteOffsetYs, qh.spriteWidths, SavedDataQuerySupport.spriteHeights, qe.spriteIndices);
+          BinaryBitmapFont var2 = new BinaryBitmapFont(param1, gn.spriteOffsetXs, ChatMessage.spriteOffsetYs, qh.spriteWidths, SavedDataQuerySupport.spriteHeights, AnimatedPathMarker.spriteIndices);
           SpriteDecodeSupport.releaseSpriteSheet(false);
           BinaryBitmapFont stackIn_7_0 = var2;
           return stackIn_7_0;

@@ -99,12 +99,12 @@ public final class EscapeVector extends NetworkGameClient {
                 }
                 if (!mj.a((byte) 92)) {
                   if (null != BoundedRandomAccessFile.activeSession) {
-                    da.field_c.b(ch.field_a.field_j, 320);
+                    da.field_c.b(ch.field_a.pointerDriven, 320);
                     if (var4 != 0) {
-                      AlternateUsernameCredentials.field_q.b(-26480, AlternateUsernameCredentials.field_q.field_b.field_j);
+                      AlternateUsernameCredentials.field_q.b(-26480, AlternateUsernameCredentials.field_q.field_b.pointerDriven);
                     }
                   } else {
-                    AlternateUsernameCredentials.field_q.b(-26480, AlternateUsernameCredentials.field_q.field_b.field_j);
+                    AlternateUsernameCredentials.field_q.b(-26480, AlternateUsernameCredentials.field_q.field_b.pointerDriven);
                   }
                   mj.field_d = 0;
                   ChatMessage.clearFrameOffsets((byte) -67);
@@ -150,10 +150,10 @@ public final class EscapeVector extends NetworkGameClient {
               TickClock.a(24, true);
             }
           }
-          if (dj.field_c != null &&
+          if (AccountPanelInputSupport.field_c != null &&
             !SingleChildContainer.field_y) {
-            dj.field_c.fadeOut(2048);
-            dj.field_c = null;
+            AccountPanelInputSupport.field_c.fadeOut(2048);
+            AccountPanelInputSupport.field_c = null;
           }
           if (null != AchievementThresholdRule.field_a &&
             !IntValueNode.field_j) {
@@ -198,7 +198,7 @@ public final class EscapeVector extends NetworkGameClient {
           GameKeyHandler.releaseStatics(47);
           nm.releaseStatics(false);
           ek.releaseStatics(69);
-          dj.releaseStatics((byte) -116);
+          AccountPanelInputSupport.releaseStatics((byte) -116);
           NetworkGameClient.releaseStatics((byte) -73);
           ClientException.releaseStatics(false);
           GameAppletShell.releaseStatics((byte) -111);
@@ -217,7 +217,7 @@ public final class EscapeVector extends NetworkGameClient {
           BrowserSessionMarkerState.releaseStatics(18);
           gm.releaseStatics(8192);
           be.releaseStatics((byte) -127);
-          bm.releaseStatics((byte) 110);
+          NameAvailabilityResultSupport.releaseStatics((byte) 110);
           ii.releaseStatics(20);
           ChatMessage.releaseStatics(-13885);
           mg.releaseStatics(true);
@@ -231,7 +231,7 @@ public final class EscapeVector extends NetworkGameClient {
           ViewportController.releaseStatics(false);
           ak.releaseStatics((byte) 77);
           dn.releaseStatics(-1);
-          ta.releaseStatics(0);
+          AchievementsScreen.releaseStatics(0);
           AchievementTracker.releaseStatics(1);
           kg.releaseStatics(80);
           p.releaseStatics(99);
@@ -249,7 +249,7 @@ public final class EscapeVector extends NetworkGameClient {
           ig.releaseStatics(-60);
           pf.releaseStatics(459);
           tf.releaseStatics(-92);
-          wc.releaseStatics((byte) 49);
+          MenuInputState.releaseStatics((byte) 49);
           PcmResampler.releaseStatics(104);
           uj.releaseStatics((byte) -106);
           jj.releaseStatics(9);
@@ -268,7 +268,7 @@ public final class EscapeVector extends NetworkGameClient {
           GzipDecoder.releaseStatics((byte) 124);
           ArchiveProvider.releaseStatics((byte) 123);
           mj.releaseStatics(true);
-          jc.releaseStatics(-1);
+          KeyCodeSupport.releaseStatics(-1);
           gk.releaseStatics((byte) -98);
           AchievementFlagSupport.releaseStatics(true);
           ke.releaseStatics(-71);
@@ -287,7 +287,7 @@ public final class EscapeVector extends NetworkGameClient {
           UiTheme.releaseStatics(-27204);
           pa.releaseStatics((byte) 103);
           LegacyButton.releaseStatics(1);
-          qe.releaseStatics(0);
+          AnimatedPathMarker.releaseStatics(0);
           SynthInstrument.releaseStatics();
           VorbisSample.releaseStatics();
           VorbisFloor.releaseStatics();
@@ -329,7 +329,7 @@ public final class EscapeVector extends NetworkGameClient {
           TextWidgetPainter.releaseStatics(-24239);
           MeshRasterState.releaseStatics();
           ri.releaseStatics(-117);
-          ui.releaseStatics(true);
+          MeshMaterial.releaseStatics(true);
           TriangleMesh.releaseStatics(true);
           ml.releaseStatics(-117);
           RepeatedCharacterSupport.releaseStatics((byte) -96);
@@ -369,7 +369,7 @@ public final class EscapeVector extends NetworkGameClient {
           WeightedLruCache.releaseStatics(true);
           AccountOverlayController.releaseStatics((byte) 118);
           ph.releaseStatics((byte) 106);
-          aj.releaseStatics(0);
+          AccountSessionSupport.releaseStatics(0);
           ti.releaseStatics((byte) -101);
           SocketConnector.releaseStatics(true);
           NanoTickClock.releaseStatics(116);
@@ -384,7 +384,7 @@ public final class EscapeVector extends NetworkGameClient {
           StringNode.releaseStatics((byte) 123);
           SpriteDecodeSupport.releaseStatics(122);
           pb.releaseStatics(false);
-          qj.releaseStatics(-10497);
+          PathPoint.releaseStatics(-10497);
           LabeledField.releaseStatics(88);
           ValidatedTextWidget.releaseStatics((byte) -87);
           EditableTextWidget.releaseStatics((byte) -96);
@@ -434,9 +434,9 @@ public final class EscapeVector extends NetworkGameClient {
           PairedTextColumns.releaseStatics(false);
           SpriteLabelColumns.releaseStatics(94);
           SpriteStrip.releaseStatics(96);
-          gf.releaseStatics(12474);
-          gb.releaseStatics(-5);
-          ea.releaseStatics((byte) 118);
+          AnimatedPanelFrame.releaseStatics(12474);
+          TransitionPoint.releaseStatics(-5);
+          SlidingSpriteTransition.releaseStatics((byte) 118);
           AchievementDefinition.releaseStatics(4);
           AchievementThresholdRule.releaseStatics(4);
           qh.releaseStatics(7);
@@ -448,7 +448,7 @@ public final class EscapeVector extends NetworkGameClient {
           ObjectSpriteSet.releaseStatics(122);
           SpriteOffset.releaseStatics(122);
           RasterSnapshot.releaseStatics((byte) 75);
-          al.releaseStatics(-128);
+          AccountFormStage.releaseStatics(-128);
           NameAvailabilityResult.releaseStatics((byte) -10);
           EmailAvailabilityRequest.releaseStatics((byte) 65);
           AccountMessagePanel.releaseStatics(8);
@@ -497,7 +497,7 @@ public final class EscapeVector extends NetworkGameClient {
             this.renderClient((byte) -128);
             ByteStorage.gameFont = DisplayNameForm.loadBinaryFont(guard ^ -92, sn.field_c, "", "fonts_squarish16", IndexedSpriteState.field_j);
             sn.field_c = null;
-            ea.field_f = fe.a("", IndexedSpriteState.field_j, "titles_escape", true);
+            SlidingSpriteTransition.field_f = fe.a("", IndexedSpriteState.field_j, "titles_escape", true);
             ArchiveIndex.field_o = fe.a("", IndexedSpriteState.field_j, "titles_vector", true);
             DisplayNameForm.field_O = fe.a("", IndexedSpriteState.field_j, "titles_achievements", true);
             ValidationHelpWidget.field_I = fe.a("", IndexedSpriteState.field_j, "titles_achievements_this_game", true);
@@ -555,7 +555,7 @@ public final class EscapeVector extends NetworkGameClient {
               CheckboxPainter.field_h = null;
               ContentTransitionDialog.field_eb = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/menu");
               EditableTextWidget.field_O = nm.a(guard ^ -94, "", var2_ref, PointCloudEffect.field_D, "music/briefing");
-              wc.field_d = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/panic");
+              MenuInputState.field_d = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/panic");
               ObjectSpriteSet.field_d = new TrackerMusicDefinition[5];
               ObjectSpriteSet.field_d[0] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_1");
               ObjectSpriteSet.field_d[1] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_2");
@@ -582,7 +582,7 @@ public final class EscapeVector extends NetworkGameClient {
             if (guard != -96) {
               field_z = (String) null;
             }
-            da.field_b = new ta();
+            da.field_b = new AchievementsScreen();
             ArchiveLoadTask.field_e = new dn(true);
             GameplaySession.resetSessionMenuState((byte) 115);
             SimulatorAssetSupport.c(0);
@@ -596,7 +596,7 @@ public final class EscapeVector extends NetworkGameClient {
           PcmResampler var2 = new PcmResampler(22050, AudioOutput.sampleRate);
           QuickChatPhraseCache.field_i = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "write-text").toPcmSample().resample(var2);
           AchievementTracker.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "cursor").toPcmSample().resample(var2);
-          bm.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "interference").toPcmSample().resample(var2);
+          NameAvailabilityResultSupport.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "interference").toPcmSample().resample(var2);
           qh.field_i = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "interference_300ms").toPcmSample().resample(var2);
           SecondaryNodeHashTable.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mainmenu_formation").toPcmSample().resample(var2);
           ArchiveRequest.field_w = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mouseover").toPcmSample().resample(var2);
@@ -620,7 +620,7 @@ public final class EscapeVector extends NetworkGameClient {
           gm.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield_empty").toPcmSample().resample(var2);
           DropTargetWidget.field_E = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-start").toPcmSample().resample(var2);
           NameAvailabilityResult.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-filling").toPcmSample().resample(var2);
-          al.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-stop").toPcmSample().resample(var2);
+          AccountFormStage.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-stop").toPcmSample().resample(var2);
           SpriteOffset.field_f = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-full").toPcmSample().resample(var2);
           SimulatorAssetSupport.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "crate-attach").toPcmSample().resample(var2);
           ObjectSpriteSet.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "tether-tighten").toPcmSample().resample(var2);
@@ -655,7 +655,7 @@ public final class EscapeVector extends NetworkGameClient {
             field_z = (String) null;
           }
           nb.a((java.applet.Applet) (this), 1585176, (byte) -125, 6340704, LoginCredentials.field_c, 192);
-          aj.field_a = new fe((java.applet.Applet) (this), WeightedCacheEntry.field_r, FullscreenFocusCanvas.field_a, LoginCredentials.field_c);
+          AccountSessionSupport.field_a = new fe((java.applet.Applet) (this), WeightedCacheEntry.field_r, FullscreenFocusCanvas.field_a, LoginCredentials.field_c);
           FullscreenFocusCanvas.field_a = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -786,7 +786,7 @@ public final class EscapeVector extends NetworkGameClient {
           DualLinkNode.field_n.addNamedGroup(sn.field_c, CipherPacketBuffer.field_o, NanoTickClock.field_h, "", 14826);
           DualLinkNode.field_n.addWholeArchive(SavedDataWrite.field_g, (byte) -125, gm.field_d, CheckboxPainter.field_h);
           DualLinkNode.field_n.addWholeArchive(SavedDataWrite.field_g, (byte) -115, gm.field_d, StripedProgressBar.field_I);
-          DualLinkNode.field_n.addWholeArchive(bm.field_f, (byte) -119, ArchivePreloader.field_d, PointCloudEffect.field_D);
+          DualLinkNode.field_n.addWholeArchive(NameAvailabilityResultSupport.field_f, (byte) -119, ArchivePreloader.field_d, PointCloudEffect.field_D);
           DualLinkNode.field_n.addWholeArchive(LegacyStyleNode.field_r, (byte) -121, ek.field_b, UiContainer.field_B);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -889,7 +889,7 @@ public final class EscapeVector extends NetworkGameClient {
           }
           boolean var4 = (UiComponent.g(11187));
           if (ii.b(16836)) {
-            gb.a((var4), (byte) 92, var3);
+            TransitionPoint.renderAccountLayer((var4), (byte) 92, var3);
             return;
           }
           if (!ShipHullGeometry.field_h) {
@@ -912,7 +912,7 @@ public final class EscapeVector extends NetworkGameClient {
             }
             if (wk.field_c) {
               SoftwareRasterizer.clearFramebuffer();
-              aj.field_a.c(-76);
+              AccountSessionSupport.field_a.c(-76);
               decompiledFrameRemainder0 = (var9 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -924,7 +924,7 @@ public final class EscapeVector extends NetworkGameClient {
                 if (decompiledFrameRemainder0) {
                   if (!PacketBuffer.field_h) {
                     if (e.field_a) {
-                      da.field_b.i(3);
+                      da.field_b.draw(3);
                       decompiledFrameRemainder0 = (var9 != 0);
                     }
                     if (decompiledFrameRemainder0) {
@@ -1042,7 +1042,7 @@ public final class EscapeVector extends NetworkGameClient {
           } else {
             stackIn_26_0 = 0;
           }
-          fc.a(stackIn_26_0, -var8Lifetime3 + 320, var8Lifetime3 + 321, 405, true, 29788, true, 6324320, 3162160, 0, 195, true);
+          AccountNoticeKind.drawAnimatedPanelFrame(stackIn_26_0, -var8Lifetime3 + 320, var8Lifetime3 + 321, 405, true, 29788, true, 6324320, 3162160, 0, 195, true);
           if (20 <= mj.field_d) {
             stackIn_30_0 = 0;
           } else {
@@ -1054,9 +1054,9 @@ public final class EscapeVector extends NetworkGameClient {
           boolean stackIn_33_4 = true;
           int stackIn_33_5 = 29788;
           boolean stackIn_33_6 = false;
-          stackIn_34_7 = (di.field_d.field_h == 0) ? (16777215) : (6340704);
-          stackIn_38_8 = (di.field_d.field_h == 0) ? (8421504) : (3170352);
-          fc.a(stackIn_30_0, stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_33_4, stackIn_33_5, stackIn_33_6, stackIn_34_7, stackIn_38_8, 1, 262, doubleBorder);
+          stackIn_34_7 = (di.field_d.selectedIndex == 0) ? (16777215) : (6340704);
+          stackIn_38_8 = (di.field_d.selectedIndex == 0) ? (8421504) : (3170352);
+          AccountNoticeKind.drawAnimatedPanelFrame(stackIn_30_0, stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_33_4, stackIn_33_5, stackIn_33_6, stackIn_34_7, stackIn_38_8, 1, 262, doubleBorder);
           if (mj.field_d >= 30) {
             stackIn_42_0 = 0;
           } else {
@@ -1068,20 +1068,20 @@ public final class EscapeVector extends NetworkGameClient {
           boolean stackIn_45_4 = true;
           int stackIn_45_5 = 29788;
           boolean stackIn_45_6 = false;
-          stackIn_46_7 = (di.field_d.field_h == 1) ? (16777215) : (6340704);
-          stackIn_50_8 = (di.field_d.field_h == 1) ? (8421504) : (3170352);
-          fc.a(stackIn_42_0, stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_45_4, stackIn_45_5, stackIn_45_6, stackIn_46_7, stackIn_50_8, 2, 332, false);
+          stackIn_46_7 = (di.field_d.selectedIndex == 1) ? (16777215) : (6340704);
+          stackIn_50_8 = (di.field_d.selectedIndex == 1) ? (8421504) : (3170352);
+          AccountNoticeKind.drawAnimatedPanelFrame(stackIn_42_0, stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_45_4, stackIn_45_5, stackIn_45_6, stackIn_46_7, stackIn_50_8, 2, 332, false);
           pb.a(4);
           ByteStorage.gameFont.drawCentered(var2, 320, 235, 10551200, -1);
           ByteStorage.gameFont.drawCentered(var4, 320, 255, 10551200, -1);
           int stackIn_53_0 = 285;
           String stackIn_53_1 = IntrusiveDeque.field_e;
-          stackIn_54_2 = (di.field_d.field_h != 0) ? (6340704) : (16777215);
+          stackIn_54_2 = (di.field_d.selectedIndex != 0) ? (6340704) : (16777215);
           MatchingTextValidator.a(stackIn_53_0, stackIn_53_1, stackIn_54_2, -128, 320);
           ByteStorage.gameFont.drawCentered(var5, 320, 325, 10551200, -1);
           int stackIn_57_0 = 355;
           String stackIn_57_1 = StringNode.field_j;
-          stackIn_58_2 = (di.field_d.field_h == 1) ? (16777215) : (6340704);
+          stackIn_58_2 = (di.field_d.selectedIndex == 1) ? (16777215) : (6340704);
           MatchingTextValidator.a(stackIn_57_0, stackIn_57_1, stackIn_58_2, -118, 320);
           ByteStorage.gameFont.drawCentered(var6, 320, 385, 10551200, -1);
           return;
@@ -1172,10 +1172,10 @@ public final class EscapeVector extends NetworkGameClient {
             if (-1 + var2.dialogueLines.length > var2.dialogueIndex) {
               return;
             }
-            if (var2.field_C != var2.revealedLine) {
+            if (var2.wrappedLineCount != var2.revealedLine) {
               return;
             }
-            TrackerGainSupport.limitTrackerGain(40 * var2.field_t / 100, 32471);
+            TrackerGainSupport.limitTrackerGain(40 * var2.revealDelayTicks / 100, 32471);
             if (var4 == 0) {
               return;
             }
@@ -1235,7 +1235,7 @@ public final class EscapeVector extends NetworkGameClient {
             this.loadLevelObjectAssets((byte) 29);
           }
           DirectByteStorage.field_k = fe.a("", IndexedSpriteState.field_j, "classic_level_select_bg", true);
-          aj.field_c = fe.a("", IndexedSpriteState.field_j, "vengeance_level_select_bg", true);
+          AccountSessionSupport.field_c = fe.a("", IndexedSpriteState.field_j, "vengeance_level_select_bg", true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -4,7 +4,7 @@
 final class di {
     String field_a;
     static EmailAvailabilityRequest field_g;
-    static wc field_d;
+    static MenuInputState field_d;
     static String field_f;
     String field_h;
     static String field_b;

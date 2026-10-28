@@ -177,41 +177,41 @@ class EditableTextWidget extends TextButton {
         return var3;
     }
 
-    final static int a(int param0, int param1) {
+    final static int cosQ16(int guard, int angle) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        param1 = param1 & 8191;
-        if (param0 <= -124) {
-          if (param1 < 4096) {
-            if (param1 >= 2048) {
-              stackIn_19_0 = -PasswordFieldPainter.field_t[-2048 + param1];
+        angle = angle & 8191;
+        if (guard <= -124) {
+          if (angle < 4096) {
+            if (angle >= 2048) {
+              stackIn_19_0 = -PasswordFieldPainter.field_t[-2048 + angle];
             } else {
-              stackIn_19_0 = PasswordFieldPainter.field_t[-param1 + 2048];
+              stackIn_19_0 = PasswordFieldPainter.field_t[-angle + 2048];
             }
             return stackIn_19_0;
           }
-          if (param1 < 6144) {
-            stackIn_15_0 = -PasswordFieldPainter.field_t[6144 - param1];
+          if (angle < 6144) {
+            stackIn_15_0 = -PasswordFieldPainter.field_t[6144 - angle];
           } else {
-            stackIn_15_0 = PasswordFieldPainter.field_t[-6144 + param1];
+            stackIn_15_0 = PasswordFieldPainter.field_t[-6144 + angle];
           }
           return stackIn_15_0;
         }
-        EditableTextWidget.a(-64, 14);
-        if (param1 < 4096) {
-          if (param1 >= 2048) {
-            stackIn_9_0 = -PasswordFieldPainter.field_t[-2048 + param1];
+        EditableTextWidget.cosQ16(-64, 14);
+        if (angle < 4096) {
+          if (angle >= 2048) {
+            stackIn_9_0 = -PasswordFieldPainter.field_t[-2048 + angle];
           } else {
-            stackIn_9_0 = PasswordFieldPainter.field_t[-param1 + 2048];
+            stackIn_9_0 = PasswordFieldPainter.field_t[-angle + 2048];
           }
           return stackIn_9_0;
         }
-        if (param1 < 6144) {
-          stackIn_5_0 = -PasswordFieldPainter.field_t[6144 - param1];
+        if (angle < 6144) {
+          stackIn_5_0 = -PasswordFieldPainter.field_t[6144 - angle];
         } else {
-          stackIn_5_0 = PasswordFieldPainter.field_t[-6144 + param1];
+          stackIn_5_0 = PasswordFieldPainter.field_t[-6144 + angle];
         }
         return stackIn_5_0;
     }
@@ -352,7 +352,7 @@ class EditableTextWidget extends TextButton {
             EditableTextWidget.releaseStatics((byte) -115);
           }
           if (ArchivePreloader.loadSpriteSheet(param2, 105, param0, param1)) {
-            return al.a((byte) 108);
+            return AccountFormStage.buildRgbSpriteFromSheet((byte) 108);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

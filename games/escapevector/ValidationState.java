@@ -6,27 +6,27 @@ final class ValidationState {
     static int field_a;
 
     final static SpriteOffset a(int param0, int param1) {
-        if (dj.field_d == null) {
+        if (AccountPanelInputSupport.field_d == null) {
           return null;
         }
         if (0 == param0) {
-          return dj.field_d[0];
+          return AccountPanelInputSupport.field_d[0];
         }
         if (param0 == param1) {
-          return dj.field_d[1];
+          return AccountPanelInputSupport.field_d[1];
         }
         if (param0 == 32768) {
-          return dj.field_d[2];
+          return AccountPanelInputSupport.field_d[2];
         }
         if (param0 == 49152) {
-          return dj.field_d[3];
+          return AccountPanelInputSupport.field_d[3];
         }
         return null;
     }
 
     final static void a(NineSliceFrame param0, int param1, int param2, int param3, NineSliceFrame param4, int param5) {
         CheckboxPainter.field_s = param2;
-        gf.field_e = param4;
+        AnimatedPanelFrame.field_e = param4;
         fe.field_k = param5;
         AchievementTracker.field_k = param1;
         if (param3 != 3) {

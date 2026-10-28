@@ -66,7 +66,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
 
     final void s(int param0) {
         try {
-          this.a(-4814, bm.a(mj.field_a, param0, param0 ^ 252), true);
+          this.a(-4814, NameAvailabilityResultSupport.createTextResponse(mj.field_a, param0, param0 ^ 252), true);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "qc.WB(" + param0 + ')');
         }
@@ -566,7 +566,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime121 = LabeledField.loadNamedAsset("minimapkey", param0 + 10584);
           if (var2Lifetime121 != null) {
-            ea.field_i = RasterSnapshot.a(var2Lifetime121, 126);
+            SlidingSpriteTransition.field_i = RasterSnapshot.a(var2Lifetime121, 126);
           }
           byte[] var2Lifetime122 = LabeledField.loadNamedAsset("minimap_message", 10592);
           if (var2Lifetime122 != null) {
@@ -594,7 +594,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime128 = LabeledField.loadNamedAsset("shoot", 10592);
           if (null != var2Lifetime128) {
-            qj.field_e = RasterSnapshot.a(var2Lifetime128, 121);
+            PathPoint.field_e = RasterSnapshot.a(var2Lifetime128, 121);
           }
           byte[] var2Lifetime129 = LabeledField.loadNamedAsset("activateshield", 10592);
           if (null != var2Lifetime129) {
@@ -714,7 +714,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime158 = LabeledField.loadNamedAsset("explosiveisonhill", 10592);
           if (null != var2Lifetime158) {
-            ui.field_d = RasterSnapshot.a(var2Lifetime158, param0 ^ 103);
+            MeshMaterial.field_d = RasterSnapshot.a(var2Lifetime158, param0 ^ 103);
           }
           byte[] var2Lifetime159 = LabeledField.loadNamedAsset("powerupisonhill", 10592);
           if (null != var2Lifetime159) {
@@ -1226,7 +1226,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime286 = LabeledField.loadNamedAsset("difficultyHard", 10592);
           if (var2Lifetime286 != null) {
-            wc.field_b = RasterSnapshot.a(var2Lifetime286, 126);
+            MenuInputState.field_b = RasterSnapshot.a(var2Lifetime286, 126);
           }
           byte[] var2Lifetime287 = LabeledField.loadNamedAsset("legend", param0 ^ 10600);
           if (null != var2Lifetime287) {
@@ -1234,7 +1234,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime288 = LabeledField.loadNamedAsset("ship", 10592);
           if (null != var2Lifetime288) {
-            qj.field_d = RasterSnapshot.a(var2Lifetime288, 117);
+            PathPoint.field_d = RasterSnapshot.a(var2Lifetime288, 117);
           }
           byte[] var2Lifetime289 = LabeledField.loadNamedAsset("targets", 10592);
           if (var2Lifetime289 != null) {
@@ -1336,12 +1336,12 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               this.transitionToContent(new AccountTermsPanel(this), 30);
               return;
             }
-            var5.appendButton((UiListener) (this), (byte) -67, bm.field_d);
+            var5.appendButton((UiListener) (this), (byte) -67, NameAvailabilityResultSupport.field_d);
             decompiledFrameRemainder0 = (var6 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (this.field_zb) {
-              var5.appendButton((UiListener) (this), (byte) -67, bm.field_d);
+              var5.appendButton((UiListener) (this), (byte) -67, NameAvailabilityResultSupport.field_d);
               if (var6 != 0) {
                 if (param1.field_g == 5) {
                   var5.appendActionButton(false, TerrainMap.field_i, 11);

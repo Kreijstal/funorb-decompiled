@@ -2,49 +2,49 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DialogueScreen extends IntrusiveNode {
-    private int field_p;
-    private int[] field_D;
-    int field_C;
-    private int field_s;
-    private boolean field_n;
-    private PcmSampleStream field_u;
-    private int field_v;
+    private int photoTransitionTicks;
+    private int[] photoIndices;
+    int wrappedLineCount;
+    private int frameOpenTicks;
+    private boolean transitioningDialogue;
+    private PcmSampleStream typingSound;
+    private int backgroundFadeTicks;
     static String field_G;
     int dialogueIndex;
     private int revealedCharacters;
-    static ui[] field_y;
-    int field_t;
+    static MeshMaterial[] meshMaterials;
+    int revealDelayTicks;
     static String field_k;
     String[] dialogueLines;
-    private boolean field_q;
+    private boolean advancingPhoto;
     boolean fullWidthScene;
-    private Sprite[] field_z;
-    private PcmSampleStream field_A;
-    private String[] field_x;
-    private boolean field_H;
+    private Sprite[] photos;
+    private PcmSampleStream backgroundSound;
+    private String[] wrappedLines;
+    private boolean textOnLeft;
     int revealedLine;
-    private int field_F;
-    boolean field_m;
-    private wc field_w;
-    private int field_I;
-    private String field_r;
-    private String[] field_h;
-    private int field_o;
-    private String[] field_i;
+    private int animationTicks;
+    boolean autoClose;
+    private MenuInputState input;
+    private int firstNonemptyLine;
+    private String actionLabel;
+    private String[] photoGroupNames;
+    private int photoIndex;
+    private String[] photoFileNames;
 
-    private final int g(int param0) {
+    private final int actionButtonPan(int guard) {
         int var2 = 0;
         int var4 = EscapeVector.obfuscationControl;
-        int var3 = this.a((byte) 67);
+        int var3 = this.actionButtonWidth((byte) 67);
         if (this.fullWidthScene) {
           var2 = -(var3 / 2) + 626;
-        } else if (!this.field_H) {
+        } else if (!this.textOnLeft) {
           var2 = 632 - var3 / 2;
         } else {
           var2 = 162 - var3 / 2;
         }
-        if (param0 != 2) {
-          DialogueScreen.a(49, (byte) 53, -18);
+        if (guard != 2) {
+          DialogueScreen.scoreForSubmission(49, (byte) 53, -18);
         }
         return var2 * 12288 / 640 + 2048;
     }
@@ -57,49 +57,49 @@ final class DialogueScreen extends IntrusiveNode {
         int var11;
         int var12;
         int var15 = EscapeVector.obfuscationControl;
-        this.h(80);
-        this.e(401);
-        int var2 = this.a((byte) 67);
-        int var3 = 43 - this.field_s;
+        this.drawBackground(80);
+        this.drawScenePhoto(401);
+        int var2 = this.actionButtonWidth((byte) 67);
+        int var3 = 43 - this.frameOpenTicks;
         if (guard < 57) {
           return;
         }
         if (!this.fullWidthScene) {
-          int stackIn_19_0 = (!this.field_H) ? 8 : 170;
+          int stackIn_19_0 = (!this.textOnLeft) ? 8 : 170;
           var4 = stackIn_19_0;
-          int stackIn_22_0 = (!this.field_H) ? 470 : 632;
+          int stackIn_22_0 = (!this.textOnLeft) ? 470 : 632;
           var5 = stackIn_22_0;
           var6 = 65;
           var7 = 415;
-          if (this.field_H) {
+          if (this.textOnLeft) {
             int stackIn_38_0 = 0;
             int stackIn_38_1 = 409;
             int stackIn_38_2 = 382;
             int stackIn_38_3 = -var2 + (-8 + var4);
-            int stackIn_39_4 = (this.field_w.field_h == 0) ? 8421504 : 3170352;
+            int stackIn_39_4 = (this.input.selectedIndex == 0) ? 8421504 : 3170352;
             boolean stackIn_41_5 = true;
             int stackIn_41_6 = -8 + var4;
             boolean stackIn_42_7 = (var3 != 0) ? false : true;
-            int stackIn_45_8 = (0 != this.field_w.field_h) ? 6340704 : 16777215;
+            int stackIn_45_8 = (0 != this.input.selectedIndex) ? 6340704 : 16777215;
             TickClock.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_41_5, stackIn_41_6, stackIn_42_7, stackIn_45_8, var3);
             int stackIn_47_0 = 405;
-            String stackIn_47_1 = this.field_r;
-            int stackIn_48_2 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
+            String stackIn_47_1 = this.actionLabel;
+            int stackIn_48_2 = (this.input.selectedIndex == 0) ? 16777215 : 6340704;
             MatchingTextValidator.a(stackIn_47_0, stackIn_47_1, stackIn_48_2, -113, var4 + (-8 - var2 / 2 - var3 * 16));
           } else {
             int stackIn_25_0 = 0;
             int stackIn_25_1 = 409;
             int stackIn_25_2 = 382;
             int stackIn_25_3 = 632 - var2;
-            int stackIn_26_4 = (this.field_w.field_h != 0) ? 3170352 : 8421504;
+            int stackIn_26_4 = (this.input.selectedIndex != 0) ? 3170352 : 8421504;
             boolean stackIn_28_5 = true;
             int stackIn_28_6 = 632;
             boolean stackIn_29_7 = (0 != var3) ? false : true;
-            int stackIn_32_8 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
+            int stackIn_32_8 = (this.input.selectedIndex == 0) ? 16777215 : 6340704;
             TickClock.a(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_26_4, stackIn_28_5, stackIn_28_6, stackIn_29_7, stackIn_32_8, var3);
             int stackIn_34_0 = 405;
-            String stackIn_34_1 = this.field_r;
-            int stackIn_35_2 = (this.field_w.field_h != 0) ? 6340704 : 16777215;
+            String stackIn_34_1 = this.actionLabel;
+            int stackIn_35_2 = (this.input.selectedIndex != 0) ? 6340704 : 16777215;
             MatchingTextValidator.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, -120, 16 * var3 + (632 - var2 / 2));
           }
         } else {
@@ -111,33 +111,33 @@ final class DialogueScreen extends IntrusiveNode {
           int stackIn_5_1 = 475;
           int stackIn_5_2 = 448;
           int stackIn_5_3 = -var2 - 6 + var5;
-          int stackIn_6_4 = (this.field_w.field_h == 0) ? 8421504 : 3170352;
+          int stackIn_6_4 = (this.input.selectedIndex == 0) ? 8421504 : 3170352;
           boolean stackIn_8_5 = true;
           int stackIn_8_6 = var5 - 6;
           boolean stackIn_9_7 = (var3 != 0) ? false : true;
-          int stackIn_12_8 = (this.field_w.field_h == 0) ? 16777215 : 6340704;
+          int stackIn_12_8 = (this.input.selectedIndex == 0) ? 16777215 : 6340704;
           TickClock.a(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, stackIn_8_5, stackIn_8_6, stackIn_9_7, stackIn_12_8, var3);
           int stackIn_14_0 = 471;
-          String stackIn_14_1 = this.field_r;
-          int stackIn_15_2 = (this.field_w.field_h != 0) ? 6340704 : 16777215;
+          String stackIn_14_1 = this.actionLabel;
+          int stackIn_15_2 = (this.input.selectedIndex != 0) ? 6340704 : 16777215;
           MatchingTextValidator.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, -122, 16 * var3 + (-6 + (var5 - var2 / 2)));
         }
         AccountMessagePanel.drawUnevenFrame(3162160, var5 - 3, 6324320, -1, 3 + var6, -108, 3 + var4, var7 - 3, var3);
         AccountMessagePanel.drawUnevenFrame(5275728, var5, 10551200, 1, var6, 99, var4, var7, var3);
-        if (this.field_C > 0) {
+        if (this.wrappedLineCount > 0) {
           int var8 = this.revealedLine;
           int var9 = this.revealedCharacters;
-          if (this.field_C <= var8) {
+          if (this.wrappedLineCount <= var8) {
             var8--;
-            var9 = this.field_x[var8].length();
+            var9 = this.wrappedLines[var8].length();
           }
           for (int var10 = 0; var8 >= var10; var10++) {
-            String var16 = this.field_x[var10];
+            String var16 = this.wrappedLines[var10];
             String var13 = var16;
             String var13Lifetime1 = var16;
             String var13Lifetime2 = var16;
             if (!this.fullWidthScene) {
-              int stackIn_63_0 = (!this.field_H) ? 478 : 8;
+              int stackIn_63_0 = (!this.textOnLeft) ? 478 : 8;
               var11 = stackIn_63_0;
               var12 = 88 + var10 * 20;
             } else {
@@ -154,7 +154,7 @@ final class DialogueScreen extends IntrusiveNode {
               var13Lifetime2 = var17;
               var13Lifetime2 = var17;
               var13Lifetime2 = var17;
-              if (0 != (this.field_F & 4)) {
+              if (0 != (this.animationTicks & 4)) {
                 var13Lifetime2 = var17 + "_";
               }
             }
@@ -164,38 +164,38 @@ final class DialogueScreen extends IntrusiveNode {
             }
           }
         }
-        if (this.field_p >= 30 &&
-          this.field_v > 0) {
+        if (this.photoTransitionTicks >= 30 &&
+          this.backgroundFadeTicks > 0) {
           int var8Lifetime1 = 128;
-          if (30 > this.field_v) {
-            var8Lifetime1 = this.field_v * var8Lifetime1 / 30;
+          if (30 > this.backgroundFadeTicks) {
+            var8Lifetime1 = this.backgroundFadeTicks * var8Lifetime1 / 30;
           }
           SoftwareRasterizer.fillRectangleAlpha(15, 178, 610, 62, 0, var8Lifetime1);
         }
-        if (30 <= this.field_p &&
-          this.field_v > 50) {
+        if (30 <= this.photoTransitionTicks &&
+          this.backgroundFadeTicks > 50) {
           int var8Lifetime2 = 128;
-          if (this.field_v < 80) {
-            var8Lifetime2 = var8Lifetime2 * (-50 + this.field_v) / 30;
+          if (this.backgroundFadeTicks < 80) {
+            var8Lifetime2 = var8Lifetime2 * (-50 + this.backgroundFadeTicks) / 30;
           }
           SoftwareRasterizer.fillRectangleAlpha(15, 240, 610, 62, 0, var8Lifetime2);
         }
-        ArchiveKeyRequest.a(244, 182, 8, this.field_v);
+        ArchiveKeyRequest.a(244, 182, 8, this.backgroundFadeTicks);
     }
 
-    DialogueScreen(int[] param0, Sprite[] param1, String[] param2, boolean param3) {
-        this(param1, param2, param3);
+    DialogueScreen(int[] photoIndices, Sprite[] photos, String[] dialogueLines, boolean fullWidthScene) {
+        this(photos, dialogueLines, fullWidthScene);
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
-          this.field_D = param0;
-          this.field_h = new String[this.field_D.length];
-          this.field_i = new String[this.field_D.length];
-          for (int var5_int = 0; var5_int < this.field_D.length; var5_int++) {
-            this.field_h[var5_int] = "photos_" + ValidatedTextWidget.field_R[this.field_D[var5_int]];
-            this.field_i[var5_int] = "";
-            boolean discarded$2 = this.a((byte) 124, var5_int);
+          this.photoIndices = photoIndices;
+          this.photoGroupNames = new String[this.photoIndices.length];
+          this.photoFileNames = new String[this.photoIndices.length];
+          for (int var5_int = 0; var5_int < this.photoIndices.length; var5_int++) {
+            this.photoGroupNames[var5_int] = "photos_" + ValidatedTextWidget.field_R[this.photoIndices[var5_int]];
+            this.photoFileNames[var5_int] = "";
+            boolean discarded$2 = this.tryLoadScenePhoto((byte) 124, var5_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -203,66 +203,66 @@ final class DialogueScreen extends IntrusiveNode {
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_7_0 = var5;
           StringBuilder stackIn_7_1 = new StringBuilder().append("tj.<init>(");
-          if (param0 == null) {
+          if (photoIndices == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param1 == null) {
+          if (photos == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (dialogueLines == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(fullWidthScene).append(')').toString());
         }
     }
 
-    private final int d(int param0) {
-        if (param0 != 8192) {
-          this.field_w = (wc) null;
+    private final int photoPan(int guard) {
+        if (guard != 8192) {
+          this.input = (MenuInputState) null;
         }
         if (this.fullWidthScene) {
           return 8192;
         }
-        int var2 = this.field_H ? 401 : 239;
+        int var2 = this.textOnLeft ? 401 : 239;
         return 12288 * var2 / 640 + 2048;
     }
 
-    private final void k(int param0) {
-        if (this.field_v == 80) {
-          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, 3072 * IterableNodeHashTable.field_c / 64, 10240);
+    private final void advanceBackgroundFadeOut(int guard) {
+        if (this.backgroundFadeTicks == 80) {
+          ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, 3072 * IterableNodeHashTable.field_c / 64, 10240);
         }
-        if (this.field_v == 30) {
-          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 6144);
+        if (this.backgroundFadeTicks == 30) {
+          ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 6144);
         }
-        this.field_v = this.field_v - 1;
-        if (param0 <= 102) {
-          field_y = (ui[]) null;
+        this.backgroundFadeTicks = this.backgroundFadeTicks - 1;
+        if (guard <= 102) {
+          meshMaterials = (MeshMaterial[]) null;
         }
     }
 
-    DialogueScreen(String param0, String param1, Sprite[] param2, String[] param3, boolean param4) {
-        this(param2, param3, param4);
+    DialogueScreen(String groupName, String filePrefix, Sprite[] photos, String[] dialogueLines, boolean fullWidthScene) {
+        this(photos, dialogueLines, fullWidthScene);
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         try {
-          this.field_D = new int[this.field_z.length];
-          this.field_h = new String[this.field_z.length];
-          this.field_i = new String[this.field_z.length];
-          for (int var6_int = 0; this.field_D.length > var6_int; var6_int++) {
-            this.field_D[var6_int] = var6_int;
-            this.field_h[var6_int] = param0;
-            this.field_i[var6_int] = param1 + (var6_int + 1);
-            boolean discarded$2 = this.a((byte) 126, var6_int);
+          this.photoIndices = new int[this.photos.length];
+          this.photoGroupNames = new String[this.photos.length];
+          this.photoFileNames = new String[this.photos.length];
+          for (int var6_int = 0; this.photoIndices.length > var6_int; var6_int++) {
+            this.photoIndices[var6_int] = var6_int;
+            this.photoGroupNames[var6_int] = groupName;
+            this.photoFileNames[var6_int] = filePrefix + (var6_int + 1);
+            boolean discarded$2 = this.tryLoadScenePhoto((byte) 126, var6_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -270,93 +270,93 @@ final class DialogueScreen extends IntrusiveNode {
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_7_0 = var6;
           StringBuilder stackIn_7_1 = new StringBuilder().append("tj.<init>(");
-          if (param0 == null) {
+          if (groupName == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param1 == null) {
+          if (filePrefix == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (photos == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param3 == null) {
+          if (dialogueLines == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(fullWidthScene).append(')').toString());
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
-        if (param1 < 125) {
+    final static int scoreForSubmission(int mode, byte guard, int score) {
+        if (guard < 125) {
           return 20;
         }
-        if (0 == param0) {
-          return param2;
+        if (0 == mode) {
+          return score;
         }
-        if (1 == param0) {
-          return param2;
+        if (1 == mode) {
+          return score;
         }
-        if (param0 == 2) {
-          return ProgressQuery.ceilDivide(-7, 100, param2);
+        if (mode == 2) {
+          return ProgressQuery.ceilDivide(-7, 100, score);
         }
-        if (param0 == 3) {
-          return ProgressQuery.ceilDivide(-25, 100, param2);
+        if (mode == 3) {
+          return ProgressQuery.ceilDivide(-25, 100, score);
         }
-        return param2;
+        return score;
     }
 
     public static void releaseStatics(boolean guard) {
         field_k = null;
         field_G = null;
         if (!guard) {
-          DialogueScreen.a((byte) -30, -21, 96);
+          DialogueScreen.rotationTransformQ16((byte) -30, -21, 96);
         }
-        field_y = null;
+        meshMaterials = null;
     }
 
-    private final void a(int param0, String param1) {
+    private final void wrapDialogueText(int guard, String text) {
         String stackIn_20_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          if (param0 != 43) {
+          if (guard != 43) {
             return;
           }
           int stackIn_6_0 = (!this.fullWidthScene) ? 154 : 614;
           int var3_int = stackIn_6_0;
-          this.field_C = ByteStorage.gameFont.wrapLines(param1, new int[]{var3_int}, this.field_x);
-          for (int var4 = 0; this.field_C > var4; var4++) {
-            if (this.field_x[var4].endsWith("<br>")) {
-              this.field_x[var4] = this.field_x[var4].substring(0, -4 + this.field_x[var4].length());
+          this.wrappedLineCount = ByteStorage.gameFont.wrapLines(text, new int[]{var3_int}, this.wrappedLines);
+          for (int var4 = 0; this.wrappedLineCount > var4; var4++) {
+            if (this.wrappedLines[var4].endsWith("<br>")) {
+              this.wrappedLines[var4] = this.wrappedLines[var4].substring(0, -4 + this.wrappedLines[var4].length());
             }
           }
           this.revealedLine = 0;
           this.revealedCharacters = 0;
-          while (this.revealedLine < this.field_C) {
-            if (0 == this.field_x[this.revealedLine].length()) {
+          while (this.revealedLine < this.wrappedLineCount) {
+            if (0 == this.wrappedLines[this.revealedLine].length()) {
               this.revealedLine = this.revealedLine + 1;
               continue;
             }
             break;
           }
-          this.field_I = this.revealedLine;
+          this.firstNonemptyLine = this.revealedLine;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
           RuntimeException stackIn_19_0 = runtimeException;
-          StringBuilder stackIn_19_1 = new StringBuilder().append("tj.N(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_19_1 = new StringBuilder().append("tj.N(").append(guard).append(',');
+          if (text == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
@@ -367,15 +367,15 @@ final class DialogueScreen extends IntrusiveNode {
 
     final void advanceDialogue(byte guard) {
         int var7 = EscapeVector.obfuscationControl;
-        this.field_w.a(this.a(-84, sf.field_c, LoginDialog.field_ob), (byte) 126, this.a(-97, GzipDecoder.field_d, UiContainer.field_y));
+        this.input.updatePointer(this.hitActionButton(-84, sf.field_c, LoginDialog.field_ob), (byte) 126, this.hitActionButton(-97, GzipDecoder.field_d, UiContainer.field_y));
         if (guard < 10) {
           return;
         }
-        if (this.field_w.field_e) {
-          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, this.g(2));
+        if (this.input.selectionChanged) {
+          ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, this.actionButtonPan(2));
         }
         if (AccountMessagePanel.field_N != 0) {
-          this.i(2048);
+          this.closeDialogue(2048);
           if (da.field_c != null) {
             da.field_c.b(true, 320);
             return;
@@ -383,9 +383,9 @@ final class DialogueScreen extends IntrusiveNode {
         } else {
           while (true) {
             if (AccountRequestDialog.pollKeyEvent(-82)) {
-              this.field_w.c((byte) 6);
-              if (this.field_w.field_e) {
-                ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, this.g(2));
+              this.input.handleKeyEvent((byte) 6);
+              if (this.input.selectionChanged) {
+                ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, this.actionButtonPan(2));
               }
               if (PasswordValidator.field_n != 13 &&
                 PasswordValidator.field_n != 84 &&
@@ -393,107 +393,107 @@ final class DialogueScreen extends IntrusiveNode {
                 82 != PasswordValidator.field_n) {
                 continue;
               }
-              this.i(2048);
+              this.closeDialogue(2048);
               if (null == da.field_c) {
                 break;
               }
               da.field_c.b(false, 320);
               return;
             }
-            if (!this.field_n &&
-              this.field_v > 0 &&
-              80 > this.field_v) {
-              this.d((byte) -21);
+            if (!this.transitioningDialogue &&
+              this.backgroundFadeTicks > 0 &&
+              80 > this.backgroundFadeTicks) {
+              this.advanceBackgroundFadeIn((byte) -21);
             }
-            if (!this.field_n &&
-              43 > this.field_s) {
-              if (this.field_s == 0) {
-                StringNode.playFrameAppearSound(this.d(8192), (byte) 51);
+            if (!this.transitioningDialogue &&
+              43 > this.frameOpenTicks) {
+              if (this.frameOpenTicks == 0) {
+                StringNode.playFrameAppearSound(this.photoPan(8192), (byte) 51);
               }
-              if (23 == this.field_s) {
-                ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 3072 * IterableNodeHashTable.field_c / 64, this.g(2));
+              if (23 == this.frameOpenTicks) {
+                ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 3072 * IterableNodeHashTable.field_c / 64, this.actionButtonPan(2));
               }
-              this.field_s = this.field_s + 1;
-              if (this.field_s == 43 &&
-                this.field_A == null) {
-                this.field_A = PcmSampleStream.createAtRatePercentQ6(AchievementTracker.field_d, 100, IterableNodeHashTable.field_c * 768 / 64, this.g((byte) 111));
-                this.field_A.setLoopCount(-1);
-                ObjectSpriteSet.field_e.addSubstream(this.field_A);
+              this.frameOpenTicks = this.frameOpenTicks + 1;
+              if (this.frameOpenTicks == 43 &&
+                this.backgroundSound == null) {
+                this.backgroundSound = PcmSampleStream.createAtRatePercentQ6(AchievementTracker.field_d, 100, IterableNodeHashTable.field_c * 768 / 64, this.typingPan((byte) 111));
+                this.backgroundSound.setLoopCount(-1);
+                ObjectSpriteSet.field_e.addSubstream(this.backgroundSound);
               }
             }
-            if (this.field_n &&
-              this.field_s > 0) {
-              if (this.field_p > 0) {
-                this.f((byte) -105);
+            if (this.transitioningDialogue &&
+              this.frameOpenTicks > 0) {
+              if (this.photoTransitionTicks > 0) {
+                this.advancePhotoClosing((byte) -105);
               }
               if (!this.fullWidthScene ||
                 this.dialogueIndex >= this.dialogueLines.length) {
-                if (this.field_s == 43) {
-                  StringNode.playFrameAppearSound(this.d(8192), (byte) 51);
+                if (this.frameOpenTicks == 43) {
+                  StringNode.playFrameAppearSound(this.photoPan(8192), (byte) 51);
                 }
-                this.field_s = this.field_s - 1;
+                this.frameOpenTicks = this.frameOpenTicks - 1;
               }
             }
-            if (this.field_n && (0 == this.field_s ||
+            if (this.transitioningDialogue && (0 == this.frameOpenTicks ||
               this.fullWidthScene &&
               this.dialogueIndex < this.dialogueLines.length &&
-              this.field_p <= 20)) {
+              this.photoTransitionTicks <= 20)) {
               if (this.dialogueIndex < this.dialogueLines.length) {
-                boolean stackIn_60_1 = !(this.field_H);
-                this.field_H = stackIn_60_1;
-                this.field_o = this.field_o + 1;
-                this.field_n = false;
+                boolean stackIn_60_1 = !(this.textOnLeft);
+                this.textOnLeft = stackIn_60_1;
+                this.photoIndex = this.photoIndex + 1;
+                this.transitioningDialogue = false;
                 if (!this.fullWidthScene) {
-                  this.a(43, this.dialogueLines[this.dialogueIndex]);
+                  this.wrapDialogueText(43, this.dialogueLines[this.dialogueIndex]);
                   ChatMessage.clearFrameOffsets((byte) -98);
                 }
               } else {
                 if (BoundedRandomAccessFile.activeSession != null) {
-                  this.i(2048);
+                  this.closeDialogue(2048);
                   return;
                 }
-                if (this.field_v <= 0) {
-                  this.i(2048);
+                if (this.backgroundFadeTicks <= 0) {
+                  this.closeDialogue(2048);
                   return;
                 }
-                this.k(108);
+                this.advanceBackgroundFadeOut(108);
               }
             }
-            if (!this.field_n &&
-              43 == this.field_s) {
-              if (this.field_q) {
-                this.f((byte) -111);
-                if (this.field_p == 20) {
-                  this.field_o = this.field_o + 1;
-                  this.field_q = false;
+            if (!this.transitioningDialogue &&
+              43 == this.frameOpenTicks) {
+              if (this.advancingPhoto) {
+                this.advancePhotoClosing((byte) -111);
+                if (this.photoTransitionTicks == 20) {
+                  this.photoIndex = this.photoIndex + 1;
+                  this.advancingPhoto = false;
                 }
-              } else if (20 > this.field_p) {
-                this.f(100);
-              } else if (this.field_p < 30 &&
-                this.a((byte) 125, this.field_o)) {
-                this.f(100);
+              } else if (20 > this.photoTransitionTicks) {
+                this.advancePhotoOpening(100);
+              } else if (this.photoTransitionTicks < 30 &&
+                this.tryLoadScenePhoto((byte) 125, this.photoIndex)) {
+                this.advancePhotoOpening(100);
               }
             }
-            if (null != this.field_A) {
-              this.field_F = this.field_F + 1;
-              if (!this.field_n &&
-                43 <= this.field_s &&
-                this.field_t > 0) {
-                int fieldTemp$0 = this.field_t - 1;
-                this.field_t = this.field_t - 1;
+            if (null != this.backgroundSound) {
+              this.animationTicks = this.animationTicks + 1;
+              if (!this.transitioningDialogue &&
+                43 <= this.frameOpenTicks &&
+                this.revealDelayTicks > 0) {
+                int fieldTemp$0 = this.revealDelayTicks - 1;
+                this.revealDelayTicks = this.revealDelayTicks - 1;
                 if (fieldTemp$0 == 0) {
-                  if (this.field_C > this.revealedLine) {
+                  if (this.wrappedLineCount > this.revealedLine) {
                     boolean var2 = false;
-                    String var3 = this.field_x[this.revealedLine];
+                    String var3 = this.wrappedLines[this.revealedLine];
                     while (this.revealedCharacters < var3.length()) {
                       if (var3.regionMatches(this.revealedCharacters, "<photo>", 0, "<photo>".length())) {
                         this.revealedCharacters = this.revealedCharacters + "<photo>".length();
-                        this.field_q = true;
+                        this.advancingPhoto = true;
                         continue;
                       }
                       if (var3.regionMatches(this.revealedCharacters, "<title>", 0, "<title>".length())) {
                         this.revealedCharacters = this.revealedCharacters + "<title>".length();
-                        this.d((byte) -21);
+                        this.advanceBackgroundFadeIn((byte) -21);
                         continue;
                       }
                       break;
@@ -501,7 +501,7 @@ final class DialogueScreen extends IntrusiveNode {
                     if (this.revealedCharacters >= var3.length()) {
                       this.revealedLine = this.revealedLine + 1;
                       this.revealedCharacters = 0;
-                      this.field_u.rampVolume(AudioOutput.sampleRate / 200, 0);
+                      this.typingSound.rampVolume(AudioOutput.sampleRate / 200, 0);
                     } else {
                       int fieldTemp$1 = this.revealedCharacters;
                       this.revealedCharacters = this.revealedCharacters + 1;
@@ -516,46 +516,46 @@ final class DialogueScreen extends IntrusiveNode {
                         }
                       }
                       if (var4 == 32) {
-                        this.field_u.rampVolume(AudioOutput.sampleRate / 200, 0);
+                        this.typingSound.rampVolume(AudioOutput.sampleRate / 200, 0);
                       } else {
-                        this.field_u.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, 3072 * IterableNodeHashTable.field_c / 64, this.g((byte) 111));
+                        this.typingSound.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, 3072 * IterableNodeHashTable.field_c / 64, this.typingPan((byte) 111));
                       }
                     }
-                    this.field_t = 2;
-                    if (this.revealedLine == this.field_C) {
-                      this.field_t = 100;
+                    this.revealDelayTicks = 2;
+                    if (this.revealedLine == this.wrappedLineCount) {
+                      this.revealDelayTicks = 100;
                     } else if (var2) {
-                      this.field_t = 50;
+                      this.revealDelayTicks = 50;
                     }
                     boolean decompiledFrameRemainder0 = false;
                   }
                   else {
                     this.dialogueIndex = this.dialogueIndex + 1;
                     if (this.dialogueLines.length <= this.dialogueIndex) {
-                      ObjectSpriteSet.field_e.removeSubstream(this.field_A);
-                      this.field_A = null;
-                      this.field_F = 0;
-                      if (!this.field_m) {
-                        this.field_r = TextFieldValidator.field_i;
+                      ObjectSpriteSet.field_e.removeSubstream(this.backgroundSound);
+                      this.backgroundSound = null;
+                      this.animationTicks = 0;
+                      if (!this.autoClose) {
+                        this.actionLabel = TextFieldValidator.field_i;
                       } else {
-                        this.a(43, (String) null);
-                        this.field_n = true;
+                        this.wrapDialogueText(43, (String) null);
+                        this.transitioningDialogue = true;
                       }
                     } else {
-                      this.revealedLine = this.field_I;
+                      this.revealedLine = this.firstNonemptyLine;
                       this.revealedCharacters = 0;
-                      this.field_t = 20;
-                      this.field_n = true;
+                      this.revealDelayTicks = 20;
+                      this.transitioningDialogue = true;
                       if (this.fullWidthScene) {
-                        this.a(43, this.dialogueLines[this.dialogueIndex]);
+                        this.wrapDialogueText(43, this.dialogueLines[this.dialogueIndex]);
                       }
                     }
                   }
                 }
               }
             }
-            if (this.field_A != null) {
-              this.field_A.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, 768 * IterableNodeHashTable.field_c / 64, this.g((byte) 111));
+            if (this.backgroundSound != null) {
+              this.backgroundSound.rampVolumeAndPanQ6(AudioOutput.sampleRate / 200, 768 * IterableNodeHashTable.field_c / 64, this.typingPan((byte) 111));
             }
             IntValueNode.field_j = true;
             return;
@@ -563,23 +563,23 @@ final class DialogueScreen extends IntrusiveNode {
         }
     }
 
-    private final int g(byte param0) {
+    private final int typingPan(byte guard) {
         int var2;
         int var3 = this.revealedLine;
         int var4 = this.revealedCharacters;
-        if (param0 != 111) {
+        if (guard != 111) {
           return -60;
         }
-        if (this.field_C <= var3) {
+        if (this.wrappedLineCount <= var3) {
           var3--;
-          var4 = this.field_x[var3].length();
+          var4 = this.wrappedLines[var3].length();
         }
-        String var8 = this.field_x[var3];
+        String var8 = this.wrappedLines[var3];
         if (!this.fullWidthScene) {
-          int stackIn_12_0 = (!this.field_H) ? 478 : 8;
+          int stackIn_12_0 = (!this.textOnLeft) ? 478 : 8;
           var2 = stackIn_12_0;
         } else {
-          int var6 = this.a((byte) 67);
+          int var6 = this.actionButtonWidth((byte) 67);
           int var7 = ByteStorage.gameFont.stringWidth(var8);
           var2 = (640 - var7) / 2;
           if (1 == var3 &&
@@ -592,10 +592,10 @@ final class DialogueScreen extends IntrusiveNode {
         return var2 * 12288 / 640 + 2048;
     }
 
-    private final int a(byte param0) {
+    private final int actionButtonWidth(byte guard) {
         int var2 = 40;
-        if (param0 != 67) {
-          boolean discarded$0 = this.a((byte) 12, 65);
+        if (guard != 67) {
+          boolean discarded$0 = this.tryLoadScenePhoto((byte) 12, 65);
         }
         int var3 = ByteStorage.gameFont.stringWidth(ig.field_c) + 9;
         if (var2 < var3) {
@@ -608,13 +608,13 @@ final class DialogueScreen extends IntrusiveNode {
         return var2;
     }
 
-    private final void e(int param0) {
+    private final void drawScenePhoto(int guard) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var2 = 0;
-        if (param0 != 401) {
-          this.field_H = false;
+        if (guard != 401) {
+          this.textOnLeft = false;
         }
         if (this.fullWidthScene) {
           var3 = 320;
@@ -622,83 +622,83 @@ final class DialogueScreen extends IntrusiveNode {
           var5 = 240;
           var2 = 15;
         } else {
-          var3 = this.field_H ? 401 : 239;
+          var3 = this.textOnLeft ? 401 : 239;
           var5 = 240;
           var4 = 72;
-          var2 = !this.field_H ? 15 : 177;
+          var2 = !this.textOnLeft ? 15 : 177;
         }
-        Sprite var6 = this.field_z[this.field_D[this.field_o]];
-        qj.a(-1276284702, this.field_F, var4, var3, var6, var5, this.field_p, var2);
+        Sprite var6 = this.photos[this.photoIndices[this.photoIndex]];
+        PathPoint.drawPhotoTransition(-1276284702, this.animationTicks, var4, var3, var6, var5, this.photoTransitionTicks, var2);
     }
 
-    private final void h(int param0) {
+    private final void drawBackground(int guard) {
         int var5 = EscapeVector.obfuscationControl;
-        if (this.field_v > 0 &&
+        if (this.backgroundFadeTicks > 0 &&
           uj.field_a != null) {
           Sprite var2 = uj.field_a;
           for (int var3 = 0; var3 < 480; var3 = var3 + var2.fullHeight) {
             for (int var4 = 0; var4 < 640; var4 = var4 + var2.fullWidth) {
-              var2.drawWithBrightness(var4, var3, this.field_v * 256 / 80);
+              var2.drawWithBrightness(var4, var3, this.backgroundFadeTicks * 256 / 80);
             }
           }
         } else {
           SoftwareRasterizer.clearFramebuffer();
         }
-        if (param0 != 80) {
-          int discarded$0 = this.a(-21, -68, -73);
+        if (guard != 80) {
+          int discarded$0 = this.hitActionButton(-21, -68, -73);
         }
     }
 
-    private final void f(byte param0) {
-        if (this.field_p == 30) {
-          PcmSampleStream var2 = PcmSampleStream.createAtRatePercentQ6(vd.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, this.d(8192));
+    private final void advancePhotoClosing(byte guard) {
+        if (this.photoTransitionTicks == 30) {
+          PcmSampleStream var2 = PcmSampleStream.createAtRatePercentQ6(vd.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, this.photoPan(8192));
           var2.playBackwardFromEnd();
           ObjectSpriteSet.field_e.addSubstream(var2);
         }
-        if (param0 >= -86) {
-          this.field_v = -93;
+        if (guard >= -86) {
+          this.backgroundFadeTicks = -93;
         }
-        if (20 == this.field_p) {
-          PcmSampleStream var2Lifetime1 = PcmSampleStream.createAtRatePercentQ6(QuickChatPhraseDefinition.field_t, 100, 3072 * IterableNodeHashTable.field_c / 64, this.d(8192));
+        if (20 == this.photoTransitionTicks) {
+          PcmSampleStream var2Lifetime1 = PcmSampleStream.createAtRatePercentQ6(QuickChatPhraseDefinition.field_t, 100, 3072 * IterableNodeHashTable.field_c / 64, this.photoPan(8192));
           ObjectSpriteSet.field_e.addSubstream(var2Lifetime1);
         }
-        this.field_p = this.field_p - 1;
+        this.photoTransitionTicks = this.photoTransitionTicks - 1;
     }
 
-    private final boolean a(byte param0, int param1) {
-        if (param0 <= 121) {
-          this.i(-101);
+    private final boolean tryLoadScenePhoto(byte guard, int sceneIndex) {
+        if (guard <= 121) {
+          this.closeDialogue(-101);
         }
-        return this.a(this.field_D[param1], 23381, this.field_i[param1], this.field_h[param1]);
+        return this.tryLoadPhoto(this.photoIndices[sceneIndex], 23381, this.photoFileNames[sceneIndex], this.photoGroupNames[sceneIndex]);
     }
 
-    private final void i(int param0) {
-        if (this.field_A != null) {
-          this.field_A.fadeOut(AudioOutput.sampleRate / 200);
+    private final void closeDialogue(int guard) {
+        if (this.backgroundSound != null) {
+          this.backgroundSound.fadeOut(AudioOutput.sampleRate / 200);
         }
-        this.field_u.fadeOut(AudioOutput.sampleRate / 200);
+        this.typingSound.fadeOut(AudioOutput.sampleRate / 200);
         Bullet.removeFirstDialogue((byte) -22);
         ChatMessage.clearFrameOffsets((byte) -111);
         Js5NetworkRequest.field_E = true;
         SavedDataQuerySupport.field_d = true;
-        if (param0 != 2048) {
-          DialogueScreen.a(-3, (byte) -83, 42);
+        if (guard != 2048) {
+          DialogueScreen.scoreForSubmission(-3, (byte) -83, 42);
         }
         ScoreSubmission.field_p = true;
     }
 
-    private final void d(byte param0) {
-        if (param0 != -21) {
-          int discarded$0 = this.a(3, 15, -89);
+    private final void advanceBackgroundFadeIn(byte guard) {
+        if (guard != -21) {
+          int discarded$0 = this.hitActionButton(3, 15, -89);
         }
-        if (this.field_v == 0) {
-          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 6144);
+        if (this.backgroundFadeTicks == 0) {
+          ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 6144);
         }
-        if (this.field_v == 50) {
-          ObjectSpriteSet.field_e.playSampleWithPan(bm.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 10240);
+        if (this.backgroundFadeTicks == 50) {
+          ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 10240);
         }
-        this.field_v = this.field_v + 1;
-        mm.a(param0 + 25, 4);
+        this.backgroundFadeTicks = this.backgroundFadeTicks + 1;
+        mm.a(guard + 25, 4);
     }
 
     final static void writeCookie(byte guard, java.applet.Applet applet, String name, String value, long lifetimeSeconds) {
@@ -761,18 +761,18 @@ final class DialogueScreen extends IntrusiveNode {
         }
     }
 
-    private final boolean a(int param0, int param1, String param2, String param3) {
+    private final boolean tryLoadPhoto(int photoSlot, int guard, String fileName, String groupName) {
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         try {
-          if (null == this.field_z[param0]) {
-            this.field_z[param0] = fe.a(param3, IndexedSpriteState.field_j, param2, true);
-            if (this.field_z[param0] == null) {
+          if (null == this.photos[photoSlot]) {
+            this.photos[photoSlot] = fe.a(groupName, IndexedSpriteState.field_j, fileName, true);
+            if (this.photos[photoSlot] == null) {
               return false;
             }
             SpriteOffset.a((byte) 44);
           }
-          if (param1 == 23381) {
+          if (guard == 23381) {
             return true;
           }
           return true;
@@ -780,14 +780,14 @@ final class DialogueScreen extends IntrusiveNode {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var5;
-          StringBuilder stackIn_13_1 = new StringBuilder().append("tj.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_13_1 = new StringBuilder().append("tj.B(").append(photoSlot).append(',').append(guard).append(',');
+          if (fileName == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param3 == null) {
+          if (groupName == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -796,26 +796,26 @@ final class DialogueScreen extends IntrusiveNode {
         }
     }
 
-    private final void f(int param0) {
-        if (this.field_p == 0) {
-          ObjectSpriteSet.field_e.playSampleWithPan(QuickChatPhraseDefinition.field_t, 100, 3072 * IterableNodeHashTable.field_c / 64, this.d(8192));
+    private final void advancePhotoOpening(int guard) {
+        if (this.photoTransitionTicks == 0) {
+          ObjectSpriteSet.field_e.playSampleWithPan(QuickChatPhraseDefinition.field_t, 100, 3072 * IterableNodeHashTable.field_c / 64, this.photoPan(8192));
         }
-        if (this.field_p == 20) {
-          ObjectSpriteSet.field_e.playSampleWithPan(vd.field_g, 100, IterableNodeHashTable.field_c * 3072 / 64, this.d(8192));
+        if (this.photoTransitionTicks == 20) {
+          ObjectSpriteSet.field_e.playSampleWithPan(vd.field_g, 100, IterableNodeHashTable.field_c * 3072 / 64, this.photoPan(8192));
         }
-        if (param0 != 100) {
+        if (guard != 100) {
           return;
         }
-        this.field_p = this.field_p + 1;
+        this.photoTransitionTicks = this.photoTransitionTicks + 1;
     }
 
-    final static int[] a(byte param0, int param1, int param2) {
-        int var3 = fc.a(10758, param2);
-        int var4 = EditableTextWidget.a(-127, param2);
-        int var5 = fc.a(10758, param1);
-        int var6 = EditableTextWidget.a(-126, param1);
+    final static int[] rotationTransformQ16(byte guard, int firstAngle, int secondAngle) {
+        int var3 = AccountNoticeKind.sinQ16(10758, secondAngle);
+        int var4 = EditableTextWidget.cosQ16(-127, secondAngle);
+        int var5 = AccountNoticeKind.sinQ16(10758, firstAngle);
+        int var6 = EditableTextWidget.cosQ16(-126, firstAngle);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
-        if (param0 != 82) {
+        if (guard != 82) {
           field_k = (String) null;
         }
         int var8 = (int)((long)var6 * (long)var3 >> 16);
@@ -824,79 +824,79 @@ final class DialogueScreen extends IntrusiveNode {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    private final int a(int param0, int param1, int param2) {
-        int var4 = this.a((byte) 67);
-        int var5 = -104 % ((param0 + 17) / 56);
+    private final int hitActionButton(int guard, int x, int y) {
+        int var4 = this.actionButtonWidth((byte) 67);
+        int var5 = -104 % ((guard + 17) / 56);
         if (this.fullWidthScene) {
-          if (param1 >= 626 - var4 &&
-            param1 < 626 &&
-            param2 >= 448 &&
-            param2 < 475) {
+          if (x >= 626 - var4 &&
+            x < 626 &&
+            y >= 448 &&
+            y < 475) {
             return 0;
           }
-        } else if (!this.field_H) {
-          if (param1 >= 632 - var4 &&
-            param1 < 632 &&
-            382 <= param2 &&
-            param2 < 409) {
+        } else if (!this.textOnLeft) {
+          if (x >= 632 - var4 &&
+            x < 632 &&
+            382 <= y &&
+            y < 409) {
             return 0;
           }
-        } else if (-var4 + 162 <= param1 &&
-          param1 < 162 &&
-          param2 >= 382 &&
-          param2 < 409) {
+        } else if (-var4 + 162 <= x &&
+          x < 162 &&
+          y >= 382 &&
+          y < 409) {
           return 0;
         }
         return -1;
     }
 
-    private DialogueScreen(Sprite[] param0, String[] param1, boolean param2) {
+    private DialogueScreen(Sprite[] photos, String[] dialogueLines, boolean fullWidthScene) {
         int stackIn_3_2 = 0;
         String stackIn_12_2 = null;
         String stackIn_15_2 = null;
         this.dialogueIndex = 0;
-        this.field_C = 0;
+        this.wrappedLineCount = 0;
         this.revealedCharacters = 0;
         this.revealedLine = 0;
-        this.field_t = 40;
+        this.revealDelayTicks = 40;
         int stackIn_2_1 = 17;
         stackIn_3_2 = (!SelfDestructEffects.field_k) ? (0) : (10);
-        this.field_x = new String[stackIn_2_1 + stackIn_3_2];
-        this.field_F = 0;
-        this.field_v = 0;
-        this.field_m = true;
-        this.field_I = 0;
-        this.field_r = ig.field_c;
+        this.wrappedLines = new String[stackIn_2_1 + stackIn_3_2];
+        this.animationTicks = 0;
+        this.backgroundFadeTicks = 0;
+        this.autoClose = true;
+        this.firstNonemptyLine = 0;
+        this.actionLabel = ig.field_c;
         try {
           ChatMessage.clearFrameOffsets((byte) -103);
-          this.dialogueLines = param1;
-          boolean stackIn_7_1 = (param2);
+          this.dialogueLines = dialogueLines;
+          boolean stackIn_7_1 = (fullWidthScene);
           this.fullWidthScene = stackIn_7_1;
-          this.field_z = param0;
-          this.field_u = PcmSampleStream.createAtRatePercent(QuickChatPhraseCache.field_i, 100, 0);
-          this.field_u.setLoopCount(-1);
-          ObjectSpriteSet.field_e.addSubstream(this.field_u);
-          this.field_w = new wc(1);
-          this.field_w.a(this.a(-77, GzipDecoder.field_d, UiContainer.field_y), true, 4767999);
-          this.a(43, this.dialogueLines[this.dialogueIndex]);
+          this.photos = photos;
+          this.typingSound = PcmSampleStream.createAtRatePercent(QuickChatPhraseCache.field_i, 100, 0);
+          this.typingSound.setLoopCount(-1);
+          ObjectSpriteSet.field_e.addSubstream(this.typingSound);
+          this.input = new MenuInputState(1);
+          this.input.setPointerSelection(this.hitActionButton(-77, GzipDecoder.field_d, UiContainer.field_y), true, 4767999);
+          this.wrapDialogueText(43, this.dialogueLines[this.dialogueIndex]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_11_0 = var4;
           StringBuilder stackIn_11_1 = new StringBuilder().append("tj.<init>(");
-          if (param0 == null) {
+          if (photos == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param1 == null) {
+          if (dialogueLines == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(fullWidthScene).append(')').toString());
         }
     }
 

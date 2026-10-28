@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ch {
-    static wc field_a;
+    static MenuInputState field_a;
     static boolean field_b;
     private static String field_z;
 

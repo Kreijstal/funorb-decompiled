@@ -9,7 +9,7 @@ final class mh {
     static String field_g;
     static int[] frameOffsets;
     static int field_e;
-    static int field_f;
+    static int legacyMenuHeight;
 
     public static void releaseStatics(boolean guard) {
         field_b = null;
@@ -41,7 +41,7 @@ final class mh {
     }
 
     final static void a(byte param0, boolean param1) {
-        wc.a(param1, 1983, true);
+        MenuInputState.drawAccountOverlay(param1, 1983, true);
         if (param0 >= -68) {
           mh.b((byte) 6);
         }

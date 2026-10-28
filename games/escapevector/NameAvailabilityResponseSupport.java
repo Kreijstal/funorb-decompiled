@@ -17,12 +17,12 @@ final class NameAvailabilityResponseSupport {
         try {
           dn.field_q = TriangleMesh.field_y;
           if (responseCode == 255) {
-            boolean stackIn_10_0 = !(13 <= gf.field_a);
-            SpriteState.field_y = fc.a(stackIn_10_0, (byte) -82);
+            boolean stackIn_10_0 = !(13 <= AnimatedPanelFrame.field_a);
+            SpriteState.field_y = AccountNoticeKind.createBooleanResponse(stackIn_10_0, (byte) -82);
           } else if (responseCode < 100) {
-            SpriteState.field_y = bm.a(message, responseCode, 4);
+            SpriteState.field_y = NameAvailabilityResultSupport.createTextResponse(message, responseCode, 4);
           } else if (105 < responseCode) {
-            SpriteState.field_y = bm.a(message, responseCode, 4);
+            SpriteState.field_y = NameAvailabilityResultSupport.createTextResponse(message, responseCode, 4);
           } else {
             SpriteState.field_y = BufferedRandomAccessFile.a(suggestions, (byte) -103);
           }

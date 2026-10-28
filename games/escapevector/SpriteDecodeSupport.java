@@ -88,18 +88,18 @@ final class SpriteDecodeSupport {
           if (guard != 122) {
             SpriteDecodeSupport.isAsciiLetter('o', (byte) -83);
           }
-          if (ui.field_b == EmailAvailabilityValidator.field_o) {
+          if (MeshMaterial.field_b == EmailAvailabilityValidator.field_o) {
             return null;
           }
-          if (TriangleMesh.field_y == ui.field_b &&
+          if (TriangleMesh.field_y == MeshMaterial.field_b &&
             name.equals(SpriteStrip.field_j)) {
-            ui.field_b = RasterBuffer.field_g;
+            MeshMaterial.field_b = RasterBuffer.field_g;
             NameAvailabilityResult stackIn_8_0 = InputGlyphSupport.field_a;
             return stackIn_8_0;
           }
           SpriteStrip.field_j = name;
           InputGlyphSupport.field_a = null;
-          ui.field_b = EmailAvailabilityValidator.field_o;
+          MeshMaterial.field_b = EmailAvailabilityValidator.field_o;
           Object stackIn_10_0 = null;
           return (NameAvailabilityResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -122,7 +122,7 @@ final class SpriteDecodeSupport {
         }
         ChatMessage.spriteOffsetYs = null;
         gn.spriteOffsetXs = null;
-        qe.spriteIndices = (byte[][]) null;
+        AnimatedPathMarker.spriteIndices = (byte[][]) null;
         SavedDataQuerySupport.spriteHeights = null;
         ArchiveLoadTask.spritePalette = null;
         qh.spriteWidths = null;

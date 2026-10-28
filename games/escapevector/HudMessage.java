@@ -23,7 +23,7 @@ final class HudMessage extends IntrusiveNode {
           if (TextLayout.field_c == null) {
             return false;
           }
-          if (al.field_d == ThreeSliceButtonPainter.field_t) {
+          if (AccountFormStage.field_d == ThreeSliceButtonPainter.field_t) {
             return true;
           }
           return false;
@@ -31,7 +31,7 @@ final class HudMessage extends IntrusiveNode {
         if (TextLayout.field_c == null) {
           return false;
         }
-        if (al.field_d == ThreeSliceButtonPainter.field_t) {
+        if (AccountFormStage.field_d == ThreeSliceButtonPainter.field_t) {
           return true;
         }
         return false;

@@ -4,11 +4,11 @@
 final class da {
     static tf field_c;
     static String[] field_d;
-    static ta field_b;
+    static AchievementsScreen field_b;
     static String field_a;
 
     final static void a(byte param0) {
-        if (!SpriteState.field_u) {
+        if (!SpriteState.guestSession) {
           throw new IllegalStateException();
         }
         CipherPacketBuffer.field_u = true;
@@ -33,7 +33,7 @@ final class da {
 
     final static IndexedSprite b(byte param0) {
         int var2 = 85 % ((param0 + 46) / 39);
-        IndexedSprite var1 = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], qe.spriteIndices[0], ArchiveLoadTask.spritePalette);
+        IndexedSprite var1 = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], AnimatedPathMarker.spriteIndices[0], ArchiveLoadTask.spritePalette);
         SpriteDecodeSupport.releaseSpriteSheet(false);
         return var1;
     }
@@ -52,7 +52,7 @@ final class da {
         String stackIn_9_2 = null;
         try {
           if (param1 > -96) {
-            field_b = (ta) null;
+            field_b = (AchievementsScreen) null;
           }
           boolean stackIn_5_0 = (param0.readBits(1, 8) == 1);
           return stackIn_5_0;

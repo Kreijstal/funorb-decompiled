@@ -292,9 +292,9 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     final static int k(int param0) {
         if (param0 != -99) {
           field_M = (int[]) null;
-          return gf.field_a;
+          return AnimatedPanelFrame.field_a;
         }
-        return gf.field_a;
+        return AnimatedPanelFrame.field_a;
     }
 
     public DisplayNameForm() {

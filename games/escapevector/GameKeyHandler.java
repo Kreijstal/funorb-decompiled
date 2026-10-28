@@ -68,11 +68,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null == ThreeSliceButtonPainter.field_v) {
             return;
           }
-          ui.field_e = 0;
+          MeshMaterial.keyboardIdleTicks = 0;
           int var2_int = param0.getKeyCode();
           if (0 <= var2_int &&
-            jc.field_a.length > var2_int) {
-            var2_int = jc.field_a[var2_int];
+            KeyCodeSupport.awtToGameKeyCodes.length > var2_int) {
+            var2_int = KeyCodeSupport.awtToGameKeyCodes[var2_int];
             if (0 != (128 & var2_int)) {
               var2_int = -1;
             }
@@ -121,11 +121,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_15_2 = null;
         try {
           if (ThreeSliceButtonPainter.field_v != null) {
-            ui.field_e = 0;
+            MeshMaterial.keyboardIdleTicks = 0;
             int var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
-              var2_int < jc.field_a.length) {
-              var2_int = -129 & jc.field_a[var2_int];
+              var2_int < KeyCodeSupport.awtToGameKeyCodes.length) {
+              var2_int = -129 & KeyCodeSupport.awtToGameKeyCodes[var2_int];
             } else {
               var2_int = -1;
             }

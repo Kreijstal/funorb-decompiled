@@ -32,11 +32,11 @@ final class td {
         }
         if (LegacyStyleNode.field_t <= var1) {
           LegacyStyleNode.field_t = var1;
-          return var1 + al.field_e;
+          return var1 + AccountFormStage.field_e;
         }
-        al.field_e = al.field_e + (LegacyStyleNode.field_t - var1);
+        AccountFormStage.field_e = AccountFormStage.field_e + (LegacyStyleNode.field_t - var1);
         LegacyStyleNode.field_t = var1;
-        return var1 + al.field_e;
+        return var1 + AccountFormStage.field_e;
     }
 
     static {

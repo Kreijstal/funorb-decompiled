@@ -32,7 +32,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               PcmResampler.field_d.setIdentifier(StrongCacheEntry.field_v, (byte) 106);
             }
             if (param0 == 10) {
-              ui.a(90);
+              MeshMaterial.showDisplayNameForm(90);
               var3_int = false;
             }
             if (var3_int) {

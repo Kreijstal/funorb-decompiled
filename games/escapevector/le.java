@@ -18,7 +18,7 @@ final class le {
     }
 
     final static String b(int param0) {
-        if (fc.field_a < 2) {
+        if (AccountNoticeKind.frameworkLoadingStage < 2) {
           return LoginMethod.field_a;
         }
         if (PasswordValidator.field_p != null) {

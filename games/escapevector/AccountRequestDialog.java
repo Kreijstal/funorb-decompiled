@@ -82,11 +82,11 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           if (guard >= -66) {
             field_nb = (char[]) null;
           }
-          if (ta.field_w == MarkerSliderPainter.field_l) {
+          if (AchievementsScreen.field_w == MarkerSliderPainter.field_l) {
             return false;
           }
           PasswordValidator.field_n = td.field_b[MarkerSliderPainter.field_l];
-          jc.field_c = ek.field_a[MarkerSliderPainter.field_l];
+          KeyCodeSupport.currentKeyCharacter = ek.field_a[MarkerSliderPainter.field_l];
           MarkerSliderPainter.field_l = 127 & 1 + MarkerSliderPainter.field_l;
           stackIn_7_0 = true;
         }

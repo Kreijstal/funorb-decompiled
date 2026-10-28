@@ -70,7 +70,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
 
     final static boolean e(byte param0) {
         int var1 = -82 % ((34 - param0) / 63);
-        boolean stackIn_4_0 = (!aj.b(-105)) && (0 < Js5NetworkRequest.field_x);
+        boolean stackIn_4_0 = (!AccountSessionSupport.isGuestSession(-105)) && (0 < Js5NetworkRequest.field_x);
         return stackIn_4_0;
     }
 

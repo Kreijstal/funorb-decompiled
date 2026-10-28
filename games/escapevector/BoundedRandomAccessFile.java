@@ -93,10 +93,10 @@ final class BoundedRandomAccessFile {
 
     final static LoginMethod[] a(boolean param0) {
         if (!param0) {
-          return new LoginMethod[]{NameAvailabilityValidator.field_q, oh.field_n, qj.field_g};
+          return new LoginMethod[]{NameAvailabilityValidator.field_q, oh.field_n, PathPoint.field_g};
         }
         field_b = (ReverbPcmStream) null;
-        return new LoginMethod[]{NameAvailabilityValidator.field_q, oh.field_n, qj.field_g};
+        return new LoginMethod[]{NameAvailabilityValidator.field_q, oh.field_n, PathPoint.field_g};
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {

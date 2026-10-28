@@ -42,7 +42,7 @@ final class DialWidget extends TextButton {
           }
           CheckboxPainter.spriteAlphas = new byte[ArchiveLoadTask.spriteCount][];
           ChatMessage.spriteOffsetYs = new int[ArchiveLoadTask.spriteCount];
-          qe.spriteIndices = new byte[ArchiveLoadTask.spriteCount][];
+          AnimatedPathMarker.spriteIndices = new byte[ArchiveLoadTask.spriteCount][];
           qh.spriteWidths = new int[ArchiveLoadTask.spriteCount];
           var18.position = -(ArchiveLoadTask.spriteCount * 8) + (-7 + encoded.length);
           on.spriteSheetWidth = var18.readUnsignedShort(1952);
@@ -76,7 +76,7 @@ final class DialWidget extends TextButton {
             byte[] var21 = new byte[var7];
             byte[] var19 = var21;
             byte[] var8 = var19;
-            qe.spriteIndices[var4Lifetime5] = var21;
+            AnimatedPathMarker.spriteIndices[var4Lifetime5] = var21;
             byte[] var22 = new byte[var7];
             byte[] var20 = var22;
             byte[] var9 = var20;

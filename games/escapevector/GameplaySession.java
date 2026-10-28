@@ -1941,7 +1941,7 @@ final class GameplaySession {
     private final void queueCampaignConclusion(int guard) {
         if (EmailSyntaxValidator.a(this.gameMode, -2)) {
           DialogueScreen var2 = new DialogueScreen(SpriteOffset.field_e, SpriteCheckboxPainter.field_c, AchievementThresholdRule.field_b, true);
-          var2.field_m = false;
+          var2.autoClose = false;
           GradientOutlineTextPainter.enqueueDialogue(1820, var2);
         }
         if (~this.gameMode == guard) {
@@ -2051,7 +2051,7 @@ final class GameplaySession {
           if (this.pickupAnimationTicks == 0) {
             this.applyPowerup(-123, this.tetheredObjectType);
             AlternateUsernameCredentials.field_n.playSampleWithPan(nm.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
-            int var2 = qj.a((byte) -38, this.tetheredObjectType, this.gameMode);
+            int var2 = PathPoint.powerupScore((byte) -38, this.tetheredObjectType, this.gameMode);
             this.levelScore = this.levelScore + var2;
             v.a(8, var2);
             this.tetheredObjectType = -1;
@@ -2311,7 +2311,7 @@ final class GameplaySession {
     }
 
     private final void recordLevelResult(byte guard, int outcome) {
-        if (aj.b(-100)) {
+        if (AccountSessionSupport.isGuestSession(-100)) {
           return;
         }
         if (SelfDestructEffects.field_k) {
@@ -2887,12 +2887,12 @@ final class GameplaySession {
         AlternateUsernameCredentials.field_q = new t();
         GameplaySession.resetSessionMenuState((byte) -28);
         mj.field_d = guard;
-        if (aj.b(-89) && (null != IntValueNode.field_i ||
+        if (AccountSessionSupport.isGuestSession(-89) && (null != IntValueNode.field_i ||
           TrackerMusicDefinition.field_f.hasSessionAchievements(-49) ||
           ua.field_c.d(17523))) {
           PacketBuffer.field_h = true;
-          di.field_d = new wc(2);
-          di.field_d.a(gb.a(GzipDecoder.field_d, UiContainer.field_y, 8158), true, 4767999);
+          di.field_d = new MenuInputState(2);
+          di.field_d.setPointerSelection(TransitionPoint.hitLoginOrDiscardPrompt(GzipDecoder.field_d, UiContainer.field_y, 8158), true, 4767999);
           boolean decompiledFrameRemainder0 = false;
         }
         else {
@@ -3418,7 +3418,7 @@ final class GameplaySession {
         if (!this.timeHackMode &&
           this.levelIndex >= 0) {
           this.livesRemaining = this.livesRemaining - 1;
-          jc.a(1);
+          KeyCodeSupport.a(1);
           this.recordLevelResult((byte) -106, 0);
         }
         if (guard >= -34) {
@@ -4641,7 +4641,7 @@ final class GameplaySession {
           AlternateUsernameCredentials.field_n.removeSubstream((PcmStream) (var4_ref));
           AlternateUsernameCredentials.field_n.removeSubstream(this.field_R);
           this.field_R = null;
-          AlternateUsernameCredentials.field_n.playSampleWithPan(al.field_b, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
+          AlternateUsernameCredentials.field_n.playSampleWithPan(AccountFormStage.field_b, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
         }
         if (var5_ref_hl != null &&
           null == this.field_Eb) {
@@ -4729,7 +4729,7 @@ final class GameplaySession {
                     this.tetheredVelocityXQ16 = 0;
                     this.field_W = false;
                     if (this.tetheredObjectType < 9) {
-                      int var14Lifetime1 = qj.a((byte) -38, this.tetheredObjectType, this.gameMode);
+                      int var14Lifetime1 = PathPoint.powerupScore((byte) -38, this.tetheredObjectType, this.gameMode);
                       this.levelScore = this.levelScore + var14Lifetime1;
                       v.a(8, var14Lifetime1);
                       this.showTntPickupMessage(this.tetheredObjectType, (byte) -9);
@@ -4749,7 +4749,7 @@ final class GameplaySession {
                     } else if (5 != var37_ref.objectType) {
                       var4_refLifetime1 = SecondaryNodeHashTable.field_c;
                     } else {
-                      var4_refLifetime1 = ui.field_d;
+                      var4_refLifetime1 = MeshMaterial.field_d;
                     }
                     decompiledFrameRemainder4 = false;
                   } else if (var4_refLifetime1 == null &&
@@ -5931,10 +5931,10 @@ final class GameplaySession {
             if (var4Lifetime2 < 0) {
               var4Lifetime2 = 0;
             }
-            score = DialogueScreen.a(this.gameMode, (byte) 126, score);
+            score = DialogueScreen.scoreForSubmission(this.gameMode, (byte) 126, score);
             int var5 = -var4Lifetime2 + levelIndex;
             int var6 = var5 + 50 * (levelIndex + score * 50);
-            int var7 = al.a(this.gameMode, 26504);
+            int var7 = AccountFormStage.availableGameMode(this.gameMode, 26504);
             if (var7 < 0) {
               return;
             }
@@ -5949,7 +5949,7 @@ final class GameplaySession {
               return;
             }
             IntValueNode.field_i = new ScoreSubmission(var7, var7 ^ 65535, var11[0], var11[1], var11[2], var11[3], new int[]{var6});
-            if (!aj.b(-98)) {
+            if (!AccountSessionSupport.isGuestSession(-98)) {
               ml.a(IntValueNode.field_i, 3, (byte) 101);
             }
           }

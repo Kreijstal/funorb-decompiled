@@ -15,7 +15,7 @@ final class ig {
     private LegacyButton[] field_j;
     private int field_f;
     int field_s;
-    private qe[] field_d;
+    private AnimatedPathMarker[] field_d;
     static String field_i;
     private int field_n;
     int field_p;
@@ -91,7 +91,7 @@ final class ig {
           if (param0 != -12) {
             this.b((byte) 44);
           }
-          if (aj.b(-117)) {
+          if (AccountSessionSupport.isGuestSession(-117)) {
             var9 = new String[]{IntrusiveDeque.field_e, ModalPanel.field_O};
             var10 = new int[]{1, 2};
             var5 = new int[]{this.field_n, this.field_e};
@@ -171,10 +171,10 @@ final class ig {
           this.field_b = (LegacyButton[]) null;
         }
         this.c(6620);
-        if (!di.field_d.b((byte) -18)) {
+        if (!di.field_d.isInitialActivation((byte) -18)) {
           return false;
         }
-        int var3 = di.field_d.field_h;
+        int var3 = di.field_d.selectedIndex;
         int var4 = SpriteFactorySupport.levelCount(false, this.field_a);
         if (var3 >= 0 &&
           var4 > var3) {
@@ -200,7 +200,7 @@ final class ig {
           return true;
         }
         if (var3 == this.field_n &&
-          aj.b(-107)) {
+          AccountSessionSupport.isGuestSession(-107)) {
           pa.a(true);
           mj.field_d = 0;
           ChatMessage.clearFrameOffsets((byte) -90);
@@ -229,7 +229,7 @@ final class ig {
           if (param0 == null) {
             return;
           }
-          int var4 = di.field_d.field_h;
+          int var4 = di.field_d.selectedIndex;
           LegacyButton[] var5 = param0;
           for (int var6 = 0; var5.length > var6; var6++) {
             LegacyButton var7 = var5[var6];
@@ -254,11 +254,11 @@ final class ig {
     }
 
     private final void c(byte param0) {
-        wc var2 = di.field_d;
+        MenuInputState var2 = di.field_d;
         if (var2 == null) {
           return;
         }
-        int var3 = var2.field_h;
+        int var3 = var2.selectedIndex;
         if (param0 != 86) {
           this.c((byte) 3);
         }
@@ -347,7 +347,7 @@ final class ig {
           this.field_p = this.field_p + 1;
           this.field_f = fieldTemp$1;
         }
-        if (aj.b(-118)) {
+        if (AccountSessionSupport.isGuestSession(-118)) {
           int fieldTemp$2 = this.field_p;
           this.field_p = this.field_p + 1;
           this.field_n = fieldTemp$2;
@@ -380,8 +380,8 @@ final class ig {
         int var13 = 3170352;
         int var14 = 6340704;
         int var15 = -32 / ((12 - param0) / 63);
-        fc.a(var12, var5, var6, var8, true, 29788, false, var14, var13, var9, var7, true);
-        int var16 = di.field_d.field_h;
+        AccountNoticeKind.drawAnimatedPanelFrame(var12, var5, var6, var8, true, 29788, false, var14, var13, var9, var7, true);
+        int var16 = di.field_d.selectedIndex;
         LegacyButton[] var17 = this.field_j;
         for (int var18 = 0; var17.length > var18; var18++) {
           var19 = var17[var18];
@@ -488,21 +488,21 @@ final class ig {
         if (param0 != 6620) {
           ig.releaseStatics(-11);
         }
-        if (di.field_d.field_e) {
+        if (di.field_d.selectionChanged) {
           Object var2 = ObjectSpriteSet.field_e;
           synchronized (var2) {
             int var3 = 1536 * IterableNodeHashTable.field_c / 64;
             int var4 = 100;
-            int var5 = di.field_d.field_h;
+            int var5 = di.field_d.selectedIndex;
             this.a(this.field_j, var3, var4, 3);
             this.a(this.field_q, var3, var4, 3);
             int var4Lifetime1 = 102;
             if (this.field_d != null) {
-              qe[] var6 = this.field_d;
+              AnimatedPathMarker[] var6 = this.field_d;
               for (int var7 = 0; var6.length > var7; var7++) {
-                qe var8 = var6[var7];
-                if (var8.field_d == var5) {
-                  int var9 = var8.field_f.field_h * 16384 / 640;
+                AnimatedPathMarker var8 = var6[var7];
+                if (var8.markerIndex == var5) {
+                  int var9 = var8.markerPosition.x * 16384 / 640;
                   ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, var4Lifetime1, var3, var9);
                 }
               }
@@ -527,12 +527,12 @@ final class ig {
     final int a(int param0, int param1, int param2) {
         int var7 = EscapeVector.obfuscationControl;
         if (this.field_d != null) {
-          qe[] var8 = this.field_d;
-          qe[] var4_ref_qe__ = var8;
+          AnimatedPathMarker[] var8 = this.field_d;
+          AnimatedPathMarker[] var4_ref_qe__ = var8;
           for (int var5 = 0; var8.length > var5; var5++) {
-            qe var6 = var8[var5];
-            if (var6.a(param0, param2, param1 ^ 12088)) {
-              return var6.field_d;
+            AnimatedPathMarker var6 = var8[var5];
+            if (var6.hitMarker(param0, param2, param1 ^ 12088)) {
+              return var6.markerIndex;
             }
           }
         }
@@ -564,12 +564,12 @@ final class ig {
         if (null == this.field_d) {
           return;
         }
-        qe[] var8 = this.field_d;
-        qe[] var3 = var8;
+        AnimatedPathMarker[] var8 = this.field_d;
+        AnimatedPathMarker[] var3 = var8;
         for (int var4 = 0; var8.length > var4; var4++) {
-          qe var5 = var8[var4];
-          boolean var6 = (var5.field_d == param1);
-          var5.a((var6), -1);
+          AnimatedPathMarker var5 = var8[var4];
+          boolean var6 = (var5.markerIndex == param1);
+          var5.draw((var6), -1);
         }
     }
 
@@ -610,7 +610,7 @@ final class ig {
         this.d(0);
         LoginCredentialType.drawInsetUnevenFrame(404, 3162160, param0 ^ 115, 0, 6324320, 76, param0, var2, 430);
         int var3 = SpriteFactorySupport.levelCount(false, this.field_a);
-        int var4 = di.field_d.field_h;
+        int var4 = di.field_d.selectedIndex;
         boolean var5 = true;
         if (var4 >= 0 &&
           var3 > var4) {
@@ -637,7 +637,7 @@ final class ig {
           this.field_k = DirectByteStorage.field_k;
         }
         if (this.field_a == 2) {
-          this.field_k = aj.field_c;
+          this.field_k = AccountSessionSupport.field_c;
         }
     }
 
@@ -647,71 +647,71 @@ final class ig {
           this.k(-66);
         }
         this.f(0);
-        wc var6 = di.field_d;
-        int var3 = var6.field_h;
+        MenuInputState var6 = di.field_d;
+        int var3 = var6.selectedIndex;
         int var4 = SpriteFactorySupport.levelCount(false, this.field_a);
         while (AccountRequestDialog.pollKeyEvent(-113)) {
-          var6.a(100);
+          var6.handleKeyWithoutNavigation(100);
           if (PasswordValidator.field_n == 96 ||
             PasswordValidator.field_n == 98) {
             if (this.field_e == var3 &&
               this.field_n >= 0) {
-              var6.a(false, this.field_n);
+              var6.selectFromKeyboard(false, this.field_n);
             } else if (var3 == this.field_e) {
-              var6.a(false, var4 - 1);
+              var6.selectFromKeyboard(false, var4 - 1);
             } else if (this.field_n == var3) {
-              var6.a(false, -1 + var4);
+              var6.selectFromKeyboard(false, -1 + var4);
             } else if (var3 > 0 &&
               var3 < var4) {
-              var6.a(false, -1 + var3);
+              var6.selectFromKeyboard(false, -1 + var3);
             } else if (0 == var3 &&
               this.field_s >= 0) {
-              var6.a(false, this.field_s);
+              var6.selectFromKeyboard(false, this.field_s);
             } else if (0 == var3 &&
               this.field_f >= 0) {
-              var6.a(false, this.field_f);
+              var6.selectFromKeyboard(false, this.field_f);
             } else if (var3 == 0) {
-              var6.a(false, this.field_e);
+              var6.selectFromKeyboard(false, this.field_e);
             } else if (var3 == this.field_s &&
               this.field_f >= 0) {
-              var6.a(false, this.field_f);
+              var6.selectFromKeyboard(false, this.field_f);
             } else if (this.field_s == var3) {
-              var6.a(false, this.field_e);
+              var6.selectFromKeyboard(false, this.field_e);
             } else if (var3 != this.field_f) {
-              var6.a(false, LoginForm.a(this.field_a, (byte) 121));
+              var6.selectFromKeyboard(false, LoginForm.a(this.field_a, (byte) 121));
             } else {
-              var6.a(false, this.field_e);
+              var6.selectFromKeyboard(false, this.field_e);
             }
           }
           if (PasswordValidator.field_n == 97 ||
             PasswordValidator.field_n == 99) {
             if (this.field_s == var3) {
-              var6.a(false, 0);
+              var6.selectFromKeyboard(false, 0);
             } else if (var3 >= 0 &&
               var3 < var4 - 1) {
-              var6.a(false, var3 + 1);
+              var6.selectFromKeyboard(false, var3 + 1);
             } else if (var4 - 1 == var3 &&
               this.field_n >= 0) {
-              var6.a(false, this.field_n);
+              var6.selectFromKeyboard(false, this.field_n);
             } else if (var3 == var4 - 1) {
-              var6.a(false, this.field_e);
+              var6.selectFromKeyboard(false, this.field_e);
             } else if (this.field_n == var3) {
-              var6.a(false, this.field_e);
+              var6.selectFromKeyboard(false, this.field_e);
             } else if (var3 == this.field_e &&
               this.field_f >= 0) {
-              var6.a(false, this.field_f);
+              var6.selectFromKeyboard(false, this.field_f);
             } else if (var3 == this.field_e &&
               this.field_s >= 0) {
-              var6.a(false, this.field_s);
+              var6.selectFromKeyboard(false, this.field_s);
             } else if (this.field_e == var3) {
-              var6.a(false, 0);
+              var6.selectFromKeyboard(false, 0);
             } else if (var3 == this.field_f &&
               this.field_s >= 0) {
-              var6.a(false, this.field_s);
+              var6.selectFromKeyboard(false, this.field_s);
             } else if (this.field_f != var3) {
-              var6.a(false, LoginForm.a(this.field_a, (byte) 121));
+              var6.selectFromKeyboard(false, LoginForm.a(this.field_a, (byte) 121));
             } else {
-              var6.a(false, 0);
+              var6.selectFromKeyboard(false, 0);
             }
           }
           if (PasswordValidator.field_n == 13) {
@@ -723,7 +723,7 @@ final class ig {
             return;
           }
         }
-        var6.a(this.a(LoginDialog.field_ob, 12089, sf.field_c), (byte) 126, this.a(UiContainer.field_y, 12089, GzipDecoder.field_d));
+        var6.updatePointer(this.a(LoginDialog.field_ob, 12089, sf.field_c), (byte) 126, this.a(UiContainer.field_y, 12089, GzipDecoder.field_d));
         boolean discarded$0 = this.a(true, -89);
         this.c((byte) 86);
         this.g(param0 ^ -2493);
@@ -737,7 +737,7 @@ final class ig {
         if (!param2) {
           String var6 = GameAppletShell.field_f;
           var4 = var6;
-          if (aj.b(-97)) {
+          if (AccountSessionSupport.isGuestSession(-97)) {
             var4 = var6 + "<br>" + AccountTermsPanel.field_O + " " + LoginCredentialType.field_c;
           }
         }
@@ -850,14 +850,14 @@ final class ig {
         this.a(var4, param0 + 9355, var3, this.field_b);
         this.a(var4, param0 ^ 9355, var3, this.field_q);
         if (this.field_d != null) {
-          qe[] var5 = this.field_d;
+          AnimatedPathMarker[] var5 = this.field_d;
           for (int var6 = 0; var5.length > var6; var6++) {
-            qe var7 = var5[var6];
-            if (var7.field_h == var2) {
+            AnimatedPathMarker var7 = var5[var6];
+            if (var7.startTick == var2) {
               PcmSample var8 = AccountOverlayController.field_b;
-              int var9 = 16384 * var7.field_f.field_h / 640;
+              int var9 = 16384 * var7.markerPosition.x / 640;
               PcmSampleStream var10 = PcmSampleStream.createAtRatePercentQ6(var8, var4, var3, var9);
-              ValidatedTextWidget.field_K[var7.field_d] = var10;
+              ValidatedTextWidget.field_K[var7.markerIndex] = var10;
             }
           }
         }
@@ -874,7 +874,7 @@ final class ig {
           if (param0 == null) {
             return;
           }
-          int var5_int = di.field_d.field_h;
+          int var5_int = di.field_d.selectedIndex;
           Object var6 = null;
           if (param3 != 3) {
             this.a(true);
