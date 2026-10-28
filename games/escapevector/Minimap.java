@@ -508,7 +508,7 @@ final class Minimap {
 
     private final void b(int param0, int param1, int param2) {
         int var8 = EscapeVector.obfuscationControl;
-        IntrusiveDeque var4 = this.session.field_k;
+        IntrusiveDeque var4 = this.session.missionTargets;
         if (var4 == null) {
           return;
         }
@@ -519,7 +519,7 @@ final class Minimap {
         IntrusiveNode var6 = var4.first(false);
         while (var6 != null) {
           LevelObject var7 = (LevelObject) (var6);
-          if (var7.field_r) {
+          if (var7.missionTarget) {
             this.a(param2, var7.x, this.field_l, var5, param1, var7.y, 4);
           }
           var6 = var4.next((byte) 70);
@@ -780,7 +780,7 @@ final class Minimap {
           var3.addLast(-12328, new sj(gk.field_b));
           var4.addLast(-12328, new tc(new Sprite[]{this.a(this.field_q, -5425)}, 0));
         }
-        IntrusiveDeque var5 = this.session.field_k;
+        IntrusiveDeque var5 = this.session.missionTargets;
         if (var5 != null &&
           !var5.isEmpty(-103)) {
           var3.addLast(-12328, new sj(wd.field_q));

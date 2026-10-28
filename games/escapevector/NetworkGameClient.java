@@ -267,7 +267,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (jn.field_b != -1 &&
               0 != jn.field_b) {
               jn.field_b = -1;
-              va.d(0);
+              SecondaryIntrusiveDeque.d(0);
             }
             if (param1) {
               q.field_P = false;
@@ -512,7 +512,7 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     private final void h(byte param0) {
         String var2 = tf.b((byte) 0);
-        va.a(var2, -112, PointCloudEffect.d((byte) -59));
+        SecondaryIntrusiveDeque.a(var2, -112, PointCloudEffect.d((byte) -59));
         int var3 = 59 % ((param0 - 41) / 61);
     }
 
@@ -592,7 +592,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (null != ji.field_b) {
           mg.field_f = ji.field_b.a(-126);
         }
-        if (rb.a(true)) {
+        if (HudMessage.a(true)) {
           int var3 = 1200 * se.a(0);
           if (this.field_v ||
             !(mg.a((byte) -12) <= var3) &&
@@ -660,7 +660,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (jn.field_b != -1 &&
             jn.field_b != 0) {
             jn.field_b = -1;
-            va.d(~param0);
+            SecondaryIntrusiveDeque.d(~param0);
           }
         }
         if (0 == jn.field_b &&

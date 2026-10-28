@@ -35,12 +35,12 @@ final class bk extends sb {
             this.field_o.position = 0;
             scanLoop1: while (true) {
               boolean decompiledFrameRemainder0 = true;
-              s var4_ref = (s) (this.field_l.b((byte) -75));
+              s var4_ref = (s) (this.field_l.removeFirst((byte) -75));
               if (var4_ref != null) {
-                this.field_p.a(-1, var4_ref);
+                this.field_p.addLast(-1, var4_ref);
                 if (var6 != 0) {
                   if (var4_ref != null) {
-                    this.field_j.a(-1, var4_ref);
+                    this.field_j.addLast(-1, var4_ref);
                     break scanLoop1;
                   }
                   decompiledFrameRemainder0 = false;
@@ -51,11 +51,11 @@ final class bk extends sb {
               }
               if (decompiledFrameRemainder0) {
                 while (true) {
-                  s var4_refLifetime1 = (s) (this.field_n.b((byte) -75));
+                  s var4_refLifetime1 = (s) (this.field_n.removeFirst((byte) -75));
                   if (var4_refLifetime1 == null) {
                     break;
                   }
-                  this.field_j.a(-1, var4_refLifetime1);
+                  this.field_j.addLast(-1, var4_refLifetime1);
                   if (var6 != 0) {
                     break scanLoop1;
                   }
@@ -478,15 +478,15 @@ final class bk extends sb {
             }
             try {
               this.field_t.a((byte) 123);
-              s var2 = (s) (this.field_p.a(0));
+              s var2 = (s) (this.field_p.first(0));
               scanLoop1: while (true) {
                 if (var2 != null) {
                   this.field_e.position = 0;
                   this.field_e.f(1, -123);
                   this.field_e.a(var2.secondaryKey, -118);
                   this.field_t.a(this.field_e.payload.length, 0, this.field_e.payload, 5000);
-                  this.field_l.a(param0 + 3993, var2);
-                  var2 = (s) (this.field_p.a((byte) -101));
+                  this.field_l.addLast(param0 + 3993, var2);
+                  var2 = (s) (this.field_p.next((byte) -101));
                   if (var16 != 0) {
                     break scanLoop1;
                   }
@@ -494,7 +494,7 @@ final class bk extends sb {
                     continue;
                   }
                 }
-                var2 = (s) (this.field_j.a(param0 ^ param0));
+                var2 = (s) (this.field_j.first(param0 ^ param0));
                 break;
               }
               while (var2 != null) {
@@ -502,8 +502,8 @@ final class bk extends sb {
                 this.field_e.f(0, -123);
                 this.field_e.a(var2.secondaryKey, -3);
                 this.field_t.a(this.field_e.payload.length, 0, this.field_e.payload, 5000);
-                this.field_n.a(-1, var2);
-                var2 = (s) (this.field_j.a((byte) -43));
+                this.field_n.addLast(-1, var2);
+                var2 = (s) (this.field_j.next((byte) -43));
                 if (var16 == 0) {
                   continue;
                 }
@@ -618,7 +618,7 @@ final class bk extends sb {
                           long var12 = (long)var7Lifetime1 + ((long)var6Lifetime1Lifetime1 << 32);
                           Object var14 = null;
                           if (var11) {
-                            var14_ref = (s) (this.field_n.a(0));
+                            var14_ref = (s) (this.field_n.first(0));
                             while (var14_ref != null) {
                               stackIn_122_0 = $cfr$lcmp(var12, var14_ref.secondaryKey);
                               if (var16 != 0) {
@@ -630,7 +630,7 @@ final class bk extends sb {
                                 decompiledFrameCompleted1 = false;
                                 break;
                               }
-                              var14_ref = (s) (this.field_n.a((byte) 106));
+                              var14_ref = (s) (this.field_n.next((byte) 106));
                             }
                             if (decompiledFrameCompleted2) {
                               decompiledFrameRemainder0 = !(decompiledFrameCompleted1);
@@ -639,7 +639,7 @@ final class bk extends sb {
                           if (decompiledFrameRemainder0 &&
                             decompiledFrameCompleted2 &&
                             decompiledFrameCompleted1) {
-                            var14_ref = (s) (this.field_l.a(0));
+                            var14_ref = (s) (this.field_l.first(0));
                             while (null != var14_ref) {
                               stackIn_122_0 = $cfr$lcmp(~var12, ~var14_ref.secondaryKey);
                               if (var16 != 0) {
@@ -650,7 +650,7 @@ final class bk extends sb {
                                 var16 == 0) {
                                 break;
                               }
-                              var14_ref = (s) (this.field_l.a((byte) -52));
+                              var14_ref = (s) (this.field_l.next((byte) -52));
                               if (var16 == 0) {
                                 continue;
                               }

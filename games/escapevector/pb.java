@@ -55,10 +55,10 @@ final class pb {
     }
 
     final static void a(int param0) {
-        ll.a(70, 8, param0 ^ 12, am.field_k);
-        if (am.field_k >= 95) {
-          if (am.field_k < 110) {
-            mf.a(fg.field_b, (-dg.field_t.fullWidth + 640) / 2, -(am.field_k * 4) + 440, dg.field_t, -122);
+        ll.a(70, 8, param0 ^ 12, LaserGateSpan.field_k);
+        if (LaserGateSpan.field_k >= 95) {
+          if (LaserGateSpan.field_k < 110) {
+            mf.a(fg.field_b, (-dg.field_t.fullWidth + 640) / 2, -(LaserGateSpan.field_k * 4) + 440, dg.field_t, -122);
             if (param0 != 4) {
               field_b = -65;
               return;

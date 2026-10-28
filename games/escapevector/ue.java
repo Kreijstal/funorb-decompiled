@@ -32,7 +32,7 @@ class ue extends hc {
           int var7 = var9.a((byte) -113, (hm) (this), param3);
           int var8 = var9.a((hm) (this), param0, -16956);
           do {
-            ic.a(false, 2 + var6.field_j, var6.field_i + var7 - 2, var6.field_n + 2, -2 + var8 + var6.field_g);
+            SeekerMine.a(false, 2 + var6.field_j, var6.field_i + var7 - 2, var6.field_n + 2, -2 + var8 + var6.field_g);
             var6 = var6.field_k;
           } while (var6 != null);
         }

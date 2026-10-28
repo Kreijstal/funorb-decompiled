@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class va {
-    private DualLinkNode field_c;
+final class SecondaryIntrusiveDeque {
+    private DualLinkNode sentinel;
     static long field_b;
-    private DualLinkNode field_a;
+    private DualLinkNode cursor;
 
-    final boolean b(int param0) {
-        if (param0 != -182442704) {
-          this.field_a = (DualLinkNode) null;
+    final boolean isEmpty(int guard) {
+        if (guard != -182442704) {
+          this.cursor = (DualLinkNode) null;
         }
-        return this.field_c.secondaryNext == this.field_c ? true : false;
+        return this.sentinel.secondaryNext == this.sentinel ? true : false;
     }
 
     final static void d(int param0) {
@@ -21,19 +21,19 @@ final class va {
     final int c(int param0) {
         int var4 = EscapeVector.obfuscationControl;
         int var2 = param0;
-        DualLinkNode var3 = this.field_c.secondaryNext;
-        while (this.field_c != var3) {
+        DualLinkNode var3 = this.sentinel.secondaryNext;
+        while (this.sentinel != var3) {
           var3 = var3.secondaryNext;
           var2++;
         }
         return var2;
     }
 
-    final DualLinkNode b(byte param0) {
-        DualLinkNode var2 = this.field_c.secondaryNext;
-        if (this.field_c != var2) {
-          if (param0 != -75) {
-            this.field_a = (DualLinkNode) null;
+    final DualLinkNode removeFirst(byte guard) {
+        DualLinkNode var2 = this.sentinel.secondaryNext;
+        if (this.sentinel != var2) {
+          if (guard != -75) {
+            this.cursor = (DualLinkNode) null;
           }
           var2.unlinkSecondary(110);
           return var2;
@@ -41,20 +41,20 @@ final class va {
         return null;
     }
 
-    final void a(int param0, DualLinkNode param1) {
+    final void addLast(int guard, DualLinkNode node) {
         try {
-          if (null != param1.secondaryPrevious) {
-            param1.unlinkSecondary(109);
+          if (null != node.secondaryPrevious) {
+            node.unlinkSecondary(109);
           }
-          if (param0 != -1) {
+          if (guard != -1) {
             field_b = 29L;
           }
-          param1.secondaryNext = this.field_c;
-          param1.secondaryPrevious = this.field_c.secondaryPrevious;
-          param1.secondaryPrevious.secondaryNext = param1;
-          param1.secondaryNext.secondaryPrevious = param1;
+          node.secondaryNext = this.sentinel;
+          node.secondaryPrevious = this.sentinel.secondaryPrevious;
+          node.secondaryPrevious.secondaryNext = node;
+          node.secondaryNext.secondaryPrevious = node;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "va.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "va.J(" + guard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class va {
               return;
             }
             if (!param11) {
-              va.d(-74);
+              SecondaryIntrusiveDeque.d(-74);
             }
             int var34 = param10 - param8;
             if (param9 == param8) {
@@ -417,31 +417,31 @@ final class va {
         }
     }
 
-    final DualLinkNode a(byte param0) {
-        int var2 = -2 / ((param0 - 48) / 32);
-        DualLinkNode var3 = this.field_a;
-        if (var3 != this.field_c) {
-          this.field_a = var3.secondaryNext;
+    final DualLinkNode next(byte guard) {
+        int var2 = -2 / ((guard - 48) / 32);
+        DualLinkNode var3 = this.cursor;
+        if (var3 != this.sentinel) {
+          this.cursor = var3.secondaryNext;
           return var3;
         }
-        this.field_a = null;
+        this.cursor = null;
         return null;
     }
 
-    public va() {
-        this.field_c = new DualLinkNode();
-        this.field_c.secondaryPrevious = this.field_c;
-        this.field_c.secondaryNext = this.field_c;
+    public SecondaryIntrusiveDeque() {
+        this.sentinel = new DualLinkNode();
+        this.sentinel.secondaryPrevious = this.sentinel;
+        this.sentinel.secondaryNext = this.sentinel;
     }
 
-    final DualLinkNode a(int param0) {
-        DualLinkNode var2 = this.field_c.secondaryNext;
-        if (var2 == this.field_c) {
-          this.field_a = null;
+    final DualLinkNode first(int guard) {
+        DualLinkNode var2 = this.sentinel.secondaryNext;
+        if (var2 == this.sentinel) {
+          this.cursor = null;
           return null;
         }
-        this.field_a = var2.secondaryNext;
-        if (param0 != 0) {
+        this.cursor = var2.secondaryNext;
+        if (guard != 0) {
           field_b = 88L;
         }
         return var2;

@@ -13,7 +13,7 @@ final class gb {
         String stackIn_33_2 = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
-          int var7_int = am.a((byte) 57, param5);
+          int var7_int = LaserGateSpan.a((byte) 57, param5);
           if (null == ae.field_d) {
             ae.field_d = new java.security.SecureRandom();
           }

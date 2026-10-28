@@ -209,7 +209,7 @@ class ld extends vj {
             for (int var6 = param2; var6 < var5; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (~param3.field_k[param1][var6] == ~param0.field_l &&
-                ic.a(param3.field_m[param1][var6], (byte) 120)) {
+                SeekerMine.a(param3.field_m[param1][var6], (byte) 120)) {
                 for (int var7 = 0; var7 < var4_int; var7++) {
                   if (param0.field_q[var7] != param3.field_o[param1][var7 + var4_int * var6]) {
                     decompiledFrameCompleted0 = false;

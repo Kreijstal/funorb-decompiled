@@ -19,7 +19,7 @@ final class cm extends oa {
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
-          va.a("", -121, param0);
+          SecondaryIntrusiveDeque.a("", -121, param0);
           IntValueNode.a(false, param0);
           if (param1 != 21027) {
             java.applet.Applet var3 = (java.applet.Applet) null;

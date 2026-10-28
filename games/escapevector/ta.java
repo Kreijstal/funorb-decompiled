@@ -766,7 +766,7 @@ final class ta {
           }
           int var7_int = 3;
           String var8 = DynamicTerrainRenderer.field_m;
-          int var9 = ic.a(var8, 16777215, param1);
+          int var9 = SeekerMine.a(var8, 16777215, param1);
           int var10 = (-var9 + 640) / 2;
           this.field_r = new dk(var7_int, param2, var8, param3, param5, param1);
           this.field_r.b((byte) 124, var10, param4);
@@ -840,7 +840,7 @@ final class ta {
             int stackIn_2_0 = 94;
             return stackIn_2_0;
           }
-          int var9 = ic.a(var8, 16777215, param1);
+          int var9 = SeekerMine.a(var8, 16777215, param1);
           int var10 = (640 - var9) / 2;
           this.field_a = new dk(var7_int, param3, var8, param5, param4, param1);
           this.field_a.b((byte) 121, var10, param0);
@@ -1164,7 +1164,7 @@ final class ta {
           }
           int var7_int = 3;
           String var8 = IntrusiveDeque.field_e;
-          int var9 = ic.a(var8, 16777215, param0);
+          int var9 = SeekerMine.a(var8, 16777215, param0);
           this.field_f = new dk(var7_int, param5, var8, param2, param3, param0);
           int var10 = (640 - var9) / 2;
           int var11 = -57 / ((param1 - 65) / 52);

@@ -10,7 +10,7 @@ final class pa {
           throw new IllegalStateException();
         }
         c.field_u = true;
-        ic.a((byte) -126, param0);
+        SeekerMine.a((byte) -126, param0);
         ff.field_e = 0;
     }
 

@@ -218,7 +218,7 @@ final class od {
               }
               if (var9Lifetime1 == 99) {
                 bo.a(30000, uc.b(92));
-                sc.field_g = new Boolean(va.a(om.field_g, true));
+                sc.field_g = new Boolean(SecondaryIntrusiveDeque.a(om.field_g, true));
                 om.field_g.position = 0;
               } else {
                 hi.field_r = -1;
@@ -305,10 +305,10 @@ final class od {
 
     final void c(int param0) {
         this.a(true);
-        if (!this.field_f.field_a) {
+        if (!this.field_f.countdownActive) {
           return;
         }
-        int var2 = this.field_f.field_X;
+        int var2 = this.field_f.countdownTicks;
         if (this.field_g >= var2) {
           this.field_e = wc.field_d;
           this.field_r = 64;
@@ -321,7 +321,7 @@ final class od {
           this.a(-110);
         }
         this.e(50);
-        var2 = this.field_f.field_X;
+        var2 = this.field_f.countdownTicks;
         if (this.field_c >= var2) {
           this.field_a = this.field_a + 1;
         }
@@ -397,8 +397,8 @@ final class od {
     }
 
     private final void a(boolean param0) {
-        boolean var2 = (this.field_f.field_a);
-        int var3 = this.field_f.field_X;
+        boolean var2 = (this.field_f.countdownActive);
+        int var3 = this.field_f.countdownTicks;
         var2 = ((var3 > this.field_g)) & var2;
         if (!param0) {
           int discarded$0 = this.a(false, 28);

@@ -300,10 +300,10 @@ public final class EscapeVector extends NetworkGameClient {
           PointCloudEffect.h(109);
           Minimap.a(68);
           m.e(-1600199832);
-          am.a((byte) -107);
-          rb.a((byte) -85);
-          pi.a((byte) 102);
-          ic.a(false);
+          LaserGateSpan.a((byte) -107);
+          HudMessage.a((byte) -85);
+          RockBuster.a((byte) 102);
+          SeekerMine.a(false);
           co.a((byte) 63);
           cd.f(-1);
           fd.a((byte) 86);

@@ -13,12 +13,12 @@ final class lh {
         DialogueScreen var1 = qa.f((byte) -49);
         if (param0 >= 60) {
           if (null != BoundedRandomAccessFile.activeSession) {
-            am.field_k = 0;
+            LaserGateSpan.field_k = 0;
             return;
           }
           if (var1 == null &&
-            am.field_k < 80) {
-            am.field_k = 95;
+            LaserGateSpan.field_k < 80) {
+            LaserGateSpan.field_k = 95;
             rk.field_e.a(qh.field_i, 100, 3072 * qm.field_c / 64, 8192);
           }
           Object var2 = null;
@@ -34,20 +34,20 @@ final class lh {
                 var2 = var17;
                 var3 = (77 - var17.fullHeight) / 2;
                 if (var2 == null) {
-                  if (am.field_k == 110) {
+                  if (LaserGateSpan.field_k == 110) {
                     rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
-                  if (am.field_k > 80) {
-                    am.field_k = am.field_k - 1;
+                  if (LaserGateSpan.field_k > 80) {
+                    LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                   }
                 } else {
                   fg.field_b = var3;
                   dg.field_t = (Sprite) (var2);
-                  if (!(am.field_k >= 95)) {
-                    am.field_k = 95;
+                  if (!(LaserGateSpan.field_k >= 95)) {
+                    LaserGateSpan.field_k = 95;
                     rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
-                  } else if (am.field_k < 110) {
-                    am.field_k = am.field_k + 1;
+                  } else if (LaserGateSpan.field_k < 110) {
+                    LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                   }
                 }
                 return;
@@ -73,20 +73,20 @@ final class lh {
                   }
                   var3 = (-((Sprite) (var2)).fullHeight + 90) / 2;
                   if (var2 == null) {
-                    if (am.field_k == 110) {
+                    if (LaserGateSpan.field_k == 110) {
                       rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                     }
-                    if (am.field_k > 80) {
-                      am.field_k = am.field_k - 1;
+                    if (LaserGateSpan.field_k > 80) {
+                      LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                     }
                   } else {
                     fg.field_b = var3;
                     dg.field_t = (Sprite) (var2);
-                    if (!(am.field_k >= 95)) {
-                      am.field_k = 95;
+                    if (!(LaserGateSpan.field_k >= 95)) {
+                      LaserGateSpan.field_k = 95;
                       rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
-                    } else if (am.field_k < 110) {
-                      am.field_k = am.field_k + 1;
+                    } else if (LaserGateSpan.field_k < 110) {
+                      LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                     }
                   }
                   return;
@@ -104,23 +104,23 @@ final class lh {
             }
           }
           if (var2 == null) {
-            if (am.field_k == 110) {
+            if (LaserGateSpan.field_k == 110) {
               rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
             }
-            if (am.field_k <= 80) {
+            if (LaserGateSpan.field_k <= 80) {
               return;
             }
-            am.field_k = am.field_k - 1;
+            LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
           } else {
             fg.field_b = var3;
             dg.field_t = (Sprite) (var2);
-            if (am.field_k < 95) {
-              am.field_k = 95;
+            if (LaserGateSpan.field_k < 95) {
+              LaserGateSpan.field_k = 95;
               rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
               return;
             }
-            if (am.field_k < 110) {
-              am.field_k = am.field_k + 1;
+            if (LaserGateSpan.field_k < 110) {
+              LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
               return;
             }
           }
@@ -128,7 +128,7 @@ final class lh {
         }
         lh.a((byte) -88);
         if (null != BoundedRandomAccessFile.activeSession) {
-          am.field_k = 0;
+          LaserGateSpan.field_k = 0;
           return;
         }
         if (var1 != null) {
@@ -145,20 +145,20 @@ final class lh {
                 var2Lifetime1 = var24;
                 var3Lifetime1 = (77 - var24.fullHeight) / 2;
                 if (var2Lifetime1 == null) {
-                  if (am.field_k == 110) {
+                  if (LaserGateSpan.field_k == 110) {
                     rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
-                  if (am.field_k > 80) {
-                    am.field_k = am.field_k - 1;
+                  if (LaserGateSpan.field_k > 80) {
+                    LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                   }
                 } else {
                   fg.field_b = var3Lifetime1;
                   dg.field_t = (Sprite) (var2Lifetime1);
-                  if (!(am.field_k >= 95)) {
-                    am.field_k = 95;
+                  if (!(LaserGateSpan.field_k >= 95)) {
+                    LaserGateSpan.field_k = 95;
                     rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
-                  } else if (am.field_k < 110) {
-                    am.field_k = am.field_k + 1;
+                  } else if (LaserGateSpan.field_k < 110) {
+                    LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                   }
                 }
                 return;
@@ -184,20 +184,20 @@ final class lh {
                   }
                   var3Lifetime1 = (-((Sprite) (var2Lifetime1)).fullHeight + 90) / 2;
                   if (var2Lifetime1 == null) {
-                    if (am.field_k == 110) {
+                    if (LaserGateSpan.field_k == 110) {
                       rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                     }
-                    if (am.field_k > 80) {
-                      am.field_k = am.field_k - 1;
+                    if (LaserGateSpan.field_k > 80) {
+                      LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                     }
                   } else {
                     fg.field_b = var3Lifetime1;
                     dg.field_t = (Sprite) (var2Lifetime1);
-                    if (!(am.field_k >= 95)) {
-                      am.field_k = 95;
+                    if (!(LaserGateSpan.field_k >= 95)) {
+                      LaserGateSpan.field_k = 95;
                       rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
-                    } else if (am.field_k < 110) {
-                      am.field_k = am.field_k + 1;
+                    } else if (LaserGateSpan.field_k < 110) {
+                      LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                     }
                   }
                   return;
@@ -215,56 +215,56 @@ final class lh {
             }
           }
           if (var2Lifetime1 == null) {
-            if (am.field_k == 110) {
+            if (LaserGateSpan.field_k == 110) {
               rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
             }
-            if (am.field_k <= 80) {
+            if (LaserGateSpan.field_k <= 80) {
               return;
             }
-            am.field_k = am.field_k - 1;
+            LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
             return;
           }
           fg.field_b = var3Lifetime1;
           dg.field_t = (Sprite) (var2Lifetime1);
-          if (am.field_k < 95) {
-            am.field_k = 95;
+          if (LaserGateSpan.field_k < 95) {
+            LaserGateSpan.field_k = 95;
             rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
             return;
           }
-          if (am.field_k >= 110) {
+          if (LaserGateSpan.field_k >= 110) {
             return;
           }
-          am.field_k = am.field_k + 1;
+          LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
           return;
         }
-        if (am.field_k < 80) {
-          am.field_k = 95;
+        if (LaserGateSpan.field_k < 80) {
+          LaserGateSpan.field_k = 95;
           rk.field_e.a(qh.field_i, 100, 3072 * qm.field_c / 64, 8192);
         }
         Object var2Lifetime2 = null;
         int var3Lifetime2 = 0;
         if (wk.field_c) {
           if (var2Lifetime2 == null) {
-            if (am.field_k == 110) {
+            if (LaserGateSpan.field_k == 110) {
               rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
             }
-            if (am.field_k <= 80) {
+            if (LaserGateSpan.field_k <= 80) {
               return;
             }
-            am.field_k = am.field_k - 1;
+            LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
             return;
           }
           fg.field_b = var3Lifetime2;
           dg.field_t = (Sprite) (var2Lifetime2);
-          if (am.field_k < 95) {
-            am.field_k = 95;
+          if (LaserGateSpan.field_k < 95) {
+            LaserGateSpan.field_k = 95;
             rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
             return;
           }
-          if (am.field_k >= 110) {
+          if (LaserGateSpan.field_k >= 110) {
             return;
           }
-          am.field_k = am.field_k + 1;
+          LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
           return;
         }
         if (pg.field_b) {
@@ -277,23 +277,23 @@ final class lh {
             var2Lifetime2 = var31;
             var3Lifetime2 = (77 - var31.fullHeight) / 2;
             if (var2Lifetime2 == null) {
-              if (am.field_k == 110) {
+              if (LaserGateSpan.field_k == 110) {
                 rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
               }
-              if (am.field_k <= 80) {
+              if (LaserGateSpan.field_k <= 80) {
                 return;
               }
-              am.field_k = am.field_k - 1;
+              LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
             } else {
               fg.field_b = var3Lifetime2;
               dg.field_t = (Sprite) (var2Lifetime2);
-              if (am.field_k < 95) {
-                am.field_k = 95;
+              if (LaserGateSpan.field_k < 95) {
+                LaserGateSpan.field_k = 95;
                 rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                 return;
               }
-              if (am.field_k < 110) {
-                am.field_k = am.field_k + 1;
+              if (LaserGateSpan.field_k < 110) {
+                LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                 return;
               }
             }
@@ -307,26 +307,26 @@ final class lh {
             if (od.field_q != 3) {
               if (PacketBuffer.field_h) {
                 if (var2Lifetime2 == null) {
-                  if (am.field_k == 110) {
+                  if (LaserGateSpan.field_k == 110) {
                     rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
-                  if (am.field_k <= 80) {
+                  if (LaserGateSpan.field_k <= 80) {
                     return;
                   }
-                  am.field_k = am.field_k - 1;
+                  LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                   return;
                 }
                 fg.field_b = var3Lifetime2;
                 dg.field_t = (Sprite) (var2Lifetime2);
-                if (am.field_k < 95) {
-                  am.field_k = 95;
+                if (LaserGateSpan.field_k < 95) {
+                  LaserGateSpan.field_k = 95;
                   rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                   return;
                 }
-                if (am.field_k >= 110) {
+                if (LaserGateSpan.field_k >= 110) {
                   return;
                 }
-                am.field_k = am.field_k + 1;
+                LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                 return;
               }
               if (e.field_a) {
@@ -337,23 +337,23 @@ final class lh {
                 }
                 var3Lifetime2 = (-((Sprite) (var2Lifetime2)).fullHeight + 90) / 2;
                 if (var2Lifetime2 == null) {
-                  if (am.field_k == 110) {
+                  if (LaserGateSpan.field_k == 110) {
                     rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
-                  if (am.field_k <= 80) {
+                  if (LaserGateSpan.field_k <= 80) {
                     return;
                   }
-                  am.field_k = am.field_k - 1;
+                  LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                 } else {
                   fg.field_b = var3Lifetime2;
                   dg.field_t = (Sprite) (var2Lifetime2);
-                  if (am.field_k < 95) {
-                    am.field_k = 95;
+                  if (LaserGateSpan.field_k < 95) {
+                    LaserGateSpan.field_k = 95;
                     rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                     return;
                   }
-                  if (am.field_k < 110) {
-                    am.field_k = am.field_k + 1;
+                  if (LaserGateSpan.field_k < 110) {
+                    LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                     return;
                   }
                 }
@@ -364,47 +364,47 @@ final class lh {
                 var2Lifetime2 = var29;
                 var3Lifetime2 = (66 - var29.fullHeight) / 2;
                 if (var2Lifetime2 == null) {
-                  if (am.field_k == 110) {
+                  if (LaserGateSpan.field_k == 110) {
                     rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
-                  if (am.field_k <= 80) {
+                  if (LaserGateSpan.field_k <= 80) {
                     return;
                   }
-                  am.field_k = am.field_k - 1;
+                  LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                   return;
                 }
                 fg.field_b = var3Lifetime2;
                 dg.field_t = (Sprite) (var2Lifetime2);
-                if (am.field_k < 95) {
-                  am.field_k = 95;
+                if (LaserGateSpan.field_k < 95) {
+                  LaserGateSpan.field_k = 95;
                   rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                   return;
                 }
-                if (am.field_k >= 110) {
+                if (LaserGateSpan.field_k >= 110) {
                   return;
                 }
-                am.field_k = am.field_k + 1;
+                LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                 return;
               }
               if (!ch.field_b) {
                 if (var2Lifetime2 == null) {
-                  if (am.field_k == 110) {
+                  if (LaserGateSpan.field_k == 110) {
                     rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                   }
-                  if (am.field_k <= 80) {
+                  if (LaserGateSpan.field_k <= 80) {
                     return;
                   }
-                  am.field_k = am.field_k - 1;
+                  LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                 } else {
                   fg.field_b = var3Lifetime2;
                   dg.field_t = (Sprite) (var2Lifetime2);
-                  if (am.field_k < 95) {
-                    am.field_k = 95;
+                  if (LaserGateSpan.field_k < 95) {
+                    LaserGateSpan.field_k = 95;
                     rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                     return;
                   }
-                  if (am.field_k < 110) {
-                    am.field_k = am.field_k + 1;
+                  if (LaserGateSpan.field_k < 110) {
+                    LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                     return;
                   }
                 }
@@ -414,23 +414,23 @@ final class lh {
               var2Lifetime2 = var30;
               var3Lifetime2 = (100 - var30.fullHeight) / 2;
               if (var2Lifetime2 == null) {
-                if (am.field_k == 110) {
+                if (LaserGateSpan.field_k == 110) {
                   rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
                 }
-                if (am.field_k <= 80) {
+                if (LaserGateSpan.field_k <= 80) {
                   return;
                 }
-                am.field_k = am.field_k - 1;
+                LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
               } else {
                 fg.field_b = var3Lifetime2;
                 dg.field_t = (Sprite) (var2Lifetime2);
-                if (am.field_k < 95) {
-                  am.field_k = 95;
+                if (LaserGateSpan.field_k < 95) {
+                  LaserGateSpan.field_k = 95;
                   rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
                   return;
                 }
-                if (am.field_k < 110) {
-                  am.field_k = am.field_k + 1;
+                if (LaserGateSpan.field_k < 110) {
+                  LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                   return;
                 }
               }
@@ -446,23 +446,23 @@ final class lh {
           }
         }
         if (var2Lifetime2 == null) {
-          if (am.field_k == 110) {
+          if (LaserGateSpan.field_k == 110) {
             rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
           }
-          if (am.field_k <= 80) {
+          if (LaserGateSpan.field_k <= 80) {
             return;
           }
-          am.field_k = am.field_k - 1;
+          LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
         } else {
           fg.field_b = var3Lifetime2;
           dg.field_t = (Sprite) (var2Lifetime2);
-          if (am.field_k < 95) {
-            am.field_k = 95;
+          if (LaserGateSpan.field_k < 95) {
+            LaserGateSpan.field_k = 95;
             rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
             return;
           }
-          if (am.field_k < 110) {
-            am.field_k = am.field_k + 1;
+          if (LaserGateSpan.field_k < 110) {
+            LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
             return;
           }
         }

@@ -52,7 +52,7 @@ final class mj {
             }
             if (al.field_d == ha.field_c &&
               bo.a(30000, 8)) {
-              va.field_b = om.field_g.i(param0 - 800509814);
+              SecondaryIntrusiveDeque.field_b = om.field_g.i(param0 - 800509814);
               om.field_g.position = 0;
               oh.a(f.field_m, param4, param1, param5, (byte) -99);
               al.field_d = mc.field_b;
@@ -115,7 +115,7 @@ final class mj {
               ck.field_r = om.field_g.c(false);
               CharSequence var11 = (CharSequence) ((Object) ck.field_r);
               cc.field_k = sf.a(-83, var11);
-              am.field_g = om.field_g.readUnsignedByte(param0 - 1);
+              LaserGateSpan.field_g = om.field_g.readUnsignedByte(param0 - 1);
               al.field_d = ck.field_t;
               if (f.field_m.a((byte) 32) == md.field_E) {
                 kf.field_q.a(27002, PointCloudEffect.d((byte) -114));

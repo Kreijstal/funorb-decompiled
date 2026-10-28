@@ -47,7 +47,7 @@ final class nk extends ah {
             String stackIn_26_0 = kk.field_a;
             return stackIn_26_0;
           }
-          if (!pi.a(-115, var5, var7)) {
+          if (!RockBuster.a(-115, var5, var7)) {
             String stackIn_31_0 = TerrainMap.field_e;
             return stackIn_31_0;
           }

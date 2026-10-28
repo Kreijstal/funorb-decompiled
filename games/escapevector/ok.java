@@ -25,7 +25,7 @@ final class ok {
         }
         if (param2 != 20) {
           field_c = -87;
-          eo.a(am.field_l, (byte) -107);
+          eo.a(LaserGateSpan.field_l, (byte) -107);
           bi.b();
           SoftwareRasterizer.d();
           fi.a(-111);
@@ -36,10 +36,10 @@ final class ok {
           if (kb.field_d >= 150) {
             cb.field_a.d(15 + var3, var4 + 10, var5);
           } else {
-            am.field_l.g(var3, var4);
+            LaserGateSpan.field_l.g(var3, var4);
           }
         } else {
-          eo.a(am.field_l, (byte) -107);
+          eo.a(LaserGateSpan.field_l, (byte) -107);
           bi.b();
           SoftwareRasterizer.d();
           fi.a(-111);
@@ -103,7 +103,7 @@ final class ok {
             }
             return;
           }
-          am.field_l.g(var3, var4);
+          LaserGateSpan.field_l.g(var3, var4);
         }
         int var6Lifetime1 = -125 + kb.field_d;
         if (var6Lifetime1 > 0 &&

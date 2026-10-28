@@ -95,7 +95,7 @@ final class ji {
           int var7_int = param3 + param5;
           for (int var8 = param6; param4 > var8; var8++) {
             String var9 = param2[var8];
-            int var10 = ic.a(var9, 16777215, param1);
+            int var10 = SeekerMine.a(var9, 16777215, param1);
             var7_int = var7_int + (var10 + param0);
           }
           int stackIn_5_0 = var7_int;

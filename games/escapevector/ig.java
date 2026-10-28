@@ -216,7 +216,7 @@ final class ig {
         }
         LevelObject.a(this.field_a, (byte) -128);
         mj.field_d = 0;
-        am.field_k = 0;
+        LaserGateSpan.field_k = 0;
         GameplaySession.c((byte) 30);
         return true;
     }
@@ -301,7 +301,7 @@ final class ig {
         }
         if (this.field_o) {
           this.field_o = false;
-          this.field_r.e(this.field_m, 110);
+          this.field_r.selectLevel(this.field_m, 110);
           this.a(true);
           fn.a((byte) 82);
         }
@@ -520,7 +520,7 @@ final class ig {
         byte[][] var2 = ld.field_h[this.field_a];
         this.field_r = new GameplaySession(var2);
         this.field_r.gameMode = this.field_a;
-        this.field_r.e(this.field_m, -59);
+        this.field_r.selectLevel(this.field_m, -59);
         this.a(true);
     }
 

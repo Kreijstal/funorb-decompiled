@@ -13,12 +13,12 @@ final class da {
         }
         c.field_u = true;
         if (param0 == -112) {
-          ic.a((byte) -123, false);
+          SeekerMine.a((byte) -123, false);
           ff.field_e = 0;
           return;
         }
         field_d = (String[]) null;
-        ic.a((byte) -123, false);
+        SeekerMine.a((byte) -123, false);
         ff.field_e = 0;
     }
 

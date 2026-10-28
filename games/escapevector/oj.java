@@ -89,22 +89,22 @@ final class oj extends hc {
           Sprite var25 = ul.field_E[0];
           int var9 = var25.fullWidth << 1;
           int var10 = var25.fullHeight << 1;
-          if (pi.field_j == null) {
-            pi.field_j = new Sprite(var9, var10);
-            eo.a(pi.field_j, (byte) -111);
-          } else if (pi.field_j.width < var9) {
-            pi.field_j = new Sprite(var9, var10);
-            eo.a(pi.field_j, (byte) -111);
-          } else if (var10 <= pi.field_j.height) {
-            eo.a(pi.field_j, (byte) -79);
+          if (RockBuster.field_j == null) {
+            RockBuster.field_j = new Sprite(var9, var10);
+            eo.a(RockBuster.field_j, (byte) -111);
+          } else if (RockBuster.field_j.width < var9) {
+            RockBuster.field_j = new Sprite(var9, var10);
+            eo.a(RockBuster.field_j, (byte) -111);
+          } else if (var10 <= RockBuster.field_j.height) {
+            eo.a(RockBuster.field_j, (byte) -79);
             SoftwareRasterizer.d();
           } else {
-            pi.field_j = new Sprite(var9, var10);
-            eo.a(pi.field_j, (byte) -111);
+            RockBuster.field_j = new Sprite(var9, var10);
+            eo.a(RockBuster.field_j, (byte) -111);
           }
           var25.b(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_R << 10, 4096);
           dl.a((byte) 116);
-          pi.field_j.c(var5 - var25.fullWidth, -var25.fullHeight + var6, 256);
+          RockBuster.field_j.c(var5 - var25.fullWidth, -var25.fullHeight + var6, 256);
           return;
         }
         field_I = (int[]) null;
@@ -118,18 +118,18 @@ final class oj extends hc {
           Sprite var15 = ul.field_E[0];
           int var9Lifetime1 = var15.fullWidth << 1;
           int var10Lifetime1 = var15.fullHeight << 1;
-          if (pi.field_j != null &&
-            pi.field_j.width >= var9Lifetime1 &&
-            var10Lifetime1 <= pi.field_j.height) {
-            eo.a(pi.field_j, (byte) -79);
+          if (RockBuster.field_j != null &&
+            RockBuster.field_j.width >= var9Lifetime1 &&
+            var10Lifetime1 <= RockBuster.field_j.height) {
+            eo.a(RockBuster.field_j, (byte) -79);
             SoftwareRasterizer.d();
           } else {
-            pi.field_j = new Sprite(var9Lifetime1, var10Lifetime1);
-            eo.a(pi.field_j, (byte) -111);
+            RockBuster.field_j = new Sprite(var9Lifetime1, var10Lifetime1);
+            eo.a(RockBuster.field_j, (byte) -111);
           }
           var15.b(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_R << 10, 4096);
           dl.a((byte) 116);
-          pi.field_j.c(var5Lifetime1 - var15.fullWidth, -var15.fullHeight + var6Lifetime1, 256);
+          RockBuster.field_j.c(var5Lifetime1 - var15.fullWidth, -var15.fullHeight + var6Lifetime1, 256);
           return;
         }
         if (ug.field_c != var8Lifetime1) {
@@ -149,18 +149,18 @@ final class oj extends hc {
         Sprite var14 = var16;
         int var9Lifetime2 = var16.fullWidth << 1;
         int var10Lifetime2 = var16.fullHeight << 1;
-        if (pi.field_j != null &&
-          pi.field_j.width >= var9Lifetime2 &&
-          var10Lifetime2 <= pi.field_j.height) {
-          eo.a(pi.field_j, (byte) -79);
+        if (RockBuster.field_j != null &&
+          RockBuster.field_j.width >= var9Lifetime2 &&
+          var10Lifetime2 <= RockBuster.field_j.height) {
+          eo.a(RockBuster.field_j, (byte) -79);
           SoftwareRasterizer.d();
         } else {
-          pi.field_j = new Sprite(var9Lifetime2, var10Lifetime2);
-          eo.a(pi.field_j, (byte) -111);
+          RockBuster.field_j = new Sprite(var9Lifetime2, var10Lifetime2);
+          eo.a(RockBuster.field_j, (byte) -111);
         }
         var16.b(112, 144, var16.fullWidth << 4, var16.fullHeight << 4, -this.field_R << 10, 4096);
         dl.a((byte) 116);
-        pi.field_j.c(var5Lifetime1 - var16.fullWidth, -var16.fullHeight + var6Lifetime1, 256);
+        RockBuster.field_j.c(var5Lifetime1 - var16.fullWidth, -var16.fullHeight + var6Lifetime1, 256);
     }
 
     final static void a(int param0, int param1, byte param2, String param3) {

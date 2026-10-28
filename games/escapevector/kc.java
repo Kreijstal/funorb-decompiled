@@ -56,7 +56,7 @@ final class kc {
             }
           }
           gi.a((byte) -58);
-          am.field_k = 0;
+          LaserGateSpan.field_k = 0;
           return;
         }
         mj.field_d = mj.field_d + 1;
@@ -84,7 +84,7 @@ final class kc {
             ((t) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_15_2);
           }
           gi.a((byte) -58);
-          am.field_k = 0;
+          LaserGateSpan.field_k = 0;
           return;
         }
         field_b = -124;
@@ -99,7 +99,7 @@ final class kc {
           boolean stackIn_30_2 = (2 != var1Lifetime1) ? false : true;
           ((t) (Object) stackIn_29_0).b(stackIn_29_1, stackIn_30_2);
           gi.a((byte) -58);
-          am.field_k = 0;
+          LaserGateSpan.field_k = 0;
         } else if (var1Lifetime1 == 2) {
           wk.field_c = false;
           mj.field_d = 0;
@@ -108,7 +108,7 @@ final class kc {
           boolean stackIn_25_2 = (2 != var1Lifetime1) ? false : true;
           ((t) (Object) stackIn_24_0).b(stackIn_24_1, stackIn_25_2);
           gi.a((byte) -58);
-          am.field_k = 0;
+          LaserGateSpan.field_k = 0;
         }
     }
 

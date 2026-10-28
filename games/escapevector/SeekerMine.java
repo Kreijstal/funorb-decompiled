@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ic extends IntrusiveNode {
-    int field_p;
-    int field_o;
-    int field_j;
+final class SeekerMine extends IntrusiveNode {
+    int xQ16;
+    int soundPlaybackRate;
+    int homeXQ16;
     static int[] field_n;
-    int field_h;
-    tl field_m;
-    int field_q;
+    int velocityYQ16;
+    tl proximitySound;
+    int yQ16;
     static String[] field_k;
-    int field_l;
-    hl field_g;
-    int field_i;
+    int homeYQ16;
+    hl flightSound;
+    int velocityXQ16;
 
     final static int a(String param0, int param1, ih param2) {
         String stackIn_8_2 = null;
@@ -48,7 +48,7 @@ final class ic extends IntrusiveNode {
 
     final static void a(byte param0, boolean param1) {
         if (param0 > -97) {
-          ic.a((byte) 51, false);
+          SeekerMine.a((byte) 51, false);
           ve.a(-58, param1, false);
           return;
         }
@@ -58,7 +58,7 @@ final class ic extends IntrusiveNode {
     public static void a(boolean param0) {
         field_k = null;
         if (param0) {
-          ic.a(false, 19, -31, -11, -87);
+          SeekerMine.a(false, 19, -31, -11, -87);
           field_n = null;
           return;
         }
@@ -77,7 +77,7 @@ final class ic extends IntrusiveNode {
         String stackIn_7_2 = null;
         try {
           if (param1 <= 108) {
-            ic.a(true);
+            SeekerMine.a(true);
           }
           CharSequence var3 = (CharSequence) ((Object) param0);
           boolean stackIn_3_0 = cc.field_k.equals(sf.a(-67, var3));
@@ -192,7 +192,7 @@ final class ic extends IntrusiveNode {
         }
     }
 
-    ic() {
+    SeekerMine() {
     }
 
     static {

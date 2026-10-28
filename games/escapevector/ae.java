@@ -131,7 +131,7 @@ final class ae implements db {
             var8.c((-var8.fullWidth + param3.field_g >> 1) + 1 + var6_int, var7 - (-1 - (param3.field_x - var8.fullHeight >> 1)), 256);
           }
           if (param3.h(0)) {
-            ic.a(false, param3.field_g - 4, 2 + var6_int, -4 + param3.field_x, 2 + var7);
+            SeekerMine.a(false, param3.field_g - 4, 2 + var6_int, -4 + param3.field_x, 2 + var7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

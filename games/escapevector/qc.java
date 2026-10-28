@@ -806,123 +806,123 @@ final class qc extends pn implements qb {
           }
           byte[] var2Lifetime181 = ki.a("tutorialtext,0", 10592);
           if (null != var2Lifetime181) {
-            ic.field_k[0] = mi.a(var2Lifetime181, PacketBuffer.a(param0, 114));
+            SeekerMine.field_k[0] = mi.a(var2Lifetime181, PacketBuffer.a(param0, 114));
           }
           byte[] var2Lifetime182 = ki.a("tutorialtext,1", param0 + 10584);
           if (null != var2Lifetime182) {
-            ic.field_k[1] = mi.a(var2Lifetime182, 122);
+            SeekerMine.field_k[1] = mi.a(var2Lifetime182, 122);
           }
           byte[] var2Lifetime183 = ki.a("tutorialtext,2", 10592);
           if (var2Lifetime183 != null) {
-            ic.field_k[2] = mi.a(var2Lifetime183, 121);
+            SeekerMine.field_k[2] = mi.a(var2Lifetime183, 121);
           }
           byte[] var2Lifetime184 = ki.a("tutorialtext,3", param0 + 10584);
           if (null != var2Lifetime184) {
-            ic.field_k[3] = mi.a(var2Lifetime184, 125);
+            SeekerMine.field_k[3] = mi.a(var2Lifetime184, 125);
           }
           byte[] var2Lifetime185 = ki.a("tutorialtext,4", 10592);
           if (var2Lifetime185 != null) {
-            ic.field_k[4] = mi.a(var2Lifetime185, PacketBuffer.a(param0, 120));
+            SeekerMine.field_k[4] = mi.a(var2Lifetime185, PacketBuffer.a(param0, 120));
           }
           byte[] var2Lifetime186 = ki.a("tutorialtext,5", 10592);
           if (var2Lifetime186 != null) {
-            ic.field_k[5] = mi.a(var2Lifetime186, 120);
+            SeekerMine.field_k[5] = mi.a(var2Lifetime186, 120);
           }
           byte[] var2Lifetime187 = ki.a("tutorialtext,6", 10592);
           if (var2Lifetime187 != null) {
-            ic.field_k[6] = mi.a(var2Lifetime187, param0 + 102);
+            SeekerMine.field_k[6] = mi.a(var2Lifetime187, param0 + 102);
           }
           byte[] var2Lifetime188 = ki.a("tutorialtext,7", 10592);
           if (null != var2Lifetime188) {
-            ic.field_k[7] = mi.a(var2Lifetime188, PacketBuffer.a(param0, 127));
+            SeekerMine.field_k[7] = mi.a(var2Lifetime188, PacketBuffer.a(param0, 127));
           }
           byte[] var2Lifetime189 = ki.a("tutorialtext,8", param0 + 10584);
           if (var2Lifetime189 != null) {
-            ic.field_k[8] = mi.a(var2Lifetime189, PacketBuffer.a(param0, 126));
+            SeekerMine.field_k[8] = mi.a(var2Lifetime189, PacketBuffer.a(param0, 126));
           }
           byte[] var2Lifetime190 = ki.a("tutorialtext,9", 10592);
           if (var2Lifetime190 != null) {
-            ic.field_k[9] = mi.a(var2Lifetime190, 122);
+            SeekerMine.field_k[9] = mi.a(var2Lifetime190, 122);
           }
           byte[] var2Lifetime191 = ki.a("tutorialtext,10", 10592);
           if (null != var2Lifetime191) {
-            ic.field_k[10] = mi.a(var2Lifetime191, PacketBuffer.a(param0, 114));
+            SeekerMine.field_k[10] = mi.a(var2Lifetime191, PacketBuffer.a(param0, 114));
           }
           byte[] var2Lifetime192 = ki.a("tutorialtext,11", 10592);
           if (null != var2Lifetime192) {
-            ic.field_k[11] = mi.a(var2Lifetime192, param0 + 114);
+            SeekerMine.field_k[11] = mi.a(var2Lifetime192, param0 + 114);
           }
           byte[] var2Lifetime193 = ki.a("tutorialtext,12", param0 + 10584);
           if (null != var2Lifetime193) {
-            ic.field_k[12] = mi.a(var2Lifetime193, param0 + 115);
+            SeekerMine.field_k[12] = mi.a(var2Lifetime193, param0 + 115);
           }
           byte[] var2Lifetime194 = ki.a("tutorialtext,13", 10592);
           if (var2Lifetime194 != null) {
-            ic.field_k[13] = mi.a(var2Lifetime194, PacketBuffer.a(param0, 112));
+            SeekerMine.field_k[13] = mi.a(var2Lifetime194, PacketBuffer.a(param0, 112));
           }
           byte[] var2Lifetime195 = ki.a("tutorialtext,14", param0 + 10584);
           if (null != var2Lifetime195) {
-            ic.field_k[14] = mi.a(var2Lifetime195, 122);
+            SeekerMine.field_k[14] = mi.a(var2Lifetime195, 122);
           }
           byte[] var2Lifetime196 = ki.a("tutorialtext,15", 10592);
           if (var2Lifetime196 != null) {
-            ic.field_k[15] = mi.a(var2Lifetime196, 121);
+            SeekerMine.field_k[15] = mi.a(var2Lifetime196, 121);
           }
           byte[] var2Lifetime197 = ki.a("tutorialtext,16", 10592);
           if (null != var2Lifetime197) {
-            ic.field_k[16] = mi.a(var2Lifetime197, 117);
+            SeekerMine.field_k[16] = mi.a(var2Lifetime197, 117);
           }
           byte[] var2Lifetime198 = ki.a("tutorialtext,17", 10592);
           if (var2Lifetime198 != null) {
-            ic.field_k[17] = mi.a(var2Lifetime198, param0 + 115);
+            SeekerMine.field_k[17] = mi.a(var2Lifetime198, param0 + 115);
           }
           byte[] var2Lifetime199 = ki.a("tutorialtext,18", 10592);
           if (var2Lifetime199 != null) {
-            ic.field_k[18] = mi.a(var2Lifetime199, 113);
+            SeekerMine.field_k[18] = mi.a(var2Lifetime199, 113);
           }
           byte[] var2Lifetime200 = ki.a("tutorialtext,19", param0 ^ 10600);
           if (null != var2Lifetime200) {
-            ic.field_k[19] = mi.a(var2Lifetime200, 125);
+            SeekerMine.field_k[19] = mi.a(var2Lifetime200, 125);
           }
           byte[] var2Lifetime201 = ki.a("tutorialtext,20", 10592);
           if (var2Lifetime201 != null) {
-            ic.field_k[20] = mi.a(var2Lifetime201, 118);
+            SeekerMine.field_k[20] = mi.a(var2Lifetime201, 118);
           }
           byte[] var2Lifetime202 = ki.a("tutorialtext,21", 10592);
           if (var2Lifetime202 != null) {
-            ic.field_k[21] = mi.a(var2Lifetime202, 126);
+            SeekerMine.field_k[21] = mi.a(var2Lifetime202, 126);
           }
           byte[] var2Lifetime203 = ki.a("tutorialtext,22", 10592);
           if (null != var2Lifetime203) {
-            ic.field_k[22] = mi.a(var2Lifetime203, 118);
+            SeekerMine.field_k[22] = mi.a(var2Lifetime203, 118);
           }
           byte[] var2Lifetime204 = ki.a("tutorialtext,23", param0 + 10584);
           if (null != var2Lifetime204) {
-            ic.field_k[23] = mi.a(var2Lifetime204, 127);
+            SeekerMine.field_k[23] = mi.a(var2Lifetime204, 127);
           }
           byte[] var2Lifetime205 = ki.a("tutorialtext,24", 10592);
           if (null != var2Lifetime205) {
-            ic.field_k[24] = mi.a(var2Lifetime205, 112);
+            SeekerMine.field_k[24] = mi.a(var2Lifetime205, 112);
           }
           byte[] var2Lifetime206 = ki.a("tutorialtext,25", 10592);
           if (null != var2Lifetime206) {
-            ic.field_k[25] = mi.a(var2Lifetime206, 110);
+            SeekerMine.field_k[25] = mi.a(var2Lifetime206, 110);
           }
           byte[] var2Lifetime207 = ki.a("tutorialtext,26", 10592);
           if (var2Lifetime207 != null) {
-            ic.field_k[26] = mi.a(var2Lifetime207, 120);
+            SeekerMine.field_k[26] = mi.a(var2Lifetime207, 120);
           }
           byte[] var2Lifetime208 = ki.a("tutorialtext,27", 10592);
           if (var2Lifetime208 != null) {
-            ic.field_k[27] = mi.a(var2Lifetime208, 127);
+            SeekerMine.field_k[27] = mi.a(var2Lifetime208, 127);
           }
           byte[] var2Lifetime209 = ki.a("tutorialtext,28", param0 ^ 10600);
           if (var2Lifetime209 != null) {
-            ic.field_k[28] = mi.a(var2Lifetime209, 127);
+            SeekerMine.field_k[28] = mi.a(var2Lifetime209, 127);
           }
           byte[] var2Lifetime210 = ki.a("tutorialtext,29", 10592);
           if (null != var2Lifetime210) {
-            ic.field_k[29] = mi.a(var2Lifetime210, 111);
+            SeekerMine.field_k[29] = mi.a(var2Lifetime210, 111);
           }
           byte[] var2Lifetime211 = ki.a("fuel_colon", 10592);
           if (var2Lifetime211 != null) {
@@ -1146,11 +1146,11 @@ final class qc extends pn implements qb {
           }
           byte[] var2Lifetime266 = ki.a("vengeanceMoonMessage,0", 10592);
           if (var2Lifetime266 != null) {
-            rb.field_j[0] = mi.a(var2Lifetime266, 121);
+            HudMessage.field_j[0] = mi.a(var2Lifetime266, 121);
           }
           byte[] var2Lifetime267 = ki.a("vengeanceMoonMessage,1", 10592);
           if (null != var2Lifetime267) {
-            rb.field_j[1] = mi.a(var2Lifetime267, 110);
+            HudMessage.field_j[1] = mi.a(var2Lifetime267, 110);
           }
           byte[] var2Lifetime268 = ki.a("vengeanceIceMessage,0", 10592);
           if (var2Lifetime268 != null) {

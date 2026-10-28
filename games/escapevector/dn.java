@@ -500,18 +500,18 @@ final class dn {
         }
         regionExit1: {
           String[] var3Lifetime1 = null;
-          if (var6.g((byte) -18)) {
+          if (var6.isMissionComplete((byte) -18)) {
             var3_ref = pf.field_h;
           } else {
-            if (!var6.field_Gb &&
+            if (!var6.shipDestroyed &&
               !var6.field_Ib) {
               if (var6.levelIndex < 0) {
                 var3_ref = AccountRegistrationPanel.field_O;
-              } else if (1 == var6.field_Ub) {
+              } else if (1 == var6.tetheredObjectType) {
                 var3_ref = pn.field_qb[var5.m((byte) -84)];
               } else if (var6.field_ec) {
                 var3_ref = d.field_f[var5.m((byte) -84)];
-              } else if (var6.field_Q != 1) {
+              } else if (var6.objectiveType != 1) {
                 var3_ref = LevelObject.field_q;
               } else {
                 var3_ref = gl.field_r;

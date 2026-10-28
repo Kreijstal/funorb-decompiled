@@ -98,7 +98,7 @@ final class ri {
               var18[0][1 + 4 * var10] = pc.field_c[var11];
               var18[0][var10 * 4 + 2] = mi.field_k[var11];
               var18[0][3 + var10 * 4] = tm.field_fb[var11];
-              if (ic.a(bl.field_l[var11], (byte) 123) &&
+              if (SeekerMine.a(bl.field_l[var11], (byte) 123) &&
                 tm.field_fb[var11] + pc.field_c[var11] + mi.field_k[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -116,7 +116,7 @@ final class ri {
               var18[1][var13 * 4 + 1] = pc.field_c[var11Lifetime1];
               var18[1][var13 * 4 + 2] = mi.field_k[var11Lifetime1];
               var18[1][3 + var13 * 4] = tm.field_fb[var11Lifetime1];
-              if (ic.a(bl.field_l[var11Lifetime1], (byte) 117) &&
+              if (SeekerMine.a(bl.field_l[var11Lifetime1], (byte) 117) &&
                 0 == tm.field_fb[var11Lifetime1] + pc.field_c[var11Lifetime1] + mi.field_k[var11Lifetime1]) {
                 var6[1][var13] = null;
                 var13--;

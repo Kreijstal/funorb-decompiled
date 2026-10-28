@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends IntrusiveNode {
+final class RockBuster extends IntrusiveNode {
     boolean field_h;
-    PointCloudEffect field_i;
+    PointCloudEffect exhaustParticles;
     static Sprite field_j;
-    int field_q;
-    hl field_o;
-    int field_n;
-    int field_m;
-    int field_l;
-    int field_p;
-    int field_g;
-    int field_k;
-    int field_r;
+    int exhaustWriteIndex;
+    hl flightSound;
+    int xQ16;
+    int angle256;
+    int activeExhaustParticles;
+    int velocityYQ16;
+    int yQ16;
+    int velocityXQ16;
+    int remainingFlightTicks;
 
     public static void a(byte param0) {
         field_j = null;
@@ -51,7 +51,7 @@ final class pi extends IntrusiveNode {
         }
     }
 
-    pi() {
+    RockBuster() {
     }
 
     static {

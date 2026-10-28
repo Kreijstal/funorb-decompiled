@@ -3,7 +3,7 @@
  */
 final class kk implements Runnable {
     static String[] field_d;
-    private va field_c;
+    private SecondaryIntrusiveDeque field_c;
     static String field_a;
     private Thread field_b;
     private boolean field_e;
@@ -49,7 +49,7 @@ final class kk implements Runnable {
           var4.field_z = 1;
           Object var5 = this.field_c;
           synchronized (var5) {
-            cm var6 = (cm) (this.field_c.a(0));
+            cm var6 = (cm) (this.field_c.first(0));
             while (var6 != null) {
               if ((long)param2 == var6.secondaryKey &&
                 param0 == var6.field_x &&
@@ -59,7 +59,7 @@ final class kk implements Runnable {
                 cm stackIn_11_0 = var4;
                 return stackIn_11_0;
               }
-              var6 = (cm) (this.field_c.a((byte) 116));
+              var6 = (cm) (this.field_c.next((byte) 116));
             }
           }
           var4.field_y = param0.a(param2, 26296);
@@ -91,7 +91,7 @@ final class kk implements Runnable {
           while (!this.field_e) {
             Object var2 = this.field_c;
             synchronized (var2) {
-              var7 = (cm) (this.field_c.b((byte) -75));
+              var7 = (cm) (this.field_c.removeFirst((byte) -75));
               if (var7 == null) {
                 try {
                   this.field_c.wait();
@@ -177,7 +177,7 @@ final class kk implements Runnable {
 
     private final void a(int param0, cm param1) {
         synchronized (this.field_c) {
-          this.field_c.a(-1, param1);
+          this.field_c.addLast(-1, param1);
           this.field_f = this.field_f + 1;
           if (param0 != -3) {
             field_a = (String) null;
@@ -215,7 +215,7 @@ final class kk implements Runnable {
     }
 
     kk(lk param0) {
-        this.field_c = new va();
+        this.field_c = new SecondaryIntrusiveDeque();
         this.field_e = false;
         this.field_f = 0;
         try {

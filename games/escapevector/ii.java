@@ -44,7 +44,7 @@ final class ii {
         if (!aa.a((byte) -84)) {
           return true;
         }
-        if (am.field_g <= 0) {
+        if (LaserGateSpan.field_g <= 0) {
           return false;
         }
         if (!NetworkGameClient.i(90)) {

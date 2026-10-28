@@ -44,7 +44,7 @@ final class ha implements db {
             } else if (this.field_d == 1) {
               var10 = var10 + (-var8 + param3.field_x >> 1);
             }
-            ic.a(false, 4 + var7, var9 - 2, var8, var10 + 2);
+            SeekerMine.a(false, 4 + var7, var9 - 2, var8, var10 + 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

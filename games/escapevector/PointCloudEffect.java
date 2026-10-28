@@ -318,7 +318,7 @@ final class PointCloudEffect extends DualLinkNode {
         if (var6 < 0) {
           return;
         }
-        BoundedRandomAccessFile.activeSession.D(var6);
+        BoundedRandomAccessFile.activeSession.ensureTerrainRow(var6);
         while (var5 < 0) {
           var5 = var5 + var3;
         }

@@ -48,7 +48,7 @@ final class hd extends java.awt.Canvas {
           if (param1) {
             return false;
           }
-          if (!pi.a(-91, param0, param2)) {
+          if (!RockBuster.a(-91, param0, param2)) {
             return true;
           }
           return false;

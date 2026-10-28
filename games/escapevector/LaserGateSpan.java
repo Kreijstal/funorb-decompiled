@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am extends IntrusiveNode {
+final class LaserGateSpan extends IntrusiveNode {
     static Sprite field_l;
     static int field_g;
     static int field_k;
-    int field_h;
-    int field_j;
-    int field_i;
+    int rightX;
+    int y;
+    int leftX;
 
     final static int a(byte param0, int param1) {
         if (param0 == 57) {
@@ -18,7 +18,7 @@ final class am extends IntrusiveNode {
           int var3 = var2 + param1;
           return var3;
         }
-        am.a((byte) 123, -70);
+        LaserGateSpan.a((byte) 123, -70);
         int var2Lifetime1 = 0;
         if ((param1 & 7) != 0) {
           var2Lifetime1 = -(param1 & 7) + 8;
@@ -27,15 +27,15 @@ final class am extends IntrusiveNode {
         return var3Lifetime1;
     }
 
-    am(int param0, int param1, int param2) {
-        this.field_j = param2;
-        this.field_h = param1;
-        this.field_i = param0;
+    LaserGateSpan(int leftX, int rightX, int y) {
+        this.y = y;
+        this.rightX = rightX;
+        this.leftX = leftX;
     }
 
     public static void a(byte param0) {
         if (param0 > -67) {
-          am.a((byte) -101);
+          LaserGateSpan.a((byte) -101);
           field_l = null;
           return;
         }

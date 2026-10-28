@@ -14,7 +14,7 @@ final class um {
             return false;
           }
           if (!SpriteState.field_u) {
-            return !rb.a(true) ? true : false;
+            return !HudMessage.a(true) ? true : false;
           }
           return false;
         }
@@ -22,7 +22,7 @@ final class um {
           return false;
         }
         if (!SpriteState.field_u) {
-          return !rb.a(true) ? true : false;
+          return !HudMessage.a(true) ? true : false;
         }
         return false;
     }

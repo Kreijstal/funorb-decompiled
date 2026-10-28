@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rb extends IntrusiveNode {
+final class HudMessage extends IntrusiveNode {
     static int[] field_h;
     static qh[] field_k;
     static String[] field_j;
-    String field_g;
-    int field_i;
+    String text;
+    int durationTicks;
 
     public static void a(byte param0) {
         if (param0 != -85) {
@@ -19,7 +19,7 @@ final class rb extends IntrusiveNode {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          rb.a((byte) -76);
+          HudMessage.a((byte) -76);
           if (pg.field_c == null) {
             return false;
           }
@@ -75,12 +75,12 @@ final class rb extends IntrusiveNode {
         }
     }
 
-    rb(String param0, int param1) {
+    HudMessage(String text, int durationTicks) {
         try {
-          this.field_g = param0;
-          this.field_i = param1;
+          this.text = text;
+          this.durationTicks = durationTicks;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (text != null ? "{...}" : "null") + ',' + durationTicks + ')');
         }
     }
 

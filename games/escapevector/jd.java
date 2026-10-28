@@ -141,8 +141,8 @@ final class jd {
           return var2_ref_byte__Lifetime2;
         }
         if (ve.field_n != null) {
-          for (int var2 = 0; var2 < rb.field_h.length; var2++) {
-            if (rb.field_h[var2] == param0 &&
+          for (int var2 = 0; var2 < HudMessage.field_h.length; var2++) {
+            if (HudMessage.field_h[var2] == param0 &&
               0 < nb.field_b[var2]) {
               int dupTemp$6 = nb.field_b[var2] - 1;
               byte[][] arrayValue$7 = ve.field_n[var2];
@@ -181,7 +181,7 @@ final class jd {
           String[] var4 = param2;
           for (int var5 = 0; var5 < var4.length; var5++) {
             String var6 = var4[var5];
-            var3_int = var3_int + ic.a(var6, param1 ^ -16777096, param0);
+            var3_int = var3_int + SeekerMine.a(var6, param1 ^ -16777096, param0);
           }
           int stackIn_8_0 = var3_int;
           return stackIn_8_0;

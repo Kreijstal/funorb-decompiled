@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LevelObject extends IntrusiveNode {
-    boolean field_h;
+    boolean glowActive;
     Sprite collisionSprite;
     static String field_q;
     int spriteFrame;
@@ -10,57 +10,57 @@ final class LevelObject extends IntrusiveNode {
     int objectId;
     private int displayOffsetX;
     private int displayOffsetY;
-    boolean field_p;
-    boolean field_r;
+    boolean triggersCountdown;
+    boolean missionTarget;
     int y;
     private Sprite displaySprite;
-    int field_o;
+    int shotCooldownTicks;
     int objectType;
 
-    private final void a(boolean param0, int param1, int param2) {
+    private final void drawTargetHighlight(boolean guard, int cameraX, int cameraY) {
         try {
-          int var4_int = 100;
-          int var5 = BoundedRandomAccessFile.activeSession.elapsedTicks % var4_int;
+          int pulsePeriod = 100;
+          int pulseTick = BoundedRandomAccessFile.activeSession.elapsedTicks % pulsePeriod;
           if (null == this.collisionSprite) {
             return;
           }
-          int var6 = this.collisionSprite.fullWidth;
-          int var7 = this.collisionSprite.fullHeight;
-          int var8 = var6 + (var4_int - var5) * 2 * var6 / var4_int;
-          int var9 = (-var5 + var4_int) * var7 * 2 / var4_int + var7;
-          if (param0) {
-            this.a(false, -79, -121);
+          int spriteWidth = this.collisionSprite.fullWidth;
+          int spriteHeight = this.collisionSprite.fullHeight;
+          int highlightWidth = spriteWidth + (pulsePeriod - pulseTick) * 2 * spriteWidth / pulsePeriod;
+          int highlightHeight = (-pulseTick + pulsePeriod) * spriteHeight * 2 / pulsePeriod + spriteHeight;
+          if (guard) {
+            this.drawTargetHighlight(false, -79, -121);
           }
-          int var10 = var5 * 128 / var4_int;
-          int var11 = 16711680;
-          int var12 = this.y + (-param2 - (var9 - var7) / 2);
-          int var13 = var9 + var12;
-          int var14 = 480;
-          if (var13 >= 0 &&
-            var12 < var14) {
-            int var15 = -param1 + this.x - (var8 - var6) / 2;
-            int var16 = var8 + var15;
-            int var17 = BoundedRandomAccessFile.activeSession.worldWidth;
-            SoftwareRasterizer.b(var15, var12, var8, var9, var11, var10);
-            if (var15 > 0 &&
-              var17 <= var16) {
+          int alpha = pulseTick * 128 / pulsePeriod;
+          int color = 16711680;
+          int screenTop = this.y + (-cameraY - (highlightHeight - spriteHeight) / 2);
+          int screenBottom = highlightHeight + screenTop;
+          int viewportHeight = 480;
+          if (screenBottom >= 0 &&
+            screenTop < viewportHeight) {
+            int screenLeft = -cameraX + this.x - (highlightWidth - spriteWidth) / 2;
+            int screenRight = highlightWidth + screenLeft;
+            int worldWidth = BoundedRandomAccessFile.activeSession.worldWidth;
+            SoftwareRasterizer.b(screenLeft, screenTop, highlightWidth, highlightHeight, color, alpha);
+            if (screenLeft > 0 &&
+              worldWidth <= screenRight) {
               return;
             }
-            if (0 < var15) {
-              var15 = var15 - var17;
+            if (0 < screenLeft) {
+              screenLeft = screenLeft - worldWidth;
               if (EscapeVector.obfuscationControl != 0) {
-                var15 = var15 + var17;
+                screenLeft = screenLeft + worldWidth;
               }
             } else {
-              var15 = var15 + var17;
+              screenLeft = screenLeft + worldWidth;
             }
-            SoftwareRasterizer.b(var15, var12, var8, var9, var11, var10);
+            SoftwareRasterizer.b(screenLeft, screenTop, highlightWidth, highlightHeight, color, alpha);
             return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var4 = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var4), "sa.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) var4), "sa.J(" + guard + ',' + cameraX + ',' + cameraY + ')');
         }
     }
 
@@ -83,10 +83,10 @@ final class LevelObject extends IntrusiveNode {
         }
     }
 
-    private final fn b(boolean param0) {
+    private final fn getDisplayOffset(boolean guard) {
         try {
           rk[] var2 = w.c(false);
-          if (!param0) {
+          if (!guard) {
             fn stackIn_2_0 = (fn) null;
             return stackIn_2_0;
           }
@@ -98,7 +98,7 @@ final class LevelObject extends IntrusiveNode {
           return (fn) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2_ref = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var2_ref), "sa.A(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2_ref), "sa.A(" + guard + ')');
         }
     }
 
@@ -138,9 +138,9 @@ final class LevelObject extends IntrusiveNode {
         }
     }
 
-    private final Sprite d(int param0) {
+    private final Sprite getDisplaySprite(int guard) {
         try {
-          if (param0 != 0) {
+          if (guard != 0) {
             LevelObject.a(22, (byte) 101);
           }
           rk[] var2 = w.c(false);
@@ -152,67 +152,67 @@ final class LevelObject extends IntrusiveNode {
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2_ref = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var2_ref), "sa.I(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2_ref), "sa.I(" + guard + ')');
         }
     }
 
-    LevelObject(int param0, int param1, int param2, int param3, boolean param4, boolean param5, int param6) {
-        this(param0, param1, param2, param3);
+    LevelObject(int objectId, int objectType, int x, int y, boolean missionTarget, boolean triggersCountdown, int spriteFrame) {
+        this(objectId, objectType, x, y);
         try {
-          this.field_p = param5;
-          this.spriteFrame = param6;
-          this.field_r = param4;
+          this.triggersCountdown = triggersCountdown;
+          this.spriteFrame = spriteFrame;
+          this.missionTarget = missionTarget;
           this.refreshSprites(-7012);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "sa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "sa.<init>(" + objectId + ',' + objectType + ',' + x + ',' + y + ',' + missionTarget + ',' + triggersCountdown + ',' + spriteFrame + ')');
         }
     }
 
     final void stampTerrain(boolean guard, GameplaySession session) {
         int stackIn_31_0 = 0;
         String stackIn_39_2 = null;
-        int var11 = EscapeVector.obfuscationControl;
+        int obfuscationControl = EscapeVector.obfuscationControl;
         try {
           if (this.collisionSprite == null) {
             return;
           }
-          int var3_int = 0;
-          int var4 = 0;
+          int sourcePixelIndex = 0;
+          int sourceRow = 0;
           while (true) {
             int stackIn_5_0 = ~this.collisionSprite.height;
             boolean decompiledFrameRemainder0 = true;
-            if (stackIn_5_0 < ~var4) {
-              int var5 = var4 + (this.y + this.collisionSprite.offsetY);
-              int var6 = var5 >> 5;
-              var5 = var5 & 31;
+            if (stackIn_5_0 < ~sourceRow) {
+              int rowY = sourceRow + (this.y + this.collisionSprite.offsetY);
+              int tileY = rowY >> 5;
+              rowY = rowY & 31;
               stackIn_31_0 = 0;
-              decompiledFrameRemainder0 = (var11 == 0);
+              decompiledFrameRemainder0 = (obfuscationControl == 0);
               if (decompiledFrameRemainder0) {
-                int var7 = stackIn_31_0;
-                while (var7 < this.collisionSprite.width) {
-                  int var8 = var7 + (this.collisionSprite.offsetX + this.x);
-                  int var9 = var8 >> 5;
-                  stackIn_5_0 = var8 & 31;
-                  int var8Lifetime1 = stackIn_5_0;
-                  while (var9 < 0) {
-                    var9 = var9 + session.tilesWide;
+                int sourceColumn = stackIn_31_0;
+                while (sourceColumn < this.collisionSprite.width) {
+                  int pixelX = sourceColumn + (this.collisionSprite.offsetX + this.x);
+                  int tileX = pixelX >> 5;
+                  stackIn_5_0 = pixelX & 31;
+                  int bitColumn = stackIn_5_0;
+                  while (tileX < 0) {
+                    tileX = tileX + session.tilesWide;
                   }
-                  var9 = var9 % session.tilesWide;
-                  if (this.collisionSprite.pixels[var3_int] != 0) {
-                    int[] var10 = session.terrainMasks[var9 + session.tilesWide * var6];
-                    if (QuickChatPhraseDefinition.fullTileMask != var10) {
-                      if (null == var10) {
-                        int[] array$0 = new int[32];
-                        var10 = array$0;
-                        session.terrainMasks[var9 + var6 * session.tilesWide] = array$0;
+                  tileX = tileX % session.tilesWide;
+                  if (this.collisionSprite.pixels[sourcePixelIndex] != 0) {
+                    int[] tileRows = session.terrainMasks[tileX + session.tilesWide * tileY];
+                    if (QuickChatPhraseDefinition.fullTileMask != tileRows) {
+                      if (null == tileRows) {
+                        int[] newTileRows = new int[32];
+                        tileRows = newTileRows;
+                        session.terrainMasks[tileX + tileY * session.tilesWide] = newTileRows;
                       }
-                      var10[var5] = lb.a(var10[var5], 1 << var8Lifetime1);
+                      tileRows[rowY] = lb.a(tileRows[rowY], 1 << bitColumn);
                     }
                   }
-                  var3_int++;
-                  var7++;
+                  sourcePixelIndex++;
+                  sourceColumn++;
                 }
-                var4++;
+                sourceRow++;
                 continue;
               }
             }
@@ -237,61 +237,61 @@ final class LevelObject extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void drawObject(int cameraY, byte guard, int cameraX) {
         Object var4 = null;
-        int var13 = EscapeVector.obfuscationControl;
+        int obfuscationControl = EscapeVector.obfuscationControl;
         try {
           if (this.collisionSprite == null) {
             return;
           }
           var4 = null;
-          int var5 = 0;
-          int var6 = 0;
-          int var7 = 0;
-          int var8 = 0;
+          int glowOffsetX = 0;
+          int glowOffsetY = 0;
+          int leftPadding = 0;
+          int topPadding = 0;
           int var9 = 0;
-          if (this.field_h) {
-            int var9Lifetime1 = this.a((byte) 54);
-            if (var9Lifetime1 > 0) {
-              var5 = this.displayOffsetX;
+          if (this.glowActive) {
+            int glowAlpha = this.glowAlpha((byte) 54);
+            if (glowAlpha > 0) {
+              glowOffsetX = this.displayOffsetX;
               var4 = this.displaySprite;
-              var6 = this.displayOffsetY;
-              if (var5 < 0) {
-                var7 = -var5;
+              glowOffsetY = this.displayOffsetY;
+              if (glowOffsetX < 0) {
+                leftPadding = -glowOffsetX;
               }
-              if (var6 < 0) {
-                var8 = -var6;
+              if (glowOffsetY < 0) {
+                topPadding = -glowOffsetY;
               }
             }
           }
-          int var10 = this.y - param0;
-          if (var10 < 480 + var8 &&
-            var10 > -this.collisionSprite.fullHeight) {
-            int var11 = -param2 + (this.x + BoundedRandomAccessFile.activeSession.worldWidth + BoundedRandomAccessFile.activeSession.worldWidth) - var7;
-            int var12 = this.collisionSprite.fullWidth + var7 + var7;
-            var11 = var11 + var12;
-            var11 = var11 % BoundedRandomAccessFile.activeSession.worldWidth;
-            var11 = var11 - var12;
+          int screenY = this.y - cameraY;
+          if (screenY < 480 + topPadding &&
+            screenY > -this.collisionSprite.fullHeight) {
+            int screenX = -cameraX + (this.x + BoundedRandomAccessFile.activeSession.worldWidth + BoundedRandomAccessFile.activeSession.worldWidth) - leftPadding;
+            int drawWidth = this.collisionSprite.fullWidth + leftPadding + leftPadding;
+            screenX = screenX + drawWidth;
+            screenX = screenX % BoundedRandomAccessFile.activeSession.worldWidth;
+            screenX = screenX - drawWidth;
             boolean decompiledNaturalLoopExit0 = false;
-            while (!(decompiledNaturalLoopExit0 = (var11 >= 640))) {
-              if (var13 == 0) {
+            while (!(decompiledNaturalLoopExit0 = (screenX >= 640))) {
+              if (obfuscationControl == 0) {
                 if (null != var4) {
-                  this.collisionSprite.e(var11 + var7, var10);
-                  ((Sprite) (var4)).c(var5 + var11 + var7, var10 + var6, this.a((byte) 122));
+                  this.collisionSprite.e(screenX + leftPadding, screenY);
+                  ((Sprite) (var4)).c(glowOffsetX + screenX + leftPadding, screenY + glowOffsetY, this.glowAlpha((byte) 122));
                 } else {
-                  this.collisionSprite.e(var11, var10);
+                  this.collisionSprite.e(screenX, screenY);
                 }
-                var11 = var11 + BoundedRandomAccessFile.activeSession.worldWidth;
+                screenX = screenX + BoundedRandomAccessFile.activeSession.worldWidth;
                 continue;
               }
               break;
             }
             if (decompiledNaturalLoopExit0 &&
-              param1 <= 106) {
-              this.a(false, -48, -24);
+              guard <= 106) {
+              this.drawTargetHighlight(false, -48, -24);
             }
-            if (this.field_r) {
-              this.a(false, param2, param0);
+            if (this.missionTarget) {
+              this.drawTargetHighlight(false, cameraX, cameraY);
             }
             return;
           }
@@ -299,17 +299,17 @@ final class LevelObject extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw t.a((Throwable) (var4), "sa.L(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) (var4), "sa.L(" + cameraY + ',' + guard + ',' + cameraX + ')');
         }
     }
 
-    private final int a(byte param0) {
+    private final int glowAlpha(byte guard) {
         try {
-          if (param0 < 36) {
+          if (guard < 36) {
             field_q = (String) null;
           }
           if (this.objectType == 2) {
-            int var2_int = -42 + this.field_o;
+            int var2_int = -42 + this.shotCooldownTicks;
             if (var2_int <= 0) {
               int stackIn_14_0 = 0;
               return stackIn_14_0;
@@ -317,7 +317,7 @@ final class LevelObject extends IntrusiveNode {
             int stackIn_16_0 = 16 * var2_int;
             return stackIn_16_0;
           }
-          double var2_double = (double)(BoundedRandomAccessFile.activeSession.field_Zb / 8);
+          double var2_double = (double)(BoundedRandomAccessFile.activeSession.shieldPulsePhase / 8);
           if (kg.a((byte) -98, this.objectType)) {
             var2_double = (double)(BoundedRandomAccessFile.activeSession.elapsedTicks % 100) / 100.0;
           }
@@ -326,14 +326,14 @@ final class LevelObject extends IntrusiveNode {
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2 = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var2), "sa.M(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "sa.M(" + guard + ')');
         }
     }
 
     private final void refreshSprites(int guard) {
         this.collisionSprite = k.a(this.spriteFrame, (byte) -39, this.objectType);
-        this.displaySprite = this.d(0);
-        fn var2 = this.b(true);
+        this.displaySprite = this.getDisplaySprite(0);
+        fn var2 = this.getDisplayOffset(true);
         if (guard != -7012) {
           return;
         }
@@ -348,13 +348,13 @@ final class LevelObject extends IntrusiveNode {
         }
     }
 
-    LevelObject(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
-        this(param0, param1, param2, param3);
+    LevelObject(int objectId, int objectType, int x, int y, boolean missionTarget, boolean triggersCountdown) {
+        this(objectId, objectType, x, y);
         try {
-          this.field_r = param4;
-          this.field_p = param5;
+          this.missionTarget = missionTarget;
+          this.triggersCountdown = triggersCountdown;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "sa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "sa.<init>(" + objectId + ',' + objectType + ',' + x + ',' + y + ',' + missionTarget + ',' + triggersCountdown + ')');
         }
     }
 
@@ -362,7 +362,7 @@ final class LevelObject extends IntrusiveNode {
         try {
           try {
             if (hi.a(param0, -2)) {
-              DialogueScreen var2 = new DialogueScreen(ic.field_n, ae.field_c, qh.field_j, true);
+              DialogueScreen var2 = new DialogueScreen(SeekerMine.field_n, ae.field_c, qh.field_j, true);
               re.a(1820, var2);
             }
             if (param1 >= -69) {
@@ -388,7 +388,7 @@ final class LevelObject extends IntrusiveNode {
         }
     }
 
-    final boolean e(byte param0) {
+    final boolean countsAsInfrastructure(byte guard) {
         try {
           if (mf.a(this.objectType, -64)) {
             return false;
@@ -402,7 +402,7 @@ final class LevelObject extends IntrusiveNode {
           if (this.objectType == 6) {
             return false;
           }
-          if (param0 != -5) {
+          if (guard != -5) {
             return false;
           }
           if (this.objectType == 7) {
@@ -411,64 +411,64 @@ final class LevelObject extends IntrusiveNode {
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2 = decompiledCaughtParameter0;
-          throw t.a((Throwable) ((Object) var2), "sa.F(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "sa.F(" + guard + ')');
         }
     }
 
     final void removeFromTerrain(GameplaySession session, byte guard) {
         String stackIn_49_2 = null;
-        int var12 = EscapeVector.obfuscationControl;
+        int obfuscationControl = EscapeVector.obfuscationControl;
         try {
           if (this.collisionSprite == null) {
             return;
           }
-          int var3_int = 0;
+          int sourcePixelIndex = 0;
           if (guard < 58) {
             this.refreshSprites(-105);
           }
-          int var4 = 0;
+          int sourceRow = 0;
           scanLoop1: while (true) {
             int stackIn_9_0 = this.collisionSprite.height;
-            if (stackIn_9_0 > var4) {
-              int var5 = var4 + this.collisionSprite.offsetY + this.y;
-              int var6 = var5 >> 5;
-              var5 = var5 & 31;
-              if (var12 != 0) {
+            if (stackIn_9_0 > sourceRow) {
+              int rowY = sourceRow + this.collisionSprite.offsetY + this.y;
+              int tileY = rowY >> 5;
+              rowY = rowY & 31;
+              if (obfuscationControl != 0) {
                 return;
               }
-              int var7 = 0;
-              while (var7 < this.collisionSprite.width) {
-                int var8 = var7 + (this.x + this.collisionSprite.offsetX);
-                int var9 = var8 >> 5;
-                stackIn_9_0 = var8 & 31;
-                int var8Lifetime1 = stackIn_9_0;
-                while (0 > var9) {
-                  var9 = var9 + session.tilesWide;
+              int sourceColumn = 0;
+              while (sourceColumn < this.collisionSprite.width) {
+                int pixelX = sourceColumn + (this.x + this.collisionSprite.offsetX);
+                int tileX = pixelX >> 5;
+                stackIn_9_0 = pixelX & 31;
+                int bitColumn = stackIn_9_0;
+                while (0 > tileX) {
+                  tileX = tileX + session.tilesWide;
                 }
-                var9 = var9 % session.tilesWide;
+                tileX = tileX % session.tilesWide;
                 if (null != BoundedRandomAccessFile.activeSession.dynamicTerrain) {
-                  BoundedRandomAccessFile.activeSession.dynamicTerrain.invalidateTileNeighborhood(var9, var6, true);
+                  BoundedRandomAccessFile.activeSession.dynamicTerrain.invalidateTileNeighborhood(tileX, tileY, true);
                 }
-                if (0 != this.collisionSprite.pixels[var3_int]) {
-                  int[] var10 = session.terrainMasks[session.tilesWide * var6 + var9];
-                  if (var10 != null) {
-                    if (QuickChatPhraseDefinition.fullTileMask == var10) {
-                      int[] array$0 = new int[32];
-                      var10 = array$0;
-                      session.terrainMasks[session.tilesWide * var6 + var9] = array$0;
-                      int var11 = 0;
-                      while (var11 < 32) {
-                        var10[var11] = -1;
-                        var11++;
+                if (0 != this.collisionSprite.pixels[sourcePixelIndex]) {
+                  int[] tileRows = session.terrainMasks[session.tilesWide * tileY + tileX];
+                  if (tileRows != null) {
+                    if (QuickChatPhraseDefinition.fullTileMask == tileRows) {
+                      int[] newTileRows = new int[32];
+                      tileRows = newTileRows;
+                      session.terrainMasks[session.tilesWide * tileY + tileX] = newTileRows;
+                      int fillRow = 0;
+                      while (fillRow < 32) {
+                        tileRows[fillRow] = -1;
+                        fillRow++;
                       }
                     }
-                    var10[var5] = ae.a(var10[var5], ~(1 << var8Lifetime1));
+                    tileRows[rowY] = ae.a(tileRows[rowY], ~(1 << bitColumn));
                   }
                 }
-                var3_int++;
-                var7++;
+                sourcePixelIndex++;
+                sourceColumn++;
               }
-              var4++;
+              sourceRow++;
               continue scanLoop1;
             }
             break;
@@ -502,7 +502,7 @@ final class LevelObject extends IntrusiveNode {
 
     LevelObject(int objectId, int objectType, int x, int y) {
         boolean stackIn_6_1 = false;
-        this.field_o = 0;
+        this.shotCooldownTicks = 0;
         try {
           boolean decompiledFrameRemainder0 = true;
           this.y = y;
@@ -521,9 +521,9 @@ final class LevelObject extends IntrusiveNode {
           if (decompiledFrameRemainder0) {
             stackIn_6_1 = true;
           }
-          this.field_h = stackIn_6_1;
-          this.field_p = false;
-          this.field_r = false;
+          this.glowActive = stackIn_6_1;
+          this.triggersCountdown = false;
+          this.missionTarget = false;
           this.spriteFrame = 0;
           this.refreshSprites(-7012);
           return;

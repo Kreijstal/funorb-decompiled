@@ -90,7 +90,7 @@ final class ja {
                     var12++;
                   }
                   if (var21 != null &&
-                    ic.a(var21, (byte) 112)) {
+                    SeekerMine.a(var21, (byte) 112)) {
                     var8[1][var13] = ck.field_r;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;

@@ -4,12 +4,12 @@
 abstract class sb {
     static wl field_a;
     static int field_h;
-    va field_p;
+    SecondaryIntrusiveDeque field_p;
     static int field_b;
-    va field_l;
+    SecondaryIntrusiveDeque field_l;
     static String field_i;
-    va field_j;
-    va field_n;
+    SecondaryIntrusiveDeque field_j;
+    SecondaryIntrusiveDeque field_n;
     long field_k;
     PacketBuffer field_e;
     int field_f;
@@ -23,7 +23,7 @@ abstract class sb {
         if (param0 == 20) {
           return 20 <= this.a(true) ? true : false;
         }
-        this.field_n = (va) null;
+        this.field_n = (SecondaryIntrusiveDeque) null;
         return 20 <= this.a(true) ? true : false;
     }
 
@@ -59,7 +59,7 @@ abstract class sb {
         if (param0 == 20) {
           return 20 <= this.a((byte) 88) ? true : false;
         }
-        this.field_n = (va) null;
+        this.field_n = (SecondaryIntrusiveDeque) null;
         return 20 <= this.a((byte) 88) ? true : false;
     }
 
@@ -82,12 +82,12 @@ abstract class sb {
             if (this.a(true) >= 20) {
               throw new RuntimeException();
             }
-            this.field_p.a(-1, var8);
+            this.field_p.addLast(-1, var8);
           } else {
             if (this.a((byte) 88) >= 20) {
               throw new RuntimeException();
             }
-            this.field_j.a(~param2, var8);
+            this.field_j.addLast(~param2, var8);
           }
           return var8;
         }
@@ -102,21 +102,21 @@ abstract class sb {
           if (this.a(true) >= 20) {
             throw new RuntimeException();
           }
-          this.field_p.a(-1, var8Lifetime1);
+          this.field_p.addLast(-1, var8Lifetime1);
         } else {
           if (this.a((byte) 88) >= 20) {
             throw new RuntimeException();
           }
-          this.field_j.a(~param2, var8Lifetime1);
+          this.field_j.addLast(~param2, var8Lifetime1);
         }
         return var8Lifetime1;
     }
 
     sb() {
-        this.field_p = new va();
-        this.field_l = new va();
-        this.field_j = new va();
-        this.field_n = new va();
+        this.field_p = new SecondaryIntrusiveDeque();
+        this.field_l = new SecondaryIntrusiveDeque();
+        this.field_j = new SecondaryIntrusiveDeque();
+        this.field_n = new SecondaryIntrusiveDeque();
         this.field_e = new PacketBuffer(6);
         this.field_g = 0;
         this.field_m = (byte) 0;

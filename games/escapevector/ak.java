@@ -1144,9 +1144,9 @@ final class ak {
         int var3 = this.i(-74);
         int var4 = this.a(1, var3);
         int var5 = di.field_d.field_h;
-        rb.a(this.field_k, var2, var5, (byte) -55);
-        rb.a(this.field_i, var4, var5, (byte) -114);
-        rb.a(this.field_j, -1, var5, (byte) -97);
+        HudMessage.a(this.field_k, var2, var5, (byte) -55);
+        HudMessage.a(this.field_i, var4, var5, (byte) -114);
+        HudMessage.a(this.field_j, -1, var5, (byte) -97);
     }
 
     private final String j(int param0) {

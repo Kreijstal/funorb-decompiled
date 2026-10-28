@@ -90,7 +90,7 @@ final class nm {
 
     final static void a(byte param0, int param1, dk[] param2) {
         try {
-          rb.a(param2, -1, param1, (byte) -28);
+          HudMessage.a(param2, -1, param1, (byte) -28);
           if (param0 > -50) {
             field_a = (hh) null;
           }

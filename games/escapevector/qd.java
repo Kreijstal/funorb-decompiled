@@ -91,7 +91,7 @@ final class qd extends IntrusiveNode {
             be.field_b.r(94);
             return;
           }
-          var1 = am.field_g;
+          var1 = LaserGateSpan.field_g;
           if (var1 > 0) {
             if (var1 == 1) {
               dj.field_b = cf.field_a;
@@ -109,7 +109,7 @@ final class qd extends IntrusiveNode {
         if (eb.field_H) {
           be.field_b.r(94);
         } else {
-          var1 = am.field_g;
+          var1 = LaserGateSpan.field_g;
           if (var1 > 0) {
             if (var1 == 1) {
               dj.field_b = cf.field_a;

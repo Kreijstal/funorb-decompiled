@@ -33,49 +33,49 @@ final class ei extends IntrusiveNode {
         if (param9 == -15733) {
           if (param1 < param8) {
             if (param5 > param8) {
-              va.a(param6, param4, param11, param13, SoftwareRasterizer.pixels, param0, param15, param2, param1, param8, param5, true, param12, param7, param14, param3, param10);
+              SecondaryIntrusiveDeque.a(param6, param4, param11, param13, SoftwareRasterizer.pixels, param0, param15, param2, param1, param8, param5, true, param12, param7, param14, param3, param10);
               return;
             }
             if (param5 > param1) {
-              va.a(param4, param6, param11, param10, SoftwareRasterizer.pixels, param7, param3, param2, param1, param5, param8, true, param12, param0, param14, param15, param13);
+              SecondaryIntrusiveDeque.a(param4, param6, param11, param10, SoftwareRasterizer.pixels, param7, param3, param2, param1, param5, param8, true, param12, param0, param14, param15, param13);
               return;
             }
-            va.a(param4, param12, param10, param11, SoftwareRasterizer.pixels, param2, param14, param7, param5, param1, param8, true, param6, param0, param3, param15, param13);
+            SecondaryIntrusiveDeque.a(param4, param12, param10, param11, SoftwareRasterizer.pixels, param2, param14, param7, param5, param1, param8, true, param6, param0, param3, param15, param13);
             return;
           }
           if (param1 < param5) {
-            va.a(param6, param12, param13, param11, SoftwareRasterizer.pixels, param2, param14, param0, param8, param1, param5, true, param4, param7, param15, param3, param10);
+            SecondaryIntrusiveDeque.a(param6, param12, param13, param11, SoftwareRasterizer.pixels, param2, param14, param0, param8, param1, param5, true, param4, param7, param15, param3, param10);
             return;
           }
           if (param8 >= param5) {
-            va.a(param12, param4, param10, param13, SoftwareRasterizer.pixels, param0, param15, param7, param5, param8, param1, true, param6, param2, param3, param14, param11);
+            SecondaryIntrusiveDeque.a(param12, param4, param10, param13, SoftwareRasterizer.pixels, param0, param15, param7, param5, param8, param1, true, param6, param2, param3, param14, param11);
             return;
           }
-          va.a(param12, param6, param13, param10, SoftwareRasterizer.pixels, param7, param3, param0, param8, param5, param1, true, param4, param2, param15, param14, param11);
+          SecondaryIntrusiveDeque.a(param12, param6, param13, param10, SoftwareRasterizer.pixels, param7, param3, param0, param8, param5, param1, true, param4, param2, param15, param14, param11);
           return;
         }
         field_n = (String) null;
         if (param1 < param8) {
           if (param5 > param8) {
-            va.a(param6, param4, param11, param13, SoftwareRasterizer.pixels, param0, param15, param2, param1, param8, param5, true, param12, param7, param14, param3, param10);
+            SecondaryIntrusiveDeque.a(param6, param4, param11, param13, SoftwareRasterizer.pixels, param0, param15, param2, param1, param8, param5, true, param12, param7, param14, param3, param10);
             return;
           }
           if (param5 > param1) {
-            va.a(param4, param6, param11, param10, SoftwareRasterizer.pixels, param7, param3, param2, param1, param5, param8, true, param12, param0, param14, param15, param13);
+            SecondaryIntrusiveDeque.a(param4, param6, param11, param10, SoftwareRasterizer.pixels, param7, param3, param2, param1, param5, param8, true, param12, param0, param14, param15, param13);
             return;
           }
-          va.a(param4, param12, param10, param11, SoftwareRasterizer.pixels, param2, param14, param7, param5, param1, param8, true, param6, param0, param3, param15, param13);
+          SecondaryIntrusiveDeque.a(param4, param12, param10, param11, SoftwareRasterizer.pixels, param2, param14, param7, param5, param1, param8, true, param6, param0, param3, param15, param13);
           return;
         }
         if (param1 < param5) {
-          va.a(param6, param12, param13, param11, SoftwareRasterizer.pixels, param2, param14, param0, param8, param1, param5, true, param4, param7, param15, param3, param10);
+          SecondaryIntrusiveDeque.a(param6, param12, param13, param11, SoftwareRasterizer.pixels, param2, param14, param0, param8, param1, param5, true, param4, param7, param15, param3, param10);
           return;
         }
         if (param8 >= param5) {
-          va.a(param12, param4, param10, param13, SoftwareRasterizer.pixels, param0, param15, param7, param5, param8, param1, true, param6, param2, param3, param14, param11);
+          SecondaryIntrusiveDeque.a(param12, param4, param10, param13, SoftwareRasterizer.pixels, param0, param15, param7, param5, param8, param1, true, param6, param2, param3, param14, param11);
           return;
         }
-        va.a(param12, param6, param13, param10, SoftwareRasterizer.pixels, param7, param3, param0, param8, param5, param1, true, param4, param2, param15, param14, param11);
+        SecondaryIntrusiveDeque.a(param12, param6, param13, param10, SoftwareRasterizer.pixels, param7, param3, param0, param8, param5, param1, true, param4, param2, param15, param14, param11);
     }
 
     final static vj a(int param0, boolean param1, long param2, String param3, String param4) {

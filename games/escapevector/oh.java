@@ -22,8 +22,8 @@ final class oh extends IntrusiveNode {
           rh.field_O[0] = gk.field_a.nextInt();
           rh.field_O[1] = gk.field_a.nextInt();
           qj.field_a.position = 0;
-          rh.field_O[2] = (int)(va.field_b >> 32);
-          rh.field_O[3] = (int)va.field_b;
+          rh.field_O[2] = (int)(SecondaryIntrusiveDeque.field_b >> 32);
+          rh.field_O[3] = (int)SecondaryIntrusiveDeque.field_b;
           qj.field_a.a((byte) 126, rh.field_O[0]);
           qj.field_a.a((byte) 123, rh.field_O[1]);
           qj.field_a.a((byte) 124, rh.field_O[2]);

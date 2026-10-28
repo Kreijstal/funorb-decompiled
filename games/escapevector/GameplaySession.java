@@ -6,112 +6,112 @@ import java.util.*;
 
 final class GameplaySession {
     DynamicTerrainRenderer dynamicTerrain;
-    private int field_T;
+    private int levelStartTicks;
     int[][] terrainMasks;
     static String field_cc;
     private int field_sc;
     int tilesWide;
     private int field_c;
-    private int field_S;
+    private int destroyedInfrastructureCount;
     Vector levelObjects;
     int worldHeight;
     private int[][] initialTerrainMasks;
-    private int field_L;
-    private va field_Ab;
+    private int initialInfrastructureCount;
+    private SecondaryIntrusiveDeque pendingTargetEffects;
     boolean field_rc;
     boolean timeHackMode;
     boolean easyMode;
     int tilesHigh;
     static int[] field_xb;
-    IntrusiveDeque field_k;
-    private int field_Rb;
-    int field_Q;
+    IntrusiveDeque missionTargets;
+    private int firstLevelIndex;
+    int objectiveType;
     private int secondaryTheme;
-    private int field_nc;
+    private int initialTilesHigh;
     private int terrainTheme;
     private byte[][] levelData;
     private ce field_Y;
     int levelIndex;
     int gameMode;
     int worldWidth;
-    private IntrusiveDeque field_vb;
+    private IntrusiveDeque pointCloudEffects;
     private od field_Db;
-    private PointCloudEffect field_Xb;
+    private PointCloudEffect exhaustParticles;
     int spawnXQ16;
-    private int field_I;
+    private int shipAngle256;
     private int field_Kb;
     int shipXQ16;
-    private int field_qc;
-    private boolean field_lb;
-    private int field_ib;
+    private int activeExhaustParticles;
+    private boolean triShotEnabled;
+    private int thrustAccelerationQ16;
     private int field_Ob;
     private boolean field_W;
     private int field_O;
     private int field_pc;
-    private int field_ac;
+    private int fuel;
     private int field_E;
     private int shipVelocityXQ16;
     private int field_x;
     private int field_o;
     private int spawnYQ16;
-    private int field_e;
-    private boolean field_Bb;
-    private int field_Tb;
-    private int field_mb;
+    private int pickupAnimationTicks;
+    private boolean shieldActive;
+    private int shieldEnergy;
+    private int tetheredXQ16;
     private IntrusiveNode field_nb;
-    private int field_U;
-    private int field_tb;
-    private int field_Sb;
+    private int initialFuel;
+    private int rockBusterAmmo;
+    private int exhaustWriteIndex;
     int shipYQ16;
-    int field_Ub;
+    int tetheredObjectType;
     private int shipVelocityYQ16;
-    private int field_gc;
-    private IntrusiveDeque field_G;
+    private int initialShieldEnergy;
+    private IntrusiveDeque bullets;
     int field_M;
-    private int field_qb;
+    private int gravityQ16;
     boolean field_ec;
-    private IntrusiveDeque field_N;
+    private IntrusiveDeque seekerMines;
     private int field_w;
     boolean field_Jb;
-    private int field_J;
-    int field_Zb;
-    private int field_m;
+    private int levelScore;
+    int shieldPulsePhase;
+    private int shotCooldownTicks;
     private int field_Hb;
-    boolean field_Gb;
+    boolean shipDestroyed;
     int score;
     private boolean field_q;
-    private int field_yb;
-    private int field_A;
-    private IntrusiveDeque field_tc;
+    private int rockBusterCooldownTicks;
+    private int livesRemaining;
+    private IntrusiveDeque hudMessageQueue;
     boolean field_Ib;
     private boolean field_jc;
     int elapsedTicks;
-    private boolean field_rb;
+    private boolean shipLanded;
     private int field_pb;
     private int field_ic;
     boolean field_Cb;
-    private IntrusiveDeque field_hb;
+    private IntrusiveDeque rockBusters;
     private int field_u;
     private boolean field_kc;
     private int field_bc;
     private int field_d;
     private int[] field_g;
     private Sprite field_i;
-    boolean field_a;
-    private String field_h;
-    int field_X;
+    boolean countdownActive;
+    private String hudMessageText;
+    int countdownTicks;
     private int field_y;
     private int field_sb;
     private int field_Qb;
-    private boolean field_db;
+    private boolean shieldUsedThisLevel;
     private int[] field_Lb;
-    private int field_l;
+    private int countdownTrigger;
     private int field_dc;
     private int field_z;
-    private int field_ab;
+    private int hudMessageTicks;
     private int field_j;
     Minimap minimap;
-    private IntrusiveDeque field_s;
+    private IntrusiveDeque initialPowerups;
     private boolean field_zb;
     private hl field_f;
     private hl field_wb;
@@ -120,14 +120,14 @@ final class GameplaySession {
     private hl field_Eb;
     private hl field_Wb;
     private hl field_r;
-    private IntrusiveDeque field_C;
+    private IntrusiveDeque laserGateSpans;
     hl field_lc;
     private hl field_Z;
-    private int field_ub;
+    private int laserGateCount;
     private hl field_jb;
     private hl field_R;
     private int field_oc;
-    private boolean field_b;
+    private boolean laserGateDestroyed;
 
     private final void c(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var12 = EscapeVector.obfuscationControl;
@@ -162,8 +162,8 @@ final class GameplaySession {
         int[] var26 = var28;
         int[] var16 = var26;
         if (param1 < 78) {
-          pi var25 = (pi) null;
-          this.a((pi) null, -78);
+          RockBuster var25 = (RockBuster) null;
+          this.detonateRockBuster((RockBuster) null, -78);
         }
         if (var26 == null &&
           vh.field_i == 0) {
@@ -195,21 +195,21 @@ final class GameplaySession {
                 (-param10 + param12) * (var20 - param6) < (param3 - param6) * (-param10 + var19)) {
                 var21_ref_hg = IntrusiveDeque.field_f.first(false);
                 for (var22 = 0; vh.field_i > var22; var22++) {
-                  am var29_ref = (am) (var21_ref_hg);
+                  LaserGateSpan var29_ref = (LaserGateSpan) (var21_ref_hg);
                   stackIn_11_0Lifetime1 = ~var20;
-                  stackIn_11_1Lifetime1 = ~var29_ref.field_j;
+                  stackIn_11_1Lifetime1 = ~var29_ref.y;
                   if (stackIn_11_0Lifetime1 == stackIn_11_1Lifetime1 &&
-                    var29_ref.field_i <= var19 &&
-                    var29_ref.field_h > var19) {
+                    var29_ref.leftX <= var19 &&
+                    var29_ref.rightX > var19) {
                     this.field_q = true;
                     return;
                   }
                   var21_ref_hg = var21_ref_hg.next;
                 }
-                if (!this.field_rb &&
+                if (!this.shipLanded &&
                   var26 != null &&
                   this.a(var30, var18, (byte) -74, var17)) {
-                  if ((255 & 24 + this.field_I) > 48) {
+                  if ((255 & 24 + this.shipAngle256) > 48) {
                     this.field_q = true;
                     return;
                   }
@@ -230,21 +230,21 @@ final class GameplaySession {
               ((-param5 + param3) * (-param0 + var19)) < ((-param0 + param12) * (var20 - param5))) {
               var21_ref_hg = IntrusiveDeque.field_f.first(false);
               for (var22 = 0; vh.field_i > var22; var22++) {
-                am var27_ref = (am) (var21_ref_hg);
+                LaserGateSpan var27_ref = (LaserGateSpan) (var21_ref_hg);
                 stackIn_11_0Lifetime1 = ~var20;
-                stackIn_11_1Lifetime1 = ~var27_ref.field_j;
+                stackIn_11_1Lifetime1 = ~var27_ref.y;
                 if (stackIn_11_0Lifetime1 == stackIn_11_1Lifetime1 &&
-                  var19 >= var27_ref.field_i &&
-                  var27_ref.field_h > var19) {
+                  var19 >= var27_ref.leftX &&
+                  var27_ref.rightX > var19) {
                   this.field_q = true;
                   return;
                 }
                 var21_ref_hg = var21_ref_hg.next;
               }
-              if (!this.field_rb &&
+              if (!this.shipLanded &&
                 var26 != null &&
                 this.a(var30, var18, (byte) -74, var17)) {
-                if ((255 & this.field_I + 24) > 48) {
+                if ((255 & this.shipAngle256 + 24) > 48) {
                   this.field_q = true;
                   return;
                 }
@@ -271,7 +271,7 @@ final class GameplaySession {
         if (10 != param0) {
           return;
         }
-        this.field_lb = true;
+        this.triShotEnabled = true;
         af.a(0);
         this.a(-128, hd.field_a);
         if (param1 != 59) {
@@ -299,22 +299,22 @@ final class GameplaySession {
         return (param0 & 65280) >> 8;
     }
 
-    final void D(int param0) {
-        if (param0 >= this.tilesHigh) {
-          int var2 = param0 + 1;
-          int[][] var3 = new int[this.tilesWide * var2][];
-          for (int var4 = 0; var4 < this.tilesWide * this.tilesHigh; var4++) {
-            var3[var4] = this.terrainMasks[var4];
+    final void ensureTerrainRow(int tileY) {
+        if (tileY >= this.tilesHigh) {
+          int requiredTilesHigh = tileY + 1;
+          int[][] expandedTerrain = new int[this.tilesWide * requiredTilesHigh][];
+          for (int tileIndex = 0; tileIndex < this.tilesWide * this.tilesHigh; tileIndex++) {
+            expandedTerrain[tileIndex] = this.terrainMasks[tileIndex];
           }
-          int var5 = this.tilesWide * this.tilesHigh;
-          int var4Lifetime1 = var5;
-          while (var5 < this.tilesWide * var2) {
-            var3[var5] = QuickChatPhraseDefinition.fullTileMask;
-            var5++;
+          int fillIndex = this.tilesWide * this.tilesHigh;
+          int initialFillIndex = fillIndex;
+          while (fillIndex < this.tilesWide * requiredTilesHigh) {
+            expandedTerrain[fillIndex] = QuickChatPhraseDefinition.fullTileMask;
+            fillIndex++;
           }
-          this.tilesHigh = var2;
+          this.tilesHigh = requiredTilesHigh;
           this.worldHeight = this.tilesHigh << 5;
-          this.terrainMasks = var3;
+          this.terrainMasks = expandedTerrain;
           return;
         }
     }
@@ -328,40 +328,40 @@ final class GameplaySession {
           if (this.field_nb != null) {
             var7_ref = (vh) (this.field_nb.next);
           } else {
-            var7_ref = (vh) (this.field_G.first(false));
+            var7_ref = (vh) (this.bullets.first(false));
           }
           var7_ref.a(param1, false, param5, param2, (byte) -124, param4, param0, 250);
           this.field_x = this.field_x + 1;
           this.field_nb = (IntrusiveNode) ((Object) var7_ref);
         } else {
           IntrusiveNode var8 = (IntrusiveNode) ((Object) new vh(param1, param0, param5, param2, param4, 250));
-          this.field_G.addLast(-12328, var8);
+          this.bullets.addLast(-12328, var8);
           this.field_O = this.field_O + 1;
           this.field_x = this.field_x + 1;
           this.field_nb = var8;
         }
         if (param3 != 256) {
-          this.D(-37);
+          this.ensureTerrainRow(-37);
         }
     }
 
     private final void loadTerrain(boolean headerOnly, int formatVersion, int guard, DataInputStream input) throws IOException {
-        TerrainMap var5 = new TerrainMap(input, formatVersion);
-        vl.b(1, var5.terrainTheme);
+        TerrainMap terrain = new TerrainMap(input, formatVersion);
+        vl.b(1, terrain.terrainTheme);
         if (guard != 640) {
           this.x(-13);
         }
-        this.terrainTheme = var5.terrainTheme;
-        this.secondaryTheme = var5.secondaryTheme;
+        this.terrainTheme = terrain.terrainTheme;
+        this.secondaryTheme = terrain.secondaryTheme;
         if (headerOnly) {
           return;
         }
         try {
-          this.terrainMasks = var5.tileMasks;
-          this.worldWidth = var5.pixelWidth;
-          this.worldHeight = var5.pixelHeight;
-          this.tilesWide = var5.tilesWide;
-          this.tilesHigh = var5.tilesHigh;
+          this.terrainMasks = terrain.tileMasks;
+          this.worldWidth = terrain.pixelWidth;
+          this.worldHeight = terrain.pixelHeight;
+          this.tilesWide = terrain.tilesWide;
+          this.tilesHigh = terrain.tilesHigh;
           this.snapshotTerrain((byte) 111);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oe.SF(" + headerOnly + ',' + formatVersion + ',' + guard + ',' + (input != null ? "{...}" : "null") + ')');
@@ -373,7 +373,7 @@ final class GameplaySession {
         ce.field_f.c(0, this.gameMode, this.levelIndex);
         this.o(0);
         if (this.levelIndex == 15 &&
-          this.field_Rb <= 0) {
+          this.firstLevelIndex <= 0) {
           if (90000 >= this.elapsedTicks) {
             this.a(this.gameMode, false, 9, 246);
           }
@@ -381,19 +381,19 @@ final class GameplaySession {
             this.a(this.gameMode, false, 10, 245);
           }
         }
-        if (this.field_ac > 2500) {
+        if (this.fuel > 2500) {
           this.a(this.gameMode, false, 6, 249);
         }
-        if (this.field_b) {
+        if (this.laserGateDestroyed) {
           this.a(this.gameMode, false, 7, 248);
         }
         if (param0 == this.levelIndex &&
-          1700 == this.field_ib) {
+          1700 == this.thrustAccelerationQ16) {
           this.a(this.gameMode, false, 13, 242);
         }
         if (9 == this.levelIndex &&
-          !this.field_db &&
-          this.field_m < 0) {
+          !this.shieldUsedThisLevel &&
+          this.shotCooldownTicks < 0) {
           this.a(this.gameMode, false, 14, 241);
         }
         if (this.levelIndex == 10) {
@@ -420,7 +420,7 @@ final class GameplaySession {
           }
         }
         if (this.levelIndex == 14 &&
-          !this.field_db) {
+          !this.shieldUsedThisLevel) {
           this.a(this.gameMode, false, 16, 239);
         }
     }
@@ -440,8 +440,8 @@ final class GameplaySession {
           return qm.field_c * 6144 / 64;
         }
         if (param2 != 96) {
-          am var7 = (am) null;
-          this.a((am) null, (byte) 83);
+          LaserGateSpan var7 = (LaserGateSpan) null;
+          this.removeLaserGateSpan((LaserGateSpan) null, (byte) 83);
         }
         return qm.field_c * param0 / (var5 / 96);
     }
@@ -452,12 +452,12 @@ final class GameplaySession {
           return (String) null;
         }
         String var3 = "";
-        if (this.field_tb == 0 &&
+        if (this.rockBusterAmmo == 0 &&
           param1 == 1) {
           var3 = ef.field_k;
         } else if (param1 == 1) {
           var3 = Minimap.field_p;
-        } else if (this.field_tb == 0 &&
+        } else if (this.rockBusterAmmo == 0 &&
           param1 == 5) {
           var3 = dd.field_b;
         } else if (5 == param1) {
@@ -468,78 +468,78 @@ final class GameplaySession {
 
     private final void a(int param0, boolean param1) {
         this.stopSessionAudio((byte) -41);
-        this.field_vb.clear((byte) 118);
+        this.pointCloudEffects.clear((byte) 118);
         this.field_Db = new od(this);
-        this.field_Xb.f((byte) -125);
+        this.exhaustParticles.f((byte) -125);
         if (param0 != 24661) {
           hh var4 = (hh) null;
           this.a(-10, -80, (Sprite) null, 116, (hh) null);
         }
         ji.a(true);
         this.field_pc = 0;
-        this.field_qc = 0;
-        this.field_tc = new IntrusiveDeque();
+        this.activeExhaustParticles = 0;
+        this.hudMessageQueue = new IntrusiveDeque();
         this.field_sb = 0;
     }
 
-    private final void c(int param0) {
-        if (this.field_ab > param0) {
-          this.field_ab = this.field_ab - 1;
-          if (0 == this.field_ab) {
-            this.field_h = null;
+    private final void updateHudMessage(int minimumTicks) {
+        if (this.hudMessageTicks > minimumTicks) {
+          this.hudMessageTicks = this.hudMessageTicks - 1;
+          if (0 == this.hudMessageTicks) {
+            this.hudMessageText = null;
           }
         }
-        if (this.field_h == null) {
-          rb var2 = this.B(-27521);
+        if (this.hudMessageText == null) {
+          HudMessage var2 = this.pollHudMessage(-27521);
           if (var2 == null) {
             return;
           }
-          this.field_h = var2.field_g;
-          this.field_ab = var2.field_i;
+          this.hudMessageText = var2.text;
+          this.hudMessageTicks = var2.durationTicks;
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
-        this.field_C.addFirst(new am(param2, param0, param1), 8364);
-        if (param3 != 2134602960) {
+    private final void addLaserGateSpan(int rightX, int y, int leftX, int guard) {
+        this.laserGateSpans.addFirst(new LaserGateSpan(leftX, rightX, y), 8364);
+        if (guard != 2134602960) {
           this.field_j = 65;
         }
-        this.field_ub = this.field_ub + 1;
+        this.laserGateCount = this.laserGateCount + 1;
     }
 
-    private final LevelObject a(DataInputStream param0, byte param1, int param2, int param3) throws IOException {
-        LevelObject var5 = null;
+    private final LevelObject readLevelObject(DataInputStream input, byte guard, int objectId, int formatVersion) throws IOException {
+        LevelObject object = null;
         String stackIn_15_2 = null;
         try {
-          int var6 = param0.readUnsignedByte();
-          if (param3 < 2 &&
-            var6 >= 8) {
-            var6++;
+          int objectType = input.readUnsignedByte();
+          if (formatVersion < 2 &&
+            objectType >= 8) {
+            objectType++;
           }
-          int var7 = param0.readUnsignedShort();
-          int var8 = -8 / ((param1 + 7) / 47);
-          int var9 = param0.readUnsignedShort();
-          if (param3 < 5) {
-            var5 = new LevelObject(param2, var6, var7, var9);
+          int x = input.readUnsignedShort();
+          int guardQuotient = -8 / ((guard + 7) / 47);
+          int y = input.readUnsignedShort();
+          if (formatVersion < 5) {
+            object = new LevelObject(objectId, objectType, x, y);
           } else {
-            var5 = this.a(param0, var7, param3, false, var6, var9, param2);
+            object = this.readLevelObjectFlags(input, x, formatVersion, false, objectType, y, objectId);
           }
-          if (var6 == 2 &&
-            11 > param3) {
+          if (objectType == 2 &&
+            11 > formatVersion) {
           }
-          LevelObject stackIn_11_0 = var5;
-          return stackIn_11_0;
+          LevelObject decodedObject = object;
+          return decodedObject;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5_ref = decompiledCaughtException;
           RuntimeException stackIn_14_0 = var5_ref;
           StringBuilder stackIn_14_1 = new StringBuilder().append("oe.IF(");
-          if (param0 == null) {
+          if (input == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(guard).append(',').append(objectId).append(',').append(formatVersion).append(')').toString());
         }
     }
 
@@ -608,7 +608,7 @@ final class GameplaySession {
 
     private final void snapshotTerrain(byte guard) {
         int var4 = EscapeVector.obfuscationControl;
-        this.field_nc = this.tilesHigh;
+        this.initialTilesHigh = this.tilesHigh;
         if (guard <= 110) {
           return;
         }
@@ -627,13 +627,13 @@ final class GameplaySession {
     }
 
     private final void a(byte param0) {
-        if (this.field_Gb &&
-          this.field_A == 0) {
+        if (this.shipDestroyed &&
+          this.livesRemaining == 0) {
           Sprite var2_ref_ed = ij.field_g;
           int var3 = -var2_ref_ed.fullWidth + 640 >> 1;
           int var4 = 480 - var2_ref_ed.fullHeight >> 1;
-          if (this.field_a &&
-            this.field_X < 0) {
+          if (this.countdownActive &&
+            this.countdownTicks < 0) {
             int var5 = 1;
             var2_ref_ed.a(var3, var4, var5);
           } else {
@@ -665,14 +665,14 @@ final class GameplaySession {
         pl.field_n.b(this.field_fb);
         Object var2 = pl.field_n;
         synchronized (var2) {
-          pi var3 = (pi) (this.field_hb.first(false));
+          RockBuster var3 = (RockBuster) (this.rockBusters.first(false));
           while (true) {
             if (var3 != null) {
-              int stackIn_15_0 = var3.field_r;
+              int stackIn_15_0 = var3.remainingFlightTicks;
               if (stackIn_15_0 != 0) {
-                pl.field_n.b(var3.field_o);
+                pl.field_n.b(var3.flightSound);
               }
-              var3 = (pi) (this.field_hb.next((byte) 70));
+              var3 = (RockBuster) (this.rockBusters.next((byte) 70));
               continue;
             }
             break;
@@ -681,13 +681,13 @@ final class GameplaySession {
           if (stackIn_15_0Lifetime1 <= 60) {
             this.a(93, 112, 30, 56, 98, -40, 38, -71);
           }
-          ic var3_ref = (ic) (this.field_N.first(false));
+          SeekerMine var3_ref = (SeekerMine) (this.seekerMines.first(false));
           while (var3_ref != null) {
-            if (null != var3_ref.field_g) {
-              pl.field_n.b(var3_ref.field_g);
-              pl.field_n.b(var3_ref.field_m);
+            if (null != var3_ref.flightSound) {
+              pl.field_n.b(var3_ref.flightSound);
+              pl.field_n.b(var3_ref.proximitySound);
             }
-            var3_ref = (ic) (this.field_N.next((byte) 70));
+            var3_ref = (SeekerMine) (this.seekerMines.next((byte) 70));
           }
         }
     }
@@ -700,7 +700,7 @@ final class GameplaySession {
           param1 = param1 + param3.offsetY;
           int var5_int = param3.width + param2 - 1;
           int var6 = -1 + (param3.height + param1);
-          double var7 = (double)this.field_I * 0.02454369260617026;
+          double var7 = (double)this.shipAngle256 * 0.02454369260617026;
           int var9 = (int)(2048.0 * Math.sin(var7));
           int var10 = -(int)(2048.0 * Math.cos(var7));
           int var11 = -var10;
@@ -804,32 +804,32 @@ final class GameplaySession {
     }
 
     private final IntrusiveNode a(IntrusiveNode param0, int param1, int param2, boolean param3, int param4) {
-        am var6_ref = null;
+        LaserGateSpan var6_ref = null;
         String stackIn_14_2 = null;
         try {
           if (!param3) {
-            this.field_S = -120;
+            this.destroyedInfrastructureCount = -120;
           }
           if (aa.field_a != 0 &&
             ~vh.field_i != ~aa.field_a) {
             Object var6 = null;
             if (param0 == null) {
-              var6_ref = (am) (IntrusiveDeque.field_f.first(false));
+              var6_ref = (LaserGateSpan) (IntrusiveDeque.field_f.first(false));
             } else {
-              var6_ref = (am) (param0.next);
+              var6_ref = (LaserGateSpan) (param0.next);
             }
             vh.field_i = vh.field_i + 1;
-            var6_ref.field_j = param4;
-            var6_ref.field_h = param1;
-            var6_ref.field_i = param2;
-            am stackIn_8_0 = var6_ref;
+            var6_ref.y = param4;
+            var6_ref.rightX = param1;
+            var6_ref.leftX = param2;
+            LaserGateSpan stackIn_8_0 = var6_ref;
             return (IntrusiveNode) ((Object) stackIn_8_0);
           }
-          am var6_refLifetime1 = new am(param2, param1, param4);
+          LaserGateSpan var6_refLifetime1 = new LaserGateSpan(param2, param1, param4);
           IntrusiveDeque.field_f.addLast(-12328, var6_refLifetime1);
           aa.field_a = aa.field_a + 1;
           vh.field_i = vh.field_i + 1;
-          am stackIn_10_0 = var6_refLifetime1;
+          LaserGateSpan stackIn_10_0 = var6_refLifetime1;
           return (IntrusiveNode) ((Object) stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -882,12 +882,12 @@ final class GameplaySession {
               if (stackIn_8_0Lifetime1 != stackIn_8_1Lifetime1) {
                 IntrusiveNode var16 = IntrusiveDeque.field_f.first(false);
                 for (int var17 = 0; vh.field_i > var17; var17++) {
-                  am var18_ref = (am) (var16);
+                  LaserGateSpan var18_ref = (LaserGateSpan) (var16);
                   int stackIn_11_0Lifetime1 = var12 + param6;
-                  int stackIn_11_1Lifetime1 = var18_ref.field_j;
+                  int stackIn_11_1Lifetime1 = var18_ref.y;
                   if (stackIn_11_0Lifetime1 == stackIn_11_1Lifetime1 &&
-                    (var13 + param3) >= var18_ref.field_i &&
-                    (var13 + param3) < var18_ref.field_h) {
+                    (var13 + param3) >= var18_ref.leftX &&
+                    (var13 + param3) < var18_ref.rightX) {
                     return true;
                   }
                   var16 = var16.next;
@@ -926,7 +926,7 @@ final class GameplaySession {
     private final void A(byte param0) {
         Object var25 = null;
         int var26 = EscapeVector.obfuscationControl;
-        double var2 = (double)this.field_I * 0.02454369260617026;
+        double var2 = (double)this.shipAngle256 * 0.02454369260617026;
         int var4 = (int)(Math.sin(var2) * 2048.0);
         int var5 = -(int)(Math.cos(var2) * 2048.0);
         int var6 = -var5;
@@ -978,13 +978,13 @@ final class GameplaySession {
         this.a(94, var22, var20, var19, var21);
         IntrusiveNode var23 = IntrusiveDeque.field_f.first(false);
         for (int var24 = 0; vh.field_i > var24; var24++) {
-          am var25_ref = (am) (var23);
+          LaserGateSpan var25_ref = (LaserGateSpan) (var23);
           var23 = var23.next;
-          var25_ref.field_i = var25_ref.field_i << 11;
-          var25_ref.field_h = var25_ref.field_h << 11;
-          var25_ref.field_j = var25_ref.field_j << 11;
+          var25_ref.leftX = var25_ref.leftX << 11;
+          var25_ref.rightX = var25_ref.rightX << 11;
+          var25_ref.y = var25_ref.y << 11;
         }
-        if (this.field_rb &&
+        if (this.shipLanded &&
           vh.field_i == 0) {
           return;
         }
@@ -1011,23 +1011,23 @@ final class GameplaySession {
         }
     }
 
-    private final void a(byte param0, DataInputStream param1, int param2) throws IOException {
+    private final void readSpawnAndFuel(byte guard, DataInputStream input, int formatVersion) throws IOException {
         try {
-          if (param2 < 3) {
+          if (formatVersion < 3) {
             this.spawnYQ16 = -8388608;
             this.spawnXQ16 = this.worldWidth << 15;
-            this.field_U = 2500;
+            this.initialFuel = 2500;
           } else {
-            this.spawnXQ16 = param1.readInt();
-            this.spawnYQ16 = param1.readInt();
-            this.field_U = param1.readInt();
-            if (this.field_U <= 0) {
-              this.field_U = 2500;
+            this.spawnXQ16 = input.readInt();
+            this.spawnYQ16 = input.readInt();
+            this.initialFuel = input.readInt();
+            if (this.initialFuel <= 0) {
+              this.initialFuel = 2500;
             }
           }
-          int var4_int = -29 / ((79 - param0) / 37);
+          int guardQuotient = -29 / ((79 - guard) / 37);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.FB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "oe.FB(" + guard + ',' + (input != null ? "{...}" : "null") + ',' + formatVersion + ')');
         }
     }
 
@@ -1066,19 +1066,19 @@ final class GameplaySession {
         return true;
     }
 
-    private final boolean i(int param0) {
-        int var2 = 92 / ((param0 + 57) / 36);
-        if (this.field_l == 0) {
+    private final boolean requiresExitBeforeCountdownEnds(int guard) {
+        int var2 = 92 / ((guard + 57) / 36);
+        if (this.countdownTrigger == 0) {
           return false;
         }
-        if (0 == this.field_Q &&
-          this.field_l == 1) {
+        if (0 == this.objectiveType &&
+          this.countdownTrigger == 1) {
           return true;
         }
-        if (this.field_Q != 1) {
+        if (this.objectiveType != 1) {
           return false;
         }
-        if (this.field_l == 2) {
+        if (this.countdownTrigger == 2) {
           return true;
         }
         return false;
@@ -1091,7 +1091,7 @@ final class GameplaySession {
         try {
           boolean var6_int = (this.usesDynamicTerrain(8192));
           PointCloudEffect var7 = ci.a((byte) -43, param4, param3, param2, (var6_int), param0);
-          this.field_vb.addLast(-12328, var7);
+          this.pointCloudEffects.addLast(-12328, var7);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oe.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -1255,7 +1255,7 @@ final class GameplaySession {
 
     private final boolean a(byte param0, int param1, int param2) {
         int var25 = EscapeVector.obfuscationControl;
-        double var4 = 0.02454369260617026 * (double)this.field_I;
+        double var4 = 0.02454369260617026 * (double)this.shipAngle256;
         int var6 = (int)(2048.0 * Math.sin(var4));
         int var7 = -(int)(Math.cos(var4) * 2048.0);
         int var8 = -var7;
@@ -1311,14 +1311,14 @@ final class GameplaySession {
           if ((param2 - var13) * (var14 - var15) < (var12 - var13) * (param1 - var15)) {
             if ((param2 - var17) * (-var19 + var14) > (-var19 + param1) * (-var17 + var12) &&
               (var13 - var17) * (param1 - var19) > (-var17 + param2) * (var15 - var19)) {
-              this.h((byte) -118);
+              this.destroyShip((byte) -118);
               return true;
             }
           } else if ((-var16 + param2) * (-var18 + var14) < (-var18 + param1) * (-var16 + var12)) {
             if (((param1 - var18) * (-var16 + var13)) >= ((-var16 + param2) * (-var18 + var15))) {
               return false;
             }
-            this.h((byte) -62);
+            this.destroyShip((byte) -62);
             return true;
           }
           return false;
@@ -1351,18 +1351,18 @@ final class GameplaySession {
         return 2;
     }
 
-    private final void a(byte[] param0, int param1) {
+    private final void decodeLevelBytes(byte[] bytes, int guard) {
         try {
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              this.loadLevelStream((InputStream) ((Object) new ByteArrayInputStream(param0)), false);
+              this.loadLevelStream((InputStream) ((Object) new ByteArrayInputStream(bytes)), false);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               IOException var3 = (IOException) (Object) decompiledCaughtException;
             }
-            if (param1 < 36) {
+            if (guard < 36) {
               this.field_Db = (od) null;
             }
             return;
@@ -1371,12 +1371,12 @@ final class GameplaySession {
             RuntimeException var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_8_0 = var3_ref;
             StringBuilder stackIn_8_1 = new StringBuilder().append("oe.OD(");
-            if (param0 == null) {
+            if (bytes == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1387,10 +1387,10 @@ final class GameplaySession {
 
     private final boolean k(int param0, int param1, int param2) {
         int var7 = EscapeVector.obfuscationControl;
-        if (this.field_Ub >= 0 &&
-          0 == this.field_e) {
-          Sprite var8 = mb.field_f[this.field_Ub];
-          int var5 = this.worldWidth + ((this.field_mb - (var8.fullWidth << 15) >> 16) + var8.offsetX);
+        if (this.tetheredObjectType >= 0 &&
+          0 == this.pickupAnimationTicks) {
+          Sprite var8 = mb.field_f[this.tetheredObjectType];
+          int var5 = this.worldWidth + ((this.tetheredXQ16 - (var8.fullWidth << 15) >> 16) + var8.offsetX);
           int var6 = (-(var8.fullHeight << 15) + this.field_E >> 16) + var8.offsetY;
           while (param1 < var5) {
             param1 = param1 + this.worldWidth;
@@ -1433,11 +1433,11 @@ final class GameplaySession {
         this.l(10974);
     }
 
-    private final void k(int param0) {
+    private final void loadCurrentLevel(int guard) {
         try {
           try {
             this.loadLevelStream((InputStream) ((Object) new ByteArrayInputStream(this.levelData[this.levelIndex])), false);
-            if (param0 > -123) {
+            if (guard > -123) {
               this.a(42, false);
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -1496,7 +1496,7 @@ final class GameplaySession {
         try {
           boolean var3_int = (this.usesDynamicTerrain(8192));
           PointCloudEffect var4 = ee.a(param0, 14, (var3_int));
-          this.field_vb.addLast(-12328, var4);
+          this.pointCloudEffects.addLast(-12328, var4);
           if (param1 != 42) {
             field_xb = (int[]) null;
           }
@@ -1536,20 +1536,20 @@ final class GameplaySession {
         }
     }
 
-    private final void f(int param0, int param1) {
-        if (this.field_l == 0) {
+    private final void activateCountdown(int guard, int trigger) {
+        if (this.countdownTrigger == 0) {
           return;
         }
-        if (param1 != this.field_l) {
+        if (trigger != this.countdownTrigger) {
           return;
         }
-        this.field_a = true;
+        this.countdownActive = true;
         int var3 = 100;
-        if (param1 == 3) {
+        if (trigger == 3) {
           var3 = 164;
         }
-        this.a(var3, (byte) 72, di.field_c);
-        int var4 = -77 / ((param0 + 30) / 34);
+        this.queueHudMessage(var3, (byte) 72, di.field_c);
+        int var4 = -77 / ((guard + 30) / 34);
     }
 
     private final void e(int param0, int param1, int param2) {
@@ -1586,7 +1586,7 @@ final class GameplaySession {
         int var8 = EscapeVector.obfuscationControl;
         int var2 = -49 % ((82 - param0) / 43);
         int var3 = 0;
-        IntrusiveNode var4 = this.field_G.first(false);
+        IntrusiveNode var4 = this.bullets.first(false);
         for (int var5 = 0; this.field_x > var5; var5++) {
           vh var6 = (vh) (var4);
           if (!var6.field_h) {
@@ -1602,14 +1602,14 @@ final class GameplaySession {
             IntrusiveNode var7 = var4;
             var4 = var4.next;
             var7.unlink((byte) -14);
-            this.field_G.addLast(-12328, var7);
+            this.bullets.addLast(-12328, var7);
           }
         }
         this.field_x = this.field_x - var3;
     }
 
     private final void f(boolean param0) {
-        int var2 = this.score + this.field_J;
+        int var2 = this.score + this.levelScore;
         ce.field_f.d((byte) -101, this.gameMode, var2);
         if (param0) {
           this.tilesWide = -77;
@@ -1643,7 +1643,7 @@ final class GameplaySession {
     private final void a(int param0, String param1) {
         try {
           int var3_int = -72 / ((param0 + 38) / 58);
-          this.a(100, (byte) 91, param1);
+          this.queueHudMessage(100, (byte) 91, param1);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oe.QB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1733,24 +1733,24 @@ final class GameplaySession {
         this.a(true, false, 94, var6, param1, param0);
     }
 
-    private final void a(int param0, DataInputStream param1, boolean param2) throws IOException {
+    private final void readLevelObjects(int formatVersion, DataInputStream input, boolean guard) throws IOException {
         String stackIn_13_2 = null;
-        int var7 = EscapeVector.obfuscationControl;
+        int obfuscationControl = EscapeVector.obfuscationControl;
         try {
-          this.field_L = 0;
-          this.field_k = null;
-          if (!param2) {
+          this.initialInfrastructureCount = 0;
+          this.missionTargets = null;
+          if (!guard) {
             this.o((byte) 113);
           }
-          this.field_S = 0;
-          this.field_Ab = null;
-          int var4_int = param1.readUnsignedByte();
-          this.levelObjects.setSize(var4_int);
-          for (int var5 = 0; var4_int > var5; var5++) {
-            LevelObject var6 = this.a(param1, (byte) -67, var5, param0);
-            this.levelObjects.setElementAt(var6, var5);
-            if (var6.e((byte) -5)) {
-              this.field_L = this.field_L + 1;
+          this.destroyedInfrastructureCount = 0;
+          this.pendingTargetEffects = null;
+          int objectCount = input.readUnsignedByte();
+          this.levelObjects.setSize(objectCount);
+          for (int objectIndex = 0; objectCount > objectIndex; objectIndex++) {
+            LevelObject object = this.readLevelObject(input, (byte) -67, objectIndex, formatVersion);
+            this.levelObjects.setElementAt(object, objectIndex);
+            if (object.countsAsInfrastructure((byte) -5)) {
+              this.initialInfrastructureCount = this.initialInfrastructureCount + 1;
             }
           }
           return;
@@ -1758,50 +1758,50 @@ final class GameplaySession {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var4;
-          StringBuilder stackIn_12_1 = new StringBuilder().append("oe.UA(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_12_1 = new StringBuilder().append("oe.UA(").append(formatVersion).append(',');
+          if (input == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final boolean g(byte param0) {
-        if (this.field_Q == 0) {
-          boolean stackIn_6_0 = (this.field_Ib) && (1 == this.field_Ub);
+    final boolean isMissionComplete(byte guard) {
+        if (this.objectiveType == 0) {
+          boolean stackIn_6_0 = (this.field_Ib) && (1 == this.tetheredObjectType);
           return stackIn_6_0;
         }
-        if (this.field_Q != 1) {
-          if (param0 <= -14) {
+        if (this.objectiveType != 1) {
+          if (guard <= -14) {
             return false;
           }
           this.levelData = (byte[][]) null;
           return false;
         }
-        boolean stackIn_12_0 = (this.field_Ib) && (this.e(119));
+        boolean stackIn_12_0 = (this.field_Ib) && (this.areMissionTargetsDestroyed(119));
         return stackIn_12_0;
     }
 
-    final void e(int param0, int param1) {
-        if (param0 < 0) {
+    final void selectLevel(int levelIndex, int guard) {
+        if (levelIndex < 0) {
           return;
         }
-        if (param0 >= this.levelData.length) {
+        if (levelIndex >= this.levelData.length) {
           return;
         }
-        this.levelIndex = param0;
-        this.a(false, this.levelData[param0], true);
-        int var3 = 20 / ((28 - param1) / 51);
+        this.levelIndex = levelIndex;
+        this.installLevelBytes(false, this.levelData[levelIndex], true);
+        int var3 = 20 / ((28 - guard) / 51);
     }
 
     private final void w(int param0) {
         int var3 = EscapeVector.obfuscationControl;
-        if (param0 == this.field_Q &&
-          this.e(true)) {
+        if (param0 == this.objectiveType &&
+          this.hasShipReachedExit(true)) {
           this.field_Ib = true;
-          if (1 == this.field_Ub) {
+          if (1 == this.tetheredObjectType) {
             vj.b(97);
             pl.field_n.a(jh.field_k, 100, qm.field_c * 6144 / 64, 8192);
             if (this.field_rc) {
@@ -1818,10 +1818,10 @@ final class GameplaySession {
             this.a(-98, ki.field_I);
           }
         }
-        if (this.field_Q == 1) {
-          if (this.e(98)) {
-            if (this.i(-108) &&
-              !this.e(true)) {
+        if (this.objectiveType == 1) {
+          if (this.areMissionTargetsDestroyed(98)) {
+            if (this.requiresExitBeforeCountdownEnds(-108) &&
+              !this.hasShipReachedExit(true)) {
               return;
             }
             this.field_Ib = true;
@@ -1835,7 +1835,7 @@ final class GameplaySession {
               this.t(7);
             }
             this.b((byte) -124, 1);
-          } else if (this.e(true)) {
+          } else if (this.hasShipReachedExit(true)) {
             this.field_Ib = true;
             pl.field_n.a(gm.field_b, 100, qm.field_c * 6144 / 64, 8192);
             this.a(param0 ^ -101, jl.field_c);
@@ -1843,21 +1843,21 @@ final class GameplaySession {
         }
     }
 
-    private final void a(int param0, byte param1, String param2) {
+    private final void queueHudMessage(int durationTicks, byte guard, String text) {
         try {
-          rb var4 = new rb(param2, param0);
-          if (param1 <= 52) {
+          HudMessage var4 = new HudMessage(text, durationTicks);
+          if (guard <= 52) {
             int[] discarded$0 = this.a(-114, (byte) -86, 65);
           }
-          this.field_tc.addLast(-12328, var4);
+          this.hudMessageQueue.addLast(-12328, var4);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.SB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "oe.SB(" + durationTicks + ',' + guard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void g(int param0, int param1) {
         if (param0 != 320) {
-          this.field_tb = -112;
+          this.rockBusterAmmo = -112;
         }
         int var3 = 0;
         if (param1 == 12) {
@@ -1871,7 +1871,7 @@ final class GameplaySession {
         }
         String var4 = this.d(false, var3);
         this.a(param0 - 430, var4);
-        this.field_tb = this.field_tb + var3;
+        this.rockBusterAmmo = this.rockBusterAmmo + var3;
         AccountRegistrationPanel.a(var3, -15655);
     }
 
@@ -1883,54 +1883,54 @@ final class GameplaySession {
         this.C(-122);
     }
 
-    private final void a(int param0, DataInputStream param1, int param2) throws IOException {
+    private final void readGravity(int defaultGravityQ16, DataInputStream input, int formatVersion) throws IOException {
         String stackIn_15_2 = null;
         try {
-          this.field_qb = param0;
-          if (param2 < 8) {
+          this.gravityQ16 = defaultGravityQ16;
+          if (formatVersion < 8) {
             return;
           }
-          int var4_int = param1.readUnsignedShort();
-          if (var4_int == 512) {
-            this.field_qb = 512;
+          int encodedGravityQ16 = input.readUnsignedShort();
+          if (encodedGravityQ16 == 512) {
+            this.gravityQ16 = 512;
           }
-          if (var4_int == 768) {
-            this.field_qb = 768;
+          if (encodedGravityQ16 == 768) {
+            this.gravityQ16 = 768;
           }
-          if (16 == var4_int) {
-            this.field_qb = 16;
+          if (16 == encodedGravityQ16) {
+            this.gravityQ16 = 16;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_14_0 = var4;
-          StringBuilder stackIn_14_1 = new StringBuilder().append("oe.RB(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_14_1 = new StringBuilder().append("oe.RB(").append(defaultGravityQ16).append(',');
+          if (input == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(formatVersion).append(')').toString());
         }
     }
 
-    private final rb B(int param0) {
-        if (this.field_tc == null) {
+    private final HudMessage pollHudMessage(int guard) {
+        if (this.hudMessageQueue == null) {
           return null;
         }
-        if (param0 != -27521) {
+        if (guard != -27521) {
           this.a(-27, true);
         }
-        if (this.field_tc.isEmpty(-97)) {
+        if (this.hudMessageQueue.isEmpty(-97)) {
           return null;
         }
-        IntrusiveNode var2 = this.field_tc.first(false);
+        IntrusiveNode var2 = this.hudMessageQueue.first(false);
         if (var2 == null) {
           return null;
         }
         var2.unlink((byte) -59);
-        return (rb) (var2);
+        return (HudMessage) (var2);
     }
 
     private final int a(int param0, int param1) {
@@ -2001,7 +2001,7 @@ final class GameplaySession {
 
     private final void o(byte param0) {
         int var2 = 124 % ((param0 - 56) / 62);
-        if (this.field_Bb) {
+        if (this.shieldActive) {
           int var3 = 10053375;
           SoftwareRasterizer.g(319, 239, 10, var3, 48);
           SoftwareRasterizer.g(320, 239, 10, var3, 48);
@@ -2022,39 +2022,39 @@ final class GameplaySession {
         this.g(param2, -7778, param1);
     }
 
-    private final void a(boolean param0, int param1, InputStream param2) throws IOException {
+    private final void decodeLevelStream(boolean headerOnly, int guard, InputStream input) throws IOException {
         try {
-          DataInputStream var4 = new DataInputStream(param2);
-          int var5 = var4.readByte();
-          this.a(var5, var4, (byte) 126);
-          this.a(var5, -8277, var4);
-          this.loadTerrain(param0, var5, 640, var4);
-          this.a(var5, var4, true);
-          this.b(var5, var4, (byte) -17);
-          this.a((byte) 121, var4, var5);
-          if (param1 != -1) {
+          DataInputStream levelInput = new DataInputStream(input);
+          int formatVersion = levelInput.readByte();
+          this.readObjectiveType(formatVersion, levelInput, (byte) 126);
+          this.readCountdown(formatVersion, -8277, levelInput);
+          this.loadTerrain(headerOnly, formatVersion, 640, levelInput);
+          this.readLevelObjects(formatVersion, levelInput, true);
+          this.readSeekerMines(formatVersion, levelInput, (byte) -17);
+          this.readSpawnAndFuel((byte) 121, levelInput, formatVersion);
+          if (guard != -1) {
             this.q((byte) -88);
           }
-          this.b(-112, var4, var5);
-          this.a(var4, var5, (byte) 71);
-          this.a(512, var4, var5);
-          var4.close();
-          this.field_rb = false;
+          this.readShieldEnergy(-112, levelInput, formatVersion);
+          this.readInitialPowerups(levelInput, formatVersion, (byte) 71);
+          this.readGravity(512, levelInput, formatVersion);
+          levelInput.close();
+          this.shipLanded = false;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.FD(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "oe.FD(" + headerOnly + ',' + guard + ',' + (input != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void a(boolean param0) {
-        if (this.field_e > 0) {
-          this.field_e = this.field_e - 1;
-          if (this.field_e == 0) {
-            this.k(-123, this.field_Ub);
+        if (this.pickupAnimationTicks > 0) {
+          this.pickupAnimationTicks = this.pickupAnimationTicks - 1;
+          if (this.pickupAnimationTicks == 0) {
+            this.k(-123, this.tetheredObjectType);
             pl.field_n.a(nm.field_a, 100, qm.field_c * 6144 / 64, 8192);
-            int var2 = qj.a((byte) -38, this.field_Ub, this.gameMode);
-            this.field_J = this.field_J + var2;
+            int var2 = qj.a((byte) -38, this.tetheredObjectType, this.gameMode);
+            this.levelScore = this.levelScore + var2;
             v.a(8, var2);
-            this.field_Ub = -1;
+            this.tetheredObjectType = -1;
             if (this.field_rc) {
               this.field_u = this.field_u + 1;
               mh.a((byte) 119);
@@ -2065,7 +2065,7 @@ final class GameplaySession {
           }
         }
         if (!param0) {
-          this.field_Gb = true;
+          this.shipDestroyed = true;
         }
     }
 
@@ -2122,16 +2122,16 @@ final class GameplaySession {
             if (this.field_Qb == 0) {
               this.field_zb = true;
             }
-          } else if (!this.field_Gb &&
+          } else if (!this.shipDestroyed &&
             !this.field_Ib &&
             !this.field_ec) {
-            if (this.field_ab < 60) {
+            if (this.hudMessageTicks < 60) {
               if (this.field_y == 0 &&
                 58720256 > this.shipYQ16) {
                 this.field_y = 1;
               }
               if (this.field_y == 1 &&
-                this.field_rb) {
+                this.shipLanded) {
                 this.field_y = 2;
               }
               if (this.field_y <= 3 &&
@@ -2144,10 +2144,10 @@ final class GameplaySession {
                 this.field_y = 3;
               }
               if (4 == this.field_y &&
-                this.field_db) {
+                this.shieldUsedThisLevel) {
                 this.field_y = 5;
               }
-              if (this.field_Ub == 1 &&
+              if (this.tetheredObjectType == 1 &&
                 this.field_y < 6) {
                 this.field_y = 6;
               }
@@ -2163,7 +2163,7 @@ final class GameplaySession {
               if (var2_int) {
                 this.field_y = 7;
               } else if (this.field_y == 7) {
-                if (this.field_Ub >= 0) {
+                if (this.tetheredObjectType >= 0) {
                   this.field_y = 8;
                 } else {
                   this.field_y = 5;
@@ -2188,9 +2188,9 @@ final class GameplaySession {
                 var3_ref_ed.height = 60;
                 this.field_i.g();
                 SoftwareRasterizer.d();
-                fh.field_g.c(ic.field_k[3 * this.field_y], 319, 20, 16777215, -1);
-                fh.field_g.c(ic.field_k[this.field_y * 3 + 1], 319, 40, 16777215, -1);
-                fh.field_g.c(ic.field_k[2 + this.field_y * 3], 319, 60, 16777215, -1);
+                fh.field_g.c(SeekerMine.field_k[3 * this.field_y], 319, 20, 16777215, -1);
+                fh.field_g.c(SeekerMine.field_k[this.field_y * 3 + 1], 319, 40, 16777215, -1);
+                fh.field_g.c(SeekerMine.field_k[2 + this.field_y * 3], 319, 60, 16777215, -1);
                 md.field_D.a(126);
               }
             }
@@ -2268,7 +2268,7 @@ final class GameplaySession {
           var2 = var4[var3];
         }
         if (param0 >= -122) {
-          this.field_C = (IntrusiveDeque) null;
+          this.laserGateSpans = (IntrusiveDeque) null;
         }
         if (this.field_Db != null) {
           ce var5 = this.field_Db.b(true);
@@ -2279,14 +2279,14 @@ final class GameplaySession {
         return (ce) (var2);
     }
 
-    private final LevelObject b(boolean param0) {
+    private final LevelObject findCargoContainer(boolean guard) {
         int var5 = EscapeVector.obfuscationControl;
         if (this.levelObjects == null) {
           return null;
         }
         int var2 = this.levelObjects.size();
         int var3 = 0;
-        if (param0) {
+        if (guard) {
           return (LevelObject) null;
         }
         while (var2 > var3) {
@@ -2350,7 +2350,7 @@ final class GameplaySession {
               }
               if (!((var7.width + var9) <= param2) &&
                 var7.pixels[(param1 - var8) * var7.width + (-var9 + param2)] != 0) {
-                this.a(var6, -120, var5);
+                this.destroyLevelObject(var6, -120, var5);
                 return;
               }
             }
@@ -2365,16 +2365,16 @@ final class GameplaySession {
         if (param2 != 8) {
           return;
         }
-        ic var5 = (ic) (this.field_N.first(false));
+        SeekerMine var5 = (SeekerMine) (this.seekerMines.first(false));
         while (true) {
           if (var5 == null) {
             return;
           }
-          stackIn_8_0 = (null != var5.field_m &&
-            (65536 & var5.field_m.field_r) != 0);
+          stackIn_8_0 = (null != var5.proximitySound &&
+            (65536 & var5.proximitySound.field_r) != 0);
           boolean var6 = stackIn_8_0;
-          int var7 = -16 + (var5.field_p >> 16) - param0;
-          int stackIn_9_0 = -param1 + (var5.field_q >> 16) - 16;
+          int var7 = -16 + (var5.xQ16 >> 16) - param0;
+          int stackIn_9_0 = -param1 + (var5.yQ16 >> 16) - 16;
           int var8 = stackIn_9_0;
           while (-od.field_b.fullWidth < var7) {
             var7 = var7 - this.worldWidth;
@@ -2391,7 +2391,7 @@ final class GameplaySession {
               od.field_b.c(var7, var8, 128);
             }
           }
-          var5 = (ic) (this.field_N.next((byte) 70));
+          var5 = (SeekerMine) (this.seekerMines.next((byte) 70));
           continue;
         }
     }
@@ -2478,7 +2478,7 @@ final class GameplaySession {
           return;
         }
         if (param2 >= -53) {
-          LevelObject discarded$0 = this.b(false);
+          LevelObject discarded$0 = this.findCargoContainer(false);
         }
         while (param1 < 0) {
           param1 = param1 + this.worldWidth;
@@ -2504,7 +2504,7 @@ final class GameplaySession {
         if (param1 != 11) {
           return;
         }
-        this.field_ib = 2550;
+        this.thrustAccelerationQ16 = 2550;
         bh.c(-64);
         if (param0) {
           this.field_O = -101;
@@ -2565,38 +2565,38 @@ final class GameplaySession {
         }
     }
 
-    private final void b(int param0, DataInputStream param1, int param2) throws IOException {
+    private final void readShieldEnergy(int guard, DataInputStream input, int formatVersion) throws IOException {
         String stackIn_9_2 = null;
         try {
-          if (param2 < 4) {
-            this.field_gc = 150;
+          if (formatVersion < 4) {
+            this.initialShieldEnergy = 150;
           } else {
-            this.field_gc = param1.readInt();
-            if (this.field_gc <= 0) {
-              this.field_gc = 150;
+            this.initialShieldEnergy = input.readInt();
+            if (this.initialShieldEnergy <= 0) {
+              this.initialShieldEnergy = 150;
             }
           }
-          int var4_int = -51 % ((10 - param0) / 61);
+          int guardRemainder = -51 % ((10 - guard) / 61);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException runtimeException = decompiledCaughtException;
           RuntimeException stackIn_8_0 = runtimeException;
-          StringBuilder stackIn_8_1 = new StringBuilder().append("oe.HF(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_8_1 = new StringBuilder().append("oe.HF(").append(guard).append(',');
+          if (input == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(formatVersion).append(')').toString());
         }
     }
 
     private final void initializeLevelObjects(boolean buildTerrainRenderer, int guard) {
         int var8 = 0;
         int var9 = EscapeVector.obfuscationControl;
-        this.field_ub = 0;
-        this.field_b = false;
+        this.laserGateCount = 0;
+        this.laserGateDestroyed = false;
         int var3 = 0;
         scanLoop1: while (true) {
           int stackIn_2_0 = ~this.levelObjects.size();
@@ -2616,7 +2616,7 @@ final class GameplaySession {
                   int var7 = (20 + var10.x) % this.worldWidth;
                   for (var8 = var6.x; var7 > var8; var8 = var8 + this.worldWidth) {
                   }
-                  this.a(var8, var10.y + 14, var7, 2134602960);
+                  this.addLaserGateSpan(var8, var10.y + 14, var7, 2134602960);
                   break;
                 }
               }
@@ -2627,15 +2627,15 @@ final class GameplaySession {
           break;
         }
         int var3Lifetime1 = -109 % ((-71 - guard) / 35);
-        this.b((byte) -101);
-        this.field_Zb = 0;
+        this.resetShipState((byte) -101);
+        this.shieldPulsePhase = 0;
         this.field_oc = 0;
-        int stackIn_17_0Lifetime1 = this.field_J;
+        int stackIn_17_0Lifetime1 = this.levelScore;
         int stackIn_17_1Lifetime1 = 128;
         td.a(stackIn_17_0Lifetime1, stackIn_17_1Lifetime1);
-        this.field_J = 0;
+        this.levelScore = 0;
         if (this.timeHackMode) {
-          this.elapsedTicks = this.field_T;
+          this.elapsedTicks = this.levelStartTicks;
         }
         ck.a(111, -this.field_u);
         mn.a(-this.field_bc, (byte) 44);
@@ -2644,21 +2644,21 @@ final class GameplaySession {
         ck.a(77, this.field_ic);
         mn.a(this.field_w, (byte) 44);
         if (0 <= this.levelIndex) {
-          this.field_db = false;
+          this.shieldUsedThisLevel = false;
         }
-        this.field_Xb = this.i(512, -22944);
+        this.exhaustParticles = this.i(512, -22944);
         if (this.usesDynamicTerrain(8192) &&
           buildTerrainRenderer) {
           this.dynamicTerrain = new DynamicTerrainRenderer(this.terrainMasks, QuickChatPhraseDefinition.fullTileMask, (int[]) null, this.tilesWide, this.tilesHigh);
-          ic.a(-101, this.dynamicTerrain.field_B);
+          SeekerMine.a(-101, this.dynamicTerrain.field_B);
         } else {
           this.dynamicTerrain = null;
         }
-        this.f(-75, 3);
+        this.activateCountdown(-75, 3);
         this.h(false);
-        LevelObject var4 = this.b(false);
+        LevelObject var4 = this.findCargoContainer(false);
         this.minimap = new Minimap(this, var4, gj.a(this.levelIndex, this.gameMode, (byte) 54));
-        this.z((byte) 0);
+        this.applyInitialPowerups((byte) 0);
         en var5 = ce.field_f;
         if (var5 != null) {
           var5.a((byte) 36);
@@ -2666,22 +2666,22 @@ final class GameplaySession {
         return;
     }
 
-    private final void a(ic param0, int param1) {
+    private final void destroySeekerMine(SeekerMine mine, int guard) {
         try {
-          if (null != param0.field_g) {
-            pl.field_n.b(param0.field_g);
-            pl.field_n.b(param0.field_m);
-            param0.field_m = null;
-            param0.field_g = null;
+          if (null != mine.flightSound) {
+            pl.field_n.b(mine.flightSound);
+            pl.field_n.b(mine.proximitySound);
+            mine.proximitySound = null;
+            mine.flightSound = null;
           }
-          if (param1 != 5) {
-            this.field_G = (IntrusiveDeque) null;
+          if (guard != 5) {
+            this.bullets = (IntrusiveDeque) null;
           }
-          this.a(125, param0.field_q, ve.field_d, param0.field_p);
-          param0.unlink((byte) -11);
+          this.a(125, mine.yQ16, ve.field_d, mine.xQ16);
+          mine.unlink((byte) -11);
           this.q((byte) -128);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.RC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "oe.RC(" + (mine != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -2696,66 +2696,66 @@ final class GameplaySession {
         }
     }
 
-    private final LevelObject a(DataInputStream param0, int param1, int param2, boolean param3, int param4, int param5, int param6) throws IOException {
+    private final LevelObject readLevelObjectFlags(DataInputStream input, int x, int formatVersion, boolean guard, int objectType, int y, int objectId) throws IOException {
         String stackIn_23_2 = null;
-        LevelObject var8 = null;
+        LevelObject object = null;
         try {
-          int var9 = param0.readByte();
-          boolean stackIn_3_0 = !(var9 == 0);
-          boolean var10 = stackIn_3_0;
-          boolean var11 = false;
-          if (param3) {
+          int targetFlag = input.readByte();
+          boolean targetFlagPresent = !(targetFlag == 0);
+          boolean missionTarget = targetFlagPresent;
+          boolean triggersCountdown = false;
+          if (guard) {
             this.field_jc = false;
           }
-          if (param2 >= 6) {
-            int var12 = param0.readByte();
-            boolean stackIn_9_0 = !(var12 == 0);
-            var11 = stackIn_9_0;
+          if (formatVersion >= 6) {
+            int countdownFlag = input.readByte();
+            boolean countdownFlagPresent = !(countdownFlag == 0);
+            triggersCountdown = countdownFlagPresent;
           }
-          if (param2 >= 9) {
-            int var12Lifetime1 = param0.readInt();
-            var8 = new LevelObject(param6, param4, param1, param5, (var10), (var11), var12Lifetime1);
+          if (formatVersion >= 9) {
+            int spriteFrame = input.readInt();
+            object = new LevelObject(objectId, objectType, x, y, (missionTarget), (triggersCountdown), spriteFrame);
           } else {
-            var8 = new LevelObject(param6, param4, param1, param5, (var10), (var11));
+            object = new LevelObject(objectId, objectType, x, y, (missionTarget), (triggersCountdown));
           }
-          if (var10) {
-            if (null == this.field_k) {
-              this.field_k = new IntrusiveDeque();
-              this.field_Ab = new va();
+          if (missionTarget) {
+            if (null == this.missionTargets) {
+              this.missionTargets = new IntrusiveDeque();
+              this.pendingTargetEffects = new SecondaryIntrusiveDeque();
             }
-            this.field_k.addLast(-12328, var8);
+            this.missionTargets.addLast(-12328, object);
           }
-          LevelObject stackIn_19_0 = var8;
-          return stackIn_19_0;
+          LevelObject decodedObject = object;
+          return decodedObject;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var8_ref = decompiledCaughtException;
           RuntimeException stackIn_22_0 = var8_ref;
           StringBuilder stackIn_22_1 = new StringBuilder().append("oe.EA(");
-          if (param0 == null) {
+          if (input == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(x).append(',').append(formatVersion).append(',').append(guard).append(',').append(objectType).append(',').append(y).append(',').append(objectId).append(')').toString());
         }
     }
 
     private final int a(byte param0, int param1, int param2, int param3) {
-        if (!this.field_a) {
+        if (!this.countdownActive) {
           return param2;
         }
-        if (this.field_X <= 0) {
+        if (this.countdownTicks <= 0) {
           return param3;
         }
-        int var5 = this.field_X % param1;
+        int var5 = this.countdownTicks % param1;
         param1 = param1 / 2;
         if (var5 < param1) {
           int var6 = param3;
           param3 = param2;
           param2 = var6;
         }
-        var5 = this.field_X % param1;
+        var5 = this.countdownTicks % param1;
         if (param0 < 72) {
           return -91;
         }
@@ -2796,16 +2796,16 @@ final class GameplaySession {
         return false;
     }
 
-    private final void a(boolean param0, byte[] param1, boolean param2) {
+    private final void installLevelBytes(boolean buildTerrainRenderer, byte[] bytes, boolean guard) {
         try {
-          if (!param2) {
+          if (!guard) {
             this.m(-93);
           }
-          this.a(24661, param0);
-          this.a(param1, 100);
-          this.initializeLevelObjects(param0, -119);
+          this.a(24661, buildTerrainRenderer);
+          this.decodeLevelBytes(bytes, 100);
+          this.initializeLevelObjects(buildTerrainRenderer, -119);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "oe.A(" + buildTerrainRenderer + ',' + (bytes != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -2845,7 +2845,7 @@ final class GameplaySession {
         }
         if (4 == this.levelIndex) {
           int[] var33 = p.field_j;
-          String[] var16 = rb.field_j;
+          String[] var16 = HudMessage.field_j;
           DialogueScreen var17 = new DialogueScreen(var33, var12, var16, false);
           re.a(1820, var17);
         }
@@ -2868,14 +2868,14 @@ final class GameplaySession {
         if (!param0) {
           this.b(-35, -120, (byte) -53);
         }
-        PointCloudEffect var2 = (PointCloudEffect) (this.field_vb.first(false));
+        PointCloudEffect var2 = (PointCloudEffect) (this.pointCloudEffects.first(false));
         while (var2 != null) {
           if (!var2.field_B) {
             var2.a();
           } else {
             var2.unlink((byte) -71);
           }
-          var2 = (PointCloudEffect) (this.field_vb.next((byte) 70));
+          var2 = (PointCloudEffect) (this.pointCloudEffects.next((byte) 70));
         }
         this.f(-20320);
     }
@@ -2901,16 +2901,16 @@ final class GameplaySession {
         gi.a((byte) -77);
     }
 
-    private final void a(pi param0, int param1) {
-        pl.field_n.b(param0.field_o);
-        param0.field_o = null;
-        if (param1 < 7) {
+    private final void detonateRockBuster(RockBuster projectile, int guard) {
+        pl.field_n.b(projectile.flightSound);
+        projectile.flightSound = null;
+        if (guard < 7) {
           return;
         }
         try {
-          this.a(123, param0.field_g, td.field_c, param0.field_n);
+          this.a(123, projectile.yQ16, td.field_c, projectile.xQ16);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.MC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "oe.MC(" + (projectile != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -2918,12 +2918,12 @@ final class GameplaySession {
         if (9 != param0) {
           return;
         }
-        this.field_Tb = this.field_Tb + 150;
+        this.shieldEnergy = this.shieldEnergy + 150;
         if (param1 > -107) {
           this.a(105);
         }
-        if (this.field_Tb >= 500) {
-          this.field_Tb = 500;
+        if (this.shieldEnergy >= 500) {
+          this.shieldEnergy = 500;
         }
         this.a(-116, qh.field_e);
     }
@@ -2931,7 +2931,7 @@ final class GameplaySession {
     private final void g(int param0, int param1, int param2) {
         int var9 = EscapeVector.obfuscationControl;
         if (param1 != -7778) {
-          boolean discarded$1 = this.e(-71);
+          boolean discarded$1 = this.areMissionTargetsDestroyed(-71);
         }
         if (this.levelIndex < 0) {
           Sprite var10 = c.field_n;
@@ -2974,18 +2974,18 @@ final class GameplaySession {
         }
     }
 
-    private final void z(byte param0) {
+    private final void applyInitialPowerups(byte guard) {
         int var8 = EscapeVector.obfuscationControl;
-        if (this.field_s == null) {
+        if (this.initialPowerups == null) {
           return;
         }
-        if (this.field_s.isEmpty(-97)) {
+        if (this.initialPowerups.isEmpty(-97)) {
           return;
         }
         int var2 = 9;
         int var3 = 5 + (var2 - 1);
-        int var4 = -54 / ((param0 - 75) / 48);
-        IntrusiveNode var5 = this.field_s.first(false);
+        int var4 = -54 / ((guard - 75) / 48);
+        IntrusiveNode var5 = this.initialPowerups.first(false);
         while (var5 != null) {
           IntValueNode var6 = (IntValueNode) (var5);
           int var7 = var6.value;
@@ -2993,24 +2993,24 @@ final class GameplaySession {
             var3 >= var7) {
             this.k(-122, var7);
           }
-          var5 = this.field_s.next((byte) 70);
+          var5 = this.initialPowerups.next((byte) 70);
         }
     }
 
-    private final void a(int param0, int param1, DataInputStream param2) throws IOException {
+    private final void readCountdown(int formatVersion, int guard, DataInputStream input) throws IOException {
         String stackIn_9_2 = null;
         try {
-          if (param0 < 6) {
-            this.field_a = false;
-            this.field_X = 0;
-            this.field_l = 0;
+          if (formatVersion < 6) {
+            this.countdownActive = false;
+            this.countdownTicks = 0;
+            this.countdownTrigger = 0;
           } else {
-            this.field_l = param2.readUnsignedByte();
-            this.field_X = param2.readInt();
-            this.field_a = false;
+            this.countdownTrigger = input.readUnsignedByte();
+            this.countdownTicks = input.readInt();
+            this.countdownActive = false;
           }
-          this.d(param1 + 29079);
-          if (param1 != -8277) {
+          this.d(guard + 29079);
+          if (guard != -8277) {
             this.field_kc = true;
           }
           return;
@@ -3018,8 +3018,8 @@ final class GameplaySession {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_8_0 = var4;
-          StringBuilder stackIn_8_1 = new StringBuilder().append("oe.TF(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_8_1 = new StringBuilder().append("oe.TF(").append(formatVersion).append(',').append(guard).append(',');
+          if (input == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -3066,16 +3066,16 @@ final class GameplaySession {
         mj.field_b.a(-mj.field_b.fullWidth + 320, (-param1 >> 3) + 40 - 44, 2 * mj.field_b.fullWidth, mj.field_b.fullHeight * 2, var4);
     }
 
-    private final void a(am param0, byte param1) {
+    private final void removeLaserGateSpan(LaserGateSpan gate, byte guard) {
         try {
-          param0.unlink((byte) -25);
-          if (param1 <= 10) {
+          gate.unlink((byte) -25);
+          if (guard <= 10) {
             this.field_c = -106;
           }
-          this.field_b = true;
-          this.field_ub = this.field_ub - 1;
+          this.laserGateDestroyed = true;
+          this.laserGateCount = this.laserGateCount - 1;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "oe.E(" + (gate != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -3092,10 +3092,10 @@ final class GameplaySession {
         try {
           boolean var5_int = (this.usesDynamicTerrain(8192));
           PointCloudEffect var6 = eg.a(param1, param3, (var5_int), true, param2);
-          this.field_vb.addLast(-12328, var6);
+          this.pointCloudEffects.addLast(-12328, var6);
           if (param0 <= 120) {
             byte[] var7 = (byte[]) null;
-            this.a(true, (byte[]) null, false);
+            this.installLevelBytes(true, (byte[]) null, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3112,28 +3112,28 @@ final class GameplaySession {
         }
     }
 
-    private final void a(LevelObject param0, int param1, int param2) {
+    private final void destroyLevelObject(LevelObject object, int guard, int objectIndex) {
         String stackIn_16_2 = null;
         try {
-          param0.removeFromTerrain(this, (byte) 76);
-          PointCloudEffect var6 = this.a(param0, (byte) 42);
-          this.levelObjects.removeElementAt(param2);
-          if (!this.field_Gb) {
-            int var5 = mf.b(this.gameMode, param0.objectType, -2);
-            this.field_J = this.field_J + var5;
+          object.removeFromTerrain(this, (byte) 76);
+          PointCloudEffect var6 = this.a(object, (byte) 42);
+          this.levelObjects.removeElementAt(objectIndex);
+          if (!this.shipDestroyed) {
+            int var5 = mf.b(this.gameMode, object.objectType, -2);
+            this.levelScore = this.levelScore + var5;
             v.a(8, var5);
           }
-          int var5Lifetime1 = 33 % ((6 - param1) / 44);
-          if (1 == param0.objectType) {
+          int var5Lifetime1 = 33 % ((6 - guard) / 44);
+          if (1 == object.objectType) {
             this.b(0);
-          } else if (9 > param0.objectType &&
-            param0.objectType != 5) {
+          } else if (9 > object.objectType &&
+            object.objectType != 5) {
             this.q((byte) -117);
           }
-          this.a(param0, var6, -2);
-          this.a((byte) 124, param0);
+          this.recordMissionTargetDestroyed(object, var6, -2);
+          this.recordInfrastructureDestroyed((byte) 124, object);
           if (this.minimap != null) {
-            this.minimap.a(param0, 4236);
+            this.minimap.a(object, 4236);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3141,20 +3141,20 @@ final class GameplaySession {
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_15_0 = var4;
           StringBuilder stackIn_15_1 = new StringBuilder().append("oe.B(");
-          if (param0 == null) {
+          if (object == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(',').append(objectIndex).append(')').toString());
         }
     }
 
-    private final boolean e(int param0) {
-        if (param0 <= 90) {
+    private final boolean areMissionTargetsDestroyed(int guard) {
+        if (guard <= 90) {
           return true;
         }
-        boolean stackIn_8_0 = (!this.field_Gb) && (this.field_k != null) && (this.field_k.isEmpty(-128)) && (this.field_Ab.b(-182442704));
+        boolean stackIn_8_0 = (!this.shipDestroyed) && (this.missionTargets != null) && (this.missionTargets.isEmpty(-128)) && (this.pendingTargetEffects.isEmpty(-182442704));
         return stackIn_8_0;
     }
 
@@ -3193,11 +3193,11 @@ final class GameplaySession {
         this.a(this.gameMode, false, var3, var4);
     }
 
-    private final boolean e(boolean param0) {
-        if (!param0) {
-          this.field_G = (IntrusiveDeque) null;
+    private final boolean hasShipReachedExit(boolean guard) {
+        if (!guard) {
+          this.bullets = (IntrusiveDeque) null;
         }
-        boolean stackIn_6_0 = (!this.field_Gb) && (-16777216 > this.shipYQ16);
+        boolean stackIn_6_0 = (!this.shipDestroyed) && (-16777216 > this.shipYQ16);
         return stackIn_6_0;
     }
 
@@ -3217,28 +3217,28 @@ final class GameplaySession {
           this.dynamicTerrain.renderTerrain(guard + 640, var3, var4);
         }
         this.b(var3, var4, (byte) -14);
-        pi var5_ref_pi = (pi) (this.field_hb.first(false));
+        RockBuster var5_ref_pi = (RockBuster) (this.rockBusters.first(false));
         while (var5_ref_pi != null) {
-          var5_ref_pi.field_i.a(guard ^ 97, var3, var4);
-          var5_ref_pi = (pi) (this.field_hb.next((byte) 70));
+          var5_ref_pi.exhaustParticles.a(guard ^ 97, var3, var4);
+          var5_ref_pi = (RockBuster) (this.rockBusters.next((byte) 70));
         }
-        this.field_Xb.a(82, var3, var4);
-        PointCloudEffect var12 = (PointCloudEffect) (this.field_vb.first(false));
+        this.exhaustParticles.a(82, var3, var4);
+        PointCloudEffect var12 = (PointCloudEffect) (this.pointCloudEffects.first(false));
         while (var12 != null) {
           var12.a(99, var3, var4);
-          var12 = (PointCloudEffect) (this.field_vb.next((byte) 70));
+          var12 = (PointCloudEffect) (this.pointCloudEffects.next((byte) 70));
         }
         if (null == this.dynamicTerrain) {
           this.a(var4, var3, (byte) -115);
           this.e(var4, guard + 8192, var3);
         }
         this.h(11905, var3, var4);
-        pi var5_ref_piLifetime1 = (pi) (this.field_hb.first(false));
+        RockBuster var5_ref_piLifetime1 = (RockBuster) (this.rockBusters.first(false));
         while (var5_ref_piLifetime1 != null) {
-          int stackIn_31_0 = var5_ref_piLifetime1.field_r;
+          int stackIn_31_0 = var5_ref_piLifetime1.remainingFlightTicks;
           if (stackIn_31_0 != 0) {
-            int var6 = (var5_ref_piLifetime1.field_n >> 16) + (-var3 + 1);
-            int var7 = 1 + ((var5_ref_piLifetime1.field_g >> 16) - var4);
+            int var6 = (var5_ref_piLifetime1.xQ16 >> 16) + (-var3 + 1);
+            int var7 = 1 + ((var5_ref_piLifetime1.yQ16 >> 16) - var4);
             while (var6 > -7) {
               var6 = var6 - this.worldWidth;
             }
@@ -3249,19 +3249,19 @@ final class GameplaySession {
                 ej.field_a != null) {
                 var8_ref_ed = ej.field_a;
               }
-              var8_ref_ed.a(var6, (byte) 34, 4096, -var5_ref_piLifetime1.field_m << 8, var7);
+              var8_ref_ed.a(var6, (byte) 34, 4096, -var5_ref_piLifetime1.angle256 << 8, var7);
             }
           }
-          var5_ref_piLifetime1 = (pi) (this.field_hb.next((byte) 70));
+          var5_ref_piLifetime1 = (RockBuster) (this.rockBusters.next((byte) 70));
         }
         int stackIn_31_0Lifetime1 = -1;
-        if (stackIn_31_0Lifetime1 >= ~this.field_Ub) {
-          Sprite var5_ref_ed = mb.field_f[this.field_Ub];
+        if (stackIn_31_0Lifetime1 >= ~this.tetheredObjectType) {
+          Sprite var5_ref_ed = mb.field_f[this.tetheredObjectType];
           if (var2 != 0 &&
-            ob.field_b[this.field_Ub] != null) {
-            var5_ref_ed = ob.field_b[this.field_Ub];
+            ob.field_b[this.tetheredObjectType] != null) {
+            var5_ref_ed = ob.field_b[this.tetheredObjectType];
           }
-          int var6Lifetime1 = (this.field_mb - (var5_ref_ed.fullWidth << 15) >> 16) - var3;
+          int var6Lifetime1 = (this.tetheredXQ16 - (var5_ref_ed.fullWidth << 15) >> 16) - var3;
           int var7Lifetime1 = (this.field_E - (var5_ref_ed.fullHeight << 15) >> 16) - var4;
           if (640 - this.worldWidth >> 1 > var6Lifetime1) {
             var6Lifetime1 = var6Lifetime1 + this.worldWidth;
@@ -3270,13 +3270,13 @@ final class GameplaySession {
           }
           int var8 = var5_ref_ed.width;
           int var9 = var5_ref_ed.height;
-          if (this.field_e > 0) {
-            var7Lifetime1 = this.field_e * (-240 + var7Lifetime1) / 50 + 240;
-            var9 = var9 * this.field_e / 50;
-            var8 = this.field_e * var8 / 50;
-            var6Lifetime1 = this.field_e * (-320 + var6Lifetime1) / 50 + 320;
+          if (this.pickupAnimationTicks > 0) {
+            var7Lifetime1 = this.pickupAnimationTicks * (-240 + var7Lifetime1) / 50 + 240;
+            var9 = var9 * this.pickupAnimationTicks / 50;
+            var8 = this.pickupAnimationTicks * var8 / 50;
+            var6Lifetime1 = this.pickupAnimationTicks * (-320 + var6Lifetime1) / 50 + 320;
           }
-          if (!this.field_Gb) {
+          if (!this.shipDestroyed) {
             int var10 = 16777215;
             if (var2 != 0 &&
               this.dynamicTerrain != null) {
@@ -3284,13 +3284,13 @@ final class GameplaySession {
             }
             SoftwareRasterizer.d(320, 240, var6Lifetime1 + (var8 >> 1), var7Lifetime1 + (var9 >> 1), var10);
           }
-          if (this.field_e > 0) {
+          if (this.pickupAnimationTicks > 0) {
             var5_ref_ed.b(var6Lifetime1, var7Lifetime1, var8, var9);
           } else {
             var5_ref_ed.e(var6Lifetime1, var7Lifetime1);
           }
         }
-        if (!this.field_Gb) {
+        if (!this.shipDestroyed) {
           this.a(var4, (Sprite) null, 65793, var3);
           this.o((byte) -110);
         }
@@ -3308,21 +3308,21 @@ final class GameplaySession {
           dc.a((byte) 57, ek.field_c, 320, 476);
         }
         if (da.field_c == null) {
-          if (this.g((byte) -91)) {
+          if (this.isMissionComplete((byte) -91)) {
             if (this.field_rc &&
               0 <= this.levelIndex) {
               IntPoint.field_b.e(640 - IntPoint.field_b.fullWidth >> 1, -IntPoint.field_b.fullHeight + 212);
               if (-100 > this.field_c) {
                 oj.a(266, 340, (byte) -106, en.field_e);
-                EscapeVector.a(Integer.toString(this.field_J), 340, 266, (byte) 110);
+                EscapeVector.a(Integer.toString(this.levelScore), 340, 266, (byte) 110);
               }
               if (this.field_c < -75) {
                 oj.a(286, 340, (byte) -102, dg.field_s);
-                EscapeVector.a(Integer.toString(this.field_ac), 340, 286, (byte) -5);
+                EscapeVector.a(Integer.toString(this.fuel), 340, 286, (byte) -5);
               }
               if (this.field_c < -50) {
                 oj.a(306, 340, (byte) -116, DualLinkNode.field_g);
-                EscapeVector.a(Integer.toString(this.field_Tb + this.field_Tb), 340, 306, (byte) -43);
+                EscapeVector.a(Integer.toString(this.shieldEnergy + this.shieldEnergy), 340, 306, (byte) -43);
               }
               oj.a(336, 340, (byte) 85, ad.field_c);
               EscapeVector.a(Integer.toString(this.score), 340, 336, (byte) 119);
@@ -3331,13 +3331,13 @@ final class GameplaySession {
             }
           }
           this.a((byte) -76);
-          if (0 < this.field_ab &&
-            this.field_ab <= 100) {
-            fh.field_g.b(this.field_h, 320, 174 + (this.field_ab >> 1), 16777215, -1, (this.field_ab << 8) / 100);
+          if (0 < this.hudMessageTicks &&
+            this.hudMessageTicks <= 100) {
+            fh.field_g.b(this.hudMessageText, 320, 174 + (this.hudMessageTicks >> 1), 16777215, -1, (this.hudMessageTicks << 8) / 100);
           }
         }
         if (this.field_c > 0) {
-          if (!this.field_Gb && (!this.field_ec ||
+          if (!this.shipDestroyed && (!this.field_ec ||
             this.levelIndex >= 0) && !this.field_Ib) {
             stackIn_91_0 = false;
             boolean decompiledFrameRemainder0 = false;
@@ -3358,21 +3358,21 @@ final class GameplaySession {
     final void x(byte param0) {
         int var2 = 92 % ((-5 - param0) / 38);
         if (this.field_c < 0) {
-          if (this.g((byte) -127) &&
+          if (this.isMissionComplete((byte) -127) &&
             this.field_rc &&
             this.levelIndex >= 0) {
             if (this.field_c < -100) {
-              this.score = this.score + this.field_J;
-              this.field_J = 0;
-              this.field_T = this.elapsedTicks;
+              this.score = this.score + this.levelScore;
+              this.levelScore = 0;
+              this.levelStartTicks = this.elapsedTicks;
             }
             if (-75 > this.field_c) {
-              this.score = this.score + this.field_ac;
-              v.a(8, this.field_ac);
+              this.score = this.score + this.fuel;
+              v.a(8, this.fuel);
             }
             if (this.field_c < -50) {
-              this.score = this.score + (this.field_Tb + this.field_Tb);
-              v.a(8, this.field_Tb + this.field_Tb);
+              this.score = this.score + (this.shieldEnergy + this.shieldEnergy);
+              v.a(8, this.shieldEnergy + this.shieldEnergy);
             }
             this.f(false);
           }
@@ -3382,7 +3382,7 @@ final class GameplaySession {
 
     private final void loadLevelStream(InputStream input, boolean option) throws IOException {
         try {
-          this.a(option, -1, input);
+          this.decodeLevelStream(option, -1, input);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oe.TC(" + (input != null ? "{...}" : "null") + ',' + option + ')');
         }
@@ -3401,27 +3401,27 @@ final class GameplaySession {
         return (16711680 & param0) >> 16;
     }
 
-    private final void h(byte param0) {
+    private final void destroyShip(byte guard) {
         if (this.easyMode) {
           return;
         }
         this.a(0, mf.field_a, 65793, 0);
         this.a(0, -28311553, mf.field_a, 0, ib.field_a);
-        if (this.field_Ub >= 0) {
-          if (this.field_e > 0) {
-            this.field_e = 0;
-            this.field_Ub = -1;
+        if (this.tetheredObjectType >= 0) {
+          if (this.pickupAnimationTicks > 0) {
+            this.pickupAnimationTicks = 0;
+            this.tetheredObjectType = -1;
           }
           pl.field_n.a(bc.field_c, 100, 6144 * qm.field_c / 64, 8192);
         }
-        this.field_Gb = true;
+        this.shipDestroyed = true;
         if (!this.timeHackMode &&
           this.levelIndex >= 0) {
-          this.field_A = this.field_A - 1;
+          this.livesRemaining = this.livesRemaining - 1;
           jc.a(1);
           this.b((byte) -106, 0);
         }
-        if (param0 >= -34) {
+        if (guard >= -34) {
           this.terrainTheme = 112;
         }
     }
@@ -3432,11 +3432,11 @@ final class GameplaySession {
           this.field_i = (Sprite) null;
         }
         int var3 = this.elapsedTicks;
-        if (this.field_a) {
-          var3 = this.field_X;
+        if (this.countdownActive) {
+          var3 = this.countdownTicks;
         }
         if (2160000 > this.elapsedTicks ||
-          this.field_a) {
+          this.countdownActive) {
           int var4 = var3 / 50;
           int var5 = var4 / 60;
           var4 = var4 - var5 * 60;
@@ -3496,26 +3496,26 @@ final class GameplaySession {
         }
         for (int var4Lifetime1 = 0; this.levelObjects.size() > var4Lifetime1; var4Lifetime1++) {
           LevelObject var7 = (LevelObject) (this.levelObjects.elementAt(var4Lifetime1));
-          var7.a(param2, (byte) 109, param1);
+          var7.drawObject(param2, (byte) 109, param1);
         }
     }
 
-    private final void a(byte param0, LevelObject param1) {
-        if (param1 == null) {
+    private final void recordInfrastructureDestroyed(byte guard, LevelObject object) {
+        if (object == null) {
           return;
         }
-        if (!param1.e((byte) -5)) {
+        if (!object.countsAsInfrastructure((byte) -5)) {
           return;
         }
-        this.field_S = this.field_S + 1;
-        if (this.field_L != this.field_S) {
+        this.destroyedInfrastructureCount = this.destroyedInfrastructureCount + 1;
+        if (this.initialInfrastructureCount != this.destroyedInfrastructureCount) {
           return;
         }
         try {
           ua.field_c.a((byte) -64, this.gameMode, oj.k(64), this.levelIndex);
-          int var3_int = 90 % ((42 - param0) / 62);
+          int var3_int = 90 % ((42 - guard) / 62);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "oe.VF(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "oe.VF(" + guard + ',' + (object != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -3523,41 +3523,41 @@ final class GameplaySession {
         int var3 = 71 % ((param1 - 6) / 36);
     }
 
-    private final void b(int param0, DataInputStream param1, byte param2) throws IOException {
+    private final void readSeekerMines(int formatVersion, DataInputStream input, byte guard) throws IOException {
         String stackIn_12_2 = null;
-        int var7 = EscapeVector.obfuscationControl;
+        int obfuscationControl = EscapeVector.obfuscationControl;
         try {
-          this.field_N = new IntrusiveDeque();
-          if (param0 >= 1) {
-            int var4_int = param1.readUnsignedByte();
-            for (int var5 = 0; var5 < var4_int; var5++) {
-              ic var6 = new ic();
-              int dupTemp$0 = param1.readUnsignedShort() << 16;
-              var6.field_j = dupTemp$0;
-              var6.field_p = dupTemp$0;
-              int dupTemp$1 = param1.readUnsignedShort() << 16;
-              var6.field_l = dupTemp$1;
-              var6.field_q = dupTemp$1;
-              var6.field_i = (int)(32769.0 * Math.random()) - 16384;
-              var6.field_h = -16384 + (int)(32769.0 * Math.random());
-              this.field_N.addLast(-12328, var6);
+          this.seekerMines = new IntrusiveDeque();
+          if (formatVersion >= 1) {
+            int mineCount = input.readUnsignedByte();
+            for (int mineIndex = 0; mineIndex < mineCount; mineIndex++) {
+              SeekerMine mine = new SeekerMine();
+              int homeXQ16 = input.readUnsignedShort() << 16;
+              mine.homeXQ16 = homeXQ16;
+              mine.xQ16 = homeXQ16;
+              int homeYQ16 = input.readUnsignedShort() << 16;
+              mine.homeYQ16 = homeYQ16;
+              mine.yQ16 = homeYQ16;
+              mine.velocityXQ16 = (int)(32769.0 * Math.random()) - 16384;
+              mine.velocityYQ16 = -16384 + (int)(32769.0 * Math.random());
+              this.seekerMines.addLast(-12328, mine);
             }
           }
-          if (param2 != -17) {
-            this.field_lb = false;
+          if (guard != -17) {
+            this.triShotEnabled = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_11_0 = var4;
-          StringBuilder stackIn_11_1 = new StringBuilder().append("oe.GB(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_11_1 = new StringBuilder().append("oe.GB(").append(formatVersion).append(',');
+          if (input == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -3573,7 +3573,7 @@ final class GameplaySession {
         double var6Lifetime1 = (double)this.shipVelocityYQ16 * var4 + var2 * (double)this.shipVelocityXQ16;
         if (var6Lifetime1 > -32768.0) {
           if (524288.0 < var6Lifetime1) {
-            this.h((byte) -50);
+            this.destroyShip((byte) -50);
             if (!this.field_rc) {
               return;
             }
@@ -3601,9 +3601,9 @@ final class GameplaySession {
         if (this.field_sc < 0) {
           return;
         }
-        if ((!this.field_Gb ||
-          this.field_A != 0) &&
-          (!this.g((byte) -113) ||
+        if ((!this.shipDestroyed ||
+          this.livesRemaining != 0) &&
+          (!this.isMissionComplete((byte) -113) ||
           !kl.a(this.levelIndex + 1, this.gameMode, true))) {
           if ((this.field_Jb ||
             this.field_Cb) && this.field_c >= 0 && 32 >= this.field_c) {
@@ -3614,7 +3614,7 @@ final class GameplaySession {
           wa.a(this.field_sc * -this.field_c / 64, 32471);
         }
         if (param0 < 28) {
-          boolean discarded$0 = this.e(71);
+          boolean discarded$0 = this.areMissionTargetsDestroyed(71);
         }
     }
 
@@ -3645,7 +3645,7 @@ final class GameplaySession {
     private final void q(byte param0) {
         if ((this.field_rc || this.easyMode) &&
           this.levelIndex >= 0 &&
-          !this.field_Gb) {
+          !this.shipDestroyed) {
           this.field_bc = this.field_bc + 1;
           c.m(-45);
           if (this.field_bc == 76) {
@@ -3660,22 +3660,22 @@ final class GameplaySession {
     private final void b(int param0, byte param1, int param2) {
         int var12 = EscapeVector.obfuscationControl;
         if (this.field_oc < 50) {
-          IntrusiveNode var4 = this.field_C.first(false);
+          IntrusiveNode var4 = this.laserGateSpans.first(false);
           int var5 = 0;
           while (true) {
-            int stackIn_3_0 = this.field_ub;
+            int stackIn_3_0 = this.laserGateCount;
             int stackIn_3_1 = var5;
             if (stackIn_3_0 <= stackIn_3_1) {
               break;
             }
-            am var6 = (am) (var4);
-            int var7 = var6.field_j - param2;
+            LaserGateSpan var6 = (LaserGateSpan) (var4);
+            int var7 = var6.y - param2;
             int stackIn_26_0 = -1;
             int stackIn_26_1 = var7;
             if (stackIn_26_0 <= stackIn_26_1 &&
               var7 < 481) {
-              int var8 = var6.field_i - param0;
-              int var9 = var6.field_h - param0;
+              int var8 = var6.leftX - param0;
+              int var9 = var6.rightX - param0;
               while (0 < var9) {
                 var9 = var9 - this.worldWidth;
                 var8 = var8 - this.worldWidth;
@@ -3707,29 +3707,29 @@ final class GameplaySession {
         int stackIn_26_1Lifetime1 = -108;
         if (stackIn_26_0Lifetime1 != stackIn_26_1Lifetime1) {
           byte[] var13 = (byte[]) null;
-          this.a(true, (byte[]) null, true);
+          this.installLevelBytes(true, (byte[]) null, true);
         }
     }
 
-    private final void a(DataInputStream param0, int param1, byte param2) throws IOException {
+    private final void readInitialPowerups(DataInputStream input, int formatVersion, byte guard) throws IOException {
         String stackIn_15_2 = null;
-        int var9 = EscapeVector.obfuscationControl;
+        int obfuscationControl = EscapeVector.obfuscationControl;
         try {
-          this.field_s = new IntrusiveDeque();
-          if (param1 < 7) {
+          this.initialPowerups = new IntrusiveDeque();
+          if (formatVersion < 7) {
             return;
           }
-          int var4_int = 28 % ((param2 + 29) / 46);
-          int var5 = param0.readUnsignedByte();
-          if (0 == var5) {
+          int guardRemainder = 28 % ((guard + 29) / 46);
+          int powerupCount = input.readUnsignedByte();
+          if (0 == powerupCount) {
             return;
           }
-          for (int var6 = 0; var6 < var5; var6++) {
-            int var7 = param0.readUnsignedByte();
-            if (mf.a(var7, -64)) {
-              IntValueNode var8 = new IntValueNode(var7);
-              this.field_s.addLast(-12328, var8);
-              this.j(var7, 101);
+          for (int powerupIndex = 0; powerupIndex < powerupCount; powerupIndex++) {
+            int objectType = input.readUnsignedByte();
+            if (mf.a(objectType, -64)) {
+              IntValueNode powerup = new IntValueNode(objectType);
+              this.initialPowerups.addLast(-12328, powerup);
+              this.j(objectType, 101);
             }
           }
           return;
@@ -3738,28 +3738,28 @@ final class GameplaySession {
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_14_0 = var4;
           StringBuilder stackIn_14_1 = new StringBuilder().append("oe.HB(");
-          if (param0 == null) {
+          if (input == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(formatVersion).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final void a(int param0, DataInputStream param1, byte param2) throws IOException {
+    private final void readObjectiveType(int formatVersion, DataInputStream input, byte guard) throws IOException {
         String stackIn_13_2 = null;
         try {
-          if (5 > param0) {
-            this.field_Q = 0;
+          if (5 > formatVersion) {
+            this.objectiveType = 0;
           } else {
-            this.field_Q = param1.readUnsignedByte();
-            if (this.field_Q != 0 &&
-              this.field_Q != 1) {
-              this.field_Q = 0;
+            this.objectiveType = input.readUnsignedByte();
+            if (this.objectiveType != 0 &&
+              this.objectiveType != 1) {
+              this.objectiveType = 0;
             }
           }
-          if (param2 < 28) {
+          if (guard < 28) {
             int discarded$0 = this.a(-118, -50, true, 65);
           }
           this.u(-15474);
@@ -3768,13 +3768,13 @@ final class GameplaySession {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_12_0 = var4;
-          StringBuilder stackIn_12_1 = new StringBuilder().append("oe.WA(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_12_1 = new StringBuilder().append("oe.WA(").append(formatVersion).append(',');
+          if (input == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -3806,8 +3806,8 @@ final class GameplaySession {
 
     private final int c(boolean param0) {
         if (!param0) {
-          ic var3 = (ic) null;
-          this.a((ic) null, 48);
+          SeekerMine var3 = (SeekerMine) null;
+          this.destroySeekerMine((SeekerMine) null, 48);
         }
         int var2 = this.terrainTheme;
         if (var2 == 0) {
@@ -3865,7 +3865,7 @@ final class GameplaySession {
         Object var22 = null;
         Object var29 = null;
         Object var44 = null;
-        int var30 = EscapeVector.obfuscationControl;
+        int obfuscationControl = EscapeVector.obfuscationControl;
         if (this.dynamicTerrain != null) {
           pf.e((byte) -106);
         }
@@ -3889,8 +3889,8 @@ final class GameplaySession {
               nk.field_n == 13) {
               this.minimap.e((byte) -101);
             }
-            if (nk.field_n == 13 && (!this.field_Gb ||
-              this.field_A != 0) && !this.field_Jb) {
+            if (nk.field_n == 13 && (!this.shipDestroyed ||
+              this.livesRemaining != 0) && !this.field_Jb) {
               if (this.minimap.b((byte) -122)) {
                 this.minimap.e((byte) -101);
               }
@@ -3903,9 +3903,9 @@ final class GameplaySession {
             if (od.field_k &&
               nk.field_n == 12) {
               this.field_c = 63;
-              this.field_Ub = 1;
+              this.tetheredObjectType = 1;
               this.field_Ib = true;
-              this.field_Gb = false;
+              this.shipDestroyed = false;
               this.field_rc = false;
               System.out.println("Level skip cheat activated");
             }
@@ -3939,11 +3939,11 @@ final class GameplaySession {
           if (!this.n((byte) 94)) {
             return;
           }
-          this.c(0);
+          this.updateHudMessage(0);
           if (this.field_j > 0) {
             this.field_j = this.field_j - 1;
           }
-          if (!this.field_Gb &&
+          if (!this.shipDestroyed &&
             !this.field_Ib &&
             !this.field_Jb && (!this.field_ec ||
             0 <= this.levelIndex)) {
@@ -3983,23 +3983,23 @@ final class GameplaySession {
             }
             this.field_c = this.field_c + 1;
           }
-          if (this.g((byte) -61) &&
+          if (this.isMissionComplete((byte) -61) &&
             this.field_rc &&
             0 <= this.levelIndex) {
             if (this.field_c == -100) {
-              this.score = this.score + this.field_J;
-              this.field_T = this.elapsedTicks;
-              this.field_J = 0;
+              this.score = this.score + this.levelScore;
+              this.levelStartTicks = this.elapsedTicks;
+              this.levelScore = 0;
               pl.field_n.a(pl.field_o, 100, qm.field_c * 6144 / 64, 8192);
             }
             if (this.field_c == -75) {
-              var2 = ei.a(0, this.field_ac, this.gameMode);
+              var2 = ei.a(0, this.fuel, this.gameMode);
               this.score = this.score + var2;
               v.a(8, var2);
               pl.field_n.a(pl.field_o, 100, qm.field_c * 6144 / 64, 8192);
             }
             if (this.field_c == -50) {
-              var2 = ei.a(0, this.field_Tb * 2, this.gameMode);
+              var2 = ei.a(0, this.shieldEnergy * 2, this.gameMode);
               this.score = this.score + var2;
               v.a(8, var2);
               pl.field_n.a(pl.field_o, 100, qm.field_c * 6144 / 64, 8192);
@@ -4015,18 +4015,18 @@ final class GameplaySession {
             this.p((byte) 9);
             return;
           }
-          if ((this.field_Gb ||
+          if ((this.shipDestroyed ||
             this.field_Jb) &&
             !this.field_Cb) {
-            if (this.field_A == 0 ||
+            if (this.livesRemaining == 0 ||
               this.field_Jb) {
               if (this.levelIndex >= 0) {
-                this.b((byte) 36, this.score + this.field_J, this.levelIndex);
+                this.b((byte) 36, this.score + this.levelScore, this.levelIndex);
               }
               this.p(0);
               return;
             }
-          } else if (this.g((byte) -122) ||
+          } else if (this.isMissionComplete((byte) -122) ||
             this.field_Cb) {
             this.field_Jb = false;
             this.levelIndex = this.levelIndex + 1;
@@ -4037,7 +4037,7 @@ final class GameplaySession {
               (this.levelIndex & 3) == 0) {
               if (this.levelIndex == 0) {
                 this.field_Qb = 0;
-                this.a(164, (byte) 55, m.field_n);
+                this.queueHudMessage(164, (byte) 55, m.field_n);
               }
               this.startSession((byte) -40);
             }
@@ -4050,79 +4050,79 @@ final class GameplaySession {
             }
             this.field_j = 314;
           }
-          this.j((byte) -110);
+          this.initializeCurrentLevel((byte) -110);
           return;
 
         }
         var2 = 0;
         while (var2 < 64) {
-          boolean stackIn_137_0 = this.field_Xb.field_E[this.field_Sb + var2];
+          boolean stackIn_137_0 = this.exhaustParticles.field_E[this.exhaustWriteIndex + var2];
           if (stackIn_137_0) {
-            this.field_qc = this.field_qc - 1;
-            this.field_Xb.field_E[this.field_Sb + var2] = false;
+            this.activeExhaustParticles = this.activeExhaustParticles - 1;
+            this.exhaustParticles.field_E[this.exhaustWriteIndex + var2] = false;
           }
           var2++;
         }
-        this.field_Xb.a();
-        this.field_Zb = 15 & 1 + this.field_Zb;
+        this.exhaustParticles.a();
+        this.shieldPulsePhase = 15 & 1 + this.shieldPulsePhase;
         this.d(true);
-        boolean stackIn_137_0Lifetime1 = this.field_Gb;
+        boolean stackIn_137_0Lifetime1 = this.shipDestroyed;
         if (!stackIn_137_0Lifetime1) {
-          if (!this.field_rb) {
+          if (!this.shipLanded) {
             if (ik.field_h[97] &&
               !ik.field_h[96]) {
               if (!this.field_jc) {
-                this.field_I = 252 & 7 + this.field_I;
+                this.shipAngle256 = 252 & 7 + this.shipAngle256;
               } else {
-                this.field_I = this.field_I + 2 & 255;
+                this.shipAngle256 = this.shipAngle256 + 2 & 255;
               }
             }
-            this.shipVelocityYQ16 = this.shipVelocityYQ16 + this.field_qb;
+            this.shipVelocityYQ16 = this.shipVelocityYQ16 + this.gravityQ16;
             if (ik.field_h[96] &&
               !ik.field_h[97]) {
               if (!this.field_kc) {
-                this.field_I = -4 + this.field_I & 252;
+                this.shipAngle256 = -4 + this.shipAngle256 & 252;
               } else {
-                this.field_I = -2 + this.field_I & 255;
+                this.shipAngle256 = -2 + this.shipAngle256 & 255;
               }
             }
           }
           if (ik.field_h[98] &&
-            this.field_ac > 0 &&
-            0 == this.field_e) {
+            this.fuel > 0 &&
+            0 == this.pickupAnimationTicks) {
             this.field_jb.f(1024 * qm.field_c / 64);
             this.field_kc = false;
-            this.field_rb = false;
+            this.shipLanded = false;
             this.field_jc = false;
-            double var2_double = 0.02454369260617026 * (double)this.field_I;
-            this.shipVelocityXQ16 = this.shipVelocityXQ16 + (int)((double)this.field_ib * Math.sin(var2_double));
-            this.shipVelocityYQ16 = this.shipVelocityYQ16 - (int)((double)this.field_ib * Math.cos(var2_double));
+            double var2_double = 0.02454369260617026 * (double)this.shipAngle256;
+            this.shipVelocityXQ16 = this.shipVelocityXQ16 + (int)((double)this.thrustAccelerationQ16 * Math.sin(var2_double));
+            this.shipVelocityYQ16 = this.shipVelocityYQ16 - (int)((double)this.thrustAccelerationQ16 * Math.cos(var2_double));
             if (this.levelIndex >= 0) {
               if (!this.easyMode) {
-                this.field_ac = this.field_ac - 1;
+                this.fuel = this.fuel - 1;
               }
               ji.a(true, -1);
             }
-            if (this.field_ac == 0) {
+            if (this.fuel == 0) {
               this.a(-111, rl.field_l);
             }
             for (var4 = 0; var4 < 64; var4++) {
-              this.field_Xb.field_E[this.field_Sb + var4] = true;
+              this.exhaustParticles.field_E[this.exhaustWriteIndex + var4] = true;
               double var5_double = var2_double + 0.2 * Math.random() - 0.1;
-              double var7_double = (double)this.field_ib * 616.8094117647058 * (0.5 + Math.random());
+              double var7_double = (double)this.thrustAccelerationQ16 * 616.8094117647058 * (0.5 + Math.random());
               int var9 = -(int)(var7_double * Math.sin(var5_double));
               int var10 = (int)(var7_double * Math.cos(var5_double));
-              this.field_Xb.field_x[this.field_Sb + var4] = this.shipXQ16 + this.shipVelocityXQ16;
-              this.field_Xb.field_A[this.field_Sb + var4] = this.shipYQ16 + this.shipVelocityYQ16;
+              this.exhaustParticles.field_x[this.exhaustWriteIndex + var4] = this.shipXQ16 + this.shipVelocityXQ16;
+              this.exhaustParticles.field_A[this.exhaustWriteIndex + var4] = this.shipYQ16 + this.shipVelocityYQ16;
               double var11_double = Math.random();
-              this.field_Xb.field_y[var4 + this.field_Sb] = (int)((double)var9 * var11_double);
-              this.field_Xb.field_C[this.field_Sb + var4] = (int)(var11_double * (double)var10);
-              this.field_Xb.field_w[this.field_Sb + var4] = 0;
-              this.field_Xb.i(var4 + this.field_Sb);
-              this.field_Xb.field_y[this.field_Sb + var4] = var9 + this.shipVelocityXQ16;
-              this.field_Xb.field_C[var4 + this.field_Sb] = var10 + this.shipVelocityYQ16;
+              this.exhaustParticles.field_y[var4 + this.exhaustWriteIndex] = (int)((double)var9 * var11_double);
+              this.exhaustParticles.field_C[this.exhaustWriteIndex + var4] = (int)(var11_double * (double)var10);
+              this.exhaustParticles.field_w[this.exhaustWriteIndex + var4] = 0;
+              this.exhaustParticles.i(var4 + this.exhaustWriteIndex);
+              this.exhaustParticles.field_y[this.exhaustWriteIndex + var4] = var9 + this.shipVelocityXQ16;
+              this.exhaustParticles.field_C[var4 + this.exhaustWriteIndex] = var10 + this.shipVelocityYQ16;
             }
-            this.field_qc = this.field_qc + 64;
+            this.activeExhaustParticles = this.activeExhaustParticles + 64;
           } else {
             this.field_jb.j(0);
           }
@@ -4152,29 +4152,29 @@ final class GameplaySession {
             }
           }
         }
-        if (!this.field_Gb && (!bc.field_d &&
+        if (!this.shipDestroyed && (!bc.field_d &&
           ik.field_h[83] ||
           (ik.field_h[81] ||
-          var2 != 0)) && (this.field_Tb > 0 &&
-          this.field_e == 0)) {
+          var2 != 0)) && (this.shieldEnergy > 0 &&
+          this.pickupAnimationTicks == 0)) {
           if (var2 == 0) {
-            this.field_db = true;
+            this.shieldUsedThisLevel = true;
           }
           if (this.levelIndex >= 0) {
-            this.field_Tb = this.field_Tb - 1;
+            this.shieldEnergy = this.shieldEnergy - 1;
             ca.b((byte) 76);
           }
-          if (0 == this.field_Tb) {
+          if (0 == this.shieldEnergy) {
             this.a(-107, rc.field_c);
             pl.field_n.a(gm.field_b, 100, qm.field_c * 6144 / 64, 8192);
           }
-          this.field_Bb = true;
-          this.field_rb = false;
+          this.shieldActive = true;
+          this.shipLanded = false;
           this.field_v.f(qm.field_c * 16384 / 64);
           boolean decompiledFrameRemainder1 = false;
         }
         else {
-          this.field_Bb = false;
+          this.shieldActive = false;
           this.field_v.f(0);
         }
         this.a(true);
@@ -4184,15 +4184,15 @@ final class GameplaySession {
         long var7_long = 0L;
         int var9Lifetime1 = 0;
         while (this.levelObjects.size() > var9Lifetime1) {
-          LevelObject var32_ref = (LevelObject) (this.levelObjects.elementAt(var9Lifetime1));
-          int stackIn_324_0 = ~var32_ref.objectType;
+          LevelObject forceFieldObject = (LevelObject) (this.levelObjects.elementAt(var9Lifetime1));
+          int stackIn_324_0 = ~forceFieldObject.objectType;
           int stackIn_324_1 = -4;
           if (stackIn_324_0 == stackIn_324_1 ||
-            4 == var32_ref.objectType) {
-            var32_ref.field_h = false;
-            if (!this.field_Gb) {
-              int var11 = 12 + var32_ref.x << 16;
-              var12 = var32_ref.y + 12 << 16;
+            4 == forceFieldObject.objectType) {
+            forceFieldObject.glowActive = false;
+            if (!this.shipDestroyed) {
+              int var11 = 12 + forceFieldObject.x << 16;
+              var12 = forceFieldObject.y + 12 << 16;
               double var13 = (double)(-var11 + this.shipXQ16);
               double var15 = (double)(this.shipYQ16 - var12);
               if ((double)(-this.worldWidth << 15) > var13) {
@@ -4202,21 +4202,21 @@ final class GameplaySession {
               }
               double var17 = var15 * var15 + var13 * var13;
               if (var17 < 171798691840000.0) {
-                var32_ref.field_h = true;
+                forceFieldObject.glowActive = true;
                 var19 = this.b(1310720, var11, 96, var12);
                 var19 = var19 * var19;
                 long var20_long = (long)this.c(var11, 106) * (long)var19;
-                if (var32_ref.objectType == 3) {
+                if (forceFieldObject.objectType == 3) {
                   var4 = var4 + var19;
                   var7_long = var7_long + var20_long;
                 } else {
                   var5_long = var5_long + var20_long;
                   var3Lifetime1 = var3Lifetime1 + var19;
                 }
-                if (!this.field_rb) {
+                if (!this.shipLanded) {
                   int var22_int = (int)(var13 * 4294967296.0 / var17);
                   int var23_int = (int)(4294967296.0 * var15 / var17);
-                  if (var32_ref.objectType == 3) {
+                  if (forceFieldObject.objectType == 3) {
                     var22_int = -var22_int;
                     var23_int = -var23_int;
                   }
@@ -4247,12 +4247,12 @@ final class GameplaySession {
         int var3Lifetime2 = 0;
         long var4_long = 0L;
         if (this.field_oc < 50) {
-          IntrusiveNode var6_ref_hg = this.field_C.first(false);
-          for (var7 = 0; var7 < this.field_ub; var7++) {
-            am var33_ref = (am) (var6_ref_hg);
-            int var9Lifetime2 = var33_ref.field_i << 16;
-            int var10Lifetime1 = var33_ref.field_i << 16;
-            int var11Lifetime1 = var33_ref.field_j << 16;
+          IntrusiveNode var6_ref_hg = this.laserGateSpans.first(false);
+          for (var7 = 0; var7 < this.laserGateCount; var7++) {
+            LaserGateSpan laserGate = (LaserGateSpan) (var6_ref_hg);
+            int var9Lifetime2 = laserGate.leftX << 16;
+            int var10Lifetime1 = laserGate.leftX << 16;
+            int var11Lifetime1 = laserGate.y << 16;
             while (this.shipXQ16 < var9Lifetime2) {
               var9Lifetime2 = var9Lifetime2 - (this.worldWidth << 16);
               var10Lifetime1 = var10Lifetime1 - (this.worldWidth << 16);
@@ -4280,41 +4280,41 @@ final class GameplaySession {
           stackIn_247_3 = (int)(var4_long / (long)var3Lifetime2);
         }
         ((hl) (Object) stackIn_246_0).a(stackIn_246_1, stackIn_246_2, stackIn_247_3);
-        ic var3_ref_ic = (ic) (this.field_N.first(false));
-        while (var3_ref_ic != null) {
-          if (null == var3_ref_ic.field_g) {
-            var3_ref_ic.field_m = new tl();
-            var3_ref_ic.field_g = hl.a(ci.field_a, 256, 0, 8192);
-            var3_ref_ic.field_m.field_k = hl.a(qi.field_J, 256, 0, 8192);
-            var3_ref_ic.field_m.field_q = hl.a(qi.field_J, 256, 0, 8192);
-            var3_ref_ic.field_g.h(-1);
-            var3_ref_ic.field_m.field_k.h(-1);
-            var3_ref_ic.field_m.field_q.h(-1);
-            var3_ref_ic.field_g.e((int)(Math.random() * (double)ci.field_a.field_h.length));
-            pl.field_n.a(var3_ref_ic.field_g);
-            pl.field_n.a(var3_ref_ic.field_m);
+        SeekerMine seekerMine = (SeekerMine) (this.seekerMines.first(false));
+        while (seekerMine != null) {
+          if (null == seekerMine.flightSound) {
+            seekerMine.proximitySound = new tl();
+            seekerMine.flightSound = hl.a(ci.field_a, 256, 0, 8192);
+            seekerMine.proximitySound.field_k = hl.a(qi.field_J, 256, 0, 8192);
+            seekerMine.proximitySound.field_q = hl.a(qi.field_J, 256, 0, 8192);
+            seekerMine.flightSound.h(-1);
+            seekerMine.proximitySound.field_k.h(-1);
+            seekerMine.proximitySound.field_q.h(-1);
+            seekerMine.flightSound.e((int)(Math.random() * (double)ci.field_a.field_h.length));
+            pl.field_n.a(seekerMine.flightSound);
+            pl.field_n.a(seekerMine.proximitySound);
           }
-          var4 = this.shipXQ16 - var3_ref_ic.field_p;
-          var5 = this.shipYQ16 - var3_ref_ic.field_q;
+          var4 = this.shipXQ16 - seekerMine.xQ16;
+          var5 = this.shipYQ16 - seekerMine.yQ16;
           if (!(-this.worldWidth << 15 <= var4)) {
             var4 = var4 + (this.worldWidth << 16);
           } else if (var4 >= this.worldWidth << 15) {
             var4 = var4 - (this.worldWidth << 16);
           }
           var6_double = (double)var5 * (double)var5 + (double)var4 * (double)var4;
-          stackIn_260_0 = (!this.field_Gb &&
+          stackIn_260_0 = (!this.shipDestroyed &&
             171798691840000.0 > var6_double) ? (1) : (0);
           var8 = stackIn_260_0;
           if (var8 == 0) {
-            var3_ref_ic.field_m.field_p = 0;
-            var4 = var3_ref_ic.field_j - var3_ref_ic.field_p;
+            seekerMine.proximitySound.field_p = 0;
+            var4 = seekerMine.homeXQ16 - seekerMine.xQ16;
             if (-this.worldWidth << 15 > var4) {
               var4 = var4 + (this.worldWidth << 16);
             } else if ((this.worldWidth << 15) <= var4) {
               var4 = var4 - (this.worldWidth << 16);
             }
             var4 = 32 + var4 >> 6;
-            var5 = var3_ref_ic.field_l - var3_ref_ic.field_q + 16 >> 5;
+            var5 = seekerMine.homeYQ16 - seekerMine.yQ16 + 16 >> 5;
             if (var5 > -64 &&
               var5 < 64) {
               var5 = (0 >= var5) ? -64 : 64;
@@ -4323,63 +4323,63 @@ final class GameplaySession {
               var4 < 64) {
               var4 = (var4 > 0) ? 64 : -64;
             }
-            var9Lifetime3 = 30000 - (var3_ref_ic.field_h >> 6);
+            var9Lifetime3 = 30000 - (seekerMine.velocityYQ16 >> 6);
           } else {
             var6_double = Math.sqrt(var6_double);
-            var3_ref_ic.field_m.field_k.i((int)(Math.pow(0.8464491362763915, var6_double / 13107200.0) * 6668800.0) / ie.field_q);
-            var3_ref_ic.field_m.field_q.i((int)(Math.pow(0.5646606914212549, var6_double / 13107200.0) * 59980800.0) / ie.field_q);
-            var3_ref_ic.field_m.field_p = (int)(Math.pow(0.1, var6_double / 13107200.0) * 26214.4);
-            var3_ref_ic.field_l = var3_ref_ic.field_q;
+            seekerMine.proximitySound.field_k.i((int)(Math.pow(0.8464491362763915, var6_double / 13107200.0) * 6668800.0) / ie.field_q);
+            seekerMine.proximitySound.field_q.i((int)(Math.pow(0.5646606914212549, var6_double / 13107200.0) * 59980800.0) / ie.field_q);
+            seekerMine.proximitySound.field_p = (int)(Math.pow(0.1, var6_double / 13107200.0) * 26214.4);
+            seekerMine.homeYQ16 = seekerMine.yQ16;
             var6_double = 2949.12 / var6_double;
-            var3_ref_ic.field_j = var3_ref_ic.field_p;
+            seekerMine.homeXQ16 = seekerMine.xQ16;
             var9Lifetime3 = 40000;
             var5 = (int)((double)var5 * var6_double);
             var4 = (int)((double)var4 * var6_double);
           }
-          if (var3_ref_ic.field_o == 0) {
-            var3_ref_ic.field_o = var9Lifetime3;
+          if (seekerMine.soundPlaybackRate == 0) {
+            seekerMine.soundPlaybackRate = var9Lifetime3;
           } else {
-            var3_ref_ic.field_o = var3_ref_ic.field_o + (4 - var3_ref_ic.field_o + var9Lifetime3 >> 3);
+            seekerMine.soundPlaybackRate = seekerMine.soundPlaybackRate + (4 - seekerMine.soundPlaybackRate + var9Lifetime3 >> 3);
           }
-          var3_ref_ic.field_g.i(var3_ref_ic.field_o * 256 / ie.field_q);
-          var3_ref_ic.field_h = var3_ref_ic.field_h + var5;
-          var3_ref_ic.field_i = var3_ref_ic.field_i + var4;
+          seekerMine.flightSound.i(seekerMine.soundPlaybackRate * 256 / ie.field_q);
+          seekerMine.velocityYQ16 = seekerMine.velocityYQ16 + var5;
+          seekerMine.velocityXQ16 = seekerMine.velocityXQ16 + var4;
           if (var8 == 0) {
-            var3_ref_ic.field_i = var3_ref_ic.field_i + (32 + var3_ref_ic.field_i >> 6);
-            var3_ref_ic.field_h = var3_ref_ic.field_h + (var3_ref_ic.field_h + 32 >> 6);
+            seekerMine.velocityXQ16 = seekerMine.velocityXQ16 + (32 + seekerMine.velocityXQ16 >> 6);
+            seekerMine.velocityYQ16 = seekerMine.velocityYQ16 + (seekerMine.velocityYQ16 + 32 >> 6);
           } else {
-            var3_ref_ic.field_h = var3_ref_ic.field_h - (var3_ref_ic.field_h + 32 >> 6);
-            var3_ref_ic.field_i = var3_ref_ic.field_i - (var3_ref_ic.field_i + 32 >> 6);
+            seekerMine.velocityYQ16 = seekerMine.velocityYQ16 - (seekerMine.velocityYQ16 + 32 >> 6);
+            seekerMine.velocityXQ16 = seekerMine.velocityXQ16 - (seekerMine.velocityXQ16 + 32 >> 6);
           }
-          var6_double = (double)var3_ref_ic.field_i * (double)var3_ref_ic.field_i + (double)var3_ref_ic.field_h * (double)var3_ref_ic.field_h;
+          var6_double = (double)seekerMine.velocityXQ16 * (double)seekerMine.velocityXQ16 + (double)seekerMine.velocityYQ16 * (double)seekerMine.velocityYQ16;
           double stackIn_288_0 = (var8 != 0) ? 38654705664.0 : 9663676416.0;
           var10_double = stackIn_288_0;
           if (var10_double < var6_double) {
             var6_double = Math.sqrt(var10_double / var6_double);
-            var3_ref_ic.field_h = (int)((double)var3_ref_ic.field_h * var6_double);
-            var3_ref_ic.field_i = (int)((double)var3_ref_ic.field_i * var6_double);
+            seekerMine.velocityYQ16 = (int)((double)seekerMine.velocityYQ16 * var6_double);
+            seekerMine.velocityXQ16 = (int)((double)seekerMine.velocityXQ16 * var6_double);
           }
           boolean decompiledFrameRemainder0 = true;
-          var3_ref_ic.field_q = var3_ref_ic.field_q + var3_ref_ic.field_h;
-          var3_ref_ic.field_p = ((this.worldWidth << 16) + (var3_ref_ic.field_p + var3_ref_ic.field_i)) % (this.worldWidth << 16);
-          var12 = this.b(4194304, var3_ref_ic.field_p, 96, var3_ref_ic.field_q);
-          var13_int = this.c(var3_ref_ic.field_p, 117);
-          var3_ref_ic.field_g.f(var12 >> 1, var13_int);
-          var3_ref_ic.field_m.field_s = var12;
-          var3_ref_ic.field_m.field_n = var13_int;
-          int var14 = this.worldWidth + (var3_ref_ic.field_p >> 16);
-          int var15_int = var3_ref_ic.field_q >> 16;
+          seekerMine.yQ16 = seekerMine.yQ16 + seekerMine.velocityYQ16;
+          seekerMine.xQ16 = ((this.worldWidth << 16) + (seekerMine.xQ16 + seekerMine.velocityXQ16)) % (this.worldWidth << 16);
+          var12 = this.b(4194304, seekerMine.xQ16, 96, seekerMine.yQ16);
+          var13_int = this.c(seekerMine.xQ16, 117);
+          seekerMine.flightSound.f(var12 >> 1, var13_int);
+          seekerMine.proximitySound.field_s = var12;
+          seekerMine.proximitySound.field_n = var13_int;
+          int var14 = this.worldWidth + (seekerMine.xQ16 >> 16);
+          int var15_int = seekerMine.yQ16 >> 16;
           var16 = var14 - 8;
           var17_int = -8 + var15_int;
-          if (!this.field_Gb) {
-            if (this.field_Bb) {
+          if (!this.shipDestroyed) {
+            if (this.shieldActive) {
               this.field_Hb = 0;
               this.field_pb = 0;
               this.a(s.field_H, var17_int, var16, (byte) 83);
               if ((this.field_Hb | this.field_pb) != 0) {
-                int var18 = var3_ref_ic.field_i + 3 * this.shipVelocityXQ16 >> 2;
+                int var18 = seekerMine.velocityXQ16 + 3 * this.shipVelocityXQ16 >> 2;
                 this.shipVelocityXQ16 = this.shipVelocityXQ16 - var18;
-                var19 = this.shipVelocityYQ16 * 3 + var3_ref_ic.field_h >> 2;
+                var19 = this.shipVelocityYQ16 * 3 + seekerMine.velocityYQ16 >> 2;
                 this.shipVelocityYQ16 = this.shipVelocityYQ16 - var19;
                 double var20_double = (double)this.field_Hb;
                 double var22_double = (double)this.field_pb;
@@ -4393,7 +4393,7 @@ final class GameplaySession {
                 }
                 this.shipVelocityXQ16 = this.shipVelocityXQ16 + var18;
                 this.shipVelocityYQ16 = this.shipVelocityYQ16 + var19;
-                this.a(var3_ref_ic, 5);
+                this.destroySeekerMine(seekerMine, 5);
                 var12 = (int)var24_doubleLifetime1 >> 4;
                 if (var12 > 6144) {
                   var12 = 6144;
@@ -4402,48 +4402,48 @@ final class GameplaySession {
                 decompiledFrameRemainder0 = false;
               }
             } else if (this.a(false, var17_int, var16, s.field_H)) {
-              this.h((byte) -62);
-              this.a(var3_ref_ic, 5);
+              this.destroyShip((byte) -62);
+              this.destroySeekerMine(seekerMine, 5);
               decompiledFrameRemainder0 = false;
             }
           }
           if (decompiledFrameRemainder0) {
-            if (0 <= this.field_Ub &&
-              this.field_e == 0) {
-              Sprite var18_ref_ed = mb.field_f[this.field_Ub];
-              for (var19 = -var16 + (this.field_mb - (var18_ref_ed.fullWidth << 15) >> 16); -this.worldWidth >> 1 > var19; var19 = var19 + this.worldWidth) {
+            if (0 <= this.tetheredObjectType &&
+              this.pickupAnimationTicks == 0) {
+              Sprite tetheredSprite = mb.field_f[this.tetheredObjectType];
+              for (var19 = -var16 + (this.tetheredXQ16 - (tetheredSprite.fullWidth << 15) >> 16); -this.worldWidth >> 1 > var19; var19 = var19 + this.worldWidth) {
               }
               while (var19 >= this.worldWidth >> 1) {
                 var19 = var19 - this.worldWidth;
               }
-              if (ln.a(s.field_H, 0, var17_int, var18_ref_ed, var19, -(var18_ref_ed.fullHeight << 15) + this.field_E >> 16)) {
+              if (ln.a(s.field_H, 0, var17_int, tetheredSprite, var19, -(tetheredSprite.fullHeight << 15) + this.field_E >> 16)) {
                 this.k((byte) 64);
-                this.a(var3_ref_ic, 5);
+                this.destroySeekerMine(seekerMine, 5);
                 decompiledFrameRemainder0 = false;
               }
             }
             if (decompiledFrameRemainder0 &&
               this.b(var16, s.field_H, var17_int, -1)) {
-              if (!this.field_Gb) {
+              if (!this.shipDestroyed) {
                 int var18Lifetime2 = hc.a(this.gameMode, (byte) 77);
-                this.field_J = this.field_J + var18Lifetime2;
+                this.levelScore = this.levelScore + var18Lifetime2;
                 v.a(8, var18Lifetime2);
               }
-              this.a(var3_ref_ic, 5);
+              this.destroySeekerMine(seekerMine, 5);
             }
           }
-          var3_ref_ic = (ic) (this.field_N.next((byte) 70));
+          seekerMine = (SeekerMine) (this.seekerMines.next((byte) 70));
         }
         this.field_oc = (1 + this.field_oc) % 200;
-        if (!this.field_Gb ||
-          this.field_Ub >= 0) {
+        if (!this.shipDestroyed ||
+          this.tetheredObjectType >= 0) {
           int var3Lifetime3 = 0;
           var4 = 0;
-          if (!this.field_Gb) {
+          if (!this.shipDestroyed) {
             var4 = this.shipVelocityYQ16;
             var3Lifetime3 = this.shipVelocityXQ16;
           }
-          int stackIn_324_0Lifetime1 = ~this.field_Ub;
+          int stackIn_324_0Lifetime1 = ~this.tetheredObjectType;
           int stackIn_324_1Lifetime1 = -1;
           if (stackIn_324_0Lifetime1 <= stackIn_324_1Lifetime1) {
             var3Lifetime3 = (this.field_Ob >> 2) + var3Lifetime3 - (var3Lifetime3 >> 2);
@@ -4459,8 +4459,8 @@ final class GameplaySession {
           }
         }
         boolean var3Lifetime4 = false;
-        if (!this.field_Gb) {
-          if (!this.field_rb) {
+        if (!this.shipDestroyed) {
+          if (!this.shipLanded) {
             int stackIn_337_0 = (this.shipYQ16 < 33554432) ? 0 : 1;
             var4 = stackIn_337_0;
             this.field_M = this.field_M + this.shipVelocityXQ16;
@@ -4473,10 +4473,10 @@ final class GameplaySession {
             this.field_q = false;
             this.field_jc = false;
             this.field_kc = false;
-            if (!this.field_Bb) {
+            if (!this.shieldActive) {
               this.A((byte) -102);
               if (this.field_q) {
-                this.h((byte) -70);
+                this.destroyShip((byte) -70);
               } else if (this.field_kc ||
                 this.field_jc) {
                 if (var5 != 0) {
@@ -4504,16 +4504,16 @@ final class GameplaySession {
                     this.shipVelocityYQ16 = 0;
                     var3Lifetime4 = true;
                     this.shipVelocityXQ16 = 0;
-                    this.field_rb = true;
+                    this.shipLanded = true;
                   }
                   boolean decompiledFrameRemainder2 = false;
                 } else if (this.field_kc) {
                   this.field_M = this.field_M + 16384;
                   this.shipXQ16 = this.shipXQ16 + 16384;
-                  this.field_I = this.field_I + 1 & 255;
+                  this.shipAngle256 = this.shipAngle256 + 1 & 255;
                 } else {
                   this.shipXQ16 = this.shipXQ16 - 16384;
-                  this.field_I = -1 + this.field_I & 255;
+                  this.shipAngle256 = -1 + this.shipAngle256 & 255;
                   this.field_M = this.field_M - 16384;
                 }
               }
@@ -4542,7 +4542,7 @@ final class GameplaySession {
             this.field_q = false;
             this.A((byte) 72);
             if (this.field_q) {
-              this.h((byte) -112);
+              this.destroyShip((byte) -112);
             }
           }
           while (this.shipXQ16 < 0) {
@@ -4564,25 +4564,25 @@ final class GameplaySession {
           stackIn_543_0 = -1;
           stackIn_543_1 = ~var34_ref.objectType;
           if (stackIn_543_0 == stackIn_543_1) {
-            var34_ref.field_h = false;
-            if (!this.field_Gb &&
-              this.field_rb) {
+            var34_ref.glowActive = false;
+            if (!this.shipDestroyed &&
+              this.shipLanded) {
               var8 = (-var34_ref.x + ((this.shipXQ16 >> 16) + this.worldWidth)) % this.worldWidth;
               int var9Lifetime4 = -var34_ref.y + (this.shipYQ16 >> 16);
               if (var8 >= 7 &&
                 var8 < 23 &&
                 var9Lifetime4 >= 50 &&
                 var9Lifetime4 < 55) {
-                if (this.field_ac < 5000) {
-                  var34_ref.field_h = true;
-                  int var10Lifetime2 = 5000 - this.field_ac;
+                if (this.fuel < 5000) {
+                  var34_ref.glowActive = true;
+                  int var10Lifetime2 = 5000 - this.fuel;
                   if (var10Lifetime2 > 13) {
                     var10Lifetime2 = 13;
                   }
                   ji.a(true, var10Lifetime2);
-                  this.field_ac = this.field_ac + 13;
-                  if (this.field_ac > 5000) {
-                    this.field_ac = 5000;
+                  this.fuel = this.fuel + 13;
+                  if (this.fuel > 5000) {
+                    this.fuel = 5000;
                   }
                   if (var4_ref != null) {
                     ((hl) (var4_ref)).f(6144 * qm.field_c / 64);
@@ -4622,8 +4622,8 @@ final class GameplaySession {
           }
           if (this.field_rc &&
             this.levelIndex == 7 &&
-            !this.field_Gb &&
-            this.field_rb &&
+            !this.shipDestroyed &&
+            this.shipLanded &&
             var34_ref.objectType == 3) {
             var8 = this.shipXQ16 >> 16;
             int var9Lifetime4Lifetime1 = this.shipYQ16 >> 16;
@@ -4647,14 +4647,14 @@ final class GameplaySession {
           null == this.field_Eb) {
           var5_ref_hl.h(0);
         }
-        if (!this.field_Gb &&
-          this.field_rb &&
-          this.field_ac == 0) {
-          this.h((byte) -61);
+        if (!this.shipDestroyed &&
+          this.shipLanded &&
+          this.fuel == 0) {
+          this.destroyShip((byte) -61);
         }
-        if (!this.field_Gb &&
-          this.field_rb &&
-          this.field_Ub < 0) {
+        if (!this.shipDestroyed &&
+          this.shipLanded &&
+          this.tetheredObjectType < 0) {
           Object var4_refLifetime1 = null;
           var5 = 0;
           scanLoop2: while (true) {
@@ -4721,20 +4721,20 @@ final class GameplaySession {
                     if (this.minimap != null) {
                       this.minimap.a(var37_ref, 4236);
                     }
-                    this.field_Ub = var37_ref.objectType;
-                    this.f(-118, 1);
-                    this.field_mb = var10Lifetime3;
+                    this.tetheredObjectType = var37_ref.objectType;
+                    this.activateCountdown(-118, 1);
+                    this.tetheredXQ16 = var10Lifetime3;
                     this.field_o = 0;
                     this.field_E = var11Lifetime2;
                     this.field_Ob = 0;
                     this.field_W = false;
-                    if (this.field_Ub < 9) {
-                      int var14Lifetime1 = qj.a((byte) -38, this.field_Ub, this.gameMode);
-                      this.field_J = this.field_J + var14Lifetime1;
+                    if (this.tetheredObjectType < 9) {
+                      int var14Lifetime1 = qj.a((byte) -38, this.tetheredObjectType, this.gameMode);
+                      this.levelScore = this.levelScore + var14Lifetime1;
                       v.a(8, var14Lifetime1);
-                      this.a(this.field_Ub, (byte) -9);
+                      this.a(this.tetheredObjectType, (byte) -9);
                     } else {
-                      this.field_e = 50;
+                      this.pickupAnimationTicks = 50;
                     }
                     pl.field_n.a(fg.field_a, 100, qm.field_c * 6144 / 64, 8192);
                     break scanLoop2;
@@ -4766,12 +4766,12 @@ final class GameplaySession {
             var5++;
           }
         }
-        if (this.field_Ub < 0) {
+        if (this.tetheredObjectType < 0) {
           this.field_fb.field_l = 0;
         } else {
           if (!this.field_W &&
-            !this.field_Gb) {
-            var4 = this.shipXQ16 - this.field_mb >> 8;
+            !this.shipDestroyed) {
+            var4 = this.shipXQ16 - this.tetheredXQ16 >> 8;
             if (-this.worldWidth << 7 > var4) {
               var4 = var4 + (this.worldWidth << 8);
             } else if ((this.worldWidth << 7) <= var4) {
@@ -4780,11 +4780,11 @@ final class GameplaySession {
             var5 = -this.field_E + this.shipYQ16 >> 8;
             var6 = this.shipVelocityXQ16;
             var7 = this.shipVelocityYQ16;
-            if (this.field_e > 0) {
-              var6 = var6 + (var4 << 8) * (-this.field_e + 50) / 2500;
-              var7 = var7 + (-this.field_e + 50) * (var5 << 8) / 2500;
-              var5 = (125 - this.field_e) * var5 / 75;
-              var4 = var4 * (125 - this.field_e) / 75;
+            if (this.pickupAnimationTicks > 0) {
+              var6 = var6 + (var4 << 8) * (-this.pickupAnimationTicks + 50) / 2500;
+              var7 = var7 + (-this.pickupAnimationTicks + 50) * (var5 << 8) / 2500;
+              var5 = (125 - this.pickupAnimationTicks) * var5 / 75;
+              var4 = var4 * (125 - this.pickupAnimationTicks) / 75;
             }
             var8 = var4 * var4 + var5 * var5;
             Object var9_ref_Object = pl.field_n;
@@ -4793,7 +4793,7 @@ final class GameplaySession {
               var5 = (int)((double)var5 / var10_double);
               var4 = (int)((double)var4 / var10_double);
               var12 = ((var6 >> 4) * var4 + var5 * (var7 >> 4)) * qm.field_c / 64 >> 6;
-              if (this.field_e == 0 &&
+              if (this.pickupAnimationTicks == 0 &&
                 var8 >= 150994944) {
                 pl.field_n.a(rk.field_c, 100, var12 >> 11);
                 this.field_W = true;
@@ -4807,12 +4807,12 @@ final class GameplaySession {
             this.field_fb.field_l = 0;
           }
           if (this.field_W) {
-            this.field_mb = this.field_mb + this.field_Ob;
-            this.field_o = this.field_o + this.field_qb;
+            this.tetheredXQ16 = this.tetheredXQ16 + this.field_Ob;
+            this.field_o = this.field_o + this.gravityQ16;
             this.field_E = this.field_E + this.field_o;
-            if (!this.field_Gb) {
+            if (!this.shipDestroyed) {
               stackIn_543_0 = -this.shipXQ16;
-              stackIn_543_1 = this.field_mb;
+              stackIn_543_1 = this.tetheredXQ16;
               double var4_double = (double)(stackIn_543_0 + stackIn_543_1);
               if ((double)(-this.worldWidth << 15) > var4_double) {
                 var4_double = var4_double + (double)(this.worldWidth << 16);
@@ -4826,21 +4826,21 @@ final class GameplaySession {
               var6_double = var6_double / var8_double;
               var12 = (int)(var4_double * var10_double);
               var13_int = (int)(var10_double * var6_double);
-              if (!this.field_rb) {
+              if (!this.shipLanded) {
                 this.shipYQ16 = this.shipYQ16 + (var13_int >> 2);
                 this.field_E = this.field_E - (var13_int - (var13_int >> 2));
                 this.shipXQ16 = this.shipXQ16 + (var12 >> 2);
-                this.field_mb = this.field_mb - (-(var12 >> 2) + var12);
+                this.tetheredXQ16 = this.tetheredXQ16 - (-(var12 >> 2) + var12);
                 this.shipXQ16 = ((this.worldWidth << 16) + this.shipXQ16) % (this.worldWidth << 16);
                 this.field_M = this.field_M + (var12 >> 2);
               } else {
-                this.field_mb = this.field_mb - var12;
+                this.tetheredXQ16 = this.tetheredXQ16 - var12;
                 this.field_E = this.field_E - var13_int;
               }
               double var14_double = (double)(this.field_o - this.shipVelocityYQ16) * var6_double + (double)(this.field_Ob - this.shipVelocityXQ16) * var4_double;
               var16 = (int)(var14_double * var4_double);
               var17_int = (int)(var6_double * var14_double);
-              if (this.field_rb) {
+              if (this.shipLanded) {
                 this.field_o = this.field_o - var17_int;
                 this.field_Ob = this.field_Ob - var16;
               } else {
@@ -4850,11 +4850,11 @@ final class GameplaySession {
                 this.field_o = this.field_o - (-(var17_int >> 2) + var17_int);
               }
             }
-            this.field_mb = (this.field_mb + (this.worldWidth << 16)) % (this.worldWidth << 16);
+            this.tetheredXQ16 = (this.tetheredXQ16 + (this.worldWidth << 16)) % (this.worldWidth << 16);
             this.field_o = this.field_o - this.field_o / 256;
             this.field_Ob = this.field_Ob - this.field_Ob / 256;
-            Sprite var39 = mb.field_f[this.field_Ub];
-            var5 = (-(var39.fullWidth << 15) + this.field_mb >> 16) + this.worldWidth;
+            Sprite var39 = mb.field_f[this.tetheredObjectType];
+            var5 = (-(var39.fullWidth << 15) + this.tetheredXQ16 >> 16) + this.worldWidth;
             var6 = this.field_E - (var39.fullHeight << 15) >> 16;
             if (this.b(var5, var39, var6, -1)) {
               this.k((byte) 9);
@@ -4862,53 +4862,53 @@ final class GameplaySession {
           }
         }
         var4 = 0;
-        IntrusiveNode var5_ref_hg = this.field_G.first(false);
+        IntrusiveNode var5_ref_hg = this.bullets.first(false);
         var6 = 0;
         while (var6 < this.field_x) {
-          vh var40_ref = (vh) (var5_ref_hg);
-          int fieldTemp$0 = var40_ref.field_m - 1;
-          var40_ref.field_m = var40_ref.field_m - 1;
+          vh bullet = (vh) (var5_ref_hg);
+          int fieldTemp$0 = bullet.field_m - 1;
+          bullet.field_m = bullet.field_m - 1;
           int stackIn_608_0 = ~fieldTemp$0;
           int stackIn_608_1 = -1;
           boolean decompiledFrameRemainder3 = true;
           boolean decompiledFrameCompleted1 = true;
           if (stackIn_608_0 == stackIn_608_1) {
             var4 = 1;
-            var40_ref.field_h = true;
+            bullet.field_h = true;
           } else {
-            var8 = (var40_ref.field_j + var40_ref.field_n + (this.worldWidth << 16)) % (this.worldWidth << 16);
-            int var9Lifetime5 = var40_ref.field_g + var40_ref.field_l;
-            var40_ref.field_j = var8;
-            var40_ref.field_l = var9Lifetime5;
+            var8 = (bullet.field_j + bullet.field_n + (this.worldWidth << 16)) % (this.worldWidth << 16);
+            int var9Lifetime5 = bullet.field_g + bullet.field_l;
+            bullet.field_j = var8;
+            bullet.field_l = var9Lifetime5;
             var8 = var8 >> 16;
             var9Lifetime5 = var9Lifetime5 >> 16;
-            if (var40_ref.field_k == 0) {
+            if (bullet.field_k == 0) {
               Sprite var41 = s.field_H;
-              ic var11_ref_ic = (ic) (this.field_N.first(false));
-              while (var11_ref_ic != null) {
-                var12 = var41.offsetY + ((var11_ref_ic.field_q >> 16) - 8);
+              SeekerMine hitMine = (SeekerMine) (this.seekerMines.first(false));
+              while (hitMine != null) {
+                var12 = var41.offsetY + ((hitMine.yQ16 >> 16) - 8);
                 int stackIn_581_0 = ~var12;
                 int stackIn_581_1 = ~var9Lifetime5;
                 if (stackIn_581_0 >= stackIn_581_1 &&
                   (var41.height + var12) > var9Lifetime5) {
-                  for (var13_int = var8 + (-(var11_ref_ic.field_p >> 16) + (8 - var41.offsetX)); var13_int < 0; var13_int = var13_int + this.worldWidth) {
+                  for (var13_int = var8 + (-(hitMine.xQ16 >> 16) + (8 - var41.offsetX)); var13_int < 0; var13_int = var13_int + this.worldWidth) {
                   }
                   var13_int = var13_int % this.worldWidth;
                   if (!(var41.width <= var13_int) &&
                     var41.pixels[(var9Lifetime5 - var12) * var41.width + var13_int] != 0) {
-                    if (!this.field_Gb) {
+                    if (!this.shipDestroyed) {
                       int var14Lifetime2 = hc.a(this.gameMode, (byte) 112);
-                      this.field_J = this.field_J + var14Lifetime2;
+                      this.levelScore = this.levelScore + var14Lifetime2;
                       v.a(8, var14Lifetime2);
                     }
-                    this.a(var11_ref_ic, 5);
-                    var40_ref.field_h = true;
+                    this.destroySeekerMine(hitMine, 5);
+                    bullet.field_h = true;
                     var4 = 1;
                     decompiledFrameCompleted1 = false;
                     break;
                   }
                 }
-                var11_ref_ic = (ic) (this.field_N.next((byte) 70));
+                hitMine = (SeekerMine) (this.seekerMines.next((byte) 70));
               }
             }
             if (decompiledFrameCompleted1) {
@@ -4929,21 +4929,21 @@ final class GameplaySession {
                 int[] var12_ref_int__ = var42;
                 if (var12_ref_int__ != null && (var12_ref_int__ == QuickChatPhraseDefinition.fullTileMask ||
                   (var46[var11Lifetime3] & 1 << var10Lifetime4) != 0)) {
-                  if (0 == var40_ref.field_k) {
+                  if (0 == bullet.field_k) {
                     this.j(-90, var11Lifetime3 | var9Lifetime5 << 5, var10Lifetime4 | var8 << 5);
                   }
                   var4 = 1;
-                  var40_ref.field_h = true;
+                  bullet.field_h = true;
                   decompiledFrameRemainder3 = false;
                 }
               }
-              if (decompiledFrameRemainder3 && (var40_ref.field_k == 1 &&
-                !this.field_Gb && (this.field_Bb &&
+              if (decompiledFrameRemainder3 && (bullet.field_k == 1 &&
+                !this.shipDestroyed && (this.shieldActive &&
                 this.d(var8 << 5 | var10Lifetime4, 32, var9Lifetime5 << 5 | var11Lifetime3) ||
                 (this.a((byte) 105, var9Lifetime5 << 5 | var11Lifetime3, var8 << 5 | var10Lifetime4) ||
                 this.k(-2, var10Lifetime4 | var8 << 5, var9Lifetime5 << 5 | var11Lifetime3))))) {
                 var4 = 1;
-                var40_ref.field_h = true;
+                bullet.field_h = true;
               }
             }
           }
@@ -4953,56 +4953,56 @@ final class GameplaySession {
         if (var4 != 0) {
           this.F(127);
         }
-        var4 = this.field_qc * qm.field_c / 32;
+        var4 = this.activeExhaustParticles * qm.field_c / 32;
         int stackIn_608_0Lifetime1 = var4;
         int stackIn_608_1Lifetime1 = 8192;
         var5 = stackIn_608_0Lifetime1 * stackIn_608_1Lifetime1;
-        pi var6_ref_pi = (pi) (this.field_hb.first(false));
-        scanLoop3: while (var6_ref_pi != null) {
+        RockBuster rockBuster = (RockBuster) (this.rockBusters.first(false));
+        scanLoop3: while (rockBuster != null) {
           var7 = 0;
           while (var7 < 32) {
-            boolean stackOut_612_0 = var6_ref_pi.field_i.field_E[var7 + var6_ref_pi.field_q];
+            boolean stackOut_612_0 = rockBuster.exhaustParticles.field_E[var7 + rockBuster.exhaustWriteIndex];
             int stackIn_618_0 = stackOut_612_0 ? 1 : 0;
             boolean stackIn_613_0 = stackOut_612_0;
             if (stackIn_613_0) {
-              var6_ref_pi.field_l = var6_ref_pi.field_l - 1;
-              var6_ref_pi.field_i.field_E[var6_ref_pi.field_q + var7] = false;
+              rockBuster.activeExhaustParticles = rockBuster.activeExhaustParticles - 1;
+              rockBuster.exhaustParticles.field_E[rockBuster.exhaustWriteIndex + var7] = false;
             }
             var7++;
           }
-          var6_ref_pi.field_i.a();
+          rockBuster.exhaustParticles.a();
           int stackIn_618_0Lifetime1 = -1;
-          if (stackIn_618_0Lifetime1 > ~var6_ref_pi.field_r) {
-            double var7_doubleLifetime1 = 0.02454369260617026 * (double)var6_ref_pi.field_m;
-            var6_ref_pi.field_k = var6_ref_pi.field_k + (int)(2000.0 * Math.sin(var7_doubleLifetime1));
-            var6_ref_pi.field_p = var6_ref_pi.field_p - (int)(2000.0 * Math.cos(var7_doubleLifetime1));
+          if (stackIn_618_0Lifetime1 > ~rockBuster.remainingFlightTicks) {
+            double var7_doubleLifetime1 = 0.02454369260617026 * (double)rockBuster.angle256;
+            rockBuster.velocityXQ16 = rockBuster.velocityXQ16 + (int)(2000.0 * Math.sin(var7_doubleLifetime1));
+            rockBuster.velocityYQ16 = rockBuster.velocityYQ16 - (int)(2000.0 * Math.cos(var7_doubleLifetime1));
             for (int var9Lifetime6 = 0; 32 > var9Lifetime6; var9Lifetime6++) {
-              var6_ref_pi.field_i.field_E[var9Lifetime6 + var6_ref_pi.field_q] = true;
+              rockBuster.exhaustParticles.field_E[var9Lifetime6 + rockBuster.exhaustWriteIndex] = true;
               var10_double = Math.random() * 0.2 + var7_doubleLifetime1 - 0.1;
               double var12_double = (0.5 + Math.random()) * 524288.0;
               int var14Lifetime3 = -(int)(Math.sin(var10_double) * var12_double);
               int var15_intLifetime1 = (int)(var12_double * Math.cos(var10_double));
-              var6_ref_pi.field_i.field_x[var9Lifetime6 + var6_ref_pi.field_q] = var6_ref_pi.field_n + var6_ref_pi.field_k;
-              var6_ref_pi.field_i.field_A[var9Lifetime6 + var6_ref_pi.field_q] = var6_ref_pi.field_g + var6_ref_pi.field_p;
+              rockBuster.exhaustParticles.field_x[var9Lifetime6 + rockBuster.exhaustWriteIndex] = rockBuster.xQ16 + rockBuster.velocityXQ16;
+              rockBuster.exhaustParticles.field_A[var9Lifetime6 + rockBuster.exhaustWriteIndex] = rockBuster.yQ16 + rockBuster.velocityYQ16;
               double var16_double = Math.random();
-              var6_ref_pi.field_i.field_y[var6_ref_pi.field_q + var9Lifetime6] = (int)(var16_double * (double)var14Lifetime3);
-              var6_ref_pi.field_i.field_C[var6_ref_pi.field_q + var9Lifetime6] = (int)(var16_double * (double)var15_intLifetime1);
-              var6_ref_pi.field_i.field_w[var9Lifetime6 + var6_ref_pi.field_q] = 0;
-              var6_ref_pi.field_i.i(var9Lifetime6 + var6_ref_pi.field_q);
-              var6_ref_pi.field_i.field_y[var6_ref_pi.field_q + var9Lifetime6] = var6_ref_pi.field_k + var14Lifetime3;
-              var6_ref_pi.field_i.field_C[var6_ref_pi.field_q + var9Lifetime6] = var15_intLifetime1 + var6_ref_pi.field_p;
+              rockBuster.exhaustParticles.field_y[rockBuster.exhaustWriteIndex + var9Lifetime6] = (int)(var16_double * (double)var14Lifetime3);
+              rockBuster.exhaustParticles.field_C[rockBuster.exhaustWriteIndex + var9Lifetime6] = (int)(var16_double * (double)var15_intLifetime1);
+              rockBuster.exhaustParticles.field_w[var9Lifetime6 + rockBuster.exhaustWriteIndex] = 0;
+              rockBuster.exhaustParticles.i(var9Lifetime6 + rockBuster.exhaustWriteIndex);
+              rockBuster.exhaustParticles.field_y[rockBuster.exhaustWriteIndex + var9Lifetime6] = rockBuster.velocityXQ16 + var14Lifetime3;
+              rockBuster.exhaustParticles.field_C[rockBuster.exhaustWriteIndex + var9Lifetime6] = var15_intLifetime1 + rockBuster.velocityYQ16;
             }
-            var6_ref_pi.field_l = var6_ref_pi.field_l + 32;
+            rockBuster.activeExhaustParticles = rockBuster.activeExhaustParticles + 32;
           }
           regionExit4: {
             boolean decompiledFrameCompleted0 = true;
-            var7 = var6_ref_pi.field_l * this.b(2097152, var6_ref_pi.field_n, 96, var6_ref_pi.field_g) / 1024;
+            var7 = rockBuster.activeExhaustParticles * this.b(2097152, rockBuster.xQ16, 96, rockBuster.yQ16) / 1024;
             var4 = var4 + var7;
-            var5 = var5 + var7 * this.c(var6_ref_pi.field_n, 124);
-            var6_ref_pi.field_q = (32 + var6_ref_pi.field_q) % 256;
-            if (0 != var6_ref_pi.field_r) {
-              int fieldTemp$1 = var6_ref_pi.field_r - 1;
-              var6_ref_pi.field_r = var6_ref_pi.field_r - 1;
+            var5 = var5 + var7 * this.c(rockBuster.xQ16, 124);
+            rockBuster.exhaustWriteIndex = (32 + rockBuster.exhaustWriteIndex) % 256;
+            if (0 != rockBuster.remainingFlightTicks) {
+              int fieldTemp$1 = rockBuster.remainingFlightTicks - 1;
+              rockBuster.remainingFlightTicks = rockBuster.remainingFlightTicks - 1;
               if (fieldTemp$1 != 0) {
                 mf.field_a.offsetY = 0;
                 Sprite var8_ref_ed = mf.field_a;
@@ -5016,37 +5016,37 @@ final class GameplaySession {
                 var10_ref_ed.fullHeight = 7;
                 mf.field_a.g();
                 SoftwareRasterizer.d();
-                mf.field_m.a(4, (byte) 34, 4096, -var6_ref_pi.field_m << 8, 4);
+                mf.field_m.a(4, (byte) 34, 4096, -rockBuster.angle256 << 8, 4);
                 md.field_D.a(120);
-                var12 = (int)Math.sqrt((double)var6_ref_pi.field_p * (double)var6_ref_pi.field_p + (double)var6_ref_pi.field_k * (double)var6_ref_pi.field_k);
+                var12 = (int)Math.sqrt((double)rockBuster.velocityYQ16 * (double)rockBuster.velocityYQ16 + (double)rockBuster.velocityXQ16 * (double)rockBuster.velocityXQ16);
                 var13_int = var12 / 196608 + 1;
-                int var14Lifetime3Lifetime1 = var6_ref_pi.field_k;
-                int var15_intLifetime1Lifetime1 = var6_ref_pi.field_p;
+                int var14Lifetime3Lifetime1 = rockBuster.velocityXQ16;
+                int var15_intLifetime1Lifetime1 = rockBuster.velocityYQ16;
                 var16 = var13_int;
                 scanLoop5: while (true) {
                   if (0 >= var16) {
-                    if (var6_ref_pi.field_h) {
-                      var6_ref_pi.field_h = false;
-                      pl.field_n.a(var6_ref_pi.field_o);
+                    if (rockBuster.field_h) {
+                      rockBuster.field_h = false;
+                      pl.field_n.a(rockBuster.flightSound);
                     }
-                    var6_ref_pi.field_o.f(this.b(2097152, var6_ref_pi.field_n, 96, var6_ref_pi.field_g), this.c(var6_ref_pi.field_n, 125));
+                    rockBuster.flightSound.f(this.b(2097152, rockBuster.xQ16, 96, rockBuster.yQ16), this.c(rockBuster.xQ16, 125));
                     break regionExit4;
                   }
                   var17_int = var14Lifetime3Lifetime1 / var16;
                   int var18Lifetime1 = var15_intLifetime1Lifetime1 / var16;
-                  var19 = ((this.worldWidth << 16) + var6_ref_pi.field_n + var17_int) % (this.worldWidth << 16);
-                  var6_ref_pi.field_n = var19;
-                  var20 = var18Lifetime1 + var6_ref_pi.field_g;
+                  var19 = ((this.worldWidth << 16) + rockBuster.xQ16 + var17_int) % (this.worldWidth << 16);
+                  rockBuster.xQ16 = var19;
+                  var20 = var18Lifetime1 + rockBuster.yQ16;
                   var14Lifetime3Lifetime1 = var14Lifetime3Lifetime1 - var17_int;
                   var19 = var19 >> 16;
                   var15_intLifetime1Lifetime1 = var15_intLifetime1Lifetime1 - var18Lifetime1;
-                  var6_ref_pi.field_g = var20;
+                  rockBuster.yQ16 = var20;
                   var19 -= 4;
                   var20 = var20 >> 16;
                   var20 -= 4;
-                  ic var21_ref_ic = (ic) (this.field_N.first(false));
-                  while (var21_ref_ic != null) {
-                    int var22_intLifetime1 = -(var21_ref_ic.field_p >> 16) + var19 + 8;
+                  SeekerMine collidedMine = (SeekerMine) (this.seekerMines.first(false));
+                  while (collidedMine != null) {
+                    int var22_intLifetime1 = -(collidedMine.xQ16 >> 16) + var19 + 8;
                     int stackIn_675_0 = -(this.worldWidth >> 1);
                     int stackIn_675_1 = var22_intLifetime1;
                     if (!(stackIn_675_0 <= stackIn_675_1)) {
@@ -5054,19 +5054,19 @@ final class GameplaySession {
                     } else if ((this.worldWidth >> 1) < var22_intLifetime1) {
                       var22_intLifetime1 = var22_intLifetime1 - this.worldWidth;
                     }
-                    int var23_intLifetime1 = var20 + (-(var21_ref_ic.field_q >> 16) + 8);
+                    int var23_intLifetime1 = var20 + (-(collidedMine.yQ16 >> 16) + 8);
                     if (!ln.a(s.field_H, 0, 0, mf.field_a, var22_intLifetime1, var23_intLifetime1)) {
-                      var21_ref_ic = (ic) (this.field_N.next((byte) 70));
+                      collidedMine = (SeekerMine) (this.seekerMines.next((byte) 70));
                       continue;
                     }
-                    if (!this.field_Gb) {
+                    if (!this.shipDestroyed) {
                       int var24 = hc.a(this.gameMode, (byte) 105);
-                      this.field_J = this.field_J + var24;
+                      this.levelScore = this.levelScore + var24;
                       v.a(8, var24);
                     }
-                    this.a(var21_ref_ic, 5);
-                    this.a(var6_ref_pi, 82);
-                    var6_ref_pi.field_r = 0;
+                    this.destroySeekerMine(collidedMine, 5);
+                    this.detonateRockBuster(rockBuster, 82);
+                    rockBuster.remainingFlightTicks = 0;
                     break regionExit4;
                   }
                   if (!this.b(this.worldWidth + var19, mf.field_a, var20, -1)) {
@@ -5080,32 +5080,32 @@ final class GameplaySession {
                   int stackIn_650_0 = this.levelObjects.size();
                   int stackIn_650_1 = var21;
                   if (stackIn_650_0 <= stackIn_650_1) {
-                    this.a(var6_ref_pi, 78);
-                    var6_ref_pi.field_r = 0;
+                    this.detonateRockBuster(rockBuster, 78);
+                    rockBuster.remainingFlightTicks = 0;
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  LevelObject var22_ref = (LevelObject) (this.levelObjects.elementAt(var21));
-                  Sprite var23 = var22_ref.collisionSprite;
-                  for (var24Lifetime1 = -var19 + var22_ref.x; this.worldWidth >> 1 < var24Lifetime1; var24Lifetime1 = var24Lifetime1 - this.worldWidth) {
+                  LevelObject hitObject = (LevelObject) (this.levelObjects.elementAt(var21));
+                  Sprite var23 = hitObject.collisionSprite;
+                  for (var24Lifetime1 = -var19 + hitObject.x; this.worldWidth >> 1 < var24Lifetime1; var24Lifetime1 = var24Lifetime1 - this.worldWidth) {
                   }
                   while ((-this.worldWidth >> 1) > var24Lifetime1) {
                     var24Lifetime1 = var24Lifetime1 + this.worldWidth;
                   }
-                  int var25 = var22_ref.y - var20;
+                  int var25 = hitObject.y - var20;
                   if (ln.a(mf.field_a, 0, 0, var23, var24Lifetime1, var25)) {
-                    this.a(var22_ref, 67, var21);
-                    if (var22_ref.objectType == 6 ||
-                      var22_ref.objectType == 7) {
-                      int var26 = var22_ref.y + 14;
-                      IntrusiveNode var27 = this.field_C.first(false);
+                    this.destroyLevelObject(hitObject, 67, var21);
+                    if (hitObject.objectType == 6 ||
+                      hitObject.objectType == 7) {
+                      int var26 = hitObject.y + 14;
+                      IntrusiveNode var27 = this.laserGateSpans.first(false);
                       int var28 = 0;
-                      while (this.field_ub > var28) {
-                        am var29_ref = (am) (var27);
-                        int stackIn_650_0Lifetime1 = var29_ref.field_j;
+                      while (this.laserGateCount > var28) {
+                        LaserGateSpan hitGate = (LaserGateSpan) (var27);
+                        int stackIn_650_0Lifetime1 = hitGate.y;
                         int stackIn_650_1Lifetime1 = var26;
                         if (stackIn_650_0Lifetime1 == stackIn_650_1Lifetime1) {
-                          this.a(var29_ref, (byte) 27);
+                          this.removeLaserGateSpan(hitGate, (byte) 27);
                           break;
                         }
                         var28++;
@@ -5117,74 +5117,74 @@ final class GameplaySession {
                 }
               }
               if (decompiledFrameCompleted0) {
-                this.a(var6_ref_pi, 49);
+                this.detonateRockBuster(rockBuster, 49);
               }
             } else {
-              if (var6_ref_pi.field_l != 0) {
-                var6_ref_pi = (pi) (this.field_hb.next((byte) 70));
+              if (rockBuster.activeExhaustParticles != 0) {
+                rockBuster = (RockBuster) (this.rockBusters.next((byte) 70));
                 continue scanLoop3;
               }
-              var6_ref_pi.unlink((byte) -52);
+              rockBuster.unlink((byte) -52);
             }
           }
-          var6_ref_pi = (pi) (this.field_hb.next((byte) 70));
+          rockBuster = (RockBuster) (this.rockBusters.next((byte) 70));
         }
-        if (!this.field_Gb) {
+        if (!this.shipDestroyed) {
           int stackIn_675_0Lifetime1 = -1;
-          int stackIn_675_1Lifetime1 = ~this.field_m;
+          int stackIn_675_1Lifetime1 = ~this.shotCooldownTicks;
           if (stackIn_675_0Lifetime1 > stackIn_675_1Lifetime1) {
-            this.field_m = this.field_m - 1;
+            this.shotCooldownTicks = this.shotCooldownTicks - 1;
           } else if (!ik.field_p &&
             ik.field_h[82]) {
-            var6_double = (double)this.field_I * 0.02454369260617026;
+            var6_double = (double)this.shipAngle256 * 0.02454369260617026;
             var8 = (int)(Math.sin(var6_double) * 131072.0);
             int var9Lifetime7 = -(int)(Math.cos(var6_double) * 131072.0);
             this.b(this.shipYQ16 + 5 * var9Lifetime7, this.shipXQ16 + 5 * var8, this.shipVelocityYQ16 + var9Lifetime7, 256, 0, var8 + this.shipVelocityXQ16);
-            if (!this.field_lb) {
+            if (!this.triShotEnabled) {
               pl.field_n.a(ni.field_M, 100, qm.field_c * 6144 / 64, 8192);
             } else {
               this.b(this.shipYQ16 + var9Lifetime7 * 5, this.shipXQ16 + var8 * 5, (var8 >> 3) - (var9Lifetime7 >> 3) + (this.shipVelocityYQ16 + var9Lifetime7), 256, 0, this.shipVelocityXQ16 + (var8 - ((var8 >> 3) + (var9Lifetime7 >> 3))));
               this.b(this.shipYQ16 + var9Lifetime7 * 5, 5 * var8 + this.shipXQ16, -(var8 >> 3) - (var9Lifetime7 >> 3) + (var9Lifetime7 + this.shipVelocityYQ16), 256, 0, (var9Lifetime7 >> 3) + this.shipVelocityXQ16 + (var8 - (var8 >> 3)));
               pl.field_n.a(gn.field_e, 100, 6144 * qm.field_c / 64, 8192);
             }
-            this.field_m = 9;
+            this.shotCooldownTicks = 9;
           }
-          if (!(0 >= this.field_yb)) {
-            this.field_yb = this.field_yb - 1;
-          } else if (this.field_tb > 0 &&
+          if (!(0 >= this.rockBusterCooldownTicks)) {
+            this.rockBusterCooldownTicks = this.rockBusterCooldownTicks - 1;
+          } else if (this.rockBusterAmmo > 0 &&
             this.d((byte) 61)) {
-            var6_double = 0.02454369260617026 * (double)this.field_I;
+            var6_double = 0.02454369260617026 * (double)this.shipAngle256;
             var8 = (int)(131072.0 * Math.sin(var6_double));
             int var9Lifetime7Lifetime1 = -(int)(Math.cos(var6_double) * 131072.0);
-            pi var43 = new pi();
-            var43.field_p = this.shipVelocityYQ16 + var9Lifetime7Lifetime1;
-            var43.field_n = (this.shipXQ16 + (5 * var8 + (this.worldWidth << 16))) % (this.worldWidth << 16);
-            var43.field_r = 100;
-            var43.field_m = this.field_I;
-            var43.field_k = this.shipVelocityXQ16 + var8;
-            var43.field_g = this.shipYQ16 + 5 * var9Lifetime7Lifetime1;
-            var43.field_i = this.i(256, -22944);
-            var43.field_o = hl.c(kf.field_p, 100, this.b(2097152, var43.field_n, 96, var43.field_g), this.c(var43.field_n, 116));
-            pl.field_n.a(var43.field_o);
-            this.field_hb.addLast(-12328, var43);
-            this.field_tb = this.field_tb - 1;
+            RockBuster launchedRockBuster = new RockBuster();
+            launchedRockBuster.velocityYQ16 = this.shipVelocityYQ16 + var9Lifetime7Lifetime1;
+            launchedRockBuster.xQ16 = (this.shipXQ16 + (5 * var8 + (this.worldWidth << 16))) % (this.worldWidth << 16);
+            launchedRockBuster.remainingFlightTicks = 100;
+            launchedRockBuster.angle256 = this.shipAngle256;
+            launchedRockBuster.velocityXQ16 = this.shipVelocityXQ16 + var8;
+            launchedRockBuster.yQ16 = this.shipYQ16 + 5 * var9Lifetime7Lifetime1;
+            launchedRockBuster.exhaustParticles = this.i(256, -22944);
+            launchedRockBuster.flightSound = hl.c(kf.field_p, 100, this.b(2097152, launchedRockBuster.xQ16, 96, launchedRockBuster.yQ16), this.c(launchedRockBuster.xQ16, 116));
+            pl.field_n.a(launchedRockBuster.flightSound);
+            this.rockBusters.addLast(-12328, launchedRockBuster);
+            this.rockBusterAmmo = this.rockBusterAmmo - 1;
             fk.b(0);
-            this.field_yb = 24;
+            this.rockBusterCooldownTicks = 24;
           }
         }
         var6 = 0;
         while (var6 < this.levelObjects.size()) {
-          LevelObject var44_ref = (LevelObject) (this.levelObjects.elementAt(var6));
-          int stackIn_713_0 = var44_ref.objectType;
+          LevelObject turret = (LevelObject) (this.levelObjects.elementAt(var6));
+          int stackIn_713_0 = turret.objectType;
           int stackIn_713_1 = 2;
           if (stackIn_713_0 == stackIn_713_1) {
-            if (var44_ref.field_o > 0) {
-              var44_ref.field_o = var44_ref.field_o - 1;
-            } else if (!this.field_Gb) {
-              fn var45 = rf.a(var44_ref.spriteFrame, 16384);
-              if (var45 != null) {
-                int var9Lifetime8 = var44_ref.x + var45.field_c << 16;
-                int var10Lifetime5 = var45.field_b + var44_ref.y << 16;
+            if (turret.shotCooldownTicks > 0) {
+              turret.shotCooldownTicks = turret.shotCooldownTicks - 1;
+            } else if (!this.shipDestroyed) {
+              fn muzzleOffset = rf.a(turret.spriteFrame, 16384);
+              if (muzzleOffset != null) {
+                int var9Lifetime8 = turret.x + muzzleOffset.field_c << 16;
+                int var10Lifetime5 = muzzleOffset.field_b + turret.y << 16;
                 int var11Lifetime4 = this.shipXQ16 - var9Lifetime8;
                 var12 = this.shipYQ16 - var10Lifetime5;
                 if (!(var11Lifetime4 >= (-this.worldWidth << 15))) {
@@ -5202,7 +5202,7 @@ final class GameplaySession {
                   var12 = (int)(var15Lifetime1 * 131072.0);
                   if (this.a((int)var17Lifetime1 >> 17, var12, 5 * var12 + var10Lifetime5, 5 * var11Lifetime4Lifetime1 + var9Lifetime8, var11Lifetime4Lifetime1, 0)) {
                     this.b(var10Lifetime5 + 5 * var12, var11Lifetime4Lifetime1 * 5 + var9Lifetime8, var12, 256, 1, var11Lifetime4Lifetime1);
-                    var44_ref.field_o = 49;
+                    turret.shotCooldownTicks = 49;
                     pl.field_n.a(uk.field_j, 100, this.b(6553600, var9Lifetime8, 96, var10Lifetime5), this.c(var9Lifetime8, 120));
                   }
                 }
@@ -5211,7 +5211,7 @@ final class GameplaySession {
           }
           var6++;
         }
-        this.B((byte) 109);
+        this.updateCountdown((byte) 109);
         if (null != this.field_Db) {
           this.field_Db.c(-1);
         }
@@ -5229,7 +5229,7 @@ final class GameplaySession {
           stackIn_718_2 = var5 / var4;
         }
         ((hl) (Object) stackIn_717_0).f(stackIn_717_1, stackIn_718_2);
-        this.field_Sb = (64 + this.field_Sb) % 512;
+        this.exhaustWriteIndex = (64 + this.exhaustWriteIndex) % 512;
         if (this.field_rc &&
           this.levelIndex >= 0) {
           this.f(false);
@@ -5291,12 +5291,12 @@ final class GameplaySession {
               } else {
                 IntrusiveNode var16 = IntrusiveDeque.field_f.first(false);
                 for (int var17 = 0; vh.field_i > var17; var17++) {
-                  am var18_ref = (am) (var16);
-                  int stackIn_11_0Lifetime1 = ~var18_ref.field_j;
+                  LaserGateSpan var18_ref = (LaserGateSpan) (var16);
+                  int stackIn_11_0Lifetime1 = ~var18_ref.y;
                   int stackIn_11_1Lifetime1 = ~var14;
                   if (stackIn_11_0Lifetime1 == stackIn_11_1Lifetime1 &&
-                    var18_ref.field_i <= var13 &&
-                    var18_ref.field_h > var13) {
+                    var18_ref.leftX <= var13 &&
+                    var18_ref.rightX > var13) {
                     this.field_Hb = this.field_Hb + var13;
                     this.field_pb = this.field_pb + var14;
                     break;
@@ -5323,14 +5323,14 @@ final class GameplaySession {
         int var5 = var13.b("0000");
         int var6 = 40;
         int var7 = 18;
-        if (0 < this.field_tb) {
+        if (0 < this.rockBusterAmmo) {
           int var4Lifetime1 = var13.b(af.field_f);
           var6 = var6 + var7;
           if (var3 < var4Lifetime1) {
             var3 = var4Lifetime1;
           }
         }
-        if (this.field_Q == 1) {
+        if (this.objectiveType == 1) {
           var6 = var6 + var7;
           int var4Lifetime2 = var13.b(IntrusiveNode.field_f);
           if (var3 < var4Lifetime2) {
@@ -5345,25 +5345,25 @@ final class GameplaySession {
         }
         int var9 = stackIn_16_0;
         if (param0 != 3) {
-          this.field_tb = 30;
+          this.rockBusterAmmo = 30;
         }
         GameAppletShell.a(var9, -4, -4, 6320248, -2, var6 + 6, param0 ^ -2, var5 + var3 + 6 + 10, 12110032, 3160124, 2 * var8);
         int var10 = 22;
         var13.b(di.field_b, var3 + 6, var10, 10004656, -1);
-        var13.a(Integer.toString(this.field_ac), 6 + var3, var10, 16777215, -1);
+        var13.a(Integer.toString(this.fuel), 6 + var3, var10, 16777215, -1);
         var10 = var10 + var7;
         var13.b(k.field_p, var3 + 6, var10, 10004656, -1);
-        var13.a(Integer.toString(this.field_Tb + this.field_Tb), 6 + var3, var10, 16777215, -1);
+        var13.a(Integer.toString(this.shieldEnergy + this.shieldEnergy), 6 + var3, var10, 16777215, -1);
         var10 = var10 + var7;
-        if (this.field_tb > 0) {
+        if (this.rockBusterAmmo > 0) {
           var13.b(af.field_f, var3 + 6, var10, 10004656, -1);
-          var13.a(Integer.toString(this.field_tb), 6 + var3, var10, 16777215, -1);
+          var13.a(Integer.toString(this.rockBusterAmmo), 6 + var3, var10, 16777215, -1);
           var10 = var10 + var7;
         }
-        if (this.field_Q == 1) {
+        if (this.objectiveType == 1) {
           int var11_int = 0;
-          if (this.field_k != null) {
-            var11_int = this.field_k.size((byte) 49);
+          if (this.missionTargets != null) {
+            var11_int = this.missionTargets.size((byte) 49);
           }
           var13.b(IntrusiveNode.field_f, 6 + var3, var10, 10004656, -1);
           var13.a(Integer.toString(var11_int), var3 + 6, var10, 16777215, -1);
@@ -5375,7 +5375,7 @@ final class GameplaySession {
         if (var3Lifetime1 < var4Lifetime3) {
           var3Lifetime1 = var4Lifetime3;
         }
-        int var4Lifetime4 = var13.b(Integer.toString(this.field_A));
+        int var4Lifetime4 = var13.b(Integer.toString(this.livesRemaining));
         if (var5Lifetime1 < var4Lifetime4) {
           var5Lifetime1 = var4Lifetime4;
         }
@@ -5386,12 +5386,12 @@ final class GameplaySession {
         if (var4Lifetime5 > var3Lifetime1) {
           var3Lifetime1 = var4Lifetime5;
         }
-        int var4Lifetime6 = var13.b(Integer.toString(this.field_J + this.score));
+        int var4Lifetime6 = var13.b(Integer.toString(this.levelScore + this.score));
         if (var5Lifetime1 < var4Lifetime6) {
           var5Lifetime1 = var4Lifetime6;
         }
         if (SpriteState.field_r ||
-          this.field_a) {
+          this.countdownActive) {
           var6Lifetime1 += 18;
           int var4Lifetime7 = var13.b(hn.field_f);
           if (var3Lifetime1 < var4Lifetime7) {
@@ -5413,17 +5413,17 @@ final class GameplaySession {
         var13.b(jf.field_K, -var5Lifetime1 + 634, 22, 10004656, -1);
         var13.a(Integer.toString(this.levelIndex + 1), -var5Lifetime1 + 634, 22, 16777215, -1);
         var13.b(vd.field_c, -var5Lifetime1 + 634, 40, 10004656, -1);
-        var13.a(Integer.toString(this.field_A), -var5Lifetime1 + 634, 40, 16777215, -1);
+        var13.a(Integer.toString(this.livesRemaining), -var5Lifetime1 + 634, 40, 16777215, -1);
         var13.b(uk.field_a, -var5Lifetime1 + 634, 58, 10004656, -1);
         ih stackIn_47_0 = var13;
-        String stackIn_47_1 = Integer.toString(this.score + this.field_J);
+        String stackIn_47_1 = Integer.toString(this.score + this.levelScore);
         int stackIn_47_2 = -var5Lifetime1 + 634;
         int stackIn_47_3 = 58;
         stackIn_48_4 = (!this.timeHackMode &&
           !this.field_rc) ? (4227327) : (16777215);
         ((ih) (Object) stackIn_47_0).a(stackIn_47_1, stackIn_47_2, stackIn_47_3, stackIn_48_4, -1);
         if (SpriteState.field_r ||
-          this.field_a) {
+          this.countdownActive) {
           int var12 = this.a((byte) 114, 50, 16777215, 16711680);
           var13.b(hn.field_f, -var5Lifetime1 + 634, 76, 10004656, -1);
           var13.a(var11, -var5Lifetime1 + 634, 76, var12, -1);
@@ -5440,15 +5440,15 @@ final class GameplaySession {
         }
     }
 
-    private final void j(byte param0) {
+    private final void initializeCurrentLevel(byte guard) {
         this.a(24661, true);
         if (this.levelIndex >= 0) {
-          this.k(param0 - 17);
+          this.loadCurrentLevel(guard - 17);
         } else {
           this.buildTutorialTerrain((byte) -120);
         }
         this.initializeLevelObjects(true, 19);
-        if (param0 != -110) {
+        if (guard != -110) {
           this.m(110);
         }
     }
@@ -5494,63 +5494,63 @@ final class GameplaySession {
         if (null != this.field_fb) {
           this.field_fb.field_l = 0;
         }
-        if (null != this.field_hb) {
+        if (null != this.rockBusters) {
           Object var2 = pl.field_n;
           synchronized (var2) {
-            pi var3 = (pi) (this.field_hb.first(false));
+            RockBuster var3 = (RockBuster) (this.rockBusters.first(false));
             while (var3 != null) {
-              if (var3.field_r != 0 &&
-                var3.field_o.isLinked((byte) 48)) {
-                pl.field_n.b(var3.field_o);
+              if (var3.remainingFlightTicks != 0 &&
+                var3.flightSound.isLinked((byte) 48)) {
+                pl.field_n.b(var3.flightSound);
                 var3.field_h = true;
               }
-              var3 = (pi) (this.field_hb.next((byte) 70));
+              var3 = (RockBuster) (this.rockBusters.next((byte) 70));
             }
-            ic var3_ref = (ic) (this.field_N.first(false));
+            SeekerMine var3_ref = (SeekerMine) (this.seekerMines.first(false));
             while (var3_ref != null) {
-              if (null != var3_ref.field_g) {
-                pl.field_n.b(var3_ref.field_g);
-                pl.field_n.b(var3_ref.field_m);
-                var3_ref.field_g = null;
-                var3_ref.field_m = null;
+              if (null != var3_ref.flightSound) {
+                pl.field_n.b(var3_ref.flightSound);
+                pl.field_n.b(var3_ref.proximitySound);
+                var3_ref.flightSound = null;
+                var3_ref.proximitySound = null;
               }
-              var3_ref = (ic) (this.field_N.next((byte) 70));
+              var3_ref = (SeekerMine) (this.seekerMines.next((byte) 70));
             }
           }
         }
     }
 
-    private final void b(byte param0) {
-        this.field_Tb = this.field_gc;
+    private final void resetShipState(byte guard) {
+        this.shieldEnergy = this.initialShieldEnergy;
         this.field_M = 0;
-        this.field_lb = false;
-        this.field_tb = 0;
-        this.field_Bb = false;
-        this.field_ib = 1700;
-        this.field_I = 0;
-        this.field_e = 0;
-        this.field_ac = this.field_U;
+        this.triShotEnabled = false;
+        this.rockBusterAmmo = 0;
+        this.shieldActive = false;
+        this.thrustAccelerationQ16 = 1700;
+        this.shipAngle256 = 0;
+        this.pickupAnimationTicks = 0;
+        this.fuel = this.initialFuel;
         this.field_Kb = 0;
         this.shipVelocityYQ16 = 0;
-        if (param0 > -71) {
-          this.field_ub = 121;
+        if (guard > -71) {
+          this.laserGateCount = 121;
         }
         this.shipVelocityXQ16 = 0;
         this.shipXQ16 = this.spawnXQ16;
         this.field_ec = false;
-        this.field_h = null;
-        this.field_Ub = -1;
-        this.field_m = -1;
-        this.field_ab = 0;
+        this.hudMessageText = null;
+        this.tetheredObjectType = -1;
+        this.shotCooldownTicks = -1;
+        this.hudMessageTicks = 0;
         this.shipYQ16 = this.spawnYQ16;
-        this.field_hb = new IntrusiveDeque();
+        this.rockBusters = new IntrusiveDeque();
         this.field_jc = false;
-        this.field_yb = 0;
-        this.field_Gb = false;
+        this.rockBusterCooldownTicks = 0;
+        this.shipDestroyed = false;
         this.field_kc = false;
         this.field_Ib = false;
         this.field_q = false;
-        this.field_G = new IntrusiveDeque();
+        this.bullets = new IntrusiveDeque();
         this.field_x = 0;
         this.field_nb = null;
         this.field_O = 0;
@@ -5561,7 +5561,7 @@ final class GameplaySession {
 
     private final void b(int param0, int param1, int param2) {
         int var7 = EscapeVector.obfuscationControl;
-        IntrusiveNode var4 = this.field_G.first(false);
+        IntrusiveNode var4 = this.bullets.first(false);
         for (int var5 = param2; this.field_x > var5; var5++) {
           vh var6 = (vh) (var4);
           var6.a(param0, false, param1);
@@ -5571,25 +5571,25 @@ final class GameplaySession {
 
     private final void k(byte param0) {
         if (this.easyMode &&
-          this.field_Ub == 1) {
+          this.tetheredObjectType == 1) {
           return;
         }
-        if (!this.field_Gb) {
-          int var2_int = mf.b(this.gameMode, this.field_Ub, -2);
-          this.field_J = this.field_J + var2_int;
+        if (!this.shipDestroyed) {
+          int var2_int = mf.b(this.gameMode, this.tetheredObjectType, -2);
+          this.levelScore = this.levelScore + var2_int;
           v.a(8, var2_int);
         }
-        Sprite var3 = mb.field_f[this.field_Ub];
+        Sprite var3 = mb.field_f[this.tetheredObjectType];
         Sprite var2 = var3;
-        this.a(-(var3.fullWidth << 15) + this.field_mb >> 16, -28311553, var2, -(var3.fullHeight << 15) + this.field_E >> 16, sf.field_e[this.field_Ub]);
-        if (this.field_Ub == 1) {
+        this.a(-(var3.fullWidth << 15) + this.tetheredXQ16 >> 16, -28311553, var2, -(var3.fullHeight << 15) + this.field_E >> 16, sf.field_e[this.tetheredObjectType]);
+        if (this.tetheredObjectType == 1) {
           this.b(0);
         }
         if (param0 < 6) {
           return;
         }
-        this.field_Ub = -1;
-        if (!this.field_Gb) {
+        this.tetheredObjectType = -1;
+        if (!this.shipDestroyed) {
           pl.field_n.a(bc.field_c, 100, qm.field_c * 6144 / 64, 8192);
         }
     }
@@ -5602,17 +5602,17 @@ final class GameplaySession {
         if (50 <= this.field_oc) {
           return;
         }
-        IntrusiveNode var7 = this.field_C.first(false);
+        IntrusiveNode var7 = this.laserGateSpans.first(false);
         int var8 = 0;
-        while (this.field_ub > var8) {
-          am var9_ref_am = (am) (var7);
-          int var10 = var9_ref_am.field_j;
+        while (this.laserGateCount > var8) {
+          LaserGateSpan var9_ref_am = (LaserGateSpan) (var7);
+          int var10 = var9_ref_am.y;
           int stackIn_18_0 = param2;
           int stackIn_18_1 = var10;
           if (stackIn_18_0 <= stackIn_18_1 &&
             var10 <= param1) {
-            int var11 = var9_ref_am.field_i;
-            for (var12 = var9_ref_am.field_h; param3 < var12; var12 = var12 - this.worldWidth) {
+            int var11 = var9_ref_am.leftX;
+            for (var12 = var9_ref_am.rightX; param3 < var12; var12 = var12 - this.worldWidth) {
               var11 = var11 - this.worldWidth;
             }
             while (param3 >= var12) {
@@ -5635,11 +5635,11 @@ final class GameplaySession {
     }
 
     private final void b(int param0) {
-        if (this.field_Q != param0) {
+        if (this.objectiveType != param0) {
           return;
         }
         this.field_ec = true;
-        if (!this.field_Gb) {
+        if (!this.shipDestroyed) {
           this.a(50, 0 > this.levelIndex ? qc.field_xb : hi.field_n);
         }
     }
@@ -5670,7 +5670,7 @@ final class GameplaySession {
           re.a(1820, var23);
         } else if (this.levelIndex < 8) {
           int[] var34 = p.field_j;
-          String[] var19 = rb.field_j;
+          String[] var19 = HudMessage.field_j;
           DialogueScreen var20 = new DialogueScreen(var34, var12, var19, false);
           re.a(1820, var20);
         } else if (this.levelIndex < 12) {
@@ -5754,16 +5754,16 @@ final class GameplaySession {
         var5 = var5 >> 11;
         var7 = var7 >> 11;
         if (param0 < 55) {
-          this.field_hb = (IntrusiveDeque) null;
+          this.rockBusters = (IntrusiveDeque) null;
         }
         this.a(98, var7, var5, var4, var6);
         IntrusiveNode var8 = IntrusiveDeque.field_f.first(false);
         for (int var9 = 0; var9 < vh.field_i; var9++) {
-          am var10 = (am) (var8);
-          var10.field_i = -var2 + (var10.field_i << 11);
-          var10.field_h = -var2 + (var10.field_h << 11);
+          LaserGateSpan var10 = (LaserGateSpan) (var8);
+          var10.leftX = -var2 + (var10.leftX << 11);
+          var10.rightX = -var2 + (var10.rightX << 11);
           var8 = var8.next;
-          var10.field_j = (var10.field_j << 11) - var3;
+          var10.y = (var10.y << 11) - var3;
         }
         if ((var6 ^ var4) >> 5 == 0) {
           this.a(var5, 31 & var6, var2, var3, var4 >> 5, true, var7, 31 & var4);
@@ -5773,43 +5773,43 @@ final class GameplaySession {
         }
     }
 
-    private final void a(LevelObject param0, PointCloudEffect param1, int param2) {
+    private final void recordMissionTargetDestroyed(LevelObject object, PointCloudEffect effect, int guard) {
         String stackIn_27_2 = null;
         String stackIn_30_2 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          if (~this.field_Q != param2) {
+          if (~this.objectiveType != guard) {
             return;
           }
-          if (this.field_k == null) {
+          if (this.missionTargets == null) {
             return;
           }
-          if (this.field_k.isEmpty(-113)) {
+          if (this.missionTargets.isEmpty(-113)) {
             return;
           }
-          if (param0 == null) {
+          if (object == null) {
             return;
           }
-          if (!param0.field_r) {
+          if (!object.missionTarget) {
             return;
           }
-          IntrusiveNode var4 = this.field_k.first(false);
+          IntrusiveNode var4 = this.missionTargets.first(false);
           while (true) {
             if (var4 == null) {
               return;
             }
             LevelObject var5 = (LevelObject) (var4);
-            if (var5.objectId != param0.objectId) {
-              var4 = this.field_k.next((byte) 70);
+            if (var5.objectId != object.objectId) {
+              var4 = this.missionTargets.next((byte) 70);
               continue;
             }
             break;
           }
-          if (param0.field_p) {
-            this.f(27, 2);
+          if (object.triggersCountdown) {
+            this.activateCountdown(27, 2);
           }
           var4.unlink((byte) -101);
-          this.field_Ab.a(param2 + 1, param1);
+          this.pendingTargetEffects.addLast(guard + 1, effect);
           this.a(-111, oi.field_J);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5817,18 +5817,18 @@ final class GameplaySession {
           RuntimeException var4_ref = decompiledCaughtException;
           RuntimeException stackIn_26_0 = var4_ref;
           StringBuilder stackIn_26_1 = new StringBuilder().append("oe.UB(");
-          if (param0 == null) {
+          if (object == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
           StringBuilder stackIn_29_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',');
-          if (param1 == null) {
+          if (effect == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -5858,11 +5858,11 @@ final class GameplaySession {
     }
 
     private final void h(boolean param0) {
-        if (0 == this.field_Q) {
-          this.a(164, (byte) 127, tf.field_i);
+        if (0 == this.objectiveType) {
+          this.queueHudMessage(164, (byte) 127, tf.field_i);
         }
-        if (1 == this.field_Q) {
-          this.a(164, (byte) 92, gl.field_r);
+        if (1 == this.objectiveType) {
+          this.queueHudMessage(164, (byte) 92, gl.field_r);
         }
         if (param0) {
           this.j(70, -118, 0);
@@ -5877,7 +5877,7 @@ final class GameplaySession {
         if (param2 < 0) {
           return null;
         }
-        if (this.field_nc > param2) {
+        if (this.initialTilesHigh > param2) {
           stackIn_7_0 = this.initialTerrainMasks[param2 * this.tilesWide + param0 % this.tilesWide];
         } else {
           stackIn_7_0 = QuickChatPhraseDefinition.fullTileMask;
@@ -5927,7 +5927,7 @@ final class GameplaySession {
               pf.a(false, "EV1: " + param1, (Throwable) null);
               return;
             }
-            int var4Lifetime2 = this.field_Rb;
+            int var4Lifetime2 = this.firstLevelIndex;
             if (var4Lifetime2 < 0) {
               var4Lifetime2 = 0;
             }
@@ -5959,20 +5959,20 @@ final class GameplaySession {
 
     private final void f(int param0) {
         int var4 = EscapeVector.obfuscationControl;
-        if (this.field_Ab == null) {
+        if (this.pendingTargetEffects == null) {
           return;
         }
-        if (this.field_Ab.b(-182442704)) {
+        if (this.pendingTargetEffects.isEmpty(-182442704)) {
           return;
         }
-        DualLinkNode var2 = this.field_Ab.a(0);
+        DualLinkNode var2 = this.pendingTargetEffects.first(0);
         while (var2 != null) {
           PointCloudEffect var3 = (PointCloudEffect) (var2);
           boolean stackOut_5_0 = var3.field_B;
           int stackIn_10_0 = stackOut_5_0 ? 1 : 0;
           boolean stackIn_6_0 = stackOut_5_0;
           if (!stackIn_6_0) {
-            var2 = this.field_Ab.a((byte) 124);
+            var2 = this.pendingTargetEffects.next((byte) 124);
             continue;
           }
           var2.unlinkSecondary(param0 ^ 20281);
@@ -5985,19 +5985,19 @@ final class GameplaySession {
         return;
     }
 
-    private final void B(byte param0) {
-        if (this.field_l == 0) {
+    private final void updateCountdown(byte guard) {
+        if (this.countdownTrigger == 0) {
           return;
         }
-        if (param0 <= 99) {
+        if (guard <= 99) {
           return;
         }
-        if (this.field_a &&
-          0 <= this.field_X) {
-          this.field_X = this.field_X - 1;
-          if (this.field_X < 0 &&
-            !this.field_Gb) {
-            this.h((byte) -79);
+        if (this.countdownActive &&
+          0 <= this.countdownTicks) {
+          this.countdownTicks = this.countdownTicks - 1;
+          if (this.countdownTicks < 0 &&
+            !this.shipDestroyed) {
+            this.destroyShip((byte) -79);
           }
         }
     }
@@ -6068,13 +6068,13 @@ final class GameplaySession {
         var3Lifetime2++;
         LevelObject var7 = new LevelObject(incrementValue$1, 1, 512 - mb.field_f[1].fullWidth / 2, 480 - mb.field_f[1].fullHeight);
         this.levelObjects.setElementAt(var7, 1);
-        this.field_N = new IntrusiveDeque();
+        this.seekerMines = new IntrusiveDeque();
         this.spawnYQ16 = 66715648;
-        this.field_qb = 512;
+        this.gravityQ16 = 512;
         this.spawnXQ16 = this.worldWidth << 15;
-        this.field_gc = 150;
-        this.field_U = 2500;
-        this.field_rb = true;
+        this.initialShieldEnergy = 150;
+        this.initialFuel = 2500;
+        this.shipLanded = true;
     }
 
     private final void a(int param0, Sprite param1, int param2, int param3) {
@@ -6083,7 +6083,7 @@ final class GameplaySession {
         int var26 = 0;
         int var33 = EscapeVector.obfuscationControl;
         try {
-          double var5_double = (double)this.field_I * 0.02454369260617026;
+          double var5_double = (double)this.shipAngle256 * 0.02454369260617026;
           int var7 = (int)(Math.sin(var5_double) * 2048.0);
           int var8 = -(int)(Math.cos(var5_double) * 2048.0);
           int var9 = -var8;
@@ -6214,31 +6214,31 @@ final class GameplaySession {
         }
     }
 
-    GameplaySession(byte[][] param0, int param1, int param2, int param3) {
+    GameplaySession(byte[][] levelData, int option, int gameMode, int levelIndex) {
         try {
           this.easyMode = false;
           this.field_rc = true;
           this.timeHackMode = false;
-          this.field_Q = 0;
+          this.objectiveType = 0;
           this.levelObjects = new Vector();
-          this.field_vb = new IntrusiveDeque();
+          this.pointCloudEffects = new IntrusiveDeque();
           this.field_Db = new od(this);
-          this.field_Xb = new PointCloudEffect(512);
-          this.field_Sb = 0;
-          this.field_qc = 0;
+          this.exhaustParticles = new PointCloudEffect(512);
+          this.exhaustWriteIndex = 0;
+          this.activeExhaustParticles = 0;
           this.field_nb = null;
-          this.field_G = new IntrusiveDeque();
-          this.field_A = 3;
-          this.field_tc = new IntrusiveDeque();
-          this.field_X = 0;
-          this.field_a = false;
+          this.bullets = new IntrusiveDeque();
+          this.livesRemaining = 3;
+          this.hudMessageQueue = new IntrusiveDeque();
+          this.countdownTicks = 0;
+          this.countdownActive = false;
           this.field_g = new int[3];
           this.field_sb = 0;
-          this.field_l = 0;
+          this.countdownTrigger = 0;
           this.field_Lb = new int[32];
           this.field_i = new Sprite(638, 60);
-          this.field_s = new IntrusiveDeque();
-          this.field_C = new IntrusiveDeque();
+          this.initialPowerups = new IntrusiveDeque();
+          this.laserGateSpans = new IntrusiveDeque();
           try {
             od.field_k = l.a((byte) -111);
             if (od.field_k) {
@@ -6267,21 +6267,21 @@ final class GameplaySession {
             pl.field_n.a(this.field_lc);
             this.field_fb = new m();
             pl.field_n.a(this.field_fb);
-            NetworkGameClient.a(127, param3);
-            this.levelData = param0;
-            this.levelIndex = param3;
-            this.gameMode = param2;
-            this.field_Rb = param3;
-            this.j((byte) -110);
+            NetworkGameClient.a(127, levelIndex);
+            this.levelData = levelData;
+            this.levelIndex = levelIndex;
+            this.gameMode = gameMode;
+            this.firstLevelIndex = levelIndex;
+            this.initializeCurrentLevel((byte) -110);
             this.field_c = 64;
-            if (param3 >= 0) {
-              this.a(164, (byte) 122, m.field_n);
+            if (levelIndex >= 0) {
+              this.queueHudMessage(164, (byte) 122, m.field_n);
               this.field_j = 314;
             }
-            this.a((byte) 84, param1);
+            this.a((byte) 84, option);
             this.o(0);
           } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "oe.<init>(" + (levelData != null ? "{...}" : "null") + ',' + option + ',' + gameMode + ',' + levelIndex + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -6290,35 +6290,35 @@ final class GameplaySession {
         }
     }
 
-    GameplaySession(byte[][] param0) {
+    GameplaySession(byte[][] levelData) {
         try {
           this.easyMode = false;
           this.field_rc = true;
           this.timeHackMode = false;
-          this.field_Q = 0;
+          this.objectiveType = 0;
           this.levelObjects = new Vector();
-          this.field_vb = new IntrusiveDeque();
+          this.pointCloudEffects = new IntrusiveDeque();
           this.field_Db = new od(this);
-          this.field_Xb = new PointCloudEffect(512);
-          this.field_Sb = 0;
-          this.field_qc = 0;
+          this.exhaustParticles = new PointCloudEffect(512);
+          this.exhaustWriteIndex = 0;
+          this.activeExhaustParticles = 0;
           this.field_nb = null;
-          this.field_G = new IntrusiveDeque();
-          this.field_A = 3;
-          this.field_tc = new IntrusiveDeque();
-          this.field_X = 0;
-          this.field_a = false;
+          this.bullets = new IntrusiveDeque();
+          this.livesRemaining = 3;
+          this.hudMessageQueue = new IntrusiveDeque();
+          this.countdownTicks = 0;
+          this.countdownActive = false;
           this.field_g = new int[3];
           this.field_sb = 0;
-          this.field_l = 0;
+          this.countdownTrigger = 0;
           this.field_Lb = new int[32];
           this.field_i = new Sprite(638, 60);
-          this.field_s = new IntrusiveDeque();
-          this.field_C = new IntrusiveDeque();
+          this.initialPowerups = new IntrusiveDeque();
+          this.laserGateSpans = new IntrusiveDeque();
           try {
-            this.levelData = param0;
+            this.levelData = levelData;
           } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "oe.<init>(" + (levelData != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
