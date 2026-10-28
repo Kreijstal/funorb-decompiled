@@ -377,7 +377,7 @@ final class DialogueScreen extends IntrusiveNode {
         if (AccountMessagePanel.field_N != 0) {
           this.closeDialogue(2048);
           if (da.field_c != null) {
-            da.field_c.b(true, 320);
+            da.field_c.updatePointerSelection(true, 320);
             return;
           }
         } else {
@@ -397,7 +397,7 @@ final class DialogueScreen extends IntrusiveNode {
               if (null == da.field_c) {
                 break;
               }
-              da.field_c.b(false, 320);
+              da.field_c.updatePointerSelection(false, 320);
               return;
             }
             if (!this.transitioningDialogue &&
@@ -720,7 +720,7 @@ final class DialogueScreen extends IntrusiveNode {
               String var7Lifetime2 = var9;
               String var7Lifetime3 = var9;
               if (lifetimeSeconds >= 0L) {
-                var7Lifetime4 = var9 + "; Expires=" + EmailCredentials.formatGmtTimestamp(-100, td.b(128) + lifetimeSeconds * 1000L) + "; Max-Age=" + lifetimeSeconds;
+                var7Lifetime4 = var9 + "; Expires=" + EmailCredentials.formatGmtTimestamp(-100, MonotonicClockSupport.monotonicMillis(128) + lifetimeSeconds * 1000L) + "; Max-Age=" + lifetimeSeconds;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

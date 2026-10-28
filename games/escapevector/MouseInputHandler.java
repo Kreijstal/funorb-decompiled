@@ -191,7 +191,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             AlphaContainer.mouseIdleTicks = 0;
             LoginCredentialType.pendingClickX = param0.getX();
             PcmResampler.pendingClickY = param0.getY();
-            td.b(128);
+            MonotonicClockSupport.monotonicMillis(128);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               SocketConnector.pendingClickButton = 1;
               LoginCredentials.heldMouseButton = 1;

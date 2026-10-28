@@ -58,13 +58,13 @@ abstract class TickClock {
           if (null != BoundedRandomAccessFile.activeSession) {
             pc.field_d = 16777215;
             ValidatedTextWidget.field_X = 7899280;
-            lh.field_e = 12110032;
+            MenuTitleSupport.field_e = 12110032;
             Sprite[] var6 = (Sprite[]) null;
             Sprite[] var5 = (Sprite[]) null;
             LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 240, param1);
           } else {
             ValidatedTextWidget.field_X = 6340704;
-            lh.field_e = 10551200;
+            MenuTitleSupport.field_e = 10551200;
             pc.field_d = 16777215;
             Sprite[] var4 = (Sprite[]) null;
             Sprite[] var3 = (Sprite[]) null;
@@ -77,7 +77,7 @@ abstract class TickClock {
         if (null != BoundedRandomAccessFile.activeSession) {
           pc.field_d = 16777215;
           ValidatedTextWidget.field_X = 7899280;
-          lh.field_e = 12110032;
+          MenuTitleSupport.field_e = 12110032;
           Sprite[] var6Lifetime1 = (Sprite[]) null;
           Sprite[] var5Lifetime1 = (Sprite[]) null;
           LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 240, param1);
@@ -86,7 +86,7 @@ abstract class TickClock {
           return;
         }
         ValidatedTextWidget.field_X = 6340704;
-        lh.field_e = 10551200;
+        MenuTitleSupport.field_e = 10551200;
         pc.field_d = 16777215;
         Sprite[] var4Lifetime1 = (Sprite[]) null;
         Sprite[] var3Lifetime1 = (Sprite[]) null;

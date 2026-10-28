@@ -1232,7 +1232,7 @@ final class GameplaySession {
           LevelObject.a(1, (byte) -86);
         }
         if (this.levelIndex == 0) {
-          DialogueScreen var3 = new DialogueScreen(BoundedRandomAccessFile.field_c, SpriteCheckboxPainter.field_c, se.field_a, false);
+          DialogueScreen var3 = new DialogueScreen(BoundedRandomAccessFile.field_c, SpriteCheckboxPainter.field_c, FrameCadenceSupport.field_a, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var3);
         }
         if (2 == this.levelIndex) {
@@ -1623,7 +1623,7 @@ final class GameplaySession {
         }
         int var2 = 95 / ((51 - guard) / 36);
         if (this.levelIndex < 2) {
-          DialogueScreen var5 = new DialogueScreen(BoundedRandomAccessFile.field_c, SpriteCheckboxPainter.field_c, se.field_a, false);
+          DialogueScreen var5 = new DialogueScreen(BoundedRandomAccessFile.field_c, SpriteCheckboxPainter.field_c, FrameCadenceSupport.field_a, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var5);
         } else if (this.levelIndex < 4) {
           DialogueScreen var6 = new DialogueScreen(bg.field_c, SpriteCheckboxPainter.field_c, SpriteCheckboxPainter.field_e, false);
@@ -1814,7 +1814,7 @@ final class GameplaySession {
             this.recordLevelResult((byte) -109, 1);
           } else if (0 <= this.levelIndex ||
             !this.cargoLost) {
-            AlternateUsernameCredentials.field_n.playSampleWithPan(gm.field_b, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
+            AlternateUsernameCredentials.field_n.playSampleWithPan(ArchiveSpriteLoader.field_b, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
             this.showHudMessage(-98, LabeledField.field_I);
           }
         }
@@ -1837,7 +1837,7 @@ final class GameplaySession {
             this.recordLevelResult((byte) -124, 1);
           } else if (this.hasShipReachedExit(true)) {
             this.levelEnded = true;
-            AlternateUsernameCredentials.field_n.playSampleWithPan(gm.field_b, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
+            AlternateUsernameCredentials.field_n.playSampleWithPan(ArchiveSpriteLoader.field_b, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
             this.showHudMessage(objectiveType ^ -101, LegacyTextBlock.field_c);
           }
         }
@@ -2632,7 +2632,7 @@ final class GameplaySession {
         this.laserCycleTicks = 0;
         int stackIn_17_0Lifetime1 = this.levelScore;
         int stackIn_17_1Lifetime1 = 128;
-        td.a(stackIn_17_0Lifetime1, stackIn_17_1Lifetime1);
+        MonotonicClockSupport.addSessionCounterOffset(stackIn_17_0Lifetime1, stackIn_17_1Lifetime1);
         this.levelScore = 0;
         if (this.timeHackMode) {
           this.elapsedTicks = this.levelStartTicks;
@@ -2839,7 +2839,7 @@ final class GameplaySession {
         }
         if (0 == this.levelIndex) {
           int[] var32 = uj.field_e;
-          String[] var13 = lh.field_c;
+          String[] var13 = MenuTitleSupport.field_c;
           DialogueScreen var14 = new DialogueScreen(var32, var12, var13, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var14);
         }
@@ -2908,7 +2908,7 @@ final class GameplaySession {
           return;
         }
         try {
-          this.spawnExplosion(123, projectile.yQ16, td.field_c, projectile.xQ16);
+          this.spawnExplosion(123, projectile.yQ16, MonotonicClockSupport.field_c, projectile.xQ16);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "oe.MC(" + (projectile != null ? "{...}" : "null") + ',' + guard + ')');
         }
@@ -3246,8 +3246,8 @@ final class GameplaySession {
               Sprite var8_ref_ed = ResourceArchive.field_m;
               stackIn_31_0 = var2;
               if (stackIn_31_0 != 0 &&
-                ej.field_a != null) {
-                var8_ref_ed = ej.field_a;
+                BitCountSupport.field_a != null) {
+                var8_ref_ed = BitCountSupport.field_a;
               }
               var8_ref_ed.drawCenteredRotatedScaled(var6, (byte) 34, 4096, -var5_ref_piLifetime1.angle256 << 8, var7);
             }
@@ -3305,7 +3305,7 @@ final class GameplaySession {
           this.drawHudPanels(3);
         } else if (null == da.field_c &&
           !this.quitRequested) {
-          ProgressQuery.a((byte) 57, ek.field_c, 320, 476);
+          ProgressQuery.a((byte) 57, InstructionsNavigationSupport.field_c, 320, 476);
         }
         if (da.field_c == null) {
           if (this.isMissionComplete((byte) -91)) {
@@ -3346,7 +3346,7 @@ final class GameplaySession {
             stackIn_91_0 = true;
           }
           boolean var5 = stackIn_91_0;
-          gh.a(this.transitionTicks + 1, 256 - (this.transitionTicks << 2), (var5), (var5));
+          PixelBlockEffect.apply(this.transitionTicks + 1, 256 - (this.transitionTicks << 2), (var5), (var5));
         }
         if (null != this.minimap &&
           this.minimap.isVisible((byte) -122)) {
@@ -3478,15 +3478,15 @@ final class GameplaySession {
             SoftwareRasterizer.resetClip();
             UiTheme.field_e.drawTransparent(var4 + 448, -cameraY);
             TrackerGainSupport.field_b.drawTransparent(544 + var4, -cameraY);
-            gm.field_a.drawTransparent(448 + var4, 288 - cameraY);
-            gm.field_a.drawTransparent(448 + var4, -cameraY + 480);
+            ArchiveSpriteLoader.field_a.drawTransparent(448 + var4, 288 - cameraY);
+            ArchiveSpriteLoader.field_a.drawTransparent(448 + var4, -cameraY + 480);
             SoftwareRasterizer.intersectClip(0, 128 - cameraY, 640, 480);
             for (int var5Lifetime4 = 128; var5Lifetime4 < 1024; var5Lifetime4 += 32) {
               PacketBuffer.field_l.drawTransparent(var4 + 224, -cameraY + var5Lifetime4);
-              cj.field_a.drawTransparent(768 + var4, -cameraY + var5Lifetime4);
+              IntroFinalFrameSupport.field_a.drawTransparent(768 + var4, -cameraY + var5Lifetime4);
             }
             SoftwareRasterizer.resetClip();
-            ej.field_e.drawTransparent(var4 + 224, 1024 - cameraY);
+            BitCountSupport.field_e.drawTransparent(var4 + 224, 1024 - cameraY);
             for (int var5Lifetime5 = 256; var5Lifetime5 < 768; var5Lifetime5 += 32) {
               EmailAvailabilityValidator.field_r.drawTransparent(var5Lifetime5 + var4, -cameraY + 1024);
             }
@@ -3791,10 +3791,10 @@ final class GameplaySession {
               ResourceArchive.drawSpriteWithRowJitter(4, var2, 31 - this.noticeTicks, this.noticeSprite, -99);
             }
           } else if (this.noticeTicks <= 120) {
-            AudioService.a(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, -this.noticeSprite.fullWidth + SoftwareRasterizer.width, (byte) -126, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, 3 * SoftwareRasterizer.width + (-1 + var2));
-            AudioService.a(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, -this.noticeSprite.fullWidth + SoftwareRasterizer.width, (byte) -84, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, var2 + 1 + 3 * SoftwareRasterizer.width);
-            AudioService.a(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, -this.noticeSprite.fullWidth + SoftwareRasterizer.width, (byte) -100, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, -1 + (var2 + 5 * SoftwareRasterizer.width));
-            AudioService.a(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, SoftwareRasterizer.width - this.noticeSprite.fullWidth, (byte) -81, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, 1 + (var2 + 5 * SoftwareRasterizer.width));
+            AudioService.darkenMaskedPixels(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, -this.noticeSprite.fullWidth + SoftwareRasterizer.width, (byte) -126, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, 3 * SoftwareRasterizer.width + (-1 + var2));
+            AudioService.darkenMaskedPixels(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, -this.noticeSprite.fullWidth + SoftwareRasterizer.width, (byte) -84, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, var2 + 1 + 3 * SoftwareRasterizer.width);
+            AudioService.darkenMaskedPixels(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, -this.noticeSprite.fullWidth + SoftwareRasterizer.width, (byte) -100, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, -1 + (var2 + 5 * SoftwareRasterizer.width));
+            AudioService.darkenMaskedPixels(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, SoftwareRasterizer.width - this.noticeSprite.fullWidth, (byte) -81, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, 1 + (var2 + 5 * SoftwareRasterizer.width));
             this.noticeSprite.drawTransparent(var2, 4);
           } else if (da.field_c == null &&
             !this.quitRequested) {
@@ -3895,7 +3895,7 @@ final class GameplaySession {
                 this.minimap.toggleVisible((byte) -101);
               }
               this.stopSessionAudio((byte) -41);
-              da.field_c = new tf();
+              da.field_c = new PauseMenuScreen();
               mj.field_d = 0;
               ChatMessage.clearFrameOffsets((byte) -56);
               return;
@@ -4166,7 +4166,7 @@ final class GameplaySession {
           }
           if (0 == this.shieldEnergy) {
             this.showHudMessage(-107, rc.field_c);
-            AlternateUsernameCredentials.field_n.playSampleWithPan(gm.field_b, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
+            AlternateUsernameCredentials.field_n.playSampleWithPan(ArchiveSpriteLoader.field_b, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
           }
           this.shieldActive = true;
           this.shipLanded = false;
@@ -4530,12 +4530,12 @@ final class GameplaySession {
               if (var4 != 0 &&
                 this.shipYQ16 < 33554432) {
                 this.showHudMessage(-114, EmailCredentials.field_e);
-                AlternateUsernameCredentials.field_n.playSampleWithPan(gm.field_b, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
+                AlternateUsernameCredentials.field_n.playSampleWithPan(ArchiveSpriteLoader.field_b, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
               }
               if (var4 == 0 &&
                 this.shipYQ16 >= 33554432) {
                 this.showHudMessage(67, AudioService.field_a);
-                AlternateUsernameCredentials.field_n.playSampleWithPan(gm.field_b, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
+                AlternateUsernameCredentials.field_n.playSampleWithPan(ArchiveSpriteLoader.field_b, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
               }
             }
           } else {
@@ -4667,7 +4667,7 @@ final class GameplaySession {
               if (var4_refLifetime1 == null) {
                 break scanLoop2;
               }
-              AlternateUsernameCredentials.field_n.playSampleWithPan(gm.field_b, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
+              AlternateUsernameCredentials.field_n.playSampleWithPan(ArchiveSpriteLoader.field_b, 100, 6144 * IterableNodeHashTable.field_c / 64, 8192);
               this.showHudMessage(127, (String) (var4_refLifetime1));
               break scanLoop2;
             }
@@ -5665,7 +5665,7 @@ final class GameplaySession {
         Sprite[] var12 = SpriteCheckboxPainter.field_c;
         if (this.levelIndex < 4) {
           int[] var35 = uj.field_e;
-          String[] var22 = lh.field_c;
+          String[] var22 = MenuTitleSupport.field_c;
           DialogueScreen var23 = new DialogueScreen(var35, var12, var22, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var23);
         } else if (this.levelIndex < 8) {
@@ -5859,7 +5859,7 @@ final class GameplaySession {
 
     private final void showObjectiveMessage(boolean guard) {
         if (0 == this.objectiveType) {
-          this.queueHudMessage(164, (byte) 127, tf.field_i);
+          this.queueHudMessage(164, (byte) 127, PauseMenuScreen.field_i);
         }
         if (1 == this.objectiveType) {
           this.queueHudMessage(164, (byte) 92, PairedTextColumns.field_r);
@@ -5938,7 +5938,7 @@ final class GameplaySession {
             if (var7 < 0) {
               return;
             }
-            lh.a((byte) 99, score);
+            MenuTitleSupport.incrementSessionCounter((byte) 99, score);
             int[] var11 = StripedProgressBar.j(-3282);
             int[] var10 = var11;
             int[] var8 = var10;
@@ -6186,9 +6186,9 @@ final class GameplaySession {
           int var28Lifetime2 = (var8 >> 7) + (var10 >> 5);
           int var30 = 65793 * (-var28Lifetime2 + (128 - (var27Lifetime2 >> 1)));
           if (this.usesDynamicTerrain(8192) &&
-            se.field_b != null) {
-            var30 = se.field_b.field_b;
-            var29 = se.field_b.field_b;
+            FrameCadenceSupport.field_b != null) {
+            var30 = FrameCadenceSupport.field_b.field_b;
+            var29 = FrameCadenceSupport.field_b.field_b;
           }
           ShipHullGeometry var32 = SpriteCheckboxPainter.field_b;
           var32.cameraOrigin.set(cameraX, color ^ 65913, cameraY);
@@ -6262,7 +6262,7 @@ final class GameplaySession {
             this.field_r = PcmSampleStream.createAtRatePercent(SpriteDecodeSupport.field_h, 100, 0);
             this.field_r.setLoopCount(-1);
             AlternateUsernameCredentials.field_n.addSubstream(this.field_r);
-            this.field_lc = PcmSampleStream.createAtRatePercent(pa.field_a, 100, 0);
+            this.field_lc = PcmSampleStream.createAtRatePercent(GuestLoginSupport.field_a, 100, 0);
             this.field_lc.setLoopCount(-1);
             AlternateUsernameCredentials.field_n.addSubstream(this.field_lc);
             this.field_fb = new TetherHumStream();

@@ -202,7 +202,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           }
           int var10 = var19.lineForCharacter(var8, 0);
           int var11 = var19.lineForCharacter(var9, 0);
-          rd.a(component.width + (component.x + originX), originX + component.x, component.height + (component.y + originY), 19807, originY + component.y);
+          SpaceCompactionSupport.pushIntersectedClip(component.width + (component.x + originX), originX + component.x, component.height + (component.y + originY), 19807, originY + component.y);
           for (int var12 = var10; var11 >= var12; var12++) {
             TextLayoutLine var13 = var18.lines[var12];
             if (var12 == var10) {
@@ -242,7 +242,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var11 = 0;
         int var13 = EscapeVector.obfuscationControl;
         try {
-          rd.a(originX + component.x + component.width, originX + component.x, originY - (-component.y - component.height), 19807, component.y + originY);
+          SpaceCompactionSupport.pushIntersectedClip(originX + component.x + component.width, originX + component.x, originY - (-component.y - component.height), 19807, component.y + originY);
           int var9_int = this.contentWidth(component, -25033);
           int var10 = this.contentHeight(-14072, component);
           if (this.wrapText) {
@@ -482,7 +482,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             int var10 = this.textXForOffset(var9, component, -18079, originX);
             int var11 = this.textOriginY(component, originY, -16956) + Math.max(0, var8.top);
             int var12 = this.textOriginY(component, originY, -16956) + Math.min(this.contentHeight(-14072, component), Math.min(var8.bottom, var7 + 1 < var14.lines.length ? var13.lines[1 + var7].top : var8.bottom));
-            rd.a(component.width + originX + component.x, component.x + originX, originY + (component.y + component.height), 19807, component.y + originY);
+            SpaceCompactionSupport.pushIntersectedClip(component.width + originX + component.x, component.x + originX, originY + (component.y + component.height), 19807, component.y + originY);
             AchievementThresholdRule.field_g.drawLine(var10, var12, -29666, var10, var11, this.caretColor);
             RasterRestoreSupport.popRasterState((byte) 122);
           }

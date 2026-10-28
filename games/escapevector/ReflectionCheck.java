@@ -29,7 +29,7 @@ final class ReflectionCheck extends IntrusiveNode {
     final static void d(byte param0) {
         if (param0 >= -112) {
           ReflectionCheck.a(81, (byte) 59);
-          boolean var1 = (lh.b((byte) 71));
+          boolean var1 = (MenuTitleSupport.isPointerDriven((byte) 71));
           if (rc.field_a == null) {
             kh.showHighscoresScreen((var1), -1230, false);
             return;
@@ -42,7 +42,7 @@ final class ReflectionCheck extends IntrusiveNode {
           }
           return;
         }
-        boolean var1Lifetime1 = (lh.b((byte) 71));
+        boolean var1Lifetime1 = (MenuTitleSupport.isPointerDriven((byte) 71));
         if (rc.field_a == null) {
           kh.showHighscoresScreen((var1Lifetime1), -1230, false);
           return;

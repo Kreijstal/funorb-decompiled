@@ -89,7 +89,7 @@ final class SocketJs5Transport extends Js5Transport {
               break;
             }
             this.idleMillis = 0;
-            this.lastServiceMillis = td.b(128);
+            this.lastServiceMillis = MonotonicClockSupport.monotonicMillis(128);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -452,7 +452,7 @@ final class SocketJs5Transport extends Js5Transport {
           int var16 = EscapeVector.obfuscationControl;
           try {
             if (null != this.socket) {
-              long var2_long = td.b(guard + 4122);
+              long var2_long = MonotonicClockSupport.monotonicMillis(guard + 4122);
               var4 = (int)(-this.lastServiceMillis + var2_long);
               this.lastServiceMillis = var2_long;
               if (var4 > 200) {

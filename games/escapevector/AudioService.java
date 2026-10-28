@@ -70,14 +70,14 @@ final class AudioService implements Runnable {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8) {
+    final static Sprite[] createBeveledFrameSprites(int borderThickness, int accentColor, int insetWidth, int accentThickness, int topLeftColor, byte guard, int bottomRightColor, int backgroundColor, int edgeLength) {
         int stackIn_11_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_47_0 = 0;
         int var15 = EscapeVector.obfuscationControl;
-        int var9 = param0 + param2 + param3;
-        Sprite[] var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param8, var9), new Sprite(var9, var9), new Sprite(var9, param8), new Sprite(64, 64), new Sprite(var9, param8), new Sprite(var9, var9), new Sprite(param8, var9), new Sprite(var9, var9)};
+        int var9 = borderThickness + insetWidth + accentThickness;
+        Sprite[] var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(edgeLength, var9), new Sprite(var9, var9), new Sprite(var9, edgeLength), new Sprite(64, 64), new Sprite(var9, edgeLength), new Sprite(var9, var9), new Sprite(edgeLength, var9), new Sprite(var9, var9)};
         Sprite[] var11_ref_ed__ = var10;
         int var12 = 0;
         scanLoop1: while (true) {
@@ -89,13 +89,13 @@ final class AudioService implements Runnable {
             }
             int var14 = stackIn_11_0;
             while (var13.pixels.length > var14) {
-              var13.pixels[var14] = param7;
+              var13.pixels[var14] = backgroundColor;
               var14++;
             }
             var12++;
             continue scanLoop1;
           }
-          stackIn_11_0 = param5;
+          stackIn_11_0 = guard;
           break;
         }
         if (stackIn_11_0 != 33) {
@@ -103,17 +103,17 @@ final class AudioService implements Runnable {
         }
         int var11 = 0;
         scanLoop2: while (true) {
-          if (var11 < param0) {
+          if (var11 < borderThickness) {
             stackIn_24_0 = 0;
             if (var15 != 0) {
               break scanLoop2;
             }
             int var12Lifetime1 = stackIn_24_0;
             while (var9 > var12Lifetime1) {
-              var10[6].pixels[var12Lifetime1 + var9 * (-var11 + var9 - 1)] = param6;
-              var10[8].pixels[var12Lifetime1 + (-1 + var9 - var11) * var9] = param6;
-              var10[2].pixels[-1 + (var9 - (var11 - var12Lifetime1 * var9))] = param6;
-              var10[8].pixels[var12Lifetime1 * var9 - var11 - (-var9 + 1)] = param6;
+              var10[6].pixels[var12Lifetime1 + var9 * (-var11 + var9 - 1)] = bottomRightColor;
+              var10[8].pixels[var12Lifetime1 + (-1 + var9 - var11) * var9] = bottomRightColor;
+              var10[2].pixels[-1 + (var9 - (var11 - var12Lifetime1 * var9))] = bottomRightColor;
+              var10[8].pixels[var12Lifetime1 * var9 - var11 - (-var9 + 1)] = bottomRightColor;
               var12Lifetime1++;
             }
             var11++;
@@ -124,20 +124,20 @@ final class AudioService implements Runnable {
         }
         int var11Lifetime1 = stackIn_24_0;
         while (true) {
-          int stackIn_26_0 = param0;
+          int stackIn_26_0 = borderThickness;
           int stackIn_26_1 = var11Lifetime1;
           if (stackIn_26_0 > stackIn_26_1) {
             stackIn_36_0 = 0;
             if (var15 == 0) {
               int var12Lifetime2 = stackIn_36_0;
               while (var9 > var12Lifetime2) {
-                var10[0].pixels[var9 * var11Lifetime1 + var12Lifetime2] = param4;
-                var10[0].pixels[var9 * var12Lifetime2 + var11Lifetime1] = param4;
+                var10[0].pixels[var9 * var11Lifetime1 + var12Lifetime2] = topLeftColor;
+                var10[0].pixels[var9 * var12Lifetime2 + var11Lifetime1] = topLeftColor;
                 stackIn_26_0 = var9 - var11Lifetime1;
                 stackIn_26_1 = var12Lifetime2;
                 if (stackIn_26_0 > stackIn_26_1) {
-                  var10[2].pixels[var12Lifetime2 + var9 * var11Lifetime1] = param4;
-                  var10[6].pixels[var12Lifetime2 * var9 + var11Lifetime1] = param4;
+                  var10[2].pixels[var12Lifetime2 + var9 * var11Lifetime1] = topLeftColor;
+                  var10[6].pixels[var12Lifetime2 * var9 + var11Lifetime1] = topLeftColor;
                 }
                 var12Lifetime2++;
               }
@@ -149,17 +149,17 @@ final class AudioService implements Runnable {
           }
           var11Lifetime1 = stackIn_36_0;
           scanLoop3: while (true) {
-            if (param8 > var11Lifetime1) {
+            if (edgeLength > var11Lifetime1) {
               stackIn_47_0 = 0;
               if (var15 != 0) {
                 break scanLoop3;
               }
               int var12Lifetime2Lifetime1 = stackIn_47_0;
-              while (param0 > var12Lifetime2Lifetime1) {
-                var10[7].pixels[var11Lifetime1 + param8 * (-1 + (var9 - var12Lifetime2Lifetime1))] = param6;
-                var10[5].pixels[var11Lifetime1 * var9 + (var9 - (1 + var12Lifetime2Lifetime1))] = param6;
-                var10[1].pixels[param8 * var12Lifetime2Lifetime1 + var11Lifetime1] = param4;
-                var10[3].pixels[var12Lifetime2Lifetime1 + var11Lifetime1 * var9] = param4;
+              while (borderThickness > var12Lifetime2Lifetime1) {
+                var10[7].pixels[var11Lifetime1 + edgeLength * (-1 + (var9 - var12Lifetime2Lifetime1))] = bottomRightColor;
+                var10[5].pixels[var11Lifetime1 * var9 + (var9 - (1 + var12Lifetime2Lifetime1))] = bottomRightColor;
+                var10[1].pixels[edgeLength * var12Lifetime2Lifetime1 + var11Lifetime1] = topLeftColor;
+                var10[3].pixels[var12Lifetime2Lifetime1 + var11Lifetime1 * var9] = topLeftColor;
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
@@ -169,14 +169,14 @@ final class AudioService implements Runnable {
             break;
           }
           var11Lifetime1 = stackIn_47_0;
-          scanLoop4: while (param8 >> 1 > var11Lifetime1) {
+          scanLoop4: while (edgeLength >> 1 > var11Lifetime1) {
             int var12Lifetime2Lifetime2 = 0;
             while (true) {
-              if (var12Lifetime2Lifetime2 < param3) {
-                var10[1].pixels[(var9 - var12Lifetime2Lifetime2 - 1) * param8 + var11Lifetime1] = param1;
-                var10[3].pixels[var11Lifetime1 * var9 + (var9 - (1 + var12Lifetime2Lifetime2))] = param1;
-                var10[7].pixels[var12Lifetime2Lifetime2 * param8 + var11Lifetime1] = param1;
-                var10[5].pixels[var12Lifetime2Lifetime2 + var9 * var11Lifetime1] = param1;
+              if (var12Lifetime2Lifetime2 < accentThickness) {
+                var10[1].pixels[(var9 - var12Lifetime2Lifetime2 - 1) * edgeLength + var11Lifetime1] = accentColor;
+                var10[3].pixels[var11Lifetime1 * var9 + (var9 - (1 + var12Lifetime2Lifetime2))] = accentColor;
+                var10[7].pixels[var12Lifetime2Lifetime2 * edgeLength + var11Lifetime1] = accentColor;
+                var10[5].pixels[var12Lifetime2Lifetime2 + var9 * var11Lifetime1] = accentColor;
                 var12Lifetime2Lifetime2++;
                 if (var15 == 0) {
                   continue;
@@ -195,17 +195,17 @@ final class AudioService implements Runnable {
         }
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openMembershipPage(byte guard, java.applet.Applet applet) {
         try {
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              if (param0 < 14) {
+              if (guard < 14) {
                 return;
               }
-              java.net.URL var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-              param1.getAppletContext().showDocument(WeightedCacheEntry.withSessionParameters((byte) 119, param1, var2), "_top");
+              java.net.URL var2 = new java.net.URL(applet.getCodeBase(), "subscribe.ws");
+              applet.getAppletContext().showDocument(WeightedCacheEntry.withSessionParameters((byte) 119, applet, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Exception var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -216,8 +216,8 @@ final class AudioService implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_8_0 = var2_ref2;
-            StringBuilder stackIn_8_1 = new StringBuilder().append("ge.A(").append(param0).append(',');
-            if (param1 == null) {
+            StringBuilder stackIn_8_1 = new StringBuilder().append("ge.A(").append(guard).append(',');
+            if (applet == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";
@@ -231,16 +231,16 @@ final class AudioService implements Runnable {
         }
     }
 
-    final static void a(byte param0) {
+    final static void decodeSavedDataResponse(byte guard) {
         int stackIn_15_0 = 0;
         byte[] var5 = null;
         int var6 = EscapeVector.obfuscationControl;
         try {
-          if (param0 != 124) {
+          if (guard != 124) {
             field_a = (String) null;
           }
           CipherPacketBuffer var9 = QuickChatDynamicCommand.incomingPackets;
-          int var2 = var9.readUnsignedByte(param0 ^ 124);
+          int var2 = var9.readUnsignedByte(guard ^ 124);
           if (var2 != 0) {
             if (var2 != 1) {
               GameModeSelectScreen.reportClientError(false, "A1: " + LoginStage.formatPacketDiagnostic((byte) -65), (Throwable) null);
@@ -250,7 +250,7 @@ final class AudioService implements Runnable {
               }
             }
             int var3 = var9.readInt(-5053);
-            SavedDataWrite var4_ref_bd = (SavedDataWrite) (rd.field_b.first(false));
+            SavedDataWrite var4_ref_bd = (SavedDataWrite) (SpaceCompactionSupport.pendingSavedDataWrites.first(false));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var4_ref_bd != null) {
@@ -258,7 +258,7 @@ final class AudioService implements Runnable {
                 decompiledFrameRemainder0 = (var6 == 0);
                 if (decompiledFrameRemainder0 &&
                   stackIn_15_0 != var3) {
-                  var4_ref_bd = (SavedDataWrite) (rd.field_b.next((byte) 70));
+                  var4_ref_bd = (SavedDataWrite) (SpaceCompactionSupport.pendingSavedDataWrites.next((byte) 70));
                   continue;
                 }
               }
@@ -294,7 +294,7 @@ final class AudioService implements Runnable {
             var5 = null;
           }
           var9.position = var9.position + 4;
-          if (!var9.verifyCrc32(param0 ^ 124)) {
+          if (!var9.verifyCrc32(guard ^ 124)) {
             nm.a(16);
             return;
           }
@@ -305,11 +305,11 @@ final class AudioService implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "ge.B(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "ge.B(" + guard + ')');
         }
     }
 
-    final static void a(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6, int param7, int[] param8, int param9) {
+    final static void darkenMaskedPixels(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6, int param7, int[] param8, int param9) {
         String stackIn_20_2 = null;
         String stackIn_23_2 = null;
         int var11 = EscapeVector.obfuscationControl;
@@ -366,7 +366,7 @@ final class AudioService implements Runnable {
 
     public static void releaseStatics(byte guard) {
         if (guard >= -11) {
-          AudioService.a((byte) -77, (java.applet.Applet) null);
+          AudioService.openMembershipPage((byte) -77, (java.applet.Applet) null);
         }
         field_b = (String[][]) null;
         field_d = null;

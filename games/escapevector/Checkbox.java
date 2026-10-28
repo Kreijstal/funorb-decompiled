@@ -148,7 +148,7 @@ final class Checkbox extends TextButton {
               var2_int = requiredBytes - QuickChatDynamicCommand.incomingPackets.position;
             }
             TextLayout.field_c.readFully(QuickChatDynamicCommand.incomingPackets.position, var2_int, QuickChatDynamicCommand.incomingPackets.payload, (byte) -49);
-            ChatMessageDecoder.field_a = td.b(128);
+            ChatMessageDecoder.field_a = MonotonicClockSupport.monotonicMillis(128);
             QuickChatDynamicCommand.incomingPackets.position = QuickChatDynamicCommand.incomingPackets.position + var2_int;
             if (requiredBytes > QuickChatDynamicCommand.incomingPackets.position) {
               return false;

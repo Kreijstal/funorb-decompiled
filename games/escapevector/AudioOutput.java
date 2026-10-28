@@ -128,7 +128,7 @@ class AudioOutput {
         if (this.rootStream != null) {
           this.rootStream.mixInto(samples, 0, length);
         }
-        this.lastMixTimeMillis = td.b(128);
+        this.lastMixTimeMillis = MonotonicClockSupport.monotonicMillis(128);
     }
 
     final static void configure(int newSampleRate, boolean newStereo, int newThreadPriority) {
@@ -148,7 +148,7 @@ class AudioOutput {
           if (this.closed) {
             return;
           }
-          long var1 = td.b(128);
+          long var1 = MonotonicClockSupport.monotonicMillis(128);
           try {
             if (var1 > this.lastMixTimeMillis + 6000L) {
               this.lastMixTimeMillis = var1 - 6000L;
@@ -156,7 +156,7 @@ class AudioOutput {
             while (var1 > this.lastMixTimeMillis + 5000L) {
               this.skipSamples(256);
               this.lastMixTimeMillis = this.lastMixTimeMillis + (long)(256000 / sampleRate);
-              var1 = td.b(128);
+              var1 = MonotonicClockSupport.monotonicMillis(128);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -299,7 +299,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.reopenAtMillis = td.b(128) + 2000L;
+            this.reopenAtMillis = MonotonicClockSupport.monotonicMillis(128) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -388,7 +388,7 @@ class AudioOutput {
     AudioOutput() {
         this.activityLimit = 32;
         this.closed = false;
-        this.lastMixTimeMillis = td.b(128);
+        this.lastMixTimeMillis = MonotonicClockSupport.monotonicMillis(128);
         this.schedulerCountdown = 0;
         this.previousBufferDrain = 0;
         this.nextAdjustmentMillis = 0L;

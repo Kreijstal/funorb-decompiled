@@ -20,10 +20,10 @@ public final class EscapeVector extends NetworkGameClient {
         int var4 = obfuscationControl;
         try {
           if (ScoreSubmission.field_h[1]) {
-            gk.field_c = false;
+            QuitPageSupport.field_c = false;
           }
           if (ScoreSubmission.field_h[2]) {
-            gk.field_c = true;
+            QuitPageSupport.field_c = true;
           }
           int var2_int = 119 % ((guard + 39) / 33);
           if (null != IsaacRandom.field_d &&
@@ -62,7 +62,7 @@ public final class EscapeVector extends NetworkGameClient {
                     if (IsaacRandom.field_d != null) {
                       ri.a(-25123);
                     }
-                    gk.a(-9787, PointCloudEffect.activeApplet((byte) -119));
+                    QuitPageSupport.openQuitPage(-9787, PointCloudEffect.activeApplet((byte) -119));
                   }
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
@@ -99,7 +99,7 @@ public final class EscapeVector extends NetworkGameClient {
                 }
                 if (!mj.a((byte) 92)) {
                   if (null != BoundedRandomAccessFile.activeSession) {
-                    da.field_c.b(ch.field_a.pointerDriven, 320);
+                    da.field_c.updatePointerSelection(PauseMenuState.input.pointerDriven, 320);
                     if (var4 != 0) {
                       AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, AlternateUsernameCredentials.field_q.input.pointerDriven);
                     }
@@ -110,13 +110,13 @@ public final class EscapeVector extends NetworkGameClient {
                   ChatMessage.clearFrameOffsets((byte) -67);
                 }
                 if (var4 != 0) {
-                  KeyboardStateSupport.a(25972, mg.field_f);
+                  KeyboardStateSupport.serviceAccountInput(25972, KeyboardIdleSupport.field_f);
                   DirectByteStorage.b((byte) -59);
                   this.advanceAssetLoading((byte) -96);
                 }
               }
             } else {
-              KeyboardStateSupport.a(25972, mg.field_f);
+              KeyboardStateSupport.serviceAccountInput(25972, KeyboardIdleSupport.field_f);
               DirectByteStorage.b((byte) -59);
               if (var4 != 0) {
                 this.advanceAssetLoading((byte) -96);
@@ -133,7 +133,7 @@ public final class EscapeVector extends NetworkGameClient {
               }
               break;
             }
-            if (um.a(17830)) {
+            if (AccountSessionStatusSupport.hasAccountSession(17830)) {
               this.k((byte) -67);
               if (var4 != 0) {
                 this.j(-9926);
@@ -197,7 +197,7 @@ public final class EscapeVector extends NetworkGameClient {
           EscapeVector.releaseStatics((byte) -95);
           GameKeyHandler.releaseStatics(47);
           nm.releaseStatics(false);
-          ek.releaseStatics(69);
+          InstructionsNavigationSupport.releaseStatics(69);
           AccountPanelInputSupport.releaseStatics((byte) -116);
           NetworkGameClient.releaseStatics((byte) -73);
           ClientException.releaseStatics(false);
@@ -210,18 +210,18 @@ public final class EscapeVector extends NetworkGameClient {
           BitmapFont.releaseStatics();
           nb.releaseStatics(-111);
           PacketBuffer.releaseStatics((byte) 70);
-          td.releaseStatics(128);
+          MonotonicClockSupport.releaseStatics(128);
           RasterRestoreSupport.releaseStatics((byte) -96);
           bg.releaseStatics(13);
           rc.releaseStatics(-49153);
           BrowserSessionMarkerState.releaseStatics(18);
-          gm.releaseStatics(8192);
-          be.releaseStatics((byte) -127);
+          ArchiveSpriteLoader.releaseStatics(8192);
+          SavedDataRequestSupport.releaseStatics((byte) -127);
           NameAvailabilityResultSupport.releaseStatics((byte) 110);
           ii.releaseStatics(20);
           ChatMessage.releaseStatics(-13885);
-          mg.releaseStatics(true);
-          um.releaseStatics(false);
+          KeyboardIdleSupport.releaseStatics(true);
+          AccountSessionStatusSupport.releaseStatics(false);
           NameAvailabilityResponseSupport.releaseStatics(-76);
           ok.releaseStatics(true);
           TickClock.releaseStatics((byte) -72);
@@ -248,11 +248,11 @@ public final class EscapeVector extends NetworkGameClient {
           MainMenuScreen.releaseStatics((byte) -34);
           LevelSelectScreen.releaseStatics(-60);
           GameModeSelectScreen.releaseStatics(459);
-          tf.releaseStatics(-92);
+          PauseMenuScreen.releaseStatics(-92);
           MenuInputState.releaseStatics((byte) 49);
           PcmResampler.releaseStatics(104);
           uj.releaseStatics((byte) -106);
-          jj.releaseStatics(9);
+          LoginPromptSupport.releaseStatics(9);
           LevelObject.releaseStatics(false);
           IntrusiveNode.releaseStatics(-71);
           SpriteState.releaseStatics(-363232252);
@@ -263,13 +263,13 @@ public final class EscapeVector extends NetworkGameClient {
           ModeProgress.releaseStatics(false);
           SavedCompletionFlags.releaseStatics((byte) 80);
           ChatMessageDecoder.releaseStatics(127);
-          le.releaseStatics(91);
+          FrameworkLoadingStatus.releaseStatics(91);
           ArchiveIndex.releaseStatics((byte) 18);
           GzipDecoder.releaseStatics((byte) 124);
           ArchiveProvider.releaseStatics((byte) 123);
           mj.releaseStatics(true);
           KeyCodeSupport.releaseStatics(-1);
-          gk.releaseStatics((byte) -98);
+          QuitPageSupport.releaseStatics((byte) -98);
           AchievementFlagSupport.releaseStatics(true);
           ke.releaseStatics(-71);
           wk.releaseStatics(false);
@@ -285,7 +285,7 @@ public final class EscapeVector extends NetworkGameClient {
           DisplayNameForm.releaseStatics((byte) 95);
           sn.releaseStatics((byte) -118);
           UiTheme.releaseStatics(-27204);
-          pa.releaseStatics((byte) 103);
+          GuestLoginSupport.releaseStatics((byte) 103);
           LegacyButton.releaseStatics(1);
           AnimatedPathMarker.releaseStatics(0);
           SynthInstrument.releaseStatics();
@@ -307,10 +307,10 @@ public final class EscapeVector extends NetworkGameClient {
           InputGlyphSupport.releaseStatics((byte) 63);
           LegacyStyleNode.releaseStatics(-1);
           NineSliceFrame.releaseStatics((byte) 86);
-          se.releaseStatics((byte) 23);
-          cb.releaseStatics(-13379);
-          bn.releaseStatics(true);
-          lh.releaseStatics((byte) 26);
+          FrameCadenceSupport.releaseStatics((byte) 23);
+          LegacyMenuState.releaseStatics(-13379);
+          AccountPayloadSupport.releaseStatics(true);
+          MenuTitleSupport.releaseStatics((byte) 26);
           LevelAvailabilitySupport.releaseStatics(16558);
           LoginCredentialType.releaseStatics(124);
           LoginCredentials.releaseStatics(-102);
@@ -335,7 +335,7 @@ public final class EscapeVector extends NetworkGameClient {
           RepeatedCharacterSupport.releaseStatics((byte) -96);
           mm.releaseStatics(56);
           cf.releaseStatics(3);
-          rd.releaseStatics(-56);
+          SpaceCompactionSupport.releaseStatics(-56);
           SavedDataQuerySupport.releaseStatics(0);
           ua.releaseStatics(0);
           pc.releaseStatics(true);
@@ -348,7 +348,7 @@ public final class EscapeVector extends NetworkGameClient {
           Bzip2State.releaseStatics(8192);
           ReflectionCheck.releaseStatics((byte) 96);
           jd.releaseStatics((byte) 77);
-          ej.releaseStatics(26);
+          BitCountSupport.releaseStatics(26);
           CheckboxPainter.releaseStatics((byte) -44);
           StatefulTextPainter.releaseStatics(true);
           DialWidgetPainter.releaseStatics((byte) -76);
@@ -361,7 +361,7 @@ public final class EscapeVector extends NetworkGameClient {
           ModalPanel.releaseStatics((byte) 127);
           UiContainer.releaseStatics((byte) -68);
           IntrusiveDequeCursor.releaseStatics(false);
-          ch.releaseStatics(-5691);
+          PauseMenuState.releaseStatics(-5691);
           TrackerGainSupport.releaseStatics(false);
           QuickChatPhraseDefinition.releaseStatics(95);
           v.releaseStatics((byte) -87);
@@ -399,7 +399,7 @@ public final class EscapeVector extends NetworkGameClient {
           DialWidget.releaseStatics(true);
           MarkerSlider.releaseStatics((byte) 59);
           AudioFilter.releaseStatics();
-          cj.releaseStatics(17159);
+          IntroFinalFrameSupport.releaseStatics(17159);
           CachedTextLayout.releaseStatics(true);
           DirectByteStorage.releaseStatics(-4);
           GrowableIntList.releaseStatics(true);
@@ -411,7 +411,7 @@ public final class EscapeVector extends NetworkGameClient {
           WeightedCacheEntry.releaseStatics(0);
           StrongCacheEntry.releaseStatics(28);
           ProxySocketConnector.releaseStatics(true);
-          mc.releaseStatics(8123);
+          LoginHandshakeState.releaseStatics(8123);
           NodeHashTableIterator.releaseStatics(false);
           DualLinkDequeIterator.releaseStatics(true);
           HighscoreQuery.releaseStatics(-83);
@@ -490,7 +490,7 @@ public final class EscapeVector extends NetworkGameClient {
     private final void advanceAssetLoading(byte guard) {
         int var3 = obfuscationControl;
         try {
-          KeyboardStateSupport.a(guard ^ -25900, mg.field_f);
+          KeyboardStateSupport.serviceAccountInput(guard ^ -25900, KeyboardIdleSupport.field_f);
           if (null == ByteStorage.gameFont) {
             ModeProgress.refreshAccountUi(-122);
             InstructionsScreen.setLoadingProgress(TextLayout.field_f, guard ^ -17595, 70.0f);
@@ -514,19 +514,19 @@ public final class EscapeVector extends NetworkGameClient {
             ResourceArchive.field_m = fe.a("", IndexedSpriteState.field_j, "rock_buster", true);
             IntPoint.field_b = fe.a("", IndexedSpriteState.field_j, "interface_level_complete", true);
             HighscoreQuery.field_g = fe.a("", IndexedSpriteState.field_j, "interface_game_over", true);
-            mc.field_d = kh.a(IndexedSpriteState.field_j, (byte) 124, "", "achievements");
-            bn.installAchievementIcons(mc.field_d, 0);
+            LoginHandshakeState.achievementIcons = kh.a(IndexedSpriteState.field_j, (byte) 124, "", "achievements");
+            AccountPayloadSupport.installAchievementIcons(LoginHandshakeState.achievementIcons, 0);
             CheckboxPainter.field_c = fe.a("basic", MarkerSliderPainter.field_h, "unachieved", true);
             DualLinkDequeIterator.field_e = fe.a("basic", MarkerSliderPainter.field_h, "locked", true);
             SpriteLoadTask.field_l = new Sprite(CheckboxPainter.field_c.fullWidth, CheckboxPainter.field_c.fullHeight);
             SpriteLoadTask.field_l.trimTransparentEdges();
             AchievementThresholdRule.setMirroredPanelBackground(fe.a("", IndexedSpriteState.field_j, "achievements_next_page_button", true), -84);
-            RasterSnapshot.field_m = new Sprite[mc.field_d.length];
+            RasterSnapshot.field_m = new Sprite[LoginHandshakeState.achievementIcons.length];
             int var2_int = 0;
-            while (mc.field_d.length > var2_int) {
+            while (LoginHandshakeState.achievementIcons.length > var2_int) {
               RasterSnapshot.field_m[var2_int] = new Sprite(32, 32);
               RasterSnapshot.field_m[var2_int].bindAsFramebuffer();
-              mc.field_d[var2_int].drawDownscaled(0, 0, 32, 32);
+              LoginHandshakeState.achievementIcons[var2_int].drawDownscaled(0, 0, 32, 32);
               var2_int++;
               if (var3 != 0) {
                 return;
@@ -606,7 +606,7 @@ public final class EscapeVector extends NetworkGameClient {
           QuickChatPhraseDefinition.field_t = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "photo-blob-grow").toPcmSample().resample(var2);
           SavedCompletionFlags.field_g = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "photo-body-explode").toPcmSample().resample(var2);
           ArchiveProvider.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "grid_effect_1").toPcmSample().resample(var2);
-          pa.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "grid_effect_2").toPcmSample().resample(var2);
+          GuestLoginSupport.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "grid_effect_2").toPcmSample().resample(var2);
           PcmResampler.field_g = VorbisSample.loadNamed(StripedProgressBar.field_I, "", "pixelate").decodeToPcm().resample(var2);
           ValidationIndicator.field_N = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "gas-pump").toPcmSample().resample(var2);
           LoginDialog.field_mb = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "gas-burn").toPcmSample().resample(var2);
@@ -617,7 +617,7 @@ public final class EscapeVector extends NetworkGameClient {
           ShipHullGeometry.field_j = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "alien-fire").toPcmSample().resample(var2);
           Bzip2State.field_G = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield").toPcmSample().resample(var2);
           InputGlyphSupport.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield_impact").toPcmSample().resample(var2);
-          gm.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield_empty").toPcmSample().resample(var2);
+          ArchiveSpriteLoader.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "shield_empty").toPcmSample().resample(var2);
           DropTargetWidget.field_E = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-start").toPcmSample().resample(var2);
           NameAvailabilityResult.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-filling").toPcmSample().resample(var2);
           AccountFormStage.field_b = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "fuel-stop").toPcmSample().resample(var2);
@@ -631,13 +631,13 @@ public final class EscapeVector extends NetworkGameClient {
           SpriteDecodeSupport.field_h = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "laser").toPcmSample().resample(var2);
           IntrusiveNodeHashTable.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-ship").toPcmSample().resample(var2);
           RasterBuffer.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion_5_seconds").toPcmSample().resample(var2);
-          pa.field_a = VorbisSample.loadNamed(StripedProgressBar.field_I, "", "beeping").decodeToPcm().resample(var2);
+          GuestLoginSupport.field_a = VorbisSample.loadNamed(StripedProgressBar.field_I, "", "beeping").decodeToPcm().resample(var2);
           this.loadObjectExplosionSamples(guard + 97, var2);
           AchievementDefinition.field_a = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "mine_inactive_hum_2").toPcmSample().resample(var2);
           AccountMessagePanel.field_J = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "100Hz square").toPcmSample();
           MarkerSliderPainter.field_d = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-seeker-mine").toPcmSample().resample(var2);
           NameAvailabilityValidator.field_p = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "rockbuster").toPcmSample().resample(var2);
-          td.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-rock-buster").toPcmSample().resample(var2);
+          MonotonicClockSupport.field_c = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "explosion-rock-buster").toPcmSample().resample(var2);
           AchievementQuery.field_k = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "level_complete").toPcmSample().resample(var2);
           AlternateUsernameCredentials.field_o = SoundEffect.loadNamed(CheckboxPainter.field_h, "", "level_complete_score").toPcmSample().resample(var2);
           SpriteOffset.a((byte) 106);
@@ -765,9 +765,9 @@ public final class EscapeVector extends NetworkGameClient {
 
     private final void initializeGameArchives(boolean guard) {
         try {
-          if (null != mg.field_c) {
-            RegistrationRequestDialog.a(8, mg.field_c);
-            mg.field_c = null;
+          if (null != KeyboardIdleSupport.field_c) {
+            RegistrationRequestDialog.a(8, KeyboardIdleSupport.field_c);
+            KeyboardIdleSupport.field_c = null;
             SpriteOffset.a((byte) 57);
           }
           IndexedSpriteState.field_j = MarkerSliderPainter.createArchive(1, 0, guard, 1, true);
@@ -784,10 +784,10 @@ public final class EscapeVector extends NetworkGameClient {
           DualLinkNode.field_n.addNamedGroup(IndexedSpriteState.field_j, TextFieldValidator.field_l, DebouncedValidator.field_d, "", 14826);
           DualLinkNode.field_n.addNamedGroup(IndexedSpriteState.field_j, TextFieldValidator.field_l, DebouncedValidator.field_d, "scrshots", 14826);
           DualLinkNode.field_n.addNamedGroup(sn.field_c, CipherPacketBuffer.field_o, NanoTickClock.field_h, "", 14826);
-          DualLinkNode.field_n.addWholeArchive(SavedDataWrite.field_g, (byte) -125, gm.field_d, CheckboxPainter.field_h);
-          DualLinkNode.field_n.addWholeArchive(SavedDataWrite.field_g, (byte) -115, gm.field_d, StripedProgressBar.field_I);
+          DualLinkNode.field_n.addWholeArchive(SavedDataWrite.field_g, (byte) -125, ArchiveSpriteLoader.field_d, CheckboxPainter.field_h);
+          DualLinkNode.field_n.addWholeArchive(SavedDataWrite.field_g, (byte) -115, ArchiveSpriteLoader.field_d, StripedProgressBar.field_I);
           DualLinkNode.field_n.addWholeArchive(NameAvailabilityResultSupport.field_f, (byte) -119, ArchivePreloader.field_d, PointCloudEffect.field_D);
-          DualLinkNode.field_n.addWholeArchive(LegacyStyleNode.field_r, (byte) -121, ek.field_b, UiContainer.field_B);
+          DualLinkNode.field_n.addWholeArchive(LegacyStyleNode.field_r, (byte) -121, InstructionsNavigationSupport.field_b, UiContainer.field_B);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -933,13 +933,13 @@ public final class EscapeVector extends NetworkGameClient {
                         decompiledFrameRemainder0 = (var9 != 0);
                       }
                       if (decompiledFrameRemainder0) {
-                        if (ch.field_b) {
+                        if (PauseMenuState.instructionsVisible) {
                           ArchiveLoadTask.field_e.drawContents((byte) 120);
                           decompiledFrameRemainder0 = (var9 != 0);
                         }
                         if (decompiledFrameRemainder0) {
                           if (null != da.field_c) {
-                            da.field_c.d((byte) 126);
+                            da.field_c.draw((byte) 126);
                             decompiledFrameRemainder0 = (var9 != 0);
                           }
                           if (decompiledFrameRemainder0 &&
@@ -975,8 +975,8 @@ public final class EscapeVector extends NetworkGameClient {
             BoundedRandomAccessFile.activeSession.timeHackMode) {
             ByteStorage.gameFont.drawCentered("TIME HACK MODE IS ON", 320, 40, 16744576, -1);
           }
-          if (2 <= mg.field_b &&
-            gk.field_c) {
+          if (2 <= KeyboardIdleSupport.field_b &&
+            QuitPageSupport.field_c) {
             ByteStorage.gameFont.drawRight("FPS: " + Bzip2State.field_p, 636, 100, 16777215, 0);
             ByteStorage.gameFont.drawRight("LPS: " + NanoTickClock.field_j, 636, 120, 16777215, 0);
             long var5 = Runtime.getRuntime().totalMemory();

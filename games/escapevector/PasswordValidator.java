@@ -39,7 +39,7 @@ final class PasswordValidator extends TextFieldValidator {
             String stackIn_33_0 = ml.field_b;
             return stackIn_33_0;
           }
-          if (lg.a(0, var5, var7)) {
+          if (PasswordSubstringSupport.containsForwardOrReversed(0, var5, var7)) {
             String stackIn_22_0 = IntrusiveDeque.field_b;
             return stackIn_22_0;
           }

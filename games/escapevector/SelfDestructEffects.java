@@ -151,8 +151,8 @@ final class SelfDestructEffects {
               if (param1) {
                 var9 = var9 | 1;
               }
-              PathPoint.field_a.writeInt((byte) 123, gk.field_a.nextInt());
-              PathPoint.field_a.writeInt((byte) 124, gk.field_a.nextInt());
+              PathPoint.field_a.writeInt((byte) 123, QuitPageSupport.field_a.nextInt());
+              PathPoint.field_a.writeInt((byte) 124, QuitPageSupport.field_a.nextInt());
               PathPoint.field_a.writeCircumfixedString((byte) 100, var14);
               PathPoint.field_a.writeCircumfixedString((byte) 100, var8);
               CharSequence var15 = (CharSequence) ((Object) param2);
@@ -163,17 +163,17 @@ final class SelfDestructEffects {
               QuickChatDynamicCommand.outgoingPackets.writeByte(18, param0 ^ 101);
               QuickChatDynamicCommand.outgoingPackets.position = QuickChatDynamicCommand.outgoingPackets.position + 2;
               int var10 = QuickChatDynamicCommand.outgoingPackets.position;
-              String var11_ref_String = tf.a(-1, PointCloudEffect.activeApplet((byte) -110));
+              String var11_ref_String = PauseMenuScreen.readSettingsCookie(-1, PointCloudEffect.activeApplet((byte) -110));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               QuickChatDynamicCommand.outgoingPackets.writeString(var11_ref_String, 105);
-              bn.a(param0 ^ -32, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
+              AccountPayloadSupport.writeEncryptedPayload(param0 ^ -32, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
               QuickChatDynamicCommand.outgoingPackets.backpatchShortLength(QuickChatDynamicCommand.outgoingPackets.position - var10, 32614);
             } else {
               PathPoint.field_a.position = 0;
-              PathPoint.field_a.writeInt((byte) 124, gk.field_a.nextInt());
-              PathPoint.field_a.writeInt((byte) 127, gk.field_a.nextInt());
+              PathPoint.field_a.writeInt((byte) 124, QuitPageSupport.field_a.nextInt());
+              PathPoint.field_a.writeInt((byte) 127, QuitPageSupport.field_a.nextInt());
               PacketBuffer stackIn_12_0 = PathPoint.field_a;
               int stackIn_12_1 = 100;
               if (!param4.b(114)) {
@@ -193,7 +193,7 @@ final class SelfDestructEffects {
               QuickChatDynamicCommand.outgoingPackets.writeByte(16, -123);
               QuickChatDynamicCommand.outgoingPackets.position = QuickChatDynamicCommand.outgoingPackets.position + 1;
               var9 = QuickChatDynamicCommand.outgoingPackets.position;
-              bn.a(0, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
+              AccountPayloadSupport.writeEncryptedPayload(0, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
               QuickChatDynamicCommand.outgoingPackets.backpatchByteLength(-38, -var9 + QuickChatDynamicCommand.outgoingPackets.position);
             }
             ClientException.a(-1, 30785);
@@ -209,7 +209,7 @@ final class SelfDestructEffects {
               AccountFormStage.field_d = ResourceArchive.field_k;
             } else {
               if (var9Lifetime1 == 248) {
-                se.writeBrowserSessionMarker((byte) 81, PointCloudEffect.activeApplet((byte) -108));
+                FrameCadenceSupport.writeBrowserSessionMarker((byte) 81, PointCloudEffect.activeApplet((byte) -108));
                 MouseWheelInput.field_a = LoadingProgressDialog.field_fb;
                 nm.a(param0 ^ -16);
                 e.field_c = false;
@@ -270,8 +270,8 @@ final class SelfDestructEffects {
               int stackIn_61_0 = 249;
               return stackIn_61_0;
             }
-            int var9Lifetime3 = ej.field_b;
-            ej.field_b = StringNode.field_i;
+            int var9Lifetime3 = BitCountSupport.field_b;
+            BitCountSupport.field_b = StringNode.field_i;
             StringNode.field_i = var9Lifetime3;
             e.field_c = true;
           }
@@ -456,7 +456,7 @@ final class SelfDestructEffects {
         try {
           this.field_f = param0;
           this.a((byte) 110);
-          int var2_int = (int)td.b(128);
+          int var2_int = (int)MonotonicClockSupport.monotonicMillis(128);
           this.field_i = new Random((long)var2_int);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ')');

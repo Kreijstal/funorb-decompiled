@@ -144,7 +144,7 @@ final class TrackerMusicDefinition {
           this.field_l = new int[256];
           ArraySupport.fill(this.field_l, 0, 256, 64);
           for (int var5Lifetime1 = 0; 256 > var5Lifetime1; var5Lifetime1++) {
-            this.field_C[var5Lifetime1] = um.field_b;
+            this.field_C[var5Lifetime1] = AccountSessionStatusSupport.field_b;
           }
           for (int var5Lifetime2 = 0; var5Lifetime2 < this.field_p; var5Lifetime2++) {
             this.field_l[var5Lifetime2] = param0.readUnsignedByte(0) + 1;

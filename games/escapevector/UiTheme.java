@@ -125,8 +125,8 @@ final class UiTheme {
         try {
           LinkButtonPainter.field_a = param2;
           SavedDataQuery.field_i = true;
-          be.field_b = new AccountRequestDialog(Checkbox.field_F, RasterRestoreSupport.field_b, param1, DialWidget.field_H, LinkButtonPainter.field_a);
-          Checkbox.field_F.pushPanel(be.field_b, 77);
+          SavedDataRequestSupport.requestDialog = new AccountRequestDialog(Checkbox.field_F, RasterRestoreSupport.field_b, param1, DialWidget.field_H, LinkButtonPainter.field_a);
+          Checkbox.field_F.pushPanel(SavedDataRequestSupport.requestDialog, 77);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "uf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -180,8 +180,8 @@ final class UiTheme {
           var6.horizontalAlignment = 0;
           StatefulTextPainter var7 = new StatefulTextPainter(var4, true);
           var7.horizontalAlignment = 0;
-          var7.setFrameSpritesForAllStates(jj.a(8947848, 46), guard + 31482);
-          var7.createStateLayer(1, (byte) -53).setFrameSprites(2, jj.a(11184810, 51)).setTextColor(2236962, -22572);
+          var7.setFrameSpritesForAllStates(LoginPromptSupport.createCenterOnlyFrame(8947848, 46), guard + 31482);
+          var7.createStateLayer(1, (byte) -53).setFrameSprites(2, LoginPromptSupport.createCenterOnlyFrame(11184810, 51)).setTextColor(2236962, -22572);
           this.checkboxPainter = (WidgetPainter) ((Object) new CheckboxPainter(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           DialWidgetPainter discarded$0 = new DialWidgetPainter(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           MarkerSliderPainter discarded$1 = new MarkerSliderPainter(font, 16777215, -1, 125269879, 4473924, 3, 268435455);

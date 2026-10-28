@@ -196,7 +196,7 @@ final class MenuInputState {
         int var9 = 0;
         int var13 = EscapeVector.obfuscationControl;
         SecondaryNodeHashTable.field_a = kh.a(spriteArchive, (byte) 126, "commonui", "frame_top");
-        bn.field_d = kh.a(spriteArchive, (byte) -114, "commonui", "frame_bottom");
+        AccountPayloadSupport.field_d = kh.a(spriteArchive, (byte) -114, "commonui", "frame_bottom");
         ProgressRecord.field_j = fe.a("commonui", spriteArchive, "jagex_logo_grey", true);
         LoginCredentialType.field_f = kh.a(spriteArchive, (byte) -81, "commonui", "button");
         EditableTextWidget.field_E = MeshMaterial.loadSpritesByName("validation", spriteArchive, "commonui", (byte) 77);
@@ -208,8 +208,8 @@ final class MenuInputState {
         IndexedSprite[] var5 = SpriteCheckboxPainter.loadIndexedSprites("commonui", "screen_options", (byte) -65, spriteArchive);
         SoundCache.field_f = new IndexedSprite[4];
         CachedArchiveProvider.field_w = new IndexedSprite[4];
-        ej.field_f = new IndexedSprite[4];
-        IndexedSprite[][] var6 = new IndexedSprite[][]{SoundCache.field_f, ej.field_f, CachedArchiveProvider.field_w};
+        BitCountSupport.field_f = new IndexedSprite[4];
+        IndexedSprite[][] var6 = new IndexedSprite[][]{SoundCache.field_f, BitCountSupport.field_f, CachedArchiveProvider.field_w};
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;
@@ -403,19 +403,19 @@ final class MenuInputState {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           if (guard != 1983) {
             MenuInputState.requestProgress(97, 35, -50, (byte) 98);
-            se.a(dimBackground, guard + 15130);
+            FrameCadenceSupport.renderAccountPanels(dimBackground, guard + 15130);
             return;
           }
-          se.a(dimBackground, guard + 15130);
+          FrameCadenceSupport.renderAccountPanels(dimBackground, guard + 15130);
           return;
         }
         SoftwareRasterizer.clearFramebuffer();
         if (guard != 1983) {
           MenuInputState.requestProgress(97, 35, -50, (byte) 98);
-          se.a(dimBackground, guard + 15130);
+          FrameCadenceSupport.renderAccountPanels(dimBackground, guard + 15130);
           return;
         }
-        se.a(dimBackground, guard + 15130);
+        FrameCadenceSupport.renderAccountPanels(dimBackground, guard + 15130);
     }
 
     final void setPointerSelection(int index, boolean pointerDriven, int guard) {

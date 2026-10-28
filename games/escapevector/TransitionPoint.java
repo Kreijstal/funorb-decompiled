@@ -101,7 +101,7 @@ final class TransitionPoint {
               NameSuggestionsPanel.field_H = false;
               var3_int = true;
             }
-            NameSuggestionsPanel.a((byte) 9, (var3_int), TileSpriteCacheEntry.field_f, AnimatedPathMarker.commonUiLoadProgress(-111), le.b(1));
+            NameSuggestionsPanel.a((byte) 9, (var3_int), TileSpriteCacheEntry.field_f, AnimatedPathMarker.commonUiLoadProgress(-111), FrameworkLoadingStatus.loadingMessage(1));
           } else if (!AccountTermsPanel.l(guard - 89)) {
             SoftwareRasterizer.clearFramebuffer();
             ok.a(240, 320, guard ^ 72);

@@ -73,7 +73,7 @@ final class SimulatorAssetSupport {
           String var3Lifetime1 = "seeker_mine";
           TerrainMaskSupport.field_a = fe.a(var1, IndexedSpriteState.field_j, var3Lifetime1, true);
           String var3Lifetime2 = "rock_buster";
-          ej.field_a = fe.a(var1, IndexedSpriteState.field_j, var3Lifetime2, true);
+          BitCountSupport.field_a = fe.a(var1, IndexedSpriteState.field_j, var3Lifetime2, true);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "fg.B(" + guard + ')');
         }

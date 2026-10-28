@@ -11,7 +11,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         super(0, 0, 476, 225, (WidgetPainter) null);
         this.createAccountButton = new TextButton(pc.field_g, (UiListener) null);
         this.backButton = new TextButton(CipherPacketBuffer.field_p, (UiListener) null);
-        this.guestButton = new TextButton(cj.field_c, (UiListener) null);
+        this.guestButton = new TextButton(IntroFinalFrameSupport.field_c, (UiListener) null);
         ThreeSliceButtonPainter var1 = new ThreeSliceButtonPainter();
         this.createAccountButton.painter = (WidgetPainter) ((Object) var1);
         this.backButton.painter = (WidgetPainter) ((Object) var1);
@@ -53,7 +53,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           if (AccountSessionSupport.isGuestSession(-127)) {
             return false;
           }
-          if (mg.field_b >= 2) {
+          if (KeyboardIdleSupport.field_b >= 2) {
             return true;
           }
           return false;
@@ -61,7 +61,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         if (AccountSessionSupport.isGuestSession(-127)) {
           return false;
         }
-        if (mg.field_b >= 2) {
+        if (KeyboardIdleSupport.field_b >= 2) {
           return true;
         }
         return false;

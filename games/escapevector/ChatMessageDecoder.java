@@ -104,11 +104,11 @@ final class ChatMessageDecoder {
         }
         boolean stackIn_11_0 = !(var2.readUnsignedByte(guard ^ guard) != 1);
         boolean var4 = stackIn_11_0;
-        gm.field_e = var2.readString(false);
+        ArchiveSpriteLoader.field_e = var2.readString(false);
         if (var4) {
           DualLinkDequeIterator.field_g = var2.readString(false);
         } else {
-          DualLinkDequeIterator.field_g = gm.field_e;
+          DualLinkDequeIterator.field_g = ArchiveSpriteLoader.field_e;
           if (var7 != 0) {
             DualLinkDequeIterator.field_g = var2.readString(false);
           }
@@ -153,7 +153,7 @@ final class ChatMessageDecoder {
     final static boolean a(boolean param0, byte param1) {
         try {
           if (Js5ArchiveManager.field_d == null) {
-            Js5ArchiveManager.field_d = MouseWheelInput.field_c.a(ej.field_b, 4, IntrusiveDeque.field_h);
+            Js5ArchiveManager.field_d = MouseWheelInput.field_c.a(BitCountSupport.field_b, 4, IntrusiveDeque.field_h);
           }
           if (param1 != 0) {
             field_b = (Sprite[][]) null;
@@ -161,8 +161,8 @@ final class ChatMessageDecoder {
           if (Js5ArchiveManager.field_d.field_f == 0) {
             return false;
           }
-          long dupTemp$1 = td.b(128);
-          le.field_c = dupTemp$1;
+          long dupTemp$1 = MonotonicClockSupport.monotonicMillis(128);
+          FrameworkLoadingStatus.field_c = dupTemp$1;
           field_a = dupTemp$1;
           if (Js5ArchiveManager.field_d.field_f != 1) {
             AccountFormStage.field_d = HighscoresScreen.field_d;
@@ -177,8 +177,8 @@ final class ChatMessageDecoder {
               int stackIn_11_0 = (!param0) ? -1 : -2;
               NetworkGameClient.field_q = stackIn_11_0;
               ArchiveIndex.field_t = stackIn_11_0;
-              jj.field_b = stackIn_11_0;
-              MenuInputState.writeAccountHandshake(rd.field_a, KeyboardStateSupport.field_b, true, DropTargetWidget.field_D, QuickChatDynamicCommand.outgoingPackets);
+              LoginPromptSupport.field_b = stackIn_11_0;
+              MenuInputState.writeAccountHandshake(SpaceCompactionSupport.field_a, KeyboardStateSupport.field_b, true, DropTargetWidget.field_D, QuickChatDynamicCommand.outgoingPackets);
               ClientException.a(-1, 30785);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;

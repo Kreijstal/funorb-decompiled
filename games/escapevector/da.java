@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class da {
-    static tf field_c;
+    static PauseMenuScreen field_c;
     static String[] field_d;
     static AchievementsScreen field_b;
     static String field_a;
@@ -24,7 +24,7 @@ final class da {
 
     final static boolean c(byte param0) {
         ByteStorage.field_a = true;
-        ContactEntry.field_mb = td.b(128) + 15000L;
+        ContactEntry.field_mb = MonotonicClockSupport.monotonicMillis(128) + 15000L;
         if (param0 < -19) {
           return 11 == QuickChatPhraseCache.field_e ? true : false;
         }

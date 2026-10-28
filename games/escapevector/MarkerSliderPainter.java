@@ -66,7 +66,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         String stackIn_20_2 = null;
         try {
           if (null == QuickChatDynamicCommand.field_e) {
-            kc.field_c = InstructionsScreen.createSpriteLoadTasks(0, TextLayoutLine.field_f, ej.field_g, param1, 1, param3, InstructionsScreen.simulatorBackgroundNames);
+            kc.field_c = InstructionsScreen.createSpriteLoadTasks(0, TextLayoutLine.field_f, BitCountSupport.field_g, param1, 1, param3, InstructionsScreen.simulatorBackgroundNames);
             int[] var6 = (int[]) null;
             HudMessage.field_k = InstructionsScreen.createSpriteLoadTasks(0, ok.field_b, CipherPacketBuffer.field_q, param2, 0, (int[]) null, MarkerSlider.field_L);
             EmailValidationError.field_b = new SpriteLoadTask(param1, NameAvailabilityResultSupport.field_e, Js5Transport.field_i, 1, SelfDestructEffects.field_n, param3);

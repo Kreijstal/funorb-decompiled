@@ -62,7 +62,7 @@ final class AchievementThresholdRule {
                 if (var2) {
                   return;
                 }
-              } else if (ch.field_b) {
+              } else if (PauseMenuState.instructionsVisible) {
                 var2 = (ArchiveLoadTask.field_e.update(-1));
                 if (var2) {
                   return;
@@ -80,7 +80,7 @@ final class AchievementThresholdRule {
             } else if (mm.a(-59)) {
               return;
             }
-            lh.a(72);
+            MenuTitleSupport.updateTitleBanner(72);
           } else {
             var4.advanceDialogue((byte) 62);
           }
@@ -112,7 +112,7 @@ final class AchievementThresholdRule {
           }
           if (var1_int &&
             UiContainer.hasMembership((byte) 98) &&
-            se.field_b == null) {
+            FrameCadenceSupport.field_b == null) {
             return false;
           }
           if (var1_int &&

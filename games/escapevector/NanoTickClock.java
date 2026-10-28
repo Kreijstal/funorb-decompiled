@@ -35,12 +35,12 @@ final class NanoTickClock extends TickClock {
             IntrusiveDeque.field_h = param11;
             StringNode.field_i = param13;
             StripedProgressBar.field_L = param6;
-            ej.field_d = param3;
+            BitCountSupport.field_d = param3;
             ThreeSliceButtonPainter.field_q = param10;
-            ej.field_b = param9;
+            BitCountSupport.field_b = param9;
             DropTargetWidget.field_D = param4;
             KeyboardStateSupport.field_b = param12;
-            rd.field_a = param2;
+            SpaceCompactionSupport.field_a = param2;
             if (MouseWheelInput.field_c.field_j == null) {
               return;
             }

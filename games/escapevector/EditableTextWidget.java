@@ -19,7 +19,7 @@ class EditableTextWidget extends TextButton {
         int stackIn_55_1 = 0;
         String stackIn_81_2 = null;
         try {
-          this.field_G = td.b(128);
+          this.field_G = MonotonicClockSupport.monotonicMillis(128);
           if (guard < 0) {
             this.cutSelection((byte) 21);
           }
@@ -317,7 +317,7 @@ class EditableTextWidget extends TextButton {
           int var8_int = ((WidgetTextLayout) ((Object) this.painter)).characterIndexAtPosition(offsetX, offsetY, UiContainer.field_y, GzipDecoder.field_d, 118, (UiComponent) (this));
           stackIn_6_1 = (var8_int == -1) ? (0) : (var8_int);
           this.moveCaret(stackIn_6_1, 61);
-          long var8_long = td.b(guard + 125);
+          long var8_long = MonotonicClockSupport.monotonicMillis(guard + 125);
           boolean stackIn_9_1 = !(-this.field_D + var8_long >= 250L);
           this.field_M = stackIn_9_1;
           if (this.field_M) {
@@ -529,7 +529,7 @@ class EditableTextWidget extends TextButton {
           this.maximumLength = param2;
           this.setText(param0, true, -33);
           this.field_J = true;
-          this.field_G = td.b(128);
+          this.field_G = MonotonicClockSupport.monotonicMillis(128);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -554,7 +554,7 @@ class EditableTextWidget extends TextButton {
                 this.caretIndex = var6;
               }
             }
-            this.field_G = td.b(128);
+            this.field_G = MonotonicClockSupport.monotonicMillis(128);
           }
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ul.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
@@ -611,7 +611,7 @@ class EditableTextWidget extends TextButton {
           if (this.selectionAnchor != this.caretIndex) {
             var10.drawSelection(screenX, this.caretIndex, (UiComponent) (this), this.selectionAnchor, -613528456, screenY);
           }
-          long var6 = td.b(128);
+          long var6 = MonotonicClockSupport.monotonicMillis(128);
           if (500L <= (-this.field_G + var6) % 1000L) {
             return;
           }
@@ -634,7 +634,7 @@ class EditableTextWidget extends TextButton {
         if (this.selectionAnchor != this.caretIndex) {
           var9.drawSelection(screenX, this.caretIndex, (UiComponent) (this), this.selectionAnchor, -613528456, screenY);
         }
-        long var6Lifetime1 = td.b(128);
+        long var6Lifetime1 = MonotonicClockSupport.monotonicMillis(128);
         if (500L <= (-this.field_G + var6Lifetime1) % 1000L) {
           return;
         }

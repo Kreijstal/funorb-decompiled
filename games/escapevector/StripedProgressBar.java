@@ -114,7 +114,7 @@ final class StripedProgressBar extends UiComponent {
             objectGlowSprites = (Sprite[]) null;
           }
           int var5_int = this.width + x;
-          rd.a(var5_int - this.rightCapMask.width, x + this.rightCapMask.width, y + this.height, 19807, y);
+          SpaceCompactionSupport.pushIntersectedClip(var5_int - this.rightCapMask.width, x + this.rightCapMask.width, y + this.height, 19807, y);
           for (int var6 = -this.stripeOffset + x; var6 < var5_int; var6 = var6 + stripes.width) {
             stripes.drawTransparent(var6, y);
           }
@@ -234,7 +234,7 @@ final class StripedProgressBar extends UiComponent {
         int var6 = screenY + this.y;
         this.drawStripedBar(-32, var6, this.stripeSprites[0], var5);
         if (65536 > this.progressQ16) {
-          rd.a(this.width + var5, var5 + (this.progressQ16 * this.width >> 16), var6 + this.height, 19807, var6);
+          SpaceCompactionSupport.pushIntersectedClip(this.width + var5, var5 + (this.progressQ16 * this.width >> 16), var6 + this.height, 19807, var6);
           this.drawStripedBar(-81, var6, this.stripeSprites[1], var5);
           RasterRestoreSupport.popRasterState((byte) 119);
         }

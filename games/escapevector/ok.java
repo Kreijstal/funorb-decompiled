@@ -34,7 +34,7 @@ final class ok {
           }
           RasterRestoreSupport.popRasterState((byte) 116);
           if (SocketConnector.field_d >= 150) {
-            cb.field_a.drawAlpha(15 + var3, var4 + 10, var5);
+            LegacyMenuState.introFinalFrameUpper.drawAlpha(15 + var3, var4 + 10, var5);
           } else {
             LaserGateSpan.field_l.drawHalfSize(var3, var4);
           }
@@ -48,7 +48,7 @@ final class ok {
           }
           RasterRestoreSupport.popRasterState((byte) 116);
           if (SocketConnector.field_d >= 150) {
-            cb.field_a.drawAlpha(15 + var3, var4 + 10, var5);
+            LegacyMenuState.introFinalFrameUpper.drawAlpha(15 + var3, var4 + 10, var5);
             int var6 = -125 + SocketConnector.field_d;
             if (var6 <= 0) {
               var6 = SocketConnector.field_d - 140;

@@ -512,17 +512,17 @@ final class AchievementTracker {
           UiTheme.field_e = fe.a("tutorial", archive, "edge_exit_left", true);
           TrackerGainSupport.field_b = fe.a("tutorial", archive, "edge_exit_right", true);
           EmailAvailabilityValidator.field_r = fe.a("tutorial", archive, "edge_inner_bottom", true);
-          ej.field_e = fe.a("tutorial", archive, "edge_inner_bottom_left", true);
+          BitCountSupport.field_e = fe.a("tutorial", archive, "edge_inner_bottom_left", true);
           MarkerSlider.field_G = fe.a("tutorial", archive, "edge_inner_bottom_right", true);
           PacketBuffer.field_l = fe.a("tutorial", archive, "edge_inner_left", true);
-          cj.field_a = fe.a("tutorial", archive, "edge_inner_right", true);
+          IntroFinalFrameSupport.field_a = fe.a("tutorial", archive, "edge_inner_right", true);
           mj.field_f = fe.a("tutorial", archive, "edge_inner_top", true);
           AccountRegistrationPanel.field_T = fe.a("tutorial", archive, "edge_inner_top_left", true);
           GrowableIntList.field_h = fe.a("tutorial", archive, "edge_inner_top_right", true);
           TrackerGainSupport.field_e = fe.a("tutorial", archive, "edge_outer", true);
           NanoTickClock.field_d = fe.a("tutorial", archive, "exitbg", true);
           CipherPacketBuffer.field_n = fe.a("tutorial", archive, "panel", true);
-          gm.field_a = fe.a("tutorial", archive, "platform", true);
+          ArchiveSpriteLoader.field_a = fe.a("tutorial", archive, "platform", true);
           EmailValidationError.field_a[var2_int] = fe.a("tutorial", archive, "texture", true);
           WeightedLruCache.field_c[var2_int] = true;
         } catch (RuntimeException runtimeException) {
@@ -747,17 +747,17 @@ final class AchievementTracker {
           int var1_int = EmailSyntaxValidator.field_o;
           int var2 = defaultCountdown;
           if (2 == ArchiveIndex.field_j) {
-            long var3_long = -SavedDataWrite.field_k + td.b(128);
+            long var3_long = -SavedDataWrite.field_k + MonotonicClockSupport.monotonicMillis(128);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (0 > var2) {
               var2 = 0;
             }
           }
           for (int var3 = 0; Js5NetworkRequest.field_I.length > var3; var3++) {
-            int var4 = jj.field_a[var3];
+            int var4 = LoginPromptSupport.field_a[var3];
             if (!(var4 >= 0)) {
-              var5 = lh.field_e;
-            } else if (var4 != cb.field_c.selectedIndex) {
+              var5 = MenuTitleSupport.field_e;
+            } else if (var4 != LegacyMenuState.input.selectedIndex) {
               var5 = ValidatedTextWidget.field_X;
             } else {
               var5 = pc.field_d;
@@ -806,7 +806,7 @@ final class AchievementTracker {
             int var8Lifetime1 = ClientException.field_e - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + CheckboxPainter.field_s;
-              if (var4 != cb.field_c.selectedIndex) {
+              if (var4 != LegacyMenuState.input.selectedIndex) {
                 stackIn_44_0 = SpriteDecodeSupport.field_g;
               } else {
                 stackIn_44_0 = AnimatedPanelFrame.field_e;
@@ -905,7 +905,7 @@ final class AchievementTracker {
           }
           for (int var5 = 0; var5 < var4.length; var5++) {
             int var6 = var4[var5];
-            var3_int = var3_int + ej.a(858993459, var6);
+            var3_int = var3_int + BitCountSupport.countSetBits(858993459, var6);
           }
           int stackIn_10_0 = var3_int;
           return stackIn_10_0;

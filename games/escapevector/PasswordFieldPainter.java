@@ -124,7 +124,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
         if (guard != 64655) {
           return 25L;
         }
-        return -ChatMessageDecoder.field_a + td.b(128);
+        return -ChatMessageDecoder.field_a + MonotonicClockSupport.monotonicMillis(128);
     }
 
     final static int fontLineHeight(BinaryBitmapFont font, int guard) {
@@ -185,7 +185,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
               var2.writeInt((byte) 123, ReflectionCheck.field_n);
               NameSuggestionsPanel.field_I.write(13, 0, var2.payload, 5000);
               ke.field_b = ke.field_b + 1;
-              BoundedRandomAccessFile.field_g = 30000L + td.b(128);
+              BoundedRandomAccessFile.field_g = 30000L + MonotonicClockSupport.monotonicMillis(128);
             }
             if (ke.field_b == 3) {
               if (!(NameSuggestionsPanel.field_I.available(-117) <= 0)) {
@@ -195,7 +195,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
                   return stackIn_27_0;
                 }
                 ke.field_b = ke.field_b + 1;
-              } else if (td.b(128) > BoundedRandomAccessFile.field_g) {
+              } else if (MonotonicClockSupport.monotonicMillis(128) > BoundedRandomAccessFile.field_g) {
                 int stackIn_32_0 = AnimatedPanelFrame.handleAccountConnectionFailure((byte) -78, -2);
                 return stackIn_32_0;
               }

@@ -30,7 +30,7 @@ final class mj {
               if (!param4) {
                 ArchiveIndex.field_m = Checkbox.createLoginCredentials(param3, false, 24564, param2);
               } else {
-                ArchiveIndex.field_m = SavedDataQuery.createCredentials(param0 - 1, false, mg.field_d, (String) null, param2);
+                ArchiveIndex.field_m = SavedDataQuery.createCredentials(param0 - 1, false, KeyboardIdleSupport.field_d, (String) null, param2);
               }
               QuickChatDynamicCommand.outgoingPackets.position = 0;
               QuickChatDynamicCommand.outgoingPackets.writeByte(14, -123);
@@ -55,10 +55,10 @@ final class mj {
               SecondaryIntrusiveDeque.field_b = QuickChatDynamicCommand.incomingPackets.readLong(param0 - 800509814);
               QuickChatDynamicCommand.incomingPackets.position = 0;
               MenuEdgeSegment.writeLoginRequest(ArchiveIndex.field_m, param4, param1, param5, (byte) -99);
-              AccountFormStage.field_d = mc.field_b;
+              AccountFormStage.field_d = LoginHandshakeState.keyExchangeStage;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (mc.field_b == AccountFormStage.field_d &&
+            if (LoginHandshakeState.keyExchangeStage == AccountFormStage.field_d &&
               Checkbox.readIncomingBytes(30000, 1)) {
               int var6_intLifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
               LegacyStyleNode.field_v = var6_intLifetime1;
@@ -85,8 +85,8 @@ final class mj {
             }
             if (AccountFormStage.field_d == ClientException.field_c &&
               ArchiveKeyRequest.hasCompletePacket(param0 + 10549)) {
-              mg.field_d = QuickChatDynamicCommand.incomingPackets.readLong(-800509813);
-              mg.field_b = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
+              KeyboardIdleSupport.field_d = QuickChatDynamicCommand.incomingPackets.readLong(-800509813);
+              KeyboardIdleSupport.field_b = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
               QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
               Js5NetworkRequest.field_x = QuickChatDynamicCommand.incomingPackets.readUnsignedShort(1952);
               String var6 = QuickChatDynamicCommand.incomingPackets.readNullableString(-15208);
@@ -136,14 +136,14 @@ final class mj {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWindowFunctionWithArguments((byte) 116, PointCloudEffect.activeApplet((byte) -128), new Object[]{ProxySocketConnector.decodeBase37Name(mg.field_d, (byte) 29)}, "zap");
+                  JavaScriptBridge.callWindowFunctionWithArguments((byte) 116, PointCloudEffect.activeApplet((byte) -128), new Object[]{ProxySocketConnector.decodeBase37Name(KeyboardIdleSupport.field_d, (byte) 29)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
               if (Js5NetworkRequest.field_x > 0) {
-                ej.field_d = true;
+                BitCountSupport.field_d = true;
               }
               QuickChatDynamicCommand.outgoingPackets.initializeCipher(NameSuggestionsPanel.field_O, (byte) 107);
               for (int var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
@@ -181,8 +181,8 @@ final class mj {
                 int stackIn_102_0 = 3;
                 return stackIn_102_0;
               }
-              int var6_intLifetime2 = ej.field_b;
-              ej.field_b = StringNode.field_i;
+              int var6_intLifetime2 = BitCountSupport.field_b;
+              BitCountSupport.field_b = StringNode.field_i;
               e.field_c = true;
               StringNode.field_i = var6_intLifetime2;
             }

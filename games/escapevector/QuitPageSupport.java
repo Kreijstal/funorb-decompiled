@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gk {
+final class QuitPageSupport {
     static Random field_a;
     static String field_b;
     static boolean field_c;
@@ -14,17 +14,17 @@ final class gk {
         int var1 = -1 / ((-32 - guard) / 60);
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openQuitPage(int guard, java.applet.Applet applet) {
         try {
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              if (param0 != -9787) {
+              if (guard != -9787) {
                 field_c = true;
               }
-              java.net.URL var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-              param1.getAppletContext().showDocument(WeightedCacheEntry.withSessionParameters((byte) 114, param1, var2), "_top");
+              java.net.URL var2 = new java.net.URL(applet.getCodeBase(), "quit.ws");
+              applet.getAppletContext().showDocument(WeightedCacheEntry.withSessionParameters((byte) 114, applet, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -36,8 +36,8 @@ final class gk {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_8_0 = var2_ref2;
-            StringBuilder stackIn_8_1 = new StringBuilder().append("gk.B(").append(param0).append(',');
-            if (param1 == null) {
+            StringBuilder stackIn_8_1 = new StringBuilder().append("gk.B(").append(guard).append(',');
+            if (applet == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";

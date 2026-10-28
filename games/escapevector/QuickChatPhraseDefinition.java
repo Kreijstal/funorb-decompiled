@@ -128,7 +128,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           }
           ProxySocketConnector.field_r.setProgress(-100, text, percent, alternateStyle);
           SoftwareRasterizer.clearFramebuffer();
-          se.a(true, guard ^ 17111);
+          FrameCadenceSupport.renderAccountPanels(true, guard ^ 17111);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "si.D(" + percent + ',' + (text != null ? "{...}" : "null") + ',' + alternateStyle + ',' + guard + ')');
         }

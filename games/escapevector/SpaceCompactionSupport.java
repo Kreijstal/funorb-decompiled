@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rd {
-    static IntrusiveDeque field_b;
-    static LoginDialog field_c;
+final class SpaceCompactionSupport {
+    static IntrusiveDeque pendingSavedDataWrites;
+    static LoginDialog loginDialog;
     static int field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param3 != 19807) {
+    final static void pushIntersectedClip(int right, int left, int bottom, int guard, int top) {
+        if (guard != 19807) {
           String var6 = (String) null;
-          rd.a((byte) -74, (String) null);
+          SpaceCompactionSupport.compactSpaces((byte) -74, (String) null);
         }
         LoginStage.pushRasterState(108);
-        SoftwareRasterizer.intersectClip(param1, param4, param0, param2);
+        SoftwareRasterizer.intersectClip(left, top, right, bottom);
     }
 
-    final static String a(byte param0, String param1) {
+    final static String compactSpaces(byte guard, String text) {
         String stackIn_18_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (param0 != 72) {
-            rd.a(111, -86, -93, -27, 95);
+          if (guard != 72) {
+            SpaceCompactionSupport.pushIntersectedClip(111, -86, -93, -27, 95);
           }
-          char[] var10 = param1.toCharArray();
+          char[] var10 = text.toCharArray();
           char[] var8 = var10;
           char[] var2 = var8;
           int var3 = 0;
@@ -49,8 +49,8 @@ final class rd {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
           RuntimeException stackIn_17_0 = var2_ref;
-          StringBuilder stackIn_17_1 = new StringBuilder().append("rd.A(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_17_1 = new StringBuilder().append("rd.A(").append(guard).append(',');
+          if (text == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
@@ -61,11 +61,11 @@ final class rd {
 
     public static void releaseStatics(int guard) {
         int var1 = -2 % ((guard - 10) / 48);
-        field_b = null;
-        field_c = null;
+        pendingSavedDataWrites = null;
+        loginDialog = null;
     }
 
     static {
-        field_b = new IntrusiveDeque();
+        pendingSavedDataWrites = new IntrusiveDeque();
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bn {
+final class AccountPayloadSupport {
     static PathPoint field_a;
     static volatile long field_c;
     static Sprite[] field_d;
@@ -14,15 +14,15 @@ final class bn {
           return;
         }
         java.math.BigInteger var2 = (java.math.BigInteger) null;
-        bn.a(-123, (PacketBuffer) null, (PacketBuffer) null, (java.math.BigInteger) null, (java.math.BigInteger) null);
+        AccountPayloadSupport.writeEncryptedPayload(-123, (PacketBuffer) null, (PacketBuffer) null, (java.math.BigInteger) null, (java.math.BigInteger) null);
         field_d = null;
     }
 
-    final static void a(int param0, PacketBuffer param1, PacketBuffer param2, java.math.BigInteger param3, java.math.BigInteger param4) {
+    final static void writeEncryptedPayload(int offset, PacketBuffer destination, PacketBuffer source, java.math.BigInteger exponent, java.math.BigInteger modulus) {
         try {
-          TransitionPoint.writeEncryptedAccountPayload(param4, false, param3, param2.payload, param1, param2.position, param0);
+          TransitionPoint.writeEncryptedAccountPayload(modulus, false, exponent, source.payload, destination, source.position, offset);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "bn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "bn.B(" + offset + ',' + (destination != null ? "{...}" : "null") + ',' + (source != null ? "{...}" : "null") + ',' + (exponent != null ? "{...}" : "null") + ',' + (modulus != null ? "{...}" : "null") + ')');
         }
     }
 

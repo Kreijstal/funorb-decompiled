@@ -22,7 +22,7 @@ abstract class MouseWheelInput {
 
     final static void enqueueSavedDataWrite(int guard, int opcode, SavedDataWrite write) {
         try {
-          rd.field_b.addLast(-12328, write);
+          SpaceCompactionSupport.pendingSavedDataWrites.addLast(-12328, write);
           SingleChildContainer.writeSavedData(-110, write, opcode);
           if (guard != 1) {
             field_a = (String) null;

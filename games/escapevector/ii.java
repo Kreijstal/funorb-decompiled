@@ -10,13 +10,13 @@ final class ii {
         if (2 < LoginDialog.field_pb) {
           LoginDialog.field_pb = 2;
         }
-        lh.field_d = 3 & param1 >> 2;
+        MenuTitleSupport.field_d = 3 & param1 >> 2;
         ChatHistorySupport.field_f = 3 & param1;
         if (param0 != 16) {
           ii.releaseStatics(17);
         }
-        if (lh.field_d > 2) {
-          lh.field_d = 2;
+        if (MenuTitleSupport.field_d > 2) {
+          MenuTitleSupport.field_d = 2;
         }
         if (ChatHistorySupport.field_f > 2) {
           ChatHistorySupport.field_f = 2;
@@ -41,7 +41,7 @@ final class ii {
         if (20 > AccountNoticeKind.frameworkLoadingStage) {
           return true;
         }
-        if (!RepeatedCharacterSupport.a((byte) -84)) {
+        if (!RepeatedCharacterSupport.isSessionFrameworkReady((byte) -84)) {
           return true;
         }
         if (LaserGateSpan.field_g <= 0) {

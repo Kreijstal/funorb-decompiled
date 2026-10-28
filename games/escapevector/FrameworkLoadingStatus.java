@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class le {
+final class FrameworkLoadingStatus {
     static QuickChatDynamicCommand field_a;
     static String field_b;
     static long field_c;
@@ -17,7 +17,7 @@ final class le {
         field_b = null;
     }
 
-    final static String b(int param0) {
+    final static String loadingMessage(int guard) {
         if (AccountNoticeKind.frameworkLoadingStage < 2) {
           return LoginMethod.field_a;
         }
@@ -37,9 +37,9 @@ final class le {
           return CipherPacketBuffer.field_o;
         }
         if (!LoadingProgressDialog.field_ab.tryLoadNamedGroup(0, "commonui")) {
-          return NanoTickClock.field_h + " - " + LoadingProgressDialog.field_ab.namedGroupProgress("commonui", param0 ^ 1) + "%";
+          return NanoTickClock.field_h + " - " + LoadingProgressDialog.field_ab.namedGroupProgress("commonui", guard ^ 1) + "%";
         }
-        if (param0 != 1) {
+        if (guard != 1) {
           field_a = (QuickChatDynamicCommand) null;
         }
         if (!AlternateUsernameCredentials.field_j.ensureIndex(0)) {

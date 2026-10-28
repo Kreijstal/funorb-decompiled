@@ -16,7 +16,7 @@ final class Bullet extends IntrusiveNode {
           if (guard > -90) {
             collisionLaserCount = -121;
           }
-          QuickChatDynamicCommand[] stackIn_4_0 = new QuickChatDynamicCommand[]{InputGlyphSupport.field_b, AccountMessagePanel.field_P, DialWidget.quickChatCommand, AlternateUsernameCredentials.field_m, AchievementDefinition.field_d, BufferedSocket.field_k, StringNode.field_l, SlidingSpriteTransition.field_g, LabeledField.field_H, AccountRegistrationPanel.field_L, le.field_a, BrowserSessionMarkerState.field_c, mg.field_g, TrackerGainSupport.field_d};
+          QuickChatDynamicCommand[] stackIn_4_0 = new QuickChatDynamicCommand[]{InputGlyphSupport.field_b, AccountMessagePanel.field_P, DialWidget.quickChatCommand, AlternateUsernameCredentials.field_m, AchievementDefinition.field_d, BufferedSocket.field_k, StringNode.field_l, SlidingSpriteTransition.field_g, LabeledField.field_H, AccountRegistrationPanel.field_L, FrameworkLoadingStatus.field_a, BrowserSessionMarkerState.field_c, KeyboardIdleSupport.field_g, TrackerGainSupport.field_d};
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,7 +170,7 @@ final class Bullet extends IntrusiveNode {
           NetworkGameClient.h(-115);
           if (mesh.field_I > 0 &&
             null != mesh.field_n) {
-            cj.a((byte) -99);
+            IntroFinalFrameSupport.clearSharedIntScratch((byte) -99);
           }
           AccountSessionSupport.field_d = 0;
           int var8 = 0;
@@ -272,10 +272,10 @@ final class Bullet extends IntrusiveNode {
           if (guard != -22) {
             Bullet.formatArchiveProgress((String) null, (ResourceArchive) null, (String) null, -6);
           }
-          if (mg.field_e.isEmpty(-107)) {
+          if (KeyboardIdleSupport.field_e.isEmpty(-107)) {
             return;
           }
-          mg.field_e.removeFirst(guard - 20223);
+          KeyboardIdleSupport.field_e.removeFirst(guard - 20223);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh {
+final class MenuTitleSupport {
     static int field_d;
     static int field_e;
     static String[] field_c;
     static String field_b;
     static String field_a;
 
-    final static void a(int param0) {
+    final static void updateTitleBanner(int guard) {
         int var4 = EscapeVector.obfuscationControl;
         DialogueScreen var1 = DropTargetWidget.f((byte) -49);
-        if (param0 >= 60) {
+        if (guard >= 60) {
           if (null != BoundedRandomAccessFile.activeSession) {
             LaserGateSpan.field_k = 0;
             return;
@@ -95,7 +95,7 @@ final class lh {
                   Sprite var15 = DynamicTerrainRenderer.field_w;
                   var2 = var15;
                   var3 = (66 - var15.fullHeight) / 2;
-                } else if (ch.field_b) {
+                } else if (PauseMenuState.instructionsVisible) {
                   Sprite var16 = AccountTermsPanel.field_H;
                   var2 = var16;
                   var3 = (100 - var16.fullHeight) / 2;
@@ -126,7 +126,7 @@ final class lh {
           }
           return;
         }
-        lh.releaseStatics((byte) -88);
+        MenuTitleSupport.releaseStatics((byte) -88);
         if (null != BoundedRandomAccessFile.activeSession) {
           LaserGateSpan.field_k = 0;
           return;
@@ -206,7 +206,7 @@ final class lh {
                   Sprite var22 = DynamicTerrainRenderer.field_w;
                   var2Lifetime1 = var22;
                   var3Lifetime1 = (66 - var22.fullHeight) / 2;
-                } else if (ch.field_b) {
+                } else if (PauseMenuState.instructionsVisible) {
                   Sprite var23 = AccountTermsPanel.field_H;
                   var2Lifetime1 = var23;
                   var3Lifetime1 = (100 - var23.fullHeight) / 2;
@@ -386,7 +386,7 @@ final class lh {
                 LaserGateSpan.field_k = LaserGateSpan.field_k + 1;
                 return;
               }
-              if (!ch.field_b) {
+              if (!PauseMenuState.instructionsVisible) {
                 if (var2Lifetime2 == null) {
                   if (LaserGateSpan.field_k == 110) {
                     ObjectSpriteSet.field_e.playSampleWithPan(NameAvailabilityResultSupport.field_a, 100, IterableNodeHashTable.field_c * 3072 / 64, 8192);
@@ -469,24 +469,24 @@ final class lh {
         return;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void incrementSessionCounter(byte guard, int amount) {
         if (SocketJs5Transport.field_r != null) {
-          SocketJs5Transport.field_r.d(param1, 136);
-          if (param0 != 99) {
-            lh.releaseStatics((byte) -88);
+          SocketJs5Transport.field_r.d(amount, 136);
+          if (guard != 99) {
+            MenuTitleSupport.releaseStatics((byte) -88);
             return;
           }
           return;
         }
-        if (param0 == 99) {
+        if (guard == 99) {
           return;
         }
-        lh.releaseStatics((byte) -88);
+        MenuTitleSupport.releaseStatics((byte) -88);
     }
 
-    final static boolean b(byte param0) {
+    final static boolean isPointerDriven(byte guard) {
         boolean var1 = true;
-        int var3 = 116 / ((param0 + 18) / 46);
+        int var3 = 116 / ((guard + 18) / 46);
         MenuInputState var2 = di.field_d;
         if (var2 != null) {
           var1 = (var2.pointerDriven);
@@ -498,7 +498,7 @@ final class lh {
         field_a = null;
         field_b = null;
         if (guard != 26) {
-          lh.b((byte) 37);
+          MenuTitleSupport.isPointerDriven((byte) 37);
           field_c = null;
           return;
         }

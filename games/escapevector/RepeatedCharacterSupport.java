@@ -5,8 +5,8 @@ final class RepeatedCharacterSupport {
     static String field_b;
     static int field_a;
 
-    final static boolean a(byte param0) {
-        int var1 = 116 / ((16 - param0) / 34);
+    final static boolean isSessionFrameworkReady(byte guard) {
+        int var1 = 116 / ((16 - guard) / 34);
         if (10 > QuickChatPhraseCache.field_e) {
           return false;
         }

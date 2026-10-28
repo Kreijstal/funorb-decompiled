@@ -408,7 +408,7 @@ final class GameModeSelectScreen {
     }
 
     private final void openGuestLogin(int guard) {
-        pa.a(true);
+        GuestLoginSupport.beginAccountLogin(true);
         mj.field_d = 0;
         ChatMessage.clearFrameOffsets((byte) -113);
         if (guard != -15268) {

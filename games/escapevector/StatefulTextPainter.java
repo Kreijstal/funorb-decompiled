@@ -93,7 +93,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             stackIn_3_0 = (UiComponent) (component);
           }
           TextButton var10 = (TextButton) (stackIn_3_0);
-          rd.a(component.width + component.x + originX, originX + component.x, component.y + (originY + component.height), 19807, originY + component.y);
+          SpaceCompactionSupport.pushIntersectedClip(component.width + component.x + originX, originX + component.x, component.y + (originY + component.height), 19807, originY + component.y);
           if (var10 != null) {
             enabled = enabled & var10.enabled;
           }

@@ -9,14 +9,14 @@ final class IntValueNode extends IntrusiveNode {
 
     final static void a(String param0, String param1, int param2) {
         try {
-          if (be.field_b != null) {
-            be.field_b.closeDialog(-18861);
+          if (SavedDataRequestSupport.requestDialog != null) {
+            SavedDataRequestSupport.requestDialog.closeDialog(-18861);
           }
           PcmResampler.field_d = new LoginForm(param0, param1, false, true, true);
           if (param2 != 63) {
             field_h = (String[]) null;
           }
-          rd.field_c.transitionToContent(PcmResampler.field_d, 30);
+          SpaceCompactionSupport.loginDialog.transitionToContent(PcmResampler.field_d, 30);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "de.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

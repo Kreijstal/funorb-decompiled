@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class um {
+final class AccountSessionStatusSupport {
     static byte[] field_b;
     static AccountNoticeKind field_d;
     static String field_a;
     static String field_c;
 
-    final static boolean a(int param0) {
-        if (param0 != 17830) {
+    final static boolean hasAccountSession(int guard) {
+        if (guard != 17830) {
           field_c = (String) null;
           if (QuickChatPhraseCache.field_e < 10) {
             return false;

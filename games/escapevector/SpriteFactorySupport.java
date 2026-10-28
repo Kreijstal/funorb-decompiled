@@ -75,11 +75,11 @@ final class SpriteFactorySupport {
 
     final static void initializeIntroAssets(ResourceArchive archive, PcmStreamMixer mixer, int durationMillis, byte guard) {
         try {
-          NodeHashTableIterator.field_h = se.a(0) * durationMillis / 1000;
+          NodeHashTableIterator.field_h = FrameCadenceSupport.ticksPerSecond(0) * durationMillis / 1000;
           on.a(archive, -58);
           LoginForm.loadLogoMeshes(archive, (byte) 110);
-          cj.a(0, archive);
-          pa.a(-83);
+          IntroFinalFrameSupport.loadFinalFrame(0, archive);
+          GuestLoginSupport.initializeIntroIntensityRamp(-83);
           if (guard < 80) {
             String var5 = (String) null;
             SpriteFactorySupport.printEncodedError(false, (String) null);

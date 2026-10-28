@@ -123,7 +123,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (!this.field_i) {
           return;
         }
-        if (td.b(128) < this.field_h) {
+        if (MonotonicClockSupport.monotonicMillis(128) < this.field_h) {
           return;
         }
         ArchiveRequest var2 = (ArchiveRequest) (this.field_q.first(false));
@@ -140,7 +140,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
           var2 = (ArchiveRequest) (this.field_q.next((byte) 62));
         }
-        this.field_h = td.b(128) + 1000L;
+        this.field_h = MonotonicClockSupport.monotonicMillis(128) + 1000L;
         return;
     }
 
@@ -203,10 +203,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
           return;
         }
         UsernameCredentials.field_h = AccountRequestDialog.a(PcmResampler.field_h.key, StatefulTextPainter.field_u, UsernameCredentials.field_h, UiContainer.field_B, (byte) 112);
-        if (se.field_b == null) {
-          se.field_b = MarkerSliderPainter.a(1, StatefulTextPainter.field_u, IndexedSpriteState.field_j, PcmResampler.field_h.key);
+        if (FrameCadenceSupport.field_b == null) {
+          FrameCadenceSupport.field_b = MarkerSliderPainter.a(1, StatefulTextPainter.field_u, IndexedSpriteState.field_j, PcmResampler.field_h.key);
         }
-        if (null != se.field_b) {
+        if (null != FrameCadenceSupport.field_b) {
           PcmResampler.field_h = null;
           StatefulTextPainter.field_u = null;
         }
@@ -523,7 +523,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             CachedArchiveProvider.b(91);
           }
           while (Js5NetworkRequest.field_I.length > var3_int) {
-            int var5 = jj.field_a[var3_int];
+            int var5 = LoginPromptSupport.field_a[var3_int];
             if (0 <= var5) {
               int var6 = LoginMethod.a(98, Js5NetworkRequest.field_I[var3_int], true);
               var4 = var4 + CheckboxPainter.field_s;

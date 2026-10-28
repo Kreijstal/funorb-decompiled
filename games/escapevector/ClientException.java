@@ -102,13 +102,13 @@ final class ClientException extends RuntimeException {
           if (TextLayout.field_c != null && (0 > param0 ||
             AccountFormStage.field_d == ThreeSliceButtonPainter.field_t)) {
             if (QuickChatDynamicCommand.outgoingPackets.position == 0 &&
-              (10000L + le.field_c) < td.b(128)) {
+              (10000L + FrameworkLoadingStatus.field_c) < MonotonicClockSupport.monotonicMillis(128)) {
               QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(param0, true);
             }
             if (0 < QuickChatDynamicCommand.outgoingPackets.position) {
               try {
                 TextLayout.field_c.write(QuickChatDynamicCommand.outgoingPackets.position, 0, QuickChatDynamicCommand.outgoingPackets.payload, 5000);
-                le.field_c = td.b(128);
+                FrameworkLoadingStatus.field_c = MonotonicClockSupport.monotonicMillis(128);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 Throwable decompiledCaughtException = decompiledCaughtParameter0;
                 IOException iOException = (IOException) (Object) decompiledCaughtException;

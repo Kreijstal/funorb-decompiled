@@ -132,7 +132,7 @@ final class SavedCompletionFlags {
         if (guard != 1317) {
           return (Sprite[]) null;
         }
-        return AudioService.a(1, accentColor, 1, 1, topLeftColor, (byte) 33, bottomRightColor, backgroundColor, 3);
+        return AudioService.createBeveledFrameSprites(1, accentColor, 1, 1, topLeftColor, (byte) 33, bottomRightColor, backgroundColor, 3);
     }
 
     private final BitSet readBitsetBytes(int bitCount, DataInputStream input, int byteCount, int startByte) throws IOException {

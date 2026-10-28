@@ -77,7 +77,7 @@ final class cf {
                   DirectByteStorage.field_j[var23Lifetime2] = -2147483648;
                 }
                 if (param2) {
-                  mg.field_a[var23Lifetime2] = var27Lifetime1 >> HighscoreQuery.field_i;
+                  KeyboardIdleSupport.field_a[var23Lifetime2] = var27Lifetime1 >> HighscoreQuery.field_i;
                   AccountNoticeDialog.field_bb[var23Lifetime2] = var28Lifetime1 >> HighscoreQuery.field_i;
                   LegacyTextBlock.field_p[var23Lifetime2] = var29Lifetime1;
                 }
@@ -115,7 +115,7 @@ final class cf {
                   var26Lifetime1Lifetime1 = param6.field_t[var23Lifetime2];
                   EmailSyntaxValidator.field_p[var23Lifetime2] = var9 + (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var18 * var26Lifetime1Lifetime1) >> 16);
                   Bzip2State.field_y[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var25Lifetime1Lifetime1 * var16 + var13 * var24Lifetime1Lifetime1) >> 16) + var10;
-                  gm.field_c[var23Lifetime2] = var11 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1 >> 16);
+                  ArchiveSpriteLoader.field_c[var23Lifetime2] = var11 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1 >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
                     decompiledFrameCompleted0 = false;

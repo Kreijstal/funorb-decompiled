@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ej {
+final class BitCountSupport {
     static Sprite field_a;
     static boolean field_d;
     static String field_c;
@@ -10,26 +10,26 @@ final class ej {
     static String[] field_g;
     static IndexedSprite[] field_f;
 
-    final static void a(byte param0, String param1) {
+    final static void submitDisplayName(byte guard, String displayName) {
         try {
-          MatchingTextValidator.b(-10002, param1);
+          MatchingTextValidator.b(-10002, displayName);
           UiTheme.a((byte) 125, mm.field_a, false);
-          if (param0 > -113) {
+          if (guard > -113) {
             String var3 = (String) null;
-            ej.a((byte) -29, (String) null);
+            BitCountSupport.submitDisplayName((byte) -29, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ej.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ej.B(" + guard + ',' + (displayName != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(int param0, int param1) {
-        param1 = ((param1 & -1431655765) >>> 1) + (param1 & 1431655765);
-        param1 = (param1 & param0) + ((-858993460 & param1) >>> 2);
-        param1 = (param1 >>> 4) + param1 & 252645135;
-        param1 = param1 + (param1 >>> 8);
-        param1 = param1 + (param1 >>> 16);
-        return param1 & 255;
+    final static int countSetBits(int pairMask, int value) {
+        value = ((value & -1431655765) >>> 1) + (value & 1431655765);
+        value = (value & pairMask) + ((-858993460 & value) >>> 2);
+        value = (value >>> 4) + value & 252645135;
+        value = value + (value >>> 8);
+        value = value + (value >>> 16);
+        return value & 255;
     }
 
     public static void releaseStatics(int guard) {

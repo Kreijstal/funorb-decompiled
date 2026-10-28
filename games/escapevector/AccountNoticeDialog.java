@@ -89,7 +89,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                 this.height = this.height + 20;
               }
             } else {
-              if (um.field_d == param1) {
+              if (AccountSessionStatusSupport.field_d == param1) {
                 var3 = MouseInputHandler.field_a;
                 this.height = this.height + 30;
               }

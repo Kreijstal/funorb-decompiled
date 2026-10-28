@@ -19,8 +19,8 @@ final class MenuEdgeSegment extends IntrusiveNode {
     final static void writeLoginRequest(LoginCredentials credentials, boolean reconnect, int clientValue, boolean option, byte guard) {
         String stackIn_25_2 = null;
         try {
-          NameSuggestionsPanel.field_O[0] = gk.field_a.nextInt();
-          NameSuggestionsPanel.field_O[1] = gk.field_a.nextInt();
+          NameSuggestionsPanel.field_O[0] = QuitPageSupport.field_a.nextInt();
+          NameSuggestionsPanel.field_O[1] = QuitPageSupport.field_a.nextInt();
           PathPoint.field_a.position = 0;
           NameSuggestionsPanel.field_O[2] = (int)(SecondaryIntrusiveDeque.field_b >> 32);
           NameSuggestionsPanel.field_O[3] = (int)SecondaryIntrusiveDeque.field_b;
@@ -42,7 +42,7 @@ final class MenuEdgeSegment extends IntrusiveNode {
           QuickChatDynamicCommand.outgoingPackets.writeInt((byte) 123, StripedProgressBar.field_L);
           QuickChatDynamicCommand.outgoingPackets.writeLong(ThreeSliceButtonPainter.field_q, (byte) -23);
           int var6 = 0;
-          if (ej.field_d) {
+          if (BitCountSupport.field_d) {
             var6 = var6 | 1;
           }
           if (KeyCodeSupport.field_b) {
@@ -55,7 +55,7 @@ final class MenuEdgeSegment extends IntrusiveNode {
             var6 = var6 | 16;
           }
           QuickChatDynamicCommand.outgoingPackets.writeByte(var6, guard - 24);
-          String var7 = tf.a(guard ^ 98, PointCloudEffect.activeApplet((byte) -120));
+          String var7 = PauseMenuScreen.readSettingsCookie(guard ^ 98, PointCloudEffect.activeApplet((byte) -120));
           if (var7 == null) {
             var7 = "";
           }
@@ -66,7 +66,7 @@ final class MenuEdgeSegment extends IntrusiveNode {
           if (p.field_i != null) {
             QuickChatDynamicCommand.outgoingPackets.writeCircumfixedString((byte) 100, p.field_i);
           }
-          bn.a(guard ^ -99, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
+          AccountPayloadSupport.writeEncryptedPayload(guard ^ -99, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, cf.field_c);
           QuickChatDynamicCommand.outgoingPackets.backpatchShortLength(-var5_int + QuickChatDynamicCommand.outgoingPackets.position, 32614);
           ClientException.a(-1, guard + 30884);
           return;

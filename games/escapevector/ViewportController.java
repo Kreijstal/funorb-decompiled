@@ -37,7 +37,7 @@ final class ViewportController {
     }
 
     final FullscreenFocusCanvas enterFullscreen(boolean windowed) {
-        this.field_p = pd.field_b;
+        this.field_p = AppletViewportState.canvasWidth;
         if (!windowed) {
           this.updateViewport(12);
           this.field_r = BoundedUrlRequest.field_d;
@@ -138,7 +138,7 @@ final class ViewportController {
             }
           }
         }
-        if (pd.field_b != var2) {
+        if (AppletViewportState.canvasWidth != var2) {
           this.field_l.onResize(true, var3, var2);
         } else if (var3 != BoundedUrlRequest.field_d) {
           this.field_l.onResize(true, var3, var2);
@@ -147,7 +147,7 @@ final class ViewportController {
           return;
         }
         if (this.field_h > 0) {
-          pb.field_b = (this.field_h - pd.field_b) / 2;
+          pb.field_b = (this.field_h - AppletViewportState.canvasWidth) / 2;
         }
     }
 
@@ -159,12 +159,12 @@ final class ViewportController {
           this.field_a = false;
         }
         if (!this.field_a) {
-          if (pd.field_b < this.field_h) {
-            pb.field_b = (-pd.field_b + this.field_h) / 2;
+          if (AppletViewportState.canvasWidth < this.field_h) {
+            pb.field_b = (-AppletViewportState.canvasWidth + this.field_h) / 2;
           } else if (0 < this.field_h) {
             pb.field_b = 0;
           }
-          if (this.field_q == pd.field_b &&
+          if (this.field_q == AppletViewportState.canvasWidth &&
             this.field_i == BoundedUrlRequest.field_d) {
             return;
           }

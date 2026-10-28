@@ -31,7 +31,7 @@ final class RatingQuery extends IntrusiveNode {
         if (mj.field_d < 1000) {
           mj.field_d = mj.field_d + 1;
         }
-        da.field_c.a((byte) -75);
+        da.field_c.update((byte) -75);
     }
 
     final static boolean a(int param0, byte param1, boolean param2, CharSequence param3) {

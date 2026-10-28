@@ -33,7 +33,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
 
     final static void enqueueDialogue(int guard, DialogueScreen dialogue) {
         try {
-          mg.field_e.addLast(-12328, dialogue);
+          KeyboardIdleSupport.field_e.addLast(-12328, dialogue);
           if (guard != 1820) {
             field_r = (String[]) null;
           }

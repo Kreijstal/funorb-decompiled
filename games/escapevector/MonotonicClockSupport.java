@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td {
+final class MonotonicClockSupport {
     static PcmSample field_c;
     static String field_a;
     static int[] field_b;
@@ -15,19 +15,19 @@ final class td {
         field_a = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void addSessionCounterOffset(int offset, int guard) {
         if (null != SocketJs5Transport.field_r) {
-          SocketJs5Transport.field_r.b(param1 ^ -129, param0);
+          SocketJs5Transport.field_r.b(guard ^ -129, offset);
         }
-        if (param1 != 128) {
-          td.a(112, 55);
+        if (guard != 128) {
+          MonotonicClockSupport.addSessionCounterOffset(112, 55);
           return;
         }
     }
 
-    final synchronized static long b(int param0) {
+    final synchronized static long monotonicMillis(int guard) {
         long var1 = System.currentTimeMillis();
-        if (param0 != 128) {
+        if (guard != 128) {
           return 9L;
         }
         if (LegacyStyleNode.field_t <= var1) {

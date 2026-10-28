@@ -174,10 +174,10 @@ final class AchievementsScreen {
             return (var4);
           }
           if (this.accountActionId == var6) {
-            pa.a(true);
+            GuestLoginSupport.beginAccountLogin(true);
           }
           if (this.highscoresActionId == var6) {
-            kh.showHighscoresScreen(lh.b((byte) -116), -1230, true);
+            kh.showHighscoresScreen(MenuTitleSupport.isPointerDriven((byte) -116), -1230, true);
           }
           if (this.mainMenuActionId == var6) {
             AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, pointerDriven);

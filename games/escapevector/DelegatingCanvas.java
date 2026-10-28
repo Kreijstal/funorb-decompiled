@@ -39,7 +39,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (accountName.length() == 0) {
             return true;
           }
-          if (lg.a(0, password, accountName)) {
+          if (PasswordSubstringSupport.containsForwardOrReversed(0, password, accountName)) {
             return false;
           }
           if (ValidationHelpWidget.containsIdentifierVariant(password, (byte) 37, accountName)) {

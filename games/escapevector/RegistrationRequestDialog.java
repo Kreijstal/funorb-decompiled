@@ -542,7 +542,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime115 = LabeledField.loadNamedAsset("leftarrow", 10592);
           if (null != var2Lifetime115) {
-            um.field_c = RasterSnapshot.a(var2Lifetime115, 126);
+            AccountSessionStatusSupport.field_c = RasterSnapshot.a(var2Lifetime115, 126);
           }
           byte[] var2Lifetime116 = LabeledField.loadNamedAsset("rightarrow", 10592);
           if (null != var2Lifetime116) {
@@ -606,7 +606,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime131 = LabeledField.loadNamedAsset("showhideminimap", 10592);
           if (var2Lifetime131 != null) {
-            cj.field_b = RasterSnapshot.a(var2Lifetime131, 112);
+            IntroFinalFrameSupport.field_b = RasterSnapshot.a(var2Lifetime131, 112);
           }
           byte[] var2Lifetime132 = LabeledField.loadNamedAsset("objectivetext1", 10592);
           if (var2Lifetime132 != null) {
@@ -674,7 +674,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime148 = LabeledField.loadNamedAsset("objective_crate", 10592);
           if (null != var2Lifetime148) {
-            tf.field_i = RasterSnapshot.a(var2Lifetime148, 122);
+            PauseMenuScreen.field_i = RasterSnapshot.a(var2Lifetime148, 122);
           }
           byte[] var2Lifetime149 = LabeledField.loadNamedAsset("autodestruct_warning", 10592);
           if (var2Lifetime149 != null) {
@@ -774,7 +774,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime173 = LabeledField.loadNamedAsset("crate", 10592);
           if (null != var2Lifetime173) {
-            gk.field_b = RasterSnapshot.a(var2Lifetime173, 118);
+            QuitPageSupport.field_b = RasterSnapshot.a(var2Lifetime173, 118);
           }
           byte[] var2Lifetime174 = LabeledField.loadNamedAsset("tnt", 10592);
           if (var2Lifetime174 != null) {
@@ -1046,11 +1046,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime241 = LabeledField.loadNamedAsset("startGameMessage,0", 10592);
           if (null != var2Lifetime241) {
-            se.field_a[0] = RasterSnapshot.a(var2Lifetime241, 118);
+            FrameCadenceSupport.field_a[0] = RasterSnapshot.a(var2Lifetime241, 118);
           }
           byte[] var2Lifetime242 = LabeledField.loadNamedAsset("startGameMessage,1", param0 ^ 10600);
           if (null != var2Lifetime242) {
-            se.field_a[1] = RasterSnapshot.a(var2Lifetime242, 112);
+            FrameCadenceSupport.field_a[1] = RasterSnapshot.a(var2Lifetime242, 112);
           }
           byte[] var2Lifetime243 = LabeledField.loadNamedAsset("firstDefencesMessage,0", 10592);
           if (null != var2Lifetime243) {
@@ -1134,15 +1134,15 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime263 = LabeledField.loadNamedAsset("vengeanceAsteroidsMessage,0", 10592);
           if (null != var2Lifetime263) {
-            lh.field_c[0] = RasterSnapshot.a(var2Lifetime263, 113);
+            MenuTitleSupport.field_c[0] = RasterSnapshot.a(var2Lifetime263, 113);
           }
           byte[] var2Lifetime264 = LabeledField.loadNamedAsset("vengeanceAsteroidsMessage,1", param0 + 10584);
           if (var2Lifetime264 != null) {
-            lh.field_c[1] = RasterSnapshot.a(var2Lifetime264, 117);
+            MenuTitleSupport.field_c[1] = RasterSnapshot.a(var2Lifetime264, 117);
           }
           byte[] var2Lifetime265 = LabeledField.loadNamedAsset("vengeanceAsteroidsMessage,2", 10592);
           if (null != var2Lifetime265) {
-            lh.field_c[2] = RasterSnapshot.a(var2Lifetime265, PacketBuffer.xor(param0, 103));
+            MenuTitleSupport.field_c[2] = RasterSnapshot.a(var2Lifetime265, PacketBuffer.xor(param0, 103));
           }
           byte[] var2Lifetime266 = LabeledField.loadNamedAsset("vengeanceMoonMessage,0", 10592);
           if (var2Lifetime266 != null) {
@@ -1198,15 +1198,15 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime279 = LabeledField.loadNamedAsset("highScoreTableNames,0", param0 + 10584);
           if (var2Lifetime279 != null) {
-            mg.field_h[0] = RasterSnapshot.a(var2Lifetime279, 122);
+            KeyboardIdleSupport.highscoreCategoryNames[0] = RasterSnapshot.a(var2Lifetime279, 122);
           }
           byte[] var2Lifetime280 = LabeledField.loadNamedAsset("highScoreTableNames,1", param0 + 10584);
           if (null != var2Lifetime280) {
-            mg.field_h[1] = RasterSnapshot.a(var2Lifetime280, 114);
+            KeyboardIdleSupport.highscoreCategoryNames[1] = RasterSnapshot.a(var2Lifetime280, 114);
           }
           byte[] var2Lifetime281 = LabeledField.loadNamedAsset("highScoreTableNames,2", 10592);
           if (var2Lifetime281 != null) {
-            mg.field_h[2] = RasterSnapshot.a(var2Lifetime281, PacketBuffer.xor(param0, 102));
+            KeyboardIdleSupport.highscoreCategoryNames[2] = RasterSnapshot.a(var2Lifetime281, PacketBuffer.xor(param0, 102));
           }
           byte[] var2Lifetime282 = LabeledField.loadNamedAsset("titleMiniMapCrate", 10592);
           if (null != var2Lifetime282) {
@@ -1363,7 +1363,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             if (param1.field_g == 3) {
               var5.appendActionButton(false, ArchiveLoadTask.field_a, 7);
             } else if (param1.field_g == 6) {
-              var5.appendActionButton(false, ej.field_c, 9);
+              var5.appendActionButton(false, BitCountSupport.field_c, 9);
               if (var6 != 0) {
                 var5.appendActionButton(false, ArchiveLoadTask.field_a, 7);
               }

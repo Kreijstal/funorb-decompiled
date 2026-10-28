@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pa {
+final class GuestLoginSupport {
     static PcmSample field_b;
     static PcmSample field_a;
 
-    final static void a(boolean param0) {
+    final static void beginAccountLogin(boolean pointerDriven) {
         if (!SpriteState.guestSession) {
           throw new IllegalStateException();
         }
         CipherPacketBuffer.field_u = true;
-        SeekerMine.a((byte) -126, param0);
+        SeekerMine.a((byte) -126, pointerDriven);
         QuickChatPhraseCache.field_e = 0;
     }
 
@@ -22,7 +22,7 @@ final class pa {
         field_b = null;
     }
 
-    final static void a(int param0) {
+    final static void initializeIntroIntensityRamp(int guard) {
         int var4 = EscapeVector.obfuscationControl;
         try {
           MeshRasterState.useRasterClip();
@@ -32,7 +32,7 @@ final class pa {
             double var2 = 15.0;
             pb.field_c[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
-          if (param0 >= -19) {
+          if (guard >= -19) {
             field_b = (PcmSample) null;
           }
           int var5 = 256;
@@ -45,7 +45,7 @@ final class pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "pa.A(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "pa.A(" + guard + ')');
         }
     }
 

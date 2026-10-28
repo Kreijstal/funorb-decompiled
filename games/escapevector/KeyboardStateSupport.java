@@ -9,23 +9,23 @@ final class KeyboardStateSupport {
     static BinaryBitmapFont field_c;
     static int field_b;
 
-    final static void a(int param0, int param1) {
+    final static void serviceAccountInput(int guard, int unusedValue) {
         AccountPanelInputSupport.serviceAccountPanelInput(6445);
-        if (param0 != 25972) {
+        if (guard != 25972) {
           field_c = (BinaryBitmapFont) null;
         }
     }
 
-    final static void b(int param0) {
+    final static void advanceSessionCounters(int guard) {
         if (SocketJs5Transport.field_r != null) {
           SocketJs5Transport.field_r.a((byte) -124);
-          if (param0 != 112) {
+          if (guard != 112) {
             KeyboardStateSupport.closeCacheServices(-21);
             return;
           }
           return;
         }
-        if (param0 == 112) {
+        if (guard == 112) {
           return;
         }
         KeyboardStateSupport.closeCacheServices(-21);
@@ -109,7 +109,7 @@ final class KeyboardStateSupport {
                 ScoreSubmission.field_h[~var2] = false;
               }
             }
-            AchievementsScreen.field_w = bn.field_b;
+            AchievementsScreen.field_w = AccountPayloadSupport.field_b;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

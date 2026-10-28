@@ -17,15 +17,15 @@ abstract class SpriteState extends DualLinkNode {
     abstract void drawRotatedScaled(int pivotXQ4, int pivotYQ4, int destinationXQ4, int destinationYQ4, int angle65536, int scaleQ12);
 
     final static void b(int param0, int param1) {
-        LoginMethod.field_a = cb.field_b[param0];
+        LoginMethod.field_a = LegacyMenuState.updateServerMessages[param0];
         if (param1 == 15) {
           AlphaContainer.field_H = SpriteStrip.field_i[param0];
-          HighscoreTable.field_g = jj.field_c[param0];
+          HighscoreTable.field_g = LoginPromptSupport.field_c[param0];
           return;
         }
         field_y = (NameAvailabilityResult) null;
         AlphaContainer.field_H = SpriteStrip.field_i[param0];
-        HighscoreTable.field_g = jj.field_c[param0];
+        HighscoreTable.field_g = LoginPromptSupport.field_c[param0];
     }
 
     final static void pollMouseState(int guard) {

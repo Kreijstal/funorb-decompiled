@@ -174,7 +174,7 @@ final class SystemTaskService implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (field_n > td.b(128)) {
+                        if (field_n > MonotonicClockSupport.monotonicMillis(128)) {
                           throw new IOException();
                         }
                         var15 = (var8.field_c >> 24 & 255) + "." + ((var8.field_c & 16763005) >> 16) + "." + ((65512 & var8.field_c) >> 8) + "." + (var8.field_c & 255);
@@ -207,7 +207,7 @@ final class SystemTaskService implements Runnable {
                           if (this.field_m) {
                             this.field_d.a(var4, var3_int, -11154);
                           } else {
-                            Class.forName("vf").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_h, new Object[]{new Integer(var3_int), new Integer(var4)});
+                            Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_h, new Object[]{new Integer(var3_int), new Integer(var4)});
                           }
                           break;
                         }
@@ -219,14 +219,14 @@ final class SystemTaskService implements Runnable {
                           if (this.field_m) {
                             this.field_d.a(var13, var3_int != 0, (byte) 110);
                           } else {
-                            Class.forName("vf").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_h, new Object[]{var13, new Boolean(var3_int != 0)});
+                            Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_h, new Object[]{var13, new Boolean(var3_int != 0)});
                           }
                           break;
                         }
                         if (!this.field_m &&
                           var2_int == 17) {
                           Object[] var11 = (Object[]) (var8.field_d);
-                          Class.forName("vf").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_h, new Object[]{var11[0], var11[1], new Integer(var8.field_c), new Integer(var8.field_a), var11[2]});
+                          Class.forName("CursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_h, new Object[]{var11[0], var11[1], new Integer(var8.field_c), new Integer(var8.field_a), var11[2]});
                         } else {
                           if (var2_int != 16) {
                             throw SystemTaskService.<RuntimeException>rethrowUnchecked(new Exception(""));
@@ -271,7 +271,7 @@ final class SystemTaskService implements Runnable {
                         }
                         break;
                       case 21:
-                        if (td.b(128) < field_n) {
+                        if (MonotonicClockSupport.monotonicMillis(128) < field_n) {
                           throw new IOException();
                         }
                         var8.field_b = java.net.InetAddress.getByName((String) (var8.field_d)).getAddress();
@@ -291,13 +291,13 @@ final class SystemTaskService implements Runnable {
                     var8.field_b = ((Class) (var9[0])).getDeclaredMethod((String) (var9[1]), (Class[]) (var9[2]));
                     break;
                   case 4:
-                    if (field_n > td.b(128)) {
+                    if (field_n > MonotonicClockSupport.monotonicMillis(128)) {
                       throw new IOException();
                     }
                     var8.field_b = new DataInputStream(((java.net.URL) (var8.field_d)).openStream());
                     break;
                   case 22:
-                    if (field_n > td.b(128)) {
+                    if (field_n > MonotonicClockSupport.monotonicMillis(128)) {
                       throw new IOException();
                     }
                     try {
@@ -311,7 +311,7 @@ final class SystemTaskService implements Runnable {
                     }
                     break;
                   case 1:
-                    if (field_n > td.b(128)) {
+                    if (field_n > MonotonicClockSupport.monotonicMillis(128)) {
                       throw new IOException();
                     }
                     var8.field_b = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_d)), var8.field_c);
@@ -573,7 +573,7 @@ final class SystemTaskService implements Runnable {
             if (this.field_m) {
               this.field_d = new fb();
             } else {
-              this.field_h = Class.forName("vf").newInstance();
+              this.field_h = Class.forName("CursorController").newInstance();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter10) {
             decompiledCaughtException = decompiledCaughtParameter10;

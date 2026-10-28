@@ -54,7 +54,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             }
             var6.appendButton((UiListener) (this), (byte) -67, WhirlpoolHasher.field_g);
           } else {
-            var6.appendActionButton(false, ej.field_c, 9);
+            var6.appendActionButton(false, BitCountSupport.field_c, 9);
           }
           this.transitionToContent(var6, 30);
           return;
@@ -85,8 +85,8 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           if (AchievementsScreen.field_w == MarkerSliderPainter.field_l) {
             return false;
           }
-          PasswordValidator.field_n = td.field_b[MarkerSliderPainter.field_l];
-          KeyCodeSupport.currentKeyCharacter = ek.field_a[MarkerSliderPainter.field_l];
+          PasswordValidator.field_n = MonotonicClockSupport.field_b[MarkerSliderPainter.field_l];
+          KeyCodeSupport.currentKeyCharacter = InstructionsNavigationSupport.field_a[MarkerSliderPainter.field_l];
           MarkerSliderPainter.field_l = 127 & 1 + MarkerSliderPainter.field_l;
           stackIn_7_0 = true;
         }
@@ -216,7 +216,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
         this.open = false;
         if (this.field_ob) {
-          jj.a(0);
+          LoginPromptSupport.showAlternateLoginForm(0);
           return;
         }
         if (this.field_lb) {

@@ -11,7 +11,7 @@ final class kc {
           int var1 = AccountSessionSupport.field_a.a((byte) 23, true);
           if (param0 == -75) {
             if (var1 == 3) {
-              AudioService.a((byte) 72, PointCloudEffect.activeApplet((byte) -128));
+              AudioService.openMembershipPage((byte) 72, PointCloudEffect.activeApplet((byte) -128));
             }
             if (var1 == 1) {
               wk.field_c = false;
@@ -34,7 +34,7 @@ final class kc {
           } else {
             field_b = -124;
             if (var1 == 3) {
-              AudioService.a((byte) 72, PointCloudEffect.activeApplet((byte) -128));
+              AudioService.openMembershipPage((byte) 72, PointCloudEffect.activeApplet((byte) -128));
             }
             if (var1 == 1) {
               wk.field_c = false;
@@ -63,7 +63,7 @@ final class kc {
         int var1Lifetime1 = AccountSessionSupport.field_a.a((byte) 23, true);
         if (param0 == -75) {
           if (var1Lifetime1 == 3) {
-            AudioService.a((byte) 72, PointCloudEffect.activeApplet((byte) -128));
+            AudioService.openMembershipPage((byte) 72, PointCloudEffect.activeApplet((byte) -128));
           }
           if (var1Lifetime1 == 1) {
             wk.field_c = false;
@@ -89,7 +89,7 @@ final class kc {
         }
         field_b = -124;
         if (var1Lifetime1 == 3) {
-          AudioService.a((byte) 72, PointCloudEffect.activeApplet((byte) -128));
+          AudioService.openMembershipPage((byte) 72, PointCloudEffect.activeApplet((byte) -128));
         }
         if (var1Lifetime1 == 1) {
           wk.field_c = false;

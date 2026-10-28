@@ -82,9 +82,9 @@ class UiComponent extends IntrusiveNode {
             MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
-          if (mg.field_f != 0 &&
+          if (KeyboardIdleSupport.field_f != 0 &&
             var5) {
-            this.onMouseWheel(offsetX, mg.field_f, (byte) -109, UiContainer.field_y, GzipDecoder.field_d, this, offsetY);
+            this.onMouseWheel(offsetX, KeyboardIdleSupport.field_f, (byte) -109, UiContainer.field_y, GzipDecoder.field_d, this, offsetY);
           }
           if (AccountMessagePanel.field_N == 0) {
             if (0 != DialWidget.field_K) {
@@ -184,7 +184,7 @@ class UiComponent extends IntrusiveNode {
         this.focusNext(1, (UiComponent) null);
         boolean var5Lifetime1 = (this.isFocused(0));
         if (inputAvailable) {
-          if (mg.field_f == 0) {
+          if (KeyboardIdleSupport.field_f == 0) {
             if (AccountMessagePanel.field_N == 0) {
               if (0 != DialWidget.field_K) {
                 ModalPanel.field_H = DialWidget.field_K;
@@ -280,7 +280,7 @@ class UiComponent extends IntrusiveNode {
             return inputAvailable;
           }
           if (var5Lifetime1) {
-            this.onMouseWheel(offsetX, mg.field_f, (byte) -109, UiContainer.field_y, GzipDecoder.field_d, this, offsetY);
+            this.onMouseWheel(offsetX, KeyboardIdleSupport.field_f, (byte) -109, UiContainer.field_y, GzipDecoder.field_d, this, offsetY);
           }
           if (AccountMessagePanel.field_N == 0) {
             if (0 != DialWidget.field_K) {

@@ -172,16 +172,16 @@ final class AnimatedPathMarker {
         String stackIn_13_2 = null;
         try {
           if (durationTicks > elapsedTicks) {
-            bn.field_a.y = elapsedTicks * (-start.y + end.y) / durationTicks + start.y;
-            bn.field_a.x = elapsedTicks * (-start.x + end.x) / durationTicks + start.x;
+            AccountPayloadSupport.field_a.y = elapsedTicks * (-start.y + end.y) / durationTicks + start.y;
+            AccountPayloadSupport.field_a.x = elapsedTicks * (-start.x + end.x) / durationTicks + start.x;
           } else {
-            bn.field_a.x = end.x;
-            bn.field_a.y = end.y;
+            AccountPayloadSupport.field_a.x = end.x;
+            AccountPayloadSupport.field_a.y = end.y;
           }
           if (!guard) {
             PathPoint var7 = (PathPoint) null;
           }
-          PathPoint stackIn_6_0 = bn.field_a;
+          PathPoint stackIn_6_0 = AccountPayloadSupport.field_a;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -362,7 +362,7 @@ final class AnimatedPathMarker {
         if (!guard) {
           spriteIndices = (byte[][]) null;
         }
-        rd.field_c.transitionToContent(new AccountChoicePanel(), 30);
+        SpaceCompactionSupport.loginDialog.transitionToContent(new AccountChoicePanel(), 30);
     }
 
     AnimatedPathMarker(int markerIndex, int[] coordinates, int radius, int[] fillColors, int[] outlineColors, int textColor, int textShadowColor, BinaryBitmapFont unusedFont) {

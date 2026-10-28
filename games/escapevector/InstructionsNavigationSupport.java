@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek {
+final class InstructionsNavigationSupport {
     static char[] field_a;
     static String field_b;
     static String field_c;
 
-    final static void a(boolean param0, boolean param1) {
-        ch.field_b = true;
+    final static void openInstructions(boolean pointerDriven, boolean guard) {
+        PauseMenuState.instructionsVisible = true;
         mj.field_d = 0;
         di.field_d = null;
-        if (!param1) {
+        if (!guard) {
           ChatMessage.clearFrameOffsets((byte) -58);
-          ArchiveLoadTask.field_e = new InstructionsScreen(param0);
+          ArchiveLoadTask.field_e = new InstructionsScreen(pointerDriven);
           return;
         }
-        ek.releaseStatics(-110);
+        InstructionsNavigationSupport.releaseStatics(-110);
         ChatMessage.clearFrameOffsets((byte) -58);
-        ArchiveLoadTask.field_e = new InstructionsScreen(param0);
+        ArchiveLoadTask.field_e = new InstructionsScreen(pointerDriven);
     }
 
     public static void releaseStatics(int guard) {

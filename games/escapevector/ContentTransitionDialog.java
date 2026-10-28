@@ -19,7 +19,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         String stackIn_11_2 = null;
         try {
           this.pendingContent = content;
-          if (mc.field_c == this.transitionPhase) {
+          if (LoginHandshakeState.contentTransitionPhase == this.transitionPhase) {
             this.animateResize(false, this.resizeTicks, 12 + this.pendingContent.width, this.pendingContent.height + this.headerInset + 12);
             this.transitionTick = 0;
           } else if (this.transitionPhase != MainMenuScreen.field_a) {
@@ -118,7 +118,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           int fieldTemp$1 = this.transitionTick + 1;
           this.transitionTick = this.transitionTick + 1;
           if (this.fadeOutTicks == fieldTemp$1) {
-            this.transitionPhase = mc.field_c;
+            this.transitionPhase = LoginHandshakeState.contentTransitionPhase;
             this.animateResize(false, this.resizeTicks, 12 + this.pendingContent.width, 12 - (-this.headerInset - this.pendingContent.height));
             this.transitionTick = 0;
             this.contentWrapper.alpha = 0;
@@ -148,7 +148,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         int fieldTemp$3 = this.transitionTick + 1;
         this.transitionTick = this.transitionTick + 1;
         if (this.fadeOutTicks == fieldTemp$3) {
-          this.transitionPhase = mc.field_c;
+          this.transitionPhase = LoginHandshakeState.contentTransitionPhase;
           this.animateResize(false, this.resizeTicks, 12 + this.pendingContent.width, 12 - (-this.headerInset - this.pendingContent.height));
           this.transitionTick = 0;
           this.contentWrapper.alpha = 0;

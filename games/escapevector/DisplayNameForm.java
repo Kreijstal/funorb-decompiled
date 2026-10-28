@@ -16,7 +16,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         if (!this.canSubmit(84)) {
           return;
         }
-        ej.a((byte) -116, this.nameField.text);
+        BitCountSupport.submitDisplayName((byte) -116, this.nameField.text);
         if (guard >= -118) {
           String var3 = (String) null;
           int discarded$0 = this.appendValidatedField(125, (String) null, 33, 115, (UiComponent) null, (String) null, 107);

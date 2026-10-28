@@ -56,14 +56,14 @@ final class DropTargetWidget extends SingleChildContainer {
 
     final static DialogueScreen f(byte param0) {
         try {
-          if (mg.field_e.isEmpty(-105)) {
+          if (KeyboardIdleSupport.field_e.isEmpty(-105)) {
             Object stackIn_2_0 = null;
             return (DialogueScreen) (stackIn_2_0);
           }
           if (param0 != -49) {
             field_H = (String) null;
           }
-          DialogueScreen stackIn_7_0 = (DialogueScreen) (mg.field_e.first(false));
+          DialogueScreen stackIn_7_0 = (DialogueScreen) (KeyboardIdleSupport.field_e.first(false));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,7 +129,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(72, "error_js5connect");
                 if (null != var2) {
-                  gm.field_f = RasterSnapshot.a(var2, 113);
+                  ArchiveSpriteLoader.field_f = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(33, "login_gameupdated");
                 if (var2 != null) {
@@ -729,7 +729,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(67, "loading");
                 if (var2 != null) {
-                  um.field_a = RasterSnapshot.a(var2, 125);
+                  AccountSessionStatusSupport.field_a = RasterSnapshot.a(var2, 125);
                 }
                 var2 = IntKeyLookup.a(98, "offline");
                 if (var2 != null) {
@@ -1105,7 +1105,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(15, "tocustomersupport");
                 if (null != var2) {
-                  ej.field_c = RasterSnapshot.a(var2, 115);
+                  BitCountSupport.field_c = RasterSnapshot.a(var2, 115);
                 }
                 var2 = IntKeyLookup.a(96, "changedisplayname");
                 if (null != var2) {
@@ -1117,7 +1117,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(55, "justplay");
                 if (var2 != null) {
-                  cj.field_c = RasterSnapshot.a(var2, 112);
+                  IntroFinalFrameSupport.field_c = RasterSnapshot.a(var2, 112);
                 }
                 var2 = IntKeyLookup.a(21, "justplay_excl");
                 if (null != var2) {
@@ -1534,7 +1534,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(16, "login_username_email");
                 if (var2 != null) {
-                  lh.field_b = RasterSnapshot.a(var2, 123);
+                  MenuTitleSupport.field_b = RasterSnapshot.a(var2, 123);
                 }
                 var2 = IntKeyLookup.a(116, "login_username");
                 if (null != var2) {
@@ -1878,7 +1878,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(107, "loading_soundeffects");
                 if (null != var2) {
-                  gm.field_d = RasterSnapshot.a(var2, 113);
+                  ArchiveSpriteLoader.field_d = RasterSnapshot.a(var2, 113);
                 }
                 var2 = IntKeyLookup.a(84, "loading_music");
                 if (null != var2) {
@@ -1890,7 +1890,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(63, "loading_levels");
                 if (var2 != null) {
-                  ek.field_b = RasterSnapshot.a(var2, 110);
+                  InstructionsNavigationSupport.field_b = RasterSnapshot.a(var2, 110);
                 }
                 var2 = IntKeyLookup.a(91, "loading_extradata");
                 if (var2 != null) {
@@ -1942,7 +1942,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(102, "instructions");
                 if (var2 != null) {
-                  mc.field_a = RasterSnapshot.a(var2, 114);
+                  LoginHandshakeState.instructionsLabel = RasterSnapshot.a(var2, 114);
                 }
                 var2 = IntKeyLookup.a(100, "tutorial");
                 if (null != var2) {
@@ -1950,7 +1950,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(46, "playtutorial");
                 if (null != var2) {
-                  be.field_a = RasterSnapshot.a(var2, 114);
+                  SavedDataRequestSupport.playTutorialLabel = RasterSnapshot.a(var2, 114);
                 }
                 var2 = IntKeyLookup.a(96, "sound_colon");
                 if (null != var2) {
@@ -2232,7 +2232,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(127, "pressescforpausemenuortoskiptutorial");
                 if (var2 != null) {
-                  ek.field_c = RasterSnapshot.a(var2, 126);
+                  InstructionsNavigationSupport.field_c = RasterSnapshot.a(var2, 126);
                 }
                 var2 = IntKeyLookup.a(36, "pressescforoptionsmenu_doesntpause");
                 if (var2 != null) {
@@ -2708,7 +2708,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(125, "fs_accept_beforeaccept");
                 if (var2 != null) {
-                  td.field_a = RasterSnapshot.a(var2, 119);
+                  MonotonicClockSupport.field_a = RasterSnapshot.a(var2, 119);
                 }
                 var2 = IntKeyLookup.a(69, "fs_button_accept");
                 if (null != var2) {
@@ -2744,7 +2744,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(102, "fs_button_members");
                 if (null != var2) {
-                  lh.field_a = RasterSnapshot.a(var2, 116);
+                  MenuTitleSupport.field_a = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(103, "fs_unavailable");
                 if (var2 != null) {
@@ -2880,7 +2880,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(15, "pleasewait_dotdotdot");
                 if (null != var2) {
-                  le.field_b = RasterSnapshot.a(var2, 118);
+                  FrameworkLoadingStatus.field_b = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(46, "serviceunavailable");
                 if (var2 != null) {

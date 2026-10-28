@@ -24,7 +24,7 @@ final class e {
             SpriteState.field_y = null;
             ResourceArchive.field_b = param4;
             InstructionsScreen.field_q = EmailAvailabilityValidator.field_o;
-            tf.field_h = param6;
+            PauseMenuScreen.field_h = param6;
             AgeValidator.field_o = param2;
           } else {
             var8.s(248);

@@ -1,35 +1,35 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cj {
+final class IntroFinalFrameSupport {
     static Sprite field_a;
     static String field_b;
     static int[][] field_d;
     static String field_c;
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadFinalFrame(int offsetY, ResourceArchive archive) {
         try {
-          Sprite var2 = new Sprite(param1.getNamedFile(-4, "", "final_frame.jpg"), (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
+          Sprite var2 = new Sprite(archive.getNamedFile(-4, "", "final_frame.jpg"), (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
           int var3 = var2.width;
           int var4 = var2.height;
-          LoginStage.pushRasterState(param0 ^ 58);
-          cb.field_a = new Sprite(var3, 3 * var4 / 4);
-          cb.field_a.bindAsFramebuffer();
-          var2.drawOpaque(0, param0);
-          Js5NetworkRequest.field_G = new Sprite(var3, -cb.field_a.height + var4);
+          LoginStage.pushRasterState(offsetY ^ 58);
+          LegacyMenuState.introFinalFrameUpper = new Sprite(var3, 3 * var4 / 4);
+          LegacyMenuState.introFinalFrameUpper.bindAsFramebuffer();
+          var2.drawOpaque(0, offsetY);
+          Js5NetworkRequest.field_G = new Sprite(var3, -LegacyMenuState.introFinalFrameUpper.height + var4);
           Js5NetworkRequest.field_G.bindAsFramebuffer();
-          var2.drawOpaque(0, -cb.field_a.height);
-          Js5NetworkRequest.field_G.offsetY = cb.field_a.height;
+          var2.drawOpaque(0, -LegacyMenuState.introFinalFrameUpper.height);
+          Js5NetworkRequest.field_G.offsetY = LegacyMenuState.introFinalFrameUpper.height;
           RasterRestoreSupport.popRasterState((byte) 120);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "cj.A(" + offsetY + ',' + (archive != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(byte param0) {
+    final static void clearSharedIntScratch(byte guard) {
         int var5 = EscapeVector.obfuscationControl;
         try {
-          int var2 = -55 % ((param0 + 59) / 39);
+          int var2 = -55 % ((guard + 59) / 39);
           int[] var6 = EditableTextWidget.field_I;
           int[] var1 = var6;
           int var3 = 0;
@@ -48,7 +48,7 @@ final class cj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "cj.C(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1_ref), "cj.C(" + guard + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class cj {
           field_d = (int[][]) null;
           return;
         }
-        cj.a((byte) 122);
+        IntroFinalFrameSupport.clearSharedIntScratch((byte) 122);
         field_d = (int[][]) null;
     }
 

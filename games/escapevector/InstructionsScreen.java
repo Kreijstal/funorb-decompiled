@@ -35,7 +35,7 @@ final class InstructionsScreen {
 
     private final void buildPickupLegend(byte guard) {
         SpriteStrip[] var2 = this.buildPickupSpriteStrips(false);
-        String[] var3 = new String[]{gk.field_b, UiContainer.field_D, LevelAvailabilitySupport.field_a, kc.field_a, ArchiveProvider.field_c, ModeProgress.field_l, NodeHashTableIterator.field_a};
+        String[] var3 = new String[]{QuitPageSupport.field_b, UiContainer.field_D, LevelAvailabilitySupport.field_a, kc.field_a, ArchiveProvider.field_c, ModeProgress.field_l, NodeHashTableIterator.field_a};
         this.prefixBullets(var3, (byte) -10);
         BinaryBitmapFont var4 = ByteStorage.gameFont;
         int var5 = 16777215;
@@ -235,9 +235,9 @@ final class InstructionsScreen {
 
     private final void close(boolean visible, int actionCode) {
         di.field_d = null;
-        ch.field_b = visible ? true : false;
+        PauseMenuState.instructionsVisible = visible ? true : false;
         if (this.resumeCode == actionCode) {
-          da.field_c.b(false, 320);
+          da.field_c.updatePointerSelection(false, 320);
         }
         if (this.mainMenuCode == actionCode) {
           AlternateUsernameCredentials.field_q.updatePointerSelection(-26480, false);
@@ -1047,11 +1047,11 @@ final class InstructionsScreen {
     }
 
     private final void buildControlLegend(boolean guard) {
-        String[] var8 = new String[]{um.field_c, ProgressQuery.field_i, PacketBuffer.field_k, SpriteOffset.field_a, SpriteStrip.field_h, ArchiveKeyRequest.field_h, SlidingSpriteTransition.field_i};
+        String[] var8 = new String[]{AccountSessionStatusSupport.field_c, ProgressQuery.field_i, PacketBuffer.field_k, SpriteOffset.field_a, SpriteStrip.field_h, ArchiveKeyRequest.field_h, SlidingSpriteTransition.field_i};
         if (!guard) {
           return;
         }
-        String[] var3 = new String[]{AchievementFlagSupport.field_b, QuickChatPhraseDefinition.field_w, mj.field_c, PathPoint.field_e, MenuEdgeSegment.field_k, DynamicTerrainRenderer.field_t, cj.field_b};
+        String[] var3 = new String[]{AchievementFlagSupport.field_b, QuickChatPhraseDefinition.field_w, mj.field_c, PathPoint.field_e, MenuEdgeSegment.field_k, DynamicTerrainRenderer.field_t, IntroFinalFrameSupport.field_b};
         int var4 = 16777215;
         int var5 = this.highlightColor((byte) 70);
         int var6 = this.headingColor((byte) 115);

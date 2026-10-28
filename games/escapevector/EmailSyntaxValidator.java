@@ -16,8 +16,8 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           }
           SavedDataQuery.field_i = false;
           DraggableWidget.field_F = false;
-          if (be.field_b != null) {
-            if (!be.field_b.open) {
+          if (SavedDataRequestSupport.requestDialog != null) {
+            if (!SavedDataRequestSupport.requestDialog.open) {
               return;
             }
             boolean var3_int = true;
@@ -42,7 +42,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               if (LinkButtonPainter.field_a) {
                 param2 = LegacyTextBlock.field_l;
               }
-              be.field_b.showResponseMessage(param2, -1, param0);
+              SavedDataRequestSupport.requestDialog.showResponseMessage(param2, -1, param0);
             }
             if (256 != param0) {
               if (param0 == 10) {

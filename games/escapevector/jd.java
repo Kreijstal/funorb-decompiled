@@ -89,7 +89,7 @@ final class jd {
           int var8Lifetime2 = stackIn_57_0;
           if (mm.field_b == null) {
             mm.field_b = PcmSampleStream.createAtRatePercentQ6(ArchiveProvider.field_d, 100, 0, var6Lifetime2);
-            ChatHistorySupport.field_d = PcmSampleStream.createAtRatePercentQ6(pa.field_b, 100, 0, var8Lifetime2);
+            ChatHistorySupport.field_d = PcmSampleStream.createAtRatePercentQ6(GuestLoginSupport.field_b, 100, 0, var8Lifetime2);
             mm.field_b.setLoopCount(-1);
             ChatHistorySupport.field_d.setLoopCount(-1);
             ObjectSpriteSet.field_e.addSubstream(mm.field_b);

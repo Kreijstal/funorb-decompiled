@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se {
+final class FrameCadenceSupport {
     static String[] field_a;
     static p field_b;
 
@@ -16,16 +16,16 @@ final class se {
         field_b = null;
     }
 
-    final static int a(int param0) {
-        if (param0 != 0) {
+    final static int ticksPerSecond(int guard) {
+        if (guard != 0) {
           field_b = (p) null;
           return (int)(1000000000L / sn.field_d);
         }
         return (int)(1000000000L / sn.field_d);
     }
 
-    final static void a(boolean param0, int param1) {
-        if (param1 != 17113) {
+    final static void renderAccountPanels(boolean unusedFlag, int guard) {
+        if (guard != 17113) {
           field_a = (String[]) null;
           Checkbox.field_F.render(0, 0, (byte) -55);
           return;

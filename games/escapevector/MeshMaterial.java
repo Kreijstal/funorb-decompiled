@@ -55,7 +55,7 @@ final class MeshMaterial {
           }
           int var4_int = archive.findGroupId(-1, groupName);
           int var5 = archive.findFileId(var4_int, fileName, true);
-          Sprite[] stackIn_3_0 = gm.a(var4_int, var5, archive, 8192);
+          Sprite[] stackIn_3_0 = ArchiveSpriteLoader.loadSprites(var4_int, var5, archive, 8192);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,22 +84,22 @@ final class MeshMaterial {
     }
 
     final static void showDisplayNameForm(int guard) {
-        if (be.field_b == null) {
+        if (SavedDataRequestSupport.requestDialog == null) {
           int var1 = -22 / ((guard - 26) / 51);
           rc.field_b = new DisplayNameForm();
-          rd.field_c.transitionToContent(rc.field_b, 30);
+          SpaceCompactionSupport.loginDialog.transitionToContent(rc.field_b, 30);
           return;
         }
-        be.field_b.closeDialog(-18861);
+        SavedDataRequestSupport.requestDialog.closeDialog(-18861);
         int var1Lifetime1 = -22 / ((guard - 26) / 51);
         rc.field_b = new DisplayNameForm();
-        rd.field_c.transitionToContent(rc.field_b, 30);
+        SpaceCompactionSupport.loginDialog.transitionToContent(rc.field_b, 30);
     }
 
     final static void setLegacyMenuColors(int normal, int selected, int disabled, int guard) {
         ValidatedTextWidget.field_X = normal;
         pc.field_d = selected;
-        lh.field_e = disabled;
+        MenuTitleSupport.field_e = disabled;
         if (guard != -11997) {
           keyboardIdleTicks = 84;
         }

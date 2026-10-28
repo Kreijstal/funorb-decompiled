@@ -38,7 +38,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.a(-1, "alreadyloaded");
                 return;
               }
-              pd.field_b = param3;
+              AppletViewportState.canvasWidth = param3;
               NameAvailabilityResponseSupport.field_b = param3;
               BoundedUrlRequest.field_d = param4;
               DropTargetWidget.field_G = param4;
@@ -166,7 +166,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     private final void a(int param0) {
         try {
-          long var2_long = td.b(128);
+          long var2_long = MonotonicClockSupport.monotonicMillis(128);
           long var4 = CipherPacketBuffer.field_t[SingleChildContainer.field_z];
           CipherPacketBuffer.field_t[SingleChildContainer.field_z] = var2_long;
           SingleChildContainer.field_z = 31 & SingleChildContainer.field_z + 1;
@@ -197,7 +197,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          LegacyMenuColumn.field_p = 4000L + td.b(128);
+          LegacyMenuColumn.field_p = 4000L + MonotonicClockSupport.monotonicMillis(128);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "eh.stop()");
         }
@@ -292,7 +292,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (this == StatefulTextPainter.field_r &&
             !RatingQuery.field_j) {
-            LegacyMenuColumn.field_p = td.b(128);
+            LegacyMenuColumn.field_p = MonotonicClockSupport.monotonicMillis(128);
             AchievementTracker.sleepMillis((byte) 100, 5000L);
             SpriteCheckboxPainter.field_a = null;
             this.a((byte) 107, false);
@@ -447,13 +447,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 DelayedServerPacket.detectMaximumHeap((byte) -61);
                 this.d(2);
-                AlphaContainer.field_D = PcmResampler.createRasterBuffer((java.awt.Component) ((Object) SpriteDecodeSupport.field_d), BoundedUrlRequest.field_d, (byte) 125, pd.field_b);
+                AlphaContainer.field_D = PcmResampler.createRasterBuffer((java.awt.Component) ((Object) SpriteDecodeSupport.field_d), BoundedUrlRequest.field_d, (byte) 125, AppletViewportState.canvasWidth);
                 this.initializeClient((byte) -97);
                 IntrusiveNodeHashTable.field_f = MinimapPoint.createTickClock(18863);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != LegacyMenuColumn.field_p) {
-                    stackIn_98_0 = compareLongs(LegacyMenuColumn.field_p, td.b(128));
+                    stackIn_98_0 = compareLongs(LegacyMenuColumn.field_p, MonotonicClockSupport.monotonicMillis(128));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if (decompiledFrameRemainder0 &&
                       stackIn_98_0 <= 0) {
@@ -498,7 +498,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     private final void c(byte param0) {
         try {
-          long var2_long = td.b(128);
+          long var2_long = MonotonicClockSupport.monotonicMillis(128);
           long var4 = TileSpriteCacheEntry.field_d[RatingQuery.field_h];
           TileSpriteCacheEntry.field_d[RatingQuery.field_h] = var2_long;
           RatingQuery.field_h = 1 + RatingQuery.field_h & 31;
@@ -512,7 +512,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (fieldTemp$0 > 50) {
             QuickChatPhraseDefinition.field_r = QuickChatPhraseDefinition.field_r - 50;
             NameSuggestionsPanel.field_H = true;
-            SpriteDecodeSupport.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
+            SpriteDecodeSupport.field_d.setSize(AppletViewportState.canvasWidth, BoundedUrlRequest.field_d);
             SpriteDecodeSupport.field_d.setVisible(true);
             if (null != PathPoint.field_i &&
               null == PathPoint.field_f) {
@@ -675,7 +675,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             !RatingQuery.field_j) {
             NameSuggestionsPanel.field_H = true;
             if (GzipDecoder.field_c &&
-              -bn.field_c + td.b(128) > 1000L) {
+              -AccountPayloadSupport.field_c + MonotonicClockSupport.monotonicMillis(128) > 1000L) {
               java.awt.Rectangle var2 = param0.getClipBounds();
               if (null != var2) {
                 if (var2.width < NameAvailabilityResponseSupport.field_b) {
@@ -759,7 +759,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var3)).setLayout((java.awt.LayoutManager) null);
           SpriteDecodeSupport.field_d = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var3)).add((java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
-          SpriteDecodeSupport.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
+          SpriteDecodeSupport.field_d.setSize(AppletViewportState.canvasWidth, BoundedUrlRequest.field_d);
           SpriteDecodeSupport.field_d.setVisible(true);
           if (var3 == PathPoint.field_i) {
             java.awt.Insets var4 = PathPoint.field_i.getInsets();
@@ -776,7 +776,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           AchievementRecord.field_l = true;
           NameSuggestionsPanel.field_H = true;
           PacketBuffer.field_i = false;
-          bn.field_c = td.b(128);
+          AccountPayloadSupport.field_c = MonotonicClockSupport.monotonicMillis(128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

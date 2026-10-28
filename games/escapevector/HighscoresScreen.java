@@ -403,7 +403,7 @@ final class HighscoresScreen {
             this.table = new HighscoreTable(this.categoryCode, var3_int, this.showSubmittedScore);
             this.table.configureFooter(3, var4, var5);
           }
-          if (statusText == le.field_b && (null == this.table ||
+          if (statusText == FrameworkLoadingStatus.field_b && (null == this.table ||
             this.table.dataState != 0)) {
             this.table = new HighscoreTable(this.categoryCode, var3_int, this.showSubmittedScore);
             this.table.configureFooter(3, var4, var5);
@@ -669,7 +669,7 @@ final class HighscoresScreen {
         if (!AccountSessionSupport.isGuestSession(-119)) {
           return;
         }
-        pa.a(true);
+        GuestLoginSupport.beginAccountLogin(true);
         mj.field_d = 0;
         ChatMessage.clearFrameOffsets((byte) -94);
     }
@@ -809,7 +809,7 @@ final class HighscoresScreen {
         String[] var11 = null;
         String stackIn_8_2 = null;
         try {
-          String[] var12 = mg.field_h;
+          String[] var12 = KeyboardIdleSupport.highscoreCategoryNames;
           if (!UiContainer.hasMembership((byte) 103)) {
             var10 = new int[]{5};
             var11 = new String[]{var12[0]};
@@ -1161,7 +1161,7 @@ final class HighscoresScreen {
           return var2;
         }
         if (!this.allQueriesComplete(start)) {
-          var2 = le.field_b;
+          var2 = FrameworkLoadingStatus.field_b;
           return var2;
         }
         var2 = this.nameColumnStatus(48);

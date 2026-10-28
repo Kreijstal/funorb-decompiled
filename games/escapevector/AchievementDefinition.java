@@ -61,7 +61,7 @@ final class AchievementDefinition {
             }
             return;
           }
-          kh.showHighscoresScreen(lh.b((byte) 116), param0 - 1230, true);
+          kh.showHighscoresScreen(MenuTitleSupport.isPointerDriven((byte) 116), param0 - 1230, true);
           if (param0 != 0) {
             field_d = (QuickChatDynamicCommand) null;
             return;

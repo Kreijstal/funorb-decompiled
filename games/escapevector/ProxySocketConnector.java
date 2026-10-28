@@ -344,7 +344,7 @@ final class ProxySocketConnector extends SocketConnector {
         achievementOrbCoins = new int[]{1, 1, 2, 3, 2, 5, 1, 3, 1, 5, 10, 5, 5, 3, 5, 5, 5, 3, 1, 1, 1, 1, 1, 2, 3, 5, 2, 5, 5, 10, 5, 1};
         cf.initializeAchievementDefinitions((byte) -76);
         ChatMessage.initializeAchievementRules(0);
-        jj.a(false);
+        LoginPromptSupport.initializeAchievementRules(false);
     }
 
     @SuppressWarnings("unchecked")

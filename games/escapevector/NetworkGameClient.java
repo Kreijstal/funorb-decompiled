@@ -43,10 +43,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             ProxyAuthenticationException.resendProgressRequests((byte) 88, 5);
           }
           if (sn.field_b[5]) {
-            be.a(6, 17205);
+            SavedDataRequestSupport.writePendingRequests(6, 17205);
           }
           if (sn.field_b[6]) {
-            BoundedUrlRequest.a(7, 69);
+            BoundedUrlRequest.writePendingRatings(7, 69);
           }
           if (sn.field_b[8]) {
             LevelObject.d((byte) 27);
@@ -116,7 +116,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != -9926) {
           this.field_o = 25;
         }
-        if (RepeatedCharacterSupport.a((byte) 102)) {
+        if (RepeatedCharacterSupport.isSessionFrameworkReady((byte) 102)) {
           int stackIn_11_1 = param0 ^ -9787;
           boolean stackIn_11_2 = false;
           if (null == IsaacRandom.field_d) {
@@ -133,7 +133,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else if (QuickChatPhraseCache.field_e == 0) {
             int discarded$2 = this.a(255, false, false);
           } else {
-            KeyboardStateSupport.a(25972, mg.field_f);
+            KeyboardStateSupport.serviceAccountInput(25972, KeyboardIdleSupport.field_f);
           }
         }
     }
@@ -239,7 +239,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     private final int a(int param0, boolean param1, boolean param2) {
         try {
           int var8 = EscapeVector.obfuscationControl;
-          int var4 = mm.a(param0 ^ 191, param2, mg.field_f, QuickChatPhraseCache.field_h);
+          int var4 = mm.a(param0 ^ 191, param2, KeyboardIdleSupport.field_f, QuickChatPhraseCache.field_h);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -275,7 +275,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               int var5_intLifetime2 = mj.a(1, this.field_w, UiTheme.a(30519), DualLinkNode.e(0), false, this.field_x);
               if (var5_intLifetime2 != -1) {
                 if (0 == var5_intLifetime2) {
-                  DialWidget.field_J = mg.field_d;
+                  DialWidget.field_J = KeyboardIdleSupport.field_d;
                   AchievementRecord.a(true);
                   QuickChatPhraseCache.field_e = 10;
                   SpriteState.guestSession = false;
@@ -287,7 +287,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 4) {
-            if (ej.field_d) {
+            if (BitCountSupport.field_d) {
               DiskCacheRequest.a(PointCloudEffect.activeApplet((byte) -113), 21027);
             } else {
               SpriteState.guestSession = true;
@@ -295,7 +295,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 5) {
-            gk.a(param0 - 10042, PointCloudEffect.activeApplet((byte) -72));
+            QuitPageSupport.openQuitPage(param0 - 10042, PointCloudEffect.activeApplet((byte) -72));
           }
           if (var4 == 6 &&
             CipherPacketBuffer.field_u) {
@@ -327,8 +327,8 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (ViewportController.field_m == null) {
                 ViewportController.field_m = new BoundedUrlRequest(field_r, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (ViewportController.field_m.a(17)) {
-                PacketBuffer var12 = ViewportController.field_m.c(-43);
+              if (ViewportController.field_m.pollCompletion(17)) {
+                PacketBuffer var12 = ViewportController.field_m.completedResponse(-43);
                 if (var12 != null) {
                   String var7 = AccountMessagePanel.decodeCp1252(var12.position, 0, var12.payload, (byte) 117);
                   AchievementGrantRule.a(var7, (byte) -6);
@@ -421,7 +421,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else if (var2 == 4) {
             LegacyButton.decodeProgressResponse(108457410);
           } else if (var2 == 5) {
-            AudioService.a((byte) 124);
+            AudioService.decodeSavedDataResponse((byte) 124);
           } else if (var2 == 6) {
             ri.a((byte) 113);
           } else if (7 == var2) {
@@ -511,7 +511,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void h(byte param0) {
-        String var2 = tf.b((byte) 0);
+        String var2 = PauseMenuScreen.readIncomingString((byte) 0);
         SecondaryIntrusiveDeque.a(var2, -112, PointCloudEffect.activeApplet((byte) -59));
         int var3 = 59 % ((param0 - 41) / 61);
     }
@@ -542,7 +542,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (this.field_b) {
           return -1;
         }
-        if (!um.a(17830)) {
+        if (!AccountSessionStatusSupport.hasAccountSession(17830)) {
           return -1;
         }
         if (MarkerSlider.field_P) {
@@ -563,7 +563,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_s = (String) null;
           }
           MarkerSlider.field_P = true;
-          ContactEntry.field_mb = td.b(128) + 15000L;
+          ContactEntry.field_mb = MonotonicClockSupport.monotonicMillis(128) + 15000L;
           return var2;
         }
         if (11 == QuickChatPhraseCache.field_e &&
@@ -590,12 +590,12 @@ abstract class NetworkGameClient extends GameAppletShell {
           AccountOverlayController.updateAccountOverlay(-103);
         }
         if (null != ji.field_b) {
-          mg.field_f = ji.field_b.pollRotation(-126);
+          KeyboardIdleSupport.field_f = ji.field_b.pollRotation(-126);
         }
         if (HudMessage.a(true)) {
-          int var3 = 1200 * se.a(0);
+          int var3 = 1200 * FrameCadenceSupport.ticksPerSecond(0);
           if (this.field_v ||
-            !(mg.a((byte) -12) <= var3) &&
+            !(KeyboardIdleSupport.keyboardIdleTicks((byte) -12) <= var3) &&
             !(SpriteDecodeSupport.mouseIdleTicks((byte) -127) <= var3)) {
             this.field_v = false;
             nm.a(param0 ^ -17);
@@ -603,7 +603,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             EmailSyntaxValidator.a(2, (byte) 83, TextFieldValidator.field_g);
             IntrusiveNode.a(12);
             MarkerSlider.field_P = true;
-            ContactEntry.field_mb = td.b(param0 + 129) + 15000L;
+            ContactEntry.field_mb = MonotonicClockSupport.monotonicMillis(param0 + 129) + 15000L;
           }
         }
         if (IntKeyLookup.field_b == -1 ||
@@ -614,12 +614,12 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var3Lifetime1 &&
             0 == IntKeyLookup.field_b &&
             QuickChatPhraseCache.field_e == 11 &&
-            !um.a(17830)) {
+            !AccountSessionStatusSupport.hasAccountSession(17830)) {
             AchievementRecord.a(true);
           }
           if (IntKeyLookup.field_b != -1 &&
             IntKeyLookup.field_b != 0) {
-            ContactEntry.field_mb = 15000L + td.b(128);
+            ContactEntry.field_mb = 15000L + MonotonicClockSupport.monotonicMillis(128);
           }
         }
         if (IntKeyLookup.field_b != -1 &&
@@ -645,7 +645,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             } else if (IntKeyLookup.field_b == 2) {
               EmailSyntaxValidator.a(256, (byte) 83, DirectByteStorage.field_l);
             } else if (IntKeyLookup.field_b != 5) {
-              EmailSyntaxValidator.a(256, (byte) 83, gm.field_f);
+              EmailSyntaxValidator.a(256, (byte) 83, ArchiveSpriteLoader.field_f);
             } else {
               EmailSyntaxValidator.a(5, (byte) 83, HighscoreTable.field_a);
             }
@@ -654,8 +654,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if ((param0 != IntKeyLookup.field_b &&
           IntKeyLookup.field_b != 0 ||
-          um.a(17830)) &&
-          ContactEntry.field_mb <= td.b(128)) {
+          AccountSessionStatusSupport.hasAccountSession(17830)) &&
+          ContactEntry.field_mb <= MonotonicClockSupport.monotonicMillis(128)) {
           MarkerSlider.field_P = false;
           if (IntKeyLookup.field_b != -1 &&
             IntKeyLookup.field_b != 0) {
@@ -664,7 +664,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (0 == IntKeyLookup.field_b &&
-          !um.a(param0 ^ -17831)) {
+          !AccountSessionStatusSupport.hasAccountSession(param0 ^ -17831)) {
           pb.field_d = false;
         }
         if (0 == AccountNoticeKind.frameworkLoadingStage &&
@@ -703,8 +703,8 @@ abstract class NetworkGameClient extends GameAppletShell {
           PasswordValidator.h(-8055);
           on.b(-87);
           CipherPacketBuffer.field_u = false;
-          DelegatingCanvas.field_e = um.field_a;
-          GzipDecoder.initializeAccountUi(ej.field_d, (byte) -124, AlternateUsernameCredentials.field_j, ii.field_a, LoadingProgressDialog.field_ab);
+          DelegatingCanvas.field_e = AccountSessionStatusSupport.field_a;
+          GzipDecoder.initializeAccountUi(BitCountSupport.field_d, (byte) -124, AlternateUsernameCredentials.field_j, ii.field_a, LoadingProgressDialog.field_ab);
           if (ProxySocketConnector.field_p ||
             KeyboardStateSupport.field_d != null) {
             String stackIn_98_0 = KeyboardStateSupport.field_d;
@@ -730,14 +730,14 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (AccountNoticeKind.frameworkLoadingStage == 10) {
           if (QuickChatPhraseCache.field_h != 0) {
-            mg.field_c = mj.a(MenuInputState.field_l, -127);
+            KeyboardIdleSupport.field_c = mj.a(MenuInputState.field_l, -127);
           }
           AccountNoticeKind.frameworkLoadingStage = 11;
         }
         if (AccountNoticeKind.frameworkLoadingStage == 11) {
-          if (mg.field_c != null && (!mg.field_c.ensureIndex(0) ||
-            !mg.field_c.tryLoadAllGroups((byte) -119))) {
-            InstructionsScreen.setLoadingProgress(Bullet.formatArchiveProgress(AlphaContainer.field_H, mg.field_c, HighscoreTable.field_g, -12920), 17637, 0.0f);
+          if (KeyboardIdleSupport.field_c != null && (!KeyboardIdleSupport.field_c.ensureIndex(0) ||
+            !KeyboardIdleSupport.field_c.tryLoadAllGroups((byte) -119))) {
+            InstructionsScreen.setLoadingProgress(Bullet.formatArchiveProgress(AlphaContainer.field_H, KeyboardIdleSupport.field_c, HighscoreTable.field_g, -12920), 17637, 0.0f);
             boolean decompiledFrameRemainder0 = false;
           }
           else {

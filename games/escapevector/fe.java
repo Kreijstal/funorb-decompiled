@@ -274,7 +274,7 @@ final class fe {
           field_k = 94;
         }
         LegacyWidgetStyle.field_E = new AccountRegistrationPanel();
-        rd.field_c.transitionToContent(LegacyWidgetStyle.field_E, 30);
+        SpaceCompactionSupport.loginDialog.transitionToContent(LegacyWidgetStyle.field_E, 30);
     }
 
     private final void b(int param0) {
@@ -283,7 +283,7 @@ final class fe {
           if (KeyboardStateSupport.field_c == null) {
             return;
           }
-          KeyboardStateSupport.field_c.drawParagraph(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+          KeyboardStateSupport.field_c.drawParagraph(AccountSessionStatusSupport.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           return;
         }
         IndexedSprite var6 = this.field_b[this.field_i];
@@ -291,7 +291,7 @@ final class fe {
         if (var2 != null) {
           var6.draw(9, 58);
         } else if (null != KeyboardStateSupport.field_c) {
-          KeyboardStateSupport.field_c.drawParagraph(um.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+          KeyboardStateSupport.field_c.drawParagraph(AccountSessionStatusSupport.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
         }
         if (param0 > -109) {
           return;
@@ -440,7 +440,7 @@ final class fe {
 
     private final void b(boolean param0) {
         try {
-          AudioService.a((byte) 53, PointCloudEffect.activeApplet((byte) -90));
+          AudioService.openMembershipPage((byte) 53, PointCloudEffect.activeApplet((byte) -90));
         } catch (Exception exception) {
           exception.printStackTrace();
         }

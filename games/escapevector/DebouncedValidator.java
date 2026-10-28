@@ -13,12 +13,12 @@ abstract class DebouncedValidator implements ValidationSource {
         }
         if (guard != 17124) {
           DebouncedValidator.a(false, true);
-          if (td.b(guard - 16996) < (this.lastChangeMillis + 350L)) {
+          if (MonotonicClockSupport.monotonicMillis(guard - 16996) < (this.lastChangeMillis + 350L)) {
             return SpriteDecodeSupport.field_f;
           }
           return this.evaluateState(-76);
         }
-        if (td.b(guard - 16996) < (this.lastChangeMillis + 350L)) {
+        if (MonotonicClockSupport.monotonicMillis(guard - 16996) < (this.lastChangeMillis + 350L)) {
           return SpriteDecodeSupport.field_f;
         }
         return this.evaluateState(-76);
@@ -29,7 +29,7 @@ abstract class DebouncedValidator implements ValidationSource {
         if (this.isEmpty(95)) {
           return null;
         }
-        if ((350L + this.lastChangeMillis) > td.b(128)) {
+        if ((350L + this.lastChangeMillis) > MonotonicClockSupport.monotonicMillis(128)) {
           return null;
         }
         return this.evaluateMessage((byte) 125);
@@ -70,7 +70,7 @@ abstract class DebouncedValidator implements ValidationSource {
     }
 
     public final void markChanged(boolean guard) {
-        this.lastChangeMillis = td.b(128);
+        this.lastChangeMillis = MonotonicClockSupport.monotonicMillis(128);
         if (guard) {
           field_b = -44;
         }

@@ -397,7 +397,7 @@ final class BufferedRandomAccessFile {
           if (ThreeSliceButtonPainter.field_t != AccountFormStage.field_d) {
             return false;
           }
-          var2_long = td.b(128);
+          var2_long = MonotonicClockSupport.monotonicMillis(128);
           if (param1 < 101) {
             return true;
           }
@@ -413,8 +413,8 @@ final class BufferedRandomAccessFile {
                 QuickChatDynamicCommand.incomingPackets.payload[var5_int] = var4_ref_dm.payload[var5_int];
               }
               NetworkGameClient.field_q = ArchiveIndex.field_t;
-              ArchiveIndex.field_t = jj.field_b;
-              jj.field_b = LegacyStyleNode.field_v;
+              ArchiveIndex.field_t = LoginPromptSupport.field_b;
+              LoginPromptSupport.field_b = LegacyStyleNode.field_v;
               LegacyStyleNode.field_v = var4_ref_dm.opcode;
               return true;
             }
@@ -448,15 +448,15 @@ final class BufferedRandomAccessFile {
             }
             if (LoginCredentials.field_a == 0) {
               NetworkGameClient.field_q = ArchiveIndex.field_t;
-              ArchiveIndex.field_t = jj.field_b;
-              jj.field_b = LegacyStyleNode.field_v;
+              ArchiveIndex.field_t = LoginPromptSupport.field_b;
+              LoginPromptSupport.field_b = LegacyStyleNode.field_v;
               LegacyStyleNode.field_v = GameAppletShell.field_a;
               GameAppletShell.field_a = -1;
               return true;
             }
             int var4 = LoginCredentials.field_a;
-            if (pd.field_a != 0.0) {
-              var4 = (int)((double)var4 + gk.field_a.nextGaussian() * pd.field_a);
+            if (AppletViewportState.networkDelayJitterMillis != 0.0) {
+              var4 = (int)((double)var4 + QuitPageSupport.field_a.nextGaussian() * AppletViewportState.networkDelayJitterMillis);
               if (var4 < 0) {
                 var4 = 0;
               }

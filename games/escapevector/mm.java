@@ -90,9 +90,9 @@ final class mm {
           }
           return false;
         }
-        if (se.field_b != null) {
-          ChatMessageDecoder.field_b[param1] = se.field_b.field_g;
-          GameModeSelectScreen.field_g[param1] = se.field_b.field_d;
+        if (FrameCadenceSupport.field_b != null) {
+          ChatMessageDecoder.field_b[param1] = FrameCadenceSupport.field_b.field_g;
+          GameModeSelectScreen.field_g[param1] = FrameCadenceSupport.field_b.field_d;
           WeightedLruCache.field_c[param1] = true;
           SpriteOffset.a((byte) 53);
           return true;

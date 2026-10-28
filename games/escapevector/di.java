@@ -79,7 +79,7 @@ final class di {
     final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7, Sprite[] param8, boolean param9, int param10, int param11, BitmapFont param12, byte param13, int param14) {
         try {
           Sprite[] var16 = (Sprite[]) null;
-          ti.a(param8, param10, param1, param5, param11, 480, 0, param4, param3, lh.field_e, param12, pc.field_d, param2, param7, (Sprite[]) null, 2, param14, 0, ValidatedTextWidget.field_X, param6, param0);
+          ti.a(param8, param10, param1, param5, param11, 480, 0, param4, param3, MenuTitleSupport.field_e, param12, pc.field_d, param2, param7, (Sprite[]) null, 2, param14, 0, ValidatedTextWidget.field_X, param6, param0);
           DebouncedValidator.a(false, param9);
           if (param13 > -5) {
             field_g = (EmailAvailabilityRequest) null;

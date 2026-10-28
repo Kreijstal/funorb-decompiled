@@ -88,7 +88,7 @@ final class AchievementRecord extends IntrusiveNode {
         if (param0) {
           SavedDataQuery.field_i = false;
           if (DialWidget.field_H) {
-            be.field_b.showConnectionRestoredMessage(94);
+            SavedDataRequestSupport.requestDialog.showConnectionRestoredMessage(94);
             return;
           }
           var1 = LaserGateSpan.field_g;
@@ -100,14 +100,14 @@ final class AchievementRecord extends IntrusiveNode {
             }
             AccountPanelInputSupport.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) AccountPanelInputSupport.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }
-          be.field_b.closeDialog(-18861);
+          SavedDataRequestSupport.requestDialog.closeDialog(-18861);
           ImageProducerRasterBuffer.d(32);
           return;
         }
         field_n = (IntrusiveDeque) null;
         SavedDataQuery.field_i = false;
         if (DialWidget.field_H) {
-          be.field_b.showConnectionRestoredMessage(94);
+          SavedDataRequestSupport.requestDialog.showConnectionRestoredMessage(94);
         } else {
           var1 = LaserGateSpan.field_g;
           if (var1 > 0) {
@@ -118,7 +118,7 @@ final class AchievementRecord extends IntrusiveNode {
             }
             AccountPanelInputSupport.field_b = Js5NetworkRequest.joinText((byte) -31, new CharSequence[]{(CharSequence) ((Object) AccountPanelInputSupport.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DropTargetWidget.field_I)});
           }
-          be.field_b.closeDialog(-18861);
+          SavedDataRequestSupport.requestDialog.closeDialog(-18861);
           ImageProducerRasterBuffer.d(32);
         }
     }

@@ -21,8 +21,8 @@ final class QuickChatPhraseCache {
           AccountNoticeKind.resetAccountFlow(3161);
           Checkbox.field_F.closeAllPanels(guard ^ 17479);
           PcmResampler.field_d = new LoginForm(StrongCacheEntry.field_v, (String) null, DialWidget.field_H, showCreateAccount, allowGuest);
-          rd.field_c = new LoginDialog(Checkbox.field_F, PcmResampler.field_d);
-          Checkbox.field_F.pushPanel(rd.field_c, 40);
+          SpaceCompactionSupport.loginDialog = new LoginDialog(Checkbox.field_F, PcmResampler.field_d);
+          Checkbox.field_F.pushPanel(SpaceCompactionSupport.loginDialog, 40);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ff.A(" + (unusedMessage != null ? "{...}" : "null") + ',' + allowGuest + ',' + guard + ',' + showCreateAccount + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gm {
+final class ArchiveSpriteLoader {
     static String field_d;
     static Sprite field_a;
     static PcmSample field_b;
@@ -9,13 +9,13 @@ final class gm {
     static String field_f;
     static int[] field_c;
 
-    final static Sprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static Sprite[] loadSprites(int groupId, int fileId, ResourceArchive archive, int guard) {
         String stackIn_10_2 = null;
         try {
-          if (param3 != 8192) {
+          if (guard != 8192) {
             field_e = (String) null;
           }
-          if (ArchivePreloader.loadSpriteSheet(param2, param3 ^ -8272, param0, param1)) {
+          if (ArchivePreloader.loadSpriteSheet(archive, guard ^ -8272, groupId, fileId)) {
             Sprite[] stackIn_6_0 = NetworkGameClient.e(15556);
             return stackIn_6_0;
           }
@@ -25,18 +25,18 @@ final class gm {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var4;
-          StringBuilder stackIn_9_1 = new StringBuilder().append("gm.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_9_1 = new StringBuilder().append("gm.C(").append(groupId).append(',').append(fileId).append(',');
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static boolean b(int param0) {
-        if (param0 != 8192) {
+    final static boolean isAlternateLoginFlow(int guard) {
+        if (guard != 8192) {
           field_d = (String) null;
           return DialWidget.field_H;
         }
@@ -54,7 +54,7 @@ final class gm {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        gm.a(13, 47, (ResourceArchive) null, 3);
+        ArchiveSpriteLoader.loadSprites(13, 47, (ResourceArchive) null, 3);
         field_e = null;
         field_c = null;
         field_a = null;

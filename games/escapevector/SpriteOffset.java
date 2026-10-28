@@ -20,7 +20,7 @@ final class SpriteOffset {
           return false;
         }
         if (di.field_d.selectedIndex == 0) {
-          pa.a(true);
+          GuestLoginSupport.beginAccountLogin(true);
           mj.field_d = 0;
           p.field_h = 2;
           ChatMessage.clearFrameOffsets((byte) -74);
@@ -62,8 +62,8 @@ final class SpriteOffset {
             field_a = (String) null;
           }
           while (AccountRequestDialog.pollKeyEvent(-108)) {
-            cb.field_c.handleKeyEvent((byte) 6);
-            if (cb.field_c.isInitialActivation((byte) -18)) {
+            LegacyMenuState.input.handleKeyEvent((byte) 6);
+            if (LegacyMenuState.input.isInitialActivation((byte) -18)) {
               var1_int = true;
             }
             if (PasswordValidator.field_n != 13) {
@@ -71,14 +71,14 @@ final class SpriteOffset {
             }
             var2 = true;
           }
-          cb.field_c.updatePointer(CachedArchiveProvider.a((byte) 122, sf.field_c, LoginDialog.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y));
-          if (cb.field_c.isInitialActivation((byte) -18)) {
+          LegacyMenuState.input.updatePointer(CachedArchiveProvider.a((byte) 122, sf.field_c, LoginDialog.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y));
+          if (LegacyMenuState.input.isInitialActivation((byte) -18)) {
             var1_int = true;
           }
           int var3 = 0;
           if (var1_int &&
-            cb.field_c.selectedIndex >= 0) {
-            var3 = CachedTextLayout.field_j[cb.field_c.selectedIndex];
+            LegacyMenuState.input.selectedIndex >= 0) {
+            var3 = CachedTextLayout.field_j[LegacyMenuState.input.selectedIndex];
             if (2 == var3) {
               TextFieldValidator.e(0);
             } else if (var3 == 5) {
@@ -90,7 +90,7 @@ final class SpriteOffset {
           }
           if (var3 == 0 &&
             ArchiveIndex.field_j == 2) {
-            long var4 = -SavedDataWrite.field_k + td.b(param0 + 142);
+            long var4 = -SavedDataWrite.field_k + MonotonicClockSupport.monotonicMillis(param0 + 142);
             int var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
               sn.a(5, 0, true);

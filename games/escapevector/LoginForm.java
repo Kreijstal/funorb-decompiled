@@ -213,7 +213,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           EditableTextWidget var3 = (EditableTextWidget) null;
           this.onSubmit(true, (EditableTextWidget) null);
         }
-        if (gm.b(8192) ||
+        if (ArchiveSpriteLoader.isAlternateLoginFlow(8192) ||
           !(this.identifierField.text.length() <= 0) &&
           !(this.passwordField.text.length() <= 0)) {
           RasterSnapshot.a(0, this.passwordField.text, this.identifierField.text);
@@ -244,7 +244,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             TextButton stackIn_18_1 = null;
             TextButton stackIn_18_2 = null;
             if (this.field_P) {
-              stackIn_19_3 = cj.field_c;
+              stackIn_19_3 = IntroFinalFrameSupport.field_c;
             } else {
               TextButton stackIn_19_1 = null;
               TextButton stackIn_19_2 = null;
@@ -286,7 +286,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           if (null != this.message) {
             this.y = this.y + (var7.paragraphHeight(this.message, -40 + this.width, var7.maxAscent) + 5);
           }
-          String var8 = lh.field_b;
+          String var8 = MenuTitleSupport.field_b;
           LoginMethod var9 = WeightedCacheEntry.readLastLoginMethod((byte) -1, PointCloudEffect.activeApplet((byte) -107));
           if (var9 == NameAvailabilityValidator.field_q) {
             var8 = GameProgressTracker.field_b;

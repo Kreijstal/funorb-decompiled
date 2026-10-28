@@ -130,7 +130,7 @@ final class LevelSelectScreen {
         String stackIn_6_2 = null;
         try {
           int[] var13 = new int[]{this.introductionAction, this.tutorialAction};
-          String[] var6 = new String[]{TickClock.field_b, be.field_a};
+          String[] var6 = new String[]{TickClock.field_b, SavedDataRequestSupport.playTutorialLabel};
           int[] var7 = new int[]{2, 3};
           int var8 = 3;
           int var9 = 89;
@@ -201,7 +201,7 @@ final class LevelSelectScreen {
         }
         if (var3 == this.loginAction &&
           AccountSessionSupport.isGuestSession(-107)) {
-          pa.a(true);
+          GuestLoginSupport.beginAccountLogin(true);
           mj.field_d = 0;
           ChatMessage.clearFrameOffsets((byte) -90);
           return true;

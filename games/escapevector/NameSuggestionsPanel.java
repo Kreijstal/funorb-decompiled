@@ -133,7 +133,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             }
             if (param1) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, pd.field_b, BoundedUrlRequest.field_d);
+              var9.fillRect(0, 0, AppletViewportState.canvasWidth, BoundedUrlRequest.field_d);
             }
             if (param2 == null) {
               param2 = new java.awt.Color(140, 17, 17);
@@ -152,11 +152,11 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
               var10.setFont(ImageProducerRasterBuffer.field_l);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (304 - param4.length() * 6) / 2, 22);
-              var9.drawImage(UiContainer.field_z, -152 + pd.field_b / 2, -18 + BoundedUrlRequest.field_d / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(UiContainer.field_z, -152 + AppletViewportState.canvasWidth / 2, -18 + BoundedUrlRequest.field_d / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Exception var6 = (Exception) (Object) decompiledCaughtException;
-              int var7 = -152 + pd.field_b / 2;
+              int var7 = -152 + AppletViewportState.canvasWidth / 2;
               int var8 = BoundedUrlRequest.field_d / 2 - 18;
               var9.setColor(param2);
               var9.drawRect(var7, var8, 303, 33);
@@ -171,7 +171,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             if (TextLayout.field_e != null) {
               var9.setFont(ImageProducerRasterBuffer.field_l);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(TextLayout.field_e, pd.field_b / 2 - 6 * TextLayout.field_e.length() / 2, BoundedUrlRequest.field_d / 2 - 26);
+              var9.drawString(TextLayout.field_e, AppletViewportState.canvasWidth / 2 - 6 * TextLayout.field_e.length() / 2, BoundedUrlRequest.field_d / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

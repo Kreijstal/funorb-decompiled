@@ -777,7 +777,7 @@ final class Minimap {
         }
         var4.addLast(-12328, new SpriteStrip(new Sprite[]{this.createLegendSwatch(this.shipColor, -5425)}, 0));
         if (null != this.cargo) {
-          var3.addLast(-12328, new StringNode(gk.field_b));
+          var3.addLast(-12328, new StringNode(QuitPageSupport.field_b));
           var4.addLast(-12328, new SpriteStrip(new Sprite[]{this.createLegendSwatch(this.cargoColor, -5425)}, 0));
         }
         IntrusiveDeque var5 = this.session.missionTargets;

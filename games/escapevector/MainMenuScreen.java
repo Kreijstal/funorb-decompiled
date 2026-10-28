@@ -96,7 +96,7 @@ final class MainMenuScreen {
             var11 != 0) {
             if (actionCode != 1) {
               if (actionCode == 2) {
-                ByteStorage.gameFont.drawCentered(mc.field_a, var6, 22, var5_int, -1);
+                ByteStorage.gameFont.drawCentered(LoginHandshakeState.instructionsLabel, var6, 22, var5_int, -1);
               }
               if (actionCode != 2 ||
                 var11 != 0) {
@@ -355,7 +355,7 @@ final class MainMenuScreen {
           }
           if (var3_int == 2 &&
             this.input.isInitialActivation((byte) -18)) {
-            ek.a(this.input.pointerDriven, false);
+            InstructionsNavigationSupport.openInstructions(this.input.pointerDriven, false);
             return true;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -505,7 +505,7 @@ final class MainMenuScreen {
             if (IsaacRandom.field_d != null) {
               ri.a(-25123);
             }
-            gk.a(-9787, PointCloudEffect.activeApplet((byte) -122));
+            QuitPageSupport.openQuitPage(-9787, PointCloudEffect.activeApplet((byte) -122));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

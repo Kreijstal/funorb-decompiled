@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ch {
-    static MenuInputState field_a;
-    static boolean field_b;
+final class PauseMenuState {
+    static MenuInputState input;
+    static boolean instructionsVisible;
     private static String field_z;
 
     public static void releaseStatics(int guard) {
         if (guard != -5691) {
-          ch.releaseStatics(1);
-          field_a = null;
+          PauseMenuState.releaseStatics(1);
+          input = null;
           return;
         }
-        field_a = null;
+        input = null;
     }
 
     static {

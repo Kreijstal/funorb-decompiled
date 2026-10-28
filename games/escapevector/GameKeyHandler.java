@@ -41,11 +41,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             int var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
               GameAppletShell.a(0, (char) var2_int)) {
-              int var3 = 1 + bn.field_b & 127;
+              int var3 = 1 + AccountPayloadSupport.field_b & 127;
               if (var3 != MarkerSliderPainter.field_l) {
-                td.field_b[bn.field_b] = -1;
-                ek.field_a[bn.field_b] = (char)var2_int;
-                bn.field_b = var3;
+                MonotonicClockSupport.field_b[AccountPayloadSupport.field_b] = -1;
+                InstructionsNavigationSupport.field_a[AccountPayloadSupport.field_b] = (char)var2_int;
+                AccountPayloadSupport.field_b = var3;
               }
             }
           }
@@ -88,11 +88,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
           }
           if (0 <= var2_int) {
-            int var3 = bn.field_b + 1 & 127;
+            int var3 = AccountPayloadSupport.field_b + 1 & 127;
             if (var3 != MarkerSliderPainter.field_l) {
-              td.field_b[bn.field_b] = var2_int;
-              ek.field_a[bn.field_b] = (char)0;
-              bn.field_b = var3;
+              MonotonicClockSupport.field_b[AccountPayloadSupport.field_b] = var2_int;
+              InstructionsNavigationSupport.field_a[AccountPayloadSupport.field_b] = (char)0;
+              AccountPayloadSupport.field_b = var3;
             }
           }
           int var3Lifetime1 = param0.getModifiers();
@@ -176,7 +176,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               String var5Lifetime4 = var7;
               String var5Lifetime5 = var7;
               if (0 != param0.length()) {
-                var5Lifetime6 = var7 + "; Expires=" + EmailCredentials.formatGmtTimestamp(-106, 94608000000L + td.b(128)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + EmailCredentials.formatGmtTimestamp(-106, 94608000000L + MonotonicClockSupport.monotonicMillis(128)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

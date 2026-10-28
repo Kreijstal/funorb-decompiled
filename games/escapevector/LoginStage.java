@@ -18,7 +18,7 @@ final class LoginStage {
 
     final static String formatPacketDiagnostic(byte guard) {
         int var5 = EscapeVector.obfuscationControl;
-        String var6 = "(" + NetworkGameClient.field_q + " " + ArchiveIndex.field_t + " " + jj.field_b + ") " + LegacyStyleNode.field_v;
+        String var6 = "(" + NetworkGameClient.field_q + " " + ArchiveIndex.field_t + " " + LoginPromptSupport.field_b + ") " + LegacyStyleNode.field_v;
         String var1 = var6;
         if (EmailSyntaxValidator.field_r > 0) {
           var1 = var6 + ":";
@@ -50,7 +50,7 @@ final class LoginStage {
         if (guard < 62) {
           return false;
         }
-        boolean stackIn_8_0 = (this == mc.field_b) || (ClientException.field_c == this) || (this == ThreeSliceButtonPainter.field_t);
+        boolean stackIn_8_0 = (this == LoginHandshakeState.keyExchangeStage) || (ClientException.field_c == this) || (this == ThreeSliceButtonPainter.field_t);
         return stackIn_8_0;
     }
 
@@ -83,7 +83,7 @@ final class LoginStage {
           }
           String var12 = DisplayModeInfo.field_e[mode].toLowerCase();
           String var11 = ByteStorage.levelNamesByMode[mode][level].toLowerCase() + ".lvl";
-          String var13 = rd.a((byte) 72, var11);
+          String var13 = SpaceCompactionSupport.compactSpaces((byte) 72, var11);
           String var15 = var12 + "_" + var13;
           String var14 = "";
           if (key == null) {
