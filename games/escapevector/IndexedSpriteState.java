@@ -33,11 +33,11 @@ abstract class IndexedSpriteState {
           int[] var2 = var20;
           for (int var3 = 0; var3 < var1_int; var3++) {
             TriangleMesh var4_ref_ia = fh.field_e[var3];
-            var4_ref_ia.a((byte) 49);
+            var4_ref_ia.updateBounds((byte) 49);
             ee.a(var3, 103);
-            int var5 = var4_ref_ia.field_a + var4_ref_ia.field_b >> 1;
-            int var6 = var4_ref_ia.field_i + var4_ref_ia.field_R >> 1;
-            int var7 = var4_ref_ia.field_g + var4_ref_ia.field_O >> 1;
+            int var5 = var4_ref_ia.maxX + var4_ref_ia.minX >> 1;
+            int var6 = var4_ref_ia.minY + var4_ref_ia.maxY >> 1;
+            int var7 = var4_ref_ia.minZ + var4_ref_ia.maxZ >> 1;
             int var8 = kh.field_a[9] >> 2;
             int var9 = kh.field_a[10] >> 2;
             int var10_int = kh.field_a[11] >> 2;

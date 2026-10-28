@@ -17,9 +17,9 @@ final class rm implements Iterator {
           return;
         }
         try {
-          param0.addMouseListener(om.field_b);
-          param0.addMouseMotionListener(om.field_b);
-          param0.addFocusListener(om.field_b);
+          param0.addMouseListener(QuickChatDynamicCommand.field_b);
+          param0.addMouseMotionListener(QuickChatDynamicCommand.field_b);
+          param0.addFocusListener(QuickChatDynamicCommand.field_b);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "rm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

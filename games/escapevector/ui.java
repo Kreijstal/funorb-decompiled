@@ -53,8 +53,8 @@ final class ui {
           if (param3 < 67) {
             field_b = (al) null;
           }
-          int var4_int = param1.b(-1, param2);
-          int var5 = param1.a(var4_int, param0, true);
+          int var4_int = param1.findGroupId(-1, param2);
+          int var5 = param1.findFileId(var4_int, param0, true);
           Sprite[] stackIn_3_0 = gm.a(var4_int, var5, param1, 8192);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

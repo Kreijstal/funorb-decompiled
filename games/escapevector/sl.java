@@ -84,13 +84,13 @@ final class sl {
     final static gi a(boolean param0, int param1) {
         int[] stackIn_26_0 = null;
         int var7 = EscapeVector.obfuscationControl;
-        CipherPacketBuffer var2 = om.field_g;
+        CipherPacketBuffer var2 = QuickChatDynamicCommand.field_g;
         int var3 = var2.readUnsignedByte(0);
         DualLinkNode.field_o = var3 & 127;
         boolean stackIn_3_0 = (0 != (128 & var3));
         rm.field_c = stackIn_3_0;
         ve.field_g = var2.readUnsignedByte(0);
-        TextFieldValidator.field_e = var2.i(-800509813);
+        TextFieldValidator.field_e = var2.readLong(-800509813);
         if (DualLinkNode.field_o != 2) {
           im.field_a = 0;
           IntKeyLookup.field_d = 0;
@@ -104,21 +104,21 @@ final class sl {
         }
         boolean stackIn_11_0 = !(var2.readUnsignedByte(param1 ^ param1) != 1);
         boolean var4 = stackIn_11_0;
-        gm.field_e = var2.c(false);
+        gm.field_e = var2.readString(false);
         if (var4) {
-          rm.field_g = var2.c(false);
+          rm.field_g = var2.readString(false);
         } else {
           rm.field_g = gm.field_e;
           if (var7 != 0) {
-            rm.field_g = var2.c(false);
+            rm.field_g = var2.readString(false);
           }
         }
         if (1 == DualLinkNode.field_o) {
           var2.readUnsignedShort(1952);
-          var2.c(false);
+          var2.readString(false);
         } else if (DualLinkNode.field_o == 4) {
           var2.readUnsignedShort(1952);
-          var2.c(false);
+          var2.readString(false);
         }
         if (!param0) {
           SelfDestructEffects.field_d = SpriteOffset.a(var2, 10241, 80);
@@ -128,11 +128,11 @@ final class sl {
         int var5 = var2.readUnsignedShort(1952);
         try {
           QuickChatPhraseDefinition var8 = EmailSyntaxValidator.field_s.a(var5, (byte) -126);
-          SelfDestructEffects.field_d = var8.g(-4);
+          SelfDestructEffects.field_d = var8.previewText(-4);
           if (rm.field_g.equals(ck.field_r)) {
             stackIn_26_0 = null;
           } else {
-            stackIn_26_0 = var8.field_z;
+            stackIn_26_0 = var8.responseIds;
           }
           bo.field_H = stackIn_26_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -169,8 +169,8 @@ final class sl {
           } else {
             try {
               TextLayout.field_c = new pj((java.net.Socket) (sk.field_d.field_b), MouseWheelInput.field_c);
-              om.field_c.position = 0;
-              CipherPacketBuffer var4 = om.field_g;
+              QuickChatDynamicCommand.field_c.position = 0;
+              CipherPacketBuffer var4 = QuickChatDynamicCommand.field_g;
               CipherPacketBuffer var5 = var4;
               al.field_d = sf.field_d;
               var5.position = 0;
@@ -178,7 +178,7 @@ final class sl {
               NetworkGameClient.field_q = stackIn_11_0;
               ArchiveIndex.field_t = stackIn_11_0;
               jj.field_b = stackIn_11_0;
-              wc.a(rd.field_a, ac.field_b, true, DropTargetWidget.field_D, om.field_c);
+              wc.a(rd.field_a, ac.field_b, true, DropTargetWidget.field_D, QuickChatDynamicCommand.field_c);
               ClientException.a(-1, 30785);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;

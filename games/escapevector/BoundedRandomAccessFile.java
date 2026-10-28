@@ -117,14 +117,14 @@ final class BoundedRandomAccessFile {
     }
 
     final static void a(int param0, int param1, ll param2) {
-        CipherPacketBuffer var3 = om.field_c;
+        CipherPacketBuffer var3 = QuickChatDynamicCommand.field_c;
         var3.writeCipheredOpcode(param1, true);
-        var3.f(param2.field_g, -123);
+        var3.writeByte(param2.field_g, -123);
         if (param0 >= -42) {
           return;
         }
         try {
-          var3.h(75, param2.field_i);
+          var3.writeShort(75, param2.field_i);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ma.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

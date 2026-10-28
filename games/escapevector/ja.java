@@ -23,7 +23,7 @@ final class ja {
         int var3 = 0;
         int var26 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var28 = om.field_g;
+          CipherPacketBuffer var28 = QuickChatDynamicCommand.field_g;
           int var2 = var28.readUnsignedByte(0);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort(1952);
@@ -47,12 +47,12 @@ final class ja {
               bg.field_a[0].field_e = false;
               bg.field_a[0].field_a = null;
               for (int var8_int = 1; var5 > var8_int; var8_int++) {
-                bg.field_a[var8_int].field_h = var28.c(false);
+                bg.field_a[var8_int].field_h = var28.readString(false);
                 bg.field_a[var8_int].field_e = false;
                 if (var28.readUnsignedByte(0) != 1) {
                   bg.field_a[var8_int].field_a = null;
                 } else {
-                  bg.field_a[var8_int].field_a = var28.c(false);
+                  bg.field_a[var8_int].field_a = var28.readString(false);
                 }
               }
               String[][] dupTemp$0 = new String[3][var6];
@@ -76,7 +76,7 @@ final class ja {
                 for (int var19 = 0; var18 > var19; var19++) {
                   int var20 = var28.readUnsignedByte(0);
                   String var21 = bg.field_a[var20].field_h;
-                  long var22 = var28.i(-800509813);
+                  long var22 = var28.readLong(-800509813);
                   int var24 = var28.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
@@ -123,7 +123,7 @@ final class ja {
             var4.unlink((byte) -90);
           } else if (var2 == 1) {
             var3 = var28.readUnsignedShort(1952);
-            long var4_long = var28.i(-800509813);
+            long var4_long = var28.readLong(-800509813);
             ik var6_ref_ik = (ik) (vj.field_d.first(false));
             while (var6_ref_ik != null) {
               if (var6_ref_ik.field_i != var3) {

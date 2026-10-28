@@ -22,7 +22,7 @@ final class di {
           MatchingTextValidator.c(true);
           ac.d(-16802);
           if (ClientException.a(-31879)) {
-            om.field_c.writeCipheredOpcode(1, true);
+            QuickChatDynamicCommand.field_c.writeCipheredOpcode(1, true);
             ClientException.a(0, 30785);
             nm.a(16);
             return;
@@ -37,7 +37,7 @@ final class di {
           nm.a(16);
           return;
         }
-        om.field_c.writeCipheredOpcode(1, true);
+        QuickChatDynamicCommand.field_c.writeCipheredOpcode(1, true);
         ClientException.a(0, 30785);
         nm.a(16);
     }

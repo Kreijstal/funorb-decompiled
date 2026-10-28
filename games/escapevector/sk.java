@@ -62,7 +62,7 @@ final class sk {
             int var6_int = this.field_b.readInt(param1 ^ -4932);
             int var7 = this.field_b.readInt(-5053);
             byte[] var13 = new byte[64];
-            this.field_b.a(var13, (byte) -96, 0, 64);
+            this.field_b.readBytes(var13, (byte) -96, 0, 64);
             CachedArchiveProvider var9 = new CachedArchiveProvider(param3, param4, param2, this.field_f, this.field_a, var6_int, var13, var7, param0);
             if (param1 != 255) {
               CachedArchiveProvider stackIn_11_0 = (CachedArchiveProvider) null;
@@ -119,7 +119,7 @@ final class sk {
         byte[] var13 = new byte[var10.payload.length - var10.position];
         byte[] var11 = var13;
         byte[] var4 = var11;
-        var10.a(var4, (byte) -96, 0, var13.length);
+        var10.readBytes(var4, (byte) -96, 0, var13.length);
         if (this.field_g == null) {
           var5 = var4;
         } else {

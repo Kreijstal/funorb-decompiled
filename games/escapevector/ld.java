@@ -8,12 +8,12 @@ class ld extends vj {
     static String[] field_g;
 
     final void a(PacketBuffer param0, byte param1) {
-        param0.a(this.field_f, (byte) -23);
+        param0.writeLong(this.field_f, (byte) -23);
         if (param1 > -15) {
           return;
         }
         try {
-          param0.a(this.field_e, (byte) 111);
+          param0.writeBase38Password(this.field_e, (byte) 111);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ld.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

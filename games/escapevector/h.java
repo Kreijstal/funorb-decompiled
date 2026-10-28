@@ -125,7 +125,7 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
         String stackIn_13_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var8 = new CipherPacketBuffer(param0.a(-4, "", "logo.fo3d"));
+          CipherPacketBuffer var8 = new CipherPacketBuffer(param0.getNamedFile(-4, "", "logo.fo3d"));
           CipherPacketBuffer var10 = var8;
           int var3 = var10.readUnsignedByte(0);
           var10.beginBitReading(-17928);
@@ -143,11 +143,11 @@ final class h extends UiContainer implements TextInputListener, ButtonListener {
           int var4Lifetime1 = var9;
           while (var3 > var9) {
             TriangleMesh var5 = fh.field_e[var9];
-            var5.a(6, 1, 6, 6, -72);
-            var5.a((byte) 49);
-            int[] var6 = new int[]{var5.field_b + var5.field_a >> 1, var5.field_R + var5.field_i >> 1, var5.field_O + var5.field_g >> 1};
+            var5.scaleVertices(6, 1, 6, 6, -72);
+            var5.updateBounds((byte) 49);
+            int[] var6 = new int[]{var5.minX + var5.maxX >> 1, var5.maxY + var5.minY >> 1, var5.maxZ + var5.minZ >> 1};
             SectorCacheStore.field_c[var9] = var6;
-            var5.a(-var6[2], 0, -var6[0], -var6[1]);
+            var5.translateVertices(-var6[2], 0, -var6[0], -var6[1]);
             var9++;
           }
           return;

@@ -274,7 +274,7 @@ final class ha implements WidgetPainter {
           if (param1 != -198630768) {
             field_c = (hf) null;
           }
-          CoverageBitmapFont stackIn_6_0 = ea.a(param2.a(param0, (byte) -97, param3), -1);
+          CoverageBitmapFont stackIn_6_0 = ea.a(param2.getFile(param0, (byte) -97, param3), -1);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

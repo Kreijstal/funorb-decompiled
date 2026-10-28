@@ -11,7 +11,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
     NameSuggestionsPanel field_G;
     static String field_O;
     private TextButton field_P;
-    static om field_L;
+    static QuickChatDynamicCommand field_L;
     private ValidatedTextWidget field_I;
     private TextButton field_K;
     private ValidatedTextWidget field_N;
@@ -242,14 +242,14 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
 
     private final String k(int param0) {
         if (param0 != 3674) {
-          field_L = (om) null;
+          field_L = (QuickChatDynamicCommand) null;
           return "</col></u>";
         }
         return "</col></u>";
     }
 
     public final void onMoreSuggestions(byte guard) {
-        ((NameAvailabilityValidator) (this.field_S.validator((byte) -89))).g(22186);
+        ((NameAvailabilityValidator) (this.field_S.validator((byte) -89))).clearCachedName(22186);
         if (guard != -61) {
           field_T = (Sprite) null;
         }
@@ -295,11 +295,11 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
-          int var4_int = param0.b(-1, param3);
+          int var4_int = param0.findGroupId(-1, param3);
           if (param1 <= 48) {
-            field_L = (om) null;
+            field_L = (QuickChatDynamicCommand) null;
           }
-          int var5 = param0.a(var4_int, param2, true);
+          int var5 = param0.findFileId(var4_int, param2, true);
           IndexedSprite stackIn_3_0 = he.a(param0, -18109, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -537,6 +537,6 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
 
     static {
         field_O = "Complete the tutorial by following<br>the instructions at the top of the screen.";
-        field_L = new om(11, 0, 1, 2);
+        field_L = new QuickChatDynamicCommand(11, 0, 1, 2);
     }
 }

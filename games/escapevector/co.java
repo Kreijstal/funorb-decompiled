@@ -3,7 +3,7 @@
  */
 final class co {
     static PcmSample field_d;
-    static om field_b;
+    static QuickChatDynamicCommand field_b;
     static NameAvailabilityResult field_a;
     static String[] field_c;
     static String field_f;
@@ -122,7 +122,7 @@ final class co {
 
     static {
         field_f = "Type your email address again to make sure it's correct";
-        field_b = new om(0, 2, 2, 1);
+        field_b = new QuickChatDynamicCommand(0, 2, 2, 1);
         field_e = new String[]{"Well done, commander. You have secured all the stolen technology stored in the aliens' outer system.", "We are now heading for the centre of the system, where <photo>a moon orbiting a sun-baked planet holds more of our technology.<br><br>This seems to be an important centre for the aliens. <photo>There are several fuel depots. Your ship has been converted to run on alien fuel if necessary.", "Watch out for these items. Land next to them to upgrade your ship.", "Be warned that these caves are defended. These dangerous red cylinders will pull your ship in like a magnet if you get too close."};
     }
 }

@@ -25,7 +25,7 @@ final class hf {
           for (int var2 = 0; var2 < EmailSyntaxValidator.field_r; var2++) {
             String var7 = var1 + ' ';
             var1 = var7;
-            int var3 = 255 & om.field_g.payload[var2];
+            int var3 = 255 & QuickChatDynamicCommand.field_g.payload[var2];
             int var4 = var3 >> 4;
             if (var4 < 10) {
               var4 += 48;
@@ -87,10 +87,10 @@ final class hf {
           String var15 = var12 + "_" + var13;
           String var14 = "";
           if (param1 == null) {
-            byte[] stackIn_17_0 = var8.a(-4, var15, var14);
+            byte[] stackIn_17_0 = var8.getNamedFile(-4, var15, var14);
             return stackIn_17_0;
           }
-          byte[] stackIn_15_0 = var8.a((byte) -73, var14, var15, param1);
+          byte[] stackIn_15_0 = var8.getNamedFileWithKey((byte) -73, var14, var15, param1);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

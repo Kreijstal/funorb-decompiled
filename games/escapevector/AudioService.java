@@ -239,7 +239,7 @@ final class AudioService implements Runnable {
           if (param0 != 124) {
             field_a = (String) null;
           }
-          CipherPacketBuffer var9 = om.field_g;
+          CipherPacketBuffer var9 = QuickChatDynamicCommand.field_g;
           int var2 = var9.readUnsignedByte(param0 ^ 124);
           if (var2 != 0) {
             if (var2 != 1) {
@@ -287,14 +287,14 @@ final class AudioService implements Runnable {
             byte[] var10 = var11;
             byte[] var7 = var10;
             var5 = var7;
-            var9.a(var11, (byte) -96, 0, var4);
+            var9.readBytes(var11, (byte) -96, 0, var4);
           }
           if (var4 == 0 ||
             var6 != 0) {
             var5 = null;
           }
           var9.position = var9.position + 4;
-          if (!var9.h(param0 ^ 124)) {
+          if (!var9.verifyCrc32(param0 ^ 124)) {
             nm.a(16);
             return;
           }

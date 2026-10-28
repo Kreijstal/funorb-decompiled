@@ -311,7 +311,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             dm.a(param0 - 251, PointCloudEffect.d((byte) -89));
           }
           if (var4 == 10) {
-            om.field_c.writeCipheredOpcode(17, true);
+            QuickChatDynamicCommand.field_c.writeCipheredOpcode(17, true);
           }
           if (param0 != 255) {
             this.field_m = -32L;
@@ -382,11 +382,11 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void c(boolean param0) {
-        int var2 = om.field_g.readUnsignedByte(0);
+        int var2 = QuickChatDynamicCommand.field_g.readUnsignedByte(0);
         boolean var3 = ((1 & var2) != 0);
         int var4 = -1 + EmailSyntaxValidator.field_r;
         byte[] var5 = new byte[var4];
-        om.field_g.readCipheredBytes(var5, 19583, var4, 0);
+        QuickChatDynamicCommand.field_g.readCipheredBytes(var5, 19583, var4, 0);
         Bzip2State.a(param0, (var3), PointCloudEffect.d((byte) -122), RasterSnapshot.a(var5, 117));
     }
 
@@ -427,7 +427,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else if (7 == var2) {
             this.h((byte) 108);
           } else if (var2 == 8) {
-            km.a(om.field_g, field_r, EmailSyntaxValidator.field_r, -24183);
+            km.a(QuickChatDynamicCommand.field_g, field_r, EmailSyntaxValidator.field_r, -24183);
           } else if (var2 == 16) {
             ll.a(true);
           } else {
@@ -684,10 +684,10 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (fc.field_a == 2) {
           if (null != PasswordValidator.field_p &&
-            PasswordValidator.field_p.b(~param0)) {
-            if (!PasswordValidator.field_p.a("", (byte) -119)) {
+            PasswordValidator.field_p.ensureIndex(~param0)) {
+            if (!PasswordValidator.field_p.hasGroupName("", (byte) -119)) {
               PasswordValidator.field_p = null;
-            } else if (PasswordValidator.field_p.a(0, "")) {
+            } else if (PasswordValidator.field_p.tryLoadNamedGroup(0, "")) {
               DropTargetWidget.a(true, PasswordValidator.field_p);
               PasswordValidator.field_p = null;
               SpriteOffset.a((byte) 62);
@@ -724,7 +724,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ii.field_a = null;
           pl.field_j = null;
           w.field_ab = null;
-          QuickChatPhraseDefinition.a(82, (java.applet.Applet) (this));
+          QuickChatPhraseDefinition.inspectAppletUsername(82, (java.applet.Applet) (this));
           SpriteOffset.a((byte) 126);
           fc.field_a = 10;
         }
@@ -735,8 +735,8 @@ abstract class NetworkGameClient extends GameAppletShell {
           fc.field_a = 11;
         }
         if (fc.field_a == 11) {
-          if (mg.field_c != null && (!mg.field_c.b(0) ||
-            !mg.field_c.a((byte) -119))) {
+          if (mg.field_c != null && (!mg.field_c.ensureIndex(0) ||
+            !mg.field_c.tryLoadAllGroups((byte) -119))) {
             dn.a(Bullet.formatArchiveProgress(md.field_H, mg.field_c, gj.field_g, -12920), 17637, 0.0f);
             boolean decompiledFrameRemainder0 = false;
           }

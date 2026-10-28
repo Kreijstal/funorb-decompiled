@@ -186,7 +186,7 @@ final class jm extends UiComponent {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param1.a(24, (byte) 21, param0, var2);
+                param1.writeBytes(24, (byte) 21, param0, var2);
                 decompiledRegionSelector0 = false;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -200,7 +200,7 @@ final class jm extends UiComponent {
                 return;
               }
             }
-            param1.a(24, (byte) 21, param0, var2);
+            param1.writeBytes(24, (byte) 21, param0, var2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

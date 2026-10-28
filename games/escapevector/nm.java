@@ -23,8 +23,8 @@ final class nm {
           if (param0 != 2) {
             field_a = (PcmSample) null;
           }
-          int var5_int = param3.b(-1, param1);
-          int var6 = param3.a(var5_int, param4, true);
+          int var5_int = param3.findGroupId(-1, param1);
+          int var6 = param3.findFileId(var5_int, param4, true);
           TrackerMusicDefinition stackIn_3_0 = ml.a(param0 ^ -15620, param3, param2, var6, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

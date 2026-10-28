@@ -43,21 +43,21 @@ final class fe {
         }
         this.b(-122);
         if (null != ck.field_x &&
-          ck.field_x.b(0) &&
-          ck.field_x.a(0, "members_expansion_screen") &&
-          ck.field_x.a(0, "arialish12") &&
-          ck.field_x.a(0, "pump32") &&
+          ck.field_x.ensureIndex(0) &&
+          ck.field_x.tryLoadNamedGroup(0, "members_expansion_screen") &&
+          ck.field_x.tryLoadNamedGroup(0, "arialish12") &&
+          ck.field_x.tryLoadNamedGroup(0, "pump32") &&
           pc.field_e != null &&
-          pc.field_e.b(0) &&
-          pc.field_e.a(0, "arialish12") &&
-          pc.field_e.a(0, "pump32")) {
+          pc.field_e.ensureIndex(0) &&
+          pc.field_e.tryLoadNamedGroup(0, "arialish12") &&
+          pc.field_e.tryLoadNamedGroup(0, "pump32")) {
           TriangleMesh.field_z = AccountRegistrationPanel.a(ck.field_x, 54, "frame", "members_expansion_screen");
           ml.field_c = fe.a("members_expansion_screen", ck.field_x, "arrow", true);
           ac.field_c = oi.a(4, pc.field_e, "arialish12", "", ck.field_x);
-          mn.field_h = ac.a("", -73, ck.field_x, "pump32", pc.field_e);
+          ReflectionCheck.field_h = ac.a("", -73, ck.field_x, "pump32", pc.field_e);
           wf.field_e = p.a((byte) 8, "benefit_orbs", ck.field_x, "members_expansion_screen");
           ee.field_c = p.a((byte) 8, "button_text", ck.field_x, "members_expansion_screen");
-          om.field_a = ui.a("button_highlights", ck.field_x, "members_expansion_screen", (byte) 71);
+          QuickChatDynamicCommand.field_a = ui.a("button_highlights", ck.field_x, "members_expansion_screen", (byte) 71);
           ck.field_x = null;
           pc.field_e = null;
         }
@@ -101,9 +101,9 @@ final class fe {
         ac.field_c.a(MatchingTextValidator.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ee.field_c.e(508 + (127 - ee.field_c.fullWidth) / 2, 315);
         if (this.field_a.field_h == 0) {
-          om.field_a[0].e(508, 299);
+          QuickChatDynamicCommand.field_a[0].e(508, 299);
         } else if (this.field_a.field_h == 1) {
-          om.field_a[1].e(508, 387);
+          QuickChatDynamicCommand.field_a[1].e(508, 387);
         }
     }
 
@@ -239,8 +239,8 @@ final class fe {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
-          int var4_int = param1.b(-1, param0);
-          int var5 = param1.a(var4_int, param2, param3);
+          int var4_int = param1.findGroupId(-1, param0);
+          int var5 = param1.findFileId(var4_int, param2, param3);
           Sprite stackIn_1_0 = EditableTextWidget.a(var4_int, var5, param1, (byte) 9);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -383,7 +383,7 @@ final class fe {
 
     private final void b(byte param0) {
         if (null == this.field_g) {
-          if (mn.field_h == null) {
+          if (ReflectionCheck.field_h == null) {
             return;
           }
           this.field_g = new Sprite(622, 47);
@@ -392,10 +392,10 @@ final class fe {
           int var2 = 16448250;
           int var3 = 10068666;
           int[] var17 = ug.a(1746055568, var3, var2);
-          this.a(mn.field_h, 0, 0, 47, 622, 0, this.field_f, var17);
+          this.a(ReflectionCheck.field_h, 0, 0, 47, 622, 0, this.field_f, var17);
           dl.a((byte) 107);
           this.field_c = new Sprite(475, 24);
-          this.a(0, mn.field_h, fd.field_d, 24, 0, this.field_c, -4, 0.75f, var17, 475);
+          this.a(0, ReflectionCheck.field_h, fd.field_d, 24, 0, this.field_c, -4, 0.75f, var17, 475);
           int[] var18 = ug.a(1746055568, 526344, 526344);
           Sprite var5 = new Sprite(121, 122);
           eo.a(var5, (byte) -40);
@@ -407,9 +407,9 @@ final class fe {
           SoftwareRasterizer.c(0, var5.height / 2, var5.width, var5.height, 16306250, 15568919);
           String var6 = UiComponent.field_r;
           String var7 = mh.field_b;
-          this.a(0, mn.field_h, var6, var5.height, 0, var5, -16, 0.5f, var18, var5.width);
-          this.a(0, mn.field_h, var7, var5.height, 0, var5, 20, 0.5f, var18, var5.width);
-          this.a(0, mn.field_h, p.field_f[this.field_o], var5.height / 3, 0, var5, -mn.field_h.field_r + (var5.height / 2 + 12), 0.699999988079071f, var18, var5.width);
+          this.a(0, ReflectionCheck.field_h, var6, var5.height, 0, var5, -16, 0.5f, var18, var5.width);
+          this.a(0, ReflectionCheck.field_h, var7, var5.height, 0, var5, 20, 0.5f, var18, var5.width);
+          this.a(0, ReflectionCheck.field_h, p.field_f[this.field_o], var5.height / 3, 0, var5, -ReflectionCheck.field_h.field_r + (var5.height / 2 + 12), 0.699999988079071f, var18, var5.width);
           dl.a((byte) -54);
           this.field_h = new Sprite(121, 122);
           eo.a(this.field_h, (byte) -104);

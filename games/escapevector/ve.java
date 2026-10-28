@@ -65,12 +65,12 @@ final class ve implements WidgetPainter {
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
         try {
-          if (null == om.field_e) {
+          if (null == QuickChatDynamicCommand.field_e) {
             kc.field_c = dn.a(0, TextLayoutLine.field_f, ej.field_g, param1, 1, param3, dn.field_C);
             int[] var6 = (int[]) null;
             HudMessage.field_k = dn.a(0, ok.field_b, CipherPacketBuffer.field_q, param2, 0, (int[]) null, q.field_L);
             tk.field_b = new qh(param1, bm.field_e, Js5Transport.field_i, 1, SelfDestructEffects.field_n, param3);
-            om.field_e = new p();
+            QuickChatDynamicCommand.field_e = new p();
             Object stackIn_3_0 = null;
             return (p) (stackIn_3_0);
           }
@@ -78,10 +78,10 @@ final class ve implements WidgetPainter {
             String var5 = (String) null;
             ve.a((byte) 82, (String) null);
           }
-          if (!om.field_e.a(23389)) {
+          if (!QuickChatDynamicCommand.field_e.a(23389)) {
             return null;
           }
-          p stackIn_9_0 = om.field_e;
+          p stackIn_9_0 = QuickChatDynamicCommand.field_e;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

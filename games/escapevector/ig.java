@@ -55,26 +55,26 @@ final class ig {
     final static void a(int param0, int param1, ik param2) {
         int var7 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var8 = om.field_c;
+          CipherPacketBuffer var8 = QuickChatDynamicCommand.field_c;
           CipherPacketBuffer var9 = var8;
           var9.writeCipheredOpcode(param1, true);
           var9.position = var9.position + 1;
           int var4 = var9.position;
-          var9.f(1, -123);
-          var9.h(-113, param2.field_i);
-          var9.h(-107, param2.field_j);
-          var9.h(110, param2.field_k);
-          var9.a((byte) 124, param2.field_o);
-          var9.a((byte) 123, param2.field_m);
-          var9.a((byte) 127, param2.field_n);
-          var9.a((byte) 127, param2.field_g);
-          var9.f(param2.field_q.length, -123);
+          var9.writeByte(1, -123);
+          var9.writeShort(-113, param2.field_i);
+          var9.writeShort(-107, param2.field_j);
+          var9.writeShort(110, param2.field_k);
+          var9.writeInt((byte) 124, param2.field_o);
+          var9.writeInt((byte) 123, param2.field_m);
+          var9.writeInt((byte) 127, param2.field_n);
+          var9.writeInt((byte) 127, param2.field_g);
+          var9.writeByte(param2.field_q.length, -123);
           int var5 = -65 / ((87 - param0) / 35);
           for (int var6 = 0; param2.field_q.length > var6; var6++) {
-            var8.a((byte) 123, param2.field_q[var6]);
+            var8.writeInt((byte) 123, param2.field_q[var6]);
           }
-          var9.c(var4, -39);
-          var9.e(-56, -var4 + var9.position);
+          var9.appendCrc32(var4, -39);
+          var9.backpatchByteLength(-56, -var4 + var9.position);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ig.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

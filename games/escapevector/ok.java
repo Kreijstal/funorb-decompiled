@@ -135,7 +135,7 @@ final class ok {
           if (param0 != 0) {
             field_d = (byte[][]) null;
           }
-          String stackIn_3_0 = ResourceArchive.a(true, false, param1);
+          String stackIn_3_0 = ResourceArchive.accountNameValidationMessage(true, false, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

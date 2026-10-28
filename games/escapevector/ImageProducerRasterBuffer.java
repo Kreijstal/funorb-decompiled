@@ -155,7 +155,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (param0 <= 68) {
             return;
           }
-          CipherPacketBuffer var14 = om.field_g;
+          CipherPacketBuffer var14 = QuickChatDynamicCommand.field_g;
           int var2 = var14.readUnsignedByte(0);
           if (var2 == 0) {
             int[] var11 = v.a(-84);

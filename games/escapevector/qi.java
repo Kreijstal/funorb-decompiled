@@ -5,7 +5,7 @@ final class qi extends UiContainer implements ButtonListener {
     static Sprite[][] field_M;
     static PcmSample field_J;
     private int field_H;
-    static om field_P;
+    static QuickChatDynamicCommand field_P;
     private pn field_K;
     static int field_N;
     private String field_G;
@@ -251,6 +251,6 @@ final class qi extends UiContainer implements ButtonListener {
 
     static {
         field_N = 0;
-        field_P = new om(1, 2, 2, 0);
+        field_P = new QuickChatDynamicCommand(1, 2, 2, 0);
     }
 }

@@ -122,10 +122,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(archive)) {
-            archive.a(true, groupId, fileId);
+            archive.tryLoadFile(true, groupId, fileId);
             return null;
           }
-          byte[] var3 = archive.a(groupId, (byte) -97, fileId);
+          byte[] var3 = archive.getFile(groupId, (byte) -97, fileId);
           if (var3 == null) {
             return null;
           }
@@ -155,10 +155,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(archive)) {
-            archive.a(fileName, groupName, (byte) 98);
+            archive.tryLoadNamedFile(fileName, groupName, (byte) 98);
             return null;
           }
-          byte[] var3 = archive.a(-4, fileName, groupName);
+          byte[] var3 = archive.getNamedFile(-4, fileName, groupName);
           if (var3 == null) {
             return null;
           }
@@ -188,7 +188,7 @@ final class VorbisSample extends IntrusiveNode {
 
     private final static boolean ensureSetup(ResourceArchive archive) {
         if (!setupLoaded) {
-          byte[] var1 = archive.a(0, (byte) -97, 0);
+          byte[] var1 = archive.getFile(0, (byte) -97, 0);
           if (var1 == null) {
             return false;
           }
@@ -239,7 +239,7 @@ final class VorbisSample extends IntrusiveNode {
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           byte[] var6 = new byte[var5];
-          var2.a(var6, (byte) -96, 0, var5);
+          var2.readBytes(var6, (byte) -96, 0, var5);
           this.packets[var4] = var6;
         }
     }

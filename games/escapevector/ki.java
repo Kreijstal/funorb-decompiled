@@ -5,7 +5,7 @@ final class ki extends SingleChildContainer {
     private int field_F;
     private String field_G;
     private int field_K;
-    static om field_H;
+    static QuickChatDynamicCommand field_H;
     private int field_D;
     private boolean field_E;
     private BitmapFont field_L;
@@ -18,7 +18,7 @@ final class ki extends SingleChildContainer {
           if (param1 != 10592) {
             ki.releaseStatics(-55);
           }
-          byte[] stackIn_3_0 = wk.field_e.a(param1 ^ -10596, param0, "");
+          byte[] stackIn_3_0 = wk.field_e.getNamedFile(param1 ^ -10596, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,7 +125,7 @@ final class ki extends SingleChildContainer {
     }
 
     static {
-        field_H = new om(10, 2, 2, 0);
+        field_H = new QuickChatDynamicCommand(10, 2, 2, 0);
         field_M = new int[]{-1, -1, -1, 0};
         field_I = "Container not retrieved - restarting";
     }

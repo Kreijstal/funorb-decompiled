@@ -502,7 +502,7 @@ final class ta {
           this.field_i[var4] = new dk(var5, this.field_c, of.field_a);
           this.field_i[var4].b((byte) 127, var7, var6);
           this.field_i[var4].a(TextFieldValidator.field_j.fullHeight, 0, TextFieldValidator.field_j.fullWidth);
-          QuickChatPhraseDefinition.a(-92, this.field_i[var4]);
+          QuickChatPhraseDefinition.applyGrayButtonPalette(-92, this.field_i[var4]);
           var4++;
         }
         if (this.field_y - 1 > this.field_h) {
@@ -513,7 +513,7 @@ final class ta {
           this.field_i[var4] = new dk(var5, this.field_e, TextFieldValidator.field_j);
           this.field_i[var4].b((byte) 122, var7Lifetime1, var6);
           this.field_i[var4].a(TextFieldValidator.field_j.fullHeight, 0, TextFieldValidator.field_j.fullWidth);
-          QuickChatPhraseDefinition.a(-110, this.field_i[var4]);
+          QuickChatPhraseDefinition.applyGrayButtonPalette(-110, this.field_i[var4]);
         }
         return param0;
     }

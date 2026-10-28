@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class pj implements Runnable {
-    static om field_k;
+    static QuickChatDynamicCommand field_k;
     private boolean field_f;
     private java.net.Socket field_i;
     private int field_j;
@@ -299,6 +299,6 @@ final class pj implements Runnable {
     }
 
     static {
-        field_k = new om(7, 0, 1, 1);
+        field_k = new QuickChatDynamicCommand(7, 0, 1, 1);
     }
 }

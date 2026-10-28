@@ -118,17 +118,17 @@ final class q extends TextButton {
 
     final static void c(int param0, byte param1) {
         if (param1 < -60) {
-          CipherPacketBuffer var2 = om.field_c;
+          CipherPacketBuffer var2 = QuickChatDynamicCommand.field_c;
           var2.writeCipheredOpcode(param0, true);
-          var2.f(1, -123);
-          var2.f(0, -123);
+          var2.writeByte(1, -123);
+          var2.writeByte(0, -123);
           return;
         }
         field_P = true;
-        CipherPacketBuffer var2Lifetime1 = om.field_c;
+        CipherPacketBuffer var2Lifetime1 = QuickChatDynamicCommand.field_c;
         var2Lifetime1.writeCipheredOpcode(param0, true);
-        var2Lifetime1.f(1, -123);
-        var2Lifetime1.f(0, -123);
+        var2Lifetime1.writeByte(1, -123);
+        var2Lifetime1.writeByte(0, -123);
     }
 
     private q() throws Throwable {

@@ -146,22 +146,22 @@ final class wk {
           boolean var4 = (da.a(param1, (byte) -104));
           boolean var5 = (da.a(param1, (byte) -114));
           TriangleMesh var6 = new TriangleMesh();
-          var6.field_K = (short)param1.readBits(16, 8);
-          var6.field_L = BufferedRandomAccessFile.a(param1, 16, var6.field_L, -1);
-          var6.field_r = BufferedRandomAccessFile.a(param1, 16, var6.field_r, -1);
-          var6.field_J = BufferedRandomAccessFile.a(param1, 16, var6.field_J, -1);
-          var6.field_D = (short)param1.readBits(16, 8);
-          var6.field_e = BufferedRandomAccessFile.a(param1, 16, var6.field_e, -1);
-          var6.field_o = BufferedRandomAccessFile.a(param1, 16, var6.field_o, -1);
-          var6.field_f = BufferedRandomAccessFile.a(param1, 16, var6.field_f, -1);
+          var6.vertexCount = (short)param1.readBits(16, 8);
+          var6.vertexX = BufferedRandomAccessFile.a(param1, 16, var6.vertexX, -1);
+          var6.vertexY = BufferedRandomAccessFile.a(param1, 16, var6.vertexY, -1);
+          var6.vertexZ = BufferedRandomAccessFile.a(param1, 16, var6.vertexZ, -1);
+          var6.faceCount = (short)param1.readBits(16, 8);
+          var6.faceVertexA = BufferedRandomAccessFile.a(param1, 16, var6.faceVertexA, -1);
+          var6.faceVertexB = BufferedRandomAccessFile.a(param1, 16, var6.faceVertexB, -1);
+          var6.faceVertexC = BufferedRandomAccessFile.a(param1, 16, var6.faceVertexC, -1);
           if (var4) {
-            var6.field_M = (short)param1.readBits(16, 8);
+            var6.normalCount = (short)param1.readBits(16, 8);
             var6.field_N = BufferedRandomAccessFile.a(param1, 16, var6.field_N, -1);
             var6.field_q = BufferedRandomAccessFile.a(param1, 16, var6.field_q, -1);
             var6.field_w = BufferedRandomAccessFile.a(param1, 16, var6.field_w, -1);
-            var6.field_h = BufferedRandomAccessFile.a(param1, 16, var6.field_h, -1);
-            var6.field_u = BufferedRandomAccessFile.a(param1, 16, var6.field_u, -1);
-            var6.field_j = BufferedRandomAccessFile.a(param1, 16, var6.field_j, -1);
+            var6.faceNormalA = BufferedRandomAccessFile.a(param1, 16, var6.faceNormalA, -1);
+            var6.faceNormalB = BufferedRandomAccessFile.a(param1, 16, var6.faceNormalB, -1);
+            var6.faceNormalC = BufferedRandomAccessFile.a(param1, 16, var6.faceNormalC, -1);
           }
           if (var5) {
             param1.readBits(16, 8);
@@ -210,14 +210,14 @@ final class wk {
         String stackIn_16_2 = null;
         String stackIn_19_2 = null;
         try {
-          if (!param4.b(0)) {
+          if (!param4.ensureIndex(0)) {
             String stackIn_2_0 = (String) (param0);
             return stackIn_2_0;
           }
           if (param1) {
             field_a = (String) null;
           }
-          String stackIn_6_0 = param2 + " - " + param4.a(param3, 0) + "%";
+          String stackIn_6_0 = param2 + " - " + param4.namedGroupProgress(param3, 0) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

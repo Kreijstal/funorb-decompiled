@@ -42,7 +42,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
               byte[] var13 = new byte[var4];
               byte[] var11 = var13;
               byte[] var5_ref_byte__ = var11;
-              var10.a(var13, (byte) -96, 0, var4);
+              var10.readBytes(var13, (byte) -96, 0, var4);
               byte[] stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }

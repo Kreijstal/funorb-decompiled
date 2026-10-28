@@ -31,25 +31,25 @@ final class gb {
             NameAvailabilityValidator.field_r = new PacketBuffer(var7_int);
           }
           NameAvailabilityValidator.field_r.position = 0;
-          NameAvailabilityValidator.field_r.a(param5, (byte) 21, param6, param3);
-          NameAvailabilityValidator.field_r.g(-1, var7_int);
-          NameAvailabilityValidator.field_r.a(1527987844, var13);
+          NameAvailabilityValidator.field_r.writeBytes(param5, (byte) 21, param6, param3);
+          NameAvailabilityValidator.field_r.padToPosition(-1, var7_int);
+          NameAvailabilityValidator.field_r.xteaEncrypt(1527987844, var13);
           if (null == ValidationIndicator.field_L ||
             !(100 <= ValidationIndicator.field_L.payload.length)) {
             ValidationIndicator.field_L = new PacketBuffer(100);
           }
           ValidationIndicator.field_L.position = 0;
-          ValidationIndicator.field_L.f(10, -123);
+          ValidationIndicator.field_L.writeByte(10, -123);
           int var11 = 0;
           int var9Lifetime1 = var11;
           while (var11 < 4) {
-            ValidationIndicator.field_L.a((byte) 127, var13[var11]);
+            ValidationIndicator.field_L.writeInt((byte) 127, var13[var11]);
             var11++;
           }
-          ValidationIndicator.field_L.h(48, param5);
-          ValidationIndicator.field_L.a((byte) -94, param0, param2);
-          param4.a(ValidationIndicator.field_L.position, (byte) 21, 0, ValidationIndicator.field_L.payload);
-          param4.a(NameAvailabilityValidator.field_r.position, (byte) 21, 0, NameAvailabilityValidator.field_r.payload);
+          ValidationIndicator.field_L.writeShort(48, param5);
+          ValidationIndicator.field_L.rsaEncrypt((byte) -94, param0, param2);
+          param4.writeBytes(ValidationIndicator.field_L.position, (byte) 21, 0, ValidationIndicator.field_L.payload);
+          param4.writeBytes(NameAvailabilityValidator.field_r.position, (byte) 21, 0, NameAvailabilityValidator.field_r.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

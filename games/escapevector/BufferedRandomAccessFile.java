@@ -408,9 +408,9 @@ final class BufferedRandomAccessFile {
               var4_ref_dm.field_g < var2_long) {
               var4_ref_dm.unlink((byte) -67);
               EmailSyntaxValidator.field_r = var4_ref_dm.field_j.length;
-              om.field_g.position = 0;
+              QuickChatDynamicCommand.field_g.position = 0;
               for (int var5_int = 0; var5_int < EmailSyntaxValidator.field_r; var5_int++) {
-                om.field_g.payload[var5_int] = var4_ref_dm.field_j[var5_int];
+                QuickChatDynamicCommand.field_g.payload[var5_int] = var4_ref_dm.field_j[var5_int];
               }
               NetworkGameClient.field_q = ArchiveIndex.field_t;
               ArchiveIndex.field_t = jj.field_b;
@@ -435,12 +435,12 @@ final class BufferedRandomAccessFile {
         try {
           while (true) {
             if (stackIn_22_0 < 0) {
-              om.field_g.position = 0;
+              QuickChatDynamicCommand.field_g.position = 0;
               if (!bo.a(30000, 1)) {
                 return false;
               }
-              GameAppletShell.field_a = om.field_g.readCipheredOpcode(8);
-              om.field_g.position = 0;
+              GameAppletShell.field_a = QuickChatDynamicCommand.field_g.readCipheredOpcode(8);
+              QuickChatDynamicCommand.field_g.position = 0;
               EmailSyntaxValidator.field_r = param0[GameAppletShell.field_a];
             }
             if (!ll.d(10550)) {
@@ -463,7 +463,7 @@ final class BufferedRandomAccessFile {
             }
             dm var5 = new dm(var2_long + (long)var4, GameAppletShell.field_a, new byte[EmailSyntaxValidator.field_r]);
             for (int var6 = 0; var6 < EmailSyntaxValidator.field_r; var6++) {
-              var5.field_j[var6] = om.field_g.payload[var6];
+              var5.field_j[var6] = QuickChatDynamicCommand.field_g.payload[var6];
             }
             bb.field_L.addLast(-12328, var5);
             GameAppletShell.field_a = -1;

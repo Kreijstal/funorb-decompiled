@@ -47,16 +47,16 @@ final class ff {
           return var3;
         }
         if (param0 >= 32768) {
-          var4 = this.field_j.a(1, (byte) -97, 32767 & param0);
+          var4 = this.field_j.getFile(1, (byte) -97, 32767 & param0);
         } else {
-          var4 = this.field_d.a(1, (byte) -97, param0);
+          var4 = this.field_d.getFile(1, (byte) -97, param0);
         }
         var3 = new QuickChatPhraseDefinition();
         if (var4 != null) {
-          var3.a(new PacketBuffer(var4), 0);
+          var3.decode(new PacketBuffer(var4), 0);
         }
         if (param0 >= 32768) {
-          var3.d((byte) 88);
+          var3.markGlobalResponses((byte) 88);
         }
         if (param1 <= -118) {
           this.field_c.a(var3, (long)param0, (byte) 100);

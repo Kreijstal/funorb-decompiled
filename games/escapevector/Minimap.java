@@ -676,7 +676,7 @@ final class Minimap {
           LevelObject var5 = (LevelObject) (var2.elementAt(var4));
           if (var5 != null) {
             int var6 = var5.objectType;
-            if ((ResourceArchive.a(var6, -64) ||
+            if ((ResourceArchive.isPowerupType(var6, -64) ||
               var6 == 0 ||
               var6 == 5) && var6 != 1) {
               this.field_C.addLast(param0 - 12328, var5);

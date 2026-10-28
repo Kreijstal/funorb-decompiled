@@ -434,7 +434,7 @@ final class tf {
         if (param0 != 0) {
           tf.releaseStatics(-60);
         }
-        return om.field_g.c(false);
+        return QuickChatDynamicCommand.field_g.readString(false);
     }
 
     private final void a(int param0, int param1, boolean param2, int param3) {

@@ -89,7 +89,7 @@ class DualLinkNode extends IntrusiveNode {
           NameSuggestionsPanel.field_N = param2;
           he.field_y = param4;
           TrackerMusicDefinition.field_j = param5;
-          mn.field_n = param6;
+          ReflectionCheck.field_n = param6;
           kh.field_c = param0;
           SelfDestructEffects.field_j = (Js5Transport) ((Object) new bk());
           ShipHullGeometry.field_b = new DiskCacheWorker(param1);

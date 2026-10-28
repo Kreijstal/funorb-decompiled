@@ -346,7 +346,7 @@ public final class EscapeVector extends NetworkGameClient {
           fh.releaseStatics((byte) 86);
           Bzip2Decoder.releaseStatics();
           Bzip2State.releaseStatics(8192);
-          mn.releaseStatics((byte) 96);
+          ReflectionCheck.releaseStatics((byte) 96);
           jd.releaseStatics((byte) 77);
           ej.releaseStatics(26);
           CheckboxPainter.releaseStatics((byte) -44);
@@ -405,7 +405,7 @@ public final class EscapeVector extends NetworkGameClient {
           kn.releaseStatics(true);
           DraggableWidget.releaseStatics(-105);
           DropTargetWidget.releaseStatics((byte) 59);
-          om.releaseStatics(5468);
+          QuickChatDynamicCommand.releaseStatics(5468);
           qm.releaseStatics((byte) 126);
           vb.releaseStatics((byte) 99);
           sh.releaseStatics(0);
@@ -561,7 +561,7 @@ public final class EscapeVector extends NetworkGameClient {
               ObjectSpriteSet.field_d[1] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_2");
               ObjectSpriteSet.field_d[2] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_3");
               ObjectSpriteSet.field_d[3] = nm.a(2, "", var2_ref, PointCloudEffect.field_D, "music/oss_area_4");
-              ObjectSpriteSet.field_d[4] = nm.a(PacketBuffer.a((int) param0, -94), "", var2_ref, PointCloudEffect.field_D, "music/simulator");
+              ObjectSpriteSet.field_d[4] = nm.a(PacketBuffer.xor((int) param0, -94), "", var2_ref, PointCloudEffect.field_D, "music/simulator");
               PointCloudEffect.field_D = null;
               SpriteOffset.a((byte) 93);
               return;

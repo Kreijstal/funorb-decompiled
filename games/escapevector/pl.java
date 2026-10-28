@@ -5,7 +5,7 @@ final class pl extends ld {
     private static long[] field_l;
     static float field_t;
     static PcmStreamMixer field_n;
-    static om field_m;
+    static QuickChatDynamicCommand field_m;
     static ResourceArchive field_j;
     static int field_r;
     static t field_q;
@@ -60,7 +60,7 @@ final class pl extends ld {
           field_l[var2] = var0;
         }
         field_s = new String[]{"Retrieval - Normal", "Retrieval - Hard", "Retribution", "Simulator"};
-        field_m = new om(4, 1, 1, 1);
+        field_m = new QuickChatDynamicCommand(4, 1, 1, 1);
         field_i = "Type your password again to make sure it's correct";
         field_k = new String[]{"fuel", "crate", "turret", "magnet", "repeller", "tnt", "laser_left", "laser_right", "barrier", "powerup_shield", "powerup_triple_shot", "powerup_thrust", "powerup_one_rockbuster", "powerup_five_rockbusters"};
         field_p = "Simulator objectives";

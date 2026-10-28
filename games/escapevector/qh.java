@@ -31,16 +31,16 @@ final class qh {
           if (this.field_f == 1) {
             Object var3 = null;
             if (this.field_g != null) {
-              var3_array = this.field_d.a((byte) 78, this.field_a, this.field_h, this.field_g);
+              var3_array = this.field_d.getNamedFileWithKey((byte) 78, this.field_a, this.field_h, this.field_g);
             } else {
-              var3_array = this.field_d.a(-4, this.field_h, this.field_a);
+              var3_array = this.field_d.getNamedFile(-4, this.field_h, this.field_a);
             }
             this.field_c = new Sprite(var3_array, (java.awt.Component) ((Object) of.field_d));
             return this.field_c;
           }
           return this.field_c;
         }
-        if (!this.field_d.a(0, this.field_a)) {
+        if (!this.field_d.tryLoadNamedGroup(0, this.field_a)) {
           return null;
         }
         int var2Lifetime1 = 5 % ((-30 - param0) / 48);
@@ -53,9 +53,9 @@ final class qh {
         }
         byte[] var3_arrayLifetime1 = null;
         if (this.field_g != null) {
-          var3_arrayLifetime2 = this.field_d.a((byte) 78, this.field_a, this.field_h, this.field_g);
+          var3_arrayLifetime2 = this.field_d.getNamedFileWithKey((byte) 78, this.field_a, this.field_h, this.field_g);
         } else {
-          var3_arrayLifetime2 = this.field_d.a(-4, this.field_h, this.field_a);
+          var3_arrayLifetime2 = this.field_d.getNamedFile(-4, this.field_h, this.field_a);
         }
         this.field_c = new Sprite(var3_arrayLifetime2, (java.awt.Component) ((Object) of.field_d));
         return this.field_c;
@@ -100,10 +100,10 @@ final class qh {
 
     final static void a(rl param0, boolean param1, int param2) {
         try {
-          CipherPacketBuffer var3 = om.field_c;
+          CipherPacketBuffer var3 = QuickChatDynamicCommand.field_c;
           var3.writeCipheredOpcode(param2, param1);
-          var3.f(param0.field_i, -123);
-          var3.f(param0.field_g, -123);
+          var3.writeByte(param0.field_i, -123);
+          var3.writeByte(param0.field_g, -123);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "qh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

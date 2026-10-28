@@ -502,7 +502,7 @@ final class en {
 
     final static void a(ResourceArchive param0, int param1) {
         int var2_int = param1;
-        if (!param0.a(0, da.field_d[var2_int])) {
+        if (!param0.tryLoadNamedGroup(0, da.field_d[var2_int])) {
           return;
         }
         try {

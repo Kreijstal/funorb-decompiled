@@ -8,7 +8,7 @@ final class ci {
     boolean field_f;
     int field_b;
     private int field_c;
-    static om field_d;
+    static QuickChatDynamicCommand field_d;
     static PcmSample field_a;
 
     public static void releaseStatics(int guard) {
@@ -56,14 +56,14 @@ final class ci {
         if (!TrackerMusicDefinition.field_f.b(param0 + 117)) {
           if (null == IntValueNode.field_i) {
             if (param0 != 0) {
-              field_d = (om) null;
+              field_d = (QuickChatDynamicCommand) null;
               return;
             }
             return;
           }
           kh.a(lh.b((byte) 116), param0 - 1230, true);
           if (param0 != 0) {
-            field_d = (om) null;
+            field_d = (QuickChatDynamicCommand) null;
             return;
           }
           return;
@@ -72,7 +72,7 @@ final class ci {
         if (param0 == 0) {
           return;
         }
-        field_d = (om) null;
+        field_d = (QuickChatDynamicCommand) null;
     }
 
     final static ll a(int param0, int param1, int param2, int param3) {
@@ -116,6 +116,6 @@ final class ci {
 
     static {
         field_g = -1;
-        field_d = new om(6, 0, 4, 2);
+        field_d = new QuickChatDynamicCommand(6, 0, 4, 2);
     }
 }

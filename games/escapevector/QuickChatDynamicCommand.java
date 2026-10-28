@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om {
-    int field_f;
-    int field_d;
+final class QuickChatDynamicCommand {
+    int id;
+    int parameterCount;
     static eg field_b;
     static p field_e;
     static CipherPacketBuffer field_g;
@@ -23,14 +23,14 @@ final class om {
           field_a = null;
           return;
         }
-        om.releaseStatics(-50);
+        QuickChatDynamicCommand.releaseStatics(-50);
         field_e = null;
         field_a = null;
     }
 
-    om(int param0, int param1, int param2, int param3) {
-        this.field_f = param0;
-        this.field_d = param3;
+    QuickChatDynamicCommand(int id, int unusedArgumentOne, int unusedArgumentTwo, int parameterCount) {
+        this.id = id;
+        this.parameterCount = parameterCount;
     }
 
     static {

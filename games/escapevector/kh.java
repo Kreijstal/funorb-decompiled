@@ -78,8 +78,8 @@ final class kh {
         String stackIn_11_2 = null;
         try {
           int var6 = 21 / ((param1 - 62) / 60);
-          int var4_int = param0.b(-1, param2);
-          int var5 = param0.a(var4_int, param3, true);
+          int var4_int = param0.findGroupId(-1, param2);
+          int var5 = param0.findFileId(var4_int, param3, true);
           Sprite[] stackIn_1_0 = cc.a(var4_int, param0, var5, (byte) 75);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

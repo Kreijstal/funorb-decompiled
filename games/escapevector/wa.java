@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wa {
-    static om field_d;
+    static QuickChatDynamicCommand field_d;
     static IntrusiveDeque field_c;
     static Sprite field_b;
     static Sprite field_e;
@@ -39,7 +39,7 @@ final class wa {
     }
 
     static {
-        field_d = new om(15, 0, 1, 0);
+        field_d = new QuickChatDynamicCommand(15, 0, 1, 0);
         field_a = "Email address is unavailable";
     }
 }

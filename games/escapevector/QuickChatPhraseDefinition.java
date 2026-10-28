@@ -4,51 +4,51 @@
 final class QuickChatPhraseDefinition extends DualLinkNode {
     static String field_w;
     static int[] fullTileMask;
-    private int[][] field_q;
+    private int[][] commandParameters;
     static String field_y;
     static IntrusiveDeque field_u;
     static int field_r;
-    int[] field_z;
-    private int[] field_x;
-    private String[] field_s;
+    int[] responseIds;
+    private int[] commandIds;
+    private String[] textFragments;
     static PcmSample field_t;
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
+    private final void decodeOpcode(int guard, PacketBuffer input, int opcode) {
         String stackIn_24_2 = null;
         int var4_int = 0;
         int var5 = 0;
         int var9 = EscapeVector.obfuscationControl;
         try {
-          if (param0 != 10691) {
+          if (guard != 10691) {
             return;
           }
-          if (param2 == 1) {
-            this.field_s = bb.a(-128, param1.c(false), '<');
+          if (opcode == 1) {
+            this.textFragments = bb.a(-128, input.readString(false), '<');
           } else {
-            if (param2 == 2) {
-              var4_int = param1.readUnsignedByte(param0 ^ 10691);
-              this.field_z = new int[var4_int];
+            if (opcode == 2) {
+              var4_int = input.readUnsignedByte(guard ^ 10691);
+              this.responseIds = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_z[var5] = param1.readUnsignedShort(1952);
+                this.responseIds[var5] = input.readUnsignedShort(1952);
               }
-            } else if (param2 == 3) {
-              var4_int = param1.readUnsignedByte(0);
-              this.field_q = new int[var4_int][];
-              this.field_x = new int[var4_int];
+            } else if (opcode == 3) {
+              var4_int = input.readUnsignedByte(0);
+              this.commandParameters = new int[var4_int][];
+              this.commandIds = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                int var6 = param1.readUnsignedShort(1952);
-                om var7 = NameAvailabilityValidator.a((byte) -57, var6);
+                int var6 = input.readUnsignedShort(1952);
+                QuickChatDynamicCommand var7 = NameAvailabilityValidator.findQuickChatDynamicCommand((byte) -57, var6);
                 if (var7 != null) {
-                  this.field_x[var5] = var6;
-                  int[] array$0 = new int[var7.field_d];
-                  this.field_q[var5] = array$0;
-                  for (int var8 = 0; var7.field_d > var8; var8++) {
-                    this.field_q[var5][var8] = param1.readUnsignedShort(PacketBuffer.a(param0, 11875));
+                  this.commandIds[var5] = var6;
+                  int[] array$0 = new int[var7.parameterCount];
+                  this.commandParameters[var5] = array$0;
+                  for (int var8 = 0; var7.parameterCount > var8; var8++) {
+                    this.commandParameters[var5][var8] = input.readUnsignedShort(PacketBuffer.xor(guard, 11875));
                   }
                 }
               }
             } else {
-              if (param2 == 4) {
+              if (opcode == 4) {
                 return;
               }
             }
@@ -58,50 +58,50 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_23_0 = var4;
-          StringBuilder stackIn_23_1 = new StringBuilder().append("si.A(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_23_1 = new StringBuilder().append("si.A(").append(guard).append(',');
+          if (input == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(opcode).append(')').toString());
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void decode(PacketBuffer input, int guard) {
         String stackIn_9_2 = null;
         int var4 = EscapeVector.obfuscationControl;
         try {
-          if (param1 != 0) {
-            this.d((byte) -118);
+          if (guard != 0) {
+            this.markGlobalResponses((byte) -118);
           }
           while (true) {
-            int var3_int = param0.readUnsignedByte(0);
+            int var3_int = input.readUnsignedByte(0);
             if (var3_int == 0) {
               return;
             }
-            this.a(10691, param0, var3_int);
+            this.decodeOpcode(10691, input, var3_int);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_8_0 = var3;
           StringBuilder stackIn_8_1 = new StringBuilder().append("si.C(");
-          if (param0 == null) {
+          if (input == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void d(byte param0) {
+    final void markGlobalResponses(byte guard) {
         int var4 = EscapeVector.obfuscationControl;
-        int var2 = 46 / ((-16 - param0) / 44);
-        if (this.field_z != null) {
-          for (int var3 = 0; var3 < this.field_z.length; var3++) {
-            this.field_z[var3] = MatchingTextValidator.a(this.field_z[var3], 32768);
+        int var2 = 46 / ((-16 - guard) / 44);
+        if (this.responseIds != null) {
+          for (int var3 = 0; var3 < this.responseIds.length; var3++) {
+            this.responseIds[var3] = MatchingTextValidator.a(this.responseIds[var3], 32768);
           }
         }
     }
@@ -117,28 +117,28 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         field_u = null;
     }
 
-    final static void a(float param0, String param1, boolean param2, byte param3) {
+    final static void showLoadingProgress(float percent, String text, boolean alternateStyle, byte guard) {
         try {
-          if (param3 != 14) {
+          if (guard != 14) {
             field_t = (PcmSample) null;
           }
           if (null == jb.field_r) {
             jb.field_r = new w(bo.field_F, dj.field_b);
-            bo.field_F.b(jb.field_r, param3 + 102);
+            bo.field_F.b(jb.field_r, guard + 102);
           }
-          jb.field_r.a(-100, param1, param0, param2);
+          jb.field_r.a(-100, text, percent, alternateStyle);
           SoftwareRasterizer.clearFramebuffer();
-          se.a(true, param3 ^ 17111);
+          se.a(true, guard ^ 17111);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "si.D(" + percent + ',' + (text != null ? "{...}" : "null") + ',' + alternateStyle + ',' + guard + ')');
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void inspectAppletUsername(int guard, java.applet.Applet applet) {
         String stackIn_7_2 = null;
         try {
-          int var2_int = 100 % ((param0 + 19) / 57);
-          String var3 = param1.getParameter("username");
+          int var2_int = 100 % ((guard + 19) / 57);
+          String var3 = applet.getParameter("username");
           if (var3 != null) {
             CharSequence var4 = (CharSequence) ((Object) var3);
             if (RasterBuffer.a((byte) 91, var4) != 0L) {
@@ -150,8 +150,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var2;
-          StringBuilder stackIn_6_1 = new StringBuilder().append("si.F(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_6_1 = new StringBuilder().append("si.F(").append(guard).append(',');
+          if (applet == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -160,34 +160,34 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final String g(int param0) {
+    final String previewText(int guard) {
         int var4 = EscapeVector.obfuscationControl;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
-        if (this.field_s == null) {
+        if (this.textFragments == null) {
           return "";
         }
-        StringBuilder discarded$0 = var5.append(this.field_s[0]);
-        for (int var3 = 1; var3 < this.field_s.length; var3++) {
+        StringBuilder discarded$0 = var5.append(this.textFragments[0]);
+        for (int var3 = 1; var3 < this.textFragments.length; var3++) {
           StringBuilder discarded$1 = var2.append("...");
-          StringBuilder discarded$2 = var5.append(this.field_s[var3]);
+          StringBuilder discarded$2 = var5.append(this.textFragments[var3]);
         }
-        if (param0 != -4) {
+        if (guard != -4) {
           QuickChatPhraseDefinition.releaseStatics(100);
         }
         return var2.toString();
     }
 
-    final static void a(int param0, dk param1) {
+    final static void applyGrayButtonPalette(int guard, dk button) {
         try {
-          if (param0 >= -60) {
+          if (guard >= -60) {
             field_r = -70;
           }
           int[] var2 = new int[]{3170352, 3170352, 3170352};
           int[] var3 = new int[]{6340704, 16777215, 16777215};
-          param1.a(var2, var3, -2);
+          button.a(var2, var3, -2);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "si.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "si.E(" + guard + ',' + (button != null ? "{...}" : "null") + ')');
         }
     }
 

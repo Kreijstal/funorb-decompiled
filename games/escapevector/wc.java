@@ -203,7 +203,7 @@ final class wc {
         ke.field_c = (BitmapFont) ((Object) ac.a("arezzo12", -110, param2, "commonui", param3));
         Js5Transport.field_a = (BitmapFont) ((Object) ac.a("arezzo14", -124, param2, "commonui", param3));
         dl.field_b = (BitmapFont) ((Object) ac.a("arezzo14bold", -93, param2, "commonui", param3));
-        Sprite var17 = new Sprite(param1.a(-4, "", "button.gif"), (java.awt.Component) ((Object) of.field_d));
+        Sprite var17 = new Sprite(param1.getNamedFile(-4, "", "button.gif"), (java.awt.Component) ((Object) of.field_d));
         AccountRegistrationPanel.a(param2, 50, "dropdown", "commonui");
         IndexedSprite[] var5 = ae.a("commonui", "screen_options", (byte) -65, param2);
         SoundCache.field_f = new IndexedSprite[4];
@@ -371,11 +371,11 @@ final class wc {
 
     final static void a(int param0, int param1, boolean param2, int param3, PacketBuffer param4) {
         try {
-          param4.f(12, -123);
-          param4.h(-119, 17);
-          param4.h(-114, param3);
-          param4.h(92, param0);
-          param4.f(param1, -123);
+          param4.writeByte(12, -123);
+          param4.writeShort(-119, 17);
+          param4.writeShort(-114, param3);
+          param4.writeShort(92, param0);
+          param4.writeByte(param1, -123);
           if (!param2) {
             field_b = (String) null;
           }

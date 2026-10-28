@@ -37,7 +37,7 @@ final class SoundEffect {
     }
 
     final static SoundEffect loadNamed(ResourceArchive archive, String groupName, String fileName) {
-        byte[] var3 = archive.a(-4, fileName, groupName);
+        byte[] var3 = archive.getNamedFile(-4, fileName, groupName);
         if (var3 == null) {
           return null;
         }
@@ -45,7 +45,7 @@ final class SoundEffect {
     }
 
     final static SoundEffect load(ResourceArchive archive, int groupId, int fileId) {
-        byte[] var3 = archive.a(groupId, (byte) -97, fileId);
+        byte[] var3 = archive.getFile(groupId, (byte) -97, fileId);
         if (var3 == null) {
           return null;
         }

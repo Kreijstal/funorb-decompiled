@@ -84,7 +84,7 @@ final class SynthInstrument {
             break;
           }
           this.oscillatorVolume[var3] = var4;
-          this.oscillatorPitch[var3] = input.e((byte) 56);
+          this.oscillatorPitch[var3] = input.readSignedSmart((byte) 56);
           this.oscillatorDelay[var3] = input.readUnsignedSmart(true);
         }
         this.echoDelayMillis = input.readUnsignedSmart(true);

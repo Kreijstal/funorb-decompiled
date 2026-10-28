@@ -262,51 +262,51 @@ final class qe {
         }
         if (ff.field_h != 0) {
           if (null != PasswordValidator.field_p) {
-            if (!PasswordValidator.field_p.b(0)) {
+            if (!PasswordValidator.field_p.ensureIndex(0)) {
               return 14;
             }
-            if (!PasswordValidator.field_p.a("", (byte) -111)) {
+            if (!PasswordValidator.field_p.hasGroupName("", (byte) -111)) {
               return 29;
             }
-            if (!PasswordValidator.field_p.a(0, "")) {
+            if (!PasswordValidator.field_p.tryLoadNamedGroup(0, "")) {
               return 29;
             }
           }
-          if (!ii.field_a.b(0)) {
+          if (!ii.field_a.ensureIndex(0)) {
             return 43;
           }
-          if (!ii.field_a.a(0, "commonui")) {
+          if (!ii.field_a.tryLoadNamedGroup(0, "commonui")) {
             return 57;
           }
-          if (!w.field_ab.b(0)) {
+          if (!w.field_ab.ensureIndex(0)) {
             return 71;
           }
-          if (!w.field_ab.a(0, "commonui")) {
+          if (!w.field_ab.tryLoadNamedGroup(0, "commonui")) {
             return 80;
           }
-          if (!pl.field_j.b(0)) {
+          if (!pl.field_j.ensureIndex(0)) {
             return 82;
           }
-          if (!pl.field_j.a((byte) -119)) {
+          if (!pl.field_j.tryLoadAllGroups((byte) -119)) {
             return 86;
           }
         } else {
-          if (!ii.field_a.b(0)) {
+          if (!ii.field_a.ensureIndex(0)) {
             return 20;
           }
-          if (!ii.field_a.a(0, "commonui")) {
+          if (!ii.field_a.tryLoadNamedGroup(0, "commonui")) {
             return 40;
           }
-          if (!w.field_ab.b(0)) {
+          if (!w.field_ab.ensureIndex(0)) {
             return 50;
           }
-          if (!w.field_ab.a(0, "commonui")) {
+          if (!w.field_ab.tryLoadNamedGroup(0, "commonui")) {
             return 60;
           }
-          if (!pl.field_j.b(0)) {
+          if (!pl.field_j.ensureIndex(0)) {
             return 70;
           }
-          if (!pl.field_j.a((byte) -119)) {
+          if (!pl.field_j.tryLoadAllGroups((byte) -119)) {
             return 80;
           }
         }

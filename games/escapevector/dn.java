@@ -337,7 +337,7 @@ final class dn {
             this.l(-88);
           }
           for (int var6 = 0; param0.length > var6; var6++) {
-            if (ResourceArchive.a(var6, -64) ||
+            if (ResourceArchive.isPowerupType(var6, -64) ||
               1 == var6 ||
               5 == var6) {
               Sprite var7 = param0[var6];

@@ -74,8 +74,8 @@ final class ae implements WidgetPainter {
             IndexedSprite[] stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
-          int var4_int = param3.b(-1, param0);
-          int var5 = param3.a(var4_int, param1, true);
+          int var4_int = param3.findGroupId(-1, param0);
+          int var5 = param3.findFileId(var4_int, param1, true);
           IndexedSprite[] stackIn_4_0 = TextHotspotRegion.a(var5, 255, param3, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -124,7 +124,7 @@ final class ae implements WidgetPainter {
           }
           int var6_int = originX + component.x;
           int var7 = originY + component.y;
-          mn.a(-27951, var6_int, var7, component.width, component.height);
+          ReflectionCheck.drawGradientOutline(-27951, var6_int, var7, component.width, component.height);
           Sprite var8 = EditableTextWidget.field_E[1];
           if (component instanceof TextButton &&
             ((TextButton) (component)).field_z) {

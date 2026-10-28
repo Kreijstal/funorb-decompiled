@@ -38,16 +38,16 @@ final class of {
         String stackIn_25_2 = null;
         String stackIn_28_2 = null;
         try {
-          if (!param0.b(0)) {
+          if (!param0.ensureIndex(0)) {
             return false;
           }
-          if (!param0.a(0, "commonui")) {
+          if (!param0.tryLoadNamedGroup(0, "commonui")) {
             return false;
           }
-          if (param1.b(0) &&
-            param1.a(0, "commonui")) {
-            if (param2.b(0) &&
-              param2.a(0, "button.gif")) {
+          if (param1.ensureIndex(0) &&
+            param1.tryLoadNamedGroup(0, "commonui")) {
+            if (param2.ensureIndex(0) &&
+              param2.tryLoadNamedGroup(0, "button.gif")) {
               if (param3 > -1) {
                 field_h = (PcmSample) null;
               }

@@ -45,11 +45,11 @@ final class km extends fh {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = om.field_c;
+        CipherPacketBuffer var2 = QuickChatDynamicCommand.field_c;
         var2.writeCipheredOpcode(param0, true);
-        var2.f(1, -123);
+        var2.writeByte(1, -123);
         int var3 = -50 % ((61 - param1) / 57);
-        var2.f(2, -123);
+        var2.writeByte(2, -123);
     }
 
     km() {
@@ -83,39 +83,39 @@ final class km extends fh {
             if (param3 != -24183) {
               return;
             }
-            mn var17 = new mn();
-            var17.field_i = param0.readUnsignedByte(0);
-            var17.field_g = param0.readInt(param3 + 19130);
-            var17.field_p = new SystemTask[var17.field_i];
-            var17.field_m = new int[var17.field_i];
-            var17.field_o = new int[var17.field_i];
-            var17.field_j = new int[var17.field_i];
-            var17.field_l = new byte[var17.field_i][][];
-            var17.field_r = new SystemTask[var17.field_i];
-            for (int var5 = 0; var5 < var17.field_i; var5++) {
+            ReflectionCheck var17 = new ReflectionCheck();
+            var17.operationCount = param0.readUnsignedByte(0);
+            var17.id = param0.readInt(param3 + 19130);
+            var17.methodTasks = new SystemTask[var17.operationCount];
+            var17.operations = new int[var17.operationCount];
+            var17.errors = new int[var17.operationCount];
+            var17.replacementValues = new int[var17.operationCount];
+            var17.serializedArguments = new byte[var17.operationCount][][];
+            var17.fieldTasks = new SystemTask[var17.operationCount];
+            for (int var5 = 0; var5 < var17.operationCount; var5++) {
               try {
                 int var6_int = param0.readUnsignedByte(0);
                 if (0 == var6_int ||
                   var6_int == 1 ||
                   var6_int == 2) {
-                  String var15 = param0.c(false);
+                  String var15 = param0.readString(false);
                   String var7 = var15;
-                  var8 = param0.c(false);
+                  var8 = param0.readString(false);
                   var9 = 0;
                   if (var6_int == 1) {
                     var9 = param0.readInt(-5053);
                   }
-                  var17.field_m[var5] = var6_int;
-                  var17.field_j[var5] = var9;
-                  var17.field_r[var5] = param1.a(var8, en.a(var15, (byte) 38), PacketBuffer.a(param3, 24120));
+                  var17.operations[var5] = var6_int;
+                  var17.replacementValues[var5] = var9;
+                  var17.fieldTasks[var5] = param1.a(var8, en.a(var15, (byte) 38), PacketBuffer.xor(param3, 24120));
                 } else if (var6_int == 3 ||
                   var6_int == 4) {
-                  String var19 = param0.c(false);
-                  var8 = param0.c(false);
+                  String var19 = param0.readString(false);
+                  var8 = param0.readString(false);
                   var9 = param0.readUnsignedByte(param3 + 24183);
                   String[] var10 = new String[var9];
                   for (int var11_int = 0; var11_int < var9; var11_int++) {
-                    var10[var11_int] = param0.c(false);
+                    var10[var11_int] = param0.readString(false);
                   }
                   byte[][] var20 = new byte[var9][];
                   byte[][] var18 = var20;
@@ -125,10 +125,10 @@ final class km extends fh {
                       int var13 = param0.readInt(param3 ^ 19914);
                       byte[] array$0 = new byte[var13];
                       var11[var12_int] = array$0;
-                      param0.a(var20[var12_int], (byte) -96, 0, var13);
+                      param0.readBytes(var20[var12_int], (byte) -96, 0, var13);
                     }
                   }
-                  var17.field_m[var5] = var6_int;
+                  var17.operations[var5] = var6_int;
                   Class[] var12 = new Class[var9];
                   int var16 = 0;
                   int var13Lifetime1 = var16;
@@ -136,29 +136,29 @@ final class km extends fh {
                     var12[var16] = en.a(var10[var16], (byte) 38);
                     var16++;
                   }
-                  var17.field_p[var5] = param1.a(var8, PacketBuffer.a(param3, -24074), en.a(var19, (byte) 38), var12);
-                  var17.field_l[var5] = var20;
+                  var17.methodTasks[var5] = param1.a(var8, PacketBuffer.xor(param3, -24074), en.a(var19, (byte) 38), var12);
+                  var17.serializedArguments[var5] = var20;
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 ClassNotFoundException var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                var17.field_o[var5] = -1;
+                var17.errors[var5] = -1;
               } catch (java.lang.SecurityException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 SecurityException var6_ref = (SecurityException) (Object) decompiledCaughtException;
-                var17.field_o[var5] = -2;
+                var17.errors[var5] = -2;
               } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 NullPointerException var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                var17.field_o[var5] = -3;
+                var17.errors[var5] = -3;
               } catch (java.lang.Exception decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
                 Exception var6_ref3 = (Exception) (Object) decompiledCaughtException;
-                var17.field_o[var5] = -4;
+                var17.errors[var5] = -4;
               } catch (java.lang.Throwable decompiledCaughtParameter4) {
                 decompiledCaughtException = decompiledCaughtParameter4;
                 Throwable var6_ref4 = decompiledCaughtException;
-                var17.field_o[var5] = -5;
+                var17.errors[var5] = -5;
               }
             }
             je.field_a.addLast(-12328, var17);

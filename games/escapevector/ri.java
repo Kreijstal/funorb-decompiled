@@ -52,7 +52,7 @@ final class ri {
     final static void a(byte param0) {
         int var12 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var14 = om.field_g;
+          CipherPacketBuffer var14 = QuickChatDynamicCommand.field_g;
           int var2 = var14.readUnsignedByte(0);
           if (param0 != 113) {
             field_b = (PcmSample) null;
@@ -74,7 +74,7 @@ final class ri {
             int var5 = var3.field_g;
             TextHotspotRegion.field_l[0] = ck.field_r;
             for (int var6_int = 1; var4 > var6_int; var6_int++) {
-              TextHotspotRegion.field_l[var6_int] = var14.c(false);
+              TextHotspotRegion.field_l[var6_int] = var14.readString(false);
             }
             wk.a(var4, param0 - 58, var5);
             for (int var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {

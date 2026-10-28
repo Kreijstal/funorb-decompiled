@@ -2638,11 +2638,11 @@ final class GameplaySession {
           this.elapsedTicks = this.levelStartTicks;
         }
         ck.a(111, -this.collectedPowerupCount);
-        mn.a(-this.destructionAchievementCount, (byte) 44);
+        ReflectionCheck.a(-this.destructionAchievementCount, (byte) 44);
         this.destructionAchievementCount = this.previousLevelDestructionCount;
         this.collectedPowerupCount = this.previousLevelPowerupCount;
         ck.a(77, this.previousLevelPowerupCount);
-        mn.a(this.previousLevelDestructionCount, (byte) 44);
+        ReflectionCheck.a(this.previousLevelDestructionCount, (byte) 44);
         if (0 <= this.levelIndex) {
           this.shieldUsedThisLevel = false;
         }
@@ -3119,7 +3119,7 @@ final class GameplaySession {
           PointCloudEffect var6 = this.spawnObjectDebris(object, (byte) 42);
           this.levelObjects.removeElementAt(objectIndex);
           if (!this.shipDestroyed) {
-            int var5 = ResourceArchive.b(this.gameMode, object.objectType, -2);
+            int var5 = ResourceArchive.objectScore(this.gameMode, object.objectType, -2);
             this.levelScore = this.levelScore + var5;
             v.a(8, var5);
           }
@@ -3726,7 +3726,7 @@ final class GameplaySession {
           }
           for (int powerupIndex = 0; powerupIndex < powerupCount; powerupIndex++) {
             int objectType = input.readUnsignedByte();
-            if (ResourceArchive.a(objectType, -64)) {
+            if (ResourceArchive.isPowerupType(objectType, -64)) {
               IntValueNode powerup = new IntValueNode(objectType);
               this.initialPowerups.addLast(-12328, powerup);
               this.initialPowerupReadHook(objectType, 101);
@@ -3788,7 +3788,7 @@ final class GameplaySession {
           if (this.noticeTicks < 31) {
             if (null == da.field_c &&
               !this.quitRequested) {
-              ResourceArchive.a(4, var2, 31 - this.noticeTicks, this.noticeSprite, -99);
+              ResourceArchive.drawSpriteWithRowJitter(4, var2, 31 - this.noticeTicks, this.noticeSprite, -99);
             }
           } else if (this.noticeTicks <= 120) {
             AudioService.a(-this.noticeSprite.fullWidth, this.noticeSprite.pixels, 0, -this.noticeSprite.fullWidth + SoftwareRasterizer.width, (byte) -126, 0, 0, -this.noticeSprite.fullHeight, SoftwareRasterizer.pixels, 3 * SoftwareRasterizer.width + (-1 + var2));
@@ -3798,7 +3798,7 @@ final class GameplaySession {
             this.noticeSprite.e(var2, 4);
           } else if (da.field_c == null &&
             !this.quitRequested) {
-            ResourceArchive.a(4, var2, -120 + this.noticeTicks, this.noticeSprite, -123);
+            ResourceArchive.drawSpriteWithRowJitter(4, var2, -120 + this.noticeTicks, this.noticeSprite, -123);
           }
         }
 
@@ -4677,7 +4677,7 @@ final class GameplaySession {
               int stackIn_449_0Lifetime1 = ~var5;
               int stackIn_449_1Lifetime1 = -1;
               if (stackIn_449_0Lifetime1 == stackIn_449_1Lifetime1) {
-                int stackIn_457_0 = (!ResourceArchive.a(var37_ref.objectType, -64)) ? 0 : 1;
+                int stackIn_457_0 = (!ResourceArchive.isPowerupType(var37_ref.objectType, -64)) ? 0 : 1;
                 var8 = stackIn_457_0;
               } else if (var5 != 1) {
                 int stackIn_466_0 = (var37_ref.objectType != 1) ? 0 : 1;
@@ -5575,7 +5575,7 @@ final class GameplaySession {
           return;
         }
         if (!this.shipDestroyed) {
-          int var2_int = ResourceArchive.b(this.gameMode, this.tetheredObjectType, -2);
+          int var2_int = ResourceArchive.objectScore(this.gameMode, this.tetheredObjectType, -2);
           this.levelScore = this.levelScore + var2_int;
           v.a(8, var2_int);
         }

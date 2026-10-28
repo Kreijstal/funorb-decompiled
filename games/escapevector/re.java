@@ -46,7 +46,7 @@ class re extends TextWidgetPainter {
         String stackIn_8_2 = null;
         try {
           if (enabled) {
-            mn.a(-27951, originX + component.x, originY + component.y, component.width, component.height);
+            ReflectionCheck.drawGradientOutline(-27951, originX + component.x, originY + component.y, component.width, component.height);
           }
           super.drawWidget(originX, originY, -60, component, enabled);
           if (guard < -14) {

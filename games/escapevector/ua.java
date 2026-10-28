@@ -49,25 +49,25 @@ final class ua {
         if (aj.b(-127)) {
           return;
         }
-        CipherPacketBuffer var4 = om.field_c;
+        CipherPacketBuffer var4 = QuickChatDynamicCommand.field_c;
         var4.writeCipheredOpcode(16, true);
         var4.position = var4.position + 1;
         if (param3 == 1) {
           int var5 = var4.position;
-          var4.f(0, -123);
-          var4.h(param3 + 45, param0);
-          var4.f(param2, -123);
-          var4.h(param3 + 9, param1);
-          var4.e(-96, var4.position - var5);
+          var4.writeByte(0, -123);
+          var4.writeShort(param3 + 45, param0);
+          var4.writeByte(param2, -123);
+          var4.writeShort(param3 + 9, param1);
+          var4.backpatchByteLength(-96, var4.position - var5);
           return;
         }
         field_b = (String) null;
         int var5Lifetime1 = var4.position;
-        var4.f(0, -123);
-        var4.h(param3 + 45, param0);
-        var4.f(param2, -123);
-        var4.h(param3 + 9, param1);
-        var4.e(-96, var4.position - var5Lifetime1);
+        var4.writeByte(0, -123);
+        var4.writeShort(param3 + 45, param0);
+        var4.writeByte(param2, -123);
+        var4.writeShort(param3 + 9, param1);
+        var4.backpatchByteLength(-96, var4.position - var5Lifetime1);
     }
 
     final static String a(int param0, int param1, CharSequence[] param2, int param3) {

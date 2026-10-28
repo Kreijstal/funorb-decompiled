@@ -27,8 +27,8 @@ final class bh extends vj {
           if (param1 >= -15) {
             bh.a(29, -33L);
           }
-          param0.a((byte) 100, this.field_g);
-          param0.a(this.field_f, (byte) 111);
+          param0.writeCircumfixedString((byte) 100, this.field_g);
+          param0.writeBase38Password(this.field_f, (byte) 111);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "bh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -64,9 +64,9 @@ final class bk extends Js5Transport {
               if (this.field_m != 0) {
                 try {
                   this.field_e.position = 0;
-                  this.field_e.f(4, -123);
-                  this.field_e.f((int) this.field_m, -123);
-                  this.field_e.a((byte) 125, 0);
+                  this.field_e.writeByte(4, -123);
+                  this.field_e.writeByte((int) this.field_m, -123);
+                  this.field_e.writeInt((byte) 125, 0);
                   this.field_t.a(this.field_e.payload.length, 0, this.field_e.payload, 5000);
                   decompiledRegionSelector0 = false;
                 } catch (java.io.IOException decompiledCaughtParameter1) {
@@ -137,8 +137,8 @@ final class bk extends Js5Transport {
               this.field_e.position = 0;
               PacketBuffer stackIn_5_0 = this.field_e;
               stackIn_6_1 = (!param0) ? (3) : (2);
-              ((PacketBuffer) (Object) stackIn_5_0).f(stackIn_6_1, -123);
-              this.field_e.a(0L, 125);
+              ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_6_1, -123);
+              this.field_e.writeLong40(0L, 125);
               if (param1) {
                 bk.g(90);
               }
@@ -273,7 +273,7 @@ final class bk extends Js5Transport {
         int stackIn_63_2 = 0;
         int var8 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var1 = om.field_g;
+          CipherPacketBuffer var1 = QuickChatDynamicCommand.field_g;
           int var2 = var1.readUnsignedByte(param0 ^ 0);
           if (param0 == var2) {
             if (null == ml.field_a) {
@@ -282,12 +282,12 @@ final class bk extends Js5Transport {
             }
             boolean stackIn_12_0 = !(var1.readUnsignedByte(0) != 1);
             boolean var3_int = stackIn_12_0;
-            String var4_ref_String = var1.c(false);
+            String var4_ref_String = var1.readString(false);
             if (var3_int) {
-              var1.c(false);
+              var1.readString(false);
             }
             tg var5 = gf.a(var4_ref_String, (byte) -125);
-            String var6 = var1.c(false);
+            String var6 = var1.readString(false);
             String var7 = sf.a(-123, (CharSequence) ((Object) var4_ref_String));
             if (null == var7) {
               var7 = var4_ref_String;
@@ -328,7 +328,7 @@ final class bk extends Js5Transport {
               return;
             }
             RasterSnapshot.field_g = 1;
-            Object var3 = var1.c(false);
+            Object var3 = var1.readString(false);
             di.field_f = ((String) (var3)).intern();
             int var4 = var1.readUnsignedByte(0);
             ii.a((byte) 16, var4);
@@ -338,12 +338,12 @@ final class bk extends Js5Transport {
             bm.field_b = new nn(128);
             ua.field_a = 0;
           }
-          Object var3Lifetime1 = var1.c(false);
+          Object var3Lifetime1 = var1.readString(false);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          String var4_ref_StringLifetime1 = var1.c(false);
-          String var5_ref = var1.c(false);
+          String var4_ref_StringLifetime1 = var1.readString(false);
+          String var5_ref = var1.readString(false);
           tg var6_ref = fk.a(param0 ^ -1465, var4_ref_StringLifetime1);
           if (var6_ref == null) {
             var6_ref = fk.a(-1465, var5_ref);
@@ -411,10 +411,10 @@ final class bk extends Js5Transport {
             }
             try {
               this.field_e.position = 0;
-              this.field_e.f(6, -123);
+              this.field_e.writeByte(6, -123);
               int var2_int = 45 % ((-48 - param0) / 39);
-              this.field_e.b(1743120456, 3);
-              this.field_e.h(82, 0);
+              this.field_e.writeMedium(1743120456, 3);
+              this.field_e.writeShort(82, 0);
               this.field_t.a(this.field_e.payload.length, 0, this.field_e.payload, 5000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -482,8 +482,8 @@ final class bk extends Js5Transport {
               scanLoop1: while (true) {
                 if (var2 != null) {
                   this.field_e.position = 0;
-                  this.field_e.f(1, -123);
-                  this.field_e.a(var2.secondaryKey, -118);
+                  this.field_e.writeByte(1, -123);
+                  this.field_e.writeLong40(var2.secondaryKey, -118);
                   this.field_t.a(this.field_e.payload.length, 0, this.field_e.payload, 5000);
                   this.field_l.addLast(param0 + 3993, var2);
                   var2 = (Js5NetworkRequest) (this.field_p.next((byte) -101));
@@ -499,8 +499,8 @@ final class bk extends Js5Transport {
               }
               while (var2 != null) {
                 this.field_e.position = 0;
-                this.field_e.f(0, -123);
-                this.field_e.a(var2.secondaryKey, -3);
+                this.field_e.writeByte(0, -123);
+                this.field_e.writeLong40(var2.secondaryKey, -3);
                 this.field_t.a(this.field_e.payload.length, 0, this.field_e.payload, 5000);
                 this.field_n.addLast(-1, var2);
                 var2 = (Js5NetworkRequest) (this.field_j.next((byte) -43));
@@ -547,7 +547,7 @@ final class bk extends Js5Transport {
                       if (this.field_m != 0) {
                         int var7 = 0;
                         while (var6 > var7) {
-                          this.field_c.field_A.payload[var7 + this.field_c.field_A.position] = (byte)PacketBuffer.a((int) this.field_c.field_A.payload[var7 + this.field_c.field_A.position], (int) this.field_m);
+                          this.field_c.field_A.payload[var7 + this.field_c.field_A.position] = (byte)PacketBuffer.xor((int) this.field_c.field_A.payload[var7 + this.field_c.field_A.position], (int) this.field_m);
                           var7++;
                           if (var16 != 0) {
                             decompiledFrameCompleted4 = false;
@@ -586,7 +586,7 @@ final class bk extends Js5Transport {
                       if (this.field_m != 0) {
                         int var6Lifetime1 = 0;
                         while (var6Lifetime1 < var5Lifetime1) {
-                          this.field_o.payload[var6Lifetime1 + this.field_o.position] = (byte)PacketBuffer.a((int) this.field_o.payload[var6Lifetime1 + this.field_o.position], (int) this.field_m);
+                          this.field_o.payload[var6Lifetime1 + this.field_o.position] = (byte)PacketBuffer.xor((int) this.field_o.payload[var6Lifetime1 + this.field_o.position], (int) this.field_m);
                           var6Lifetime1++;
                           if (var16 != 0) {
                             decompiledFrameCompleted3 = false;
@@ -668,8 +668,8 @@ final class bk extends Js5Transport {
                           int stackIn_126_0 = (stackIn_122_0 != ~var10) ? 9 : 5;
                           int var15 = stackIn_126_0;
                           this.field_c.field_A = new PacketBuffer(var15 + (var9 + this.field_c.field_y));
-                          this.field_c.field_A.f(var10, -123);
-                          this.field_c.field_A.a((byte) 125, var9);
+                          this.field_c.field_A.writeByte(var10, -123);
+                          this.field_c.field_A.writeInt((byte) 125, var9);
                           this.field_c.field_F = 10;
                           this.field_o.position = 0;
                           decompiledFrameRemainder1 = (var16 != 0);

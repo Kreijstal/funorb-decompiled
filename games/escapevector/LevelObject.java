@@ -390,7 +390,7 @@ final class LevelObject extends IntrusiveNode {
 
     final boolean countsAsInfrastructure(byte guard) {
         try {
-          if (ResourceArchive.a(this.objectType, -64)) {
+          if (ResourceArchive.isPowerupType(this.objectType, -64)) {
             return false;
           }
           if (1 == this.objectType) {

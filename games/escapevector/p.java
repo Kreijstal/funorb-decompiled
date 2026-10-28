@@ -156,8 +156,8 @@ final class p {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
-          int var4_int = param2.b(-1, param3);
-          int var5 = param2.a(var4_int, param1, true);
+          int var4_int = param2.findGroupId(-1, param3);
+          int var5 = param2.findFileId(var4_int, param1, true);
           if (param0 != 8) {
             String var6 = (String) null;
             p.a((byte) -89, (String) null, (ResourceArchive) null, (String) null);

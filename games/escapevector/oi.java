@@ -97,11 +97,11 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         try {
-          int var5_int = param4.b(-1, param2);
+          int var5_int = param4.findGroupId(-1, param2);
           if (param0 != 4) {
             field_N = (String) null;
           }
-          int var6 = param4.a(var5_int, param3, true);
+          int var6 = param4.findFileId(var5_int, param3, true);
           ih stackIn_3_0 = fa.a(param0 - 3, param1, var5_int, param4, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,7 +140,7 @@ final class oi extends UiContainer implements NameSuggestionListener, ButtonList
         if (guard != -61) {
           return;
         }
-        ((NameAvailabilityValidator) (this.field_I.validator((byte) -89))).g(guard + 22247);
+        ((NameAvailabilityValidator) (this.field_I.validator((byte) -89))).clearCachedName(guard + 22247);
     }
 
     final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {

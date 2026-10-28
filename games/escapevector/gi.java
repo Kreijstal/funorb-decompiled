@@ -117,7 +117,7 @@ final class gi {
         String stackIn_8_2 = null;
         try {
           int var2_int = co.a(param1, (byte) -127);
-          String var3 = mn.a(param0 ^ 16, (char) var2_int, 20);
+          String var3 = ReflectionCheck.repeatChar(param0 ^ 16, (char) var2_int, 20);
           if (param0 == -96) {
             int stackIn_4_0 = param1.b(var3);
             return stackIn_4_0;

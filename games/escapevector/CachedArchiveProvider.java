@@ -50,8 +50,8 @@ final class CachedArchiveProvider extends ArchiveProvider {
               var3 = this.field_u.next((byte) 70);
             }
             scanLoop1: while (true) {
-              if (this.field_m.field_i.length > this.field_z) {
-                if (this.field_m.field_i[this.field_z] != 0) {
+              if (this.field_m.groupFileCounts.length > this.field_z) {
+                if (this.field_m.groupFileCounts[this.field_z] != 0) {
                   if (250 <= this.field_k.field_f) {
                     var2_int = false;
                     break scanLoop1;
@@ -90,8 +90,8 @@ final class CachedArchiveProvider extends ArchiveProvider {
               }
               var3Lifetime1 = this.field_u.next((byte) 70);
             }
-            while (this.field_z < this.field_m.field_i.length) {
-              if (this.field_m.field_i[this.field_z] == 0) {
+            while (this.field_z < this.field_m.groupFileCounts.length) {
+              if (this.field_m.groupFileCounts[this.field_z] == 0) {
                 this.field_z = this.field_z + 1;
                 continue;
               }
@@ -189,10 +189,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (param0 != 2) {
           return;
         }
-        if (!he.field_u.b(0)) {
+        if (!he.field_u.ensureIndex(0)) {
           return;
         }
-        if (!he.field_u.a((byte) -119)) {
+        if (!he.field_u.tryLoadAllGroups((byte) -119)) {
           return;
         }
         if (PcmResampler.field_h == null) {
@@ -241,7 +241,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               throw new RuntimeException();
             }
             this.field_m = new ArchiveIndex(var7, this.field_p, this.field_g);
-            if (this.field_m.field_n != this.field_l) {
+            if (this.field_m.revision != this.field_l) {
               throw new RuntimeException();
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -279,7 +279,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
         this.field_y = null;
         if (null != this.field_x) {
-          this.field_f = new byte[this.field_m.field_k];
+          this.field_f = new byte[this.field_m.groupCapacity];
         }
         return this.field_m;
     }
@@ -347,12 +347,12 @@ final class CachedArchiveProvider extends ArchiveProvider {
               qf.field_m.reset();
               qf.field_m.update(var5, 0, var18.length - 2);
               var6_int = (int)qf.field_m.getValue();
-              if (var6_int != this.field_m.field_l[param0]) {
+              if (var6_int != this.field_m.groupCrc32s[param0]) {
                 throw new RuntimeException();
               }
-              if (this.field_m.field_h != null &&
-                this.field_m.field_h[param0] != null) {
-                byte[] var27 = this.field_m.field_h[param0];
+              if (this.field_m.groupDigests != null &&
+                this.field_m.groupDigests[param0] != null) {
+                byte[] var27 = this.field_m.groupDigests[param0];
                 byte[] var28 = RasterBuffer.a(var5, 0, var18.length - 2, param2 - 23874);
                 for (var9 = 0; var9 < 64; var9++) {
                   if (~var27[var9] != ~var28[var9]) {
@@ -361,7 +361,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 }
               }
               int var7 = (var5[-2 + var18.length] << 8 & 65280) + (255 & var5[-1 + var18.length]);
-              if (var7 != (this.field_m.field_q[param0] & 65535)) {
+              if (var7 != (this.field_m.groupVersions[param0] & 65535)) {
                 throw new RuntimeException();
               }
               if (this.field_f[param0] != 1) {
@@ -395,12 +395,12 @@ final class CachedArchiveProvider extends ArchiveProvider {
             qf.field_m.reset();
             qf.field_m.update(var5, 0, var18.length - 2);
             var6_int = (int)qf.field_m.getValue();
-            if (var6_int != this.field_m.field_l[param0]) {
+            if (var6_int != this.field_m.groupCrc32s[param0]) {
               throw new RuntimeException();
             }
-            if (this.field_m.field_h != null &&
-              null != this.field_m.field_h[param0]) {
-              byte[] var30 = this.field_m.field_h[param0];
+            if (this.field_m.groupDigests != null &&
+              null != this.field_m.groupDigests[param0]) {
+              byte[] var30 = this.field_m.groupDigests[param0];
               byte[] var29 = RasterBuffer.a(var5, 0, -2 + var18.length, 0);
               int var11 = 0;
               var9 = var11;
@@ -431,8 +431,8 @@ final class CachedArchiveProvider extends ArchiveProvider {
           this.field_q.put((IntrusiveNode) (var4), 10901, (long)param0);
           return null;
         }
-        var5[var18.length - 2] = (byte)(this.field_m.field_q[param0] >>> 8);
-        var5[var18.length - 1] = (byte)this.field_m.field_q[param0];
+        var5[var18.length - 2] = (byte)(this.field_m.groupVersions[param0] >>> 8);
+        var5[var18.length - 1] = (byte)this.field_m.groupVersions[param0];
         if (null != this.field_x) {
           this.field_k.a(var18, param0, param2 ^ 23872, this.field_x);
           if (this.field_f[param0] != 1) {
@@ -461,9 +461,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
           int var3 = (int)var2.key;
           if (var3 < 0) {
             var2.unlink((byte) -57);
-          } else if (var3 >= this.field_m.field_k) {
+          } else if (var3 >= this.field_m.groupCapacity) {
             var2.unlink((byte) -57);
-          } else if (this.field_m.field_i[var3] == 0) {
+          } else if (this.field_m.groupFileCounts[var3] == 0) {
             var2.unlink((byte) -57);
           } else {
             if (this.field_f[var3] == 0) {

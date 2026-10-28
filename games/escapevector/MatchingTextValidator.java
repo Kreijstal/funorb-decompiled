@@ -126,10 +126,10 @@ final class MatchingTextValidator extends TextFieldValidator {
 
     final static void c(boolean param0) {
         Throwable decompiledCaughtException = null;
-        if (om.field_b != null) {
-          Object var1 = om.field_b;
+        if (QuickChatDynamicCommand.field_b != null) {
+          Object var1 = QuickChatDynamicCommand.field_b;
           synchronized (var1) {
-            om.field_b = null;
+            QuickChatDynamicCommand.field_b = null;
           }
         }
         if (!param0) {

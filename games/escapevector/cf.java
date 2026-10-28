@@ -45,10 +45,10 @@ final class cf {
           int var23Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (var23Lifetime2 < param6.field_K) {
-              int var24Lifetime1 = param6.field_L[var23Lifetime2];
-              int var25Lifetime1 = param6.field_r[var23Lifetime2];
-              int var26Lifetime1 = param6.field_J[var23Lifetime2];
+            if (var23Lifetime2 < param6.vertexCount) {
+              int var24Lifetime1 = param6.vertexX[var23Lifetime2];
+              int var25Lifetime1 = param6.vertexY[var23Lifetime2];
+              int var26Lifetime1 = param6.vertexZ[var23Lifetime2];
               int var27Lifetime1 = (var18 * var26Lifetime1 + (var24Lifetime1 * var12 + var15 * var25Lifetime1) >> 16 - ij.field_i) + var9;
               int var28Lifetime1 = var10 + (var16 * var25Lifetime1 + var13 * var24Lifetime1 + var19 * var26Lifetime1 >> -ij.field_i + 16);
               int var29Lifetime1 = (var24Lifetime1 * var14 - (-(var17 * var25Lifetime1) - var26Lifetime1 * var20) >> 16) + var11;
@@ -97,7 +97,7 @@ final class cf {
                 param6.field_l != null &&
                 null != param6.field_t) {
                 var23Lifetime2 = 0;
-                while (!(param6.field_D <= var23Lifetime2)) {
+                while (!(param6.faceCount <= var23Lifetime2)) {
                   int var24Lifetime1Lifetime1 = param6.field_k[var23Lifetime2];
                   int var25Lifetime1Lifetime1 = param6.field_d[var23Lifetime2];
                   int var26Lifetime1Lifetime1 = param6.field_E[var23Lifetime2];
@@ -139,7 +139,7 @@ final class cf {
                 var18 = 0;
                 while (true) {
                   int stackIn_60_0Lifetime1 = ~var18;
-                  int stackIn_60_1Lifetime1 = ~param6.field_M;
+                  int stackIn_60_1Lifetime1 = ~param6.normalCount;
                   if (stackIn_60_0Lifetime1 <= stackIn_60_1Lifetime1) {
                     break;
                   }
@@ -401,7 +401,7 @@ final class cf {
           if (param0 != 11) {
             field_b = (String) null;
           }
-          boolean stackIn_4_0 = param1.a((byte) -119);
+          boolean stackIn_4_0 = param1.tryLoadAllGroups((byte) -119);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

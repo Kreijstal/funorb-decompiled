@@ -6,7 +6,7 @@ final class eb extends TextButton {
     int field_I;
     int field_M;
     static boolean field_H;
-    static om field_L;
+    static QuickChatDynamicCommand field_L;
     int field_F;
     int field_D;
     int field_G;
@@ -85,11 +85,11 @@ final class eb extends TextButton {
             int var11 = var18.readUnsignedByte(0);
             if ((var11 & 1) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var18.a(false);
+                var8[var12] = var18.readByte(false);
               }
               if (0 != (2 & var11)) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  byte dupTemp$0 = var18.a(false);
+                  byte dupTemp$0 = var18.readByte(false);
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   boolean stackIn_50_0 = var10;
@@ -100,13 +100,13 @@ final class eb extends TextButton {
             } else {
               for (var12 = 0; var12 < var5; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var13 * var5 + var12] = var18.a(false);
+                  var8[var13 * var5 + var12] = var18.readByte(false);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    byte dupTemp$1 = var18.a(false);
+                    byte dupTemp$1 = var18.readByte(false);
                     var9[var12 + var5 * var13] = dupTemp$1;
                     int var14 = dupTemp$1;
                     boolean stackIn_38_0 = var10;
@@ -185,7 +185,7 @@ final class eb extends TextButton {
     }
 
     static {
-        field_L = new om(2, 4, 4, 0);
+        field_L = new QuickChatDynamicCommand(2, 4, 4, 0);
         field_K = 0;
     }
 }

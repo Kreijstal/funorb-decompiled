@@ -24,23 +24,23 @@ final class oh extends IntrusiveNode {
           qj.field_a.position = 0;
           NameSuggestionsPanel.field_O[2] = (int)(SecondaryIntrusiveDeque.field_b >> 32);
           NameSuggestionsPanel.field_O[3] = (int)SecondaryIntrusiveDeque.field_b;
-          qj.field_a.a((byte) 126, NameSuggestionsPanel.field_O[0]);
-          qj.field_a.a((byte) 123, NameSuggestionsPanel.field_O[1]);
-          qj.field_a.a((byte) 124, NameSuggestionsPanel.field_O[2]);
-          qj.field_a.a((byte) 126, NameSuggestionsPanel.field_O[3]);
+          qj.field_a.writeInt((byte) 126, NameSuggestionsPanel.field_O[0]);
+          qj.field_a.writeInt((byte) 123, NameSuggestionsPanel.field_O[1]);
+          qj.field_a.writeInt((byte) 124, NameSuggestionsPanel.field_O[2]);
+          qj.field_a.writeInt((byte) 126, NameSuggestionsPanel.field_O[3]);
           jm.a(0, qj.field_a);
-          qj.field_a.h(13, param2);
+          qj.field_a.writeShort(13, param2);
           param0.a(qj.field_a, (byte) -121);
-          om.field_c.position = 0;
+          QuickChatDynamicCommand.field_c.position = 0;
           if (!param1) {
-            om.field_c.f(16, -123);
+            QuickChatDynamicCommand.field_c.writeByte(16, -123);
           } else {
-            om.field_c.f(18, -123);
+            QuickChatDynamicCommand.field_c.writeByte(18, -123);
           }
-          om.field_c.position = om.field_c.position + 2;
-          int var5_int = om.field_c.position;
-          om.field_c.a((byte) 123, jm.field_L);
-          om.field_c.a(ck.field_q, (byte) -23);
+          QuickChatDynamicCommand.field_c.position = QuickChatDynamicCommand.field_c.position + 2;
+          int var5_int = QuickChatDynamicCommand.field_c.position;
+          QuickChatDynamicCommand.field_c.writeInt((byte) 123, jm.field_L);
+          QuickChatDynamicCommand.field_c.writeLong(ck.field_q, (byte) -23);
           int var6 = 0;
           if (ej.field_d) {
             var6 = var6 | 1;
@@ -54,20 +54,20 @@ final class oh extends IntrusiveNode {
           if (null != p.field_i) {
             var6 = var6 | 16;
           }
-          om.field_c.f(var6, param4 - 24);
+          QuickChatDynamicCommand.field_c.writeByte(var6, param4 - 24);
           String var7 = tf.a(param4 ^ 98, PointCloudEffect.d((byte) -120));
           if (var7 == null) {
             var7 = "";
           }
-          om.field_c.a(var7, 101);
+          QuickChatDynamicCommand.field_c.writeString(var7, 101);
           if (param4 != -99) {
             return;
           }
           if (p.field_i != null) {
-            om.field_c.a((byte) 100, p.field_i);
+            QuickChatDynamicCommand.field_c.writeCircumfixedString((byte) 100, p.field_i);
           }
-          bn.a(param4 ^ -99, om.field_c, qj.field_a, q.field_O, cf.field_c);
-          om.field_c.i(-var5_int + om.field_c.position, 32614);
+          bn.a(param4 ^ -99, QuickChatDynamicCommand.field_c, qj.field_a, q.field_O, cf.field_c);
+          QuickChatDynamicCommand.field_c.backpatchShortLength(-var5_int + QuickChatDynamicCommand.field_c.position, 32614);
           ClientException.a(-1, param4 + 30884);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

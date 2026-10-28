@@ -90,19 +90,19 @@ abstract class DebouncedValidator implements ValidationSource {
 
     final static void a(qd param0, int param1, boolean param2) {
         try {
-          CipherPacketBuffer var3 = om.field_c;
+          CipherPacketBuffer var3 = QuickChatDynamicCommand.field_c;
           var3.writeCipheredOpcode(param1, param2);
           var3.position = var3.position + 1;
           int var4 = var3.position;
-          var3.f(1, -123);
-          var3.f(param0.field_m, -123);
-          var3.f(param0.field_h, -123);
-          var3.a((byte) 124, param0.field_k);
-          var3.a((byte) 127, param0.field_i);
-          var3.a((byte) 125, param0.field_j);
-          var3.a((byte) 127, param0.field_g);
-          var3.c(var4, -76);
-          var3.e(86, var3.position - var4);
+          var3.writeByte(1, -123);
+          var3.writeByte(param0.field_m, -123);
+          var3.writeByte(param0.field_h, -123);
+          var3.writeInt((byte) 124, param0.field_k);
+          var3.writeInt((byte) 127, param0.field_i);
+          var3.writeInt((byte) 125, param0.field_j);
+          var3.writeInt((byte) 127, param0.field_g);
+          var3.appendCrc32(var4, -76);
+          var3.backpatchByteLength(86, var3.position - var4);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "sm.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

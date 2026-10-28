@@ -37,7 +37,7 @@ class IntrusiveNode {
     }
 
     final static void a(int param0, int param1, cc param2) {
-        CipherPacketBuffer var5 = om.field_c;
+        CipherPacketBuffer var5 = QuickChatDynamicCommand.field_c;
         var5.writeCipheredOpcode(param1, true);
         var5.position = var5.position + 1;
         int var4 = var5.position;
@@ -45,15 +45,15 @@ class IntrusiveNode {
           return;
         }
         try {
-          var5.f(1, -123);
-          var5.f(param2.field_i, -123);
-          var5.d(12680, param2.field_m);
-          var5.a((byte) 126, param2.field_n);
-          var5.a((byte) 127, param2.field_h);
-          var5.a((byte) 123, param2.field_o);
-          var5.a((byte) 125, param2.field_g);
-          var5.c(var4, -61);
-          var5.e(118, -var4 + var5.position);
+          var5.writeByte(1, -123);
+          var5.writeByte(param2.field_i, -123);
+          var5.writeSignedSmart(12680, param2.field_m);
+          var5.writeInt((byte) 126, param2.field_n);
+          var5.writeInt((byte) 127, param2.field_h);
+          var5.writeInt((byte) 123, param2.field_o);
+          var5.writeInt((byte) 125, param2.field_g);
+          var5.appendCrc32(var4, -61);
+          var5.backpatchByteLength(118, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "hg.WA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

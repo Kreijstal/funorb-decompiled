@@ -386,21 +386,21 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
     final static void a(int param0, bd param1, int param2) {
         String stackIn_9_2 = null;
         try {
-          CipherPacketBuffer var5 = om.field_c;
+          CipherPacketBuffer var5 = QuickChatDynamicCommand.field_c;
           var5.writeCipheredOpcode(param2, true);
           var5.position = var5.position + 1;
           int var4 = var5.position;
-          var5.f(1, -123);
+          var5.writeByte(1, -123);
           if (param1.field_j != null) {
-            var5.f(param1.field_j.length, -123);
-            var5.a(param1.field_j.length, (byte) 21, 0, param1.field_j);
+            var5.writeByte(param1.field_j.length, -123);
+            var5.writeBytes(param1.field_j.length, (byte) 21, 0, param1.field_j);
           } else {
-            var5.f(0, -123);
+            var5.writeByte(0, -123);
           }
-          var5.c(var4, -38);
+          var5.appendCrc32(var4, -38);
           var5.position = var5.position - 4;
           param1.field_i = var5.readInt(-5053);
-          var5.e(-80, -var4 + var5.position);
+          var5.backpatchByteLength(-80, -var4 + var5.position);
           if (param0 >= -80) {
             SingleChildContainer.releaseStatics((byte) 12);
           }

@@ -11,17 +11,17 @@ final class Bullet extends IntrusiveNode {
     int velocityYQ16;
     int yQ16;
 
-    final static om[] e(int param0) {
+    final static QuickChatDynamicCommand[] quickChatDynamicCommands(int guard) {
         try {
-          if (param0 > -90) {
+          if (guard > -90) {
             collisionLaserCount = -121;
           }
-          om[] stackIn_4_0 = new om[]{co.field_b, qi.field_P, eb.field_L, pl.field_m, ci.field_d, pj.field_k, sj.field_l, ea.field_g, ki.field_H, AccountRegistrationPanel.field_L, le.field_a, an.field_c, mg.field_g, wa.field_d};
+          QuickChatDynamicCommand[] stackIn_4_0 = new QuickChatDynamicCommand[]{co.field_b, qi.field_P, eb.field_L, pl.field_m, ci.field_d, pj.field_k, sj.field_l, ea.field_g, ki.field_H, AccountRegistrationPanel.field_L, le.field_a, an.field_c, mg.field_g, wa.field_d};
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "vh.A(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "vh.A(" + guard + ')');
         }
     }
 
@@ -30,12 +30,12 @@ final class Bullet extends IntrusiveNode {
         String stackIn_16_2 = null;
         String stackIn_20_2 = null;
         try {
-          if (!archive.b(0)) {
+          if (!archive.ensureIndex(0)) {
             String stackIn_2_0 = (String) (fallback);
             return stackIn_2_0;
           }
           if (guard == -12920) {
-            String stackIn_7_0 = label + " - " + archive.a(-125) + "%";
+            String stackIn_7_0 = label + " - " + archive.overallProgress(-125) + "%";
             return stackIn_7_0;
           }
           String stackIn_5_0 = (String) null;
@@ -175,10 +175,10 @@ final class Bullet extends IntrusiveNode {
           aj.field_d = 0;
           int var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var8 < mesh.field_D)))) {
-            int var9 = mesh.field_e[var8];
-            int var10 = mesh.field_o[var8];
-            int var11 = mesh.field_f[var8];
+          while (!(decompiledNaturalLoopExit0 = (!(var8 < mesh.faceCount)))) {
+            int var9 = mesh.faceVertexA[var8];
+            int var10 = mesh.faceVertexB[var8];
+            int var11 = mesh.faceVertexC[var8];
             boolean stackOut_13_0 = cullBackfaces;
             stackIn_52_0 = stackOut_13_0 ? 1 : 0;
             boolean stackIn_14_0 = stackOut_13_0;

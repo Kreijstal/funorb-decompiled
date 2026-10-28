@@ -101,20 +101,20 @@ final class ClientException extends RuntimeException {
         try {
           if (TextLayout.field_c != null && (0 > param0 ||
             al.field_d == ck.field_t)) {
-            if (om.field_c.position == 0 &&
+            if (QuickChatDynamicCommand.field_c.position == 0 &&
               (10000L + le.field_c) < td.b(128)) {
-              om.field_c.writeCipheredOpcode(param0, true);
+              QuickChatDynamicCommand.field_c.writeCipheredOpcode(param0, true);
             }
-            if (0 < om.field_c.position) {
+            if (0 < QuickChatDynamicCommand.field_c.position) {
               try {
-                TextLayout.field_c.a(om.field_c.position, 0, om.field_c.payload, 5000);
+                TextLayout.field_c.a(QuickChatDynamicCommand.field_c.position, 0, QuickChatDynamicCommand.field_c.payload, 5000);
                 le.field_c = td.b(128);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 Throwable decompiledCaughtException = decompiledCaughtParameter0;
                 IOException iOException = (IOException) (Object) decompiledCaughtException;
                 nm.a(16);
               }
-              om.field_c.position = 0;
+              QuickChatDynamicCommand.field_c.position = 0;
             }
             if (param1 == 30785) {
               return;
@@ -122,7 +122,7 @@ final class ClientException extends RuntimeException {
             ClientException.releaseStatics(true);
             return;
           }
-          om.field_c.position = 0;
+          QuickChatDynamicCommand.field_c.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -43,7 +43,7 @@ final class vi {
             boolean decompiledFrameRemainder0 = true;
             if (qm.field_d[var3].field_a == param0.field_a) {
               int var4 = qm.field_d[var3].b(47);
-              if (ResourceArchive.field_l[var4] > mn.field_k) {
+              if (ResourceArchive.field_l[var4] > ReflectionCheck.field_k) {
                 ResourceArchive.field_l[var4] = ResourceArchive.field_l[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class le {
-    static om field_a;
+    static QuickChatDynamicCommand field_a;
     static String field_b;
     static long field_c;
 
@@ -22,37 +22,37 @@ final class le {
           return ee.field_a;
         }
         if (PasswordValidator.field_p != null) {
-          if (!PasswordValidator.field_p.b(0)) {
+          if (!PasswordValidator.field_p.ensureIndex(0)) {
             return md.field_H;
           }
           return gj.field_g;
         }
-        if (!ii.field_a.b(0)) {
+        if (!ii.field_a.ensureIndex(0)) {
           return TextFieldValidator.field_l;
         }
-        if (!ii.field_a.a(0, "commonui")) {
-          return DebouncedValidator.field_d + " - " + ii.field_a.a("commonui", 0) + "%";
+        if (!ii.field_a.tryLoadNamedGroup(0, "commonui")) {
+          return DebouncedValidator.field_d + " - " + ii.field_a.namedGroupProgress("commonui", 0) + "%";
         }
-        if (!w.field_ab.b(0)) {
+        if (!w.field_ab.ensureIndex(0)) {
           return CipherPacketBuffer.field_o;
         }
-        if (!w.field_ab.a(0, "commonui")) {
-          return qf.field_h + " - " + w.field_ab.a("commonui", param0 ^ 1) + "%";
+        if (!w.field_ab.tryLoadNamedGroup(0, "commonui")) {
+          return qf.field_h + " - " + w.field_ab.namedGroupProgress("commonui", param0 ^ 1) + "%";
         }
         if (param0 != 1) {
-          field_a = (om) null;
+          field_a = (QuickChatDynamicCommand) null;
         }
-        if (!pl.field_j.b(0)) {
+        if (!pl.field_j.ensureIndex(0)) {
           return ff.field_a;
         }
-        if (!pl.field_j.a((byte) -119)) {
-          return wf.field_b + " - " + pl.field_j.a(-67) + "%";
+        if (!pl.field_j.tryLoadAllGroups((byte) -119)) {
+          return wf.field_b + " - " + pl.field_j.overallProgress(-67) + "%";
         }
         return field_b;
     }
 
     static {
-        field_a = new om(12, 0, 1, 0);
+        field_a = new QuickChatDynamicCommand(12, 0, 1, 0);
         field_b = "Please wait...";
     }
 }

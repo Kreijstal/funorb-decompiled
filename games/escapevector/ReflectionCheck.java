@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn extends IntrusiveNode {
+final class ReflectionCheck extends IntrusiveNode {
     static int field_n;
-    SystemTask[] field_r;
-    int field_g;
-    int field_i;
-    byte[][][] field_l;
-    int[] field_o;
-    SystemTask[] field_p;
+    SystemTask[] fieldTasks;
+    int id;
+    int operationCount;
+    byte[][][] serializedArguments;
+    int[] errors;
+    SystemTask[] methodTasks;
     static CoverageBitmapFont field_h;
-    int[] field_m;
+    int[] operations;
     static ph field_q;
     static int field_k;
-    int[] field_j;
+    int[] replacementValues;
 
-    final static String a(int param0, char param1, int param2) {
+    final static String repeatChar(int guard, char character, int count) {
         int var6 = EscapeVector.obfuscationControl;
-        char[] var7 = new char[param2];
+        char[] var7 = new char[count];
         char[] var3 = var7;
         for (int var4 = 0; var7.length > var4; var4++) {
-          var7[var4] = param1;
+          var7[var4] = character;
         }
-        int var5 = 53 / ((49 - param0) / 63);
+        int var5 = 53 / ((49 - guard) / 63);
         return new String(var7);
     }
 
     final static void d(byte param0) {
         if (param0 >= -112) {
-          mn.a(81, (byte) 59);
+          ReflectionCheck.a(81, (byte) 59);
           boolean var1 = (lh.b((byte) 71));
           if (rc.field_a == null) {
             kh.a((var1), -1230, false);
@@ -68,47 +68,47 @@ final class mn extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawGradientOutline(int guard, int x, int y, int width, int height) {
         int var10 = EscapeVector.obfuscationControl;
         try {
-          SoftwareRasterizer.drawHorizontalLine(param1, param2, 1 + param3, 10000536);
-          SoftwareRasterizer.drawHorizontalLine(param1, param4 + param2, param3 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(x, y, 1 + width, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(x, height + y, width + 1, 12105912);
           int var5_int = 1;
-          int var6 = param4;
-          if (SoftwareRasterizer.clipTop > var5_int + param2) {
-            var5_int = SoftwareRasterizer.clipTop - param2;
+          int var6 = height;
+          if (SoftwareRasterizer.clipTop > var5_int + y) {
+            var5_int = SoftwareRasterizer.clipTop - y;
           }
-          if (param0 != -27951) {
+          if (guard != -27951) {
             return;
           }
-          if (param2 + var6 > SoftwareRasterizer.clipBottom) {
-            var6 = -param2 + SoftwareRasterizer.clipBottom;
+          if (y + var6 > SoftwareRasterizer.clipBottom) {
+            var6 = -y + SoftwareRasterizer.clipBottom;
           }
           for (int var7 = var5_int; var6 > var7; var7++) {
-            int var8 = var7 * 48 / param4 + 152;
+            int var8 = var7 * 48 / height + 152;
             int var9 = var8 << 16 | var8 << 8 | var8;
-            SoftwareRasterizer.pixels[param1 + SoftwareRasterizer.width * (var7 + param2)] = var9;
-            SoftwareRasterizer.pixels[param3 + (param1 + (param2 + var7) * SoftwareRasterizer.width)] = var9;
+            SoftwareRasterizer.pixels[x + SoftwareRasterizer.width * (var7 + y)] = var9;
+            SoftwareRasterizer.pixels[width + (x + (y + var7) * SoftwareRasterizer.width)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var5), "mn.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) var5), "mn.D(" + guard + ',' + x + ',' + y + ',' + width + ',' + height + ')');
         }
     }
 
     public static void releaseStatics(byte guard) {
         field_h = null;
         if (guard < 70) {
-          mn.a(86, -71, -62, 90, 61);
+          ReflectionCheck.drawGradientOutline(86, -71, -62, 90, 61);
           field_q = null;
           return;
         }
         field_q = null;
     }
 
-    mn() {
+    ReflectionCheck() {
     }
 
     static {

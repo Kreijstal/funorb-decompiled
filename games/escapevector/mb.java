@@ -57,7 +57,7 @@ final class mb {
                   return;
                 }
               } else if (CheckboxPainter.field_n) {
-                mn.d((byte) -120);
+                ReflectionCheck.d((byte) -120);
                 var2 = (rc.field_a.f(-91));
                 if (var2) {
                   return;

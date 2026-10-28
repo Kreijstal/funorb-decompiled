@@ -24,7 +24,7 @@ final class NameAvailabilityResult {
           if (bd.field_h != null) {
             try {
               bd.field_h.a(0, 0L);
-              bd.field_h.a(true, om.field_g.position, om.field_g.payload, 24);
+              bd.field_h.a(true, QuickChatDynamicCommand.field_g.position, QuickChatDynamicCommand.field_g.payload, 24);
               decompiledRegionSelector0 = false;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;
@@ -32,14 +32,14 @@ final class NameAvailabilityResult {
               decompiledRegionSelector0 = true;
             }
             if (!decompiledRegionSelector0) {
-              om.field_g.position = om.field_g.position + 24;
+              QuickChatDynamicCommand.field_g.position = QuickChatDynamicCommand.field_g.position + 24;
               if (param0 > -44) {
                 NameAvailabilityResult.a((byte) -105);
               }
               return;
             }
           }
-          om.field_g.position = om.field_g.position + 24;
+          QuickChatDynamicCommand.field_g.position = QuickChatDynamicCommand.field_g.position + 24;
           if (param0 <= -44) {
             return;
           }

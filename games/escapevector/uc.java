@@ -79,7 +79,7 @@ final class uc {
     final static boolean a(ResourceArchive param0, int param1, int param2, int param3) {
         String stackIn_8_2 = null;
         try {
-          byte[] var6 = param0.a(param2, (byte) -97, param3);
+          byte[] var6 = param0.getFile(param2, (byte) -97, param3);
           byte[] var4 = var6;
           int var5 = -6 / ((param1 - 6) / 55);
           if (var6 == null) {
@@ -108,25 +108,25 @@ final class uc {
         }
         while (this.field_f > this.field_e) {
           qk var4 = this.field_c[this.field_e];
-          if (!var4.field_h.b(0)) {
+          if (!var4.field_h.ensureIndex(0)) {
             this.a(0, -33, var4);
             return false;
           }
           if (0 <= var4.field_b &&
-            !var4.field_h.d(118, var4.field_b)) {
-            this.a(var4.field_h.b(param0 - 3810, var4.field_b), -102, var4);
+            !var4.field_h.tryLoadGroup(118, var4.field_b)) {
+            this.a(var4.field_h.groupProgress(param0 - 3810, var4.field_b), -102, var4);
             return false;
           }
           if (null != var4.field_i &&
-            !var4.field_h.a(0, var4.field_i)) {
-            this.a(var4.field_h.a(var4.field_i, 0), param0 - 7114, var4);
+            !var4.field_h.tryLoadNamedGroup(0, var4.field_i)) {
+            this.a(var4.field_h.namedGroupProgress(var4.field_i, 0), param0 - 7114, var4);
             return false;
           }
           if (var4.field_b < 0 &&
             null == var4.field_i &&
             var4.field_d != null &&
-            !var4.field_h.a((byte) -119)) {
-            this.a(var4.field_h.a(-98), -17, var4);
+            !var4.field_h.tryLoadAllGroups((byte) -119)) {
+            this.a(var4.field_h.overallProgress(-98), -17, var4);
             return false;
           }
           this.field_e = this.field_e + 1;

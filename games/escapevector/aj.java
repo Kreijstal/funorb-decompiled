@@ -11,13 +11,13 @@ final class aj {
 
     final static void a(int param0, int param1, ij param2) {
         try {
-          CipherPacketBuffer var3 = om.field_c;
+          CipherPacketBuffer var3 = QuickChatDynamicCommand.field_c;
           var3.writeCipheredOpcode(param1, true);
-          var3.f(5, -123);
-          var3.f(0, -123);
-          var3.h(-123, param2.field_n);
-          var3.f(param2.field_h, -123);
-          var3.f(param2.field_j, -123);
+          var3.writeByte(5, -123);
+          var3.writeByte(0, -123);
+          var3.writeShort(-123, param2.field_n);
+          var3.writeByte(param2.field_h, -123);
+          var3.writeByte(param2.field_j, -123);
           int var4 = 58 % ((param0 + 64) / 39);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "aj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

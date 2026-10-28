@@ -259,7 +259,7 @@ final class vd {
     final static void a(byte param0) {
         int var1 = -124 % ((param0 + 86) / 37);
         dl.field_a = false;
-        om.field_g.readUnsignedByte(0);
+        QuickChatDynamicCommand.field_g.readUnsignedByte(0);
     }
 
     private final BitSet a(byte param0, int param1, BitSet param2, int param3, int param4) {

@@ -163,7 +163,7 @@ final class t {
           mj.field_b.h(5267536);
           int var7Lifetime1 = -mj.field_d + 30 + 5 * param0;
           if (var7Lifetime1 > 0) {
-            ResourceArchive.a(param1, (-mj.field_b.fullWidth + 640) / 2, var7Lifetime1, mj.field_b, param2 ^ 120);
+            ResourceArchive.drawSpriteWithRowJitter(param1, (-mj.field_b.fullWidth + 640) / 2, var7Lifetime1, mj.field_b, param2 ^ 120);
             if (var11 == 0) {
               return;
             }

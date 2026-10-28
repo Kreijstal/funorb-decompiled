@@ -15,11 +15,11 @@ abstract class ArchiveRequest extends DualLinkNode {
           return;
         }
         try {
-          CipherPacketBuffer var3 = om.field_c;
+          CipherPacketBuffer var3 = QuickChatDynamicCommand.field_c;
           var3.writeCipheredOpcode(param0, true);
-          var3.f(2, -123);
-          var3.f(0, -123);
-          var3.f(param1.field_j, -123);
+          var3.writeByte(2, -123);
+          var3.writeByte(0, -123);
+          var3.writeByte(param1.field_j, -123);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "oa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

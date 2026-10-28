@@ -14,9 +14,9 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         this.field_n = false;
     }
 
-    final void g(int param0) {
+    final void clearCachedName(int guard) {
         this.field_s = null;
-        if (param0 != 22186) {
+        if (guard != 22186) {
           String var3 = (String) null;
           this.messageForText((byte) -126, (String) null);
         }
@@ -65,32 +65,32 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
-        if (param1 == 0) {
-          return param2;
+    final static int scaleCampaignBonus(int guard, int gameMode, int value) {
+        if (gameMode == 0) {
+          return value;
         }
-        if (param1 == 1) {
-          return param2;
+        if (gameMode == 1) {
+          return value;
         }
-        if (param1 == 2) {
-          return 100 * param2;
+        if (gameMode == 2) {
+          return 100 * value;
         }
-        if (param0 <= 5) {
+        if (guard <= 5) {
           return 107;
         }
-        if (param1 != 3) {
-          return param2;
+        if (gameMode != 3) {
+          return value;
         }
-        return param2 * 100;
+        return value * 100;
     }
 
-    final static om a(byte param0, int param1) {
+    final static QuickChatDynamicCommand findQuickChatDynamicCommand(byte guard, int id) {
         int var5 = EscapeVector.obfuscationControl;
-        om[] var6 = Bullet.e(-91);
-        om[] var2 = var6;
-        int var3 = 2 % ((3 - param0) / 49);
+        QuickChatDynamicCommand[] var6 = Bullet.quickChatDynamicCommands(-91);
+        QuickChatDynamicCommand[] var2 = var6;
+        int var3 = 2 % ((3 - guard) / 49);
         for (int var4 = 0; var6.length > var4; var4++) {
-          if (param1 == var6[var4].field_f) {
+          if (id == var6[var4].id) {
             return var6[var4];
           }
         }

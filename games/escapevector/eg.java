@@ -7,7 +7,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         String stackIn_7_2 = null;
         try {
-          if (om.field_b == null) {
+          if (QuickChatDynamicCommand.field_b == null) {
             return;
           }
           md.field_G = 0;
@@ -32,7 +32,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         String stackIn_7_2 = null;
         try {
-          if (null == om.field_b) {
+          if (null == QuickChatDynamicCommand.field_b) {
             return;
           }
           md.field_G = 0;
@@ -105,7 +105,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         String stackIn_7_2 = null;
         try {
-          if (null == om.field_b) {
+          if (null == QuickChatDynamicCommand.field_b) {
             return;
           }
           vj.field_b = 0;
@@ -126,7 +126,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (null != om.field_b) {
+          if (null != QuickChatDynamicCommand.field_b) {
             md.field_G = 0;
             vb.field_b = param0.getX();
             jk.field_b = param0.getY();
@@ -140,7 +140,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseReleased(java.awt.event.MouseEvent param0) {
         String stackIn_10_2 = null;
         try {
-          if (om.field_b != null) {
+          if (QuickChatDynamicCommand.field_b != null) {
             md.field_G = 0;
             vj.field_b = 0;
             ke.field_a = true;
@@ -173,7 +173,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-          if (null != om.field_b) {
+          if (null != QuickChatDynamicCommand.field_b) {
             md.field_G = 0;
             vb.field_b = param0.getX();
             jk.field_b = param0.getY();
@@ -187,7 +187,7 @@ final class eg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mousePressed(java.awt.event.MouseEvent param0) {
         String stackIn_13_2 = null;
         try {
-          if (om.field_b != null) {
+          if (QuickChatDynamicCommand.field_b != null) {
             md.field_G = 0;
             fk.field_b = param0.getX();
             PcmResampler.field_c = param0.getY();

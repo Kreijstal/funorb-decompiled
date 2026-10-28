@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class an {
-    static om field_c;
+    static QuickChatDynamicCommand field_c;
     static boolean field_a;
     static String field_b;
     private static String field_z;
@@ -17,7 +17,7 @@ final class an {
 
     static {
         field_z = "an.A(";
-        field_c = new om(13, 0, 1, 0);
+        field_c = new QuickChatDynamicCommand(13, 0, 1, 0);
         field_b = "Fullscreen";
     }
 }

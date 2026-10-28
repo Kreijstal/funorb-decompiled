@@ -181,8 +181,8 @@ final class un extends re {
               NameSuggestionsPanel.field_I = new pj((java.net.Socket) (qk.field_g.field_b), IntPoint.field_d);
               PacketBuffer var2 = new PacketBuffer(13);
               wc.a(TrackerMusicDefinition.field_j, he.field_y, true, NameSuggestionsPanel.field_N, var2);
-              var2.f(15, -123);
-              var2.a((byte) 123, mn.field_n);
+              var2.writeByte(15, -123);
+              var2.writeInt((byte) 123, ReflectionCheck.field_n);
               NameSuggestionsPanel.field_I.a(13, 0, var2.payload, 5000);
               ke.field_b = ke.field_b + 1;
               BoundedRandomAccessFile.field_g = 30000L + td.b(128);

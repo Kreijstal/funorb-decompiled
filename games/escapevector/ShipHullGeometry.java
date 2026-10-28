@@ -74,15 +74,15 @@ final class ShipHullGeometry {
           } else {
             SelfDestructEffects.f(46);
           }
-          int[] var54 = new int[param5.field_M];
+          int[] var54 = new int[param5.normalCount];
           int[] var49 = var54;
           int[] var41 = var49;
           int[] var8 = var41;
-          int[] var64 = new int[param5.field_M];
+          int[] var64 = new int[param5.normalCount];
           int[] var62 = oi.field_L;
           int[] var63 = IsaacRandom.field_f;
           int[] var61 = GameplaySession.field_xb;
-          for (int var13 = 0; param5.field_M > var13; var13++) {
+          for (int var13 = 0; param5.normalCount > var13; var13++) {
             int var14 = param6 * var61[var13] + param2 * var62[var13] + param7 * var63[var13] >> 8;
             if (0 > var14) {
               var14 = -var14;
@@ -105,23 +105,23 @@ final class ShipHullGeometry {
           }
           for (int var13Lifetime1 = 0; var13Lifetime1 < aj.field_d; var13Lifetime1++) {
             int var14Lifetime1 = bc.field_f[var13Lifetime1];
-            int var15Lifetime1 = param5.field_e[var14Lifetime1];
-            int var16 = param5.field_o[var14Lifetime1];
-            int var17 = param5.field_f[var14Lifetime1];
-            if (param5.field_h[var14Lifetime1] >= oi.field_L.length) {
+            int var15Lifetime1 = param5.faceVertexA[var14Lifetime1];
+            int var16 = param5.faceVertexB[var14Lifetime1];
+            int var17 = param5.faceVertexC[var14Lifetime1];
+            if (param5.faceNormalA[var14Lifetime1] >= oi.field_L.length) {
               stackIn_26_0 = -1;
             } else {
-              stackIn_26_0 = param5.field_h[var14Lifetime1];
+              stackIn_26_0 = param5.faceNormalA[var14Lifetime1];
             }
             int var18 = stackIn_26_0;
-            if (param5.field_u[var14Lifetime1] >= oi.field_L.length) {
+            if (param5.faceNormalB[var14Lifetime1] >= oi.field_L.length) {
               stackIn_29_0 = -1;
             } else {
-              stackIn_29_0 = param5.field_u[var14Lifetime1];
+              stackIn_29_0 = param5.faceNormalB[var14Lifetime1];
             }
             int var19 = stackIn_29_0;
-            if (param5.field_j[var14Lifetime1] < oi.field_L.length) {
-              stackIn_32_0 = param5.field_j[var14Lifetime1];
+            if (param5.faceNormalC[var14Lifetime1] < oi.field_L.length) {
+              stackIn_32_0 = param5.faceNormalC[var14Lifetime1];
             } else {
               stackIn_32_0 = -1;
             }

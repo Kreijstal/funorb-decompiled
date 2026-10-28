@@ -8,7 +8,7 @@ final class mg {
     static int field_b;
     static int[] field_a;
     static int field_f;
-    static om field_g;
+    static QuickChatDynamicCommand field_g;
     static ResourceArchive field_c;
 
     final static int a(byte param0) {
@@ -38,6 +38,6 @@ final class mg {
         field_h = new String[]{"Retrieval", "Retribution", "Simulator"};
         field_a = new int[8192];
         field_e = new IntrusiveDeque();
-        field_g = new om(14, 0, 4, 1);
+        field_g = new QuickChatDynamicCommand(14, 0, 4, 1);
     }
 }

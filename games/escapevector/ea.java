@@ -8,7 +8,7 @@ final class ea {
     private int field_e;
     static String field_i;
     private gb field_j;
-    static om field_g;
+    static QuickChatDynamicCommand field_g;
     private gb field_k;
     static Sprite field_d;
     private int field_b;
@@ -101,21 +101,21 @@ final class ea {
     final static boolean c(byte param0) {
         int var3 = EscapeVector.obfuscationControl;
         try {
-          mn var4 = (mn) (je.field_a.first(false));
-          mn var1 = var4;
+          ReflectionCheck var4 = (ReflectionCheck) (je.field_a.first(false));
+          ReflectionCheck var1 = var4;
           if (var1 == null) {
             return false;
           }
           if (param0 > -47) {
             return true;
           }
-          for (int var2 = 0; var1.field_i > var2; var2++) {
-            if (var4.field_r[var2] != null &&
-              0 == var4.field_r[var2].field_f) {
+          for (int var2 = 0; var1.operationCount > var2; var2++) {
+            if (var4.fieldTasks[var2] != null &&
+              0 == var4.fieldTasks[var2].field_f) {
               return false;
             }
-            if (null != var4.field_p[var2] &&
-              var4.field_p[var2].field_f == 0) {
+            if (null != var4.methodTasks[var2] &&
+              var4.methodTasks[var2].field_f == 0) {
               return false;
             }
           }
@@ -143,7 +143,7 @@ final class ea {
 
     static {
         field_i = "M";
-        field_g = new om(9, 0, 4, 1);
+        field_g = new QuickChatDynamicCommand(9, 0, 4, 1);
         field_d = new Sprite(270, 70);
     }
 }

@@ -126,8 +126,8 @@ final class ac {
         String stackIn_14_2 = null;
         try {
           int var5_int = 4 % ((50 - param1) / 60);
-          int var6 = param2.b(-1, param3);
-          int var7 = param2.a(var6, param0, true);
+          int var6 = param2.findGroupId(-1, param3);
+          int var7 = param2.findFileId(var6, param0, true);
           CoverageBitmapFont stackIn_1_0 = ha.a(var6, -198630768, param4, var7, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

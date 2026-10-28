@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj extends IntrusiveNode {
-    static om field_l;
+    static QuickChatDynamicCommand field_l;
     String field_g;
     static String field_j;
     static int field_h;
@@ -18,7 +18,7 @@ final class sj extends IntrusiveNode {
           ObjectSpriteSet.field_e.addSubstream(mb.field_a);
           return;
         }
-        field_l = (om) null;
+        field_l = (QuickChatDynamicCommand) null;
         ObjectSpriteSet.field_e.addSubstream(mb.field_a);
     }
 
@@ -27,7 +27,7 @@ final class sj extends IntrusiveNode {
         field_k = null;
         field_l = null;
         if (guard != 123) {
-          field_l = (om) null;
+          field_l = (QuickChatDynamicCommand) null;
         }
     }
 
@@ -40,7 +40,7 @@ final class sj extends IntrusiveNode {
     }
 
     static {
-        field_l = new om(8, 0, 4, 1);
+        field_l = new QuickChatDynamicCommand(8, 0, 4, 1);
         field_j = "Discard";
         field_k = "Target locations";
     }

@@ -38,7 +38,7 @@ final class tg extends ol {
             CharSequence var3 = (CharSequence) null;
             tg.a(-9, (CharSequence) null);
           }
-          boolean stackIn_3_0 = PacketBuffer.a(false, param1, 113);
+          boolean stackIn_3_0 = PacketBuffer.isValidAccountName(false, param1, 113);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

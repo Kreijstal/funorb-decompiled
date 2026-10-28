@@ -30,7 +30,7 @@ abstract class SpriteState extends DualLinkNode {
 
     final static void g(int param0) {
         Throwable decompiledCaughtException = null;
-        Object var1 = om.field_b;
+        Object var1 = QuickChatDynamicCommand.field_b;
         synchronized (var1) {
           md.field_G = md.field_G + 1;
           eb.field_K = vj.field_b;

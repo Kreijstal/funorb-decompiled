@@ -127,7 +127,7 @@ final class fa {
             fa.releaseStatics(true);
           }
           if (uc.a(param3, 121, param2, param4)) {
-            ih stackIn_6_0 = DropTargetWidget.a(16826, param1.a(param2, (byte) -97, param4));
+            ih stackIn_6_0 = DropTargetWidget.a(16826, param1.getFile(param2, (byte) -97, param4));
             return stackIn_6_0;
           }
           Object stackIn_4_0 = null;

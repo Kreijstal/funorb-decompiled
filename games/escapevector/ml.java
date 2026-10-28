@@ -28,7 +28,7 @@ final class ml {
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
-          byte[] var6 = param1.a(param4, (byte) -97, param3);
+          byte[] var6 = param1.getFile(param4, (byte) -97, param3);
           byte[] var5 = var6;
           if (var6 == null) {
             return null;

@@ -25,8 +25,8 @@ final class qf extends eo {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            om.field_g = new CipherPacketBuffer(param1);
-            om.field_c = new CipherPacketBuffer(param0);
+            QuickChatDynamicCommand.field_g = new CipherPacketBuffer(param1);
+            QuickChatDynamicCommand.field_c = new CipherPacketBuffer(param0);
             if (param8 != 84) {
               qf.releaseStatics(-106);
             }

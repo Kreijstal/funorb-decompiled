@@ -21,7 +21,7 @@ final class ll extends IntrusiveNode {
     final static void b(boolean param0) {
         ll var1 = (ll) (jl.field_n.first(param0));
         if (var1 != null) {
-          CipherPacketBuffer var2 = om.field_g;
+          CipherPacketBuffer var2 = QuickChatDynamicCommand.field_g;
           var1.field_j = new int[]{var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053), var2.readInt(-5053)};
           var1.unlink((byte) -66);
           return;
@@ -33,11 +33,11 @@ final class ll extends IntrusiveNode {
         int var5 = EscapeVector.obfuscationControl;
         if (param3 > 0) {
           if (!(30 <= param3)) {
-            ResourceArchive.a(param1, 8, 60 - param3 * 2, ea.field_f, param2 ^ -97);
+            ResourceArchive.drawSpriteWithRowJitter(param1, 8, 60 - param3 * 2, ea.field_f, param2 ^ -97);
           } else if (param3 <= 80) {
             ea.field_f.e(8, param1);
           } else if (param3 < 95) {
-            ResourceArchive.a(param1, 8, (param3 - 80) * 4, ea.field_f, param2 - 115);
+            ResourceArchive.drawSpriteWithRowJitter(param1, 8, (param3 - 80) * 4, ea.field_f, param2 - 115);
           }
         }
         if (param2 != 8) {
@@ -47,7 +47,7 @@ final class ll extends IntrusiveNode {
           return;
         }
         if (80 > param3) {
-          ResourceArchive.a(param0, -ArchiveIndex.field_o.fullWidth + 632, 2 * (-param3 + 80), ArchiveIndex.field_o, param2 ^ -112);
+          ResourceArchive.drawSpriteWithRowJitter(param0, -ArchiveIndex.field_o.fullWidth + 632, 2 * (-param3 + 80), ArchiveIndex.field_o, param2 ^ -112);
           return;
         }
         if (param3 <= 80) {
@@ -57,7 +57,7 @@ final class ll extends IntrusiveNode {
         if (95 <= param3) {
           return;
         }
-        ResourceArchive.a(param0, -ArchiveIndex.field_o.fullWidth + 632, (param3 - 80) * 4, ArchiveIndex.field_o, param2 ^ -108);
+        ResourceArchive.drawSpriteWithRowJitter(param0, -ArchiveIndex.field_o.fullWidth + 632, (param3 - 80) * 4, ArchiveIndex.field_o, param2 ^ -108);
     }
 
     public static void releaseStatics(byte guard) {
@@ -71,7 +71,7 @@ final class ll extends IntrusiveNode {
     }
 
     final static void a(boolean param0) {
-        ck.field_r = om.field_g.c(!param0 ? true : false);
+        ck.field_r = QuickChatDynamicCommand.field_g.readString(!param0 ? true : false);
         if (param0) {
           CharSequence var3 = (CharSequence) ((Object) ck.field_r);
           cc.field_k = sf.a(-101, var3);
@@ -87,15 +87,15 @@ final class ll extends IntrusiveNode {
           if (!bo.a(30000, 1)) {
             return false;
           }
-          EmailSyntaxValidator.field_r = om.field_g.readUnsignedByte(param0 ^ 10550);
-          om.field_g.position = 0;
+          EmailSyntaxValidator.field_r = QuickChatDynamicCommand.field_g.readUnsignedByte(param0 ^ 10550);
+          QuickChatDynamicCommand.field_g.position = 0;
         }
         if (EmailSyntaxValidator.field_r == -2) {
           if (!bo.a(30000, 2)) {
             return false;
           }
-          EmailSyntaxValidator.field_r = om.field_g.readUnsignedShort(1952);
-          om.field_g.position = 0;
+          EmailSyntaxValidator.field_r = QuickChatDynamicCommand.field_g.readUnsignedShort(1952);
+          QuickChatDynamicCommand.field_g.position = 0;
         }
         if (param0 == 10550) {
           return bo.a(30000, EmailSyntaxValidator.field_r);

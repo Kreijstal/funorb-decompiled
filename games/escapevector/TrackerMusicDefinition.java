@@ -151,7 +151,7 @@ final class TrackerMusicDefinition {
             int var6 = param0.readUnsignedShort(1952);
             byte[] var16 = new byte[var6];
             if (0 < var6) {
-              param0.a(var16, (byte) -96, 0, var6);
+              param0.readBytes(var16, (byte) -96, 0, var6);
               this.field_C[var5Lifetime2] = var16;
             }
           }
@@ -206,7 +206,7 @@ final class TrackerMusicDefinition {
               this.field_v[var6Lifetime1] = array$2;
               int var10 = 0;
               for (int var11 = 0; var8Lifetime1 > var11; var11++) {
-                int dupTemp$3 = var10 + param0.e((byte) 32);
+                int dupTemp$3 = var10 + param0.readSignedSmart((byte) 32);
                 var10 = dupTemp$3;
                 int localTemp$4 = var4Lifetime1Lifetime1 + dupTemp$3;
                 var4Lifetime1Lifetime1 = localTemp$4;
@@ -225,7 +225,7 @@ final class TrackerMusicDefinition {
               int var4Lifetime1Lifetime3 = 0;
               int var10Lifetime1 = 0;
               for (int var11Lifetime2 = 0; var9 > var11Lifetime2; var11Lifetime2++) {
-                int dupTemp$8 = var10Lifetime1 + param0.e((byte) 114);
+                int dupTemp$8 = var10Lifetime1 + param0.readSignedSmart((byte) 114);
                 var10Lifetime1 = dupTemp$8;
                 int localTemp$9 = var4Lifetime1Lifetime3 + dupTemp$8;
                 var4Lifetime1Lifetime3 = localTemp$9;
@@ -245,10 +245,10 @@ final class TrackerMusicDefinition {
                 this.field_h[var5Lifetime4] = param0.readUnsignedMedium((byte) -126);
                 this.field_A[var5Lifetime4] = this.field_h[var5Lifetime4] + param0.readUnsignedMedium((byte) -107);
                 this.field_a[var5Lifetime4] = param0.readUnsignedByte(0);
-                this.field_z[var5Lifetime4] = param0.a(false);
+                this.field_z[var5Lifetime4] = param0.readByte(false);
                 this.field_E[var5Lifetime4] = param0.readUnsignedByte(0);
                 this.field_y[var5Lifetime4] = param0.readUnsignedByte(0);
-                this.field_b[var5Lifetime4] = param0.a(false) - 1;
+                this.field_b[var5Lifetime4] = param0.readByte(false) - 1;
                 this.field_e[var5Lifetime4] = param0.readUnsignedShort(1952);
                 this.field_c[var5Lifetime4] = param0.readUnsignedShort(1952);
                 var5Lifetime4++;

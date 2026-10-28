@@ -12,7 +12,7 @@ final class on {
 
     final static void a(ResourceArchive param0, int param1) {
         try {
-          VorbisSample.decodeSetup(param0.a(-4, "", "headers.packvorbis"));
+          VorbisSample.decodeSetup(param0.getNamedFile(-4, "", "headers.packvorbis"));
           VorbisSample var2 = VorbisSample.loadNamed(param0, "jagex logo2.packvorbis", "");
           if (param1 != -58) {
             field_c = (String) null;

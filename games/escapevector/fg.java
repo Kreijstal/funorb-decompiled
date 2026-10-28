@@ -57,7 +57,7 @@ final class fg {
           return;
         }
         String var1 = "simulator";
-        if (!IndexedSpriteState.field_j.a(param0, var1)) {
+        if (!IndexedSpriteState.field_j.tryLoadNamedGroup(param0, var1)) {
           return;
         }
         try {

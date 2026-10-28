@@ -332,7 +332,7 @@ final class dk {
     final static void e(int param0) {
         int var8 = EscapeVector.obfuscationControl;
         try {
-          CipherPacketBuffer var10 = om.field_g;
+          CipherPacketBuffer var10 = QuickChatDynamicCommand.field_g;
           int var2 = var10.readUnsignedByte(0);
           int var3 = var10.readUnsignedByte(0);
           if (param0 != 108457410) {
@@ -359,7 +359,7 @@ final class dk {
             return;
           }
           if (var2 == 1) {
-            int var4_int = var10.e((byte) 106);
+            int var4_int = var10.readSignedSmart((byte) 106);
             cc var5_ref_cc = (cc) (RasterBuffer.field_e.first(false));
             while (var5_ref_cc != null) {
               if (var5_ref_cc.field_i != var3 ||

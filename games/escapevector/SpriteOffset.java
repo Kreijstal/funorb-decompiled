@@ -123,7 +123,7 @@ final class SpriteOffset {
               var3_int = param2;
             }
             byte[] var4 = new byte[var3_int];
-            param0.position = param0.position + mn.field_q.a(var4, true, 0, param0.position, var3_int, param0.payload);
+            param0.position = param0.position + ReflectionCheck.field_q.a(var4, true, 0, param0.position, var3_int, param0.payload);
             String var5 = qi.a(var3_int, 0, var4, (byte) -94);
             String stackIn_5_0 = var5;
             return stackIn_5_0;
