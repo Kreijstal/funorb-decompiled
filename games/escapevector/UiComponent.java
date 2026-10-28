@@ -84,7 +84,7 @@ class UiComponent extends IntrusiveNode {
           }
           if (mg.field_f != 0 &&
             var5) {
-            this.onMouseWheel(offsetX, mg.field_f, (byte) -109, UiContainer.field_y, dh.field_d, this, offsetY);
+            this.onMouseWheel(offsetX, mg.field_f, (byte) -109, UiContainer.field_y, GzipDecoder.field_d, this, offsetY);
           }
           if (AccountMessagePanel.field_N == 0) {
             if (0 != DialWidget.field_K) {
@@ -97,7 +97,7 @@ class UiComponent extends IntrusiveNode {
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
-            this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
+            this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
             DraggableWidget var9 = gf.field_b;
             if (var9 != null) {
               if (var9.listener instanceof WidgetDropListener) {
@@ -132,7 +132,7 @@ class UiComponent extends IntrusiveNode {
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
-              this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
+              this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
               DraggableWidget var10 = gf.field_b;
               if (var10 != null) {
                 if (!(var10.listener instanceof WidgetDropListener)) {
@@ -163,7 +163,7 @@ class UiComponent extends IntrusiveNode {
             MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
             return inputAvailable;
           }
-          this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
+          this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
           DraggableWidget var11 = gf.field_b;
           if (var11 != null) {
             if (var11.listener instanceof WidgetDropListener) {
@@ -196,7 +196,7 @@ class UiComponent extends IntrusiveNode {
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
-              this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
+              this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
               DraggableWidget var12 = gf.field_b;
               if (var12 != null) {
                 if (var12.listener instanceof WidgetDropListener) {
@@ -231,7 +231,7 @@ class UiComponent extends IntrusiveNode {
                   MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                   return inputAvailable;
                 }
-                this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
+                this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
                 DraggableWidget var13 = gf.field_b;
                 if (var13 != null) {
                   if (!(var13.listener instanceof WidgetDropListener)) {
@@ -262,7 +262,7 @@ class UiComponent extends IntrusiveNode {
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
-            this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
+            this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
             DraggableWidget var14 = gf.field_b;
             if (var14 != null) {
               if (var14.listener instanceof WidgetDropListener) {
@@ -280,7 +280,7 @@ class UiComponent extends IntrusiveNode {
             return inputAvailable;
           }
           if (var5Lifetime1) {
-            this.onMouseWheel(offsetX, mg.field_f, (byte) -109, UiContainer.field_y, dh.field_d, this, offsetY);
+            this.onMouseWheel(offsetX, mg.field_f, (byte) -109, UiContainer.field_y, GzipDecoder.field_d, this, offsetY);
           }
           if (AccountMessagePanel.field_N == 0) {
             if (0 != DialWidget.field_K) {
@@ -293,7 +293,7 @@ class UiComponent extends IntrusiveNode {
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
-            this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
+            this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
             DraggableWidget var15 = gf.field_b;
             if (var15 != null) {
               if (var15.listener instanceof WidgetDropListener) {
@@ -328,7 +328,7 @@ class UiComponent extends IntrusiveNode {
                 MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
                 return inputAvailable;
               }
-              this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
+              this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
               DraggableWidget var16 = gf.field_b;
               if (var16 == null) {
                 if (var7 == 0) {
@@ -370,7 +370,7 @@ class UiComponent extends IntrusiveNode {
               MarkerSliderPainter.updateHoverText((byte) -112, this.getTooltip(1));
               return inputAvailable;
             }
-            this.onPointerReleased(UiContainer.field_y, offsetY, dh.field_d, offsetX, this, (byte) -113);
+            this.onPointerReleased(UiContainer.field_y, offsetY, GzipDecoder.field_d, offsetX, this, (byte) -113);
             DraggableWidget var17 = gf.field_b;
             if (var17 != null) {
               if (var17.listener instanceof WidgetDropListener) {
@@ -746,7 +746,7 @@ class UiComponent extends IntrusiveNode {
           if (guard != -14472) {
             return;
           }
-          boolean var5_int = (this.hitTest(dh.field_d, UiContainer.field_y, offsetX, (byte) 70, offsetY));
+          boolean var5_int = (this.hitTest(GzipDecoder.field_d, UiContainer.field_y, offsetX, (byte) 70, offsetY));
           boolean stackIn_4_0 = this.hovered;
           stackIn_5_1 = ((var5_int)) ? (0) : (1);
           if ((stackIn_4_0 ? 1 : 0) == stackIn_5_1) {

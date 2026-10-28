@@ -93,20 +93,20 @@ final class IntrusiveNodeHashTable {
             return null;
           }
           if (param4 == 0) {
-            ja[] var10 = dh.a(6629, param3);
-            ja[] var6 = var10;
+            DisplayModeInfo[] var10 = GzipDecoder.enumerateDisplayModes(6629, param3);
+            DisplayModeInfo[] var6 = var10;
             if (var6 == null) {
               return null;
             }
             boolean var7_int = false;
             for (int var8 = 0; var8 < var10.length; var8++) {
-              if (var10[var8].field_c == param1 &&
-                param2 == var10[var8].field_g && ((0 == param5 ||
-                var10[var8].field_f == param5) &&
+              if (var10[var8].width == param1 &&
+                param2 == var10[var8].height && ((0 == param5 ||
+                var10[var8].refreshRate == param5) &&
                 (!var7_int ||
-                !(param4 >= var10[var8].field_d)))) {
+                !(param4 >= var10[var8].bitDepth)))) {
                 var7_int = true;
-                param4 = var10[var8].field_d;
+                param4 = var10[var8].bitDepth;
               }
             }
             if (!var7_int) {

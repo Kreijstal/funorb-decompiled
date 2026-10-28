@@ -70,7 +70,7 @@ final class ClientException extends RuntimeException {
           int var5 = param1;
           while (true) {
             if (var4.length <= var5) {
-              EmailValidationError stackIn_18_0 = co.a(var3[var3.length - 1], 0);
+              EmailValidationError stackIn_18_0 = InputGlyphSupport.rejectNumericDomainSuffix(var3[var3.length - 1], 0);
               return stackIn_18_0;
             }
             String var6 = var4[var5];
@@ -136,11 +136,11 @@ final class ClientException extends RuntimeException {
         field_b = new int[17];
         int[] var1 = new int[]{29, 0, 0, -3, -3};
         int[] var0 = var1;
-        qg.a(var0, 0, field_b, 0, var1.length);
+        ArraySupport.copy(var0, 0, field_b, 0, var1.length);
         field_f = new int[17];
         int[] var2 = new int[]{19, 0, -10, -5, -5};
         var0 = var2;
-        qg.a(var0, 0, field_f, 0, var2.length);
+        ArraySupport.copy(var0, 0, field_f, 0, var2.length);
         field_c = new LoginStage();
         field_d = new int[8192];
     }

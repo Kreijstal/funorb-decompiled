@@ -98,7 +98,7 @@ final class SynthInstrument {
 
     final int[] synthesize(int sampleCount, int durationMillis) {
         int var12Lifetime1Lifetime1;
-        qg.a(samples, 0, sampleCount);
+        ArraySupport.clear(samples, 0, sampleCount);
         if (durationMillis < 10) {
           return samples;
         }

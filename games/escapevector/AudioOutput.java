@@ -34,7 +34,7 @@ class AudioOutput {
         if (stereo) {
           var3 = var3 << 1;
         }
-        qg.a(samples, 0, var3);
+        ArraySupport.clear(samples, 0, var3);
         this.schedulerCountdown = this.schedulerCountdown - length;
         if (this.rootStream != null &&
           this.schedulerCountdown <= 0) {

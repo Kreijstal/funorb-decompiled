@@ -165,7 +165,7 @@ final class PointCloudEffect extends DualLinkNode {
         }
         var7 = var7 + BoundedRandomAccessFile.activeSession.worldWidth;
         if (this.field_q) {
-          stackIn_8_0 = gi.field_c;
+          stackIn_8_0 = ChatMessage.field_c;
         } else {
           stackIn_8_0 = RatingQuery.field_k;
         }
@@ -465,15 +465,15 @@ final class PointCloudEffect extends DualLinkNode {
     }
 
     private final void g(int param0) {
-        this.a(109, RatingQuery.field_k, gi.field_c);
-        gi.field_c.field_k = RatingQuery.field_k.field_k;
+        this.a(109, RatingQuery.field_k, ChatMessage.field_c);
+        ChatMessage.field_c.field_k = RatingQuery.field_k.field_k;
         if (param0 < 114) {
           field_r = (String[]) null;
         }
-        this.a(112, RatingQuery.field_k, gi.field_i);
-        int var2 = gi.field_i.field_h * gi.field_i.field_a;
-        if (gi.field_i.field_k.length < var2) {
-          gi.field_i.field_k = new byte[var2];
+        this.a(112, RatingQuery.field_k, ChatMessage.field_i);
+        int var2 = ChatMessage.field_i.field_h * ChatMessage.field_i.field_a;
+        if (ChatMessage.field_i.field_k.length < var2) {
+          ChatMessage.field_i.field_k = new byte[var2];
         }
     }
 
@@ -587,7 +587,7 @@ final class PointCloudEffect extends DualLinkNode {
         if (param0 <= 86) {
           field_z = (String[]) null;
         }
-        byte[] var20 = gi.field_i.field_k;
+        byte[] var20 = ChatMessage.field_i.field_k;
         byte[] var17 = var20;
         byte[] var16 = var17;
         byte[] var26 = var16;
@@ -634,7 +634,7 @@ final class PointCloudEffect extends DualLinkNode {
         int var9Lifetime1 = 0;
         while (true) {
           if (var9Lifetime1 >= var4Lifetime1) {
-            return gi.field_i;
+            return ChatMessage.field_i;
           }
           int var10Lifetime1 = var7Lifetime1;
           int var11Lifetime1 = var7Lifetime1 + var8Lifetime1;

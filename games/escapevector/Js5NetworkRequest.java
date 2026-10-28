@@ -55,7 +55,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
               if (1 != var3) {
                 Object var7 = SpriteStrip.field_g;
                 synchronized (var7) {
-                  SpriteStrip.field_g.a(122, var14, var10);
+                  SpriteStrip.field_g.decompress(122, var14, var10);
                 }
               } else {
                 Bzip2Decoder.a(var14, var5, bytes, var4, 9);

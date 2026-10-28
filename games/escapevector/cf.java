@@ -217,7 +217,7 @@ final class cf {
           }
           for (int var1_int = 0; var1_int < 32; var1_int++) {
             int var2 = var1_int;
-            boolean var3 = (dh.a(var1_int, (byte) 33));
+            boolean var3 = (GzipDecoder.a(var1_int, (byte) 33));
             boolean var4 = (ug.a(var1_int, 0));
             int var5 = ProxySocketConnector.field_q[var1_int];
             int var6 = ProxySocketConnector.field_s[var1_int];

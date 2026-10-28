@@ -58,14 +58,14 @@ final class pb {
         ArchiveKeyRequest.a(70, 8, param0 ^ 12, LaserGateSpan.field_k);
         if (LaserGateSpan.field_k >= 95) {
           if (LaserGateSpan.field_k < 110) {
-            ResourceArchive.drawSpriteWithRowJitter(fg.field_b, (-EmailAvailabilityValidator.field_t.fullWidth + 640) / 2, -(LaserGateSpan.field_k * 4) + 440, EmailAvailabilityValidator.field_t, -122);
+            ResourceArchive.drawSpriteWithRowJitter(SimulatorAssetSupport.field_b, (-EmailAvailabilityValidator.field_t.fullWidth + 640) / 2, -(LaserGateSpan.field_k * 4) + 440, EmailAvailabilityValidator.field_t, -122);
             if (param0 != 4) {
               field_b = -65;
               return;
             }
             return;
           }
-          EmailAvailabilityValidator.field_t.drawTransparent((640 - EmailAvailabilityValidator.field_t.fullWidth) / 2, fg.field_b);
+          EmailAvailabilityValidator.field_t.drawTransparent((640 - EmailAvailabilityValidator.field_t.fullWidth) / 2, SimulatorAssetSupport.field_b);
           if (param0 != 4) {
             field_b = -65;
             return;

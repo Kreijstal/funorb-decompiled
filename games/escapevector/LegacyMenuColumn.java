@@ -87,7 +87,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
     }
 
     private final int fixedTextWidth(int guard) {
-        int var2 = gi.a((byte) -96, this.font);
+        int var2 = ChatMessage.maximumTwentyCharacterWidth((byte) -96, this.font);
         if (guard != -407) {
           boolean[] var3 = (boolean[]) null;
           this.drawVisibleRows(100, (boolean[]) null, (byte) 94);
@@ -112,7 +112,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
           int var4_int = this.x;
           int var5 = this.headerAreaHeight(2);
           int var6 = this.rowHeight(-1);
-          int var7 = var5 + (this.y + uc.a(-1, this.font));
+          int var7 = var5 + (this.y + ArchivePreloader.fontMaxAscent(-1, this.font));
           if (!guard) {
             int discarded$1 = this.widestDigit((byte) 22);
           }
@@ -213,7 +213,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
           return;
         }
         int var2 = this.x;
-        int var3 = this.y - (-2 - uc.a(-1, this.font));
+        int var3 = this.y - (-2 - ArchivePreloader.fontMaxAscent(-1, this.font));
         this.font.drawLeft(this.header, var2, var3, this.textColor, -1);
         int var4 = this.font.stringWidth(this.header);
         SoftwareRasterizer.fillRectangle(var2, var3, var4, 2, this.textColor);
@@ -267,7 +267,7 @@ final class LegacyMenuColumn extends IntrusiveNode {
         int var3 = this.x;
         int var4 = this.headerAreaHeight(2);
         int var5 = this.rowHeight(-1);
-        int var6 = var4 + this.y + uc.a(-1, this.font);
+        int var6 = var4 + this.y + ArchivePreloader.fontMaxAscent(-1, this.font);
         int var7 = 0;
         if (guard != 3) {
           int discarded$0 = this.drawRow(-111, -60, -104, -15, 22, -100);

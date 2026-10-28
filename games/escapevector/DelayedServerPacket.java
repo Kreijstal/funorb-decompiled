@@ -47,7 +47,7 @@ final class DelayedServerPacket extends IntrusiveNode {
             field_h = -2;
           }
           while (4 > var3_int) {
-            Sprite[] stackIn_6_0 = sl.field_b[theme];
+            Sprite[] stackIn_6_0 = ChatMessageDecoder.field_b[theme];
             int stackIn_6_1 = var3_int;
             String stackIn_6_2 = da.field_d[theme];
             ResourceArchive stackIn_6_3 = (ResourceArchive) (archive);

@@ -35,7 +35,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             field_p = (PcmSample) null;
           }
           if (!text.equals(this.field_s)) {
-            NameAvailabilityResult var3 = of.a(122, text);
+            NameAvailabilityResult var3 = SpriteDecodeSupport.pollNameAvailability(122, text);
             if (var3 != null &&
               null == var3.field_f) {
               this.field_n = var3.field_a;
@@ -108,7 +108,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!text.equals(this.field_s)) {
-            NameAvailabilityResult var5 = of.a(122, text);
+            NameAvailabilityResult var5 = SpriteDecodeSupport.pollNameAvailability(122, text);
             if (var5 == null) {
               return null;
             }

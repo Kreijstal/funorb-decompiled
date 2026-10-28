@@ -47,7 +47,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!text.equals(this.field_n)) {
-            EmailAvailabilityRequest var3 = ja.a(text, true);
+            EmailAvailabilityRequest var3 = DisplayModeInfo.a(text, true);
             if (!var3.isComplete(0)) {
               ValidationState stackIn_7_0 = ug.field_c;
               return stackIn_7_0;

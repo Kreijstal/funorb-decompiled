@@ -41,7 +41,7 @@ final class lh {
                     LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                   }
                 } else {
-                  fg.field_b = var3;
+                  SimulatorAssetSupport.field_b = var3;
                   EmailAvailabilityValidator.field_t = (Sprite) (var2);
                   if (!(LaserGateSpan.field_k >= 95)) {
                     LaserGateSpan.field_k = 95;
@@ -80,7 +80,7 @@ final class lh {
                       LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                     }
                   } else {
-                    fg.field_b = var3;
+                    SimulatorAssetSupport.field_b = var3;
                     EmailAvailabilityValidator.field_t = (Sprite) (var2);
                     if (!(LaserGateSpan.field_k >= 95)) {
                       LaserGateSpan.field_k = 95;
@@ -112,7 +112,7 @@ final class lh {
             }
             LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
           } else {
-            fg.field_b = var3;
+            SimulatorAssetSupport.field_b = var3;
             EmailAvailabilityValidator.field_t = (Sprite) (var2);
             if (LaserGateSpan.field_k < 95) {
               LaserGateSpan.field_k = 95;
@@ -152,7 +152,7 @@ final class lh {
                     LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                   }
                 } else {
-                  fg.field_b = var3Lifetime1;
+                  SimulatorAssetSupport.field_b = var3Lifetime1;
                   EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime1);
                   if (!(LaserGateSpan.field_k >= 95)) {
                     LaserGateSpan.field_k = 95;
@@ -191,7 +191,7 @@ final class lh {
                       LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                     }
                   } else {
-                    fg.field_b = var3Lifetime1;
+                    SimulatorAssetSupport.field_b = var3Lifetime1;
                     EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime1);
                     if (!(LaserGateSpan.field_k >= 95)) {
                       LaserGateSpan.field_k = 95;
@@ -224,7 +224,7 @@ final class lh {
             LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
             return;
           }
-          fg.field_b = var3Lifetime1;
+          SimulatorAssetSupport.field_b = var3Lifetime1;
           EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime1);
           if (LaserGateSpan.field_k < 95) {
             LaserGateSpan.field_k = 95;
@@ -254,7 +254,7 @@ final class lh {
             LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
             return;
           }
-          fg.field_b = var3Lifetime2;
+          SimulatorAssetSupport.field_b = var3Lifetime2;
           EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
           if (LaserGateSpan.field_k < 95) {
             LaserGateSpan.field_k = 95;
@@ -285,7 +285,7 @@ final class lh {
               }
               LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
             } else {
-              fg.field_b = var3Lifetime2;
+              SimulatorAssetSupport.field_b = var3Lifetime2;
               EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
               if (LaserGateSpan.field_k < 95) {
                 LaserGateSpan.field_k = 95;
@@ -316,7 +316,7 @@ final class lh {
                   LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                   return;
                 }
-                fg.field_b = var3Lifetime2;
+                SimulatorAssetSupport.field_b = var3Lifetime2;
                 EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
                 if (LaserGateSpan.field_k < 95) {
                   LaserGateSpan.field_k = 95;
@@ -345,7 +345,7 @@ final class lh {
                   }
                   LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                 } else {
-                  fg.field_b = var3Lifetime2;
+                  SimulatorAssetSupport.field_b = var3Lifetime2;
                   EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
                   if (LaserGateSpan.field_k < 95) {
                     LaserGateSpan.field_k = 95;
@@ -373,7 +373,7 @@ final class lh {
                   LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                   return;
                 }
-                fg.field_b = var3Lifetime2;
+                SimulatorAssetSupport.field_b = var3Lifetime2;
                 EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
                 if (LaserGateSpan.field_k < 95) {
                   LaserGateSpan.field_k = 95;
@@ -396,7 +396,7 @@ final class lh {
                   }
                   LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
                 } else {
-                  fg.field_b = var3Lifetime2;
+                  SimulatorAssetSupport.field_b = var3Lifetime2;
                   EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
                   if (LaserGateSpan.field_k < 95) {
                     LaserGateSpan.field_k = 95;
@@ -422,7 +422,7 @@ final class lh {
                 }
                 LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
               } else {
-                fg.field_b = var3Lifetime2;
+                SimulatorAssetSupport.field_b = var3Lifetime2;
                 EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
                 if (LaserGateSpan.field_k < 95) {
                   LaserGateSpan.field_k = 95;
@@ -454,7 +454,7 @@ final class lh {
           }
           LaserGateSpan.field_k = LaserGateSpan.field_k - 1;
         } else {
-          fg.field_b = var3Lifetime2;
+          SimulatorAssetSupport.field_b = var3Lifetime2;
           EmailAvailabilityValidator.field_t = (Sprite) (var2Lifetime2);
           if (LaserGateSpan.field_k < 95) {
             LaserGateSpan.field_k = 95;

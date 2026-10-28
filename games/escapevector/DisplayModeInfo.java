@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja {
+final class DisplayModeInfo {
     static String[] field_e;
-    int field_d;
-    int field_f;
+    int bitDepth;
+    int refreshRate;
     static LoginCredentialType field_a;
-    int field_c;
-    int field_g;
+    int width;
+    int height;
     static String field_b;
 
     public static void releaseStatics(int guard) {
@@ -178,8 +178,8 @@ final class ja {
         }
     }
 
-    static long a(long param0, long param1) {
-        return param0 ^ param1;
+    static long bitwiseOr(long left, long right) {
+        return left ^ right;
     }
 
     static {

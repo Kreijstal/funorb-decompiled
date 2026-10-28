@@ -127,7 +127,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            java.awt.Graphics var9 = of.field_d.getGraphics();
+            java.awt.Graphics var9 = SpriteDecodeSupport.field_d.getGraphics();
             if (null == ImageProducerRasterBuffer.field_l) {
               ImageProducerRasterBuffer.field_l = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -140,7 +140,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             }
             try {
               if (null == UiContainer.field_z) {
-                UiContainer.field_z = of.field_d.createImage(304, 34);
+                UiContainer.field_z = SpriteDecodeSupport.field_d.createImage(304, 34);
               }
               java.awt.Graphics var10 = UiContainer.field_z.getGraphics();
               var10.setColor(param2);
@@ -176,7 +176,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             Exception var5 = (Exception) (Object) decompiledCaughtException;
-            of.field_d.repaint();
+            SpriteDecodeSupport.field_d.repaint();
           }
           if (param0 != 9) {
             field_O = (int[]) null;

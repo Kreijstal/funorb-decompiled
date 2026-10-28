@@ -66,7 +66,7 @@ final class kg {
           return false;
         }
         int var2 = this.field_e.field_j;
-        int var3 = je.a(false, var2);
+        int var3 = SpriteFactorySupport.levelCount(false, var2);
         if (var3 <= 0) {
           return false;
         }
@@ -89,7 +89,7 @@ final class kg {
 
     final boolean a(int param0, boolean param1) {
         int var7 = EscapeVector.obfuscationControl;
-        int var3 = je.a(param1, param0);
+        int var3 = SpriteFactorySupport.levelCount(param1, param0);
         if (0 >= var3) {
           return false;
         }
@@ -146,7 +146,7 @@ final class kg {
               return var5.field_n;
             }
             if (var5.field_d == 1) {
-              int var6 = je.a(false, param1);
+              int var6 = SpriteFactorySupport.levelCount(false, param1);
               if (0 >= var6) {
                 return 0;
               }

@@ -506,9 +506,9 @@ final class en {
           return;
         }
         try {
-          sl.field_b[var2_int][0] = fe.a("tutorial", param0, "layer0", true);
-          uj.field_a = sl.field_b[var2_int][0];
-          sl.field_b[var2_int][2] = fe.a("tutorial", param0, "layer2", true);
+          ChatMessageDecoder.field_b[var2_int][0] = fe.a("tutorial", param0, "layer0", true);
+          uj.field_a = ChatMessageDecoder.field_b[var2_int][0];
+          ChatMessageDecoder.field_b[var2_int][2] = fe.a("tutorial", param0, "layer2", true);
           UiTheme.field_e = fe.a("tutorial", param0, "edge_exit_left", true);
           TrackerGainSupport.field_b = fe.a("tutorial", param0, "edge_exit_right", true);
           EmailAvailabilityValidator.field_r = fe.a("tutorial", param0, "edge_inner_bottom", true);
@@ -597,15 +597,15 @@ final class en {
 
     final void c(int param0, int param1, int param2) {
         int var7 = EscapeVector.obfuscationControl;
-        if (ProxySocketConnector.field_k == null) {
+        if (ProxySocketConnector.achievementRules == null) {
           return;
         }
-        jk[] var8 = ProxySocketConnector.field_k;
-        jk[] var4 = var8;
+        AchievementGrantRule[] var8 = ProxySocketConnector.achievementRules;
+        AchievementGrantRule[] var4 = var8;
         for (int var5 = param0; var8.length > var5; var5++) {
-          jk var6 = var8[var5];
+          AchievementGrantRule var6 = var8[var5];
           if (var6 != null) {
-            var6.a((byte) 106, param2, param1);
+            var6.grantIfAllowed((byte) 106, param2, param1);
           }
         }
     }
@@ -807,7 +807,7 @@ final class en {
             if (var4 >= 0) {
               var1_int = var1_int + CheckboxPainter.field_s;
               if (var4 != cb.field_c.field_h) {
-                stackIn_44_0 = of.field_g;
+                stackIn_44_0 = SpriteDecodeSupport.field_g;
               } else {
                 stackIn_44_0 = gf.field_e;
               }
@@ -822,7 +822,7 @@ final class en {
               var1_int = var1_int + (ok.field_a + (CheckboxPainter.field_s + field_k));
             } else {
               nb.field_a.drawLeft(var6, var8Lifetime1, var1_int + StrongCacheEntry.field_t, var5, -1);
-              var1_int = var1_int + je.field_b;
+              var1_int = var1_int + SpriteFactorySupport.field_b;
             }
           }
           return;

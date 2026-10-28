@@ -314,7 +314,7 @@ class EditableTextWidget extends TextButton {
           if (!(this.painter instanceof WidgetTextLayout)) {
             return false;
           }
-          int var8_int = ((WidgetTextLayout) ((Object) this.painter)).characterIndexAtPosition(offsetX, offsetY, UiContainer.field_y, dh.field_d, 118, (UiComponent) (this));
+          int var8_int = ((WidgetTextLayout) ((Object) this.painter)).characterIndexAtPosition(offsetX, offsetY, UiContainer.field_y, GzipDecoder.field_d, 118, (UiComponent) (this));
           stackIn_6_1 = (var8_int == -1) ? (0) : (var8_int);
           this.moveCaret(stackIn_6_1, 61);
           long var8_long = td.b(guard + 125);
@@ -351,7 +351,7 @@ class EditableTextWidget extends TextButton {
           if (param3 <= 3) {
             EditableTextWidget.releaseStatics((byte) -115);
           }
-          if (uc.a(param2, 105, param0, param1)) {
+          if (ArchivePreloader.loadSpriteSheet(param2, 105, param0, param1)) {
             return al.a((byte) 108);
           }
           return null;
@@ -545,7 +545,7 @@ class EditableTextWidget extends TextButton {
           if (this.field_t == 1) {
             if (this.painter instanceof WidgetTextLayout) {
               WidgetTextLayout var7 = (WidgetTextLayout) ((Object) this.painter);
-              int var6 = var7.characterIndexAtPosition(offsetX, offsetY, UiContainer.field_y, dh.field_d, guard + 14560, (UiComponent) (this));
+              int var6 = var7.characterIndexAtPosition(offsetX, offsetY, UiContainer.field_y, GzipDecoder.field_d, guard + 14560, (UiComponent) (this));
               if (var6 != -1) {
                 if (this.field_M && this.field_N > var6 &&
                   var6 > this.selectionAnchor) {

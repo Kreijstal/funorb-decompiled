@@ -76,7 +76,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
 
     final static void a(java.awt.Canvas param0, int param1) {
         try {
-          if (ff.field_e == 11) {
+          if (QuickChatPhraseCache.field_e == 11) {
             bm.b((byte) 62);
           }
           QuickChatPhraseDefinition.showLoadingProgress(AlternateUsernameCredentials.field_t, DelegatingCanvas.field_e, pb.field_d, (byte) 14);

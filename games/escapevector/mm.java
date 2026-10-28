@@ -10,7 +10,7 @@ final class mm {
         int var2 = EscapeVector.obfuscationControl;
         try {
           if (mj.field_d == 0) {
-            sj.a(8192, (byte) 51);
+            StringNode.playFrameAppearSound(8192, (byte) 51);
           }
           boolean var1_int = false;
           IntValueNode.field_j = true;
@@ -28,7 +28,7 @@ final class mm {
           }
           do {
             if (!AccountRequestDialog.pollKeyEvent(-126)) {
-              di.field_d.a(gb.a(sf.field_c, LoginDialog.field_ob, 8158), (byte) 126, gb.a(dh.field_d, UiContainer.field_y, 8158));
+              di.field_d.a(gb.a(sf.field_c, LoginDialog.field_ob, 8158), (byte) 126, gb.a(GzipDecoder.field_d, UiContainer.field_y, 8158));
               if (!SpriteOffset.a(true, 0)) {
                 return (var1_int);
               }
@@ -52,7 +52,7 @@ final class mm {
         StatefulTextPainter.field_x = param2;
         int var5 = -76 % ((-35 - param0) / 47);
         ok.field_a = param4;
-        je.field_b = param1;
+        SpriteFactorySupport.field_b = param1;
         StrongCacheEntry.field_t = param3;
     }
 
@@ -91,7 +91,7 @@ final class mm {
           return false;
         }
         if (se.field_b != null) {
-          sl.field_b[param1] = se.field_b.field_g;
+          ChatMessageDecoder.field_b[param1] = se.field_b.field_g;
           pf.field_g[param1] = se.field_b.field_d;
           WeightedLruCache.field_c[param1] = true;
           SpriteOffset.a((byte) 53);

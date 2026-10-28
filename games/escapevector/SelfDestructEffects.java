@@ -48,7 +48,7 @@ final class SelfDestructEffects {
           int var3 = -128 % ((param0 + 36) / 48);
           for (int var2 = 1; al.field_f.length > var2; var2++) {
             int var4 = al.field_f[var2];
-            qg.a(SavedDataQuerySupport.field_f, var2 << 4, SavedDataQuerySupport.field_f, var1_int, var4);
+            ArraySupport.copy(SavedDataQuerySupport.field_f, var2 << 4, SavedDataQuerySupport.field_f, var1_int, var4);
             var1_int = var1_int + var4;
           }
           return;
@@ -138,7 +138,7 @@ final class SelfDestructEffects {
             field_s = false;
           }
           if (null == TextLayout.field_c &&
-            !sl.a(false, (byte) 0)) {
+            !ChatMessageDecoder.a(false, (byte) 0)) {
             int stackIn_6_0 = -1;
             return stackIn_6_0;
           }
@@ -217,7 +217,7 @@ final class SelfDestructEffects {
                 return stackIn_34_0;
               }
               if (var9Lifetime1 == 99) {
-                Checkbox.readIncomingBytes(30000, uc.b(92));
+                Checkbox.readIncomingBytes(30000, ArchivePreloader.booleanReplyLength(92));
                 DialWidgetPainter.field_g = new Boolean(SecondaryIntrusiveDeque.a(QuickChatDynamicCommand.incomingPackets, true));
                 QuickChatDynamicCommand.incomingPackets.position = 0;
               } else {
@@ -271,8 +271,8 @@ final class SelfDestructEffects {
               return stackIn_61_0;
             }
             int var9Lifetime3 = ej.field_b;
-            ej.field_b = sj.field_i;
-            sj.field_i = var9Lifetime3;
+            ej.field_b = StringNode.field_i;
+            StringNode.field_i = var9Lifetime3;
             e.field_c = true;
           }
           int stackIn_64_0 = -1;

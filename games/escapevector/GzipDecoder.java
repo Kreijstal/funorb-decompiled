@@ -3,69 +3,69 @@
  */
 import java.util.*;
 
-final class dh {
+final class GzipDecoder {
     static boolean field_c;
     static int field_d;
     static int field_b;
     static int[] field_e;
-    private java.util.zip.Inflater field_a;
+    private java.util.zip.Inflater inflater;
 
-    final static void a(boolean param0, byte param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
+    final static void initializeAccountUi(boolean guard, byte byteGuard, ResourceArchive sprites, ResourceArchive fonts, ResourceArchive buttons) {
         try {
           di.field_g = RasterBuffer.a((byte) 41, "");
           di.field_g.complete((byte) -128, false);
-          wc.a(83, param2, param3, param4);
+          wc.a(83, sprites, fonts, buttons);
           GrowableIntList.a((byte) -96);
           dn.field_q = RasterBuffer.field_g;
-          if (param1 > -111) {
-            dh.a(13, (byte) 34);
+          if (byteGuard > -111) {
+            GzipDecoder.a(13, (byte) 34);
           }
           ui.field_b = RasterBuffer.field_g;
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "dh.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "dh.D(" + guard + ',' + byteGuard + ',' + (sprites != null ? "{...}" : "null") + ',' + (fonts != null ? "{...}" : "null") + ',' + (buttons != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static ja[] a(int param0, SystemTaskService param1) {
+    final static DisplayModeInfo[] enumerateDisplayModes(int guard, SystemTaskService taskService) {
         String stackIn_22_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (!param1.c(0)) {
-            ja[] stackIn_4_0 = new ja[]{};
+          if (!taskService.c(0)) {
+            DisplayModeInfo[] stackIn_4_0 = new DisplayModeInfo[]{};
             return stackIn_4_0;
           }
-          SystemTask var8 = param1.a(5);
+          SystemTask var8 = taskService.a(5);
           while (var8.field_f == 0) {
             en.a((byte) 101, 10L);
           }
           if (var8.field_f == 2) {
-            ja[] stackIn_10_0 = new ja[]{};
+            DisplayModeInfo[] stackIn_10_0 = new DisplayModeInfo[]{};
             return stackIn_10_0;
           }
-          if (param0 != 6629) {
-            ja[] stackIn_13_0 = (ja[]) null;
+          if (guard != 6629) {
+            DisplayModeInfo[] stackIn_13_0 = (DisplayModeInfo[]) null;
             return stackIn_13_0;
           }
           int[] var10 = (int[]) (var8.field_b);
           int[] var9 = var10;
           int[] var3 = var9;
-          ja[] var4 = new ja[var10.length >> 2];
+          DisplayModeInfo[] var4 = new DisplayModeInfo[var10.length >> 2];
           for (int var5 = 0; var5 < var4.length; var5++) {
-            ja var6 = new ja();
+            DisplayModeInfo var6 = new DisplayModeInfo();
             var4[var5] = var6;
-            var6.field_c = var3[var5 << 2];
-            var6.field_g = var3[1 + (var5 << 2)];
-            var6.field_d = var3[(var5 << 2) + 2];
-            var6.field_f = var3[3 + (var5 << 2)];
+            var6.width = var3[var5 << 2];
+            var6.height = var3[1 + (var5 << 2)];
+            var6.bitDepth = var3[(var5 << 2) + 2];
+            var6.refreshRate = var3[3 + (var5 << 2)];
           }
-          ja[] stackIn_18_0 = var4;
+          DisplayModeInfo[] stackIn_18_0 = var4;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_21_0 = var2;
-          StringBuilder stackIn_21_1 = new StringBuilder().append("dh.A(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_21_1 = new StringBuilder().append("dh.A(").append(guard).append(',');
+          if (taskService == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
@@ -74,7 +74,7 @@ final class dh {
         }
     }
 
-    public dh() {
+    public GzipDecoder() {
         this(-1, 1000000, 1000000);
     }
 
@@ -83,7 +83,7 @@ final class dh {
           int[] var2 = ProxySocketConnector.field_m;
           int var3 = 0;
           if (param1 < 26) {
-            dh.releaseStatics((byte) -79);
+            GzipDecoder.releaseStatics((byte) -79);
           }
           while (var3 < var2.length) {
             int var4 = var2[var3];
@@ -105,27 +105,27 @@ final class dh {
         int var1 = 61 % ((46 - guard) / 49);
     }
 
-    final void a(int param0, byte[] param1, PacketBuffer param2) {
+    final void decompress(int guard, byte[] destination, PacketBuffer input) {
         try {
           try {
-            if (param2.payload[param2.position] != 31 ||
-              param2.payload[1 + param2.position] != -117) {
+            if (input.payload[input.position] != 31 ||
+              input.payload[1 + input.position] != -117) {
               throw new RuntimeException("");
             }
-            if (null == this.field_a) {
-              this.field_a = new java.util.zip.Inflater(true);
+            if (null == this.inflater) {
+              this.inflater = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_a.setInput(param2.payload, param2.position + 10, param2.payload.length + (-10 - param2.position) - 8);
-              this.field_a.inflate(param1);
+              this.inflater.setInput(input.payload, input.position + 10, input.payload.length + (-10 - input.position) - 8);
+              this.inflater.inflate(destination);
             } catch (Exception exception) {
-              this.field_a.reset();
+              this.inflater.reset();
               throw new RuntimeException("");
             }
-            this.field_a.reset();
-            int var4_int = -73 % ((13 - param0) / 58);
+            this.inflater.reset();
+            int var4_int = -73 % ((13 - guard) / 58);
           } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "dh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "dh.C(" + guard + ',' + (destination != null ? "{...}" : "null") + ',' + (input != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -134,7 +134,7 @@ final class dh {
         }
     }
 
-    private dh(int param0, int param1, int param2) {
+    private GzipDecoder(int param0, int param1, int param2) {
     }
 
     static {

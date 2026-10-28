@@ -63,7 +63,7 @@ final class LoginStage {
           if (guard < 92) {
             field_b = -32;
           }
-          int var6_int = je.a(false, mode);
+          int var6_int = SpriteFactorySupport.levelCount(false, mode);
           if (level < 0) {
             return null;
           }
@@ -71,7 +71,7 @@ final class LoginStage {
             Object stackIn_6_0 = null;
             return (byte[]) (stackIn_6_0);
           }
-          int var7 = dh.field_e[mode];
+          int var7 = GzipDecoder.field_e[mode];
           if (var7 != 2) {
             stackIn_10_0 = (ResourceArchive) (archive);
           } else {
@@ -81,7 +81,7 @@ final class LoginStage {
           if (var8 == null) {
             return null;
           }
-          String var12 = ja.field_e[mode].toLowerCase();
+          String var12 = DisplayModeInfo.field_e[mode].toLowerCase();
           String var11 = ByteStorage.levelNamesByMode[mode][level].toLowerCase() + ".lvl";
           String var13 = rd.a((byte) 72, var11);
           String var15 = var12 + "_" + var13;
@@ -123,17 +123,17 @@ final class LoginStage {
         if (guard < 63) {
           field_c = -0.8853374871854307;
         }
-        Sprite[] var1 = new Sprite[qk.spriteCount];
-        for (int var2 = 0; var2 < qk.spriteCount; var2++) {
+        Sprite[] var1 = new Sprite[ArchiveLoadTask.spriteCount];
+        for (int var2 = 0; var2 < ArchiveLoadTask.spriteCount; var2++) {
           int var3 = SavedDataQuerySupport.spriteHeights[var2] * qh.spriteWidths[var2];
           byte[] var4 = qe.spriteIndices[var2];
           int[] var5 = new int[var3];
           for (int var6 = 0; var6 < var3; var6++) {
-            var5[var6] = qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var4[var6], 255)];
+            var5[var6] = ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], gi.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var5);
+          var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var5);
         }
-        of.a(false);
+        SpriteDecodeSupport.releaseSpriteSheet(false);
         return var1;
     }
 

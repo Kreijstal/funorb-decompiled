@@ -55,7 +55,7 @@ final class kc {
               ((t) (Object) stackIn_45_0).b(stackIn_45_1, stackIn_46_2);
             }
           }
-          gi.a((byte) -58);
+          ChatMessage.clearFrameOffsets((byte) -58);
           LaserGateSpan.field_k = 0;
           return;
         }
@@ -83,7 +83,7 @@ final class kc {
             boolean stackIn_15_2 = (2 != var1Lifetime1) ? false : true;
             ((t) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_15_2);
           }
-          gi.a((byte) -58);
+          ChatMessage.clearFrameOffsets((byte) -58);
           LaserGateSpan.field_k = 0;
           return;
         }
@@ -98,7 +98,7 @@ final class kc {
           int stackIn_29_1 = -26480;
           boolean stackIn_30_2 = (2 != var1Lifetime1) ? false : true;
           ((t) (Object) stackIn_29_0).b(stackIn_29_1, stackIn_30_2);
-          gi.a((byte) -58);
+          ChatMessage.clearFrameOffsets((byte) -58);
           LaserGateSpan.field_k = 0;
         } else if (var1Lifetime1 == 2) {
           wk.field_c = false;
@@ -107,7 +107,7 @@ final class kc {
           int stackIn_24_1 = -26480;
           boolean stackIn_25_2 = (2 != var1Lifetime1) ? false : true;
           ((t) (Object) stackIn_24_0).b(stackIn_24_1, stackIn_25_2);
-          gi.a((byte) -58);
+          ChatMessage.clearFrameOffsets((byte) -58);
           LaserGateSpan.field_k = 0;
         }
     }

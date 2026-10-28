@@ -33,7 +33,7 @@ final class ValidationState {
           return;
         }
         try {
-          of.field_g = param0;
+          SpriteDecodeSupport.field_g = param0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "rf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

@@ -7,14 +7,14 @@ final class mh {
     static String field_b;
     static String field_d;
     static String field_g;
-    static int[] field_a;
+    static int[] frameOffsets;
     static int field_e;
     static int field_f;
 
     public static void releaseStatics(boolean guard) {
         field_b = null;
         field_g = null;
-        field_a = null;
+        frameOffsets = null;
         if (!guard) {
           mh.b((byte) 81);
         }
@@ -86,7 +86,7 @@ final class mh {
         field_h = new LoginStage();
         field_b = "PER MONTH";
         field_d = "Confirm Password: ";
-        field_a = new int[48];
+        frameOffsets = new int[48];
         field_g = "Seek out and destroy all the alien military infrastructure.<br>Some levels are booby trapped with auto-destruct systems.<br>Escape before the timer counts down to zero.";
     }
 }

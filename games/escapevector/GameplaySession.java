@@ -1240,7 +1240,7 @@ final class GameplaySession {
           GradientOutlineTextPainter.enqueueDialogue(1820, var4);
         }
         if (4 == this.levelIndex) {
-          DialogueScreen var5 = new DialogueScreen(DynamicTerrainRenderer.field_i, SpriteCheckboxPainter.field_c, co.field_e, false);
+          DialogueScreen var5 = new DialogueScreen(DynamicTerrainRenderer.field_i, SpriteCheckboxPainter.field_c, InputGlyphSupport.field_e, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var5);
         }
         if (guard == ~this.levelIndex) {
@@ -1332,7 +1332,7 @@ final class GameplaySession {
         }
         boolean var2 = true;
         if (6 == this.secondaryTheme) {
-          var2 = (fg.c(0));
+          var2 = (SimulatorAssetSupport.c(0));
         }
         var2 = ((var2) & mm.a(4, this.terrainTheme));
         return (var2);
@@ -1422,7 +1422,7 @@ final class GameplaySession {
         UiComponent.field_o = new pf(option);
         di.field_d = null;
         mj.field_d = 0;
-        gi.a((byte) -93);
+        ChatMessage.clearFrameOffsets((byte) -93);
     }
 
     final void replayMissionBriefing(int guard) {
@@ -1629,7 +1629,7 @@ final class GameplaySession {
           DialogueScreen var6 = new DialogueScreen(bg.field_c, SpriteCheckboxPainter.field_c, SpriteCheckboxPainter.field_e, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var6);
         } else if (this.levelIndex < 8) {
-          DialogueScreen var7 = new DialogueScreen(DynamicTerrainRenderer.field_i, SpriteCheckboxPainter.field_c, co.field_e, false);
+          DialogueScreen var7 = new DialogueScreen(DynamicTerrainRenderer.field_i, SpriteCheckboxPainter.field_c, InputGlyphSupport.field_e, false);
           GradientOutlineTextPainter.enqueueDialogue(1820, var7);
         } else if (this.levelIndex < 12) {
           DialogueScreen var8 = new DialogueScreen(UiContainer.field_F, SpriteCheckboxPainter.field_c, LegacyMenuColumn.field_g, false);
@@ -1721,7 +1721,7 @@ final class GameplaySession {
     }
 
     private final void drawThemeBottomBackground(int x, int y, int guard) {
-        Sprite var4 = sl.field_b[this.secondaryTheme][3];
+        Sprite var4 = ChatMessageDecoder.field_b[this.secondaryTheme][3];
         int var5 = -128 / ((43 - guard) / 45);
         if (var4 != null) {
           y = y + var4.fullHeight;
@@ -1983,7 +1983,7 @@ final class GameplaySession {
           Sprite var6 = (Sprite) null;
           this.renderShipHull(-94, (Sprite) null, -116, 123);
         }
-        int[] var4 = wi.field_h;
+        int[] var4 = TileSpriteCacheEntry.field_h;
         if (var4 != null &&
           var3 >= 0 &&
           var3 < var4.length &&
@@ -2012,12 +2012,12 @@ final class GameplaySession {
 
     private final void drawParallaxBackground(int guard, int cameraX, int cameraY) {
         cameraY -= 64;
-        this.tileParallaxLayer(this.repeatSkyLayerVertically((byte) 90), false, 117, sl.field_b[this.secondaryTheme][0], (-cameraY >> 3) - (this.tutorialBackgroundPhase >> 1), -cameraX >> 3);
+        this.tileParallaxLayer(this.repeatSkyLayerVertically((byte) 90), false, 117, ChatMessageDecoder.field_b[this.secondaryTheme][0], (-cameraY >> 3) - (this.tutorialBackgroundPhase >> 1), -cameraX >> 3);
         int var4 = 26 / ((16 - guard) / 39);
         this.drawLevelTitle(-1, cameraY);
-        this.tileParallaxLayer(false, false, 124, sl.field_b[this.secondaryTheme][1], -cameraY * 5 >> 3, 5 * -cameraX >> 3);
-        this.tileParallaxLayer(false, false, 74, sl.field_b[this.secondaryTheme][2], -cameraY + (cameraY >> 2), (cameraX >> 2) - cameraX);
-        this.tileParallaxLayer(false, true, 92, sl.field_b[this.secondaryTheme][3], (cameraY >> 3) - cameraY, -cameraX + (cameraX >> 3));
+        this.tileParallaxLayer(false, false, 124, ChatMessageDecoder.field_b[this.secondaryTheme][1], -cameraY * 5 >> 3, 5 * -cameraX >> 3);
+        this.tileParallaxLayer(false, false, 74, ChatMessageDecoder.field_b[this.secondaryTheme][2], -cameraY + (cameraY >> 2), (cameraX >> 2) - cameraX);
+        this.tileParallaxLayer(false, true, 92, ChatMessageDecoder.field_b[this.secondaryTheme][3], (cameraY >> 3) - cameraY, -cameraX + (cameraX >> 3));
         this.drawThemeBottomBackground(-cameraX + (cameraX >> 3), -cameraY + (cameraY >> 3), -36);
         this.drawTutorialCavernBackground(cameraY, -7778, cameraX);
     }
@@ -2102,7 +2102,7 @@ final class GameplaySession {
         int var4 = EscapeVector.obfuscationControl;
         int var2 = 0;
         for (int var3 = 0; var3 < this.gameMode; var3++) {
-          var2 = var2 + je.a(false, var3);
+          var2 = var2 + SpriteFactorySupport.levelCount(false, var3);
         }
         var2 = var2 + this.levelIndex;
         if (guard != 20824) {
@@ -2223,7 +2223,7 @@ final class GameplaySession {
                 this.displayedAchievementCount = this.displayedAchievementCount + 1;
                 this.displayedAchievementIds[fieldTemp$0] = this.pendingAchievementIds[0];
                 this.pendingAchievementCount = this.pendingAchievementCount - 1;
-                qg.a(this.pendingAchievementIds, 1, this.pendingAchievementIds, 0, this.pendingAchievementCount);
+                ArraySupport.copy(this.pendingAchievementIds, 1, this.pendingAchievementIds, 0, this.pendingAchievementCount);
                 continue;
               }
               break;
@@ -2882,7 +2882,7 @@ final class GameplaySession {
 
     private final void leaveSession(int guard) {
         this.detachSessionAudio(72);
-        dh.field_b = BoundedRandomAccessFile.activeSession.gameMode;
+        GzipDecoder.field_b = BoundedRandomAccessFile.activeSession.gameMode;
         BoundedRandomAccessFile.activeSession = null;
         AlternateUsernameCredentials.field_q = new t();
         GameplaySession.resetSessionMenuState((byte) -28);
@@ -2892,13 +2892,13 @@ final class GameplaySession {
           ua.field_c.d(17523))) {
           PacketBuffer.field_h = true;
           di.field_d = new wc(2);
-          di.field_d.a(gb.a(dh.field_d, UiContainer.field_y, 8158), true, 4767999);
+          di.field_d.a(gb.a(GzipDecoder.field_d, UiContainer.field_y, 8158), true, 4767999);
           boolean decompiledFrameRemainder0 = false;
         }
         else {
           ci.a(0);
         }
-        gi.a((byte) -77);
+        ChatMessage.clearFrameOffsets((byte) -77);
     }
 
     private final void detonateRockBuster(RockBuster projectile, int guard) {
@@ -3133,7 +3133,7 @@ final class GameplaySession {
           this.recordMissionTargetDestroyed(object, var6, -2);
           this.recordInfrastructureDestroyed((byte) 124, object);
           if (this.minimap != null) {
-            this.minimap.a(object, 4236);
+            this.minimap.removeObject(object, 4236);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3280,7 +3280,7 @@ final class GameplaySession {
             int var10 = 16777215;
             if (var2 != 0 &&
               this.dynamicTerrain != null) {
-              var10 = this.dynamicTerrain.field_z;
+              var10 = this.dynamicTerrain.boundaryColor;
             }
             SoftwareRasterizer.drawLine(320, 240, var6Lifetime1 + (var8 >> 1), var7Lifetime1 + (var9 >> 1), var10);
           }
@@ -3349,8 +3349,8 @@ final class GameplaySession {
           gh.a(this.transitionTicks + 1, 256 - (this.transitionTicks << 2), (var5), (var5));
         }
         if (null != this.minimap &&
-          this.minimap.b((byte) -122)) {
-          this.minimap.a((byte) -120);
+          this.minimap.isVisible((byte) -122)) {
+          this.minimap.draw((byte) -120);
         }
         return;
     }
@@ -3590,7 +3590,7 @@ final class GameplaySession {
           if (var8 > 6144) {
             var8 = 6144;
           }
-          AlternateUsernameCredentials.field_n.playSampleWithPan(co.field_d, 100, IterableNodeHashTable.field_c * var8 / 64, 8192);
+          AlternateUsernameCredentials.field_n.playSampleWithPan(InputGlyphSupport.field_d, 100, IterableNodeHashTable.field_c * var8 / 64, 8192);
         }
     }
 
@@ -3873,31 +3873,31 @@ final class GameplaySession {
           this.tutorialBackgroundPhase = -1 + this.tutorialBackgroundPhase & 1023;
         }
         if (this.minimap != null) {
-          this.minimap.field_c = this.minimap.field_c + 1;
+          this.minimap.animationTick = this.minimap.animationTick + 1;
         }
         scanLoop1: while (true) {
           if (AccountRequestDialog.pollKeyEvent(-116)) {
-            if (~PasswordValidator.field_n == ~of.field_c &&
+            if (~PasswordValidator.field_n == ~SpriteDecodeSupport.field_c &&
               this.minimap != null) {
-              this.minimap.e((byte) -101);
-              if (this.minimap.b((byte) -107)) {
+              this.minimap.toggleVisible((byte) -101);
+              if (this.minimap.isVisible((byte) -107)) {
                 this.stopSessionAudio((byte) -41);
               }
             }
             if (this.minimap != null &&
-              this.minimap.b((byte) -114) &&
+              this.minimap.isVisible((byte) -114) &&
               PasswordValidator.field_n == 13) {
-              this.minimap.e((byte) -101);
+              this.minimap.toggleVisible((byte) -101);
             }
             if (PasswordValidator.field_n == 13 && (!this.shipDestroyed ||
               this.livesRemaining != 0) && !this.quitRequested) {
-              if (this.minimap.b((byte) -122)) {
-                this.minimap.e((byte) -101);
+              if (this.minimap.isVisible((byte) -122)) {
+                this.minimap.toggleVisible((byte) -101);
               }
               this.stopSessionAudio((byte) -41);
               da.field_c = new tf();
               mj.field_d = 0;
-              gi.a((byte) -56);
+              ChatMessage.clearFrameOffsets((byte) -56);
               return;
             }
             if (SelfDestructEffects.field_k &&
@@ -3932,7 +3932,7 @@ final class GameplaySession {
             System.out.println("Timehack checking cheat activated");
             continue;
           }
-          if (this.minimap.b((byte) -110)) {
+          if (this.minimap.isVisible((byte) -110)) {
             return;
           }
           this.activeSessionTicks = this.activeSessionTicks + 1;
@@ -4398,7 +4398,7 @@ final class GameplaySession {
                 if (var12 > 6144) {
                   var12 = 6144;
                 }
-                AlternateUsernameCredentials.field_n.playSampleWithPan(co.field_d, 100, var12 * IterableNodeHashTable.field_c / 64, 8192);
+                AlternateUsernameCredentials.field_n.playSampleWithPan(InputGlyphSupport.field_d, 100, var12 * IterableNodeHashTable.field_c / 64, 8192);
                 decompiledFrameRemainder0 = false;
               }
             } else if (this.spriteOverlapsShipHull(false, var17_int, var16, Js5NetworkRequest.field_H)) {
@@ -4719,7 +4719,7 @@ final class GameplaySession {
                     var37_ref.removeFromTerrain(this, (byte) 75);
                     var6--;
                     if (this.minimap != null) {
-                      this.minimap.a(var37_ref, 4236);
+                      this.minimap.removeObject(var37_ref, 4236);
                     }
                     this.tetheredObjectType = var37_ref.objectType;
                     this.activateCountdown(-118, 1);
@@ -4736,7 +4736,7 @@ final class GameplaySession {
                     } else {
                       this.pickupAnimationTicks = 50;
                     }
-                    AlternateUsernameCredentials.field_n.playSampleWithPan(fg.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
+                    AlternateUsernameCredentials.field_n.playSampleWithPan(SimulatorAssetSupport.field_a, 100, IterableNodeHashTable.field_c * 6144 / 64, 8192);
                     break scanLoop2;
                   }
                   if (var4_refLifetime1 != on.field_d &&
@@ -4745,7 +4745,7 @@ final class GameplaySession {
                     var12 >= -32 &&
                     32 >= var12) {
                     if (1 == var37_ref.objectType) {
-                      var4_refLifetime1 = ff.field_f;
+                      var4_refLifetime1 = QuickChatPhraseCache.field_f;
                     } else if (5 != var37_ref.objectType) {
                       var4_refLifetime1 = SecondaryNodeHashTable.field_c;
                     } else {
@@ -6253,13 +6253,13 @@ final class GameplaySession {
             this.field_v = PcmSampleStream.createAtRatePercent(Bzip2State.field_G, 100, 0);
             this.field_v.setLoopCount(-1);
             AlternateUsernameCredentials.field_n.addSubstream(this.field_v);
-            this.field_Wb = PcmSampleStream.createAtRatePercent(vi.field_c, 100, 0);
+            this.field_Wb = PcmSampleStream.createAtRatePercent(ChatHistorySupport.field_c, 100, 0);
             this.field_Wb.setLoopCount(-1);
             AlternateUsernameCredentials.field_n.addSubstream(this.field_Wb);
             this.field_wb = PcmSampleStream.createAtRatePercent(LoadingProgressDialog.field_hb, 100, 0);
             this.field_wb.setLoopCount(-1);
             AlternateUsernameCredentials.field_n.addSubstream(this.field_wb);
-            this.field_r = PcmSampleStream.createAtRatePercent(of.field_h, 100, 0);
+            this.field_r = PcmSampleStream.createAtRatePercent(SpriteDecodeSupport.field_h, 100, 0);
             this.field_r.setLoopCount(-1);
             AlternateUsernameCredentials.field_n.addSubstream(this.field_r);
             this.field_lc = PcmSampleStream.createAtRatePercent(pa.field_a, 100, 0);

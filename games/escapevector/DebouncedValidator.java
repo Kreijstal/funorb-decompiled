@@ -14,12 +14,12 @@ abstract class DebouncedValidator implements ValidationSource {
         if (guard != 17124) {
           DebouncedValidator.a(false, true);
           if (td.b(guard - 16996) < (this.lastChangeMillis + 350L)) {
-            return of.field_f;
+            return SpriteDecodeSupport.field_f;
           }
           return this.evaluateState(-76);
         }
         if (td.b(guard - 16996) < (this.lastChangeMillis + 350L)) {
-          return of.field_f;
+          return SpriteDecodeSupport.field_f;
         }
         return this.evaluateState(-76);
     }

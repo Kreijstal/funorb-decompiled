@@ -218,7 +218,7 @@ final class qe {
             Sprite[] var5 = (Sprite[]) null;
             qe.a(107, 78, 55, (Sprite[]) null, 95, 113);
           }
-          qg.a(param3, 0, param0, param1, param3.length);
+          ArraySupport.copy(param3, 0, param0, param1, param3.length);
           param1 = param1 + param3.length;
           int stackIn_3_0 = param1;
           return stackIn_3_0;
@@ -260,7 +260,7 @@ final class qe {
         if (fc.field_a < 2) {
           return 0;
         }
-        if (ff.field_h != 0) {
+        if (QuickChatPhraseCache.field_h != 0) {
           if (null != PasswordValidator.field_p) {
             if (!PasswordValidator.field_p.ensureIndex(0)) {
               return 14;

@@ -505,11 +505,11 @@ final class vd {
           var6++;
           var5[incrementValue$1] = (byte) 1;
           if (param1 != null) {
-            qg.a(param1, 0, var5, var6, param1.length);
+            ArraySupport.copy(param1, 0, var5, var6, param1.length);
             var6 = var6 + param1.length;
           }
           if (param2 != null) {
-            qg.a(param2, 0, var5, var6, param2.length);
+            ArraySupport.copy(param2, 0, var5, var6, param2.length);
             var6 = var6 + param2.length;
           }
           byte[] stackIn_12_0 = var5;

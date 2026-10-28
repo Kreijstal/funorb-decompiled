@@ -14,8 +14,8 @@ final class ArchiveKeyRequest extends IntrusiveNode {
         SelfDestructEffects.field_q = param1;
         di.field_d = new wc(CheckboxPainter.field_l.field_p);
         int var4 = LoginForm.a(param1, (byte) 121);
-        di.field_d.a(102, param2, CheckboxPainter.field_l.a(UiContainer.field_y, 12089, dh.field_d), var4);
-        gi.a((byte) -70);
+        di.field_d.a(102, param2, CheckboxPainter.field_l.a(UiContainer.field_y, 12089, GzipDecoder.field_d), var4);
+        ChatMessage.clearFrameOffsets((byte) -70);
     }
 
     final static void decodeArchiveKeyResponse(boolean guard) {

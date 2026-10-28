@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class co {
+final class InputGlyphSupport {
     static PcmSample field_d;
     static QuickChatDynamicCommand field_b;
     static NameAvailabilityResult field_a;
@@ -17,28 +17,28 @@ final class co {
         field_f = null;
         field_c = null;
         if (guard != 63) {
-          co.releaseStatics((byte) -70);
+          InputGlyphSupport.releaseStatics((byte) -70);
         }
     }
 
-    final static char a(BinaryBitmapFont param0, byte param1) {
+    final static char widestInputGlyph(BinaryBitmapFont font, byte guard) {
         String stackIn_33_2 = null;
         int var8 = EscapeVector.obfuscationControl;
         try {
           int var2_int = 119;
-          int var3 = param0.charAdvance((char) var2_int);
+          int var3 = font.charAdvance((char) var2_int);
           char[] var11 = SpriteStrip.field_k[0];
           char[] var10 = var11;
           char[] var9 = var10;
           char[] var4_ref_char__ = var9;
-          if (param1 >= -122) {
+          if (guard >= -122) {
             int stackIn_3_0 = 65479;
             return (char) stackIn_3_0;
           }
           for (int var5 = 0; var5 < var11.length; var5++) {
             int var6 = var11[var5];
             if (ml.a((char) var6, 21654)) {
-              int var7 = param0.charAdvance((char) var6);
+              int var7 = font.charAdvance((char) var6);
               if (var3 < var7) {
                 var3 = var7;
                 var2_int = var6;
@@ -48,21 +48,21 @@ final class co {
           char[] var4_ref_char__Lifetime1 = SpriteStrip.field_k[1];
           for (int var5Lifetime1 = 0; var4_ref_char__Lifetime1.length > var5Lifetime1; var5Lifetime1++) {
             int var6Lifetime1 = var4_ref_char__Lifetime1[var5Lifetime1];
-            int var7Lifetime1 = param0.charAdvance((char) var6Lifetime1);
+            int var7Lifetime1 = font.charAdvance((char) var6Lifetime1);
             if (ml.a((char) var6Lifetime1, 21654) &&
               var7Lifetime1 > var3) {
               var2_int = var6Lifetime1;
               var3 = var7Lifetime1;
             }
           }
-          int var4 = StrongCacheEntry.widestAllowedGlyph((byte) -89, ModalPanel.field_R[0], param0, uj.field_f[0]);
-          int var5Lifetime2 = param0.charAdvance((char) var4);
+          int var4 = StrongCacheEntry.widestAllowedGlyph((byte) -89, ModalPanel.field_R[0], font, uj.field_f[0]);
+          int var5Lifetime2 = font.charAdvance((char) var4);
           if (var5Lifetime2 > var3) {
             var3 = var5Lifetime2;
             var2_int = var4;
           }
-          int var4Lifetime1 = StrongCacheEntry.widestAllowedGlyph((byte) -63, ModalPanel.field_R[1], param0, uj.field_f[1]);
-          int var5Lifetime3 = param0.charAdvance((char) var4Lifetime1);
+          int var4Lifetime1 = StrongCacheEntry.widestAllowedGlyph((byte) -63, ModalPanel.field_R[1], font, uj.field_f[1]);
+          int var5Lifetime3 = font.charAdvance((char) var4Lifetime1);
           if (var5Lifetime3 > var3) {
             var3 = var5Lifetime3;
             var2_int = var4Lifetime1;
@@ -74,27 +74,27 @@ final class co {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_32_0 = var2;
           StringBuilder stackIn_32_1 = new StringBuilder().append("co.A(");
-          if (param0 == null) {
+          if (font == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static EmailValidationError a(String param0, int param1) {
+    final static EmailValidationError rejectNumericDomainSuffix(String suffix, int start) {
         String stackIn_14_2 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          int var2_int = param0.length();
-          int var3 = param1;
+          int var2_int = suffix.length();
+          int var3 = start;
           while (true) {
             if (var3 >= var2_int) {
               EmailValidationError stackIn_10_0 = CachedTextLayout.field_p;
               return stackIn_10_0;
             }
-            int var4 = param0.charAt(var3);
+            int var4 = suffix.charAt(var3);
             if (48 > var4) {
               return null;
             }
@@ -111,12 +111,12 @@ final class co {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_13_0 = var2;
           StringBuilder stackIn_13_1 = new StringBuilder().append("co.C(");
-          if (param0 == null) {
+          if (suffix == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(start).append(')').toString());
         }
     }
 

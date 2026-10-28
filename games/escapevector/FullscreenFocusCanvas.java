@@ -9,7 +9,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static IndexedSprite[] field_a;
     java.awt.Frame field_d;
     static int field_h;
-    static sk field_e;
+    static Js5ArchiveManager field_e;
 
     public final void update(java.awt.Graphics param0) {
     }
@@ -106,7 +106,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           FullscreenFocusCanvas.a(param0, this.field_d, false);
           if (!param1) {
-            field_e = (sk) null;
+            field_e = (Js5ArchiveManager) null;
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "af.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -126,7 +126,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         int stackIn_48_0 = 0;
         int var6;
         int var7;
-        vi.field_e[AccountTermsPanel.field_J] = param4;
+        ChatHistorySupport.field_e[AccountTermsPanel.field_J] = param4;
         LegacyStyleNode.field_q[AccountTermsPanel.field_J] = AccountTermsPanel.field_J;
         DualLinkNode.field_k[AccountTermsPanel.field_J] = param5;
         if (param5 < TextLayoutLine.field_e) {

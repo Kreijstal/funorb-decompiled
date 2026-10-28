@@ -1101,7 +1101,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(64, "toserverlist");
                 if (var2 != null) {
-                  qk.field_a = RasterSnapshot.a(var2, 124);
+                  ArchiveLoadTask.field_a = RasterSnapshot.a(var2, 124);
                 }
                 var2 = IntKeyLookup.a(15, "tocustomersupport");
                 if (null != var2) {
@@ -1538,7 +1538,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(116, "login_username");
                 if (null != var2) {
-                  wi.field_c = RasterSnapshot.a(var2, 127);
+                  TileSpriteCacheEntry.field_c = RasterSnapshot.a(var2, 127);
                 }
                 var2 = IntKeyLookup.a(48, "login_email");
                 if (var2 != null) {
@@ -1606,7 +1606,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(101, "create_email_confirm_tooltip");
                 if (var2 != null) {
-                  co.field_f = RasterSnapshot.a(var2, 122);
+                  InputGlyphSupport.field_f = RasterSnapshot.a(var2, 122);
                 }
                 var2 = IntKeyLookup.a(111, "create_age_tooltip");
                 if (var2 != null) {
@@ -1850,7 +1850,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(49, "waitingfor_extradata");
                 if (var2 != null) {
-                  ff.field_a = RasterSnapshot.a(var2, 121);
+                  QuickChatPhraseCache.field_a = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(31, "waitingfor_languages");
                 if (null != var2) {
@@ -1882,7 +1882,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(84, "loading_music");
                 if (null != var2) {
-                  uc.field_d = RasterSnapshot.a(var2, 116);
+                  ArchivePreloader.field_d = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(94, "loading_instruments");
                 if (null != var2) {
@@ -2042,7 +2042,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(99, "startgame");
                 if (var2 != null) {
-                  of.field_e = RasterSnapshot.a(var2, 124);
+                  SpriteDecodeSupport.field_e = RasterSnapshot.a(var2, 124);
                 }
                 var2 = IntKeyLookup.a(93, "newgame");
                 if (var2 != null) {
@@ -2098,7 +2098,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(69, "previous");
                 if (var2 != null) {
-                  ja.field_b = RasterSnapshot.a(var2, 115);
+                  DisplayModeInfo.field_b = RasterSnapshot.a(var2, 115);
                 }
                 var2 = IntKeyLookup.a(71, "prev");
                 if (var2 != null) {
@@ -2908,31 +2908,31 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(105, "mustlogin2,1");
                 if (null != var2) {
-                  sl.field_c[1] = RasterSnapshot.a(var2, 126);
+                  ChatMessageDecoder.field_c[1] = RasterSnapshot.a(var2, 126);
                 }
                 var2 = IntKeyLookup.a(50, "mustlogin2,2");
                 if (null != var2) {
-                  sl.field_c[2] = RasterSnapshot.a(var2, 116);
+                  ChatMessageDecoder.field_c[2] = RasterSnapshot.a(var2, 116);
                 }
                 var2 = IntKeyLookup.a(73, "mustlogin2,3");
                 if (var2 != null) {
-                  sl.field_c[3] = RasterSnapshot.a(var2, 117);
+                  ChatMessageDecoder.field_c[3] = RasterSnapshot.a(var2, 117);
                 }
                 var2 = IntKeyLookup.a(42, "mustlogin2,4");
                 if (null != var2) {
-                  sl.field_c[4] = RasterSnapshot.a(var2, 112);
+                  ChatMessageDecoder.field_c[4] = RasterSnapshot.a(var2, 112);
                 }
                 var2 = IntKeyLookup.a(58, "mustlogin2,5");
                 if (null != var2) {
-                  sl.field_c[5] = RasterSnapshot.a(var2, 125);
+                  ChatMessageDecoder.field_c[5] = RasterSnapshot.a(var2, 125);
                 }
                 var2 = IntKeyLookup.a(84, "mustlogin2,6");
                 if (null != var2) {
-                  sl.field_c[6] = RasterSnapshot.a(var2, 119);
+                  ChatMessageDecoder.field_c[6] = RasterSnapshot.a(var2, 119);
                 }
                 var2 = IntKeyLookup.a(122, "mustlogin2,7");
                 if (var2 != null) {
-                  sl.field_c[7] = RasterSnapshot.a(var2, 121);
+                  ChatMessageDecoder.field_c[7] = RasterSnapshot.a(var2, 121);
                 }
                 var2 = IntKeyLookup.a(102, "mustlogin3,1");
                 if (var2 != null) {
@@ -2964,7 +2964,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.a(43, "discard");
                 if (null != var2) {
-                  sj.field_j = RasterSnapshot.a(var2, 118);
+                  StringNode.field_j = RasterSnapshot.a(var2, 118);
                 }
                 var2 = IntKeyLookup.a(69, "mustlogin4,1");
                 if (null != var2) {
@@ -3160,8 +3160,8 @@ final class DropTargetWidget extends SingleChildContainer {
             Object stackIn_5_0 = null;
             return (BinaryBitmapFont) (stackIn_5_0);
           }
-          BinaryBitmapFont var2 = new BinaryBitmapFont(param1, gn.spriteOffsetXs, gi.spriteOffsetYs, qh.spriteWidths, SavedDataQuerySupport.spriteHeights, qe.spriteIndices);
-          of.a(false);
+          BinaryBitmapFont var2 = new BinaryBitmapFont(param1, gn.spriteOffsetXs, ChatMessage.spriteOffsetYs, qh.spriteWidths, SavedDataQuerySupport.spriteHeights, qe.spriteIndices);
+          SpriteDecodeSupport.releaseSpriteSheet(false);
           BinaryBitmapFont stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

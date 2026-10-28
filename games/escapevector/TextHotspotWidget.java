@@ -209,7 +209,7 @@ class TextHotspotWidget extends TextButton {
           super.updateHover(guard, offsetY, offsetX, root);
           this.field_E = null;
           if (this.hovered) {
-            int var5_int = -offsetX + (dh.field_d - this.x);
+            int var5_int = -offsetX + (GzipDecoder.field_d - this.x);
             int var6 = -offsetY + UiContainer.field_y - this.y;
             this.field_E = this.hotspotAt(var6, (byte) -111, var5_int);
           }

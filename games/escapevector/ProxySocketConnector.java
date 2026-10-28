@@ -12,13 +12,13 @@ final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector proxySelector;
     static int[] field_y;
     static int[] field_x;
-    static int[] field_v;
-    static jk[] field_k;
-    static int[] field_h;
+    static int[] achievementCategories;
+    static AchievementGrantRule[] achievementRules;
+    static int[] achievementMasks;
     static int[] field_z;
     static int[] field_t;
     static mb[] field_i;
-    static int[] field_u;
+    static int[] achievementModes;
     static ci[] field_l;
     static int[] field_q;
     static int[] field_j;
@@ -213,14 +213,14 @@ final class ProxySocketConnector extends SocketConnector {
         field_q = null;
         field_y = null;
         field_s = null;
-        field_u = null;
-        field_h = null;
+        achievementModes = null;
+        achievementMasks = null;
         field_i = null;
         field_r = null;
         field_t = null;
         field_z = null;
-        field_v = null;
-        field_k = null;
+        achievementCategories = null;
+        achievementRules = null;
     }
 
     private final java.net.Socket openHttpTunnel(int proxyPort, String authorizationHeader, int guard, String proxyHost) throws IOException {
@@ -332,18 +332,18 @@ final class ProxySocketConnector extends SocketConnector {
         field_p = false;
         field_w = new Sprite(1, 1);
         field_z = new int[]{8, 17};
-        field_v = new int[]{18, 19, 20, 21, 0, 1, 2, 3, 22, 23, 24, 25, 31, 30};
-        field_h = new int[]{3, 3, 3, 3, 1, 1, 1, 1, 4, 4, 4, 4, 8, 8};
+        achievementCategories = new int[]{18, 19, 20, 21, 0, 1, 2, 3, 22, 23, 24, 25, 31, 30};
+        achievementMasks = new int[]{3, 3, 3, 3, 1, 1, 1, 1, 4, 4, 4, 4, 8, 8};
         field_t = new int[]{100, 100, 200, 300, 200, 500, 100, 300, 100, 500, 1000, 500, 500, 300, 500, 500, 500, 300, 50, 50, 100, 150, 100, 200, 300, 500, 200, 500, 500, 1000, 500, 100};
         field_j = new int[]{25000, 100000, 350000, 800000};
         field_x = new int[]{4, 5, 26, 27};
         field_y = new int[]{0, 0, 2, 2};
         field_m = new int[]{22, 23, 24, 25, 26, 27, 28, 29, 30, 31};
-        field_u = new int[]{3, 7, 11, 15, 3, 7, 11, 15, 3, 7, 11, 15, 0, 10};
+        achievementModes = new int[]{3, 7, 11, 15, 3, 7, 11, 15, 3, 7, 11, 15, 0, 10};
         field_q = new int[]{1, 1, 1, 1, 3, 3, 3, 1, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 8, 8, 8};
         field_s = new int[]{1, 1, 2, 3, 2, 5, 1, 3, 1, 5, 10, 5, 5, 3, 5, 5, 5, 3, 1, 1, 1, 1, 1, 2, 3, 5, 2, 5, 5, 10, 5, 1};
         cf.a((byte) -76);
-        gi.a(0);
+        ChatMessage.initializeAchievementRules(0);
         jj.a(false);
     }
 

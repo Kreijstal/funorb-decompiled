@@ -34,8 +34,8 @@ abstract class SpriteState extends DualLinkNode {
         synchronized (var1) {
           AlphaContainer.mouseIdleTicks = AlphaContainer.mouseIdleTicks + 1;
           DialWidget.field_K = LoginCredentials.heldMouseButton;
-          dh.field_d = IterableDualLinkDeque.pendingMouseX;
-          UiContainer.field_y = jk.pendingMouseY;
+          GzipDecoder.field_d = IterableDualLinkDeque.pendingMouseX;
+          UiContainer.field_y = AchievementGrantRule.pendingMouseY;
           TextFieldValidator.field_h = ke.mouseInputChanged;
           ke.mouseInputChanged = false;
           AccountMessagePanel.field_N = SocketConnector.pendingClickButton;
@@ -67,7 +67,7 @@ abstract class SpriteState extends DualLinkNode {
         int var3 = da.field_b.d((byte) -73);
         di.field_d = new wc(var3);
         int var4 = da.field_b.c(5201);
-        int var5 = da.field_b.a(-3, dh.field_d, UiContainer.field_y);
+        int var5 = da.field_b.a(-3, GzipDecoder.field_d, UiContainer.field_y);
         di.field_d.a(95, param1, var5, var4);
     }
 

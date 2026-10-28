@@ -51,7 +51,7 @@ final class ak {
         if (param1 != -123) {
           return;
         }
-        gi.a((byte) -71);
+        ChatMessage.clearFrameOffsets((byte) -71);
     }
 
     private final int[] a(int[] param0, int param1, int[] param2, int[] param3) {
@@ -528,8 +528,8 @@ final class ak {
           int[] var24 = new int[var11];
           int[] var20 = var24;
           int[] var12 = var20;
-          qg.a(var8, 0, var12, 0, var21.length);
-          qg.a(var9, 0, var12, var21.length, var22.length);
+          ArraySupport.copy(var8, 0, var12, 0, var21.length);
+          ArraySupport.copy(var9, 0, var12, var21.length, var22.length);
           int[] var26 = new int[var11];
           for (int var14 = 0; var14 < var26.length; var14++) {
             var26[var14] = var14;
@@ -571,7 +571,7 @@ final class ak {
 
     private final void b(int param0) {
         if (mj.field_d == 0) {
-          sj.a(8192, (byte) 51);
+          StringNode.playFrameAppearSound(8192, (byte) 51);
         }
         IntValueNode.field_j = true;
         if (param0 != 100) {
@@ -626,7 +626,7 @@ final class ak {
         if (var3) {
           return (var3);
         }
-        di.field_d.a(this.c(sf.field_c, -1, LoginDialog.field_ob), (byte) 120, this.c(dh.field_d, -1, UiContainer.field_y));
+        di.field_d.a(this.c(sf.field_c, -1, LoginDialog.field_ob), (byte) 120, this.c(GzipDecoder.field_d, -1, UiContainer.field_y));
         this.c(false);
         boolean var3Lifetime1 = (this.a(true, Js5NetworkRequest.a((byte) 15, -1), (byte) 79));
         return (var3Lifetime1);
@@ -645,7 +645,7 @@ final class ak {
           int[] var26 = this.b(var12, param3, 10);
           int[] var28 = this.a(param0, -47, var12, param4);
           int[] var27 = this.a(var12, param1, 0);
-          this.field_j = DynamicTerrainRenderer.a(param2 + (-param8 + 1), var26, param6, param8, param7, var11, var27, false, var28);
+          this.field_j = DynamicTerrainRenderer.createButtonRow(param2 + (-param8 + 1), var26, param6, param8, param7, var11, var27, false, var28);
           int[] stackIn_3_0 = var10;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -671,7 +671,7 @@ final class ak {
         }
         pa.a(true);
         mj.field_d = 0;
-        gi.a((byte) -94);
+        ChatMessage.clearFrameOffsets((byte) -94);
     }
 
     private final void h(byte param0) {
@@ -790,7 +790,7 @@ final class ak {
         boolean var2 = false;
         while (AccountRequestDialog.pollKeyEvent(-110)) {
           di.field_d.a(127);
-          qk.a(this.field_a, param0 ^ 3);
+          ArchiveLoadTask.cycleSelectionFromArrowKey(this.field_a, param0 ^ 3);
           if (PasswordValidator.field_n == 13) {
             int var3 = this.a(1, 0);
             di.field_d.a(false, var3);
@@ -821,7 +821,7 @@ final class ak {
           int[] var26 = this.b(var13, param8, 10);
           int[] var28 = this.a(param5, param3 ^ 115, var13, param4);
           int[] var27 = this.a(var13, param0, param3 ^ param3);
-          this.field_k = DynamicTerrainRenderer.a(param7 + (-param1 + 1), var26, param2, param1, param6, var11, var27, false, var28);
+          this.field_k = DynamicTerrainRenderer.createButtonRow(param7 + (-param1 + 1), var26, param2, param1, param6, var11, var27, false, var28);
           int[] stackIn_4_0 = var10;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -996,7 +996,7 @@ final class ak {
           int[] var26 = this.b(var12, param6, 10);
           int[] var28 = this.a(param1, -47, var12, param2);
           int[] var27 = this.a(var12, param7, 0);
-          this.field_i = DynamicTerrainRenderer.a(1 + (-param4 + param3), var26, param8, param4, param0, var11, var27, false, var28);
+          this.field_i = DynamicTerrainRenderer.createButtonRow(1 + (-param4 + param3), var26, param8, param4, param0, var11, var27, false, var28);
           int[] stackIn_4_0 = var10;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

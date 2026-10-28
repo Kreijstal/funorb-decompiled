@@ -7,7 +7,7 @@ final class RepeatedCharacterSupport {
 
     final static boolean a(byte param0) {
         int var1 = 116 / ((16 - param0) / 34);
-        if (10 > ff.field_e) {
+        if (10 > QuickChatPhraseCache.field_e) {
           return false;
         }
         if (fc.field_a >= 13) {

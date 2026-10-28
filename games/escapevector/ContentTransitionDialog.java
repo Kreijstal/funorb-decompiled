@@ -81,7 +81,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           super.finishTransition(guard);
           return;
         }
-        if (this.transitionPhase != ff.field_b) {
+        if (this.transitionPhase != QuickChatPhraseCache.field_b) {
           this.resizeAndCenter(255, this.pendingContent.height + 12 + this.headerInset, 12 + this.pendingContent.width);
           this.installContent((byte) -121, this.pendingContent);
         } else {
@@ -102,7 +102,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
             return super.updateAnimationsAndCheckClosed(-13907);
           }
           if (this.transitionPhase != t.field_a) {
-            if (ff.field_b != this.transitionPhase) {
+            if (QuickChatPhraseCache.field_b != this.transitionPhase) {
               return super.updateAnimationsAndCheckClosed(-13907);
             }
             int fieldTemp$0 = this.transitionTick + 1;
@@ -132,7 +132,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           return super.updateAnimationsAndCheckClosed(-13907);
         }
         if (this.transitionPhase != t.field_a) {
-          if (ff.field_b != this.transitionPhase) {
+          if (QuickChatPhraseCache.field_b != this.transitionPhase) {
             return super.updateAnimationsAndCheckClosed(-13907);
           }
           int fieldTemp$2 = this.transitionTick + 1;
@@ -228,7 +228,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         if (t.field_a == this.transitionPhase) {
           return;
         }
-        this.transitionPhase = ff.field_b;
+        this.transitionPhase = QuickChatPhraseCache.field_b;
         this.transitionTick = 0;
         this.installContent((byte) -115, this.pendingContent);
         int var2 = 41 / ((45 - guard) / 53);

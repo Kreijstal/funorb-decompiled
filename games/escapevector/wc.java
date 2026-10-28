@@ -88,7 +88,7 @@ final class wc {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 == 0) {
-          int var6 = this.a((byte) 113, param2, dh.field_d, param3, param4, UiContainer.field_y, param1);
+          int var6 = this.a((byte) 113, param2, GzipDecoder.field_d, param3, param4, UiContainer.field_y, param1);
           int var7 = this.a((byte) 124, param2, sf.field_c, param3, param4, LoginDialog.field_ob, param1);
           this.a(var7, (byte) 118, var6);
           return;
@@ -203,7 +203,7 @@ final class wc {
         ke.field_c = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo12", -110, param2, "commonui", param3));
         Js5Transport.field_a = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo14", -124, param2, "commonui", param3));
         RasterRestoreSupport.field_b = (BitmapFont) ((Object) KeyboardStateSupport.loadCoverageFont("arezzo14bold", -93, param2, "commonui", param3));
-        Sprite var17 = new Sprite(param1.getNamedFile(-4, "", "button.gif"), (java.awt.Component) ((Object) of.field_d));
+        Sprite var17 = new Sprite(param1.getNamedFile(-4, "", "button.gif"), (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
         AccountRegistrationPanel.a(param2, 50, "dropdown", "commonui");
         IndexedSprite[] var5 = SpriteCheckboxPainter.loadIndexedSprites("commonui", "screen_options", (byte) -65, param2);
         SoundCache.field_f = new IndexedSprite[4];

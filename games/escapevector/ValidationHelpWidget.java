@@ -29,7 +29,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         Object var23 = null;
         int var13 = EscapeVector.obfuscationControl;
         ValidationState var6 = this.validation.validationState(17124);
-        if (of.field_f == var6) {
+        if (SpriteDecodeSupport.field_f == var6) {
           String var17 = ContentTransitionDialog.field_bb;
           if (!var17.equals(this.text)) {
             this.text = var17;
@@ -43,7 +43,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           if (guard <= 85) {
             return;
           }
-          if (of.field_f == var6) {
+          if (SpriteDecodeSupport.field_f == var6) {
             Sprite var20 = EditableTextWidget.field_E[0];
             int var11 = var20.fullWidth << 1;
             int var12 = var20.fullHeight << 1;
@@ -124,7 +124,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         if (guard <= 85) {
           return;
         }
-        if (of.field_f == var6Lifetime1) {
+        if (SpriteDecodeSupport.field_f == var6Lifetime1) {
           Sprite var25 = EditableTextWidget.field_E[0];
           int var11Lifetime1 = var25.fullWidth << 1;
           int var12Lifetime1 = var25.fullHeight << 1;
@@ -196,7 +196,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         String stackIn_14_2 = null;
         try {
           text = MouseWheelInput.replaceCharacter(-1, '_', text, "");
-          String var3 = DynamicTerrainRenderer.a(identifier, false);
+          String var3 = DynamicTerrainRenderer.reverseString(identifier, false);
           if (guard != 37) {
             field_J = (String) null;
           }

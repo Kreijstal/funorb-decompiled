@@ -18,7 +18,7 @@ final class mj {
           int var9 = EscapeVector.obfuscationControl;
           try {
             if (null == TextLayout.field_c &&
-              !sl.a(param4, (byte) 0)) {
+              !ChatMessageDecoder.a(param4, (byte) 0)) {
               int stackIn_5_0 = -1;
               return stackIn_5_0;
             }
@@ -98,7 +98,7 @@ final class mj {
                 boolean stackIn_48_0 = ((8 & var7) != 0);
                 RasterRestoreSupport.field_a = stackIn_48_0;
                 boolean stackIn_51_0 = ((4 & var7) != 0);
-                ff.field_g = stackIn_51_0;
+                QuickChatPhraseCache.field_g = stackIn_51_0;
                 if (RasterRestoreSupport.field_a) {
                 }
               }
@@ -119,7 +119,7 @@ final class mj {
               al.field_d = ThreeSliceButtonPainter.field_t;
               if (ArchiveIndex.field_m.type((byte) 32) == AlphaContainer.field_E) {
                 NameAvailabilityValidator.field_q.a(27002, PointCloudEffect.d((byte) -114));
-              } else if (ArchiveIndex.field_m.type((byte) 32) == ja.field_a) {
+              } else if (ArchiveIndex.field_m.type((byte) 32) == DisplayModeInfo.field_a) {
                 oh.field_n.a(27002, PointCloudEffect.d((byte) -71));
               }
               e.field_c = false;
@@ -127,7 +127,7 @@ final class mj {
                 GameKeyHandler.a(var6, (byte) 30, PointCloudEffect.d((byte) -119));
               }
               if (Js5NetworkRequest.field_x <= 0 &&
-                !ff.field_g) {
+                !QuickChatPhraseCache.field_g) {
                 try {
                   JavaScriptBridge.callWindowFunction(PointCloudEffect.d((byte) -107), "unzap", param0 - 29156);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -182,9 +182,9 @@ final class mj {
                 return stackIn_102_0;
               }
               int var6_intLifetime2 = ej.field_b;
-              ej.field_b = sj.field_i;
+              ej.field_b = StringNode.field_i;
               e.field_c = true;
-              sj.field_i = var6_intLifetime2;
+              StringNode.field_i = var6_intLifetime2;
             }
             int stackIn_104_0 = -1;
             return stackIn_104_0;

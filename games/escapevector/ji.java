@@ -14,15 +14,15 @@ final class ji {
           try {
             var6 = null;
             if (null != IntPoint.field_d.field_b) {
-              uc.field_h = new BufferedRandomAccessFile(IntPoint.field_d.field_b, 5200, 0);
+              ArchivePreloader.field_h = new BufferedRandomAccessFile(IntPoint.field_d.field_b, 5200, 0);
               IntPoint.field_d.field_b = null;
-              var6 = new SectorCacheStore(255, uc.field_h, new BufferedRandomAccessFile(IntPoint.field_d.field_x, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, ArchivePreloader.field_h, new BufferedRandomAccessFile(IntPoint.field_d.field_x, 12000, 0), 2097152);
             }
             if (param5 != 114) {
               field_a = (String) null;
             }
             Object var7 = null;
-            if (uc.field_h != null) {
+            if (ArchivePreloader.field_h != null) {
               if (bg.field_e == null) {
                 bg.field_e = new BufferedRandomAccessFile[IntPoint.field_d.field_u.length];
               }
@@ -30,9 +30,9 @@ final class ji {
                 bg.field_e[param1] = new BufferedRandomAccessFile(IntPoint.field_d.field_u[param1], 12000, 0);
                 IntPoint.field_d.field_u[param1] = null;
               }
-              var7 = new SectorCacheStore(param1, uc.field_h, bg.field_e[param1], 2097152);
+              var7 = new SectorCacheStore(param1, ArchivePreloader.field_h, bg.field_e[param1], 2097152);
             }
-            CachedArchiveProvider var8 = FullscreenFocusCanvas.field_e.a(param2, 255, (SectorCacheStore) (var6), param1, (SectorCacheStore) (var7));
+            CachedArchiveProvider var8 = FullscreenFocusCanvas.field_e.archiveProvider(param2, 255, (SectorCacheStore) (var6), param1, (SectorCacheStore) (var7));
             if (param0) {
               var8.b((byte) -49);
             }

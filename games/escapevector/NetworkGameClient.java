@@ -90,16 +90,16 @@ abstract class NetworkGameClient extends GameAppletShell {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        ff.field_h = this.field_u;
-        SpriteState.b(ff.field_h, 15);
-        NanoTickClock.a(5000, 5000, this.field_t, this.field_n, param4, field_r, this.field_p, param6, (byte) 84, this.field_o, this.field_m, this.field_s, ff.field_h, this.field_y);
-        DualLinkNode.a(this.field_s, field_r, param4, param5 ^ 22212, ff.field_h, this.field_t, this.field_p, this.field_y, this.field_o);
+        QuickChatPhraseCache.field_h = this.field_u;
+        SpriteState.b(QuickChatPhraseCache.field_h, 15);
+        NanoTickClock.a(5000, 5000, this.field_t, this.field_n, param4, field_r, this.field_p, param6, (byte) 84, this.field_o, this.field_m, this.field_s, QuickChatPhraseCache.field_h, this.field_y);
+        DualLinkNode.a(this.field_s, field_r, param4, param5 ^ 22212, QuickChatPhraseCache.field_h, this.field_t, this.field_p, this.field_y, this.field_o);
         ImageProducerRasterBuffer.e(param5 + 213);
         ji.field_b = EscapeVector.createMouseWheelInput(13);
-        rc.a(of.field_d, true);
-        vi.field_g = param1;
+        rc.a(SpriteDecodeSupport.field_d, true);
+        ChatHistorySupport.field_g = param1;
         MarkerSliderPainter.field_k = param0;
-        gi.field_l = param3;
+        ChatMessage.field_l = param3;
         if (param5 != -99) {
           this.j(28);
         }
@@ -130,7 +130,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         } else if (fc.field_a >= 10) {
           if (!AccountTermsPanel.l(3)) {
             fc.a(true);
-          } else if (ff.field_e == 0) {
+          } else if (QuickChatPhraseCache.field_e == 0) {
             int discarded$2 = this.a(255, false, false);
           } else {
             KeyboardStateSupport.a(25972, mg.field_f);
@@ -140,32 +140,32 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     final static Sprite[] e(int param0) {
         int var8 = EscapeVector.obfuscationControl;
-        Sprite[] var1 = new Sprite[qk.spriteCount];
-        for (int var2 = 0; qk.spriteCount > var2; var2++) {
+        Sprite[] var1 = new Sprite[ArchiveLoadTask.spriteCount];
+        for (int var2 = 0; ArchiveLoadTask.spriteCount > var2; var2++) {
           int var3 = qh.spriteWidths[var2] * SavedDataQuerySupport.spriteHeights[var2];
           byte[] var20 = qe.spriteIndices[var2];
           if (!UiContainer.spriteHasAlpha[var2]) {
             int[] var9 = new int[var3];
             int[] var21 = var9;
             for (int var6_int = 0; var6_int < var3; var6_int++) {
-              var9[var6_int] = qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var20[var6_int], 255)];
+              var9[var6_int] = ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var20[var6_int], 255)];
             }
-            var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], gi.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var21);
+            var1[var2] = new Sprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var21);
           } else {
             byte[] var22 = CheckboxPainter.spriteAlphas[var2];
             int[] var16 = new int[var3];
             int[] var13 = var16;
             int[] var6 = var13;
             for (int var7 = 0; var7 < var3; var7++) {
-              var6[var7] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(255, (int) var22[var7]) << 24, qk.spritePalette[SpriteCheckboxPainter.bitwiseAnd(255, (int) var20[var7])]);
+              var6[var7] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(255, (int) var22[var7]) << 24, ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd(255, (int) var20[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], gi.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[var2], ChatMessage.spriteOffsetYs[var2], qh.spriteWidths[var2], SavedDataQuerySupport.spriteHeights[var2], var16));
           }
         }
         if (param0 != 15556) {
           NetworkGameClient.e(126);
         }
-        of.a(false);
+        SpriteDecodeSupport.releaseSpriteSheet(false);
         return var1;
     }
 
@@ -239,14 +239,14 @@ abstract class NetworkGameClient extends GameAppletShell {
     private final int a(int param0, boolean param1, boolean param2) {
         try {
           int var8 = EscapeVector.obfuscationControl;
-          int var4 = mm.a(param0 ^ 191, param2, mg.field_f, ff.field_h);
+          int var4 = mm.a(param0 ^ 191, param2, mg.field_f, QuickChatPhraseCache.field_h);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
             int var5_int = ui.a(GrowableIntList.b(true), jd.a(false), 55);
             if (var5_int != -1) {
-              jk.a(AccountTermsPanel.field_I, MouseWheelInput.field_a, param0 ^ -156, var5_int);
+              AchievementGrantRule.completeNameAvailabilityAndSuggestions(AccountTermsPanel.field_I, MouseWheelInput.field_a, param0 ^ -156, var5_int);
               AccountTermsPanel.field_I = null;
               MouseWheelInput.field_a = null;
             }
@@ -277,7 +277,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 if (0 == var5_intLifetime2) {
                   DialWidget.field_J = mg.field_d;
                   AchievementRecord.a(true);
-                  ff.field_e = 10;
+                  QuickChatPhraseCache.field_e = 10;
                   SpriteState.field_u = false;
                 } else {
                   EmailSyntaxValidator.a(var5_intLifetime2, (byte) 83, MouseWheelInput.field_a);
@@ -291,7 +291,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               DiskCacheRequest.a(PointCloudEffect.d((byte) -113), 21027);
             } else {
               SpriteState.field_u = true;
-              ff.field_e = 10;
+              QuickChatPhraseCache.field_e = 10;
             }
           }
           if (var4 == 5) {
@@ -299,7 +299,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (var4 == 6 &&
             CipherPacketBuffer.field_u) {
-            ff.field_e = 10;
+            QuickChatPhraseCache.field_e = 10;
           }
           if (var4 == 7) {
             v.a(PointCloudEffect.d((byte) -120), (byte) -99);
@@ -331,10 +331,10 @@ abstract class NetworkGameClient extends GameAppletShell {
                 PacketBuffer var12 = ViewportController.field_m.c(-43);
                 if (var12 != null) {
                   String var7 = AccountMessagePanel.decodeCp1252(var12.position, 0, var12.payload, (byte) 117);
-                  jk.a(var7, (byte) -6);
+                  AchievementGrantRule.a(var7, (byte) -6);
                 } else {
                   String var9 = (String) null;
-                  jk.a((String) null, (byte) -6);
+                  AchievementGrantRule.a((String) null, (byte) -6);
                 }
                 ViewportController.field_m = null;
               }
@@ -343,12 +343,12 @@ abstract class NetworkGameClient extends GameAppletShell {
               Exception var5 = (Exception) (Object) decompiledCaughtException;
               pf.a(false, "S1", (Throwable) ((Object) var5));
               String var10 = (String) null;
-              jk.a((String) null, (byte) -6);
+              AchievementGrantRule.a((String) null, (byte) -6);
               ViewportController.field_m = null;
             }
           }
           if (15 == var4) {
-            ff.field_e = 10;
+            QuickChatPhraseCache.field_e = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -415,7 +415,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var2 == 1) {
             ArchiveKeyRequest.decodeArchiveKeyResponse(false);
           } else if (2 == var2) {
-            ja.a((byte) -120);
+            DisplayModeInfo.a((byte) -120);
           } else if (3 == var2) {
             ImageProducerRasterBuffer.c(103);
           } else if (var2 == 4) {
@@ -450,8 +450,8 @@ abstract class NetworkGameClient extends GameAppletShell {
               return;
             }
             boolean stackIn_25_0 = (12 == var2);
-            gi var4 = sl.a(stackIn_25_0, 2);
-            DynamicTerrainRenderer.a(19956, var4);
+            ChatMessage var4 = ChatMessageDecoder.decodeMessage(stackIn_25_0, 2);
+            DynamicTerrainRenderer.acceptChatMessage(19956, var4);
           }
           return;
         }
@@ -566,7 +566,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ContactEntry.field_mb = td.b(128) + 15000L;
           return var2;
         }
-        if (11 == ff.field_e &&
+        if (11 == QuickChatPhraseCache.field_e &&
           0 == IntKeyLookup.field_b) {
           AchievementRecord.a(true);
         }
@@ -586,7 +586,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         KeyboardStateSupport.pollKeyboardState(28087);
         SpriteState.pollMouseState(-3657);
         if (!ii.b(16836) &&
-          11 != ff.field_e) {
+          11 != QuickChatPhraseCache.field_e) {
           AccountOverlayController.updateAccountOverlay(-103);
         }
         if (null != ji.field_b) {
@@ -596,7 +596,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var3 = 1200 * se.a(0);
           if (this.field_v ||
             !(mg.a((byte) -12) <= var3) &&
-            !(of.a((byte) -127) <= var3)) {
+            !(SpriteDecodeSupport.mouseIdleTicks((byte) -127) <= var3)) {
             this.field_v = false;
             nm.a(param0 ^ -17);
             DialWidgetPainter.b((byte) -87);
@@ -613,7 +613,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           IntKeyLookup.field_b = SpriteCheckboxPainter.b(param0 - 1021831774);
           if (var3Lifetime1 &&
             0 == IntKeyLookup.field_b &&
-            ff.field_e == 11 &&
+            QuickChatPhraseCache.field_e == 11 &&
             !um.a(17830)) {
             AchievementRecord.a(true);
           }
@@ -636,7 +636,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             } else {
               this.a(-1, "outofdate");
             }
-          } else if (ff.field_e >= 10) {
+          } else if (QuickChatPhraseCache.field_e >= 10) {
             DialWidgetPainter.b((byte) -103);
             if (IntKeyLookup.field_b == 3) {
               EmailSyntaxValidator.a(256, (byte) 83, GameKeyHandler.field_b);
@@ -672,12 +672,12 @@ abstract class NetworkGameClient extends GameAppletShell {
           fc.field_a = 1;
         }
         if (fc.field_a == 1) {
-          if (ff.field_h != 0) {
+          if (QuickChatPhraseCache.field_h != 0) {
             PasswordValidator.field_p = mj.a(dn.field_a, param0 - 127);
           }
           ii.field_a = MarkerSliderPainter.createArchive(MarkerSliderPainter.field_k, 0, false, 1, true);
-          LoadingProgressDialog.field_ab = MarkerSliderPainter.createArchive(gi.field_l, 0, false, 1, true);
-          AlternateUsernameCredentials.field_j = MarkerSliderPainter.createArchive(vi.field_g, 0, false, 1, true);
+          LoadingProgressDialog.field_ab = MarkerSliderPainter.createArchive(ChatMessage.field_l, 0, false, 1, true);
+          AlternateUsernameCredentials.field_j = MarkerSliderPainter.createArchive(ChatHistorySupport.field_g, 0, false, 1, true);
           MarkerSliderPainter.field_h = ii.field_a;
           fc.field_a = 2;
           SavedDataQuery.field_m = LoadingProgressDialog.field_ab;
@@ -698,29 +698,29 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (3 == fc.field_a &&
-          of.a(ii.field_a, LoadingProgressDialog.field_ab, AlternateUsernameCredentials.field_j, (byte) -90) &&
+          SpriteDecodeSupport.commonUiReady(ii.field_a, LoadingProgressDialog.field_ab, AlternateUsernameCredentials.field_j, (byte) -90) &&
           cf.a(11, AlternateUsernameCredentials.field_j)) {
           PasswordValidator.h(-8055);
           on.b(-87);
           CipherPacketBuffer.field_u = false;
           DelegatingCanvas.field_e = um.field_a;
-          dh.a(ej.field_d, (byte) -124, AlternateUsernameCredentials.field_j, ii.field_a, LoadingProgressDialog.field_ab);
+          GzipDecoder.initializeAccountUi(ej.field_d, (byte) -124, AlternateUsernameCredentials.field_j, ii.field_a, LoadingProgressDialog.field_ab);
           if (ProxySocketConnector.field_p ||
             KeyboardStateSupport.field_d != null) {
             String stackIn_98_0 = KeyboardStateSupport.field_d;
             boolean stackIn_99_1 = !(ProxySocketConnector.field_p);
             int stackIn_101_2 = 64;
             boolean stackIn_102_3 = !(ProxySocketConnector.field_p);
-            ff.a(stackIn_98_0, stackIn_99_1, stackIn_101_2, stackIn_102_3);
+            QuickChatPhraseCache.showLoginDialog(stackIn_98_0, stackIn_99_1, stackIn_101_2, stackIn_102_3);
           }
           if (SavedDataQuerySupport.field_e) {
             bm.a(4);
           }
           if (gb.field_b == null) {
             gb.field_b = UsernameCredentials.sharedPcmMixer((byte) 117);
-            sj.field_h = wc.c(-31119);
+            StringNode.field_h = wc.c(-31119);
           }
-          je.a(AlternateUsernameCredentials.field_j, gb.field_b, sj.field_h, (byte) 103);
+          SpriteFactorySupport.initializeIntroAssets(AlternateUsernameCredentials.field_j, gb.field_b, StringNode.field_h, (byte) 103);
           ii.field_a = null;
           AlternateUsernameCredentials.field_j = null;
           LoadingProgressDialog.field_ab = null;
@@ -729,7 +729,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           fc.field_a = 10;
         }
         if (fc.field_a == 10) {
-          if (ff.field_h != 0) {
+          if (QuickChatPhraseCache.field_h != 0) {
             mg.field_c = mj.a(wc.field_l, -127);
           }
           fc.field_a = 11;
@@ -741,20 +741,20 @@ abstract class NetworkGameClient extends GameAppletShell {
             boolean decompiledFrameRemainder0 = false;
           }
           else {
-            of.field_b = true;
+            SpriteDecodeSupport.field_b = true;
             fc.field_a = 12;
           }
         }
         if (fc.field_a == 12 &&
-          !of.field_b) {
+          !SpriteDecodeSupport.field_b) {
           fc.field_a = 13;
         }
         if (fc.field_a == 13) {
           boolean var3Lifetime2 = true;
           if (null != DualLinkNode.field_n) {
-            boolean stackIn_131_0 = !(!DualLinkNode.field_n.a(7020));
+            boolean stackIn_131_0 = !(!DualLinkNode.field_n.pollComplete(7020));
             var3Lifetime2 = stackIn_131_0;
-            dn.a(DualLinkNode.field_n.field_b, 17637, DualLinkNode.field_n.field_a);
+            dn.a(DualLinkNode.field_n.message, 17637, DualLinkNode.field_n.progressPercent);
           }
           if (var3Lifetime2) {
             fc.field_a = 20;
@@ -762,9 +762,9 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (!param1 &&
           PacketBuffer.field_i) {
-          Checkbox.detachCanvasInput(of.field_d, (byte) -127);
+          Checkbox.detachCanvasInput(SpriteDecodeSupport.field_d, (byte) -127);
           this.d(-32);
-          rc.a(of.field_d, true);
+          rc.a(SpriteDecodeSupport.field_d, true);
         }
         if (sn.field_b[8]) {
           CipherPacketBuffer.p(11197);

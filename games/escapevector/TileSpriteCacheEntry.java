@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wi {
+final class TileSpriteCacheEntry {
     static String field_c;
-    int field_a;
-    boolean field_g;
-    Sprite field_e;
-    int field_b;
+    int tileX;
+    boolean dirty;
+    Sprite sprite;
+    int tileY;
     static java.awt.Color field_f;
     static int[] field_h;
     static long[] field_d;
     static String field_i;
 
-    wi(int param0, int param1, int param2, int param3) {
-        this.field_e = new Sprite(param0, param1);
-        this.field_b = param2;
-        this.field_a = param3;
-        this.field_g = true;
+    TileSpriteCacheEntry(int param0, int param1, int param2, int param3) {
+        this.sprite = new Sprite(param0, param1);
+        this.tileY = param2;
+        this.tileX = param3;
+        this.dirty = true;
     }
 
     public static void releaseStatics(int guard) {
@@ -28,7 +28,7 @@ final class wi {
           field_d = null;
           return;
         }
-        wi.releaseStatics(66);
+        TileSpriteCacheEntry.releaseStatics(66);
         field_i = null;
         field_f = null;
         field_d = null;

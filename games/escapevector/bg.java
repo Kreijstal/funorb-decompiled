@@ -30,7 +30,7 @@ final class bg {
           if (param3 != 0) {
             bg.releaseStatics(-94);
           }
-          byte[][][] stackIn_3_0 = sl.a(param2, param0, (int[]) null, param1, 1, param3 + 0);
+          byte[][][] stackIn_3_0 = ChatMessageDecoder.loadCampaignsByArchiveKind(param2, param0, (int[]) null, param1, 1, param3 + 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

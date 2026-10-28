@@ -95,7 +95,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           }
           for (int var2_int = 0; var2_int < param1.length(); var2_int++) {
             int var3 = param1.charAt(var2_int);
-            if (!of.a((char) var3, (byte) 103) &&
+            if (!SpriteDecodeSupport.isAsciiLetter((char) var3, (byte) 103) &&
               !on.a((char) var3, false)) {
               return true;
             }

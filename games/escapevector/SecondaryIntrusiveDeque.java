@@ -392,7 +392,7 @@ final class SecondaryIntrusiveDeque {
     final static void a(String param0, int param1, java.applet.Applet param2) {
         try {
           try {
-            wi.field_i = param0;
+            TileSpriteCacheEntry.field_i = param0;
             try {
               if (param1 > -110) {
                 field_b = 2L;

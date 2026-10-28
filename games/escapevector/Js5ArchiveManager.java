@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk {
-    private java.math.BigInteger field_c;
+final class Js5ArchiveManager {
+    private java.math.BigInteger rsaModulus;
     static SystemTask field_d;
-    private CachedArchiveProvider[] field_e;
-    private PacketBuffer field_b;
-    private Js5NetworkRequest field_h;
-    private DiskCacheWorker field_a;
-    private Js5Transport field_f;
-    private java.math.BigInteger field_g;
+    private CachedArchiveProvider[] providers;
+    private PacketBuffer masterIndex;
+    private Js5NetworkRequest masterRequest;
+    private DiskCacheWorker diskWorker;
+    private Js5Transport transport;
+    private java.math.BigInteger rsaExponent;
 
     public static void releaseStatics(boolean guard) {
         if (!guard) {
@@ -20,55 +20,55 @@ final class sk {
         field_d = null;
     }
 
-    final void a(byte param0) {
+    final void serviceProviders(byte guard) {
         int var3 = EscapeVector.obfuscationControl;
-        if (this.field_e == null) {
+        if (this.providers == null) {
           return;
         }
-        for (int var2 = 0; this.field_e.length > var2; var2++) {
-          if (null != this.field_e[var2]) {
-            this.field_e[var2].d(param0 - 13);
+        for (int var2 = 0; this.providers.length > var2; var2++) {
+          if (null != this.providers[var2]) {
+            this.providers[var2].d(guard - 13);
           }
         }
         int var4 = 0;
         int var2Lifetime1 = var4;
-        while (this.field_e.length > var4) {
-          if (this.field_e[var4] != null) {
-            this.field_e[var4].c(-26);
+        while (this.providers.length > var4) {
+          if (this.providers[var4] != null) {
+            this.providers[var4].c(-26);
           }
           var4++;
         }
-        if (param0 == 12) {
+        if (guard == 12) {
           return;
         }
-        this.a(false);
+        this.ensureMasterIndex(false);
         return;
     }
 
-    final CachedArchiveProvider a(boolean param0, int param1, SectorCacheStore param2, int param3, SectorCacheStore param4) {
+    final CachedArchiveProvider archiveProvider(boolean param0, int param1, SectorCacheStore param2, int param3, SectorCacheStore param4) {
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
         try {
-          if (this.field_b == null) {
+          if (this.masterIndex == null) {
             throw new RuntimeException();
           }
           if (0 <= param3 &&
-            param3 < this.field_e.length) {
-            if (this.field_e[param3] != null) {
-              CachedArchiveProvider stackIn_8_0 = this.field_e[param3];
+            param3 < this.providers.length) {
+            if (this.providers[param3] != null) {
+              CachedArchiveProvider stackIn_8_0 = this.providers[param3];
               return stackIn_8_0;
             }
-            this.field_b.position = 6 + param3 * 72;
-            int var6_int = this.field_b.readInt(param1 ^ -4932);
-            int var7 = this.field_b.readInt(-5053);
+            this.masterIndex.position = 6 + param3 * 72;
+            int var6_int = this.masterIndex.readInt(param1 ^ -4932);
+            int var7 = this.masterIndex.readInt(-5053);
             byte[] var13 = new byte[64];
-            this.field_b.readBytes(var13, (byte) -96, 0, 64);
-            CachedArchiveProvider var9 = new CachedArchiveProvider(param3, param4, param2, this.field_f, this.field_a, var6_int, var13, var7, param0);
+            this.masterIndex.readBytes(var13, (byte) -96, 0, 64);
+            CachedArchiveProvider var9 = new CachedArchiveProvider(param3, param4, param2, this.transport, this.diskWorker, var6_int, var13, var7, param0);
             if (param1 != 255) {
               CachedArchiveProvider stackIn_11_0 = (CachedArchiveProvider) null;
               return stackIn_11_0;
             }
-            this.field_e[param3] = var9;
+            this.providers[param3] = var9;
             CachedArchiveProvider stackIn_13_0 = var9;
             return stackIn_13_0;
           }
@@ -93,26 +93,26 @@ final class sk {
         }
     }
 
-    sk(Js5Transport param0, DiskCacheWorker param1) {
+    Js5ArchiveManager(Js5Transport param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final boolean a(boolean param0) {
+    final boolean ensureMasterIndex(boolean guard) {
         byte[] var5;
         int var8 = EscapeVector.obfuscationControl;
-        if (null != this.field_b) {
+        if (null != this.masterIndex) {
           return true;
         }
-        if (null == this.field_h) {
-          if (this.field_f.isUrgentCapacityReached(20)) {
+        if (null == this.masterRequest) {
+          if (this.transport.isUrgentCapacityReached(20)) {
             return false;
           }
-          this.field_h = this.field_f.requestGroup(255, true, (byte) 0, 255, (byte) 0);
+          this.masterRequest = this.transport.requestGroup(255, true, (byte) 0, 255, (byte) 0);
         }
-        if (this.field_h.field_u) {
+        if (this.masterRequest.field_u) {
           return false;
         }
-        PacketBuffer var10 = new PacketBuffer(this.field_h.getBytes(true));
+        PacketBuffer var10 = new PacketBuffer(this.masterRequest.getBytes(true));
         var10.position = 5;
         int var3 = var10.readUnsignedByte(0);
         var10.position = var10.position + 72 * var3;
@@ -120,15 +120,15 @@ final class sk {
         byte[] var11 = var13;
         byte[] var4 = var11;
         var10.readBytes(var4, (byte) -96, 0, var13.length);
-        if (this.field_g == null) {
+        if (this.rsaExponent == null) {
           var5 = var4;
         } else {
-          if (null == this.field_c) {
+          if (null == this.rsaModulus) {
             var5 = var4;
             if (65 != var5.length) {
               throw new RuntimeException();
             }
-            if (param0) {
+            if (guard) {
               return true;
             }
             byte[] var16 = RasterBuffer.a(var10.payload, 5, -5 + (-var13.length + var10.position), 0);
@@ -137,18 +137,18 @@ final class sk {
                 throw new RuntimeException();
               }
             }
-            this.field_e = new CachedArchiveProvider[var3];
-            this.field_b = var10;
+            this.providers = new CachedArchiveProvider[var3];
+            this.masterIndex = var10;
             return true;
           }
           java.math.BigInteger var12 = new java.math.BigInteger(var13);
-          java.math.BigInteger var7_ref_java_math_BigInteger = var12.modPow(this.field_g, this.field_c);
+          java.math.BigInteger var7_ref_java_math_BigInteger = var12.modPow(this.rsaExponent, this.rsaModulus);
           var5 = var7_ref_java_math_BigInteger.toByteArray();
         }
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        if (param0) {
+        if (guard) {
           return true;
         }
         byte[] var17 = RasterBuffer.a(var10.payload, 5, -5 + (-var13.length + var10.position), 0);
@@ -157,25 +157,25 @@ final class sk {
             throw new RuntimeException();
           }
         }
-        this.field_e = new CachedArchiveProvider[var3];
-        this.field_b = var10;
+        this.providers = new CachedArchiveProvider[var3];
+        this.masterIndex = var10;
         return true;
     }
 
-    private sk(Js5Transport param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private Js5ArchiveManager(Js5Transport param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         try {
-          this.field_a = param1;
-          this.field_f = param0;
-          this.field_c = param3;
-          this.field_g = param2;
-          if (this.field_f.isUrgentCapacityReached(20)) {
+          this.diskWorker = param1;
+          this.transport = param0;
+          this.rsaModulus = param3;
+          this.rsaExponent = param2;
+          if (this.transport.isUrgentCapacityReached(20)) {
             return;
           }
-          this.field_h = this.field_f.requestGroup(255, true, (byte) 0, 255, (byte) 0);
+          this.masterRequest = this.transport.requestGroup(255, true, (byte) 0, 255, (byte) 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

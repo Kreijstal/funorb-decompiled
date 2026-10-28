@@ -40,7 +40,7 @@ final class CachedTextLayout extends TextLayout {
           TextLayoutLine var10 = var9;
           var10.insertionX[0] = -font.stringWidth(text) + rightX;
           var10.insertionX[text.length()] = rightX;
-          vi.a(0, text, var10, font, false);
+          ChatHistorySupport.fillJustifiedInsertionPositions(0, text, var10, font, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -173,7 +173,7 @@ final class CachedTextLayout extends TextLayout {
               } else {
                 stackIn_40_0 = this.justificationSpacingQ8(-21446, font.stringWidth(var14), var14, width);
               }
-              vi.a(stackIn_40_0, var14, var15, font, false);
+              ChatHistorySupport.fillJustifiedInsertionPositions(stackIn_40_0, var14, var15, font, false);
             }
             this.lines[var13Lifetime1] = var15;
             var11 = var11 + lineSpacing;
@@ -217,7 +217,7 @@ final class CachedTextLayout extends TextLayout {
           TextLayoutLine var8 = var7;
           var7.insertionX[0] = leftX;
           var8.insertionX[text.length()] = leftX + font.stringWidth(text);
-          vi.a(guard, text, var8, font, false);
+          ChatHistorySupport.fillJustifiedInsertionPositions(guard, text, var8, font, false);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "wh.A(" + (text != null ? "{...}" : "null") + ',' + guard + ',' + leftX + ',' + baselineY + ',' + (font != null ? "{...}" : "null") + ')');
         }
@@ -253,7 +253,7 @@ final class CachedTextLayout extends TextLayout {
           int var7 = font.stringWidth(text);
           var8.insertionX[0] = -(var7 >> 1) + centerX;
           var8.insertionX[text.length()] = (var7 >> 1) + centerX;
-          vi.a(0, text, var8, font, false);
+          ChatHistorySupport.fillJustifiedInsertionPositions(0, text, var8, font, false);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "wh.F(" + (text != null ? "{...}" : "null") + ',' + centerX + ',' + (font != null ? "{...}" : "null") + ',' + baselineY + ',' + guard + ')');
         }

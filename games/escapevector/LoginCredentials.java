@@ -15,7 +15,7 @@ abstract class LoginCredentials {
         field_d = null;
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+    final static void sortRatingIndices(byte param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         int stackIn_25_0 = 0;
         int var14 = EscapeVector.obfuscationControl;
         try {
@@ -54,15 +54,15 @@ abstract class LoginCredentials {
                 var10 = var13;
               }
             }
-            LoginCredentials.a((byte) -109, var8, param2, param3, param4, var9, param6);
-            LoginCredentials.a((byte) -96, param1, param2, var10, param4, param5, var8);
+            LoginCredentials.sortRatingIndices((byte) -109, var8, param2, param3, param4, var9, param6);
+            LoginCredentials.sortRatingIndices((byte) -96, param1, param2, var10, param4, param5, var8);
             return;
           }
           for (int var7_intLifetime1 = -1 + param1; param6 < var7_intLifetime1; var7_intLifetime1--) {
             for (int var8Lifetime1 = param6; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
               int var9Lifetime1 = LegacyStyleNode.field_q[var8Lifetime1];
               int var10Lifetime1 = LegacyStyleNode.field_q[var8Lifetime1 + 1];
-              if (ke.a(var9Lifetime1, 2, var10Lifetime1, param4)) {
+              if (ke.isRatingRowAfter(var9Lifetime1, 2, var10Lifetime1, param4)) {
                 LegacyStyleNode.field_q[var8Lifetime1] = var10Lifetime1;
                 LegacyStyleNode.field_q[var8Lifetime1 + 1] = var9Lifetime1;
               }

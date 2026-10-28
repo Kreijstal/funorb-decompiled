@@ -94,11 +94,11 @@ class TextButton extends UiComponent {
             if (DialWidget.field_K == this.field_t) {
               return;
             }
-            if (this.hitTest(dh.field_d, UiContainer.field_y, offsetX, (byte) 97, offsetY) &&
+            if (this.hitTest(GzipDecoder.field_d, UiContainer.field_y, offsetX, (byte) 97, offsetY) &&
               DialWidget.field_K == 0) {
-              this.notifyAction(-19646, UiContainer.field_y - offsetY, -offsetX + dh.field_d, this.field_t);
+              this.notifyAction(-19646, UiContainer.field_y - offsetY, -offsetX + GzipDecoder.field_d, this.field_t);
             }
-            this.onPointerReleased(UiContainer.field_y, offsetX, dh.field_d, offsetY, root, (byte) 15);
+            this.onPointerReleased(UiContainer.field_y, offsetX, GzipDecoder.field_d, offsetY, root, (byte) 15);
           }
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "hc.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');

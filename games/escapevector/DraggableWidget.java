@@ -149,7 +149,7 @@ final class DraggableWidget extends SingleChildContainer {
           if ((!(this.child instanceof TextButton) ||
             ((TextButton) (this.child)).enabled) &&
             this.field_t == 1) {
-            var5_int = -this.field_J + dh.field_d - offsetX;
+            var5_int = -this.field_J + GzipDecoder.field_d - offsetX;
             int var6 = -offsetY - this.field_L + UiContainer.field_y;
             if (var5_int != this.x ||
               this.y != var6) {

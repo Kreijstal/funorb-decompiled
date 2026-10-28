@@ -56,9 +56,9 @@ abstract class IndexedSpriteState {
           if (param0 >= -107) {
             IndexedSpriteState.a(56);
           }
-          if (dh.field_d != -1 &&
+          if (GzipDecoder.field_d != -1 &&
             -1 != UiContainer.field_y) {
-            var7Lifetime1 = -320 + dh.field_d;
+            var7Lifetime1 = -320 + GzipDecoder.field_d;
             var8Lifetime1 = -UiContainer.field_y + 240;
             var9Lifetime1 = -128;
           }

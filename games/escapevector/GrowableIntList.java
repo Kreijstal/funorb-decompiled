@@ -51,7 +51,7 @@ final class GrowableIntList {
         }
         if (index <= this.lastIndex) {
           if (this.lastIndex != index) {
-            qg.a(this.values, index + 1, this.values, index, this.lastIndex - index);
+            ArraySupport.copy(this.values, index + 1, this.values, index, this.lastIndex - index);
           }
           this.lastIndex = this.lastIndex - 1;
           return;
@@ -69,7 +69,7 @@ final class GrowableIntList {
     private final void growToIndex(int guard, int index) {
         int[] var4 = new int[this.capacityForIndex(guard, index)];
         int[] var3 = var4;
-        qg.a(this.values, 0, var4, 0, this.values.length);
+        ArraySupport.copy(this.values, 0, var4, 0, this.values.length);
         this.values = var4;
     }
 

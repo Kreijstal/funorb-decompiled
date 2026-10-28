@@ -14,27 +14,27 @@ final class da {
         CipherPacketBuffer.field_u = true;
         if (param0 == -112) {
           SeekerMine.a((byte) -123, false);
-          ff.field_e = 0;
+          QuickChatPhraseCache.field_e = 0;
           return;
         }
         field_d = (String[]) null;
         SeekerMine.a((byte) -123, false);
-        ff.field_e = 0;
+        QuickChatPhraseCache.field_e = 0;
     }
 
     final static boolean c(byte param0) {
         ByteStorage.field_a = true;
         ContactEntry.field_mb = td.b(128) + 15000L;
         if (param0 < -19) {
-          return 11 == ff.field_e ? true : false;
+          return 11 == QuickChatPhraseCache.field_e ? true : false;
         }
         return false;
     }
 
     final static IndexedSprite b(byte param0) {
         int var2 = 85 % ((param0 + 46) / 39);
-        IndexedSprite var1 = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], gi.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], qe.spriteIndices[0], qk.spritePalette);
-        of.a(false);
+        IndexedSprite var1 = new IndexedSprite(on.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, gn.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], qh.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], qe.spriteIndices[0], ArchiveLoadTask.spritePalette);
+        SpriteDecodeSupport.releaseSpriteSheet(false);
         return var1;
     }
 

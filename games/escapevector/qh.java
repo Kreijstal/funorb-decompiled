@@ -35,7 +35,7 @@ final class qh {
             } else {
               var3_array = this.field_d.getNamedFile(-4, this.field_h, this.field_a);
             }
-            this.field_c = new Sprite(var3_array, (java.awt.Component) ((Object) of.field_d));
+            this.field_c = new Sprite(var3_array, (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
             return this.field_c;
           }
           return this.field_c;
@@ -57,7 +57,7 @@ final class qh {
         } else {
           var3_arrayLifetime2 = this.field_d.getNamedFile(-4, this.field_h, this.field_a);
         }
-        this.field_c = new Sprite(var3_arrayLifetime2, (java.awt.Component) ((Object) of.field_d));
+        this.field_c = new Sprite(var3_arrayLifetime2, (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
         return this.field_c;
     }
 

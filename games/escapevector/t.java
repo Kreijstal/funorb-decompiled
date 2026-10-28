@@ -90,7 +90,7 @@ final class t {
           boolean decompiledFrameRemainder0 = true;
           int var6 = mj.field_b.fullWidth / 2;
           if (param0 == 0) {
-            ByteStorage.gameFont.drawCentered(of.field_e, var6, 22, var5_int, -1);
+            ByteStorage.gameFont.drawCentered(SpriteDecodeSupport.field_e, var6, 22, var5_int, -1);
           }
           if (param0 != 0 ||
             var11 != 0) {
@@ -308,7 +308,7 @@ final class t {
           return;
         }
         try {
-          this.field_b.a(this.field_b.a((byte) 115, 192, dh.field_d, 24, 400, UiContainer.field_y, 240), param1, 4767999);
+          this.field_b.a(this.field_b.a((byte) 115, 192, GzipDecoder.field_d, 24, 400, UiContainer.field_y, 240), param1, 4767999);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "t.J(" + param0 + ',' + param1 + ')');
         }
@@ -395,7 +395,7 @@ final class t {
               int stackIn_68_0 = (var4 <= var5) ? var5 : var4;
               int var6 = stackIn_68_0;
               int var7 = 320 + (var6 - 68) / 2;
-              int var8 = -var7 - 2 + dh.field_d;
+              int var8 = -var7 - 2 + GzipDecoder.field_d;
               if (!(var8 >= 0)) {
                 var8 = 0;
               } else if (var8 > 64) {
@@ -454,7 +454,7 @@ final class t {
               int stackIn_129_0 = (var4Lifetime1 <= var5Lifetime1) ? var5Lifetime1 : var4Lifetime1;
               int var6Lifetime1 = stackIn_129_0;
               int var7Lifetime1 = 320 + (-68 + var6Lifetime1) / 2;
-              int var8Lifetime1 = dh.field_d - 2 - var7Lifetime1;
+              int var8Lifetime1 = GzipDecoder.field_d - 2 - var7Lifetime1;
               if (0 > var8Lifetime1) {
                 var8Lifetime1 = 0;
                 if (var10 != 0 &&
@@ -487,14 +487,14 @@ final class t {
             this.field_b.b((byte) -18)) {
             kh.a(this.field_b.field_j, -1230, false);
             mj.field_d = 0;
-            gi.a((byte) -96);
+            ChatMessage.clearFrameOffsets((byte) -96);
             return true;
           }
           if (var3_int == 7 &&
             this.field_b.b((byte) -18)) {
             SpriteState.a(param0 + 13193, this.field_b.field_j);
             mj.field_d = 0;
-            gi.a((byte) -94);
+            ChatMessage.clearFrameOffsets((byte) -94);
             return true;
           }
           if (param0 != -13169) {

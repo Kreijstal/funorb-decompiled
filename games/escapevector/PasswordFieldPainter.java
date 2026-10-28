@@ -124,7 +124,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
         if (guard != 64655) {
           return 25L;
         }
-        return -sl.field_a + td.b(128);
+        return -ChatMessageDecoder.field_a + td.b(128);
     }
 
     final static int fontLineHeight(BinaryBitmapFont font, int guard) {
@@ -165,20 +165,20 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
           }
           try {
             if (ke.field_b == 0) {
-              qk.field_g = IntPoint.field_d.a(AgeValidator.field_n, 4, kh.field_c);
+              ArchiveLoadTask.field_g = IntPoint.field_d.a(AgeValidator.field_n, 4, kh.field_c);
               ke.field_b = ke.field_b + 1;
             }
             if (ke.field_b == 1) {
-              if (2 == qk.field_g.field_f) {
+              if (2 == ArchiveLoadTask.field_g.field_f) {
                 int stackIn_15_0 = gf.a((byte) -78, -1);
                 return stackIn_15_0;
               }
-              if (1 == qk.field_g.field_f) {
+              if (1 == ArchiveLoadTask.field_g.field_f) {
                 ke.field_b = ke.field_b + 1;
               }
             }
             if (ke.field_b == 2) {
-              NameSuggestionsPanel.field_I = new BufferedSocket((java.net.Socket) (qk.field_g.field_b), IntPoint.field_d);
+              NameSuggestionsPanel.field_I = new BufferedSocket((java.net.Socket) (ArchiveLoadTask.field_g.field_b), IntPoint.field_d);
               PacketBuffer var2 = new PacketBuffer(13);
               wc.a(TrackerMusicDefinition.field_j, StatefulTextPainter.field_y, true, NameSuggestionsPanel.field_N, var2);
               var2.writeByte(15, -123);
@@ -205,7 +205,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
               return stackIn_37_0;
             }
             SelfDestructEffects.field_j.attachConnection(NameSuggestionsPanel.field_I, PointCloudEffect.field_t, (byte) -99);
-            qk.field_g = null;
+            ArchiveLoadTask.field_g = null;
             ke.field_b = 0;
             NameSuggestionsPanel.field_I = null;
             int stackIn_35_0 = 0;

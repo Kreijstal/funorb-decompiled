@@ -48,7 +48,7 @@ final class gj {
           int[] var9 = (int[]) null;
           int[] discarded$0 = this.a(false, (int[]) null, 43);
         }
-        int var4 = je.a(false, var3);
+        int var4 = SpriteFactorySupport.levelCount(false, var3);
         int[] var12 = new int[this.field_h];
         int[] var11 = var12;
         int[] var5 = var11;
@@ -80,7 +80,7 @@ final class gj {
           int[] var9 = (int[]) null;
           int[] discarded$0 = this.a(true, (int[]) null, -69);
         }
-        int var4 = je.a(false, var3);
+        int var4 = SpriteFactorySupport.levelCount(false, var3);
         int[] var12 = new int[this.field_h];
         int[] var11 = var12;
         int[] var5 = var11;
@@ -128,7 +128,7 @@ final class gj {
         int var7 = -42 % ((45 - param0) / 61);
         int var6 = PasswordFieldPainter.fontLineHeight(var5, 31512);
         var4 = var4 - var6;
-        int var8 = uc.a(-1, var5);
+        int var8 = ArchivePreloader.fontMaxAscent(-1, var5);
         var4 = var4 + var8;
         if (this.field_v != null) {
           var5.drawCentered(this.field_v, var3, var4, this.field_j, -1);
@@ -380,7 +380,7 @@ final class gj {
             String[] stackIn_2_0 = (String[]) null;
             return stackIn_2_0;
           }
-          qg.a(param0, 0, var3, 0, param0.length);
+          ArraySupport.copy(param0, 0, var3, 0, param0.length);
           if (this.field_r) {
             var4[-1 + this.field_h] = ThreeSliceButtonPainter.field_r;
           }

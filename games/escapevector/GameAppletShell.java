@@ -427,7 +427,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   if (stackIn_79_0 < stackIn_79_1) {
                     break;
                   }
-                  dh.field_c = true;
+                  GzipDecoder.field_c = true;
                   break;
                 }
               }
@@ -447,7 +447,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 DelayedServerPacket.detectMaximumHeap((byte) -61);
                 this.d(2);
-                AlphaContainer.field_D = PcmResampler.createRasterBuffer((java.awt.Component) ((Object) of.field_d), BoundedUrlRequest.field_d, (byte) 125, pd.field_b);
+                AlphaContainer.field_D = PcmResampler.createRasterBuffer((java.awt.Component) ((Object) SpriteDecodeSupport.field_d), BoundedUrlRequest.field_d, (byte) 125, pd.field_b);
                 this.initializeClient((byte) -97);
                 IntrusiveNodeHashTable.field_f = MinimapPoint.createTickClock(18863);
                 do {
@@ -468,7 +468,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(var3 < Js5NetworkRequest.field_z)) {
                       this.c((byte) 92);
-                      FullscreenFocusCanvas.a((byte) -61, NetworkGameClient.field_r, of.field_d);
+                      FullscreenFocusCanvas.a((byte) -61, NetworkGameClient.field_r, SpriteDecodeSupport.field_d);
                       break;
                     }
                     this.a(48);
@@ -499,8 +499,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     private final void c(byte param0) {
         try {
           long var2_long = td.b(128);
-          long var4 = wi.field_d[RatingQuery.field_h];
-          wi.field_d[RatingQuery.field_h] = var2_long;
+          long var4 = TileSpriteCacheEntry.field_d[RatingQuery.field_h];
+          TileSpriteCacheEntry.field_d[RatingQuery.field_h] = var2_long;
           RatingQuery.field_h = 1 + RatingQuery.field_h & 31;
           if (var4 != 0L &&
             var4 < var2_long) {
@@ -512,17 +512,17 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (fieldTemp$0 > 50) {
             QuickChatPhraseDefinition.field_r = QuickChatPhraseDefinition.field_r - 50;
             NameSuggestionsPanel.field_H = true;
-            of.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
-            of.field_d.setVisible(true);
+            SpriteDecodeSupport.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
+            SpriteDecodeSupport.field_d.setVisible(true);
             if (null != qj.field_i &&
               null == qj.field_f) {
               java.awt.Insets var6_ref_java_awt_Insets = qj.field_i.getInsets();
-              of.field_d.setLocation(var6_ref_java_awt_Insets.left + pb.field_b, Js5NetworkRequest.field_D + var6_ref_java_awt_Insets.top);
+              SpriteDecodeSupport.field_d.setLocation(var6_ref_java_awt_Insets.left + pb.field_b, Js5NetworkRequest.field_D + var6_ref_java_awt_Insets.top);
               if (EscapeVector.obfuscationControl != 0) {
-                of.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
+                SpriteDecodeSupport.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
               }
             } else {
-              of.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
+              SpriteDecodeSupport.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
             }
           }
           this.renderClient((byte) 26);
@@ -674,7 +674,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (StatefulTextPainter.field_r == this &&
             !RatingQuery.field_j) {
             NameSuggestionsPanel.field_H = true;
-            if (dh.field_c &&
+            if (GzipDecoder.field_c &&
               -bn.field_c + td.b(128) > 1000L) {
               java.awt.Rectangle var2 = param0.getClipBounds();
               if (null != var2) {
@@ -727,10 +727,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         Object var3 = null;
         int var5 = EscapeVector.obfuscationControl;
         try {
-          if (of.field_d != null) {
-            of.field_d.removeFocusListener((java.awt.event.FocusListener) (this));
-            of.field_d.getParent().setBackground(java.awt.Color.black);
-            of.field_d.getParent().remove((java.awt.Component) ((Object) of.field_d));
+          if (SpriteDecodeSupport.field_d != null) {
+            SpriteDecodeSupport.field_d.removeFocusListener((java.awt.event.FocusListener) (this));
+            SpriteDecodeSupport.field_d.getParent().setBackground(java.awt.Color.black);
+            SpriteDecodeSupport.field_d.getParent().remove((java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
           }
           boolean decompiledFrameRemainder0 = true;
           int var2_int = -119 % ((76 - param0) / 49);
@@ -757,21 +757,21 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             var3 = qj.field_f;
           }
           ((java.awt.Container) (var3)).setLayout((java.awt.LayoutManager) null);
-          of.field_d = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var3)).add((java.awt.Component) ((Object) of.field_d));
-          of.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
-          of.field_d.setVisible(true);
+          SpriteDecodeSupport.field_d = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var3)).add((java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
+          SpriteDecodeSupport.field_d.setSize(pd.field_b, BoundedUrlRequest.field_d);
+          SpriteDecodeSupport.field_d.setVisible(true);
           if (var3 == qj.field_i) {
             java.awt.Insets var4 = qj.field_i.getInsets();
-            of.field_d.setLocation(var4.left + pb.field_b, var4.top + Js5NetworkRequest.field_D);
+            SpriteDecodeSupport.field_d.setLocation(var4.left + pb.field_b, var4.top + Js5NetworkRequest.field_D);
             if (var5 != 0) {
-              of.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
+              SpriteDecodeSupport.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
             }
           } else {
-            of.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
+            SpriteDecodeSupport.field_d.setLocation(pb.field_b, Js5NetworkRequest.field_D);
           }
-          of.field_d.addFocusListener((java.awt.event.FocusListener) (this));
-          of.field_d.requestFocus();
+          SpriteDecodeSupport.field_d.addFocusListener((java.awt.event.FocusListener) (this));
+          SpriteDecodeSupport.field_d.requestFocus();
           ObjectSpriteSet.field_b = true;
           AchievementRecord.field_l = true;
           NameSuggestionsPanel.field_H = true;
@@ -834,10 +834,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             decompiledCaughtException = decompiledCaughtParameter0;
             var3_ref2 = (Exception) (Object) decompiledCaughtException;
           }
-          if (of.field_d != null) {
+          if (SpriteDecodeSupport.field_d != null) {
             try {
-              of.field_d.removeFocusListener((java.awt.event.FocusListener) (this));
-              of.field_d.getParent().remove((java.awt.Component) ((Object) of.field_d));
+              SpriteDecodeSupport.field_d.removeFocusListener((java.awt.event.FocusListener) (this));
+              SpriteDecodeSupport.field_d.getParent().remove((java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3_ref2 = (Exception) (Object) decompiledCaughtException;

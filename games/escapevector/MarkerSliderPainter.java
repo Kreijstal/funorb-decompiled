@@ -111,7 +111,7 @@ final class MarkerSliderPainter implements WidgetPainter {
 
     final static void a(int param0, boolean param1, boolean param2) {
         String var4 = (String) null;
-        ff.a((String) null, param2, 64, param1);
+        QuickChatPhraseCache.showLoginDialog((String) null, param2, 64, param1);
         int var3 = 104 / ((31 - param0) / 61);
     }
 
@@ -130,7 +130,7 @@ final class MarkerSliderPainter implements WidgetPainter {
           if (-1 == bg.field_f &&
             ValidationIndicator.field_M == -1) {
             ValidationIndicator.field_M = UiContainer.field_y;
-            bg.field_f = dh.field_d;
+            bg.field_f = GzipDecoder.field_d;
           }
           boolean decompiledFrameRemainder0 = true;
           SavedDataQuery.field_j = SavedDataQuery.field_j + 1;

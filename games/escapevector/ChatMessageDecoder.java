@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sl {
+final class ChatMessageDecoder {
     static String[] field_c;
     static UiTheme field_d;
     static long field_a;
@@ -16,30 +16,30 @@ final class sl {
           field_d = null;
           return;
         }
-        sl.a((ResourceArchive) null, (ResourceArchive) null, (int[]) null, (byte[][][]) null, -11, 8);
+        ChatMessageDecoder.loadCampaignsByArchiveKind((ResourceArchive) null, (ResourceArchive) null, (int[]) null, (byte[][][]) null, -11, 8);
         field_b = (Sprite[][]) null;
         field_d = null;
     }
 
-    final static byte[][][] a(ResourceArchive param0, ResourceArchive param1, int[] param2, byte[][][] param3, int param4, int param5) {
+    final static byte[][][] loadCampaignsByArchiveKind(ResourceArchive memberArchive, ResourceArchive archive, int[] key, byte[][][] campaigns, int kind, int startMode) {
         String stackIn_18_2 = null;
         String stackIn_21_2 = null;
         String stackIn_24_2 = null;
         String stackIn_27_2 = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
-          int var6_int = dh.field_e.length;
-          if (param3 == null) {
-            param3 = new byte[var6_int][][];
+          int var6_int = GzipDecoder.field_e.length;
+          if (campaigns == null) {
+            campaigns = new byte[var6_int][][];
           }
-          int var7 = param5;
+          int var7 = startMode;
           while (var7 < var6_int) {
-            int var8 = dh.field_e[var7];
-            if ((param4 == var8 ||
-              var10 != 0) && (param3[var7] == null ||
+            int var8 = GzipDecoder.field_e[var7];
+            if ((kind == var8 ||
+              var10 != 0) && (campaigns[var7] == null ||
               var10 != 0)) {
-              byte[][] var12 = LegacyWidgetStyle.loadCampaignLevels(-51, param1, param2, var7, param0);
-              param3[var7] = var12;
+              byte[][] var12 = LegacyWidgetStyle.loadCampaignLevels(-51, archive, key, var7, memberArchive);
+              campaigns[var7] = var12;
             }
             var7++;
             if (var10 == 0) {
@@ -47,41 +47,41 @@ final class sl {
             }
             break;
           }
-          byte[][][] stackIn_14_0 = (byte[][][]) (param3);
+          byte[][][] stackIn_14_0 = (byte[][][]) (campaigns);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
           RuntimeException stackIn_17_0 = var6;
           StringBuilder stackIn_17_1 = new StringBuilder().append("sl.A(");
-          if (param0 == null) {
+          if (memberArchive == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
           StringBuilder stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
-          if (param1 == null) {
+          if (archive == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
           StringBuilder stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
-          if (param2 == null) {
+          if (key == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
           StringBuilder stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param3 == null) {
+          if (campaigns == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(kind).append(',').append(startMode).append(')').toString());
         }
     }
 
-    final static gi a(boolean param0, int param1) {
+    final static ChatMessage decodeMessage(boolean quickChat, int guard) {
         int[] stackIn_26_0 = null;
         int var7 = EscapeVector.obfuscationControl;
         CipherPacketBuffer var2 = QuickChatDynamicCommand.incomingPackets;
@@ -102,7 +102,7 @@ final class sl {
             IntKeyLookup.field_d = 0;
           }
         }
-        boolean stackIn_11_0 = !(var2.readUnsignedByte(param1 ^ param1) != 1);
+        boolean stackIn_11_0 = !(var2.readUnsignedByte(guard ^ guard) != 1);
         boolean var4 = stackIn_11_0;
         gm.field_e = var2.readString(false);
         if (var4) {
@@ -120,14 +120,14 @@ final class sl {
           var2.readUnsignedShort(1952);
           var2.readString(false);
         }
-        if (!param0) {
+        if (!quickChat) {
           SelfDestructEffects.field_d = SpriteOffset.a(var2, 10241, 80);
           Checkbox.field_H = null;
-          return new gi(param0);
+          return new ChatMessage(quickChat);
         }
         int var5 = var2.readUnsignedShort(1952);
         try {
-          QuickChatPhraseDefinition var8 = EmailSyntaxValidator.field_s.a(var5, (byte) -126);
+          QuickChatPhraseDefinition var8 = EmailSyntaxValidator.field_s.phrase(var5, (byte) -126);
           SelfDestructEffects.field_d = var8.previewText(-4);
           if (DualLinkDequeIterator.field_g.equals(ThreeSliceButtonPainter.field_r)) {
             stackIn_26_0 = null;
@@ -143,32 +143,32 @@ final class sl {
           SelfDestructEffects.field_d = null;
         }
         if (var7 == 0) {
-          return new gi(param0);
+          return new ChatMessage(quickChat);
         }
         SelfDestructEffects.field_d = SpriteOffset.a(var2, 10241, 80);
         Checkbox.field_H = null;
-        return new gi(param0);
+        return new ChatMessage(quickChat);
     }
 
     final static boolean a(boolean param0, byte param1) {
         try {
-          if (sk.field_d == null) {
-            sk.field_d = MouseWheelInput.field_c.a(ej.field_b, 4, IntrusiveDeque.field_h);
+          if (Js5ArchiveManager.field_d == null) {
+            Js5ArchiveManager.field_d = MouseWheelInput.field_c.a(ej.field_b, 4, IntrusiveDeque.field_h);
           }
           if (param1 != 0) {
             field_b = (Sprite[][]) null;
           }
-          if (sk.field_d.field_f == 0) {
+          if (Js5ArchiveManager.field_d.field_f == 0) {
             return false;
           }
           long dupTemp$1 = td.b(128);
           le.field_c = dupTemp$1;
           field_a = dupTemp$1;
-          if (sk.field_d.field_f != 1) {
+          if (Js5ArchiveManager.field_d.field_f != 1) {
             al.field_d = ak.field_d;
           } else {
             try {
-              TextLayout.field_c = new BufferedSocket((java.net.Socket) (sk.field_d.field_b), MouseWheelInput.field_c);
+              TextLayout.field_c = new BufferedSocket((java.net.Socket) (Js5ArchiveManager.field_d.field_b), MouseWheelInput.field_c);
               QuickChatDynamicCommand.outgoingPackets.position = 0;
               CipherPacketBuffer var4 = QuickChatDynamicCommand.incomingPackets;
               CipherPacketBuffer var5 = var4;
@@ -185,15 +185,15 @@ final class sl {
               IOException var2 = (IOException) (Object) decompiledCaughtException;
               al.field_d = ak.field_d;
               if (EscapeVector.obfuscationControl == 0) {
-                sk.field_d = null;
+                Js5ArchiveManager.field_d = null;
                 return true;
               }
               al.field_d = ak.field_d;
-              sk.field_d = null;
+              Js5ArchiveManager.field_d = null;
               return true;
             }
           }
-          sk.field_d = null;
+          Js5ArchiveManager.field_d = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

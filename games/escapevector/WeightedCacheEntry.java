@@ -84,9 +84,9 @@ abstract class WeightedCacheEntry extends DualLinkNode {
             var4 = var3;
             var4 = var3;
           }
-          if (wi.field_i != null &&
-            !wi.field_i.equals(applet.getParameter("session"))) {
-            var4 = wi.field_i;
+          if (TileSpriteCacheEntry.field_i != null &&
+            !TileSpriteCacheEntry.field_i.equals(applet.getParameter("session"))) {
+            var4 = TileSpriteCacheEntry.field_i;
           }
           java.net.URL stackIn_10_0 = RasterBuffer.a((String) (var4), -1, (String) (var3), url, 1);
           return stackIn_10_0;

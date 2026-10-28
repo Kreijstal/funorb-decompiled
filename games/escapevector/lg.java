@@ -6,7 +6,7 @@ final class lg {
         String stackIn_19_2 = null;
         String stackIn_22_2 = null;
         try {
-          String var3 = DynamicTerrainRenderer.a(param2, false);
+          String var3 = DynamicTerrainRenderer.reverseString(param2, false);
           if (param1.indexOf(param2) != -1) {
             return true;
           }

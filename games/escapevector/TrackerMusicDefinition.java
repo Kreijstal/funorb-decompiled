@@ -107,7 +107,7 @@ final class TrackerMusicDefinition {
         if (-1 == param2) {
           return StatefulTextPainter.field_v;
         }
-        int var3 = je.a(false, param1);
+        int var3 = SpriteFactorySupport.levelCount(false, param1);
         if (param0 <= 75) {
           field_f = (en) null;
         }
@@ -142,7 +142,7 @@ final class TrackerMusicDefinition {
           }
           this.field_C = new byte[256][];
           this.field_l = new int[256];
-          qg.a(this.field_l, 0, 256, 64);
+          ArraySupport.fill(this.field_l, 0, 256, 64);
           for (int var5Lifetime1 = 0; 256 > var5Lifetime1; var5Lifetime1++) {
             this.field_C[var5Lifetime1] = um.field_b;
           }

@@ -304,7 +304,7 @@ final class ResourceArchive {
           Object var22 = null;
           int var12 = EscapeVector.obfuscationControl;
           try {
-            ReflectionCheck var13 = (ReflectionCheck) (je.field_a.first(false));
+            ReflectionCheck var13 = (ReflectionCheck) (SpriteFactorySupport.field_a.first(false));
             ReflectionCheck var17 = var13;
             if (var17 == null) {
               return;
@@ -897,7 +897,7 @@ final class ResourceArchive {
                     var21 = var20;
                   }
                   if (requestedFileId == var21) {
-                    qg.a(var43, var17Lifetime4, var44, var14_intLifetime1, var19Lifetime2);
+                    ArraySupport.copy(var43, var17Lifetime4, var44, var14_intLifetime1, var19Lifetime2);
                     var14_intLifetime1 = var14_intLifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -936,7 +936,7 @@ final class ResourceArchive {
               int var18Lifetime1 = 0;
               for (int var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var31.readInt(-5053);
-                qg.a(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
+                ArraySupport.copy(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
               }

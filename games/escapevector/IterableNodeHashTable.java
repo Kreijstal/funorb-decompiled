@@ -5,7 +5,7 @@ import java.util.*;
 
 final class IterableNodeHashTable implements Iterable {
     private IntrusiveNode lookupCursor;
-    static gi[] field_d;
+    static ChatMessage[] field_d;
     static int field_c;
     int bucketCount;
     static String[] field_f;
@@ -95,7 +95,7 @@ final class IterableNodeHashTable implements Iterable {
         field_a = null;
         field_f = null;
         if (guard < 86) {
-          field_d = (gi[]) null;
+          field_d = (ChatMessage[]) null;
         }
     }
 

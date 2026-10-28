@@ -32,44 +32,44 @@ final class DialWidget extends TextButton {
           PacketBuffer var17 = new PacketBuffer(encoded);
           PacketBuffer var18 = var17;
           var18.position = -2 + encoded.length;
-          qk.spriteCount = var18.readUnsignedShort(1952);
-          gn.spriteOffsetXs = new int[qk.spriteCount];
-          UiContainer.spriteHasAlpha = new boolean[qk.spriteCount];
-          SavedDataQuerySupport.spriteHeights = new int[qk.spriteCount];
+          ArchiveLoadTask.spriteCount = var18.readUnsignedShort(1952);
+          gn.spriteOffsetXs = new int[ArchiveLoadTask.spriteCount];
+          UiContainer.spriteHasAlpha = new boolean[ArchiveLoadTask.spriteCount];
+          SavedDataQuerySupport.spriteHeights = new int[ArchiveLoadTask.spriteCount];
           if (!guard) {
             byte[] var16 = (byte[]) null;
             DialWidget.decodeSpriteSheet((byte[]) null, false);
           }
-          CheckboxPainter.spriteAlphas = new byte[qk.spriteCount][];
-          gi.spriteOffsetYs = new int[qk.spriteCount];
-          qe.spriteIndices = new byte[qk.spriteCount][];
-          qh.spriteWidths = new int[qk.spriteCount];
-          var18.position = -(qk.spriteCount * 8) + (-7 + encoded.length);
+          CheckboxPainter.spriteAlphas = new byte[ArchiveLoadTask.spriteCount][];
+          ChatMessage.spriteOffsetYs = new int[ArchiveLoadTask.spriteCount];
+          qe.spriteIndices = new byte[ArchiveLoadTask.spriteCount][];
+          qh.spriteWidths = new int[ArchiveLoadTask.spriteCount];
+          var18.position = -(ArchiveLoadTask.spriteCount * 8) + (-7 + encoded.length);
           on.spriteSheetWidth = var18.readUnsignedShort(1952);
           DelegatingCanvas.spriteSheetHeight = var18.readUnsignedShort(1952);
           int var3 = 1 + (var18.readUnsignedByte(0) & 255);
-          for (int var4 = 0; var4 < qk.spriteCount; var4++) {
+          for (int var4 = 0; var4 < ArchiveLoadTask.spriteCount; var4++) {
             gn.spriteOffsetXs[var4] = var17.readUnsignedShort(1952);
           }
-          for (int var4Lifetime1 = 0; qk.spriteCount > var4Lifetime1; var4Lifetime1++) {
-            gi.spriteOffsetYs[var4Lifetime1] = var18.readUnsignedShort(1952);
+          for (int var4Lifetime1 = 0; ArchiveLoadTask.spriteCount > var4Lifetime1; var4Lifetime1++) {
+            ChatMessage.spriteOffsetYs[var4Lifetime1] = var18.readUnsignedShort(1952);
           }
-          for (int var4Lifetime2 = 0; var4Lifetime2 < qk.spriteCount; var4Lifetime2++) {
+          for (int var4Lifetime2 = 0; var4Lifetime2 < ArchiveLoadTask.spriteCount; var4Lifetime2++) {
             qh.spriteWidths[var4Lifetime2] = var18.readUnsignedShort(1952);
           }
-          for (int var4Lifetime3 = 0; qk.spriteCount > var4Lifetime3; var4Lifetime3++) {
+          for (int var4Lifetime3 = 0; ArchiveLoadTask.spriteCount > var4Lifetime3; var4Lifetime3++) {
             SavedDataQuerySupport.spriteHeights[var4Lifetime3] = var18.readUnsignedShort(1952);
           }
-          var18.position = -(var3 * 3) - (-3 - (encoded.length - (7 + qk.spriteCount * 8)));
-          qk.spritePalette = new int[var3];
+          var18.position = -(var3 * 3) - (-3 - (encoded.length - (7 + ArchiveLoadTask.spriteCount * 8)));
+          ArchiveLoadTask.spritePalette = new int[var3];
           for (int var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            qk.spritePalette[var4Lifetime4] = var18.readUnsignedMedium((byte) -124);
-            if (qk.spritePalette[var4Lifetime4] == 0) {
-              qk.spritePalette[var4Lifetime4] = 1;
+            ArchiveLoadTask.spritePalette[var4Lifetime4] = var18.readUnsignedMedium((byte) -124);
+            if (ArchiveLoadTask.spritePalette[var4Lifetime4] == 0) {
+              ArchiveLoadTask.spritePalette[var4Lifetime4] = 1;
             }
           }
           var18.position = 0;
-          for (int var4Lifetime5 = 0; var4Lifetime5 < qk.spriteCount; var4Lifetime5++) {
+          for (int var4Lifetime5 = 0; var4Lifetime5 < ArchiveLoadTask.spriteCount; var4Lifetime5++) {
             int var5 = qh.spriteWidths[var4Lifetime5];
             int var6 = SavedDataQuerySupport.spriteHeights[var4Lifetime5];
             int var7 = var6 * var5;

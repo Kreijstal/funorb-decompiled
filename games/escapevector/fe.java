@@ -75,14 +75,14 @@ final class fe {
             UiContainer.field_y < 290) {
             int var2Lifetime2 = 40 + (40 * TextLayoutLine.sineQ16(this.field_m << 4, -124) >> 16);
             if (var2Lifetime2 > 0) {
-              if (dh.field_d > 9 &&
-                dh.field_d < 82) {
+              if (GzipDecoder.field_d > 9 &&
+                GzipDecoder.field_d < 82) {
                 ml.field_c.drawAdditive(8, 256, var2Lifetime2);
                 ml.field_c.drawAdditive(10, 256, var2Lifetime2);
                 ml.field_c.drawAdditive(8, 258, var2Lifetime2);
                 ml.field_c.drawAdditive(10, 258, var2Lifetime2);
-              } else if (dh.field_d > 558 &&
-                dh.field_d < 631) {
+              } else if (GzipDecoder.field_d > 558 &&
+                GzipDecoder.field_d < 631) {
                 ml.field_c.flipHorizontally();
                 ml.field_c.drawAdditive(557, 256, var2Lifetime2);
                 ml.field_c.drawAdditive(559, 256, var2Lifetime2);
@@ -110,7 +110,7 @@ final class fe {
     final int a(byte param0, boolean param1) {
         int var6 = EscapeVector.obfuscationControl;
         this.field_e = this.field_e + 65536;
-        while (fg.a(false, this.field_e, IntKeyLookup.field_a) >= 65536) {
+        while (SimulatorAssetSupport.multiplyQ16(false, this.field_e, IntKeyLookup.field_a) >= 65536) {
           this.field_m = this.field_m + 1;
           this.field_e = this.field_e - IntKeyLookup.field_a;
         }
@@ -174,12 +174,12 @@ final class fe {
             this.field_l > IntKeyLookup.field_c &&
             LoginDialog.field_ob > 257 &&
             290 > LoginDialog.field_ob) {
-            if (dh.field_d > 9 &&
-              dh.field_d < 82) {
+            if (GzipDecoder.field_d > 9 &&
+              GzipDecoder.field_d < 82) {
               this.field_l = IntKeyLookup.field_c;
             }
-            if (558 < dh.field_d &&
-              dh.field_d < 631) {
+            if (558 < GzipDecoder.field_d &&
+              GzipDecoder.field_d < 631) {
               this.field_l = IntKeyLookup.field_c;
             }
           }
@@ -187,7 +187,7 @@ final class fe {
         if (!param1) {
           return 0;
         }
-        this.field_a.a(this.a(sf.field_c, LoginDialog.field_ob, -16311), (byte) 122, this.a(dh.field_d, UiContainer.field_y, -16311));
+        this.field_a.a(this.a(sf.field_c, LoginDialog.field_ob, -16311), (byte) 122, this.a(GzipDecoder.field_d, UiContainer.field_y, -16311));
         boolean var4Lifetime1 = false;
         if (this.field_a.b((byte) -18)) {
           if (this.field_a.field_h == 0) {
@@ -320,7 +320,7 @@ final class fe {
         this.field_m = 0;
         this.field_i = 0;
         this.field_e = 0;
-        this.field_a.a(105, param0, this.a(dh.field_d, UiContainer.field_y, -16311), -1);
+        this.field_a.a(105, param0, this.a(GzipDecoder.field_d, UiContainer.field_y, -16311), -1);
     }
 
     private final void a(boolean param0, String[] param1, IndexedSprite[] param2, java.applet.Applet param3, String param4, int param5) {

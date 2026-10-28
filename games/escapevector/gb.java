@@ -101,12 +101,12 @@ final class gb {
               NameSuggestionsPanel.field_H = false;
               var3_int = true;
             }
-            NameSuggestionsPanel.a((byte) 9, (var3_int), wi.field_f, qe.a(-111), le.b(1));
+            NameSuggestionsPanel.a((byte) 9, (var3_int), TileSpriteCacheEntry.field_f, qe.a(-111), le.b(1));
           } else if (!AccountTermsPanel.l(param1 - 89)) {
             SoftwareRasterizer.clearFramebuffer();
             ok.a(240, 320, param1 ^ 72);
             SecondaryNodeHashTable.presentRaster(param2, 0, -1, 0);
-          } else if (ff.field_e != 0) {
+          } else if (QuickChatPhraseCache.field_e != 0) {
             TextFieldValidator.a(param2, 0);
           } else {
             wc.a(param0, 1983, false);

@@ -61,7 +61,7 @@ final class dn {
         if (param0 != 0) {
           dn.releaseStatics(-11);
         }
-        return vi.field_a - TriangleMesh.field_x;
+        return ChatHistorySupport.field_a - TriangleMesh.field_x;
     }
 
     private final void e(byte param0) {
@@ -155,7 +155,7 @@ final class dn {
           int var15 = 0;
           if (this.field_m > 0) {
             int var16 = var11 + param3;
-            String var17 = ja.field_b;
+            String var17 = DisplayModeInfo.field_b;
             int incrementValue$1 = var8;
             var8++;
             this.a(var17, var12, var10, var7_int, var9, var16, param5, this.field_p, 0, 10551200, incrementValue$1);
@@ -243,7 +243,7 @@ final class dn {
           AlternateUsernameCredentials.field_q.b(-26480, false);
         }
         mj.field_d = 0;
-        gi.a((byte) -118);
+        ChatMessage.clearFrameOffsets((byte) -118);
     }
 
     private final int a(int param0, int param1, int param2) {
@@ -272,7 +272,7 @@ final class dn {
         int var2 = mj.field_d;
         if (var2 == 0) {
           int var3_int = 8192;
-          sj.a(var3_int, (byte) 51);
+          StringNode.playFrameAppearSound(var3_int, (byte) 51);
         }
         IntValueNode.field_j = true;
         if (null != BoundedRandomAccessFile.activeSession &&
@@ -480,7 +480,7 @@ final class dn {
         } else {
           var3 = this.b(this.field_g, -3844);
         }
-        int var4 = this.a(104, dh.field_d, UiContainer.field_y);
+        int var4 = this.a(104, GzipDecoder.field_d, UiContainer.field_y);
         this.field_d.a(121, param0, var4, var3);
         if (param1) {
           SpriteStrip[] discarded$0 = this.b(true);
@@ -898,11 +898,11 @@ final class dn {
         if (param3) {
           var4++;
         }
-        return sl.field_c[var4];
+        return ChatMessageDecoder.field_c[var4];
     }
 
     private final void d(int param0) {
-        int var2 = this.a(103, dh.field_d, UiContainer.field_y);
+        int var2 = this.a(103, GzipDecoder.field_d, UiContainer.field_y);
         if (param0 != -22600) {
           this.field_z = (LegacyButton) null;
         }
@@ -1025,7 +1025,7 @@ final class dn {
     private final int a(int[] param0, int param1, int param2) {
         String stackIn_7_2 = null;
         try {
-          qg.a(param0, 0, this.field_A, param2, param0.length);
+          ArraySupport.copy(param0, 0, this.field_A, param2, param0.length);
           if (param1 != -3549) {
             this.field_m = 116;
           }

@@ -25,7 +25,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
     final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {
         try {
           super.updateHover(guard, offsetY, offsetX, root);
-          this.field_W = -offsetX - this.x + dh.field_d;
+          this.field_W = -offsetX - this.x + GzipDecoder.field_d;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "gd.Q(" + guard + ',' + offsetY + ',' + offsetX + ',' + (root != null ? "{...}" : "null") + ')');
         }
@@ -77,7 +77,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         if (this.tooltip == null) {
           return null;
         }
-        ri.a(UiContainer.field_y, dh.field_d + this.width - this.field_W, (byte) -62);
+        ri.a(UiContainer.field_y, GzipDecoder.field_d + this.width - this.field_W, (byte) -62);
         if (guard == 1) {
           return this.tooltip;
         }

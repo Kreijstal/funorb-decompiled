@@ -14,9 +14,9 @@ final class jd {
           if (!GameAppletShell.field_k) {
             if (null != mm.field_b) {
               mm.field_b.fadeOut(256);
-              vi.field_d.fadeOut(256);
+              ChatHistorySupport.field_d.fadeOut(256);
               mm.field_b = null;
-              vi.field_d = null;
+              ChatHistorySupport.field_d = null;
             }
             return;
           }
@@ -89,14 +89,14 @@ final class jd {
           int var8Lifetime2 = stackIn_57_0;
           if (mm.field_b == null) {
             mm.field_b = PcmSampleStream.createAtRatePercentQ6(ArchiveProvider.field_d, 100, 0, var6Lifetime2);
-            vi.field_d = PcmSampleStream.createAtRatePercentQ6(pa.field_b, 100, 0, var8Lifetime2);
+            ChatHistorySupport.field_d = PcmSampleStream.createAtRatePercentQ6(pa.field_b, 100, 0, var8Lifetime2);
             mm.field_b.setLoopCount(-1);
-            vi.field_d.setLoopCount(-1);
+            ChatHistorySupport.field_d.setLoopCount(-1);
             ObjectSpriteSet.field_e.addSubstream(mm.field_b);
-            ObjectSpriteSet.field_e.addSubstream(vi.field_d);
+            ObjectSpriteSet.field_e.addSubstream(ChatHistorySupport.field_d);
           }
           mm.field_b.rampVolumeAndPanQ6(441, IterableNodeHashTable.field_c * var5 / 64, var6Lifetime2);
-          vi.field_d.rampVolumeAndPanQ6(441, var7Lifetime2 * IterableNodeHashTable.field_c / 64, var8Lifetime2);
+          ChatHistorySupport.field_d.rampVolumeAndPanQ6(441, var7Lifetime2 * IterableNodeHashTable.field_c / 64, var8Lifetime2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,11 +114,11 @@ final class jd {
 
     final synchronized static byte[] a(int param0, boolean param1) {
         if (param0 == 100 &&
-          0 < vi.field_b) {
-          int fieldTemp$3 = vi.field_b - 1;
-          vi.field_b = vi.field_b - 1;
+          0 < ChatHistorySupport.field_b) {
+          int fieldTemp$3 = ChatHistorySupport.field_b - 1;
+          ChatHistorySupport.field_b = ChatHistorySupport.field_b - 1;
           byte[] var2_ref_byte__ = SavedDataQuery.field_l[fieldTemp$3];
-          SavedDataQuery.field_l[vi.field_b] = null;
+          SavedDataQuery.field_l[ChatHistorySupport.field_b] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&
@@ -168,20 +168,20 @@ final class jd {
         return new sn(DualLinkNode.e(0), UiTheme.c(62));
     }
 
-    final static int a(BinaryBitmapFont param0, byte param1, String[] param2) {
+    final static int totalButtonTextWidth(BinaryBitmapFont font, byte guard, String[] labels) {
         String stackIn_12_2 = null;
         String stackIn_15_2 = null;
         int var7 = EscapeVector.obfuscationControl;
         try {
-          if (param1 != -121) {
+          if (guard != -121) {
             int stackIn_3_0 = -57;
             return stackIn_3_0;
           }
           int var3_int = 0;
-          String[] var4 = param2;
+          String[] var4 = labels;
           for (int var5 = 0; var5 < var4.length; var5++) {
             String var6 = var4[var5];
-            var3_int = var3_int + SeekerMine.a(var6, param1 ^ -16777096, param0);
+            var3_int = var3_int + SeekerMine.a(var6, guard ^ -16777096, font);
           }
           int stackIn_8_0 = var3_int;
           return stackIn_8_0;
@@ -190,13 +190,13 @@ final class jd {
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_11_0 = var3;
           StringBuilder stackIn_11_1 = new StringBuilder().append("jd.A(");
-          if (param0 == null) {
+          if (font == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(',');
+          if (labels == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

@@ -56,7 +56,7 @@ final class jj {
     final static Sprite[] a(int param0, int param1) {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
-        var3[4] = of.a(param0, (byte) 104, 64);
+        var3[4] = SpriteDecodeSupport.solidSprite(param0, (byte) 104, 64);
         if (param1 <= 33) {
           return (Sprite[]) null;
         }

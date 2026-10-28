@@ -37,7 +37,7 @@ final class SectorCacheStore {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = je.a(false, param0);
+        int var3 = SpriteFactorySupport.levelCount(false, param0);
         if (param2 < -1) {
           return -1;
         }

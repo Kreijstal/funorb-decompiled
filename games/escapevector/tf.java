@@ -203,7 +203,7 @@ final class tf {
             int stackIn_39_0 = (var3 > var4) ? var3 : var4;
             int var5 = stackIn_39_0;
             int var6 = 320 + (var5 - 68) / 2;
-            int var7 = -var6 - (2 - dh.field_d);
+            int var7 = -var6 - (2 - GzipDecoder.field_d);
             if (var7 < 0) {
               var7 = 0;
             } else if (var7 > 64) {
@@ -264,7 +264,7 @@ final class tf {
             int stackIn_79_0 = (var3Lifetime1 <= var4Lifetime1) ? var4Lifetime1 : var3Lifetime1;
             int var5Lifetime1 = stackIn_79_0;
             int var6Lifetime1 = 320 + (var5Lifetime1 - 68) / 2;
-            int var7Lifetime1 = -2 - (var6Lifetime1 - dh.field_d);
+            int var7Lifetime1 = -2 - (var6Lifetime1 - GzipDecoder.field_d);
             if (!(var7Lifetime1 >= 0)) {
               var7Lifetime1 = 0;
             } else if (var7Lifetime1 > 64) {
@@ -361,7 +361,7 @@ final class tf {
         if (param1 != 320) {
           this.a((byte) 11);
         }
-        ch.field_a.a(ch.field_a.a((byte) 119, this.field_f, dh.field_d, 24, this.field_a, UiContainer.field_y, this.field_d), param0, param1 + 4767679);
+        ch.field_a.a(ch.field_a.a((byte) 119, this.field_f, GzipDecoder.field_d, 24, this.field_a, UiContainer.field_y, this.field_d), param0, param1 + 4767679);
     }
 
     private final int c(byte param0) {

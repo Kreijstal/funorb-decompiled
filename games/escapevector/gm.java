@@ -15,7 +15,7 @@ final class gm {
           if (param3 != 8192) {
             field_e = (String) null;
           }
-          if (uc.a(param2, param3 ^ -8272, param0, param1)) {
+          if (ArchivePreloader.loadSpriteSheet(param2, param3 ^ -8272, param0, param1)) {
             Sprite[] stackIn_6_0 = NetworkGameClient.e(15556);
             return stackIn_6_0;
           }

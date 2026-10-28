@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj extends IntrusiveNode {
+final class StringNode extends IntrusiveNode {
     static QuickChatDynamicCommand field_l;
-    String field_g;
+    String text;
     static String field_j;
     static int field_h;
     static String field_k;
     static int field_i;
 
-    final static void a(int param0, byte param1) {
+    final static void playFrameAppearSound(int pan, byte guard) {
         if (mb.field_a != null) {
           mb.field_a.fadeOut(2048);
         }
-        mb.field_a = PcmSampleStream.createAtRatePercentQ6(UiTheme.field_g, 100, IterableNodeHashTable.field_c * 6144 / 64, param0);
-        if (param1 == 51) {
+        mb.field_a = PcmSampleStream.createAtRatePercentQ6(UiTheme.field_g, 100, IterableNodeHashTable.field_c * 6144 / 64, pan);
+        if (guard == 51) {
           ObjectSpriteSet.field_e.addSubstream(mb.field_a);
           return;
         }
@@ -31,9 +31,9 @@ final class sj extends IntrusiveNode {
         }
     }
 
-    sj(String param0) {
+    StringNode(String param0) {
         try {
-          this.field_g = param0;
+          this.text = param0;
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

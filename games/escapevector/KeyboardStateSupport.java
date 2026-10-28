@@ -45,9 +45,9 @@ final class KeyboardStateSupport {
             if (guard != -16802) {
               return;
             }
-            if (uc.field_h != null) {
+            if (ArchivePreloader.field_h != null) {
               try {
-                uc.field_h.a((byte) -111);
+                ArchivePreloader.field_h.a((byte) -111);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 IOException var1 = (IOException) (Object) decompiledCaughtException;

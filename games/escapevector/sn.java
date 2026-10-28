@@ -151,9 +151,9 @@ final class sn {
               throw new IllegalStateException();
             }
             ContactEntry.field_nb = new String[var4];
-            qg.a(pf.field_e, 0, ContactEntry.field_nb, 0, var4);
+            ArraySupport.copy(pf.field_e, 0, ContactEntry.field_nb, 0, var4);
             SecondaryNodeHashTable.field_i = new String[-1 - var4 + var3_int];
-            qg.a(pf.field_e, 1 + var4, SecondaryNodeHashTable.field_i, 0, -var4 + (var3_int - 1));
+            ArraySupport.copy(pf.field_e, 1 + var4, SecondaryNodeHashTable.field_i, 0, -var4 + (var3_int - 1));
             var4 = -1;
             var3_int = PasswordFieldPainter.a(pf.field_e, param1 ^ 71, nb.field_a, Js5Transport.field_h, SingleChildContainer.a(al.field_c, param1 ^ -63, new String[]{"<br><%0><br>"}));
             for (var5 = 0; var3_int > var5; var5++) {
@@ -167,9 +167,9 @@ final class sn {
               throw new IllegalStateException();
             }
             IterableNodeHashTable.field_f = new String[var4];
-            qg.a(pf.field_e, 0, IterableNodeHashTable.field_f, 0, var4);
+            ArraySupport.copy(pf.field_e, 0, IterableNodeHashTable.field_f, 0, var4);
             ModalStack.field_G = new String[var3_int - var4 - 1];
-            qg.a(pf.field_e, 1 + var4, ModalStack.field_G, 0, -1 + var3_int - var4);
+            ArraySupport.copy(pf.field_e, 1 + var4, ModalStack.field_G, 0, -1 + var3_int - var4);
             if (IterableNodeHashTable.field_f.length > ContactEntry.field_nb.length) {
               stackIn_52_0 = IterableNodeHashTable.field_f.length;
             } else {
@@ -255,13 +255,13 @@ final class sn {
               }
             }
           }
-          vi.field_a = -(var3_intLifetime1 >> 1) + ClientException.field_e + var3_intLifetime1;
+          ChatHistorySupport.field_a = -(var3_intLifetime1 >> 1) + ClientException.field_e + var3_intLifetime1;
           TriangleMesh.field_x = ClientException.field_e - (var3_intLifetime1 >> 1);
           mh.field_f = cb.field_c.field_k * (CheckboxPainter.field_s + en.field_k << 1);
           for (int var4Lifetime2 = param1; Js5NetworkRequest.field_I.length > var4Lifetime2; var4Lifetime2++) {
             int stackIn_112_0 = mh.field_f;
             if (jj.field_a[var4Lifetime2] < 0) {
-              stackIn_113_1 = je.field_b;
+              stackIn_113_1 = SpriteFactorySupport.field_b;
             } else {
               stackIn_113_1 = ok.field_a;
             }
@@ -284,12 +284,12 @@ final class sn {
               cj.field_d[var4Lifetime3][3] = (en.field_k << 1) + ok.field_a;
               var5Lifetime3 = var5Lifetime3 + (CheckboxPainter.field_s + (en.field_k << 1) + ok.field_a);
             } else {
-              var5Lifetime3 = var5Lifetime3 + je.field_b;
+              var5Lifetime3 = var5Lifetime3 + SpriteFactorySupport.field_b;
             }
             var4Lifetime3++;
           }
           if (2 != ArchiveIndex.field_j) {
-            cb.field_c.a(param1 ^ 90, param2, CachedArchiveProvider.a((byte) 122, dh.field_d, UiContainer.field_y), 0);
+            cb.field_c.a(param1 ^ 90, param2, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y), 0);
           } else {
             cb.field_c.a(param1 + 91, param2, -1, -1);
           }

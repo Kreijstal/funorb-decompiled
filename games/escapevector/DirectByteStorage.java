@@ -68,7 +68,7 @@ final class DirectByteStorage extends ByteStorage {
           ua.field_c.g(-9949);
         }
         CachedArchiveProvider.b(param0 ^ -57);
-        fg.b(0);
+        SimulatorAssetSupport.loadSimulatorSprites(0);
     }
 
     final static void readReflectionCheck(PacketBuffer buffer, SystemTaskService taskService, int unused, int guard) {
@@ -161,7 +161,7 @@ final class DirectByteStorage extends ByteStorage {
                 var17.errors[var5] = -5;
               }
             }
-            je.field_a.addLast(-12328, var17);
+            SpriteFactorySupport.field_a.addLast(-12328, var17);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

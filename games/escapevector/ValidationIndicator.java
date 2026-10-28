@@ -72,7 +72,7 @@ final class ValidationIndicator extends TextButton {
           int var5 = this.x + screenX + (this.width >> 1);
           int var6 = this.y + screenY + (this.height >> 1);
           ValidationState var8 = this.field_F.validationState(17124);
-          if (var8 != of.field_f &&
+          if (var8 != SpriteDecodeSupport.field_f &&
             ug.field_c != var8) {
             if (ArchiveProvider.field_a == var8) {
               Sprite var24 = EditableTextWidget.field_E[2];
@@ -114,7 +114,7 @@ final class ValidationIndicator extends TextButton {
         int var5Lifetime1 = this.x + screenX + (this.width >> 1);
         int var6Lifetime1 = this.y + screenY + (this.height >> 1);
         ValidationState var8Lifetime1 = this.field_F.validationState(17124);
-        if (var8Lifetime1 == of.field_f) {
+        if (var8Lifetime1 == SpriteDecodeSupport.field_f) {
           Sprite var15 = EditableTextWidget.field_E[0];
           int var9Lifetime1 = var15.fullWidth << 1;
           int var10Lifetime1 = var15.fullHeight << 1;

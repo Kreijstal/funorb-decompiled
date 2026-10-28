@@ -574,7 +574,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime123 = LabeledField.loadNamedAsset("keycode_minimap", param0 + 10584);
           if (var2Lifetime123 != null) {
-            of.field_c = 255 & var2Lifetime123[0];
+            SpriteDecodeSupport.field_c = 255 & var2Lifetime123[0];
           }
           byte[] var2Lifetime124 = LabeledField.loadNamedAsset("keycode_rockbuster", param0 ^ 10600);
           if (var2Lifetime124 != null) {
@@ -710,7 +710,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime157 = LabeledField.loadNamedAsset("containerisonhill", param0 + 10584);
           if (null != var2Lifetime157) {
-            ff.field_f = RasterSnapshot.a(var2Lifetime157, param0 + 102);
+            QuickChatPhraseCache.field_f = RasterSnapshot.a(var2Lifetime157, param0 + 102);
           }
           byte[] var2Lifetime158 = LabeledField.loadNamedAsset("explosiveisonhill", 10592);
           if (null != var2Lifetime158) {
@@ -1070,19 +1070,19 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime247 = LabeledField.loadNamedAsset("bakedMoonMessage,0", param0 ^ 10600);
           if (var2Lifetime247 != null) {
-            co.field_e[0] = RasterSnapshot.a(var2Lifetime247, 118);
+            InputGlyphSupport.field_e[0] = RasterSnapshot.a(var2Lifetime247, 118);
           }
           byte[] var2Lifetime248 = LabeledField.loadNamedAsset("bakedMoonMessage,1", 10592);
           if (var2Lifetime248 != null) {
-            co.field_e[1] = RasterSnapshot.a(var2Lifetime248, 127);
+            InputGlyphSupport.field_e[1] = RasterSnapshot.a(var2Lifetime248, 127);
           }
           byte[] var2Lifetime249 = LabeledField.loadNamedAsset("bakedMoonMessage,2", 10592);
           if (var2Lifetime249 != null) {
-            co.field_e[2] = RasterSnapshot.a(var2Lifetime249, 123);
+            InputGlyphSupport.field_e[2] = RasterSnapshot.a(var2Lifetime249, 123);
           }
           byte[] var2Lifetime250 = LabeledField.loadNamedAsset("bakedMoonMessage,3", param0 ^ 10600);
           if (var2Lifetime250 != null) {
-            co.field_e[3] = RasterSnapshot.a(var2Lifetime250, 123);
+            InputGlyphSupport.field_e[3] = RasterSnapshot.a(var2Lifetime250, 123);
           }
           byte[] var2Lifetime251 = LabeledField.loadNamedAsset("icyMoonMessage,0", 10592);
           if (var2Lifetime251 != null) {
@@ -1214,7 +1214,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           }
           byte[] var2Lifetime283 = LabeledField.loadNamedAsset("titleMiniMapTargets", param0 ^ 10600);
           if (var2Lifetime283 != null) {
-            sj.field_k = RasterSnapshot.a(var2Lifetime283, 121);
+            StringNode.field_k = RasterSnapshot.a(var2Lifetime283, 121);
           }
           byte[] var2Lifetime284 = LabeledField.loadNamedAsset("highScoresDifficultyMode", 10592);
           if (null != var2Lifetime284) {
@@ -1361,11 +1361,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               var5.appendActionButton(false, Minimap.field_O, -1);
             }
             if (param1.field_g == 3) {
-              var5.appendActionButton(false, qk.field_a, 7);
+              var5.appendActionButton(false, ArchiveLoadTask.field_a, 7);
             } else if (param1.field_g == 6) {
               var5.appendActionButton(false, ej.field_c, 9);
               if (var6 != 0) {
-                var5.appendActionButton(false, qk.field_a, 7);
+                var5.appendActionButton(false, ArchiveLoadTask.field_a, 7);
               }
             }
           }

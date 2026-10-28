@@ -192,7 +192,7 @@ class UsernameCredentials extends LoginCredentials {
         if (guard != 32) {
           return (LoginCredentialType) null;
         }
-        return ja.field_a;
+        return DisplayModeInfo.field_a;
     }
 
     final static int findSubmittedScoreRow(ScoreSubmission submission, int column, int startRow, HighscoreQuery highscores) {

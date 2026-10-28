@@ -145,7 +145,7 @@ final class WhirlpoolHasher {
             this.field_b = this.field_b + 1;
             this.field_h[fieldTemp$1] = (byte) 0;
           }
-          qg.a(this.field_j, 0, this.field_h, 32, 32);
+          ArraySupport.copy(this.field_j, 0, this.field_h, 32, 32);
           if (guard) {
             byte[] var9 = (byte[]) null;
             this.updateBits(105L, (byte[]) null, -56);
@@ -186,7 +186,7 @@ final class WhirlpoolHasher {
         int var2 = 0;
         int var3 = 0;
         while (var2 < 8) {
-          this.field_i[var2] = ja.a(ja.a(SpriteOffset.a((long)this.field_h[6 + var3] << 8, 65280L), ja.a(SpriteOffset.a(16711680L, (long)this.field_h[5 + var3] << 16), ja.a(SpriteOffset.a(255L, (long)this.field_h[var3 + 4]) << 24, ja.a(SpriteOffset.a(255L, (long)this.field_h[3 + var3]) << 32, ja.a(SpriteOffset.a(255L, (long)this.field_h[2 + var3]) << 40, ja.a(SpriteOffset.a(71776119061217280L, (long)this.field_h[var3 + 1] << 48), (long)this.field_h[var3] << 56)))))), SpriteOffset.a((long)this.field_h[7 + var3], 255L));
+          this.field_i[var2] = DisplayModeInfo.bitwiseOr(DisplayModeInfo.bitwiseOr(SpriteOffset.a((long)this.field_h[6 + var3] << 8, 65280L), DisplayModeInfo.bitwiseOr(SpriteOffset.a(16711680L, (long)this.field_h[5 + var3] << 16), DisplayModeInfo.bitwiseOr(SpriteOffset.a(255L, (long)this.field_h[var3 + 4]) << 24, DisplayModeInfo.bitwiseOr(SpriteOffset.a(255L, (long)this.field_h[3 + var3]) << 32, DisplayModeInfo.bitwiseOr(SpriteOffset.a(255L, (long)this.field_h[2 + var3]) << 40, DisplayModeInfo.bitwiseOr(SpriteOffset.a(71776119061217280L, (long)this.field_h[var3 + 1] << 48), (long)this.field_h[var3] << 56)))))), SpriteOffset.a((long)this.field_h[7 + var3], 255L));
           var2++;
           var3 += 8;
         }
@@ -194,7 +194,7 @@ final class WhirlpoolHasher {
           long dupTemp$0 = this.field_k[var2Lifetime1];
           long arrayValue$1 = this.field_i[var2Lifetime1];
           this.field_e[var2Lifetime1] = dupTemp$0;
-          this.field_d[var2Lifetime1] = ja.a(arrayValue$1, dupTemp$0);
+          this.field_d[var2Lifetime1] = DisplayModeInfo.bitwiseOr(arrayValue$1, dupTemp$0);
         }
         if (guard > -22) {
           this.field_i = (long[]) null;
@@ -205,7 +205,7 @@ final class WhirlpoolHasher {
             int var4 = 0;
             int var5 = 56;
             while (var4 < 8) {
-              this.field_a[var3Lifetime1] = ja.a(this.field_a[var3Lifetime1], AccountNoticeDialog.field_db[var4][SpriteCheckboxPainter.bitwiseAnd((int)(this.field_e[SpriteCheckboxPainter.bitwiseAnd(7, var3Lifetime1 - var4)] >>> var5), 255)]);
+              this.field_a[var3Lifetime1] = DisplayModeInfo.bitwiseOr(this.field_a[var3Lifetime1], AccountNoticeDialog.field_db[var4][SpriteCheckboxPainter.bitwiseAnd((int)(this.field_e[SpriteCheckboxPainter.bitwiseAnd(7, var3Lifetime1 - var4)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -213,14 +213,14 @@ final class WhirlpoolHasher {
           for (int var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_e[var3Lifetime1Lifetime1] = this.field_a[var3Lifetime1Lifetime1];
           }
-          this.field_e[0] = ja.a(this.field_e[0], AccountNoticeDialog.field_ab[var2Lifetime2]);
+          this.field_e[0] = DisplayModeInfo.bitwiseOr(this.field_e[0], AccountNoticeDialog.field_ab[var2Lifetime2]);
           for (int var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_a[var3Lifetime1Lifetime2] = this.field_e[var3Lifetime1Lifetime2];
             int var7 = 0;
             int var4Lifetime1 = var7;
             int var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_a[var3Lifetime1Lifetime2] = ja.a(this.field_a[var3Lifetime1Lifetime2], AccountNoticeDialog.field_db[var7][SpriteCheckboxPainter.bitwiseAnd((int)(this.field_d[SpriteCheckboxPainter.bitwiseAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_a[var3Lifetime1Lifetime2] = DisplayModeInfo.bitwiseOr(this.field_a[var3Lifetime1Lifetime2], AccountNoticeDialog.field_db[var7][SpriteCheckboxPainter.bitwiseAnd((int)(this.field_d[SpriteCheckboxPainter.bitwiseAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -230,7 +230,7 @@ final class WhirlpoolHasher {
           }
         }
         for (int var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_k[var2Lifetime3] = ja.a(this.field_k[var2Lifetime3], ja.a(this.field_i[var2Lifetime3], this.field_d[var2Lifetime3]));
+          this.field_k[var2Lifetime3] = DisplayModeInfo.bitwiseOr(this.field_k[var2Lifetime3], DisplayModeInfo.bitwiseOr(this.field_i[var2Lifetime3], this.field_d[var2Lifetime3]));
         }
     }
 

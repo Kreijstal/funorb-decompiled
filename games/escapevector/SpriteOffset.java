@@ -23,7 +23,7 @@ final class SpriteOffset {
           pa.a(true);
           mj.field_d = 0;
           p.field_h = 2;
-          gi.a((byte) -74);
+          ChatMessage.clearFrameOffsets((byte) -74);
           return true;
         }
         if (di.field_d.field_h == 1) {
@@ -33,7 +33,7 @@ final class SpriteOffset {
           mj.field_d = 0;
           PacketBuffer.field_h = false;
           AlternateUsernameCredentials.field_q.b(-26480, param0);
-          gi.a((byte) -66);
+          ChatMessage.clearFrameOffsets((byte) -66);
           return true;
         }
         return false;
@@ -71,7 +71,7 @@ final class SpriteOffset {
             }
             var2 = true;
           }
-          cb.field_c.a(CachedArchiveProvider.a((byte) 122, sf.field_c, LoginDialog.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, dh.field_d, UiContainer.field_y));
+          cb.field_c.a(CachedArchiveProvider.a((byte) 122, sf.field_c, LoginDialog.field_ob), (byte) 120, CachedArchiveProvider.a((byte) 122, GzipDecoder.field_d, UiContainer.field_y));
           if (cb.field_c.b((byte) -18)) {
             var1_int = true;
           }
@@ -198,7 +198,7 @@ final class SpriteOffset {
           }
           IntrusiveNodeHashTable.field_f.resetTiming(237);
           for (int var1_int = 0; 32 > var1_int; var1_int++) {
-            wi.field_d[var1_int] = 0L;
+            TileSpriteCacheEntry.field_d[var1_int] = 0L;
           }
           for (int var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             CipherPacketBuffer.field_t[var1_intLifetime1] = 0L;

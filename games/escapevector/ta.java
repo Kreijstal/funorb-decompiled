@@ -71,7 +71,7 @@ final class ta {
 
     private final void f(boolean param0) {
         if (mj.field_d == 0) {
-          sj.a(8192, (byte) 51);
+          StringNode.playFrameAppearSound(8192, (byte) 51);
         }
         IntValueNode.field_j = param0;
         this.a(64, this.field_f);
@@ -186,7 +186,7 @@ final class ta {
           e.field_a = false;
           TrackerMusicDefinition.field_f.a(true);
           mj.field_d = 0;
-          gi.a((byte) -71);
+          ChatMessage.clearFrameOffsets((byte) -71);
           var4 = true;
           return (var4);
         }
@@ -391,7 +391,7 @@ final class ta {
         boolean var2 = false;
         if (AccountRequestDialog.pollKeyEvent(-98)) {
           di.field_d.a(118);
-          qk.a(this.field_t, 0);
+          ArchiveLoadTask.cycleSelectionFromArrowKey(this.field_t, 0);
           if (PasswordValidator.field_n == 13) {
             di.field_d.a(false, this.field_d);
           }
@@ -499,7 +499,7 @@ final class ta {
           param0++;
           this.field_c = incrementValue$0;
           int var7 = this.field_o.field_j - TextFieldValidator.field_j.fullWidth / 2;
-          this.field_i[var4] = new LegacyButton(var5, this.field_c, of.field_a);
+          this.field_i[var4] = new LegacyButton(var5, this.field_c, SpriteDecodeSupport.field_a);
           this.field_i[var4].setPosition((byte) 127, var7, var6);
           this.field_i[var4].setSize(TextFieldValidator.field_j.fullHeight, 0, TextFieldValidator.field_j.fullWidth);
           QuickChatPhraseDefinition.applyGrayButtonPalette(-92, this.field_i[var4]);
@@ -621,7 +621,7 @@ final class ta {
     }
 
     private final boolean h(byte param0) {
-        di.field_d.a(this.a(-3, sf.field_c, LoginDialog.field_ob), (byte) 119, this.a(-3, dh.field_d, UiContainer.field_y));
+        di.field_d.a(this.a(-3, sf.field_c, LoginDialog.field_ob), (byte) 119, this.a(-3, GzipDecoder.field_d, UiContainer.field_y));
         this.a(20364);
         boolean var2 = (this.a((byte) -91, true, Js5NetworkRequest.a((byte) 15, -1)));
         int var3 = -122 / ((param0 - 73) / 47);
@@ -1207,10 +1207,10 @@ final class ta {
         this.g(var4, 0);
         di.field_d = new wc(var4);
         int var5 = da.field_b.c(5201);
-        int var6 = da.field_b.a(-3, dh.field_d, UiContainer.field_y);
+        int var6 = da.field_b.a(-3, GzipDecoder.field_d, UiContainer.field_y);
         di.field_d.a(117, true, var6, var5);
         mj.field_d = 0;
-        gi.a((byte) -70);
+        ChatMessage.clearFrameOffsets((byte) -70);
         int var7 = -97 % ((param1 + 21) / 32);
         this.d(4551, var3);
     }

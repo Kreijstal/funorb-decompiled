@@ -9,7 +9,7 @@ final class cj {
 
     final static void a(int param0, ResourceArchive param1) {
         try {
-          Sprite var2 = new Sprite(param1.getNamedFile(-4, "", "final_frame.jpg"), (java.awt.Component) ((Object) of.field_d));
+          Sprite var2 = new Sprite(param1.getNamedFile(-4, "", "final_frame.jpg"), (java.awt.Component) ((Object) SpriteDecodeSupport.field_d));
           int var3 = var2.width;
           int var4 = var2.height;
           LoginStage.pushRasterState(param0 ^ 58);

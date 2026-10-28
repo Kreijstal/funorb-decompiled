@@ -10,7 +10,7 @@ final class um {
     final static boolean a(int param0) {
         if (param0 != 17830) {
           field_c = (String) null;
-          if (ff.field_e < 10) {
+          if (QuickChatPhraseCache.field_e < 10) {
             return false;
           }
           if (!SpriteState.field_u) {
@@ -18,7 +18,7 @@ final class um {
           }
           return false;
         }
-        if (ff.field_e < 10) {
+        if (QuickChatPhraseCache.field_e < 10) {
           return false;
         }
         if (!SpriteState.field_u) {
@@ -39,7 +39,7 @@ final class um {
 
     static {
         field_b = new byte[65536];
-        qg.a(field_b, 0, 65536, (byte) -128);
+        ArraySupport.fill(field_b, 0, 65536, (byte) -128);
         field_a = "Loading...";
         field_d = new fc();
         field_c = "LEFT ARROW";

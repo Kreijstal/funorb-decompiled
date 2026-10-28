@@ -55,7 +55,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
     }
 
     final static int b(int param0) {
-        FullscreenFocusCanvas.field_e.a((byte) 12);
+        FullscreenFocusCanvas.field_e.serviceProviders((byte) 12);
         if (param0 != -1021831775) {
           field_b = (ShipHullGeometry) null;
         }

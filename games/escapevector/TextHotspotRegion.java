@@ -14,14 +14,14 @@ final class TextHotspotRegion extends IntrusiveNode {
     final static IndexedSprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         String stackIn_10_2 = null;
         try {
-          if (!uc.a(param2, 100, param3, param0)) {
+          if (!ArchivePreloader.loadSpriteSheet(param2, 100, param3, param0)) {
             return null;
           }
           if (param1 != 255) {
             ResourceArchive var5 = (ResourceArchive) null;
             TextHotspotRegion.a(49, -40, (ResourceArchive) null, 15);
           }
-          IndexedSprite[] stackIn_6_0 = fg.a(13029);
+          IndexedSprite[] stackIn_6_0 = SimulatorAssetSupport.buildIndexedSpritesFromSheet(13029);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

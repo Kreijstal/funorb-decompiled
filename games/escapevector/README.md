@@ -2,9 +2,9 @@
 
 This is the only published Java tree. Reviewed rules and the reproducer live in dekobloko-work/readable. The current reverse dictionary is ../../decompilation/escapevector-naming.json.
 
-This pass names 240 reviewed classes and 6275 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
+This pass names 257 reviewed classes and 6950 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
 
-Coverage: 242/349 class declarations and 1638/2781 methods have readable names; 277 constructors follow their owning class. 107 classes and 1143 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
+Coverage: 259/349 class declarations and 1786/2781 methods have readable names; 277 constructors follow their owning class. 90 classes and 995 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
 
 ## Entry points
 
@@ -36,6 +36,8 @@ Every GameplaySession method has a reviewed name. `updateMissionOutcome`, `recor
 
 `DynamicTerrainRenderer` is selected for terrain theme four; other themes use the session terrain path. `invalidateTileNeighborhood` marks a 3x3 region dirty following edits. `PointCloudEffect` owns per-point fixed-point motion, masks and drawing. These names do not claim that every effect or object type has been identified.
 
+Every Minimap and DynamicTerrainRenderer method has a reviewed name. Minimap separates terrain scaling, wrapped views, pulsing cargo/objective/pickup markers and legend layout. DynamicTerrainRenderer separates padded masks, orthogonal boundary detection, solid/boundary sprite caches, cache rotation and compositing. TileSpriteCacheEntry retains its sprite and coordinates across reuse. Unrelated button, rating and chat helpers retain their original owners.
+
 ## Dialogue and shared engine
 
 `PcmStream` defines process/mixInto/skip, firstSubstream/nextSubstream, activity and priority for all concrete audio streams. PcmStreamMixer owns its substreams and timed PcmMixerListener queue. PcmSample/PcmSampleStream/PcmResampler expose PCM bytes, loops, interpolation and resampling. AudioOutput and JavaSoundAudioOutput distinguish device lifecycle hooks from stream mixing. ReverbPcmStream uses separate ReverbCombFilter and ReverbAllPassFilter rings.
@@ -43,6 +45,10 @@ Every GameplaySession method has a reviewed name. `updateMissionOutcome`, `recor
 `VorbisSample` separates shared setup/bitstream tables from per-sample packets, overlap and resumable PCM output. VorbisCodebook, VorbisFloor, VorbisResidue and VorbisMapping expose the compressed-audio stages. SynthInstrument and AudioFilter synthesize envelope-controlled oscillators; SoundEffect mixes up to ten delayed instruments. SoundCache separates completed PCM from pending Vorbis decoders. PcmSampleStream names every control and all sixteen specialized mixing kernels by direction, channel count, interpolation and gain ramp. AudioOutput names scheduling, device service and shutdown; ReverbPcmStream separates wet/dry/input gains, feedback, damping and stereo width.
 
 `ResourceArchive` consumes ArchiveProvider; CachedArchiveProvider combines Js5Transport with SectorCacheStore, BufferedRandomAccessFile and DiskCacheWorker. ArchiveIndex holds reference metadata; ArchiveRequest has separate network/disk implementations. SystemTaskService owns operating-system work represented by SystemTask. CipherPacketBuffer/IsaacRandom distinguish opcode encryption from ordinary PacketBuffer byte encodings; WhirlpoolHasher and Bzip2Decoder/Bzip2State identify archive digest and decompression work.
+
+`ArchivePreloader` polls ArchiveLoadTask records and retains the original progress ceiling. Js5ArchiveManager validates the master index and creates/services providers. GzipDecoder owns the raw inflater and preserves header/footer handling and reset paths. SpriteDecodeSupport, SpriteFactorySupport and SimulatorAssetSupport distinguish sheet lifetime, sprite construction and simulator assets. ArraySupport names the original fill/clear/overlap-safe copy loops.
+
+`ChatMessageDecoder` reads plain or quick-chat messages, including sender identity, rank and split message IDs. ChatMessage exposes display priority; ChatHistorySupport appends and trims history. QuickChatPhraseCache separates local and global phrase archives. AchievementGrantRule retains the original mode/mask/category checks. Static helpers outside these roles remain on their original classes, without inferred module relocation.
 
 Every PacketBuffer, ResourceArchive and TriangleMesh method has a reviewed name. Buffer methods distinguish fixed widths, signed smarts, CP1252 string delimiters, length backpatches, CRC32, XTEA ranges, RSA and base-38 password packing. ArchiveIndex distinguishes group/file counts from sparse slot capacities; ResourceArchive separates loading, validity, named lookup and unpacking. File retention policy zero retains files, one discards the returned slot and two builds only the requested file before discarding its unpacked group. Packed-group retention is independent. TriangleMesh transforms invalidate lazy axis bounds.
 

@@ -367,7 +367,7 @@ final class DialogueScreen extends IntrusiveNode {
 
     final void advanceDialogue(byte guard) {
         int var7 = EscapeVector.obfuscationControl;
-        this.field_w.a(this.a(-84, sf.field_c, LoginDialog.field_ob), (byte) 126, this.a(-97, dh.field_d, UiContainer.field_y));
+        this.field_w.a(this.a(-84, sf.field_c, LoginDialog.field_ob), (byte) 126, this.a(-97, GzipDecoder.field_d, UiContainer.field_y));
         if (guard < 10) {
           return;
         }
@@ -408,7 +408,7 @@ final class DialogueScreen extends IntrusiveNode {
             if (!this.field_n &&
               43 > this.field_s) {
               if (this.field_s == 0) {
-                sj.a(this.d(8192), (byte) 51);
+                StringNode.playFrameAppearSound(this.d(8192), (byte) 51);
               }
               if (23 == this.field_s) {
                 ObjectSpriteSet.field_e.playSampleWithPan(pc.field_a, 100, 3072 * IterableNodeHashTable.field_c / 64, this.g(2));
@@ -429,7 +429,7 @@ final class DialogueScreen extends IntrusiveNode {
               if (!this.fullWidthScene ||
                 this.dialogueIndex >= this.dialogueLines.length) {
                 if (this.field_s == 43) {
-                  sj.a(this.d(8192), (byte) 51);
+                  StringNode.playFrameAppearSound(this.d(8192), (byte) 51);
                 }
                 this.field_s = this.field_s - 1;
               }
@@ -445,7 +445,7 @@ final class DialogueScreen extends IntrusiveNode {
                 this.field_n = false;
                 if (!this.fullWidthScene) {
                   this.a(43, this.dialogueLines[this.dialogueIndex]);
-                  gi.a((byte) -98);
+                  ChatMessage.clearFrameOffsets((byte) -98);
                 }
               } else {
                 if (BoundedRandomAccessFile.activeSession != null) {
@@ -678,7 +678,7 @@ final class DialogueScreen extends IntrusiveNode {
         }
         this.field_u.fadeOut(AudioOutput.sampleRate / 200);
         Bullet.removeFirstDialogue((byte) -22);
-        gi.a((byte) -111);
+        ChatMessage.clearFrameOffsets((byte) -111);
         Js5NetworkRequest.field_E = true;
         SavedDataQuerySupport.field_d = true;
         if (param0 != 2048) {
@@ -868,16 +868,16 @@ final class DialogueScreen extends IntrusiveNode {
         this.field_I = 0;
         this.field_r = ig.field_c;
         try {
-          gi.a((byte) -103);
+          ChatMessage.clearFrameOffsets((byte) -103);
           this.dialogueLines = param1;
           boolean stackIn_7_1 = (param2);
           this.fullWidthScene = stackIn_7_1;
           this.field_z = param0;
-          this.field_u = PcmSampleStream.createAtRatePercent(ff.field_i, 100, 0);
+          this.field_u = PcmSampleStream.createAtRatePercent(QuickChatPhraseCache.field_i, 100, 0);
           this.field_u.setLoopCount(-1);
           ObjectSpriteSet.field_e.addSubstream(this.field_u);
           this.field_w = new wc(1);
-          this.field_w.a(this.a(-77, dh.field_d, UiContainer.field_y), true, 4767999);
+          this.field_w.a(this.a(-77, GzipDecoder.field_d, UiContainer.field_y), true, 4767999);
           this.a(43, this.dialogueLines[this.dialogueIndex]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

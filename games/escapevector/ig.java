@@ -102,7 +102,7 @@ final class ig {
           }
           int var11 = var9.length;
           int[] var16 = TextLayoutLine.a(param2, param1, var11, (byte) -17);
-          this.field_q = DynamicTerrainRenderer.a(var8, var5, var7, var6, param3, var9, var10, false, var16);
+          this.field_q = DynamicTerrainRenderer.createButtonRow(var8, var5, var7, var6, param3, var9, var10, false, var16);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "ig.S(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -114,7 +114,7 @@ final class ig {
         }
         Minimap var2 = this.field_r.minimap;
         if (var2 != null) {
-          var2.field_c = var2.field_c + 1;
+          var2.animationTick = var2.animationTick + 1;
         }
         if (param0 != -98) {
           LegacyButton var3 = (LegacyButton) null;
@@ -137,7 +137,7 @@ final class ig {
           int var10 = 402;
           int var11 = var6.length;
           int[] var17 = TextLayoutLine.a(param3, param0, var11, (byte) -17);
-          this.field_b = DynamicTerrainRenderer.a(var10, var13, var9, var8, param2, var6, var7, false, var17);
+          this.field_b = DynamicTerrainRenderer.createButtonRow(var10, var13, var9, var8, param2, var6, var7, false, var17);
           if (param1 != -9079) {
             this.field_b = (LegacyButton[]) null;
           }
@@ -175,7 +175,7 @@ final class ig {
           return false;
         }
         int var3 = di.field_d.field_h;
-        int var4 = je.a(false, this.field_a);
+        int var4 = SpriteFactorySupport.levelCount(false, this.field_a);
         if (var3 >= 0 &&
           var4 > var3) {
           int var5 = ua.field_c.b(this.field_a, 0);
@@ -203,7 +203,7 @@ final class ig {
           aj.b(-107)) {
           pa.a(true);
           mj.field_d = 0;
-          gi.a((byte) -90);
+          ChatMessage.clearFrameOffsets((byte) -90);
           return true;
         }
         if (var3 == this.field_e) {
@@ -262,7 +262,7 @@ final class ig {
         if (param0 != 86) {
           this.c((byte) 3);
         }
-        int var4 = je.a(false, this.field_a);
+        int var4 = SpriteFactorySupport.levelCount(false, this.field_a);
         if (var3 < 0) {
           return;
         }
@@ -330,12 +330,12 @@ final class ig {
         int var14 = (var8 - var10) / 2;
         int var15 = -var11 + (var5 + var13);
         int var16 = -var12 + var14 + var6;
-        var17.b(var16, false, var15, param0);
+        var17.renderView(var16, false, var15, param0);
     }
 
     private final void i(int param0) {
         boolean var2 = (this.field_a == 3);
-        int var3 = je.a(false, this.field_a);
+        int var3 = SpriteFactorySupport.levelCount(false, this.field_a);
         this.field_p = var3;
         if (!var2) {
           int fieldTemp$0 = this.field_p;
@@ -608,8 +608,8 @@ final class ig {
           this.field_k.drawOpaque(3, 79);
         }
         this.d(0);
-        LoginCredentialType.a(404, 3162160, param0 ^ 115, 0, 6324320, 76, param0, var2, 430);
-        int var3 = je.a(false, this.field_a);
+        LoginCredentialType.drawInsetUnevenFrame(404, 3162160, param0 ^ 115, 0, 6324320, 76, param0, var2, 430);
+        int var3 = SpriteFactorySupport.levelCount(false, this.field_a);
         int var4 = di.field_d.field_h;
         boolean var5 = true;
         if (var4 >= 0 &&
@@ -649,7 +649,7 @@ final class ig {
         this.f(0);
         wc var6 = di.field_d;
         int var3 = var6.field_h;
-        int var4 = je.a(false, this.field_a);
+        int var4 = SpriteFactorySupport.levelCount(false, this.field_a);
         while (AccountRequestDialog.pollKeyEvent(-113)) {
           var6.a(100);
           if (PasswordValidator.field_n == 96 ||
@@ -723,7 +723,7 @@ final class ig {
             return;
           }
         }
-        var6.a(this.a(LoginDialog.field_ob, 12089, sf.field_c), (byte) 126, this.a(UiContainer.field_y, 12089, dh.field_d));
+        var6.a(this.a(LoginDialog.field_ob, 12089, sf.field_c), (byte) 126, this.a(UiContainer.field_y, 12089, GzipDecoder.field_d));
         boolean discarded$0 = this.a(true, -89);
         this.c((byte) 86);
         this.g(param0 ^ -2493);
@@ -760,12 +760,12 @@ final class ig {
         if (var2 == null) {
           return;
         }
-        var2.field_c = var2.field_c + 1;
-        if (!var2.b((byte) -102)) {
-          var2.e((byte) -101);
+        var2.animationTick = var2.animationTick + 1;
+        if (!var2.isVisible((byte) -102)) {
+          var2.toggleVisible((byte) -101);
         }
-        var2.field_d = false;
-        var2.field_L = false;
+        var2.showFrame = false;
+        var2.darkenBackground = false;
     }
 
     private final void a(byte param0, BinaryBitmapFont param1, int param2) {
@@ -785,7 +785,7 @@ final class ig {
           int var11 = 30;
           int[] var12 = ValidationIndicator.field_E[this.field_a];
           int var13 = var12.length;
-          int var14 = je.a(false, this.field_a);
+          int var14 = SpriteFactorySupport.levelCount(false, this.field_a);
           int var15 = LabeledField.field_M[this.field_a];
           this.field_j = new LegacyButton[-var15 + var14];
           int var16 = ua.field_c.a(29386, this.field_a);
@@ -839,7 +839,7 @@ final class ig {
         int var11 = EscapeVector.obfuscationControl;
         int var2 = mj.field_d;
         if (var2 == 0) {
-          sj.a(8192, (byte) 51);
+          StringNode.playFrameAppearSound(8192, (byte) 51);
         }
         IntValueNode.field_j = true;
         if (param0 != 0) {

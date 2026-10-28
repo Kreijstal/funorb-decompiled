@@ -11,7 +11,7 @@ final class pa {
         }
         CipherPacketBuffer.field_u = true;
         SeekerMine.a((byte) -126, param0);
-        ff.field_e = 0;
+        QuickChatPhraseCache.field_e = 0;
     }
 
     public static void releaseStatics(byte guard) {

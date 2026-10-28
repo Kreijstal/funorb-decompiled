@@ -70,7 +70,7 @@ final class LevelObject extends IntrusiveNode {
             if (param0 != 27) {
               LevelObject.d((byte) -32);
             }
-            je.field_a = new IntrusiveDeque();
+            SpriteFactorySupport.field_a = new IntrusiveDeque();
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             RuntimeException var1 = decompiledCaughtParameter0;

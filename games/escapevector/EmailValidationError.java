@@ -18,7 +18,7 @@ final class EmailValidationError {
         if (param0 != 23403) {
           EmailValidationError.releaseStatics(-66);
         }
-        return FullscreenFocusCanvas.field_e.a(false);
+        return FullscreenFocusCanvas.field_e.ensureMasterIndex(false);
     }
 
     final static Sprite[] a(boolean param0, qh[] param1) {

@@ -77,12 +77,12 @@ final class DialWidgetPainter implements WidgetPainter {
     }
 
     final static void b(byte param0) {
-        if (ff.field_e == 10) {
+        if (QuickChatPhraseCache.field_e == 10) {
           fe.a(-84);
-          ff.field_e = 11;
+          QuickChatPhraseCache.field_e = 11;
         } else if (!NetworkGameClient.i(56)) {
           fe.a(-84);
-          ff.field_e = 11;
+          QuickChatPhraseCache.field_e = 11;
         }
         pb.field_d = true;
         if (param0 < -81) {

@@ -42,7 +42,7 @@ final class rd {
           char[] var11 = new char[var10.length - var3];
           char[] var9 = var11;
           char[] var4 = var9;
-          qg.a(var2, 0, var4, 0, var11.length);
+          ArraySupport.copy(var2, 0, var4, 0, var11.length);
           String stackIn_14_0 = new String(var11);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

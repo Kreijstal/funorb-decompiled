@@ -85,7 +85,7 @@ final class ri {
                 FullscreenFocusCanvas.a(param0 - 112, CachedArchiveProvider.field_n, wk.field_d, PointCloudEffect.field_u, var6_intLifetime1, SocketJs5Transport.field_s);
               }
             }
-            DynamicTerrainRenderer.b(var5, 0);
+            DynamicTerrainRenderer.rankRatingRows(var5, 0);
             String[][] var6 = new String[2][var5];
             int[][] var18 = new int[2][var5 * 4];
             int var8 = AccountTermsPanel.field_J;
@@ -149,7 +149,7 @@ final class ri {
         if (param0 != -25123) {
           field_a = (String) null;
         }
-        of.field_d.requestFocus();
+        SpriteDecodeSupport.field_d.requestFocus();
     }
 
     static {

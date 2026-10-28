@@ -5,7 +5,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
     static int field_r;
     static int field_o;
     static String field_n;
-    static ff field_s;
+    static QuickChatPhraseCache field_s;
     static int[] field_p;
     static int field_q;
 
@@ -60,24 +60,24 @@ final class EmailSyntaxValidator extends TextFieldValidator {
     }
 
     final static UiTheme c(boolean param0) {
-        if (sl.field_d == null) {
-          sl.field_d = new UiTheme();
-          sl.field_d.initializePainters(-31476, Js5Transport.field_a);
-          sl.field_d.tooltipBorderColor = 7697781;
-          sl.field_d.tooltipFont = ke.field_c;
-          sl.field_d.tooltipRightPadding = 5;
-          sl.field_d.tooltipLineSpacing = 14;
-          sl.field_d.tooltipBackgroundColor = 2763306;
-          sl.field_d.tooltipLeftPadding = 6;
-          sl.field_d.tooltipTopPadding = 0;
-          sl.field_d.tooltipBottomPadding = 4;
+        if (ChatMessageDecoder.field_d == null) {
+          ChatMessageDecoder.field_d = new UiTheme();
+          ChatMessageDecoder.field_d.initializePainters(-31476, Js5Transport.field_a);
+          ChatMessageDecoder.field_d.tooltipBorderColor = 7697781;
+          ChatMessageDecoder.field_d.tooltipFont = ke.field_c;
+          ChatMessageDecoder.field_d.tooltipRightPadding = 5;
+          ChatMessageDecoder.field_d.tooltipLineSpacing = 14;
+          ChatMessageDecoder.field_d.tooltipBackgroundColor = 2763306;
+          ChatMessageDecoder.field_d.tooltipLeftPadding = 6;
+          ChatMessageDecoder.field_d.tooltipTopPadding = 0;
+          ChatMessageDecoder.field_d.tooltipBottomPadding = 4;
           if (!param0) {
-            return sl.field_d;
+            return ChatMessageDecoder.field_d;
           }
           return (UiTheme) null;
         }
         if (!param0) {
-          return sl.field_d;
+          return ChatMessageDecoder.field_d;
         }
         return (UiTheme) null;
     }

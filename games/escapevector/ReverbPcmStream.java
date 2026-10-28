@@ -202,7 +202,7 @@ final class ReverbPcmStream extends PcmStream {
           if (this.inputStream == null) {
             continue;
           }
-          qg.a(this.inputBuffer, 0, var4);
+          ArraySupport.clear(this.inputBuffer, 0, var4);
         }
     }
 

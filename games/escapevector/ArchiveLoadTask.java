@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qk {
+final class ArchiveLoadTask {
     static dn field_e;
-    String field_i;
-    int field_b;
+    String groupName;
+    int groupId;
     static int spriteCount;
-    String field_d;
-    ResourceArchive field_h;
+    String progressText;
+    ResourceArchive archive;
     static String field_a;
     static SystemTask field_g;
     static int[] spritePalette;
-    String field_c;
+    String waitingText;
 
     public static void releaseStatics(byte guard) {
         int var1 = -8 / ((4 - guard) / 38);
@@ -26,22 +26,22 @@ final class qk {
         mj.field_d = 0;
         int var2 = -17 % ((-17 - param1) / 39);
         AlternateUsernameCredentials.field_q.b(-26480, param0);
-        gi.a((byte) -123);
+        ChatMessage.clearFrameOffsets((byte) -123);
     }
 
-    final static void a(int[] param0, int param1) {
+    final static void cycleSelectionFromArrowKey(int[] choices, int guard) {
         String stackIn_19_2 = null;
         try {
           if (PasswordValidator.field_n == 97 ||
             PasswordValidator.field_n == 99) {
             int var2_int = di.field_d.field_h;
             var2_int++;
-            if (var2_int >= param0.length) {
+            if (var2_int >= choices.length) {
               var2_int = 0;
             }
             di.field_d.a(false, var2_int);
           }
-          if (param1 != 0) {
+          if (guard != 0) {
             field_e = (dn) null;
           }
           if (96 != PasswordValidator.field_n &&
@@ -51,7 +51,7 @@ final class qk {
           int var2_intLifetime1 = di.field_d.field_h;
           var2_intLifetime1--;
           if (0 > var2_intLifetime1) {
-            var2_intLifetime1 = -1 + param0.length;
+            var2_intLifetime1 = -1 + choices.length;
           }
           di.field_d.a(false, var2_intLifetime1);
           return;
@@ -60,12 +60,12 @@ final class qk {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_18_0 = var2;
           StringBuilder stackIn_18_1 = new StringBuilder().append("qk.C(");
-          if (param0 == null) {
+          if (choices == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
         }
     }
 

@@ -159,7 +159,7 @@ final class gn {
         if (param1 < 0) {
           return false;
         }
-        int var3 = je.a(false, this.field_j);
+        int var3 = SpriteFactorySupport.levelCount(false, this.field_j);
         if (var3 <= param1) {
           return false;
         }
@@ -179,7 +179,7 @@ final class gn {
         if (param0 < 0) {
           return -1;
         }
-        int var3 = je.a(false, this.field_j);
+        int var3 = SpriteFactorySupport.levelCount(false, this.field_j);
         if (param0 >= var3) {
           return -1;
         }
@@ -245,7 +245,7 @@ final class gn {
             if (param1 < 0) {
               return;
             }
-            int var4_int = je.a(false, this.field_j);
+            int var4_int = SpriteFactorySupport.levelCount(false, this.field_j);
             if (var4_int <= param1) {
               return;
             }

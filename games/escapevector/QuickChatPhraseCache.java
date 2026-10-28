@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ff {
-    private ResourceArchive field_d;
-    private WeightedLruCache field_c;
+final class QuickChatPhraseCache {
+    private ResourceArchive localArchive;
+    private WeightedLruCache cache;
     static int field_h;
-    private ResourceArchive field_j;
+    private ResourceArchive globalArchive;
     static TerrainMaskSupport field_b;
     static int field_e;
     static boolean field_g;
@@ -13,18 +13,18 @@ final class ff {
     static String field_a;
     static PcmSample field_i;
 
-    final static void a(String param0, boolean param1, int param2, boolean param3) {
+    final static void showLoginDialog(String unusedMessage, boolean allowGuest, int guard, boolean showCreateAccount) {
         try {
-          if (param2 != 64) {
+          if (guard != 64) {
             field_i = (PcmSample) null;
           }
           fc.a(3161);
-          Checkbox.field_F.closeAllPanels(param2 ^ 17479);
-          PcmResampler.field_d = new LoginForm(StrongCacheEntry.field_v, (String) null, DialWidget.field_H, param3, param1);
+          Checkbox.field_F.closeAllPanels(guard ^ 17479);
+          PcmResampler.field_d = new LoginForm(StrongCacheEntry.field_v, (String) null, DialWidget.field_H, showCreateAccount, allowGuest);
           rd.field_c = new LoginDialog(Checkbox.field_F, PcmResampler.field_d);
           Checkbox.field_F.pushPanel(rd.field_c, 40);
         } catch (RuntimeException runtimeException) {
-          throw t.a((Throwable) ((Object) runtimeException), "ff.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ff.A(" + (unusedMessage != null ? "{...}" : "null") + ',' + allowGuest + ',' + guard + ',' + showCreateAccount + ')');
         }
     }
 
@@ -40,36 +40,36 @@ final class ff {
         field_a = null;
     }
 
-    final QuickChatPhraseDefinition a(int param0, byte param1) {
+    final QuickChatPhraseDefinition phrase(int id, byte guard) {
         byte[] var4 = null;
-        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_c.get((long)param0, (byte) -54));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.cache.get((long)id, (byte) -54));
         if (var3 != null) {
           return var3;
         }
-        if (param0 >= 32768) {
-          var4 = this.field_j.getFile(1, (byte) -97, 32767 & param0);
+        if (id >= 32768) {
+          var4 = this.globalArchive.getFile(1, (byte) -97, 32767 & id);
         } else {
-          var4 = this.field_d.getFile(1, (byte) -97, param0);
+          var4 = this.localArchive.getFile(1, (byte) -97, id);
         }
         var3 = new QuickChatPhraseDefinition();
         if (var4 != null) {
           var3.decode(new PacketBuffer(var4), 0);
         }
-        if (param0 >= 32768) {
+        if (id >= 32768) {
           var3.markGlobalResponses((byte) 88);
         }
-        if (param1 <= -118) {
-          this.field_c.put(var3, (long)param0, (byte) 100);
+        if (guard <= -118) {
+          this.cache.put(var3, (long)id, (byte) 100);
           return var3;
         }
         field_e = -127;
-        this.field_c.put(var3, (long)param0, (byte) 100);
+        this.cache.put(var3, (long)id, (byte) 100);
         return var3;
     }
 
-    final static void a(byte param0) {
-        if (param0 <= 50) {
-          ff.a((byte) -15);
+    final static void advanceMenuTransition(byte guard) {
+        if (guard <= 50) {
+          QuickChatPhraseCache.advanceMenuTransition((byte) -15);
         }
         SectorCacheStore.a((byte) 123);
         if (mj.field_d != 0) {
@@ -90,7 +90,7 @@ final class ff {
         } else {
           dj.field_c = PcmSampleStream.createAtRatePercentQ6(SecondaryNodeHashTable.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
           ObjectSpriteSet.field_e.addSubstream(dj.field_c);
-          sj.a(8192, (byte) 51);
+          StringNode.playFrameAppearSound(8192, (byte) 51);
           if (mj.field_d < 1000) {
             mj.field_d = mj.field_d + 1;
             AlternateUsernameCredentials.field_q.a(400);
@@ -105,7 +105,7 @@ final class ff {
         }
         dj.field_c = PcmSampleStream.createAtRatePercentQ6(SecondaryNodeHashTable.field_g, 100, 3072 * IterableNodeHashTable.field_c / 64, 8192);
         ObjectSpriteSet.field_e.addSubstream(dj.field_c);
-        sj.a(8192, (byte) 51);
+        StringNode.playFrameAppearSound(8192, (byte) 51);
         if (mj.field_d < 1000) {
           mj.field_d = mj.field_d + 1;
           AlternateUsernameCredentials.field_q.a(400);
@@ -118,7 +118,7 @@ final class ff {
         IntValueNode.field_j = true;
     }
 
-    private ff() throws Throwable {
+    private QuickChatPhraseCache() throws Throwable {
         throw new Error();
     }
 

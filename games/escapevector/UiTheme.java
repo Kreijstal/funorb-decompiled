@@ -64,14 +64,14 @@ final class UiTheme {
               int var13 = var9 / var8;
               var12 = var8 + (var9 % var8 + var13 - 1) / var13 * 2;
             }
-            if (null == co.field_c) {
-              co.field_c = new String[16];
+            if (null == InputGlyphSupport.field_c) {
+              InputGlyphSupport.field_c = new String[16];
             }
-            int var11Lifetime1 = this.tooltipFont.wrapLines(text, new int[]{var12}, co.field_c);
+            int var11Lifetime1 = this.tooltipFont.wrapLines(text, new int[]{var12}, InputGlyphSupport.field_c);
             var9 = 0;
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             for (int var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              int var14 = this.tooltipFont.stringWidth(co.field_c[var13Lifetime2]);
+              int var14 = this.tooltipFont.stringWidth(InputGlyphSupport.field_c[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }

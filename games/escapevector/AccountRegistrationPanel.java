@@ -183,7 +183,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_P = new TextButton(CipherPacketBuffer.field_p, (UiListener) null);
         this.field_S.tooltip = ModalPanel.field_K;
         this.field_I.tooltip = en.field_a;
-        this.field_R.tooltip = co.field_f;
+        this.field_R.tooltip = InputGlyphSupport.field_f;
         this.field_Q.tooltip = RepeatedCharacterSupport.field_b;
         this.field_U.tooltip = AlternateUsernameCredentials.field_i;
         this.field_N.tooltip = ta.field_k;
@@ -269,7 +269,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           if (var4 == ArchiveProvider.field_a) {
             return false;
           }
-          if (var4 == of.field_f) {
+          if (var4 == SpriteDecodeSupport.field_f) {
             return false;
           }
           if (var4 != GradientOutlineTextPainter.field_s) {
@@ -364,10 +364,10 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
 
     final static java.awt.Canvas i(byte param0) {
         if (param0 == 10) {
-          return null == IsaacRandom.field_d ? of.field_d : (java.awt.Canvas) ((Object) IsaacRandom.field_d);
+          return null == IsaacRandom.field_d ? SpriteDecodeSupport.field_d : (java.awt.Canvas) ((Object) IsaacRandom.field_d);
         }
         field_M = (ObjectSpriteSet[]) null;
-        return null == IsaacRandom.field_d ? of.field_d : (java.awt.Canvas) ((Object) IsaacRandom.field_d);
+        return null == IsaacRandom.field_d ? SpriteDecodeSupport.field_d : (java.awt.Canvas) ((Object) IsaacRandom.field_d);
     }
 
     final void updateHover(int guard, int offsetY, int offsetX, UiComponent root) {

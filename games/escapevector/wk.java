@@ -24,9 +24,9 @@ final class wk {
         if (param1 != 55) {
           wk.a(50, 41, 94);
         }
-        if (null == vi.field_e ||
-          !(param0 <= vi.field_e.length)) {
-          vi.field_e = new int[param0 * 2];
+        if (null == ChatHistorySupport.field_e ||
+          !(param0 <= ChatHistorySupport.field_e.length)) {
+          ChatHistorySupport.field_e = new int[param0 * 2];
         }
         if (null == DualLinkNode.field_k ||
           !(param0 <= DualLinkNode.field_k.length)) {

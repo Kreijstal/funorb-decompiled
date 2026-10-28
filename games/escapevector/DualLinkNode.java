@@ -10,7 +10,7 @@ class DualLinkNode extends IntrusiveNode {
     static int field_o;
     static int[] field_m;
     static int[] field_k;
-    static uc field_n;
+    static ArchivePreloader field_n;
     static String field_g;
 
     final void unlinkSecondary(int guard) {
@@ -93,7 +93,7 @@ class DualLinkNode extends IntrusiveNode {
           kh.field_c = param0;
           SelfDestructEffects.field_j = (Js5Transport) ((Object) new SocketJs5Transport());
           ShipHullGeometry.field_b = new DiskCacheWorker(param1);
-          FullscreenFocusCanvas.field_e = new sk(SelfDestructEffects.field_j, ShipHullGeometry.field_b);
+          FullscreenFocusCanvas.field_e = new Js5ArchiveManager(SelfDestructEffects.field_j, ShipHullGeometry.field_b);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "fl.W(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

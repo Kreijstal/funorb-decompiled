@@ -30,7 +30,7 @@ final class ShipHullGeometry {
 
     final static void a(int param0, int[] param1, int[] param2) {
         try {
-          gi.a(param0 + param1.length, param2, 1, 0, param1);
+          ChatMessage.sortIntPairs(param0 + param1.length, param2, 1, 0, param1);
         } catch (RuntimeException runtimeException) {
           throw t.a((Throwable) ((Object) runtimeException), "uk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

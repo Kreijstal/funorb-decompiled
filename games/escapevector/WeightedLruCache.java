@@ -126,7 +126,7 @@ final class WeightedLruCache {
           if (guard != 1) {
             WeightedLruCache.releaseStatics(true);
           }
-          if (uc.a(glyphArchive, 121, groupId, fileId)) {
+          if (ArchivePreloader.loadSpriteSheet(glyphArchive, 121, groupId, fileId)) {
             BinaryBitmapFont stackIn_6_0 = DropTargetWidget.a(16826, metricsArchive.getFile(groupId, (byte) -97, fileId));
             return stackIn_6_0;
           }

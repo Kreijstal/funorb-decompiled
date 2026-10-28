@@ -11,13 +11,13 @@ final class ek {
         mj.field_d = 0;
         di.field_d = null;
         if (!param1) {
-          gi.a((byte) -58);
-          qk.field_e = new dn(param0);
+          ChatMessage.clearFrameOffsets((byte) -58);
+          ArchiveLoadTask.field_e = new dn(param0);
           return;
         }
         ek.releaseStatics(-110);
-        gi.a((byte) -58);
-        qk.field_e = new dn(param0);
+        ChatMessage.clearFrameOffsets((byte) -58);
+        ArchiveLoadTask.field_e = new dn(param0);
     }
 
     public static void releaseStatics(int guard) {

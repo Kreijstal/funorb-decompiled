@@ -50,7 +50,7 @@ class LegacyWidgetStyle extends LegacyStyleNode {
         String stackIn_18_2 = null;
         int var10 = EscapeVector.obfuscationControl;
         try {
-          int var5_int = je.a(false, mode);
+          int var5_int = SpriteFactorySupport.levelCount(false, mode);
           if (0 >= var5_int) {
             byte[][] stackIn_3_0 = (byte[][]) null;
             return stackIn_3_0;

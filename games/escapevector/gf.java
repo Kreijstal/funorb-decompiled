@@ -27,7 +27,7 @@ final class gf {
 
     final static int a(byte param0, int param1) {
         int var3 = EscapeVector.obfuscationControl;
-        qk.field_g = null;
+        ArchiveLoadTask.field_g = null;
         NameSuggestionsPanel.field_I = null;
         ke.field_b = 0;
         int var2 = AgeValidator.field_n;

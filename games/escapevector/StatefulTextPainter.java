@@ -32,7 +32,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           if (param1 != -18109) {
             field_v = (String) null;
           }
-          if (uc.a(param0, 96, param3, param2)) {
+          if (ArchivePreloader.loadSpriteSheet(param0, 96, param3, param2)) {
             IndexedSprite stackIn_6_0 = da.b((byte) 8);
             return stackIn_6_0;
           }
@@ -260,7 +260,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
               }
             }
           } else {
-            qg.a(this.stateLayers, 0, target.stateLayers, 0, 6);
+            ArraySupport.copy(this.stateLayers, 0, target.stateLayers, 0, 6);
           }
           if (guard > 120) {
             return;

@@ -267,7 +267,7 @@ final class LinkButtonPainter implements WidgetPainter {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
-          if (!uc.a(param4, param1 ^ 198630719, param0, param3)) {
+          if (!ArchivePreloader.loadSpriteSheet(param4, param1 ^ 198630719, param0, param3)) {
             Object stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }

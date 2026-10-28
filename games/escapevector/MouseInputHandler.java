@@ -12,7 +12,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           AlphaContainer.mouseIdleTicks = 0;
           IterableDualLinkDeque.pendingMouseX = param0.getX();
-          jk.pendingMouseY = param0.getY();
+          AchievementGrantRule.pendingMouseY = param0.getY();
           ke.mouseInputChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -37,7 +37,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           AlphaContainer.mouseIdleTicks = 0;
           IterableDualLinkDeque.pendingMouseX = -1;
-          jk.pendingMouseY = -1;
+          AchievementGrantRule.pendingMouseY = -1;
           ke.mouseInputChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -129,7 +129,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != QuickChatDynamicCommand.mouseHandler) {
             AlphaContainer.mouseIdleTicks = 0;
             IterableDualLinkDeque.pendingMouseX = param0.getX();
-            jk.pendingMouseY = param0.getY();
+            AchievementGrantRule.pendingMouseY = param0.getY();
             ke.mouseInputChanged = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -176,7 +176,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != QuickChatDynamicCommand.mouseHandler) {
             AlphaContainer.mouseIdleTicks = 0;
             IterableDualLinkDeque.pendingMouseX = param0.getX();
-            jk.pendingMouseY = param0.getY();
+            AchievementGrantRule.pendingMouseY = param0.getY();
             ke.mouseInputChanged = true;
           }
         } catch (RuntimeException runtimeException) {

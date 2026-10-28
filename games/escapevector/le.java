@@ -43,7 +43,7 @@ final class le {
           field_a = (QuickChatDynamicCommand) null;
         }
         if (!AlternateUsernameCredentials.field_j.ensureIndex(0)) {
-          return ff.field_a;
+          return QuickChatPhraseCache.field_a;
         }
         if (!AlternateUsernameCredentials.field_j.tryLoadAllGroups((byte) -119)) {
           return IntrusiveDequeCursor.field_b + " - " + AlternateUsernameCredentials.field_j.overallProgress(-67) + "%";

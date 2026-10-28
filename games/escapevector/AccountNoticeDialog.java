@@ -53,7 +53,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         int var7 = 1;
         BinaryBitmapFont var8 = ByteStorage.gameFont;
         int[][] var18 = ValidatedTextWidget.field_U[param2];
-        int var10 = je.a(false, param2);
+        int var10 = SpriteFactorySupport.levelCount(false, param2);
         if (1 + param1 < var10) {
           var10 = 1 + param1;
         }
@@ -240,7 +240,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         var0 = var15;
         while (10 >= var15) {
             var1 = -8 + 8 * var15;
-            field_ab[var15] = ja.a(SpriteOffset.a(field_db[7][7 + var1], 255L), ja.a(ja.a(SpriteOffset.a(field_db[5][var1 + 5], 16711680L), ja.a(SpriteOffset.a(4278190080L, field_db[4][4 + var1]), ja.a(ja.a(SpriteOffset.a(field_db[2][2 + var1], 280375465082880L), ja.a(SpriteOffset.a(field_db[1][var1 + 1], 71776119061217280L), SpriteOffset.a(field_db[0][var1], -72057594037927936L))), SpriteOffset.a(1095216660480L, field_db[3][3 + var1])))), SpriteOffset.a(65280L, field_db[6][var1 + 6])));
+            field_ab[var15] = DisplayModeInfo.bitwiseOr(SpriteOffset.a(field_db[7][7 + var1], 255L), DisplayModeInfo.bitwiseOr(DisplayModeInfo.bitwiseOr(SpriteOffset.a(field_db[5][var1 + 5], 16711680L), DisplayModeInfo.bitwiseOr(SpriteOffset.a(4278190080L, field_db[4][4 + var1]), DisplayModeInfo.bitwiseOr(DisplayModeInfo.bitwiseOr(SpriteOffset.a(field_db[2][2 + var1], 280375465082880L), DisplayModeInfo.bitwiseOr(SpriteOffset.a(field_db[1][var1 + 1], 71776119061217280L), SpriteOffset.a(field_db[0][var1], -72057594037927936L))), SpriteOffset.a(1095216660480L, field_db[3][3 + var1])))), SpriteOffset.a(65280L, field_db[6][var1 + 6])));
             var15++;
         }
     }

@@ -36,7 +36,7 @@ final class BufferedRandomAccessFile {
             if (this.field_a != -1L &&
               this.field_d + (long)param3 > this.field_a + (long)this.field_h.length) {
               int var5_int = (int)(this.field_a - this.field_d + (long)this.field_h.length);
-              qg.a(param2, param1, this.field_h, (int)(this.field_d - this.field_a), var5_int);
+              ArraySupport.copy(param2, param1, this.field_h, (int)(this.field_d - this.field_a), var5_int);
               param1 = param1 + var5_int;
               this.field_d = this.field_d + (long)var5_int;
               param3 = param3 - var5_int;
@@ -72,7 +72,7 @@ final class BufferedRandomAccessFile {
               if (var5_long > -1L &&
                 var5_long < var7) {
                 int var9 = (int)(var7 - var5_long);
-                qg.a(param2, (int)(var5_long + (long)param1 - this.field_d), this.field_g, (int)(var5_long - this.field_f), var9);
+                ArraySupport.copy(param2, (int)(var5_long + (long)param1 - this.field_d), this.field_g, (int)(var5_long - this.field_f), var9);
               }
               this.field_d = this.field_d + (long)param3;
               return;
@@ -81,7 +81,7 @@ final class BufferedRandomAccessFile {
               if (this.field_a == -1L) {
                 this.field_a = this.field_d;
               }
-              qg.a(param2, param1, this.field_h, (int)(this.field_d - this.field_a), param3);
+              ArraySupport.copy(param2, param1, this.field_h, (int)(this.field_d - this.field_a), param3);
               this.field_d = this.field_d + (long)param3;
               if (this.field_d - this.field_a > (long)this.field_l) {
                 this.field_l = (int)(this.field_d - this.field_a);
@@ -151,7 +151,7 @@ final class BufferedRandomAccessFile {
           if (var2_long > -1L &&
             var2_long < var4) {
             int var6 = (int)(-var2_long + var4);
-            qg.a(this.field_h, (int)(-this.field_a + var2_long), this.field_g, (int)(-this.field_f + var2_long), var6);
+            ArraySupport.copy(this.field_h, (int)(-this.field_a + var2_long), this.field_g, (int)(-this.field_f + var2_long), var6);
           }
           this.field_l = 0;
           this.field_a = -1L;
@@ -221,7 +221,7 @@ final class BufferedRandomAccessFile {
             if (this.field_a != -1L &&
               this.field_d >= this.field_a &&
               (long)this.field_l + this.field_a >= (long)param1 + this.field_d) {
-              qg.a(this.field_h, (int)(-this.field_a + this.field_d), param3, param0, param1);
+              ArraySupport.copy(this.field_h, (int)(-this.field_a + this.field_d), param3, param0, param1);
               this.field_d = this.field_d + (long)param1;
               return;
             }
@@ -234,7 +234,7 @@ final class BufferedRandomAccessFile {
               if (param1 < var9_int) {
                 var9_int = param1;
               }
-              qg.a(this.field_g, (int)(this.field_d - this.field_f), param3, param0, var9_int);
+              ArraySupport.copy(this.field_g, (int)(this.field_d - this.field_f), param3, param0, var9_int);
               param0 = param0 + var9_int;
               param1 = param1 - var9_int;
               this.field_d = this.field_d + (long)var9_int;
@@ -265,7 +265,7 @@ final class BufferedRandomAccessFile {
               if (var9_intLifetime1Lifetime1 > this.field_j) {
                 var9_intLifetime1Lifetime1 = this.field_j;
               }
-              qg.a(this.field_g, 0, param3, param0, var9_intLifetime1Lifetime1);
+              ArraySupport.copy(this.field_g, 0, param3, param0, var9_intLifetime1Lifetime1);
               this.field_d = this.field_d + (long)var9_intLifetime1Lifetime1;
               param1 = param1 - var9_intLifetime1Lifetime1;
               param0 = param0 + var9_intLifetime1Lifetime1;
@@ -307,7 +307,7 @@ final class BufferedRandomAccessFile {
               if (var9 > -1L &&
                 var11 > var9) {
                 int var13 = (int)(var11 - var9);
-                qg.a(this.field_h, (int)(-this.field_a + var9), param3, var7 + (int)(var9 - var5_long), var13);
+                ArraySupport.copy(this.field_h, (int)(-this.field_a + var9), param3, var7 + (int)(var9 - var5_long), var13);
                 if (this.field_d < var11) {
                   param1 = (int)((long)param1 - (var11 - this.field_d));
                   this.field_d = var11;

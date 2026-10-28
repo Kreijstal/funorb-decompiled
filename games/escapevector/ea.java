@@ -32,8 +32,8 @@ final class ea {
           if (param0 == null) {
             return null;
           }
-          CoverageBitmapFont var2 = new CoverageBitmapFont(param0, gn.spriteOffsetXs, gi.spriteOffsetYs, qh.spriteWidths, SavedDataQuerySupport.spriteHeights, qk.spritePalette, qe.spriteIndices);
-          of.a(false);
+          CoverageBitmapFont var2 = new CoverageBitmapFont(param0, gn.spriteOffsetXs, ChatMessage.spriteOffsetYs, qh.spriteWidths, SavedDataQuerySupport.spriteHeights, ArchiveLoadTask.spritePalette, qe.spriteIndices);
+          SpriteDecodeSupport.releaseSpriteSheet(false);
           CoverageBitmapFont stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,7 +101,7 @@ final class ea {
     final static boolean c(byte param0) {
         int var3 = EscapeVector.obfuscationControl;
         try {
-          ReflectionCheck var4 = (ReflectionCheck) (je.field_a.first(false));
+          ReflectionCheck var4 = (ReflectionCheck) (SpriteFactorySupport.field_a.first(false));
           ReflectionCheck var1 = var4;
           if (var1 == null) {
             return false;

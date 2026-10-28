@@ -44,7 +44,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             ((AccountMessagePanel) (Object) stackIn_14_0).appendActionButton(stackIn_14_1, stackIn_15_2, -1);
           }
           if (responseCode == 3) {
-            var6.appendActionButton(false, qk.field_a, 7);
+            var6.appendActionButton(false, ArchiveLoadTask.field_a, 7);
           } else if (responseCode == 4) {
             var6.appendActionButton(false, SavedDataQuery.field_k, 8);
           } else if (6 != responseCode) {
@@ -117,7 +117,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         String stackIn_17_2 = null;
         try {
           if (param4 > 53) {
-            byte[][][] stackIn_4_0 = sl.a(param1, param3, param0, param2, 2, 0);
+            byte[][][] stackIn_4_0 = ChatMessageDecoder.loadCampaignsByArchiveKind(param1, param3, param0, param2, 2, 0);
             return stackIn_4_0;
           }
           byte[][][] stackIn_2_0 = (byte[][][]) null;
@@ -246,7 +246,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         try {
           int var2_int = source.length;
           byte[] var3 = new byte[var2_int];
-          qg.a(source, sourceOffset, var3, 0, var2_int);
+          ArraySupport.copy(source, sourceOffset, var3, 0, var2_int);
           byte[] stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

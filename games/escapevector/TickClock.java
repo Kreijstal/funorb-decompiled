@@ -71,7 +71,7 @@ abstract class TickClock {
             LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 300, param1);
           }
           mj.field_d = 0;
-          gi.a((byte) -71);
+          ChatMessage.clearFrameOffsets((byte) -71);
           return;
         }
         if (null != BoundedRandomAccessFile.activeSession) {
@@ -82,7 +82,7 @@ abstract class TickClock {
           Sprite[] var5Lifetime1 = (Sprite[]) null;
           LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 240, param1);
           mj.field_d = 0;
-          gi.a((byte) -71);
+          ChatMessage.clearFrameOffsets((byte) -71);
           return;
         }
         ValidatedTextWidget.field_X = 6340704;
@@ -92,7 +92,7 @@ abstract class TickClock {
         Sprite[] var3Lifetime1 = (Sprite[]) null;
         LevelObject.a(0, 0, false, (Sprite[]) null, 0, 24, (Sprite[]) null, 320, 22, ByteStorage.gameFont, 300, param1);
         mj.field_d = 0;
-        gi.a((byte) -71);
+        ChatMessage.clearFrameOffsets((byte) -71);
         return;
     }
 

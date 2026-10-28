@@ -181,7 +181,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         if (param1 != 121) {
           field_O = (String) null;
         }
-        int var3 = je.a(false, param0);
+        int var3 = SpriteFactorySupport.levelCount(false, param0);
         if (var2 >= var3) {
           var2 = 0;
         } else if (var2 == 0) {
@@ -291,7 +291,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           if (var9 == NameAvailabilityValidator.field_q) {
             var8 = kg.field_b;
           } else if (var9 == oh.field_n) {
-            var8 = wi.field_c;
+            var8 = TileSpriteCacheEntry.field_c;
           }
           LabeledField dupTemp$0 = new LabeledField(10, this.y, -20 + this.width, 25, this.identifierField, false, 80, 3, var7, 16777215, var8);
           LabeledField var12 = dupTemp$0;

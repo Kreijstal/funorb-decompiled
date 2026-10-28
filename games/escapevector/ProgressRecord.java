@@ -16,7 +16,7 @@ final class ProgressRecord extends IntrusiveNode {
         String stackIn_8_2 = null;
         try {
           int var4_int = -48 % ((guard + 38) / 33);
-          if (uc.a(archive, 120, groupId, fileId)) {
+          if (ArchivePreloader.loadSpriteSheet(archive, 120, groupId, fileId)) {
             Sprite[] stackIn_4_0 = LoginStage.buildRgbSpritesFromSheet(121);
             return stackIn_4_0;
           }

@@ -22,7 +22,7 @@ final class mb {
               }
               if (p.field_h == 2) {
                 PacketBuffer.field_h = false;
-                gi.a((byte) -126);
+                ChatMessage.clearFrameOffsets((byte) -126);
                 di.field_d = null;
                 if (null != IntValueNode.field_i) {
                   ml.a(IntValueNode.field_i, 3, (byte) 101);
@@ -32,7 +32,7 @@ final class mb {
             }
             p.field_h = 0;
             mj.field_d = 0;
-            gi.a((byte) -105);
+            ChatMessage.clearFrameOffsets((byte) -105);
           }
           if (param0 >= -47) {
             return;
@@ -63,12 +63,12 @@ final class mb {
                   return;
                 }
               } else if (ch.field_b) {
-                var2 = (qk.field_e.f(-1));
+                var2 = (ArchiveLoadTask.field_e.f(-1));
                 if (var2) {
                   return;
                 }
               } else if (AlternateUsernameCredentials.field_q != null) {
-                ff.a((byte) 127);
+                QuickChatPhraseCache.advanceMenuTransition((byte) 127);
               } else if (null != da.field_c) {
                 RatingQuery.e(-46);
               } else {
@@ -140,14 +140,14 @@ final class mb {
         String stackIn_8_2 = null;
         try {
           TextFieldValidator.field_j = param0;
-          of.field_a = new Sprite(param0.fullWidth, param0.fullHeight);
+          SpriteDecodeSupport.field_a = new Sprite(param0.fullWidth, param0.fullHeight);
           if (param1 > -11) {
             field_a = (PcmSampleStream) null;
           }
           int[] var3 = new int[4];
           int[] var2 = var3;
           SoftwareRasterizer.saveClip(var3);
-          of.field_a.bindAsFramebuffer();
+          SpriteDecodeSupport.field_a.bindAsFramebuffer();
           param0.drawMirrored(0, 0);
           AlphaContainer.field_D.a(107);
           SoftwareRasterizer.restoreClip(var3);

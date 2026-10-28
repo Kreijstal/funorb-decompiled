@@ -19,7 +19,7 @@ final class RatingQuery extends IntrusiveNode {
 
     final static void e(int param0) {
         if (mj.field_d == 0) {
-          sj.a(8192, (byte) 51);
+          StringNode.playFrameAppearSound(8192, (byte) 51);
         }
         IntValueNode.field_j = true;
         if (param0 != -46) {

@@ -252,7 +252,7 @@ final class pf {
             field_e = (String[]) null;
           }
           int[] var21 = TextLayoutLine.a(param2, param3, var11, (byte) -17);
-          this.field_a = DynamicTerrainRenderer.a(var6, var20, var7, var5_int, param0, var9, var10, false, var21);
+          this.field_a = DynamicTerrainRenderer.createButtonRow(var6, var20, var7, var5_int, param0, var9, var10, false, var21);
           int[] stackIn_6_0 = var8;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -328,7 +328,7 @@ final class pf {
           }
           if (PasswordValidator.field_n == 13) {
             TextLayout.field_b = false;
-            qk.a((var2), -87);
+            ArchiveLoadTask.a((var2), -87);
           }
           if (this.a((var2), (byte) 91)) {
             return true;
@@ -345,7 +345,7 @@ final class pf {
         if (param0 <= 61) {
           field_h = (String) null;
         }
-        int var2 = this.a(1, UiContainer.field_y, dh.field_d);
+        int var2 = this.a(1, UiContainer.field_y, GzipDecoder.field_d);
         int var3 = this.a(1, LoginDialog.field_ob, sf.field_c);
         this.field_b.a(var3, (byte) 121, var2);
         boolean discarded$0 = this.a(true, (byte) 91);
@@ -410,7 +410,7 @@ final class pf {
     private final void b(int param0) {
         pa.a(true);
         mj.field_d = 0;
-        gi.a((byte) -113);
+        ChatMessage.clearFrameOffsets((byte) -113);
         if (param0 != -15268) {
           return;
         }
@@ -658,7 +658,7 @@ final class pf {
           }
           if (4 == var4) {
             TextLayout.field_b = false;
-            qk.a(param0, param1 + 34);
+            ArchiveLoadTask.a(param0, param1 + 34);
             return true;
           }
           if (this.b((byte) 89) == var4) {
@@ -720,7 +720,7 @@ final class pf {
 
     private final void c(byte param0) {
         if (mj.field_d == 0) {
-          sj.a(8192, (byte) 51);
+          StringNode.playFrameAppearSound(8192, (byte) 51);
         }
         IntValueNode.field_j = true;
         int var2 = 6144 * IterableNodeHashTable.field_c / 64;
@@ -801,7 +801,7 @@ final class pf {
             var10 = var10 + var12_ref_dk.width;
           }
           int var11Lifetime1 = 640;
-          int var12 = DynamicTerrainRenderer.a(1, var9, var11Lifetime1, var10);
+          int var12 = DynamicTerrainRenderer.calculateButtonGap(1, var9, var11Lifetime1, var10);
           int var13 = PcmResampler.a(var10, (byte) 86, var11Lifetime1, var9, var12);
           int var14 = 0;
           int var15 = var14 + var13;
@@ -865,8 +865,8 @@ final class pf {
         int var6 = var4.length + var5.length;
         int var7 = 60 / ((50 - param0) / 47);
         this.field_d = new int[var6];
-        qg.a(var4, 0, this.field_d, 0, var4.length);
-        qg.a(var5, 0, this.field_d, var4.length, var5.length);
+        ArraySupport.copy(var4, 0, this.field_d, 0, var4.length);
+        ArraySupport.copy(var5, 0, this.field_d, var4.length, var5.length);
         IndexedSpriteState.a(this.field_c, 0);
         IndexedSpriteState.a(this.field_a, 0);
     }
@@ -886,7 +886,7 @@ final class pf {
               }
               var3 = var3 + param1;
             }
-            je.a(param0, var3);
+            SpriteFactorySupport.printEncodedError(param0, var3);
             var3 = ResizableModalPanel.replaceAllLiteral(var3, ":", (byte) 111, "%3a");
             var3 = ResizableModalPanel.replaceAllLiteral(var3, "@", (byte) 111, "%40");
             var3 = ResizableModalPanel.replaceAllLiteral(var3, "&", (byte) 111, "%26");
@@ -932,9 +932,9 @@ final class pf {
           this.field_b = (wc) null;
         }
         this.field_b = new wc(param2);
-        int var4 = this.a(UiContainer.field_y, this.field_c, dh.field_d, 3);
+        int var4 = this.a(UiContainer.field_y, this.field_c, GzipDecoder.field_d, 3);
         if (var4 < 0) {
-          var4 = this.a(UiContainer.field_y, this.field_a, dh.field_d, 3);
+          var4 = this.a(UiContainer.field_y, this.field_a, GzipDecoder.field_d, 3);
         }
         this.field_b.a(125, param0, var4, 0);
     }

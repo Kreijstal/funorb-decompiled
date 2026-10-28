@@ -486,8 +486,8 @@ final class CachedArchiveProvider extends ArchiveProvider {
           if (!param1) {
             CachedArchiveProvider.releaseStatics((byte) 80);
           }
-          if (uc.a(param0, 116, param3, param2)) {
-            Sprite stackIn_6_0 = je.b(100);
+          if (ArchivePreloader.loadSpriteSheet(param0, 116, param3, param2)) {
+            Sprite stackIn_6_0 = SpriteFactorySupport.buildSpriteFromSheet(100);
             return stackIn_6_0;
           }
           Object stackIn_4_0 = null;
@@ -534,7 +534,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               }
               var4 = var4 + (CheckboxPainter.field_s + (en.field_k << 1) + ok.field_a);
             } else {
-              var4 = var4 + je.field_b;
+              var4 = var4 + SpriteFactorySupport.field_b;
             }
             var3_int++;
           }
