@@ -34,7 +34,7 @@ abstract class IndexedSpriteState {
           for (int var3 = 0; var3 < var1_int; var3++) {
             TriangleMesh var4_ref_ia = ByteStorage.logoMeshes[var3];
             var4_ref_ia.updateBounds((byte) 49);
-            LoginMethod.a(var3, 103);
+            LoginMethod.updateLogoMeshRotation(var3, 103);
             int var5 = var4_ref_ia.maxX + var4_ref_ia.minX >> 1;
             int var6 = var4_ref_ia.minY + var4_ref_ia.maxY >> 1;
             int var7 = var4_ref_ia.minZ + var4_ref_ia.maxZ >> 1;
@@ -82,7 +82,7 @@ abstract class IndexedSpriteState {
             }
             var21[var16] = -2147483648;
             TriangleMesh var17 = ByteStorage.logoMeshes[var16];
-            LoginMethod.a(var16, 61);
+            LoginMethod.updateLogoMeshRotation(var16, 61);
             for (int var18 = 0; 3 > var18; var18++) {
               TerrainMaskSupport.field_c[var18] = TerrainMaskSupport.field_c[var18] + SectorCacheStore.field_c[var15][var18];
             }

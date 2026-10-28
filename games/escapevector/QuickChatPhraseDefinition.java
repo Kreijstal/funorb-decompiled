@@ -101,7 +101,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var2 = 46 / ((-16 - guard) / 44);
         if (this.responseIds != null) {
           for (int var3 = 0; var3 < this.responseIds.length; var3++) {
-            this.responseIds[var3] = MatchingTextValidator.a(this.responseIds[var3], 32768);
+            this.responseIds[var3] = MatchingTextValidator.bitwiseOr(this.responseIds[var3], 32768);
           }
         }
     }

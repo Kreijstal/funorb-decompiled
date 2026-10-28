@@ -175,7 +175,7 @@ final class ChatMessageDecoder {
               AccountFormStage.field_d = SessionCounterState.field_d;
               var5.position = 0;
               int stackIn_11_0 = (!param0) ? -1 : -2;
-              NetworkGameClient.field_q = stackIn_11_0;
+              NetworkGameClient.oldestIncomingOpcode = stackIn_11_0;
               ArchiveIndex.field_t = stackIn_11_0;
               LoginPromptSupport.field_b = stackIn_11_0;
               MenuInputState.writeAccountHandshake(SpaceCompactionSupport.field_a, KeyboardStateSupport.field_b, true, DropTargetWidget.field_D, QuickChatDynamicCommand.outgoingPackets);

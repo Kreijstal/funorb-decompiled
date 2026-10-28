@@ -23,7 +23,7 @@ final class MeshMaterial {
         try {
           int var3_int = -113 % ((guard + 13) / 50);
           String var4 = (String) null;
-          int stackIn_1_0 = SelfDestructEffects.a((byte) -32, false, (String) null, firstText, secondText, 0, 0);
+          int stackIn_1_0 = SelfDestructEffects.pollAccountFormExchange((byte) -32, false, (String) null, firstText, secondText, 0, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

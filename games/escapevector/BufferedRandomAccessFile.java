@@ -412,7 +412,7 @@ final class BufferedRandomAccessFile {
               for (int var5_int = 0; var5_int < EmailSyntaxValidator.field_r; var5_int++) {
                 QuickChatDynamicCommand.incomingPackets.payload[var5_int] = var4_ref_dm.payload[var5_int];
               }
-              NetworkGameClient.field_q = ArchiveIndex.field_t;
+              NetworkGameClient.oldestIncomingOpcode = ArchiveIndex.field_t;
               ArchiveIndex.field_t = LoginPromptSupport.field_b;
               LoginPromptSupport.field_b = LegacyStyleNode.field_v;
               LegacyStyleNode.field_v = var4_ref_dm.opcode;
@@ -447,7 +447,7 @@ final class BufferedRandomAccessFile {
               return false;
             }
             if (LoginCredentials.field_a == 0) {
-              NetworkGameClient.field_q = ArchiveIndex.field_t;
+              NetworkGameClient.oldestIncomingOpcode = ArchiveIndex.field_t;
               ArchiveIndex.field_t = LoginPromptSupport.field_b;
               LoginPromptSupport.field_b = LegacyStyleNode.field_v;
               LegacyStyleNode.field_v = GameAppletShell.field_a;

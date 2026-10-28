@@ -3,8 +3,8 @@
  */
 final class PasswordValidator extends TextFieldValidator {
     static int field_n;
-    private EditableTextWidget field_o;
-    private EditableTextWidget field_q;
+    private EditableTextWidget emailField;
+    private EditableTextWidget identifierField;
     static ResourceArchive field_p;
     static String field_s;
     static String field_r;
@@ -12,7 +12,7 @@ final class PasswordValidator extends TextFieldValidator {
     final String messageForText(byte guard, String text) {
         String stackIn_37_2 = null;
         try {
-          String var7 = this.field_q.text.toLowerCase();
+          String var7 = this.identifierField.text.toLowerCase();
           String var4 = text.toLowerCase();
           if (0 == var4.length()) {
             return null;
@@ -22,7 +22,7 @@ final class PasswordValidator extends TextFieldValidator {
             String stackIn_6_0 = TerrainMap.field_e;
             return stackIn_6_0;
           }
-          if (MatchingTextValidator.b((byte) -78, var5)) {
+          if (MatchingTextValidator.containsNonAsciiAlphanumeric((byte) -78, var5)) {
             String stackIn_10_0 = ModeProgress.field_b;
             return stackIn_10_0;
           }
@@ -31,7 +31,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_14_0;
           }
           int var6 = 78 / ((guard - 10) / 51);
-          if (this.b((byte) 53, text)) {
+          if (this.containsEmailPortion((byte) 53, text)) {
             String stackIn_17_0 = CampaignLoadingSupport.field_b;
             return stackIn_17_0;
           }
@@ -67,8 +67,8 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static void h(int param0) {
-        if (param0 != -8055) {
+    final static void releaseLoadingScreenResources(int guard) {
+        if (guard != -8055) {
           field_n = -37;
           ImageProducerRasterBuffer.field_l = null;
           UiContainer.field_z = null;
@@ -78,14 +78,14 @@ final class PasswordValidator extends TextFieldValidator {
         UiContainer.field_z = null;
     }
 
-    private final boolean b(byte param0, String param1) {
+    private final boolean containsEmailPortion(byte guard, String password) {
         String stackIn_19_2 = null;
         try {
-          if (param0 != 53) {
+          if (guard != 53) {
             field_s = (String) null;
           }
-          String var3 = this.field_o.text.toLowerCase();
-          String var4 = param1.toLowerCase();
+          String var3 = this.emailField.text.toLowerCase();
+          String var4 = password.toLowerCase();
           if (var3.length() > 0) {
             if (0 >= var4.length()) {
               return false;
@@ -107,8 +107,8 @@ final class PasswordValidator extends TextFieldValidator {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_18_0 = var3_ref;
-          StringBuilder stackIn_18_1 = new StringBuilder().append("nk.H(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_18_1 = new StringBuilder().append("nk.H(").append(guard).append(',');
+          if (password == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -117,15 +117,15 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static int a(int param0, LegacyButton param1) {
+    final static int buttonSoundPan(int guard, LegacyButton button) {
         String stackIn_10_2 = null;
         try {
-          if (param1 == null) {
+          if (button == null) {
             int stackIn_2_0 = 8192;
             return stackIn_2_0;
           }
-          int var2_int = param1.x + param1.width / 2;
-          if (param0 >= -83) {
+          int var2_int = button.x + button.width / 2;
+          if (guard >= -83) {
             field_p = (ResourceArchive) null;
           }
           int stackIn_6_0 = var2_int * 16384 / 640;
@@ -134,8 +134,8 @@ final class PasswordValidator extends TextFieldValidator {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_9_0 = var2;
-          StringBuilder stackIn_9_1 = new StringBuilder().append("nk.I(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_9_1 = new StringBuilder().append("nk.I(").append(guard).append(',');
+          if (button == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -147,7 +147,7 @@ final class PasswordValidator extends TextFieldValidator {
     final ValidationState validateText(int guard, String text) {
         String stackIn_13_2 = null;
         try {
-          String var3 = this.field_q.text.toLowerCase();
+          String var3 = this.identifierField.text.toLowerCase();
           String var4 = text.toLowerCase();
           if (guard == ~var4.length()) {
             ValidationState stackIn_2_0 = ArchiveProvider.field_a;
@@ -157,7 +157,7 @@ final class PasswordValidator extends TextFieldValidator {
             ValidationState stackIn_5_0 = ArchiveProvider.field_a;
             return stackIn_5_0;
           }
-          if (!this.b((byte) 53, text)) {
+          if (!this.containsEmailPortion((byte) 53, text)) {
             return IsaacRandom.field_h;
           }
           ValidationState stackIn_9_0 = ArchiveProvider.field_a;
@@ -176,15 +176,15 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static int a(int param0, int param1) {
-        if (!AchievementRecord.a(param1, -102)) {
+    final static int modeSessionOption(int guard, int mode) {
+        if (!AchievementRecord.isModeAvailable(mode, -102)) {
           return 1;
         }
-        if (param0 == 1) {
-          return SavedDataQuerySupport.field_g[param1];
+        if (guard == 1) {
+          return SavedDataQuerySupport.modeSessionOptions[mode];
         }
         field_p = (ResourceArchive) null;
-        return SavedDataQuerySupport.field_g[param1];
+        return SavedDataQuerySupport.modeSessionOptions[mode];
     }
 
     public static void releaseStatics(int guard) {
@@ -199,23 +199,23 @@ final class PasswordValidator extends TextFieldValidator {
         field_r = null;
     }
 
-    final static void b(int param0, int param1) {
+    final static void setSessionAchievementBit(int bit, int guard) {
         if (null != SocketJs5Transport.field_r) {
-          SocketJs5Transport.field_r.setAchievementBit(param0, 3748);
+          SocketJs5Transport.field_r.setAchievementBit(bit, 3748);
         }
-        if (param1 > -121) {
-          PasswordValidator.a(-97, -50);
+        if (guard > -121) {
+          PasswordValidator.modeSessionOption(-97, -50);
           return;
         }
     }
 
-    PasswordValidator(EditableTextWidget param0, EditableTextWidget param1, EditableTextWidget param2) {
-        super(param0);
+    PasswordValidator(EditableTextWidget field, EditableTextWidget identifierField, EditableTextWidget emailField) {
+        super(field);
         try {
-          this.field_q = param1;
-          this.field_o = param2;
+          this.identifierField = identifierField;
+          this.emailField = emailField;
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "nk.<init>(" + (field != null ? "{...}" : "null") + ',' + (identifierField != null ? "{...}" : "null") + ',' + (emailField != null ? "{...}" : "null") + ')');
         }
     }
 

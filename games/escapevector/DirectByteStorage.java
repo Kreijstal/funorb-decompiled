@@ -188,23 +188,23 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    final static void a(PacketBuffer param0, int param1) {
+    final static void readPackedRatingValues(PacketBuffer input, int guard) {
         try {
-          CachedArchiveProvider.field_n = param0.readUnsignedShort(param1 - 1238557701) << 5;
-          int var2_int = param0.readUnsignedByte(0);
+          CachedArchiveProvider.field_n = input.readUnsignedShort(guard - 1238557701) << 5;
+          int var2_int = input.readUnsignedByte(0);
           CachedArchiveProvider.field_n = CachedArchiveProvider.field_n + (var2_int >> 3);
           IntegerParseSupport.field_d = 1835008 & var2_int << 18;
-          IntegerParseSupport.field_d = IntegerParseSupport.field_d + (param0.readUnsignedShort(1952) << 2);
-          int var2_intLifetime1 = param0.readUnsignedByte(param1 - 1238559653);
+          IntegerParseSupport.field_d = IntegerParseSupport.field_d + (input.readUnsignedShort(1952) << 2);
+          int var2_intLifetime1 = input.readUnsignedByte(guard - 1238559653);
           IntegerParseSupport.field_d = IntegerParseSupport.field_d + (var2_intLifetime1 >> 6);
           PointCloudEffect.field_u = (63 & var2_intLifetime1) << 15;
-          PointCloudEffect.field_u = PointCloudEffect.field_u + (param0.readUnsignedByte(param1 - 1238559653) << 7);
-          int var2_intLifetime2 = param0.readUnsignedByte(param1 ^ param1);
+          PointCloudEffect.field_u = PointCloudEffect.field_u + (input.readUnsignedByte(guard - 1238559653) << 7);
+          int var2_intLifetime2 = input.readUnsignedByte(guard ^ guard);
           SocketJs5Transport.field_s = (var2_intLifetime2 & 1) << 16;
           PointCloudEffect.field_u = PointCloudEffect.field_u + (var2_intLifetime2 >> 1);
-          SocketJs5Transport.field_s = SocketJs5Transport.field_s + param0.readUnsignedShort(1952);
+          SocketJs5Transport.field_s = SocketJs5Transport.field_s + input.readUnsignedShort(1952);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "km.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "km.H(" + (input != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

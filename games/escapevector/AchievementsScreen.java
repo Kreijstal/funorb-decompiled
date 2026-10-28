@@ -154,7 +154,7 @@ final class AchievementsScreen {
           int var7 = ((this.detailPanel.height - icon.fullHeight) / divisor - var5) / 3;
           int var8 = var7 + this.detailPanel.y + var4.maxAscent;
           int var9 = 320;
-          MatchingTextValidator.a(var8, var6, 16777215, -110, var9);
+          MatchingTextValidator.drawOutlinedTitle(var8, var6, 16777215, -110, var9);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ta.D(" + divisor + ',' + (icon != null ? "{...}" : "null") + ')');
         }
@@ -766,7 +766,7 @@ final class AchievementsScreen {
           }
           int var7_int = 3;
           String var8 = DynamicTerrainRenderer.field_m;
-          int var9 = SeekerMine.a(var8, 16777215, font);
+          int var9 = SeekerMine.paddedButtonTextWidth(var8, 16777215, font);
           int var10 = (-var9 + 640) / 2;
           this.highscoresButton = new LegacyButton(var7_int, actionId, var8, revealTick, frameId, font);
           this.highscoresButton.setPosition((byte) 124, var10, y);
@@ -812,7 +812,7 @@ final class AchievementsScreen {
         }
         if (HighscorePlayerRecord.field_d.selectionChanged) {
           LegacyButton var2 = this.selectedButton(true);
-          int var3 = PasswordValidator.a(-93, var2);
+          int var3 = PasswordValidator.buttonSoundPan(-93, var2);
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, IterableNodeHashTable.field_c * 1536 / 64, var3);
         }
     }
@@ -840,7 +840,7 @@ final class AchievementsScreen {
             int stackIn_2_0 = 94;
             return stackIn_2_0;
           }
-          int var9 = SeekerMine.a(var8, 16777215, font);
+          int var9 = SeekerMine.paddedButtonTextWidth(var8, 16777215, font);
           int var10 = (640 - var9) / 2;
           this.mainMenuButton = new LegacyButton(var7_int, actionId, var8, revealTick, frameId, font);
           this.mainMenuButton.setPosition((byte) 121, var10, y);
@@ -1028,7 +1028,7 @@ final class AchievementsScreen {
 
     final void draw(int guard) {
         SoftwareRasterizer.clearFramebuffer();
-        SelfDestructEffects.b(2);
+        SelfDestructEffects.drawMenuEdges(2);
         MenuTitleRenderSupport.drawTitles(4);
         if (guard != 3) {
           this.pageButtons = (LegacyButton[]) null;
@@ -1102,7 +1102,7 @@ final class AchievementsScreen {
           return;
         }
         try {
-          int var4 = PasswordValidator.a(-87, button);
+          int var4 = PasswordValidator.buttonSoundPan(-87, button);
           ObjectSpriteSet.field_e.playSampleWithPan(ModeProgressSupport.field_a, 100, IterableNodeHashTable.field_c * 6144 / volumeDivisor, var4);
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ta.P(" + volumeDivisor + ',' + (button != null ? "{...}" : "null") + ')');
@@ -1164,7 +1164,7 @@ final class AchievementsScreen {
           }
           int var7_int = 3;
           String var8 = IntrusiveDeque.field_e;
-          int var9 = SeekerMine.a(var8, 16777215, font);
+          int var9 = SeekerMine.paddedButtonTextWidth(var8, 16777215, font);
           this.accountButton = new LegacyButton(var7_int, actionId, var8, revealTick, frameId, font);
           int var10 = (640 - var9) / 2;
           int var11 = -57 / ((guard - 65) / 52);

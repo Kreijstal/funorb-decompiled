@@ -23,7 +23,7 @@ final class SpriteFactorySupport {
             int[] var11 = var13;
             int[] var5_ref_int__ = var11;
             for (int var6 = 0; var1 > var6; var6++) {
-              var5_ref_int__[var6] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(var20[var6] << 24, -16777216), ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var21[var6], 255)]);
+              var5_ref_int__[var6] = MatchingTextValidator.bitwiseOr(SpriteCheckboxPainter.bitwiseAnd(var20[var6] << 24, -16777216), ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var21[var6], 255)]);
             }
             var3 = new ArgbSprite(IntroAudioSupport.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var13);
           } else {
@@ -45,7 +45,7 @@ final class SpriteFactorySupport {
           int[] var11Lifetime1 = var13Lifetime1;
           int[] var5_ref_int__Lifetime1 = var11Lifetime1;
           for (int var6Lifetime1 = 0; var1Lifetime1 > var6Lifetime1; var6Lifetime1++) {
-            var5_ref_int__Lifetime1[var6Lifetime1] = MatchingTextValidator.a(SpriteCheckboxPainter.bitwiseAnd(var18[var6Lifetime1] << 24, -16777216), ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var19[var6Lifetime1], 255)]);
+            var5_ref_int__Lifetime1[var6Lifetime1] = MatchingTextValidator.bitwiseOr(SpriteCheckboxPainter.bitwiseAnd(var18[var6Lifetime1] << 24, -16777216), ArchiveLoadTask.spritePalette[SpriteCheckboxPainter.bitwiseAnd((int) var19[var6Lifetime1], 255)]);
           }
           var3Lifetime1 = new ArgbSprite(IntroAudioSupport.spriteSheetWidth, DelegatingCanvas.spriteSheetHeight, ModeProgress.spriteOffsetXs[0], ChatMessage.spriteOffsetYs[0], SpriteLoadTask.spriteWidths[0], SavedDataQuerySupport.spriteHeights[0], var13Lifetime1);
         } else {
@@ -62,12 +62,12 @@ final class SpriteFactorySupport {
     final static int levelCount(boolean guard, int mode) {
         if (guard) {
           SpriteFactorySupport.buildSpriteFromSheet(13);
-          if (AchievementRecord.a(mode, -102)) {
+          if (AchievementRecord.isModeAvailable(mode, -102)) {
             return ModeProgressSupport.levelNameCount(2513, mode);
           }
           return 0;
         }
-        if (AchievementRecord.a(mode, -102)) {
+        if (AchievementRecord.isModeAvailable(mode, -102)) {
           return ModeProgressSupport.levelNameCount(2513, mode);
         }
         return 0;

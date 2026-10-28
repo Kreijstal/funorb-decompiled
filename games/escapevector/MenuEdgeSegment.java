@@ -51,7 +51,7 @@ final class MenuEdgeSegment extends IntrusiveNode {
           if (option) {
             var6 = var6 | 8;
           }
-          if (null != SimulatorSpriteAssets.field_i) {
+          if (null != SimulatorSpriteAssets.pendingDisplayName) {
             var6 = var6 | 16;
           }
           QuickChatDynamicCommand.outgoingPackets.writeByte(var6, guard - 24);
@@ -63,8 +63,8 @@ final class MenuEdgeSegment extends IntrusiveNode {
           if (guard != -99) {
             return;
           }
-          if (SimulatorSpriteAssets.field_i != null) {
-            QuickChatDynamicCommand.outgoingPackets.writeCircumfixedString((byte) 100, SimulatorSpriteAssets.field_i);
+          if (SimulatorSpriteAssets.pendingDisplayName != null) {
+            QuickChatDynamicCommand.outgoingPackets.writeCircumfixedString((byte) 100, SimulatorSpriteAssets.pendingDisplayName);
           }
           AccountPayloadSupport.writeEncryptedPayload(guard ^ -99, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, MeshProjectionSupport.field_c);
           QuickChatDynamicCommand.outgoingPackets.backpatchShortLength(-var5_int + QuickChatDynamicCommand.outgoingPackets.position, 32614);

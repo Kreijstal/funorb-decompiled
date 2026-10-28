@@ -30,7 +30,7 @@ final class IntroFinalFrameSupport {
         int var5 = EscapeVector.obfuscationControl;
         try {
           int var2 = -55 % ((guard + 59) / 39);
-          int[] var6 = EditableTextWidget.field_I;
+          int[] var6 = EditableTextWidget.facePriorityCursors;
           int[] var1 = var6;
           int var3 = 0;
           int var4 = var6.length;

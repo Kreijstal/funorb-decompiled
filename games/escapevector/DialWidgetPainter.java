@@ -80,7 +80,7 @@ final class DialWidgetPainter implements WidgetPainter {
         if (QuickChatPhraseCache.field_e == 10) {
           MembershipPromotionScreen.beginAlternateLoginFlow(-84);
           QuickChatPhraseCache.field_e = 11;
-        } else if (!NetworkGameClient.i(56)) {
+        } else if (!NetworkGameClient.supportsSessionRecovery(56)) {
           MembershipPromotionScreen.beginAlternateLoginFlow(-84);
           QuickChatPhraseCache.field_e = 11;
         }

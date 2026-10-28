@@ -14,18 +14,18 @@ final class AccountPanelInputSupport {
           MenuEdgeSegment var3 = (MenuEdgeSegment) (TrackerGainSupport.field_c.first(false));
           while (var3 != null) {
             if (var3.direction < 0) {
-              SoftwareRasterizer.drawHorizontalLine(var3.x - var3.length + offsetX, offsetY + var3.y, var3.length, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawHorizontalLine(var3.x - var3.length + offsetX, offsetY + var3.y, var3.length, EmailSyntaxValidator.menuEdgeColor);
             } else {
-              SoftwareRasterizer.drawHorizontalLine(offsetX + var3.x, offsetY + var3.y, var3.length, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawHorizontalLine(offsetX + var3.x, offsetY + var3.y, var3.length, EmailSyntaxValidator.menuEdgeColor);
             }
             var3 = (MenuEdgeSegment) (TrackerGainSupport.field_c.next((byte) 70));
           }
           MenuEdgeSegment var3Lifetime1 = (MenuEdgeSegment) (QuickChatPhraseDefinition.field_u.first(false));
           while (var3Lifetime1 != null) {
             if (var3Lifetime1.direction >= 0) {
-              SoftwareRasterizer.drawVerticalLine(offsetX + var3Lifetime1.x, offsetY + var3Lifetime1.y, var3Lifetime1.length, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawVerticalLine(offsetX + var3Lifetime1.x, offsetY + var3Lifetime1.y, var3Lifetime1.length, EmailSyntaxValidator.menuEdgeColor);
             } else {
-              SoftwareRasterizer.drawVerticalLine(var3Lifetime1.x + offsetX, offsetY - var3Lifetime1.length + var3Lifetime1.y, var3Lifetime1.length, EmailSyntaxValidator.field_q);
+              SoftwareRasterizer.drawVerticalLine(var3Lifetime1.x + offsetX, offsetY - var3Lifetime1.length + var3Lifetime1.y, var3Lifetime1.length, EmailSyntaxValidator.menuEdgeColor);
             }
             var3Lifetime1 = (MenuEdgeSegment) (QuickChatPhraseDefinition.field_u.next((byte) 70));
           }

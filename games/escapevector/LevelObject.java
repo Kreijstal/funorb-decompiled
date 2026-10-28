@@ -206,7 +206,7 @@ final class LevelObject extends IntrusiveNode {
                         tileRows = newTileRows;
                         session.terrainMasks[tileX + tileY * session.tilesWide] = newTileRows;
                       }
-                      tileRows[rowY] = MatchingTextValidator.a(tileRows[rowY], 1 << bitColumn);
+                      tileRows[rowY] = MatchingTextValidator.bitwiseOr(tileRows[rowY], 1 << bitColumn);
                     }
                   }
                   sourcePixelIndex++;

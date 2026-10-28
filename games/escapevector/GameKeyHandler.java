@@ -40,7 +40,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (ThreeSliceButtonPainter.field_v != null) {
             int var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
-              GameAppletShell.a(0, (char) var2_int)) {
+              GameAppletShell.isCp1252Character(0, (char) var2_int)) {
               int var3 = 1 + AccountPayloadSupport.field_b & 127;
               if (var3 != MarkerSliderPainter.field_l) {
                 MonotonicClockSupport.field_b[AccountPayloadSupport.field_b] = -1;
@@ -58,8 +58,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static void b(int param0) {
-        int var1 = 16 % ((param0 - 0) / 63);
+    final static void checkStartupGuard(int guard) {
+        int var1 = 16 % ((guard - 0) / 63);
     }
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
@@ -154,51 +154,51 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static void a(String param0, byte param1, java.applet.Applet param2) {
+    final static void setSettingsCookie(String settings, byte guard, java.applet.Applet applet) {
         try {
           String stackIn_14_2 = null;
           String stackIn_17_2 = null;
           Throwable decompiledCaughtException = null;
           String var5Lifetime6;
           try {
-            MenuEdgeSegment.field_p = param0;
+            MenuEdgeSegment.field_p = settings;
             try {
-              String var6 = param2.getParameter("cookieprefix");
+              String var6 = applet.getParameter("cookieprefix");
               String var5 = var6;
               String var5Lifetime1 = var6;
-              if (param1 != 30) {
+              if (guard != 30) {
                 return;
               }
-              String var4 = param2.getParameter("cookiehost");
+              String var4 = applet.getParameter("cookiehost");
               String var5Lifetime2 = var4;
               String var5Lifetime3 = var4;
-              String var7 = var6 + "settings=" + param0 + "; version=1; path=/; domain=" + var4;
+              String var7 = var6 + "settings=" + settings + "; version=1; path=/; domain=" + var4;
               String var5Lifetime4 = var7;
               String var5Lifetime5 = var7;
-              if (0 != param0.length()) {
+              if (0 != settings.length()) {
                 var5Lifetime6 = var7 + "; Expires=" + EmailCredentials.formatGmtTimestamp(-106, 94608000000L + MonotonicClockSupport.monotonicMillis(128)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              JavaScriptBridge.evaluateScript((byte) -111, param2, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluateScript((byte) -111, applet, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var3 = decompiledCaughtException;
             }
-            PairedTextColumns.updateBrowserLinks((byte) 15, param2);
+            PairedTextColumns.updateBrowserLinks((byte) 15, applet);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             RuntimeException var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             RuntimeException stackIn_13_0 = var3_ref;
             StringBuilder stackIn_13_1 = new StringBuilder().append("ag.C(");
-            if (param0 == null) {
+            if (settings == null) {
               stackIn_14_2 = "null";
             } else {
               stackIn_14_2 = "{...}";
             }
-            StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',');
-            if (param2 == null) {
+            StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(',');
+            if (applet == null) {
               stackIn_17_2 = "null";
             } else {
               stackIn_17_2 = "{...}";

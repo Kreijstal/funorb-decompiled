@@ -78,11 +78,11 @@ final class DisplayAndRatingSupport {
             }
             IntegerParseSupport.ensureRatingScratch(var4, guard - 58, var5);
             for (int var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              DirectByteStorage.a(var14, 1238559653);
+              DirectByteStorage.readPackedRatingValues(var14, 1238559653);
               if (var6_intLifetime1 != 0) {
-                FullscreenFocusCanvas.a(1, CachedArchiveProvider.field_n, IntegerParseSupport.field_d, PointCloudEffect.field_u, var6_intLifetime1, SocketJs5Transport.field_s);
+                FullscreenFocusCanvas.appendRatingRow(1, CachedArchiveProvider.field_n, IntegerParseSupport.field_d, PointCloudEffect.field_u, var6_intLifetime1, SocketJs5Transport.field_s);
               } else {
-                FullscreenFocusCanvas.a(guard - 112, CachedArchiveProvider.field_n, IntegerParseSupport.field_d, PointCloudEffect.field_u, var6_intLifetime1, SocketJs5Transport.field_s);
+                FullscreenFocusCanvas.appendRatingRow(guard - 112, CachedArchiveProvider.field_n, IntegerParseSupport.field_d, PointCloudEffect.field_u, var6_intLifetime1, SocketJs5Transport.field_s);
               }
             }
             DynamicTerrainRenderer.rankRatingRows(var5, 0);
@@ -98,7 +98,7 @@ final class DisplayAndRatingSupport {
               var18[0][1 + 4 * var10] = ModeProgressSupport.field_c[var11];
               var18[0][var10 * 4 + 2] = RasterSnapshot.field_k[var11];
               var18[0][3 + var10 * 4] = AccountNoticeDialog.field_fb[var11];
-              if (SeekerMine.a(TextHotspotRegion.field_l[var11], (byte) 123) &&
+              if (SeekerMine.isCurrentPlayerName(TextHotspotRegion.field_l[var11], (byte) 123) &&
                 AccountNoticeDialog.field_fb[var11] + ModeProgressSupport.field_c[var11] + RasterSnapshot.field_k[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -116,7 +116,7 @@ final class DisplayAndRatingSupport {
               var18[1][var13 * 4 + 1] = ModeProgressSupport.field_c[var11Lifetime1];
               var18[1][var13 * 4 + 2] = RasterSnapshot.field_k[var11Lifetime1];
               var18[1][3 + var13 * 4] = AccountNoticeDialog.field_fb[var11Lifetime1];
-              if (SeekerMine.a(TextHotspotRegion.field_l[var11Lifetime1], (byte) 117) &&
+              if (SeekerMine.isCurrentPlayerName(TextHotspotRegion.field_l[var11Lifetime1], (byte) 117) &&
                 0 == AccountNoticeDialog.field_fb[var11Lifetime1] + ModeProgressSupport.field_c[var11Lifetime1] + RasterSnapshot.field_k[var11Lifetime1]) {
                 var6[1][var13] = null;
                 var13--;
@@ -141,7 +141,7 @@ final class DisplayAndRatingSupport {
           return;
         }
         Checkbox.detachCanvasInput(IsaacRandom.field_d, (byte) -59);
-        IsaacRandom.field_d.a(NetworkGameClient.field_r, true);
+        IsaacRandom.field_d.exitFullscreen(NetworkGameClient.taskService, true);
         IsaacRandom.field_d = null;
         if (null != DirectByteStorage.field_n) {
           DirectByteStorage.field_n.restoreWindowedSize(guard ^ -25123);

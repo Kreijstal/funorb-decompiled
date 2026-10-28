@@ -95,7 +95,7 @@ final class ArchiveFactorySupport {
           int var7_int = leftPadding + rightPadding;
           for (int var8 = startIndex; endIndex > var8; var8++) {
             String var9 = labels[var8];
-            int var10 = SeekerMine.a(var9, 16777215, font);
+            int var10 = SeekerMine.paddedButtonTextWidth(var9, 16777215, font);
             var7_int = var7_int + (var10 + spacing);
           }
           int stackIn_5_0 = var7_int;

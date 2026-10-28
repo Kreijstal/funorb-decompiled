@@ -11,17 +11,17 @@ final class AchievementRecord extends IntrusiveNode {
     int field_g;
     static volatile boolean field_l;
 
-    final static boolean a(int param0, int param1) {
-        if (param1 >= -85) {
+    final static boolean isModeAvailable(int mode, int guard) {
+        if (guard >= -85) {
           field_n = (IntrusiveDeque) null;
           int var2 = GzipDecoder.field_e.length;
-          if (0 > param0) {
+          if (0 > mode) {
             return false;
           }
-          if (var2 <= param0) {
+          if (var2 <= mode) {
             return false;
           }
-          int var3 = GzipDecoder.field_e[param0];
+          int var3 = GzipDecoder.field_e[mode];
           if (var3 != 2) {
             return true;
           }
@@ -31,13 +31,13 @@ final class AchievementRecord extends IntrusiveNode {
           return false;
         }
         int var2Lifetime1 = GzipDecoder.field_e.length;
-        if (0 > param0) {
+        if (0 > mode) {
           return false;
         }
-        if (var2Lifetime1 <= param0) {
+        if (var2Lifetime1 <= mode) {
           return false;
         }
-        int var3Lifetime1 = GzipDecoder.field_e[param0];
+        int var3Lifetime1 = GzipDecoder.field_e[mode];
         if (var3Lifetime1 != 2) {
           return true;
         }

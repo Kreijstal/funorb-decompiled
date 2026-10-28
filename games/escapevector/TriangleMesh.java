@@ -6,7 +6,7 @@ final class TriangleMesh {
     short[] field_v;
     static AccountFormStage field_y;
     short[] vertexX;
-    byte[] field_n;
+    byte[] facePriorities;
     short[] field_Q;
     int maxZ;
     int[] field_k;
@@ -15,7 +15,7 @@ final class TriangleMesh {
     short[] faceVertexA;
     int[] field_C;
     int[] field_s;
-    byte field_I;
+    byte facePriorityCount;
     short[] vertexZ;
     int[] field_t;
     short[] field_N;
@@ -130,7 +130,7 @@ final class TriangleMesh {
     }
 
     TriangleMesh() {
-        this.field_I = (byte) 0;
+        this.facePriorityCount = (byte) 0;
         this.boundsValid = false;
     }
 

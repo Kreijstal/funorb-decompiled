@@ -62,7 +62,7 @@ final class LoginHandshakeSupport {
               Checkbox.readIncomingBytes(30000, 1)) {
               int var6_intLifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(0);
               LegacyStyleNode.field_v = var6_intLifetime1;
-              SimulatorSpriteAssets.field_i = null;
+              SimulatorSpriteAssets.pendingDisplayName = null;
               QuickChatDynamicCommand.incomingPackets.position = 0;
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
@@ -118,13 +118,13 @@ final class LoginHandshakeSupport {
               LaserGateSpan.field_g = QuickChatDynamicCommand.incomingPackets.readUnsignedByte(guard - 1);
               AccountFormStage.field_d = ThreeSliceButtonPainter.field_t;
               if (ArchiveIndex.field_m.type((byte) 32) == AlphaContainer.field_E) {
-                NameAvailabilityValidator.field_q.a(27002, PointCloudEffect.activeApplet((byte) -114));
+                NameAvailabilityValidator.field_q.rememberLoginMethod(27002, PointCloudEffect.activeApplet((byte) -114));
               } else if (ArchiveIndex.field_m.type((byte) 32) == DisplayModeInfo.field_a) {
-                MenuEdgeSegment.field_n.a(27002, PointCloudEffect.activeApplet((byte) -71));
+                MenuEdgeSegment.field_n.rememberLoginMethod(27002, PointCloudEffect.activeApplet((byte) -71));
               }
               RegistrationFlowSupport.field_c = false;
               if (var6 != null) {
-                GameKeyHandler.a(var6, (byte) 30, PointCloudEffect.activeApplet((byte) -119));
+                GameKeyHandler.setSettingsCookie(var6, (byte) 30, PointCloudEffect.activeApplet((byte) -119));
               }
               if (Js5NetworkRequest.field_x <= 0 &&
                 !QuickChatPhraseCache.field_g) {

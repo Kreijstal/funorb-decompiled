@@ -121,7 +121,7 @@ final class GameplaySession {
     private PcmSampleStream field_Wb;
     private PcmSampleStream field_r;
     private IntrusiveDeque laserGateSpans;
-    PcmSampleStream field_lc;
+    PcmSampleStream countdownBeepStream;
     private PcmSampleStream field_Z;
     private int laserGateCount;
     private PcmSampleStream field_jb;
@@ -272,7 +272,7 @@ final class GameplaySession {
           return;
         }
         this.triShotEnabled = true;
-        FullscreenFocusCanvas.a(0);
+        FullscreenFocusCanvas.advanceSessionCounters(0);
         this.showHudMessage(-128, DelegatingCanvas.field_a);
         if (guard != 59) {
           this.laserCycleTicks = -54;
@@ -661,7 +661,7 @@ final class GameplaySession {
         AlternateUsernameCredentials.field_n.removeSubstream(this.field_Wb);
         AlternateUsernameCredentials.field_n.removeSubstream(this.field_wb);
         AlternateUsernameCredentials.field_n.removeSubstream(this.field_r);
-        AlternateUsernameCredentials.field_n.removeSubstream(this.field_lc);
+        AlternateUsernameCredentials.field_n.removeSubstream(this.countdownBeepStream);
         AlternateUsernameCredentials.field_n.removeSubstream(this.field_fb);
         Object var2 = AlternateUsernameCredentials.field_n;
         synchronized (var2) {
@@ -1495,7 +1495,7 @@ final class GameplaySession {
         String stackIn_7_2 = null;
         try {
           boolean var3_int = (this.usesDynamicTerrain(8192));
-          PointCloudEffect var4 = LoginMethod.a(object, 14, (var3_int));
+          PointCloudEffect var4 = LoginMethod.createObjectDebris(object, 14, (var3_int));
           this.pointCloudEffects.addLast(-12328, var4);
           if (guard != 42) {
             field_xb = (int[]) null;
@@ -1968,7 +1968,7 @@ final class GameplaySession {
         }
         if (null != this.selfDestructEffects) {
           boolean var5 = false;
-          TrackerMusicDefinition var6 = this.selfDestructEffects.b(true);
+          TrackerMusicDefinition var6 = this.selfDestructEffects.musicOverride(true);
           if (var6 != null) {
             var2 = var5;
           }
@@ -1991,7 +1991,7 @@ final class GameplaySession {
           var2 = var4[var3];
         }
         if (null != this.selfDestructEffects) {
-          int var5 = this.selfDestructEffects.c(true);
+          int var5 = this.selfDestructEffects.musicVolumeOverride(true);
           if (var5 >= 0) {
             var2 = var5;
           }
@@ -2271,7 +2271,7 @@ final class GameplaySession {
           this.laserGateSpans = (IntrusiveDeque) null;
         }
         if (this.selfDestructEffects != null) {
-          TrackerMusicDefinition var5 = this.selfDestructEffects.b(true);
+          TrackerMusicDefinition var5 = this.selfDestructEffects.musicOverride(true);
           if (var5 != null) {
             var2 = var5;
           }
@@ -2650,7 +2650,7 @@ final class GameplaySession {
         if (this.usesDynamicTerrain(8192) &&
           buildTerrainRenderer) {
           this.dynamicTerrain = new DynamicTerrainRenderer(this.terrainMasks, QuickChatPhraseDefinition.fullTileMask, (int[]) null, this.tilesWide, this.tilesHigh);
-          SeekerMine.a(-101, this.dynamicTerrain.field_B);
+          SeekerMine.setMenuEdgeColor(-101, this.dynamicTerrain.field_B);
         } else {
           this.dynamicTerrain = null;
         }
@@ -3083,7 +3083,7 @@ final class GameplaySession {
         TrackerGainSupport.field_c = new IntrusiveDeque();
         QuickChatPhraseDefinition.field_u = new IntrusiveDeque();
         LoginIdentifierSupport.field_e = 0;
-        EmailSyntaxValidator.field_q = 6324320;
+        EmailSyntaxValidator.menuEdgeColor = 6324320;
         int var1 = -7 / ((70 - guard) / 32);
     }
 
@@ -3298,7 +3298,7 @@ final class GameplaySession {
         this.drawBullets(var3, var4, guard);
         this.drawLaserGates(var3, (byte) -108, var4);
         if (null != this.selfDestructEffects) {
-          this.selfDestructEffects.a((byte) -87, var3, var4);
+          this.selfDestructEffects.draw((byte) -87, var3, var4);
         }
         this.drawNotice(guard ^ -32369);
         if (this.levelIndex >= 0) {
@@ -5213,7 +5213,7 @@ final class GameplaySession {
         }
         this.updateCountdown((byte) 109);
         if (null != this.selfDestructEffects) {
-          this.selfDestructEffects.c(-1);
+          this.selfDestructEffects.updateCountdownEffects(-1);
         }
         this.updateMissionOutcome(0);
         int stackIn_713_0Lifetime1 = guard;
@@ -5347,7 +5347,7 @@ final class GameplaySession {
         if (guard != 3) {
           this.rockBusterAmmo = 30;
         }
-        GameAppletShell.a(var9, -4, -4, 6320248, -2, var6 + 6, guard ^ -2, var5 + var3 + 6 + 10, 12110032, 3160124, 2 * var8);
+        GameAppletShell.drawFadingPanelFrame(var9, -4, -4, 6320248, -2, var6 + 6, guard ^ -2, var5 + var3 + 6 + 10, 12110032, 3160124, 2 * var8);
         int var10 = 22;
         var13.drawRight(HighscorePlayerRecord.field_b, var3 + 6, var10, 10004656, -1);
         var13.drawLeft(Integer.toString(this.fuel), 6 + var3, var10, 16777215, -1);
@@ -5409,7 +5409,7 @@ final class GameplaySession {
           stackIn_44_0 = 0;
         }
         int var9Lifetime1 = stackIn_44_0;
-        GameAppletShell.a(var9Lifetime1, 634 - var5Lifetime1 - var3Lifetime1 - 10, -4, 6320248, -2, var6Lifetime1 + 6, -3, 644, 12110032, 3160124, var8Lifetime1 * 2);
+        GameAppletShell.drawFadingPanelFrame(var9Lifetime1, 634 - var5Lifetime1 - var3Lifetime1 - 10, -4, 6320248, -2, var6Lifetime1 + 6, -3, 644, 12110032, 3160124, var8Lifetime1 * 2);
         var13.drawRight(AccountTermsPanel.field_K, -var5Lifetime1 + 634, 22, 10004656, -1);
         var13.drawLeft(Integer.toString(this.levelIndex + 1), -var5Lifetime1 + 634, 22, 16777215, -1);
         var13.drawRight(SavedCompletionFlags.field_c, -var5Lifetime1 + 634, 40, 10004656, -1);
@@ -5488,8 +5488,8 @@ final class GameplaySession {
         if (this.field_r != null) {
           this.field_r.rampVolumeQ6(AudioOutput.sampleRate / 100, 0);
         }
-        if (this.field_lc != null) {
-          this.silenceSampleStream(guard ^ -45, this.field_lc);
+        if (this.countdownBeepStream != null) {
+          this.silenceSampleStream(guard ^ -45, this.countdownBeepStream);
         }
         if (null != this.field_fb) {
           this.field_fb.field_l = 0;
@@ -6262,12 +6262,12 @@ final class GameplaySession {
             this.field_r = PcmSampleStream.createAtRatePercent(SpriteDecodeSupport.field_h, 100, 0);
             this.field_r.setLoopCount(-1);
             AlternateUsernameCredentials.field_n.addSubstream(this.field_r);
-            this.field_lc = PcmSampleStream.createAtRatePercent(GuestLoginSupport.field_a, 100, 0);
-            this.field_lc.setLoopCount(-1);
-            AlternateUsernameCredentials.field_n.addSubstream(this.field_lc);
+            this.countdownBeepStream = PcmSampleStream.createAtRatePercent(GuestLoginSupport.countdownBeepSample, 100, 0);
+            this.countdownBeepStream.setLoopCount(-1);
+            AlternateUsernameCredentials.field_n.addSubstream(this.countdownBeepStream);
             this.field_fb = new TetherHumStream();
             AlternateUsernameCredentials.field_n.addSubstream(this.field_fb);
-            NetworkGameClient.a(127, levelIndex);
+            NetworkGameClient.initializeSessionCounters(127, levelIndex);
             this.levelData = levelData;
             this.levelIndex = levelIndex;
             this.gameMode = gameMode;

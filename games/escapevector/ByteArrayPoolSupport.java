@@ -181,7 +181,7 @@ final class ByteArrayPoolSupport {
           String[] var4 = labels;
           for (int var5 = 0; var5 < var4.length; var5++) {
             String var6 = var4[var5];
-            var3_int = var3_int + SeekerMine.a(var6, guard ^ -16777096, font);
+            var3_int = var3_int + SeekerMine.paddedButtonTextWidth(var6, guard ^ -16777096, font);
           }
           int stackIn_8_0 = var3_int;
           return stackIn_8_0;

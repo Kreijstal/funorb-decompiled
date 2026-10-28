@@ -9,7 +9,7 @@ final class SimulatorSpriteAssets {
     static int field_a;
     static int[] field_j;
     static String field_e;
-    static String field_i;
+    static String pendingDisplayName;
     Sprite texture;
     int field_b;
 
@@ -20,7 +20,7 @@ final class SimulatorSpriteAssets {
           field_j = (int[]) null;
         }
         field_e = null;
-        field_i = null;
+        pendingDisplayName = null;
         field_f = null;
     }
 

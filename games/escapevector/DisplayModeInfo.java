@@ -90,7 +90,7 @@ final class DisplayModeInfo {
                     var12++;
                   }
                   if (var21 != null &&
-                    SeekerMine.a(var21, (byte) 112)) {
+                    SeekerMine.isCurrentPlayerName(var21, (byte) 112)) {
                     var8[1][var13] = ThreeSliceButtonPainter.field_r;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;

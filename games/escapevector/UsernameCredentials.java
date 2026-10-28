@@ -209,7 +209,7 @@ class UsernameCredentials extends LoginCredentials {
             for (int var6 = startRow; var6 < var5; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (~highscores.longColumns[column][var6] == ~submission.field_l &&
-                SeekerMine.a(highscores.stringColumns[column][var6], (byte) 120)) {
+                SeekerMine.isCurrentPlayerName(highscores.stringColumns[column][var6], (byte) 120)) {
                 for (int var7 = 0; var7 < var4_int; var7++) {
                   if (submission.field_q[var7] != highscores.intColumns[column][var7 + var4_int * var6]) {
                     decompiledFrameCompleted0 = false;

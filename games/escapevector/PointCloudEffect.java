@@ -252,7 +252,7 @@ final class PointCloudEffect extends DualLinkNode {
           if (var2 < 128) {
             var6 = var6 + (var2 * 128 - var2 * var2 >> 5);
           }
-          RatingQuery.pointCloudRasterSprite.field_l[var2] = MatchingTextValidator.a(MatchingTextValidator.a(var4 << 16, var5 << 8), var6);
+          RatingQuery.pointCloudRasterSprite.field_l[var2] = MatchingTextValidator.bitwiseOr(MatchingTextValidator.bitwiseOr(var4 << 16, var5 << 8), var6);
         }
     }
 

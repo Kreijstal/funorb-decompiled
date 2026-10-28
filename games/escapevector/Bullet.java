@@ -167,9 +167,9 @@ final class Bullet extends IntrusiveNode {
           }
           int var6 = 3 * nearDepth;
           int var7 = -10 + var5_int;
-          NetworkGameClient.h(-115);
-          if (mesh.field_I > 0 &&
-            null != mesh.field_n) {
+          NetworkGameClient.clearFaceDepthBuckets(-115);
+          if (mesh.facePriorityCount > 0 &&
+            null != mesh.facePriorities) {
             IntroFinalFrameSupport.clearSharedIntScratch((byte) -99);
           }
           AccountSessionSupport.field_d = 0;
@@ -201,8 +201,8 @@ final class Bullet extends IntrusiveNode {
                     if (var14 != -2147483648) {
                       var15 = -var6 + var14 + (var12Lifetime1 + var13Lifetime1);
                       stackIn_32_0 = (var7 >= 0) ? (var15 >> var7) : (var15 << -var7);
-                      var16 = -stackIn_32_0 + (AccountFormStage.field_f.length - 1);
-                      var17 = AccountFormStage.field_f[var16];
+                      var16 = -stackIn_32_0 + (AccountFormStage.faceDepthBucketCounts.length - 1);
+                      var17 = AccountFormStage.faceDepthBucketCounts[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -211,17 +211,17 @@ final class Bullet extends IntrusiveNode {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = AccountFormStage.field_f[var16];
+                          var17 = AccountFormStage.faceDepthBucketCounts[var16];
                           continue;
                         }
                         int stackIn_43_0Lifetime1 = var17 + (var16 << 4);
                         int var18 = stackIn_43_0Lifetime1;
-                        SavedDataQuerySupport.field_f[var18] = var8;
-                        AccountFormStage.field_f[var16] = 1 + var17;
-                        if (mesh.field_I > 0 &&
-                          mesh.field_n != null) {
-                          byte dupTemp$0 = mesh.field_n[var8];
-                          EditableTextWidget.field_I[dupTemp$0] = EditableTextWidget.field_I[dupTemp$0] + 1;
+                        SavedDataQuerySupport.bucketedFaceIndices[var18] = var8;
+                        AccountFormStage.faceDepthBucketCounts[var16] = 1 + var17;
+                        if (mesh.facePriorityCount > 0 &&
+                          mesh.facePriorities != null) {
+                          byte dupTemp$0 = mesh.facePriorities[var8];
+                          EditableTextWidget.facePriorityCursors[dupTemp$0] = EditableTextWidget.facePriorityCursors[dupTemp$0] + 1;
                         }
                         AccountSessionSupport.field_d = AccountSessionSupport.field_d + 1;
                         break;
@@ -236,15 +236,15 @@ final class Bullet extends IntrusiveNode {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_52_0 = ~mesh.field_I;
+            stackIn_52_0 = ~mesh.facePriorityCount;
           }
           if (stackIn_52_0 < -1 &&
-            null != mesh.field_n) {
+            null != mesh.facePriorities) {
             int var8Lifetime1 = 0;
             int var9Lifetime1 = 0;
-            while (!(EditableTextWidget.field_I.length <= var9Lifetime1)) {
-              int var10Lifetime1 = EditableTextWidget.field_I[var9Lifetime1];
-              EditableTextWidget.field_I[var9Lifetime1] = var8Lifetime1;
+            while (!(EditableTextWidget.facePriorityCursors.length <= var9Lifetime1)) {
+              int var10Lifetime1 = EditableTextWidget.facePriorityCursors[var9Lifetime1];
+              EditableTextWidget.facePriorityCursors[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

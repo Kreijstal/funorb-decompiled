@@ -13,12 +13,12 @@ final class SessionMenuSupport {
         }
         CipherPacketBuffer.field_u = true;
         if (guard == -112) {
-          SeekerMine.a((byte) -123, false);
+          SeekerMine.showAccountLogin((byte) -123, false);
           QuickChatPhraseCache.field_e = 0;
           return;
         }
         field_d = (String[]) null;
-        SeekerMine.a((byte) -123, false);
+        SeekerMine.showAccountLogin((byte) -123, false);
         QuickChatPhraseCache.field_e = 0;
     }
 

@@ -3,22 +3,22 @@
  */
 final class GuestLoginSupport {
     static PcmSample field_b;
-    static PcmSample field_a;
+    static PcmSample countdownBeepSample;
 
     final static void beginAccountLogin(boolean pointerDriven) {
         if (!SpriteState.guestSession) {
           throw new IllegalStateException();
         }
         CipherPacketBuffer.field_u = true;
-        SeekerMine.a((byte) -126, pointerDriven);
+        SeekerMine.showAccountLogin((byte) -126, pointerDriven);
         QuickChatPhraseCache.field_e = 0;
     }
 
     public static void releaseStatics(byte guard) {
         if (guard != 103) {
-          field_a = (PcmSample) null;
+          countdownBeepSample = (PcmSample) null;
         }
-        field_a = null;
+        countdownBeepSample = null;
         field_b = null;
     }
 

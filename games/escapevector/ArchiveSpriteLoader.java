@@ -16,7 +16,7 @@ final class ArchiveSpriteLoader {
             field_e = (String) null;
           }
           if (ArchivePreloader.loadSpriteSheet(archive, guard ^ -8272, groupId, fileId)) {
-            Sprite[] stackIn_6_0 = NetworkGameClient.e(15556);
+            Sprite[] stackIn_6_0 = NetworkGameClient.buildDecodedSprites(15556);
             return stackIn_6_0;
           }
           Object stackIn_4_0 = null;

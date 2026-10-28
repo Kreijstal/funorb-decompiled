@@ -3,10 +3,10 @@
  */
 final class SavedDataQuerySupport {
     static PcmSample field_c;
-    static int[] field_g;
+    static int[] modeSessionOptions;
     static boolean field_e;
     static int[] spriteHeights;
-    static int[] field_f;
+    static int[] bucketedFaceIndices;
     static IntrusiveDeque field_b;
     static boolean field_d;
 
@@ -17,8 +17,8 @@ final class SavedDataQuerySupport {
         field_c = null;
         spriteHeights = null;
         field_b = null;
-        field_g = null;
-        field_f = null;
+        modeSessionOptions = null;
+        bucketedFaceIndices = null;
     }
 
     final static SavedDataQuery requestSavedData(int opcode, int guard) {
@@ -32,8 +32,8 @@ final class SavedDataQuerySupport {
     }
 
     static {
-        field_g = new int[]{0, 1, 1, 1};
-        field_f = new int[16384];
+        modeSessionOptions = new int[]{0, 1, 1, 1};
+        bucketedFaceIndices = new int[16384];
         field_b = new IntrusiveDeque();
     }
 }

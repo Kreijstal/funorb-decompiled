@@ -36,7 +36,7 @@ final class AudioService implements Runnable {
                   var1_int++;
                 }
                 AchievementTracker.sleepMillis((byte) -95, 10L);
-                FullscreenFocusCanvas.a((byte) -61, this.tasks, (Object) null);
+                FullscreenFocusCanvas.pumpEventQueue((byte) -61, this.tasks, (Object) null);
                 continue;
               }
               break;

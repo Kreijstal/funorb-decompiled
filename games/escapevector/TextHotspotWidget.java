@@ -32,7 +32,7 @@ class TextHotspotWidget extends TextButton {
           int var7 = var9.textOriginX((byte) -113, (UiComponent) (this), screenX);
           int var8 = var9.textOriginY((UiComponent) (this), screenY, -16956);
           do {
-            SeekerMine.a(false, 2 + var6.width, var6.x + var7 - 2, var6.height + 2, -2 + var8 + var6.y);
+            SeekerMine.drawDottedRectangle(false, 2 + var6.width, var6.x + var7 - 2, var6.height + 2, -2 + var8 + var6.y);
             var6 = var6.nextFragment;
           } while (var6 != null);
         }

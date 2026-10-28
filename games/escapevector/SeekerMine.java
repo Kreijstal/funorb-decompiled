@@ -14,13 +14,13 @@ final class SeekerMine extends IntrusiveNode {
     PcmSampleStream flightSound;
     int velocityXQ16;
 
-    final static int a(String param0, int param1, BinaryBitmapFont param2) {
+    final static int paddedButtonTextWidth(String text, int guard, BinaryBitmapFont font) {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
-          int var3_int = CheckboxPainter.a(param2, param1 - 16777215);
-          int var4 = 4 * var3_int + param2.stringWidth(param0);
-          if (param1 == 16777215) {
+          int var3_int = CheckboxPainter.a(font, guard - 16777215);
+          int var4 = 4 * var3_int + font.stringWidth(text);
+          if (guard == 16777215) {
             int stackIn_4_0 = var4;
             return stackIn_4_0;
           }
@@ -31,13 +31,13 @@ final class SeekerMine extends IntrusiveNode {
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_7_0 = var3;
           StringBuilder stackIn_7_1 = new StringBuilder().append("ic.C(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(',');
+          if (font == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -46,40 +46,40 @@ final class SeekerMine extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
-        if (param0 > -97) {
-          SeekerMine.a((byte) 51, false);
-          MarkerSliderPainter.a(-58, param1, false);
+    final static void showAccountLogin(byte guard, boolean showCreateAccount) {
+        if (guard > -97) {
+          SeekerMine.showAccountLogin((byte) 51, false);
+          MarkerSliderPainter.a(-58, showCreateAccount, false);
           return;
         }
-        MarkerSliderPainter.a(-58, param1, false);
+        MarkerSliderPainter.a(-58, showCreateAccount, false);
     }
 
     public static void releaseStatics(boolean guard) {
         field_k = null;
         if (guard) {
-          SeekerMine.a(false, 19, -31, -11, -87);
+          SeekerMine.drawDottedRectangle(false, 19, -31, -11, -87);
           field_n = null;
           return;
         }
         field_n = null;
     }
 
-    final static void a(int param0, int param1) {
-        if (param0 > -97) {
+    final static void setMenuEdgeColor(int guard, int color) {
+        if (guard > -97) {
           return;
         }
         GameplaySession.resetSessionMenuState((byte) -14);
-        EmailSyntaxValidator.field_q = param1;
+        EmailSyntaxValidator.menuEdgeColor = color;
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isCurrentPlayerName(String name, byte guard) {
         String stackIn_7_2 = null;
         try {
-          if (param1 <= 108) {
+          if (guard <= 108) {
             SeekerMine.releaseStatics(true);
           }
-          CharSequence var3 = (CharSequence) ((Object) param0);
+          CharSequence var3 = (CharSequence) ((Object) name);
           boolean stackIn_3_0 = ProgressRecord.field_k.equals(SessionCounterState.normalizeAccountName(-67, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,37 +87,37 @@ final class SeekerMine extends IntrusiveNode {
           RuntimeException var2 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var2;
           StringBuilder stackIn_6_1 = new StringBuilder().append("ic.E(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4) {
+    final static void drawDottedRectangle(boolean guard, int width, int x, int height, int y) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
         int var13 = EscapeVector.obfuscationControl;
         try {
-          int var5_int = param1 + param2;
-          int var6 = param4 + param3;
-          if (param2 <= SoftwareRasterizer.clipLeft) {
+          int var5_int = width + x;
+          int var6 = y + height;
+          if (x <= SoftwareRasterizer.clipLeft) {
             stackIn_4_0 = SoftwareRasterizer.clipLeft;
           } else {
-            stackIn_4_0 = param2;
+            stackIn_4_0 = x;
           }
           int var7 = stackIn_4_0;
-          if (SoftwareRasterizer.clipTop >= param4) {
+          if (SoftwareRasterizer.clipTop >= y) {
             stackIn_7_0 = SoftwareRasterizer.clipTop;
           } else {
-            stackIn_7_0 = param4;
+            stackIn_7_0 = y;
           }
           int var8 = stackIn_7_0;
-          if (param0) {
+          if (guard) {
             field_k = (String[]) null;
           }
           if (SoftwareRasterizer.clipRight > var5_int) {
@@ -132,9 +132,9 @@ final class SeekerMine extends IntrusiveNode {
             stackIn_15_0 = var6;
           }
           int var10 = stackIn_15_0;
-          if (param2 >= SoftwareRasterizer.clipLeft &&
-            param2 < SoftwareRasterizer.clipRight) {
-            int var11 = param2 + SoftwareRasterizer.width * var8;
+          if (x >= SoftwareRasterizer.clipLeft &&
+            x < SoftwareRasterizer.clipRight) {
+            int var11 = x + SoftwareRasterizer.width * var8;
             int var12 = -var8 + (1 + var10) >> 1;
             while (true) {
               var12--;
@@ -145,9 +145,9 @@ final class SeekerMine extends IntrusiveNode {
               var11 = var11 + SoftwareRasterizer.width * 2;
             }
           }
-          if (param4 >= SoftwareRasterizer.clipTop &&
+          if (y >= SoftwareRasterizer.clipTop &&
             var6 < SoftwareRasterizer.clipBottom) {
-            int var11Lifetime1 = var7 + SoftwareRasterizer.width * param4;
+            int var11Lifetime1 = var7 + SoftwareRasterizer.width * y;
             int var12Lifetime1 = -var7 + var9 + 1 >> 1;
             while (true) {
               var12Lifetime1--;
@@ -160,7 +160,7 @@ final class SeekerMine extends IntrusiveNode {
           }
           if (SoftwareRasterizer.clipLeft <= var5_int &&
             var5_int < SoftwareRasterizer.clipRight) {
-            int var11Lifetime2 = SoftwareRasterizer.width * (var8 + (1 & var5_int - param2)) + var5_int;
+            int var11Lifetime2 = SoftwareRasterizer.width * (var8 + (1 & var5_int - x)) + var5_int;
             int var12Lifetime2 = 1 - (-var10 + var8) >> 1;
             while (true) {
               var12Lifetime2--;
@@ -171,9 +171,9 @@ final class SeekerMine extends IntrusiveNode {
               var11Lifetime2 = var11Lifetime2 + 2 * SoftwareRasterizer.width;
             }
           }
-          if (SoftwareRasterizer.clipTop <= param4 &&
+          if (SoftwareRasterizer.clipTop <= y &&
             var6 < SoftwareRasterizer.clipBottom) {
-            int var11Lifetime3 = var7 + var6 * SoftwareRasterizer.width + (1 & -param4 + var6);
+            int var11Lifetime3 = var7 + var6 * SoftwareRasterizer.width + (1 & -y + var6);
             int var12Lifetime3 = -var7 + (var9 + 1) >> 1;
             while (true) {
               var12Lifetime3--;
@@ -188,7 +188,7 @@ final class SeekerMine extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var5), "ic.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var5), "ic.B(" + guard + ',' + width + ',' + x + ',' + height + ',' + y + ')');
         }
     }
 

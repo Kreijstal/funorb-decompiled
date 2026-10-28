@@ -266,7 +266,7 @@ final class HighscoresScreen {
 
     final void draw(boolean guard) {
         SoftwareRasterizer.clearFramebuffer();
-        SelfDestructEffects.b(2);
+        SelfDestructEffects.drawMenuEdges(2);
         this.drawTableAndStatus(-1);
         MenuTitleRenderSupport.drawTitles(4);
         if (guard) {
@@ -440,7 +440,7 @@ final class HighscoresScreen {
     private final void playSelectionSound(boolean guard) {
         if (HighscorePlayerRecord.field_d.selectionChanged) {
           LegacyButton var2 = this.selectedButton((byte) 82);
-          int var3 = PasswordValidator.a(-122, var2);
+          int var3 = PasswordValidator.buttonSoundPan(-122, var2);
           ObjectSpriteSet.field_e.playSampleWithPan(ArchiveRequest.field_w, 100, 1536 * IterableNodeHashTable.field_c / 64, var3);
         }
         if (guard) {

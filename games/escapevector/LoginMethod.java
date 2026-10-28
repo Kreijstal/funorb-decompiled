@@ -7,7 +7,7 @@ final class LoginMethod {
     static String field_d;
     private String name;
 
-    final static void a(int param0, int param1) {
+    final static void updateLogoMeshRotation(int meshIndex, int guard) {
         int var6 = EscapeVector.obfuscationControl;
         int var2 = 0;
         int var3 = SocketConnector.field_d;
@@ -18,50 +18,50 @@ final class LoginMethod {
             var2 = (var3 * 16384 - 40960) / 220;
             int var4 = 1;
             int var5 = 0;
-            if (3 == param0) {
+            if (3 == meshIndex) {
               var4 = -1;
             }
-            if (param0 == 1) {
+            if (meshIndex == 1) {
               var5 = 1;
             }
-            if (4 == param0) {
+            if (4 == meshIndex) {
               var5 = 1;
               var4 = 1;
             }
-            if (5 == param0) {
+            if (5 == meshIndex) {
               var4 = -1;
               var5 = 1;
             }
-            if (param1 < 46) {
+            if (guard < 46) {
               return;
             }
-            if (6 == param0) {
+            if (6 == meshIndex) {
               var4 = 1;
               var5 = -1;
             }
-            if (param0 == 7) {
+            if (meshIndex == 7) {
               var4 = -1;
               var5 = -1;
-            } else if (8 == param0) {
-              var4 = -1;
-              var5 = -1;
-            }
-            if (param0 == 11) {
-              var4 = -1;
-            }
-            if (12 == param0) {
+            } else if (8 == meshIndex) {
               var4 = -1;
               var5 = -1;
             }
-            if (param0 == 13) {
+            if (meshIndex == 11) {
+              var4 = -1;
+            }
+            if (12 == meshIndex) {
+              var4 = -1;
+              var5 = -1;
+            }
+            if (meshIndex == 13) {
               var5 = -1;
               var4 = 1;
             }
-            if (param0 == 14) {
+            if (meshIndex == 14) {
               var4 = -1;
               var5 = 1;
             }
-            if (15 == param0) {
+            if (15 == meshIndex) {
               var5 = 1;
               var4 = 1;
             }
@@ -73,48 +73,48 @@ final class LoginMethod {
             var2 = -(var3 * (var3 * 8192) / 3300) + 8192;
             int var4Lifetime2 = 1;
             int var5Lifetime2 = 0;
-            if (3 == param0) {
+            if (3 == meshIndex) {
               var4Lifetime2 = -1;
             }
-            if (param0 == 1) {
+            if (meshIndex == 1) {
               var5Lifetime2 = 1;
             }
-            if (4 == param0) {
+            if (4 == meshIndex) {
               var5Lifetime2 = 1;
               var4Lifetime2 = 1;
             }
-            if (5 == param0) {
+            if (5 == meshIndex) {
               var4Lifetime2 = -1;
               var5Lifetime2 = 1;
             }
-            if (param1 < 46) {
+            if (guard < 46) {
               return;
             }
-            if (6 == param0) {
+            if (6 == meshIndex) {
               var4Lifetime2 = 1;
               var5Lifetime2 = -1;
             }
-            if (param0 == 7 ||
-              8 == param0) {
+            if (meshIndex == 7 ||
+              8 == meshIndex) {
               var4Lifetime2 = -1;
               var5Lifetime2 = -1;
             }
-            if (param0 == 11) {
+            if (meshIndex == 11) {
               var4Lifetime2 = -1;
             }
-            if (12 == param0) {
+            if (12 == meshIndex) {
               var4Lifetime2 = -1;
               var5Lifetime2 = -1;
             }
-            if (param0 == 13) {
+            if (meshIndex == 13) {
               var5Lifetime2 = -1;
               var4Lifetime2 = 1;
             }
-            if (param0 == 14) {
+            if (meshIndex == 14) {
               var4Lifetime2 = -1;
               var5Lifetime2 = 1;
             }
-            if (15 == param0) {
+            if (15 == meshIndex) {
               var5Lifetime2 = 1;
               var4Lifetime2 = 1;
             }
@@ -124,48 +124,48 @@ final class LoginMethod {
         }
         int var4Lifetime1 = 1;
         int var5Lifetime1 = 0;
-        if (3 == param0) {
+        if (3 == meshIndex) {
           var4Lifetime1 = -1;
         }
-        if (param0 == 1) {
+        if (meshIndex == 1) {
           var5Lifetime1 = 1;
         }
-        if (4 == param0) {
+        if (4 == meshIndex) {
           var5Lifetime1 = 1;
           var4Lifetime1 = 1;
         }
-        if (5 == param0) {
+        if (5 == meshIndex) {
           var4Lifetime1 = -1;
           var5Lifetime1 = 1;
         }
-        if (param1 < 46) {
+        if (guard < 46) {
           return;
         }
-        if (6 == param0) {
+        if (6 == meshIndex) {
           var4Lifetime1 = 1;
           var5Lifetime1 = -1;
         }
-        if (param0 == 7 ||
-          8 == param0) {
+        if (meshIndex == 7 ||
+          8 == meshIndex) {
           var4Lifetime1 = -1;
           var5Lifetime1 = -1;
         }
-        if (param0 == 11) {
+        if (meshIndex == 11) {
           var4Lifetime1 = -1;
         }
-        if (12 == param0) {
+        if (12 == meshIndex) {
           var4Lifetime1 = -1;
           var5Lifetime1 = -1;
         }
-        if (param0 == 13) {
+        if (meshIndex == 13) {
           var5Lifetime1 = -1;
           var4Lifetime1 = 1;
         }
-        if (param0 == 14) {
+        if (meshIndex == 14) {
           var4Lifetime1 = -1;
           var5Lifetime1 = 1;
         }
-        if (15 == param0) {
+        if (15 == meshIndex) {
           var5Lifetime1 = 1;
           var4Lifetime1 = 1;
         }
@@ -184,38 +184,38 @@ final class LoginMethod {
         field_d = null;
     }
 
-    final void a(int param0, java.applet.Applet param1) {
+    final void rememberLoginMethod(int guard, java.applet.Applet applet) {
         try {
-          if (param0 != 27002) {
+          if (guard != 27002) {
             field_a = (String) null;
           }
-          DialogueScreen.writeCookie((byte) 70, param1, "jagex-last-login-method", this.name, 31536000L);
+          DialogueScreen.writeCookie((byte) 70, applet, "jagex-last-login-method", this.name, 31536000L);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ee.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "ee.B(" + guard + ',' + (applet != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(int param0, String param1, boolean param2) {
+    final static int legacyMenuTextWidth(int guard, String text, boolean titleFont) {
         String stackIn_8_2 = null;
         try {
-          int var3_int = 74 % ((param0 + 43) / 47);
-          if (!param2) {
-            int stackIn_4_0 = MembershipAssetSupport.field_a.stringWidth(param1);
+          int var3_int = 74 % ((guard + 43) / 47);
+          if (!titleFont) {
+            int stackIn_4_0 = MembershipAssetSupport.field_a.stringWidth(text);
             return stackIn_4_0;
           }
-          int stackIn_2_0 = MenuTitleRenderSupport.field_e.stringWidth(param1);
+          int stackIn_2_0 = MenuTitleRenderSupport.field_e.stringWidth(text);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_7_0 = var3;
-          StringBuilder stackIn_7_1 = new StringBuilder().append("ee.G(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_7_1 = new StringBuilder().append("ee.G(").append(guard).append(',');
+          if (text == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(titleFont).append(')').toString());
         }
     }
 
@@ -282,26 +282,26 @@ final class LoginMethod {
         }
     }
 
-    final static PointCloudEffect a(LevelObject param0, int param1, boolean param2) {
+    final static PointCloudEffect createObjectDebris(LevelObject object, int guard, boolean indexedRendering) {
         String stackIn_7_2 = null;
         try {
-          if (param1 != 14) {
+          if (guard != 14) {
             Sprite[] var4 = (Sprite[]) null;
             LoginMethod.drawThreeSlice(30, -124, true, (Sprite[]) null, -14);
           }
-          PointCloudEffect stackIn_3_0 = AchievementDefinition.createSpriteDebris((byte) -43, SessionCounterState.objectExplosionSamples[param0.objectType], param0.y, param0.collisionSprite, param2, param0.x);
+          PointCloudEffect stackIn_3_0 = AchievementDefinition.createSpriteDebris((byte) -43, SessionCounterState.objectExplosionSamples[object.objectType], object.y, object.collisionSprite, indexedRendering, object.x);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
           RuntimeException stackIn_6_0 = var3;
           StringBuilder stackIn_6_1 = new StringBuilder().append("ee.C(");
-          if (param0 == null) {
+          if (object == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(',').append(indexedRendering).append(')').toString());
         }
     }
 

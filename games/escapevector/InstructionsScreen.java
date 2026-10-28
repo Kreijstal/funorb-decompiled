@@ -736,7 +736,7 @@ final class InstructionsScreen {
         }
         if (!this.inSession) {
           SoftwareRasterizer.clearFramebuffer();
-          SelfDestructEffects.b(2);
+          SelfDestructEffects.drawMenuEdges(2);
           this.frame.draw(105);
           MenuTitleRenderSupport.drawTitles(4);
         } else {

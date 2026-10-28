@@ -36,7 +36,7 @@ final class SpriteArchiveSupport {
           }
           LoginText var7 = new LoginText(param0);
           LoginText var8 = new LoginText(param2);
-          int stackIn_3_0 = SelfDestructEffects.a((byte) -32, param4, param3, var8, var7, param1, param5);
+          int stackIn_3_0 = SelfDestructEffects.pollAccountFormExchange((byte) -32, param4, param3, var8, var7, param1, param5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -127,7 +127,7 @@ final class SpriteArchiveSupport {
 
     final static void addPointCloudIntensity(byte guard, int amount, int pixelIndex) {
         int var3 = (255 & RatingQuery.pointCloudRasterSprite.field_k[pixelIndex]) + amount;
-        RatingQuery.pointCloudRasterSprite.field_k[pixelIndex] = (byte)MatchingTextValidator.a(var3, var3 << 23 >> 31);
+        RatingQuery.pointCloudRasterSprite.field_k[pixelIndex] = (byte)MatchingTextValidator.bitwiseOr(var3, var3 << 23 >> 31);
         int var4 = -46 % ((-11 - guard) / 34);
     }
 

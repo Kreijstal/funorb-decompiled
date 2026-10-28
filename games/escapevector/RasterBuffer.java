@@ -4,7 +4,7 @@
 abstract class RasterBuffer {
     int width;
     static AccountFormStage field_g;
-    static PcmSample field_c;
+    static PcmSample fiveSecondExplosionSample;
     static IntrusiveDeque field_e;
     int height;
     static String field_b;
@@ -19,7 +19,7 @@ abstract class RasterBuffer {
           return;
         }
         field_b = null;
-        field_c = null;
+        fiveSecondExplosionSample = null;
         field_e = null;
     }
 

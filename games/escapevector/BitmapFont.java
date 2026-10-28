@@ -445,7 +445,7 @@ abstract class BitmapFont extends DualLinkNode {
         try {
           if (tag.startsWith("col=")) {
             CharSequence var3 = (CharSequence) ((Object) tag.substring(4));
-            currentColor = GameAppletShell.a(16, 27672, var3);
+            currentColor = GameAppletShell.parseInt(16, 27672, var3);
           } else if (tag.equals("/col")) {
             currentColor = defaultColor;
           } else if (tag.startsWith("trans=")) {
@@ -455,21 +455,21 @@ abstract class BitmapFont extends DualLinkNode {
             currentAlpha = defaultAlpha;
           } else if (tag.startsWith("str=")) {
             CharSequence var5 = (CharSequence) ((Object) tag.substring(4));
-            strikeColor = GameAppletShell.a(16, 27672, var5);
+            strikeColor = GameAppletShell.parseInt(16, 27672, var5);
           } else if (tag.equals("str")) {
             strikeColor = 8388608;
           } else if (tag.equals("/str")) {
             strikeColor = -1;
           } else if (tag.startsWith("u=")) {
             CharSequence var6 = (CharSequence) ((Object) tag.substring(2));
-            underlineColor = GameAppletShell.a(16, 27672, var6);
+            underlineColor = GameAppletShell.parseInt(16, 27672, var6);
           } else if (tag.equals("u")) {
             underlineColor = 0;
           } else if (tag.equals("/u")) {
             underlineColor = -1;
           } else if (tag.startsWith("shad=")) {
             CharSequence var7 = (CharSequence) ((Object) tag.substring(5));
-            currentShadowColor = GameAppletShell.a(16, 27672, var7);
+            currentShadowColor = GameAppletShell.parseInt(16, 27672, var7);
           } else if (tag.equals("shad")) {
             currentShadowColor = 0;
           } else if (tag.equals("/shad")) {

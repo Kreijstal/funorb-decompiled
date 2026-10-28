@@ -85,7 +85,7 @@ final class DialogueScreen extends IntrusiveNode {
             int stackIn_47_0 = 405;
             String stackIn_47_1 = this.actionLabel;
             int stackIn_48_2 = (this.input.selectedIndex == 0) ? 16777215 : 6340704;
-            MatchingTextValidator.a(stackIn_47_0, stackIn_47_1, stackIn_48_2, -113, var4 + (-8 - var2 / 2 - var3 * 16));
+            MatchingTextValidator.drawOutlinedTitle(stackIn_47_0, stackIn_47_1, stackIn_48_2, -113, var4 + (-8 - var2 / 2 - var3 * 16));
           } else {
             int stackIn_25_0 = 0;
             int stackIn_25_1 = 409;
@@ -100,7 +100,7 @@ final class DialogueScreen extends IntrusiveNode {
             int stackIn_34_0 = 405;
             String stackIn_34_1 = this.actionLabel;
             int stackIn_35_2 = (this.input.selectedIndex != 0) ? 6340704 : 16777215;
-            MatchingTextValidator.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, -120, 16 * var3 + (632 - var2 / 2));
+            MatchingTextValidator.drawOutlinedTitle(stackIn_34_0, stackIn_34_1, stackIn_35_2, -120, 16 * var3 + (632 - var2 / 2));
           }
         } else {
           var7 = 420;
@@ -120,7 +120,7 @@ final class DialogueScreen extends IntrusiveNode {
           int stackIn_14_0 = 471;
           String stackIn_14_1 = this.actionLabel;
           int stackIn_15_2 = (this.input.selectedIndex != 0) ? 6340704 : 16777215;
-          MatchingTextValidator.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, -122, 16 * var3 + (-6 + (var5 - var2 / 2)));
+          MatchingTextValidator.drawOutlinedTitle(stackIn_14_0, stackIn_14_1, stackIn_15_2, -122, 16 * var3 + (-6 + (var5 - var2 / 2)));
         }
         AccountMessagePanel.drawUnevenFrame(3162160, var5 - 3, 6324320, -1, 3 + var6, -108, 3 + var4, var7 - 3, var3);
         AccountMessagePanel.drawUnevenFrame(5275728, var5, 10551200, 1, var6, 99, var4, var7, var3);

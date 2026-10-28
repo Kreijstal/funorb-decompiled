@@ -284,7 +284,7 @@ final class GameProgressTracker {
             var4 = 1;
           }
           int var5 = DualLinkNode.field_m[var2];
-          boolean var6 = (PasswordValidator.a(1, var2) == 2);
+          boolean var6 = (PasswordValidator.modeSessionOption(1, var2) == 2);
           this.modes[var2] = new ModeProgress(var2, var3, var4, var5, (var6), this);
         }
         int var2Lifetime1 = 2;

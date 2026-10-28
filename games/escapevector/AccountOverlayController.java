@@ -18,7 +18,7 @@ final class AccountOverlayController {
         try {
           if (!IntrusiveNode.b(12)) {
             if (null != IsaacRandom.field_d &&
-              IsaacRandom.field_d.field_c) {
+              IsaacRandom.field_d.focusLost) {
               DisplayAndRatingSupport.exitFullscreen(-25123);
               AccountRequestDialog.field_pb.pushPanel(new AccountNoticeDialog(AccountRequestDialog.field_pb, ThreeSliceButtonPainter.field_A), 69);
             }

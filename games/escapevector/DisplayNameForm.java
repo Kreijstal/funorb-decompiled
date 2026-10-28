@@ -235,7 +235,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
             return;
           }
           if (this.cancelButton == button) {
-            GameAppletShell.b(guard ^ -104);
+            GameAppletShell.showEmptyLoginForm(guard ^ -104);
             return;
           }
           if (button != this.submitButton) {

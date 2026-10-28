@@ -72,7 +72,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         int var7 = EscapeVector.obfuscationControl;
         try {
           if (this.backButton == button) {
-            GameAppletShell.b(-74);
+            GameAppletShell.showEmptyLoginForm(-74);
           } else if (this.createAccountButton == button) {
             MembershipPromotionScreen.showRegistrationPanel((byte) -83);
           } else if (this.guestButton == button) {
@@ -133,7 +133,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         if (param0 != -8462) {
           return -107;
         }
-        if (!AchievementRecord.a(param1, -99)) {
+        if (!AchievementRecord.isModeAvailable(param1, -99)) {
           return -1;
         }
         return param1;

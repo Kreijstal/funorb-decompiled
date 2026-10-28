@@ -157,7 +157,7 @@ abstract class DebouncedValidator implements ValidationSource {
             LoginText.buildLegacyMenu(var2Lifetime4, 0, param1);
             return;
           }
-          IsaacRandom.field_d = AccountFormStage.createFullscreenCanvas(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
+          IsaacRandom.field_d = AccountFormStage.createFullscreenCanvas(640, -16493, NetworkGameClient.taskService, 480, 0, 0);
           if (null == IsaacRandom.field_d) {
             var2Lifetime5 = 3;
           } else {
@@ -209,7 +209,7 @@ abstract class DebouncedValidator implements ValidationSource {
           }
           return;
         }
-        IsaacRandom.field_d = AccountFormStage.createFullscreenCanvas(640, -16493, NetworkGameClient.field_r, 480, 0, 0);
+        IsaacRandom.field_d = AccountFormStage.createFullscreenCanvas(640, -16493, NetworkGameClient.taskService, 480, 0, 0);
         if (null == IsaacRandom.field_d) {
           var2Lifetime3 = 3;
         } else {

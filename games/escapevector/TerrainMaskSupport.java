@@ -49,7 +49,7 @@ final class TerrainMaskSupport {
         if (1 == quadrantCode) {
           int var8_int = -(1 << left) + (2 << -1 + right);
           for (int var9 = top; bottom > var9; var9++) {
-            rows[var9] = MatchingTextValidator.a(rows[var9], var8_int);
+            rows[var9] = MatchingTextValidator.bitwiseOr(rows[var9], var8_int);
           }
           return;
         }

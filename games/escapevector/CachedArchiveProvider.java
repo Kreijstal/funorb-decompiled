@@ -525,7 +525,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           while (Js5NetworkRequest.field_I.length > var3_int) {
             int var5 = LoginPromptSupport.field_a[var3_int];
             if (0 <= var5) {
-              int var6 = LoginMethod.a(98, Js5NetworkRequest.field_I[var3_int], true);
+              int var6 = LoginMethod.legacyMenuTextWidth(98, Js5NetworkRequest.field_I[var3_int], true);
               var4 = var4 + CheckboxPainter.field_s;
               int var7 = -(var6 >> 1) + ClientException.field_e;
               if (DualLinkNode.a(x, (AchievementTracker.field_k << 1) + IntroFrameRenderer.field_a, guard ^ -123, var4, -MembershipPromotionScreen.field_k + var7, (MembershipPromotionScreen.field_k << 1) + var6, y)) {

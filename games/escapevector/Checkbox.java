@@ -91,7 +91,7 @@ final class Checkbox extends TextButton {
         try {
           DialWidgetPainter.detachKeyboardInput((byte) -58, (java.awt.Component) ((Object) canvas));
           int var2_int = 120 / ((guard - 54) / 57);
-          SelfDestructEffects.a((java.awt.Component) ((Object) canvas), (byte) 9);
+          SelfDestructEffects.detachMouseInput((java.awt.Component) ((Object) canvas), (byte) 9);
           if (null == ArchiveFactorySupport.field_b) {
             return;
           }

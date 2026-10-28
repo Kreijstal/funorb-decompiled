@@ -43,7 +43,7 @@ final class ViewportController {
           this.field_r = BoundedUrlRequest.field_d;
           this.field_l.onResize(windowed, this.field_o, this.field_j);
           PacketBuffer.field_i = false;
-          FullscreenFocusCanvas var2 = AccountFormStage.createFullscreenCanvas(this.field_j, -16493, NetworkGameClient.field_r, this.field_o, 0, 0);
+          FullscreenFocusCanvas var2 = AccountFormStage.createFullscreenCanvas(this.field_j, -16493, NetworkGameClient.taskService, this.field_o, 0, 0);
           if (var2 == null) {
             this.restoreWindowedSize(0);
             return var2;
@@ -53,7 +53,7 @@ final class ViewportController {
         this.field_r = BoundedUrlRequest.field_d;
         this.field_l.onResize(windowed, this.field_o, this.field_j);
         PacketBuffer.field_i = false;
-        FullscreenFocusCanvas var2Lifetime1 = AccountFormStage.createFullscreenCanvas(this.field_j, -16493, NetworkGameClient.field_r, this.field_o, 0, 0);
+        FullscreenFocusCanvas var2Lifetime1 = AccountFormStage.createFullscreenCanvas(this.field_j, -16493, NetworkGameClient.taskService, this.field_o, 0, 0);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }

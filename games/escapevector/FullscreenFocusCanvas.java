@@ -4,10 +4,10 @@
 final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_b;
     static String field_f;
-    volatile boolean field_c;
+    volatile boolean focusLost;
     static String field_g;
     static IndexedSprite[] field_a;
-    java.awt.Frame field_d;
+    java.awt.Frame frame;
     static int field_h;
     static Js5ArchiveManager field_e;
 
@@ -16,17 +16,17 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          this.field_c = true;
+          this.focusLost = true;
         } catch (RuntimeException runtimeException) {
           throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "af.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0) {
+    final static void advanceSessionCounters(int guard) {
         if (SocketJs5Transport.field_r != null) {
           SocketJs5Transport.field_r.advanceCounters((byte) -118);
         }
-        if (param0 != 0) {
+        if (guard != 0) {
           FullscreenFocusCanvas.releaseStatics((byte) -8);
           return;
         }
@@ -49,30 +49,30 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         field_f = null;
     }
 
-    final static void a(byte param0, SystemTaskService param1, Object param2) {
+    final static void pumpEventQueue(byte guard, SystemTaskService taskService, Object source) {
         String stackIn_20_2 = null;
         String stackIn_23_2 = null;
         Throwable decompiledCaughtException = null;
         int var4 = EscapeVector.obfuscationControl;
         try {
-          if (param1.eventQueue == null) {
+          if (taskService.eventQueue == null) {
             return;
           }
-          if (param0 != -61) {
+          if (guard != -61) {
             return;
           }
           for (int var3_int = 0; 50 > var3_int; var3_int++) {
-            if (null != param1.eventQueue.peekEvent()) {
+            if (null != taskService.eventQueue.peekEvent()) {
               AchievementTracker.sleepMillis((byte) -15, 1L);
               continue;
             }
             break;
           }
           try {
-            if (param2 == null) {
+            if (source == null) {
               return;
             }
-            param1.eventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
+            taskService.eventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(source, 1001, "dummy")));
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,14 +83,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           decompiledCaughtException = decompiledCaughtParameter1;
           RuntimeException var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           RuntimeException stackIn_19_0 = var3_ref;
-          StringBuilder stackIn_19_1 = new StringBuilder().append("af.B(").append(param0).append(',');
-          if (param1 == null) {
+          StringBuilder stackIn_19_1 = new StringBuilder().append("af.B(").append(guard).append(',');
+          if (taskService == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
           StringBuilder stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
-          if (param2 == null) {
+          if (source == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
@@ -102,14 +102,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final void a(SystemTaskService param0, boolean param1) {
+    final void exitFullscreen(SystemTaskService taskService, boolean guard) {
         try {
-          FullscreenFocusCanvas.a(param0, this.field_d, false);
-          if (!param1) {
+          FullscreenFocusCanvas.exitFullscreenAndDispose(taskService, this.frame, false);
+          if (!guard) {
             field_e = (Js5ArchiveManager) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "af.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "af.E(" + (taskService != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -119,27 +119,27 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     FullscreenFocusCanvas() {
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void appendRatingRow(int guard, int firstCount, int secondCount, int thirdCount, int labelIndex, int value) {
         int stackIn_8_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_48_0 = 0;
         int var6;
         int var7;
-        ChatHistorySupport.field_e[AccountTermsPanel.field_J] = param4;
+        ChatHistorySupport.field_e[AccountTermsPanel.field_J] = labelIndex;
         LegacyStyleNode.field_q[AccountTermsPanel.field_J] = AccountTermsPanel.field_J;
-        DualLinkNode.field_k[AccountTermsPanel.field_J] = param5;
-        if (param5 < TextLayoutLine.field_e) {
-          TextLayout.field_d = param5;
+        DualLinkNode.field_k[AccountTermsPanel.field_J] = value;
+        if (value < TextLayoutLine.field_e) {
+          TextLayout.field_d = value;
         }
-        if (ArchiveRequest.field_t >= param5) {
-          ModeProgressSupport.field_c[AccountTermsPanel.field_J] = param1;
-          if (param0 == 1) {
-            RasterSnapshot.field_k[AccountTermsPanel.field_J] = param2;
-            AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = param3;
-            var6 = param3 + param2 + param1;
+        if (ArchiveRequest.field_t >= value) {
+          ModeProgressSupport.field_c[AccountTermsPanel.field_J] = firstCount;
+          if (guard == 1) {
+            RasterSnapshot.field_k[AccountTermsPanel.field_J] = secondCount;
+            AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = thirdCount;
+            var6 = thirdCount + secondCount + firstCount;
             if (var6 != 0) {
-              stackIn_48_0 = param1 * 1000 / var6;
+              stackIn_48_0 = firstCount * 1000 / var6;
             } else {
               stackIn_48_0 = 0;
             }
@@ -154,36 +154,36 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             }
             return;
           }
-          FullscreenFocusCanvas.a(-7, 8, -13, 15, -127, 46);
-          RasterSnapshot.field_k[AccountTermsPanel.field_J] = param2;
-          AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = param3;
-          var6 = param3 + param2 + param1;
+          FullscreenFocusCanvas.appendRatingRow(-7, 8, -13, 15, -127, 46);
+          RasterSnapshot.field_k[AccountTermsPanel.field_J] = secondCount;
+          AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = thirdCount;
+          var6 = thirdCount + secondCount + firstCount;
           if (var6 != 0) {
-            stackIn_35_0 = param1 * 1000 / var6;
+            stackIn_35_0 = firstCount * 1000 / var6;
           } else {
             stackIn_35_0 = 0;
           }
           var7 = stackIn_35_0;
         } else {
-          AlternateUsernameCredentials.field_r = param5;
-          ModeProgressSupport.field_c[AccountTermsPanel.field_J] = param1;
-          if (param0 == 1) {
-            RasterSnapshot.field_k[AccountTermsPanel.field_J] = param2;
-            AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = param3;
-            var6 = param3 + param2 + param1;
+          AlternateUsernameCredentials.field_r = value;
+          ModeProgressSupport.field_c[AccountTermsPanel.field_J] = firstCount;
+          if (guard == 1) {
+            RasterSnapshot.field_k[AccountTermsPanel.field_J] = secondCount;
+            AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = thirdCount;
+            var6 = thirdCount + secondCount + firstCount;
             if (var6 != 0) {
-              stackIn_8_0 = param1 * 1000 / var6;
+              stackIn_8_0 = firstCount * 1000 / var6;
             } else {
               stackIn_8_0 = 0;
             }
             var7 = stackIn_8_0;
           } else {
-            FullscreenFocusCanvas.a(-7, 8, -13, 15, -127, 46);
-            RasterSnapshot.field_k[AccountTermsPanel.field_J] = param2;
-            AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = param3;
-            var6 = param3 + param2 + param1;
+            FullscreenFocusCanvas.appendRatingRow(-7, 8, -13, 15, -127, 46);
+            RasterSnapshot.field_k[AccountTermsPanel.field_J] = secondCount;
+            AccountNoticeDialog.field_fb[AccountTermsPanel.field_J] = thirdCount;
+            var6 = thirdCount + secondCount + firstCount;
             if (var6 != 0) {
-              stackIn_21_0 = param1 * 1000 / var6;
+              stackIn_21_0 = firstCount * 1000 / var6;
             } else {
               stackIn_21_0 = 0;
             }
@@ -200,13 +200,13 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static void a(SystemTaskService param0, java.awt.Frame param1, boolean param2) {
+    final static void exitFullscreenAndDispose(SystemTaskService taskService, java.awt.Frame frame, boolean visibleAfterExit) {
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         int var4 = EscapeVector.obfuscationControl;
         try {
           while (true) {
-            SystemTask var3 = param0.exitFullscreen((byte) 45, param1);
+            SystemTask var3 = taskService.exitFullscreen((byte) 45, frame);
             while (var3.status == 0) {
               AchievementTracker.sleepMillis((byte) 93, 10L);
             }
@@ -216,26 +216,26 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             }
             break;
           }
-          param1.setVisible(param2);
-          param1.dispose();
+          frame.setVisible(visibleAfterExit);
+          frame.dispose();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3_ref = decompiledCaughtException;
           RuntimeException stackIn_10_0 = var3_ref;
           StringBuilder stackIn_10_1 = new StringBuilder().append("af.C(");
-          if (param0 == null) {
+          if (taskService == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param1 == null) {
+          if (frame == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(visibleAfterExit).append(')').toString());
         }
     }
 

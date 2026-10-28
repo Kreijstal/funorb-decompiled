@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountFormStage {
-    static int[] field_f;
+    static int[] faceDepthBucketCounts;
     static int[] field_a;
     static LoginStage field_d;
     static PcmSample field_b;
@@ -44,7 +44,7 @@ final class AccountFormStage {
         if (guard > -1) {
           AccountFormStage.buildRgbSpriteFromSheet((byte) 104);
         }
-        field_f = null;
+        faceDepthBucketCounts = null;
         field_c = null;
     }
 
@@ -73,8 +73,8 @@ final class AccountFormStage {
             return null;
           }
           FullscreenFocusCanvas var7 = new FullscreenFocusCanvas();
-          var7.field_d = var8;
-          var7.field_d.add((java.awt.Component) ((Object) var7));
+          var7.frame = var8;
+          var7.frame.add((java.awt.Component) ((Object) var7));
           if (param1 != -16493) {
             field_b = (PcmSample) null;
           }
@@ -99,7 +99,7 @@ final class AccountFormStage {
 
     static {
         field_a = new int[256];
-        field_f = new int[1024];
+        faceDepthBucketCounts = new int[1024];
         for (int var1 = 0; var1 < 256; var1++) {
           int var0 = var1;
           for (int var2 = 0; var2 < 8; var2++) {

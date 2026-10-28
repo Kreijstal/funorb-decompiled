@@ -44,7 +44,7 @@ final class LinkButtonPainter implements WidgetPainter {
             } else if (this.verticalAlignment == 1) {
               var10 = var10 + (-var8 + component.height >> 1);
             }
-            SeekerMine.a(false, 4 + var7, var9 - 2, var8, var10 + 2);
+            SeekerMine.drawDottedRectangle(false, 4 + var7, var9 - 2, var8, var10 + 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

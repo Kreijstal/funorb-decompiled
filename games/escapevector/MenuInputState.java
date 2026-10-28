@@ -8,7 +8,7 @@ final class MenuInputState {
     int selectedIndex;
     boolean pointerDriven;
     private int heldButton;
-    static TrackerMusicDefinition field_d;
+    static TrackerMusicDefinition panicMusic;
     private int keyCode;
     private int initialPressButton;
     int itemCount;
@@ -17,7 +17,7 @@ final class MenuInputState {
 
     public static void releaseStatics(byte guard) {
         field_b = null;
-        field_d = null;
+        panicMusic = null;
         if (guard != 49) {
           MenuInputState.drawAccountOverlay(false, -49, true);
         }
@@ -275,7 +275,7 @@ final class MenuInputState {
           ArchiveRequest.writeProgressQuery(opcode, var4, -755);
           return var4;
         }
-        field_d = (TrackerMusicDefinition) null;
+        panicMusic = (TrackerMusicDefinition) null;
         AchievementTracker.field_i.addLast(-12328, var4);
         ArchiveRequest.writeProgressQuery(opcode, var4, -755);
         return var4;

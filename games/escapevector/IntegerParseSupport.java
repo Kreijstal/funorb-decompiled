@@ -175,17 +175,17 @@ final class IntegerParseSupport {
             var6.field_m = BufferedRandomAccessFile.readPackedShortArray(input, 16, var6.field_m, -1);
           }
           if (SessionMenuSupport.readBitFlag(input, (byte) -102)) {
-            var6.field_n = StripedProgressBar.readPackedByteArray(16, 118, input, var6.field_n);
+            var6.facePriorities = StripedProgressBar.readPackedByteArray(16, 118, input, var6.facePriorities);
             int var7 = 0;
-            for (int var8 = 0; var8 < var6.field_n.length; var8++) {
-              if ((255 & var6.field_n[var8]) > var7) {
-                var7 = var6.field_n[var8] & 255;
+            for (int var8 = 0; var8 < var6.facePriorities.length; var8++) {
+              if ((255 & var6.facePriorities[var8]) > var7) {
+                var7 = var6.facePriorities[var8] & 255;
               }
             }
             if (0 == var7) {
-              var6.field_n = null;
+              var6.facePriorities = null;
             } else {
-              var6.field_I = (byte)(1 + var7);
+              var6.facePriorityCount = (byte)(1 + var7);
             }
           }
           TriangleMesh stackIn_24_0 = var6;

@@ -602,7 +602,7 @@ final class LevelSelectScreen {
 
     final void draw(int guard) {
         SoftwareRasterizer.clearFramebuffer();
-        SelfDestructEffects.b(guard ^ 1);
+        SelfDestructEffects.drawMenuEdges(guard ^ 1);
         int var2 = LoginHandshakeSupport.field_d < 50 ? -LoginHandshakeSupport.field_d + 50 : 0;
         if (null != this.background) {
           this.background.drawOpaque(3, 79);

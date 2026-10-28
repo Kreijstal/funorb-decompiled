@@ -19,7 +19,7 @@ final class HighscorePlayerRecord {
         if (guard != 1) {
           field_c = (String) null;
           GradientOutlineTextPainter.clearSharedKeyHandler(2);
-          MatchingTextValidator.c(true);
+          MatchingTextValidator.releaseMouseHandler(true);
           KeyboardStateSupport.closeCacheServices(-16802);
           if (ClientException.a(-31879)) {
             QuickChatDynamicCommand.outgoingPackets.writeCipheredOpcode(1, true);
@@ -31,7 +31,7 @@ final class HighscorePlayerRecord {
           return;
         }
         GradientOutlineTextPainter.clearSharedKeyHandler(2);
-        MatchingTextValidator.c(true);
+        MatchingTextValidator.releaseMouseHandler(true);
         KeyboardStateSupport.closeCacheServices(-16802);
         if (!ClientException.a(-31879)) {
           ConnectionSupport.closeTransport(16);

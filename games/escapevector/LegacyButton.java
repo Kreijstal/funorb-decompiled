@@ -84,7 +84,7 @@ final class LegacyButton {
         } else {
           var8Lifetime1 = this.labelBaseline(-18641);
           var9_int = this.width / 2 + this.x;
-          MatchingTextValidator.a(var8Lifetime1, this.text, this.textColors[var6], -128, var9_int);
+          MatchingTextValidator.drawOutlinedTitle(var8Lifetime1, this.text, this.textColors[var6], -128, var9_int);
         }
         return;
     }

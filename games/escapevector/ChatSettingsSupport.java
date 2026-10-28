@@ -47,7 +47,7 @@ final class ChatSettingsSupport {
         if (LaserGateSpan.field_g <= 0) {
           return false;
         }
-        if (!NetworkGameClient.i(90)) {
+        if (!NetworkGameClient.supportsSessionRecovery(90)) {
           return true;
         }
         return false;

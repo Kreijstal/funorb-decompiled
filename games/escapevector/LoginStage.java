@@ -18,7 +18,7 @@ final class LoginStage {
 
     final static String formatPacketDiagnostic(byte guard) {
         int var5 = EscapeVector.obfuscationControl;
-        String var6 = "(" + NetworkGameClient.field_q + " " + ArchiveIndex.field_t + " " + LoginPromptSupport.field_b + ") " + LegacyStyleNode.field_v;
+        String var6 = "(" + NetworkGameClient.oldestIncomingOpcode + " " + ArchiveIndex.field_t + " " + LoginPromptSupport.field_b + ") " + LegacyStyleNode.field_v;
         String var1 = var6;
         if (EmailSyntaxValidator.field_r > 0) {
           var1 = var6 + ":";

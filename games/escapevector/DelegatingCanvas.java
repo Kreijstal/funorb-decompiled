@@ -27,7 +27,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         String stackIn_32_2 = null;
         String stackIn_35_2 = null;
         try {
-          if (MatchingTextValidator.b((byte) -35, password)) {
+          if (MatchingTextValidator.containsNonAsciiAlphanumeric((byte) -35, password)) {
             return false;
           }
           if (RepeatedCharacterSupport.isRepeatedCharacter(1, password)) {

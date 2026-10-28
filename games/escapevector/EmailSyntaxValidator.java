@@ -7,12 +7,12 @@ final class EmailSyntaxValidator extends TextFieldValidator {
     static String field_n;
     static QuickChatPhraseCache field_s;
     static int[] field_p;
-    static int field_q;
+    static int menuEdgeColor;
 
     final static void a(int param0, byte param1, String param2) {
         try {
           if (param1 != 83) {
-            field_q = -5;
+            menuEdgeColor = -5;
           }
           SavedDataQuery.field_i = false;
           DraggableWidget.field_F = false;
@@ -131,11 +131,11 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           if (!param0) {
             return;
           }
-          field_q = -4;
+          menuEdgeColor = -4;
           return;
         }
         if (param0) {
-          field_q = -4;
+          menuEdgeColor = -4;
           return;
         }
     }

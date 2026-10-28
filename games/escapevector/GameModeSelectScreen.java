@@ -104,7 +104,7 @@ final class GameModeSelectScreen {
           this.footerButtons = (LegacyButton[]) null;
         }
         SoftwareRasterizer.clearFramebuffer();
-        SelfDestructEffects.b(guard - 98);
+        SelfDestructEffects.drawMenuEdges(guard - 98);
         MenuTitleRenderSupport.drawTitles(4);
         this.drawButtons(this.modeButtons, (byte) -116);
         this.drawButtons(this.footerButtons, (byte) -109);

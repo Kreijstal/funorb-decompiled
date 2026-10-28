@@ -67,12 +67,12 @@ final class ShipHullGeometry {
             return;
           }
           TriangleMesh var44 = param5;
-          if (var44.field_n != null &&
-            var44.field_I > 1) {
-            byte[] var60 = var44.field_n;
-            NetworkGameClient.a(var60, 0, EditableTextWidget.field_I, 114, 0);
+          if (var44.facePriorities != null &&
+            var44.facePriorityCount > 1) {
+            byte[] var60 = var44.facePriorities;
+            NetworkGameClient.scatterFacesByPriority(var60, 0, EditableTextWidget.facePriorityCursors, 114, 0);
           } else {
-            SelfDestructEffects.f(46);
+            SelfDestructEffects.flattenFaceDepthBuckets(46);
           }
           int[] var54 = new int[param5.normalCount];
           int[] var49 = var54;
@@ -104,7 +104,7 @@ final class ShipHullGeometry {
             var64[var13] = var15Lifetime2;
           }
           for (int var13Lifetime1 = 0; var13Lifetime1 < AccountSessionSupport.field_d; var13Lifetime1++) {
-            int var14Lifetime1 = SavedDataQuerySupport.field_f[var13Lifetime1];
+            int var14Lifetime1 = SavedDataQuerySupport.bucketedFaceIndices[var13Lifetime1];
             int var15Lifetime1 = param5.faceVertexA[var14Lifetime1];
             int var16 = param5.faceVertexB[var14Lifetime1];
             int var17 = param5.faceVertexC[var14Lifetime1];

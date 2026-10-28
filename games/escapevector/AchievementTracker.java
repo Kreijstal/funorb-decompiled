@@ -437,7 +437,7 @@ final class AchievementTracker {
         }
         this.markAchievement((byte) -47, 1, achievementId);
         this.markAchievement((byte) -47, 0, achievementId);
-        PasswordValidator.b(achievementId, -128);
+        PasswordValidator.setSessionAchievementBit(achievementId, -128);
         if (guard != 54) {
           return true;
         }
@@ -802,7 +802,7 @@ final class AchievementTracker {
             int stackIn_38_0 = defaultCountdown ^ 94;
             String stackIn_38_1 = var6;
             boolean stackIn_39_2 = !(var4 < 0);
-            int var7Lifetime1 = LoginMethod.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
+            int var7Lifetime1 = LoginMethod.legacyMenuTextWidth(stackIn_38_0, stackIn_38_1, stackIn_39_2);
             int var8Lifetime1 = ClientException.field_e - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + CheckboxPainter.field_s;

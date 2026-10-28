@@ -246,7 +246,7 @@ final class MainMenuScreen {
         int var5 = EscapeVector.obfuscationControl;
         try {
           SoftwareRasterizer.clearFramebuffer();
-          SelfDestructEffects.b(2);
+          SelfDestructEffects.drawMenuEdges(2);
           if (LoginHandshakeSupport.isLegacyMenuVisible((byte) 117)) {
             int var2_int = InstructionsScreen.legacyMenuWidth(0) / 2 + 20;
             int var3 = 15 + SlidingSpriteTransition.legacyMenuHeight((byte) -122) / 2;

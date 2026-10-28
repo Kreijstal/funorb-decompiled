@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class FullscreenDisplayController {
-    private java.awt.GraphicsDevice field_a;
-    private java.awt.DisplayMode field_b;
+    private java.awt.GraphicsDevice device;
+    private java.awt.DisplayMode originalMode;
 
-    private final void a(int param0, java.awt.Frame param1) {
-        if (param0 != 265181602) {
+    private final void setFullscreenWindow(int guard, java.awt.Frame frame) {
+        if (guard != 265181602) {
           return;
         }
-        this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param1));
+        this.device.setFullScreenWindow((java.awt.Window) ((Object) frame));
     }
 
     public final int[] listmodes() {
-        java.awt.DisplayMode[] var4 = this.field_a.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.device.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
         int[] var2 = new int[var4.length << 2];
         for (int var3 = 0; var3 < var4.length; var3++) {
@@ -26,16 +26,16 @@ final class FullscreenDisplayController {
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
-        this.field_b = this.field_a.getDisplayMode();
-        if (null == this.field_b) {
+        this.originalMode = this.device.getDisplayMode();
+        if (null == this.originalMode) {
           throw new NullPointerException();
         }
         param0.setUndecorated(true);
         param0.enableInputMethods(false);
-        this.a(265181602, param0);
+        this.setFullscreenWindow(265181602, param0);
         if (param4 == 0) {
-          int var6 = this.field_b.getRefreshRate();
-          java.awt.DisplayMode[] var7 = this.field_a.getDisplayModes();
+          int var6 = this.originalMode.getRefreshRate();
+          java.awt.DisplayMode[] var7 = this.device.getDisplayModes();
           boolean var8 = false;
           for (int var9 = 0; var7.length > var9; var9++) {
             if (var7[var9].getWidth() == param1 &&
@@ -53,24 +53,24 @@ final class FullscreenDisplayController {
             param4 = var6;
           }
         }
-        this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+        this.device.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
     }
 
     public final void exit() {
-        if (null != this.field_b) {
-          this.field_a.setDisplayMode(this.field_b);
-          if (!this.field_a.getDisplayMode().equals(this.field_b)) {
+        if (null != this.originalMode) {
+          this.device.setDisplayMode(this.originalMode);
+          if (!this.device.getDisplayMode().equals(this.originalMode)) {
             throw new RuntimeException("");
           }
-          this.field_b = null;
+          this.originalMode = null;
         }
-        this.a(265181602, (java.awt.Frame) null);
+        this.setFullscreenWindow(265181602, (java.awt.Frame) null);
     }
 
     public FullscreenDisplayController() throws Exception {
         java.awt.GraphicsEnvironment var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        this.field_a = var1.getDefaultScreenDevice();
-        if (this.field_a.isFullScreenSupported()) {
+        this.device = var1.getDefaultScreenDevice();
+        if (this.device.isFullScreenSupported()) {
           return;
         }
         java.awt.GraphicsDevice[] var2 = var1.getScreenDevices();
@@ -79,7 +79,7 @@ final class FullscreenDisplayController {
           java.awt.GraphicsDevice var5 = var3[var4];
           if (var5 != null &&
             var5.isFullScreenSupported()) {
-            this.field_a = var5;
+            this.device = var5;
             return;
           }
         }

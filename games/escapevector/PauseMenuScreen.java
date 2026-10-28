@@ -47,11 +47,11 @@ final class PauseMenuScreen {
         if (LoginHandshakeSupport.isLegacyMenuVisible((byte) 122)) {
           int var4 = 20 + InstructionsScreen.legacyMenuWidth(0) / 2;
           int var5 = 15 + SlidingSpriteTransition.legacyMenuHeight((byte) -96) / 2;
-          GameAppletShell.a(var3, 320 - var4, 240 - var5, 6320248, 0, var5 + 241, -3, 321 + var4, 12110032, 3160124, 2 * var2);
+          GameAppletShell.drawFadingPanelFrame(var3, 320 - var4, 240 - var5, 6320248, 0, var5 + 241, -3, 321 + var4, 12110032, 3160124, 2 * var2);
           AchievementTracker.drawLegacyMenu(0);
           return;
         }
-        GameAppletShell.a(var3, this.left - 6, this.top - 12, 6320248, 0, 24 * PauseMenuState.input.itemCount + this.top + 12, -3, 6 + this.right, 12110032, 3160124, var2 * 2);
+        GameAppletShell.drawFadingPanelFrame(var3, this.left - 6, this.top - 12, 6320248, 0, 24 * PauseMenuState.input.itemCount + this.top + 12, -3, 6 + this.right, 12110032, 3160124, var2 * 2);
         int var4Lifetime1 = this.top;
         int var5Lifetime1 = 0;
         if (guard <= 124) {

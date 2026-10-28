@@ -265,7 +265,7 @@ final class AnimatedPanelFrame {
             return;
           }
           int var5 = this.accentWidth((byte) -57);
-          GameAppletShell.a(var5, this.x, this.y, this.darkColor, this.frameId, var3, -3, var2, this.lightColor, this.accentColor, var4);
+          GameAppletShell.drawFadingPanelFrame(var5, this.x, this.y, this.darkColor, this.frameId, var3, -3, var2, this.lightColor, this.accentColor, var4);
           return;
         }
         int var3Lifetime1 = this.height + this.y;
@@ -275,7 +275,7 @@ final class AnimatedPanelFrame {
           return;
         }
         int var5Lifetime1 = this.accentWidth((byte) -57);
-        GameAppletShell.a(var5Lifetime1, this.x, this.y, this.darkColor, this.frameId, var3Lifetime1, -3, var2, this.lightColor, this.accentColor, var4Lifetime1);
+        GameAppletShell.drawFadingPanelFrame(var5Lifetime1, this.x, this.y, this.darkColor, this.frameId, var3Lifetime1, -3, var2, this.lightColor, this.accentColor, var4Lifetime1);
     }
 
     public static void releaseStatics(int guard) {

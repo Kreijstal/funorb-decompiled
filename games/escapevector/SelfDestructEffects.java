@@ -11,119 +11,119 @@ final class SelfDestructEffects {
     static int field_q;
     static boolean field_n;
     static Sprite field_b;
-    private IntrusiveDeque field_o;
-    private int field_a;
-    private int field_m;
-    private TrackerMusicDefinition field_e;
-    private int field_g;
-    private int field_r;
-    private Sprite field_l;
-    private int field_h;
-    private GameplaySession field_f;
-    private Random field_i;
-    private int field_c;
-    private int field_p;
+    private IntrusiveDeque particles;
+    private int flashTicks;
+    private int blastDiameter;
+    private TrackerMusicDefinition musicOverride;
+    private int warningMusicThresholdTicks;
+    private int musicVolumeOverride;
+    private Sprite blastMask;
+    private int particleIntervalTicks;
+    private GameplaySession session;
+    private Random random;
+    private int flashDurationTicks;
+    private int particleStartThresholdTicks;
 
-    private final void a(boolean param0, int param1, int param2) {
+    private final void drawParticles(boolean guard, int cameraY, int cameraX) {
         int var6 = EscapeVector.obfuscationControl;
-        if (this.field_o.isEmpty(-98)) {
+        if (this.particles.isEmpty(-98)) {
           return;
         }
-        IntrusiveNode var4 = this.field_o.first(false);
+        IntrusiveNode var4 = this.particles.first(false);
         while (var4 != null) {
           PointCloudEffect var5 = (PointCloudEffect) (var4);
-          var5.draw(99, param2, param1);
-          var4 = this.field_o.next((byte) 70);
+          var5.draw(99, cameraX, cameraY);
+          var4 = this.particles.next((byte) 70);
         }
-        if (!param0) {
+        if (!guard) {
           java.awt.Component var7 = (java.awt.Component) null;
-          SelfDestructEffects.a((java.awt.Component) null, (byte) -120);
+          SelfDestructEffects.detachMouseInput((java.awt.Component) null, (byte) -120);
         }
     }
 
-    final static void f(int param0) {
+    final static void flattenFaceDepthBuckets(int guard) {
         int var5 = EscapeVector.obfuscationControl;
         try {
-          int var1_int = AccountFormStage.field_f[0];
-          int var3 = -128 % ((param0 + 36) / 48);
-          for (int var2 = 1; AccountFormStage.field_f.length > var2; var2++) {
-            int var4 = AccountFormStage.field_f[var2];
-            ArraySupport.copy(SavedDataQuerySupport.field_f, var2 << 4, SavedDataQuerySupport.field_f, var1_int, var4);
+          int var1_int = AccountFormStage.faceDepthBucketCounts[0];
+          int var3 = -128 % ((guard + 36) / 48);
+          for (int var2 = 1; AccountFormStage.faceDepthBucketCounts.length > var2; var2++) {
+            int var4 = AccountFormStage.faceDepthBucketCounts[var2];
+            ArraySupport.copy(SavedDataQuerySupport.bucketedFaceIndices, var2 << 4, SavedDataQuerySupport.bucketedFaceIndices, var1_int, var4);
             var1_int = var1_int + var4;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "od.B(" + param0 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) var1), "od.B(" + guard + ')');
         }
     }
 
-    private final void a(byte param0) {
-        this.field_l = new Sprite(this.field_m, this.field_m);
+    private final void buildBlastMask(byte guard) {
+        this.blastMask = new Sprite(this.blastDiameter, this.blastDiameter);
         int[] var8 = new int[4];
         int[] var2 = var8;
         SoftwareRasterizer.saveClip(var8);
-        this.field_l.bindAsFramebuffer();
-        int var3 = this.field_m / 2;
-        int var4 = this.field_m / 2;
-        int var5 = this.field_m / 2;
+        this.blastMask.bindAsFramebuffer();
+        int var3 = this.blastDiameter / 2;
+        int var4 = this.blastDiameter / 2;
+        int var5 = this.blastDiameter / 2;
         int var6 = 1;
         SoftwareRasterizer.fillCircle(var3, var4, var5, var6);
         if (AlphaContainer.field_D != null) {
           AlphaContainer.field_D.bindRaster(125);
         }
-        int var7 = -25 / ((param0 + 25) / 58);
+        int var7 = -25 / ((guard + 25) / 58);
         SoftwareRasterizer.restoreClip(var8);
     }
 
-    final static void b(int param0) {
-        if (param0 != 2) {
+    final static void drawMenuEdges(int guard) {
+        if (guard != 2) {
           java.awt.Component var2 = (java.awt.Component) null;
-          SelfDestructEffects.a((java.awt.Component) null, (byte) -63);
+          SelfDestructEffects.detachMouseInput((java.awt.Component) null, (byte) -63);
         }
         AccountPanelInputSupport.drawCachedEdgeSegments(0, -14, 0);
     }
 
-    private final int a(boolean param0, int param1) {
+    private final int wrapWorldX(boolean guard, int x) {
         int var4 = EscapeVector.obfuscationControl;
-        int var3 = this.field_f.worldWidth;
-        while (param1 < 0) {
-          param1 = param1 + var3;
+        int var3 = this.session.worldWidth;
+        while (x < 0) {
+          x = x + var3;
         }
-        while (var3 <= param1) {
-          param1 = param1 - var3;
+        while (var3 <= x) {
+          x = x - var3;
         }
-        if (param0) {
-          this.a(-66);
+        if (guard) {
+          this.spawnCountdownBlast(-66);
         }
-        return param1;
+        return x;
     }
 
-    private final void a(int param0) {
+    private final void spawnCountdownBlast(int guard) {
         int var2 = 640;
         int var3 = 480;
-        if (param0 > -99) {
-          this.field_i = (Random) null;
+        if (guard > -99) {
+          this.random = (Random) null;
         }
-        int var4 = (this.field_f.shipXQ16 >> 16) - var2 / 2;
-        int var5 = (this.field_f.shipYQ16 >> 16) - var3 / 2;
-        int var6 = this.a(var2, 1) + var4;
-        var6 = this.a(false, var6);
-        int var7 = this.a(var3, 1) + var5;
+        int var4 = (this.session.shipXQ16 >> 16) - var2 / 2;
+        int var5 = (this.session.shipYQ16 >> 16) - var3 / 2;
+        int var6 = this.randomOffset(var2, 1) + var4;
+        var6 = this.wrapWorldX(false, var6);
+        int var7 = this.randomOffset(var3, 1) + var5;
         if (var7 < 0) {
           var7 = 0;
         }
-        int var8 = this.field_f.worldHeight;
+        int var8 = this.session.worldHeight;
         if (var7 >= var8) {
-          var7 = -this.field_l.fullHeight + (-1 + var8);
+          var7 = -this.blastMask.fullHeight + (-1 + var8);
         }
         PcmSample var9 = SessionCounterState.objectExplosionSamples[0];
-        PointCloudEffect var10 = new PointCloudEffect(this.field_l, var6, var7, var9);
-        this.field_o.addLast(-12328, var10);
+        PointCloudEffect var10 = new PointCloudEffect(this.blastMask, var6, var7, var9);
+        this.particles.addLast(-12328, var10);
     }
 
-    final static int a(byte param0, boolean param1, String param2, LoginText param3, LoginText param4, int param5, int param6) {
+    final static int pollAccountFormExchange(byte guard, boolean receiveNews, String password, LoginText email, LoginText identifier, int affiliateId, int age) {
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         String stackIn_68_2 = null;
@@ -132,9 +132,9 @@ final class SelfDestructEffects {
         int var9 = 0;
         int var13 = EscapeVector.obfuscationControl;
         try {
-          String var14 = param4.text(-106);
-          String var8 = param3.text(-78);
-          if (param0 != -32) {
+          String var14 = identifier.text(-106);
+          String var8 = email.text(-78);
+          if (guard != -32) {
             field_s = false;
           }
           if (null == TextLayout.field_c &&
@@ -145,22 +145,22 @@ final class SelfDestructEffects {
           if (AccountFormStage.field_d == SessionCounterState.field_d) {
             DialWidgetPainter.field_g = null;
             QuickChatDynamicCommand.outgoingPackets.position = 0;
-            if (param2 != null) {
+            if (password != null) {
               var9 = 0;
               PathPoint.field_a.position = 0;
-              if (param1) {
+              if (receiveNews) {
                 var9 = var9 | 1;
               }
               PathPoint.field_a.writeInt((byte) 123, QuitPageSupport.field_a.nextInt());
               PathPoint.field_a.writeInt((byte) 124, QuitPageSupport.field_a.nextInt());
               PathPoint.field_a.writeCircumfixedString((byte) 100, var14);
               PathPoint.field_a.writeCircumfixedString((byte) 100, var8);
-              CharSequence var15 = (CharSequence) ((Object) param2);
+              CharSequence var15 = (CharSequence) ((Object) password);
               PathPoint.field_a.writeCircumfixedString((byte) 100, ThemeAssetSupport.normalizeAsciiName(0, var15));
-              PathPoint.field_a.writeShort(-116, param5);
-              PathPoint.field_a.writeByte(param6, -123);
+              PathPoint.field_a.writeShort(-116, affiliateId);
+              PathPoint.field_a.writeByte(age, -123);
               PathPoint.field_a.writeByte(var9, -123);
-              QuickChatDynamicCommand.outgoingPackets.writeByte(18, param0 ^ 101);
+              QuickChatDynamicCommand.outgoingPackets.writeByte(18, guard ^ 101);
               QuickChatDynamicCommand.outgoingPackets.position = QuickChatDynamicCommand.outgoingPackets.position + 2;
               int var10 = QuickChatDynamicCommand.outgoingPackets.position;
               String var11_ref_String = PauseMenuScreen.readSettingsCookie(-1, PointCloudEffect.activeApplet((byte) -110));
@@ -168,7 +168,7 @@ final class SelfDestructEffects {
                 var11_ref_String = "";
               }
               QuickChatDynamicCommand.outgoingPackets.writeString(var11_ref_String, 105);
-              AccountPayloadSupport.writeEncryptedPayload(param0 ^ -32, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, MeshProjectionSupport.field_c);
+              AccountPayloadSupport.writeEncryptedPayload(guard ^ -32, QuickChatDynamicCommand.outgoingPackets, PathPoint.field_a, MarkerSlider.field_O, MeshProjectionSupport.field_c);
               QuickChatDynamicCommand.outgoingPackets.backpatchShortLength(QuickChatDynamicCommand.outgoingPackets.position - var10, 32614);
             } else {
               PathPoint.field_a.position = 0;
@@ -176,7 +176,7 @@ final class SelfDestructEffects {
               PathPoint.field_a.writeInt((byte) 127, QuitPageSupport.field_a.nextInt());
               PacketBuffer stackIn_12_0 = PathPoint.field_a;
               int stackIn_12_1 = 100;
-              if (!param4.isFlagged(114)) {
+              if (!identifier.isFlagged(114)) {
                 stackIn_13_2 = "";
               } else {
                 stackIn_13_2 = var14;
@@ -184,7 +184,7 @@ final class SelfDestructEffects {
               ((PacketBuffer) (Object) stackIn_12_0).writeCircumfixedString((byte) stackIn_12_1, stackIn_13_2);
               PacketBuffer stackIn_15_0 = PathPoint.field_a;
               int stackIn_15_1 = 100;
-              if (param3.isFlagged(88)) {
+              if (email.isFlagged(88)) {
                 stackIn_16_2 = var8;
               } else {
                 stackIn_16_2 = "";
@@ -211,7 +211,7 @@ final class SelfDestructEffects {
               if (var9Lifetime1 == 248) {
                 FrameCadenceSupport.writeBrowserSessionMarker((byte) 81, PointCloudEffect.activeApplet((byte) -108));
                 MouseWheelInput.field_a = LoadingProgressDialog.field_fb;
-                ConnectionSupport.closeTransport(param0 ^ -16);
+                ConnectionSupport.closeTransport(guard ^ -16);
                 RegistrationFlowSupport.field_c = false;
                 int stackIn_34_0 = var9Lifetime1;
                 return stackIn_34_0;
@@ -229,10 +229,10 @@ final class SelfDestructEffects {
           }
           if (AccountFormStage.field_d == ResourceArchive.field_k) {
             int var9Lifetime2 = 2;
-            if (Checkbox.readIncomingBytes(param0 + 30032, var9Lifetime2)) {
-              int var10Lifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedShort(param0 + 1984);
+            if (Checkbox.readIncomingBytes(guard + 30032, var9Lifetime2)) {
+              int var10Lifetime1 = QuickChatDynamicCommand.incomingPackets.readUnsignedShort(guard + 1984);
               QuickChatDynamicCommand.incomingPackets.position = 0;
-              if (Checkbox.readIncomingBytes(param0 + 30032, var10Lifetime1)) {
+              if (Checkbox.readIncomingBytes(guard + 30032, var10Lifetime1)) {
                 int var11 = AccountTermsPanel.field_I.length;
                 for (int var12 = 0; var12 < var11; var12++) {
                   AccountTermsPanel.field_I[var12] = QuickChatDynamicCommand.incomingPackets.readCircumfixedString((byte) 125);
@@ -245,13 +245,13 @@ final class SelfDestructEffects {
             }
           }
           if (AccountFormStage.field_d == LoginIdentifierSupport.field_h &&
-            ArchiveKeyRequest.hasCompletePacket(param0 ^ -10538)) {
+            ArchiveKeyRequest.hasCompletePacket(guard ^ -10538)) {
             if (LegacyStyleNode.field_v != 255) {
               MouseWheelInput.field_a = QuickChatDynamicCommand.incomingPackets.readString(false);
             } else {
-              String var9_ref_String = QuickChatDynamicCommand.incomingPackets.readNullableString(param0 - 15176);
+              String var9_ref_String = QuickChatDynamicCommand.incomingPackets.readNullableString(guard - 15176);
               if (var9_ref_String != null) {
-                GameKeyHandler.a(var9_ref_String, (byte) 30, PointCloudEffect.activeApplet((byte) -83));
+                GameKeyHandler.setSettingsCookie(var9_ref_String, (byte) 30, PointCloudEffect.activeApplet((byte) -83));
               }
             }
             ConnectionSupport.closeTransport(16);
@@ -281,56 +281,56 @@ final class SelfDestructEffects {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var7 = decompiledCaughtException;
           RuntimeException stackIn_67_0 = var7;
-          StringBuilder stackIn_67_1 = new StringBuilder().append("od.N(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          StringBuilder stackIn_67_1 = new StringBuilder().append("od.N(").append(guard).append(',').append(receiveNews).append(',');
+          if (password == null) {
             stackIn_68_2 = "null";
           } else {
             stackIn_68_2 = "{...}";
           }
           StringBuilder stackIn_70_1 = ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',');
-          if (param3 == null) {
+          if (email == null) {
             stackIn_71_2 = "null";
           } else {
             stackIn_71_2 = "{...}";
           }
           StringBuilder stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',');
-          if (param4 == null) {
+          if (identifier == null) {
             stackIn_74_2 = "null";
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(affiliateId).append(',').append(age).append(')').toString());
         }
     }
 
-    final void c(int param0) {
-        this.a(true);
-        if (!this.field_f.countdownActive) {
+    final void updateCountdownEffects(int guard) {
+        this.updateBeepGain(true);
+        if (!this.session.countdownActive) {
           return;
         }
-        int var2 = this.field_f.countdownTicks;
-        if (this.field_g >= var2) {
-          this.field_e = MenuInputState.field_d;
-          this.field_r = 64;
+        int var2 = this.session.countdownTicks;
+        if (this.warningMusicThresholdTicks >= var2) {
+          this.musicOverride = MenuInputState.panicMusic;
+          this.musicVolumeOverride = 64;
         }
-        if (this.field_p < var2) {
+        if (this.particleStartThresholdTicks < var2) {
           return;
         }
-        var2 = -var2 + this.field_p;
-        if (param0 == ~(var2 % this.field_h)) {
-          this.a(-110);
+        var2 = -var2 + this.particleStartThresholdTicks;
+        if (guard == ~(var2 % this.particleIntervalTicks)) {
+          this.spawnCountdownBlast(-110);
         }
-        this.e(50);
-        var2 = this.field_f.countdownTicks;
-        if (this.field_c >= var2) {
-          this.field_a = this.field_a + 1;
+        this.updateParticles(50);
+        var2 = this.session.countdownTicks;
+        if (this.flashDurationTicks >= var2) {
+          this.flashTicks = this.flashTicks + 1;
         }
-        if (this.field_c < this.field_a) {
-          this.field_a = this.field_c;
+        if (this.flashDurationTicks < this.flashTicks) {
+          this.flashTicks = this.flashDurationTicks;
         }
-        if (1 == this.field_a) {
+        if (1 == this.flashTicks) {
           PcmStreamMixer var3 = AlternateUsernameCredentials.field_n;
-          PcmSample var4 = RasterBuffer.field_c;
+          PcmSample var4 = RasterBuffer.fiveSecondExplosionSample;
           int var5 = 100;
           int var6 = IterableNodeHashTable.field_c * 6144 / 64;
           int var7 = 8192;
@@ -338,70 +338,70 @@ final class SelfDestructEffects {
         }
     }
 
-    private final void e(int param0) {
+    private final void updateParticles(int guard) {
         Object var3 = null;
         int var4 = EscapeVector.obfuscationControl;
-        if (this.field_o.isEmpty(-120)) {
+        if (this.particles.isEmpty(-120)) {
           return;
         }
-        IntrusiveNode var2 = this.field_o.first(false);
-        if (param0 != 50) {
-          this.field_m = 75;
+        IntrusiveNode var2 = this.particles.first(false);
+        if (guard != 50) {
+          this.blastDiameter = 75;
         }
         while (var2 != null) {
           PointCloudEffect var3_ref = (PointCloudEffect) (var2);
           var3_ref.updateParticles();
-          var2 = this.field_o.next((byte) 70);
+          var2 = this.particles.next((byte) 70);
         }
-        var2 = this.field_o.first(false);
+        var2 = this.particles.first(false);
         while (var2 != null) {
           PointCloudEffect var3_refLifetime1 = (PointCloudEffect) (var2);
           if (var3_refLifetime1.finished) {
             var3_refLifetime1.unlink((byte) -119);
             break;
           }
-          var2 = this.field_o.next((byte) 70);
+          var2 = this.particles.next((byte) 70);
         }
     }
 
-    private final int a(int param0, int param1) {
-        long var3 = (long)this.field_i.nextInt();
+    private final int randomOffset(int span, int excludedTail) {
+        long var3 = (long)this.random.nextInt();
         if (var3 < 0L) {
           var3 = -var3;
         }
-        var3 = (long)(param0 - param1) * var3 / 2147483647L;
+        var3 = (long)(span - excludedTail) * var3 / 2147483647L;
         return (int)var3;
     }
 
-    final void a(byte param0, int param1, int param2) {
-        this.a(true, param2, param1);
-        if (param0 != -87) {
-          this.b(true);
+    final void draw(byte guard, int cameraX, int cameraY) {
+        this.drawParticles(true, cameraY, cameraX);
+        if (guard != -87) {
+          this.musicOverride(true);
         }
-        if (this.field_a <= 0) {
+        if (this.flashTicks <= 0) {
           return;
         }
         int var4 = 256;
-        int var5 = this.field_a * var4 / this.field_c;
+        int var5 = this.flashTicks * var4 / this.flashDurationTicks;
         int var6 = 640;
         int var7 = 480;
         int var8 = 16777215;
         SoftwareRasterizer.fillRectangleAlpha(0, 0, var6, var7, var8, var5);
     }
 
-    final TrackerMusicDefinition b(boolean param0) {
-        if (!param0) {
+    final TrackerMusicDefinition musicOverride(boolean guard) {
+        if (!guard) {
           field_d = (String) null;
         }
-        return this.field_e;
+        return this.musicOverride;
     }
 
-    private final void a(boolean param0) {
-        boolean var2 = (this.field_f.countdownActive);
-        int var3 = this.field_f.countdownTicks;
-        var2 = ((var3 > this.field_g)) & var2;
-        if (!param0) {
-          int discarded$0 = this.a(false, 28);
+    private final void updateBeepGain(boolean guard) {
+        boolean var2 = (this.session.countdownActive);
+        int var3 = this.session.countdownTicks;
+        var2 = ((var3 > this.warningMusicThresholdTicks)) & var2;
+        if (!guard) {
+          int discarded$0 = this.wrapWorldX(false, 28);
         }
         int var4 = IterableNodeHashTable.field_c * 6144 / 64;
         int var5 = 8192;
@@ -409,29 +409,29 @@ final class SelfDestructEffects {
           var4 = 0;
           var5 = 0;
         }
-        PcmSampleStream var6 = this.field_f.field_lc;
+        PcmSampleStream var6 = this.session.countdownBeepStream;
         if (var6 == null) {
           return;
         }
         var6.setVolumeAndPanQ6(var4, var5);
     }
 
-    final int c(boolean param0) {
-        if (!param0) {
-          this.field_m = -125;
+    final int musicVolumeOverride(boolean guard) {
+        if (!guard) {
+          this.blastDiameter = -125;
         }
-        return this.field_r;
+        return this.musicVolumeOverride;
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void detachMouseInput(java.awt.Component component, byte guard) {
         try {
-          param0.removeMouseListener(QuickChatDynamicCommand.mouseHandler);
-          param0.removeMouseMotionListener(QuickChatDynamicCommand.mouseHandler);
-          int var2_int = 100 % ((-57 - param1) / 62);
-          param0.removeFocusListener(QuickChatDynamicCommand.mouseHandler);
+          component.removeMouseListener(QuickChatDynamicCommand.mouseHandler);
+          component.removeMouseMotionListener(QuickChatDynamicCommand.mouseHandler);
+          int var2_int = 100 % ((-57 - guard) / 62);
+          component.removeFocusListener(QuickChatDynamicCommand.mouseHandler);
           LoginCredentials.heldMouseButton = 0;
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "od.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "od.F(" + (component != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -444,22 +444,22 @@ final class SelfDestructEffects {
         }
     }
 
-    SelfDestructEffects(GameplaySession param0) {
-        this.field_o = new IntrusiveDeque();
-        this.field_g = 1500;
-        this.field_r = -1;
-        this.field_m = 32;
-        this.field_p = 500;
-        this.field_h = 50;
-        this.field_e = null;
-        this.field_c = 50;
+    SelfDestructEffects(GameplaySession session) {
+        this.particles = new IntrusiveDeque();
+        this.warningMusicThresholdTicks = 1500;
+        this.musicVolumeOverride = -1;
+        this.blastDiameter = 32;
+        this.particleStartThresholdTicks = 500;
+        this.particleIntervalTicks = 50;
+        this.musicOverride = null;
+        this.flashDurationTicks = 50;
         try {
-          this.field_f = param0;
-          this.a((byte) 110);
+          this.session = session;
+          this.buildBlastMask((byte) 110);
           int var2_int = (int)MonotonicClockSupport.monotonicMillis(128);
-          this.field_i = new Random((long)var2_int);
+          this.random = new Random((long)var2_int);
         } catch (RuntimeException runtimeException) {
-          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MainMenuScreen.wrapClientException((Throwable) ((Object) runtimeException), "od.<init>(" + (session != null ? "{...}" : "null") + ')');
         }
     }
 

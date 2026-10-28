@@ -7,7 +7,7 @@ class EditableTextWidget extends TextButton {
     private int field_N;
     private long field_G;
     private boolean field_M;
-    static int[] field_I;
+    static int[] facePriorityCursors;
     static TrackerMusicDefinition field_O;
     private long field_D;
     private int maximumLength;
@@ -389,11 +389,11 @@ class EditableTextWidget extends TextButton {
         if (guard > -52) {
           field_O = (TrackerMusicDefinition) null;
           field_E = null;
-          field_I = null;
+          facePriorityCursors = null;
           return;
         }
         field_E = null;
-        field_I = null;
+        facePriorityCursors = null;
     }
 
     private final void moveCaret(int index, int guard) {
@@ -539,7 +539,7 @@ class EditableTextWidget extends TextButton {
         try {
           super.updateHover(guard + 0, offsetY, offsetX, root);
           if (guard != -14472) {
-            field_I = (int[]) null;
+            facePriorityCursors = (int[]) null;
           }
           this.m(-22686);
           if (this.field_t == 1) {
@@ -643,6 +643,6 @@ class EditableTextWidget extends TextButton {
     }
 
     static {
-        field_I = new int[128];
+        facePriorityCursors = new int[128];
     }
 }
