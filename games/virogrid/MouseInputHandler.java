@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class me implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static km field_d;
-    static km field_c;
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+    static SpriteWidget field_d;
+    static SpriteWidget field_c;
     static int field_b;
     static String[][] field_a;
     static dl field_e;
@@ -259,7 +259,7 @@ final class me implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     final static boolean b(int param0) {
         if (param0 <= 8) {
           String var2 = (String) null;
-          me.a((String) null, (String) null, true);
+          MouseInputHandler.a((String) null, (String) null, true);
           if (j.field_l < 10) {
             return false;
           }
@@ -301,7 +301,7 @@ final class me implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           field_c = null;
           return;
         }
-        me.b(24);
+        MouseInputHandler.b(24);
         field_d = null;
         field_a = (String[][]) null;
         field_c = null;

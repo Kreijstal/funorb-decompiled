@@ -7,11 +7,11 @@ final class gk implements Iterable {
     static hg field_g;
     static byte[][][] field_c;
     int field_a;
-    static p field_f;
-    l[] field_h;
-    static km field_b;
-    private l field_d;
-    static km field_e;
+    static IntrusiveDeque field_f;
+    IntrusiveNode[] field_h;
+    static SpriteWidget field_b;
+    private IntrusiveNode field_d;
+    static SpriteWidget field_e;
 
     public static void a(byte param0) {
         try {
@@ -26,31 +26,31 @@ final class gk implements Iterable {
         }
     }
 
-    final l a(long param0, int param1) {
-        l var4 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var4 = null;
         int var6 = 0;
-        l stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         int stackIn_12_0 = 0;
-        l stackIn_14_0 = null;
+        IntrusiveNode stackIn_14_0 = null;
         Object stackIn_16_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        l var5 = null;
+        IntrusiveNode var5 = null;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           var4 = this.field_h[(int)((long)(this.field_a - 1) & param0)];
-          this.field_d = var4.field_f;
+          this.field_d = var4.previous;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (this.field_d == var4))) {
-            stackIn_12_0 = $cfr$lcmp(param0, this.field_d.field_d);
+            stackIn_12_0 = $cfr$lcmp(param0, this.field_d.key);
             if (var6 == 0) {
               if (stackIn_12_0 == 0) {
                 var5 = this.field_d;
-                this.field_d = this.field_d.field_f;
+                this.field_d = this.field_d.previous;
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              this.field_d = this.field_d.field_f;
+              this.field_d = this.field_d.previous;
               continue;
             }
             break;
@@ -59,12 +59,12 @@ final class gk implements Iterable {
             stackIn_12_0 = param1;
           }
           if (stackIn_12_0 != -18348) {
-            stackIn_14_0 = (l) null;
+            stackIn_14_0 = (IntrusiveNode) null;
             return stackIn_14_0;
           }
           this.field_d = null;
           stackIn_16_0 = null;
-          return (l) (stackIn_16_0);
+          return (IntrusiveNode) (stackIn_16_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
@@ -81,9 +81,9 @@ final class gk implements Iterable {
         int stackIn_7_5;
         boolean stackIn_8_6 = false;
         gh stackIn_12_0 = null;
-        km stackIn_37_0 = null;
+        SpriteWidget stackIn_37_0 = null;
         String stackIn_38_1 = null;
-        km stackIn_41_0 = null;
+        SpriteWidget stackIn_41_0 = null;
         String stackIn_42_1 = null;
         int stackIn_46_0 = 0;
         Object stackIn_87_0 = null;
@@ -92,7 +92,7 @@ final class gk implements Iterable {
         gh stackOut_11_0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        p var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         gh var7 = null;
@@ -121,7 +121,7 @@ final class gk implements Iterable {
           stackIn_7_3 = false;
           stackIn_7_4 = 2;
           stackIn_7_5 = param1 * (3 * (pg.field_e + 2));
-          stackIn_8_6 = (ve.field_q.field_Ib == wf.field_d);
+          stackIn_8_6 = (ve.field_q.field_Ib == RasterBuffer.field_d);
           boolean decompiledFrameRemainder0 = true;
           var3_int = ((um) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_8_6) ? 1 : 0;
           var4 = ve.field_q.field_Lb.field_W;
@@ -140,11 +140,11 @@ final class gk implements Iterable {
               stackIn_12_0 = stackOut_11_0;
               if (var19 == 0) {
                 if (stackIn_12_0.field_W == null) {
-                  var7.field_Eb = new km(0L, gg.field_F);
+                  var7.field_Eb = new SpriteWidget(0L, gg.field_F);
                   var7.a(0, var7.field_Eb);
-                  var7.field_Gb = new km(0L, jd.field_d);
+                  var7.field_Gb = new SpriteWidget(0L, jd.field_d);
                   var7.a(0, var7.field_Gb);
-                  var7.field_Mb = new km(0L, gg.field_F);
+                  var7.field_Mb = new SpriteWidget(0L, gg.field_F);
                   var7.a(0, var7.field_Mb);
                   var7.field_Gb.field_lb = 2;
                   var8 = 1;
@@ -166,8 +166,8 @@ final class gk implements Iterable {
                 if (null != var7.field_Jb &&
                   !var7.field_Jb.equals("")) {
                   var7.field_Mb.field_ab = var11;
-                  var7.field_Mb.field_qb = qg.field_u;
-                  var7.field_Mb.a(0, pg.field_e, qg.field_u.field_u + 3, (byte) -94, var9);
+                  var7.field_Mb.normalSprite = qg.displayNameChangedIcon;
+                  var7.field_Mb.a(0, pg.field_e, qg.displayNameChangedIcon.field_u + 3, (byte) -94, var9);
                   var12 = 1;
                 }
                 var7.field_Gb.field_bb = var11;
@@ -181,7 +181,7 @@ final class gk implements Iterable {
                 var13 = 0;
                 var14 = var7.field_K - 82;
                 if (var12 != 0) {
-                  var13 = qg.field_u.field_u + 3;
+                  var13 = qg.displayNameChangedIcon.field_u + 3;
                   var14 = var14 - var13;
                 }
                 stackIn_37_0 = var7.field_Eb;
@@ -207,7 +207,7 @@ final class gk implements Iterable {
                   var7.field_kb = -var7.field_ub + var9;
                 }
                 if (var8 != 0) {
-                  ve.field_q.field_Lb.a(2, var7, (km) (var6), (byte) 113);
+                  ve.field_q.field_Lb.a(2, var7, (SpriteWidget) (var6), (byte) 113);
                 }
                 if (var7.field_Mb != null &&
                   var7.field_Mb.field_S) {
@@ -243,7 +243,7 @@ final class gk implements Iterable {
             if (decompiledNaturalLoopExit0) {
               stackIn_87_0 = ve.field_q.field_Fb;
             }
-            if (((km) (stackIn_87_0)).field_nb != 0) {
+            if (((SpriteWidget) (stackIn_87_0)).field_nb != 0) {
               he.field_Xb = new fe(ve.field_q.field_Fb.field_Bb, ve.field_q.field_Fb.field_J, ve.field_q.field_Fb.field_K, ve.field_q.field_Fb.field_ub, jd.field_e, s.field_f, ti.field_h, ti.field_h);
               ge.field_d = 0;
             }
@@ -275,26 +275,26 @@ final class gk implements Iterable {
         }
     }
 
-    final void a(l param0, int param1, long param2) {
+    final void a(IntrusiveNode param0, int param1, long param2) {
         RuntimeException runtimeException = null;
-        l var5 = null;
+        IntrusiveNode var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != param0.field_a) {
+          if (null != param0.next) {
             param0.a(false);
           }
           if (param1 > -83) {
             return;
           }
           var5 = this.field_h[(int)((long)(-1 + this.field_a) & param2)];
-          param0.field_f = var5;
-          param0.field_a = var5.field_a;
-          param0.field_a.field_f = param0;
-          param0.field_d = param2;
-          param0.field_f.field_a = param0;
+          param0.previous = var5;
+          param0.next = var5.next;
+          param0.next.previous = param0;
+          param0.key = param2;
+          param0.previous.next = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -311,23 +311,23 @@ final class gk implements Iterable {
     }
 
     gk(int param0) {
-        l dupTemp$0 = null;
+        IntrusiveNode dupTemp$0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        l var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           this.field_a = param0;
-          this.field_h = new l[param0];
+          this.field_h = new IntrusiveNode[param0];
           var2_int = 0;
           while (param0 > var2_int) {
-            dupTemp$0 = new l();
+            dupTemp$0 = new IntrusiveNode();
             this.field_h[var2_int] = dupTemp$0;
             var3 = dupTemp$0;
-            var3.field_f = var3;
-            var3.field_a = var3;
+            var3.previous = var3;
+            var3.next = var3;
             var2_int++;
             if (var4 != 0) {
               return;
@@ -362,12 +362,12 @@ final class gk implements Iterable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          p.field_f = param0;
+          IntrusiveDeque.field_f = param0;
           if (param2) {
             field_c = (byte[][][]) null;
           }
           fe.field_Fb = true;
-          hf.field_w = new sh(tm.field_l, on.field_b, param1, kb.field_c, p.field_f);
+          hf.field_w = new sh(tm.field_l, on.arezzo14BoldFont, param1, kb.field_c, IntrusiveDeque.field_f);
           tm.field_l.a(0, hf.field_w);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

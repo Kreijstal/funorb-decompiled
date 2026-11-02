@@ -3,7 +3,7 @@
  */
 final class ag extends java.awt.Canvas {
     private java.awt.Component field_k;
-    static mg field_g;
+    static Sprite field_g;
     static int[] field_f;
     static int[] field_b;
     static int[][] field_j;
@@ -12,7 +12,7 @@ final class ag extends java.awt.Canvas {
     static int field_e;
     static int[] field_a;
     static int[] field_h;
-    static km field_d;
+    static SpriteWidget field_d;
 
     final static boolean c(int param0) {
         boolean stackIn_10_0 = false;
@@ -24,7 +24,7 @@ final class ag extends java.awt.Canvas {
           if (md.a(false)) {
             return true;
           }
-          if (null != km.field_yb) {
+          if (null != SpriteWidget.field_yb) {
             stackIn_20_0 = true;
           } else {
             if (af.a(false)) {
@@ -41,7 +41,7 @@ final class ag extends java.awt.Canvas {
         if (md.a(false)) {
           return true;
         }
-        if (null != km.field_yb) {
+        if (null != SpriteWidget.field_yb) {
           stackIn_10_0 = true;
         } else {
           if (af.a(false)) {
@@ -133,7 +133,7 @@ final class ag extends java.awt.Canvas {
     }
 
     static {
-        field_g = new mg(540, 140);
+        field_g = new Sprite(540, 140);
         field_b = new int[12];
         field_f = new int[12];
         field_h = new int[12];

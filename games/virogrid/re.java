@@ -3,21 +3,21 @@
  */
 final class re extends mh {
     static String field_n;
-    static v field_o;
+    static v tinyFont;
     static int field_m;
     static int field_l;
     static String field_p;
 
     public static void b(int param0) {
         field_p = null;
-        field_o = null;
+        tinyFont = null;
         int var1 = -52 % ((-62 - param0) / 53);
         field_n = null;
     }
 
     final ul a(boolean param0) {
         if (!param0) {
-          field_o = (v) null;
+          tinyFont = (v) null;
           return oh.field_e;
         }
         return oh.field_e;

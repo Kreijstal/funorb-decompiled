@@ -6,7 +6,7 @@ final class uh {
     static String field_d;
     private boolean field_f;
     static int field_b;
-    static eh field_e;
+    static Js5Archive field_e;
     private String field_a;
     static int field_c;
 
@@ -23,7 +23,7 @@ final class uh {
         return this.field_a;
     }
 
-    final static String a(String param0, String param1, String param2, int param3, eh param4) {
+    final static String a(String param0, String param1, String param2, int param3, Js5Archive param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -81,7 +81,7 @@ final class uh {
 
     final static void a(byte param0, java.awt.Canvas param1) {
         if (j.field_l == 11) {
-          rl.b((byte) 29);
+          SpriteState.b((byte) 29);
         }
         if (param0 < 29) {
           return;
@@ -131,7 +131,7 @@ final class uh {
         try {
           param0.setFocusTraversalKeysEnabled(false);
           if (param1 <= 94) {
-            field_e = (eh) null;
+            field_e = (Js5Archive) null;
           }
           param0.addKeyListener(w.field_L);
           param0.addFocusListener(w.field_L);

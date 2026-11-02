@@ -162,7 +162,7 @@ final class ji {
           if (param0 != 11) {
             field_c = (String) null;
           }
-          var2 = ci.a(jc.a(param1, (byte) -124), 75);
+          var2 = ci.a(PacketBuffer.a(param1, (byte) -124), 75);
           if (var2 == null) {
             var2 = "";
           }

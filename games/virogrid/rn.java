@@ -34,7 +34,7 @@ abstract class rn {
 
     final static void a(int param0) {
         if (ac.field_e) {
-          df.g(df.field_i, df.field_g, df.field_k - df.field_i, -df.field_g + df.field_h);
+          Rasterizer.g(Rasterizer.field_i, Rasterizer.field_g, Rasterizer.field_k - Rasterizer.field_i, -Rasterizer.field_g + Rasterizer.field_h);
           cm.field_h.a(false, 24960);
         }
         if (param0 == -26808) {

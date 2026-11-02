@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class uk extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
-    static String field_g;
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+    static String textColourBlue;
     static int field_c;
     boolean field_i;
     public static int field_f;
@@ -40,7 +40,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    final void a(int param0, String param1) {
+    final void redirectToErrorPage(int param0, String param1) {
         try {
           RuntimeException stackIn_14_0 = null;
           StringBuilder stackIn_14_1 = null;
@@ -118,10 +118,10 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
         RuntimeException var5 = null;
         try {
           if (param1 != 6) {
-            field_g = (String) null;
+            textColourBlue = (String) null;
           }
           lm.a(param1 - 6);
-          df.h(param2, param4, param3, param0);
+          Rasterizer.h(param2, param4, param3, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,7 +130,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void a(boolean param0) {
+    private final void runTick(boolean param0) {
         long var2_long = 0L;
         long var4 = 0L;
         Throwable decompiledCaughtException = null;
@@ -151,7 +151,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
           synchronized (var6) {
             fe.field_Gb = ub.field_F;
           }
-          this.c(0);
+          this.tickGame(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void a(byte param0, boolean param1) {
+    private final void terminate(byte param0, boolean param1) {
         Exception exception = null;
         RuntimeException runtimeException = null;
         Object var3 = null;
@@ -187,10 +187,10 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (fi.field_v != null) {
+          if (UiWidget.field_v != null) {
             try {
-              fi.field_v.removeFocusListener((java.awt.event.FocusListener) (this));
-              fi.field_v.getParent().remove((java.awt.Component) ((Object) fi.field_v));
+              UiWidget.field_v.removeFocusListener((java.awt.event.FocusListener) (this));
+              UiWidget.field_v.getParent().remove((java.awt.Component) ((Object) UiWidget.field_v));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -204,7 +204,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.d(0);
+          this.shutdown(0);
           if (bj.field_m != null) {
             try {
               System.exit(0);
@@ -257,7 +257,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void c(boolean param0);
+    abstract void initializeGame(boolean param0);
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
@@ -272,7 +272,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (vg.field_I != null) {
-            stackIn_8_0 = vg.field_I.field_g ? 1 : 0;
+            stackIn_8_0 = vg.field_I.online ? 1 : 0;
           } else {
             stackIn_8_0 = (null == ei.field_b) ? 0 : 1;
           }
@@ -287,7 +287,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
           var6 = param1 + (int)kd.field_t - 644;
           var7 = var5 / 20;
           if (param0 >= -103) {
-            uk.a(-101, 19, -78, 79, -92);
+            GameApplet.a(-101, 19, -78, 79, -92);
           }
           if (var5 < 0 ||
             var6 < 0 ||
@@ -306,17 +306,17 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    final synchronized void e(int param0) {
+    final synchronized void recreateCanvas(int param0) {
         Object var2 = null;
         java.awt.Insets var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
-          if (fi.field_v != null) {
-            fi.field_v.removeFocusListener((java.awt.event.FocusListener) (this));
-            fi.field_v.getParent().setBackground(java.awt.Color.black);
-            fi.field_v.getParent().remove((java.awt.Component) ((Object) fi.field_v));
+          if (UiWidget.field_v != null) {
+            UiWidget.field_v.removeFocusListener((java.awt.event.FocusListener) (this));
+            UiWidget.field_v.getParent().setBackground(java.awt.Color.black);
+            UiWidget.field_v.getParent().remove((java.awt.Component) ((Object) UiWidget.field_v));
           }
           boolean decompiledFrameRemainder0 = true;
           if (mk.field_cb == null) {
@@ -342,28 +342,28 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
             var2 = mk.field_cb;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          fi.field_v = (java.awt.Canvas) ((Object) new ag((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) fi.field_v));
+          UiWidget.field_v = (java.awt.Canvas) ((Object) new ag((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) UiWidget.field_v));
           if (param0 != 21616) {
-            this.b(false);
+            this.onCanvasCreated(false);
           }
-          fi.field_v.setSize(fl.field_i, km.field_B);
-          fi.field_v.setVisible(true);
+          UiWidget.field_v.setSize(fl.field_i, SpriteWidget.field_B);
+          UiWidget.field_v.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == bj.field_m);
           if (!decompiledSharedTail0) {
-            fi.field_v.setLocation(fi.field_s, rk.field_c);
+            UiWidget.field_v.setLocation(UiWidget.field_s, rk.field_c);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = bj.field_m.getInsets();
-            fi.field_v.setLocation(fi.field_s + var3.left, var3.top + rk.field_c);
+            UiWidget.field_v.setLocation(UiWidget.field_s + var3.left, var3.top + rk.field_c);
           }
-          fi.field_v.addFocusListener((java.awt.event.FocusListener) (this));
-          fi.field_v.requestFocus();
+          UiWidget.field_v.addFocusListener((java.awt.event.FocusListener) (this));
+          UiWidget.field_v.requestFocus();
           fe.field_Gb = true;
           ub.field_F = true;
           ce.field_K = true;
-          km.field_Db = false;
+          SpriteWidget.field_Db = false;
           oi.field_b = hc.a(param0 ^ -29554);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -434,7 +434,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
           hn.field_n = param2;
           nd.field_c = param4;
           ve.field_o = param3;
-          ld.field_d = param0;
+          GameKeyHandler.field_d = param0;
           li.field_m = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -500,7 +500,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void d(int param0);
+    abstract void shutdown(int param0);
 
     public final void windowDeiconified(java.awt.event.WindowEvent param0) {
     }
@@ -508,11 +508,11 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
     public final void windowClosed(java.awt.event.WindowEvent param0) {
     }
 
-    abstract void b(boolean param0);
+    abstract void onCanvasCreated(boolean param0);
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6) {
         try {
-          pd dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_24_0 = null;
           StringBuilder stackIn_24_1 = null;
           String stackIn_25_2 = null;
@@ -525,15 +525,15 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
           try {
             try {
               if (null != jj.field_n) {
-                km.field_pb = km.field_pb + 1;
-                if (km.field_pb < 3) {
+                SpriteWidget.field_pb = SpriteWidget.field_pb + 1;
+                if (SpriteWidget.field_pb < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
-                this.a(-25296, "alreadyloaded");
+                this.redirectToErrorPage(-25296, "alreadyloaded");
                 return;
               }
-              km.field_B = param1;
+              SpriteWidget.field_B = param1;
               ah.field_g = param1;
               db.field_v = param4;
               rk.field_c = 0;
@@ -543,9 +543,9 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
               fl.field_i = param2;
               he.field_nc = param2;
               jj.field_n = this;
-              fi.field_s = 0;
-              wf.field_m = mb.g((byte) 109);
-              dupTemp$0 = new pd(param3, param6, param5, true);
+              UiWidget.field_s = 0;
+              RasterBuffer.field_m = mb.g((byte) 109);
+              dupTemp$0 = new PlatformTaskDispatcher(param3, param6, param5, true);
               ei.field_c = dupTemp$0;
               qn.field_R = dupTemp$0;
               var8 = ei.field_c.a(1, (Runnable) (this), 255);
@@ -562,7 +562,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
               en.a((String) null, var8_ref, 1);
-              this.a(-25296, "crash");
+              this.redirectToErrorPage(-25296, "crash");
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -600,7 +600,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
         try {
           if (this == jj.field_n &&
             !md.field_d) {
-            rl.field_t = 0L;
+            SpriteState.field_t = 0L;
             return;
           }
           return;
@@ -617,10 +617,10 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          rl.field_t = hc.a(-9986);
+          SpriteState.field_t = hc.a(-9986);
           mm.a(-22, 5000L);
           qn.field_R = null;
-          this.a((byte) 20, false);
+          this.terminate((byte) 20, false);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "uk.destroy()");
         }
@@ -671,11 +671,11 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (pd.field_q != null) {
-                var1 = pd.field_q.toLowerCase();
+              if (PlatformTaskDispatcher.field_q != null) {
+                var1 = PlatformTaskDispatcher.field_q.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = pd.field_k;
+                  var2 = PlatformTaskDispatcher.field_k;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -687,7 +687,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
                     var2.equals("1.5") ||
                     var2.startsWith("1.5.") ||
                     var2.equals("1.6.0")) {
-                    this.a(-25296, "wrongjava");
+                    this.redirectToErrorPage(-25296, "wrongjava");
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
@@ -708,8 +708,8 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (pa.a((CharSequence) ((Object) var4), -128) &&
-                        !(fm.a((CharSequence) ((Object) var4), false) >= 10)) {
-                        this.a(-25296, "wrongjava");
+                        !(WhirlpoolDigest.a((CharSequence) ((Object) var4), false) >= 10)) {
+                        this.redirectToErrorPage(-25296, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
                     }
@@ -717,8 +717,8 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (pd.field_k != null))) {
-                stackIn_68_0 = pd.field_k.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformTaskDispatcher.field_k != null))) {
+                stackIn_68_0 = PlatformTaskDispatcher.field_k.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -727,8 +727,8 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (var1_int < pd.field_k.length()) {
-                    var3 = pd.field_k.charAt(var1_int);
+                  if (var1_int < PlatformTaskDispatcher.field_k.length()) {
+                    var3 = PlatformTaskDispatcher.field_k.charAt(var1_int);
                     stackIn_81_0 = 48;
                     stackIn_81_1 = var3;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -755,7 +755,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
                 if (ai.field_a != null) {
                   var1 = ai.field_a;
                 }
-                var2_ref = pd.field_v;
+                var2_ref = PlatformTaskDispatcher.field_v;
                 if (null != var2_ref) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -765,14 +765,14 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
                   }
                 }
                 we.a(1);
-                this.e(21616);
-                ca.field_M = eg.a((java.awt.Component) ((Object) fi.field_v), fl.field_i, km.field_B, 101);
-                this.c(true);
+                this.recreateCanvas(21616);
+                ca.field_M = eg.a((java.awt.Component) ((Object) UiWidget.field_v), fl.field_i, SpriteWidget.field_B, 101);
+                this.initializeGame(true);
                 kb.field_b = gf.g(true);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (rl.field_t != 0L) {
-                    stackIn_102_0 = $cfr$lcmp(rl.field_t, hc.a(-9986));
+                  if (SpriteState.field_t != 0L) {
+                    stackIn_102_0 = $cfr$lcmp(SpriteState.field_t, hc.a(-9986));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 <= 0)) {
@@ -787,10 +787,10 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
                   do {
                     if (!(ae.field_c > var3)) {
                       this.f(9282);
-                      od.a(ei.field_c, fi.field_v, (byte) -102);
+                      od.a(ei.field_c, UiWidget.field_v, (byte) -102);
                       break;
                     }
-                    this.a(true);
+                    this.runTick(true);
                     var3++;
                   } while (var5 == 0);
                 } while (var5 == 0);
@@ -799,9 +799,9 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
               en.a((String) null, (Throwable) (var1), 1);
-              this.a(-25296, "crash");
+              this.redirectToErrorPage(-25296, "crash");
             }
-            this.a((byte) 20, true);
+            this.terminate((byte) 20, true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -841,20 +841,20 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
           if (fieldTemp$1 > 50) {
             ce.field_K = true;
             lm.field_a = lm.field_a - 50;
-            fi.field_v.setSize(fl.field_i, km.field_B);
-            fi.field_v.setVisible(true);
+            UiWidget.field_v.setSize(fl.field_i, SpriteWidget.field_B);
+            UiWidget.field_v.setVisible(true);
             if (null != bj.field_m &&
               mk.field_cb == null) {
               var6 = bj.field_m.getInsets();
-              fi.field_v.setLocation(fi.field_s + var6.left, rk.field_c + var6.top);
+              UiWidget.field_v.setLocation(UiWidget.field_s + var6.left, rk.field_c + var6.top);
               if (Virogrid.field_F) {
-                fi.field_v.setLocation(fi.field_s, rk.field_c);
+                UiWidget.field_v.setLocation(UiWidget.field_s, rk.field_c);
               }
             } else {
-              fi.field_v.setLocation(fi.field_s, rk.field_c);
+              UiWidget.field_v.setLocation(UiWidget.field_s, rk.field_c);
             }
           }
-          this.b(true);
+          this.onCanvasCreated(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -869,7 +869,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
     public final void windowDeactivated(java.awt.event.WindowEvent param0) {
     }
 
-    protected uk() {
+    protected GameApplet() {
         this.field_i = false;
     }
 
@@ -885,13 +885,13 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
         return super.getCodeBase();
     }
 
-    abstract void c(int param0);
+    abstract void tickGame(int param0);
 
     public static void b(int param0) {
         try {
-          field_g = null;
+          textColourBlue = null;
           if (param0 != -6490) {
-            field_g = (String) null;
+            textColourBlue = (String) null;
           }
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "uk.I(" + param0 + ')');
@@ -904,7 +904,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          rl.field_t = hc.a(-9986) + 4000L;
+          SpriteState.field_t = hc.a(-9986) + 4000L;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "uk.stop()");
         }
@@ -932,7 +932,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
                   return;
                 }
               }
-              km.field_Db = true;
+              SpriteWidget.field_Db = true;
             }
             return;
           }
@@ -952,7 +952,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
     }
 
     static {
-        field_g = "blue";
+        textColourBlue = "blue";
     }
 
     private static int $cfr$lcmp(long left, long right) {

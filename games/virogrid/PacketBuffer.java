@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class jc extends l {
+class PacketBuffer extends IntrusiveNode {
     static int field_m;
     static int[] field_i;
     static String field_j;
-    int field_l;
-    byte[] field_g;
-    static eh field_k;
+    int position;
+    byte[] payload;
+    static Js5Archive field_k;
     static rm[] field_h;
 
-    final String f(int param0) {
+    final String readOptionalString(int param0) {
         if (param0 < 50) {
           String var3 = (String) null;
-          this.b((String) null, (byte) 65);
+          this.writeZeroPrefixedString((String) null, (byte) 65);
         }
-        if (this.field_g[this.field_l] == 0) {
-          this.field_l = this.field_l + 1;
+        if (this.payload[this.position] == 0) {
+          this.position = this.position + 1;
           return null;
         }
-        return this.h(-120);
+        return this.readString(-120);
     }
 
     final void a(byte[] param0, int param1, int param2, byte param3) {
@@ -36,9 +36,9 @@ class jc extends l {
         try {
           var5_int = -77 % ((param3 + 49) / 55);
           for (var6 = param2; param2 + param1 > var6; var6++) {
-            fieldTemp$0 = this.field_l;
-            this.field_l = this.field_l + 1;
-            this.field_g[fieldTemp$0] = param0[var6];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$0] = param0[var6];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -55,17 +55,17 @@ class jc extends l {
         }
     }
 
-    final int d(boolean param0) {
+    final int readLargeSmart(boolean param0) {
         if (!param0) {
-          this.field_g = (byte[]) null;
+          this.payload = (byte[]) null;
         }
-        if (this.field_g[this.field_l] < 0) {
-          return this.d((byte) 119) & 2147483647;
+        if (this.payload[this.position] < 0) {
+          return this.readInt((byte) 119) & 2147483647;
         }
-        return this.c((byte) -49);
+        return this.readUnsignedShort((byte) -49);
     }
 
-    final void b(String param0, byte param1) {
+    final void writeZeroPrefixedString(String param0, byte param1) {
         int var3_int = 0;
         int fieldTemp$0 = 0;
         CharSequence var5 = null;
@@ -76,23 +76,23 @@ class jc extends l {
             throw new IllegalArgumentException("");
           }
           int var4 = 119 % ((param1 - 57) / 47);
-          fieldTemp$0 = this.field_l;
-          this.field_l = this.field_l + 1;
-          this.field_g[fieldTemp$0] = (byte) 0;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
           var5 = (CharSequence) ((Object) param0);
-          this.field_l = this.field_l + f.a(param0.length(), this.field_l, -125, 0, this.field_g, var5);
-          fieldTemp$1 = this.field_l;
-          this.field_l = this.field_l + 1;
-          this.field_g[fieldTemp$1] = (byte) 0;
+          this.position = this.position + f.a(param0.length(), this.position, -125, 0, this.payload, var5);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "jc.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2) {
+    final void encryptRsa(java.math.BigInteger param0, java.math.BigInteger param1, byte param2) {
         byte[] var8 = null;
-        int var4_int = this.field_l;
-        this.field_l = 0;
+        int var4_int = this.position;
+        this.position = 0;
         byte[] var5 = new byte[var4_int];
         this.a(0, var4_int, true, var5);
         java.math.BigInteger var6 = new java.math.BigInteger(var5);
@@ -102,7 +102,7 @@ class jc extends l {
         }
         try {
           var8 = var7.toByteArray();
-          this.field_l = 0;
+          this.position = 0;
           this.a((byte) -57, var8.length);
           this.a(var8, var8.length, 0, (byte) 26);
         } catch (RuntimeException runtimeException) {
@@ -110,7 +110,7 @@ class jc extends l {
         }
     }
 
-    final void a(String param0, byte param1) {
+    final void writeString(String param0, byte param1) {
         int fieldTemp$1 = 0;
         int var3_int = 0;
         CharSequence var4 = null;
@@ -125,12 +125,12 @@ class jc extends l {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param0);
-          this.field_l = this.field_l + f.a(param0.length(), this.field_l, -122, 0, this.field_g, var4);
-          fieldTemp$1 = this.field_l;
-          this.field_l = this.field_l + 1;
-          this.field_g[fieldTemp$1] = (byte) 0;
+          this.position = this.position + f.a(param0.length(), this.position, -122, 0, this.payload, var4);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte) 0;
           if (param1 > -34) {
-            this.field_l = 100;
+            this.position = 100;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,23 +147,23 @@ class jc extends l {
         }
     }
 
-    final String h(int param0) {
+    final String readString(int param0) {
         int fieldTemp$0 = 0;
         int var2;
         int var3;
         if (param0 > -116) {
           this.a(-7, (byte) 122);
         }
-        var2 = this.field_l;
+        var2 = this.position;
         do {
-          fieldTemp$0 = this.field_l;
-          this.field_l = this.field_l + 1;
-        } while (0 != this.field_g[fieldTemp$0]);
-        var3 = this.field_l - var2 - 1;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+        } while (0 != this.payload[fieldTemp$0]);
+        var3 = this.position - var2 - 1;
         if (var3 == 0) {
           return "";
         }
-        return nf.a(var3, (byte) -94, var2, this.field_g);
+        return nf.a(var3, (byte) -94, var2, this.payload);
     }
 
     final void a(int param0, int[] param1, int param2, int param3) {
@@ -184,8 +184,8 @@ class jc extends l {
         int var13 = 0;
         var13 = Virogrid.field_F ? 1 : 0;
         try {
-          var5_int = this.field_l;
-          this.field_l = param3;
+          var5_int = this.position;
+          this.position = param3;
           var6 = (-param3 + param0) / 8;
           var7 = 0;
           while (true) {
@@ -193,11 +193,11 @@ class jc extends l {
               if (param2 != 9843) {
                 return;
               }
-              this.field_l = var5_int;
+              this.position = var5_int;
               return;
             }
-            var8 = this.d((byte) 102);
-            var9 = this.d((byte) 122);
+            var8 = this.readInt((byte) 102);
+            var9 = this.readInt((byte) 122);
             var10 = -957401312;
             var11 = -1640531527;
             var12 = 32;
@@ -212,7 +212,7 @@ class jc extends l {
               }
               break;
             }
-            this.field_l = this.field_l - 8;
+            this.position = this.position - 8;
             this.a(var8, (byte) -42);
             this.a(var9, (byte) -42);
             var7++;
@@ -232,31 +232,31 @@ class jc extends l {
     }
 
     final void a(byte param0, long param1) {
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$0] = (byte)(int)(param1 >> 56);
-        int fieldTemp$1 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$1] = (byte)(int)(param1 >> 48);
-        int fieldTemp$2 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$2] = (byte)(int)(param1 >> 40);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 56);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 48);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 40);
         int var4 = -110 % ((20 - param0) / 34);
-        int fieldTemp$3 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$3] = (byte)(int)(param1 >> 32);
-        int fieldTemp$4 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$4] = (byte)(int)(param1 >> 24);
-        int fieldTemp$5 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$5] = (byte)(int)(param1 >> 16);
-        int fieldTemp$6 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$6] = (byte)(int)(param1 >> 8);
-        int fieldTemp$7 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$7] = (byte)(int)param1;
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 32);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param1 >> 24);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param1 >> 16);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)(param1 >> 8);
+        int fieldTemp$7 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$7] = (byte)(int)param1;
     }
 
     final void a(int param0, int param1, boolean param2, byte[] param3) {
@@ -271,9 +271,9 @@ class jc extends l {
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           for (var5_int = param0; param0 + param1 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_l;
-            this.field_l = this.field_l + 1;
-            param3[var5_int] = this.field_g[fieldTemp$0];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int] = this.payload[fieldTemp$0];
           }
           if (!param2) {
             field_m = 124;
@@ -293,47 +293,47 @@ class jc extends l {
         }
     }
 
-    final int d(byte param0) {
+    final int readInt(byte param0) {
         if (param0 <= 90) {
           String var3 = (String) null;
-          this.b((String) null, (byte) 58);
+          this.writeZeroPrefixedString((String) null, (byte) 58);
         }
-        this.field_l = this.field_l + 4;
-        return ((this.field_g[this.field_l - 2] & 255) << 8) + (((this.field_g[-3 + this.field_l] & 255) << 16) + ((this.field_g[this.field_l - 4] << 24 & -16777216) + (this.field_g[this.field_l - 1] & 255)));
+        this.position = this.position + 4;
+        return ((this.payload[this.position - 2] & 255) << 8) + (((this.payload[-3 + this.position] & 255) << 16) + ((this.payload[this.position - 4] << 24 & -16777216) + (this.payload[this.position - 1] & 255)));
     }
 
     private final void a(int param0, long param1) {
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$0] = (byte)(int)(param1 >> 48);
-        int fieldTemp$1 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$1] = (byte)(int)(param1 >> 40);
-        int fieldTemp$2 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$2] = (byte)(int)(param1 >> 32);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 48);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 40);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 32);
         if (param0 != 65280) {
           return;
         }
-        int fieldTemp$3 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$3] = (byte)(int)(param1 >> 24);
-        int fieldTemp$4 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$4] = (byte)(int)(param1 >> 16);
-        int fieldTemp$5 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$5] = (byte)(int)(param1 >> 8);
-        int fieldTemp$6 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$6] = (byte)(int)param1;
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 24);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param1 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param1 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)param1;
     }
 
-    final byte a(byte param0) {
+    final byte readByte(byte param0) {
         int var2 = 49 / ((-17 - param0) / 51);
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        return this.field_g[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0];
     }
 
     final void b(int param0, byte param1) {
@@ -341,59 +341,59 @@ class jc extends l {
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
         if (param1 != 0) {
-          this.field_l = 10;
+          this.position = 10;
         }
-        while (param0 > this.field_l) {
-          fieldTemp$0 = this.field_l;
-          this.field_l = this.field_l + 1;
-          this.field_g[fieldTemp$0] = (byte) 0;
+        while (param0 > this.position) {
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         }
     }
 
     final void b(int param0, int param1) {
-        this.field_g[param1 + (-param0 + this.field_l)] = (byte)param0;
+        this.payload[param1 + (-param0 + this.position)] = (byte)param0;
     }
 
     final void c(int param0, int param1) {
-        this.field_g[-2 - param0 + this.field_l] = (byte)(param0 >> 8);
-        this.field_g[-param0 + this.field_l - 1] = (byte)param0;
+        this.payload[-2 - param0 + this.position] = (byte)(param0 >> 8);
+        this.payload[-param0 + this.position - 1] = (byte)param0;
         if (param1 != -3991) {
           field_j = (String) null;
         }
     }
 
-    final int c(byte param0) {
+    final int readUnsignedShort(byte param0) {
         int var2 = 48 / ((-5 - param0) / 38);
-        this.field_l = this.field_l + 2;
-        return (65280 & this.field_g[this.field_l - 2] << 8) + (this.field_g[this.field_l - 1] & 255);
+        this.position = this.position + 2;
+        return (65280 & this.payload[this.position - 2] << 8) + (this.payload[this.position - 1] & 255);
     }
 
-    final int a(int param0) {
+    final int readMedium(int param0) {
         if (param0 != -25842) {
           this.c(-62, -66);
         }
-        this.field_l = this.field_l + 3;
-        return ((this.field_g[this.field_l - 3] & 255) << 16) + (65280 & this.field_g[-2 + this.field_l] << 8) + (255 & this.field_g[-1 + this.field_l]);
+        this.position = this.position + 3;
+        return ((this.payload[this.position - 3] & 255) << 16) + (65280 & this.payload[-2 + this.position] << 8) + (255 & this.payload[-1 + this.position]);
     }
 
-    final int d(int param0) {
-        int var2 = 255 & this.field_g[this.field_l];
+    final int readSignedSmart(int param0) {
+        int var2 = 255 & this.payload[this.position];
         if (param0 < 45) {
           field_h = (rm[]) null;
         }
         if (var2 >= 128) {
-          return this.c((byte) -80) - 49152;
+          return this.readUnsignedShort((byte) -80) - 49152;
         }
-        return -64 + this.g(11132);
+        return -64 + this.readUnsignedByte(11132);
     }
 
-    final boolean e(int param0) {
-        this.field_l = this.field_l - 4;
+    final boolean verifyChecksum(int param0) {
+        this.position = this.position - 4;
         if (param0 != -29449) {
           this.a((byte) 19, -57);
         }
-        int var2 = ed.a(this.field_l, 0, this.field_g, -26459);
-        int var3 = this.d((byte) 104);
+        int var2 = ed.a(this.position, 0, this.payload, -26459);
+        int var3 = this.readInt((byte) 104);
         if (var3 == var2) {
           return true;
         }
@@ -404,23 +404,23 @@ class jc extends l {
         if (param1) {
           return;
         }
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$0] = (byte)(param0 >> 16);
-        int fieldTemp$1 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$1] = (byte)(param0 >> 8);
-        int fieldTemp$2 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$2] = (byte)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 >> 16);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param0 >> 8);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)param0;
     }
 
     final long e(byte param0) {
         if (param0 != -60) {
           this.a(69, true);
         }
-        long var2 = (long)this.d((byte) 127) & 4294967295L;
-        long var4 = 4294967295L & (long)this.d((byte) 120);
+        long var2 = (long)this.readInt((byte) 127) & 4294967295L;
+        long var4 = 4294967295L & (long)this.readInt((byte) 120);
         return var4 + (var2 << 32);
     }
 
@@ -487,16 +487,16 @@ class jc extends l {
         }
     }
 
-    jc(int param0) {
-        this.field_l = 0;
-        this.field_g = bc.a(false, param0);
+    PacketBuffer(int param0) {
+        this.position = 0;
+        this.payload = bc.a(false, param0);
     }
 
     final int b(byte param0, int param1) {
         if (param0 != -111) {
           this.a(-93L, -50);
         }
-        int var3 = ed.a(this.field_l, param1, this.field_g, -26459);
+        int var3 = ed.a(this.position, param1, this.payload, -26459);
         this.a(var3, (byte) -42);
         return var3;
     }
@@ -512,21 +512,21 @@ class jc extends l {
     }
 
     final void a(int param0, byte param1) {
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$0] = (byte)(param0 >> 24);
-        int fieldTemp$1 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$1] = (byte)(param0 >> 16);
-        int fieldTemp$2 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$2] = (byte)(param0 >> 8);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 >> 24);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param0 >> 16);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(param0 >> 8);
         if (param1 != -42) {
-          this.field_g = (byte[]) null;
+          this.payload = (byte[]) null;
         }
-        int fieldTemp$3 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$3] = (byte)param0;
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)param0;
     }
 
     final static boolean a(String param0, boolean param1) {
@@ -539,7 +539,7 @@ class jc extends l {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            jc.b((byte) -127);
+            PacketBuffer.b((byte) -127);
           }
           var3 = (CharSequence) ((Object) param0);
           stackIn_3_0 = wn.field_n.equals(c.a(var3, param1));
@@ -559,13 +559,13 @@ class jc extends l {
     }
 
     final void a(byte param0, int param1) {
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$0] = (byte)(param1 >> 8);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 8);
         int var3 = -102 / ((param0 + 1) / 56);
-        int fieldTemp$1 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$1] = (byte)param1;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)param1;
     }
 
     final int c(int param0) {
@@ -574,15 +574,15 @@ class jc extends l {
         int var3;
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        var2 = this.field_g[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         var3 = param0;
         while (0 > var2) {
           var3 = (var2 & 127 | var3) << 7;
-          fieldTemp$1 = this.field_l;
-          this.field_l = this.field_l + 1;
-          var2 = this.field_g[fieldTemp$1];
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          var2 = this.payload[fieldTemp$1];
         }
         return var2 | var3;
     }
@@ -592,43 +592,43 @@ class jc extends l {
         int var2;
         int var3;
         int var4;
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        var2 = this.field_g[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         if (var2 != 0) {
           throw new IllegalStateException("");
         }
         if (param0 != 15070) {
-          this.field_l = -81;
+          this.position = -81;
         }
-        var3 = this.field_l;
+        var3 = this.position;
         do {
-          fieldTemp$1 = this.field_l;
-          this.field_l = this.field_l + 1;
-        } while (this.field_g[fieldTemp$1] != 0);
-        var4 = -1 + (-var3 + this.field_l);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+        } while (this.payload[fieldTemp$1] != 0);
+        var4 = -1 + (-var3 + this.position);
         if (var4 != 0) {
-          return nf.a(var4, (byte) -126, var3, this.field_g);
+          return nf.a(var4, (byte) -126, var3, this.payload);
         }
         return "";
     }
 
     final void a(long param0, int param1) {
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$0] = (byte)(int)(param0 >> 32);
-        int fieldTemp$1 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$1] = (byte)(int)(param0 >> 24);
-        int fieldTemp$2 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$2] = (byte)(int)(param0 >> 16);
-        int fieldTemp$3 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$3] = (byte)(int)(param0 >> 8);
-        int fieldTemp$4 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$4] = (byte)(int)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 32);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 24);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 16);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 8);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)param0;
         if (param1 != 65280) {
           this.c(true);
         }
@@ -703,28 +703,28 @@ class jc extends l {
           int[] var3 = (int[]) null;
           this.a(57, (int[]) null, 95, 88);
         }
-        int var2 = 255 & this.field_g[this.field_l];
+        int var2 = 255 & this.payload[this.position];
         if (var2 >= 128) {
-          return this.c((byte) -84) - 32768;
+          return this.readUnsignedShort((byte) -84) - 32768;
         }
-        return this.g(11132);
+        return this.readUnsignedByte(11132);
     }
 
     final void a(int param0, int param1) {
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$0] = (byte)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)param0;
         int var3 = -47 % ((param1 + 6) / 59);
     }
 
     final void e(int param0, int param1) {
-        this.field_g[-4 + (-param1 + this.field_l)] = (byte)(param1 >> 24);
-        this.field_g[-param1 + (this.field_l - 3)] = (byte)(param1 >> 16);
-        this.field_g[-2 + (this.field_l - param1)] = (byte)(param1 >> 8);
+        this.payload[-4 + (-param1 + this.position)] = (byte)(param1 >> 24);
+        this.payload[-param1 + (this.position - 3)] = (byte)(param1 >> 16);
+        this.payload[-2 + (this.position - param1)] = (byte)(param1 >> 8);
         if (param0 < 16) {
           this.a(17L, 99);
         }
-        this.field_g[this.field_l - param1 - 1] = (byte)param1;
+        this.payload[this.position - param1 - 1] = (byte)param1;
     }
 
     final void a(int param0, int[] param1) {
@@ -744,8 +744,8 @@ class jc extends l {
         int var10 = 0;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
-          var3_int = this.field_l / 8;
-          this.field_l = 0;
+          var3_int = this.position / 8;
+          this.position = 0;
           var4 = 0;
           if (param0 != 32768) {
             return;
@@ -754,8 +754,8 @@ class jc extends l {
             if (var4 >= var3_int) {
               return;
             }
-            var5 = this.d((byte) 113);
-            var6 = this.d((byte) 103);
+            var5 = this.readInt((byte) 113);
+            var6 = this.readInt((byte) 103);
             var7 = 0;
             var8 = -1640531527;
             var9 = 32;
@@ -770,7 +770,7 @@ class jc extends l {
               }
               break;
             }
-            this.field_l = this.field_l - 8;
+            this.position = this.position - 8;
             this.a(var5, (byte) -42);
             this.a(var6, (byte) -42);
             var4++;
@@ -789,10 +789,10 @@ class jc extends l {
         }
     }
 
-    jc(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
-          this.field_l = 0;
-          this.field_g = param0;
+          this.position = 0;
+          this.payload = param0;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "jc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -817,7 +817,7 @@ class jc extends l {
         }
     }
 
-    final void c(int param0, byte param1) {
+    final void writeSignedSmart(int param0, byte param1) {
         int var3 = 126 / ((param1 - 15) / 36);
         if (param0 < 64 &&
           param0 >= -64) {
@@ -832,17 +832,17 @@ class jc extends l {
         throw new IllegalArgumentException();
     }
 
-    final int g(int param0) {
+    final int readUnsignedByte(int param0) {
         if (param0 != 11132) {
           byte[] var3 = (byte[]) null;
           this.a((byte[]) null, -80, -57, (byte) 68);
         }
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        return 255 & this.field_g[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0];
     }
 
-    final void f(int param0, int param1) {
+    final void writeSmart(int param0, int param1) {
         if (param0 >= 0 &&
           128 > param0) {
           this.a(param0, 103);

@@ -8,10 +8,10 @@ final class lm implements Runnable {
     volatile boolean field_f;
     volatile boolean field_d;
     volatile ua[] field_h;
-    pd field_b;
+    PlatformTaskDispatcher field_b;
     static on field_e;
     static int field_j;
-    static String field_k;
+    static String textPlayers;
     static String field_c;
 
     public static void a(byte param0) {
@@ -20,7 +20,7 @@ final class lm implements Runnable {
           lm.a(85, 97, false, 87, -111);
         }
         field_g = null;
-        field_k = null;
+        textPlayers = null;
         field_e = null;
         field_i = null;
     }
@@ -30,7 +30,7 @@ final class lm implements Runnable {
         if (var1 == null) {
           var1 = new qg();
         }
-        var1.a(df.field_d, df.field_i, df.field_h, (byte) -45, df.field_e, df.field_f, df.field_g, df.field_k);
+        var1.a(Rasterizer.field_d, Rasterizer.field_i, Rasterizer.field_h, (byte) -45, Rasterizer.field_e, Rasterizer.field_f, Rasterizer.field_g, Rasterizer.field_k);
         if (param0 != 0) {
           return;
         }
@@ -39,13 +39,13 @@ final class lm implements Runnable {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
         int var6 = 0;
-        ic stackIn_7_0 = null;
+        GameSession stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        ic stackIn_11_0 = null;
+        GameSession stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
-        ic stackIn_16_0 = null;
+        GameSession stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
-        ic stackIn_20_0 = null;
+        GameSession stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         oi stackIn_25_0 = null;
         int stackIn_25_1 = 0;
@@ -80,22 +80,22 @@ final class lm implements Runnable {
               if (ke.field_p.field_d) {
                 stackIn_20_0 = vg.field_I;
                 stackIn_21_1 = !(!(0.0 > nk.field_K[11]));
-                ((ic) (Object) stackIn_20_0).a(stackIn_21_1, 85, c.field_d);
+                ((GameSession) (Object) stackIn_20_0).a(stackIn_21_1, 85, c.field_d);
               } else {
                 stackIn_16_0 = vg.field_I;
                 stackIn_17_1 = !(!(0.0 > nk.field_K[11]));
-                ((ic) (Object) stackIn_16_0).a(stackIn_17_1, (byte) 101, we.field_e, c.field_d);
+                ((GameSession) (Object) stackIn_16_0).a(stackIn_17_1, (byte) 101, we.field_e, c.field_d);
               }
             } else {
               if (ei.field_b != null) {
                 if (ke.field_p.field_d) {
                   stackIn_11_0 = ei.field_b;
                   stackIn_12_1 = !(!(nk.field_K[11] < 0.0));
-                  ((ic) (Object) stackIn_11_0).a(stackIn_12_1, 99, c.field_d);
+                  ((GameSession) (Object) stackIn_11_0).a(stackIn_12_1, 99, c.field_d);
                 } else {
                   stackIn_7_0 = ei.field_b;
                   stackIn_8_1 = !(!(0.0 > nk.field_K[11]));
-                  ((ic) (Object) stackIn_7_0).a(stackIn_8_1, (byte) 58, we.field_e, c.field_d);
+                  ((GameSession) (Object) stackIn_7_0).a(stackIn_8_1, (byte) 58, we.field_e, c.field_d);
                 }
               }
             }
@@ -157,40 +157,40 @@ final class lm implements Runnable {
         }
     }
 
-    final static mg[] a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
-        mg var13 = null;
-        mg var14 = null;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
+        Sprite var13 = null;
+        Sprite var14 = null;
         int var6 = 51 / ((34 - param1) / 32);
-        int[] var18 = df.field_d;
-        int var8 = df.field_e;
-        int var9 = df.field_f;
-        mg var10 = new mg(16, param2);
+        int[] var18 = Rasterizer.field_d;
+        int var8 = Rasterizer.field_e;
+        int var9 = Rasterizer.field_f;
+        Sprite var10 = new Sprite(16, param2);
         var10.b();
-        df.a(0, 0, 16, param2, param3, param0);
+        Rasterizer.a(0, 0, 16, param2, param3, param0);
         Object var11 = null;
         if (param5) {
           var13 = var10.d();
           var11 = var13;
           var13.b();
-          df.b(0, 0, 5, 0);
-          df.b(0, 1, 3, 0);
-          df.b(0, 2, 2, 0);
-          df.b(0, 3, 1, 0);
-          df.b(0, 4, 1, 0);
+          Rasterizer.b(0, 0, 5, 0);
+          Rasterizer.b(0, 1, 3, 0);
+          Rasterizer.b(0, 2, 2, 0);
+          Rasterizer.b(0, 3, 1, 0);
+          Rasterizer.b(0, 4, 1, 0);
         }
         Object var12 = null;
         if (param4) {
           var14 = var10.d();
           var12 = var14;
           var14.b();
-          df.b(11, 0, 5, 0);
-          df.b(13, 1, 3, 0);
-          df.b(14, 2, 2, 0);
-          df.b(15, 3, 1, 0);
-          df.b(15, 4, 1, 0);
+          Rasterizer.b(11, 0, 5, 0);
+          Rasterizer.b(13, 1, 3, 0);
+          Rasterizer.b(14, 2, 2, 0);
+          Rasterizer.b(15, 3, 1, 0);
+          Rasterizer.b(15, 4, 1, 0);
         }
-        df.a(var18, var8, var9);
-        return new mg[]{null, null, null, (mg) (var11), var10, (mg) (var12), null, null, null};
+        Rasterizer.a(var18, var8, var9);
+        return new Sprite[]{null, null, null, (Sprite) (var11), var10, (Sprite) (var12), null, null, null};
     }
 
     static long a(long param0, long param1) {
@@ -207,7 +207,7 @@ final class lm implements Runnable {
         field_g = "Player Name: ";
         field_a = 500;
         field_i = new lc(10, 2, 2, 0);
-        field_k = "Players are <%0> and <%1>.";
+        textPlayers = "Players are <%0> and <%1>.";
         field_e = new on();
         field_c = "To <%0>: ";
     }

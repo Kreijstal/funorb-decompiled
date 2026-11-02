@@ -4,7 +4,7 @@
 final class jm {
     static String field_a;
     d field_c;
-    static km field_b;
+    static SpriteWidget field_b;
     static String field_d;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -16,7 +16,7 @@ final class jm {
         if (param0 != 36) {
           jm.a((byte) 30);
         }
-        wb.field_m.a(-80 - oc.field_k + (dg.field_E.field_K - 2), 18, oc.field_k + 82, (byte) -45, 2 + pg.field_e);
+        DualLinkNode.field_m.a(-80 - oc.field_k + (dg.field_E.field_K - 2), 18, oc.field_k + 82, (byte) -45, 2 + pg.field_e);
         ve.field_q.a(dg.field_E.field_K, 0, 2, -20 + (-2 - pg.field_e + dg.field_E.field_ub), oc.field_k, 20 + (2 + pg.field_e), 20, 0);
         lg.field_a.a(oc.field_k, 2, 20, 0);
     }
@@ -74,7 +74,7 @@ final class jm {
 
     final static void a(int param0, int param1, int param2) {
         if (param2 != -2) {
-          field_b = (km) null;
+          field_b = (SpriteWidget) null;
         }
         j.field_b = param0;
         si.field_a = param0;
@@ -87,16 +87,16 @@ final class jm {
         int var2 = 0;
         int var3 = 0;
         if (param1 != -102) {
-          field_b = (km) null;
+          field_b = (SpriteWidget) null;
         }
         vf.field_c = param0;
         if (db.field_D != ve.field_t) {
           var2 = ve.field_t * ve.field_t;
           var3 = -(db.field_D * db.field_D) + var2;
-          param0 = param0 + (-param0 + p.field_h) * var3 / var2;
+          param0 = param0 + (-param0 + IntrusiveDeque.field_h) * var3 / var2;
         }
         we.field_c.a(oh.field_f, 120, 640, (byte) -120, param0);
-        ql.a((byte) 117, 5, 640, qi.field_d, 0, -24 + p.field_h, dl.field_b);
+        ql.a((byte) 117, 5, 640, qi.field_d, 0, -24 + IntrusiveDeque.field_h, dl.field_b);
     }
 
     final static boolean a(int param0, int param1, boolean param2, CharSequence param3) {
@@ -182,12 +182,12 @@ final class jm {
         }
     }
 
-    jm(String param0, km param1) {
+    jm(String param0, SpriteWidget param1) {
         String[] var3 = null;
-        km[] var4 = null;
+        SpriteWidget[] var4 = null;
         try {
           var3 = new String[]{param0, ng.field_Y, tl.field_k};
-          var4 = new km[]{param1, dg.field_E, (km) ((Object) lg.field_a)};
+          var4 = new SpriteWidget[]{param1, dg.field_E, (SpriteWidget) ((Object) lg.field_a)};
           this.field_c = new d(0L, ve.field_w, var3, sl.field_h, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "jm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

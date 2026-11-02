@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends l {
-    static km field_m;
+final class ij extends IntrusiveNode {
+    static SpriteWidget field_m;
     static String field_i;
     int field_o;
     boolean field_p;
     int field_l;
-    static km field_k;
+    static SpriteWidget field_k;
     static nh[] field_n;
     static String field_h;
     static int field_q;
@@ -196,12 +196,12 @@ final class ij extends l {
 
     final static void a(byte param0) {
         int var1 = id.field_r / 2;
-        String var2 = jk.field_e;
+        String var2 = jk.textBootsequence;
         if (db.b((byte) 13, 0)) {
-          var2 = ge.field_a;
+          var2 = ge.textBootsequenceHalloween;
         }
         String var3 = var2.substring(0, var1 <= var2.length() ? var1 : var2.length());
-        mc.field_b.a(var3, 120, 100, 400, 200, 1141646, -1, 0, 0, 0);
+        mc.menuFont.a(var3, 120, 100, 400, 200, 1141646, -1, 0, 0, 0);
         if (param0 != 105) {
           int[] var4 = (int[]) null;
           ij.a((int[]) null, 50, -10, -91, (int[]) null);
@@ -222,8 +222,8 @@ final class ij extends l {
         try {
           var2_int = 0;
           var3 = 21 / ((-72 - param0) / 41);
-          for (var4 = -(df.field_e * df.field_f); var4 < 0; var4++) {
-            var5 = df.field_d[var2_int];
+          for (var4 = -(Rasterizer.field_e * Rasterizer.field_f); var4 < 0; var4++) {
+            var5 = Rasterizer.field_d[var2_int];
             var6 = var5 & 16711935;
             var5 = var5 & 65280;
             var6 = var6 * param1;
@@ -233,7 +233,7 @@ final class ij extends l {
             var5 = (var6 | var5) >> 8;
             incrementValue$2 = var2_int;
             var2_int++;
-            df.field_d[incrementValue$2] = var5;
+            Rasterizer.field_d[incrementValue$2] = var5;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

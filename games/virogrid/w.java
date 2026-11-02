@@ -8,7 +8,7 @@ final class w extends tg {
     static kg field_I;
     static String field_F;
     static int field_K;
-    static ld field_L;
+    static GameKeyHandler field_L;
     static boolean field_J;
 
     final static void a(byte param0, long param1, int param2) {
@@ -17,20 +17,20 @@ final class w extends tg {
         int var5Lifetime1;
         if (param0 == 74) {
           var4.g(param2, param0 ^ 66);
-          var4.field_l = var4.field_l + 1;
-          var5 = var4.field_l;
+          var4.position = var4.position + 1;
+          var5 = var4.position;
           var4.a(7, -114);
           var4.a((byte) 100, param1);
-          var4.b(-var5 + var4.field_l, -1);
+          var4.b(-var5 + var4.position, -1);
           return;
         }
         w.a((byte) -80, -70L, 4);
         var4.g(param2, param0 ^ 66);
-        var4.field_l = var4.field_l + 1;
-        var5Lifetime1 = var4.field_l;
+        var4.position = var4.position + 1;
+        var5Lifetime1 = var4.position;
         var4.a(7, -114);
         var4.a((byte) 100, param1);
-        var4.b(-var5Lifetime1 + var4.field_l, -1);
+        var4.b(-var5Lifetime1 + var4.position, -1);
     }
 
     final static void a(int param0, int param1) {
@@ -102,11 +102,11 @@ final class w extends tg {
         }
     }
 
-    final static mg a(eh param0, int param1, int param2, int param3) {
+    final static Sprite a(Js5Archive param0, int param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        mg stackIn_4_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -118,7 +118,7 @@ final class w extends tg {
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (mg) (stackIn_2_0);
+          return (Sprite) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -134,9 +134,9 @@ final class w extends tg {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        mg var15 = null;
-        mg var16 = null;
-        mg var12 = null;
+        Sprite var15 = null;
+        Sprite var16 = null;
+        Sprite var12 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = Virogrid.field_F ? 1 : 0;
@@ -149,12 +149,12 @@ final class w extends tg {
         int var5 = this.field_l + (param1 + (this.field_g >> 1));
         int var6 = this.field_u + (param2 + (this.field_m >> 1));
         wl var8 = this.field_G.a(-22243);
-        if (gd.field_r == var8) {
+        if (ImageProducerRasterBuffer.field_r == var8) {
           var15 = bf.field_p[0];
           var9 = var15.field_u << 1;
           var10 = var15.field_z << 1;
           if (null == hh.field_a) {
-            hh.field_a = new mg(var9, var10);
+            hh.field_a = new Sprite(var9, var10);
             kb.a(hh.field_a, 16865);
             var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
@@ -162,7 +162,7 @@ final class w extends tg {
             return;
           }
           if (var9 > hh.field_a.field_w) {
-            hh.field_a = new mg(var9, var10);
+            hh.field_a = new Sprite(var9, var10);
             kb.a(hh.field_a, 16865);
             var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
@@ -170,7 +170,7 @@ final class w extends tg {
             return;
           }
           if (hh.field_a.field_p < var10) {
-            hh.field_a = new mg(var9, var10);
+            hh.field_a = new Sprite(var9, var10);
             kb.a(hh.field_a, 16865);
             var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
@@ -178,7 +178,7 @@ final class w extends tg {
             return;
           }
           kb.a(hh.field_a, 16865);
-          df.c();
+          Rasterizer.c();
           var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
           ai.a(true);
           hh.field_a.e(var5 - var15.field_u, -var15.field_z + var6, 256);
@@ -189,7 +189,7 @@ final class w extends tg {
           var9Lifetime1 = var16.field_u << 1;
           var10Lifetime1 = var16.field_z << 1;
           if (null == hh.field_a) {
-            hh.field_a = new mg(var9Lifetime1, var10Lifetime1);
+            hh.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             kb.a(hh.field_a, 16865);
             var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
@@ -197,7 +197,7 @@ final class w extends tg {
             return;
           }
           if (var9Lifetime1 > hh.field_a.field_w) {
-            hh.field_a = new mg(var9Lifetime1, var10Lifetime1);
+            hh.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             kb.a(hh.field_a, 16865);
             var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
@@ -205,7 +205,7 @@ final class w extends tg {
             return;
           }
           if (hh.field_a.field_p < var10Lifetime1) {
-            hh.field_a = new mg(var9Lifetime1, var10Lifetime1);
+            hh.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             kb.a(hh.field_a, 16865);
             var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
@@ -213,7 +213,7 @@ final class w extends tg {
             return;
           }
           kb.a(hh.field_a, 16865);
-          df.c();
+          Rasterizer.c();
           var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
           ai.a(true);
           hh.field_a.e(var5 - var16.field_u, -var16.field_z + var6, 256);
@@ -227,13 +227,13 @@ final class w extends tg {
         if (bm.field_i != var8) {
           return;
         }
-        mg var13 = bf.field_p[1];
+        Sprite var13 = bf.field_p[1];
         var13.e(var5 - (var13.field_w >> 1), -(var13.field_p >> 1) + var6, 256);
     }
 
     final String d(int param0) {
         if (param0 < 35) {
-          field_L = (ld) null;
+          field_L = (GameKeyHandler) null;
           if (this.field_p) {
             return this.field_G.b(28433);
           }
@@ -245,7 +245,7 @@ final class w extends tg {
         return null;
     }
 
-    final void a(int param0, int param1, fi param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           if (param1 <= 113) {
             w.a((byte) -19, -106L, -21);
@@ -257,7 +257,7 @@ final class w extends tg {
         }
     }
 
-    final boolean a(fi param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -287,7 +287,7 @@ final class w extends tg {
         field_M = "(1 player wants to join)";
         field_F = "Only show game chat from my friends";
         field_K = 0;
-        field_L = new ld();
+        field_L = new GameKeyHandler();
         field_J = false;
     }
 }

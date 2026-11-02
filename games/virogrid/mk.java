@@ -7,7 +7,7 @@ final class mk extends dc implements ta {
     static int[] field_gb;
     static int[] field_eb;
     static String field_fb;
-    static mg field_bb;
+    static Sprite field_bb;
 
     private final void g(boolean param0) {
         if (!this.field_G) {
@@ -30,11 +30,11 @@ final class mk extends dc implements ta {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new tg(param0, param1);
-          var4.field_w = (ol) ((Object) new hf());
+          var4.listener = (WidgetListener) ((Object) new hf());
           var5 = -6 + this.field_m;
           this.field_m = this.field_m + 38;
           var4.a(30, true, var5, 15, -14 + this.field_g - 16);
-          this.a((fi) (var4), (byte) -78);
+          this.a((UiWidget) (var4), (byte) -78);
           var6 = -20 % ((param2 + 24) / 62);
           this.d(false);
           stackIn_1_0 = var4;
@@ -99,7 +99,7 @@ final class mk extends dc implements ta {
         }
     }
 
-    final static boolean a(jc param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -110,7 +110,7 @@ final class mk extends dc implements ta {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.g(11132);
+          var2_int = param0.readUnsignedByte(11132);
           if (param1 > -41) {
             mk.k(-49);
           }
@@ -135,7 +135,7 @@ final class mk extends dc implements ta {
     mk(je param0, ra param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        fi var4 = null;
+        UiWidget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -155,18 +155,18 @@ final class mk extends dc implements ta {
             } else {
               if (param1 == lb.field_a) {
                 this.field_m = this.field_m + 30;
-                var3 = el.field_i;
+                var3 = BufferedSocket.field_i;
               }
             }
           } else {
-            var3 = fd.field_x;
+            var3 = WidgetContainer.field_x;
           }
-          var4 = new fi((String) (var3), (cd) null);
+          var4 = new UiWidget((String) (var3), (cd) null);
           var4.field_u = 50;
           var4.field_m = 80;
           var4.field_l = 0;
           var4.field_g = this.field_g;
-          var4.field_w = (ol) ((Object) new aj(dk.field_j, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.listener = (WidgetListener) ((Object) new aj(dk.arezzo12Font, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, (byte) -78);
           this.field_db = this.a(je.field_I, (cd) (this), (byte) 75);
           return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class od extends uk {
+abstract class od extends GameApplet {
     private int field_r;
     static String[] field_n;
     String field_v;
@@ -16,7 +16,7 @@ abstract class od extends uk {
     private int field_z;
     private boolean field_x;
     private boolean field_u;
-    static km field_y;
+    static SpriteWidget field_y;
     private int field_k;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
@@ -31,7 +31,7 @@ abstract class od extends uk {
         ch.a(this.field_p, ei.field_c, this.field_z, param0, this.field_v, ih.field_c, 86, this.field_r, this.field_w);
         lb.a(42);
         sb.field_d = s.a((byte) -110);
-        nn.a(fi.field_v, (byte) -128);
+        nn.a(UiWidget.field_v, (byte) -128);
         ae.field_a = param1;
         ck.field_c = param2;
         ka.field_j = param5;
@@ -61,7 +61,7 @@ abstract class od extends uk {
           int var4 = 0;
           int var5 = 0;
           Exception var6 = null;
-          jc var7 = null;
+          PacketBuffer var7 = null;
           String var8 = null;
           int var9 = 0;
           String var10 = null;
@@ -78,35 +78,35 @@ abstract class od extends uk {
           if (var4 == 1) {
             var5 = ii.a(hh.a(-30890), je.h(true), 27984);
             if (-1 != var5) {
-              al.a(ld.field_g, var5, jf.field_b, 100);
+              al.a(GameKeyHandler.field_g, var5, jf.field_b, 100);
               jf.field_b = null;
-              ld.field_g = null;
+              GameKeyHandler.field_g = null;
             }
-            var12 = fi.e(true);
+            var12 = UiWidget.e(true);
             if (var12 != null) {
               mj.a(0, var12.booleanValue());
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = ld.a((byte) 2, ag.a(true), jl.a(-127), ne.a((byte) -52), eh.d(86), f.a(8), this.field_k);
+            var5Lifetime1 = GameKeyHandler.a((byte) 2, ag.a(true), jl.a(-127), ne.a((byte) -52), Js5Archive.d(86), f.a(8), this.field_k);
             if (-1 != var5Lifetime1) {
-              fn.a(var5Lifetime1, 105, jf.field_b, ld.field_g);
+              fn.a(var5Lifetime1, 105, jf.field_b, GameKeyHandler.field_g);
               jf.field_b = null;
-              ld.field_g = null;
+              GameKeyHandler.field_g = null;
             }
           }
           if (var4 == 3) {
             if (nh.field_o != -1 &&
               0 != nh.field_o) {
               nh.field_o = -1;
-              rl.e(true);
+              SpriteState.e(true);
             }
             if (!param2) {
               var5Lifetime2 = pa.a(f.a(8), false, this.field_k, (byte) -57, this.field_u, ne.a((byte) -52));
               if (var5Lifetime2 != -1) {
                 if (var5Lifetime2 != 0) {
-                  a.a(ld.field_g, var5Lifetime2, false);
-                  ld.field_g = null;
+                  a.a(GameKeyHandler.field_g, var5Lifetime2, false);
+                  GameKeyHandler.field_g = null;
                 } else {
                   ae.field_d = md.field_a;
                   sg.a(-2);
@@ -163,7 +163,7 @@ abstract class od extends uk {
                   var10 = (String) null;
                   kd.a((byte) 92, (String) null);
                 } else {
-                  var8 = nf.a(var7.field_l, (byte) -122, 0, var7.field_g);
+                  var8 = nf.a(var7.position, (byte) -122, 0, var7.payload);
                   kd.a((byte) 78, var8);
                 }
                 nb.field_p = null;
@@ -246,7 +246,7 @@ abstract class od extends uk {
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             en.a((String) null, (Throwable) ((Object) var6_ref), 1);
-            this.a(-25296, "crash");
+            this.redirectToErrorPage(-25296, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -284,10 +284,10 @@ abstract class od extends uk {
         if (var2 != 0 &&
           var2 != 1) {
           if (!oc.field_l) {
-            this.a(-25296, "reconnect");
+            this.redirectToErrorPage(-25296, "reconnect");
           }
           ve.c((byte) -105);
-          a.a(ld.field_g, var2, false);
+          a.a(GameKeyHandler.field_g, var2, false);
           ri.field_f = true;
           hc.field_a = hc.a(-9986) + 15000L;
           return var2;
@@ -300,25 +300,25 @@ abstract class od extends uk {
     }
 
     private final void c(byte param0) {
-        jc.field_i[7] = -1;
-        jc.field_i[4] = -1;
-        jc.field_i[16] = -1;
-        jc.field_i[8] = -2;
-        jc.field_i[2] = -2;
-        jc.field_i[12] = -1;
-        jc.field_i[9] = -1;
-        jc.field_i[5] = -1;
-        jc.field_i[13] = -1;
+        PacketBuffer.field_i[7] = -1;
+        PacketBuffer.field_i[4] = -1;
+        PacketBuffer.field_i[16] = -1;
+        PacketBuffer.field_i[8] = -2;
+        PacketBuffer.field_i[2] = -2;
+        PacketBuffer.field_i[12] = -1;
+        PacketBuffer.field_i[9] = -1;
+        PacketBuffer.field_i[5] = -1;
+        PacketBuffer.field_i[13] = -1;
         if (param0 <= 75) {
           this.a(false, -38);
         }
-        jc.field_i[18] = 1;
-        jc.field_i[6] = -2;
-        jc.field_i[3] = -1;
-        jc.field_i[17] = -1;
-        jc.field_i[10] = -1;
-        jc.field_i[11] = -1;
-        jc.field_i[1] = 16;
+        PacketBuffer.field_i[18] = 1;
+        PacketBuffer.field_i[6] = -2;
+        PacketBuffer.field_i[3] = -1;
+        PacketBuffer.field_i[17] = -1;
+        PacketBuffer.field_i[10] = -1;
+        PacketBuffer.field_i[11] = -1;
+        PacketBuffer.field_i[1] = 16;
     }
 
     private final void l(int param0) {
@@ -410,7 +410,7 @@ abstract class od extends uk {
           var3 = 1200 * wh.a((byte) 5);
           if (this.field_q ||
             !(lj.c(-28791807) <= var3) &&
-            !(km.e(-87) <= var3)) {
+            !(SpriteWidget.e(-87) <= var3)) {
             this.field_q = false;
             tn.a(false);
             ve.c((byte) -50);
@@ -424,7 +424,7 @@ abstract class od extends uk {
           nh.field_o == 0) {
           stackIn_24_0 = (nh.field_o != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          nh.field_o = m.b(true);
+          nh.field_o = CellAnimator.b(true);
           if (var3Lifetime1 != 0 &&
             nh.field_o == 0 &&
             j.field_l == 11 &&
@@ -445,19 +445,19 @@ abstract class od extends uk {
             if (nh.field_o != 3) {
               if (nh.field_o != 4) {
                 if (nh.field_o == 2) {
-                  this.a(-25296, "js5connect_full");
+                  this.redirectToErrorPage(-25296, "js5connect_full");
                 } else {
                   if (nh.field_o == 5) {
-                    this.a(-25296, "outofdate");
+                    this.redirectToErrorPage(-25296, "outofdate");
                   } else {
-                    this.a(-25296, "js5connect");
+                    this.redirectToErrorPage(-25296, "js5connect");
                   }
                 }
               } else {
-                this.a(-25296, "js5io");
+                this.redirectToErrorPage(-25296, "js5io");
               }
             } else {
-              this.a(-25296, "js5crc");
+              this.redirectToErrorPage(-25296, "js5crc");
             }
           } else {
             if (j.field_l >= 10) {
@@ -491,7 +491,7 @@ abstract class od extends uk {
           if (nh.field_o != -1 &&
             0 != nh.field_o) {
             nh.field_o = -1;
-            rl.e(true);
+            SpriteState.e(true);
           }
         }
         if (0 == nh.field_o &&
@@ -504,7 +504,7 @@ abstract class od extends uk {
         }
         if (dj.field_n == 1) {
           if (0 != ih.field_c) {
-            sj.field_l = p.a(76, ej.field_P);
+            sj.field_l = IntrusiveDeque.a(76, ej.field_P);
           }
           td.field_a = qd.a(false, 1, true, ka.field_j, (byte) 70);
           jf.field_j = qd.a(false, 1, true, te.field_h, (byte) 81);
@@ -562,7 +562,7 @@ abstract class od extends uk {
         }
         if (10 == dj.field_n) {
           if (ih.field_c != 0) {
-            uh.field_e = p.a(34, ck.field_c);
+            uh.field_e = IntrusiveDeque.a(34, ck.field_c);
           }
           dj.field_n = 11;
         }
@@ -594,10 +594,10 @@ abstract class od extends uk {
           }
         }
         if (!param0 &&
-          km.field_Db) {
-          af.a((byte) -116, fi.field_v);
-          this.e(21616);
-          nn.a(fi.field_v, (byte) -124);
+          SpriteWidget.field_Db) {
+          af.a((byte) -116, UiWidget.field_v);
+          this.recreateCanvas(21616);
+          nn.a(UiWidget.field_v, (byte) -124);
         }
         if (di.field_r[8]) {
           rc.c(-1);
@@ -611,7 +611,7 @@ abstract class od extends uk {
         di.field_r[6] = true;
     }
 
-    final static void a(pd param0, Object param1, byte param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, byte param2) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -679,7 +679,7 @@ abstract class od extends uk {
         la.field_k = param0;
         if (param2) {
           Object var5 = (Object) null;
-          od.a((pd) null, (Object) null, (byte) -5);
+          od.a((PlatformTaskDispatcher) null, (Object) null, (byte) -5);
         }
         sf.field_I = param3;
         na.field_Hb = param1;
@@ -702,7 +702,7 @@ abstract class od extends uk {
         if (param0 != 1) {
           od.a(36, 8, true, 93);
         }
-        if (me.b(param0 ^ 102)) {
+        if (MouseInputHandler.b(param0 ^ 102)) {
           stackIn_11_1 = 30;
           stackIn_12_2 = (null != ih.field_b);
           discarded$4 = this.a(stackIn_11_1, stackIn_12_2, false);
@@ -722,7 +722,7 @@ abstract class od extends uk {
     }
 
     private final void h(int param0) {
-        int var2 = sh.field_qb.g(11132);
+        int var2 = sh.field_qb.readUnsignedByte(11132);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         if (param0 != -6731) {
           this.field_w = 83;
@@ -730,7 +730,7 @@ abstract class od extends uk {
         int var4 = ba.field_a - 1;
         byte[] var5 = new byte[var4];
         sh.field_qb.a(-121, 0, var5, var4);
-        eh.a(i.a(param0 + 4709, var5), mb.g((byte) -95), (byte) -25, var3 != 0);
+        Js5Archive.a(i.a(param0 + 4709, var5), mb.g((byte) -95), (byte) -25, var3 != 0);
     }
 
     final int c(boolean param0, int param1) {
@@ -760,7 +760,7 @@ abstract class od extends uk {
               } else {
                 if (var2 != 4) {
                   if (var2 == 5) {
-                    fb.a(26360);
+                    CellFlip.a(26360);
                   } else {
                     if (var2 == 6) {
                       pe.a(-1);
@@ -789,7 +789,7 @@ abstract class od extends uk {
                               return;
                             }
                             stackIn_28_0 = (var2 == 12);
-                            var3 = el.a(stackIn_28_0, 0);
+                            var3 = BufferedSocket.a(stackIn_28_0, 0);
                             cf.a(var3, (byte) 78);
                           }
                         } else {
@@ -805,10 +805,10 @@ abstract class od extends uk {
                 }
               }
             } else {
-              km.d((byte) 76);
+              SpriteWidget.d((byte) 76);
             }
           } else {
-            el.e(-2);
+            BufferedSocket.e(-2);
           }
           return;
         }

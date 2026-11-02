@@ -279,7 +279,7 @@ final class il extends cn {
           field_o = 0;
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < this.field_F; var8Lifetime1++) {
-          L45: {
+          regionExit1: {
             if (this.field_R[var8Lifetime1] != -2) {
               var9 = this.field_C[var8Lifetime1];
               var10 = this.field_n[var8Lifetime1];
@@ -326,7 +326,7 @@ final class il extends cn {
                       var28 = field_v[var27];
                       if (var28 == 64) {
                         if (field_o == 512) {
-                          break L45;
+                          break regionExit1;
                         }
                         fieldTemp$7 = field_o;
                         field_o = field_o + 1;
@@ -341,10 +341,10 @@ final class il extends cn {
                     }
                   }
                 }
-                break L45;
+                break regionExit1;
               }
               if (param1 &&
-                this.a(eh.field_n + fk.field_j, wm.field_F + fk.field_k, field_O[var9], field_O[var10], field_O[var11], var12, var13, var14_int)) {
+                this.a(Js5Archive.field_n + fk.field_j, wm.field_F + fk.field_k, field_O[var9], field_O[var10], field_O[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = w.field_K;
                 w.field_K = w.field_K + 1;
                 bc.field_b[fieldTemp$13] = param2;
@@ -368,7 +368,7 @@ final class il extends cn {
                     var16Lifetime2 = field_v[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
                       if (field_o == 512) {
-                        break L45;
+                        break regionExit1;
                       }
                       fieldTemp$14 = field_o;
                       field_o = field_o + 1;
@@ -806,8 +806,8 @@ final class il extends cn {
         if (field_B > field_p) {
           field_B = field_p;
         }
-        var1Lifetime2 = fk.field_m[0] % df.field_e;
-        var2Lifetime2 = fk.field_m[0] / df.field_e;
+        var1Lifetime2 = fk.field_m[0] % Rasterizer.field_e;
+        var2Lifetime2 = fk.field_m[0] / Rasterizer.field_e;
         field_k = field_k + var1Lifetime2;
         field_I = field_I + var1Lifetime2;
         field_B = field_B + var2Lifetime2;
@@ -1241,7 +1241,7 @@ final class il extends cn {
         this.field_K = false;
     }
 
-    il(qb param0, int param1, int param2, int param3, int param4, int param5) {
+    il(Model param0, int param1, int param2, int param3, int param4, int param5) {
         int dupTemp$1 = 0;
         int incrementValue$0 = 0;
         int var7;

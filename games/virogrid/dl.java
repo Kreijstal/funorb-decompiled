@@ -13,13 +13,13 @@ final class dl {
           field_d = null;
           return;
         }
-        km var2 = (km) null;
-        dl.a((km) null, (byte) -42, (km) null);
+        SpriteWidget var2 = (SpriteWidget) null;
+        dl.a((SpriteWidget) null, (byte) -42, (SpriteWidget) null);
         field_a = null;
         field_d = null;
     }
 
-    final static void a(km param0, byte param1, km param2) {
+    final static void a(SpriteWidget param0, byte param1, SpriteWidget param2) {
         RuntimeException var3 = null;
         int[] var4 = null;
         RuntimeException stackIn_16_0 = null;
@@ -30,10 +30,10 @@ final class dl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.field_W == null) {
-            param0.field_W = new p();
+            param0.field_W = new IntrusiveDeque();
           }
           if (null == param2.field_W) {
-            param2.field_W = new p();
+            param2.field_W = new IntrusiveDeque();
           }
           if (oa.field_h == null) {
             oa.field_h = new kf(64);
@@ -48,7 +48,7 @@ final class dl {
             return;
           }
           var4 = (int[]) null;
-          dl.a((km) null, (km) null, -53, (km) null, (int[]) null);
+          dl.a((SpriteWidget) null, (SpriteWidget) null, -53, (SpriteWidget) null, (int[]) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,7 +97,7 @@ final class dl {
         return true;
     }
 
-    final static oj a(km param0, km param1, int param2, km param3, int[] param4) {
+    final static oj a(SpriteWidget param0, SpriteWidget param1, int param2, SpriteWidget param3, int[] param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;

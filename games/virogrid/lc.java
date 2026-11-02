@@ -3,9 +3,9 @@
  */
 final class lc {
     static String field_d;
-    static mg[] field_c;
+    static Sprite[] openToMeIcons;
     static String[] field_e;
-    static jc field_b;
+    static PacketBuffer field_b;
     static String field_h;
     int field_g;
     static String field_f;
@@ -18,7 +18,7 @@ final class lc {
     public static void a(int param0) {
         field_e = null;
         field_b = null;
-        field_c = null;
+        openToMeIcons = null;
         field_d = null;
         field_h = null;
         if (param0 == -26834) {

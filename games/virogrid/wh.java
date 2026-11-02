@@ -3,8 +3,8 @@
  */
 abstract class wh {
     static rm[] field_b;
-    static km field_d;
-    static km field_a;
+    static SpriteWidget field_d;
+    static SpriteWidget field_a;
     static int[] field_c;
 
     abstract void a(byte[] param0, byte param1);
@@ -19,9 +19,9 @@ abstract class wh {
     final static int a(int param0, boolean param1, int param2, boolean param3, String param4, uh param5, uh param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
-        jc stackIn_11_0 = null;
+        PacketBuffer stackIn_11_0 = null;
         String stackIn_12_1 = null;
-        jc stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         String stackIn_15_1 = null;
         int stackIn_32_0 = 0;
         int stackIn_43_0 = 0;
@@ -61,34 +61,34 @@ abstract class wh {
           }
           if (ul.field_c == ug.field_a) {
             ia.field_b = null;
-            gk.field_g.field_l = 0;
+            gk.field_g.position = 0;
             if (param4 != null) {
               var9 = 0;
-              gg.field_D.field_l = 0;
+              gg.field_D.position = 0;
               if (param1) {
                 var9 = var9 | 1;
               }
               gg.field_D.a(mc.field_c.nextInt(), (byte) -42);
               gg.field_D.a(mc.field_c.nextInt(), (byte) -42);
-              gg.field_D.b(var14, (byte) -87);
-              gg.field_D.b(var8, (byte) -125);
+              gg.field_D.writeZeroPrefixedString(var14, (byte) -87);
+              gg.field_D.writeZeroPrefixedString(var8, (byte) -125);
               var15 = (CharSequence) ((Object) param4);
-              gg.field_D.b(na.a((byte) 51, var15), (byte) 118);
+              gg.field_D.writeZeroPrefixedString(na.a((byte) 51, var15), (byte) 118);
               gg.field_D.a((byte) -88, param0);
               gg.field_D.a(param2, -69);
               gg.field_D.a(var9, -66);
               gk.field_g.a(18, 105);
-              gk.field_g.field_l = gk.field_g.field_l + 2;
-              var10 = gk.field_g.field_l;
+              gk.field_g.position = gk.field_g.position + 2;
+              var10 = gk.field_g.position;
               var11_ref_String = sh.b(-25, mb.g((byte) 41));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              gk.field_g.a(var11_ref_String, (byte) -75);
+              gk.field_g.writeString(var11_ref_String, (byte) -75);
               nl.a(on.field_a, gg.field_D, gk.field_g, ch.field_i, 0);
-              gk.field_g.c(-var10 + gk.field_g.field_l, -3991);
+              gk.field_g.c(-var10 + gk.field_g.position, -3991);
             } else {
-              gg.field_D.field_l = 0;
+              gg.field_D.position = 0;
               gg.field_D.a(mc.field_c.nextInt(), (byte) -42);
               gg.field_D.a(mc.field_c.nextInt(), (byte) -42);
               stackIn_11_0 = gg.field_D;
@@ -97,27 +97,27 @@ abstract class wh {
               } else {
                 stackIn_12_1 = "";
               }
-              ((jc) (Object) stackIn_11_0).b(stackIn_12_1, (byte) 109);
+              ((PacketBuffer) (Object) stackIn_11_0).writeZeroPrefixedString(stackIn_12_1, (byte) 109);
               stackIn_14_0 = gg.field_D;
               if (!param6.a(0)) {
                 stackIn_15_1 = "";
               } else {
                 stackIn_15_1 = var8;
               }
-              ((jc) (Object) stackIn_14_0).b(stackIn_15_1, (byte) -32);
+              ((PacketBuffer) (Object) stackIn_14_0).writeZeroPrefixedString(stackIn_15_1, (byte) -32);
               gk.field_g.a(16, -90);
-              gk.field_g.field_l = gk.field_g.field_l + 1;
-              var9 = gk.field_g.field_l;
+              gk.field_g.position = gk.field_g.position + 1;
+              var9 = gk.field_g.position;
               nl.a(on.field_a, gg.field_D, gk.field_g, ch.field_i, 0);
-              gk.field_g.b(gk.field_g.field_l - var9, -1);
+              gk.field_g.b(gk.field_g.position - var9, -1);
             }
             al.b(-1, -1);
-            ug.field_a = me.field_e;
+            ug.field_a = MouseInputHandler.field_e;
           }
-          if (me.field_e == ug.field_a &&
+          if (MouseInputHandler.field_e == ug.field_a &&
             wg.a(1, 0)) {
-            var9Lifetime1 = sh.field_qb.g(11132);
-            sh.field_qb.field_l = 0;
+            var9Lifetime1 = sh.field_qb.readUnsignedByte(11132);
+            sh.field_qb.position = 0;
             if (100 <= var9Lifetime1 &&
               105 >= var9Lifetime1) {
               jf.field_b = new String[-100 + var9Lifetime1];
@@ -125,7 +125,7 @@ abstract class wh {
             } else {
               if (var9Lifetime1 == 248) {
                 sj.a(mb.g((byte) -112), 20298);
-                ld.field_g = wf.field_a;
+                GameKeyHandler.field_g = RasterBuffer.field_a;
                 tn.a(false);
                 fh.field_e = false;
                 stackIn_32_0 = var9Lifetime1;
@@ -134,7 +134,7 @@ abstract class wh {
               if (99 == var9Lifetime1) {
                 wg.a(bl.f(0), 0);
                 ia.field_b = new Boolean(mk.a(sh.field_qb, -87));
-                sh.field_qb.field_l = 0;
+                sh.field_qb.position = 0;
               } else {
                 ci.field_q = var9Lifetime1;
                 ba.field_a = -1;
@@ -145,8 +145,8 @@ abstract class wh {
           if (kk.field_n == ug.field_a) {
             var9Lifetime2 = 2;
             if (wg.a(var9Lifetime2, 0)) {
-              var10Lifetime1 = sh.field_qb.c((byte) -45);
-              sh.field_qb.field_l = 0;
+              var10Lifetime1 = sh.field_qb.readUnsignedShort((byte) -45);
+              sh.field_qb.position = 0;
               if (wg.a(var10Lifetime1, 0)) {
                 var11 = jf.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
@@ -163,11 +163,11 @@ abstract class wh {
             field_c = (int[]) null;
           }
           if (k.field_a == ug.field_a &&
-            ic.c((byte) 48)) {
+            GameSession.c((byte) 48)) {
             if (255 != ci.field_q) {
-              ld.field_g = sh.field_qb.h(-118);
+              GameKeyHandler.field_g = sh.field_qb.readString(-118);
             } else {
-              var9_ref_String = sh.field_qb.f(123);
+              var9_ref_String = sh.field_qb.readOptionalString(123);
               if (var9_ref_String != null) {
                 jd.a(-51, var9_ref_String, mb.g((byte) 37));
               }
@@ -180,9 +180,9 @@ abstract class wh {
           if (oj.field_Ub == null) {
             if (fh.field_e) {
               if (30000L >= af.b(-126)) {
-                ld.field_g = ll.field_a;
+                GameKeyHandler.field_g = ll.field_a;
               } else {
-                ld.field_g = wa.field_L;
+                GameKeyHandler.field_g = wa.field_L;
               }
               fh.field_e = false;
               stackIn_62_0 = 249;
@@ -288,7 +288,7 @@ abstract class wh {
                           }
                           gb.a(-2, var5, var4 != 0, var3);
                         } else {
-                          el.a(12229, param1);
+                          BufferedSocket.a(12229, param1);
                         }
                       } else {
                         if (var3 != 4) {
@@ -309,12 +309,12 @@ abstract class wh {
                               } else {
                                 if (10 != var3) {
                                   if (var3 == 11) {
-                                    vg.field_I.b((byte) -45);
+                                    vg.field_I.resign((byte) -45);
                                     var3 = param1 ? 1 : 0;
                                     gb.a(-2, 0, var3 != 0, -1);
                                   } else {
                                     if (var3 == 18) {
-                                      vg.field_I.a((byte) 70);
+                                      vg.field_I.restartGame((byte) 70);
                                       var3 = param1 ? 1 : 0;
                                       gb.a(-2, 0, var3 != 0, -1);
                                     } else {
@@ -338,7 +338,7 @@ abstract class wh {
                                           }
                                         } else {
                                           if (20 == var3) {
-                                            uk.field_c = 0;
+                                            GameApplet.field_c = 0;
                                           } else {
                                             if (21 != var3) {
                                               if (var3 != 22) {
@@ -367,7 +367,7 @@ abstract class wh {
                                                 }
                                               }
                                             } else {
-                                              uk.field_c = 1;
+                                              GameApplet.field_c = 1;
                                             }
                                           }
                                         }
@@ -390,7 +390,7 @@ abstract class wh {
                               } else {
                                 var3 = param1 ? 1 : 0;
                                 a.field_D = false;
-                                ic.a(ib.field_b, hd.field_b.field_A, 320, ib.field_b, 8, mc.field_b, 2, hd.field_b.field_A + hd.field_b.field_G, 8, -16824, var3 != 0, 240);
+                                GameSession.a(ib.frameSprites, hd.standardFont.field_A, 320, ib.frameSprites, 8, mc.menuFont, 2, hd.standardFont.field_A + hd.standardFont.field_G, 8, -16824, var3 != 0, 240);
                               }
                             }
                           }
@@ -454,7 +454,7 @@ abstract class wh {
                 a.field_D = false;
                 stackIn_58_0 = (!qm.i(20)) ? 1 : 0;
                 var3 = stackIn_58_0;
-                hk.a(8, 2, var3, 320, 8, hd.field_b.field_A, true, 240, ib.field_b, (byte) 118, ib.field_b, param1, hd.field_b.field_A + hd.field_b.field_G, he.field_cc, mc.field_b);
+                hk.a(8, 2, var3, 320, 8, hd.standardFont.field_A, true, 240, ib.frameSprites, (byte) 118, ib.frameSprites, param1, hd.standardFont.field_A + hd.standardFont.field_G, he.textLobbyPleaselogin, mc.menuFont);
               }
             }
           }

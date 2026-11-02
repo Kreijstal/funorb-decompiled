@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jb extends rd {
-    static km field_J;
+    static SpriteWidget field_J;
     private wa field_F;
     private wa field_G;
     private boolean field_E;
-    static mg[] field_I;
+    static Sprite[] gamePrivacyIcons;
     private wa field_H;
 
     final boolean h(int param0) {
@@ -124,30 +124,30 @@ final class jb extends rd {
         }
     }
 
-    private jb(ol param0, boolean param1) {
-        super(0, 0, 0, 0, (ol) null);
+    private jb(WidgetListener param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetListener) null);
         try {
           this.field_G = (wa) ((Object) new vd("", (cd) null, 2));
           this.field_H = (wa) ((Object) new vd("", (cd) null, 2));
           this.field_F = (wa) ((Object) new vd("", (cd) null, 4));
-          this.field_F.field_w = param0;
-          this.field_H.field_w = param0;
-          this.field_G.field_w = param0;
+          this.field_F.listener = param0;
+          this.field_H.listener = param0;
+          this.field_G.listener = param0;
           this.field_E = param1 ? true : false;
           if (!this.field_E) {
-            this.a((fi) (this.field_G), (byte) -78);
-            this.a((fi) (this.field_H), (byte) -78);
+            this.a((UiWidget) (this.field_G), (byte) -78);
+            this.a((UiWidget) (this.field_H), (byte) -78);
           } else {
-            this.a((fi) (this.field_H), (byte) -78);
-            this.a((fi) (this.field_G), (byte) -78);
+            this.a((UiWidget) (this.field_H), (byte) -78);
+            this.a((UiWidget) (this.field_G), (byte) -78);
           }
-          this.a((fi) (this.field_F), (byte) -78);
+          this.a((UiWidget) (this.field_F), (byte) -78);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "jb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    jb(ol param0, boolean param1, int param2, int param3, int param4, int param5) {
+    jb(WidgetListener param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.a(param5, true, param3, param2, param4);
@@ -156,9 +156,9 @@ final class jb extends rd {
         }
     }
 
-    private final void a(fi param0, String param1, int param2, int param3, int param4) {
+    private final void a(UiWidget param0, String param1, int param2, int param3, int param4) {
         try {
-          dk.field_j.c(param1, param0.field_l + param3 + (param0.field_g >> 1), -5 + param2 + param0.field_u, 16777215, -1);
+          dk.arezzo12Font.c(param1, param0.field_l + param3 + (param0.field_g >> 1), -5 + param2 + param0.field_u, 16777215, -1);
           if (param4 < 6) {
             jb.a(75, -12);
           }
@@ -213,7 +213,7 @@ final class jb extends rd {
         if (param0 != -99) {
           return;
         }
-        field_I = null;
+        gamePrivacyIcons = null;
     }
 
     final int g(int param0) {

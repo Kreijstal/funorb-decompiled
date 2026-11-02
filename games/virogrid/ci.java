@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ci extends qe {
-    static p field_o;
+    static IntrusiveDeque field_o;
     private wa field_p;
     static int field_q;
     static int field_r;
     static String field_n;
-    static mg field_s;
+    static Sprite field_s;
 
     public static void h(int param0) {
         if (param0 >= -6) {
@@ -93,7 +93,7 @@ final class ci extends qe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            field_s = (mg) null;
+            field_s = (Sprite) null;
           }
           if (this.field_p instanceof fg) {
             var3 = ((fg) ((Object) this.field_p)).a(-1);
@@ -182,9 +182,9 @@ final class ci extends qe {
         }
     }
 
-    final static km j(int param0) {
+    final static SpriteWidget j(int param0) {
         if (param0 >= -109) {
-          return (km) null;
+          return (SpriteWidget) null;
         }
         return cg.b(1463);
     }

@@ -35,7 +35,7 @@ final class lb {
         boolean stackIn_70_6;
         Object stackIn_73_0 = null;
         int stackIn_91_0 = 0;
-        km stackIn_159_0 = null;
+        SpriteWidget stackIn_159_0 = null;
         int stackIn_159_1 = 0;
         int stackIn_159_2 = 0;
         int stackIn_160_3 = 0;
@@ -50,16 +50,16 @@ final class lb {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        p var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         lk var12 = null;
         int var13 = 0;
-        km var14 = null;
-        km var15 = null;
-        km var16 = null;
-        km var17 = null;
-        km var18 = null;
+        SpriteWidget var14 = null;
+        SpriteWidget var15 = null;
+        SpriteWidget var16 = null;
+        SpriteWidget var17 = null;
+        SpriteWidget var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -145,13 +145,13 @@ final class lb {
             stackIn_69_3 = false;
             stackIn_69_4 = 2;
             stackIn_69_5 = (pg.field_e + 2) * (4 * param0);
-            stackIn_70_6 = (param2 == wf.field_d);
+            stackIn_70_6 = (param2 == RasterBuffer.field_d);
             var9 = ((um) (Object) stackIn_69_0).a(stackIn_69_1, stackIn_69_2, stackIn_69_3, stackIn_69_4, stackIn_69_5, stackIn_70_6) ? 1 : 0;
           }
           var10 = param2.field_Jb.field_W;
           var11 = null;
           var12 = (lk) (var10.a((byte) -36));
-          L12: while (true) {
+          scanLoop1: while (true) {
             stackIn_73_0 = null;
             if (stackIn_73_0 != var12) {
               var13 = 0;
@@ -159,19 +159,19 @@ final class lb {
                 return;
               }
               if (null == var12.field_W) {
-                var12.field_Lb = new km(0L, gg.field_F);
+                var12.field_Lb = new SpriteWidget(0L, gg.field_F);
                 var12.a(0, var12.field_Lb);
-                var12.field_Kb = new km(0L, jd.field_d);
+                var12.field_Kb = new SpriteWidget(0L, jd.field_d);
                 if (ql.field_d) {
                   var12.a(0, var12.field_Kb);
                 }
                 var12.field_Kb.field_lb = 2;
-                var12.field_Yb = new km(0L, ti.field_h);
+                var12.field_Yb = new SpriteWidget(0L, ti.field_h);
                 var12.a(param4 - 21547, var12.field_Yb);
                 var12.b((byte) 42);
-                var12.field_Hb = new km(0L, id.field_a);
+                var12.field_Hb = new SpriteWidget(0L, id.field_a);
                 var12.a(param4 ^ 21547, var12.field_Hb);
-                var12.field_Mb = new km(0L, kf.field_g);
+                var12.field_Mb = new SpriteWidget(0L, kf.field_g);
                 var13 = 1;
                 var12.a(0, var12.field_Mb);
               }
@@ -199,7 +199,7 @@ final class lb {
               var19 = 0;
               var20 = var12.field_Eb;
               var21 = 72;
-              if (uf.field_j == param2) {
+              if (GameBoard.field_j == param2) {
                 var21 += 42;
               }
               var20 = e.a(var12.field_Lb.field_C, var20, var21);
@@ -280,24 +280,24 @@ final class lb {
                 } else {
                   stackIn_160_3 = 42;
                 }
-                ((km) (Object) stackIn_159_0).a(stackIn_159_1, stackIn_159_2, -stackIn_160_3 + (var12.field_K - var25_int), (byte) -50, var19);
+                ((SpriteWidget) (Object) stackIn_159_0).a(stackIn_159_1, stackIn_159_2, -stackIn_160_3 + (var12.field_K - var25_int), (byte) -50, var19);
                 var12.field_Kb.field_V = Integer.toString(var12.field_Vb);
                 var12.field_Kb.a(-40 + var12.field_K, pg.field_e, 40, (byte) -51, var19);
                 var19 = var19 + pg.field_e;
                 if (!var12.field_Lb.field_S ||
                   var22 == 0) {
                   if ((!(!var12.field_Lb.field_S)) &&
-                    ((null != fd.field_A)) &&
-                    ((fd.field_A[var12.field_Ub] != null))) {
-                    wc.field_g = fd.field_A[var12.field_Ub];
+                    ((null != WidgetContainer.field_A)) &&
+                    ((WidgetContainer.field_A[var12.field_Ub] != null))) {
+                    wc.field_g = WidgetContainer.field_A[var12.field_Ub];
                   }
                   decompiledFrameRemainder1 = false;
                 }
                 else {
                   wc.field_g = var12.field_Eb;
-                  if (fd.field_A != null &&
-                    fd.field_A[var12.field_Ub] != null) {
-                    wc.field_g = wc.field_g + " - " + fd.field_A[var12.field_Ub];
+                  if (WidgetContainer.field_A != null &&
+                    WidgetContainer.field_A[var12.field_Ub] != null) {
+                    wc.field_g = wc.field_g + " - " + WidgetContainer.field_A[var12.field_Ub];
                   }
                 }
               }
@@ -313,7 +313,7 @@ final class lb {
                 var12.field_kb = var19 - var12.field_ub;
               }
               if (var13 != 0) {
-                param2.field_Jb.a(2, var12, (km) (var11), (byte) 108);
+                param2.field_Jb.a(2, var12, (SpriteWidget) (var11), (byte) 108);
               }
               boolean decompiledFrameRemainder0 = true;
               if (var12.field_nb != 0 &&
@@ -322,7 +322,7 @@ final class lb {
                   if (var12.field_Mb.field_nb != 0) {
                     w.a((byte) 74, var12.field_Ob, param1);
                   } else {
-                    p.a(0, ii.field_b, false, a.field_y, 0, var12, param2);
+                    IntrusiveDeque.a(0, ii.field_b, false, a.field_y, 0, var12, param2);
                   }
                   decompiledFrameRemainder0 = false;
                 }
@@ -350,10 +350,10 @@ final class lb {
                           var25_int = qe.b(-728240159, ~var12.field_Fb & var8);
                           var24 = ke.field_o;
                           if (var25_int > 0 &&
-                            me.field_a != null &&
-                            var25_int <= me.field_a.length &&
-                            null != me.field_a[-1 + var25_int]) {
-                            var24 = me.field_a[var25_int - 1][1];
+                            MouseInputHandler.field_a != null &&
+                            var25_int <= MouseInputHandler.field_a.length &&
+                            null != MouseInputHandler.field_a[-1 + var25_int]) {
+                            var24 = MouseInputHandler.field_a[var25_int - 1][1];
                           }
                         }
                       } else {
@@ -372,10 +372,10 @@ final class lb {
                           var25_int = qe.b(-728240159, var8 & ~var12.field_Fb);
                           var24 = oi.a(new String[]{var20}, ci.field_n, 2);
                           if (var25_int > 0 &&
-                            null != me.field_a &&
-                            me.field_a.length >= var25_int &&
-                            me.field_a[var25_int - 1] != null) {
-                            var24 = oi.a(new String[]{var20}, me.field_a[-1 + var25_int][2], 2);
+                            null != MouseInputHandler.field_a &&
+                            MouseInputHandler.field_a.length >= var25_int &&
+                            MouseInputHandler.field_a[var25_int - 1] != null) {
+                            var24 = oi.a(new String[]{var20}, MouseInputHandler.field_a[-1 + var25_int][2], 2);
                           }
                         }
                       } else {
@@ -467,7 +467,7 @@ final class lb {
               }
               var11 = var12;
               var12 = (lk) (var10.a(16213));
-              continue L12;
+              continue scanLoop1;
             }
             break;
           }
@@ -516,7 +516,7 @@ final class lb {
         }
     }
 
-    final static void a(int param0, eh param1) {
+    final static void a(int param0, Js5Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2620_0;
             StringBuilder stackIn_2620_1;
@@ -527,9 +527,9 @@ final class lb {
             int var3;
             int var4;
             int param0;
-            eh param1;
+            Js5Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, eh initialParam1) {
+            $CfrPartitionedBody(int initialParam0, Js5Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2620_0 = null;
@@ -542,7 +542,7 @@ final class lb {
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                jc.field_k = param1;
+                PacketBuffer.field_k = param1;
                 var2 = rh.a("loginm3", (byte) -114);
                 if (var2 != null) {
                   wa.field_L = i.a(-2022, var2);
@@ -581,11 +581,11 @@ final class lb {
                 }
                 var2 = rh.a("create_unable", (byte) -119);
                 if (null != var2) {
-                  wf.field_a = i.a(param0 - 2021, var2);
+                  RasterBuffer.field_a = i.a(param0 - 2021, var2);
                 }
                 var2 = rh.a("create_ineligible", (byte) -72);
                 if (null != var2) {
-                  ma.field_d = i.a(param0 - 2021, var2);
+                  IntrusiveDequeCursor.field_d = i.a(param0 - 2021, var2);
                 }
                 var2 = rh.a("usernameprompt", (byte) -66);
                 if (var2 != null) {
@@ -625,7 +625,7 @@ final class lb {
                 }
                 var2 = rh.a("mu_chat_on", (byte) -69);
                 if (var2 != null) {
-                  eh.field_g = i.a(-2022, var2);
+                  Js5Archive.field_g = i.a(-2022, var2);
                 }
                 var2 = rh.a("mu_chat_friends", (byte) -65);
                 if (null != var2) {
@@ -765,7 +765,7 @@ final class lb {
                 }
                 var2 = rh.a("mu_gamelist_all_games", (byte) -69);
                 if (null != var2) {
-                  uf.field_o = i.a(-2022, var2);
+                  GameBoard.field_o = i.a(-2022, var2);
                 }
                 var2 = rh.a("mu_gamelist_status", (byte) -111);
                 if (null != var2) {
@@ -773,7 +773,7 @@ final class lb {
                 }
                 var2 = rh.a("mu_gamelist_owner", (byte) -107);
                 if (var2 != null) {
-                  wf.field_g = i.a(-2022, var2);
+                  RasterBuffer.field_g = i.a(-2022, var2);
                 }
                 var2 = rh.a("mu_gamelist_players", (byte) -96);
                 if (var2 != null) {
@@ -917,7 +917,7 @@ final class lb {
                 }
                 var2 = rh.a("unable_to_send_message_password_b", (byte) -69);
                 if (var2 != null) {
-                  rl.field_q = i.a(-2022, var2);
+                  SpriteState.field_q = i.a(-2022, var2);
                 }
                 var2 = rh.a("mu_chat_lobby_show_all", (byte) -120);
                 if (var2 != null) {
@@ -925,7 +925,7 @@ final class lb {
                 }
                 var2 = rh.a("mu_chat_lobby_friends_only", (byte) -98);
                 if (var2 != null) {
-                  el.field_g = i.a(-2022, var2);
+                  BufferedSocket.field_g = i.a(-2022, var2);
                 }
                 var2 = rh.a("mu_chat_lobby_friends", (byte) -62);
                 if (var2 != null) {
@@ -957,7 +957,7 @@ final class lb {
                 }
                 var2 = rh.a("mu_chat_pm_friends_only", (byte) -109);
                 if (var2 != null) {
-                  rl.field_v = i.a(param0 - 2021, var2);
+                  SpriteState.field_v = i.a(param0 - 2021, var2);
                 }
                 var2 = rh.a("mu_chat_pm_friends", (byte) -106);
                 if (var2 != null) {
@@ -993,7 +993,7 @@ final class lb {
                 }
                 var2 = rh.a("searching_for_opponent_singular", (byte) -81);
                 if (var2 != null) {
-                  ma.field_f = i.a(-2022, var2);
+                  IntrusiveDequeCursor.field_f = i.a(-2022, var2);
                 }
                 var2 = rh.a("searching_for_opponents_plural", (byte) -113);
                 if (null != var2) {
@@ -1005,7 +1005,7 @@ final class lb {
                 }
                 var2 = rh.a("find_opponents_plural", (byte) -119);
                 if (var2 != null) {
-                  p.field_g = i.a(-2022, var2);
+                  IntrusiveDeque.field_g = i.a(-2022, var2);
                 }
                 var2 = rh.a("rated_game_tips_setup_singular", (byte) -103);
                 if (null != var2) {
@@ -1033,7 +1033,7 @@ final class lb {
                 }
                 var2 = rh.a("join_requests_many", (byte) -102);
                 if (var2 != null) {
-                  l.field_e = i.a(-2022, var2);
+                  IntrusiveNode.field_e = i.a(-2022, var2);
                 }
                 var2 = rh.a("xs_game", (byte) -99);
                 if (null != var2) {
@@ -1041,7 +1041,7 @@ final class lb {
                 }
                 var2 = rh.a("waiting_for_x_to_start_game", (byte) -61);
                 if (null != var2) {
-                  fm.field_c = i.a(-2022, var2);
+                  WhirlpoolDigest.field_c = i.a(-2022, var2);
                 }
                 var2 = rh.a("game_options_changed", (byte) -115);
                 if (var2 != null) {
@@ -1105,7 +1105,7 @@ final class lb {
                 }
                 var2 = rh.a("status_playing", (byte) -107);
                 if (var2 != null) {
-                  wf.field_k = i.a(param0 - 2021, var2);
+                  RasterBuffer.field_k = i.a(param0 - 2021, var2);
                 }
                 var2 = rh.a("status_join", (byte) -86);
                 if (null != var2) {
@@ -1117,7 +1117,7 @@ final class lb {
                 }
                 var2 = rh.a("status_full", (byte) -75);
                 if (null != var2) {
-                  el.field_b = i.a(-2022, var2);
+                  BufferedSocket.field_b = i.a(-2022, var2);
                 }
                 var2 = rh.a("players_in_game", (byte) -88);
                 if (var2 != null) {
@@ -1189,7 +1189,7 @@ final class lb {
                 }
                 var2 = rh.a("multiconst_friends", (byte) -93);
                 if (var2 != null) {
-                  wf.field_i = i.a(-2022, var2);
+                  RasterBuffer.field_i = i.a(-2022, var2);
                 }
                 var2 = rh.a("multiconst_similar_rating", (byte) -126);
                 if (null != var2) {
@@ -1301,7 +1301,7 @@ final class lb {
                 }
                 var2 = rh.a("gameopt_notunlocked", (byte) -71);
                 if (var2 != null) {
-                  el.field_a = i.a(-2022, var2);
+                  BufferedSocket.field_a = i.a(-2022, var2);
                 }
                 var2 = rh.a("gameopt_cannotbecombined1", (byte) -116);
                 if (null != var2) {
@@ -1447,7 +1447,7 @@ final class lb {
                 }
                 var2 = rh.a("rule_0_1", (byte) -77);
                 if (null != var2) {
-                  ld.field_a = i.a(-2022, var2);
+                  GameKeyHandler.field_a = i.a(-2022, var2);
                 }
                 var2 = rh.a("rule_0_2", (byte) -89);
                 if (var2 != null) {
@@ -1471,7 +1471,7 @@ final class lb {
                 }
                 var2 = rh.a("rule_1_0", (byte) -107);
                 if (var2 != null) {
-                  el.field_f = i.a(-2022, var2);
+                  BufferedSocket.field_f = i.a(-2022, var2);
                 }
                 var2 = rh.a("rule_1_1", (byte) -65);
                 if (null != var2) {
@@ -1491,7 +1491,7 @@ final class lb {
                 }
                 var2 = rh.a("rule_pillar_2", (byte) -80);
                 if (null != var2) {
-                  gd.field_p = i.a(-2022, var2);
+                  ImageProducerRasterBuffer.field_p = i.a(-2022, var2);
                 }
                 var2 = rh.a("rule_2_0", (byte) -102);
                 if (var2 != null) {
@@ -1523,11 +1523,11 @@ final class lb {
                 }
                 var2 = rh.a("pleaselogin_member", (byte) -104);
                 if (null != var2) {
-                  jc.field_j = i.a(-2022, var2);
+                  PacketBuffer.field_j = i.a(-2022, var2);
                 }
                 var2 = rh.a("invaliduserorpass", (byte) -126);
                 if (var2 != null) {
-                  wb.field_g = i.a(-2022, var2);
+                  DualLinkNode.field_g = i.a(-2022, var2);
                 }
                 var2 = rh.a("pleasetryagain", (byte) -61);
                 if (null != var2) {
@@ -1967,7 +1967,7 @@ final class lb {
                 }
                 var2 = rh.a("create_agreeterms", (byte) -90);
                 if (null != var2) {
-                  eh.field_m = i.a(-2022, var2);
+                  Js5Archive.field_m = i.a(-2022, var2);
                 }
                 var2 = rh.a("create_u13terms", (byte) -97);
                 if (null != var2) {
@@ -2011,7 +2011,7 @@ final class lb {
                 }
                 var2 = rh.a("login_no_displayname", (byte) -70);
                 if (var2 != null) {
-                  ld.field_e = i.a(param0 - 2021, var2);
+                  GameKeyHandler.field_e = i.a(param0 - 2021, var2);
                 }
                 var2 = rh.a("create_username_tooltip", (byte) -74);
                 if (null != var2) {
@@ -2103,7 +2103,7 @@ final class lb {
                 }
                 var2 = rh.a("create_alert_doublespace", (byte) -74);
                 if (var2 != null) {
-                  km.field_P = i.a(-2022, var2);
+                  SpriteWidget.field_P = i.a(-2022, var2);
                 }
                 var2 = rh.a("create_alert_passchars", (byte) -67);
                 if (var2 != null) {
@@ -2135,7 +2135,7 @@ final class lb {
                 }
                 var2 = rh.a("create_alert_invalidemail", (byte) -77);
                 if (var2 != null) {
-                  ma.field_a = i.a(-2022, var2);
+                  IntrusiveDequeCursor.field_a = i.a(-2022, var2);
                 }
                 var2 = rh.a("create_alert_email_unavailable", (byte) -100);
                 if (null != var2) {
@@ -2421,7 +2421,7 @@ final class lb {
                 }
                 var2 = rh.a("achievements", (byte) -117);
                 if (null != var2) {
-                  uf.field_F = i.a(param0 ^ 2021, var2);
+                  GameBoard.field_F = i.a(param0 ^ 2021, var2);
                 }
                 var2 = rh.a("achievementsthisgame", (byte) -77);
                 if (var2 != null) {
@@ -2489,7 +2489,7 @@ final class lb {
                 }
                 var2 = rh.a("newgame", (byte) -82);
                 if (null != var2) {
-                  wb.field_l = i.a(-2022, var2);
+                  DualLinkNode.field_l = i.a(-2022, var2);
                 }
                 var2 = rh.a("resumegame", (byte) -75);
                 if (null != var2) {
@@ -2785,7 +2785,7 @@ final class lb {
                 }
                 var2 = rh.a("orbcoins_colon", (byte) -87);
                 if (null != var2) {
-                  wb.field_i = i.a(-2022, var2);
+                  DualLinkNode.field_i = i.a(-2022, var2);
                 }
                 var2 = rh.a("achieved_colon_description", (byte) -103);
                 if (null != var2) {
@@ -2853,11 +2853,11 @@ final class lb {
                 }
                 var2 = rh.a("mp_cancelrematch", (byte) -84);
                 if (null != var2) {
-                  ic.field_s = i.a(-2022, var2);
+                  GameSession.field_s = i.a(-2022, var2);
                 }
                 var2 = rh.a("mp_cancelrematch_unrated", (byte) -128);
                 if (null != var2) {
-                  ic.field_b = i.a(-2022, var2);
+                  GameSession.field_b = i.a(-2022, var2);
                 }
                 var2 = rh.a("mp_rematchnewgame", (byte) -126);
                 if (var2 != null) {
@@ -2949,7 +2949,7 @@ final class lb {
                 }
                 var2 = rh.a("mp_showchat_nounread", (byte) -73);
                 if (var2 != null) {
-                  wb.field_n = i.a(param0 ^ 2021, var2);
+                  DualLinkNode.field_n = i.a(param0 ^ 2021, var2);
                 }
                 var2 = rh.a("mp_showchat_unread1", (byte) -70);
                 if (var2 != null) {
@@ -2973,7 +2973,7 @@ final class lb {
                 }
                 var2 = rh.a("quickchat_help_title", (byte) -88);
                 if (var2 != null) {
-                  gd.field_q = i.a(-2022, var2);
+                  ImageProducerRasterBuffer.field_q = i.a(-2022, var2);
                 }
                 var2 = rh.a("quickchat_shortcut_help,0", (byte) -82);
                 if (var2 != null) {
@@ -3041,7 +3041,7 @@ final class lb {
                 }
                 var2 = rh.a("rating_won", (byte) -115);
                 if (var2 != null) {
-                  rl.field_s = i.a(-2022, var2);
+                  SpriteState.field_s = i.a(-2022, var2);
                 }
                 var2 = rh.a("rating_lost", (byte) -61);
                 if (null != var2) {
@@ -3049,7 +3049,7 @@ final class lb {
                 }
                 var2 = rh.a("rating_drawn", (byte) -118);
                 if (null != var2) {
-                  rl.field_o = i.a(param0 - 2021, var2);
+                  SpriteState.field_o = i.a(param0 - 2021, var2);
                 }
                 var2 = rh.a("benefits_fullscreen", (byte) -115);
                 if (null != var2) {
@@ -3189,11 +3189,11 @@ final class lb {
                 }
                 var2 = rh.a("fs_unavailable", (byte) -93);
                 if (var2 != null) {
-                  eh.field_h = i.a(param0 - 2021, var2);
+                  Js5Archive.field_h = i.a(param0 - 2021, var2);
                 }
                 var2 = rh.a("fs_unavailable_try_signed_applet", (byte) -81);
                 if (var2 != null) {
-                  fd.field_x = i.a(param0 - 2021, var2);
+                  WidgetContainer.field_x = i.a(param0 - 2021, var2);
                 }
                 var2 = rh.a("fs_focus", (byte) -73);
                 if (null != var2) {
@@ -3205,7 +3205,7 @@ final class lb {
                 }
                 var2 = rh.a("fs_timeout", (byte) -102);
                 if (null != var2) {
-                  el.field_i = i.a(param0 - 2021, var2);
+                  BufferedSocket.field_i = i.a(param0 - 2021, var2);
                 }
             }
             void runChunk3() throws java.lang.RuntimeException {
@@ -3528,7 +3528,7 @@ final class lb {
                 if (var2 != null) {
                   i.a(param0 - 2021, var2);
                 }
-                jc.field_k = null;
+                PacketBuffer.field_k = null;
             }
             void run() {
                 var3 = Virogrid.field_F ? 1 : 0;
@@ -3554,9 +3554,9 @@ final class lb {
                   throw kg.a((Throwable) ((Object) stackIn_2620_0), ((StringBuilder) (Object) stackIn_2620_1).append(stackIn_2621_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = uk.field_f;
+                  var4 = GameApplet.field_f;
                   var4++;
-                  uk.field_f = var4;
+                  GameApplet.field_f = var4;
                 }
             }
         }

@@ -10,21 +10,21 @@ final class md {
     static dj field_e;
     static boolean field_d;
     static vc field_i;
-    static eh field_h;
+    static Js5Archive field_h;
 
-    final static mg[] a(boolean param0, int param1) {
-        mg[] var3 = null;
-        mg[] var2 = null;
-        mg[] var3Lifetime1;
-        mg[] var2Lifetime1;
+    final static Sprite[] a(boolean param0, int param1) {
+        Sprite[] var3 = null;
+        Sprite[] var2 = null;
+        Sprite[] var3Lifetime1;
+        Sprite[] var2Lifetime1;
         if (param0) {
-          var3 = new mg[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = eg.a(64, (byte) 40, param1);
           return var2;
         }
         md.a(2);
-        var3Lifetime1 = new mg[9];
+        var3Lifetime1 = new Sprite[9];
         var2Lifetime1 = var3Lifetime1;
         var3Lifetime1[4] = eg.a(64, (byte) 40, param1);
         return var2Lifetime1;
@@ -90,7 +90,7 @@ final class md {
           sb.field_b[1] = mc.field_c.nextInt();
           sb.field_b[2] = (int)(ph.field_i >> 32);
           sb.field_b[3] = (int)ph.field_i;
-          gg.field_D.field_l = 0;
+          gg.field_D.position = 0;
           gg.field_D.a(sb.field_b[0], (byte) -42);
           gg.field_D.a(sb.field_b[1], (byte) -42);
           gg.field_D.a(sb.field_b[2], (byte) -42);
@@ -98,21 +98,21 @@ final class md {
           kl.a(gg.field_D, (byte) 111);
           gg.field_D.a((byte) -126, param3);
           param4.a(false, gg.field_D);
-          gk.field_g.field_l = 0;
+          gk.field_g.position = 0;
           if (param0) {
             gk.field_g.a(18, param1 ^ -122);
           } else {
             gk.field_g.a(16, 61);
           }
-          gk.field_g.field_l = gk.field_g.field_l + 2;
-          var5_int = gk.field_g.field_l;
+          gk.field_g.position = gk.field_g.position + 2;
+          var5_int = gk.field_g.position;
           gk.field_g.a(cj.field_c, (byte) -42);
           gk.field_g.a((byte) -30, vi.field_n);
           var6 = 0;
           if (wg.field_c) {
             var6 = var6 | 1;
           }
-          if (el.field_k) {
+          if (BufferedSocket.field_k) {
             var6 = var6 | 4;
           }
           if (param2) {
@@ -126,12 +126,12 @@ final class md {
           if (var7 == null) {
             var7 = "";
           }
-          gk.field_g.a(var7, (byte) -63);
+          gk.field_g.writeString(var7, (byte) -63);
           if (null != mj.field_B) {
-            gk.field_g.b(mj.field_B, (byte) 127);
+            gk.field_g.writeZeroPrefixedString(mj.field_B, (byte) 127);
           }
           nl.a(on.field_a, gg.field_D, gk.field_g, ch.field_i, param1);
-          gk.field_g.c(-var5_int + gk.field_g.field_l, -3991);
+          gk.field_g.c(-var5_int + gk.field_g.position, -3991);
           al.b(~param1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,7 +161,7 @@ final class md {
         bk var2 = null;
         bk var2Lifetime1;
         if (vf.field_f == null) {
-          vf.field_f = new aj(dk.field_j, 20, 0, 0, 0, 11579568, -1, 0, 0, dk.field_j.field_H, -1, 2147483647, true);
+          vf.field_f = new aj(dk.arezzo12Font, 20, 0, 0, 0, 11579568, -1, 0, 0, dk.arezzo12Font.field_H, -1, 2147483647, true);
           if (param0 > -102) {
             var2 = (bk) null;
             md.a(false, -13, true, -83, (bk) null);

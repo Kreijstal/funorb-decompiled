@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class g {
-    static eh field_a;
+    static Js5Archive field_a;
     static tn field_b;
     static boolean field_c;
     static String field_d;
@@ -74,7 +74,7 @@ final class g {
             stackIn_5_0 = (String) null;
             return stackIn_5_0;
           }
-          if (jc.a(param0, true)) {
+          if (PacketBuffer.a(param0, true)) {
             stackIn_9_0 = ql.field_k;
             return stackIn_9_0;
           }
@@ -82,7 +82,7 @@ final class g {
             stackIn_12_0 = sa.field_p;
             return stackIn_12_0;
           }
-          if (fm.a(param0, -1369854352)) {
+          if (WhirlpoolDigest.a(param0, -1369854352)) {
             stackIn_15_0 = oi.a(new String[]{param0}, lc.field_d, 2);
             return stackIn_15_0;
           }
@@ -96,11 +96,11 @@ final class g {
           }
           var5 = gk.field_g;
           var5.g(param2, 8);
-          var5.field_l = var5.field_l + 1;
-          var4 = var5.field_l;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(2, 76);
-          var5.a(param0, (byte) -96);
-          var5.b(var5.field_l - var4, -1);
+          var5.writeString(param0, (byte) -96);
+          var5.b(var5.position - var4, -1);
           stackIn_23_0 = null;
           return (String) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nn {
-    static km field_b;
+    static SpriteWidget field_b;
     static int field_a;
 
-    final static void a(mg[][] param0, mg[][] param1, int param2, byte[] param3, byte[] param4, eh param5, eh param6, boolean param7, int param8, String[][] param9, String[][] param10, String[] param11, int[] param12, int param13, eh param14) {
+    final static void a(Sprite[][] param0, Sprite[][] param1, int param2, byte[] param3, byte[] param4, Js5Archive param5, Js5Archive param6, boolean param7, int param8, String[][] param9, String[][] param10, String[] param11, int[] param12, int param13, Js5Archive param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -131,58 +131,58 @@ final class nn {
         qe.field_m = (param1 & 15) >> 2;
         if (ca.field_D > 2) {
           ca.field_D = 2;
-          el.field_t = param1 & 3;
+          BufferedSocket.field_t = param1 & 3;
           if (param0) {
             if (!(qe.field_m <= 2)) {
               qe.field_m = 2;
             }
-            if (el.field_t <= 2) {
+            if (BufferedSocket.field_t <= 2) {
               return;
             }
-            el.field_t = 2;
+            BufferedSocket.field_t = 2;
             return;
           }
           nn.a(true, -24);
           if (!(qe.field_m <= 2)) {
             qe.field_m = 2;
           }
-          if (el.field_t > 2) {
-            el.field_t = 2;
+          if (BufferedSocket.field_t > 2) {
+            BufferedSocket.field_t = 2;
             return;
           }
           return;
         }
-        el.field_t = param1 & 3;
+        BufferedSocket.field_t = param1 & 3;
         if (!param0) {
           nn.a(true, -24);
           if (!(qe.field_m <= 2)) {
             qe.field_m = 2;
           }
-          if (el.field_t <= 2) {
+          if (BufferedSocket.field_t <= 2) {
             return;
           }
-          el.field_t = 2;
+          BufferedSocket.field_t = 2;
           return;
         }
         if (!(qe.field_m <= 2)) {
           qe.field_m = 2;
         }
-        if (el.field_t <= 2) {
+        if (BufferedSocket.field_t <= 2) {
           return;
         }
-        el.field_t = 2;
+        BufferedSocket.field_t = 2;
     }
 
     public static void a(int param0) {
         field_b = null;
         if (param0 != 53) {
-          field_b = (km) null;
+          field_b = (SpriteWidget) null;
         }
     }
 
     final static void a(java.awt.Canvas param0, byte param1) {
         RuntimeException var2 = null;
-        eh var3 = null;
+        Js5Archive var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -190,8 +190,8 @@ final class nn {
         try {
           uh.a((java.awt.Component) ((Object) param0), (byte) 97);
           if (param1 >= -40) {
-            var3 = (eh) null;
-            nn.a((mg[][]) null, (mg[][]) null, -23, (byte[]) null, (byte[]) null, (eh) null, (eh) null, false, -93, (String[][]) null, (String[][]) null, (String[]) null, (int[]) null, 76, (eh) null);
+            var3 = (Js5Archive) null;
+            nn.a((Sprite[][]) null, (Sprite[][]) null, -23, (byte[]) null, (byte[]) null, (Js5Archive) null, (Js5Archive) null, false, -93, (String[][]) null, (String[][]) null, (String[]) null, (int[]) null, 76, (Js5Archive) null);
           }
           ga.a((java.awt.Component) ((Object) param0), false);
           if (sb.field_d == null) {

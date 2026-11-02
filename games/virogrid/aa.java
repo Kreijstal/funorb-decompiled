@@ -25,7 +25,7 @@ final class aa {
 
     final static void a(byte param0) {
         int var1 = 65 / ((param0 - 27) / 34);
-        ij.field_j = new na(fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, ma.field_e);
+        ij.field_j = new na(fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, IntrusiveDequeCursor.field_e);
     }
 
     static {

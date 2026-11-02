@@ -7,8 +7,8 @@ final class we {
     static String field_f;
     static int field_l;
     static int field_a;
-    static km field_c;
-    static mg field_e;
+    static SpriteWidget field_c;
+    static Sprite field_e;
     static float field_k;
     static int field_d;
     static int field_h;
@@ -94,7 +94,7 @@ final class we {
             we.a(64);
           }
           if (param1 != null &&
-            param1.length() >= jc.field_m &&
+            param1.length() >= PacketBuffer.field_m &&
             param1.length() <= hh.field_c) {
             return false;
           }

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class pd implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     static String field_q;
     private boolean field_g;
     ji field_o;
@@ -118,15 +118,15 @@ final class pd implements Runnable {
                   case 16:
                   default:
                     if (!this.field_a) {
-                      throw pd.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 12:
-                        var3_ref = pd.a(field_n, (String) (var9.field_g), field_u, 100150608);
+                        var3_ref = PlatformTaskDispatcher.a(field_n, (String) (var9.field_g), field_u, 100150608);
                         var9.field_f = var3_ref;
                         break;
                       case 13:
-                        var3_ref = pd.a("", (String) (var9.field_g), field_u, 100150608);
+                        var3_ref = PlatformTaskDispatcher.a("", (String) (var9.field_g), field_u, 100150608);
                         var9.field_f = var3_ref;
                         break;
                       case 16:
@@ -160,21 +160,21 @@ final class pd implements Runnable {
                           Class.forName("uj").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_b, new Object[]{var14[0], var14[1], new Integer(var9.field_e), new Integer(var9.field_c), var14[2]});
                         } else {
                           if (16 != var2_int) {
-                            throw pd.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_x.startsWith("win")) {
-                              throw pd.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var8 = (String) (var9.field_g);
                             if (!var8.startsWith("http://") &&
                               !var8.startsWith("https://")) {
-                              throw pd.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var8.length() > var5; var5++) {
                               if (var4_ref_String.indexOf((int) var8.charAt(var5)) == -1) {
-                                throw pd.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
@@ -183,7 +183,7 @@ final class pd implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref2 = (Exception) (Object) decompiledCaughtException;
                             var9.field_f = var3_ref2;
-                            throw pd.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
                           }
                         }
                         break;
@@ -492,7 +492,7 @@ final class pd implements Runnable {
         return this.field_p != null ? true : false;
     }
 
-    pd(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;

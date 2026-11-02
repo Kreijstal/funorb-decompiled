@@ -4,7 +4,7 @@
 final class vi extends bk {
     static String field_m;
     private String field_i;
-    static p field_h;
+    static IntrusiveDeque field_h;
     static float field_k;
     private String field_e;
     static String field_j;
@@ -26,13 +26,13 @@ final class vi extends bk {
         fe.field_Fb = false;
         if (param0 < -113) {
           kf.a(-1, -1);
-          cb.field_c = kh.field_e;
+          MouseWheelInput.field_c = kh.field_e;
           pa.field_l = kh.field_e;
           return;
         }
         vi.b((byte) -39);
         kf.a(-1, -1);
-        cb.field_c = kh.field_e;
+        MouseWheelInput.field_c = kh.field_e;
         pa.field_l = kh.field_e;
     }
 
@@ -60,12 +60,12 @@ final class vi extends bk {
         }
     }
 
-    final void a(boolean param0, jc param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         if (param0) {
           return;
         }
         try {
-          param1.b(this.field_e, (byte) 112);
+          param1.writeZeroPrefixedString(this.field_e, (byte) 112);
           param1.c(this.field_i, (byte) 82);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "vi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -75,7 +75,7 @@ final class vi extends bk {
     static {
         field_m = "Members";
         field_j = "Invite only";
-        field_h = new p();
+        field_h = new IntrusiveDeque();
         field_f = "No";
     }
 }

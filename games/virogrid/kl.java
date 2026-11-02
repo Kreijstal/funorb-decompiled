@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class kl extends fd implements ta {
+final class kl extends WidgetContainer implements ta {
     private String[] field_H;
     private tg[] field_F;
     private fc field_G;
@@ -48,7 +48,7 @@ final class kl extends fd implements ta {
           if (param1 < 13) {
             return;
           }
-          this.field_z.a(false);
+          this.children.a(false);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
@@ -56,19 +56,19 @@ final class kl extends fd implements ta {
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.field_H[var4_int] = ji.a(11, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
-            var4 = new ti(dj.field_h, 0, 1);
+            var4 = new ti(dj.arezzo14Font, 0, 1);
             this.field_F = new tg[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_F[var5] = new tg(this.field_H[var5], (cd) (this));
-              this.field_F[var5].field_w = (ol) ((Object) var4);
+              this.field_F[var5].listener = (WidgetListener) ((Object) var4);
               this.field_F[var5].field_h = jj.field_i;
               this.field_F[var5].a(15, true, 20 + 16 * var5, 0, 80);
-              this.a((fi) (this.field_F[var5]), (byte) -78);
+              this.a((UiWidget) (this.field_F[var5]), (byte) -78);
             }
             this.field_F[var3_int] = new tg(rj.field_i, (cd) (this));
-            this.field_F[var3_int].field_w = (ol) ((Object) var4);
+            this.field_F[var3_int].listener = (WidgetListener) ((Object) var4);
             this.field_F[var3_int].a(15, true, 20 - (-(var3_int * 16) - 16), 0, 100);
-            this.a((fi) (this.field_F[var3_int]), (byte) -78);
+            this.a((UiWidget) (this.field_F[var3_int]), (byte) -78);
             return;
           }
           this.field_H = null;
@@ -87,7 +87,7 @@ final class kl extends fd implements ta {
         }
     }
 
-    final static void a(jc param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         try {
           int var5 = 0;
           RuntimeException runtimeException = null;
@@ -193,7 +193,7 @@ final class kl extends fd implements ta {
     }
 
     kl(fc param0) {
-        super(0, 0, 0, 0, (ol) null);
+        super(0, 0, 0, 0, (WidgetListener) null);
         try {
           this.field_G = param0;
         } catch (RuntimeException runtimeException) {
@@ -206,13 +206,13 @@ final class kl extends fd implements ta {
         if (param3 != 0) {
           return;
         }
-        e var5 = dj.field_h;
+        e var5 = dj.arezzo14Font;
         if (this.field_H != null) {
           var5.a(bg.field_Pb, this.field_l + param1, param2 + this.field_u, this.field_g, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_H);
         }
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;

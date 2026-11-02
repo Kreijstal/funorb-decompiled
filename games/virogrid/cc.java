@@ -3,9 +3,9 @@
  */
 class cc extends aj {
     static float field_x;
-    static mg field_u;
-    static String[] field_v;
-    static km field_w;
+    static Sprite field_u;
+    static String[] detailNames;
+    static SpriteWidget field_w;
 
     final static lc[] a(byte param0) {
         if (param0 == -104) {
@@ -15,7 +15,7 @@ class cc extends aj {
         return new lc[]{pm.field_q, dn.field_d, db.field_z, pn.field_z, gf.field_z, na.field_Fb, af.field_l, ud.field_c, lm.field_i, ji.field_b, dk.field_s, oj.field_Xb, vl.field_f, oe.field_e};
     }
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -53,10 +53,10 @@ class cc extends aj {
     }
 
     cc(int param0) {
-        this(dj.field_h, param0);
+        this(dj.arezzo14Font, param0);
     }
 
-    final static void a(boolean param0, he param1, boolean param2, jc param3) {
+    final static void a(boolean param0, he param1, boolean param2, PacketBuffer param3) {
         int var8 = 0;
         he stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
@@ -87,11 +87,11 @@ class cc extends aj {
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           if (param0) {
-            param1.field_ic = param3.g(11132);
+            param1.field_ic = param3.readUnsignedByte(11132);
           }
-          param1.field_vc = param3.g(11132);
-          param1.field_fc = param3.g(11132);
-          var4_int = param3.g(11132);
+          param1.field_vc = param3.readUnsignedByte(11132);
+          param1.field_fc = param3.readUnsignedByte(11132);
+          var4_int = param3.readUnsignedByte(11132);
           stackIn_6_0 = (he) (param1);
           stackIn_7_1 = ((128 & var4_int) != 0);
           stackIn_6_0.field_Sb = stackIn_7_1;
@@ -119,24 +119,24 @@ class cc extends aj {
           param3.a(0, param1.field_Pb.length, param2, param1.field_Pb);
           stackIn_29_0 = ((2 & var4_int) == 0) ? 0 : 1;
           var6 = stackIn_29_0;
-          param1.field_ac = param3.c((byte) 47);
-          param1.field_Hb = hc.a(-9986) - (long)param3.d((byte) 119);
+          param1.field_ac = param3.readUnsignedShort((byte) 47);
+          param1.field_Hb = hc.a(-9986) - (long)param3.readInt((byte) 119);
           if (var5 != 0) {
-            param1.field_mc = param3.d((byte) 127);
+            param1.field_mc = param3.readInt((byte) 127);
           } else {
             param1.field_mc = -1;
           }
           param1.field_gc = param3.e((byte) -60);
-          var7 = param3.field_l;
-          param1.field_Qb = param3.h(-119);
+          var7 = param3.position;
+          param1.field_Qb = param3.readString(-119);
           if (var6 == 0) {
             param1.field_Zb = null;
             return;
           }
-          param3.field_l = var7;
+          param3.position = var7;
           param1.field_Zb = new String[param1.field_ic];
           for (var8 = 0; param1.field_ic > var8; var8++) {
-            param1.field_Zb[var8] = param3.h(-119);
+            param1.field_Zb[var8] = param3.readString(-119);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,7 +165,7 @@ class cc extends aj {
         }
         field_w = null;
         field_u = null;
-        field_v = null;
+        detailNames = null;
     }
 
     cc(e param0, int param1) {
@@ -173,7 +173,7 @@ class cc extends aj {
     }
 
     static {
-        field_u = new mg(270, 70);
-        field_v = new String[]{"2D - Fastest", "2D - Best", "3D - Fastest", "3D - Best"};
+        field_u = new Sprite(270, 70);
+        detailNames = new String[]{"2D - Fastest", "2D - Best", "3D - Fastest", "3D - Best"};
     }
 }

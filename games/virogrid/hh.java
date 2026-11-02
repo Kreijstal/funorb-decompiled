@@ -5,7 +5,7 @@ final class hh {
     static long field_d;
     static int field_c;
     static int[] field_b;
-    static mg field_a;
+    static Sprite field_a;
     static int field_e;
 
     final static void a(byte param0, int param1) {
@@ -164,10 +164,10 @@ final class hh {
 
     final static uh a(int param0) {
         if (param0 == -30890) {
-          return new uh(eh.d(-110), ci.i(24410));
+          return new uh(Js5Archive.d(-110), ci.i(24410));
         }
         hh.b((byte) 14);
-        return new uh(eh.d(-110), ci.i(24410));
+        return new uh(Js5Archive.d(-110), ci.i(24410));
     }
 
     public final String toString() {

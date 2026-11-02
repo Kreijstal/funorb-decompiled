@@ -15,7 +15,7 @@ abstract class ah {
     static int field_k;
     int field_b;
 
-    final static void a(byte param0, pd param1, java.awt.Frame param2) {
+    final static void a(byte param0, PlatformTaskDispatcher param1, java.awt.Frame param2) {
         int var3_int = 0;
         un var4 = null;
         int var5 = 0;
@@ -88,14 +88,14 @@ abstract class ah {
         RuntimeException var5 = null;
         var9 = Virogrid.field_F ? 1 : 0;
         try {
-          var5_int = param4 + df.field_e * param2;
+          var5_int = param4 + Rasterizer.field_e * param2;
           var6 = var5_int + param0;
           var7 = (16711422 & param3) >> 1;
           if (param1 != 100) {
             field_h = (kf) null;
           }
           for (var8 = var5_int; var8 < var6; var8++) {
-            stackIn_7_0 = df.field_d;
+            stackIn_7_0 = Rasterizer.field_d;
             stackIn_7_1 = var8;
             if (0 == var8 % 2) {
               stackIn_8_2 = var7;

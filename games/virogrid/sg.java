@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sg extends l {
+final class sg extends IntrusiveNode {
     static String field_k;
     static long field_l;
     static String field_g;
     byte[] field_h;
     static int field_j;
-    static p field_m;
+    static IntrusiveDeque field_m;
     static int field_n;
     static float field_i;
 
@@ -82,6 +82,6 @@ final class sg extends l {
     static {
         field_k = "The '<%0>' setting needs to be changed.";
         field_g = "Email address is unavailable";
-        field_m = new p();
+        field_m = new IntrusiveDeque();
     }
 }

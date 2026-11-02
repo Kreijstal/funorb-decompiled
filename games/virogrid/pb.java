@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pb extends l {
+final class pb extends IntrusiveNode {
     static String field_m;
     int field_o;
     int field_j;
-    static km field_p;
-    static String field_k;
+    static SpriteWidget field_p;
+    static String textColourWhite;
     static int[] field_i;
     pb field_q;
     static String field_l;
@@ -18,7 +18,7 @@ final class pb extends l {
 
     final static boolean a(int param0) {
         if (param0 != 4) {
-          field_p = (km) null;
+          field_p = (SpriteWidget) null;
           if (null == kk.field_q) {
             return false;
           }
@@ -36,7 +36,7 @@ final class pb extends l {
         return false;
     }
 
-    final static void a(byte[] param0, eh param1, String[] param2, int param3, boolean param4, int param5, byte[] param6, rm[] param7, eh param8, int[] param9, String[][] param10, int[] param11, String[][] param12, boolean param13, eh param14, mg[][] param15, mg[][] param16) {
+    final static void a(byte[] param0, Js5Archive param1, String[] param2, int param3, boolean param4, int param5, byte[] param6, rm[] param7, Js5Archive param8, int[] param9, String[][] param10, int[] param11, String[][] param12, boolean param13, Js5Archive param14, Sprite[][] param15, Sprite[][] param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -71,7 +71,7 @@ final class pb extends l {
           var18 = (String[]) null;
           nm.a(param6, param7, param9, param12, param0, param8, 1, (String[]) null, param10, param16, param4, param15, param5, param11, (byte) -94, param2, param1, param14, param3);
           if (param13) {
-            pb.a((byte[]) null, (eh) null, (String[]) null, 25, false, 29, (byte[]) null, (rm[]) null, (eh) null, (int[]) null, (String[][]) null, (int[]) null, (String[][]) null, false, (eh) null, (mg[][]) null, (mg[][]) null);
+            pb.a((byte[]) null, (Js5Archive) null, (String[]) null, 25, false, 29, (byte[]) null, (rm[]) null, (Js5Archive) null, (int[]) null, (String[][]) null, (int[]) null, (String[][]) null, false, (Js5Archive) null, (Sprite[][]) null, (Sprite[][]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -171,7 +171,7 @@ final class pb extends l {
     public static void a(byte param0) {
         field_m = null;
         int var1 = -55 % ((-5 - param0) / 34);
-        field_k = null;
+        textColourWhite = null;
         field_p = null;
         field_i = null;
         field_l = null;
@@ -179,7 +179,7 @@ final class pb extends l {
     }
 
     static {
-        field_k = "white";
+        textColourWhite = "white";
         field_i = new int[4];
         field_h = -1;
         field_n = "Passwords must be between 5 and 20 letters and numbers";

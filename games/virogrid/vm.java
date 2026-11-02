@@ -5,7 +5,7 @@ final class vm {
     static double[] field_d;
     static int field_c;
     static un field_b;
-    static String field_a;
+    static String textEndgameResigned;
     static boolean field_e;
 
     final static void a(byte param0, boolean param1) {
@@ -19,7 +19,7 @@ final class vm {
             if (!ad.field_h) {
               return;
             }
-            df.g(0, 0, df.field_e, we.field_c.field_J);
+            Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
             pm.field_n.a(param1, 24960);
             return;
           }
@@ -27,7 +27,7 @@ final class vm {
             if (!ad.field_h) {
               return;
             }
-            df.g(0, 0, df.field_e, we.field_c.field_J);
+            Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
             pm.field_n.a(param1, 24960);
             return;
           }
@@ -35,7 +35,7 @@ final class vm {
             return;
           }
           if (ad.field_h) {
-            df.g(0, 0, df.field_e, we.field_c.field_J);
+            Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
             pm.field_n.a(param1, 24960);
           }
           return;
@@ -48,7 +48,7 @@ final class vm {
             if (!ad.field_h) {
               return;
             }
-            df.g(0, 0, df.field_e, we.field_c.field_J);
+            Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
             pm.field_n.a(param1, 24960);
             return;
           }
@@ -56,12 +56,12 @@ final class vm {
             return;
           }
           if (ad.field_h) {
-            df.g(0, 0, df.field_e, we.field_c.field_J);
+            Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
             pm.field_n.a(param1, 24960);
           }
           return;
         }
-        df.g(0, 0, df.field_e, we.field_c.field_J);
+        Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
         jj.field_a.a(param1, 24960);
         if (param0 < 16) {
           field_b = (un) null;
@@ -70,12 +70,12 @@ final class vm {
           if (!ad.field_h) {
             return;
           }
-          df.g(0, 0, df.field_e, we.field_c.field_J);
+          Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
           pm.field_n.a(param1, 24960);
         } else {
           if (th.field_z > 0) {
             if (ad.field_h) {
-              df.g(0, 0, df.field_e, we.field_c.field_J);
+              Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
               pm.field_n.a(param1, 24960);
             }
             return;
@@ -83,7 +83,7 @@ final class vm {
         }
     }
 
-    final static rc a(eh param0, byte param1, int param2) {
+    final static rc a(Js5Archive param0, byte param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -149,7 +149,7 @@ final class vm {
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        textEndgameResigned = null;
         if (param0 >= -105) {
           return;
         }
@@ -158,7 +158,7 @@ final class vm {
     }
 
     static {
-        field_a = "<%0> resigned";
+        textEndgameResigned = "<%0> resigned";
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

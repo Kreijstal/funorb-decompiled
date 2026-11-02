@@ -269,32 +269,32 @@ final class hl {
         return field_l;
     }
 
-    final void a(jc param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_o = new wj();
         this.field_o.a(param0);
         this.field_a = new wj();
         this.field_a.a(param0);
-        int var2 = param0.g(11132);
+        int var2 = param0.readUnsignedByte(11132);
         if (var2 != 0) {
-          param0.field_l = param0.field_l - 1;
+          param0.position = param0.position - 1;
           this.field_h = new wj();
           this.field_h.a(param0);
           this.field_i = new wj();
           this.field_i.a(param0);
         }
-        var2 = param0.g(11132);
+        var2 = param0.readUnsignedByte(11132);
         if (var2 != 0) {
-          param0.field_l = param0.field_l - 1;
+          param0.position = param0.position - 1;
           this.field_y = new wj();
           this.field_y.a(param0);
           this.field_r = new wj();
           this.field_r.a(param0);
         }
-        var2 = param0.g(11132);
+        var2 = param0.readUnsignedByte(11132);
         if (var2 != 0) {
-          param0.field_l = param0.field_l - 1;
+          param0.position = param0.position - 1;
           this.field_x = new wj();
           this.field_x.a(param0);
           this.field_f = new wj();
@@ -306,13 +306,13 @@ final class hl {
             break;
           }
           this.field_m[var3] = var4;
-          this.field_b[var3] = param0.d(121);
+          this.field_b[var3] = param0.readSignedSmart(121);
           this.field_p[var3] = param0.c(false);
         }
         this.field_u = param0.c(false);
         this.field_t = param0.c(false);
-        this.field_q = param0.c((byte) 36);
-        this.field_g = param0.c((byte) -92);
+        this.field_q = param0.readUnsignedShort((byte) 36);
+        this.field_g = param0.readUnsignedShort((byte) -92);
         this.field_k = new bh();
         this.field_s = new wj();
         this.field_k.a(param0, this.field_s);

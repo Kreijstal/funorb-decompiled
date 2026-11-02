@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hj extends l {
+final class hj extends IntrusiveNode {
     int field_i;
     static int field_h;
     static rm[] field_g;
@@ -19,9 +19,9 @@ final class hj extends l {
         this.field_i = param0;
     }
 
-    final static rm a(eh param0, int param1, int param2) {
+    final static rm a(Js5Archive param0, int param1, int param2) {
         RuntimeException var3 = null;
-        eh var4 = null;
+        Js5Archive var4 = null;
         rm stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -32,8 +32,8 @@ final class hj extends l {
             return null;
           }
           if (param2 != 12) {
-            var4 = (eh) null;
-            hj.a((eh) null, -36, 3);
+            var4 = (Js5Archive) null;
+            hj.a((Js5Archive) null, -36, 3);
           }
           stackIn_6_0 = bk.a(121);
           return stackIn_6_0;
@@ -51,7 +51,7 @@ final class hj extends l {
         }
     }
 
-    final static void a(int param0, jc param1, int param2, int param3, int param4) {
+    final static void a(int param0, PacketBuffer param1, int param2, int param3, int param4) {
         try {
           param1.a(param4, 84);
           param1.a((byte) -73, 17);
@@ -63,7 +63,7 @@ final class hj extends l {
         }
     }
 
-    final static km c(int param0) {
+    final static SpriteWidget c(int param0) {
         if (param0 < 43) {
           field_h = 95;
           return wm.field_r.field_Jb;

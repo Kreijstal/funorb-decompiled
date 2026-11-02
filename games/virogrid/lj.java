@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj implements ol {
+final class lj implements WidgetListener {
     static float field_r;
     private e field_p;
     static byte[][] field_j;
@@ -49,7 +49,7 @@ final class lj implements ol {
           if (null != vg.field_I) {
             mn.a(false);
             fe.g(1);
-            stackIn_7_0 = (vg.field_I.field_e == 1) ? 0.0 : 3.141592653589793;
+            stackIn_7_0 = (vg.field_I.localPlayer == 1) ? 0.0 : 3.141592653589793;
             sj.field_o = (float)stackIn_7_0;
             if (Virogrid.field_F) {
               sj.field_o = 3.1415927410125732f;
@@ -60,7 +60,7 @@ final class lj implements ol {
           if (param0 < 96) {
             return;
           }
-          el.a(true, (byte) -106);
+          BufferedSocket.a(true, (byte) -106);
           vm.field_d[0] = (double)field_r * Math.sin((double)cf.field_c);
           vm.field_d[2] = (double)field_r * Math.cos((double)cf.field_c);
           gb.c((byte) -44);
@@ -71,7 +71,7 @@ final class lj implements ol {
             var1_int = (1 + kn.field_B) % 3;
           }
           kn.field_B = var1_int;
-          ei.a(0, oi.field_c[var1_int + 1]);
+          ei.a(0, oi.musicTracks[var1_int + 1]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,8 +80,8 @@ final class lj implements ol {
         }
     }
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
-        fi stackIn_4_0 = null;
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -94,7 +94,7 @@ final class lj implements ol {
         int var10 = 0;
         try {
           if (param1 instanceof gn) {
-            stackIn_4_0 = (fi) (param1);
+            stackIn_4_0 = (UiWidget) (param1);
           } else {
             stackIn_4_0 = null;
           }
@@ -103,20 +103,20 @@ final class lj implements ol {
             param2 = param2 & var6.field_C;
           }
           if (param4 != -23294) {
-            this.a(107, (fi) null, true, -95, -123);
+            this.a(107, (UiWidget) null, true, -95, -123);
           }
           var7 = 5592405;
-          df.b(param0 + param1.field_l, param1.field_u + param3, param1.field_g, param1.field_m, this.field_l);
+          Rasterizer.b(param0 + param1.field_l, param1.field_u + param3, param1.field_g, param1.field_m, this.field_l);
           if (param2) {
             var7 = 16777215;
           }
           var8 = param0 - (-param1.field_l - this.field_f);
           var9 = this.field_a + (param3 + param1.field_u);
-          df.f(var8, var9, this.field_n, this.field_o, 5592405);
-          df.b(var8, var9, this.field_n, this.field_o, var7);
+          Rasterizer.f(var8, var9, this.field_n, this.field_o, 5592405);
+          Rasterizer.b(var8, var9, this.field_n, this.field_o, var7);
           if (var6.field_z) {
-            df.a(var8, var9, this.field_n + var8, this.field_o + var9, 1);
-            df.a(var8 + this.field_n, var9, var8, this.field_o + var9, 1);
+            Rasterizer.a(var8, var9, this.field_n + var8, this.field_o + var9, 1);
+            Rasterizer.a(var8 + this.field_n, var9, var8, this.field_o + var9, 1);
           }
           if (null != this.field_p) {
             var10 = this.field_n + (this.field_f + this.field_e);
@@ -200,11 +200,11 @@ final class lj implements ol {
             if (var19 == 0) {
               if (stackIn_12_0) {
                 var12 = en.field_Hb[var9];
-                var13 = ld.field_h[var9];
+                var13 = GameKeyHandler.field_h[var9];
                 var14 = en.field_Hb[var10] - var12;
                 var15 = en.field_Hb[var11] - var12;
-                var16 = ld.field_h[var10] - var13;
-                var17 = -var13 + ld.field_h[var11];
+                var16 = GameKeyHandler.field_h[var10] - var13;
+                var17 = -var13 + GameKeyHandler.field_h[var11];
               }
               if (!stackIn_12_0 ||
                 !(var14 * var17 - var15 * var16 >= 0)) {
@@ -290,7 +290,7 @@ final class lj implements ol {
         }
     }
 
-    final static void a(boolean param0, jc param1) {
+    final static void a(boolean param0, PacketBuffer param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException stackIn_8_0 = null;
@@ -300,22 +300,22 @@ final class lj implements ol {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          ve.field_s = param1.c((byte) 83) << 5;
-          var2_int = param1.g(11132);
+          ve.field_s = param1.readUnsignedShort((byte) 83) << 5;
+          var2_int = param1.readUnsignedByte(11132);
           ve.field_s = ve.field_s + (var2_int >> 3);
           ng.field_X = (var2_int & 7) << 18;
-          ng.field_X = ng.field_X + (param1.c((byte) -43) << 2);
-          var2_intLifetime1 = param1.g(11132);
+          ng.field_X = ng.field_X + (param1.readUnsignedShort((byte) -43) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(11132);
           if (!param0) {
             field_r = 0.6400812864303589f;
           }
           ng.field_X = ng.field_X + (var2_intLifetime1 >> 6);
           ug.field_b = (63 & var2_intLifetime1) << 15;
-          ug.field_b = ug.field_b + (param1.g(11132) << 7);
-          var2_intLifetime2 = param1.g(11132);
+          ug.field_b = ug.field_b + (param1.readUnsignedByte(11132) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(11132);
           lm.field_j = (var2_intLifetime2 & 1) << 16;
           ug.field_b = ug.field_b + (var2_intLifetime2 >> 1);
-          lm.field_j = lm.field_j + param1.c((byte) 70);
+          lm.field_j = lm.field_j + param1.readUnsignedShort((byte) 70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

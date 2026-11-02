@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class aj implements ol, gm {
+class aj implements WidgetListener, gm {
     int field_f;
     static String field_h;
     int field_t;
@@ -14,7 +14,7 @@ class aj implements ol, gm {
     e field_i;
     int field_k;
     static String field_e;
-    static p field_m;
+    static IntrusiveDeque field_m;
     int field_d;
     int field_j;
     private int field_b;
@@ -23,10 +23,10 @@ class aj implements ol, gm {
     static int field_g;
     int field_c;
 
-    public final int b(int param0, fi param1, int param2) {
+    public final int b(int param0, UiWidget param1, int param2) {
         int discarded$1 = 0;
         RuntimeException var4 = null;
-        fi var5 = null;
+        UiWidget var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -34,8 +34,8 @@ class aj implements ol, gm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -587719039) {
-            var5 = (fi) null;
-            discarded$1 = this.a(23, -29, (byte) 22, (fi) null);
+            var5 = (UiWidget) null;
+            discarded$1 = this.a(23, -29, (byte) 22, (UiWidget) null);
           }
           stackIn_3_0 = this.a((byte) -92, param1, param2, 0);
           return stackIn_3_0;
@@ -53,7 +53,7 @@ class aj implements ol, gm {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, fi param3, int param4, int param5) {
+    public final void a(byte param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -94,7 +94,7 @@ class aj implements ol, gm {
           }
           var10 = var18.b(var8, 0);
           var11 = var18.b(var9, 0);
-          uk.a(param3.field_m + (param3.field_u + param5), 6, param2 + param3.field_l, param3.field_g + param3.field_l + param2, param5 + param3.field_u);
+          GameApplet.a(param3.field_m + (param3.field_u + param5), 6, param2 + param3.field_l, param3.field_g + param3.field_l + param2, param5 + param3.field_u);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_d[var12];
             if (var10 != var12) {
@@ -131,7 +131,7 @@ class aj implements ol, gm {
         }
     }
 
-    private final int a(byte param0, fi param1, int param2, int param3) {
+    private final int a(byte param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -157,7 +157,7 @@ class aj implements ol, gm {
         }
     }
 
-    public final int b(fi param0, boolean param1) {
+    public final int b(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -186,21 +186,21 @@ class aj implements ol, gm {
         }
     }
 
-    private final void a(int param0, int param1, fi param2, int param3) {
+    private final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           this.a(param0, this.field_b, param3, 0, 0, -103, this.field_c, param2);
           if (param1 != 29940) {
-            fi var6 = (fi) null;
-            this.b((fi) null, 57);
+            UiWidget var6 = (UiWidget) null;
+            this.b((UiWidget) null, 57);
           }
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "aj.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    public final int a(fi param0, int param1) {
+    public final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        fi var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -208,8 +208,8 @@ class aj implements ol, gm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 65) {
-            var4 = (fi) null;
-            this.b(-67, (fi) null, -114);
+            var4 = (UiWidget) null;
+            this.b(-67, (UiWidget) null, -114);
           }
           this.a(param0, (byte) -128);
           stackIn_3_0 = param0.field_r.a((byte) 20) + this.field_n + this.field_r;
@@ -228,7 +228,7 @@ class aj implements ol, gm {
         }
     }
 
-    private final int a(int param0, fi param1) {
+    private final int a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -255,7 +255,7 @@ class aj implements ol, gm {
         }
     }
 
-    private final void b(fi param0, int param1) {
+    private final void b(UiWidget param0, int param1) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -350,7 +350,7 @@ class aj implements ol, gm {
         }
     }
 
-    public final int a(int param0, fi param1, int param2) {
+    public final int a(int param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -381,7 +381,7 @@ class aj implements ol, gm {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final int a(int param0, int param1, byte param2, fi param3) {
+    private final int a(int param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -422,7 +422,7 @@ class aj implements ol, gm {
         field_q = null;
     }
 
-    public final int a(int param0, int param1, int param2, fi param3, boolean param4, int param5) {
+    public final int a(int param0, int param1, int param2, UiWidget param3, boolean param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -452,7 +452,7 @@ class aj implements ol, gm {
         }
     }
 
-    public final ie a(fi param0, byte param1) {
+    public final ie a(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ie stackIn_7_0 = null;
@@ -486,7 +486,7 @@ class aj implements ol, gm {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, fi param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, UiWidget param7) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -502,7 +502,7 @@ class aj implements ol, gm {
         var14 = Virogrid.field_F ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          uk.a(param7.field_m + param7.field_u + param0, 6, param2 + param7.field_l, param7.field_g + (param7.field_l + param2), param7.field_u + param0);
+          GameApplet.a(param7.field_m + param7.field_u + param0, 6, param2 + param7.field_l, param7.field_g + (param7.field_l + param2), param7.field_u + param0);
           var9_int = -54 % ((-43 - param5) / 49);
           var10 = this.b(param7, true);
           var11 = this.a(0, param7);
@@ -554,7 +554,7 @@ class aj implements ol, gm {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, fi param3, int param4) {
+    public final void a(int param0, int param1, boolean param2, UiWidget param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         ri var8 = null;
@@ -592,7 +592,7 @@ class aj implements ol, gm {
             stackIn_5_3 = var13.field_d[1 + var7].field_c;
           }
           var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-          uk.a(param3.field_m + param3.field_u + param4, 6, param0 + param3.field_l, param3.field_g + (param3.field_l + param0), param3.field_u + param4);
+          GameApplet.a(param3.field_m + param3.field_u + param4, 6, param0 + param3.field_l, param3.field_g + (param3.field_l + param0), param3.field_u + param4);
           vi.field_g.a(var11, -28, this.field_t, var10, var10, var12);
           ai.a(param2);
           return;
@@ -618,7 +618,7 @@ class aj implements ol, gm {
         return this.field_i.field_H + this.field_i.field_G;
     }
 
-    String c(fi param0, int param1) {
+    String c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -647,9 +647,9 @@ class aj implements ol, gm {
         }
     }
 
-    public final int a(fi param0, boolean param1) {
+    public final int a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
-        fi var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -658,8 +658,8 @@ class aj implements ol, gm {
         try {
           this.a(param0, (byte) -118);
           if (param1) {
-            var4 = (fi) null;
-            this.a(-29, (fi) null, false, -86, -114);
+            var4 = (UiWidget) null;
+            this.a(-29, (UiWidget) null, false, -86, -114);
           }
           stackIn_3_0 = param0.field_r.a(3209) + (this.field_p + this.field_d);
           return stackIn_3_0;
@@ -677,7 +677,7 @@ class aj implements ol, gm {
         }
     }
 
-    public void a(int param0, fi param1, boolean param2, int param3, int param4) {
+    public void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
         if (this.field_i == null) {
           return;
         }
@@ -720,6 +720,6 @@ class aj implements ol, gm {
         field_h = "Played";
         field_e = "Creating your account";
         field_g = 131072;
-        field_m = new p();
+        field_m = new IntrusiveDeque();
     }
 }

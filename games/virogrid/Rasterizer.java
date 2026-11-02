@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class df {
+final class Rasterizer {
     static int field_h;
     static int[] field_j;
     private static int[] field_a;
@@ -44,7 +44,7 @@ final class df {
         field_g = param1;
         field_k = param2;
         field_h = param3;
-        df.b();
+        Rasterizer.b();
     }
 
     final static void f(int param0, int param1, int param2, int param3, int param4) {
@@ -52,8 +52,8 @@ final class df {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          df.d(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          df.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          Rasterizer.d(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          Rasterizer.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
@@ -118,7 +118,7 @@ final class df {
         field_g = param0[1];
         field_k = param0[2];
         field_h = param0[3];
-        df.b();
+        Rasterizer.b();
     }
 
     final static void g(int param0, int param1, int param2, int param3) {
@@ -138,7 +138,7 @@ final class df {
         }
         int var4 = field_e - param2;
         int var5 = param0 + param1 * field_e;
-        df.a(var5, field_d, 0, param2, -param3, var4);
+        Rasterizer.a(var5, field_d, 0, param2, -param3, var4);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -184,11 +184,11 @@ final class df {
         int var23Lifetime1;
         int var23Lifetime2;
         if (param6 == 256) {
-          df.c(param0, param1, param2, param3, param4, param5);
+          Rasterizer.c(param0, param1, param2, param3, param4, param5);
           return;
         }
         if (param4 == 0) {
-          df.b(param0, param1, param2, param3, param5, param6);
+          Rasterizer.b(param0, param1, param2, param3, param5, param6);
           return;
         }
         var7 = 256 - param6;
@@ -325,17 +325,17 @@ final class df {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            df.b(param0 + param2, param1, -param2 + 1, param4);
+            Rasterizer.b(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            df.b(param0, param1, param2 + 1, param4);
+            Rasterizer.b(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            df.d(param0, param1 + param3, -param3 + 1, param4);
+            Rasterizer.d(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            df.d(param0, param1, param3 + 1, param4);
+            Rasterizer.d(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -497,7 +497,7 @@ final class df {
         int var21 = var20 - var19;
         int var22 = var6 + var8 * field_e;
         int var23 = field_e + var6 - var7;
-        df.a(0, 0, 0, 0, 0, var15, var5, var22, field_d, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        Rasterizer.a(0, 0, 0, 0, 0, var15, var5, var22, field_d, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
     private final static void c(int param0, int param1, int param2, int param3, int param4) {
@@ -567,7 +567,7 @@ final class df {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          df.a(param0, param1, param3);
+          Rasterizer.a(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -940,7 +940,7 @@ final class df {
         int var20Lifetime1;
         int var20Lifetime2;
         if (param4 == 0) {
-          df.b(param0, param1, param2, param3, param5);
+          Rasterizer.b(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -1071,7 +1071,7 @@ final class df {
         int var9;
         int var10;
         if (param2 == 0) {
-          df.a(param0, param1, param3);
+          Rasterizer.a(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -1271,7 +1271,7 @@ final class df {
         int var22Lifetime2;
         int var22Lifetime3;
         if (param4 == 0) {
-          df.e(param0, param1, param2, param3, param5);
+          Rasterizer.e(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -1346,10 +1346,10 @@ final class df {
                   field_d[var17 + var19] = param5;
                 }
               }
-              df.d(param0, param1 + var18, param3 - var18 - var18, param5);
-              df.d(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-              df.b(param0 + var18, param1, param2 - var18 - var18, param5);
-              df.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+              Rasterizer.d(param0, param1 + var18, param3 - var18 - var18, param5);
+              Rasterizer.d(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
+              Rasterizer.b(param0 + var18, param1, param2 - var18 - var18, param5);
+              Rasterizer.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
               while (true) {
                 incrementValue$1 = var19;
                 var19++;
@@ -1498,10 +1498,10 @@ final class df {
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4) {
-        df.b(param0, param1, param2, param4);
-        df.b(param0, param1 + param3 - 1, param2, param4);
-        df.d(param0, param1, param3, param4);
-        df.d(param0 + param2 - 1, param1, param3, param4);
+        Rasterizer.b(param0, param1, param2, param4);
+        Rasterizer.b(param0, param1 + param3 - 1, param2, param4);
+        Rasterizer.d(param0, param1, param3, param4);
+        Rasterizer.d(param0 + param2 - 1, param1, param3, param4);
     }
 
     private final static void d(int param0, int param1, int param2, int param3, int param4) {
@@ -1593,7 +1593,7 @@ final class df {
         field_d = param0;
         field_e = param1;
         field_f = param2;
-        df.a(0, 0, param1, param2);
+        Rasterizer.a(0, 0, param1, param2);
     }
 
     final static void c() {
@@ -1809,8 +1809,8 @@ final class df {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        df.a(field_d, 0, param2 + param3 * field_e, param0, param2, param4, field_e - param4, param5);
-        df.a(field_d, 0, param2 + param3 * field_e, param1, param3, param5, field_e - param4, param2, param4);
+        Rasterizer.a(field_d, 0, param2 + param3 * field_e, param0, param2, param4, field_e - param4, param5);
+        Rasterizer.a(field_d, 0, param2 + param3 * field_e, param1, param3, param5, field_e - param4, param2, param4);
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4) {
@@ -1856,7 +1856,7 @@ final class df {
         if (field_h > param3) {
           field_h = param3;
         }
-        df.b();
+        Rasterizer.b();
     }
 
     static {

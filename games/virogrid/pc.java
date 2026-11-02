@@ -3,12 +3,12 @@
  */
 final class pc {
     static String field_d;
-    static String field_a;
+    static String textCreateAccount1;
     static String field_c;
     static long field_b;
-    static String field_e;
+    static String textOpponent;
 
-    final static vh a(eh param0, int param1, String param2, String param3, eh param4) {
+    final static vh a(Js5Archive param0, int param1, String param2, String param3, Js5Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -60,7 +60,7 @@ final class pc {
         }
     }
 
-    final static void a(mg param0, byte param1) {
+    final static void a(Sprite param0, byte param1) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -75,11 +75,11 @@ final class pc {
           pj.a(param0, 256);
           if (db.b((byte) 13, 0) &&
             sh.a(4712, 100) != 0) {
-            df.b(0, 0, 200, 400, 0);
+            Rasterizer.b(0, 0, 200, 400, 0);
             ul.b((byte) 96);
             return;
           }
-          df.b(0, 0, 200, 400, 8421504);
+          Rasterizer.b(0, 0, 200, 400, 8421504);
           if (param1 > -24) {
             pc.a(111);
           }
@@ -91,7 +91,7 @@ final class pc {
               if (1 != var2.field_g) {
                 var3 = wh.field_b;
               } else {
-                var3 = ic.field_y;
+                var3 = GameSession.field_y;
               }
             }
             var4 = var3[var2.field_o / 3];
@@ -120,8 +120,8 @@ final class pc {
     }
 
     public static void a(int param0) {
-        field_a = null;
-        field_e = null;
+        textCreateAccount1 = null;
+        textOpponent = null;
         field_c = null;
         if (param0 != -30114) {
           field_b = -39L;
@@ -132,9 +132,9 @@ final class pc {
     }
 
     static {
-        field_a = "Create a free account to";
+        textCreateAccount1 = "Create a free account to";
         field_c = "Show all game chat";
-        field_e = "Your opponent is <%0>.";
+        textOpponent = "Your opponent is <%0>.";
         field_d = "Email (Login):";
     }
 }

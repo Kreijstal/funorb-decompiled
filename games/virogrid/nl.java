@@ -8,12 +8,12 @@ final class nl extends aj {
     private jj field_y;
     static int field_u;
 
-    final void a(byte param0, mg param1) {
+    final void a(byte param0, Sprite param1) {
         int var4 = 0;
         jj[] var3 = null;
         jj var5 = null;
         int var6 = 0;
-        mg var7 = null;
+        Sprite var7 = null;
         jj[] var8 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -31,8 +31,8 @@ final class nl extends aj {
             }
           }
           if (param0 >= -113) {
-            var7 = (mg) null;
-            this.a((byte) -103, (mg) null);
+            var7 = (Sprite) null;
+            this.a((byte) -103, (Sprite) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,7 +49,7 @@ final class nl extends aj {
         }
     }
 
-    final void a(mg[] param0, int param1) {
+    final void a(Sprite[] param0, int param1) {
         int var4 = 0;
         jj[] var3 = null;
         jj var5 = null;
@@ -90,9 +90,9 @@ final class nl extends aj {
         }
     }
 
-    final static void a(java.math.BigInteger param0, jc param1, jc param2, java.math.BigInteger param3, int param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, PacketBuffer param2, java.math.BigInteger param3, int param4) {
         try {
-          bl.a(0, param1.field_l, param0, param2, param1.field_g, param3, param4);
+          bl.a(0, param1.position, param0, param2, param1.payload, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "nl.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -113,7 +113,7 @@ final class nl extends aj {
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (jc.a(var3, (byte) -126) != 0L) {
+            if (PacketBuffer.a(var3, (byte) -126) != 0L) {
               return;
             }
           }
@@ -132,8 +132,8 @@ final class nl extends aj {
         }
     }
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
-        fi stackIn_3_0 = null;
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -150,10 +150,10 @@ final class nl extends aj {
           if (!(param1 instanceof tg)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (fi) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           }
           var10 = (tg) (stackIn_3_0);
-          uk.a(param1.field_m + param3 + param1.field_u, 6, param0 + param1.field_l, param1.field_g + param0 + param1.field_l, param3 + param1.field_u);
+          GameApplet.a(param1.field_m + param3 + param1.field_u, 6, param0 + param1.field_l, param1.field_g + param0 + param1.field_l, param3 + param1.field_u);
           if (var10 != null) {
             param2 = param2 & var10.field_C;
           }
@@ -245,7 +245,7 @@ final class nl extends aj {
         }
     }
 
-    final void a(int param0, mg[] param1, byte param2) {
+    final void a(int param0, Sprite[] param1, byte param2) {
         int var4_int = 0;
         if (param2 >= -119) {
           return;
@@ -274,7 +274,7 @@ final class nl extends aj {
         if (param0 != 4) {
           return -116;
         }
-        return (qe.field_m << 2) + (ca.field_D << 4) + el.field_t;
+        return (qe.field_m << 2) + (ca.field_D << 4) + BufferedSocket.field_t;
     }
 
     public static void c(int param0) {

@@ -5,7 +5,7 @@ final class af {
     static lc field_l;
     static String field_f;
     static long field_e;
-    static km field_d;
+    static SpriteWidget field_d;
     static boolean field_c;
     static boolean field_i;
     static jg field_g;

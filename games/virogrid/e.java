@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class e extends wb {
+abstract class e extends DualLinkNode {
     private int[] field_p;
     private static StringBuilder field_B;
     int field_A;
@@ -162,7 +162,7 @@ abstract class e extends wb {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_F = fm.a(var4, false);
+                field_F = WhirlpoolDigest.a(var4, false);
               }
             } else {
               field_E = field_v;
@@ -270,7 +270,7 @@ abstract class e extends wb {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = fm.a(var13, false);
+                                  var10 = WhirlpoolDigest.a(var13, false);
                                   var11_ref_ah = this.field_o[var10];
                                   if (this.field_s == null) {
                                     stackIn_27_0 = var11_ref_ah.field_i;
@@ -348,10 +348,10 @@ abstract class e extends wb {
               }
               param1 = param1 + this.field_u[var8];
               if (field_I != -1) {
-                df.b(var11, param2 + (int)((double)this.field_J * 0.7), param1 - var11, field_I);
+                Rasterizer.b(var11, param2 + (int)((double)this.field_J * 0.7), param1 - var11, field_I);
               }
               if (field_D != -1) {
-                df.b(var11, param2 + this.field_J + 1, param1 - var11, field_D);
+                Rasterizer.b(var11, param2 + this.field_J + 1, param1 - var11, field_D);
               }
               var5 = var8;
             }
@@ -545,7 +545,7 @@ abstract class e extends wb {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = fm.a(var10, false);
+                                  var9_int = WhirlpoolDigest.a(var10, false);
                                   var4 = var4 + this.field_o[var9_int].field_j;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -853,7 +853,7 @@ abstract class e extends wb {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = fm.a(var18, false);
+                                    var16_int = WhirlpoolDigest.a(var18, false);
                                     var4 = var4 + this.field_o[var16_int].field_j;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {

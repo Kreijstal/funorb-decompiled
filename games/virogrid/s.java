@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class s {
-    static eh field_a;
+    static Js5Archive field_a;
     int field_j;
     static String field_h;
     static String field_c;
     int field_e;
     int field_d;
-    static km field_b;
+    static SpriteWidget field_b;
     static int field_g;
     int field_i;
-    static km field_f;
+    static SpriteWidget field_f;
 
     final static boolean b(byte param0) {
         int var1 = -51 / ((param0 + 22) / 47);
@@ -52,18 +52,18 @@ final class s {
         }
     }
 
-    final static cb a(byte param0) {
+    final static MouseWheelInput a(byte param0) {
         try {
           Throwable var1 = null;
-          cb stackIn_2_0 = null;
-          cb stackIn_4_0 = null;
+          MouseWheelInput stackIn_2_0 = null;
+          MouseWheelInput stackIn_4_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 == -110) {
-              stackIn_4_0 = (cb) (Class.forName("hb").newInstance());
+              stackIn_4_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
               return stackIn_4_0;
             }
-            stackIn_2_0 = (cb) null;
+            stackIn_2_0 = (MouseWheelInput) null;
             return stackIn_2_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

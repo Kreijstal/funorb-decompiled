@@ -69,7 +69,7 @@ final class al extends mi implements bo, wi {
         RuntimeException var4_ref = null;
         var5 = Virogrid.field_F ? 1 : 0;
         try {
-          cb.field_c = rg.field_d;
+          MouseWheelInput.field_c = rg.field_d;
           if (param3 != 100) {
             var6 = (String) null;
             al.a((String) null, -66, 0.017817853018641472f);
@@ -217,27 +217,27 @@ final class al extends mi implements bo, wi {
           Throwable decompiledCaughtException = null;
           if (null != oj.field_Ub && (0 > param1 ||
             kh.field_c == ug.field_a)) {
-            if (gk.field_g.field_l == 0 &&
+            if (gk.field_g.position == 0 &&
               (ud.field_a + 10000L) < hc.a(-9986)) {
               gk.field_g.g(param1, 8);
             }
             if (param0 != -1) {
               field_i = (String) null;
             }
-            if (0 < gk.field_g.field_l) {
+            if (0 < gk.field_g.position) {
               try {
-                oj.field_Ub.a(gk.field_g.field_g, param0 + 1, 0, gk.field_g.field_l);
+                oj.field_Ub.a(gk.field_g.payload, param0 + 1, 0, gk.field_g.position);
                 ud.field_a = hc.a(-9986);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 tn.a(false);
               }
-              gk.field_g.field_l = 0;
+              gk.field_g.position = 0;
             }
             return;
           }
-          gk.field_g.field_l = 0;
+          gk.field_g.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

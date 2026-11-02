@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class el implements Runnable {
+final class BufferedSocket implements Runnable {
     static boolean field_k;
     static String field_i;
     private boolean field_l;
@@ -17,7 +17,7 @@ final class el implements Runnable {
     static String field_a;
     private int field_c;
     private byte[] field_v;
-    static eh field_d;
+    static Js5Archive field_d;
     private int field_m;
     static int field_r;
     static int[] field_w;
@@ -26,7 +26,7 @@ final class el implements Runnable {
     static String field_f;
     private int field_u;
     static int field_t;
-    private pd field_o;
+    private PlatformTaskDispatcher field_o;
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
         int var5_int = 0;
@@ -39,7 +39,7 @@ final class el implements Runnable {
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           if (param2 != -1) {
-            el.a(false);
+            BufferedSocket.a(false);
           }
           if (this.field_l) {
             return;
@@ -81,37 +81,37 @@ final class el implements Runnable {
         th var9 = null;
         var7 = Virogrid.field_F ? 1 : 0;
         var8 = sh.field_qb;
-        var3 = var8.g(11132);
+        var3 = var8.readUnsignedByte(11132);
         td.field_h = 127 & var3;
         stackIn_3_0 = (param1 != (128 & var3));
         ea.field_b = stackIn_3_0;
-        va.field_b = var8.g(11132);
+        va.field_b = var8.readUnsignedByte(11132);
         hk.field_Kb = var8.e((byte) -60);
         if (td.field_h != 2) {
           eb.field_d = 0;
           pl.field_b = 0;
         } else {
-          eb.field_d = var8.c((byte) -54);
-          pl.field_b = var8.a(-25842);
+          eb.field_d = var8.readUnsignedShort((byte) -54);
+          pl.field_b = var8.readMedium(-25842);
         }
-        stackIn_9_0 = (1 != var8.g(11132)) ? 0 : 1;
+        stackIn_9_0 = (1 != var8.readUnsignedByte(11132)) ? 0 : 1;
         var4 = stackIn_9_0;
-        vc.field_hb = var8.h(-118);
+        vc.field_hb = var8.readString(-118);
         if (var4 == 0) {
           vl.field_k = vc.field_hb;
         } else {
-          vl.field_k = var8.h(-118);
+          vl.field_k = var8.readString(-118);
         }
         if (td.field_h != 1 &&
           4 != td.field_h) {
           pb.field_l = null;
           ef.field_b = 0;
         } else {
-          ef.field_b = var8.c((byte) 49);
-          pb.field_l = var8.h(-127);
+          ef.field_b = var8.readUnsignedShort((byte) 49);
+          pb.field_l = var8.readString(-127);
         }
         if (param0) {
-          var5 = var8.c((byte) -77);
+          var5 = var8.readUnsignedShort((byte) -77);
           try {
             var9 = cj.field_s.a((byte) 125, var5);
             aa.field_f = var9.d(124);
@@ -201,10 +201,10 @@ final class el implements Runnable {
           return;
         }
         hg var2 = sh.field_qb;
-        var2.d((byte) 118);
-        var2.d((byte) 102);
-        var2.d((byte) 99);
-        var2.d((byte) 102);
+        var2.readInt((byte) 118);
+        var2.readInt((byte) 102);
+        var2.readInt((byte) 99);
+        var2.readInt((byte) 102);
         var1.a(false);
     }
 
@@ -263,7 +263,7 @@ final class el implements Runnable {
           return;
         }
         ib.b(-94);
-        nf.a(td.field_j, j.field_k[0].field_u, pg.field_e, oc.field_k, -27, qi.field_d);
+        nf.a(td.field_j, j.chatFilterIcons[0].field_u, pg.field_e, oc.field_k, -27, qi.field_d);
     }
 
     protected final void finalize() {
@@ -301,7 +301,7 @@ final class el implements Runnable {
         int stackIn_16_0 = 0;
         ad.field_g[2] = 0.0;
         ad.field_g[0] = 1.0;
-        el.a(false, (byte) -106);
+        BufferedSocket.a(false, (byte) -106);
         mj.field_D = 262144;
         ao.field_Hb = 52.5f;
         we.field_k = 50.0f;
@@ -423,7 +423,7 @@ final class el implements Runnable {
         }
     }
 
-    el(java.net.Socket param0, pd param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -450,7 +450,7 @@ final class el implements Runnable {
         return this.field_e.read();
     }
 
-    private el(java.net.Socket param0, pd param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_l = false;
         this.field_p = false;
         this.field_c = 0;

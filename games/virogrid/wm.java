@@ -16,7 +16,7 @@ final class wm {
     int[] field_n;
     short[] field_t;
     int[] field_c;
-    static km field_m;
+    static SpriteWidget field_m;
     int field_T;
     short[] field_j;
     short[] field_e;
@@ -48,7 +48,7 @@ final class wm {
     int[] field_f;
     int[] field_o;
     int[] field_q;
-    static eh field_w;
+    static Js5Archive field_w;
 
     final static void a(wg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, wg param12, e param13, e param14, int param15, int param16, int param17, int param18, wg param19) {
         RuntimeException stackIn_4_0 = null;
@@ -179,7 +179,7 @@ final class wm {
         this.field_p = var5;
     }
 
-    final static h a(int param0, int param1, int param2, int param3, int param4, pd param5) {
+    final static h a(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         h var7 = null;
@@ -320,7 +320,7 @@ final class wm {
         }
         ch.a(true);
         vb.a((byte) -124);
-        km.field_yb = null;
+        SpriteWidget.field_yb = null;
         f.a((byte) -42);
     }
 

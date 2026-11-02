@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int[] field_h;
     static String field_g;
     static String field_a;
-    static String field_f;
+    static String text3d;
     static boolean field_c;
-    static km field_b;
+    static SpriteWidget field_b;
     static String field_e;
     static int field_d;
 
@@ -85,22 +85,22 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     final static void a(int param0) {
-        ij.field_k = new km(0L, (km) null);
+        ij.field_k = new SpriteWidget(0L, (SpriteWidget) null);
         if (!ql.field_d) {
           ij.field_k.a(0, ij.field_m);
           dd.field_b = new jm(fj.field_a, ij.field_k);
-          fd.field_y = new km(0L, (km) null);
-          fd.field_y.a(0, dd.field_b.field_c);
-          fd.field_y.a(param0, s.field_b);
+          WidgetContainer.field_y = new SpriteWidget(0L, (SpriteWidget) null);
+          WidgetContainer.field_y.a(0, dd.field_b.field_c);
+          WidgetContainer.field_y.a(param0, s.field_b);
           id.b(param0 - 105);
           return;
         }
         ij.field_k.a(0, qd.field_f);
         ij.field_k.a(0, ij.field_m);
         dd.field_b = new jm(fj.field_a, ij.field_k);
-        fd.field_y = new km(0L, (km) null);
-        fd.field_y.a(0, dd.field_b.field_c);
-        fd.field_y.a(param0, s.field_b);
+        WidgetContainer.field_y = new SpriteWidget(0L, (SpriteWidget) null);
+        WidgetContainer.field_y.a(0, dd.field_b.field_c);
+        WidgetContainer.field_y.a(param0, s.field_b);
         id.b(param0 - 105);
     }
 
@@ -132,7 +132,7 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
         field_g = null;
         field_h = null;
         field_a = null;
-        field_f = null;
+        text3d = null;
         field_e = null;
         field_b = null;
     }
@@ -182,7 +182,7 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
     final static void a(int param0, int param1, int param2, wg param3) {
         try {
           if (param0 != -1) {
-            ld.a((byte) -63);
+            GameKeyHandler.a((byte) -63);
           }
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "ld.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -255,7 +255,7 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     static {
         field_h = new int[8192];
-        field_f = "3D";
+        text3d = "3D";
         field_a = "Encouraging rule breaking";
         field_e = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
     }

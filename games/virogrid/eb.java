@@ -4,15 +4,15 @@
 import java.util.*;
 
 final class eb implements Iterable {
-    static km field_b;
+    static SpriteWidget field_b;
     static int field_f;
     static String field_a;
     static int field_d;
     static String field_g;
-    wb field_e;
-    static km field_c;
+    DualLinkNode field_e;
+    static SpriteWidget field_c;
 
-    final void a(boolean param0, wb param1) {
+    final void a(boolean param0, DualLinkNode param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -54,12 +54,12 @@ final class eb implements Iterable {
         field_b = null;
     }
 
-    final wb a(int param0) {
+    final DualLinkNode a(int param0) {
         if (param0 != -32314) {
-          wb var3 = (wb) null;
-          this.a(true, (wb) null);
+          DualLinkNode var3 = (DualLinkNode) null;
+          this.a(true, (DualLinkNode) null);
         }
-        wb var2 = this.field_e.field_h;
+        DualLinkNode var2 = this.field_e.field_h;
         if (this.field_e == var2) {
           return null;
         }
@@ -74,21 +74,21 @@ final class eb implements Iterable {
     final static void a(boolean param0, boolean param1, int param2, boolean param3) {
         int stackIn_11_0 = 0;
         String stackIn_24_0 = null;
-        km stackIn_36_0 = null;
+        SpriteWidget stackIn_36_0 = null;
         String stackIn_37_1 = null;
-        km stackIn_39_0 = null;
+        SpriteWidget stackIn_39_0 = null;
         String[] stackIn_39_1 = null;
         String stackIn_40_2 = null;
-        km stackIn_70_0 = null;
+        SpriteWidget stackIn_70_0 = null;
         boolean stackIn_71_1 = false;
-        km stackIn_75_0 = null;
+        SpriteWidget stackIn_75_0 = null;
         boolean stackIn_76_1 = false;
-        km stackIn_80_0 = null;
+        SpriteWidget stackIn_80_0 = null;
         boolean stackIn_81_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        km var5 = null;
-        km var6 = null;
+        SpriteWidget var5 = null;
+        SpriteWidget var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -99,9 +99,9 @@ final class eb implements Iterable {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        km var15 = null;
+        SpriteWidget var15 = null;
         String var16 = null;
-        km var17 = null;
+        SpriteWidget var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -153,15 +153,15 @@ final class eb implements Iterable {
               }
             }
             ii.field_d.field_Y = true;
-            if (!ld.field_c) {
+            if (!GameKeyHandler.field_c) {
               stackIn_36_0 = ii.field_d;
               if (var8 != 0) {
-                stackIn_37_1 = p.field_g;
+                stackIn_37_1 = IntrusiveDeque.field_g;
               } else {
                 stackIn_37_1 = gf.field_x;
               }
               stackIn_36_0.field_V = ((String) (Object) stackIn_37_1).toUpperCase();
-              stackIn_39_0 = l.field_b;
+              stackIn_39_0 = IntrusiveNode.field_b;
               stackIn_39_1 = new String[]{ii.field_d.field_V};
               if (var8 != 0) {
                 stackIn_40_2 = ok.field_K;
@@ -171,7 +171,7 @@ final class eb implements Iterable {
               stackIn_39_0.field_V = oi.a(stackIn_39_1, stackIn_40_2, 2);
               jk.field_b.field_V = nl.field_v;
               ud.field_b = true;
-              fb.field_o.field_Y = true;
+              CellFlip.field_o.field_Y = true;
               if (nb.field_q != null) {
                 vi.field_l = false;
                 ud.field_b = false;
@@ -218,10 +218,10 @@ final class eb implements Iterable {
                 }
               }
             } else {
-              fb.field_o.field_Y = false;
-              l.field_b.field_V = bl.field_A;
+              CellFlip.field_o.field_Y = false;
+              IntrusiveNode.field_b.field_V = bl.field_A;
               if (var8 == 0) {
-                stackIn_24_0 = ma.field_f;
+                stackIn_24_0 = IntrusiveDequeCursor.field_f;
               } else {
                 stackIn_24_0 = uh.field_d;
               }
@@ -229,14 +229,14 @@ final class eb implements Iterable {
               var9 = var16;
               var10Lifetime1 = jk.field_b.field_C.a(var16) + 3 * jk.field_b.field_C.a('.');
               jk.field_b.field_lb = 0;
-              if ((rl.field_y & 48) == 16) {
+              if ((SpriteState.field_y & 48) == 16) {
                 var9 = var16 + ".";
               }
               jk.field_b.field_z = (-var10Lifetime1 + jk.field_b.field_K) / 2;
-              if ((48 & rl.field_y) == 32) {
+              if ((48 & SpriteState.field_y) == 32) {
                 var9 = (String) (var9) + "..";
               }
-              if ((48 & rl.field_y) == 48) {
+              if ((48 & SpriteState.field_y) == 48) {
                 var9 = (String) (var9) + "...";
               }
               jk.field_b.field_V = (String) (var9);
@@ -245,23 +245,23 @@ final class eb implements Iterable {
           }
           stackIn_70_0 = ao.field_Eb;
           stackIn_71_1 = (param3) && (!param1) && (!ad.field_h);
-          ((km) (Object) stackIn_70_0).a(stackIn_71_1, (byte) 89);
+          ((SpriteWidget) (Object) stackIn_70_0).a(stackIn_71_1, (byte) 89);
           stackIn_75_0 = dm.field_r;
           stackIn_76_1 = (param3) && (!param1) && (!ad.field_h);
-          ((km) (Object) stackIn_75_0).a(stackIn_76_1, (byte) 103);
+          ((SpriteWidget) (Object) stackIn_75_0).a(stackIn_76_1, (byte) 103);
           stackIn_80_0 = pm.field_n;
           stackIn_81_1 = (param3) && (!param1) && (ad.field_h);
-          ((km) (Object) stackIn_80_0).a(stackIn_81_1, (byte) 100);
+          ((SpriteWidget) (Object) stackIn_80_0).a(stackIn_81_1, (byte) 100);
           he.field_pc.field_c.g(0);
           if (param0) {
             field_f = 123;
           }
           if (null != la.field_h) {
-            if (fb.field_o.field_nb != 0) {
+            if (CellFlip.field_o.field_nb != 0) {
               ub.b(param2, -12508);
             }
             if (0 != ii.field_d.field_nb) {
-              if (!ld.field_c) {
+              if (!GameKeyHandler.field_c) {
                 em.a((byte) -55, param2);
               } else {
                 qa.a(3, param2);
@@ -278,7 +278,7 @@ final class eb implements Iterable {
     }
 
     eb() {
-        this.field_e = new wb();
+        this.field_e = new DualLinkNode();
         this.field_e.field_h = this.field_e;
         this.field_e.field_k = this.field_e;
     }

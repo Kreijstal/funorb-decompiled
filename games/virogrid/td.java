@@ -9,20 +9,20 @@ final class td {
     static ml[] field_d;
     static un field_b;
     static int field_h;
-    static mg[] field_g;
-    static eh field_a;
+    static Sprite[] buttonSprites;
+    static Js5Archive field_a;
     static int field_f;
 
-    final static void a(l param0, byte param1, l param2) {
+    final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
         try {
-          if (param2.field_a != null) {
+          if (param2.next != null) {
             param2.a(false);
           }
           int var3_int = 37 / ((param1 + 12) / 33);
-          param2.field_a = param0.field_a;
-          param2.field_f = param0;
-          param2.field_a.field_f = param2;
-          param2.field_f.field_a = param2;
+          param2.next = param0.next;
+          param2.previous = param0;
+          param2.next.previous = param2;
+          param2.previous.next = param2;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "td.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -71,7 +71,7 @@ final class td {
         field_e = null;
         if (param0 == 6666) {
           field_c = null;
-          field_g = null;
+          buttonSprites = null;
           field_d = null;
           field_a = null;
           return;
@@ -79,16 +79,16 @@ final class td {
         java.awt.Canvas var2 = (java.awt.Canvas) null;
         td.a(-12, (java.awt.Canvas) null, -119, 111);
         field_c = null;
-        field_g = null;
+        buttonSprites = null;
         field_d = null;
         field_a = null;
     }
 
-    final static mg[] a(int param0, int param1, int param2, eh param3) {
+    final static Sprite[] a(int param0, int param1, int param2, Js5Archive param3) {
         RuntimeException var4 = null;
-        eh var5 = null;
+        Js5Archive var5 = null;
         Object stackIn_2_0 = null;
-        mg[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -96,11 +96,11 @@ final class td {
         try {
           if (!hn.a(param3, param2, param0, (byte) 109)) {
             stackIn_2_0 = null;
-            return (mg[]) (stackIn_2_0);
+            return (Sprite[]) (stackIn_2_0);
           }
           if (param1 != 6887) {
-            var5 = (eh) null;
-            td.a(37, -9, -75, (eh) null);
+            var5 = (Js5Archive) null;
+            td.a(37, -9, -75, (Js5Archive) null);
           }
           stackIn_6_0 = kd.c(true);
           return stackIn_6_0;

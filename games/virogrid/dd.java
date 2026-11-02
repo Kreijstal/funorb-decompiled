@@ -3,10 +3,10 @@
  */
 final class dd {
     static String field_e;
-    static String field_d;
+    static String textEndgameNotime;
     static String field_c;
     static boolean field_a;
-    static String field_f;
+    static String textCreateAccount2;
     static jm field_b;
 
     final static boolean a(String param0, boolean param1) {
@@ -45,11 +45,11 @@ final class dd {
         }
     }
 
-    final static mg[] a(byte param0) {
+    final static Sprite[] a(byte param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
-        mg[] var1;
+        Sprite[] var1;
         int var3;
         int[] var6;
         int var8;
@@ -61,7 +61,7 @@ final class dd {
         int[] var22;
         byte[] var23;
         var8 = Virogrid.field_F ? 1 : 0;
-        var1 = new mg[rj.field_h];
+        var1 = new Sprite[rj.field_h];
         for (var2 = 0; rj.field_h > var2; var2++) {
           var3 = db.field_k[var2] * gb.field_F[var2];
           var21 = lj.field_j[var2];
@@ -71,7 +71,7 @@ final class dd {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var10[var6_int] = k.field_c[rb.a((int) var21[var6_int], 255)];
             }
-            var1[var2] = new mg(oj.field_Kb, se.field_d, el.field_w[var2], mb.field_bb[var2], db.field_k[var2], gb.field_F[var2], var22);
+            var1[var2] = new Sprite(oj.field_Kb, se.field_d, BufferedSocket.field_w[var2], mb.field_bb[var2], db.field_k[var2], gb.field_F[var2], var22);
           } else {
             var23 = md.field_g[var2];
             var17 = new int[var3];
@@ -80,7 +80,7 @@ final class dd {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = oh.a(rb.a((int) var23[var7], 255) << 24, k.field_c[rb.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (mg) ((Object) new kc(oj.field_Kb, se.field_d, el.field_w[var2], mb.field_bb[var2], db.field_k[var2], gb.field_F[var2], var17));
+            var1[var2] = (Sprite) ((Object) new kc(oj.field_Kb, se.field_d, BufferedSocket.field_w[var2], mb.field_bb[var2], db.field_k[var2], gb.field_F[var2], var17));
           }
         }
         if (param0 > -106) {
@@ -96,16 +96,16 @@ final class dd {
           return;
         }
         field_e = null;
-        field_f = null;
+        textCreateAccount2 = null;
         field_b = null;
-        field_d = null;
+        textEndgameNotime = null;
         field_c = null;
     }
 
     static {
         field_e = "Just play";
-        field_d = "<%0> ran out of time";
-        field_f = "start using this feature.";
+        textEndgameNotime = "<%0> ran out of time";
+        textCreateAccount2 = "start using this feature.";
         field_c = "Invalid password.";
     }
 }

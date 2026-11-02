@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wb extends l {
+class DualLinkNode extends IntrusiveNode {
     static String field_l;
     long field_j;
     static String field_n;
-    wb field_h;
+    DualLinkNode field_h;
     static String field_g;
     static String field_i;
-    static km field_m;
-    wb field_k;
+    static SpriteWidget field_m;
+    DualLinkNode field_k;
 
     final void c(int param0) {
         if (this.field_k == null) {
@@ -56,12 +56,12 @@ class wb extends l {
         int var3 = 0;
         int var3Lifetime1;
         if (param0) {
-          df.b(0, 0, df.field_e, df.field_f, 0, 192);
+          Rasterizer.b(0, 0, Rasterizer.field_e, Rasterizer.field_f, 0, 192);
           ci.b(param0, -126);
           var3 = -121 / ((79 - param1) / 35);
           return;
         }
-        df.c();
+        Rasterizer.c();
         ci.b(param0, -126);
         var3Lifetime1 = -121 / ((79 - param1) / 35);
     }
@@ -88,7 +88,7 @@ class wb extends l {
         return this.field_j;
     }
 
-    protected wb() {
+    protected DualLinkNode() {
     }
 
     static {

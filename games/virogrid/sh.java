@@ -11,8 +11,8 @@ class sh extends mb implements ta {
     private boolean field_vb;
     private boolean field_zb;
     static int field_rb;
-    static p field_tb;
-    static int[] field_yb;
+    static IntrusiveDeque field_tb;
+    static int[] turnDurations;
     private boolean field_wb;
     static hg field_qb;
     static int[] field_ub;
@@ -44,20 +44,20 @@ class sh extends mb implements ta {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (cb.field_c == ao.field_Kb) {
+          if (MouseWheelInput.field_c == ao.field_Kb) {
             return null;
           }
           if (param0 != 648093968) {
             stackIn_5_0 = (ck) null;
             return stackIn_5_0;
           }
-          if (rg.field_d == cb.field_c &&
+          if (rg.field_d == MouseWheelInput.field_c &&
             param1.equals(ve.field_u)) {
-            cb.field_c = kh.field_e;
+            MouseWheelInput.field_c = kh.field_e;
             stackIn_12_0 = de.field_ob;
             return stackIn_12_0;
           }
-          cb.field_c = ao.field_Kb;
+          MouseWheelInput.field_c = ao.field_Kb;
           de.field_ob = null;
           ve.field_u = param1;
           stackIn_10_0 = null;
@@ -77,7 +77,7 @@ class sh extends mb implements ta {
     }
 
     public static void g(boolean param0) {
-        field_yb = null;
+        turnDurations = null;
         field_sb = null;
         field_tb = null;
         if (!param0) {
@@ -88,16 +88,16 @@ class sh extends mb implements ta {
     }
 
     final static int b(int param0, int param1, int param2, int param3) {
-        if (!(param2 + param3 > df.field_e)) {
+        if (!(param2 + param3 > Rasterizer.field_e)) {
           return param2;
         }
         if (param2 + (param1 - param3) >= param0) {
           return param1 + param2 - param3;
         }
-        return df.field_e - param3;
+        return Rasterizer.field_e - param3;
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
@@ -153,7 +153,7 @@ class sh extends mb implements ta {
               var4 = (String) (q.b("getcookies", 6168, param1));
               var5 = ql.a(var4, (byte) -123, ';');
               if (param0 >= 0) {
-                field_tb = (p) null;
+                field_tb = (IntrusiveDeque) null;
               }
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -201,7 +201,7 @@ class sh extends mb implements ta {
           if (param0 != -40) {
             sh.g(true);
           }
-          eh.field_d = param5;
+          Js5Archive.field_d = param5;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "sh.WB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -229,7 +229,7 @@ class sh extends mb implements ta {
             pi.a("tochangedisplayname.ws", -17713, mb.g((byte) 75));
           }
           if (param0 != 12085) {
-            field_yb = (int[]) null;
+            turnDurations = (int[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -400,7 +400,7 @@ class sh extends mb implements ta {
                   var22 = var22 + var24;
                   var18 = var18 + var20;
                   var25 = var25 + var27;
-                  var36Lifetime2 = var36Lifetime2 + df.field_e;
+                  var36Lifetime2 = var36Lifetime2 + Rasterizer.field_e;
                   var21 = var21 + var23;
                   var17_int = var17_int + var19;
                 }
@@ -558,7 +558,7 @@ class sh extends mb implements ta {
               var17_int = var17_int + var19;
               var25 = var25 + var27;
               var22 = var22 + var24;
-              var35Lifetime1 = var35Lifetime1 + df.field_e;
+              var35Lifetime1 = var35Lifetime1 + Rasterizer.field_e;
             }
             return;
           }
@@ -587,7 +587,7 @@ class sh extends mb implements ta {
           this.field_xb = false;
           this.field_pb = new dg(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_pb.field_z = true;
-          this.a((fi) (this.field_pb), (byte) -78);
+          this.a((UiWidget) (this.field_pb), (byte) -78);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -688,7 +688,7 @@ class sh extends mb implements ta {
 
     static {
         field_sb = "Name is available";
-        field_tb = new p();
-        field_yb = new int[]{6000, 4500, 3000, 2250, 1500, 1000, 500};
+        field_tb = new IntrusiveDeque();
+        turnDurations = new int[]{6000, 4500, 3000, 2250, 1500, 1000, 500};
     }
 }

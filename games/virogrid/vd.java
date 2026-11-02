@@ -3,7 +3,7 @@
  */
 final class vd extends wa implements fg {
     private le field_U;
-    static mg[] field_Y;
+    static Sprite[] field_Y;
     static String field_X;
     static en field_Z;
     private int field_W;
@@ -20,7 +20,7 @@ final class vd extends wa implements fg {
         if (this.field_h == null) {
           return null;
         }
-        km.a(this.field_g + (-this.field_W + nl.field_u), hk.field_Jb, -83);
+        SpriteWidget.a(this.field_g + (-this.field_W + nl.field_u), hk.field_Jb, -83);
         if (param0 > 35) {
           return this.field_h;
         }
@@ -35,7 +35,7 @@ final class vd extends wa implements fg {
           field_Y = null;
           return;
         }
-        field_Y = (mg[]) null;
+        field_Y = (Sprite[]) null;
         field_V = null;
         field_Y = null;
     }
@@ -118,7 +118,7 @@ final class vd extends wa implements fg {
         return this.field_U;
     }
 
-    final void a(int param0, int param1, fi param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         super.a(param0, 114, param2, param3);
         if (param1 < 113) {
           return;

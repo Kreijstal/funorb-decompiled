@@ -6,12 +6,12 @@ abstract class mb extends dc {
     static int[][] field_db;
     static int[] field_bb;
     private int field_jb;
-    static String field_eb;
+    static String playernameHotseat1;
     static String field_mb;
     private int field_cb;
     private int field_hb;
     private int field_nb;
-    private fi field_ib;
+    private UiWidget field_ib;
     private on field_fb;
     static String field_gb;
     private kn field_kb;
@@ -82,9 +82,9 @@ abstract class mb extends dc {
         return super.f(3);
     }
 
-    void b(fi param0, byte param1) {
+    void b(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
-        fi var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -103,8 +103,8 @@ abstract class mb extends dc {
           if (param1 == -53) {
             return;
           }
-          var4 = (fi) null;
-          this.a((fi) null, '￈', 62, -58);
+          var4 = (UiWidget) null;
+          this.a((UiWidget) null, '￈', 62, -58);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,7 +161,7 @@ abstract class mb extends dc {
         }
     }
 
-    private final void c(int param0, fi param1) {
+    private final void c(int param0, UiWidget param1) {
         if (param0 != 6) {
           return;
         }
@@ -175,14 +175,14 @@ abstract class mb extends dc {
           } else {
             this.field_kb = new kn();
           }
-          this.a((fi) (this.field_kb), (byte) -78);
+          this.a((UiWidget) (this.field_kb), (byte) -78);
           this.field_ib = null;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "mb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    mb(je param0, fi param1, int param2, int param3, int param4) {
+    mb(je param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_g + 12, param2 + (12 + param1.field_m));
         try {
           this.field_hb = param3;
@@ -200,16 +200,16 @@ abstract class mb extends dc {
         field_gb = null;
         field_mb = null;
         if (param0 >= 118) {
-          field_eb = null;
+          playernameHotseat1 = null;
           field_db = (int[][]) null;
           return;
         }
         field_db = (int[][]) null;
-        field_eb = null;
+        playernameHotseat1 = null;
         field_db = (int[][]) null;
     }
 
-    final static void a(int param0, byte param1, mg[] param2, int param3, int param4) {
+    final static void a(int param0, byte param1, Sprite[] param2, int param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -230,8 +230,8 @@ abstract class mb extends dc {
             var7 = param2[1].field_u;
             param2[0].d(param3, param4);
             param2[2].d(-var6 + param0 + param3, param4);
-            df.b(od.field_m);
-            df.h(param3 + var5_int, param4, -var6 + param0 + param3, param2[1].field_z + param4);
+            Rasterizer.b(od.field_m);
+            Rasterizer.h(param3 + var5_int, param4, -var6 + param0 + param3, param2[1].field_z + param4);
             if (param1 != -117) {
               return;
             }
@@ -240,7 +240,7 @@ abstract class mb extends dc {
             for (param3 = var8; var9 > param3; param3 = param3 + var7) {
               param2[1].d(param3, param4);
             }
-            df.a(od.field_m);
+            Rasterizer.a(od.field_m);
             return;
           }
           return;
@@ -259,7 +259,7 @@ abstract class mb extends dc {
     }
 
     final static void i(byte param0) {
-        mi.field_d = sh.field_qb.h(-118);
+        mi.field_d = sh.field_qb.readString(-118);
         if (param0 < 42) {
           return;
         }
@@ -275,7 +275,7 @@ abstract class mb extends dc {
         return (java.applet.Applet) ((Object) jj.field_n);
     }
 
-    boolean a(fi param0, char param1, int param2, int param3) {
+    boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_15_0 = null;
@@ -318,7 +318,7 @@ abstract class mb extends dc {
     }
 
     static {
-        field_eb = "Blue";
+        playernameHotseat1 = "Blue";
         field_gb = "Please enter your age in years";
         field_mb = "Create a free account to start using this feature";
     }

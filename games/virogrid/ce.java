@@ -16,7 +16,7 @@ final class ce extends ec {
     static String field_H;
     private int field_L;
 
-    final boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_8_0 = 0;
@@ -59,7 +59,7 @@ final class ce extends ec {
         }
     }
 
-    final void a(int param0, int param1, fi param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         int stackIn_18_1 = 0;
         int stackIn_19_2 = 0;
         int stackIn_26_1 = 0;
@@ -140,14 +140,14 @@ final class ce extends ec {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          eh var3 = null;
+          Js5Archive var3 = null;
           hg var5 = null;
           hg var6 = null;
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           if (param0 >= -35) {
-            var3 = (eh) null;
-            ce.a(47, -49, (eh) null, -99);
+            var3 = (Js5Archive) null;
+            ce.a(47, -49, (Js5Archive) null, -99);
           }
           if (td.field_b == null) {
             td.field_b = qc.field_f.a(uh.field_b, 27402, fj.field_c);
@@ -162,17 +162,17 @@ final class ce extends ec {
             ug.field_a = bd.field_d;
           } else {
             try {
-              oj.field_Ub = new el((java.net.Socket) (td.field_b.field_f), qc.field_f);
+              oj.field_Ub = new BufferedSocket((java.net.Socket) (td.field_b.field_f), qc.field_f);
               var5 = sh.field_qb;
               var6 = var5;
-              gk.field_g.field_l = 0;
+              gk.field_g.position = 0;
               stackIn_13_0 = (param1) ? -2 : -1;
               ah.field_e = stackIn_13_0;
               pl.field_c = stackIn_13_0;
               md.field_b = stackIn_13_0;
               ug.field_a = ul.field_c;
-              var6.field_l = 0;
-              hj.a(m.field_m, gk.field_g, wc.field_m, oj.field_Yb, 12);
+              var6.position = 0;
+              hj.a(CellAnimator.field_m, gk.field_g, wc.field_m, oj.field_Yb, 12);
               al.b(-1, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -198,7 +198,7 @@ final class ce extends ec {
         field_H = null;
     }
 
-    final static rm[] a(int param0, int param1, eh param2, int param3) {
+    final static rm[] a(int param0, int param1, Js5Archive param2, int param3) {
         RuntimeException var4 = null;
         rm[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -274,7 +274,7 @@ final class ce extends ec {
         }
     }
 
-    private ce(int param0, int param1, int param2, int param3, ol param4, cd param5, fi param6, boolean param7, boolean param8) {
+    private ce(int param0, int param1, int param2, int param3, WidgetListener param4, cd param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_J = 2147483647;
         this.field_M = 2147483647;
@@ -318,7 +318,7 @@ final class ce extends ec {
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var4Lifetime1;
-        gg.field_D.field_l = 0;
+        gg.field_D.position = 0;
         if (param2 == -2) {
           gg.field_D.a(12, 108);
           gg.field_D.a(mc.field_c.nextInt(), (byte) -42);
@@ -326,13 +326,13 @@ final class ce extends ec {
           gg.field_D.a(param0, 112);
           gg.field_D.a(param1, param2 ^ -82);
           gg.field_D.a((byte) 65, param3);
-          gg.field_D.a(on.field_a, ch.field_i, (byte) 86);
+          gg.field_D.encryptRsa(on.field_a, ch.field_i, (byte) 86);
           gk.field_g.g(18, 8);
-          fieldTemp$0 = gk.field_g.field_l + 1;
-          gk.field_g.field_l = gk.field_g.field_l + 1;
+          fieldTemp$0 = gk.field_g.position + 1;
+          gk.field_g.position = gk.field_g.position + 1;
           var4 = fieldTemp$0;
-          gk.field_g.a(gg.field_D.field_g, gg.field_D.field_l, 0, (byte) -123);
-          gk.field_g.b(-var4 + gk.field_g.field_l, -1);
+          gk.field_g.a(gg.field_D.payload, gg.field_D.position, 0, (byte) -123);
+          gk.field_g.b(-var4 + gk.field_g.position, -1);
           return;
         }
         field_H = (String) null;
@@ -342,13 +342,13 @@ final class ce extends ec {
         gg.field_D.a(param0, 112);
         gg.field_D.a(param1, param2 ^ -82);
         gg.field_D.a((byte) 65, param3);
-        gg.field_D.a(on.field_a, ch.field_i, (byte) 86);
+        gg.field_D.encryptRsa(on.field_a, ch.field_i, (byte) 86);
         gk.field_g.g(18, 8);
-        int fieldTemp$1 = gk.field_g.field_l + 1;
-        gk.field_g.field_l = gk.field_g.field_l + 1;
+        int fieldTemp$1 = gk.field_g.position + 1;
+        gk.field_g.position = gk.field_g.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        gk.field_g.a(gg.field_D.field_g, gg.field_D.field_l, 0, (byte) -123);
-        gk.field_g.b(-var4Lifetime1 + gk.field_g.field_l, -1);
+        gk.field_g.a(gg.field_D.payload, gg.field_D.position, 0, (byte) -123);
+        gk.field_g.b(-var4Lifetime1 + gk.field_g.position, -1);
     }
 
     final void e(int param0) {
@@ -363,8 +363,8 @@ final class ce extends ec {
 
     final static void f(int param0) {
         am.a((byte) -16);
-        if (fi.field_v != null) {
-          af.a((byte) -103, fi.field_v);
+        if (UiWidget.field_v != null) {
+          af.a((byte) -103, UiWidget.field_v);
         }
         nm.d(param0 ^ 13628);
         lh.a(true);
@@ -379,7 +379,7 @@ final class ce extends ec {
         }
     }
 
-    final void a(int param0, int param1, int param2, fi param3, int param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         super.a(param0, param1, param2, param3, param4, 108);
         if (param5 < 73) {
           return;

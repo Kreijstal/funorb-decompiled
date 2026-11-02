@@ -2,5 +2,5 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface t extends cd {
-    public abstract void a(boolean param0, fi param1, int param2);
+    public abstract void a(boolean param0, UiWidget param1, int param2);
 }

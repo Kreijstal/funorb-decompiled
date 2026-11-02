@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class gh extends km {
+final class gh extends SpriteWidget {
     static String field_Kb;
     String field_Pb;
     int field_Nb;
     String field_Jb;
-    km field_Eb;
+    SpriteWidget field_Eb;
     static nh field_Ib;
-    km field_Mb;
+    SpriteWidget field_Mb;
     String field_Hb;
     String field_Ob;
     static String field_Fb;
-    static String field_Lb;
-    km field_Gb;
+    static String hotseatoptionAilevelColon;
+    SpriteWidget field_Gb;
 
     final static String a(long param0, byte param1) {
         int var7 = 0;
@@ -36,7 +36,7 @@ final class gh extends km {
     }
 
     public static void d(boolean param0) {
-        field_Lb = null;
+        hotseatoptionAilevelColon = null;
         field_Fb = null;
         field_Ib = null;
         field_Kb = null;
@@ -46,11 +46,11 @@ final class gh extends km {
     }
 
     gh() {
-        super(0L, (km) null);
+        super(0L, (SpriteWidget) null);
     }
 
     static {
         field_Kb = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
-        field_Lb = "AI: <%0>";
+        hotseatoptionAilevelColon = "AI: <%0>";
     }
 }

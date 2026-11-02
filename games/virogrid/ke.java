@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ke extends wb {
-    static km field_u;
+class ke extends DualLinkNode {
+    static SpriteWidget field_u;
     static boolean[][] field_t;
     static String field_o;
     static jf field_p;
@@ -24,12 +24,12 @@ class ke extends wb {
         field_t = (boolean[][]) null;
     }
 
-    final static mg[] a(int param0, eh param1, String param2, String param3) {
+    final static Sprite[] a(int param0, Js5Archive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         String var6 = null;
-        mg[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -41,7 +41,7 @@ class ke extends wb {
         try {
           if (param0 != 32) {
             var6 = (String) null;
-            ke.a(-75, (eh) null, (String) null, (String) null);
+            ke.a(-75, (Js5Archive) null, (String) null, (String) null);
           }
           var4_int = param1.a(-1, param2);
           var5 = param1.a(-94, var4_int, param3);
@@ -73,11 +73,11 @@ class ke extends wb {
         }
     }
 
-    final static rm[] a(String param0, String param1, eh param2, int param3) {
+    final static rm[] a(String param0, String param1, Js5Archive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        eh var6 = null;
+        Js5Archive var6 = null;
         rm[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -89,8 +89,8 @@ class ke extends wb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 32370) {
-            var6 = (eh) null;
-            ke.a((String) null, (String) null, (eh) null, 62);
+            var6 = (Js5Archive) null;
+            ke.a((String) null, (String) null, (Js5Archive) null, 62);
           }
           var4_int = param2.a(-1, param1);
           var5 = param2.a(-63, var4_int, param0);

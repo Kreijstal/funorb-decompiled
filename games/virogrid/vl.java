@@ -3,7 +3,7 @@
  */
 final class vl implements kj {
     static lc field_f;
-    private p field_j;
+    private IntrusiveDeque field_j;
     private tb[] field_b;
     static String field_g;
     static int[] field_i;
@@ -14,7 +14,7 @@ final class vl implements kj {
     private int field_c;
     private int field_a;
     private int field_h;
-    private eh field_l;
+    private Js5Archive field_l;
 
     public final int a(byte param0, int param1) {
         if (param0 > -61) {
@@ -181,11 +181,11 @@ final class vl implements kj {
         return this.field_h == 64 ? true : false;
     }
 
-    vl(eh param0, eh param1, int param2, int param3) {
+    vl(Js5Archive param0, Js5Archive param1, int param2, int param3) {
         int var7 = 0;
         int[] var5 = null;
         int var6 = 0;
-        jc var8 = null;
+        PacketBuffer var8 = null;
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
@@ -196,7 +196,7 @@ final class vl implements kj {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        this.field_j = new p();
+        this.field_j = new IntrusiveDeque();
         this.field_c = 0;
         this.field_h = 128;
         try {
@@ -211,7 +211,7 @@ final class vl implements kj {
           var6 = var12.length;
           this.field_b = new tb[param0.d((byte) 43, 0)];
           for (var7 = 0; var7 < var6; var7++) {
-            var8 = new jc(param0.a(0, var12[var7], 0));
+            var8 = new PacketBuffer(param0.a(0, var12[var7], 0));
             this.field_b[var12[var7]] = new tb(var8);
           }
           return;

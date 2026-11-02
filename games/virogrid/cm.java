@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm extends l {
+final class cm extends IntrusiveNode {
     static il field_k;
     static String field_i;
-    static km field_h;
+    static SpriteWidget field_h;
     static String field_g;
-    static String field_j;
+    static String hotseatmenulabel;
 
     public static void c(int param0) {
         field_k = null;
         field_i = null;
         field_g = null;
         field_h = null;
-        field_j = null;
+        hotseatmenulabel = null;
         int var1 = 84 / ((56 - param0) / 52);
     }
 
@@ -147,19 +147,19 @@ final class cm extends l {
           } else {
             if (nm.c(param1 ^ -45)) {
               if (j.field_l == 0) {
-                wb.a(false, (byte) 119, param2);
+                DualLinkNode.a(false, (byte) 119, param2);
                 td.a(-30179, param0, 0, 0);
               } else {
                 uh.a((byte) 114, param0);
               }
             } else {
-              df.c();
+              Rasterizer.c();
               fh.a(240, 0, 320);
               td.a(-30179, param0, 0, 0);
             }
           }
           if (param1 != -47) {
-            field_h = (km) null;
+            field_h = (SpriteWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,6 +190,6 @@ final class cm extends l {
     static {
         field_g = "Unrated game";
         field_i = "Public";
-        field_j = "Hotseat/Singleplayer";
+        hotseatmenulabel = "Hotseat/Singleplayer";
     }
 }

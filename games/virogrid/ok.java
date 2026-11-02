@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ok extends fd implements im, ta {
+final class ok extends WidgetContainer implements im, ta {
     private b field_H;
     static String field_K;
     static int field_L;
@@ -19,7 +19,7 @@ final class ok extends fd implements im, ta {
         }
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -56,7 +56,7 @@ final class ok extends fd implements im, ta {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, e param9, int param10, mg[] param11, int param12, int param13, int param14, int param15, mg[] param16, e param17, mg[] param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, e param9, int param10, Sprite[] param11, int param12, int param13, int param14, int param15, Sprite[] param16, e param17, Sprite[] param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -154,7 +154,7 @@ final class ok extends fd implements im, ta {
     }
 
     ok(b param0) {
-        super(0, 0, 288, 0, (ol) null);
+        super(0, 0, 288, 0, (WidgetListener) null);
         String var7 = null;
         int var3 = 0;
         aj var4 = null;
@@ -163,10 +163,10 @@ final class ok extends fd implements im, ta {
         try {
           this.field_H = param0;
           this.field_I = new tg(md.field_c, (cd) null);
-          this.field_I.field_w = (ol) ((Object) new hf());
+          this.field_I.listener = (WidgetListener) ((Object) new hf());
           var7 = oi.a(new String[]{this.a((byte) 125), this.a(-18042)}, gh.field_Kb, 2);
           var3 = 20;
-          var4 = new aj(dj.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, dj.field_h.field_H, -1, 2147483647, true);
+          var4 = new aj(dj.arezzo14Font, 0, 0, 0, 0, 16777215, -1, 3, 0, dj.arezzo14Font.field_H, -1, 2147483647, true);
           this.field_D = new nk(var7, var4);
           this.field_D.field_h = "";
           this.field_D.a(al.field_g, (byte) -100, 0);
@@ -175,12 +175,12 @@ final class ok extends fd implements im, ta {
           this.field_D.field_o = (cd) (this);
           this.field_D.a(-40 + this.field_g, var3, 26, (byte) -125);
           var3 = var3 + (this.field_D.field_m + 15);
-          this.a((fi) (this.field_D), (byte) -78);
+          this.a((UiWidget) (this.field_D), (byte) -78);
           var5 = 4;
           var6 = 200;
           this.field_I.a(40, true, var3, -var6 + 300 >> 1, var6);
           this.field_I.field_o = (cd) (this);
-          this.a((fi) (this.field_I), (byte) -78);
+          this.a((UiWidget) (this.field_I), (byte) -78);
           this.a(var5 + (55 + var3), true, 0, 0, 300);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -200,17 +200,17 @@ final class ok extends fd implements im, ta {
             field_J = true;
           }
           if (0 == param0) {
-            wf.a("terms.ws", 12);
+            RasterBuffer.a("terms.ws", 12);
             return;
           }
           if (param0 == 1) {
-            wf.a("privacy.ws", 12);
+            RasterBuffer.a("privacy.ws", 12);
             return;
           }
           if (param0 != 2) {
             return;
           }
-          wf.a("conduct.ws", 12);
+          RasterBuffer.a("conduct.ws", 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

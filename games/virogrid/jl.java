@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jl extends fd implements ta {
+final class jl extends WidgetContainer implements ta {
     static int field_E;
     private tg field_I;
     static String field_D;
@@ -12,7 +12,7 @@ final class jl extends fd implements ta {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = param1 + this.field_l;
         int var6 = this.field_u + param2;
-        dj.field_h.a(ka.field_n, 20 + var5, 20 + var6, -40 + this.field_g, this.field_m - 50, 16777215, -1, 1, 0, dj.field_h.field_H);
+        dj.arezzo14Font.a(ka.field_n, 20 + var5, 20 + var6, -40 + this.field_g, this.field_m - 50, 16777215, -1, 1, 0, dj.arezzo14Font.field_H);
         super.a(param0, param1, param2, param3);
     }
 
@@ -21,22 +21,22 @@ final class jl extends fd implements ta {
         hg var8 = gk.field_g;
         hg var6 = var8;
         var8.g(param3, 8);
-        var8.field_l = var8.field_l + 1;
+        var8.position = var8.position + 1;
         if (param4 != 39) {
           return;
         }
         try {
-          var7 = var8.field_l;
+          var7 = var8.position;
           var8.a(param1, -69);
           if (param1 == 2) {
-            var8.a(param2, (byte) -102);
+            var8.writeString(param2, (byte) -102);
           }
           if (param5 != null) {
             en.a(true, param5, var8);
           } else {
             var8.a((byte) -78, param0);
           }
-          var8.b(var8.field_l - var7, -1);
+          var8.b(var8.position - var7, -1);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "jl.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -110,7 +110,7 @@ final class jl extends fd implements ta {
         }
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -148,14 +148,14 @@ final class jl extends fd implements ta {
     }
 
     public jl() {
-        super(0, 0, 476, 225, (ol) null);
+        super(0, 0, 476, 225, (WidgetListener) null);
         this.field_G = new tg(bj.field_g, (cd) null);
         this.field_H = new tg(ql.field_o, (cd) null);
         this.field_I = new tg(dd.field_e, (cd) null);
         hf var1 = new hf();
-        this.field_G.field_w = (ol) ((Object) var1);
-        this.field_H.field_w = (ol) ((Object) var1);
-        this.field_I.field_w = (ol) ((Object) var1);
+        this.field_G.listener = (WidgetListener) ((Object) var1);
+        this.field_H.listener = (WidgetListener) ((Object) var1);
+        this.field_I.listener = (WidgetListener) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
@@ -167,9 +167,9 @@ final class jl extends fd implements ta {
         this.field_I.field_o = (cd) (this);
         this.field_G.field_h = mh.field_j;
         this.field_I.field_h = fn.field_f;
-        this.a((fi) (this.field_H), (byte) -78);
-        this.a((fi) (this.field_G), (byte) -78);
-        this.a((fi) (this.field_I), (byte) -78);
+        this.a((UiWidget) (this.field_H), (byte) -78);
+        this.a((UiWidget) (this.field_G), (byte) -78);
+        this.a((UiWidget) (this.field_I), (byte) -78);
     }
 
     final static boolean a(int param0) {

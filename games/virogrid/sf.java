@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends fd implements ta {
+final class sf extends WidgetContainer implements ta {
     static double field_M;
     private tg[] field_E;
     private String field_D;
     private int[] field_N;
     private int field_H;
     static String field_K;
-    static eh field_O;
+    static Js5Archive field_O;
     static int field_I;
     static int field_F;
-    static mg[][] field_J;
+    static Sprite[][] field_J;
     private sh field_G;
     private e field_L;
 
     sf(sh param0, e param1, String param2) {
-        super(0, 0, 288, 0, (ol) null);
+        super(0, 0, 288, 0, (WidgetListener) null);
         int var4_int = 0;
         this.field_H = 0;
         try {
@@ -43,11 +43,11 @@ final class sf extends fd implements ta {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new tg(param2, param0);
-          var4.field_w = (ol) ((Object) new hf());
+          var4.listener = (WidgetListener) ((Object) new hf());
           var5 = this.field_m - 2;
           this.a(this.field_m + 34, true, 0, 0, this.field_g);
           var4.a(30, true, var5, 7, -14 + this.field_g);
-          this.a((fi) (var4), (byte) -78);
+          this.a((UiWidget) (var4), (byte) -78);
           if (param1 != 260) {
             this.field_L = (e) null;
           }
@@ -178,9 +178,9 @@ final class sf extends fd implements ta {
         field_K = null;
         field_O = null;
         if (param0 <= 52) {
-          field_J = (mg[][]) null;
+          field_J = (Sprite[][]) null;
         }
-        field_J = (mg[][]) null;
+        field_J = (Sprite[][]) null;
     }
 
     private final void a(int param0, int param1) {

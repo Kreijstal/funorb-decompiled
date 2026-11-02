@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends km {
-    private km field_Kb;
-    private km[] field_Hb;
+final class bg extends SpriteWidget {
+    private SpriteWidget field_Kb;
+    private SpriteWidget[] field_Hb;
     private int field_Nb;
     private StringBuilder field_Ib;
-    private km field_Qb;
-    private km field_Eb;
+    private SpriteWidget field_Qb;
+    private SpriteWidget field_Eb;
     long field_Mb;
     private en field_Jb;
     static String field_Pb;
-    private km field_Ob;
-    private km field_Fb;
+    private SpriteWidget field_Ob;
+    private SpriteWidget field_Fb;
     static ml field_Lb;
-    private km field_Gb;
+    private SpriteWidget field_Gb;
 
     public static void g(int param0) {
         field_Lb = null;
@@ -24,7 +24,7 @@ final class bg extends km {
         }
     }
 
-    private final int a(km param0, km param1, int param2, int param3, int param4) {
+    private final int a(SpriteWidget param0, SpriteWidget param1, int param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
@@ -67,7 +67,7 @@ final class bg extends km {
         }
     }
 
-    bg(int param0, int param1, int param2, int param3, int param4, km param5, km param6, km param7, km param8, en param9, km param10, String param11, long param12) {
+    bg(int param0, int param1, int param2, int param3, int param4, SpriteWidget param5, SpriteWidget param6, SpriteWidget param7, SpriteWidget param8, en param9, SpriteWidget param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         Object stackIn_6_0;
@@ -80,7 +80,7 @@ final class bg extends km {
         en stackIn_8_1;
         en stackIn_8_2;
         String stackIn_8_5;
-        km stackIn_14_0 = null;
+        SpriteWidget stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -99,7 +99,7 @@ final class bg extends km {
         String stackIn_70_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var15_int = 0;
-        km[] var15 = null;
+        SpriteWidget[] var15 = null;
         RuntimeException var15_ref = null;
         int var16 = 0;
         int var17 = 0;
@@ -112,7 +112,7 @@ final class bg extends km {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        km[] var28 = null;
+        SpriteWidget[] var28 = null;
         Object stackIn_6_0Lifetime1;
         Object stackIn_8_0Lifetime1;
         en stackIn_8_1Lifetime1;
@@ -137,29 +137,29 @@ final class bg extends km {
         this.field_Nb = -2;
         try {
           this.field_Mb = param12;
-          this.field_Ob = new km(0L, param6, we.field_i.toUpperCase());
+          this.field_Ob = new SpriteWidget(0L, param6, we.field_i.toUpperCase());
           this.field_Ob.field_lb = 1;
           this.a(0, this.field_Ob);
-          this.field_Qb = new km(0L, param7);
+          this.field_Qb = new SpriteWidget(0L, param7);
           this.field_Ob.a(0, this.field_Qb);
-          this.field_Gb = new km(0L, (km) null);
+          this.field_Gb = new SpriteWidget(0L, (SpriteWidget) null);
           this.a(0, this.field_Gb);
           if (param11 != null) {
-            this.field_Fb = new km(0L, param8, qa.field_f);
+            this.field_Fb = new SpriteWidget(0L, param8, qa.field_f);
             this.field_Fb.field_lb = 1;
             this.field_Fb.field_E = 11184810;
             this.field_Gb.a(0, this.field_Fb);
-            this.field_Eb = new km(0L, param8, jf.field_l);
+            this.field_Eb = new SpriteWidget(0L, param8, jf.field_l);
             this.field_Eb.field_lb = 1;
             this.field_Eb.field_E = 11184810;
             this.field_Gb.a(0, this.field_Eb);
-            this.field_Kb = new km(0L, param8);
+            this.field_Kb = new SpriteWidget(0L, param8);
             this.field_Kb.field_E = 16764006;
             this.field_Gb.a(0, this.field_Kb);
             this.field_Kb.field_eb = "|";
             if (!(og.field_s < 5) ||
               !(hd.field_d < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
@@ -173,7 +173,7 @@ final class bg extends km {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = ai.field_i;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;
@@ -184,18 +184,18 @@ final class bg extends km {
               this.field_Jb = new en(stackIn_6_3, stackIn_6_4, stackIn_8_5);
               this.field_Gb.a(0, this.field_Jb);
             }
-            var28 = new km[3];
+            var28 = new SpriteWidget[3];
             var15 = var28;
-            var28[0] = new km(0L, (km) null);
+            var28[0] = new SpriteWidget(0L, (SpriteWidget) null);
             this.field_Gb.a(0, var28[0]);
-            var28[1] = new km(0L, (km) null);
+            var28[1] = new SpriteWidget(0L, (SpriteWidget) null);
             this.field_Gb.a(0, var28[1]);
-            var28[2] = new km(0L, (km) null);
+            var28[2] = new SpriteWidget(0L, (SpriteWidget) null);
             this.field_Gb.a(0, var28[2]);
-            this.field_Hb = new km[ad.field_c];
+            this.field_Hb = new SpriteWidget[ad.field_c];
             for (var16 = 0; var16 < ad.field_c; var16++) {
               if (null != se.field_f[var16]) {
-                this.field_Hb[var16] = new km(0L, param10, se.field_f[var16]);
+                this.field_Hb[var16] = new SpriteWidget(0L, param10, se.field_f[var16]);
                 this.field_Hb[var16].field_lb = 0;
                 stackIn_14_0 = this.field_Hb[var16];
                 stackIn_15_1 = (param11 != null);
@@ -216,7 +216,7 @@ final class bg extends km {
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_C.a(gd.field_p);
+            var17Lifetime3 = param6.field_C.a(ImageProducerRasterBuffer.field_p);
             if (var16Lifetime2 < var17Lifetime3) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -255,7 +255,7 @@ final class bg extends km {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(var18Lifetime5, -97, var28[2], var16Lifetime2, gd.field_p, param6);
+            var18Lifetime5 = this.a(var18Lifetime5, -97, var28[2], var16Lifetime2, ImageProducerRasterBuffer.field_p, param6);
             var18Lifetime5 = this.a(var28[2], this.field_Hb[13], 56, var18Lifetime5, var16Lifetime2);
             var18Lifetime5 = this.a(var28[2], this.field_Hb[21], 71, var18Lifetime5, var16Lifetime2);
             var18Lifetime5 = this.a(var28[2], this.field_Hb[11], 65, var18Lifetime5, var16Lifetime2);
@@ -296,11 +296,11 @@ final class bg extends km {
             var23 = var19 + 26;
             var24 = var22 + 24 + var17Lifetime5 + 10;
             var25 = sh.b(0, param2, param0, var23);
-            var26 = p.a(-1, var24, param1, param3);
+            var26 = IntrusiveDeque.a(-1, var24, param1, param3);
             this.a(var25, var24, var23, (byte) -124, var26);
             return;
           }
-          this.field_Fb = new km(0L, param8, ji.field_a);
+          this.field_Fb = new SpriteWidget(0L, param8, ji.field_a);
           this.field_Fb.field_E = 11184810;
           this.field_Fb.field_lb = 1;
           this.field_Gb.a(0, this.field_Fb);
@@ -314,7 +314,7 @@ final class bg extends km {
           var18Lifetime1 = var15_int + 26;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = sh.b(0, param2, param0, var18Lifetime1);
-          var21Lifetime1 = p.a(-1, var19Lifetime1, param1, param3);
+          var21Lifetime1 = IntrusiveDeque.a(-1, var19Lifetime1, param1, param3);
           this.a(var20Lifetime1, var19Lifetime1, var18Lifetime1, (byte) -104, var21Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -378,7 +378,7 @@ final class bg extends km {
     final boolean h(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 140) {
-          this.field_Gb = (km) null;
+          this.field_Gb = (SpriteWidget) null;
         }
         stackIn_6_0 = (this.field_Jb != null) && (this.field_Jb.field_xb);
         return stackIn_6_0;
@@ -409,7 +409,7 @@ final class bg extends km {
         int var3 = 0;
         en stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
-        km stackIn_15_0 = null;
+        SpriteWidget stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
@@ -450,11 +450,11 @@ final class bg extends km {
         return this.field_Nb;
     }
 
-    private final int a(int param0, int param1, km param2, int param3, String param4, km param5) {
+    private final int a(int param0, int param1, SpriteWidget param2, int param3, String param4, SpriteWidget param5) {
         int discarded$1 = 0;
-        km var7 = null;
+        SpriteWidget var7 = null;
         RuntimeException var7_ref = null;
-        km var8 = null;
+        SpriteWidget var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -465,11 +465,11 @@ final class bg extends km {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new km(0L, param5, 0, param0, param3, 24, param4);
+          var7 = new SpriteWidget(0L, param5, 0, param0, param3, 24, param4);
           param0 += 32;
           if (param1 >= -10) {
-            var8 = (km) null;
-            discarded$1 = this.a((km) null, (km) null, -49, 28, 48);
+            var8 = (SpriteWidget) null;
+            discarded$1 = this.a((SpriteWidget) null, (SpriteWidget) null, -49, 28, 48);
           }
           param2.a(0, var7);
           stackIn_3_0 = param0;

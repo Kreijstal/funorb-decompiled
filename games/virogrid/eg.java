@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eg extends in {
+final class eg extends AudioStream {
     static String field_t;
     private int[] field_w;
     private int[] field_q;
@@ -9,12 +9,12 @@ final class eg extends in {
     static String field_G;
     private i field_x;
     private int field_r;
-    private sc field_B;
+    private MusicTrack field_B;
     static String field_z;
-    private sc field_E;
+    private MusicTrack field_E;
     static String field_p;
     private int field_v;
-    private sc field_u;
+    private MusicTrack field_u;
     private int field_k;
     private i field_A;
     static String field_s;
@@ -25,9 +25,9 @@ final class eg extends in {
     static int field_y;
     static String field_F;
 
-    final static km d(int param0) {
+    final static SpriteWidget d(int param0) {
         if (param0 != 1048576) {
-          return (km) null;
+          return (SpriteWidget) null;
         }
         return hj.c(112);
     }
@@ -74,10 +74,10 @@ final class eg extends in {
         this.field_C = param1;
     }
 
-    final static mg a(int param0, byte param1, int param2) {
+    final static Sprite a(int param0, byte param1, int param2) {
         int var5 = Virogrid.field_F ? 1 : 0;
-        mg var6 = new mg(param0, param0);
-        mg var3 = var6;
+        Sprite var6 = new Sprite(param0, param0);
+        Sprite var3 = var6;
         int var4 = 0;
         if (param1 > 13) {
           while (var3.field_B.length > var4) {
@@ -86,7 +86,7 @@ final class eg extends in {
           }
           return var3;
         }
-        return (mg) null;
+        return (Sprite) null;
     }
 
     final void b(int[] param0, int param1, int param2) {
@@ -246,11 +246,11 @@ final class eg extends in {
         return rk.field_f;
     }
 
-    final in b() {
+    final AudioStream b() {
         return null;
     }
 
-    final in c() {
+    final AudioStream c() {
         return null;
     }
 
@@ -258,16 +258,16 @@ final class eg extends in {
         return 2;
     }
 
-    final static wf a(java.awt.Component param0, int param1, int param2, int param3) {
+    final static RasterBuffer a(java.awt.Component param0, int param1, int param2, int param3) {
         try {
           int var4_int = 0;
           RuntimeException var4 = null;
           Class var5 = null;
           Throwable var5_ref = null;
-          wf var6 = null;
-          gd var6_ref = null;
-          wf stackIn_2_0 = null;
-          gd stackIn_4_0 = null;
+          RasterBuffer var6 = null;
+          ImageProducerRasterBuffer var6_ref = null;
+          RasterBuffer stackIn_2_0 = null;
+          ImageProducerRasterBuffer stackIn_4_0 = null;
           RuntimeException stackIn_7_0 = null;
           StringBuilder stackIn_7_1 = null;
           String stackIn_8_2 = null;
@@ -276,17 +276,17 @@ final class eg extends in {
             var4_int = -32 % ((param3 + 6) / 37);
             try {
               var5 = Class.forName("n");
-              var6 = (wf) (var5.newInstance());
+              var6 = (RasterBuffer) (var5.newInstance());
               var6.a(param2, param1, (byte) -56, param0);
               stackIn_2_0 = var6;
               return stackIn_2_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5_ref = decompiledCaughtException;
-              var6_ref = new gd();
-              ((wf) ((Object) var6_ref)).a(param2, param1, (byte) -66, param0);
+              var6_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var6_ref)).a(param2, param1, (byte) -66, param0);
               stackIn_4_0 = var6_ref;
-              return (wf) ((Object) stackIn_4_0);
+              return (RasterBuffer) ((Object) stackIn_4_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -319,7 +319,7 @@ final class eg extends in {
         field_p = null;
     }
 
-    final synchronized void a(sc param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final synchronized void a(MusicTrack param0, int param1, int param2, boolean param3, int param4, int param5) {
         boolean stackIn_19_1 = false;
         int stackIn_33_0 = 0;
         i stackIn_41_0 = null;

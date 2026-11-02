@@ -4,9 +4,9 @@
 final class di extends qe {
     private String field_s;
     static int field_o;
-    static km field_n;
+    static SpriteWidget field_n;
     private boolean field_p;
-    static p field_v;
+    static IntrusiveDeque field_v;
     static String field_q;
     static boolean[] field_r;
     static String field_t;
@@ -140,8 +140,8 @@ final class di extends qe {
           field_n = null;
           return;
         }
-        sc var2 = (sc) null;
-        di.a((sc) null, -36, true);
+        MusicTrack var2 = (MusicTrack) null;
+        di.a((MusicTrack) null, -36, true);
         field_v = null;
         field_u = null;
         field_t = null;
@@ -151,11 +151,11 @@ final class di extends qe {
     final static id c(byte param0) {
         if (null == ca.field_Q) {
           ca.field_Q = new id();
-          ca.field_Q.a((byte) 119, dj.field_h);
+          ca.field_Q.a((byte) 119, dj.arezzo14Font);
           ca.field_Q.field_n = 5;
           ca.field_Q.field_e = 2763306;
           ca.field_Q.field_g = 6;
-          ca.field_Q.field_o = dk.field_j;
+          ca.field_Q.field_o = dk.arezzo12Font;
           ca.field_Q.field_k = 14;
           ca.field_Q.field_s = 7697781;
           ca.field_Q.field_q = 0;
@@ -171,7 +171,7 @@ final class di extends qe {
         return (id) null;
     }
 
-    final static void a(sc param0, int param1, boolean param2) {
+    final static void a(MusicTrack param0, int param1, boolean param2) {
         try {
           la.a(-1, 256, param2, param0);
           int var3_int = -19 / ((param1 - 65) / 42);
@@ -181,7 +181,7 @@ final class di extends qe {
     }
 
     static {
-        field_v = new p();
+        field_v = new IntrusiveDeque();
         field_q = "The following settings need to be changed:  ";
         field_r = new boolean[64];
         field_t = "You have <%0> unread messages!";

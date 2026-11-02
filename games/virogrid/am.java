@@ -6,7 +6,7 @@ final class am {
     static String field_a;
     static String field_d;
     static String field_b;
-    static jc field_e;
+    static PacketBuffer field_e;
 
     final static boolean a(byte param0, int param1) {
         if (param0 == -56) {
@@ -26,7 +26,7 @@ final class am {
         if (null != kk.field_q) {
           kk.field_q.a((byte) -122);
         }
-        fi.field_v.requestFocus();
+        UiWidget.field_v.requestFocus();
         if (param0 == -16) {
           return;
         }

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends l {
+final class pe extends IntrusiveNode {
     jh field_g;
-    l field_h;
+    IntrusiveNode field_h;
     static int[] field_j;
     static int field_k;
     int field_i;
 
-    final static void a(java.awt.Component param0, i param1, pd param2, boolean param3, byte param4, int param5) {
+    final static void a(java.awt.Component param0, i param1, PlatformTaskDispatcher param2, boolean param3, byte param4, int param5) {
         if (param4 >= -4) {
           return;
         }
@@ -28,12 +28,12 @@ final class pe extends l {
         int var10 = Virogrid.field_F ? 1 : 0;
         int var9Lifetime1;
         try {
-          var5_int = df.field_e * param0 + param2;
-          var6 = param4 * df.field_e + var5_int;
+          var5_int = Rasterizer.field_e * param0 + param2;
+          var6 = param4 * Rasterizer.field_e + var5_int;
           var7 = (param1 & 16711422) >> 1;
           var8 = 0;
-          for (var9 = var5_int; var6 > var9; var9 = var9 + df.field_e) {
-            df.field_d[var9] = 0 == var8 % 2 ? var7 : param1;
+          for (var9 = var5_int; var6 > var9; var9 = var9 + Rasterizer.field_e) {
+            Rasterizer.field_d[var9] = 0 == var8 % 2 ? var7 : param1;
             var8++;
           }
           var9Lifetime1 = -57 / ((-54 - param3) / 53);
@@ -47,7 +47,7 @@ final class pe extends l {
         int var1 = -99 / ((-23 - param0) / 53);
     }
 
-    final static String a(String param0, String param1, eh param2, int param3, int param4) {
+    final static String a(String param0, String param1, Js5Archive param2, int param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -120,7 +120,7 @@ final class pe extends l {
         try {
           var13 = sh.field_qb;
           var15 = var13;
-          var2 = var15.g(11132);
+          var2 = var15.readUnsignedByte(11132);
           var3 = (dh) (bl.field_D.a((byte) -67));
           while (var3 != null) {
             if (var2 != var3.field_i) {
@@ -133,12 +133,12 @@ final class pe extends l {
             tn.a(false);
             return;
           }
-          var4 = var15.g(param0 + 11133);
+          var4 = var15.readUnsignedByte(param0 + 11133);
           if (param0 != ~var4) {
             rc.field_h[0] = mi.field_d;
             var5 = var3.field_g;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              rc.field_h[var6_int] = var13.h(-121);
+              rc.field_h[var6_int] = var13.readString(-121);
             }
             fj.a((byte) 125, var5, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -148,9 +148,9 @@ final class pe extends l {
                 var3.field_u = lm.field_j;
                 var3.field_h = ve.field_s;
                 var3.field_q = ng.field_X;
-                fd.a(ng.field_X, lm.field_j, ~param0, ve.field_s, var6_intLifetime1, ug.field_b);
+                WidgetContainer.a(ng.field_X, lm.field_j, ~param0, ve.field_s, var6_intLifetime1, ug.field_b);
               } else {
-                fd.a(ng.field_X, lm.field_j, ~param0, ve.field_s, var6_intLifetime1, ug.field_b);
+                WidgetContainer.a(ng.field_X, lm.field_j, ~param0, ve.field_s, var6_intLifetime1, ug.field_b);
               }
             }
             sb.a(var5, (byte) 46);
@@ -170,7 +170,7 @@ final class pe extends l {
               var7[0][4 * var10 + 1] = vc.field_jb[var11];
               var7[0][2 + 4 * var10] = tg.field_A[var11];
               var7[0][3 + 4 * var10] = kf.field_j[var11];
-              if (jc.a(rc.field_h[var11], true) &&
+              if (PacketBuffer.a(rc.field_h[var11], true) &&
                 0 == vc.field_jb[var11] - (-tg.field_A[var11] - kf.field_j[var11])) {
                 var6[0][var10] = null;
                 var10--;
@@ -188,7 +188,7 @@ final class pe extends l {
               var7[1][1 + 4 * var14] = vc.field_jb[var11Lifetime1];
               var7[1][4 * var14 + 2] = tg.field_A[var11Lifetime1];
               var7[1][var14 * 4 + 3] = kf.field_j[var11Lifetime1];
-              if (jc.a(rc.field_h[var11Lifetime1], true) &&
+              if (PacketBuffer.a(rc.field_h[var11Lifetime1], true) &&
                 vc.field_jb[var11Lifetime1] - (-tg.field_A[var11Lifetime1] - kf.field_j[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;
@@ -216,10 +216,10 @@ final class pe extends l {
           field_k = 63;
         }
         mb.field_bb = null;
-        el.field_w = null;
+        BufferedSocket.field_w = null;
     }
 
-    pe(jh param0, l param1) {
+    pe(jh param0, IntrusiveNode param1) {
         try {
           this.field_g = param0;
           this.field_i = param0.l();

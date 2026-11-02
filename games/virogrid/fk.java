@@ -28,10 +28,10 @@ final class fk {
         if (field_m.length < field_n) {
           field_m = new int[ra.a(8742, field_n)];
         }
-        int var4 = param1 * df.field_e + param0;
+        int var4 = param1 * Rasterizer.field_e + param0;
         for (var5 = 0; var5 < field_n; var5++) {
           field_m[var5] = var4;
-          var4 = var4 + df.field_e;
+          var4 = var4 + Rasterizer.field_e;
         }
     }
 
@@ -165,7 +165,7 @@ final class fk {
     }
 
     final static void a() {
-        fk.a(df.field_i, df.field_g, df.field_k, df.field_h);
+        fk.a(Rasterizer.field_i, Rasterizer.field_g, Rasterizer.field_k, Rasterizer.field_h);
     }
 
     final static void a(kj param0) {
@@ -298,11 +298,11 @@ final class fk {
                 while (true) {
                   param2--;
                   if (param2 >= 0) {
-                    fk.a(df.field_d, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                    fk.a(Rasterizer.field_d, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                     param4 = param4 + var28;
                     param3 = param3 + var26;
                     param6 = param6 + var31;
-                    param0 = param0 + df.field_e;
+                    param0 = param0 + Rasterizer.field_e;
                     var32 = var32 + var34;
                     var35 = var35 + var37;
                     var38 = var38 + var40;
@@ -312,11 +312,11 @@ final class fk {
                 }
                 param1--;
                 while (param1 >= 0) {
-                  fk.a(df.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  fk.a(Rasterizer.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var27;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + df.field_e;
+                  param0 = param0 + Rasterizer.field_e;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -330,11 +330,11 @@ final class fk {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  fk.a(df.field_d, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  fk.a(Rasterizer.field_d, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + df.field_e;
+                  param0 = param0 + Rasterizer.field_e;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -344,11 +344,11 @@ final class fk {
               }
               param1--;
               while (param1 >= 0) {
-                fk.a(df.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                fk.a(Rasterizer.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
-                param0 = param0 + df.field_e;
+                param0 = param0 + Rasterizer.field_e;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -383,11 +383,11 @@ final class fk {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fk.a(df.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  fk.a(Rasterizer.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + df.field_e;
+                  param0 = param0 + Rasterizer.field_e;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -397,11 +397,11 @@ final class fk {
               }
               param2--;
               while (param2 >= 0) {
-                fk.a(df.field_d, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                fk.a(Rasterizer.field_d, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param4 = param4 + var27;
                 param6 = param6 + var31;
-                param0 = param0 + df.field_e;
+                param0 = param0 + Rasterizer.field_e;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -415,11 +415,11 @@ final class fk {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fk.a(df.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                fk.a(Rasterizer.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
-                param0 = param0 + df.field_e;
+                param0 = param0 + Rasterizer.field_e;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -429,11 +429,11 @@ final class fk {
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(df.field_d, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+              fk.a(Rasterizer.field_d, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
               param5 = param5 + var28;
               param4 = param4 + var27;
               param6 = param6 + var31;
-              param0 = param0 + df.field_e;
+              param0 = param0 + Rasterizer.field_e;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -478,11 +478,11 @@ final class fk {
                 while (true) {
                   param1--;
                   if (param1 >= 0) {
-                    fk.a(df.field_d, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                    fk.a(Rasterizer.field_d, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                     param3 = param3 + var27;
                     param5 = param5 + var28;
                     param8 = param8 + var31;
-                    param2 = param2 + df.field_e;
+                    param2 = param2 + Rasterizer.field_e;
                     var32 = var32 + var34;
                     var35 = var35 + var37;
                     var38 = var38 + var40;
@@ -492,11 +492,11 @@ final class fk {
                 }
                 param0--;
                 while (param0 >= 0) {
-                  fk.a(df.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  fk.a(Rasterizer.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var26;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + df.field_e;
+                  param2 = param2 + Rasterizer.field_e;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -510,11 +510,11 @@ final class fk {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fk.a(df.field_d, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  fk.a(Rasterizer.field_d, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param3 = param3 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + df.field_e;
+                  param2 = param2 + Rasterizer.field_e;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -524,11 +524,11 @@ final class fk {
               }
               param0--;
               while (param0 >= 0) {
-                fk.a(df.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                fk.a(Rasterizer.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var26;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
-                param2 = param2 + df.field_e;
+                param2 = param2 + Rasterizer.field_e;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -561,11 +561,11 @@ final class fk {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  fk.a(df.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  fk.a(Rasterizer.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + df.field_e;
+                  param2 = param2 + Rasterizer.field_e;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -575,11 +575,11 @@ final class fk {
               }
               param1--;
               while (param1 >= 0) {
-                fk.a(df.field_d, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                fk.a(Rasterizer.field_d, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param3 = param3 + var26;
                 param8 = param8 + var31;
-                param2 = param2 + df.field_e;
+                param2 = param2 + Rasterizer.field_e;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -593,11 +593,11 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(df.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                fk.a(Rasterizer.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
-                param2 = param2 + df.field_e;
+                param2 = param2 + Rasterizer.field_e;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -607,11 +607,11 @@ final class fk {
             }
             param1--;
             while (param1 >= 0) {
-              fk.a(df.field_d, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+              fk.a(Rasterizer.field_d, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param8 = param8 + var31;
-              param2 = param2 + df.field_e;
+              param2 = param2 + Rasterizer.field_e;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -655,11 +655,11 @@ final class fk {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  fk.a(df.field_d, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                  fk.a(Rasterizer.field_d, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var26;
                   param4 = param4 + var27;
                   param7 = param7 + var31;
-                  param1 = param1 + df.field_e;
+                  param1 = param1 + Rasterizer.field_e;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -669,11 +669,11 @@ final class fk {
               }
               param2--;
               while (param2 >= 0) {
-                fk.a(df.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                fk.a(Rasterizer.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var28;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + df.field_e;
+                param1 = param1 + Rasterizer.field_e;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -687,11 +687,11 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(df.field_d, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                fk.a(Rasterizer.field_d, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + df.field_e;
+                param1 = param1 + Rasterizer.field_e;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -701,11 +701,11 @@ final class fk {
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(df.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              fk.a(Rasterizer.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var28;
               param4 = param4 + var27;
               param7 = param7 + var31;
-              param1 = param1 + df.field_e;
+              param1 = param1 + Rasterizer.field_e;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -740,11 +740,11 @@ final class fk {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                fk.a(df.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                fk.a(Rasterizer.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + df.field_e;
+                param1 = param1 + Rasterizer.field_e;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -754,11 +754,11 @@ final class fk {
             }
             param0--;
             while (param0 >= 0) {
-              fk.a(df.field_d, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              fk.a(Rasterizer.field_d, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param5 = param5 + var28;
               param7 = param7 + var31;
-              param1 = param1 + df.field_e;
+              param1 = param1 + Rasterizer.field_e;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -772,11 +772,11 @@ final class fk {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              fk.a(df.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              fk.a(Rasterizer.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param4 = param4 + var27;
               param7 = param7 + var31;
-              param1 = param1 + df.field_e;
+              param1 = param1 + Rasterizer.field_e;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -786,11 +786,11 @@ final class fk {
           }
           param0--;
           while (param0 >= 0) {
-            fk.a(df.field_d, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+            fk.a(Rasterizer.field_d, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
             param3 = param3 + var26;
             param5 = param5 + var28;
             param7 = param7 + var31;
-            param1 = param1 + df.field_e;
+            param1 = param1 + Rasterizer.field_e;
             var32 = var32 + var34;
             var35 = var35 + var37;
             var38 = var38 + var40;
@@ -864,20 +864,20 @@ final class fk {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  fk.a(df.field_d, param0, param6, 0, param3 >> 16, param4 >> 16);
+                  fk.a(Rasterizer.field_d, param0, param6, 0, param3 >> 16, param4 >> 16);
                   param4 = param4 + var9;
                   param3 = param3 + var7;
-                  param0 = param0 + df.field_e;
+                  param0 = param0 + Rasterizer.field_e;
                   continue;
                 }
                 break;
               }
               param1--;
               while (param1 >= 0) {
-                fk.a(df.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
+                fk.a(Rasterizer.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var8;
                 param3 = param3 + var7;
-                param0 = param0 + df.field_e;
+                param0 = param0 + Rasterizer.field_e;
                 param1--;
               }
               return;
@@ -888,20 +888,20 @@ final class fk {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                fk.a(df.field_d, param0, param6, 0, param4 >> 16, param3 >> 16);
+                fk.a(Rasterizer.field_d, param0, param6, 0, param4 >> 16, param3 >> 16);
                 param4 = param4 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + df.field_e;
+                param0 = param0 + Rasterizer.field_e;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              fk.a(df.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
+              fk.a(Rasterizer.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var8;
               param3 = param3 + var7;
-              param0 = param0 + df.field_e;
+              param0 = param0 + Rasterizer.field_e;
               param1--;
             }
             return;
@@ -929,20 +929,20 @@ final class fk {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fk.a(df.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
+                fk.a(Rasterizer.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + df.field_e;
+                param0 = param0 + Rasterizer.field_e;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(df.field_d, param0, param6, 0, param4 >> 16, param5 >> 16);
+              fk.a(Rasterizer.field_d, param0, param6, 0, param4 >> 16, param5 >> 16);
               param5 = param5 + var9;
               param4 = param4 + var8;
-              param0 = param0 + df.field_e;
+              param0 = param0 + Rasterizer.field_e;
               param2--;
             }
             return;
@@ -953,20 +953,20 @@ final class fk {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              fk.a(df.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
+              fk.a(Rasterizer.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var9;
               param3 = param3 + var7;
-              param0 = param0 + df.field_e;
+              param0 = param0 + Rasterizer.field_e;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            fk.a(df.field_d, param0, param6, 0, param5 >> 16, param4 >> 16);
+            fk.a(Rasterizer.field_d, param0, param6, 0, param5 >> 16, param4 >> 16);
             param5 = param5 + var9;
             param4 = param4 + var8;
-            param0 = param0 + df.field_e;
+            param0 = param0 + Rasterizer.field_e;
             param2--;
           }
           return;
@@ -1002,20 +1002,20 @@ final class fk {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fk.a(df.field_d, param2, param6, 0, param5 >> 16, param3 >> 16);
+                  fk.a(Rasterizer.field_d, param2, param6, 0, param5 >> 16, param3 >> 16);
                   param3 = param3 + var8;
                   param5 = param5 + var9;
-                  param2 = param2 + df.field_e;
+                  param2 = param2 + Rasterizer.field_e;
                   continue;
                 }
                 break;
               }
               param0--;
               while (param0 >= 0) {
-                fk.a(df.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
+                fk.a(Rasterizer.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var7;
                 param5 = param5 + var9;
-                param2 = param2 + df.field_e;
+                param2 = param2 + Rasterizer.field_e;
                 param0--;
               }
               return;
@@ -1026,20 +1026,20 @@ final class fk {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fk.a(df.field_d, param2, param6, 0, param3 >> 16, param5 >> 16);
+                fk.a(Rasterizer.field_d, param2, param6, 0, param3 >> 16, param5 >> 16);
                 param3 = param3 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + df.field_e;
+                param2 = param2 + Rasterizer.field_e;
                 continue;
               }
               break;
             }
             param0--;
             while (param0 >= 0) {
-              fk.a(df.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
+              fk.a(Rasterizer.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var7;
               param5 = param5 + var9;
-              param2 = param2 + df.field_e;
+              param2 = param2 + Rasterizer.field_e;
               param0--;
             }
             return;
@@ -1064,20 +1064,20 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(df.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
+                fk.a(Rasterizer.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + df.field_e;
+                param2 = param2 + Rasterizer.field_e;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              fk.a(df.field_d, param2, param6, 0, param3 >> 16, param4 >> 16);
+              fk.a(Rasterizer.field_d, param2, param6, 0, param3 >> 16, param4 >> 16);
               param4 = param4 + var8;
               param3 = param3 + var7;
-              param2 = param2 + df.field_e;
+              param2 = param2 + Rasterizer.field_e;
               param1--;
             }
             return;
@@ -1088,20 +1088,20 @@ final class fk {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fk.a(df.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
+              fk.a(Rasterizer.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var8;
               param5 = param5 + var9;
-              param2 = param2 + df.field_e;
+              param2 = param2 + Rasterizer.field_e;
               continue;
             }
             break;
           }
           param1--;
           while (param1 >= 0) {
-            fk.a(df.field_d, param2, param6, 0, param4 >> 16, param3 >> 16);
+            fk.a(Rasterizer.field_d, param2, param6, 0, param4 >> 16, param3 >> 16);
             param4 = param4 + var8;
             param3 = param3 + var7;
-            param2 = param2 + df.field_e;
+            param2 = param2 + Rasterizer.field_e;
             param1--;
           }
           return;
@@ -1136,20 +1136,20 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(df.field_d, param1, param6, 0, param4 >> 16, param5 >> 16);
+                fk.a(Rasterizer.field_d, param1, param6, 0, param4 >> 16, param5 >> 16);
                 param5 = param5 + var7;
                 param4 = param4 + var8;
-                param1 = param1 + df.field_e;
+                param1 = param1 + Rasterizer.field_e;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(df.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
+              fk.a(Rasterizer.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var9;
               param4 = param4 + var8;
-              param1 = param1 + df.field_e;
+              param1 = param1 + Rasterizer.field_e;
               param2--;
             }
             return;
@@ -1160,20 +1160,20 @@ final class fk {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fk.a(df.field_d, param1, param6, 0, param5 >> 16, param4 >> 16);
+              fk.a(Rasterizer.field_d, param1, param6, 0, param5 >> 16, param4 >> 16);
               param5 = param5 + var7;
               param4 = param4 + var8;
-              param1 = param1 + df.field_e;
+              param1 = param1 + Rasterizer.field_e;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            fk.a(df.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
+            fk.a(Rasterizer.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var9;
             param4 = param4 + var8;
-            param1 = param1 + df.field_e;
+            param1 = param1 + Rasterizer.field_e;
             param2--;
           }
           return;
@@ -1201,20 +1201,20 @@ final class fk {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              fk.a(df.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
+              fk.a(Rasterizer.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var7;
               param4 = param4 + var8;
-              param1 = param1 + df.field_e;
+              param1 = param1 + Rasterizer.field_e;
               continue;
             }
             break;
           }
           param0--;
           while (param0 >= 0) {
-            fk.a(df.field_d, param1, param6, 0, param5 >> 16, param3 >> 16);
+            fk.a(Rasterizer.field_d, param1, param6, 0, param5 >> 16, param3 >> 16);
             param3 = param3 + var7;
             param5 = param5 + var9;
-            param1 = param1 + df.field_e;
+            param1 = param1 + Rasterizer.field_e;
             param0--;
           }
           return;
@@ -1225,20 +1225,20 @@ final class fk {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            fk.a(df.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
+            fk.a(Rasterizer.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var7;
             param4 = param4 + var8;
-            param1 = param1 + df.field_e;
+            param1 = param1 + Rasterizer.field_e;
             continue;
           }
           break;
         }
         param0--;
         while (param0 >= 0) {
-          fk.a(df.field_d, param1, param6, 0, param3 >> 16, param5 >> 16);
+          fk.a(Rasterizer.field_d, param1, param6, 0, param3 >> 16, param5 >> 16);
           param3 = param3 + var7;
           param5 = param5 + var9;
-          param1 = param1 + df.field_e;
+          param1 = param1 + Rasterizer.field_e;
           param0--;
         }
         return;
@@ -1434,22 +1434,22 @@ final class fk {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  fk.a(df.field_d, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
+                  fk.a(Rasterizer.field_d, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
                   param4 = param4 + var17;
                   param3 = param3 + var16;
                   param6 = param6 + var20;
-                  param0 = param0 + df.field_e;
+                  param0 = param0 + Rasterizer.field_e;
                   continue;
                 }
                 break;
               }
               param1--;
               while (param1 >= 0) {
-                fk.a(df.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                fk.a(Rasterizer.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var15;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + df.field_e;
+                param0 = param0 + Rasterizer.field_e;
                 param1--;
               }
               return;
@@ -1460,22 +1460,22 @@ final class fk {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                fk.a(df.field_d, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
+                fk.a(Rasterizer.field_d, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
                 param4 = param4 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + df.field_e;
+                param0 = param0 + Rasterizer.field_e;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              fk.a(df.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              fk.a(Rasterizer.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var15;
               param3 = param3 + var16;
               param6 = param6 + var20;
-              param0 = param0 + df.field_e;
+              param0 = param0 + Rasterizer.field_e;
               param1--;
             }
             return;
@@ -1504,22 +1504,22 @@ final class fk {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fk.a(df.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                fk.a(Rasterizer.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + df.field_e;
+                param0 = param0 + Rasterizer.field_e;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(df.field_d, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
+              fk.a(Rasterizer.field_d, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
               param5 = param5 + var17;
               param4 = param4 + var15;
               param6 = param6 + var20;
-              param0 = param0 + df.field_e;
+              param0 = param0 + Rasterizer.field_e;
               param2--;
             }
             return;
@@ -1530,22 +1530,22 @@ final class fk {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              fk.a(df.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              fk.a(Rasterizer.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var17;
               param3 = param3 + var16;
               param6 = param6 + var20;
-              param0 = param0 + df.field_e;
+              param0 = param0 + Rasterizer.field_e;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            fk.a(df.field_d, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
+            fk.a(Rasterizer.field_d, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
             param5 = param5 + var17;
             param4 = param4 + var15;
             param6 = param6 + var20;
-            param0 = param0 + df.field_e;
+            param0 = param0 + Rasterizer.field_e;
             param2--;
           }
           return;
@@ -1583,22 +1583,22 @@ final class fk {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fk.a(df.field_d, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
+                  fk.a(Rasterizer.field_d, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
                   param3 = param3 + var15;
                   param5 = param5 + var17;
                   param8 = param8 + var20;
-                  param2 = param2 + df.field_e;
+                  param2 = param2 + Rasterizer.field_e;
                   continue;
                 }
                 break;
               }
               param0--;
               while (param0 >= 0) {
-                fk.a(df.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                fk.a(Rasterizer.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var16;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + df.field_e;
+                param2 = param2 + Rasterizer.field_e;
                 param0--;
               }
               return;
@@ -1609,22 +1609,22 @@ final class fk {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fk.a(df.field_d, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
+                fk.a(Rasterizer.field_d, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
                 param3 = param3 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + df.field_e;
+                param2 = param2 + Rasterizer.field_e;
                 continue;
               }
               break;
             }
             param0--;
             while (param0 >= 0) {
-              fk.a(df.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              fk.a(Rasterizer.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var16;
               param5 = param5 + var17;
               param8 = param8 + var20;
-              param2 = param2 + df.field_e;
+              param2 = param2 + Rasterizer.field_e;
               param0--;
             }
             return;
@@ -1650,22 +1650,22 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(df.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                fk.a(Rasterizer.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + df.field_e;
+                param2 = param2 + Rasterizer.field_e;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              fk.a(df.field_d, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
+              fk.a(Rasterizer.field_d, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
               param4 = param4 + var15;
               param3 = param3 + var16;
               param8 = param8 + var20;
-              param2 = param2 + df.field_e;
+              param2 = param2 + Rasterizer.field_e;
               param1--;
             }
             return;
@@ -1676,22 +1676,22 @@ final class fk {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fk.a(df.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              fk.a(Rasterizer.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var15;
               param5 = param5 + var17;
               param8 = param8 + var20;
-              param2 = param2 + df.field_e;
+              param2 = param2 + Rasterizer.field_e;
               continue;
             }
             break;
           }
           param1--;
           while (param1 >= 0) {
-            fk.a(df.field_d, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
+            fk.a(Rasterizer.field_d, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
             param4 = param4 + var15;
             param3 = param3 + var16;
             param8 = param8 + var20;
-            param2 = param2 + df.field_e;
+            param2 = param2 + Rasterizer.field_e;
             param1--;
           }
           return;
@@ -1728,22 +1728,22 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(df.field_d, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
+                fk.a(Rasterizer.field_d, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
                 param5 = param5 + var16;
                 param4 = param4 + var15;
                 param7 = param7 + var20;
-                param1 = param1 + df.field_e;
+                param1 = param1 + Rasterizer.field_e;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(df.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              fk.a(Rasterizer.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var17;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + df.field_e;
+              param1 = param1 + Rasterizer.field_e;
               param2--;
             }
             return;
@@ -1754,22 +1754,22 @@ final class fk {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fk.a(df.field_d, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
+              fk.a(Rasterizer.field_d, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
               param5 = param5 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + df.field_e;
+              param1 = param1 + Rasterizer.field_e;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            fk.a(df.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            fk.a(Rasterizer.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var17;
             param4 = param4 + var15;
             param7 = param7 + var20;
-            param1 = param1 + df.field_e;
+            param1 = param1 + Rasterizer.field_e;
             param2--;
           }
           return;
@@ -1798,22 +1798,22 @@ final class fk {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              fk.a(df.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              fk.a(Rasterizer.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + df.field_e;
+              param1 = param1 + Rasterizer.field_e;
               continue;
             }
             break;
           }
           param0--;
           while (param0 >= 0) {
-            fk.a(df.field_d, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
+            fk.a(Rasterizer.field_d, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
             param3 = param3 + var16;
             param5 = param5 + var17;
             param7 = param7 + var20;
-            param1 = param1 + df.field_e;
+            param1 = param1 + Rasterizer.field_e;
             param0--;
           }
           return;
@@ -1824,22 +1824,22 @@ final class fk {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            fk.a(df.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            fk.a(Rasterizer.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var16;
             param4 = param4 + var15;
             param7 = param7 + var20;
-            param1 = param1 + df.field_e;
+            param1 = param1 + Rasterizer.field_e;
             continue;
           }
           break;
         }
         param0--;
         while (param0 >= 0) {
-          fk.a(df.field_d, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
+          fk.a(Rasterizer.field_d, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
           param3 = param3 + var16;
           param5 = param5 + var17;
           param7 = param7 + var20;
-          param1 = param1 + df.field_e;
+          param1 = param1 + Rasterizer.field_e;
           param0--;
         }
         return;
@@ -1859,8 +1859,8 @@ final class fk {
 
     final static void a(int param0, int param1) {
         int var2 = field_m[0];
-        int var3 = var2 / df.field_e;
-        int var4 = var2 - var3 * df.field_e;
+        int var3 = var2 / Rasterizer.field_e;
+        int var4 = var2 - var3 * Rasterizer.field_e;
         field_j = param0 - var4;
         field_k = param1 - var3;
     }
@@ -1915,7 +1915,7 @@ final class fk {
             param0[param1++] = param2;
           }
         }
-        L2: {
+        regionExit1: {
           if (field_d == 254) {
             while (true) {
               param3--;
@@ -1924,7 +1924,7 @@ final class fk {
                 while (true) {
                   param3--;
                   if (param3 < 0) {
-                    break L2;
+                    break regionExit1;
                   }
                   incrementValue$12 = param1;
                   param1++;
@@ -1955,7 +1955,7 @@ final class fk {
               while (true) {
                 param3--;
                 if (param3 < 0) {
-                  break L2;
+                  break regionExit1;
                 }
                 var8 = param0[param1];
                 incrementValue$7 = param1;

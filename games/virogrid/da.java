@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class da extends l {
-    static km field_n;
+final class da extends IntrusiveNode {
+    static SpriteWidget field_n;
     int field_q;
     int field_l;
     static int[] field_g;
     int field_o;
-    static mg field_h;
+    static Sprite field_h;
     static String field_i;
     int field_p;
     int field_m;
@@ -18,7 +18,7 @@ final class da extends l {
         field_g = null;
         field_i = null;
         if (param0 != 8355711) {
-          field_h = (mg) null;
+          field_h = (Sprite) null;
         }
         field_h = null;
         field_n = null;
@@ -52,13 +52,13 @@ final class da extends l {
         var5 = 0;
         var6 = 0;
         for (var7 = qh.field_K - 1; var7 >= 0; var7--) {
-          var8_ref_cj = el.field_s[var7];
+          var8_ref_cj = BufferedSocket.field_s[var7];
           var9 = 0;
           if (!wg.field_f &&
             var5 < nb.field_s) {
             var10_int = id.a(var8_ref_cj.field_n, (byte) 82);
             if (var8_ref_cj.b(-6761) >= var10_int && (var8_ref_cj.field_j ||
-              !fm.a(var8_ref_cj.field_i, -1369854352))) {
+              !WhirlpoolDigest.a(var8_ref_cj.field_i, -1369854352))) {
               var9 = 1;
             }
           }
@@ -75,7 +75,7 @@ final class da extends l {
               var10 = re.a((byte) -100, var8_ref_cj);
               var11 = var10 + e.b(var8_ref_cj.field_h);
               var12 = qd.a(param0 ^ -18302, var8_ref_cj);
-              var8_ref_cj.field_t = new km(0L, wh.field_d, var11);
+              var8_ref_cj.field_t = new SpriteWidget(0L, wh.field_d, var11);
               var6 = var6 + param3;
               var8_ref_cj.field_t.field_ab = ((wh.field_d.field_ab & 16711422) >> 1) - (8355711 & var12 >> 1) + var12;
               var8_ref_cj.field_t.field_A = -(var12 >> 1 & 8355711) + var12 + (wh.field_d.field_A >> 1 & 8355711);
@@ -87,7 +87,7 @@ final class da extends l {
         }
         var7Lifetime1 = 0;
         for (var8 = 0; var8 < qh.field_K; var8++) {
-          var9_ref_cj = el.field_s[var8];
+          var9_ref_cj = BufferedSocket.field_s[var8];
           if (null != var9_ref_cj.field_t) {
             ne.field_c.field_Jb.a(0, var9_ref_cj.field_t);
             var9_ref_cj.field_t.a(param2, param3, var9_ref_cj.field_t.c((byte) 81), (byte) -44, var7Lifetime1);
@@ -107,20 +107,20 @@ final class da extends l {
         if (ad.field_l) {
           ne.field_c.field_Jb.field_F = ne.field_c.field_Eb.field_ub - ne.field_c.field_Jb.field_ub;
           ad.field_l = false;
-          uf.field_i = true;
+          GameBoard.field_i = true;
           ne.field_c.field_Jb.field_Cb = 0;
         }
         if (qc.field_h &&
           qc.field_i != null) {
-          uf.field_i = true;
+          GameBoard.field_i = true;
         }
         var9Lifetime1 = -ne.field_c.field_Jb.field_kb - ne.field_c.field_Jb.field_ub + ne.field_c.field_Eb.field_ub;
-        if (uf.field_i) {
+        if (GameBoard.field_i) {
           ne.field_c.field_Jb.field_Cb = var9Lifetime1 - ne.field_c.field_Jb.field_F;
         }
         ne.field_c.a(-1, param3, true, param1 * (2 * param3));
         stackIn_50_0 = (var9Lifetime1 == ne.field_c.field_Jb.field_Cb + ne.field_c.field_Jb.field_F);
-        uf.field_i = stackIn_50_0;
+        GameBoard.field_i = stackIn_50_0;
         return (cj) (var4);
     }
 

@@ -21,7 +21,7 @@ final class wl {
     final static boolean b(byte param0) {
         if (param0 >= -60) {
           java.awt.Component var2 = (java.awt.Component) null;
-          wl.a((pd) null, (i) null, 10, 112, false, (java.awt.Component) null, -74, 75);
+          wl.a((PlatformTaskDispatcher) null, (i) null, 10, 112, false, (java.awt.Component) null, -74, 75);
           if (null == oj.field_Ub) {
             return false;
           }
@@ -43,10 +43,10 @@ final class wl {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, int param2, sc param3, boolean param4) {
+    final static void a(int param0, int param1, int param2, MusicTrack param3, boolean param4) {
         RuntimeException var5 = null;
         eg stackIn_2_0;
-        sc stackIn_2_1;
+        MusicTrack stackIn_2_1;
         int stackIn_2_2;
         int stackIn_2_3;
         boolean stackIn_3_4 = false;
@@ -56,7 +56,7 @@ final class wl {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_2_0 = wc.field_f;
-          stackIn_2_1 = (sc) (param3);
+          stackIn_2_1 = (MusicTrack) (param3);
           stackIn_2_2 = param2;
           stackIn_2_3 = param0;
           stackIn_3_4 = !(param4);
@@ -80,7 +80,7 @@ final class wl {
         }
     }
 
-    final static void a(pd param0, i param1, int param2, int param3, boolean param4, java.awt.Component param5, int param6, int param7) {
+    final static void a(PlatformTaskDispatcher param0, i param1, int param2, int param3, boolean param4, java.awt.Component param5, int param6, int param7) {
         try {
           ua.a(param6, param4, 10);
           ae.field_g = ua.a(param0, param5, 0, param7);

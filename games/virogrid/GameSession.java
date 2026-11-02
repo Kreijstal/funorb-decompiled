@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ic {
+final class GameSession {
     boolean field_l;
-    boolean field_g;
-    int field_e;
+    boolean online;
+    int localPlayer;
     private int field_i;
     private int field_z;
     private int field_o;
-    uf field_C;
-    m field_A;
+    GameBoard board;
+    CellAnimator animator;
     int field_n;
     private int field_c;
-    private int field_r;
+    private int cellSize;
     private int field_p;
     private int field_B;
     private String field_a;
@@ -20,13 +20,13 @@ final class ic {
     boolean field_t;
     int field_v;
     static byte[] field_f;
-    private int field_h;
-    private int field_x;
+    private int hoverColumn;
+    private int hoverRow;
     private int field_k;
-    private int field_j;
+    private int tickCount;
     private int field_m;
     static String field_b;
-    int field_w;
+    int turnTimer;
     private int field_d;
     private int field_u;
     static rm[] field_y;
@@ -72,36 +72,36 @@ final class ic {
         int var3Lifetime3;
         int var4Lifetime1;
         var6 = Virogrid.field_F ? 1 : 0;
-        if (this.field_C.field_E) {
-          if (this.field_C.field_A >= 0) {
-            if (this.field_g &&
-              this.field_C.field_A == this.field_e) {
+        if (this.board.finished) {
+          if (this.board.currentPlayer >= 0) {
+            if (this.online &&
+              this.board.currentPlayer == this.localPlayer) {
               gh.field_Fb = gg.field_N;
             } else {
-              gh.field_Fb = oi.a(new String[]{this.field_C.field_c[this.field_C.field_A]}, rf.field_j, 2);
+              gh.field_Fb = oi.a(new String[]{this.board.playerNames[this.board.currentPlayer]}, rf.field_j, 2);
             }
           } else {
             gh.field_Fb = ne.field_b;
           }
         } else {
-          if (this.field_C.field_A < 0) {
+          if (this.board.currentPlayer < 0) {
             gh.field_Fb = "";
           } else {
-            var2_ref_String = Integer.toString((this.field_w + 49) / 50);
-            if (this.field_g) {
-              if (this.field_C.field_A == 0) {
-                stackIn_7_0 = uk.field_g;
+            var2_ref_String = Integer.toString((this.turnTimer + 49) / 50);
+            if (this.online) {
+              if (this.board.currentPlayer == 0) {
+                stackIn_7_0 = GameApplet.textColourBlue;
               } else {
-                stackIn_7_0 = pb.field_k;
+                stackIn_7_0 = pb.textColourWhite;
               }
               var3_ref_String = stackIn_7_0;
-              if (this.field_C.field_A == this.field_e) {
-                gh.field_Fb = oi.a(new String[]{var3_ref_String, var2_ref_String}, gf.field_B, 2);
+              if (this.board.currentPlayer == this.localPlayer) {
+                gh.field_Fb = oi.a(new String[]{var3_ref_String, var2_ref_String}, gf.textYourTurnPlaying, 2);
               } else {
-                gh.field_Fb = oi.a(new String[]{var3_ref_String, var2_ref_String, this.field_C.field_c[this.field_C.field_A]}, ie.field_b, 2);
+                gh.field_Fb = oi.a(new String[]{var3_ref_String, var2_ref_String, this.board.playerNames[this.board.currentPlayer]}, ie.textXTurnPlaying, 2);
               }
             } else {
-              gh.field_Fb = oi.a(new String[]{this.field_C.field_c[this.field_C.field_A], var2_ref_String}, hc.field_b, 2);
+              gh.field_Fb = oi.a(new String[]{this.board.playerNames[this.board.currentPlayer], var2_ref_String}, hc.textXTurn, 2);
             }
           }
         }
@@ -125,9 +125,9 @@ final class ic {
           }
         }
         boolean decompiledFrameRemainder2 = true;
-        vg.field_H.a(gh.field_Fb);
-        if (this.field_D && (!this.field_g ||
-          this.field_C.field_A == this.field_e)) {
+        vg.smallFont.a(gh.field_Fb);
+        if (this.field_D && (!this.online ||
+          this.board.currentPlayer == this.localPlayer)) {
           fieldTemp$1 = this.field_i + 1;
           this.field_i = this.field_i + 1;
           if (!(fieldTemp$1 <= 28)) {
@@ -142,15 +142,15 @@ final class ic {
             this.field_i = 0;
           }
         }
-        if (this.field_g) {
+        if (this.online) {
           for (var2 = 0; var2 < 2; var2++) {
-            if (var2 == this.field_e) {
-              if (0 == (1 << var2 & this.field_C.field_r)) {
-                if (!this.field_C.field_E &&
-                  (1 << var2 & this.field_C.field_D) != 0) {
+            if (var2 == this.localPlayer) {
+              if (0 == (1 << var2 & this.board.field_r)) {
+                if (!this.board.finished &&
+                  (1 << var2 & this.board.field_D) != 0) {
                   ve.field_v[var2] = pl.field_f;
                 } else {
-                  if ((this.field_C.field_b & 1 << var2) == 0) {
+                  if ((this.board.field_b & 1 << var2) == 0) {
                     ve.field_v[var2] = null;
                   } else {
                     stackIn_73_0 = ve.field_v;
@@ -164,19 +164,19 @@ final class ic {
                   }
                 }
               } else {
-                if ((1 << var2 & this.field_C.field_b) != 0) {
+                if ((1 << var2 & this.board.field_b) != 0) {
                   ve.field_v[var2] = nd.field_b;
                 } else {
                   ve.field_v[var2] = h.field_d;
                 }
               }
             } else {
-              var3_ref_String = this.field_C.field_c[var2];
-              if ((this.field_C.field_r & 1 << var2) != 0) {
+              var3_ref_String = this.board.playerNames[var2];
+              if ((this.board.field_r & 1 << var2) != 0) {
                 if ((1 << var2 & this.field_v) != 0) {
                   ve.field_v[var2] = oi.a(new String[]{var3_ref_String}, mh.field_f, 2);
                 } else {
-                  if ((this.field_C.field_b & 1 << var2) == 0) {
+                  if ((this.board.field_b & 1 << var2) == 0) {
                     ve.field_v[var2] = oi.a(new String[]{var3_ref_String}, qn.field_L, 2);
                   } else {
                     ve.field_v[var2] = oi.a(new String[]{var3_ref_String}, c.field_f, 2);
@@ -184,11 +184,11 @@ final class ic {
                 }
               } else {
                 if ((1 << var2 & this.field_v) == 0) {
-                  if (!this.field_C.field_E &&
-                    (this.field_C.field_D & 1 << var2) != 0) {
+                  if (!this.board.finished &&
+                    (this.board.field_D & 1 << var2) != 0) {
                     ve.field_v[var2] = oi.a(new String[]{var3_ref_String}, wa.field_S, 2);
                   } else {
-                    if ((this.field_C.field_b & 1 << var2) != 0) {
+                    if ((this.board.field_b & 1 << var2) != 0) {
                       stackIn_50_0 = ve.field_v;
                       stackIn_50_1 = var2;
                       stackIn_50_2 = new String[]{var3_ref_String};
@@ -208,18 +208,18 @@ final class ic {
               }
             }
           }
-          if (this.field_e == -2) {
+          if (this.localPlayer == -2) {
             this.field_z = -1;
             ve.field_v[3] = sj.field_d;
             ve.field_v[2] = null;
             this.field_q = 3;
-          } else if (!this.field_C.field_E) {
+          } else if (!this.board.finished) {
             this.field_q = -1;
             this.field_z = 2;
             ve.field_p[3] = null;
-            if (0 != (1 << this.field_e & this.field_C.field_D)) {
+            if (0 != (1 << this.localPlayer & this.board.field_D)) {
               ve.field_v[2] = je.field_E;
-            } else if (this.field_C.field_D != 0) {
+            } else if (this.board.field_D != 0) {
               ve.field_v[2] = of.field_c;
             } else {
               ve.field_v[2] = null;
@@ -232,7 +232,7 @@ final class ic {
             if (this.field_v != 0) {
               ve.field_v[2] = null;
               this.field_z = -1;
-            } else if ((this.field_C.field_b & 1 << this.field_e) != 0) {
+            } else if ((this.board.field_b & 1 << this.localPlayer) != 0) {
               stackIn_92_0 = ve.field_v;
               stackIn_92_1 = 2;
               if (!this.field_t) {
@@ -241,7 +241,7 @@ final class ic {
                 stackIn_93_2 = (String) (field_b);
               }
               stackIn_92_0[stackIn_92_1] = stackIn_93_2;
-            } else if (this.field_C.field_b == 0) {
+            } else if (this.board.field_b == 0) {
               stackIn_101_0 = ve.field_v;
               stackIn_101_1 = 2;
               if (!this.field_t) {
@@ -264,10 +264,10 @@ final class ic {
         } else {
           ve.field_v[2] = null;
           ve.field_v[3] = null;
-          if (this.field_C.field_E) {
+          if (this.board.finished) {
             this.field_q = 1;
             this.field_z = 0;
-            ve.field_v[0] = hg.field_n;
+            ve.field_v[0] = hg.textPlayAgain;
             ve.field_v[1] = sj.field_d;
           } else {
             ve.field_v[0] = null;
@@ -295,19 +295,19 @@ final class ic {
         for (var3Lifetime2 = 0; 4 > var3Lifetime2; var3Lifetime2++) {
           stackIn_131_0 = null;
           stackIn_131_1 = ve.field_v[var3Lifetime2];
-          L29: {
-            L30: {
+          regionExit1: {
+            regionExit2: {
               if (stackIn_131_0 != stackIn_131_1) {
                 if (!ve.field_v[var3Lifetime2].equals(ve.field_p[var3Lifetime2])) {
-                  break L30;
+                  break regionExit2;
                 }
               } else {
                 if (ve.field_p[var3Lifetime2] != null) {
-                  break L30;
+                  break regionExit2;
                 }
               }
               ve.field_A[var3Lifetime2] = 0;
-              break L29;
+              break regionExit1;
             }
             dupTemp$4 = ve.field_A[var3Lifetime2] + 8;
             ve.field_A[var3Lifetime2] = dupTemp$4;
@@ -324,7 +324,7 @@ final class ic {
         var3Lifetime3 = 1;
         for (var4 = 0; var4 < 4; var4++) {
           if (null != ve.field_v[var4]) {
-            var5 = vg.field_H.a(ve.field_v[var4].toUpperCase());
+            var5 = vg.smallFont.a(ve.field_v[var4].toUpperCase());
             if (var5 > var3Lifetime3) {
               var3Lifetime3 = var5;
             }
@@ -342,21 +342,21 @@ final class ic {
           var7++;
         }
         ie.field_e = ie.field_e + (-ie.field_e + (float)ve.field_y) * 0.10000000149011612f;
-        if (this.field_C.field_E) {
+        if (this.board.finished) {
           fieldTemp$3 = this.field_n + 1;
           this.field_n = this.field_n + 1;
           if (150 < fieldTemp$3) {
           }
         }
-        fb.field_m = dn.field_b;
+        CellFlip.field_m = dn.field_b;
         if (!bl.field_B) {
           if (wc.field_j > 1) {
-            fb.field_m = oi.a(new String[]{Integer.toString(wc.field_j)}, sj.field_e, 2);
+            CellFlip.field_m = oi.a(new String[]{Integer.toString(wc.field_j)}, sj.field_e, 2);
           } else {
             if (wc.field_j == 1) {
-              fb.field_m = cj.field_q;
+              CellFlip.field_m = cj.field_q;
             } else {
-              fb.field_m = wb.field_n;
+              CellFlip.field_m = DualLinkNode.field_n;
             }
           }
         }
@@ -367,8 +367,8 @@ final class ic {
           if (!wg.a(1, 0)) {
             return false;
           }
-          ba.field_a = sh.field_qb.g(11132);
-          sh.field_qb.field_l = 0;
+          ba.field_a = sh.field_qb.readUnsignedByte(11132);
+          sh.field_qb.position = 0;
         }
         if (param0 != 48) {
           field_y = (rm[]) null;
@@ -377,22 +377,22 @@ final class ic {
           if (!wg.a(2, 0)) {
             return false;
           }
-          ba.field_a = sh.field_qb.c((byte) -109);
-          sh.field_qb.field_l = 0;
+          ba.field_a = sh.field_qb.readUnsignedShort((byte) -109);
+          sh.field_qb.position = 0;
         }
         return wg.a(ba.field_a, 0);
     }
 
     private final void a(int param0, int param1, int param2, int param3, byte param4) {
         gk.field_g.g(58, 8);
-        gk.field_g.a(this.field_C.field_u, -70);
+        gk.field_g.a(this.board.turnCount, -70);
         gk.field_g.a(param3, param4 - 19);
         gk.field_g.a(param2, 56);
         gk.field_g.a(param0, param4 - 177);
         gk.field_g.a(param1, 91);
-        if (null == this.field_A.field_j) {
+        if (null == this.animator.field_j) {
         }
-        this.field_A.field_j = new bi(param2, param3, this.field_C.field_u, param1, param0);
+        this.animator.field_j = new bi(param2, param3, this.board.turnCount, param1, param0);
         if (param4 != 85) {
           field_y = (rm[]) null;
         }
@@ -407,31 +407,31 @@ final class ic {
 
     private final void a(int param0, int param1, int param2, int param3, boolean param4) {
         if (0 < param1) {
-          df.c(param0, param3, param1, param2);
+          Rasterizer.c(param0, param3, param1, param2);
         }
         if (param4) {
           this.a((byte) 104, false);
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void chooseAiMove(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         this.field_D = false;
-        this.field_A.field_k = -1;
-        this.field_A.field_c = -1;
-        this.field_C.b(param0, 0);
-        if (this.field_C.field_f > 0) {
-          var3 = id.field_r % this.field_C.field_f;
-          var4 = this.field_C.field_e[var3];
-          var5 = this.field_C.field_G[var3];
-          var6 = this.field_C.field_q[var3];
-          var7 = this.field_C.field_t[var3];
-          if (!this.field_g) {
-            this.a(-13020, var6, var5, var7, var4);
+        this.animator.selectedColumn = -1;
+        this.animator.selectedRow = -1;
+        this.board.collectBestMoves(param0, 0);
+        if (this.board.candidateCount > 0) {
+          var3 = id.field_r % this.board.candidateCount;
+          var4 = this.board.candidateDestRows[var3];
+          var5 = this.board.candidateDestColumns[var3];
+          var6 = this.board.candidateSourceRows[var3];
+          var7 = this.board.candidateSourceColumns[var3];
+          if (!this.online) {
+            this.performMove(-13020, var6, var5, var7, var4);
           } else {
             this.a(var6, var7, var5, var4, (byte) 85);
           }
@@ -443,13 +443,13 @@ final class ic {
 
     final static lk a(long param0, byte param1) {
         if (param1 != -127) {
-          ic.c((byte) 111);
+          GameSession.c((byte) 111);
         }
         return (lk) (ah.field_h.a(param0, (byte) 99));
     }
 
     final void c(int param0) {
-        if (!this.field_g) {
+        if (!this.online) {
           throw new IllegalStateException();
         }
         gk.field_g.g(param0, 8);
@@ -487,7 +487,7 @@ final class ic {
         int var14;
         int var16;
         int var17;
-        mg var18;
+        Sprite var18;
         int var4Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -510,9 +510,9 @@ final class ic {
         String var7_ref_StringLifetime1;
         int var9Lifetime3;
         var17 = Virogrid.field_F ? 1 : 0;
-        if (this.field_C.field_E) {
-          if (!this.field_A.field_g.b((byte) 26)) {
-            stackIn_8_0 = (-2 == this.field_e) ? 1 : 0;
+        if (this.board.finished) {
+          if (!this.animator.flips.b((byte) 26)) {
+            stackIn_8_0 = (-2 == this.localPlayer) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }
@@ -532,70 +532,70 @@ final class ic {
               var5++;
             }
           }
-          if (this.field_C.field_E &&
+          if (this.board.finished &&
             -1 == i.field_y &&
             -1 == hm.field_c) {
             var7_ref_String = "";
             var6_ref_String = var7_ref_String;
             var7_ref_StringLifetime1 = var6_ref_String;
             var6_ref_StringLifetime1 = var7_ref_StringLifetime1;
-            if (this.field_C.field_A != -1) {
-              if (this.field_g &&
-                this.field_e == this.field_C.field_A) {
+            if (this.board.currentPlayer != -1) {
+              if (this.online &&
+                this.localPlayer == this.board.currentPlayer) {
                 var6_ref_StringLifetime2 = gg.field_N;
               } else {
-                var6_ref_StringLifetime2 = oi.a(new String[]{this.field_C.field_c[this.field_C.field_A]}, rf.field_j, 2);
+                var6_ref_StringLifetime2 = oi.a(new String[]{this.board.playerNames[this.board.currentPlayer]}, rf.field_j, 2);
                 var7_ref_StringLifetime1 = var6_ref_StringLifetime2;
                 var7_ref_StringLifetime1 = var6_ref_StringLifetime2;
               }
             } else {
               var6_ref_StringLifetime2 = ne.field_b;
             }
-            if (!(this.field_C.field_A < 0) ||
-              this.field_C.field_A == -1 &&
-              this.field_C.field_n) {
-              if (!this.field_C.field_n) {
-                if (this.field_C.field_x) {
-                  if (this.field_g &&
-                    this.field_e == 1 - this.field_C.field_A) {
-                    var7_ref_StringLifetime1 = id.field_f;
+            if (!(this.board.currentPlayer < 0) ||
+              this.board.currentPlayer == -1 &&
+              this.board.boardFilled) {
+              if (!this.board.boardFilled) {
+                if (this.board.playerWipedOut) {
+                  if (this.online &&
+                    this.localPlayer == 1 - this.board.currentPlayer) {
+                    var7_ref_StringLifetime1 = id.textEndgameNopiecesYou;
                   } else {
-                    var7_ref_StringLifetime1 = oi.a(new String[]{this.field_C.field_c[-this.field_C.field_A + 1]}, cg.field_e, 2);
+                    var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[-this.board.currentPlayer + 1]}, cg.textEndgameNopieces, 2);
                   }
                 } else {
-                  if (this.field_C.field_r != 0) {
-                    if (this.field_g &&
-                      -this.field_C.field_A + 1 == this.field_e) {
-                      var7_ref_StringLifetime1 = pg.field_a;
+                  if (this.board.field_r != 0) {
+                    if (this.online &&
+                      -this.board.currentPlayer + 1 == this.localPlayer) {
+                      var7_ref_StringLifetime1 = pg.textEndgameResignedYou;
                     } else {
-                      var7_ref_StringLifetime1 = oi.a(new String[]{this.field_C.field_c[1 - this.field_C.field_A]}, vm.field_a, 2);
+                      var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[1 - this.board.currentPlayer]}, vm.textEndgameResigned, 2);
                     }
                   } else {
-                    if (this.field_w <= 1) {
-                      if (this.field_g &&
-                        this.field_e == -this.field_C.field_A + 1) {
-                        var7_ref_StringLifetime1 = ao.field_Nb;
+                    if (this.turnTimer <= 1) {
+                      if (this.online &&
+                        this.localPlayer == -this.board.currentPlayer + 1) {
+                        var7_ref_StringLifetime1 = ao.textEndgameNotimeYou;
                       } else {
-                        var7_ref_StringLifetime1 = oi.a(new String[]{this.field_C.field_c[1 - this.field_C.field_A]}, dd.field_d, 2);
+                        var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[1 - this.board.currentPlayer]}, dd.textEndgameNotime, 2);
                       }
                     }
                   }
                 }
               } else {
-                if (-1 != this.field_C.field_A) {
-                  if (this.field_g &&
-                    this.field_C.field_A == this.field_e) {
-                    var7_ref_StringLifetime1 = fh.field_a;
+                if (-1 != this.board.currentPlayer) {
+                  if (this.online &&
+                    this.board.currentPlayer == this.localPlayer) {
+                    var7_ref_StringLifetime1 = fh.textEndgameBoardfilledYou;
                   } else {
-                    var7_ref_StringLifetime1 = oi.a(new String[]{this.field_C.field_c[this.field_C.field_A]}, rc.field_i, 2);
+                    var7_ref_StringLifetime1 = oi.a(new String[]{this.board.playerNames[this.board.currentPlayer]}, rc.textEndgameBoardfilled, 2);
                   }
                 } else {
-                  var7_ref_StringLifetime1 = vf.field_d;
+                  var7_ref_StringLifetime1 = vf.textEndgameBoardfilledDraw;
                 }
               }
             }
-            var8 = hd.field_b.a(var6_ref_StringLifetime2) / 2;
-            var9 = mc.field_b.a(var7_ref_StringLifetime1) / 2;
+            var8 = hd.standardFont.a(var6_ref_StringLifetime2) / 2;
+            var9 = mc.menuFont.a(var7_ref_StringLifetime1) / 2;
             if (var9 > var8) {
               var8 = var9;
             }
@@ -616,17 +616,17 @@ final class ic {
             var14 = 2 + (int)((Math.cos((double)((float)id.field_r / 20.0f)) + 1.0) * 8.0);
             for (var15 = 0; var15 < 9; var15++) {
               var16 = var14 * (-var15 + 9) >>> 3;
-              df.a(-var8 + (var10 - var16), var12 + (var11 - var13 - var16), var8 + var16 << 1, var13 + var16 << 1, 10, 1141646, 26);
+              Rasterizer.a(-var8 + (var10 - var16), var12 + (var11 - var13 - var16), var8 + var16 << 1, var13 + var16 << 1, 10, 1141646, 26);
             }
-            df.a(-var8 + var10, var12 + (-var13 + var11), var8 << 1, var13 << 1, 10, 0, 180);
+            Rasterizer.a(-var8 + var10, var12 + (-var13 + var11), var8 << 1, var13 << 1, 10, 0, 180);
             var4 = 1;
-            hd.field_b.c(var6_ref_StringLifetime2, var10, -2 + var11 + hd.field_b.field_H / 2, 16777215, -1);
-            var11 = var11 + (hd.field_b.field_H / 2 * 5 - 2);
+            hd.standardFont.c(var6_ref_StringLifetime2, var10, -2 + var11 + hd.standardFont.field_H / 2, 16777215, -1);
+            var11 = var11 + (hd.standardFont.field_H / 2 * 5 - 2);
             if (!(var7_ref_StringLifetime1.length() <= 0)) {
-              mc.field_b.c(var7_ref_StringLifetime1, var10, -2 + var11 + mc.field_b.field_H / 2, 16777215, -1);
+              mc.menuFont.c(var7_ref_StringLifetime1, var10, -2 + var11 + mc.menuFont.field_H / 2, 16777215, -1);
             }
           }
-          if (!this.field_g) {
+          if (!this.online) {
             var4 = 1;
           }
           if (var4 == 0 &&
@@ -643,22 +643,22 @@ final class ic {
               }
             }
             if (2147483647 != var6Lifetime2) {
-              df.a(-4 + (-var6Lifetime2 + 651), -28, 8 + var6Lifetime2, 32 + var7, 4, 0, 200);
+              Rasterizer.a(-4 + (-var6Lifetime2 + 651), -28, 8 + var6Lifetime2, 32 + var7, 4, 0, 200);
             }
           }
           for (var6Lifetime3 = 0; 4 > var6Lifetime3; var6Lifetime3++) {
-            L21: {
+            regionExit1: {
               var7Lifetime2 = 1141646;
               if (var6Lifetime3 == this.field_z ||
                 var6Lifetime3 == this.field_q) {
                 if (i.field_y != -1) {
-                  break L21;
+                  break regionExit1;
                 }
                 if (var6Lifetime3 == this.field_u) {
                   var7Lifetime2 = 16777215;
                 }
                 if (20 > id.field_r % 40 &&
-                  this.field_C.field_E) {
+                  this.board.finished) {
                   var7Lifetime2 = 8421504 | (16711422 & var7Lifetime2) >> 1;
                 }
               }
@@ -678,25 +678,25 @@ final class ic {
                 var12Lifetime1 = var11Lifetime2 + (32 + ve.field_B[var6Lifetime3]);
                 if (ve.field_A[var6Lifetime3] == 0) {
                   if (ve.field_v[var6Lifetime3] != null) {
-                    df.e(var11Lifetime2, vg.field_H.field_G - (vg.field_H.field_H - var10Lifetime2), 32 + ve.field_B[var6Lifetime3], 18, 4, 1141646);
-                    vg.field_H.b(ve.field_p[var6Lifetime3].toUpperCase(), -(vg.field_H.a(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1);
+                    Rasterizer.e(var11Lifetime2, vg.smallFont.field_G - (vg.smallFont.field_H - var10Lifetime2), 32 + ve.field_B[var6Lifetime3], 18, 4, 1141646);
+                    vg.smallFont.b(ve.field_p[var6Lifetime3].toUpperCase(), -(vg.smallFont.a(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1);
                   }
                 } else {
                   if (ve.field_p[var6Lifetime3] != null) {
-                    vg.field_H.c(ve.field_p[var6Lifetime3].toUpperCase(), (var11Lifetime2 + var12Lifetime1) / 2 - (vg.field_H.a(ve.field_p[var6Lifetime3].toUpperCase()) >> 1), var10Lifetime2, var7Lifetime2, -1, 256 - ve.field_A[var6Lifetime3]);
+                    vg.smallFont.c(ve.field_p[var6Lifetime3].toUpperCase(), (var11Lifetime2 + var12Lifetime1) / 2 - (vg.smallFont.a(ve.field_p[var6Lifetime3].toUpperCase()) >> 1), var10Lifetime2, var7Lifetime2, -1, 256 - ve.field_A[var6Lifetime3]);
                   }
                   if (null != ve.field_v[var6Lifetime3]) {
-                    vg.field_H.c(ve.field_v[var6Lifetime3].toUpperCase(), -(vg.field_H.a(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1, ve.field_A[var6Lifetime3]);
+                    vg.smallFont.c(ve.field_v[var6Lifetime3].toUpperCase(), -(vg.smallFont.a(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1, ve.field_A[var6Lifetime3]);
                   }
                 }
               }
             }
           }
         }
-        if (this.field_g) {
-          stackIn_125_0 = fb.field_m;
+        if (this.online) {
+          stackIn_125_0 = CellFlip.field_m;
           if (stackIn_125_0 != null) {
-            var4Lifetime1 = 18 + vg.field_H.a(fb.field_m.toUpperCase());
+            var4Lifetime1 = 18 + vg.smallFont.a(CellFlip.field_m.toUpperCase());
             vi.field_k = vi.field_k + ((float)var4Lifetime1 - vi.field_k) * 0.5f;
             if (this.field_u == -2 &&
               param1) {
@@ -711,7 +711,7 @@ final class ic {
             var5Lifetime1 = stackIn_136_0;
             stackIn_139_0 = (var5Lifetime1 == 0) ? 1141646 : 16777215;
             var6Lifetime1 = stackIn_139_0;
-            df.a(-4, -21 + (-2 + we.field_c.field_J), (int)vi.field_k + 8, 34, 4, 0, 200);
+            Rasterizer.a(-4, -21 + (-2 + we.field_c.field_J), (int)vi.field_k + 8, 34, 4, 0, 200);
             var7Lifetime1 = 256;
             var8Lifetime1 = -20 + we.field_c.field_J;
             var9Lifetime1 = 1;
@@ -719,14 +719,14 @@ final class ic {
             var11Lifetime1 = 18;
             if (var10Lifetime1 > 8 &&
               var11Lifetime1 > 8) {
-              df.e(var9Lifetime1, var8Lifetime1, var10Lifetime1, var11Lifetime1, 4, 1141646);
+              Rasterizer.e(var9Lifetime1, var8Lifetime1, var10Lifetime1, var11Lifetime1, 4, 1141646);
             }
-            vg.field_H.b(fb.field_m.toUpperCase(), ((int)vi.field_k >> 1) + var9Lifetime1, -2 + (we.field_c.field_J - 4), var6Lifetime1, -1, var7Lifetime1);
+            vg.smallFont.b(CellFlip.field_m.toUpperCase(), ((int)vi.field_k >> 1) + var9Lifetime1, -2 + (we.field_c.field_J - 4), var6Lifetime1, -1, var7Lifetime1);
           }
         }
         if (param0 != -16) {
-          var18 = (mg) null;
-          this.a((mg) null, (byte) 103, true);
+          var18 = (Sprite) null;
+          this.a((Sprite) null, (byte) 103, true);
         }
     }
 
@@ -737,15 +737,15 @@ final class ic {
         int var2Lifetime2;
         if (13 == um.field_Gb) {
           var2 = 2;
-          if (!this.field_g) {
+          if (!this.online) {
             vm.$cfr$intArgs$a$45c25716b3df(30, ih.field_d);
             this.a(true, var2, 22273, false);
             return;
           }
-          if (this.field_e < 0) {
+          if (this.localPlayer < 0) {
             var2Lifetime2 = 5;
           } else {
-            if (!this.field_C.field_E) {
+            if (!this.board.finished) {
               var2Lifetime2 = 3;
             } else {
               var2Lifetime2 = 4;
@@ -758,7 +758,7 @@ final class ic {
         var2Lifetime1 = -20 / ((param0 - 36) / 54);
     }
 
-    private final void a(int param0, boolean param1, mg param2) {
+    private final void a(int param0, boolean param1, Sprite param2) {
         int var4_int = 0;
         int var5 = 0;
         int stackIn_8_0 = 0;
@@ -771,7 +771,7 @@ final class ic {
         RuntimeException var4 = null;
         int var6 = 0;
         int var7 = 0;
-        fb var8 = null;
+        CellFlip var8 = null;
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
@@ -781,47 +781,47 @@ final class ic {
         var10 = Virogrid.field_F ? 1 : 0;
         try {
           pj.a(param2, 256);
-          df.b(100, param0, 10, 400, 0);
-          df.b(530, 0, 10, 400, 0);
-          df.b(110, 0, 420, 400, 191);
-          for (var4_int = 0; var4_int < this.field_A.field_d.length; var4_int++) {
-            for (var5 = 0; var5 < this.field_A.field_d[0].length; var5++) {
-              var7 = -(this.field_r * var5) - this.field_p + 370;
+          Rasterizer.b(100, param0, 10, 400, 0);
+          Rasterizer.b(530, 0, 10, 400, 0);
+          Rasterizer.b(110, 0, 420, 400, 191);
+          for (var4_int = 0; var4_int < this.animator.displayedCells.length; var4_int++) {
+            for (var5 = 0; var5 < this.animator.displayedCells[0].length; var5++) {
+              var7 = -(this.cellSize * var5) - this.field_p + 370;
               if (param1) {
-                stackIn_8_0 = var4_int * this.field_r + this.field_B + 140;
+                stackIn_8_0 = var4_int * this.cellSize + this.field_B + 140;
               } else {
-                stackIn_8_0 = -this.field_B + (500 - this.field_r * var4_int);
+                stackIn_8_0 = -this.field_B + (500 - this.cellSize * var4_int);
               }
               var6 = stackIn_8_0;
               var8_int = 0;
-              var9 = this.b(var4_int, var5, -2096, this.e(param0 ^ 6121), var8_int);
-              df.c(var6, var7, this.field_o, var9);
+              var9 = this.b(var4_int, var5, -2096, this.turnPulse(param0 ^ 6121), var8_int);
+              Rasterizer.c(var6, var7, this.field_o, var9);
             }
           }
-          var8 = (fb) (this.field_A.field_g.a((byte) -117));
+          var8 = (CellFlip) (this.animator.flips.a((byte) -117));
           while (var8 != null) {
-            stackIn_15_0 = (var8.field_q) ? 12517376 : 16777215;
+            stackIn_15_0 = (var8.newOwnerIsFirstPlayer) ? 12517376 : 16777215;
             var9Lifetime1 = stackIn_15_0;
             if (param1) {
-              stackIn_18_0 = this.field_B + (140 + this.field_r * var8.field_g);
+              stackIn_18_0 = this.field_B + (140 + this.cellSize * var8.row);
             } else {
-              stackIn_18_0 = -this.field_B + 500 - var8.field_g * this.field_r;
+              stackIn_18_0 = -this.field_B + 500 - var8.row * this.cellSize;
             }
             var6Lifetime1 = stackIn_18_0;
-            var7Lifetime1 = -(this.field_r * var8.field_k) - this.field_p + 370;
-            if (var8.field_j != 0) {
-              if (var8.field_j == 1) {
-                df.b(var6Lifetime1 - (var8.field_n >> 1), 0, var8.field_n, var7Lifetime1, var9Lifetime1);
-                df.c(var6Lifetime1, var7Lifetime1, var8.field_n, var9Lifetime1);
+            var7Lifetime1 = -(this.cellSize * var8.column) - this.field_p + 370;
+            if (var8.phase != 0) {
+              if (var8.phase == 1) {
+                Rasterizer.b(var6Lifetime1 - (var8.field_n >> 1), 0, var8.field_n, var7Lifetime1, var9Lifetime1);
+                Rasterizer.c(var6Lifetime1, var7Lifetime1, var8.field_n, var9Lifetime1);
               } else {
-                df.b(var6Lifetime1 - (var8.field_n >> 1), 0, var8.field_n, var8.field_h, var9Lifetime1);
-                df.c(var6Lifetime1, var8.field_h, var8.field_n >> 1, var9Lifetime1);
-                df.c(var6Lifetime1, var7Lifetime1, this.field_o, var9Lifetime1);
+                Rasterizer.b(var6Lifetime1 - (var8.field_n >> 1), 0, var8.field_n, var8.field_h, var9Lifetime1);
+                Rasterizer.c(var6Lifetime1, var8.field_h, var8.field_n >> 1, var9Lifetime1);
+                Rasterizer.c(var6Lifetime1, var7Lifetime1, this.field_o, var9Lifetime1);
               }
             } else {
-              df.a(var6Lifetime1, 0, var6Lifetime1, var8.field_h, var9Lifetime1);
+              Rasterizer.a(var6Lifetime1, 0, var6Lifetime1, var8.field_h, var9Lifetime1);
             }
-            var8 = (fb) (this.field_A.field_g.a(16213));
+            var8 = (CellFlip) (this.animator.flips.a(16213));
           }
           ul.b((byte) 115);
           return;
@@ -839,7 +839,7 @@ final class ic {
         }
     }
 
-    private final void b(int param0, boolean param1) {
+    private final void drawStatusPanel(int param0, boolean param1) {
         int var11 = 0;
         int stackIn_5_0 = 0;
         v stackIn_9_0;
@@ -874,61 +874,61 @@ final class ic {
         var13 = Virogrid.field_F ? 1 : 0;
         ah.a(400, 100, 39, 1141646, 120);
         ah.a(400, 100, 40, 1141646, 120);
-        if (this.field_C.field_E) {
-          stackIn_84_0 = (this.field_C.field_A == 0) ? 30136 : 16777215;
+        if (this.board.finished) {
+          stackIn_84_0 = (this.board.currentPlayer == 0) ? 30136 : 16777215;
           var3 = stackIn_84_0;
-          var4 = Integer.toString(this.field_C.field_z[0]);
+          var4 = Integer.toString(this.board.pieceCounts[0]);
           var7_ref_String = var4;
           var6 = var7_ref_String;
           var7_ref_String = var4;
-          var5 = Integer.toString(this.field_C.field_z[1]);
+          var5 = Integer.toString(this.board.pieceCounts[1]);
           var7_ref_String = var5;
           var6 = var7_ref_String;
           var7_ref_String = var5;
-          if (this.field_A.field_g.b((byte) 91)) {
+          if (this.animator.flips.b((byte) 91)) {
             var6 = ne.field_b;
             var7 = 16777215;
-            if (0 <= this.field_C.field_A) {
-              if (this.field_g &&
-                this.field_e == this.field_C.field_A) {
+            if (0 <= this.board.currentPlayer) {
+              if (this.online &&
+                this.localPlayer == this.board.currentPlayer) {
                 var7 = var3;
                 var6 = gg.field_N;
               } else {
                 var7 = var3;
-                var6 = oi.a(new String[]{this.field_C.field_c[this.field_C.field_A]}, rf.field_j, 2);
+                var6 = oi.a(new String[]{this.board.playerNames[this.board.currentPlayer]}, rf.field_j, 2);
               }
             }
-            mc.field_b.c(var6, 320, 30, var7, -1);
-            var8 = mc.field_b.a(var6);
-            hd.field_b.a(var4, Math.min(186, 320 + (-16 - var8 / 2)), 30, 30136, -1);
-            hd.field_b.b(var5, Math.max(456, var8 / 2 + 336), 30, 16777215, -1);
+            mc.menuFont.c(var6, 320, 30, var7, -1);
+            var8 = mc.menuFont.a(var6);
+            hd.standardFont.a(var4, Math.min(186, 320 + (-16 - var8 / 2)), 30, 30136, -1);
+            hd.standardFont.b(var5, Math.max(456, var8 / 2 + 336), 30, 16777215, -1);
           } else {
-            if (this.field_C.field_g) {
-              var6_int = 1 - this.field_C.field_B;
-              var7_ref_String = oi.a(new String[]{this.field_C.field_c[var6_int]}, ee.field_f, 2);
-              if (this.field_g &&
-                this.field_e == var6_int) {
-                var7_ref_String = vc.field_db;
+            if (this.board.field_g) {
+              var6_int = 1 - this.board.lastMovePlayer;
+              var7_ref_String = oi.a(new String[]{this.board.playerNames[var6_int]}, ee.textEndgameEntrapment, 2);
+              if (this.online &&
+                this.localPlayer == var6_int) {
+                var7_ref_String = vc.textEndgameEntrapmentYou;
                 var6 = var7_ref_String;
                 var6 = var7_ref_String;
               }
-              mc.field_b.c(var7_ref_String, 320, 30, 16777215, -1);
+              mc.menuFont.c(var7_ref_String, 320, 30, 16777215, -1);
             }
           }
         } else {
           pe.a(10, 1141646, 319, (byte) 99, 25);
           pe.a(10, 1141646, 320, (byte) -124, 25);
-          var16 = Integer.toString(this.field_C.field_z[0]);
-          var17 = Integer.toString(this.field_C.field_z[1]);
-          hd.field_b.a(var16, 316, 30, 30136, -1);
-          hd.field_b.b(var17, 326, 30, 16777215, -1);
-          if (this.field_C.field_A >= 0) {
-            var5 = oi.a(new String[]{Integer.toString((-1 + (this.field_w + 50)) / 50)}, ej.field_O, 2);
-            stackIn_5_0 = (this.field_C.field_A == 0) ? 30136 : 16777215;
+          var16 = Integer.toString(this.board.pieceCounts[0]);
+          var17 = Integer.toString(this.board.pieceCounts[1]);
+          hd.standardFont.a(var16, 316, 30, 30136, -1);
+          hd.standardFont.b(var17, 326, 30, 16777215, -1);
+          if (this.board.currentPlayer >= 0) {
+            var5 = oi.a(new String[]{Integer.toString((-1 + (this.turnTimer + 50)) / 50)}, ej.field_O, 2);
+            stackIn_5_0 = (this.board.currentPlayer == 0) ? 30136 : 16777215;
             var6_int = stackIn_5_0;
-            if (this.field_g &&
-              this.field_e == this.field_C.field_A) {
-              stackIn_9_0 = mc.field_b;
+            if (this.online &&
+              this.localPlayer == this.board.currentPlayer) {
+              stackIn_9_0 = mc.menuFont;
               stackIn_9_1 = vg.field_E;
               stackIn_9_2 = 124;
               stackIn_9_3 = 30;
@@ -938,73 +938,73 @@ final class ic {
                 stackIn_10_4 = var6_int;
               }
               ((v) (Object) stackIn_9_0).b(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_10_4, -1);
-              mc.field_b.a(var5, 516, 30, 16777215, -1);
+              mc.menuFont.a(var5, 516, 30, 16777215, -1);
             } else {
-              var14 = this.field_C.field_c[this.field_C.field_A];
+              var14 = this.board.playerNames[this.board.currentPlayer];
               var7_ref_String = var14;
-              var8 = -hd.field_b.a(var17) + 268;
+              var8 = -hd.standardFont.a(var17) + 268;
               var9_ref_String = oi.a(new String[]{var14}, ec.field_y, 2);
-              while (var8 < hd.field_b.a(var9_ref_String)) {
+              while (var8 < hd.standardFont.a(var9_ref_String)) {
                 var15 = var7_ref_String.substring(0, var7_ref_String.length() - 1);
                 var7_ref_String = var15;
                 var9_ref_String = oi.a(new String[]{var15 + "..."}, ec.field_y, 2);
               }
-              stackIn_16_0 = mc.field_b;
+              stackIn_16_0 = mc.menuFont;
               stackIn_16_1 = var9_ref_String;
               stackIn_16_2 = 516;
               stackIn_16_3 = 30;
-              if (this.field_C.field_A != 0) {
+              if (this.board.currentPlayer != 0) {
                 stackIn_17_4 = 16777215;
               } else {
                 stackIn_17_4 = 30136;
               }
               ((v) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, -1);
-              mc.field_b.b(var5, 124, 30, 16777215, -1);
+              mc.menuFont.b(var5, 124, 30, 16777215, -1);
             }
           }
           var5_int = 0;
-          if (!this.field_C.field_E &&
-            this.field_C.field_A >= 0 && (!this.field_g ||
-            this.field_e == this.field_C.field_A)) {
-            L13: {
+          if (!this.board.finished &&
+            this.board.currentPlayer >= 0 && (!this.online ||
+            this.localPlayer == this.board.currentPlayer)) {
+            regionExit1: {
               var6 = "";
-              if ((!this.field_g ||
-                !(this.field_C.field_u <= 1)) && 0 != this.field_C.field_u) {
-                if ((!this.field_g ||
-                  !(this.field_C.field_u <= 3)) &&
-                  this.field_C.field_u != 2) {
-                  if ((((this.field_g &&
-                    (this.field_C.field_u <= 5)) ||
-                    this.field_C.field_u == 4)) && (!(!b.field_Db))) {
-                    var6 = jd.field_a;
+              if ((!this.online ||
+                !(this.board.turnCount <= 1)) && 0 != this.board.turnCount) {
+                if ((!this.online ||
+                  !(this.board.turnCount <= 3)) &&
+                  this.board.turnCount != 2) {
+                  if ((((this.online &&
+                    (this.board.turnCount <= 5)) ||
+                    this.board.turnCount == 4)) && (!(!b.field_Db))) {
+                    var6 = jd.tutorial4;
                   }
                 } else {
                   if (!(!b.field_Db)) {
-                    var6 = fa.field_h;
+                    var6 = fa.tutorial3;
                   }
                 }
-                break L13;
+                break regionExit1;
               }
               if (b.field_Db) {
-                if (this.field_A.field_c == -1) {
-                  var6 = ee.field_b;
-                  for (var7 = 0; var7 < this.field_C.field_C.length; var7++) {
-                    for (var8 = 0; this.field_C.field_C[0].length > var8; var8++) {
-                      if (~this.field_C.field_C[var7][var8] == ~this.field_C.field_A) {
-                        this.a(this.a(var8, 5975), this.a(this.field_C.field_C[0].length / 2, 5975), false, this.b(200, this.field_C.field_A), this.a(param1, 4347, this.field_C.field_C.length / 2), this.a(param1, 4347, var7));
+                if (this.animator.selectedRow == -1) {
+                  var6 = ee.tutorial1;
+                  for (var7 = 0; var7 < this.board.cells.length; var7++) {
+                    for (var8 = 0; this.board.cells[0].length > var8; var8++) {
+                      if (~this.board.cells[var7][var8] == ~this.board.currentPlayer) {
+                        this.a(this.cellScreenY(var8, 5975), this.cellScreenY(this.board.cells[0].length / 2, 5975), false, this.b(200, this.board.currentPlayer), this.cellScreenX(param1, 4347, this.board.cells.length / 2), this.cellScreenX(param1, 4347, var7));
                       }
                     }
                   }
                 } else {
-                  var6 = gl.field_h;
+                  var6 = gl.tutorial2;
                 }
               }
             }
-            if ((!this.field_g &&
-              this.field_C.field_u > 0 ||
-              (!(this.field_C.field_u <= 1) ||
-              this.field_A.field_c != -1)) &&
-              this.field_C.field_C[0].length / 2 == this.field_h) {
+            if ((!this.online &&
+              this.board.turnCount > 0 ||
+              (!(this.board.turnCount <= 1) ||
+              this.animator.selectedRow != -1)) &&
+              this.board.cells[0].length / 2 == this.hoverColumn) {
               var6 = "";
             }
             if (var6.length() > 0) {
@@ -1030,15 +1030,15 @@ final class ic {
             this.field_c > 0) {
             var6_int = 320;
             var7 = 224;
-            var8 = mc.field_b.c(this.field_a, 23320) + 16;
-            var9 = 16 + mc.field_b.a(this.field_a, 800, 20);
+            var8 = mc.menuFont.c(this.field_a, 23320) + 16;
+            var9 = 16 + mc.menuFont.a(this.field_a, 800, 20);
             var10 = (int)(8.0 * (1.0 + Math.cos((double)((float)id.field_r / 20.0f)))) + 2;
             for (var11 = 0; var11 < 9; var11++) {
               var12 = var10 * (9 - var11) >>> 3;
-              df.a(-(var8 / 2) + var6_int - var12, -var12 + (-(var9 / 2) + var7), var12 + var8 / 2 << 1, var9 / 2 + var12 << 1, 10, 1141646, this.field_c / 7);
+              Rasterizer.a(-(var8 / 2) + var6_int - var12, -var12 + (-(var9 / 2) + var7), var12 + var8 / 2 << 1, var9 / 2 + var12 << 1, 10, 1141646, this.field_c / 7);
             }
-            df.a(-(var8 / 2) + var6_int, -(var9 / 2) + var7, var8, var9, 10, 0, this.field_c);
-            mc.field_b.a(this.field_a, 320, 220, 0, 0, 16777215, -1, this.field_c, 1, 1, 20);
+            Rasterizer.a(-(var8 / 2) + var6_int, -(var9 / 2) + var7, var8, var9, 10, 0, this.field_c);
+            mc.menuFont.a(this.field_a, 320, 220, 0, 0, 16777215, -1, this.field_c, 1, 1, 20);
           }
         }
         if (param0 <= 65) {
@@ -1046,11 +1046,11 @@ final class ic {
         }
     }
 
-    final static void a(mg[] param0, int param1, int param2, mg[] param3, int param4, e param5, int param6, int param7, int param8, int param9, boolean param10, int param11) {
+    final static void a(Sprite[] param0, int param1, int param2, Sprite[] param3, int param4, e param5, int param6, int param7, int param8, int param9, boolean param10, int param11) {
         try {
           kh.a(param1, param7, param2, param11, param5, (byte) -59, param3, param4, param1, param7, param6, param0, param8, param5, param10);
           if (param9 != -16824) {
-            ic.a(117L, (byte) -51);
+            GameSession.a(117L, (byte) -51);
           }
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "ic.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
@@ -1065,37 +1065,37 @@ final class ic {
           ai.field_c = cf.field_c;
           kg.field_a = lj.field_r;
         }
-        el.a(false, (byte) -106);
+        BufferedSocket.a(false, (byte) -106);
         if (!ke.field_p.field_d &&
           mf.a(98, param1)) {
           ka.a(true, (byte) 87);
         }
         var5 = param1;
         if (param2 != 22273) {
-          ic.b(64);
+          GameSession.b(64);
         }
         var6 = param3 ? 1 : 0;
         gb.a(-2, 0, var6 != 0, var5);
     }
 
-    private final void a(int param0) {
-        this.field_r = 360 / (this.field_A.field_d.length - 1);
-        int var2 = 300 / (-1 + this.field_A.field_d[0].length);
+    private final void layoutBoard(int param0) {
+        this.cellSize = 360 / (this.animator.displayedCells.length - 1);
+        int var2 = 300 / (-1 + this.animator.displayedCells[0].length);
         if (param0 != -6032) {
           this.field_q = -26;
         }
-        if (this.field_r > var2) {
-          this.field_r = var2;
+        if (this.cellSize > var2) {
+          this.cellSize = var2;
         }
-        this.field_B = (360 - this.field_r * (-1 + this.field_A.field_d.length)) / 2;
-        this.field_p = (-(this.field_r * (-1 + this.field_A.field_d[0].length)) + 300) / 2;
-        this.field_o = -2 + (int)Math.round((double)this.field_r / 2.25);
-        this.field_d = (int)((double)this.field_r / 2.25);
-        ie.a(this.field_A.field_d.length, this.field_r, param0 ^ -30900, this.field_B, this.field_p, this.field_A.field_d[0].length);
-        oj.b(-9, this.field_r);
+        this.field_B = (360 - this.cellSize * (-1 + this.animator.displayedCells.length)) / 2;
+        this.field_p = (-(this.cellSize * (-1 + this.animator.displayedCells[0].length)) + 300) / 2;
+        this.field_o = -2 + (int)Math.round((double)this.cellSize / 2.25);
+        this.field_d = (int)((double)this.cellSize / 2.25);
+        ie.a(this.animator.displayedCells.length, this.cellSize, param0 ^ -30900, this.field_B, this.field_p, this.animator.displayedCells[0].length);
+        oj.b(-9, this.cellSize);
     }
 
-    private final void a(mg param0, boolean param1, int param2) {
+    private final void a(Sprite param0, boolean param1, int param2) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_58_0;
@@ -1122,7 +1122,7 @@ final class ic {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        fb var15 = null;
+        CellFlip var15 = null;
         int var15_int = 0;
         int var16 = 0;
         int var17 = 0;
@@ -1152,10 +1152,10 @@ final class ic {
         var19 = Virogrid.field_F ? 1 : 0;
         try {
           pj.a(param0, 256);
-          df.b(100, 0, 10, 400, 0);
-          df.b(530, 0, 10, 400, 0);
-          df.b(110, 0, 420, 400, 263172);
-          var4_int = this.e(6121);
+          Rasterizer.b(100, 0, 10, 400, 0);
+          Rasterizer.b(530, 0, 10, 400, 0);
+          Rasterizer.b(110, 0, 420, 400, 263172);
+          var4_int = this.turnPulse(6121);
           if (param2 != 9) {
             return;
           }
@@ -1165,9 +1165,9 @@ final class ic {
             stackIn_6_0 = var4_int;
           }
           var5 = stackIn_6_0;
-          if (!this.field_C.field_E) {
-            if (this.field_A.field_c != -1) {
-              stackIn_14_0 = (this.field_A.field_k != -1) ? 1 : 0;
+          if (!this.board.finished) {
+            if (this.animator.selectedRow != -1) {
+              stackIn_14_0 = (this.animator.selectedColumn != -1) ? 1 : 0;
             } else {
               stackIn_14_0 = 0;
             }
@@ -1177,7 +1177,7 @@ final class ic {
           var10 = stackIn_14_0;
           var11 = (this.field_d >> 1) + this.field_d << 4;
           var12 = 100 - id.field_r % 200;
-          if (2 > this.field_C.field_u) {
+          if (2 > this.board.turnCount) {
             var11 = this.field_d + this.field_d << 4;
             var12 = -(id.field_r % 50) + 100;
           }
@@ -1185,20 +1185,20 @@ final class ic {
             var12 = -var12;
           }
           if (var10 != 0) {
-            var8 = this.a(param1, 4347, this.field_A.field_c);
-            var9 = this.a(this.field_A.field_k, 5975);
-            df.c(var8, var9, this.field_d, 16776964);
-            df.c(var8, var9, 1 + this.field_d, 16776964);
-            df.c(var8, var9, this.field_d, 263172);
+            var8 = this.cellScreenX(param1, 4347, this.animator.selectedRow);
+            var9 = this.cellScreenY(this.animator.selectedColumn, 5975);
+            Rasterizer.c(var8, var9, this.field_d, 16776964);
+            Rasterizer.c(var8, var9, 1 + this.field_d, 16776964);
+            Rasterizer.c(var8, var9, this.field_d, 263172);
           }
           var12 += 100;
           var13 = 0;
           var14 = var5;
-          if (this.field_C.field_C.length != 7) {
-            if (this.field_C.field_C.length == 9) {
+          if (this.board.cells.length != 7) {
+            if (this.board.cells.length == 9) {
               var14 = (int)((double)var5 * 0.65);
             } else {
-              if (11 <= this.field_C.field_C.length) {
+              if (11 <= this.board.cells.length) {
                 var14 = var5 >> 1;
                 var5 = var5 >> 1;
               }
@@ -1206,80 +1206,80 @@ final class ic {
           } else {
             var14 = (int)(0.9 * (double)var5);
           }
-          for (var6 = 0; var6 < this.field_A.field_d.length; var6++) {
-            for (var7 = 0; var7 < this.field_A.field_d[0].length; var7++) {
-              var8Lifetime1 = this.a(param1, 4347, var6);
-              var9Lifetime1 = this.a(var7, 5975);
-              df.c(var8Lifetime1, var9Lifetime1, this.field_o, 996682);
+          for (var6 = 0; var6 < this.animator.displayedCells.length; var6++) {
+            for (var7 = 0; var7 < this.animator.displayedCells[0].length; var7++) {
+              var8Lifetime1 = this.cellScreenX(param1, 4347, var6);
+              var9Lifetime1 = this.cellScreenY(var7, 5975);
+              Rasterizer.c(var8Lifetime1, var9Lifetime1, this.field_o, 996682);
               var15_int = this.b(var6, var7, -2096, var4_int, var13);
               if (var15_int == -1) {
-                df.c(var8Lifetime1, var9Lifetime1, this.field_o - 3, 263172);
+                Rasterizer.c(var8Lifetime1, var9Lifetime1, this.field_o - 3, 263172);
                 if (var10 != 0) {
-                  var16 = this.field_C.a(var7, this.field_A.field_c, (byte) 99, var6, this.field_A.field_k);
+                  var16 = this.board.classifyMove(var7, this.animator.selectedRow, (byte) 99, var6, this.animator.selectedColumn);
                   if (var16 != -1) {
-                    this.a(var8Lifetime1, -var14 + this.field_d, this.b(this.field_A.field_c, this.field_A.field_k, -2096, var4_int, var13), var9Lifetime1, false);
+                    this.a(var8Lifetime1, -var14 + this.field_d, this.b(this.animator.selectedRow, this.animator.selectedColumn, -2096, var4_int, var13), var9Lifetime1, false);
                   }
                 }
               }
             }
           }
-          for (var6Lifetime1 = 0; var6Lifetime1 < this.field_A.field_d.length; var6Lifetime1++) {
-            for (var7Lifetime1 = 0; var7Lifetime1 < this.field_A.field_d[0].length; var7Lifetime1++) {
-              var8Lifetime2 = this.a(param1, 4347, var6Lifetime1);
-              var9Lifetime2 = this.a(var7Lifetime1, param2 ^ 5982);
-              if ((!this.field_g ||
-                this.field_e == this.field_C.field_A) && (!this.field_C.field_E &&
-                this.field_A.field_d[var6Lifetime1][var7Lifetime1] == this.field_C.field_A &&
-                this.field_A.field_h[var6Lifetime1][var7Lifetime1])) {
-                if (this.field_A.field_c != var6Lifetime1 ||
-                  this.field_A.field_k != var7Lifetime1) {
+          for (var6Lifetime1 = 0; var6Lifetime1 < this.animator.displayedCells.length; var6Lifetime1++) {
+            for (var7Lifetime1 = 0; var7Lifetime1 < this.animator.displayedCells[0].length; var7Lifetime1++) {
+              var8Lifetime2 = this.cellScreenX(param1, 4347, var6Lifetime1);
+              var9Lifetime2 = this.cellScreenY(var7Lifetime1, param2 ^ 5982);
+              if ((!this.online ||
+                this.localPlayer == this.board.currentPlayer) && (!this.board.finished &&
+                this.animator.displayedCells[var6Lifetime1][var7Lifetime1] == this.board.currentPlayer &&
+                this.animator.field_h[var6Lifetime1][var7Lifetime1])) {
+                if (this.animator.selectedRow != var6Lifetime1 ||
+                  this.animator.selectedColumn != var7Lifetime1) {
                   stackIn_58_0 = var8Lifetime2 << 4;
                   stackIn_58_1 = var9Lifetime2 << 4;
                   stackIn_58_2 = var11;
                   stackIn_58_3 = var12;
-                  if (this.field_C.field_A == 0) {
+                  if (this.board.currentPlayer == 0) {
                     stackIn_59_4 = vb.field_a;
                   } else {
                     stackIn_59_4 = vb.field_j;
                   }
-                  df.a(stackIn_58_0, stackIn_58_1, stackIn_58_2, stackIn_58_3, stackIn_59_4);
+                  Rasterizer.a(stackIn_58_0, stackIn_58_1, stackIn_58_2, stackIn_58_3, stackIn_59_4);
                 }
-                if (this.field_w > sh.field_yb[this.field_C.field_y] - 200 &&
-                  this.field_w < -150 + sh.field_yb[this.field_C.field_y]) {
-                  df.f(var8Lifetime2, var9Lifetime2, this.field_d + 1, 16776964);
+                if (this.turnTimer > sh.turnDurations[this.board.timeSetting] - 200 &&
+                  this.turnTimer < -150 + sh.turnDurations[this.board.timeSetting]) {
+                  Rasterizer.f(var8Lifetime2, var9Lifetime2, this.field_d + 1, 16776964);
                 }
               }
             }
           }
-          for (var6Lifetime2 = 0; var6Lifetime2 < this.field_A.field_d.length; var6Lifetime2++) {
-            for (var7Lifetime2 = 0; this.field_A.field_d[0].length > var7Lifetime2; var7Lifetime2++) {
+          for (var6Lifetime2 = 0; var6Lifetime2 < this.animator.displayedCells.length; var6Lifetime2++) {
+            for (var7Lifetime2 = 0; this.animator.displayedCells[0].length > var7Lifetime2; var7Lifetime2++) {
               boolean decompiledFrameRemainder0 = true;
-              var8Lifetime3 = this.a(param1, 4347, var6Lifetime2);
-              var9Lifetime3 = this.a(var7Lifetime2, param2 + 5966);
+              var8Lifetime3 = this.cellScreenX(param1, 4347, var6Lifetime2);
+              var9Lifetime3 = this.cellScreenY(var7Lifetime2, param2 + 5966);
               var15_intLifetime1 = this.b(var6Lifetime2, var7Lifetime2, -2096, var4_int, var13);
               if (-1 != var15_intLifetime1) {
-                if (this.field_A.field_c == var6Lifetime2 &&
-                  this.field_A.field_k == var7Lifetime2) {
-                  df.c(var8Lifetime3, var9Lifetime3, this.field_o - 3, 263172);
+                if (this.animator.selectedRow == var6Lifetime2 &&
+                  this.animator.selectedColumn == var7Lifetime2) {
+                  Rasterizer.c(var8Lifetime3, var9Lifetime3, this.field_o - 3, 263172);
                   var16Lifetime1 = -this.field_k + this.field_d;
                   this.a(var8Lifetime3, var16Lifetime1, var15_intLifetime1, var9Lifetime3, false);
                 } else {
-                  if (this.field_A.field_d[var6Lifetime2][var7Lifetime2] != -1 &&
-                    this.field_A.field_d[var6Lifetime2][var7Lifetime2] != this.field_C.field_A) {
-                    var16Lifetime1 = -this.field_x + var6Lifetime2;
+                  if (this.animator.displayedCells[var6Lifetime2][var7Lifetime2] != -1 &&
+                    this.animator.displayedCells[var6Lifetime2][var7Lifetime2] != this.board.currentPlayer) {
+                    var16Lifetime1 = -this.hoverRow + var6Lifetime2;
                     if (var16Lifetime1 < 0) {
                       var16Lifetime1 = -var16Lifetime1;
                     }
-                    var17 = var7Lifetime2 - this.field_h;
+                    var17 = var7Lifetime2 - this.hoverColumn;
                     if (var17 < 0) {
                       var17 = -var17;
                     }
                     if (var16Lifetime1 <= 1 &&
-                      var17 <= 1 && (!this.field_g ||
-                      this.field_e == this.field_C.field_A) && (!this.field_C.field_E &&
-                      this.field_A.field_c != -1 &&
-                      this.field_C.a((int) (byte)this.field_C.field_A, this.field_x, this.field_A.field_k, 2, this.field_A.field_c, this.field_h))) {
-                      df.c(var8Lifetime3, var9Lifetime3, -3 + this.field_o, 263172);
+                      var17 <= 1 && (!this.online ||
+                      this.localPlayer == this.board.currentPlayer) && (!this.board.finished &&
+                      this.animator.selectedRow != -1 &&
+                      this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.hoverRow, this.animator.selectedColumn, 2, this.animator.selectedRow, this.hoverColumn))) {
+                      Rasterizer.c(var8Lifetime3, var9Lifetime3, -3 + this.field_o, 263172);
                       this.a(var8Lifetime3, -(var5 >> 1) + this.field_d, var15_intLifetime1, var9Lifetime3, false);
                     } else {
                       this.a(var8Lifetime3, this.field_d, var15_intLifetime1, var9Lifetime3, false);
@@ -1293,29 +1293,29 @@ final class ic {
               }
             }
           }
-          if ((!this.field_g ||
-            this.field_e == this.field_C.field_A) && !this.field_C.field_E) {
-            if (!this.field_C.a((byte) 127, this.field_h, this.field_x, (byte)this.field_C.field_A)) {
-              if ((this.field_A.field_c != -1) &&
-                (this.field_C.a((int) (byte)this.field_C.field_A, this.field_x, this.field_A.field_k, 2, this.field_A.field_c, this.field_h))) {
-                var8Lifetime4 = this.a(param1, 4347, this.field_x);
-                var9Lifetime4 = this.a(this.field_h, 5975);
-                df.f(var8Lifetime4, var9Lifetime4, this.field_d, 16776964);
+          if ((!this.online ||
+            this.localPlayer == this.board.currentPlayer) && !this.board.finished) {
+            if (!this.board.cellEquals((byte) 127, this.hoverColumn, this.hoverRow, (byte)this.board.currentPlayer)) {
+              if ((this.animator.selectedRow != -1) &&
+                (this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.hoverRow, this.animator.selectedColumn, 2, this.animator.selectedRow, this.hoverColumn))) {
+                var8Lifetime4 = this.cellScreenX(param1, 4347, this.hoverRow);
+                var9Lifetime4 = this.cellScreenY(this.hoverColumn, 5975);
+                Rasterizer.f(var8Lifetime4, var9Lifetime4, this.field_d, 16776964);
               }
             } else {
-              var8Lifetime4 = this.a(param1, 4347, this.field_x);
-              var9Lifetime4 = this.a(this.field_h, 5975);
-              df.f(var8Lifetime4, var9Lifetime4, this.field_d, 16776964);
+              var8Lifetime4 = this.cellScreenX(param1, 4347, this.hoverRow);
+              var9Lifetime4 = this.cellScreenY(this.hoverColumn, 5975);
+              Rasterizer.f(var8Lifetime4, var9Lifetime4, this.field_d, 16776964);
             }
           }
-          var15 = (fb) (this.field_A.field_g.a((byte) -70));
+          var15 = (CellFlip) (this.animator.flips.a((byte) -70));
           while (var15 != null) {
-            stackIn_110_0 = (var15.field_q) ? 30136 : 16777215;
+            stackIn_110_0 = (var15.newOwnerIsFirstPlayer) ? 30136 : 16777215;
             var16Lifetime2 = stackIn_110_0;
-            var8Lifetime5 = this.a(param1, 4347, var15.field_g);
-            var9Lifetime5 = this.a(var15.field_k, 5975);
-            if (var15.field_j != 0) {
-              if (var15.field_j != 1) {
+            var8Lifetime5 = this.cellScreenX(param1, 4347, var15.row);
+            var9Lifetime5 = this.cellScreenY(var15.column, 5975);
+            if (var15.phase != 0) {
+              if (var15.phase != 1) {
                 this.a(var8Lifetime5, this.field_d, var16Lifetime2, var9Lifetime5, false);
               } else {
                 stackIn_115_1 = var8Lifetime5;
@@ -1327,17 +1327,17 @@ final class ic {
                 this.a(stackIn_115_1, stackIn_116_2, var16Lifetime2, var9Lifetime5, false);
               }
             }
-            var15 = (fb) (this.field_A.field_g.a(param2 + 16204));
+            var15 = (CellFlip) (this.animator.flips.a(param2 + 16204));
           }
-          if (this.field_C.field_B >= 0) {
-            var16Lifetime3 = this.b(param2 ^ 193, this.field_C.field_B);
-            var17Lifetime1 = this.a(param1, param2 ^ 4338, this.field_C.field_k);
-            var18 = this.a(this.field_C.field_a, 5975);
-            var8Lifetime6 = this.a(param1, 4347, this.field_C.field_m);
-            var9Lifetime6 = this.a(this.field_C.field_w, 5975);
+          if (this.board.lastMovePlayer >= 0) {
+            var16Lifetime3 = this.b(param2 ^ 193, this.board.lastMovePlayer);
+            var17Lifetime1 = this.cellScreenX(param1, param2 ^ 4338, this.board.lastMoveSourceRow);
+            var18 = this.cellScreenY(this.board.lastMoveSourceColumn, 5975);
+            var8Lifetime6 = this.cellScreenX(param1, 4347, this.board.lastMoveDestRow);
+            var9Lifetime6 = this.cellScreenY(this.board.lastMoveDestColumn, 5975);
             this.a(var9Lifetime6, var18, false, var16Lifetime3, var17Lifetime1, var8Lifetime6);
           }
-          this.b(68, param1);
+          this.drawStatusPanel(68, param1);
           if (ke.field_p.field_k) {
             wd.b(8);
           }
@@ -1357,34 +1357,34 @@ final class ic {
         }
     }
 
-    final void a(boolean param0, byte param1, mg param2, mg param3) {
+    final void a(boolean param0, byte param1, Sprite param2, Sprite param3) {
         try {
           this.a(0, param0, param3);
           this.a(param2, (byte) -123, param0);
           if (param1 <= 1) {
-            this.c(47, 113);
+            this.chooseAiMove(47, 113);
           }
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "ic.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(byte param0) {
+    final void resign(byte param0) {
         int var3;
         var3 = Virogrid.field_F ? 1 : 0;
-        if (!this.field_g) {
-          if (this.field_C.field_A == 0) {
-            this.field_C.d(param0 - 25, 1);
+        if (!this.online) {
+          if (this.board.currentPlayer == 0) {
+            this.board.finishGame(param0 - 25, 1);
           } else {
-            if (this.field_C.field_A == 1) {
-              this.field_C.d(-35, 0);
+            if (this.board.currentPlayer == 1) {
+              this.board.finishGame(-35, 0);
             }
           }
         } else {
           gk.field_g.g(60, param0 + 53);
         }
         if (param0 != -45) {
-          ic.c((byte) -78);
+          GameSession.c((byte) -78);
         }
     }
 
@@ -1395,12 +1395,12 @@ final class ic {
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder0 = true;
         var7 = Virogrid.field_F ? 1 : 0;
-        if (this.field_x == param0 &&
-          this.field_h == param1 && (!this.field_g ||
-          this.field_e == this.field_C.field_A) && !this.field_C.field_E) {
-          if ((!this.field_C.a((byte) 127, this.field_h, this.field_x, (byte)this.field_C.field_A)) &&
-            (decompiledFrameRemainder0 = (-1 != this.field_A.field_c))) {
-            decompiledFrameRemainder0 = !(!this.field_C.a((int) (byte)this.field_C.field_A, this.field_x, this.field_A.field_k, 2, this.field_A.field_c, this.field_h));
+        if (this.hoverRow == param0 &&
+          this.hoverColumn == param1 && (!this.online ||
+          this.localPlayer == this.board.currentPlayer) && !this.board.finished) {
+          if ((!this.board.cellEquals((byte) 127, this.hoverColumn, this.hoverRow, (byte)this.board.currentPlayer)) &&
+            (decompiledFrameRemainder0 = (-1 != this.animator.selectedRow))) {
+            decompiledFrameRemainder0 = !(!this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.hoverRow, this.animator.selectedColumn, 2, this.animator.selectedRow, this.hoverColumn));
           }
           if (decompiledFrameRemainder0) {
             param4 = param4 + param3 * 4;
@@ -1408,18 +1408,18 @@ final class ic {
           }
         }
         if (decompiledFrameRemainder1) {
-          if ((!this.field_g ||
-            this.field_e == this.field_C.field_A) &&
-            (!this.field_C.field_E &&
-            this.field_A.field_d[param0][param1] == this.field_C.field_A &&
-            this.field_A.field_h[param0][param1])) {
+          if ((!this.online ||
+            this.localPlayer == this.board.currentPlayer) &&
+            (!this.board.finished &&
+            this.animator.displayedCells[param0][param1] == this.board.currentPlayer &&
+            this.animator.field_h[param0][param1])) {
             param4 = param4 + param3 * 6;
           } else {
-            if (this.field_A.field_d[param0][param1] != 0) {
-              if (this.field_A.field_d[param0][param1] == 1) {
+            if (this.animator.displayedCells[param0][param1] != 0) {
+              if (this.animator.displayedCells[param0][param1] == 1) {
                 param4 += 128;
               } else {
-                if (this.field_A.field_d[param0][param1] == -1) {
+                if (this.animator.displayedCells[param0][param1] == -1) {
                   return -1;
                 }
               }
@@ -1447,7 +1447,7 @@ final class ic {
         return var6;
     }
 
-    final void a(int param0, boolean param1) {
+    final void tick(int param0, boolean param1) {
         int var4 = 0;
         int var5 = 0;
         int stackIn_70_0 = 0;
@@ -1456,7 +1456,7 @@ final class ic {
         int var6;
         int var7;
         var7 = Virogrid.field_F ? 1 : 0;
-        this.field_j = this.field_j + 1;
+        this.tickCount = this.tickCount + 1;
         if (param1 &&
           !ag.c(-101) &&
           gb.field_H.field_g) {
@@ -1474,11 +1474,11 @@ final class ic {
           }
         }
         var3 = 0;
-        for (var4 = 0; this.field_C.field_C.length > var4; var4++) {
-          for (var5 = 0; var5 < this.field_C.field_C[0].length; var5++) {
-            if (this.field_x == var4 &&
-              var5 == this.field_h) {
-              var6 = this.field_C.a(var5, this.field_A.field_c, (byte) 99, var4, this.field_A.field_k);
+        for (var4 = 0; this.board.cells.length > var4; var4++) {
+          for (var5 = 0; var5 < this.board.cells[0].length; var5++) {
+            if (this.hoverRow == var4 &&
+              var5 == this.hoverColumn) {
+              var6 = this.board.classifyMove(var5, this.animator.selectedRow, (byte) 99, var4, this.animator.selectedColumn);
               if (var6 != -1 &&
                 var6 == 1) {
                 var3 = 1;
@@ -1493,49 +1493,49 @@ final class ic {
           0 < this.field_k) {
           this.field_k = this.field_k - 1;
         }
-        if (this.field_g) {
-          if (!this.field_C.field_E) {
-            if (this.field_w > 1) {
-              this.field_w = this.field_w - 1;
+        if (this.online) {
+          if (!this.board.finished) {
+            if (this.turnTimer > 1) {
+              this.turnTimer = this.turnTimer - 1;
             }
           } else {
-            if (!this.field_C.field_E) {
-              this.field_w = this.field_w - 1;
-              if (this.field_w == 0) {
-                this.c(1, -11272);
+            if (!this.board.finished) {
+              this.turnTimer = this.turnTimer - 1;
+              if (this.turnTimer == 0) {
+                this.chooseAiMove(1, -11272);
               }
             }
           }
         } else {
-          if (!this.field_C.field_E) {
-            this.field_w = this.field_w - 1;
-            if (this.field_w == 0) {
-              this.c(1, -11272);
+          if (!this.board.finished) {
+            this.turnTimer = this.turnTimer - 1;
+            if (this.turnTimer == 0) {
+              this.chooseAiMove(1, -11272);
             }
           }
         }
-        this.field_A.a(-125);
-        if (!this.field_C.field_E && (this.field_C.field_A == this.field_e ||
-          !this.field_g) && (this.field_w < 750 &&
-          this.field_w % 50 == 0)) {
+        this.animator.advanceFlips(-125);
+        if (!this.board.finished && (this.board.currentPlayer == this.localPlayer ||
+          !this.online) && (this.turnTimer < 750 &&
+          this.turnTimer % 50 == 0)) {
           vm.$cfr$intArgs$a$45c25716b3df(30, bg.field_Lb);
         }
-        if (this.field_C.field_E &&
-          this.field_C.field_A >= 0 && (this.field_A.field_e == 0 &&
-          9 == this.field_j % 20 ||
-          this.field_A.field_e == 1 &&
-          this.field_j % 20 == 19)) {
+        if (this.board.finished &&
+          this.board.currentPlayer >= 0 && (this.animator.field_e == 0 &&
+          9 == this.tickCount % 20 ||
+          this.animator.field_e == 1 &&
+          this.tickCount % 20 == 19)) {
           stackIn_70_0 = 30;
-          if (this.field_g &&
-            this.field_e != this.field_A.field_e) {
+          if (this.online &&
+            this.localPlayer != this.animator.field_e) {
             stackIn_71_1 = cg.field_d;
           } else {
             stackIn_71_1 = f.field_j;
           }
           vm.$cfr$intArgs$a$45c25716b3df(stackIn_70_0, stackIn_71_1);
         }
-        if (this.field_C.field_E &&
-          this.field_A.field_g.b((byte) 48) &&
+        if (this.board.finished &&
+          this.animator.flips.b((byte) 48) &&
           param1 &&
           gb.field_H.field_g &&
           jk.field_c != 2 &&
@@ -1558,11 +1558,11 @@ final class ic {
         this.a(false);
     }
 
-    private final int a(boolean param0, int param1, int param2) {
+    private final int cellScreenX(boolean param0, int param1, int param2) {
         if (param1 != 4347) {
           this.field_c = -75;
         }
-        return param0 ? this.field_B + 140 + this.field_r * param2 : -this.field_B + 500 - this.field_r * param2;
+        return param0 ? this.field_B + 140 + this.cellSize * param2 : -this.field_B + 500 - this.cellSize * param2;
     }
 
     private final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
@@ -1625,16 +1625,16 @@ final class ic {
         }
         var26 = (2 * var8 + (var12 + var19)) * nf.a(21855, var10) / 65536 + var17;
         var27 = var18 + (2 * var8 + (var19 + var12)) * id.a(var10, 32) / 65536;
-        df.a(param4 + 2, param1, 2 + var13, var14, 263172);
-        df.a(-2 + param4, param1, var13 - 2, var14, 263172);
-        df.a(param4, param1 + 2, var13, 2 + var14, 263172);
-        df.a(param4, -2 + param1, var13, var14 - 2, 263172);
-        df.a(param4 + 3, param1, 3 + var13, var14, 263172);
-        df.a(-3 + param4, param1, var13 - 3, var14, 263172);
-        df.a(param4, 3 + param1, var13, var14 + 3, 263172);
-        df.a(param4, -3 + param1, var13, var14 - 3, 263172);
-        df.c(param4, param1, 4, 0);
-        df.c(param4, param1, 2, param3);
+        Rasterizer.a(param4 + 2, param1, 2 + var13, var14, 263172);
+        Rasterizer.a(-2 + param4, param1, var13 - 2, var14, 263172);
+        Rasterizer.a(param4, param1 + 2, var13, 2 + var14, 263172);
+        Rasterizer.a(param4, -2 + param1, var13, var14 - 2, 263172);
+        Rasterizer.a(param4 + 3, param1, 3 + var13, var14, 263172);
+        Rasterizer.a(-3 + param4, param1, var13 - 3, var14, 263172);
+        Rasterizer.a(param4, 3 + param1, var13, var14 + 3, 263172);
+        Rasterizer.a(param4, -3 + param1, var13, var14 - 3, 263172);
+        Rasterizer.c(param4, param1, 4, 0);
+        Rasterizer.c(param4, param1, 2, param3);
         var46 = new int[3];
         var46[0] = var15;
         var47 = new int[3];
@@ -1645,11 +1645,11 @@ final class ic {
         var47[2] = var23;
         fk.a(var18, var25, var27, var17, var24, var26, 263172);
         fk.a(var47[0], var47[1], var47[2], var46[0], var46[1], var46[2], param3);
-        df.a(param4, param1, var13, var14, param3);
-        df.a(param4 + 1, param1, var13 + 1, var14, param3);
-        df.a(param4 - 1, param1, -1 + var13, var14, param3);
-        df.a(param4, 1 + param1, var13, var14 + 1, param3);
-        df.a(param4, param1 - 1, var13, var14 - 1, param3);
+        Rasterizer.a(param4, param1, var13, var14, param3);
+        Rasterizer.a(param4 + 1, param1, var13 + 1, var14, param3);
+        Rasterizer.a(param4 - 1, param1, -1 + var13, var14, param3);
+        Rasterizer.a(param4, 1 + param1, var13, var14 + 1, param3);
+        Rasterizer.a(param4, param1 - 1, var13, var14 - 1, param3);
         var30 = (2 + var19) / 2 * nf.a(21855, var7) / 65536 + param5;
         var31 = param0 + id.a(var7, 32) * ((2 + var19) / 2) / 65536;
         var32 = -(3 * nf.a(21855, var7) / 65536) + param4;
@@ -1659,14 +1659,14 @@ final class ic {
           var37 = (int)Math.round((double)(-var32 + var30) * var34 + (double)var32);
           var38 = (int)Math.round((double)var33 + (double)(-var33 + var31) * var34);
           var34 = var34 + 0.25;
-          df.c(var37, var38, 1, 263172);
+          Rasterizer.c(var37, var38, 1, 263172);
           if (var34 > 1.0) {
             var34 = var34 - 1.0;
           }
         }
     }
 
-    private final void a(mg param0, byte param1, boolean param2) {
+    private final void a(Sprite param0, byte param1, boolean param2) {
         int stackIn_11_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_53_0 = 0;
@@ -1695,92 +1695,92 @@ final class ic {
         var10 = Virogrid.field_F ? 1 : 0;
         try {
           pj.a(param0, 256);
-          df.b(110, 0, 420, 400, 127);
-          df.b(100, 0, 10, 400, 0);
-          df.b(530, 0, 10, 400, 0);
+          Rasterizer.b(110, 0, 420, 400, 127);
+          Rasterizer.b(100, 0, 10, 400, 0);
+          Rasterizer.b(530, 0, 10, 400, 0);
           var4_int = 31 & id.field_r >> 1;
           if (var4_int >= 16) {
             var4_int = 32 - var4_int;
           }
-          for (var5 = 0; var5 < this.field_A.field_d.length; var5++) {
-            for (var6 = 0; this.field_A.field_d[0].length > var6; var6++) {
-              var8 = -(this.field_r * var6) + 370 - this.field_p;
+          for (var5 = 0; var5 < this.animator.displayedCells.length; var5++) {
+            for (var6 = 0; this.animator.displayedCells[0].length > var6; var6++) {
+              var8 = -(this.cellSize * var6) + 370 - this.field_p;
               if (!param2) {
-                stackIn_11_0 = -this.field_B + 500 - var5 * this.field_r;
+                stackIn_11_0 = -this.field_B + 500 - var5 * this.cellSize;
               } else {
-                stackIn_11_0 = this.field_B + (140 + var5 * this.field_r);
+                stackIn_11_0 = this.field_B + (140 + var5 * this.cellSize);
               }
               var7 = stackIn_11_0;
-              df.c(var7, var8, this.field_o, 263172);
-              df.c(var7, var8, this.field_d, 0);
+              Rasterizer.c(var7, var8, this.field_o, 263172);
+              Rasterizer.c(var7, var8, this.field_d, 0);
             }
           }
           var9 = 94 / ((param1 + 65) / 58);
-          for (var5Lifetime1 = 0; this.field_A.field_d.length > var5Lifetime1; var5Lifetime1++) {
+          for (var5Lifetime1 = 0; this.animator.displayedCells.length > var5Lifetime1; var5Lifetime1++) {
             var11 = 0;
             var6Lifetime1 = var11;
-            while (var11 < this.field_A.field_d[0].length) {
+            while (var11 < this.animator.displayedCells[0].length) {
               if (param2) {
-                stackIn_20_0 = 140 + (this.field_B + var5Lifetime1 * this.field_r);
+                stackIn_20_0 = 140 + (this.field_B + var5Lifetime1 * this.cellSize);
               } else {
-                stackIn_20_0 = -(var5Lifetime1 * this.field_r) + (500 - this.field_B);
+                stackIn_20_0 = -(var5Lifetime1 * this.cellSize) + (500 - this.field_B);
               }
               var7Lifetime1 = stackIn_20_0;
-              var8Lifetime1 = -(this.field_r * var11) - this.field_p + 370;
-              if (this.field_A.field_d[var5Lifetime1][var11] != -1) {
-                df.c(var7Lifetime1, var8Lifetime1, this.field_o, 263172);
-                df.c(var7Lifetime1, var8Lifetime1, this.field_d, 0);
+              var8Lifetime1 = -(this.cellSize * var11) - this.field_p + 370;
+              if (this.animator.displayedCells[var5Lifetime1][var11] != -1) {
+                Rasterizer.c(var7Lifetime1, var8Lifetime1, this.field_o, 263172);
+                Rasterizer.c(var7Lifetime1, var8Lifetime1, this.field_d, 0);
               }
-              if ((!this.field_g ||
-                this.field_C.field_A == this.field_e) &&
-                (!this.field_C.field_E &&
-                this.field_A.field_d[var5Lifetime1][var11] == this.field_C.field_A &&
-                this.field_A.field_h[var5Lifetime1][var11] &&
-                this.field_w > -200 + sh.field_yb[this.field_C.field_y] &&
-                -150 + sh.field_yb[this.field_C.field_y] > this.field_w)) {
-                df.f(var7Lifetime1, var8Lifetime1, this.field_o, 16776964);
+              if ((!this.online ||
+                this.board.currentPlayer == this.localPlayer) &&
+                (!this.board.finished &&
+                this.animator.displayedCells[var5Lifetime1][var11] == this.board.currentPlayer &&
+                this.animator.field_h[var5Lifetime1][var11] &&
+                this.turnTimer > -200 + sh.turnDurations[this.board.timeSetting] &&
+                -150 + sh.turnDurations[this.board.timeSetting] > this.turnTimer)) {
+                Rasterizer.f(var7Lifetime1, var8Lifetime1, this.field_o, 16776964);
               }
               var11++;
             }
           }
-          if ((!this.field_g ||
-            this.field_C.field_A == this.field_e) && !this.field_C.field_E) {
-            if (!this.field_C.a((byte) 127, this.field_h, this.field_x, (byte)this.field_C.field_A)) {
-              if ((this.field_A.field_c != -1) &&
-                (this.field_C.a((int) (byte)this.field_C.field_A, this.field_x, this.field_A.field_k, 2, this.field_A.field_c, this.field_h))) {
+          if ((!this.online ||
+            this.board.currentPlayer == this.localPlayer) && !this.board.finished) {
+            if (!this.board.cellEquals((byte) 127, this.hoverColumn, this.hoverRow, (byte)this.board.currentPlayer)) {
+              if ((this.animator.selectedRow != -1) &&
+                (this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.hoverRow, this.animator.selectedColumn, 2, this.animator.selectedRow, this.hoverColumn))) {
                 if (param2) {
-                  stackIn_53_0 = this.field_B + (140 + this.field_x * this.field_r);
+                  stackIn_53_0 = this.field_B + (140 + this.hoverRow * this.cellSize);
                 } else {
-                  stackIn_53_0 = -this.field_B + 500 - this.field_x * this.field_r;
+                  stackIn_53_0 = -this.field_B + 500 - this.hoverRow * this.cellSize;
                 }
                 var7Lifetime2 = stackIn_53_0;
-                var8Lifetime2 = -(this.field_r * this.field_h) + (-this.field_p + 370);
-                df.f(var7Lifetime2, var8Lifetime2, this.field_o, 16776964);
+                var8Lifetime2 = -(this.cellSize * this.hoverColumn) + (-this.field_p + 370);
+                Rasterizer.f(var7Lifetime2, var8Lifetime2, this.field_o, 16776964);
               }
             } else {
               if (param2) {
-                stackIn_53_0 = this.field_B + (140 + this.field_x * this.field_r);
+                stackIn_53_0 = this.field_B + (140 + this.hoverRow * this.cellSize);
               } else {
-                stackIn_53_0 = -this.field_B + 500 - this.field_x * this.field_r;
+                stackIn_53_0 = -this.field_B + 500 - this.hoverRow * this.cellSize;
               }
               var7Lifetime2 = stackIn_53_0;
-              var8Lifetime2 = -(this.field_r * this.field_h) + (-this.field_p + 370);
-              df.f(var7Lifetime2, var8Lifetime2, this.field_o, 16776964);
+              var8Lifetime2 = -(this.cellSize * this.hoverColumn) + (-this.field_p + 370);
+              Rasterizer.f(var7Lifetime2, var8Lifetime2, this.field_o, 16776964);
             }
           }
-          if (this.field_A.field_c != -1 &&
-            -1 != this.field_A.field_k) {
+          if (this.animator.selectedRow != -1 &&
+            -1 != this.animator.selectedColumn) {
             if (param2) {
-              stackIn_59_0 = this.field_A.field_c * this.field_r + (140 + this.field_B);
+              stackIn_59_0 = this.animator.selectedRow * this.cellSize + (140 + this.field_B);
             } else {
-              stackIn_59_0 = -(this.field_r * this.field_A.field_c) + (-this.field_B + 500);
+              stackIn_59_0 = -(this.cellSize * this.animator.selectedRow) + (-this.field_B + 500);
             }
             var7Lifetime3 = stackIn_59_0;
-            var8Lifetime3 = -this.field_p + (370 - this.field_A.field_k * this.field_r);
-            df.f(var7Lifetime3, var8Lifetime3, this.field_o, 16776964);
-            df.f(var7Lifetime3, var8Lifetime3, 1 + this.field_o, 16776964);
+            var8Lifetime3 = -this.field_p + (370 - this.animator.selectedColumn * this.cellSize);
+            Rasterizer.f(var7Lifetime3, var8Lifetime3, this.field_o, 16776964);
+            Rasterizer.f(var7Lifetime3, var8Lifetime3, 1 + this.field_o, 16776964);
           }
-          this.b(107, param2);
+          this.drawStatusPanel(107, param2);
           ul.b((byte) 104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1797,7 +1797,7 @@ final class ic {
         }
     }
 
-    final void a(boolean param0, int param1, mg param2) {
+    final void a(boolean param0, int param1, Sprite param2) {
         try {
           this.a(param2, param0, 9);
           if (param1 <= 60) {
@@ -1823,13 +1823,13 @@ final class ic {
         if (!param6 &&
           hk.field_Jb <= we.field_c.field_J) {
           var11 = 0;
-          if (this.field_C.field_E &&
+          if (this.board.finished &&
             i.field_y == -1 &&
             hm.field_c == -1) {
             var11 = 1;
           }
           if (param7 != -64) {
-            this.field_g = false;
+            this.online = false;
           }
           if (param0) {
             if (var11 == 0) {
@@ -1846,7 +1846,7 @@ final class ic {
               }
             }
           }
-          if (this.field_g &&
+          if (this.online &&
             -1 != hk.field_Jb) {
             var12 = hk.field_Jb + (24 - we.field_c.field_J);
             if (0 < var12 &&
@@ -1867,40 +1867,40 @@ final class ic {
                   }
                 }
               } else {
-                if (!this.field_g) {
+                if (!this.online) {
                   wh.a(param7 + 2158, true, 9);
                 } else {
                   wh.a(2094, true, 12);
                 }
               }
             } else {
-              if (this.field_C.field_E) {
-                this.a((byte) 45);
+              if (this.board.finished) {
+                this.restartGame((byte) 45);
               } else {
                 this.c(param7 + 123);
               }
             }
           }
-          if (!this.field_C.field_E &&
+          if (!this.board.finished &&
             this.field_m != 0 &&
-            this.field_C.field_v != this.field_C.field_A) {
-            if (this.field_A.field_g.b((byte) 64)) {
-              this.c(this.field_m, -11272);
+            this.board.field_v != this.board.currentPlayer) {
+            if (this.animator.flips.b((byte) 64)) {
+              this.chooseAiMove(this.field_m, -11272);
             }
-            this.field_A.field_k = -1;
-            this.field_A.field_c = -1;
+            this.animator.selectedColumn = -1;
+            this.animator.selectedRow = -1;
             this.field_D = false;
             return;
           }
           if (this.field_u == -1 && (param0 &&
-            !this.field_C.field_E &&
+            !this.board.finished &&
             param4 >= 110.0 &&
             param4 < 530.0 &&
             0.0 <= param1)) {
             if (!(param1 < 400.0)) {
               return;
             }
-            var14 = this.field_r / 2;
+            var14 = this.cellSize / 2;
             if (!param2) {
               stackIn_61_0 = -(int)param4 + (-this.field_B + var14 + 500);
             } else {
@@ -1908,66 +1908,66 @@ final class ic {
             }
             var12Lifetime1 = stackIn_61_0;
             if (var12Lifetime1 < 0) {
-              var12Lifetime1 = var12Lifetime1 - this.field_r;
+              var12Lifetime1 = var12Lifetime1 - this.cellSize;
             }
             var13 = -(int)param1 + (-this.field_p + 370) + var14;
-            var12Lifetime1 = var12Lifetime1 / this.field_r;
+            var12Lifetime1 = var12Lifetime1 / this.cellSize;
             if (var13 < 0) {
-              var13 = var13 - this.field_r;
+              var13 = var13 - this.cellSize;
             }
-            this.field_x = var12Lifetime1;
-            var13 = var13 / this.field_r;
-            this.field_h = var13;
+            this.hoverRow = var12Lifetime1;
+            var13 = var13 / this.cellSize;
+            this.hoverColumn = var13;
             if (param5 != 1) {
               if (param5 != 2) {
                 return;
               }
-              if (this.field_A.field_c == -1) {
+              if (this.animator.selectedRow == -1) {
                 return;
               }
               vm.$cfr$intArgs$a$45c25716b3df(30, of.field_b);
-              this.field_A.field_c = -1;
-              this.field_A.field_k = -1;
+              this.animator.selectedRow = -1;
+              this.animator.selectedColumn = -1;
               return;
             }
-            var15 = this.field_A.field_c;
-            var16 = this.field_A.field_k;
-            if (this.field_A.field_c != -1 &&
-              this.field_A.field_k != -1) {
-              if (this.field_C.a(this.field_C.field_A, var12Lifetime1, this.field_A.field_k, param7 + 66, this.field_A.field_c, var13)) {
-                if (this.field_g) {
-                  if (this.field_C.field_A == this.field_e) {
-                    this.a(this.field_A.field_c, this.field_A.field_k, var13, var12Lifetime1, (byte) 85);
-                    this.field_A.field_c = -1;
-                    this.field_A.field_k = -1;
+            var15 = this.animator.selectedRow;
+            var16 = this.animator.selectedColumn;
+            if (this.animator.selectedRow != -1 &&
+              this.animator.selectedColumn != -1) {
+              if (this.board.isLegalMove(this.board.currentPlayer, var12Lifetime1, this.animator.selectedColumn, param7 + 66, this.animator.selectedRow, var13)) {
+                if (this.online) {
+                  if (this.board.currentPlayer == this.localPlayer) {
+                    this.a(this.animator.selectedRow, this.animator.selectedColumn, var13, var12Lifetime1, (byte) 85);
+                    this.animator.selectedRow = -1;
+                    this.animator.selectedColumn = -1;
                     this.field_D = false;
                   }
                 } else {
-                  this.a(param7 ^ 13028, this.field_A.field_c, var13, this.field_A.field_k, var12Lifetime1);
-                  this.field_A.field_k = -1;
+                  this.performMove(param7 ^ 13028, this.animator.selectedRow, var13, this.animator.selectedColumn, var12Lifetime1);
+                  this.animator.selectedColumn = -1;
                   this.field_D = false;
-                  this.field_A.field_c = -1;
+                  this.animator.selectedRow = -1;
                 }
               } else {
-                if (!this.field_C.a((byte) 127, var13, var12Lifetime1, (byte)this.field_C.field_A)) {
+                if (!this.board.cellEquals((byte) 127, var13, var12Lifetime1, (byte)this.board.currentPlayer)) {
                   vm.$cfr$intArgs$a$45c25716b3df(30, of.field_b);
                 }
-                this.field_A.field_k = -1;
-                this.field_A.field_c = -1;
+                this.animator.selectedColumn = -1;
+                this.animator.selectedRow = -1;
               }
             }
-            if (-1 != this.field_A.field_c) {
+            if (-1 != this.animator.selectedRow) {
               return;
             }
-            if (this.field_C.a((byte) 127, var13, var12Lifetime1, (byte)this.field_C.field_A)) {
+            if (this.board.cellEquals((byte) 127, var13, var12Lifetime1, (byte)this.board.currentPlayer)) {
               if (var15 == var12Lifetime1 &&
                 var13 == var16) {
                 return;
               }
-              if (!this.field_g ||
-                this.field_C.field_A == this.field_e) {
-                this.field_A.field_c = var12Lifetime1;
-                this.field_A.field_k = var13;
+              if (!this.online ||
+                this.board.currentPlayer == this.localPlayer) {
+                this.animator.selectedRow = var12Lifetime1;
+                this.animator.selectedColumn = var13;
                 return;
               }
             }
@@ -1977,32 +1977,32 @@ final class ic {
         this.field_u = -1;
     }
 
-    final void a(byte param0) {
-        if (this.field_g) {
+    final void restartGame(byte param0) {
+        if (this.online) {
           gk.field_g.g(61, 8);
         } else {
-          this.field_C.d(0);
-          this.field_A = new m(this.field_C, this.field_e);
-          this.field_A.a(false);
-          this.field_w = sh.field_yb[this.field_C.field_y];
+          this.board.restart(0);
+          this.animator = new CellAnimator(this.board, this.localPlayer);
+          this.animator.resetToBoard(false);
+          this.turnTimer = sh.turnDurations[this.board.timeSetting];
           vm.$cfr$intArgs$a$45c25716b3df(30, qd.field_i);
-          el.a(true, (byte) -106);
+          BufferedSocket.a(true, (byte) -106);
           this.field_q = -1;
           this.field_z = -1;
         }
         if (param0 <= 29) {
-          this.a(56);
+          this.layoutBoard(56);
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int cellScreenY(int param0, int param1) {
         if (param1 != 5975) {
-          this.field_e = 116;
+          this.localPlayer = 116;
         }
-        return -this.field_p + 370 - this.field_r * param0;
+        return -this.field_p + 370 - this.cellSize * param0;
     }
 
-    private final int e(int param0) {
+    private final int turnPulse(int param0) {
         int var2 = 31 & id.field_r >> 1;
         if (var2 >= 16) {
           var2 = 32 - var2;
@@ -2011,7 +2011,7 @@ final class ic {
         if (param0 != 6121) {
           return -8;
         }
-        if (this.field_C.field_A == 0) {
+        if (this.board.currentPlayer == 0) {
           var2 = -var2;
         }
         return var2;
@@ -2021,9 +2021,9 @@ final class ic {
         int var3 = 0;
         int var4 = Virogrid.field_F ? 1 : 0;
         if (param0 != -70) {
-          this.field_r = -77;
+          this.cellSize = -77;
         }
-        if (!this.field_g) {
+        if (!this.online) {
           for (var3 = 0; 4 > var3; var3++) {
             ve.field_A[var3] = 256;
             ve.field_v[var3] = null;
@@ -2033,34 +2033,34 @@ final class ic {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
-        this.field_C.a(param1, param3, (byte) 119, this.field_C.field_A, param4, param2);
-        this.field_A.a(this.field_g, 31626);
+    private final void performMove(int param0, int param1, int param2, int param3, int param4) {
+        this.board.applyMove(param1, param3, (byte) 119, this.board.currentPlayer, param4, param2);
+        this.animator.syncWithBoard(this.online, 31626);
         if (param0 != -13020) {
           this.field_o = 2;
         }
-        if (this.field_C.c(20602)) {
-          if (this.field_e != -2) {
+        if (this.board.checkGameEnd(20602)) {
+          if (this.localPlayer != -2) {
             this.a(false, -1, param0 ^ -26075, false);
           }
           this.field_n = 0;
         } else {
-          this.field_C.b(param0 ^ 12970);
-          this.field_w = sh.field_yb[this.field_C.field_y];
+          this.board.advanceTurn(param0 ^ 12970);
+          this.turnTimer = sh.turnDurations[this.board.timeSetting];
         }
     }
 
-    ic(boolean param0, int param1, String[] param2, int param3, boolean param4, int param5, int param6) {
+    GameSession(boolean param0, int param1, String[] param2, int param3, boolean param4, int param5, int param6) {
         int var8_int = 0;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         Object stackIn_9_0;
-        uf stackIn_9_1;
-        uf stackIn_9_2;
+        GameBoard stackIn_9_1;
+        GameBoard stackIn_9_2;
         int stackIn_9_3;
         String[] stackIn_9_4;
-        uf stackIn_10_1 = null;
-        uf stackIn_10_2 = null;
+        GameBoard stackIn_10_1 = null;
+        GameBoard stackIn_10_2 = null;
         int stackIn_10_5 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -2070,14 +2070,14 @@ final class ic {
         this.field_l = false;
         this.field_c = 0;
         this.field_a = "";
-        this.field_x = 0;
+        this.hoverRow = 0;
         this.field_k = 0;
-        this.field_h = 0;
+        this.hoverColumn = 0;
         try {
           stackIn_4_1 = (param0);
-          this.field_g = stackIn_4_1;
+          this.online = stackIn_4_1;
           this.field_m = param6;
-          this.field_e = param3;
+          this.localPlayer = param3;
           stackIn_7_1 = (param4);
           this.field_t = stackIn_7_1;
           stackIn_9_0 = this;
@@ -2085,7 +2085,7 @@ final class ic {
           stackIn_9_2 = null;
           stackIn_9_3 = param1;
           stackIn_9_4 = (String[]) (param2);
-          if (!this.field_g) {
+          if (!this.online) {
             stackIn_10_1 = null;
             stackIn_10_2 = null;
             stackIn_10_5 = 0;
@@ -2094,27 +2094,27 @@ final class ic {
             stackIn_10_2 = null;
             stackIn_10_5 = -1;
           }
-          this.field_C = new uf(stackIn_9_3, stackIn_9_4, stackIn_10_5, param5);
-          if (!this.field_g) {
-            this.field_C.a(0, 0, 21428);
-            this.field_w = sh.field_yb[this.field_C.field_y];
+          this.board = new GameBoard(stackIn_9_3, stackIn_9_4, stackIn_10_5, param5);
+          if (!this.online) {
+            this.board.setTurn(0, 0, 21428);
+            this.turnTimer = sh.turnDurations[this.board.timeSetting];
           }
-          this.field_A = new m(this.field_C, this.field_e);
-          this.field_j = 0;
+          this.animator = new CellAnimator(this.board, this.localPlayer);
+          this.tickCount = 0;
           this.field_z = -1;
           this.field_D = true;
           this.field_i = 0;
           this.field_q = -1;
-          if (!this.field_g) {
+          if (!this.online) {
             for (var8_int = 0; 4 > var8_int; var8_int++) {
               ve.field_A[var8_int] = 256;
               ve.field_v[var8_int] = null;
               ve.field_p[var8_int] = null;
             }
-            this.a(-6032);
+            this.layoutBoard(-6032);
             return;
           }
-          this.a(-6032);
+          this.layoutBoard(-6032);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

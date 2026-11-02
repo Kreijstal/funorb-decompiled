@@ -1,58 +1,58 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends km {
+final class he extends SpriteWidget {
     int field_ic;
     boolean field_Ib;
-    static km field_Jb;
+    static SpriteWidget field_Jb;
     static int field_nc;
     int field_fc;
     boolean field_Sb;
-    km field_oc;
+    SpriteWidget field_oc;
     int field_lc;
     int field_Mb;
     boolean field_Rb;
-    km field_Yb;
-    km field_Gb;
-    km field_rc;
-    km field_Kb;
+    SpriteWidget field_Yb;
+    SpriteWidget field_Gb;
+    SpriteWidget field_rc;
+    SpriteWidget field_Kb;
     long field_gc;
-    km field_bc;
+    SpriteWidget field_bc;
     int field_ac;
-    static String field_cc;
-    km field_Vb;
+    static String textLobbyPleaselogin;
+    SpriteWidget field_Vb;
     boolean field_dc;
-    km field_Lb;
+    SpriteWidget field_Lb;
     boolean field_kc;
     static fe field_Xb;
-    km field_Fb;
-    km field_uc;
-    km field_Ob;
+    SpriteWidget field_Fb;
+    SpriteWidget field_uc;
+    SpriteWidget field_Ob;
     byte[] field_Pb;
     static int field_ec;
-    km[] field_jc;
+    SpriteWidget[] field_jc;
     static String field_Wb;
-    km field_qc;
-    km field_Tb;
+    SpriteWidget field_qc;
+    SpriteWidget field_Tb;
     String[] field_Zb;
     String field_Qb;
     int field_Eb;
-    km field_Nb;
+    SpriteWidget field_Nb;
     boolean field_sc;
     long field_Hb;
     static jm field_pc;
     int field_mc;
     boolean field_Ub;
-    km field_hc;
-    km field_tc;
+    SpriteWidget field_hc;
+    SpriteWidget field_tc;
     int field_vc;
 
-    final static mg[] a(mg[] param0, int param1) {
+    final static Sprite[] a(Sprite[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        mg var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
-        mg[] stackIn_5_0 = null;
+        Sprite[] stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -66,7 +66,7 @@ final class he extends km {
             param0[var2_int].field_u = param0[var2_int].field_w;
             param0[var2_int].field_z = param0[var2_int].field_p;
           }
-          stackIn_5_0 = (mg[]) (param0);
+          stackIn_5_0 = (Sprite[]) (param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,7 +99,7 @@ final class he extends km {
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        mg[] var4 = null;
+        Sprite[] var4 = null;
         try {
           if (param1 == 1) {
             stackIn_2_0 = oi.a(new String[]{param0}, mj.field_y, 2);
@@ -142,8 +142,8 @@ final class he extends km {
             return stackIn_35_0;
           }
           if (!param2) {
-            var4 = (mg[]) null;
-            he.a((mg[]) null, -22);
+            var4 = (Sprite[]) null;
+            he.a((Sprite[]) null, -22);
           }
           if (param1 != 13) {
             return null;
@@ -167,16 +167,16 @@ final class he extends km {
     final static void i(int param0) {
         if (param0 == -532) {
           wg.field_f = false;
-          dh.field_n = 0 == sh.field_qb.g(11132) ? true : false;
+          dh.field_n = 0 == sh.field_qb.readUnsignedByte(11132) ? true : false;
           return;
         }
-        field_Jb = (km) null;
+        field_Jb = (SpriteWidget) null;
         wg.field_f = false;
-        dh.field_n = 0 == sh.field_qb.g(11132) ? true : false;
+        dh.field_n = 0 == sh.field_qb.readUnsignedByte(11132) ? true : false;
     }
 
     he(int param0) {
-        super(0L, (km) null);
+        super(0L, (SpriteWidget) null);
         this.field_Pb = new byte[param0];
     }
 
@@ -195,7 +195,7 @@ final class he extends km {
         field_Xb = null;
         field_pc = null;
         field_Jb = null;
-        field_cc = null;
+        textLobbyPleaselogin = null;
     }
 
     final boolean f(byte param0) {
@@ -265,16 +265,16 @@ final class he extends km {
         return true;
     }
 
-    final static mg[] b(int param0, int param1, int param2, byte param3, int param4) {
-        mg[] var6 = new mg[9];
-        mg[] var5 = var6;
-        mg dupTemp$0 = eg.a(param1, (byte) 127, param4);
+    final static Sprite[] b(int param0, int param1, int param2, byte param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = eg.a(param1, (byte) 127, param4);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        mg dupTemp$1 = eg.a(param1, (byte) 45, param0);
+        Sprite dupTemp$1 = eg.a(param1, (byte) 45, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -284,7 +284,7 @@ final class he extends km {
           }
           return var5;
         }
-        return (mg[]) null;
+        return (Sprite[]) null;
     }
 
     final boolean a(he param0, int param1) {
@@ -390,6 +390,6 @@ final class he extends km {
     }
 
     static {
-        field_cc = "To play a multiplayer game, please either log in or create a free account.";
+        textLobbyPleaselogin = "To play a multiplayer game, please either log in or create a free account.";
     }
 }

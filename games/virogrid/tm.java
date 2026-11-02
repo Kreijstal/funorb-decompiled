@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tm extends l {
+final class tm extends IntrusiveNode {
     static String field_i;
     static String field_j;
     int field_m;
@@ -25,7 +25,7 @@ final class tm extends l {
         field_k = null;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, mg[] param5) {
+    final static void a(int param0, int param1, boolean param2, int param3, int param4, Sprite[] param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -52,7 +52,7 @@ final class tm extends l {
         int var19 = 0;
         int var20 = 0;
         int var22 = 0;
-        mg[] var23 = null;
+        Sprite[] var23 = null;
         int var20Lifetime1;
         int var20Lifetime2;
         int var20Lifetime3;
@@ -102,77 +102,77 @@ final class tm extends l {
             }
             var18 = var14;
             var19 = var15;
-            df.b(nf.field_f);
+            Rasterizer.b(nf.field_f);
             if (var19 < var18) {
               var19 = param1 + var8 * param4 / (var9 + var8);
               var18 = param1 + var8 * param4 / (var9 + var8);
             }
             if (param5[0] != null) {
-              df.h(param0, param1, var16, var18);
+              Rasterizer.h(param0, param1, var16, var18);
               param5[0].d(param0, param1);
-              df.a(nf.field_f);
+              Rasterizer.a(nf.field_f);
             }
             if (null != param5[2]) {
-              df.h(var17, param1, var10, var18);
+              Rasterizer.h(var17, param1, var10, var18);
               param5[2].d(var13, param1);
-              df.a(nf.field_f);
+              Rasterizer.a(nf.field_f);
             }
             if (param5[6] != null) {
-              df.h(param0, var19, var16, var11);
+              Rasterizer.h(param0, var19, var16, var11);
               param5[6].d(param0, var15);
-              df.a(nf.field_f);
+              Rasterizer.a(nf.field_f);
             }
             if (param5[8] != null) {
-              df.h(var17, var19, var10, var11);
+              Rasterizer.h(var17, var19, var10, var11);
               param5[8].d(var13, var15);
-              df.a(nf.field_f);
+              Rasterizer.a(nf.field_f);
             }
             if (param5[1] != null &&
               param5[1].field_u != 0) {
-              df.h(var16, param1, var17, var18);
+              Rasterizer.h(var16, param1, var17, var18);
               for (var20 = var12; var13 > var20; var20 = var20 + param5[1].field_u) {
                 param5[1].d(var20, param1);
               }
-              df.a(nf.field_f);
+              Rasterizer.a(nf.field_f);
             }
             if (null != param5[7] &&
               param5[7].field_u != 0) {
-              df.h(var16, var19, var17, var11);
+              Rasterizer.h(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param5[7].field_u) {
                 param5[7].d(var20Lifetime1, var15);
               }
-              df.a(nf.field_f);
+              Rasterizer.a(nf.field_f);
             }
             if (param2) {
-              var23 = (mg[]) null;
-              tm.a(-38, 91, true, -16, -31, (mg[]) null);
+              var23 = (Sprite[]) null;
+              tm.a(-38, 91, true, -16, -31, (Sprite[]) null);
             }
             if (null != param5[3] &&
               param5[3].field_z != 0) {
-              df.h(param0, var18, var16, var19);
+              Rasterizer.h(param0, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param5[3].field_z) {
                 param5[3].d(param0, var20Lifetime2);
               }
-              df.a(nf.field_f);
+              Rasterizer.a(nf.field_f);
             }
             if (null != param5[5] &&
               param5[5].field_z != 0) {
-              df.h(var17, var18, var10, var19);
+              Rasterizer.h(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param5[5].field_z) {
                 param5[5].d(var13, var20Lifetime3);
               }
-              df.a(nf.field_f);
+              Rasterizer.a(nf.field_f);
             }
             if (param5[4] != null &&
               0 != param5[4].field_u &&
               param5[4].field_z != 0) {
-              df.h(var16, var18, var17, var19);
+              Rasterizer.h(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param5[4].field_z) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param5[4].field_u) {
                   param5[4].d(var21, var20Lifetime4);
                 }
               }
-              df.a(nf.field_f);
+              Rasterizer.a(nf.field_f);
               return;
             }
             return;
@@ -222,20 +222,20 @@ final class tm extends l {
         }
     }
 
-    final static void a(mg[][] param0, int param1, int param2, int param3, int[] param4, eh param5, mg[][] param6, byte[] param7, String[][] param8, int param9, String[][] param10, String[] param11, String[] param12, byte[] param13, String[] param14) {
+    final static void a(Sprite[][] param0, int param1, int param2, int param3, int[] param4, Js5Archive param5, Sprite[][] param6, byte[] param7, String[][] param8, int param9, String[][] param10, String[] param11, String[] param12, byte[] param13, String[] param14) {
         hk[] array$0 = null;
         hk[] array$1 = null;
         hk[] array$2 = null;
         int var19 = 0;
-        km stackIn_7_0;
-        km stackIn_7_1;
+        SpriteWidget stackIn_7_0;
+        SpriteWidget stackIn_7_1;
         long stackIn_7_2;
-        km stackIn_7_3;
-        km stackIn_8_0 = null;
-        km stackIn_8_1 = null;
+        SpriteWidget stackIn_7_3;
+        SpriteWidget stackIn_8_0 = null;
+        SpriteWidget stackIn_8_1 = null;
         String stackIn_8_4 = null;
         Object stackIn_45_0 = null;
-        km stackIn_45_1 = null;
+        SpriteWidget stackIn_45_1 = null;
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
@@ -261,15 +261,15 @@ final class tm extends l {
         String stackIn_107_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        km var16 = null;
+        SpriteWidget var16 = null;
         int var17_int = 0;
-        km var17 = null;
+        SpriteWidget var17 = null;
         int var18 = 0;
         Object var19_ref = null;
         Object var20 = null;
         int var21 = 0;
-        km var23 = null;
-        km var24 = null;
+        SpriteWidget var23 = null;
+        SpriteWidget var24 = null;
         int var18Lifetime1;
         int var18Lifetime2;
         int var17_intLifetime1;
@@ -286,50 +286,50 @@ final class tm extends l {
           vc.field_fb = param6;
           ch.field_j = param11;
           te.field_e = param14;
-          p.field_e = param7;
-          ic.field_f = param13;
+          IntrusiveDeque.field_e = param7;
+          GameSession.field_f = param13;
           th.field_p = param10;
-          uf.field_d = param8;
-          jb.field_I = ke.a(32, param5, "lobby", "gameprivacy");
-          m.field_f = ke.a(32, param5, "lobby", "ratedgame");
-          lc.field_c = ke.a(32, param5, "lobby", "opentome");
-          ph.field_m = ke.a(32, param5, "lobby", "allowspectators");
+          GameBoard.field_d = param8;
+          jb.gamePrivacyIcons = ke.a(32, param5, "lobby", "gameprivacy");
+          CellAnimator.ratedGameIcons = ke.a(32, param5, "lobby", "ratedgame");
+          lc.openToMeIcons = ke.a(32, param5, "lobby", "opentome");
+          ph.allowSpectatorsIcons = ke.a(32, param5, "lobby", "allowspectators");
           cj.field_b = new String[5];
           cj.field_b[1] = ob.field_a;
           cj.field_b[0] = vi.field_j;
-          cj.field_b[2] = wf.field_i;
+          cj.field_b[2] = RasterBuffer.field_i;
           cj.field_b[3] = ca.field_R;
           cj.field_b[4] = ak.field_c;
-          ij.field_m = new km(0L, (km) null);
-          me.field_d = new km(0L, ag.field_d, tl.field_h);
-          wm.field_m = new km(0L, he.field_Jb, wl.field_f);
-          uf.field_j = new um(0L, new km(0L, (km) null), gg.field_M, ub.field_z);
-          ij.field_m.a(0, me.field_d);
+          ij.field_m = new SpriteWidget(0L, (SpriteWidget) null);
+          MouseInputHandler.field_d = new SpriteWidget(0L, ag.field_d, tl.field_h);
+          wm.field_m = new SpriteWidget(0L, he.field_Jb, wl.field_f);
+          GameBoard.field_j = new um(0L, new SpriteWidget(0L, (SpriteWidget) null), gg.field_M, ub.field_z);
+          ij.field_m.a(0, MouseInputHandler.field_d);
           if (ql.field_d) {
             ij.field_m.a(0, wm.field_m);
           }
-          ij.field_m.a(0, uf.field_j);
-          uf.field_j.field_Eb.b(18003, ti.field_h);
-          uf.field_j.field_Eb.field_D = 1;
-          var23 = uf.field_j.field_Eb;
+          ij.field_m.a(0, GameBoard.field_j);
+          GameBoard.field_j.field_Eb.b(18003, ti.field_h);
+          GameBoard.field_j.field_Eb.field_D = 1;
+          var23 = GameBoard.field_j.field_Eb;
           var24 = var23;
           var24.field_lb = 1;
-          qd.field_f = new km(0L, ti.field_h);
+          qd.field_f = new SpriteWidget(0L, ti.field_h);
           if (param1 <= 92) {
             return;
           }
           qd.field_f.field_lb = 1;
-          s.field_b = new km(0L, mf.field_j, um.field_Ib.toUpperCase());
-          ng.field_Z = new km(0L, kh.field_b, uf.field_o.toUpperCase());
-          nk.field_I = new km(0L, cc.field_w);
-          f.field_c = new km(0L, ag.field_d, pi.field_a);
-          qn.field_H = new km(0L, jm.field_b, wf.field_g);
-          fn.field_d = new km(0L, jm.field_b, lh.field_c);
-          gk.field_b = new km(0L, jm.field_b, th.field_r);
-          ec.field_C = new km(0L, jm.field_b, fh.field_d);
-          qn.field_J = new km(0L, he.field_Jb, bf.field_k);
-          ch.field_a = new um(0L, new km(0L, (km) null), gg.field_M, ub.field_z);
-          nd.field_a = new km(0L, bd.field_b, dm.field_s.toUpperCase());
+          s.field_b = new SpriteWidget(0L, mf.field_j, um.field_Ib.toUpperCase());
+          ng.field_Z = new SpriteWidget(0L, kh.field_b, GameBoard.field_o.toUpperCase());
+          nk.field_I = new SpriteWidget(0L, cc.field_w);
+          f.field_c = new SpriteWidget(0L, ag.field_d, pi.field_a);
+          qn.field_H = new SpriteWidget(0L, jm.field_b, RasterBuffer.field_g);
+          fn.field_d = new SpriteWidget(0L, jm.field_b, lh.field_c);
+          gk.field_b = new SpriteWidget(0L, jm.field_b, th.field_r);
+          ec.field_C = new SpriteWidget(0L, jm.field_b, fh.field_d);
+          qn.field_J = new SpriteWidget(0L, he.field_Jb, bf.field_k);
+          ch.field_a = new um(0L, new SpriteWidget(0L, (SpriteWidget) null), gg.field_M, ub.field_z);
+          nd.field_a = new SpriteWidget(0L, bd.field_b, dm.field_s.toUpperCase());
           nd.field_a.field_Y = ql.field_d;
           stackIn_7_0 = null;
           stackIn_7_1 = null;
@@ -342,10 +342,10 @@ final class tm extends l {
           } else {
             stackIn_8_0 = null;
             stackIn_8_1 = null;
-            stackIn_8_4 = wb.field_l;
+            stackIn_8_4 = DualLinkNode.field_l;
           }
-          dc.field_R = new km(stackIn_7_2, stackIn_7_3, ((String) (Object) stackIn_8_4).toUpperCase());
-          hg.field_p = new km(0L, (km) null);
+          dc.field_R = new SpriteWidget(stackIn_7_2, stackIn_7_3, ((String) (Object) stackIn_8_4).toUpperCase());
+          hg.field_p = new SpriteWidget(0L, (SpriteWidget) null);
           hg.field_p.a(0, ng.field_Z);
           hg.field_p.a(0, nk.field_I);
           nk.field_I.a(0, f.field_c);
@@ -361,67 +361,67 @@ final class tm extends l {
             hg.field_p.a(0, nd.field_a);
           }
           hg.field_p.a(0, dc.field_R);
-          pa.field_o = new km(0L, ti.field_h);
+          pa.field_o = new SpriteWidget(0L, ti.field_h);
           pa.field_o.field_D = 0;
           pa.field_o.field_lb = 1;
-          nk.field_H = new km(0L, fa.field_n, kb.field_a.toUpperCase());
-          jj.field_a = new km(0L, fn.field_e);
+          nk.field_H = new SpriteWidget(0L, fa.field_n, kb.field_a.toUpperCase());
+          jj.field_a = new SpriteWidget(0L, fn.field_e);
           jj.field_a.a(0, pa.field_o);
           jj.field_a.a(0, nk.field_H);
-          l.field_b = new km(0L, gg.field_M);
-          l.field_b.b(18003, ti.field_h);
-          var16 = l.field_b;
-          l.field_b.field_D = 1;
+          IntrusiveNode.field_b = new SpriteWidget(0L, gg.field_M);
+          IntrusiveNode.field_b.b(18003, ti.field_h);
+          var16 = IntrusiveNode.field_b;
+          IntrusiveNode.field_b.field_D = 1;
           var16.field_lb = 1;
-          ia.field_d = new km(0L, (km) null);
-          qh.field_R = new km(0L, ti.field_h);
+          ia.field_d = new SpriteWidget(0L, (SpriteWidget) null);
+          qh.field_R = new SpriteWidget(0L, ti.field_h);
           qh.field_R.field_lb = 1;
-          kh.field_g = new km(0L, ag.field_d, tl.field_h);
-          gn.field_F = new km(0L, he.field_Jb, wl.field_f);
-          wm.field_r = new um(0L, new km(0L, (km) null), gg.field_M, ub.field_z);
+          kh.field_g = new SpriteWidget(0L, ag.field_d, tl.field_h);
+          gn.field_F = new SpriteWidget(0L, he.field_Jb, wl.field_f);
+          wm.field_r = new um(0L, new SpriteWidget(0L, (SpriteWidget) null), gg.field_M, ub.field_z);
           ia.field_d.a(0, qh.field_R);
           ia.field_d.a(0, kh.field_g);
           if (ql.field_d) {
             ia.field_d.a(0, gn.field_F);
           }
           ia.field_d.a(0, wm.field_r);
-          fb.field_o = new km(0L, mf.field_j, mf.field_i.toUpperCase());
-          qi.field_e = new km(0L, kh.field_b);
-          nn.field_b = new km(0L, cc.field_w);
-          qa.field_c = new km(0L, me.field_c, tk.field_a.toUpperCase());
+          CellFlip.field_o = new SpriteWidget(0L, mf.field_j, mf.field_i.toUpperCase());
+          qi.field_e = new SpriteWidget(0L, kh.field_b);
+          nn.field_b = new SpriteWidget(0L, cc.field_w);
+          qa.field_c = new SpriteWidget(0L, MouseInputHandler.field_c, tk.field_a.toUpperCase());
           oe.field_b = new hk[4 + param9][];
-          f.field_f = new km[param9 + 4];
-          f.field_f[0] = new km(0L, ke.field_u, ul.field_b);
+          f.field_f = new SpriteWidget[param9 + 4];
+          f.field_f[0] = new SpriteWidget(0L, ke.field_u, ul.field_b);
           oe.field_b[0] = new hk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            oe.field_b[0][var17_int + 1] = new hk(0L, vf.field_e, (km) null, ma.field_e, jb.field_I[var17_int], cj.field_b[var17_int]);
+            oe.field_b[0][var17_int + 1] = new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, jb.gamePrivacyIcons[var17_int], cj.field_b[var17_int]);
           }
           if (2 <= vj.field_b.length) {
-            f.field_f[1] = new km(0L, ke.field_u, wg.field_d);
+            f.field_f[1] = new SpriteWidget(0L, ke.field_u, wg.field_d);
             array$0 = new hk[vj.field_b.length + 1];
             oe.field_b[1] = array$0;
-            oe.field_b[1][0] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, gn.field_I);
+            oe.field_b[1][0] = new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, (Sprite) null, gn.field_I);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < vj.field_b.length; var17_intLifetime1++) {
-              oe.field_b[1][1 + var17_intLifetime1] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, Integer.toString(vj.field_b[var17_intLifetime1]));
+              oe.field_b[1][1 + var17_intLifetime1] = new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, (Sprite) null, Integer.toString(vj.field_b[var17_intLifetime1]));
             }
           }
-          f.field_f[2] = new km(0L, ke.field_u, field_i);
-          oe.field_b[2] = new hk[]{new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, gn.field_I), new hk(0L, vf.field_e, (km) null, ma.field_e, ph.field_m[0], vi.field_f), new hk(0L, vf.field_e, (km) null, ma.field_e, ph.field_m[1], ej.field_F)};
+          f.field_f[2] = new SpriteWidget(0L, ke.field_u, field_i);
+          oe.field_b[2] = new hk[]{new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, (Sprite) null, gn.field_I), new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, ph.allowSpectatorsIcons[0], vi.field_f), new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, ph.allowSpectatorsIcons[1], ej.field_F)};
           if (qi.field_f > 1) {
-            f.field_f[3] = new km(0L, ke.field_u, sm.field_c);
+            f.field_f[3] = new SpriteWidget(0L, ke.field_u, sm.field_c);
             array$1 = new hk[1 + qi.field_f];
             oe.field_b[3] = array$1;
-            oe.field_b[3][0] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, gn.field_I);
+            oe.field_b[3][0] = new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, (Sprite) null, gn.field_I);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < qi.field_f; var17_intLifetime2++) {
-              oe.field_b[3][var17_intLifetime2 + 1] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, te.field_e[var17_intLifetime2]);
+              oe.field_b[3][var17_intLifetime2 + 1] = new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, (Sprite) null, te.field_e[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param9 > var17_intLifetime3; var17_intLifetime3++) {
-            f.field_f[var17_intLifetime3 + 4] = new km(0L, ke.field_u, bd.field_a[var17_intLifetime3]);
-            array$2 = new hk[1 + rb.a(255, (int) ic.field_f[var17_intLifetime3])];
+            f.field_f[var17_intLifetime3 + 4] = new SpriteWidget(0L, ke.field_u, bd.field_a[var17_intLifetime3]);
+            array$2 = new hk[1 + rb.a(255, (int) GameSession.field_f[var17_intLifetime3])];
             oe.field_b[4 + var17_intLifetime3] = array$2;
-            oe.field_b[var17_intLifetime3 + 4][0] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, gn.field_I);
-            for (var18 = 0; var18 < (ic.field_f[var17_intLifetime3] & 255); var18++) {
+            oe.field_b[var17_intLifetime3 + 4][0] = new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, (Sprite) null, gn.field_I);
+            for (var18 = 0; var18 < (GameSession.field_f[var17_intLifetime3] & 255); var18++) {
               if (sf.field_J == null) {
                 var19_ref = null;
               } else {
@@ -431,16 +431,16 @@ final class tm extends l {
                   var19_ref = null;
                 }
               }
-              if (uf.field_d != null) {
-                if (uf.field_d[var17_intLifetime3] == null) {
+              if (GameBoard.field_d != null) {
+                if (GameBoard.field_d[var17_intLifetime3] == null) {
                   var20 = null;
                 } else {
-                  var20 = uf.field_d[var17_intLifetime3][var18];
+                  var20 = GameBoard.field_d[var17_intLifetime3][var18];
                 }
               } else {
                 var20 = null;
               }
-              oe.field_b[4 + var17_intLifetime3][var18 + 1] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) (var19_ref), (String) (var20));
+              oe.field_b[4 + var17_intLifetime3][var18 + 1] = new hk(0L, vf.field_e, (SpriteWidget) null, IntrusiveDequeCursor.field_e, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < param9 + 4; var17_intLifetime4++) {
@@ -458,14 +458,14 @@ final class tm extends l {
               }
             }
           }
-          ed.field_c = new km(0L, bd.field_b);
-          ii.field_d = new km(0L, bd.field_b);
-          jk.field_b = new km(0L, da.field_n);
+          ed.field_c = new SpriteWidget(0L, bd.field_b);
+          ii.field_d = new SpriteWidget(0L, bd.field_b);
+          jk.field_b = new SpriteWidget(0L, da.field_n);
           jk.field_b.b(18003, ti.field_h);
           var17 = jk.field_b;
           jk.field_b.field_D = 1;
           var17.field_lb = 1;
-          dm.field_r = new km(0L, (km) null);
+          dm.field_r = new SpriteWidget(0L, (SpriteWidget) null);
           dm.field_r.a(0, qi.field_e);
           dm.field_r.a(0, nn.field_b);
           nn.field_b.a(0, qa.field_c);
@@ -484,8 +484,8 @@ final class tm extends l {
           dm.field_r.a(0, ed.field_c);
           dm.field_r.a(0, ii.field_d);
           dm.field_r.a(0, jk.field_b);
-          jj.field_m = new km(0L, wh.field_a, lc.field_h.toUpperCase());
-          na.field_Ib = new km(0L, fa.field_n, ob.field_b.toUpperCase());
+          jj.field_m = new SpriteWidget(0L, wh.field_a, lc.field_h.toUpperCase());
+          na.field_Ib = new SpriteWidget(0L, fa.field_n, ob.field_b.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -561,16 +561,16 @@ final class tm extends l {
         }
     }
 
-    final static mg[] a(eh param0, int param1, int param2, int param3) {
+    final static Sprite[] a(Js5Archive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        mg[] stackIn_2_0 = null;
+        Sprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 4) {
-            stackIn_2_0 = (mg[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           if (hn.a(param0, param1, param3, (byte) 109)) {

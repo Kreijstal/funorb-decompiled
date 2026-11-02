@@ -7,11 +7,11 @@ final class nd {
     static String field_b;
     private boolean field_e;
     static co field_j;
-    static km field_a;
+    static SpriteWidget field_a;
     private int[] field_f;
     private int field_i;
     static long field_c;
-    static mg field_d;
+    static Sprite field_d;
 
     final void b(int param0, int param1) {
         this.a(-113, param1, this.field_i + 1);
@@ -55,7 +55,7 @@ final class nd {
           this.field_f = var4;
           return;
         }
-        field_a = (km) null;
+        field_a = (SpriteWidget) null;
         ek.a(this.field_f, 0, var4, 0, this.field_f.length);
         this.field_f = var4;
     }
@@ -67,7 +67,7 @@ final class nd {
           }
           int var3_int = 94 / ((param0 + 93) / 33);
           aa.field_a = new ca(param1, param2, false, true, true);
-          fi.field_t.b(aa.field_a, (byte) -53);
+          UiWidget.field_t.b(aa.field_a, (byte) -53);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "nd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

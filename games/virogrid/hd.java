@@ -6,7 +6,7 @@ import java.io.*;
 final class hd {
     static int field_d;
     static String field_c;
-    static v field_b;
+    static v standardFont;
     static r field_g;
     static String field_a;
     static int field_e;
@@ -17,7 +17,7 @@ final class hd {
         if (param0 != 3881) {
           hd.a(-33);
         }
-        field_b = null;
+        standardFont = null;
         field_g = null;
         field_c = null;
     }
@@ -71,7 +71,7 @@ final class hd {
           var22 = null;
           var12 = Virogrid.field_F ? 1 : 0;
           try {
-            var13 = (bf) (l.field_c.a((byte) -104));
+            var13 = (bf) (IntrusiveNode.field_c.a((byte) -104));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -98,7 +98,7 @@ final class hd {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.field_l;
+            var4 = param1.position;
             param1.a(var17.field_h, (byte) -42);
             for (var5 = 0; var5 < var17.field_n; var5++) {
               if (var17.field_l[var5] == 0) {
@@ -142,7 +142,7 @@ final class hd {
                       param1.a(4, 88);
                     } else {
                       param1.a(2, 125);
-                      param1.a((String) (var10), (byte) -102);
+                      param1.writeString((String) (var10), (byte) -102);
                     }
                   } else {
                     if (4 == var6_int) {

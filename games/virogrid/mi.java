@@ -3,7 +3,7 @@
  */
 abstract class mi implements le {
     static String field_e;
-    static String field_f;
+    static String textRemovedFromGame;
     static int field_c;
     private long field_b;
     static String field_a;
@@ -11,7 +11,7 @@ abstract class mi implements le {
 
     final static boolean a(byte param0) {
         if (param0 >= -103) {
-          field_f = (String) null;
+          textRemovedFromGame = (String) null;
           return ih.field_b == null ? fe.field_Gb : true;
         }
         return ih.field_b == null ? fe.field_Gb : true;
@@ -36,8 +36,8 @@ abstract class mi implements le {
           vi.b((byte) -126);
           tm.field_l.a((byte) 76);
           aa.field_a = new ca(pm.field_g, (String) null, kb.field_c, param1, param2);
-          fi.field_t = new de(tm.field_l, aa.field_a);
-          tm.field_l.a(0, fi.field_t);
+          UiWidget.field_t = new de(tm.field_l, aa.field_a);
+          tm.field_l.a(0, UiWidget.field_t);
           if (!param3) {
             field_c = 59;
           }
@@ -54,7 +54,7 @@ abstract class mi implements le {
           mi.e(-16);
           hn.a(-1781, param0);
           if (en.field_Fb) {
-            df.g(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
+            Rasterizer.g(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
             he.field_pc.field_c.a(param0, 24960);
             la.a(param1 ^ 8271, param0);
             return;
@@ -67,7 +67,7 @@ abstract class mi implements le {
           la.a(param1 ^ 8271, param0);
           return;
         }
-        df.g(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
+        Rasterizer.g(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
         he.field_pc.field_c.a(param0, 24960);
         la.a(param1 ^ 8271, param0);
     }
@@ -84,7 +84,7 @@ abstract class mi implements le {
     }
 
     public static void e(int param0) {
-        field_f = null;
+        textRemovedFromGame = null;
         if (param0 != 12) {
           return;
         }
@@ -131,7 +131,7 @@ abstract class mi implements le {
           return wm.field_v;
         }
         if (!(hc.a(param0 + 12257) >= 350L + this.field_b)) {
-          return gd.field_r;
+          return ImageProducerRasterBuffer.field_r;
         }
         if (param0 == -22243) {
           return this.f(-843083384);
@@ -212,7 +212,7 @@ abstract class mi implements le {
     abstract wl f(int param0);
 
     static {
-        field_f = "Sorry, you were removed from the game you were playing. This happened either because you were disconnected for too long, or because the server was updated.";
+        textRemovedFromGame = "Sorry, you were removed from the game you were playing. This happened either because you were disconnected for too long, or because the server was updated.";
         field_e = "Unpacking music";
         field_a = "Hide private chat and appear offline to friends";
     }

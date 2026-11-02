@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qg extends l {
+final class qg extends IntrusiveNode {
     static String field_s;
     int[] field_p;
     int field_q;
@@ -12,10 +12,10 @@ final class qg extends l {
     int field_t;
     static ul field_r;
     int field_i;
-    static mg[] field_j;
+    static Sprite[] frameBottomSprites;
     int field_o;
     static int field_n;
-    static mg field_u;
+    static Sprite displayNameChangedIcon;
     static il field_h;
     static int field_w;
     static int field_g;
@@ -99,16 +99,16 @@ final class qg extends l {
 
     public static void a(int param0) {
         field_h = null;
-        field_u = null;
+        displayNameChangedIcon = null;
         field_s = null;
         field_l = null;
-        field_j = null;
+        frameBottomSprites = null;
         field_m = null;
         if (param0 >= 104) {
           field_r = null;
           return;
         }
-        field_j = (mg[]) null;
+        frameBottomSprites = (Sprite[]) null;
         field_r = null;
     }
 

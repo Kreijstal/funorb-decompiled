@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rj implements ol {
+final class rj implements WidgetListener {
     private int field_e;
     private e field_g;
     private int field_f;
@@ -15,9 +15,9 @@ final class rj implements ol {
     static int field_l;
     static int field_h;
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
         int var10 = 0;
-        fi stackIn_6_0 = null;
+        UiWidget stackIn_6_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -27,29 +27,29 @@ final class rj implements ol {
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        fi var12 = null;
+        UiWidget var12 = null;
         gb var13 = null;
         var11 = Virogrid.field_F ? 1 : 0;
         try {
           if (param4 != -23294) {
-            var12 = (fi) null;
-            this.a(62, (fi) null, true, -29, -102);
+            var12 = (UiWidget) null;
+            this.a(62, (UiWidget) null, true, -29, -102);
           }
           if (!(param1 instanceof gb)) {
             stackIn_6_0 = null;
           } else {
-            stackIn_6_0 = (fi) (param1);
+            stackIn_6_0 = (UiWidget) (param1);
           }
           var13 = (gb) (stackIn_6_0);
           if (var13 == null) {
           }
-          df.b(param0 + param1.field_l, param3 + param1.field_u, param1.field_g, param1.field_m, this.field_k);
+          Rasterizer.b(param0 + param1.field_l, param3 + param1.field_u, param1.field_g, param1.field_m, this.field_k);
           var7 = param1.field_g - var13.field_J * 2;
           var8 = param1.field_l + (param0 + var13.field_J);
           var9 = var13.field_K + param1.field_u + param3;
-          df.a(var8, var9, var8 + var7, var9, this.field_a);
+          Rasterizer.a(var8, var9, var8 + var7, var9, this.field_a);
           for (var10 = -1 + var13.d((byte) -108); var10 >= 0; var10--) {
-            df.c(var7 * var13.a(-1, var10) / var13.a(2147483647) + var8, var9, this.field_b, this.field_e);
+            Rasterizer.c(var7 * var13.a(-1, var10) / var13.a(2147483647) + var8, var9, this.field_b, this.field_e);
           }
           if (this.field_g == null) {
             return;
@@ -73,12 +73,12 @@ final class rj implements ol {
     final static void a(int param0, boolean param1, long param2) {
         hg var4 = gk.field_g;
         var4.g(param0, 8);
-        var4.field_l = var4.field_l + 1;
-        int var5 = var4.field_l;
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
         var4.a(6, -119);
         var4.a((byte) 67, param2);
         if (!param1) {
-          var4.b(-var5 + var4.field_l, -1);
+          var4.b(-var5 + var4.position, -1);
           return;
         }
     }
@@ -136,25 +136,25 @@ final class rj implements ol {
         }
         if (param1 < param5) {
           if (param7 > param5) {
-            li.a(param1, param6, param5, df.field_d, param7, param0, param2, param3, (byte) -105);
+            li.a(param1, param6, param5, Rasterizer.field_d, param7, param0, param2, param3, (byte) -105);
             return;
           }
           if (param7 > param1) {
-            li.a(param1, param6, param7, df.field_d, param5, param3, param2, param0, (byte) 112);
+            li.a(param1, param6, param7, Rasterizer.field_d, param5, param3, param2, param0, (byte) 112);
             return;
           }
-          li.a(param7, param3, param1, df.field_d, param5, param6, param2, param0, (byte) -58);
+          li.a(param7, param3, param1, Rasterizer.field_d, param5, param6, param2, param0, (byte) -58);
           return;
         }
         if (param7 > param1) {
-          li.a(param5, param0, param1, df.field_d, param7, param6, param2, param3, (byte) 75);
+          li.a(param5, param0, param1, Rasterizer.field_d, param7, param6, param2, param3, (byte) 75);
           return;
         }
         if (param5 >= param7) {
-          li.a(param7, param3, param5, df.field_d, param1, param0, param2, param6, (byte) -59);
+          li.a(param7, param3, param5, Rasterizer.field_d, param1, param0, param2, param6, (byte) -59);
           return;
         }
-        li.a(param5, param0, param7, df.field_d, param1, param3, param2, param6, (byte) -68);
+        li.a(param5, param0, param7, Rasterizer.field_d, param1, param3, param2, param6, (byte) -68);
     }
 
     static {

@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class km extends ke {
+class SpriteWidget extends ke {
     int field_fb;
     e field_C;
-    mg[] field_x;
-    mg field_y;
-    mg field_qb;
+    Sprite[] field_x;
+    Sprite mouseHeldSprite;
+    Sprite normalSprite;
     private int field_U;
     private int field_wb;
     int field_tb;
     int field_J;
     static bg field_yb;
     private int field_M;
-    mg field_sb;
+    Sprite mouseOverSprite;
     int field_ab;
     int field_w;
     String field_V;
@@ -21,7 +21,7 @@ class km extends ke {
     int field_E;
     int field_K;
     int field_Bb;
-    mg field_rb;
+    Sprite disabledSprite;
     int field_kb;
     boolean field_X;
     boolean field_G;
@@ -31,7 +31,7 @@ class km extends ke {
     private int field_v;
     static int field_pb;
     int field_R;
-    p field_W;
+    IntrusiveDeque field_W;
     static String field_P;
     int field_Cb;
     int field_hb;
@@ -45,19 +45,19 @@ class km extends ke {
     int field_H;
     int field_O;
     private boolean field_Z;
-    mg field_jb;
+    Sprite field_jb;
     private int field_ob;
-    mg[] field_L;
+    Sprite[] field_L;
     boolean field_Y;
     int field_zb;
-    mg[] field_vb;
+    Sprite[] field_vb;
     private boolean field_gb;
     static int field_B;
     String field_eb;
     int field_ub;
     int field_lb;
-    mg[] field_cb;
-    mg[] field_T;
+    Sprite[] field_cb;
+    Sprite[] field_T;
     int field_z;
     private int field_N;
     boolean field_xb;
@@ -65,13 +65,13 @@ class km extends ke {
     boolean field_ib;
 
     final void a(boolean param0, int param1) {
-        this.a(param0, 0, df.field_e, 0, 0, df.field_f, false, false, false, false, true);
+        this.a(param0, 0, Rasterizer.field_e, 0, 0, Rasterizer.field_f, false, false, false, false, true);
         if (param1 != 24960) {
           this.field_mb = true;
         }
     }
 
-    final void b(int param0, km param1) {
+    final void b(int param0, SpriteWidget param1) {
         boolean stackIn_94_1 = false;
         RuntimeException stackIn_101_0 = null;
         StringBuilder stackIn_101_1 = null;
@@ -101,8 +101,8 @@ class km extends ke {
             if (null != param1.field_jb) {
               this.field_jb = param1.field_jb;
             }
-            if (null != param1.field_sb) {
-              this.field_sb = param1.field_sb;
+            if (null != param1.mouseOverSprite) {
+              this.mouseOverSprite = param1.mouseOverSprite;
             }
             if (0 != param1.field_z) {
               this.field_z = param1.field_z;
@@ -110,8 +110,8 @@ class km extends ke {
             if (param1.field_T != null) {
               this.field_T = param1.field_T;
             }
-            if (null != param1.field_y) {
-              this.field_y = param1.field_y;
+            if (null != param1.mouseHeldSprite) {
+              this.mouseHeldSprite = param1.mouseHeldSprite;
             }
             if (param1.field_C != null) {
               this.field_C = param1.field_C;
@@ -134,8 +134,8 @@ class km extends ke {
             if (null != param1.field_vb) {
               this.field_vb = param1.field_vb;
             }
-            if (null != param1.field_qb) {
-              this.field_qb = param1.field_qb;
+            if (null != param1.normalSprite) {
+              this.normalSprite = param1.normalSprite;
             }
             if (!param1.field_Y) {
               this.field_Y = param1.field_Y;
@@ -149,8 +149,8 @@ class km extends ke {
             if (param1.field_H != 256) {
               this.field_H = param1.field_H;
             }
-            if (param1.field_rb != null) {
-              this.field_rb = param1.field_rb;
+            if (param1.disabledSprite != null) {
+              this.disabledSprite = param1.disabledSprite;
             }
             if (0 <= param1.field_bb) {
               this.field_bb = param1.field_bb;
@@ -212,17 +212,17 @@ class km extends ke {
         }
     }
 
-    km(long param0, km param1, String param2) {
+    SpriteWidget(long param0, SpriteWidget param1, String param2) {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
     final void a(boolean param0, byte param1) {
         ch.field_b = !param0 ? true : false;
         if (param1 < 88) {
-          km.e(36);
+          SpriteWidget.e(36);
         }
         vl.field_d = !param0 ? true : false;
-        this.a(df.field_f, df.field_e, 0, true, true, 0);
+        this.a(Rasterizer.field_f, Rasterizer.field_e, 0, true, true, 0);
     }
 
     public static void f(int param0) {
@@ -234,32 +234,32 @@ class km extends ke {
     }
 
     final void b(byte param0) {
-        km var4 = null;
+        SpriteWidget var4 = null;
         int var3 = Virogrid.field_F ? 1 : 0;
         if (param0 != 42) {
           return;
         }
         if (null != this.field_W) {
-          var4 = (km) (this.field_W.b(false));
+          var4 = (SpriteWidget) (this.field_W.b(false));
           while (var4 != null) {
             var4.field_mb = true;
             var4.b((byte) 42);
-            var4 = (km) (this.field_W.e(9003));
+            var4 = (SpriteWidget) (this.field_W.e(9003));
           }
         }
     }
 
-    km(long param0, km param1) {
+    SpriteWidget(long param0, SpriteWidget param1) {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final void a(int param0, km param1) {
+    final void a(int param0, SpriteWidget param1) {
         if (param0 != 0) {
           return;
         }
         try {
           if (this.field_W == null) {
-            this.field_W = new p();
+            this.field_W = new IntrusiveDeque();
           }
           this.field_W.a(param1, (byte) -36);
         } catch (RuntimeException runtimeException) {
@@ -305,9 +305,9 @@ class km extends ke {
         var26 = Virogrid.field_F ? 1 : 0;
         try {
           var28 = sh.field_qb;
-          var2 = var28.g(11132);
+          var2 = var28.readUnsignedByte(11132);
           if (var2 == 0) {
-            var3 = var28.c((byte) 87);
+            var3 = var28.readUnsignedShort((byte) 87);
             var4 = (oc) (fn.field_a.a((byte) -77));
             while (var4 != null) {
               if (var4.field_j != var3) {
@@ -320,7 +320,7 @@ class km extends ke {
               tn.a(false);
               return;
             }
-            var5 = var28.g(11132);
+            var5 = var28.readUnsignedByte(11132);
             if (var5 != 0) {
               var6 = var4.field_g;
               qd.field_m[0].field_g = mi.field_d;
@@ -328,10 +328,10 @@ class km extends ke {
               var7 = var4.field_m;
               qd.field_m[0].field_d = null;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                qd.field_m[var8_int].field_g = var28.h(param0 ^ -59);
+                qd.field_m[var8_int].field_g = var28.readString(param0 ^ -59);
                 qd.field_m[var8_int].field_e = false;
-                if (var28.g(11132) == 1) {
-                  qd.field_m[var8_int].field_d = var28.h(param0 - 204);
+                if (var28.readUnsignedByte(11132) == 1) {
+                  qd.field_m[var8_int].field_d = var28.readString(param0 - 204);
                 } else {
                   qd.field_m[var8_int].field_d = null;
                 }
@@ -346,13 +346,13 @@ class km extends ke {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.g(11132);
+              var18 = var28.readUnsignedByte(11132);
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var28.g(11132);
+                  var20 = var28.readUnsignedByte(11132);
                   var21 = qd.field_m[var20].field_g;
                   var22 = var28.e((byte) -60);
-                  var24 = var28.field_l;
+                  var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = qd.field_m[var20].field_d;
@@ -361,20 +361,20 @@ class km extends ke {
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$0 = var15;
                       var15++;
-                      var36[0][incrementValue$0] = var28.d((byte) 93);
+                      var36[0][incrementValue$0] = var28.readInt((byte) 93);
                     }
                   }
                   if (var21 != null &&
-                    jc.a(var21, true)) {
+                    PacketBuffer.a(var21, true)) {
                     var8[1][var13] = mi.field_d;
                     var9[1][var13] = null;
                     var35[1][var13] = var22;
                     var13++;
-                    var28.field_l = var24;
+                    var28.position = var24;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$1 = var16;
                       var16++;
-                      var36[1][incrementValue$1] = var28.d((byte) 103);
+                      var36[1][incrementValue$1] = var28.readInt((byte) 103);
                     }
                   }
                   if (var6 > var14 &&
@@ -384,11 +384,11 @@ class km extends ke {
                     var9[2][var14] = qd.field_m[var20].field_d;
                     var35[2][var14] = var22;
                     var14++;
-                    var28.field_l = var24;
+                    var28.position = var24;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$2 = var17;
                       var17++;
-                      var36[2][incrementValue$2] = var28.d((byte) 127);
+                      var36[2][incrementValue$2] = var28.readInt((byte) 127);
                     }
                   }
                 }
@@ -396,7 +396,7 @@ class km extends ke {
             }
             var4.a(false);
           } else if (var2 == 1) {
-            var3 = var28.c((byte) 83);
+            var3 = var28.readUnsignedShort((byte) 83);
             var28.e((byte) -60);
             var4_ref = (hn) (qn.field_P.a((byte) -44));
             while (var4_ref != null) {
@@ -442,13 +442,13 @@ class km extends ke {
 
     final static int e(int param0) {
         if (param0 > -53) {
-          km.a(-109, -67, 3);
+          SpriteWidget.a(-109, -67, 3);
         }
         return ng.field_Q;
     }
 
     final int a(int param0, byte param1) {
-        km var4 = null;
+        SpriteWidget var4 = null;
         int var5 = 0;
         int var4_int = 0;
         int var6 = Virogrid.field_F ? 1 : 0;
@@ -461,8 +461,8 @@ class km extends ke {
             var3 = var4_int;
           }
         }
-        if (null != this.field_qb) {
-          var4_intLifetime1 = this.field_qb.field_u;
+        if (null != this.normalSprite) {
+          var4_intLifetime1 = this.normalSprite.field_u;
           if (var4_intLifetime1 > var3) {
             var3 = var4_intLifetime1;
           }
@@ -471,13 +471,13 @@ class km extends ke {
           this.a(-4, -89, -47, true, false, 60);
         }
         if (null != this.field_W) {
-          var4 = (km) (this.field_W.a((byte) -46));
+          var4 = (SpriteWidget) (this.field_W.a((byte) -46));
           while (var4 != null) {
             var5 = var4.field_tb + var4.field_K;
             if (var5 > var3) {
               var3 = var5;
             }
-            var4 = (km) (this.field_W.a(16213));
+            var4 = (SpriteWidget) (this.field_W.a(16213));
           }
         }
         return var3;
@@ -492,7 +492,7 @@ class km extends ke {
         int var10;
         int var11;
         int var12;
-        km var13;
+        SpriteWidget var13;
         int var14;
         int var7Lifetime1;
         int var7Lifetime2;
@@ -532,19 +532,19 @@ class km extends ke {
         this.field_J = this.field_F + param2;
         this.field_kb = this.field_kb - var7Lifetime3;
         param3 = param3 & this.field_Y;
-        var8 = df.field_i;
-        var9 = df.field_g;
-        var10 = df.field_k;
-        var11 = df.field_h;
-        df.h(this.field_Bb, this.field_J, this.field_Bb + this.field_K, this.field_J + this.field_ub);
+        var8 = Rasterizer.field_i;
+        var9 = Rasterizer.field_g;
+        var10 = Rasterizer.field_k;
+        var11 = Rasterizer.field_h;
+        Rasterizer.h(this.field_Bb, this.field_J, this.field_Bb + this.field_K, this.field_J + this.field_ub);
         var12 = 0;
         if (!vl.field_d &&
           param3 &&
           oi.field_g != 0 &&
-          ii.field_b >= df.field_i &&
-          df.field_k > ii.field_b &&
-          a.field_y >= df.field_g &&
-          df.field_h > a.field_y) {
+          ii.field_b >= Rasterizer.field_i &&
+          Rasterizer.field_k > ii.field_b &&
+          a.field_y >= Rasterizer.field_g &&
+          Rasterizer.field_h > a.field_y) {
           this.field_U = -this.field_J + a.field_y;
           this.field_nb = oi.field_g;
           var12 = 1;
@@ -556,7 +556,7 @@ class km extends ke {
             this.field_w = 0;
           }
         }
-        stackIn_31_1 = (!ch.field_b) && (df.field_i <= nl.field_u) && (df.field_k > nl.field_u) && (hk.field_Jb >= df.field_g) && (hk.field_Jb < df.field_h);
+        stackIn_31_1 = (!ch.field_b) && (Rasterizer.field_i <= nl.field_u) && (Rasterizer.field_k > nl.field_u) && (hk.field_Jb >= Rasterizer.field_g) && (hk.field_Jb < Rasterizer.field_h);
         this.field_G = stackIn_31_1;
         if (0 == j.field_e) {
           this.field_w = 0;
@@ -564,10 +564,10 @@ class km extends ke {
         stackIn_39_1 = (this.field_G) && (j.field_e == this.field_w) && (param3);
         this.field_S = stackIn_39_1;
         if (this.field_W != null) {
-          var13 = (km) (this.field_W.b(false));
+          var13 = (SpriteWidget) (this.field_W.b(false));
           while (var13 != null) {
             var13.a(this.field_ub, this.field_K, this.field_J, param3, param4, this.field_Bb);
-            var13 = (km) (this.field_W.e(9003));
+            var13 = (SpriteWidget) (this.field_W.e(9003));
           }
         }
         if (this.field_G) {
@@ -576,7 +576,7 @@ class km extends ke {
         if (var12 != 0) {
           vl.field_d = true;
         }
-        df.a(var8, var9, var10, var11);
+        Rasterizer.a(var8, var9, var10, var11);
         if (this.field_w != 0 &&
           this.field_X) {
           this.field_F = hk.field_Jb + (-this.field_U - param2);
@@ -600,7 +600,7 @@ class km extends ke {
         }
     }
 
-    final void a(int param0, km param1, km param2, byte param3) {
+    final void a(int param0, SpriteWidget param1, SpriteWidget param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -653,8 +653,8 @@ class km extends ke {
         int var13;
         int var14;
         int var15;
-        mg[] var16;
-        mg var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;
@@ -662,7 +662,7 @@ class km extends ke {
         int var22;
         int var23_int;
         String var23;
-        km var23_ref;
+        SpriteWidget var23_ref;
         int var24;
         int var25;
         String var26;
@@ -671,11 +671,11 @@ class km extends ke {
         var25 = Virogrid.field_F ? 1 : 0;
         this.field_J = param1 + this.field_F;
         this.field_Bb = param4 + this.field_tb;
-        var12 = df.field_i;
-        var13 = df.field_g;
-        var14 = df.field_k;
-        var15 = df.field_h;
-        df.h(this.field_Bb, this.field_J, this.field_Bb + this.field_K, this.field_J + this.field_ub);
+        var12 = Rasterizer.field_i;
+        var13 = Rasterizer.field_g;
+        var14 = Rasterizer.field_k;
+        var15 = Rasterizer.field_h;
+        Rasterizer.h(this.field_Bb, this.field_J, this.field_Bb + this.field_K, this.field_J + this.field_ub);
         param10 = param10 & this.field_Y;
         if (!this.field_mb) {
           param8 = this.field_S;
@@ -684,7 +684,7 @@ class km extends ke {
           param7 = stackIn_5_0;
         }
         var16 = this.field_vb;
-        var17 = this.field_qb;
+        var17 = this.normalSprite;
         var18 = this.field_E;
         var19 = param3;
         if (!param10) {
@@ -694,8 +694,8 @@ class km extends ke {
           if (this.field_db >= 0) {
             var18 = this.field_db;
           }
-          if (this.field_rb != null) {
-            var17 = this.field_rb;
+          if (this.disabledSprite != null) {
+            var17 = this.disabledSprite;
           }
         }
         var20 = 0;
@@ -706,8 +706,8 @@ class km extends ke {
           if (null != this.field_x) {
             var16 = this.field_x;
           }
-          if (null != this.field_sb) {
-            var17 = this.field_sb;
+          if (null != this.mouseOverSprite) {
+            var17 = this.mouseOverSprite;
           }
           if (this.field_ab >= 0) {
             var18 = this.field_ab;
@@ -729,8 +729,8 @@ class km extends ke {
           if (this.field_O != -2147483648) {
             var20 = this.field_O;
           }
-          if (this.field_y != null) {
-            var17 = this.field_y;
+          if (this.mouseHeldSprite != null) {
+            var17 = this.mouseHeldSprite;
           }
         }
         if (param9) {
@@ -818,17 +818,17 @@ class km extends ke {
           }
         }
         if (null != this.field_W) {
-          var23_ref = (km) (this.field_W.a((byte) -49));
+          var23_ref = (SpriteWidget) (this.field_W.a((byte) -49));
           while (var23_ref != null) {
             var23_ref.a(param0, var20 + this.field_J, this.field_K, 0, this.field_Bb + var19, this.field_ub, this.field_Z, param7, param8, param9, param10);
-            var23_ref = (km) (this.field_W.a(16213));
+            var23_ref = (SpriteWidget) (this.field_W.a(16213));
           }
         }
-        df.a(var12, var13, var14, var15);
+        Rasterizer.a(var12, var13, var14, var15);
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        km var10_ref_km = null;
+        SpriteWidget var10_ref_km = null;
         int var9 = 0;
         int var11 = Virogrid.field_F ? 1 : 0;
         int var5 = -this.field_F;
@@ -838,11 +838,11 @@ class km extends ke {
         int var9Lifetime1;
         if (!param0) {
           var9 = 0;
-          var10_ref_km = (km) (this.field_W.a((byte) -74));
+          var10_ref_km = (SpriteWidget) (this.field_W.a((byte) -74));
           while (var10_ref_km != null) {
             var10_ref_km.field_Cb = var9 - var10_ref_km.field_F;
             var9 = var9 + (var10_ref_km.field_ub + var10_ref_km.field_kb + param1);
-            var10_ref_km = (km) (this.field_W.a(16213));
+            var10_ref_km = (SpriteWidget) (this.field_W.a(16213));
           }
           var8 = -param1 + var9;
         }
@@ -872,7 +872,7 @@ class km extends ke {
         int var3 = -21 / ((-5 - param2) / 60);
     }
 
-    protected km() {
+    protected SpriteWidget() {
         this.field_R = -2147483648;
         this.field_hb = -2147483648;
         this.field_db = -1;
@@ -890,7 +890,7 @@ class km extends ke {
         this.field_ab = -1;
     }
 
-    km(long param0, km param1, int param2, int param3, int param4, int param5, String param6) {
+    SpriteWidget(long param0, SpriteWidget param1, int param2, int param3, int param4, int param5, String param6) {
         this.field_R = -2147483648;
         this.field_hb = -2147483648;
         this.field_db = -1;
@@ -911,7 +911,7 @@ class km extends ke {
           this.field_F = param3;
           this.field_K = param4;
           this.field_tb = param2;
-          this.field_d = param0;
+          this.key = param0;
           this.b(18003, param1);
           if (param6 != null) {
             this.field_V = param6;

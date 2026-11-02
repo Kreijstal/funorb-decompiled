@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ae implements ol {
+final class ae implements WidgetListener {
     static long field_d;
     static int field_a;
     static String[] field_b;
@@ -20,7 +20,7 @@ final class ae implements ol {
         field_e = null;
     }
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -28,7 +28,7 @@ final class ae implements ol {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        mg var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param1.field_l + param0;
           if (param4 != -23294) {

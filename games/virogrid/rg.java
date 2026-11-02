@@ -35,7 +35,7 @@ final class rg extends RuntimeException {
         var1Lifetime1 = var6 + ":";
         for (var2 = 0; ba.field_a > var2; var2++) {
           var7 = var1Lifetime1 + ' ';
-          var3 = sh.field_qb.field_g[var2] & 255;
+          var3 = sh.field_qb.payload[var2] & 255;
           var4 = var3 >> 4;
           var3 = var3 & 15;
           if (var4 < 10) {

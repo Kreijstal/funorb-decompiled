@@ -4,7 +4,7 @@
 final class hf extends aj {
     private int field_u;
     private int field_B;
-    private mg[] field_x;
+    private Sprite[] field_x;
     private int field_y;
     static java.awt.Color field_v;
     static int field_C;
@@ -13,7 +13,7 @@ final class hf extends aj {
     static sh field_w;
     static int[] field_z;
 
-    public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+    public final void a(int param0, UiWidget param1, boolean param2, int param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -80,10 +80,10 @@ final class hf extends aj {
 
     private hf(int param0, int param1, int param2) {
         this.field_u = param2;
-        this.field_x = td.field_g;
+        this.field_x = td.buttonSprites;
         this.field_B = param0;
         this.field_y = param1;
-        this.field_i = on.field_b;
+        this.field_i = on.arezzo14BoldFont;
     }
 
     public hf() {

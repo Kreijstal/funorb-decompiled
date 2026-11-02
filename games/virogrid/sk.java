@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sk {
-    static p field_a;
+    static IntrusiveDeque field_a;
     static int field_d;
     static String field_b;
     static String field_c;
@@ -21,7 +21,7 @@ final class sk {
 
     static {
         field_z = "sk.A(";
-        field_a = new p();
+        field_a = new IntrusiveDeque();
         field_b = "Loading extra data";
         field_d = -1;
         field_c = "Sound: ";

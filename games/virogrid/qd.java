@@ -12,7 +12,7 @@ final class qd {
     int field_d;
     static ai[] field_m;
     int field_l;
-    static km field_f;
+    static SpriteWidget field_f;
     static String field_g;
     static ml field_i;
     static int field_c;
@@ -122,7 +122,7 @@ final class qd {
         ge.field_b = -1;
     }
 
-    final static eh a(boolean param0, int param1, boolean param2, int param3, byte param4) {
+    final static Js5Archive a(boolean param0, int param1, boolean param2, int param3, byte param4) {
         if (param4 >= 40) {
           return va.a(param1, false, param3, -116, param2, param0);
         }
@@ -136,7 +136,7 @@ final class qd {
         field_f = null;
         field_m = null;
         if (!param0) {
-          field_f = (km) null;
+          field_f = (SpriteWidget) null;
         }
     }
 
@@ -196,7 +196,7 @@ final class qd {
 
     final static he a(byte param0, int param1) {
         int var2 = -66 % ((param0 - 65) / 53);
-        return ma.field_c == null ? null : (he) (ma.field_c.a((long)param1, (byte) 93));
+        return IntrusiveDequeCursor.field_c == null ? null : (he) (IntrusiveDequeCursor.field_c.a((long)param1, (byte) 93));
     }
 
     static {

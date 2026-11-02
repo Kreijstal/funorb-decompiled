@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wf {
+abstract class RasterBuffer {
     static um field_d;
     static il field_j;
     static String field_k;
-    static String[] field_e;
+    static String[] gameOptionLabels;
     static String field_g;
     int[] field_l;
     int field_c;
@@ -32,7 +32,7 @@ abstract class wf {
         field_i = null;
         field_g = null;
         field_m = null;
-        field_e = null;
+        gameOptionLabels = null;
         field_j = null;
         field_k = null;
         field_a = null;
@@ -47,7 +47,7 @@ abstract class wf {
         boolean stackIn_8_0 = false;
         if (!param3) {
           var8 = (String) null;
-          wf.a((String) null, -15);
+          RasterBuffer.a((String) null, -15);
         }
         stackIn_8_0 = (param0 <= param1) && (param1 < param2 + param0) && (param4 <= param5) && (param6 + param4 > param5);
         return stackIn_8_0;
@@ -57,11 +57,11 @@ abstract class wf {
         try {
           ti.field_g = param3;
           if (param2 != 0) {
-            wf.a(83, 51, -93, false, 111, -102, -46);
+            RasterBuffer.a(83, 51, -93, false, 111, -102, -46);
           }
           j.field_h = param1;
           rf.field_b = param0;
-          bj.a(df.field_e / 2, 23, df.field_f / 2);
+          bj.a(Rasterizer.field_e / 2, 23, Rasterizer.field_f / 2);
           vb.a(param1.field_A, (byte) 90, param1.field_A + param1.field_G, param3.field_G + param3.field_A, param3.field_A);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "wf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -70,7 +70,7 @@ abstract class wf {
 
     abstract void a(byte param0, int param1, java.awt.Graphics param2, int param3);
 
-    final static oj a(km param0, km param1, u param2, int param3, km param4) {
+    final static oj a(SpriteWidget param0, SpriteWidget param1, u param2, int param3, SpriteWidget param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -129,7 +129,7 @@ abstract class wf {
           var9 = var20;
           if (param3 != 49) {
             var18 = (e) null;
-            wf.a(96, (e) null, -35, (e) null);
+            RasterBuffer.a(96, (e) null, -35, (e) null);
           }
           var21 = new int[var7];
           var19 = var21;
@@ -140,7 +140,7 @@ abstract class wf {
               var13_ref_u = dm.field_v.a(param2.field_x[var12], (byte) 61);
               var8[var12] = var13_ref_u.field_v;
               var9[var12] = param2.field_p[var12];
-              var11[var12] = wf.a(param0, param1, var13_ref_u, 49, param4);
+              var11[var12] = RasterBuffer.a(param0, param1, var13_ref_u, 49, param4);
             }
           }
           if (param2.field_w != null) {
@@ -246,14 +246,14 @@ abstract class wf {
     }
 
     final void a(byte param0) {
-        df.a(this.field_l, this.field_c, this.field_b);
+        Rasterizer.a(this.field_l, this.field_c, this.field_b);
         if (param0 != 29) {
           this.a((byte) -120);
         }
     }
 
     static {
-        field_e = new String[]{"Turn duration (seconds)", "Grid width"};
+        gameOptionLabels = new String[]{"Turn duration (seconds)", "Grid width"};
         field_k = "Playing";
         field_a = "Unfortunately we are unable to create an account for you at this time.";
         field_g = "Owner";

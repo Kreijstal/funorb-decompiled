@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends fi {
+final class dg extends UiWidget {
     static int field_x;
-    private mg[] field_D;
+    private Sprite[] field_D;
     private int field_K;
     private int field_H;
     boolean field_z;
     private int field_y;
-    private mg field_I;
-    static km field_E;
-    static String field_G;
-    private mg field_B;
+    private Sprite field_I;
+    static SpriteWidget field_E;
+    static String textRatedAchievements;
+    private Sprite field_B;
     private int field_J;
     private int field_F;
-    private mg field_A;
+    private Sprite field_A;
     int field_C;
     private int field_L;
 
@@ -42,7 +42,7 @@ final class dg extends fi {
           var6 = null;
           if (param0.indexOf('@') == -1) {
             var7 = (CharSequence) ((Object) param0);
-            var4_long = jc.a(var7, (byte) -105);
+            var4_long = PacketBuffer.a(var7, (byte) -105);
           } else {
             var6 = param0;
           }
@@ -68,17 +68,17 @@ final class dg extends fi {
         }
     }
 
-    private final mg e(int param0) {
+    private final Sprite e(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Virogrid.field_F ? 1 : 0;
         int var2 = this.field_m >> 1;
-        mg var3 = new mg(var2, this.field_m);
+        Sprite var3 = new Sprite(var2, this.field_m);
         kb.a(var3, 16865);
         if (param0 < 63) {
-          return (mg) null;
+          return (Sprite) null;
         }
         for (var4 = 0; this.field_m > var4; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
@@ -88,14 +88,14 @@ final class dg extends fi {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
             }
-            df.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            Rasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         ai.a(true);
         return var3;
     }
 
-    private final void a(int param0, mg param1, int param2, boolean param3) {
+    private final void a(int param0, Sprite param1, int param2, boolean param3) {
         int var6 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -108,7 +108,7 @@ final class dg extends fi {
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           var5_int = param2 + this.field_g;
-          uk.a(param0 + this.field_m, 6, param2 + this.field_A.field_w, -this.field_A.field_w + var5_int, param0);
+          GameApplet.a(param0 + this.field_m, 6, param2 + this.field_A.field_w, -this.field_A.field_w + var5_int, param0);
           for (var6 = -this.field_L + param2; var6 < var5_int; var6 = var6 + param1.field_w) {
             param1.d(var6, param0);
           }
@@ -116,7 +116,7 @@ final class dg extends fi {
           if (param3) {
             return;
           }
-          if (df.field_i <= this.field_A.field_w + param2) {
+          if (Rasterizer.field_i <= this.field_A.field_w + param2) {
             kb.a(this.field_I, 16865);
             param1.d(-this.field_L, 0);
             param1.d(2 * this.field_J - this.field_L, 0);
@@ -124,7 +124,7 @@ final class dg extends fi {
             ai.a(true);
             this.field_I.d(param2, param0);
           }
-          if (-this.field_A.field_w + var5_int <= df.field_k) {
+          if (-this.field_A.field_w + var5_int <= Rasterizer.field_k) {
             kb.a(this.field_I, 16865);
             for (var7 = this.field_L + (-this.field_A.field_w + this.field_g); this.field_J * 2 < var7; var7 = var7 - this.field_J * 2) {
             }
@@ -151,7 +151,7 @@ final class dg extends fi {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        mg discarded$0 = null;
+        Sprite discarded$0 = null;
         if (param3 != 0) {
           return;
         }
@@ -159,7 +159,7 @@ final class dg extends fi {
         int var6 = param2 + this.field_u;
         this.a(var6, this.field_D[0], var5, false);
         if (this.field_C < 65536) {
-          uk.a(var6 + this.field_m, 6, (this.field_C * this.field_g >> 16) + var5, var5 + this.field_g, var6);
+          GameApplet.a(var6 + this.field_m, 6, (this.field_C * this.field_g >> 16) + var5, var5 + this.field_g, var6);
           this.a(var6, this.field_D[1], var5, false);
           ai.a(true);
         }
@@ -169,12 +169,12 @@ final class dg extends fi {
     }
 
     private final void a(int param0) {
-        this.field_D = new mg[]{this.c(this.field_F, this.field_H, -17), this.c(this.field_K, this.field_y, param0 ^ -46)};
+        this.field_D = new Sprite[]{this.c(this.field_F, this.field_H, -17), this.c(this.field_K, this.field_y, param0 ^ -46)};
         this.field_A = this.e(127);
         this.field_B = this.field_A.c();
-        this.field_I = new mg(this.field_m >> 1, this.field_m);
+        this.field_I = new Sprite(this.field_m >> 1, this.field_m);
         if (param0 != 10) {
-          field_G = (String) null;
+          textRatedAchievements = (String) null;
         }
     }
 
@@ -184,15 +184,15 @@ final class dg extends fi {
     }
 
     public static void a(byte param0) {
-        field_G = null;
+        textRatedAchievements = null;
         if (param0 <= 13) {
           return;
         }
         field_E = null;
     }
 
-    private final mg c(int param0, int param1, int param2) {
-        mg discarded$0 = null;
+    private final Sprite c(int param0, int param1, int param2) {
+        Sprite discarded$0 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -207,7 +207,7 @@ final class dg extends fi {
         if (param2 > -15) {
           discarded$0 = this.e(93);
         }
-        mg var14 = new mg(this.field_J * 2, this.field_m);
+        Sprite var14 = new Sprite(this.field_J * 2, this.field_m);
         kb.a(var14, 16865);
         int var5 = this.field_m >> 1;
         for (var6 = 0; var6 < this.field_m; var6++) {
@@ -217,13 +217,13 @@ final class dg extends fi {
           var10 = var6 - var5;
           var11 = 128 + (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
           var12 = var11 >= 256 ? var8 | var9 : (var9 * var11 & 16711680 | -16711936 & var11 * var8) >>> 8;
-          df.b(var7, var6, this.field_J, var12);
+          Rasterizer.b(var7, var6, this.field_J, var12);
           var8Lifetime1 = param0 & 16711935;
-          df.b(var7 - 2 * this.field_J, var6, this.field_J, var12);
+          Rasterizer.b(var7 - 2 * this.field_J, var6, this.field_J, var12);
           var9Lifetime1 = 65280 & param0;
           var12Lifetime1 = var11 < 256 ? (var9Lifetime1 * var11 & 16711680 | -16711936 & var8Lifetime1 * var11) >>> 8 : var9Lifetime1 | var8Lifetime1;
-          df.b(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
-          df.b(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
+          Rasterizer.b(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
+          Rasterizer.b(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
         }
         ai.a(true);
         return var14;
@@ -272,19 +272,19 @@ final class dg extends fi {
           param2 = param2 / 2;
           var5 = 2 + (int)((Math.cos((double)((float)id.field_r / 20.0f)) + 1.0) * 8.0);
           if (param1 > -123) {
-            field_G = (String) null;
+            textRatedAchievements = (String) null;
           }
           for (var6 = 0; 9 > var6; var6++) {
             var7 = (-var6 + 9) * var5 >>> 3;
-            df.a(var3_int + (-param2 - var7), var4 - param0 - var7, param2 + var7 << 1, var7 + param0 << 1, 10, 1141646, 26);
+            Rasterizer.a(var3_int + (-param2 - var7), var4 - param0 - var7, param2 + var7 << 1, var7 + param0 << 1, 10, 1141646, 26);
           }
-          df.a(-param2 + var3_int, -param0 + var4, param2 << 1, param0 << 1, 10, 0, 180);
+          Rasterizer.a(-param2 + var3_int, -param0 + var4, param2 << 1, param0 << 1, 10, 0, 180);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "dg.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0, int param1, fi param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -317,6 +317,6 @@ final class dg extends fi {
     }
 
     static {
-        field_G = "Achievements can only be obtained by playing Rated games";
+        textRatedAchievements = "Achievements can only be obtained by playing Rated games";
     }
 }

@@ -3,7 +3,7 @@
  */
 class mh extends bk {
     private String field_k;
-    static String[] field_i;
+    static String[] aiLevelNames;
     static String field_j;
     static int field_g;
     private long field_h;
@@ -14,15 +14,15 @@ class mh extends bk {
         if (!param0) {
           mh.b((byte) -16);
         }
-        return p.field_b;
+        return IntrusiveDeque.field_b;
     }
 
     public static void b(byte param0) {
         field_f = null;
-        field_i = null;
+        aiLevelNames = null;
         field_j = null;
         if (param0 != 51) {
-          field_i = (String[]) null;
+          aiLevelNames = (String[]) null;
         }
         field_e = null;
     }
@@ -103,7 +103,7 @@ class mh extends bk {
         }
     }
 
-    final void a(boolean param0, jc param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         try {
           param1.a((byte) 87, this.field_h);
           param1.c(this.field_k, (byte) 60);
@@ -147,7 +147,7 @@ class mh extends bk {
     }
 
     static {
-        field_i = new String[]{"None", "Easy", "Normal", "Hard"};
+        aiLevelNames = new String[]{"None", "Easy", "Normal", "Hard"};
         field_f = "<%0> has resigned and left.";
         field_e = "If you do nothing the game will revert to normal view in <%0> seconds.";
         field_j = "Create your own free Jagex account";

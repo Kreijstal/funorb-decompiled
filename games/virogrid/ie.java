@@ -4,7 +4,7 @@
 abstract class ie {
     ri[] field_d;
     static float field_e;
-    static String field_b;
+    static String textXTurnPlaying;
     static kf field_a;
     static String field_c;
 
@@ -14,7 +14,7 @@ abstract class ie {
           ie.a(81, -82, 22, -52, -108, 64);
         }
         field_a = null;
-        field_b = null;
+        textXTurnPlaying = null;
     }
 
     final int a(byte param0) {
@@ -57,7 +57,7 @@ abstract class ie {
         int var7Lifetime1;
         var9 = Virogrid.field_F ? 1 : 0;
         try {
-          fd.field_B = new int[param5];
+          WidgetContainer.field_B = new int[param5];
           o.field_d = new int[param0];
           var6_int = 0;
           if (param2 != 28476) {
@@ -74,7 +74,7 @@ abstract class ie {
           var6_intLifetime1 = var10;
           while (var10 < param5) {
             var7Lifetime1 = -(var10 * param1) + 370 - param4;
-            fd.field_B[var10] = var7Lifetime1;
+            WidgetContainer.field_B[var10] = var7Lifetime1;
             var10++;
           }
           return;
@@ -85,7 +85,7 @@ abstract class ie {
         }
     }
 
-    final static vh a(boolean param0, int param1, int param2, eh param3, eh param4) {
+    final static vh a(boolean param0, int param1, int param2, Js5Archive param3, Js5Archive param4) {
         RuntimeException var5 = null;
         vh stackIn_2_0 = null;
         vh stackIn_7_0 = null;
@@ -271,7 +271,7 @@ abstract class ie {
     }
 
     static {
-        field_b = "<%2>'s turn - playing <%0> (<%1>)";
+        textXTurnPlaying = "<%2>'s turn - playing <%0> (<%1>)";
         field_c = "Visit the Account Management section on the main site to view.";
     }
 }

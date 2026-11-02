@@ -5,18 +5,18 @@ import java.util.*;
 
 final class wc {
     static Calendar field_l;
-    private eh field_i;
+    private Js5Archive field_i;
     private sl field_d;
     static String field_g;
-    static km field_k;
-    private eh field_h;
+    static SpriteWidget field_k;
+    private Js5Archive field_h;
     static ml field_a;
     static String field_b;
     static int field_m;
     static int field_j;
     static String field_e;
     static eg field_f;
-    static String[][] field_c;
+    static String[][] gameOptionNames;
 
     final static boolean a(byte param0, gh param1, gh param2) {
         int var3_int = 0;
@@ -83,7 +83,7 @@ final class wc {
         }
         var5 = new u();
         if (var4 != null) {
-          var5.a(11693, new jc(var4));
+          var5.a(11693, new PacketBuffer(var4));
         }
         if (32768 <= param0) {
           var5.d(3818);
@@ -117,13 +117,13 @@ final class wc {
         field_e = null;
         field_b = null;
         if (param0 == 200) {
-          field_c = (String[][]) null;
+          gameOptionNames = (String[][]) null;
           field_g = null;
           return;
         }
     }
 
-    wc(int param0, eh param1, eh param2) {
+    wc(int param0, Js5Archive param1, Js5Archive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -167,6 +167,6 @@ final class wc {
         field_l = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
         field_b = "Please wait...";
         field_e = "The invitation has been withdrawn.";
-        field_c = new String[][]{new String[]{"120", "90", "60", "45", "30", "20", "10"}, new String[]{"7", "9", "11"}};
+        gameOptionNames = new String[][]{new String[]{"120", "90", "60", "45", "30", "20", "10"}, new String[]{"7", "9", "11"}};
     }
 }

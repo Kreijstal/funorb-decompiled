@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qk {
-    static String[] field_d;
+    static String[] achievementTitles;
     static int field_b;
-    private wb field_c;
-    private wb field_a;
+    private DualLinkNode field_c;
+    private DualLinkNode field_a;
 
-    final wb d(int param0) {
+    final DualLinkNode d(int param0) {
         if (param0 != -1) {
-          this.field_a = (wb) null;
+          this.field_a = (DualLinkNode) null;
         }
-        wb var2 = this.field_c.field_h;
+        DualLinkNode var2 = this.field_c.field_h;
         if (this.field_c == var2) {
           this.field_a = null;
           return null;
@@ -21,7 +21,7 @@ final class qk {
     }
 
     final static void a(boolean param0, int param1, byte param2, boolean param3, boolean param4) {
-        km stackIn_18_0 = null;
+        SpriteWidget stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
@@ -35,11 +35,11 @@ final class qk {
         boolean stackIn_136_0 = false;
         boolean stackIn_152_0 = false;
         int stackIn_158_0 = 0;
-        km stackIn_178_0 = null;
+        SpriteWidget stackIn_178_0 = null;
         boolean stackIn_179_1 = false;
-        km stackIn_185_0 = null;
+        SpriteWidget stackIn_185_0 = null;
         boolean stackIn_186_1 = false;
-        km stackIn_190_0 = null;
+        SpriteWidget stackIn_190_0 = null;
         boolean stackIn_191_1 = false;
         Object stackIn_192_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -47,9 +47,9 @@ final class qk {
         boolean stackOut_135_0;
         boolean stackOut_151_0;
         RuntimeException var5 = null;
-        km var6 = null;
-        km var7 = null;
-        km var8 = null;
+        SpriteWidget var6 = null;
+        SpriteWidget var7 = null;
+        SpriteWidget var8 = null;
         int var9 = 0;
         String var9_ref_String = null;
         String var10_ref_String = null;
@@ -65,18 +65,18 @@ final class qk {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        p var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         lk var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        km var22 = null;
+        SpriteWidget var22 = null;
         int[] var23 = null;
         String var24 = null;
         String var25 = null;
         int[] var26 = null;
-        km var27 = null;
+        SpriteWidget var27 = null;
         int stackIn_54_0Lifetime1;
         int stackIn_54_1Lifetime1;
         int stackIn_63_0Lifetime1;
@@ -88,7 +88,7 @@ final class qk {
           boolean decompiledFrameCompleted1 = true;
           rf.a(th.field_z, -4);
           if (wl.field_d != null) {
-            fb.field_o.field_Y = true;
+            CellFlip.field_o.field_Y = true;
             var22 = ed.field_c;
             var27 = var22;
             ed.field_c.field_ub = 0;
@@ -117,14 +117,14 @@ final class qk {
               ed.field_c.field_vb = bd.field_b.field_vb;
               if (0 < ea.field_a) {
                 if (1 != ea.field_a) {
-                  var10_ref_String = oi.a(new String[]{Integer.toString(ea.field_a)}, l.field_e, 2);
+                  var10_ref_String = oi.a(new String[]{Integer.toString(ea.field_a)}, IntrusiveNode.field_e, 2);
                   if (var19 != 0) {
                     var10_ref_String = w.field_M;
                   }
                 } else {
                   var10_ref_String = w.field_M;
                 }
-                if ((rl.field_y & 16) == 0 &&
+                if ((SpriteState.field_y & 16) == 0 &&
                   !ad.field_h) {
                   ed.field_c.field_vb = bd.field_b.field_x;
                 }
@@ -151,12 +151,12 @@ final class qk {
                   hk.field_Lb[var11_int] = false;
                   var11_int++;
                 } while (var19 == 0);
-                L18: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11_int = 0;
                     stackIn_69_0 = 0;
                     if (var19 != 0) {
-                      break L18;
+                      break scanLoop1;
                     }
                     var12 = stackIn_69_0;
                     while (true) {
@@ -169,7 +169,7 @@ final class qk {
                         var13 = var20;
                         stackIn_63_0 = 0;
                         var14_int = stackIn_63_0;
-                        L25: while (true) {
+                        scanLoop2: while (true) {
                           if (var14_int < var26.length) {
                             var15 = var26[var14_int];
                             var16 = var20[var14_int + 1];
@@ -177,7 +177,7 @@ final class qk {
                             stackIn_54_1 = ~var15;
                             if (stackIn_54_0 != stackIn_54_1) {
                               if (~(255 & wl.field_d.field_Pb[var15]) != ~var16) {
-                                break L25;
+                                break scanLoop2;
                               }
                             } else {
                               if (0 != var10) {
@@ -188,7 +188,7 @@ final class qk {
                               var17_int = stackIn_47_0;
                               if (~var17_int != ~var16 &&
                                 var19 == 0) {
-                                break L25;
+                                break scanLoop2;
                               }
                             }
                             var14_int += 2;
@@ -293,14 +293,14 @@ final class qk {
                   var16 = 0;
                   var17 = wm.field_r.field_Jb.field_W;
                   var18_ref = (lk) (var17.a((byte) -72));
-                  L50: while (true) {
+                  scanLoop3: while (true) {
                     boolean decompiledFrameRemainder2 = true;
                     if (var18_ref != null) {
                       stackOut_109_0 = var18_ref.g(0);
                       stackIn_125_0 = stackOut_109_0 ? 1 : 0;
                       stackIn_110_0 = stackOut_109_0;
                       if (var19 != 0) {
-                        break L50;
+                        break scanLoop3;
                       }
                       if (!stackIn_110_0) {
                         if (var11_int != 0 &&
@@ -447,14 +447,14 @@ final class qk {
                 var9_ref_String = wl.field_d.field_Qb;
                 qi.field_e.field_V = oi.a(new String[]{var9_ref_String}, ra.field_c, 2).toUpperCase();
                 jk.field_b.a(0, 40, dm.field_r.field_K, (byte) -97, dm.field_r.field_ub - 40);
-                jk.field_b.field_V = oi.a(new String[]{var9_ref_String}, fm.field_c, 2);
+                jk.field_b.field_V = oi.a(new String[]{var9_ref_String}, WhirlpoolDigest.field_c, 2);
                 var8 = jk.field_b;
               }
             } else {
               var9_ref_String = wl.field_d.field_Qb;
               qi.field_e.field_V = oi.a(new String[]{var9_ref_String}, ra.field_c, 2).toUpperCase();
               jk.field_b.a(0, 40, dm.field_r.field_K, (byte) -97, dm.field_r.field_ub - 40);
-              jk.field_b.field_V = oi.a(new String[]{var9_ref_String}, fm.field_c, 2);
+              jk.field_b.field_V = oi.a(new String[]{var9_ref_String}, WhirlpoolDigest.field_c, 2);
               var8 = jk.field_b;
             }
             if (decompiledFrameCompleted1) {
@@ -472,21 +472,21 @@ final class qk {
           if (decompiledFrameCompleted1) {
             stackIn_178_0 = ao.field_Eb;
             stackIn_179_1 = (param3) && (!param0) && (!ad.field_h);
-            ((km) (Object) stackIn_178_0).a(stackIn_179_1, (byte) 94);
+            ((SpriteWidget) (Object) stackIn_178_0).a(stackIn_179_1, (byte) 94);
             if (param2 < 1) {
               return;
             }
             stackIn_185_0 = dm.field_r;
             stackIn_186_1 = (param3) && (!param0) && (!ad.field_h);
-            ((km) (Object) stackIn_185_0).a(stackIn_186_1, (byte) 123);
+            ((SpriteWidget) (Object) stackIn_185_0).a(stackIn_186_1, (byte) 123);
             stackIn_190_0 = pm.field_n;
             stackIn_191_1 = (param3) && (!param0) && (ad.field_h);
-            ((km) (Object) stackIn_190_0).a(stackIn_191_1, (byte) 122);
+            ((SpriteWidget) (Object) stackIn_190_0).a(stackIn_191_1, (byte) 122);
             he.field_pc.field_c.g(0);
             stackIn_192_0 = null;
           }
           if (stackIn_192_0 != wl.field_d) {
-            if (fb.field_o.field_nb != 0) {
+            if (CellFlip.field_o.field_nb != 0) {
               nn.a(wl.field_d.e((byte) -124), param1, (byte) -128);
             }
             if (ii.field_d.field_nb != 0) {
@@ -508,15 +508,15 @@ final class qk {
         }
     }
 
-    final void a(wb param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
           if (null != param0.field_k) {
             param0.c(78);
           }
           param0.field_k = this.field_c.field_k;
           if (param1 < 87) {
-            wb var4 = (wb) null;
-            this.a((wb) null, (byte) 78);
+            DualLinkNode var4 = (DualLinkNode) null;
+            this.a((DualLinkNode) null, (byte) 78);
           }
           param0.field_h = this.field_c;
           param0.field_k.field_h = param0;
@@ -530,7 +530,7 @@ final class qk {
         if (param0 != 2) {
           field_b = -102;
         }
-        field_d = null;
+        achievementTitles = null;
     }
 
     final static void b(byte param0) {
@@ -548,7 +548,7 @@ final class qk {
 
     final int b(int param0) {
         int var2;
-        wb var3;
+        DualLinkNode var3;
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
         var2 = param0;
@@ -566,27 +566,27 @@ final class qk {
 
     final static void a(boolean param0) {
         RuntimeException runtimeException = null;
-        mg var1 = null;
-        mg var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
-          var1 = new mg(540, 140);
+          var1 = new Sprite(540, 140);
           kb.a(var1, 16865);
           if (param0) {
             qk.a(true);
           }
           fk.a();
-          df.c();
+          Rasterizer.c();
           kf.field_e = 0;
           cm.a(11);
           var2 = var1.d();
           var3 = 0;
           while (var3 < 15) {
             var2.d(-2, -2, 16777215);
-            df.d(4, 4, 0, 0, 540, 140);
+            Rasterizer.d(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
               return;
@@ -603,8 +603,8 @@ final class qk {
         }
     }
 
-    final wb a(byte param0) {
-        wb var2 = this.field_c.field_h;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_c.field_h;
         if (param0 != -103) {
           java.applet.Applet var3 = (java.applet.Applet) null;
           qk.a((String) null, (java.applet.Applet) null, -78);
@@ -616,15 +616,15 @@ final class qk {
         return var2;
     }
 
-    final wb a(int param0) {
-        wb var2 = this.field_a;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_a;
         if (this.field_c == var2) {
           this.field_a = null;
           return null;
         }
         this.field_a = var2.field_h;
         if (param0 != 26605) {
-          this.field_a = (wb) null;
+          this.field_a = (DualLinkNode) null;
         }
         return var2;
     }
@@ -646,7 +646,7 @@ final class qk {
               q.a("document.cookie=\"" + var5 + "\"", -17107, param1);
             } catch (Throwable throwable) {
             }
-            wf.a(param1, 49);
+            RasterBuffer.a(param1, 49);
           } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) ((Object) runtimeException), "qk.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
@@ -658,13 +658,13 @@ final class qk {
     }
 
     public qk() {
-        this.field_c = new wb();
+        this.field_c = new DualLinkNode();
         this.field_c.field_h = this.field_c;
         this.field_c.field_k = this.field_c;
     }
 
     static {
         field_b = 64;
-        field_d = new String[]{"The Easy One", "Perfect Jump", "Virogrid Expert", "Total domination", "Winning streak", "You lose", "Entrapment", "Bunny Hopping", "Virogrid Addict", "Ghost Spotter"};
+        achievementTitles = new String[]{"The Easy One", "Perfect Jump", "Virogrid Expert", "Total domination", "Winning streak", "You lose", "Entrapment", "Bunny Hopping", "Virogrid Addict", "Ghost Spotter"};
     }
 }

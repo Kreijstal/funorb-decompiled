@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la extends l {
+final class la extends IntrusiveNode {
     static boolean field_n;
     static he field_h;
     static int field_k;
@@ -12,7 +12,7 @@ final class la extends l {
     static String field_m;
     int field_j;
 
-    final static void a(int param0, eh param1) {
+    final static void a(int param0, Js5Archive param1) {
         gj var2 = null;
         if (param0 != 1048576) {
           return;
@@ -39,7 +39,7 @@ final class la extends l {
         field_m = null;
     }
 
-    final static void a(int param0, int param1, boolean param2, sc param3) {
+    final static void a(int param0, int param1, boolean param2, MusicTrack param3) {
         Object var4 = null;
         Throwable var5 = null;
         Object stackIn_19_0 = null;
@@ -93,8 +93,8 @@ final class la extends l {
           }
           return;
         }
-        sc var3 = (sc) null;
-        la.a(22, -99, true, (sc) null);
+        MusicTrack var3 = (MusicTrack) null;
+        la.a(22, -99, true, (MusicTrack) null);
         if (var2 != null) {
           var2.a(0, we.field_c.field_J, we.field_c.field_Bb);
         }

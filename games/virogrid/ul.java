@@ -4,7 +4,7 @@
 final class ul {
     static int[] field_h;
     static dl field_c;
-    static km field_a;
+    static SpriteWidget field_a;
     static String field_b;
     static String field_f;
     int field_d;
@@ -12,13 +12,13 @@ final class ul {
     static String field_e;
 
     final static void b(byte param0) {
-        me.field_b = me.field_b - 1;
-        df.a(ph.field_l[me.field_b], kn.field_K[me.field_b], se.field_e[me.field_b]);
+        MouseInputHandler.field_b = MouseInputHandler.field_b - 1;
+        Rasterizer.a(ph.field_l[MouseInputHandler.field_b], kn.field_K[MouseInputHandler.field_b], se.field_e[MouseInputHandler.field_b]);
         if (param0 >= 79) {
-          df.field_i = pb.field_i[me.field_b];
-          df.field_k = m.field_i[me.field_b];
-          df.field_g = ng.field_O[me.field_b];
-          df.field_h = qe.field_h[me.field_b];
+          Rasterizer.field_i = pb.field_i[MouseInputHandler.field_b];
+          Rasterizer.field_k = CellAnimator.field_i[MouseInputHandler.field_b];
+          Rasterizer.field_g = ng.field_O[MouseInputHandler.field_b];
+          Rasterizer.field_h = qe.field_h[MouseInputHandler.field_b];
           return;
         }
     }
@@ -91,10 +91,10 @@ final class ul {
         sa.a((byte) 120, ea.field_e, de.field_sb, true);
         if (param0 != 15429) {
           field_b = (String) null;
-          p.field_f = true;
+          IntrusiveDeque.field_f = true;
           return;
         }
-        p.field_f = true;
+        IntrusiveDeque.field_f = true;
     }
 
     ul(int param0) {

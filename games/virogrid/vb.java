@@ -9,12 +9,12 @@ final class vb {
     int field_m;
     String field_e;
     static String field_g;
-    eh field_f;
+    Js5Archive field_f;
     String field_b;
     static int[] field_a;
-    static String field_i;
+    static String textViewcontrolsZoomout;
     static String field_d;
-    static mg field_l;
+    static Sprite field_l;
 
     final static lc a(byte param0, int param1) {
         int var3 = 0;
@@ -38,7 +38,7 @@ final class vb {
     }
 
     public static void b(byte param0) {
-        field_i = null;
+        textViewcontrolsZoomout = null;
         field_a = null;
         field_d = null;
         field_j = null;
@@ -84,7 +84,7 @@ final class vb {
         for (var0Lifetime1 = 0; 256 > var0Lifetime1; var0Lifetime1++) {
           field_j[var0Lifetime1] = var0Lifetime1 / 2 * 256 + 1 * (var0Lifetime1 / 2) + var0Lifetime1 / 2 * 65536;
         }
-        field_i = "Zoom out";
+        textViewcontrolsZoomout = "Zoom out";
         field_d = "Show all lobby chat";
     }
 }

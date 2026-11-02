@@ -5,9 +5,9 @@ final class qa implements be {
     static int field_e;
     static double field_b;
     static String field_a;
-    static km field_c;
+    static SpriteWidget field_c;
     static String field_f;
-    static km field_d;
+    static SpriteWidget field_d;
 
     final static void a(int param0, int param1) {
         hg var2 = gk.field_g;
@@ -24,8 +24,8 @@ final class qa implements be {
           int var7 = 12 % ((param0 + 41) / 56);
           var6 = gk.field_g;
           var6.g(param3, 8);
-          var6.field_l = var6.field_l + 1;
-          var8 = var6.field_l;
+          var6.position = var6.position + 1;
+          var8 = var6.position;
           var6.a(4, -66);
           var6.a(param5, 72);
           var9 = param1;
@@ -34,7 +34,7 @@ final class qa implements be {
           }
           var6.a(var9, -95);
           var6.a(param2, param2.length, 0, (byte) 81);
-          var6.b(var6.field_l - var8, -1);
+          var6.b(var6.position - var8, -1);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "qa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

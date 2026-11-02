@@ -9,15 +9,15 @@ final class qn extends tg {
     int field_N;
     int field_G;
     int field_Q;
-    static p field_P;
+    static IntrusiveDeque field_P;
     int field_O;
     int field_M;
-    static eh field_I;
+    static Js5Archive field_I;
     static java.util.zip.CRC32 field_S;
     static String field_L;
-    static km field_J;
-    static km field_H;
-    static pd field_R;
+    static SpriteWidget field_J;
+    static SpriteWidget field_H;
+    static PlatformTaskDispatcher field_R;
 
     public static void c(byte param0) {
         field_I = null;
@@ -117,7 +117,7 @@ final class qn extends tg {
         }
     }
 
-    final boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -172,7 +172,7 @@ final class qn extends tg {
 
     static {
         field_K = 2;
-        field_P = new p();
+        field_P = new IntrusiveDeque();
         field_L = "<%0> has resigned.";
         field_S = new java.util.zip.CRC32();
     }

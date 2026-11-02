@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rl extends wb {
+abstract class SpriteState extends DualLinkNode {
     static String field_s;
     static String field_v;
     int field_z;
@@ -29,7 +29,7 @@ abstract class rl extends wb {
         }
     }
 
-    final static km d(boolean param0) {
+    final static SpriteWidget d(boolean param0) {
         if (!param0) {
           field_y = 78;
           return lg.field_a.field_Lb;
@@ -45,13 +45,13 @@ abstract class rl extends wb {
           field_s = null;
           return;
         }
-        rl.d(87);
+        SpriteState.d(87);
         field_o = null;
         field_q = null;
         field_s = null;
     }
 
-    rl() {
+    SpriteState() {
     }
 
     static {

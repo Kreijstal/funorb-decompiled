@@ -11,12 +11,12 @@ final class va {
     static String field_f;
     static String field_a;
 
-    final static eh a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
+    final static Js5Archive a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           oa var8 = null;
-          eh stackIn_17_0 = null;
+          Js5Archive stackIn_17_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -43,7 +43,7 @@ final class va {
             if (param5) {
               var8.a(true);
             }
-            stackIn_17_0 = new eh(var8, param4, param0);
+            stackIn_17_0 = new Js5Archive(var8, param4, param0);
             return stackIn_17_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class va {
 
     final static void a(boolean param0) {
         tk.field_b = new qh();
-        fi.field_t.b(tk.field_b, (byte) -53);
+        UiWidget.field_t.b(tk.field_b, (byte) -53);
         if (param0) {
           field_d = (String) null;
         }

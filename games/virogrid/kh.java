@@ -9,8 +9,8 @@ final class kh {
     static String field_a;
     static ob field_e;
     static int field_d;
-    static km field_g;
-    static km field_b;
+    static SpriteWidget field_g;
+    static SpriteWidget field_b;
 
     public static void a(byte param0) {
         field_c = null;
@@ -124,68 +124,68 @@ final class kh {
         }
     }
 
-    final static void a(km param0, int param1, int param2) {
+    final static void a(SpriteWidget param0, int param1, int param2) {
         dj var9 = null;
-        mg var11 = null;
+        Sprite var11 = null;
         String var10 = null;
         dj var12 = null;
-        mg var14 = null;
+        Sprite var14 = null;
         String var13 = null;
         dj var15 = null;
-        mg var17 = null;
+        Sprite var17 = null;
         String var16 = null;
         dj var18 = null;
-        mg var20 = null;
+        Sprite var20 = null;
         String var19 = null;
         dj var21 = null;
-        mg var23 = null;
+        Sprite var23 = null;
         String var22 = null;
         dj var24 = null;
-        mg var26 = null;
+        Sprite var26 = null;
         String var25 = null;
         dj var27 = null;
         String var28 = null;
         dj var30 = null;
-        mg var32 = null;
+        Sprite var32 = null;
         String var31 = null;
         dj var33 = null;
-        mg var35 = null;
+        Sprite var35 = null;
         String var34 = null;
         dj var36 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        mg var29 = null;
-        mg var29Lifetime1;
-        mg var29Lifetime2;
-        mg var29Lifetime3;
-        mg var29Lifetime4;
-        mg var29Lifetime5;
-        mg var29Lifetime6;
-        mg var29Lifetime7;
-        mg var29Lifetime1Lifetime1;
-        mg var29Lifetime1Lifetime2;
-        mg var29Lifetime1Lifetime3;
-        mg var29Lifetime1Lifetime4;
-        mg var29Lifetime1Lifetime5;
+        Sprite var29 = null;
+        Sprite var29Lifetime1;
+        Sprite var29Lifetime2;
+        Sprite var29Lifetime3;
+        Sprite var29Lifetime4;
+        Sprite var29Lifetime5;
+        Sprite var29Lifetime6;
+        Sprite var29Lifetime7;
+        Sprite var29Lifetime1Lifetime1;
+        Sprite var29Lifetime1Lifetime2;
+        Sprite var29Lifetime1Lifetime3;
+        Sprite var29Lifetime1Lifetime4;
+        Sprite var29Lifetime1Lifetime5;
         try {
           ai.a(param1, (um) null, (int[]) null, (String) null, 0L, (String) null, -1, param0, 60);
           if (param1 == 0) {
             var9 = md.field_e;
-            var11 = j.field_k[0];
+            var11 = j.chatFilterIcons[0];
             var29 = var11;
             var29Lifetime3 = var11;
             var10 = vb.field_d;
             var9.field_a.a(var10, (byte) 89, 11, var11);
             var12 = md.field_e;
-            var14 = j.field_k[1];
+            var14 = j.chatFilterIcons[1];
             var29Lifetime4 = var14;
             var29Lifetime5 = var14;
             var13 = ql.field_p;
             var12.field_a.a(var13, (byte) 89, 12, var14);
             var15 = md.field_e;
-            var17 = j.field_k[2];
+            var17 = j.chatFilterIcons[2];
             var29Lifetime6 = var17;
             var29Lifetime7 = var17;
             var16 = f.field_h;
@@ -193,19 +193,19 @@ final class kh {
           }
           if (1 == param1) {
             var18 = md.field_e;
-            var20 = j.field_k[0];
+            var20 = j.chatFilterIcons[0];
             var29Lifetime1 = var20;
             var29Lifetime1Lifetime1 = var20;
             var19 = pc.field_c;
             var18.field_a.a(var19, (byte) 89, 11, var20);
             var21 = md.field_e;
-            var23 = j.field_k[1];
+            var23 = j.chatFilterIcons[1];
             var29Lifetime1Lifetime2 = var23;
             var29Lifetime1Lifetime3 = var23;
             var22 = oa.field_u;
             var21.field_a.a(var22, (byte) 89, 12, var23);
             var24 = md.field_e;
-            var26 = j.field_k[2];
+            var26 = j.chatFilterIcons[2];
             var29Lifetime1Lifetime4 = var26;
             var29Lifetime1Lifetime5 = var26;
             var25 = la.field_m;
@@ -213,15 +213,15 @@ final class kh {
           }
           if (param1 == 2) {
             var27 = md.field_e;
-            var29Lifetime2 = j.field_k[0];
+            var29Lifetime2 = j.chatFilterIcons[0];
             var28 = bf.field_s;
             var27.field_a.a(var28, (byte) 89, 11, var29Lifetime2);
             var30 = md.field_e;
-            var32 = j.field_k[1];
+            var32 = j.chatFilterIcons[1];
             var31 = ql.field_f;
             var30.field_a.a(var31, (byte) 89, 12, var32);
             var33 = md.field_e;
-            var35 = j.field_k[2];
+            var35 = j.chatFilterIcons[2];
             var34 = mi.field_a;
             var33.field_a.a(var34, (byte) 89, 13, var35);
           }
@@ -239,14 +239,14 @@ final class kh {
         }
     }
 
-    final static mg[] a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        mg[] var10;
-        mg[] var11_ref_mg__;
+        Sprite[] var10;
+        Sprite[] var11_ref_mg__;
         int var11;
         int var12;
-        mg var13;
+        Sprite var13;
         int var15;
         e var16;
         int var11Lifetime1;
@@ -258,7 +258,7 @@ final class kh {
         int var12Lifetime4;
         var15 = Virogrid.field_F ? 1 : 0;
         var9 = param8 + param0 + param6;
-        var10 = new mg[]{new mg(var9, var9), new mg(param5, var9), new mg(var9, var9), new mg(var9, param5), new mg(64, 64), new mg(var9, param5), new mg(var9, var9), new mg(param5, var9), new mg(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param5, var9), new Sprite(var9, var9), new Sprite(var9, param5), new Sprite(64, 64), new Sprite(var9, param5), new Sprite(var9, var9), new Sprite(param5, var9), new Sprite(var9, var9)};
         var11_ref_mg__ = var10;
         for (var12 = 0; var12 < var11_ref_mg__.length; var12++) {
           var13 = var11_ref_mg__[var12];
@@ -286,7 +286,7 @@ final class kh {
         }
         if (param2 != -105) {
           var16 = (e) null;
-          kh.a(92, -47, -44, -58, (e) null, (byte) 53, (mg[]) null, 44, 120, 77, -28, (mg[]) null, 119, (e) null, true);
+          kh.a(92, -47, -44, -58, (e) null, (byte) 53, (Sprite[]) null, 44, 120, 77, -28, (Sprite[]) null, 119, (e) null, true);
         }
         for (var11Lifetime2 = 0; var11Lifetime2 < param5; var11Lifetime2++) {
           for (var12Lifetime3 = 0; param0 > var12Lifetime3; var12Lifetime3++) {
@@ -307,10 +307,10 @@ final class kh {
         return var10;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, e param4, byte param5, mg[] param6, int param7, int param8, int param9, int param10, mg[] param11, int param12, e param13, boolean param14) {
+    final static void a(int param0, int param1, int param2, int param3, e param4, byte param5, Sprite[] param6, int param7, int param8, int param9, int param10, Sprite[] param11, int param12, e param13, boolean param14) {
         try {
-          mg[] var16 = (mg[]) null;
-          ok.a(param0, 480, jl.field_E, -100, param3, param9, en.field_Kb, param2, param10, param13, param1, (mg[]) null, 0, param8, param7, ti.field_b, param11, param4, param6, param12, 0);
+          Sprite[] var16 = (Sprite[]) null;
+          ok.a(param0, 480, jl.field_E, -100, param3, param9, en.field_Kb, param2, param10, param13, param1, (Sprite[]) null, 0, param8, param7, ti.field_b, param11, param4, param6, param12, 0);
           int var15_int = -42 % ((18 - param5) / 62);
           ti.a(param14, -1502464351);
         } catch (RuntimeException runtimeException) {

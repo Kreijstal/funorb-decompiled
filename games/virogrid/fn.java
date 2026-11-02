@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fn {
-    static km field_d;
+    static SpriteWidget field_d;
     static String[] field_b;
-    static String field_g;
+    static String textNotAvailableIn2d;
     static String field_f;
-    static p field_a;
+    static IntrusiveDeque field_a;
     static int field_c;
-    static km field_e;
+    static SpriteWidget field_e;
 
     final static boolean a(int param0, int param1, byte param2) {
         StringBuilder discarded$0 = null;
@@ -50,7 +50,7 @@ final class fn {
         var42 = null;
         var12 = Virogrid.field_F ? 1 : 0;
         var3 = 1;
-        if (!uf.field_i &&
+        if (!GameBoard.field_i &&
           null == qc.field_i) {
           var3 = 0;
         }
@@ -75,7 +75,7 @@ final class fn {
                 gf.a((String) null, 0, false, am.field_d, 2, (String) null);
                 var16 = (String) null;
                 var15 = (String) null;
-                gf.a((String) null, 0, false, rl.field_q, 2, (String) null);
+                gf.a((String) null, 0, false, SpriteState.field_q, 2, (String) null);
                 re.c((byte) 121);
                 return true;
               }
@@ -197,7 +197,7 @@ final class fn {
         field_f = null;
         int var1 = -60 / ((30 - param0) / 54);
         field_a = null;
-        field_g = null;
+        textNotAvailableIn2d = null;
     }
 
     final static void a(int param0) {
@@ -208,7 +208,7 @@ final class fn {
         var2 = Virogrid.field_F ? 1 : 0;
         try {
           la.field_h = null;
-          ld.field_c = false;
+          GameKeyHandler.field_c = false;
           wl.field_d = null;
           if (ci.field_o != null) {
             ci.field_o.a(false);
@@ -219,7 +219,7 @@ final class fn {
             te.field_f.a(false);
             te.field_f = null;
           }
-          ma.field_c = null;
+          IntrusiveDequeCursor.field_c = null;
           if (qm.field_Mb != null) {
             qm.field_Mb.a(false);
             qm.field_Mb = null;
@@ -234,7 +234,7 @@ final class fn {
             ti.field_i = null;
           }
           if (param0 >= -30) {
-            field_a = (p) null;
+            field_a = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -310,10 +310,10 @@ final class fn {
         int var2 = Virogrid.field_F ? 1 : 0;
         try {
           if (param0 != -69) {
-            field_e = (km) null;
+            field_e = (SpriteWidget) null;
           }
           for (var1_int = 0; qh.field_K > var1_int; var1_int++) {
-            el.field_s[var1_int] = null;
+            BufferedSocket.field_s[var1_int] = null;
           }
           qh.field_K = 0;
         } catch (RuntimeException runtimeException) {
@@ -323,8 +323,8 @@ final class fn {
 
     static {
         field_f = "Play the game without logging in just yet";
-        field_g = "2D - Fastest";
+        textNotAvailableIn2d = "2D - Fastest";
         field_b = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-        field_a = new p();
+        field_a = new IntrusiveDeque();
     }
 }

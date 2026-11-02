@@ -3,9 +3,9 @@
  */
 final class ia {
     static Boolean field_b;
-    static km field_d;
+    static SpriteWidget field_d;
     static boolean field_c;
-    static String field_a;
+    static String textViewcontrolsCentre;
     static int[] field_e;
     private static String field_z;
 
@@ -14,18 +14,18 @@ final class ia {
         if (param0 >= 2) {
           field_b = null;
           field_e = null;
-          field_a = null;
+          textViewcontrolsCentre = null;
           return;
         }
         ia.a(106);
         field_b = null;
         field_e = null;
-        field_a = null;
+        textViewcontrolsCentre = null;
     }
 
     static {
         field_z = "ia.A(";
         field_c = true;
-        field_a = "Reset view";
+        textViewcontrolsCentre = "Reset view";
     }
 }

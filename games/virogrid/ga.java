@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ga extends km {
-    private km field_Eb;
+final class ga extends SpriteWidget {
+    private SpriteWidget field_Eb;
     private int[] field_Kb;
     private int field_Ib;
     private int field_Pb;
     private int field_Lb;
     private int field_Fb;
-    private km field_Hb;
+    private SpriteWidget field_Hb;
     static dl field_Ob;
-    private mg[] field_Jb;
+    private Sprite[] field_Jb;
     private int field_Qb;
     private int field_Mb;
     private int field_Nb;
@@ -77,7 +77,7 @@ final class ga extends km {
 
     final void a(int param0, String param1, int param2) {
         try {
-          this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Eb, (mg) null, param1);
+          this.field_Gb[this.field_Qb] = new hk(0L, (SpriteWidget) null, (SpriteWidget) null, this.field_Eb, (Sprite) null, param1);
           this.field_Gb[this.field_Qb].field_x = this.field_Jb;
           this.field_Gb[this.field_Qb].field_ib = true;
           this.field_Gb[this.field_Qb].field_D = param0;
@@ -89,9 +89,9 @@ final class ga extends km {
         }
     }
 
-    final void a(String param0, byte param1, int param2, mg param3) {
+    final void a(String param0, byte param1, int param2, Sprite param3) {
         try {
-          this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Eb, param3, param0);
+          this.field_Gb[this.field_Qb] = new hk(0L, (SpriteWidget) null, (SpriteWidget) null, this.field_Eb, param3, param0);
           this.field_Gb[this.field_Qb].field_x = this.field_Jb;
           this.field_Gb[this.field_Qb].field_ib = true;
           this.field_Gb[this.field_Qb].field_D = 1;
@@ -114,7 +114,7 @@ final class ga extends km {
         return ql.field_q.a((byte) 19);
     }
 
-    ga(km param0, mg[] param1, km param2, km param3, int param4, int param5, int param6, int param7, int param8) {
+    ga(SpriteWidget param0, Sprite[] param1, SpriteWidget param2, SpriteWidget param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Nb = -2;
         this.field_Kb = new int[256];
@@ -144,7 +144,7 @@ final class ga extends km {
         int var8Lifetime1;
         var11 = Virogrid.field_F ? 1 : 0;
         if (this.field_Qb == 0) {
-          this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Hb, (mg) null, cg.field_a);
+          this.field_Gb[this.field_Qb] = new hk(0L, (SpriteWidget) null, (SpriteWidget) null, this.field_Hb, (Sprite) null, cg.field_a);
           this.field_Gb[this.field_Qb].field_D = 1;
           this.a(0, this.field_Gb[this.field_Qb]);
           this.field_Kb[this.field_Qb] = -1;
@@ -160,7 +160,7 @@ final class ga extends km {
         var6 = var6 + 2 * this.field_Fb;
         var7Lifetime1 = this.field_Mb * this.field_Qb + this.field_Pb + this.field_Pb;
         var8Lifetime1 = sh.b(0, param2, param3, var6);
-        var9 = p.a(-1, var7Lifetime1, param4, param0);
+        var9 = IntrusiveDeque.a(-1, var7Lifetime1, param4, param0);
         this.a(var8Lifetime1, var7Lifetime1, var6, (byte) -87, var9);
         for (var10 = 0; var10 < this.field_Qb; var10++) {
           this.field_Gb[var10].a(-(2 * this.field_Fb) + var6, this.field_Fb, 2, var10 * this.field_Mb + this.field_Pb, this.field_Lb, this.field_Mb, this.field_Ib);

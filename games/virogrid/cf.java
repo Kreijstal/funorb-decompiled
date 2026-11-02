@@ -12,8 +12,8 @@ final class cf {
         int var1 = -95 / ((param0 - 66) / 45);
     }
 
-    final static void a(eh param0, eh param1, int param2, eh param3) {
-        mg var17 = null;
+    final static void loadCommonUi(Js5Archive param0, Js5Archive param1, int param2, Js5Archive param3) {
+        Sprite var17 = null;
         rm[] var5 = null;
         rm[][] var6 = null;
         int[][] var19 = null;
@@ -21,10 +21,10 @@ final class cf {
         int[][] var7 = null;
         rm[] var14 = null;
         int var11_int = 0;
-        mg var15 = null;
-        mg var18 = null;
-        mg var11 = null;
-        mg var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = Virogrid.field_F ? 1 : 0;
@@ -34,21 +34,21 @@ final class cf {
           if (param2 < 51) {
             cf.a(105);
           }
-          qm.field_Kb = ke.a(32, param0, "commonui", "frame_top");
-          qg.field_j = ke.a(32, param0, "commonui", "frame_bottom");
-          ed.field_d = sn.a(param0, "jagex_logo_grey", "commonui", false);
-          td.field_g = ke.a(32, param0, "commonui", "button");
+          qm.frameTopSprites = ke.a(32, param0, "commonui", "frame_top");
+          qg.frameBottomSprites = ke.a(32, param0, "commonui", "frame_bottom");
+          ed.jagexLogoGrey = sn.a(param0, "jagex_logo_grey", "commonui", false);
+          td.buttonSprites = ke.a(32, param0, "commonui", "button");
           bf.field_p = jj.a("commonui", param0, false, "validation");
-          dk.field_j = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo12", param3));
-          dj.field_h = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo14", param3));
-          on.field_b = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo14bold", param3));
-          var17 = new mg(param1.a("button.gif", 100, ""), (java.awt.Component) ((Object) fi.field_v));
+          dk.arezzo12Font = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo12", param3));
+          dj.arezzo14Font = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo14", param3));
+          on.arezzo14BoldFont = (e) ((Object) pc.a(param0, -1, "commonui", "arezzo14bold", param3));
+          var17 = new Sprite(param1.a("button.gif", 100, ""), (java.awt.Component) ((Object) UiWidget.field_v));
           vc.a(param0, "dropdown", "commonui", (byte) 39);
           var5 = ke.a("screen_options", "commonui", param0, 32370);
           dk.field_q = new rm[4];
           hj.field_g = new rm[4];
-          jc.field_h = new rm[4];
-          var6 = new rm[][]{hj.field_g, jc.field_h, dk.field_q};
+          PacketBuffer.field_h = new rm[4];
+          var6 = new rm[][]{hj.field_g, PacketBuffer.field_h, dk.field_q};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -70,19 +70,19 @@ final class cf {
           var9Lifetime1 = var17.field_p;
           lm.a(0);
           var17.b();
-          df.e(0, 0, df.field_e, df.field_f);
-          var15 = new mg(var9Lifetime1, var9Lifetime1);
+          Rasterizer.e(0, 0, Rasterizer.field_e, Rasterizer.field_f);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.b();
           var17.b(0, 0);
-          var11 = new mg(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.b();
           var17.b(var9Lifetime1 - var17.field_w, 0);
-          var12 = new mg(var17.field_w - var9Lifetime1 * 2, var9Lifetime1);
+          var12 = new Sprite(var17.field_w - var9Lifetime1 * 2, var9Lifetime1);
           var12.b();
           var17.b(-var9Lifetime1, 0);
           ai.a(true);
-          td.field_g = new mg[]{var15, var12, var11};
+          td.buttonSprites = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "cf.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -90,7 +90,7 @@ final class cf {
 
     final static void a(byte param0, boolean param1) {
         if (ij.field_j != null) {
-          df.g(df.field_i, df.field_g, -df.field_i + df.field_k, df.field_h - df.field_g);
+          Rasterizer.g(Rasterizer.field_i, Rasterizer.field_g, -Rasterizer.field_i + Rasterizer.field_k, Rasterizer.field_h - Rasterizer.field_g);
           ij.field_j.a(param1, 24960);
         }
         if (param0 > -94) {
@@ -140,7 +140,7 @@ final class cf {
           if (param0.field_m != 0 ||
             param0.field_a != 0) {
             for (var2_int = 0; qh.field_K > var2_int; var2_int++) {
-              var3 = el.field_s[var2_int];
+              var3 = BufferedSocket.field_s[var2_int];
               if (var3.field_n == 2 &&
                 param0.field_m == var3.field_m &&
                 param0.field_a == var3.field_a) {

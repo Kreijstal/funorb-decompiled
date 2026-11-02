@@ -11370,6 +11370,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "virogrid": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/virogrid"
+      },
+      "inputTreeSha256": "73369b22d01d3ca4afc8a1bb025a3f1d85920183905582e40ec4c7859f2e1c78",
+      "sources": {
+        "files": 347,
+        "sha256": "41b48309c8c357d1f3d6611f90556274bf310a9999118cf2edaffb9f0cf77667"
+      },
+      "dictionary": {
+        "path": "decompilation/virogrid-naming.json",
+        "sha256": "5303861c701791f2ba8b42ffe8f1169a9a9907fc0e811632d91d66294718ffcc"
+      },
+      "readingGuide": {
+        "path": "games/virogrid/README.md",
+        "sha256": "c5dfefe48dc0286c4d8cc1b6706bba907aaa04bcdd479bf68d58c902acf05e9c"
+      },
+      "rulesSha256": "9983ac99478b109d73718b5cc8560ecd24814f37919e705100838953ce644bc7",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -13553,6 +13577,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 347,
+          "sha256": "41b48309c8c357d1f3d6611f90556274bf310a9999118cf2edaffb9f0cf77667"
         }
       },
       "voidhunters": {

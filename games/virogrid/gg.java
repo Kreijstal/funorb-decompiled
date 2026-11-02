@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gg extends fd {
+abstract class gg extends WidgetContainer {
     private je field_L;
     static int[][] field_E;
-    static km field_F;
+    static SpriteWidget field_F;
     boolean field_G;
     static String[] field_I;
-    static jc field_D;
-    static km field_M;
+    static PacketBuffer field_D;
+    static SpriteWidget field_M;
     static String field_N;
     private int field_H;
     static String field_J;
@@ -29,10 +29,10 @@ abstract class gg extends fd {
         if (b.field_Eb == null ||
           !(b.field_Eb.field_w >= this.field_g) ||
           !(b.field_Eb.field_p >= this.field_m)) {
-          b.field_Eb = new mg(this.field_g, this.field_m);
+          b.field_Eb = new Sprite(this.field_g, this.field_m);
         }
         kb.a(b.field_Eb, 16865);
-        df.c();
+        Rasterizer.c();
         this.b(0, 23, 0);
         super.a(param0, -param1 - this.field_l, -param2 - this.field_u, param3);
         ai.a(true);
@@ -63,12 +63,12 @@ abstract class gg extends fd {
         field_M = null;
     }
 
-    final fi c(byte param0) {
-        fi var2 = super.c(param0);
+    final UiWidget c(byte param0) {
+        UiWidget var2 = super.c(param0);
         if (var2 != null) {
           return var2;
         }
-        return (fi) (this);
+        return (UiWidget) (this);
     }
 
     private final int e(byte param0) {
@@ -100,7 +100,7 @@ abstract class gg extends fd {
     final void c(int param0, int param1, int param2) {
         this.a(param0, true, mn.field_a - param0 >> 1, mm.field_i - param2 >> 1, param2);
         if (param1 < 106) {
-          field_F = (km) null;
+          field_F = (SpriteWidget) null;
         }
     }
 
@@ -150,7 +150,7 @@ abstract class gg extends fd {
     final static void a(int param0, wg param1, boolean param2, int param3) {
         try {
           if (!param2) {
-            field_F = (km) null;
+            field_F = (SpriteWidget) null;
           }
           jf.field_o = param1;
           oe.field_f = param0;
@@ -161,7 +161,7 @@ abstract class gg extends fd {
     }
 
     gg(je param0, int param1, int param2) {
-        super(-param1 + mm.field_i >> 1, -param2 + mn.field_a >> 1, param1, param2, (ol) null);
+        super(-param1 + mm.field_i >> 1, -param2 + mn.field_a >> 1, param1, param2, (WidgetListener) null);
         try {
           this.field_G = false;
           this.field_L = param0;
@@ -184,7 +184,7 @@ abstract class gg extends fd {
     static {
         field_I = new String[16];
         field_N = "You have won!";
-        field_D = new jc(256);
+        field_D = new PacketBuffer(256);
         field_J = "You are on <%0>";
     }
 }

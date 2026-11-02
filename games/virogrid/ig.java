@@ -15,8 +15,8 @@ final class ig {
           field_c = null;
           return;
         }
-        eh var2 = (eh) null;
-        ig.a(true, (r) null, (eh) null, 84);
+        Js5Archive var2 = (Js5Archive) null;
+        ig.a(true, (r) null, (Js5Archive) null, 84);
         field_a = null;
         field_d = null;
         field_b = null;
@@ -125,7 +125,7 @@ final class ig {
         return true;
     }
 
-    final static void a(boolean param0, r param1, eh param2, int param3) {
+    final static void a(boolean param0, r param1, Js5Archive param2, int param3) {
         try {
           of.field_a = wh.a((byte) 5) * param3 / 1000;
           la.a(1048576, param2);

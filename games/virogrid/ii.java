@@ -4,10 +4,10 @@
 final class ii {
     private byte[] field_c;
     private int[] field_f;
-    static pd field_a;
+    static PlatformTaskDispatcher field_a;
     private int[] field_e;
     static int field_b;
-    static km field_d;
+    static SpriteWidget field_d;
 
     final static void b(byte param0) {
         vi.b((byte) -123);
@@ -43,7 +43,7 @@ final class ii {
         try {
           var7_int = 0;
           if (param2 != -7089) {
-            field_d = (km) null;
+            field_d = (SpriteWidget) null;
           }
           param0 = param0 + param3;
           var8 = param1 << 3;
@@ -163,7 +163,7 @@ final class ii {
             this.field_c = (byte[]) null;
           }
           var8 = param1;
-          L3: while (true) {
+          scanLoop1: while (true) {
             var9 = param4[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -177,7 +177,7 @@ final class ii {
               param2++;
               param0[incrementValue$1] = (byte)(~var10);
               if (param2 >= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -193,7 +193,7 @@ final class ii {
               param2++;
               param0[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param3 <= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -209,7 +209,7 @@ final class ii {
               param2++;
               param0[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param2 >= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -225,7 +225,7 @@ final class ii {
               param2++;
               param0[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param2 >= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -241,7 +241,7 @@ final class ii {
               param2++;
               param0[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param2 >= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -273,7 +273,7 @@ final class ii {
               param2++;
               param0[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param2 >= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -289,7 +289,7 @@ final class ii {
               param2++;
               param0[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param2 >= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -366,7 +366,7 @@ final class ii {
                   }
                   if (var5 >= 2 &&
                     !param1) {
-                    stackIn_30_0 = km.field_P;
+                    stackIn_30_0 = SpriteWidget.field_P;
                     return stackIn_30_0;
                   }
                 }
@@ -536,7 +536,7 @@ final class ii {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 27984) {
-            field_a = (pd) null;
+            field_a = (PlatformTaskDispatcher) null;
           }
           var4 = (String) null;
           stackIn_3_0 = wh.a(0, false, 0, true, (String) null, param1, param0);

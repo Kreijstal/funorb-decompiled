@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gn extends tg {
-    static eh field_G;
+    static Js5Archive field_G;
     static String field_H;
-    static km field_F;
+    static SpriteWidget field_F;
     static String field_I;
 
     final void b(byte param0, int param1, int param2, int param3) {
@@ -16,7 +16,7 @@ final class gn extends tg {
     private gn(String param0, cd param1) {
         this(param0, vi.field_g.field_l, param1);
         try {
-          this.field_w = vi.field_g.field_i;
+          this.listener = vi.field_g.field_i;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -33,7 +33,7 @@ final class gn extends tg {
         field_F = null;
     }
 
-    final static mg c(byte param0) {
+    final static Sprite c(byte param0) {
         int var4_int = 0;
         int var5 = Virogrid.field_F ? 1 : 0;
         int var1 = gb.field_F[0] * db.field_k[0];
@@ -42,7 +42,7 @@ final class gn extends tg {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = k.field_c[rb.a((int) var2[var4_int], 255)];
         }
-        mg var4 = new mg(oj.field_Kb, se.field_d, el.field_w[0], mb.field_bb[0], db.field_k[0], gb.field_F[0], var3);
+        Sprite var4 = new Sprite(oj.field_Kb, se.field_d, BufferedSocket.field_w[0], mb.field_bb[0], db.field_k[0], gb.field_F[0], var3);
         if (param0 != -9) {
           gn.g(true);
         }
@@ -60,10 +60,10 @@ final class gn extends tg {
         }
     }
 
-    private gn(String param0, ol param1, cd param2) {
+    private gn(String param0, WidgetListener param1, cd param2) {
         super(param0, param1, param2);
         try {
-          this.field_w = vi.field_g.field_i;
+          this.listener = vi.field_g.field_i;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

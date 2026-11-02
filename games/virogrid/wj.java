@@ -22,21 +22,21 @@ final class wj {
         this.field_b = 0;
     }
 
-    final void a(jc param0) {
-        this.field_h = param0.g(11132);
-        this.field_j = param0.d((byte) 105);
-        this.field_f = param0.d((byte) 104);
+    final void a(PacketBuffer param0) {
+        this.field_h = param0.readUnsignedByte(11132);
+        this.field_j = param0.readInt((byte) 105);
+        this.field_f = param0.readInt((byte) 104);
         this.b(param0);
     }
 
-    final void b(jc param0) {
+    final void b(PacketBuffer param0) {
         int var2 = 0;
-        this.field_i = param0.g(11132);
+        this.field_i = param0.readUnsignedByte(11132);
         this.field_g = new int[this.field_i];
         this.field_d = new int[this.field_i];
         for (var2 = 0; var2 < this.field_i; var2++) {
-          this.field_g[var2] = param0.c((byte) 110);
-          this.field_d[var2] = param0.c((byte) -90);
+          this.field_g[var2] = param0.readUnsignedShort((byte) 110);
+          this.field_d[var2] = param0.readUnsignedShort((byte) -90);
         }
     }
 

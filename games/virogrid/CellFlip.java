@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb extends l {
+final class CellFlip extends IntrusiveNode {
     int field_h;
-    boolean field_q;
-    int field_j;
-    static km field_o;
-    int field_k;
+    boolean newOwnerIsFirstPlayer;
+    int phase;
+    static SpriteWidget field_o;
+    int column;
     static int[] field_p;
     static String field_m;
     static boolean field_i;
     static String[] field_l;
     int field_n;
-    int field_g;
+    int row;
 
     final static void a(int param0) {
         RuntimeException decompiledCaughtException = null;
@@ -29,25 +29,25 @@ final class fb extends l {
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           if (param0 != 26360) {
-            fb.a(-72);
+            CellFlip.a(-72);
           }
           var10 = sh.field_qb;
-          var2 = var10.g(11132);
+          var2 = var10.readUnsignedByte(11132);
           if (var2 == 0) {
             var9 = (cm) (di.field_v.a((byte) -51));
             if (var9 == null) {
               tn.a(false);
               return;
             }
-            var4 = var10.g(11132);
+            var4 = var10.readUnsignedByte(11132);
             if (var4 != 0) {
               var14 = new byte[var4];
               var10.a(0, var4, true, var14);
             } else {
               var5 = null;
             }
-            var10.field_l = var10.field_l + 4;
-            if (var10.e(-29449)) {
+            var10.position = var10.position + 4;
+            if (var10.verifyChecksum(-29449)) {
               var9.a(false);
               return;
             }
@@ -59,7 +59,7 @@ final class fb extends l {
             tn.a(false);
             return;
           }
-          var3 = var10.d((byte) 122);
+          var3 = var10.readInt((byte) 122);
           var4_ref_fa = (fa) (oi.field_a.a((byte) -65));
           while (var4_ref_fa != null) {
             if (var3 != var4_ref_fa.field_i) {
@@ -89,29 +89,29 @@ final class fb extends l {
           field_p = null;
           return;
         }
-        fb.a((byte) -26);
+        CellFlip.a((byte) -26);
         field_l = null;
         field_o = null;
         field_m = null;
         field_p = null;
     }
 
-    fb(int param0, int param1, boolean param2) {
-        this.field_j = 0;
-        this.field_g = param1;
-        this.field_q = param2 ? true : false;
+    CellFlip(int param0, int param1, boolean param2) {
+        this.phase = 0;
+        this.row = param1;
+        this.newOwnerIsFirstPlayer = param2 ? true : false;
         this.field_h = 0;
-        this.field_k = param0;
+        this.column = param0;
     }
 
-    fb(bi param0, boolean param1) {
+    CellFlip(bi param0, boolean param1) {
         try {
-          this.field_q = param1 ? true : false;
-          this.field_j = 0;
-          this.field_g = param0.field_b;
+          this.newOwnerIsFirstPlayer = param1 ? true : false;
+          this.phase = 0;
+          this.row = param0.field_b;
           this.field_h = 0;
           this.field_n = 0;
-          this.field_k = param0.field_a;
+          this.column = param0.field_a;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

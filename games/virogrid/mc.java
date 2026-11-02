@@ -4,11 +4,11 @@
 import java.util.*;
 
 final class mc {
-    static v field_b;
+    static v menuFont;
     static int field_a;
     static String field_e;
     static Random field_c;
-    static String field_d;
+    static String textViewcontrolsLeft;
 
     final static byte[] a(byte[] param0, int param1) {
         byte[] stackIn_9_0 = null;
@@ -25,19 +25,19 @@ final class mc {
         byte[] var6 = null;
         Object var7 = null;
         byte[] var9 = null;
-        jc var10 = null;
+        PacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
         try {
-          var10 = new jc(param0);
+          var10 = new PacketBuffer(param0);
           if (param1 <= 110) {
             var9 = (byte[]) null;
             mc.a((byte[]) null, 98);
           }
-          var3 = var10.g(11132);
-          var4 = var10.d((byte) 93);
+          var3 = var10.readUnsignedByte(11132);
+          var4 = var10.readInt((byte) 93);
           if (0 <= var4 && (on.field_c == 0 ||
             !(var4 > on.field_c))) {
             if (0 == var3) {
@@ -48,7 +48,7 @@ final class mc {
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }
-            var5 = var10.d((byte) 123);
+            var5 = var10.readInt((byte) 123);
             if (var5 >= 0 && (on.field_c == 0 ||
               !(on.field_c < var5))) {
               var14 = new byte[var5];
@@ -113,15 +113,15 @@ final class mc {
     }
 
     public static void a(boolean param0) {
-        field_d = null;
+        textViewcontrolsLeft = null;
         if (!param0) {
-          field_b = null;
+          menuFont = null;
           field_e = null;
           field_c = null;
           return;
         }
         mc.a(44, true, false, -98, 124, 89, 122);
-        field_b = null;
+        menuFont = null;
         field_e = null;
         field_c = null;
     }
@@ -130,6 +130,6 @@ final class mc {
         field_a = -1;
         field_e = "<%0> has lost connection.";
         field_c = new Random();
-        field_d = "Rotate camera left";
+        textViewcontrolsLeft = "Rotate camera left";
     }
 }

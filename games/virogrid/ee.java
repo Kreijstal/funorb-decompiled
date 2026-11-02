@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ee {
-    static String field_f;
-    static String field_b;
-    static km field_e;
+    static String textEndgameEntrapment;
+    static String tutorial1;
+    static SpriteWidget field_e;
     static il field_a;
     static wl field_c;
     static String field_d;
@@ -111,7 +111,7 @@ final class ee {
             }
           }
         } else {
-          wl.field_e = m.a((byte) 106, 4);
+          wl.field_e = CellAnimator.a((byte) 106, 4);
           if (!wl.field_e.field_l) {
             if (!param0) {
               if (an.field_b) {
@@ -157,15 +157,15 @@ final class ee {
         if (param0 < 15) {
           return;
         }
-        fi.field_t.b(new jl(), (byte) -53);
+        UiWidget.field_t.b(new jl(), (byte) -53);
     }
 
     public static void b(byte param0) {
-        field_b = null;
+        tutorial1 = null;
         field_c = null;
         field_d = null;
         field_a = null;
-        field_f = null;
+        textEndgameEntrapment = null;
         if (param0 <= 53) {
           return;
         }
@@ -173,8 +173,8 @@ final class ee {
     }
 
     static {
-        field_f = "<%0> cannot move";
-        field_b = "These are your pieces<br>Click to select one";
+        textEndgameEntrapment = "<%0> cannot move";
+        tutorial1 = "These are your pieces<br>Click to select one";
         field_d = "Loading sound effects";
         field_c = new wl();
     }

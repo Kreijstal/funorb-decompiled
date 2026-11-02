@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm {
+final class WhirlpoolDigest {
     private long[] field_f;
     private byte[] field_d;
     private byte[] field_e;
@@ -36,7 +36,7 @@ final class fm {
           sh.field_rb = var1_int + dg.field_x;
           var2 = tl.field_i;
           for (var3 = 0; vg.field_F.length > var3; var3++) {
-            var4 = wf.field_f[var3];
+            var4 = RasterBuffer.field_f[var3];
             if (var4 >= 0) {
               if (var4 != g.field_b.field_d) {
                 var5 = na.field_Hb;
@@ -55,7 +55,7 @@ final class fm {
               if (var4 == g.field_b.field_d) {
                 stackIn_16_0 = tg.field_D;
               } else {
-                stackIn_16_0 = ma.field_h;
+                stackIn_16_0 = IntrusiveDequeCursor.field_h;
               }
               var9 = stackIn_16_0;
               if (var9 != null) {
@@ -93,7 +93,7 @@ final class fm {
           if (param1) {
             field_c = (String) null;
           }
-          stackIn_3_0 = p.a(10, 4330, true, param0);
+          stackIn_3_0 = IntrusiveDeque.a(10, 4330, true, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -210,7 +210,7 @@ final class fm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1369854352) {
-            fm.a((byte) 80);
+            WhirlpoolDigest.a((byte) 80);
           }
           stackIn_5_0 = (kh.a((byte) 61, param0) != null);
           return stackIn_5_0;
@@ -233,7 +233,7 @@ final class fm {
         he var7 = null;
         hg var4 = null;
         if (wl.field_b != param0) {
-          var6 = (he) (ma.field_c.a((long)wl.field_b, (byte) 77));
+          var6 = (he) (IntrusiveDequeCursor.field_c.a((long)wl.field_b, (byte) 77));
           var7 = var6;
           wl.field_b = param0;
           if (var7 != null) {
@@ -317,7 +317,7 @@ final class fm {
 
     public static void a(byte param0) {
         if (param0 != -54) {
-          fm.a((byte) 0);
+          WhirlpoolDigest.a((byte) 0);
         }
         field_c = null;
     }
@@ -394,7 +394,7 @@ final class fm {
         }
     }
 
-    fm() {
+    WhirlpoolDigest() {
         this.field_d = new byte[32];
         this.field_f = new long[8];
         this.field_e = new byte[64];

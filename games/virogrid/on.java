@@ -3,7 +3,7 @@
  */
 final class on {
     static java.math.BigInteger field_a;
-    static e field_b;
+    static e arezzo14BoldFont;
     static boolean field_d;
     static int field_c;
 
@@ -50,7 +50,7 @@ final class on {
     }
 
     public static void a(byte param0) {
-        field_b = null;
+        arezzo14BoldFont = null;
         if (param0 <= 42) {
           on.a(23);
           field_a = null;

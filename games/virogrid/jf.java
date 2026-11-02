@@ -12,7 +12,7 @@ final class jf {
     static e field_n;
     static wg field_o;
     int field_a;
-    static eh field_j;
+    static Js5Archive field_j;
     int field_c;
     boolean field_m;
     boolean field_d;
@@ -22,16 +22,16 @@ final class jf {
         this(3);
     }
 
-    final static void a(boolean param0, eh param1, eh param2, eh param3, int param4) {
+    final static void a(boolean param0, Js5Archive param1, Js5Archive param2, Js5Archive param3, int param4) {
         try {
           if (param4 != -1) {
             field_n = (e) null;
           }
           w.field_I = oe.a("", false);
           w.field_I.a(false, 11358);
-          cf.a(param2, param3, 60, param1);
+          cf.loadCommonUi(param2, param3, 60, param1);
           jg.b(461050508);
-          cb.field_c = kh.field_e;
+          MouseWheelInput.field_c = kh.field_e;
           pa.field_l = kh.field_e;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "jf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -81,7 +81,7 @@ final class jf {
           if (param0 == null) {
             return null;
           }
-          var2 = new vh(param0, el.field_w, mb.field_bb, db.field_k, gb.field_F, k.field_c, lj.field_j);
+          var2 = new vh(param0, BufferedSocket.field_w, mb.field_bb, db.field_k, gb.field_F, k.field_c, lj.field_j);
           pe.b((byte) -28);
           if (param1 == 20) {
             stackIn_7_0 = var2;

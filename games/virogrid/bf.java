@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf extends l {
+final class bf extends IntrusiveNode {
     static String field_k;
     int[] field_u;
     static int[] field_m;
     int[] field_l;
     static boolean field_t;
     int field_h;
-    static mg[] field_p;
+    static Sprite[] field_p;
     static int field_o;
     int[] field_g;
     int field_n;
@@ -18,7 +18,7 @@ final class bf extends l {
     static String field_s;
     un[] field_r;
 
-    final static void a(int param0, int param1, mg param2) {
+    final static void a(int param0, int param1, Sprite param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -78,25 +78,25 @@ final class bf extends l {
         fa var11 = null;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
-          df.b(param2, param3, param1 + 1, 10000536);
-          df.b(param2, param4 + param3, 1 + param1, 12105912);
+          Rasterizer.b(param2, param3, param1 + 1, 10000536);
+          Rasterizer.b(param2, param4 + param3, 1 + param1, 12105912);
           var5_int = 1;
           if (!param0) {
             var11 = (fa) null;
             bf.a((fa) null, -34, -7);
           }
-          if (df.field_g > param3 + var5_int) {
-            var5_int = df.field_g - param3;
+          if (Rasterizer.field_g > param3 + var5_int) {
+            var5_int = Rasterizer.field_g - param3;
           }
           var6 = param4;
-          if (var6 + param3 > df.field_h) {
-            var6 = df.field_h - param3;
+          if (var6 + param3 > Rasterizer.field_h) {
+            var6 = Rasterizer.field_h - param3;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + 48 * var7 / param4;
             var9 = var8 << 16 | var8 << 8 | var8;
-            df.field_d[(param3 + var7) * df.field_e + param2] = var9;
-            df.field_d[param1 + param2 + (var7 + param3) * df.field_e] = var9;
+            Rasterizer.field_d[(param3 + var7) * Rasterizer.field_e + param2] = var9;
+            Rasterizer.field_d[param1 + param2 + (var7 + param3) * Rasterizer.field_e] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,8 +112,8 @@ final class bf extends l {
         try {
           var5 = gk.field_g;
           var5.g(param2, 8);
-          var5.field_l = var5.field_l + 1;
-          var4 = var5.field_l;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(1, -109);
           if (param0.field_g == null) {
             var5.a(0, param1 ^ -98);
@@ -122,15 +122,15 @@ final class bf extends l {
             var5.a(param0.field_g, param0.field_g.length, 0, (byte) 94);
           }
           var5.b((byte) -111, var4);
-          var5.field_l = var5.field_l - param1;
-          param0.field_i = var5.d((byte) 127);
-          var5.b(var5.field_l - var4, param1 ^ -5);
+          var5.position = var5.position - param1;
+          param0.field_i = var5.readInt((byte) 127);
+          var5.b(var5.position - var4, param1 ^ -5);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "bf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static km a(byte param0) {
+    final static SpriteWidget a(byte param0) {
         if (param0 >= -70) {
           bf.a((byte) -57);
           return d.h(0);
@@ -146,7 +146,7 @@ final class bf extends l {
           field_p = null;
           return;
         }
-        field_p = (mg[]) null;
+        field_p = (Sprite[]) null;
         field_s = null;
         field_m = null;
         field_k = null;

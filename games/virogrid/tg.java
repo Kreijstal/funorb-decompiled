@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class tg extends fi {
+class tg extends UiWidget {
     boolean field_z;
     static wg field_D;
     static int[] field_A;
@@ -13,7 +13,7 @@ class tg extends fi {
     static int field_x;
     boolean field_C;
 
-    tg(String param0, ol param1, cd param2) {
+    tg(String param0, WidgetListener param1, cd param2) {
         super(param0, param1, param2);
         this.field_E = false;
         this.field_B = true;
@@ -32,12 +32,12 @@ class tg extends fi {
           return;
         }
         if (this.field_o instanceof t) {
-          ((t) (this.field_o)).a(this.field_E, (fi) (this), 97);
+          ((t) (this.field_o)).a(this.field_E, (UiWidget) (this), 97);
           return;
         }
     }
 
-    void a(int param0, int param1, fi param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           super.a(param0, 125, param2, param3);
           if (param1 <= 113) {
@@ -82,7 +82,7 @@ class tg extends fi {
         return this.field_E;
     }
 
-    final void a(int param0, int param1, int param2, fi param3, int param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         RuntimeException var7 = null;
         StringBuilder var8 = null;
         RuntimeException stackIn_8_0 = null;
@@ -115,7 +115,7 @@ class tg extends fi {
         }
     }
 
-    boolean a(fi param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -135,7 +135,7 @@ class tg extends fi {
           this.field_E = true;
           if (this.field_o != null &&
             this.field_o instanceof t) {
-            ((t) (this.field_o)).a(this.field_E, (fi) (this), 91);
+            ((t) (this.field_o)).a(this.field_E, (UiWidget) (this), 91);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -207,7 +207,7 @@ class tg extends fi {
         field_D = null;
     }
 
-    boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -248,7 +248,7 @@ class tg extends fi {
         this(param0, vi.field_g.field_l, param1);
     }
 
-    boolean a(fi param0, char param1, int param2, int param3) {
+    boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -281,7 +281,7 @@ class tg extends fi {
         this.field_E = false;
         this.field_B = true;
         this.field_C = true;
-        this.field_w = vi.field_g.field_b;
+        this.listener = vi.field_g.field_b;
     }
 
     static {

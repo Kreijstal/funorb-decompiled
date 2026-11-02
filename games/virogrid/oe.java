@@ -35,13 +35,13 @@ final class oe {
           if (null != gh.field_Ib) {
             try {
               gh.field_Ib.a(0L, 0);
-              gh.field_Ib.a(sh.field_qb.field_l, sh.field_qb.field_g, 24, param0 ^ 0);
+              gh.field_Ib.a(sh.field_qb.position, sh.field_qb.payload, 24, param0 ^ 0);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
             }
           }
-          sh.field_qb.field_l = sh.field_qb.field_l + 24;
+          sh.field_qb.position = sh.field_qb.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

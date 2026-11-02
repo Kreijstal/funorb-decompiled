@@ -4,10 +4,10 @@
 final class vc extends dc {
     private dg field_gb;
     static int[] field_eb;
-    static String field_db;
+    static String textEndgameEntrapmentYou;
     static int field_bb;
     private String field_lb;
-    static mg[][] field_fb;
+    static Sprite[][] field_fb;
     static int[] field_jb;
     private String field_kb;
     private boolean field_ib;
@@ -16,12 +16,12 @@ final class vc extends dc {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, 22, param2);
-        on.field_b.c(this.field_lb, param2 + (this.field_g >> 1), 103 + param0, 16777215, -1);
+        on.arezzo14BoldFont.c(this.field_lb, param2 + (this.field_g >> 1), 103 + param0, 16777215, -1);
         if (param1 < 8) {
           vc.g((byte) 3);
           if (this.field_kb != null) {
-            df.b(20 + param2, 113 + param0, 260, 8421504);
-            on.field_b.a(this.field_kb, param2 + 20, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, on.field_b.field_H);
+            Rasterizer.b(20 + param2, 113 + param0, 260, 8421504);
+            on.arezzo14BoldFont.a(this.field_kb, param2 + 20, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, on.arezzo14BoldFont.field_H);
             return;
           }
           return;
@@ -29,8 +29,8 @@ final class vc extends dc {
         if (this.field_kb == null) {
           return;
         }
-        df.b(20 + param2, 113 + param0, 260, 8421504);
-        on.field_b.a(this.field_kb, param2 + 20, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, on.field_b.field_H);
+        Rasterizer.b(20 + param2, 113 + param0, 260, 8421504);
+        on.arezzo14BoldFont.a(this.field_kb, param2 + 20, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, on.arezzo14BoldFont.field_H);
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
@@ -42,13 +42,13 @@ final class vc extends dc {
     }
 
     public static void g(byte param0) {
-        field_db = null;
+        textEndgameEntrapmentYou = null;
         field_eb = null;
         field_hb = null;
         if (param0 < 57) {
           return;
         }
-        field_fb = (mg[][]) null;
+        field_fb = (Sprite[][]) null;
         field_jb = null;
     }
 
@@ -100,14 +100,14 @@ final class vc extends dc {
         try {
           this.field_kb = param1;
           if (null != this.field_kb) {
-            var3_int = on.field_b.a(this.field_kb, 260, on.field_b.field_H);
+            var3_int = on.arezzo14BoldFont.a(this.field_kb, 260, on.arezzo14BoldFont.field_H);
             this.c(150 + var3_int, 120, 300);
           }
           this.field_gb = new dg(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_gb.field_z = true;
           this.field_cb = false;
           this.field_ib = false;
-          this.a((fi) (this.field_gb), (byte) -78);
+          this.a((UiWidget) (this.field_gb), (byte) -78);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -140,7 +140,7 @@ final class vc extends dc {
         }
     }
 
-    final static rm a(eh param0, String param1, String param2, byte param3) {
+    final static rm a(Js5Archive param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -189,6 +189,6 @@ final class vc extends dc {
 
     static {
         field_eb = new int[]{1, 1, 1, 3, 2, 1, 1, 2, 5, 1};
-        field_db = "You cannot move";
+        textEndgameEntrapmentYou = "You cannot move";
     }
 }

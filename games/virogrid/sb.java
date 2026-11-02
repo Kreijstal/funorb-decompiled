@@ -9,10 +9,10 @@ final class sb implements Runnable {
     static int[] field_b;
     private boolean field_f;
     private Thread field_g;
-    static cb field_d;
+    static MouseWheelInput field_d;
     int field_e;
 
-    final static mg[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = -56 / ((param1 + 9) / 63);
         return kh.a(1, param4, (byte) -105, param3, param2, 3, 1, param0, 1);
     }
@@ -42,7 +42,7 @@ final class sb implements Runnable {
               var7 = var8;
               var7Lifetime1 = var8;
               if (param4 != -2) {
-                field_d = (cb) null;
+                field_d = (MouseWheelInput) null;
               }
               var9 = param0 + "=" + param1 + "; version=1; path=/; domain=" + var8;
               var7Lifetime2 = var9;
@@ -256,15 +256,15 @@ final class sb implements Runnable {
             sb.a(-47, (byte) -80, -105, 81, 28);
           }
           var10 = sh.field_qb;
-          var2 = var10.g(11132);
-          var3 = var10.g(11132);
+          var2 = var10.readUnsignedByte(11132);
+          var3 = var10.readUnsignedByte(11132);
           if (var2 == 0) {
             var4 = (tm) (bj.field_o.a((byte) -64));
             if (var4 == null) {
               tn.a(false);
               return;
             }
-            var5 = -var10.field_l + ba.field_a;
+            var5 = -var10.position + ba.field_a;
             var12 = var4.field_p;
             var11 = var12;
             var6 = var11;
@@ -272,13 +272,13 @@ final class sb implements Runnable {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.g(jd.a((int) param0, -11073)) << (rb.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(jd.a((int) param0, -11073)) << (rb.a(var7, 3) << 8));
             }
             var4.a(false);
             return;
           }
           if (var2 == 1) {
-            var4_int = var10.d(123);
+            var4_int = var10.readSignedSmart(123);
             var5_ref_da = (da) (aj.field_m.a((byte) -105));
             while (var5_ref_da != null) {
               if (var5_ref_da.field_p != var3 ||
@@ -488,7 +488,7 @@ final class sb implements Runnable {
         }
     }
 
-    sb(pd param0) {
+    sb(PlatformTaskDispatcher param0) {
         un var2 = null;
         this.field_h = new qk();
         this.field_f = false;

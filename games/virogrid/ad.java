@@ -4,13 +4,13 @@
 final class ad {
     static String field_f;
     static String field_a;
-    static mg field_b;
+    static Sprite orbCoinIcon;
     static String field_j;
-    private eh field_k;
+    private Js5Archive field_k;
     private sl field_d;
     static boolean field_h;
     static boolean field_l;
-    private eh field_e;
+    private Js5Archive field_e;
     static int field_i;
     static int field_c;
     static double[] field_g;
@@ -35,7 +35,7 @@ final class ad {
           }
           var6 = new th();
           if (var4 != null) {
-            var6.a(new jc(var4), 0);
+            var6.a(new PacketBuffer(var4), 0);
           }
           if (param1 >= 32768) {
             var6.d(false);
@@ -56,7 +56,7 @@ final class ad {
         var5 = new th();
         var3Lifetime2 = var5;
         if (var4Lifetime1 != null) {
-          var5.a(new jc(var4Lifetime1), 0);
+          var5.a(new PacketBuffer(var4Lifetime1), 0);
         }
         if (param1 >= 32768) {
           var5.d(false);
@@ -66,7 +66,7 @@ final class ad {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        orbCoinIcon = null;
         if (param0 != 90) {
           return;
         }
@@ -76,7 +76,7 @@ final class ad {
         field_g = null;
     }
 
-    ad(int param0, eh param1, eh param2, be param3) {
+    ad(int param0, Js5Archive param1, Js5Archive param2, be param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

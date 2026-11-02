@@ -7,11 +7,11 @@ final class sd {
     static String field_d;
     static int field_e;
     static ga field_f;
-    static km field_a;
-    static String field_b;
+    static SpriteWidget field_a;
+    static String text2d;
 
     public static void a(byte param0) {
-        field_b = null;
+        text2d = null;
         field_f = null;
         if (param0 != 113) {
           return;
@@ -25,14 +25,14 @@ final class sd {
     final static void a(int param0, int param1) {
         hg var2 = gk.field_g;
         var2.g(param1, 8);
-        var2.field_l = var2.field_l + 1;
-        int var3 = var2.field_l;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.a(5, 122);
         var2.a(wl.field_d.field_vc, 101);
         int var4 = (wl.field_d.field_lc << 6) + wl.field_d.field_fc;
         var2.a(var4, param0 ^ -74);
         var2.a(wl.field_d.field_Pb, wl.field_d.field_Pb.length, param0, (byte) -126);
-        var2.b(-var3 + var2.field_l, -1);
+        var2.b(-var3 + var2.position, -1);
     }
 
     final static boolean a(int param0) {
@@ -62,10 +62,10 @@ final class sd {
         if (param2 != 2) {
           return;
         }
-        if (param0 == el.field_t) {
+        if (param0 == BufferedSocket.field_t) {
           return;
         }
-        el.field_t = param0;
+        BufferedSocket.field_t = param0;
         ad.field_l = true;
         sh.a((byte) -112, param1);
     }
@@ -88,6 +88,6 @@ final class sd {
         field_e = 0;
         field_d = "Music: ";
         field_g = "Quick Chat game";
-        field_b = "2D";
+        text2d = "2D";
     }
 }

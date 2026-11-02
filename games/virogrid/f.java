@@ -4,13 +4,13 @@
 import java.util.*;
 
 final class f implements Iterator {
-    private wb field_a;
-    static km[] field_f;
+    private DualLinkNode field_a;
+    static SpriteWidget[] field_f;
     static ml field_j;
     private eb field_e;
     static String field_d;
-    private wb field_i;
-    static km field_c;
+    private DualLinkNode field_i;
+    static SpriteWidget field_c;
     static String field_g;
     static int field_b;
     static String field_h;
@@ -182,12 +182,12 @@ final class f implements Iterator {
     public final Object next() {
         Object var1 = this.field_a;
         if (this.field_e.field_e != var1) {
-          this.field_a = ((wb) (var1)).field_h;
+          this.field_a = ((DualLinkNode) (var1)).field_h;
         } else {
           this.field_a = null;
           var1 = null;
         }
-        this.field_i = (wb) (var1);
+        this.field_i = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -229,7 +229,7 @@ final class f implements Iterator {
         int var4 = 0;
         int var5 = Virogrid.field_F ? 1 : 0;
         if (param2 >= -3) {
-          field_c = (km) null;
+          field_c = (SpriteWidget) null;
         }
         char[] var6 = new char[param1];
         char[] var3 = var6;

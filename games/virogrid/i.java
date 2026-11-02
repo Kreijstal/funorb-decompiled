@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends in {
+final class i extends AudioStream {
     private int[] field_R;
     static String field_D;
     static int field_F;
@@ -38,7 +38,7 @@ final class i extends in {
     private boolean field_t;
     private boolean field_n;
     private int field_s;
-    private sc field_A;
+    private MusicTrack field_A;
 
     private final int a(byte param0, wn param1) {
         int var3_int = 0;
@@ -76,7 +76,7 @@ final class i extends in {
         }
     }
 
-    final synchronized in b() {
+    final synchronized AudioStream b() {
         return null;
     }
 
@@ -491,7 +491,7 @@ final class i extends in {
         }
     }
 
-    private final synchronized void a(sc param0, boolean param1, boolean param2, boolean param3) {
+    private final synchronized void a(MusicTrack param0, boolean param1, boolean param2, boolean param3) {
         int var6 = 0;
         int var7 = Virogrid.field_F ? 1 : 0;
         this.a(-8193, param3);
@@ -657,7 +657,7 @@ final class i extends in {
         }
     }
 
-    final synchronized boolean a(eh param0, int param1, jg param2, sc param3, int param4) {
+    final synchronized boolean a(Js5Archive param0, int param1, jg param2, MusicTrack param3, int param4) {
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -685,7 +685,7 @@ final class i extends in {
           }
           var8 = (sg) (param3.field_h.a((byte) 19));
           while (var8 != null) {
-            var9 = (int)var8.field_d;
+            var9 = (int)var8.key;
             var12 = (rc) (this.field_o.a((long)var9, param4 ^ -14905));
             if (var12 == null) {
               var13 = vm.a(param0, (byte) 42, var9);
@@ -779,7 +779,7 @@ final class i extends in {
 
     final static String a(int param0, byte[] param1) {
         RuntimeException var2 = null;
-        eh var3 = null;
+        Js5Archive var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -787,8 +787,8 @@ final class i extends in {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2022) {
-            var3 = (eh) null;
-            i.a((byte) 27, (eh) null);
+            var3 = (Js5Archive) null;
+            i.a((byte) 27, (Js5Archive) null);
           }
           stackIn_3_0 = nf.a(param1.length, (byte) -120, 0, param1);
           return stackIn_3_0;
@@ -806,8 +806,8 @@ final class i extends in {
         }
     }
 
-    final synchronized in c() {
-        return (in) ((Object) this.field_L);
+    final synchronized AudioStream c() {
+        return (AudioStream) ((Object) this.field_L);
     }
 
     private final void a(int param0, int param1, byte param2, int param3) {
@@ -836,9 +836,9 @@ final class i extends in {
         }
     }
 
-    final static boolean a(byte param0, eh param1) {
+    final static boolean a(byte param0, Js5Archive param1) {
         RuntimeException var2 = null;
-        eh var3 = null;
+        Js5Archive var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -846,8 +846,8 @@ final class i extends in {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 99) {
-            var3 = (eh) null;
-            i.a((byte) -25, (eh) null);
+            var3 = (Js5Archive) null;
+            i.a((byte) -25, (Js5Archive) null);
           }
           stackIn_3_0 = param1.b(25867);
           return stackIn_3_0;
@@ -1030,7 +1030,7 @@ final class i extends in {
         }
     }
 
-    final synchronized void a(boolean param0, int param1, sc param2) {
+    final synchronized void a(boolean param0, int param1, MusicTrack param2) {
         if (param1 != 37) {
           return;
         }

@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ac {
-    static p field_d;
+    static IntrusiveDeque field_d;
     static ua field_c;
     static String field_a;
-    static String field_b;
+    static String textDetail;
     static boolean field_e;
 
     public static void a(int param0) {
@@ -15,14 +15,14 @@ final class ac {
           return;
         }
         field_c = null;
-        field_b = null;
+        textDetail = null;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        km var5 = null;
+        SpriteWidget var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
@@ -32,9 +32,9 @@ final class ac {
           if (ve.field_t > db.field_D) {
             db.field_D = db.field_D + 1;
           }
-          if (p.field_h != ca.field_M.field_b) {
-            vf.field_c = vf.field_c + (ca.field_M.field_b - p.field_h);
-            p.field_h = ca.field_M.field_b;
+          if (IntrusiveDeque.field_h != ca.field_M.field_b) {
+            vf.field_c = vf.field_c + (ca.field_M.field_b - IntrusiveDeque.field_h);
+            IntrusiveDeque.field_h = ca.field_M.field_b;
           }
           if (0 >= db.field_D) {
             return;
@@ -55,12 +55,12 @@ final class ac {
                 kh.a(var5, var4_int, 20435);
               }
               var6 = id.a(var4_int, (byte) 119);
-              og.field_g[var4_int].field_qb = j.field_k[var6];
+              og.field_g[var4_int].normalSprite = j.chatFilterIcons[var6];
               th.field_o[var4_int].field_V = hn.field_i[var6];
             }
           }
           if (~af.field_d.field_nb != param1) {
-            km.field_yb = new bg(af.field_d.field_Bb, af.field_d.field_J, af.field_d.field_K, af.field_d.field_ub, param2, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, ma.field_e, (String) null, 0L);
+            SpriteWidget.field_yb = new bg(af.field_d.field_Bb, af.field_d.field_J, af.field_d.field_K, af.field_d.field_ub, param2, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, IntrusiveDequeCursor.field_e, (String) null, 0L);
           }
           var9 = da.a(param1 ^ 1402, param0, qi.field_d, pg.field_e);
           if (var9 != null) {
@@ -82,6 +82,6 @@ final class ac {
     static {
         field_a = "Report abuse";
         field_e = false;
-        field_b = "Detail: ";
+        textDetail = "Detail: ";
     }
 }

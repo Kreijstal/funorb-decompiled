@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends km {
-    static String field_Ob;
-    static mg[] field_Kb;
-    static p field_Mb;
-    private km field_Fb;
-    private km field_Jb;
+final class qm extends SpriteWidget {
+    static String textError;
+    static Sprite[] frameTopSprites;
+    static IntrusiveDeque field_Mb;
+    private SpriteWidget field_Fb;
+    private SpriteWidget field_Jb;
     static String field_Hb;
-    private km field_Nb;
-    private km field_Eb;
+    private SpriteWidget field_Nb;
+    private SpriteWidget field_Eb;
     private int field_Ib;
-    private km field_Lb;
+    private SpriteWidget field_Lb;
     static String field_Gb;
-    private km field_Pb;
+    private SpriteWidget field_Pb;
 
     final boolean g(int param0) {
         if (this.field_Nb.field_nb != 0) {
@@ -71,8 +71,8 @@ final class qm extends km {
         return oi.field_d;
     }
 
-    qm(long param0, km param1, km param2, km param3, km param4) {
-        super(param0, (km) null);
+    qm(long param0, SpriteWidget param1, SpriteWidget param2, SpriteWidget param3, SpriteWidget param4) {
+        super(param0, (SpriteWidget) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -84,24 +84,24 @@ final class qm extends km {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        km var9 = null;
-        km var10 = null;
+        SpriteWidget var9 = null;
+        SpriteWidget var10 = null;
         try {
-          this.field_Fb = new km(0L, param1);
-          this.field_Nb = new km(0L, param2);
+          this.field_Fb = new SpriteWidget(0L, param1);
+          this.field_Nb = new SpriteWidget(0L, param2);
           this.a(0, this.field_Fb);
           this.a(0, this.field_Nb);
-          this.field_Eb = new km(0L, (km) null);
+          this.field_Eb = new SpriteWidget(0L, (SpriteWidget) null);
           this.a(0, this.field_Eb);
-          this.field_Lb = new km(0L, param3);
-          this.field_Jb = new km(0L, param3);
+          this.field_Lb = new SpriteWidget(0L, param3);
+          this.field_Jb = new SpriteWidget(0L, param3);
           var9 = this.field_Lb;
           var10 = var9;
           this.field_Jb.field_ib = true;
           var10.field_ib = true;
           this.field_Eb.a(0, this.field_Lb);
           this.field_Eb.a(0, this.field_Jb);
-          this.field_Pb = new km(0L, param4);
+          this.field_Pb = new SpriteWidget(0L, param4);
           this.field_Pb.field_X = true;
           this.field_Eb.a(0, this.field_Pb);
           return;
@@ -162,8 +162,8 @@ final class qm extends km {
         if (param0 < 103) {
           field_Gb = (String) null;
         }
-        field_Ob = null;
-        field_Kb = null;
+        textError = null;
+        frameTopSprites = null;
         field_Mb = null;
     }
 
@@ -192,13 +192,13 @@ final class qm extends km {
         int stackIn_5_4;
         int stackIn_5_5;
         boolean stackIn_6_6 = false;
-        km stackIn_21_0 = null;
+        SpriteWidget stackIn_21_0 = null;
         String stackIn_22_1 = null;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        p var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         gh var6 = null;
         int var7 = 0;
@@ -215,7 +215,7 @@ final class qm extends km {
         var15 = Virogrid.field_F ? 1 : 0;
         try {
           if (param2 < 111) {
-            field_Ob = (String) null;
+            textError = (String) null;
           }
           stackIn_5_0 = lg.field_a.field_Ib;
           stackIn_5_1 = 2 + pg.field_e;
@@ -223,7 +223,7 @@ final class qm extends km {
           stackIn_5_3 = false;
           stackIn_5_4 = 2;
           stackIn_5_5 = param0 * (6 + 3 * pg.field_e);
-          stackIn_6_6 = (wf.field_d == lg.field_a.field_Ib);
+          stackIn_6_6 = (RasterBuffer.field_d == lg.field_a.field_Ib);
           var3_int = ((um) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
           var4 = lg.field_a.field_Lb.field_W;
           if (oa.field_q != 2 &&
@@ -240,9 +240,9 @@ final class qm extends km {
           while (var6 != null) {
             var7 = 0;
             if (null == var6.field_W) {
-              var6.field_Eb = new km(0L, gg.field_F);
+              var6.field_Eb = new SpriteWidget(0L, gg.field_F);
               var6.a(0, var6.field_Eb);
-              var6.field_Mb = new km(0L, gg.field_F);
+              var6.field_Mb = new SpriteWidget(0L, gg.field_F);
               var6.a(0, var6.field_Mb);
               var6.b((byte) 42);
               var7 = 1;
@@ -252,15 +252,15 @@ final class qm extends km {
             var8 = 0;
             if (var6.field_Jb != null &&
               !var6.field_Jb.equals("")) {
-              var6.field_Mb.field_qb = qg.field_u;
+              var6.field_Mb.normalSprite = qg.displayNameChangedIcon;
               var6.field_Mb.field_ab = 16737894;
               var8 = 1;
-              var6.field_Mb.a(0, pg.field_e, qg.field_u.field_u + 3, (byte) -60, 0);
+              var6.field_Mb.a(0, pg.field_e, qg.displayNameChangedIcon.field_u + 3, (byte) -60, 0);
             }
             var9 = 0;
             var10 = var6.field_K;
             if (var8 != 0) {
-              var9 = qg.field_u.field_u + 3;
+              var9 = qg.displayNameChangedIcon.field_u + 3;
               var10 = var10 - var9;
             }
             stackIn_21_0 = var6.field_Eb;
@@ -277,7 +277,7 @@ final class qm extends km {
               var6.field_kb = pg.field_e - var6.field_ub;
             }
             if (var7 != 0) {
-              lg.field_a.field_Lb.a(2, var6, (km) (var5), (byte) 109);
+              lg.field_a.field_Lb.a(2, var6, (SpriteWidget) (var5), (byte) 109);
             }
             if (null != var6.field_Mb &&
               var6.field_Mb.field_S) {
@@ -375,17 +375,17 @@ final class qm extends km {
           var11 = (var9 / 2 + param1 * var10) / var9;
         }
         int var12 = var8 / 2 + var11;
-        km var14 = this.field_Fb;
+        SpriteWidget var14 = this.field_Fb;
         var14.field_tb = 0;
         var14.field_F = 0;
         var14.field_ub = var5;
         var14.field_K = this.field_K;
-        km var15 = this.field_Nb;
+        SpriteWidget var15 = this.field_Nb;
         var15.field_K = this.field_K;
         var15.field_ub = -var6 + this.field_ub;
         var15.field_F = var6;
         var15.field_tb = 0;
-        km var16 = this.field_Eb;
+        SpriteWidget var16 = this.field_Eb;
         var16.field_tb = 0;
         var16.field_F = var5;
         var16.field_K = this.field_K;
@@ -393,17 +393,17 @@ final class qm extends km {
           return;
         }
         var16.field_ub = var7;
-        km var17 = this.field_Lb;
+        SpriteWidget var17 = this.field_Lb;
         var17.field_K = this.field_K;
         var17.field_F = 0;
         var17.field_tb = 0;
         var17.field_ub = var12;
-        km var18 = this.field_Jb;
+        SpriteWidget var18 = this.field_Jb;
         var18.field_tb = 0;
         var18.field_K = this.field_K;
         var18.field_ub = -var12 + var7;
         var18.field_F = var12;
-        km var19 = this.field_Pb;
+        SpriteWidget var19 = this.field_Pb;
         this.field_Eb.field_Y = param2 < param0 ? true : false;
         this.field_Nb.field_Y = param2 < param0 ? true : false;
         this.field_Fb.field_Y = param2 < param0 ? true : false;
@@ -451,7 +451,7 @@ final class qm extends km {
     }
 
     static {
-        field_Ob = "Error";
+        textError = "Error";
         field_Gb = "Show players in <%0>'s game";
         field_Hb = "Invite <%0> to this game";
     }

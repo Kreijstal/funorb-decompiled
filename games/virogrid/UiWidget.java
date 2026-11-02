@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-class fi extends l {
+class UiWidget extends IntrusiveNode {
     cd field_o;
     int field_k;
     int field_g;
     int field_q;
     int field_l;
-    ol field_w;
+    WidgetListener listener;
     static int[] field_j;
     static java.awt.Canvas field_v;
     int field_m;
@@ -31,7 +31,7 @@ class fi extends l {
         return var1;
     }
 
-    void a(int param0, int param1, int param2, fi param3, int param4, int param5) {
+    void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         try {
           if (param5 <= 73) {
             this.a((Hashtable) null, (byte) -23, 50, (StringBuilder) null);
@@ -104,7 +104,7 @@ class fi extends l {
         }
     }
 
-    boolean a(fi param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -114,7 +114,7 @@ class fi extends l {
           if (param1 == -8515) {
             return false;
           }
-          this.a((fi) null, 9, true, -68, -47, 99, 20);
+          this.a((UiWidget) null, 9, true, -68, -47, 99, 20);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -141,7 +141,7 @@ class fi extends l {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 34) {
-            this.a((fi) null, -111, true, 107, -55, -73, 65);
+            this.a((UiWidget) null, -111, true, 107, -55, -73, 65);
           }
           if (param0.containsKey(this)) {
             discarded$1 = param3.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
@@ -192,7 +192,7 @@ class fi extends l {
         }
     }
 
-    boolean a(int param0, fi param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -222,16 +222,16 @@ class fi extends l {
         int var5;
         ce var6;
         int var7;
-        L0: {
+        regionExit1: {
           var7 = Virogrid.field_F ? 1 : 0;
           this.a(param1, 116, this, param0);
           var5 = this.f(true) ? 1 : 0;
           if (!param3) {
             if (var5 == 0) {
-              break L0;
+              break regionExit1;
             }
             if (oi.field_g == 0) {
-              break L0;
+              break regionExit1;
             }
             this.c(-1);
           }
@@ -303,10 +303,10 @@ class fi extends l {
           if (this.f(true)) {
             discarded$3 = param3.append(" focused");
           }
-          if (this.field_w != null) {
+          if (this.listener != null) {
             discarded$4 = param3.append(" renderer=");
-            if (!(this.field_w instanceof fi)) {
-              discarded$5 = param3.append(this.field_w);
+            if (!(this.listener instanceof UiWidget)) {
+              discarded$5 = param3.append(this.listener);
               if (var6 != 0) {
                 param3 = this.a(param1, (byte) 119, param0 + 1, param3);
               }
@@ -319,7 +319,7 @@ class fi extends l {
           }
           if (null != this.field_o) {
             discarded$6 = param3.append(" listener=");
-            if (!(this.field_o instanceof fi)) {
+            if (!(this.field_o instanceof UiWidget)) {
               discarded$7 = param3.append(this.field_o);
               if (var6 != 0) {
                 param3 = this.a(param1, (byte) 126, 1 + param0, param3);
@@ -361,7 +361,7 @@ class fi extends l {
         return this.a(new Hashtable(), (byte) 123, 0, new StringBuilder()).toString();
     }
 
-    boolean a(fi param0, char param1, int param2, int param3) {
+    boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_4_0 = null;
@@ -385,7 +385,7 @@ class fi extends l {
         }
     }
 
-    fi(String param0, cd param1) {
+    UiWidget(String param0, cd param1) {
         this(param0, vi.field_g.field_j, param1);
     }
 
@@ -399,7 +399,7 @@ class fi extends l {
         return this.field_h;
     }
 
-    void a(int param0, int param1, fi param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_1 = 0;
@@ -446,7 +446,7 @@ class fi extends l {
     public static void c(boolean param0) {
         field_t = null;
         if (param0) {
-          fi.c(false);
+          UiWidget.c(false);
         }
         field_j = null;
         field_v = null;
@@ -457,12 +457,12 @@ class fi extends l {
           this.a(15, (Hashtable) null, (byte) 35, (StringBuilder) null);
         }
         if (0 == param3 &&
-          this.field_w != null) {
-          this.field_w.a(param1, this, true, param2, -23294);
+          this.listener != null) {
+          this.listener.a(param1, this, true, param2, -23294);
         }
     }
 
-    boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -521,12 +521,12 @@ class fi extends l {
         return false;
     }
 
-    protected fi() {
+    protected UiWidget() {
         this.field_q = 0;
         this.field_k = 0;
     }
 
-    fi(String param0, ol param1, cd param2) {
+    UiWidget(String param0, WidgetListener param1, cd param2) {
         RuntimeException runtimeException = null;
         gm var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -540,11 +540,11 @@ class fi extends l {
         this.field_q = 0;
         this.field_k = 0;
         try {
-          this.field_w = param1;
+          this.listener = param1;
           this.field_o = param2;
           this.field_n = param0;
-          if (this.field_w instanceof gm) {
-            var4 = (gm) ((Object) this.field_w);
+          if (this.listener instanceof gm) {
+            var4 = (gm) ((Object) this.listener);
             this.field_g = var4.a(this, false);
             this.field_m = var4.a(this, 80);
           }
@@ -575,7 +575,7 @@ class fi extends l {
         }
     }
 
-    fi(int param0, int param1, int param2, int param3, ol param4, cd param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetListener param4, cd param5) {
         this.field_q = 0;
         this.field_k = 0;
         try {
@@ -584,7 +584,7 @@ class fi extends l {
           this.field_l = param0;
           this.field_m = param3;
           this.field_o = param5;
-          this.field_w = param4;
+          this.listener = param4;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "fi.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

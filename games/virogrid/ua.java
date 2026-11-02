@@ -9,22 +9,22 @@ class ua {
     int[] field_a;
     static boolean field_q;
     private long field_r;
-    private in field_d;
+    private AudioStream field_d;
     private boolean field_c;
     private long field_k;
-    private in[] field_t;
+    private AudioStream[] field_t;
     private long field_s;
     private int field_g;
     private int field_f;
     private int field_h;
     private boolean field_n;
     private int field_m;
-    private in[] field_u;
+    private AudioStream[] field_u;
     private int field_j;
     private int field_l;
     private int field_o;
 
-    final static ua a(pd param0, java.awt.Component param1, int param2, int param3) {
+    final static ua a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           tc var4 = null;
           Throwable var4_ref = null;
@@ -133,13 +133,13 @@ class ua {
         this.field_c = true;
     }
 
-    final synchronized void a(in param0) {
+    final synchronized void a(AudioStream param0) {
         this.field_d = param0;
     }
 
-    private final void a(in param0, int param1) {
+    private final void a(AudioStream param0, int param1) {
         int var3 = param1 >> 5;
-        in var4 = this.field_t[var3];
+        AudioStream var4 = this.field_t[var3];
         if (var4 == null) {
           this.field_u[var3] = param0;
         } else {
@@ -149,12 +149,12 @@ class ua {
         param0.field_i = param1;
     }
 
-    private final static void b(in param0) {
+    private final static void b(AudioStream param0) {
         param0.field_g = false;
         if (param0.field_j != null) {
           param0.field_j.field_g = 0;
         }
-        in var1 = param0.c();
+        AudioStream var1 = param0.c();
         while (var1 != null) {
           ua.b(var1);
           var1 = param0.b();
@@ -305,20 +305,20 @@ class ua {
         int var7_int;
         Object var7;
         int var8_int;
-        in[] var8;
+        AudioStream[] var8;
         int var9;
         Object var10;
-        in var11;
+        AudioStream var11;
         tj var12;
         int var13;
-        in var14;
+        AudioStream var14;
         int var15_int;
-        in var15;
+        AudioStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        in var14Lifetime1;
-        in var14Lifetime2;
+        AudioStream var14Lifetime1;
+        AudioStream var14Lifetime2;
         var3 = param1;
         if (field_q) {
           var3 = var3 << 1;
@@ -333,7 +333,7 @@ class ua {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -366,7 +366,7 @@ class ua {
                       var12.field_g = var12.field_g + var13;
                     }
                     if (var4 >= this.field_e) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.c();
                     if (var14Lifetime2 != null) {
@@ -379,12 +379,12 @@ class ua {
                     var15 = var11.field_h;
                     var11.field_h = null;
                     if (var10 != null) {
-                      ((in) (var10)).field_h = var15;
+                      ((AudioStream) (var10)).field_h = var15;
                     } else {
                       this.field_u[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_t[var7_int] = (in) (var10);
+                      this.field_t[var7_int] = (AudioStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -405,8 +405,8 @@ class ua {
             this.field_t[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((in) (var7)).field_h;
-              ((in) (var7)).field_h = null;
+              var10Lifetime1 = ((AudioStream) (var7)).field_h;
+              ((AudioStream) (var7)).field_h = null;
               var7 = var10Lifetime1;
             }
           }
@@ -426,11 +426,11 @@ class ua {
         this.field_r = hc.a(-9986);
         this.field_g = 0;
         this.field_s = 0L;
-        this.field_u = new in[8];
+        this.field_u = new AudioStream[8];
         this.field_n = true;
         this.field_m = 0;
         this.field_l = 0;
-        this.field_t = new in[8];
+        this.field_t = new AudioStream[8];
         this.field_k = 0L;
         this.field_j = 0;
     }

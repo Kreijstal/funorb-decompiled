@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl extends l {
+final class fl extends IntrusiveNode {
     static String field_r;
     int field_o;
     static String field_k;

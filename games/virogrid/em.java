@@ -3,45 +3,45 @@
  */
 final class em {
     static float field_c;
-    static String field_e;
+    static String playernameHotseat2;
     static String[] field_f;
-    static v field_d;
+    static v chatFont;
     static r field_a;
-    static String[] field_b;
+    static String[] instructionPages;
 
     public static void a(int param0) {
         field_f = null;
         if (param0 < -78) {
-          field_b = null;
+          instructionPages = null;
           field_a = null;
-          field_e = null;
-          field_d = null;
+          playernameHotseat2 = null;
+          chatFont = null;
           return;
         }
         em.a((byte) -63, 112);
-        field_b = null;
+        instructionPages = null;
         field_a = null;
-        field_e = null;
-        field_d = null;
+        playernameHotseat2 = null;
+        chatFont = null;
     }
 
     final static void a(byte param0, int param1) {
         hg var2 = gk.field_g;
         var2.g(param1, 8);
-        var2.field_l = var2.field_l + 1;
-        int var3 = var2.field_l;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.a(2, -124);
         var2.a(kn.field_E, kn.field_E.length, 0, (byte) -121);
         var2.a(aa.field_e, -111);
         var2.a(qc.field_c, 77);
         if (param0 == -55) {
           var2.a(pm.field_p, pm.field_p.length, 0, (byte) -105);
-          var2.b(var2.field_l - var3, -1);
+          var2.b(var2.position - var3, -1);
           return;
         }
-        field_b = (String[]) null;
+        instructionPages = (String[]) null;
         var2.a(pm.field_p, pm.field_p.length, 0, (byte) -105);
-        var2.b(var2.field_l - var3, -1);
+        var2.b(var2.position - var3, -1);
     }
 
     final static void b(int param0) {
@@ -76,7 +76,7 @@ final class em {
         }
     }
 
-    final static v a(int param0, int param1, eh param2, boolean param3, eh param4) {
+    final static v a(int param0, int param1, Js5Archive param2, boolean param3, Js5Archive param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         v stackIn_6_0 = null;
@@ -183,7 +183,7 @@ final class em {
           }
           uh.field_c = -1;
           if (!param0) {
-            field_b = (String[]) null;
+            instructionPages = (String[]) null;
           }
           sk.field_d = -1;
           if (ei.field_a) {
@@ -210,7 +210,7 @@ final class em {
 
     static {
         field_f = new String[]{"All scores", "My scores", "Best each"};
-        field_e = "White";
-        field_b = new String[]{"Dominate the grid to achieve victory!<br><br>Players take turns to select a piece and either clone it into an adjacent space, or jump it two spaces.<br><br>If a piece is cloned or jumped into a space that is next to one or more opposing pieces, it will automatically capture those pieces.<br><br>If the grid is filled before either player wipes out the other, the player with the most pieces on the grid wins.", "Each player has a limited amount of time to perform their move. If the timer ever reaches zero, a move is played for them by the easy AI. After three strikes in an online game, that player forfeits the game.<br><br>To rotate the board in game, use the arrow keys or the control panel at the lower-right-hand corner of the screen, or hold down the right mouse button while moving the mouse.<br><br>The circle button in the control panel will restore the default view.<br><br>You can zoom the camera in and out with the mouse wheel or with the up and down arrow keys."};
+        playernameHotseat2 = "White";
+        instructionPages = new String[]{"Dominate the grid to achieve victory!<br><br>Players take turns to select a piece and either clone it into an adjacent space, or jump it two spaces.<br><br>If a piece is cloned or jumped into a space that is next to one or more opposing pieces, it will automatically capture those pieces.<br><br>If the grid is filled before either player wipes out the other, the player with the most pieces on the grid wins.", "Each player has a limited amount of time to perform their move. If the timer ever reaches zero, a move is played for them by the easy AI. After three strikes in an online game, that player forfeits the game.<br><br>To rotate the board in game, use the arrow keys or the control panel at the lower-right-hand corner of the screen, or hold down the right mouse button while moving the mouse.<br><br>The circle button in the control panel will restore the default view.<br><br>You can zoom the camera in and out with the mouse wheel or with the up and down arrow keys."};
     }
 }

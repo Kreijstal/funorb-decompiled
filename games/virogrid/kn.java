@@ -45,7 +45,7 @@ final class kn extends ec {
           this.field_x.a((byte) 37, param1 + this.field_l, this.field_u + param2, param3);
           return;
         }
-        mg var5 = new mg(this.field_x.field_g, this.field_x.field_m);
+        Sprite var5 = new Sprite(this.field_x.field_g, this.field_x.field_m);
         kb.a(var5, 16865);
         this.field_x.a(param0, 0, 0, param3);
         ai.a(true);
@@ -53,7 +53,7 @@ final class kn extends ec {
     }
 
     public kn() {
-        super(0, 0, 0, 0, (ol) null, (cd) null);
+        super(0, 0, 0, 0, (WidgetListener) null, (cd) null);
         this.field_H = 256;
     }
 
@@ -107,11 +107,11 @@ final class kn extends ec {
               var10 = var18;
               var11 = 0;
               var12 = 0;
-              L3: while (true) {
+              scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
                     vb.field_h != param6) {
-                    break L3;
+                    break scanLoop1;
                   }
                   var8_int = 0;
                   for (var12 = 0; var19.length > var12; var12 += 2) {
@@ -124,13 +124,13 @@ final class kn extends ec {
                       vi.field_l = true;
                     }
                   }
-                  break L3;
+                  break scanLoop1;
                 }
                 var13Lifetime1 = var19[var12];
                 var14 = var10[var12 + 1];
                 if (var13Lifetime1 == -1) {
                   if (var14 != vj.field_b[param2]) {
-                    break L3;
+                    break scanLoop1;
                   }
                 } else {
                   if (param6 == var13Lifetime1 &&
@@ -138,10 +138,10 @@ final class kn extends ec {
                     var11 = 1;
                   } else {
                     if (var13Lifetime1 >= param6) {
-                      break L3;
+                      break scanLoop1;
                     }
                     if (var14 != (ub.field_D[var13Lifetime1] & 255)) {
-                      break L3;
+                      break scanLoop1;
                     }
                   }
                 }
@@ -322,8 +322,8 @@ final class kn extends ec {
         }
     }
 
-    kn(fi param0) {
-        super(param0.field_l, param0.field_u, param0.field_g, param0.field_m, (ol) null, (cd) null);
+    kn(UiWidget param0) {
+        super(param0.field_l, param0.field_u, param0.field_g, param0.field_m, (WidgetListener) null, (cd) null);
         try {
           param0.a(this.field_m, true, 0, 0, this.field_g);
           this.field_H = 256;

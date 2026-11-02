@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ca extends fd implements bo, ta {
+final class ca extends WidgetContainer implements bo, ta {
     private boolean field_T;
     private wa field_E;
     private wa field_K;
     private boolean field_I;
     private tg field_J;
     private tg field_P;
-    static wf field_M;
+    static RasterBuffer field_M;
     private String field_S;
     private boolean field_H;
     private tg field_F;
@@ -81,7 +81,7 @@ final class ca extends fd implements bo, ta {
           var1_int = 0;
           var2 = 0;
           if (param0 != 2) {
-            field_M = (wf) null;
+            field_M = (RasterBuffer) null;
           }
           while (nd.b((byte) -103)) {
             co.field_k.e(-126);
@@ -107,12 +107,12 @@ final class ca extends fd implements bo, ta {
             }
           } else {
             if (var2 != 0 &&
-              p.field_d != 2) {
+              IntrusiveDeque.field_d != 2) {
               nm.b(1);
             }
           }
           if (0 == var3 &&
-            2 == p.field_d) {
+            2 == IntrusiveDeque.field_d) {
             var4 = hc.a(-9986) - af.field_e;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
@@ -138,7 +138,7 @@ final class ca extends fd implements bo, ta {
     }
 
     ca(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (ol) null);
+        super(0, 0, 310, 190, (WidgetListener) null);
         ej dupTemp$0 = null;
         ej dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -198,32 +198,32 @@ final class ca extends fd implements bo, ta {
             this.field_P = new tg(og.field_k, (cd) null);
             this.field_E.field_C = false;
           }
-          this.field_E.field_w = (ol) ((Object) new cc(10000536));
-          this.field_K.field_w = (ol) ((Object) new a(10000536));
+          this.field_E.listener = (WidgetListener) ((Object) new cc(10000536));
+          this.field_K.listener = (WidgetListener) ((Object) new a(10000536));
           var6 = new hf();
-          this.field_F.field_w = (ol) ((Object) var6);
+          this.field_F.listener = (WidgetListener) ((Object) var6);
           if (this.field_P != null) {
-            this.field_P.field_w = (ol) ((Object) var6);
+            this.field_P.listener = (WidgetListener) ((Object) var6);
           }
           this.field_E.field_h = sn.field_n;
           if (this.field_J != null) {
-            this.field_J.field_w = (ol) ((Object) var6);
+            this.field_J.listener = (WidgetListener) ((Object) var6);
           }
           if (null != this.field_J) {
             this.field_J.field_h = mh.field_j;
           }
           if (!this.field_H) {
             if (!this.field_T) {
-              this.field_P.field_w = (ol) ((Object) new ti());
+              this.field_P.listener = (WidgetListener) ((Object) new ti());
             } else {
               this.field_P.field_h = fn.field_f;
-              this.field_P.field_w = (ol) ((Object) new ti());
+              this.field_P.listener = (WidgetListener) ((Object) new ti());
             }
           } else {
             this.field_P.field_h = pj.field_b;
           }
           this.field_u = 15;
-          var7 = dj.field_h;
+          var7 = dj.arezzo14Font;
           if (this.field_S != null) {
             this.field_u = this.field_u + (var7.a(this.field_S, -40 + this.field_g, var7.field_H) + 5);
           }
@@ -238,12 +238,12 @@ final class ca extends fd implements bo, ta {
           }
           dupTemp$0 = new ej(10, this.field_u, this.field_g - 20, 25, this.field_E, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a((fi) (dupTemp$0), (byte) -78);
-          this.field_u = this.field_u + (5 + ((fi) ((Object) var12)).field_m);
+          this.a((UiWidget) (dupTemp$0), (byte) -78);
+          this.field_u = this.field_u + (5 + ((UiWidget) ((Object) var12)).field_m);
           dupTemp$1 = new ej(10, this.field_u, this.field_g - 20, 25, this.field_K, false, 80, 3, var7, 16777215, hm.field_b);
           var13 = dupTemp$1;
-          this.a((fi) (dupTemp$1), (byte) -78);
-          this.field_u = this.field_u + (5 + ((fi) ((Object) var13)).field_m);
+          this.a((UiWidget) (dupTemp$1), (byte) -78);
+          this.field_u = this.field_u + (5 + ((UiWidget) ((Object) var13)).field_m);
           this.field_F.field_o = (cd) (this);
           if (this.field_J != null) {
             this.field_J.field_o = (cd) (this);
@@ -273,12 +273,12 @@ final class ca extends fd implements bo, ta {
             }
           }
           this.a(this.field_u + 3, true, 0, 0, this.field_g);
-          this.a((fi) (this.field_F), (byte) -78);
+          this.a((UiWidget) (this.field_F), (byte) -78);
           if (null != this.field_J) {
-            this.a((fi) (this.field_J), (byte) -78);
+            this.a((UiWidget) (this.field_J), (byte) -78);
           }
           if (null != this.field_P) {
-            this.a((fi) (this.field_P), (byte) -78);
+            this.a((UiWidget) (this.field_P), (byte) -78);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -313,7 +313,7 @@ final class ca extends fd implements bo, ta {
         }
     }
 
-    final boolean a(fi param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -358,7 +358,7 @@ final class ca extends fd implements bo, ta {
         RuntimeException var3 = null;
         try {
           if (this.field_E == param1) {
-            this.field_K.a((fi) (this), -8515);
+            this.field_K.a((UiWidget) (this), -8515);
           }
           if (param0) {
             field_G = 96;
@@ -433,7 +433,7 @@ final class ca extends fd implements bo, ta {
                 } else {
                   if (!(kh.field_d >= ve.field_t)) {
                     if (kh.field_d == 0) {
-                      ld.a(0);
+                      GameKeyHandler.a(0);
                     }
                     kh.field_d = kh.field_d + 1;
                   }
@@ -464,10 +464,10 @@ final class ca extends fd implements bo, ta {
 
     final void a(byte param0, int param1, int param2, int param3) {
         if (this.field_S != null) {
-          dj.field_h.a(this.field_S, this.field_l + param1 + 20, param2 - (-this.field_u - 15), -40 + this.field_g, this.field_m, 16777215, -1, 1, 0, dj.field_h.field_H);
+          dj.arezzo14Font.a(this.field_S, this.field_l + param1 + 20, param2 - (-this.field_u - 15), -40 + this.field_g, this.field_m, 16777215, -1, 1, 0, dj.arezzo14Font.field_H);
         }
         if (this.field_J != null) {
-          df.b(param1 + 10, param2 + 134, -20 + this.field_g, 4210752);
+          Rasterizer.b(param1 + 10, param2 + 134, -20 + this.field_g, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }
@@ -510,7 +510,7 @@ final class ca extends fd implements bo, ta {
 
     public final void a(int param0, tg param1, int param2, int param3, int param4) {
         int var7 = 0;
-        fi var8 = null;
+        UiWidget var8 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -519,8 +519,8 @@ final class ca extends fd implements bo, ta {
         var7 = Virogrid.field_F ? 1 : 0;
         try {
           if (param0 != 12085) {
-            var8 = (fi) null;
-            this.a((fi) null, '\026', 57, -15);
+            var8 = (UiWidget) null;
+            this.a((UiWidget) null, '\026', 57, -15);
           }
           if (this.field_F == param1) {
             this.a((byte) -127);

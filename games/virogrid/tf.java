@@ -3,9 +3,9 @@
  */
 final class tf {
     int field_b;
-    static p field_a;
-    static km field_c;
-    static km field_d;
+    static IntrusiveDeque field_a;
+    static SpriteWidget field_c;
+    static SpriteWidget field_d;
 
     final static void a(byte param0) {
         sd.field_e = 0;
@@ -27,6 +27,6 @@ final class tf {
     }
 
     static {
-        field_a = new p();
+        field_a = new IntrusiveDeque();
     }
 }

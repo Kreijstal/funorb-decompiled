@@ -4,13 +4,13 @@
 final class cg {
     static char[] field_f;
     static String field_b;
-    static String field_e;
+    static String textEndgameNopieces;
     static ml field_d;
     static String field_c;
     static String field_a;
     static String field_g;
 
-    final static km b(int param0) {
+    final static SpriteWidget b(int param0) {
         if (param0 != 1463) {
           cg.a(false, 127);
           return ch.field_a.field_Jb;
@@ -22,7 +22,7 @@ final class cg {
         field_d = null;
         field_a = null;
         field_b = null;
-        field_e = null;
+        textEndgameNopieces = null;
         field_g = null;
         field_c = null;
         if (param0 < -24) {
@@ -49,8 +49,8 @@ final class cg {
         if (md.field_e != null) {
           md.field_e.a((byte) -22, param0);
           ra.a((byte) 3, param0);
-          if (null != km.field_yb) {
-            km.field_yb.a(param0, param1 + 18109);
+          if (null != SpriteWidget.field_yb) {
+            SpriteWidget.field_yb.a(param0, param1 + 18109);
           }
           cf.a((byte) -111, param0);
           if (param1 != 6851) {
@@ -60,8 +60,8 @@ final class cg {
           return;
         }
         ra.a((byte) 3, param0);
-        if (null != km.field_yb) {
-          km.field_yb.a(param0, param1 + 18109);
+        if (null != SpriteWidget.field_yb) {
+          SpriteWidget.field_yb.a(param0, param1 + 18109);
         }
         cf.a((byte) -111, param0);
         if (param1 == 6851) {
@@ -76,6 +76,6 @@ final class cg {
         field_a = "No options available";
         field_c = "You must play 1 more rated game before playing with the current options.";
         field_g = "Solicitation";
-        field_e = "<%0> has no pieces left";
+        textEndgameNopieces = "<%0> has no pieces left";
     }
 }

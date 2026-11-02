@@ -64,23 +64,23 @@ final class ch {
         }
         String var1 = og.c(-113);
         aa.field_a = new ca(var1, (String) null, true, false, false);
-        tm.field_l.a(0, fi.field_t);
+        tm.field_l.a(0, UiWidget.field_t);
         if (param0 < -109) {
-          fi.field_t.b(aa.field_a, (byte) -53);
-          fi.field_t.j(-4236);
+          UiWidget.field_t.b(aa.field_a, (byte) -53);
+          UiWidget.field_t.j(-4236);
           return;
         }
         String var2 = (String) null;
         ch.a((String) null, (byte) -120);
-        fi.field_t.b(aa.field_a, (byte) -53);
-        fi.field_t.j(-4236);
+        UiWidget.field_t.b(aa.field_a, (byte) -53);
+        UiWidget.field_t.j(-4236);
     }
 
-    final static void a(int param0, pd param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
         ok.field_G = param8;
         co.field_g = param4;
         ed.field_b = param3;
-        fd.field_C = param7;
+        WidgetContainer.field_C = param7;
         rj.field_l = param5;
         ii.field_a = param1;
         if (param6 < 7) {
@@ -100,7 +100,7 @@ final class ch {
     final static void a(boolean param0) {
         if (null == md.field_e) {
           md.field_e = null;
-          wf.field_d = null;
+          RasterBuffer.field_d = null;
           if (param0) {
             return;
           }
@@ -109,7 +109,7 @@ final class ch {
         }
         if (null == md.field_e.field_d) {
           md.field_e = null;
-          wf.field_d = null;
+          RasterBuffer.field_d = null;
           if (param0) {
             return;
           }
@@ -118,7 +118,7 @@ final class ch {
         }
         md.field_e.field_d.field_xb = false;
         md.field_e = null;
-        wf.field_d = null;
+        RasterBuffer.field_d = null;
         if (param0) {
           return;
         }

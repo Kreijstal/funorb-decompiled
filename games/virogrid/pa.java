@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pa extends in {
-    p field_k;
+final class pa extends AudioStream {
+    IntrusiveDeque field_k;
     private i field_m;
     static ob field_l;
-    static km field_o;
+    static SpriteWidget field_o;
     r field_n;
 
     final static int[] a(int param0, int param1, int param2) {
@@ -141,7 +141,7 @@ final class pa extends in {
               } else {
                 ab.field_G = pl.a(md.field_a, (String) null, param3 + 184, param0, false);
               }
-              gk.field_g.field_l = 0;
+              gk.field_g.position = 0;
               gk.field_g.a(14, -77);
               gk.field_g.a(ab.field_G.a(true).field_d, 77);
               al.b(-1, -1);
@@ -149,7 +149,7 @@ final class pa extends in {
             }
             if (th.field_t == ug.field_a &&
               wg.a(1, param3 + 57)) {
-              var6_int = sh.field_qb.g(11132);
+              var6_int = sh.field_qb.readUnsignedByte(11132);
               if (0 == var6_int) {
                 ug.field_a = ga.field_Ob;
               } else {
@@ -157,7 +157,7 @@ final class pa extends in {
                 ba.field_a = -1;
                 ug.field_a = ub.field_E;
               }
-              sh.field_qb.field_l = 0;
+              sh.field_qb.position = 0;
             }
             if (param3 != -57) {
               stackIn_20_0 = -38;
@@ -166,17 +166,17 @@ final class pa extends in {
             if (ug.field_a == ga.field_Ob &&
               wg.a(8, 0)) {
               ph.field_i = sh.field_qb.e((byte) -60);
-              sh.field_qb.field_l = 0;
+              sh.field_qb.position = 0;
               md.a(param1, 0, param4, param2, ab.field_G);
               ug.field_a = lg.field_d;
             }
             boolean decompiledFrameRemainder0 = true;
             if (ug.field_a == lg.field_d &&
               wg.a(1, 0)) {
-              var6_intLifetime1 = sh.field_qb.g(11132);
+              var6_intLifetime1 = sh.field_qb.readUnsignedByte(11132);
               ci.field_q = var6_intLifetime1;
               mj.field_B = null;
-              sh.field_qb.field_l = 0;
+              sh.field_qb.position = 0;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -197,14 +197,14 @@ final class pa extends in {
               }
             }
             if (nf.field_h == ug.field_a &&
-              ic.c((byte) 48)) {
+              GameSession.c((byte) 48)) {
               md.field_a = sh.field_qb.e((byte) -60);
               he.field_Wb = param0;
-              hd.field_d = sh.field_qb.g(11132);
-              og.field_s = sh.field_qb.g(11132);
-              bn.field_d = sh.field_qb.c((byte) -64);
-              var6 = sh.field_qb.f(param3 ^ -97);
-              var7 = sh.field_qb.g(param3 ^ -11077);
+              hd.field_d = sh.field_qb.readUnsignedByte(11132);
+              og.field_s = sh.field_qb.readUnsignedByte(11132);
+              bn.field_d = sh.field_qb.readUnsignedShort((byte) -64);
+              var6 = sh.field_qb.readOptionalString(param3 ^ -97);
+              var7 = sh.field_qb.readUnsignedByte(param3 ^ -11077);
               if ((var7 & 1) != 0) {
                 oe.a(0);
               }
@@ -221,23 +221,23 @@ final class pa extends in {
               }
               stackIn_58_0 = ((var7 & 16) != 0);
               wd.field_a = stackIn_58_0;
-              if (el.field_k) {
-                sh.field_qb.g(11132);
-                sh.field_qb.g(param3 + 11189);
-                sh.field_qb.d((byte) 98);
-                rn.field_e = sh.field_qb.c((byte) 127);
+              if (BufferedSocket.field_k) {
+                sh.field_qb.readUnsignedByte(11132);
+                sh.field_qb.readUnsignedByte(param3 + 11189);
+                sh.field_qb.readInt((byte) 98);
+                rn.field_e = sh.field_qb.readUnsignedShort((byte) 127);
                 lj.field_d = new byte[rn.field_e];
                 for (var8 = 0; rn.field_e > var8; var8++) {
-                  lj.field_d[var8] = sh.field_qb.a((byte) 114);
+                  lj.field_d[var8] = sh.field_qb.readByte((byte) 114);
                 }
               }
-              mi.field_d = sh.field_qb.h(param3 - 69);
+              mi.field_d = sh.field_qb.readString(param3 - 69);
               var10 = (CharSequence) ((Object) mi.field_d);
               wn.field_n = c.a(var10, true);
-              mf.field_h = sh.field_qb.g(11132);
+              mf.field_h = sh.field_qb.readUnsignedByte(11132);
               ug.field_a = kh.field_c;
               if (ab.field_G.a(true) != qg.field_r) {
-                if (ab.field_G.a(true) == p.field_b) {
+                if (ab.field_G.a(true) == IntrusiveDeque.field_b) {
                   Virogrid.field_O.a(mb.g((byte) -86), (byte) 100);
                 }
               } else {
@@ -275,7 +275,7 @@ final class pa extends in {
               return stackIn_85_0;
             }
             if (ub.field_E == ug.field_a &&
-              ic.c((byte) 48)) {
+              GameSession.c((byte) 48)) {
               tn.a(false);
               if (ci.field_q == 7 &&
                 !fh.field_e) {
@@ -286,7 +286,7 @@ final class pa extends in {
               if (7 == ci.field_q) {
                 ci.field_q = 3;
               }
-              ld.field_g = sh.field_qb.h(param3 ^ 68);
+              GameKeyHandler.field_g = sh.field_qb.readString(param3 ^ 68);
               fh.field_e = false;
               stackIn_97_0 = ci.field_q;
               return stackIn_97_0;
@@ -294,9 +294,9 @@ final class pa extends in {
             if (null == oj.field_Ub) {
               if (fh.field_e) {
                 if (af.b(param3 ^ 69) <= 30000L) {
-                  ld.field_g = ll.field_a;
+                  GameKeyHandler.field_g = ll.field_a;
                 } else {
-                  ld.field_g = wa.field_L;
+                  GameKeyHandler.field_g = wa.field_L;
                 }
                 fh.field_e = false;
                 stackIn_105_0 = 3;
@@ -334,20 +334,20 @@ final class pa extends in {
         }
     }
 
-    final in c() {
+    final AudioStream c() {
         wn var1 = (wn) (this.field_k.a((byte) -77));
         if (var1 == null) {
           return null;
         }
         if (var1.field_p != null) {
-          return (in) ((Object) var1.field_p);
+          return (AudioStream) ((Object) var1.field_p);
         }
         return this.b();
     }
 
     public static void c(boolean param0) {
         if (!param0) {
-          field_o = (km) null;
+          field_o = (SpriteWidget) null;
         }
         field_l = null;
         field_o = null;
@@ -518,7 +518,7 @@ final class pa extends in {
         }
     }
 
-    final in b() {
+    final AudioStream b() {
         wn var1_ref = null;
         int var2 = Virogrid.field_F ? 1 : 0;
         do {
@@ -527,11 +527,11 @@ final class pa extends in {
             return null;
           }
         } while (null == var1_ref.field_p);
-        return (in) ((Object) var1_ref.field_p);
+        return (AudioStream) ((Object) var1_ref.field_p);
     }
 
     pa(i param0) {
-        this.field_k = new p();
+        this.field_k = new IntrusiveDeque();
         this.field_n = new r();
         try {
           this.field_m = param0;

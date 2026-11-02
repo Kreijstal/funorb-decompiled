@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class gd extends wf implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_s;
     private java.awt.image.ImageConsumer field_o;
     static wl field_r;
     static String field_p;
     static String field_q;
-    static p field_n;
+    static IntrusiveDeque field_n;
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
@@ -64,7 +64,7 @@ final class gd extends wf implements java.awt.image.ImageProducer, java.awt.imag
         field_p = null;
         field_q = null;
         if (param0 < 67) {
-          gd.b((byte) 93);
+          ImageProducerRasterBuffer.b((byte) 93);
           field_r = null;
           return;
         }
@@ -141,13 +141,13 @@ final class gd extends wf implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    gd() {
+    ImageProducerRasterBuffer() {
     }
 
     static {
         field_r = new wl();
         field_p = "Security";
         field_q = "Shortcut Reference";
-        field_n = new p();
+        field_n = new IntrusiveDeque();
     }
 }

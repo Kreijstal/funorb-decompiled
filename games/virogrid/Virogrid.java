@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public final class Virogrid extends od {
-    private p field_I;
+    private IntrusiveDeque field_I;
     static co field_O;
     private int[] field_N;
     private int[] field_D;
@@ -18,7 +18,7 @@ public final class Virogrid extends od {
     private int[] field_J;
     public static boolean field_F;
 
-    private final void r(int param0) {
+    private final void initScene(int param0) {
         jf dupTemp$2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -40,9 +40,9 @@ public final class Virogrid extends od {
           ce.field_E = 0;
           bi.field_c = new int[]{0, 154, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
           gb.field_H.field_d = true;
-          c.field_d = new mg(640, 400);
-          we.field_e = new mg(640, 400);
-          mk.field_bb = new mg(200, 400);
+          c.field_d = new Sprite(640, 400);
+          we.field_e = new Sprite(640, 400);
+          mk.field_bb = new Sprite(200, 400);
           var2_int = 0;
           if (param0 <= 59) {
             Virogrid.$cfr$intArgs$b$d65aded092bd(-64, false);
@@ -77,15 +77,15 @@ public final class Virogrid extends od {
         }
     }
 
-    private final void a(eh param0, byte param1, eh param2, eh param3, eh param4, eh param5) {
+    private final void loadGraphics(Js5Archive param0, byte param1, Js5Archive param2, Js5Archive param3, Js5Archive param4, Js5Archive param5) {
         int var10 = 0;
-        mg discarded$0 = null;
-        mg discarded$1 = null;
+        Sprite discarded$0 = null;
+        Sprite discarded$1 = null;
         int var8 = 0;
         int var9_int = 0;
-        mg var11 = null;
+        Sprite var11 = null;
         int var12 = 0;
-        mg var13 = null;
+        Sprite var13 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -107,58 +107,58 @@ public final class Virogrid extends od {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        mg[][] var9 = null;
+        Sprite[][] var9 = null;
         var12 = field_F ? 1 : 0;
         try {
-          hd.field_b = a.a("", param5, -110, "font", param4);
-          vg.field_H = a.a("", param5, -95, "smallfont", param4);
-          mc.field_b = a.a("", param5, -120, "menufont", param4);
-          re.field_o = a.a("", param5, -110, "tinyfont", param4);
+          hd.standardFont = a.a("", param5, -110, "font", param4);
+          vg.smallFont = a.a("", param5, -95, "smallfont", param4);
+          mc.menuFont = a.a("", param5, -120, "menufont", param4);
+          re.tinyFont = a.a("", param5, -110, "tinyfont", param4);
           var13 = sn.a(param5, "starfield", "", false);
-          sj.field_j = new mg(2560, 256);
+          sj.field_j = new Sprite(2560, 256);
           sj.field_j.b();
           var13.b(0, 0);
           var13.b(1280, 0);
           ca.field_M.a((byte) 29);
-          eh.field_l = vc.a(param5, "logo", "", (byte) 114);
+          Js5Archive.field_l = vc.a(param5, "logo", "", (byte) 114);
           sn.a(param5, "splash", "", false);
           tk.field_d = ke.a("walk1", "", param5, 32370);
-          ic.field_y = ke.a("walk2", "", param5, 32370);
+          GameSession.field_y = ke.a("walk2", "", param5, 32370);
           wh.field_b = ke.a("walk3", "", param5, 32370);
-          vb.field_l = new mg(640, 480);
-          ib.field_b = b.a("", param5, 7, "frame");
-          wf.a(100, mc.field_b, 0, vg.field_H);
+          vb.field_l = new Sprite(640, 480);
+          ib.frameSprites = b.a("", param5, 7, "frame");
+          RasterBuffer.a(100, mc.menuFont, 0, vg.smallFont);
           en.field_Kb = 16777215;
           la.field_k = 16777215;
           sf.field_I = 16777215;
           na.field_Hb = 8437759;
           jl.field_E = 16777215;
           ti.field_b = 8437759;
-          cb.field_d = ke.a(32, param5, "", "achievements_large");
-          mj.field_F = sn.a(param2, "unachieved", "basic", false);
-          ad.field_b = sn.a(param2, "orbcoin", "basic", false);
-          var8 = cb.field_d.length;
-          vd.field_Y = new mg[var8];
+          MouseWheelInput.achievementIcons = ke.a(32, param5, "", "achievements_large");
+          mj.unachievedIcon = sn.a(param2, "unachieved", "basic", false);
+          ad.orbCoinIcon = sn.a(param2, "orbcoin", "basic", false);
+          var8 = MouseWheelInput.achievementIcons.length;
+          vd.field_Y = new Sprite[var8];
           qc.a(123);
           var9_int = -67 / ((param1 + 11) / 58);
           for (var10 = 0; var8 > var10; var10++) {
-            var11 = new mg(32, 32);
+            var11 = new Sprite(32, 32);
             var11.b();
-            cb.field_d[var10].b(0, 0, 32, 32);
+            MouseWheelInput.achievementIcons[var10].b(0, 0, 32, 32);
             vd.field_Y[var10] = var11;
           }
-          tn.field_b = new mg(32, 32);
+          tn.field_b = new Sprite(32, 32);
           tn.field_b.b();
-          mj.field_F.b(0, 0, 32, 32);
+          mj.unachievedIcon.b(0, 0, 32, 32);
           ul.b((byte) 108);
-          kd.field_p = ke.a(32, param5, "", "viewicons");
+          kd.viewIcons = ke.a(32, param5, "", "viewicons");
           discarded$0 = this.b(131586, -9105, 30136);
           discarded$1 = this.b(263172, -9105, 6316128);
-          var9 = new mg[2][];
+          var9 = new Sprite[2][];
           var9[0] = ke.a(32, param5, "", "turntime_icons");
           var9[1] = ke.a(32, param5, "", "gridwidth_icons");
-          nn.a(var9, var9, 2, ra.field_e, m.field_a, param3, param2, true, -27871, wc.field_c, wc.field_c, wf.field_e, wn.field_j, 2, ng.field_T);
-          ak.field_e = sn.a(param5, "lobbyicon", "", false);
+          nn.a(var9, var9, 2, ra.field_e, CellAnimator.field_a, param3, param2, true, -27871, wc.gameOptionNames, wc.gameOptionNames, RasterBuffer.gameOptionLabels, wn.field_j, 2, ng.field_T);
+          ak.lobbyIcon = sn.a(param5, "lobbyicon", "", false);
           fk.a(new vl(param0, param5, 8, 128));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -235,7 +235,7 @@ public final class Virogrid extends od {
         }
     }
 
-    final void c(boolean param0) {
+    final void initializeGame(boolean param0) {
         i var3 = null;
         i stackIn_3_0 = null;
         int stackIn_3_1 = 0;
@@ -251,22 +251,22 @@ public final class Virogrid extends od {
           stackIn_3_2 = 9;
           stackIn_4_3 = !(param0);
           ((i) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3);
-          pe.a((java.awt.Component) ((Object) fi.field_v), var3, ei.field_c, param0, (byte) -18, 22050);
+          pe.a((java.awt.Component) ((Object) UiWidget.field_v), var3, ei.field_c, param0, (byte) -18, 22050);
           this.a(false, true, -118, true, false, false, false);
-          jc.field_i[60] = 4;
-          jc.field_i[67] = 1;
-          jc.field_i[63] = 1;
-          jc.field_i[64] = 1;
-          jc.field_i[65] = 1;
-          jc.field_i[62] = 2;
-          jc.field_i[9] = -1;
-          jc.field_i[61] = 5;
-          jc.field_i[10] = -1;
-          jc.field_i[57] = -2;
-          jc.field_i[58] = -2;
-          jc.field_i[66] = 1;
+          PacketBuffer.field_i[60] = 4;
+          PacketBuffer.field_i[67] = 1;
+          PacketBuffer.field_i[63] = 1;
+          PacketBuffer.field_i[64] = 1;
+          PacketBuffer.field_i[65] = 1;
+          PacketBuffer.field_i[62] = 2;
+          PacketBuffer.field_i[9] = -1;
+          PacketBuffer.field_i[61] = 5;
+          PacketBuffer.field_i[10] = -1;
+          PacketBuffer.field_i[57] = -2;
+          PacketBuffer.field_i[58] = -2;
+          PacketBuffer.field_i[66] = 1;
           db.a((byte) 81, 200);
-          this.r(114);
+          this.initScene(114);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -275,7 +275,7 @@ public final class Virogrid extends od {
         }
     }
 
-    private final boolean c(byte param0, boolean param1) {
+    private final boolean advanceLoading(byte param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -291,26 +291,26 @@ public final class Virogrid extends od {
             }
             if (wm.field_w != null) {
               al.a(mi.field_e, param0 ^ -37, 80.0f);
-              this.b(true);
-              oi.field_c = new sc[4];
-              oi.field_c[0] = sc.a(wm.field_w, "", "ataxx titlescreen");
-              oi.field_c[1] = sc.a(wm.field_w, "", "tetralink ingame 1");
-              oi.field_c[2] = sc.a(wm.field_w, "", "tetralink ingame 2");
-              oi.field_c[3] = sc.a(wm.field_w, "", "tetralink ingame 3");
+              this.onCanvasCreated(true);
+              oi.musicTracks = new MusicTrack[4];
+              oi.musicTracks[0] = MusicTrack.a(wm.field_w, "", "ataxx titlescreen");
+              oi.musicTracks[1] = MusicTrack.a(wm.field_w, "", "tetralink ingame 1");
+              oi.musicTracks[2] = MusicTrack.a(wm.field_w, "", "tetralink ingame 2");
+              oi.musicTracks[3] = MusicTrack.a(wm.field_w, "", "tetralink ingame 3");
               for (var3_int = 0; var3_int < 4; var3_int++) {
-                vg.field_B.a(el.field_d, 0, af.field_g, oi.field_c[var3_int], 0);
+                vg.field_B.a(BufferedSocket.field_d, 0, af.field_g, oi.musicTracks[var3_int], 0);
               }
               vg.field_B.e(-1);
               af.field_g = null;
-              el.field_d = null;
+              BufferedSocket.field_d = null;
               wm.field_w = null;
               sb.a(-90);
               return false;
             }
             if (null != g.field_a) {
               al.a(aj.field_l, 13, 90.0f);
-              this.b(true);
-              this.a(gn.field_G, (byte) -105, ge.field_c, s.field_a, g.field_a, oj.field_Fb);
+              this.onCanvasCreated(true);
+              this.loadGraphics(gn.field_G, (byte) -105, ge.field_c, s.field_a, g.field_a, oj.field_Fb);
               s.field_a = null;
               g.field_a = null;
               sb.a(-82);
@@ -318,7 +318,7 @@ public final class Virogrid extends od {
             }
             if (null != wn.field_i) {
               al.a(gl.field_i, 13, 95.0f);
-              this.b(true);
+              this.onCanvasCreated(true);
               this.a(1053, wn.field_i);
               wn.field_i = null;
               sb.a(param0 - 63);
@@ -339,7 +339,7 @@ public final class Virogrid extends od {
             fh.a((byte) -89);
             qc.a(50, (byte) 111);
             bm.c(-111, 50);
-            ei.a(0, oi.field_c[0]);
+            ei.a(0, oi.musicTracks[0]);
             id.field_r = 0;
             return true;
           }
@@ -357,8 +357,8 @@ public final class Virogrid extends od {
                       pj.field_c.b(25867)) {
                       if (sf.field_O.c(0) &&
                         sf.field_O.b(param0 ^ -25891)) {
-                        if (el.field_d.c(0) &&
-                          el.field_d.b(25867)) {
+                        if (BufferedSocket.field_d.c(0) &&
+                          BufferedSocket.field_d.b(25867)) {
                           if (wm.field_w.c(param0 + 42) &&
                             wm.field_w.b(param0 + 25909)) {
                             if (oj.field_Fb.c(0) &&
@@ -378,7 +378,7 @@ public final class Virogrid extends od {
                                           return false;
                                         }
                                         ge.b(18887);
-                                        this.b(true);
+                                        this.onCanvasCreated(true);
                                         af.field_g = new jg(pj.field_c, sf.field_O);
                                         af.field_g.a((byte) 86, "", "menu_select");
                                         of.field_b = af.field_g.a((byte) 112, "", "tetralink_invalid_move");
@@ -427,7 +427,7 @@ public final class Virogrid extends od {
                           al.a(uh.a("", nh.field_r, te.field_g, -1, wm.field_w), 13, 60.0f);
                           return false;
                         }
-                        al.a(pe.a(te.field_g, nh.field_r, el.field_d, 0, 0), 13, 45.0f);
+                        al.a(pe.a(te.field_g, nh.field_r, BufferedSocket.field_d, 0, 0), 13, 45.0f);
                         return false;
                       }
                       al.a(uh.a("", ee.field_d, bm.field_n, -1, sf.field_O), 13, 40.0f);
@@ -593,9 +593,9 @@ public final class Virogrid extends od {
               vm.field_d[0] = (double)lj.field_r * Math.sin((double)cf.field_c);
               vm.field_d[2] = (double)lj.field_r * Math.cos((double)cf.field_c);
               gb.c((byte) -44);
-              ci.field_s = new mg(640, 480);
+              ci.field_s = new Sprite(640, 480);
               pj.a(ci.field_s, 256);
-              df.b(0, 0, 640, 480, 3158064);
+              Rasterizer.b(0, 0, 640, 480, 3158064);
               var3 = j.field_b;
               var4 = tm.field_g;
               jm.a(320, 240, -2);
@@ -619,7 +619,7 @@ public final class Virogrid extends od {
               kf.field_c.a(pe.field_j, bi.field_c);
               cm.field_k.a(pe.field_j, bi.field_c);
               ba.field_c.a(pe.field_j, bi.field_c);
-              wf.field_j.a(pe.field_j, bi.field_c);
+              RasterBuffer.field_j.a(pe.field_j, bi.field_c);
               th.field_y.a(var20, bi.field_c);
               pj.field_a.a(var20, bi.field_c);
               qg.field_h.a(var20, bi.field_c);
@@ -697,10 +697,10 @@ public final class Virogrid extends od {
                 }
               }
               pj.a(c.field_d, 256);
-              var4_ref_pm = (pm) (gd.field_n.a((byte) -107));
+              var4_ref_pm = (pm) (ImageProducerRasterBuffer.field_n.a((byte) -107));
               while (var4_ref_pm != null) {
                 rk.a(var4_ref_pm.field_m, var4_ref_pm.field_h, var4_ref_pm.field_r << 3, 10000);
-                var4_ref_pm = (pm) (gd.field_n.a(16213));
+                var4_ref_pm = (pm) (ImageProducerRasterBuffer.field_n.a(16213));
               }
               ul.b((byte) 86);
               c.field_d.d(j.field_b - (c.field_d.field_w >> 1), -(c.field_d.field_p >> 1) + tm.field_g);
@@ -717,7 +717,7 @@ public final class Virogrid extends od {
               var6Lifetime2 = 512 + (var3_ref_fl.field_m >> 12);
               var5Lifetime1 = var3_ref_fl.field_p >> 12;
               if (var6Lifetime2 > 0) {
-                df.a((var4Lifetime2 << 13) / var6Lifetime2 + (j.field_b << 4), (tm.field_g << 4) + (var5Lifetime1 << 13) / var6Lifetime2, 65536 / var6Lifetime2, var3_ref_fl.field_o * 5 / 3, pj.field_d);
+                Rasterizer.a((var4Lifetime2 << 13) / var6Lifetime2 + (j.field_b << 4), (tm.field_g << 4) + (var5Lifetime1 << 13) / var6Lifetime2, 65536 / var6Lifetime2, var3_ref_fl.field_o * 5 / 3, pj.field_d);
               }
               var3_ref_fl = (fl) (sh.field_tb.a(16213));
             }
@@ -731,15 +731,15 @@ public final class Virogrid extends od {
         }
     }
 
-    final void b(boolean param0) {
+    final void onCanvasCreated(boolean param0) {
         Object stackIn_5_0 = null;
-        ic stackIn_24_0 = null;
+        GameSession stackIn_24_0 = null;
         boolean stackIn_61_0 = false;
         boolean stackIn_66_0 = false;
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
         RuntimeException var2_ref = null;
-        ic var3 = null;
+        GameSession var3 = null;
         int var4 = 0;
         hj var4_ref_hj = null;
         int var5 = 0;
@@ -749,7 +749,7 @@ public final class Virogrid extends od {
         var7 = field_F ? 1 : 0;
         try {
           if (null == ih.field_b) {
-            stackIn_5_0 = fi.field_v;
+            stackIn_5_0 = UiWidget.field_v;
           } else {
             stackIn_5_0 = ih.field_b;
           }
@@ -800,16 +800,16 @@ public final class Virogrid extends od {
             ok.b(f.b(-844), 3410);
           }
           if (ug.a(param0)) {
-            df.g(0, 0, df.field_e, df.field_f);
+            Rasterizer.g(0, 0, Rasterizer.field_e, Rasterizer.field_f);
             stackIn_66_0 = !param0;
-            var4 = ma.a(stackIn_66_0) + 24;
+            var4 = IntrusiveDequeCursor.a(stackIn_66_0) + 24;
             var5 = Virogrid.q(-80) + 26;
             dg.b(var5, -124, var4);
             qi.b(-5205);
           } else {
             if (ak.b(-31609)) {
               stackIn_61_0 = (ih.field_b != null) || (fe.field_Gb);
-              fd.a(stackIn_61_0, -20248);
+              WidgetContainer.a(stackIn_61_0, -20248);
             } else {
               if (!eg.a((byte) 47)) {
                 if (!this.field_I.b((byte) 64)) {
@@ -825,13 +825,13 @@ public final class Virogrid extends od {
                     }
                   }
                   vd.field_Y[var4_ref_hj.field_i].d(8, var5);
-                  hd.field_b.b(qk.field_d[var4_ref_hj.field_i], 48, hd.field_b.field_H + var5, 8437759, -1);
+                  hd.standardFont.b(qk.achievementTitles[var4_ref_hj.field_i], 48, hd.standardFont.field_H + var5, 8437759, -1);
                 }
               } else {
                 var4 = 24 + rh.a(-16118);
                 var5 = pg.a(true) + 26;
                 dg.b(var5, -125, var4);
-                fm.a(false);
+                WhirlpoolDigest.a(false);
               }
             }
           }
@@ -839,7 +839,7 @@ public final class Virogrid extends od {
             ij.a(-119, (16 - wa.field_K) * 256 / 16);
           }
           if (hd.field_d >= 2) {
-            hd.field_b.b(Integer.toString(mj.field_E), 4, 24, 16777215, -1);
+            hd.standardFont.b(Integer.toString(mj.field_E), 4, 24, 16777215, -1);
           }
           td.a(-30179, (java.awt.Canvas) (var8), 0, 0);
           return;
@@ -866,60 +866,60 @@ public final class Virogrid extends od {
         }
     }
 
-    private final void a(int param0, eh param1) {
-        qb var4 = null;
-        qb var5 = null;
-        qb var6 = null;
-        qb var7 = null;
-        qb var8 = null;
-        qb var9 = null;
-        qb var10 = null;
-        qb var11 = null;
-        qb var12 = null;
-        qb var13 = null;
-        qb var14 = null;
-        qb var15 = null;
-        qb var16 = null;
-        qb var17 = null;
-        qb var18 = null;
-        qb var19 = null;
-        qb var20 = null;
+    private final void a(int param0, Js5Archive param1) {
+        Model var4 = null;
+        Model var5 = null;
+        Model var6 = null;
+        Model var7 = null;
+        Model var8 = null;
+        Model var9 = null;
+        Model var10 = null;
+        Model var11 = null;
+        Model var12 = null;
+        Model var13 = null;
+        Model var14 = null;
+        Model var15 = null;
+        Model var16 = null;
+        Model var17 = null;
+        Model var18 = null;
+        Model var19 = null;
+        Model var20 = null;
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
-        qb var27 = null;
+        Model var27 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        qb var26 = null;
+        Model var26 = null;
         try {
           fk.a(1.0f);
           fk.a();
           if (param0 != 1053) {
             return;
           }
-          var27 = qb.a(param1, "", "scenery_walls");
-          var4 = qb.a(param1, "", "scenery_walls2");
-          var5 = qb.a(param1, "", "scenery_game-table");
-          var6 = qb.a(param1, "", "scenery_floor");
-          var7 = qb.a(param1, "", "scenery_props1");
-          var8 = qb.a(param1, "", "scenery_props2");
-          var9 = qb.a(param1, "", "scenery_ceiling");
-          var10 = qb.a(param1, "", "scenery_door");
-          var11 = qb.a(param1, "", "scenery_game-screen_back");
-          var12 = qb.a(param1, "", "scenery_game-screen_front");
-          var13 = qb.a(param1, "", "scenery_game-screen_front-left");
-          var14 = qb.a(param1, "", "scenery_game-screen_back-left");
-          var15 = qb.a(param1, "", "scenery_game-screen_back-top");
-          var16 = qb.a(param1, "", "scenery_game-screen_front-right");
-          var17 = qb.a(param1, "", "scenery_game-screen_back-right");
-          var18 = qb.a(param1, "", "scenery_game-screen_front-top");
-          var19 = qb.a(param1, "", "scenery_game-screen_front-black");
-          var20 = qb.a(param1, "", "scenery_game-screen_back-black");
+          var27 = Model.a(param1, "", "scenery_walls");
+          var4 = Model.a(param1, "", "scenery_walls2");
+          var5 = Model.a(param1, "", "scenery_game-table");
+          var6 = Model.a(param1, "", "scenery_floor");
+          var7 = Model.a(param1, "", "scenery_props1");
+          var8 = Model.a(param1, "", "scenery_props2");
+          var9 = Model.a(param1, "", "scenery_ceiling");
+          var10 = Model.a(param1, "", "scenery_door");
+          var11 = Model.a(param1, "", "scenery_game-screen_back");
+          var12 = Model.a(param1, "", "scenery_game-screen_front");
+          var13 = Model.a(param1, "", "scenery_game-screen_front-left");
+          var14 = Model.a(param1, "", "scenery_game-screen_back-left");
+          var15 = Model.a(param1, "", "scenery_game-screen_back-top");
+          var16 = Model.a(param1, "", "scenery_game-screen_front-right");
+          var17 = Model.a(param1, "", "scenery_game-screen_back-right");
+          var18 = Model.a(param1, "", "scenery_game-screen_front-top");
+          var19 = Model.a(param1, "", "scenery_game-screen_front-black");
+          var20 = Model.a(param1, "", "scenery_game-screen_back-black");
           this.a(var11, (byte) 69);
           this.a(var12, (byte) 69);
           this.a(var13, (byte) 69);
@@ -946,7 +946,7 @@ public final class Virogrid extends od {
           var24 = 256;
           var25 = 0;
           if (db.b((byte) 13, 0)) {
-            var26 = qb.a(param1, "", "ghost_untextured");
+            var26 = Model.a(param1, "", "ghost_untextured");
             ri.field_a = (il) (var26.a(var21, var22, var23, var24, var25));
             var23 = 64;
             var21 = 42;
@@ -956,7 +956,7 @@ public final class Virogrid extends od {
           fl.field_s = (il) (var5.a(var21, var22, var23, var24, var25));
           nb.field_x = (il) (var6.a(var21, var22, var23, var24, var25));
           ba.field_c = (il) (var7.a(var21, var22, var23, var24, var25));
-          wf.field_j = (il) (var8.a(var21, var22, var23, var24, var25));
+          RasterBuffer.field_j = (il) (var8.a(var21, var22, var23, var24, var25));
           kg.field_c = (il) (var9.a(var21, var22, var23, var24, var25));
           lk.field_Qb = (il) (var10.a(var21, var22, var23, var24, var25));
           var13.d();
@@ -990,7 +990,7 @@ public final class Virogrid extends od {
         }
     }
 
-    final void c(int param0) {
+    final void tickGame(int param0) {
         boolean discarded$0 = false;
         String[] array$1 = null;
         boolean stackIn_8_1 = false;
@@ -1011,7 +1011,7 @@ public final class Virogrid extends od {
         String[] var5_ref_String__ = null;
         int var6 = 0;
         int var7 = 0;
-        ic var7_ref_ic = null;
+        GameSession var7_ref_ic = null;
         String var8 = null;
         String var9 = null;
         int var9_int = 0;
@@ -1036,7 +1036,7 @@ public final class Virogrid extends od {
         var11 = field_F ? 1 : 0;
         try {
           lj.c(param0 ^ -28791807);
-          tl.field_l = km.e(param0 ^ -125);
+          tl.field_l = SpriteWidget.e(param0 ^ -125);
           kh.a(false);
           if (null != ih.field_b &&
             ih.field_b.field_a) {
@@ -1046,26 +1046,26 @@ public final class Virogrid extends od {
           stackIn_8_1 = (ih.field_b != null);
           this.a(stackIn_8_1, 121);
           if (i.field_w) {
-            this.t(param0 ^ 13);
+            this.openArchives(param0 ^ 13);
             i.field_w = false;
           }
           id.field_r = id.field_r + 1;
           if (id.field_r == 500 &&
             10 == hm.field_c) {
-            el.a(12229, false);
+            BufferedSocket.a(12229, false);
           }
           if (j.a(-1)) {
             this.m(1);
             if (j.a(-1)) {
-              if (me.b(66)) {
-                discarded$0 = this.c((byte) -42, false);
+              if (MouseInputHandler.b(66)) {
+                discarded$0 = this.advanceLoading((byte) -42, false);
               }
               return;
             }
           }
           if (!i.field_H) {
             jb.a(og.field_b, param0 + 45);
-            if (this.c((byte) -42, true)) {
+            if (this.advanceLoading((byte) -42, true)) {
               i.field_H = true;
             }
           } else {
@@ -1110,11 +1110,11 @@ public final class Virogrid extends od {
                   } else {
                     if (var2_int == 3) {
                       a.field_D = false;
-                      ic.a(ib.field_b, hd.field_b.field_A, 320, ib.field_b, 8, mc.field_b, 2, hd.field_b.field_A + hd.field_b.field_G, 8, -16824, true, 240);
+                      GameSession.a(ib.frameSprites, hd.standardFont.field_A, 320, ib.frameSprites, 8, mc.menuFont, 2, hd.standardFont.field_A + hd.standardFont.field_G, 8, -16824, true, 240);
                     } else {
                       if (var2_int == 4) {
                         a.field_D = true;
-                        gn.a((byte) 53, jc.field_j, 0);
+                        gn.a((byte) 53, PacketBuffer.field_j, 0);
                       }
                     }
                   }
@@ -1126,7 +1126,7 @@ public final class Virogrid extends od {
             }
           }
           while (true) {
-            if (!kd.a(-122, jc.field_i)) {
+            if (!kd.a(-122, PacketBuffer.field_i)) {
               al.b(-1, param0);
               if (i.field_y == -2) {
                 bl.field_B = true;
@@ -1147,7 +1147,7 @@ public final class Virogrid extends od {
                       if (!dd.field_a) {
                         gb.a(-2, 0, false, 0);
                       } else {
-                        kn.field_J = mi.field_f;
+                        kn.field_J = mi.textRemovedFromGame;
                         gb.a(-2, 0, false, 9);
                       }
                       wm.c((byte) -86);
@@ -1157,11 +1157,11 @@ public final class Virogrid extends od {
                       dd.field_a = false;
                       aj.field_a = false;
                     }
-                    eh.field_e = false;
+                    Js5Archive.field_e = false;
                     qe.field_k = false;
                   } else {
                     qe.field_k = true;
-                    eh.field_e = true;
+                    Js5Archive.field_e = true;
                   }
                 }
                 var3 = 0;
@@ -1170,7 +1170,7 @@ public final class Virogrid extends od {
                 }
                 if (aj.field_a ||
                   qe.field_k ||
-                  eh.field_e) {
+                  Js5Archive.field_e) {
                   var3 = 1;
                 }
                 if (var3 != 0) {
@@ -1186,7 +1186,7 @@ public final class Virogrid extends od {
               hm.field_c = 9;
               qe.field_k = false;
               em.field_c = 128.0f;
-              kn.field_J = sh.field_qb.h(-117);
+              kn.field_J = sh.field_qb.readString(-117);
               continue;
             }
             if (ci.field_q == 14) {
@@ -1213,19 +1213,19 @@ public final class Virogrid extends od {
                 on.field_d = false;
                 jm.a(320, 240, param0 ^ -2);
                 if (null != vg.field_I &&
-                  1 == vg.field_I.field_e) {
+                  1 == vg.field_I.localPlayer) {
                   stackIn_83_0 = 0.0;
                 } else {
                   stackIn_83_0 = 3.141592653589793;
                 }
                 sj.field_o = (float)stackIn_83_0;
-                el.a(false, (byte) -106);
+                BufferedSocket.a(false, (byte) -106);
                 vm.field_d[0] = (double)lj.field_r * Math.sin((double)cf.field_c);
                 vm.field_d[2] = (double)lj.field_r * Math.cos((double)cf.field_c);
                 ka.a(true, (byte) 87);
                 gb.c((byte) -44);
               }
-              eh.field_e = false;
+              Js5Archive.field_e = false;
               qe.field_k = false;
               continue;
             }
@@ -1235,7 +1235,7 @@ public final class Virogrid extends od {
               continue;
             }
             if (67 == ci.field_q) {
-              var2_intLifetime1Lifetime1 = sh.field_qb.g(11132);
+              var2_intLifetime1Lifetime1 = sh.field_qb.readUnsignedByte(11132);
               var3Lifetime1 = 1 << var2_intLifetime1Lifetime1;
               rn.field_c = rn.field_c | var3Lifetime1;
               this.field_I.a(new hj(var2_intLifetime1Lifetime1), (byte) -61);
@@ -1259,7 +1259,7 @@ public final class Virogrid extends od {
                   wc.field_j = 0;
                   on.field_d = false;
                 }
-                eh.field_e = false;
+                Js5Archive.field_e = false;
                 continue;
               }
               var2 = null;
@@ -1272,47 +1272,47 @@ public final class Virogrid extends od {
               }
               if (var2 != null) {
                 if (ci.field_q == 60) {
-                  var3Lifetime2 = sh.field_qb.g(11132);
-                  var4_int = sh.field_qb.g(11132);
-                  var5 = sh.field_qb.c((byte) -92);
-                  ((ic) (var2)).field_C.a(var3Lifetime2, var4_int, 21428);
-                  if (((ic) (var2)).field_C.field_v == -1) {
-                    ((ic) (var2)).field_C.field_v = var3Lifetime2;
+                  var3Lifetime2 = sh.field_qb.readUnsignedByte(11132);
+                  var4_int = sh.field_qb.readUnsignedByte(11132);
+                  var5 = sh.field_qb.readUnsignedShort((byte) -92);
+                  ((GameSession) (var2)).board.setTurn(var3Lifetime2, var4_int, 21428);
+                  if (((GameSession) (var2)).board.field_v == -1) {
+                    ((GameSession) (var2)).board.field_v = var3Lifetime2;
                   }
-                  ((ic) (var2)).field_C.a(((ic) (var2)).field_A.field_h, ((ic) (var2)).field_C.field_A, (byte) 14);
-                  ((ic) (var2)).field_w = var5 - 50;
-                  if (1 <= ((ic) (var2)).field_w) {
+                  ((GameSession) (var2)).board.a(((GameSession) (var2)).animator.field_h, ((GameSession) (var2)).board.currentPlayer, (byte) 14);
+                  ((GameSession) (var2)).turnTimer = var5 - 50;
+                  if (1 <= ((GameSession) (var2)).turnTimer) {
                     continue;
                   }
-                  ((ic) (var2)).field_w = 1;
+                  ((GameSession) (var2)).turnTimer = 1;
                   continue;
                 }
                 if (ci.field_q == 61) {
-                  var3Lifetime2Lifetime1 = sh.field_qb.g(param0 ^ 11132);
-                  var4_intLifetime2 = sh.field_qb.g(param0 + 11132);
-                  var5Lifetime1 = sh.field_qb.g(param0 ^ 11132);
-                  var6 = sh.field_qb.g(11132);
-                  var7 = sh.field_qb.g(11132);
-                  ((ic) (var2)).field_C.a(var6, var7, (byte) 119, var3Lifetime2Lifetime1, var4_intLifetime2, var5Lifetime1);
-                  ((ic) (var2)).field_A.a(((ic) (var2)).field_g, 31626);
-                  ((ic) (var2)).field_A.field_k = -1;
-                  ((ic) (var2)).field_D = false;
-                  ((ic) (var2)).field_A.field_c = -1;
+                  var3Lifetime2Lifetime1 = sh.field_qb.readUnsignedByte(param0 ^ 11132);
+                  var4_intLifetime2 = sh.field_qb.readUnsignedByte(param0 + 11132);
+                  var5Lifetime1 = sh.field_qb.readUnsignedByte(param0 ^ 11132);
+                  var6 = sh.field_qb.readUnsignedByte(11132);
+                  var7 = sh.field_qb.readUnsignedByte(11132);
+                  ((GameSession) (var2)).board.applyMove(var6, var7, (byte) 119, var3Lifetime2Lifetime1, var4_intLifetime2, var5Lifetime1);
+                  ((GameSession) (var2)).animator.syncWithBoard(((GameSession) (var2)).online, 31626);
+                  ((GameSession) (var2)).animator.selectedColumn = -1;
+                  ((GameSession) (var2)).field_D = false;
+                  ((GameSession) (var2)).animator.selectedRow = -1;
                   continue;
                 }
                 if (ci.field_q == 62) {
-                  var3Lifetime2Lifetime2 = sh.field_qb.a((byte) -72);
-                  ((ic) (var2)).field_C.d(-39, var3Lifetime2Lifetime2);
-                  ((ic) (var2)).field_C.c((int) sh.field_qb.a((byte) -103), 2);
+                  var3Lifetime2Lifetime2 = sh.field_qb.readByte((byte) -72);
+                  ((GameSession) (var2)).board.finishGame(-39, var3Lifetime2Lifetime2);
+                  ((GameSession) (var2)).board.c((int) sh.field_qb.readByte((byte) -103), 2);
                   var4 = var2;
-                  if (((ic) (var4)).field_e != -2) {
-                    ((ic) (var4)).a(false, -1, 22273, false);
+                  if (((GameSession) (var4)).localPlayer != -2) {
+                    ((GameSession) (var4)).a(false, -1, 22273, false);
                   }
-                  ((ic) (var4)).field_n = 0;
+                  ((GameSession) (var4)).field_n = 0;
                   continue;
                 }
                 if (ci.field_q == 63) {
-                  ((ic) (var2)).field_C.field_D = sh.field_qb.g(11132);
+                  ((GameSession) (var2)).board.field_D = sh.field_qb.readUnsignedByte(11132);
                   if (null == vg.field_I) {
                     continue;
                   }
@@ -1320,11 +1320,11 @@ public final class Virogrid extends od {
                   continue;
                 }
                 if (64 == ci.field_q) {
-                  ((ic) (var2)).field_C.field_r = sh.field_qb.g(11132);
+                  ((GameSession) (var2)).board.field_r = sh.field_qb.readUnsignedByte(11132);
                   continue;
                 }
                 if (ci.field_q == 65) {
-                  ((ic) (var2)).field_C.field_b = sh.field_qb.g(param0 ^ 11132);
+                  ((GameSession) (var2)).board.field_b = sh.field_qb.readUnsignedByte(param0 ^ 11132);
                   if (null == vg.field_I) {
                     continue;
                   }
@@ -1332,7 +1332,7 @@ public final class Virogrid extends od {
                   continue;
                 }
                 if (66 == ci.field_q) {
-                  ((ic) (var2)).field_v = sh.field_qb.g(11132);
+                  ((GameSession) (var2)).field_v = sh.field_qb.readUnsignedByte(11132);
                   if (null == vg.field_I) {
                     continue;
                   }
@@ -1344,55 +1344,55 @@ public final class Virogrid extends od {
               continue;
             }
             wm.c((byte) -86);
-            var2_intLifetime1Lifetime2 = sh.field_qb.g(11132);
-            var3Lifetime3 = sh.field_qb.g(11132);
-            stackIn_99_0 = (sh.field_qb.g(11132) == 0) ? 0 : 1;
+            var2_intLifetime1Lifetime2 = sh.field_qb.readUnsignedByte(11132);
+            var3Lifetime3 = sh.field_qb.readUnsignedByte(11132);
+            stackIn_99_0 = (sh.field_qb.readUnsignedByte(11132) == 0) ? 0 : 1;
             var4_intLifetime1 = stackIn_99_0;
             var5_ref_String__ = new String[2];
             for (var7Lifetime1 = 0; var5_ref_String__.length > var7Lifetime1; var7Lifetime1++) {
               var5_ref_String__[var7Lifetime1] = sh.field_qb.i(15070);
             }
             var6Lifetime1 = -2;
-            var6Lifetime2 = sh.field_qb.a((byte) 62);
+            var6Lifetime2 = sh.field_qb.readByte((byte) 62);
             var6Lifetime2 = var6Lifetime2 - (var6Lifetime2 >>> 31);
-            var7_ref_ic = new ic(true, var2_intLifetime1Lifetime2, var5_ref_String__, var6Lifetime2, var4_intLifetime1 != 0, var3Lifetime3, 0);
-            var7_ref_ic.field_C.a(sh.field_qb, (byte) 57);
-            var7_ref_ic.field_A.a(false);
+            var7_ref_ic = new GameSession(true, var2_intLifetime1Lifetime2, var5_ref_String__, var6Lifetime2, var4_intLifetime1 != 0, var3Lifetime3, 0);
+            var7_ref_ic.board.readCells(sh.field_qb, (byte) 57);
+            var7_ref_ic.animator.resetToBoard(false);
             if (ci.field_q != 57) {
               ei.field_b = var7_ref_ic;
               on.field_d = true;
-              var8 = var7_ref_ic.field_C.field_c[0];
-              var9 = var7_ref_ic.field_C.field_c[1];
-              var14 = oi.a(new String[]{var8, var9}, lm.field_k, 2);
-              gf.a(mi.field_d, 0, false, var14, 1, var7_ref_ic.field_C.field_c[0]);
+              var8 = var7_ref_ic.board.playerNames[0];
+              var9 = var7_ref_ic.board.playerNames[1];
+              var14 = oi.a(new String[]{var8, var9}, lm.textPlayers, 2);
+              gf.a(mi.field_d, 0, false, var14, 1, var7_ref_ic.board.playerNames[0]);
             } else {
               dd.field_a = true;
               vg.field_I = var7_ref_ic;
               if (var7_ref_ic.field_t) {
-                var8 = var7_ref_ic.field_C.field_c[0];
+                var8 = var7_ref_ic.board.playerNames[0];
                 var9_int = 0;
-                while (jc.a(var8, true)) {
+                while (PacketBuffer.a(var8, true)) {
                   var9_int++;
-                  var8 = var7_ref_ic.field_C.field_c[var9_int];
+                  var8 = var7_ref_ic.board.playerNames[var9_int];
                 }
-                var12 = oi.a(new String[]{var8}, pc.field_e, 2);
-                gf.a(mi.field_d, 0, false, var12, 1, var7_ref_ic.field_C.field_c[0]);
+                var12 = oi.a(new String[]{var8}, pc.textOpponent, 2);
+                gf.a(mi.field_d, 0, false, var12, 1, var7_ref_ic.board.playerNames[0]);
               }
               array$1 = new String[1];
               stackIn_112_0 = array$1;
               stackIn_112_1 = array$1;
               stackIn_112_2 = 0;
               if (var6Lifetime2 != 0) {
-                stackIn_113_3 = pb.field_k;
+                stackIn_113_3 = pb.textColourWhite;
               } else {
-                stackIn_113_3 = uk.field_g;
+                stackIn_113_3 = GameApplet.textColourBlue;
               }
               stackIn_112_1[stackIn_112_2] = stackIn_113_3;
-              var13 = oi.a(stackIn_112_0, rf.field_f, 2);
-              gf.a(mi.field_d, 0, false, var13, 1, var7_ref_ic.field_C.field_c[0]);
+              var13 = oi.a(stackIn_112_0, rf.textYourcolour, 2);
+              gf.a(mi.field_d, 0, false, var13, 1, var7_ref_ic.board.playerNames[0]);
             }
             lj.b(122);
-            eh.field_e = false;
+            Js5Archive.field_e = false;
             vm.field_e = true;
             hm.field_c = -1;
           }
@@ -1411,7 +1411,7 @@ public final class Virogrid extends od {
         }
     }
 
-    private final int[] a(byte param0, qb param1) {
+    private final int[] a(byte param0, Model param1) {
         RuntimeException var3 = null;
         int[] stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -1537,7 +1537,7 @@ public final class Virogrid extends od {
           }
           boolean decompiledFrameRemainder0 = true;
           if (var2_int != 0) {
-            df.b(0, 0, 640, 480, 3158064);
+            Rasterizer.b(0, 0, 640, 480, 3158064);
             this.e((byte) -62);
             pc.a(mk.field_bb, (byte) -86);
             si.a(nk.field_K, new double[]{-110.0, 26.0, -410.0}, new double[]{-1.0, 0.0, 0.0}, 64.0, 114.0, mk.field_bb, 2621440, 10420224, 10485760, 26148864, ke.field_p.field_k);
@@ -1571,13 +1571,13 @@ public final class Virogrid extends od {
               da.field_k[0] = vm.field_d[0];
               qc.a(118);
               vb.field_l.b();
-              df.b(0, 0, 640, 480, 0);
+              Rasterizer.b(0, 0, 640, 480, 0);
               kg.field_c.a(pe.field_j, bi.field_c);
               nb.field_x.a(pe.field_j, bi.field_c);
               kf.field_c.a(pe.field_j, bi.field_c);
               cm.field_k.a(pe.field_j, bi.field_c);
               ba.field_c.a(pe.field_j, bi.field_c);
-              wf.field_j.a(pe.field_j, bi.field_c);
+              RasterBuffer.field_j.a(pe.field_j, bi.field_c);
               fl.field_s.a(pe.field_j, bi.field_c);
               if (var4Lifetime2 == 0) {
                 th.field_y.a(var23, this.field_J);
@@ -1695,7 +1695,7 @@ public final class Virogrid extends od {
               var14 = var7Lifetime3 * pe.field_j[8] + var12Lifetime2 * pe.field_j[7] + pe.field_j[6] * var11Lifetime1;
               var7Lifetime3Lifetime1 = var15 >> 22;
               if (var15 > 0) {
-                df.a((j.field_b << 4) + (var13 >> 9) / var7Lifetime3Lifetime1, (var14 >> 9) / var7Lifetime3Lifetime1 + (tm.field_g << 4), 16384 / var7Lifetime3Lifetime1, var16_ref.field_o * 5 / 3, pj.field_d);
+                Rasterizer.a((j.field_b << 4) + (var13 >> 9) / var7Lifetime3Lifetime1, (var14 >> 9) / var7Lifetime3Lifetime1 + (tm.field_g << 4), 16384 / var7Lifetime3Lifetime1, var16_ref.field_o * 5 / 3, pj.field_d);
               }
               var16_ref = (fl) (sh.field_tb.a(16213));
             }
@@ -1799,7 +1799,7 @@ public final class Virogrid extends od {
                     var3_int = 1;
                     var4 = 1;
                   } else {
-                    vg.field_I.a(-104, true);
+                    vg.field_I.tick(-104, true);
                     while (nd.b((byte) -107)) {
                       vg.field_I.d(117);
                     }
@@ -1816,13 +1816,13 @@ public final class Virogrid extends od {
             }
             if (aj.field_a &&
               !qe.field_k &&
-              !eh.field_e) {
+              !Js5Archive.field_e) {
               bc.a(var3_int != 0, (byte) -120);
               if (on.field_d) {
-                ei.field_b.a(-103, var4 != 0);
+                ei.field_b.tick(-103, var4 != 0);
               }
               if (dd.field_a) {
-                vg.field_I.a(-111, var4 != 0);
+                vg.field_I.tick(-111, var4 != 0);
               }
               while (nd.b((byte) -111)) {
                 if (bl.field_B) {
@@ -1887,7 +1887,7 @@ public final class Virogrid extends od {
                   wn.c(param0);
                   if (a.field_D) {
                     a.field_D = false;
-                    ic.a(ib.field_b, hd.field_b.field_A, 320, ib.field_b, 8, mc.field_b, 2, hd.field_b.field_G + hd.field_b.field_A, 8, -16824, false, 240);
+                    GameSession.a(ib.frameSprites, hd.standardFont.field_A, 320, ib.frameSprites, 8, mc.menuFont, 2, hd.standardFont.field_G + hd.standardFont.field_A, 8, -16824, false, 240);
                   }
                   if (bj.field_n) {
                     var3_int = bd.field_e;
@@ -1909,8 +1909,8 @@ public final class Virogrid extends od {
             }
           }
           if (-3 == hm.field_c) {
-            var8 = new String[]{mb.field_eb, em.field_e};
-            vg.field_I = new ic(false, eg.field_y, var8, 0, false, ll.field_b, ce.field_I);
+            var8 = new String[]{mb.playernameHotseat1, em.playernameHotseat2};
+            vg.field_I = new GameSession(false, eg.field_y, var8, 0, false, ll.field_b, ce.field_I);
             lj.b(101);
             stackIn_106_0 = (!pn.field_x) ? 0 : 1;
             var4Lifetime1 = stackIn_106_0;
@@ -1924,15 +1924,15 @@ public final class Virogrid extends od {
           }
           if (-5 == hm.field_c) {
             nn.a(wl.field_d.e((byte) -124), 11, (byte) -120);
-            eh.field_e = true;
+            Js5Archive.field_e = true;
             hm.field_c = i.field_y;
           }
           oj.e((byte) -75);
           if (db.b((byte) 13, 0)) {
             if (vg.field_I != null &&
-              vg.field_I.field_g &&
+              vg.field_I.online &&
               vg.field_I.field_t &&
-              vg.field_I.field_C.field_u > sh.a(4712, 40000) &&
+              vg.field_I.board.turnCount > sh.a(4712, 40000) &&
               !vg.field_I.field_l) {
               vg.field_I.field_l = true;
               hj.field_h = id.field_c;
@@ -1969,20 +1969,20 @@ public final class Virogrid extends od {
         }
     }
 
-    private final mg b(int param0, int param1, int param2) {
+    private final Sprite b(int param0, int param1, int param2) {
         int var5 = 0;
-        mg var4 = null;
+        Sprite var4 = null;
         int var6 = 0;
-        mg stackIn_8_0 = null;
+        Sprite stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         var6 = field_F ? 1 : 0;
         try {
-          var4 = new mg(57, 57);
+          var4 = new Sprite(57, 57);
           pj.a(var4, 256);
-          df.c(29, 29, 27, 263172);
+          Rasterizer.c(29, 29, 27, 263172);
           for (var5 = 23; var5 >= 0; var5--) {
-            df.c(29, 29, var5, param2 + var5 * param0);
+            Rasterizer.c(29, 29, var5, param2 + var5 * param0);
           }
           ul.b((byte) 93);
           if (param1 != -9105) {
@@ -1997,9 +1997,9 @@ public final class Virogrid extends od {
         }
     }
 
-    final static void a(eh param0, byte param1) {
+    final static void a(Js5Archive param0, byte param1) {
         RuntimeException runtimeException = null;
-        mg var2 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -2008,15 +2008,15 @@ public final class Virogrid extends od {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new mg(param0.a("final_frame.jpg", 100, ""), (java.awt.Component) ((Object) fi.field_v));
+          var2 = new Sprite(param0.a("final_frame.jpg", 100, ""), (java.awt.Component) ((Object) UiWidget.field_v));
           var3 = var2.field_w;
           var4 = var2.field_p;
           lm.a(0);
           var5 = 120 / ((33 - param1) / 33);
-          nd.field_d = new mg(var3, 3 * var4 / 4);
+          nd.field_d = new Sprite(var3, 3 * var4 / 4);
           nd.field_d.b();
           var2.b(0, 0);
-          dn.field_c = new mg(var3, -nd.field_d.field_p + var4);
+          dn.field_c = new Sprite(var3, -nd.field_d.field_p + var4);
           dn.field_c.b();
           var2.b(0, -nd.field_d.field_p);
           dn.field_c.field_x = nd.field_d.field_p;
@@ -2036,23 +2036,23 @@ public final class Virogrid extends od {
         }
     }
 
-    private final void t(int param0) {
+    private final void openArchives(int param0) {
         try {
           if (null != uh.field_e) {
             a.a(20, uh.field_e);
             uh.field_e = null;
             sb.a(-52);
           }
-          md.field_h = p.a(83, 3);
-          oj.field_Fb = p.a(117, 5);
-          g.field_a = p.a(98, 6);
-          pj.field_c = p.a(89, 7);
-          sf.field_O = p.a(param0 ^ 35, 8);
-          el.field_d = p.a(64, 9);
-          wm.field_w = p.a(97, 10);
-          wn.field_i = p.a(33, 11);
-          gn.field_G = p.a(param0 ^ 51, 12);
-          ng.field_T = p.a(81, param0);
+          md.field_h = IntrusiveDeque.a(83, 3);
+          oj.field_Fb = IntrusiveDeque.a(117, 5);
+          g.field_a = IntrusiveDeque.a(98, 6);
+          pj.field_c = IntrusiveDeque.a(89, 7);
+          sf.field_O = IntrusiveDeque.a(param0 ^ 35, 8);
+          BufferedSocket.field_d = IntrusiveDeque.a(64, 9);
+          wm.field_w = IntrusiveDeque.a(97, 10);
+          wn.field_i = IntrusiveDeque.a(33, 11);
+          gn.field_G = IntrusiveDeque.a(param0 ^ 51, 12);
+          ng.field_T = IntrusiveDeque.a(81, param0);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "Virogrid.AB(" + param0 + ')');
         }
@@ -2078,34 +2078,34 @@ public final class Virogrid extends od {
         }
     }
 
-    final void d(int param0) {
+    final void shutdown(int param0) {
         int var3 = field_F ? 1 : 0;
         try {
           Virogrid.u(240);
           hj.a(17);
-          l.b(-6325);
-          p.c(param0 - 32);
+          IntrusiveNode.b(-6325);
+          IntrusiveDeque.c(param0 - 32);
           ud.a((byte) -94);
           fj.a((byte) -99);
           rh.b(param0 ^ 57);
           bn.a((byte) -118);
           rk.a(-97);
-          ld.a((byte) -110);
+          GameKeyHandler.a((byte) -110);
           cg.a(-65);
           nf.a(-28637);
           wd.a(param0 ^ -8518);
           em.a(-85);
           od.d(false);
           rg.a(param0 ^ 64);
-          uk.b(param0 - 6490);
+          GameApplet.b(param0 - 6490);
           og.b(param0 + 74);
-          me.a(param0 + 0);
-          cb.b(3981);
-          df.a();
-          eh.a((byte) -104);
+          MouseInputHandler.a(param0 + 0);
+          MouseWheelInput.b(3981);
+          Rasterizer.a();
+          Js5Archive.a((byte) -104);
           e.a();
           ak.a(4472);
-          jc.b((byte) 110);
+          PacketBuffer.b((byte) 110);
           hc.a(true);
           se.a((byte) 79);
           rb.a((byte) -13);
@@ -2118,7 +2118,7 @@ public final class Virogrid extends od {
           cj.a(-99);
           nm.a(26523);
           hm.b(param0 ^ -126);
-          wf.a(param0 ^ -28608);
+          RasterBuffer.a(param0 ^ -28608);
           qc.a((byte) 9);
           h.a(true);
           li.b((byte) 112);
@@ -2127,16 +2127,16 @@ public final class Virogrid extends od {
           sb.b(-851125662);
           ha.a(param0 + 79);
           nh.a(false);
-          el.d(-127);
+          BufferedSocket.d(-127);
           oi.c(122);
-          ic.b(23320);
+          GameSession.b(23320);
           pi.a(param0 ^ -29216);
           il.a();
-          qb.b();
-          uf.a(98);
+          Model.b();
+          GameBoard.a(98);
           ee.b((byte) 119);
-          rl.d(0);
-          wb.c(true);
+          SpriteState.d(0);
+          DualLinkNode.c(true);
           bd.a(95);
           tn.f(param0 + 31);
           ke.d(-51);
@@ -2149,7 +2149,7 @@ public final class Virogrid extends od {
           gi.a((byte) -103);
           en.g(0);
           qm.j(124);
-          km.f(param0 + 2147483647);
+          SpriteWidget.f(param0 + 2147483647);
           ga.i(param0 ^ -91);
           ao.g(-119);
           dj.a(false);
@@ -2207,7 +2207,7 @@ public final class Virogrid extends od {
           hg.f((byte) 103);
           mm.a(false);
           dd.b((byte) -58);
-          m.b(-314);
+          CellAnimator.b(-314);
           ia.a(44);
           ab.e(-16349);
           va.a(-91);
@@ -2254,13 +2254,13 @@ public final class Virogrid extends od {
           ql.a((byte) -87);
           rj.a(6);
           ie.b(0);
-          fi.c(false);
+          UiWidget.c(false);
           tg.a((byte) -78);
           ec.a(param0 - 3298);
           dc.h(-126);
           gg.g(-1);
-          fd.e(1);
-          ma.d(param0 ^ 0);
+          WidgetContainer.e(1);
+          IntrusiveDequeCursor.d(param0 ^ 0);
           jk.a((byte) 110);
           nj.b();
           tk.a(0);
@@ -2276,12 +2276,12 @@ public final class Virogrid extends od {
           rn.a((byte) -38);
           te.a((byte) 126);
           mf.f(-93);
-          gd.b((byte) 104);
+          ImageProducerRasterBuffer.b((byte) 104);
           ug.a(-97);
           ch.a(0);
           hl.a();
           sg.d(-2);
-          fm.a((byte) -54);
+          WhirlpoolDigest.a((byte) -54);
           hd.a(3881);
           d.e((byte) -73);
           fe.h(32498);
@@ -2352,7 +2352,7 @@ public final class Virogrid extends od {
           re.b(-120);
           vi.b(param0 + 31856);
           bi.a(46);
-          fb.a((byte) 21);
+          CellFlip.a((byte) 21);
           ra.a(false);
           tm.a(-74);
           da.a(param0 ^ 8355711);
@@ -2388,10 +2388,10 @@ public final class Virogrid extends od {
         }
     }
 
-    private final void a(qb param0, byte param1) {
+    private final void a(Model param0, byte param1) {
         int[] discarded$1 = null;
         RuntimeException runtimeException = null;
-        qb var4 = null;
+        Model var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -2399,8 +2399,8 @@ public final class Virogrid extends od {
         try {
           param0.a(0, 154, 0);
           if (param1 != 69) {
-            var4 = (qb) null;
-            discarded$1 = this.a((byte) -76, (qb) null);
+            var4 = (Model) null;
+            discarded$1 = this.a((byte) -76, (Model) null);
           }
           param0.a(256, 256, 256, 32);
           param0.a(0, -154, 0);
@@ -2420,7 +2420,7 @@ public final class Virogrid extends od {
     }
 
     public Virogrid() {
-        this.field_I = new p();
+        this.field_I = new IntrusiveDeque();
         this.field_A = 0;
     }
 
