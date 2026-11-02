@@ -32,8 +32,8 @@ final class po extends Human {
             }
             var4 = param0.worldToScreenX(this.field_jb[var3_int], (byte) -78);
             var5 = param0.worldToScreenY(this.field_gb[var3_int], param1 ^ 5060);
-            Rasterizer.b(-1 + var4, var5 - 1, 3, 3, 0);
-            Rasterizer.a(var4, var5, 65280);
+            Rasterizer.fillRect(-1 + var4, var5 - 1, 3, 3, 0);
+            Rasterizer.setPixel(var4, var5, 65280);
             var3_int++;
           } while (var6 == 0);
           if (null != this.field_yb) {

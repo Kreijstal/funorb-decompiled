@@ -464,7 +464,7 @@ abstract class Human extends Mover {
                 this.state != 11) {
                 if (3 != this.field_S &&
                   this.field_S != 2) {
-                  ld.field_l[this.field_t][var5Lifetime1].c(var3_int, var4);
+                  ld.field_l[this.field_t][var5Lifetime1].drawMirrored(var3_int, var4);
                 } else {
                   ld.field_l[this.field_t][var5Lifetime1].b(var3_int, var4);
                 }
@@ -479,7 +479,7 @@ abstract class Human extends Mover {
                       ld.field_l[this.field_t][var5Lifetime1].b(var3_int, var4);
                     } else {
                       if (this.field_S == 1) {
-                        ld.field_l[this.field_t][var5Lifetime1].c(var3_int, var4);
+                        ld.field_l[this.field_t][var5Lifetime1].drawMirrored(var3_int, var4);
                       }
                     }
                   }

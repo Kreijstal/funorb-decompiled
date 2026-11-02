@@ -108,7 +108,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         }
         try {
           var5.writeCrc32(-69, var4);
-          var5.d(-60, -var4 + var5.position);
+          var5.writeLengthPrefixByte(-60, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ag.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -117,7 +117,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     public final Object next() {
         Object var1 = this.field_g;
         if (this.field_f.field_c != var1) {
-          this.field_g = ((DualLinkNode) (var1)).field_i;
+          this.field_g = ((DualLinkNode) (var1)).secondaryNext;
         } else {
           this.field_g = null;
           var1 = null;
@@ -131,7 +131,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         try {
           this.field_f = param0;
           this.field_d = null;
-          this.field_g = this.field_f.field_c.field_i;
+          this.field_g = this.field_f.field_c.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -141,7 +141,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (null == this.field_d) {
           throw new IllegalStateException();
         }
-        this.field_d.c((byte) -9);
+        this.field_d.unlinkSecondary((byte) -9);
         this.field_d = null;
     }
 

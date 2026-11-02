@@ -193,7 +193,7 @@ final class om extends w {
               var22++;
               var21++;
             }
-            var17.e(var8_int, var9);
+            var17.drawWithOffsets(var8_int, var9);
             return;
           }
           return;

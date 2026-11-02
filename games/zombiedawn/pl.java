@@ -108,7 +108,7 @@ final class pl extends al {
         RuntimeException var3 = null;
         try {
           i.field_T = new Sprite(640, 341);
-          i.field_T.a();
+          i.field_T.setAsRenderTarget();
           if (param1 != -257) {
             return;
           }
@@ -156,7 +156,7 @@ final class pl extends al {
           if (b.field_q == param2 &&
             !this.field_b.field_j) {
             if (ki.field_X[param2] != -1) {
-              af.field_d.c(ki.field_X[param2], no.field_G[param2] + param1);
+              af.field_d.drawMirrored(ki.field_X[param2], no.field_G[param2] + param1);
             }
             if (cj.field_c[param2] != -1 &&
               this.b(param2 + 3, -1, 16777215)) {
@@ -733,15 +733,15 @@ final class pl extends al {
           var7 = 13421721;
           var8 = 10079351;
           var9 = 16777215;
-          i.field_T.e(param1, param2);
+          i.field_T.drawWithOffsets(param1, param2);
           var10 = 1;
           Rasterizer.a(param1 + qo.field_s, 35 + param2, bm.field_c, 280, 0, 128);
           if (nc.field_k.field_r >= bm.field_c) {
             nc.field_k.b(param1 + 195, 30 + param2);
           } else {
-            Rasterizer.f(0, 0, 320 + param1, nh.field_P);
+            Rasterizer.setClip(0, 0, 320 + param1, nh.field_P);
             nc.field_k.b(qo.field_s + param1, 30 + param2);
-            Rasterizer.f(320 + param1, 0, bd.field_e, nh.field_P);
+            Rasterizer.setClip(320 + param1, 0, bd.field_e, nh.field_P);
             nc.field_k.b(param1 - (-j.field_d + nc.field_k.field_r), 30 + param2);
             Rasterizer.resetClip();
           }
@@ -846,7 +846,7 @@ final class pl extends al {
             }
             rg.field_F = IterableNodeHashTable.field_b;
             this.f(-1, -257);
-            i.field_T.a();
+            i.field_T.setAsRenderTarget();
             Rasterizer.h(3, 3, 0, 0, 640, 341);
             cn.field_f.b(-128);
             ce.field_p = 0;

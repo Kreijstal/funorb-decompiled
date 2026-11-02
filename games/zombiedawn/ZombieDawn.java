@@ -115,7 +115,7 @@ public final class ZombieDawn extends GameLoopApplet {
           Mover.$cfr$intArgs$a$3aedf8649552(var9, 99, var11, var12, var10);
           if (bd.field_e == 640 &&
             480 == nh.field_P) {
-            qk.field_Hb[0].e(0, 0);
+            qk.field_Hb[0].drawWithOffsets(0, 0);
             qk.field_Hb[0].b(0, 0, 256);
           } else {
             var13 = bd.field_e / 128;
@@ -123,22 +123,22 @@ public final class ZombieDawn extends GameLoopApplet {
             qk.field_Hb[0].a(-var13, -var14, 2 * var13 + bd.field_e, var14 * 2 + nh.field_P);
             qk.field_Hb[0].b(-var13, -var14, bd.field_e + 2 * var13, var14 * 2 + nh.field_P, 150);
           }
-          Rasterizer.f(var10, var9, var8, var7);
+          Rasterizer.setClip(var10, var9, var8, var7);
           pf.field_f.b(var10, var9);
-          Rasterizer.f(var8, var9, var11, var7);
+          Rasterizer.setClip(var8, var9, var11, var7);
           pf.field_f.b(-pf.field_f.field_w + var11, var9);
-          Rasterizer.f(var10, var7, var8, var12);
+          Rasterizer.setClip(var10, var7, var8, var12);
           pf.field_f.b(var10, -pf.field_f.field_t + var12);
-          Rasterizer.f(var8, var7, var11, var12);
+          Rasterizer.setClip(var8, var7, var11, var12);
           pf.field_f.b(var11 - pf.field_f.field_w, -pf.field_f.field_t + var12);
-          Rasterizer.f(var10, var9, var11, var12);
+          Rasterizer.setClip(var10, var9, var11, var12);
           ((Font) ((Object) var2_ref)).a(var4_ref_String, bd.field_d, nh.field_G, 2, -1);
           var13Lifetime1 = (int)(oj.field_d.field_b * (float)var3 / 100.0f);
-          Rasterizer.b(var8 - var3 / 2, 10 + var7, var3, 12, 0);
-          Rasterizer.f(-(var3 / 2) + var8, var7 + 10, var8 + (-(var3 / 2) + var13Lifetime1), var7 + 22);
+          Rasterizer.fillRect(var8 - var3 / 2, 10 + var7, var3, 12, 0);
+          Rasterizer.setClip(-(var3 / 2) + var8, var7 + 10, var8 + (-(var3 / 2) + var13Lifetime1), var7 + 22);
           if (bd.field_e == 640 &&
             480 == nh.field_P) {
-            qk.field_Hb[3].e(0, 0);
+            qk.field_Hb[3].drawWithOffsets(0, 0);
             qk.field_Hb[3].b(0, 0, 150);
           } else {
             var14Lifetime1 = bd.field_e / 128;
@@ -146,7 +146,7 @@ public final class ZombieDawn extends GameLoopApplet {
             qk.field_Hb[3].a(-var14Lifetime1, -var15, var14Lifetime1 * 2 + bd.field_e, 2 * var15 + nh.field_P);
             qk.field_Hb[3].b(-var14Lifetime1, -var15, 2 * var14Lifetime1 + bd.field_e, 2 * var15 + nh.field_P, 150);
           }
-          Rasterizer.c(-(var3 / 2) + var8, var7 + 10, var3, 12, 4458504);
+          Rasterizer.drawRectOutline(-(var3 / 2) + var8, var7 + 10, var3, 12, 4458504);
           pa.a(param0 ^ 26807);
           decompiledFrameRemainder0 = false;
         }

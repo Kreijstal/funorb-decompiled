@@ -42,7 +42,7 @@ final class da extends IntrusiveNode {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             dn.a(var1, 84);
-            dp.field_e.d(-128, var1.position - var2);
+            dp.field_e.writeLengthPrefixByte(-128, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

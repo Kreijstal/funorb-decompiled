@@ -6,7 +6,7 @@ import java.io.*;
 final class PlatformTaskDispatcher implements Runnable {
     qn[] field_q;
     java.awt.EventQueue field_x;
-    private op field_a;
+    private AsyncRequest field_a;
     private Object field_l;
     private boolean field_w;
     private Thread field_f;
@@ -23,7 +23,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private boolean field_u;
     boolean field_t;
     private static String field_p;
-    private op field_k;
+    private AsyncRequest field_k;
     private static String field_s;
     static String field_g;
     qn field_e;
@@ -42,8 +42,8 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.field_o != null ? true : false;
     }
 
-    final op a(int param0, int param1, int param2, int param3, int param4) {
-        op discarded$0 = null;
+    final AsyncRequest a(int param0, int param1, int param2, int param3, int param4) {
+        AsyncRequest discarded$0 = null;
         if (param1 != 1525233840) {
           String var7 = (String) null;
           discarded$0 = this.a((String) null, -122, true, 56);
@@ -51,32 +51,32 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.a((byte) 61, (param4 << 16) + param2, 6, (param0 << 16) + param3, (Object) null);
     }
 
-    final op a(java.awt.Frame param0, byte param1) {
+    final AsyncRequest requestFrame(java.awt.Frame param0, byte param1) {
         if (param1 <= 4) {
-          return (op) null;
+          return (AsyncRequest) null;
         }
         return this.a((byte) 61, 0, 7, 0, param0);
     }
 
-    final op a(int param0, java.net.URL param1) {
+    final AsyncRequest openUrlStream(int param0, java.net.URL param1) {
         if (param0 != 7645) {
-          return (op) null;
+          return (AsyncRequest) null;
         }
         return this.a((byte) 61, 0, 4, 0, param1);
     }
 
-    final op a(int param0) {
+    final AsyncRequest a(int param0) {
         if (param0 != -1) {
-          return (op) null;
+          return (AsyncRequest) null;
         }
         return this.a((byte) 61, 0, 5, 0, (Object) null);
     }
 
-    private final op a(byte param0, int param1, int param2, int param3, Object param4) {
-        op var6 = null;
+    private final AsyncRequest a(byte param0, int param1, int param2, int param3, Object param4) {
+        AsyncRequest var6 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
-        var6 = new op();
+        var6 = new AsyncRequest();
         if (param0 != 61) {
           this.field_x = (java.awt.EventQueue) null;
         }
@@ -115,7 +115,7 @@ final class PlatformTaskDispatcher implements Runnable {
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
-          op var8 = null;
+          AsyncRequest var8 = null;
           String var9 = null;
           java.awt.Frame var10 = null;
           java.awt.Component var11 = null;
@@ -160,7 +160,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var18.setDaemon(true);
                     var18.start();
                     var18.setPriority(var8.field_g);
-                    var8.field_d = var18;
+                    var8.result = var18;
                     break;
                   case 8:
                     var17 = (Object[]) (var8.field_e);
@@ -168,7 +168,7 @@ final class PlatformTaskDispatcher implements Runnable {
                       ((Class) (var17[0])).getClassLoader() == null) {
                       throw new SecurityException();
                     }
-                    var8.field_d = ((Class) (var17[0])).getDeclaredMethod((String) (var17[1]), (Class[]) (var17[2]));
+                    var8.result = ((Class) (var17[0])).getDeclaredMethod((String) (var17[1]), (Class[]) (var17[2]));
                     break;
                   case 9:
                     var16 = (Object[]) (var8.field_e);
@@ -176,11 +176,11 @@ final class PlatformTaskDispatcher implements Runnable {
                       null == ((Class) (var16[0])).getClassLoader()) {
                       throw new SecurityException();
                     }
-                    var8.field_d = ((Class) (var16[0])).getDeclaredField((String) (var16[1]));
+                    var8.result = ((Class) (var16[0])).getDeclaredField((String) (var16[1]));
                     break;
                   case 18:
                     var15 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
-                    var8.field_d = var15.getContents((Object) null);
+                    var8.result = var15.getContents((Object) null);
                     break;
                   case 19:
                     var7 = (java.awt.datatransfer.Transferable) (var8.field_e);
@@ -202,7 +202,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         break;
                       case 13:
                         var3_ref = PlatformTaskDispatcher.a((String) (var8.field_e), (byte) -44, field_c, "");
-                        var8.field_d = var3_ref;
+                        var8.result = var3_ref;
                         break;
                       case 16:
                       default:
@@ -253,22 +253,22 @@ final class PlatformTaskDispatcher implements Runnable {
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var12 + "\"");
-                            var8.field_d = null;
+                            var8.result = null;
                           } catch (java.lang.Exception decompiledCaughtParameter1) {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref2 = (Exception) (Object) decompiledCaughtException;
-                            var8.field_d = var3_ref2;
+                            var8.result = var3_ref2;
                             throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
                           }
                         }
                         break;
                       case 12:
                         var3_ref = PlatformTaskDispatcher.a((String) (var8.field_e), (byte) -44, field_c, field_s);
-                        var8.field_d = var3_ref;
+                        var8.result = var3_ref;
                         break;
                       case 6:
                         var10 = new java.awt.Frame("Jagex Full Screen");
-                        var8.field_d = var10;
+                        var8.result = var10;
                         var10.setResizable(false);
                         if (!this.field_u) {
                           Class.forName("bk").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_o, new Object[]{var10, new Integer(var8.field_g >>> 16), new Integer(65535 & var8.field_g), new Integer(var8.field_c >> 16), new Integer(65535 & var8.field_c)});
@@ -278,23 +278,23 @@ final class PlatformTaskDispatcher implements Runnable {
                         break;
                       case 5:
                         if (!this.field_u) {
-                          var8.field_d = Class.forName("bk").getMethod("listmodes", new Class[]{}).invoke(this.field_o, new Object[]{});
+                          var8.result = Class.forName("bk").getMethod("listmodes", new Class[]{}).invoke(this.field_o, new Object[]{});
                         } else {
-                          var8.field_d = this.field_m.a(8);
+                          var8.result = this.field_m.a(8);
                         }
                         break;
                       case 21:
                         if (pd.a(-22826) < field_j) {
                           throw new IOException();
                         }
-                        var8.field_d = java.net.InetAddress.getByName((String) (var8.field_e)).getAddress();
+                        var8.result = java.net.InetAddress.getByName((String) (var8.field_e)).getAddress();
                         break;
                       case 3:
                         if (pd.a(-22826) < field_j) {
                           throw new IOException();
                         }
                         var9 = (255 & var8.field_g >> 24) + "." + (255 & var8.field_g >> 16) + "." + ((65496 & var8.field_g) >> 8) + "." + (255 & var8.field_g);
-                        var8.field_d = java.net.InetAddress.getByName(var9).getHostName();
+                        var8.result = java.net.InetAddress.getByName(var9).getHostName();
                         break;
                     }
                     break;
@@ -302,7 +302,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     if (pd.a(-22826) < field_j) {
                       throw new IOException();
                     }
-                    var8.field_d = new DataInputStream(((java.net.URL) (var8.field_e)).openStream());
+                    var8.result = new DataInputStream(((java.net.URL) (var8.field_e)).openStream());
                     break;
                   case 22:
                     if (field_j > pd.a(-22826)) {
@@ -310,11 +310,11 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (dg) null;
-                      var8.field_d = ud.a((String) (var8.field_e), (byte) 68, var8.field_g).a(false);
+                      var8.result = ud.a((String) (var8.field_e), (byte) 68, var8.field_g).a(false);
                     } catch (dg decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (dg) (Object) decompiledCaughtException;
-                      var8.field_d = var3_ref3.getMessage();
+                      var8.result = var3_ref3.getMessage();
                       throw var3_ref3;
                     }
                     break;
@@ -322,11 +322,11 @@ final class PlatformTaskDispatcher implements Runnable {
                     if (field_j > pd.a(-22826)) {
                       throw new IOException();
                     }
-                    var8.field_d = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_e)), var8.field_g);
+                    var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_e)), var8.field_g);
                     break;
                 }
               }
-              var8.field_f = 1;
+              var8.status = 1;
             } catch (java.lang.ThreadDeath decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               var2_ref = (ThreadDeath) (Object) decompiledCaughtException;
@@ -334,7 +334,7 @@ final class PlatformTaskDispatcher implements Runnable {
             } catch (java.lang.Throwable decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = decompiledCaughtException;
-              var8.field_f = 2;
+              var8.status = 2;
             }
             var2 = var8;
             synchronized (var2) {
@@ -348,8 +348,8 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final op a(int param0, String param1, int param2) {
-        op discarded$0 = null;
+    final AsyncRequest connectSocket(int param0, String param1, int param2) {
+        AsyncRequest discarded$0 = null;
         if (param0 != 2) {
           String var5 = (String) null;
           discarded$0 = this.a((String) null, 28, true, -32);
@@ -357,15 +357,15 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.a(param1, param2, false, -124);
     }
 
-    final op a(byte param0, String param1, Class param2) {
+    final AsyncRequest a(byte param0, String param1, Class param2) {
         if (param0 != -113) {
           Runnable var5 = (Runnable) null;
-          this.a(50, (Runnable) null, false);
+          this.startThread(50, (Runnable) null, false);
         }
         return this.a((byte) 61, 0, 9, 0, new Object[]{param2, param1});
     }
 
-    private final op a(String param0, int param1, boolean param2, int param3) {
+    private final AsyncRequest a(String param0, int param1, boolean param2, int param3) {
         int var5 = 28 / ((param3 + 56) / 58);
         return this.a((byte) 61, param1, !param2 ? 1 : 22, 0, param0);
     }
@@ -482,7 +482,7 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final op a(Class[] param0, Class param1, int param2, String param3) {
+    final AsyncRequest a(Class[] param0, Class param1, int param2, String param3) {
         if (param2 != 255) {
           this.field_q = (qn[]) null;
         }
@@ -618,10 +618,10 @@ final class PlatformTaskDispatcher implements Runnable {
         this.field_f.start();
     }
 
-    final op a(int param0, Runnable param1, boolean param2) {
+    final AsyncRequest startThread(int param0, Runnable param1, boolean param2) {
         if (!param2) {
           String var5 = (String) null;
-          this.a(-51, (String) null, -36);
+          this.connectSocket(-51, (String) null, -36);
         }
         return this.a((byte) 61, param0, 2, 0, param1);
     }

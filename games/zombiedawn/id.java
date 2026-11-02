@@ -80,7 +80,7 @@ class id extends WorldObject {
                 tm.field_h[this.field_F].f(var3_int, var4);
               }
             } else {
-              tm.field_h[this.field_F].c(var3_int, var4);
+              tm.field_h[this.field_F].drawMirrored(var3_int, var4);
             }
             if (this.field_O) {
               if (!this.field_P) {
@@ -90,7 +90,7 @@ class id extends WorldObject {
                   tm.field_h[-8 + this.field_F].f(var3_int, var4 - 24);
                 }
               } else {
-                tm.field_h[this.field_F - 8].c(var3_int, -24 + var4);
+                tm.field_h[this.field_F - 8].drawMirrored(var3_int, -24 + var4);
               }
             }
           } else {

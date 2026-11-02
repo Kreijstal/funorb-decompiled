@@ -20,14 +20,14 @@ final class lh extends pc {
           try {
             this.field_b.position = 0;
             this.field_b.writeByte(6, 13);
-            this.field_b.c(3, -105);
+            this.field_b.writeMedium(3, -105);
             this.field_b.writeShort(0, (byte) 105);
-            this.field_n.a(this.field_b.payload.length, true, 0, this.field_b.payload);
+            this.field_n.write(this.field_b.payload.length, true, 0, this.field_b.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_n.a(100);
+              this.field_n.close(100);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -80,7 +80,7 @@ final class lh extends pc {
             this.field_i = this.field_i + var4;
             if (this.field_i > 30000) {
               try {
-                this.field_n.a(-59);
+                this.field_n.close(-59);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -106,22 +106,22 @@ final class lh extends pc {
             while (var2 != null) {
               this.field_b.position = 0;
               this.field_b.writeByte(1, 114);
-              this.field_b.writeLong40(var2.field_n, param0 ^ -21);
-              this.field_n.a(this.field_b.payload.length, true, 0, this.field_b.payload);
-              this.field_l.a(var2, (byte) -117);
+              this.field_b.writeLong40(var2.secondaryKey, param0 ^ -21);
+              this.field_n.write(this.field_b.payload.length, true, 0, this.field_b.payload);
+              this.field_l.addLast(var2, (byte) -117);
               var2 = (og) (this.field_a.a((byte) 117));
             }
             var2Lifetime1 = (og) (this.field_f.c((byte) 34));
             while (var2Lifetime1 != null) {
               this.field_b.position = 0;
               this.field_b.writeByte(0, -123);
-              this.field_b.writeLong40(var2Lifetime1.field_n, 0);
-              this.field_n.a(this.field_b.payload.length, true, 0, this.field_b.payload);
-              this.field_m.a(var2Lifetime1, (byte) -95);
+              this.field_b.writeLong40(var2Lifetime1.secondaryKey, 0);
+              this.field_n.write(this.field_b.payload.length, true, 0, this.field_b.payload);
+              this.field_m.addLast(var2Lifetime1, (byte) -95);
               var2Lifetime1 = (og) (this.field_f.a((byte) 112));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_n.b((byte) -59);
+              var3_int = this.field_n.available((byte) -59);
               if (var3_int < 0) {
                 throw new IOException();
               }
@@ -140,7 +140,7 @@ final class lh extends pc {
                   if (var5 > var3_int) {
                     var5 = var3_int;
                   }
-                  this.field_n.a(this.field_j.position, var5, this.field_j.payload, 0);
+                  this.field_n.readFully(this.field_j.position, var5, this.field_j.payload, 0);
                   if (this.field_c != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
                       this.field_j.payload[var6 + this.field_j.position] = (byte)rd.b((int) this.field_j.payload[var6 + this.field_j.position], (int) this.field_c);
@@ -174,7 +174,7 @@ final class lh extends pc {
                       if (var11 != 0) {
                         var14_ref = (og) (this.field_m.c((byte) 34));
                         while (var14_ref != null) {
-                          if (var12 == var14_ref.field_n) {
+                          if (var12 == var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -186,7 +186,7 @@ final class lh extends pc {
                         (decompiledFrameCompleted0)) {
                         var14_ref = (og) (this.field_l.c((byte) 34));
                         while (var14_ref != null) {
-                          if (~var12 == ~var14_ref.field_n) {
+                          if (~var12 == ~var14_ref.secondaryKey) {
                             break;
                           }
                           var14_ref = (og) (this.field_l.a((byte) 125));
@@ -214,7 +214,7 @@ final class lh extends pc {
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  this.field_n.a(this.field_d.field_w.position, var6, this.field_d.field_w.payload, 0);
+                  this.field_n.readFully(this.field_d.field_w.position, var6, this.field_d.field_w.payload, 0);
                   if (this.field_c != 0) {
                     for (var7 = 0; var6 > var7; var7++) {
                       this.field_d.field_w.payload[var7 + this.field_d.field_w.position] = (byte)rd.b((int) this.field_d.field_w.payload[var7 + this.field_d.field_w.position], (int) this.field_c);
@@ -223,7 +223,7 @@ final class lh extends pc {
                   this.field_d.field_w.position = this.field_d.field_w.position + var6;
                   this.field_d.field_v = this.field_d.field_v + var6;
                   if (this.field_d.field_w.position == var5) {
-                    this.field_d.c((byte) -15);
+                    this.field_d.unlinkSecondary((byte) -15);
                     this.field_d.field_q = false;
                     this.field_d = null;
                   } else {
@@ -241,7 +241,7 @@ final class lh extends pc {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_n.a(param0 - 52);
+              this.field_n.close(param0 - 52);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -282,12 +282,12 @@ final class lh extends pc {
             }
             ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_5_1, -98);
             this.field_b.writeLong40(0L, 0);
-            this.field_n.a(this.field_b.payload.length, true, 0, this.field_b.payload);
+            this.field_n.write(this.field_b.payload.length, true, 0, this.field_b.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_n.a(-103);
+              this.field_n.close(-103);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
@@ -324,7 +324,7 @@ final class lh extends pc {
           try {
             if (this.field_n != null) {
               try {
-                this.field_n.a(100);
+                this.field_n.close(100);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -337,17 +337,17 @@ final class lh extends pc {
             this.field_j.position = 0;
             this.field_d = null;
             while (true) {
-              var4_ref = (og) (this.field_l.a(116));
+              var4_ref = (og) (this.field_l.removeFirst(116));
               if (var4_ref != null) {
-                this.field_a.a(var4_ref, (byte) -120);
+                this.field_a.addLast(var4_ref, (byte) -120);
                 continue;
               }
               break;
             }
             while (true) {
-              var4_refLifetime1 = (og) (this.field_m.a(-61));
+              var4_refLifetime1 = (og) (this.field_m.removeFirst(-61));
               if (var4_refLifetime1 != null) {
-                this.field_f.a(var4_refLifetime1, (byte) -97);
+                this.field_f.addLast(var4_refLifetime1, (byte) -97);
                 continue;
               }
               break;
@@ -358,12 +358,12 @@ final class lh extends pc {
                 this.field_b.writeByte(4, 29);
                 this.field_b.writeByte((int) this.field_c, -112);
                 this.field_b.writeInt(-104, 0);
-                this.field_n.a(this.field_b.payload.length, true, 0, this.field_b.payload);
+                this.field_n.write(this.field_b.payload.length, true, 0, this.field_b.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_n.a(69);
+                  this.field_n.close(69);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -398,7 +398,7 @@ final class lh extends pc {
 
     final void a(int param0) {
         try {
-          this.field_n.a(123);
+          this.field_n.close(123);
         } catch (Exception exception) {
         }
         this.field_e = -1;
@@ -412,7 +412,7 @@ final class lh extends pc {
 
     final void d(int param0) {
         if (null != this.field_n) {
-          this.field_n.a(108);
+          this.field_n.close(108);
         }
         if (param0 != 31239) {
           this.a(-79, true);

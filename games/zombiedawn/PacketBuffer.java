@@ -7,7 +7,7 @@ class PacketBuffer extends IntrusiveNode {
     byte[] payload;
     int position;
 
-    final void d(int param0, int param1) {
+    final void writeLengthPrefixByte(int param0, int param1) {
         int var3 = 120 % ((-2 - param0) / 42);
         this.payload[this.position + (-param1 - 1)] = (byte)param1;
     }
@@ -558,7 +558,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final int g(int param0) {
+    final int readUnsignedMedium(int param0) {
         this.position = this.position + 3;
         if (param0 != -1875) {
           this.position = 35;
@@ -612,7 +612,7 @@ class PacketBuffer extends IntrusiveNode {
         return -32768 + this.f(param0 ^ -105);
     }
 
-    final int b(boolean param0) {
+    final int readVarInt(boolean param0) {
         int fieldTemp$1 = 0;
         int var2;
         int var3;
@@ -797,7 +797,7 @@ class PacketBuffer extends IntrusiveNode {
         return (var2 << 32) + var4;
     }
 
-    final void f(int param0, int param1) {
+    final void writeLengthPrefixInt(int param0, int param1) {
         this.payload[-param0 + (this.position - 4)] = (byte)(param0 >> 24);
         this.payload[-param0 + this.position - 3] = (byte)(param0 >> 16);
         this.payload[-param0 + (this.position - 2)] = (byte)(param0 >> 8);
@@ -807,7 +807,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[-1 + (-param0 + this.position)] = (byte)param0;
     }
 
-    final void c(int param0, int param1) {
+    final void writeMedium(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(param0 >> 16);
@@ -820,7 +820,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$2] = (byte)param0;
     }
 
-    final void a(int param0, int param1) {
+    final void writeSignedSmart(int param0, int param1) {
         if (param1 < 64 &&
           -64 <= param1) {
           this.writeByte(64 + param1, 31);
@@ -906,7 +906,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void g(int param0, int param1) {
+    final void writeLengthPrefixShort(int param0, int param1) {
         this.payload[-param1 + (this.position - 2)] = (byte)(param1 >> 8);
         if (param0 != 57) {
           this.readLong(true);
@@ -914,7 +914,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[this.position - param1 - 1] = (byte)param1;
     }
 
-    final void a(byte param0, int param1) {
+    final void writeVarInt(byte param0, int param1) {
         if ((-128 & param1) != 0) {
           if (0 != (param1 & -16384)) {
             if (0 != (param1 & -2097152)) {

@@ -16,8 +16,8 @@ abstract class pa extends UiWidget implements jf {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        Rasterizer.a(var1.field_p, var1.field_l, var1.field_i);
-        Rasterizer.f(var1.field_j, var1.field_m, var1.field_h, var1.field_k);
+        Rasterizer.setBuffer(var1.field_p, var1.field_l, var1.field_i);
+        Rasterizer.setClip(var1.field_j, var1.field_m, var1.field_h, var1.field_k);
         var1.field_p = null;
         ad.field_h.addFirst(0, var1);
         if (param0 != -21189) {

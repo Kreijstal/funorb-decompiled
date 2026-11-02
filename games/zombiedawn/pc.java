@@ -34,17 +34,17 @@ abstract class pc {
         og var9 = new og();
         var9.field_C = param0;
         var9.field_r = param1 ? true : false;
-        var9.field_n = var7;
+        var9.secondaryKey = var7;
         if (!param1) {
           if (this.a(true) >= 20) {
             throw new RuntimeException();
           }
-          this.field_f.a(var9, (byte) -99);
+          this.field_f.addLast(var9, (byte) -99);
         } else {
           if (!(20 > this.e(-1216122784))) {
             throw new RuntimeException();
           }
-          this.field_a.a(var9, (byte) -124);
+          this.field_a.addLast(var9, (byte) -124);
         }
         return var9;
     }

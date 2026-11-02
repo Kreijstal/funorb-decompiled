@@ -450,7 +450,7 @@ final class ma extends IntrusiveNode {
               } else {
                 var20Lifetime2 = var18[var21++];
               }
-              var22 = var38.b(true);
+              var22 = var38.readVarInt(true);
             }
             this.field_j[var23] = (short)(this.field_j[var23] + (eg.a(2, var22 - 1) << 14));
             this.field_l[var23] = var22;

@@ -104,7 +104,7 @@ final class t implements io {
         int var12Lifetime1;
         try {
           var14 = param3 instanceof fp ? (fp) (param3) : null;
-          Rasterizer.b(param3.field_k + param4, param3.field_j + param2, param3.field_i, param3.field_n, this.field_a);
+          Rasterizer.fillRect(param3.field_k + param4, param3.field_j + param2, param3.field_i, param3.field_n, this.field_a);
           if (param0 != 16777215) {
             this.field_g = (Font) null;
           }

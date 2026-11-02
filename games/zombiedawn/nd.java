@@ -199,13 +199,13 @@ final class nd {
           var4 = var5.position;
           var5.writeByte(param1, 35);
           var5.writeByte(param2.field_i, -96);
-          var5.a(17087, param2.field_r);
+          var5.writeSignedSmart(17087, param2.field_r);
           var5.writeInt(param1 ^ -126, param2.field_q);
           var5.writeInt(param1 ^ -110, param2.field_k);
           var5.writeInt(param1 ^ -113, param2.field_m);
           var5.writeInt(param1 ^ 87, param2.field_h);
           var5.writeCrc32(-126, var4);
-          var5.d(75, -var4 + var5.position);
+          var5.writeLengthPrefixByte(75, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

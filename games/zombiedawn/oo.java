@@ -77,7 +77,7 @@ final class oo extends id {
                 if (!this.field_V[var10][var12]) {
                   var14[-1 + var13].b(var11, var9);
                 } else {
-                  var14[-1 + var13].c(var11, var9);
+                  var14[-1 + var13].drawMirrored(var11, var9);
                 }
               }
               wg.field_n = wg.field_n + 1;
@@ -377,7 +377,7 @@ final class oo extends id {
                   if (!this.field_V[var10][var12]) {
                     var14[-1 + var13].b(var11, var9);
                   } else {
-                    var14[var13 - 1].c(var11, var9);
+                    var14[var13 - 1].drawMirrored(var11, var9);
                   }
                 }
                 wg.field_n = wg.field_n + 1;

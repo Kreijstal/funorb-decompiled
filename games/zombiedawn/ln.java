@@ -42,7 +42,7 @@ abstract class ln {
           ep.field_i = 0;
         } else {
           ep.field_i = var3.f(2);
-          td.field_a = var3.g(-1875);
+          td.field_a = var3.readUnsignedMedium(-1875);
         }
         stackIn_9_0 = (1 != var3.readUnsignedByte((byte) -115)) ? 0 : 1;
         var5 = stackIn_9_0;

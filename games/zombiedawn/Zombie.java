@@ -388,7 +388,7 @@ final class Zombie extends Mover {
             if (this.field_S != 3) {
               ad.field_g[this.field_t][var5].b(3, 3);
             } else {
-              ad.field_g[this.field_t][var5].c(3, 3);
+              ad.field_g[this.field_t][var5].drawMirrored(3, 3);
             }
             ho.a(md.field_vb, this.o((byte) -101), this.field_fb, -111);
             if (0 < this.field_Ab) {
@@ -765,7 +765,7 @@ final class Zombie extends Mover {
           return;
         }
         this.field_tb = false;
-        this.c((byte) -67);
+        this.unlinkSecondary((byte) -67);
     }
 
     final boolean m(byte param0) {

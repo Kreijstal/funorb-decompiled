@@ -28,7 +28,7 @@ final class pg extends al {
         if (param0 > -35) {
           this.field_m = -72;
         }
-        Rasterizer.f(5, 5, -5 + bd.field_e, -5 + nh.field_P);
+        Rasterizer.setClip(5, 5, -5 + bd.field_e, -5 + nh.field_P);
         la.a(30);
         qk.a(6, -(2 * this.field_q) + 640, -11 + nh.field_P, 3 + (this.field_q + vh.field_b), false);
         la.field_d.b((byte) -55);

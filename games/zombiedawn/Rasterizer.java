@@ -39,7 +39,7 @@ final class Rasterizer {
         int var22Lifetime2;
         int var22Lifetime3;
         if (param4 == 0) {
-          Rasterizer.c(param0, param1, param2, param3, param5);
+          Rasterizer.drawRectOutline(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -114,10 +114,10 @@ final class Rasterizer {
                   pixels[var17 + var19] = param5;
                 }
               }
-              Rasterizer.e(param0, param1 + var18, param3 - var18 - var18, param5);
-              Rasterizer.e(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-              Rasterizer.b(param0 + var18, param1, param2 - var18 - var18, param5);
-              Rasterizer.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+              Rasterizer.drawVerticalLine(param0, param1 + var18, param3 - var18 - var18, param5);
+              Rasterizer.drawVerticalLine(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
+              Rasterizer.drawHorizontalLine(param0 + var18, param1, param2 - var18 - var18, param5);
+              Rasterizer.drawHorizontalLine(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
               while (true) {
                 incrementValue$1 = var19;
                 var19++;
@@ -195,7 +195,7 @@ final class Rasterizer {
         return;
     }
 
-    final static void e(int param0, int param1, int param2, int param3) {
+    final static void drawVerticalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (param0 >= clipLeft) {
@@ -225,18 +225,18 @@ final class Rasterizer {
         Rasterizer.a(pixels, 0, param2 + param3 * width, param1, param3, param5, width - param4, param2, param4);
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4) {
-        Rasterizer.b(param0, param1, param2, param4);
-        Rasterizer.b(param0, param1 + param3 - 1, param2, param4);
-        Rasterizer.e(param0, param1, param3, param4);
-        Rasterizer.e(param0 + param2 - 1, param1, param3, param4);
+    final static void drawRectOutline(int param0, int param1, int param2, int param3, int param4) {
+        Rasterizer.drawHorizontalLine(param0, param1, param2, param4);
+        Rasterizer.drawHorizontalLine(param0, param1 + param3 - 1, param2, param4);
+        Rasterizer.drawVerticalLine(param0, param1, param3, param4);
+        Rasterizer.drawVerticalLine(param0 + param2 - 1, param1, param3, param4);
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void setBuffer(int[] param0, int param1, int param2) {
         pixels = param0;
         width = param1;
         height = param2;
-        Rasterizer.f(0, 0, param1, param2);
+        Rasterizer.setClip(0, 0, param1, param2);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -433,7 +433,7 @@ final class Rasterizer {
         int var9;
         int var10;
         if (param2 == 0) {
-          Rasterizer.a(param0, param1, param3);
+          Rasterizer.setPixel(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -600,7 +600,7 @@ final class Rasterizer {
         }
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
+    final static void setClip(int param0, int param1, int param2, int param3) {
         if (param0 < 0) {
           param0 = 0;
         }
@@ -851,7 +851,7 @@ final class Rasterizer {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setPixel(int param0, int param1, int param2) {
         if (param0 >= clipLeft) {
           if (param1 < clipTop ||
             param0 >= clipRight ||
@@ -1129,17 +1129,17 @@ final class Rasterizer {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            Rasterizer.b(param0 + param2, param1, -param2 + 1, param4);
+            Rasterizer.drawHorizontalLine(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            Rasterizer.b(param0, param1, param2 + 1, param4);
+            Rasterizer.drawHorizontalLine(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            Rasterizer.e(param0, param1 + param3, -param3 + 1, param4);
+            Rasterizer.drawVerticalLine(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            Rasterizer.e(param0, param1, param3 + 1, param4);
+            Rasterizer.drawVerticalLine(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -1235,7 +1235,7 @@ final class Rasterizer {
         int var20Lifetime1;
         int var20Lifetime2;
         if (param4 == 0) {
-          Rasterizer.b(param0, param1, param2, param3, param5);
+          Rasterizer.fillRect(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -1692,7 +1692,7 @@ final class Rasterizer {
         return;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillRect(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -1989,7 +1989,7 @@ final class Rasterizer {
         Rasterizer.a(var5, pixels, 0, param2, -param3, var4);
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
+    final static void drawHorizontalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (param1 >= clipTop) {
@@ -2086,7 +2086,7 @@ final class Rasterizer {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          Rasterizer.a(param0, param1, param3);
+          Rasterizer.setPixel(param0, param1, param3);
           return;
         }
         if (param2 < 0) {

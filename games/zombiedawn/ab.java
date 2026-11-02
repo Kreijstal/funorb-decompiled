@@ -148,8 +148,8 @@ final class ab extends ln {
               }
             }
           } else {
-            param0[6].a();
-            Rasterizer.b(0, 0, 24, 24, 0);
+            param0[6].setAsRenderTarget();
+            Rasterizer.fillRect(0, 0, 24, 24, 0);
             MouseInputHandler.a(param0, 3, 79, (byte) -17, 2);
             MouseInputHandler.a(param0, 4, 78, (byte) -17, 2);
             MouseInputHandler.a(param0, 1, 77, (byte) -17, 2);

@@ -85,7 +85,7 @@ final class lf extends IntrusiveNode {
         te.field_eb = param1;
         ul.field_d = param1;
         int[] var4 = (int[]) null;
-        Rasterizer.a((int[]) null, 0, 0);
+        Rasterizer.setBuffer((int[]) null, 0, 0);
         cn.field_f = l.a(-1, param0, (java.awt.Component) ((Object) cj.field_d), param1);
         cn.field_f.b(param2 - 129);
         ba.a(18002, param0 / 2, param1 / 2);

@@ -212,7 +212,7 @@ abstract class ki extends pn {
           return;
         }
         try {
-          Rasterizer.a(param1.field_z, param1.field_r, param1.field_q);
+          Rasterizer.setBuffer(param1.field_z, param1.field_r, param1.field_q);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ki.EB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

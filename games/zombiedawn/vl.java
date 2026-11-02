@@ -52,11 +52,11 @@ final class vl implements io {
           if (param1) {
             var7 = 16777215;
           }
-          Rasterizer.b(param3.field_k + param4, param2 + param3.field_j, param3.field_i, param3.field_n, this.field_e);
+          Rasterizer.fillRect(param3.field_k + param4, param2 + param3.field_j, param3.field_i, param3.field_n, this.field_e);
           var8 = this.field_h + param4 + param3.field_k;
           var9 = param2 - (-param3.field_j - this.field_c);
           Rasterizer.f(var8, var9, this.field_l, this.field_n, 5592405);
-          Rasterizer.b(var8, var9, this.field_l, this.field_n, var7);
+          Rasterizer.fillRect(var8, var9, this.field_l, this.field_n, var7);
           if (var11.field_x) {
             Rasterizer.e(var8, var9, this.field_l + var8, this.field_n + var9, 1);
             Rasterizer.e(this.field_l + var8, var9, var8, var9 + this.field_n, 1);
@@ -104,7 +104,7 @@ final class vl implements io {
             if (decompiledFrameRemainder0) {
               if (0 < dp.field_e.position) {
                 try {
-                  sn.field_c.a(dp.field_e.position, true, 0, dp.field_e.payload);
+                  sn.field_c.write(dp.field_e.position, true, 0, dp.field_e.payload);
                   hm.field_N = pd.a(-22826);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

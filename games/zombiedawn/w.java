@@ -20,7 +20,7 @@ abstract class w {
           return;
         }
         try {
-          nf.field_d.a();
+          nf.field_d.setAsRenderTarget();
           ni.field_b[2].h(5, -5, 16777215);
           ni.field_b[3].h(5, -5, 16777215);
           Rasterizer.h(4, 4, 0, 0, Rasterizer.width, Rasterizer.height);
@@ -30,7 +30,7 @@ abstract class w {
           qp.field_c = new Sprite[mk.field_a.length];
           for (var2_int = 0; var2_int < mk.field_a.length; var2_int++) {
             mk.field_a[var2_int] = new Sprite(200, 25);
-            mk.field_a[var2_int].a();
+            mk.field_a[var2_int].setAsRenderTarget();
             bj.field_q.a(qp.a(var2_int, 90), 100, 17, 16777215, -1);
             qp.field_c[var2_int] = so.a(mk.field_a[var2_int]);
           }

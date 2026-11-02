@@ -160,7 +160,7 @@ final class LevelNavigation {
                       var12 > var11) {
                       var13 = tm.field_h[var11];
                       if ((1073741824 & var10) > 0) {
-                        var13.c(var5_int, var6);
+                        var13.drawMirrored(var5_int, var6);
                       } else {
                         if ((536870912 & var10) <= 0) {
                           var13.b(var5_int, var6);
@@ -209,7 +209,7 @@ final class LevelNavigation {
                         }
                       }
                       if (kc.field_Q) {
-                        Rasterizer.c(var5_int, var6, 25, 25, 7864183);
+                        Rasterizer.drawRectOutline(var5_int, var6, 25, 25, 7864183);
                       }
                     }
                   } else {
@@ -231,7 +231,7 @@ final class LevelNavigation {
                             var12_ref_vn.f(var5_int, var6);
                           }
                         } else {
-                          var12_ref_vn.c(var5_int, var6);
+                          var12_ref_vn.drawMirrored(var5_int, var6);
                         }
                       }
                       if (dg.field_a) {
@@ -244,7 +244,7 @@ final class LevelNavigation {
                           var13_int = var8 + this.field_j;
                           if (this.b(0, var12, 1 + var13_int) ||
                             this.b(0, var12, var13_int + 2)) {
-                            Rasterizer.c(var5_int, var6, 24, 24, 16711808);
+                            Rasterizer.drawRectOutline(var5_int, var6, 24, 24, 16711808);
                           }
                         }
                       }
@@ -809,9 +809,9 @@ final class LevelNavigation {
                   var16 = (127 & var15_int) >> 0;
                   if (var16 >= 0 &&
                     var16 < field_o.length) {
-                    field_o[var16].e(var13Lifetime1, var14Lifetime1);
+                    field_o[var16].drawWithOffsets(var13Lifetime1, var14Lifetime1);
                   } else {
-                    Rasterizer.b(var13Lifetime1, var14Lifetime1, 24, 24, 7631988);
+                    Rasterizer.fillRect(var13Lifetime1, var14Lifetime1, 24, 24, 7631988);
                   }
                 }
                 this.field_v[var12][var11] = var15_int;
@@ -842,10 +842,10 @@ final class LevelNavigation {
             param1.y = param1.y - var4;
             param1.x = param1.x - var3_int;
             pa.a(-21189);
-            GameLoopApplet.field_A.e(var3_int, var4);
+            GameLoopApplet.field_A.drawWithOffsets(var3_int, var4);
             return;
           }
-          GameLoopApplet.field_A.e(var3_int, var4);
+          GameLoopApplet.field_A.drawWithOffsets(var3_int, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1197,9 +1197,9 @@ final class LevelNavigation {
                   var14Lifetime1 = var13Lifetime1 >> 0 & 127;
                   if (var14Lifetime1 >= 0 &&
                     var14Lifetime1 < field_o.length) {
-                    field_o[var14Lifetime1].e(var3_int, var4);
+                    field_o[var14Lifetime1].drawWithOffsets(var3_int, var4);
                   } else {
-                    Rasterizer.b(var3_int, var4, 24, 24, 7631988);
+                    Rasterizer.fillRect(var3_int, var4, 24, 24, 7631988);
                   }
                   this.field_v[var12][var11] = var13Lifetime1;
                   var3_int += 24;

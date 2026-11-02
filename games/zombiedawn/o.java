@@ -275,7 +275,7 @@ final class o {
         int var3Lifetime1;
         var4 = ZombieDawn.field_J;
         Rasterizer.f(9, 9, 622, 47, 4540749, 65793);
-        Rasterizer.b(9, 257, 622, 33, 2585);
+        Rasterizer.fillRect(9, 257, 622, 33, 2585);
         Rasterizer.f(9, 265, 622, 11, 2585, 1515566);
         var2 = 0;
         var3 = 14;
@@ -292,7 +292,7 @@ final class o {
         var3Lifetime1 = 299;
         while (var2Lifetime1 < 2) {
           Rasterizer.f(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-          Rasterizer.b(508, var3Lifetime1 + 42, 127, 42, 12410);
+          Rasterizer.fillRect(508, var3Lifetime1 + 42, 127, 42, 12410);
           var3Lifetime1 += 91;
           var2Lifetime1++;
         }
@@ -325,7 +325,7 @@ final class o {
         li.field_i.a(0, 0);
         if (null != nl.field_r) {
           nl.field_r.b(9, 257);
-          nl.field_r.c(558, 257);
+          nl.field_r.drawMirrored(558, 257);
           if (257 < ei.field_K &&
             ei.field_K < 290) {
             var2Lifetime2 = 40 + (40 * ig.f(2047, this.field_o << 4) >> 16);
@@ -537,7 +537,7 @@ final class o {
             this.field_p = (Sprite) null;
           }
           for (var9_int = param1; var9_int < param4; var9_int++) {
-            Rasterizer.f(param3, var9_int, param2, var9_int + 1);
+            Rasterizer.setClip(param3, var9_int, param2, var9_int + 1);
             var10 = var9_int * param6.length / param4;
             var11 = param6[param6.length + (-var10 - 1)];
             param5.a(param7, param3, param1, param2, param4, var11, -1, 1, 1, 0);

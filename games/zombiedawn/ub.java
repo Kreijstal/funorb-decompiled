@@ -55,7 +55,7 @@ final class ub {
         var3 = ZombieDawn.field_J;
         try {
           b.field_q = param0;
-          qn.field_g.a();
+          qn.field_g.setAsRenderTarget();
           Rasterizer.clear();
           bd.field_i[qd.field_e][b.field_q].b(10, 10);
           for (var2_int = 0; 3 > var2_int; var2_int++) {
@@ -131,20 +131,20 @@ final class ub {
         int var4 = 0;
         int var2 = -1;
         if (this.field_p == 1.0f) {
-          si.field_Ub[5].a();
+          si.field_Ub[5].setAsRenderTarget();
           Rasterizer.clear();
           this.field_o.b(this.h(31214), -5 + Rasterizer.width, this.field_o.field_I + 5, 0, var2);
         } else {
-          pl.field_p.a();
+          pl.field_p.setAsRenderTarget();
           Rasterizer.clear();
           this.field_o.b(this.h(31214), -5 + Rasterizer.width, 5 + this.field_o.field_I, 2, var2);
           var3 = (int)(this.field_p * (float)Rasterizer.width);
           var4 = (int)((float)Rasterizer.height * this.field_p);
-          si.field_Ub[5].a();
+          si.field_Ub[5].setAsRenderTarget();
           Rasterizer.clear();
           pl.field_p.a(Rasterizer.width - var3, 0, var3, var4);
         }
-        vh.field_e[5].a();
+        vh.field_e[5].setAsRenderTarget();
         Rasterizer.clear();
         si.field_Ub[5].h(0, 0, 16777215);
         oc.a((byte) 50);
@@ -157,7 +157,7 @@ final class ub {
         int var3;
         int var4;
         var4 = ZombieDawn.field_J;
-        si.field_Ub[2].a();
+        si.field_Ub[2].setAsRenderTarget();
         Rasterizer.clear();
         if (this.field_s) {
           var2 = Js5Archive.field_e.field_hb;
@@ -185,7 +185,7 @@ final class ub {
         } else {
           this.field_o.c(Integer.toString(var2), 20, this.field_o.field_I * 2 - 3, 2, 65793);
         }
-        vh.field_e[2].a();
+        vh.field_e[2].setAsRenderTarget();
         Rasterizer.clear();
         si.field_Ub[2].h(0, 0, 16777215);
         oc.a((byte) -65);
@@ -196,10 +196,10 @@ final class ub {
     }
 
     private final void d(int param0, int param1) {
-        si.field_Ub[4].a();
+        si.field_Ub[4].setAsRenderTarget();
         Rasterizer.clear();
         this.field_o.b(this.b(param0 - 73, param1), -5 + Rasterizer.width, 5 + this.field_o.field_I, param0, -1);
-        vh.field_e[4].a();
+        vh.field_e[4].setAsRenderTarget();
         Rasterizer.clear();
         si.field_Ub[4].h(0, 0, 16777215);
         oc.a((byte) -78);
@@ -304,9 +304,9 @@ final class ub {
         int var2Lifetime3Lifetime3;
         if (this.field_i) {
           var2 = id.field_M + this.field_n;
-          Rasterizer.b(0, 0, bd.field_e, var2, 0);
+          Rasterizer.fillRect(0, 0, bd.field_e, var2, 0);
           var2++;
-          Rasterizer.b(0, -var2 + nh.field_P, bd.field_e, var2, 0);
+          Rasterizer.fillRect(0, -var2 + nh.field_P, bd.field_e, var2, 0);
           return;
         }
         if (this.field_c) {
@@ -412,10 +412,10 @@ final class ub {
     }
 
     private final void e(int param0) {
-        si.field_Ub[3].a();
+        si.field_Ub[3].setAsRenderTarget();
         Rasterizer.clear();
         this.field_o.b(Integer.toString(this.field_k), -5 + Rasterizer.width, this.field_o.field_I + 5, 1, 65793);
-        vh.field_e[3].a();
+        vh.field_e[3].setAsRenderTarget();
         Rasterizer.clear();
         si.field_Ub[3].h(0, 0, 16777215);
         oc.a((byte) -83);

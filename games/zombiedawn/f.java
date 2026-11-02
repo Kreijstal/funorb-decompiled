@@ -48,7 +48,7 @@ final class f {
           var6 = param1.worldToScreenY(uo.field_h, 0);
           var7 = pj.a(var6, 82, var5) * 5 >> 2;
           oe.field_c.h(var7);
-          Rasterizer.f(var5, var6, var5 + ClientException.field_a, var6 + rh.field_a);
+          Rasterizer.setClip(var5, var6, var5 + ClientException.field_a, var6 + rh.field_a);
           Rasterizer.a(param1.worldToScreenX(var3, (byte) -89) << 4, param1.worldToScreenY(var4, 0) << 4, pl.field_r, UiWidget.field_q, b.field_p);
           Rasterizer.resetClip();
         } catch (RuntimeException runtimeException) {

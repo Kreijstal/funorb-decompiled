@@ -34,7 +34,7 @@ final class lc {
           var6 = new jl(param3, param1);
           this.field_e.a(param0, true, var6);
           this.field_g.a(0, var6);
-          ((bj) ((Object) var6)).field_n = 0L;
+          ((bj) ((Object) var6)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "lc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -52,7 +52,7 @@ final class lc {
           }
           if (param0 != null) {
             param0.unlink(-27598);
-            param0.c((byte) -79);
+            param0.unlinkSecondary((byte) -79);
             this.field_b = this.field_b + param0.field_r;
           }
           return;
@@ -195,7 +195,7 @@ final class lc {
         Object var5 = var8.d((byte) 87);
         if (var5 == null) {
           var8.unlink(param1 ^ -1431649945);
-          var8.c((byte) -21);
+          var8.unlinkSecondary((byte) -21);
           this.field_b = this.field_b + var8.field_r;
           return null;
         }
@@ -203,12 +203,12 @@ final class lc {
           var6 = new jl(var5, var8.field_r);
           this.field_e.a(var8.key, true, var6);
           this.field_g.a(0, var6);
-          ((bj) ((Object) var6)).field_n = 0L;
+          ((bj) ((Object) var6)).secondaryKey = 0L;
           var8.unlink(-27598);
-          var8.c((byte) -60);
+          var8.unlinkSecondary((byte) -60);
         } else {
           this.field_g.a(0, var8);
-          var8.field_n = 0L;
+          var8.secondaryKey = 0L;
         }
         return var5;
     }

@@ -58,7 +58,7 @@ final class ud implements io {
           if (param3.e(-17741)) {
             TileMap.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 ^ 16777172, var7 + 2);
           }
-          Rasterizer.f(var6_int, var7, -2 + param3.field_i + var6_int, var7 + param3.field_n);
+          Rasterizer.setClip(var6_int, var7, -2 + param3.field_i + var6_int, var7 + param3.field_n);
           var8 = this.field_b.field_T.g(0);
           if (var8 != null) {
             var9 = var8.toString();
@@ -152,7 +152,7 @@ final class ud implements io {
         re[] var4 = null;
         re var6 = null;
         int var7 = 0;
-        op var8 = null;
+        AsyncRequest var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = ZombieDawn.field_J;
@@ -162,14 +162,14 @@ final class ud implements io {
             return stackIn_4_0;
           }
           var8 = param1.a(param0 - 1);
-          while (var8.field_f == 0) {
+          while (var8.status == 0) {
             ld.a(10L, (byte) 84);
           }
-          if (var8.field_f == 2) {
+          if (var8.status == 2) {
             stackIn_11_0 = new re[]{};
             return stackIn_11_0;
           }
-          var10 = (int[]) (var8.field_d);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new re[var10.length >> 2];

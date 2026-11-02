@@ -32,12 +32,12 @@ final class kl extends al {
         if (260 <= this.field_m) {
           if (this.field_m >= 388) {
             if (this.field_m < 508) {
-              nn.field_j.e(var2, var3);
+              nn.field_j.drawWithOffsets(var2, var3);
               we.field_Ub.b(var2, 480 + (var3 - we.field_Ub.field_q));
             } else {
               if (this.field_m >= 1564) {
                 if (this.field_m < 1724) {
-                  nn.field_j.e(-264 + var2, var3);
+                  nn.field_j.drawWithOffsets(-264 + var2, var3);
                   pg.field_t.b(var2 + 270, 200 + var3);
                 } else {
                   if (this.field_m >= 1852) {
@@ -51,7 +51,7 @@ final class kl extends al {
                 }
               } else {
                 var4 = -508 + this.field_m;
-                nn.field_j.e(-(var4 >> 2) + var2, var3);
+                nn.field_j.drawWithOffsets(-(var4 >> 2) + var2, var3);
                 var5 = var4 * 3 >> 2;
                 we.field_Ub.b(-var5 + var2, var3 + 480 - we.field_Ub.field_q);
                 pg.field_t.b(1062 + (var2 - var5), 200 + var3);
@@ -324,7 +324,7 @@ final class kl extends al {
 
     private final void a(int param0, int param1, int param2, String param3) {
         try {
-          lf.field_h.a();
+          lf.field_h.setAsRenderTarget();
           Rasterizer.clear();
           sg.field_jb.a(param3, 60, param1, 520, 200, 4, 0, 1, 0, param0);
           so.a(16777215);

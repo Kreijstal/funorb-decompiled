@@ -14,12 +14,12 @@ final class BufferedSocket implements Runnable {
     private byte[] field_e;
     private InputStream field_a;
     private boolean field_b;
-    private op field_c;
+    private AsyncRequest field_c;
     private boolean field_i;
     private int field_j;
     private java.net.Socket field_l;
 
-    final void a(int param0, boolean param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, boolean param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -55,7 +55,7 @@ final class BufferedSocket implements Runnable {
               var6++;
             }
             if (null == this.field_c) {
-              this.field_c = this.field_m.a(3, (Runnable) (this), true);
+              this.field_c = this.field_m.startThread(3, (Runnable) (this), true);
             }
             this.notifyAll();
           }
@@ -74,7 +74,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void readFully(int param0, int param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -85,7 +85,7 @@ final class BufferedSocket implements Runnable {
         var6 = ZombieDawn.field_J;
         try {
           if (param3 != 0) {
-            this.field_c = (op) null;
+            this.field_c = (AsyncRequest) null;
           }
           if (this.field_b) {
             return;
@@ -113,7 +113,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int b(byte param0) throws IOException {
+    final int available(byte param0) throws IOException {
         if (param0 >= -2) {
           BufferedSocket.b(6);
           if (!this.field_b) {
@@ -139,7 +139,7 @@ final class BufferedSocket implements Runnable {
         field_h = null;
     }
 
-    final int a(boolean param0) throws IOException {
+    final int readByte(boolean param0) throws IOException {
         if (this.field_b) {
           return 0;
         }
@@ -152,7 +152,7 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.a(-89);
+        this.close(-89);
     }
 
     public final void run() {
@@ -270,7 +270,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0) {
+    final void close(int param0) {
         try {
           int var2 = 0;
           InterruptedException var2_ref_InterruptedException = null;
@@ -287,12 +287,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (this.field_c != null) {
-            while (this.field_c.field_f == 0) {
+            while (this.field_c.status == 0) {
               ld.a(1L, (byte) 89);
             }
-            if (this.field_c.field_f == 1) {
+            if (this.field_c.status == 1) {
               try {
-                ((Thread) (this.field_c.field_d)).join();
+                ((Thread) (this.field_c.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref_InterruptedException = (InterruptedException) (Object) decompiledCaughtException;

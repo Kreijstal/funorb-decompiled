@@ -51,7 +51,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             var7.writeInt(30, param2.field_k[var5]);
           }
           var8.writeCrc32(-123, var4);
-          var8.d(50, -var4 + var8.position);
+          var8.writeLengthPrefixByte(50, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

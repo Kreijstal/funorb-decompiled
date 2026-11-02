@@ -526,7 +526,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void e(int param0, int param1) {
+    void drawWithOffsets(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1113,7 +1113,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void c(int param0, int param1) {
+    void drawMirrored(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1159,7 +1159,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void d(int param0, int param1) {
+    void drawHalfSize(int param0, int param1) {
         param0 = param0 + (this.field_v >> 1);
         param1 = param1 + (this.field_x >> 1);
         int var3 = param0 < Rasterizer.clipLeft ? Rasterizer.clipLeft - param0 << 1 : 0;
@@ -1338,8 +1338,8 @@ class Sprite extends SpriteState {
         this.field_r = var3Lifetime3;
     }
 
-    final void a() {
-        Rasterizer.a(this.field_z, this.field_w, this.field_t);
+    final void setAsRenderTarget() {
+        Rasterizer.setBuffer(this.field_z, this.field_w, this.field_t);
     }
 
     final void b(int param0, int param1, int param2, int param3) {

@@ -141,7 +141,7 @@ final class rg extends pa {
             field_H = 9;
           }
           var3 = new Sprite(var2_int, var2_int);
-          var3.a();
+          var3.setAsRenderTarget();
           hm.field_E.d(0, 0, var2_int, var2_int);
           cn.field_f.b(44);
           hm.field_E = var3;

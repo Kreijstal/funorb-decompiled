@@ -362,9 +362,9 @@ final class kc extends id {
               if (!this.field_H) {
                 return;
               }
-              Rasterizer.e(-1 + var6, var7, 6 + this.field_T, var4);
-              Rasterizer.e(var6, var7, this.field_T + 6, var5);
-              Rasterizer.e(1 + var6, var7, this.field_T + 6, var4);
+              Rasterizer.drawVerticalLine(-1 + var6, var7, 6 + this.field_T, var4);
+              Rasterizer.drawVerticalLine(var6, var7, this.field_T + 6, var5);
+              Rasterizer.drawVerticalLine(1 + var6, var7, this.field_T + 6, var4);
               return;
             }
           }
@@ -372,9 +372,9 @@ final class kc extends id {
           var7 -= 12;
           var6 = var6 + var8;
           if (this.field_H) {
-            Rasterizer.b(var6, var7 - 1, this.field_T - var8, var4);
-            Rasterizer.b(var6, var7, -var8 + this.field_T, var5);
-            Rasterizer.b(var6, 1 + var7, this.field_T - var8, var4);
+            Rasterizer.drawHorizontalLine(var6, var7 - 1, this.field_T - var8, var4);
+            Rasterizer.drawHorizontalLine(var6, var7, -var8 + this.field_T, var5);
+            Rasterizer.drawHorizontalLine(var6, 1 + var7, this.field_T - var8, var4);
           }
           var7 -= 12;
           tm.field_h[this.field_F + 1].b(this.field_T + var6 + (-var8 - 24), var7);

@@ -56,7 +56,7 @@ final class pk extends gl {
         }
         int var5 = param2 + this.field_k;
         int var6 = param0 + this.field_j;
-        Rasterizer.b(var5, var6, this.field_i, this.field_n, 0);
+        Rasterizer.fillRect(var5, var6, this.field_i, this.field_n, 0);
         int var7 = this.field_K;
         if (param3 != ~this.field_O) {
           var7 = this.field_O;

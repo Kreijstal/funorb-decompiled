@@ -284,8 +284,8 @@ final class ig extends wo {
           for (var5 = 0; var5 < this.field_ub; var5++) {
             var6 = param0.worldToScreenX(this.field_jb[var5], (byte) -115);
             var7 = param0.worldToScreenY(this.field_gb[var5], 0);
-            Rasterizer.b(var6 - 1, var7 - 1, 3, 3, 0);
-            Rasterizer.a(var6, var7, 65280);
+            Rasterizer.fillRect(var6 - 1, var7 - 1, 3, 3, 0);
+            Rasterizer.setPixel(var6, var7, 65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -222,36 +222,36 @@ final class jo extends qk {
           try {
             var1_int = -73 / ((param0 - 36) / 39);
             if (jd.field_a == 0) {
-              GameWorld.field_O = lc.field_a.a(2, gd.field_u, bd.field_j);
+              GameWorld.field_O = lc.field_a.connectSocket(2, gd.field_u, bd.field_j);
               jd.field_a = jd.field_a + 1;
             }
             if (jd.field_a == 1) {
-              if (GameWorld.field_O.field_f == 2) {
+              if (GameWorld.field_O.status == 2) {
                 stackIn_14_0 = k.a(-1, 50);
                 return stackIn_14_0;
               }
-              if (GameWorld.field_O.field_f == 1) {
+              if (GameWorld.field_O.status == 1) {
                 jd.field_a = jd.field_a + 1;
               }
             }
             if (jd.field_a == 2) {
-              sb.field_a = new BufferedSocket((java.net.Socket) (GameWorld.field_O.field_d), lc.field_a);
+              sb.field_a = new BufferedSocket((java.net.Socket) (GameWorld.field_O.result), lc.field_a);
               var2_ref_de = new PacketBuffer(13);
               uj.a(ha.field_a, uj.field_d, (byte) -114, var2_ref_de, nd.field_a);
               var2_ref_de.writeByte(15, -101);
               var2_ref_de.writeInt(-116, wh.field_b);
-              sb.field_a.a(13, true, 0, var2_ref_de.payload);
+              sb.field_a.write(13, true, 0, var2_ref_de.payload);
               jd.field_a = jd.field_a + 1;
               ul.field_e = 30000L + pd.a(-22826);
             }
             if (jd.field_a == 3) {
-              if (sb.field_a.b((byte) -80) <= 0) {
+              if (sb.field_a.available((byte) -80) <= 0) {
                 if (pd.a(-22826) > ul.field_e) {
                   stackIn_30_0 = k.a(-2, 50);
                   return stackIn_30_0;
                 }
               } else {
-                var2 = sb.field_a.a(false);
+                var2 = sb.field_a.readByte(false);
                 if (var2 != 0) {
                   stackIn_25_0 = k.a(var2, 50);
                   return stackIn_25_0;
@@ -322,8 +322,8 @@ final class jo extends qk {
           while (this.field_ub > var10) {
             var7 = param0.worldToScreenX(this.field_jb[var10], (byte) -62);
             var8 = param0.worldToScreenY(this.field_gb[var10], 0);
-            Rasterizer.b(-1 + var7, var8 - 1, 3, 3, 0);
-            Rasterizer.a(var7, var8, 65280);
+            Rasterizer.fillRect(-1 + var7, var8 - 1, 3, 3, 0);
+            Rasterizer.setPixel(var7, var8, 65280);
             var10++;
           }
           Rasterizer.g(var3_int, var4, 3, 16776960);

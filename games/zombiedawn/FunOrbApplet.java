@@ -359,7 +359,7 @@ abstract class FunOrbApplet extends GameApplet {
           mk.a(-128);
         }
         if (jl.field_u != null) {
-          id.field_I = jl.field_u.a(-96);
+          id.field_I = jl.field_u.takeRotation(-96);
         }
         if (ng.a((byte) -64)) {
           var3 = 1200 * nk.a((byte) 121);

@@ -113,7 +113,7 @@ final class me extends wo {
         java.awt.Frame var8 = null;
         int var9 = 0;
         re[] var10 = null;
-        op var11 = null;
+        AsyncRequest var11 = null;
         int var7Lifetime1;
         var9 = ZombieDawn.field_J;
         try {
@@ -145,14 +145,14 @@ final class me extends wo {
           }
           var11 = param3.a(param4, 1525233840, param5, param2, param1);
           var7Lifetime1 = 116 % ((47 - param0) / 60);
-          while (0 == var11.field_f) {
+          while (0 == var11.status) {
             ld.a(10L, (byte) 118);
           }
-          var8 = (java.awt.Frame) (var11.field_d);
+          var8 = (java.awt.Frame) (var11.result);
           if (var8 == null) {
             return null;
           }
-          if (2 != var11.field_f) {
+          if (2 != var11.status) {
             return var8;
           }
           jb.a(-41, var8, param3);
@@ -214,8 +214,8 @@ final class me extends wo {
           for (var5 = 0; var5 < this.field_ub; var5++) {
             var6 = param0.worldToScreenX(this.field_jb[var5], (byte) -114);
             var7 = param0.worldToScreenY(this.field_gb[var5], 0);
-            Rasterizer.b(var6 - 1, var7 - 1, 3, 3, 0);
-            Rasterizer.a(var6, var7, 65280);
+            Rasterizer.fillRect(var6 - 1, var7 - 1, 3, 3, 0);
+            Rasterizer.setPixel(var6, var7, 65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

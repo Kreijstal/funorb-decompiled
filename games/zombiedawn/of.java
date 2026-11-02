@@ -121,24 +121,24 @@ final class of {
           if (IntrusiveDeque.field_a != null &&
             IntrusiveDeque.field_a[0] != null) {
             var1_int = IntrusiveDeque.field_a[0].field_w;
-            IntrusiveDeque.field_a[0].e(0, 0);
-            IntrusiveDeque.field_a[1].e(-var1_int + bd.field_e, 0);
-            IntrusiveDeque.field_a[2].e(0, nh.field_P - var1_int);
-            IntrusiveDeque.field_a[3].e(-var1_int + bd.field_e, -var1_int + nh.field_P);
+            IntrusiveDeque.field_a[0].drawWithOffsets(0, 0);
+            IntrusiveDeque.field_a[1].drawWithOffsets(-var1_int + bd.field_e, 0);
+            IntrusiveDeque.field_a[2].drawWithOffsets(0, nh.field_P - var1_int);
+            IntrusiveDeque.field_a[3].drawWithOffsets(-var1_int + bd.field_e, -var1_int + nh.field_P);
             Mover.$cfr$intArgs$a$3aedf8649552(0, 99, -var1_int + bd.field_e, nh.field_P, var1_int);
             if (param0 != 11690) {
               return;
             }
             var3 = nh.field_P - var1_int;
             for (var2 = var1_int; var2 < Rasterizer.clipRight; var2 = var2 + ch.field_a.field_w) {
-              ch.field_a.e(var2, 0);
+              ch.field_a.drawWithOffsets(var2, 0);
               ch.field_a.f(var2, var3);
             }
-            Rasterizer.f(0, var1_int, bd.field_e, nh.field_P - var1_int);
+            Rasterizer.setClip(0, var1_int, bd.field_e, nh.field_P - var1_int);
             var2Lifetime1 = -var1_int + bd.field_e;
             for (var3Lifetime1 = var1_int; Rasterizer.clipBottom > var3Lifetime1; var3Lifetime1 = var3Lifetime1 + GameWorld.field_x.field_t) {
-              GameWorld.field_x.e(0, var3Lifetime1);
-              GameWorld.field_x.c(var2Lifetime1, var3Lifetime1);
+              GameWorld.field_x.drawWithOffsets(0, var3Lifetime1);
+              GameWorld.field_x.drawMirrored(var2Lifetime1, var3Lifetime1);
             }
             pa.a(-21189);
             return;
@@ -205,8 +205,8 @@ final class of {
           if (Rasterizer.height < var8 + var6 + 6) {
             var8 = -6 + (-var6 + Rasterizer.height);
           }
-          Rasterizer.c(var7, var8, 6 + var5_int, 6 + var6, this.field_j);
-          Rasterizer.b(var7 + 1, var8 + 1, var5_int + 4, var6 + 4, this.field_k);
+          Rasterizer.drawRectOutline(var7, var8, 6 + var5_int, 6 + var6, this.field_j);
+          Rasterizer.fillRect(var7 + 1, var8 + 1, var5_int + 4, var6 + 4, this.field_k);
           this.field_c.c(param0, var7 + 3, this.field_c.field_w + 3 + var8, this.field_j, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -390,8 +390,8 @@ final class of {
           if (Rasterizer.height < var13Lifetime1 - (-var10 - var6)) {
             var13Lifetime1 = -var6 - var10 + param2;
           }
-          Rasterizer.c(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_i);
-          Rasterizer.b(var12 + 1, var13Lifetime1 + 1, -2 + var9 + var5_int, var10 + var6 - 2, this.field_k);
+          Rasterizer.drawRectOutline(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_i);
+          Rasterizer.fillRect(var12 + 1, var13Lifetime1 + 1, -2 + var9 + var5_int, var10 + var6 - 2, this.field_k);
           this.field_c.a(param1, var12 + this.field_r, this.field_q + var13Lifetime1, var9, var10, this.field_j, -1, 0, param3, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

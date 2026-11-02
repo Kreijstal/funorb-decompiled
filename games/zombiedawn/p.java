@@ -47,14 +47,14 @@ final class p {
     final static void a(int param0) {
         if (param0 == 1) {
           if (sn.field_c != null) {
-            sn.field_c.a(-126);
+            sn.field_c.close(-126);
             sn.field_c = null;
           }
           return;
         }
         p.a(true);
         if (sn.field_c != null) {
-          sn.field_c.a(-126);
+          sn.field_c.close(-126);
           sn.field_c = null;
         }
     }

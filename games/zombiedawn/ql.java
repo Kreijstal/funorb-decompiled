@@ -32,7 +32,7 @@ final class ql extends pm {
           var4.writeShort(param3, (byte) 105);
           var4.writeByte(param2, 82);
           var4.writeShort(param0, (byte) 105);
-          var4.d(60, var4.position - var5);
+          var4.writeLengthPrefixByte(60, var4.position - var5);
           return;
         }
     }

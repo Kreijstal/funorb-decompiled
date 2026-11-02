@@ -85,7 +85,7 @@ final class fg extends al {
             DualLinkNode.field_k[0].e(var14 - 8, -4 + var15, 128);
             DualLinkNode.field_k[0].e(13 + var14, var15 + 14, 128);
             DualLinkNode.field_k[0].e(var14 + 41, var15 + 11, 128);
-            Rasterizer.c(var14 + 3, 14 + var15, 77, 47, 16777215);
+            Rasterizer.drawRectOutline(var14 + 3, 14 + var15, 77, 47, 16777215);
             Rasterizer.b(var14 + 4, 15 + var15, 75, 45, 10066431, 32);
             Rasterizer.a(var14 + 5, var15 + 16, 73, 43, 3355647, 32);
           } else {
@@ -152,13 +152,13 @@ final class fg extends al {
                               var18 = 3;
                               var17 = var5;
                               var19 = 3;
-                              Rasterizer.c(-var18 + var16, var17 - var19, cn.field_c[0].field_w + 2 * var18, var19 * 2 + cn.field_c[0].field_t, 0);
+                              Rasterizer.drawRectOutline(-var18 + var16, var17 - var19, cn.field_c[0].field_w + 2 * var18, var19 * 2 + cn.field_c[0].field_t, 0);
                               var18--;
                               var19--;
-                              Rasterizer.c(-var18 + var16, -var19 + var17, 2 * var18 + cn.field_c[0].field_w, 2 * var19 + cn.field_c[0].field_t, 16777215);
+                              Rasterizer.drawRectOutline(-var18 + var16, -var19 + var17, 2 * var18 + cn.field_c[0].field_w, 2 * var19 + cn.field_c[0].field_t, 16777215);
                               var19--;
                               var18--;
-                              Rasterizer.c(var16 - var18, -var19 + var17, var18 * 2 + cn.field_c[0].field_w, 2 * var19 + cn.field_c[0].field_t, 0);
+                              Rasterizer.drawRectOutline(var16 - var18, -var19 + var17, var18 * 2 + cn.field_c[0].field_w, 2 * var19 + cn.field_c[0].field_t, 0);
                               cn.field_c[0].b(var16, var17);
                               var4 = bj.field_q.a(gj.field_g[this.field_n][0], 195 + vh.field_b, 5 + var5, -170 + var3, 440, 16777215, 0, 0, 0, var2);
                             }

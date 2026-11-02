@@ -8,11 +8,11 @@ abstract class MouseWheelInput {
     static boolean[] field_a;
     private static String field_z;
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void attach(int param0, java.awt.Component param1);
 
-    abstract int a(int param0);
+    abstract int takeRotation(int param0);
 
-    abstract void a(java.awt.Component param0, byte param1);
+    abstract void detach(java.awt.Component param0, byte param1);
 
     public static void b(int param0) {
         field_a = null;

@@ -73,7 +73,7 @@ final class rn {
           var17.position = -(t.field_h * 8) - 7 + param0.length - (var3 - 1) * 3;
           j.field_a = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            j.field_a[var4Lifetime4] = var17.g(-1875);
+            j.field_a[var4Lifetime4] = var17.readUnsignedMedium(-1875);
             if (j.field_a[var4Lifetime4] == 0) {
               j.field_a[var4Lifetime4] = 1;
             }

@@ -150,7 +150,7 @@ final class te extends id {
                   var16 = wh.field_a[var8Lifetime1][-1 + var12];
                   var13 = var16;
                   if (this.field_P) {
-                    var13.c(-100 + (var5 - this.field_Y[var9Lifetime1]), var6 + this.field_W[var9Lifetime1]);
+                    var13.drawMirrored(-100 + (var5 - this.field_Y[var9Lifetime1]), var6 + this.field_W[var9Lifetime1]);
                   } else {
                     var16.b(var5 + this.field_Y[var9Lifetime1], var6 + this.field_W[var9Lifetime1]);
                   }
@@ -170,7 +170,7 @@ final class te extends id {
               if (!this.field_P) {
                 var9_ref_vn.b(var3_int, var4);
               } else {
-                var9_ref_vn.c(var3_int, var4);
+                var9_ref_vn.drawMirrored(var3_int, var4);
               }
             }
             for (var9Lifetime1Lifetime1 = 1; 3 > var9Lifetime1Lifetime1; var9Lifetime1Lifetime1 += 2) {
@@ -183,7 +183,7 @@ final class te extends id {
                   var17 = wh.field_a[var8Lifetime1Lifetime2][-1 + var12Lifetime1];
                   var13Lifetime1 = var17;
                   if (this.field_P) {
-                    var13Lifetime1.c(var5 - this.field_Y[var9Lifetime1Lifetime1] - 100, this.field_W[var9Lifetime1Lifetime1] + var6);
+                    var13Lifetime1.drawMirrored(var5 - this.field_Y[var9Lifetime1Lifetime1] - 100, this.field_W[var9Lifetime1Lifetime1] + var6);
                   } else {
                     var17.b(this.field_Y[var9Lifetime1Lifetime1] + var5, var6 + this.field_W[var9Lifetime1Lifetime1]);
                   }

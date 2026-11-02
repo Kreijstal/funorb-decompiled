@@ -205,7 +205,7 @@ final class hk extends WorldObject {
               var9 = tm.field_n[this.field_G];
               var10 = tm.field_i[this.field_G];
               var11 = 8 * var8Lifetime1 - var7Lifetime1 + (var10 + (var9 - 1));
-              tm.field_h[var11].c(-var6 + (var3_int + 24 * var7Lifetime1), var4 - (var5 - 24 * var8Lifetime1));
+              tm.field_h[var11].drawMirrored(-var6 + (var3_int + 24 * var7Lifetime1), var4 - (var5 - 24 * var8Lifetime1));
             }
           }
           return;

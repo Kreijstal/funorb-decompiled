@@ -3,7 +3,7 @@
  */
 final class n extends IntrusiveNode {
     int[] field_q;
-    op[] field_m;
+    AsyncRequest[] field_m;
     static java.awt.Frame field_p;
     int[] field_h;
     static int[] field_k;
@@ -11,7 +11,7 @@ final class n extends IntrusiveNode {
     int[] field_j;
     static String[] field_r;
     byte[][][] field_i;
-    op[] field_n;
+    AsyncRequest[] field_n;
     int field_o;
 
     public static void a(int param0) {

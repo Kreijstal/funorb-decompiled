@@ -232,7 +232,7 @@ final class dp implements io {
           if (150 <= LevelNavigation.field_x) {
             kh.field_a.e(var3 + 15, var4 + 10, var5);
           } else {
-            ti.field_g.d(var3, var4);
+            ti.field_g.drawHalfSize(var3, var4);
           }
           var6 = -125 + LevelNavigation.field_x;
           if (0 < var6) {
@@ -275,7 +275,7 @@ final class dp implements io {
           if (150 <= LevelNavigation.field_x) {
             kh.field_a.e(var3 + 15, var4 + 10, var5);
           } else {
-            ti.field_g.d(var3, var4);
+            ti.field_g.drawHalfSize(var3, var4);
           }
           var6Lifetime1 = -125 + LevelNavigation.field_x;
           if (0 < var6Lifetime1 &&
@@ -296,7 +296,7 @@ final class dp implements io {
           if (150 <= LevelNavigation.field_x) {
             kh.field_a.e(var3 + 15, var4 + 10, var5);
           } else {
-            ti.field_g.d(var3, var4);
+            ti.field_g.drawHalfSize(var3, var4);
           }
           var6Lifetime1 = -125 + LevelNavigation.field_x;
           if (0 < var6Lifetime1 &&

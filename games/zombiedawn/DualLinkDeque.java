@@ -12,36 +12,36 @@ final class DualLinkDeque {
           return null;
         }
         if (param0 >= 99) {
-          this.field_b = var2.field_i;
+          this.field_b = var2.secondaryNext;
           return var2;
         }
         this.a((byte) 86);
-        this.field_b = var2.field_i;
+        this.field_b = var2.secondaryNext;
         return var2;
     }
 
-    final DualLinkNode a(int param0) {
-        DualLinkNode var2 = this.field_a.field_i;
+    final DualLinkNode removeFirst(int param0) {
+        DualLinkNode var2 = this.field_a.secondaryNext;
         if (var2 != this.field_a) {
-          var2.c((byte) -50);
+          var2.unlinkSecondary((byte) -50);
           int var3 = 111 / ((38 - param0) / 57);
           return var2;
         }
         return null;
     }
 
-    final void a(DualLinkNode param0, byte param1) {
+    final void addLast(DualLinkNode param0, byte param1) {
         try {
-          if (null != param0.field_h) {
-            param0.c((byte) -58);
+          if (null != param0.secondaryPrevious) {
+            param0.unlinkSecondary((byte) -58);
           }
-          param0.field_h = this.field_a.field_h;
-          param0.field_i = this.field_a;
-          param0.field_h.field_i = param0;
+          param0.secondaryPrevious = this.field_a.secondaryPrevious;
+          param0.secondaryNext = this.field_a;
+          param0.secondaryPrevious.secondaryNext = param0;
           if (param1 > -89) {
             this.field_a = (DualLinkNode) null;
           }
-          param0.field_i.field_h = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ra.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -143,18 +143,18 @@ final class DualLinkDeque {
     final int a(boolean param0) {
         int var4 = ZombieDawn.field_J;
         int var2 = 0;
-        DualLinkNode var3 = this.field_a.field_i;
+        DualLinkNode var3 = this.field_a.secondaryNext;
         if (param0) {
           DualLinkDeque.e((byte) 21);
           while (this.field_a != var3) {
             var2++;
-            var3 = var3.field_i;
+            var3 = var3.secondaryNext;
           }
           return var2;
         }
         while (this.field_a != var3) {
           var2++;
-          var3 = var3.field_i;
+          var3 = var3.secondaryNext;
         }
         return var2;
     }
@@ -223,8 +223,8 @@ final class DualLinkDeque {
 
     public DualLinkDeque() {
         this.field_a = new DualLinkNode();
-        this.field_a.field_i = this.field_a;
-        this.field_a.field_h = this.field_a;
+        this.field_a.secondaryNext = this.field_a;
+        this.field_a.secondaryPrevious = this.field_a;
     }
 
     final void b(int param0) {
@@ -234,41 +234,41 @@ final class DualLinkDeque {
         if (param0 < 37) {
           this.field_b = (DualLinkNode) null;
           while (true) {
-            var5 = this.field_a.field_i;
+            var5 = this.field_a.secondaryNext;
             if (this.field_a == var5) {
               break;
             }
-            var5.c((byte) -122);
+            var5.unlinkSecondary((byte) -122);
           }
           this.field_b = null;
           return;
         }
         while (true) {
-          var4 = this.field_a.field_i;
+          var4 = this.field_a.secondaryNext;
           if (this.field_a == var4) {
             break;
           }
-          var4.c((byte) -122);
+          var4.unlinkSecondary((byte) -122);
         }
         this.field_b = null;
     }
 
     final DualLinkNode c(byte param0) {
-        DualLinkNode var2 = this.field_a.field_i;
+        DualLinkNode var2 = this.field_a.secondaryNext;
         if (param0 != 34) {
           this.field_a = (DualLinkNode) null;
           if (this.field_a == var2) {
             this.field_b = null;
             return null;
           }
-          this.field_b = var2.field_i;
+          this.field_b = var2.secondaryNext;
           return var2;
         }
         if (this.field_a == var2) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_i;
+        this.field_b = var2.secondaryNext;
         return var2;
     }
 

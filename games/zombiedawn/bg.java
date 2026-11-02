@@ -128,7 +128,7 @@ final class bg extends IntrusiveNode {
               dp.field_e.position = dp.field_e.position + 1;
               var9 = dp.field_e.position;
               ab.a(dh.field_e, pm.field_c, (byte) 108, dp.field_e, pj.field_p);
-              dp.field_e.d(param0 - 211, -var9 + dp.field_e.position);
+              dp.field_e.writeLengthPrefixByte(param0 - 211, -var9 + dp.field_e.position);
             } else {
               var9 = 0;
               dh.field_e.position = 0;
@@ -153,7 +153,7 @@ final class bg extends IntrusiveNode {
               }
               dp.field_e.writeTerminatedString(param0 + 23, var11_ref_StringLifetime4);
               ab.a(dh.field_e, pm.field_c, (byte) -109, dp.field_e, pj.field_p);
-              dp.field_e.g(57, -var10 + dp.field_e.position);
+              dp.field_e.writeLengthPrefixShort(57, -var10 + dp.field_e.position);
             }
             vl.a((byte) -46, -1);
             ic.field_T = oe.field_a;

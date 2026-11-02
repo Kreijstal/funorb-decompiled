@@ -40,7 +40,7 @@ final class gk extends WorldObject {
                   o.field_d[this.field_t].b(var3_int, var4);
                 }
               } else {
-                o.field_d[this.field_t].c(var3_int, var4);
+                o.field_d[this.field_t].drawMirrored(var3_int, var4);
               }
             } else {
               o.field_d[this.field_t].h(var3_int, var4, 2105376);
@@ -96,7 +96,7 @@ final class gk extends WorldObject {
         RuntimeException var3 = null;
         try {
           Zombie.field_Fb[param0] = param1;
-          Zombie.field_Fb[param0][-2 + Zombie.field_Fb[param0].length].a();
+          Zombie.field_Fb[param0][-2 + Zombie.field_Fb[param0].length].setAsRenderTarget();
           if (!ng.field_e) {
             Rasterizer.clear();
           }

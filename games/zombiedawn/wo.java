@@ -27,8 +27,8 @@ class wo extends Human {
           for (var3_int = 0; this.field_ub > var3_int; var3_int++) {
             var4 = param0.worldToScreenX(this.field_jb[var3_int], (byte) -59);
             var5 = param0.worldToScreenY(this.field_gb[var3_int], 0);
-            Rasterizer.b(-1 + var4, var5 - 1, 3, 3, 0);
-            Rasterizer.a(var4, var5, 65280);
+            Rasterizer.fillRect(-1 + var4, var5 - 1, 3, 3, 0);
+            Rasterizer.setPixel(var4, var5, 65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

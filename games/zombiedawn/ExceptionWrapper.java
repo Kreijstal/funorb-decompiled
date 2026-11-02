@@ -32,7 +32,7 @@ final class ExceptionWrapper implements Runnable {
           var5 = new wd();
           var5.field_x = param2;
           var5.field_A = param3;
-          var5.field_n = (long)param1;
+          var5.secondaryKey = (long)param1;
           var5.field_r = false;
           var5.field_v = 2;
           this.a(true, var5);
@@ -60,7 +60,7 @@ final class ExceptionWrapper implements Runnable {
 
     private final void a(boolean param0, wd param1) {
         synchronized (this.field_b) {
-          this.field_b.a(param1, (byte) -112);
+          this.field_b.addLast(param1, (byte) -112);
           this.field_k = this.field_k + 1;
           if (!param0) {
             String var5 = (String) null;
@@ -85,7 +85,7 @@ final class ExceptionWrapper implements Runnable {
           while (!this.field_l) {
             var2 = this.field_b;
             synchronized (var2) {
-              var7 = (wd) (this.field_b.a(-90));
+              var7 = (wd) (this.field_b.removeFirst(-90));
               if (var7 == null) {
                 try {
                   this.field_b.wait();
@@ -106,7 +106,7 @@ final class ExceptionWrapper implements Runnable {
               boolean decompiledFrameRemainder0 = true;
               if (2 != var7.field_v) {
                 if (var7.field_v == 3) {
-                  var7.field_A = var7.field_x.a(-65536, (int)var7.field_n);
+                  var7.field_A = var7.field_x.a(-65536, (int)var7.secondaryKey);
                   decompiledRegionSelector1 = 1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -114,7 +114,7 @@ final class ExceptionWrapper implements Runnable {
                   var7.field_q = false;
                 }
               } else {
-                var7.field_x.a((int)var7.field_n, var7.field_A, var7.field_A.length, (byte) -96);
+                var7.field_x.a((int)var7.secondaryKey, var7.field_A, var7.field_A.length, (byte) -96);
                 var7.field_q = false;
               }
               if (decompiledFrameRemainder0) {
@@ -194,7 +194,7 @@ final class ExceptionWrapper implements Runnable {
             }
             var6 = (wd) (this.field_b.c((byte) 34));
             while (var6 != null) {
-              if ((long)param0 == var6.field_n &&
+              if ((long)param0 == var6.secondaryKey &&
                 var6.field_x == param1 &&
                 var6.field_v == 2) {
                 var4.field_A = var6.field_A;
@@ -246,7 +246,7 @@ final class ExceptionWrapper implements Runnable {
         try {
           var4 = new wd();
           var4.field_r = false;
-          var4.field_n = (long)param2;
+          var4.secondaryKey = (long)param2;
           var4.field_x = param1;
           var4.field_v = 3;
           this.a(true, var4);
@@ -271,19 +271,19 @@ final class ExceptionWrapper implements Runnable {
     }
 
     ExceptionWrapper(PlatformTaskDispatcher param0) {
-        op var2 = null;
+        AsyncRequest var2 = null;
         this.field_b = new DualLinkDeque();
         this.field_l = false;
         this.field_k = 0;
         try {
-          var2 = param0.a(5, (Runnable) (this), true);
-          while (0 == var2.field_f) {
+          var2 = param0.startThread(5, (Runnable) (this), true);
+          while (0 == var2.status) {
             ld.a(10L, (byte) 105);
           }
-          if (2 == var2.field_f) {
+          if (2 == var2.status) {
             throw new RuntimeException();
           }
-          this.field_h = (Thread) (var2.field_d);
+          this.field_h = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -9,7 +9,7 @@ final class ao extends WorldObject {
     static String field_I;
     private String field_D;
     private PcmSampleStream field_H;
-    static op field_F;
+    static AsyncRequest field_F;
 
     final static HumanFactory a(String[] args, int param1) {
         HumanFactory var2 = null;
@@ -23,7 +23,7 @@ final class ao extends WorldObject {
           var2 = new HumanFactory(false);
           var2.field_g = args;
           if (param1 > -76) {
-            field_F = (op) null;
+            field_F = (AsyncRequest) null;
           }
           stackIn_3_0 = var2;
           return stackIn_3_0;

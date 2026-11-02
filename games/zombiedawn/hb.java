@@ -52,13 +52,13 @@ final class hb extends UiWidget {
           var11 = var7 - var5;
           var12 = (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var11 * var11)) / (double)var5)) + 128;
           var13 = var12 >= 256 ? var9 | var10 : (var12 * var9 & -16711936 | 16711680 & var12 * var10) >>> 8;
-          Rasterizer.b(var8, var7, this.field_E, var13);
+          Rasterizer.drawHorizontalLine(var8, var7, this.field_E, var13);
           var9Lifetime1 = 16711935 & param1;
           var10Lifetime1 = param1 & 65280;
-          Rasterizer.b(var8 - 2 * this.field_E, var7, this.field_E, var13);
+          Rasterizer.drawHorizontalLine(var8 - 2 * this.field_E, var7, this.field_E, var13);
           var13Lifetime1 = var12 < 256 ? (16711680 & var12 * var10Lifetime1 | -16711936 & var9Lifetime1 * var12) >>> 8 : var10Lifetime1 | var9Lifetime1;
-          Rasterizer.b(var8 + this.field_E, var7, this.field_E, var13Lifetime1);
-          Rasterizer.b(-this.field_E + var8, var7, this.field_E, var13Lifetime1);
+          Rasterizer.drawHorizontalLine(var8 + this.field_E, var7, this.field_E, var13Lifetime1);
+          Rasterizer.drawHorizontalLine(-this.field_E + var8, var7, this.field_E, var13Lifetime1);
         }
         pa.a(-21189);
         return var15;
@@ -154,7 +154,7 @@ final class hb extends UiWidget {
               var6 = Math.sqrt(1.0 - var6);
               var8 = 1.0 <= var6 ? 255 : (int)(var6 * 255.0);
             }
-            Rasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            Rasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         if (param0 >= -81) {

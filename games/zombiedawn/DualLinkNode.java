@@ -2,25 +2,25 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class DualLinkNode extends IntrusiveNode {
-    long field_n;
-    DualLinkNode field_i;
+    long secondaryKey;
+    DualLinkNode secondaryNext;
     static cg field_l;
     static volatile int field_j;
-    DualLinkNode field_h;
+    DualLinkNode secondaryPrevious;
     static String field_o;
     static Sprite[] field_k;
     static int field_m;
 
-    final void c(byte param0) {
-        if (null == this.field_h) {
+    final void unlinkSecondary(byte param0) {
+        if (null == this.secondaryPrevious) {
           return;
         }
-        this.field_h.field_i = this.field_i;
-        this.field_i.field_h = this.field_h;
-        this.field_i = null;
-        this.field_h = null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryNext = null;
+        this.secondaryPrevious = null;
         if (param0 >= -6) {
-          this.field_i = (DualLinkNode) null;
+          this.secondaryNext = (DualLinkNode) null;
         }
     }
 

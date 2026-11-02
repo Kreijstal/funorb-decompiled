@@ -178,9 +178,9 @@ final class i extends pn implements hh {
           int stackIn_12_0 = 0;
           Throwable decompiledCaughtException = null;
           if (ao.field_F == null) {
-            ao.field_F = jm.field_B.a(2, tm.field_o, ci.field_c);
+            ao.field_F = jm.field_B.connectSocket(2, tm.field_o, ci.field_c);
           }
-          if (ao.field_F.field_f == 0) {
+          if (ao.field_F.status == 0) {
             return false;
           }
           dupTemp$1 = pd.a(-22826);
@@ -189,11 +189,11 @@ final class i extends pn implements hh {
           if (!param1) {
             field_X = (boolean[]) null;
           }
-          if (1 != ao.field_F.field_f) {
+          if (1 != ao.field_F.status) {
             ic.field_T = jc.field_l;
           } else {
             try {
-              sn.field_c = new BufferedSocket((java.net.Socket) (ao.field_F.field_d), jm.field_B);
+              sn.field_c = new BufferedSocket((java.net.Socket) (ao.field_F.result), jm.field_B);
               var4 = fj.field_g;
               var5 = var4;
               dp.field_e.position = 0;

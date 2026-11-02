@@ -133,7 +133,7 @@ final class el implements io {
           var12 = (hf) (stackIn_4_0);
           if (var12 != null) {
           }
-          Rasterizer.b(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, this.field_b);
+          Rasterizer.fillRect(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, this.field_b);
           if (param0 != 16777215) {
             el.a(-79);
           }

@@ -65,7 +65,7 @@ final class rk {
             dp.field_e.writeTerminatedStringWithHeader((byte) -88, ia.field_b);
           }
           ab.a(dh.field_e, pm.field_c, (byte) -105, dp.field_e, pj.field_p);
-          dp.field_e.g(57, -var5_int + dp.field_e.position);
+          dp.field_e.writeLengthPrefixShort(57, -var5_int + dp.field_e.position);
           vl.a((byte) -46, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

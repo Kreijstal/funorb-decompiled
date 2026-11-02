@@ -41,11 +41,11 @@ final class jh {
           var2 = 1 / ((-61 - param0) / 57);
           for (var3 = 0; var3 < var1.field_l; var3++) {
             if (null != var5.field_n[var3] &&
-              var5.field_n[var3].field_f == 0) {
+              var5.field_n[var3].status == 0) {
               return false;
             }
             if (var5.field_m[var3] != null &&
-              var5.field_m[var3].field_f == 0) {
+              var5.field_m[var3].status == 0) {
               return false;
             }
           }

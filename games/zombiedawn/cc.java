@@ -312,7 +312,7 @@ final class cc {
           if (!this.field_g) {
             var3.b(8 + var2, 24 - this.field_o + nh.field_P);
           } else {
-            var3.d(var2 + 7, nh.field_P - (this.field_o - 24));
+            var3.drawHalfSize(var2 + 7, nh.field_P - (this.field_o - 24));
           }
           if (this.field_d) {
             var3.b(var2 + 8, nh.field_P - this.field_o + 24, 96 + ae.field_c[this.field_j]);
@@ -322,7 +322,7 @@ final class cc {
           if (!this.field_g) {
             var3.e(var2 + 8, nh.field_P - 56, this.field_o * 3);
           } else {
-            var3.d(7 + var2, this.field_o);
+            var3.drawHalfSize(7 + var2, this.field_o);
           }
         }
         if (param0 < 110) {

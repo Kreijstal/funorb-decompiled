@@ -1222,9 +1222,9 @@ final class ap extends al {
           } else {
             if (nh.field_P == 480) {
               if (this.field_x == 2) {
-                qk.field_Hb[3].e(0, 0);
+                qk.field_Hb[3].drawWithOffsets(0, 0);
               } else {
-                qk.field_Hb[2].e(0, 0);
+                qk.field_Hb[2].drawWithOffsets(0, 0);
               }
             } else {
               stackIn_23_0 = qk.field_Hb;
@@ -1241,9 +1241,9 @@ final class ap extends al {
           } else {
             if (nh.field_P == 480) {
               if (this.field_x != 2) {
-                qk.field_Hb[2].e(0, 0);
+                qk.field_Hb[2].drawWithOffsets(0, 0);
               } else {
-                qk.field_Hb[3].e(0, 0);
+                qk.field_Hb[3].drawWithOffsets(0, 0);
               }
             } else {
               stackIn_9_0 = qk.field_Hb;

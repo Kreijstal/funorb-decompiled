@@ -210,7 +210,7 @@ class qf {
                 field_j == null) {
                 field_j = new cp();
                 field_j.field_b = param0;
-                param0.a(field_q, (Runnable) ((Object) field_j), true);
+                param0.startThread(field_q, (Runnable) ((Object) field_j), true);
               }
               if (field_j != null) {
                 if (field_j.field_c[param2] != null) {

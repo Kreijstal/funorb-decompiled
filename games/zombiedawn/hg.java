@@ -38,8 +38,8 @@ final class hg {
             var2.h(-2, -2, 16777215);
             Rasterizer.h(4, 4, 0, 0, 540, 140);
           }
-          wc.field_Pb.a();
-          var1.d(0, 0);
+          wc.field_Pb.setAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           pa.a(-21189);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hg.F(" + param0 + ')');

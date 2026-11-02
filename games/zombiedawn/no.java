@@ -59,7 +59,7 @@ final class no extends WorldObject {
           Rasterizer.e(var8 - 1, var4, -var5 + var8 - 1, this.field_F + var4, var9);
           Rasterizer.e(var8 - 2, var4, var8 + (-var5 - 2), -2 + this.field_F + var4, var9);
           for (var10 = -3 + this.field_F + var4; var4 <= var10; var10 -= 7) {
-            Rasterizer.b(var7 + 2, var10, -3 + 2 * var6, var9);
+            Rasterizer.drawHorizontalLine(var7 + 2, var10, -3 + 2 * var6, var9);
           }
           pa.a(-21189);
           if (param0 <= -76) {

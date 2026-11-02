@@ -214,7 +214,7 @@ final class ih extends hp implements ok, hh {
           ia.field_e.a(this.field_P, 20 + (param2 + this.field_k), param0 - (-this.field_j - 15), this.field_i - 40, this.field_n, 16777215, -1, 1, 0, ia.field_e.field_I);
         }
         if (this.field_K != null) {
-          Rasterizer.b(10 + param2, param0 + 134, -20 + this.field_i, 4210752);
+          Rasterizer.drawHorizontalLine(10 + param2, param0 + 134, -20 + this.field_i, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

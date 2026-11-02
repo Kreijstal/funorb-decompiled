@@ -29,7 +29,7 @@ final class k extends vf {
         int var12 = 0;
         int var13 = 0;
         try {
-          Rasterizer.c(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, 10197915);
+          Rasterizer.drawRectOutline(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, 10197915);
           if (param1) {
             stackIn_6_0 = (((an) (param3)).field_x) ? 1 : 0;
           } else {

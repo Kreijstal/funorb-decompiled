@@ -124,7 +124,7 @@ final class se extends qg {
           if (jl.field_u == null) {
             return;
           }
-          jl.field_u.a(param0 + 3012, (java.awt.Component) ((Object) param1));
+          jl.field_u.attach(param0 + 3012, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

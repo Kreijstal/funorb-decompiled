@@ -18,7 +18,7 @@ final class GameWorld {
     static Sprite field_x;
     private IntrusiveDeque field_ob;
     private int field_Z;
-    static op field_O;
+    static AsyncRequest field_O;
     int field_r;
     private qj field_b;
     int field_f;
@@ -758,7 +758,7 @@ final class GameWorld {
               if (var7.i((byte) -126)) {
                 var7.field_qb = false;
                 if (var7.a(param1, param4, param2, param0, false)) {
-                  this.field_W.a(var7, (byte) -123);
+                  this.field_W.addLast(var7, (byte) -123);
                   var7.r(-31340);
                 }
               }
@@ -821,7 +821,7 @@ final class GameWorld {
         try {
           this.field_lb.addFirst(0, new mm(param0, param2));
           if (param1 != 54) {
-            field_O = (op) null;
+            field_O = (AsyncRequest) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hi.P(" + param0 + ',' + param1 + ',' + param2 + ')');
@@ -1398,7 +1398,7 @@ final class GameWorld {
         var7 = ZombieDawn.field_J;
         try {
           param0.d(0);
-          param0.c((byte) -48);
+          param0.unlinkSecondary((byte) -48);
           param0.unlink(-27598);
           this.field_gb.d((byte) -106);
           if (!param1) {
@@ -2001,7 +2001,7 @@ final class GameWorld {
               if (var2 instanceof Zombie &&
                 ((Zombie) (var2)).getY(237239984) < 200) {
                 var2.unlink(-27598);
-                ((DualLinkNode) (var2)).c((byte) -10);
+                ((DualLinkNode) (var2)).unlinkSecondary((byte) -10);
                 this.field_i.addFirst(0, new ao(((Zombie) (var2)).getX(true), 200, fl.field_e, false));
                 var4 = fl.field_e;
                 this.field_g = this.field_g - var4 * this.field_K;
@@ -2296,9 +2296,9 @@ final class GameWorld {
               }
               if (stackIn_146_0 <= stackIn_146_1 && (!((bd.field_e * 2) < var5_int) ||
                 var14 != 0)) {
-                Rasterizer.e(-1 + var5_int, 0, 2 * nh.field_P, 255);
-                Rasterizer.e(var5_int, 0, 2 * nh.field_P, 255);
-                Rasterizer.e(var5_int + 1, 0, nh.field_P * 2, 255);
+                Rasterizer.drawVerticalLine(-1 + var5_int, 0, 2 * nh.field_P, 255);
+                Rasterizer.drawVerticalLine(var5_int, 0, 2 * nh.field_P, 255);
+                Rasterizer.drawVerticalLine(var5_int + 1, 0, nh.field_P * 2, 255);
               }
               var4_int += 128;
             }
@@ -2320,9 +2320,9 @@ final class GameWorld {
                 }
                 if (stackIn_180_0 <= stackIn_180_1 && (!(var5_intLifetime2 > (2 * nh.field_P)) ||
                   var14 != 0)) {
-                  Rasterizer.b(0, -1 + var5_intLifetime2, bd.field_e * 2, 255);
-                  Rasterizer.b(0, var5_intLifetime2, 2 * bd.field_e, 255);
-                  Rasterizer.b(0, 1 + var5_intLifetime2, bd.field_e * 2, 255);
+                  Rasterizer.drawHorizontalLine(0, -1 + var5_intLifetime2, bd.field_e * 2, 255);
+                  Rasterizer.drawHorizontalLine(0, var5_intLifetime2, 2 * bd.field_e, 255);
+                  Rasterizer.drawHorizontalLine(0, 1 + var5_intLifetime2, bd.field_e * 2, 255);
                 }
                 var4_int += 128;
               }
@@ -2355,7 +2355,7 @@ final class GameWorld {
               } else {
                 var5_intLifetime1 = this.field_j;
               }
-              Rasterizer.c(var4_int, var5_intLifetime1, var6_int, var7_int, 16777215);
+              Rasterizer.drawRectOutline(var4_int, var5_intLifetime1, var6_int, var7_int, 16777215);
               Rasterizer.b(var4_int + 1, 1 + var5_intLifetime1, var6_int - 2, -2 + var7_int, 10066431, 32);
               Rasterizer.a(2 + var4_int, 2 + var5_intLifetime1, -4 + var6_int, -4 + var7_int, 3355647, 32);
             }
@@ -2404,15 +2404,15 @@ final class GameWorld {
               var12 = (int)(var13 * (float)var12 + (-var13 + 1.0f) * (float)(nh.field_P - 5));
               System.out.println("lit area: " + var9 + "," + var11 + "," + (-var9 + var10_int) + "," + (-var11 + var12));
             }
-            Rasterizer.f(5, 5, -5 + bd.field_e, -5 + nh.field_P);
-            Rasterizer.b(5, 5, -10 + bd.field_e, var11 - 5, 0);
-            Rasterizer.b(5, var12, bd.field_e - 10, nh.field_P + (-5 - var12), 0);
-            Rasterizer.b(5, var11, -5 + var9, -var11 + var12, 0);
-            Rasterizer.b(var10_int, var11, -5 + bd.field_e - var10_int, -var11 + var12, 0);
+            Rasterizer.setClip(5, 5, -5 + bd.field_e, -5 + nh.field_P);
+            Rasterizer.fillRect(5, 5, -10 + bd.field_e, var11 - 5, 0);
+            Rasterizer.fillRect(5, var12, bd.field_e - 10, nh.field_P + (-5 - var12), 0);
+            Rasterizer.fillRect(5, var11, -5 + var9, -var11 + var12, 0);
+            Rasterizer.fillRect(var10_int, var11, -5 + bd.field_e - var10_int, -var11 + var12, 0);
           }
           if (this.field_ib == -1 ||
             this.field_N > 0) {
-            Rasterizer.f(-this.field_N + (vh.field_b + 640), 0, bd.field_e, nh.field_P);
+            Rasterizer.setClip(-this.field_N + (vh.field_b + 640), 0, bd.field_e, nh.field_P);
             if (this.field_h == -1) {
               var5.a(kb.field_g[this.field_q], bd.field_d, 280, 16777215, 0);
             }
@@ -2538,8 +2538,8 @@ final class GameWorld {
               return;
             }
             if (null == var7_ref_qh) {
-              var6_ref_kd.c((byte) -68);
-              var5.a(var6_ref_kd, (byte) -128);
+              var6_ref_kd.unlinkSecondary((byte) -68);
+              var5.addLast(var6_ref_kd, (byte) -128);
             } else {
               var4_int = 0;
             }
@@ -2655,8 +2655,8 @@ final class GameWorld {
               }
               var13Lifetime1 = (Zombie) (var5.c((byte) 34));
               while (var13Lifetime1 != null) {
-                var13Lifetime1.c((byte) -85);
-                this.field_W.a(var13Lifetime1, (byte) -109);
+                var13Lifetime1.unlinkSecondary((byte) -85);
+                this.field_W.addLast(var13Lifetime1, (byte) -109);
                 var13Lifetime1 = (Zombie) (var5.a((byte) 122));
               }
               return;
@@ -2805,7 +2805,7 @@ final class GameWorld {
           if (param0 == 0) {
             if (param3) {
               var8.r(param2 ^ -31320);
-              this.field_W.a(var8, (byte) -126);
+              this.field_W.addLast(var8, (byte) -126);
               if (param4 != null) {
                 var8.a(this.navigation.a(true, var6_int, param4.y, param4.x, var7), true);
               }
@@ -3269,7 +3269,7 @@ final class GameWorld {
                         var8_ref_kd.field_fb = -1;
                         var8_ref_kd.field_qb = false;
                         var8_ref_kd.field_cb = false;
-                        var8_ref_kd.c((byte) -20);
+                        var8_ref_kd.unlinkSecondary((byte) -20);
                         var8_ref_kd.q((byte) -114);
                         var8_ref_kd.a(this.navigation.a(true, var8_ref_kd.getX(true), 120, this.navigation.width - 1, var8_ref_kd.getY(237239984)), true);
                         this.field_gb.a(true);
@@ -3854,10 +3854,10 @@ final class GameWorld {
           var5 = sg.field_jb;
           this.field_V = new Sprite(var5.b(var4_ref), var5.field_I + var5.field_x);
           this.field_t = new Sprite(12 + this.field_V.field_w, 12 + this.field_V.field_t);
-          this.field_V.a();
+          this.field_V.setAsRenderTarget();
           this.field_N = 640;
           var5.a(var4_ref, this.field_V.field_w / 2, this.field_V.field_t - var5.field_x, 2, -1);
-          this.field_t.a();
+          this.field_t.setAsRenderTarget();
           this.field_V.h(6, 6, 16777215);
           Rasterizer.h(4, 4, 0, 0, Rasterizer.width, Rasterizer.height);
           this.field_V.h(6, 6, 0);
@@ -4390,7 +4390,7 @@ final class GameWorld {
           if (param1 != -2) {
             this.c(-111, -8, -118);
           }
-          this.field_W.a(param0, (byte) -105);
+          this.field_W.addLast(param0, (byte) -105);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

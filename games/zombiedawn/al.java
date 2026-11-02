@@ -98,17 +98,17 @@ class al {
                     break;
                 }
               }
-              qk.field_Hb[0].e(0, 0);
+              qk.field_Hb[0].drawWithOffsets(0, 0);
               if (var5 == 0) {
                 return;
               }
             }
-            qk.field_Hb[4].e(0, 0);
+            qk.field_Hb[4].drawWithOffsets(0, 0);
             if (var5 == 0) {
               return;
             }
           }
-          Rasterizer.b(0, 0, 640, 480, 65793);
+          Rasterizer.fillRect(0, 0, 640, 480, 65793);
           return;
         }
         regionExit3: {
@@ -167,7 +167,7 @@ class al {
               break regionExit3;
             }
           }
-          Rasterizer.b(0, 0, bd.field_e, nh.field_P, 65793);
+          Rasterizer.fillRect(0, 0, bd.field_e, nh.field_P, 65793);
         }
     }
 
@@ -188,7 +188,7 @@ class al {
         if (11 == var6Lifetime1) {
           var6Lifetime1 = 1;
         }
-        lf.field_h.a();
+        lf.field_h.setAsRenderTarget();
         qk.field_Jb[var6Lifetime1].b((byte) 119);
         cn.field_f.b(64);
         int var7 = -57 / ((param1 + 72) / 47);
@@ -315,7 +315,7 @@ class al {
             var15 = (var8 - var14 >> 1) + var5;
             sg.field_jb.c(var7, var15, (var12 >> 1) + (ca.field_b[0].field_q + sg.field_jb.field_I + var4), var10, 0);
             var15 = var15 + (ff.field_b + 8);
-            Rasterizer.c(var15, var9 / 2 + var4 - 1, 129, 2, var10);
+            Rasterizer.drawRectOutline(var15, var9 / 2 + var4 - 1, 129, 2, var10);
             if (var6 == 12) {
               stackIn_65_0 = ge.field_c;
             } else {
@@ -327,8 +327,8 @@ class al {
             if (ad.field_g == null ||
               ad.field_g[0] == null ||
               ad.field_g[0][0] == null) {
-              Rasterizer.b(-1 + (var16 >> 1) + var15, 3 + var4, 3, -6 + var9, 6684672);
-              Rasterizer.c(-1 + (var16 >> 1) + var15, var4 + 3, 3, -6 + var9, 11141120);
+              Rasterizer.fillRect(-1 + (var16 >> 1) + var15, 3 + var4, 3, -6 + var9, 6684672);
+              Rasterizer.drawRectOutline(-1 + (var16 >> 1) + var15, var4 + 3, 3, -6 + var9, 11141120);
               decompiledFrameRemainder0 = (var22 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -338,9 +338,9 @@ class al {
               if (param2) {
                 var18 = (int)((tp.field_p >> 3) % 4L) + 14;
               }
-              Rasterizer.b(var15, var9 / 2 + var4 - 1, 129, 6, 6815744);
-              Rasterizer.b(var15, -1 + var9 / 2 + var4, (var16 >> 1) + 1, 6, 13373713);
-              Rasterizer.c(var15, -1 + (var4 + var9 / 2), 129, 6, var10);
+              Rasterizer.fillRect(var15, var9 / 2 + var4 - 1, 129, 6, 6815744);
+              Rasterizer.fillRect(var15, -1 + var9 / 2 + var4, (var16 >> 1) + 1, 6, 13373713);
+              Rasterizer.drawRectOutline(var15, -1 + (var4 + var9 / 2), 129, 6, var10);
               Rasterizer.e(var15, var4 + (var9 / 2 - 1), 129, 6, 1, var10);
               stackIn_79_0 = ad.field_g[var17][var18];
               stackIn_79_1 = 0;

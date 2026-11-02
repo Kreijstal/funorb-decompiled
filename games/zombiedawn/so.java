@@ -8,7 +8,7 @@ final class so {
 
     final static Sprite a(Sprite param0) {
         Sprite var1 = new Sprite(param0.field_r, param0.field_q);
-        var1.a();
+        var1.setAsRenderTarget();
         Rasterizer.clear();
         param0.h(0, 0, 16777215);
         so.a(12303291);
@@ -201,7 +201,7 @@ final class so {
             }
           }
         }
-        var5.e(0, 0);
+        var5.drawWithOffsets(0, 0);
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {

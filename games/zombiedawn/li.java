@@ -4,15 +4,15 @@
 import java.io.*;
 
 final class li implements Runnable {
-    private op field_j;
-    private op field_b;
+    private AsyncRequest field_j;
+    private AsyncRequest field_b;
     private PlatformTaskDispatcher field_g;
     static v field_i;
     private DataInputStream field_e;
     static String field_f;
     private PacketBuffer field_a;
     private java.net.URL field_d;
-    private op field_k;
+    private AsyncRequest field_k;
     static v[] field_h;
     private int field_c;
 
@@ -35,12 +35,12 @@ final class li implements Runnable {
         boolean decompiledFrameRemainder1 = true;
         if (0 == this.field_c) {
           if (null == this.field_b) {
-            this.field_b = this.field_g.a(7645, this.field_d);
+            this.field_b = this.field_g.openUrlStream(7645, this.field_d);
           }
-          if (0 == this.field_b.field_f) {
+          if (0 == this.field_b.status) {
             return false;
           }
-          if (this.field_b.field_f != 1) {
+          if (this.field_b.status != 1) {
             this.field_b = null;
             decompiledFrameRemainder1 = false;
           }
@@ -49,12 +49,12 @@ final class li implements Runnable {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_c == 1) {
             if (null == this.field_k) {
-              this.field_k = this.field_g.a(2, this.field_d.getHost(), 443);
+              this.field_k = this.field_g.connectSocket(2, this.field_d.getHost(), 443);
             }
-            if (this.field_k.field_f == 0) {
+            if (this.field_k.status == 0) {
               return false;
             }
-            if (this.field_k.field_f != 1) {
+            if (this.field_k.status != 1) {
               this.field_k = null;
               decompiledFrameRemainder0 = false;
             }
@@ -63,10 +63,10 @@ final class li implements Runnable {
             if (null == this.field_e) {
               try {
                 if (this.field_c == 0) {
-                  this.field_e = (DataInputStream) (this.field_b.field_d);
+                  this.field_e = (DataInputStream) (this.field_b.result);
                 }
                 if (this.field_c == 1) {
-                  var4 = (java.net.Socket) (this.field_k.field_d);
+                  var4 = (java.net.Socket) (this.field_k.result);
                   var4.setSoTimeout(10000);
                   var3 = var4.getOutputStream();
                   var3.write(17);
@@ -86,12 +86,12 @@ final class li implements Runnable {
               this.field_g = (PlatformTaskDispatcher) null;
             }
             if (null == this.field_j) {
-              this.field_j = this.field_g.a(5, (Runnable) (this), true);
+              this.field_j = this.field_g.startThread(5, (Runnable) (this), true);
             }
-            if (this.field_j.field_f == 0) {
+            if (this.field_j.status == 0) {
               return false;
             }
-            if (this.field_j.field_f == 1) {
+            if (this.field_j.status == 1) {
               return false;
             }
             this.finalize();
@@ -144,7 +144,7 @@ final class li implements Runnable {
               if (0 < pl.field_t[var7].field_H) {
                 var8 = param1.worldToScreenX(pl.field_t[var7].getX(true), (byte) -108) + 4;
                 var9 = 4 + param1.worldToScreenY(pl.field_t[var7].getY(237239984), 0);
-                Rasterizer.a(var8, var9, 0);
+                Rasterizer.setPixel(var8, var9, 0);
               }
             }
           }
@@ -241,18 +241,18 @@ final class li implements Runnable {
 
     protected final void finalize() {
         if (this.field_b != null) {
-          if (null != this.field_b.field_d) {
+          if (null != this.field_b.result) {
             try {
-              ((DataInputStream) (this.field_b.field_d)).close();
+              ((DataInputStream) (this.field_b.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_b = null;
         }
         if (null != this.field_k) {
-          if (this.field_k.field_d != null) {
+          if (this.field_k.result != null) {
             try {
-              ((java.net.Socket) (this.field_k.field_d)).close();
+              ((java.net.Socket) (this.field_k.result)).close();
             } catch (Exception exception) {
             }
           }

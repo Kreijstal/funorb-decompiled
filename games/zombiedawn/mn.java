@@ -188,7 +188,7 @@ final class mn extends IntrusiveNode {
                   this.field_i.field_b[var3_int][var4]) {
                   for (var5_int = 0; 2 > var5_int; var5_int++) {
                     var6_ref_ek = ip.a(var4 * 24, 24 * var3_int, 100, true);
-                    this.field_n.a(var6_ref_ek, (byte) -116);
+                    this.field_n.addLast(var6_ref_ek, (byte) -116);
                     Js5Archive.field_e.zombies.addLast(var6_ref_ek, -122);
                   }
                 }
@@ -284,11 +284,11 @@ final class mn extends IntrusiveNode {
           var4 = var2.field_t;
           hk.i(1584);
           kh.field_a = new Sprite(var3, 3 * var4 / 4);
-          kh.field_a.a();
-          var2.e(0, 0);
+          kh.field_a.setAsRenderTarget();
+          var2.drawWithOffsets(0, 0);
           bh.field_j = new Sprite(var3, -kh.field_a.field_t + var4);
-          bh.field_j.a();
-          var2.e(0, -kh.field_a.field_t);
+          bh.field_j.setAsRenderTarget();
+          var2.drawWithOffsets(0, -kh.field_a.field_t);
           bh.field_j.field_x = kh.field_a.field_t;
           pa.a(-21189);
         } catch (RuntimeException runtimeException) {

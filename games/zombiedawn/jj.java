@@ -80,7 +80,7 @@ final class jj extends WorldObject {
         var2 = ZombieDawn.field_J;
         try {
           Camera.field_o = new Sprite(512, 512);
-          Camera.field_o.a();
+          Camera.field_o.setAsRenderTarget();
           for (var1_int = 256; var1_int > 0; var1_int--) {
             Rasterizer.g(256, 256, var1_int, -var1_int + 256);
           }

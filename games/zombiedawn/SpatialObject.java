@@ -34,7 +34,7 @@ class SpatialObject extends DualLinkNode {
           rf.a((java.awt.Component) ((Object) param1), -116);
           SpatialGrid.a(3490, (java.awt.Component) ((Object) param1));
           if (null != jl.field_u) {
-            jl.field_u.a((java.awt.Component) ((Object) param1), (byte) -36);
+            jl.field_u.detach((java.awt.Component) ((Object) param1), (byte) -36);
           }
           if (param0 == -46) {
             return;

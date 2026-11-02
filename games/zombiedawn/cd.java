@@ -639,7 +639,7 @@ final class cd extends Sprite {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void drawMirrored(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -785,7 +785,7 @@ final class cd extends Sprite {
         }
     }
 
-    final void e(int param0, int param1) {
+    final void drawWithOffsets(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -981,7 +981,7 @@ final class cd extends Sprite {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;

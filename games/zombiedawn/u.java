@@ -237,10 +237,10 @@ final class u {
             this.field_i[this.field_n].b(var3, nh.field_P - (this.field_l >> 4));
             return;
           }
-          this.field_i[this.field_n].c(var3, -(this.field_l >> 4) + nh.field_P);
+          this.field_i[this.field_n].drawMirrored(var3, -(this.field_l >> 4) + nh.field_P);
           return;
         }
-        this.field_i[this.field_n].c(this.field_j, nh.field_P - (this.field_l >> 4));
+        this.field_i[this.field_n].drawMirrored(this.field_j, nh.field_P - (this.field_l >> 4));
         if (640 >= bd.field_e) {
           return;
         }

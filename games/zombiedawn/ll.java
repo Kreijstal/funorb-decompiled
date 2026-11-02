@@ -86,18 +86,18 @@ abstract class ll {
           }
           var9Lifetime1 = var17.field_t;
           hk.i(1584);
-          var17.a();
+          var17.setAsRenderTarget();
           Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.a();
-          var17.e(0, 0);
+          var18.setAsRenderTarget();
+          var17.drawWithOffsets(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.a();
-          var17.e(var9Lifetime1 - var17.field_w, 0);
+          var11.setAsRenderTarget();
+          var17.drawWithOffsets(var9Lifetime1 - var17.field_w, 0);
           var12 = new Sprite(var17.field_w - 2 * var9Lifetime1, var9Lifetime1);
-          var12.a();
-          var17.e(-var9Lifetime1, 0);
+          var12.setAsRenderTarget();
+          var17.drawWithOffsets(-var9Lifetime1, 0);
           pa.a(-21189);
           ia.field_d = new Sprite[]{var15, var12, var11};
           if (param3 != -19041) {

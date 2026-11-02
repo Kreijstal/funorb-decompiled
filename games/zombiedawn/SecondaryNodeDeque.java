@@ -49,17 +49,17 @@ final class SecondaryNodeDeque implements Iterable {
     }
 
     final DualLinkNode a(int param0) {
-        DualLinkNode var2 = this.field_c.field_i;
+        DualLinkNode var2 = this.field_c.secondaryNext;
         if (param0 < 46) {
           field_d = 104;
           if (var2 != this.field_c) {
-            var2.c((byte) -34);
+            var2.unlinkSecondary((byte) -34);
             return var2;
           }
           return null;
         }
         if (var2 != this.field_c) {
-          var2.c((byte) -34);
+          var2.unlinkSecondary((byte) -34);
           return var2;
         }
         return null;
@@ -67,17 +67,17 @@ final class SecondaryNodeDeque implements Iterable {
 
     final void a(int param0, DualLinkNode param1) {
         try {
-          if (param1.field_h != null) {
-            param1.c((byte) -12);
+          if (param1.secondaryPrevious != null) {
+            param1.unlinkSecondary((byte) -12);
           }
-          param1.field_i = this.field_c;
-          param1.field_h = this.field_c.field_h;
-          param1.field_h.field_i = param1;
+          param1.secondaryNext = this.field_c;
+          param1.secondaryPrevious = this.field_c.secondaryPrevious;
+          param1.secondaryPrevious.secondaryNext = param1;
           if (param0 != 0) {
             byte[] var4 = (byte[]) null;
             SecondaryNodeDeque.a(-82, 33, (byte[]) null);
           }
-          param1.field_i.field_h = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ii.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

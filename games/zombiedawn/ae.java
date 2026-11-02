@@ -133,7 +133,7 @@ final class ae {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          op var4 = null;
+          AsyncRequest var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -178,12 +178,12 @@ final class ae {
               stackIn_15_3 = null;
               stackIn_15_6 = i.field_U;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_h).append("&v2=").append(PlatformTaskDispatcher.field_g).append("&e=").append(var10).toString()));
-            while (var4.field_f == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).openUrlStream(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_h).append("&v2=").append(PlatformTaskDispatcher.field_g).append("&e=").append(var10).toString()));
+            while (var4.status == 0) {
               ld.a(1L, (byte) 62);
             }
-            if (var4.field_f == 1) {
-              var5 = (DataInputStream) (var4.field_d);
+            if (var4.status == 1) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

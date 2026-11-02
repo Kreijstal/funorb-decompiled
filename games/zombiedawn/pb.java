@@ -129,8 +129,8 @@ final class pb extends IntrusiveNode {
         RuntimeException var5 = null;
         var10 = ZombieDawn.field_J;
         try {
-          Rasterizer.b(param0, param2, param4 + 1, 10000536);
-          Rasterizer.b(param0, param2 + param1, 1 + param4, 12105912);
+          Rasterizer.drawHorizontalLine(param0, param2, param4 + 1, 10000536);
+          Rasterizer.drawHorizontalLine(param0, param2 + param1, 1 + param4, 12105912);
           var5_int = 1;
           var6 = param1;
           if (Rasterizer.clipTop > var5_int + param2) {

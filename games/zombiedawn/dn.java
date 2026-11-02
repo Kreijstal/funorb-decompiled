@@ -123,18 +123,18 @@ final class dn extends pa {
             var3 = 0;
             for (var4 = 0; var4 < var17.field_l; var4++) {
               if (null != var13.field_n[var4]) {
-                if (var13.field_n[var4].field_f == 2) {
+                if (var13.field_n[var4].status == 2) {
                   var13.field_q[var4] = -5;
                 }
-                if (var13.field_n[var4].field_f == 0) {
+                if (var13.field_n[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (var13.field_m[var4] != null) {
-                if (var13.field_m[var4].field_f == 2) {
+                if (var13.field_m[var4].status == 2) {
                   var13.field_q[var4] = -6;
                 }
-                if (var13.field_m[var4].field_f == 0) {
+                if (var13.field_m[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -151,19 +151,19 @@ final class dn extends pa {
                 try {
                   var6_int = var17.field_h[var5];
                   if (var6_int == 0) {
-                    var15 = (java.lang.reflect.Field) (var17.field_n[var5].field_d);
+                    var15 = (java.lang.reflect.Field) (var17.field_n[var5].result);
                     var8 = var15.getInt((Object) null);
                     param0.writeByte(0, 64);
                     param0.writeInt(102, var8);
                   } else {
                     if (var6_int == 1) {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_n[var5].field_d);
+                      var16_ref = (java.lang.reflect.Field) (var17.field_n[var5].result);
                       var19 = var16_ref;
                       var19.setInt((Object) null, var17.field_j[var5]);
                       param0.writeByte(0, 122);
                     } else {
                       if (var6_int == 2) {
-                        var26 = (java.lang.reflect.Field) (var17.field_n[var5].field_d);
+                        var26 = (java.lang.reflect.Field) (var17.field_n[var5].result);
                         var8 = var26.getModifiers();
                         param0.writeByte(0, 29);
                         param0.writeInt(73, var8);
@@ -171,7 +171,7 @@ final class dn extends pa {
                     }
                   }
                   if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var17.field_m[var5].field_d);
+                    var28 = (java.lang.reflect.Method) (var17.field_m[var5].result);
                     var25 = var17.field_i[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var25.length > var10_int; var10_int++) {
@@ -192,7 +192,7 @@ final class dn extends pa {
                     }
                   } else {
                     if (var6_int == 4) {
-                      var27 = (java.lang.reflect.Method) (var17.field_m[var5].field_d);
+                      var27 = (java.lang.reflect.Method) (var17.field_m[var5].result);
                       var8Lifetime1 = var27.getModifiers();
                       param0.writeByte(0, -84);
                       param0.writeInt(69, var8Lifetime1);

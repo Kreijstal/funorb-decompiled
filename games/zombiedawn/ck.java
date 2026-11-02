@@ -122,12 +122,12 @@ final class ck extends IntrusiveNode {
           if (null == sn.field_c) {
             return false;
           }
-          int var2_int = sn.field_c.b((byte) -109);
+          int var2_int = sn.field_c.available((byte) -109);
           if (var2_int > 0) {
             if (-fj.field_g.position + param1 < var2_int) {
               var2_int = -fj.field_g.position + param1;
             }
-            sn.field_c.a(fj.field_g.position, var2_int, fj.field_g.payload, 0);
+            sn.field_c.readFully(fj.field_g.position, var2_int, fj.field_g.payload, 0);
             pi.field_i = pd.a(-22826);
             fj.field_g.position = fj.field_g.position + var2_int;
             if (!(fj.field_g.position >= param1)) {

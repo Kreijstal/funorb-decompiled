@@ -61,8 +61,8 @@ final class di extends hp implements hh {
             var18.field_o = param0.readInt(102);
             var18.field_i = new byte[var18.field_l][][];
             var18.field_q = new int[var18.field_l];
-            var18.field_m = new op[var18.field_l];
-            var18.field_n = new op[var18.field_l];
+            var18.field_m = new AsyncRequest[var18.field_l];
+            var18.field_n = new AsyncRequest[var18.field_l];
             if (param1 != 30) {
               return;
             }

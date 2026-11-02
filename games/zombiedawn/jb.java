@@ -368,7 +368,7 @@ final class jb implements io {
 
     final static void a(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
-        op var4 = null;
+        AsyncRequest var4 = null;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -381,11 +381,11 @@ final class jb implements io {
         try {
           var3_int = -100 % ((62 - param0) / 39);
           while (true) {
-            var4 = param2.a(param1, (byte) 52);
-            while (var4.field_f == 0) {
+            var4 = param2.requestFrame(param1, (byte) 52);
+            while (var4.status == 0) {
               ld.a(10L, (byte) 115);
             }
-            if (var4.field_f != 1) {
+            if (var4.status != 1) {
               ld.a(100L, (byte) 70);
               continue;
             }

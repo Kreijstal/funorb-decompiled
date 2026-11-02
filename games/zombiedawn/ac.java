@@ -157,7 +157,7 @@ final class ac extends al {
             }
             ExceptionWrapper.field_a = Zombie.field_Db;
             this.a(-1, (byte) -115);
-            cc.field_k.a();
+            cc.field_k.setAsRenderTarget();
             Rasterizer.h(3, 3, 0, 0, 640, 341);
             cn.field_f.b(-124);
             qn.field_b = 0;
@@ -297,7 +297,7 @@ final class ac extends al {
         if (param1 == bn.field_i &&
           !this.field_b.field_j) {
           if (-1 != hn.field_q[param1]) {
-            Human.field_tb.c(-20 + vh.field_b + qg.field_a[param1], param3 + id.field_M + to.field_c[param1] + 17);
+            Human.field_tb.drawMirrored(-20 + vh.field_b + qg.field_a[param1], param3 + id.field_M + to.field_c[param1] + 17);
           }
           if (pd.field_a[param1] != -1 &&
             this.a(param1 + 3, -1, 117)) {
@@ -661,7 +661,7 @@ final class ac extends al {
     private final void a(int param0, byte param1) {
         int var3 = -9 / ((param1 + 11) / 63);
         cc.field_k = new Sprite(640, 341);
-        cc.field_k.a();
+        cc.field_k.setAsRenderTarget();
         Rasterizer.clear();
         this.e(-122, 0);
         cn.field_f.b(13);

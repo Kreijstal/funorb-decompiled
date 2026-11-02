@@ -104,7 +104,7 @@ abstract class pn extends ei {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            Rasterizer.b(param0 + var10, var8, var11 - var10, var9);
+            Rasterizer.drawHorizontalLine(param0 + var10, var8, var11 - var10, var9);
           }
           var8++;
           var7++;
@@ -120,8 +120,8 @@ abstract class pn extends ei {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          Rasterizer.b(param0, var8Lifetime1, 6, var9Lifetime1);
-          Rasterizer.b(param0 + this.field_i - 6, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer.drawHorizontalLine(param0 + this.field_i - 6, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -136,8 +136,8 @@ abstract class pn extends ei {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          Rasterizer.b(param0, var8Lifetime2, 6, var9Lifetime2);
-          Rasterizer.b(this.field_i + (param0 - 6), var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer.drawHorizontalLine(this.field_i + (param0 - 6), var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

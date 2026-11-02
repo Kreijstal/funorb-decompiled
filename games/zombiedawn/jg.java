@@ -28,7 +28,7 @@ final class jg {
           var2 != 247) {
           return this.a(param0, var2);
         }
-        var3 = this.field_g.b(true);
+        var3 = this.field_g.readVarInt(true);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.field_g.payload[this.field_g.position] & 255;
@@ -76,7 +76,7 @@ final class jg {
     }
 
     final void c(int param0) {
-        int var2 = this.field_g.b(true);
+        int var2 = this.field_g.readVarInt(true);
         this.field_f[param0] = this.field_f[param0] + var2;
     }
 
@@ -118,13 +118,13 @@ final class jg {
         int var4Lifetime1;
         if (param1 == 255) {
           var3 = this.field_g.readUnsignedByte((byte) -116);
-          var4 = this.field_g.b(true);
+          var4 = this.field_g.readVarInt(true);
           if (var3 == 47) {
             this.field_g.position = this.field_g.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_g.g(-1875);
+            var5 = this.field_g.readUnsignedMedium(-1875);
             var4 -= 3;
             var6 = this.field_f[param0];
             this.field_h = this.field_h + (long)var6 * (long)(this.field_e - var5);

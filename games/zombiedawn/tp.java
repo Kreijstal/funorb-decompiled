@@ -375,11 +375,11 @@ final class tp extends PcmStream {
           vh.field_e[5] = new Sprite(200, 90);
           si.field_Ub[6] = new Sprite(200, 50);
           vh.field_e[6] = new Sprite(200, 50);
-          vh.field_e[0].a();
+          vh.field_e[0].setAsRenderTarget();
           si.field_Ub[0].h(5, 5, 16777215);
           oc.a((byte) 70);
           si.field_Ub[0].h(5, 5, 0);
-          vh.field_e[1].a();
+          vh.field_e[1].setAsRenderTarget();
           si.field_Ub[1].h(-35, 5, 16777215);
           so.a(16777215);
           oc.a((byte) -115);

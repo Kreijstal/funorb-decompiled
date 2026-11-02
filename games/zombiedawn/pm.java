@@ -133,12 +133,12 @@ abstract class pm extends um implements ok {
         int var1_int = 0;
         int var2 = ZombieDawn.field_J;
         LevelNavigation.field_a = new Sprite(60, 60);
-        LevelNavigation.field_a.a();
+        LevelNavigation.field_a.setAsRenderTarget();
         Rasterizer.g(30, 30, 28, 4521728);
         og.field_x = new Sprite[8];
         for (var1_int = 0; 8 > var1_int; var1_int++) {
           og.field_x[var1_int] = new Sprite(22, 22);
-          og.field_x[var1_int].a();
+          og.field_x[var1_int].setAsRenderTarget();
           Rasterizer.g(11, 11, 2 + var1_int, 5622784);
           Rasterizer.g(11, 11, var1_int, 65793);
         }

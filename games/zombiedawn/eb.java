@@ -26,7 +26,7 @@ final class eb implements io {
           for (var6_int = 0; param3.field_n >= var6_int; var6_int++) {
             var7 = 152 + 48 * var6_int / param3.field_n;
             var8 = var7 | (var7 << 16 | var7 << 8);
-            Rasterizer.b(param3.field_k + param4, var6_int + param2 + param3.field_j, param3.field_i, var8);
+            Rasterizer.drawHorizontalLine(param3.field_k + param4, var6_int + param2 + param3.field_j, param3.field_i, var8);
           }
           var6_intLifetime1 = 1;
           if (param0 != 16777215) {
@@ -45,7 +45,7 @@ final class eb implements io {
                 Rasterizer.pixels[Rasterizer.width * var9 - (-var7Lifetime1 - var8Lifetime1)] = eg.a(Rasterizer.pixels[var8Lifetime1 + (Rasterizer.width * var9 + var7Lifetime1)] >> 1, 8355711);
               }
             }
-            Rasterizer.b(var7Lifetime1, var9, var8Lifetime1, 0);
+            Rasterizer.drawHorizontalLine(var7Lifetime1, var9, var8Lifetime1, 0);
             var6_intLifetime1++;
           }
           return;

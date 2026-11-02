@@ -323,7 +323,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           StringBuilder stackIn_24_1 = null;
           String stackIn_25_2 = null;
           Throwable decompiledCaughtException = null;
-          op var8 = null;
+          AsyncRequest var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -354,9 +354,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               dupTemp$0 = new PlatformTaskDispatcher(param6, param2, param1, true);
               vh.field_a = dupTemp$0;
               mh.field_E = dupTemp$0;
-              var8 = vh.field_a.a(1, (Runnable) (this), true);
+              var8 = vh.field_a.startThread(1, (Runnable) (this), true);
               while (true) {
-                if (var8.field_f == 0) {
+                if (var8.status == 0) {
                   ld.a(10L, (byte) 95);
                   if (var9 == 0) {
                     continue;
