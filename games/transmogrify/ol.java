@@ -12,7 +12,7 @@ final class ol {
     int[] field_g;
     static String field_e;
 
-    final static void a(int param0, int param1, int param2, long param3, fe param4, int param5, int param6, boolean param7, int param8, String param9, boolean param10, int param11, int param12, int param13) {
+    final static void a(int param0, int param1, int param2, long param3, PlatformTaskDispatcher param4, int param5, int param6, boolean param7, int param8, String param9, boolean param10, int param11, int param12, int param13) {
         try {
           RuntimeException stackIn_12_0 = null;
           StringBuilder stackIn_12_1 = null;
@@ -23,7 +23,7 @@ final class ol {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            nf.field_l = new hj(param1);
+            WordLanguage.field_l = new hj(param1);
             ff.field_D = new hj(param6);
             dh.field_x = param12;
             ua.field_c = param8;
@@ -34,7 +34,7 @@ final class ol {
               return;
             }
             wd.field_g = param7;
-            pi.field_h = param2;
+            AchievementUnlockEvent.field_h = param2;
             lf.field_c = param13;
             l.field_b = param4;
             kf.field_p = param0;
@@ -43,7 +43,7 @@ final class ol {
               return;
             }
             try {
-              ah.field_b = new we(l.field_b.field_v, 64, 0);
+              DelegatingCanvas.field_b = new we(l.field_b.field_v, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

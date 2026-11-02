@@ -14,22 +14,22 @@ final class wh extends lj {
     final static vd a(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
-        if (null != fa.field_i) {
+        if (null != GameApplet.field_i) {
           var1 = 40 / ((param0 - 72) / 54);
-          return fa.field_i;
+          return GameApplet.field_i;
         }
-        fa.field_i = new vd();
-        fa.field_i.a(-71, vd.field_h);
-        fa.field_i.field_n = 2763306;
-        fa.field_i.field_c = 6;
-        fa.field_i.field_e = 4;
-        fa.field_i.field_l = 0;
-        fa.field_i.field_j = 14;
-        fa.field_i.field_m = al.field_i;
-        fa.field_i.field_g = 7697781;
-        fa.field_i.field_i = 5;
+        GameApplet.field_i = new vd();
+        GameApplet.field_i.a(-71, vd.field_h);
+        GameApplet.field_i.field_n = 2763306;
+        GameApplet.field_i.field_c = 6;
+        GameApplet.field_i.field_e = 4;
+        GameApplet.field_i.field_l = 0;
+        GameApplet.field_i.field_j = 14;
+        GameApplet.field_i.field_m = al.field_i;
+        GameApplet.field_i.field_g = 7697781;
+        GameApplet.field_i.field_i = 5;
         var1Lifetime1 = 40 / ((param0 - 72) / 54);
-        return fa.field_i;
+        return GameApplet.field_i;
     }
 
     public static void h(int param0) {
@@ -40,7 +40,7 @@ final class wh extends lj {
         field_I = null;
     }
 
-    final boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    final boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -111,7 +111,7 @@ final class wh extends lj {
 
     final static void f(byte param0) {
         int var2 = 0;
-        sj dupTemp$1 = null;
+        LetterTile dupTemp$1 = null;
         Object var1 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -122,14 +122,14 @@ final class wh extends lj {
             wh.h(86);
           }
           for (var2 = 11; var2 >= 0; var2--) {
-            dupTemp$1 = od.field_g.field_e[var2];
+            dupTemp$1 = od.submissionRack.tiles[var2];
             var1 = dupTemp$1;
             if (dupTemp$1 == null) {
               continue;
             }
             break;
           }
-          eh.a((sj) (var1), 67);
+          eh.returnTileToRack((LetterTile) (var1), 67);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

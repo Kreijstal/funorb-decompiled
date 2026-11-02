@@ -158,14 +158,14 @@ final class hd {
             hd.b((byte) 70);
           }
           for (var3 = 0; qb.field_f.length > var3; var3++) {
-            var4 = ce.field_a[var3];
+            var4 = GameKeyHandler.field_a[var3];
             if (var4 < 0) {
               var5 = u.field_b;
             } else {
               if (var4 != bk.field_c.field_d) {
                 var5 = Transmogrify.field_D;
               } else {
-                var5 = pf.field_b;
+                var5 = SecondaryNodeDeque.field_b;
               }
             }
             var6 = qb.field_f[var3];
@@ -224,10 +224,10 @@ final class hd {
               var1_int = var1_int + jl.field_o;
             }
             if (var4 < 0) {
-              ce.field_b.b(var6, var8Lifetime1, var1_int + field_d, var5, -1);
+              GameKeyHandler.field_b.b(var6, var8Lifetime1, var1_int + field_d, var5, -1);
               var1_int = var1_int + fi.field_x;
             } else {
-              tb.field_c.b(var6, var8Lifetime1, var1_int + pi.field_k, var5, -1);
+              tb.field_c.b(var6, var8Lifetime1, var1_int + AchievementUnlockEvent.field_k, var5, -1);
               var1_int = var1_int + (hi.field_c + (ee.field_D + jl.field_o));
             }
           }

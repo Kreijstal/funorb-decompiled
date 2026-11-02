@@ -14,10 +14,10 @@ final class tf {
         RuntimeException var2 = null;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
-          var4 = (am) (ec.field_b.a((byte) -95));
+          var4 = (am) (SocketConnector.field_b.a((byte) -95));
           while (var4 != null) {
             ei.a(true, param0, var4);
-            var4 = (am) (ec.field_b.a(true));
+            var4 = (am) (SocketConnector.field_b.a(true));
           }
           if (param1) {
             tf.a(-55, false);
@@ -89,12 +89,12 @@ final class tf {
           ej.field_n = true;
           q.field_a = param2;
           if (q.field_a == 0) {
-            var3_int = vd.a(nc.field_r, gd.field_m, qi.field_b, ce.field_b, (byte) 110);
+            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, MouseInputHandler.field_b, GameKeyHandler.field_b, (byte) 110);
             var4 = 3 + var3_int;
-            ce.field_a = new int[var4];
+            GameKeyHandler.field_a = new int[var4];
             qb.field_f = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              ce.field_a[var5] = -1;
+              GameKeyHandler.field_a[var5] = -1;
             }
             uj.field_d = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -102,18 +102,18 @@ final class tf {
             }
             qb.field_f[-3 + var4] = "";
             qb.field_f[var4 - 2] = vg.field_g;
-            ce.field_a[var4 - 2] = 0;
+            GameKeyHandler.field_a[var4 - 2] = 0;
             uj.field_d[0] = 4;
             qb.field_f[var4 - 1] = oe.field_a;
-            ce.field_a[-1 + var4] = 1;
+            GameKeyHandler.field_a[-1 + var4] = 1;
             uj.field_d[1] = 5;
           } else if (1 == q.field_a) {
-            var3_int = vd.a(nc.field_r, gd.field_m, qi.field_b, ce.field_b, (byte) -103);
+            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, MouseInputHandler.field_b, GameKeyHandler.field_b, (byte) -103);
             var4 = var3_int + 2;
             qb.field_f = new String[var4];
-            ce.field_a = new int[var4];
+            GameKeyHandler.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              ce.field_a[var5] = -1;
+              GameKeyHandler.field_a[var5] = -1;
             }
             uj.field_d = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -121,20 +121,20 @@ final class tf {
             }
             qb.field_f[-2 + var4] = "";
             qb.field_f[var4 - 1] = oe.field_a;
-            ce.field_a[-1 + var4] = 0;
+            GameKeyHandler.field_a[-1 + var4] = 0;
             uj.field_d[0] = 5;
           } else if (q.field_a != 2) {
             if (q.field_a == 3) {
               if (!lk.field_b.field_e) {
-                var3_int = vd.a(nc.field_r, gd.field_m, nh.field_m, ce.field_b, (byte) -103);
+                var3_int = vd.a(nc.field_r, AchievementNotice.field_m, nh.field_m, GameKeyHandler.field_b, (byte) -103);
               } else {
-                var3_int = vd.a(nc.field_r, gd.field_m, e.field_x, ce.field_b, (byte) -118);
+                var3_int = vd.a(nc.field_r, AchievementNotice.field_m, e.field_x, GameKeyHandler.field_b, (byte) -118);
               }
               var4 = 2 + var3_int;
-              ce.field_a = new int[var4];
+              GameKeyHandler.field_a = new int[var4];
               qb.field_f = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                ce.field_a[var5] = -1;
+                GameKeyHandler.field_a[var5] = -1;
               }
               uj.field_d = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -142,15 +142,15 @@ final class tf {
               }
               qb.field_f[-2 + var4] = "";
               qb.field_f[-1 + var4] = oe.field_a;
-              ce.field_a[-1 + var4] = 0;
+              GameKeyHandler.field_a[-1 + var4] = 0;
               uj.field_d[0] = 5;
             } else if (4 == q.field_a) {
-              var3_int = vd.a(nc.field_r, gd.field_m, n.field_b, ce.field_b, (byte) -111);
+              var3_int = vd.a(nc.field_r, AchievementNotice.field_m, n.field_b, GameKeyHandler.field_b, (byte) -111);
               var4 = 2 + var3_int;
               qb.field_f = new String[var4];
-              ce.field_a = new int[var4];
+              GameKeyHandler.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                ce.field_a[var5] = -1;
+                GameKeyHandler.field_a[var5] = -1;
               }
               uj.field_d = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -158,18 +158,18 @@ final class tf {
               }
               qb.field_f[-2 + var4] = "";
               qb.field_f[-1 + var4] = oe.field_a;
-              ce.field_a[-1 + var4] = 0;
+              GameKeyHandler.field_a[-1 + var4] = 0;
               uj.field_d[0] = 5;
             } else {
               if (5 != q.field_a) {
                 throw new IllegalArgumentException();
               }
-              var3_int = vd.a(nc.field_r, gd.field_m, dg.field_e, ce.field_b, (byte) 71);
+              var3_int = vd.a(nc.field_r, AchievementNotice.field_m, FullscreenFocusCanvas.field_e, GameKeyHandler.field_b, (byte) 71);
               var4 = 3 + var3_int;
               qb.field_f = new String[var4];
-              ce.field_a = new int[var4];
+              GameKeyHandler.field_a = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                ce.field_a[var5] = -1;
+                GameKeyHandler.field_a[var5] = -1;
               }
               uj.field_d = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -177,14 +177,14 @@ final class tf {
               }
               qb.field_f[-3 + var4] = "";
               qb.field_f[var4 - 2] = pe.field_a;
-              ce.field_a[var4 - 2] = 0;
+              GameKeyHandler.field_a[var4 - 2] = 0;
               uj.field_d[0] = 3;
               qb.field_f[-1 + var4] = oe.field_a;
-              ce.field_a[var4 - 1] = 1;
+              GameKeyHandler.field_a[var4 - 1] = 1;
               uj.field_d[1] = 5;
             }
           } else {
-            var3_int = vd.a(nc.field_r, gd.field_m, ij.a(ef.field_c, new String[]{"<br><%0><br>"}, (byte) -53), ce.field_b, (byte) -80);
+            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, ij.a(ef.field_c, new String[]{"<br><%0><br>"}, (byte) -53), GameKeyHandler.field_b, (byte) -80);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(nc.field_r[var5])) {
@@ -201,7 +201,7 @@ final class tf {
             ne.field_a = new String[-1 + var3_int - var4];
             ji.a(nc.field_r, 1 + var4, ne.field_a, 0, -1 + (var3_int - var4));
             var4 = -1;
-            var3_int = vd.a(nc.field_r, gd.field_m, ij.a(mk.field_C, new String[]{"<br><%0><br>"}, (byte) -46), ce.field_b, (byte) 112);
+            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, ij.a(mk.field_C, new String[]{"<br><%0><br>"}, (byte) -46), GameKeyHandler.field_b, (byte) 112);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(nc.field_r[var5])) {
                 continue;
@@ -229,16 +229,16 @@ final class tf {
             }
             var6 = stackIn_68_0;
             var7 = var5 + 7 + var6;
-            ce.field_a = new int[var7];
+            GameKeyHandler.field_a = new int[var7];
             qb.field_f = new String[var7];
             for (var8 = 0; var7 > var8; var8++) {
-              ce.field_a[var8] = -1;
+              GameKeyHandler.field_a[var8] = -1;
             }
             uj.field_d = new int[2];
             qb.field_f[0] = ab.field_a;
             qb.field_f[1] = wd.field_i;
-            ce.field_a[1] = 0;
-            ce.field_a[3] = 1;
+            GameKeyHandler.field_a[1] = 0;
+            GameKeyHandler.field_a[3] = 1;
             qb.field_f[3] = ac.field_h;
             uj.field_d[0] = 5;
             qb.field_f[5] = "";
@@ -256,7 +256,7 @@ final class tf {
               stackIn_75_0[stackIn_75_1] = stackIn_76_2;
             }
             qb.field_f[6 + var5] = null;
-            ce.field_a[var5 + 6] = -2;
+            GameKeyHandler.field_a[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_80_0 = qb.field_f;
               stackIn_80_1 = 7 - (-var5 - var8Lifetime3);
@@ -276,7 +276,7 @@ final class tf {
           for (var4Lifetime1 = 0; var4Lifetime1 < qb.field_f.length; var4Lifetime1++) {
             stackIn_89_0 = qb.field_f[var4Lifetime1];
             stackIn_89_1 = false;
-            stackIn_90_2 = !(0 > ce.field_a[var4Lifetime1]);
+            stackIn_90_2 = !(0 > GameKeyHandler.field_a[var4Lifetime1]);
             var5Lifetime1 = uc.a(stackIn_89_0, stackIn_89_1, stackIn_90_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -306,7 +306,7 @@ final class tf {
           mf.field_d = (ee.field_D + jl.field_o << 1) * bk.field_c.field_a;
           for (var4Lifetime2 = 0; var4Lifetime2 < qb.field_f.length; var4Lifetime2++) {
             stackIn_113_0 = mf.field_d;
-            if (ce.field_a[var4Lifetime2] >= 0) {
+            if (GameKeyHandler.field_a[var4Lifetime2] >= 0) {
               stackIn_114_1 = hi.field_c;
             } else {
               stackIn_114_1 = fi.field_x;
@@ -321,7 +321,7 @@ final class tf {
           var4Lifetime3 = 0;
           var5Lifetime3 = qa.field_u;
           while (qb.field_f.length > var4Lifetime3) {
-            var6Lifetime1 = ce.field_a[var4Lifetime3];
+            var6Lifetime1 = GameKeyHandler.field_a[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = uc.a(qb.field_f[var4Lifetime3], false, true);
               var5Lifetime3 = var5Lifetime3 + ee.field_D;
@@ -338,7 +338,7 @@ final class tf {
             var4Lifetime3++;
           }
           if (q.field_a != 2) {
-            bk.field_c.a(tl.a(196077633, oa.field_j, bk.field_a), 0, (byte) -104, param1);
+            bk.field_c.a(tl.a(196077633, PacketBuffer.field_j, bk.field_a), 0, (byte) -104, param1);
           } else {
             bk.field_c.a(-1, -1, (byte) 124, param1);
           }

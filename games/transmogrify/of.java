@@ -6,26 +6,26 @@ final class of {
     static int field_c;
     static String field_b;
     static jc field_a;
-    static StringBuilder field_e;
+    static StringBuilder wordBuffer;
     static pd field_d;
 
     public static void a(int param0) {
         field_d = null;
         field_b = null;
-        field_e = null;
+        wordBuffer = null;
         field_a = null;
         if (param0 == -21068) {
           field_f = null;
           return;
         }
-        field_e = (StringBuilder) null;
+        wordBuffer = (StringBuilder) null;
         field_f = null;
     }
 
     final static void b(int param0) {
         de.field_c[21] = ak.field_c;
         de.field_c[19] = dk.field_a;
-        de.field_c[12] = pf.field_f;
+        de.field_c[12] = SecondaryNodeDeque.field_f;
         de.field_c[8] = ol.field_c;
         de.field_c[15] = we.field_b;
         de.field_c[5] = ia.field_i;
@@ -34,14 +34,14 @@ final class of {
         de.field_c[17] = ck.field_H;
         de.field_c[16] = nh.field_l;
         de.field_c[11] = cc.field_c;
-        de.field_c[20] = kl.field_e;
+        de.field_c[20] = ContextualRuntimeException.field_e;
         de.field_c[10] = uc.field_b;
         de.field_c[18] = ob.field_M;
         de.field_c[2] = dl.field_m;
-        de.field_c[9] = se.field_q;
-        de.field_c[7] = he.field_h;
+        de.field_c[9] = SpriteState.field_q;
+        de.field_c[7] = he.endGameLabel;
         de.field_c[14] = aa.field_h;
-        de.field_c[1] = wf.field_e;
+        de.field_c[1] = IntrusiveNode.field_e;
         de.field_c[param0] = i.field_e;
         de.field_c[13] = kk.field_e;
         de.field_c[4] = nj.field_m;
@@ -51,7 +51,7 @@ final class of {
     static {
         field_b = "Change display name";
         field_f = new kh("usename");
-        field_e = new StringBuilder(12);
+        wordBuffer = new StringBuilder(12);
         field_d = new pd();
     }
 }

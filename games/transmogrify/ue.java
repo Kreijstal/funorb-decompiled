@@ -6,7 +6,7 @@ import java.io.*;
 abstract class ue {
     static int field_a;
     ol[] field_b;
-    static ii[] field_c;
+    static IndexedSprite[] field_c;
 
     final int a(int param0) {
         int stackIn_6_0 = 0;
@@ -71,30 +71,30 @@ abstract class ue {
         return var3;
     }
 
-    final static void b(int param0) {
+    final static void dumpRackState(int param0) {
         int incrementValue$0 = 0;
         String stackIn_13_0 = null;
         String stackIn_23_0 = null;
         String stackIn_34_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
-        sj var1 = null;
+        LetterTile var1 = null;
         RuntimeException var1_ref = null;
         int var2_int = 0;
-        sj var2 = null;
-        sj var3 = null;
+        LetterTile var2 = null;
+        LetterTile var3 = null;
         int var3_int = 0;
         String var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        sj var6 = null;
+        LetterTile var6 = null;
         String var7 = null;
-        sj var8 = null;
+        LetterTile var8 = null;
         String var9 = null;
-        sj var10 = null;
+        LetterTile var10 = null;
         String var11 = null;
-        sj var12 = null;
-        sj var3Lifetime1;
+        LetterTile var12 = null;
+        LetterTile var3Lifetime1;
         String var3_refLifetime1;
         String var3_refLifetime2;
         int var1_intLifetime1;
@@ -110,109 +110,109 @@ abstract class ue {
             throw new RuntimeException();
           }
           for (var1_int = 0; var1_int < 12; var1_int++) {
-            var6 = od.field_g.field_e[var1_int];
+            var6 = od.submissionRack.tiles[var1_int];
             if (var6 != null) {
-              if (var6.field_o == od.field_g &&
-                var1_int == var6.field_t) {
+              if (var6.rack == od.submissionRack &&
+                var1_int == var6.slot) {
                 stackIn_13_0 = "";
               } else {
-                stackIn_13_0 = "; believes itself to be at " + ac.a(38, var6.field_o) + "[" + var6.field_t + "]";
+                stackIn_13_0 = "; believes itself to be at " + ac.rackName(38, var6.rack) + "[" + var6.slot + "]";
               }
               var7 = stackIn_13_0;
               var3_ref = var7;
-              System.out.println("submission_rack[" + var1_int + "]=" + var6.field_i + " with dest " + var6.field_g + "," + var6.field_p + var7);
-              var6.field_g = -2147483648;
+              System.out.println("submission_rack[" + var1_int + "]=" + var6.letter + " with dest " + var6.destinationX + "," + var6.destinationY + var7);
+              var6.destinationX = -2147483648;
             }
           }
           for (var1_intLifetime1 = 0; 12 > var1_intLifetime1; var1_intLifetime1++) {
-            var8 = wk.field_a.field_e[var1_intLifetime1];
+            var8 = wk.carryoverRack.tiles[var1_intLifetime1];
             if (var8 != null) {
-              if (var8.field_o == wk.field_a &&
-                var8.field_t == var1_intLifetime1) {
+              if (var8.rack == wk.carryoverRack &&
+                var8.slot == var1_intLifetime1) {
                 stackIn_23_0 = "";
               } else {
-                stackIn_23_0 = "; believes itself to be at " + ac.a(97, var8.field_o) + "[" + var8.field_t + "]";
+                stackIn_23_0 = "; believes itself to be at " + ac.rackName(97, var8.rack) + "[" + var8.slot + "]";
               }
               var9 = stackIn_23_0;
               var3_refLifetime1 = var9;
-              System.out.println("carryover_rack[" + var1_intLifetime1 + "]=" + var8.field_i + " with dest " + var8.field_g + "," + var8.field_p + var9);
-              var8.field_g = -2147483648;
+              System.out.println("carryover_rack[" + var1_intLifetime1 + "]=" + var8.letter + " with dest " + var8.destinationX + "," + var8.destinationY + var9);
+              var8.destinationX = -2147483648;
             }
           }
           for (var1_intLifetime2 = 0; var1_intLifetime2 < 8; var1_intLifetime2++) {
-            var10 = si.field_i.field_e[var1_intLifetime2];
+            var10 = si.newRack.tiles[var1_intLifetime2];
             if (var10 != null) {
-              if (si.field_i == var10.field_o &&
-                var10.field_t == var1_intLifetime2) {
+              if (si.newRack == var10.rack &&
+                var10.slot == var1_intLifetime2) {
                 stackIn_34_0 = "";
               } else {
-                stackIn_34_0 = "; believes itself to be at " + ac.a(49, var10.field_o) + "[" + var10.field_t + "]";
+                stackIn_34_0 = "; believes itself to be at " + ac.rackName(49, var10.rack) + "[" + var10.slot + "]";
               }
               var11 = stackIn_34_0;
               var3_refLifetime2 = var11;
-              System.out.println("new_rack[" + var1_intLifetime2 + "]=" + var10.field_i + " with dest " + var10.field_g + "," + var10.field_p + var11);
-              var10.field_g = -2147483648;
+              System.out.println("new_rack[" + var1_intLifetime2 + "]=" + var10.letter + " with dest " + var10.destinationX + "," + var10.destinationY + var11);
+              var10.destinationX = -2147483648;
             }
           }
           if (param0 != 31370) {
             return;
           }
-          var1 = (sj) (ch.field_e.a((byte) -95));
+          var1 = (LetterTile) (ch.field_e.a((byte) -95));
           while (null != var1) {
-            if (var1.field_o != de.field_d &&
-              var1.field_g != -2147483648) {
-              System.out.println("Floating tile " + var1.field_i + " with dest " + var1.field_g + "," + var1.field_p + " believes itself to be at " + ac.a(82, var1.field_o) + "[" + var1.field_t + "]");
+            if (var1.rack != de.field_d &&
+              var1.destinationX != -2147483648) {
+              System.out.println("Floating tile " + var1.letter + " with dest " + var1.destinationX + "," + var1.destinationY + " believes itself to be at " + ac.rackName(82, var1.rack) + "[" + var1.slot + "]");
               var2_int = 0;
               for (var3_int = 0; 12 > var3_int; var3_int++) {
-                if (wk.field_a.field_e[var3_int] != null) {
+                if (wk.carryoverRack.tiles[var3_int] != null) {
                   continue;
                 }
                 var2_int = 1;
-                var1.a(var3_int, 28, wk.field_a);
+                var1.moveToRack(var3_int, 28, wk.carryoverRack);
                 break;
               }
               if (var2_int != 0) {
-                var1 = (sj) (ch.field_e.a(true));
+                var1 = (LetterTile) (ch.field_e.a(true));
                 continue;
               }
               var5 = 0;
               var3_intLifetime1 = var5;
               while (var5 < 8) {
-                if (null == si.field_i.field_e[var5]) {
-                  var1.a(var5, 28, si.field_i);
+                if (null == si.newRack.tiles[var5]) {
+                  var1.moveToRack(var5, 28, si.newRack);
                   break;
                 }
                 var5++;
               }
             }
-            var1 = (sj) (ch.field_e.a(true));
+            var1 = (LetterTile) (ch.field_e.a(true));
           }
           var1_intLifetime3 = 0;
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 12; var2_intLifetime1++) {
-            var3 = od.field_g.field_e[var2_intLifetime1];
+            var3 = od.submissionRack.tiles[var2_intLifetime1];
             if (null != var3) {
               incrementValue$0 = var1_intLifetime3;
               var1_intLifetime3++;
-              var3.a(incrementValue$0, 28, od.field_g);
+              var3.moveToRack(incrementValue$0, 28, od.submissionRack);
             }
           }
           for (var2_intLifetime2 = 0; var2_intLifetime2 < 12; var2_intLifetime2++) {
-            var12 = wk.field_a.field_e[var2_intLifetime2];
+            var12 = wk.carryoverRack.tiles[var2_intLifetime2];
             if (var12 != null) {
-              var12.a(var2_intLifetime2, 28, wk.field_a);
+              var12.moveToRack(var2_intLifetime2, 28, wk.carryoverRack);
             }
           }
           for (var2_intLifetime3 = 0; var2_intLifetime3 < 8; var2_intLifetime3++) {
-            var3Lifetime1 = si.field_i.field_e[var2_intLifetime3];
+            var3Lifetime1 = si.newRack.tiles[var2_intLifetime3];
             if (null != var3Lifetime1) {
-              var3Lifetime1.a(var2_intLifetime3, 28, si.field_i);
+              var3Lifetime1.moveToRack(var2_intLifetime3, 28, si.newRack);
             }
           }
-          var2 = (sj) (ch.field_e.a((byte) -95));
+          var2 = (LetterTile) (ch.field_e.a((byte) -95));
           while (var2 != null) {
-            var2.field_j = var2.field_g;
-            var2.field_q = var2.field_p;
-            var2 = (sj) (ch.field_e.a(true));
+            var2.x = var2.destinationX;
+            var2.y = var2.destinationY;
+            var2 = (LetterTile) (ch.field_e.a(true));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -227,7 +227,7 @@ abstract class ue {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (nf.field_l.field_h >= param0) {
+          if (WordLanguage.field_l.position >= param0) {
             return true;
           }
           if (null == nk.field_b) {
@@ -236,16 +236,16 @@ abstract class ue {
           try {
             var2_int = nk.field_b.a((byte) -125);
             if (var2_int > 0) {
-              if (param0 - nf.field_l.field_h < var2_int) {
-                var2_int = -nf.field_l.field_h + param0;
+              if (param0 - WordLanguage.field_l.position < var2_int) {
+                var2_int = -WordLanguage.field_l.position + param0;
               }
-              nk.field_b.a(nf.field_l.field_h, var2_int, nf.field_l.field_g, 5768);
+              nk.field_b.a(WordLanguage.field_l.position, var2_int, WordLanguage.field_l.payload, 5768);
               wi.field_q = lk.a(param1 ^ 0);
-              nf.field_l.field_h = nf.field_l.field_h + var2_int;
-              if (param0 > nf.field_l.field_h) {
+              WordLanguage.field_l.position = WordLanguage.field_l.position + var2_int;
+              if (param0 > WordLanguage.field_l.position) {
                 return false;
               }
-              nf.field_l.field_h = 0;
+              WordLanguage.field_l.position = 0;
               return true;
             }
             if (param1 != 0) {

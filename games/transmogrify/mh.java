@@ -5,16 +5,16 @@ import java.io.*;
 
 final class mh {
     static int[] field_b;
-    static qj field_e;
+    static IntrusiveDeque field_e;
     static String field_c;
     static String field_d;
-    static qj field_a;
+    static IntrusiveDeque field_a;
 
     final static void a(int param0, String param1) {
         try {
           ql.field_a = param1;
           if (param0 != 11207) {
-            field_e = (qj) null;
+            field_e = (IntrusiveDeque) null;
           }
           ba.a(108, 12);
         } catch (RuntimeException runtimeException) {
@@ -51,7 +51,7 @@ final class mh {
             stackIn_7_0 = rd.field_d;
             return stackIn_7_0;
           }
-          var3 = vi.a((char)param1, param0, 0);
+          var3 = IterableNodeHashTable.a((char)param1, param0, 0);
           if (var3.length < 2) {
             stackIn_10_0 = ai.field_a;
             return stackIn_10_0;
@@ -64,7 +64,7 @@ final class mh {
               return stackIn_18_0;
             }
             var6 = var4[var5];
-            var7 = gj.a(param1 - 46, var6);
+            var7 = BufferedSocket.a(param1 - 46, var6);
             if (var7 == null) {
               var5++;
               continue;
@@ -164,11 +164,11 @@ final class mh {
           }
           return od.field_h;
         }
-        if (!cj.field_c.a((byte) -124)) {
+        if (!RasterBuffer.field_c.a((byte) -124)) {
           return vg.field_a;
         }
-        if (!cj.field_c.a((byte) 120, "commonui")) {
-          return aa.field_f + " - " + cj.field_c.a(0, "commonui") + "%";
+        if (!RasterBuffer.field_c.a((byte) 120, "commonui")) {
+          return aa.field_f + " - " + RasterBuffer.field_c.a(0, "commonui") + "%";
         }
         if (param0 <= 75) {
           return (String) null;
@@ -200,21 +200,21 @@ final class mh {
           }
           try {
             var6 = null;
-            if (null != qi.field_a.field_b) {
-              kk.field_b = new we(qi.field_a.field_b, 5200, 0);
-              qi.field_a.field_b = null;
-              var6 = new ak(255, kk.field_b, new we(qi.field_a.field_h, 12000, 0), 2097152);
+            if (null != MouseInputHandler.field_a.field_b) {
+              kk.field_b = new we(MouseInputHandler.field_a.field_b, 5200, 0);
+              MouseInputHandler.field_a.field_b = null;
+              var6 = new ak(255, kk.field_b, new we(MouseInputHandler.field_a.field_h, 12000, 0), 2097152);
             }
             var7 = null;
             if (kk.field_b != null) {
-              if (null == oa.field_m) {
-                oa.field_m = new we[qi.field_a.field_s.length];
+              if (null == PacketBuffer.field_m) {
+                PacketBuffer.field_m = new we[MouseInputHandler.field_a.field_s.length];
               }
-              if (oa.field_m[param5] == null) {
-                oa.field_m[param5] = new we(qi.field_a.field_s[param5], 12000, 0);
-                qi.field_a.field_s[param5] = null;
+              if (PacketBuffer.field_m[param5] == null) {
+                PacketBuffer.field_m[param5] = new we(MouseInputHandler.field_a.field_s[param5], 12000, 0);
+                MouseInputHandler.field_a.field_s[param5] = null;
               }
-              var7 = new ak(param5, kk.field_b, oa.field_m[param5], 2097152);
+              var7 = new ak(param5, kk.field_b, PacketBuffer.field_m[param5], 2097152);
             }
             var8 = we.field_j.a(param5, param3, 24108, (ak) (var6), (ak) (var7));
             if (param1) {
@@ -247,8 +247,8 @@ final class mh {
 
     static {
         field_b = new int[1024];
-        field_e = new qj();
+        field_e = new IntrusiveDeque();
         field_d = "Please wait...";
-        field_a = new qj();
+        field_a = new IntrusiveDeque();
     }
 }

@@ -4,7 +4,7 @@
 final class vh extends me {
     static int field_m;
     static int field_n;
-    static ti field_l;
+    static Sprite field_l;
     static String field_j;
     static String field_k;
 
@@ -31,7 +31,7 @@ final class vh extends me {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (kj.a(param0, false, "getcookies"));
-              var4 = vi.a(';', var3, 0);
+              var4 = IterableNodeHashTable.a(';', var3, 0);
               for (var5 = param1; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -86,7 +86,7 @@ final class vh extends me {
             stackIn_10_0 = hi.field_b;
             return stackIn_10_0;
           }
-          stackIn_8_0 = ec.field_d;
+          stackIn_8_0 = SocketConnector.field_d;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,7 +111,7 @@ final class vh extends me {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(95, param1) == ec.field_d) {
+          if (this.a(95, param1) == SocketConnector.field_d) {
             stackIn_3_0 = uc.field_c;
             return stackIn_3_0;
           }

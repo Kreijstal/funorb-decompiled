@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fk extends lj {
-    static ib field_F;
+    static PlatformTask field_F;
     private int field_I;
     static int field_E;
     int field_G;
@@ -27,7 +27,7 @@ final class fk extends lj {
         field_D = null;
     }
 
-    final boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    final boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;

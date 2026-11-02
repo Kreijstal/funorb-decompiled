@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mg {
-    private ii[] field_a;
+    private IndexedSprite[] field_a;
     static boolean field_d;
     private int field_f;
     static volatile boolean field_c;
@@ -107,9 +107,9 @@ final class mg {
     final static int a(int param0, boolean param1, int param2, boolean param3) {
         if (!param3) {
           mg.a(124, true, 121, true);
-          return wf.a(-1);
+          return IntrusiveNode.a(-1);
         }
-        return wf.a(-1);
+        return IntrusiveNode.a(-1);
     }
 
     final int a(boolean param0) {
@@ -119,7 +119,7 @@ final class mg {
         return this.field_a[0].field_g;
     }
 
-    mg(ii[] param0) {
+    mg(IndexedSprite[] param0) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException stackIn_16_0 = null;

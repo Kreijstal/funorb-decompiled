@@ -18,7 +18,7 @@ abstract class me extends ca implements fb {
     }
 
     public final void a(rg param0, int param1) {
-        fe var4 = null;
+        PlatformTaskDispatcher var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -26,8 +26,8 @@ abstract class me extends ca implements fb {
         RuntimeException var3 = null;
         try {
           if (param1 > -55) {
-            var4 = (fe) null;
-            me.a(120, 109, 17, (String) null, 22, -46, 96, -16, (fe) null);
+            var4 = (PlatformTaskDispatcher) null;
+            me.a(120, 109, 17, (String) null, 22, -46, 96, -16, (PlatformTaskDispatcher) null);
             this.a(true);
           } else {
             this.a(true);
@@ -132,15 +132,15 @@ abstract class me extends ca implements fb {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, fe param8) {
+    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, PlatformTaskDispatcher param8) {
         try {
           ne.field_b = param6;
           c.field_b = param0;
-          nf.field_i = param3;
-          qi.field_a = param8;
+          WordLanguage.field_i = param3;
+          MouseInputHandler.field_a = param8;
           if (param2 <= 37) {
-            fe var10 = (fe) null;
-            me.a(44, 91, 102, (String) null, 8, 17, 66, 2, (fe) null);
+            PlatformTaskDispatcher var10 = (PlatformTaskDispatcher) null;
+            me.a(44, 91, 102, (String) null, 8, 17, 66, 2, (PlatformTaskDispatcher) null);
           }
           of.field_c = param1;
           tl.field_c = param4;

@@ -6,7 +6,7 @@ import java.io.*;
 final class gb {
     static String field_e;
     static String field_b;
-    static ii[] field_a;
+    static IndexedSprite[] field_a;
     static String field_c;
     static String field_d;
 
@@ -80,7 +80,7 @@ final class gb {
         }
     }
 
-    final static nb[] a(fe param0, byte param1) {
+    final static nb[] a(PlatformTaskDispatcher param0, byte param1) {
         int var5 = 0;
         nb[] stackIn_3_0 = null;
         nb[] stackIn_10_0 = null;
@@ -95,7 +95,7 @@ final class gb {
         nb var6 = null;
         int var7 = 0;
         String var8 = null;
-        ib var9 = null;
+        PlatformTask var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var7 = Transmogrify.field_A ? 1 : 0;
@@ -167,8 +167,8 @@ final class gb {
           wl.field_I = false;
           aa.field_g = false;
           var3_int = -66 % ((-23 - param1) / 41);
-          if (null != wg.field_d &&
-            wg.field_d.field_A) {
+          if (null != SecondaryNodeDequeIterator.field_d &&
+            SecondaryNodeDequeIterator.field_d.field_A) {
             var4 = 1;
             if (param0 == 8) {
               param0 = 2;
@@ -190,7 +190,7 @@ final class gb {
               if (hd.field_b) {
                 param2 = qd.field_c;
               }
-              wg.field_d.a(param2, param0, -4);
+              SecondaryNodeDequeIterator.field_d.a(param2, param0, -4);
             }
             if (param0 != 256 &&
               param0 != 10 &&
@@ -222,7 +222,7 @@ final class gb {
         ba.a(param0 ^ 60, 17);
     }
 
-    final static void a(oa param0, boolean param1) {
+    final static void a(PacketBuffer param0, boolean param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -243,10 +243,10 @@ final class gb {
             }
             var6 = new byte[24];
             var2 = var6;
-            if (ah.field_b != null) {
+            if (DelegatingCanvas.field_b != null) {
               try {
-                ah.field_b.a(0L, (byte) -128);
-                ah.field_b.a(var6, 16711708);
+                DelegatingCanvas.field_b.a(0L, (byte) -128);
+                DelegatingCanvas.field_b.a(var6, 16711708);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var6[var3_int] == 0) {
                     continue;

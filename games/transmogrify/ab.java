@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ab {
-    static qj field_c;
+    static IntrusiveDeque field_c;
     private int field_g;
-    ti field_d;
-    ti[] field_i;
+    Sprite field_d;
+    Sprite[] field_i;
     private int field_h;
     private int field_f;
     private int field_b;
@@ -38,7 +38,7 @@ final class ab {
         }
     }
 
-    final ab a(ti[] param0, byte param1) {
+    final ab a(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
         ab var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -82,7 +82,7 @@ final class ab {
         return this;
     }
 
-    final void a(byte param0, ki param1, int param2, qg param3, int param4) {
+    final void a(byte param0, ki param1, int param2, UiWidget param3, int param4) {
         kg stackIn_17_0 = null;
         String stackIn_17_1 = null;
         int stackIn_18_2 = 0;
@@ -201,7 +201,7 @@ final class ab {
         return this;
     }
 
-    final void a(ki param0, byte param1, int param2, int param3, ab param4, qg param5) {
+    final void a(ki param0, byte param1, int param2, int param3, ab param4, UiWidget param5) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -294,7 +294,7 @@ final class ab {
     }
 
     static {
-        field_c = new qj();
+        field_c = new IntrusiveDeque();
         field_a = "Click";
     }
 }

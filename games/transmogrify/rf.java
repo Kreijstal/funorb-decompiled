@@ -6,7 +6,7 @@ final class rf extends a {
     static e[] field_eb;
     static String[] field_cb;
 
-    rf(da param0, qg param1) {
+    rf(da param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -348,7 +348,7 @@ final class rf extends a {
         }
     }
 
-    final void b(int param0, qg param1) {
+    final void b(int param0, UiWidget param1) {
         try {
           super.b(-52, param1);
           int var3_int = 83 / ((34 - param0) / 54);

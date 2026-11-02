@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kb extends ri {
+class kb extends DualLinkNode {
     static java.math.BigInteger field_p;
     static volatile boolean field_l;
     static String field_o;
@@ -39,7 +39,7 @@ class kb extends ri {
           if (param1 <= 104) {
             kb.b(true);
           }
-          stackIn_3_0 = pi.field_g.a(param0, (byte) 118, "");
+          stackIn_3_0 = AchievementUnlockEvent.field_g.a(param0, (byte) 118, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

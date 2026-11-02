@@ -14,9 +14,9 @@ abstract class uh {
     bk field_n;
     long field_l;
     int field_b;
-    oa field_i;
+    PacketBuffer field_i;
     byte field_m;
-    oa field_g;
+    PacketBuffer field_g;
     volatile int field_k;
     volatile int field_p;
     pj field_e;
@@ -46,7 +46,7 @@ abstract class uh {
           return;
         }
         lc var2 = (lc) null;
-        uh.a((java.awt.Component) null, 16, -39, (fe) null, (lc) null, true);
+        uh.a((java.awt.Component) null, 16, -39, (PlatformTaskDispatcher) null, (lc) null, true);
         field_d = null;
         field_o = null;
         field_r = null;
@@ -60,7 +60,7 @@ abstract class uh {
         return this.a((byte) 72) >= 20 ? true : false;
     }
 
-    final static void a(java.awt.Component param0, int param1, int param2, fe param3, lc param4, boolean param5) {
+    final static void a(java.awt.Component param0, int param1, int param2, PlatformTaskDispatcher param3, lc param4, boolean param5) {
         try {
           aj.a(param0, param1, 22290, param4, param5, param1, param3, 1024);
           if (param2 != -21) {
@@ -99,7 +99,7 @@ abstract class uh {
           return var8;
         }
         var9 = (lc) null;
-        uh.a((java.awt.Component) null, -79, 112, (fe) null, (lc) null, false);
+        uh.a((java.awt.Component) null, -79, 112, (PlatformTaskDispatcher) null, (lc) null, false);
         var8.field_j = var6;
         if (param2) {
           if (this.a((byte) -110) >= 20) {
@@ -131,11 +131,11 @@ abstract class uh {
         this.field_h = new bk();
         this.field_a = new bk();
         this.field_n = new bk();
-        this.field_i = new oa(6);
+        this.field_i = new PacketBuffer(6);
         this.field_m = (byte) 0;
         this.field_p = 0;
         this.field_k = 0;
-        this.field_g = new oa(10);
+        this.field_g = new PacketBuffer(10);
     }
 
     static {

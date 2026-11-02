@@ -3,7 +3,7 @@
  */
 final class f {
     static int field_a;
-    static fe field_b;
+    static PlatformTaskDispatcher field_b;
 
     final static void a(byte param0) {
         int var15 = 0;
@@ -74,10 +74,10 @@ final class f {
           }
           var7Lifetime1 = 0;
           var8Lifetime1 = pe.a(4096, var6Lifetime1) >> 8;
-          var9Lifetime1 = ri.a(-124, var6Lifetime1) >> 8;
-          if (oa.field_j != -1 &&
+          var9Lifetime1 = DualLinkNode.a(-124, var6Lifetime1) >> 8;
+          if (PacketBuffer.field_j != -1 &&
             -1 != bk.field_a) {
-            var7Lifetime1 = -320 + oa.field_j;
+            var7Lifetime1 = -320 + PacketBuffer.field_j;
             var9Lifetime1 = -128;
             var8Lifetime1 = 240 - bk.field_a;
           }
@@ -118,13 +118,13 @@ final class f {
 
     public static void a(boolean param0) {
         if (param0) {
-          field_b = (fe) null;
+          field_b = (PlatformTaskDispatcher) null;
         }
         field_b = null;
     }
 
-    final static ii a(int param0) {
-        ii var1 = new ii(pj.field_y, ll.field_U, gj.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[param0], re.field_K[0], rg.field_D);
+    final static IndexedSprite a(int param0) {
+        IndexedSprite var1 = new IndexedSprite(pj.field_y, ll.field_U, BufferedSocket.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[param0], re.field_K[0], rg.field_D);
         wd.d(param0 ^ 9);
         return var1;
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class h implements ui, m {
+class h implements WidgetRenderer, m {
     int field_c;
     int field_a;
     private int field_m;
@@ -17,7 +17,7 @@ class h implements ui, m {
     int field_f;
     int field_h;
 
-    public final int a(int param0, qg param1) {
+    public final int a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -45,7 +45,7 @@ class h implements ui, m {
         }
     }
 
-    public void a(int param0, int param1, boolean param2, byte param3, qg param4) {
+    public void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         if (this.field_i == null) {
           return;
         }
@@ -61,7 +61,7 @@ class h implements ui, m {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final int a(int param0, byte param1, int param2, int param3, int param4, qg param5) {
+    public final int a(int param0, byte param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -98,7 +98,7 @@ class h implements ui, m {
         return this.field_i.field_y + this.field_i.field_t;
     }
 
-    public final void a(int param0, int param1, int param2, qg param3, boolean param4) {
+    public final void a(int param0, int param1, int param2, UiWidget param3, boolean param4) {
         ue var13 = null;
         ue var14 = null;
         int var7 = 0;
@@ -121,7 +121,7 @@ class h implements ui, m {
             var11 = this.a(param3, -83, param2) + Math.max(0, var8.field_a);
             var12 = this.a(param3, -102, param2) + Math.min(this.d(param3, 15065), Math.min(var8.field_f, 1 + var7 < var14.field_b.length ? var13.field_b[1 + var7].field_a : var8.field_f));
             c.a(param0 - (-param3.field_p - param3.field_l), param3.field_p + param0, (byte) -50, param3.field_h + param2 + param3.field_n, param2 + param3.field_n);
-            vi.field_e.a(var10, this.field_n, var12, var11, var10, (byte) 119);
+            IterableNodeHashTable.field_e.a(var10, this.field_n, var12, var11, var10, (byte) 119);
             fi.c(param4);
           }
         } catch (RuntimeException runtimeException) {
@@ -129,7 +129,7 @@ class h implements ui, m {
         }
     }
 
-    public final void a(qg param0, int param1, int param2, int param3, byte param4, int param5) {
+    public final void a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5) {
         int var12 = 0;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
@@ -187,7 +187,7 @@ class h implements ui, m {
                 }
               }
               var15 = stackIn_21_0;
-              vi.field_e.a(this.field_g >>> 24, this.field_c + (param1 + param0.field_n - (-param0.field_o - var13.field_a)), var15 - var14, this.a(239, param0, param2, var14), this.field_g, var13.field_f, 4);
+              IterableNodeHashTable.field_e.a(this.field_g >>> 24, this.field_c + (param1 + param0.field_n - (-param0.field_o - var13.field_a)), var15 - var14, this.a(239, param0, param2, var14), this.field_g, var13.field_f, 4);
             }
             fi.c(true);
             return;
@@ -207,7 +207,7 @@ class h implements ui, m {
         }
     }
 
-    private final void a(byte param0, qg param1) {
+    private final void a(byte param0, UiWidget param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -300,7 +300,7 @@ class h implements ui, m {
         }
     }
 
-    String c(qg param0, int param1) {
+    String c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -329,7 +329,7 @@ class h implements ui, m {
         }
     }
 
-    private final int d(qg param0, int param1) {
+    private final int d(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -356,7 +356,7 @@ class h implements ui, m {
         }
     }
 
-    public final int a(qg param0, int param1, int param2) {
+    public final int a(UiWidget param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_1_0 = 0;
@@ -382,7 +382,7 @@ class h implements ui, m {
         }
     }
 
-    public final int b(int param0, qg param1) {
+    public final int b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -409,9 +409,9 @@ class h implements ui, m {
         }
     }
 
-    public final ue a(qg param0, int param1) {
+    public final ue a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        qg var4 = null;
+        UiWidget var4 = null;
         ue stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -419,8 +419,8 @@ class h implements ui, m {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -2) {
-            var4 = (qg) null;
-            this.a(-104, (qg) null);
+            var4 = (UiWidget) null;
+            this.a(-104, (UiWidget) null);
           }
           if (null == param0.field_i) {
             param0.field_i = (ue) ((Object) new jh());
@@ -446,7 +446,7 @@ class h implements ui, m {
         }
     }
 
-    public final int b(qg param0, int param1) {
+    public final int b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -476,7 +476,7 @@ class h implements ui, m {
         }
     }
 
-    private final int a(int param0, qg param1, int param2, int param3) {
+    private final int a(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -503,7 +503,7 @@ class h implements ui, m {
         }
     }
 
-    private final void a(int param0, int param1, int param2, qg param3) {
+    private final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.a(param2, param1, param3, (byte) -49, this.field_f, 0, 0, this.field_m);
           if (param0 != 251) {
@@ -558,7 +558,7 @@ class h implements ui, m {
         return !(param1 <= param0);
     }
 
-    private final void a(int param0, int param1, qg param2, byte param3, int param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, UiWidget param2, byte param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -569,13 +569,13 @@ class h implements ui, m {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        qg var14 = null;
+        UiWidget var14 = null;
         int var12Lifetime1;
         var13 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param3 != -49) {
-            var14 = (qg) null;
-            this.a(-60, (byte) -69, -117, 8, -43, (qg) null);
+            var14 = (UiWidget) null;
+            this.a(-60, (byte) -69, -117, 8, -43, (UiWidget) null);
           }
           boolean decompiledFrameRemainder0 = true;
           c.a(param2.field_l + param1 + param2.field_p, param1 + param2.field_p, (byte) -50, param2.field_h + param0 + param2.field_n, param0 + param2.field_n);
@@ -629,7 +629,7 @@ class h implements ui, m {
         }
     }
 
-    private final int a(qg param0, byte param1, int param2, int param3) {
+    private final int a(UiWidget param0, byte param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -665,7 +665,7 @@ class h implements ui, m {
         field_l = null;
     }
 
-    public final int a(int param0, qg param1, int param2) {
+    public final int a(int param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

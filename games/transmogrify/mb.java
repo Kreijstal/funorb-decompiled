@@ -181,7 +181,7 @@ final class mb {
         var2 = this.field_f.length;
         System.arraycopy(this.field_f, 0, field_c, 0, var2);
         var3 = field_h[this.field_b - 1];
-        var4 = qg.a((byte) 117, var3 - 1);
+        var4 = UiWidget.a((byte) 117, var3 - 1);
         field_d[0] = ml.f(var4);
         field_d[1] = ml.f(var4);
         var5 = 2;

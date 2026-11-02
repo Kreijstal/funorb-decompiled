@@ -4,17 +4,17 @@
 final class ch {
     static int field_b;
     static String field_a;
-    static qj field_e;
-    static ti field_c;
+    static IntrusiveDeque field_e;
+    static Sprite field_c;
     static Boolean field_f;
     static int field_d;
 
-    final static kl a(Throwable param0, String param1) {
-        kl var2 = null;
-        if (!(param0 instanceof kl)) {
-          var2 = new kl(param0, param1);
+    final static ContextualRuntimeException a(Throwable param0, String param1) {
+        ContextualRuntimeException var2 = null;
+        if (!(param0 instanceof ContextualRuntimeException)) {
+          var2 = new ContextualRuntimeException(param0, param1);
         } else {
-          var2 = (kl) ((Object) param0);
+          var2 = (ContextualRuntimeException) ((Object) param0);
           var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
@@ -37,7 +37,7 @@ final class ch {
         try {
           if (gh.field_m == null) {
             gh.field_m = new sd(ci.field_f, tg.field_c);
-            ci.field_f.b((qg) (gh.field_m), (byte) -71);
+            ci.field_f.b((UiWidget) (gh.field_m), (byte) -71);
           }
           gh.field_m.a(param2, param1, (byte) -27, param3);
           sb.c();
@@ -49,6 +49,6 @@ final class ch {
 
     static {
         field_a = "Play free version";
-        field_e = new qj();
+        field_e = new IntrusiveDeque();
     }
 }

@@ -6,9 +6,9 @@ final class r {
     private int field_a;
     private mj[] field_b;
 
-    final hb a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new hb(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
     private final byte[] b() {
@@ -56,7 +56,7 @@ final class r {
         if (var3 == null) {
           return null;
         }
-        return new r(new oa(var3));
+        return new r(new PacketBuffer(var3));
     }
 
     final static r a(ci param0, int param1, int param2) {
@@ -64,17 +64,17 @@ final class r {
         if (var3 == null) {
           return null;
         }
-        return new r(new oa(var3));
+        return new r(new PacketBuffer(var3));
     }
 
-    private r(oa param0) {
+    private r(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new mj[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.d((byte) 27);
           if (var3 != 0) {
-            param0.field_h = param0.field_h - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new mj();
             this.field_b[var2].a(param0);
           }

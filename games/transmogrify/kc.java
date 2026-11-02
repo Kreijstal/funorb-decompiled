@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kc extends wf {
+final class kc extends IntrusiveNode {
     int field_r;
     int field_z;
     int field_u;
@@ -15,11 +15,11 @@ final class kc extends wf {
     int field_x;
     int field_C;
     int field_i;
-    bb field_y;
+    PcmSampleStream field_y;
     si field_h;
     int field_n;
     int field_p;
-    hb field_t;
+    PcmSample field_t;
     int field_o;
     int field_m;
     static boolean field_D;

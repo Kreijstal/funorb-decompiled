@@ -136,7 +136,7 @@ final class pe {
           param0 = param0 + param2;
           var7_int = param4;
           var8 = param5;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param3[var8];
             if (var9 < 0) {
               var7_int = this.field_c[var7_int];
@@ -150,7 +150,7 @@ final class pe {
               param2++;
               param1[incrementValue$1] = (byte)(~var10);
               if (param0 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -166,7 +166,7 @@ final class pe {
               param2++;
               param1[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param2 >= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -182,7 +182,7 @@ final class pe {
               param2++;
               param1[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param0 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -214,7 +214,7 @@ final class pe {
               param2++;
               param1[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param2 >= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -230,7 +230,7 @@ final class pe {
               param2++;
               param1[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param2 >= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -246,7 +246,7 @@ final class pe {
               param2++;
               param1[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param0 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -262,7 +262,7 @@ final class pe {
               param2++;
               param1[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param2 >= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }

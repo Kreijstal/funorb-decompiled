@@ -8,7 +8,7 @@ final class ge extends aj implements hl, df {
     private lj field_y;
     private sf field_w;
 
-    final boolean a(int param0, qg param1, byte param2, char param3) {
+    final boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -101,7 +101,7 @@ final class ge extends aj implements hl, df {
     }
 
     ge(sf param0) {
-        super(0, 0, 288, 0, (ui) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         h var4 = null;
@@ -110,7 +110,7 @@ final class ge extends aj implements hl, df {
         try {
           this.field_w = param0;
           this.field_y = new lj(qe.field_I, (ma) null);
-          this.field_y.field_q = (ui) ((Object) new qa());
+          this.field_y.field_q = (WidgetRenderer) ((Object) new qa());
           var7 = ij.a(ua.field_b, new String[]{this.l(300), this.m(-71)}, (byte) -123);
           var3 = 20;
           var4 = new h(vd.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, vd.field_h.field_y, -1, 2147483647, true);
@@ -122,12 +122,12 @@ final class ge extends aj implements hl, df {
           this.field_z.field_l = this.field_l - 40;
           this.field_z.a(26, this.field_l - 40, -1, var3);
           var3 = var3 + (this.field_z.field_h + 15);
-          this.a((qg) (this.field_z), (byte) -79);
+          this.a((UiWidget) (this.field_z), (byte) -79);
           var5 = 4;
           var6 = 200;
           this.field_y.a(36, var3, -var6 + 300 >> 1, var6, 40);
           this.field_y.field_m = (ma) (this);
-          this.a((qg) (this.field_y), (byte) -97);
+          this.a((UiWidget) (this.field_y), (byte) -97);
           this.a(86, 0, 0, 300, var5 + (var3 + 55));
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ')');

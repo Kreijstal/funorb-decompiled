@@ -9,7 +9,7 @@ final class db {
     static String[] field_b;
     static String field_f;
 
-    final static void a(fe param0, Object param1, int param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, int param2) {
         int var3_int = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -134,7 +134,7 @@ final class db {
         field_b = null;
         if (param0 != 8192) {
           Object var2 = (Object) null;
-          db.a((fe) null, (Object) null, -100);
+          db.a((PlatformTaskDispatcher) null, (Object) null, -100);
         }
     }
 

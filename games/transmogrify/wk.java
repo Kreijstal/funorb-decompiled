@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wk {
-    static j field_a;
+    static TileRack carryoverRack;
     static int field_d;
     static int field_c;
     static int[] field_b;
 
     final static int a(byte param0) {
         if (param0 != -124) {
-          field_a = (j) null;
+          carryoverRack = (TileRack) null;
           return ab.field_j;
         }
         return ab.field_j;
@@ -19,10 +19,10 @@ final class wk {
         field_b = null;
         if (param0 != -30254) {
           wk.a((byte) -22);
-          field_a = null;
+          carryoverRack = null;
           return;
         }
-        field_a = null;
+        carryoverRack = null;
     }
 
     final static String a(int param0, CharSequence[] param1) {
@@ -74,7 +74,7 @@ final class wk {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
               var4 = (String) (kj.a(param0, false, "getcookies"));
-              var5 = vi.a(';', var4, 0);
+              var5 = IterableNodeHashTable.a(';', var4, 0);
               var6 = 0;
               if (param1 != -45) {
                 wk.b((byte) 74);
@@ -133,6 +133,6 @@ final class wk {
     }
 
     static {
-        field_a = new j(12, 34, 190);
+        carryoverRack = new TileRack(12, 34, 190);
     }
 }

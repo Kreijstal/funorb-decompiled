@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nj extends wf {
+final class nj extends IntrusiveNode {
     int field_o;
     int field_q;
     static tf field_g;
@@ -27,14 +27,14 @@ final class nj extends wf {
         field_m = null;
     }
 
-    final static ti[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        ti[] var10;
-        ti[] var11_ref_ti__;
+        Sprite[] var10;
+        Sprite[] var11_ref_ti__;
         int var11;
         int var12;
-        ti var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -45,7 +45,7 @@ final class nj extends wf {
         int var12Lifetime4;
         var15 = Transmogrify.field_A ? 1 : 0;
         var9 = param4 + param7 + param0;
-        var10 = new ti[]{new ti(var9, var9), new ti(param3, var9), new ti(var9, var9), new ti(var9, param3), new ti(64, 64), new ti(var9, param3), new ti(var9, var9), new ti(param3, var9), new ti(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9), new Sprite(var9, param3), new Sprite(64, 64), new Sprite(var9, param3), new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9)};
         var11_ref_ti__ = var10;
         var12 = 0;
         if (param6 < 42) {

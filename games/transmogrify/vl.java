@@ -65,7 +65,7 @@ final class vl extends fi {
         }
     }
 
-    final boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    final boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_6_0 = 0;
@@ -160,7 +160,7 @@ final class vl extends fi {
         }
     }
 
-    final void a(int param0, int param1, qg param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_s = 0;
@@ -169,7 +169,7 @@ final class vl extends fi {
         }
     }
 
-    private vl(int param0, int param1, int param2, int param3, ui param4, ma param5, qg param6, boolean param7, boolean param8) {
+    private vl(int param0, int param1, int param2, int param3, WidgetRenderer param4, ma param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_D = 2147483647;
         this.field_z = 2147483647;
@@ -236,7 +236,7 @@ final class vl extends fi {
             stackIn_4_0 = null;
             return (uj) (stackIn_4_0);
           }
-          if (db.field_a == gd.field_l &&
+          if (db.field_a == AchievementNotice.field_l &&
             param1.equals(jh.field_g)) {
             db.field_a = jh.field_n;
             stackIn_11_0 = de.field_a;
@@ -261,7 +261,7 @@ final class vl extends fi {
         }
     }
 
-    final void a(int param0, byte param1, qg param2, int param3) {
+    final void a(int param0, byte param1, UiWidget param2, int param3) {
         int stackIn_14_1 = 0;
         int stackIn_17_2 = 0;
         int stackIn_22_1 = 0;
@@ -277,7 +277,7 @@ final class vl extends fi {
           if ((!(this.field_v instanceof lj) ||
             ((lj) (this.field_v)).field_t) &&
             this.field_s == 1) {
-            var5_int = oa.field_j + (-this.field_E - param3);
+            var5_int = PacketBuffer.field_j + (-this.field_E - param3);
             var6 = -this.field_H + bk.field_a - param0;
             if (this.field_p != var5_int ||
               var6 != this.field_n) {

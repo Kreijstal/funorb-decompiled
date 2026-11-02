@@ -4,7 +4,7 @@
 final class el {
     private int field_u;
     int[] field_s;
-    static ce field_n;
+    static GameKeyHandler field_n;
     int field_b;
     static int[] field_m;
     static boolean field_g;
@@ -54,7 +54,7 @@ final class el {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        oa var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -71,7 +71,7 @@ final class el {
         int var13Lifetime1Lifetime1;
         var16 = Transmogrify.field_A ? 1 : 0;
         try {
-          var17 = new oa(lk.a(-110, param0));
+          var17 = new PacketBuffer(lk.a(-110, param0));
           var4 = var17.d((byte) 85);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -269,7 +269,7 @@ final class el {
             }
           }
           if (param0 != -9904) {
-            field_n = (ce) null;
+            field_n = (GameKeyHandler) null;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -315,7 +315,7 @@ final class el {
           if (param1 != 33) {
             el.a((byte) -81);
           }
-          rh.field_v = gd.field_l;
+          rh.field_v = AchievementNotice.field_l;
           if (param0 != 255) {
             if (param0 >= 100 &&
               param0 <= 105) {
@@ -391,7 +391,7 @@ final class el {
     static {
         field_m = new int[8192];
         field_a = "Go Back";
-        field_n = new ce();
+        field_n = new GameKeyHandler();
         field_d = -1;
     }
 }

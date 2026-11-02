@@ -4,13 +4,13 @@
 final class lk {
     static int[] field_d;
     static boolean field_c;
-    static fe field_b;
+    static PlatformTaskDispatcher field_b;
     static int[] field_e;
     static String field_a;
 
     final synchronized static long a(int param0) {
         if (param0 != 0) {
-          field_b = (fe) null;
+          field_b = (PlatformTaskDispatcher) null;
         }
         long var1 = System.currentTimeMillis();
         if (var1 < cl.field_y) {
@@ -59,14 +59,14 @@ final class lk {
         byte[] var6_ref_byte__ = null;
         byte[] var7 = null;
         Object var8 = null;
-        oa var10 = null;
+        PacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
         try {
           var3 = -27 % ((param0 - 13) / 43);
-          var10 = new oa(param1);
+          var10 = new PacketBuffer(param1);
           var4 = var10.d((byte) 57);
           var5 = var10.c((byte) -126);
           if (var5 >= 0 && (ll.field_R == 0 ||
@@ -113,19 +113,19 @@ final class lk {
         }
     }
 
-    final static ti a(boolean param0) {
+    final static Sprite a(boolean param0) {
         int var4_int = 0;
         int var5 = Transmogrify.field_A ? 1 : 0;
         int var1 = wk.field_b[0] * ql.field_b[0];
         byte[] var2 = re.field_K[0];
         int[] var3 = new int[var1];
         if (!param0) {
-          return (ti) null;
+          return (Sprite) null;
         }
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = rg.field_D[vg.c(255, (int) var2[var4_int])];
         }
-        ti var4 = new ti(pj.field_y, ll.field_U, gj.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[0], var3);
+        Sprite var4 = new Sprite(pj.field_y, ll.field_U, BufferedSocket.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[0], var3);
         wd.d(126);
         return var4;
     }

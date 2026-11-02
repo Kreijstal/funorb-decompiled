@@ -37,23 +37,23 @@ abstract class td {
           ci.field_f.k(31410);
           ok.field_a = new ff(ob.field_F, (String) null, lb.field_d, param3, param1);
           l.field_d = new rf(ci.field_f, ok.field_a);
-          ci.field_f.b((qg) (l.field_d), (byte) -71);
+          ci.field_f.b((UiWidget) (l.field_d), (byte) -71);
           int var4_int = 70 % ((param0 - 41) / 32);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "td.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static void a(wf param0, byte param1, wf param2) {
+    final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
         try {
-          if (param2.field_f != null) {
+          if (param2.previous != null) {
             param2.c(5);
           }
           int var3_int = 8 % ((param1 - 51) / 40);
-          param2.field_b = param0;
-          param2.field_f = param0.field_f;
-          param2.field_f.field_b = param2;
-          param2.field_b.field_f = param2;
+          param2.next = param0;
+          param2.previous = param0.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "td.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

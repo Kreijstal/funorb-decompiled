@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh extends wf {
+final class gh extends IntrusiveNode {
     byte[] field_k;
     int field_j;
     static int field_l;
@@ -16,7 +16,7 @@ final class gh extends wf {
           pc.a(1);
           return;
         }
-        hj var2 = nf.field_l;
+        hj var2 = WordLanguage.field_l;
         var2.c((byte) -126);
         if (param0 == 0) {
           var2.c((byte) -108);

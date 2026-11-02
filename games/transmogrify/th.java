@@ -3,7 +3,7 @@
  */
 final class th {
     static int field_a;
-    static String field_b;
+    static String shuffleLabel;
     static String field_e;
     static String[] field_d;
     static td field_c;
@@ -23,7 +23,7 @@ final class th {
         }
     }
 
-    final static void a(int param0, oa param1) {
+    final static void a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -50,7 +50,7 @@ final class th {
     }
 
     public static void a(byte param0) {
-        field_b = null;
+        shuffleLabel = null;
         field_e = null;
         field_c = null;
         field_d = null;
@@ -62,7 +62,7 @@ final class th {
 
     static {
         field_a = 0;
-        field_b = "Shuffle";
+        shuffleLabel = "Shuffle";
         field_e = "No highscores";
     }
 }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class si extends wf {
+final class si extends IntrusiveNode {
     private int[] field_o;
     static int field_l;
     byte[] field_p;
-    hb[] field_j;
-    static j field_i;
+    PcmSample[] field_j;
+    static TileRack newRack;
     nh[] field_m;
     short[] field_k;
     int field_h;
@@ -15,15 +15,15 @@ final class si extends wf {
 
     final void d(int param0) {
         if (param0 <= 56) {
-          field_i = (j) null;
+          newRack = (TileRack) null;
         }
         this.field_o = null;
     }
 
     public static void a(byte param0) {
-        field_i = null;
+        newRack = null;
         if (param0 < 74) {
-          field_i = (j) null;
+          newRack = (TileRack) null;
         }
     }
 
@@ -70,7 +70,7 @@ final class si extends wf {
                   }
                 }
                 if (var7 != null) {
-                  this.field_j[var8] = (hb) (var7);
+                  this.field_j[var8] = (PcmSample) (var7);
                   this.field_o[var8] = 0;
                 }
               }
@@ -156,7 +156,7 @@ final class si extends wf {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        oa var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         nh var40 = null;
         byte[] var41 = null;
@@ -236,11 +236,11 @@ final class si extends wf {
           this.field_o = new int[128];
           this.field_k = new short[128];
           this.field_n = new byte[128];
-          this.field_j = new hb[128];
+          this.field_j = new PcmSample[128];
           this.field_g = new byte[128];
           this.field_m = new nh[128];
-          var38 = new oa(param0);
-          for (var3 = 0; var38.field_g[var3 + var38.field_h] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
@@ -248,11 +248,11 @@ final class si extends wf {
           for (var5 = 0; var5 < var3; var5++) {
             var4[var5] = var38.b(true);
           }
-          var38.field_h = var38.field_h + 1;
+          var38.position = var38.position + 1;
           var3++;
-          var5Lifetime1 = var38.field_h;
-          var38.field_h = var38.field_h + var3;
-          for (var6 = 0; var38.field_g[var38.field_h + var6] != 0; var6++) {
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var38.position + var6] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
@@ -261,10 +261,10 @@ final class si extends wf {
             var7[var8] = var38.b(true);
           }
           var6++;
-          var38.field_h = var38.field_h + 1;
-          var8Lifetime1 = var38.field_h;
-          var38.field_h = var38.field_h + var6;
-          for (var9 = 0; var38.field_g[var38.field_h + var9] != 0; var9++) {
+          var38.position = var38.position + 1;
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var38.position + var9] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
@@ -272,7 +272,7 @@ final class si extends wf {
           for (var11_int = 0; var9 > var11_int; var11_int++) {
             var10[var11_int] = var38.b(true);
           }
-          var38.field_h = var38.field_h + 1;
+          var38.position = var38.position + 1;
           var9++;
           var53 = new byte[var9];
           var39 = var53;
@@ -331,7 +331,7 @@ final class si extends wf {
           }
           var47 = stackIn_42_0;
           var16 = var47;
-          for (var17 = 0; var38.field_g[var17 + var38.field_h] != 0; var17++) {
+          for (var17 = 0; var38.payload[var17 + var38.position] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
@@ -340,7 +340,7 @@ final class si extends wf {
             var18[var19] = var38.b(true);
           }
           var17++;
-          var38.field_h = var38.field_h + 1;
+          var38.position = var38.position + 1;
           var19Lifetime1 = 0;
           for (var20 = 0; 128 > var20; var20++) {
             var19Lifetime1 = var19Lifetime1 + var38.d((byte) 45);
@@ -380,7 +380,7 @@ final class si extends wf {
                 }
                 incrementValue$6 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = var38.field_g[incrementValue$6] - 1;
+                var23Lifetime1 = var38.payload[incrementValue$6] - 1;
               }
               this.field_g[var24] = (byte)var23Lifetime1;
               var20Lifetime3--;
@@ -394,7 +394,7 @@ final class si extends wf {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = var38.field_g[incrementValue$3] + 16 << 2;
+                var24Lifetime1 = var38.payload[incrementValue$3] + 16 << 2;
                 if (var56.length > var21Lifetime2) {
                   var20Lifetime4 = var7[var21Lifetime2++];
                 } else {
@@ -619,6 +619,6 @@ final class si extends wf {
     }
 
     static {
-        field_i = new j(8, 161, 247);
+        newRack = new TileRack(8, 161, 247);
     }
 }

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class Transmogrify extends ig {
+public final class Transmogrify extends SessionGameApplet {
     static String field_B;
     static String field_E;
     static int field_D;
     public static boolean field_A;
 
-    final void e(int param0) {
+    final void releaseGameResources(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -39,7 +39,7 @@ public final class Transmogrify extends ig {
         }
     }
 
-    final void b(byte param0) {
+    final void updateGame(byte param0) {
         boolean discarded$0 = false;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
@@ -50,7 +50,7 @@ public final class Transmogrify extends ig {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        gd var5 = null;
+        AchievementNotice var5 = null;
         var4 = field_A ? 1 : 0;
         try {
           sf.v(107);
@@ -62,9 +62,9 @@ public final class Transmogrify extends ig {
           stackIn_7_1 = 10017;
           stackIn_8_2 = (ub.field_c != null);
           this.a(stackIn_7_1, stackIn_8_2);
-          if (wf.field_a) {
+          if (IntrusiveNode.field_a) {
             this.j(-7632);
-            wf.field_a = false;
+            IntrusiveNode.field_a = false;
           }
           if (param0 > -12) {
             return;
@@ -77,25 +77,25 @@ public final class Transmogrify extends ig {
               }
               return;
             }
-            if (!qj.b((byte) 99)) {
+            if (!IntrusiveDeque.b((byte) 99)) {
               sh.field_c = pj.a(29, (byte) -76, 3, 10, 1);
             }
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!vi.field_h) {
-            gj.a(true, f.field_a);
+          if (!IterableNodeHashTable.field_h) {
+            BufferedSocket.a(true, f.field_a);
             if (this.a((byte) -96, true)) {
               this.n(32198);
-              vi.field_h = true;
+              IterableNodeHashTable.field_h = true;
             }
           } else {
-            if (!qj.b((byte) 95) &&
+            if (!IntrusiveDeque.b((byte) 95) &&
               !ud.field_a &&
               lb.field_i != 2) {
               if (kb.field_n != null &&
                 kb.field_n.field_i) {
                 hc.field_u = hc.field_u & ~kb.field_n.field_k;
-                rh.field_n = rh.field_n | kb.field_n.field_k;
+                rh.unlockedAchievementMask = rh.unlockedAchievementMask | kb.field_n.field_k;
                 kb.field_n = null;
                 cg.b((byte) -27);
                 qd.a(-117);
@@ -114,7 +114,7 @@ public final class Transmogrify extends ig {
               if (!ll.c(true)) {
                 if (!dj.b(-1)) {
                   if (tl.field_d < 169) {
-                    tl.field_d = tl.field_d + fa.field_f;
+                    tl.field_d = tl.field_d + GameApplet.field_f;
                     if (169 <= tl.field_d) {
                       wd.a(17099, true, bd.field_u[6]);
                     }
@@ -123,7 +123,7 @@ public final class Transmogrify extends ig {
                   }
                 } else {
                   stackIn_47_0 = (ub.field_c != null);
-                  var2_int = pc.a(stackIn_47_0, (ig) (this), (byte) 120);
+                  var2_int = pc.a(stackIn_47_0, (SessionGameApplet) (this), (byte) 120);
                   switch (var2_int) {
                     case 1:
                       qd.b(5);
@@ -164,16 +164,16 @@ public final class Transmogrify extends ig {
               }
             }
           }
-          if (!qj.b((byte) 122)) {
+          if (!IntrusiveDeque.b((byte) 122)) {
             while (true) {
-              var5 = (gd) (mc.field_c.c(-128));
+              var5 = (AchievementNotice) (mc.field_c.c(-128));
               if (var5 == null) {
                 break;
               }
               te.a(var5, (byte) -10, 4);
             }
           }
-          while (gj.a(ek.field_c, (byte) 114)) {
+          while (BufferedSocket.a(ek.field_c, (byte) 114)) {
             this.g(-89);
           }
           rb.a(0, -377);
@@ -182,7 +182,7 @@ public final class Transmogrify extends ig {
           if (var2_int != 0) {
             var3 = this.f((byte) 102);
             if (var3 == 2) {
-              jd.a(240, 10, eh.field_c, 3, wf.field_d.field_y, 320, wf.field_d, wf.field_d.field_y * 3 / 2, 3, pf.field_h, false);
+              jd.a(240, 10, eh.field_c, 3, IntrusiveNode.field_d.field_y, 320, IntrusiveNode.field_d, IntrusiveNode.field_d.field_y * 3 / 2, 3, SecondaryNodeDeque.field_h, false);
             }
           }
           return;
@@ -201,7 +201,7 @@ public final class Transmogrify extends ig {
           if (param0 != 72) {
             field_D = -63;
           }
-          stackIn_3_0 = nf.field_l.g(12248);
+          stackIn_3_0 = WordLanguage.field_l.g(12248);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,11 +225,11 @@ public final class Transmogrify extends ig {
           var1 = ff.field_D;
           while (cg.g(-5591)) {
             var1.a(false, 8);
-            fieldTemp$0 = var1.field_h + 1;
-            var1.field_h = var1.field_h + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             lc.a((byte) 65, var1);
-            ff.field_D.a((byte) -42, var1.field_h - var2);
+            ff.field_D.a((byte) -42, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -294,7 +294,7 @@ public final class Transmogrify extends ig {
           if (lb.field_i != 0) {
             if (1 != lb.field_i) {
               if (2 == lb.field_i) {
-                if (qj.b((byte) 104)) {
+                if (IntrusiveDeque.b((byte) 104)) {
                   be.field_q = hf.field_i;
                 } else {
                   kb.field_n = l.a((byte) 12, 4);
@@ -318,9 +318,9 @@ public final class Transmogrify extends ig {
               lc.field_q = lc.field_q + 1;
               if (lc.field_q == 16) {
                 if (ll.c(true)) {
-                  fg.d((byte) 91);
+                  ImageProducerRasterBuffer.d((byte) 91);
                 } else {
-                  qg.b(false);
+                  UiWidget.b(false);
                 }
                 lb.field_i = 2;
               }
@@ -336,7 +336,7 @@ public final class Transmogrify extends ig {
               } else {
                 ej.field_l[be.field_q].c((byte) 122);
                 if (oh.field_j > 2 &&
-                  n.field_a < 10) {
+                  n.submittedWordCount < 10) {
                   wk.field_c = wk.field_c + 1;
                   dc.field_a = dc.field_a + 1;
                 }
@@ -354,11 +354,11 @@ public final class Transmogrify extends ig {
                   }
                   if (qf.field_d == 5) {
                     var2_int = 130;
-                    var3 = wf.field_d.field_t + (wf.field_d.field_D + 4);
-                    var2_int = var2_int + var3 * wf.field_d.b(sd.field_Q, 341);
+                    var3 = IntrusiveNode.field_d.field_t + (IntrusiveNode.field_d.field_D + 4);
+                    var2_int = var2_int + var3 * IntrusiveNode.field_d.b(sd.field_Q, 341);
                     stackIn_39_0 = var2_int;
                     stackIn_39_1 = var3;
-                    stackIn_39_2 = wf.field_d;
+                    stackIn_39_2 = IntrusiveNode.field_d;
                     stackIn_39_3 = 1;
                     if (hc.field_u == 0) {
                       stackIn_40_4 = 0;
@@ -371,7 +371,7 @@ public final class Transmogrify extends ig {
                     stackIn_43_3 = stackIn_39_3;
                     stackIn_43_4 = stackIn_40_4;
                     stackIn_43_5 = false;
-                    if (0 == pf.field_g) {
+                    if (0 == SecondaryNodeDeque.field_g) {
                       stackIn_44_0 = stackIn_43_0;
                       stackIn_44_1 = stackIn_43_1;
                       stackIn_44_2 = stackIn_43_2;
@@ -392,10 +392,10 @@ public final class Transmogrify extends ig {
                     stackIn_47_1 = 5;
                     stackIn_47_2 = var3 + jk.field_x.a(true);
                     stackIn_47_3 = var3;
-                    stackIn_47_4 = wf.field_d;
+                    stackIn_47_4 = IntrusiveNode.field_d;
                     stackIn_47_5 = -127;
                     stackIn_47_6 = 0;
-                    if (0 == pf.field_g) {
+                    if (0 == SecondaryNodeDeque.field_g) {
                       stackIn_48_7 = 0;
                     } else {
                       stackIn_48_7 = 1;
@@ -429,7 +429,7 @@ public final class Transmogrify extends ig {
                       stackIn_52_7 = stackIn_48_7;
                       stackIn_52_8 = true;
                     }
-                    stackIn_52_0[stackIn_52_1] = stackIn_52_2 + stackIn_52_3 * ((mi) (Object) stackIn_52_4).b(gd.$cfr$intArgs$a$c7de0d339b2a(stackIn_52_5, stackIn_52_6 != 0, stackIn_52_7 != 0, stackIn_52_8), 341);
+                    stackIn_52_0[stackIn_52_1] = stackIn_52_2 + stackIn_52_3 * ((mi) (Object) stackIn_52_4).b(AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(stackIn_52_5, stackIn_52_6 != 0, stackIn_52_7 != 0, stackIn_52_8), 341);
                   }
                 }
               } else {
@@ -437,11 +437,11 @@ public final class Transmogrify extends ig {
                   sh.field_c = null;
                 }
                 if (be.field_q == 5 &&
-                  qj.b((byte) 99)) {
-                  rh.field_n = 0;
+                  IntrusiveDeque.b((byte) 99)) {
+                  rh.unlockedAchievementMask = 0;
                   hc.field_u = 0;
                   mc.field_c.g(-1);
-                  pf.field_g = 0;
+                  SecondaryNodeDeque.field_g = 0;
                 }
                 lc.field_q = 0;
                 be.field_q = qf.field_d;
@@ -451,14 +451,14 @@ public final class Transmogrify extends ig {
               }
               eg.field_b = eg.field_b + 1;
               if (oh.field_j > 2 &&
-                10 > n.field_a) {
+                10 > n.submittedWordCount) {
                 wk.field_c = wk.field_c + 1;
                 dc.field_a = dc.field_a + 1;
               }
             }
           }
           if (param0 != 11179) {
-            this.a(60);
+            this.initializeGame(60);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -468,23 +468,23 @@ public final class Transmogrify extends ig {
         }
     }
 
-    final void b(int param0) {
+    final void renderFrame(int param0) {
         Object stackIn_5_0 = null;
         boolean stackIn_12_0 = false;
         boolean stackIn_88_0 = false;
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
         RuntimeException var2_ref = null;
-        ti[] var3_ref_ti__ = null;
+        Sprite[] var3_ref_ti__ = null;
         int var3 = 0;
         int var4 = 0;
-        ti var5_ref_ti = null;
+        Sprite var5_ref_ti = null;
         int var5 = 0;
         int var6 = 0;
-        ti[] var7_ref_ti__ = null;
+        Sprite[] var7_ref_ti__ = null;
         int var7 = 0;
         int var8 = 0;
-        ti var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
         Object var11 = null;
         int var3Lifetime1;
@@ -492,7 +492,7 @@ public final class Transmogrify extends ig {
         var10 = field_A ? 1 : 0;
         try {
           if (ub.field_c == null) {
-            stackIn_5_0 = gd.field_k;
+            stackIn_5_0 = AchievementNotice.field_k;
           } else {
             stackIn_5_0 = ub.field_c;
           }
@@ -502,16 +502,16 @@ public final class Transmogrify extends ig {
             if (null != ub.field_c) {
               stackIn_12_0 = true;
             } else {
-              stackIn_12_0 = rj.field_b;
+              stackIn_12_0 = MouseWheelInput.field_b;
             }
             da.a(stackIn_12_0, (byte) 119, (java.awt.Canvas) (var11));
             return;
           }
-          if (!vi.field_h) {
+          if (!IterableNodeHashTable.field_h) {
             ng.a(false, (java.awt.Canvas) (var11));
             return;
           }
-          if (!qj.b((byte) 119) &&
+          if (!IntrusiveDeque.b((byte) 119) &&
             !ud.field_a) {
             ng.a(false, (java.awt.Canvas) (var11));
             return;
@@ -623,11 +623,11 @@ public final class Transmogrify extends ig {
             if (null != ub.field_c) {
               stackIn_88_0 = true;
             } else {
-              stackIn_88_0 = rj.field_b;
+              stackIn_88_0 = MouseWheelInput.field_b;
             }
-            cj.a(stackIn_88_0, 793);
+            RasterBuffer.a(stackIn_88_0, 793);
           }
-          ah.a(0, 0, (byte) 119, (java.awt.Canvas) (var11));
+          DelegatingCanvas.a(0, 0, (byte) 119, (java.awt.Canvas) (var11));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -644,27 +644,27 @@ public final class Transmogrify extends ig {
         int var9_int = 0;
         int incrementValue$0 = 0;
         int incrementValue$2 = 0;
-        sj dupTemp$1 = null;
+        LetterTile dupTemp$1 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5_int = 0;
-        ad[] var5 = null;
+        WordDictionary[] var5 = null;
         int var6_int = 0;
-        nf var6 = null;
-        sj var7 = null;
+        WordLanguage var6 = null;
+        LetterTile var7 = null;
         int var7_int = 0;
-        sj var8 = null;
-        sj var9 = null;
+        LetterTile var8 = null;
+        LetterTile var9 = null;
         int var10 = 0;
-        ti var12 = null;
-        ti[] var13 = null;
-        ti var14 = null;
-        ad[] var15 = null;
-        ad[] var16 = null;
-        sj var17 = null;
-        sj var18 = null;
+        Sprite var12 = null;
+        Sprite[] var13 = null;
+        Sprite var14 = null;
+        WordDictionary[] var15 = null;
+        WordDictionary[] var16 = null;
+        LetterTile var17 = null;
+        LetterTile var18 = null;
         byte[] var21 = null;
         int var3_intLifetime1;
         int var3_intLifetime2;
@@ -702,7 +702,7 @@ public final class Transmogrify extends ig {
                             vf.a((byte) -128, 52.0f, ee.a(dj.field_a, (byte) 102, i.field_c, li.field_k, "arialish12"));
                             return false;
                           }
-                          if (!ig.field_y.a((byte) 118, "arialish12")) {
+                          if (!SessionGameApplet.field_y.a((byte) 118, "arialish12")) {
                             vf.a((byte) -125, 52.0f, ee.a(dj.field_a, (byte) 106, i.field_c, li.field_k, "arialish12"));
                             return false;
                           }
@@ -710,7 +710,7 @@ public final class Transmogrify extends ig {
                             vf.a((byte) 83, 53.0f, ee.a(dj.field_a, (byte) 106, i.field_c, li.field_k, "arialish20"));
                             return false;
                           }
-                          if (!ig.field_y.a((byte) 117, "arialish20")) {
+                          if (!SessionGameApplet.field_y.a((byte) 117, "arialish20")) {
                             vf.a((byte) -123, 53.0f, ee.a(dj.field_a, (byte) 123, i.field_c, li.field_k, "arialish20"));
                             return false;
                           }
@@ -721,22 +721,22 @@ public final class Transmogrify extends ig {
                               return false;
                             }
                             cg.b((byte) -121);
-                            this.b(15648);
+                            this.renderFrame(15648);
                             rc.field_a = new bl(pc.field_a, di.field_h);
-                            dg.field_d[0] = r.a(pc.field_a, "", "trans16_button_click").a();
-                            dg.field_d[1] = r.a(pc.field_a, "", "trans01_submit_accept").a();
-                            dg.field_d[2] = r.a(pc.field_a, "", "trans02_submit_decline").a();
-                            dg.field_d[3] = r.a(pc.field_a, "", "trans03_place_tile_1").a();
-                            dg.field_d[4] = r.a(pc.field_a, "", "trans04_place_tile_2").a();
-                            dg.field_d[5] = r.a(pc.field_a, "", "trans05_place_tile_3").a();
-                            dg.field_d[6] = r.a(pc.field_a, "", "trans06_incorrect_letter").a();
-                            dg.field_d[7] = r.a(pc.field_a, "", "trans07_popup_warning").a();
-                            lj.field_u = bb.a(dg.field_d[1], 100, 255);
+                            FullscreenFocusCanvas.field_d[0] = r.a(pc.field_a, "", "trans16_button_click").a();
+                            FullscreenFocusCanvas.field_d[1] = r.a(pc.field_a, "", "trans01_submit_accept").a();
+                            FullscreenFocusCanvas.field_d[2] = r.a(pc.field_a, "", "trans02_submit_decline").a();
+                            FullscreenFocusCanvas.field_d[3] = r.a(pc.field_a, "", "trans03_place_tile_1").a();
+                            FullscreenFocusCanvas.field_d[4] = r.a(pc.field_a, "", "trans04_place_tile_2").a();
+                            FullscreenFocusCanvas.field_d[5] = r.a(pc.field_a, "", "trans05_place_tile_3").a();
+                            FullscreenFocusCanvas.field_d[6] = r.a(pc.field_a, "", "trans06_incorrect_letter").a();
+                            FullscreenFocusCanvas.field_d[7] = r.a(pc.field_a, "", "trans07_popup_warning").a();
+                            lj.field_u = PcmSampleStream.a(FullscreenFocusCanvas.field_d[1], 100, 255);
                             pc.field_a = null;
                             el.b(-6491);
                             return false;
                           }
-                          vf.a((byte) -4, 54.0f, rj.a(l.field_a, (byte) -38));
+                          vf.a((byte) -4, 54.0f, MouseWheelInput.a(l.field_a, (byte) -38));
                           return false;
                         }
                         vf.a((byte) 11, 51.0f, ee.a(dj.field_a, (byte) 75, i.field_c, kk.field_a, ""));
@@ -748,13 +748,13 @@ public final class Transmogrify extends ig {
                     vf.a((byte) -128, 49.0f, ee.a(i.field_d, (byte) 97, kh.field_e, ta.field_d, ""));
                     return false;
                   }
-                  vf.a((byte) 25, 48.0f, fg.a(kh.field_e, be.field_n, 0, i.field_d, 32389));
+                  vf.a((byte) 25, 48.0f, ImageProducerRasterBuffer.a(kh.field_e, be.field_n, 0, i.field_d, 32389));
                   return false;
                 }
                 vf.a((byte) -10, 2.0f, ee.a(i.field_d, (byte) 74, kh.field_e, di.field_h, ""));
                 return false;
               }
-              vf.a((byte) 90, 1.0f, ee.a(oc.field_H, (byte) 71, k.field_e, pc.field_a, ""));
+              vf.a((byte) 90, 1.0f, ee.a(oc.field_H, (byte) 71, IndexedSpriteState.field_e, pc.field_a, ""));
               return false;
             }
             vf.a((byte) -121, 0.0f, ee.a(vg.field_a, (byte) 100, aa.field_f, li.field_k, "basic"));
@@ -762,21 +762,21 @@ public final class Transmogrify extends ig {
           }
           if (null != di.field_h) {
             vf.a((byte) -121, 74.0f, q.field_c);
-            this.b(15648);
-            dg.field_d[10] = ml.a(di.field_h, "", "trans14_crowd_cheer_long").b();
-            dg.field_d[11] = ml.a(di.field_h, "", "trans15_crowd_cheer_short").b();
+            this.renderFrame(15648);
+            FullscreenFocusCanvas.field_d[10] = ml.a(di.field_h, "", "trans14_crowd_cheer_long").b();
+            FullscreenFocusCanvas.field_d[11] = ml.a(di.field_h, "", "trans15_crowd_cheer_short").b();
             var3_int = 95190;
             var4 = 275371;
-            dg.field_d[9] = ec.a(var4, 0, var3_int, dg.field_d[10]);
-            dg.field_d[8] = ec.a(dg.field_d[10].field_l.length, 0, var4, dg.field_d[10]);
-            dg.field_d[12] = ec.a(dg.field_d[10].field_l.length, 0, var3_int, dg.field_d[10]);
+            FullscreenFocusCanvas.field_d[9] = SocketConnector.a(var4, 0, var3_int, FullscreenFocusCanvas.field_d[10]);
+            FullscreenFocusCanvas.field_d[8] = SocketConnector.a(FullscreenFocusCanvas.field_d[10].field_l.length, 0, var4, FullscreenFocusCanvas.field_d[10]);
+            FullscreenFocusCanvas.field_d[12] = SocketConnector.a(FullscreenFocusCanvas.field_d[10].field_l.length, 0, var3_int, FullscreenFocusCanvas.field_d[10]);
             di.field_h = null;
             el.b(-6491);
             return false;
           }
           if (null != ta.field_d) {
             vf.a((byte) -125, 75.0f, db.field_f);
-            this.b(15648);
+            this.renderFrame(15648);
             bd.field_u = new pl[10];
             bd.field_u[0] = pl.a(ta.field_d, "", "transmogrify intro jingle");
             bd.field_u[1] = pl.a(ta.field_d, "", "transmogrify 1-3");
@@ -806,54 +806,54 @@ public final class Transmogrify extends ig {
             return false;
           }
           if (null == gb.field_a &&
-            null == wf.field_d) {
+            null == IntrusiveNode.field_d) {
             vf.a((byte) -125, 92.0f, ha.field_b);
-            this.b(param0 ^ -15744);
+            this.renderFrame(param0 ^ -15744);
             gb.field_a = ej.a((byte) -43, li.field_k, "", "arialish20");
             el.b(-6491);
             return false;
           }
           if (le.field_A == null) {
-            var21 = ig.field_y.a("", (byte) 92, "arialish20");
-            wf.field_d = jd.a(var21, 98, gb.field_a);
+            var21 = SessionGameApplet.field_y.a("", (byte) 92, "arialish20");
+            IntrusiveNode.field_d = jd.a(var21, 98, gb.field_a);
             og.field_a = ua.a(oi.field_g, "", 32, kk.field_a, "arialish20narrow");
             le.field_A = eh.a(gb.field_a, param0 ^ -96, var21, 255, 119);
             le.field_A.field_K[1] = new int[]{0, 16777215, 7829367};
-            hk.field_a = am.a("", li.field_k, (byte) 72, ig.field_y, "arialish12");
+            hk.field_a = am.a("", li.field_k, (byte) 72, SessionGameApplet.field_y, "arialish12");
             gb.field_a = null;
-            wf.field_d.a(ue.field_c, (int[]) null);
+            IntrusiveNode.field_d.a(ue.field_c, (int[]) null);
             hk.field_a.a(ue.field_c, (int[]) null);
             ff.field_z = pc.a("basic", "unachieved", li.field_k, param0 ^ 33);
             nh.a(ff.field_z, (byte) 59);
-            var4Lifetime1 = wf.field_d.field_t + wf.field_d.field_y;
+            var4Lifetime1 = IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_y;
             c.field_a = pc.a("basic", "orbcoin", li.field_k, param0 ^ 33);
             li.field_k = null;
-            ig.field_y = null;
-            og.field_b = new ti(var4Lifetime1, var4Lifetime1);
+            SessionGameApplet.field_y = null;
+            og.field_b = new Sprite(var4Lifetime1, var4Lifetime1);
             og.field_b.e();
             c.field_a.a(0, 0, var4Lifetime1, var4Lifetime1);
             c.field_a = null;
-            ri.field_k.a(115);
+            DualLinkNode.field_k.a(115);
             dh.field_B = pc.a("", "background", oi.field_g, param0 - 28);
-            qe.field_F = kl.a(oi.field_g, (byte) 127, "", "hostanims_uniq");
-            mk.field_B = kl.a(oi.field_g, (byte) 125, "", "dialog_frame");
-            pf.field_h = kl.a(oi.field_g, (byte) 125, "", "button_frame");
-            eh.field_c = kl.a(oi.field_g, (byte) 121, "", "button_frame_hi");
+            qe.field_F = ContextualRuntimeException.a(oi.field_g, (byte) 127, "", "hostanims_uniq");
+            mk.field_B = ContextualRuntimeException.a(oi.field_g, (byte) 125, "", "dialog_frame");
+            SecondaryNodeDeque.field_h = ContextualRuntimeException.a(oi.field_g, (byte) 125, "", "button_frame");
+            eh.field_c = ContextualRuntimeException.a(oi.field_g, (byte) 121, "", "button_frame_hi");
             jk.field_x = new mg(ej.a((byte) -43, oi.field_g, "var_button", ""));
-            var5_int = wf.field_d.a(mc.field_a[0]);
-            var6_int = wf.field_d.a(mc.field_a[1]);
+            var5_int = IntrusiveNode.field_d.a(mc.countdownLabels[0]);
+            var6_int = IntrusiveNode.field_d.a(mc.countdownLabels[1]);
             if (var5_int < var6_int) {
               var5_int = var6_int;
             }
-            var6_intLifetime3 = wf.field_d.a(mc.field_a[2]);
-            tb.field_b = new ti[3];
+            var6_intLifetime3 = IntrusiveNode.field_d.a(mc.countdownLabels[2]);
+            tb.field_b = new Sprite[3];
             if (var6_intLifetime3 > var5_int) {
               var5_int = var6_intLifetime3;
             }
             var5_int += 16;
-            var7_int = 4 + wf.field_d.field_y + wf.field_d.field_t;
+            var7_int = 4 + IntrusiveNode.field_d.field_y + IntrusiveNode.field_d.field_t;
             for (var8_int = 0; var8_int < 3; var8_int++) {
-              tb.field_b[var8_int] = new ti(var5_int, var7_int);
+              tb.field_b[var8_int] = new Sprite(var5_int, var7_int);
               tb.field_b[var8_int].e();
               dk.a(var7_int, mk.field_B, -28018, 0, 0, var5_int);
               for (var9_int = 0; sb.field_h.length > var9_int; var9_int++) {
@@ -862,9 +862,9 @@ public final class Transmogrify extends ig {
                   sb.field_h[var9_int] = 7500402;
                 }
               }
-              wf.field_d.c(mc.field_a[var8_int], var5_int >> 1, wf.field_d.field_y + 2, 1, -1);
+              IntrusiveNode.field_d.c(mc.countdownLabels[var8_int], var5_int >> 1, IntrusiveNode.field_d.field_y + 2, 1, -1);
             }
-            ri.field_k.a(param0 + 199);
+            DualLinkNode.field_k.a(param0 + 199);
             el.b(-6491);
             return false;
           }
@@ -874,13 +874,13 @@ public final class Transmogrify extends ig {
           if (null == rk.field_r[4]) {
             a.field_R = pc.a("", "logo_highscores", oi.field_g, param0 ^ 118);
             mk.field_y = pc.a("", "logo_achievements", oi.field_g, 58);
-            se.field_t = pc.a("", "logo_instructions", oi.field_g, -33);
+            SpriteState.field_t = pc.a("", "logo_instructions", oi.field_g, -33);
             uj.field_e = cf.a((byte) -122);
-            kk.field_d = kl.a(oi.field_g, (byte) 121, "", "frame_trans");
-            ck.field_C = kl.a(oi.field_g, (byte) 123, "", "frame_trans_inner");
-            pf.field_d = pc.a("", "banner", oi.field_g, 71);
-            rk.field_r[4] = new ti(640, 480);
-            var12 = new ti(640, 480);
+            kk.field_d = ContextualRuntimeException.a(oi.field_g, (byte) 121, "", "frame_trans");
+            ck.field_C = ContextualRuntimeException.a(oi.field_g, (byte) 123, "", "frame_trans_inner");
+            SecondaryNodeDeque.field_d = pc.a("", "banner", oi.field_g, 71);
+            rk.field_r[4] = new Sprite(640, 480);
+            var12 = new Sprite(640, 480);
             var12.e();
             dk.a(377, ck.field_C, -28018, 258, 72, 361);
             mk.field_y.d(337, 14, 0);
@@ -897,10 +897,10 @@ public final class Transmogrify extends ig {
               pc.a("halloween", "achievementsbg_nobox", oi.field_g, 18).c(0, 0);
             }
             var12.e(0, 0, 166);
-            wf.a(kk.field_d, 377, 7, 258, 2363394, 361, 72);
+            IntrusiveNode.a(kk.field_d, 377, 7, 258, 2363394, 361, 72);
             mk.field_y.c(337, 14);
             rk.field_r[6] = rk.field_r[4];
-            rk.field_r[1] = new ti(640, 480);
+            rk.field_r[1] = new Sprite(640, 480);
             rk.field_r[1].e();
             uj.field_e.f(0, 0);
             if (!wl.a(false, 0)) {
@@ -908,10 +908,10 @@ public final class Transmogrify extends ig {
             } else {
               pc.a("halloween", "pausemenu_nobox", oi.field_g, -127).c(0, 0);
             }
-            wf.a(kk.field_d, 347, param0 + 103, 140, 2363394, 361, 72);
-            wf.a(ck.field_C, 347, 7, 140, 16777215, 361, 72);
-            pf.field_d.c(219, 14);
-            ri.field_k.a(param0 ^ -47);
+            IntrusiveNode.a(kk.field_d, 347, param0 + 103, 140, 2363394, 361, 72);
+            IntrusiveNode.a(ck.field_C, 347, 7, 140, 16777215, 361, 72);
+            SecondaryNodeDeque.field_d.c(219, 14);
+            DualLinkNode.field_k.a(param0 ^ -47);
             rk.field_r[7] = rk.field_r[1];
             el.b(-6491);
             return false;
@@ -923,17 +923,17 @@ public final class Transmogrify extends ig {
               rk.field_r[0] = kf.a(pc.a("", "mainmenu_packed", oi.field_g, -5), false, (byte) -93);
             }
             rk.field_r[0].e();
-            pf.field_d.c(219, 21);
+            SecondaryNodeDeque.field_d.c(219, 21);
             rk.field_r[3] = pc.a("", "instructions_bg", oi.field_g, -128);
             rk.field_r[5] = rk.field_r[1];
             wl.field_K = pc.a("", "tile", oi.field_g, param0 + 149);
-            rj.field_a = kl.a(oi.field_g, (byte) 122, "", "sparkles");
-            hf.field_d = kl.a(oi.field_g, (byte) 122, "", "sparkle_array");
-            jh.field_h = new ti(640, 480);
+            MouseWheelInput.field_a = ContextualRuntimeException.a(oi.field_g, (byte) 122, "", "sparkles");
+            hf.field_d = ContextualRuntimeException.a(oi.field_g, (byte) 122, "", "sparkle_array");
+            jh.field_h = new Sprite(640, 480);
             jh.field_h.e();
             uj.field_e.f(0, 0);
             pc.a("", "spikes", oi.field_g, 45).c(0, 0);
-            rk.field_r[2] = new ti(640, 480);
+            rk.field_r[2] = new Sprite(640, 480);
             rk.field_r[2].e();
             jh.field_h.f(0, 0);
             if (wl.a(false, 0)) {
@@ -942,20 +942,20 @@ public final class Transmogrify extends ig {
               pc.a("", "highscorebg_nobox", oi.field_g, -126).c(0, 0);
             }
             a.field_R.c(10, 10);
-            wf.a(kk.field_d, 377, 7, 217, 2363394, 361, 20);
-            wf.a(ck.field_C, 377, param0 + 103, 217, 16777215, 361, 20);
-            ri.field_k.a(117);
+            IntrusiveNode.a(kk.field_d, 377, 7, 217, 2363394, 361, 20);
+            IntrusiveNode.a(ck.field_C, 377, param0 + 103, 217, 16777215, 361, 20);
+            DualLinkNode.field_k.a(117);
             jl.field_l = pc.a("", "intro_bigstar", oi.field_g, param0 ^ -58);
-            gk.field_c = kl.a(oi.field_g, (byte) 124, "", "intro_stars");
+            gk.field_c = ContextualRuntimeException.a(oi.field_g, (byte) 124, "", "intro_stars");
             ij.field_h = pc.a("", "intro_host", oi.field_g, -124);
             hc.field_r = pc.a("", "intro_hostess", oi.field_g, 95);
             rh.field_s = kf.a(pc.a("", "intro_logo_packed", oi.field_g, param0 - 31), false, (byte) 126);
             rh.field_s.b();
             kk.field_d = null;
             ck.field_C = null;
-            pf.field_d = null;
+            SecondaryNodeDeque.field_d = null;
             uj.field_e = null;
-            fc.field_h = kl.a(oi.field_g, (byte) 126, "", "achievements");
+            fc.field_h = ContextualRuntimeException.a(oi.field_g, (byte) 126, "", "achievements");
             var13 = fc.field_h;
             for (var4Lifetime3 = 0; var13.length > var4Lifetime3; var4Lifetime3++) {
               var14 = var13[var4Lifetime3];
@@ -964,12 +964,12 @@ public final class Transmogrify extends ig {
             if (wl.a(false, 0)) {
               ij.field_h = pc.a("halloween", "intro_host", oi.field_g, -128);
               hc.field_r = pc.a("halloween", "intro_hostess", oi.field_g, 59);
-              qe.field_F = kl.a(oi.field_g, (byte) 127, "halloween", "hostanims_uniq");
+              qe.field_F = ContextualRuntimeException.a(oi.field_g, (byte) 127, "halloween", "hostanims_uniq");
               rk.field_r[3] = pc.a("halloween", "instructions_bg", oi.field_g, -12);
               dh.field_B = pc.a("halloween", "background", oi.field_g, 19);
             }
-            hk.a(wf.field_d, param0 + 98, 400, wf.field_d);
-            ej.a(16, (byte) 108, 8, 2, new pg(pf.field_h), new pg(eh.field_c));
+            hk.a(IntrusiveNode.field_d, param0 + 98, 400, IntrusiveNode.field_d);
+            ej.a(16, (byte) 108, 8, 2, new pg(SecondaryNodeDeque.field_h), new pg(eh.field_c));
             vf.a(new pg(mk.field_B), 10, 10, param0 + 211);
             el.b(-6491);
             return false;
@@ -984,8 +984,8 @@ public final class Transmogrify extends ig {
             return true;
           }
           vf.a((byte) -11, 93.0f, vh.field_k);
-          this.b(param0 + 15744);
-          var15 = kl.b(param0 + 12, l.field_a);
+          this.renderFrame(param0 + 15744);
+          var15 = ContextualRuntimeException.b(param0 + 12, l.field_a);
           var4Lifetime4 = 0;
           for (var5_intLifetime1 = 0; var5_intLifetime1 < var15.length; var5_intLifetime1++) {
             if (var15[var5_intLifetime1] != null) {
@@ -994,7 +994,7 @@ public final class Transmogrify extends ig {
           }
           incrementValue$0 = var4Lifetime4;
           var4Lifetime4--;
-          var16 = new ad[incrementValue$0];
+          var16 = new WordDictionary[incrementValue$0];
           var5 = var16;
           for (var6_intLifetime1 = var15.length - 1; var6_intLifetime1 >= 0; var6_intLifetime1--) {
             if (var15[var6_intLifetime1] != null) {
@@ -1003,29 +1003,29 @@ public final class Transmogrify extends ig {
               var5[incrementValue$2] = var15[var6_intLifetime1];
             }
           }
-          we.field_l = new nf[var16.length];
+          we.field_l = new WordLanguage[var16.length];
           for (var6_intLifetime2 = 0; var6_intLifetime2 < we.field_l.length; var6_intLifetime2++) {
-            we.field_l[var6_intLifetime2] = new nf(oi.field_g, kk.field_a, var16[var6_intLifetime2]);
+            we.field_l[var6_intLifetime2] = new WordLanguage(oi.field_g, kk.field_a, var16[var6_intLifetime2]);
             if (we.field_l[var6_intLifetime2].field_j.equals(hi.field_d)) {
               am.field_n = var6_intLifetime2;
             }
           }
           var6 = we.field_l[am.field_n];
-          var17 = w.a(de.field_d, 1, var6, (byte) 60, var6.field_d.charAt(0));
-          var17.field_g = 1000;
+          var17 = NodeHashTableIterator.a(de.field_d, 1, var6, (byte) 60, var6.field_d.charAt(0));
+          var17.destinationX = 1000;
           var8 = var17;
-          var8.field_j = 1000;
+          var8.x = 1000;
           ob.a(1, 1, var17, 0);
           ue.field_c[1].field_h = var6.field_c.field_D + 8;
           var17.d(1);
-          dupTemp$1 = w.a(de.field_d, 1, var6, (byte) 88, var6.field_n.charAt(1));
+          dupTemp$1 = NodeHashTableIterator.a(de.field_d, 1, var6, (byte) 88, var6.field_n.charAt(1));
           sg.field_p = dupTemp$1;
           var18 = dupTemp$1;
           var7 = var18;
-          var7.field_g = 1000;
+          var7.destinationX = 1000;
           var9 = var7;
-          var9.field_j = 1000;
-          var7.field_x = true;
+          var9.x = 1000;
+          var7.doublesWordScore = true;
           ob.a(1, 2, var18, 0);
           oi.field_g = null;
           l.field_a = null;
@@ -1040,7 +1040,7 @@ public final class Transmogrify extends ig {
         }
     }
 
-    final void a(int param0) {
+    final void initializeGame(int param0) {
         this.a(8, param0 ^ -10, 13, 9, 11, 0, false, 10);
         lc var2 = new lc();
         if (param0 != -9) {
@@ -1048,13 +1048,13 @@ public final class Transmogrify extends ig {
         }
         try {
           var2.b(128, 9, -23780);
-          uh.a((java.awt.Component) ((Object) gd.field_k), 22050, -21, lk.field_b, var2, true);
+          uh.a((java.awt.Component) ((Object) AchievementNotice.field_k), 22050, -21, lk.field_b, var2, true);
           uc.a(128, (byte) -119);
           u.field_b = 4473924;
           field_D = 128;
-          pf.field_b = 255;
+          SecondaryNodeDeque.field_b = 255;
           this.a(true, false, false, false, (byte) 9);
-          ue.field_c = new ii[3];
+          ue.field_c = new IndexedSprite[3];
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "Transmogrify.F(" + param0 + ')');
         }
@@ -1064,13 +1064,13 @@ public final class Transmogrify extends ig {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (!qj.b((byte) 126) &&
+          if (!IntrusiveDeque.b((byte) 126) &&
             kb.field_n == null) {
             kb.field_n = l.a((byte) 12, 4);
           }
           wd.a(param0 - 15099, false, bd.field_u[0]);
           if (param0 != 32198) {
-            this.c(9);
+            this.clearAppletStatics(9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1132,10 +1132,10 @@ public final class Transmogrify extends ig {
         }
     }
 
-    final void c(int param0) {
+    final void clearAppletStatics(int param0) {
         try {
           Transmogrify.l(0);
-          qj.c((byte) -115);
+          IntrusiveDeque.c((byte) -115);
           ai.a((byte) 67);
           kb.b(false);
           ub.a(-31455);
@@ -1144,19 +1144,19 @@ public final class Transmogrify extends ig {
           cd.a(107);
           dk.a((byte) 127);
           we.a(-11509);
-          gj.b(-102);
+          BufferedSocket.b(-102);
           ci.d(-120);
-          ig.i((byte) -49);
-          kl.a(6);
-          fa.f(-121);
+          SessionGameApplet.i((byte) -49);
+          ContextualRuntimeException.a(6);
+          GameApplet.f(-121);
           qb.a((byte) -62);
-          ce.a((byte) -127);
-          qi.a(74);
-          rj.a(false);
+          GameKeyHandler.a((byte) -127);
+          MouseInputHandler.a(74);
+          MouseWheelInput.a(false);
           sb.a();
           mh.a(0);
           gb.a(param0 - 5);
-          oa.b((byte) -99);
+          PacketBuffer.b((byte) -99);
           lk.a((byte) -124);
           bc.a(122);
           n.a(false);
@@ -1169,16 +1169,16 @@ public final class Transmogrify extends ig {
           af.a((byte) 22);
           of.a(-21068);
           td.b(0);
-          cj.a((byte) 119);
+          RasterBuffer.a((byte) 119);
           gg.c(127);
-          dg.a(-1);
+          FullscreenFocusCanvas.a(-1);
           ea.b((byte) 100);
           mg.a((byte) -28);
           bl.b(116);
           vg.a((byte) -60);
-          nf.a((byte) -41);
+          WordLanguage.a((byte) -41);
           gk.a(9);
-          wf.a(false);
+          IntrusiveNode.a(false);
           lc.e(-122);
           ul.b();
           ej.b(false);
@@ -1194,7 +1194,7 @@ public final class Transmogrify extends ig {
           el.a((byte) 99);
           qd.c(69);
           ih.a((byte) -46);
-          ad.a(1);
+          WordDictionary.a(1);
           lb.a((byte) 103);
           il.a((byte) -24);
           da.i(param0 ^ param0);
@@ -1213,14 +1213,14 @@ public final class Transmogrify extends ig {
           ml.c();
           mb.a();
           hk.a((byte) 35);
-          ri.a((byte) 18);
-          k.a(false);
-          se.c((byte) 99);
+          DualLinkNode.a((byte) 18);
+          IndexedSpriteState.a(false);
+          SpriteState.c((byte) 99);
           id.a((byte) 92);
           ei.a((byte) -110);
-          j.a((byte) -119);
+          TileRack.a((byte) -119);
           ld.a(102);
-          sj.b((byte) -15);
+          LetterTile.b((byte) -15);
           ua.a(-124);
           hj.m(param0 ^ 252);
           d.a(1);
@@ -1242,7 +1242,7 @@ public final class Transmogrify extends ig {
           di.b(54);
           eg.a((byte) 66);
           rh.b(true);
-          ec.c(0);
+          SocketConnector.c(0);
           rl.b(7);
           db.a(8192);
           dj.a(48);
@@ -1265,7 +1265,7 @@ public final class Transmogrify extends ig {
           ae.b(-116);
           bj.c((byte) -79);
           wb.b((byte) 83);
-          ah.a(param0 ^ -23430);
+          DelegatingCanvas.a(param0 ^ -23430);
           c.a(param0 + 18123);
           ba.d(param0 - 1);
           fd.a(127);
@@ -1289,7 +1289,7 @@ public final class Transmogrify extends ig {
           rb.a(-53);
           ha.a(-19424);
           kf.e(123);
-          fg.b((byte) 107);
+          ImageProducerRasterBuffer.b((byte) 107);
           og.a(false);
           nb.a(param0 + 17);
           wd.a((byte) 126);
@@ -1311,21 +1311,21 @@ public final class Transmogrify extends ig {
           wh.h(43);
           fk.a((byte) 114);
           jg.a();
-          pi.a((byte) -110);
+          AchievementUnlockEvent.a((byte) -110);
           mf.a(true);
-          nl.d(-114);
+          ProxySocketConnector.d(-114);
           hf.a((byte) 118);
           jh.c(-1);
           te.a((byte) 41);
           vl.i(2147483647);
           g.i(19224);
-          vi.a(param0 + 62);
-          pf.a(17205);
+          IterableNodeHashTable.a(param0 + 62);
+          SecondaryNodeDeque.a(17205);
           dl.b(false);
           hc.d((byte) 105);
           je.a((byte) -128);
-          w.b((byte) -117);
-          wg.a(20738);
+          NodeHashTableIterator.b((byte) -117);
+          SecondaryNodeDequeIterator.a(20738);
           o.d(0);
           am.a((byte) 5);
           ta.a(param0 + 4);
@@ -1338,7 +1338,7 @@ public final class Transmogrify extends ig {
           ng.a((byte) 122);
           qk.a((byte) -86);
           oh.a((byte) 104);
-          gd.d(111);
+          AchievementNotice.d(111);
           pd.b((byte) -74);
           uj.b(-1);
           fc.a(false);

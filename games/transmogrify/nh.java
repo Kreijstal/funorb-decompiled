@@ -49,7 +49,7 @@ final class nh {
         }
     }
 
-    final static void a(ti param0, byte param1) {
+    final static void a(Sprite param0, byte param1) {
         int var6 = 0;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -99,8 +99,8 @@ final class nh {
         }
     }
 
-    final static gd a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        gd var8 = new gd(param4, param2, param3, param1, param0, param5);
+    final static AchievementNotice a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        AchievementNotice var8 = new AchievementNotice(param4, param2, param3, param1, param0, param5);
         int var9 = -40 % ((param7 - 6) / 59);
         rh.field_r.a(var8, -107);
         ne.a((byte) 7, var8, param6);
@@ -115,18 +115,18 @@ final class nh {
         int var1 = 43 % ((47 - param0) / 61);
     }
 
-    final static rj b(int param0) {
+    final static MouseWheelInput b(int param0) {
         try {
           Throwable var1 = null;
-          ti var2 = null;
-          rj stackIn_3_0 = null;
+          Sprite var2 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 1) {
-              var2 = (ti) null;
-              nh.a((ti) null, (byte) 65);
+              var2 = (Sprite) null;
+              nh.a((Sprite) null, (byte) 65);
             }
-            stackIn_3_0 = (rj) (Class.forName("sk").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

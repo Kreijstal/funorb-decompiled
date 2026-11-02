@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends wf {
+final class ba extends IntrusiveNode {
     static int field_n;
     int field_p;
     byte[][][] field_g;
     int[] field_j;
     int[] field_h;
-    ib[] field_o;
+    PlatformTask[] field_o;
     static String[] field_l;
-    ib[] field_m;
+    PlatformTask[] field_m;
     int[] field_k;
     static int[] field_q;
     int field_i;

@@ -14,7 +14,7 @@ final class lh {
     private int field_j;
     int field_b;
 
-    final void a(oa param0) {
+    final void a(PacketBuffer param0) {
         this.field_d = param0.d((byte) 112);
         this.field_h = param0.c((byte) -105);
         this.field_b = param0.c((byte) -110);
@@ -48,7 +48,7 @@ final class lh {
         this.field_f = 0;
     }
 
-    final void b(oa param0) {
+    final void b(PacketBuffer param0) {
         int var2 = 0;
         this.field_c = param0.d((byte) 93);
         this.field_e = new int[this.field_c];

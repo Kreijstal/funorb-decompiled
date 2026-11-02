@@ -32,8 +32,8 @@ final class ei {
           stackIn_3_0 = var8;
           stackIn_4_1 = !(param0);
           ((hj) (Object) stackIn_3_0).a(stackIn_4_1, param1);
-          var8.field_h = var8.field_h + 1;
-          var4 = var8.field_h;
+          var8.position = var8.position + 1;
+          var4 = var8.position;
           var8.f(6389, 1);
           var8.c(param2.field_p, -159688920);
           var8.c(param2.field_j, -159688920);
@@ -50,7 +50,7 @@ final class ei {
             var7.a(-117, param2.field_m[var5]);
           }
           var8.d(var4, -1323322296);
-          var8.a((byte) -42, var8.field_h - var4);
+          var8.a((byte) -42, var8.position - var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

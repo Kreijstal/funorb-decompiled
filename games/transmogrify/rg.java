@@ -49,24 +49,24 @@ class rg extends lj {
           var5Lifetime1 = 55 % ((77 - param3) / 34);
           return;
         }
-        this.field_q.a(param0, param1, this.field_t, (byte) 107, (qg) (this));
+        this.field_q.a(param0, param1, this.field_t, (byte) 107, (UiWidget) (this));
         if (!(this.field_q instanceof m)) {
           var5Lifetime2 = 55 % ((77 - param3) / 34);
           return;
         }
         m var8 = (m) ((Object) this.field_q);
         if (this.field_H != this.field_F) {
-          var8.a((qg) (this), param1, param0, this.field_F, (byte) -49, this.field_H);
+          var8.a((UiWidget) (this), param1, param0, this.field_F, (byte) -49, this.field_H);
           var6 = lk.a(0);
           if ((-this.field_C + var6) % 1000L < 500L) {
-            var8.a(param0, this.field_H, param1, (qg) (this), true);
+            var8.a(param0, this.field_H, param1, (UiWidget) (this), true);
           }
           var5Lifetime3 = 55 % ((77 - param3) / 34);
           return;
         }
         var6Lifetime1 = lk.a(0);
         if ((-this.field_C + var6Lifetime1) % 1000L < 500L) {
-          var8.a(param0, this.field_H, param1, (qg) (this), true);
+          var8.a(param0, this.field_H, param1, (UiWidget) (this), true);
           var5Lifetime4 = 55 % ((77 - param3) / 34);
           return;
         }
@@ -267,7 +267,7 @@ class rg extends lj {
         this.field_A = false;
         try {
           this.field_E = param2;
-          this.field_q = vi.field_e.field_f;
+          this.field_q = IterableNodeHashTable.field_e.field_f;
           this.a(param0, true, 1);
           this.field_J = true;
           this.field_C = lk.a(0);
@@ -315,9 +315,9 @@ class rg extends lj {
           return;
         }
         var9 = (m) ((Object) this.field_q);
-        var3 = var9.a((qg) (this), -2);
+        var3 = var9.a((UiWidget) (this), -2);
         var4 = var3.b((byte) 3);
-        var5 = var9.b(param0, (qg) (this));
+        var5 = var9.b(param0, (UiWidget) (this));
         var6 = var9.a(true) >> 1;
         if (var4 < var5 - var6) {
           this.field_o = 0;
@@ -343,7 +343,7 @@ class rg extends lj {
         return;
     }
 
-    final boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    final boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         int stackIn_6_1 = 0;
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_20_0 = null;
@@ -360,7 +360,7 @@ class rg extends lj {
           if (!(this.field_q instanceof m)) {
             return false;
           }
-          var8_int = ((m) ((Object) this.field_q)).a(param6, (byte) -50, bk.field_a, param3, oa.field_j, (qg) (this));
+          var8_int = ((m) ((Object) this.field_q)).a(param6, (byte) -50, bk.field_a, param3, PacketBuffer.field_j, (UiWidget) (this));
           if (var8_int == -1) {
             stackIn_6_1 = 0;
           } else {
@@ -395,7 +395,7 @@ class rg extends lj {
         }
     }
 
-    void a(int param0, byte param1, qg param2, int param3) {
+    void a(int param0, byte param1, UiWidget param2, int param3) {
         m var5 = null;
         int var6 = 0;
         try {
@@ -404,7 +404,7 @@ class rg extends lj {
           if (this.field_s == 1) {
             if (this.field_q instanceof m) {
               var5 = (m) ((Object) this.field_q);
-              var6 = var5.a(param0, (byte) -50, bk.field_a, param3, oa.field_j, (qg) (this));
+              var6 = var5.a(param0, (byte) -50, bk.field_a, param3, PacketBuffer.field_j, (UiWidget) (this));
               if (var6 != -1) {
                 if (this.field_A &&
                   var6 < this.field_M &&
@@ -421,7 +421,7 @@ class rg extends lj {
         }
     }
 
-    final boolean a(int param0, qg param1, byte param2, char param3) {
+    final boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int dupTemp$0 = 0;
         int stackIn_16_1 = 0;
         int stackIn_47_1 = 0;
@@ -567,7 +567,7 @@ class rg extends lj {
 
     final static void n(int param0) {
         ub.field_d = false;
-        nf.field_l.d((byte) 29);
+        WordLanguage.field_l.d((byte) 29);
         if (param0 < 66) {
           rg.n(74);
         }

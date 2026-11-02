@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vf {
-    static ti field_a;
+    static Sprite field_a;
     static hi field_b;
 
     final static void a(byte param0, float param1, String param2) {
         try {
           ea.field_n = param2;
           int var3_int = -91 / ((param0 + 66) / 55);
-          ah.field_a = param1;
+          DelegatingCanvas.field_a = param1;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "vf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -17,7 +17,7 @@ final class vf {
 
     final static void a(pg param0, int param1, int param2, int param3) {
         try {
-          dg.field_b = param2;
+          FullscreenFocusCanvas.field_b = param2;
           if (param3 <= 96) {
             vf.a(false);
           }
@@ -66,7 +66,7 @@ final class vf {
           if (param0) {
             return;
           }
-          field_a = (ti) null;
+          field_a = (Sprite) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

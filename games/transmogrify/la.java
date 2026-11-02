@@ -2,5 +2,5 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface la extends ma {
-    public abstract void a(qg param0, byte param1, boolean param2);
+    public abstract void a(UiWidget param0, byte param1, boolean param2);
 }

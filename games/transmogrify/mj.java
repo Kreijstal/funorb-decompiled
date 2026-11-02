@@ -30,7 +30,7 @@ final class mj {
     private static int[] field_e;
     private static int[] field_j;
 
-    final void a(oa param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_v = new lh();
@@ -39,7 +39,7 @@ final class mj {
         this.field_i.a(param0);
         int var2 = param0.d((byte) 44);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_o = new lh();
           this.field_o.a(param0);
           this.field_f = new lh();
@@ -47,7 +47,7 @@ final class mj {
         }
         var2 = param0.d((byte) 72);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_n = new lh();
           this.field_n.a(param0);
           this.field_u = new lh();
@@ -55,7 +55,7 @@ final class mj {
         }
         var2 = param0.d((byte) 100);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_w = new lh();
           this.field_w.a(param0);
           this.field_m = new lh();

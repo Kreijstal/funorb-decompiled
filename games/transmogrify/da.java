@@ -3,7 +3,7 @@
  */
 final class da extends fi {
     static String field_B;
-    private qj field_D;
+    private IntrusiveDeque field_D;
     static String field_A;
     static String field_z;
     static int field_C;
@@ -33,11 +33,11 @@ final class da extends fi {
             if (!ki.b(true)) {
               sb.c();
               ub.a(320, 240, (byte) 116);
-              ah.a(0, 0, (byte) 110, param2);
+              DelegatingCanvas.a(0, 0, (byte) 110, param2);
             } else {
               if (gl.field_y == 0) {
-                ec.a(false, param0, -124);
-                ah.a(0, 0, (byte) 104, param2);
+                SocketConnector.a(false, param0, -124);
+                DelegatingCanvas.a(0, 0, (byte) 104, param2);
               } else {
                 ng.a(false, param2);
               }
@@ -48,7 +48,7 @@ final class da extends fi {
               kb.field_l = false;
               var3_int = 1;
             }
-            jk.a(gj.field_a, (byte) -119, be.b(71), mh.b(100), var3_int != 0);
+            jk.a(BufferedSocket.field_a, (byte) -119, be.b(71), mh.b(100), var3_int != 0);
           }
           if (param1 <= 63) {
             var5 = (java.awt.Canvas) null;
@@ -70,8 +70,8 @@ final class da extends fi {
     }
 
     public da() {
-        super(0, 0, cd.field_b, wj.field_h, (ui) null, (ma) null);
-        this.field_D = new qj();
+        super(0, 0, cd.field_b, wj.field_h, (WidgetRenderer) null, (ma) null);
+        this.field_D = new IntrusiveDeque();
     }
 
     final mk e(byte param0) {
@@ -106,7 +106,7 @@ final class da extends fi {
         this.field_v = null;
     }
 
-    final qg d(byte param0) {
+    final UiWidget d(byte param0) {
         tl var2;
         mk var3;
         int var4;
@@ -137,7 +137,7 @@ final class da extends fi {
           }
           var3 = (mk) (var2.a(param0 ^ 405142401));
         }
-        this.field_v = (qg) ((Object) this.e((byte) -107));
+        this.field_v = (UiWidget) ((Object) this.e((byte) -107));
     }
 
     final static String a(boolean param0, CharSequence param1) {
@@ -170,14 +170,14 @@ final class da extends fi {
     final void a(int param0, int param1, int param2, byte param3) {
         int var8 = Transmogrify.field_A ? 1 : 0;
         if (this.field_q != null) {
-          this.field_q.a(param0, param1, true, (byte) 126, (qg) (this));
+          this.field_q.a(param0, param1, true, (byte) 126, (UiWidget) (this));
         }
         tl var5 = new tl(this.field_D);
-        qg var6 = (qg) (var5.a((byte) 62));
+        UiWidget var6 = (UiWidget) (var5.a((byte) 62));
         int var7 = -24 % ((param3 - 77) / 34);
         while (var6 != null) {
           var6.a(param0 + this.field_p, this.field_n + param1, param2, (byte) -95);
-          var6 = (qg) (var5.b(-29339));
+          var6 = (UiWidget) (var5.b(-29339));
         }
     }
 
@@ -196,7 +196,7 @@ final class da extends fi {
         }
     }
 
-    final void b(qg param0, byte param1) {
+    final void b(UiWidget param0, byte param1) {
         mk var3 = null;
         try {
           if (!(param0 instanceof mk)) {
@@ -206,9 +206,9 @@ final class da extends fi {
           if (param1 != -71) {
             field_C = 1;
           }
-          this.field_D.a((wf) (var3), (byte) 33);
+          this.field_D.a((IntrusiveNode) (var3), (byte) 33);
           var3.field_A = true;
-          var3.a((qg) (this), param1 + 51);
+          var3.a((UiWidget) (this), param1 + 51);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "da.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

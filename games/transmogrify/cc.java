@@ -10,18 +10,18 @@ final class cc {
     static String field_b;
     static int[] field_f;
 
-    final static ti[] a(int param0, ci param1, int param2, int param3) {
+    final static Sprite[] a(int param0, ci param1, int param2, int param3) {
         RuntimeException var4 = null;
-        ti[] stackIn_2_0 = null;
+        Sprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        ti[] stackIn_7_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > -31) {
-            stackIn_2_0 = (ti[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           if (rl.a(param0, 0, param3, param1)) {
@@ -29,7 +29,7 @@ final class cc {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (ti[]) (stackIn_5_0);
+          return (Sprite[]) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

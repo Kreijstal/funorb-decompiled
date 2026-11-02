@@ -22,7 +22,7 @@ final class jg {
         field_a = (int[][]) null;
     }
 
-    final void a(oa param0, lh param1) {
+    final void a(PacketBuffer param0, lh param1) {
         int var3;
         int var4;
         int var5;

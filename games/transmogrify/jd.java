@@ -7,7 +7,7 @@ final class jd extends IOException {
     static int field_a;
     static int field_b;
 
-    final static mi a(byte[] param0, int param1, ii[] param2) {
+    final static mi a(byte[] param0, int param1, IndexedSprite[] param2) {
         int var9 = 0;
         int[] var3 = null;
         RuntimeException var3_ref = null;
@@ -94,7 +94,7 @@ final class jd extends IOException {
         super(param0);
     }
 
-    final static void a(int param0, int param1, ti[] param2, int param3, int param4, int param5, kg param6, int param7, int param8, ti[] param9, boolean param10) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, int param5, kg param6, int param7, int param8, Sprite[] param9, boolean param10) {
         try {
           je.a(-11);
           if (param10) {
@@ -109,9 +109,9 @@ final class jd extends IOException {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
-        oa stackIn_13_0 = null;
+        PacketBuffer stackIn_13_0 = null;
         String stackIn_14_1 = null;
-        oa stackIn_16_0 = null;
+        PacketBuffer stackIn_16_0 = null;
         String stackIn_17_1 = null;
         int stackIn_33_0 = 0;
         int stackIn_45_0 = 0;
@@ -155,13 +155,13 @@ final class jd extends IOException {
           }
           if (lj.field_z == jk.field_y) {
             ch.field_f = null;
-            ff.field_D.field_h = 0;
+            ff.field_D.position = 0;
             if (param3 != null) {
               var9 = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
-              d.field_d.field_h = 0;
+              d.field_d.position = 0;
               d.field_d.a(param2 - 94, d.field_c.nextInt());
               d.field_d.a(param2 ^ 110, d.field_c.nextInt());
               d.field_d.a(var14, 123);
@@ -172,17 +172,17 @@ final class jd extends IOException {
               d.field_d.f(6389, param0);
               d.field_d.f(6389, var9);
               ff.field_D.f(6389, 18);
-              ff.field_D.field_h = ff.field_D.field_h + 2;
-              var10 = ff.field_D.field_h;
+              ff.field_D.position = ff.field_D.position + 2;
+              var10 = ff.field_D.position;
               var11_ref_String = wk.a(ha.b(116), (byte) -45);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               ff.field_D.a(92, var11_ref_String);
               bj.a(kb.field_p, q.field_f, ff.field_D, (byte) -123, d.field_d);
-              ff.field_D.b(-109, ff.field_D.field_h - var10);
+              ff.field_D.b(-109, ff.field_D.position - var10);
             } else {
-              d.field_d.field_h = 0;
+              d.field_d.position = 0;
               d.field_d.a(param2 - 96, d.field_c.nextInt());
               d.field_d.a(-103, d.field_c.nextInt());
               stackIn_13_0 = d.field_d;
@@ -191,27 +191,27 @@ final class jd extends IOException {
               } else {
                 stackIn_14_1 = "";
               }
-              ((oa) (Object) stackIn_13_0).a(stackIn_14_1, 126);
+              ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_14_1, 126);
               stackIn_16_0 = d.field_d;
               if (param1.a((byte) -121)) {
                 stackIn_17_1 = var8;
               } else {
                 stackIn_17_1 = "";
               }
-              ((oa) (Object) stackIn_16_0).a(stackIn_17_1, param2 ^ -117);
+              ((PacketBuffer) (Object) stackIn_16_0).a(stackIn_17_1, param2 ^ -117);
               ff.field_D.f(6389, 16);
-              ff.field_D.field_h = ff.field_D.field_h + 1;
-              var9 = ff.field_D.field_h;
+              ff.field_D.position = ff.field_D.position + 1;
+              var9 = ff.field_D.position;
               bj.a(kb.field_p, q.field_f, ff.field_D, (byte) -108, d.field_d);
-              ff.field_D.a((byte) -42, -var9 + ff.field_D.field_h);
+              ff.field_D.a((byte) -42, -var9 + ff.field_D.position);
             }
             rb.a(-1, -377);
             lj.field_z = vf.field_b;
           }
           if (vf.field_b == lj.field_z &&
             ue.a(1, 0)) {
-            var9Lifetime1 = nf.field_l.d((byte) 97);
-            nf.field_l.field_h = 0;
+            var9Lifetime1 = WordLanguage.field_l.d((byte) 97);
+            WordLanguage.field_l.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               lj.field_z = aa.field_b;
@@ -231,20 +231,20 @@ final class jd extends IOException {
                 ca.field_e = var9Lifetime1;
               } else {
                 ue.a(jk.a((byte) -114), 0);
-                ch.field_f = new Boolean(oh.a((byte) -87, nf.field_l));
-                nf.field_l.field_h = 0;
+                ch.field_f = new Boolean(oh.a((byte) -87, WordLanguage.field_l));
+                WordLanguage.field_l.position = 0;
               }
             }
           }
           if (aa.field_b == lj.field_z) {
             var9Lifetime2 = 2;
             if (ue.a(var9Lifetime2, 0)) {
-              var10Lifetime1 = nf.field_l.a((byte) -102);
-              nf.field_l.field_h = 0;
+              var10Lifetime1 = WordLanguage.field_l.a((byte) -102);
+              WordLanguage.field_l.position = 0;
               if (ue.a(var10Lifetime1, 0)) {
                 var11 = wh.field_F.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  wh.field_F[var12] = nf.field_l.e(26);
+                  wh.field_F[var12] = WordLanguage.field_l.e(26);
                 }
                 pc.a(1);
                 ej.field_k = false;
@@ -254,14 +254,14 @@ final class jd extends IOException {
             }
           }
           if (gg.field_f == lj.field_z &&
-            ce.a(0)) {
+            GameKeyHandler.a(0)) {
             if (ca.field_e == 255) {
-              var9_ref_String = nf.field_l.j(-1640531527);
+              var9_ref_String = WordLanguage.field_l.j(-1640531527);
               if (var9_ref_String != null) {
                 v.a(0, var9_ref_String, ha.b(114));
               }
             } else {
-              Transmogrify.field_B = nf.field_l.g(param2 + 12257);
+              Transmogrify.field_B = WordLanguage.field_l.g(param2 + 12257);
             }
             pc.a(1);
             ej.field_k = false;

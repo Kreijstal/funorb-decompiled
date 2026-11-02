@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jl extends wf {
+final class jl extends IntrusiveNode {
     int field_n;
     int field_i;
     int field_g;
@@ -9,7 +9,7 @@ final class jl extends wf {
     int field_k;
     int field_h;
     int field_m;
-    static ti field_l;
+    static Sprite field_l;
     static int field_j;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -70,7 +70,7 @@ final class jl extends wf {
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var9 = nf.field_l;
+          var9 = WordLanguage.field_l;
           var2 = var9.d((byte) 78);
           var3 = var9.d((byte) 106);
           if (var2 == 0) {
@@ -79,7 +79,7 @@ final class jl extends wf {
               pc.a(1);
               return;
             }
-            var5_int = -var9.field_h + tg.field_a;
+            var5_int = -var9.position + tg.field_a;
             var11 = var4_ref_oi.field_m;
             var10 = var11;
             var6 = var10;
@@ -128,7 +128,7 @@ final class jl extends wf {
     public static void a(byte param0) {
         field_l = null;
         if (param0 < 9) {
-          field_l = (ti) null;
+          field_l = (Sprite) null;
         }
     }
 

@@ -245,7 +245,7 @@ final class ak {
                 this.field_d.a(sf.field_kb, 6, (byte) 110, 0);
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param1) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -261,7 +261,7 @@ final class ak {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var12 = ((sf.field_kb[4] & 255) << 8) + (sf.field_kb[5] & 255);
                         var11 = ((sf.field_kb[2] & 255) << 8) + (((255 & sf.field_kb[1]) << 16) + (((sf.field_kb[0] & 255) << 24) + (255 & sf.field_kb[3])));
@@ -277,7 +277,7 @@ final class ak {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var11 = (255 & sf.field_kb[1]) + (65280 & sf.field_kb[0] << 8);
                         var13 = 255 & sf.field_kb[7];
@@ -396,7 +396,7 @@ final class ak {
             var3 = (byte[]) null;
             ak.a((byte[]) null, 124);
           }
-          var2 = new hh(param0, gj.field_j, re.field_a, ql.field_b, wk.field_b, rg.field_D, re.field_K);
+          var2 = new hh(param0, BufferedSocket.field_j, re.field_a, ql.field_b, wk.field_b, rg.field_D, re.field_K);
           wd.d(120);
           stackIn_6_0 = var2;
           return stackIn_6_0;

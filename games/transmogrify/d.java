@@ -8,12 +8,12 @@ final class d {
     static Random field_c;
     static pl field_e;
     static int[] field_a;
-    static oa field_d;
+    static PacketBuffer field_d;
     static int[] field_b;
 
     final static void a(Throwable param0, int param1, String param2) {
         try {
-          fe stackIn_12_0;
+          PlatformTaskDispatcher stackIn_12_0;
           int stackIn_12_1;
           java.net.URL stackIn_12_2;
           java.net.URL stackIn_12_3;
@@ -26,7 +26,7 @@ final class d {
           int var3 = 0;
           String var4 = null;
           Exception var4_ref = null;
-          ib var5 = null;
+          PlatformTask var5 = null;
           DataInputStream var6 = null;
           int var7 = 0;
           String var8 = null;
@@ -69,7 +69,7 @@ final class d {
               stackIn_13_3 = null;
               stackIn_13_6 = mh.field_c;
             }
-            var5 = ((fe) (Object) stackIn_12_0).a(stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(fe.field_w).append("&v2=").append(fe.field_c).append("&e=").append(var11).toString()));
+            var5 = ((PlatformTaskDispatcher) (Object) stackIn_12_0).a(stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(PlatformTaskDispatcher.field_w).append("&v2=").append(PlatformTaskDispatcher.field_c).append("&e=").append(var11).toString()));
             while (var5.field_c == 0) {
               pg.a(1L, -124);
             }
@@ -103,7 +103,7 @@ final class d {
     static {
         field_c = new Random();
         field_a = new int[8192];
-        field_d = new oa(256);
+        field_d = new PacketBuffer(256);
         field_b = new int[8192];
     }
 }

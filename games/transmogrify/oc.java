@@ -7,14 +7,14 @@ final class oc extends fi {
     static String field_E;
     private kg field_D;
     private boolean field_B;
-    static qj field_G;
+    static IntrusiveDeque field_G;
     private int field_A;
     private int field_C;
     private int field_F;
     static String field_H;
 
-    oc(int param0, int param1, int param2, int param3, qg param4, boolean param5, int param6, int param7, kg param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (ui) null, (ma) null);
+    oc(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, kg param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetRenderer) null, (ma) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -102,7 +102,7 @@ final class oc extends fi {
 
     final static td j(int param0) {
         if (param0 != 0) {
-          field_G = (qj) null;
+          field_G = (IntrusiveDeque) null;
           return (td) ((Object) new kf());
         }
         return (td) ((Object) new kf());
@@ -122,7 +122,7 @@ final class oc extends fi {
     static {
         field_E = "Connection lost - attempting to reconnect";
         field_y = 0;
-        field_G = new qj();
+        field_G = new IntrusiveDeque();
         field_H = "Waiting for sound effects";
     }
 }

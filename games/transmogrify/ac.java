@@ -5,7 +5,7 @@ final class ac extends kk {
     static ld field_n;
     private String field_i;
     static String field_h;
-    static ti field_m;
+    static Sprite field_m;
     private String field_l;
     static long field_j;
     static String[] field_k;
@@ -18,13 +18,13 @@ final class ac extends kk {
           field_n = null;
           return;
         }
-        field_m = (ti) null;
+        field_m = (Sprite) null;
         field_k = null;
         field_m = null;
         field_n = null;
     }
 
-    final void a(byte param0, oa param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 >= -50) {
             ac.a((byte) -2);
@@ -79,9 +79,9 @@ final class ac extends kk {
         return wh.field_I;
     }
 
-    final static String a(int param0, j param1) {
+    final static String rackName(int param0, TileRack param1) {
         RuntimeException var2 = null;
-        j var3 = null;
+        TileRack var3 = null;
         String stackIn_4_0 = null;
         String stackIn_8_0 = null;
         String stackIn_10_0 = null;
@@ -92,18 +92,18 @@ final class ac extends kk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 13) {
-            var3 = (j) null;
-            ac.a(-41, (j) null);
+            var3 = (TileRack) null;
+            ac.rackName(-41, (TileRack) null);
           }
-          if (param1 == od.field_g) {
+          if (param1 == od.submissionRack) {
             stackIn_4_0 = "submission_rack";
             return stackIn_4_0;
           }
-          if (wk.field_a == param1) {
+          if (wk.carryoverRack == param1) {
             stackIn_12_0 = "carryover_rack";
             return stackIn_12_0;
           }
-          if (param1 == si.field_i) {
+          if (param1 == si.newRack) {
             stackIn_10_0 = "new_rack";
             return stackIn_10_0;
           }
@@ -123,7 +123,7 @@ final class ac extends kk {
         }
     }
 
-    final static ti a(int param0, int param1, ci param2, boolean param3) {
+    final static Sprite a(int param0, int param1, ci param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -162,7 +162,7 @@ final class ac extends kk {
 
     static {
         field_h = "Cancel";
-        field_m = new ti(270, 70);
+        field_m = new Sprite(270, 70);
         field_k = new String[]{"All scores", "My scores", "Best each"};
     }
 }

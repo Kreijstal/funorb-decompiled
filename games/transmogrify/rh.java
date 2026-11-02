@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rh extends ri {
+abstract class rh extends DualLinkNode {
     static am field_t;
     volatile boolean field_m;
-    static qj field_r;
+    static IntrusiveDeque field_r;
     boolean field_o;
     private static tf field_u;
     boolean field_p;
     static pd field_v;
-    static ti[] field_l;
-    static ti field_s;
-    static int field_n;
+    static Sprite[] field_l;
+    static Sprite field_s;
+    static int unlockedAchievementMask;
     static kg field_q;
 
     final static String a(byte param0, int param1) {
@@ -21,7 +21,7 @@ abstract class rh extends ri {
 
     final static tf[] d(int param0) {
         if (param0 == -26481) {
-          return new tf[]{nf.field_m, og.field_d, oa.field_l, field_u, ef.field_e, gk.field_b, rf.field_db, gk.field_d, gh.field_g, oj.field_m, u.field_c, kb.field_q, ik.field_cb, nj.field_g};
+          return new tf[]{WordLanguage.field_m, og.field_d, PacketBuffer.field_l, field_u, ef.field_e, gk.field_b, rf.field_db, gk.field_d, gh.field_g, oj.field_m, u.field_c, kb.field_q, ik.field_cb, nj.field_g};
         }
         return (tf[]) null;
     }
@@ -51,7 +51,7 @@ abstract class rh extends ri {
 
     static {
         field_t = null;
-        field_r = new qj();
+        field_r = new IntrusiveDeque();
         field_u = new tf(4, 1, 1, 1);
     }
 }

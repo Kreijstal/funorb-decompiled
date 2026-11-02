@@ -5,7 +5,7 @@ final class hi {
     static int[] field_f;
     static rc field_b;
     static int field_g;
-    static qi field_e;
+    static MouseInputHandler field_e;
     static int field_c;
     static String field_d;
     static int field_a;
@@ -160,7 +160,7 @@ final class hi {
         }
         field_b = new rc();
         field_g = 0;
-        field_e = new qi();
+        field_e = new MouseInputHandler();
         field_d = "en-gb";
         field_a = 1;
         field_h = new int[8192];

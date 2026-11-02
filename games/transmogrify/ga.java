@@ -3,7 +3,7 @@
  */
 final class ga {
     static volatile int field_b;
-    static rj field_a;
+    static MouseWheelInput field_a;
 
     final static boolean a(String param0, int param1) {
         int var2_int = 0;
@@ -17,11 +17,11 @@ final class ga {
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param1 != 3336) {
-            field_a = (rj) null;
+            field_a = (MouseWheelInput) null;
           }
           for (var2_int = 0; param0.length() > var2_int; var2_int++) {
             var3 = param0.charAt(var2_int);
-            if (!k.a((char) var3, -37) &&
+            if (!IndexedSpriteState.a((char) var3, -37) &&
               !dj.a((char) var3, true)) {
               return true;
             }
@@ -135,7 +135,7 @@ final class ga {
 
     final static int a(int param0, byte param1) {
         if (param1 >= -35) {
-          field_a = (rj) null;
+          field_a = (MouseWheelInput) null;
           if (param0 == 16711935) {
             return 0;
           }

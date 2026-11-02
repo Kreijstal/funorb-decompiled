@@ -8,10 +8,10 @@ final class ob extends le {
     static String field_I;
     private wa field_L;
     static String field_M;
-    private ti field_H;
+    private Sprite field_H;
     static String field_F;
 
-    final void a(int param0, byte param1, qg param2, int param3) {
+    final void a(int param0, byte param1, UiWidget param2, int param3) {
         try {
           this.field_K = this.field_K + 1;
           super.a(param0, param1, param2, param3);
@@ -37,13 +37,13 @@ final class ob extends le {
         int var12;
         int var13;
         int var14;
-        ti var15;
-        ti var16;
-        ti var17;
+        Sprite var15;
+        Sprite var16;
+        Sprite var17;
         rc var6Lifetime1;
-        L0: {
-          L1: {
-            L2: {
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
               var14 = Transmogrify.field_A ? 1 : 0;
               var6 = this.field_L.a(27835);
               if (var6 != ek.field_a &&
@@ -51,17 +51,17 @@ final class ob extends le {
                 var5 = this.field_L.c(30523);
                 if (var5 == null) {
                   var5 = this.field_J;
-                  break L2;
+                  break regionExit3;
                 }
                 if (!var5.equals(this.field_k)) {
-                  break L1;
+                  break regionExit2;
                 }
-                break L0;
+                break regionExit1;
               }
               var5 = bj.field_X;
             }
             if (var5.equals(this.field_k)) {
-              break L0;
+              break regionExit1;
             }
           }
           this.field_k = var5;
@@ -72,10 +72,10 @@ final class ob extends le {
         var6Lifetime1 = this.field_L.a(27835);
         var9 = (m) ((Object) this.field_q);
         var10 = param0 + this.field_p;
-        var11 = var9.a((qg) (this), 68, param1) + (var9.a((qg) (this), -2).a(126) >> 1);
+        var11 = var9.a((UiWidget) (this), 68, param1) + (var9.a((UiWidget) (this), -2).a(126) >> 1);
         if (ek.field_a != var6Lifetime1 &&
           fi.field_u != var6Lifetime1) {
-          if (ec.field_d == var6Lifetime1) {
+          if (SocketConnector.field_d == var6Lifetime1) {
             var16 = ai.field_b[2];
             var16.c(var10, var11 - (var16.field_m >> 1), 256);
           } else if (hi.field_b == var6Lifetime1) {
@@ -92,7 +92,7 @@ final class ob extends le {
             oj.a(this.field_H, 256);
             sb.c();
           } else {
-            this.field_H = new ti(var12, var13);
+            this.field_H = new Sprite(var12, var13);
             oj.a(this.field_H, 256);
           }
           var15.a(112, 144, var15.field_r << 4, var15.field_s << 4, -this.field_K << 10, 4096);
@@ -102,7 +102,7 @@ final class ob extends le {
     }
 
     ob(wa param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, rj.b(true));
+        super(param1, MouseWheelInput.b(true));
         try {
           this.field_J = param1;
           this.field_L = param0;
@@ -112,7 +112,7 @@ final class ob extends le {
         }
     }
 
-    final static void a(int param0, int param1, sj param2, int param3) {
+    final static void a(int param0, int param1, LetterTile param2, int param3) {
         int var6 = 0;
         int var9 = 0;
         int incrementValue$0 = 0;
@@ -125,20 +125,20 @@ final class ob extends le {
         int var7 = 0;
         int var8 = 0;
         int var10 = 0;
-        ii var11 = null;
-        ii var12 = null;
+        IndexedSprite var11 = null;
+        IndexedSprite var12 = null;
         var10 = Transmogrify.field_A ? 1 : 0;
         try {
           if (null == ue.field_c[param1]) {
-            ue.field_c[param1] = new ii(wl.field_K.field_n, wl.field_K.field_m, 256);
+            ue.field_c[param1] = new IndexedSprite(wl.field_K.field_n, wl.field_K.field_m, 256);
             ue.field_c[param1].field_h = hk.field_a.field_y;
           }
           if (null == tj.field_s) {
-            tj.field_s = new ti(wl.field_K.field_n, wl.field_K.field_m);
+            tj.field_s = new Sprite(wl.field_K.field_n, wl.field_K.field_m);
           }
           tj.field_s.e();
           sb.c();
-          param2.a(param3, -param2.field_q, 1, -param2.field_j);
+          param2.draw(param3, -param2.y, 1, -param2.x);
           var11 = ue.field_c[param1];
           var12 = var11;
           var11.field_j[0] = 0;
@@ -161,7 +161,7 @@ final class ob extends le {
             }
             var12.field_i[var6] = (byte)var8;
           }
-          ri.field_k.a(104);
+          DualLinkNode.field_k.a(104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,7 +177,7 @@ final class ob extends le {
         }
     }
 
-    final boolean a(qg param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -267,7 +267,7 @@ final class ob extends le {
 
     final static void l(int param0) {
         int var1 = -55 / ((16 - param0) / 35);
-        wg.field_f = new qj();
+        SecondaryNodeDequeIterator.field_f = new IntrusiveDeque();
     }
 
     static {

@@ -165,7 +165,7 @@ final class gg {
           var21Lifetime2 = ka.field_f;
           var22Lifetime2 = ka.field_g;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (param4.field_M > var23Lifetime2) {
               var24Lifetime1 = param4.field_v[var23Lifetime2];
@@ -180,7 +180,7 @@ final class gg {
                 if (stackIn_62_0 < stackIn_62_1) {
                   stackIn_71_0 = ~var18;
                   stackIn_71_1 = ~mk.field_w.length;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -225,7 +225,7 @@ final class gg {
                   var26Lifetime1Lifetime1 = param4.field_c[var23Lifetime2];
                   db.field_e[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var24Lifetime1Lifetime1 * var12 + var15 * var25Lifetime1Lifetime1) >> 16);
                   me.field_i[var23Lifetime2] = var10 + (var13 * var24Lifetime1Lifetime1 - (-(var16 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var19) >> 16);
-                  ec.field_c[var23Lifetime2] = (var14 * var24Lifetime1Lifetime1 + (var17 * var25Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
+                  SocketConnector.field_c[var23Lifetime2] = (var14 * var24Lifetime1Lifetime1 + (var17 * var25Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
                   var24Lifetime1Lifetime1 = param4.field_g[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_Q[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_p[var23Lifetime2];
@@ -268,7 +268,7 @@ final class gg {
                   stackIn_71_0 = ~var18;
                   stackIn_71_1 = ~mk.field_w.length;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_71_0 <= stackIn_71_1) {
                     break;
@@ -317,7 +317,7 @@ final class gg {
 
     final static void b(int param0) {
         try {
-          dg.b(-81);
+          FullscreenFocusCanvas.b(-81);
           ba.a(119, param0);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "gg.D(" + param0 + ')');

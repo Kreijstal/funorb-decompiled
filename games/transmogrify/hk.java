@@ -19,9 +19,9 @@ final class hk {
 
     final static void a(kg param0, int param1, int param2, kg param3) {
         try {
-          gd.field_m = param2;
+          AchievementNotice.field_m = param2;
           tb.field_c = param3;
-          ce.field_b = param0;
+          GameKeyHandler.field_b = param0;
           me.a(false, sb.field_c / param1, sb.field_g / 2);
           dc.a(param0.field_D, param3.field_D, -47, param0.field_D + param0.field_t, param3.field_D + param3.field_t);
         } catch (RuntimeException runtimeException) {

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class kk {
-    static qj field_f;
-    static ti[] field_d;
+    static IntrusiveDeque field_f;
+    static Sprite[] field_d;
     static ci field_a;
     static we field_b;
     static String field_g;
@@ -83,10 +83,10 @@ abstract class kk {
         field_g = null;
     }
 
-    abstract void a(byte param0, oa param1);
+    abstract void a(byte param0, PacketBuffer param1);
 
     static {
         field_e = "Music: ";
-        field_f = new qj();
+        field_f = new IntrusiveDeque();
     }
 }

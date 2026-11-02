@@ -35,7 +35,7 @@ final class bh {
         }
     }
 
-    final static ti[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param1 <= -109) {
           return nj.a(1, param4, param2, 3, 1, param3, 103, 1, param0);
         }

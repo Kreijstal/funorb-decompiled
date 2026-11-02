@@ -5,16 +5,16 @@ import java.util.*;
 
 final class qd {
     private java.util.zip.Inflater field_b;
-    static qj field_d;
+    static IntrusiveDeque field_d;
     static String[] field_e;
     static int[] field_a;
     static String field_c;
 
-    final void a(oa param0, int param1, byte[] param2) {
+    final void a(PacketBuffer param0, int param1, byte[] param2) {
         try {
           try {
-            if (param0.field_g[param0.field_h] != 31 ||
-              param0.field_g[1 + param0.field_h] != -117) {
+            if (param0.payload[param0.position] != 31 ||
+              param0.payload[1 + param0.position] != -117) {
               throw new RuntimeException("");
             }
             if (param1 >= -106) {
@@ -24,7 +24,7 @@ final class qd {
               this.field_b = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_b.setInput(param0.field_g, param0.field_h + 10, param0.field_g.length - 10 + (-param0.field_h - 8));
+              this.field_b.setInput(param0.payload, param0.position + 10, param0.payload.length - 10 + (-param0.position - 8));
               this.field_b.inflate(param2);
             } catch (Exception exception) {
               this.field_b.reset();
@@ -100,14 +100,14 @@ final class qd {
         if (null == ub.field_c) {
           return;
         }
-        gd.a(ub.field_c, (byte) 106);
+        AchievementNotice.a(ub.field_c, (byte) 106);
         ub.field_c.a(-100, lk.field_b);
         if (param0 == 5) {
           ub.field_c = null;
           if (vg.field_b != null) {
             vg.field_b.c((byte) -126);
           }
-          gd.field_k.requestFocus();
+          AchievementNotice.field_k.requestFocus();
           return;
         }
         ci var2 = (ci) null;
@@ -116,7 +116,7 @@ final class qd {
         if (vg.field_b != null) {
           vg.field_b.c((byte) -126);
         }
-        gd.field_k.requestFocus();
+        AchievementNotice.field_k.requestFocus();
     }
 
     final static boolean a(ci param0, byte param1) {
@@ -146,7 +146,7 @@ final class qd {
     }
 
     static {
-        field_d = new qj();
+        field_d = new IntrusiveDeque();
         field_e = new String[]{"Showing by rating", "Showing by win percentage"};
         field_c = "Please try again in a few minutes.";
     }

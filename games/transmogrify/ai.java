@@ -8,7 +8,7 @@ final class ai {
     static q field_a;
     static String field_d;
     static int field_c;
-    static ti[] field_b;
+    static Sprite[] field_b;
 
     final static int a(int param0) {
         try {
@@ -20,7 +20,7 @@ final class ai {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          oa var2 = null;
+          PacketBuffer var2 = null;
           if (oh.field_h.field_p >= 4) {
             if (oh.field_h.field_k == -1) {
               return 3;
@@ -32,7 +32,7 @@ final class ai {
           }
           try {
             if (0 == cl.field_A) {
-              wj.field_j = qi.field_a.a(60, nf.field_i, c.field_b);
+              wj.field_j = MouseInputHandler.field_a.a(60, WordLanguage.field_i, c.field_b);
               cl.field_A = cl.field_A + 1;
             }
             if (cl.field_A == 1) {
@@ -45,12 +45,12 @@ final class ai {
               }
             }
             if (cl.field_A == param0) {
-              re.field_y = new gj((java.net.Socket) (wj.field_j.field_g), qi.field_a);
-              var2 = new oa(13);
+              re.field_y = new BufferedSocket((java.net.Socket) (wj.field_j.field_g), MouseInputHandler.field_a);
+              var2 = new PacketBuffer(13);
               qb.a(116, of.field_c, var2, uh.field_f, tl.field_c);
               var2.f(param0 + 6387, 15);
               var2.a(-109, dk.field_h);
-              re.field_y.a((byte) 9, var2.field_g, 13, 0);
+              re.field_y.a((byte) 9, var2.payload, 13, 0);
               cl.field_A = cl.field_A + 1;
               ob.field_G = 30000L + lk.a(param0 ^ 2);
             }
@@ -110,18 +110,18 @@ final class ai {
           throw new IllegalStateException();
         }
         int var2 = 33 / ((-70 - param0) / 55);
-        if (null == wg.field_d) {
+        if (null == SecondaryNodeDequeIterator.field_d) {
           var1 = lb.a(true);
           ok.field_a = new ff(var1, (String) null, true, false, false);
-          ci.field_f.b((qg) (l.field_d), (byte) -71);
+          ci.field_f.b((UiWidget) (l.field_d), (byte) -71);
           l.field_d.b(-122, ok.field_a);
           l.field_d.p(27830);
           return;
         }
-        wg.field_d.r(77);
+        SecondaryNodeDequeIterator.field_d.r(77);
         var1Lifetime1 = lb.a(true);
         ok.field_a = new ff(var1Lifetime1, (String) null, true, false, false);
-        ci.field_f.b((qg) (l.field_d), (byte) -71);
+        ci.field_f.b((UiWidget) (l.field_d), (byte) -71);
         l.field_d.b(-122, ok.field_a);
         l.field_d.p(27830);
     }

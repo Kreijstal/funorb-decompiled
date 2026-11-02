@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jh extends ue {
-    static ti field_h;
+    static Sprite field_h;
     private String field_d;
     static pd field_n;
     private int field_e;
@@ -259,7 +259,7 @@ final class jh extends ue {
     public static void c(int param0) {
         field_n = null;
         if (param0 != -1) {
-          field_h = (ti) null;
+          field_h = (Sprite) null;
         }
         field_g = null;
         field_h = null;

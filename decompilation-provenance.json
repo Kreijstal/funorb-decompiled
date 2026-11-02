@@ -11202,6 +11202,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "transmogrify": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/transmogrify"
+      },
+      "inputTreeSha256": "faa6d117084c568bd9d39988182d22f1769d14a933f457095f67da827eb4807d",
+      "sources": {
+        "files": 299,
+        "sha256": "4ff617e3a5387e7d23cf7e488d28e1dc44cc676e6c95f22d87d08485d5090867"
+      },
+      "dictionary": {
+        "path": "decompilation/transmogrify-naming.json",
+        "sha256": "c158da7a47951dea18ca86b6f12e84bd87ccb94f9fa1d62b30df90d8527a1a96"
+      },
+      "readingGuide": {
+        "path": "games/transmogrify/README.md",
+        "sha256": "e738580b65e87f4e288705cf34906d2d9a8d396750b346fcd3873488bd034172"
+      },
+      "rulesSha256": "3b9e4cd6884e19fd9adae8213d9c48b549807f8ddeffa3cd262e1e1bfb69033b",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -13277,6 +13301,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 299,
+          "sha256": "4ff617e3a5387e7d23cf7e488d28e1dc44cc676e6c95f22d87d08485d5090867"
         }
       },
       "vertigo2": {

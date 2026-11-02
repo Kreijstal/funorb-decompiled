@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class lc extends ag {
+final class lc extends PcmStream {
     private int[] field_y;
     private int[] field_r;
     private kc[][] field_l;
@@ -69,7 +69,7 @@ final class lc extends ag {
           }
           var8 = (wd) (param3.field_h.b(1000));
           while (var8 != null) {
-            var9 = (int)var8.field_c;
+            var9 = (int)var8.key;
             var10 = (si) (this.field_Q.a((long)var9, 0));
             if (var10 == null) {
               var10 = ac.a(var9, 270, param4);
@@ -431,7 +431,7 @@ final class lc extends ag {
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        gd var11 = null;
+        AchievementNotice var11 = null;
         hj var12 = null;
         int[] var13 = null;
         oh var14 = null;
@@ -439,7 +439,7 @@ final class lc extends ag {
         int[] var16 = null;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
-          var12 = nf.field_l;
+          var12 = WordLanguage.field_l;
           if (param0) {
             field_L = (String) null;
           }
@@ -452,9 +452,9 @@ final class lc extends ag {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((oa) ((Object) var5)).d((byte) 48);
+            var6 = ((PacketBuffer) ((Object) var5)).d((byte) 48);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((oa) ((Object) var5)).c((byte) -124);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).c((byte) -124);
             }
             var14 = (oh) (oc.field_G.a((byte) -95));
             if (var14 == null) {
@@ -468,7 +468,7 @@ final class lc extends ag {
             return;
           }
           if (var2 == 1) {
-            var11 = (gd) (rh.field_r.a((byte) -95));
+            var11 = (AchievementNotice) (rh.field_r.a((byte) -95));
             if (var11 == null) {
               pc.a(1);
               return;
@@ -498,7 +498,7 @@ final class lc extends ag {
         }
     }
 
-    final synchronized ag a() {
+    final synchronized PcmStream a() {
         return null;
     }
 
@@ -683,8 +683,8 @@ final class lc extends ag {
         }
     }
 
-    final synchronized ag d() {
-        return (ag) ((Object) this.field_m);
+    final synchronized PcmStream d() {
+        return (PcmStream) ((Object) this.field_m);
     }
 
     private final void e(int param0, int param1, int param2) {
@@ -934,7 +934,7 @@ final class lc extends ag {
           var23 = null;
           var13 = Transmogrify.field_A ? 1 : 0;
           try {
-            var14 = (ba) (wg.field_f.a((byte) -95));
+            var14 = (ba) (SecondaryNodeDequeIterator.field_f.a((byte) -95));
             var18 = var14;
             if (var18 == null) {
               return;
@@ -961,7 +961,7 @@ final class lc extends ag {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.field_h;
+            var4 = param1.position;
             param1.a(-109, var18.field_i);
             var5 = 117 % ((param0 - 0) / 44);
             for (var6 = 0; var18.field_p > var6; var6++) {
@@ -1111,7 +1111,7 @@ final class lc extends ag {
         boolean stackIn_20_2 = false;
         kc var5;
         int var6_int;
-        hb var6;
+        PcmSample var6;
         kc var7;
         kc var8;
         int var9;
@@ -1164,9 +1164,9 @@ final class lc extends ag {
         var7.field_p = -1;
         var7.field_z = 0;
         if (this.field_P[param0] == 0) {
-          var7.field_y = bb.a(var6, this.a(var7, (byte) 106), this.b(var7, (byte) -77), this.a(var7, 1135851910));
+          var7.field_y = PcmSampleStream.a(var6, this.a(var7, (byte) 106), this.b(var7, (byte) -77), this.a(var7, 1135851910));
         } else {
-          var7.field_y = bb.a(var6, this.a(var7, (byte) 123), 0, this.a(var7, 1135851910));
+          var7.field_y = PcmSampleStream.a(var6, this.a(var7, (byte) 123), 0, this.a(var7, 1135851910));
           stackIn_19_1 = false;
           stackIn_20_2 = !(var10.field_k[param1] >= 0);
           this.a(stackIn_19_1, stackIn_20_2, var7);

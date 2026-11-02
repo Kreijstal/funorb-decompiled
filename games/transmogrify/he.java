@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends wf {
-    static String field_h;
-    static String field_g;
+final class he extends IntrusiveNode {
+    static String endGameLabel;
+    static String skipRoundPrompt;
 
     public static void a(byte param0) {
         if (param0 < 12) {
           he.b((byte) 57);
-          field_g = null;
-          field_h = null;
+          skipRoundPrompt = null;
+          endGameLabel = null;
           return;
         }
-        field_g = null;
-        field_h = null;
+        skipRoundPrompt = null;
+        endGameLabel = null;
     }
 
     final static void a(String[] args, byte param1, String param2, int param3) {
@@ -33,7 +33,7 @@ final class he extends wf {
           if (param1 <= 75) {
             return;
           }
-          db.field_a = gd.field_l;
+          db.field_a = AchievementNotice.field_l;
           if (255 == param3) {
             stackIn_12_0 = !(ab.field_j >= 13);
             de.field_a = de.a(stackIn_12_0, (byte) -116);
@@ -408,7 +408,7 @@ final class he extends wf {
         vb.field_a = -2147483648;
     }
 
-    final static void a(ti param0, int param1, int param2, byte param3, int param4) {
+    final static void a(Sprite param0, int param1, int param2, byte param3, int param4) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -421,7 +421,7 @@ final class he extends wf {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ti var12 = null;
+        Sprite var12 = null;
         int var11Lifetime1;
         int var11Lifetime2;
         try {
@@ -431,8 +431,8 @@ final class he extends wf {
           var6 = 0;
           var7 = param0.field_m;
           if (param3 <= 55) {
-            var12 = (ti) null;
-            he.a((ti) null, 10, 5, (byte) -107, 1);
+            var12 = (Sprite) null;
+            he.a((Sprite) null, 10, 5, (byte) -107, 1);
           }
           var8 = param0.field_n;
           var9 = -var8 + sb.field_c;
@@ -496,7 +496,7 @@ final class he extends wf {
     }
 
     static {
-        field_h = "End Game";
-        field_g = "Are you sure you want to skip this round, scoring 0 for it?";
+        endGameLabel = "End Game";
+        skipRoundPrompt = "Are you sure you want to skip this round, scoring 0 for it?";
     }
 }

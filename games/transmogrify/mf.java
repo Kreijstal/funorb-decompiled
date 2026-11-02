@@ -3,7 +3,7 @@
  */
 final class mf {
     static String field_a;
-    static qj field_b;
+    static IntrusiveDeque field_b;
     static int field_d;
     static int[] field_c;
     private static String field_z;
@@ -20,7 +20,7 @@ final class mf {
     static {
         field_z = "mf.A(";
         field_a = "Enter the name you'd prefer. This is the name displayed to other players.";
-        field_b = new qj();
+        field_b = new IntrusiveDeque();
         field_c = new int[4];
     }
 }

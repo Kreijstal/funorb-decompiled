@@ -15,7 +15,7 @@ final class cg extends me {
         RuntimeException decompiledCaughtException = null;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
-          var4 = (ba) (wg.field_f.a((byte) -95));
+          var4 = (ba) (SecondaryNodeDequeIterator.field_f.a((byte) -95));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -74,12 +74,12 @@ final class cg extends me {
             var3 = ((ie) ((Object) this.field_j)).a((byte) 113);
             if (var3 != null &&
               var3.a(27835) != hi.field_b) {
-              stackIn_7_0 = ec.field_d;
+              stackIn_7_0 = SocketConnector.field_d;
               return stackIn_7_0;
             }
           }
           if (!param1.equals(this.field_j.field_k)) {
-            stackIn_11_0 = ec.field_d;
+            stackIn_11_0 = SocketConnector.field_d;
           } else {
             stackIn_11_0 = hi.field_b;
           }

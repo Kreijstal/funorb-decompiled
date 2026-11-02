@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class od extends wf {
+final class od extends IntrusiveNode {
     int field_k;
     static String field_h;
-    wf field_i;
+    IntrusiveNode field_i;
     static ta[] field_l;
-    bb field_j;
-    static j field_g;
+    PcmSampleStream field_j;
+    static TileRack submissionRack;
 
-    od(bb param0, wf param1) {
+    od(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_j = param0;
           this.field_k = param0.h();
@@ -21,7 +21,7 @@ final class od extends wf {
     }
 
     public static void b(boolean param0) {
-        field_g = null;
+        submissionRack = null;
         field_h = null;
         if (!param0) {
           return;
@@ -35,6 +35,6 @@ final class od extends wf {
         for (var0 = 0; var0 < field_l.length; var0++) {
           field_l[var0] = new ta();
         }
-        field_g = new j(12, 34, 114);
+        submissionRack = new TileRack(12, 34, 114);
     }
 }

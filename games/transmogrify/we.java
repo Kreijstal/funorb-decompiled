@@ -15,7 +15,7 @@ final class we {
     private long field_f;
     static dk field_j;
     private long field_n;
-    static nf[] field_l;
+    static WordLanguage[] field_l;
     private byte[] field_d;
     private long field_h;
 
@@ -163,11 +163,11 @@ final class we {
         return og.field_c[var4];
     }
 
-    final static ti[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param1 <= 110) {
           we.a(49);
         }
-        return ad.a(param0, param3, param2, 127, 1);
+        return WordDictionary.a(param0, param3, param2, 127, 1);
     }
 
     final void a(byte[] param0, int param1, byte param2, int param3) throws IOException {

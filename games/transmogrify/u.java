@@ -47,7 +47,7 @@ final class u {
           var3 = param0.k(12, 1522829539);
           var4 = new oe[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (!w.a(-1, param0)) {
+            if (!NodeHashTableIterator.a(-1, param0)) {
               var6 = param0.k(ol.a(-23755, var5 - 1), 1522829539);
               var4[var5] = var4[var6];
             } else {
@@ -127,7 +127,7 @@ final class u {
         }
     }
 
-    final static String a(boolean param0, int param1, oa param2) {
+    final static String a(boolean param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -151,7 +151,7 @@ final class u {
               return stackIn_4_0;
             }
             var4 = new byte[var3_int];
-            param2.field_h = param2.field_h + bf.field_C.a(var3_int, var4, 0, param2.field_g, 0, param2.field_h);
+            param2.position = param2.position + bf.field_C.a(var3_int, var4, 0, param2.payload, 0, param2.position);
             var5 = cc.a(0, 15923, var3_int, var4);
             stackIn_6_0 = var5;
             return stackIn_6_0;

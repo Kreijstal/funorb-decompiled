@@ -4,19 +4,19 @@
 final class fl {
     private int field_d;
     private int field_f;
-    private wf[] field_e;
-    private wf field_b;
-    private wf field_a;
+    private IntrusiveNode[] field_e;
+    private IntrusiveNode field_b;
+    private IntrusiveNode field_a;
     static boolean field_c;
 
-    final wf a(int param0) {
+    final IntrusiveNode a(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var2;
         int var3;
-        wf var4;
-        wf var5;
-        wf var8;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var8;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (this.field_f <= 0) {
           do {
@@ -26,14 +26,14 @@ final class fl {
             }
             fieldTemp$1 = this.field_f;
             this.field_f = this.field_f + 1;
-            var4 = this.field_e[fieldTemp$1].field_b;
+            var4 = this.field_e[fieldTemp$1].next;
           } while (this.field_e[this.field_f - 1] == var4);
-          this.field_a = var4.field_b;
+          this.field_a = var4.next;
           return var4;
         }
         if (this.field_a != this.field_e[this.field_f - 1]) {
           var8 = this.field_a;
-          this.field_a = var8.field_b;
+          this.field_a = var8.next;
           return var8;
         }
         do {
@@ -43,64 +43,64 @@ final class fl {
           }
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          var5 = this.field_e[fieldTemp$0].field_b;
+          var5 = this.field_e[fieldTemp$0].next;
         } while (this.field_e[this.field_f - 1] == var5);
-        this.field_a = var5.field_b;
+        this.field_a = var5.next;
         return var5;
     }
 
-    final wf a(long param0, int param1) {
-        wf var5 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
         int var6 = Transmogrify.field_A ? 1 : 0;
-        wf var4 = this.field_e[(int)((long)(-1 + this.field_d) & param0)];
-        this.field_b = var4.field_b;
+        IntrusiveNode var4 = this.field_e[(int)((long)(-1 + this.field_d) & param0)];
+        this.field_b = var4.next;
         while (this.field_b != var4) {
-          if (~this.field_b.field_c == ~param0) {
+          if (~this.field_b.key == ~param0) {
             var5 = this.field_b;
-            this.field_b = this.field_b.field_b;
+            this.field_b = this.field_b.next;
             return var5;
           }
-          this.field_b = this.field_b.field_b;
+          this.field_b = this.field_b.next;
         }
         this.field_b = null;
         if (param1 != 0) {
-          wf var7 = (wf) null;
-          this.a(28L, (byte) 9, (wf) null);
+          IntrusiveNode var7 = (IntrusiveNode) null;
+          this.a(28L, (byte) 9, (IntrusiveNode) null);
           return null;
         }
         return null;
     }
 
-    final wf b(int param0) {
+    final IntrusiveNode b(int param0) {
         if (param0 == 1000) {
           this.field_f = 0;
           return this.a(71);
         }
-        ag var3 = (ag) null;
-        fl.a((ag) null, 122, -2);
+        PcmStream var3 = (PcmStream) null;
+        fl.a((PcmStream) null, 122, -2);
         this.field_f = 0;
         return this.a(71);
     }
 
-    final void a(long param0, byte param1, wf param2) {
-        wf var5 = null;
+    final void a(long param0, byte param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (null != param2.field_f) {
+          if (null != param2.previous) {
             param2.c(5);
           }
           var5 = this.field_e[(int)(param0 & (long)(-1 + this.field_d))];
-          param2.field_b = var5;
+          param2.next = var5;
           int var6 = 70 / ((3 - param1) / 58);
-          param2.field_f = var5.field_f;
-          param2.field_f.field_b = param2;
-          param2.field_b.field_f = param2;
-          param2.field_c = param0;
+          param2.previous = var5.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
+          param2.key = param0;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "fl.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static nd a(ag param0, int param1, int param2) {
+    final static nd a(PcmStream param0, int param1, int param2) {
         RuntimeException var3 = null;
         nd stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -129,17 +129,17 @@ final class fl {
 
     fl(int param0) {
         int var2 = 0;
-        wf dupTemp$1 = null;
-        wf var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_f = 0;
-        this.field_e = new wf[param0];
+        this.field_e = new IntrusiveNode[param0];
         this.field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new wf();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          var3.field_b = var3;
-          var3.field_f = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

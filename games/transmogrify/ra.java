@@ -4,8 +4,8 @@
 final class ra {
     static int field_a;
 
-    final static void a(fe param0, java.awt.Frame param1, int param2) {
-        ib var3 = null;
+    final static void a(PlatformTaskDispatcher param0, java.awt.Frame param1, int param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -31,7 +31,7 @@ final class ra {
           param1.setVisible(false);
           if (param2 != 100) {
             var5 = (java.awt.Frame) null;
-            ra.a((fe) null, (java.awt.Frame) null, 29);
+            ra.a((PlatformTaskDispatcher) null, (java.awt.Frame) null, 29);
           }
           param1.dispose();
           return;
@@ -69,12 +69,12 @@ final class ra {
     }
 
     final static void a(int param0) {
-        ti var1 = null;
-        ti var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = Transmogrify.field_A ? 1 : 0;
         try {
-          var1 = new ti(540, 140);
+          var1 = new Sprite(540, 140);
           oj.a(var1, 256);
           ka.c();
           sb.c();

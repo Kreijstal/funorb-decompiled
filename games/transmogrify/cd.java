@@ -64,11 +64,11 @@ final class cd implements Runnable {
         }
     }
 
-    final static ti a(int param0, int param1, byte param2) {
+    final static Sprite a(int param0, int param1, byte param2) {
         int var4 = 0;
         int var5 = Transmogrify.field_A ? 1 : 0;
-        ti var6 = new ti(param1, param1);
-        ti var3 = var6;
+        Sprite var6 = new Sprite(param1, param1);
+        Sprite var3 = var6;
         if (param2 >= -18) {
           cd.b(92);
         }
@@ -297,8 +297,8 @@ final class cd implements Runnable {
         }
     }
 
-    cd(fe param0) {
-        ib var2 = null;
+    cd(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_c = new bk();
         this.field_d = false;
         this.field_e = 0;

@@ -8,9 +8,9 @@ final class kf extends td {
     private long[] field_n;
     private int field_j;
     private int field_m;
-    static qj field_o;
+    static IntrusiveDeque field_o;
     static String[] field_k;
-    static ii[] field_h;
+    static IndexedSprite[] field_h;
     static int[] field_g;
     static String field_e;
     static pg field_i;
@@ -57,7 +57,7 @@ final class kf extends td {
           if (null != ub.field_c &&
             ub.field_c.field_c) {
             qd.b(param0 + 3);
-            oi.field_k.b((qg) (new ll(oi.field_k, fi.field_w)), (byte) -71);
+            oi.field_k.b((UiWidget) (new ll(oi.field_k, fi.field_w)), (byte) -71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,8 +92,8 @@ final class kf extends td {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        oa var16 = null;
-        oa var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -106,23 +106,23 @@ final class kf extends td {
         int var5Lifetime1;
         var15 = Transmogrify.field_A ? 1 : 0;
         try {
-          var16 = new oa(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
-          var17.field_h = param0.length - 2;
+          var17.position = param0.length - 2;
           ih.field_b = var17.a((byte) -126);
           wk.field_b = new int[ih.field_b];
           ld.field_e = new byte[ih.field_b][];
           ql.field_b = new int[ih.field_b];
-          gj.field_j = new int[ih.field_b];
+          BufferedSocket.field_j = new int[ih.field_b];
           re.field_a = new int[ih.field_b];
           cc.field_e = new boolean[ih.field_b];
           re.field_K = new byte[ih.field_b][];
-          var17.field_h = param0.length - (7 + ih.field_b * 8);
+          var17.position = param0.length - (7 + ih.field_b * 8);
           pj.field_y = var17.a((byte) -122);
           ll.field_U = var17.a((byte) -100);
           var3 = (var17.d((byte) 102) & 255) + 1;
           for (var4 = 0; ih.field_b > var4; var4++) {
-            gj.field_j[var4] = var16.a((byte) -93);
+            BufferedSocket.field_j[var4] = var16.a((byte) -93);
           }
           var4Lifetime1 = 0;
           var5 = 22 % ((param1 - 19) / 47);
@@ -136,7 +136,7 @@ final class kf extends td {
           for (var4Lifetime3 = 0; var4Lifetime3 < ih.field_b; var4Lifetime3++) {
             wk.field_b[var4Lifetime3] = var17.a((byte) -112);
           }
-          var17.field_h = -(3 * (-1 + var3)) + param0.length - 7 - ih.field_b * 8;
+          var17.position = -(3 * (-1 + var3)) + param0.length - 7 - ih.field_b * 8;
           rg.field_D = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             rg.field_D[var4Lifetime4] = var17.g((byte) 124);
@@ -144,7 +144,7 @@ final class kf extends td {
               rg.field_D[var4Lifetime4] = 1;
             }
           }
-          var17.field_h = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < ih.field_b; var4Lifetime5++) {
             var5Lifetime1 = ql.field_b[var4Lifetime5];
             var6 = wk.field_b[var4Lifetime5];
@@ -285,7 +285,7 @@ final class kf extends td {
         this.field_l = (long)param0;
     }
 
-    final static ti a(ti param0, boolean param1, byte param2) {
+    final static Sprite a(Sprite param0, boolean param1, byte param2) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int var17 = 0;
@@ -304,13 +304,13 @@ final class kf extends td {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ti var16 = null;
+        Sprite var16 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
         int[] var25 = null;
-        ti stackIn_23_0 = null;
+        Sprite stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -371,7 +371,7 @@ final class kf extends td {
           var6 += 2;
           var15 = ga.a(param0.field_w[var6], (byte) -128) * 255 + ga.a(param0.field_w[var6 + 1], (byte) -113);
           var6 += 2;
-          var16 = new ti(var14, var15);
+          var16 = new Sprite(var14, var15);
           var16.field_l = var11Lifetime1;
           var16.field_u = var10Lifetime2;
           var16.field_r = var12Lifetime1;
@@ -418,7 +418,7 @@ final class kf extends td {
 
     static {
         field_k = new String[255];
-        field_o = new qj();
+        field_o = new IntrusiveDeque();
         field_g = new int[8192];
     }
 }

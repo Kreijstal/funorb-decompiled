@@ -4,10 +4,10 @@
 final class pj extends rh {
     int field_C;
     static hi field_w;
-    oa field_B;
+    PacketBuffer field_B;
     static int field_y;
     byte field_z;
-    static qj field_A;
+    static IntrusiveDeque field_A;
     static int[] field_x;
 
     final byte[] e(int param0) {
@@ -16,16 +16,16 @@ final class pj extends rh {
           if (this.field_m) {
             throw new RuntimeException();
           }
-          if (this.field_B.field_h >= this.field_B.field_g.length - this.field_z) {
-            return this.field_B.field_g;
+          if (this.field_B.position >= this.field_B.payload.length - this.field_z) {
+            return this.field_B.payload;
           }
           throw new RuntimeException();
         }
         if (this.field_m) {
           throw new RuntimeException();
         }
-        if (this.field_B.field_h >= this.field_B.field_g.length - this.field_z) {
-          return this.field_B.field_g;
+        if (this.field_B.position >= this.field_B.payload.length - this.field_z) {
+          return this.field_B.payload;
         }
         throw new RuntimeException();
     }
@@ -49,7 +49,7 @@ final class pj extends rh {
         if (this.field_B == null) {
           return 0;
         }
-        return this.field_B.field_h * 100 / (-this.field_z + this.field_B.field_g.length);
+        return this.field_B.position * 100 / (-this.field_z + this.field_B.payload.length);
     }
 
     final static o a(int param0, byte param1, int param2, int param3, int param4) {
@@ -81,7 +81,7 @@ final class pj extends rh {
     static {
         int var0 = 0;
         field_w = new hi();
-        field_A = new qj();
+        field_A = new IntrusiveDeque();
         field_x = new int[256];
         for (var0 = 0; var0 < 256; var0++) {
           field_x[var0] = vg.c(var0 * 143, -2063532288) << 8;

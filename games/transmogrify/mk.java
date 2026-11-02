@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class mk extends aj {
-    static ti field_y;
+    static Sprite field_y;
     boolean field_A;
     static String field_C;
     private int field_D;
     static int field_x;
     static int[] field_w;
-    static ti[] field_B;
+    static Sprite[] field_B;
     static String field_E;
     private da field_z;
 
@@ -55,7 +55,7 @@ abstract class mk extends aj {
         if (param0 == -18555) {
           return !this.field_A ? 0 : this.field_z.e((byte) 14) == this ? 256 : 0;
         }
-        field_y = (ti) null;
+        field_y = (Sprite) null;
         return !this.field_A ? 0 : this.field_z.e((byte) 14) == this ? 256 : 0;
     }
 
@@ -76,7 +76,7 @@ abstract class mk extends aj {
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           var2_int = 30 / ((param0 - 46) / 38);
-          if (null == sj.field_u) {
+          if (null == LetterTile.field_u) {
             return null;
           }
           if (param1 == null) {
@@ -90,7 +90,7 @@ abstract class mk extends aj {
           if (var3 == null) {
             return null;
           }
-          var4 = (uk) (sj.field_u.a((long)var3.hashCode(), (byte) -72));
+          var4 = (uk) (LetterTile.field_u.a((long)var3.hashCode(), (byte) -72));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_eb);
             var5 = hj.a((byte) -128, var8);
@@ -98,7 +98,7 @@ abstract class mk extends aj {
               stackIn_17_0 = var4;
               return stackIn_17_0;
             }
-            var4 = (uk) (sj.field_u.a(-91));
+            var4 = (uk) (LetterTile.field_u.a(-91));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,7 +147,7 @@ abstract class mk extends aj {
     }
 
     mk(da param0, int param1, int param2) {
-        super(-param1 + cd.field_b >> 1, wj.field_h - param2 >> 1, param1, param2, (ui) null);
+        super(-param1 + cd.field_b >> 1, wj.field_h - param2 >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_D = 0;
           this.field_A = false;
@@ -160,7 +160,7 @@ abstract class mk extends aj {
     final void a(int param0, int param1, boolean param2) {
         this.a(87, -param1 + wj.field_h >> 1, cd.field_b - param0 >> 1, param0, param1);
         if (param2) {
-          field_B = (ti[]) null;
+          field_B = (Sprite[]) null;
         }
     }
 
@@ -178,7 +178,7 @@ abstract class mk extends aj {
           return;
         }
         if (qk.field_c == null) {
-          qk.field_c = new ti(this.field_l, this.field_h);
+          qk.field_c = new Sprite(this.field_l, this.field_h);
           oj.a(qk.field_c, 256);
           sb.c();
           this.a(0, (byte) -81, 0);
@@ -188,7 +188,7 @@ abstract class mk extends aj {
           return;
         }
         if (this.field_l > qk.field_c.field_n) {
-          qk.field_c = new ti(this.field_l, this.field_h);
+          qk.field_c = new Sprite(this.field_l, this.field_h);
           oj.a(qk.field_c, 256);
           sb.c();
           this.a(0, (byte) -81, 0);
@@ -206,7 +206,7 @@ abstract class mk extends aj {
           qk.field_c.e(param0 + this.field_p, param1 + this.field_n, this.field_D);
           return;
         }
-        qk.field_c = new ti(this.field_l, this.field_h);
+        qk.field_c = new Sprite(this.field_l, this.field_h);
         oj.a(qk.field_c, 256);
         sb.c();
         this.a(0, (byte) -81, 0);
@@ -217,16 +217,16 @@ abstract class mk extends aj {
 
     abstract void a(int param0, byte param1, int param2);
 
-    final qg i(int param0) {
-        qg var2 = super.i(-120);
+    final UiWidget i(int param0) {
+        UiWidget var2 = super.i(-120);
         if (var2 != null) {
           return var2;
         }
         if (param0 <= -112) {
-          return (qg) (this);
+          return (UiWidget) (this);
         }
         field_w = (int[]) null;
-        return (qg) (this);
+        return (UiWidget) (this);
     }
 
     public static void n(int param0) {

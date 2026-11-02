@@ -8,37 +8,37 @@ class bj extends kb {
     private int field_U;
     private int field_u;
     private boolean field_B;
-    private ti field_v;
+    private Sprite field_v;
     private int field_N;
     private int field_R;
-    private ti[] field_O;
+    private Sprite[] field_O;
     private int field_H;
     private int field_T;
     private int field_K;
     static String field_P;
-    private ti field_db;
-    private ti[] field_L;
-    private ti field_I;
+    private Sprite field_db;
+    private Sprite[] field_L;
+    private Sprite field_I;
     private int field_J;
     private boolean field_G;
-    private ti[] field_S;
+    private Sprite[] field_S;
     private int field_A;
     private int field_s;
     private int field_Z;
-    private ti[] field_M;
+    private Sprite[] field_M;
     private boolean field_ab;
     static String field_X;
     private int field_cb;
-    private ti field_E;
+    private Sprite field_E;
     private int field_r;
     private int field_t;
     private int field_Q;
     private int field_w;
     private int field_y;
     private int field_z;
-    private ti field_C;
+    private Sprite field_C;
     private boolean field_V;
-    private ti[] field_bb;
+    private Sprite[] field_bb;
     private boolean field_F;
     private kg field_Y;
 
@@ -192,20 +192,20 @@ class bj extends kb {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, oa param2, byte param3, oa param4) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, PacketBuffer param2, byte param3, PacketBuffer param4) {
         try {
           if (param3 >= -100) {
             field_X = (String) null;
           }
-          gl.a((byte) -126, param1, param0, param4.field_g, param2, param4.field_h, 0);
+          gl.a((byte) -126, param1, param0, param4.payload, param2, param4.position, 0);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "bj.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void d(int param0) {
-        if (null != wg.field_d) {
-          wg.field_d.r(77);
+        if (null != SecondaryNodeDequeIterator.field_d) {
+          SecondaryNodeDequeIterator.field_d.r(77);
         }
         ca.field_g = new ck();
         if (param0 != -2147483648) {
@@ -236,7 +236,7 @@ class bj extends kb {
         this.field_A = -1;
         this.field_F = true;
         try {
-          this.field_c = param0;
+          this.key = param0;
           this.a(-10583, param1);
           if (param6 != null) {
             this.field_D = param6;

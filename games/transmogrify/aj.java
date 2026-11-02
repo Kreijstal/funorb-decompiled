@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-class aj extends qg implements pb {
-    qj field_u;
+class aj extends UiWidget implements pb {
+    IntrusiveDeque field_u;
     static String field_v;
     static java.awt.Frame field_t;
 
@@ -14,10 +14,10 @@ class aj extends qg implements pb {
         this.j(-110);
     }
 
-    final void a(int param0, int param1, qg param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         tl var7 = null;
-        qg var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -29,11 +29,11 @@ class aj extends qg implements pb {
           if (param3 != -1) {
             return;
           }
-          var8 = (qg) (var7.c(param3 - 90));
+          var8 = (UiWidget) (var7.c(param3 - 90));
           while (var8 != null) {
             if (var8.b(8)) {
               var8.a(this.field_n + param0, param1, param2, -1, param4, this.field_p + param5);
-              var8 = (qg) (var7.a(405142401));
+              var8 = (UiWidget) (var7.a(405142401));
               continue;
             }
             break;
@@ -53,10 +53,10 @@ class aj extends qg implements pb {
         }
     }
 
-    void a(int param0, byte param1, qg param2, int param3) {
+    void a(int param0, byte param1, UiWidget param2, int param3) {
         RuntimeException runtimeException = null;
         tl var5 = null;
-        qg var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -66,11 +66,11 @@ class aj extends qg implements pb {
         try {
           super.a(param0, param1, param2, param3);
           var5 = new tl(this.field_u);
-          var6 = (qg) (var5.c(-95));
+          var6 = (UiWidget) (var5.c(-95));
           while (var6 != null) {
             if (var6.b(8)) {
               var6.a(param0 + this.field_n, (byte) -12, param2, param3 + this.field_p);
-              var6 = (qg) (var5.a(param1 ^ -405142411));
+              var6 = (UiWidget) (var5.a(param1 ^ -405142411));
               continue;
             }
             break;
@@ -90,10 +90,10 @@ class aj extends qg implements pb {
         }
     }
 
-    final boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    final boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         tl var8 = null;
         RuntimeException var8_ref = null;
-        qg var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -105,11 +105,11 @@ class aj extends qg implements pb {
           if (param4 != -30386) {
             this.f(-5);
           }
-          var9 = (qg) (var8.c(-108));
+          var9 = (UiWidget) (var8.c(-108));
           while (var9 != null) {
             if (var9.b(8)) {
               if (!var9.b(param0, param1, param2, param3 + this.field_p, -30386, param5, this.field_n + param6)) {
-                var9 = (qg) (var8.a(405142401));
+                var9 = (UiWidget) (var8.a(405142401));
                 continue;
               }
               return true;
@@ -131,10 +131,10 @@ class aj extends qg implements pb {
         }
     }
 
-    final boolean a(qg param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         tl var3 = null;
         RuntimeException var3_ref = null;
-        qg var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -146,12 +146,12 @@ class aj extends qg implements pb {
           if (param1 > -11) {
             return true;
           }
-          var4 = (qg) (var3.c(-117));
+          var4 = (UiWidget) (var3.c(-117));
           while (var4 != null) {
             if (var4.a(param0, -87)) {
               return true;
             }
-            var4 = (qg) (var3.a(405142401));
+            var4 = (UiWidget) (var3.a(405142401));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -173,28 +173,28 @@ class aj extends qg implements pb {
         return null != this.i(-124) ? true : false;
     }
 
-    qg i(int param0) {
+    UiWidget i(int param0) {
         tl var2;
-        qg var3;
+        UiWidget var3;
         int var4;
         var4 = Transmogrify.field_A ? 1 : 0;
         var2 = new tl(this.field_u);
-        var3 = (qg) (var2.c(-123));
+        var3 = (UiWidget) (var2.c(-123));
         if (param0 >= -112) {
-          return (qg) null;
+          return (UiWidget) null;
         }
         while (var3 != null) {
           if (var3.b((byte) 78)) {
             return var3;
           }
-          var3 = (qg) (var2.a(405142401));
+          var3 = (UiWidget) (var2.a(405142401));
         }
         return null;
     }
 
     final StringBuilder a(int param0, int param1, StringBuilder param2, Hashtable param3) {
         RuntimeException var5 = null;
-        qg var6 = null;
+        UiWidget var6 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -208,8 +208,8 @@ class aj extends qg implements pb {
             this.a(-12060, param3, param2, param0);
           }
           if (param1 > -20) {
-            var6 = (qg) null;
-            this.a((qg) null, (byte) -109);
+            var6 = (UiWidget) null;
+            this.a((UiWidget) null, (byte) -109);
           }
           stackIn_6_0 = (StringBuilder) (param2);
           return stackIn_6_0;
@@ -245,18 +245,18 @@ class aj extends qg implements pb {
         }
         int var2 = 0;
         tl var3 = new tl(this.field_u);
-        qg var4 = (qg) (var3.c(-127));
+        UiWidget var4 = (UiWidget) (var3.c(-127));
         while (var4 != null) {
           var5 = var4.g(-68);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (qg) (var3.a(405142401));
+          var4 = (UiWidget) (var3.a(405142401));
         }
         return var2;
     }
 
-    final void a(qg param0, byte param1) {
+    final void a(UiWidget param0, byte param1) {
         try {
           this.field_u.a(param0, -111);
           if (param1 >= -77) {
@@ -272,7 +272,7 @@ class aj extends qg implements pb {
         oh.field_h.field_k = 0;
     }
 
-    final static void a(java.awt.Component param0, int param1, int param2, lc param3, boolean param4, int param5, fe param6, int param7) {
+    final static void a(java.awt.Component param0, int param1, int param2, lc param3, boolean param4, int param5, PlatformTaskDispatcher param6, int param7) {
         try {
           qh.a(param5, param4, 10);
           re.field_h = qh.a(param6, param0, 0, param1);
@@ -294,7 +294,7 @@ class aj extends qg implements pb {
 
     final String f(int param0) {
         tl var2;
-        qg var3;
+        UiWidget var3;
         String var4;
         int var5;
         var5 = Transmogrify.field_A ? 1 : 0;
@@ -302,13 +302,13 @@ class aj extends qg implements pb {
           aj.a(false, true, true, true);
         }
         var2 = new tl(this.field_u);
-        var3 = (qg) (var2.c(-95));
+        var3 = (UiWidget) (var2.c(-95));
         while (var3 != null) {
           var4 = var3.f(4);
           if (var4 != null) {
             return var4;
           }
-          var3 = (qg) (var2.a(param0 + 405142397));
+          var3 = (UiWidget) (var2.a(param0 + 405142397));
         }
         return null;
     }
@@ -322,39 +322,39 @@ class aj extends qg implements pb {
     }
 
     final static void a(ci param0, ci param1, ci param2, int param3) {
-        ti var17 = null;
-        ii[] var5 = null;
-        ii[][] var6 = null;
+        Sprite var17 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
-        ii[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var11_int = 0;
-        ti var15 = null;
-        ti var18 = null;
-        ti var11 = null;
-        ti var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = Transmogrify.field_A ? 1 : 0;
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          ua.field_f = kl.a(param2, (byte) 127, "commonui", "frame_top");
-          rh.field_l = kl.a(param2, (byte) 125, "commonui", "frame_bottom");
+          ua.field_f = ContextualRuntimeException.a(param2, (byte) 127, "commonui", "frame_top");
+          rh.field_l = ContextualRuntimeException.a(param2, (byte) 125, "commonui", "frame_bottom");
           vf.field_a = pc.a("commonui", "jagex_logo_grey", param2, 113);
-          mc.field_b = kl.a(param2, (byte) 125, "commonui", "button");
+          mc.field_b = ContextualRuntimeException.a(param2, (byte) 125, "commonui", "button");
           ai.field_b = ik.a("commonui", param2, (byte) -46, "validation");
           al.field_i = (kg) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo12"));
           vd.field_h = (kg) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo14"));
           rh.field_q = (kg) ((Object) ua.a(param2, "commonui", param3 - 2394310, param1, "arezzo14bold"));
-          var17 = new ti(param0.a("", (byte) 100, "button.gif"), (java.awt.Component) ((Object) gd.field_k));
+          var17 = new Sprite(param0.a("", (byte) 100, "button.gif"), (java.awt.Component) ((Object) AchievementNotice.field_k));
           gk.a("commonui", param3 ^ -2392393, param2, "dropdown");
           var5 = ej.a((byte) -43, param2, "screen_options", "commonui");
-          kf.field_h = new ii[4];
-          fj.field_a = new ii[4];
-          eh.field_b = new ii[4];
-          var6 = new ii[][]{fj.field_a, kf.field_h, eh.field_b};
+          kf.field_h = new IndexedSprite[4];
+          fj.field_a = new IndexedSprite[4];
+          eh.field_b = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{fj.field_a, kf.field_h, eh.field_b};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -368,7 +368,7 @@ class aj extends qg implements pb {
           var19[3][var8Lifetime1] = 4767999;
           for (var9 = 0; var9 < 3; var9++) {
             var14 = var6[var9];
-            ii[] var10 = var14;
+            IndexedSprite[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
               var14[var11_int] = qf.a(var5[var9], var19[var11_int], -2);
             }
@@ -377,18 +377,18 @@ class aj extends qg implements pb {
           og.a((byte) 108);
           var17.e();
           sb.b(0, 0, sb.field_c, sb.field_g);
-          var15 = new ti(var9Lifetime1, var9Lifetime1);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.e();
           var17.f(0, 0);
-          var11 = new ti(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.e();
           var17.f(-var17.field_n + var9Lifetime1, 0);
-          var12 = new ti(-(2 * var9Lifetime1) + var17.field_n, var9Lifetime1);
+          var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_n, var9Lifetime1);
           var12.e();
           var17.f(-var9Lifetime1, 0);
           fi.c(true);
-          mc.field_b = new ti[]{var15, var12, var11};
+          mc.field_b = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "aj.QB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -411,12 +411,12 @@ class aj extends qg implements pb {
         return rf.field_cb[var4];
     }
 
-    boolean a(int param0, qg param1, byte param2, char param3) {
+    boolean a(int param0, UiWidget param1, byte param2, char param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        qg var9 = null;
+        UiWidget var9 = null;
         tl var10 = null;
         boolean stackIn_13_0 = false;
         RuntimeException stackIn_18_0 = null;
@@ -427,14 +427,14 @@ class aj extends qg implements pb {
         try {
           var6 = 26 % ((65 - param2) / 55);
           var10 = new tl(this.field_u);
-          var9 = (qg) (var10.c(-117));
+          var9 = (UiWidget) (var10.c(-117));
           while (var9 != null) {
             if (var9.b(8)) {
               if (var9.b((byte) -103) &&
                 var9.a(param0, param1, (byte) 125, param3)) {
                 return true;
               }
-              var9 = (qg) (var10.a(405142401));
+              var9 = (UiWidget) (var10.a(405142401));
               continue;
             }
             break;
@@ -469,19 +469,19 @@ class aj extends qg implements pb {
         if (param0 > -72) {
           return;
         }
-        qg var3 = (qg) (var2.c(-125));
+        UiWidget var3 = (UiWidget) (var2.c(-125));
         while (var3 != null) {
           var3.c((byte) 38);
-          var3 = (qg) (var2.a(405142401));
+          var3 = (UiWidget) (var2.a(405142401));
         }
     }
 
-    final boolean b(qg param0, int param1) {
+    final boolean b(UiWidget param0, int param1) {
         tl var3 = null;
         RuntimeException var3_ref = null;
-        qg var4 = null;
+        UiWidget var4 = null;
         tl var5 = null;
-        qg var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -496,20 +496,20 @@ class aj extends qg implements pb {
           if (param1 <= 44) {
             return true;
           }
-          var4 = (qg) (var3.c(-117));
+          var4 = (UiWidget) (var3.c(-117));
           while (var4 != null) {
             if (var4.b((byte) -118)) {
               var5 = new tl(this.field_u);
               var5.a(var4, 95);
-              var6 = (qg) (var5.a(405142401));
+              var6 = (UiWidget) (var5.a(405142401));
               while (var6 != null) {
                 if (var6.a(param0, -30)) {
                   return true;
                 }
-                var6 = (qg) (var5.a(405142401));
+                var6 = (UiWidget) (var5.a(405142401));
               }
             }
-            var4 = (qg) (var3.a(405142401));
+            var4 = (UiWidget) (var3.a(405142401));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -531,7 +531,7 @@ class aj extends qg implements pb {
         int var7 = 0;
         StringBuilder discarded$4 = null;
         tl var5 = null;
-        qg var6 = null;
+        UiWidget var6 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -544,16 +544,16 @@ class aj extends qg implements pb {
         try {
           var5 = new tl(this.field_u);
           if (param0 != -12060) {
-            this.field_u = (qj) null;
+            this.field_u = (IntrusiveDeque) null;
           }
-          var6 = (qg) (var5.c(param0 + 11962));
+          var6 = (UiWidget) (var5.c(param0 + 11962));
           while (var6 != null) {
             discarded$3 = param2.append('\n');
             for (var7 = 0; var7 <= param3; var7++) {
               discarded$4 = param2.append(' ');
             }
             var6.a(1 + param3, -43, param2, param1);
-            var6 = (qg) (var5.a(405142401));
+            var6 = (UiWidget) (var5.a(405142401));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -581,21 +581,21 @@ class aj extends qg implements pb {
         int var6 = -80 % ((77 - param3) / 34);
         if (param2 == 0 &&
           this.field_q != null) {
-          this.field_q.a(param0, param1, true, (byte) 103, (qg) (this));
+          this.field_q.a(param0, param1, true, (byte) 103, (UiWidget) (this));
         }
         tl var5 = new tl(this.field_u);
-        qg var7 = (qg) (var5.a((byte) 62));
+        UiWidget var7 = (UiWidget) (var5.a((byte) 62));
         while (var7 != null) {
           var7.a(param0 + this.field_p, param1 + this.field_n, param2, (byte) 9);
-          var7 = (qg) (var5.b(-29339));
+          var7 = (UiWidget) (var5.b(-29339));
         }
     }
 
-    final boolean a(int param0, qg param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        qg var4 = null;
+        UiWidget var4 = null;
         tl var5 = null;
-        qg var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         tl var8 = null;
         RuntimeException stackIn_20_0 = null;
@@ -609,23 +609,23 @@ class aj extends qg implements pb {
           }
           var8 = new tl(this.field_u);
           if (param0 != 2) {
-            this.a(-95, (qg) null, (byte) -47, '￈');
+            this.a(-95, (UiWidget) null, (byte) -47, '￈');
           }
-          var4 = (qg) (var8.a((byte) 62));
+          var4 = (UiWidget) (var8.a((byte) 62));
           while (var4 != null) {
             if (var4.b((byte) -112)) {
               var5 = new tl(this.field_u);
               var5.a(var4, true);
-              var6 = (qg) (var5.b(-29339));
+              var6 = (UiWidget) (var5.b(-29339));
               while (var6 != null) {
                 if (!var6.a(param1, -69)) {
-                  var6 = (qg) (var5.b(-29339));
+                  var6 = (UiWidget) (var5.b(-29339));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (qg) (var8.b(-29339));
+            var4 = (UiWidget) (var8.b(-29339));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -642,15 +642,15 @@ class aj extends qg implements pb {
         }
     }
 
-    aj(int param0, int param1, int param2, int param3, ui param4) {
+    aj(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
         super(param0, param1, param2, param3, param4, (ma) null);
-        this.field_u = new qj();
+        this.field_u = new IntrusiveDeque();
     }
 
-    final boolean a(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         tl var8 = null;
         RuntimeException var8_ref = null;
-        qg var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -659,14 +659,14 @@ class aj extends qg implements pb {
         var10 = Transmogrify.field_A ? 1 : 0;
         try {
           var8 = new tl(this.field_u);
-          var9 = (qg) (var8.c(param5 ^ 114));
+          var9 = (UiWidget) (var8.c(param5 ^ 114));
           while (var9 != null) {
             if (var9.b(8)) {
               if (var9.b((byte) -119) &&
                 var9.a(param0, param1, param2, param3, param4, -17, param6)) {
                 return true;
               }
-              var9 = (qg) (var8.a(405142401));
+              var9 = (UiWidget) (var8.a(405142401));
               continue;
             }
             break;
@@ -692,13 +692,13 @@ class aj extends qg implements pb {
     final void e(int param0) {
         int var4 = Transmogrify.field_A ? 1 : 0;
         tl var2 = new tl(this.field_u);
-        qg var3 = (qg) (var2.c(-114));
+        UiWidget var3 = (UiWidget) (var2.c(-114));
         if (param0 != -29113) {
-          this.field_u = (qj) null;
+          this.field_u = (IntrusiveDeque) null;
         }
         while (var3 != null) {
           var3.e(-29113);
-          var3 = (qg) (var2.a(param0 ^ -405113402));
+          var3 = (UiWidget) (var2.a(param0 ^ -405113402));
         }
     }
 

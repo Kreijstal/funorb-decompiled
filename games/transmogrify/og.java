@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class og {
-    static ti field_b;
+    static Sprite field_b;
     static int field_e;
     static tf field_d;
     static hh field_a;
@@ -129,7 +129,7 @@ final class og {
     final static void b(boolean param0) {
         int var1 = jk.l(-889);
         int var2 = ba.a((byte) 101);
-        kf.field_i.a(var1 + (tj.field_y << 1), qa.field_u - dg.field_b, -tj.field_y + ic.field_b, (byte) 110, (dg.field_b << 1) + var2);
+        kf.field_i.a(var1 + (tj.field_y << 1), qa.field_u - FullscreenFocusCanvas.field_b, -tj.field_y + ic.field_b, (byte) 110, (FullscreenFocusCanvas.field_b << 1) + var2);
         hd.a((byte) 8);
         if (!param0) {
           return;

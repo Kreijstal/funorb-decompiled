@@ -68,7 +68,7 @@ final class wc {
               } else {
                 ll.field_V = bf.a(param5, (byte) 41, false, param2);
               }
-              ff.field_D.field_h = 0;
+              ff.field_D.position = 0;
               ff.field_D.f(6389, 14);
               ff.field_D.f(6389, ll.field_V.a(-184).field_a);
               rb.a(-1, -377);
@@ -76,7 +76,7 @@ final class wc {
             }
             if (g.field_y == lj.field_z &&
               ue.a(1, 0)) {
-              var6_int = nf.field_l.d((byte) 125);
+              var6_int = WordLanguage.field_l.d((byte) 125);
               if (var6_int == 0) {
                 lj.field_z = lb.field_e;
               } else {
@@ -84,12 +84,12 @@ final class wc {
                 tg.field_a = -1;
                 lj.field_z = aa.field_e;
               }
-              nf.field_l.field_h = 0;
+              WordLanguage.field_l.position = 0;
             }
             if (lj.field_z == lb.field_e &&
               ue.a(8, 0)) {
-              fd.field_g = nf.field_l.e((byte) -115);
-              nf.field_l.field_h = 0;
+              fd.field_g = WordLanguage.field_l.e((byte) -115);
+              WordLanguage.field_l.position = 0;
               tb.a(ll.field_V, param0, param3, param4, 122);
               lj.field_z = ck.field_I;
             }
@@ -97,10 +97,10 @@ final class wc {
             var6_intLifetime1 = -17 / ((-59 - param1) / 55);
             if (lj.field_z == ck.field_I &&
               ue.a(1, 0)) {
-              var7 = nf.field_l.d((byte) 110);
+              var7 = WordLanguage.field_l.d((byte) 110);
               ca.field_e = var7;
               e.field_I = null;
-              nf.field_l.field_h = 0;
+              WordLanguage.field_l.position = 0;
               if (var7 != 0 &&
                 var7 != 1) {
                 if (var7 != 8) {
@@ -121,13 +121,13 @@ final class wc {
               }
             }
             if (lj.field_z == pj.field_w &&
-              ce.a(0)) {
-              ac.field_j = nf.field_l.e((byte) 117);
-              va.field_j = nf.field_l.d((byte) 58);
-              nf.field_l.d((byte) 93);
-              wj.field_o = nf.field_l.a((byte) -118);
-              var7_ref_String = nf.field_l.j(-1640531527);
-              var8 = nf.field_l.d((byte) 82);
+              GameKeyHandler.a(0)) {
+              ac.field_j = WordLanguage.field_l.e((byte) 117);
+              va.field_j = WordLanguage.field_l.d((byte) 58);
+              WordLanguage.field_l.d((byte) 93);
+              wj.field_o = WordLanguage.field_l.a((byte) -118);
+              var7_ref_String = WordLanguage.field_l.j(-1640531527);
+              var8 = WordLanguage.field_l.d((byte) 82);
               if ((1 & var8) != 0) {
                 rb.a((byte) -114);
               }
@@ -140,19 +140,19 @@ final class wc {
                 }
               }
               if (kc.field_D) {
-                nf.field_l.d((byte) 63);
-                nf.field_l.d((byte) 33);
-                nf.field_l.c((byte) -119);
-                ai.field_c = nf.field_l.a((byte) -119);
+                WordLanguage.field_l.d((byte) 63);
+                WordLanguage.field_l.d((byte) 33);
+                WordLanguage.field_l.c((byte) -119);
+                ai.field_c = WordLanguage.field_l.a((byte) -119);
                 td.field_c = new byte[ai.field_c];
                 for (var9 = 0; var9 < ai.field_c; var9++) {
-                  td.field_c[var9] = nf.field_l.b(true);
+                  td.field_c[var9] = WordLanguage.field_l.b(true);
                 }
               }
-              w.field_a = nf.field_l.g(12248);
-              var12 = (CharSequence) ((Object) w.field_a);
+              NodeHashTableIterator.field_a = WordLanguage.field_l.g(12248);
+              var12 = (CharSequence) ((Object) NodeHashTableIterator.field_a);
               kf.field_e = hj.a((byte) -128, var12);
-              db.field_d = nf.field_l.d((byte) 123);
+              db.field_d = WordLanguage.field_l.d((byte) 123);
               lj.field_z = ll.field_Q;
               if (ll.field_V.a(-184) != wh.field_I) {
                 if (ll.field_V.a(-184) == vc.field_G) {
@@ -188,12 +188,12 @@ final class wc {
               for (var9Lifetime1 = 0; var9Lifetime1 < 4; var9Lifetime1++) {
                 mf.field_c[var9Lifetime1] = mf.field_c[var9Lifetime1] + 50;
               }
-              nf.field_l.a((byte) -74, mf.field_c);
+              WordLanguage.field_l.a((byte) -74, mf.field_c);
               stackIn_73_0 = ca.field_e;
               return stackIn_73_0;
             }
             if (aa.field_e == lj.field_z &&
-              ce.a(0)) {
+              GameKeyHandler.a(0)) {
               pc.a(1);
               if (ca.field_e == 7 &&
                 !ej.field_k) {
@@ -204,7 +204,7 @@ final class wc {
               if (7 == ca.field_e) {
                 ca.field_e = 3;
               }
-              Transmogrify.field_B = nf.field_l.g(12248);
+              Transmogrify.field_B = WordLanguage.field_l.g(12248);
               ej.field_k = false;
               stackIn_84_0 = ca.field_e;
               return stackIn_84_0;
@@ -256,16 +256,16 @@ final class wc {
         throw new Error();
     }
 
-    final static cj a(int param0, java.awt.Component param1, int param2, int param3) {
+    final static RasterBuffer a(int param0, java.awt.Component param1, int param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          cj var5 = null;
-          fg var5_ref = null;
-          cj stackIn_2_0 = null;
-          cj stackIn_4_0 = null;
-          fg stackIn_6_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_2_0 = null;
+          RasterBuffer stackIn_4_0 = null;
+          ImageProducerRasterBuffer stackIn_6_0 = null;
           RuntimeException stackIn_9_0 = null;
           StringBuilder stackIn_9_1 = null;
           String stackIn_10_2 = null;
@@ -274,20 +274,20 @@ final class wc {
             try {
               var4 = Class.forName("dd");
               if (param0 != 4) {
-                stackIn_2_0 = (cj) null;
+                stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;
               }
-              var5 = (cj) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param3, param2, param1, (byte) -126);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new fg();
-              ((cj) ((Object) var5_ref)).a(param3, param2, param1, (byte) -6);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param3, param2, param1, (byte) -6);
               stackIn_6_0 = var5_ref;
-              return (cj) ((Object) stackIn_6_0);
+              return (RasterBuffer) ((Object) stackIn_6_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -321,7 +321,7 @@ final class wc {
         }
         var3 = new rk();
         if (var4 != null) {
-          var3.a(new oa(var4), param0 ^ -2);
+          var3.a(new PacketBuffer(var4), param0 ^ -2);
         }
         if (32768 <= param1) {
           var3.c((byte) 52);
@@ -366,7 +366,7 @@ final class wc {
         int var12Lifetime1;
         var13 = Transmogrify.field_A ? 1 : 0;
         try {
-          var14 = nf.field_l;
+          var14 = WordLanguage.field_l;
           var16 = var14;
           var2 = var16.d((byte) 108);
           var3 = (ng) (kf.field_o.a((byte) -95));
@@ -385,7 +385,7 @@ final class wc {
           var4 = var16.d((byte) 78);
           if (0 != var4) {
             var6 = var3.field_k;
-            kf.field_k[0] = w.field_a;
+            kf.field_k[0] = NodeHashTableIterator.field_a;
             for (var7_int = 1; var4 > var7_int; var7_int++) {
               kf.field_k[var7_int] = var14.g(12248);
             }
@@ -411,7 +411,7 @@ final class wc {
               var20[0][1 + var11 * 4] = bh.field_a[var12];
               var20[0][2 + 4 * var11] = pd.field_a[var12];
               var20[0][var11 * 4 + 3] = bg.field_j[var12];
-              if (qg.a(kf.field_k[var12], (byte) -128) &&
+              if (UiWidget.a(kf.field_k[var12], (byte) -128) &&
                 pd.field_a[var12] + bh.field_a[var12] + bg.field_j[var12] == 0) {
                 var7[0][var11] = null;
                 var11--;
@@ -429,7 +429,7 @@ final class wc {
               var20[1][var15 * 4 + 1] = bh.field_a[var12Lifetime1];
               var20[1][2 + var15 * 4] = pd.field_a[var12Lifetime1];
               var20[1][3 + var15 * 4] = bg.field_j[var12Lifetime1];
-              if (qg.a(kf.field_k[var12Lifetime1], (byte) -111) &&
+              if (UiWidget.a(kf.field_k[var12Lifetime1], (byte) -111) &&
                 bg.field_j[var12Lifetime1] + (bh.field_a[var12Lifetime1] + pd.field_a[var12Lifetime1]) == 0) {
                 var7[1][var15] = null;
                 var15--;

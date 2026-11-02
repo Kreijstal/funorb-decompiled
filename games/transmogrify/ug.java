@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ug {
-    static ti field_f;
+    static Sprite field_f;
     static int[] field_c;
     private int[] field_j;
     private int field_i;
@@ -17,7 +17,7 @@ final class ug {
         if (!param0) {
           return;
         }
-        if (eh.field_a <= 0) {
+        if (eh.totalScore <= 0) {
           sh.field_c = null;
           return;
         }
@@ -29,7 +29,7 @@ final class ug {
           sh.field_c = null;
           return;
         }
-        if (qj.b((byte) 92)) {
+        if (IntrusiveDeque.b((byte) 92)) {
           sh.field_c = null;
           return;
         }
@@ -37,7 +37,7 @@ final class ug {
           sh.field_c = null;
           return;
         }
-        rh.field_t = tl.a(bc.field_b, 36, new int[]{(eh.field_a << 6) + qi.field_c.field_o}, 3, qf.field_e, vh.field_n, 65506, 29, hf.field_j);
+        rh.field_t = tl.a(bc.field_b, 36, new int[]{(eh.totalScore << 6) + MouseInputHandler.field_c.field_o}, 3, qf.field_e, vh.field_n, 65506, 29, hf.field_j);
         sh.field_c = null;
     }
 
@@ -111,7 +111,7 @@ final class ug {
 
     public static void a(byte param0) {
         if (param0 <= 94) {
-          field_f = (ti) null;
+          field_f = (Sprite) null;
           field_c = null;
           field_f = null;
           return;
@@ -251,7 +251,7 @@ final class ug {
     }
 
     static {
-        field_f = new ti(540, 140);
+        field_f = new Sprite(540, 140);
         field_h = 0;
     }
 }

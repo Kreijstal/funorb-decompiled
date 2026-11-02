@@ -3,9 +3,9 @@
  */
 final class lf {
     static int field_c;
-    private pf field_f;
+    private SecondaryNodeDeque field_f;
     private int field_g;
-    private vi field_b;
+    private IterableNodeHashTable field_b;
     private int field_a;
     static String field_e;
     static jc field_d;
@@ -67,8 +67,8 @@ final class lf {
 
     final static void a(boolean param0) {
         qd.b(5);
-        if (null != gd.field_k) {
-          gd.a(gd.field_k, (byte) 118);
+        if (null != AchievementNotice.field_k) {
+          AchievementNotice.a(AchievementNotice.field_k, (byte) 118);
           jh.a(false);
           lk.b(false);
           eh.b((byte) 99);
@@ -123,7 +123,7 @@ final class lf {
           }
           if (var11.d(8)) {
             var6 = new hc(var12, var11.field_o);
-            this.field_b.a(var6, (byte) 93, var11.field_c);
+            this.field_b.a(var6, (byte) 93, var11.key);
             this.field_f.a(false, var6);
             ((dl) ((Object) var6)).field_j = 0L;
             var11.c(param0 - 17694);
@@ -149,7 +149,7 @@ final class lf {
         }
         if (var9.d(8)) {
           var6Lifetime1 = new hc(var10, var9.field_o);
-          this.field_b.a(var6Lifetime1, (byte) 93, var9.field_c);
+          this.field_b.a(var6Lifetime1, (byte) 93, var9.key);
           this.field_f.a(false, var6Lifetime1);
           ((dl) ((Object) var6Lifetime1)).field_j = 0L;
           var9.c(param0 - 17694);
@@ -197,12 +197,12 @@ final class lf {
         int var1Lifetime1;
         int var1Lifetime2;
         if (kc.field_g >= 224) {
-          ec.a(256, 9956);
+          SocketConnector.a(256, 9956);
           var1 = 4 / ((param0 - 58) / 47);
           return;
         }
         var1Lifetime1 = kc.field_g % 32;
-        ec.a(kc.field_g + (32 - var1Lifetime1), 9956);
+        SocketConnector.a(kc.field_g + (32 - var1Lifetime1), 9956);
         var1Lifetime2 = 4 / ((param0 - 58) / 47);
     }
 
@@ -233,7 +233,7 @@ final class lf {
             stackIn_13_0 = (byte[]) (param2);
             return stackIn_13_0;
           }
-          stackIn_11_0 = pi.a((byte) -29, param2);
+          stackIn_11_0 = AchievementUnlockEvent.a((byte) -29, param2);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

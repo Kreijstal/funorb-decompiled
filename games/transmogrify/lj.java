@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-class lj extends qg {
+class lj extends UiWidget {
     private boolean field_v;
-    static bb field_u;
+    static PcmSampleStream field_u;
     boolean field_t;
     static double field_x;
     static hi field_z;
@@ -62,7 +62,7 @@ class lj extends qg {
         field_u = null;
     }
 
-    boolean a(qg param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -75,7 +75,7 @@ class lj extends qg {
             this.field_w = true;
             if (this.field_m != null &&
               this.field_m instanceof la) {
-              ((la) (this.field_m)).a((qg) (this), (byte) -73, this.field_w);
+              ((la) (this.field_m)).a((UiWidget) (this), (byte) -73, this.field_w);
             }
             if (param1 < -11) {
               return true;
@@ -103,7 +103,7 @@ class lj extends qg {
         tb.a(ha.b(119), true);
     }
 
-    lj(String param0, ui param1, ma param2) {
+    lj(String param0, WidgetRenderer param1, ma param2) {
         super(param0, param1, param2);
         this.field_t = true;
         this.field_w = false;
@@ -111,10 +111,10 @@ class lj extends qg {
     }
 
     lj(String param0, ma param1) {
-        this(param0, vi.field_e.field_d, param1);
+        this(param0, IterableNodeHashTable.field_e.field_d, param1);
     }
 
-    boolean a(int param0, qg param1, byte param2, char param3) {
+    boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -200,25 +200,25 @@ class lj extends qg {
         }
     }
 
-    void a(int param0, byte param1, qg param2, int param3) {
+    void a(int param0, byte param1, UiWidget param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           if (0 != this.field_s) {
             if (this.field_s == b.field_k) {
               return;
             }
-            if (this.b(param3, param0, param1 + 11, oa.field_j, bk.field_a) &&
+            if (this.b(param3, param0, param1 + 11, PacketBuffer.field_j, bk.field_a) &&
               0 == b.field_k) {
-              this.a((byte) -105, -param0 + bk.field_a, this.field_s, -param3 + oa.field_j);
+              this.a((byte) -105, -param0 + bk.field_a, this.field_s, -param3 + PacketBuffer.field_j);
             }
-            this.a(param0, oa.field_j, param2, -1, bk.field_a, param3);
+            this.a(param0, PacketBuffer.field_j, param2, -1, bk.field_a, param3);
           }
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "lj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -259,7 +259,7 @@ class lj extends qg {
         return this.field_w;
     }
 
-    final void a(int param0, int param1, qg param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           if (param3 != -1) {
             lj.d((byte) 20);
@@ -291,7 +291,7 @@ class lj extends qg {
           return;
         }
         if (this.field_m instanceof la) {
-          ((la) (this.field_m)).a((qg) (this), (byte) -42, this.field_w);
+          ((la) (this.field_m)).a((UiWidget) (this), (byte) -42, this.field_w);
           if (param0 == -29113) {
             return;
           }
@@ -330,7 +330,7 @@ class lj extends qg {
                 return stackIn_3_0;
               }
               var3 = (String) (kj.a(param2, false, "getcookies"));
-              var4 = vi.a(';', var3, 0);
+              var4 = IterableNodeHashTable.a(';', var3, 0);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -374,7 +374,7 @@ class lj extends qg {
         this.field_t = true;
         this.field_w = false;
         this.field_v = true;
-        this.field_q = vi.field_e.field_o;
+        this.field_q = IterableNodeHashTable.field_e.field_o;
     }
 
     static {

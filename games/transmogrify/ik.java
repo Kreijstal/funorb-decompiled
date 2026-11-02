@@ -21,7 +21,7 @@ class ik extends a implements df {
         String var7;
         String var8;
         var5 = Transmogrify.field_A ? 1 : 0;
-        var6 = "(" + bd.field_t + " " + nf.field_k + " " + dg.field_a + ") " + ca.field_e;
+        var6 = "(" + bd.field_t + " " + WordLanguage.field_k + " " + FullscreenFocusCanvas.field_a + ") " + ca.field_e;
         var1 = var6;
         if (param0 != 48) {
           field_cb = (tf) null;
@@ -30,7 +30,7 @@ class ik extends a implements df {
           var1 = var6 + ":";
           for (var2 = 0; var2 < tg.field_a; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & nf.field_l.field_g[var2];
+            var3 = 255 & WordLanguage.field_l.payload[var2];
             var4 = var3 >> 4;
             if (10 > var4) {
               var4 += 48;
@@ -50,7 +50,7 @@ class ik extends a implements df {
         return var1;
     }
 
-    final boolean a(int param0, qg param1, byte param2, char param3) {
+    final boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -125,7 +125,7 @@ class ik extends a implements df {
             var6.a(ta.field_b, 17, param2 + 5);
           }
           if (~param1 == param2) {
-            var6.a(ad.field_f, 7, param2 + 5);
+            var6.a(WordDictionary.field_f, 7, param2 + 5);
           } else {
             if (param1 != 4) {
               if (6 != param1) {
@@ -165,7 +165,7 @@ class ik extends a implements df {
           this.field_hb = param1;
           this.field_fb = new qe(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_fb.field_w = true;
-          this.a((qg) (this.field_fb), (byte) -88);
+          this.a((UiWidget) (this.field_fb), (byte) -88);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -194,11 +194,11 @@ class ik extends a implements df {
         }
     }
 
-    final static ti[] a(String param0, ci param1, byte param2, String param3) {
+    final static Sprite[] a(String param0, ci param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ti[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

@@ -24,13 +24,13 @@ final class id {
         hj var8 = null;
         rk var9 = null;
         var7 = Transmogrify.field_A ? 1 : 0;
-        var8 = nf.field_l;
+        var8 = WordLanguage.field_l;
         var3 = var8.d((byte) 95);
         kd.field_a = 127 & var3;
         stackIn_3_0 = ((128 & var3) != 0);
         a.field_bb = stackIn_3_0;
         sh.field_b = var8.d((byte) 106);
-        sj.field_m = var8.e((byte) -51);
+        LetterTile.field_m = var8.e((byte) -51);
         if (kd.field_a != 2) {
           jd.field_b = 0;
           u.field_d = 0;
@@ -67,7 +67,7 @@ final class id {
         try {
           var9 = vl.field_C.b(1, var5);
           l.field_c = var9.d((byte) -127);
-          if (!fd.field_i.equals(w.field_a)) {
+          if (!fd.field_i.equals(NodeHashTableIterator.field_a)) {
             stackIn_25_0 = var9.field_m;
           } else {
             stackIn_25_0 = null;

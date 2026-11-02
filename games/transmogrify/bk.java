@@ -3,13 +3,13 @@
  */
 final class bk {
     static al field_c;
-    private ri field_b;
-    private ri field_e;
+    private DualLinkNode field_b;
+    private DualLinkNode field_e;
     static int field_d;
     static int field_a;
 
-    final ri d(int param0) {
-        ri var2 = this.field_b.field_h;
+    final DualLinkNode d(int param0) {
+        DualLinkNode var2 = this.field_b.field_h;
         if (var2 == this.field_b) {
           return null;
         }
@@ -33,9 +33,9 @@ final class bk {
         }
     }
 
-    final ri b(byte param0) {
-        ri var2 = null;
-        ri var2Lifetime1;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 <= 107) {
           bk.b(81);
           var2 = this.field_b.field_h;
@@ -57,9 +57,9 @@ final class bk {
 
     final int a(byte param0) {
         int var2 = 0;
-        ri var3 = null;
+        DualLinkNode var3 = null;
         int var4 = Transmogrify.field_A ? 1 : 0;
-        ri var3Lifetime1;
+        DualLinkNode var3Lifetime1;
         int var2Lifetime1;
         if (param0 == 16) {
           var2 = 0;
@@ -70,7 +70,7 @@ final class bk {
           }
           return var2;
         }
-        this.field_b = (ri) null;
+        this.field_b = (DualLinkNode) null;
         var2Lifetime1 = 0;
         var3Lifetime1 = this.field_b.field_h;
         while (this.field_b != var3Lifetime1) {
@@ -87,11 +87,11 @@ final class bk {
         field_c = null;
     }
 
-    final ri a(int param0) {
-        ri var2 = null;
-        ri var2Lifetime1;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 < 80) {
-          this.field_e = (ri) null;
+          this.field_e = (DualLinkNode) null;
           var2 = this.field_e;
           if (this.field_b == var2) {
             this.field_e = null;
@@ -109,7 +109,7 @@ final class bk {
         return var2Lifetime1;
     }
 
-    final void a(byte param0, ri param1) {
+    final void a(byte param0, DualLinkNode param1) {
         try {
           if (param1.field_g != null) {
             param1.b((byte) -116);
@@ -127,7 +127,7 @@ final class bk {
     }
 
     public bk() {
-        this.field_b = new ri();
+        this.field_b = new DualLinkNode();
         this.field_b.field_g = this.field_b;
         this.field_b.field_h = this.field_b;
     }

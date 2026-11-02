@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd extends ag {
-    private ag field_o;
+final class nd extends PcmStream {
+    private PcmStream field_o;
     private int field_k;
     static int field_m;
     static ci field_n;
@@ -29,13 +29,13 @@ final class nd extends ag {
           }
           param1 = param1 + this.field_k;
           param2 = param2 - this.field_k;
-          this.field_o.field_b = this.field_b;
-          this.field_o.field_f = this.field_f;
+          this.field_o.next = this.next;
+          this.field_o.previous = this.previous;
           this.field_k = 0;
-          this.field_f.field_b = (wf) ((Object) this.field_o);
-          this.field_b.field_f = (wf) ((Object) this.field_o);
-          this.field_f = null;
-          this.field_b = null;
+          this.previous.next = (IntrusiveNode) ((Object) this.field_o);
+          this.next.previous = (IntrusiveNode) ((Object) this.field_o);
+          this.previous = null;
+          this.next = null;
           if (0 >= param2) {
             return;
           }
@@ -63,7 +63,7 @@ final class nd extends ag {
         return 0;
     }
 
-    final ag d() {
+    final PcmStream d() {
         return null;
     }
 
@@ -71,12 +71,12 @@ final class nd extends ag {
         if (this.field_k <= param0) {
           param0 = param0 - this.field_k;
           this.field_k = 0;
-          this.field_o.field_f = this.field_f;
-          this.field_o.field_b = this.field_b;
-          this.field_f.field_b = (wf) ((Object) this.field_o);
-          this.field_b.field_f = (wf) ((Object) this.field_o);
-          this.field_b = null;
-          this.field_f = null;
+          this.field_o.previous = this.previous;
+          this.field_o.next = this.next;
+          this.previous.next = (IntrusiveNode) ((Object) this.field_o);
+          this.next.previous = (IntrusiveNode) ((Object) this.field_o);
+          this.next = null;
+          this.previous = null;
           if (param0 > 0) {
             this.field_o.d(param0);
           }
@@ -92,11 +92,11 @@ final class nd extends ag {
         return param1 == (-param1 & param1) ? true : false;
     }
 
-    final ag a() {
+    final PcmStream a() {
         return null;
     }
 
-    nd(ag param0, int param1) {
+    nd(PcmStream param0, int param1) {
         try {
           this.field_o = param0;
           this.field_g = this.field_o.field_g;

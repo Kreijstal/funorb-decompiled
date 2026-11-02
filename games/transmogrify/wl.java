@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wl extends aj implements hl, df, tc {
-    static ti field_K;
+    static Sprite field_K;
     private vc field_C;
     private lj field_G;
     private vc field_x;
@@ -17,7 +17,7 @@ final class wl extends aj implements hl, df, tc {
     private vc field_E;
 
     public wl() {
-        super(0, 0, 496, 0, (ui) null);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_J = new vc("", (ma) null, 12);
         this.field_y = new vc("", (ma) null, 100);
         this.field_E = new vc("", (ma) null, 100);
@@ -31,7 +31,7 @@ final class wl extends aj implements hl, df, tc {
         this.field_J.field_j = mf.field_a;
         this.field_y.field_j = aa.field_c;
         this.field_E.field_j = sd.field_V;
-        this.field_F.field_j = fa.field_g;
+        this.field_F.field_j = GameApplet.field_g;
         this.field_x.field_j = gb.field_b;
         this.field_C.field_j = wj.field_l;
         this.field_w.field_j = ia.field_l;
@@ -42,27 +42,27 @@ final class wl extends aj implements hl, df, tc {
         this.field_x.a(97, new cg(this.field_x, this.field_F));
         this.field_C.a(-104, new md(this.field_C));
         this.field_G.field_t = false;
-        this.field_G.field_q = (ui) ((Object) new qa());
-        this.field_A.field_q = (ui) ((Object) new ek());
-        this.field_J.field_q = (ui) ((Object) new ni(10000536));
+        this.field_G.field_q = (WidgetRenderer) ((Object) new qa());
+        this.field_A.field_q = (WidgetRenderer) ((Object) new ek());
+        this.field_J.field_q = (WidgetRenderer) ((Object) new ni(10000536));
         ni dupTemp$0 = new ni(10000536);
-        this.field_E.field_q = (ui) ((Object) dupTemp$0);
-        this.field_y.field_q = (ui) ((Object) dupTemp$0);
-        this.field_C.field_q = (ui) ((Object) new ni(10000536));
-        this.field_w.field_q = (ui) ((Object) new kd());
+        this.field_E.field_q = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_y.field_q = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_C.field_q = (WidgetRenderer) ((Object) new ni(10000536));
+        this.field_w.field_q = (WidgetRenderer) ((Object) new kd());
         nc dupTemp$1 = new nc(10000536);
-        this.field_x.field_q = (ui) ((Object) dupTemp$1);
-        this.field_F.field_q = (ui) ((Object) dupTemp$1);
+        this.field_x.field_q = (WidgetRenderer) ((Object) dupTemp$1);
+        this.field_F.field_q = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = ij.a(gk.field_g, new String[]{this.m(-122), this.n(106)}, (byte) -72);
         int var3 = 20;
         var3 = var3 + this.a(170, 74, rg.field_I, this.field_y, var3);
-        var3 = var3 + (this.a(66, this.field_E, 20, "", 170, pf.field_i, var3) + 5);
+        var3 = var3 + (this.a(66, this.field_E, 20, "", 170, SecondaryNodeDeque.field_i, var3) + 5);
         var3 = var3 + this.a(170, 101, ee.field_y, this.field_F, var3);
-        var3 = var3 + (5 + this.a(this.field_x, 170, 35, kl.field_d, var3, di.field_a));
+        var3 = var3 + (5 + this.a(this.field_x, 170, 35, ContextualRuntimeException.field_d, var3, di.field_a));
         var3 = var3 + (5 + this.a(this.field_J, 170, 35, bi.field_O, var3, rd.field_b));
         var3 = var3 + this.a(170, 818340513, qe.field_A, var3, this.field_C);
         oc var4 = new oc(46, var3, -90 + this.field_l, 25, this.field_w, true, -120 + this.field_l, 5, al.field_i, 11579568, uh.field_o);
-        this.a((qg) (var4), (byte) -105);
+        this.a((UiWidget) (var4), (byte) -105);
         var3 = var3 + var4.field_h;
         h var5 = new h(vd.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, vd.field_h.field_y, -1, 2147483647, true);
         this.field_z = new le(var2, var5);
@@ -72,18 +72,18 @@ final class wl extends aj implements hl, df, tc {
         this.field_z.field_m = (ma) (this);
         this.field_z.a(46, -90 + this.field_l, -1, var3);
         var3 = var3 + (this.field_z.field_h + 15);
-        this.a((qg) (this.field_z), (byte) -88);
+        this.a((UiWidget) (this.field_z), (byte) -88);
         int var6 = 4;
         int var7 = 200;
         this.field_G.a(-83, var3, -var7 + 496 >> 1, var7, 40);
         this.field_A.a(-107, 15 + var3, 3 + var6, 60, 40);
         this.field_A.field_m = (ma) (this);
         this.field_G.field_m = (ma) (this);
-        this.a((qg) (this.field_G), (byte) -119);
-        this.a((qg) (this.field_A), (byte) -125);
+        this.a((UiWidget) (this.field_G), (byte) -119);
+        this.a((UiWidget) (this.field_A), (byte) -125);
         this.field_D = new dh((tc) (this));
         this.field_D.a(124, this.field_J.field_n + 20, this.field_J.field_p + this.field_J.field_l + 60, -this.field_J.field_p + (this.field_l + (-this.field_J.field_l - 60)), 150);
-        this.a((qg) (this.field_D), (byte) -97);
+        this.a((UiWidget) (this.field_D), (byte) -97);
         this.a(39, 0, 0, 496, 55 + (var3 + var6));
     }
 
@@ -159,7 +159,7 @@ final class wl extends aj implements hl, df, tc {
         return 0 != (hc.field_t & 1 << param1) ? true : false;
     }
 
-    private final int a(int param0, int param1, String param2, int param3, qg param4) {
+    private final int a(int param0, int param1, String param2, int param3, UiWidget param4) {
         RuntimeException var6 = null;
         ve var7 = null;
         oc var8 = null;
@@ -173,13 +173,13 @@ final class wl extends aj implements hl, df, tc {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = new oc(20, param3, param0 + 120, 25, param4, false, 120, 3, vd.field_h, 16777215, param2);
-          this.a((qg) (var8), (byte) -124);
+          this.a((UiWidget) (var8), (byte) -124);
           if (param1 != 818340513) {
             stackIn_2_0 = -55;
             return stackIn_2_0;
           }
           var7 = new ve(((ie) ((Object) param4)).a((byte) 87));
-          this.a((qg) (var7), (byte) -103);
+          this.a((UiWidget) (var7), (byte) -103);
           var7.a(91, (-15 + var8.field_h >> 1) + var8.field_n, var8.field_l + var8.field_p + 3, 15, 15);
           stackIn_4_0 = var8.field_h;
           return stackIn_4_0;
@@ -216,7 +216,7 @@ final class wl extends aj implements hl, df, tc {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(int param0, int param1, String param2, qg param3, int param4) {
+    private final int a(int param0, int param1, String param2, UiWidget param3, int param4) {
         oc var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -233,7 +233,7 @@ final class wl extends aj implements hl, df, tc {
             stackIn_2_0 = -1;
             return stackIn_2_0;
           }
-          this.a((qg) (var6), (byte) -121);
+          this.a((UiWidget) (var6), (byte) -121);
           stackIn_4_0 = var6.field_h;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -256,7 +256,7 @@ final class wl extends aj implements hl, df, tc {
         }
     }
 
-    final boolean a(int param0, qg param1, byte param2, char param3) {
+    final boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -309,7 +309,7 @@ final class wl extends aj implements hl, df, tc {
           }
           var4 = var3.a(27835);
           var5 = -88 % ((52 - param0) / 45);
-          if (ec.field_d == var4) {
+          if (SocketConnector.field_d == var4) {
             return false;
           }
           if (var4 == ek.field_a) {
@@ -342,7 +342,7 @@ final class wl extends aj implements hl, df, tc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 17) {
-            field_K = (ti) null;
+            field_K = (Sprite) null;
           }
           if (param0 == this.field_A) {
             kc.a((byte) -127);
@@ -367,7 +367,7 @@ final class wl extends aj implements hl, df, tc {
         }
     }
 
-    private final int a(int param0, qg param1, int param2, String param3, int param4, String param5, int param6) {
+    private final int a(int param0, UiWidget param1, int param2, String param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         ob var9 = null;
         oc var10 = null;
@@ -387,10 +387,10 @@ final class wl extends aj implements hl, df, tc {
             return stackIn_2_0;
           }
           var10 = new oc(20, param6, param4 + 120, 25, param1, false, 120, 3, vd.field_h, 16777215, param5);
-          this.a((qg) (var10), (byte) -113);
+          this.a((UiWidget) (var10), (byte) -113);
           var9 = new ob(((ie) ((Object) param1)).a((byte) -101), param3, 126, var10.field_h + param6, param4 + 50, param2);
           var9.field_m = (ma) (this);
-          this.a((qg) (var9), (byte) -89);
+          this.a((UiWidget) (var9), (byte) -89);
           stackIn_4_0 = var9.field_h + var10.field_h;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -440,8 +440,8 @@ final class wl extends aj implements hl, df, tc {
         if (param0 == 2188) {
           return ej.a(this, this.field_y.field_k, this.field_F.field_k, this.field_w.field_y, false, this.field_J.field_k, var2);
         }
-        qg var4 = (qg) null;
-        int discarded$0 = this.a(80, -87, (String) null, (qg) null, -6);
+        UiWidget var4 = (UiWidget) null;
+        int discarded$0 = this.a(80, -87, (String) null, (UiWidget) null, -6);
         return ej.a(this, this.field_y.field_k, this.field_F.field_k, this.field_w.field_y, false, this.field_J.field_k, var2);
     }
 
@@ -494,7 +494,7 @@ final class wl extends aj implements hl, df, tc {
         return false;
     }
 
-    private final int a(qg param0, int param1, int param2, String param3, int param4, String param5) {
+    private final int a(UiWidget param0, int param1, int param2, String param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -537,7 +537,7 @@ final class wl extends aj implements hl, df, tc {
         }
     }
 
-    final void a(int param0, byte param1, qg param2, int param3) {
+    final void a(int param0, byte param1, UiWidget param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_G.field_t = this.o(15);
@@ -548,7 +548,7 @@ final class wl extends aj implements hl, df, tc {
 
     final static void p(int param0) {
         if (param0 < 101) {
-          field_K = (ti) null;
+          field_K = (Sprite) null;
         }
     }
 

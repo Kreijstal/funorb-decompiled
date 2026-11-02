@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mc {
-    static qj field_c;
-    static ti[] field_b;
-    static String[] field_a;
+    static IntrusiveDeque field_c;
+    static Sprite[] field_b;
+    static String[] countdownLabels;
 
     final static long b(boolean param0) {
         if (!param0) {
@@ -18,13 +18,13 @@ final class mc {
         if (!param0) {
           return;
         }
-        field_a = null;
+        countdownLabels = null;
         field_b = null;
     }
 
     final static String a(byte param0) {
         if (param0 != 102) {
-          field_c = (qj) null;
+          field_c = (IntrusiveDeque) null;
         }
         if (rh.field_v == of.field_d) {
           return ta.field_h;
@@ -33,7 +33,7 @@ final class mc {
     }
 
     static {
-        field_c = new qj();
-        field_a = new String[]{"Ready", "Set", "Go"};
+        field_c = new IntrusiveDeque();
+        countdownLabels = new String[]{"Ready", "Set", "Go"};
     }
 }

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am extends wf {
+final class am extends IntrusiveNode {
     int field_p;
     long field_o;
     int[] field_m;
-    static oa field_q;
+    static PacketBuffer field_q;
     int field_i;
     int field_k;
     int field_g;
@@ -87,7 +87,7 @@ final class am extends wf {
           }
           var5_int = param1.b(114, param4);
           var6 = param1.a(param2 - 73, param0, var5_int);
-          stackIn_4_0 = oa.a(-123, param3, param1, var5_int, var6);
+          stackIn_4_0 = PacketBuffer.a(-123, param3, param1, var5_int, var6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,6 +140,6 @@ final class am extends wf {
     }
 
     static {
-        field_q = new oa((byte[]) null);
+        field_q = new PacketBuffer((byte[]) null);
     }
 }

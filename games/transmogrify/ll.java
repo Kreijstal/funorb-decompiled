@@ -4,7 +4,7 @@
 final class ll extends bi implements df {
     private lj field_P;
     static int field_U;
-    static qj field_T;
+    static IntrusiveDeque field_T;
     static kk field_V;
     static hi field_Q;
     static boolean field_S;
@@ -77,7 +77,7 @@ final class ll extends bi implements df {
             }
             var2 = 1;
           }
-          bk.field_c.a(-112, tl.a(196077633, ol.field_b, nk.field_c), tl.a(196077633, oa.field_j, bk.field_a));
+          bk.field_c.a(-112, tl.a(196077633, ol.field_b, nk.field_c), tl.a(196077633, PacketBuffer.field_j, bk.field_a));
           if (bk.field_c.b(31552)) {
             var1_int = 1;
           }
@@ -132,7 +132,7 @@ final class ll extends bi implements df {
     ll(da param0, sh param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        qg var4 = null;
+        UiWidget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -151,19 +151,19 @@ final class ll extends bi implements df {
               }
             } else {
               if (ge.field_A == param1) {
-                var3 = dg.field_e;
+                var3 = FullscreenFocusCanvas.field_e;
                 this.field_h = this.field_h + 30;
               }
             }
           } else {
             var3 = nh.field_m;
           }
-          var4 = new qg((String) (var3), (ma) null);
+          var4 = new UiWidget((String) (var3), (ma) null);
           var4.field_l = this.field_l;
           var4.field_p = 0;
           var4.field_h = 80;
           var4.field_n = 50;
-          var4.field_q = (ui) ((Object) new h(al.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_q = (WidgetRenderer) ((Object) new h(al.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, (byte) -82);
           this.field_P = this.a(oe.field_a, (ma) (this), -3);
           return;
@@ -202,11 +202,11 @@ final class ll extends bi implements df {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new lj(param0, param1);
-          var4.field_q = (ui) ((Object) new qa());
+          var4.field_q = (WidgetRenderer) ((Object) new qa());
           var5 = -6 + this.field_h;
           this.field_h = this.field_h + 38;
           var4.a(-91, var5, 15, -14 + (this.field_l - 16), 30);
-          this.a((qg) (var4), (byte) -114);
+          this.a((UiWidget) (var4), (byte) -114);
           if (param2 != -3) {
             var6 = (ma) null;
             discarded$1 = this.a((String) null, (ma) null, 24);
@@ -244,7 +244,7 @@ final class ll extends bi implements df {
 
     static {
         field_V = null;
-        field_T = new qj();
+        field_T = new IntrusiveDeque();
         field_W = "<u>Tutorial: lesson 2<br>A full game has 10 rounds. Reusing tiles causes their value to rise. If you use the bonus tile, it doubles your word score.<br><br>Make a second word, trying to use the bonus tile:<br><img=0>";
         field_R = 0;
         field_Q = new hi();

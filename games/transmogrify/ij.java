@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij implements ui {
+final class ij implements WidgetRenderer {
     private int field_e;
     private int field_b;
     private int field_c;
@@ -9,13 +9,13 @@ final class ij implements ui {
     static wk field_d;
     static int field_a;
     private int field_j;
-    static ti field_h;
+    static Sprite field_h;
     private kg field_i;
     private int field_f;
 
-    public final void a(int param0, int param1, boolean param2, byte param3, qg param4) {
+    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         int var10 = 0;
-        qg stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -32,7 +32,7 @@ final class ij implements ui {
           if (!(param4 instanceof fk)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (qg) (param4);
+            stackIn_4_0 = (UiWidget) (param4);
           }
           var13 = (fk) (stackIn_4_0);
           sb.a(param4.field_p + param0, param1 + param4.field_n, param4.field_l, param4.field_h, this.field_c);
@@ -105,7 +105,7 @@ final class ij implements ui {
                 break;
               }
               var7_ref_String = param0.substring(var6_int + 2, var5);
-              if (!qj.a((CharSequence) ((Object) var7_ref_String), 38)) {
+              if (!IntrusiveDeque.a((CharSequence) ((Object) var7_ref_String), 38)) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -142,7 +142,7 @@ final class ij implements ui {
               break;
             }
             var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!qj.a((CharSequence) ((Object) var9), 49)) {
+            if (!IntrusiveDeque.a((CharSequence) ((Object) var9), 49)) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {

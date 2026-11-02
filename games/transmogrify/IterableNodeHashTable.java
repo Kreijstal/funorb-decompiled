@@ -1,0 +1,152 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class IterableNodeHashTable implements Iterable {
+    int field_c;
+    private IntrusiveNode field_f;
+    IntrusiveNode[] field_d;
+    static StringBuilder[] usedWords;
+    static int[] wordScores;
+    static String field_i;
+    static String field_b;
+    static boolean field_h;
+    static vd field_e;
+
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
+        int var6 = Transmogrify.field_A ? 1 : 0;
+        IntrusiveNode var4 = this.field_d[(int)((long)(param0 + this.field_c) & param1)];
+        this.field_f = var4.next;
+        while (var4 != this.field_f) {
+          if (this.field_f.key == param1) {
+            var5 = this.field_f;
+            this.field_f = this.field_f.next;
+            return var5;
+          }
+          this.field_f = this.field_f.next;
+        }
+        this.field_f = null;
+        return null;
+    }
+
+    final void a(IntrusiveNode param0, byte param1, long param2) {
+        IntrusiveNode var5 = null;
+        try {
+          if (param0.previous != null) {
+            param0.c(5);
+          }
+          var5 = this.field_d[(int)((long)(-1 + this.field_c) & param2)];
+          param0.previous = var5.previous;
+          param0.next = var5;
+          param0.previous.next = param0;
+          if (param1 < 60) {
+            String var6 = (String) null;
+            IterableNodeHashTable.a('X', (String) null, -67);
+          }
+          param0.next.previous = param0;
+          param0.key = param2;
+        } catch (RuntimeException runtimeException) {
+          throw ch.a((Throwable) ((Object) runtimeException), "vi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    final static String[] a(char param0, String param1, int param2) {
+        int var7 = 0;
+        int incrementValue$1 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        String[] var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        CharSequence var10 = null;
+        String[] stackIn_8_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var9 = Transmogrify.field_A ? 1 : 0;
+        try {
+          var10 = (CharSequence) ((Object) param1);
+          var3_int = lj.a(param2 ^ 126, param0, var10);
+          var4 = new String[1 + var3_int];
+          var5 = param2;
+          var6 = 0;
+          for (var7 = 0; var7 < var3_int; var7++) {
+            for (var8 = var6; param0 != param1.charAt(var8); var8++) {
+            }
+            incrementValue$1 = var5;
+            var5++;
+            var4[incrementValue$1] = param1.substring(var6, var8);
+            var6 = var8 + 1;
+          }
+          var4[var3_int] = param1.substring(var6);
+          stackIn_8_0 = var4;
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("vi.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw ch.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public final Iterator iterator() {
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
+    }
+
+    private IterableNodeHashTable() throws Throwable {
+        throw new Error();
+    }
+
+    final static void a(byte param0) {
+        int var1 = 0;
+        Throwable decompiledCaughtException = null;
+        Object var2 = null;
+        var1 = 102 / ((param0 - 31) / 59);
+        var2 = hi.field_e;
+        synchronized (var2) {
+          b.field_k = cg.field_k;
+          BufferedSocket.field_l = BufferedSocket.field_l + 1;
+          PacketBuffer.field_j = fc.field_g;
+          bk.field_a = uj.field_i;
+          tl.field_a = li.field_j;
+          li.field_j = false;
+          tg.field_d = WordDictionary.field_b;
+          ol.field_b = dh.field_w;
+          nk.field_c = ga.field_b;
+          WordDictionary.field_b = 0;
+        }
+    }
+
+    public static void a(int param0) {
+        field_b = null;
+        usedWords = null;
+        field_i = null;
+        wordScores = null;
+        if (param0 < 33) {
+          IterableNodeHashTable.a(103);
+        }
+        field_e = null;
+    }
+
+    static {
+        int var0 = 0;
+        usedWords = new StringBuilder[10];
+        for (var0 = 0; usedWords.length > var0; var0++) {
+          usedWords[var0] = new StringBuilder(12);
+        }
+        wordScores = new int[usedWords.length];
+        field_i = "Creating your account";
+        field_b = "Visit the Account Management section on the main site to view.";
+    }
+}

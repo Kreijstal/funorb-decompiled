@@ -20,14 +20,14 @@ final class uc {
     final static void a(byte param0) {
         CharSequence var3 = null;
         if (param0 >= 76) {
-          w.field_a = nf.field_l.g(12248);
-          var3 = (CharSequence) ((Object) w.field_a);
+          NodeHashTableIterator.field_a = WordLanguage.field_l.g(12248);
+          var3 = (CharSequence) ((Object) NodeHashTableIterator.field_a);
           kf.field_e = hj.a((byte) -125, var3);
           return;
         }
         uc.a(96, (byte) 96);
-        w.field_a = nf.field_l.g(12248);
-        CharSequence var2 = (CharSequence) ((Object) w.field_a);
+        NodeHashTableIterator.field_a = WordLanguage.field_l.g(12248);
+        CharSequence var2 = (CharSequence) ((Object) NodeHashTableIterator.field_a);
         kf.field_e = hj.a((byte) -125, var2);
     }
 
@@ -49,7 +49,7 @@ final class uc {
             stackIn_7_0 = tb.field_c.a(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = ce.field_b.a(param0);
+          stackIn_5_0 = GameKeyHandler.field_b.a(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

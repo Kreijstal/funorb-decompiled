@@ -9,7 +9,7 @@ final class eg {
         int var3 = 0;
         jl var4 = null;
         oi var5 = null;
-        qj stackIn_9_0 = null;
+        IntrusiveDeque stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -17,7 +17,7 @@ final class eg {
         try {
           var4 = (jl) (ll.field_T.a((byte) -95));
           while (var4 != null) {
-            sj.a(-7812, param1, var4);
+            LetterTile.a(-7812, param1, var4);
             var4 = (jl) (ll.field_T.a(true));
           }
           var5 = (oi) (qd.field_d.a((byte) -95));
@@ -28,7 +28,7 @@ final class eg {
             de.a(var5, param1, 2);
             stackIn_9_0 = qd.field_d;
             stackIn_10_1 = !(param0);
-            var5 = (oi) (((qj) (Object) stackIn_9_0).a(stackIn_10_1));
+            var5 = (oi) (((IntrusiveDeque) (Object) stackIn_9_0).a(stackIn_10_1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,7 +49,7 @@ final class eg {
     }
 
     final static void a(int param0) {
-        vi.field_e = wh.a((byte) -122);
+        IterableNodeHashTable.field_e = wh.a((byte) -122);
         ci.field_f = new da();
         wl.a(true, true, 170);
         if (param0 >= 54) {
@@ -72,7 +72,7 @@ final class eg {
           if (rd.field_f == -1 &&
             el.field_d == -1) {
             el.field_d = bk.field_a;
-            rd.field_f = oa.field_j;
+            rd.field_f = PacketBuffer.field_j;
           }
           boolean decompiledFrameRemainder0 = true;
           da.field_y = da.field_y + 1;
@@ -112,7 +112,7 @@ final class eg {
                 lk.field_c = true;
               }
             }
-            qi.field_d = rd.field_f;
+            MouseInputHandler.field_d = rd.field_f;
             og.field_e = el.field_d;
           }
           tj.field_v = param0;
@@ -123,12 +123,12 @@ final class eg {
             da.field_y < bk.field_d &&
             tl.field_a) {
             og.field_e = el.field_d;
-            qi.field_d = rd.field_f;
+            MouseInputHandler.field_d = rd.field_f;
             da.field_y = 0;
           }
           rd.field_f = -1;
           if (lk.field_c &&
-            pi.field_j == da.field_y) {
+            AchievementUnlockEvent.field_j == da.field_y) {
             da.field_y = 0;
             lk.field_c = false;
           }

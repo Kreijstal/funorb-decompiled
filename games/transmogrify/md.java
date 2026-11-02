@@ -16,7 +16,7 @@ final class md extends me {
           if (param0 != -1) {
             field_k = 66;
           }
-          if (this.a(95, param1) != ec.field_d) {
+          if (this.a(95, param1) != SocketConnector.field_d) {
             return null;
           }
           stackIn_5_0 = tj.field_A;
@@ -53,8 +53,8 @@ final class md extends me {
             this.a(81, (String) null);
           }
           var5 = (CharSequence) ((Object) param1);
-          if (!qj.a(var5, 100)) {
-            stackIn_4_0 = ec.field_d;
+          if (!IntrusiveDeque.a(var5, 100)) {
+            stackIn_4_0 = SocketConnector.field_d;
             return stackIn_4_0;
           }
           var6 = (CharSequence) ((Object) param1);
@@ -63,7 +63,7 @@ final class md extends me {
             var3_int <= 130) {
             return hi.field_b;
           }
-          stackIn_9_0 = ec.field_d;
+          stackIn_9_0 = SocketConnector.field_d;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

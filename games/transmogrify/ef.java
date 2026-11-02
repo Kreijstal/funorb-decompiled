@@ -5,7 +5,7 @@ final class ef implements Runnable {
     volatile boolean field_a;
     volatile qh[] field_f;
     static tf field_e;
-    fe field_b;
+    PlatformTaskDispatcher field_b;
     volatile boolean field_d;
     static String field_c;
 

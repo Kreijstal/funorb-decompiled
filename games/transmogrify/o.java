@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class o extends wf {
+final class o extends IntrusiveNode {
     int field_h;
     String[][] field_m;
     int field_j;

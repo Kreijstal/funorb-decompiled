@@ -12,14 +12,14 @@ final class rb {
           if (param0 != -114) {
             field_a = 53;
           }
-          if (ah.field_b != null) {
+          if (DelegatingCanvas.field_b != null) {
             try {
-              ah.field_b.a(0L, (byte) -127);
-              ah.field_b.a(nf.field_l.field_g, 24, (byte) 118, nf.field_l.field_h);
+              DelegatingCanvas.field_b.a(0L, (byte) -127);
+              DelegatingCanvas.field_b.a(WordLanguage.field_l.payload, 24, (byte) 118, WordLanguage.field_l.position);
             } catch (Exception exception) {
             }
           }
-          nf.field_l.field_h = nf.field_l.field_h + 24;
+          WordLanguage.field_l.position = WordLanguage.field_l.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -198,12 +198,12 @@ final class rb {
           if (nk.field_b != null) {
             if (param0 >= 0) {
               decompiledFrameRemainder0 = (ll.field_Q == lj.field_z);
-              if ((decompiledFrameRemainder0) && (ff.field_D.field_h == 0 &&
+              if ((decompiledFrameRemainder0) && (ff.field_D.position == 0 &&
                 (10000L + td.field_b) < lk.a(0))) {
                 ff.field_D.a(false, param0);
               }
             } else {
-              if (ff.field_D.field_h == 0 &&
+              if (ff.field_D.position == 0 &&
                 (10000L + td.field_b) < lk.a(0)) {
                 ff.field_D.a(false, param0);
               }
@@ -212,21 +212,21 @@ final class rb {
               if (param1 != -377) {
                 rb.a(81, (byte) 3);
               }
-              if (ff.field_D.field_h > 0) {
+              if (ff.field_D.position > 0) {
                 try {
-                  nk.field_b.a((byte) 9, ff.field_D.field_g, ff.field_D.field_h, 0);
+                  nk.field_b.a((byte) 9, ff.field_D.payload, ff.field_D.position, 0);
                   td.field_b = lk.a(0);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   pc.a(1);
                 }
-                ff.field_D.field_h = 0;
+                ff.field_D.position = 0;
               }
               return;
             }
           }
-          ff.field_D.field_h = 0;
+          ff.field_D.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -255,7 +255,7 @@ final class rb {
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param1 == null) {
-            stackIn_3_0 = se.field_o;
+            stackIn_3_0 = SpriteState.field_o;
             return stackIn_3_0;
           }
           var3_int = param1.length();
@@ -292,10 +292,10 @@ final class rb {
               stackIn_20_0 = kd.field_d;
               return stackIn_20_0;
             }
-            stackIn_15_0 = se.field_o;
+            stackIn_15_0 = SpriteState.field_o;
             return stackIn_15_0;
           }
-          stackIn_10_0 = se.field_o;
+          stackIn_10_0 = SpriteState.field_o;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

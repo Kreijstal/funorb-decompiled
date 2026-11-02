@@ -7,10 +7,10 @@ final class ic {
     static int field_a;
     static int field_b;
 
-    final static od a(bb param0, int param1) {
+    final static od a(PcmSampleStream param0, int param1) {
         od var2 = null;
         RuntimeException var2_ref = null;
-        bb var3 = null;
+        PcmSampleStream var3 = null;
         od stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -18,8 +18,8 @@ final class ic {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 4) {
-            var3 = (bb) null;
-            ic.a((bb) null, -1);
+            var3 = (PcmSampleStream) null;
+            ic.a((PcmSampleStream) null, -1);
           }
           var2 = new od(param0, param0);
           lb.field_f.a(var2, param1 ^ -112);

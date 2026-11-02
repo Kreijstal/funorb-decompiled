@@ -22,7 +22,7 @@ final class vg {
           this.field_i = 39;
         }
         if (this.field_i == 2 &&
-          !qj.b((byte) 112)) {
+          !IntrusiveDeque.b((byte) 112)) {
           if (param0 >= 3) {
             return fd.field_b[this.field_i] + fd.field_a[this.field_i];
           }
@@ -48,19 +48,19 @@ final class vg {
         int var7 = Transmogrify.field_A ? 1 : 0;
         String[] var8 = new String[16];
         String[] var3 = var8;
-        int var4 = wf.field_d.a(db.field_b[ra.field_a], lk.field_e, var3);
+        int var4 = IntrusiveNode.field_d.a(db.field_b[ra.field_a], lk.field_e, var3);
         int var5 = 0;
         int var6 = 156 + param0;
         while (var4 > var5) {
-          wf.field_d.b(var8[var5], 54, var6, 119, -1);
+          IntrusiveNode.field_d.b(var8[var5], 54, var6, 119, -1);
           var5++;
           var6 += 22;
         }
         if (param1 >= -25) {
           this.a(true, -9, -1, 116);
         }
-        wf.field_d.a(rh.a((byte) 117, 1 + ra.field_a), 548, param0 + 142, 0, -1);
-        se.field_t.c(166, param0);
+        IntrusiveNode.field_d.a(rh.a((byte) 117, 1 + ra.field_a), 548, param0 + 142, 0, -1);
+        SpriteState.field_t.c(166, param0);
     }
 
     private final boolean a(int param0, boolean param1) {
@@ -100,7 +100,7 @@ final class vg {
 
     private final int a(int param0, byte param1) {
         if (this.field_i == 2 &&
-          !qj.b((byte) 80)) {
+          !IntrusiveDeque.b((byte) 80)) {
           if (param0 < 3) {
             return fd.field_e[this.field_i] + param0 * 200;
           }
@@ -142,15 +142,15 @@ final class vg {
         var4 = 283;
         var5 = 112;
         if (!param0) {
-          stackIn_3_0 = rh.field_n;
+          stackIn_3_0 = rh.unlockedAchievementMask;
         } else {
           stackIn_3_0 = hc.field_u;
         }
         var6 = stackIn_3_0;
         var7 = 0;
         var8 = -1;
-        for (var9 = 0; qj.field_a.length > var9; var9++) {
-          L10: {
+        for (var9 = 0; IntrusiveDeque.field_a.length > var9; var9++) {
+          regionExit1: {
             if (wl.a(false, 0) ||
               var9 != 15 ||
               (32768 & var6) != 0) {
@@ -158,12 +158,12 @@ final class vg {
                 fc.field_h[var9].e(var4, param2 + var5);
               } else {
                 if (param0) {
-                  break L10;
+                  break regionExit1;
                 }
                 ff.field_z.e(var4, var5 + param2);
               }
-              if (var4 <= oa.field_j &&
-                32 + var4 >= oa.field_j &&
+              if (var4 <= PacketBuffer.field_j &&
+                32 + var4 >= PacketBuffer.field_j &&
                 param2 + var5 <= bk.field_a &&
                 bk.field_a <= param2 + (var5 + 32)) {
                 sb.b(-2 + var4, -2 + var5, 36, 36, 6, 8421504);
@@ -201,47 +201,47 @@ final class vg {
           return;
         }
         if (var8 != -1) {
-          var9Lifetime1 = wf.field_d.field_t + (wf.field_d.field_D + 2);
-          wf.field_d.c(qj.field_a[var8], 438, param2 + 206, 0, -1);
+          var9Lifetime1 = IntrusiveNode.field_d.field_t + (IntrusiveNode.field_d.field_D + 2);
+          IntrusiveNode.field_d.c(IntrusiveDeque.field_a[var8], 438, param2 + 206, 0, -1);
           stackIn_46_0 = ((var6 & 1 << var8) == 0) ? 0 : 1;
           var10 = stackIn_46_0;
           if (var10 != 0) {
-            wf.field_d.c(rl.field_i, 438, 206 + (var9Lifetime1 + param2), 0, -1);
+            IntrusiveNode.field_d.c(rl.field_i, 438, 206 + (var9Lifetime1 + param2), 0, -1);
           } else {
-            wf.field_d.c(ff.field_x, 438, var9Lifetime1 + 206 + param2, 16711680, -1);
+            IntrusiveNode.field_d.c(ff.field_x, 438, var9Lifetime1 + 206 + param2, 16711680, -1);
           }
           if (var10 == 0) {
             ff.field_z.c(263, 206 + var9Lifetime1 + param2);
           } else {
             fc.field_h[var8].c(263, param2 + (206 + var9Lifetime1));
           }
-          var11 = 4 + (wf.field_d.field_y * 2 + (206 + param2));
+          var11 = 4 + (IntrusiveNode.field_d.field_y * 2 + (206 + param2));
           var12 = new String[16];
-          var13 = wf.field_d.a(bl.field_b[var8], new int[]{219}, var12);
+          var13 = IntrusiveNode.field_d.a(bl.achievementDescriptions[var8], new int[]{219}, var12);
           var11 = var11 + ((-var13 + 4) * var9Lifetime1 >> 1);
           for (var14 = 0; var14 < var13; var14++) {
-            wf.field_d.b(var12[var14], 394, var11, 0, -1);
+            IntrusiveNode.field_d.b(var12[var14], 394, var11, 0, -1);
             var11 = var11 + var9Lifetime1;
           }
           if (var13 < 3) {
             var11 = var11 + var9Lifetime1;
           }
-          wf.field_d.b(gj.field_f + rg.field_B[var8], 394, var11, 0, -1);
+          IntrusiveNode.field_d.b(BufferedSocket.field_f + rg.field_B[var8], 394, var11, 0, -1);
           var4Lifetime1 = 394;
           var11 = var11 + var9Lifetime1;
-          wf.field_d.b(ck.field_F, var4Lifetime1, var11, 0, -1);
-          var4Lifetime1 = var4Lifetime1 + wf.field_d.a(ck.field_F);
+          IntrusiveNode.field_d.b(ck.field_F, var4Lifetime1, var11, 0, -1);
+          var4Lifetime1 = var4Lifetime1 + IntrusiveNode.field_d.a(ck.field_F);
           for (var14Lifetime1 = 0; wd.field_k[var8] > var14Lifetime1; var14Lifetime1++) {
-            og.field_b.c(var4Lifetime1, -wf.field_d.field_y + var11);
+            og.field_b.c(var4Lifetime1, -IntrusiveNode.field_d.field_y + var11);
             var4Lifetime1 = var4Lifetime1 + og.field_b.field_n / 3;
           }
         } else {
-          var5Lifetime1 = param2 + 206 - wf.field_d.field_y;
-          var9Lifetime1 = wf.field_d.field_t + wf.field_d.field_y;
-          var5Lifetime1 = var5Lifetime1 + var9Lifetime1 * wf.field_d.a(aj.field_v, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
+          var5Lifetime1 = param2 + 206 - IntrusiveNode.field_d.field_y;
+          var9Lifetime1 = IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_y;
+          var5Lifetime1 = var5Lifetime1 + var9Lifetime1 * IntrusiveNode.field_d.a(aj.field_v, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
           var5Lifetime1 = var5Lifetime1 + var9Lifetime1;
-          if (qj.b((byte) 95)) {
-            wf.field_d.a(tj.field_t, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
+          if (IntrusiveDeque.b((byte) 95)) {
+            IntrusiveNode.field_d.a(tj.field_t, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
           }
         }
     }
@@ -262,7 +262,7 @@ final class vg {
         if (this.field_i == 3) {
           var3 = 2;
         }
-        this.field_j.a(this.a(oa.field_j, param1 + 1192, bk.field_a), var3, (byte) 61, param0);
+        this.field_j.a(this.a(PacketBuffer.field_j, param1 + 1192, bk.field_a), var3, (byte) 61, param0);
         this.field_e = -1;
         this.field_f = 0;
     }
@@ -279,7 +279,7 @@ final class vg {
         int var9;
         int var10;
         var10 = Transmogrify.field_A ? 1 : 0;
-        stackIn_3_0 = (!rj.field_b) ? 0 : 1;
+        stackIn_3_0 = (!MouseWheelInput.field_b) ? 0 : 1;
         var4 = stackIn_3_0;
         if (null != ub.field_c &&
           !ub.field_c.field_c) {
@@ -292,7 +292,7 @@ final class vg {
         boolean decompiledFrameRemainder0 = true;
         if (var5 == 0 &&
           uc.field_d) {
-          if (!qj.b((byte) 120)) {
+          if (!IntrusiveDeque.b((byte) 120)) {
             if (null == sh.field_c) {
               uc.field_d = false;
               decompiledFrameRemainder0 = false;
@@ -320,8 +320,8 @@ final class vg {
             var5 = 20;
           }
         }
-        L4: {
-          L5: {
+        regionExit1: {
+          regionExit2: {
             var9 = var5;
             if (0 != var9) {
               if (var9 != 20) {
@@ -329,73 +329,73 @@ final class vg {
                   var9 != 21) {
                   if (var9 == 5) {
                     if (!this.field_j.f(-9112)) {
-                      break L5;
+                      break regionExit2;
                     }
-                    vk.a((byte) 127, dg.field_d[0]);
+                    vk.a((byte) 127, FullscreenFocusCanvas.field_d[0]);
                     qf.field_d = 0;
-                    break L4;
+                    break regionExit1;
                   }
                   if (16 == var9) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 89, dg.field_d[0]);
+                      vk.a((byte) 89, FullscreenFocusCanvas.field_d[0]);
                       qf.field_d = 0;
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 14) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 120, dg.field_d[0]);
+                      vk.a((byte) 120, FullscreenFocusCanvas.field_d[0]);
                       qf.field_d = 4;
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 3) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 110, dg.field_d[0]);
+                      vk.a((byte) 110, FullscreenFocusCanvas.field_d[0]);
                       wc.field_d = this.field_i;
                       qf.field_d = 3;
                       ra.field_a = 0;
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 6) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 125, dg.field_d[0]);
+                      vk.a((byte) 125, FullscreenFocusCanvas.field_d[0]);
                       qf.field_d = wc.field_d;
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 2) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 91, dg.field_d[0]);
+                      vk.a((byte) 91, FullscreenFocusCanvas.field_d[0]);
                       qf.field_d = 2;
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (12 == var9) {
                     var6 = kc.field_g;
                     var7 = 0;
                     if (this.field_j.e(0)) {
-                      ec.a(0, 9956);
+                      SocketConnector.a(0, 9956);
                     }
                     if (this.field_j.c(-4135)) {
                       var7 = 1;
-                      ec.a(256, 9956);
+                      SocketConnector.a(256, 9956);
                     }
                     if (this.field_j.b((byte) 78)) {
-                      var9 = 256 * (oa.field_j - this.field_c) / 80;
+                      var9 = 256 * (PacketBuffer.field_j - this.field_c) / 80;
                       if (var9 <= 0) {
-                        ec.a(0, 9956);
+                        SocketConnector.a(0, 9956);
                       } else {
                         if (var9 >= 256) {
-                          ec.a(256, 9956);
+                          SocketConnector.a(256, 9956);
                         } else {
-                          ec.a(var9, 9956);
+                          SocketConnector.a(var9, 9956);
                         }
                       }
                     }
                     if (this.field_j.c(param2)) {
-                      qj.e(-127);
+                      IntrusiveDeque.e(-127);
                     }
                     if (this.field_j.c((byte) -72)) {
                       lf.a((byte) -125);
@@ -403,7 +403,7 @@ final class vg {
                     }
                     if (kc.field_g == var6 &&
                       var7 == 0) {
-                      break L5;
+                      break regionExit2;
                     }
                     if ((!(lj.field_u.b(8)) ||
                       lj.field_u.l())) {
@@ -411,7 +411,7 @@ final class vg {
                       lj.field_u.k(255);
                       ic.a(lj.field_u, 4);
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (13 == var9) {
                     if (this.field_j.e(0)) {
@@ -422,7 +422,7 @@ final class vg {
                       uc.a(var8, (byte) -121);
                     }
                     if (this.field_j.b((byte) 83)) {
-                      var9 = 256 * (oa.field_j - this.field_c) / 80;
+                      var9 = 256 * (PacketBuffer.field_j - this.field_c) / 80;
                       if (var9 <= 0) {
                         uc.a(0, (byte) -117);
                       } else {
@@ -441,36 +441,36 @@ final class vg {
                       }
                     }
                     if (!this.field_j.c((byte) -72)) {
-                      break L5;
+                      break regionExit2;
                     }
                     if (var8 * 7 >> 3 <= lb.field_a) {
                       uc.a(var8, (byte) -127);
                     } else {
                       uc.a((var8 >> 3) + lb.field_a, (byte) -123);
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 4) {
                     if (!this.field_j.f(-9112)) {
-                      break L5;
+                      break regionExit2;
                     }
-                    vk.a((byte) 83, dg.field_d[0]);
+                    vk.a((byte) 83, FullscreenFocusCanvas.field_d[0]);
                     if (null != ub.field_c) {
                       qd.b(5);
                     } else {
                       var9 = param0 ? 1 : 0;
                       dj.a(param2, var9 != 0);
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 7) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 120, dg.field_d[0]);
+                      vk.a((byte) 120, FullscreenFocusCanvas.field_d[0]);
                       if (hc.field_u == 0 &&
-                        pf.field_g == 0) {
+                        SecondaryNodeDeque.field_g == 0) {
                         qf.field_d = 0;
                       } else {
-                        if (qj.b((byte) 82)) {
+                        if (IntrusiveDeque.b((byte) 82)) {
                           qf.field_d = 5;
                         } else {
                           ug.b(true);
@@ -484,40 +484,40 @@ final class vg {
                       }
                       wc.field_d = 0;
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 22) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 127, dg.field_d[0]);
+                      vk.a((byte) 127, FullscreenFocusCanvas.field_d[0]);
                       wc.field_d = 0;
                       qf.field_d = 0;
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (8 == var9) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 92, dg.field_d[0]);
+                      vk.a((byte) 92, FullscreenFocusCanvas.field_d[0]);
                       ck.field_y = 0;
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 9) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 88, dg.field_d[0]);
+                      vk.a((byte) 88, FullscreenFocusCanvas.field_d[0]);
                       ck.field_y = 1;
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 10) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 105, dg.field_d[0]);
+                      vk.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
                       ck.field_y = 2;
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 15) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 92, dg.field_d[0]);
+                      vk.a((byte) 92, FullscreenFocusCanvas.field_d[0]);
                       if (4 != this.field_i &&
                         this.field_i != 2) {
                         if ((this.field_i == 5)) {
@@ -527,27 +527,27 @@ final class vg {
                         vb.a(this.field_i, this.field_i, (byte) 121);
                       }
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 18) {
                     if (!this.field_j.f(-9112)) {
-                      break L5;
+                      break regionExit2;
                     }
                     if (!(!this.a(param1, false))) {
-                      vk.a((byte) 105, dg.field_d[0]);
+                      vk.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
                       ra.field_a = ra.field_a - 1;
                       if ((ra.field_a == 0)) {
                         this.field_j.field_d = 2;
                       }
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 19) {
                     if (!this.field_j.f(-9112)) {
-                      break L5;
+                      break regionExit2;
                     }
                     if (!(!this.a(param1, false))) {
-                      vk.a((byte) 127, dg.field_d[0]);
+                      vk.a((byte) 127, FullscreenFocusCanvas.field_d[0]);
                       ra.field_a = ra.field_a + 1;
                       if ((-1 + db.field_b.length == ra.field_a)) {
                         if (wc.field_d != 1 &&
@@ -558,20 +558,20 @@ final class vg {
                         }
                       }
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (var9 == 11) {
                     if (!(!this.field_j.f(-9112))) {
-                      vk.a((byte) 106, dg.field_d[0]);
+                      vk.a((byte) 106, FullscreenFocusCanvas.field_d[0]);
                       vl.a((byte) 93, ha.b(125));
                     }
-                    break L4;
+                    break regionExit1;
                   }
                   if (17 != var9) {
-                    break L4;
+                    break regionExit1;
                   }
                   if (this.field_j.d(104)) {
-                    vk.a((byte) 120, dg.field_d[0]);
+                    vk.a((byte) 120, FullscreenFocusCanvas.field_d[0]);
                     while (true) {
                       fieldTemp$0 = am.field_n + 1;
                       am.field_n = am.field_n + 1;
@@ -585,9 +585,9 @@ final class vg {
                     }
                   }
                   if (!this.field_j.a((byte) -112)) {
-                    break L4;
+                    break regionExit1;
                   }
-                  vk.a((byte) 113, dg.field_d[0]);
+                  vk.a((byte) 113, FullscreenFocusCanvas.field_d[0]);
                   while (true) {
                     fieldTemp$1 = am.field_n - 1;
                     am.field_n = am.field_n - 1;
@@ -599,21 +599,21 @@ final class vg {
                     }
                     break;
                   }
-                  break L5;
+                  break regionExit2;
                 }
                 if ((!(!this.field_j.f(-9112))) &&
                   ((var4 != 0))) {
-                  vk.a((byte) 112, dg.field_d[0]);
+                  vk.a((byte) 112, FullscreenFocusCanvas.field_d[0]);
                   wc.field_d = 0;
                   qf.field_d = -1;
                 }
-                break L4;
+                break regionExit1;
               }
               if (!this.field_j.f(-9112)) {
-                break L4;
+                break regionExit1;
               }
               if (var4 != 0) {
-                vk.a((byte) 105, dg.field_d[0]);
+                vk.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
                 sh.field_c = null;
                 rh.field_t = null;
                 rc.a(true, (byte) -13);
@@ -624,10 +624,10 @@ final class vg {
               }
             } else {
               if (!this.field_j.f(-9112)) {
-                break L4;
+                break regionExit1;
               }
               if (var4 != 0) {
-                vk.a((byte) 91, dg.field_d[0]);
+                vk.a((byte) 91, FullscreenFocusCanvas.field_d[0]);
                 sh.field_c = null;
                 rh.field_t = null;
                 rc.a(false, (byte) -13);
@@ -684,7 +684,7 @@ final class vg {
         if (param0 != 122) {
           this.g(-27, -43);
         }
-        this.field_j.a(-107, this.a(ol.field_b, 1448, nk.field_c), this.a(oa.field_j, 1448, bk.field_a));
+        this.field_j.a(-107, this.a(ol.field_b, 1448, nk.field_c), this.a(PacketBuffer.field_j, 1448, bk.field_a));
         if (-1 != this.field_j.field_d) {
           this.a(true, this.field_j.field_d, true);
         }
@@ -772,7 +772,7 @@ final class vg {
 
     private final int a(int param0, int param1) {
         if (this.field_i == 2 &&
-          !qj.b((byte) 94)) {
+          !IntrusiveDeque.b((byte) 94)) {
           return 180 + this.a(param0, (byte) 123);
         }
         if (this.field_i == 3) {
@@ -795,26 +795,26 @@ final class vg {
         int var8;
         String[] var9;
         int var12;
-        ti var13;
+        Sprite var13;
         int var14;
         int var15;
         int var16;
         String var17;
-        ti var18;
+        Sprite var18;
         int var19;
         int[] var26;
         long[] var27;
         int var5Lifetime1;
-        L0: {
+        regionExit1: {
           var19 = Transmogrify.field_A ? 1 : 0;
           var4 = -66 / ((param0 - 41) / 60);
-          if (qj.b((byte) 93)) {
+          if (IntrusiveDeque.b((byte) 93)) {
             var3 = tj.field_t;
           } else {
             if (sh.field_c == null) {
               sh.field_c = pj.a(29, (byte) -10, 3, 10, 1);
             }
-            var5_ref_mi = wf.field_d;
+            var5_ref_mi = IntrusiveNode.field_d;
             var6 = sh.field_c;
             var7 = ck.field_y;
             if (var6.field_k) {
@@ -831,12 +831,12 @@ final class vg {
                     var15 = var26[var13_int] >> 6;
                     var16 = 63 & var26[var13_int];
                     var17 = var9[var13_int];
-                    if (qg.a(var17, (byte) 106) &&
+                    if (UiWidget.a(var17, (byte) 106) &&
                       var8 == 0 &&
                       rh.field_t != null &&
                       var27[var13_int] == rh.field_t.field_o &&
-                      pf.field_g == var15 &&
-                      qi.field_c.field_o == var16) {
+                      SecondaryNodeDeque.field_g == var15 &&
+                      MouseInputHandler.field_c.field_o == var16) {
                       var8 = 1;
                       var14 = 255;
                     }
@@ -849,24 +849,24 @@ final class vg {
                   }
                   var12 += 28;
                 }
-                if (((-2147483648 != pf.field_g)) &&
+                if (((-2147483648 != SecondaryNodeDeque.field_g)) &&
                   ((var8 == 0)) &&
-                  ((pf.field_g != 0))) {
-                  var5_ref_mi.b(w.field_a, 268, var12, 255, -1);
-                  var5_ref_mi.a(Integer.toString(pf.field_g), 520, var12, 255, -1);
-                  var13 = qi.field_c.field_a;
+                  ((SecondaryNodeDeque.field_g != 0))) {
+                  var5_ref_mi.b(NodeHashTableIterator.field_a, 268, var12, 255, -1);
+                  var5_ref_mi.a(Integer.toString(SecondaryNodeDeque.field_g), 520, var12, 255, -1);
+                  var13 = MouseInputHandler.field_c.field_a;
                   var13.f(528, (24 - var13.field_m) / 2 + (-1 + var5_ref_mi.field_C - var5_ref_mi.field_y) + (var12 - 24));
                 }
-                break L0;
+                break regionExit1;
               }
-              var3 = wg.field_e;
+              var3 = SecondaryNodeDequeIterator.field_e;
             } else {
               var3 = mh.field_d;
             }
           }
         }
         var5 = param1 + 163;
-        wf.field_d.a(var3, 224, var5, 346, 1000, 119, -1, 1, 0, -4 + (wf.field_d.field_t + wf.field_d.field_y));
+        IntrusiveNode.field_d.a(var3, 224, var5, 346, 1000, 119, -1, 1, 0, -4 + (IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_y));
         if (0 == var3.length()) {
           var5Lifetime1 = 331 + param1;
           og.field_a.a(sg.field_o, 224, var5Lifetime1, 346, 1000, 119, -1, 1, 0, og.field_a.field_y - (-og.field_a.field_t + 4));
@@ -910,35 +910,35 @@ final class vg {
               if (this.field_i != 6) {
                 if (this.field_i == 5) {
                   var3 = 130 + param1;
-                  var4 = 4 + wf.field_d.field_t + wf.field_d.field_D;
-                  var5 = var4 * wf.field_d.b(sd.field_Q, 341);
-                  wf.field_d.a(sd.field_Q, 150, var3, 341, var5, 0, -1, 1, 0, var4);
+                  var4 = 4 + IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_D;
+                  var5 = var4 * IntrusiveNode.field_d.b(sd.field_Q, 341);
+                  IntrusiveNode.field_d.a(sd.field_Q, 150, var3, 341, var5, 0, -1, 1, 0, var4);
                   var3 = var3 + var5;
                   stackIn_10_0 = true;
                   stackIn_11_1 = (hc.field_u == 0) ? false : true;
                   stackIn_13_2 = false;
-                  stackIn_14_3 = (pf.field_g == 0) ? false : true;
+                  stackIn_14_3 = (SecondaryNodeDeque.field_g == 0) ? false : true;
                   var8 = aj.a(stackIn_10_0, stackIn_11_1, stackIn_13_2, stackIn_14_3);
-                  var5Lifetime1 = var4 * wf.field_d.b(var8, 341);
-                  wf.field_d.a(var8, 150, var3, 341, var5Lifetime1, 0, -1, 1, 0, var4);
+                  var5Lifetime1 = var4 * IntrusiveNode.field_d.b(var8, 341);
+                  IntrusiveNode.field_d.a(var8, 150, var3, 341, var5Lifetime1, 0, -1, 1, 0, var4);
                   var3 = var3 + var5Lifetime1;
                   var3 = var3 + (jk.field_x.a(true) + var4);
                   stackIn_16_0 = -85;
                   stackIn_16_1 = false;
-                  stackIn_17_2 = (pf.field_g == 0) ? false : true;
+                  stackIn_17_2 = (SecondaryNodeDeque.field_g == 0) ? false : true;
                   stackIn_20_3 = (hc.field_u == 0) ? false : true;
-                  var9 = gd.$cfr$intArgs$a$c7de0d339b2a(stackIn_16_0, stackIn_16_1, stackIn_17_2, stackIn_20_3);
-                  var5Lifetime2 = var4 * wf.field_d.b(var9, 341);
-                  wf.field_d.a(var9, 150, var3, 341, var5Lifetime2, 0, -1, 1, 0, var4);
+                  var9 = AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(stackIn_16_0, stackIn_16_1, stackIn_17_2, stackIn_20_3);
+                  var5Lifetime2 = var4 * IntrusiveNode.field_d.b(var9, 341);
+                  IntrusiveNode.field_d.a(var9, 150, var3, 341, var5Lifetime2, 0, -1, 1, 0, var4);
                   var3 = var3 + var5Lifetime2;
                   var3 = var3 + jk.field_x.a(true);
                   stackIn_22_0 = false;
                   stackIn_23_1 = (hc.field_u == 0) ? false : true;
                   stackIn_25_2 = -106;
-                  stackIn_26_3 = (pf.field_g == 0) ? false : true;
+                  stackIn_26_3 = (SecondaryNodeDeque.field_g == 0) ? false : true;
                   var10 = we.a(stackIn_22_0, stackIn_23_1, stackIn_25_2, stackIn_26_3);
-                  var5Lifetime3 = wf.field_d.b(var10, 341) * var4;
-                  wf.field_d.a(var10, 150, var3, 341, var5Lifetime3, 0, -1, 1, 0, var4);
+                  var5Lifetime3 = IntrusiveNode.field_d.b(var10, 341) * var4;
+                  IntrusiveNode.field_d.a(var10, 150, var3, 341, var5Lifetime3, 0, -1, 1, 0, var4);
                 }
               } else {
                 this.a(true, -2, param1);
@@ -963,7 +963,7 @@ final class vg {
         int var3;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (2 == this.field_i &&
-          !qj.b((byte) 114)) {
+          !IntrusiveDeque.b((byte) 114)) {
           if (!this.field_j.b((byte) 117)) {
             if (ch.field_d == 96) {
               this.field_j.field_f = false;
@@ -1148,7 +1148,7 @@ final class vg {
         int var10;
         mi var11;
         int var12;
-        ti var12_ref_ti;
+        Sprite var12_ref_ti;
         int var13;
         int var14;
         int var15;
@@ -1175,7 +1175,7 @@ final class vg {
         if (param1 > -116) {
           return;
         }
-        var11 = wf.field_d;
+        var11 = IntrusiveNode.field_d;
         if (var8 != 12 &&
           var8 != 13) {
           if (var8 == 17) {

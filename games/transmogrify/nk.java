@@ -3,7 +3,7 @@
  */
 final class nk {
     static int field_c;
-    static gj field_b;
+    static BufferedSocket field_b;
     static int[] field_e;
     static ci field_d;
     int field_a;

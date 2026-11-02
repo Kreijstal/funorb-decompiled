@@ -106,21 +106,21 @@ final class v {
     }
 
     final static void a(byte param0, ci param1) {
-        ti var2 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new ti(param1.a("", (byte) 91, "final_frame.jpg"), (java.awt.Component) ((Object) gd.field_k));
+          var2 = new Sprite(param1.a("", (byte) 91, "final_frame.jpg"), (java.awt.Component) ((Object) AchievementNotice.field_k));
           var3 = var2.field_n;
           var4 = var2.field_m;
           og.a((byte) 45);
-          ch.field_c = new ti(var3, var4 * 3 / 4);
+          ch.field_c = new Sprite(var3, var4 * 3 / 4);
           ch.field_c.e();
           var2.f(0, 0);
           if (param0 < 86) {
             field_a = (Calendar) null;
           }
-          tb.field_e = new ti(var3, -ch.field_c.field_m + var4);
+          tb.field_e = new Sprite(var3, -ch.field_c.field_m + var4);
           tb.field_e.e();
           var2.f(0, -ch.field_c.field_m);
           tb.field_e.field_l = ch.field_c.field_m;

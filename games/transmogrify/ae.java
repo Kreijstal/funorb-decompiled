@@ -35,7 +35,7 @@ final class ae {
         return false;
     }
 
-    final static ii a(int param0, ci param1, int param2, boolean param3) {
+    final static IndexedSprite a(int param0, ci param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

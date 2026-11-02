@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dl extends ri {
+abstract class dl extends DualLinkNode {
     static long[][] field_n;
     int field_o;
     static long[] field_q;
@@ -117,131 +117,131 @@ abstract class dl extends ri {
           }
           var2Lifetime1 = qd.a(10, "achievement_names,0");
           if (var2Lifetime1 != null) {
-            qj.field_a[0] = eg.a(120, var2Lifetime1);
+            IntrusiveDeque.field_a[0] = eg.a(120, var2Lifetime1);
           }
           var2Lifetime2 = qd.a(10, "achievement_names,1");
           if (null != var2Lifetime2) {
-            qj.field_a[1] = eg.a(84, var2Lifetime2);
+            IntrusiveDeque.field_a[1] = eg.a(84, var2Lifetime2);
           }
           var2Lifetime3 = qd.a(10, "achievement_names,2");
           if (null != var2Lifetime3) {
-            qj.field_a[2] = eg.a(97, var2Lifetime3);
+            IntrusiveDeque.field_a[2] = eg.a(97, var2Lifetime3);
           }
           var2Lifetime4 = qd.a(10, "achievement_names,3");
           if (var2Lifetime4 != null) {
-            qj.field_a[3] = eg.a(111, var2Lifetime4);
+            IntrusiveDeque.field_a[3] = eg.a(111, var2Lifetime4);
           }
           var2Lifetime5 = qd.a(10, "achievement_names,4");
           if (null != var2Lifetime5) {
-            qj.field_a[4] = eg.a(112, var2Lifetime5);
+            IntrusiveDeque.field_a[4] = eg.a(112, var2Lifetime5);
           }
           var2Lifetime6 = qd.a(10, "achievement_names,5");
           if (null != var2Lifetime6) {
-            qj.field_a[5] = eg.a(126, var2Lifetime6);
+            IntrusiveDeque.field_a[5] = eg.a(126, var2Lifetime6);
           }
           var2Lifetime7 = qd.a(10, "achievement_names,6");
           if (null != var2Lifetime7) {
-            qj.field_a[6] = eg.a(108, var2Lifetime7);
+            IntrusiveDeque.field_a[6] = eg.a(108, var2Lifetime7);
           }
           var2Lifetime8 = qd.a(10, "achievement_names,7");
           if (var2Lifetime8 != null) {
-            qj.field_a[7] = eg.a(114, var2Lifetime8);
+            IntrusiveDeque.field_a[7] = eg.a(114, var2Lifetime8);
           }
           var2Lifetime9 = qd.a(10, "achievement_names,8");
           if (null != var2Lifetime9) {
-            qj.field_a[8] = eg.a(110, var2Lifetime9);
+            IntrusiveDeque.field_a[8] = eg.a(110, var2Lifetime9);
           }
           var2Lifetime10 = qd.a(10, "achievement_names,9");
           if (var2Lifetime10 != null) {
-            qj.field_a[9] = eg.a(96, var2Lifetime10);
+            IntrusiveDeque.field_a[9] = eg.a(96, var2Lifetime10);
           }
           var2Lifetime11 = qd.a(10, "achievement_names,10");
           if (null != var2Lifetime11) {
-            qj.field_a[10] = eg.a(95, var2Lifetime11);
+            IntrusiveDeque.field_a[10] = eg.a(95, var2Lifetime11);
           }
           var2Lifetime12 = qd.a(10, "achievement_names,11");
           if (null != var2Lifetime12) {
-            qj.field_a[11] = eg.a(84, var2Lifetime12);
+            IntrusiveDeque.field_a[11] = eg.a(84, var2Lifetime12);
           }
           var2Lifetime13 = qd.a(10, "achievement_names,12");
           if (var2Lifetime13 != null) {
-            qj.field_a[12] = eg.a(102, var2Lifetime13);
+            IntrusiveDeque.field_a[12] = eg.a(102, var2Lifetime13);
           }
           var2Lifetime14 = qd.a(10, "achievement_names,13");
           if (var2Lifetime14 != null) {
-            qj.field_a[13] = eg.a(107, var2Lifetime14);
+            IntrusiveDeque.field_a[13] = eg.a(107, var2Lifetime14);
           }
           var2Lifetime15 = qd.a(10, "achievement_names,14");
           if (null != var2Lifetime15) {
-            qj.field_a[14] = eg.a(92, var2Lifetime15);
+            IntrusiveDeque.field_a[14] = eg.a(92, var2Lifetime15);
           }
           var2Lifetime16 = qd.a(10, "achievement_names,15");
           if (var2Lifetime16 != null) {
-            qj.field_a[15] = eg.a(117, var2Lifetime16);
+            IntrusiveDeque.field_a[15] = eg.a(117, var2Lifetime16);
           }
           var2Lifetime17 = qd.a(10, "achievement_criteria,0");
           if (var2Lifetime17 != null) {
-            bl.field_b[0] = eg.a(109, var2Lifetime17);
+            bl.achievementDescriptions[0] = eg.a(109, var2Lifetime17);
           }
           var2Lifetime18 = qd.a(10, "achievement_criteria,1");
           if (var2Lifetime18 != null) {
-            bl.field_b[1] = eg.a(85, var2Lifetime18);
+            bl.achievementDescriptions[1] = eg.a(85, var2Lifetime18);
           }
           var2Lifetime19 = qd.a(10, "achievement_criteria,2");
           if (null != var2Lifetime19) {
-            bl.field_b[2] = eg.a(106, var2Lifetime19);
+            bl.achievementDescriptions[2] = eg.a(106, var2Lifetime19);
           }
           var2Lifetime20 = qd.a(10, "achievement_criteria,3");
           if (var2Lifetime20 != null) {
-            bl.field_b[3] = eg.a(86, var2Lifetime20);
+            bl.achievementDescriptions[3] = eg.a(86, var2Lifetime20);
           }
           var2Lifetime21 = qd.a(10, "achievement_criteria,4");
           if (null != var2Lifetime21) {
-            bl.field_b[4] = eg.a(125, var2Lifetime21);
+            bl.achievementDescriptions[4] = eg.a(125, var2Lifetime21);
           }
           var2Lifetime22 = qd.a(10, "achievement_criteria,5");
           if (null != var2Lifetime22) {
-            bl.field_b[5] = eg.a(124, var2Lifetime22);
+            bl.achievementDescriptions[5] = eg.a(124, var2Lifetime22);
           }
           var2Lifetime23 = qd.a(10, "achievement_criteria,6");
           if (null != var2Lifetime23) {
-            bl.field_b[6] = eg.a(95, var2Lifetime23);
+            bl.achievementDescriptions[6] = eg.a(95, var2Lifetime23);
           }
           var2Lifetime24 = qd.a(10, "achievement_criteria,7");
           if (var2Lifetime24 != null) {
-            bl.field_b[7] = eg.a(102, var2Lifetime24);
+            bl.achievementDescriptions[7] = eg.a(102, var2Lifetime24);
           }
           var2Lifetime25 = qd.a(10, "achievement_criteria,8");
           if (null != var2Lifetime25) {
-            bl.field_b[8] = eg.a(112, var2Lifetime25);
+            bl.achievementDescriptions[8] = eg.a(112, var2Lifetime25);
           }
           var2Lifetime26 = qd.a(10, "achievement_criteria,9");
           if (null != var2Lifetime26) {
-            bl.field_b[9] = eg.a(124, var2Lifetime26);
+            bl.achievementDescriptions[9] = eg.a(124, var2Lifetime26);
           }
           var2Lifetime27 = qd.a(10, "achievement_criteria,10");
           if (var2Lifetime27 != null) {
-            bl.field_b[10] = eg.a(118, var2Lifetime27);
+            bl.achievementDescriptions[10] = eg.a(118, var2Lifetime27);
           }
           var2Lifetime28 = qd.a(10, "achievement_criteria,11");
           if (null != var2Lifetime28) {
-            bl.field_b[11] = eg.a(88, var2Lifetime28);
+            bl.achievementDescriptions[11] = eg.a(88, var2Lifetime28);
           }
           var2Lifetime29 = qd.a(10, "achievement_criteria,12");
           if (var2Lifetime29 != null) {
-            bl.field_b[12] = eg.a(92, var2Lifetime29);
+            bl.achievementDescriptions[12] = eg.a(92, var2Lifetime29);
           }
           var2Lifetime30 = qd.a(10, "achievement_criteria,13");
           if (var2Lifetime30 != null) {
-            bl.field_b[13] = eg.a(111, var2Lifetime30);
+            bl.achievementDescriptions[13] = eg.a(111, var2Lifetime30);
           }
           var2Lifetime31 = qd.a(10, "achievement_criteria,14");
           if (null != var2Lifetime31) {
-            bl.field_b[14] = eg.a(118, var2Lifetime31);
+            bl.achievementDescriptions[14] = eg.a(118, var2Lifetime31);
           }
           var2Lifetime32 = qd.a(10, "achievement_criteria,15");
           if (null != var2Lifetime32) {
-            bl.field_b[15] = eg.a(112, var2Lifetime32);
+            bl.achievementDescriptions[15] = eg.a(112, var2Lifetime32);
           }
           var2Lifetime33 = qd.a(10, "submit_for_space");
           var3 = 66 % ((param1 - 46) / 51);
@@ -254,15 +254,15 @@ abstract class dl extends ri {
           }
           var2Lifetime35 = qd.a(10, "shuffle");
           if (var2Lifetime35 != null) {
-            th.field_b = eg.a(125, var2Lifetime35);
+            th.shuffleLabel = eg.a(125, var2Lifetime35);
           }
           var2Lifetime36 = qd.a(10, "variety_bonus");
           if (var2Lifetime36 != null) {
-            sg.field_k = eg.a(88, var2Lifetime36);
+            sg.varietyBonusLabel = eg.a(88, var2Lifetime36);
           }
           var2Lifetime37 = qd.a(10, "time_bonus");
           if (null != var2Lifetime37) {
-            ub.field_e = eg.a(115, var2Lifetime37);
+            ub.timeBonusLabel = eg.a(115, var2Lifetime37);
           }
           var2Lifetime38 = qd.a(10, "total");
           if (var2Lifetime38 != null) {
@@ -270,7 +270,7 @@ abstract class dl extends ri {
           }
           var2Lifetime39 = qd.a(10, "confirm_zero_score");
           if (var2Lifetime39 != null) {
-            he.field_g = eg.a(98, var2Lifetime39);
+            he.skipRoundPrompt = eg.a(98, var2Lifetime39);
           }
           var2Lifetime40 = qd.a(10, "ok");
           if (var2Lifetime40 != null) {
@@ -302,19 +302,19 @@ abstract class dl extends ri {
           }
           var2Lifetime47 = qd.a(10, "halloweenAchievemnts,0");
           if (null != var2Lifetime47) {
-            ua.field_a[0] = eg.a(123, var2Lifetime47);
+            ua.bonusWords[0] = eg.a(123, var2Lifetime47);
           }
           var2Lifetime48 = qd.a(10, "halloweenAchievemnts,1");
           if (null != var2Lifetime48) {
-            ua.field_a[1] = eg.a(104, var2Lifetime48);
+            ua.bonusWords[1] = eg.a(104, var2Lifetime48);
           }
           var2Lifetime49 = qd.a(10, "halloweenAchievemnts,2");
           if (null != var2Lifetime49) {
-            ua.field_a[2] = eg.a(99, var2Lifetime49);
+            ua.bonusWords[2] = eg.a(99, var2Lifetime49);
           }
           var2Lifetime50 = qd.a(10, "halloweenAchievemnts,3");
           if (var2Lifetime50 != null) {
-            ua.field_a[3] = eg.a(124, var2Lifetime50);
+            ua.bonusWords[3] = eg.a(124, var2Lifetime50);
           }
           var2Lifetime51 = qd.a(10, "all");
           if (var2Lifetime51 != null) {
@@ -322,7 +322,7 @@ abstract class dl extends ri {
           }
           var2Lifetime52 = qd.a(10, "mine");
           if (var2Lifetime52 != null) {
-            se.field_q = eg.a(98, var2Lifetime52);
+            SpriteState.field_q = eg.a(98, var2Lifetime52);
           }
           var2Lifetime53 = qd.a(10, "besteach");
           if (var2Lifetime53 != null) {
@@ -370,19 +370,19 @@ abstract class dl extends ri {
           }
           var2Lifetime64 = qd.a(10, "tuttext3");
           if (var2Lifetime64 != null) {
-            nl.field_g = eg.a(94, var2Lifetime64);
+            ProxySocketConnector.field_g = eg.a(94, var2Lifetime64);
           }
           var2Lifetime65 = qd.a(10, "readysetgo_str,0");
           if (var2Lifetime65 != null) {
-            mc.field_a[0] = eg.a(124, var2Lifetime65);
+            mc.countdownLabels[0] = eg.a(124, var2Lifetime65);
           }
           var2Lifetime66 = qd.a(10, "readysetgo_str,1");
           if (var2Lifetime66 != null) {
-            mc.field_a[1] = eg.a(109, var2Lifetime66);
+            mc.countdownLabels[1] = eg.a(109, var2Lifetime66);
           }
           var2Lifetime67 = qd.a(10, "readysetgo_str,2");
           if (var2Lifetime67 != null) {
-            mc.field_a[2] = eg.a(83, var2Lifetime67);
+            mc.countdownLabels[2] = eg.a(83, var2Lifetime67);
           }
           uj.field_h = null;
           return;
@@ -416,7 +416,7 @@ abstract class dl extends ri {
         field_n = new long[8][256];
         field_q = new long[11];
         var0 = 0;
-        L0: while (var0 < 256) {
+        scanLoop1: while (var0 < 256) {
           var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
           if ((1 & var0) != 0) {
             stackIn_6_0 = (long)(var1 & 255);

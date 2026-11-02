@@ -21,7 +21,7 @@ final class ee extends aj implements df {
     }
 
     ee(ik param0, kg param1, String param2) {
-        super(0, 0, 288, 0, (ui) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_w = 0;
         try {
@@ -187,11 +187,11 @@ final class ee extends aj implements df {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new lj(param2, param0);
-          var4.field_q = (ui) ((Object) new qa());
+          var4.field_q = (WidgetRenderer) ((Object) new qa());
           var5 = -2 + this.field_h;
           this.a(85, 0, 0, this.field_l, 34 + this.field_h);
           var4.a(73, var5, 7, this.field_l - 14, 30);
-          this.a((qg) (var4), (byte) -83);
+          this.a((UiWidget) (var4), (byte) -83);
           if (param1 != 8283) {
             this.field_A = (kg) null;
           }

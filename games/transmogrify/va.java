@@ -22,11 +22,11 @@ final class va extends me {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (this.field_k.a(95, param1) == ec.field_d) {
+          if (this.field_k.a(95, param1) == SocketConnector.field_d) {
             stackIn_6_0 = this.field_k.b(-1, param1);
             return stackIn_6_0;
           }
-          if (this.a(95, param1) != ec.field_d) {
+          if (this.a(95, param1) != SocketConnector.field_d) {
             stackIn_11_0 = wj.field_i;
             return stackIn_11_0;
           }
@@ -104,12 +104,12 @@ final class va extends me {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_k.a((int) (char)param0, param1) == ec.field_d) {
-            stackIn_3_0 = ec.field_d;
+          if (this.field_k.a((int) (char)param0, param1) == SocketConnector.field_d) {
+            stackIn_3_0 = SocketConnector.field_d;
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_l)) {
-            var3 = pi.a(17118, param1);
+            var3 = AchievementUnlockEvent.a(17118, param1);
             if (!var3.b(-26753)) {
               stackIn_8_0 = fi.field_u;
               return stackIn_8_0;
@@ -118,7 +118,7 @@ final class va extends me {
             this.field_m = var3.a(-1);
           }
           if (!this.field_m) {
-            stackIn_13_0 = ec.field_d;
+            stackIn_13_0 = SocketConnector.field_d;
           } else {
             stackIn_13_0 = hi.field_b;
           }

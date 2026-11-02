@@ -6,9 +6,9 @@ import java.io.*;
 final class eh {
     private static long[] field_d;
     static h field_e;
-    static ti[] field_c;
-    static int field_a;
-    static ii[] field_b;
+    static Sprite[] field_c;
+    static int totalScore;
+    static IndexedSprite[] field_b;
 
     final static void a(ol param0, byte param1, String param2, kg param3, int param4) {
         int var7 = 0;
@@ -84,7 +84,7 @@ final class eh {
         field_e = null;
     }
 
-    final static void a(sj param0, int param1) {
+    final static void returnTileToRack(LetterTile param0, int param1) {
         int var3 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -92,8 +92,8 @@ final class eh {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        j var3_ref_j = null;
-        j var4 = null;
+        TileRack var3_ref_j = null;
+        TileRack var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -101,37 +101,37 @@ final class eh {
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param1 < 52) {
-            field_a = -6;
+            totalScore = -6;
           }
-          var2_int = param0.field_t;
-          if (param0.field_k != null &&
-            param0.field_k != od.field_g &&
-            null == param0.field_k.field_e[param0.field_s]) {
-            param0.a(param0.field_s, 28, param0.field_k);
+          var2_int = param0.slot;
+          if (param0.previousRack != null &&
+            param0.previousRack != od.submissionRack &&
+            null == param0.previousRack.tiles[param0.previousSlot]) {
+            param0.moveToRack(param0.previousSlot, 28, param0.previousRack);
             param0 = null;
           }
           if (param0 != null) {
-            if (param0.field_h != 0) {
-              var3_ref_j = wk.field_a;
-              var4 = si.field_i;
+            if (param0.carryoverFlag != 0) {
+              var3_ref_j = wk.carryoverRack;
+              var4 = si.newRack;
             } else {
-              var4 = wk.field_a;
-              var3_ref_j = si.field_i;
+              var4 = wk.carryoverRack;
+              var3_ref_j = si.newRack;
             }
-            for (var5 = 0; var3_ref_j.field_e.length > var5; var5++) {
-              if (null != var3_ref_j.field_e[var5]) {
+            for (var5 = 0; var3_ref_j.tiles.length > var5; var5++) {
+              if (null != var3_ref_j.tiles[var5]) {
                 continue;
               }
-              param0.a(var5, 28, var3_ref_j);
+              param0.moveToRack(var5, 28, var3_ref_j);
               param0 = null;
               break;
             }
             if (param0 != null) {
               var7 = 0;
               var5Lifetime1 = var7;
-              while (var7 < var4.field_e.length) {
-                if (var4.field_e[var7] == null) {
-                  param0.a(var7, 28, var4);
+              while (var7 < var4.tiles.length) {
+                if (var4.tiles[var7] == null) {
+                  param0.moveToRack(var7, 28, var4);
                   break;
                 }
                 var7++;
@@ -139,8 +139,8 @@ final class eh {
             }
           }
           for (var3 = 1 + var2_int; var3 < 12; var3++) {
-            if (od.field_g.field_e[var3] != null) {
-              od.field_g.field_e[var3].a(-1 + var3, 28, od.field_g);
+            if (od.submissionRack.tiles[var3] != null) {
+              od.submissionRack.tiles[var3].moveToRack(-1 + var3, 28, od.submissionRack);
               continue;
             }
             break;
@@ -176,11 +176,11 @@ final class eh {
             } catch (IOException iOException) {
             }
           }
-          if (null != oa.field_m) {
-            for (var1_int = 0; var1_int < oa.field_m.length; var1_int++) {
-              if (oa.field_m[var1_int] != null) {
+          if (null != PacketBuffer.field_m) {
+            for (var1_int = 0; var1_int < PacketBuffer.field_m.length; var1_int++) {
+              if (PacketBuffer.field_m[var1_int] != null) {
                 try {
-                  oa.field_m[var1_int].a((byte) -61);
+                  PacketBuffer.field_m[var1_int].a((byte) -61);
                 } catch (IOException var2_ref) {
                 }
               }
@@ -197,7 +197,7 @@ final class eh {
         }
     }
 
-    final static sa a(ii[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static sa a(IndexedSprite[] param0, int param1, byte[] param2, int param3, int param4) {
         int var11_int = 0;
         byte[] array$0 = null;
         int incrementValue$3 = 0;
@@ -341,7 +341,7 @@ final class eh {
           }
           field_d[var2] = var0;
         }
-        field_a = 0;
+        totalScore = 0;
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

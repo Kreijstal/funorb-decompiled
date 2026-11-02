@@ -9,7 +9,7 @@ final class hf extends dj {
     private java.nio.ByteBuffer field_e;
     static int[][] field_f;
     static int field_i;
-    static ti[] field_d;
+    static Sprite[] field_d;
 
     public static void a(byte param0) {
         if (param0 == 118) {
