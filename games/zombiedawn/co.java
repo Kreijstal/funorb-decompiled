@@ -61,7 +61,7 @@ final class co {
           }
           break;
         }
-        var6Lifetime1 = new kc(param2, param1, hd.field_u[var7], param0, param3, hg.field_a[var7], si.field_Qb[var7]);
+        var6Lifetime1 = new kc(param2, param1, SpriteState.field_u[var7], param0, param3, hg.field_a[var7], si.field_Qb[var7]);
         rg.field_J.a((DualLinkNode) (var6Lifetime1), (byte) -119);
         if (param4 == ch.field_b) {
           var6Lifetime1 = new te(param2, param1, 0, param0);

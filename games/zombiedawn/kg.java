@@ -54,7 +54,7 @@ final class kg extends pm {
             this.field_h = (tb) null;
           }
           if (cj.a((byte) 15, var5)) {
-            stackIn_11_0 = dj.field_a;
+            stackIn_11_0 = Js5Archive.field_a;
             return stackIn_11_0;
           }
           if (tb.a(-10723, var5)) {

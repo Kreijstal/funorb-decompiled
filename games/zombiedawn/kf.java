@@ -66,9 +66,9 @@ final class kf extends pn implements hh {
 
     kf(dn param0) {
         super(param0, 200, 130);
-        ga var2 = null;
+        UiWidget var2 = null;
         try {
-          var2 = new ga(mf.field_a, (sk) null);
+          var2 = new UiWidget(mf.field_a, (sk) null);
           var2.field_n = 80;
           var2.field_i = this.field_i;
           var2.field_k = 0;
@@ -118,7 +118,7 @@ final class kf extends pn implements hh {
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_11_0 = false;
@@ -129,10 +129,10 @@ final class kf extends pn implements hh {
         try {
           if (param1 == 98) {
             if (null == this.field_U) {
-              this.field_W.a((byte) 110, (ga) (this));
+              this.field_W.a((byte) 110, (UiWidget) (this));
               return true;
             }
-            this.field_U.a((byte) 100, (ga) (this));
+            this.field_U.a((byte) 100, (UiWidget) (this));
             return true;
           }
           var5_int = 122 / ((param0 + 83) / 32);
@@ -140,7 +140,7 @@ final class kf extends pn implements hh {
             stackIn_11_0 = super.a(75, param1, param2, param3);
             return stackIn_11_0;
           }
-          this.field_W.a((byte) 107, (ga) (this));
+          this.field_W.a((byte) 107, (UiWidget) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

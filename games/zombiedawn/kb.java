@@ -6,7 +6,7 @@ final class kb extends pm {
     static sm field_f;
     static String[] field_g;
     static String[] field_j;
-    static vn[] field_i;
+    static Sprite[] field_i;
 
     final String a(String param0, byte param1) {
         RuntimeException var3 = null;
@@ -17,7 +17,7 @@ final class kb extends pm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -94) {
-            field_i = (vn[]) null;
+            field_i = (Sprite[]) null;
           }
           if (this.a(param0, 2) != MouseWheelInput.field_b) {
             return null;
@@ -65,7 +65,7 @@ final class kb extends pm {
             return stackIn_4_0;
           }
           var6 = (CharSequence) ((Object) param0);
-          var3_int = ra.a(var6, 121);
+          var3_int = DualLinkDeque.a(var6, 121);
           if (var3_int > 0 &&
             130 >= var3_int) {
             return mc.field_g;

@@ -13,7 +13,7 @@ final class Camera {
     private int field_l;
     float field_e;
     private int field_y;
-    static vn field_o;
+    static Sprite field_o;
     private int field_p;
     int x;
     private int field_n;
@@ -121,7 +121,7 @@ final class Camera {
             for (var11 = param0; var11 < param1; var11++) {
               var12 = qd.field_c[var11];
               if (param4) {
-                stackIn_23_0 = dj.field_g[var12];
+                stackIn_23_0 = Js5Archive.field_g[var12];
               } else {
                 stackIn_23_0 = qp.field_b[var12];
               }

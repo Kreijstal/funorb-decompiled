@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveDeque {
-    static vn[] field_a;
+    static Sprite[] field_a;
     IntrusiveNode sentinel;
-    static dj field_d;
+    static Js5Archive field_d;
     private IntrusiveNode field_c;
 
     final IntrusiveNode b(byte param0) {
@@ -115,7 +115,7 @@ class IntrusiveDeque {
           }
           param1.previous = this.sentinel;
           if (param0 != 0) {
-            field_d = (dj) null;
+            field_d = (Js5Archive) null;
           }
           param1.next = this.sentinel.next;
           param1.next.previous = param1;

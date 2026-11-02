@@ -10,7 +10,7 @@ final class li implements Runnable {
     static v field_i;
     private DataInputStream field_e;
     static String field_f;
-    private de field_a;
+    private PacketBuffer field_a;
     private java.net.URL field_d;
     private op field_k;
     static v[] field_h;
@@ -74,7 +74,7 @@ final class li implements Runnable {
                   var3.write(pd.a((byte) 67, var5));
                   this.field_e = new DataInputStream(var4.getInputStream());
                 }
-                this.field_a.field_j = 0;
+                this.field_a.position = 0;
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = (IOException) (Object) decompiledCaughtException;
@@ -177,16 +177,16 @@ final class li implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = ZombieDawn.field_J;
           try {
-            while (this.field_a.field_j < this.field_a.field_h.length) {
-              var1_int = this.field_e.read(this.field_a.field_h, this.field_a.field_j, -this.field_a.field_j + this.field_a.field_h.length);
+            while (this.field_a.position < this.field_a.payload.length) {
+              var1_int = this.field_e.read(this.field_a.payload, this.field_a.position, -this.field_a.position + this.field_a.payload.length);
               if (var1_int >= 0) {
-                this.field_a.field_j = this.field_a.field_j + var1_int;
+                this.field_a.position = this.field_a.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_a.field_j == this.field_a.field_h.length) {
-              throw li.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_a.field_h.length + " " + this.field_d));
+            if (this.field_a.position == this.field_a.payload.length) {
+              throw li.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_a.payload.length + " " + this.field_d));
             }
             var1 = this;
             synchronized (var1) {
@@ -223,15 +223,15 @@ final class li implements Runnable {
         try {
           this.field_d = param1;
           this.field_g = param0;
-          this.field_a = new de(param2);
+          this.field_a = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final de a(byte param0) {
+    final PacketBuffer a(byte param0) {
         if (param0 != -118) {
-          return (de) null;
+          return (PacketBuffer) null;
         }
         if (this.field_c == 3) {
           return this.field_a;

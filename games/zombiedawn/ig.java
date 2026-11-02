@@ -80,7 +80,7 @@ final class ig extends wo {
                       this.field_Ab = false;
                     }
                     if (var6 == 3) {
-                      dj.field_e.a(this, (byte) 110);
+                      Js5Archive.field_e.a(this, (byte) 110);
                       ho.a(this.getY(237239984), (byte) 54, this.getX(true));
                       this.unlink(-27598);
                       this.d(0);
@@ -89,7 +89,7 @@ final class ig extends wo {
                         this.unlink(-27598);
                         this.d(0);
                       } else {
-                        if (24 + dj.field_e.field_H.field_u <= var2) {
+                        if (24 + Js5Archive.field_e.field_H.field_u <= var2) {
                           this.unlink(-27598);
                           this.d(0);
                         }
@@ -107,11 +107,11 @@ final class ig extends wo {
             }
             if (var7 == 0) {
               if (var6 == 3) {
-                dj.field_e.a(this, (byte) 110);
+                Js5Archive.field_e.a(this, (byte) 110);
                 ho.a(this.getY(237239984), (byte) 54, this.getX(true));
               } else {
                 if (var2 > -24 &&
-                  24 + dj.field_e.field_H.field_u > var2) {
+                  24 + Js5Archive.field_e.field_H.field_u > var2) {
                   return;
                 }
               }
@@ -123,7 +123,7 @@ final class ig extends wo {
             this.e(1, -6904);
             this.field_Ab = false;
             if (var6 == 3) {
-              dj.field_e.a(this, (byte) 110);
+              Js5Archive.field_e.a(this, (byte) 110);
               ho.a(this.getY(237239984), (byte) 54, this.getX(true));
               this.unlink(-27598);
               this.d(0);
@@ -132,7 +132,7 @@ final class ig extends wo {
                 this.unlink(-27598);
                 this.d(0);
               } else {
-                if (24 + dj.field_e.field_H.field_u <= var2) {
+                if (24 + Js5Archive.field_e.field_H.field_u <= var2) {
                   this.unlink(-27598);
                   this.d(0);
                 }
@@ -144,11 +144,11 @@ final class ig extends wo {
             3 < var3 &&
             var5 > 5) {
             if (var6 == 3) {
-              dj.field_e.a(this, (byte) 110);
+              Js5Archive.field_e.a(this, (byte) 110);
               ho.a(this.getY(237239984), (byte) 54, this.getX(true));
             } else {
               if (var2 > -24 &&
-                24 + dj.field_e.field_H.field_u > var2) {
+                24 + Js5Archive.field_e.field_H.field_u > var2) {
                 return;
               }
             }
@@ -202,7 +202,7 @@ final class ig extends wo {
                     this.field_Ab = false;
                   }
                   if (var6 == 3) {
-                    dj.field_e.a(this, (byte) 110);
+                    Js5Archive.field_e.a(this, (byte) 110);
                     ho.a(this.getY(237239984), (byte) 54, this.getX(true));
                     this.unlink(-27598);
                     this.d(0);
@@ -212,7 +212,7 @@ final class ig extends wo {
                     this.unlink(-27598);
                     this.d(0);
                   } else {
-                    if (24 + dj.field_e.field_H.field_u <= var2) {
+                    if (24 + Js5Archive.field_e.field_H.field_u <= var2) {
                       this.unlink(-27598);
                       this.d(0);
                       return;
@@ -235,11 +235,11 @@ final class ig extends wo {
           }
         }
         if (var6 == 3) {
-          dj.field_e.a(this, (byte) 110);
+          Js5Archive.field_e.a(this, (byte) 110);
           ho.a(this.getY(237239984), (byte) 54, this.getX(true));
         } else {
           if (var2 > -24 &&
-            24 + dj.field_e.field_H.field_u > var2) {
+            24 + Js5Archive.field_e.field_H.field_u > var2) {
             return;
           }
         }
@@ -252,8 +252,8 @@ final class ig extends wo {
         if (param0 < 95) {
           this.g(18);
         }
-        if (this.getY(237239984) - 48 <= dj.field_e.field_H.field_p &&
-          this.getX(true) - 48 <= dj.field_e.field_H.field_u) {
+        if (this.getY(237239984) - 48 <= Js5Archive.field_e.field_H.field_p &&
+          this.getX(true) - 48 <= Js5Archive.field_e.field_H.field_u) {
           return;
         }
         this.unlink(-27598);
@@ -327,7 +327,7 @@ final class ig extends wo {
         if (this.getY(237239984) < 0) {
           return;
         }
-        if (this.getY(237239984) > dj.field_e.field_H.field_p) {
+        if (this.getY(237239984) > Js5Archive.field_e.field_H.field_p) {
           return;
         }
         if (!(this.getX(true) >= 0)) {
@@ -345,7 +345,7 @@ final class ig extends wo {
         return en.field_e[param1 & 2047];
     }
 
-    final static void a(rb param0, int param1, int param2, int param3, int param4, rb param5, int param6, int param7, int param8, mf param9, int param10, mf param11, int param12, mf param13, int param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void a(Font param0, int param1, int param2, int param3, int param4, Font param5, int param6, int param7, int param8, mf param9, int param10, mf param11, int param12, mf param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

@@ -6,21 +6,21 @@ final class nj extends pn implements hh {
     private an field_T;
     static String field_X;
     private an field_W;
-    private ga field_U;
+    private UiWidget field_U;
 
     nj(dn param0) {
         super(param0, 200, 200);
-        ga var3 = null;
+        UiWidget var3 = null;
         try {
           this.field_V = pd.a(-22826);
-          var3 = new ga(SecondaryNodeDequeIterator.field_c, (sk) null);
+          var3 = new UiWidget(SecondaryNodeDequeIterator.field_c, (sk) null);
           var3.field_i = this.field_i;
           var3.field_n = 100;
           var3.field_j = 50;
           var3.field_k = 0;
           var3.field_h = (io) ((Object) new vf(SecondaryNodeDeque.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var3, 10);
-          this.field_U = new ga(SecondaryNodeDequeIterator.field_c, (sk) null);
+          this.field_U = new UiWidget(SecondaryNodeDequeIterator.field_c, (sk) null);
           this.field_U.field_k = 0;
           this.field_U.field_j = 20 + var3.field_n + var3.field_j;
           this.field_U.field_i = this.field_i;
@@ -34,7 +34,7 @@ final class nj extends pn implements hh {
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         int var6 = 0;
         boolean stackIn_9_0 = false;
@@ -47,14 +47,14 @@ final class nj extends pn implements hh {
           var5_int = -59 % ((-83 - param0) / 32);
           var6 = param1;
           if (var6 == 99) {
-            this.field_W.a((byte) 115, (ga) (this));
+            this.field_W.a((byte) 115, (UiWidget) (this));
             return true;
           }
           if (var6 != 98) {
             stackIn_9_0 = super.a(-127, param1, param2, param3);
             return stackIn_9_0;
           }
-          this.field_T.a((byte) 116, (ga) (this));
+          this.field_T.a((byte) 116, (UiWidget) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class nj extends pn implements hh {
         }
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;

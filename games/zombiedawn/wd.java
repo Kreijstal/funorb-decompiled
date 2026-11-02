@@ -3,7 +3,7 @@
  */
 final class wd extends pj {
     byte[] field_A;
-    static vn field_y;
+    static Sprite field_y;
     static String field_w;
     na field_x;
     static int[] field_z;

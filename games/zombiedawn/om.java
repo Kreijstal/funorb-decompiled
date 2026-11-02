@@ -72,7 +72,7 @@ final class om extends w {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        vn var17 = null;
+        Sprite var17 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
@@ -120,7 +120,7 @@ final class om extends w {
           var16Lifetime1 = -var9 + var11;
           if (0 < var15Lifetime1 &&
             var16Lifetime1 > 0) {
-            var17 = new vn(var15Lifetime1, var16Lifetime1);
+            var17 = new Sprite(var15Lifetime1, var16Lifetime1);
             var18 = param6 * param6;
             var19 = (param7 + param6) * (param6 + param7);
             var20 = 0;

@@ -18,7 +18,7 @@ final class tl implements ug {
     private boolean field_m;
     private lo[] field_q;
     static String field_e;
-    private dj field_h;
+    private Js5Archive field_h;
     private int[] field_r;
 
     final void b(int param0, int param1) {
@@ -76,8 +76,8 @@ final class tl implements ug {
         an.field_B = pb.a(true, false, 6, true, 1);
         this.field_h = pb.a(true, false, 7, true, 1);
         bp.field_h = new jk(50);
-        dj var4 = nl.field_p;
-        dj var3 = gj.field_i;
+        Js5Archive var4 = nl.field_p;
+        Js5Archive var3 = gj.field_i;
         bp.field_h.a("basic", DualLinkNode.field_o, el.field_m, var4, (byte) -84);
         bp.field_h.a("arialish12", DualLinkNode.field_o, el.field_m, var4, (byte) -84);
         bp.field_h.a("arialish12", DualLinkNode.field_o, el.field_m, var3, (byte) -84);
@@ -91,10 +91,10 @@ final class tl implements ug {
 
     private final void c(int param0) {
         int var9 = 0;
-        dj var3 = null;
+        Js5Archive var3 = null;
         int var4_int = 0;
         int var11 = 0;
-        dj var15 = null;
+        Js5Archive var15 = null;
         boolean stackIn_102_1 = false;
         Throwable decompiledCaughtException = null;
         float var4 = 0.0f;
@@ -104,15 +104,15 @@ final class tl implements ug {
         int var6 = 0;
         IllegalArgumentException var6_ref_IllegalArgumentException = null;
         v[] var7 = null;
-        vn[] var7_array = null;
+        Sprite[] var7_array = null;
         int var8 = 0;
-        vn[] var8_ref_vn__ = null;
-        vn var10 = null;
+        Sprite[] var8_ref_vn__ = null;
+        Sprite var10 = null;
         int var12 = 0;
         String var13 = null;
         ml var14 = null;
         v[] var16 = null;
-        vn[] var17 = null;
+        Sprite[] var17 = null;
         int var8Lifetime1;
         var11 = ZombieDawn.field_J;
         oh.d((byte) -95);
@@ -192,7 +192,7 @@ final class tl implements ug {
               }
             }
             this.a(800, ji.field_a, 75.0f, false, 3.0f);
-            np.field_E = new vn(nm.field_e.a("map.jpg", param0 ^ -26, "jpg/"), (java.awt.Component) ((Object) cj.field_d));
+            np.field_E = new Sprite(nm.field_e.a("map.jpg", param0 ^ -26, "jpg/"), (java.awt.Component) ((Object) cj.field_d));
           }
           nm.field_e = null;
           this.a(param0 ^ 75, 78.0f);
@@ -226,10 +226,10 @@ final class tl implements ug {
           if (sg.field_jb == null) {
             return;
           }
-          b.field_j = ra.a(ZombieDawn.field_H, "basic", "font_title", 0, a.field_h);
+          b.field_j = DualLinkDeque.a(ZombieDawn.field_H, "basic", "font_title", 0, a.field_h);
           bj.field_q = gb.a("font_medium", -1, ZombieDawn.field_H, "basic", a.field_h);
           rg.a(bj.field_q, false);
-          tf.a((byte) 119);
+          SpatialBucket.a((byte) 119);
           if (be.field_j <= 0) {
             var16 = dd.a("membersexpansion", "screenshots", -1864, a.field_h);
             var7 = var16;
@@ -280,7 +280,7 @@ final class tl implements ug {
           bj.a("basic", -120, a.field_h, "button_depressed");
           jb.field_a = vm.a((byte) -104, "pin_flags", "basic", a.field_h);
           this.a(var5, param0 - 75, var6, var4);
-          ed.field_a = new vn[32];
+          ed.field_a = new Sprite[32];
           var17 = vm.a((byte) 126, "all_achievements", "basic", a.field_h);
           var7_array = var17;
           for (var8 = 0; var8 < 32; var8++) {
@@ -305,7 +305,7 @@ final class tl implements ug {
             bd.a(var10, false);
           }
           bd.a(e.field_G, false);
-          ed.field_b = new vn[f.field_j.length];
+          ed.field_b = new Sprite[f.field_j.length];
           var12 = 0;
           var8Lifetime1 = var12;
           while (var12 < ed.field_b.length) {
@@ -552,7 +552,7 @@ final class tl implements ug {
           return false;
         }
         if (param0) {
-          this.field_h = (dj) null;
+          this.field_h = (Js5Archive) null;
         }
         for (var3 = 0; this.field_f > var3; var3++) {
           if (param1 == this.field_r[var3]) {
@@ -840,7 +840,7 @@ final class tl implements ug {
                   if (null == ob.field_c) {
                     ob.field_c = vm.a((byte) -77, "glass", "gameuk", a.field_h);
                   }
-                  tf.field_b = vm.a((byte) 20, "bulletcasing", "gameuk", a.field_h);
+                  SpatialBucket.field_b = vm.a((byte) 20, "bulletcasing", "gameuk", a.field_h);
                 } else {
                   if (var7 != 6 &&
                     var7 != 0 &&

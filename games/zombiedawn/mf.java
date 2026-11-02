@@ -5,7 +5,7 @@ final class mf {
     static int field_d;
     static int field_c;
     static String field_a;
-    private vn[] field_b;
+    private Sprite[] field_b;
 
     final static void a(byte param0) {
         int var1_int = 0;
@@ -71,7 +71,7 @@ final class mf {
         field_a = null;
     }
 
-    mf(vn[] param0) {
+    mf(Sprite[] param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

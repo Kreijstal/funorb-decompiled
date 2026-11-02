@@ -32,26 +32,26 @@ final class DelegatingCanvas extends java.awt.Canvas {
         am var7 = dp.field_e;
         am var8 = var7;
         var8.j(11, param1);
-        var8.field_j = var8.field_j + 1;
-        int var4 = var8.field_j;
-        var8.i(1, 100);
-        var8.a(param2.field_i, (byte) 105);
-        var8.a(param2.field_o, (byte) 105);
-        var8.a(param2.field_n, (byte) 105);
-        var8.h(104, param2.field_q);
-        var8.h(-124, param2.field_m);
-        var8.h(-118, param2.field_l);
+        var8.position = var8.position + 1;
+        int var4 = var8.position;
+        var8.writeByte(1, 100);
+        var8.writeShort(param2.field_i, (byte) 105);
+        var8.writeShort(param2.field_o, (byte) 105);
+        var8.writeShort(param2.field_n, (byte) 105);
+        var8.writeInt(104, param2.field_q);
+        var8.writeInt(-124, param2.field_m);
+        var8.writeInt(-118, param2.field_l);
         if (param0 >= -47) {
           return;
         }
         try {
-          var8.h(40, param2.field_t);
-          var8.i(param2.field_k.length, 87);
+          var8.writeInt(40, param2.field_t);
+          var8.writeByte(param2.field_k.length, 87);
           for (var5 = 0; var5 < param2.field_k.length; var5++) {
-            var7.h(30, param2.field_k[var5]);
+            var7.writeInt(30, param2.field_k[var5]);
           }
-          var8.e(-123, var4);
-          var8.d(50, -var4 + var8.field_j);
+          var8.writeCrc32(-123, var4);
+          var8.d(50, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

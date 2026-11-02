@@ -5,13 +5,13 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
     java.awt.Frame field_e;
     volatile boolean field_a;
     static int[] field_b;
-    static vn[] field_c;
+    static Sprite[] field_c;
     static uh field_d;
 
     public static void c(int param0) {
         if (param0 < 39) {
-          dj var2 = (dj) null;
-          la.a((dj) null, 13, (dj) null, (byte) 28, -8);
+          Js5Archive var2 = (Js5Archive) null;
+          la.a((Js5Archive) null, 13, (Js5Archive) null, (byte) 28, -8);
           field_c = null;
           field_b = null;
           field_d = null;
@@ -85,15 +85,15 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
           if (null != ce.field_t) {
             try {
               ce.field_t.a(0, 0L);
-              ce.field_t.a(122, fj.field_g.field_h, fj.field_g.field_j, 24);
+              ce.field_t.a(122, fj.field_g.payload, fj.field_g.position, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              fj.field_g.field_j = fj.field_g.field_j + 24;
+              fj.field_g.position = fj.field_g.position + 24;
               return;
             }
           }
-          fj.field_g.field_j = fj.field_g.field_j + 24;
+          fj.field_g.position = fj.field_g.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -112,7 +112,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static oi a(dj param0, int param1, dj param2, byte param3, int param4) {
+    final static oi a(Js5Archive param0, int param1, Js5Archive param2, byte param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         oi stackIn_5_0 = null;

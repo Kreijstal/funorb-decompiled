@@ -49,12 +49,12 @@ abstract class ei extends hp {
         }
     }
 
-    final ga d(byte param0) {
-        ga var2 = super.d(param0);
+    final UiWidget d(byte param0) {
+        UiWidget var2 = super.d(param0);
         if (var2 != null) {
           return var2;
         }
-        return (ga) (this);
+        return (UiWidget) (this);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -70,7 +70,7 @@ abstract class ei extends hp {
           return;
         }
         if (null == f.field_e) {
-          f.field_e = new vn(this.field_i, this.field_n);
+          f.field_e = new Sprite(this.field_i, this.field_n);
           ki.a((byte) -86, f.field_e);
           Rasterizer.d();
           this.a(param3, 0, (byte) -121);
@@ -80,7 +80,7 @@ abstract class ei extends hp {
           return;
         }
         if (f.field_e.field_w < this.field_i) {
-          f.field_e = new vn(this.field_i, this.field_n);
+          f.field_e = new Sprite(this.field_i, this.field_n);
           ki.a((byte) -86, f.field_e);
           Rasterizer.d();
           this.a(param3, 0, (byte) -121);
@@ -98,7 +98,7 @@ abstract class ei extends hp {
           f.field_e.e(this.field_k + param2, this.field_j + param0, this.field_I);
           return;
         }
-        f.field_e = new vn(this.field_i, this.field_n);
+        f.field_e = new Sprite(this.field_i, this.field_n);
         ki.a((byte) -86, f.field_e);
         Rasterizer.d();
         this.a(param3, 0, (byte) -121);

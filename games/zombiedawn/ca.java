@@ -3,7 +3,7 @@
  */
 final class ca {
     static double field_a;
-    static vn[] field_b;
+    static Sprite[] field_b;
 
     final static void a(byte param0, String param1) {
         try {
@@ -51,15 +51,15 @@ final class ca {
         }
     }
 
-    final static vn[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var15 = 0;
         int var9;
-        vn[] var10;
+        Sprite[] var10;
         int var11;
-        vn[] var12_ref_vn__;
+        Sprite[] var12_ref_vn__;
         int var12;
         int var13;
-        vn var14;
+        Sprite var14;
         int var16;
         int var12Lifetime1;
         int var12Lifetime2;
@@ -70,7 +70,7 @@ final class ca {
         int var13Lifetime4;
         var16 = ZombieDawn.field_J;
         var9 = param3 + param5 + param2;
-        var10 = new vn[]{new vn(var9, var9), new vn(param6, var9), new vn(var9, var9), new vn(var9, param6), new vn(64, 64), new vn(var9, param6), new vn(var9, var9), new vn(param6, var9), new vn(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9), new Sprite(var9, param6), new Sprite(64, 64), new Sprite(var9, param6), new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9)};
         var11 = 73 % ((-38 - param8) / 56);
         var12_ref_vn__ = var10;
         for (var13 = 0; var13 < var12_ref_vn__.length; var13++) {
@@ -131,7 +131,7 @@ final class ca {
           }
           var5 = (lo) (c.field_b.b((byte) 26));
           while (var5 != null) {
-            ga.a(param0, 0, var5);
+            UiWidget.a(param0, 0, var5);
             var5 = (lo) (c.field_b.a(false));
           }
           if (param1 > -95) {
@@ -147,7 +147,7 @@ final class ca {
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_b = (vn[]) null;
+          field_b = (Sprite[]) null;
         }
         field_b = null;
     }

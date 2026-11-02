@@ -8,10 +8,10 @@ final class ip extends PcmStream {
     IntrusiveDeque field_s;
     static String field_o;
     static int[] field_r;
-    static de field_l;
+    static PacketBuffer field_l;
     PcmMixer field_m;
     static boolean[] field_q;
-    static vn[] field_p;
+    static Sprite[] field_p;
 
     final static void c(int param0) {
         int var5 = 0;
@@ -373,7 +373,7 @@ final class ip extends PcmStream {
     final static int a(int param0, int param1) {
         int var2 = 0;
         if (param1 != -1) {
-          field_l = (de) null;
+          field_l = (PacketBuffer) null;
         }
         if ((7 & param0) != 0) {
           var2 = -(7 & param0) + 8;

@@ -10,9 +10,9 @@ final class vj extends al {
     static String[] field_p;
     static int field_q;
     static long field_n;
-    private vn field_r;
+    private Sprite field_r;
     static int field_o;
-    private vn field_u;
+    private Sprite field_u;
 
     final void a(int param0) {
         int var3;
@@ -193,7 +193,7 @@ final class vj extends al {
     final int b(int param0, boolean param1) {
         if (!param1) {
           String var4 = (String) null;
-          vj.a((dj) null, (String) null, (String) null, -46);
+          vj.a((Js5Archive) null, (String) null, (String) null, -46);
         }
         if (!po.w(13296) &&
           param0 < 2) {
@@ -243,7 +243,7 @@ final class vj extends al {
         super.a((byte) -51);
         li.a(false);
         if (this.field_r == null) {
-          this.field_r = new vn(100, 100);
+          this.field_r = new Sprite(100, 100);
           ki.a((byte) -92, this.field_r);
           Rasterizer.d();
           jb.field_a[1].b(25, 25);
@@ -252,7 +252,7 @@ final class vj extends al {
           }
           Rasterizer.h(2, 2, 0, 0, 100, 100);
           pa.a(-21189);
-          this.field_u = new vn(100, 100);
+          this.field_u = new Sprite(100, 100);
           ki.a((byte) -94, this.field_u);
           Rasterizer.d();
           jb.field_a[1].b(25, 25);
@@ -333,7 +333,7 @@ final class vj extends al {
         var3Lifetime2 = 6 + id.field_M + 89 + sg.field_jb.field_I + 100;
         sg.field_jb.a(var2, vh.field_b + 330, var3Lifetime2, 0, 0);
         if (param0 > -35) {
-          this.field_u = (vn) null;
+          this.field_u = (Sprite) null;
         }
         if (po.w(13296)) {
           stackIn_54_0 = rn.field_a;
@@ -414,7 +414,7 @@ final class vj extends al {
         return (param0 == 0 ? 50 : 470) + vh.field_b;
     }
 
-    final static v a(dj param0, String param1, String param2, int param3) {
+    final static v a(Js5Archive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -386,7 +386,7 @@ final class po extends Human {
           if (param0 > -60) {
             field_wb = (int[]) null;
           }
-          var4 = dj.field_e.field_R.b((byte) 26);
+          var4 = Js5Archive.field_e.zombies.b((byte) 26);
           while (var4 instanceof WorldObject) {
             if (var4 instanceof Zombie &&
               ((Zombie) (var4)).state != 8 &&

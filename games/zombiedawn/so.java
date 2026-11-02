@@ -6,8 +6,8 @@ import java.util.*;
 final class so {
     static Random field_a;
 
-    final static vn a(vn param0) {
-        vn var1 = new vn(param0.field_r, param0.field_q);
+    final static Sprite a(Sprite param0) {
+        Sprite var1 = new Sprite(param0.field_r, param0.field_q);
         var1.a();
         Rasterizer.d();
         param0.h(0, 0, 16777215);
@@ -56,7 +56,7 @@ final class so {
         }
     }
 
-    final static void b(vn param0, int param1, int param2, int param3) {
+    final static void b(Sprite param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var4 = param1 + param2 * Rasterizer.field_f;
         int var5 = 0;
@@ -118,7 +118,7 @@ final class so {
         }
     }
 
-    final static void a(vn param0, int param1, int param2) {
+    final static void a(Sprite param0, int param1, int param2) {
         int var9 = 0;
         int var3 = param1 + param2 * Rasterizer.field_f;
         int var4 = 0;
@@ -172,13 +172,13 @@ final class so {
         int[] var2;
         int var3;
         int var4;
-        vn var5;
+        Sprite var5;
         int[] var6;
         var1 = 0;
         var2 = Rasterizer.field_c;
         var3 = Rasterizer.field_f;
         var4 = Rasterizer.field_a;
-        var5 = new vn(var3, var4);
+        var5 = new Sprite(var3, var4);
         var6 = var5.field_z;
         for (var7 = 0; var7 < var4; var7++) {
           for (var8 = 0; var8 < var3; var8++) {
@@ -232,7 +232,7 @@ final class so {
         return param0[pb.a(field_a, param0.length, 1)];
     }
 
-    final static void a(vn param0, int param1, int param2, int param3) {
+    final static void a(Sprite param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

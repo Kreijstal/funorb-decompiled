@@ -15,7 +15,7 @@ final class of {
     int field_p;
     io field_g;
     io field_a;
-    rb field_c;
+    Font field_c;
     io field_n;
     io field_s;
     private int field_j;
@@ -71,7 +71,7 @@ final class of {
             stackIn_9_0 = fg.field_m;
             return stackIn_9_0;
           }
-          var3 = de.a('.', param0, -124);
+          var3 = PacketBuffer.split('.', param0, -124);
           if (2 > var3.length) {
             stackIn_13_0 = bg.field_l;
             return stackIn_13_0;
@@ -223,10 +223,10 @@ final class of {
         }
     }
 
-    final void a(int param0, rb param1) {
+    final void a(int param0, Font param1) {
         vf var17 = null;
         qo var4 = null;
-        vn[] var5 = null;
+        Sprite[] var5 = null;
         cd var16 = null;
         cd var18 = null;
         int var7_int = 0;
@@ -235,12 +235,12 @@ final class of {
         t discarded$0 = null;
         el discarded$1 = null;
         qo var8 = null;
-        vn[] var9 = null;
-        vn[] var10 = null;
-        vn dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         qo var11 = null;
         qo var12 = null;
-        vn var13 = null;
+        Sprite var13 = null;
         qo var14 = null;
         qo var19 = null;
         int var15 = ZombieDawn.field_J;
@@ -266,13 +266,13 @@ final class of {
           var4.a((byte) 73, 0).b((byte) -21, 15658734).a(tb.c(10066329, 8947848, -2967, 7829367), param0 ^ 37);
           var4.a((byte) 73, 1).a(tb.c(10066329, 11184810, -2967, 13421772), 33);
           var4.a((byte) 73, 3).a(tb.c(7829367, 8947848, param0 - 2971, 10066329), param0 ^ 37).a((byte) 126, 1).a(1, (byte) 57);
-          var5 = new vn[9];
+          var5 = new Sprite[9];
           var16 = new cd(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_z.length > var7_int; var7_int++) {
             var16.field_z[var7_int] = 1077952576;
           }
-          var5[4] = (vn) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) 73, 4).a(true, (byte) 74).a(var5, 33);
           var4.a((byte) 73, 5).a(ab.a(0, (byte) -36, 0, 0, 65793), 33).a(true, (byte) -113).b((byte) -21, -1);
           this.field_a = (io) ((Object) var4);
@@ -290,10 +290,10 @@ final class of {
           var8.a((byte) 73, 0).a(tb.c(7829367, 15658734, param0 ^ -2963, 10066329), param0 + 29).b((byte) -21, 1118481).a(-1, param0 ^ -107);
           var8.a((byte) 73, param0).a(true, (byte) 72).a(var5, param0 + 29);
           this.field_b = (io) ((Object) var8);
-          var9 = new vn[9];
-          var10 = new vn[9];
-          var9[4] = new vn(2, 1);
-          var10[4] = new vn(1, 2);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_z = new int[]{6710886, 7829367};
           var10[4].field_z = new int[]{6710886, 7829367};
@@ -303,7 +303,7 @@ final class of {
           var12.a(1, var10, 0);
           this.field_m = (io) ((Object) var4);
           this.field_s = (io) ((Object) var12);
-          var13 = new vn(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           this.field_p = 10;
           var14 = new qo(var4, true);

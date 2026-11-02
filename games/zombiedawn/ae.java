@@ -8,7 +8,7 @@ final class ae {
     static int[] field_c;
     static String[] field_b;
 
-    final static void a(dj param0, byte param1) {
+    final static void a(Js5Archive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         gd var5 = null;

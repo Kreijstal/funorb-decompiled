@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class f {
-    static dj field_i;
+    static Js5Archive field_i;
     static int[] field_g;
     int field_h;
     static int field_f;
     static int field_k;
     static int field_b;
-    static vn field_e;
+    static Sprite field_e;
     static String[] field_j;
     static int field_a;
     static int field_c;
-    static vn field_d;
+    static Sprite field_d;
 
     public static void a(byte param0) {
         if (param0 > 4) {
@@ -23,7 +23,7 @@ final class f {
           field_g = null;
           return;
         }
-        field_i = (dj) null;
+        field_i = (Js5Archive) null;
         field_j = null;
         field_i = null;
         field_e = null;
@@ -49,7 +49,7 @@ final class f {
           var7 = pj.a(var6, 82, var5) * 5 >> 2;
           oe.field_c.h(var7);
           Rasterizer.f(var5, var6, var5 + ClientException.field_a, var6 + rh.field_a);
-          Rasterizer.a(param1.worldToScreenX(var3, (byte) -89) << 4, param1.worldToScreenY(var4, 0) << 4, pl.field_r, ga.field_q, b.field_p);
+          Rasterizer.a(param1.worldToScreenX(var3, (byte) -89) << 4, param1.worldToScreenY(var4, 0) << 4, pl.field_r, UiWidget.field_q, b.field_p);
           Rasterizer.c();
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "f.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

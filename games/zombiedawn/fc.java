@@ -175,7 +175,7 @@ final class fc extends qk {
           this.field_yb = null;
         }
         var5 = -1;
-        var6 = dj.field_e.field_R.b((byte) 26);
+        var6 = Js5Archive.field_e.zombies.b((byte) 26);
         while (var6 instanceof WorldObject) {
           if (var6 instanceof Zombie) {
             if (!((Zombie) (var6)).x(91)) {

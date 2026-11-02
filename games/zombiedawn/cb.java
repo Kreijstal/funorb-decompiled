@@ -3,43 +3,43 @@
  */
 class cb extends ce {
     private int field_L;
-    private vn[] field_D;
+    private Sprite[] field_D;
     private int field_Y;
-    private vn field_A;
+    private Sprite field_A;
     private boolean field_H;
-    private vn field_F;
+    private Sprite field_F;
     private int field_S;
     private int field_K;
     private int field_P;
     private boolean field_E;
-    private vn[] field_y;
+    private Sprite[] field_y;
     private String field_O;
-    private rb field_bb;
+    private Font field_bb;
     private boolean field_cb;
     private int field_J;
     private int field_x;
     static int[] field_N;
     private int field_V;
     private int field_Q;
-    private vn field_R;
+    private Sprite field_R;
     private int field_fb;
     private int field_gb;
-    private vn field_C;
+    private Sprite field_C;
     private boolean field_X;
     private int field_T;
     private boolean field_eb;
     private String field_Z;
     private int field_M;
     private boolean field_w;
-    private vn[] field_db;
+    private Sprite[] field_db;
     private int field_z;
-    private vn field_B;
+    private Sprite field_B;
     private int field_ab;
-    private vn[] field_G;
+    private Sprite[] field_G;
     private int field_U;
     private int field_I;
     private int field_W;
-    private vn[] field_hb;
+    private Sprite[] field_hb;
 
     final static boolean a(int param0, char param1) {
         boolean stackIn_9_0 = false;
@@ -79,7 +79,7 @@ class cb extends ce {
           var1 = var6 + ":";
           for (var2 = 0; jd.field_b > var2; var2++) {
             var7 = var1 + ' ';
-            var3 = fj.field_g.field_h[var2] & 255;
+            var3 = fj.field_g.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {
@@ -224,7 +224,7 @@ class cb extends ce {
             }
           }
           if (param0 != -2147483648) {
-            this.field_D = (vn[]) null;
+            this.field_D = (Sprite[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

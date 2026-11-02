@@ -140,7 +140,7 @@ final class mb extends IntrusiveNode {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        de var2 = new de(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_x = var2.c(125);
         this.field_y = var2.c(101);
         this.field_w = var2.c(109);
@@ -161,7 +161,7 @@ final class mb extends IntrusiveNode {
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(var5, 0, var6, 11240);
+          var2.readBytes(var5, 0, var6, 11240);
           this.field_t[var4] = var6;
         }
     }
@@ -176,7 +176,7 @@ final class mb extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    private final static boolean a(dj param0) {
+    private final static boolean a(Js5Archive param0) {
         byte[] var1 = null;
         if (!field_n) {
           var1 = param0.a((byte) 51, 0, 0);
@@ -211,7 +211,7 @@ final class mb extends IntrusiveNode {
         return var1;
     }
 
-    final static mb a(dj param0, String param1, String param2) {
+    final static mb a(Js5Archive param0, String param1, String param2) {
         try {
           mb var4_ref = null;
           if (!mb.a(param0)) {
@@ -261,7 +261,7 @@ final class mb extends IntrusiveNode {
         field_L = 0;
     }
 
-    final static mb a(dj param0, int param1, int param2) {
+    final static mb a(Js5Archive param0, int param1, int param2) {
         try {
           mb var4_ref = null;
           if (!mb.a(param0)) {

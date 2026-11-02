@@ -243,12 +243,12 @@ final class ac extends al {
 
     private final void a(boolean param0, int param1, int param2, int param3) {
         int stackIn_13_0 = 0;
-        vn var6;
+        Sprite var6;
         int var7;
         int var8;
         int var9;
-        vn var10;
-        vn var11;
+        Sprite var10;
+        Sprite var11;
         int var7Lifetime1;
         var9 = ZombieDawn.field_J;
         var10 = f.field_d;
@@ -660,7 +660,7 @@ final class ac extends al {
 
     private final void a(int param0, byte param1) {
         int var3 = -9 / ((param1 + 11) / 63);
-        cc.field_k = new vn(640, 341);
+        cc.field_k = new Sprite(640, 341);
         cc.field_k.a();
         Rasterizer.d();
         this.e(-122, 0);

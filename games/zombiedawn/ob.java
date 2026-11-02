@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ob {
-    static vn[] field_c;
+    static Sprite[] field_c;
     static String[] field_a;
-    static vn[][] field_b;
+    static Sprite[][] field_b;
     private static String field_z;
 
     public static void a(int param0) {
@@ -12,13 +12,13 @@ final class ob {
         if (param0 < 30) {
           return;
         }
-        field_b = (vn[][]) null;
+        field_b = (Sprite[][]) null;
         field_c = null;
     }
 
     static {
         field_z = "ob.A(";
-        field_b = new vn[10][];
+        field_b = new Sprite[10][];
         field_a = new String[]{"All scores", "My scores", "Best each"};
     }
 }

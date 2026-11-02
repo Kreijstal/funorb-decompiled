@@ -7,7 +7,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     private SecondaryNodeDeque field_f;
     static f[] field_a;
     static int[] field_b;
-    static vn field_h;
+    static Sprite field_h;
     private DualLinkNode field_d;
     private DualLinkNode field_g;
     static String field_c;
@@ -94,21 +94,21 @@ final class SecondaryNodeDequeIterator implements Iterator {
     final static void a(int param0, boolean param1, bo param2) {
         am var5 = dp.field_e;
         var5.j(11, param0);
-        var5.field_j = var5.field_j + 1;
-        int var4 = var5.field_j;
-        var5.i(1, -111);
-        var5.i(param2.field_q, -101);
-        var5.i(param2.field_h, 40);
-        var5.h(-109, param2.field_j);
-        var5.h(-105, param2.field_k);
-        var5.h(98, param2.field_m);
-        var5.h(-118, param2.field_l);
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
+        var5.writeByte(1, -111);
+        var5.writeByte(param2.field_q, -101);
+        var5.writeByte(param2.field_h, 40);
+        var5.writeInt(-109, param2.field_j);
+        var5.writeInt(-105, param2.field_k);
+        var5.writeInt(98, param2.field_m);
+        var5.writeInt(-118, param2.field_l);
         if (!param1) {
           return;
         }
         try {
-          var5.e(-69, var4);
-          var5.d(-60, -var4 + var5.field_j);
+          var5.writeCrc32(-69, var4);
+          var5.d(-60, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ag.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

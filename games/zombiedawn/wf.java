@@ -4,11 +4,11 @@
 final class wf extends hm {
     static boolean[] field_P;
     private String field_Q;
-    private vn field_O;
+    private Sprite field_O;
     private vc field_R;
     private int field_T;
 
-    final boolean a(byte param0, ga param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -52,7 +52,7 @@ final class wf extends hm {
         }
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         try {
           int var5_int = 101 / ((46 - param1) / 42);
           this.field_T = this.field_T + 1;
@@ -70,27 +70,27 @@ final class wf extends hm {
         int var11;
         int var12;
         int var13;
-        vn var16;
+        Sprite var16;
         String var17;
         Object var18;
-        vn var19;
-        vn var20;
-        vn var21;
+        Sprite var19;
+        Sprite var20;
+        Sprite var21;
         String var22;
         Object var23;
-        vn var24;
-        vn var25;
-        vn var26;
+        Sprite var24;
+        Sprite var25;
+        Sprite var26;
         String var27;
         Object var28;
-        vn var29;
-        vn var30;
-        vn var33;
-        vn var34;
+        Sprite var29;
+        Sprite var30;
+        Sprite var33;
+        Sprite var34;
         Object var35;
-        vn var36;
-        vn var37;
-        vn var38;
+        Sprite var36;
+        Sprite var37;
+        Sprite var38;
         ak var39;
         ak var40;
         ak var41;
@@ -112,7 +112,7 @@ final class wf extends hm {
         String var5Lifetime1;
         rh var6Lifetime1;
         rh var6Lifetime2;
-        vn var16Lifetime1;
+        Sprite var16Lifetime1;
         var18 = null;
         var23 = null;
         var28 = null;
@@ -129,34 +129,34 @@ final class wf extends hm {
           var6 = this.field_R.a((byte) -120);
           var39 = (ak) ((Object) this.field_h);
           var9 = this.field_k + param2;
-          var10 = var39.a((ga) (this), param3 + 1, param0) + (var39.a(112, (ga) (this)).a((byte) 102) >> 1);
+          var10 = var39.a((UiWidget) (this), param3 + 1, param0) + (var39.a(112, (UiWidget) (this)).a((byte) 102) >> 1);
           if (var6 != se.field_l &&
             gj.field_v != var6) {
             if (var6 == MouseWheelInput.field_b) {
-              var20 = dj.field_k[2];
+              var20 = Js5Archive.field_k[2];
               var20.b(var9, -(var20.field_t >> 1) + var10, 256);
               return;
             }
             if (mc.field_g != var6) {
               return;
             }
-            var19 = dj.field_k[1];
+            var19 = Js5Archive.field_k[1];
             var19.b(var9, -(var19.field_t >> 1) + var10, 256);
             return;
           }
-          var21 = dj.field_k[0];
+          var21 = Js5Archive.field_k[0];
           var11 = var21.field_r << 1;
           var12 = var21.field_q << 1;
           if (this.field_O == null) {
-            this.field_O = new vn(var11, var12);
+            this.field_O = new Sprite(var11, var12);
             ki.a((byte) -118, this.field_O);
           } else {
             if (var11 > this.field_O.field_w) {
-              this.field_O = new vn(var11, var12);
+              this.field_O = new Sprite(var11, var12);
               ki.a((byte) -118, this.field_O);
             } else {
               if (var12 > this.field_O.field_t) {
-                this.field_O = new vn(var11, var12);
+                this.field_O = new Sprite(var11, var12);
                 ki.a((byte) -118, this.field_O);
               } else {
                 ki.a((byte) -103, this.field_O);
@@ -179,37 +179,37 @@ final class wf extends hm {
           var6 = this.field_R.a((byte) -120);
           var40 = (ak) ((Object) this.field_h);
           var9Lifetime1 = this.field_k + param2;
-          var10Lifetime1 = var40.a((ga) (this), param3 + 1, param0) + (var40.a(112, (ga) (this)).a((byte) 102) >> 1);
+          var10Lifetime1 = var40.a((UiWidget) (this), param3 + 1, param0) + (var40.a(112, (UiWidget) (this)).a((byte) 102) >> 1);
           if (var6 != se.field_l &&
             gj.field_v != var6) {
             if (var6 == MouseWheelInput.field_b) {
-              var25 = dj.field_k[2];
+              var25 = Js5Archive.field_k[2];
               var25.b(var9Lifetime1, -(var25.field_t >> 1) + var10Lifetime1, 256);
               return;
             }
             if (mc.field_g != var6) {
               return;
             }
-            var24 = dj.field_k[1];
+            var24 = Js5Archive.field_k[1];
             var24.b(var9Lifetime1, -(var24.field_t >> 1) + var10Lifetime1, 256);
             return;
           }
-          var26 = dj.field_k[0];
+          var26 = Js5Archive.field_k[0];
           var11Lifetime1 = var26.field_r << 1;
           var12Lifetime1 = var26.field_q << 1;
           if (this.field_O == null) {
-            this.field_O = new vn(var11Lifetime1, var12Lifetime1);
+            this.field_O = new Sprite(var11Lifetime1, var12Lifetime1);
             ki.a((byte) -118, this.field_O);
           } else {
             if (var11Lifetime1 > this.field_O.field_w) {
-              this.field_O = new vn(var11Lifetime1, var12Lifetime1);
+              this.field_O = new Sprite(var11Lifetime1, var12Lifetime1);
               ki.a((byte) -118, this.field_O);
             } else {
               if (var12Lifetime1 <= this.field_O.field_t) {
                 ki.a((byte) -103, this.field_O);
                 Rasterizer.d();
               } else {
-                this.field_O = new vn(var11Lifetime1, var12Lifetime1);
+                this.field_O = new Sprite(var11Lifetime1, var12Lifetime1);
                 ki.a((byte) -118, this.field_O);
               }
             }
@@ -229,22 +229,22 @@ final class wf extends hm {
           var6Lifetime1 = this.field_R.a((byte) -120);
           var42 = (ak) ((Object) this.field_h);
           var9Lifetime2 = this.field_k + param2;
-          var10Lifetime2 = var42.a((ga) (this), param3 + 1, param0) + (var42.a(112, (ga) (this)).a((byte) 102) >> 1);
+          var10Lifetime2 = var42.a((UiWidget) (this), param3 + 1, param0) + (var42.a(112, (UiWidget) (this)).a((byte) 102) >> 1);
           if (var6Lifetime1 != se.field_l &&
             gj.field_v != var6Lifetime1) {
             if (var6Lifetime1 == MouseWheelInput.field_b) {
-              var37 = dj.field_k[2];
+              var37 = Js5Archive.field_k[2];
               var37.b(var9Lifetime2, -(var37.field_t >> 1) + var10Lifetime2, 256);
               return;
             }
             if (mc.field_g != var6Lifetime1) {
               return;
             }
-            var36 = dj.field_k[1];
+            var36 = Js5Archive.field_k[1];
             var36.b(var9Lifetime2, -(var36.field_t >> 1) + var10Lifetime2, 256);
             return;
           }
-          var38 = dj.field_k[0];
+          var38 = Js5Archive.field_k[0];
           var11Lifetime2 = var38.field_r << 1;
           var12Lifetime2 = var38.field_q << 1;
           if (this.field_O != null &&
@@ -253,11 +253,11 @@ final class wf extends hm {
               ki.a((byte) -103, this.field_O);
               Rasterizer.d();
             } else {
-              this.field_O = new vn(var11Lifetime2, var12Lifetime2);
+              this.field_O = new Sprite(var11Lifetime2, var12Lifetime2);
               ki.a((byte) -118, this.field_O);
             }
           } else {
-            this.field_O = new vn(var11Lifetime2, var12Lifetime2);
+            this.field_O = new Sprite(var11Lifetime2, var12Lifetime2);
             ki.a((byte) -118, this.field_O);
           }
           var38.a(112, 144, var38.field_r << 4, var38.field_q << 4, -this.field_T << 10, 4096);
@@ -275,25 +275,25 @@ final class wf extends hm {
         var6Lifetime2 = this.field_R.a((byte) -120);
         var41 = (ak) ((Object) this.field_h);
         var9Lifetime3 = this.field_k + param2;
-        var10Lifetime3 = var41.a((ga) (this), param3 + 1, param0) + (var41.a(112, (ga) (this)).a((byte) 102) >> 1);
+        var10Lifetime3 = var41.a((UiWidget) (this), param3 + 1, param0) + (var41.a(112, (UiWidget) (this)).a((byte) 102) >> 1);
         if (var6Lifetime2 == se.field_l) {
-          var29 = dj.field_k[0];
+          var29 = Js5Archive.field_k[0];
           var16 = var29;
           var11Lifetime3 = var29.field_r << 1;
           var12Lifetime3 = var29.field_q << 1;
           if (this.field_O == null) {
-            this.field_O = new vn(var11Lifetime3, var12Lifetime3);
+            this.field_O = new Sprite(var11Lifetime3, var12Lifetime3);
             ki.a((byte) -118, this.field_O);
           } else {
             if (var11Lifetime3 > this.field_O.field_w) {
-              this.field_O = new vn(var11Lifetime3, var12Lifetime3);
+              this.field_O = new Sprite(var11Lifetime3, var12Lifetime3);
               ki.a((byte) -118, this.field_O);
             } else {
               if (var12Lifetime3 <= this.field_O.field_t) {
                 ki.a((byte) -103, this.field_O);
                 Rasterizer.d();
               } else {
-                this.field_O = new vn(var11Lifetime3, var12Lifetime3);
+                this.field_O = new Sprite(var11Lifetime3, var12Lifetime3);
                 ki.a((byte) -118, this.field_O);
               }
             }
@@ -305,31 +305,31 @@ final class wf extends hm {
         }
         if (gj.field_v != var6Lifetime2) {
           if (var6Lifetime2 == MouseWheelInput.field_b) {
-            var34 = dj.field_k[2];
+            var34 = Js5Archive.field_k[2];
             var34.b(var9Lifetime3, -(var34.field_t >> 1) + var10Lifetime3, 256);
             return;
           }
           if (mc.field_g != var6Lifetime2) {
             return;
           }
-          var33 = dj.field_k[1];
+          var33 = Js5Archive.field_k[1];
           var33.b(var9Lifetime3, -(var33.field_t >> 1) + var10Lifetime3, 256);
           return;
         }
-        var30 = dj.field_k[0];
+        var30 = Js5Archive.field_k[0];
         var16Lifetime1 = var30;
         var11Lifetime4 = var30.field_r << 1;
         var12Lifetime4 = var30.field_q << 1;
         if (this.field_O == null) {
-          this.field_O = new vn(var11Lifetime4, var12Lifetime4);
+          this.field_O = new Sprite(var11Lifetime4, var12Lifetime4);
           ki.a((byte) -118, this.field_O);
         } else {
           if (var11Lifetime4 > this.field_O.field_w) {
-            this.field_O = new vn(var11Lifetime4, var12Lifetime4);
+            this.field_O = new Sprite(var11Lifetime4, var12Lifetime4);
             ki.a((byte) -118, this.field_O);
           } else {
             if (var12Lifetime4 > this.field_O.field_t) {
-              this.field_O = new vn(var11Lifetime4, var12Lifetime4);
+              this.field_O = new Sprite(var11Lifetime4, var12Lifetime4);
               ki.a((byte) -118, this.field_O);
             } else {
               ki.a((byte) -103, this.field_O);

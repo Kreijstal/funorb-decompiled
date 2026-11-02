@@ -225,7 +225,7 @@ final class fg extends al {
         this.field_n = 0;
     }
 
-    final static vn d(int param0) {
+    final static Sprite d(int param0) {
         int var5 = 0;
         int var6 = 0;
         int var1;
@@ -239,7 +239,7 @@ final class fg extends al {
         byte[] var17;
         var7 = ZombieDawn.field_J;
         if (param0 > -98) {
-          return (vn) null;
+          return (Sprite) null;
         }
         var1 = uf.field_n[0] * bn.field_c[0];
         var17 = vj.field_m[0];
@@ -248,7 +248,7 @@ final class fg extends al {
           for (var5 = 0; var1 > var5; var5++) {
             var9[var5] = j.field_a[eg.a((int) var17[var5], 255)];
           }
-          var3 = new vn(gl.field_F, Zombie.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var9);
+          var3 = new Sprite(gl.field_F, Zombie.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var9);
         } else {
           var16 = ka.field_f[0];
           var13 = new int[var1];
@@ -260,7 +260,7 @@ final class fg extends al {
           var3 = new cd(gl.field_F, Zombie.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var13);
         }
         no.f((byte) -73);
-        return (vn) (var3);
+        return (Sprite) (var3);
     }
 
     final void a(int param0) {

@@ -349,7 +349,7 @@ final class kl extends al {
         bn.field_i = param0;
         ki.a((byte) -119, cc.field_b);
         Rasterizer.d();
-        vn var2 = f.field_d;
+        Sprite var2 = f.field_d;
         int var3 = 0;
         int var4 = 0;
         var2.b(var3 + 10, var4 + 10);

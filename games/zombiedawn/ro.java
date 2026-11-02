@@ -29,7 +29,7 @@ final class ro {
         }
     }
 
-    final static vn[] a(byte param0) {
+    final static Sprite[] a(byte param0) {
         byte[] var11 = null;
         byte[] var10 = null;
         int var2 = 0;
@@ -37,7 +37,7 @@ final class ro {
         int[] var5 = null;
         int var6 = 0;
         int var7 = ZombieDawn.field_J;
-        vn[] var1 = new vn[t.field_h];
+        Sprite[] var1 = new Sprite[t.field_h];
         int[] var5Lifetime1;
         int var2Lifetime1;
         int var6Lifetime1;
@@ -50,7 +50,7 @@ final class ro {
             for (var6 = 0; var3 > var6; var6++) {
               var5[var6] = j.field_a[eg.a((int) var11[var6], 255)];
             }
-            var1[var2] = new vn(gl.field_F, Zombie.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var5);
+            var1[var2] = new Sprite(gl.field_F, Zombie.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var5);
           }
           no.f((byte) -111);
           return var1;
@@ -63,7 +63,7 @@ final class ro {
           for (var6Lifetime1 = 0; var3Lifetime1 > var6Lifetime1; var6Lifetime1++) {
             var5Lifetime1[var6Lifetime1] = j.field_a[eg.a((int) var10[var6Lifetime1], 255)];
           }
-          var1[var2Lifetime1] = new vn(gl.field_F, Zombie.field_pb, sl.field_d[var2Lifetime1], bo.field_o[var2Lifetime1], bn.field_c[var2Lifetime1], uf.field_n[var2Lifetime1], var5Lifetime1);
+          var1[var2Lifetime1] = new Sprite(gl.field_F, Zombie.field_pb, sl.field_d[var2Lifetime1], bo.field_o[var2Lifetime1], bn.field_c[var2Lifetime1], uf.field_n[var2Lifetime1], var5Lifetime1);
         }
         no.f((byte) -111);
         return var1;

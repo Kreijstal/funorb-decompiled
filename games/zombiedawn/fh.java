@@ -11,7 +11,7 @@ final class fh extends hp implements ri, hh {
         super(0, 0, 496, 0, (io) null);
         this.field_F = new ic("", (sk) null, 12);
         vf var1 = new vf(SecondaryNodeDeque.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_e.field_I, -1, 2147483647, true);
-        ga var2 = new ga(rc.field_j, var1, (sk) null);
+        UiWidget var2 = new UiWidget(rc.field_j, var1, (sk) null);
         this.field_H = new an(TileMap.field_n, (sk) null);
         this.field_G = new an(vi.field_b, (sk) null);
         this.field_F.field_s = sn.field_d;
@@ -42,8 +42,8 @@ final class fh extends hp implements ri, hh {
     private final boolean h(int param0) {
         int discarded$0 = 0;
         if (param0 != 13) {
-          ga var3 = (ga) null;
-          discarded$0 = this.a(106, (String) null, (byte) -4, (String) null, (ga) null, -13);
+          UiWidget var3 = (UiWidget) null;
+          discarded$0 = this.a(106, (String) null, (byte) -4, (String) null, (UiWidget) null, -13);
           if (this.a(65, (mi) (this.field_F))) {
             return true;
           }
@@ -55,7 +55,7 @@ final class fh extends hp implements ri, hh {
         return false;
     }
 
-    private final int a(int param0, int param1, ga param2, String param3, int param4, int param5, String param6) {
+    private final int a(int param0, int param1, UiWidget param2, String param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
         wf var9 = null;
         q var10 = null;
@@ -179,7 +179,7 @@ final class fh extends hp implements ri, hh {
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -279,7 +279,7 @@ final class fh extends hp implements ri, hh {
         ((pg) (qk.field_Jb[14])).d((byte) -41);
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         try {
           super.a(param0, (byte) -48, param2, param3);
           int var5_int = 102 % ((param1 - 46) / 42);
@@ -303,7 +303,7 @@ final class fh extends hp implements ri, hh {
         return ae.field_b[var4];
     }
 
-    private final int a(int param0, String param1, byte param2, String param3, ga param4, int param5) {
+    private final int a(int param0, String param1, byte param2, String param3, UiWidget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -365,7 +365,7 @@ final class fh extends hp implements ri, hh {
               this.e((byte) 117);
             }
           } else {
-            dj.a(113);
+            Js5Archive.a(113);
           }
           if (param1 == -6) {
             return;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bh extends IntrusiveNode {
-    static vn field_j;
+    static Sprite field_j;
     static java.applet.Applet field_i;
     byte[] field_k;
     static String field_h;

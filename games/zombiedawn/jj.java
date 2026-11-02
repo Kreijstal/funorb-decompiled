@@ -79,7 +79,7 @@ final class jj extends WorldObject {
         RuntimeException var1 = null;
         var2 = ZombieDawn.field_J;
         try {
-          Camera.field_o = new vn(512, 512);
+          Camera.field_o = new Sprite(512, 512);
           Camera.field_o.a();
           for (var1_int = 256; var1_int > 0; var1_int--) {
             Rasterizer.g(256, 256, var1_int, -var1_int + 256);
@@ -98,13 +98,13 @@ final class jj extends WorldObject {
         }
     }
 
-    final static String a(int param0, int param1, de param2) {
+    final static String a(int param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         String var5 = null;
-        de var6 = null;
+        PacketBuffer var6 = null;
         String stackIn_6_0 = null;
         String stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -118,12 +118,12 @@ final class jj extends WorldObject {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param2.field_j = param2.field_j + pi.field_l.a(param2.field_h, 0, var3_int, param1 ^ -28649, param2.field_j, var4);
+            param2.position = param2.position + pi.field_l.a(param2.payload, 0, var3_int, param1 ^ -28649, param2.position, var4);
             if (param1 != -23171) {
-              var6 = (de) null;
-              jj.a(57, -111, (de) null);
+              var6 = (PacketBuffer) null;
+              jj.a(57, -111, (PacketBuffer) null);
             }
-            var5 = fa.a(var4, var3_int, 0, -78);
+            var5 = SpatialObject.a(var4, var3_int, 0, -78);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -7,7 +7,7 @@ final class nc extends IntrusiveNode {
     static PcmSampleStream field_r;
     static int field_j;
     private int field_i;
-    static vn field_k;
+    static Sprite field_k;
     private int field_s;
     private int field_n;
     int field_q;
@@ -84,13 +84,13 @@ final class nc extends IntrusiveNode {
           return;
         }
         this.field_s = 0;
-        var2 = (WorldObject) (dj.field_e.field_R.b((byte) 26));
+        var2 = (WorldObject) (Js5Archive.field_e.zombies.b((byte) 26));
         while (var2 != null) {
           if (var2 instanceof Human) {
             var3 = (Human) (var2);
             var3.a(this, -26246);
           }
-          var2 = (WorldObject) (dj.field_e.field_R.a(false));
+          var2 = (WorldObject) (Js5Archive.field_e.zombies.a(false));
         }
         this.field_i = this.field_i + 7;
         if (param0) {

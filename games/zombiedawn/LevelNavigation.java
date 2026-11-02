@@ -30,9 +30,9 @@ final class LevelNavigation {
     private int field_f;
     static int field_x;
     private int field_r;
-    static vn field_a;
+    static Sprite field_a;
     private int[] field_m;
-    static vn[] field_o;
+    static Sprite[] field_o;
 
     final int[][] a(int param0) {
         int var4 = 0;
@@ -116,8 +116,8 @@ final class LevelNavigation {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        vn var12_ref_vn = null;
-        vn var13 = null;
+        Sprite var12_ref_vn = null;
+        Sprite var13 = null;
         int var13_int = 0;
         int var14 = 0;
         var14 = ZombieDawn.field_J;
@@ -373,7 +373,7 @@ final class LevelNavigation {
                   var20 = var27.d((byte) -127);
                   var21 = cm.field_b[var20].field_c;
                   var22 = var27.c(true);
-                  var24 = var27.field_j;
+                  var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = cm.field_b[var20].field_d;
@@ -390,7 +390,7 @@ final class LevelNavigation {
                     var8[1][var13] = ce.field_r;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var27.field_j = var24;
+                    var27.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
@@ -405,7 +405,7 @@ final class LevelNavigation {
                     var9[2][var14] = cm.field_b[var20].field_d;
                     var10[2][var14] = var22;
                     var14++;
-                    var27.field_j = var24;
+                    var27.position = var24;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
@@ -683,7 +683,7 @@ final class LevelNavigation {
         if (this.field_t) {
           this.c((byte) -88);
           if (!this.field_t) {
-            dj.field_e.a(true);
+            Js5Archive.field_e.a(true);
             if (this.field_q) {
               this.field_q = false;
               this.a(true, 108);
@@ -771,7 +771,7 @@ final class LevelNavigation {
             }
           } else {
             m.field_A = null;
-            m.field_A = new vn(24 + bd.field_e, nh.field_P + 24);
+            m.field_A = new Sprite(24 + bd.field_e, nh.field_P + 24);
             this.field_y = -1;
           }
           if (this.field_y >= 0) {
@@ -830,13 +830,13 @@ final class LevelNavigation {
             param1.y = param1.y + var4;
             if (6 == this.field_A.field_a && (this.field_n <= this.field_g ||
               this.field_z >= this.field_r)) {
-              var15 = dj.field_e.field_R.b((byte) 26);
+              var15 = Js5Archive.field_e.zombies.b((byte) 26);
               while (var15 != null) {
                 if (var15 instanceof oo) {
                   var20 = (oo) (var15);
                   var20.a(param1, (byte) 65);
                 }
-                var15 = dj.field_e.field_R.a(false);
+                var15 = Js5Archive.field_e.zombies.a(false);
               }
             }
             param1.y = param1.y - var4;
@@ -1220,7 +1220,7 @@ final class LevelNavigation {
           if (param1) {
             return;
           }
-          if (ga.field_w) {
+          if (UiWidget.field_w) {
             var3_intLifetime1 = param0.a(ha.field_b, false);
             var4Lifetime1 = param0.b(ei.field_K, true);
             for (var5Lifetime1 = 0; this.field_i.length > var5Lifetime1; var5Lifetime1++) {

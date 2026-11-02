@@ -3,8 +3,8 @@
  */
 final class ed {
     static String field_c;
-    static vn[] field_a;
-    static vn[] field_b;
+    static Sprite[] field_a;
+    static Sprite[] field_b;
 
     final static void a(int param0) {
         r.a(da.field_i, -49, true, to.field_d);

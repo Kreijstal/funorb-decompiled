@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nh extends hp implements hh {
-    static vn[] field_R;
+    static Sprite[] field_R;
     qi field_F;
     private an field_N;
     private an field_Q;
@@ -11,14 +11,14 @@ final class nh extends hp implements hh {
     pk field_T;
     String field_U;
     static int field_I;
-    rb field_L;
+    Font field_L;
     static int field_P;
     private boolean field_S;
     private int field_M;
     private int field_V;
     static GameApplet field_J;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -152,7 +152,7 @@ final class nh extends hp implements hh {
         this.c(param2, param1, param3, param4, 81);
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         boolean stackIn_56_0 = false;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -280,7 +280,7 @@ final class nh extends hp implements hh {
         return this.field_T.field_K;
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         try {
           super.a(param0, (byte) -7, param2, param3);
           int var5_int = 60 / ((param1 - 46) / 42);
@@ -353,7 +353,7 @@ final class nh extends hp implements hh {
         }
     }
 
-    final boolean a(byte param0, ga param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -361,14 +361,14 @@ final class nh extends hp implements hh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 67) {
-            this.field_L = (rb) null;
+            this.field_L = (Font) null;
           }
           param1.c((byte) 57);
           this.field_S = true;
           this.field_U = "";
           if (null != this.field_v &&
             this.field_v instanceof ef) {
-            ((ef) (this.field_v)).a(this.field_S, (ga) (this), (byte) 15);
+            ((ef) (this.field_v)).a(this.field_S, (UiWidget) (this), (byte) 15);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

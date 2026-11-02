@@ -14,7 +14,7 @@ final class jc extends IntrusiveNode {
     boolean field_j;
     static String[] field_p;
     int[][] field_k;
-    static vn[] field_t;
+    static Sprite[] field_t;
     static int[] field_n;
 
     final static void a(byte param0, java.applet.Applet param1) {

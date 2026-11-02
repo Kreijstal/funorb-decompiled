@@ -34,12 +34,12 @@ final class gb extends WorldObject {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        dj var15 = null;
+        Js5Archive var15 = null;
         var14 = ZombieDawn.field_J;
         try {
           if (param0 > -76) {
-            var15 = (dj) null;
-            gb.a((String) null, -100, (dj) null, (String) null, (dj) null);
+            var15 = (Js5Archive) null;
+            gb.a((String) null, -100, (Js5Archive) null, (String) null, (Js5Archive) null);
           }
           var3_int = 0;
           if (this.field_F) {
@@ -101,7 +101,7 @@ final class gb extends WorldObject {
         }
     }
 
-    final static oi a(String param0, int param1, dj param2, String param3, dj param4) {
+    final static oi a(String param0, int param1, Js5Archive param2, String param3, Js5Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -165,19 +165,19 @@ final class gb extends WorldObject {
         va var4;
         int var5;
         int var6;
-        dj var7;
+        Js5Archive var7;
         Zombie var8;
         int var5Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var6 = ZombieDawn.field_J;
-        if (5 == dj.field_e.field_H.field_A.field_a) {
+        if (5 == Js5Archive.field_e.field_H.field_A.field_a) {
           var2 = (this.getX(true) + 12) / 24;
           var3 = (-1 + this.getY(237239984)) / 24;
           if (var2 >= 0 &&
             var3 >= 0 &&
-            dj.field_e.field_H.field_A.field_f[0].length > var2 &&
-            dj.field_e.field_H.field_A.field_f.length > var3) {
-            var4 = ub.a(127, dj.field_e.field_H.field_A.field_f[var3][var2]);
+            Js5Archive.field_e.field_H.field_A.field_f[0].length > var2 &&
+            Js5Archive.field_e.field_H.field_A.field_f.length > var3) {
+            var4 = ub.a(127, Js5Archive.field_e.field_H.field_A.field_f[var3][var2]);
             if ((var4 != null)) {
               if (0 <= var4.field_h) {
                 if (var4.field_h <= 0) {
@@ -228,8 +228,8 @@ final class gb extends WorldObject {
         }
         this.field_E = this.field_E + 1;
         if (param0 < 95) {
-          var7 = (dj) null;
-          gb.a((String) null, 58, (dj) null, (String) null, (dj) null);
+          var7 = (Js5Archive) null;
+          gb.a((String) null, 58, (Js5Archive) null, (String) null, (Js5Archive) null);
         }
         if (this.field_E >= 120) {
           this.field_E = 0;
@@ -241,11 +241,11 @@ final class gb extends WorldObject {
           var8 = (Zombie) (this.a((byte) -74, 36, 2));
           while (var8 != null) {
             if (var8.i((byte) -126) &&
-              dj.field_e.field_Q.b(-4149, this.field_t)) {
+              Js5Archive.field_e.field_Q.b(-4149, this.field_t)) {
               kh.a(9, false);
               ck.a(this.field_t, 6836);
-              if (dj.field_e.field_q == 4 &&
-                dj.field_e.field_h == 0) {
+              if (Js5Archive.field_e.field_q == 4 &&
+                Js5Archive.field_e.field_h == 0) {
                 if (cm.field_c == null &&
                   this.field_t == 12) {
                   cm.field_c = var8;
@@ -253,7 +253,7 @@ final class gb extends WorldObject {
                   if (cm.field_c == var8 &&
                     this.field_t == 0 &&
                     !var8.x(124)) {
-                    dj.field_e.a(241, 14, (byte) -23);
+                    Js5Archive.field_e.a(241, 14, (byte) -23);
                   }
                 }
               }

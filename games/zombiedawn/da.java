@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class da extends IntrusiveNode {
-    static dj field_l;
+    static Js5Archive field_l;
     static sf field_j;
     static String field_i;
     static int field_h;
@@ -38,11 +38,11 @@ final class da extends IntrusiveNode {
           var1 = dp.field_e;
           while (jh.a((byte) 103)) {
             var1.j(11, 8);
-            fieldTemp$0 = var1.field_j + 1;
-            var1.field_j = var1.field_j + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             dn.a(var1, 84);
-            dp.field_e.d(-128, var1.field_j - var2);
+            dp.field_e.d(-128, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

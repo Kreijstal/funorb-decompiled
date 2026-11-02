@@ -307,11 +307,11 @@ abstract class pn extends ei {
             og.field_A = true;
             kh.a(64, false);
             vf.field_c = kh.a(150, false);
-            dj.field_e.field_R.addFirst(0, ne.field_c);
+            Js5Archive.field_e.zombies.addFirst(0, ne.field_c);
             for (var5Lifetime1 = 0; pl.field_t.length > var5Lifetime1; var5Lifetime1++) {
-              dj.field_e.field_R.addFirst(0, pl.field_t[var5Lifetime1]);
+              Js5Archive.field_e.zombies.addFirst(0, pl.field_t[var5Lifetime1]);
             }
-            dj.field_e.field_R.addFirst(0, new jj(370, 550));
+            Js5Archive.field_e.zombies.addFirst(0, new jj(370, 550));
           } else {
             if (ac.field_m != 950) {
               if (ac.field_m != 700) {

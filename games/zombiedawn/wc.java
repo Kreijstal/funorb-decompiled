@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class wc extends qk {
-    static vn field_Pb;
+    static Sprite field_Pb;
     private int field_Qb;
     static volatile int field_Ob;
     static int[] field_Nb;
@@ -17,7 +17,7 @@ class wc extends qk {
           this.field_yb = null;
         }
         int var5 = -1;
-        IntrusiveNode var6 = dj.field_e.field_R.b((byte) 26);
+        IntrusiveNode var6 = Js5Archive.field_e.zombies.b((byte) 26);
         while (var6 instanceof WorldObject) {
           if (var6 instanceof Zombie &&
             ((Zombie) (var6)).x(94)) {
@@ -229,7 +229,7 @@ class wc extends qk {
             while (var9 < var8) {
               var11 = qd.field_c[var9];
               var6[0][var10] = bb.field_b[var11];
-              var18[0][var10 * 4] = dj.field_g[var11];
+              var18[0][var10 * 4] = Js5Archive.field_g[var11];
               var18[0][1 + 4 * var10] = qo.field_r[var11];
               var18[0][2 + var10 * 4] = sg.field_kb[var11];
               var18[0][var10 * 4 + 3] = jd.field_d[var11];
@@ -247,7 +247,7 @@ class wc extends qk {
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = qd.field_c[var9Lifetime1 + var5];
               var6[1][var13] = bb.field_b[var11Lifetime1];
-              var18[1][4 * var13] = dj.field_g[var11Lifetime1];
+              var18[1][4 * var13] = Js5Archive.field_g[var11Lifetime1];
               var18[1][1 + 4 * var13] = qo.field_r[var11Lifetime1];
               var18[1][var13 * 4 + 2] = sg.field_kb[var11Lifetime1];
               var18[1][4 * var13 + 3] = jd.field_d[var11Lifetime1];
@@ -358,7 +358,7 @@ class wc extends qk {
     }
 
     static {
-        field_Pb = new vn(270, 70);
+        field_Pb = new Sprite(270, 70);
         field_Ob = 0;
         field_Nb = new int[8192];
     }

@@ -10,7 +10,7 @@ final class jo extends qk {
     private boolean field_Sb;
     static vf field_Ob;
     private int field_Pb;
-    static vn[][] field_Tb;
+    static Sprite[][] field_Tb;
 
     final void l(byte param0) {
         int var2;
@@ -37,7 +37,7 @@ final class jo extends qk {
         if (this.field_Sb) {
           this.state = 23;
           if (-1 != this.field_Rb) {
-            var10 = dj.field_e.field_H.a(true, this.getX(true), this.field_Pb, this.field_Rb, this.getY(237239984));
+            var10 = Js5Archive.field_e.field_H.a(true, this.getX(true), this.field_Pb, this.field_Rb, this.getY(237239984));
             if (var10 != null) {
               var3_ref_kk = (Point) (var10.b((byte) 26));
               this.field_Pb = var3_ref_kk.y;
@@ -133,12 +133,12 @@ final class jo extends qk {
     public static void o(byte param0) {
         field_Nb = null;
         if (param0 <= -59) {
-          field_Tb = (vn[][]) null;
+          field_Tb = (Sprite[][]) null;
           field_Ob = null;
           return;
         }
         jo.o((byte) -101);
-        field_Tb = (vn[][]) null;
+        field_Tb = (Sprite[][]) null;
         field_Ob = null;
     }
 
@@ -208,13 +208,13 @@ final class jo extends qk {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          de var2_ref_de = null;
+          PacketBuffer var2_ref_de = null;
           int var2 = 0;
-          if (tf.field_c.field_h >= 4) {
-            if (tf.field_c.field_e == -1) {
+          if (SpatialBucket.field_c.field_h >= 4) {
+            if (SpatialBucket.field_c.field_e == -1) {
               return 3;
             }
-            if (tf.field_c.field_e == -2) {
+            if (SpatialBucket.field_c.field_e == -2) {
               return 4;
             }
             return 1;
@@ -236,11 +236,11 @@ final class jo extends qk {
             }
             if (jd.field_a == 2) {
               sb.field_a = new BufferedSocket((java.net.Socket) (GameWorld.field_O.field_d), lc.field_a);
-              var2_ref_de = new de(13);
+              var2_ref_de = new PacketBuffer(13);
               uj.a(ha.field_a, uj.field_d, (byte) -114, var2_ref_de, nd.field_a);
-              var2_ref_de.i(15, -101);
-              var2_ref_de.h(-116, wh.field_b);
-              sb.field_a.a(13, true, 0, var2_ref_de.field_h);
+              var2_ref_de.writeByte(15, -101);
+              var2_ref_de.writeInt(-116, wh.field_b);
+              sb.field_a.a(13, true, 0, var2_ref_de.payload);
               jd.field_a = jd.field_a + 1;
               ul.field_e = 30000L + pd.a(-22826);
             }
@@ -263,7 +263,7 @@ final class jo extends qk {
               stackIn_35_0 = -1;
               return stackIn_35_0;
             }
-            tf.field_c.a(bo.field_n, sb.field_a, 120);
+            SpatialBucket.field_c.a(bo.field_n, sb.field_a, 120);
             sb.field_a = null;
             jd.field_a = 0;
             GameWorld.field_O = null;
@@ -346,6 +346,6 @@ final class jo extends qk {
     static {
         field_Qb = 5;
         field_Nb = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
-        field_Tb = new vn[2][];
+        field_Tb = new Sprite[2][];
     }
 }

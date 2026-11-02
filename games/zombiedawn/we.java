@@ -8,9 +8,9 @@ final class we extends qk {
     static String field_Rb;
     static String[] field_Sb;
     private int field_Vb;
-    static vn field_Ub;
+    static Sprite field_Ub;
     private int field_Nb;
-    static vn field_Tb;
+    static Sprite field_Tb;
     private Zombie field_Qb;
     private int field_Pb;
 
@@ -82,13 +82,13 @@ final class we extends qk {
         field_Tb = null;
         field_Ub = null;
         if (param0 != 16777215) {
-          field_Ub = (vn) null;
+          field_Ub = (Sprite) null;
         }
     }
 
     final void l(byte param0) {
         if (param0 != 52) {
-          field_Tb = (vn) null;
+          field_Tb = (Sprite) null;
         }
         if (this.a(-117, this.field_Nb, false)) {
           this.m((byte) -123);
@@ -302,7 +302,7 @@ final class we extends qk {
               var6_ref = (Zombie) (this.e((byte) 32));
               continue;
             }
-            var9 = dj.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+            var9 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
             if (var9 != null) {
               if (var6_ref.field_Bb == 0 && (!(var9.field_g <= var5) ||
                 var5 == -1)) {
@@ -341,7 +341,7 @@ final class we extends qk {
                 var6_ref = (Zombie) (this.e((byte) 32));
                 continue;
               }
-              var10 = dj.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+              var10 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var10 != null) {
                 if (var6_ref.field_Bb == 0 && (!(var10.field_g <= var5) ||
                   var5 == -1)) {
@@ -364,7 +364,7 @@ final class we extends qk {
                 var6_ref = (Zombie) (this.e((byte) 32));
                 continue;
               }
-              var17 = dj.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+              var17 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var17 != null) {
                 if (var6_ref.field_Bb == 0 && (!(var17.field_g <= var5) ||
                   var5 == -1)) {
@@ -400,7 +400,7 @@ final class we extends qk {
           rn.field_b.field_c = false;
           p.b(0, 27102);
           if (param0 > -45) {
-            field_Tb = (vn) null;
+            field_Tb = (Sprite) null;
             return;
           }
           return;
@@ -409,7 +409,7 @@ final class we extends qk {
         if (param0 <= -45) {
           return;
         }
-        field_Tb = (vn) null;
+        field_Tb = (Sprite) null;
     }
 
     private final void z(int param0) {

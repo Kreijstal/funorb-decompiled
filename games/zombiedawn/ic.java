@@ -55,7 +55,7 @@ final class ic extends tb implements mi {
         field_W = null;
     }
 
-    final static String a(String param0, byte param1, String param2, dj param3) {
+    final static String a(String param0, byte param1, String param2, Js5Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
@@ -217,7 +217,7 @@ final class ic extends tb implements mi {
         }
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         try {
           super.a(param0, (byte) 121, param2, param3);
           int var5_int = -112 % ((46 - param1) / 42);

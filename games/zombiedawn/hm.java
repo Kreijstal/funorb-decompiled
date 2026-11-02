@@ -3,7 +3,7 @@
  */
 class hm extends an {
     private IntrusiveDeque field_I;
-    static vn field_E;
+    static Sprite field_E;
     private String[] field_K;
     private eg field_G;
     static long field_N;
@@ -13,17 +13,17 @@ class hm extends an {
     static int[][] field_F;
     static int field_J;
 
-    boolean a(byte param0, ga param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        ga var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 67) {
-            var4 = (ga) null;
-            this.a((ga) null, (byte) 86, -110, -12);
+            var4 = (UiWidget) null;
+            this.a((UiWidget) null, (byte) 86, -110, -12);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,7 +144,7 @@ class hm extends an {
         }
         var2 = 0;
         var3 = (ak) ((Object) this.field_h);
-        var4 = var3.a(-113, (ga) (this));
+        var4 = var3.a(-113, (UiWidget) (this));
         while (true) {
           var5 = this.field_o.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -204,7 +204,7 @@ class hm extends an {
         RuntimeException runtimeException = null;
         String[] var4 = null;
         int var6 = 0;
-        ga var7 = null;
+        UiWidget var7 = null;
         String[] var8 = null;
         String[] var9 = null;
         RuntimeException stackIn_15_0 = null;
@@ -226,8 +226,8 @@ class hm extends an {
             this.field_K = var9;
           }
           if (param1 != -21423) {
-            var7 = (ga) null;
-            this.a((ga) null, (byte) 100, -58, -75);
+            var7 = (UiWidget) null;
+            this.a((UiWidget) null, (byte) 100, -58, -75);
           }
           this.field_K[param0] = param2;
           return;
@@ -247,14 +247,14 @@ class hm extends an {
 
     final void a(int param0, int param1, boolean param2, int param3) {
         if (param2) {
-          this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (ga) (this)));
+          this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (UiWidget) (this)));
           return;
         }
         hm.g(-53);
-        this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (ga) (this)));
+        this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (UiWidget) (this)));
     }
 
-    void a(ga param0, byte param1, int param2, int param3) {
+    void a(UiWidget param0, byte param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         try {
@@ -282,8 +282,8 @@ class hm extends an {
           var6 = this.field_G;
           if (var6 == null) {
           } else {
-            var7 = var5.b((ga) (this), 128, param2);
-            var8 = var5.a((ga) (this), 1, param0);
+            var7 = var5.b((UiWidget) (this), 128, param2);
+            var8 = var5.a((UiWidget) (this), 1, param0);
             do {
               TileMap.b(var6.field_j + 2, var6.field_m + 2, var6.field_i + var7 - 2, param3 + 117, var6.field_k + var8 - 2);
               var6 = var6.field_h;
@@ -369,7 +369,7 @@ class hm extends an {
           field_F = (int[][]) null;
           return;
         }
-        field_E = (vn) null;
+        field_E = (Sprite) null;
         field_F = (int[][]) null;
     }
 

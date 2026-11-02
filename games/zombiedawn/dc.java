@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dc {
-    static vn[] field_a;
+    static Sprite[] field_a;
 
     final static void a(byte param0) {
         if (param0 <= 107) {
-          field_a = (vn[]) null;
+          field_a = (Sprite[]) null;
           if (df.field_h) {
             nm.field_b = false;
             df.field_h = false;
@@ -43,13 +43,13 @@ final class dc {
           se.field_m.addFirst(param0 ^ 18, var2);
           return var2.field_j;
         }
-        field_a = (vn[]) null;
+        field_a = (Sprite[]) null;
         var2Lifetime1 = new tm(param1);
         se.field_m.addFirst(param0 ^ 18, var2Lifetime1);
         return var2Lifetime1.field_j;
     }
 
     static {
-        field_a = new vn[2];
+        field_a = new Sprite[2];
     }
 }

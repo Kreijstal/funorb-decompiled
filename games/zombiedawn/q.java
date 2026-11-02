@@ -6,9 +6,9 @@ final class q extends pa {
     private int field_D;
     private int field_J;
     private String field_F;
-    private rb field_E;
+    private Font field_E;
     private boolean field_K;
-    static rb field_H;
+    static Font field_H;
     private int field_I;
 
     final String d(int param0) {
@@ -23,14 +23,14 @@ final class q extends pa {
     public static void c(boolean param0) {
         field_H = null;
         if (param0) {
-          field_H = (rb) null;
+          field_H = (Font) null;
           field_G = null;
           return;
         }
         field_G = null;
     }
 
-    q(int param0, int param1, int param2, int param3, ga param4, boolean param5, int param6, int param7, rb param8, int param9, String param10) {
+    q(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, Font param8, int param9, String param10) {
         super(param0, param1, param2, param3, (io) null, (sk) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

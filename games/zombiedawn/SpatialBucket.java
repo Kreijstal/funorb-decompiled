@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tf {
-    private fa field_a;
-    static vn[] field_b;
-    private fa field_d;
+final class SpatialBucket {
+    private SpatialObject field_a;
+    static Sprite[] field_b;
+    private SpatialObject field_d;
     static pc field_c;
 
     final static int a(boolean param0, int param1, CharSequence param2, int param3) {
@@ -28,7 +28,7 @@ final class tf {
             param3 <= 36) {
             var4_int = 0;
             if (param1 != 5) {
-              field_b = (vn[]) null;
+              field_b = (Sprite[]) null;
             }
             var5 = 0;
             var6 = 0;
@@ -90,8 +90,8 @@ final class tf {
         }
     }
 
-    final fa b(int param0) {
-        fa var2 = this.field_a.field_q;
+    final SpatialObject b(int param0) {
+        SpatialObject var2 = this.field_a.field_q;
         if (var2 != this.field_a) {
           int var3 = 59 % ((-16 - param0) / 44);
           this.field_d = var2.field_q;
@@ -105,7 +105,7 @@ final class tf {
         field_c = null;
         field_b = null;
         if (param0 != -12220) {
-          field_b = (vn[]) null;
+          field_b = (Sprite[]) null;
         }
     }
 
@@ -134,7 +134,7 @@ final class tf {
           var4 = var5;
           int[] var1 = var4;
           if (param0 != 119) {
-            field_b = (vn[]) null;
+            field_b = (Sprite[]) null;
           }
           sg.field_jb.field_O = new int[11][];
           sg.field_jb.field_O[0] = var6;
@@ -158,14 +158,14 @@ final class tf {
         }
     }
 
-    public tf() {
-        this.field_a = new fa();
+    public SpatialBucket() {
+        this.field_a = new SpatialObject();
         this.field_a.field_q = this.field_a;
         this.field_a.field_r = this.field_a;
     }
 
-    final fa a(int param0) {
-        fa var2 = this.field_d;
+    final SpatialObject a(int param0) {
+        SpatialObject var2 = this.field_d;
         if (this.field_a == var2) {
           this.field_d = null;
           return null;
@@ -174,12 +174,12 @@ final class tf {
           this.field_d = var2.field_q;
           return var2;
         }
-        tf.c(43);
+        SpatialBucket.c(43);
         this.field_d = var2.field_q;
         return var2;
     }
 
-    final void a(byte param0, fa param1) {
+    final void a(byte param0, SpatialObject param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -196,7 +196,7 @@ final class tf {
           if (param0 > 16) {
             return;
           }
-          this.field_d = (fa) null;
+          this.field_d = (SpatialObject) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

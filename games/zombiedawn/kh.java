@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kh implements io {
-    static vn field_a;
+    static Sprite field_a;
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         try {
           if (param0 != 16777215) {
-            field_a = (vn) null;
+            field_a = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "kh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

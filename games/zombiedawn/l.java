@@ -3,7 +3,7 @@
  */
 final class l extends ll {
     static int field_e;
-    static vn[] field_b;
+    static Sprite[] field_b;
     private String field_c;
     private String field_f;
     static String field_g;
@@ -54,13 +54,13 @@ final class l extends ll {
         }
     }
 
-    final void a(boolean param0, de param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         try {
           if (param0) {
             java.awt.Component var4 = (java.awt.Component) null;
             l.a(-71, 119, (java.awt.Component) null, -102);
           }
-          param1.a((byte) -88, this.field_f);
+          param1.writeTerminatedStringWithHeader((byte) -88, this.field_f);
           param1.a(this.field_c, (byte) 95);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "l.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -69,7 +69,7 @@ final class l extends ll {
 
     final nk a(byte param0) {
         if (param0 != -102) {
-          field_b = (vn[]) null;
+          field_b = (Sprite[]) null;
           return dp.field_a;
         }
         return dp.field_a;
@@ -91,7 +91,7 @@ final class l extends ll {
           try {
             try {
               if (param0 != -1) {
-                field_b = (vn[]) null;
+                field_b = (Sprite[]) null;
               }
               var4 = Class.forName("ai");
               var5 = (dh) (var4.newInstance());

@@ -4,7 +4,7 @@
 final class ng {
     static MouseInputHandler field_b;
     static boolean field_e;
-    static vn[] field_c;
+    static Sprite[] field_c;
     static fk field_a;
     static String field_d;
 

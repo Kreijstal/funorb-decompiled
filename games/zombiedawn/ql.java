@@ -6,7 +6,7 @@ final class ql extends pm {
     static String field_f;
     private String field_i;
     static float field_j;
-    static vn field_g;
+    static Sprite field_g;
 
     final static void d(int param0) {
         int var1 = 0;
@@ -26,13 +26,13 @@ final class ql extends pm {
         if (!po.w(13296)) {
           var4 = dp.field_e;
           var4.j(11, param1);
-          var4.field_j = var4.field_j + 1;
-          var5 = var4.field_j;
-          var4.i(0, 97);
-          var4.a(param3, (byte) 105);
-          var4.i(param2, 82);
-          var4.a(param0, (byte) 105);
-          var4.d(60, var4.field_j - var5);
+          var4.position = var4.position + 1;
+          var5 = var4.position;
+          var4.writeByte(0, 97);
+          var4.writeShort(param3, (byte) 105);
+          var4.writeByte(param2, 82);
+          var4.writeShort(param0, (byte) 105);
+          var4.d(60, var4.position - var5);
           return;
         }
     }
@@ -66,7 +66,7 @@ final class ql extends pm {
             }
           }
           if (param1 != 2) {
-            field_g = (vn) null;
+            field_g = (Sprite) null;
           }
           if (this.field_h) {
             stackIn_16_0 = mc.field_g;
@@ -124,7 +124,7 @@ final class ql extends pm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -94) {
-            field_g = (vn) null;
+            field_g = (Sprite) null;
           }
           var5 = (CharSequence) ((Object) param0);
           var3 = ed.a(var5, (byte) -105);

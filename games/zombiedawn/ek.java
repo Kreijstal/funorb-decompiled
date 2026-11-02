@@ -81,7 +81,7 @@ final class ek extends WorldObject {
                 return;
               }
               if (!ng.field_e &&
-                dj.field_e.field_H.field_b[this.getY(237239984) / 24][this.getX(true) / 24]) {
+                Js5Archive.field_e.field_H.field_b[this.getY(237239984) / 24][this.getX(true) / 24]) {
                 return;
               }
               bg.field_o[this.field_F].e(var3_int, var4, this.field_H);

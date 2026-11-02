@@ -11,7 +11,7 @@ final class vl implements io {
     static vk field_m;
     private int field_j;
     static String[] field_p;
-    private rb field_d;
+    private Font field_d;
     private int field_n;
     private int field_g;
     static int field_r;
@@ -23,8 +23,8 @@ final class vl implements io {
     private int field_o;
     static String field_f;
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
-        ga stackIn_3_0 = null;
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -37,7 +37,7 @@ final class vl implements io {
         fm var11 = null;
         try {
           if (param3 instanceof fm) {
-            stackIn_3_0 = (ga) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
@@ -91,32 +91,32 @@ final class vl implements io {
           if (sn.field_c != null) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (df.field_j == ic.field_T);
-              if ((decompiledFrameRemainder0) && (dp.field_e.field_j == 0 &&
+              if ((decompiledFrameRemainder0) && (dp.field_e.position == 0 &&
                 pd.a(-22826) > (10000L + hm.field_N))) {
                 dp.field_e.j(11, param1);
               }
             } else {
-              if (dp.field_e.field_j == 0 &&
+              if (dp.field_e.position == 0 &&
                 pd.a(-22826) > (10000L + hm.field_N)) {
                 dp.field_e.j(11, param1);
               }
             }
             if (decompiledFrameRemainder0) {
-              if (0 < dp.field_e.field_j) {
+              if (0 < dp.field_e.position) {
                 try {
-                  sn.field_c.a(dp.field_e.field_j, true, 0, dp.field_e.field_h);
+                  sn.field_c.a(dp.field_e.position, true, 0, dp.field_e.payload);
                   hm.field_N = pd.a(-22826);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   p.a(1);
                 }
-                dp.field_e.field_j = 0;
+                dp.field_e.position = 0;
               }
               return;
             }
           }
-          dp.field_e.field_j = 0;
+          dp.field_e.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -183,7 +183,7 @@ final class vl implements io {
         }
     }
 
-    vl(rb param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    vl(Font param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_a = 1;
         this.field_o = 1;
         try {

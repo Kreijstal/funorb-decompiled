@@ -24,7 +24,7 @@ abstract class Human extends Mover {
     boolean field_fb;
     boolean field_ob;
     private int field_qb;
-    static vn field_tb;
+    static Sprite field_tb;
 
     final boolean p(int param0) {
         int var2 = -44 / ((-76 - param0) / 44);
@@ -276,7 +276,7 @@ abstract class Human extends Mover {
         Point var7 = null;
         Point var6 = null;
         int var4 = -5 % ((43 - param1) / 57);
-        qh var5 = dj.field_e.field_H.a(true, this.getX(true), param2, param0, this.getY(237239984));
+        qh var5 = Js5Archive.field_e.field_H.a(true, this.getX(true), param2, param0, this.getY(237239984));
         if (var5 != null) {
           var7 = (Point) (var5.b((byte) 26));
           var6 = var7;
@@ -322,7 +322,7 @@ abstract class Human extends Mover {
           regionExit1: {
             var5 = stackIn_8_0;
             if (-1 + this.field_ub != var4 && (var5 == 0 ||
-              -1 == dj.field_e.field_H.a(this.field_gb[var4], this.getY(237239984), this.field_jb[var4], this.getX(true), 124))) {
+              -1 == Js5Archive.field_e.field_H.a(this.field_gb[var4], this.getY(237239984), this.field_jb[var4], this.getX(true), 124))) {
               MouseInputHandler.field_e[var4] = -1;
               break regionExit1;
             }
@@ -381,7 +381,7 @@ abstract class Human extends Mover {
     }
 
     void a(byte param0, Camera param1) {
-        vn stackIn_20_0 = null;
+        Sprite stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         int stackIn_21_2 = 0;
         int stackIn_64_0;
@@ -599,7 +599,7 @@ abstract class Human extends Mover {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = dj.field_e.field_H;
+          var3 = Js5Archive.field_e.field_H;
           if (param0 <= 52) {
             var8 = (Camera) null;
             this.a((byte) -36, (Camera) null);
@@ -641,8 +641,8 @@ abstract class Human extends Mover {
         int var4;
         int var2Lifetime1;
         var4 = ZombieDawn.field_J;
-        if (400 + this.field_t > dj.field_e.field_r &&
-          dj.field_e.field_r > 200 &&
+        if (400 + this.field_t > Js5Archive.field_e.field_r &&
+          Js5Archive.field_e.field_r > 200 &&
           pb.a(so.field_a, 25, 1) == 0) {
           this.c(this.getX(true) + pb.a(so.field_a, 1000, 1) - 500, 78, this.getY(237239984) - (-pb.a(so.field_a, 1000, 1) + 500));
         }
@@ -695,17 +695,17 @@ abstract class Human extends Mover {
               if (0 != this.field_O ||
                 this.field_T != 0) {
                 this.g((byte) -113);
-                if (!dj.field_e.field_H.a(false, this.field_T + this.field_x >> 16, this.field_y + this.field_O >> 16, true)) {
+                if (!Js5Archive.field_e.field_H.a(false, this.field_T + this.field_x >> 16, this.field_y + this.field_O >> 16, true)) {
                   this.field_x = this.field_x - this.field_T;
                   this.field_y = this.field_y - this.field_O;
                   if (this.field_O != 0 &&
-                    dj.field_e.field_H.a(false, this.getY(237239984), this.field_O + this.field_y >> 16, true)) {
+                    Js5Archive.field_e.field_H.a(false, this.getY(237239984), this.field_O + this.field_y >> 16, true)) {
                     this.field_T = 0;
                     this.field_y = this.field_y + this.field_O;
                     this.field_X = this.field_x >> 16;
                   } else {
                     if (this.field_T != 0 &&
-                      dj.field_e.field_H.a(false, this.field_x + this.field_T >> 16, this.field_y >> 16, true)) {
+                      Js5Archive.field_e.field_H.a(false, this.field_x + this.field_T >> 16, this.field_y >> 16, true)) {
                       this.field_O = 0;
                       this.field_Y = this.field_y >> 16;
                       this.field_x = this.field_x + this.field_T;
@@ -743,7 +743,7 @@ abstract class Human extends Mover {
               if (fieldTemp$6 >= 5) {
                 this.field_qb = 0;
                 var2 = 0;
-                var3 = dj.field_e.field_lb.b((byte) 26);
+                var3 = Js5Archive.field_e.field_lb.b((byte) 26);
                 while (var3 instanceof mm) {
                   var2 = var2 != 0 | ((mm) (var3)).a(this, (byte) 108) ? 1 : 0;
                   var3 = var3.previous;
@@ -773,7 +773,7 @@ abstract class Human extends Mover {
               if (5 <= fieldTemp$5) {
                 this.field_qb = 0;
                 var2Lifetime1 = 0;
-                var3 = dj.field_e.field_lb.b((byte) 26);
+                var3 = Js5Archive.field_e.field_lb.b((byte) 26);
                 while (var3 instanceof mm) {
                   var2Lifetime1 = var2Lifetime1 != 0 | ((mm) (var3)).a(this, (byte) 79) ? 1 : 0;
                   var3 = var3.previous;
@@ -849,7 +849,7 @@ abstract class Human extends Mover {
         this.field_hb = false;
         this.field_ob = false;
         this.field_vb = 0;
-        vn discarded$0 = new vn(48, 48);
+        Sprite discarded$0 = new Sprite(48, 48);
         this.field_lb = pb.a(so.field_a, 200, 1);
         this.field_jb = new int[61];
         this.field_gb = new int[61];
@@ -891,8 +891,8 @@ abstract class Human extends Mover {
                 continue;
               }
               if (param1 ||
-                dj.field_e.field_H.a(var6.getY(237239984), this.getX(true), this.getY(237239984), (byte) -91, false, var6.getX(true)) != -1 ||
-                dj.field_e.field_H.a(var6.getY(237239984) - 48, this.getX(true), -48 + this.getY(237239984), (byte) -109, false, var6.getX(true)) != -1) {
+                Js5Archive.field_e.field_H.a(var6.getY(237239984), this.getX(true), this.getY(237239984), (byte) -91, false, var6.getX(true)) != -1 ||
+                Js5Archive.field_e.field_H.a(var6.getY(237239984) - 48, this.getX(true), -48 + this.getY(237239984), (byte) -109, false, var6.getX(true)) != -1) {
                 return true;
               }
             }
@@ -964,7 +964,7 @@ abstract class Human extends Mover {
         this.unlink(-27598);
         this.d(0);
         if (!(0 >= this.field_z)) {
-          dj.field_e.field_J[-1 + this.field_z] = dj.field_e.field_J[-1 + this.field_z] - 1;
+          Js5Archive.field_e.field_J[-1 + this.field_z] = Js5Archive.field_e.field_J[-1 + this.field_z] - 1;
         }
     }
 

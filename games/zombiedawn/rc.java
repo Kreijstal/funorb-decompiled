@@ -13,7 +13,7 @@ final class rc extends IntrusiveNode {
     int field_m;
     int field_n;
     static String field_j;
-    static vn field_v;
+    static Sprite field_v;
     static int field_p;
     static String field_w;
     int[] field_k;

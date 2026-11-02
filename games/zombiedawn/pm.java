@@ -11,11 +11,11 @@ abstract class pm extends um implements ok {
         try {
           var3 = dp.field_e;
           var3.j(11, param1);
-          var3.i(5, -107);
-          var3.i(param0, -98);
-          var3.a(param2.field_s, (byte) 105);
-          var3.i(param2.field_u, -114);
-          var3.i(param2.field_o, param0 ^ -126);
+          var3.writeByte(5, -107);
+          var3.writeByte(param0, -98);
+          var3.writeShort(param2.field_s, (byte) 105);
+          var3.writeByte(param2.field_u, -114);
+          var3.writeByte(param2.field_o, param0 ^ -126);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -38,7 +38,7 @@ abstract class pm extends um implements ok {
         return this.a(this.field_d.field_o, (byte) -117);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, vn[] param8, int param9, vn[] param10, rb param11, vn[] param12, byte param13, int param14) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, Sprite[] param8, int param9, Sprite[] param10, Font param11, Sprite[] param12, byte param13, int param14) {
         int var15_int = 0;
         RuntimeException var15 = null;
         int var16 = 0;
@@ -132,12 +132,12 @@ abstract class pm extends um implements ok {
     final static void d(byte param0) {
         int var1_int = 0;
         int var2 = ZombieDawn.field_J;
-        LevelNavigation.field_a = new vn(60, 60);
+        LevelNavigation.field_a = new Sprite(60, 60);
         LevelNavigation.field_a.a();
         Rasterizer.g(30, 30, 28, 4521728);
-        og.field_x = new vn[8];
+        og.field_x = new Sprite[8];
         for (var1_int = 0; 8 > var1_int; var1_int++) {
-          og.field_x[var1_int] = new vn(22, 22);
+          og.field_x[var1_int] = new Sprite(22, 22);
           og.field_x[var1_int].a();
           Rasterizer.g(11, 11, 2 + var1_int, 5622784);
           Rasterizer.g(11, 11, var1_int, 65793);

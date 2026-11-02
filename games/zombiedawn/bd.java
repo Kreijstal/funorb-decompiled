@@ -9,7 +9,7 @@ final class bd {
     static cg field_q;
     private long[] field_p;
     private byte[] field_k;
-    static vn[][] field_i;
+    static Sprite[][] field_i;
     private long[] field_s;
     static boolean field_r;
     static String field_h;
@@ -33,7 +33,7 @@ final class bd {
     }
 
     public static void a(boolean param0) {
-        field_i = (vn[][]) null;
+        field_i = (Sprite[][]) null;
         field_h = null;
         field_m = null;
         if (!param0) {
@@ -42,7 +42,7 @@ final class bd {
         field_q = null;
     }
 
-    final static void a(vn param0, boolean param1) {
+    final static void a(Sprite param0, boolean param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -393,7 +393,7 @@ final class bd {
     }
 
     static {
-        field_i = new vn[2][];
+        field_i = new Sprite[2][];
         field_h = "Apply";
         field_r = true;
         field_q = new cg(10, 2, 2, 0);

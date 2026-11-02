@@ -143,7 +143,7 @@ final class ap extends al {
               }
               if (!param6) {
                 if (!param5) {
-                  if (dj.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.b(-25983)) {
                     stackIn_44_1 = kc.field_Y;
                   } else {
                     stackIn_44_1 = po.field_wb;
@@ -228,7 +228,7 @@ final class ap extends al {
               }
               if (!param6) {
                 if (!param5) {
-                  if (dj.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.b(-25983)) {
                     stackIn_91_1 = kc.field_Y;
                   } else {
                     stackIn_91_1 = po.field_wb;
@@ -294,7 +294,7 @@ final class ap extends al {
           if (param3 < -19) {
             if (!param6) {
               if (!param5) {
-                if (dj.field_e.b(-25983)) {
+                if (Js5Archive.field_e.b(-25983)) {
                   stackIn_125_1 = kc.field_Y;
                 } else {
                   stackIn_125_1 = po.field_wb;
@@ -326,7 +326,7 @@ final class ap extends al {
             this.a((byte) -39);
             if (!param6) {
               if (!param5) {
-                if (dj.field_e.b(-25983)) {
+                if (Js5Archive.field_e.b(-25983)) {
                   stackIn_142_1 = kc.field_Y;
                 } else {
                   stackIn_142_1 = po.field_wb;
@@ -380,7 +380,7 @@ final class ap extends al {
               }
             } else {
               if (!param5) {
-                if (dj.field_e.b(-25983)) {
+                if (Js5Archive.field_e.b(-25983)) {
                   stackIn_196_1 = kc.field_Y;
                 } else {
                   stackIn_196_1 = po.field_wb;
@@ -404,7 +404,7 @@ final class ap extends al {
               this.a((byte) -39);
               if (!param6) {
                 if (!param5) {
-                  if (dj.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.b(-25983)) {
                     stackIn_162_1 = kc.field_Y;
                   } else {
                     stackIn_162_1 = po.field_wb;
@@ -447,7 +447,7 @@ final class ap extends al {
                 }
               } else {
                 if (!param5) {
-                  if (dj.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.b(-25983)) {
                     stackIn_174_1 = kc.field_Y;
                   } else {
                     stackIn_174_1 = po.field_wb;
@@ -634,7 +634,7 @@ final class ap extends al {
           return;
         }
         if (this.field_y) {
-          var7 = dj.field_e;
+          var7 = Js5Archive.field_e;
           var5 = this.field_n;
           var7.field_eb = var7.field_eb + (var5 << 8);
           var7.field_G = var7.field_G + var5;
@@ -790,7 +790,7 @@ final class ap extends al {
           return;
         }
         if (1 == this.field_x) {
-          var9 = dj.field_e;
+          var9 = Js5Archive.field_e;
           var5Lifetime1 = (this.field_r + 1) / 2 * this.field_E + this.field_D * this.field_A;
           var9.field_eb = var9.field_eb + (var5Lifetime1 << 8);
           var9.field_g = var9.field_g - var9.field_K * var5Lifetime1;
@@ -948,7 +948,7 @@ final class ap extends al {
           this.field_B = 2;
           return;
         }
-        var10 = dj.field_e;
+        var10 = Js5Archive.field_e;
         var5Lifetime2 = (this.field_r + 1) / 2 * this.field_E + this.field_D * this.field_A;
         var10.field_eb = var10.field_eb + (var5Lifetime2 << 8);
         var10.field_g = var10.field_g - var10.field_K * var5Lifetime2;
@@ -1204,13 +1204,13 @@ final class ap extends al {
     }
 
     final void b(byte param0) {
-        vn[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         int stackIn_5_1 = 0;
-        vn[] stackIn_9_0 = null;
+        Sprite[] stackIn_9_0 = null;
         int stackIn_10_1 = 0;
-        vn[] stackIn_18_0 = null;
+        Sprite[] stackIn_18_0 = null;
         int stackIn_19_1 = 0;
-        vn[] stackIn_23_0 = null;
+        Sprite[] stackIn_23_0 = null;
         int stackIn_24_1 = 0;
         int var3;
         var3 = ZombieDawn.field_J;
@@ -1218,7 +1218,7 @@ final class ap extends al {
           if (640 != bd.field_e) {
             stackIn_18_0 = qk.field_Hb;
             stackIn_19_1 = (2 != this.field_x) ? 2 : 3;
-            ((vn) (Object) stackIn_18_0[stackIn_19_1]).a(0, 0, bd.field_e, nh.field_P);
+            ((Sprite) (Object) stackIn_18_0[stackIn_19_1]).a(0, 0, bd.field_e, nh.field_P);
           } else {
             if (nh.field_P == 480) {
               if (this.field_x == 2) {
@@ -1229,7 +1229,7 @@ final class ap extends al {
             } else {
               stackIn_23_0 = qk.field_Hb;
               stackIn_24_1 = (2 != this.field_x) ? 2 : 3;
-              ((vn) (Object) stackIn_23_0[stackIn_24_1]).a(0, 0, bd.field_e, nh.field_P);
+              ((Sprite) (Object) stackIn_23_0[stackIn_24_1]).a(0, 0, bd.field_e, nh.field_P);
             }
           }
         } else {
@@ -1237,7 +1237,7 @@ final class ap extends al {
           if (640 != bd.field_e) {
             stackIn_4_0 = qk.field_Hb;
             stackIn_5_1 = (2 != this.field_x) ? 2 : 3;
-            ((vn) (Object) stackIn_4_0[stackIn_5_1]).a(0, 0, bd.field_e, nh.field_P);
+            ((Sprite) (Object) stackIn_4_0[stackIn_5_1]).a(0, 0, bd.field_e, nh.field_P);
           } else {
             if (nh.field_P == 480) {
               if (this.field_x != 2) {
@@ -1248,7 +1248,7 @@ final class ap extends al {
             } else {
               stackIn_9_0 = qk.field_Hb;
               stackIn_10_1 = (2 != this.field_x) ? 2 : 3;
-              ((vn) (Object) stackIn_9_0[stackIn_10_1]).a(0, 0, bd.field_e, nh.field_P);
+              ((Sprite) (Object) stackIn_9_0[stackIn_10_1]).a(0, 0, bd.field_e, nh.field_P);
             }
           }
         }

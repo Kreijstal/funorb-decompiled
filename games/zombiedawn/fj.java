@@ -7,10 +7,10 @@ final class fj extends pm {
     static char[] field_h;
     static am field_g;
 
-    final static vn a(vn param0, int param1, int param2, boolean param3) {
+    final static Sprite a(Sprite param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
-        vn stackIn_2_0 = null;
-        vn stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -18,7 +18,7 @@ final class fj extends pm {
         try {
           ki.a((byte) -116, md.field_vb);
           if (param2 != 339) {
-            stackIn_2_0 = (vn) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           Rasterizer.d();

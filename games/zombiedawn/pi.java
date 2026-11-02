@@ -408,11 +408,11 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
         try {
           var3 = dp.field_e;
           var3.j(param0 - 14, param1);
-          var3.i(param2.field_h, 120);
+          var3.writeByte(param2.field_h, 120);
           if (param0 != 25) {
             field_k = (int[]) null;
           }
-          var3.a(param2.field_i, (byte) 105);
+          var3.writeShort(param2.field_i, (byte) 105);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pi.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -33,7 +33,7 @@ final class ho {
         }
     }
 
-    final static void a(vn param0, boolean param1, int param2, int param3) {
+    final static void a(Sprite param0, boolean param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -97,8 +97,8 @@ final class ho {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != 118) {
-          vn var2 = (vn) null;
-          ho.a((vn) null, false, 18, -108);
+          Sprite var2 = (Sprite) null;
+          ho.a((Sprite) null, false, 18, -108);
         }
     }
 

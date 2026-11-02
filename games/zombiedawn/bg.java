@@ -9,7 +9,7 @@ final class bg extends IntrusiveNode {
     long field_h;
     static int field_k;
     static vk field_l;
-    static vn[] field_o;
+    static Sprite[] field_o;
 
     public static void c(byte param0) {
         if (param0 != -44) {
@@ -47,10 +47,10 @@ final class bg extends IntrusiveNode {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
-        de stackIn_20_0 = null;
+        PacketBuffer stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         String stackIn_21_2 = null;
-        de stackIn_23_0 = null;
+        PacketBuffer stackIn_23_0 = null;
         int stackIn_23_1 = 0;
         String stackIn_24_2 = null;
         int stackIn_34_0 = 0;
@@ -102,12 +102,12 @@ final class bg extends IntrusiveNode {
             return stackIn_8_0;
           }
           if (ui.field_g == ic.field_T) {
-            dp.field_e.field_j = 0;
+            dp.field_e.position = 0;
             ba.field_g = null;
             if (param3 == null) {
-              dh.field_e.field_j = 0;
-              dh.field_e.h(-127, p.field_b.nextInt());
-              dh.field_e.h(-119, p.field_b.nextInt());
+              dh.field_e.position = 0;
+              dh.field_e.writeInt(-127, p.field_b.nextInt());
+              dh.field_e.writeInt(-119, p.field_b.nextInt());
               stackIn_20_0 = dh.field_e;
               stackIn_20_1 = -88;
               if (!param2.b(32)) {
@@ -115,7 +115,7 @@ final class bg extends IntrusiveNode {
               } else {
                 stackIn_21_2 = var14;
               }
-              ((de) (Object) stackIn_20_0).a((byte) stackIn_20_1, stackIn_21_2);
+              ((PacketBuffer) (Object) stackIn_20_0).writeTerminatedStringWithHeader((byte) stackIn_20_1, stackIn_21_2);
               stackIn_23_0 = dh.field_e;
               stackIn_23_1 = -88;
               if (!param4.b(param0 ^ 73)) {
@@ -123,37 +123,37 @@ final class bg extends IntrusiveNode {
               } else {
                 stackIn_24_2 = var8;
               }
-              ((de) (Object) stackIn_23_0).a((byte) stackIn_23_1, stackIn_24_2);
-              dp.field_e.i(16, 64);
-              dp.field_e.field_j = dp.field_e.field_j + 1;
-              var9 = dp.field_e.field_j;
+              ((PacketBuffer) (Object) stackIn_23_0).writeTerminatedStringWithHeader((byte) stackIn_23_1, stackIn_24_2);
+              dp.field_e.writeByte(16, 64);
+              dp.field_e.position = dp.field_e.position + 1;
+              var9 = dp.field_e.position;
               ab.a(dh.field_e, pm.field_c, (byte) 108, dp.field_e, pj.field_p);
-              dp.field_e.d(param0 - 211, -var9 + dp.field_e.field_j);
+              dp.field_e.d(param0 - 211, -var9 + dp.field_e.position);
             } else {
               var9 = 0;
-              dh.field_e.field_j = 0;
+              dh.field_e.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              dh.field_e.h(23, p.field_b.nextInt());
-              dh.field_e.h(-117, p.field_b.nextInt());
-              dh.field_e.a((byte) -88, var14);
-              dh.field_e.a((byte) -88, var8);
+              dh.field_e.writeInt(23, p.field_b.nextInt());
+              dh.field_e.writeInt(-117, p.field_b.nextInt());
+              dh.field_e.writeTerminatedStringWithHeader((byte) -88, var14);
+              dh.field_e.writeTerminatedStringWithHeader((byte) -88, var8);
               var15 = (CharSequence) ((Object) param3);
-              dh.field_e.a((byte) -88, qb.a(-122, var15));
-              dh.field_e.a(param5, (byte) 105);
-              dh.field_e.i(param1, 53);
-              dh.field_e.i(var9, 66);
-              dp.field_e.i(18, 125);
-              dp.field_e.field_j = dp.field_e.field_j + 2;
-              var10 = dp.field_e.field_j;
+              dh.field_e.writeTerminatedStringWithHeader((byte) -88, qb.a(-122, var15));
+              dh.field_e.writeShort(param5, (byte) 105);
+              dh.field_e.writeByte(param1, 53);
+              dh.field_e.writeByte(var9, 66);
+              dp.field_e.writeByte(18, 125);
+              dp.field_e.position = dp.field_e.position + 2;
+              var10 = dp.field_e.position;
               var11_ref_StringLifetime4 = ff.a(hc.a(0), (byte) -128);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              dp.field_e.a(param0 + 23, var11_ref_StringLifetime4);
+              dp.field_e.writeTerminatedString(param0 + 23, var11_ref_StringLifetime4);
               ab.a(dh.field_e, pm.field_c, (byte) -109, dp.field_e, pj.field_p);
-              dp.field_e.g(57, -var10 + dp.field_e.field_j);
+              dp.field_e.g(57, -var10 + dp.field_e.position);
             }
             vl.a((byte) -46, -1);
             ic.field_T = oe.field_a;
@@ -161,7 +161,7 @@ final class bg extends IntrusiveNode {
           if (oe.field_a == ic.field_T &&
             ck.a((byte) -125, 1)) {
             var9Lifetime1 = fj.field_g.d((byte) -119);
-            fj.field_g.field_j = 0;
+            fj.field_g.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ic.field_T = og.field_B;
@@ -182,7 +182,7 @@ final class bg extends IntrusiveNode {
               } else {
                 ck.a((byte) -103, lo.a(false));
                 ba.field_g = new Boolean(uh.a((byte) -36, fj.field_g));
-                fj.field_g.field_j = 0;
+                fj.field_g.position = 0;
               }
             }
           }
@@ -190,11 +190,11 @@ final class bg extends IntrusiveNode {
             var9Lifetime2 = 2;
             if (ck.a((byte) -128, var9Lifetime2)) {
               var10Lifetime1 = fj.field_g.f(param0 ^ 107);
-              fj.field_g.field_j = 0;
+              fj.field_g.position = 0;
               if (ck.a((byte) -100, var10Lifetime1)) {
                 var11 = ho.field_a.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  ho.field_a[var12] = fj.field_g.d(19988);
+                  ho.field_a[var12] = fj.field_g.readString(19988);
                 }
                 p.a(1);
                 nm.field_d = false;

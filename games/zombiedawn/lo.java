@@ -7,7 +7,7 @@ final class lo extends IntrusiveNode {
     int[] field_o;
     static String field_p;
     static cg field_s;
-    static vn field_i;
+    static Sprite field_i;
     boolean field_h;
     static int field_m;
     static int field_j;

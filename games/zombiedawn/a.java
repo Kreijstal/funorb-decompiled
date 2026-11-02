@@ -13,7 +13,7 @@ final class a {
     static String field_l;
     private int field_b;
     static boolean field_c;
-    static dj field_h;
+    static Js5Archive field_h;
     private int field_i;
     static int field_m;
     static int[] field_g;
@@ -40,7 +40,7 @@ final class a {
             a.a((byte) 123);
           }
           var4 = param0.worldToScreenY(this.field_o >> 16, 0) - (this.field_k >> 16);
-          tf.field_b[this.field_b].b(-3 + var3_int, -3 + var4);
+          SpatialBucket.field_b[this.field_b].b(-3 + var3_int, -3 + var4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "a.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -72,7 +72,7 @@ final class a {
 
     final static void a(byte param0) {
         if (param0 != 40) {
-          field_h = (dj) null;
+          field_h = (Js5Archive) null;
           pa.field_x = new va[]{};
           return;
         }

@@ -8,7 +8,7 @@ final class nf {
     int field_a;
     byte[] field_b;
     byte[] field_h;
-    static vn field_d;
+    static Sprite field_d;
     int field_i;
     int field_f;
     int field_e;

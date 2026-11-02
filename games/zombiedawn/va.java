@@ -83,7 +83,7 @@ final class va {
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
         Throwable decompiledCaughtException = null;
-        de var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -96,14 +96,14 @@ final class va {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          var2 = new de(param1);
+          var2 = new PacketBuffer(param1);
           var3 = var2.d((byte) -118);
           var4 = var2.c(-38);
           if (var4 >= 0 && (m.field_z == 0 ||
             !(var4 > m.field_z))) {
             if (var3 == 0) {
               var5_ref_byte__ = new byte[var4];
-              var2.a(var4, 0, var5_ref_byte__, 11240);
+              var2.readBytes(var4, 0, var5_ref_byte__, 11240);
               stackIn_14_0 = var5_ref_byte__;
               return stackIn_14_0;
             }

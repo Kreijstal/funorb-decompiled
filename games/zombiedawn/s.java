@@ -6,7 +6,7 @@ import java.io.*;
 final class s extends IntrusiveNode {
     int field_i;
     WorldObject field_h;
-    static vn field_j;
+    static Sprite field_j;
 
     final static void a(long param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, PlatformTaskDispatcher param10, String param11, int param12, int param13) {
         try {
@@ -133,7 +133,7 @@ final class s extends IntrusiveNode {
                   if ((ac.field_m - 850) / 2 == 100) {
                     ha.field_d.field_x = -50 + ha.field_d.getY(237239984) << 16;
                     for (var5 = 0; var5 < 5; var5++) {
-                      var6 = dj.field_e.spawnZombie(10, (byte) 124, 90, 340, 380);
+                      var6 = Js5Archive.field_e.spawnZombie(10, (byte) 124, 90, 340, 380);
                       var7 = new qh();
                       var7.addFirst(0, new Point(var6.getX(true), var6.getY(237239984) - 100));
                       var6.a(var7, true);
@@ -201,7 +201,7 @@ final class s extends IntrusiveNode {
         if (param0 <= -111) {
           return;
         }
-        field_j = (vn) null;
+        field_j = (Sprite) null;
     }
 
     final static String a(int param0, String param1, String[] param2) {
@@ -255,7 +255,7 @@ final class s extends IntrusiveNode {
                 continue;
               }
               var5++;
-              var8 = ra.a((CharSequence) ((Object) var7_ref_String), 122);
+              var8 = DualLinkDeque.a((CharSequence) ((Object) var7_ref_String), 122);
               var4 = var4 + (param2[var8].length() + (-var5 + var6_int));
               continue;
             }
@@ -292,7 +292,7 @@ final class s extends IntrusiveNode {
               continue;
             }
             var5Lifetime1++;
-            var10 = ra.a((CharSequence) ((Object) var9), param0 ^ 1938762718);
+            var10 = DualLinkDeque.a((CharSequence) ((Object) var9), param0 ^ 1938762718);
             discarded$1 = var6.append(param1.substring(var7, var8Lifetime1));
             discarded$2 = var6.append(param2[var10]);
             var7 = var5Lifetime1;

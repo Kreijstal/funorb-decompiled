@@ -4,7 +4,7 @@
 final class t implements io {
     private int field_a;
     private int field_l;
-    private rb field_g;
+    private Font field_g;
     static PcmMixer field_m;
     static PcmMixer field_i;
     private int field_f;
@@ -91,7 +91,7 @@ final class t implements io {
         return ce.field_r;
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         fp var14 = null;
         int var7 = 0;
         int var8 = 0;
@@ -106,7 +106,7 @@ final class t implements io {
           var14 = param3 instanceof fp ? (fp) (param3) : null;
           Rasterizer.b(param3.field_k + param4, param3.field_j + param2, param3.field_i, param3.field_n, this.field_a);
           if (param0 != 16777215) {
-            this.field_g = (rb) null;
+            this.field_g = (Font) null;
           }
           if (var14 != null) {
           }
@@ -133,7 +133,7 @@ final class t implements io {
         }
     }
 
-    t(rb param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    t(Font param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_g = param0;
           this.field_j = param5;

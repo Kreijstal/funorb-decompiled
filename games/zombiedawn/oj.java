@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oj {
-    static vn field_f;
+    static Sprite field_f;
     static tl field_d;
     private float field_a;
     private float field_c;
@@ -42,7 +42,7 @@ final class oj {
         return (of) null;
     }
 
-    final void a(vn param0, int param1, int param2, int param3, int param4, int param5) {
+    final void a(Sprite param0, int param1, int param2, int param3, int param4, int param5) {
         try {
           param0.b((int)this.field_a + param5 - 16, -16 + ((int)this.field_b + param2), param1);
           if (param4 > -92) {
@@ -61,7 +61,7 @@ final class oj {
         this.field_a = this.field_a + this.field_c;
         this.field_b = this.field_b + this.field_e;
         if (this.field_c != 0.0f) {
-          if (dj.field_e.field_H.a((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
+          if (Js5Archive.field_e.field_H.a((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
             return;
           }
           this.field_e = 0.0f;
@@ -71,7 +71,7 @@ final class oj {
         if (0.0f == this.field_e) {
           return;
         }
-        if (dj.field_e.field_H.a((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
+        if (Js5Archive.field_e.field_H.a((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
           return;
         }
         this.field_e = 0.0f;
@@ -85,7 +85,7 @@ final class oj {
         this.field_a = 0.0f;
     }
 
-    final static lp a(int param0, dj param1, int param2, dj param3, int param4) {
+    final static lp a(int param0, Js5Archive param1, int param2, Js5Archive param3, int param4) {
         RuntimeException var5 = null;
         lp stackIn_5_0 = null;
         lp stackIn_7_0 = null;

@@ -4,7 +4,7 @@
 final class nm {
     static boolean field_b;
     static boolean field_d;
-    static dj field_e;
+    static Js5Archive field_e;
     static boolean field_c;
     static boolean field_a;
     static int field_f;

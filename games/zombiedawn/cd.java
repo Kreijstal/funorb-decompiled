@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cd extends vn {
+final class cd extends Sprite {
     final void g(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;

@@ -32,11 +32,11 @@ final class pb extends IntrusiveNode {
         return -9 + pb.a(so.field_a, 18, 1);
     }
 
-    final static dj a(boolean param0, boolean param1, int param2, boolean param3, int param4) {
+    final static Js5Archive a(boolean param0, boolean param1, int param2, boolean param3, int param4) {
         if (param4 != 1) {
-          return (dj) null;
+          return (Js5Archive) null;
         }
-        return hd.a(false, true, param2, param1 ? 1 : 0, param0, param3);
+        return SpriteState.a(false, true, param2, param1 ? 1 : 0, param0, param3);
     }
 
     final static void a(int param0, byte param1, int param2) {
@@ -185,7 +185,7 @@ final class pb extends IntrusiveNode {
               p.a(1);
               return;
             }
-            var5_int = jd.field_b - var9.field_j;
+            var5_int = jd.field_b - var9.position;
             var11 = var4_ref_lo.field_o;
             var10 = var11;
             var6 = var10;

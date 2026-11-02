@@ -16,7 +16,7 @@ final class ie {
         field_h = (int[][]) null;
     }
 
-    final void a(de param0, ko param1) {
+    final void a(PacketBuffer param0, ko param1) {
         int var3;
         int var4;
         int var5;

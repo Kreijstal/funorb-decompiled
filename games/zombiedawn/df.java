@@ -23,11 +23,11 @@ final class df extends IntrusiveNode {
         field_j = null;
     }
 
-    final static vn[] a(byte param0, String param1, String param2, dj param3) {
+    final static Sprite[] a(byte param0, String param1, String param2, Js5Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        vn[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

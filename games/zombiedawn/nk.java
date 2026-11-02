@@ -14,14 +14,14 @@ final class nk {
         throw new IllegalStateException();
     }
 
-    final static void a(dj param0, int param1, dj param2, dj param3, boolean param4) {
+    final static void a(Js5Archive param0, int param1, Js5Archive param2, Js5Archive param3, boolean param4) {
         try {
           gl.field_E = co.a("", param1 - 118);
           gl.field_E.a(false, -54);
           ll.a(param2, param3, param0, -19041);
           if (param1 != -1) {
-            dj var6 = (dj) null;
-            nk.a((dj) null, 101, (dj) null, (dj) null, false);
+            Js5Archive var6 = (Js5Archive) null;
+            nk.a((Js5Archive) null, 101, (Js5Archive) null, (Js5Archive) null, false);
           }
           mm.c((byte) -70);
           fk.field_F = ic.field_S;

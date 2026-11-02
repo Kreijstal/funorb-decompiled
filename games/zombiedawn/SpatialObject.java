@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-class fa extends DualLinkNode {
-    fa field_q;
-    fa field_r;
+class SpatialObject extends DualLinkNode {
+    SpatialObject field_q;
+    SpatialObject field_r;
     static int field_p;
 
     final void d(int param0) {
@@ -19,7 +19,7 @@ class fa extends DualLinkNode {
           this.field_r = null;
           return;
         }
-        this.field_r = (fa) null;
+        this.field_r = (SpatialObject) null;
         this.field_q = null;
         this.field_r = null;
     }
@@ -32,7 +32,7 @@ class fa extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           rf.a((java.awt.Component) ((Object) param1), -116);
-          mj.a(3490, (java.awt.Component) ((Object) param1));
+          SpatialGrid.a(3490, (java.awt.Component) ((Object) param1));
           if (null != jl.field_u) {
             jl.field_u.a((java.awt.Component) ((Object) param1), (byte) -36);
           }
@@ -118,7 +118,7 @@ class fa extends DualLinkNode {
         }
     }
 
-    protected fa() {
+    protected SpatialObject() {
     }
 
     final static int e(int param0) {

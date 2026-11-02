@@ -8,9 +8,9 @@ class al {
     int field_k;
     static boolean field_e;
     int field_g;
-    static dj field_a;
+    static Js5Archive field_a;
     private int field_j;
-    static vn field_f;
+    static Sprite field_f;
     int field_i;
     private boolean field_l;
     jp field_b;
@@ -37,7 +37,7 @@ class al {
         field_c = null;
         field_a = null;
         if (param0 != 2) {
-          al.a((dj) null, 55, (dj) null, (dj) null);
+          al.a((Js5Archive) null, 55, (Js5Archive) null, (Js5Archive) null);
         }
     }
 
@@ -217,7 +217,7 @@ class al {
         int stackIn_62_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_74_0 = 0;
-        vn stackIn_79_0 = null;
+        Sprite stackIn_79_0 = null;
         int stackIn_79_1 = 0;
         int stackIn_79_2 = 0;
         boolean stackIn_80_3;
@@ -236,7 +236,7 @@ class al {
         int var16;
         int var17;
         int var18;
-        vn var19;
+        Sprite var19;
         int var20;
         int var21;
         int var22;
@@ -277,8 +277,8 @@ class al {
             stackIn_40_0 = (param2) ? 1 : 10;
             var10 = stackIn_40_0;
           }
-          if (dj.field_e != null) {
-            stackIn_44_0 = dj.field_e.j(-5402);
+          if (Js5Archive.field_e != null) {
+            stackIn_44_0 = Js5Archive.field_e.j(-5402);
           } else {
             stackIn_44_0 = 0;
           }
@@ -377,7 +377,7 @@ class al {
         }
         if (this.field_d == 2 &&
           this.field_h[this.field_b.field_d] == 21 &&
-          dj.field_e.j(-5402) == 0) {
+          Js5Archive.field_e.j(-5402) == 0) {
           if (kg.field_i != 98) {
             if (99 == kg.field_i) {
               this.field_b.b(this.field_b.field_d + 1, param0 + 31542);
@@ -405,7 +405,7 @@ class al {
           return;
         }
         if (this.field_d == 0) {
-          vl.field_b.a(-1, param1);
+          vl.field_b.update(-1, param1);
           return;
         }
         if (this.field_d == 8) {
@@ -579,7 +579,7 @@ class al {
     boolean a(int param0, int param1, char param2) {
         int var4;
         if (this.field_d == 0) {
-          return vl.field_b.a(param0, param2, -29638);
+          return vl.field_b.handleKeyPress(param0, param2, -29638);
         }
         if (param0 != 13) {
           if (this.field_d == 8) {
@@ -995,7 +995,7 @@ class al {
                       var8 = 0;
                       do {
                         if (8 <= var8) {
-                          var7_ref_int__ = dj.field_i;
+                          var7_ref_int__ = Js5Archive.field_i;
                           break;
                         }
                         var12[var8] = 0;
@@ -1292,7 +1292,7 @@ class al {
                       if (!this.field_b.d(-123)) {
                         break regionExit1;
                       }
-                      ra.d((byte) 76);
+                      DualLinkDeque.d((byte) 76);
                       if (var9 == 0) {
                         break regionExit1;
                       }
@@ -1378,7 +1378,7 @@ class al {
                       }
                       if (this.field_d == 5 ||
                         3 == this.field_d) {
-                        hd.a(this.field_d, param2 ^ 8500, this.field_d);
+                        SpriteState.a(this.field_d, param2 ^ 8500, this.field_d);
                         if (var9 == 0) {
                           break regionExit1;
                         }
@@ -1387,7 +1387,7 @@ class al {
                         break regionExit1;
                       }
                       stackIn_206_0 = (nk.a(param2 + 8520, kg.field_g)) ? 6 : 3;
-                      hd.a(stackIn_206_0, -126, 7);
+                      SpriteState.a(stackIn_206_0, -126, 7);
                       if (var9 == 0) {
                         break regionExit1;
                       }
@@ -1495,7 +1495,7 @@ class al {
           if (this.field_h[param0] != 21) {
             return true;
           }
-          if (dj.field_e.j(-5402) != 0) {
+          if (Js5Archive.field_e.j(-5402) != 0) {
             return true;
           }
           return false;
@@ -1523,7 +1523,7 @@ class al {
         int var2Lifetime3;
         var5 = ZombieDawn.field_J;
         if (this.field_d == 0) {
-          vl.field_b.e(9844);
+          vl.field_b.draw(9844);
           return;
         }
         if (this.field_d == 11) {
@@ -1618,7 +1618,7 @@ class al {
         return;
     }
 
-    final static boolean a(dj param0, int param1, dj param2, dj param3) {
+    final static boolean a(Js5Archive param0, int param1, Js5Archive param2, Js5Archive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

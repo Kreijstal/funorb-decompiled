@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class si extends qk {
-    static vn[] field_Ub;
+    static Sprite[] field_Ub;
     private int field_Pb;
     static int field_Rb;
     private int field_Nb;
@@ -13,8 +13,8 @@ final class si extends qk {
     private Zombie field_Ob;
 
     final static void x(int param0) {
-        tf.field_c.field_h = 0;
-        tf.field_c.field_e = param0;
+        SpatialBucket.field_c.field_h = 0;
+        SpatialBucket.field_c.field_e = param0;
     }
 
     final void g(int param0) {
@@ -204,7 +204,7 @@ final class si extends qk {
         Object var6;
         Zombie var6_ref;
         int var8;
-        dj var9;
+        Js5Archive var9;
         qh var10;
         qh var11;
         qh var18;
@@ -221,8 +221,8 @@ final class si extends qk {
           this.y(126);
           var2 = null;
           if (param0 < 113) {
-            var9 = (dj) null;
-            si.a(50, 105, (dj) null, -55);
+            var9 = (Js5Archive) null;
+            si.a(50, 105, (Js5Archive) null, -55);
           }
           var3 = null;
           var4 = -1;
@@ -230,7 +230,7 @@ final class si extends qk {
           var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
           while (var6_ref != null) {
             if (var6_ref.x(33)) {
-              var10 = dj.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+              var10 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var10 != null) {
                 if (!(var10.field_g <= var4) ||
                   var4 == -1) {
@@ -268,7 +268,7 @@ final class si extends qk {
             var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
             while (var6_ref != null) {
               if (var6_ref.x(33)) {
-                var11 = dj.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+                var11 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
                 if (var11 != null) {
                   if (!(var11.field_g <= var4) ||
                     var4 == -1) {
@@ -298,15 +298,15 @@ final class si extends qk {
               }
             }
           } else {
-            var9 = (dj) null;
-            si.a(50, 105, (dj) null, -55);
+            var9 = (Js5Archive) null;
+            si.a(50, 105, (Js5Archive) null, -55);
             var3 = null;
             var4 = -1;
             var5 = -1;
             var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
             while (var6_ref != null) {
               if (var6_ref.x(33)) {
-                var18 = dj.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+                var18 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
                 if (var18 != null) {
                   if (!(var18.field_g <= var4) ||
                     var4 == -1) {
@@ -413,17 +413,17 @@ final class si extends qk {
         }
     }
 
-    final static vn a(int param0, int param1, dj param2, int param3) {
+    final static Sprite a(int param0, int param1, Js5Archive param2, int param3) {
         RuntimeException var4 = null;
-        dj var5 = null;
+        Js5Archive var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 48) {
-            var5 = (dj) null;
-            si.a(-109, -74, (dj) null, 70);
+            var5 = (Js5Archive) null;
+            si.a(-109, -74, (Js5Archive) null, 70);
           }
           if (ph.a(param1, param3 + 30995, param0, param2)) {
             return fg.d(-127);

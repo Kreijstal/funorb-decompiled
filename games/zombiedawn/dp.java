@@ -4,10 +4,10 @@
 final class dp implements io {
     static nk field_a;
     static String field_g;
-    static vn[] field_b;
+    static Sprite[] field_b;
     private int field_d;
     static int field_h;
-    private rb field_f;
+    private Font field_f;
     static am field_e;
     private int field_c;
 
@@ -118,7 +118,7 @@ final class dp implements io {
         return 86;
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -330,7 +330,7 @@ final class dp implements io {
         this.field_c = 1;
     }
 
-    dp(rb param0, int param1, int param2) {
+    dp(Font param0, int param1, int param2) {
         try {
           this.field_d = param2;
           this.field_f = param0;

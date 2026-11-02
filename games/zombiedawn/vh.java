@@ -3,7 +3,7 @@
  */
 final class vh {
     static PlatformTaskDispatcher field_a;
-    static vn[] field_e;
+    static Sprite[] field_e;
     static nk field_d;
     static int field_b;
     static sd field_c;

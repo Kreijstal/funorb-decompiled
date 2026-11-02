@@ -19,7 +19,7 @@ final class mp {
         int var7Lifetime1;
         j.field_b[qn.field_e] = param0;
         qd.field_c[qn.field_e] = qn.field_e;
-        dj.field_g[qn.field_e] = param1;
+        Js5Archive.field_g[qn.field_e] = param1;
         if (param1 <= ub.field_d) {
           if (param1 < fe.field_O) {
             sg.field_pb = param1;

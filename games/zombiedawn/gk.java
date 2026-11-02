@@ -87,7 +87,7 @@ final class gk extends WorldObject {
         field_H = null;
     }
 
-    final static void a(int param0, vn[] param1, boolean param2) {
+    final static void a(int param0, Sprite[] param1, boolean param2) {
         byte[] var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

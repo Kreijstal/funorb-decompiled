@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ga extends IntrusiveNode {
+class UiWidget extends IntrusiveNode {
     static int field_q;
     int field_k;
     int field_p;
@@ -23,11 +23,11 @@ class ga extends IntrusiveNode {
 
     void c(byte param0) {
         if (param0 != 57) {
-          this.a((ga) null, -6, 18, 10, -10, false, 55);
+          this.a((UiWidget) null, -6, 18, 10, -10, false, 55);
         }
     }
 
-    boolean a(ga param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -53,7 +53,7 @@ class ga extends IntrusiveNode {
         }
     }
 
-    boolean a(byte param0, ga param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -79,7 +79,7 @@ class ga extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -92,7 +92,7 @@ class ga extends IntrusiveNode {
           if (param1 == 1) {
             return false;
           }
-          this.a((ga) null, 64, -30, -110, -58, false, 34);
+          this.a((UiWidget) null, 64, -30, -110, -58, false, 34);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -139,7 +139,7 @@ class ga extends IntrusiveNode {
           }
           if (null != this.field_h) {
             discarded$4 = param3.append(" renderer=");
-            if (this.field_h instanceof ga) {
+            if (this.field_h instanceof UiWidget) {
               param3 = this.a(param0, param3, true, param1 + 1);
               if (var6 != 0) {
                 discarded$5 = param3.append(this.field_h);
@@ -150,7 +150,7 @@ class ga extends IntrusiveNode {
           }
           if (this.field_v != null) {
             discarded$6 = param3.append(" listener=");
-            if (this.field_v instanceof ga) {
+            if (this.field_v instanceof UiWidget) {
               param3 = this.a(param0, param3, true, param1 + 1);
               if (var6 != 0) {
                 discarded$7 = param3.append(this.field_v);
@@ -312,7 +312,7 @@ class ga extends IntrusiveNode {
           og.a(this.d(-58), 0);
           return param2;
         }
-        this.a(76, 88, -58, 36, -103, -17, (ga) null);
+        this.a(76, 88, -58, 36, -103, -17, (UiWidget) null);
         var5Lifetime1 = this.e(-17741) ? 1 : 0;
         if (!param2) {
           if (var5Lifetime1 == 0) {
@@ -481,7 +481,7 @@ class ga extends IntrusiveNode {
         return param2;
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4, ga param5) {
+    void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
           if (param1 < 1) {
             this.field_v = (sk) null;
@@ -537,9 +537,9 @@ class ga extends IntrusiveNode {
         try {
           var3 = dp.field_e;
           var3.j(11, param0);
-          var3.i(2, 93);
-          var3.i(param1, param1 ^ 35);
-          var3.i(param2.field_k, -96);
+          var3.writeByte(2, 93);
+          var3.writeByte(param1, param1 ^ 35);
+          var3.writeByte(param2.field_k, -96);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ga.VA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -568,7 +568,7 @@ class ga extends IntrusiveNode {
         se.field_j.a(mm.field_i, lc.field_i, var5, -104);
     }
 
-    void a(ga param0, byte param1, int param2, int param3) {
+    void a(UiWidget param0, byte param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int stackIn_3_0 = 0;
@@ -609,7 +609,7 @@ class ga extends IntrusiveNode {
 
     boolean e(int param0) {
         if (param0 != -17741) {
-          this.a(-123, 51, -13, -35, -43, -14, (ga) null);
+          this.a(-123, 51, -13, -35, -43, -14, (UiWidget) null);
           return false;
         }
         return false;
@@ -626,15 +626,15 @@ class ga extends IntrusiveNode {
     final void a(boolean param0) {
         this.a(38, this.field_j, this.field_k, this.field_i, this.field_n);
         if (!param0) {
-          ga.a(122, 7, (lo) null);
+          UiWidget.a(122, 7, (lo) null);
         }
     }
 
-    ga(String param0, sk param1) {
+    UiWidget(String param0, sk param1) {
         this(param0, se.field_j.field_n, param1);
     }
 
-    boolean a(int param0, int param1, ga param2, char param3) {
+    boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_4_0 = null;
@@ -777,12 +777,12 @@ class ga extends IntrusiveNode {
         }
     }
 
-    protected ga() {
+    protected UiWidget() {
         this.field_p = 0;
         this.field_u = 0;
     }
 
-    ga(String param0, io param1, sk param2) {
+    UiWidget(String param0, io param1, sk param2) {
         ak var4 = null;
         this.field_p = 0;
         this.field_u = 0;
@@ -800,7 +800,7 @@ class ga extends IntrusiveNode {
         }
     }
 
-    ga(int param0, int param1, int param2, int param3, io param4, sk param5) {
+    UiWidget(int param0, int param1, int param2, int param3, io param4, sk param5) {
         this.field_p = 0;
         this.field_u = 0;
         try {

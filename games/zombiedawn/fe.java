@@ -13,7 +13,7 @@ final class fe extends hp implements oa, hh {
     private md field_N;
     static int field_H;
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;

@@ -37,7 +37,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static void a(vn[] param0, int param1, int param2, byte param3, int param4) {
+    final static void a(Sprite[] param0, int param1, int param2, byte param3, int param4) {
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;
@@ -166,17 +166,17 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static v[] a(dj param0, int param1, int param2, int param3) {
+    final static v[] a(Js5Archive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        vn[] var5 = null;
+        Sprite[] var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > -68) {
-            var5 = (vn[]) null;
-            MouseInputHandler.a((vn[]) null, -98, 92, (byte) 28, 20);
+            var5 = (Sprite[]) null;
+            MouseInputHandler.a((Sprite[]) null, -98, 92, (byte) 28, 20);
           }
           if (ph.a(param1, 31043, param3, param0)) {
             return di.a(-79);

@@ -282,7 +282,7 @@ final class tp extends PcmStream {
         }
     }
 
-    final static void a(byte param0, dj param1) {
+    final static void a(byte param0, Js5Archive param1) {
         mb var2 = null;
         if (param0 <= 120) {
           return;
@@ -304,7 +304,7 @@ final class tp extends PcmStream {
         if (param0 != 0) {
           field_p = -26L;
         }
-        return new ji(ra.e((byte) -16), df.a(1));
+        return new ji(DualLinkDeque.e((byte) -16), df.a(1));
     }
 
     final static PcmSampleStream b(byte param0, int param1) {
@@ -356,25 +356,25 @@ final class tp extends PcmStream {
         return 2;
     }
 
-    final static void a(vn[] param0, int param1) {
+    final static void a(Sprite[] param0, int param1) {
         try {
-          si.field_Ub = new vn[7];
-          vh.field_e = new vn[7];
-          pl.field_p = new vn(300, 200);
+          si.field_Ub = new Sprite[7];
+          vh.field_e = new Sprite[7];
+          pl.field_p = new Sprite(300, 200);
           si.field_Ub[0] = param0[0];
-          vh.field_e[0] = new vn(param0[0].field_w + 20, param0[0].field_t - param1);
+          vh.field_e[0] = new Sprite(param0[0].field_w + 20, param0[0].field_t - param1);
           si.field_Ub[1] = param0[1];
-          vh.field_e[1] = new vn(10 + param0[1].field_w, 10 + param0[1].field_t);
-          si.field_Ub[2] = new vn(150, 100);
-          vh.field_e[2] = new vn(150, 100);
-          si.field_Ub[3] = new vn(120, 50);
-          vh.field_e[3] = new vn(120, 50);
-          si.field_Ub[4] = new vn(300, 50);
-          vh.field_e[4] = new vn(300, 50);
-          si.field_Ub[5] = new vn(200, 90);
-          vh.field_e[5] = new vn(200, 90);
-          si.field_Ub[6] = new vn(200, 50);
-          vh.field_e[6] = new vn(200, 50);
+          vh.field_e[1] = new Sprite(10 + param0[1].field_w, 10 + param0[1].field_t);
+          si.field_Ub[2] = new Sprite(150, 100);
+          vh.field_e[2] = new Sprite(150, 100);
+          si.field_Ub[3] = new Sprite(120, 50);
+          vh.field_e[3] = new Sprite(120, 50);
+          si.field_Ub[4] = new Sprite(300, 50);
+          vh.field_e[4] = new Sprite(300, 50);
+          si.field_Ub[5] = new Sprite(200, 90);
+          vh.field_e[5] = new Sprite(200, 90);
+          si.field_Ub[6] = new Sprite(200, 50);
+          vh.field_e[6] = new Sprite(200, 50);
           vh.field_e[0].a();
           si.field_Ub[0].h(5, 5, 16777215);
           oc.a((byte) 70);

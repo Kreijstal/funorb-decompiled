@@ -75,10 +75,10 @@ final class fp extends an {
           if (qp.field_b[param0] > qp.field_b[param3]) {
             return false;
           }
-          if (dj.field_g[param3] > dj.field_g[param0]) {
+          if (Js5Archive.field_g[param3] > Js5Archive.field_g[param0]) {
             return true;
           }
-          if (dj.field_g[param3] < dj.field_g[param0]) {
+          if (Js5Archive.field_g[param3] < Js5Archive.field_g[param0]) {
             return false;
           }
           if (param2 == 0) {
@@ -103,10 +103,10 @@ final class fp extends an {
           }
           return !(param0 >= param3);
         }
-        if (dj.field_g[param0] < dj.field_g[param3]) {
+        if (Js5Archive.field_g[param0] < Js5Archive.field_g[param3]) {
           return true;
         }
-        if (dj.field_g[param0] > dj.field_g[param3]) {
+        if (Js5Archive.field_g[param0] > Js5Archive.field_g[param3]) {
           return false;
         }
         if (qp.field_b[param3] > qp.field_b[param0]) {
@@ -141,7 +141,7 @@ final class fp extends an {
         return true;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;

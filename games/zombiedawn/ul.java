@@ -5,8 +5,8 @@ final class ul {
     static boolean field_f;
     static long field_b;
     private lc field_a;
-    private dj field_g;
-    private dj field_c;
+    private Js5Archive field_g;
+    private Js5Archive field_c;
     static int field_d;
     static long field_e;
 
@@ -31,18 +31,18 @@ final class ul {
         }
     }
 
-    final static vn a(boolean param0, String param1) {
+    final static Sprite a(boolean param0, String param1) {
         oi var2 = null;
         RuntimeException var2_ref = null;
-        vn var3 = null;
-        vn stackIn_3_0 = null;
+        Sprite var3 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = bj.field_q;
-          var3 = new vn(var2.b(param1), 27);
+          var3 = new Sprite(var2.b(param1), 27);
           var3.a();
           if (param0) {
             ul.a(-121, (byte) 5);
@@ -78,7 +78,7 @@ final class ul {
         var3 = new dm();
         int var5 = 91 / ((-7 - param0) / 53);
         if (var4 != null) {
-          var3.a(new de(var4), 0);
+          var3.a(new PacketBuffer(var4), 0);
         }
         if (param1 >= 32768) {
           var3.d((byte) -76);

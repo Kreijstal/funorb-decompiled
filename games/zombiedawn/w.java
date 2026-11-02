@@ -11,11 +11,11 @@ abstract class w {
 
     abstract byte[] a(int param0, byte param1);
 
-    final static void a(vn[] param0, byte param1) {
+    final static void a(Sprite[] param0, byte param1) {
         int var2_int = 0;
         int var3 = ZombieDawn.field_J;
         ni.field_b = param0;
-        nf.field_d = new vn(55, 130);
+        nf.field_d = new Sprite(55, 130);
         if (param1 >= -58) {
           return;
         }
@@ -26,10 +26,10 @@ abstract class w {
           Rasterizer.h(4, 4, 0, 0, Rasterizer.field_f, Rasterizer.field_a);
           ni.field_b[2].h(5, -5, 0);
           ni.field_b[3].h(5, -5, 0);
-          mk.field_a = new vn[16];
-          qp.field_c = new vn[mk.field_a.length];
+          mk.field_a = new Sprite[16];
+          qp.field_c = new Sprite[mk.field_a.length];
           for (var2_int = 0; var2_int < mk.field_a.length; var2_int++) {
-            mk.field_a[var2_int] = new vn(200, 25);
+            mk.field_a[var2_int] = new Sprite(200, 25);
             mk.field_a[var2_int].a();
             bj.field_q.a(qp.a(var2_int, 90), 100, 17, 16777215, -1);
             qp.field_c[var2_int] = so.a(mk.field_a[var2_int]);
@@ -51,8 +51,8 @@ abstract class w {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != -98) {
-          vn[] var2 = (vn[]) null;
-          w.a((vn[]) null, (byte) -72);
+          Sprite[] var2 = (Sprite[]) null;
+          w.a((Sprite[]) null, (byte) -72);
         }
     }
 

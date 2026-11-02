@@ -160,16 +160,16 @@ final class ub {
         si.field_Ub[2].a();
         Rasterizer.d();
         if (this.field_s) {
-          var2 = dj.field_e.field_hb;
+          var2 = Js5Archive.field_e.field_hb;
         } else {
           if (!this.field_g) {
-            var2 = dj.field_e.field_P;
+            var2 = Js5Archive.field_e.field_P;
           } else {
-            var2 = dj.field_e.field_nb;
+            var2 = Js5Archive.field_e.field_nb;
           }
         }
         if (!this.field_s) {
-          stackIn_8_0 = dj.field_e.field_f;
+          stackIn_8_0 = Js5Archive.field_e.field_f;
         } else {
           stackIn_8_0 = 2;
         }
@@ -211,7 +211,7 @@ final class ub {
         int var3;
         var3 = ZombieDawn.field_J;
         this.field_k = 0;
-        var2 = dj.field_e.field_R.b((byte) 26);
+        var2 = Js5Archive.field_e.zombies.b((byte) 26);
         k.field_t = 0;
         while (var2 instanceof WorldObject) {
           if (var2 instanceof Zombie &&
@@ -227,7 +227,7 @@ final class ub {
           }
           var2 = var2.previous;
         }
-        k.field_t = k.field_t - dj.field_e.field_db;
+        k.field_t = k.field_t - Js5Archive.field_e.field_db;
         if (param0 != -106) {
           return;
         }
@@ -244,7 +244,7 @@ final class ub {
         if (!this.field_s &&
           !this.field_e &&
           !this.field_g &&
-          dj.field_e.field_f > dj.field_e.field_P + k.field_t) {
+          Js5Archive.field_e.field_f > Js5Archive.field_e.field_P + k.field_t) {
           ck.a(-11, param0 ^ -6878);
         }
     }
@@ -367,7 +367,7 @@ final class ub {
         if (!param0) {
           this.f(-118);
         }
-        stackIn_12_0 = (dj.field_e.field_P >= dj.field_e.field_f) && (!this.field_l) && (!this.field_g);
+        stackIn_12_0 = (Js5Archive.field_e.field_P >= Js5Archive.field_e.field_f) && (!this.field_l) && (!this.field_g);
         return stackIn_12_0;
     }
 
@@ -399,7 +399,7 @@ final class ub {
           var2 = s.a(1938762664, li.field_f, new String[]{Integer.toString(this.field_b), Integer.toString(this.field_k + this.field_b)});
           this.field_o.a(var2, Rasterizer.field_f / 2, 5 + this.field_o.field_I, 2, 65793);
         } else {
-          var2 = kn.field_I + " " + Integer.toString(dj.field_e.field_nb);
+          var2 = kn.field_I + " " + Integer.toString(Js5Archive.field_e.field_nb);
           bj.field_q.a(var2, Rasterizer.field_f / 2, 5 + this.field_o.field_I, 16777088, 65793);
         }
         pa.a(-21189);

@@ -3,7 +3,7 @@
  */
 final class jg {
     private static byte[] field_c;
-    private de field_g;
+    private PacketBuffer field_g;
     private int[] field_a;
     private int field_e;
     private long field_h;
@@ -16,13 +16,13 @@ final class jg {
         int var2;
         int var3;
         int var4;
-        var2 = this.field_g.field_h[this.field_g.field_j];
+        var2 = this.field_g.payload[this.field_g.position];
         if (var2 >= 0) {
           var2 = this.field_d[param0];
         } else {
           var2 = var2 & 255;
           this.field_d[param0] = var2;
-          this.field_g.field_j = this.field_g.field_j + 1;
+          this.field_g.position = this.field_g.position + 1;
         }
         if (var2 != 240 &&
           var2 != 247) {
@@ -31,17 +31,17 @@ final class jg {
         var3 = this.field_g.b(true);
         if (var2 == 247 &&
           var3 > 0) {
-          var4 = this.field_g.field_h[this.field_g.field_j] & 255;
+          var4 = this.field_g.payload[this.field_g.position] & 255;
           if (!(var4 < 241) &&
             !(var4 > 243) || (var4 == 246 ||
             var4 == 248) || !(var4 < 250) &&
             !(var4 > 252) || var4 == 254) {
-            this.field_g.field_j = this.field_g.field_j + 1;
+            this.field_g.position = this.field_g.position + 1;
             this.field_d[param0] = var4;
             return this.a(param0, var4);
           }
         }
-        this.field_g.field_j = this.field_g.field_j + var3;
+        this.field_g.position = this.field_g.position + var3;
         return 0;
     }
 
@@ -64,11 +64,11 @@ final class jg {
     }
 
     final void c() {
-        this.field_g.field_j = -1;
+        this.field_g.position = -1;
     }
 
     final void e() {
-        this.field_g.field_h = null;
+        this.field_g.payload = null;
         this.field_a = null;
         this.field_i = null;
         this.field_f = null;
@@ -87,9 +87,9 @@ final class jg {
         for (var4 = 0; var4 < var3; var4++) {
           this.field_f[var4] = 0;
           this.field_d[var4] = 0;
-          this.field_g.field_j = this.field_a[var4];
+          this.field_g.position = this.field_a[var4];
           this.c(var4);
-          this.field_i[var4] = this.field_g.field_j;
+          this.field_i[var4] = this.field_g.position;
         }
     }
 
@@ -98,15 +98,15 @@ final class jg {
     }
 
     final void b(int param0) {
-        this.field_i[param0] = this.field_g.field_j;
+        this.field_i[param0] = this.field_g.position;
     }
 
     final void f(int param0) {
-        this.field_g.field_j = this.field_i[param0];
+        this.field_g.position = this.field_i[param0];
     }
 
     final boolean a() {
-        return this.field_g.field_h != null;
+        return this.field_g.payload != null;
     }
 
     private final int a(int param0, int param1) {
@@ -120,7 +120,7 @@ final class jg {
           var3 = this.field_g.d((byte) -116);
           var4 = this.field_g.b(true);
           if (var3 == 47) {
-            this.field_g.field_j = this.field_g.field_j + var4;
+            this.field_g.position = this.field_g.position + var4;
             return 1;
           }
           if (var3 == 81) {
@@ -129,10 +129,10 @@ final class jg {
             var6 = this.field_f[param0];
             this.field_h = this.field_h + (long)var6 * (long)(this.field_e - var5);
             this.field_e = var5;
-            this.field_g.field_j = this.field_g.field_j + var4;
+            this.field_g.position = this.field_g.position + var4;
             return 2;
           }
-          this.field_g.field_j = this.field_g.field_j + var4;
+          this.field_g.position = this.field_g.position + var4;
           return 3;
         }
         var3Lifetime1 = field_c[param1 - 128];
@@ -159,8 +159,8 @@ final class jg {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
-        this.field_g.field_h = param0;
-        this.field_g.field_j = 10;
+        this.field_g.payload = param0;
+        this.field_g.position = 10;
         int var2 = this.field_g.f(2);
         this.field_b = this.field_g.f(2);
         this.field_e = 500000;
@@ -170,10 +170,10 @@ final class jg {
           var4 = this.field_g.c(123);
           var5 = this.field_g.c(121);
           if (var4 == 1297379947) {
-            this.field_a[var3] = this.field_g.field_j;
+            this.field_a[var3] = this.field_g.position;
             var3++;
           }
-          this.field_g.field_j = this.field_g.field_j + var5;
+          this.field_g.position = this.field_g.position + var5;
         }
         this.field_h = 0L;
         this.field_i = new int[var2];
@@ -203,11 +203,11 @@ final class jg {
     }
 
     jg() {
-        this.field_g = new de((byte[]) null);
+        this.field_g = new PacketBuffer((byte[]) null);
     }
 
     jg(byte[] param0) {
-        this.field_g = new de((byte[]) null);
+        this.field_g = new PacketBuffer((byte[]) null);
         this.a(param0);
     }
 

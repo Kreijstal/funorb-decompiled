@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class gl extends an {
-    private ga field_G;
+    private UiWidget field_G;
     static int field_F;
     static tk field_E;
 
-    final boolean a(byte param0, ga param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -63,7 +63,7 @@ class gl extends an {
         }
     }
 
-    final static void a(dj param0, int param1) {
+    final static void a(Js5Archive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_1234_0;
             StringBuilder stackIn_1234_1;
@@ -72,10 +72,10 @@ class gl extends an {
             byte[] var2;
             RuntimeException var2_ref;
             int var3;
-            dj param0;
+            Js5Archive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(dj initialParam0, int initialParam1) {
+            $CfrPartitionedBody(Js5Archive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1234_0 = null;
@@ -1524,7 +1524,7 @@ class gl extends an {
         decompiledBody.run();
     }
 
-    gl(ga param0) {
+    gl(UiWidget param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

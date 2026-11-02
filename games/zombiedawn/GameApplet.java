@@ -161,7 +161,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static void a(int param0, int param1, vn[] param2, int param3, int param4) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -179,7 +179,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             param3 > 0) {
             var5_int = param2[0].field_r;
             if (param0 <= 10) {
-              GameApplet.a(-53, 77, (vn[]) null, 65, -32);
+              GameApplet.a(-53, 77, (Sprite[]) null, 65, -32);
             }
             var6 = param2[2].field_r;
             var7 = param2[1].field_r;
@@ -863,7 +863,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (sj.a((byte) -118, (CharSequence) ((Object) var4)) &&
-                        !(ra.a((CharSequence) ((Object) var4), -84) >= 10)) {
+                        !(DualLinkDeque.a((CharSequence) ((Object) var4), -84) >= 10)) {
                         this.a("wrongjava", 50);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }

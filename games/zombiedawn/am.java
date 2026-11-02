@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am extends de {
+final class am extends PacketBuffer {
     private uo field_l;
     private int field_n;
     static String field_m;
@@ -19,25 +19,25 @@ final class am extends de {
         if (param0 <= 122) {
           return 95;
         }
-        int fieldTemp$0 = this.field_j;
-        this.field_j = this.field_j + 1;
-        return this.field_h[fieldTemp$0] - this.field_l.a(92) & 255;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0] - this.field_l.a(92) & 255;
     }
 
     final void h(byte param0) {
         if (param0 != 75) {
           this.i(13);
         }
-        this.field_n = this.field_j * 8;
+        this.field_n = this.position * 8;
     }
 
     final void i(int param0) {
-        this.field_j = (7 + this.field_n) / param0;
+        this.position = (7 + this.field_n) / param0;
     }
 
     final static void k(int param0) {
-        if (LevelNavigation.field_x != 0 - mj.field_b &&
-          LevelNavigation.field_x == -mj.field_b + 250) {
+        if (LevelNavigation.field_x != 0 - SpatialGrid.field_b &&
+          LevelNavigation.field_x == -SpatialGrid.field_b + 250) {
         }
         if (param0 != -21215) {
           return;
@@ -96,9 +96,9 @@ final class am extends de {
         var6 = ZombieDawn.field_J;
         try {
           for (var5_int = param3; param0 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_j;
-            this.field_j = this.field_j + 1;
-            param1[var5_int + param2] = (byte)(this.field_h[fieldTemp$0] - this.field_l.a(96));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param1[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_l.a(96));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,14 +132,14 @@ final class am extends de {
         while (param1 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.field_h[incrementValue$0] & jd.field_e[var4]) << param1 - var4);
+          var5 = var5 + ((this.payload[incrementValue$0] & jd.field_e[var4]) << param1 - var4);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (param1 != var4) {
-          var5 = var5 + (this.field_h[var3] >> var4 - param1 & jd.field_e[param1]);
+          var5 = var5 + (this.payload[var3] >> var4 - param1 & jd.field_e[param1]);
         } else {
-          var5 = var5 + (jd.field_e[var4] & this.field_h[var3]);
+          var5 = var5 + (jd.field_e[var4] & this.payload[var3]);
         }
         return var5;
     }
@@ -154,9 +154,9 @@ final class am extends de {
     }
 
     final void j(int param0, int param1) {
-        int fieldTemp$0 = this.field_j;
-        this.field_j = this.field_j + 1;
-        this.field_h[fieldTemp$0] = (byte)(param1 + this.field_l.a(124));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_l.a(124));
         if (param0 != 11) {
           this.field_n = -62;
         }

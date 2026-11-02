@@ -6,7 +6,7 @@ abstract class dh {
     int[] field_c;
     java.awt.Image field_f;
     int field_a;
-    static de field_e;
+    static PacketBuffer field_e;
     static String field_g;
     int field_d;
 
@@ -54,7 +54,7 @@ abstract class dh {
             return;
           }
         } else {
-          field_e = (de) null;
+          field_e = (PacketBuffer) null;
           if (rc.field_p == f.field_k) {
             fieldTemp$1 = ln.field_b;
             ln.field_b = ln.field_b + 1;
@@ -106,7 +106,7 @@ abstract class dh {
     }
 
     static {
-        field_e = new de(256);
+        field_e = new PacketBuffer(256);
         field_g = "Unpacking graphics";
     }
 }

@@ -7,7 +7,7 @@ final class vk {
     static String[] field_b;
     static int field_a;
 
-    final static ma a(dj param0, int param1, int param2) {
+    final static ma a(Js5Archive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

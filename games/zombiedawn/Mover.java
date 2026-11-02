@@ -35,7 +35,7 @@ abstract class Mover extends WorldObject {
         int var6 = ZombieDawn.field_J;
         int var4Lifetime1;
         int var5Lifetime1;
-        if (!dj.field_e.field_mb.field_e) {
+        if (!Js5Archive.field_e.tileMap.field_e) {
           return null;
         }
         va var7 = ub.a(127, this.l(-95));
@@ -45,7 +45,7 @@ abstract class Mover extends WorldObject {
         }
         this.field_y = this.field_y + var7.field_h;
         this.field_x = this.field_x + var7.field_i;
-        if (dj.field_e.field_H.a(false, this.field_x >> 16, this.field_y >> 16, true)) {
+        if (Js5Archive.field_e.field_H.a(false, this.field_x >> 16, this.field_y >> 16, true)) {
           this.d((byte) 12);
         } else {
           this.field_x = this.field_x - var7.field_i;
@@ -270,7 +270,7 @@ abstract class Mover extends WorldObject {
     final int b(int param0, int param1, int param2) {
         int var4 = param1 / 24;
         int var5 = param2 / 24;
-        int[][] var6 = dj.field_e.field_H.field_A.field_f;
+        int[][] var6 = Js5Archive.field_e.field_H.field_A.field_f;
         if (var4 < param0) {
           return 0;
         }
@@ -357,8 +357,8 @@ abstract class Mover extends WorldObject {
                 this.field_x < var3) {
                 var5 = 1;
                 var6 = 67 % ((-53 - param0) / 32);
-                if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-                  Math.abs(this.field_x - var3) < hd.field_y) {
+                if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+                  Math.abs(this.field_x - var3) < SpriteState.field_y) {
                   var4 = 1;
                   var5 = 1;
                 }
@@ -392,8 +392,8 @@ abstract class Mover extends WorldObject {
                 }
                 var5 = stackIn_15_0;
                 var6 = 67 % ((-53 - param0) / 32);
-                if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-                  Math.abs(this.field_x - var3) < hd.field_y) {
+                if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+                  Math.abs(this.field_x - var3) < SpriteState.field_y) {
                   var4 = 1;
                   var5 = 1;
                 }
@@ -424,8 +424,8 @@ abstract class Mover extends WorldObject {
           }
           var5Lifetime5 = stackIn_54_0;
           var6Lifetime5 = 67 % ((-53 - param0) / 32);
-          if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-            Math.abs(this.field_x - var3) < hd.field_y) {
+          if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+            Math.abs(this.field_x - var3) < SpriteState.field_y) {
             var4 = 1;
             var5Lifetime5 = 1;
           }
@@ -473,8 +473,8 @@ abstract class Mover extends WorldObject {
             }
             var5Lifetime1 = stackIn_157_0;
             var6Lifetime1 = 67 % ((-53 - param0) / 32);
-            if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-              Math.abs(this.field_x - var3) < hd.field_y) {
+            if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+              Math.abs(this.field_x - var3) < SpriteState.field_y) {
               var4Lifetime1 = 1;
               var5Lifetime1 = 1;
             }
@@ -505,8 +505,8 @@ abstract class Mover extends WorldObject {
                 this.field_x < var3) {
                 var5Lifetime1Lifetime1 = 1;
                 var6Lifetime1Lifetime1 = 67 % ((-53 - param0) / 32);
-                if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-                  Math.abs(this.field_x - var3) < hd.field_y) {
+                if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+                  Math.abs(this.field_x - var3) < SpriteState.field_y) {
                   var4Lifetime1Lifetime1 = 1;
                   var5Lifetime1Lifetime1 = 1;
                 }
@@ -540,8 +540,8 @@ abstract class Mover extends WorldObject {
                 }
                 var5Lifetime1Lifetime1 = stackIn_84_0;
                 var6Lifetime1Lifetime1 = 67 % ((-53 - param0) / 32);
-                if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-                  Math.abs(this.field_x - var3) < hd.field_y) {
+                if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+                  Math.abs(this.field_x - var3) < SpriteState.field_y) {
                   var4Lifetime1Lifetime1 = 1;
                   var5Lifetime1Lifetime1 = 1;
                 }
@@ -572,8 +572,8 @@ abstract class Mover extends WorldObject {
           }
           var5Lifetime1Lifetime2 = stackIn_123_0;
           var6Lifetime1Lifetime2 = 67 % ((-53 - param0) / 32);
-          if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-            Math.abs(this.field_x - var3) < hd.field_y) {
+          if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+            Math.abs(this.field_x - var3) < SpriteState.field_y) {
             var4Lifetime1Lifetime1 = 1;
             var5Lifetime1Lifetime2 = 1;
           }
@@ -616,8 +616,8 @@ abstract class Mover extends WorldObject {
           }
           var5Lifetime2 = stackIn_188_0;
           var6Lifetime2 = 67 % ((-53 - param0) / 32);
-          if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-            Math.abs(this.field_x - var3) < hd.field_y) {
+          if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+            Math.abs(this.field_x - var3) < SpriteState.field_y) {
             var4Lifetime2 = 1;
             var5Lifetime2 = 1;
           }
@@ -645,8 +645,8 @@ abstract class Mover extends WorldObject {
         if (this.field_T == 0) {
           var5Lifetime3 = 1;
           var6Lifetime3 = 67 % ((-53 - param0) / 32);
-          if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-            Math.abs(this.field_x - var3) < hd.field_y) {
+          if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+            Math.abs(this.field_x - var3) < SpriteState.field_y) {
             var4Lifetime3 = 1;
             var5Lifetime3 = 1;
           }
@@ -679,8 +679,8 @@ abstract class Mover extends WorldObject {
             if (this.field_x > var3) {
               var5Lifetime4 = 1;
               var6Lifetime4 = 67 % ((-53 - param0) / 32);
-              if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-                Math.abs(this.field_x - var3) < hd.field_y) {
+              if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+                Math.abs(this.field_x - var3) < SpriteState.field_y) {
                 var4Lifetime3 = 1;
                 var5Lifetime4 = 1;
               }
@@ -707,8 +707,8 @@ abstract class Mover extends WorldObject {
             }
             var5Lifetime4 = stackIn_253_0;
             var6Lifetime4Lifetime2 = 67 % ((-53 - param0) / 32);
-            if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-              Math.abs(this.field_x - var3) < hd.field_y) {
+            if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+              Math.abs(this.field_x - var3) < SpriteState.field_y) {
               var4Lifetime3 = 1;
               var5Lifetime4 = 1;
             }
@@ -738,8 +738,8 @@ abstract class Mover extends WorldObject {
             }
           }
           var6Lifetime4Lifetime1 = 67 % ((-53 - param0) / 32);
-          if (Math.abs(-var2 + this.field_y) < hd.field_y &&
-            Math.abs(this.field_x - var3) < hd.field_y) {
+          if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
+            Math.abs(this.field_x - var3) < SpriteState.field_y) {
             var4Lifetime3 = 1;
             var5Lifetime4 = 1;
           }

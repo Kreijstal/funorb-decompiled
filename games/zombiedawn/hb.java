@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb extends ga {
+final class hb extends UiWidget {
     private int field_x;
     private int field_y;
     private int field_A;
-    private vn field_K;
+    private Sprite field_K;
     static String[] field_D;
-    private vn[] field_L;
-    private vn field_J;
+    private Sprite[] field_L;
+    private Sprite field_J;
     boolean field_F;
     int field_C;
-    private vn field_B;
+    private Sprite field_B;
     private int field_z;
     static String field_G;
     private int field_H;
     private int field_E;
 
     private final void g(int param0) {
-        this.field_L = new vn[]{this.b(this.field_y, this.field_A, -69), this.b(this.field_z, this.field_x, -105)};
+        this.field_L = new Sprite[]{this.b(this.field_y, this.field_A, -69), this.b(this.field_z, this.field_x, -105)};
         this.field_K = this.a(-108);
         this.field_J = this.field_K.d();
-        this.field_B = new vn(this.field_n >> 1, this.field_n);
+        this.field_B = new Sprite(this.field_n >> 1, this.field_n);
         int var2 = -77 / ((param0 - 88) / 33);
     }
 
@@ -29,7 +29,7 @@ final class hb extends ga {
         this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, param6 >> 1 & 8355711);
     }
 
-    private final vn b(int param0, int param1, int param2) {
+    private final Sprite b(int param0, int param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -38,7 +38,7 @@ final class hb extends ga {
         int var12 = 0;
         int var13 = 0;
         int var14 = ZombieDawn.field_J;
-        vn var15 = new vn(this.field_E * 2, this.field_n);
+        Sprite var15 = new Sprite(this.field_E * 2, this.field_n);
         int var9Lifetime1;
         int var10Lifetime1;
         int var13Lifetime1;
@@ -64,7 +64,7 @@ final class hb extends ga {
         return var15;
     }
 
-    private final void a(int param0, vn param1, byte param2, int param3) {
+    private final void a(int param0, Sprite param1, byte param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -137,14 +137,14 @@ final class hb extends ga {
         }
     }
 
-    private final vn a(int param0) {
+    private final Sprite a(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = ZombieDawn.field_J;
         int var2 = this.field_n >> 1;
-        vn var3 = new vn(var2, this.field_n);
+        Sprite var3 = new Sprite(var2, this.field_n);
         ki.a((byte) -118, var3);
         for (var4 = 0; var4 < this.field_n; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -164,7 +164,7 @@ final class hb extends ga {
         return var3;
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         try {
           if (this.field_F) {
             this.field_H = this.field_H + 1;

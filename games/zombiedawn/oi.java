@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi extends rb {
+final class oi extends Font {
     private byte[][] field_D;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {

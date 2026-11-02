@@ -3,11 +3,11 @@
  */
 final class ka {
     static byte[][] field_e;
-    private dj field_g;
+    private Js5Archive field_g;
     static String field_a;
     static byte[][] field_f;
     private dl field_c;
-    private dj field_b;
+    private Js5Archive field_b;
     static boolean[] field_h;
     private dl field_d;
 
@@ -212,7 +212,7 @@ final class ka {
         }
     }
 
-    ka(dj param0, dj param1) {
+    ka(Js5Archive param0, Js5Archive param1) {
         this.field_c = new dl(256);
         this.field_d = new dl(256);
         try {

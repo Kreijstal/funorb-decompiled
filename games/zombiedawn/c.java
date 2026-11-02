@@ -94,7 +94,7 @@ final class c {
         return stackIn_50_0;
     }
 
-    final static String a(dj param0, String param1, String param2, String param3, byte param4) {
+    final static String a(Js5Archive param0, String param1, String param2, String param3, byte param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;

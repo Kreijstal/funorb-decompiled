@@ -96,25 +96,25 @@ final class mm extends IntrusiveNode {
         int var2 = 40;
         int var3 = pb.a(so.field_a, 5, 1);
         if (var3 == 0) {
-          ga.field_q = ga.field_q - 3;
+          UiWidget.field_q = UiWidget.field_q - 3;
         } else {
           if (var3 == 1) {
-            ga.field_q = ga.field_q + 3;
+            UiWidget.field_q = UiWidget.field_q + 3;
           }
         }
-        if (!(ga.field_q >= var2)) {
-          ga.field_q = var2;
+        if (!(UiWidget.field_q >= var2)) {
+          UiWidget.field_q = var2;
         }
-        if (ga.field_q > var1 + var2) {
-          ga.field_q = var1 + var2;
+        if (UiWidget.field_q > var1 + var2) {
+          UiWidget.field_q = var1 + var2;
         }
     }
 
-    final static dj a(int param0, byte param1) {
+    final static Js5Archive a(int param0, byte param1) {
         if (param1 >= -18) {
           field_i = -54;
         }
-        return hd.a(false, true, param0, 1, true, false);
+        return SpriteState.a(false, true, param0, 1, true, false);
     }
 
     final boolean a(Human param0, byte param1) {

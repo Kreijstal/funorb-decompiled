@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj {
+final class SpatialGrid {
     private int field_l;
     private int field_f;
     private int field_j;
     private int field_i;
     int field_d;
     private int field_m;
-    private tf field_k;
-    private tf[] field_e;
+    private SpatialBucket field_k;
+    private SpatialBucket[] field_e;
     static int[] field_g;
-    private fa field_a;
+    private SpatialObject field_a;
     private int field_h;
     private int field_c;
     static int field_b;
 
-    private final tf a(int param0, int param1, int param2) {
+    private final SpatialBucket a(int param0, int param1, int param2) {
         if (param0 != 1) {
           this.field_j = 32;
           return this.a(false, param1, param2, 0);
@@ -33,7 +33,7 @@ final class mj {
         var3 = ZombieDawn.field_J;
         try {
           if (param1 != -1) {
-            mj.a(103, -42);
+            SpatialGrid.a(103, -42);
           }
           var4 = (bo) (mp.field_g.b((byte) 26));
           while (var4 != null) {
@@ -53,7 +53,7 @@ final class mj {
         }
     }
 
-    final fa a(int param0, int param1, int param2, int param3) {
+    final SpatialObject a(int param0, int param1, int param2, int param3) {
         if (param2 != 29845) {
           this.field_j = -108;
           return this.a(param1 - param0, param3 - param0, param3 + param0, param0 + param1, true);
@@ -61,8 +61,8 @@ final class mj {
         return this.a(param1 - param0, param3 - param0, param3 + param0, param0 + param1, true);
     }
 
-    private final tf a(boolean param0, int param1, int param2, int param3) {
-        tf dupTemp$0 = null;
+    private final SpatialBucket a(boolean param0, int param1, int param2, int param3) {
+        SpatialBucket dupTemp$0 = null;
         if (param1 >= this.field_m) {
           return null;
         }
@@ -75,28 +75,28 @@ final class mj {
         if (0 > param2) {
           return null;
         }
-        tf var5 = this.field_e[param2 + param1 * this.field_d];
+        SpatialBucket var5 = this.field_e[param2 + param1 * this.field_d];
         if (var5 == null &&
           param0) {
-          dupTemp$0 = new tf();
+          dupTemp$0 = new SpatialBucket();
           this.field_e[param2 + param1 * this.field_d] = dupTemp$0;
           var5 = dupTemp$0;
         }
         if (param3 != 0) {
           java.awt.Component var6 = (java.awt.Component) null;
-          mj.a(31, (java.awt.Component) null);
+          SpatialGrid.a(31, (java.awt.Component) null);
           return var5;
         }
         return var5;
     }
 
-    final fa b(boolean param0) {
+    final SpatialObject b(boolean param0) {
         int var3;
-        fa stackIn_5_1 = null;
-        fa stackIn_14_1 = null;
-        fa stackIn_28_1 = null;
-        fa stackIn_38_1 = null;
-        fa stackIn_49_1 = null;
+        SpatialObject stackIn_5_1 = null;
+        SpatialObject stackIn_14_1 = null;
+        SpatialObject stackIn_28_1 = null;
+        SpatialObject stackIn_38_1 = null;
+        SpatialObject stackIn_49_1 = null;
         var3 = ZombieDawn.field_J;
         if (null != this.field_k) {
           if (null == this.field_a) {
@@ -117,7 +117,7 @@ final class mj {
               if (this.field_h < this.field_c) {
                 this.field_a = null;
                 if (param0) {
-                  this.field_a = (fa) null;
+                  this.field_a = (SpatialObject) null;
                 }
                 return this.field_a;
               }
@@ -133,7 +133,7 @@ final class mj {
           if (!param0) {
             return this.field_a;
           }
-          this.field_a = (fa) null;
+          this.field_a = (SpatialObject) null;
           return this.field_a;
         }
         this.field_k = this.a(1, this.field_c, this.field_l);
@@ -162,7 +162,7 @@ final class mj {
             break;
           }
           if (param0) {
-            this.field_a = (fa) null;
+            this.field_a = (SpatialObject) null;
           }
           return this.field_a;
         }
@@ -195,13 +195,13 @@ final class mj {
           break;
         }
         if (param0) {
-          this.field_a = (fa) null;
+          this.field_a = (SpatialObject) null;
         }
         return this.field_a;
     }
 
-    final void a(int param0, int param1, fa param2, int param3) {
-        tf var5 = null;
+    final void a(int param0, int param1, SpatialObject param2, int param3) {
+        SpatialBucket var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -235,15 +235,15 @@ final class mj {
         int var1 = 6 / ((param0 + 48) / 33);
     }
 
-    final fa a(boolean param0) {
+    final SpatialObject a(boolean param0) {
         if (!param0) {
-          this.field_a = (fa) null;
+          this.field_a = (SpatialObject) null;
           return this.a(0, 0, -1 + this.field_d, -1 + this.field_m, true);
         }
         return this.a(0, 0, -1 + this.field_d, -1 + this.field_m, true);
     }
 
-    final fa a(int param0, int param1, int param2, int param3, boolean param4) {
+    final SpatialObject a(int param0, int param1, int param2, int param3, boolean param4) {
         this.field_i = param0 < 0 ? 0 : param0;
         this.field_h = param3 >= this.field_m ? -1 + this.field_m : param3;
         this.field_f = param1 < 0 ? 0 : param1;
@@ -277,10 +277,10 @@ final class mj {
         }
     }
 
-    mj(int param0, int param1) {
+    SpatialGrid(int param0, int param1) {
         this.field_d = param0;
         this.field_m = param1;
-        this.field_e = new tf[this.field_d * this.field_m];
+        this.field_e = new SpatialBucket[this.field_d * this.field_m];
     }
 
     static {

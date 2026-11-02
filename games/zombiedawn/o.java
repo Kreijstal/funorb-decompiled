@@ -7,17 +7,17 @@ final class o {
     private jp field_a;
     private int field_i;
     static byte[] field_l;
-    private vn field_p;
+    private Sprite field_p;
     private int field_q;
     private boolean field_f;
-    private vn field_g;
+    private Sprite field_g;
     private String field_j;
     private v[] field_m;
     private int field_h;
-    private vn field_b;
+    private Sprite field_b;
     private int field_e;
     private int field_o;
-    static vn[] field_d;
+    static Sprite[] field_d;
     static String field_n;
 
     private final void a(byte param0) {
@@ -27,14 +27,14 @@ final class o {
         int[] var14 = null;
         int[] var12 = null;
         int[] var10 = null;
-        vn var6 = null;
+        Sprite var6 = null;
         String var7 = null;
         String var8 = null;
         if (null == this.field_b) {
           if (null == ui.field_b) {
             return;
           }
-          this.field_b = new vn(622, 47);
+          this.field_b = new Sprite(622, 47);
           ki.a((byte) -84, this.field_b);
           int var2 = 76 % ((param0 + 45) / 48);
           Rasterizer.f(0, 0, 622, 47, 4540749, 65793);
@@ -43,12 +43,12 @@ final class o {
           var16 = gk.a(var4, -107, var3);
           this.a(-1, 0, 622, 0, 47, ui.field_b, var16, this.field_j);
           pa.a(-21189);
-          this.field_g = new vn(475, 24);
+          this.field_g = new Sprite(475, 24);
           this.a(SecondaryNodeDequeIterator.field_e, 0, (byte) 112, this.field_g, var16, -4, ui.field_b, 475, 0.75f, 24);
           var14 = gk.a(526344, -116, 526344);
           var12 = var14;
           var10 = var12;
-          var6 = new vn(121, 122);
+          var6 = new Sprite(121, 122);
           ki.a((byte) -127, var6);
           Rasterizer.f(0, 0, var6.field_w, var6.field_t / 2, 16180917, 16306250);
           Rasterizer.f(0, var6.field_t / 2, var6.field_w, var6.field_t, 16306250, 15568919);
@@ -58,7 +58,7 @@ final class o {
           this.a(var8, 0, (byte) 42, var6, var14, 20, ui.field_b, var6.field_w, 0.5f, var6.field_t);
           this.a(ui.field_e[this.field_h], 0, (byte) 99, var6, var10, var6.field_t / 2 + (-ui.field_b.field_I + 12), ui.field_b, var6.field_w, 0.699999988079071f, var6.field_t / 3);
           pa.a(-21189);
-          this.field_p = new vn(121, 122);
+          this.field_p = new Sprite(121, 122);
           ki.a((byte) -121, this.field_p);
           var6.e(this.field_p.field_w / 2, this.field_p.field_t / 2, -2048, 4096);
           pa.a(-21189);
@@ -126,7 +126,7 @@ final class o {
           var7 = param1.getParameter("currency");
           if (var7 != null &&
             sj.a((byte) -117, (CharSequence) ((Object) var7))) {
-            this.field_h = ra.a((CharSequence) ((Object) var7), 115);
+            this.field_h = DualLinkDeque.a((CharSequence) ((Object) var7), 115);
           } else {
             this.field_h = 2;
           }
@@ -192,7 +192,7 @@ final class o {
         return 0;
     }
 
-    private final void a(String param0, int param1, byte param2, vn param3, int[] param4, int param5, rb param6, int param7, float param8, int param9) {
+    private final void a(String param0, int param1, byte param2, Sprite param3, int[] param4, int param5, Font param6, int param7, float param8, int param9) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -206,11 +206,11 @@ final class o {
         int var11_int = 0;
         RuntimeException var11 = null;
         int var12 = 0;
-        vn var13 = null;
+        Sprite var13 = null;
         try {
           var11_int = (int)((float)param7 / param8);
           var12 = (int)((float)param9 / param8);
-          var13 = new vn(var11_int, var12);
+          var13 = new Sprite(var11_int, var12);
           if (param2 < 6) {
             this.field_m = (v[]) null;
           }
@@ -286,7 +286,7 @@ final class o {
         }
         if (param0 < 102) {
           var5 = (String) null;
-          this.a(15, -22, 123, 21, -97, (rb) null, (int[]) null, (String) null);
+          this.a(15, -22, 123, 21, -97, (Font) null, (int[]) null, (String) null);
         }
         var2Lifetime1 = 0;
         var3Lifetime1 = 299;
@@ -309,7 +309,7 @@ final class o {
           li.field_i = vj.a(nl.field_t, "frame", "members_expansion_screen", 4424743);
           nl.field_r = gf.a(nl.field_t, "arrow", 8, "members_expansion_screen");
           tc.field_r = gb.a("", -1, ge.field_b, "arialish12", nl.field_t);
-          ui.field_b = ra.a(ge.field_b, "pump32", "", 0, nl.field_t);
+          ui.field_b = DualLinkDeque.a(ge.field_b, "pump32", "", 0, nl.field_t);
           ck.field_i = bn.a("benefit_orbs", nl.field_t, "members_expansion_screen", 1);
           bb.field_c = bn.a("button_text", nl.field_t, "members_expansion_screen", 1);
           ng.field_c = df.a((byte) 24, "members_expansion_screen", "button_highlights", nl.field_t);
@@ -371,7 +371,7 @@ final class o {
         field_n = null;
         field_d = null;
         if (!param0) {
-          field_d = (vn[]) null;
+          field_d = (Sprite[]) null;
         }
     }
 
@@ -526,7 +526,7 @@ final class o {
         return 3;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, rb param5, int[] param6, String param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, Font param5, int[] param6, String param7) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -534,7 +534,7 @@ final class o {
         try {
           hk.i(1584);
           if (param0 != -1) {
-            this.field_p = (vn) null;
+            this.field_p = (Sprite) null;
           }
           for (var9_int = param1; var9_int < param4; var9_int++) {
             Rasterizer.f(param3, var9_int, param2, var9_int + 1);

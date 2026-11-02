@@ -43,7 +43,7 @@ final class sa extends pn {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 61 % ((param1 - 51) / 40);
-          stackIn_1_0 = tf.a(true, 5, param0, param2);
+          stackIn_1_0 = SpatialBucket.a(true, 5, param0, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

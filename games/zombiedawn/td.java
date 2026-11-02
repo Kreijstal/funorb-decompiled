@@ -44,7 +44,7 @@ final class td {
 
     final static void a(int param0) {
         if (i.field_Y) {
-          de.field_i = true;
+          PacketBuffer.field_i = true;
           int var1 = -64 / ((param0 - 77) / 35);
           lk.a(true, 116);
           fl.field_a = 0;

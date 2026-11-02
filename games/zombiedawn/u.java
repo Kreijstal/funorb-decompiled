@@ -7,7 +7,7 @@ final class u {
     private int field_m;
     static int[] field_d;
     boolean field_k;
-    private vn[] field_i;
+    private Sprite[] field_i;
     int field_l;
     private int field_n;
     private int field_g;
@@ -260,7 +260,7 @@ final class u {
         field_e = null;
     }
 
-    u(vn[] param0, int param1, int param2) {
+    u(Sprite[] param0, int param1, int param2) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

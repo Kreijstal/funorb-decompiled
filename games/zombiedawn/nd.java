@@ -195,17 +195,17 @@ final class nd {
         try {
           var5 = dp.field_e;
           var5.j(param1 ^ 10, param0);
-          var5.field_j = var5.field_j + 1;
-          var4 = var5.field_j;
-          var5.i(param1, 35);
-          var5.i(param2.field_i, -96);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(param1, 35);
+          var5.writeByte(param2.field_i, -96);
           var5.a(17087, param2.field_r);
-          var5.h(param1 ^ -126, param2.field_q);
-          var5.h(param1 ^ -110, param2.field_k);
-          var5.h(param1 ^ -113, param2.field_m);
-          var5.h(param1 ^ 87, param2.field_h);
-          var5.e(-126, var4);
-          var5.d(75, -var4 + var5.field_j);
+          var5.writeInt(param1 ^ -126, param2.field_q);
+          var5.writeInt(param1 ^ -110, param2.field_k);
+          var5.writeInt(param1 ^ -113, param2.field_m);
+          var5.writeInt(param1 ^ 87, param2.field_h);
+          var5.writeCrc32(-126, var4);
+          var5.d(75, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

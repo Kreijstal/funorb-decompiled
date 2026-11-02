@@ -64,9 +64,9 @@ final class fm extends an {
             var9 = var10;
             var4 = var9;
             var5 = var13;
-            var6 = ((de) ((Object) var5)).d((byte) -124);
+            var6 = ((PacketBuffer) ((Object) var5)).d((byte) -124);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((de) ((Object) var5)).c(-90);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).c(-90);
             }
             var12 = (b) (qi.field_J.b((byte) 26));
             if (var12 == null) {

@@ -65,7 +65,7 @@ class bn extends ll {
         }
     }
 
-    final static void a(int param0, dj param1) {
+    final static void a(int param0, Js5Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2595_0;
             StringBuilder stackIn_2595_1;
@@ -76,9 +76,9 @@ class bn extends ll {
             int var3;
             int var4;
             int param0;
-            dj param1;
+            Js5Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, dj initialParam1) {
+            $CfrPartitionedBody(int initialParam0, Js5Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2595_0 = null;
@@ -1656,7 +1656,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_alert_passchars", 0);
                 if (var2 != null) {
-                  dj.field_a = gg.a(var2, (byte) 56);
+                  Js5Archive.field_a = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_alert_passrepeated", 0);
                 if (var2 != null) {
@@ -2830,11 +2830,11 @@ class bn extends ll {
                 }
                 var2 = qn.a("rating_mode_long_name,0", 0);
                 if (null != var2) {
-                  hd.field_p[0] = gg.a(var2, (byte) 56);
+                  SpriteState.field_p[0] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("rating_mode_long_name,1", 0);
                 if (var2 != null) {
-                  hd.field_p[1] = gg.a(var2, (byte) 56);
+                  SpriteState.field_p[1] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("graphics_config_fixed_size", 0);
                 if (var2 != null) {
@@ -3110,7 +3110,7 @@ class bn extends ll {
         decompiledBody.run();
     }
 
-    final void a(boolean param0, de param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -3137,11 +3137,11 @@ class bn extends ll {
         }
     }
 
-    final static vn a(String param0, dj param1, String param2, int param3) {
+    final static Sprite a(String param0, Js5Archive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        vn stackIn_4_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

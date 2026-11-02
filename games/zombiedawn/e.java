@@ -6,12 +6,12 @@ final class e extends hp implements hh {
     private an[] field_F;
     static String field_I;
     static int field_H;
-    private rb field_L;
+    private Font field_L;
     private int[] field_J;
     static dn field_S;
     private int field_N;
     private String field_Q;
-    static vn field_G;
+    static Sprite field_G;
     private sg field_R;
     static int field_P;
     static int field_K;
@@ -115,7 +115,7 @@ final class e extends hp implements hh {
         this.field_F = var3;
     }
 
-    e(sg param0, rb param1, String param2) {
+    e(sg param0, Font param1, String param2) {
         super(0, 0, 288, 0, (io) null);
         int var4_int = 0;
         this.field_N = 0;
@@ -134,7 +134,7 @@ final class e extends hp implements hh {
         field_S = null;
         field_I = null;
         if (!param0) {
-          field_G = (vn) null;
+          field_G = (Sprite) null;
         }
         field_G = null;
     }

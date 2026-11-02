@@ -59,16 +59,16 @@ final class te extends id {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        vn var9_ref_vn = null;
+        Sprite var9_ref_vn = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        vn var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         String var15 = null;
-        vn var16 = null;
-        vn var17 = null;
-        vn var13Lifetime1;
+        Sprite var16 = null;
+        Sprite var17 = null;
+        Sprite var13Lifetime1;
         int var7Lifetime1;
         int var7Lifetime2;
         int var8Lifetime1;
@@ -452,10 +452,10 @@ final class te extends id {
                 MouseWheelInput.field_c = stackIn_113_0 + stackIn_113_1;
               }
               if (16 == this.field_hb.field_t) {
-                dj.field_e.a(234, 21, (byte) -23);
+                Js5Archive.field_e.a(234, 21, (byte) -23);
               }
               if (MouseWheelInput.field_c == 20) {
-                dj.field_e.a(235, 20, (byte) -23);
+                Js5Archive.field_e.a(235, 20, (byte) -23);
               }
               ck.a(-10, 6836);
               kh.a(151, false);

@@ -36,7 +36,7 @@ final class jm extends tc {
         }
     }
 
-    final String b(int param0, ga param1) {
+    final String b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -67,7 +67,7 @@ final class jm extends tc {
         this(ia.field_e, param0);
     }
 
-    private jm(rb param0, int param1) {
+    private jm(Font param0, int param1) {
         super(param0, param1);
     }
 

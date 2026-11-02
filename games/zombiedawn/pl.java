@@ -9,7 +9,7 @@ final class pl extends al {
     private jp field_q;
     static int field_m;
     private int[] field_n;
-    static vn field_p;
+    static Sprite field_p;
 
     final static void a(int param0, int param1, byte param2) {
         if (param2 != 50) {
@@ -107,7 +107,7 @@ final class pl extends al {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          i.field_T = new vn(640, 341);
+          i.field_T = new Sprite(640, 341);
           i.field_T.a();
           if (param1 != -257) {
             return;

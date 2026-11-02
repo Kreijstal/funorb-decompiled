@@ -34,10 +34,10 @@ final class ph {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, dj param3) {
+    final static boolean a(int param0, int param1, int param2, Js5Archive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        dj var5 = null;
+        Js5Archive var5 = null;
         byte[] var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -53,8 +53,8 @@ final class ph {
           if (param1 == 31043) {
             return true;
           }
-          var5 = (dj) null;
-          ph.a(-94, 1, -17, (dj) null);
+          var5 = (Js5Archive) null;
+          ph.a(-94, 1, -17, (Js5Archive) null);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

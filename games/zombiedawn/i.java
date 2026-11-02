@@ -6,7 +6,7 @@ import java.io.*;
 final class i extends pn implements hh {
     static jp field_W;
     static String field_U;
-    static vn field_T;
+    static Sprite field_T;
     static float field_V;
     static boolean[] field_X;
     private an field_Z;
@@ -17,7 +17,7 @@ final class i extends pn implements hh {
           return;
         }
         if (!param0) {
-          field_T = (vn) null;
+          field_T = (Sprite) null;
           this.field_H = false;
           return;
         }
@@ -114,7 +114,7 @@ final class i extends pn implements hh {
     i(dn param0, sm param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        ga var4 = null;
+        UiWidget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -140,7 +140,7 @@ final class i extends pn implements hh {
           } else {
             var3 = lo.field_n;
           }
-          var4 = new ga((String) (var3), (sk) null);
+          var4 = new UiWidget((String) (var3), (sk) null);
           var4.field_k = 0;
           var4.field_i = this.field_i;
           var4.field_n = 80;
@@ -196,13 +196,13 @@ final class i extends pn implements hh {
               sn.field_c = new BufferedSocket((java.net.Socket) (ao.field_F.field_d), jm.field_B);
               var4 = fj.field_g;
               var5 = var4;
-              dp.field_e.field_j = 0;
+              dp.field_e.position = 0;
               stackIn_12_0 = (!param0) ? -1 : -2;
               em.field_U = stackIn_12_0;
               wb.field_t = stackIn_12_0;
               e.field_P = stackIn_12_0;
               ic.field_T = ui.field_g;
-              var5.field_j = 0;
+              var5.position = 0;
               uj.a(IntrusiveNode.field_g, ba.field_b, (byte) -114, dp.field_e, kg.field_k);
               vl.a((byte) -46, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {

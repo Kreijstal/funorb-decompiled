@@ -3,15 +3,15 @@
  */
 final class tm extends IntrusiveNode {
     static int[] field_n;
-    static vn field_m;
+    static Sprite field_m;
     static int[] field_i;
     static int[] field_l;
-    static vn[] field_h;
+    static Sprite[] field_h;
     PcmSampleStream field_j;
     static int[] field_k;
     static String field_o;
 
-    final static void a(int param0, int param1, int param2, vn[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -228,7 +228,7 @@ final class tm extends IntrusiveNode {
           if (param1 == -77) {
             return;
           }
-          field_m = (vn) null;
+          field_m = (Sprite) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

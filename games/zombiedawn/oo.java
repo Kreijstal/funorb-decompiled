@@ -8,7 +8,7 @@ final class oo extends id {
     static int[] field_U;
     private int field_H;
     private int[][] field_X;
-    private vn field_W;
+    private Sprite field_W;
     static String field_T;
     private boolean[][] field_V;
 
@@ -29,7 +29,7 @@ final class oo extends id {
         int var9 = 0;
         int var11 = 0;
         int var13 = 0;
-        vn[] var14 = null;
+        Sprite[] var14 = null;
         int var15 = 0;
         var15 = ZombieDawn.field_J;
         try {
@@ -120,7 +120,7 @@ final class oo extends id {
               var3_int != hn.field_p.field_w ||
               hn.field_p.field_t != var4) {
               hn.field_p = null;
-              hn.field_p = new vn(var3_int, var4);
+              hn.field_p = new Sprite(var3_int, var4);
             }
             ki.a((byte) -114, hn.field_p);
             this.a(param1, 47);
@@ -324,7 +324,7 @@ final class oo extends id {
         int var9 = 0;
         int var11 = 0;
         int var13 = 0;
-        vn[] var14 = null;
+        Sprite[] var14 = null;
         int var15 = 0;
         var15 = ZombieDawn.field_J;
         try {

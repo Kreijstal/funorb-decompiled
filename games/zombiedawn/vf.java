@@ -16,11 +16,11 @@ class vf implements io, ak {
     int field_j;
     private int field_q;
     int field_p;
-    rb field_m;
+    Font field_m;
     int field_b;
     int field_h;
 
-    public final vg a(int param0, ga param1) {
+    public final vg a(int param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         vg stackIn_7_0 = null;
@@ -54,9 +54,9 @@ class vf implements io, ak {
         }
     }
 
-    public final int a(ga param0, int param1, int param2) {
+    public final int a(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
-        ga var5 = null;
+        UiWidget var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -64,8 +64,8 @@ class vf implements io, ak {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            var5 = (ga) null;
-            this.a((byte) -2, (ga) null);
+            var5 = (UiWidget) null;
+            this.a((byte) -2, (UiWidget) null);
           }
           stackIn_3_0 = this.a(param0, 0, (byte) 24, param2);
           return stackIn_3_0;
@@ -83,11 +83,11 @@ class vf implements io, ak {
         }
     }
 
-    vf(rb param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    vf(Font param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final int b(ga param0, int param1, int param2) {
+    public final int b(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -116,7 +116,7 @@ class vf implements io, ak {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6, int param7) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -127,14 +127,14 @@ class vf implements io, ak {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        ga var14 = null;
+        UiWidget var14 = null;
         int var12Lifetime1;
         var13 = ZombieDawn.field_J;
         try {
           Mover.$cfr$intArgs$a$3aedf8649552(param2 + param6.field_j, 99, param6.field_i + (param4 + param6.field_k), param6.field_n + (param6.field_j + param2), param4 + param6.field_k);
           if (param7 < 3) {
-            var14 = (ga) null;
-            this.b((ga) null, 57, -8);
+            var14 = (UiWidget) null;
+            this.b((UiWidget) null, 57, -8);
           }
           boolean decompiledFrameRemainder0 = true;
           var9_int = this.a((byte) 123, param6);
@@ -187,9 +187,9 @@ class vf implements io, ak {
         }
     }
 
-    String b(int param0, ga param1) {
+    String b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        ga var4 = null;
+        UiWidget var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -197,8 +197,8 @@ class vf implements io, ak {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 12307) {
-            var4 = (ga) null;
-            this.b((byte) 77, (ga) null);
+            var4 = (UiWidget) null;
+            this.b((byte) 77, (UiWidget) null);
           }
           stackIn_3_0 = param1.field_o;
           return stackIn_3_0;
@@ -231,7 +231,7 @@ class vf implements io, ak {
         }
     }
 
-    public final void a(int param0, int param1, int param2, ga param3, int param4, int param5) {
+    public final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
@@ -308,21 +308,21 @@ class vf implements io, ak {
         }
     }
 
-    public void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         if (null == this.field_m) {
           return;
         }
         try {
           this.a(param2, (byte) 119, param4, param3);
           if (param0 != 16777215) {
-            this.field_m = (rb) null;
+            this.field_m = (Font) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    public final int a(boolean param0, ga param1) {
+    public final int a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -352,7 +352,7 @@ class vf implements io, ak {
         }
     }
 
-    final static void a(int param0, vn[] param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, Sprite[] param1, int param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -535,7 +535,7 @@ class vf implements io, ak {
         }
     }
 
-    public final int a(byte param0, ga param1) {
+    public final int a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -562,7 +562,7 @@ class vf implements io, ak {
         }
     }
 
-    private final int a(ga param0, int param1, byte param2, int param3) {
+    private final int a(UiWidget param0, int param1, byte param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -591,7 +591,7 @@ class vf implements io, ak {
         }
     }
 
-    private final int a(ga param0, int param1) {
+    private final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -620,7 +620,7 @@ class vf implements io, ak {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, ga param3) {
+    private final void a(int param0, byte param1, int param2, UiWidget param3) {
         try {
           this.a(0, 0, param0, this.field_l, param2, this.field_q, param3, 72);
           if (param1 <= 42) {
@@ -631,9 +631,9 @@ class vf implements io, ak {
         }
     }
 
-    public final int b(byte param0, ga param1) {
+    public final int b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        ga var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -641,8 +641,8 @@ class vf implements io, ak {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -31) {
-            var4 = (ga) null;
-            this.a(62, 84, 6, -2, (ga) null);
+            var4 = (UiWidget) null;
+            this.a(62, 84, 6, -2, (UiWidget) null);
           }
           this.a(106, param1);
           stackIn_3_0 = param1.field_t.b((byte) 63) + (this.field_g + this.field_o);
@@ -661,7 +661,7 @@ class vf implements io, ak {
         }
     }
 
-    private final void c(int param0, ga param1) {
+    private final void c(int param0, UiWidget param1) {
         int discarded$0 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -673,7 +673,7 @@ class vf implements io, ak {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ga var8 = null;
+        UiWidget var8 = null;
         int var6Lifetime1;
         var7 = ZombieDawn.field_J;
         try {
@@ -712,8 +712,8 @@ class vf implements io, ak {
             }
           }
           if (param0 != 26289) {
-            var8 = (ga) null;
-            discarded$0 = this.a((ga) null, 125);
+            var8 = (UiWidget) null;
+            discarded$0 = this.a((UiWidget) null, 125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -730,7 +730,7 @@ class vf implements io, ak {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, ga param4) {
+    public final void a(int param0, int param1, int param2, int param3, UiWidget param4) {
         vg var13 = null;
         vg var14 = null;
         int var7 = 0;
@@ -766,9 +766,9 @@ class vf implements io, ak {
         }
     }
 
-    private final int a(boolean param0, ga param1, int param2, int param3) {
+    private final int a(boolean param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
-        ga var6 = null;
+        UiWidget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -776,8 +776,8 @@ class vf implements io, ak {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            var6 = (ga) null;
-            this.a(-121, false, -32, (ga) null, -20);
+            var6 = (UiWidget) null;
+            this.a(-121, false, -32, (UiWidget) null, -20);
           }
           stackIn_3_0 = param1.field_u + (param3 + param1.field_k + this.field_g + param2);
           return stackIn_3_0;
@@ -798,7 +798,7 @@ class vf implements io, ak {
     protected vf() {
     }
 
-    vf(rb param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    vf(Font param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_q = param6;
           this.field_n = param9;
@@ -818,7 +818,7 @@ class vf implements io, ak {
         }
     }
 
-    public final int a(ga param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int a(UiWidget param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

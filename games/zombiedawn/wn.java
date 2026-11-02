@@ -5,12 +5,12 @@ final class wn {
     static sn field_a;
     static boolean field_b;
 
-    final static dj a(boolean param0, int param1, byte param2, int param3, boolean param4) {
+    final static Js5Archive a(boolean param0, int param1, byte param2, int param3, boolean param4) {
         if (param2 == -85) {
-          return hd.a(false, true, param1, param3, param0, param4);
+          return SpriteState.a(false, true, param1, param3, param0, param4);
         }
         field_b = true;
-        return hd.a(false, true, param1, param3, param0, param4);
+        return SpriteState.a(false, true, param1, param3, param0, param4);
     }
 
     final static void a(int param0, rj param1, int param2, java.awt.Component param3, PlatformTaskDispatcher param4, int param5, boolean param6, int param7) {

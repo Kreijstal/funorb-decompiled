@@ -15,7 +15,7 @@ final class GameWorld {
     private int field_ab;
     int field_g;
     private int field_c;
-    static vn field_x;
+    static Sprite field_x;
     private IntrusiveDeque field_ob;
     private int field_Z;
     static op field_O;
@@ -26,7 +26,7 @@ final class GameWorld {
     int field_nb;
     int field_G;
     private int field_z;
-    Camera field_S;
+    Camera camera;
     int field_P;
     int field_hb;
     private ub field_gb;
@@ -38,28 +38,28 @@ final class GameWorld {
     int[] field_u;
     private int field_k;
     private boolean field_p;
-    private vn field_t;
+    private Sprite field_t;
     int field_db;
     private int field_jb;
     private IntrusiveDeque field_v;
     private boolean field_w;
-    IntrusiveDeque field_R;
+    IntrusiveDeque zombies;
     private int field_U;
     private int[] field_s;
     private int field_B;
     private int field_o;
     int field_h;
-    TileMap field_mb;
-    private ra field_W;
+    TileMap tileMap;
+    private DualLinkDeque field_W;
     IntrusiveDeque field_e;
-    mj field_n;
+    SpatialGrid field_n;
     private int field_fb;
     private PcmSampleStream field_L;
     private int field_ib;
     int[] field_J;
     private boolean field_X;
     private boolean field_M;
-    private vn field_V;
+    private Sprite field_V;
     private IntrusiveDeque field_m;
     private Zombie field_kb;
     int field_bb;
@@ -285,7 +285,7 @@ final class GameWorld {
               return;
             }
           }
-          if (!this.field_S.field_d) {
+          if (!this.camera.field_d) {
             this.field_ib = 0;
             ck.a(-1, 6836);
           }
@@ -386,10 +386,10 @@ final class GameWorld {
         int[] var4Lifetime1;
         int var5Lifetime1;
         try {
-          if (vi.a(param1, dj.field_i, -88)) {
+          if (vi.a(param1, Js5Archive.field_i, -88)) {
             return;
           }
-          var4 = dj.field_i;
+          var4 = Js5Archive.field_i;
           var5 = param1;
           var4[var5 >> 5] = GameWorld.a(var4[var5 >> 5], 1 << eg.a(31, var5));
           var4Lifetime1 = kg.field_g;
@@ -422,7 +422,7 @@ final class GameWorld {
         RuntimeException decompiledCaughtException = null;
         var4 = ZombieDawn.field_J;
         try {
-          var2 = (WorldObject) (this.field_R.b((byte) 26));
+          var2 = (WorldObject) (this.zombies.b((byte) 26));
           if (!param0) {
             return;
           }
@@ -448,7 +448,7 @@ final class GameWorld {
                 var3_ref2.B(-124);
               }
             }
-            stackIn_27_0 = this.field_R;
+            stackIn_27_0 = this.zombies;
             stackIn_28_1 = !(param0);
             var2 = (WorldObject) (((IntrusiveDeque) (Object) stackIn_27_0).a(stackIn_28_1));
           }
@@ -477,7 +477,7 @@ final class GameWorld {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void update(int param0, boolean param1) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_29_0 = 0;
@@ -538,14 +538,14 @@ final class GameWorld {
             stackIn_29_0 = 1;
           }
           var3_int = stackIn_29_0;
-          var4 = this.field_S.x;
-          var5 = this.field_S.y;
+          var4 = this.camera.x;
+          var5 = this.camera.y;
           if (!param1) {
-            this.field_S.a(false, false, false, (byte) -87, false, false);
+            this.camera.a(false, false, false, (byte) -87, false, false);
           }
           if (param1 ||
             var7 != 0) {
-            stackIn_39_0 = this.field_S;
+            stackIn_39_0 = this.camera;
             stackIn_42_1 = (bo.field_p[99]) || (bo.field_p[ge.field_e]);
             stackIn_49_2 = (bo.field_p[98]) || (bo.field_p[vf.field_d]);
             boolean decompiledFrameRemainder1 = true;
@@ -564,8 +564,8 @@ final class GameWorld {
           if (bo.field_i &&
             this.field_ib != -1 &&
             var3_int == 0) {
-            this.field_S.x = var4;
-            this.field_S.y = var5;
+            this.camera.x = var4;
+            this.camera.y = var5;
             var6 = 0;
             do {
               boolean decompiledFrameRemainder3 = true;
@@ -590,14 +590,14 @@ final class GameWorld {
               if (stackIn_92_0 <= var6) {
                 break;
               }
-              vl.a(this.field_S, this.field_gb, -91);
+              vl.a(this.camera, this.field_gb, -91);
               var6++;
             } while (var7 == 0);
           }
           if (this.field_p &&
             1 == kc.field_R) {
-            this.field_B = this.field_B - (-var4 + this.field_S.x);
-            this.field_j = this.field_j - (this.field_S.y - var5);
+            this.field_B = this.field_B - (-var4 + this.camera.x);
+            this.field_j = this.field_j - (this.camera.y - var5);
             if (this.field_B == -1) {
               this.field_B = this.field_B - 1;
             }
@@ -652,11 +652,11 @@ final class GameWorld {
           }
           if (0 < this.field_N && (0 == this.field_ib ||
             this.field_ib == -1 &&
-            (double)this.field_S.field_e > 0.95)) {
+            (double)this.camera.field_e > 0.95)) {
             this.field_N = this.field_N - 15;
           }
           this.g((byte) 125);
-          so.b(this.field_R);
+          so.b(this.zombies);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -676,7 +676,7 @@ final class GameWorld {
           if (param1 != -99) {
             return;
           }
-          this.field_mb = param0;
+          this.tileMap = param0;
           this.e(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -748,7 +748,7 @@ final class GameWorld {
           if (param3 < 31) {
             this.f((byte) 105);
           }
-          var6 = this.field_R.b((byte) 26);
+          var6 = this.zombies.b((byte) 26);
           while (var6 instanceof WorldObject) {
             if (var8 != 0) {
               return;
@@ -806,7 +806,7 @@ final class GameWorld {
           }
           var6 = new Zombie(stackIn_6_2, stackIn_6_3, stackIn_7_4, 0);
           var6.field_gb = 500;
-          this.field_R.addFirst(0, var6);
+          this.zombies.addFirst(0, var6);
           this.field_gb.d((byte) -106);
           stackIn_8_0 = var6;
           return stackIn_8_0;
@@ -883,7 +883,7 @@ final class GameWorld {
         var6 = ZombieDawn.field_J;
         try {
           var2_int = 1 * WorldObject.a(1311979239, (int)(tp.field_p << 1)) + 2 * rd.a(true, (int)(tp.field_p >> 1)) >> 16;
-          var3 = (-this.field_S.x + (-1 + (int)tp.field_p * bd.field_e)) % 1337;
+          var3 = (-this.camera.x + (-1 + (int)tp.field_p * bd.field_e)) % 1337;
           var4 = var3 / bd.field_e;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(nh.field_P > var4)))) {
@@ -903,14 +903,14 @@ final class GameWorld {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            var3 = ((int)tp.field_p * bd.field_e - 1 - this.field_S.x) % 917;
+            var3 = ((int)tp.field_p * bd.field_e - 1 - this.camera.x) % 917;
             stackIn_14_0 = var3 / bd.field_e;
           }
           var4Lifetime1 = stackIn_14_0;
           while (true) {
             if (!(nh.field_P > var4Lifetime1)) {
               var4Lifetime1 = -54 / ((-32 - param0) / 46);
-              var3 = (-this.field_S.x - 1 + (int)tp.field_p * bd.field_e) % 593;
+              var3 = (-this.camera.x - 1 + (int)tp.field_p * bd.field_e) % 593;
               stackIn_27_0 = var3 / bd.field_e;
               break;
             }
@@ -1402,7 +1402,7 @@ final class GameWorld {
           param0.unlink(-27598);
           this.field_gb.d((byte) -106);
           if (!param1) {
-            this.e(69);
+            this.draw(69);
           }
           if (-1 == this.field_h &&
             this.field_q == 2 &&
@@ -1657,7 +1657,7 @@ final class GameWorld {
         RuntimeException var5_ref = null;
         try {
           if (param1 != -6355) {
-            this.a(105, 'ﾬ', -105);
+            this.handleKeyPress(105, 'ﾬ', -105);
           }
           stackIn_6_0 = null;
           stackIn_6_1 = null;
@@ -1758,7 +1758,7 @@ final class GameWorld {
         }
     }
 
-    final boolean a(int param0, char param1, int param2) {
+    final boolean handleKeyPress(int param0, char param1, int param2) {
         boolean stackIn_49_0 = false;
         boolean stackIn_57_0 = false;
         boolean stackIn_65_0 = false;
@@ -1823,12 +1823,12 @@ final class GameWorld {
             return true;
           }
           if (param2 != -29638) {
-            field_x = (vn) null;
+            field_x = (Sprite) null;
           }
           if (this.field_A) {
             if (param0 == 34) {
-              stackIn_49_0 = !(ga.field_w);
-              ga.field_w = stackIn_49_0;
+              stackIn_49_0 = !(UiWidget.field_w);
+              UiWidget.field_w = stackIn_49_0;
             }
             if (param0 == 36) {
               stackIn_57_0 = !(jp.field_m);
@@ -1904,7 +1904,7 @@ final class GameWorld {
               return true;
             }
             if (param0 == 6) {
-              var4 = this.field_R.b((byte) 26);
+              var4 = this.zombies.b((byte) 26);
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (!(var4 instanceof WorldObject)))) {
                 stackOut_157_0 = var4 instanceof Zombie;
@@ -1953,7 +1953,7 @@ final class GameWorld {
             }
             if (param0 == 12 &&
               bo.field_p[82]) {
-              this.field_S.a((byte) -99);
+              this.camera.a((byte) -99);
               return true;
             }
             if (param0 == 12) {
@@ -1988,7 +1988,7 @@ final class GameWorld {
           if (param0 <= 75) {
             GameWorld.a((java.applet.Applet) null, -78);
           }
-          var2 = this.field_R.b((byte) 26);
+          var2 = this.zombies.b((byte) 26);
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var2 instanceof WorldObject)))) {
             var3 = var2.previous;
@@ -2031,8 +2031,8 @@ final class GameWorld {
         }
     }
 
-    final void e(int param0) {
-        vn[] stackIn_27_0 = null;
+    final void draw(int param0) {
+        Sprite[] stackIn_27_0 = null;
         int stackIn_28_1 = 0;
         int stackIn_58_0 = 0;
         int stackIn_58_1 = 0;
@@ -2097,26 +2097,26 @@ final class GameWorld {
             }
             this.field_L.h(ge.field_c * (220 * var2_int) / 16 >> 8);
             if (var2_int > 0) {
-              this.field_S.x = this.field_S.x + (pb.a(so.field_a, var2_int, param0 - 9843) - var2_int / 2);
-              this.field_S.y = this.field_S.y + (-(var2_int / 2) + pb.a(so.field_a, var2_int, 1));
+              this.camera.x = this.camera.x + (pb.a(so.field_a, var2_int, param0 - 9843) - var2_int / 2);
+              this.camera.y = this.camera.y + (-(var2_int / 2) + pb.a(so.field_a, var2_int, 1));
             }
           }
-          this.field_H.a(this.field_S, false);
+          this.field_H.a(this.camera, false);
           if (-1 != this.field_H.field_A.field_c &&
             this.field_H.field_A.field_o != -1) {
-            var2_intLifetime1 = this.field_S.worldToScreenX(this.field_H.field_A.field_c, (byte) -100);
-            var3 = this.field_S.worldToScreenY(this.field_H.field_A.field_o, 0);
+            var2_intLifetime1 = this.camera.worldToScreenX(this.field_H.field_A.field_c, (byte) -100);
+            var3 = this.camera.worldToScreenY(this.field_H.field_A.field_o, 0);
             stackIn_27_0 = sl.field_c;
             if (5 > he.field_c) {
               stackIn_28_1 = he.field_c;
             } else {
               stackIn_28_1 = 4;
             }
-            ((vn) (Object) stackIn_27_0[stackIn_28_1]).b(var2_intLifetime1 - 44, -44 + var3);
+            ((Sprite) (Object) stackIn_27_0[stackIn_28_1]).b(var2_intLifetime1 - 44, -44 + var3);
           }
           var2 = this.field_lb.b((byte) 26);
           while (null != var2) {
-            ((mm) (var2)).a((byte) 117, this.field_S);
+            ((mm) (var2)).a((byte) 117, this.camera);
             var2 = this.field_lb.a(false);
             if (var14 == 0) {
               continue;
@@ -2126,13 +2126,13 @@ final class GameWorld {
           boolean decompiledFrameCompleted3 = true;
           var3 = bo.field_i ? 1 : 0;
           if (var3 != 0) {
-            li.a(-18996, this.field_S);
+            li.a(-18996, this.camera);
           }
           if (var3 == 0 ||
             var14 != 0) {
             var2 = this.field_d.b((byte) 26);
             while (var2 != null) {
-              ((gk) (var2)).a((byte) -104, this.field_S);
+              ((gk) (var2)).a((byte) -104, this.camera);
               var2 = this.field_d.a(false);
               if (var14 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -2148,7 +2148,7 @@ final class GameWorld {
               var2 = this.field_m.b((byte) 26);
               break;
             }
-            ((nc) (var2)).a(this.field_S, true);
+            ((nc) (var2)).a(this.camera, true);
             var2 = this.field_e.a(false);
           } while (var14 == 0);
           boolean decompiledNaturalLoopExit2 = false;
@@ -2158,7 +2158,7 @@ final class GameWorld {
             stackIn_58_1 = ~var4.field_o;
             if (var14 == 0) {
               if (stackIn_58_0 == stackIn_58_1) {
-                var4.a(this.field_S, (byte) 110);
+                var4.a(this.camera, (byte) 110);
               }
               var2 = this.field_m.a(false);
               continue;
@@ -2172,12 +2172,12 @@ final class GameWorld {
           if (stackIn_58_0 != stackIn_58_1) {
             this.a((Zombie) null, false);
           }
-          this.field_H.a(this.field_S, 1, true, false);
+          this.field_H.a(this.camera, 1, true, false);
           var2 = this.field_v.b((byte) 26);
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != var2) {
-              ((mn) (var2)).a(this.field_S, -516);
+              ((mn) (var2)).a(this.camera, -516);
               var2 = this.field_v.a(false);
               if (var14 == 0) {
                 continue;
@@ -2188,7 +2188,7 @@ final class GameWorld {
             if (decompiledFrameRemainder0) {
               var2 = this.field_d.b((byte) 26);
               while (null != var2) {
-                ((gk) (var2)).a((byte) -82, this.field_S);
+                ((gk) (var2)).a((byte) -82, this.camera);
                 var2 = this.field_d.a(false);
                 if (var14 != 0) {
                   break scanLoop1;
@@ -2199,11 +2199,11 @@ final class GameWorld {
             wg.field_n = 0;
             break;
           }
-          if (!(Math.abs(-TileMap.field_q + this.field_S.x) <= 40) ||
-            !(40 >= Math.abs(-qb.field_b + this.field_S.y))) {
-            qb.field_b = this.field_S.y;
+          if (!(Math.abs(-TileMap.field_q + this.camera.x) <= 40) ||
+            !(40 >= Math.abs(-qb.field_b + this.camera.y))) {
+            qb.field_b = this.camera.y;
             ld.field_m = true;
-            TileMap.field_q = this.field_S.x;
+            TileMap.field_q = this.camera.x;
             ki.a((byte) -120, hn.field_p);
             Rasterizer.d();
             pa.a(-21189);
@@ -2213,21 +2213,21 @@ final class GameWorld {
           } else {
             ld.field_m = false;
           }
-          var2 = this.field_R.b((byte) 26);
+          var2 = this.zombies.b((byte) 26);
           do {
             if (var2 == null) {
               var2 = this.field_T.b((byte) 26);
               break;
             }
-            ((WorldObject) (var2)).a((byte) -101, this.field_S);
-            var2 = this.field_R.a(false);
+            ((WorldObject) (var2)).a((byte) -101, this.camera);
+            var2 = this.zombies.a(false);
           } while (var14 == 0);
           do {
             if (null == var2) {
               var2 = this.field_m.b((byte) 26);
               break;
             }
-            ((gb) (var2)).a((byte) -86, this.field_S);
+            ((gb) (var2)).a((byte) -86, this.camera);
             var2 = this.field_T.a(false);
           } while (var14 == 0);
           boolean decompiledNaturalLoopExit1 = false;
@@ -2237,7 +2237,7 @@ final class GameWorld {
             stackIn_108_1 = 1;
             if (var14 == 0) {
               if (stackIn_108_0 != stackIn_108_1) {
-                var4Lifetime1.a(this.field_S, (byte) 110);
+                var4Lifetime1.a(this.camera, (byte) 110);
               }
               var2 = this.field_m.a(false);
               continue;
@@ -2249,29 +2249,29 @@ final class GameWorld {
             stackIn_108_1 = -6;
           }
           if (stackIn_108_0 == stackIn_108_1) {
-            hn.field_p.b(-this.field_S.x + TileMap.field_q - 40, -this.field_S.y + (qb.field_b - 40));
+            hn.field_p.b(-this.camera.x + TileMap.field_q - 40, -this.camera.y + (qb.field_b - 40));
           }
-          this.field_H.a(this.field_S, 2, true, false);
+          this.field_H.a(this.camera, 2, true, false);
           if (this.field_H.field_A.field_a == 6 &&
             this.field_h != -1) {
             this.i(1);
           }
-          this.field_H.a(this.field_S, 3, true, false);
-          var2 = this.field_R.b((byte) 26);
+          this.field_H.a(this.camera, 3, true, false);
+          var2 = this.zombies.b((byte) 26);
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var2))) {
             stackIn_127_0 = var2 instanceof Zombie;
             if (var14 == 0) {
               if (stackIn_127_0) {
-                ((Zombie) (var2)).a(0, this.field_S);
+                ((Zombie) (var2)).a(0, this.camera);
               }
-              var2 = this.field_R.a(false);
+              var2 = this.zombies.a(false);
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.field_b.a((byte) 6, this.field_S);
+            this.field_b.a((byte) 6, this.camera);
             stackIn_127_0 = kc.field_Q;
           }
           boolean decompiledFrameCompleted2 = true;
@@ -2280,12 +2280,12 @@ final class GameWorld {
           if (stackIn_127_0) {
             var4_int = 0;
             while (var4_int < this.field_H.field_u) {
-              var5_int = this.field_S.worldToScreenX(var4_int, (byte) -92);
+              var5_int = this.camera.worldToScreenX(var4_int, (byte) -92);
               stackIn_146_0 = ~var5_int;
               stackIn_146_1 = -1;
               if (var14 != 0) {
                 if (stackIn_146_0 < stackIn_146_1) {
-                  var5_int = this.field_S.worldToScreenY(var4_int, 0);
+                  var5_int = this.camera.worldToScreenY(var4_int, 0);
                   stackIn_180_0 = ~var5_int;
                   stackIn_180_1 = -1;
                   decompiledFrameCompleted2 = false;
@@ -2311,7 +2311,7 @@ final class GameWorld {
                 if (stackIn_146_0Lifetime1 >= stackIn_146_1Lifetime1) {
                   break;
                 }
-                var5_intLifetime2 = this.field_S.worldToScreenY(var4_int, 0);
+                var5_intLifetime2 = this.camera.worldToScreenY(var4_int, 0);
                 stackIn_180_0 = ~var5_intLifetime2;
                 stackIn_180_1 = -1;
                 if (var14 != 0) {
@@ -2365,12 +2365,12 @@ final class GameWorld {
           if (stackIn_180_0 == stackIn_180_1) {
             this.field_Q.g(param0 - 11137);
           }
-          f.a((byte) -17, this.field_S);
+          f.a((byte) -17, this.camera);
           if (this.field_q == 5) {
             this.d(param0 - 9934);
           }
           if (ql.field_j >= 0.0f) {
-            oj.field_f.b(this.field_S.worldToScreenX(ek.field_I, (byte) -124), this.field_S.worldToScreenY(-(int)ql.field_j + el.field_g, param0 ^ 9844));
+            oj.field_f.b(this.camera.worldToScreenX(ek.field_I, (byte) -124), this.camera.worldToScreenY(-(int)ql.field_j + el.field_g, param0 ^ 9844));
           }
           var2 = this.field_i.b((byte) 26);
           do {
@@ -2380,24 +2380,24 @@ final class GameWorld {
               eg.d(0);
               break;
             }
-            ((ao) (var2)).a((byte) -106, this.field_S);
+            ((ao) (var2)).a((byte) -106, this.camera);
             var2 = this.field_i.a(false);
           } while (var14 == 0);
           var4_ref = sg.field_jb;
           var5 = bj.field_q;
           var6 = pc.field_k;
-          if (!bo.field_i && ((this.field_S.field_d ||
-            0.0f < this.field_S.field_g) &&
+          if (!bo.field_i && ((this.camera.field_d ||
+            0.0f < this.camera.field_g) &&
             (!(vh.field_b <= 150) ||
             !(id.field_M <= 150)))) {
-            var7_intLifetime1 = this.field_S.worldToScreenX(this.field_S.field_v, (byte) -102);
-            var8_int = this.field_S.worldToScreenY(this.field_S.field_f, 0);
+            var7_intLifetime1 = this.camera.worldToScreenX(this.camera.field_v, (byte) -102);
+            var8_int = this.camera.worldToScreenY(this.camera.field_f, 0);
             var9 = var7_intLifetime1 - 320;
             var10_int = 320 + var7_intLifetime1;
             var11 = var8_int - 240;
             var12 = 240 + var8_int;
-            if (!this.field_S.field_d) {
-              var13 = this.field_S.field_g;
+            if (!this.camera.field_d) {
+              var13 = this.camera.field_g;
               var10_int = (int)((float)(bd.field_e - 5) * (1.0f - var13) + var13 * (float)var10_int);
               var9 = (int)(var13 * (float)var9 + (-var13 + 1.0f) * 5.0f);
               var11 = (int)(var13 * (float)var11 + 5.0f * (-var13 + 1.0f));
@@ -2454,10 +2454,10 @@ final class GameWorld {
             Rasterizer.a(0, 0, 640, 17, 0, 100);
           }
           if (jp.field_m) {
-            pc.field_k.c("cam=(" + this.field_S.x + ", " + this.field_S.y + ") bk=" + ci.field_d + " k=" + kc.field_R + " mouse=(" + ha.field_b + "," + ei.field_K + ") trees=" + ap.field_u + " tree tiles=" + wg.field_n, 5, 13, 16777215, 0);
+            pc.field_k.c("cam=(" + this.camera.x + ", " + this.camera.y + ") bk=" + ci.field_d + " k=" + kc.field_R + " mouse=(" + ha.field_b + "," + ei.field_K + ") trees=" + ap.field_u + " tree tiles=" + wg.field_n, 5, 13, 16777215, 0);
           }
           if (nk.field_d) {
-            pc.field_k.c("mouseover tile=(" + (-bd.field_d + ha.field_b + this.field_S.x) / 24 + ", " + (-nh.field_G + (ei.field_K + this.field_S.y)) / 24 + ")  pixel=(" + (ha.field_b + (this.field_S.x - bd.field_d)) + "," + (this.field_S.y + ei.field_K - nh.field_G) + ")", 5, 13, 16777215, 0);
+            pc.field_k.c("mouseover tile=(" + (-bd.field_d + ha.field_b + this.camera.x) / 24 + ", " + (-nh.field_G + (ei.field_K + this.camera.y)) / 24 + ")  pixel=(" + (ha.field_b + (this.camera.x - bd.field_d)) + "," + (this.camera.y + ei.field_K - nh.field_G) + ")", 5, 13, 16777215, 0);
           }
           if (this.field_F) {
             var5.b("Cheater!", 630, 410, 16776960, 0);
@@ -2493,7 +2493,7 @@ final class GameWorld {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        ra var5 = null;
+        DualLinkDeque var5 = null;
         Zombie var6_ref_kd = null;
         int var6 = 0;
         qh var7_ref_qh = null;
@@ -2521,8 +2521,8 @@ final class GameWorld {
         try {
           this.field_b.a((byte) 75, param1, param0);
           if (1 < this.field_W.a(false)) {
-            param1 = fa.e(-126) + (-(param1 % 24) + param1);
-            param0 = fa.e(-127) + param0 - param0 % 24;
+            param1 = SpatialObject.e(-126) + (-(param1 % 24) + param1);
+            param0 = SpatialObject.e(-127) + param0 - param0 % 24;
             if (var18 != 0) {
               param0 += 6;
             }
@@ -2530,7 +2530,7 @@ final class GameWorld {
             param0 += 6;
           }
           var4_int = 1;
-          var5 = new ra();
+          var5 = new DualLinkDeque();
           var6_ref_kd = (Zombie) (this.field_W.c((byte) 34));
           while (null != var6_ref_kd) {
             var7_ref_qh = this.field_H.a(true, var6_ref_kd.getX(true), param0, param1, var6_ref_kd.getY(237239984));
@@ -2643,8 +2643,8 @@ final class GameWorld {
                   -1 == var15Lifetime1) {
                   return;
                 }
-                param1 = 24 * var14Lifetime1 + fa.e(-128);
-                param0 = fa.e(49) + var15Lifetime1 * 24;
+                param1 = 24 * var14Lifetime1 + SpatialObject.e(-128);
+                param0 = SpatialObject.e(49) + var15Lifetime1 * 24;
                 var13.a(this.field_H.a(true, var13.getX(true), param0, param1, var13.getY(237239984)), true);
                 if (7 == this.field_q &&
                   0 == this.field_h &&
@@ -2725,14 +2725,14 @@ final class GameWorld {
         RuntimeException decompiledCaughtException = null;
         var11 = ZombieDawn.field_J;
         try {
-          var5_int = this.field_S.a(param3, false);
-          var6 = this.field_S.b(param0, true);
+          var5_int = this.camera.a(param3, false);
+          var6 = this.camera.b(param0, true);
           var7 = null;
           var8 = -1;
           if (param2 >= -66) {
             this.a(112, -70, 11, 40, -44);
           }
-          var9 = (WorldObject) (this.field_R.b((byte) 26));
+          var9 = (WorldObject) (this.zombies.b((byte) 26));
           while (null != var9) {
             if (param1 &&
               var9 instanceof Human ||
@@ -2745,7 +2745,7 @@ final class GameWorld {
                 var7 = var10;
               }
             }
-            var9 = (WorldObject) (this.field_R.a(false));
+            var9 = (WorldObject) (this.zombies.a(false));
             if (var11 == 0) {
               continue;
             }
@@ -2799,9 +2799,9 @@ final class GameWorld {
           if (param1.field_kb) {
             var8.b((byte) 124, 1000);
           }
-          this.field_R.addFirst(0, var8);
+          this.zombies.addFirst(0, var8);
           var8.d((byte) 118);
-          so.b(this.field_R);
+          so.b(this.zombies);
           if (param0 == 0) {
             if (param3) {
               var8.r(param2 ^ -31320);
@@ -2821,7 +2821,7 @@ final class GameWorld {
             if (this.field_q != 5 ||
               this.field_h != -1) {
               if (-1 == this.field_h) {
-                stackIn_55_0 = ga.field_r;
+                stackIn_55_0 = UiWidget.field_r;
               } else {
                 stackIn_55_0 = param1.s(24478);
               }
@@ -2918,8 +2918,8 @@ final class GameWorld {
               return;
             }
           }
-          var4_int = this.field_S.a(param0, false);
-          var5 = this.field_S.b(param1, true);
+          var4_int = this.camera.a(param0, false);
+          var5 = this.camera.b(param1, true);
           if (this.field_H.a(false, var5, var4_int, true)) {
             boolean decompiledFrameRemainder1 = true;
             boolean decompiledFrameCompleted0 = true;
@@ -2956,7 +2956,7 @@ final class GameWorld {
                 var6_ref = new me(var4_int, var5, 3);
               }
               this.field_f = this.field_f + 1;
-              this.field_R.addFirst(0, (IntrusiveNode) (var6_ref));
+              this.zombies.addFirst(0, (IntrusiveNode) (var6_ref));
               this.field_gb.d((byte) -106);
               ((Human) (var6_ref)).d((byte) 124);
               decompiledFrameRemainder1 = (var9 != 0);
@@ -2972,7 +2972,7 @@ final class GameWorld {
                 var7 = 0;
                 while (var7 < var6) {
                   var8 = new Zombie(var4_int, var5, pb.a(so.field_a, 2, param2 ^ 31099), 0);
-                  this.field_R.addFirst(0, var8);
+                  this.zombies.addFirst(0, var8);
                   var8.d((byte) -1);
                   var7++;
                   if (var9 != 0) {
@@ -3159,7 +3159,7 @@ final class GameWorld {
             this.field_H.a(false);
             var3 = 0;
             var4 = 0;
-            var5_ref_le = this.field_R.b((byte) 26);
+            var5_ref_le = this.zombies.b((byte) 26);
             boolean decompiledNaturalLoopExit1 = false;
             while (!(decompiledNaturalLoopExit1 = (!(var5_ref_le instanceof WorldObject)))) {
               var6 = var5_ref_le.previous;
@@ -3301,7 +3301,7 @@ final class GameWorld {
                   while (var10 < 18) {
                     var11 = so.c(24) + var8;
                     var12 = so.c(9);
-                    this.field_R.addFirst(0, new me(var11, var9, var12));
+                    this.zombies.addFirst(0, new me(var11, var9, var12));
                     var9 -= 30;
                     var10++;
                     if (var13 != 0) {
@@ -3327,7 +3327,7 @@ final class GameWorld {
                   var9Lifetime4 = var9Lifetime4 + so.c(48);
                   var10Lifetime2 = var10Lifetime2 + so.c(48);
                   this.field_jb = 25;
-                  this.field_R.addFirst(0, new ig(var9Lifetime4, var10Lifetime2, var11Lifetime1));
+                  this.zombies.addFirst(0, new ig(var9Lifetime4, var10Lifetime2, var11Lifetime1));
                 }
               }
             }
@@ -3350,7 +3350,7 @@ final class GameWorld {
                     if (var7Lifetime1 < 4) {
                       var8Lifetime1 = -15 + pb.a(so.field_a, 30, param0 - 92);
                       var9Lifetime1 = pb.a(so.field_a, 30, 1) - 15;
-                      this.field_R.addFirst(param0 ^ 93, HumanFactory.createHuman(123, var8Lifetime1 + this.field_H.field_A.field_c, 19, this.field_H.field_A.field_o + var9Lifetime1));
+                      this.zombies.addFirst(param0 ^ 93, HumanFactory.createHuman(123, var8Lifetime1 + this.field_H.field_A.field_c, 19, this.field_H.field_A.field_o + var9Lifetime1));
                       var7Lifetime1++;
                       if (var13 == 0) {
                         continue;
@@ -3484,7 +3484,7 @@ final class GameWorld {
                 if (this.field_W.a(false) <= 0) {
                   return;
                 }
-                this.b(this.field_S.b(param2, true), this.field_S.a(param1, false), 122);
+                this.b(this.camera.b(param2, true), this.camera.a(param1, false), 122);
                 if (var5 == 0) {
                   return;
                 }
@@ -3495,7 +3495,7 @@ final class GameWorld {
                 return;
               }
             }
-            this.field_Q.b(this.field_S.b(param2, true), this.field_S.a(param1, false), false);
+            this.field_Q.b(this.camera.b(param2, true), this.camera.a(param1, false), false);
             return;
           }
           return;
@@ -3540,7 +3540,7 @@ final class GameWorld {
             !this.field_H.a(false, param0 - 24, -24 + param3, true) &&
             this.field_H.a(false, param0, param3, true)) {
             param0 = param0 - (24 + param0 % 24);
-            this.field_R.addFirst(0, new gk(param3, param0, 6 + pb.a(so.field_a, 6, 1), param1));
+            this.zombies.addFirst(0, new gk(param3, param0, 6 + pb.a(so.field_a, 6, 1), param1));
             this.field_d.addFirst(0, new gk(param3, 24 + param0, pb.a(so.field_a, 6, 1), param1));
           }
           return;
@@ -3687,7 +3687,7 @@ final class GameWorld {
           if (this.field_bb == 1) {
             oj.field_d.a(false, 14);
           }
-          oj.field_d.a(param0, this.field_mb.field_a);
+          oj.field_d.a(param0, this.tileMap.field_a);
           oj.field_d.a(param0, var2_int);
           if (!oj.field_d.c((byte) 115)) {
             return;
@@ -3697,7 +3697,7 @@ final class GameWorld {
           this.field_M = false;
           this.field_p = param0;
           this.field_kb = null;
-          this.field_W = new ra();
+          this.field_W = new DualLinkDeque();
           this.field_b = new qj();
           this.field_nb = 0;
           mc.field_h = 0;
@@ -3712,17 +3712,17 @@ final class GameWorld {
           this.field_r = 0;
           this.field_fb = 0;
           MouseWheelInput.field_c = 0;
-          this.field_H = new LevelNavigation(this.field_mb);
+          this.field_H = new LevelNavigation(this.tileMap);
           this.field_u = new int[3];
           this.field_J = new int[3];
           mn.a(false);
           hm.a(9);
-          this.field_n = new mj(1 + (this.field_H.field_u >> 7), 1 + (this.field_H.field_p >> 7));
-          this.field_S = new Camera(this.field_H.field_u, this.field_H.field_p);
-          this.field_S.a(this.field_mb.field_b[1], this.field_mb.field_b[3], this.field_mb.field_m[2], this.field_mb.field_m[0], this.field_mb.field_b[0], this.field_mb.field_m[1], this.field_mb.field_m[3], this.field_mb.field_b[2], 106);
-          this.field_S.a((byte) -98);
-          this.b(8, this.field_mb.field_a);
-          this.field_mb.a(0, true);
+          this.field_n = new SpatialGrid(1 + (this.field_H.field_u >> 7), 1 + (this.field_H.field_p >> 7));
+          this.camera = new Camera(this.field_H.field_u, this.field_H.field_p);
+          this.camera.a(this.tileMap.field_b[1], this.tileMap.field_b[3], this.tileMap.field_m[2], this.tileMap.field_m[0], this.tileMap.field_b[0], this.tileMap.field_m[1], this.tileMap.field_m[3], this.tileMap.field_b[2], 106);
+          this.camera.a((byte) -98);
+          this.b(8, this.tileMap.field_a);
+          this.tileMap.a(0, true);
           this.field_m = new IntrusiveDeque();
           this.field_lb = new IntrusiveDeque();
           this.field_d = new IntrusiveDeque();
@@ -3730,8 +3730,8 @@ final class GameWorld {
           this.field_v = new IntrusiveDeque();
           this.field_T = new IntrusiveDeque();
           this.field_i = new IntrusiveDeque();
-          this.field_R = this.field_mb.b((byte) 106);
-          so.b(this.field_R);
+          this.zombies = this.tileMap.b((byte) 106);
+          so.b(this.zombies);
           this.field_f = 0;
           this.field_l = 0;
           cm.field_c = null;
@@ -3744,7 +3744,7 @@ final class GameWorld {
             stackIn_16_0 = 0;
           }
           var3 = stackIn_16_0;
-          var4 = (WorldObject) (this.field_R.b((byte) 26));
+          var4 = (WorldObject) (this.zombies.b((byte) 26));
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (null == var4))) {
             stackOut_18_0 = var4 instanceof gb;
@@ -3796,7 +3796,7 @@ final class GameWorld {
                   }
                 }
               }
-              var4 = (WorldObject) (this.field_R.a(false));
+              var4 = (WorldObject) (this.zombies.a(false));
               continue;
             }
             break;
@@ -3815,11 +3815,11 @@ final class GameWorld {
           if (!vi.field_a) {
             stackIn_92_1 = null;
             stackIn_92_2 = null;
-            stackIn_92_3 = 1 + this.field_mb.field_j;
+            stackIn_92_3 = 1 + this.tileMap.field_j;
           } else {
             stackIn_92_1 = null;
             stackIn_92_2 = null;
-            stackIn_92_3 = this.field_mb.field_s + 1;
+            stackIn_92_3 = this.tileMap.field_s + 1;
           }
           this.field_gb = new ub(stackIn_92_3);
           gg.a(128);
@@ -3852,8 +3852,8 @@ final class GameWorld {
             var4_ref = gj.field_w[this.field_q][this.field_h];
           }
           var5 = sg.field_jb;
-          this.field_V = new vn(var5.b(var4_ref), var5.field_I + var5.field_x);
-          this.field_t = new vn(12 + this.field_V.field_w, 12 + this.field_V.field_t);
+          this.field_V = new Sprite(var5.b(var4_ref), var5.field_I + var5.field_x);
+          this.field_t = new Sprite(12 + this.field_V.field_w, 12 + this.field_V.field_t);
           this.field_V.a();
           this.field_N = 640;
           var5.a(var4_ref, this.field_V.field_w / 2, this.field_V.field_t - var5.field_x, 2, -1);
@@ -4074,7 +4074,7 @@ final class GameWorld {
               var6 = 0;
               var7 = 0;
               boolean decompiledNaturalLoopExit0 = false;
-              while (!(decompiledNaturalLoopExit0 = (!(var7 < this.field_mb.field_r)))) {
+              while (!(decompiledNaturalLoopExit0 = (!(var7 < this.tileMap.field_r)))) {
                 var8Lifetime2 = this.field_H.c(var7, -34, var6) & 127;
                 stackIn_320_0 = ~var8Lifetime2;
                 stackIn_320_1 = -8;
@@ -4091,14 +4091,14 @@ final class GameWorld {
                 break;
               }
               if (decompiledNaturalLoopExit0) {
-                stackIn_320_0 = this.field_mb.field_k;
+                stackIn_320_0 = this.tileMap.field_k;
                 stackIn_320_1 = 1;
               }
               var6Lifetime2 = stackIn_320_0 - stackIn_320_1;
               var7Lifetime2 = 0;
               scanLoop5: while (true) {
                 boolean decompiledFrameRemainder5 = true;
-                if (this.field_mb.field_r > var7Lifetime2) {
+                if (this.tileMap.field_r > var7Lifetime2) {
                   var8Lifetime3 = 127 & this.field_H.c(var7Lifetime2, 89, var6Lifetime2);
                   stackIn_331_0 = -8;
                   stackIn_331_1 = ~var8Lifetime3;
@@ -4127,7 +4127,7 @@ final class GameWorld {
                   var6Lifetime2 = 0;
                   while (true) {
                     stackIn_331_0Lifetime1 = var6Lifetime2;
-                    stackIn_331_1Lifetime1 = this.field_mb.field_k;
+                    stackIn_331_1Lifetime1 = this.tileMap.field_k;
                     if (stackIn_331_0Lifetime1 >= stackIn_331_1Lifetime1) {
                       break;
                     }
@@ -4146,13 +4146,13 @@ final class GameWorld {
                     var6Lifetime2++;
                   }
                 }
-                stackIn_340_0 = this.field_mb.field_r;
+                stackIn_340_0 = this.tileMap.field_r;
                 stackIn_340_1 = 1;
                 break;
               }
               var7Lifetime3 = stackIn_340_0 - stackIn_340_1;
               var6Lifetime3 = 0;
-              while (var6Lifetime3 < this.field_mb.field_k) {
+              while (var6Lifetime3 < this.tileMap.field_k) {
                 var8Lifetime4 = 127 & this.field_H.c(var7Lifetime3, -63, var6Lifetime3);
                 stackIn_351_0 = var8Lifetime4;
                 stackIn_351_1 = 7;
@@ -4179,7 +4179,7 @@ final class GameWorld {
                 var7Lifetime4 = 0;
                 while (true) {
                   stackIn_351_0Lifetime1 = var7Lifetime4;
-                  stackIn_351_1Lifetime1 = this.field_mb.field_r;
+                  stackIn_351_1Lifetime1 = this.tileMap.field_r;
                   if (stackIn_351_0Lifetime1 >= stackIn_351_1Lifetime1) {
                     break;
                   }
@@ -4189,7 +4189,7 @@ final class GameWorld {
                     break;
                   }
                   var6Lifetime4 = stackIn_371_0;
-                  while (var6Lifetime4 < this.field_mb.field_k) {
+                  while (var6Lifetime4 < this.tileMap.field_k) {
                     var8Lifetime5 = 127 & this.field_H.field_A.field_h[var7Lifetime4][var6Lifetime4];
                     stackIn_351_0Lifetime1Lifetime1 = var8Lifetime5;
                     stackIn_351_1Lifetime1Lifetime1 = 14;
@@ -4207,13 +4207,13 @@ final class GameWorld {
           }
           if ((decompiledFrameCompleted3) &&
             (decompiledFrameCompleted1)) {
-            stackIn_371_0 = ~this.field_mb.field_a;
+            stackIn_371_0 = ~this.tileMap.field_a;
           }
           boolean decompiledFrameCompleted0 = true;
           if (stackIn_371_0 == -9) {
             var6Lifetime1 = 0;
             while (true) {
-              stackIn_374_0 = this.field_mb.field_r;
+              stackIn_374_0 = this.tileMap.field_r;
               stackIn_374_1 = var6Lifetime1;
               if (stackIn_374_0 <= stackIn_374_1) {
                 break;
@@ -4225,7 +4225,7 @@ final class GameWorld {
               }
               var7Lifetime1 = stackIn_415_0;
               while (true) {
-                stackIn_378_0 = this.field_mb.field_k;
+                stackIn_378_0 = this.tileMap.field_k;
                 stackIn_378_1 = var7Lifetime1;
                 if (stackIn_378_0 > stackIn_378_1) {
                   var8Lifetime1 = this.field_H.field_A.field_h[var6Lifetime1][var7Lifetime1];
@@ -4439,7 +4439,7 @@ final class GameWorld {
             bo.field_p[83]))) {
             this.field_ib = 0;
             ck.a(-1, 6836);
-            this.field_S.c(-106);
+            this.camera.c(-106);
             this.field_N = 0;
             decompiledFrameRemainder1 = (var6 != 0);
           }
@@ -4451,7 +4451,7 @@ final class GameWorld {
                 this.field_M &&
                 this.field_p &&
                 this.field_w) {
-                var2 = (WorldObject) (this.field_R.b((byte) 26));
+                var2 = (WorldObject) (this.zombies.b((byte) 26));
                 while (null != var2) {
                   stackOut_37_0 = var2 instanceof Zombie;
                   stackIn_126_0 = stackOut_37_0 ? 1 : 0;
@@ -4463,7 +4463,7 @@ final class GameWorld {
                   if (stackIn_38_0) {
                     ((Zombie) (var2)).field_qb = false;
                   }
-                  var2 = (WorldObject) (this.field_R.a(false));
+                  var2 = (WorldObject) (this.zombies.a(false));
                 }
               }
               if (decompiledFrameCompleted1) {
@@ -4501,7 +4501,7 @@ final class GameWorld {
                     !bo.field_p[82]) {
                     this.c((byte) 112);
                   }
-                  this.a(this.field_S.b(ei.field_K, true), this.field_S.a(this.field_B, false), this.field_S.b(this.field_j, true), 47, this.field_S.a(ha.field_b, false));
+                  this.a(this.camera.b(ei.field_K, true), this.camera.a(this.field_B, false), this.camera.b(this.field_j, true), 47, this.camera.a(ha.field_b, false));
                   if (this.field_W.a(false) > 0) {
                     ck.a(-3, 6836);
                   }
@@ -4526,7 +4526,7 @@ final class GameWorld {
                 }
                 if (this.field_p) {
                   if (!this.field_w) {
-                    this.field_S.a((byte) -123, var2_int, var3);
+                    this.camera.a((byte) -123, var2_int, var3);
                     this.field_B = ha.field_b;
                     this.field_j = ei.field_K;
                     decompiledFrameRemainder1 = (var6 != 0);
@@ -4537,7 +4537,7 @@ final class GameWorld {
                       !bo.field_p[82]) {
                       this.c((byte) -112);
                     }
-                    var4 = (WorldObject) (this.field_R.b((byte) 26));
+                    var4 = (WorldObject) (this.zombies.b((byte) 26));
                     while (var4 != null) {
                       stackOut_117_0 = var4 instanceof Zombie;
                       stackIn_126_0 = stackOut_117_0 ? 1 : 0;
@@ -4549,10 +4549,10 @@ final class GameWorld {
                       if (stackIn_118_0) {
                         var5 = (Zombie) (var4);
                         if (var5.i((byte) -126)) {
-                          var5.field_qb = var5.a(this.field_S.a(this.field_B, false), this.field_S.a(ha.field_b, false), this.field_S.b(this.field_j, true), this.field_S.b(ei.field_K, true), false);
+                          var5.field_qb = var5.a(this.camera.a(this.field_B, false), this.camera.a(ha.field_b, false), this.camera.b(this.field_j, true), this.camera.b(ei.field_K, true), false);
                         }
                       }
-                      var4 = (WorldObject) (this.field_R.a(false));
+                      var4 = (WorldObject) (this.zombies.a(false));
                     }
                   }
                 }
@@ -4589,8 +4589,8 @@ final class GameWorld {
         int var4 = 0;
         var4 = ZombieDawn.field_J;
         try {
-          dj.field_e.field_H.a(param0, -106);
-          var2 = (WorldObject) (this.field_R.b((byte) 26));
+          Js5Archive.field_e.field_H.a(param0, -106);
+          var2 = (WorldObject) (this.zombies.b((byte) 26));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var2))) {
             stackOut_3_0 = var2 instanceof Mover;
@@ -4611,7 +4611,7 @@ final class GameWorld {
                   ((Mover) (Object) stackIn_17_0).e(stackIn_18_1, -6904);
                 }
               }
-              stackIn_22_0 = this.field_R;
+              stackIn_22_0 = this.zombies;
               stackIn_23_1 = !(param0);
               var2 = (WorldObject) (((IntrusiveDeque) (Object) stackIn_22_0).a(stackIn_23_1));
               continue;
@@ -4681,7 +4681,7 @@ final class GameWorld {
         try {
           this.field_m.addFirst(0, new ck(param3, param1, param0));
           if (!param2) {
-            this.field_W = (ra) null;
+            this.field_W = (DualLinkDeque) null;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4748,7 +4748,7 @@ final class GameWorld {
           }
           qm.field_b = this.field_bb;
           if (param0) {
-            this.field_n = (mj) null;
+            this.field_n = (SpatialGrid) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4801,7 +4801,7 @@ final class GameWorld {
         this.field_E = 0;
         this.field_a = null;
         try {
-          dj.field_e = this;
+          Js5Archive.field_e = this;
           this.field_I = 47646;
           this.field_K = 15731621;
           stackIn_3_1 = param0 * 7;

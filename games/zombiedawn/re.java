@@ -8,13 +8,13 @@ final class re {
     int field_b;
     int field_f;
     static String field_c;
-    static rb field_g;
+    static Font field_g;
 
     final static void a(byte param0) {
         if (cn.field_b == null) {
           return;
         }
-        fa.a((byte) -46, cn.field_b);
+        SpatialObject.a((byte) -46, cn.field_b);
         cn.field_b.a(vh.field_a, (byte) 115);
         if (param0 != -71) {
           return;

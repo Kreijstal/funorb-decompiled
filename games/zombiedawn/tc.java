@@ -4,7 +4,7 @@
 class tc extends vf {
     static oi field_r;
     static int[] field_y;
-    static vn[] field_z;
+    static Sprite[] field_z;
     static String field_u;
     static int[] field_w;
     static String[] field_x;
@@ -49,11 +49,11 @@ class tc extends vf {
         }
     }
 
-    tc(rb param0, int param1) {
+    tc(Font param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_I, -1, 2147483647, false);
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -119,7 +119,7 @@ class tc extends vf {
         field_u = null;
         field_v = null;
         if (param0 != -26642) {
-          field_z = (vn[]) null;
+          field_z = (Sprite[]) null;
         }
     }
 

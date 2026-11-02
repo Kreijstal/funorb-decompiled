@@ -7,16 +7,16 @@ final class uj {
     private static long[] field_c;
     static int field_d;
 
-    final static void a(int param0, int param1, byte param2, de param3, int param4) {
+    final static void a(int param0, int param1, byte param2, PacketBuffer param3, int param4) {
         try {
-          param3.i(12, 55);
+          param3.writeByte(12, 55);
           if (param2 != -114) {
             field_c = (long[]) null;
           }
-          param3.a(17, (byte) 105);
-          param3.a(param4, (byte) 105);
-          param3.a(param0, (byte) 105);
-          param3.i(param1, param2 + 218);
+          param3.writeShort(17, (byte) 105);
+          param3.writeShort(param4, (byte) 105);
+          param3.writeShort(param0, (byte) 105);
+          param3.writeByte(param1, param2 + 218);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "uj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

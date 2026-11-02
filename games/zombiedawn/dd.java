@@ -11,15 +11,15 @@ final class dd {
           jb.field_b.addFirst(0, param1);
           nd.a(param0, 1, param1);
           if (param2 > -6) {
-            dj var4 = (dj) null;
-            dd.a((String) null, (String) null, 118, (dj) null);
+            Js5Archive var4 = (Js5Archive) null;
+            dd.a((String) null, (String) null, 118, (Js5Archive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "dd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static v[] a(String param0, String param1, int param2, dj param3) {
+    final static v[] a(String param0, String param1, int param2, Js5Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -75,8 +75,8 @@ final class dd {
           field_b = null;
           return;
         }
-        dj var2 = (dj) null;
-        dd.a((String) null, (String) null, 95, (dj) null);
+        Js5Archive var2 = (Js5Archive) null;
+        dd.a((String) null, (String) null, 95, (Js5Archive) null);
         field_a = null;
         field_c = null;
         field_b = null;

@@ -10,7 +10,7 @@ final class bp {
     private ExceptionWrapper field_i;
     private om[] field_g;
     static String field_j;
-    private de field_d;
+    private PacketBuffer field_d;
     private pc field_f;
 
     public static void a(int param0) {
@@ -46,14 +46,14 @@ final class bp {
               stackIn_10_0 = this.field_g[param3];
               return stackIn_10_0;
             }
-            this.field_d.field_j = 72 * param3 + 6;
+            this.field_d.position = 72 * param3 + 6;
             if (param1 >= -99) {
               this.field_b = (java.math.BigInteger) null;
             }
             var6_int = this.field_d.c(89);
             var7 = this.field_d.c(-95);
             var13 = new byte[64];
-            this.field_d.a(64, 0, var13, 11240);
+            this.field_d.readBytes(64, 0, var13, 11240);
             var9 = new om(param3, param0, param4, this.field_f, this.field_i, var6_int, var13, var7, param2);
             this.field_g[param3] = var9;
             stackIn_14_0 = var9;
@@ -91,7 +91,7 @@ final class bp {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        de var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -109,14 +109,14 @@ final class bp {
         if (this.field_e.field_q) {
           return false;
         }
-        var10 = new de(this.field_e.d(0));
-        var10.field_j = 5;
+        var10 = new PacketBuffer(this.field_e.d(0));
+        var10.position = 5;
         var3 = var10.d((byte) -118);
-        var10.field_j = var10.field_j + 72 * var3;
-        var13 = new byte[var10.field_h.length - var10.field_j];
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
-        var10.a(var13.length, 0, var13, 11240);
+        var10.readBytes(var13.length, 0, var13, 11240);
         if (null != this.field_b &&
           this.field_c != null) {
           var12 = new java.math.BigInteger(var13);
@@ -128,7 +128,7 @@ final class bp {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = nl.a(5, -5 + (var10.field_j - var13.length), -117, var10.field_h);
+        var15 = nl.a(5, -5 + (var10.position - var13.length), -117, var10.payload);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

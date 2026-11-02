@@ -18,7 +18,7 @@ final class r extends eh {
         int var6 = 0;
         int var7 = ZombieDawn.field_J;
         int var4 = null != this.field_E ? this.field_E.length : 0;
-        ga[] var5 = new ga[param2 * var4];
+        UiWidget[] var5 = new UiWidget[param2 * var4];
         if (this.field_B != null &&
           this.field_B.length > 0 &&
           var5.length > 0 &&
@@ -52,7 +52,7 @@ final class r extends eh {
           var3_int = 0;
           var4 = IterableNodeHashTable.field_d;
           while (var3_int < cj.field_h.length) {
-            var5 = hd.field_s[var3_int];
+            var5 = SpriteState.field_s[var3_int];
             if (var5 < 0) {
               var4 = var4 + vl.field_r;
             } else {
@@ -102,7 +102,7 @@ final class r extends eh {
         int var3;
         int var4;
         int var6;
-        ga var5;
+        UiWidget var5;
         var6 = ZombieDawn.field_J;
         var2 = 0;
         var3 = 0;
@@ -132,7 +132,7 @@ final class r extends eh {
         }
     }
 
-    final void a(int param0, ga param1, int param2) {
+    final void a(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         try {
@@ -152,7 +152,7 @@ final class r extends eh {
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -227,7 +227,7 @@ final class r extends eh {
           this.field_C = (int[]) null;
         }
         int var4 = this.field_C == null ? 0 : this.field_C.length;
-        ga[] var5 = new ga[var4 * param1];
+        UiWidget[] var5 = new UiWidget[var4 * param1];
         if (this.field_B != null && 0 < this.field_B.length && var5.length > 0 &&
           param2 > 0) {
           gp.a(this.field_B, 0, var5, 0, var4 * Math.min(param2, param1));
@@ -274,7 +274,7 @@ final class r extends eh {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -306,7 +306,7 @@ final class r extends eh {
         int var6 = -60 % ((-23 - param0) / 48);
     }
 
-    private final void a(int param0, ga param1, int param2, int param3) {
+    private final void a(int param0, UiWidget param1, int param2, int param3) {
         int stackIn_3_0 = 0;
         int stackIn_4_1 = 0;
         int stackIn_6_0 = 0;

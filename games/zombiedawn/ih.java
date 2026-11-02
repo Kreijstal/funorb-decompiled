@@ -57,7 +57,7 @@ final class ih extends hp implements ok, hh {
         RuntimeException decompiledCaughtException = null;
         vm var6 = null;
         RuntimeException var6_ref = null;
-        rb var7 = null;
+        Font var7 = null;
         String var8 = null;
         sn var9 = null;
         q var12 = null;
@@ -139,12 +139,12 @@ final class ih extends hp implements ok, hh {
           dupTemp$0 = new q(10, this.field_j, -20 + this.field_i, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(dupTemp$0, 10);
-          this.field_j = this.field_j + (((ga) ((Object) var12)).field_n + 5);
+          this.field_j = this.field_j + (((UiWidget) ((Object) var12)).field_n + 5);
           dupTemp$1 = new q(10, this.field_j, this.field_i - 20, 25, this.field_M, false, 80, 3, var7, 16777215, ui.field_c);
           var13 = dupTemp$1;
           this.a(dupTemp$1, 10);
           this.field_R.field_v = (sk) (this);
-          this.field_j = this.field_j + (5 + ((ga) ((Object) var13)).field_n);
+          this.field_j = this.field_j + (5 + ((UiWidget) ((Object) var13)).field_n);
           if (null != this.field_K) {
             this.field_K.field_v = (sk) (this);
           }
@@ -261,7 +261,7 @@ final class ih extends hp implements ok, hh {
         RuntimeException var3 = null;
         try {
           if (param0 == this.field_N) {
-            this.field_M.a((byte) 125, (ga) (this));
+            this.field_M.a((byte) 125, (UiWidget) (this));
           }
           var3_int = -126 / ((param1 - 35) / 38);
           if (this.field_M == param0) {
@@ -328,7 +328,7 @@ final class ih extends hp implements ok, hh {
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;

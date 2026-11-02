@@ -8,8 +8,8 @@ final class hn extends IntrusiveNode {
     static char[] field_o;
     static int field_m;
     static double field_j;
-    static vn field_h;
-    static vn field_p;
+    static Sprite field_h;
+    static Sprite field_p;
     static int[] field_q;
     static int field_l;
 
@@ -89,6 +89,6 @@ final class hn extends IntrusiveNode {
         field_j = Math.atan2(1.0, 0.0);
         field_q = new int[]{-1, 160, 342, 435};
         field_l = 8;
-        field_p = new vn(720, 560);
+        field_p = new Sprite(720, 560);
     }
 }

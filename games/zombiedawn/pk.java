@@ -6,7 +6,7 @@ final class pk extends gl {
     private nh field_M;
     int field_I;
     Object[] field_L;
-    private rb field_H;
+    private Font field_H;
     int field_O;
     int field_K;
     static boolean field_J;
@@ -117,7 +117,7 @@ final class pk extends gl {
           return false;
         }
         if (param1 != 21224) {
-          this.field_H = (rb) null;
+          this.field_H = (Font) null;
         }
         if (!this.field_M.field_F.field_D.field_l) {
           return false;
@@ -154,7 +154,7 @@ final class pk extends gl {
         return null == this.field_L ? 200 : (2 * this.field_L.length + 1) * this.field_I >> 1;
     }
 
-    pk(nh param0, rb param1, Object[] param2, int param3) {
+    pk(nh param0, Font param1, Object[] param2, int param3) {
         super(param0);
         try {
           this.field_M = param0;

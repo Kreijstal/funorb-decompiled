@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tj extends rb {
+final class tj extends Font {
     private byte[][] field_D;
     int[][] field_O;
 

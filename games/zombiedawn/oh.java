@@ -14,7 +14,7 @@ final class oh extends cb {
         }
     }
 
-    final static void a(byte[] param0, int param1, java.math.BigInteger param2, de param3, int param4, int param5, java.math.BigInteger param6) {
+    final static void a(byte[] param0, int param1, java.math.BigInteger param2, PacketBuffer param3, int param4, int param5, java.math.BigInteger param6) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -49,32 +49,32 @@ final class oh extends cb {
           }
           if (param5 != 31857) {
             var11 = (java.math.BigInteger) null;
-            oh.a((byte[]) null, 73, (java.math.BigInteger) null, (de) null, -53, 65, (java.math.BigInteger) null);
+            oh.a((byte[]) null, 73, (java.math.BigInteger) null, (PacketBuffer) null, -53, 65, (java.math.BigInteger) null);
           }
           if (null == bb.field_h ||
-            !(var7_int <= bb.field_h.field_h.length)) {
-            bb.field_h = new de(var7_int);
+            !(var7_int <= bb.field_h.payload.length)) {
+            bb.field_h = new PacketBuffer(var7_int);
           }
-          bb.field_h.field_j = 0;
+          bb.field_h.position = 0;
           bb.field_h.a(param0, param4, param1, param5 - 59700);
-          bb.field_h.b(var7_int, 0);
+          bb.field_h.padToPosition(var7_int, 0);
           bb.field_h.a(var14, 30044);
           if (null == ip.field_l ||
-            !(ip.field_l.field_h.length >= 100)) {
-            ip.field_l = new de(100);
+            !(ip.field_l.payload.length >= 100)) {
+            ip.field_l = new PacketBuffer(100);
           }
-          ip.field_l.field_j = 0;
-          ip.field_l.i(10, 52);
+          ip.field_l.position = 0;
+          ip.field_l.writeByte(10, 52);
           var12 = 0;
           var9Lifetime1 = var12;
           while (var12 < 4) {
-            ip.field_l.h(param5 ^ 31772, var14[var12]);
+            ip.field_l.writeInt(param5 ^ 31772, var14[var12]);
             var12++;
           }
-          ip.field_l.a(param4, (byte) 105);
-          ip.field_l.a(param2, false, param6);
-          param3.a(ip.field_l.field_h, ip.field_l.field_j, 0, param5 ^ -4276);
-          param3.a(bb.field_h.field_h, bb.field_h.field_j, 0, -27843);
+          ip.field_l.writeShort(param4, (byte) 105);
+          ip.field_l.encryptRsa(param2, false, param6);
+          param3.a(ip.field_l.payload, ip.field_l.position, 0, param5 ^ -4276);
+          param3.a(bb.field_h.payload, bb.field_h.position, 0, -27843);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

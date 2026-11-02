@@ -72,12 +72,12 @@ final class lg {
           var3 = 8 / ((param1 - 36) / 46);
           for (var2_int = 0; param0 > var2_int; var2_int++) {
             if (ExceptionWrapper.field_e != 0) {
-              var9 = dj.field_e.spawnZombie(60, (byte) 125, 930, 140, 960);
+              var9 = Js5Archive.field_e.spawnZombie(60, (byte) 125, 930, 140, 960);
               var5 = 20 + hp.field_A.getX(true) - so.c(40);
               var6 = hp.field_A.getY(237239984) - so.c(60);
-              var9.a(dj.field_e.field_H.a(true, var9.getX(true), var6, var5, var9.getY(237239984)), true);
+              var9.a(Js5Archive.field_e.field_H.a(true, var9.getX(true), var6, var5, var9.getY(237239984)), true);
             } else {
-              var8 = dj.field_e.spawnZombie(20, (byte) 120, 70, 354, 890);
+              var8 = Js5Archive.field_e.spawnZombie(20, (byte) 120, 70, 354, 890);
               var5_ref_qh = new qh();
               var5_ref_qh.addFirst(0, new Point(var8.getX(true), 450));
               var5_ref_qh.addFirst(0, new Point(384, 206));

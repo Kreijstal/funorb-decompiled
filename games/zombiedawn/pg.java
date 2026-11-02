@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pg extends al {
-    static vn field_t;
+    static Sprite field_t;
     static String field_n;
     private int field_s;
     static int field_p;
@@ -219,7 +219,7 @@ final class pg extends al {
     final static void c(int param0) {
         re.a((byte) -71);
         if (null != cj.field_d) {
-          fa.a((byte) -46, cj.field_d);
+          SpatialObject.a((byte) -46, cj.field_d);
         }
         fc.o((byte) -101);
         jo.x(-2);

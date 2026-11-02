@@ -4,10 +4,10 @@
 final class og extends pj {
     static boolean field_A;
     static int[] field_y;
-    de field_w;
+    PacketBuffer field_w;
     static String field_z;
     byte field_C;
-    static vn[] field_x;
+    static Sprite[] field_x;
     int field_v;
     static af field_B;
 
@@ -15,13 +15,13 @@ final class og extends pj {
         if (this.field_q) {
           throw new RuntimeException();
         }
-        if (this.field_w.field_j < this.field_w.field_h.length - this.field_C) {
+        if (this.field_w.position < this.field_w.payload.length - this.field_C) {
           throw new RuntimeException();
         }
         if (param0 != 0) {
           return (byte[]) null;
         }
-        return this.field_w.field_h;
+        return this.field_w.payload;
     }
 
     final static void a(String param0, int param1) {
@@ -138,7 +138,7 @@ final class og extends pj {
         if (param0 != -31478) {
           return 29;
         }
-        return 100 * this.field_w.field_j / (-this.field_C + this.field_w.field_h.length);
+        return 100 * this.field_w.position / (-this.field_C + this.field_w.payload.length);
     }
 
     final static void g(int param0) {

@@ -33,7 +33,7 @@ final class jh {
         RuntimeException decompiledCaughtException = null;
         var4 = ZombieDawn.field_J;
         try {
-          var5 = (n) (dj.field_l.b((byte) 26));
+          var5 = (n) (Js5Archive.field_l.b((byte) 26));
           var1 = var5;
           if (var1 == null) {
             return false;
@@ -94,7 +94,7 @@ final class jh {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        de var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -111,7 +111,7 @@ final class jh {
         int var13Lifetime1Lifetime1;
         var16 = ZombieDawn.field_J;
         try {
-          var17 = new de(va.a((byte) -122, param0));
+          var17 = new PacketBuffer(va.a((byte) -122, param0));
           var4 = var17.d((byte) -127);
           if (var4 >= 5 &&
             7 >= var4) {
@@ -180,7 +180,7 @@ final class jh {
             if (var7 != 0) {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_q; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(64, 0, var21, 11240);
+                var17.readBytes(64, 0, var21, 11240);
                 this.field_f[this.field_n[var10Lifetime3]] = var21;
               }
             }

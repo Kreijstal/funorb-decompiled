@@ -3,13 +3,13 @@
  */
 final class cn {
     static ci field_d;
-    static vn field_i;
+    static Sprite field_i;
     static int field_h;
     static int field_j;
-    static vn[] field_c;
+    static Sprite[] field_c;
     static dh field_f;
     static int field_g;
-    static vn[] field_a;
+    static Sprite[] field_a;
     static String[] field_e;
     static la field_b;
 

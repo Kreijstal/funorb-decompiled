@@ -20,7 +20,7 @@ final class di extends hp implements hh {
         }
     }
 
-    final static void a(de param0, int param1, int param2, PlatformTaskDispatcher param3) {
+    final static void a(PacketBuffer param0, int param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -91,7 +91,7 @@ final class di extends hp implements hh {
                         var13 = param0.c(100);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param0.a(var13, 0, var22[var12_int], 11240);
+                        param0.readBytes(var13, 0, var22[var12_int], 11240);
                       }
                     }
                     var18.field_h[var5] = var6_int;
@@ -138,7 +138,7 @@ final class di extends hp implements hh {
                 var18.field_q[var5] = -5;
               }
             }
-            dj.field_l.addFirst(0, var18);
+            Js5Archive.field_l.addFirst(0, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -166,7 +166,7 @@ final class di extends hp implements hh {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        fa.field_p = param0;
+        SpatialObject.field_p = param0;
         ma.field_k = param4;
         pf.field_g = param1;
         if (param3 != -116) {
@@ -195,7 +195,7 @@ final class di extends hp implements hh {
             return;
           }
           if (this.field_H == param2) {
-            dj.a(109);
+            Js5Archive.a(109);
           } else {
             if (this.field_F == param2) {
               vj.d(69);
@@ -220,7 +220,7 @@ final class di extends hp implements hh {
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;

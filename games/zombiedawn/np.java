@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class np extends an {
-    static vn field_E;
+    static Sprite field_E;
     static ij field_H;
     private int field_F;
     private vc field_G;
@@ -15,7 +15,7 @@ final class np extends an {
         return null;
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         try {
           this.field_F = this.field_F + 1;
           super.a(param0, (byte) -110, param2, param3);
@@ -26,10 +26,10 @@ final class np extends an {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        vn var15 = null;
-        vn var16 = null;
-        vn var14 = null;
-        vn var13 = null;
+        Sprite var15 = null;
+        Sprite var16 = null;
+        Sprite var14 = null;
+        Sprite var13 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = ZombieDawn.field_J;
@@ -43,11 +43,11 @@ final class np extends an {
         int var6 = this.field_j + (param0 + (this.field_n >> 1));
         rh var8 = this.field_G.a((byte) -76);
         if (var8 == se.field_l) {
-          var15 = dj.field_k[0];
+          var15 = Js5Archive.field_k[0];
           var9 = var15.field_r << 1;
           var10 = var15.field_q << 1;
           if (tm.field_m == null) {
-            tm.field_m = new vn(var9, var10);
+            tm.field_m = new Sprite(var9, var10);
             ki.a((byte) -94, tm.field_m);
             var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
@@ -55,7 +55,7 @@ final class np extends an {
             return;
           }
           if (tm.field_m.field_w < var9) {
-            tm.field_m = new vn(var9, var10);
+            tm.field_m = new Sprite(var9, var10);
             ki.a((byte) -94, tm.field_m);
             var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
@@ -70,7 +70,7 @@ final class np extends an {
             tm.field_m.b(-var15.field_r + var5, -var15.field_q + var6, 256);
             return;
           }
-          tm.field_m = new vn(var9, var10);
+          tm.field_m = new Sprite(var9, var10);
           ki.a((byte) -94, tm.field_m);
           var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
           pa.a(-21189);
@@ -78,11 +78,11 @@ final class np extends an {
           return;
         }
         if (gj.field_v == var8) {
-          var16 = dj.field_k[0];
+          var16 = Js5Archive.field_k[0];
           var9Lifetime1 = var16.field_r << 1;
           var10Lifetime1 = var16.field_q << 1;
           if (tm.field_m == null) {
-            tm.field_m = new vn(var9Lifetime1, var10Lifetime1);
+            tm.field_m = new Sprite(var9Lifetime1, var10Lifetime1);
             ki.a((byte) -94, tm.field_m);
             var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
@@ -90,7 +90,7 @@ final class np extends an {
             return;
           }
           if (tm.field_m.field_w < var9Lifetime1) {
-            tm.field_m = new vn(var9Lifetime1, var10Lifetime1);
+            tm.field_m = new Sprite(var9Lifetime1, var10Lifetime1);
             ki.a((byte) -94, tm.field_m);
             var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
@@ -105,7 +105,7 @@ final class np extends an {
             tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);
             return;
           }
-          tm.field_m = new vn(var9Lifetime1, var10Lifetime1);
+          tm.field_m = new Sprite(var9Lifetime1, var10Lifetime1);
           ki.a((byte) -94, tm.field_m);
           var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
           pa.a(-21189);
@@ -113,12 +113,12 @@ final class np extends an {
           return;
         }
         if (var8 == MouseWheelInput.field_b) {
-          var14 = dj.field_k[2];
+          var14 = Js5Archive.field_k[2];
           var14.b(-(var14.field_w >> 1) + var5, -(var14.field_t >> 1) + var6, 256);
           return;
         }
         if (mc.field_g == var8) {
-          var13 = dj.field_k[1];
+          var13 = Js5Archive.field_k[1];
           var13.b(var5 - (var13.field_w >> 1), -(var13.field_t >> 1) + var6, 256);
           return;
         }
@@ -164,7 +164,7 @@ final class np extends an {
         }
     }
 
-    final boolean a(byte param0, ga param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

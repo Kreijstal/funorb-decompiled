@@ -6,7 +6,7 @@ import java.util.*;
 final class hk extends WorldObject {
     private int field_I;
     static IntrusiveDeque field_F;
-    static vn field_H;
+    static Sprite field_H;
     private int field_O;
     private boolean field_D;
     private int field_E;
@@ -42,7 +42,7 @@ final class hk extends WorldObject {
         this.field_O = this.field_O + this.field_I;
         if (fp.field_H >= this.field_O) {
           if (ac.field_t <= this.field_O) {
-            var2 = dj.field_e.field_R.b((byte) 26);
+            var2 = Js5Archive.field_e.zombies.b((byte) 26);
             while (var2 instanceof WorldObject) {
               if (var2 instanceof Zombie) {
                 var3 = ((Zombie) (var2)).getX(true);

@@ -7,12 +7,12 @@ class tb extends an {
     private int field_N;
     private int field_H;
     private boolean field_F;
-    static vn field_G;
+    static Sprite field_G;
     private long field_M;
     private int field_O;
     private boolean field_I;
     private long field_J;
-    static dj field_K;
+    static Js5Archive field_K;
 
     private final void c(boolean param0) {
         if (this.field_v instanceof ok) {
@@ -31,7 +31,7 @@ class tb extends an {
           return this.field_N;
         }
         if (!param0) {
-          field_K = (dj) null;
+          field_K = (Js5Archive) null;
         }
         for (var2 = this.field_N - 1; var2 > 0; var2--) {
           if (32 != this.field_o.charAt(var2 - 1)) {
@@ -50,9 +50,9 @@ class tb extends an {
         this.h(121);
     }
 
-    final static vn[] c(int param0, int param1, int param2, int param3) {
+    final static Sprite[] c(int param0, int param1, int param2, int param3) {
         if (param2 != -2967) {
-          return (vn[]) null;
+          return (Sprite[]) null;
         }
         return kj.a(1, param1, 12692, param3, param0);
     }
@@ -121,7 +121,7 @@ class tb extends an {
         this.d((byte) 119);
     }
 
-    void a(ga param0, byte param1, int param2, int param3) {
+    void a(UiWidget param0, byte param1, int param2, int param3) {
         ak var6 = null;
         int var7 = 0;
         try {
@@ -131,7 +131,7 @@ class tb extends an {
           if (1 == this.field_m) {
             if (this.field_h instanceof ak) {
               var6 = (ak) ((Object) this.field_h);
-              var7 = var6.a((ga) (this), -1, param2, ha.field_b, ei.field_K, param3);
+              var7 = var6.a((UiWidget) (this), -1, param2, ha.field_b, ei.field_K, param3);
               if (-1 != var7) {
                 if (this.field_F &&
                   var7 < this.field_L &&
@@ -202,15 +202,15 @@ class tb extends an {
         }
         if (this.field_h != null &&
           param1 == 0) {
-          this.field_h.a(16777215, this.field_C, param0, (ga) (this), param2);
+          this.field_h.a(16777215, this.field_C, param0, (UiWidget) (this), param2);
           if (this.field_h instanceof ak) {
             var8 = (ak) ((Object) this.field_h);
             if (this.field_H != this.field_N) {
-              var8.a(-118, this.field_H, param0, (ga) (this), param2, this.field_N);
+              var8.a(-118, this.field_H, param0, (UiWidget) (this), param2, this.field_N);
             }
             var6 = pd.a(-22826);
             if ((var6 - this.field_M) % 1000L < 500L) {
-              var8.a(this.field_N, param2, param0, param3 ^ -39, (ga) (this));
+              var8.a(this.field_N, param2, param0, param3 ^ -39, (UiWidget) (this));
             }
           }
         }
@@ -348,7 +348,7 @@ class tb extends an {
         return this.field_o.substring(var2, var3);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int stackIn_6_1 = 0;
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_24_0 = null;
@@ -361,7 +361,7 @@ class tb extends an {
         try {
           if (super.a(param0, param1 ^ 0, param2, param3, param4, param5, param6) &&
             this.field_h instanceof ak) {
-            var8_int = ((ak) ((Object) this.field_h)).a((ga) (this), param1 - 2, param2, ha.field_b, ei.field_K, param4);
+            var8_int = ((ak) ((Object) this.field_h)).a((UiWidget) (this), param1 - 2, param2, ha.field_b, ei.field_K, param4);
             if (var8_int != -1) {
               stackIn_6_1 = var8_int;
             } else {
@@ -422,9 +422,9 @@ class tb extends an {
           field_E = -5;
         }
         var9 = (ak) ((Object) this.field_h);
-        var3 = var9.a(98, (ga) (this));
+        var3 = var9.a(98, (UiWidget) (this));
         var4 = var3.b((byte) 123);
-        var5 = var9.a((byte) 124, (ga) (this));
+        var5 = var9.a((byte) 124, (UiWidget) (this));
         var6 = var9.a(5) >> 1;
         if (var5 - var6 > var4) {
           this.field_u = 0;
@@ -523,7 +523,7 @@ class tb extends an {
         return (byte) 9;
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int dupTemp$0 = 0;
         int stackIn_33_1 = 0;
         int stackIn_62_1 = 0;

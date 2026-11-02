@@ -11,7 +11,7 @@ final class lc {
     private SecondaryNodeDeque field_g;
     static int field_h;
     static PlatformTaskDispatcher field_a;
-    static vn[] field_k;
+    static Sprite[] field_k;
     static int field_j;
 
     private final void a(long param0, int param1, int param2, Object param3) {
@@ -94,7 +94,7 @@ final class lc {
         bj var4 = (bj) (this.field_e.a(false, param1));
         this.a(var4, param0 + 143);
         if (param0 != -20) {
-          field_k = (vn[]) null;
+          field_k = (Sprite[]) null;
         }
     }
 
@@ -152,7 +152,7 @@ final class lc {
         }
     }
 
-    final static void a(dj param0, dj param1, byte param2) {
+    final static void a(Js5Archive param0, Js5Archive param1, byte param2) {
         try {
           ge.field_b = param1;
           int var3_int = -117 / ((-21 - param2) / 34);
@@ -164,7 +164,7 @@ final class lc {
 
     public static void a(int param0) {
         if (param0 != -1) {
-          field_k = (vn[]) null;
+          field_k = (Sprite[]) null;
         }
         field_a = null;
         field_k = null;

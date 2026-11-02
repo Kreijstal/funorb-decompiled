@@ -69,18 +69,18 @@ final class ji {
         field_f = null;
     }
 
-    final static vn[] a(dj param0, int param1, int param2, int param3) {
+    final static Sprite[] a(Js5Archive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        vn[] stackIn_2_0 = null;
+        Sprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        vn[] stackIn_7_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1) {
-            stackIn_2_0 = (vn[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           if (ph.a(param2, 31043, param3, param0)) {
@@ -88,7 +88,7 @@ final class ji {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (vn[]) (stackIn_5_0);
+          return (Sprite[]) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

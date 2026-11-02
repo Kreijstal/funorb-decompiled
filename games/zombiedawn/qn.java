@@ -8,9 +8,9 @@ final class qn {
     static boolean field_j;
     private long field_d;
     private long field_f;
-    static vn[] field_k;
-    static vn field_g;
-    static dj field_i;
+    static Sprite[] field_k;
+    static Sprite field_g;
+    static Js5Archive field_i;
     static boolean field_h;
     static int field_e;
     static String field_a;
@@ -49,7 +49,7 @@ final class qn {
           this.field_f = param1;
           return;
         }
-        field_k = (vn[]) null;
+        field_k = (Sprite[]) null;
         this.field_c.seek(param1);
         this.field_f = param1;
     }
@@ -149,7 +149,7 @@ final class qn {
     final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
         try {
           if (param0 != 0) {
-            field_g = (vn) null;
+            field_g = (Sprite) null;
           }
           if (((long)param1 + this.field_f) > this.field_d) {
             this.field_c.seek(this.field_d);
@@ -171,7 +171,7 @@ final class qn {
     static {
         field_j = false;
         field_h = true;
-        field_g = new vn(300, 200);
+        field_g = new Sprite(300, 200);
         field_b = 0;
         field_a = "Email: ";
     }

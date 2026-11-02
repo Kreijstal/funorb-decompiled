@@ -12,7 +12,7 @@ abstract class wb extends GameApplet {
     private int field_v;
     private int field_n;
     private boolean field_o;
-    static rb field_m;
+    static Font field_m;
     private boolean field_r;
     private int field_q;
     private int field_w;
@@ -187,7 +187,7 @@ abstract class wb extends GameApplet {
         if (ja.field_b) {
           return -1;
         }
-        int var2 = de.a(true, we.p((byte) 106), ja.a(23917), this.field_v, true, this.field_s);
+        int var2 = PacketBuffer.a(true, we.p((byte) 106), ja.a(23917), this.field_v, true, this.field_s);
         if (var2 == -1) {
           return -1;
         }
@@ -232,7 +232,7 @@ abstract class wb extends GameApplet {
             dp.a(3, -4);
           }
           if (i.field_X[3]) {
-            mj.a(4, -1);
+            SpatialGrid.a(4, -1);
           }
           if (i.field_X[4]) {
             ca.a(5, (byte) -118);
@@ -310,7 +310,7 @@ abstract class wb extends GameApplet {
                       }
                     }
                   } else {
-                    ra.b((byte) -120);
+                    DualLinkDeque.b((byte) -120);
                   }
                 } else {
                   pb.c((byte) 68);
@@ -488,7 +488,7 @@ abstract class wb extends GameApplet {
           ph.b(26311);
           ng.a(121);
           ka.field_a = ql.field_f;
-          de.field_i = false;
+          PacketBuffer.field_i = false;
           nk.a(al.field_a, -1, da.field_l, IntrusiveDeque.field_d, ih.field_S);
           if (sn.field_b ||
             fo.field_b != null) {
@@ -548,7 +548,7 @@ abstract class wb extends GameApplet {
         }
         if (!param0 &&
           rl.field_f) {
-          fa.a((byte) -46, cj.field_d);
+          SpatialObject.a((byte) -46, cj.field_d);
           this.a(true);
           se.a(20922, cj.field_d);
         }
@@ -584,7 +584,7 @@ abstract class wb extends GameApplet {
 
     final void i(int param0) {
         if (param0 != 12) {
-          field_m = (rb) null;
+          field_m = (Font) null;
         }
         i.field_X[1] = true;
     }
@@ -600,7 +600,7 @@ abstract class wb extends GameApplet {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          de var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = ZombieDawn.field_J;
@@ -621,7 +621,7 @@ abstract class wb extends GameApplet {
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = md.a(co.c(17821), ra.e((byte) -57), ja.a(23917), la.b(0), (byte) -15, this.field_v, we.p((byte) -117));
+            var5_intLifetime1 = md.a(co.c(17821), DualLinkDeque.e((byte) -57), ja.a(23917), la.b(0), (byte) -15, this.field_v, we.p((byte) -117));
             if (var5_intLifetime1 != -1) {
               ln.a(var5_intLifetime1, -14, sc.field_d, ho.field_a);
               ho.field_a = null;
@@ -635,7 +635,7 @@ abstract class wb extends GameApplet {
               si.x(0);
             }
             if (!param0) {
-              var5_intLifetime2 = de.a(true, we.p((byte) 126), ja.a(23917), this.field_v, false, this.field_s);
+              var5_intLifetime2 = PacketBuffer.a(true, we.p((byte) 126), ja.a(23917), this.field_v, false, this.field_s);
               if (var5_intLifetime2 != -1) {
                 if (0 == var5_intLifetime2) {
                   nk.field_e = p.field_a;
@@ -663,7 +663,7 @@ abstract class wb extends GameApplet {
             bo.a(-88, hc.a(0));
           }
           if (var4 == 6 &&
-            de.field_i) {
+            PacketBuffer.field_i) {
             fl.field_a = 10;
           }
           if (var4 == 7) {
@@ -695,7 +695,7 @@ abstract class wb extends GameApplet {
               if (hp.field_E.a(105)) {
                 var12 = hp.field_E.a((byte) -118);
                 if (var12 != null) {
-                  var7 = fa.a(var12.field_h, var12.field_j, 0, -124);
+                  var7 = SpatialObject.a(var12.payload, var12.position, 0, -124);
                   vf.a(74, var7);
                 } else {
                   var9 = (String) null;

@@ -8,7 +8,7 @@ final class BufferedSocket implements Runnable {
     private int field_n;
     private int field_g;
     static int field_k;
-    static dj field_h;
+    static Js5Archive field_h;
     private PlatformTaskDispatcher field_m;
     static String field_f;
     private byte[] field_e;

@@ -44,9 +44,9 @@ final class ab extends ln {
         return 0L;
     }
 
-    final static void a(vn[] param0, byte param1, int param2) {
+    final static void a(Sprite[] param0, byte param1, int param2) {
         int var4 = 0;
-        vn[] var5 = null;
+        Sprite[] var5 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -56,8 +56,8 @@ final class ab extends ln {
         try {
           ob.field_b[param2] = param0;
           if (param1 <= 31) {
-            var5 = (vn[]) null;
-            ab.a((vn[]) null, (byte) 32, 21);
+            var5 = (Sprite[]) null;
+            ab.a((Sprite[]) null, (byte) 32, 21);
           }
           if (param2 != 0) {
             if (param2 == 4) {
@@ -228,17 +228,17 @@ final class ab extends ln {
         return var4;
     }
 
-    final static vn[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 >= -6) {
           ab.a(61, (byte) -100, -10, 45, -84);
         }
         return ca.a(param2, param0, 1, 1, param4, 1, 3, param3, -120);
     }
 
-    final static void a(de param0, java.math.BigInteger param1, byte param2, de param3, java.math.BigInteger param4) {
+    final static void a(PacketBuffer param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
           int var5_int = 50 % ((param2 + 43) / 46);
-          oh.a(param0.field_h, 0, param4, param3, param0.field_j, 31857, param1);
+          oh.a(param0.payload, 0, param4, param3, param0.position, 31857, param1);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ab.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

@@ -10,7 +10,7 @@ final class qj {
     private int field_a;
     static int field_d;
     static int field_e;
-    static vn[][] field_j;
+    static Sprite[][] field_j;
     private int field_c;
 
     final void a(byte param0) {
@@ -49,7 +49,7 @@ final class qj {
     }
 
     final void a(byte param0, Camera param1) {
-        vn[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -58,7 +58,7 @@ final class qj {
         RuntimeException var3 = null;
         try {
           if (param0 != 6) {
-            field_j = (vn[][]) null;
+            field_j = (Sprite[][]) null;
           }
           if (this.field_i >= 0.0f) {
             stackIn_6_0 = lb.field_eb;
@@ -67,7 +67,7 @@ final class qj {
             } else {
               stackIn_7_1 = 6;
             }
-            ((vn) (Object) stackIn_6_0[stackIn_7_1]).e(param1.worldToScreenX(this.field_h, (byte) -72) - 12, param1.worldToScreenY(this.field_c, 0) - 12, this.field_a);
+            ((Sprite) (Object) stackIn_6_0[stackIn_7_1]).e(param1.worldToScreenX(this.field_h, (byte) -72) - 12, param1.worldToScreenY(this.field_c, 0) - 12, this.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -86,7 +86,7 @@ final class qj {
 
     public static void a(int param0) {
         field_f = null;
-        field_j = (vn[][]) null;
+        field_j = (Sprite[][]) null;
         if (param0 != 97) {
           field_f = (PcmSampleStream) null;
         }
@@ -351,6 +351,6 @@ final class qj {
         field_g = 0L;
         field_f = null;
         field_d = 640;
-        field_j = new vn[10][];
+        field_j = new Sprite[10][];
     }
 }

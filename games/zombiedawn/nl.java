@@ -3,11 +3,11 @@
  */
 final class nl extends al {
     static volatile int field_s;
-    static dj field_p;
-    static vn field_r;
+    static Js5Archive field_p;
+    static Sprite field_r;
     private int field_n;
     static int[] field_o;
-    static dj field_t;
+    static Js5Archive field_t;
     private int field_q;
     static cg field_m;
 
@@ -56,7 +56,7 @@ final class nl extends al {
         int var8;
         int var9;
         int var10;
-        vn var11;
+        Sprite var11;
         int var12;
         int var13;
         int var14;
@@ -66,7 +66,7 @@ final class nl extends al {
         String var19;
         int var21;
         String[] var22;
-        vn var23;
+        Sprite var23;
         String var24;
         String var25;
         int var8Lifetime1;
@@ -165,16 +165,16 @@ final class nl extends al {
         }
     }
 
-    final static void a(int param0, PcmMixer param1, byte param2, dj param3) {
+    final static void a(int param0, PcmMixer param1, byte param2, Js5Archive param3) {
         try {
-          mj.field_b = nk.a((byte) 122) * param0 / 1000;
+          SpatialGrid.field_b = nk.a((byte) 122) * param0 / 1000;
           tp.a((byte) 124, param3);
           ae.a(param3, (byte) -128);
           mn.a(param3, true);
           ta.a(255);
           hg.a((byte) -101);
           int var4_int = -67 / ((param2 - 2) / 56);
-          LevelNavigation.field_x = 0 - mj.field_b;
+          LevelNavigation.field_x = 0 - SpatialGrid.field_b;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nl.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -191,7 +191,7 @@ final class nl extends al {
         }
     }
 
-    private final vn c(int param0, boolean param1) {
+    private final Sprite c(int param0, boolean param1) {
         if (this.g(param0, -7)) {
           return ed.field_a[param0];
         }
@@ -200,7 +200,7 @@ final class nl extends al {
           return hf.field_E;
         }
         if (!param1) {
-          field_p = (dj) null;
+          field_p = (Js5Archive) null;
         }
         return e.field_G;
     }
@@ -336,7 +336,7 @@ final class nl extends al {
     }
 
     private final boolean g(int param0, int param1) {
-        int[] var4 = param1 != ~this.field_d ? dj.field_i : kg.field_g;
+        int[] var4 = param1 != ~this.field_d ? Js5Archive.field_i : kg.field_g;
         int[] var3 = var4;
         return vi.a(param0, var4, -112);
     }

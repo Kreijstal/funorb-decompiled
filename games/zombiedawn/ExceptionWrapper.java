@@ -9,7 +9,7 @@ final class ExceptionWrapper implements Runnable {
     static qf field_d;
     static byte[][] field_j;
     static int field_e;
-    private ra field_b;
+    private DualLinkDeque field_b;
     private boolean field_l;
     private Thread field_h;
     static String field_f;
@@ -272,7 +272,7 @@ final class ExceptionWrapper implements Runnable {
 
     ExceptionWrapper(PlatformTaskDispatcher param0) {
         op var2 = null;
-        this.field_b = new ra();
+        this.field_b = new DualLinkDeque();
         this.field_l = false;
         this.field_k = 0;
         try {

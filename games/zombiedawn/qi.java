@@ -25,7 +25,7 @@ final class qi extends eh {
         return true;
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         try {
           int var5_int = 81 / ((param1 - 46) / 42);
           super.a(param0, (byte) -38, param2, param3);
@@ -106,7 +106,7 @@ final class qi extends eh {
         this.f(78);
     }
 
-    final boolean a(ga param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -222,13 +222,13 @@ final class qi extends eh {
           }
           this.field_I = param0 ? true : false;
           this.field_L = param2;
-          this.field_B[1] = (ga) ((Object) param2);
+          this.field_B[1] = (UiWidget) ((Object) param2);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qi.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
@@ -256,14 +256,14 @@ final class qi extends eh {
         }
     }
 
-    qi(int param0, int param1, int param2, int param3, io param4, ga param5, io param6) {
+    qi(int param0, int param1, int param2, int param3, io param4, UiWidget param5, io param6) {
         super(param0, param1, param2, param3, param4);
         rg dupTemp$0 = null;
         try {
-          this.field_B = new ga[3];
+          this.field_B = new UiWidget[3];
           dupTemp$0 = new rg(param0, param1, param2, param3, param6, param5);
           this.field_D = dupTemp$0;
-          this.field_B[2] = (ga) ((Object) dupTemp$0);
+          this.field_B[2] = (UiWidget) ((Object) dupTemp$0);
           this.e((byte) 82);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qi.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');

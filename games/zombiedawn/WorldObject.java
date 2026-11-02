@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class WorldObject extends fa {
+abstract class WorldObject extends SpatialObject {
     boolean field_C;
     int field_x;
     int field_t;
     private int field_v;
-    static vn[] field_w;
+    static Sprite[] field_w;
     int field_s;
     private int field_A;
     int field_y;
@@ -24,7 +24,7 @@ abstract class WorldObject extends fa {
         if (this.field_B != var3) {
           this.field_u = var4;
           this.field_B = var3;
-          dj.field_e.a(false, this);
+          Js5Archive.field_e.a(false, this);
           return;
         }
         if (this.field_u == var4) {
@@ -32,7 +32,7 @@ abstract class WorldObject extends fa {
         }
         this.field_u = var4;
         this.field_B = var3;
-        dj.field_e.a(false, this);
+        Js5Archive.field_e.a(false, this);
     }
 
     final WorldObject e(byte param0) {
@@ -41,10 +41,10 @@ abstract class WorldObject extends fa {
         WorldObject var6;
         if (param0 == 32) {
           if (-1 == this.field_v) {
-            return (WorldObject) (dj.field_e.field_n.b(false));
+            return (WorldObject) (Js5Archive.field_e.field_n.b(false));
           }
           do {
-            var6 = (WorldObject) (dj.field_e.field_n.b(false));
+            var6 = (WorldObject) (Js5Archive.field_e.field_n.b(false));
             if (var6 == null) {
               return null;
             }
@@ -54,10 +54,10 @@ abstract class WorldObject extends fa {
         }
         this.field_x = -55;
         if (-1 == this.field_v) {
-          return (WorldObject) (dj.field_e.field_n.b(false));
+          return (WorldObject) (Js5Archive.field_e.field_n.b(false));
         }
         while (true) {
-          var3_ref = (WorldObject) (dj.field_e.field_n.b(false));
+          var3_ref = (WorldObject) (Js5Archive.field_e.field_n.b(false));
           if (var3_ref == null) {
             return null;
           }
@@ -147,9 +147,9 @@ abstract class WorldObject extends fa {
           var4 = null;
           if (param1 != -1) {
             var5 = 1 + (param1 >> 7);
-            var4_ref = (WorldObject) (dj.field_e.field_n.a(var5, this.field_u, 29845, this.field_B));
+            var4_ref = (WorldObject) (Js5Archive.field_e.field_n.a(var5, this.field_u, 29845, this.field_B));
           } else {
-            var4_ref = (WorldObject) (dj.field_e.field_n.a(true));
+            var4_ref = (WorldObject) (Js5Archive.field_e.field_n.a(true));
           }
           if (param0 != -74) {
             return (WorldObject) null;
@@ -173,9 +173,9 @@ abstract class WorldObject extends fa {
         var4Lifetime1 = null;
         if (param1 != -1) {
           var5Lifetime1 = 1 + (param1 >> 7);
-          var4_refLifetime1 = (WorldObject) (dj.field_e.field_n.a(var5Lifetime1, this.field_u, 29845, this.field_B));
+          var4_refLifetime1 = (WorldObject) (Js5Archive.field_e.field_n.a(var5Lifetime1, this.field_u, 29845, this.field_B));
         } else {
-          var4_refLifetime1 = (WorldObject) (dj.field_e.field_n.a(true));
+          var4_refLifetime1 = (WorldObject) (Js5Archive.field_e.field_n.a(true));
         }
         if (param0 != -74) {
           return (WorldObject) null;
@@ -205,33 +205,33 @@ abstract class WorldObject extends fa {
           this.field_v = -1;
           if (param1 == 16) {
             if (param0 == -1) {
-              return (WorldObject) (dj.field_e.field_n.a(true));
+              return (WorldObject) (Js5Archive.field_e.field_n.a(true));
             }
             var3 = (param0 >> 7) + 1;
-            return (WorldObject) (dj.field_e.field_n.a(var3, this.field_u, 29845, this.field_B));
+            return (WorldObject) (Js5Archive.field_e.field_n.a(var3, this.field_u, 29845, this.field_B));
           }
           this.field_x = 64;
           if (param0 == -1) {
-            return (WorldObject) (dj.field_e.field_n.a(true));
+            return (WorldObject) (Js5Archive.field_e.field_n.a(true));
           }
           var3Lifetime3 = (param0 >> 7) + 1;
-          return (WorldObject) (dj.field_e.field_n.a(var3Lifetime3, this.field_u, 29845, this.field_B));
+          return (WorldObject) (Js5Archive.field_e.field_n.a(var3Lifetime3, this.field_u, 29845, this.field_B));
         }
         this.field_A = -1;
         this.field_v = -1;
         if (param1 == 16) {
           if (param0 == -1) {
-            return (WorldObject) (dj.field_e.field_n.a(true));
+            return (WorldObject) (Js5Archive.field_e.field_n.a(true));
           }
           var3Lifetime1 = (param0 >> 7) + 1;
-          return (WorldObject) (dj.field_e.field_n.a(var3Lifetime1, this.field_u, 29845, this.field_B));
+          return (WorldObject) (Js5Archive.field_e.field_n.a(var3Lifetime1, this.field_u, 29845, this.field_B));
         }
         this.field_x = 64;
         if (param0 == -1) {
-          return (WorldObject) (dj.field_e.field_n.a(true));
+          return (WorldObject) (Js5Archive.field_e.field_n.a(true));
         }
         var3Lifetime2 = (param0 >> 7) + 1;
-        return (WorldObject) (dj.field_e.field_n.a(var3Lifetime2, this.field_u, 29845, this.field_B));
+        return (WorldObject) (Js5Archive.field_e.field_n.a(var3Lifetime2, this.field_u, 29845, this.field_B));
     }
 
     final static void a(int param0, byte[] param1, byte param2, int param3) {
@@ -308,7 +308,7 @@ abstract class WorldObject extends fa {
 
     public static void h(int param0) {
         if (param0 != 237239984) {
-          field_w = (vn[]) null;
+          field_w = (Sprite[]) null;
           field_w = null;
           return;
         }

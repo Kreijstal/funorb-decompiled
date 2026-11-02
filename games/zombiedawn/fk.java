@@ -14,7 +14,7 @@ final class fk extends hp implements oa, hh, ri {
     static sd field_F;
     private ic field_G;
     private ic field_R;
-    static vn field_K;
+    static Sprite field_K;
     private ic field_Q;
     private fm field_O;
 
@@ -33,7 +33,7 @@ final class fk extends hp implements oa, hh, ri {
         return kl.a(this.field_P.field_o, 640, this, this.field_N.field_o, var2, this.field_G.field_o, this.field_O.field_x);
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -127,7 +127,7 @@ final class fk extends hp implements oa, hh, ri {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(String param0, int param1, ga param2, int param3, int param4) {
+    private final int a(String param0, int param1, UiWidget param2, int param3, int param4) {
         q var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -162,7 +162,7 @@ final class fk extends hp implements oa, hh, ri {
         }
     }
 
-    private final int a(int param0, int param1, int param2, String param3, ga param4) {
+    private final int a(int param0, int param1, int param2, String param3, UiWidget param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         np var7 = null;
@@ -213,7 +213,7 @@ final class fk extends hp implements oa, hh, ri {
         field_F = null;
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         try {
           super.a(param0, (byte) -92, param2, param3);
           int var5_int = 40 % ((46 - param1) / 42);
@@ -296,7 +296,7 @@ final class fk extends hp implements oa, hh, ri {
         }
     }
 
-    private final int a(int param0, ga param1, String param2, String param3, int param4, int param5) {
+    private final int a(int param0, UiWidget param1, String param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         String var8 = null;
         int stackIn_3_0 = 0;
@@ -341,7 +341,7 @@ final class fk extends hp implements oa, hh, ri {
         }
     }
 
-    private final int a(ga param0, int param1, int param2, String param3, int param4, int param5, String param6) {
+    private final int a(UiWidget param0, int param1, int param2, String param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
         wf var9 = null;
         q var10 = null;
@@ -483,7 +483,7 @@ final class fk extends hp implements oa, hh, ri {
         int fieldTemp$0 = oo.field_R;
         oo.field_R = oo.field_R - 1;
         if (fieldTemp$0 <= 0) {
-          dj.field_e.field_R.addFirst(0, new hk());
+          Js5Archive.field_e.zombies.addFirst(0, new hk());
           oo.field_R = pb.a(so.field_a, 40, 1) + 40;
           if (param0) {
             fk.b(false);

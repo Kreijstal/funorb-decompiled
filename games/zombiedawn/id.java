@@ -32,7 +32,7 @@ class id extends WorldObject {
             }
             this.field_F = oo.field_U[var3];
             if (this.field_z > 0) {
-              dj.field_e.field_u[this.field_z - 1] = dj.field_e.field_u[this.field_z - 1] - 1;
+              Js5Archive.field_e.field_u[this.field_z - 1] = Js5Archive.field_e.field_u[this.field_z - 1] - 1;
             }
             this.field_z = 0;
             return true;
@@ -146,9 +146,9 @@ class id extends WorldObject {
         if (0 == this.field_z) {
           return;
         }
-        dj.field_e.field_u[-1 + this.field_z] = dj.field_e.field_u[-1 + this.field_z] - 1;
-        if (0 >= dj.field_e.field_u[-1 + this.field_z]) {
-          var2 = dj.field_e.field_R.sentinel.previous;
+        Js5Archive.field_e.field_u[-1 + this.field_z] = Js5Archive.field_e.field_u[-1 + this.field_z] - 1;
+        if (0 >= Js5Archive.field_e.field_u[-1 + this.field_z]) {
+          var2 = Js5Archive.field_e.zombies.sentinel.previous;
           while (var2 instanceof WorldObject) {
             if (var2 instanceof Human &&
               this.field_z == ((WorldObject) (var2)).field_z) {
@@ -159,7 +159,7 @@ class id extends WorldObject {
         }
         this.field_E = this.field_z;
         this.field_z = 0;
-        var6 = dj.field_e.field_H;
+        var6 = Js5Archive.field_e.field_H;
         var7 = var6;
         var3 = this.getX(param0) / 24;
         var4 = this.getY(237239984) / 24;
@@ -243,15 +243,15 @@ class id extends WorldObject {
         if (param0 <= 95) {
           return;
         }
-        if (dj.field_e.field_r < 400 &&
-          dj.field_e.field_r > 200) {
+        if (Js5Archive.field_e.field_r < 400 &&
+          Js5Archive.field_e.field_r > 200) {
           var2 = 0;
           while (!(var2 >= ka.field_h.length)) {
             if (this.field_F != tl.field_g[var2]) {
               var2++;
               continue;
             }
-            if (dj.field_e.field_r >= 250 &&
+            if (Js5Archive.field_e.field_r >= 250 &&
               0 != pb.a(so.field_a, 25, 1)) {
               break;
             }
@@ -263,10 +263,10 @@ class id extends WorldObject {
             if (this.getY(237239984) % 24 == 0) {
               var4_int--;
             }
-            dj.field_e.field_H.field_A.field_f[var4_int][var3] = eg.a(dj.field_e.field_H.field_A.field_f[var4_int][var3], -33554433);
-            dj.field_e.field_H.field_A.field_f[-1 + var4_int][var3] = eg.a(dj.field_e.field_H.field_A.field_f[-1 + var4_int][var3], -33554433);
-            dj.field_e.field_H.field_A.a(true, 14365, var4_int, false, var3);
-            dj.field_e.field_H.field_A.a(true, 14365, var4_int - 1, false, var3);
+            Js5Archive.field_e.field_H.field_A.field_f[var4_int][var3] = eg.a(Js5Archive.field_e.field_H.field_A.field_f[var4_int][var3], -33554433);
+            Js5Archive.field_e.field_H.field_A.field_f[-1 + var4_int][var3] = eg.a(Js5Archive.field_e.field_H.field_A.field_f[-1 + var4_int][var3], -33554433);
+            Js5Archive.field_e.field_H.field_A.a(true, 14365, var4_int, false, var3);
+            Js5Archive.field_e.field_H.field_A.a(true, 14365, var4_int - 1, false, var3);
             if (pb.a(so.field_a, 2, 1) != 0) {
               break;
             }
@@ -294,7 +294,7 @@ class id extends WorldObject {
                 }
                 var4 = this.e((byte) 32);
               }
-              dj.field_e.b(true);
+              Js5Archive.field_e.b(true);
               wh.a((byte) -81);
               break;
             }
@@ -309,9 +309,9 @@ class id extends WorldObject {
           var3Lifetime2 = (this.getY(237239984) - 1) / 24;
           if (0 <= var2Lifetime1 &&
             0 <= var3Lifetime2 &&
-            var2Lifetime1 < dj.field_e.field_H.field_A.field_f[0].length &&
-            var3Lifetime2 < dj.field_e.field_H.field_A.field_f.length) {
-            var7 = ub.a(127, dj.field_e.field_H.field_A.field_f[var3Lifetime2][var2Lifetime1]);
+            var2Lifetime1 < Js5Archive.field_e.field_H.field_A.field_f[0].length &&
+            var3Lifetime2 < Js5Archive.field_e.field_H.field_A.field_f.length) {
+            var7 = ub.a(127, Js5Archive.field_e.field_H.field_A.field_f[var3Lifetime2][var2Lifetime1]);
             if ((var7 != null)) {
               if (var7.field_h >= 0) {
                 if (var7.field_h <= 0) {

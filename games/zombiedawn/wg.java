@@ -21,7 +21,7 @@ final class wg extends IntrusiveNode {
         field_j = (byte[][][]) null;
     }
 
-    final static v a(int param0, dj param1, int param2, int param3) {
+    final static v a(int param0, Js5Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

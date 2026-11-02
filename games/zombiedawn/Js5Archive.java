@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dj {
+final class Js5Archive {
     private Object[] field_j;
     static IntrusiveDeque field_l;
     private int field_d;
@@ -13,7 +13,7 @@ final class dj {
     private Object[][] field_c;
     static GameWorld field_e;
     private jh field_b;
-    static vn[] field_k;
+    static Sprite[] field_k;
     static int[] field_i;
 
     private final synchronized boolean a(int[] param0, int param1, int param2, byte param3) {
@@ -52,10 +52,10 @@ final class dj {
         byte[] var24 = null;
         int[] var25 = null;
         byte[] var26 = null;
-        de var27 = null;
+        PacketBuffer var27 = null;
         byte[] var28 = null;
-        de var30 = null;
-        de var32 = null;
+        PacketBuffer var30 = null;
+        PacketBuffer var32 = null;
         int[] var33 = null;
         byte[][] var34 = null;
         int[] var35 = null;
@@ -107,8 +107,8 @@ final class dj {
             var36 = SecondaryNodeDequeIterator.a(this.field_j[param2], (byte) 125, true);
             var26 = var36;
             var9 = var26;
-            var27 = new de(var36);
-            var27.a(153818020, var27.field_h.length, param0, 5);
+            var27 = new PacketBuffer(var36);
+            var27.a(153818020, var27.payload.length, param0, 5);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -140,9 +140,9 @@ final class dj {
               var11--;
               var12 = 255 & var24[var11];
               var11 = var11 - var12 * (var5_int * 4);
-              var30 = new de(var44);
+              var30 = new PacketBuffer(var44);
               var14_int = 0;
-              var30.field_j = var11;
+              var30.position = var11;
               var15_int = 0;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
@@ -164,7 +164,7 @@ final class dj {
               }
               var45 = new byte[var14_int];
               var14_intLifetime1 = 0;
-              var30.field_j = var11;
+              var30.position = var11;
               var17 = 0;
               for (var18 = 0; var12 > var18; var18++) {
                 var19 = 0;
@@ -188,11 +188,11 @@ final class dj {
               var11--;
               var12 = 255 & var24[var11];
               var11 = var11 - 4 * (var12 * var5_int);
-              var32 = new de(var44);
+              var32 = new PacketBuffer(var44);
               var40 = new int[var5_int];
               var33 = var40;
               var14 = var33;
-              var32.field_j = var11;
+              var32.position = var11;
               for (var15_int = 0; var15_int < var12; var15_int++) {
                 var16 = 0;
                 for (var17 = 0; var17 < var5_int; var17++) {
@@ -208,7 +208,7 @@ final class dj {
                 var15[var16] = array$1;
                 var40[var16] = 0;
               }
-              var32.field_j = var11;
+              var32.position = var11;
               var16 = 0;
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
@@ -847,7 +847,7 @@ final class dj {
         return var2 != 0;
     }
 
-    dj(w param0, boolean param1, int param2) {
+    Js5Archive(w param0, boolean param1, int param2) {
         this.field_b = null;
         try {
           if (param2 < 0 ||

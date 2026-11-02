@@ -8,7 +8,7 @@ class DualLinkNode extends IntrusiveNode {
     static volatile int field_j;
     DualLinkNode field_h;
     static String field_o;
-    static vn[] field_k;
+    static Sprite[] field_k;
     static int field_m;
 
     final void c(byte param0) {
@@ -31,7 +31,7 @@ class DualLinkNode extends IntrusiveNode {
           field_l = null;
           return;
         }
-        field_k = (vn[]) null;
+        field_k = (Sprite[]) null;
         field_o = null;
         field_k = null;
         field_l = null;

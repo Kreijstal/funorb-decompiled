@@ -59,21 +59,21 @@ final class sn {
         throw new IllegalStateException();
     }
 
-    final static vn a(int param0, double param1, byte param2) {
+    final static Sprite a(int param0, double param1, byte param2) {
         if (param2 > -31) {
           sn.a((byte) 27);
         }
-        vn var10 = new vn(640, 90);
+        Sprite var10 = new Sprite(640, 90);
         ki.a((byte) -97, var10);
-        vn var5 = new vn(640, 90);
+        Sprite var5 = new Sprite(640, 90);
         ki.a((byte) -94, var5);
         Rasterizer.f(0, 5, 640, 75, 16777215, 1);
         pa.a(-21189);
-        vn var6 = new vn(640, 90);
+        Sprite var6 = new Sprite(640, 90);
         ki.a((byte) -113, var6);
         b.field_j.a(f.field_j[param0], 320, 65, 13631488, 1);
         pa.a(-21189);
-        vn var7 = new vn(640, 90);
+        Sprite var7 = new Sprite(640, 90);
         ki.a((byte) -123, var7);
         int var8 = (int)(param1 * 640.0);
         int var9 = (int)(param1 * 90.0);
@@ -96,7 +96,7 @@ final class sn {
         return NodeHashTableIterator.a(param0 - 139, hc.a(param0 ^ 12));
     }
 
-    final static tj a(int param0, int param1, dj param2, dj param3, int param4) {
+    final static tj a(int param0, int param1, Js5Archive param2, Js5Archive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         tj stackIn_6_0 = null;
@@ -153,19 +153,19 @@ final class sn {
           return;
         }
         try {
-          var5.field_j = var5.field_j + 1;
-          var4 = var5.field_j;
-          var5.i(1, 79);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, 79);
           if (param1.field_j == null) {
-            var5.i(0, 95);
+            var5.writeByte(0, 95);
           } else {
-            var5.i(param1.field_j.length, -90);
+            var5.writeByte(param1.field_j.length, -90);
             var5.a(param1.field_j, param1.field_j.length, 0, param2 ^ -27843);
           }
-          var5.e(-60, var4);
-          var5.field_j = var5.field_j - 4;
+          var5.writeCrc32(-60, var4);
+          var5.position = var5.position - 4;
           param1.field_k = var5.c(98);
-          var5.d(69, var5.field_j - var4);
+          var5.d(69, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

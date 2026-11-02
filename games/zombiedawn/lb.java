@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lb extends pn implements hh {
-    static vn[] field_eb;
+    static Sprite[] field_eb;
     private nh field_hb;
     private an[] field_U;
     private an field_W;
@@ -54,7 +54,7 @@ final class lb extends pn implements hh {
             return stackIn_2_0;
           }
           var4.a(-71, var5, 15, this.field_i - 30, 30);
-          this.a((ga) (var4), 10);
+          this.a((UiWidget) (var4), 10);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -196,7 +196,7 @@ final class lb extends pn implements hh {
         try {
           this.field_ib = param0;
           var4 = -49 / ((param1 + 40) / 47);
-          param0.a((byte) 68, (ga) (this));
+          param0.a((byte) 68, (UiWidget) (this));
           var3 = this.o(16);
           stackIn_2_0 = this.field_gb;
           stackIn_3_1 = (var3 != param0);
@@ -237,7 +237,7 @@ final class lb extends pn implements hh {
         }
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         int var6 = 0;
         int stackIn_15_0 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -260,7 +260,7 @@ final class lb extends pn implements hh {
             for (var6 = 0; var6 < var9.length; var6++) {
               var7 = var9[var6];
               if (var7.field_l) {
-                var7.a((byte) 126, (ga) (this));
+                var7.a((byte) 126, (UiWidget) (this));
               }
             }
           }
@@ -292,7 +292,7 @@ final class lb extends pn implements hh {
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         boolean stackIn_73_0 = false;
         Object stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
@@ -342,19 +342,19 @@ final class lb extends pn implements hh {
             case 97:
               if (var5 == this.field_bb) {
                 if (null != this.field_W) {
-                  this.field_W.a((byte) 110, (ga) (this));
+                  this.field_W.a((byte) 110, (UiWidget) (this));
                 } else {
-                  this.field_V.a((byte) 111, (ga) (this));
+                  this.field_V.a((byte) 111, (UiWidget) (this));
                 }
                 return true;
               }
               if (var5 == this.field_W) {
-                this.field_V.a((byte) 85, (ga) (this));
+                this.field_V.a((byte) 85, (UiWidget) (this));
                 return true;
               }
               if (var5 == this.field_X &&
                 this.field_gb.field_C) {
-                this.field_gb.a((byte) 74, (ga) (this));
+                this.field_gb.a((byte) 74, (UiWidget) (this));
                 return true;
               }
               break;
@@ -365,39 +365,39 @@ final class lb extends pn implements hh {
                   break;
                 }
                 if (!this.field_gb.field_C) {
-                  this.field_X.a((byte) 68, (ga) (this));
+                  this.field_X.a((byte) 68, (UiWidget) (this));
                 } else {
-                  this.field_gb.a((byte) 92, (ga) (this));
+                  this.field_gb.a((byte) 92, (UiWidget) (this));
                 }
                 return true;
               }
-              this.field_X.a((byte) 116, (ga) (this));
+              this.field_X.a((byte) 116, (UiWidget) (this));
               return true;
             case 98:
               if (var5 == this.field_X) {
-                this.field_bb.a((byte) 89, (ga) (this));
+                this.field_bb.a((byte) 89, (UiWidget) (this));
                 return true;
               }
               if (this.field_gb == var5) {
-                this.field_V.a((byte) 102, (ga) (this));
+                this.field_V.a((byte) 102, (UiWidget) (this));
                 return true;
               }
               break;
             case 96:
               if (var5 == this.field_V) {
                 if (null != this.field_W) {
-                  this.field_W.a((byte) 125, (ga) (this));
+                  this.field_W.a((byte) 125, (UiWidget) (this));
                   return true;
                 }
-                this.field_bb.a((byte) 84, (ga) (this));
+                this.field_bb.a((byte) 84, (UiWidget) (this));
                 return true;
               }
               if (var5 == this.field_W) {
-                this.field_bb.a((byte) 125, (ga) (this));
+                this.field_bb.a((byte) 125, (UiWidget) (this));
                 return true;
               }
               if (var5 == this.field_gb) {
-                this.field_X.a((byte) 74, (ga) (this));
+                this.field_X.a((byte) 74, (UiWidget) (this));
                 return true;
               }
               break;
@@ -532,7 +532,7 @@ final class lb extends pn implements hh {
         int var6_int = 0;
         String var6 = null;
         an var6_ref = null;
-        ga var7 = null;
+        UiWidget var7 = null;
         re var8 = null;
         String var10 = null;
         Object stackIn_50_0Lifetime1;
@@ -672,7 +672,7 @@ final class lb extends pn implements hh {
             }
             var10 = stackIn_74_0;
             var6 = var10;
-            var7 = new ga(var10, (sk) null);
+            var7 = new UiWidget(var10, (sk) null);
             var7.field_i = this.field_i;
             var7.field_j = 163;
             var7.field_k = 0;

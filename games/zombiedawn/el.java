@@ -6,7 +6,7 @@ final class el implements io {
     private int field_l;
     static String field_h;
     private int field_e;
-    private rb field_j;
+    private Font field_j;
     static int field_n;
     private int field_a;
     static String field_m;
@@ -110,9 +110,9 @@ final class el implements io {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int var10 = 0;
-        ga stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -126,7 +126,7 @@ final class el implements io {
         var11 = ZombieDawn.field_J;
         try {
           if (param3 instanceof hf) {
-            stackIn_4_0 = (ga) (param3);
+            stackIn_4_0 = (UiWidget) (param3);
           } else {
             stackIn_4_0 = null;
           }
@@ -163,7 +163,7 @@ final class el implements io {
         }
     }
 
-    el(rb param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    el(Font param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_c = param2;
           this.field_e = param5;

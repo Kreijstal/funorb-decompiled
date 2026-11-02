@@ -6,7 +6,7 @@ final class aa {
     private boolean field_h;
     int[] field_e;
     private int field_l;
-    static dj field_f;
+    static Js5Archive field_f;
     int field_i;
     int field_b;
     int field_j;
@@ -43,12 +43,12 @@ final class aa {
         field_g = null;
         field_a = null;
         if (param0 != -2008296413) {
-          de var2 = (de) null;
-          aa.a((de) null, -30);
+          PacketBuffer var2 = (PacketBuffer) null;
+          aa.a((PacketBuffer) null, -30);
         }
     }
 
-    final static void a(de param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;

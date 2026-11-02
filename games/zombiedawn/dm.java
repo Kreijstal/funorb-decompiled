@@ -11,7 +11,7 @@ final class dm extends DualLinkNode {
     private int[][] field_w;
     static int[] field_p;
 
-    final void a(de param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -96,7 +96,7 @@ final class dm extends DualLinkNode {
         field_p = null;
     }
 
-    private final void a(de param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -115,7 +115,7 @@ final class dm extends DualLinkNode {
             this.e(58);
           }
           if (param1 == 1) {
-            this.field_t = de.a('<', param0.a(true), -123);
+            this.field_t = PacketBuffer.split('<', param0.a(true), -123);
           } else {
             if (param1 == 2) {
               var4_int = param0.d((byte) -122);

@@ -11,8 +11,8 @@ final class j {
     static df field_l;
     static int[] field_a;
     static wl field_h;
-    dj field_c;
-    static vn[] field_e;
+    Js5Archive field_c;
+    static Sprite[] field_e;
     static int[] field_b;
     private static String field_z;
 

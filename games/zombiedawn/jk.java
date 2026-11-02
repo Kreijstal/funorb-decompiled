@@ -11,7 +11,7 @@ final class jk {
     private int field_d;
     private j[] field_e;
 
-    final void a(String param0, dj param1, int param2) {
+    final void a(String param0, Js5Archive param1, int param2) {
         try {
           this.a(param1, -1, (String) null, param0, 25324, (String) null);
           if (param2 != 1) {
@@ -22,7 +22,7 @@ final class jk {
         }
     }
 
-    private final void a(dj param0, int param1, String param2, String param3, int param4, String param5) {
+    private final void a(Js5Archive param0, int param1, String param2, String param3, int param4, String param5) {
         j[] var9 = null;
         j var8 = null;
         j var10 = null;
@@ -145,7 +145,7 @@ final class jk {
         }
     }
 
-    final void a(byte param0, dj param1, String param2, String param3) {
+    final void a(byte param0, Js5Archive param1, String param2, String param3) {
         try {
           this.a(param1, -1, (String) null, param3, 25324, param2);
           if (param0 > -90) {
@@ -200,7 +200,7 @@ final class jk {
         field_h = null;
     }
 
-    final void a(String param0, String param1, String param2, dj param3, byte param4) {
+    final void a(String param0, String param1, String param2, Js5Archive param3, byte param4) {
         try {
           this.a(param3, -1, param0, param1, param4 ^ -25280, param2);
           if (param4 != -84) {

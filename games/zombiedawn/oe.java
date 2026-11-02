@@ -50,8 +50,8 @@ final class oe {
         }
         try {
           var3.j(11, param0);
-          var3.i(param2.field_h, 70);
-          var3.i(param2.field_i, param1 + 19119);
+          var3.writeByte(param2.field_h, 70);
+          var3.writeByte(param2.field_i, param1 + 19119);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "oe.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

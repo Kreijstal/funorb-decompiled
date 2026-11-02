@@ -44,7 +44,7 @@ final class HumanFactory {
             if (ng.field_e) {
               return (Human) ((Object) new qk(param1, param3, param2));
             }
-            if (dj.field_e.field_q == 7) {
+            if (Js5Archive.field_e.field_q == 7) {
               return (Human) ((Object) new jo(param1, param3, param2));
             }
             return (Human) ((Object) new qk(param1, param3, param2));
@@ -53,7 +53,7 @@ final class HumanFactory {
             if (ng.field_e) {
               return (Human) ((Object) new qk(param1, param3, param2));
             }
-            if (dj.field_e.field_q != 7) {
+            if (Js5Archive.field_e.field_q != 7) {
               return (Human) ((Object) new qk(param1, param3, param2));
             }
             return (Human) ((Object) new jo(param1, param3, param2));
@@ -99,7 +99,7 @@ final class HumanFactory {
             return (Human) ((Object) new wo(param1, param3, param2));
           }
           if (!ng.field_e &&
-            dj.field_e.field_q == 7) {
+            Js5Archive.field_e.field_q == 7) {
             return (Human) ((Object) new jo(param1, param3, param2));
           }
           return (Human) ((Object) new qk(param1, param3, param2));

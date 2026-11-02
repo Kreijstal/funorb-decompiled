@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pf {
-    static vn field_f;
+    static Sprite field_f;
     static volatile int field_c;
     private int field_a;
     private DualLinkNode[] field_i;

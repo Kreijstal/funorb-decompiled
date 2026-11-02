@@ -82,7 +82,7 @@ final class d {
             }
           }
           for (var3 = 0; var3 < cj.field_h.length; var3++) {
-            var4 = hd.field_s[var3];
+            var4 = SpriteState.field_s[var3];
             if (var4 >= 0) {
               if (var4 != i.field_W.field_d) {
                 var5 = dl.field_f;
@@ -137,7 +137,7 @@ final class d {
             if (var4 >= 0) {
               var1_int = var1_int + fe.field_H;
               if (var4 != i.field_W.field_d) {
-                stackIn_44_0 = de.field_k;
+                stackIn_44_0 = PacketBuffer.field_k;
               } else {
                 stackIn_44_0 = hp.field_B;
               }

@@ -223,9 +223,9 @@ final class bm {
         }
     }
 
-    final static vn[] a(byte param0, int param1) {
-        vn[] var3 = new vn[9];
-        vn[] var2 = var3;
+    final static Sprite[] a(byte param0, int param1) {
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         if (param0 < -67) {
           var3[4] = qk.c(param1, (byte) -71, 64);
           return var2;

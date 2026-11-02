@@ -206,7 +206,7 @@ final class dk extends wc {
     final void a(byte param0, Camera param1) {
         int var8 = 0;
         int stackIn_16_0 = 0;
-        vn stackIn_29_0 = null;
+        Sprite stackIn_29_0 = null;
         int stackIn_29_1 = 0;
         int stackIn_30_2 = 0;
         RuntimeException stackIn_40_0 = null;

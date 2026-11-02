@@ -129,12 +129,12 @@ abstract class bj extends DualLinkNode {
         this.field_r = param0;
     }
 
-    final static vn[] a(String param0, int param1, dj param2, String param3) {
-        vn[] var4 = null;
+    final static Sprite[] a(String param0, int param1, Js5Archive param2, String param3) {
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
-        vn[] var5 = null;
-        vn[] stackIn_2_0 = null;
-        vn[] stackIn_4_0 = null;
+        Sprite[] var5 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -149,7 +149,7 @@ abstract class bj extends DualLinkNode {
           var5[3].field_q = var5[3].field_t;
           var5[1].field_r = var5[1].field_w;
           if (param1 > -117) {
-            stackIn_2_0 = (vn[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           var5[5].field_q = var5[5].field_t;

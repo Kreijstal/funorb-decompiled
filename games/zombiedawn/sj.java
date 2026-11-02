@@ -41,7 +41,7 @@ final class sj {
         p.b(1, 27102);
     }
 
-    final static void a(int param0, int param1, int param2, vn param3) {
+    final static void a(int param0, int param1, int param2, Sprite param3) {
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

@@ -3,12 +3,12 @@
  */
 final class kp extends rf {
     private java.nio.ByteBuffer field_e;
-    static dj field_f;
+    static Js5Archive field_f;
 
     final static void a(int param0, byte param1) {
         ea.field_a = 1000000000L / (long)param0;
         if (param1 != 3) {
-          field_f = (dj) null;
+          field_f = (Js5Archive) null;
         }
     }
 

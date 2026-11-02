@@ -7,7 +7,7 @@ final class cf extends ki {
     static qf field_fb;
     static Vector field_eb;
 
-    final void b(int param0, ga param1) {
+    final void b(int param0, UiWidget param1) {
         try {
           super.b(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -25,7 +25,7 @@ final class cf extends ki {
         field_fb = null;
     }
 
-    cf(dn param0, ga param1) {
+    cf(dn param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

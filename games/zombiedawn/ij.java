@@ -17,7 +17,7 @@ final class ij extends pa {
     static String[] field_M;
     static u[] field_L;
 
-    ij(int param0, int param1, int param2, int param3, io param4, sk param5, ga param6, boolean param7, boolean param8) {
+    ij(int param0, int param1, int param2, int param3, io param4, sk param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_Q = 2147483647;
         this.field_G = 2147483647;
@@ -111,7 +111,7 @@ final class ij extends pa {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, ga param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
           if (param1 <= 1) {
             field_I = -68;
@@ -189,7 +189,7 @@ final class ij extends pa {
         }
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         int stackIn_14_1 = 0;
         int stackIn_17_2 = 0;
         int stackIn_22_1 = 0;
@@ -265,7 +265,7 @@ final class ij extends pa {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_11_0 = 0;

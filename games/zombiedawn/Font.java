@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rb extends DualLinkNode {
+abstract class Font extends DualLinkNode {
     int field_I;
     private int[] field_s;
     private int[] field_r;
@@ -151,7 +151,7 @@ abstract class rb extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = ra.a(var13, -30);
+                                  var10 = DualLinkDeque.a(var13, -30);
                                   var11_ref_qb = this.field_B[var10];
                                   if (this.field_s == null) {
                                     stackIn_27_0 = var11_ref_qb.field_e;
@@ -303,7 +303,7 @@ abstract class rb extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = ra.a(var18, -56);
+                                    var16_int = DualLinkDeque.a(var18, -56);
                                     var4 = var4 + this.field_B[var16_int].field_a;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -532,7 +532,7 @@ abstract class rb extends DualLinkNode {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_z[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)rb.a(var15, var16, var17, this.field_r, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_z[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)Font.a(var15, var16, var17, this.field_r, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -686,7 +686,7 @@ abstract class rb extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_v = ra.a(var4, 114);
+                field_v = DualLinkDeque.a(var4, 114);
               }
             } else {
               field_p = field_M;
@@ -806,7 +806,7 @@ abstract class rb extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = ra.a(var10, 125);
+                                  var9_int = DualLinkDeque.a(var10, 125);
                                   var4 = var4 + this.field_B[var9_int].field_a;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -866,7 +866,7 @@ abstract class rb extends DualLinkNode {
         this.a(param0, param1 - this.b(param0), param2);
     }
 
-    rb(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
+    Font(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var8 = 0;
         int var6;
         int var7;

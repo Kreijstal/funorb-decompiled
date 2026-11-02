@@ -6,7 +6,7 @@ import java.util.*;
 class qk extends Human {
     static int[] field_Kb;
     private int field_Lb;
-    static vn[] field_Hb;
+    static Sprite[] field_Hb;
     private boolean field_wb;
     Zombie field_yb;
     int field_Ab;
@@ -22,13 +22,13 @@ class qk extends Human {
     private int field_Ib;
     private boolean field_Bb;
 
-    final static vn c(int param0, byte param1, int param2) {
+    final static Sprite c(int param0, byte param1, int param2) {
         int var5 = ZombieDawn.field_J;
-        vn var6 = new vn(param2, param2);
-        vn var3 = var6;
+        Sprite var6 = new Sprite(param2, param2);
+        Sprite var3 = var6;
         int var4 = 0;
         if (param1 != -71) {
-          return (vn) null;
+          return (Sprite) null;
         }
         while (var4 < var3.field_z.length) {
           var6.field_z[var4] = param0;
@@ -443,7 +443,7 @@ class qk extends Human {
                     if (28 != this.field_t) {
                       this.field_yb.z(0);
                     } else {
-                      dj.field_e.b(2, this.field_yb.getY(237239984), true, this.field_yb.getX(true));
+                      Js5Archive.field_e.b(2, this.field_yb.getY(237239984), true, this.field_yb.getX(true));
                     }
                     if (this.field_Ab > 2000) {
                       this.field_Ab = 3000;
@@ -505,7 +505,7 @@ class qk extends Human {
           bm.field_a[var5_int] = param1;
           hg.field_a[var5_int] = param2;
           si.field_Qb[var5_int] = param4;
-          hd.field_u[var5_int] = param0;
+          SpriteState.field_u[var5_int] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -556,8 +556,8 @@ class qk extends Human {
               var8 = -var6 + this.getY(237239984);
               var9 = var7 * var7 + var8 * var8;
               if (var3 > var9) {
-                if (dj.field_e.field_H.a(var6, this.getY(237239984), var5, this.getX(true), 123) == -1 &&
-                  dj.field_e.field_H.a(-24 + var6, -24 + this.getY(237239984), var5, this.getX(true), 105) == -1) {
+                if (Js5Archive.field_e.field_H.a(var6, this.getY(237239984), var5, this.getX(true), 123) == -1 &&
+                  Js5Archive.field_e.field_H.a(-24 + var6, -24 + this.getY(237239984), var5, this.getX(true), 105) == -1) {
                   var4_ref_fb = this.e((byte) 32);
                   continue;
                 }
@@ -612,7 +612,7 @@ class qk extends Human {
     }
 
     static {
-        field_Hb = new vn[5];
+        field_Hb = new Sprite[5];
         field_Cb = new int[8192];
         field_Jb = new al[15];
     }

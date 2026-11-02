@@ -16,7 +16,7 @@ final class gg {
           if (param1 != 56) {
             gg.a((byte) -92);
           }
-          stackIn_3_0 = fa.a(param0, param0.length, 0, -73);
+          stackIn_3_0 = SpatialObject.a(param0, param0.length, 0, -73);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -33,7 +33,7 @@ final class gg {
     }
 
     final static void a(int param0) {
-        vg.field_a = dj.field_e.field_H.field_A.field_p;
+        vg.field_a = Js5Archive.field_e.field_H.field_A.field_p;
         pm.d((byte) 36);
         if (param0 != 128) {
           byte[] var2 = (byte[]) null;

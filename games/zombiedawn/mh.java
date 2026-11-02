@@ -15,7 +15,7 @@ final class mh extends pa {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        vn var6 = null;
+        Sprite var6 = null;
         if (param3 != param1) {
           return;
         }
@@ -26,7 +26,7 @@ final class mh extends pa {
           return;
         }
         if (256 != this.field_H) {
-          var6 = new vn(this.field_z.field_i, this.field_z.field_n);
+          var6 = new Sprite(this.field_z.field_i, this.field_z.field_n);
           ki.a((byte) -108, var6);
           this.field_z.a(0, param1, 0, param3 + 0);
           pa.a(-21189);
@@ -36,7 +36,7 @@ final class mh extends pa {
         this.field_z.a(param0 + this.field_j, param1, param2 + this.field_k, param3 ^ 0);
     }
 
-    mh(ga param0) {
+    mh(UiWidget param0) {
         super(param0.field_k, param0.field_j, param0.field_i, param0.field_n, (io) null, (sk) null);
         try {
           param0.a(61, 0, 0, this.field_i, this.field_n);
@@ -61,9 +61,9 @@ final class mh extends pa {
             mh.a(55, -23, -91, (String) null, 112, -70, (PlatformTaskDispatcher) null, 37, -64);
           }
           uj.field_d = param8;
-          tf.field_c = (pc) ((Object) new lh());
+          SpatialBucket.field_c = (pc) ((Object) new lh());
           he.field_d = new ExceptionWrapper(param6);
-          ep.field_l = new bp(tf.field_c, he.field_d);
+          ep.field_l = new bp(SpatialBucket.field_c, he.field_d);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mh.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }

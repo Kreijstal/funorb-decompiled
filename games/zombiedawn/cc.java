@@ -12,9 +12,9 @@ final class cc {
     static int[][] field_h;
     private boolean field_d;
     private boolean field_p;
-    static vn field_b;
+    static Sprite field_b;
     int field_i;
-    static vn field_k;
+    static Sprite field_k;
     private int field_o;
     int field_l;
     private int field_f;
@@ -35,12 +35,12 @@ final class cc {
         if (!i.field_Y) {
           throw new IllegalStateException();
         }
-        de.field_i = true;
+        PacketBuffer.field_i = true;
         lk.a(false, param0 ^ 116);
         fl.field_a = param0;
     }
 
-    final static void a(de param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -56,7 +56,7 @@ final class cc {
           var5 = ZombieDawn.field_J;
           try {
             if (param1 != 10) {
-              field_b = (vn) null;
+              field_b = (Sprite) null;
             }
             var6 = new byte[24];
             var2 = var6;
@@ -285,9 +285,9 @@ final class cc {
     }
 
     final void a(byte param0) {
-        vn stackIn_8_0 = null;
+        Sprite stackIn_8_0 = null;
         int var2;
-        vn var3;
+        Sprite var3;
         int var4;
         var4 = ZombieDawn.field_J;
         if (this.field_o <= 0) {
@@ -350,6 +350,6 @@ final class cc {
         field_h = new int[][]{null, null, null, null, new int[]{4, 0, 3}, new int[]{5, 2, 6, 1, 7}, null, null, new int[]{12, 9, 14}, new int[]{15, 13, 10}};
         field_k = null;
         field_c = new boolean[14];
-        field_b = new vn(195, 170);
+        field_b = new Sprite(195, 170);
     }
 }

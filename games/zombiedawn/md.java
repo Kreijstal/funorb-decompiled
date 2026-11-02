@@ -7,8 +7,8 @@ final class md extends sg implements hh {
     private fk field_sb;
     static String[] field_qb;
     private boolean field_ub;
-    static vn field_vb;
-    static vn field_tb;
+    static Sprite field_vb;
+    static Sprite field_tb;
 
     final static int a(boolean param0, String param1, String param2, int param3, byte param4, int param5, String param6) {
         ji var7 = null;
@@ -195,7 +195,7 @@ final class md extends sg implements hh {
           }
           ed.a(419);
           if (param1 != -6) {
-            field_vb = (vn) null;
+            field_vb = (Sprite) null;
             this.h((byte) -126);
           } else {
             this.h((byte) -126);
@@ -264,6 +264,6 @@ final class md extends sg implements hh {
     static {
         field_qb = new String[]{"Tutorial Tips: On", "Tutorial Tips: Off"};
         field_wb = "Logging in...";
-        field_vb = new vn(54, 54);
+        field_vb = new Sprite(54, 54);
     }
 }

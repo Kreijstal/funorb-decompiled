@@ -5,7 +5,7 @@ abstract class ki extends pn {
     private int field_ab;
     static String field_V;
     private int field_cb;
-    private ga field_W;
+    private UiWidget field_W;
     private wl field_U;
     private mh field_Y;
     private int field_T;
@@ -36,7 +36,7 @@ abstract class ki extends pn {
         }
     }
 
-    void b(int param0, ga param1) {
+    void b(int param0, UiWidget param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -151,7 +151,7 @@ abstract class ki extends pn {
         }
     }
 
-    private final void a(ga param0, byte param1) {
+    private final void a(UiWidget param0, byte param1) {
         try {
           if (this.field_Y != null) {
             this.field_Y.unlink(-27598);
@@ -170,7 +170,7 @@ abstract class ki extends pn {
         }
     }
 
-    boolean a(int param0, int param1, ga param2, char param3) {
+    boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -206,7 +206,7 @@ abstract class ki extends pn {
         }
     }
 
-    final static void a(byte param0, vn param1) {
+    final static void a(byte param0, Sprite param1) {
         hk.i(1584);
         if (param0 >= -76) {
           return;
@@ -231,7 +231,7 @@ abstract class ki extends pn {
         super.f((byte) -58);
     }
 
-    ki(dn param0, ga param1, int param2, int param3, int param4) {
+    ki(dn param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_i + 12, 12 + (param2 + param1.field_n));
         try {
           this.field_ab = param4;
@@ -282,8 +282,8 @@ abstract class ki extends pn {
 
     public static void g(byte param0) {
         if (param0 < 41) {
-          vn var2 = (vn) null;
-          ki.a((byte) 10, (vn) null);
+          Sprite var2 = (Sprite) null;
+          ki.a((byte) 10, (Sprite) null);
         }
         field_V = null;
         field_bb = null;

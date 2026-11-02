@@ -435,7 +435,7 @@ final class rj extends PcmStream {
           this.field_t = this.field_w.a(this.field_v);
           if (param1 >= -122) {
             var8 = (ka) null;
-            this.a((wj) null, (byte) -81, (dj) null, -58, (ka) null);
+            this.a((wj) null, (byte) -81, (Js5Archive) null, -58, (ka) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -452,7 +452,7 @@ final class rj extends PcmStream {
         }
     }
 
-    final synchronized boolean a(wj param0, byte param1, dj param2, int param3, ka param4) {
+    final synchronized boolean a(wj param0, byte param1, Js5Archive param2, int param3, ka param4) {
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

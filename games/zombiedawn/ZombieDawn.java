@@ -3,11 +3,11 @@
  */
 public final class ZombieDawn extends m {
     private boolean field_F;
-    static dj field_H;
+    static Js5Archive field_H;
     static long[] field_E;
     private StringBuilder field_I;
     private StringBuilder field_G;
-    static rb field_K;
+    static Font field_K;
     static String field_D;
     public static int field_J;
 
@@ -41,7 +41,7 @@ public final class ZombieDawn extends m {
         return false;
     }
 
-    public final void a(int param0) {
+    public final void drawFrame(int param0) {
         al stackIn_5_0 = null;
         al var2;
         tj var2_ref;
@@ -101,7 +101,7 @@ public final class ZombieDawn extends m {
           var2_ref = sg.field_jb;
           var3 = 380;
           var4_ref_String = jh.field_l;
-          var5 = ((rb) ((Object) var2_ref)).b(var4_ref_String);
+          var5 = ((Font) ((Object) var2_ref)).b(var4_ref_String);
           if (var3 > var5) {
             var5 = var3 + 20;
           }
@@ -132,7 +132,7 @@ public final class ZombieDawn extends m {
           Rasterizer.f(var8, var7, var11, var12);
           pf.field_f.b(var11 - pf.field_f.field_w, -pf.field_f.field_t + var12);
           Rasterizer.f(var10, var9, var11, var12);
-          ((rb) ((Object) var2_ref)).a(var4_ref_String, bd.field_d, nh.field_G, 2, -1);
+          ((Font) ((Object) var2_ref)).a(var4_ref_String, bd.field_d, nh.field_G, 2, -1);
           var13Lifetime1 = (int)(oj.field_d.field_b * (float)var3 / 100.0f);
           Rasterizer.b(var8 - var3 / 2, 10 + var7, var3, 12, 0);
           Rasterizer.f(-(var3 / 2) + var8, var7 + 10, var8 + (-(var3 / 2) + var13Lifetime1), var7 + 22);
@@ -224,11 +224,11 @@ public final class ZombieDawn extends m {
 
     final void a(int param0, int param1) {
         if (param1 < 27) {
-          field_K = (rb) null;
+          field_K = (Font) null;
         }
     }
 
-    public final void a(boolean param0, boolean param1) {
+    public final void runTick(boolean param0, boolean param1) {
         int var4;
         wg var5;
         var4 = field_J;
@@ -248,7 +248,7 @@ public final class ZombieDawn extends m {
           if (lf.field_h != null && (lf.field_h.field_w != bd.field_e ||
             lf.field_h.field_t != nh.field_P)) {
             lf.field_h = null;
-            lf.field_h = new vn(bd.field_e, nh.field_P);
+            lf.field_h = new Sprite(bd.field_e, nh.field_P);
           }
           TileMap.field_q = -1;
         }
@@ -347,7 +347,7 @@ public final class ZombieDawn extends m {
         mk.b(4);
         IntrusiveDeque.c((byte) -61);
         Rasterizer.a();
-        rb.a();
+        Font.a();
         am.j(-98);
         ff.a(-1);
         sb.a(false);
@@ -368,10 +368,10 @@ public final class ZombieDawn extends m {
         li.b(-72);
         MouseInputHandler.a(-14380);
         MouseWheelInput.b(103);
-        dj.b(108);
+        Js5Archive.b(108);
         ob.a(41);
         mp.a(13);
-        de.e(27291);
+        PacketBuffer.e(27291);
         pd.a((byte) -117);
         ne.a((byte) 83);
         gf.a(true);
@@ -422,7 +422,7 @@ public final class ZombieDawn extends m {
         DualLinkNode.a(-107);
         da.c((byte) 93);
         dc.a(-79);
-        mj.a((byte) -86);
+        SpatialGrid.a((byte) -86);
         uk.a(-21);
         ro.b((byte) -99);
         vj.e((byte) 112);
@@ -446,7 +446,7 @@ public final class ZombieDawn extends m {
         d.a(6);
         nk.a(-11486);
         qb.a(-6633);
-        hd.d((byte) -77);
+        SpriteState.d((byte) -77);
         ei.a(123);
         dn.h(0);
         i.m(10);
@@ -530,7 +530,7 @@ public final class ZombieDawn extends m {
         pi.d(-1);
         te.f((byte) 105);
         id.i(-72);
-        tf.c(-12220);
+        SpatialBucket.c(-12220);
         kc.c(!param0 ? true : false);
         mm.e((byte) 47);
         ck.d(1);

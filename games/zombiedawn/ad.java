@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ad extends vg {
-    private rb field_d;
+    private Font field_d;
     static String field_o;
     private int field_p;
     private boolean field_m;
-    static vn[] field_f;
+    static Sprite[] field_f;
     private int field_k;
     private String field_l;
     static IntrusiveDeque field_h;
     private int field_j;
     private int field_i;
-    static vn[][] field_g;
+    static Sprite[][] field_g;
     static int field_e;
     private int field_n;
 
-    private final oe a(rb param0, boolean param1, String param2, int param3) {
+    private final oe a(Font param0, boolean param1, String param2, int param3) {
         oe discarded$1 = null;
         oe var5 = null;
         RuntimeException var5_ref = null;
@@ -29,7 +29,7 @@ final class ad extends vg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            discarded$1 = this.a((rb) null, false, (String) null, -57);
+            discarded$1 = this.a((Font) null, false, (String) null, -57);
           }
           var5 = new oe(param3 - param0.field_I, param3 + param0.field_x, param2.length());
           this.field_b = new oe[]{var5};
@@ -55,7 +55,7 @@ final class ad extends vg {
         }
     }
 
-    final void a(String param0, int param1, rb param2, byte param3, int param4) {
+    final void a(String param0, int param1, Font param2, byte param3, int param4) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -85,7 +85,7 @@ final class ad extends vg {
           var6.field_e[param0.length()] = param4;
           ma.a(var6, 0, param0, param2, false);
           if (param3 != 83) {
-            this.a((String) null, (byte) 105, 37, (rb) null, 104, 15, -99, 98);
+            this.a((String) null, (byte) 105, 37, (Font) null, 104, 15, -99, 98);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -192,7 +192,7 @@ final class ad extends vg {
     }
 
     public static void b(int param0) {
-        field_g = (vn[][]) null;
+        field_g = (Sprite[][]) null;
         field_h = null;
         if (param0 != -1819016370) {
           return;
@@ -205,7 +205,7 @@ final class ad extends vg {
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, rb param4) {
+    final void a(int param0, int param1, int param2, String param3, Font param4) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -258,7 +258,7 @@ final class ad extends vg {
         }
     }
 
-    final void a(String param0, byte param1, int param2, rb param3, int param4, int param5, int param6, int param7) {
+    final void a(String param0, byte param1, int param2, Font param3, int param4, int param5, int param6, int param7) {
         oe discarded$0 = null;
         oe stackIn_65_0;
         oe stackIn_65_1;
@@ -309,7 +309,7 @@ final class ad extends vg {
           this.field_d = param3;
           this.field_l = param0;
           if (param1 != -106) {
-            discarded$0 = this.a((rb) null, false, (String) null, 35);
+            discarded$0 = this.a((Font) null, false, (String) null, 35);
           }
           this.field_p = param6;
           this.field_k = param7;
@@ -461,7 +461,7 @@ final class ad extends vg {
           var7_int = 2147483647;
           var8 = -2147483648;
           if (param3 != 50) {
-            field_g = (vn[][]) null;
+            field_g = (Sprite[][]) null;
           }
           var21 = param6[3] >> 2;
           var22 = param6[4] >> 2;
@@ -620,7 +620,7 @@ final class ad extends vg {
         }
     }
 
-    final void a(int param0, rb param1, String param2, int param3, int param4) {
+    final void a(int param0, Font param1, String param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         oe var6 = null;
         int var7 = 0;
@@ -690,6 +690,6 @@ final class ad extends vg {
     static {
         field_o = "Waiting for extra data";
         field_h = new IntrusiveDeque();
-        field_g = new vn[2][];
+        field_g = new Sprite[2][];
     }
 }

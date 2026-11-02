@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-abstract class pa extends ga implements jf {
+abstract class pa extends UiWidget implements jf {
     static ul field_y;
-    ga field_z;
+    UiWidget field_z;
     static String field_C;
     static va[] field_x;
     static int field_B;
@@ -112,7 +112,7 @@ abstract class pa extends ga implements jf {
         }
     }
 
-    void a(ga param0, byte param1, int param2, int param3) {
+    void a(UiWidget param0, byte param1, int param2, int param3) {
         try {
           super.a(param0, (byte) 116, param2, param3);
           if (this.field_z != null) {
@@ -124,7 +124,7 @@ abstract class pa extends ga implements jf {
         }
     }
 
-    final boolean a(ga param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -216,7 +216,7 @@ abstract class pa extends ga implements jf {
         }
     }
 
-    private final boolean a(int param0, ga param1) {
+    private final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -268,7 +268,7 @@ abstract class pa extends ga implements jf {
     void a(int param0, int param1, int param2, int param3) {
         if (param3 == param1 &&
           null != this.field_h) {
-          this.field_h.a(param3 ^ 16777215, true, param0, (ga) (this), param2);
+          this.field_h.a(param3 ^ 16777215, true, param0, (UiWidget) (this), param2);
         }
         if (null != this.field_z) {
           this.field_z.a(param0 + this.field_j, param1, this.field_k + param2, 0);
@@ -277,13 +277,13 @@ abstract class pa extends ga implements jf {
 
     final boolean e(int param0) {
         if (param0 != -17741) {
-          ga var3 = (ga) null;
-          this.a(-104, 60, -60, -9, -111, (ga) null);
+          UiWidget var3 = (UiWidget) null;
+          this.a(-104, 60, -60, -9, -111, (UiWidget) null);
         }
         return null != this.f(-6) ? true : false;
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
@@ -322,7 +322,7 @@ abstract class pa extends ga implements jf {
         }
     }
 
-    private final boolean b(int param0, ga param1) {
+    private final boolean b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -353,12 +353,12 @@ abstract class pa extends ga implements jf {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    ga f(int param0) {
+    UiWidget f(int param0) {
         if (param0 >= -2) {
           String var3 = (String) null;
           pa.a((String) null, true);
         }
-        ga var2 = this.field_z;
+        UiWidget var2 = this.field_z;
         if (var2 == null) {
           return null;
         }
@@ -428,7 +428,7 @@ abstract class pa extends ga implements jf {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4, ga param5) {
+    void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -456,7 +456,7 @@ abstract class pa extends ga implements jf {
         }
     }
 
-    final boolean a(byte param0, ga param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -500,7 +500,7 @@ abstract class pa extends ga implements jf {
         return this.field_z == null ? 0 : this.field_z.c(param0 ^ 0);
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         StringBuilder var9 = null;
         boolean stackIn_6_0 = false;

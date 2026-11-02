@@ -16,7 +16,7 @@ final class qo extends vf {
         }
     }
 
-    final void a(int param0, vn[] param1, int param2) {
+    final void a(int param0, Sprite[] param1, int param2) {
         int var4_int = param2;
         if (param0 != 1) {
           return;
@@ -92,7 +92,7 @@ final class qo extends vf {
         }
     }
 
-    final void a(int param0, vn[] param1) {
+    final void a(int param0, Sprite[] param1) {
         int var4 = 0;
         gj[] var3 = null;
         gj var5 = null;
@@ -131,7 +131,7 @@ final class qo extends vf {
         }
     }
 
-    final static void a(int param0, int param1, vn[] param2, int param3, vn[] param4, rb param5, int param6, int param7, int param8, byte param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, rb param18, vn[] param19) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, Sprite[] param4, Font param5, int param6, int param7, int param8, byte param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, Font param18, Sprite[] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -189,8 +189,8 @@ final class qo extends vf {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
-        ga stackIn_3_0 = null;
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -207,7 +207,7 @@ final class qo extends vf {
           if (!(param3 instanceof an)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (ga) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           }
           var10 = (an) (stackIn_3_0);
           Mover.$cfr$intArgs$a$3aedf8649552(param2 + param3.field_j, 99, param3.field_i + (param4 + param3.field_k), param2 - (-param3.field_j - param3.field_n), param3.field_k + param4);
@@ -343,7 +343,7 @@ final class qo extends vf {
         }
     }
 
-    final void a(vn param0, int param1) {
+    final void a(Sprite param0, int param1) {
         int var4 = 0;
         gj[] var3 = null;
         gj var5 = null;

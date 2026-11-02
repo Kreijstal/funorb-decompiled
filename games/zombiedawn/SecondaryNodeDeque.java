@@ -5,7 +5,7 @@ import java.util.*;
 
 final class SecondaryNodeDeque implements Iterable {
     static int field_d;
-    static rb field_a;
+    static Font field_a;
     DualLinkNode field_c;
     static String[] field_b;
 

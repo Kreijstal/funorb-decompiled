@@ -15,7 +15,7 @@ final class ci {
           return 54;
         }
         ep.field_l.a(true);
-        if (!tf.field_c.c(param0 - 277)) {
+        if (!SpatialBucket.field_c.c(param0 - 277)) {
           return jo.w(79);
         }
         return 0;
@@ -35,7 +35,7 @@ final class ci {
     private ci(int param0, int param1, int param2) {
     }
 
-    final void a(byte[] param0, de param1, int param2) {
+    final void a(byte[] param0, PacketBuffer param1, int param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -46,13 +46,13 @@ final class ci {
           String stackIn_17_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param1.field_h[param1.field_j] == 31 &&
-              param1.field_h[1 + param1.field_j] == -117) {
+            if (param1.payload[param1.position] == 31 &&
+              param1.payload[1 + param1.position] == -117) {
               if (null == this.field_e) {
                 this.field_e = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_e.setInput(param1.field_h, param1.field_j + 10, param1.field_h.length + param2 - param1.field_j - 10);
+                this.field_e.setInput(param1.payload, param1.position + 10, param1.payload.length + param2 - param1.position - 10);
                 this.field_e.inflate(param0);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

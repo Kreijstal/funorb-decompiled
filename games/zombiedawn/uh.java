@@ -46,8 +46,8 @@ final class uh {
         if (var2 != -1 &&
           this.field_c &&
           this.field_a != 0) {
-          var3 = dj.field_e.field_S;
-          var4 = dj.field_e.field_H;
+          var3 = Js5Archive.field_e.camera;
+          var4 = Js5Archive.field_e.field_H;
           if (this.field_p) {
             var5 = var3.a(-(int)((float)(24 * this.field_a) / 1.0f) + ha.field_b, false);
             var6 = var3.b(ei.field_K - (int)((float)(24 * this.field_a) / 1.0f), true);
@@ -112,7 +112,7 @@ final class uh {
         return this.field_f;
     }
 
-    final static boolean a(byte param0, de param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -216,7 +216,7 @@ final class uh {
         }
     }
 
-    private final void a(int param0, vn param1, vn param2) {
+    private final void a(int param0, Sprite param1, Sprite param2) {
         try {
           if (param0 <= 82) {
             this.f(35);
@@ -248,28 +248,28 @@ final class uh {
           if (var4 != 10) {
             if (var4 != 13) {
               if (var4 == 15) {
-                stackIn_16_0 = dj.field_e;
+                stackIn_16_0 = Js5Archive.field_e;
                 stackIn_16_1 = param0;
                 stackIn_16_2 = param1;
                 stackIn_17_3 = (param2) ? false : true;
                 ((GameWorld) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2, stackIn_17_3, 120);
               } else {
                 if (var4 == 12) {
-                  dj.field_e.f((byte) 9);
+                  Js5Archive.field_e.f((byte) 9);
                 }
               }
             } else {
-              stackIn_9_0 = dj.field_e;
+              stackIn_9_0 = Js5Archive.field_e;
               stackIn_9_1 = 1;
               stackIn_9_2 = param0;
               stackIn_10_3 = (param2) ? false : true;
               ((GameWorld) (Object) stackIn_9_0).b(stackIn_9_1, stackIn_9_2, stackIn_10_3, param1);
             }
           } else {
-            dj.field_e.a(false, -6355, param1, param0);
+            Js5Archive.field_e.a(false, -6355, param1, param0);
           }
         } else {
-          dj.field_e.a(true, -6355, param1, param0);
+          Js5Archive.field_e.a(true, -6355, param1, param0);
         }
         if (param2) {
           this.field_a = 83;
@@ -404,7 +404,7 @@ final class uh {
                         if (var4 != 14) {
                           if (var4 == 7) {
                             ((Human) (param1)).o(-6253);
-                            dj.field_e.a(0, (Human) (param1), (byte) 60, true, (Point) null);
+                            Js5Archive.field_e.a(0, (Human) (param1), (byte) 60, true, (Point) null);
                           }
                         } else {
                           var6.b(true);

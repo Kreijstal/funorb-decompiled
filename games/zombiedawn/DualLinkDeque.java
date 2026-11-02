@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra {
+final class DualLinkDeque {
     private DualLinkNode field_a;
     private DualLinkNode field_b;
 
@@ -57,7 +57,7 @@ final class ra {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 43 % ((param1 - 48) / 58);
-          stackIn_1_0 = tf.a(true, 5, param0, 10);
+          stackIn_1_0 = SpatialBucket.a(true, 5, param0, 10);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,12 +100,12 @@ final class ra {
             var5_int = var9.d((byte) -122);
             if (var5_int != 0) {
               var13 = new byte[var5_int];
-              var9.a(var5_int, 0, var13, 11240);
+              var9.readBytes(var5_int, 0, var13, 11240);
             } else {
               var6 = null;
             }
-            var9.field_j = var9.field_j + 4;
-            if (!var9.g((byte) -98)) {
+            var9.position = var9.position + 4;
+            if (!var9.verifyCrc32((byte) -98)) {
               p.a(1);
               return;
             }
@@ -145,7 +145,7 @@ final class ra {
         int var2 = 0;
         DualLinkNode var3 = this.field_a.field_i;
         if (param0) {
-          ra.e((byte) 21);
+          DualLinkDeque.e((byte) 21);
           while (this.field_a != var3) {
             var2++;
             var3 = var3.field_i;
@@ -164,7 +164,7 @@ final class ra {
         mg.a(false);
     }
 
-    final static lp a(dj param0, String param1, String param2, int param3, dj param4) {
+    final static lp a(Js5Archive param0, String param1, String param2, int param3, Js5Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -221,7 +221,7 @@ final class ra {
         }
     }
 
-    public ra() {
+    public DualLinkDeque() {
         this.field_a = new DualLinkNode();
         this.field_a.field_i = this.field_a;
         this.field_a.field_h = this.field_a;
@@ -285,7 +285,7 @@ final class ra {
         if (param0 < -12) {
           return m.field_B;
         }
-        ra.e((byte) 66);
+        DualLinkDeque.e((byte) 66);
         return m.field_B;
     }
 

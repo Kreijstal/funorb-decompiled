@@ -3,7 +3,7 @@
  */
 final class mo {
     static int field_b;
-    static vn field_a;
+    static Sprite field_a;
     private int[] field_c;
 
     final static String a(int param0, int param1, char param2) {

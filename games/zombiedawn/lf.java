@@ -5,7 +5,7 @@ final class lf extends IntrusiveNode {
     int field_y;
     int field_w;
     static boolean field_n;
-    static vn field_h;
+    static Sprite field_h;
     int field_C;
     ma field_u;
     int field_A;
@@ -113,6 +113,6 @@ final class lf extends IntrusiveNode {
 
     static {
         field_m = -1;
-        field_h = new vn(640, 480);
+        field_h = new Sprite(640, 480);
     }
 }

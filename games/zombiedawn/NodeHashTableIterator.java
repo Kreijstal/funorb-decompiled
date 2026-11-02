@@ -129,7 +129,7 @@ final class NodeHashTableIterator implements Iterator {
               if (param0 >= -111) {
                 field_g = (cg) null;
               }
-              var4 = de.a(';', var3, -125);
+              var4 = PacketBuffer.split(';', var3, -125);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

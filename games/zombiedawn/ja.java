@@ -71,7 +71,7 @@ final class ja {
         }
     }
 
-    final static int a(byte param0, String[] param1, String param2, int param3, rb param4) {
+    final static int a(byte param0, String[] param1, String param2, int param3, Font param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

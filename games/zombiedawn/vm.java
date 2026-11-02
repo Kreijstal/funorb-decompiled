@@ -4,17 +4,17 @@
 final class vm extends vf {
     private int field_r;
     private int field_v;
-    private vn[] field_s;
+    private Sprite[] field_s;
     static int field_w;
     private int field_t;
     static int[][] field_u;
 
-    final static vn[] a(byte param0, String param1, String param2, dj param3) {
+    final static Sprite[] a(byte param0, String param1, String param2, Js5Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        vn[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -60,7 +60,7 @@ final class vm extends vf {
         RuntimeException var1_ref = null;
         int var3 = 0;
         int var4 = 0;
-        dj var5 = null;
+        Js5Archive var5 = null;
         int[] var6 = null;
         int[] var8 = null;
         int var10 = 0;
@@ -82,11 +82,11 @@ final class vm extends vf {
             if (param0 == 1) {
               return false;
             }
-            var5 = (dj) null;
-            vm.a((byte) 126, (String) null, (String) null, (dj) null);
+            var5 = (Js5Archive) null;
+            vm.a((byte) 126, (String) null, (String) null, (Js5Archive) null);
             return false;
           }
-          var13 = dj.field_i;
+          var13 = Js5Archive.field_i;
           var11 = var13;
           var6 = var11;
           var1 = var6;
@@ -133,7 +133,7 @@ final class vm extends vf {
         this.field_t = param2;
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;

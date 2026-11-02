@@ -20,7 +20,7 @@ final class ha {
         if (param0 < 116) {
           field_d = (fc) null;
         }
-        fp.field_H = dj.field_e.field_H.field_u + 300;
+        fp.field_H = Js5Archive.field_e.field_H.field_u + 300;
         ac.field_t = -300;
     }
 
@@ -80,7 +80,7 @@ final class ha {
         if (param0 < 116) {
           field_d = (fc) null;
         }
-        fp.field_H = dj.field_e.field_H.field_u + 300;
+        fp.field_H = Js5Archive.field_e.field_H.field_u + 300;
         ac.field_t = -300;
     }
 }

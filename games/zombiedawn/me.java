@@ -52,7 +52,7 @@ final class me extends wo {
 
     final void d(byte param0) {
         if (this.getY(237239984) < 0 ||
-          this.getY(237239984) > dj.field_e.field_H.field_p) {
+          this.getY(237239984) > Js5Archive.field_e.field_H.field_p) {
           return;
         }
         int var2 = -66 % ((param0 - 66) / 50);
@@ -61,7 +61,7 @@ final class me extends wo {
 
     final void g(int param0) {
         super.g(99);
-        if (this.getY(237239984) - 48 > dj.field_e.field_H.field_p) {
+        if (this.getY(237239984) - 48 > Js5Archive.field_e.field_H.field_p) {
           this.unlink(-27598);
           this.d(0);
           if (param0 > 95) {

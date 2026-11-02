@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class hd extends DualLinkNode {
+abstract class SpriteState extends DualLinkNode {
     static int[] field_u;
     static String[] field_p;
     int field_q;
@@ -33,13 +33,13 @@ abstract class hd extends DualLinkNode {
         field_u = null;
     }
 
-    final static dj a(boolean param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
+    final static Js5Archive a(boolean param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           om var8 = null;
-          dj stackIn_11_0 = null;
-          dj stackIn_15_0 = null;
+          Js5Archive stackIn_11_0 = null;
+          Js5Archive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -61,13 +61,13 @@ abstract class hd extends DualLinkNode {
             }
             var8 = ep.field_l.a((na) (var7), (byte) -106, param0, param2, (na) (var6));
             if (!param1) {
-              stackIn_11_0 = (dj) null;
+              stackIn_11_0 = (Js5Archive) null;
               return stackIn_11_0;
             }
             if (param5) {
               var8.a(false);
             }
-            stackIn_15_0 = new dj(var8, param4, param3);
+            stackIn_15_0 = new Js5Archive(var8, param4, param3);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ abstract class hd extends DualLinkNode {
         }
     }
 
-    hd() {
+    SpriteState() {
     }
 
     static {

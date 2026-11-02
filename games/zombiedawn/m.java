@@ -7,7 +7,7 @@ abstract class m extends wb implements ib {
     static String field_B;
     static String field_C;
     static int field_z;
-    static vn field_A;
+    static Sprite field_A;
 
     abstract void o(int param0);
 
@@ -62,7 +62,7 @@ abstract class m extends wb implements ib {
         }
         wn.field_b = true;
         for (var3 = -1 + cf.field_eb.size(); var3 >= 0; var3--) {
-          ((ib) (cf.field_eb.elementAt(var3))).a(-14964);
+          ((ib) (cf.field_eb.elementAt(var3))).drawFrame(-14964);
         }
         int var4 = 35 / ((param0 + 27) / 44);
         if (wn.field_b) {
@@ -75,7 +75,7 @@ abstract class m extends wb implements ib {
 
     abstract boolean n(int param0);
 
-    public abstract void a(int param0);
+    public abstract void drawFrame(int param0);
 
     private final void p(int param0) {
         int stackIn_28_1 = 0;
@@ -99,14 +99,14 @@ abstract class m extends wb implements ib {
               if (var3 != 2) {
                 if (3 == var3) {
                   cn.a(true, false);
-                  this.a(false, false);
+                  this.runTick(false, false);
                 } else {
                   if (var3 != 4) {
-                    this.a(false, false);
+                    this.runTick(false, false);
                   } else {
                     mn.a(-1, GameWorld.field_Y, false);
                     hp.field_C = true;
-                    this.a(false, false);
+                    this.runTick(false, false);
                   }
                 }
               } else {
@@ -120,16 +120,16 @@ abstract class m extends wb implements ib {
               var3 = this.a(stackIn_28_1, stackIn_29_2);
               if (var3 != 1 &&
                 var3 != 2) {
-                this.a(false, false);
+                this.runTick(false, false);
               } else {
                 if (null != cn.field_b) {
                   re.a((byte) -71);
                 }
                 if (var3 != 2) {
-                  this.a(false, false);
+                  this.runTick(false, false);
                 } else {
                   bo.a(param0 ^ -1869, hc.a(0));
-                  this.a(false, false);
+                  this.runTick(false, false);
                 }
               }
             } else {
@@ -139,7 +139,7 @@ abstract class m extends wb implements ib {
                   if (var3 == 1) {
                     mn.a(-1, vd.field_e, true);
                   }
-                  this.a(false, false);
+                  this.runTick(false, false);
                 } else {
                   dh.c(256);
                 }
@@ -175,14 +175,14 @@ abstract class m extends wb implements ib {
             }
           }
         } else {
-          this.a(false, false);
+          this.runTick(false, false);
         }
         if (param0 != 1831) {
           return;
         }
         for (var3Lifetime1 = 0; cf.field_eb.size() > var3Lifetime1; var3Lifetime1++) {
           var6 = (ib) (cf.field_eb.elementAt(var3Lifetime1));
-          var6.a(var2 != 0, false);
+          var6.runTick(var2 != 0, false);
           stackIn_58_0 = var2;
           if (var6.a((byte) 119)) {
             stackIn_59_1 = 0;
@@ -203,7 +203,7 @@ abstract class m extends wb implements ib {
           this.e(-12);
         }
         if (param0 < 65) {
-          field_A = (vn) null;
+          field_A = (Sprite) null;
         }
     }
 
@@ -316,7 +316,7 @@ abstract class m extends wb implements ib {
         field_A = null;
     }
 
-    public abstract void a(boolean param0, boolean param1);
+    public abstract void runTick(boolean param0, boolean param1);
 
     final static lo a(byte param0, int param1, int param2, int param3) {
         if (param0 > -104) {
@@ -326,7 +326,7 @@ abstract class m extends wb implements ib {
         var4.field_k = param3;
         var4.field_o = new int[param1];
         c.field_b.addFirst(0, var4);
-        ga.a(param2, 0, var4);
+        UiWidget.a(param2, 0, var4);
         return var4;
     }
 
@@ -335,6 +335,6 @@ abstract class m extends wb implements ib {
     static {
         field_z = 0;
         field_C = "Mouse-over an icon for details";
-        field_A = new vn(664, 504);
+        field_A = new Sprite(664, 504);
     }
 }

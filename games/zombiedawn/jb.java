@@ -7,9 +7,9 @@ final class jb implements io {
     static IntrusiveDeque field_b;
     static String field_d;
     static String field_c;
-    static vn[] field_a;
+    static Sprite[] field_a;
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -17,7 +17,7 @@ final class jb implements io {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        vn var8 = null;
+        Sprite var8 = null;
         try {
           if (param0 != 16777215) {
             return;
@@ -25,7 +25,7 @@ final class jb implements io {
           var6_int = param3.field_k + param4;
           var7 = param2 + param3.field_j;
           pb.a(var6_int, param3.field_n, var7, 48, param3.field_i);
-          var8 = dj.field_k[1];
+          var8 = Js5Archive.field_k[1];
           if (param3 instanceof an &&
             ((an) (param3)).field_x) {
             var8.b(var6_int - (-1 - (-var8.field_r + param3.field_i >> 1)), 1 + var7 + (param3.field_n - var8.field_q >> 1), 256);
@@ -53,8 +53,8 @@ final class jb implements io {
           !(param0 <= j.field_b.length)) {
           j.field_b = new int[param0 * 2];
         }
-        if (null == dj.field_g) {
-          dj.field_g = new int[2 * param0];
+        if (null == Js5Archive.field_g) {
+          Js5Archive.field_g = new int[2 * param0];
           if (qo.field_r == null ||
             !(qo.field_r.length >= param0)) {
             qo.field_r = new int[2 * param0];
@@ -147,8 +147,8 @@ final class jb implements io {
             }
           }
         } else {
-          if (param0 > dj.field_g.length) {
-            dj.field_g = new int[2 * param0];
+          if (param0 > Js5Archive.field_g.length) {
+            Js5Archive.field_g = new int[2 * param0];
             if (qo.field_r == null ||
               !(qo.field_r.length >= param0)) {
               qo.field_r = new int[2 * param0];
@@ -331,7 +331,7 @@ final class jb implements io {
         }
         ub.field_d = -2147483648;
         if (!param1) {
-          field_a = (vn[]) null;
+          field_a = (Sprite[]) null;
         }
         qn.field_e = 0;
         fe.field_O = 2147483647;

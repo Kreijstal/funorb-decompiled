@@ -5,10 +5,10 @@ final class mn extends IntrusiveNode {
     private int field_l;
     private int field_k;
     private LevelNavigation field_i;
-    private vn field_r;
+    private Sprite field_r;
     private int field_p;
     private int field_q;
-    private ra field_n;
+    private DualLinkDeque field_n;
     private int field_o;
     private int field_j;
     private int field_h;
@@ -33,7 +33,7 @@ final class mn extends IntrusiveNode {
           }
         }
         var2Lifetime1 = -48 % ((19 - param0) / 63);
-        dj.field_e.b(true);
+        Js5Archive.field_e.b(true);
     }
 
     final void a(Camera param0, int param1) {
@@ -180,7 +180,7 @@ final class mn extends IntrusiveNode {
             this.field_m = -1 + this.field_i.field_A.field_k;
           }
           this.field_l = 0;
-          this.field_n = new ra();
+          this.field_n = new DualLinkDeque();
           if (this.field_k == 1) {
             for (var3_int = this.field_j; this.field_p >= var3_int; var3_int++) {
               for (var4 = this.field_q; this.field_m >= var4; var4++) {
@@ -189,7 +189,7 @@ final class mn extends IntrusiveNode {
                   for (var5_int = 0; 2 > var5_int; var5_int++) {
                     var6_ref_ek = ip.a(var4 * 24, 24 * var3_int, 100, true);
                     this.field_n.a(var6_ref_ek, (byte) -116);
-                    dj.field_e.field_R.addLast(var6_ref_ek, -122);
+                    Js5Archive.field_e.zombies.addLast(var6_ref_ek, -122);
                   }
                 }
               }
@@ -198,7 +198,7 @@ final class mn extends IntrusiveNode {
           } else {
             var3_int = 48 * je.field_a;
             var4 = 48 * je.field_a;
-            this.field_r = new vn(var3_int, var4);
+            this.field_r = new Sprite(var3_int, var4);
             for (var5_int = this.field_j; this.field_p >= var5_int; var5_int++) {
               for (var6 = this.field_q; this.field_m >= var6; var6++) {
                 this.field_i.field_b[var5_int][var6] = false;
@@ -213,7 +213,7 @@ final class mn extends IntrusiveNode {
               Rasterizer.d();
             }
             this.field_i.a(var5, 1, true, false);
-            var11 = dj.field_e.field_R;
+            var11 = Js5Archive.field_e.zombies;
             var7 = var11.b((byte) 26);
             while (var7 != null) {
               if (var7 instanceof id &&
@@ -262,7 +262,7 @@ final class mn extends IntrusiveNode {
             bm.field_a[var1_int] = 0;
             hg.field_a[var1_int] = 0;
             si.field_Qb[var1_int] = 0;
-            hd.field_u[var1_int] = 0;
+            SpriteState.field_u[var1_int] = 0;
           }
           rg.field_J.b(97);
         } catch (RuntimeException runtimeException) {
@@ -270,23 +270,23 @@ final class mn extends IntrusiveNode {
         }
     }
 
-    final static void a(dj param0, boolean param1) {
-        vn var2 = null;
+    final static void a(Js5Archive param0, boolean param1) {
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new vn(param0.a("", -116, "final_frame.jpg"), (java.awt.Component) ((Object) cj.field_d));
+          var2 = new Sprite(param0.a("", -116, "final_frame.jpg"), (java.awt.Component) ((Object) cj.field_d));
           if (!param1) {
-            dj var5 = (dj) null;
-            mn.a((dj) null, false);
+            Js5Archive var5 = (Js5Archive) null;
+            mn.a((Js5Archive) null, false);
           }
           var3 = var2.field_w;
           var4 = var2.field_t;
           hk.i(1584);
-          kh.field_a = new vn(var3, 3 * var4 / 4);
+          kh.field_a = new Sprite(var3, 3 * var4 / 4);
           kh.field_a.a();
           var2.e(0, 0);
-          bh.field_j = new vn(var3, -kh.field_a.field_t + var4);
+          bh.field_j = new Sprite(var3, -kh.field_a.field_t + var4);
           bh.field_j.a();
           var2.e(0, -kh.field_a.field_t);
           bh.field_j.field_x = kh.field_a.field_t;
@@ -300,8 +300,8 @@ final class mn extends IntrusiveNode {
         try {
           sc.field_a = param2;
           if (param0 != -1) {
-            dj var4 = (dj) null;
-            mn.a((dj) null, true);
+            Js5Archive var4 = (Js5Archive) null;
+            mn.a((Js5Archive) null, true);
           }
           rc.field_p = f.field_k;
         } catch (RuntimeException runtimeException) {
