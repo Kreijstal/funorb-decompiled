@@ -10,7 +10,7 @@ final class om extends ml {
         this(qc.field_x, param0);
     }
 
-    private om(cc param0, int param1) {
+    private om(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -26,7 +26,7 @@ final class om extends ml {
         return param0 | param1;
     }
 
-    final String a(byte param0, iq param1) {
+    final String a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -37,7 +37,7 @@ final class om extends ml {
           if (param0 != -90) {
             field_D = -38;
           }
-          stackIn_3_0 = rh.a((byte) -95, param1.field_w.length(), '*');
+          stackIn_3_0 = rh.a((byte) -95, param1.text.length(), '*');
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

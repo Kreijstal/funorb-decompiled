@@ -4,7 +4,7 @@
 abstract class bg {
     byte field_d;
     static boolean field_c;
-    static nj field_b;
+    static IntrusiveDeque field_b;
     static String[] field_e;
     static String field_a;
 
@@ -18,7 +18,7 @@ abstract class bg {
 
     abstract void a(boolean param0, int[] param1, boolean param2, boolean param3);
 
-    fc a(lg param0, int param1, int param2, byte param3) {
+    fc a(Model param0, int param1, int param2, byte param3) {
         RuntimeException var5 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -153,7 +153,7 @@ abstract class bg {
     static {
         field_c = false;
         field_e = new String[]{"Paint Pot", "Coin", "Dynamite", "1-Up", "Jetpack", "Save Star", "Compass"};
-        field_b = new nj();
+        field_b = new IntrusiveDeque();
         field_a = "Press any key to close";
     }
 }

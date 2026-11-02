@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends ji {
-    static nj field_z;
+final class te extends TextureOperator {
+    static IntrusiveDeque field_z;
     private int field_A;
     static int[][] field_D;
     static int[] field_F;
@@ -35,15 +35,15 @@ final class te extends ji {
         this.d(-17016, param0);
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         try {
           if (param0 != 110) {
-            field_z = (nj) null;
+            field_z = (IntrusiveDeque) null;
           }
           var4_int = param1;
           if (0 == var4_int) {
-            this.d(-17016, param2.m(0));
+            this.d(-17016, param2.readUnsignedMedium(0));
           }
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "te.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -105,7 +105,7 @@ final class te extends ji {
           field_H = null;
           return;
         }
-        field_z = (nj) null;
+        field_z = (IntrusiveDeque) null;
         field_I = null;
         field_D = (int[][]) null;
         field_y = null;
@@ -116,7 +116,7 @@ final class te extends ji {
         field_F = new int[8192];
         field_y = "Accept <%0> into this game";
         field_H = new String[]{"Low", "Medium", "High"};
-        field_z = new nj();
+        field_z = new IntrusiveDeque();
         field_I = "Accept draw";
         field_B = new int[]{250, 300, 500, 250, 400, 500, 1050, 900, 1500, 1500, 600, 1250, 800, 2000, 3500, 3500, 2700, 4500, 2250, 2500, 2750, 2400, 2000, 4250, 3400, 3000, 1600, 3750, 8000, 2500, 2500, 4600, 4250, 2250, 3750, 4350, 4500, 3000, 3000, 3500, 3250, 4500, 2750, 3500, 2000, 3000, 3750, 6500, 2750, 4000};
     }

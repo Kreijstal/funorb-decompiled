@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kn implements ur {
+final class kn implements WidgetListener {
     private int field_e;
     private int field_c;
-    static ed[][] field_h;
-    private cc field_b;
+    static PacketBuffer[][] field_h;
+    private BitmapFont field_b;
     private int field_j;
     private int field_d;
     private int field_n;
     private int field_i;
     private int field_o;
-    static lg field_p;
+    static Model field_p;
     static String field_m;
     private int field_f;
     private int field_g;
@@ -19,8 +19,8 @@ final class kn implements ur {
     private int field_k;
     private int field_l;
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
-        iq stackIn_3_0 = null;
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -33,7 +33,7 @@ final class kn implements ur {
         ck var11 = null;
         try {
           if (param3 instanceof ck) {
-            stackIn_3_0 = (iq) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
@@ -42,12 +42,12 @@ final class kn implements ur {
             param0 = param0 & var11.field_F;
           }
           var7 = 5592405;
-          bi.b(param1 + param3.field_o, param3.field_t + param4, param3.field_n, param3.field_s, this.field_k);
+          bi.b(param1 + param3.x, param3.y + param4, param3.width, param3.height, this.field_k);
           if (param0) {
             var7 = 16777215;
           }
-          var8 = this.field_i + (param1 + param3.field_o);
-          var9 = this.field_c + (param3.field_t + param4);
+          var8 = this.field_i + (param1 + param3.x);
+          var9 = this.field_c + (param3.y + param4);
           bi.f(var8, var9, this.field_d, this.field_f, 5592405);
           bi.b(var8, var9, this.field_d, this.field_f, var7);
           if (var11.field_G) {
@@ -59,7 +59,7 @@ final class kn implements ur {
           }
           if (null != this.field_b) {
             var10 = this.field_d + (this.field_i + this.field_n);
-            this.field_b.a(param3.field_w, var10 + (param1 + param3.field_o), this.field_g + param4 + param3.field_t, param3.field_n - (var10 + this.field_n), -(this.field_n << 1) + param3.field_s, this.field_e, this.field_j, this.field_o, this.field_l, 0);
+            this.field_b.a(param3.text, var10 + (param1 + param3.x), this.field_g + param4 + param3.y, param3.width - (var10 + this.field_n), -(this.field_n << 1) + param3.height, this.field_e, this.field_j, this.field_o, this.field_l, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -79,14 +79,14 @@ final class kn implements ur {
     public static void a(boolean param0) {
         field_p = null;
         field_m = null;
-        field_h = (ed[][]) null;
+        field_h = (PacketBuffer[][]) null;
         field_a = null;
         if (!param0) {
           field_a = (String) null;
         }
     }
 
-    kn(cc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    kn(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_o = 1;
         this.field_l = 1;
         try {
@@ -106,7 +106,7 @@ final class kn implements ur {
     }
 
     static {
-        field_h = new ed[][]{new ed[50], new ed[30], new ed[40], new ed[50]};
+        field_h = new PacketBuffer[][]{new PacketBuffer[50], new PacketBuffer[30], new PacketBuffer[40], new PacketBuffer[50]};
         field_a = "You have <%0> unread messages!";
         field_m = "This password contains your Player Name, and would be easy to guess";
     }

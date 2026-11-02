@@ -25,8 +25,8 @@ final class rg extends IOException {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         ql.field_L.a(88, param0, param3, param2, param6);
         if (param4 == -4803) {
-          if (ji.field_n != null) {
-            ji.field_n.a(param3, param3, param1, param5, -gr.field_Y + param5, -126);
+          if (TextureOperator.field_n != null) {
+            TextureOperator.field_n.a(param3, param3, param1, param5, -gr.field_Y + param5, -126);
           }
           return;
         }
@@ -38,7 +38,7 @@ final class rg extends IOException {
 
     final static void a(byte param0, boolean param1) {
         if (ko.field_S != null) {
-          oh.a(ko.field_S, false);
+          WidgetWrapper.a(ko.field_S, false);
         }
         if (null != un.field_Lb) {
           un.field_Lb.a(param1, -64);

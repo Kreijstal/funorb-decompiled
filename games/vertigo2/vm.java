@@ -21,10 +21,10 @@ final class vm {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (pe.field_r) {
-          return lq.field_a.a(-88, de.field_f, ji.field_r);
+          return lq.field_a.a(-88, de.field_f, TextureOperator.field_r);
         }
-        if (pm.field_a) {
-          return cf.a(31077, param0, param3);
+        if (BufferedSocket.field_a) {
+          return SecondaryNodeDequeIterator.a(31077, param0, param3);
         }
         if (mp.a(param3, param0, param2 ^ 1899)) {
           return true;
@@ -33,7 +33,7 @@ final class vm {
           return true;
         }
         if (!hj.field_b) {
-          return gf.a(param0, param1, 69);
+          return NodeHashTableIterator.a(param0, param1, 69);
         }
         return false;
     }

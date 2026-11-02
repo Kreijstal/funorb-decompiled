@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bq extends ji {
-    static cr field_B;
+final class bq extends TextureOperator {
+    static UiPanel field_B;
     private int field_y;
     static String field_A;
     static String[] field_G;
@@ -147,12 +147,12 @@ final class bq extends ji {
         var19 = Vertigo2.field_L ? 1 : 0;
         try {
           tf.field_o = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = cg.field_b.length;
+          var1_int = GameKeyHandler.field_b.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
-            var4_ref_jp = cg.field_b[var3];
+            var4_ref_jp = GameKeyHandler.field_b[var3];
             var4_ref_jp.a((byte) 117);
             c.a(var3, -3797);
             var5 = var4_ref_jp.field_D + var4_ref_jp.field_S >> 1;
@@ -173,10 +173,10 @@ final class bq extends ji {
           var7Lifetime1 = 0;
           var8Lifetime1 = nf.a((byte) -28, var6Lifetime1) >> 8;
           var9Lifetime1 = fk.a((byte) -118, var6Lifetime1) >> 8;
-          if (ed.field_n != -1 &&
+          if (PacketBuffer.field_n != -1 &&
             -1 != gb.field_d) {
             var9Lifetime1 = -128;
-            var7Lifetime1 = -320 + ed.field_n;
+            var7Lifetime1 = -320 + PacketBuffer.field_n;
             var8Lifetime1 = 240 - gb.field_d;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1)));
@@ -193,15 +193,15 @@ final class bq extends ji {
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
-          for (var15 = 0; cg.field_b.length > var15; var15++) {
+          for (var15 = 0; GameKeyHandler.field_b.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < cg.field_b.length; var17_int++) {
+            for (var17_int = 1; var17_int < GameKeyHandler.field_b.length; var17_int++) {
               if (var21[var17_int] > var21[var16]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = cg.field_b[var16];
+            var17 = GameKeyHandler.field_b[var16];
             c.a(var16, -3797);
             for (var18 = 0; var18 < 3; var18++) {
               ba.field_g[var18] = ba.field_g[var18] + jg.field_j[var15][var18];
@@ -217,7 +217,7 @@ final class bq extends ji {
         }
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_8_1 = false;
@@ -230,10 +230,10 @@ final class bq extends ji {
         try {
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_y = param2.a((byte) -11);
+            this.field_y = param2.readUnsignedShort((byte) -11);
           } else {
             if (var4_int == 1) {
-              stackIn_8_1 = (param2.h(-11) == 1);
+              stackIn_8_1 = (param2.readUnsignedByte(-11) == 1);
               this.field_z = stackIn_8_1;
             }
           }

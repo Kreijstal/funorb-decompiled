@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc extends li {
+final class oc extends IntrusiveNode {
     int field_p;
     int[] field_u;
     int[] field_y;
-    wk[] field_t;
-    static cc field_s;
-    static cr field_v;
+    AsyncRequest[] field_t;
+    static BitmapFont field_s;
+    static UiPanel field_v;
     static String field_x;
     byte[][][] field_q;
     int[] field_o;
     int field_n;
-    static r field_r;
-    wk[] field_w;
+    static Archive field_r;
+    AsyncRequest[] field_w;
 
     final static boolean a(char param0, byte param1) {
         if (param1 > -87) {
-          field_v = (cr) null;
+          field_v = (UiPanel) null;
           if (param0 < 65) {
             if (param0 < 97) {
               return false;
@@ -59,7 +59,7 @@ final class oc extends li {
         return false;
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, jj param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_23_0 = null;
         Object stackIn_35_0 = null;
@@ -73,7 +73,7 @@ final class oc extends li {
         java.awt.Frame var7 = null;
         int var9 = 0;
         cl[] var10 = null;
-        wk var11 = null;
+        AsyncRequest var11 = null;
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           if (!param3.a(-124)) {
@@ -101,18 +101,18 @@ final class oc extends li {
               return (java.awt.Frame) (stackIn_23_0);
             }
           }
-          var11 = param3.a(param0, param4, param2, param1, 1636602704);
-          while (var11.field_b == 0) {
+          var11 = param3.requestEnterFullscreen(param0, param4, param2, param1, 1636602704);
+          while (var11.status == 0) {
             um.a(true, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_d);
+          var7 = (java.awt.Frame) (var11.result);
           if (param5 < 20) {
-            field_s = (cc) null;
+            field_s = (BitmapFont) null;
           }
           if (var7 == null) {
             return null;
           }
-          if (var11.field_b != 2) {
+          if (var11.status != 2) {
             return var7;
           }
           br.a(var7, param3, 8);
@@ -138,7 +138,7 @@ final class oc extends li {
         field_s = null;
         field_r = null;
         if (param0 != -27171) {
-          field_s = (cc) null;
+          field_s = (BitmapFont) null;
         }
     }
 

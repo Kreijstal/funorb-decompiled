@@ -1,0 +1,74 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class SpriteState extends DualLinkNode {
+    int field_B;
+    int field_x;
+    int field_t;
+    static boolean[][] field_w;
+    int field_y;
+    int field_C;
+    int field_z;
+    static StringBuilder field_D;
+    static int field_E;
+    static Model field_v;
+    static String field_A;
+    static UiPanel field_u;
+
+    abstract void a(int param0, int param1, int param2, int param3, int param4);
+
+    abstract void a(int param0, int param1, int param2, int param3);
+
+    final static void h(int param0) {
+        field_D.setLength(param0);
+        ui.field_g = 0;
+    }
+
+    final static boolean i(int param0) {
+        if (param0 != 11) {
+          return false;
+        }
+        if (sp.field_V) {
+          if (vj.field_h) {
+            return true;
+          }
+          return ag.b(49) ? true : false;
+        }
+        if (!ag.b(49)) {
+          return false;
+        }
+        return true;
+    }
+
+    public static void a(byte param0) {
+        field_v = null;
+        field_D = null;
+        field_A = null;
+        field_u = null;
+        if (param0 >= 91) {
+          field_w = (boolean[][]) null;
+          return;
+        }
+        SpriteState.a(-125, false);
+        field_w = (boolean[][]) null;
+    }
+
+    final static void a(int param0, boolean param1) {
+        if (tf.a((byte) 117)) {
+          param1 = false;
+        }
+        d.a(69, param1);
+        kp.i(param0);
+    }
+
+    SpriteState() {
+    }
+
+    static {
+        field_w = new boolean[][]{new boolean[11], new boolean[10]};
+        field_D = new StringBuilder(80);
+        field_E = 0;
+        or discarded$0 = new or();
+        field_A = "Lobby";
+    }
+}

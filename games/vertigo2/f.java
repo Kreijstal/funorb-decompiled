@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class f extends ji {
+final class f extends TextureOperator {
     private int field_G;
     private int field_z;
     static ve field_H;
@@ -14,7 +14,7 @@ final class f extends ji {
     static String field_J;
     static String field_D;
 
-    final static void a(long param0, int param1, int param2, jj param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, String param11, int param12, int param13) {
+    final static void a(long param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, String param11, int param12, int param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -25,8 +25,8 @@ final class f extends ji {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            id.field_f = new mi(param12);
-            uh.field_Wb = new mi(param2);
+            id.field_f = new BitPacketBuffer(param12);
+            uh.field_Wb = new BitPacketBuffer(param2);
             kr.field_g = param3;
             cl.field_d = param6;
             pl.field_i = param8;
@@ -35,7 +35,7 @@ final class f extends ji {
               f.b(true);
             }
             nb.field_y = param11;
-            nj.field_e = param4;
+            IntrusiveDeque.field_e = param4;
             ng.field_c = param1;
             bl.field_C = param9;
             ne.field_P = param5;
@@ -105,19 +105,19 @@ final class f extends ji {
             if (hj.field_b) {
               g.a((byte) -10);
             } else {
-              il.field_a = true;
+              MouseWheelInput.field_a = true;
             }
           }
-          if (il.field_a) {
+          if (MouseWheelInput.field_a) {
             ca.a(param1, param4, param6, param4, 20, param0, param5, 126, param3);
             gk.field_c.a(0, param7);
             if (param7) {
               if (0 != kk.field_a.field_tb) {
-                il.field_a = false;
+                MouseWheelInput.field_a = false;
               }
               if (oa.field_s.field_tb != 0) {
-                fb.h(0);
-                il.field_a = false;
+                SpriteState.h(0);
+                MouseWheelInput.field_a = false;
                 return;
               }
             }
@@ -154,7 +154,7 @@ final class f extends ji {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          ed var2 = null;
+          PacketBuffer var2 = null;
           if (4 <= kb.field_e.field_m) {
             if (kb.field_e.field_j == -1) {
               return 3;
@@ -166,25 +166,25 @@ final class f extends ji {
           }
           try {
             if (param0 == al.field_t) {
-              pq.field_f = or.field_f.a(param0 - 108, rf.field_l, lm.field_H);
+              pq.field_f = or.field_f.requestSocket(param0 - 108, rf.field_l, lm.field_H);
               al.field_t = al.field_t + 1;
             }
             if (1 == al.field_t) {
-              if (pq.field_f.field_b == 2) {
+              if (pq.field_f.status == 2) {
                 stackIn_14_0 = pl.a((byte) 11, -1);
                 return stackIn_14_0;
               }
-              if (pq.field_f.field_b == 1) {
+              if (pq.field_f.status == 1) {
                 al.field_t = al.field_t + 1;
               }
             }
             if (al.field_t == 2) {
-              fn.field_y = new pm((java.net.Socket) (pq.field_f.field_d), or.field_f);
-              var2 = new ed(13);
-              jo.a(var2, od.field_Kb, qi.field_a, 124, il.field_h);
-              var2.f(15, param0 - 85);
-              var2.e(rf.field_q, 0);
-              fn.field_y.a(0, 13, 127, var2.field_p);
+              fn.field_y = new BufferedSocket((java.net.Socket) (pq.field_f.result), or.field_f);
+              var2 = new PacketBuffer(13);
+              jo.a(var2, od.field_Kb, FullscreenFocusCanvas.field_a, 124, MouseWheelInput.field_h);
+              var2.writeByte(15, param0 - 85);
+              var2.writeInt(rf.field_q, 0);
+              fn.field_y.a(0, 13, 127, var2.payload);
               al.field_t = al.field_t + 1;
               pq.field_e = 30000L + gk.a(param0 + 60);
             }
@@ -262,21 +262,21 @@ final class f extends ji {
         RuntimeException var1 = null;
         var2 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (!gf.a((byte) -105)) {
+          if (!NodeHashTableIterator.a((byte) -105)) {
             if (null != dc.field_L &&
               dc.field_L.field_e) {
               cp.a((byte) 127);
-              qb.field_d.b(new gr(qb.field_d, sd.field_I), 0);
+              JaggrabClient.field_d.b(new gr(JaggrabClient.field_d, sd.field_I), 0);
             }
             return;
           }
           if (param0 != -6) {
             field_I = (String[]) null;
           }
-          qb.field_d.a(qg.field_I, true, (byte) 115, oj.field_N);
-          qb.field_d.l(0);
-          while (gf.a(false)) {
-            qb.field_d.a(-122, de.field_f, ji.field_r);
+          JaggrabClient.field_d.a(qg.field_I, true, (byte) 115, oj.field_N);
+          JaggrabClient.field_d.l(0);
+          while (NodeHashTableIterator.a(false)) {
+            JaggrabClient.field_d.a(-122, de.field_f, TextureOperator.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -286,26 +286,26 @@ final class f extends ji {
         }
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        ed var5 = null;
+        PacketBuffer var5 = null;
         try {
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_z = param2.a((byte) -11);
+            this.field_z = param2.readUnsignedShort((byte) -11);
           } else {
             if (var4_int == 1) {
-              this.field_G = param2.a((byte) -11);
+              this.field_G = param2.readUnsignedShort((byte) -11);
             }
           }
           if (param0 != 110) {
-            var5 = (ed) null;
-            this.a((byte) -51, 30, (ed) null);
+            var5 = (PacketBuffer) null;
+            this.a((byte) -51, 30, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

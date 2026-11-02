@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ol extends ji {
+final class ol extends TextureOperator {
     private int[] field_M;
     private int field_K;
     static int field_I;
@@ -30,7 +30,7 @@ final class ol extends ji {
         if (param3 <= 23) {
           field_B = 0;
         }
-        cj.b(param1, -1, param0, param2);
+        WidgetContainer.b(param1, -1, param0, param2);
     }
 
     final static wp a(String param0, int param1) {
@@ -147,7 +147,7 @@ final class ol extends ji {
         this.field_M[this.field_R] = 4096;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -159,33 +159,33 @@ final class ol extends ji {
         try {
           var4_int = param1;
           if (0 == var4_int) {
-            this.field_C = param2.h(-11);
+            this.field_C = param2.readUnsignedByte(-11);
           } else {
             if (var4_int == 1) {
-              this.field_R = param2.h(-11);
+              this.field_R = param2.readUnsignedByte(-11);
             } else {
               if (var4_int != 2) {
                 if (var4_int != 3) {
                   if (var4_int != 4) {
                     if (var4_int == 5) {
-                      this.field_E = param2.a((byte) -11);
+                      this.field_E = param2.readUnsignedShort((byte) -11);
                     } else {
                       if (var4_int == 6) {
-                        this.field_J = param2.a((byte) -11);
+                        this.field_J = param2.readUnsignedShort((byte) -11);
                       } else {
                         if (var4_int == 7) {
-                          this.field_Q = param2.a((byte) -11);
+                          this.field_Q = param2.readUnsignedShort((byte) -11);
                         }
                       }
                     }
                   } else {
-                    this.field_L = param2.a((byte) -11);
+                    this.field_L = param2.readUnsignedShort((byte) -11);
                   }
                 } else {
-                  this.field_y = param2.a((byte) -11);
+                  this.field_y = param2.readUnsignedShort((byte) -11);
                 }
               } else {
-                this.field_N = param2.a((byte) -11);
+                this.field_N = param2.readUnsignedShort((byte) -11);
               }
             }
           }
@@ -300,7 +300,7 @@ final class ol extends ji {
         int var5 = 59 / ((param0 - 51) / 44);
         var4.field_o = new int[param3];
         var4.field_r = param2;
-        mb.field_v.a(var4, false);
+        mb.field_v.addFirst(var4, false);
         ec.a(param1, (byte) 126, var4);
         return var4;
     }

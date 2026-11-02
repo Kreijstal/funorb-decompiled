@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mf {
-    static cc field_c;
+    static BitmapFont field_c;
     static int field_b;
     static String field_a;
 
@@ -17,11 +17,11 @@ final class mf {
         field_c = null;
     }
 
-    final static er a(r param0, int param1, byte param2, int param3) {
+    final static Sprite a(Archive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        er stackIn_5_0 = null;
-        er stackIn_7_0 = null;
+        Sprite stackIn_5_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -29,13 +29,13 @@ final class mf {
         try {
           if (!hq.a(124, param3, param1, param0)) {
             stackIn_2_0 = null;
-            return (er) (stackIn_2_0);
+            return (Sprite) (stackIn_2_0);
           }
           if (param2 <= -72) {
             stackIn_7_0 = td.a(4205);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (er) null;
+          stackIn_5_0 = (Sprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,18 +64,18 @@ final class mf {
           var1 = gk.a(param0 ^ -6287);
           var3 = -id.field_a + var1;
           if (var3 > 30000L) {
-            nj.field_d = 0;
+            IntrusiveDeque.field_d = 0;
             id.field_a = var1;
             return true;
           }
           var5 = 3000;
-          if (nj.field_d >= 7) {
+          if (IntrusiveDeque.field_d >= 7) {
             var5 = 12000;
           } else {
-            if (nj.field_d >= 5) {
+            if (IntrusiveDeque.field_d >= 5) {
               var5 = 9000;
             } else {
-              if (nj.field_d >= 3) {
+              if (IntrusiveDeque.field_d >= 3) {
                 var5 = 6000;
               }
             }
@@ -84,25 +84,25 @@ final class mf {
             return false;
           }
           id.field_a = var1;
-          nj.field_d = nj.field_d + 1;
+          IntrusiveDeque.field_d = IntrusiveDeque.field_d + 1;
           return true;
         }
         field_b = -111;
         var1Lifetime1 = gk.a(param0 ^ -6287);
         var3Lifetime1 = -id.field_a + var1Lifetime1;
         if (var3Lifetime1 > 30000L) {
-          nj.field_d = 0;
+          IntrusiveDeque.field_d = 0;
           id.field_a = var1Lifetime1;
           return true;
         }
         var5Lifetime1 = 3000;
-        if (nj.field_d >= 7) {
+        if (IntrusiveDeque.field_d >= 7) {
           var5Lifetime1 = 12000;
         } else {
-          if (nj.field_d >= 5) {
+          if (IntrusiveDeque.field_d >= 5) {
             var5Lifetime1 = 9000;
           } else {
-            if (nj.field_d >= 3) {
+            if (IntrusiveDeque.field_d >= 3) {
               var5Lifetime1 = 6000;
             }
           }
@@ -111,7 +111,7 @@ final class mf {
           return false;
         }
         id.field_a = var1Lifetime1;
-        nj.field_d = nj.field_d + 1;
+        IntrusiveDeque.field_d = IntrusiveDeque.field_d + 1;
         return true;
     }
 

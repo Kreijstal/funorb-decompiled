@@ -4,7 +4,7 @@
 final class vl {
     static String field_g;
     static int[][] field_e;
-    static lg[][] field_a;
+    static Model[][] field_a;
     static String field_b;
     String field_i;
     boolean field_m;
@@ -22,7 +22,7 @@ final class vl {
         }
     }
 
-    final static u a(int param0, String param1, r param2, String param3) {
+    final static u a(int param0, String param1, Archive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -70,18 +70,18 @@ final class vl {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (aj.field_f == null ||
-          !(param1 <= aj.field_f.length)) {
-          aj.field_f = new int[param1 * 2];
+        if (ProxySocketConnector.field_f == null ||
+          !(param1 <= ProxySocketConnector.field_f.length)) {
+          ProxySocketConnector.field_f = new int[param1 * 2];
         }
         if (param2 != -26418) {
           field_h = (String) null;
         }
         if (on.field_e == null) {
           on.field_e = new int[param1 * 2];
-          if (li.field_g == null ||
-            !(param1 <= li.field_g.length)) {
-            li.field_g = new int[2 * param1];
+          if (IntrusiveNode.field_g == null ||
+            !(param1 <= IntrusiveNode.field_g.length)) {
+            IntrusiveNode.field_g = new int[2 * param1];
           }
           if (null != ub.field_p &&
             param1 <= ub.field_p.length) {
@@ -178,9 +178,9 @@ final class vl {
           }
         } else {
           if (param1 <= on.field_e.length) {
-            if (li.field_g == null ||
-              !(param1 <= li.field_g.length)) {
-              li.field_g = new int[2 * param1];
+            if (IntrusiveNode.field_g == null ||
+              !(param1 <= IntrusiveNode.field_g.length)) {
+              IntrusiveNode.field_g = new int[2 * param1];
             }
             if (null != ub.field_p &&
               param1 <= ub.field_p.length) {
@@ -277,9 +277,9 @@ final class vl {
             }
           } else {
             on.field_e = new int[param1 * 2];
-            if (li.field_g == null ||
-              !(param1 <= li.field_g.length)) {
-              li.field_g = new int[2 * param1];
+            if (IntrusiveNode.field_g == null ||
+              !(param1 <= IntrusiveNode.field_g.length)) {
+              IntrusiveNode.field_g = new int[2 * param1];
             }
             if (null != ub.field_p &&
               param1 <= ub.field_p.length) {
@@ -403,7 +403,7 @@ final class vl {
     public static void a(byte param0) {
         field_j = null;
         field_b = null;
-        field_a = (lg[][]) null;
+        field_a = (Model[][]) null;
         field_f = null;
         field_e = (int[][]) null;
         field_d = null;
@@ -423,45 +423,45 @@ final class vl {
         ti.c(-95);
     }
 
-    final static er[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        er var16 = null;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        Sprite var16 = null;
         int[] var18 = bi.field_l;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
         int var7 = bi.field_e;
         int var8 = bi.field_j;
-        er var9 = new er(param1, param0 - param1 * 2);
+        Sprite var9 = new Sprite(param1, param0 - param1 * 2);
         var9.d();
         bi.e(0, param2, param1, -(param1 * 2) + param0, param4, param5);
-        er var10 = new er(param1, param1);
+        Sprite var10 = new Sprite(param1, param1);
         var10.d();
         bi.b(0, 0, param1, param1, param4);
-        er var11 = new er(16, param1);
+        Sprite var11 = new Sprite(16, param1);
         var11.d();
         bi.b(0, 0, 16, param1, param4);
-        er var12 = new er(param1, param1);
+        Sprite var12 = new Sprite(param1, param1);
         var12.d();
         bi.b(0, 0, param1, param1, param5);
-        er var13 = new er(16, param1);
+        Sprite var13 = new Sprite(16, param1);
         var13.d();
         bi.b(0, 0, 16, param1, param5);
         Object var14 = null;
         if (param3 > 0) {
-          var16 = new er(16, 16);
+          var16 = new Sprite(16, 16);
           var14 = var16;
           var16.d();
           bi.b(0, 0, 16, 16, param3);
         }
         bi.a(var18, var7, var8);
-        return new er[]{var10, var11, var10, var9, (er) (var14), var9, var12, var13, var12};
+        return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
     static {
         field_b = "Email address is unavailable";
         field_f = "Orb coins: ";
         field_g = "<img=2> / <img=10><br><img=1> / <img=12><br><img=3> / <img=11><br><img=4> / <img=9><br><img=5> / <img=7><br><img=15> / <img=17><br><img=14> / <img=16><br><img=8>";
-        field_a = new lg[13][2];
+        field_a = new Model[13][2];
         field_h = "Password is valid";
         field_d = "Create unrated game";
     }

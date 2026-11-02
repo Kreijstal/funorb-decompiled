@@ -13,9 +13,9 @@ final class ti {
           if (param0 != 10) {
             field_a = (String) null;
           }
-          if (tg.field_e < 224) {
-            var1_int = tg.field_e % 32;
-            pk.b(param0 + 104, 32 + tg.field_e - var1_int);
+          if (DelegatingCanvas.field_e < 224) {
+            var1_int = DelegatingCanvas.field_e % 32;
+            pk.b(param0 + 104, 32 + DelegatingCanvas.field_e - var1_int);
             if (!Vertigo2.field_L) {
               return;
             }
@@ -29,7 +29,7 @@ final class ti {
         }
     }
 
-    final static void a(boolean param0, r param1, int param2, r param3) {
+    final static void a(boolean param0, Archive param1, int param2, Archive param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -38,7 +38,7 @@ final class ti {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          fm.a(lk.field_a, fm.field_e, ca.field_f, ol.field_H, 12895, kb.field_c, rq.field_t, param0, ee.field_b, ja.field_e, ip.field_a, pn.field_N);
+          fm.a(RasterBuffer.field_a, fm.field_e, ca.field_f, ol.field_H, 12895, kb.field_c, rq.field_t, param0, ee.field_b, ja.field_e, ip.field_a, pn.field_N);
           kb.field_d = gk.a(param1, "lobby", "chatfilter", true);
           ba.field_f[1] = uo.field_j;
           ba.field_f[2] = vg.field_a;
@@ -46,7 +46,7 @@ final class ti {
             field_b = (ve) null;
           }
           ba.field_f[0] = lo.field_g;
-          rq.a(li.field_e, param2 - 2, param3);
+          rq.a(IntrusiveNode.field_e, param2 - 2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,8 +78,8 @@ final class ti {
             ti.a((byte) -39);
           }
           if (!gl.field_o &&
-            qf.field_b >= aj.field_h &&
-            (ea.field_g + aj.field_h) > qf.field_b) {
+            qf.field_b >= ProxySocketConnector.field_h &&
+            (ea.field_g + ProxySocketConnector.field_h) > qf.field_b) {
             stackIn_13_0 = as.field_a;
             return stackIn_13_0;
           }
@@ -219,7 +219,7 @@ final class ti {
           }
           var22 = oo.field_e;
           var23 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var23 < param6.field_F) {
               var24 = param6.field_I[var23];
               var25 = param6.field_r[var23];
@@ -232,7 +232,7 @@ final class ti {
               if (var30 != 0) {
                 if (stackIn_62_0 < stackIn_62_1) {
                   if (var18 >= pk.field_w.length) {
-                    break L1;
+                    break scanLoop1;
                   }
                   var19 = param6.field_h[var18];
                   var20 = param6.field_O[var18];
@@ -241,12 +241,12 @@ final class ti {
                   dp.field_A[var18] = var13 * var20 + var19 * var10 + var21 * var16 >> 16;
                   dh.field_d[var18] = var17 * var21 + var14 * var20 + var11 * var19 >> 16;
                   var18++;
-                  break L1;
+                  break scanLoop1;
                 }
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_62_0 <= stackIn_62_1) {
-                nj.field_a[var23] = var27 / var29 + var21;
+                IntrusiveDeque.field_a[var23] = var27 / var29 + var21;
                 ml.field_t[var23] = var22 + var28 / var29;
                 pk.field_v[var23] = var29;
                 if (var8 < var29) {
@@ -305,7 +305,7 @@ final class ti {
             }
             if (decompiledFrameCompleted0) {
               if (!param4) {
-                break L1;
+                break scanLoop1;
               }
               var9 = param0[3];
               var10 = param0[4];

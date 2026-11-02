@@ -12,7 +12,7 @@ final class hi extends bg {
     static String field_p;
     private wg field_f;
     private int field_h;
-    static r field_o;
+    static Archive field_o;
 
     final void a(boolean param0, int[] param1, boolean param2, boolean param3) {
         if (param0) {
@@ -88,7 +88,7 @@ final class hi extends bg {
           var10Lifetime8 = 14 / ((param1 - 11) / 40);
           return;
         }
-        if (cj.field_D < param6) {
+        if (WidgetContainer.field_D < param6) {
           lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime9 = 14 / ((param1 - 11) / 40);
           return;
@@ -98,7 +98,7 @@ final class hi extends bg {
           var10Lifetime10 = 14 / ((param1 - 11) / 40);
           return;
         }
-        if (cj.field_D < param5) {
+        if (WidgetContainer.field_D < param5) {
           lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime11 = 14 / ((param1 - 11) / 40);
           return;
@@ -108,7 +108,7 @@ final class hi extends bg {
           var10Lifetime12 = 14 / ((param1 - 11) / 40);
           return;
         }
-        if (param0 > cj.field_D) {
+        if (param0 > WidgetContainer.field_D) {
           lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime13 = 14 / ((param1 - 11) / 40);
           return;
@@ -118,7 +118,7 @@ final class hi extends bg {
           var10Lifetime14 = 14 / ((param1 - 11) / 40);
           return;
         }
-        if (param4 <= cj.field_D) {
+        if (param4 <= WidgetContainer.field_D) {
           vc.a(param2, param8, param0, param4, param6, param5, param3, (byte) 96, param7, param9);
           var10Lifetime15 = 14 / ((param1 - 11) / 40);
           return;
@@ -127,7 +127,7 @@ final class hi extends bg {
         var10Lifetime16 = 14 / ((param1 - 11) / 40);
     }
 
-    final static void a(r param0, int param1) {
+    final static void a(Archive param0, int param1) {
         vh var2 = null;
         vh.a(param0.a("headers.packvorbis", "", 0));
         if (param1 <= 2) {
@@ -198,7 +198,7 @@ final class hi extends bg {
         }
     }
 
-    final static cr b(int param0) {
+    final static UiPanel b(int param0) {
         int var1 = -25 / ((param0 + 54) / 34);
         return ao.field_O.field_Mb;
     }
@@ -266,7 +266,7 @@ final class hi extends bg {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        lg var6 = null;
+        Model var6 = null;
         RuntimeException var6_ref = null;
         fc var10 = null;
         var9 = Vertigo2.field_L ? 1 : 0;
@@ -282,7 +282,7 @@ final class hi extends bg {
             if (var8 != 1) {
               var6 = th.field_a[var7];
             } else {
-              var6 = qb.field_f[var7];
+              var6 = JaggrabClient.field_f[var7];
             }
           } else {
             var6 = wo.field_q[var7];

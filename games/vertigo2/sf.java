@@ -3,7 +3,7 @@
  */
 final class sf {
     static fe field_b;
-    static er[] field_a;
+    static Sprite[] field_a;
     static int field_d;
     static String field_c;
     static int[] field_e;

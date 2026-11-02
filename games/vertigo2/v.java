@@ -7,7 +7,7 @@ abstract class v {
     static String field_b;
     private static String field_z;
 
-    abstract void a(ed param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 
     abstract tq a(byte param0);
 

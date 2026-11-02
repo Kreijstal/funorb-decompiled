@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa extends li {
+final class fa extends IntrusiveNode {
     static int[] field_u;
     static String field_p;
     static char[] field_o;
@@ -10,7 +10,7 @@ final class fa extends li {
     static String field_v;
     static String field_q;
     static String field_t;
-    static er[] field_s;
+    static Sprite[] field_s;
 
     fa(int param0) {
         this.field_n = param0;
@@ -31,7 +31,7 @@ final class fa extends li {
     final static void a(int param0, int param1, boolean param2) {
         uh var6 = null;
         uh var7 = null;
-        mi var4 = null;
+        BitPacketBuffer var4 = null;
         if (param1 != br.field_Q) {
           var6 = (uh) (lh.field_b.a(3661, (long)br.field_Q));
           var7 = var6;
@@ -40,10 +40,10 @@ final class fa extends li {
           }
           br.field_Q = param1;
           var4 = uh.field_Wb;
-          var4.j(param0, 125);
-          var4.f(3, -86);
-          var4.f(11, -112);
-          var4.d(param1, -1783);
+          var4.writeCipheredByte(param0, 125);
+          var4.writeByte(3, -86);
+          var4.writeByte(11, -112);
+          var4.writeShort(param1, -1783);
         }
         if (param2) {
           return;

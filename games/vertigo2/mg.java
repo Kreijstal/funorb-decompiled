@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg extends oh {
+final class mg extends WidgetWrapper {
     private int field_P;
     static int[] field_J;
     private String field_U;
-    static nj field_N;
+    static IntrusiveDeque field_N;
     private int field_I;
     private boolean field_H;
-    private cc field_K;
+    private BitmapFont field_K;
     static nk[][] field_S;
     private int field_Q;
     static boolean field_O;
@@ -16,10 +16,10 @@ final class mg extends oh {
     static String field_L;
     static String field_G;
     static od field_R;
-    static cr[] field_M;
+    static UiPanel[] field_M;
 
-    mg(int param0, int param1, int param2, int param3, iq param4, boolean param5, int param6, int param7, cc param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (ur) null, (uf) null);
+    mg(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetListener) null, (uf) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -46,7 +46,7 @@ final class mg extends oh {
           var12_int = this.field_I - this.field_Q;
           var13 = this.field_K.a(param10, var12_int, this.field_K.field_z) + this.field_Q * 2;
           if (param3 < var13) {
-            this.a(false, param0, param1, var13, param2);
+            this.setBounds(false, param0, param1, var13, param2);
           } else {
             var13 = param3;
           }
@@ -56,7 +56,7 @@ final class mg extends oh {
             stackIn_10_0 = this.field_I + this.field_Q * 2;
           }
           var14 = stackIn_10_0;
-          this.field_C.a(false, var14, (-param3 + var13 >> 1) + this.field_Q, -(2 * this.field_Q) + param3, param2 - this.field_I - 3 * this.field_Q);
+          this.field_C.setBounds(false, var14, (-param3 + var13 >> 1) + this.field_Q, -(2 * this.field_Q) + param3, param2 - this.field_I - 3 * this.field_Q);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,14 +85,14 @@ final class mg extends oh {
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        int var5 = param2 + this.field_o;
-        int var6 = param3 + this.field_t;
+        int var5 = param2 + this.x;
+        int var6 = param3 + this.y;
         super.a(param0, param1, param2, param3);
         if (param1 != 0) {
           return;
         }
-        int var7 = this.field_H ? -(2 * this.field_Q) - this.field_I + this.field_n : 0;
-        this.field_K.a(this.field_U, this.field_Q + var7 + var5, var6 + this.field_Q, -this.field_Q + this.field_I, -(2 * this.field_Q) + this.field_s, this.field_P, -1, !this.field_H ? 2 : 0, 1, this.field_K.field_z);
+        int var7 = this.field_H ? -(2 * this.field_Q) - this.field_I + this.width : 0;
+        this.field_K.a(this.field_U, this.field_Q + var7 + var5, var6 + this.field_Q, -this.field_Q + this.field_I, -(2 * this.field_Q) + this.height, this.field_P, -1, !this.field_H ? 2 : 0, 1, this.field_K.field_z);
     }
 
     final static void a(int param0, boolean param1, float param2, String param3) {
@@ -403,10 +403,10 @@ final class mg extends oh {
               var15 = 0;
               if (var4_int != 0 &&
                 var9 >= 0) {
-                if (il.field_b != null &&
-                  null != il.field_b[var7] &&
-                  (il.field_b[var7][var9] & ~ob.field_L) > 0) {
-                  var15 = ib.a(~ob.field_L & il.field_b[var7][var9], (byte) 79);
+                if (MouseWheelInput.field_b != null &&
+                  null != MouseWheelInput.field_b[var7] &&
+                  (MouseWheelInput.field_b[var7][var9] & ~ob.field_L) > 0) {
+                  var15 = ib.a(~ob.field_L & MouseWheelInput.field_b[var7][var9], (byte) 79);
                   var14 = 1;
                 }
                 if (null != sf.field_f &&
@@ -457,7 +457,7 @@ final class mg extends oh {
                 var13 = stackIn_204_0;
               }
               if (2 <= fn.field_z &&
-                cr.field_eb[12]) {
+                UiPanel.field_eb[12]) {
                 var13 = 0;
                 var14 = 0;
                 var10 = 0;
@@ -493,7 +493,7 @@ final class mg extends oh {
                 }
                 uq.a(param3, var7, 20473, 0, -1, var9, -1, param2);
                 if (fn.field_z >= 2 &&
-                  cr.field_eb[12]) {
+                  UiPanel.field_eb[12]) {
                   gd.field_r = true;
                 }
                 if (!gd.field_r) {
@@ -584,7 +584,7 @@ final class mg extends oh {
                       }
                     }
                   } else {
-                    var21 = tr.field_d;
+                    var21 = GameplayScreen.field_d;
                   }
                 } else {
                   var21 = le.field_b;
@@ -625,7 +625,7 @@ final class mg extends oh {
                 }
                 if (var21 != null) {
                   var32 = "<col=A00000>" + (String) (var21);
-                  var33 = uj.a("<br>", "<br><col=A00000>", 0, var32);
+                  var33 = MenuSelectionCursor.a("<br>", "<br><col=A00000>", 0, var32);
                   if (var20 == null) {
                     var20 = var33;
                   } else {
@@ -712,7 +712,7 @@ final class mg extends oh {
 
     static {
         field_J = new int[8192];
-        field_N = new nj();
+        field_N = new IntrusiveDeque();
         field_T = "Cancel draw";
         field_G = "The following settings need to be changed:  ";
         field_L = "Breaking real-world laws";

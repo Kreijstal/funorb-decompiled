@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gg extends li {
-    ra field_r;
+final class gg extends IntrusiveNode {
+    SamplePlaybackStream field_r;
     int field_p;
-    static cr field_o;
+    static UiPanel field_o;
     static int[] field_n;
-    li field_q;
+    IntrusiveNode field_q;
     static String field_s;
 
     final static void a(String param0, boolean param1, java.applet.Applet param2) {
@@ -66,12 +66,12 @@ final class gg extends li {
         }
     }
 
-    gg(ra param0, li param1) {
+    gg(SamplePlaybackStream param0, IntrusiveNode param1) {
         try {
           this.field_r = param0;
           this.field_p = param0.h();
           this.field_q = param1;
-          this.field_r.g(tg.field_e * this.field_p + 128 >> 8);
+          this.field_r.g(DelegatingCanvas.field_e * this.field_p + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "gg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

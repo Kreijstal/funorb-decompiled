@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ac extends oh {
+final class ac extends WidgetWrapper {
     static String field_M;
     static byte[][] field_O;
     static String field_N;
-    static r field_G;
+    static Archive field_G;
     static String field_L;
     static String field_J;
     static int[] field_I;
     static int[] field_K;
 
-    private ac(int param0, int param1, int param2, int param3, ur param4, uf param5, iq param6) {
+    private ac(int param0, int param1, int param2, int param3, WidgetListener param4, uf param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_C = param6;
@@ -32,14 +32,14 @@ final class ac extends oh {
           field_N = null;
           return;
         }
-        field_G = (r) null;
+        field_G = (Archive) null;
         field_O = (byte[][]) null;
         field_L = null;
         field_J = null;
         field_N = null;
     }
 
-    final void a(iq param0, byte param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
         qg var7 = null;
         try {
           super.a(param0, param1, param2, param3, param4, param5);

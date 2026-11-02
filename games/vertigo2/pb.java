@@ -22,9 +22,9 @@ final class pb {
 
     final static void a(byte param0, int param1, int param2, int param3) {
         oi.field_b = param3;
-        ma.field_m = param2;
+        ImageProducerRasterBuffer.field_m = param2;
         int var4 = -120 / ((64 - param0) / 39);
-        sr.field_a = param1;
+        SecondaryNodeDeque.field_a = param1;
     }
 
     final static void a(int param0, int param1, int param2, jp param3, int param4, int param5, int param6, int param7) {
@@ -166,11 +166,11 @@ final class pb {
               stackIn_40_0 = null;
             }
             var21 = stackIn_40_0;
-            var22 = nj.field_a[var15Lifetime1];
+            var22 = IntrusiveDeque.field_a[var15Lifetime1];
             var23 = ml.field_t[var15Lifetime1];
-            var24 = nj.field_a[var16];
+            var24 = IntrusiveDeque.field_a[var16];
             var25 = ml.field_t[var16];
-            var26 = nj.field_a[var17];
+            var26 = IntrusiveDeque.field_a[var17];
             var27 = ml.field_t[var17];
             if (var18 == var19 &&
               var20 == var19) {

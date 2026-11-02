@@ -3,38 +3,38 @@
  */
 import java.util.*;
 
-final class uh extends cr {
-    cr field_pc;
-    cr[] field_Zb;
+final class uh extends UiPanel {
+    UiPanel field_pc;
+    UiPanel[] field_Zb;
     int field_uc;
-    cr field_Ob;
+    UiPanel field_Ob;
     boolean field_qc;
     boolean field_Sb;
     int field_Yb;
-    cr field_Kb;
-    cr field_bc;
-    cr field_Rb;
-    cr field_ec;
-    cr field_ac;
+    UiPanel field_Kb;
+    UiPanel field_bc;
+    UiPanel field_Rb;
+    UiPanel field_ec;
+    UiPanel field_ac;
     int field_Qb;
-    static mi field_Wb;
+    static BitPacketBuffer field_Wb;
     long field_Pb;
     int field_ic;
     boolean field_Tb;
-    cr field_rc;
+    UiPanel field_rc;
     boolean field_dc;
-    cr field_Vb;
+    UiPanel field_Vb;
     String[] field_Hb;
     static int field_oc;
     boolean field_vc;
     long field_hc;
     int field_Lb;
-    cr field_jc;
-    cr field_Jb;
+    UiPanel field_jc;
+    UiPanel field_Jb;
     boolean field_Mb;
-    cr field_cc;
-    cr field_nc;
-    cr field_gc;
+    UiPanel field_cc;
+    UiPanel field_nc;
+    UiPanel field_gc;
     boolean field_kc;
     int field_tc;
     int field_Ub;
@@ -42,9 +42,9 @@ final class uh extends cr {
     static int field_mc;
     String field_Nb;
     static vi field_Xb;
-    cr field_Ib;
+    UiPanel field_Ib;
     static String field_lc;
-    cr field_wc;
+    UiPanel field_wc;
     static volatile boolean field_sc;
     int field_xc;
 
@@ -64,7 +64,7 @@ final class uh extends cr {
     }
 
     uh(int param0) {
-        super(0L, (cr) null);
+        super(0L, (UiPanel) null);
         this.field_fc = new byte[param0];
     }
 
@@ -75,7 +75,7 @@ final class uh extends cr {
         return !this.e(param0 ^ -3977) ? true : false;
     }
 
-    final static void a(boolean param0, er param1) {
+    final static void a(boolean param0, Sprite param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;

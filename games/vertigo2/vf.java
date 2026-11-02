@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf extends ji {
+final class vf extends TextureOperator {
     static int[] field_y;
-    static cr field_B;
+    static UiPanel field_B;
     private int field_z;
-    static nj field_C;
+    static IntrusiveDeque field_C;
 
     final int[] c(int param0, int param1) {
         int[] stackIn_35_0 = null;
@@ -34,7 +34,7 @@ final class vf extends ji {
         int var5;
         int var8;
         int var9;
-        ed var10;
+        PacketBuffer var10;
         int[] var11;
         int[] var18;
         int[] var19;
@@ -181,8 +181,8 @@ final class vf extends ji {
           }
         }
         if (param1 <= 91) {
-          var10 = (ed) null;
-          this.a((byte) -30, 29, (ed) null);
+          var10 = (PacketBuffer) null;
+          this.a((byte) -30, 29, (PacketBuffer) null);
         }
         return var3;
     }
@@ -192,7 +192,7 @@ final class vf extends ji {
         this.field_z = 6;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_10_1 = false;
@@ -208,10 +208,10 @@ final class vf extends ji {
           }
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_z = param2.h(param0 ^ -101);
+            this.field_z = param2.readUnsignedByte(param0 ^ -101);
           } else {
             if (1 == var4_int) {
-              stackIn_10_1 = (param2.h(param0 - 121) == 1);
+              stackIn_10_1 = (param2.readUnsignedByte(param0 - 121) == 1);
               this.field_o = stackIn_10_1;
             }
           }
@@ -233,7 +233,7 @@ final class vf extends ji {
     public static void b(byte param0) {
         field_C = null;
         if (param0 != 36) {
-          field_B = (cr) null;
+          field_B = (UiPanel) null;
         }
         field_B = null;
         field_y = null;
@@ -747,6 +747,6 @@ final class vf extends ji {
     }
 
     static {
-        field_C = new nj();
+        field_C = new IntrusiveDeque();
     }
 }

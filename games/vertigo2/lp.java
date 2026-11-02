@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lp extends ji {
+final class lp extends TextureOperator {
     static int field_D;
     static int[] field_B;
     static java.math.BigInteger field_E;
@@ -62,16 +62,16 @@ final class lp extends ji {
               if (var3 != 2) {
                 if (var3 != 1) {
                   if (var3 == 3) {
-                    if (cr.field_eb[86]) {
-                      stackIn_42_0 = (cr.field_eb[82]) ? 1 : 0;
+                    if (UiPanel.field_eb[86]) {
+                      stackIn_42_0 = (UiPanel.field_eb[82]) ? 1 : 0;
                     } else {
                       stackIn_42_0 = 0;
                     }
                     var2 = stackIn_42_0;
                   } else {
                     if (0 == var3) {
-                      if (!cr.field_eb[86]) {
-                        stackIn_49_0 = (!cr.field_eb[82]) ? 1 : 0;
+                      if (!UiPanel.field_eb[86]) {
+                        stackIn_49_0 = (!UiPanel.field_eb[82]) ? 1 : 0;
                       } else {
                         stackIn_49_0 = 0;
                       }
@@ -79,16 +79,16 @@ final class lp extends ji {
                     }
                   }
                 } else {
-                  if (!cr.field_eb[86]) {
-                    stackIn_35_0 = (cr.field_eb[82]) ? 1 : 0;
+                  if (!UiPanel.field_eb[86]) {
+                    stackIn_35_0 = (UiPanel.field_eb[82]) ? 1 : 0;
                   } else {
                     stackIn_35_0 = 0;
                   }
                   var2 = stackIn_35_0;
                 }
               } else {
-                if (cr.field_eb[86]) {
-                  stackIn_28_0 = (!cr.field_eb[82]) ? 1 : 0;
+                if (UiPanel.field_eb[86]) {
+                  stackIn_28_0 = (!UiPanel.field_eb[82]) ? 1 : 0;
                 } else {
                   stackIn_28_0 = 0;
                 }
@@ -99,14 +99,14 @@ final class lp extends ji {
                 var4 = -(var3Lifetime1 * 12) + var1_int;
                 if (-8 + de.field_f >= 0) {
                   var5 = var4 - 8 + 5 * var3Lifetime1;
-                  fb.field_w[1][var5] = true;
+                  SpriteState.field_w[1][var5] = true;
                   stackIn_54_0 = var5;
                   return stackIn_54_0;
                 }
                 var5Lifetime1 = 7 * var3Lifetime1 + var4;
                 mb.field_s = mb.field_s ^ 1 << var5Lifetime1;
-                if (fb.field_w[0].length > var5Lifetime1) {
-                  fb.field_w[0][var5Lifetime1] = true;
+                if (SpriteState.field_w[0].length > var5Lifetime1) {
+                  SpriteState.field_w[0][var5Lifetime1] = true;
                 }
               }
             }
@@ -139,7 +139,7 @@ final class lp extends ji {
         this.field_y = param0;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -152,7 +152,7 @@ final class lp extends ji {
           }
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_y = (param2.h(-11) << 12) / 255;
+            this.field_y = (param2.readUnsignedByte(-11) << 12) / 255;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -79,7 +79,7 @@ final class go {
         }
     }
 
-    private final void a(int param0, ed param1) {
+    private final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -87,11 +87,11 @@ final class go {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        ed var5 = null;
+        PacketBuffer var5 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           while (true) {
-            var3_int = param1.h(-11);
+            var3_int = param1.readUnsignedByte(-11);
             if (0 != var3_int) {
               this.a(var3_int, param1, (byte) -121);
               continue;
@@ -99,8 +99,8 @@ final class go {
             break;
           }
           if (param0 < 108) {
-            var5 = (ed) null;
-            this.a(-60, (ed) null);
+            var5 = (PacketBuffer) null;
+            this.a(-60, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,15 +117,15 @@ final class go {
         }
     }
 
-    private go(r param0, int param1, String param2) {
+    private go(Archive param0, int param1, String param2) {
         this(param0, param1, param0.a(param1, param2, 111));
     }
 
-    go(r param0, String param1, String param2) {
+    go(Archive param0, String param1, String param2) {
         this(param0, param0.a((byte) 122, param1), param2);
     }
 
-    private final void a(int param0, ed param1, byte param2) {
+    private final void a(int param0, PacketBuffer param1, byte param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_56_0 = null;
@@ -142,80 +142,80 @@ final class go {
         try {
           var4_int = 124 / ((param2 - 4) / 62);
           if (param0 == 1) {
-            var5 = param1.a((byte) -11);
+            var5 = param1.readUnsignedShort((byte) -11);
             this.field_e = new int[var5];
             for (var6 = 0; var6 < var5; var6++) {
-              this.field_e[var6] = param1.a((byte) -11);
+              this.field_e[var6] = param1.readUnsignedShort((byte) -11);
             }
             this.field_c = new int[var5];
             for (var6 = 0; var5 > var6; var6++) {
-              this.field_c[var6] = param1.a((byte) -11);
+              this.field_c[var6] = param1.readUnsignedShort((byte) -11);
             }
             for (var6 = 0; var6 < var5; var6++) {
-              this.field_c[var6] = (param1.a((byte) -11) << 16) + this.field_c[var6];
+              this.field_c[var6] = (param1.readUnsignedShort((byte) -11) << 16) + this.field_c[var6];
             }
           } else {
             if (param0 == 2) {
-              this.field_b = param1.a((byte) -11);
+              this.field_b = param1.readUnsignedShort((byte) -11);
               return;
             }
             if (param0 == 3) {
-              var5 = param1.h(-11);
+              var5 = param1.readUnsignedByte(-11);
               this.field_f = new int[1 + var5];
               for (var6 = 0; var6 < var5; var6++) {
-                this.field_f[var6] = param1.h(-11);
+                this.field_f[var6] = param1.readUnsignedByte(-11);
               }
               this.field_f[var5] = 9999999;
               return;
             }
             if (param0 == 5) {
-              param1.h(-11);
+              param1.readUnsignedByte(-11);
               return;
             }
             if (param0 == 6) {
-              param1.a((byte) -11);
+              param1.readUnsignedShort((byte) -11);
               return;
             }
             if (param0 == 7) {
-              param1.a((byte) -11);
+              param1.readUnsignedShort((byte) -11);
               return;
             }
             if (8 == param0) {
-              this.field_j = param1.h(-11);
+              this.field_j = param1.readUnsignedByte(-11);
               this.field_a = false;
               return;
             }
             if (param0 == 9) {
-              param1.h(-11);
+              param1.readUnsignedByte(-11);
               return;
             }
             if (param0 == 10) {
-              param1.h(-11);
+              param1.readUnsignedByte(-11);
               return;
             }
             if (11 == param0) {
-              param1.h(-11);
+              param1.readUnsignedByte(-11);
               return;
             }
             if (12 == param0) {
-              var5 = param1.h(-11);
+              var5 = param1.readUnsignedByte(-11);
               for (var6 = 0; var6 < var5; var6++) {
-                param1.a((byte) -11);
+                param1.readUnsignedShort((byte) -11);
               }
               for (var6 = 0; var6 < var5; var6++) {
-                param1.a((byte) -11);
+                param1.readUnsignedShort((byte) -11);
               }
             } else if (param0 == 13) {
-              var5 = param1.a((byte) -11);
+              var5 = param1.readUnsignedShort((byte) -11);
               this.field_i = new int[var5][];
               for (var6 = 0; var6 < var5; var6++) {
-                var7 = param1.h(-11);
+                var7 = param1.readUnsignedByte(-11);
                 if (0 < var7) {
                   array$0 = new int[var7];
                   this.field_i[var6] = array$0;
-                  this.field_i[var6][0] = param1.m(0);
+                  this.field_i[var6][0] = param1.readUnsignedMedium(0);
                   for (var8 = 1; var8 < var7; var8++) {
-                    this.field_i[var6][var8] = param1.a((byte) -11);
+                    this.field_i[var6][var8] = param1.readUnsignedShort((byte) -11);
                   }
                 }
               }
@@ -249,7 +249,7 @@ final class go {
         field_g = null;
     }
 
-    private go(r param0, int param1, int param2) {
+    private go(Archive param0, int param1, int param2) {
         int var7 = 0;
         byte[] var4 = null;
         int var5 = 0;
@@ -272,7 +272,7 @@ final class go {
           var9 = var10;
           var4 = var9;
           if (var9 != null) {
-            this.a(121, new ed(var11));
+            this.a(121, new PacketBuffer(var11));
           }
           var5 = 0;
           for (var6 = 0; var6 < this.field_c.length; var6++) {

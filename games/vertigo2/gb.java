@@ -5,11 +5,11 @@ import java.io.*;
 
 final class gb {
     static String field_a;
-    static cc field_b;
-    static cr field_c;
+    static BitmapFont field_b;
+    static UiPanel field_c;
     static int field_d;
 
-    final static er[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 28290) {
           field_d = -33;
         }
@@ -66,7 +66,7 @@ final class gb {
         }
     }
 
-    final static void a(int param0, fb param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
+    final static void a(int param0, SpriteState param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
         try {
           if (param7 >= -82) {
             field_a = (String) null;
@@ -86,7 +86,7 @@ final class gb {
         String var18 = null;
         String var19 = null;
         int var12 = 0;
-        dg var14 = null;
+        ClientException var14 = null;
         String var2 = null;
         String var11 = null;
         int var13 = Vertigo2.field_L ? 1 : 0;
@@ -100,10 +100,10 @@ final class gb {
         String var11Lifetime6;
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
-        if (param0 instanceof dg) {
-          var14 = (dg) ((Object) param0);
+        if (param0 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param0);
           var2 = var14.field_e + " | ";
-          param0 = var14.field_a;
+          param0 = var14.cause;
         } else {
           var2 = "";
           var11 = var2;

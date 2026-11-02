@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class vh extends li {
+final class vh extends IntrusiveNode {
     private static float[] field_p;
     private float[] field_t;
     private static byte[] field_P;
@@ -39,7 +39,7 @@ final class vh extends li {
     private boolean field_R;
     private static int field_L;
 
-    private final static boolean a(r param0) {
+    private final static boolean a(Archive param0) {
         byte[] var1 = null;
         if (!field_M) {
           var1 = param0.a(0, 0, (byte) -54);
@@ -56,16 +56,16 @@ final class vh extends li {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        ed var2 = new ed(param0);
-        this.field_y = var2.b(true);
-        this.field_v = var2.b(true);
-        this.field_n = var2.b(true);
-        this.field_I = var2.b(true);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_y = var2.readInt(true);
+        this.field_v = var2.readInt(true);
+        this.field_n = var2.readInt(true);
+        this.field_I = var2.readInt(true);
         if (this.field_I < 0) {
           this.field_I = ~this.field_I;
           this.field_O = true;
         }
-        int var3 = var2.b(true);
+        int var3 = var2.readInt(true);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -73,7 +73,7 @@ final class vh extends li {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.h(-11);
+            var6_int = var2.readUnsignedByte(-11);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
@@ -92,7 +92,7 @@ final class vh extends li {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final ae b() {
+    final PcmSample b() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -124,7 +124,7 @@ final class vh extends li {
           }
         }
         this.field_t = null;
-        return new ae(this.field_y, var1, this.field_n, this.field_I, this.field_O);
+        return new PcmSample(this.field_y, var1, this.field_n, this.field_I, this.field_O);
     }
 
     final static int a(int param0) {
@@ -510,7 +510,7 @@ final class vh extends li {
         return var0;
     }
 
-    final static vh a(r param0, String param1, String param2) {
+    final static vh a(Archive param0, String param1, String param2) {
         try {
           vh var4_ref = null;
           if (!vh.a(param0)) {
@@ -554,7 +554,7 @@ final class vh extends li {
         field_D = null;
     }
 
-    final ae a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -604,7 +604,7 @@ final class vh extends li {
         this.field_t = null;
         var12 = this.field_T;
         this.field_T = null;
-        return new ae(this.field_y, var12, this.field_n, this.field_I, this.field_O);
+        return new PcmSample(this.field_y, var12, this.field_n, this.field_I, this.field_O);
     }
 
     private final static void a(byte[] param0, int param1) {
@@ -613,7 +613,7 @@ final class vh extends li {
         field_Q = 0;
     }
 
-    final static vh a(r param0, int param1, int param2) {
+    final static vh a(Archive param0, int param1, int param2) {
         try {
           vh var4_ref = null;
           if (!vh.a(param0)) {

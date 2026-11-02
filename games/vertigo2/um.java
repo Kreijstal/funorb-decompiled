@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-abstract class um extends iq implements dq {
+abstract class um extends UiWidget implements dq {
     static String field_H;
     static qg field_E;
     static ee field_F;
     static String field_C;
-    iq[] field_G;
+    UiWidget[] field_G;
     static String field_D;
 
     void a(boolean param0, int param1, int param2, int param3) {
         int var5 = 0;
-        iq var6;
+        UiWidget var6;
         int var7;
-        ur stackIn_7_0 = null;
+        WidgetListener stackIn_7_0 = null;
         boolean stackIn_7_1 = false;
         int stackIn_7_2 = 0;
         boolean stackIn_8_3;
@@ -24,28 +24,28 @@ abstract class um extends iq implements dq {
           return;
         }
         if (param1 == 0 &&
-          this.field_B != null) {
-          stackIn_7_0 = this.field_B;
+          this.listener != null) {
+          stackIn_7_0 = this.listener;
           stackIn_7_1 = true;
           stackIn_7_2 = param2;
           stackIn_8_3 = (param0) ? false : true;
-          ((ur) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3, (iq) (this), param3);
+          ((WidgetListener) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3, (UiWidget) (this), param3);
         }
         if (null != this.field_G) {
           for (var5 = -1 + this.field_G.length; var5 >= 0; var5--) {
             var6 = this.field_G[var5];
             if (var6 != null) {
-              var6.a(false, param1, param2 + this.field_o, this.field_t + param3);
+              var6.a(false, param1, param2 + this.x, this.y + param3);
             }
           }
         }
     }
 
-    private final boolean a(int param0, iq param1, int param2) {
+    private final boolean a(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        iq var5 = null;
-        iq var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -90,13 +90,13 @@ abstract class um extends iq implements dq {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, iq param3, int param4, byte param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, byte param5, int param6) {
         RuntimeException var8 = null;
         int var9 = 0;
-        iq var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        iq var12 = null;
-        iq[] var13 = null;
+        UiWidget var12 = null;
+        UiWidget[] var13 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -109,13 +109,13 @@ abstract class um extends iq implements dq {
           var13 = this.field_G;
           var9 = 0;
           if (param5 > -107) {
-            var12 = (iq) null;
-            this.a(-62, 27, -12, -87, -46, (byte) -68, (iq) null);
+            var12 = (UiWidget) null;
+            this.a(-62, 27, -12, -87, -46, (byte) -68, (UiWidget) null);
           }
           while (var13.length > var9) {
             var10 = var13[var9];
             if (var10 != null &&
-              var10.a(param0, param1 + this.field_o, this.field_t + param2, param3, param4, (byte) -128, param6)) {
+              var10.a(param0, param1 + this.x, this.y + param2, param3, param4, (byte) -128, param6)) {
               return true;
             }
             var9++;
@@ -138,8 +138,8 @@ abstract class um extends iq implements dq {
     final int c(byte param0) {
         int var4 = 0;
         int var2;
-        iq[] var3;
-        iq var5;
+        UiWidget[] var3;
+        UiWidget var5;
         int var7;
         int var6;
         var7 = Vertigo2.field_L ? 1 : 0;
@@ -160,14 +160,14 @@ abstract class um extends iq implements dq {
         return var2;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, byte param5, iq param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, byte param5, UiWidget param6) {
         int var9 = 0;
-        iq[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        iq var10_ref_iq = null;
+        UiWidget var10_ref_iq = null;
         int var10 = 0;
         int var11 = 0;
-        iq[] var12 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -205,10 +205,10 @@ abstract class um extends iq implements dq {
 
     final String a(boolean param0) {
         int var3 = 0;
-        iq[] var2;
-        iq var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var6;
-        iq[] var7;
+        UiWidget[] var7;
         String var5;
         var6 = Vertigo2.field_L ? 1 : 0;
         if (this.field_G == null) {
@@ -249,7 +249,7 @@ abstract class um extends iq implements dq {
             var1 = (gg) (fm.field_b.a((byte) 100));
             while (var1 != null) {
               if (!var1.field_q.b(param0 + 91)) {
-                var1.c(2);
+                var1.unlink(2);
               }
               var1 = (gg) (fm.field_b.b(104));
             }
@@ -257,7 +257,7 @@ abstract class um extends iq implements dq {
               var1Lifetime1 = (gg) (ro.field_b.a((byte) 100));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_q.b(86)) {
-                  var1Lifetime1.c(2);
+                  var1Lifetime1.unlink(2);
                 }
                 var1Lifetime1 = (gg) (ro.field_b.b(96));
               }
@@ -278,8 +278,8 @@ abstract class um extends iq implements dq {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.b(!param0 ? true : false);
     }
 
@@ -341,9 +341,9 @@ abstract class um extends iq implements dq {
         int var8 = 0;
         StringBuilder discarded$6 = null;
         StringBuilder discarded$5 = null;
-        iq var7 = null;
+        UiWidget var7 = null;
         int var9 = 0;
-        iq[] var10 = null;
+        UiWidget[] var10 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -393,13 +393,13 @@ abstract class um extends iq implements dq {
         }
     }
 
-    private final iq a(byte param0) {
+    private final UiWidget a(byte param0) {
         int var4 = 0;
-        iq[] var2;
+        UiWidget[] var2;
         int var3;
-        iq var5;
+        UiWidget var5;
         int var6;
-        iq[] var7;
+        UiWidget[] var7;
         var6 = Vertigo2.field_L ? 1 : 0;
         if (this.field_G == null) {
           return null;
@@ -426,11 +426,11 @@ abstract class um extends iq implements dq {
 
     final void d(byte param0) {
         int var3 = 0;
-        iq[] var2;
-        iq var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var5;
-        iq[] var7;
-        iq var6;
+        UiWidget[] var7;
+        UiWidget var6;
         var5 = Vertigo2.field_L ? 1 : 0;
         var7 = this.field_G;
         var2 = var7;
@@ -441,12 +441,12 @@ abstract class um extends iq implements dq {
           }
         }
         if (param0 != 2) {
-          var6 = (iq) null;
-          this.a(101, -56, -30, -66, -25, (byte) -87, (iq) null);
+          var6 = (UiWidget) null;
+          this.a(101, -56, -30, -66, -25, (byte) -87, (UiWidget) null);
         }
     }
 
-    private final boolean a(iq param0, byte param1) {
+    private final boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -473,12 +473,12 @@ abstract class um extends iq implements dq {
         }
     }
 
-    void a(byte param0, int param1, int param2, iq param3) {
+    void a(byte param0, int param1, int param2, UiWidget param3) {
         int var6 = 0;
-        iq[] var5 = null;
-        iq var7 = null;
+        UiWidget[] var5 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        iq[] var9 = null;
+        UiWidget[] var9 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -498,7 +498,7 @@ abstract class um extends iq implements dq {
           for (var6 = 0; var9.length > var6; var6++) {
             var7 = var9[var6];
             if (var7 != null) {
-              var7.a((byte) 46, this.field_o + param1, this.field_t + param2, param3);
+              var7.a((byte) 46, this.x + param1, this.y + param2, param3);
             }
           }
           return;
@@ -531,7 +531,7 @@ abstract class um extends iq implements dq {
         }
     }
 
-    private final boolean b(byte param0, iq param1) {
+    private final boolean b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -558,13 +558,13 @@ abstract class um extends iq implements dq {
         }
     }
 
-    final boolean a(byte param0, iq param1) {
+    final boolean a(byte param0, UiWidget param1) {
         int var4 = 0;
-        iq[] var3 = null;
+        UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
-        iq var5 = null;
+        UiWidget var5 = null;
         int var6 = 0;
-        iq[] var7 = null;
+        UiWidget[] var7 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -598,15 +598,15 @@ abstract class um extends iq implements dq {
         }
     }
 
-    um(int param0, int param1, int param2, int param3, ur param4) {
+    um(int param0, int param1, int param2, int param3, WidgetListener param4) {
         super(param0, param1, param2, param3, param4, (uf) null);
     }
 
-    private final boolean a(int param0, iq param1, byte param2) {
+    private final boolean a(int param0, UiWidget param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        iq var5 = null;
-        iq var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -650,14 +650,14 @@ abstract class um extends iq implements dq {
         }
     }
 
-    final boolean a(char param0, int param1, int param2, iq param3) {
+    final boolean a(char param0, int param1, int param2, UiWidget param3) {
         int var6 = 0;
-        iq[] var5 = null;
+        UiWidget[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        iq var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        iq[] var9 = null;
+        UiWidget[] var9 = null;
         boolean stackIn_19_0 = false;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -685,7 +685,7 @@ abstract class um extends iq implements dq {
           if (var5_int != 80) {
             return false;
           }
-          if (!cr.field_eb[81]) {
+          if (!UiPanel.field_eb[81]) {
             stackIn_19_0 = this.a(param3, (byte) 121);
           } else {
             stackIn_19_0 = this.b((byte) 104, param3);
@@ -707,12 +707,12 @@ abstract class um extends iq implements dq {
 
     abstract void b(boolean param0);
 
-    final void a(iq param0, byte param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
-        iq[] var7 = null;
-        iq var9 = null;
+        UiWidget[] var7 = null;
+        UiWidget var9 = null;
         int var10 = 0;
-        iq[] var11 = null;
+        UiWidget[] var11 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -728,7 +728,7 @@ abstract class um extends iq implements dq {
           for (var8 = 0; var8 < var11.length; var8++) {
             var9 = var11[var8];
             if (var9 != null) {
-              var9.a(param0, (byte) 46, param2 + this.field_o, this.field_t + param3, param4, param5);
+              var9.a(param0, (byte) 46, param2 + this.x, this.y + param3, param4, param5);
             }
           }
           if (param1 != 46) {

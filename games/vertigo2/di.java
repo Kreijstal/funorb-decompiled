@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class di extends ji {
+final class di extends TextureOperator {
     static String field_B;
     private int field_A;
     static String field_y;
     private int field_z;
 
-    final static jp a(mi param0, boolean param1) {
+    final static jp a(BitPacketBuffer param0, boolean param1) {
         int var7 = 0;
         jp stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
@@ -23,7 +23,7 @@ final class di extends ji {
         int var8 = 0;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
-          var2_int = param0.c((byte) -120, 8);
+          var2_int = param0.readBits((byte) -120, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -33,16 +33,16 @@ final class di extends ji {
           var3 = id.a(param0, -31980) ? 1 : 0;
           var4 = id.a(param0, -31980) ? 1 : 0;
           var5 = new jp();
-          var5.field_F = (short)param0.c((byte) -96, 16);
+          var5.field_F = (short)param0.readBits((byte) -96, 16);
           var5.field_I = ee.a(param0, -126, 16, var5.field_I);
           var5.field_r = ee.a(param0, -92, 16, var5.field_r);
           var5.field_m = ee.a(param0, -120, 16, var5.field_m);
-          var5.field_w = (short)param0.c((byte) -114, 16);
+          var5.field_w = (short)param0.readBits((byte) -114, 16);
           var5.field_p = ee.a(param0, -39, 16, var5.field_p);
           var5.field_L = ee.a(param0, -95, 16, var5.field_L);
           var5.field_c = ee.a(param0, -40, 16, var5.field_c);
           if (var3 != 0) {
-            var5.field_K = (short)param0.c((byte) -125, 16);
+            var5.field_K = (short)param0.readBits((byte) -125, 16);
             var5.field_h = ee.a(param0, -90, 16, var5.field_h);
             var5.field_O = ee.a(param0, -34, 16, var5.field_O);
             var5.field_a = ee.a(param0, -109, 16, var5.field_a);
@@ -51,7 +51,7 @@ final class di extends ji {
             var5.field_C = ee.a(param0, -30, 16, var5.field_C);
           }
           if (var4 != 0) {
-            param0.c((byte) -94, 16);
+            param0.readBits((byte) -94, 16);
             var5.field_N = ee.a(param0, -65, 16, var5.field_N);
             var5.field_d = ee.a(param0, -55, 16, var5.field_d);
             var5.field_Q = ee.a(param0, -117, 16, var5.field_Q);
@@ -208,7 +208,7 @@ final class di extends ji {
         int var3 = Vertigo2.field_L ? 1 : 0;
         int var1_intLifetime1;
         try {
-          wa.field_i.b(-1);
+          IsaacCipher.field_i.b(-1);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             l.field_b[var1_int] = 0L;
           }
@@ -235,7 +235,7 @@ final class di extends ji {
         ui.field_g = 2;
         CharSequence var5 = (CharSequence) ((Object) param2);
         sm.field_Kb = rc.a(var5, 320);
-        il.field_a = true;
+        MouseWheelInput.field_a = true;
         if (param0 <= 14) {
           return;
         }
@@ -311,7 +311,7 @@ final class di extends ji {
         return var3;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_14_1 = false;
@@ -329,14 +329,14 @@ final class di extends ji {
           if (0 != var4_int) {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                stackIn_14_1 = (param2.h(-11) == 1);
+                stackIn_14_1 = (param2.readUnsignedByte(-11) == 1);
                 this.field_o = stackIn_14_1;
               }
             } else {
-              this.field_A = param2.h(-11);
+              this.field_A = param2.readUnsignedByte(-11);
             }
           } else {
-            this.field_z = param2.h(-11);
+            this.field_z = param2.readUnsignedByte(-11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

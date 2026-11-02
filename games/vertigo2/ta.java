@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta extends gp {
+final class ta extends DualLinkNode {
     he field_v;
     private float field_t;
     private int[] field_x;
@@ -9,7 +9,7 @@ final class ta extends gp {
     private boolean field_y;
     private boolean field_w;
 
-    final int[] a(ka param0, r param1, float param2, boolean param3) {
+    final int[] a(ka param0, Archive param1, float param2, boolean param3) {
         int[] var5;
         int[] var6;
         int[] var7;
@@ -279,18 +279,18 @@ final class ta extends gp {
         return this.field_x;
     }
 
-    ta(ed param0) {
+    ta(PacketBuffer param0) {
         this.field_v = new he(param0);
-        this.field_w = param0.h(-11) == 1 ? true : false;
-        this.field_y = param0.h(-11) == 1 ? true : false;
-        param0.h(-11);
-        param0.h(-11);
-        int var2 = param0.h(-11) & 3;
-        param0.g(98);
-        param0.g(126);
-        param0.h(-11);
-        param0.h(-11);
-        param0.h(-11);
+        this.field_w = param0.readUnsignedByte(-11) == 1 ? true : false;
+        this.field_y = param0.readUnsignedByte(-11) == 1 ? true : false;
+        param0.readUnsignedByte(-11);
+        param0.readUnsignedByte(-11);
+        int var2 = param0.readUnsignedByte(-11) & 3;
+        param0.readSignedByte(98);
+        param0.readSignedByte(126);
+        param0.readUnsignedByte(-11);
+        param0.readUnsignedByte(-11);
+        param0.readUnsignedByte(-11);
         if (var2 == 1) {
           return;
         }

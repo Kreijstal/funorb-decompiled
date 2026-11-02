@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends sn {
+final class fk extends PcmStream {
     static String field_A;
     private int field_y;
     private int field_E;
@@ -99,7 +99,7 @@ final class fk extends sn {
         return param1 < 6144 ? -jc.field_b[-param1 + 6144] : jc.field_b[param1 - 6144];
     }
 
-    final sn a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -386,9 +386,9 @@ final class fk extends sn {
         return 2;
     }
 
-    final static er[] c(int param0, int param1, int param2) {
+    final static Sprite[] c(int param0, int param1, int param2) {
         if (param0 > -126) {
-          return (er[]) null;
+          return (Sprite[]) null;
         }
         return ca.a((byte) -123, param1, 1, param2);
     }
@@ -481,11 +481,11 @@ final class fk extends sn {
               var6 = uc.a(mn.field_q[var3_int], true, false);
               var7 = -(var6 >> 1) + vm.field_c;
               var4 = var4 + al.field_z;
-              if (pe.a(kd.field_z + (qc.field_z << 1), var4, param0, param2, (byte) 17, var7 - gl.field_l, (gl.field_l << 1) + var6)) {
+              if (pe.a(GameShell.field_z + (qc.field_z << 1), var4, param0, param2, (byte) 17, var7 - gl.field_l, (gl.field_l << 1) + var6)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (kd.field_z + ((qc.field_z << 1) + al.field_z));
+              var4 = var4 + (GameShell.field_z + ((qc.field_z << 1) + al.field_z));
             }
             var3_int++;
           }
@@ -498,7 +498,7 @@ final class fk extends sn {
         }
     }
 
-    final sn c() {
+    final PcmStream c() {
         return null;
     }
 

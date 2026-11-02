@@ -6,7 +6,7 @@ final class jr implements Runnable {
     volatile boolean field_a;
     static wp field_e;
     static int[] field_f;
-    jj field_c;
+    PlatformTaskDispatcher field_c;
     volatile dd[] field_d;
 
     final static String[] a(byte param0, char param1, String param2) {
@@ -89,7 +89,7 @@ final class jr implements Runnable {
     }
 
     final static void a(int param0, int param1) {
-        li var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         nf var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -130,9 +130,9 @@ final class jr implements Runnable {
         om.field_D = bi.field_j;
         km.i(202);
         qo.field_D.a(0, 14017, ca.field_h.field_Fb, 0, -2 + (-40 + ca.field_h.field_db));
-        bf.field_c.a(86, il.field_k.field_Fb, r.field_f, 0, 0);
-        int var1 = 2 + r.field_f;
-        im.field_j.a(94, il.field_k.field_Fb, il.field_k.field_db - (db.field_S ? var1 : 0), !db.field_S ? 0 : var1, 0);
+        bf.field_c.a(86, MouseWheelInput.field_k.field_Fb, Archive.field_f, 0, 0);
+        int var1 = 2 + Archive.field_f;
+        im.field_j.a(94, MouseWheelInput.field_k.field_Fb, MouseWheelInput.field_k.field_db - (db.field_S ? var1 : 0), !db.field_S ? 0 : var1, 0);
         po.b((byte) -52);
         vb.field_j.a(123, ca.field_h.field_Fb, 40, ca.field_h.field_db - 40, 0);
         qn.field_s.a(121, ud.field_A.field_Fb, 30, 0, 0);
@@ -144,7 +144,7 @@ final class jr implements Runnable {
         ok.field_b.a(78, 48, 30, 5, 205);
         int var3 = !db.field_S ? 200 : 250;
         tp.field_Nb.a(98, 363 - var3, 30, 5, var3 + 5);
-        sa.field_b.a(72, -365 + (-5 + (ud.field_A.field_Fb - 5)), 30, 5, 370);
+        MouseInputHandler.field_b.a(72, -365 + (-5 + (ud.field_A.field_Fb - 5)), 30, 5, 370);
         uk.field_v.a(37, 2, re.field_k, -5 + (ja.field_b.field_db - 5 - 32), 5, ja.field_b.field_Fb - 10, 3124);
         int var4 = (ud.field_A.field_Fb + 2) / 2;
         b.field_h.a(125, -2 + var4, 40, -40 + ud.field_A.field_db, 0);

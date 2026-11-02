@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wb extends ji {
+final class wb extends TextureOperator {
     private int field_y;
     private int field_A;
     private int field_D;
@@ -44,7 +44,7 @@ final class wb extends ji {
         int var9;
         int var10;
         int var11;
-        ed var12;
+        PacketBuffer var12;
         int[] var13;
         int var7Lifetime1;
         int var7Lifetime2;
@@ -125,8 +125,8 @@ final class wb extends ji {
           }
         }
         if (param1 <= 91) {
-          var12 = (ed) null;
-          this.a((byte) -116, 10, (ed) null);
+          var12 = (PacketBuffer) null;
+          this.a((byte) -116, 10, (PacketBuffer) null);
         }
         return var13;
     }
@@ -151,7 +151,7 @@ final class wb extends ji {
         return true;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -166,29 +166,29 @@ final class wb extends ji {
           }
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_A = param2.a((byte) -11);
+            this.field_A = param2.readUnsignedShort((byte) -11);
           } else {
             if (var4_int == 1) {
-              this.field_y = param2.a((byte) -11);
+              this.field_y = param2.readUnsignedShort((byte) -11);
             } else {
               if (var4_int != 2) {
                 if (var4_int != 3) {
                   if (var4_int == 4) {
-                    this.field_z = param2.a((byte) -11);
+                    this.field_z = param2.readUnsignedShort((byte) -11);
                   } else {
                     if (var4_int == 5) {
-                      this.field_D = param2.a((byte) -11);
+                      this.field_D = param2.readUnsignedShort((byte) -11);
                     } else {
                       if (var4_int == 6) {
-                        this.field_B = param2.a((byte) -11);
+                        this.field_B = param2.readUnsignedShort((byte) -11);
                       }
                     }
                   }
                 } else {
-                  this.field_G = param2.a((byte) -11);
+                  this.field_G = param2.readUnsignedShort((byte) -11);
                 }
               } else {
-                this.field_F = param2.a((byte) -11);
+                this.field_F = param2.readUnsignedShort((byte) -11);
               }
             }
           }
@@ -215,7 +215,7 @@ final class wb extends ji {
         if (param2 <= 85) {
           wb.b((byte) 118);
         }
-        var5 = qb.field_b[var4 * 255 >> 12 & 255];
+        var5 = JaggrabClient.field_b[var4 * 255 >> 12 & 255];
         var5 = (var5 << 12) / this.field_z;
         var5 = (var5 << 12) / this.field_B;
         var5 = var5 * this.field_D >> 12;
@@ -228,7 +228,7 @@ final class wb extends ji {
         int var5;
         boolean stackIn_6_0 = false;
         var4 = this.field_z * (param0 - param1) >> 12;
-        var5 = qb.field_b[var4 * 255 >> 12 & 255];
+        var5 = JaggrabClient.field_b[var4 * 255 >> 12 & 255];
         var5 = (var5 << 12) / this.field_z;
         var5 = (var5 << 12) / this.field_B;
         var5 = var5 * this.field_D >> 12;

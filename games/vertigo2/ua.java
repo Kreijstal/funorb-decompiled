@@ -4,7 +4,7 @@
 final class ua {
     static int field_e;
     static int field_a;
-    static cr field_c;
+    static UiPanel field_c;
     static String field_b;
     static String field_f;
     static String field_d;
@@ -21,7 +21,7 @@ final class ua {
         field_g = null;
     }
 
-    final static void a(int param0, er[] param1, int param2, int param3, int param4, int param5, int param6, er[] param7, int param8, cc param9, int param10, int param11, int param12, int param13, int param14, int param15, er[] param16, int param17, int param18, byte param19, cc param20) {
+    final static void a(int param0, Sprite[] param1, int param2, int param3, int param4, int param5, int param6, Sprite[] param7, int param8, BitmapFont param9, int param10, int param11, int param12, int param13, int param14, int param15, Sprite[] param16, int param17, int param18, byte param19, BitmapFont param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

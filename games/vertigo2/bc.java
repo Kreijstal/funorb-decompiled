@@ -6,7 +6,7 @@ final class bc {
     static int field_c;
     static String field_a;
 
-    final static void a(int param0, int param1, byte param2, er[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, byte param2, Sprite[] param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;

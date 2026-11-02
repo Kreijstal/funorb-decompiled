@@ -1,0 +1,146 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+    private java.awt.image.ColorModel field_j;
+    static String field_k;
+    private java.awt.image.ImageConsumer field_l;
+    static int field_m;
+
+    private final synchronized void a(byte param0) {
+        if (param0 != -8) {
+          this.a((byte) 5);
+          if (this.field_l == null) {
+            return;
+          }
+          this.field_l.setPixels(0, 0, this.field_i, this.field_d, this.field_j, this.field_e, 0, this.field_i);
+          this.field_l.imageComplete(2);
+          return;
+        }
+        if (this.field_l == null) {
+          return;
+        }
+        this.field_l.setPixels(0, 0, this.field_i, this.field_d, this.field_j, this.field_e, 0, this.field_i);
+        this.field_l.imageComplete(2);
+    }
+
+    public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
+        RuntimeException var7 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_4_0 = var7;
+          stackIn_4_1 = new StringBuilder().append("ma.imageUpdate(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw wn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
+        try {
+          this.field_l = param0;
+          param0.setDimensions(this.field_i, this.field_d);
+          param0.setProperties((Hashtable) null);
+          param0.setColorModel(this.field_j);
+          param0.setHints(14);
+        } catch (RuntimeException runtimeException) {
+          throw wn.a((Throwable) ((Object) runtimeException), "ma.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(boolean param0, int param1) {
+        if (param1 < 53) {
+          return;
+        }
+        td.field_c.b(param0, 0);
+        ql var2 = lq.field_a;
+        if (var2 == null) {
+          return;
+        }
+        var2.a(td.field_c.field_ob, 54, td.field_c.field_C);
+    }
+
+    public static void c(int param0) {
+        field_k = null;
+        int var1 = -5 % ((param0 - 1) / 38);
+    }
+
+    public final void startProduction(java.awt.image.ImageConsumer param0) {
+        try {
+          this.addConsumer(param0);
+        } catch (RuntimeException runtimeException) {
+          throw wn.a((Throwable) ((Object) runtimeException), "ma.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void a(java.awt.Graphics param0, int param1, int param2, int param3) {
+        try {
+          if (param2 != 15698) {
+            java.awt.Component var6 = (java.awt.Component) null;
+            this.a((java.awt.Component) null, -69, -63, 49);
+          }
+          this.a((byte) -8);
+          param0.drawImage(this.field_b, param3, param1, (java.awt.image.ImageObserver) (this));
+        } catch (RuntimeException runtimeException) {
+          throw wn.a((Throwable) ((Object) runtimeException), "ma.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    final void a(java.awt.Component param0, int param1, int param2, int param3) {
+        this.field_d = param3;
+        this.field_e = new int[1 + param3 * param2];
+        this.field_i = param2;
+        this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+        this.field_b = param0.createImage((java.awt.image.ImageProducer) (this));
+        this.a((byte) -8);
+        param0.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
+        if (param1 != -3) {
+          return;
+        }
+        try {
+          this.a((byte) -8);
+          param0.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
+          this.a((byte) -8);
+          param0.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
+          this.a(44);
+        } catch (RuntimeException runtimeException) {
+          throw wn.a((Throwable) ((Object) runtimeException), "ma.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
+        try {
+          if (param0 == this.field_l) {
+            this.field_l = null;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw wn.a((Throwable) ((Object) runtimeException), "ma.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
+        return param0 == this.field_l;
+    }
+
+    public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
+    }
+
+    ImageProducerRasterBuffer() {
+    }
+
+    static {
+        field_k = "Accept";
+    }
+}

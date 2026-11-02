@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eq extends ji {
+final class eq extends TextureOperator {
     private int field_y;
     private int field_A;
-    static cr field_z;
+    static UiPanel field_z;
     static String field_E;
     static fe field_F;
     static String field_B;
@@ -182,7 +182,7 @@ final class eq extends ji {
         return var6.toString();
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -195,15 +195,15 @@ final class eq extends ji {
         try {
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_y = param2.a((byte) -11);
+            this.field_y = param2.readUnsignedShort((byte) -11);
           } else {
             if (1 != var4_int) {
               if (var4_int == 2) {
-                stackIn_11_1 = (1 == param2.h(-11));
+                stackIn_11_1 = (1 == param2.readUnsignedByte(-11));
                 this.field_o = stackIn_11_1;
               }
             } else {
-              this.field_A = param2.a((byte) -11);
+              this.field_A = param2.readUnsignedShort((byte) -11);
             }
           }
           if (param0 != 110) {

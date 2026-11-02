@@ -1270,7 +1270,7 @@ final class fc extends bn {
           field_e = 0;
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < this.field_w; var8Lifetime1++) {
-          L45: {
+          regionExit1: {
             if (this.field_bb[var8Lifetime1] != -2) {
               var9 = this.field_o[var8Lifetime1];
               var10 = this.field_a[var8Lifetime1];
@@ -1317,7 +1317,7 @@ final class fc extends bn {
                       var28 = field_j[var27];
                       if (var28 == 64) {
                         if (field_e == 512) {
-                          break L45;
+                          break regionExit1;
                         }
                         fieldTemp$7 = field_e;
                         field_e = field_e + 1;
@@ -1332,10 +1332,10 @@ final class fc extends bn {
                     }
                   }
                 }
-                break L45;
+                break regionExit1;
               }
               if (param1 &&
-                this.a(bj.field_h + oo.field_l, fb.field_E + oo.field_e, field_cb[var9], field_cb[var10], field_cb[var11], var12, var13, var14_int)) {
+                this.a(RandomAccessCacheFile.field_h + oo.field_l, SpriteState.field_E + oo.field_e, field_cb[var9], field_cb[var10], field_cb[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = ec.field_C;
                 ec.field_C = ec.field_C + 1;
                 un.field_Mb[fieldTemp$13] = param2;
@@ -1359,7 +1359,7 @@ final class fc extends bn {
                     var16Lifetime2 = field_j[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
                       if (field_e == 512) {
-                        break L45;
+                        break regionExit1;
                       }
                       fieldTemp$14 = field_e;
                       field_e = field_e + 1;
@@ -2014,7 +2014,7 @@ final class fc extends bn {
         this.field_M = (byte) 0;
     }
 
-    fc(lg param0, int param1, int param2, int param3, int param4, int param5) {
+    fc(Model param0, int param1, int param2, int param3, int param4, int param5) {
         int dupTemp$1 = 0;
         int incrementValue$0 = 0;
         int var7;

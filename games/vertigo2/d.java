@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class d extends iq {
+class d extends UiWidget {
     private boolean field_D;
     static float field_C;
     boolean field_F;
@@ -57,7 +57,7 @@ class d extends iq {
         }
     }
 
-    boolean a(int param0, int param1, int param2, iq param3, int param4, byte param5, int param6) {
+    boolean a(int param0, int param1, int param2, UiWidget param3, int param4, byte param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -199,7 +199,7 @@ class d extends iq {
         }
     }
 
-    boolean a(byte param0, iq param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -215,7 +215,7 @@ class d extends iq {
             this.field_D = true;
             if (null != this.field_v &&
               this.field_v instanceof hg) {
-              ((hg) (this.field_v)).a(9787, (iq) (this), this.field_D);
+              ((hg) (this.field_v)).a(9787, (UiWidget) (this), this.field_D);
             }
             return true;
           }
@@ -239,7 +239,7 @@ class d extends iq {
         int fieldTemp$0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        mi var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;
@@ -262,24 +262,24 @@ class d extends iq {
             return;
           }
           var1 = id.field_f;
-          var2 = var1.h(-11);
+          var2 = var1.readUnsignedByte(-11);
           if (var2 == 0) {
             if (null == jn.field_g) {
               jn.field_g = new fi(128);
               vd.field_a = 0;
             }
-            stackIn_14_0 = (1 != var1.h(-11)) ? 0 : 1;
+            stackIn_14_0 = (1 != var1.readUnsignedByte(-11)) ? 0 : 1;
             var3_int = stackIn_14_0;
-            var4_ref_String = var1.f(128);
+            var4_ref_String = var1.readString(128);
             if (var3_int == 0) {
               var5 = var4_ref_String;
             }
             if (var3_int != 0 ||
               var9 != 0) {
-              var5 = var1.f(128);
+              var5 = var1.readString(128);
             }
             var6 = or.a(56, var4_ref_String);
-            var7_ref = var1.f(128);
+            var7_ref = var1.readString(128);
             var8 = rc.a((CharSequence) ((Object) var4_ref_String), 320);
             if (null == var8) {
               var8 = var4_ref_String;
@@ -296,7 +296,7 @@ class d extends iq {
               fieldTemp$1 = vd.field_a;
               vd.field_a = vd.field_a + 1;
               var6.field_Pb = fieldTemp$1;
-              vj.field_d.a(var6, false);
+              vj.field_d.addFirst(var6, false);
             }
             var6.field_Mb = var4_ref_String;
             var6.field_Ib = var7_ref;
@@ -322,9 +322,9 @@ class d extends iq {
               return;
             }
             ba.field_d = 1;
-            var3 = var1.f(128);
-            dg.field_d = ((String) (var3)).intern();
-            var4 = var1.h(-11);
+            var3 = var1.readString(128);
+            ClientException.field_d = ((String) (var3)).intern();
+            var4 = var1.readUnsignedByte(-11);
             ir.a(var4, (byte) -65);
             return;
           }
@@ -332,12 +332,12 @@ class d extends iq {
             se.field_A = new fi(128);
             sq.field_b = 0;
           }
-          var3Lifetime1 = var1.f(128);
+          var3Lifetime1 = var1.readString(128);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.f(128);
-          var5Lifetime1 = var1.f(128);
+          var4_ref_StringLifetime1 = var1.readString(128);
+          var5Lifetime1 = var1.readString(128);
           var6Lifetime1 = vo.a(var4_ref_StringLifetime1, 0);
           if (var6Lifetime1 == null) {
             var6Lifetime1 = vo.a(var5Lifetime1, 0);
@@ -351,7 +351,7 @@ class d extends iq {
             fieldTemp$0 = sq.field_b;
             sq.field_b = sq.field_b + 1;
             var6Lifetime1.field_Pb = fieldTemp$0;
-            tm.field_a.a(var6Lifetime1, false);
+            tm.field_a.addFirst(var6Lifetime1, false);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -359,7 +359,7 @@ class d extends iq {
           var6Lifetime1.field_Ib = var5Lifetime1;
           var6Lifetime1.field_Mb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Lb = (String) (var3Lifetime1);
-          var6Lifetime1.c(2);
+          var6Lifetime1.unlink(2);
           var7 = (tp) (tm.field_a.a((byte) 100));
           while (var7 != null) {
             if (md.a(1308, var7, var6Lifetime1)) {
@@ -376,7 +376,7 @@ class d extends iq {
               return;
             }
           }
-          tm.field_a.a(var6Lifetime1, false);
+          tm.field_a.addFirst(var6Lifetime1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -385,7 +385,7 @@ class d extends iq {
         }
     }
 
-    d(String param0, ur param1, uf param2) {
+    d(String param0, WidgetListener param1, uf param2) {
         super(param0, param1, param2);
         this.field_D = false;
         this.field_F = true;
@@ -417,7 +417,7 @@ class d extends iq {
             this.field_D = false;
             if (this.field_v != null &&
               this.field_v instanceof hg) {
-              ((hg) (this.field_v)).a(9787, (iq) (this), this.field_D);
+              ((hg) (this.field_v)).a(9787, (UiWidget) (this), this.field_D);
             }
           }
           if (param0 != 2) {
@@ -431,7 +431,7 @@ class d extends iq {
         }
     }
 
-    final void a(iq param0, byte param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, byte param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -444,7 +444,7 @@ class d extends iq {
           }
           this.field_A = 0;
           if (param1 != 46) {
-            this.a('u', -8, -87, (iq) null);
+            this.a('u', -8, -87, (UiWidget) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -461,7 +461,7 @@ class d extends iq {
         }
     }
 
-    boolean a(char param0, int param1, int param2, iq param3) {
+    boolean a(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -495,7 +495,7 @@ class d extends iq {
         this(param0, eb.field_c.field_p, param1);
     }
 
-    void a(byte param0, int param1, int param2, iq param3) {
+    void a(byte param0, int param1, int param2, UiWidget param3) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -505,11 +505,11 @@ class d extends iq {
           super.a((byte) 34, param1, param2, param3);
           if (this.field_A != 0 &&
             ~q.field_v != ~this.field_A) {
-            if (this.a(0, param2, param1, ed.field_n, gb.field_d) &&
+            if (this.a(0, param2, param1, PacketBuffer.field_n, gb.field_d) &&
               q.field_v == 0) {
-              this.a(ed.field_n - param1, this.field_A, (byte) 117, gb.field_d - param2);
+              this.a(PacketBuffer.field_n - param1, this.field_A, (byte) 117, gb.field_d - param2);
             }
-            this.a(param3, (byte) 46, param1, param2, ed.field_n, gb.field_d);
+            this.a(param3, (byte) 46, param1, param2, PacketBuffer.field_n, gb.field_d);
           }
           if (param0 < 6) {
             d.a('ﾬ', -84);
@@ -534,7 +534,7 @@ class d extends iq {
         this.field_F = true;
         this.field_E = true;
         try {
-          this.field_B = eb.field_c.field_q;
+          this.listener = eb.field_c.field_q;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "d.<init>()");
         }

@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends cj implements ij {
+final class qm extends WidgetContainer implements ij {
     private d field_F;
     static ba field_G;
     private d field_E;
     private d field_H;
 
     public qm() {
-        super(0, 0, 476, 225, (ur) null);
+        super(0, 0, 476, 225, (WidgetListener) null);
         this.field_F = new d(pk.field_r, (uf) null);
         this.field_E = new d(tc.field_a, (uf) null);
         this.field_H = new d(fd.field_o, (uf) null);
         vo var1 = new vo();
-        this.field_F.field_B = (ur) ((Object) var1);
-        this.field_E.field_B = (ur) ((Object) var1);
-        this.field_H.field_B = (ur) ((Object) var1);
+        this.field_F.listener = (WidgetListener) ((Object) var1);
+        this.field_E.listener = (WidgetListener) ((Object) var1);
+        this.field_H.listener = (WidgetListener) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_E.a(false, -var3 + this.field_n >> 1, -48 + this.field_s - var2, 30, var4);
-        this.field_H.a(false, var2 + (-var3 + this.field_n >> 1) + var4, -var2 + (this.field_s - 48), 30, var4);
-        this.field_F.a(false, -var3 + this.field_n >> 1, -(var2 * 2) + this.field_s - 78, 30, var3);
+        this.field_E.setBounds(false, -var3 + this.width >> 1, -48 + this.height - var2, 30, var4);
+        this.field_H.setBounds(false, var2 + (-var3 + this.width >> 1) + var4, -var2 + (this.height - 48), 30, var4);
+        this.field_F.setBounds(false, -var3 + this.width >> 1, -(var2 * 2) + this.height - 78, 30, var3);
         this.field_E.field_v = (uf) (this);
         this.field_F.field_v = (uf) (this);
         this.field_H.field_v = (uf) (this);
@@ -32,7 +32,7 @@ final class qm extends cj implements ij {
         this.c((byte) -29, this.field_H);
     }
 
-    final boolean a(char param0, int param1, int param2, iq param3) {
+    final boolean a(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_12_0 = false;
@@ -128,7 +128,7 @@ final class qm extends cj implements ij {
           if (param2 < 76) {
             field_G = (ba) null;
           }
-          if (!lk.a(1, param4, param1, param3, param0)) {
+          if (!RasterBuffer.a(1, param4, param1, param3, param0)) {
             return false;
           }
           if (param3 == 1) {
@@ -163,9 +163,9 @@ final class qm extends cj implements ij {
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        int var5 = this.field_o + param2;
-        int var6 = this.field_t + param3;
-        qc.field_x.a(kl.field_Jb, var5 + 20, var6 + 20, -40 + this.field_n, -50 + this.field_s, 16777215, -1, 1, 0, qc.field_x.field_z);
+        int var5 = this.x + param2;
+        int var6 = this.y + param3;
+        qc.field_x.a(kl.field_Jb, var5 + 20, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, qc.field_x.field_z);
         super.a(param0, param1, param2, param3);
     }
 

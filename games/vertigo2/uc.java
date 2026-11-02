@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uc {
-    static cr field_a;
+    static UiPanel field_a;
     static char[] field_b;
     static String field_c;
 
@@ -22,7 +22,7 @@ final class uc {
         if (param0 >= 97) {
           return;
         }
-        field_a = (cr) null;
+        field_a = (UiPanel) null;
     }
 
     final static int a(String param0, boolean param1, boolean param2) {
@@ -35,7 +35,7 @@ final class uc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            field_a = (cr) null;
+            field_a = (UiPanel) null;
           }
           if (!param1) {
             stackIn_6_0 = mf.field_c.c(param0);
@@ -102,6 +102,6 @@ final class uc {
         if (param0 >= 97) {
           return;
         }
-        field_a = (cr) null;
+        field_a = (UiPanel) null;
     }
 }

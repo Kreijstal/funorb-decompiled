@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends cc {
+final class ge extends BitmapFont {
     private byte[][] field_Q;
 
     private final static byte[][] a(int[] param0, byte[][] param1) {

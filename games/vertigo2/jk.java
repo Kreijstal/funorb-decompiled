@@ -59,7 +59,7 @@ final class jk {
 
     final static void a(int param0, byte param1, ub param2) {
         try {
-          ob.field_Q.a(param2, false);
+          ob.field_Q.addFirst(param2, false);
           if (param1 != 44) {
             ub var4 = (ub) null;
             jk.a(-25, (byte) -73, (ub) null);

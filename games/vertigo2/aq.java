@@ -10,22 +10,22 @@ final class aq {
     static int[] field_d;
     private int field_g;
     static String field_b;
-    private nj field_j;
+    private IntrusiveDeque field_j;
     private int field_h;
     boolean field_i;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param5 < ap.field_e) {
-          el.a(param1, (byte) -124, param2, param5, param0, param4, param7, param3);
+          IterableNodeHashTable.a(param1, (byte) -124, param2, param5, param0, param4, param7, param3);
         } else {
           if (ib.field_a < param0) {
-            el.a(param1, (byte) -124, param2, param5, param0, param4, param7, param3);
+            IterableNodeHashTable.a(param1, (byte) -124, param2, param5, param0, param4, param7, param3);
           } else {
             if (param7 < ua.field_e) {
-              el.a(param1, (byte) -124, param2, param5, param0, param4, param7, param3);
+              IterableNodeHashTable.a(param1, (byte) -124, param2, param5, param0, param4, param7, param3);
             } else {
-              if (cj.field_D < param4) {
-                el.a(param1, (byte) -124, param2, param5, param0, param4, param7, param3);
+              if (WidgetContainer.field_D < param4) {
+                IterableNodeHashTable.a(param1, (byte) -124, param2, param5, param0, param4, param7, param3);
               } else {
                 fn.a(param0, param5, param7, param4, param1, (byte) -11, param2, param3);
               }
@@ -48,7 +48,7 @@ final class aq {
           this.field_g = 40;
         }
         this.field_k = (int[][]) null;
-        this.field_j.c(0);
+        this.field_j.clear(0);
         this.field_j = null;
     }
 
@@ -86,14 +86,14 @@ final class aq {
             var5Lifetime2 = (fd) (this.field_j.c((byte) -127));
             var4 = new fd(param0, var5Lifetime2.field_n);
             this.field_c[var5Lifetime2.field_r] = null;
-            var5Lifetime2.c(2);
+            var5Lifetime2.unlink(2);
           } else {
             var4 = new fd(param0, this.field_e);
             this.field_e = this.field_e + 1;
           }
           this.field_c[param0] = var4;
         }
-        this.field_j.a(var4, (byte) 27);
+        this.field_j.addLast(var4, (byte) 27);
         return this.field_k[var4.field_n];
     }
 
@@ -118,7 +118,7 @@ final class aq {
         int var2 = 0;
         int var3 = Vertigo2.field_L ? 1 : 0;
         if (param0 != 100) {
-          this.field_j = (nj) null;
+          this.field_j = (IntrusiveDeque) null;
         }
         if (this.field_h != this.field_g) {
           throw new RuntimeException("Can only retrieve a full image cache");
@@ -132,7 +132,7 @@ final class aq {
     aq(int param0, int param1, int param2) {
         this.field_e = 0;
         this.field_a = -1;
-        this.field_j = new nj();
+        this.field_j = new IntrusiveDeque();
         this.field_i = false;
         this.field_h = param0;
         this.field_g = param1;

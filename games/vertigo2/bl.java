@@ -18,17 +18,17 @@ final class bl extends l {
     private int field_p;
     int field_P;
     int field_m;
-    private er field_G;
+    private Sprite field_G;
     private boolean field_w;
     private int field_B;
     int field_x;
     boolean field_u;
     int field_J;
-    private er field_M;
+    private Sprite field_M;
     private boolean field_n;
-    private er field_A;
+    private Sprite field_A;
     static String[] field_z;
-    static cc field_N;
+    static BitmapFont field_N;
     private boolean field_H;
     static int[] field_r;
     private int field_D;
@@ -284,7 +284,7 @@ final class bl extends l {
             }
             qe.field_cb = gk.a(95);
           }
-          ve.field_d.field_b = gi.field_n.length;
+          ve.field_d.itemCount = gi.field_n.length;
           var3_intLifetime1 = 0;
           if (param2 != -30962) {
             field_r = (int[]) null;
@@ -316,13 +316,13 @@ final class bl extends l {
               }
             }
           }
-          jp.field_o = ve.field_d.field_b * (qc.field_z + al.field_z << 1);
+          jp.field_o = ve.field_d.itemCount * (qc.field_z + al.field_z << 1);
           sg.field_d = -(var3_intLifetime1 >> 1) + vm.field_c;
           c.field_e = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + vm.field_c;
           for (var4Lifetime2 = 0; var4Lifetime2 < mn.field_q.length; var4Lifetime2++) {
             stackIn_115_0 = jp.field_o;
             if (0 <= gd.field_s[var4Lifetime2]) {
-              stackIn_116_1 = kd.field_z;
+              stackIn_116_1 = GameShell.field_z;
             } else {
               stackIn_116_1 = gd.field_k;
             }
@@ -344,13 +344,13 @@ final class bl extends l {
               vi.field_C[var4Lifetime3][0] = -gl.field_l + var8Lifetime1;
               vi.field_C[var4Lifetime3][1] = var5Lifetime3;
               vi.field_C[var4Lifetime3][2] = (gl.field_l << 1) + var7Lifetime2;
-              vi.field_C[var4Lifetime3][3] = (qc.field_z << 1) + kd.field_z;
-              var5Lifetime3 = var5Lifetime3 + (kd.field_z + (qc.field_z << 1) + al.field_z);
+              vi.field_C[var4Lifetime3][3] = (qc.field_z << 1) + GameShell.field_z;
+              var5Lifetime3 = var5Lifetime3 + (GameShell.field_z + (qc.field_z << 1) + al.field_z);
             }
             var4Lifetime3++;
           }
           if (da.field_j != 2) {
-            ve.field_d.a(param0, fk.b(gb.field_d, 1282642017, ed.field_n), 0, (byte) 80);
+            ve.field_d.a(param0, fk.b(gb.field_d, 1282642017, PacketBuffer.field_n), 0, (byte) 80);
           } else {
             ve.field_d.a(param0, -1, -1, (byte) 80);
           }
@@ -368,8 +368,8 @@ final class bl extends l {
         int stackIn_7_1 = 0;
         String stackIn_13_0 = null;
         int stackIn_20_0 = 0;
-        er stackIn_48_0 = null;
-        er stackIn_51_0 = null;
+        Sprite stackIn_48_0 = null;
+        Sprite stackIn_51_0 = null;
         int var2;
         int var3;
         int var4;
@@ -378,11 +378,11 @@ final class bl extends l {
         int var5_int;
         int var6;
         int var7;
-        er[] var7_ref_er__;
+        Sprite[] var7_ref_er__;
         int var8;
-        er var9;
+        Sprite var9;
         int var9_int;
-        er var10;
+        Sprite var10;
         int var10_int;
         int var11;
         int var13;
@@ -490,15 +490,15 @@ final class bl extends l {
             }
             var7_ref_er__[2].e(var11, var10_int);
             this.field_l.a(var5_int, (byte) 78, -1, -10 + (this.field_g + this.field_f / 2 - var6Lifetime1 / 2), var4_ref_String, (-this.field_l.field_c + (-this.field_l.field_g + var7_ref_er__[1].field_t)) / 2 + var10_int + var7_ref_er__[0].field_t / 2);
-            if (ig.field_c != null &&
+            if (SocketConnector.field_c != null &&
               this.field_u) {
-              if (te.field_B[var3] >= ig.field_c[var3]) {
-                il.field_c.c(42, var10_int - 2);
+              if (te.field_B[var3] >= SocketConnector.field_c[var3]) {
+                MouseWheelInput.field_c.c(42, var10_int - 2);
               } else {
-                if (sf.field_e[var3] >= ig.field_c[var3]) {
+                if (sf.field_e[var3] >= SocketConnector.field_c[var3]) {
                   kq.field_Kb.c(42, var10_int - 2);
                 } else {
-                  if (!(ig.field_c[var3] > bp.field_E[var3])) {
+                  if (!(SocketConnector.field_c[var3] > bp.field_E[var3])) {
                     hh.field_a.c(42, var10_int - 2);
                   }
                 }
@@ -559,14 +559,14 @@ final class bl extends l {
           this.field_L = this.field_L + uo.field_h;
           if (0 <= this.field_t &&
             this.field_t < this.field_k.length) {
-            if (cr.field_eb[98]) {
+            if (UiPanel.field_eb[98]) {
               if (this.field_O < 0) {
                 this.field_t = this.field_t - 1;
                 this.field_L = this.field_t;
                 this.field_O = wj.field_b;
               }
             } else {
-              if (!cr.field_eb[99]) {
+              if (!UiPanel.field_eb[99]) {
                 this.field_O = -1;
               } else {
                 if (this.field_O < 0) {
@@ -610,9 +610,9 @@ final class bl extends l {
             return;
           }
           boolean decompiledFrameRemainder1 = true;
-          if (this.field_g + (this.field_f - this.field_E) <= ed.field_n &&
+          if (this.field_g + (this.field_f - this.field_E) <= PacketBuffer.field_n &&
             this.field_n &&
-            ed.field_n < this.field_g + (this.field_f + this.field_E)) {
+            PacketBuffer.field_n < this.field_g + (this.field_f + this.field_E)) {
             if (gb.field_d <= this.field_l.field_k + (this.field_c + this.field_E)) {
               if (this.field_s < 0) {
                 this.field_s = wj.field_b;
@@ -667,7 +667,7 @@ final class bl extends l {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (ed.field_n < this.field_f + (this.field_g + this.field_E)) {
+              if (PacketBuffer.field_n < this.field_f + (this.field_g + this.field_E)) {
                 var4Lifetime2 = this.field_D - this.field_l.field_k - this.field_c + gb.field_d;
                 var5Lifetime2 = this.field_t;
                 this.field_t = var4Lifetime2 / (this.field_l.field_k + this.field_B);
@@ -728,7 +728,7 @@ final class bl extends l {
         }
     }
 
-    bl(int param0, int param1, int param2, int param3, wn param4, er param5, er param6, er param7, er param8) {
+    bl(int param0, int param1, int param2, int param3, wn param4, Sprite param5, Sprite param6, Sprite param7, Sprite param8) {
         int stackIn_4_1 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

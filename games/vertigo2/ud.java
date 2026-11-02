@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends gp {
+final class ud extends DualLinkNode {
     int[] field_C;
     char[] field_u;
     boolean field_y;
     static String field_E;
     int[] field_z;
-    static cr field_A;
+    static UiPanel field_A;
     static String field_w;
     static String field_t;
     String field_D;
-    static cr field_x;
+    static UiPanel field_x;
     char[] field_v;
 
-    private final void a(int param0, int param1, ed param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         char[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         char stackIn_14_2 = 0;
@@ -37,12 +37,12 @@ final class ud extends gp {
           }
           if (param1 != 1) {
             if (param1 == 2) {
-              var4_int = param2.h(-11);
+              var4_int = param2.readUnsignedByte(-11);
               this.field_v = new char[var4_int];
               this.field_C = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_C[var5] = param2.a((byte) -11);
-                var6 = param2.g(88);
+                this.field_C[var5] = param2.readUnsignedShort((byte) -11);
+                var6 = param2.readSignedByte(88);
                 stackIn_19_0 = this.field_v;
                 stackIn_19_1 = var5;
                 if (var6 != 0) {
@@ -53,12 +53,12 @@ final class ud extends gp {
                 stackIn_19_0[stackIn_19_1] = (char) stackIn_20_2;
               }
             } else if (param1 == 3) {
-              var4_int = param2.h(-11);
+              var4_int = param2.readUnsignedByte(-11);
               this.field_z = new int[var4_int];
               this.field_u = new char[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_z[var5] = param2.a((byte) -11);
-                var6 = param2.g(112);
+                this.field_z[var5] = param2.readUnsignedShort((byte) -11);
+                var6 = param2.readSignedByte(112);
                 stackIn_13_0 = this.field_u;
                 stackIn_13_1 = var5;
                 if (var6 == 0) {
@@ -75,7 +75,7 @@ final class ud extends gp {
               }
             }
           } else {
-            this.field_D = param2.f(param0 ^ 6395);
+            this.field_D = param2.readString(param0 ^ 6395);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,7 +92,7 @@ final class ud extends gp {
         }
     }
 
-    final void a(ed param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -106,7 +106,7 @@ final class ud extends gp {
             ud.b((byte) -4);
           }
           while (true) {
-            var3_int = param0.h(-11);
+            var3_int = param0.readUnsignedByte(-11);
             if (0 == var3_int) {
               return;
             }

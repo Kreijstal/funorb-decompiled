@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hr extends ji {
+final class hr extends TextureOperator {
     static String field_z;
     private int[][] field_B;
     private int field_E;
     private int[] field_y;
     private short[] field_F;
-    static cr field_C;
+    static UiPanel field_C;
     static int field_D;
     private int[] field_A;
 
@@ -34,7 +34,7 @@ final class hr extends ji {
         try {
           var4 = (vi) (mc.field_i.a((byte) 100));
           while (var4 != null) {
-            aj.a(param0, 126, var4);
+            ProxySocketConnector.a(param0, 126, var4);
             var4 = (vi) (mc.field_i.b(40));
           }
           var5 = (s) (wg.field_i.a((byte) 100));
@@ -123,7 +123,7 @@ final class hr extends ji {
         field_C = null;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -137,11 +137,11 @@ final class hr extends ji {
             return;
           }
           if (param1 == 0) {
-            this.field_E = param2.h(param0 ^ -101);
-            this.field_B = new int[param2.h(param0 - 121)][2];
+            this.field_E = param2.readUnsignedByte(param0 ^ -101);
+            this.field_B = new int[param2.readUnsignedByte(param0 - 121)][2];
             for (var4_int = 0; var4_int < this.field_B.length; var4_int++) {
-              this.field_B[var4_int][0] = param2.a((byte) -11);
-              this.field_B[var4_int][1] = param2.a((byte) -11);
+              this.field_B[var4_int][0] = param2.readUnsignedShort((byte) -11);
+              this.field_B[var4_int][1] = param2.readUnsignedShort((byte) -11);
             }
             return;
           }
@@ -267,7 +267,7 @@ final class hr extends ji {
             var24 = this.field_B[-1 + var3];
             var35 = this.field_B[var3];
             var7 = (-var24[0] + var4 << 12) / (-var24[0] + var35[0]);
-            var8 = 4096 - qb.field_b[var7 >> 5 & 255] >> 1;
+            var8 = 4096 - JaggrabClient.field_b[var7 >> 5 & 255] >> 1;
             var9 = 4096 - var8;
             var10 = var8 * var35[1] + var9 * var24[1] >> 12;
             if (-32768 >= var10) {

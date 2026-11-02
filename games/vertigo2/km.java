@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km extends gp {
+final class km extends DualLinkNode {
     static int field_x;
     static String field_u;
     byte[] field_t;

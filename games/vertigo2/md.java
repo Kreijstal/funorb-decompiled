@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class md extends ji {
+final class md extends TextureOperator {
     private int field_B;
     private int field_E;
     static String[] field_C;
@@ -13,7 +13,7 @@ final class md extends ji {
     static int field_D;
     static String field_y;
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -28,21 +28,21 @@ final class md extends ji {
           }
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_E = param2.h(-11);
+            this.field_E = param2.readUnsignedByte(-11);
           } else {
             if (1 == var4_int) {
-              this.field_F = param2.a((byte) -11);
+              this.field_F = param2.readUnsignedShort((byte) -11);
             } else {
               if (var4_int != 2) {
                 if (var4_int == 3) {
-                  this.field_A = param2.a((byte) -11);
+                  this.field_A = param2.readUnsignedShort((byte) -11);
                 } else {
                   if (var4_int == 4) {
-                    this.field_z = param2.a((byte) -11);
+                    this.field_z = param2.readUnsignedShort((byte) -11);
                   }
                 }
               } else {
-                this.field_B = param2.h(-11);
+                this.field_B = param2.readUnsignedByte(-11);
               }
             }
           }
@@ -82,14 +82,14 @@ final class md extends ji {
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           var3_int = param2.field_Pb - param1.field_Pb;
-          if (dg.field_d == param2.field_Lb) {
+          if (ClientException.field_d == param2.field_Lb) {
             var3_int -= 200;
           } else {
             if (null == param2.field_Lb) {
               var3_int += 200;
             }
           }
-          if (param1.field_Lb != dg.field_d) {
+          if (param1.field_Lb != ClientException.field_d) {
             if (null == param1.field_Lb) {
               var3_int -= 200;
             }
@@ -213,7 +213,7 @@ final class md extends ji {
             var8 = var8 >> 4 & 255;
             var9 = mj.a(-106, var6, we.field_M);
             var10 = mj.a(-128, var6, aa.field_Vb);
-            var11 = (qb.field_b[var8] * this.field_B >> 12) + var9;
+            var11 = (JaggrabClient.field_b[var8] * this.field_B >> 12) + var9;
             var12 = var10 + (this.field_B * eh.field_b[var8] >> 12);
             var13 = -var10 + var12;
             var14 = var11 - var9;

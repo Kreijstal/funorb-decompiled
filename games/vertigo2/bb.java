@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb extends ji {
+final class bb extends TextureOperator {
     static String field_G;
     private int field_E;
     static fg field_F;
@@ -120,7 +120,7 @@ final class bb extends ji {
         return (int[][]) null;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -133,24 +133,24 @@ final class bb extends ji {
         try {
           var5 = param1;
           if (var5 == 0) {
-            this.field_B = param2.a((byte) -11);
+            this.field_B = param2.readUnsignedShort((byte) -11);
           } else {
             if (1 == var5) {
-              this.field_D = param2.a((byte) -11);
+              this.field_D = param2.readUnsignedShort((byte) -11);
             } else {
               if (var5 != 2) {
                 if (var5 == 3) {
-                  this.field_E = param2.a((byte) -11);
+                  this.field_E = param2.readUnsignedShort((byte) -11);
                 } else {
                   if (var5 == 4) {
-                    var4_int = param2.m(0);
+                    var4_int = param2.readUnsignedMedium(0);
                     this.field_z[2] = b.a(var4_int >> 12, 0);
                     this.field_z[1] = b.a(var4_int >> 4, 4080);
                     this.field_z[0] = b.a(16711680, var4_int) << 4;
                   }
                 }
               } else {
-                this.field_C = param2.a((byte) -11);
+                this.field_C = param2.readUnsignedShort((byte) -11);
               }
             }
           }
@@ -211,7 +211,7 @@ final class bb extends ji {
         if (null != param1.field_f) {
           uo.field_d = param1.field_a;
           jo.field_b = param1.field_s;
-          tg.field_a = param1.field_b;
+          DelegatingCanvas.field_a = param1.field_b;
           fj.field_lb = param1.field_f;
         }
         if (param0) {

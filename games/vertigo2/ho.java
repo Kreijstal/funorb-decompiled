@@ -19,7 +19,7 @@ final class ho {
         }
         mg.field_O = true;
         int var1 = 47 / ((3 - param0) / 46);
-        pm.a((byte) 52, false);
+        BufferedSocket.a((byte) 52, false);
         hn.field_w = 0;
     }
 
@@ -61,10 +61,10 @@ final class ho {
 
     final static void a(int param0, boolean param1) {
         int var6 = 0;
-        cr dupTemp$0 = null;
+        UiPanel dupTemp$0 = null;
         int var11 = 0;
         int stackIn_4_0 = 0;
-        cr stackIn_6_0 = null;
+        UiPanel stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
         int stackIn_48_0 = 0;
@@ -74,17 +74,17 @@ final class ho {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        cr var7 = null;
+        UiPanel var7 = null;
         int var7_int = 0;
         int var8 = 0;
-        cr var8_ref_cr = null;
+        UiPanel var8_ref_cr = null;
         nk var9 = null;
         int var9_int = 0;
         int var10 = 0;
         nk var10_ref_nk = null;
         int var12 = 0;
         int var13 = 0;
-        cr var14 = null;
+        UiPanel var14 = null;
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
           om.field_D = bi.field_j;
@@ -95,8 +95,8 @@ final class ho {
             stackIn_4_0 = mp.field_b;
           }
           hq.b(stackIn_4_0, -127);
-          el.field_e.a(0, 14017, hk.field_o.field_Fb, 0, -2 + (-40 + hk.field_o.field_db));
-          nb.field_D.a(param0 ^ 108, de.field_g.field_Fb, r.field_f, 0, 0);
+          IterableNodeHashTable.field_e.a(0, 14017, hk.field_o.field_Fb, 0, -2 + (-40 + hk.field_o.field_db));
+          nb.field_D.a(param0 ^ 108, de.field_g.field_Fb, Archive.field_f, 0, 0);
           stackIn_6_0 = uc.field_a;
           stackIn_6_1 = param0 + 83;
           if (db.field_S) {
@@ -104,9 +104,9 @@ final class ho {
           } else {
             stackIn_7_2 = 0;
           }
-          ((cr) (Object) stackIn_6_0).a(stackIn_6_1, -stackIn_7_2 + de.field_g.field_Fb, 18, 2 + r.field_f, 0);
-          eq.field_z.a(param0 + 95, re.field_k + 42, 18, 2 + r.field_f, -40 + (-re.field_k + (de.field_g.field_Fb - 2)));
-          vd.field_d.a(2 + r.field_f + 20, 2, re.field_k, -22 + (de.field_g.field_db - r.field_f), 0, de.field_g.field_Fb, 3124);
+          ((UiPanel) (Object) stackIn_6_0).a(stackIn_6_1, -stackIn_7_2 + de.field_g.field_Fb, 18, 2 + Archive.field_f, 0);
+          eq.field_z.a(param0 + 95, re.field_k + 42, 18, 2 + Archive.field_f, -40 + (-re.field_k + (de.field_g.field_Fb - 2)));
+          vd.field_d.a(2 + Archive.field_f + 20, 2, re.field_k, -22 + (de.field_g.field_db - Archive.field_f), 0, de.field_g.field_Fb, 3124);
           ne.field_G.a(76, hk.field_o.field_Fb, 40, -40 + hk.field_o.field_db, param0);
           ud.field_x.a(76, lb.field_c.field_Fb, 30, 0, 0);
           fd.field_s.a(108, lb.field_c.field_Fb, -2 + (lb.field_c.field_db - 70), 30, 0);
@@ -133,10 +133,10 @@ final class ho {
               !(sp.field_O <= 1))) {
               if (!param1 &&
                 var6 == 3) {
-                dupTemp$0 = el.field_h[var6];
+                dupTemp$0 = IterableNodeHashTable.field_h[var6];
                 var14 = dupTemp$0;
                 var7 = dupTemp$0;
-                el.field_h[var6].field_db = 0;
+                IterableNodeHashTable.field_h[var6].field_db = 0;
                 var14.field_Fb = 0;
                 for (var8 = 0; mg.field_S[var6].length > var8; var8++) {
                   if (mg.field_S[var6][var8] != null) {
@@ -147,8 +147,8 @@ final class ho {
                 }
               } else if (param1 &&
                 0 == var6) {
-                var7 = el.field_h[var6];
-                el.field_h[var6].field_db = 0;
+                var7 = IterableNodeHashTable.field_h[var6];
+                IterableNodeHashTable.field_h[var6].field_db = 0;
                 var7.field_Fb = 0;
                 for (var8 = 0; var8 < mg.field_S[var6].length; var8++) {
                   if (mg.field_S[var6][var8] != null) {
@@ -173,8 +173,8 @@ final class ho {
                 }
                 var7_int = stackIn_48_0;
                 if (var7_int != 0) {
-                  var8_ref_cr = el.field_h[var6];
-                  el.field_h[var6].field_db = 0;
+                  var8_ref_cr = IterableNodeHashTable.field_h[var6];
+                  IterableNodeHashTable.field_h[var6].field_db = 0;
                   var8_ref_cr.field_Fb = 0;
                   for (var9_int = 0; var9_int < mg.field_S[var6].length; var9_int++) {
                     if (null != mg.field_S[var6][var9_int]) {
@@ -184,10 +184,10 @@ final class ho {
                     }
                   }
                 } else {
-                  el.field_h[var6].a(param0 ^ 123, 103, var3, var5, 5);
+                  IterableNodeHashTable.field_h[var6].a(param0 ^ 123, 103, var3, var5, 5);
                   var8 = 110;
                   if (param1) {
-                    mg.field_S[var6][0].a(var5, 38, r.field_j, var3, 2, param0 + 1, var8);
+                    mg.field_S[var6][0].a(var5, 38, Archive.field_j, var3, 2, param0 + 1, var8);
                     var8 += 40;
                   } else {
                     if (mg.field_S[var6][0] != null) {
@@ -200,7 +200,7 @@ final class ho {
                   var10 = -1 + mg.field_S[var6].length;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
-                    mg.field_S[var6][1 + var11].a(var5, -var12 + ((var11 + 1) * var9_int / var10 - 2), r.field_j, var3, 2, param0 ^ 1, var12 + var8);
+                    mg.field_S[var6][1 + var11].a(var5, -var12 + ((var11 + 1) * var9_int / var10 - 2), Archive.field_j, var3, 2, param0 ^ 1, var12 + var8);
                   }
                   var5 = var5 + (2 + var3);
                 }

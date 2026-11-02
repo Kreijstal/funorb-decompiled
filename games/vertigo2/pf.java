@@ -4,7 +4,7 @@
 final class pf {
     static int field_a;
 
-    final static gg a(byte param0, ae param1, int param2) {
+    final static gg a(byte param0, PcmSample param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         gg stackIn_1_0 = null;
@@ -14,7 +14,7 @@ final class pf {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 65 / ((-27 - param0) / 52);
-          stackIn_1_0 = sp.a(ra.a(param1, 100, param2), -124);
+          stackIn_1_0 = sp.a(SamplePlaybackStream.a(param1, 100, param2), -124);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -37,9 +37,9 @@ final class pf {
         boolean stackIn_4_3;
         boolean stackIn_5_4 = false;
         tp stackIn_12_0 = null;
-        cr stackIn_37_0 = null;
+        UiPanel stackIn_37_0 = null;
         String stackIn_38_1 = null;
-        cr stackIn_41_0 = null;
+        UiPanel stackIn_41_0 = null;
         String stackIn_42_1 = null;
         int stackIn_46_0 = 0;
         Object stackIn_101_0 = null;
@@ -47,7 +47,7 @@ final class pf {
         tp stackOut_11_0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        nj var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         tp var7 = null;
@@ -68,11 +68,11 @@ final class pf {
         var19 = Vertigo2.field_L ? 1 : 0;
         try {
           stackIn_4_0 = h.field_D.field_Lb;
-          stackIn_4_1 = param2 * ((2 + r.field_f) * 3);
+          stackIn_4_1 = param2 * ((2 + Archive.field_f) * 3);
           stackIn_4_2 = 2;
           stackIn_4_3 = param1;
           stackIn_5_4 = (wq.field_M == h.field_D.field_Lb);
-          var3_int = ((od) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, -5, 2 + r.field_f) ? 1 : 0;
+          var3_int = ((od) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, -5, 2 + Archive.field_f) ? 1 : 0;
           var4 = h.field_D.field_Mb.field_M;
           if (param0) {
             pf.a(true, true, 108);
@@ -81,7 +81,7 @@ final class pf {
           var5 = null;
           if (ba.field_d == 2) {
             wi.field_g.field_lb = true;
-            el.field_a.field_S = Vertigo2.a(new String[]{dg.field_d}, pq.field_a, 0);
+            IterableNodeHashTable.field_a.field_S = Vertigo2.a(new String[]{ClientException.field_d}, pq.field_a, 0);
             h.field_D.field_Lb.field_Lb.field_S = null;
             var6 = null;
             var7 = (tp) (var4.a((byte) 100));
@@ -95,11 +95,11 @@ final class pf {
                 break;
               }
               if (stackIn_12_0.field_M == null) {
-                var7.field_Jb = new cr(0L, el.field_b);
+                var7.field_Jb = new UiPanel(0L, IterableNodeHashTable.field_b);
                 var7.b(var7.field_Jb, 119);
-                var7.field_Kb = new cr(0L, tm.field_b);
+                var7.field_Kb = new UiPanel(0L, tm.field_b);
                 var7.b(var7.field_Kb, 126);
-                var7.field_Ob = new cr(0L, el.field_b);
+                var7.field_Ob = new UiPanel(0L, IterableNodeHashTable.field_b);
                 var7.b(var7.field_Ob, 125);
                 var7.field_Kb.field_O = 2;
                 var8 = 1;
@@ -110,7 +110,7 @@ final class pf {
               if (null == var7.field_Lb) {
                 var10 = 13369344;
                 var11 = 16737894;
-              } else if (var7.field_Lb == dg.field_d) {
+              } else if (var7.field_Lb == ClientException.field_d) {
                 var11 = 6750054;
                 var10 = 52224;
               } else {
@@ -123,7 +123,7 @@ final class pf {
                 var7.field_Ob.field_Db = qr.field_q;
                 var7.field_Ob.field_B = var11;
                 var12 = 1;
-                var7.field_Ob.a(100, qr.field_q.field_x + 3, r.field_f, var9, 0);
+                var7.field_Ob.a(100, qr.field_q.field_x + 3, Archive.field_f, var9, 0);
               }
               var7.field_Kb.field_B = var11;
               var7.field_Jb.field_B = var11;
@@ -143,10 +143,10 @@ final class pf {
               if (var14 <= 0) {
                 stackIn_38_1 = var7.field_Mb;
               } else {
-                stackIn_38_1 = cc.a(var7.field_Jb.field_z, var7.field_Mb, var14);
+                stackIn_38_1 = BitmapFont.a(var7.field_Jb.field_z, var7.field_Mb, var14);
               }
               stackIn_37_0.field_S = stackIn_38_1;
-              var7.field_Jb.a(81, var14, r.field_f, var9, var13);
+              var7.field_Jb.a(81, var14, Archive.field_f, var9, var13);
               stackIn_41_0 = var7.field_Kb;
               if (null == var7.field_Lb) {
                 stackIn_42_1 = aq.field_f;
@@ -154,15 +154,15 @@ final class pf {
                 stackIn_42_1 = var7.field_Lb;
               }
               stackIn_41_0.field_S = stackIn_42_1;
-              var7.field_Kb.a(97, 80, r.field_f, var9, -80 + var7.field_Fb);
+              var7.field_Kb.a(97, 80, Archive.field_f, var9, -80 + var7.field_Fb);
               stackIn_46_0 = (var7.field_Jb.field_S.equals(var7.field_Mb)) ? 0 : 1;
               var15 = stackIn_46_0;
-              var9 = var9 + r.field_f;
+              var9 = var9 + Archive.field_f;
               if (var3_int == 0) {
                 var7.field_kb = var9 - var7.field_db;
               }
               if (var8 != 0) {
-                h.field_D.field_Mb.a((byte) 121, (cr) (var6), var7, 2);
+                h.field_D.field_Mb.a((byte) 121, (UiPanel) (var6), var7, 2);
               }
               var6 = var7;
               if (var7.field_Ob == null ||
@@ -204,7 +204,7 @@ final class pf {
             }
           } else {
             wi.field_g.field_lb = false;
-            el.field_a.field_S = b.field_f;
+            IterableNodeHashTable.field_a.field_S = b.field_f;
             if (ba.field_d != 1) {
               h.field_D.field_Lb.field_Lb.field_S = mq.field_t;
               if (var19 != 0) {
@@ -213,7 +213,7 @@ final class pf {
             } else {
               h.field_D.field_Lb.field_Lb.field_S = tn.field_r;
             }
-            tg.a(0, h.field_D.field_Mb);
+            DelegatingCanvas.a(0, h.field_D.field_Mb);
           }
           if (decompiledFrameCompleted0) {
             stackIn_101_0 = var5;

@@ -3,14 +3,14 @@
  */
 final class gi extends ah {
     static ve field_t;
-    static jj field_s;
-    static r field_p;
+    static PlatformTaskDispatcher field_s;
+    static Archive field_p;
     static int field_m;
     static boolean field_r;
     static boolean field_o;
     static String field_q;
     static int[] field_n;
-    static nj field_v;
+    static IntrusiveDeque field_v;
     static int field_u;
 
     public static void b(boolean param0) {
@@ -87,6 +87,6 @@ final class gi extends ah {
         field_r = false;
         field_m = 640;
         field_q = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
-        field_v = new nj();
+        field_v = new IntrusiveDeque();
     }
 }

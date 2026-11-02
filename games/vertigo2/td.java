@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td implements ur {
+final class td implements WidgetListener {
     private int field_f;
-    static cr field_c;
+    static UiPanel field_c;
     private int field_e;
     private int field_h;
     private int field_k;
     private int field_j;
-    private cc field_d;
+    private BitmapFont field_d;
     static int field_g;
     private int field_b;
     private int field_i;
     static mp field_a;
     static String[] field_l;
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -23,7 +23,7 @@ final class td implements ur {
         int var12 = 0;
         int var13 = 0;
         ao var14 = null;
-        iq stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -34,16 +34,16 @@ final class td implements ur {
         int var12Lifetime1;
         try {
           if (param3 instanceof ao) {
-            stackIn_3_0 = (iq) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
           var14 = (ao) (stackIn_3_0);
           if (var14 != null) {
           }
-          bi.b(param1 + param3.field_o, param4 + param3.field_t, param3.field_n, param3.field_s, this.field_h);
-          var7 = var14.field_J + param3.field_o + param1;
-          var8 = param3.field_t + param4 + var14.field_M;
+          bi.b(param1 + param3.x, param4 + param3.y, param3.width, param3.height, this.field_h);
+          var7 = var14.field_J + param3.x + param1;
+          var8 = param3.y + param4 + var14.field_M;
           bi.f(var7, var8, var14.field_L, this.field_e);
           if (var14.field_I != -1) {
             var9 = 2.0 * ((double)var14.field_I * 3.141592653589793) / (double)var14.field_S;
@@ -61,7 +61,7 @@ final class td implements ur {
           }
           if (null != this.field_d) {
             var13 = this.field_f + (var14.field_J + var14.field_L);
-            this.field_d.a(param3.field_w, var13 + (param1 + param3.field_o), param3.field_t + param4 + this.field_b, -var13 - this.field_f + param3.field_n, -(this.field_f << 1) + param3.field_s, this.field_k, this.field_j, 1, 1, 0);
+            this.field_d.a(param3.text, var13 + (param1 + param3.x), param3.y + param4 + this.field_b, -var13 - this.field_f + param3.width, -(this.field_f << 1) + param3.height, this.field_k, this.field_j, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,7 +78,7 @@ final class td implements ur {
         }
     }
 
-    final static qr a(boolean param0, ed param1) {
+    final static qr a(boolean param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         qr stackIn_2_0 = null;
         qr stackIn_4_0 = null;
@@ -88,7 +88,7 @@ final class td implements ur {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = new qr(param1.n(2), param1.n(2), param1.n(2), param1.n(2), param1.m(0), param1.m(0), param1.h(-11));
+            stackIn_4_0 = new qr(param1.readSignedShort(2), param1.readSignedShort(2), param1.readSignedShort(2), param1.readSignedShort(2), param1.readUnsignedMedium(0), param1.readUnsignedMedium(0), param1.readUnsignedByte(-11));
             return stackIn_4_0;
           }
           stackIn_2_0 = (qr) null;
@@ -116,7 +116,7 @@ final class td implements ur {
         field_c = null;
     }
 
-    final static er a(int param0) {
+    final static Sprite a(int param0) {
         int var5_int = 0;
         int var6 = 0;
         int var1;
@@ -139,7 +139,7 @@ final class td implements ur {
           for (var5_int = 0; var5_int < var1; var5_int++) {
             var8[var5_int] = in.field_c[b.a((int) var16[var5_int], 255)];
           }
-          var3 = new er(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var8);
+          var3 = new Sprite(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var8);
         } else {
           var17 = ej.field_c[0];
           var13 = new int[var1];
@@ -151,7 +151,7 @@ final class td implements ur {
           var3 = new fe(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var13);
         }
         la.a((byte) 37);
-        return (er) (var3);
+        return (Sprite) (var3);
     }
 
     final static void a(boolean param0, boolean param1, byte param2) {
@@ -166,7 +166,7 @@ final class td implements ur {
         mh.a(param1, false);
     }
 
-    td(cc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    td(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_f = param1;
           this.field_e = param5;

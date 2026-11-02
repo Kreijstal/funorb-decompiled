@@ -10,11 +10,11 @@ final class lq {
     static bh field_b;
 
     final int a(int param0) {
-        er var3;
+        Sprite var3;
         int stackIn_7_0 = 0;
         if (param0 != 6586) {
-          var3 = (er) null;
-          lq.a((er) null, (byte) 110);
+          var3 = (Sprite) null;
+          lq.a((Sprite) null, (byte) 110);
         }
         if (this.field_c != null &&
           this.field_c.length != 0) {
@@ -51,8 +51,8 @@ final class lq {
         field_e = null;
         field_a = null;
         if (param0) {
-          er var2 = (er) null;
-          lq.a((er) null, (byte) -50);
+          Sprite var2 = (Sprite) null;
+          lq.a((Sprite) null, (byte) -50);
         }
     }
 
@@ -62,12 +62,12 @@ final class lq {
         this.field_c = new int[param2 + 1];
     }
 
-    final static void a(er param0, byte param1) {
+    final static void a(Sprite param0, byte param1) {
         if (param1 != -94) {
           return;
         }
         try {
-          tg.a((byte) -110);
+          DelegatingCanvas.a((byte) -110);
           bi.a(param0.field_F, param0.field_x, param0.field_B);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "lq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

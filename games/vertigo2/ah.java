@@ -7,14 +7,14 @@ class ah extends mo {
     static String field_k;
 
     final static void a(byte param0, int param1) {
-        mi var2 = uh.field_Wb;
-        var2.j(param1, 124);
+        BitPacketBuffer var2 = uh.field_Wb;
+        var2.writeCipheredByte(param1, 124);
         if (param0 != -50) {
           return;
         }
         try {
-          var2.f(1, param0 - 46);
-          var2.f(0, -100);
+          var2.writeByte(1, param0 - 46);
+          var2.writeByte(0, -100);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "ah.D(" + param0 + ',' + param1 + ')');
         }
@@ -32,7 +32,7 @@ class ah extends mo {
         }
     }
 
-    final static void a(int param0, r param1) {
+    final static void a(int param0, Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_1292_0;
             StringBuilder stackIn_1292_1;
@@ -43,9 +43,9 @@ class ah extends mo {
             int var3;
             int var4;
             int param0;
-            r param1;
+            Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, r initialParam1) {
+            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1292_0 = null;
@@ -117,59 +117,59 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -123, "achievement_criteria,0");
                 if (var2 != null) {
-                  nj.field_i[0] = in.a(0, var2);
+                  IntrusiveDeque.field_i[0] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -50, "achievement_criteria,1");
                 if (var2 != null) {
-                  nj.field_i[1] = in.a(0, var2);
+                  IntrusiveDeque.field_i[1] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -30, "achievement_criteria,2");
                 if (null != var2) {
-                  nj.field_i[2] = in.a(0, var2);
+                  IntrusiveDeque.field_i[2] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -40, "achievement_criteria,3");
                 if (null != var2) {
-                  nj.field_i[3] = in.a(0, var2);
+                  IntrusiveDeque.field_i[3] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -12, "achievement_criteria,4");
                 if (var2 != null) {
-                  nj.field_i[4] = in.a(0, var2);
+                  IntrusiveDeque.field_i[4] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -107, "achievement_criteria,5");
                 if (null != var2) {
-                  nj.field_i[5] = in.a(0, var2);
+                  IntrusiveDeque.field_i[5] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -25, "achievement_criteria,6");
                 if (var2 != null) {
-                  nj.field_i[6] = in.a(0, var2);
+                  IntrusiveDeque.field_i[6] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -23, "achievement_criteria,7");
                 if (var2 != null) {
-                  nj.field_i[7] = in.a(0, var2);
+                  IntrusiveDeque.field_i[7] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -45, "achievement_criteria,8");
                 if (null != var2) {
-                  nj.field_i[8] = in.a(0, var2);
+                  IntrusiveDeque.field_i[8] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -34, "achievement_criteria,9");
                 if (null != var2) {
-                  nj.field_i[9] = in.a(0, var2);
+                  IntrusiveDeque.field_i[9] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -16, "achievement_criteria,10");
                 if (var2 != null) {
-                  nj.field_i[10] = in.a(0, var2);
+                  IntrusiveDeque.field_i[10] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -80, "achievement_criteria,11");
                 if (var2 != null) {
-                  nj.field_i[11] = in.a(0, var2);
+                  IntrusiveDeque.field_i[11] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -114, "achievement_criteria,12");
                 if (var2 != null) {
-                  nj.field_i[12] = in.a(0, var2);
+                  IntrusiveDeque.field_i[12] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -30, "TIMES");
                 if (null != var2) {
-                  uj.field_k = in.a(0, var2);
+                  MenuSelectionCursor.field_k = in.a(0, var2);
                 }
                 var2 = en.a((byte) -59, "ANY_KEY_TO_CLOSE");
                 if (var2 != null) {
@@ -261,51 +261,51 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -126, "instructions_block_descriptions,0");
                 if (var2 != null) {
-                  uj.field_j[0] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[0] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -22, "instructions_block_descriptions,1");
                 if (var2 != null) {
-                  uj.field_j[1] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[1] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -63, "instructions_block_descriptions,2");
                 if (null != var2) {
-                  uj.field_j[2] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[2] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -100, "instructions_block_descriptions,3");
                 if (null != var2) {
-                  uj.field_j[3] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[3] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -20, "instructions_block_descriptions,4");
                 if (var2 != null) {
-                  uj.field_j[4] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[4] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -70, "instructions_block_descriptions,5");
                 if (null != var2) {
-                  uj.field_j[5] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[5] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -81, "instructions_block_descriptions,6");
                 if (null != var2) {
-                  uj.field_j[6] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[6] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -27, "instructions_block_descriptions,7");
                 if (var2 != null) {
-                  uj.field_j[7] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[7] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -36, "instructions_block_descriptions,8");
                 if (var2 != null) {
-                  uj.field_j[8] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[8] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -82, "instructions_block_descriptions,9");
                 if (var2 != null) {
-                  uj.field_j[9] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[9] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -63, "instructions_block_descriptions,10");
                 if (null != var2) {
-                  uj.field_j[10] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[10] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -63, "instructions_block_descriptions,11");
                 if (var2 != null) {
-                  uj.field_j[11] = in.a(0, var2);
+                  MenuSelectionCursor.field_j[11] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -82, "instructions_item_names,0");
                 if (null != var2) {
@@ -409,59 +409,59 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -42, "GAMEOPTNAMES,0,0");
                 if (null != var2) {
-                  wa.field_e[0][0] = in.a(0, var2);
+                  IsaacCipher.field_e[0][0] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -55, "GAMEOPTNAMES,0,1");
                 if (null != var2) {
-                  wa.field_e[0][1] = in.a(0, var2);
+                  IsaacCipher.field_e[0][1] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -124, "GAMEOPTNAMES,1,0");
                 if (null != var2) {
-                  wa.field_e[1][0] = in.a(0, var2);
+                  IsaacCipher.field_e[1][0] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -102, "GAMEOPTNAMES,1,1");
                 if (var2 != null) {
-                  wa.field_e[1][1] = in.a(0, var2);
+                  IsaacCipher.field_e[1][1] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -124, "GAMEOPTNAMES,1,2");
                 if (null != var2) {
-                  wa.field_e[1][2] = in.a(0, var2);
+                  IsaacCipher.field_e[1][2] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -48, "GAMEOPTNAMES,1,3");
                 if (null != var2) {
-                  wa.field_e[1][3] = in.a(0, var2);
+                  IsaacCipher.field_e[1][3] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -112, "GAMEOPTNAMES,1,4");
                 if (null != var2) {
-                  wa.field_e[1][4] = in.a(0, var2);
+                  IsaacCipher.field_e[1][4] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -54, "GAMEOPTNAMES,1,5");
                 if (null != var2) {
-                  wa.field_e[1][5] = in.a(0, var2);
+                  IsaacCipher.field_e[1][5] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -35, "GAMEOPTNAMES,1,6");
                 if (var2 != null) {
-                  wa.field_e[1][6] = in.a(0, var2);
+                  IsaacCipher.field_e[1][6] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -102, "GAMEOPTNAMES,1,7");
                 if (null != var2) {
-                  wa.field_e[1][7] = in.a(0, var2);
+                  IsaacCipher.field_e[1][7] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -27, "GAMEOPTNAMES,2,0");
                 if (null != var2) {
-                  wa.field_e[2][0] = in.a(0, var2);
+                  IsaacCipher.field_e[2][0] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -28, "GAMEOPTNAMES,2,1");
                 if (var2 != null) {
-                  wa.field_e[2][1] = in.a(0, var2);
+                  IsaacCipher.field_e[2][1] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -83, "GAMEOPTNAMES,2,2");
                 if (null != var2) {
-                  wa.field_e[2][2] = in.a(0, var2);
+                  IsaacCipher.field_e[2][2] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -21, "GAMEOPTNAMES,2,3");
                 if (var2 != null) {
-                  wa.field_e[2][3] = in.a(0, var2);
+                  IsaacCipher.field_e[2][3] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -56, "EOL_SCORES");
                 if (null != var2) {
@@ -497,7 +497,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -101, "MAPVIEW_NOTE");
                 if (var2 != null) {
-                  aj.field_i = in.a(0, var2);
+                  ProxySocketConnector.field_i = in.a(0, var2);
                 }
                 var2 = en.a((byte) -88, "TIME");
                 if (var2 != null) {
@@ -509,7 +509,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -88, "LEVEL_SELECT_TIMEATTACK");
                 if (null != var2) {
-                  dg.field_b = in.a(0, var2);
+                  ClientException.field_b = in.a(0, var2);
                 }
                 var2 = en.a((byte) -102, "INTRO_SINGLEPLAYER_LEVEL");
                 if (var2 != null) {
@@ -533,7 +533,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -11, "INTRO_MULTIPLAYER_PLAYER_BLUE");
                 if (null != var2) {
-                  lk.field_h = in.a(0, var2);
+                  RasterBuffer.field_h = in.a(0, var2);
                 }
                 var2 = en.a((byte) -96, "INTRO_MULTIPLAYER_PLAYERIS_RED");
                 if (null != var2) {
@@ -561,7 +561,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -122, "T_4");
                 if (null != var2) {
-                  og.field_c = in.a(0, var2);
+                  GameApplet.field_c = in.a(0, var2);
                 }
                 var2 = en.a((byte) -104, "T_5");
                 if (null != var2) {
@@ -1176,7 +1176,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -112, "GENERAL");
                 if (var2 != null) {
-                  ji.field_w = in.a(0, var2);
+                  TextureOperator.field_w = in.a(0, var2);
                 }
                 var2 = en.a((byte) -116, "CONTROLS_1P");
                 if (null != var2) {
@@ -1220,7 +1220,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -29, "DEATHMATCH");
                 if (null != var2) {
-                  tr.field_e = in.a(0, var2);
+                  GameplayScreen.field_e = in.a(0, var2);
                 }
                 var2 = en.a((byte) -58, "COOP");
                 if (null != var2) {
@@ -1228,7 +1228,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -54, "WINNINGPERCENTAGE");
                 if (null != var2) {
-                  gp.field_q = in.a(0, var2);
+                  DualLinkNode.field_q = in.a(0, var2);
                 }
                 var2 = en.a((byte) -8, "YOUWON");
                 if (null != var2) {
@@ -1312,7 +1312,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -44, "YOUDDIED");
                 if (var2 != null) {
-                  uj.field_e = in.a(0, var2);
+                  MenuSelectionCursor.field_e = in.a(0, var2);
                 }
                 var2 = en.a((byte) -22, "BLUEDIED");
                 if (null != var2) {
@@ -1376,7 +1376,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -124, "GAMEOVER");
                 if (var2 != null) {
-                  sr.field_c = in.a(0, var2);
+                  SecondaryNodeDeque.field_c = in.a(0, var2);
                 }
                 var2 = en.a((byte) -103, "LEVELCOMPLETE");
                 if (null != var2) {
@@ -1388,11 +1388,11 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -19, "ANONPLAYER");
                 if (var2 != null) {
-                  ed.field_o = in.a(0, var2);
+                  PacketBuffer.field_o = in.a(0, var2);
                 }
                 var2 = en.a((byte) -57, "OBSCURED");
                 if (null != var2) {
-                  iq.field_z = in.a(0, var2);
+                  UiWidget.field_z = in.a(0, var2);
                 }
                 var2 = en.a((byte) -15, "TIMEATTACK_UNLUCKY");
                 if (var2 != null) {
@@ -1460,7 +1460,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -79, "keycode_birdseye");
                 if (null != var2) {
-                  il.field_d = 255 & var2[0];
+                  MouseWheelInput.field_d = 255 & var2[0];
                 }
                 var2 = en.a((byte) -109, "keycode_jump");
                 if (var2 != null) {
@@ -1547,7 +1547,7 @@ class ah extends mo {
                   }
                   throw wn.a((Throwable) ((Object) stackIn_1292_0), ((StringBuilder) (Object) stackIn_1292_1).append(stackIn_1293_2).append(')').toString());
                 }
-                if (og.field_a != 0) {
+                if (GameApplet.field_a != 0) {
                   Vertigo2.field_L = (var4 == 0);
                 }
             }

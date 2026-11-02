@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nn extends li {
+final class nn extends IntrusiveNode {
     int field_u;
     int[] field_n;
     static tj field_w;
@@ -10,7 +10,7 @@ final class nn extends li {
     int field_v;
     static String[] field_t;
     int field_x;
-    static r field_y;
+    static Archive field_y;
     static String field_p;
     int field_q;
     static int[] field_s;
@@ -39,7 +39,7 @@ final class nn extends li {
           ui.field_b.a(82, ui.field_b.field_Fb, param2, 0, param1 + dj.field_d.field_Fb);
           mg.field_R.a(5, 2, param3, var7 - 5, 5, param1 + 485 + (2 + param3), param0 ^ 3125);
           if (null != lq.field_a) {
-            lq.field_a.a(false, mg.field_R.field_wb, mg.field_R.field_N, mg.field_R.field_db, mg.field_R.field_Fb);
+            lq.field_a.setBounds(false, mg.field_R.field_wb, mg.field_R.field_N, mg.field_R.field_db, mg.field_R.field_Fb);
           }
           var8 = -param1 + (td.field_c.field_Fb - var6_int);
           var9 = var8 / 2;
@@ -91,7 +91,7 @@ final class nn extends li {
           this.field_q = param0;
           this.field_r = param7;
           if (param5 != -550) {
-            field_y = (r) null;
+            field_y = (Archive) null;
           }
           this.field_x = param2;
           this.field_v = param1;
@@ -102,15 +102,15 @@ final class nn extends li {
         }
     }
 
-    final static lk a(int param0, java.awt.Component param1, boolean param2, int param3) {
+    final static RasterBuffer a(int param0, java.awt.Component param1, boolean param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          lk var5 = null;
-          ma var5_ref = null;
-          lk stackIn_3_0 = null;
-          ma stackIn_5_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -121,17 +121,17 @@ final class nn extends li {
                 nn.a(-77);
               }
               var4 = Class.forName("em");
-              var5 = (lk) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param1, -3, param3, param0);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new ma();
-              ((lk) ((Object) var5_ref)).a(param1, -3, param3, param0);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param1, -3, param3, param0);
               stackIn_5_0 = var5_ref;
-              return (lk) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

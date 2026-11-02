@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class un extends cr {
+final class un extends UiPanel {
     private StringBuilder field_Kb;
     static long[] field_Mb;
-    private cr field_Nb;
+    private UiPanel field_Nb;
     static boolean field_Ib;
     static ee field_Hb;
-    private cr field_Jb;
+    private UiPanel field_Jb;
     private int field_Ob;
     static b field_Lb;
 
@@ -43,7 +43,7 @@ final class un extends cr {
         }
         if (de.field_f != 85) {
           if (12 > this.field_Kb.length()) {
-            var2 = Character.toLowerCase(ji.field_r);
+            var2 = Character.toLowerCase(TextureOperator.field_r);
             if (32 == var2) {
               var2 = 95;
             }
@@ -171,7 +171,7 @@ final class un extends cr {
           }
           return true;
         }
-        var2Lifetime1 = Character.toLowerCase(ji.field_r);
+        var2Lifetime1 = Character.toLowerCase(TextureOperator.field_r);
         if (32 == var2Lifetime1) {
           var2Lifetime1 = 95;
         }
@@ -371,7 +371,7 @@ final class un extends cr {
           return this.field_Ob;
         }
         while (true) {
-          if (!gf.a(false)) {
+          if (!NodeHashTableIterator.a(false)) {
             this.field_Jb.field_S = this.field_Kb.toString();
             if (!param0) {
               return this.field_Ob;
@@ -389,19 +389,19 @@ final class un extends cr {
             this.field_Kb.length() > 0) {
             w.a(true, ' ', this.field_Kb.length() - 1, this.field_Kb);
           }
-          if (gi.a((CharSequence) ((Object) this.field_Kb), ji.field_r, (byte) 31)) {
-            discarded$0 = this.field_Kb.append(ji.field_r);
+          if (gi.a((CharSequence) ((Object) this.field_Kb), TextureOperator.field_r, (byte) 31)) {
+            discarded$0 = this.field_Kb.append(TextureOperator.field_r);
           } else {
             if (0 == this.field_Kb.length() &&
-              ji.field_r == 91) {
-              discarded$1 = this.field_Kb.append(ji.field_r);
+              TextureOperator.field_r == 91) {
+              discarded$1 = this.field_Kb.append(TextureOperator.field_r);
             } else {
               if (1 == this.field_Kb.length() &&
-                35 == ji.field_r) {
-                discarded$2 = this.field_Kb.append(ji.field_r);
+                35 == TextureOperator.field_r) {
+                discarded$2 = this.field_Kb.append(TextureOperator.field_r);
               } else {
-                if (93 == ji.field_r) {
-                  discarded$3 = this.field_Kb.append(ji.field_r);
+                if (93 == TextureOperator.field_r) {
+                  discarded$3 = this.field_Kb.append(TextureOperator.field_r);
                 }
               }
             }
@@ -421,7 +421,7 @@ final class un extends cr {
         return 2;
     }
 
-    un(int param0, int param1, int param2, int param3, String param4, cr param5, cr param6, cr param7) {
+    un(int param0, int param1, int param2, int param3, String param4, UiPanel param5, UiPanel param6, UiPanel param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -441,18 +441,18 @@ final class un extends cr {
         int var13 = 0;
         this.field_Ob = 0;
         try {
-          this.field_Nb = new cr(0L, param6, param4);
+          this.field_Nb = new UiPanel(0L, param6, param4);
           this.b(this.field_Nb, 127);
-          this.field_Jb = new cr(0L, param7);
+          this.field_Jb = new UiPanel(0L, param7);
           this.field_Jb.field_A = 16764006;
           this.b(this.field_Jb, 123);
           this.field_Jb.field_J = "|";
           this.field_Kb = new StringBuilder(12);
           var9_int = this.field_Nb.j(-21391);
-          this.field_Nb.a(80, var9_int, r.field_f, 3, 5);
-          this.field_Jb.a(81, var9_int, r.field_f, r.field_f + 3, 5);
+          this.field_Nb.a(80, var9_int, Archive.field_f, 3, 5);
+          this.field_Jb.a(81, var9_int, Archive.field_f, Archive.field_f + 3, 5);
           var10 = 5 + var9_int + 5;
-          var11 = 3 + (3 + 2 * r.field_f);
+          var11 = 3 + (3 + 2 * Archive.field_f);
           var12 = jf.a(var10, param2, param0, 1);
           var13 = dm.a(param3, 0, var11, param1);
           this.a(123, var10, var11, var13, var12);
@@ -509,7 +509,7 @@ final class un extends cr {
         return false;
     }
 
-    final static cr b(byte param0) {
+    final static UiPanel b(byte param0) {
         int var1 = -13 / ((37 - param0) / 47);
         return pk.e(2);
     }

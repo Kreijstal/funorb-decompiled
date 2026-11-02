@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class od extends cr {
-    cr field_Lb;
+final class od extends UiPanel {
+    UiPanel field_Lb;
     static int field_Mb;
-    cr field_Nb;
+    UiPanel field_Nb;
     ie field_Hb;
     static String field_Ib;
     static int field_Kb;
@@ -198,10 +198,10 @@ final class od extends cr {
         }
     }
 
-    od(long param0, cr param1, cr param2, ie param3) {
-        super(param0, (cr) null);
+    od(long param0, UiPanel param1, UiPanel param2, ie param3) {
+        super(param0, (UiPanel) null);
         try {
-          this.field_Lb = new cr(0L, param2);
+          this.field_Lb = new UiPanel(0L, param2);
           this.field_Hb = new ie(0L, param3);
           this.b(this.field_Lb, 125);
           this.b(this.field_Hb, 124);

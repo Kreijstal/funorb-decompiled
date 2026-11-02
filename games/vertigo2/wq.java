@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class wq extends oh {
+final class wq extends WidgetWrapper {
     static int[] field_I;
     static int[] field_G;
     int field_J;
@@ -23,25 +23,25 @@ final class wq extends oh {
           return;
         }
         if (this.field_J == 256) {
-          this.field_C.a(false, param1, this.field_o + param2, param3 + this.field_t);
+          this.field_C.a(false, param1, this.x + param2, param3 + this.y);
           return;
         }
-        er var6 = new er(this.field_C.field_n, this.field_C.field_s);
+        Sprite var6 = new Sprite(this.field_C.width, this.field_C.height);
         lq.a(var6, (byte) -94);
         this.field_C.a(param0, param1, 0, 0);
         ln.d(-28558);
-        var6.c(this.field_o + param2, param3 + this.field_t, this.field_J);
+        var6.c(this.x + param2, param3 + this.y, this.field_J);
     }
 
     public wq() {
-        super(0, 0, 0, 0, (ur) null, (uf) null);
+        super(0, 0, 0, 0, (WidgetListener) null, (uf) null);
         this.field_J = 256;
     }
 
-    wq(iq param0) {
-        super(param0.field_o, param0.field_t, param0.field_n, param0.field_s, (ur) null, (uf) null);
+    wq(UiWidget param0) {
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetListener) null, (uf) null);
         try {
-          param0.a(false, 0, 0, this.field_s, this.field_n);
+          param0.setBounds(false, 0, 0, this.height, this.width);
           this.field_J = 256;
           this.field_C = param0;
         } catch (RuntimeException runtimeException) {

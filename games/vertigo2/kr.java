@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kr {
-    private ed field_d;
+    private PacketBuffer field_d;
     private java.math.BigInteger field_i;
     private uk[] field_b;
     private t field_a;
-    static jj field_g;
+    static PlatformTaskDispatcher field_g;
     private ia field_e;
     private tk field_f;
     static byte[] field_c;
@@ -68,9 +68,9 @@ final class kr {
               stackIn_10_0 = this.field_b[param3];
               return stackIn_10_0;
             }
-            this.field_d.field_u = param3 * 72 + 6;
-            var6_int = this.field_d.b(true);
-            var7 = this.field_d.b(true);
+            this.field_d.position = param3 * 72 + 6;
+            var6_int = this.field_d.readInt(true);
+            var7 = this.field_d.readInt(true);
             var13 = new byte[64];
             this.field_d.a(0, var13, 64, 67);
             var9 = new uk(param3, param4, param1, this.field_f, this.field_a, var6_int, var13, var7, param2);
@@ -129,10 +129,10 @@ final class kr {
     }
 
     final static void a(int param0) {
-        kd.field_x = va.field_s.a(1, sl.field_q[20]);
+        GameShell.field_x = va.field_s.a(1, sl.field_q[20]);
         int var1 = va.field_s.a(1, sl.field_q[21]);
-        if (!(kd.field_x >= var1)) {
-          kd.field_x = var1;
+        if (!(GameShell.field_x >= var1)) {
+          GameShell.field_x = var1;
         }
         if (param0 != -3645) {
           kr.a(85);
@@ -165,7 +165,7 @@ final class kr {
         byte[] var6;
         java.math.BigInteger var8_ref_java_math_BigInteger;
         int var9;
-        ed var11;
+        PacketBuffer var11;
         byte[] var12;
         java.math.BigInteger var13;
         byte[] var14;
@@ -183,12 +183,12 @@ final class kr {
         if (this.field_e.field_z) {
           return false;
         }
-        var11 = new ed(this.field_e.a((byte) -106));
-        var11.field_u = 5;
-        var3 = var11.h(-11);
-        var11.field_u = var11.field_u + var3 * 72;
+        var11 = new PacketBuffer(this.field_e.a((byte) -106));
+        var11.position = 5;
+        var3 = var11.readUnsignedByte(-11);
+        var11.position = var11.position + var3 * 72;
         var5 = 13 % ((-4 - param0) / 48);
-        var14 = new byte[var11.field_p.length - var11.field_u];
+        var14 = new byte[var11.payload.length - var11.position];
         var12 = var14;
         var4 = var12;
         var11.a(0, var4, var14.length, 61);
@@ -203,7 +203,7 @@ final class kr {
         if (var6.length != 65) {
           throw new RuntimeException();
         }
-        var16 = de.a(5, (byte) -110, var11.field_u - var14.length - 5, var11.field_p);
+        var16 = de.a(5, (byte) -110, var11.position - var14.length - 5, var11.payload);
         for (var8 = 0; var8 < 64; var8++) {
           if (var6[var8 + 1] != var16[var8]) {
             throw new RuntimeException();

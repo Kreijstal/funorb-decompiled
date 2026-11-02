@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rm extends ji {
+final class rm extends TextureOperator {
     static int field_z;
     static String field_E;
     private int field_C;
@@ -103,10 +103,10 @@ final class rm extends ji {
         }
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
-        ed var6 = null;
+        PacketBuffer var6 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -115,16 +115,16 @@ final class rm extends ji {
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param0 != 110) {
-            var6 = (ed) null;
-            this.a((byte) 114, 100, (ed) null);
+            var6 = (PacketBuffer) null;
+            this.a((byte) 114, 100, (PacketBuffer) null);
           }
           var4_int = param1;
           if (var4_int != 0) {
             if (1 == var4_int) {
-              this.field_D = param2.h(-11);
+              this.field_D = param2.readUnsignedByte(-11);
             }
           } else {
-            this.field_C = param2.h(param0 - 121);
+            this.field_C = param2.readUnsignedByte(param0 - 121);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

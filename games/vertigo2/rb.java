@@ -13,7 +13,7 @@ abstract class rb {
         }
     }
 
-    final static pl a(byte param0, ed param1) {
+    final static pl a(byte param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         pl stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -24,7 +24,7 @@ abstract class rb {
           if (param0 <= 80) {
             field_b = (String) null;
           }
-          stackIn_3_0 = new pl(param1.n(2), param1.n(2), param1.n(2), param1.n(2), param1.m(0), param1.m(0), param1.h(-11));
+          stackIn_3_0 = new pl(param1.readSignedShort(2), param1.readSignedShort(2), param1.readSignedShort(2), param1.readSignedShort(2), param1.readUnsignedMedium(0), param1.readUnsignedMedium(0), param1.readUnsignedByte(-11));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,35 +3,35 @@
  */
 final class hb extends bg {
     int field_z;
-    private lg field_i;
-    private lg field_h;
+    private Model field_i;
+    private Model field_h;
     int field_w;
     private wg field_n;
     private wg field_u;
     static String field_o;
     private boolean field_f;
     private int field_E;
-    static lg field_A;
+    static Model field_A;
     private boolean field_y;
-    static wk field_q;
+    static AsyncRequest field_q;
     int field_x;
     private int field_s;
-    static cr field_j;
+    static UiPanel field_j;
     private int field_v;
     private int field_l;
     private int field_m;
     private boolean field_r;
     private int field_g;
-    static cr field_k;
-    private lg field_B;
-    private lg field_t;
-    static cr field_D;
+    static UiPanel field_k;
+    private Model field_B;
+    private Model field_t;
+    static UiPanel field_D;
     static int field_p;
 
     final void a(int param0, int param1) {
         this.field_m = param0;
         if (param1 != -25196) {
-          this.field_i = (lg) null;
+          this.field_i = (Model) null;
         }
     }
 
@@ -42,7 +42,7 @@ final class hb extends bg {
         try {
           nf.field_q[2] = this.field_z;
           if (param0) {
-            this.field_h = (lg) null;
+            this.field_h = (Model) null;
           }
           nf.field_q[3] = 65535;
           nf.field_q[4] = 0;
@@ -84,7 +84,7 @@ final class hb extends bg {
 
     final static int b(byte param0) {
         int var1 = 125 % ((param0 + 11) / 49);
-        return cf.field_a;
+        return SecondaryNodeDequeIterator.field_a;
     }
 
     final int b(int param0) {
@@ -95,12 +95,12 @@ final class hb extends bg {
         return this.field_m;
     }
 
-    final lg c(byte param0) {
-        lg var3 = null;
-        lg var2 = null;
-        lg var2Lifetime1;
+    final Model c(byte param0) {
+        Model var3 = null;
+        Model var2 = null;
+        Model var2Lifetime1;
         if (param0 != 4) {
-          field_A = (lg) null;
+          field_A = (Model) null;
         }
         if (this.field_l == 2) {
           return null;
@@ -109,11 +109,11 @@ final class hb extends bg {
           return null;
         }
         if (!be.field_q) {
-          var2 = new lg(fb.field_v, false, false, false, false);
+          var2 = new Model(SpriteState.field_v, false, false, false, false);
           return var2;
         }
         if (null != this.field_t) {
-          var3 = new lg(this.field_t, false, false, false, false);
+          var3 = new Model(this.field_t, false, false, false, false);
           var2Lifetime1 = var3;
           var3.field_c = rr.field_D;
           var3.field_o = lf.field_A[6];
@@ -145,8 +145,8 @@ final class hb extends bg {
           if (param2 <= 88) {
             hb.c(105);
           }
-          var6_int = pk.a((byte) -14, cj.field_D, param4, ua.field_e);
-          var7 = pk.a((byte) -14, cj.field_D, param1, ua.field_e);
+          var6_int = pk.a((byte) -14, WidgetContainer.field_D, param4, ua.field_e);
+          var7 = pk.a((byte) -14, WidgetContainer.field_D, param1, ua.field_e);
           var8 = pk.a((byte) -14, ib.field_a, param5, ap.field_e);
           var9 = pk.a((byte) -14, ib.field_a, param0, ap.field_e);
           for (var10 = var6_int; var7 >= var10; var10++) {
@@ -335,7 +335,7 @@ final class hb extends bg {
         int var6 = 0;
         int var7 = 0;
         int var8_int = 0;
-        lg var8 = null;
+        Model var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -429,7 +429,7 @@ final class hb extends bg {
                     ll.field_e[2] = ui.field_e;
                     ll.field_e[0] = this.field_h;
                     ll.field_e[1] = this.field_i;
-                    this.field_h = new lg(ll.field_e, 3);
+                    this.field_h = new Model(ll.field_e, 3);
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -440,7 +440,7 @@ final class hb extends bg {
                     }
                     this.a(2, (byte) -36);
                     this.field_f = param0.field_G;
-                    var8 = new lg(this.field_h, false, false, true, false);
+                    var8 = new Model(this.field_h, false, false, true, false);
                     var9 = nf.field_q[0];
                     var10 = nf.field_q[1];
                     nf.field_q[1] = 0;
@@ -455,9 +455,9 @@ final class hb extends bg {
                     ll.field_e[1] = ch.field_d[this.field_m];
                     ll.field_e[2] = sl.field_u;
                     if (!this.field_f) {
-                      this.field_h = new lg(ll.field_e, 3);
+                      this.field_h = new Model(ll.field_e, 3);
                     } else {
-                      this.field_h = new lg(ll.field_e, 2);
+                      this.field_h = new Model(ll.field_e, 2);
                     }
                   }
                 }
@@ -473,7 +473,7 @@ final class hb extends bg {
                     ll.field_e[1] = qo.field_A;
                     ll.field_e[0] = this.field_h;
                     var5 = 1;
-                    this.field_h = new lg(ll.field_e, 2);
+                    this.field_h = new Model(ll.field_e, 2);
                     break;
                   case 8:
                     var5 = 1;
@@ -696,7 +696,7 @@ final class hb extends bg {
             eb.field_f[3] = 65535;
           }
           this.field_B.a(eb.field_f);
-          this.field_t = new lg(this.field_B, true, true, param0, true);
+          this.field_t = new Model(this.field_B, true, true, param0, true);
           return;
         }
     }
@@ -778,7 +778,7 @@ final class hb extends bg {
     }
 
     hb() {
-        this.field_B = new lg(4096, 4096, 0, true, true, true, false, false);
+        this.field_B = new Model(4096, 4096, 0, true, true, true, false, false);
         this.field_n = new wg();
         this.field_u = new wg();
         this.field_u.a(ap.field_b[27], (byte) 87);

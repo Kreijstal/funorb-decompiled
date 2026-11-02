@@ -100,7 +100,7 @@ final class lj {
           var5 = f.field_B;
           var6 = hj.field_c;
           var7 = ca.field_g;
-          oh.field_D.a(new ub(this.field_j, var3, var4Lifetime1, var5, var6, var7), false);
+          WidgetWrapper.field_D.addFirst(new ub(this.field_j, var3, var4Lifetime1, var5, var6, var7), false);
         }
         this.field_r.a((byte) -31, var3, kn.field_h[this.field_j][var3]);
         stackIn_28_0 = this.field_r;
@@ -130,7 +130,7 @@ final class lj {
         return stackIn_8_0;
     }
 
-    final void a(mi param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           this.field_r.a(param0, 0);
           if (param1 <= 66) {
@@ -156,7 +156,7 @@ final class lj {
     }
 
     final static void a(byte param0) {
-        e.a(12899, hb.field_D, ji.field_s, ee.field_b, ua.field_c);
+        e.a(12899, hb.field_D, TextureOperator.field_s, ee.field_b, ua.field_c);
         if (param0 >= -114) {
           lj.d(80);
         }

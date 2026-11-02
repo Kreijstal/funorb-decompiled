@@ -51,8 +51,8 @@ final class t implements Runnable {
 
     public static void a(boolean param0) {
         if (param0) {
-          r var2 = (r) null;
-          t.a((fp) null, 44, 108, (r) null);
+          Archive var2 = (Archive) null;
+          t.a((PcmStreamMixer) null, 44, 108, (Archive) null);
         }
         field_n = null;
         field_m = null;
@@ -125,8 +125,8 @@ final class t implements Runnable {
             this.field_e.notifyAll();
           }
           if (param0 > -8) {
-            r var4 = (r) null;
-            t.a((fp) null, 6, 3, (r) null);
+            Archive var4 = (Archive) null;
+            t.a((PcmStreamMixer) null, 6, 3, (Archive) null);
           }
           try {
             this.field_h.join();
@@ -142,7 +142,7 @@ final class t implements Runnable {
 
     final static void a(byte param0) {
         int var1;
-        r var2;
+        Archive var2;
         if (sp.field_V &&
           vj.field_h) {
           return;
@@ -170,8 +170,8 @@ final class t implements Runnable {
           }
         }
         if (param0 != 44) {
-          var2 = (r) null;
-          t.a((u[]) null, (int[]) null, (r) null, (r) null, false);
+          var2 = (Archive) null;
+          t.a((u[]) null, (int[]) null, (Archive) null, (Archive) null, false);
         }
         if (sp.field_V &&
           vj.field_h) {
@@ -185,9 +185,9 @@ final class t implements Runnable {
         }
     }
 
-    final static void a(fp param0, int param1, int param2, r param3) {
+    final static void a(PcmStreamMixer param0, int param1, int param2, Archive param3) {
         try {
-          sq.field_e = param2 * el.b(true) / 1000;
+          sq.field_e = param2 * IterableNodeHashTable.b(true) / 1000;
           hi.a(param3, 56);
           jl.a(param3, (byte) -85);
           ao.a(param1 - 1513236, param3);
@@ -204,8 +204,8 @@ final class t implements Runnable {
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 < 26) {
-          r var6 = (r) null;
-          t.a((u[]) null, (int[]) null, (r) null, (r) null, false);
+          Archive var6 = (Archive) null;
+          t.a((u[]) null, (int[]) null, (Archive) null, (Archive) null, false);
         }
         hq.field_r = param2;
         jm.field_G = param3;
@@ -300,11 +300,11 @@ final class t implements Runnable {
         }
     }
 
-    final static void a(u[] param0, int[] param1, r param2, r param3, boolean param4) {
-        er[] dupTemp$0 = null;
-        er[] dupTemp$1 = null;
-        er[] dupTemp$2 = null;
-        er[] dupTemp$3 = null;
+    final static void a(u[] param0, int[] param1, Archive param2, Archive param3, boolean param4) {
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         u[] var5 = null;
         u[] var6 = null;
         int[] var6_array = null;
@@ -316,72 +316,72 @@ final class t implements Runnable {
         int[] var22 = null;
         int[] var23 = null;
         int[] var24 = null;
-        cr stackIn_22_0;
-        r stackIn_22_1;
+        UiPanel stackIn_22_0;
+        Archive stackIn_22_1;
         String stackIn_22_2;
         String stackIn_22_3;
         boolean stackIn_23_4 = false;
-        cr stackIn_25_0;
-        r stackIn_25_1;
+        UiPanel stackIn_25_0;
+        Archive stackIn_25_1;
         String stackIn_25_2;
         String stackIn_25_3;
         boolean stackIn_26_4 = false;
-        cr stackIn_28_0;
-        r stackIn_28_1;
+        UiPanel stackIn_28_0;
+        Archive stackIn_28_1;
         String stackIn_28_2;
         String stackIn_28_3;
         boolean stackIn_29_4 = false;
-        cr stackIn_31_0;
-        r stackIn_31_1;
+        UiPanel stackIn_31_0;
+        Archive stackIn_31_1;
         String stackIn_31_2;
         String stackIn_31_3;
         boolean stackIn_32_4 = false;
-        cr stackIn_34_0;
-        r stackIn_34_1;
+        UiPanel stackIn_34_0;
+        Archive stackIn_34_1;
         String stackIn_34_2;
         String stackIn_34_3;
         boolean stackIn_35_4 = false;
-        cr stackIn_37_0;
-        r stackIn_37_1;
+        UiPanel stackIn_37_0;
+        Archive stackIn_37_1;
         String stackIn_37_2;
         String stackIn_37_3;
         boolean stackIn_38_4 = false;
-        cr stackIn_40_0;
-        r stackIn_40_1;
+        UiPanel stackIn_40_0;
+        Archive stackIn_40_1;
         String stackIn_40_2;
         String stackIn_40_3;
         boolean stackIn_41_4 = false;
-        cr stackIn_43_0;
-        r stackIn_43_1;
+        UiPanel stackIn_43_0;
+        Archive stackIn_43_1;
         String stackIn_43_2;
         String stackIn_43_3;
         boolean stackIn_44_4 = false;
-        cr stackIn_46_0;
-        r stackIn_46_1;
+        UiPanel stackIn_46_0;
+        Archive stackIn_46_1;
         String stackIn_46_2;
         String stackIn_46_3;
         boolean stackIn_47_4 = false;
-        cr stackIn_49_0;
-        r stackIn_49_1;
+        UiPanel stackIn_49_0;
+        Archive stackIn_49_1;
         String stackIn_49_2;
         String stackIn_49_3;
         boolean stackIn_50_4 = false;
-        cr stackIn_52_0;
-        r stackIn_52_1;
+        UiPanel stackIn_52_0;
+        Archive stackIn_52_1;
         String stackIn_52_2;
         String stackIn_52_3;
         boolean stackIn_53_4 = false;
-        cr stackIn_55_0;
-        r stackIn_55_1;
+        UiPanel stackIn_55_0;
+        Archive stackIn_55_1;
         String stackIn_55_2;
         String stackIn_55_3;
         boolean stackIn_56_4 = false;
-        r stackIn_58_0 = null;
+        Archive stackIn_58_0 = null;
         String stackIn_58_1 = null;
         String stackIn_58_2 = null;
         boolean stackIn_59_3 = false;
-        cr stackIn_61_0;
-        r stackIn_61_1;
+        UiPanel stackIn_61_0;
+        Archive stackIn_61_1;
         String stackIn_61_2;
         String stackIn_61_3;
         boolean stackIn_62_4;
@@ -397,22 +397,22 @@ final class t implements Runnable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         co var7 = null;
-        cr var8 = null;
-        cr var9 = null;
-        cr var10 = null;
-        cr var11 = null;
-        er[] var12 = null;
-        er[] var13 = null;
-        er[] var14 = null;
-        cr var15 = null;
-        er[] var16 = null;
-        er[] var17 = null;
+        UiPanel var8 = null;
+        UiPanel var9 = null;
+        UiPanel var10 = null;
+        UiPanel var11 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
+        UiPanel var15 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
         var18 = Vertigo2.field_L ? 1 : 0;
         try {
-          var20 = oh.a((byte) -39, "crowns", "lobby", param3);
+          var20 = WidgetWrapper.a((byte) -39, "crowns", "lobby", param3);
           var5 = var20;
           eh.field_e = var20.length;
           if (param0 != null) {
@@ -446,85 +446,85 @@ final class t implements Runnable {
             }
           }
           nl.field_k = 2;
-          r.field_j = 2;
-          r.field_f = 15;
+          Archive.field_j = 2;
+          Archive.field_f = 15;
           ia.field_G = 4;
           hc.field_b = 11;
           var7 = w.a(param2, param3, "largefont", "lobby", 121);
-          li.field_e = w.a(param2, param3, "generalfont", "lobby", 104);
+          IntrusiveNode.field_e = w.a(param2, param3, "generalfont", "lobby", 104);
           kb.field_c = w.a(param2, param3, "chatfont", "lobby", 121);
           var7.a(var5, var24);
-          li.field_e.a(var5, var24);
+          IntrusiveNode.field_e.a(var5, var24);
           kb.field_c.a(var5, var24);
-          var8 = new cr(0L, (cr) null);
-          var8.field_z = (cc) ((Object) var7);
-          var8.field_qb = r.field_f;
+          var8 = new UiPanel(0L, (UiPanel) null);
+          var8.field_z = (BitmapFont) ((Object) var7);
+          var8.field_qb = Archive.field_f;
           var8.field_A = 16777215;
           var9 = var8;
           var8.field_ab = 1;
           var9.field_O = 1;
-          var10 = new cr(0L, (cr) null);
-          var10.field_z = (cc) ((Object) li.field_e);
-          var10.field_qb = r.field_f;
+          var10 = new UiPanel(0L, (UiPanel) null);
+          var10.field_z = (BitmapFont) ((Object) IntrusiveNode.field_e);
+          var10.field_qb = Archive.field_f;
           var10.field_A = 16777215;
           var10.field_ab = 1;
           var11 = var10;
           var11.field_O = 1;
-          j.field_q = new cr(0L, var8);
+          j.field_q = new UiPanel(0L, var8);
           j.field_q.field_Bb = hq.a(gk.a(param3, "lobby", "heading", true), 202);
-          rq.field_t = new cr(0L, (cr) null);
+          rq.field_t = new UiPanel(0L, (UiPanel) null);
           rq.field_t.field_Bb = ml.a((byte) -13, 8421504, false, 4210752, 120, param4);
-          lk.field_a = new cr(0L, (cr) null);
-          lk.field_a.field_Bb = vl.a(114, 3, 0, 1, 6316128, 6316128);
-          vf.field_B = new cr(0L, (cr) null);
+          RasterBuffer.field_a = new UiPanel(0L, (UiPanel) null);
+          RasterBuffer.field_a.field_Bb = vl.a(114, 3, 0, 1, 6316128, 6316128);
+          vf.field_B = new UiPanel(0L, (UiPanel) null);
           vf.field_B.field_Bb = hq.a(gk.a(param3, "lobby", "popup", true), 202);
           var12 = hq.a(gk.a(param3, "lobby", "popup_mouseover", true), 202);
           var13 = gk.a(param3, "lobby", "button", true);
           var14 = hq.a(gk.a(param3, "lobby", "tab_active", true), 202);
-          ji.field_s = new cr(0L, var8);
-          ji.field_s.field_Bb = var14;
-          eh.field_a = new cr(0L, (cr) null);
+          TextureOperator.field_s = new UiPanel(0L, var8);
+          TextureOperator.field_s.field_Bb = var14;
+          eh.field_a = new UiPanel(0L, (UiPanel) null);
           eh.field_a.field_Db = tn.a("closebutton", param3, -82, "lobby");
           eh.field_a.field_W = tn.a("closebutton_mouseover", param3, -90, "lobby");
-          gn.field_f = new cr(0L, var8);
+          gn.field_f = new UiPanel(0L, var8);
           gn.field_f.field_Bb = ml.a((byte) -13, 3815994, true, 2039583, 40, true);
-          db.field_t = new cr(0L, var10);
+          db.field_t = new UiPanel(0L, var10);
           db.field_t.field_R = 2;
           db.field_t.field_Bb = ml.a((byte) -13, 3815994, true, 2039583, 30, false);
-          kl.field_Ib = new cr(0L, var10);
+          kl.field_Ib = new UiPanel(0L, var10);
           kl.field_Ib.field_R = 2;
           kl.field_Ib.field_Bb = ml.a((byte) -13, 3815994, false, 2039583, 30, false);
-          sa.field_a = new cr(0L, var10);
-          sa.field_a.field_R = 2;
-          sa.field_a.field_Bb = ml.a((byte) -13, 3815994, false, 2039583, 30, true);
-          ee.field_b = new cr(0L, (cr) null);
-          ee.field_b.field_qb = r.field_f;
+          MouseInputHandler.field_a = new UiPanel(0L, var10);
+          MouseInputHandler.field_a.field_R = 2;
+          MouseInputHandler.field_a.field_Bb = ml.a((byte) -13, 3815994, false, 2039583, 30, true);
+          ee.field_b = new UiPanel(0L, (UiPanel) null);
+          ee.field_b.field_qb = Archive.field_f;
           ee.field_b.field_ab = 1;
           ee.field_b.field_A = 13421772;
-          ee.field_b.field_z = (cc) ((Object) li.field_e);
-          ja.field_e = new cr(0L, ee.field_b);
+          ee.field_b.field_z = (BitmapFont) ((Object) IntrusiveNode.field_e);
+          ja.field_e = new UiPanel(0L, ee.field_b);
           ja.field_e.field_H = 16777215;
           ja.field_e.field_B = 16777215;
           ja.field_e.field_A = 16764006;
           ja.field_e.field_D = 8421504;
           ja.field_e.field_K = 16777215;
-          var15 = new cr(0L, ja.field_e);
-          var15.field_z = (cc) ((Object) var7);
-          var15.field_qb = r.field_f;
+          var15 = new UiPanel(0L, ja.field_e);
+          var15.field_z = (BitmapFont) ((Object) var7);
+          var15.field_qb = Archive.field_f;
           var15.field_A = 16777215;
-          pn.field_N = new cr(0L, ee.field_b);
+          pn.field_N = new UiPanel(0L, ee.field_b);
           pn.field_N.field_Bb = ml.a((byte) -13, 2236962, false, 2236962, 16, false);
           pn.field_N.field_R = 2;
-          fm.field_e = new cr(0L, ee.field_b);
+          fm.field_e = new UiPanel(0L, ee.field_b);
           fm.field_e.field_Bb = ml.a((byte) -13, 1513239, false, 1513239, 16, false);
           fm.field_e.field_R = 2;
-          tm.field_b = new cr(0L, pn.field_N);
+          tm.field_b = new UiPanel(0L, pn.field_N);
           tm.field_b.a(ja.field_e, -46);
-          el.field_b = new cr(0L, fm.field_e);
-          el.field_b.a(ja.field_e, -104);
+          IterableNodeHashTable.field_b = new UiPanel(0L, fm.field_e);
+          IterableNodeHashTable.field_b.a(ja.field_e, -104);
           var16 = gk.a(param3, "lobby", "button_mouseover", true);
-          ar.field_c = new kq(vf.field_B, var12, ee.field_b, ja.field_e, 3, 2, r.field_j, 3, r.field_f);
-          bq.field_B = new cr(0L, ja.field_e);
+          ar.field_c = new kq(vf.field_B, var12, ee.field_b, ja.field_e, 3, 2, Archive.field_j, 3, Archive.field_f);
+          bq.field_B = new UiPanel(0L, ja.field_e);
           bq.field_B.field_bb = 1;
           bq.field_B.field_Y = 1;
           bq.field_B.field_Cb = 1;
@@ -533,63 +533,63 @@ final class t implements Runnable {
           bq.field_B.field_Gb = 1;
           bq.field_B.field_cb = gk.a(param3, "lobby", "button_mouseheld", true);
           stackIn_22_0 = bq.field_B;
-          stackIn_22_1 = (r) (param3);
+          stackIn_22_1 = (Archive) (param3);
           stackIn_22_2 = "lobby";
           stackIn_22_3 = "button_active";
           stackIn_23_4 = !(param4);
           stackIn_22_0.field_T = gk.a(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_23_4);
           stackIn_25_0 = bq.field_B;
-          stackIn_25_1 = (r) (param3);
+          stackIn_25_1 = (Archive) (param3);
           stackIn_25_2 = "lobby";
           stackIn_25_3 = "button_disabled";
           stackIn_26_4 = !(param4);
           stackIn_25_0.field_gb = gk.a(stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_26_4);
           bq.field_B.field_O = 1;
-          qr.field_m = new cr(0L, ja.field_e);
+          qr.field_m = new UiPanel(0L, ja.field_e);
           qr.field_m.field_O = 1;
           stackIn_28_0 = qr.field_m;
-          stackIn_28_1 = (r) (param3);
+          stackIn_28_1 = (Archive) (param3);
           stackIn_28_2 = "lobby";
           stackIn_28_3 = "tab_inactive";
           stackIn_29_4 = !(param4);
           stackIn_28_0.field_Bb = hq.a(gk.a(stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_29_4), 202);
           stackIn_31_0 = qr.field_m;
-          stackIn_31_1 = (r) (param3);
+          stackIn_31_1 = (Archive) (param3);
           stackIn_31_2 = "lobby";
           stackIn_31_3 = "tab_mouseover";
           stackIn_32_4 = !(param4);
           stackIn_31_0.field_Q = hq.a(gk.a(stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_32_4), 202);
           qr.field_m.field_T = var14;
-          ab.field_d = new cr(0L, (cr) null);
+          ab.field_d = new UiPanel(0L, (UiPanel) null);
           ab.field_d.field_Bb = vl.a(206, 3, 0, -1, 1856141, 1127256);
-          dj.field_b = new cr(0L, (cr) null);
+          dj.field_b = new UiPanel(0L, (UiPanel) null);
           dj.field_b.field_Bb = vl.a(290, 3, 0, -1, 11579568, 6052956);
-          fb.field_u = new cr(0L, var15);
-          fb.field_u.field_bb = 1;
-          fb.field_u.field_Gb = 1;
-          fb.field_u.field_O = 1;
-          fb.field_u.field_Y = 1;
-          fb.field_u.field_Cb = 1;
-          ub.field_t = new cr(0L, fb.field_u);
-          uk.field_e = new cr(0L, ja.field_e);
+          SpriteState.field_u = new UiPanel(0L, var15);
+          SpriteState.field_u.field_bb = 1;
+          SpriteState.field_u.field_Gb = 1;
+          SpriteState.field_u.field_O = 1;
+          SpriteState.field_u.field_Y = 1;
+          SpriteState.field_u.field_Cb = 1;
+          ub.field_t = new UiPanel(0L, SpriteState.field_u);
+          uk.field_e = new UiPanel(0L, ja.field_e);
           uk.field_e.field_Cb = 1;
           uk.field_e.field_O = 1;
           uk.field_e.field_Y = 1;
           uk.field_e.field_Gb = 1;
           uk.field_e.field_bb = 1;
-          sc.field_c = new cr(0L, uk.field_e);
-          gh.field_b = new cr(0L, uk.field_e);
-          vc.field_b = new cr(0L, fb.field_u);
-          ip.field_a = new cr(0L, uk.field_e);
-          ca.field_f = new cr(0L, uk.field_e);
-          tr.field_l = new cr(0L, uk.field_e);
+          sc.field_c = new UiPanel(0L, uk.field_e);
+          gh.field_b = new UiPanel(0L, uk.field_e);
+          vc.field_b = new UiPanel(0L, SpriteState.field_u);
+          ip.field_a = new UiPanel(0L, uk.field_e);
+          ca.field_f = new UiPanel(0L, uk.field_e);
+          GameplayScreen.field_l = new UiPanel(0L, uk.field_e);
           uk.field_e.field_Bb = hq.a(gk.a(param3, "lobby", "smallbutton", true), 202);
           uk.field_e.field_Q = hq.a(gk.a(param3, "lobby", "smallbutton_mouseover", true), 202);
           dupTemp$0 = hq.a(gk.a(param3, "lobby", "smallbutton_active", true), 202);
           uk.field_e.field_T = dupTemp$0;
           uk.field_e.field_cb = dupTemp$0;
           stackIn_34_0 = uk.field_e;
-          stackIn_34_1 = (r) (param3);
+          stackIn_34_1 = (Archive) (param3);
           stackIn_34_2 = "lobby";
           stackIn_34_3 = "smallbutton_disabled";
           stackIn_35_4 = !(param4);
@@ -597,24 +597,24 @@ final class t implements Runnable {
           ub.field_t.field_Bb = hq.a(gk.a(param3, "lobby", "mediumbutton", true), 202);
           ub.field_t.field_Q = hq.a(gk.a(param3, "lobby", "mediumbutton_mouseover", true), 202);
           ub.field_t.field_cb = hq.a(gk.a(param3, "lobby", "mediumbutton_mouseheld", true), 202);
-          fb.field_u.field_Bb = hq.a(gk.a(param3, "lobby", "bigbutton", true), 202);
-          fb.field_u.field_Q = hq.a(gk.a(param3, "lobby", "bigbutton_mouseover", true), 202);
-          stackIn_37_0 = fb.field_u;
-          stackIn_37_1 = (r) (param3);
+          SpriteState.field_u.field_Bb = hq.a(gk.a(param3, "lobby", "bigbutton", true), 202);
+          SpriteState.field_u.field_Q = hq.a(gk.a(param3, "lobby", "bigbutton_mouseover", true), 202);
+          stackIn_37_0 = SpriteState.field_u;
+          stackIn_37_1 = (Archive) (param3);
           stackIn_37_2 = "lobby";
           stackIn_37_3 = "bigbutton_mouseheld";
           stackIn_38_4 = !(param4);
           stackIn_37_0.field_cb = hq.a(gk.a(stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_38_4), 202);
-          fb.field_u.field_gb = hq.a(gk.a(param3, "lobby", "bigbutton_disabled", true), 202);
+          SpriteState.field_u.field_gb = hq.a(gk.a(param3, "lobby", "bigbutton_disabled", true), 202);
           sc.field_c.field_Bb = hq.a(gk.a(param3, "lobby", "greenbutton", true), 202);
           stackIn_40_0 = sc.field_c;
-          stackIn_40_1 = (r) (param3);
+          stackIn_40_1 = (Archive) (param3);
           stackIn_40_2 = "lobby";
           stackIn_40_3 = "greenbutton_mouseover";
           stackIn_41_4 = !(param4);
           stackIn_40_0.field_Q = hq.a(gk.a(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4), 202);
           stackIn_43_0 = sc.field_c;
-          stackIn_43_1 = (r) (param3);
+          stackIn_43_1 = (Archive) (param3);
           stackIn_43_2 = "lobby";
           stackIn_43_3 = "greenbutton_mouseheld";
           stackIn_44_4 = !(param4);
@@ -622,7 +622,7 @@ final class t implements Runnable {
           gh.field_b.field_Bb = hq.a(gk.a(param3, "lobby", "redbutton", true), 202);
           gh.field_b.field_Q = hq.a(gk.a(param3, "lobby", "redbutton_mouseover", true), 202);
           stackIn_46_0 = gh.field_b;
-          stackIn_46_1 = (r) (param3);
+          stackIn_46_1 = (Archive) (param3);
           stackIn_46_2 = "lobby";
           stackIn_46_3 = "redbutton_mouseheld";
           stackIn_47_4 = !(param4);
@@ -631,30 +631,30 @@ final class t implements Runnable {
           vc.field_b.field_Q = hq.a(gk.a(param3, "lobby", "backbutton_mouseover", true), 202);
           vc.field_b.field_cb = hq.a(gk.a(param3, "lobby", "backbutton_mouseheld", true), 202);
           vc.field_b.field_gb = hq.a(gk.a(param3, "lobby", "backbutton_disabled", true), 202);
-          tr.field_l.field_Bb = hq.a(gk.a(param3, "lobby", "gameoptionbutton", true), 202);
-          stackIn_49_0 = tr.field_l;
-          stackIn_49_1 = (r) (param3);
+          GameplayScreen.field_l.field_Bb = hq.a(gk.a(param3, "lobby", "gameoptionbutton", true), 202);
+          stackIn_49_0 = GameplayScreen.field_l;
+          stackIn_49_1 = (Archive) (param3);
           stackIn_49_2 = "lobby";
           stackIn_49_3 = "gameoptionbutton_mouseover";
           stackIn_50_4 = !(param4);
           stackIn_49_0.field_Q = hq.a(gk.a(stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_50_4), 202);
           dupTemp$1 = hq.a(gk.a(param3, "lobby", "gameoptionbutton_active", true), 202);
-          tr.field_l.field_T = dupTemp$1;
-          tr.field_l.field_cb = dupTemp$1;
-          tr.field_l.field_gb = hq.a(gk.a(param3, "lobby", "gameoptionbutton_disabled", true), 202);
+          GameplayScreen.field_l.field_T = dupTemp$1;
+          GameplayScreen.field_l.field_cb = dupTemp$1;
+          GameplayScreen.field_l.field_gb = hq.a(gk.a(param3, "lobby", "gameoptionbutton_disabled", true), 202);
           ip.field_a.field_Bb = hq.a(gk.a(param3, "lobby", "chatbutton", true), 202);
           ip.field_a.field_Q = hq.a(gk.a(param3, "lobby", "chatbutton_mouseover", true), 202);
           dupTemp$2 = hq.a(gk.a(param3, "lobby", "chatbutton_active", true), 202);
           ip.field_a.field_T = dupTemp$2;
           ip.field_a.field_cb = dupTemp$2;
           stackIn_52_0 = ca.field_f;
-          stackIn_52_1 = (r) (param3);
+          stackIn_52_1 = (Archive) (param3);
           stackIn_52_2 = "lobby";
           stackIn_52_3 = "chatfilterbutton";
           stackIn_53_4 = !(param4);
           stackIn_52_0.field_Bb = hq.a(gk.a(stackIn_52_1, stackIn_52_2, stackIn_52_3, stackIn_53_4), 202);
           stackIn_55_0 = ca.field_f;
-          stackIn_55_1 = (r) (param3);
+          stackIn_55_1 = (Archive) (param3);
           stackIn_55_2 = "lobby";
           stackIn_55_3 = "chatfilterbutton_mouseover";
           stackIn_56_4 = !(param4);
@@ -662,39 +662,39 @@ final class t implements Runnable {
           dupTemp$3 = hq.a(gk.a(param3, "lobby", "chatfilterbutton_active", true), 202);
           ca.field_f.field_T = dupTemp$3;
           ca.field_f.field_cb = dupTemp$3;
-          stackIn_58_0 = (r) (param3);
+          stackIn_58_0 = (Archive) (param3);
           stackIn_58_1 = "lobby";
           stackIn_58_2 = "checkbox";
           stackIn_59_3 = !(param4);
           var17 = gk.a(stackIn_58_0, stackIn_58_1, stackIn_58_2, stackIn_59_3);
           fr.field_a = new sm(0L, var17[1], var17[0], 1, ja.field_e, (String) null);
-          tb.field_a = new cr(0L, (cr) null);
+          tb.field_a = new UiPanel(0L, (UiPanel) null);
           tb.field_a.field_Bb = rh.a(tn.a("slideregion", param3, -90, "lobby"), -27140);
           tb.field_a.field_Q = rh.a(tn.a("slideregion_mouseover", param3, -95, "lobby"), -27140);
           tb.field_a.field_cb = rh.a(tn.a("slideregion_mouseheld", param3, -77, "lobby"), -27140);
           tb.field_a.field_gb = rh.a(tn.a("slideregion_disabled", param3, -89, "lobby"), -27140);
-          sj.field_c = new cr(0L, (cr) null);
+          sj.field_c = new UiPanel(0L, (UiPanel) null);
           sj.field_c.field_Bb = hq.a(gk.a(param3, "lobby", "dragbar", true), 202);
           stackIn_61_0 = sj.field_c;
-          stackIn_61_1 = (r) (param3);
+          stackIn_61_1 = (Archive) (param3);
           stackIn_61_2 = "lobby";
           stackIn_61_3 = "dragbar_mouseover";
           stackIn_62_4 = !(param4);
           stackIn_61_0.field_Q = hq.a(gk.a(stackIn_61_1, stackIn_61_2, stackIn_61_3, stackIn_62_4), 202);
           sj.field_c.field_cb = hq.a(gk.a(param3, "lobby", "dragbar_mouseheld", true), 202);
           sj.field_c.field_gb = hq.a(gk.a(param3, "lobby", "dragbar_disabled", true), 202);
-          ad.field_e = new cr(0L, (cr) null);
+          ad.field_e = new UiPanel(0L, (UiPanel) null);
           ad.field_e.field_Db = tn.a("upbutton", param3, -73, "lobby");
           ad.field_e.field_W = tn.a("upbutton_mouseover", param3, -107, "lobby");
           ad.field_e.field_Ab = tn.a("upbutton_mouseheld", param3, -100, "lobby");
           ad.field_e.field_I = tn.a("upbutton_disabled", param3, -80, "lobby");
-          lc.field_e = new cr(0L, (cr) null);
+          lc.field_e = new UiPanel(0L, (UiPanel) null);
           lc.field_e.field_Db = tn.a("downbutton", param3, -101, "lobby");
           lc.field_e.field_W = tn.a("downbutton_mouseover", param3, -77, "lobby");
           lc.field_e.field_Ab = tn.a("downbutton_mouseheld", param3, -114, "lobby");
           lc.field_e.field_I = tn.a("downbutton_disabled", param3, -99, "lobby");
           ol.field_H = new ie(0L, ad.field_e, lc.field_e, tb.field_a, sj.field_c);
-          pb.field_b = new dm(0L, (cr) null, ua.field_c, ol.field_H, uk.field_e, (String) null, (String) null);
+          pb.field_b = new dm(0L, (UiPanel) null, ua.field_c, ol.field_H, uk.field_e, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -771,20 +771,20 @@ final class t implements Runnable {
         }
     }
 
-    t(jj param0) {
-        wk var2 = null;
+    t(PlatformTaskDispatcher param0) {
+        AsyncRequest var2 = null;
         this.field_e = new ak();
         this.field_d = 0;
         this.field_j = false;
         try {
-          var2 = param0.a(5, (Runnable) (this), 0);
-          while (0 == var2.field_b) {
+          var2 = param0.startThread(5, (Runnable) (this), 0);
+          while (0 == var2.status) {
             um.a(true, 10L);
           }
-          if (var2.field_b == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_h = (Thread) (var2.field_d);
+          this.field_h = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

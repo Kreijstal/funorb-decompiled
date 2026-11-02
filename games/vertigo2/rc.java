@@ -28,7 +28,7 @@ final class rc {
         int var11Lifetime1;
         int var11Lifetime2;
         jq.a(70, 20, 100, 600, 320);
-        cc var13 = tk.field_c;
+        BitmapFont var13 = tk.field_c;
         int var2 = 2 + var13.field_z;
         int var3 = var13.field_z;
         int var4 = var13.field_z + var13.field_M;
@@ -37,7 +37,7 @@ final class rc {
         }
         int var5 = 110 + va.field_s.field_j;
         if (0 == jq.field_b) {
-          va.field_s.a(16777215, (byte) 60, -1, 40, ji.field_w, var5);
+          va.field_s.a(16777215, (byte) 60, -1, 40, TextureOperator.field_w, var5);
           va.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
           var13.a(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
           mp.field_a.e(60, 290);
@@ -51,16 +51,16 @@ final class rc {
           va.field_s.a(16777215, (byte) 61, -1, 40, uq.field_b, var5);
           var6 = 30;
           var7 = var3 + 130 + 2 * var4;
-          var8 = li.field_i[0].field_y;
-          var9 = li.field_i[0].field_t;
+          var8 = IntrusiveNode.field_i[0].field_y;
+          var9 = IntrusiveNode.field_i[0].field_t;
           var10 = 0;
           var11 = 3;
-          bh.a(var10, var8, var2, uj.field_j, var11, var13, 225, var6, aa.field_Sb, var7, 128, li.field_i, var9);
+          bh.a(var10, var8, var2, MenuSelectionCursor.field_j, var11, var13, 225, var6, aa.field_Sb, var7, 128, IntrusiveNode.field_i, var9);
           bi.c(320, var3 + 130 + 4, 320 - (80 - (var3 + 4)), 16777215, 100);
           var6 += 300;
           var11 += 3;
           var10 += 3;
-          bh.a(var10, var8, var2, uj.field_j, var11, var13, 225, var6, aa.field_Sb, var7, 128, li.field_i, var9);
+          bh.a(var10, var8, var2, MenuSelectionCursor.field_j, var11, var13, 225, var6, aa.field_Sb, var7, 128, IntrusiveNode.field_i, var9);
           if (var12 == 0) {
             va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
             return;
@@ -104,21 +104,21 @@ final class rc {
         va.field_s.a(16777215, (byte) 71, -1, 40, fh.field_v, var5);
         var6Lifetime2 = 30;
         var7Lifetime2 = var3 + 130 + 2 * var4;
-        var8Lifetime2 = li.field_i[0].field_y;
-        var9Lifetime2 = li.field_i[0].field_t;
+        var8Lifetime2 = IntrusiveNode.field_i[0].field_y;
+        var9Lifetime2 = IntrusiveNode.field_i[0].field_t;
         var10Lifetime2 = 6;
         var11Lifetime2 = 9;
-        bh.a(var10Lifetime2, var8Lifetime2, var2, uj.field_j, var11Lifetime2, var13, 225, var6Lifetime2, aa.field_Sb, var7Lifetime2, 128, li.field_i, var9Lifetime2);
+        bh.a(var10Lifetime2, var8Lifetime2, var2, MenuSelectionCursor.field_j, var11Lifetime2, var13, 225, var6Lifetime2, aa.field_Sb, var7Lifetime2, 128, IntrusiveNode.field_i, var9Lifetime2);
         var11Lifetime2 += 3;
         var10Lifetime2 += 3;
         bi.c(320, 134 + var3, -80 - (-4 - var3) + 320, 16777215, 100);
         var6Lifetime2 += 300;
-        bh.a(var10Lifetime2, var8Lifetime2, var2, uj.field_j, var11Lifetime2, var13, 225, var6Lifetime2, aa.field_Sb, var7Lifetime2, param0 + 32291, li.field_i, var9Lifetime2);
+        bh.a(var10Lifetime2, var8Lifetime2, var2, MenuSelectionCursor.field_j, var11Lifetime2, var13, 225, var6Lifetime2, aa.field_Sb, var7Lifetime2, param0 + 32291, IntrusiveNode.field_i, var9Lifetime2);
         if (var12 == 0) {
           va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
           return;
         }
-        va.field_s.a(16777215, (byte) 60, -1, 40, ji.field_w, var5);
+        va.field_s.a(16777215, (byte) 60, -1, 40, TextureOperator.field_w, var5);
         va.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
         var13.a(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
         mp.field_a.e(60, 290);
@@ -260,7 +260,7 @@ final class rc {
           }
           var2_int = 0;
           var3 = param0.length();
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var2_int < var3) {
               stackOut_6_0 = jq.a(param0.charAt(var2_int), -96);
@@ -271,7 +271,7 @@ final class rc {
                   stackOut_13_0 = jq.a(param0.charAt(var3 - 1), -96);
                   stackIn_18_0 = stackOut_13_0 ? 1 : 0;
                   stackIn_14_0 = stackOut_13_0;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -292,7 +292,7 @@ final class rc {
                 stackIn_18_0 = stackOut_13_0Lifetime1 ? 1 : 0;
                 stackIn_14_0Lifetime1 = stackOut_13_0Lifetime1;
                 if (var9 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
                 if (!stackIn_14_0Lifetime1) {
                   break;
@@ -357,11 +357,11 @@ final class rc {
         }
     }
 
-    final static fp b(int param0) {
+    final static PcmStreamMixer b(int param0) {
         if (param0 < 106) {
-          return (fp) null;
+          return (PcmStreamMixer) null;
         }
-        return il.field_g;
+        return MouseWheelInput.field_g;
     }
 
     static {

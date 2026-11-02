@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends cj implements ih, ij {
+final class ob extends WidgetContainer implements ih, ij {
     private kp field_O;
     private d field_K;
     private boolean field_S;
@@ -10,18 +10,18 @@ final class ob extends cj implements ih, ij {
     private String field_P;
     private d field_G;
     private boolean field_R;
-    static nj field_Q;
+    static IntrusiveDeque field_Q;
     static String field_I;
-    static nj field_M;
+    static IntrusiveDeque field_M;
     private d field_J;
     static int field_L;
     static double field_F;
 
     private final void a(int param0) {
         if (hi.c((byte) 6) ||
-          !(this.field_H.field_w.length() <= 0) &&
-          !(this.field_O.field_w.length() <= 0)) {
-          la.a(this.field_H.field_w, this.field_O.field_w, 26806);
+          !(this.field_H.text.length() <= 0) &&
+          !(this.field_O.text.length() <= 0)) {
+          la.a(this.field_H.text, this.field_O.text, 26806);
         }
         if (param0 >= -86) {
           this.field_S = false;
@@ -37,7 +37,7 @@ final class ob extends cj implements ih, ij {
         RuntimeException var3 = null;
         try {
           if (param1 == this.field_H) {
-            this.field_O.a((byte) 116, (iq) (this));
+            this.field_O.a((byte) 116, (UiWidget) (this));
           }
           if (param0 < 16) {
             var4 = (kp) null;
@@ -61,7 +61,7 @@ final class ob extends cj implements ih, ij {
         }
     }
 
-    final boolean a(char param0, int param1, int param2, iq param3) {
+    final boolean a(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -101,7 +101,7 @@ final class ob extends cj implements ih, ij {
         String var4 = null;
         try {
           if (param0 != -79) {
-            field_Q = (nj) null;
+            field_Q = (IntrusiveDeque) null;
           }
           var3 = this.field_H;
           var4 = param1;
@@ -122,14 +122,14 @@ final class ob extends cj implements ih, ij {
 
     final void a(boolean param0, int param1, int param2, int param3) {
         if (param0) {
-          iq var6 = (iq) null;
-          this.a('g', -59, 99, (iq) null);
+          UiWidget var6 = (UiWidget) null;
+          this.a('g', -59, 99, (UiWidget) null);
         }
         if (null != this.field_P) {
-          qc.field_x.a(this.field_P, this.field_o + param2 + 20, 15 + this.field_t + param3, this.field_n - 40, this.field_s, 16777215, -1, 1, 0, qc.field_x.field_z);
+          qc.field_x.a(this.field_P, this.x + param2 + 20, 15 + this.y + param3, this.width - 40, this.height, 16777215, -1, 1, 0, qc.field_x.field_z);
         }
         if (null != this.field_K) {
-          bi.b(10 + param2, 134 + param3, this.field_n - 20, 4210752);
+          bi.b(10 + param2, 134 + param3, this.width - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }
@@ -154,7 +154,7 @@ final class ob extends cj implements ih, ij {
     }
 
     ob(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (ur) null);
+        super(0, 0, 310, 190, (WidgetListener) null);
         mg dupTemp$0 = null;
         mg dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -173,7 +173,7 @@ final class ob extends cj implements ih, ij {
         RuntimeException decompiledCaughtException = null;
         vo var6 = null;
         RuntimeException var6_ref = null;
-        cc var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         ej var9 = null;
         mg var12 = null;
@@ -214,16 +214,16 @@ final class ob extends cj implements ih, ij {
               this.field_K = new d(pk.field_r, (uf) (this));
             }
           }
-          this.field_H.field_B = (ur) ((Object) new ml(10000536));
-          this.field_O.field_B = (ur) ((Object) new om(10000536));
+          this.field_H.listener = (WidgetListener) ((Object) new ml(10000536));
+          this.field_O.listener = (WidgetListener) ((Object) new om(10000536));
           var6 = new vo();
-          this.field_J.field_B = (ur) ((Object) var6);
+          this.field_J.listener = (WidgetListener) ((Object) var6);
           if (this.field_G != null) {
-            this.field_G.field_B = (ur) ((Object) var6);
+            this.field_G.listener = (WidgetListener) ((Object) var6);
           }
           this.field_H.field_q = wh.field_A;
           if (this.field_K != null) {
-            this.field_K.field_B = (ur) ((Object) var6);
+            this.field_K.listener = (WidgetListener) ((Object) var6);
           }
           if (null != this.field_K) {
             this.field_K.field_q = ni.field_h;
@@ -232,35 +232,35 @@ final class ob extends cj implements ih, ij {
             this.field_G.field_q = fm.field_h;
           } else {
             if (!this.field_R) {
-              this.field_G.field_B = (ur) ((Object) new jc());
+              this.field_G.listener = (WidgetListener) ((Object) new jc());
             } else {
               this.field_G.field_q = he.field_z;
-              this.field_G.field_B = (ur) ((Object) new jc());
+              this.field_G.listener = (WidgetListener) ((Object) new jc());
             }
           }
-          this.field_t = 15;
+          this.y = 15;
           var7 = qc.field_x;
           if (this.field_P != null) {
-            this.field_t = this.field_t + (5 + var7.a(this.field_P, this.field_n - 40, var7.field_z));
+            this.y = this.y + (5 + var7.a(this.field_P, this.width - 40, var7.field_z));
           }
           var8 = ll.field_a;
           var9 = kf.a((byte) -100, ob.e((byte) -52));
-          if (li.field_j == var9) {
+          if (IntrusiveNode.field_j == var9) {
             var8 = la.field_c;
           } else {
             if (var9 == la.field_i) {
               var8 = w.field_A;
             }
           }
-          dupTemp$0 = new mg(10, this.field_t, -20 + this.field_n, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new mg(10, this.y, -20 + this.width, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.c((byte) -107, dupTemp$0);
-          this.field_t = this.field_t + (5 + ((iq) ((Object) var12)).field_s);
-          dupTemp$1 = new mg(10, this.field_t, -20 + this.field_n, 25, this.field_O, false, 80, 3, var7, 16777215, uc.field_c);
+          this.y = this.y + (5 + ((UiWidget) ((Object) var12)).height);
+          dupTemp$1 = new mg(10, this.y, -20 + this.width, 25, this.field_O, false, 80, 3, var7, 16777215, uc.field_c);
           var13 = dupTemp$1;
           this.c((byte) 83, dupTemp$1);
           this.field_J.field_v = (uf) (this);
-          this.field_t = this.field_t + (((iq) ((Object) var13)).field_s + 5);
+          this.y = this.y + (((UiWidget) ((Object) var13)).height + 5);
           if (null != this.field_K) {
             this.field_K.field_v = (uf) (this);
           }
@@ -268,27 +268,27 @@ final class ob extends cj implements ih, ij {
             this.field_G.field_v = (uf) (this);
           }
           if (this.field_K != null) {
-            this.field_J.a(false, 85, this.field_t, 30, -95 + this.field_n);
-            this.field_t = this.field_t + 60;
+            this.field_J.setBounds(false, 85, this.y, 30, -95 + this.width);
+            this.y = this.y + 60;
           } else {
-            this.field_J.a(false, 8, this.field_t, 30, -10 + (-6 + this.field_n));
-            this.field_t = this.field_t + 35;
+            this.field_J.setBounds(false, 8, this.y, 30, -10 + (-6 + this.width));
+            this.y = this.y + 35;
           }
           if (null != this.field_K) {
-            this.field_K.a(false, 8, this.field_t, 30, this.field_n - 6 - 10);
-            this.field_t = this.field_t + 35;
+            this.field_K.setBounds(false, 8, this.y, 30, this.width - 6 - 10);
+            this.y = this.y + 35;
           }
           if (this.field_G != null) {
             if (!this.field_N &&
               !this.field_R) {
-              this.field_G.a(false, 8, this.field_t, 20, 40);
-              this.field_t = this.field_t + 25;
+              this.field_G.setBounds(false, 8, this.y, 20, 40);
+              this.y = this.y + 25;
             } else {
-              this.field_G.a(false, 8, this.field_t, 30, -6 + this.field_n - 10);
-              this.field_t = this.field_t + 35;
+              this.field_G.setBounds(false, 8, this.y, 30, -6 + this.width - 10);
+              this.y = this.y + 35;
             }
           }
-          this.a(false, 0, 0, this.field_t + 3, this.field_n);
+          this.setBounds(false, 0, 0, this.y + 3, this.width);
           this.c((byte) 85, this.field_J);
           if (null != this.field_K) {
             this.c((byte) -43, this.field_K);
@@ -318,11 +318,11 @@ final class ob extends cj implements ih, ij {
     }
 
     final String j(int param0) {
-        if (null != this.field_H.field_w) {
+        if (null != this.field_H.text) {
           if (param0 != 5607) {
             this.a(true, 116, -61, 8);
           }
-          return this.field_H.field_w;
+          return this.field_H.text;
         }
         return "";
     }
@@ -378,9 +378,9 @@ final class ob extends cj implements ih, ij {
     }
 
     static {
-        field_Q = new nj();
+        field_Q = new IntrusiveDeque();
         field_I = "Please log in as a subscribing member to access this feature.";
         field_F = -1.0;
-        field_M = new nj();
+        field_M = new IntrusiveDeque();
     }
 }

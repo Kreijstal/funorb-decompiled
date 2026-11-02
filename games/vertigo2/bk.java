@@ -45,11 +45,11 @@ final class bk {
           ui.field_d = -(sf.field_d >> 1) + kf.field_b;
           var2 = ui.field_d;
           for (var3 = 0; al.field_y.length > var3; var3++) {
-            var4 = dg.field_f[var3];
+            var4 = ClientException.field_f[var3];
             if (var4 < 0) {
               var5 = t.field_c;
             } else {
-              if (var4 == kg.field_G.field_c) {
+              if (var4 == kg.field_G.selectedIndex) {
                 var5 = vm.field_b;
               } else {
                 var5 = vg.field_d;
@@ -63,7 +63,7 @@ final class bk {
             var8 = -(var7 >> 1) + ni.field_a;
             if (0 <= var4) {
               var2 = var2 + vo.field_y;
-              if (kg.field_G.field_c != var4) {
+              if (kg.field_G.selectedIndex != var4) {
                 stackIn_18_0 = od.field_Jb;
               } else {
                 stackIn_18_0 = td.field_a;
@@ -98,26 +98,26 @@ final class bk {
         }
     }
 
-    final static er[] a(int param0, int param1, r param2, int param3) {
+    final static Sprite[] a(int param0, int param1, Archive param2, int param3) {
         RuntimeException var4 = null;
-        r var5 = null;
+        Archive var5 = null;
         Object stackIn_4_0 = null;
-        er[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -2724) {
-            var5 = (r) null;
-            bk.a(-14, -96, (r) null, 39);
+            var5 = (Archive) null;
+            bk.a(-14, -96, (Archive) null, 39);
           }
           if (hq.a(124, param0, param1, param2)) {
-            stackIn_6_0 = wa.c(param3 + 2846);
+            stackIn_6_0 = IsaacCipher.c(param3 + 2846);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (er[]) (stackIn_4_0);
+          return (Sprite[]) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

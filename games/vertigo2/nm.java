@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nm extends cj {
+abstract class nm extends WidgetContainer {
     boolean field_I;
     private sd field_H;
     static int field_E;
@@ -40,46 +40,46 @@ abstract class nm extends cj {
           if (param1 != 0) {
             return;
           }
-          this.a((byte) -128, this.field_o + param2, this.field_t + param3);
+          this.a((byte) -128, this.x + param2, this.y + param3);
           super.a(param0, param1, param2, param3);
           return;
         }
         if (se.field_C == null) {
-          se.field_C = new er(this.field_n, this.field_s);
+          se.field_C = new Sprite(this.width, this.height);
           lq.a(se.field_C, (byte) -94);
           bi.c();
           this.a((byte) -128, 0, 0);
-          super.a(param0, param1, -this.field_o - param2, -this.field_t - param3);
+          super.a(param0, param1, -this.x - param2, -this.y - param3);
           ln.d(-28558);
-          se.field_C.c(this.field_o + param2, this.field_t + param3, this.field_G);
+          se.field_C.c(this.x + param2, this.y + param3, this.field_G);
           return;
         }
-        if (this.field_n > se.field_C.field_y) {
-          se.field_C = new er(this.field_n, this.field_s);
+        if (this.width > se.field_C.field_y) {
+          se.field_C = new Sprite(this.width, this.height);
           lq.a(se.field_C, (byte) -94);
           bi.c();
           this.a((byte) -128, 0, 0);
-          super.a(param0, param1, -this.field_o - param2, -this.field_t - param3);
+          super.a(param0, param1, -this.x - param2, -this.y - param3);
           ln.d(-28558);
-          se.field_C.c(this.field_o + param2, this.field_t + param3, this.field_G);
+          se.field_C.c(this.x + param2, this.y + param3, this.field_G);
           return;
         }
-        if (this.field_s > se.field_C.field_t) {
-          se.field_C = new er(this.field_n, this.field_s);
+        if (this.height > se.field_C.field_t) {
+          se.field_C = new Sprite(this.width, this.height);
           lq.a(se.field_C, (byte) -94);
           bi.c();
           this.a((byte) -128, 0, 0);
-          super.a(param0, param1, -this.field_o - param2, -this.field_t - param3);
+          super.a(param0, param1, -this.x - param2, -this.y - param3);
           ln.d(-28558);
-          se.field_C.c(this.field_o + param2, this.field_t + param3, this.field_G);
+          se.field_C.c(this.x + param2, this.y + param3, this.field_G);
           return;
         }
         lq.a(se.field_C, (byte) -94);
         bi.c();
         this.a((byte) -128, 0, 0);
-        super.a(param0, param1, -this.field_o - param2, -this.field_t - param3);
+        super.a(param0, param1, -this.x - param2, -this.y - param3);
         ln.d(-28558);
-        se.field_C.c(this.field_o + param2, this.field_t + param3, this.field_G);
+        se.field_C.c(this.x + param2, this.y + param3, this.field_G);
     }
 
     private final int i(int param0) {
@@ -163,15 +163,15 @@ abstract class nm extends cj {
 
     final void b(int param0, int param1, int param2) {
         if (param0 == -1535749535) {
-          this.a(false, gi.field_m - param1 >> 1, im.field_h - param2 >> 1, param2, param1);
+          this.setBounds(false, gi.field_m - param1 >> 1, im.field_h - param2 >> 1, param2, param1);
           return;
         }
         nm.k(-40);
-        this.a(false, gi.field_m - param1 >> 1, im.field_h - param2 >> 1, param2, param1);
+        this.setBounds(false, gi.field_m - param1 >> 1, im.field_h - param2 >> 1, param2, param1);
     }
 
     nm(sd param0, int param1, int param2) {
-        super(-param1 + gi.field_m >> 1, -param2 + im.field_h >> 1, param1, param2, (ur) null);
+        super(-param1 + gi.field_m >> 1, -param2 + im.field_h >> 1, param1, param2, (WidgetListener) null);
         try {
           this.field_I = false;
           this.field_H = param0;
@@ -181,12 +181,12 @@ abstract class nm extends cj {
         }
     }
 
-    final iq b(boolean param0) {
-        iq var2 = super.b(param0);
+    final UiWidget b(boolean param0) {
+        UiWidget var2 = super.b(param0);
         if (var2 != null) {
           return var2;
         }
-        return (iq) (this);
+        return (UiWidget) (this);
     }
 
     static {

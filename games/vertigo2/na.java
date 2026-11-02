@@ -34,12 +34,12 @@ final class na extends da {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!qb.a(var4, -51)) {
+          if (!JaggrabClient.a(var4, -51)) {
             stackIn_3_0 = ir.field_a;
             return stackIn_3_0;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3_int = cf.a(107, var5);
+          var3_int = SecondaryNodeDequeIterator.a(107, var5);
           if (~var3_int < param0 &&
             var3_int <= 130) {
             return qm.field_G;

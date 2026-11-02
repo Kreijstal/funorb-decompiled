@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bp extends ji {
+final class bp extends TextureOperator {
     static int[] field_E;
     private int field_D;
     static wp field_A;
     static ve field_y;
-    static cr field_C;
+    static UiPanel field_C;
     static int field_z;
 
     final static void a(int param0, boolean param1, java.awt.Canvas param2) {
@@ -92,7 +92,7 @@ final class bp extends ji {
           for (var9 = 0; we.field_M > var9; var9++) {
             var10 = var30[var9] * 255 >> 12 & 255;
             var11 = this.field_D * var31[var9] >> 12;
-            var12 = qb.field_b[var10] * var11 >> 12;
+            var12 = JaggrabClient.field_b[var10] * var11 >> 12;
             var13 = eh.field_b[var10] * var11 >> 12;
             var14 = (var12 >> 12) + var9 & rm.field_z;
             var15 = param1 + (var13 >> 12) & fk.field_x;
@@ -106,7 +106,7 @@ final class bp extends ji {
         return var18;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -122,11 +122,11 @@ final class bp extends ji {
           }
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_D = param2.a((byte) -11) << 4;
+            this.field_D = param2.readUnsignedShort((byte) -11) << 4;
             return;
           }
           if (var4_int == 1) {
-            stackIn_11_1 = (1 == param2.h(param0 - 121));
+            stackIn_11_1 = (1 == param2.readUnsignedByte(param0 - 121));
             this.field_o = stackIn_11_1;
           }
           return;
@@ -155,7 +155,7 @@ final class bp extends ji {
         field_E = null;
         field_C = null;
         if (param0 != 7750) {
-          field_C = (cr) null;
+          field_C = (UiPanel) null;
         }
     }
 
@@ -187,7 +187,7 @@ final class bp extends ji {
         for (var6 = 0; we.field_M > var6; var6++) {
           var7 = (4082 & var25[var6]) >> 4;
           var8 = this.field_D * var26[var6] >> 12;
-          var9 = var8 * qb.field_b[var7] >> 12;
+          var9 = var8 * JaggrabClient.field_b[var7] >> 12;
           var10 = var8 * eh.field_b[var7] >> 12;
           var11 = var6 + (var9 >> 12) & rm.field_z;
           var12 = (var10 >> 12) + param0 & fk.field_x;

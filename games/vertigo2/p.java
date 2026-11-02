@@ -11,13 +11,13 @@ final class p {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        mi var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         nf var11 = null;
-        mi var12 = null;
+        BitPacketBuffer var12 = null;
         int[] var13 = null;
         hq var14 = null;
         hq var15 = null;
@@ -25,7 +25,7 @@ final class p {
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           var12 = id.field_f;
-          var2 = var12.h(-11);
+          var2 = var12.readUnsignedByte(-11);
           if (param0 > -108) {
             field_a = (String) null;
           }
@@ -37,9 +37,9 @@ final class p {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((ed) ((Object) var5)).h(-11);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-11);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((ed) ((Object) var5)).b(true);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
             var14 = (hq) (mo.field_h.a((byte) 100));
             if (var14 == null) {
@@ -49,7 +49,7 @@ final class p {
             var14.field_o = true;
             var14.field_n = var3;
             var14.field_p = var16[0];
-            var14.c(2);
+            var14.unlink(2);
             return;
           }
           if (1 == var2) {
@@ -58,7 +58,7 @@ final class p {
               rm.b((byte) 11);
               return;
             }
-            var11.c(2);
+            var11.unlink(2);
             return;
           }
           if (var2 != 2) {
@@ -74,7 +74,7 @@ final class p {
           var15.field_n = mm.a(8);
           var15.field_o = true;
           var15.field_p = var15.field_n[0];
-          var15.c(2);
+          var15.unlink(2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

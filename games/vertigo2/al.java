@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al extends li {
+final class al extends IntrusiveNode {
     byte[] field_p;
     byte[] field_B;
     static int field_z;
     byte[] field_q;
     private int[] field_u;
     static int[] field_s;
-    ae[] field_r;
+    PcmSample[] field_r;
     short[] field_n;
     static int[] field_x;
     gl[] field_v;
@@ -72,7 +72,7 @@ final class al extends li {
                   }
                 }
                 if (var7 != null) {
-                  this.field_r[var8] = (ae) (var7);
+                  this.field_r[var8] = (PcmSample) (var7);
                   this.field_u[var8] = 0;
                 }
               }
@@ -169,7 +169,7 @@ final class al extends li {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        ed var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         gl var40 = null;
         byte[] var41 = null;
@@ -248,44 +248,44 @@ final class al extends li {
           this.field_u = new int[128];
           this.field_q = new byte[128];
           this.field_p = new byte[128];
-          this.field_r = new ae[128];
+          this.field_r = new PcmSample[128];
           this.field_B = new byte[128];
           this.field_n = new short[128];
           this.field_v = new gl[128];
-          var38 = new ed(param0);
-          for (var3 = 0; var38.field_p[var38.field_u + var3] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var38.position + var3] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var5 < var3; var5++) {
-            var4[var5] = var38.g(101);
+            var4[var5] = var38.readSignedByte(101);
           }
-          var38.field_u = var38.field_u + 1;
+          var38.position = var38.position + 1;
           var3++;
-          var5Lifetime1 = var38.field_u;
-          var38.field_u = var38.field_u + var3;
-          for (var6 = 0; var38.field_p[var38.field_u + var6] != 0; var6++) {
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var38.position + var6] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var6 > var8; var8++) {
-            var7[var8] = var38.g(89);
+            var7[var8] = var38.readSignedByte(89);
           }
           var6++;
-          var38.field_u = var38.field_u + 1;
-          var8Lifetime1 = var38.field_u;
-          var38.field_u = var38.field_u + var6;
-          for (var9 = 0; var38.field_p[var38.field_u + var9] != 0; var9++) {
+          var38.position = var38.position + 1;
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var38.position + var9] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var11_int < var9; var11_int++) {
-            var10[var11_int] = var38.g(125);
+            var10[var11_int] = var38.readSignedByte(125);
           }
-          var38.field_u = var38.field_u + 1;
+          var38.position = var38.position + 1;
           var9++;
           var53 = new byte[var9];
           var39 = var53;
@@ -295,7 +295,7 @@ final class al extends li {
             var13_int = 1;
             var12 = 2;
             for (var14 = 2; var9 > var14; var14++) {
-              var15_int = var38.h(-11);
+              var15_int = var38.readUnsignedByte(-11);
               if (var15_int == 0) {
                 incrementValue$0 = var12;
                 var12++;
@@ -317,17 +317,17 @@ final class al extends li {
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
-            var16_int = var38.h(-11);
+            var16_int = var38.readUnsignedByte(-11);
             if (var16_int > 0) {
               var15_ref.field_e = new byte[var16_int * 2];
             }
-            var16_intLifetime1 = var38.h(-11);
+            var16_intLifetime1 = var38.readUnsignedByte(-11);
             if (var16_intLifetime1 > 0) {
               var15_ref.field_g = new byte[2 + var16_intLifetime1 * 2];
               var40.field_g[1] = (byte)64;
             }
           }
-          var14Lifetime2 = var38.h(-11);
+          var14Lifetime2 = var38.readUnsignedByte(-11);
           if (var14Lifetime2 > 0) {
             stackIn_39_0 = new byte[var14Lifetime2 * 2];
           } else {
@@ -336,7 +336,7 @@ final class al extends li {
           var58 = stackIn_39_0;
           var46 = var58;
           var15 = var46;
-          var14Lifetime3 = var38.h(-11);
+          var14Lifetime3 = var38.readUnsignedByte(-11);
           if (var14Lifetime3 <= 0) {
             stackIn_42_0 = null;
           } else {
@@ -344,24 +344,24 @@ final class al extends li {
           }
           var47 = stackIn_42_0;
           var16 = var47;
-          for (var17 = 0; var38.field_p[var17 + var38.field_u] != 0; var17++) {
+          for (var17 = 0; var38.payload[var17 + var38.position] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var17 > var19; var19++) {
-            var18[var19] = var38.g(87);
+            var18[var19] = var38.readSignedByte(87);
           }
-          var38.field_u = var38.field_u + 1;
+          var38.position = var38.position + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; 128 > var20; var20++) {
-            var19Lifetime1 = var19Lifetime1 + var38.h(-11);
+            var19Lifetime1 = var19Lifetime1 + var38.readUnsignedByte(-11);
             this.field_n[var20] = (short)var19Lifetime1;
           }
           var19Lifetime2 = 0;
           for (var20Lifetime1 = 0; var20Lifetime1 < 128; var20Lifetime1++) {
-            var19Lifetime2 = var19Lifetime2 + var38.h(-11);
+            var19Lifetime2 = var19Lifetime2 + var38.readUnsignedByte(-11);
             this.field_n[var20Lifetime1] = (short)(this.field_n[var20Lifetime1] + (var19Lifetime2 << 8));
           }
           var20Lifetime2 = 0;
@@ -393,7 +393,7 @@ final class al extends li {
                 }
                 incrementValue$6 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = -1 + var38.field_p[incrementValue$6];
+                var23Lifetime1 = -1 + var38.payload[incrementValue$6];
               }
               this.field_q[var24] = (byte)var23Lifetime1;
               var20Lifetime3--;
@@ -412,7 +412,7 @@ final class al extends li {
                 }
                 incrementValue$4 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = var38.field_p[incrementValue$4] + 16 << 2;
+                var24Lifetime1 = var38.payload[incrementValue$4] + 16 << 2;
               }
               this.field_B[var25_int] = (byte)var24Lifetime1;
               var20Lifetime4--;
@@ -446,34 +446,34 @@ final class al extends li {
                 var20Lifetime6 = var18[var21Lifetime4++];
               }
               if (this.field_u[var27] > 0) {
-                var26Lifetime1 = var38.h(-11) + 1;
+                var26Lifetime1 = var38.readUnsignedByte(-11) + 1;
               }
             }
             this.field_p[var27] = (byte)var26Lifetime1;
             var20Lifetime6--;
           }
-          this.field_w = var38.h(-11) + 1;
+          this.field_w = var38.readUnsignedByte(-11) + 1;
           for (var27Lifetime1 = 0; var12 > var27Lifetime1; var27Lifetime1++) {
             var45 = var13[var27Lifetime1];
             if (var45.field_e != null) {
               for (var29 = 1; var45.field_e.length > var29; var29 += 2) {
-                var45.field_e[var29] = var38.g(88);
+                var45.field_e[var29] = var38.readSignedByte(88);
               }
             }
             if (var45.field_g != null) {
               for (var29Lifetime5 = 3; var29Lifetime5 < -2 + var45.field_g.length; var29Lifetime5 += 2) {
-                var45.field_g[var29Lifetime5] = var38.g(98);
+                var45.field_g[var29Lifetime5] = var38.readSignedByte(98);
               }
             }
           }
           if (var15 != null) {
             for (var27Lifetime2 = 1; var58.length > var27Lifetime2; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.g(108);
+              var15[var27Lifetime2] = var38.readSignedByte(108);
             }
           }
           if (var16 != null) {
             for (var27Lifetime3 = 1; var27Lifetime3 < var47.length; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.g(114);
+              var16[var27Lifetime3] = var38.readSignedByte(114);
             }
           }
           for (var27Lifetime4 = 0; var12 > var27Lifetime4; var27Lifetime4++) {
@@ -481,7 +481,7 @@ final class al extends li {
             if (var48.field_g != null) {
               var19Lifetime3 = 0;
               for (var29Lifetime1 = 2; var29Lifetime1 < var48.field_g.length; var29Lifetime1 += 2) {
-                var19Lifetime3 = var38.h(-11) + 1 + var19Lifetime3;
+                var19Lifetime3 = var38.readUnsignedByte(-11) + 1 + var19Lifetime3;
                 var48.field_g[var29Lifetime1] = (byte)var19Lifetime3;
               }
             }
@@ -491,16 +491,16 @@ final class al extends li {
             if (var49.field_e != null) {
               var19Lifetime4 = 0;
               for (var29Lifetime2 = 2; var49.field_e.length > var29Lifetime2; var29Lifetime2 += 2) {
-                var19Lifetime4 = var19Lifetime4 + 1 + var38.h(-11);
+                var19Lifetime4 = var19Lifetime4 + 1 + var38.readUnsignedByte(-11);
                 var49.field_e[var29Lifetime2] = (byte)var19Lifetime4;
               }
             }
           }
           if (var15 != null) {
-            var19Lifetime5 = var38.h(-11);
+            var19Lifetime5 = var38.readUnsignedByte(-11);
             var15[0] = (byte)var19Lifetime5;
             for (var27Lifetime6 = 2; var27Lifetime6 < var58.length; var27Lifetime6 += 2) {
-              var19Lifetime5 = 1 + (var19Lifetime5 + var38.h(-11));
+              var19Lifetime5 = 1 + (var19Lifetime5 + var38.readUnsignedByte(-11));
               var15[var27Lifetime6] = (byte)var19Lifetime5;
             }
             var27Lifetime6Lifetime1 = var58[0];
@@ -529,13 +529,13 @@ final class al extends li {
           }
           if (var16 == null) {
             for (var27Lifetime7 = 0; var12 > var27Lifetime7; var27Lifetime7++) {
-              var13[var27Lifetime7].field_n = var38.h(-11);
+              var13[var27Lifetime7].field_n = var38.readUnsignedByte(-11);
             }
           } else {
-            var19Lifetime6 = var38.h(-11);
+            var19Lifetime6 = var38.readUnsignedByte(-11);
             var16[0] = (byte)var19Lifetime6;
             for (var27Lifetime7 = 2; var27Lifetime7 < var47.length; var27Lifetime7 += 2) {
-              var19Lifetime6 = var19Lifetime6 + (1 + var38.h(-11));
+              var19Lifetime6 = var19Lifetime6 + (1 + var38.readUnsignedByte(-11));
               var16[var27Lifetime7] = (byte)var19Lifetime6;
             }
             var27Lifetime7 = var47[0];
@@ -584,34 +584,34 @@ final class al extends li {
               this.field_B[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
             }
             for (var27Lifetime7 = 0; var12 > var27Lifetime7; var27Lifetime7++) {
-              var13[var27Lifetime7].field_n = var38.h(-11);
+              var13[var27Lifetime7].field_n = var38.readUnsignedByte(-11);
             }
           }
           for (var27Lifetime8 = 0; var27Lifetime8 < var12; var27Lifetime8++) {
             var50 = var13[var27Lifetime8];
             if (null != var50.field_e) {
-              var50.field_h = var38.h(-11);
+              var50.field_h = var38.readUnsignedByte(-11);
             }
             if (null != var50.field_g) {
-              var50.field_j = var38.h(-11);
+              var50.field_j = var38.readUnsignedByte(-11);
             }
             if (var50.field_n > 0) {
-              var50.field_f = var38.h(-11);
+              var50.field_f = var38.readUnsignedByte(-11);
             }
           }
           for (var27Lifetime9 = 0; var12 > var27Lifetime9; var27Lifetime9++) {
-            var13[var27Lifetime9].field_b = var38.h(-11);
+            var13[var27Lifetime9].field_b = var38.readUnsignedByte(-11);
           }
           for (var27Lifetime10 = 0; var12 > var27Lifetime10; var27Lifetime10++) {
             var51 = var13[var27Lifetime10];
             if (var51.field_b > 0) {
-              var51.field_c = var38.h(-11);
+              var51.field_c = var38.readUnsignedByte(-11);
             }
           }
           for (var27Lifetime11 = 0; var27Lifetime11 < var12; var27Lifetime11++) {
             var52 = var13[var27Lifetime11];
             if (0 < var52.field_c) {
-              var52.field_d = var38.h(-11);
+              var52.field_d = var38.readUnsignedByte(-11);
             }
           }
           return;

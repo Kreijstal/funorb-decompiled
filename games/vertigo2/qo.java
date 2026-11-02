@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qo extends ji {
+final class qo extends TextureOperator {
     private jq[] field_z;
-    static nj field_B;
-    static lg field_A;
-    static er field_y;
+    static IntrusiveDeque field_B;
+    static Model field_A;
+    static Sprite field_y;
     static String field_E;
     static lb field_D;
 
@@ -65,7 +65,7 @@ final class qo extends ji {
         return var3;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         boolean stackIn_19_1 = false;
         RuntimeException stackIn_25_0 = null;
@@ -79,9 +79,9 @@ final class qo extends ji {
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param1 == 0) {
-            this.field_z = new jq[param2.h(param0 - 121)];
+            this.field_z = new jq[param2.readUnsignedByte(param0 - 121)];
             for (var4_int = 0; var4_int < this.field_z.length; var4_int++) {
-              var5 = param2.h(-11);
+              var5 = param2.readUnsignedByte(-11);
               var6 = var5;
               if (var6 != 0) {
                 if (var6 == 1) {
@@ -101,7 +101,7 @@ final class qo extends ji {
             }
           } else {
             if (1 == param1) {
-              stackIn_19_1 = (param2.h(-11) == 1);
+              stackIn_19_1 = (param2.readUnsignedByte(-11) == 1);
               this.field_o = stackIn_19_1;
             }
           }
@@ -151,7 +151,7 @@ final class qo extends ji {
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param0 != 17989) {
-            field_A = (lg) null;
+            field_A = (Model) null;
           }
           var3_int = we.field_M;
           var4 = aa.field_Vb;
@@ -193,6 +193,6 @@ final class qo extends ji {
 
     static {
         field_E = "You cannot chat to <%0> because <%0> is offline in your friend list.";
-        field_B = new nj();
+        field_B = new IntrusiveDeque();
     }
 }

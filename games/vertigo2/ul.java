@@ -29,7 +29,7 @@ final class ul {
     ul(byte[] param0, mb param1) {
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
-        ed var4 = null;
+        PacketBuffer var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -39,27 +39,27 @@ final class ul {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        ed var14 = null;
+        PacketBuffer var14 = null;
         int var9Lifetime1;
         this.field_a = null;
         this.field_l = -1;
         this.field_a = param1;
         try {
-          var14 = new ed(param0);
-          var4 = new ed(param0);
-          var14.h(-11);
-          var14.field_u = var14.field_u + 2;
-          var5 = var14.h(-11);
+          var14 = new PacketBuffer(param0);
+          var4 = new PacketBuffer(param0);
+          var14.readUnsignedByte(-11);
+          var14.position = var14.position + 2;
+          var5 = var14.readUnsignedByte(-11);
           var6 = 0;
           var7 = -1;
           var8 = -1;
-          var4.field_u = var14.field_u + var5;
+          var4.position = var14.position + var5;
           for (var9 = 0; var9 < var5; var9++) {
             var10 = this.field_a.field_r[var9];
             if (var10 == 0) {
               var7 = var9;
             }
-            var11 = var14.h(-11);
+            var11 = var14.readUnsignedByte(-11);
             if (var11 > 0) {
               if (var10 == 0) {
                 var8 = var9;
@@ -72,17 +72,17 @@ final class ul {
               if ((var11 & 1) == 0) {
                 field_m[var6] = (short)var12;
               } else {
-                field_m[var6] = (short)var4.j(-3084);
+                field_m[var6] = (short)var4.readSignedSmart(-3084);
               }
               if ((var11 & 2) == 0) {
                 field_j[var6] = (short)var12;
               } else {
-                field_j[var6] = (short)var4.j(-3084);
+                field_j[var6] = (short)var4.readSignedSmart(-3084);
               }
               if ((var11 & 4) == 0) {
                 field_h[var6] = (short)var12;
               } else {
-                field_h[var6] = (short)var4.j(-3084);
+                field_h[var6] = (short)var4.readSignedSmart(-3084);
               }
               field_b[var6] = (byte)(var11 >>> 3 & 3);
               if (var10 == 2) {
@@ -106,7 +106,7 @@ final class ul {
               var6++;
             }
           }
-          if (var4.field_u != param0.length) {
+          if (var4.position != param0.length) {
             throw new RuntimeException();
           }
           this.field_l = var6;

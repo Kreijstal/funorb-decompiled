@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class we extends iq {
+final class we extends UiWidget {
     private int field_K;
     static String field_N;
-    private er[] field_D;
+    private Sprite[] field_D;
     private int field_C;
-    private er field_I;
+    private Sprite field_I;
     private int field_S;
     private int field_R;
     private int field_P;
     boolean field_F;
     int field_G;
     static String field_H;
-    private er field_E;
+    private Sprite field_E;
     static int field_M;
-    private er field_Q;
+    private Sprite field_Q;
     static String field_J;
     static String field_L;
     private int field_O;
 
-    private final void a(int param0, er param1, boolean param2, int param3) {
+    private final void a(int param0, Sprite param1, boolean param2, int param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -32,8 +32,8 @@ final class we extends iq {
         int var8 = 0;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
-          var5_int = this.field_n + param0;
-          jb.a(param3, var5_int - this.field_I.field_y, param0 + this.field_I.field_y, -30486, param3 + this.field_s);
+          var5_int = this.width + param0;
+          jb.a(param3, var5_int - this.field_I.field_y, param0 + this.field_I.field_y, -30486, param3 + this.height);
           var6 = -this.field_P + param0;
           if (param2) {
             return;
@@ -53,7 +53,7 @@ final class we extends iq {
           }
           if (var5_int - this.field_I.field_y <= bi.field_i) {
             lq.a(this.field_Q, (byte) -94);
-            for (var7 = this.field_P + (this.field_n - this.field_I.field_y); 2 * this.field_O < var7; var7 = var7 - 2 * this.field_O) {
+            for (var7 = this.field_P + (this.width - this.field_I.field_y); 2 * this.field_O < var7; var7 = var7 - 2 * this.field_O) {
             }
             param1.e(-var7, 0);
             param1.e(-var7 + this.field_O * 2, 0);
@@ -86,7 +86,7 @@ final class we extends iq {
         ea.b((byte) 111);
         vb.d(65);
         if (cd.b(-27440)) {
-          uh.field_Wb.j(1, param0 ^ -1733144137);
+          uh.field_Wb.writeCipheredByte(1, param0 ^ -1733144137);
           lf.d(61, 0);
         }
         rm.b((byte) 86);
@@ -126,7 +126,7 @@ final class we extends iq {
           var3_int = 0;
           var4 = ui.field_d;
           while (var3_int < al.field_y.length) {
-            var5 = dg.field_f[var3_int];
+            var5 = ClientException.field_f[var3_int];
             if (var5 >= 0) {
               var6 = ao.a(120, al.field_y[var3_int], true);
               var7 = -(var6 >> 1) + ni.field_a;
@@ -150,7 +150,7 @@ final class we extends iq {
         }
     }
 
-    final static void a(r param0, boolean param1, byte param2, r param3, r param4) {
+    final static void a(Archive param0, boolean param1, byte param2, Archive param3, Archive param4) {
         cl.field_c = qc.a(param2 + 7, "");
         cl.field_c.a(0, false);
         if (param2 != -7) {
@@ -166,7 +166,7 @@ final class we extends iq {
         }
     }
 
-    private final er a(int param0, int param1, byte param2) {
+    private final Sprite a(int param0, int param1, byte param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -174,17 +174,17 @@ final class we extends iq {
         int var11 = 0;
         int var12 = 0;
         int var13 = Vertigo2.field_L ? 1 : 0;
-        er var14 = new er(this.field_O * 2, this.field_s);
+        Sprite var14 = new Sprite(this.field_O * 2, this.height);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         lq.a(var14, (byte) -94);
-        int var5 = this.field_s >> 1;
+        int var5 = this.height >> 1;
         int var6 = 0;
         if (param2 <= 27) {
-          return (er) null;
+          return (Sprite) null;
         }
-        while (this.field_s > var6) {
+        while (this.height > var6) {
           var7 = (var6 >> 1) * (-1 + this.field_O * 2) % (2 * this.field_O);
           var8 = param0 & 16711935;
           var9 = param0 & 65280;
@@ -208,8 +208,8 @@ final class we extends iq {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, (16711422 & param6) >> 1);
     }
 
-    final void a(byte param0, int param1, int param2, iq param3) {
-        er discarded$1 = null;
+    final void a(byte param0, int param1, int param2, UiWidget param3) {
+        Sprite discarded$1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -240,12 +240,12 @@ final class we extends iq {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a(85);
     }
 
-    private final er h(int param0) {
+    private final Sprite h(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -254,12 +254,12 @@ final class we extends iq {
         if (param0 != 2) {
           field_H = (String) null;
         }
-        int var2 = this.field_s >> 1;
-        er var3 = new er(var2, this.field_s);
+        int var2 = this.height >> 1;
+        Sprite var3 = new Sprite(var2, this.height);
         lq.a(var3, (byte) -94);
-        for (var4 = 0; var4 < this.field_s; var4++) {
+        for (var4 = 0; var4 < this.height; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.field_s - var4));
+            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.height - var4));
             var8 = 1;
             if (var6 < 1.0) {
               var6 = Math.sqrt(-var6 + 1.0);
@@ -287,26 +287,26 @@ final class we extends iq {
         if (0 != param1) {
           return;
         }
-        int var5 = this.field_o + param2;
-        int var6 = this.field_t + param3;
+        int var5 = this.x + param2;
+        int var6 = this.y + param3;
         this.a(var5, this.field_D[0], param0, var6);
         if (this.field_G < 65536) {
-          jb.a(var6, var5 + this.field_n, var5 + (this.field_G * this.field_n >> 16), -30486, var6 + this.field_s);
+          jb.a(var6, var5 + this.width, var5 + (this.field_G * this.width >> 16), -30486, var6 + this.height);
           this.a(var5, this.field_D[1], false, var6);
           ln.d(-28558);
         }
     }
 
     private final void a(int param0) {
-        this.field_D = new er[]{this.a(this.field_K, this.field_C, (byte) 100), this.a(this.field_S, this.field_R, (byte) 48)};
+        this.field_D = new Sprite[]{this.a(this.field_K, this.field_C, (byte) 100), this.a(this.field_S, this.field_R, (byte) 48)};
         this.field_I = this.h(2);
         this.field_E = this.field_I.a();
-        this.field_Q = new er(this.field_s >> 1, this.field_s);
+        this.field_Q = new Sprite(this.height >> 1, this.height);
         int var2 = 6 % ((-7 - param0) / 48);
     }
 
-    private final static void a(r param0, r param1, r param2, byte param3) {
-        er var17 = null;
+    private final static void a(Archive param0, Archive param1, Archive param2, byte param3) {
+        Sprite var17 = null;
         u[] var5 = null;
         u[][] var6 = null;
         int[][] var19 = null;
@@ -314,10 +314,10 @@ final class we extends iq {
         int[][] var7 = null;
         u[] var14 = null;
         int var11_int = 0;
-        er var15 = null;
-        er var18 = null;
-        er var11 = null;
-        er var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = Vertigo2.field_L ? 1 : 0;
@@ -328,20 +328,20 @@ final class we extends iq {
           ki.field_b = gk.a(param1, "commonui", "frame_bottom", true);
           qo.field_y = tn.a("jagex_logo_grey", param1, param3 - 38, "commonui");
           q.field_z = gk.a(param1, "commonui", "button", true);
-          jn.field_b = mi.a("validation", param1, (byte) 34, "commonui");
+          jn.field_b = BitPacketBuffer.a("validation", param1, (byte) 34, "commonui");
           if (param3 != -57) {
             field_L = (String) null;
           }
-          bl.field_N = (cc) ((Object) rl.a(param1, 12, param0, "commonui", "arezzo12"));
-          qc.field_x = (cc) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14"));
-          sg.field_a = (cc) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14bold"));
-          var17 = new er(param2.a("button.gif", "", 0), (java.awt.Component) ((Object) ne.field_F));
+          bl.field_N = (BitmapFont) ((Object) rl.a(param1, 12, param0, "commonui", "arezzo12"));
+          qc.field_x = (BitmapFont) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14"));
+          sg.field_a = (BitmapFont) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14bold"));
+          var17 = new Sprite(param2.a("button.gif", "", 0), (java.awt.Component) ((Object) ne.field_F));
           vl.a(0, "commonui", param1, "dropdown");
-          var5 = oh.a((byte) -39, "screen_options", "commonui", param1);
+          var5 = WidgetWrapper.a((byte) -39, "screen_options", "commonui", param1);
           rg.field_e = new u[4];
           wh.field_F = new u[4];
-          r.field_k = new u[4];
-          var6 = new u[][]{wh.field_F, r.field_k, rg.field_e};
+          Archive.field_k = new u[4];
+          var6 = new u[][]{wh.field_F, Archive.field_k, rg.field_e};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -361,21 +361,21 @@ final class we extends iq {
             }
           }
           var9Lifetime1 = var17.field_t;
-          tg.a((byte) -123);
+          DelegatingCanvas.a((byte) -123);
           var17.d();
           bi.a(0, 0, bi.field_e, bi.field_j);
-          var15 = new er(var9Lifetime1, var9Lifetime1);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.d();
           var17.c(0, 0);
-          var11 = new er(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.d();
           var17.c(-var17.field_y + var9Lifetime1, 0);
-          var12 = new er(var17.field_y - var9Lifetime1 * 2, var9Lifetime1);
+          var12 = new Sprite(var17.field_y - var9Lifetime1 * 2, var9Lifetime1);
           var12.d();
           var17.c(-var9Lifetime1, 0);
           ln.d(-28558);
-          q.field_z = new er[]{var15, var12, var11};
+          q.field_z = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "we.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -387,7 +387,7 @@ final class we extends iq {
         this.field_O = param4;
         this.field_K = param5;
         this.field_R = param8;
-        this.a(false, param0, param1, param3, param2);
+        this.setBounds(false, param0, param1, param3, param2);
     }
 
     static {

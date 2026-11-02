@@ -41,7 +41,7 @@ final class ap {
         }
     }
 
-    final static al a(int param0, r param1, int param2) {
+    final static al a(int param0, Archive param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

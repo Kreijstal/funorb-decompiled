@@ -37,7 +37,7 @@ final class rf extends da {
             var3 = ((ik) ((Object) this.field_r)).a((byte) -5);
             if (var3 != null) {
               if (var3.a(-23996) == qm.field_G &&
-                !param1.equals(this.field_r.field_w)) {
+                !param1.equals(this.field_r.text)) {
                 stackIn_7_0 = gl.field_a;
                 return stackIn_7_0;
               }
@@ -45,7 +45,7 @@ final class rf extends da {
               return stackIn_9_0;
             }
           }
-          if (!param1.equals(this.field_r.field_w)) {
+          if (!param1.equals(this.field_r.text)) {
             stackIn_13_0 = gl.field_a;
             return stackIn_13_0;
           }
@@ -92,7 +92,7 @@ final class rf extends da {
             stackIn_9_0 = (ba) null;
             return stackIn_9_0;
           }
-          if (param1.equals(this.field_r.field_w)) {
+          if (param1.equals(this.field_r.text)) {
             stackIn_13_0 = qm.field_G;
           } else {
             stackIn_13_0 = ir.field_a;

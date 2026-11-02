@@ -5,7 +5,7 @@ import java.io.*;
 
 final class vb extends dh {
     private java.nio.ByteBuffer field_i;
-    static cr field_j;
+    static UiPanel field_j;
     static boolean field_g;
     static int field_h;
 
@@ -96,7 +96,7 @@ final class vb extends dh {
         try {
           this.field_i = java.nio.ByteBuffer.allocateDirect(param0.length);
           if (!param1) {
-            field_j = (cr) null;
+            field_j = (UiPanel) null;
           }
           this.field_i.position(0);
           this.field_i.put(param0);

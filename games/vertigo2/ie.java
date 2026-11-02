@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ie extends cr {
+final class ie extends UiPanel {
     static String field_Rb;
     static fe field_Hb;
-    private cr field_Mb;
+    private UiPanel field_Mb;
     static String field_Sb;
-    private cr field_Ib;
-    private cr field_Lb;
+    private UiPanel field_Ib;
+    private UiPanel field_Lb;
     static int field_Kb;
-    private cr field_Ob;
+    private UiPanel field_Ob;
     static long field_Nb;
-    private cr field_Qb;
-    private cr field_Pb;
+    private UiPanel field_Qb;
+    private UiPanel field_Pb;
     private int field_Jb;
 
     final void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
@@ -24,7 +24,7 @@ final class ie extends cr {
           this.a(param5, param4, (byte) -52, param7);
           return;
         }
-        this.field_Lb = (cr) null;
+        this.field_Lb = (UiPanel) null;
         this.field_wb = param6;
         this.a(param5, param4, (byte) -52, param7);
     }
@@ -117,30 +117,30 @@ final class ie extends cr {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        cr var14 = null;
-        cr var15 = null;
-        cr var16 = null;
-        cr var17 = null;
-        cr var18 = null;
-        cr var19 = null;
-        cr var14Lifetime1;
-        cr var14Lifetime2;
-        cr var14Lifetime3;
-        cr var15Lifetime1;
-        cr var15Lifetime2;
-        cr var15Lifetime3;
-        cr var16Lifetime1;
-        cr var16Lifetime2;
-        cr var16Lifetime3;
-        cr var17Lifetime1;
-        cr var17Lifetime2;
-        cr var17Lifetime3;
-        cr var18Lifetime1;
-        cr var18Lifetime2;
-        cr var18Lifetime3;
-        cr var19Lifetime1;
-        cr var19Lifetime2;
-        cr var19Lifetime3;
+        UiPanel var14 = null;
+        UiPanel var15 = null;
+        UiPanel var16 = null;
+        UiPanel var17 = null;
+        UiPanel var18 = null;
+        UiPanel var19 = null;
+        UiPanel var14Lifetime1;
+        UiPanel var14Lifetime2;
+        UiPanel var14Lifetime3;
+        UiPanel var15Lifetime1;
+        UiPanel var15Lifetime2;
+        UiPanel var15Lifetime3;
+        UiPanel var16Lifetime1;
+        UiPanel var16Lifetime2;
+        UiPanel var16Lifetime3;
+        UiPanel var17Lifetime1;
+        UiPanel var17Lifetime2;
+        UiPanel var17Lifetime3;
+        UiPanel var18Lifetime1;
+        UiPanel var18Lifetime2;
+        UiPanel var18Lifetime3;
+        UiPanel var19Lifetime1;
+        UiPanel var19Lifetime2;
+        UiPanel var19Lifetime3;
         int var8Lifetime1;
         int var8Lifetime2;
         int var9Lifetime1;
@@ -365,7 +365,7 @@ final class ie extends cr {
         }
         e.a(param1, (byte) -128);
         if (null != ko.field_S) {
-          oh.a(ko.field_S, false);
+          WidgetWrapper.a(ko.field_S, false);
         }
     }
 
@@ -404,8 +404,8 @@ final class ie extends cr {
         return false;
     }
 
-    ie(long param0, cr param1, cr param2, cr param3, cr param4) {
-        super(param0, (cr) null);
+    ie(long param0, UiPanel param1, UiPanel param2, UiPanel param3, UiPanel param4) {
+        super(param0, (UiPanel) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -417,24 +417,24 @@ final class ie extends cr {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        cr var9 = null;
-        cr var10 = null;
+        UiPanel var9 = null;
+        UiPanel var10 = null;
         try {
-          this.field_Lb = new cr(0L, param1);
-          this.field_Qb = new cr(0L, param2);
+          this.field_Lb = new UiPanel(0L, param1);
+          this.field_Qb = new UiPanel(0L, param2);
           this.b(this.field_Lb, 126);
           this.b(this.field_Qb, 125);
-          this.field_Mb = new cr(0L, (cr) null);
+          this.field_Mb = new UiPanel(0L, (UiPanel) null);
           this.b(this.field_Mb, 125);
-          this.field_Ib = new cr(0L, param3);
-          this.field_Ob = new cr(0L, param3);
+          this.field_Ib = new UiPanel(0L, param3);
+          this.field_Ob = new UiPanel(0L, param3);
           var9 = this.field_Ib;
           var10 = var9;
           this.field_Ob.field_jb = true;
           var10.field_jb = true;
           this.field_Mb.b(this.field_Ib, 123);
           this.field_Mb.b(this.field_Ob, 118);
-          this.field_Pb = new cr(0L, param4);
+          this.field_Pb = new UiPanel(0L, param4);
           this.field_Pb.field_X = true;
           this.field_Mb.b(this.field_Pb, 122);
           return;

@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb implements ur {
+final class kb implements WidgetListener {
     static co field_c;
-    static er[] field_d;
-    static cg field_a;
+    static Sprite[] field_d;
+    static GameKeyHandler field_a;
     static tk field_e;
-    static r field_b;
+    static Archive field_b;
     static String field_f;
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -17,23 +17,23 @@ final class kb implements ur {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        er var8 = null;
+        Sprite var8 = null;
         try {
           if (!param2) {
             kb.a(10);
           }
-          var6_int = param1 + param3.field_o;
-          var7 = param3.field_t + param4;
-          h.a(var6_int, 1, var7, param3.field_n, param3.field_s);
+          var6_int = param1 + param3.x;
+          var7 = param3.y + param4;
+          h.a(var6_int, 1, var7, param3.width, param3.height);
           var8 = jn.field_b[1];
           if (param3 instanceof d &&
             ((d) (param3)).field_G) {
-            var8.d(var6_int + 1 + (param3.field_n - var8.field_x >> 1), (param3.field_s - var8.field_B >> 1) + (var7 + 1), 256);
+            var8.d(var6_int + 1 + (param3.width - var8.field_x >> 1), (param3.height - var8.field_B >> 1) + (var7 + 1), 256);
           }
           if (!param3.f(86)) {
             return;
           }
-          mr.a(-4 + param3.field_n, var7 + 2, param3.field_s - 4, 0, var6_int + 2);
+          mr.a(-4 + param3.width, var7 + 2, param3.height - 4, 0, var6_int + 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,7 +65,7 @@ final class kb implements ur {
     }
 
     static {
-        field_a = new cg();
+        field_a = new GameKeyHandler();
         field_f = "<col=F62610>Red:</col> <%0> <col=25D3F7>Blue:</col> <%1>";
     }
 }

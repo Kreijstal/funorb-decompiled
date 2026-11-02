@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pc {
-    static cr field_b;
+    static UiPanel field_b;
     static int[] field_a;
-    static er field_c;
+    static Sprite field_c;
     static String field_d;
 
     final static byte[] a(byte param0, boolean param1, Object param2) {
@@ -32,7 +32,7 @@ final class pc {
             return stackIn_7_0;
           }
           if (param0 != 6) {
-            field_c = (er) null;
+            field_c = (Sprite) null;
           }
           if (!(param2 instanceof dh)) {
             throw new IllegalArgumentException();
@@ -91,7 +91,7 @@ final class pc {
 
     final static void b(byte param0) {
         if (param0 != -111) {
-          field_c = (er) null;
+          field_c = (Sprite) null;
         }
     }
 

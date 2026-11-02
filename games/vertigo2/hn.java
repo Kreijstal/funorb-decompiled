@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hn extends li {
+final class hn extends IntrusiveNode {
     byte[] field_p;
     int field_q;
     static String[][] field_u;
@@ -41,16 +41,16 @@ final class hn extends li {
           var19[1] = var15 * (double)param8 - var11_double * (double)param9;
           var19[2] = var11_double * (double)param10 - (double)param8 * var13;
           var17Lifetime1 = Math.sqrt(var21[2] * var21[2] + (var21[1] * var21[1] + var21[0] * var21[0]));
-          param3[5] = (int)(var21[2] / var17Lifetime1 * tg.field_f);
-          param3[3] = (int)(var21[0] / var17Lifetime1 * tg.field_f);
-          param3[4] = (int)(var21[1] / var17Lifetime1 * tg.field_f);
+          param3[5] = (int)(var21[2] / var17Lifetime1 * DelegatingCanvas.field_f);
+          param3[3] = (int)(var21[0] / var17Lifetime1 * DelegatingCanvas.field_f);
+          param3[4] = (int)(var21[1] / var17Lifetime1 * DelegatingCanvas.field_f);
           var19[0] = -(var15 * (double)param3[4]) + (double)param3[5] * var13;
           var19[1] = -(var11_double * (double)param3[5]) + (double)param3[3] * var15;
           var19[2] = -(var13 * (double)param3[3]) + (double)param3[4] * var11_double;
           var17Lifetime2 = Math.sqrt(var21[2] * var21[2] + (var21[0] * var21[0] + var21[1] * var21[1]));
-          param3[6] = (int)(var21[0] / var17Lifetime2 * tg.field_f);
-          param3[7] = (int)(var21[1] / var17Lifetime2 * tg.field_f);
-          param3[8] = (int)(var21[2] / var17Lifetime2 * tg.field_f);
+          param3[6] = (int)(var21[0] / var17Lifetime2 * DelegatingCanvas.field_f);
+          param3[7] = (int)(var21[1] / var17Lifetime2 * DelegatingCanvas.field_f);
+          param3[8] = (int)(var21[2] / var17Lifetime2 * DelegatingCanvas.field_f);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }

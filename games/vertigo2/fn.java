@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fn extends ji {
-    static pm field_y;
+final class fn extends TextureOperator {
+    static BufferedSocket field_y;
     static int field_z;
     static String field_B;
     static String field_A;

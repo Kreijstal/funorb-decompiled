@@ -5,7 +5,7 @@ final class wi extends v {
     private String field_e;
     static fc[][] field_j;
     static int field_f;
-    static cr field_g;
+    static UiPanel field_g;
     static go[] field_d;
     private String field_i;
     static boolean[] field_h;
@@ -25,7 +25,7 @@ final class wi extends v {
         return lb.field_e;
     }
 
-    final void a(ed param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           if (param1 != 47) {
             this.a((byte) -76);

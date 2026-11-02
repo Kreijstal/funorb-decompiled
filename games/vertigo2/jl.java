@@ -2,44 +2,44 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jl {
-    private li field_c;
+    private IntrusiveNode field_c;
     static String field_f;
     private int field_i;
-    private li field_d;
+    private IntrusiveNode field_d;
     static String[] field_a;
     static String field_h;
     private int field_b;
-    static er field_g;
-    private li[] field_e;
+    static Sprite field_g;
+    private IntrusiveNode[] field_e;
 
-    final void a(li param0, long param1, boolean param2) {
-        if (param0.field_a != null) {
-          param0.c(2);
+    final void a(IntrusiveNode param0, long param1, boolean param2) {
+        if (param0.next != null) {
+          param0.unlink(2);
         }
-        li var5 = this.field_e[(int)(param1 & (long)(this.field_b - 1))];
-        param0.field_c = var5;
-        param0.field_a = var5.field_a;
-        param0.field_a.field_c = param0;
+        IntrusiveNode var5 = this.field_e[(int)(param1 & (long)(this.field_b - 1))];
+        param0.previous = var5;
+        param0.next = var5.next;
+        param0.next.previous = param0;
         if (param2) {
           return;
         }
         try {
-          param0.field_k = param1;
-          param0.field_c.field_a = param0;
+          param0.key = param1;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "jl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(r param0, byte param1) {
+    final static void a(Archive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         jp var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        mi var8 = null;
+        BitPacketBuffer var8 = null;
         int var9 = 0;
-        mi var10 = null;
+        BitPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -48,21 +48,21 @@ final class jl {
         int var4Lifetime1;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          var8 = new mi(param0.a("logo.fo3d", "", 0));
+          var8 = new BitPacketBuffer(param0.a("logo.fo3d", "", 0));
           var10 = var8;
-          var3 = var10.h(-11);
-          var10.p(0);
+          var3 = var10.readUnsignedByte(-11);
+          var10.beginBitAccess(0);
           wc.field_o = ng.a((byte) -108, var10);
           jg.field_j = new int[var3][];
-          cg.field_b = new jp[var3];
+          GameKeyHandler.field_b = new jp[var3];
           for (var4 = 0; var3 > var4; var4++) {
-            cg.field_b[var4] = di.a(var8, true);
+            GameKeyHandler.field_b[var4] = di.a(var8, true);
           }
-          var10.b((byte) -71);
+          var10.endBitAccess((byte) -71);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {
-            var5 = cg.field_b[var9];
+            var5 = GameKeyHandler.field_b[var9];
             var5.a(6, (byte) -121, 6, 6, 1);
             var5.a((byte) 117);
             var6 = new int[]{var5.field_S + var5.field_D >> 1, var5.field_E + var5.field_t >> 1, var5.field_B + var5.field_k >> 1};
@@ -88,7 +88,7 @@ final class jl {
         }
     }
 
-    final li b(int param0) {
+    final IntrusiveNode b(int param0) {
         this.field_i = param0;
         return this.c(-115);
     }
@@ -103,12 +103,12 @@ final class jl {
         }
     }
 
-    final li c(int param0) {
+    final IntrusiveNode c(int param0) {
         int fieldTemp$0 = 0;
-        li var2;
+        IntrusiveNode var2;
         int var3;
         qj var4;
-        li var5;
+        IntrusiveNode var5;
         var3 = Vertigo2.field_L ? 1 : 0;
         if (param0 >= -9) {
           var4 = (qj) null;
@@ -117,7 +117,7 @@ final class jl {
         if (this.field_i > 0 &&
           this.field_c != this.field_e[-1 + this.field_i]) {
           var2 = this.field_c;
-          this.field_c = var2.field_c;
+          this.field_c = var2.previous;
           return var2;
         }
         do {
@@ -126,10 +126,10 @@ final class jl {
           }
           fieldTemp$0 = this.field_i;
           this.field_i = this.field_i + 1;
-          var5 = this.field_e[fieldTemp$0].field_c;
+          var5 = this.field_e[fieldTemp$0].previous;
           var2 = var5;
         } while (var5 == this.field_e[-1 + this.field_i]);
-        this.field_c = var2.field_c;
+        this.field_c = var2.previous;
         return var2;
     }
 
@@ -169,21 +169,21 @@ final class jl {
         }
     }
 
-    final li a(long param0, byte param1) {
-        li var5 = null;
+    final IntrusiveNode a(long param0, byte param1) {
+        IntrusiveNode var5 = null;
         int var6 = Vertigo2.field_L ? 1 : 0;
         if (param1 != 64) {
           this.c(127);
         }
-        li var4 = this.field_e[(int)((long)(this.field_b - 1) & param0)];
-        this.field_d = var4.field_c;
+        IntrusiveNode var4 = this.field_e[(int)((long)(this.field_b - 1) & param0)];
+        this.field_d = var4.previous;
         while (this.field_d != var4) {
-          if (param0 == this.field_d.field_k) {
+          if (param0 == this.field_d.key) {
             var5 = this.field_d;
-            this.field_d = this.field_d.field_c;
+            this.field_d = this.field_d.previous;
             return var5;
           }
-          this.field_d = this.field_d.field_c;
+          this.field_d = this.field_d.previous;
         }
         this.field_d = null;
         return null;
@@ -191,17 +191,17 @@ final class jl {
 
     jl(int param0) {
         int var2 = 0;
-        li dupTemp$0 = null;
-        li var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_i = 0;
         this.field_b = param0;
-        this.field_e = new li[param0];
+        this.field_e = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new li();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_e[var2] = dupTemp$0;
-          var3.field_a = var3;
-          var3.field_c = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

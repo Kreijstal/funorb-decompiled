@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii extends ji {
+final class ii extends TextureOperator {
     static int field_E;
     private int field_F;
     static boolean field_z;
     static String field_A;
     private int field_B;
-    static r field_C;
+    static Archive field_C;
     private int field_D;
     private int field_y;
 
@@ -19,7 +19,7 @@ final class ii extends ji {
         this.field_y = 1365;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -31,17 +31,17 @@ final class ii extends ji {
         try {
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_y = param2.a((byte) -11);
+            this.field_y = param2.readUnsignedShort((byte) -11);
           } else {
             if (1 == var4_int) {
-              this.field_D = param2.a((byte) -11);
+              this.field_D = param2.readUnsignedShort((byte) -11);
             } else {
               if (var4_int != 2) {
                 if (3 == var4_int) {
-                  this.field_B = param2.a((byte) -11);
+                  this.field_B = param2.readUnsignedShort((byte) -11);
                 }
               } else {
-                this.field_F = param2.a((byte) -11);
+                this.field_F = param2.readUnsignedShort((byte) -11);
               }
             }
           }
@@ -134,7 +134,7 @@ final class ii extends ji {
           }
           return var15;
         }
-        field_C = (r) null;
+        field_C = (Archive) null;
         var15Lifetime1 = this.field_x.a(param0, (byte) 66);
         var3Lifetime1 = var15Lifetime1;
         if (!this.field_x.field_i) {

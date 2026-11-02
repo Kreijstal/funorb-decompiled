@@ -3,7 +3,7 @@
  */
 final class eh {
     static int field_c;
-    static cr field_a;
+    static UiPanel field_a;
     static int field_e;
     static String field_g;
     static String[] field_d;
@@ -56,7 +56,7 @@ final class eh {
         }
         if (0 == var6) {
           if (var7 != 0) {
-            cr.b(param3, param0, param2 ^ 3, param5, param4);
+            UiPanel.b(param3, param0, param2 ^ 3, param5, param4);
           }
           return;
         }
@@ -85,21 +85,21 @@ final class eh {
             var11 = ua.field_e;
             var9 = (ua.field_e - var13 << 12) / var12;
           } else {
-            if (var11 > cj.field_D) {
-              var9 = (cj.field_D - var13 << 12) / var12;
-              var11 = cj.field_D;
+            if (var11 > WidgetContainer.field_D) {
+              var9 = (WidgetContainer.field_D - var13 << 12) / var12;
+              var11 = WidgetContainer.field_D;
             }
           }
           if (var10 < ua.field_e) {
             var10 = ua.field_e;
             var8 = (ua.field_e - var13 << 12) / var12;
           } else {
-            if (var10 > cj.field_D) {
-              var8 = (cj.field_D - var13 << 12) / var12;
-              var10 = cj.field_D;
+            if (var10 > WidgetContainer.field_D) {
+              var8 = (WidgetContainer.field_D - var13 << 12) / var12;
+              var10 = WidgetContainer.field_D;
             }
           }
-          uj.a(var8, var9, var11, true, var10, param4);
+          MenuSelectionCursor.a(var8, var9, var11, true, var10, param4);
           return;
         }
         if (param1 > ib.field_a) {
@@ -121,21 +121,21 @@ final class eh {
             var11Lifetime1 = ua.field_e;
             var9Lifetime1 = (ua.field_e - var13 << 12) / var12;
           } else {
-            if (var11Lifetime1 > cj.field_D) {
-              var9Lifetime1 = (cj.field_D - var13 << 12) / var12;
-              var11Lifetime1 = cj.field_D;
+            if (var11Lifetime1 > WidgetContainer.field_D) {
+              var9Lifetime1 = (WidgetContainer.field_D - var13 << 12) / var12;
+              var11Lifetime1 = WidgetContainer.field_D;
             }
           }
           if (var10Lifetime1 < ua.field_e) {
             var10Lifetime1 = ua.field_e;
             var8Lifetime1 = (ua.field_e - var13 << 12) / var12;
           } else {
-            if (var10Lifetime1 > cj.field_D) {
-              var8Lifetime1 = (cj.field_D - var13 << 12) / var12;
-              var10Lifetime1 = cj.field_D;
+            if (var10Lifetime1 > WidgetContainer.field_D) {
+              var8Lifetime1 = (WidgetContainer.field_D - var13 << 12) / var12;
+              var10Lifetime1 = WidgetContainer.field_D;
             }
           }
-          uj.a(var8Lifetime1, var9Lifetime1, var11Lifetime1, true, var10Lifetime1, param4);
+          MenuSelectionCursor.a(var8Lifetime1, var9Lifetime1, var11Lifetime1, true, var10Lifetime1, param4);
           return;
         }
         var11Lifetime2 = param0;
@@ -151,21 +151,21 @@ final class eh {
               var11Lifetime2 = ua.field_e;
               var9Lifetime2 = (ua.field_e - var13 << 12) / var12;
             } else {
-              if (var11Lifetime2 > cj.field_D) {
-                var9Lifetime2 = (cj.field_D - var13 << 12) / var12;
-                var11Lifetime2 = cj.field_D;
+              if (var11Lifetime2 > WidgetContainer.field_D) {
+                var9Lifetime2 = (WidgetContainer.field_D - var13 << 12) / var12;
+                var11Lifetime2 = WidgetContainer.field_D;
               }
             }
             if (var10Lifetime2 < ua.field_e) {
               var10Lifetime2 = ua.field_e;
               var8Lifetime2 = (ua.field_e - var13 << 12) / var12;
             } else {
-              if (var10Lifetime2 > cj.field_D) {
-                var8Lifetime2 = (cj.field_D - var13 << 12) / var12;
-                var10Lifetime2 = cj.field_D;
+              if (var10Lifetime2 > WidgetContainer.field_D) {
+                var8Lifetime2 = (WidgetContainer.field_D - var13 << 12) / var12;
+                var10Lifetime2 = WidgetContainer.field_D;
               }
             }
-            uj.a(var8Lifetime2, var9Lifetime2, var11Lifetime2, true, var10Lifetime2, param4);
+            MenuSelectionCursor.a(var8Lifetime2, var9Lifetime2, var11Lifetime2, true, var10Lifetime2, param4);
             return;
           }
           var10Lifetime2 = (ib.field_a * var12 >> 12) + var13;
@@ -175,21 +175,21 @@ final class eh {
           var11Lifetime2 = ua.field_e;
           var9Lifetime2 = (ua.field_e - var13 << 12) / var12;
         } else {
-          if (var11Lifetime2 > cj.field_D) {
-            var9Lifetime2 = (cj.field_D - var13 << 12) / var12;
-            var11Lifetime2 = cj.field_D;
+          if (var11Lifetime2 > WidgetContainer.field_D) {
+            var9Lifetime2 = (WidgetContainer.field_D - var13 << 12) / var12;
+            var11Lifetime2 = WidgetContainer.field_D;
           }
         }
         if (var10Lifetime2 < ua.field_e) {
           var10Lifetime2 = ua.field_e;
           var8Lifetime2 = (ua.field_e - var13 << 12) / var12;
         } else {
-          if (var10Lifetime2 > cj.field_D) {
-            var8Lifetime2 = (cj.field_D - var13 << 12) / var12;
-            var10Lifetime2 = cj.field_D;
+          if (var10Lifetime2 > WidgetContainer.field_D) {
+            var8Lifetime2 = (WidgetContainer.field_D - var13 << 12) / var12;
+            var10Lifetime2 = WidgetContainer.field_D;
           }
         }
-        uj.a(var8Lifetime2, var9Lifetime2, var11Lifetime2, true, var10Lifetime2, param4);
+        MenuSelectionCursor.a(var8Lifetime2, var9Lifetime2, var11Lifetime2, true, var10Lifetime2, param4);
         return;
     }
 
@@ -277,7 +277,7 @@ final class eh {
             sg.a(param1, param5, param7, (byte) 47, param0, param3, param2, param6);
             return;
           }
-          if (cj.field_D < param2 + param1) {
+          if (WidgetContainer.field_D < param2 + param1) {
             sg.a(param1, param5, param7, (byte) 47, param0, param3, param2, param6);
             return;
           }
@@ -296,7 +296,7 @@ final class eh {
           sg.a(param1, param5, param7, (byte) 47, param0, param3, param2, param6);
           return;
         }
-        if (cj.field_D < param2 + param1) {
+        if (WidgetContainer.field_D < param2 + param1) {
           sg.a(param1, param5, param7, (byte) 47, param0, param3, param2, param6);
           return;
         }

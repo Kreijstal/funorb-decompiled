@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class b {
-    cr field_l;
+    UiPanel field_l;
     private int field_c;
     private int[] field_g;
     int field_j;
@@ -11,7 +11,7 @@ final class b {
     static ll field_d;
     static int field_i;
     static String field_a;
-    static cr field_h;
+    static UiPanel field_h;
     static String field_f;
     static String field_b;
     private String field_e;
@@ -36,11 +36,11 @@ final class b {
             var7 = this.a(true);
             var4 = var7;
             var5 = vo.a(this.field_k, 0);
-            var6 = iq.b(this.field_k, 100) ? 1 : 0;
+            var6 = UiWidget.b(this.field_k, 100) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_n.a(Vertigo2.a(new String[]{var7}, ln.field_e, 69), 4, 0);
-              this.field_n.a(Vertigo2.a(new String[]{var7}, mi.field_x, 103), 6, 0);
+              this.field_n.a(Vertigo2.a(new String[]{var7}, BitPacketBuffer.field_x, 103), 6, 0);
               if (param0 != null &&
                 param1 != 2 &&
                 !pe.field_r) {
@@ -269,7 +269,7 @@ final class b {
         if (param1 != 17) {
           return false;
         }
-        up.field_z = new cb(this.field_l.field_ob, this.field_l.field_C, this.field_l.field_Fb, this.field_l.field_db, param2, hb.field_D, ji.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e, this.field_k, this.field_o);
+        up.field_z = new cb(this.field_l.field_ob, this.field_l.field_C, this.field_l.field_Fb, this.field_l.field_db, param2, hb.field_D, TextureOperator.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e, this.field_k, this.field_o);
         return true;
     }
 
@@ -288,15 +288,15 @@ final class b {
           return true;
         }
         if (param1 == 11) {
-          cf.a(this.field_c, 0, param0, (byte) 53);
+          SecondaryNodeDequeIterator.a(this.field_c, 0, param0, (byte) 53);
           return true;
         }
         if (12 == param1) {
-          cf.a(this.field_c, 1, param0, (byte) 63);
+          SecondaryNodeDequeIterator.a(this.field_c, 1, param0, (byte) 63);
           return true;
         }
         if (param1 == 13) {
-          cf.a(this.field_c, 2, param0, (byte) 104);
+          SecondaryNodeDequeIterator.a(this.field_c, 2, param0, (byte) 104);
           return true;
         }
         if (14 == param1) {
@@ -365,7 +365,7 @@ final class b {
 
     final boolean d(int param0) {
         if (param0 != 2) {
-          this.field_l = (cr) null;
+          this.field_l = (UiPanel) null;
           if (this.field_n == null) {
             return false;
           }
@@ -415,7 +415,7 @@ final class b {
           return true;
         }
         if (param1 == 5) {
-          var9 = lk.a((byte) -41, param0, this.field_k);
+          var9 = RasterBuffer.a((byte) -41, param0, this.field_k);
           if (var9 == null) {
             if (param2 == 0) {
               return true;
@@ -560,7 +560,7 @@ final class b {
           return true;
         }
         if (1 == param0) {
-          ed.a(this.field_o, param1, (byte) -96);
+          PacketBuffer.a(this.field_o, param1, (byte) -96);
           return true;
         }
         if (param0 == 2) {
@@ -586,7 +586,7 @@ final class b {
         return true;
     }
 
-    b(cr param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    b(UiPanel param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_n = new kq(ar.field_c);
           this.field_l = param0;

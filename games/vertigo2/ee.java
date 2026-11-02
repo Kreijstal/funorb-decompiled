@@ -4,7 +4,7 @@
 final class ee {
     static String field_a;
     static int field_c;
-    static cr field_b;
+    static UiPanel field_b;
     static String field_d;
 
     final static void a(int param0, int param1, int param2) {
@@ -14,7 +14,7 @@ final class ee {
         e.a(on.field_b[param2][param0], false);
     }
 
-    final static void a(int param0, r param1) {
+    final static void a(int param0, Archive param1) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -32,25 +32,25 @@ final class ee {
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 9; var2_int++) {
-            kn.field_h[0][var2_int] = new ed(param1.a("", "level0" + (var2_int + 1) + ".map", 0));
+            kn.field_h[0][var2_int] = new PacketBuffer(param1.a("", "level0" + (var2_int + 1) + ".map", 0));
           }
           for (var2_intLifetime1 = 9; 50 > var2_intLifetime1; var2_intLifetime1++) {
-            kn.field_h[0][var2_intLifetime1] = new ed(param1.a("", "level" + (var2_intLifetime1 + 1) + ".map", 0));
+            kn.field_h[0][var2_intLifetime1] = new PacketBuffer(param1.a("", "level" + (var2_intLifetime1 + 1) + ".map", 0));
           }
           for (var2_intLifetime2 = 0; var2_intLifetime2 < 9; var2_intLifetime2++) {
-            kn.field_h[1][var2_intLifetime2] = new ed(param1.a("", "level0" + (1 + var2_intLifetime2) + ".2pl", param0 - 11579));
+            kn.field_h[1][var2_intLifetime2] = new PacketBuffer(param1.a("", "level0" + (1 + var2_intLifetime2) + ".2pl", param0 - 11579));
           }
           for (var2_intLifetime3 = 9; var2_intLifetime3 < 30; var2_intLifetime3++) {
-            kn.field_h[1][var2_intLifetime3] = new ed(param1.a("", "level" + (1 + var2_intLifetime3) + ".2pl", tk.a(param0, 11579)));
+            kn.field_h[1][var2_intLifetime3] = new PacketBuffer(param1.a("", "level" + (1 + var2_intLifetime3) + ".2pl", tk.a(param0, 11579)));
           }
           for (var2_intLifetime4 = 0; var2_intLifetime4 < 9; var2_intLifetime4++) {
-            kn.field_h[2][var2_intLifetime4] = new ed(param1.a("", "level0" + (var2_intLifetime4 + 1) + ".cmp", 0));
+            kn.field_h[2][var2_intLifetime4] = new PacketBuffer(param1.a("", "level0" + (var2_intLifetime4 + 1) + ".cmp", 0));
           }
           if (param0 != 11579) {
             return;
           }
           for (var2_intLifetime5 = 9; 40 > var2_intLifetime5; var2_intLifetime5++) {
-            kn.field_h[2][var2_intLifetime5] = new ed(param1.a("", "level" + (1 + var2_intLifetime5) + ".cmp", tk.a(param0, 11579)));
+            kn.field_h[2][var2_intLifetime5] = new PacketBuffer(param1.a("", "level" + (1 + var2_intLifetime5) + ".cmp", tk.a(param0, 11579)));
           }
           for (var2_intLifetime6 = 0; var2_intLifetime6 < 9; var2_intLifetime6++) {
             kn.field_h[3][var2_intLifetime6] = kn.field_h[0][var2_intLifetime6];
@@ -91,7 +91,7 @@ final class ee {
         try {
           var1_int = 0;
           if (param0 != -11747) {
-            field_b = (cr) null;
+            field_b = (UiPanel) null;
           }
           while (var1_int < rr.field_B.length) {
             if (rr.field_z[var1_int]) {
@@ -108,7 +108,7 @@ final class ee {
         }
     }
 
-    final static short[] a(mi param0, int param1, int param2, short[] param3) {
+    final static short[] a(BitPacketBuffer param0, int param1, int param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -125,7 +125,7 @@ final class ee {
         RuntimeException var4 = null;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
-          var4_int = param0.c((byte) -120, param2);
+          var4_int = param0.readBits((byte) -120, param2);
           if (var4_int == 0) {
             return null;
           }
@@ -133,8 +133,8 @@ final class ee {
             param3.length != var4_int) {
             param3 = new short[var4_int];
           }
-          var5 = param0.c((byte) -118, 4);
-          var6 = (short)param0.c((byte) -94, 16);
+          var5 = param0.readBits((byte) -118, 4);
+          var6 = (short)param0.readBits((byte) -94, 16);
           if (param1 >= -24) {
             stackIn_10_0 = (short[]) null;
             return stackIn_10_0;
@@ -145,7 +145,7 @@ final class ee {
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (short)(var6 + param0.c((byte) -96, var5));
+              param3[var7] = (short)(var6 + param0.readBits((byte) -96, var5));
             }
           }
           stackIn_19_0 = (short[]) (param3);
@@ -229,18 +229,18 @@ final class ee {
 
     final static void a(int param0, boolean param1) {
         if (param0 != 8) {
-          r var3 = (r) null;
-          ee.a(77, (r) null);
+          Archive var3 = (Archive) null;
+          ee.a(77, (Archive) null);
         }
         if (tf.a((byte) 112)) {
           param1 = false;
         }
         kf.a(-7393, param1);
         if (bg.field_c) {
-          bi.d(el.field_e.field_b.field_wb, el.field_e.field_b.field_N, el.field_e.field_b.field_Fb, el.field_e.field_b.field_db);
-          el.field_e.field_b.b(param1, param0 ^ 8);
+          bi.d(IterableNodeHashTable.field_e.field_b.field_wb, IterableNodeHashTable.field_e.field_b.field_N, IterableNodeHashTable.field_e.field_b.field_Fb, IterableNodeHashTable.field_e.field_b.field_db);
+          IterableNodeHashTable.field_e.field_b.b(param1, param0 ^ 8);
         }
-        ma.a(param1, 78);
+        ImageProducerRasterBuffer.a(param1, 78);
     }
 
     public final String toString() {

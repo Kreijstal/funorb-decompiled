@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rq extends sn {
+final class rq extends PcmStream {
     static String field_x;
     private db field_s;
     static String field_A;
-    nj field_w;
+    IntrusiveDeque field_w;
     static int field_B;
-    fp field_z;
-    static cr field_t;
+    PcmStreamMixer field_z;
+    static UiPanel field_t;
     static int field_u;
     static String field_v;
     static boolean field_y;
-    static lg field_r;
+    static Model field_r;
 
-    final static void a(cc param0, int param1, r param2) {
+    final static void a(BitmapFont param0, int param1, Archive param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -34,7 +34,7 @@ final class rq extends sn {
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           var3_int = np.field_Lb;
-          ql.field_L = new cr(0L, (cr) null);
+          ql.field_L = new UiPanel(0L, (UiPanel) null);
           if (param2 == null) {
             var10 = (Throwable) null;
             ke.a((Throwable) null, "QC1", 0);
@@ -51,20 +51,20 @@ final class rq extends sn {
             return;
           }
           pe.a(var4, 97);
-          mp.field_g = nq.a(5138823, 0, 1513239, 2245737, 4020342, 1513239, 1127256, (cc) null, 65793, 65793, param1 ^ 94, 65793, 8947848);
+          mp.field_g = nq.a(5138823, 0, 1513239, 2245737, 4020342, 1513239, 1127256, (BitmapFont) null, 65793, 65793, param1 ^ 94, 65793, 8947848);
           fo.field_c = nq.a(0, 16764006, 0, 0, 0, 0, 0, param0, 0, 0, 88, 0, 0);
           va.field_h = nq.a(0, 16777215, 0, 0, 0, 0, 0, param0, 0, 0, 125, 0, 0);
           var5 = bi.field_e;
           var6 = bi.field_j;
           var15 = bi.field_l;
-          fm.field_g = new er(10, 14);
+          fm.field_g = new Sprite(10, 14);
           fm.field_g.d();
           for (var8 = param1; var8 < 7; var8++) {
             bi.e(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           bi.a(var15, var5, var6);
           lr.field_H = fj.a(va.field_h, fo.field_c, var4, 10, mp.field_g);
-          ql.field_L.field_M = new nj();
+          ql.field_L.field_M = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,12 +86,12 @@ final class rq extends sn {
         }
     }
 
-    final static er a(r param0, String param1, String param2, byte param3) {
+    final static Sprite a(Archive param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        er stackIn_2_0 = null;
-        er stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -102,7 +102,7 @@ final class rq extends sn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 98) {
-            stackIn_2_0 = (er) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           var4_int = param0.a((byte) 120, param2);
@@ -179,9 +179,9 @@ final class rq extends sn {
             param2.field_o = 1048575 & var4_int * param1 + param2.field_o;
             if (param1 >= var5) {
               if (0 == this.field_s.field_H[param2.field_q]) {
-                param2.field_J = ra.a(param2.field_z, param2.field_J.g(), param2.field_J.h(), param2.field_J.e());
+                param2.field_J = SamplePlaybackStream.a(param2.field_z, param2.field_J.g(), param2.field_J.h(), param2.field_J.e());
               } else {
-                param2.field_J = ra.a(param2.field_z, param2.field_J.g(), 0, param2.field_J.e());
+                param2.field_J = SamplePlaybackStream.a(param2.field_z, param2.field_J.g(), 0, param2.field_J.e());
                 stackIn_6_0 = this.field_s;
                 stackIn_6_1 = (pe) (param2);
                 stackIn_6_2 = 92;
@@ -237,9 +237,9 @@ final class rq extends sn {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ra var11 = null;
+        SamplePlaybackStream var11 = null;
         int var12 = 0;
-        r var13 = null;
+        Archive var13 = null;
         var12 = Vertigo2.field_L ? 1 : 0;
         try {
           if (0 != (4 & this.field_s.field_N[param4.field_q]) &&
@@ -262,7 +262,7 @@ final class rq extends sn {
               }
               var11 = param4.field_J;
               if (this.field_s.field_H[param4.field_q] != 0) {
-                param4.field_J = ra.a(param4.field_z, var11.g(), 0, var11.e());
+                param4.field_J = SamplePlaybackStream.a(param4.field_z, var11.g(), 0, var11.e());
                 stackIn_12_0 = this.field_s;
                 stackIn_12_1 = (pe) (param4);
                 stackIn_12_2 = 87;
@@ -270,7 +270,7 @@ final class rq extends sn {
                 ((db) (Object) stackIn_12_0).a(stackIn_12_1, (byte) stackIn_12_2, stackIn_13_3);
                 param4.field_J.b(var9, var11.h());
               } else {
-                param4.field_J = ra.a(param4.field_z, var11.g(), var11.h(), var11.e());
+                param4.field_J = SamplePlaybackStream.a(param4.field_z, var11.g(), var11.h(), var11.e());
               }
               if (0 > param4.field_K.field_n[param4.field_B]) {
                 param4.field_J.i(-1);
@@ -285,8 +285,8 @@ final class rq extends sn {
           }
           param4.field_J.b(param1, param0, param2);
           if (param3 < 49) {
-            var13 = (r) null;
-            rq.a((cc) null, 118, (r) null);
+            var13 = (Archive) null;
+            rq.a((BitmapFont) null, 118, (Archive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -348,9 +348,9 @@ final class rq extends sn {
             var8 = dc.a(480, var12, (byte) 79, or.field_n, oc.field_s);
             var9 = 3 + var8;
             al.field_y = new String[var9];
-            dg.field_f = new int[var9];
+            ClientException.field_f = new int[var9];
             for (var10 = 0; var9 > var10; var10++) {
-              dg.field_f[var10] = -1;
+              ClientException.field_f[var10] = -1;
             }
             rc.field_c = new int[2];
             for (var10 = 0; var8 > var10; var10++) {
@@ -358,10 +358,10 @@ final class rq extends sn {
             }
             al.field_y[var9 - 3] = "";
             al.field_y[var9 - 2] = var6;
-            dg.field_f[-2 + var9] = 0;
+            ClientException.field_f[-2 + var9] = 0;
             rc.field_c[0] = 1;
             al.field_y[-1 + var9] = lr.field_N;
-            dg.field_f[-1 + var9] = 1;
+            ClientException.field_f[-1 + var9] = 1;
             rc.field_c[1] = 2;
           } else {
             if (hr.field_D != 1) {
@@ -370,9 +370,9 @@ final class rq extends sn {
             var8 = dc.a(480, var12, (byte) 99, or.field_n, oc.field_s);
             var9 = 2 + var8;
             al.field_y = new String[var9];
-            dg.field_f = new int[var9];
+            ClientException.field_f = new int[var9];
             for (var10 = 0; var10 < var9; var10++) {
-              dg.field_f[var10] = -1;
+              ClientException.field_f[var10] = -1;
             }
             rc.field_c = new int[1];
             for (var10 = 0; var8 > var10; var10++) {
@@ -380,17 +380,17 @@ final class rq extends sn {
             }
             al.field_y[-2 + var9] = "";
             al.field_y[-1 + var9] = lr.field_N;
-            dg.field_f[var9 - 1] = 0;
+            ClientException.field_f[var9 - 1] = 0;
             rc.field_c[0] = 2;
           }
-          kg.field_G.field_b = rc.field_c.length;
+          kg.field_G.itemCount = rc.field_c.length;
           var8Lifetime1 = 0;
           for (var9Lifetime1 = 0; al.field_y.length > var9Lifetime1; var9Lifetime1++) {
             stackIn_25_0 = 121;
             stackIn_25_1 = al.field_y[var9Lifetime1];
-            stackIn_26_2 = !(dg.field_f[var9Lifetime1] < 0);
+            stackIn_26_2 = !(ClientException.field_f[var9Lifetime1] < 0);
             var10Lifetime1 = ao.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
-            if (dg.field_f[var9Lifetime1] != -1) {
+            if (ClientException.field_f[var9Lifetime1] != -1) {
               var10Lifetime1 = var10Lifetime1 + hc.field_a * 2;
             }
             if (var10Lifetime1 > var8Lifetime1) {
@@ -399,10 +399,10 @@ final class rq extends sn {
           }
           qp.field_d = -(var8Lifetime1 >> 1) + var8Lifetime1 + ni.field_a;
           pk.field_o = -(var8Lifetime1 >> 1) + ni.field_a;
-          sf.field_d = kg.field_G.field_b * (vo.field_y + eb.field_h << 1);
+          sf.field_d = kg.field_G.itemCount * (vo.field_y + eb.field_h << 1);
           for (var9Lifetime2 = 0; var9Lifetime2 < al.field_y.length; var9Lifetime2++) {
             stackIn_36_0 = sf.field_d;
-            if (dg.field_f[var9Lifetime2] >= 0) {
+            if (ClientException.field_f[var9Lifetime2] >= 0) {
               stackIn_37_1 = ml.field_v;
             } else {
               stackIn_37_1 = cd.field_a;
@@ -410,7 +410,7 @@ final class rq extends sn {
             sf.field_d = stackIn_36_0 + stackIn_37_1;
           }
           ui.field_d = -(sf.field_d >> 1) + kf.field_b;
-          kg.field_G.a(param3, we.a(gb.field_d, true, ed.field_n), 0, (byte) 80);
+          kg.field_G.a(param3, we.a(gb.field_d, true, PacketBuffer.field_n), 0, (byte) 80);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -427,7 +427,7 @@ final class rq extends sn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        er var6 = new er(param1, param0);
+        Sprite var6 = new Sprite(param1, param0);
         int var7 = 47 % ((3 - param4) / 57);
         var6.d();
         bi.f(0, 0, param1, param0, 12, 5921370);
@@ -489,20 +489,20 @@ final class rq extends sn {
         }
     }
 
-    final sn c() {
+    final PcmStream c() {
         pe var1 = (pe) (this.field_w.a((byte) 100));
         if (var1 == null) {
           return null;
         }
         if (var1.field_J != null) {
-          return (sn) ((Object) var1.field_J);
+          return (PcmStream) ((Object) var1.field_J);
         }
         return this.a();
     }
 
     rq(db param0) {
-        this.field_w = new nj();
-        this.field_z = new fp();
+        this.field_w = new IntrusiveDeque();
+        this.field_z = new PcmStreamMixer();
         try {
           this.field_s = param0;
         } catch (RuntimeException runtimeException) {
@@ -510,7 +510,7 @@ final class rq extends sn {
         }
     }
 
-    final sn a() {
+    final PcmStream a() {
         pe var1_ref = null;
         int var2 = Vertigo2.field_L ? 1 : 0;
         do {
@@ -519,7 +519,7 @@ final class rq extends sn {
             return null;
           }
         } while (var1_ref.field_J == null);
-        return (sn) ((Object) var1_ref.field_J);
+        return (PcmStream) ((Object) var1_ref.field_J);
     }
 
     final static boolean a(byte param0) {

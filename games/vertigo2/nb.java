@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nb extends ji {
+final class nb extends TextureOperator {
     static String field_A;
     static boolean field_z;
     static String field_E;
     private int field_C;
-    static cr field_D;
+    static UiPanel field_D;
     static fd field_F;
     static ve field_B;
     static String field_y;
 
-    final static void a(int param0, cc param1, cc param2, byte param3) {
+    final static void a(int param0, BitmapFont param1, BitmapFont param2, byte param3) {
         try {
           bc.field_c = param0;
           mf.field_c = param2;
@@ -123,13 +123,13 @@ final class nb extends ji {
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        mi var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        mi var8 = null;
+        BitPacketBuffer var8 = null;
         q var9 = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         if (param1 <= 32) {
@@ -137,34 +137,34 @@ final class nb extends ji {
         }
         var8 = id.field_f;
         var2 = var8;
-        var3 = var8.h(-11);
+        var3 = var8.readUnsignedByte(-11);
         ln.field_c = 127 & var3;
         stackIn_5_0 = (0 != (var3 & 128));
         cb.field_Ib = stackIn_5_0;
-        rq.field_u = var8.h(-11);
-        ug.field_a = var8.i(-31016);
+        rq.field_u = var8.readUnsignedByte(-11);
+        ug.field_a = var8.readLong(-31016);
         if (ln.field_c == 2) {
-          ck.field_J = var8.a((byte) -11);
-          qf.field_a = var8.m(0);
+          ck.field_J = var8.readUnsignedShort((byte) -11);
+          qf.field_a = var8.readUnsignedMedium(0);
         } else {
           ck.field_J = 0;
           qf.field_a = 0;
         }
-        stackIn_11_0 = (var8.h(-11) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(-11) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        sp.field_U = var8.f(128);
+        sp.field_U = var8.readString(128);
         if (var4 == 0) {
           fd.field_p = sp.field_U;
         } else {
-          fd.field_p = var8.f(128);
+          fd.field_p = var8.readString(128);
         }
         if (ln.field_c == 1) {
-          tj.field_b = var8.a((byte) -11);
-          ad.field_a = var8.f(128);
+          tj.field_b = var8.readUnsignedShort((byte) -11);
+          ad.field_a = var8.readString(128);
         } else {
           if (ln.field_c == 4) {
-            tj.field_b = var8.a((byte) -11);
-            ad.field_a = var8.f(128);
+            tj.field_b = var8.readUnsignedShort((byte) -11);
+            ad.field_a = var8.readString(128);
           } else {
             tj.field_b = 0;
             ad.field_a = null;
@@ -174,7 +174,7 @@ final class nb extends ji {
           tj.field_a = hh.a((byte) -123, 80, var8);
           sd.field_P = null;
         } else {
-          var5 = var8.a((byte) -11);
+          var5 = var8.readUnsignedShort((byte) -11);
           try {
             var9 = wm.field_k.a(1, var5);
             tj.field_a = var9.h(33);
@@ -202,16 +202,16 @@ final class nb extends ji {
         hh.a(-20, lr.field_H);
     }
 
-    final static il i(int param0) {
+    final static MouseWheelInput i(int param0) {
         try {
           Throwable var1 = null;
-          il stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 0) {
               nb.g(127);
             }
-            stackIn_3_0 = (il) (Class.forName("vk").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -259,7 +259,7 @@ final class nb extends ji {
           if (param0.field_s != 2) {
             if (param0.field_s == 0 &&
               fq.field_i) {
-              var3 = "[" + fb.field_A + "] ";
+              var3 = "[" + SpriteState.field_A + "] ";
             }
             if (param0.field_s == 1) {
               var3 = "[" + Vertigo2.a(new String[]{param0.field_k}, ie.field_Rb, -117) + "] ";
@@ -300,7 +300,7 @@ final class nb extends ji {
         }
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -310,7 +310,7 @@ final class nb extends ji {
         try {
           var4_int = param1;
           if (0 == var4_int) {
-            this.field_C = param2.a((byte) -11);
+            this.field_C = param2.readUnsignedShort((byte) -11);
           }
           if (param0 != 110) {
             field_A = (String) null;
@@ -331,7 +331,7 @@ final class nb extends ji {
     }
 
     final static void d(int param0, int param1) {
-        li var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         hn var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -412,8 +412,8 @@ final class nb extends ji {
         field_E = null;
         field_B = null;
         if (param0 != 0) {
-          cc var2 = (cc) null;
-          nb.a(102, (cc) null, (cc) null, (byte) 77);
+          BitmapFont var2 = (BitmapFont) null;
+          nb.a(102, (BitmapFont) null, (BitmapFont) null, (byte) 77);
         }
     }
 

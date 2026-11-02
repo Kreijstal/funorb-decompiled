@@ -7,7 +7,7 @@ class fj extends rl implements ij {
     private boolean field_kb;
     private boolean field_gb;
     private we field_fb;
-    private cc field_mb;
+    private BitmapFont field_mb;
     static String field_hb;
     private boolean field_ib;
 
@@ -86,7 +86,7 @@ class fj extends rl implements ij {
         }
     }
 
-    fj(sd param0, cc param1, String param2, boolean param3, boolean param4) {
+    fj(sd param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new rh((fj) null, param1, param2), 77, 10, 10);
         try {
           this.field_kb = false;
@@ -102,7 +102,7 @@ class fj extends rl implements ij {
         }
     }
 
-    final boolean a(char param0, int param1, int param2, iq param3) {
+    final boolean a(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -130,7 +130,7 @@ class fj extends rl implements ij {
         }
     }
 
-    final static aa a(cr param0, cr param1, ud param2, int param3, cr param4) {
+    final static aa a(UiPanel param0, UiPanel param1, ud param2, int param3, UiPanel param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;

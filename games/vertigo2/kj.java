@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends ji {
+final class kj extends TextureOperator {
     private boolean field_z;
     static boolean field_E;
     static int field_B;
@@ -104,7 +104,7 @@ final class kj extends ji {
         field_A = null;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_9_1 = false;
@@ -120,16 +120,16 @@ final class kj extends ji {
           var4_int = param1;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              stackIn_13_1 = (param2.h(-11) == 1);
+              stackIn_13_1 = (param2.readUnsignedByte(-11) == 1);
               this.field_z = stackIn_13_1;
             } else {
               if (var4_int == 2) {
-                stackIn_17_1 = (param2.h(param0 - 121) == 1);
+                stackIn_17_1 = (param2.readUnsignedByte(param0 - 121) == 1);
                 this.field_o = stackIn_17_1;
               }
             }
           } else {
-            stackIn_9_1 = (param2.h(-11) == 1);
+            stackIn_9_1 = (param2.readUnsignedByte(-11) == 1);
             this.field_y = stackIn_9_1;
           }
           if (param0 != 110) {
@@ -192,7 +192,7 @@ final class kj extends ji {
         return var3;
     }
 
-    final static void a(int param0, int param1, int param2, er[] param3, int param4) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;

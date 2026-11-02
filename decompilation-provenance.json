@@ -11250,6 +11250,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "vertigo2": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/vertigo2"
+      },
+      "inputTreeSha256": "b86ada205c32613a036a9e416609fcf457a10b96880520acbb3f7a85a216b7f7",
+      "sources": {
+        "files": 437,
+        "sha256": "d1e67338389dd3cc2e1ac4449ced35ab78d9c5bbbd9f5fb0e5768411e324e95b"
+      },
+      "dictionary": {
+        "path": "decompilation/vertigo2-naming.json",
+        "sha256": "8eb9360e518d5f741b37b1b04ae1c263b3bb787907a8d894a49b5ad4aa18e2ef"
+      },
+      "readingGuide": {
+        "path": "games/vertigo2/README.md",
+        "sha256": "314063b7a564f478e3df77a56ffea535d21508fec251db0db4b5f6d0e0e14f29"
+      },
+      "rulesSha256": "507b05cc420480210759c829b429c77ae0255a73f2c669074162b3035e209aeb",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -13379,6 +13403,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 437,
+          "sha256": "d1e67338389dd3cc2e1ac4449ced35ab78d9c5bbbd9f5fb0e5768411e324e95b"
         }
       },
       "virogrid": {

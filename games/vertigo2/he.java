@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends gp {
+final class he extends DualLinkNode {
     static String field_B;
     private int[] field_w;
     private int[] field_y;
     static String field_t;
-    private ji[] field_v;
+    private TextureOperator[] field_v;
     static String field_z;
-    static cr field_x;
-    private ji field_A;
+    static UiPanel field_x;
+    private TextureOperator field_A;
     static int[] field_u;
 
-    final int[] a(r param0, double param1, boolean param2, boolean param3, int param4, int param5, int param6, ka param7) {
+    final int[] a(Archive param0, double param1, boolean param2, boolean param3, int param4, int param5, int param6, ka param7) {
         int var10_int = 0;
         int var19 = 0;
         int[] stackIn_43_0 = null;
@@ -103,12 +103,12 @@ final class he extends gp {
               if (var22 > 255) {
                 var22 = 255;
               }
-              var21 = li.field_l[var21];
+              var21 = IntrusiveNode.field_l[var21];
               if (0 > var22) {
                 var22 = 0;
               }
-              var20 = li.field_l[var20];
-              var22 = li.field_l[var22];
+              var20 = IntrusiveNode.field_l[var20];
+              var22 = IntrusiveNode.field_l[var22];
               var23 = (var20 << 16) - (-(var21 << 8) - var22);
               if (var23 != 0) {
                 var23 = var23 | -16777216;
@@ -169,31 +169,31 @@ final class he extends gp {
     }
 
     final static void a(int param0, ub param1, int param2) {
-        mi var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = uh.field_Wb;
-          var5.j(param0, 118);
-          var5.field_u = var5.field_u + 1;
-          var4 = var5.field_u;
-          var5.f(1, 117);
-          var5.f(param1.field_u, -71);
+          var5.writeCipheredByte(param0, 118);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, 117);
+          var5.writeByte(param1.field_u, -71);
           if (param2 != -27011) {
             he.a((byte) -108, 124);
           }
-          var5.b(param1.field_q, (byte) -124);
-          var5.e(param1.field_s, 0);
-          var5.e(param1.field_o, 0);
-          var5.e(param1.field_r, 0);
-          var5.e(param1.field_n, 0);
+          var5.writeSignedSmart(param1.field_q, (byte) -124);
+          var5.writeInt(param1.field_s, 0);
+          var5.writeInt(param1.field_o, 0);
+          var5.writeInt(param1.field_r, 0);
+          var5.writeInt(param1.field_n, 0);
           var5.c(var4, 85);
-          var5.b((byte) 53, var5.field_u - var4);
+          var5.patchByteLength((byte) 53, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "he.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final boolean a(r param0, ka param1, int param2) {
+    final boolean a(Archive param0, ka param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -251,7 +251,7 @@ final class he extends gp {
         }
     }
 
-    he(ed param0) {
+    he(PacketBuffer param0) {
         int[] array$2 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -269,9 +269,9 @@ final class he extends gp {
         int var9 = 0;
         int var10 = 0;
         int[][] var12 = null;
-        ji var13 = null;
-        ji var14 = null;
-        ji var15 = null;
+        TextureOperator var13 = null;
+        TextureOperator var14 = null;
+        TextureOperator var15 = null;
         int var6Lifetime1;
         int var9Lifetime1;
         int var3Lifetime1;
@@ -279,11 +279,11 @@ final class he extends gp {
         int var8Lifetime1;
         int var9Lifetime1Lifetime1;
         try {
-          var2_int = param0.h(-11);
+          var2_int = param0.readUnsignedByte(-11);
           var3 = 0;
           var4 = 0;
           var12 = new int[var2_int][];
-          this.field_v = new ji[var2_int];
+          this.field_v = new TextureOperator[var2_int];
           for (var6 = 0; var2_int > var6; var6++) {
             var13 = ve.a((byte) -109, param0);
             var14 = var13;
@@ -293,11 +293,11 @@ final class he extends gp {
             if (var14.e(6557) >= 0) {
               var4++;
             }
-            var8 = var14.field_u.length;
+            var8 = var14.inputs.length;
             array$2 = new int[var8];
             var12[var6] = array$2;
             for (var9 = 0; var9 < var8; var9++) {
-              var12[var6][var9] = param0.h(-11);
+              var12[var6][var9] = param0.readUnsignedByte(-11);
             }
             this.field_v[var6] = var13;
           }
@@ -307,9 +307,9 @@ final class he extends gp {
           var4Lifetime1 = 0;
           for (var6Lifetime1 = 0; var2_int > var6Lifetime1; var6Lifetime1++) {
             var15 = this.field_v[var6Lifetime1];
-            var8Lifetime1 = var15.field_u.length;
+            var8Lifetime1 = var15.inputs.length;
             for (var9Lifetime1 = 0; var8Lifetime1 > var9Lifetime1; var9Lifetime1++) {
-              var15.field_u[var9Lifetime1] = this.field_v[var12[var6Lifetime1][var9Lifetime1]];
+              var15.inputs[var9Lifetime1] = this.field_v[var12[var6Lifetime1][var9Lifetime1]];
             }
             var9Lifetime1Lifetime1 = var15.a((byte) -117);
             var10 = var15.e(6557);
@@ -325,10 +325,10 @@ final class he extends gp {
             }
             var12[var6Lifetime1] = null;
           }
-          this.field_A = this.field_v[param0.h(-11)];
-          param0.h(-11);
+          this.field_A = this.field_v[param0.readUnsignedByte(-11)];
+          param0.readUnsignedByte(-11);
           var5 = (int[][]) null;
-          param0.h(-11);
+          param0.readUnsignedByte(-11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

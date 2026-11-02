@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ca {
-    static cr field_f;
+    static UiPanel field_f;
     static int field_g;
-    static cr field_h;
+    static UiPanel field_h;
     static int[] field_a;
     static String field_e;
     static int field_b;
@@ -24,7 +24,7 @@ final class ca {
           if (2 != ui.field_g) {
             oa.field_s.field_S = ml.field_x;
           } else {
-            oa.field_s.field_S = nj.field_c;
+            oa.field_s.field_S = IntrusiveDeque.field_c;
           }
           var9_int = 495;
           var10 = 5;
@@ -46,20 +46,20 @@ final class ca {
         }
     }
 
-    final static er[] a(byte param0, int param1, int param2, int param3) {
+    final static Sprite[] a(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = Vertigo2.field_L ? 1 : 0;
-        er[] var7 = new er[9];
-        er[] var4 = var7;
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var4 = var7;
         if (param0 <= -73) {
-          var7[0] = ed.a(param3, param2, false);
+          var7[0] = PacketBuffer.a(param3, param2, false);
           for (var5 = 1; var5 < 9; var5++) {
             var7[var5] = var7[0];
           }
-          var4[4] = ed.a(param1, 64, false);
+          var4[4] = PacketBuffer.a(param1, 64, false);
           return var4;
         }
-        return (er[]) null;
+        return (Sprite[]) null;
     }
 
     final static void a(boolean param0, int param1) {
@@ -96,7 +96,7 @@ final class ca {
               return;
             }
             if (am.field_b) {
-              stackIn_77_0 = (il.field_a) ? 1 : 0;
+              stackIn_77_0 = (MouseWheelInput.field_a) ? 1 : 0;
             } else {
               stackIn_77_0 = 0;
             }
@@ -148,7 +148,7 @@ final class ca {
           }
           return;
         }
-        if (!il.field_a) {
+        if (!MouseWheelInput.field_a) {
           var2Lifetime2 = 0;
           stackIn_48_0 = (param0) && (m.h(param1 + 16109)) && (var2Lifetime2 == 0);
           ff.a(stackIn_48_0, 11182);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jo implements ur {
+final class jo implements WidgetListener {
     private int field_a;
     static int field_b;
     private int field_c;
@@ -12,16 +12,16 @@ final class jo implements ur {
     static int[] field_h;
     static String[] field_g;
     private int field_j;
-    private cc field_i;
+    private BitmapFont field_i;
 
-    final static void a(ed param0, int param1, int param2, int param3, int param4) {
+    final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
           int var5_int = 110 % ((param3 + 26) / 41);
-          param0.f(12, 116);
-          param0.d(17, -1783);
-          param0.d(param4, -1783);
-          param0.d(param1, -1783);
-          param0.f(param2, -107);
+          param0.writeByte(12, 116);
+          param0.writeShort(17, -1783);
+          param0.writeShort(param4, -1783);
+          param0.writeShort(param1, -1783);
+          param0.writeByte(param2, -107);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "jo.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -38,9 +38,9 @@ final class jo implements ur {
         field_h = null;
     }
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         int var10 = 0;
-        iq stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -56,7 +56,7 @@ final class jo implements ur {
           if (!(param3 instanceof jf)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (iq) (param3);
+            stackIn_4_0 = (UiWidget) (param3);
           }
           var12 = (jf) (stackIn_4_0);
           if (!param2) {
@@ -64,10 +64,10 @@ final class jo implements ur {
           }
           if (var12 == null) {
           }
-          bi.b(param1 + param3.field_o, param4 + param3.field_t, param3.field_n, param3.field_s, this.field_e);
-          var7 = param3.field_n - 2 * var12.field_K;
-          var8 = var12.field_K + param3.field_o + param1;
-          var9 = param4 + (param3.field_t + var12.field_L);
+          bi.b(param1 + param3.x, param4 + param3.y, param3.width, param3.height, this.field_e);
+          var7 = param3.width - 2 * var12.field_K;
+          var8 = var12.field_K + param3.x + param1;
+          var9 = param4 + (param3.y + var12.field_L);
           bi.a(var8, var9, var7 + var8, var9, this.field_a);
           for (var10 = var12.a((byte) -104) - 1; var10 >= 0; var10--) {
             bi.f(var8 + var12.a(var10, (byte) 122) * var7 / var12.c(param2), var9, this.field_j, this.field_k);
@@ -75,7 +75,7 @@ final class jo implements ur {
           if (null == this.field_i) {
             return;
           }
-          this.field_i.c(var12.field_w, var7 / 2 + var8, var12.field_L + this.field_i.field_D + var9, this.field_f, this.field_c);
+          this.field_i.c(var12.text, var7 / 2 + var8, var12.field_L + this.field_i.field_D + var9, this.field_f, this.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class jo implements ur {
         }
     }
 
-    jo(cc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    jo(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_k = param6;
           this.field_c = param2;

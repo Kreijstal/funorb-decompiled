@@ -6,8 +6,8 @@ final class ak {
     static String field_c;
     static String field_f;
     static int field_e;
-    private gp field_a;
-    private gp field_b;
+    private DualLinkNode field_a;
+    private DualLinkNode field_b;
 
     final static void a(boolean param0, boolean param1, int param2) {
         String var4 = (String) null;
@@ -17,45 +17,45 @@ final class ak {
         }
     }
 
-    final gp b(byte param0) {
-        gp var2 = null;
-        gp var2Lifetime1;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != -50) {
           field_e = -33;
-          var2 = this.field_a.field_p;
+          var2 = this.field_a.secondaryPrevious;
           if (this.field_a == var2) {
             this.field_b = null;
             return null;
           }
-          this.field_b = var2.field_p;
+          this.field_b = var2.secondaryPrevious;
           return var2;
         }
-        var2Lifetime1 = this.field_a.field_p;
+        var2Lifetime1 = this.field_a.secondaryPrevious;
         if (this.field_a == var2Lifetime1) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2Lifetime1.field_p;
+        this.field_b = var2Lifetime1.secondaryPrevious;
         return var2Lifetime1;
     }
 
     final int a(byte param0) {
-        gp var3 = null;
+        DualLinkNode var3 = null;
         int var4 = Vertigo2.field_L ? 1 : 0;
         int var2 = 0;
-        gp var3Lifetime1;
+        DualLinkNode var3Lifetime1;
         if (param0 >= 6) {
-          var3 = this.field_a.field_p;
+          var3 = this.field_a.secondaryPrevious;
           while (var3 != this.field_a) {
-            var3 = var3.field_p;
+            var3 = var3.secondaryPrevious;
             var2++;
           }
           return var2;
         }
         ak.b(24);
-        var3Lifetime1 = this.field_a.field_p;
+        var3Lifetime1 = this.field_a.secondaryPrevious;
         while (var3Lifetime1 != this.field_a) {
-          var3Lifetime1 = var3Lifetime1.field_p;
+          var3Lifetime1 = var3Lifetime1.secondaryPrevious;
           var2++;
         }
         return var2;
@@ -68,20 +68,20 @@ final class ak {
         field_c = null;
     }
 
-    final void a(boolean param0, gp param1) {
+    final void a(boolean param0, DualLinkNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != param1.field_o) {
-            param1.a(-125);
+          if (null != param1.secondaryNext) {
+            param1.unlinkSecondary(-125);
           }
-          param1.field_p = this.field_a;
-          param1.field_o = this.field_a.field_o;
-          param1.field_o.field_p = param1;
-          param1.field_p.field_o = param1;
+          param1.secondaryPrevious = this.field_a;
+          param1.secondaryNext = this.field_a.secondaryNext;
+          param1.secondaryNext.secondaryPrevious = param1;
+          param1.secondaryPrevious.secondaryNext = param1;
           if (!param0) {
             return;
           }
@@ -110,7 +110,7 @@ final class ak {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!il.field_a) {
+          if (!MouseWheelInput.field_a) {
             return false;
           }
           var2_int = 83 / ((14 - param0) / 60);
@@ -138,35 +138,35 @@ final class ak {
     }
 
     public ak() {
-        this.field_a = new gp();
-        this.field_a.field_p = this.field_a;
-        this.field_a.field_o = this.field_a;
+        this.field_a = new DualLinkNode();
+        this.field_a.secondaryPrevious = this.field_a;
+        this.field_a.secondaryNext = this.field_a;
     }
 
-    final gp a(int param0) {
+    final DualLinkNode a(int param0) {
         if (param0 > -8) {
-          return (gp) null;
+          return (DualLinkNode) null;
         }
-        gp var2 = this.field_a.field_p;
+        DualLinkNode var2 = this.field_a.secondaryPrevious;
         if (var2 != this.field_a) {
-          var2.a(-122);
+          var2.unlinkSecondary(-122);
           return var2;
         }
         return null;
     }
 
-    final gp a(boolean param0) {
-        gp var2 = this.field_b;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2 = this.field_b;
         if (var2 == this.field_a) {
           this.field_b = null;
           return null;
         }
         if (param0) {
-          this.field_b = var2.field_p;
+          this.field_b = var2.secondaryPrevious;
           return var2;
         }
         field_e = 54;
-        this.field_b = var2.field_p;
+        this.field_b = var2.secondaryPrevious;
         return var2;
     }
 

@@ -3,7 +3,7 @@
  */
 final class lr extends d {
     static String field_L;
-    static er field_O;
+    static Sprite field_O;
     static String field_I;
     static String field_K;
     static String field_J;
@@ -11,12 +11,12 @@ final class lr extends d {
     static String field_N;
     private int field_Q;
     static aa field_H;
-    static cr field_P;
+    static UiPanel field_P;
     static String field_M;
     static String field_T;
     private of field_R;
 
-    final void a(byte param0, int param1, int param2, iq param3) {
+    final void a(byte param0, int param1, int param2, UiWidget param3) {
         try {
           if (param0 <= 6) {
             lr.a((byte) 76);
@@ -54,7 +54,7 @@ final class lr extends d {
         field_P = null;
     }
 
-    final boolean a(byte param0, iq param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -97,9 +97,9 @@ final class lr extends d {
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        er var15 = null;
-        er var16 = null;
-        er var13 = null;
+        Sprite var15 = null;
+        Sprite var16 = null;
+        Sprite var13 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = Vertigo2.field_L ? 1 : 0;
@@ -109,77 +109,77 @@ final class lr extends d {
         if (param1 != 0) {
           return;
         }
-        int var5 = this.field_o + param2 + (this.field_n >> 1);
-        int var6 = this.field_t + (param3 + (this.field_s >> 1));
+        int var5 = this.x + param2 + (this.width >> 1);
+        int var6 = this.y + (param3 + (this.height >> 1));
         ba var8 = this.field_R.a(-23996);
         if (tk.field_n == var8) {
           var15 = jn.field_b[0];
           var9 = var15.field_x << 1;
           var10 = var15.field_B << 1;
-          if (cr.field_E == null) {
-            cr.field_E = new er(var9, var10);
-            lq.a(cr.field_E, (byte) -94);
+          if (UiPanel.field_E == null) {
+            UiPanel.field_E = new Sprite(var9, var10);
+            lq.a(UiPanel.field_E, (byte) -94);
             var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            cr.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+            UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
             return;
           }
-          if (var9 > cr.field_E.field_y) {
-            cr.field_E = new er(var9, var10);
-            lq.a(cr.field_E, (byte) -94);
+          if (var9 > UiPanel.field_E.field_y) {
+            UiPanel.field_E = new Sprite(var9, var10);
+            lq.a(UiPanel.field_E, (byte) -94);
             var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            cr.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+            UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
             return;
           }
-          if (cr.field_E.field_t < var10) {
-            cr.field_E = new er(var9, var10);
-            lq.a(cr.field_E, (byte) -94);
+          if (UiPanel.field_E.field_t < var10) {
+            UiPanel.field_E = new Sprite(var9, var10);
+            lq.a(UiPanel.field_E, (byte) -94);
             var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            cr.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+            UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
             return;
           }
-          lq.a(cr.field_E, (byte) -94);
+          lq.a(UiPanel.field_E, (byte) -94);
           bi.c();
           var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
           ln.d(-28558);
-          cr.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+          UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
           return;
         }
         if (dj.field_c == var8) {
           var16 = jn.field_b[0];
           var9Lifetime1 = var16.field_x << 1;
           var10Lifetime1 = var16.field_B << 1;
-          if (cr.field_E == null) {
-            cr.field_E = new er(var9Lifetime1, var10Lifetime1);
-            lq.a(cr.field_E, (byte) -94);
+          if (UiPanel.field_E == null) {
+            UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
+            lq.a(UiPanel.field_E, (byte) -94);
             var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            cr.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+            UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
             return;
           }
-          if (var9Lifetime1 > cr.field_E.field_y) {
-            cr.field_E = new er(var9Lifetime1, var10Lifetime1);
-            lq.a(cr.field_E, (byte) -94);
+          if (var9Lifetime1 > UiPanel.field_E.field_y) {
+            UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
+            lq.a(UiPanel.field_E, (byte) -94);
             var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            cr.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+            UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
             return;
           }
-          if (cr.field_E.field_t < var10Lifetime1) {
-            cr.field_E = new er(var9Lifetime1, var10Lifetime1);
-            lq.a(cr.field_E, (byte) -94);
+          if (UiPanel.field_E.field_t < var10Lifetime1) {
+            UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
+            lq.a(UiPanel.field_E, (byte) -94);
             var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            cr.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+            UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
             return;
           }
-          lq.a(cr.field_E, (byte) -94);
+          lq.a(UiPanel.field_E, (byte) -94);
           bi.c();
           var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
           ln.d(-28558);
-          cr.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+          UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
           return;
         }
         if (ir.field_a == var8) {
@@ -190,7 +190,7 @@ final class lr extends d {
         if (qm.field_G != var8) {
           return;
         }
-        er var12 = jn.field_b[1];
+        Sprite var12 = jn.field_b[1];
         var12.d(var5 - (var12.field_y >> 1), -(var12.field_t >> 1) + var6, 256);
     }
 
@@ -342,7 +342,7 @@ final class lr extends d {
           if (param2 > 13) {
             return;
           }
-          field_O = (er) null;
+          field_O = (Sprite) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -366,7 +366,7 @@ final class lr extends d {
         try {
           var1_int = 0;
           var2 = 0;
-          while (gf.a(false)) {
+          while (NodeHashTableIterator.a(false)) {
             ve.field_d.d((byte) 81);
             if (ve.field_d.a(84)) {
               var1_int = 1;
@@ -376,14 +376,14 @@ final class lr extends d {
             }
             var2 = 1;
           }
-          ve.field_d.a((byte) -29, fk.b(gb.field_d, 1282642017, ed.field_n), fk.b(no.field_e, 1282642017, sd.field_N));
+          ve.field_d.a((byte) -29, fk.b(gb.field_d, 1282642017, PacketBuffer.field_n), fk.b(no.field_e, 1282642017, sd.field_N));
           if (ve.field_d.a(84)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            0 <= ve.field_d.field_c) {
-            var3 = gi.field_n[ve.field_d.field_c];
+            0 <= ve.field_d.selectedIndex) {
+            var3 = gi.field_n[ve.field_d.selectedIndex];
             if (var3 == 2) {
               hd.a((byte) 47);
             } else if (var3 == 5) {

@@ -7,8 +7,8 @@ final class ln {
     static fe field_f;
     static String field_e;
     static int[] field_g;
-    static tr field_d;
-    static er[] field_b;
+    static GameplayScreen field_d;
+    static Sprite[] field_b;
 
     public static void a(int param0) {
         field_g = null;
@@ -18,7 +18,7 @@ final class ln {
         field_e = null;
         field_d = null;
         if (param0 >= -33) {
-          field_b = (er[]) null;
+          field_b = (Sprite[]) null;
         }
     }
 
@@ -61,7 +61,7 @@ final class ln {
     }
 
     final static void d(int param0) {
-        nn var1 = (nn) (gi.field_v.d((byte) 92));
+        nn var1 = (nn) (gi.field_v.removeFirst((byte) 92));
         if (param0 != -28558) {
           ln.a(101, 106);
           if (var1 == null) {
@@ -70,7 +70,7 @@ final class ln {
           bi.a(var1.field_n, var1.field_r, var1.field_o);
           bi.g(var1.field_q, var1.field_x, var1.field_u, var1.field_v);
           var1.field_n = null;
-          ag.field_b.a(var1, false);
+          ag.field_b.addFirst(var1, false);
           return;
         }
         if (var1 == null) {
@@ -79,7 +79,7 @@ final class ln {
         bi.a(var1.field_n, var1.field_r, var1.field_o);
         bi.g(var1.field_q, var1.field_x, var1.field_u, var1.field_v);
         var1.field_n = null;
-        ag.field_b.a(var1, false);
+        ag.field_b.addFirst(var1, false);
     }
 
     static {

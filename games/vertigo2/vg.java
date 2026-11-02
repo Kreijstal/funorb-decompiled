@@ -7,7 +7,7 @@ final class vg {
     static boolean[][] field_c;
     static String field_a;
 
-    final static ge a(int param0, int param1, int param2, r param3, r param4) {
+    final static ge a(int param0, int param1, int param2, Archive param3, Archive param4) {
         RuntimeException var5 = null;
         ge stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -57,7 +57,7 @@ final class vg {
           if (param2 < 1) {
             return false;
           }
-          if (gf.b(param1, param3, param0 - 24480) >= param2) {
+          if (NodeHashTableIterator.b(param1, param3, param0 - 24480) >= param2) {
             return true;
           }
           return false;
@@ -71,7 +71,7 @@ final class vg {
         if (param2 < 1) {
           return false;
         }
-        if (gf.b(param1, param3, param0 - 24480) >= param2) {
+        if (NodeHashTableIterator.b(param1, param3, param0 - 24480) >= param2) {
           return true;
         }
         return false;

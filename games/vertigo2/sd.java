@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends oh {
-    private nj field_J;
+final class sd extends WidgetWrapper {
+    private IntrusiveDeque field_J;
     static ll field_I;
     static String[] field_M;
     static int[] field_P;
@@ -15,7 +15,7 @@ final class sd extends oh {
 
     final void i(int param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
-        vp var2 = new vp(this.field_J);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_J);
         if (param0 != 0) {
           return;
         }
@@ -28,36 +28,36 @@ final class sd extends oh {
     }
 
     public sd() {
-        super(0, 0, gi.field_m, im.field_h, (ur) null, (uf) null);
-        this.field_J = new nj();
+        super(0, 0, gi.field_m, im.field_h, (WidgetListener) null, (uf) null);
+        this.field_J = new IntrusiveDeque();
     }
 
     final void h(int param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
-        vp var2 = new vp(this.field_J);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_J);
         nm var3 = (nm) (var2.d(4));
         if (param0 != 0) {
           return;
         }
         while (var3 != null) {
           if (var3.a(-1)) {
-            var3.c(2);
+            var3.unlink(2);
           }
           var3 = (nm) (var2.c(2));
         }
     }
 
-    final iq a(int param0) {
-        vp var2;
+    final UiWidget a(int param0) {
+        IntrusiveDequeCursor var2;
         nm var3;
         int var4;
-        iq var5;
+        UiWidget var5;
         var4 = Vertigo2.field_L ? 1 : 0;
-        var2 = new vp(this.field_J);
+        var2 = new IntrusiveDequeCursor(this.field_J);
         var3 = (nm) (var2.d(4));
         if (param0 != 15197) {
-          var5 = (iq) null;
-          this.b((iq) null, 32);
+          var5 = (UiWidget) null;
+          this.b((UiWidget) null, 32);
         }
         while (var3 != null) {
           if (var3.field_I) {
@@ -70,38 +70,38 @@ final class sd extends oh {
 
     final void l(int param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
-        vp var2 = new vp(this.field_J);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_J);
         nm var3 = (nm) (var2.d(4));
         while (var3 != null) {
           if (var3.j(17)) {
-            var3.c(param0 ^ 2);
+            var3.unlink(param0 ^ 2);
           }
           var3 = (nm) (var2.c(2));
         }
-        this.field_C = (iq) ((Object) this.k(param0 + param0));
+        this.field_C = (UiWidget) ((Object) this.k(param0 + param0));
     }
 
     final static void f(byte param0) {
         String var2 = (String) null;
-        aj.a((String) null, "", (byte) 33);
+        ProxySocketConnector.a((String) null, "", (byte) 33);
         if (param0 != -1) {
           sd.f((byte) -45);
         }
     }
 
-    final void b(iq param0, int param1) {
+    final void b(UiWidget param0, int param1) {
         nm var3 = null;
         try {
           if (!(param0 instanceof nm)) {
             throw new IllegalArgumentException();
           }
           var3 = (nm) (param0);
-          this.field_J.a(var3, (byte) 27);
+          this.field_J.addLast(var3, (byte) 27);
           var3.field_I = true;
           if (param1 != 0) {
             sd.f((byte) 122);
           }
-          var3.a((byte) 116, (iq) (this));
+          var3.a((byte) 116, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "sd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -109,17 +109,17 @@ final class sd extends oh {
 
     final void a(boolean param0, int param1, int param2, int param3) {
         int var7 = Vertigo2.field_L ? 1 : 0;
-        if (null != this.field_B) {
-          this.field_B.a(true, param2, true, (iq) (this), param3);
+        if (null != this.listener) {
+          this.listener.a(true, param2, true, (UiWidget) (this), param3);
         }
-        vp var5 = new vp(this.field_J);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_J);
         if (param0) {
           this.a(45);
         }
-        iq var6 = (iq) (var5.b(4));
+        UiWidget var6 = (UiWidget) (var5.b(4));
         while (var6 != null) {
-          var6.a(false, param1, param2 + this.field_o, this.field_t + param3);
-          var6 = (iq) (var5.a((byte) 50));
+          var6.a(false, param1, param2 + this.x, this.y + param3);
+          var6 = (UiWidget) (var5.a((byte) 50));
         }
     }
 
@@ -137,14 +137,14 @@ final class sd extends oh {
     }
 
     final nm k(int param0) {
-        vp var2;
+        IntrusiveDequeCursor var2;
         nm var3;
         int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
         if (param0 != 0) {
           sd.f((byte) 76);
         }
-        var2 = new vp(this.field_J);
+        var2 = new IntrusiveDequeCursor(this.field_J);
         var3 = (nm) (var2.d(4));
         while (var3 != null) {
           if (var3.field_I) {

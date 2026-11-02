@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg extends ji {
+final class kg extends TextureOperator {
     private byte[] field_B;
-    static uj field_G;
+    static MenuSelectionCursor field_G;
     private int field_C;
     private short[] field_z;
     private short[] field_K;
@@ -54,7 +54,7 @@ final class kg extends ji {
         int var3 = var2 * (-tc.field_b + ce.field_b) / var1 + tc.field_b;
         td.field_c.a(82, 640, 120, var3, ml.field_w);
         int var4 = 65 % ((param0 + 14) / 47);
-        rg.a(640, r.field_j, 0, ce.field_b - 24, -4803, ia.field_G, 5);
+        rg.a(640, Archive.field_j, 0, ce.field_b - 24, -4803, ia.field_G, 5);
     }
 
     private final void a(int[] param0, int param1, int param2) {
@@ -329,7 +329,7 @@ final class kg extends ji {
         return ((var17 - var16) * param4 >> 12) + var16;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int dupTemp$0 = 0;
         boolean stackIn_18_1 = false;
         RuntimeException stackIn_32_0 = null;
@@ -347,40 +347,40 @@ final class kg extends ji {
           var4_int = param1;
           if (var4_int != 0) {
             if (1 == var4_int) {
-              this.field_E = param2.h(-11);
+              this.field_E = param2.readUnsignedByte(-11);
             } else {
               if (var4_int == 2) {
-                this.field_H = param2.n(param0 - 108);
+                this.field_H = param2.readSignedShort(param0 - 108);
                 if (this.field_H >= 0) {
                   return;
                 }
                 this.field_K = new short[this.field_E];
                 for (var4_int = 0; this.field_E > var4_int; var4_int++) {
-                  this.field_K[var4_int] = (short)param2.n(2);
+                  this.field_K[var4_int] = (short)param2.readSignedShort(2);
                 }
               } else {
                 if (var4_int == 3) {
-                  dupTemp$0 = param2.h(param0 ^ -101);
+                  dupTemp$0 = param2.readUnsignedByte(param0 ^ -101);
                   this.field_A = dupTemp$0;
                   this.field_F = dupTemp$0;
                   return;
                 }
                 if (var4_int == 4) {
-                  this.field_C = param2.h(-11);
+                  this.field_C = param2.readUnsignedByte(-11);
                   return;
                 }
                 if (var4_int == 5) {
-                  this.field_F = param2.h(-11);
+                  this.field_F = param2.readUnsignedByte(-11);
                   return;
                 }
                 if (var4_int == 6) {
-                  this.field_A = param2.h(param0 - 121);
+                  this.field_A = param2.readUnsignedByte(param0 - 121);
                   return;
                 }
               }
             }
           } else {
-            stackIn_18_1 = (param2.h(-11) == 1);
+            stackIn_18_1 = (param2.readUnsignedByte(-11) == 1);
             this.field_D = stackIn_18_1;
           }
           return;
@@ -440,7 +440,7 @@ final class kg extends ji {
     }
 
     static {
-        field_G = new uj(1);
+        field_G = new MenuSelectionCursor(1);
         field_I = "Asking to join <%0>'s game...";
     }
 }

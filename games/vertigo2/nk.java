@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends cr {
+final class nk extends UiPanel {
     static String field_Ib;
-    cr field_Jb;
-    private cr field_Lb;
+    UiPanel field_Jb;
+    private UiPanel field_Lb;
     static String field_Kb;
-    static r field_Hb;
+    static Archive field_Hb;
 
     public static void a(byte param0) {
         if (param0 < -7) {
@@ -73,7 +73,7 @@ final class nk extends cr {
         this.a(param2, 29138, param4);
     }
 
-    final static void a(int param0, String[][] param1, r param2, byte param3, int param4, byte[] param5, er[][] param6, String[][] param7, String[] param8, byte[] param9, String[] param10, er[][] param11, r param12, r param13, int[] param14, int param15, boolean param16, u[] param17, int[] param18) {
+    final static void a(int param0, String[][] param1, Archive param2, byte param3, int param4, byte[] param5, Sprite[][] param6, String[][] param7, String[] param8, byte[] param9, String[] param10, Sprite[][] param11, Archive param12, Archive param13, int[] param14, int param15, boolean param16, u[] param17, int[] param18) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -211,7 +211,7 @@ final class nk extends cr {
         int var5Lifetime1;
         if (param2 != -24692) {
           int[] var6 = (int[]) null;
-          nk.a(-81, (String[][]) null, (r) null, (byte) -46, -84, (byte[]) null, (er[][]) null, (String[][]) null, (String[]) null, (byte[]) null, (String[]) null, (er[][]) null, (r) null, (r) null, (int[]) null, 45, true, (u[]) null, (int[]) null);
+          nk.a(-81, (String[][]) null, (Archive) null, (byte) -46, -84, (byte[]) null, (Sprite[][]) null, (String[][]) null, (String[]) null, (byte[]) null, (String[]) null, (Sprite[][]) null, (Archive) null, (Archive) null, (int[]) null, 45, true, (u[]) null, (int[]) null);
           var4 = -param1;
           if (this.field_Lb != null) {
             var4 = this.field_Lb.j(-21391);
@@ -233,7 +233,7 @@ final class nk extends cr {
         return param0 + (var4Lifetime1 + param1) - (-var5Lifetime1 - param0);
     }
 
-    nk(long param0, cr param1, cr param2, cr param3, er param4, String param5) {
+    nk(long param0, UiPanel param1, UiPanel param2, UiPanel param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -250,12 +250,12 @@ final class nk extends cr {
         RuntimeException var8 = null;
         try {
           if (param4 != null) {
-            this.field_Lb = new cr(0L, param2);
+            this.field_Lb = new UiPanel(0L, param2);
             this.field_Lb.field_Db = param4;
             this.b(this.field_Lb, 119);
           }
           if (param5 != null) {
-            this.field_Jb = new cr(0L, param3, param5);
+            this.field_Jb = new UiPanel(0L, param3, param5);
             this.b(this.field_Jb, 122);
             this.i(-2147483648);
           } else {

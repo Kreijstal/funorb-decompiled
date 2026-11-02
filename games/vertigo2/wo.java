@@ -10,7 +10,7 @@ final class wo {
     private int field_K;
     static double field_S;
     int field_E;
-    static lg[] field_q;
+    static Model[] field_q;
     private int field_bb;
     private boolean field_x;
     boolean field_z;
@@ -206,7 +206,7 @@ final class wo {
           if (2 != param0 &&
             3 != param0) {
             tn.field_i.e(10, 10);
-            va.field_s.a(16777215, (byte) 75, -1, tn.field_i.field_x + 15, Vertigo2.a(new String[]{Integer.toString(this.field_ab)}, uj.field_k, 109), 10 + (va.field_s.field_k + 10));
+            va.field_s.a(16777215, (byte) 75, -1, tn.field_i.field_x + 15, Vertigo2.a(new String[]{Integer.toString(this.field_ab)}, MenuSelectionCursor.field_k, 109), 10 + (va.field_s.field_k + 10));
           }
           var8 = td.field_c.field_C;
           var9 = 0;
@@ -233,13 +233,13 @@ final class wo {
             var11_int = 25;
             be.field_n.e(-5 + var11_int, 5 + (-be.field_n.field_B + (var8 - var9) - 20));
             va.field_s.a(16777215, (byte) 77, -1, 48, Integer.toString(this.field_g), 5 + (var8 + (-20 - var9) - (be.field_n.field_B - va.field_s.field_k)));
-            qi.a(false, var11_int, 25, var8 - 20 - (var9 + be.field_n.field_B));
+            FullscreenFocusCanvas.a(false, var11_int, 25, var8 - 20 - (var9 + be.field_n.field_B));
           }
           if (this.field_U > 0) {
-            var11_intLifetime1 = -60 - (var9 - var8) - bj.field_j.field_B;
-            bj.field_j.e(20, var11_intLifetime1 + 5);
+            var11_intLifetime1 = -60 - (var9 - var8) - RandomAccessCacheFile.field_j.field_B;
+            RandomAccessCacheFile.field_j.e(20, var11_intLifetime1 + 5);
             va.field_s.a(16777215, (byte) 124, -1, 48, Integer.toString(this.field_U), 5 + va.field_s.field_k + var11_intLifetime1);
-            qi.a(false, 25, 25, var11_intLifetime1);
+            FullscreenFocusCanvas.a(false, 25, 25, var11_intLifetime1);
           }
           if (!this.field_x) {
             var20 = Integer.toString(this.field_W);
@@ -265,17 +265,17 @@ final class wo {
           }
           if (param1 != param0) {
             var12 = va.field_s.a(param1 - 2, var11);
-            qi.a(false, 620 - var12, var12, 10);
+            FullscreenFocusCanvas.a(false, 620 - var12, var12, 10);
             va.field_s.a(16777215, (byte) 109, -1, -var12 + 620, var11, -2 + va.field_s.field_k + 16);
           }
           if (0 < this.field_H) {
             var21 = Vertigo2.a(new String[]{gl.a(-126, true, false, this.field_H)}, mc.field_f, -114);
             var13Lifetime1 = va.field_s.a(1, var21);
-            qi.a(false, -var13Lifetime1 + 620, var13Lifetime1, 10);
+            FullscreenFocusCanvas.a(false, -var13Lifetime1 + 620, var13Lifetime1, 10);
             va.field_s.a(16777215, (byte) 61, -1, -var13Lifetime1 + 620, var21, va.field_s.field_k + 16 - 2);
           }
           if (param4) {
-            var19.a(aj.field_i, 16777215, -1, 320, 64, 2);
+            var19.a(ProxySocketConnector.field_i, 16777215, -1, 320, 64, 2);
           }
           return;
         }
@@ -303,7 +303,7 @@ final class wo {
         }
     }
 
-    final void a(int param0, mi param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         boolean stackIn_3_1 = false;
         boolean stackIn_6_1 = false;
         boolean stackIn_9_1 = false;
@@ -316,44 +316,44 @@ final class wo {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_c = -256 + param1.c((byte) -106, 10);
-          this.field_O = param1.c((byte) -113, 10) - 256;
-          this.field_ab = param1.c((byte) -122, 4);
-          this.field_Y = param1.c((byte) -100, 4) - 5;
-          this.field_U = param1.c((byte) -98, 3);
-          this.field_g = param1.c((byte) -104, 3);
-          this.field_W = param1.c((byte) -109, 15);
-          this.field_E = param1.c((byte) -117, 32);
-          this.field_y = param1.c((byte) -114, 32);
-          this.field_k = param1.c((byte) -106, 32);
-          this.field_f = param1.c((byte) -100, 4);
-          this.field_M = param1.c((byte) -118, 32);
-          this.field_Q = param1.c((byte) -112, 32);
-          stackIn_3_1 = (param1.c((byte) -123, 1) == 1);
+          this.field_c = -256 + param1.readBits((byte) -106, 10);
+          this.field_O = param1.readBits((byte) -113, 10) - 256;
+          this.field_ab = param1.readBits((byte) -122, 4);
+          this.field_Y = param1.readBits((byte) -100, 4) - 5;
+          this.field_U = param1.readBits((byte) -98, 3);
+          this.field_g = param1.readBits((byte) -104, 3);
+          this.field_W = param1.readBits((byte) -109, 15);
+          this.field_E = param1.readBits((byte) -117, 32);
+          this.field_y = param1.readBits((byte) -114, 32);
+          this.field_k = param1.readBits((byte) -106, 32);
+          this.field_f = param1.readBits((byte) -100, 4);
+          this.field_M = param1.readBits((byte) -118, 32);
+          this.field_Q = param1.readBits((byte) -112, 32);
+          stackIn_3_1 = (param1.readBits((byte) -123, 1) == 1);
           this.field_A = stackIn_3_1;
-          stackIn_6_1 = (1 == param1.c((byte) -115, 1));
+          stackIn_6_1 = (1 == param1.readBits((byte) -115, 1));
           this.field_z = stackIn_6_1;
-          stackIn_9_1 = (param1.c((byte) -95, 1) == 1);
+          stackIn_9_1 = (param1.readBits((byte) -95, 1) == 1);
           this.field_F = stackIn_9_1;
-          stackIn_12_1 = (1 == param1.c((byte) -96, 1));
+          stackIn_12_1 = (1 == param1.readBits((byte) -96, 1));
           this.field_o = stackIn_12_1;
-          stackIn_15_1 = (param1.c((byte) -101, 1) == 1);
+          stackIn_15_1 = (param1.readBits((byte) -101, 1) == 1);
           this.field_G = stackIn_15_1;
-          this.field_h = param1.c((byte) -103, 7) - 50;
-          this.field_X = -param1.c((byte) -105, 6);
-          this.field_n = param1.c((byte) -97, 11);
-          this.field_N = param1.c((byte) -114, 2);
-          this.field_K = param1.c((byte) -121, 10);
-          this.field_Z = param1.c((byte) -108, 10);
-          this.field_bb = param1.c((byte) -122, 12);
+          this.field_h = param1.readBits((byte) -103, 7) - 50;
+          this.field_X = -param1.readBits((byte) -105, 6);
+          this.field_n = param1.readBits((byte) -97, 11);
+          this.field_N = param1.readBits((byte) -114, 2);
+          this.field_K = param1.readBits((byte) -121, 10);
+          this.field_Z = param1.readBits((byte) -108, 10);
+          this.field_bb = param1.readBits((byte) -122, 12);
           if (param0 != 0) {
             wo.a(114, -101, false, -98, 72, -17);
           }
-          this.field_J = param1.c((byte) -105, 4);
-          this.field_t = -1 + param1.c((byte) -102, 9);
-          this.field_v = (byte)param1.c((byte) -125, 5);
-          this.field_B = param1.c((byte) -101, 4);
-          stackIn_20_1 = (param1.c((byte) -109, 1) == 1);
+          this.field_J = param1.readBits((byte) -105, 4);
+          this.field_t = -1 + param1.readBits((byte) -102, 9);
+          this.field_v = (byte)param1.readBits((byte) -125, 5);
+          this.field_B = param1.readBits((byte) -101, 4);
+          stackIn_20_1 = (param1.readBits((byte) -109, 1) == 1);
           this.field_R = stackIn_20_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -713,7 +713,7 @@ final class wo {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        aj.field_f[cq.field_i] = param3;
+        ProxySocketConnector.field_f[cq.field_i] = param3;
         ac.field_I[cq.field_i] = cq.field_i;
         on.field_e[cq.field_i] = param0;
         if (!(param0 <= ug.field_b)) {
@@ -725,7 +725,7 @@ final class wo {
         if (!param2) {
           wo.a(36, -58, true, -105, -9, -63);
         }
-        li.field_g[cq.field_i] = param4;
+        IntrusiveNode.field_g[cq.field_i] = param4;
         ub.field_p[cq.field_i] = param1;
         jf.field_N[cq.field_i] = param5;
         int var6 = param5 + param1 + param4;
@@ -1303,7 +1303,7 @@ final class wo {
     }
 
     static {
-        field_q = new lg[2];
+        field_q = new Model[2];
         field_S = 0.0;
         field_V = new String[]{"Game type", "Starting level", "Number of levels"};
         field_b = "Who can join";

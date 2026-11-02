@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa extends cr {
+final class aa extends UiPanel {
     private int[] field_Ob;
     private int field_Rb;
     static int[] field_Jb;
@@ -33,12 +33,12 @@ final class aa extends cr {
           return this.field_Ib.a(param0, false, param2);
         }
         if (null == this.field_Ib &&
-          ji.field_n == this &&
+          TextureOperator.field_n == this &&
           var4 != 0) {
           bm.g(0);
           return true;
         }
-        int var5 = ji.field_r;
+        int var5 = TextureOperator.field_r;
         if (var5 > 0) {
           if (v.field_c == var5) {
             var5 = 63;
@@ -56,7 +56,7 @@ final class aa extends cr {
         return false;
     }
 
-    aa(long param0, cr param1, cr param2, cr param3, aa[] param4, int[] param5, String[] param6, char[] param7) {
+    aa(long param0, UiPanel param1, UiPanel param2, UiPanel param3, aa[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -80,8 +80,8 @@ final class aa extends cr {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        cc var17 = null;
-        cc var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_Ub = -1;
         try {
           this.field_Hb = param7;
@@ -98,14 +98,14 @@ final class aa extends cr {
           var12 = "</col>";
           for (var13 = 0; var13 < this.field_Tb; var13++) {
             if (0 < this.field_Hb[var13]) {
-              param6[var13] = var11 + bj.a(0, this.field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + RandomAccessCacheFile.a(0, this.field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.field_Wb[var13] != null ||
               -1 == this.field_Ob[var13]) {
               var14 = fm.field_g;
             }
-            this.field_Lb[var13] = new nk(0L, param2, (cr) null, param3, (er) (var14), param6[var13]);
+            this.field_Lb[var13] = new nk(0L, param2, (UiPanel) null, param3, (Sprite) (var14), param6[var13]);
             this.b(this.field_Lb[var13], 118);
             var15 = var17.c(param6[var13]);
             if (var15 > this.field_Nb) {
@@ -220,7 +220,7 @@ final class aa extends cr {
         }
         if (null != this.field_Ib) {
           this.field_Ib.a((byte) 34);
-          this.field_Ib.c(2);
+          this.field_Ib.unlink(2);
         }
         this.field_Ib = null;
         this.field_Ub = -1;
@@ -260,7 +260,7 @@ final class aa extends cr {
                 var6 = 1;
               }
               if (ab.a(0, var6) == 2) {
-                cf.a(var6, 1, param3, (byte) 119);
+                SecondaryNodeDequeIterator.a(var6, 1, param3, (byte) 119);
               }
               var8 = (String) null;
               tf.a(ui.field_g, ea.field_b, 47, (String) null, param1, var5);

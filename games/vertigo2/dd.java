@@ -10,14 +10,14 @@ class dd {
     int[] field_i;
     private static jr field_j;
     private static int field_e;
-    private sn field_r;
+    private PcmStream field_r;
     private boolean field_f;
     private int field_d;
-    private sn[] field_a;
+    private PcmStream[] field_a;
     private int field_t;
     private long field_p;
     private int field_b;
-    private sn[] field_q;
+    private PcmStream[] field_q;
     private int field_m;
     private int field_l;
     private long field_n;
@@ -43,20 +43,20 @@ class dd {
         int var7_int;
         Object var7;
         int var8_int;
-        sn[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        sn var11;
-        dr var12;
+        PcmStream var11;
+        AbstractAudioSample var12;
         int var13;
-        sn var14;
+        PcmStream var14;
         int var15_int;
-        sn var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        sn var14Lifetime1;
-        sn var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_h) {
           var3 = var3 << 1;
@@ -71,7 +71,7 @@ class dd {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -89,7 +89,7 @@ class dd {
                   var14 = var11;
                   var14Lifetime1 = var11;
                   while (var11 != null) {
-                    var12 = var11.field_n;
+                    var12 = var11.sample;
                     if (var12 != null &&
                       var12.field_n > var8_int) {
                       var5 = var5 | 1 << var7_int;
@@ -104,7 +104,7 @@ class dd {
                       var12.field_n = var12.field_n + var13;
                     }
                     if (var4 >= this.field_o) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.c();
                     if (var14Lifetime2 != null) {
@@ -117,12 +117,12 @@ class dd {
                     var15 = var11.field_q;
                     var11.field_q = null;
                     if (var10 != null) {
-                      ((sn) (var10)).field_q = var15;
+                      ((PcmStream) (var10)).field_q = var15;
                     } else {
                       this.field_q[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_a[var7_int] = (sn) (var10);
+                      this.field_a[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -143,8 +143,8 @@ class dd {
             this.field_a[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((sn) (var7)).field_q;
-              ((sn) (var7)).field_q = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_q;
+              ((PcmStream) (var7)).field_q = null;
               var7 = var10Lifetime1;
             }
           }
@@ -161,7 +161,7 @@ class dd {
     void e() throws Exception {
     }
 
-    final synchronized void a(sn param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_r = param0;
     }
 
@@ -273,9 +273,9 @@ class dd {
     void b(int param0) throws Exception {
     }
 
-    private final void a(sn param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        sn var4 = this.field_a[var3];
+        PcmStream var4 = this.field_a[var3];
         if (var4 == null) {
           this.field_q[var3] = param0;
         } else {
@@ -298,7 +298,7 @@ class dd {
         field_e = param2;
     }
 
-    final static dd a(jj param0, java.awt.Component param1, int param2, int param3) {
+    final static dd a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           vr var4 = null;
           Throwable var4_ref = null;
@@ -338,7 +338,7 @@ class dd {
                 field_j == null) {
                 field_j = new jr();
                 field_j.field_c = param0;
-                param0.a(field_e, (Runnable) ((Object) field_j), 0);
+                param0.startThread(field_e, (Runnable) ((Object) field_j), 0);
               }
               if (field_j != null) {
                 if (field_j.field_d[param2] != null) {
@@ -378,12 +378,12 @@ class dd {
         }
     }
 
-    private final static void b(sn param0) {
+    private final static void b(PcmStream param0) {
         param0.field_p = false;
-        if (param0.field_n != null) {
-          param0.field_n.field_n = 0;
+        if (param0.sample != null) {
+          param0.sample.field_n = 0;
         }
-        sn var1 = param0.c();
+        PcmStream var1 = param0.c();
         while (var1 != null) {
           dd.b(var1);
           var1 = param0.a();
@@ -425,8 +425,8 @@ class dd {
         this.field_o = 32;
         this.field_k = gk.a(47);
         this.field_b = 0;
-        this.field_a = new sn[8];
-        this.field_q = new sn[8];
+        this.field_a = new PcmStream[8];
+        this.field_q = new PcmStream[8];
         this.field_f = true;
         this.field_s = 0;
         this.field_p = 0L;

@@ -5,9 +5,9 @@ final class id {
     static int field_d;
     private jl field_e;
     static sq field_g;
-    static mi field_f;
-    private r field_h;
-    private r field_b;
+    static BitPacketBuffer field_f;
+    private Archive field_h;
+    private Archive field_b;
     static long field_a;
     private jl field_c;
 
@@ -33,7 +33,7 @@ final class id {
     final static void a(int param0) {
         if (sq.field_c) {
           mg.field_O = true;
-          pm.a((byte) 52, true);
+          BufferedSocket.a((byte) 52, true);
           int var1 = 39 % ((param0 - 88) / 32);
           hn.field_w = 0;
           return;
@@ -41,7 +41,7 @@ final class id {
         throw new IllegalStateException();
     }
 
-    final static boolean a(mi param0, int param1) {
+    final static boolean a(BitPacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -52,7 +52,7 @@ final class id {
           if (param1 != -31980) {
             field_g = (sq) null;
           }
-          stackIn_5_0 = (param0.c((byte) -109, 1) == 1);
+          stackIn_5_0 = (param0.readBits((byte) -109, 1) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,12 +68,12 @@ final class id {
         }
     }
 
-    final ae a(boolean param0, int[] param1, int param2) {
-        ae discarded$1 = null;
+    final PcmSample a(boolean param0, int[] param1, int param2) {
+        PcmSample discarded$1 = null;
         RuntimeException var4 = null;
         int[] var5 = null;
-        ae stackIn_3_0 = null;
-        ae stackIn_7_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -106,7 +106,7 @@ final class id {
         }
     }
 
-    final static int a(int param0, short param1, short param2, lg param3, boolean param4, short param5) {
+    final static int a(int param0, short param1, short param2, Model param3, boolean param4, short param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -154,12 +154,12 @@ final class id {
         field_g = null;
     }
 
-    final ae a(int[] param0, int param1, int param2) {
-        ae discarded$1 = null;
+    final PcmSample a(int[] param0, int param1, int param2) {
+        PcmSample discarded$1 = null;
         RuntimeException var4 = null;
         int[] var5 = null;
-        ae stackIn_3_0 = null;
-        ae stackIn_6_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_6_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -192,21 +192,21 @@ final class id {
         }
     }
 
-    private final ae a(int[] param0, int param1, int param2, int param3) {
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        ae var8 = null;
+        PcmSample var8 = null;
         hp var9 = null;
-        ae var10 = null;
-        ae stackIn_5_0 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_5_0 = null;
         Object stackIn_9_0 = null;
-        ae stackIn_17_0 = null;
+        PcmSample stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ae var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param3 >>> 12 | (param3 & 1342181375) << 4) ^ param2;
           var5_int = var5_int | param3 << 16;
@@ -214,7 +214,7 @@ final class id {
             this.field_e = (jl) null;
           }
           var6 = (long)var5_int;
-          var8 = (ae) (this.field_c.a(var6, (byte) 64));
+          var8 = (PcmSample) (this.field_c.a(var6, (byte) 64));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -222,7 +222,7 @@ final class id {
           if (param0 != null &&
             param0[0] <= 0) {
             stackIn_9_0 = null;
-            return (ae) (stackIn_9_0);
+            return (PcmSample) (stackIn_9_0);
           }
           var9 = hp.a(this.field_b, param3, param2);
           if (var9 == null) {
@@ -232,7 +232,7 @@ final class id {
           var8Lifetime1 = var10;
           this.field_c.a(var8Lifetime1, var6, false);
           if (param0 != null) {
-            param0[0] = param0[0] - var10.field_s.length;
+            param0[0] = param0[0] - var10.samples.length;
           }
           stackIn_17_0 = var8Lifetime1;
           return stackIn_17_0;
@@ -250,20 +250,20 @@ final class id {
         }
     }
 
-    final static qi a(int param0, int param1, byte param2, int param3, jj param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, byte param2, int param3, PlatformTaskDispatcher param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        qi var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        qi stackIn_2_0 = null;
-        qi stackIn_7_0 = null;
+        FullscreenFocusCanvas stackIn_2_0 = null;
+        FullscreenFocusCanvas stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 94) {
-            stackIn_2_0 = (qi) null;
+            stackIn_2_0 = (FullscreenFocusCanvas) null;
             return stackIn_2_0;
           }
           var8 = oc.a(param5, param1, param0, param4, param3, 54);
@@ -271,7 +271,7 @@ final class id {
           if (var8 == null) {
             return null;
           }
-          var7 = new qi();
+          var7 = new FullscreenFocusCanvas();
           var7.field_c = var8;
           var7.field_c.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param3, param5);
@@ -293,20 +293,20 @@ final class id {
         }
     }
 
-    private final ae b(int[] param0, int param1, int param2, int param3) {
+    private final PcmSample b(int[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        ae var8 = null;
+        PcmSample var8 = null;
         vh var9 = null;
-        ae stackIn_5_0 = null;
+        PcmSample stackIn_5_0 = null;
         Object stackIn_9_0 = null;
-        ae stackIn_20_0 = null;
+        PcmSample stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ae var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param1 >>> 12 | (-1879044097 & param1) << 4) ^ param3;
           var5_int = var5_int | param1 << 16;
@@ -314,7 +314,7 @@ final class id {
             field_a = 53L;
           }
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (ae) (this.field_c.a(var6, (byte) 64));
+          var8 = (PcmSample) (this.field_c.a(var6, (byte) 64));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -322,7 +322,7 @@ final class id {
           if (param0 != null &&
             param0[0] <= 0) {
             stackIn_9_0 = null;
-            return (ae) (stackIn_9_0);
+            return (PcmSample) (stackIn_9_0);
           }
           var9 = (vh) (this.field_e.a(var6, (byte) 64));
           if (var9 == null) {
@@ -336,7 +336,7 @@ final class id {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.c(2);
+          var9.unlink(2);
           this.field_c.a(var8Lifetime1, var6, false);
           stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;
@@ -354,7 +354,7 @@ final class id {
         }
     }
 
-    id(r param0, r param1) {
+    id(Archive param0, Archive param1) {
         this.field_e = new jl(256);
         this.field_c = new jl(256);
         try {

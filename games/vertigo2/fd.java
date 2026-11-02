@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fd extends li {
+final class fd extends IntrusiveNode {
     int field_r;
     static int[] field_t;
     static String field_o;
     int field_n;
-    static cr field_s;
+    static UiPanel field_s;
     static String field_p;
     static byte[] field_q;
 

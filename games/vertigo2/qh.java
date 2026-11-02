@@ -281,7 +281,7 @@ final class qh {
                 this.field_i.a(param2 - 255, 6, 0, lf.field_D);
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param4) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -297,7 +297,7 @@ final class qh {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var13 = lf.field_D[7] & 255;
                         var11 = (255 & lf.field_D[1]) + (65280 & lf.field_D[0] << 8);
@@ -313,7 +313,7 @@ final class qh {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var12 = (lf.field_D[5] & 255) + ((lf.field_D[4] & 255) << 8);
                         var13 = lf.field_D[9] & 255;

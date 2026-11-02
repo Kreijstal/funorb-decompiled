@@ -7,14 +7,14 @@ final class hd {
     static String field_c;
     static long[] field_d;
     private int field_a;
-    static cc field_f;
-    static cr field_g;
+    static BitmapFont field_f;
+    static UiPanel field_g;
     static String field_h;
-    private nj field_e;
-    static r field_b;
+    private IntrusiveDeque field_e;
+    static Archive field_b;
 
     final int a(byte param0, int param1) {
-        vp var4 = null;
+        IntrusiveDequeCursor var4 = null;
         bo var5 = null;
         int var6 = Vertigo2.field_L ? 1 : 0;
         if (param0 != -17) {
@@ -23,10 +23,10 @@ final class hd {
         bo var3 = (bo) (this.field_e.c((byte) -30));
         while (var3 != null) {
           if (param1 == var3.field_q) {
-            var4 = new vp(this.field_e);
+            var4 = new IntrusiveDequeCursor(this.field_e);
             var5 = (bo) (var4.a(var3, 3));
             while (var5 != null) {
-              var5.c(param0 ^ -19);
+              var5.unlink(param0 ^ -19);
               var5 = (bo) (var4.a((byte) 23));
             }
             return var3.field_s;
@@ -56,11 +56,11 @@ final class hd {
         if (param0 != 16777215) {
           return 90;
         }
-        return this.field_e.c(true);
+        return this.field_e.size(true);
     }
 
     final void a(boolean param0) {
-        mi var2;
+        BitPacketBuffer var2;
         bo var3;
         int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
@@ -70,7 +70,7 @@ final class hd {
         }
         var3 = (bo) (this.field_e.a((byte) 100));
         while (var3 != null &&
-          -var2.field_u + var2.field_p.length > 9) {
+          -var2.position + var2.payload.length > 9) {
           if (!var3.field_n) {
             if (Math.random() < 0.7) {
               return;
@@ -90,17 +90,17 @@ final class hd {
         if (param2 != 7829367) {
           field_h = (String) null;
         }
-        if (this.field_e.c(true) >= 254) {
+        if (this.field_e.size(true) >= 254) {
           return;
         }
         bo var4 = (bo) (this.field_e.c((byte) -125));
         if (var4 == null) {
           var4 = new bo(this.field_a, param0);
-          this.field_e.a(var4, false);
+          this.field_e.addFirst(var4, false);
         } else {
           if (var4.a((byte) 76)) {
             var4 = new bo(this.field_a, param0);
-            this.field_e.a(var4, false);
+            this.field_e.addFirst(var4, false);
           }
         }
         var4.b(param1, param2 - 7829378);
@@ -131,8 +131,8 @@ final class hd {
         int var6 = param4 / 5;
         int var7 = param1 / 4;
         int var8 = (640 - 2 * var6) / (param4 + var6);
-        int var9 = this.field_e.c(true) / var8;
-        int var10 = this.field_e.c(true) - var9 * var8;
+        int var9 = this.field_e.size(true) / var8;
+        int var10 = this.field_e.size(true) - var9 * var8;
         if (var9 == 0 &&
           var10 == 0) {
           return param3;
@@ -222,14 +222,14 @@ final class hd {
         jo.field_g = null;
         ba.field_b = null;
         if (param0 != 47) {
-          field_f = (cc) null;
+          field_f = (BitmapFont) null;
         }
     }
 
     hd(int param0, int param1) {
         this.field_a = param0;
         if (this.field_a >= 0) {
-          this.field_e = new nj();
+          this.field_e = new IntrusiveDeque();
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oi {
-    static cr field_a;
+    static UiPanel field_a;
     static int field_b;
 
     final static int a(int param0) {
@@ -24,7 +24,7 @@ final class oi {
         if (param2 < 119) {
           return;
         }
-        ig.a(param3, ia.field_G, 2, nl.field_k, param1, param0, r.field_f);
+        SocketConnector.a(param3, ia.field_G, 2, nl.field_k, param1, param0, Archive.field_f);
     }
 
     static {

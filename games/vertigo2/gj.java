@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gj extends ji {
-    static cr field_z;
+final class gj extends TextureOperator {
+    static UiPanel field_z;
     static int field_y;
 
     final int[][] b(int param0, int param1) {
@@ -162,7 +162,7 @@ final class gj extends ji {
             am.field_n != 22 &&
             3 != am.field_n &&
             am.field_n != 4) {
-            var4 = vp.a((byte) 76, am.field_n) - 1;
+            var4 = IntrusiveDequeCursor.a((byte) 76, am.field_n) - 1;
           }
           if (am.field_n == 7) {
             var4 = 1;
@@ -173,7 +173,7 @@ final class gj extends ji {
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, boolean param4) {
-        cr stackIn_21_0 = null;
+        UiPanel stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
         int stackIn_37_0 = 0;
         int stackIn_37_1 = 0;
@@ -187,13 +187,13 @@ final class gj extends ji {
         boolean stackIn_136_0 = false;
         boolean stackIn_153_0 = false;
         int stackIn_160_0 = 0;
-        cr stackIn_178_0 = null;
+        UiPanel stackIn_178_0 = null;
         int stackIn_178_1 = 0;
         boolean stackIn_179_2 = false;
-        cr stackIn_183_0 = null;
+        UiPanel stackIn_183_0 = null;
         int stackIn_183_1 = 0;
         boolean stackIn_184_2 = false;
-        cr stackIn_188_0 = null;
+        UiPanel stackIn_188_0 = null;
         int stackIn_188_1 = 0;
         boolean stackIn_189_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -201,9 +201,9 @@ final class gj extends ji {
         boolean stackOut_135_0;
         boolean stackOut_152_0;
         RuntimeException var5 = null;
-        cr var6 = null;
-        cr var7 = null;
-        cr var8 = null;
+        UiPanel var6 = null;
+        UiPanel var7 = null;
+        UiPanel var8 = null;
         String var9_ref_String = null;
         int var9 = 0;
         String var10_ref_String = null;
@@ -219,18 +219,18 @@ final class gj extends ji {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        nj var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         bs var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        cr var22 = null;
+        UiPanel var22 = null;
         int[] var23 = null;
         String var24 = null;
         String var25 = null;
         int[] var26 = null;
-        cr var27 = null;
+        UiPanel var27 = null;
         int stackIn_55_0Lifetime1;
         int stackIn_55_1Lifetime1;
         int stackIn_63_0Lifetime1;
@@ -277,7 +277,7 @@ final class gj extends ji {
                 fo.field_f.field_S = fg.field_db.toUpperCase();
                 fo.field_f.field_lb = false;
               }
-              fo.field_f.field_Bb = fb.field_u.field_Bb;
+              fo.field_f.field_Bb = SpriteState.field_u.field_Bb;
               if (kk.field_j > 0) {
                 boolean decompiledSharedTail1 = (1 != kk.field_j);
                 if (!decompiledSharedTail1) {
@@ -289,14 +289,14 @@ final class gj extends ji {
                 }
                 if (0 == (lo.field_d & 16) &&
                   !im.field_g) {
-                  fo.field_f.field_Bb = fb.field_u.field_Q;
+                  fo.field_f.field_Bb = SpriteState.field_u.field_Q;
                 }
                 fo.field_f.field_S = fo.field_f.field_S + "<br>" + var10_ref_String;
               }
               hd.field_g.a(82, -var9 + lb.field_c.field_Fb, 40, lb.field_c.field_db - 40, var9);
               hd.field_g.field_S = gm.field_a.toUpperCase();
               stackIn_21_0 = hd.field_g;
-              stackIn_22_1 = (param0) && (r.field_h == 0L);
+              stackIn_22_1 = (param0) && (Archive.field_h == 0L);
               stackIn_21_0.field_lb = stackIn_22_1;
               var8 = hd.field_g;
               var10 = 2;
@@ -314,12 +314,12 @@ final class gj extends ji {
                   mn.field_t[var11_int] = false;
                   var11_int++;
                 } while (var19 == 0);
-                L17: while (true) {
+                scanLoop1: while (true) {
                   if (2 > var10) {
                     var11_int = 0;
                     stackIn_69_0 = 0;
                     if (var19 != 0) {
-                      break L17;
+                      break scanLoop1;
                     }
                     var12 = stackIn_69_0;
                     while (true) {
@@ -332,7 +332,7 @@ final class gj extends ji {
                         var13 = var20;
                         stackIn_63_0 = 0;
                         var14_int = stackIn_63_0;
-                        L24: while (true) {
+                        scanLoop2: while (true) {
                           if (var26.length > var14_int) {
                             var15 = var26[var14_int];
                             var16 = var20[var14_int + 1];
@@ -347,11 +347,11 @@ final class gj extends ji {
                               var17_int = stackIn_48_0;
                               if (var16 != var17_int &&
                                 var19 == 0) {
-                                break L24;
+                                break scanLoop2;
                               }
                             } else {
                               if ((255 & gd.field_j.field_fc[var15]) != var16) {
-                                break L24;
+                                break scanLoop2;
                               }
                             }
                             var14_int += 2;
@@ -393,7 +393,7 @@ final class gj extends ji {
                   break;
                 }
                 if (!(stackIn_69_0 > fn.field_z) &&
-                  cr.field_eb[12]) {
+                  UiPanel.field_eb[12]) {
                   var10 = 2;
                 }
               }
@@ -404,7 +404,7 @@ final class gj extends ji {
                 (decompiledFrameRemainder3 = (sf.field_f != null ||
                 te.field_D != null ||
                 qh.field_e != null ||
-                null != il.field_b))) {
+                null != MouseWheelInput.field_b))) {
                 var11_int = 0;
                 var12 = 0;
                 var13_int = 0;
@@ -431,9 +431,9 @@ final class gj extends ji {
                         var11_int = 1;
                       }
                     }
-                    if (il.field_b != null &&
-                      null != il.field_b[var16]) {
-                      var15 = var15 | il.field_b[var16][var17_int];
+                    if (MouseWheelInput.field_b != null &&
+                      null != MouseWheelInput.field_b[var16]) {
+                      var15 = var15 | MouseWheelInput.field_b[var16][var17_int];
                     }
                     if (null != qh.field_e &&
                       null != qh.field_e[var16]) {
@@ -456,14 +456,14 @@ final class gj extends ji {
                 }
                 var17 = vd.field_d.field_Nb.field_M;
                 var18_ref = (bs) (var17.a((byte) 100));
-                L48: while (true) {
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
                     stackOut_107_0 = var18_ref.k(param3 + 15);
                     stackIn_126_0 = stackOut_107_0 ? 1 : 0;
                     stackIn_108_0 = stackOut_107_0;
                     if (var19 != 0) {
-                      break L48;
+                      break scanLoop3;
                     }
                     if (!stackIn_108_0 ||
                       var19 != 0) {
@@ -506,7 +506,7 @@ final class gj extends ji {
                   break;
                 }
                 if (stackIn_126_0 >= 2 &&
-                  cr.field_eb[12]) {
+                  UiPanel.field_eb[12]) {
                   var16 = 0;
                 }
                 if ((var16 == 0) &&
@@ -531,7 +531,7 @@ final class gj extends ji {
                   (decompiledFrameRemainder1)) {
                   hd.field_g.field_lb = false;
                   if (hd.field_g.field_G) {
-                    if (el.field_e.field_b.field_Kb != 0) {
+                    if (IterableNodeHashTable.field_e.field_b.field_Kb != 0) {
                       ko.field_S = Vertigo2.a(new String[]{or.field_k}, pb.field_e, param3 ^ -117);
                       if (var19 != 0) {
                         ko.field_S = di.field_y;
@@ -603,8 +603,8 @@ final class gj extends ji {
                 ko.field_S = "<col=A00000>" + var13_ref + "<br>" + var14;
               }
             }
-            if (r.field_h != 0L) {
-              var9 = (int)(r.field_h - gk.a(param3 + 108));
+            if (Archive.field_h != 0L) {
+              var9 = (int)(Archive.field_h - gk.a(param3 + 108));
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;
@@ -616,16 +616,16 @@ final class gj extends ji {
           stackIn_178_0 = hk.field_o;
           stackIn_178_1 = 0;
           stackIn_179_2 = (param4) && (!param2) && (!im.field_g);
-          ((cr) (Object) stackIn_178_0).a(stackIn_178_1, stackIn_179_2);
+          ((UiPanel) (Object) stackIn_178_0).a(stackIn_178_1, stackIn_179_2);
           stackIn_183_0 = lb.field_c;
           stackIn_183_1 = 0;
           stackIn_184_2 = (param4) && (!param2) && (!im.field_g);
-          ((cr) (Object) stackIn_183_0).a(stackIn_183_1, stackIn_184_2);
+          ((UiPanel) (Object) stackIn_183_0).a(stackIn_183_1, stackIn_184_2);
           stackIn_188_0 = wc.field_m;
           stackIn_188_1 = param3;
           stackIn_189_2 = (param4) && (!param2) && (im.field_g);
-          ((cr) (Object) stackIn_188_0).a(stackIn_188_1, stackIn_189_2);
-          el.field_e.field_b.k(0);
+          ((UiPanel) (Object) stackIn_188_0).a(stackIn_188_1, stackIn_189_2);
+          IterableNodeHashTable.field_e.field_b.k(0);
           if (gd.field_j != null) {
             if (ne.field_G.field_tb != 0) {
               qk.d(gd.field_j.a((byte) -38), param1, 18964);
@@ -649,7 +649,7 @@ final class gj extends ji {
         }
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -658,7 +658,7 @@ final class gj extends ji {
         RuntimeException var4 = null;
         try {
           if (param1 == 0) {
-            stackIn_4_1 = (1 == param2.h(-11));
+            stackIn_4_1 = (1 == param2.readUnsignedByte(-11));
             this.field_o = stackIn_4_1;
           }
           if (param0 != 110) {

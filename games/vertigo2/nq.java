@@ -12,7 +12,7 @@ final class nq extends rk {
     byte[] field_L;
     static String field_K;
 
-    final static void a(int param0, int[] param1, int param2, int[] param3, int[] param4, byte[] param5, int[] param6, int[] param7, int[] param8, int[] param9, int[] param10, int param11, int[] param12, int param13, int param14, int param15, int param16, int[] param17, int[] param18, int param19, lg param20, int param21, int param22, int[] param23) {
+    final static void a(int param0, int[] param1, int param2, int[] param3, int[] param4, byte[] param5, int[] param6, int[] param7, int[] param8, int[] param9, int[] param10, int param11, int[] param12, int param13, int param14, int param15, int param16, int[] param17, int[] param18, int param19, Model param20, int param21, int param22, int[] param23) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -60,7 +60,7 @@ final class nq extends rk {
         int stackIn_116_0 = 0;
         int stackIn_124_0 = 0;
         int stackIn_259_0 = 0;
-        lg stackIn_312_0 = null;
+        Model stackIn_312_0 = null;
         RuntimeException stackIn_354_0 = null;
         StringBuilder stackIn_354_1 = null;
         String stackIn_355_2 = null;
@@ -169,7 +169,7 @@ final class nq extends rk {
           if (null == pq.field_c ||
             !(pq.field_c.length >= param14)) {
             var24_int = param14 + 100;
-            r.field_c = new int[var24_int];
+            Archive.field_c = new int[var24_int];
             pq.field_c = new int[var24_int];
           }
           if (ba.field_e == null ||
@@ -182,7 +182,7 @@ final class nq extends rk {
           if (wb.field_E == null) {
             wb.field_E = new int[16];
           }
-          var25 = r.field_c;
+          var25 = Archive.field_c;
           var26 = wb.field_E;
           var27 = ba.field_e;
           no.field_b = 0;
@@ -193,7 +193,7 @@ final class nq extends rk {
           if (null == kh.field_c ||
             !(param14 <= kh.field_c.length)) {
             kh.field_c = new int[param14 + 100];
-            sa.field_c = new int[100 + param14];
+            MouseInputHandler.field_c = new int[100 + param14];
             hk.field_q = new int[param14 + 100];
           }
           if (vm.field_a == null ||
@@ -205,7 +205,7 @@ final class nq extends rk {
           var29 = -113 / ((-19 - param19) / 47);
           if (param9 != null && (null == or.field_e ||
             !(param0 <= or.field_e.length))) {
-            vp.field_d = new int[100 + param0];
+            IntrusiveDequeCursor.field_d = new int[100 + param0];
             or.field_e = new int[100 + param0];
             kc.field_e = new int[100 + param0];
           }
@@ -283,7 +283,7 @@ final class nq extends rk {
                   var24[var40] = fieldTemp$1;
                   kh.field_c[var35] = var43;
                   hk.field_q[var35] = var44;
-                  sa.field_c[var35] = var45;
+                  MouseInputHandler.field_c[var35] = var45;
                 }
                 vm.field_a[var34] = var35;
                 var35 = var24[var41];
@@ -294,7 +294,7 @@ final class nq extends rk {
                   var24[var41] = fieldTemp$2;
                   kh.field_c[var35] = var46;
                   hk.field_q[var35] = var47;
-                  sa.field_c[var35] = var48;
+                  MouseInputHandler.field_c[var35] = var48;
                 }
                 al.field_s[var34] = var35;
                 var35 = var24[var42];
@@ -305,13 +305,13 @@ final class nq extends rk {
                   var24[var42] = fieldTemp$3;
                   kh.field_c[var35] = var49;
                   hk.field_q[var35] = var50;
-                  sa.field_c[var35] = var51;
+                  MouseInputHandler.field_c[var35] = var51;
                 }
                 hm.field_C[var34] = var35;
                 if (param9 != null) {
                   or.field_e[var34] = param9[var39];
                   kc.field_e[var34] = param10[var39];
-                  vp.field_d[var34] = param7[var39];
+                  IntrusiveDequeCursor.field_d[var34] = param7[var39];
                 }
                 var27[var34] = var39;
               } else if ((-var54 | (-var53 | -var52)) < 0) {
@@ -323,8 +323,8 @@ final class nq extends rk {
                   qq.a(hk.field_q, 0, var55Lifetime4, 0, jd.field_d);
                   hk.field_q = var55Lifetime4;
                   var55Lifetime5 = new int[104 + param14 + var30];
-                  qq.a(sa.field_c, 0, var55Lifetime5, 0, jd.field_d);
-                  sa.field_c = var55Lifetime5;
+                  qq.a(MouseInputHandler.field_c, 0, var55Lifetime5, 0, jd.field_d);
+                  MouseInputHandler.field_c = var55Lifetime5;
                 }
                 if (4 + param14 + var32 > lf.field_z.length) {
                   var55Lifetime1 = new int[param14 - (-var32 - 104)];
@@ -377,7 +377,7 @@ final class nq extends rk {
                     var24[var40] = incrementValue$4;
                     kh.field_c[var35] = var43;
                     hk.field_q[var35] = var44;
-                    sa.field_c[var35] = var45;
+                    MouseInputHandler.field_c[var35] = var45;
                   }
                   var26[0 + var58] = var35;
                   var26[8 + var58] = var36;
@@ -411,7 +411,7 @@ final class nq extends rk {
                   var61 = (var44 * var53 - var52 * var47) / var64;
                   kh.field_c[var35] = var60;
                   hk.field_q[var35] = var61;
-                  sa.field_c[var35] = var62;
+                  MouseInputHandler.field_c[var35] = var62;
                   var26[var58 + 0] = var35;
                   var26[var58 + 8] = var63;
                   var58++;
@@ -434,7 +434,7 @@ final class nq extends rk {
                     var24[var41] = incrementValue$8;
                     kh.field_c[var35] = var46;
                     hk.field_q[var35] = var47;
-                    sa.field_c[var35] = var48;
+                    MouseInputHandler.field_c[var35] = var48;
                   }
                   var26[var58 + 0] = var35;
                   var26[var58 + 8] = var37;
@@ -468,7 +468,7 @@ final class nq extends rk {
                   var60Lifetime1 = (var46 * var54 - var53 * var49) / var64Lifetime1;
                   kh.field_c[var35] = var60Lifetime1;
                   hk.field_q[var35] = var61Lifetime1;
-                  sa.field_c[var35] = var62Lifetime1;
+                  MouseInputHandler.field_c[var35] = var62Lifetime1;
                   var26[var58 + 0] = var35;
                   var26[var58 + 8] = var63Lifetime1;
                   incrementValue$11 = var57;
@@ -491,7 +491,7 @@ final class nq extends rk {
                     var24[var42] = incrementValue$12;
                     kh.field_c[var35] = var49;
                     hk.field_q[var35] = var50;
-                    sa.field_c[var35] = var51;
+                    MouseInputHandler.field_c[var35] = var51;
                   }
                   var26[var58 + 0] = var35;
                   var26[var58 + 8] = var38;
@@ -524,7 +524,7 @@ final class nq extends rk {
                   var60Lifetime2 = (var52 * var49 - var43 * var54) / var64Lifetime2;
                   kh.field_c[var35] = var60Lifetime2;
                   hk.field_q[var35] = var61Lifetime2;
-                  sa.field_c[var35] = var62Lifetime2;
+                  MouseInputHandler.field_c[var35] = var62Lifetime2;
                   var26[var58 + 0] = var35;
                   var26[var58 + 8] = var63Lifetime2;
                   var58++;
@@ -559,8 +559,8 @@ final class nq extends rk {
                     qq.a(kc.field_e, 0, var55Lifetime2Lifetime3, 0, var34);
                     kc.field_e = var55Lifetime2Lifetime3;
                     var55Lifetime2Lifetime3 = new int[var58 + var31 + param0 + 98];
-                    qq.a(vp.field_d, 0, var55Lifetime2Lifetime3, 0, var34);
-                    vp.field_d = var55Lifetime2Lifetime3;
+                    qq.a(IntrusiveDequeCursor.field_d, 0, var55Lifetime2Lifetime3, 0, var34);
+                    IntrusiveDequeCursor.field_d = var55Lifetime2Lifetime3;
                   }
                 }
                 vm.field_a[var34] = var26[0];
@@ -569,11 +569,11 @@ final class nq extends rk {
                 if (param9 != null) {
                   if (var65 == 0) {
                     or.field_e[var34] = var36;
-                    vp.field_d[var34] = var38;
+                    IntrusiveDequeCursor.field_d[var34] = var38;
                   } else {
                     or.field_e[var34] = var26[8];
                     kc.field_e[var34] = var26[9];
-                    vp.field_d[var34] = var26[10];
+                    IntrusiveDequeCursor.field_d[var34] = var26[10];
                   }
                 }
                 var27[var34++] = var39;
@@ -585,10 +585,10 @@ final class nq extends rk {
                     if (var65 != 0) {
                       or.field_e[var34] = var26[10];
                       kc.field_e[var34] = var26[11];
-                      vp.field_d[var34] = var26[8];
+                      IntrusiveDequeCursor.field_d[var34] = var26[8];
                     } else {
                       or.field_e[var34] = var36;
-                      vp.field_d[var34] = var38;
+                      IntrusiveDequeCursor.field_d[var34] = var38;
                     }
                   }
                   var27[var34++] = var39;
@@ -728,7 +728,7 @@ final class nq extends rk {
               var39Lifetime1 = 0;
               while (true) {
                 if (var39Lifetime1 < param11) {
-                  stackIn_312_0 = (lg) (param20);
+                  stackIn_312_0 = (Model) (param20);
                   if (var66 == 0) {
                     if (stackIn_312_0.field_E[var39Lifetime1] == 0) {
                       var34 = param20.field_M[var39Lifetime1];
@@ -740,7 +740,7 @@ final class nq extends rk {
                         var24[var34] = fieldTemp$25;
                         kh.field_c[var35Lifetime1] = param17[var34];
                         hk.field_q[var35Lifetime1] = param1[var34];
-                        sa.field_c[var35Lifetime1] = param6[var34];
+                        MouseInputHandler.field_c[var35Lifetime1] = param6[var34];
                       }
                       qn.field_p.field_M[var39Lifetime1] = (short)var35Lifetime1;
                       var35Lifetime1 = var25[var34];
@@ -763,7 +763,7 @@ final class nq extends rk {
                         var24[var34] = fieldTemp$27;
                         kh.field_c[var35Lifetime1] = param17[var34];
                         hk.field_q[var35Lifetime1] = param1[var34];
-                        sa.field_c[var35Lifetime1] = param6[var34];
+                        MouseInputHandler.field_c[var35Lifetime1] = param6[var34];
                       }
                       qn.field_p.field_P[var39Lifetime1] = (short)var35Lifetime1;
                       var35Lifetime1 = var25[var34];
@@ -786,7 +786,7 @@ final class nq extends rk {
                         var24[var34] = fieldTemp$29;
                         kh.field_c[var35Lifetime1] = param17[var34];
                         hk.field_q[var35Lifetime1] = param1[var34];
-                        sa.field_c[var35Lifetime1] = param6[var34];
+                        MouseInputHandler.field_c[var35Lifetime1] = param6[var34];
                       }
                       qn.field_p.field_F[var39Lifetime1] = (short)var35Lifetime1;
                       var35Lifetime1 = var25[var34];
@@ -855,7 +855,7 @@ final class nq extends rk {
             }
             if (null == ga.field_jb ||
               !(ga.field_jb.length >= param11)) {
-              cg.field_e = new int[param11];
+              GameKeyHandler.field_e = new int[param11];
               ga.field_jb = new int[param11];
               ln.field_g = new int[param11];
             }
@@ -873,7 +873,7 @@ final class nq extends rk {
                 var24[var34] = fieldTemp$42;
                 kh.field_c[var35Lifetime1Lifetime1] = param17[var34];
                 hk.field_q[var35Lifetime1Lifetime1] = param1[var34];
-                sa.field_c[var35Lifetime1Lifetime1] = param6[var34];
+                MouseInputHandler.field_c[var35Lifetime1Lifetime1] = param6[var34];
               }
               qp.field_g[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
               var35Lifetime1Lifetime1 = var25[var34];
@@ -896,7 +896,7 @@ final class nq extends rk {
                 var24[var34] = fieldTemp$44;
                 kh.field_c[var35Lifetime1Lifetime1] = param17[var34];
                 hk.field_q[var35Lifetime1Lifetime1] = param1[var34];
-                sa.field_c[var35Lifetime1Lifetime1] = param6[var34];
+                MouseInputHandler.field_c[var35Lifetime1Lifetime1] = param6[var34];
               }
               pd.field_a[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
               var35Lifetime1Lifetime1 = var25[var34];
@@ -919,7 +919,7 @@ final class nq extends rk {
                 var24[var34] = fieldTemp$46;
                 kh.field_c[var35Lifetime1Lifetime1] = param17[var34];
                 hk.field_q[var35Lifetime1Lifetime1] = param1[var34];
-                sa.field_c[var35Lifetime1Lifetime1] = param6[var34];
+                MouseInputHandler.field_c[var35Lifetime1Lifetime1] = param6[var34];
               }
               da.field_k[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
               var35Lifetime1Lifetime1 = var25[var34];
@@ -932,7 +932,7 @@ final class nq extends rk {
                 ga.field_hb[var35Lifetime1Lifetime1] = param1[var34];
                 rn.field_z[var35Lifetime1Lifetime1] = param6[var34];
               }
-              cg.field_e[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
+              GameKeyHandler.field_e[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
               var39Lifetime1Lifetime1++;
             }
           }
@@ -1051,19 +1051,19 @@ final class nq extends rk {
         }
     }
 
-    final static cr a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, cc param7, int param8, int param9, int param10, int param11, int param12) {
-        cr var13 = null;
+    final static UiPanel a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, int param12) {
+        UiPanel var13 = null;
         RuntimeException var13_ref = null;
-        cr stackIn_4_0 = null;
+        UiPanel stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param10 < 68) {
-            nq.a(-57, (int[]) null, 62, (int[]) null, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -30, (int[]) null, 85, 74, -104, -52, (int[]) null, (int[]) null, -25, (lg) null, -20, 0, (int[]) null);
+            nq.a(-57, (int[]) null, 62, (int[]) null, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -30, (int[]) null, 85, 74, -104, -52, (int[]) null, (int[]) null, -25, (Model) null, -20, 0, (int[]) null);
           }
-          var13 = new cr(0L, (cr) null);
+          var13 = new UiPanel(0L, (UiPanel) null);
           var13.field_Bb = fk.c(-127, param5, param9);
           var13.field_Q = fk.c(-127, param12, param2);
           var13.field_cb = fk.c(-127, param3, param6);
@@ -1094,7 +1094,7 @@ final class nq extends rk {
           field_I = null;
           field_J = null;
           if (param0 > -120) {
-            nq.a(57, -73, 44, 92, 52, -107, 58, (cc) null, -88, 65, 75, 44, 36);
+            nq.a(57, -73, 44, 92, 52, -107, 58, (BitmapFont) null, -88, 65, 75, 44, 36);
           }
           field_G = null;
           field_K = null;

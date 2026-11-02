@@ -71,7 +71,7 @@ final class am {
                 this.field_s.a(0, -125);
               }
               if (param2 &&
-                cr.field_eb[il.field_d] &&
+                UiPanel.field_eb[MouseWheelInput.field_d] &&
                 param0.h(param1 ^ -9869) == 1 &&
                 !var13.field_G &&
                 var13.b(param1 ^ 119) != 4 &&
@@ -333,8 +333,8 @@ final class am {
             var13_int = sf.field_b.field_t << 5;
             var14 = Vertigo2.field_C.field_y << 4;
             var15 = Vertigo2.field_C.field_t << 4;
-            var16 = ji.field_p.field_y << 4;
-            var17_int = ji.field_p.field_t << 4;
+            var16 = TextureOperator.field_p.field_y << 4;
+            var17_int = TextureOperator.field_p.field_t << 4;
             var18 = jf.field_M.field_y << 4;
             var19_int = jf.field_M.field_t << 4;
             if (this.field_s.field_o ||
@@ -353,7 +353,7 @@ final class am {
               gb.a(this.field_u[var20][1], var11_ref_fe, var13_int, this.field_u[var20][0], this.field_s.field_e, this.field_u[var20][2], var12_int, -118);
             }
             gb.a(this.field_v[0][1], Vertigo2.field_C, var15, this.field_v[0][0], this.field_s.field_e, this.field_v[0][2], var14, -124);
-            gb.a(this.field_v[1][1], ji.field_p, var17_int, this.field_v[1][0], this.field_s.field_e, this.field_v[1][2], var16, -114);
+            gb.a(this.field_v[1][1], TextureOperator.field_p, var17_int, this.field_v[1][0], this.field_s.field_e, this.field_v[1][2], var16, -114);
           }
           var11 = 0;
           var12 = param2.c(126);
@@ -674,7 +674,7 @@ final class am {
         wo[] var33 = null;
         Object var34 = null;
         hb var34_ref = null;
-        lg var35 = null;
+        Model var35 = null;
         fc var36 = null;
         Object var37 = null;
         hb var37_ref = null;
@@ -790,8 +790,8 @@ final class am {
             var20_int = sf.field_b.field_t << 3;
             var21_int = Vertigo2.field_C.field_y << 3;
             var22 = Vertigo2.field_C.field_t << 3;
-            var23 = ji.field_p.field_y << 3;
-            var24 = ji.field_p.field_t << 3;
+            var23 = TextureOperator.field_p.field_y << 3;
+            var24 = TextureOperator.field_p.field_t << 3;
             var25 = jf.field_M.field_y << 3;
             var26 = jf.field_M.field_t << 3;
             if (var13Lifetime1 != 4) {
@@ -811,7 +811,7 @@ final class am {
             }
             if (var13Lifetime1 != 4) {
               gb.a(this.field_v[0][1], Vertigo2.field_C, var22, this.field_v[0][0], this.field_s.field_e, this.field_v[0][2], var21_int, -128);
-              gb.a(this.field_v[1][1], ji.field_p, var24, this.field_v[1][0], this.field_s.field_e, this.field_v[1][2], var23, -128);
+              gb.a(this.field_v[1][1], TextureOperator.field_p, var24, this.field_v[1][0], this.field_s.field_e, this.field_v[1][2], var23, -128);
             }
           }
           if (gi.field_r) {
@@ -885,7 +885,7 @@ final class am {
           } else {
             if (null == dc.field_J ||
               dc.field_J.length != this.field_c.length) {
-              dc.field_J = new lg[this.field_c.length];
+              dc.field_J = new Model[this.field_c.length];
             }
             if (null == oe.field_ob ||
               this.field_c.length != oe.field_ob.length) {
@@ -982,7 +982,7 @@ final class am {
                     var26Lifetime1Lifetime1 = -(128 * (va.field_b[1] - oe.field_ob[var25][2]) / 960) + 128;
                     if (var26Lifetime1Lifetime1 > 10 &&
                       var26Lifetime1Lifetime1 <= 128) {
-                      var35 = new lg(dc.field_J[var25], false, true, true, true);
+                      var35 = new Model(dc.field_J[var25], false, true, true, true);
                       var35.b(var26Lifetime1Lifetime1, 128, var26Lifetime1Lifetime1);
                       var36 = this.field_a[var24].a(var35, oe.field_ob[var25][0], oe.field_ob[var25][1], (byte) -101);
                       if (var36 != null &&
@@ -1072,14 +1072,14 @@ final class am {
               }
               var28 += 20;
               var29 = -(var28 / 2) + 610;
-              qi.a(!param3, var29 - var28 / 2, var28, 5);
+              FullscreenFocusCanvas.a(!param3, var29 - var28 / 2, var28, 5);
               va.field_s.a(var38[0], 16777215, -1, var29, 30, 2);
-              qi.a(false, -(var28 / 2) + var29, var28, 55);
+              FullscreenFocusCanvas.a(false, -(var28 / 2) + var29, var28, 55);
               va.field_s.a(var38[1], 16777215, -1, var29, 80, 2);
               if (param0 < 0) {
                 return;
               }
-              qi.a(false, -(var28 / 2) + var29, var28, 105);
+              FullscreenFocusCanvas.a(false, -(var28 / 2) + var29, var28, 105);
               if (param8 != 0) {
                 va.field_s.a(var38[3], 2479095, -1, var29, 130, 2);
                 return;
@@ -1100,14 +1100,14 @@ final class am {
               }
               var28 += 20;
               var29 = 610 - var28 / 2;
-              qi.a(false, -(var28 / 2) + var29, var28, 5);
+              FullscreenFocusCanvas.a(false, -(var28 / 2) + var29, var28, 5);
               va.field_s.a(var39[0], 16777215, -1, var29, 30, 2);
-              qi.a(false, -(var28 / 2) + var29, var28, 55);
+              FullscreenFocusCanvas.a(false, -(var28 / 2) + var29, var28, 55);
               va.field_s.a(var39[1], 16777215, -1, var29, 80, 2);
               if (0 > param0) {
                 return;
               }
-              qi.a(!param3, var29 - var28 / 2, var28, 105);
+              FullscreenFocusCanvas.a(!param3, var29 - var28 / 2, var28, 105);
               if (param8 == 0) {
                 va.field_s.a(lh.field_d, 16131600, -1, var29, 130, 2);
                 return;
@@ -1176,7 +1176,7 @@ final class am {
                         ea.field_d[3].e(320 - ea.field_d[3].field_x / 2, 70);
                       }
                     } else {
-                      var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), rq.field_A}, gp.field_q, 90);
+                      var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), rq.field_A}, DualLinkNode.field_q, 90);
                       ea.field_d[4].e(-(ea.field_d[4].field_x / 2) + 320, 70);
                     }
                   } else {
@@ -1189,7 +1189,7 @@ final class am {
                     }
                   }
                 } else {
-                  var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), rq.field_A}, gp.field_q, -128);
+                  var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), rq.field_A}, DualLinkNode.field_q, -128);
                   if (50 >= var28) {
                     if (var28 < 50) {
                       ea.field_d[10].e(-(ea.field_d[10].field_x / 2) + 320, 70);
@@ -1213,20 +1213,20 @@ final class am {
               this.field_f.a(200, true, 220, 28, 14);
               if (param4.field_w != 2) {
                 if (1 == param4.field_w) {
-                  qi.a(!param3, 20, va.field_s.a(1, lp.field_A), 55);
+                  FullscreenFocusCanvas.a(!param3, 20, va.field_s.a(1, lp.field_A), 55);
                   va.field_s.a(16777215, (byte) 104, -1, 20, lp.field_A, 80);
                 }
               } else {
                 var27_int = param4.field_I / 50;
-                qi.a(false, 20, va.field_s.a(1, tr.field_e), 10);
+                FullscreenFocusCanvas.a(false, 20, va.field_s.a(1, GameplayScreen.field_e), 10);
                 if (var27_int < 0) {
                   var27_int = 0;
                 }
-                va.field_s.a(16777215, (byte) 52, -1, 20, tr.field_e, 35);
+                va.field_s.a(16777215, (byte) 52, -1, 20, GameplayScreen.field_e, 35);
                 if (param4.field_I > 0) {
                   var40 = Vertigo2.a(new String[]{gl.a(-121, true, false, param4.field_I)}, mc.field_f, -3);
                   var29 = va.field_s.a(1, var40);
-                  qi.a(false, -20 - var29 + 640, var29, 60);
+                  FullscreenFocusCanvas.a(false, -20 - var29 + 640, var29, 60);
                   var30 = 16777215;
                   if (var27_int < 10) {
                     var31 = (int)(100.0 * (Math.sin((double)param4.field_I / 8.0) + 1.0)) + 55;
@@ -1252,7 +1252,7 @@ final class am {
               var41 = new String[2];
               var27 = var41;
               var27[0] = Vertigo2.a(new String[]{this.field_h[0]}, dk.field_m, -125);
-              var27[1] = Vertigo2.a(new String[]{this.field_h[1]}, lk.field_h, -125);
+              var27[1] = Vertigo2.a(new String[]{this.field_h[1]}, RasterBuffer.field_h, -125);
               var28 = 1;
               for (var29 = 0; var29 < var41.length; var29++) {
                 if (param0 != var29) {
@@ -1265,12 +1265,12 @@ final class am {
                 var30Lifetime1 += 45;
               }
               if (param0 != 0) {
-                qi.a(false, var29, var28, 5 + (-30 + var30Lifetime1));
+                FullscreenFocusCanvas.a(false, var29, var28, 5 + (-30 + var30Lifetime1));
                 va.field_s.a(16131600, (byte) 89, -1, var29, var41[0], var30Lifetime1);
                 var30Lifetime1 += 50;
               }
               if (param0 != 1) {
-                qi.a(false, var29, var28, -30 + var30Lifetime1 + 5);
+                FullscreenFocusCanvas.a(false, var29, var28, -30 + var30Lifetime1 + 5);
                 va.field_s.a(2479095, (byte) 98, -1, var29, var41[1], var30Lifetime1);
                 return;
               }
@@ -1501,8 +1501,8 @@ final class am {
             var15_int = sf.field_b.field_t << 5;
             var16 = Vertigo2.field_C.field_y << 4;
             var17 = Vertigo2.field_C.field_t << 4;
-            var18 = ji.field_p.field_y << 4;
-            var19_int = ji.field_p.field_t << 4;
+            var18 = TextureOperator.field_p.field_y << 4;
+            var19_int = TextureOperator.field_p.field_t << 4;
             var20 = jf.field_M.field_y << 4;
             var21_int = jf.field_M.field_t << 4;
             if (this.field_s.field_o ||
@@ -1521,7 +1521,7 @@ final class am {
               gb.a(this.field_u[var22][1], var13_ref_fe, var15_int, this.field_u[var22][0], this.field_s.field_e, this.field_u[var22][2], var14_int, -105);
             }
             gb.a(this.field_v[0][1], Vertigo2.field_C, var17, this.field_v[0][0], this.field_s.field_e, this.field_v[0][2], var16, -96);
-            gb.a(this.field_v[1][1], ji.field_p, var19_int, this.field_v[1][0], this.field_s.field_e, this.field_v[1][2], var18, -89);
+            gb.a(this.field_v[1][1], TextureOperator.field_p, var19_int, this.field_v[1][0], this.field_s.field_e, this.field_v[1][2], var18, -89);
           }
           var13 = 0;
           var14 = param2.c(121);

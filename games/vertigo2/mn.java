@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn extends li {
+final class mn extends IntrusiveNode {
     static mn field_v;
     static String field_p;
     static boolean[] field_t;
-    static er[] field_o;
+    static Sprite[] field_o;
     int field_r;
-    static cr field_n;
+    static UiPanel field_n;
     static String field_u;
     static String[] field_q;
     int field_s;
@@ -52,7 +52,7 @@ final class mn extends li {
               } else {
                 if (ld.field_b > mp.field_b) {
                   if (0 == mp.field_b) {
-                    ed.a(false, false);
+                    PacketBuffer.a(false, false);
                   }
                   mp.field_b = mp.field_b + 1;
                 }
@@ -68,7 +68,7 @@ final class mn extends li {
                 } else {
                   if (ko.field_P < ld.field_b) {
                     if (ko.field_P == 0) {
-                      ed.a(true, false);
+                      PacketBuffer.a(true, false);
                     }
                     ko.field_P = ko.field_P + 1;
                   }

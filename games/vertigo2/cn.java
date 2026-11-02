@@ -164,7 +164,7 @@ final class cn {
         return this.field_i;
     }
 
-    final static void a(ed param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;

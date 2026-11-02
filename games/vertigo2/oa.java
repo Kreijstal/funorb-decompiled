@@ -7,7 +7,7 @@ final class oa extends da {
     private String field_n;
     private boolean field_r;
     static int field_p;
-    static cr field_s;
+    static UiPanel field_s;
     private rf field_m;
     static int field_q;
 
@@ -74,7 +74,7 @@ final class oa extends da {
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_n)) {
-            var3 = ig.a(param1, false);
+            var3 = SocketConnector.a(param1, false);
             if (!var3.a((byte) -100)) {
               stackIn_7_0 = dj.field_c;
               return stackIn_7_0;

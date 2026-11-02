@@ -9,7 +9,7 @@ final class ej {
     static byte[][] field_c;
     static String field_d;
 
-    final static er a(byte param0) {
+    final static Sprite a(byte param0) {
         int var5_int = 0;
         int var6 = Vertigo2.field_L ? 1 : 0;
         int var1 = 110 / ((param0 - 43) / 32);
@@ -19,7 +19,7 @@ final class ej {
         for (var5_int = 0; var5_int < var2; var5_int++) {
           var4[var5_int] = in.field_c[b.a(255, (int) var3[var5_int])];
         }
-        er var5 = new er(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var4);
+        Sprite var5 = new Sprite(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var4);
         la.a((byte) 17);
         return var5;
     }

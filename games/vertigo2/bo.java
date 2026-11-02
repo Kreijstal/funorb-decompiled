@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bo extends li {
+final class bo extends IntrusiveNode {
     boolean field_n;
     private int field_r;
     int field_q;
@@ -19,8 +19,8 @@ final class bo extends li {
     private final void e(int param0) {
         this.field_r = 0;
         if (param0 > -67) {
-          mi var3 = (mi) null;
-          this.a(13, (mi) null);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a(13, (BitPacketBuffer) null);
         }
     }
 
@@ -193,15 +193,15 @@ final class bo extends li {
         }
     }
 
-    final void a(int param0, mi param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = Vertigo2.field_L ? 1 : 0;
         try {
-          param1.j(63, param0 + 124);
+          param1.writeCipheredByte(63, param0 + 124);
           param1.d(false);
-          param1.a((byte) 114, 8, this.field_q);
+          param1.writeBits((byte) 114, 8, this.field_q);
           for (var3_int = param0; var3_int < 10; var3_int++) {
-            param1.a((byte) 118, 6, this.a((byte) 117, this.field_o[var3_int]));
+            param1.writeBits((byte) 118, 6, this.a((byte) 117, this.field_o[var3_int]));
           }
           param1.q(param0 - 9);
           this.e(-85);

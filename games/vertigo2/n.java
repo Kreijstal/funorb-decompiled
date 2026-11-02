@@ -3,7 +3,7 @@
  */
 final class n {
     static ga field_b;
-    static er field_a;
+    static Sprite field_a;
     static String field_c;
     private static String field_z;
 
@@ -16,7 +16,7 @@ final class n {
 
     static {
         field_z = "n.A(";
-        field_a = new er(540, 140);
+        field_a = new Sprite(540, 140);
         field_c = "You can spectate this game";
     }
 }

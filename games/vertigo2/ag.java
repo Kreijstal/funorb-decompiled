@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ag {
-    static nj field_b;
+    static IntrusiveDeque field_b;
     static String field_c;
     static String[] field_a;
 
-    final static aa a(cr param0, cr param1, int param2, int[] param3, cr param4) {
+    final static aa a(UiPanel param0, UiPanel param1, int param2, int[] param3, UiPanel param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
@@ -108,7 +108,7 @@ final class ag {
     }
 
     static {
-        field_b = new nj();
+        field_b = new IntrusiveDeque();
         field_c = "Passwords must be between 5 and 20 letters and numbers";
         field_a = new String[]{"Contains enough paint for five tiles; comes in blue and purple.", "This is worth 100 points.", "Lets you destroy blocks around you; use it to save paint.", "Pick this up to gain an extra life!", "Lets you jump higher than normal. Each jetpack has enough fuel for one use.", "Saves the level so that, if you die, you'll start from when you touched it.", "Shows the entire level to aid navigation."};
     }

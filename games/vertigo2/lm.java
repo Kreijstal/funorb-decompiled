@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class lm extends ji {
+final class lm extends TextureOperator {
     private int field_z;
     private int field_E;
-    static cr field_F;
+    static UiPanel field_F;
     private int field_C;
     private int field_L;
     private int field_A;
@@ -31,7 +31,7 @@ final class lm extends ji {
         this.field_y = 2048;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -47,38 +47,38 @@ final class lm extends ji {
           var4_int = param1;
           if (0 != var4_int) {
             if (var4_int == 1) {
-              this.field_D = param2.a((byte) -11);
+              this.field_D = param2.readUnsignedShort((byte) -11);
             } else {
               if (var4_int != 2) {
                 if (var4_int != 3) {
                   if (var4_int == 4) {
-                    this.field_L = param2.a((byte) -11);
+                    this.field_L = param2.readUnsignedShort((byte) -11);
                   } else {
                     if (5 == var4_int) {
-                      this.field_A = param2.a((byte) -11);
+                      this.field_A = param2.readUnsignedShort((byte) -11);
                     } else {
                       if (var4_int != 6) {
                         if (var4_int != 7) {
                           if (var4_int == 8) {
-                            this.field_J = param2.a((byte) -11);
+                            this.field_J = param2.readUnsignedShort((byte) -11);
                           }
                         } else {
-                          this.field_I = param2.a((byte) -11);
+                          this.field_I = param2.readUnsignedShort((byte) -11);
                         }
                       } else {
-                        this.field_z = param2.h(-11);
+                        this.field_z = param2.readUnsignedByte(-11);
                       }
                     }
                   }
                 } else {
-                  this.field_C = param2.a((byte) -11);
+                  this.field_C = param2.readUnsignedShort((byte) -11);
                 }
               } else {
-                this.field_y = param2.a((byte) -11);
+                this.field_y = param2.readUnsignedShort((byte) -11);
               }
             }
           } else {
-            this.field_E = param2.h(-11);
+            this.field_E = param2.readUnsignedByte(-11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,7 +95,7 @@ final class lm extends ji {
         }
     }
 
-    final static boolean a(r param0, byte param1) {
+    final static boolean a(Archive param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -128,7 +128,7 @@ final class lm extends ji {
         int var6;
         int var7;
         int var8;
-        r var9;
+        Archive var9;
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = Vertigo2.field_L ? 1 : 0;
@@ -174,8 +174,8 @@ final class lm extends ji {
         }
         var6Lifetime1 = -140 + hm.field_F;
         if (param0 != 115) {
-          var9 = (r) null;
-          lm.a((String) null, -5, (String) null, (r) null);
+          var9 = (Archive) null;
+          lm.a((String) null, -5, (String) null, (Archive) null);
         }
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = 256;
@@ -187,11 +187,11 @@ final class lm extends ji {
         return;
     }
 
-    final static er[] a(String param0, int param1, String param2, r param3) {
-        er[] var4 = null;
+    final static Sprite[] a(String param0, int param1, String param2, Archive param3) {
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
-        er[] var5 = null;
-        er[] stackIn_3_0 = null;
+        Sprite[] var5 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -340,7 +340,7 @@ final class lm extends ji {
               var23 = we.field_M - var8;
               var25 = we.field_M;
             }
-            L3: {
+            regionExit1: {
               if (var11 == 0) {
                 var26_int = var9;
                 var52 = var47[var9];
@@ -392,7 +392,7 @@ final class lm extends ji {
                       }
                     }
                     var9 = var26_int;
-                    break L3;
+                    break regionExit1;
                   }
                   var26_int++;
                   stackIn_22_0 = ~var26_int;
@@ -473,8 +473,8 @@ final class lm extends ji {
 
     final void a(int param0) {
         if (param0 > -98) {
-          r var3 = (r) null;
-          lm.a((r) null, (byte) 122);
+          Archive var3 = (Archive) null;
+          lm.a((Archive) null, (byte) 122);
         }
     }
 

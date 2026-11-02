@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc implements ur {
+final class jc implements WidgetListener {
     private int field_a;
     static String field_c;
-    private cc field_e;
+    private BitmapFont field_e;
     private int field_d;
     static int[] field_b;
 
@@ -34,7 +34,7 @@ final class jc implements ur {
         sl.field_q[10] = te.field_I;
     }
 
-    public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
+    public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -59,27 +59,27 @@ final class jc implements ur {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_w + "</u>", param3.field_o + param1, param4 + param3.field_t, param3.field_n, param3.field_s, var6_int, -1, this.field_a, this.field_d, this.field_e.field_M + this.field_e.field_z);
+          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.text + "</u>", param3.x + param1, param4 + param3.y, param3.width, param3.height, var6_int, -1, this.field_a, this.field_d, this.field_e.field_M + this.field_e.field_z);
           if (!param3.f(101)) {
             return;
           }
-          var7 = this.field_e.c(param3.field_w);
+          var7 = this.field_e.c(param3.text);
           var8 = this.field_e.field_M + this.field_e.field_z;
-          var9 = param3.field_o + param1;
-          var10 = param4 + param3.field_t;
+          var9 = param3.x + param1;
+          var10 = param4 + param3.y;
           if (this.field_a == 2) {
-            var9 = var9 + (param3.field_n - var7);
+            var9 = var9 + (param3.width - var7);
           } else {
             if (this.field_a == 1) {
-              var9 = var9 + (param3.field_n - var7 >> 1);
+              var9 = var9 + (param3.width - var7 >> 1);
             }
           }
           if (this.field_d != 2) {
             if (this.field_d == 1) {
-              var10 = var10 + (param3.field_s - var8 >> 1);
+              var10 = var10 + (param3.height - var8 >> 1);
             }
           } else {
-            var10 = var10 + (-var8 + param3.field_s);
+            var10 = var10 + (-var8 + param3.height);
           }
           mr.a(4 + var7, var10 + 2, var8, 0, var9 - 2);
           return;
@@ -125,25 +125,25 @@ final class jc implements ur {
     }
 
     final static void a(int param0, int param1, nf param2) {
-        mi var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = uh.field_Wb;
-          var5.j(param1, param0 ^ -14553);
-          var5.field_u = var5.field_u + 1;
-          var4 = var5.field_u;
-          var5.f(1, 121);
-          var5.f(param2.field_p, param0 + 14428);
-          var5.f(param2.field_t, -100);
+          var5.writeCipheredByte(param1, param0 ^ -14553);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, 121);
+          var5.writeByte(param2.field_p, param0 + 14428);
+          var5.writeByte(param2.field_t, -100);
           if (param0 != -14499) {
             field_b = (int[]) null;
           }
-          var5.e(param2.field_r, 0);
-          var5.e(param2.field_s, 0);
-          var5.e(param2.field_y, param0 + 14499);
-          var5.e(param2.field_n, 0);
+          var5.writeInt(param2.field_r, 0);
+          var5.writeInt(param2.field_s, 0);
+          var5.writeInt(param2.field_y, param0 + 14499);
+          var5.writeInt(param2.field_n, 0);
           var5.c(var4, 120);
-          var5.b((byte) 115, var5.field_u - var4);
+          var5.patchByteLength((byte) 115, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "jc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -163,7 +163,7 @@ final class jc implements ur {
         this.field_e = qc.field_x;
     }
 
-    jc(cc param0, int param1, int param2) {
+    jc(BitmapFont param0, int param1, int param2) {
         try {
           this.field_a = param1;
           this.field_d = param2;

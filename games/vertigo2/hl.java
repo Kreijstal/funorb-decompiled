@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends li {
+final class hl extends IntrusiveNode {
     byte[] field_n;
-    static cr[] field_q;
+    static UiPanel[] field_q;
     static String field_o;
     int field_r;
     long field_p;
@@ -12,7 +12,7 @@ final class hl extends li {
         field_o = null;
         field_q = null;
         if (param0 != -118) {
-          field_q = (cr[]) null;
+          field_q = (UiPanel[]) null;
         }
     }
 

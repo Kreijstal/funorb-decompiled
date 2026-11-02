@@ -3,16 +3,16 @@
  */
 import java.util.*;
 
-final class dc extends ji {
+final class dc extends TextureOperator {
     private int field_I;
     private int field_z;
     static int field_O;
     static boolean field_B;
-    static lg[] field_J;
+    static Model[] field_J;
     static String field_M;
     static mc field_P;
     static long field_F;
-    static qi field_L;
+    static FullscreenFocusCanvas field_L;
     static String field_K;
     private int field_C;
     private int field_N;
@@ -21,7 +21,7 @@ final class dc extends ji {
     private int field_H;
     private int field_y;
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int dupTemp$0 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -40,28 +40,28 @@ final class dc extends ji {
             if (var4_int != 1) {
               if (var4_int != 2) {
                 if (var4_int == 3) {
-                  this.field_C = param2.h(-11);
+                  this.field_C = param2.readUnsignedByte(-11);
                 } else {
                   if (4 != var4_int) {
                     if (5 == var4_int) {
-                      this.field_y = param2.h(param0 ^ -101);
+                      this.field_y = param2.readUnsignedByte(param0 ^ -101);
                     } else {
                       if (var4_int == 6) {
-                        this.field_I = param2.h(-11);
+                        this.field_I = param2.readUnsignedByte(-11);
                       }
                     }
                   } else {
-                    this.field_z = param2.h(-11);
+                    this.field_z = param2.readUnsignedByte(-11);
                   }
                 }
               } else {
-                this.field_H = param2.a((byte) -11);
+                this.field_H = param2.readUnsignedShort((byte) -11);
               }
             } else {
-              this.field_N = param2.h(-11);
+              this.field_N = param2.readUnsignedByte(-11);
             }
           } else {
-            dupTemp$0 = param2.h(-11);
+            dupTemp$0 = param2.readUnsignedByte(-11);
             this.field_I = dupTemp$0;
             this.field_y = dupTemp$0;
           }
@@ -120,7 +120,7 @@ final class dc extends ji {
         var19 = Vertigo2.field_L ? 1 : 0;
         var3 = this.field_x.a(param0, (byte) -84);
         if (param1 < 91) {
-          field_J = (lg[]) null;
+          field_J = (Model[]) null;
         }
         if (this.field_x.field_i) {
           var4 = 2048 + this.field_I * lf.field_y[param0];
@@ -270,11 +270,11 @@ final class dc extends ji {
 
     final static void a(boolean param0, byte param1) {
         if (param1 != -110) {
-          field_L = (qi) null;
+          field_L = (FullscreenFocusCanvas) null;
         }
-        if (nj.field_b != null) {
+        if (IntrusiveDeque.field_b != null) {
           bi.d(bi.field_d, bi.field_f, bi.field_i - bi.field_d, bi.field_c - bi.field_f);
-          nj.field_b.b(param0, param1 + 110);
+          IntrusiveDeque.field_b.b(param0, param1 + 110);
         }
     }
 
@@ -285,8 +285,8 @@ final class dc extends ji {
         field_J = null;
         field_M = null;
         if (param0 <= 28) {
-          cc var2 = (cc) null;
-          dc.a(-55, (String) null, (byte) -15, (String[]) null, (cc) null);
+          BitmapFont var2 = (BitmapFont) null;
+          dc.a(-55, (String) null, (byte) -15, (String[]) null, (BitmapFont) null);
         }
     }
 
@@ -317,7 +317,7 @@ final class dc extends ji {
         this.field_y = 5;
     }
 
-    final static int a(int param0, String param1, byte param2, String[] param3, cc param4) {
+    final static int a(int param0, String param1, byte param2, String[] param3, BitmapFont param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -353,7 +353,7 @@ final class dc extends ji {
           }
           var6 = (-1 + (param0 + var5_int)) / param0;
           if (param2 <= 5) {
-            field_L = (qi) null;
+            field_L = (FullscreenFocusCanvas) null;
           }
           param0 = var5_int / var6;
           var6Lifetime1 = 0;
@@ -417,8 +417,8 @@ final class dc extends ji {
         this.field_E = kk.a(this.field_N, (byte) 38);
         this.b((byte) -111);
         if (param0 >= -98) {
-          cc var3 = (cc) null;
-          dc.a(-24, (String) null, (byte) -105, (String[]) null, (cc) null);
+          BitmapFont var3 = (BitmapFont) null;
+          dc.a(-24, (String) null, (byte) -105, (String[]) null, (BitmapFont) null);
         }
     }
 

@@ -12,18 +12,18 @@ final class ko extends af {
     static int field_P;
     static ke field_M;
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         int var6 = -130 + param4 >> 1;
         if (this.field_Q) {
-          this.field_T.a(false, var6, 0, param3, 25);
-          this.field_N.a(false, 45 + var6, 0, param3, 25);
-          this.field_R.a(param0, var6 + 90, 0, param3, 40);
+          this.field_T.setBounds(false, var6, 0, param3, 25);
+          this.field_N.setBounds(false, 45 + var6, 0, param3, 25);
+          this.field_R.setBounds(param0, var6 + 90, 0, param3, 40);
           return;
         }
-        this.field_N.a(param0, var6, 0, param3, 25);
-        this.field_T.a(param0, var6 + 45, 0, param3, 25);
-        this.field_R.a(param0, var6 + 90, 0, param3, 40);
+        this.field_N.setBounds(param0, var6, 0, param3, 25);
+        this.field_T.setBounds(param0, var6 + 45, 0, param3, 25);
+        this.field_R.setBounds(param0, var6 + 90, 0, param3, 40);
     }
 
     final int a(int param0) {
@@ -34,7 +34,7 @@ final class ko extends af {
           return -117;
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.field_N.field_w);
+          stackIn_3_0 = Integer.parseInt(this.field_N.text);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -44,32 +44,32 @@ final class ko extends af {
     }
 
     final boolean e(boolean param0) {
-        if (null == this.field_N.field_w) {
+        if (null == this.field_N.text) {
           return true;
         }
-        if (0 == this.field_N.field_w.length()) {
+        if (0 == this.field_N.text.length()) {
           return true;
         }
-        if (null == this.field_T.field_w) {
+        if (null == this.field_T.text) {
           return true;
         }
-        if (this.field_T.field_w.length() == 0) {
+        if (this.field_T.text.length() == 0) {
           return true;
         }
         if (param0) {
           this.e(false);
-          if (null == this.field_R.field_w) {
+          if (null == this.field_R.text) {
             return true;
           }
-          if (this.field_R.field_w.length() != 0) {
+          if (this.field_R.text.length() != 0) {
             return false;
           }
           return true;
         }
-        if (null == this.field_R.field_w) {
+        if (null == this.field_R.text) {
           return true;
         }
-        if (this.field_R.field_w.length() != 0) {
+        if (this.field_R.text.length() != 0) {
           return false;
         }
         return true;
@@ -113,7 +113,7 @@ final class ko extends af {
           ko.b((byte) 90, -57);
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.field_R.field_w);
+          stackIn_3_0 = Integer.parseInt(this.field_R.text);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,7 +138,7 @@ final class ko extends af {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        cr var5 = null;
+        UiPanel var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
@@ -176,9 +176,9 @@ final class ko extends af {
             }
           }
           if (ea.field_c.field_tb != 0) {
-            up.field_z = new cb(ea.field_c.field_ob, ea.field_c.field_C, ea.field_c.field_Fb, ea.field_c.field_db, param2, hb.field_D, ji.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e, (String) null, 0L);
+            up.field_z = new cb(ea.field_c.field_ob, ea.field_c.field_C, ea.field_c.field_Fb, ea.field_c.field_db, param2, hb.field_D, TextureOperator.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e, (String) null, 0L);
           }
-          var9 = qr.a(ia.field_G, 55, param1, r.field_f);
+          var9 = qr.a(ia.field_G, 55, param1, Archive.field_f);
           if (var9 != null) {
             nd.a(var9, 32192);
           }
@@ -198,25 +198,25 @@ final class ko extends af {
         }
     }
 
-    ko(ur param0, boolean param1, int param2, int param3, int param4, int param5) {
+    ko(WidgetListener param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(false, param2, param3, param5, param4);
+          this.setBounds(false, param2, param3, param5, param4);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    private ko(ur param0, boolean param1) {
-        super(0, 0, 0, 0, (ur) null);
+    private ko(WidgetListener param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetListener) null);
         try {
           this.field_N = (kp) ((Object) new br("", (uf) null, 2));
           this.field_T = (kp) ((Object) new br("", (uf) null, 2));
           this.field_R = (kp) ((Object) new br("", (uf) null, 4));
           this.field_Q = param1 ? true : false;
-          this.field_R.field_B = param0;
-          this.field_T.field_B = param0;
-          this.field_N.field_B = param0;
+          this.field_R.listener = param0;
+          this.field_T.listener = param0;
+          this.field_N.listener = param0;
           if (!this.field_Q) {
             this.c((byte) -91, this.field_N);
             this.c((byte) -27, this.field_T);
@@ -233,8 +233,8 @@ final class ko extends af {
     final void a(boolean param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
         if (param1 == 0) {
-          param2 = param2 + this.field_o;
-          param3 = param3 + this.field_t;
+          param2 = param2 + this.x;
+          param3 = param3 + this.y;
           this.a(param3, -626, param2, this.field_N, gl.field_m);
           this.a(param3, -626, param2, this.field_T, ff.field_v);
           this.a(param3, -626, param2, this.field_R, um.field_C);
@@ -250,7 +250,7 @@ final class ko extends af {
           field_P = 123;
         }
         try {
-          stackIn_3_0 = -1 + Integer.parseInt(this.field_T.field_w);
+          stackIn_3_0 = -1 + Integer.parseInt(this.field_T.text);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -259,12 +259,12 @@ final class ko extends af {
         }
     }
 
-    private final void a(int param0, int param1, int param2, iq param3, String param4) {
+    private final void a(int param0, int param1, int param2, UiWidget param3, String param4) {
         try {
           if (param1 != -626) {
-            this.a(true, -28, 21, -75, 109);
+            this.setBounds(true, -28, 21, -75, 109);
           }
-          bl.field_N.c(param4, (param3.field_n >> 1) + param2 + param3.field_o, -5 + (param3.field_t + param0), 16777215, -1);
+          bl.field_N.c(param4, (param3.width >> 1) + param2 + param3.x, -5 + (param3.y + param0), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "ko.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -276,7 +276,7 @@ final class ko extends af {
           return var2;
         }
         if (this.field_p) {
-          return this.field_q != null ? this.field_q : this.field_w;
+          return this.field_q != null ? this.field_q : this.text;
         }
         return null;
     }

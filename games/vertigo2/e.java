@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class e {
-    er[] field_m;
+    Sprite[] field_m;
     private int field_k;
     static int[] field_b;
     static String field_l;
@@ -10,7 +10,7 @@ final class e {
     static String field_e;
     private int field_d;
     static String field_j;
-    er field_h;
+    Sprite field_h;
     private boolean field_g;
     static byte[] field_c;
     private int field_f;
@@ -55,7 +55,7 @@ final class e {
           field_l = (String) null;
         }
         if (ua.field_e <= param3 &&
-          cj.field_D >= param3) {
+          WidgetContainer.field_D >= param3) {
           param4 = pk.a((byte) -14, ib.field_a, param4, ap.field_e);
           param1 = pk.a((byte) -14, ib.field_a, param1, ap.field_e);
           oq.a(param1, param4, (byte) -86, param3, param2);
@@ -78,7 +78,7 @@ final class e {
         return this;
     }
 
-    final static void a(int param0, cr param1, cr param2, cr param3, cr param4) {
+    final static void a(int param0, UiPanel param1, UiPanel param2, UiPanel param3, UiPanel param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -92,14 +92,14 @@ final class e {
         String var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
-        cr var7 = null;
+        UiPanel var7 = null;
         String var8 = null;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
           if (null != ha.field_a) {
             return;
           }
-          il.field_a = false;
+          MouseWheelInput.field_a = false;
           if (pe.field_r) {
             var5 = ah.field_k;
           } else {
@@ -116,21 +116,21 @@ final class e {
           dj.field_d.field_B = ((np.field_Ib.field_B & 16711422) >> 1) + lj.field_p - (8355711 & lj.field_p >> 1);
           dj.field_d.field_H = -((16711423 & lj.field_p) >> 1) + lj.field_p + ((16711422 & np.field_Ib.field_H) >> 1);
           dj.field_d.field_K = lj.field_p - (((16711422 & lj.field_p) >> 1) - (np.field_Ib.field_K >> 1 & 8355711));
-          gk.field_c = new cr(0L, param1);
-          hb.field_j = new cr(0L, param2);
-          lm.field_F = new cr(0L, (cr) null);
+          gk.field_c = new UiPanel(0L, param1);
+          hb.field_j = new UiPanel(0L, param2);
+          lm.field_F = new UiPanel(0L, (UiPanel) null);
           if (param0 != 12899) {
-            var7 = (cr) null;
-            e.a(-89, (cr) null, (cr) null, (cr) null, (cr) null);
+            var7 = (UiPanel) null;
+            e.a(-89, (UiPanel) null, (UiPanel) null, (UiPanel) null, (UiPanel) null);
           }
-          gg.field_o = new cr(0L, param4);
-          dj.field_d = new cr(0L, param3);
-          dj.field_d.field_z = cg.field_f;
+          gg.field_o = new UiPanel(0L, param4);
+          dj.field_d = new UiPanel(0L, param3);
+          dj.field_d.field_z = GameKeyHandler.field_f;
           gg.field_o.b(dj.field_d, 125);
-          ui.field_b = new cr(0L, gj.field_z);
+          ui.field_b = new UiPanel(0L, gj.field_z);
           gg.field_o.b(ui.field_b, 125);
-          kk.field_a = new cr(0L, np.field_Ib, oe.field_rb);
-          oa.field_s = new cr(0L, np.field_Ib);
+          kk.field_a = new UiPanel(0L, np.field_Ib, oe.field_rb);
+          oa.field_s = new UiPanel(0L, np.field_Ib);
           gk.field_c.b(hb.field_j, 127);
           gk.field_c.b(lm.field_F, 123);
           lm.field_F.b(gg.field_o, param0 ^ 12824);
@@ -169,8 +169,8 @@ final class e {
         }
     }
 
-    final void a(iq param0, int param1, int param2, int param3, mq param4) {
-        cc stackIn_18_0;
+    final void a(UiWidget param0, int param1, int param2, int param3, mq param4) {
+        BitmapFont stackIn_18_0;
         String stackIn_18_1;
         int stackIn_18_2;
         int stackIn_18_3;
@@ -194,24 +194,24 @@ final class e {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          bc.a(param0.field_s, param0.field_t + param3, (byte) 127, this.field_m, param0.field_n, param1 + param0.field_o);
+          bc.a(param0.height, param0.y + param3, (byte) 127, this.field_m, param0.width, param1 + param0.x);
           if (param2 != 1) {
             this.a(-54, -91);
           }
           if (null != this.field_h) {
-            var6_int = param1 + param0.field_o + this.field_i;
+            var6_int = param1 + param0.x + this.field_i;
             if (param4.field_m == 1) {
-              var6_int = var6_int + (-this.field_h.field_x + param0.field_n) / 2;
+              var6_int = var6_int + (-this.field_h.field_x + param0.width) / 2;
             }
-            var7 = param0.field_t + param3 + this.field_d;
+            var7 = param0.y + param3 + this.field_d;
             if (param4.field_m == 2) {
-              var6_int = var6_int + (param0.field_n - this.field_h.field_x);
+              var6_int = var6_int + (param0.width - this.field_h.field_x);
             }
             if (param4.field_d == 1) {
-              var7 = var7 + (-this.field_h.field_B + param0.field_s) / 2;
+              var7 = var7 + (-this.field_h.field_B + param0.height) / 2;
             }
             if (param4.field_d == 2) {
-              var7 = var7 + (-this.field_h.field_B + param0.field_s);
+              var7 = var7 + (-this.field_h.field_B + param0.height);
             }
             this.field_h.e(var6_int, var7);
           }
@@ -223,7 +223,7 @@ final class e {
             }
             stackIn_18_0 = param4.field_l;
             stackIn_18_1 = var6;
-            stackIn_18_2 = param0.field_o + param1;
+            stackIn_18_2 = param0.x + param1;
             stackIn_18_3 = -param4.field_i;
             if (-2147483648 != this.field_i) {
               stackIn_19_4 = this.field_i;
@@ -236,9 +236,9 @@ final class e {
             } else {
               stackIn_22_3 = 0;
             }
-            stackIn_24_3 = stackIn_22_3 + (param4.field_k + param3 + param0.field_t);
-            stackIn_24_4 = -param4.field_j - param4.field_i + param0.field_n;
-            stackIn_24_5 = -param4.field_c + (-param4.field_k + param0.field_s);
+            stackIn_24_3 = stackIn_22_3 + (param4.field_k + param3 + param0.y);
+            stackIn_24_4 = -param4.field_j - param4.field_i + param0.width;
+            stackIn_24_5 = -param4.field_c + (-param4.field_k + param0.height);
             stackIn_24_6 = this.field_k;
             stackIn_24_7 = this.field_f;
             if (this.field_a != -2147483648) {
@@ -246,7 +246,7 @@ final class e {
             } else {
               stackIn_25_8 = 256;
             }
-            ((cc) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_m, param4.field_d, param4.field_n);
+            ((BitmapFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_m, param4.field_d, param4.field_n);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -288,7 +288,7 @@ final class e {
         return this;
     }
 
-    final static gg a(ae param0, boolean param1) {
+    final static gg a(PcmSample param0, boolean param1) {
         RuntimeException var2 = null;
         gg stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -299,7 +299,7 @@ final class e {
           if (param1) {
             e.a(true, (byte) 4);
           }
-          stackIn_3_0 = sp.a(ra.a(param0, 100, 96), -93);
+          stackIn_3_0 = sp.a(SamplePlaybackStream.a(param0, 100, 96), -93);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -319,11 +319,11 @@ final class e {
         gk.field_c.b(param0, 0);
         if (param1 > -124) {
           Object var3 = (Object) null;
-          e.a((jj) null, (Object) null, -43);
+          e.a((PlatformTaskDispatcher) null, (Object) null, -43);
         }
     }
 
-    final static void a(jj param0, Object param1, int param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, int param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -378,7 +378,7 @@ final class e {
         }
     }
 
-    final void a(mq param0, int param1, iq param2, int param3, int param4, e param5) {
+    final void a(mq param0, int param1, UiWidget param2, int param3, int param4, e param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -457,7 +457,7 @@ final class e {
         this.field_i = 0;
     }
 
-    final e a(int param0, er[] param1) {
+    final e a(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -465,7 +465,7 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -110) {
-            this.field_m = (er[]) null;
+            this.field_m = (Sprite[]) null;
           }
           this.field_m = param1;
           return this;

@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mp {
-    private er[] field_e;
+    private Sprite[] field_e;
     static String field_c;
     static fe field_a;
-    static cr field_g;
+    static UiPanel field_g;
     static ch field_f;
     static int field_d;
     static int field_b;
@@ -27,7 +27,7 @@ final class mp {
         }
     }
 
-    mp(er[] param0) {
+    mp(Sprite[] param0) {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
@@ -45,7 +45,7 @@ final class mp {
         }
         int var3 = null != sj.field_d ? 1 : 0;
         if (de.field_f == 9) {
-          if (!lk.a(1, tg.field_a, uo.field_d, jo.field_b, fj.field_lb)) {
+          if (!RasterBuffer.a(1, DelegatingCanvas.field_a, uo.field_d, jo.field_b, fj.field_lb)) {
             if (de.field_f == 10) {
               if (var3 != 0) {
                 return false;
@@ -60,7 +60,7 @@ final class mp {
               return false;
             }
             if (nm.field_E == 2 &&
-              !rm.a((byte) -126, ba.field_a, qi.field_b)) {
+              !rm.a((byte) -126, ba.field_a, FullscreenFocusCanvas.field_b)) {
               return false;
             }
             if (nm.field_E != 2) {
@@ -69,7 +69,7 @@ final class mp {
               }
               if (mf.b(-6390)) {
                 var4 = (String) null;
-                tf.a(nm.field_E, qi.field_b, -84, (String) null, param0, ap.field_c);
+                tf.a(nm.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
                 return true;
               }
               return true;
@@ -78,16 +78,16 @@ final class mp {
               return true;
             }
             var4Lifetime2 = (String) null;
-            tf.a(nm.field_E, qi.field_b, -84, (String) null, param0, ap.field_c);
+            tf.a(nm.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
             return true;
           }
           if (jo.field_b != 2) {
             if (var3 == 0) {
-              return qm.a(fj.field_lb, uo.field_d, (byte) 83, jo.field_b, tg.field_a);
+              return qm.a(fj.field_lb, uo.field_d, (byte) 83, jo.field_b, DelegatingCanvas.field_a);
             }
             return false;
           }
-          return qm.a(fj.field_lb, uo.field_d, (byte) 83, jo.field_b, tg.field_a);
+          return qm.a(fj.field_lb, uo.field_d, (byte) 83, jo.field_b, DelegatingCanvas.field_a);
         }
         if (de.field_f == 10) {
           if (var3 != 0) {
@@ -99,14 +99,14 @@ final class mp {
         if (de.field_f == 11 &&
           ff.field_m) {
           if (nm.field_E == 2 &&
-            !rm.a((byte) -126, ba.field_a, qi.field_b)) {
+            !rm.a((byte) -126, ba.field_a, FullscreenFocusCanvas.field_b)) {
             return false;
           }
           if (nm.field_E != 2) {
             if (var3 == 0) {
               if (mf.b(-6390)) {
                 var4Lifetime1 = (String) null;
-                tf.a(nm.field_E, qi.field_b, -84, (String) null, param0, ap.field_c);
+                tf.a(nm.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
               }
               return true;
             }
@@ -114,7 +114,7 @@ final class mp {
           }
           if (mf.b(-6390)) {
             var4Lifetime1Lifetime1 = (String) null;
-            tf.a(nm.field_E, qi.field_b, -84, (String) null, param0, ap.field_c);
+            tf.a(nm.field_E, FullscreenFocusCanvas.field_b, -84, (String) null, param0, ap.field_c);
           }
           return true;
         }
@@ -122,20 +122,20 @@ final class mp {
     }
 
     final static void a(int param0, int param1) {
-        mi var2 = null;
-        mi var2Lifetime1;
+        BitPacketBuffer var2 = null;
+        BitPacketBuffer var2Lifetime1;
         if (param1 > 17) {
           var2 = uh.field_Wb;
-          var2.j(param0, 118);
-          var2.f(1, 112);
-          var2.f(0, 99);
+          var2.writeCipheredByte(param0, 118);
+          var2.writeByte(1, 112);
+          var2.writeByte(0, 99);
           return;
         }
         mp.a(-79, -52);
         var2Lifetime1 = uh.field_Wb;
-        var2Lifetime1.j(param0, 118);
-        var2Lifetime1.f(1, 112);
-        var2Lifetime1.f(0, 99);
+        var2Lifetime1.writeCipheredByte(param0, 118);
+        var2Lifetime1.writeByte(1, 112);
+        var2Lifetime1.writeByte(0, 99);
     }
 
     static {

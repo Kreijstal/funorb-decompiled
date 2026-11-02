@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rr extends ji {
+final class rr extends TextureOperator {
     static String field_A;
     static boolean[] field_z;
     static boolean field_C;
     static short[] field_D;
     static String field_y;
-    static ra[] field_B;
+    static SamplePlaybackStream[] field_B;
 
     public rr() {
         super(1, false);
@@ -135,8 +135,8 @@ final class rr extends ji {
         int var1 = 82 % ((-3 - param0) / 49);
     }
 
-    final void a(byte param0, int param1, ed param2) {
-        ed var5 = null;
+    final void a(byte param0, int param1, PacketBuffer param2) {
+        PacketBuffer var5 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -145,12 +145,12 @@ final class rr extends ji {
         RuntimeException var4 = null;
         try {
           if (0 == param1) {
-            stackIn_5_1 = (param2.h(-11) == 1);
+            stackIn_5_1 = (param2.readUnsignedByte(-11) == 1);
             this.field_o = stackIn_5_1;
           }
           if (param0 != 110) {
-            var5 = (ed) null;
-            this.a((byte) -97, 81, (ed) null);
+            var5 = (PacketBuffer) null;
+            this.a((byte) -97, 81, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -220,7 +220,7 @@ final class rr extends ji {
         field_D = new short[4096];
         field_y = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_C = true;
-        field_B = new ra[3];
+        field_B = new SamplePlaybackStream[3];
         field_z = new boolean[field_B.length];
     }
 }

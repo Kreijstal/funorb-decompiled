@@ -8,7 +8,7 @@ final class ga extends rl {
     static int field_gb;
     static int[] field_hb;
 
-    ga(sd param0, iq param1) {
+    ga(sd param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -37,7 +37,7 @@ final class ga extends rl {
         field_hb = null;
     }
 
-    final void a(boolean param0, iq param1) {
+    final void a(boolean param0, UiWidget param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {

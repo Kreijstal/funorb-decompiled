@@ -6,7 +6,7 @@ abstract class rl extends sp {
     private int field_eb;
     private int field_Y;
     private wq field_bb;
-    private iq field_Z;
+    private UiWidget field_Z;
     static int field_db;
     private int field_ab;
     private int field_W;
@@ -41,7 +41,7 @@ abstract class rl extends sp {
         this.field_bb.field_J = 0;
     }
 
-    final static ge a(r param0, int param1, r param2, String param3, String param4) {
+    final static ge a(Archive param0, int param1, Archive param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -98,7 +98,7 @@ abstract class rl extends sp {
         }
     }
 
-    boolean a(char param0, int param1, int param2, iq param3) {
+    boolean a(char param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -135,12 +135,12 @@ abstract class rl extends sp {
     boolean j(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        iq var4 = null;
+        UiWidget var4 = null;
         int var3 = Vertigo2.field_L ? 1 : 0;
-        iq var4Lifetime1;
-        iq var4Lifetime2;
-        iq var4Lifetime3;
-        iq var4Lifetime4;
+        UiWidget var4Lifetime1;
+        UiWidget var4Lifetime2;
+        UiWidget var4Lifetime3;
+        UiWidget var4Lifetime4;
         if (this.field_cb != null) {
           if (nh.field_m == this.field_cb) {
             fieldTemp$0 = this.field_eb + 1;
@@ -148,19 +148,19 @@ abstract class rl extends sp {
             if (fieldTemp$0 != this.field_Y) {
               this.field_bb.field_J = 256 - (this.field_eb << 8) / this.field_Y;
               if (param0 != 17) {
-                var4 = (iq) null;
-                this.a(true, (iq) null);
+                var4 = (UiWidget) null;
+                this.a(true, (UiWidget) null);
                 return super.j(17);
               }
               return super.j(17);
             }
-            this.field_cb = gf.field_f;
-            this.a(this.field_X, 12 + this.field_Z.field_n, this.field_W + 12 + this.field_Z.field_s, (byte) 118);
+            this.field_cb = NodeHashTableIterator.field_f;
+            this.a(this.field_X, 12 + this.field_Z.width, this.field_W + 12 + this.field_Z.height, (byte) 118);
             this.field_eb = 0;
             this.field_bb.field_J = 0;
             if (param0 != 17) {
-              var4 = (iq) null;
-              this.a(true, (iq) null);
+              var4 = (UiWidget) null;
+              this.a(true, (UiWidget) null);
               return super.j(17);
             }
             return super.j(17);
@@ -169,8 +169,8 @@ abstract class rl extends sp {
             if (param0 == 17) {
               return super.j(17);
             }
-            var4Lifetime2 = (iq) null;
-            this.a(true, (iq) null);
+            var4Lifetime2 = (UiWidget) null;
+            this.a(true, (UiWidget) null);
             return super.j(17);
           }
           fieldTemp$1 = this.field_eb + 1;
@@ -180,8 +180,8 @@ abstract class rl extends sp {
             if (param0 == 17) {
               return super.j(17);
             }
-            var4Lifetime3 = (iq) null;
-            this.a(true, (iq) null);
+            var4Lifetime3 = (UiWidget) null;
+            this.a(true, (UiWidget) null);
             return super.j(17);
           }
           this.field_cb = null;
@@ -189,20 +189,20 @@ abstract class rl extends sp {
           if (param0 == 17) {
             return super.j(17);
           }
-          var4Lifetime4 = (iq) null;
-          this.a(true, (iq) null);
+          var4Lifetime4 = (UiWidget) null;
+          this.a(true, (UiWidget) null);
           return super.j(17);
         }
         if (param0 == 17) {
           return super.j(17);
         }
-        var4Lifetime1 = (iq) null;
-        this.a(true, (iq) null);
+        var4Lifetime1 = (UiWidget) null;
+        this.a(true, (UiWidget) null);
         return super.j(17);
     }
 
-    rl(sd param0, iq param1, int param2, int param3, int param4) {
-        super(param0, 12 + param1.field_n, param1.field_s + (param2 + 12));
+    rl(sd param0, UiWidget param1, int param2, int param3, int param4) {
+        super(param0, 12 + param1.width, param1.height + (param2 + 12));
         try {
           this.field_X = param4;
           this.field_W = param2;
@@ -214,14 +214,14 @@ abstract class rl extends sp {
         }
     }
 
-    private final void b(int param0, iq param1) {
+    private final void b(int param0, UiWidget param1) {
         if (this.field_bb != null) {
-          this.field_bb.c(2);
+          this.field_bb.unlink(2);
         }
         if (param1 == null) {
           this.field_bb = new wq();
         } else {
-          param1.a(false, 6, this.field_W + 6, param1.field_s, param1.field_n);
+          param1.setBounds(false, 6, this.field_W + 6, param1.height, param1.width);
           this.field_bb = new wq(param1);
         }
         this.c((byte) -61, this.field_bb);
@@ -235,7 +235,7 @@ abstract class rl extends sp {
         }
     }
 
-    void a(boolean param0, iq param1) {
+    void a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -246,8 +246,8 @@ abstract class rl extends sp {
             this.f((byte) 75);
           }
           this.field_Z = param1;
-          if (gf.field_f == this.field_cb) {
-            this.a(this.field_X, 12 + this.field_Z.field_n, this.field_W + 12 + this.field_Z.field_s, (byte) 61);
+          if (NodeHashTableIterator.field_f == this.field_cb) {
+            this.a(this.field_X, 12 + this.field_Z.width, this.field_W + 12 + this.field_Z.height, (byte) 61);
             this.field_eb = 0;
             return;
           }
@@ -277,7 +277,7 @@ abstract class rl extends sp {
           return;
         }
         if (id.field_g != this.field_cb) {
-          this.b(-1535749535, this.field_Z.field_n + 12, 12 + this.field_W + this.field_Z.field_s);
+          this.b(-1535749535, this.field_Z.width + 12, 12 + this.field_W + this.field_Z.height);
           this.b(param0 + 13716, this.field_Z);
         } else {
           this.field_bb.field_J = 256;

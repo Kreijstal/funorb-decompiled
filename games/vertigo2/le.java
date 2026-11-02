@@ -4,7 +4,7 @@
 final class le {
     static th field_d;
     static String field_a;
-    static r field_f;
+    static Archive field_f;
     static String field_b;
     static String field_c;
     static String field_e;
@@ -46,7 +46,7 @@ final class le {
         ub var5_ref_ub = null;
         int[] var6 = null;
         int var8 = 0;
-        mi var9 = null;
+        BitPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = Vertigo2.field_L ? 1 : 0;
@@ -55,15 +55,15 @@ final class le {
             return;
           }
           var9 = id.field_f;
-          var2 = var9.h(-11);
-          var3 = var9.h(-11);
+          var2 = var9.readUnsignedByte(-11);
+          var3 = var9.readUnsignedByte(-11);
           if (var2 == 0) {
             var4 = (be) (mb.field_v.a((byte) 100));
             if (var4 == null) {
               rm.b((byte) -79);
               return;
             }
-            var5 = -var9.field_u + ca.field_b;
+            var5 = -var9.position + ca.field_b;
             var11 = var4.field_o;
             var10 = var11;
             var6 = var10;
@@ -71,10 +71,10 @@ final class le {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.h(-11) << b.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(-11) << b.a(768, var7 << 8));
             }
             var4.field_p = true;
-            var4.c(2);
+            var4.unlink(2);
             return;
           }
           if (var2 != 1) {
@@ -82,7 +82,7 @@ final class le {
             rm.b((byte) -30);
             return;
           }
-          var4_int = var9.j(-3084);
+          var4_int = var9.readSignedSmart(-3084);
           var5_ref_ub = (ub) (ob.field_Q.a((byte) 100));
           while (var5_ref_ub != null) {
             if (var5_ref_ub.field_u != var3 ||
@@ -96,7 +96,7 @@ final class le {
             rm.b((byte) 83);
             return;
           }
-          var5_ref_ub.c(2);
+          var5_ref_ub.unlink(2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

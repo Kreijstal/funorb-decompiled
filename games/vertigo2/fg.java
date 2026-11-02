@@ -3,7 +3,7 @@
  */
 final class fg extends sp {
     private we field_W;
-    static nj field_eb;
+    static IntrusiveDeque field_eb;
     private String field_fb;
     private boolean field_ab;
     private String field_bb;
@@ -18,7 +18,7 @@ final class fg extends sp {
         field_cb = null;
         field_eb = null;
         if (param0 != -15691) {
-          field_eb = (nj) null;
+          field_eb = (IntrusiveDeque) null;
           field_X = null;
           return;
         }
@@ -33,7 +33,7 @@ final class fg extends sp {
     final void a(byte param0, int param1, int param2) {
         if (param0 <= -92) {
           super.a((byte) -108, param1, param2);
-          sg.field_a.c(this.field_bb, (this.field_n >> 1) + param1, 103 + param2, 16777215, -1);
+          sg.field_a.c(this.field_bb, (this.width >> 1) + param1, 103 + param2, 16777215, -1);
           if (null != this.field_fb) {
             bi.b(param1 + 20, param2 + 120 - 7, 260, 8421504);
             sg.field_a.a(this.field_fb, 20 + param1, 8 + (120 + param2), 260, 100, 16777215, -1, 1, 0, sg.field_a.field_z);
@@ -42,7 +42,7 @@ final class fg extends sp {
         }
     }
 
-    final static String a(r param0, String param1, String param2, int param3) {
+    final static String a(Archive param0, String param1, String param2, int param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -163,7 +163,7 @@ final class fg extends sp {
         field_cb = "You have withdrawn your request to join.";
         field_X = "Remove <%0> from friend list";
         field_Y = 20;
-        field_eb = new nj();
+        field_eb = new IntrusiveDeque();
         field_db = "Game full";
     }
 }

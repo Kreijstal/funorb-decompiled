@@ -6,7 +6,7 @@ final class lc {
     static int field_b;
     static String field_c;
     static int field_a;
-    static cr field_e;
+    static UiPanel field_e;
     static double field_g;
     static int field_f;
 
@@ -37,8 +37,8 @@ final class lc {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ed var16 = null;
-        ed var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -50,10 +50,10 @@ final class lc {
         int var4Lifetime5;
         var15 = Vertigo2.field_L ? 1 : 0;
         try {
-          var16 = new ed(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_u = -2 + param1.length;
-          eo.field_m = var17.a((byte) -11);
+          var17.position = -2 + param1.length;
+          eo.field_m = var17.readUnsignedShort((byte) -11);
           vi.field_w = new int[eo.field_m];
           vl.field_j = new boolean[eo.field_m];
           pc.field_a = new int[eo.field_m];
@@ -61,26 +61,26 @@ final class lc {
           ca.field_a = new int[eo.field_m];
           ej.field_c = new byte[eo.field_m][];
           se.field_y = new byte[eo.field_m][];
-          var17.field_u = param1.length - 7 - eo.field_m * 8;
-          ql.field_M = var17.a((byte) -11);
-          vj.field_c = var17.a((byte) -11);
-          var3 = (var17.h(-11) & 255) + 1;
+          var17.position = param1.length - 7 - eo.field_m * 8;
+          ql.field_M = var17.readUnsignedShort((byte) -11);
+          vj.field_c = var17.readUnsignedShort((byte) -11);
+          var3 = (var17.readUnsignedByte(-11) & 255) + 1;
           for (var4 = 0; eo.field_m > var4; var4++) {
-            ca.field_a[var4] = var16.a((byte) -11);
+            ca.field_a[var4] = var16.readUnsignedShort((byte) -11);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < eo.field_m; var4Lifetime1++) {
-            pc.field_a[var4Lifetime1] = var17.a((byte) -11);
+            pc.field_a[var4Lifetime1] = var17.readUnsignedShort((byte) -11);
           }
           for (var4Lifetime2 = 0; eo.field_m > var4Lifetime2; var4Lifetime2++) {
-            mh.field_c[var4Lifetime2] = var17.a((byte) -11);
+            mh.field_c[var4Lifetime2] = var17.readUnsignedShort((byte) -11);
           }
           for (var4Lifetime3 = 0; eo.field_m > var4Lifetime3; var4Lifetime3++) {
-            vi.field_w[var4Lifetime3] = var17.a((byte) -11);
+            vi.field_w[var4Lifetime3] = var17.readUnsignedShort((byte) -11);
           }
-          var17.field_u = -(3 * (var3 - 1)) + (param1.length - 7 - eo.field_m * 8);
+          var17.position = -(3 * (var3 - 1)) + (param1.length - 7 - eo.field_m * 8);
           in.field_c = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            in.field_c[var4Lifetime4] = var17.m(0);
+            in.field_c[var4Lifetime4] = var17.readUnsignedMedium(0);
             if (in.field_c[var4Lifetime4] == 0) {
               in.field_c[var4Lifetime4] = 1;
             }
@@ -88,7 +88,7 @@ final class lc {
           if (param0 <= 52) {
             return;
           }
-          var17.field_u = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < eo.field_m; var4Lifetime5++) {
             var5 = mh.field_c[var4Lifetime5];
             var6 = vi.field_w[var4Lifetime5];
@@ -102,16 +102,16 @@ final class lc {
             var9 = var19;
             ej.field_c[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.h(-11);
+            var11 = var17.readUnsignedByte(-11);
             stackIn_24_0 = 0;
             stackIn_24_1 = var11 & 1;
             if (stackIn_24_0 == stackIn_24_1) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var17.g(97);
+                var8[var12] = var17.readSignedByte(97);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$1 = var17.g(102);
+                  dupTemp$1 = var17.readSignedByte(102);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_34_0 = var10;
@@ -126,13 +126,13 @@ final class lc {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var13 * var5 + var12] = var17.g(106);
+                  var8[var13 * var5 + var12] = var17.readSignedByte(106);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$0 = var17.g(112);
+                    dupTemp$0 = var17.readSignedByte(112);
                     var9[var12 + var5 * var13] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_50_0 = var10;
@@ -166,7 +166,7 @@ final class lc {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 30015) {
-          field_e = (cr) null;
+          field_e = (UiPanel) null;
         }
         field_e = null;
     }

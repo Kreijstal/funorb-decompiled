@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dp extends ji {
+final class dp extends TextureOperator {
     static String[] field_F;
     private int field_z;
     static int[] field_A;
@@ -10,7 +10,7 @@ final class dp extends ji {
     private int[] field_B;
     private int field_C;
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -22,13 +22,13 @@ final class dp extends ji {
         try {
           var4_int = param1;
           if (var4_int == 0) {
-            this.field_z = param2.h(-11);
+            this.field_z = param2.readUnsignedByte(-11);
           } else {
             if (1 == var4_int) {
-              this.field_C = param2.a((byte) -11);
+              this.field_C = param2.readUnsignedShort((byte) -11);
             } else {
               if (var4_int == 2) {
-                this.field_y = param2.h(-11);
+                this.field_y = param2.readUnsignedByte(-11);
               }
             }
           }
@@ -77,15 +77,15 @@ final class dp extends ji {
           if (this.field_y == 0) {
             var5 = 0;
             var6 = 0;
-            L8: while (true) {
+            scanLoop1: while (true) {
               if (var6 < this.field_z) {
                 if (this.field_B[var6] <= var4 &&
                   this.field_B[1 + var6] > var4) {
                   if (this.field_D[var6] <= var4) {
-                    break L8;
+                    break scanLoop1;
                   }
                   var5 = 4096;
-                  break L8;
+                  break scanLoop1;
                 }
                 var6++;
                 continue;
@@ -117,15 +117,15 @@ final class dp extends ji {
               }
               var11 = 0;
               var9Lifetime1 = var11;
-              L5: while (true) {
+              scanLoop2: while (true) {
                 if (var11 < this.field_z) {
                   if (var6Lifetime1 >= this.field_B[var11] &&
                     this.field_B[var11 + 1] > var6Lifetime1) {
                     if (this.field_D[var11] <= var6Lifetime1) {
-                      break L5;
+                      break scanLoop2;
                     }
                     var7 = 4096;
-                    break L5;
+                    break scanLoop2;
                   }
                   var11++;
                   continue;
@@ -278,7 +278,7 @@ final class dp extends ji {
               var5 = 0;
               var2 = var5;
               while (var5 < 112) {
-                cr.field_eb[var5] = false;
+                UiPanel.field_eb[var5] = false;
                 var5++;
               }
               fh.field_w = bd.field_f;
@@ -287,10 +287,10 @@ final class dp extends ji {
                 var2 = bq.field_D[bd.field_f];
                 bd.field_f = 127 & bd.field_f + 1;
                 if (var2 >= 0) {
-                  cr.field_eb[var2] = true;
+                  UiPanel.field_eb[var2] = true;
                   continue;
                 }
-                cr.field_eb[~var2] = false;
+                UiPanel.field_eb[~var2] = false;
               }
             }
             ah.field_l = ro.field_e;

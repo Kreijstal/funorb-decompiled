@@ -8,17 +8,17 @@ final class sl extends ro {
     private String field_r;
     private int field_t;
     static boolean[] field_m;
-    private cc field_p;
+    private BitmapFont field_p;
     static long field_w;
     private int field_j;
     private int field_k;
     static int field_l;
     private int field_n;
     private int field_v;
-    static lg field_u;
+    static Model field_u;
     private boolean field_o;
 
-    final void a(int param0, cc param1, String param2, int param3, int param4) {
+    final void a(int param0, BitmapFont param1, String param2, int param3, int param4) {
         lq var8 = null;
         int var7 = 0;
         if (param3 != -12558) {
@@ -51,10 +51,10 @@ final class sl extends ro {
 
     final static boolean b(int param0) {
         int var1 = -92 / ((param0 - 49) / 40);
-        return dc.field_L != null ? true : uj.field_g;
+        return dc.field_L != null ? true : MenuSelectionCursor.field_g;
     }
 
-    final void b(int param0, cc param1, String param2, int param3, int param4) {
+    final void b(int param0, BitmapFont param1, String param2, int param3, int param4) {
         lq var7 = null;
         lq var8 = null;
         if (param2 == null) {
@@ -97,7 +97,7 @@ final class sl extends ro {
         }
     }
 
-    final void a(int param0, String param1, int param2, cc param3, int param4, int param5, int param6, int param7) {
+    final void a(int param0, String param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7) {
         lq stackIn_34_0;
         lq stackIn_34_1;
         int stackIn_34_2;
@@ -107,7 +107,7 @@ final class sl extends ro {
         int stackIn_35_4 = 0;
         lq stackIn_38_0;
         String stackIn_38_1;
-        cc stackIn_38_2;
+        BitmapFont stackIn_38_2;
         int stackIn_38_3;
         int stackIn_39_4;
         RuntimeException stackIn_44_0 = null;
@@ -201,7 +201,7 @@ final class sl extends ro {
               var14.field_c[var13.length()] = param3.c(var13);
               stackIn_38_0 = var14;
               stackIn_38_1 = var13;
-              stackIn_38_2 = (cc) (param3);
+              stackIn_38_2 = (BitmapFont) (param3);
               stackIn_38_3 = 83;
               if (param4 == 3) {
                 stackIn_39_4 = this.a(var13, false, param3.c(var13), param6);
@@ -234,7 +234,7 @@ final class sl extends ro {
         }
     }
 
-    final void a(int param0, byte param1, cc param2, int param3, String param4) {
+    final void a(int param0, byte param1, BitmapFont param2, int param3, String param4) {
         lq var8 = null;
         lq var9 = null;
         if (param1 <= 83) {
@@ -266,7 +266,7 @@ final class sl extends ro {
     public sl() {
     }
 
-    private final lq a(String param0, byte param1, cc param2, int param3) {
+    private final lq a(String param0, byte param1, BitmapFont param2, int param3) {
         lq var5 = null;
         RuntimeException var5_ref = null;
         lq var6 = null;

@@ -48,19 +48,19 @@ final class ao extends d {
         }
     }
 
-    final static void a(int param0, r param1) {
-        er var2 = null;
+    final static void a(int param0, Archive param1) {
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new er(param1.a("final_frame.jpg", "", 0), (java.awt.Component) ((Object) ne.field_F));
+          var2 = new Sprite(param1.a("final_frame.jpg", "", 0), (java.awt.Component) ((Object) ne.field_F));
           var3 = var2.field_y;
           var4 = var2.field_t;
-          tg.a((byte) -31);
-          qn.field_r = new er(var3, param0 * var4 / 4);
+          DelegatingCanvas.a((byte) -31);
+          qn.field_r = new Sprite(var3, param0 * var4 / 4);
           qn.field_r.d();
           var2.c(0, 0);
-          lr.field_O = new er(var3, -qn.field_r.field_t + var4);
+          lr.field_O = new Sprite(var3, -qn.field_r.field_t + var4);
           lr.field_O.d();
           var2.c(0, -qn.field_r.field_t);
           lr.field_O.field_z = qn.field_r.field_t;
@@ -87,7 +87,7 @@ final class ao extends d {
         field_Q = null;
     }
 
-    final boolean a(int param0, int param1, int param2, iq param3, int param4, byte param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, byte param5, int param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -97,18 +97,18 @@ final class ao extends d {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        r var13 = null;
+        Archive var13 = null;
         var12 = Vertigo2.field_L ? 1 : 0;
         try {
           if (!super.a(param0, param1, param2, param3, param4, (byte) -119, param6)) {
             if (param5 > -107) {
-              var13 = (r) null;
-              ao.a(41, (r) null);
+              var13 = (Archive) null;
+              ao.a(41, (Archive) null);
             }
             return false;
           }
-          var8_int = param0 - param1 - this.field_o - this.field_J;
-          var9 = param6 - this.field_t + (-param2 - this.field_M);
+          var8_int = param0 - param1 - this.x - this.field_J;
+          var9 = param6 - this.y + (-param2 - this.field_M);
           if (this.field_L * this.field_L > var9 * var9 + var8_int * var8_int) {
             var10 = Math.atan2((double)var9, (double)var8_int) - lb.field_g;
             if (0.0 > var10) {

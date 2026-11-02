@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bm extends ji {
+final class bm extends TextureOperator {
     private int field_F;
     private int field_C;
     static tj field_I;
@@ -29,7 +29,7 @@ final class bm extends ji {
         if (-param4 + param5 >= ap.field_e &&
           ib.field_a >= param5 + param4 &&
           ua.field_e <= param1 - param0 &&
-          param1 + param0 <= cj.field_D) {
+          param1 + param0 <= WidgetContainer.field_D) {
           rc.a(param4, param2, param0, param1, param5, (byte) -126);
         } else {
           mq.a(false, param0, param2, param4, param1, param5);
@@ -39,7 +39,7 @@ final class bm extends ji {
         }
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -53,15 +53,15 @@ final class bm extends ji {
           var4_int = param1;
           if (var4_int != 0) {
             if (1 == var4_int) {
-              this.field_F = param2.a((byte) -11);
+              this.field_F = param2.readUnsignedShort((byte) -11);
             } else {
               if (var4_int == 2) {
-                stackIn_11_1 = (param2.h(-11) == 1);
+                stackIn_11_1 = (param2.readUnsignedByte(-11) == 1);
                 this.field_o = stackIn_11_1;
               }
             }
           } else {
-            this.field_C = param2.a((byte) -11);
+            this.field_C = param2.readUnsignedShort((byte) -11);
           }
           if (param0 != 110) {
             field_H = 55L;
@@ -141,12 +141,12 @@ final class bm extends ji {
     }
 
     final static void g(int param0) {
-        pm.field_a = false;
-        if (null != ji.field_n) {
-          ji.field_n.a((byte) 34);
+        BufferedSocket.field_a = false;
+        if (null != TextureOperator.field_n) {
+          TextureOperator.field_n.a((byte) 34);
         }
         if (ui.field_g != param0) {
-          fb.h(0);
+          SpriteState.h(0);
         }
         gr.field_Y = 0;
     }

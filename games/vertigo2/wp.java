@@ -12,9 +12,9 @@ final class wp {
         throw new IllegalStateException();
     }
 
-    final static er[] a(int param0, byte param1, int param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3) {
         if (param1 < 72) {
-          return (er[]) null;
+          return (Sprite[]) null;
         }
         return nr.a(param3, 1, param2, param0, -33);
     }
@@ -32,24 +32,24 @@ final class wp {
         field_e = null;
     }
 
-    final static ig a(String param0, byte param1, int param2) {
-        aj var3 = null;
+    final static SocketConnector a(String param0, byte param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        ig stackIn_2_0 = null;
-        aj stackIn_4_0 = null;
+        SocketConnector stackIn_2_0 = null;
+        ProxySocketConnector stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new aj();
-          ((ig) ((Object) var3)).field_b = param2;
-          ((ig) ((Object) var3)).field_a = param0;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).port = param2;
+          ((SocketConnector) ((Object) var3)).host = param0;
           if (param1 == -109) {
             stackIn_4_0 = var3;
-            return (ig) ((Object) stackIn_4_0);
+            return (SocketConnector) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (ig) null;
+          stackIn_2_0 = (SocketConnector) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

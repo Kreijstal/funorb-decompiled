@@ -10,15 +10,15 @@ abstract class da extends de implements ih {
     public final boolean c(int param0) {
         if (param0 != -12211) {
           field_j = -18;
-          if (this.field_h.field_w != null) {
-            return this.field_h.field_w.length() == 0 ? true : false;
+          if (this.field_h.text != null) {
+            return this.field_h.text.length() == 0 ? true : false;
           }
           return true;
         }
-        if (this.field_h.field_w == null) {
+        if (this.field_h.text == null) {
           return true;
         }
-        if (this.field_h.field_w.length() != 0) {
+        if (this.field_h.text.length() != 0) {
           return false;
         }
         return true;
@@ -37,10 +37,10 @@ abstract class da extends de implements ih {
 
     final ba a(byte param0) {
         if (param0 > 24) {
-          return this.a(-1, this.field_h.field_w);
+          return this.a(-1, this.field_h.text);
         }
         field_i = 123;
-        return this.a(-1, this.field_h.field_w);
+        return this.a(-1, this.field_h.text);
     }
 
     da(kp param0) {
@@ -64,10 +64,10 @@ abstract class da extends de implements ih {
 
     final String f(int param0) {
         if (param0 < -68) {
-          return this.b(3614, this.field_h.field_w);
+          return this.b(3614, this.field_h.text);
         }
         this.f(-53);
-        return this.b(3614, this.field_h.field_w);
+        return this.b(3614, this.field_h.text);
     }
 
     public final void a(int param0, kp param1) {

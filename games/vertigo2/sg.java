@@ -7,7 +7,7 @@ final class sg {
     int field_b;
     int field_g;
     static int field_d;
-    static cc field_a;
+    static BitmapFont field_a;
     static String field_c;
     int field_h;
 
@@ -16,7 +16,7 @@ final class sg {
           field_d = -110;
         }
         String var2 = (String) null;
-        aj.a((String) null, mk.field_S, (byte) 33);
+        ProxySocketConnector.a((String) null, mk.field_S, (byte) 33);
     }
 
     public static void a(byte param0) {
@@ -114,7 +114,7 @@ final class sg {
           var37 = var30;
           var38 = var29 * (-1 + var12);
           if (param6 >= ua.field_e &&
-            cj.field_D >= param6) {
+            WidgetContainer.field_D >= param6) {
             var57 = vl.field_e[param6];
             var40 = pk.a((byte) -14, ib.field_a, -param2 + param4, ap.field_e);
             var41 = pk.a((byte) -14, ib.field_a, param2 + param4, ap.field_e);
@@ -178,7 +178,7 @@ final class sg {
             if (var41Lifetime1 < ua.field_e) {
               continue;
             }
-            if (var40Lifetime1 > cj.field_D) {
+            if (var40Lifetime1 > WidgetContainer.field_D) {
               continue;
             }
             var42Lifetime1 = pk.a((byte) -14, ib.field_a, var8_int + param4, ap.field_e);
@@ -187,7 +187,7 @@ final class sg {
               if (ua.field_e <= var40Lifetime1) {
                 ki.a(-95, var43Lifetime1, vl.field_e[var40Lifetime1], var42Lifetime1, param5);
               }
-              if (cj.field_D < var41Lifetime1) {
+              if (WidgetContainer.field_D < var41Lifetime1) {
                 continue;
               }
               ki.a(-98, var43Lifetime1, vl.field_e[var41Lifetime1], var42Lifetime1, param5);
@@ -201,7 +201,7 @@ final class sg {
               ki.a(-113, var45, var58, var44, param7);
               ki.a(-90, var44, var58, var42Lifetime1, param5);
             }
-            if (var41Lifetime1 > cj.field_D) {
+            if (var41Lifetime1 > WidgetContainer.field_D) {
               continue;
             }
             var59 = vl.field_e[var41Lifetime1];

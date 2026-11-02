@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gn {
-    static cr field_f;
+    static UiPanel field_f;
     static String field_e;
     static boolean field_d;
     static String field_c;

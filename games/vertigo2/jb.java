@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jb extends ji {
+final class jb extends TextureOperator {
     private int field_K;
     private int field_J;
     private int field_B;
@@ -18,7 +18,7 @@ final class jb extends ji {
     private int field_E;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        tg.a((byte) -50);
+        DelegatingCanvas.a((byte) -50);
         if (param3 == -30486) {
           bi.c(param2, param0, param1, param4);
           return;
@@ -115,7 +115,7 @@ final class jb extends ji {
         return;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -128,14 +128,14 @@ final class jb extends ji {
           var4_int = param1;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_D = (param2.g(111) << 12) / 100;
+              this.field_D = (param2.readSignedByte(111) << 12) / 100;
             } else {
               if (var4_int == 2) {
-                this.field_I = (param2.g(81) << 12) / 100;
+                this.field_I = (param2.readSignedByte(81) << 12) / 100;
               }
             }
           } else {
-            this.field_J = param2.n(2);
+            this.field_J = param2.readSignedShort(2);
           }
           if (param0 != 110) {
             this.field_z = -99;

@@ -53,18 +53,18 @@ final class ce {
         long dupTemp$2 = 0L;
         int var2;
         if (null == hb.field_q) {
-          hb.field_q = kr.field_g.a(-121, cl.field_d, nb.field_y);
+          hb.field_q = kr.field_g.requestSocket(-121, cl.field_d, nb.field_y);
         }
-        if (hb.field_q.field_b == 0) {
+        if (hb.field_q.status == 0) {
           return false;
         }
         dupTemp$2 = gk.a(99);
         bm.field_H = dupTemp$2;
         gn.field_b = dupTemp$2;
         var2 = 67 % ((param0 - 60) / 39);
-        if (1 != hb.field_q.field_b) {
+        if (1 != hb.field_q.status) {
         }
-        rg.field_d = gf.field_h;
+        rg.field_d = NodeHashTableIterator.field_h;
         hb.field_q = null;
         return true;
     }
@@ -130,7 +130,7 @@ final class ce {
         RuntimeException var2_ref = null;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
-          param1.c(2);
+          param1.unlink(2);
           if (!param0) {
             field_b = -90;
           }
@@ -143,7 +143,7 @@ final class ce {
             break;
           }
           if (var2 == null) {
-            nr.field_p.a(param1, false);
+            nr.field_p.addFirst(param1, false);
           } else {
             jn.a(param1, var2, 18724);
           }

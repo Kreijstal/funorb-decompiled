@@ -27,7 +27,7 @@ abstract class ug {
 
     final static void a(int param0, int param1, int param2, long param3, String param4) {
         nm.field_E = param0;
-        qi.field_b = param4;
+        FullscreenFocusCanvas.field_b = param4;
         if (param1 != -3) {
           return;
         }
@@ -66,7 +66,7 @@ abstract class ug {
             return stackIn_4_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = cg.field_a;
+            stackIn_7_0 = GameKeyHandler.field_a;
             return stackIn_7_0;
           }
           var3 = jr.a((byte) -9, '.', param0);
@@ -81,7 +81,7 @@ abstract class ug {
           var5 = 0;
           while (true) {
             if (var4.length <= var5) {
-              stackIn_20_0 = cr.b(var3[var3.length - 1], 0);
+              stackIn_20_0 = UiPanel.b(var3[var3.length - 1], 0);
               return stackIn_20_0;
             }
             var6 = var4[var5];
@@ -108,7 +108,7 @@ abstract class ug {
         }
     }
 
-    final static r a(int param0, boolean param1, boolean param2, boolean param3, int param4) {
+    final static Archive a(int param0, boolean param1, boolean param2, boolean param3, int param4) {
         if (!param3) {
           return vo.a(false, 124, param4, param0, param1, param2);
         }
@@ -124,7 +124,7 @@ abstract class ug {
         }
     }
 
-    final static gd a(ed param0, int param1) {
+    final static gd a(PacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
         gd stackIn_3_0 = null;
@@ -137,7 +137,7 @@ abstract class ug {
             var3 = (String) null;
             ug.a((String) null, (byte) -93);
           }
-          stackIn_3_0 = new gd(param0.n(2), param0.n(2), param0.n(param1 - 44), param0.n(2), param0.n(2), param0.n(2), param0.n(2), param0.n(param1 ^ 44), param0.m(0), param0.h(param1 - 57));
+          stackIn_3_0 = new gd(param0.readSignedShort(2), param0.readSignedShort(2), param0.readSignedShort(param1 - 44), param0.readSignedShort(2), param0.readSignedShort(2), param0.readSignedShort(2), param0.readSignedShort(2), param0.readSignedShort(param1 ^ 44), param0.readUnsignedMedium(0), param0.readUnsignedByte(param1 - 57));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

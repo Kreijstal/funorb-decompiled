@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class np extends cr {
-    private cr field_Hb;
-    static cr field_Ib;
+final class np extends UiPanel {
+    private UiPanel field_Hb;
+    static UiPanel field_Ib;
     static float field_Nb;
-    static r field_Kb;
+    static Archive field_Kb;
     static int field_Lb;
     static int field_Ob;
     static String field_Mb;
@@ -43,7 +43,7 @@ final class np extends cr {
         int var1 = 87 / ((-67 - param0) / 34);
     }
 
-    np(cr param0, cr param1, cr param2, cr param3, cr param4, cr param5) {
+    np(UiPanel param0, UiPanel param1, UiPanel param2, UiPanel param3, UiPanel param4, UiPanel param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -60,27 +60,27 @@ final class np extends cr {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        cr var8 = null;
-        cr var9 = null;
+        UiPanel var8 = null;
+        UiPanel var9 = null;
         int var10 = 0;
         int var11 = 0;
-        cr var13 = null;
-        cr var14 = null;
+        UiPanel var13 = null;
+        UiPanel var14 = null;
         int var15 = 0;
-        cr var17 = null;
+        UiPanel var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new cr(0L, param1, br.field_W.toUpperCase());
+          var17 = new UiPanel(0L, param1, br.field_W.toUpperCase());
           var17.field_O = 1;
-          this.field_Hb = new cr(0L, param2);
-          var8 = new cr(0L, param3);
-          var9 = new cr(0L, param3, ac.field_N);
+          this.field_Hb = new UiPanel(0L, param2);
+          var8 = new UiPanel(0L, param3);
+          var9 = new UiPanel(0L, param3, ac.field_N);
           var9.field_O = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; sd.field_M.length > var12; var12++) {
-            var13 = new cr(0L, param3, qr.field_k[var12]);
-            var14 = new cr(0L, param3, sd.field_M[var12]);
+            var13 = new UiPanel(0L, param3, qr.field_k[var12]);
+            var14 = new UiPanel(0L, param3, sd.field_M[var12]);
             var15 = param3.field_z.c(sd.field_M[var12]);
             var13.a(115, 65, 15, var10, 20);
             if (var11 < var15) {

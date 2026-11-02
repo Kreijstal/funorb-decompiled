@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ip {
-    static cr field_a;
+    static UiPanel field_a;
 
     final static void a(byte param0, String param1, int param2) {
         try {
@@ -84,7 +84,7 @@ final class ip {
           var26 = var16 - var20 * (-1 + var22);
           var27 = var13 << 2;
           if (param3 != -45) {
-            field_a = (cr) null;
+            field_a = (UiPanel) null;
           }
           var28 = var14 << 2;
           var29 = var15 << 2;

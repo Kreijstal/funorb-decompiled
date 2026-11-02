@@ -5,7 +5,7 @@ abstract class jq {
     static String field_d;
     int field_a;
     static int field_e;
-    static er[][] field_c;
+    static Sprite[][] field_c;
     static int field_b;
     int field_g;
     int field_f;
@@ -15,7 +15,7 @@ abstract class jq {
         if (param0 > -87) {
           return;
         }
-        field_c = (er[][]) null;
+        field_c = (Sprite[][]) null;
     }
 
     final static boolean a(char param0, int param1) {
@@ -62,7 +62,7 @@ abstract class jq {
     abstract void b(int param0, byte param1, int param2);
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        er var6 = new er(param3, param4);
+        Sprite var6 = new Sprite(param3, param4);
         var6.d();
         bi.f(0, 0, param3, param4, 12, 5921370);
         if (param0 > 57) {

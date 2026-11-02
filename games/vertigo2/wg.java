@@ -9,17 +9,17 @@ final class wg {
     private int[] field_b;
     private int field_e;
     private int field_f;
-    static nj field_i;
+    static IntrusiveDeque field_i;
     private int field_k;
     private int field_c;
     static int field_g;
 
-    final void a(lg param0, int param1) {
+    final void a(Model param0, int param1) {
         try {
           param0.a(jm.field_B, this.field_e);
           if (param1 != -875079928) {
-            lg var4 = (lg) null;
-            this.a((lg) null, 64);
+            Model var4 = (Model) null;
+            this.a((Model) null, 64);
           }
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "wg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -311,6 +311,6 @@ final class wg {
     }
 
     static {
-        field_i = new nj();
+        field_i = new IntrusiveDeque();
     }
 }

@@ -2,23 +2,23 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ha {
-    private er field_e;
-    private er field_c;
+    private Sprite field_e;
+    private Sprite field_c;
     int field_d;
     private int field_b;
-    static cr field_a;
+    static UiPanel field_a;
 
-    final static void a(int param0, er[][] param1, int param2, String[][] param3, er[][] param4, String[] param5, String[] param6, int param7, String[][] param8, int param9, int[] param10, String[] param11, byte[] param12, byte[] param13, r param14) {
+    final static void a(int param0, Sprite[][] param1, int param2, String[][] param3, Sprite[][] param4, String[] param5, String[] param6, int param7, String[][] param8, int param9, int[] param10, String[] param11, byte[] param12, byte[] param13, Archive param14) {
         nk[] array$0 = null;
         nk[] array$1 = null;
         nk[] array$2 = null;
         int var19 = 0;
-        cr stackIn_6_0;
-        cr stackIn_6_1;
+        UiPanel stackIn_6_0;
+        UiPanel stackIn_6_1;
         long stackIn_6_2;
-        cr stackIn_6_3;
-        cr stackIn_7_0 = null;
-        cr stackIn_7_1 = null;
+        UiPanel stackIn_6_3;
+        UiPanel stackIn_7_0 = null;
+        UiPanel stackIn_7_1 = null;
         String stackIn_7_4 = null;
         RuntimeException stackIn_75_0 = null;
         StringBuilder stackIn_75_1 = null;
@@ -45,15 +45,15 @@ final class ha {
         String stackIn_106_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        cr var16 = null;
+        UiPanel var16 = null;
         int var17_int = 0;
-        cr var17 = null;
+        UiPanel var17 = null;
         int var18 = 0;
         Object var19_ref = null;
         Object var20 = null;
         int var21 = 0;
-        cr var23 = null;
-        cr var24 = null;
+        UiPanel var23 = null;
+        UiPanel var24 = null;
         int var18Lifetime1;
         int var18Lifetime2;
         int var17_intLifetime1;
@@ -84,10 +84,10 @@ final class ha {
           gm.field_c[2] = fa.field_q;
           gm.field_c[4] = pq.field_g;
           gm.field_c[3] = ve.field_b;
-          im.field_j = new cr(0L, (cr) null);
-          hr.field_C = new cr((long)param9, db.field_t, kc.field_c);
-          rk.field_v = new cr(0L, sa.field_a, f.field_D);
-          ja.field_f = new od(0L, new cr(0L, (cr) null), ua.field_c, ol.field_H);
+          im.field_j = new UiPanel(0L, (UiPanel) null);
+          hr.field_C = new UiPanel((long)param9, db.field_t, kc.field_c);
+          rk.field_v = new UiPanel(0L, MouseInputHandler.field_a, f.field_D);
+          ja.field_f = new od(0L, new UiPanel(0L, (UiPanel) null), ua.field_c, ol.field_H);
           im.field_j.b(hr.field_C, 118);
           if (db.field_S) {
             im.field_j.b(rk.field_v, 121);
@@ -98,24 +98,24 @@ final class ha {
           var23 = ja.field_f.field_Lb;
           var24 = var23;
           var24.field_O = 1;
-          bf.field_c = new cr(0L, ee.field_b);
+          bf.field_c = new UiPanel(0L, ee.field_b);
           bf.field_c.field_O = 1;
-          vb.field_j = new cr(0L, vc.field_b, sl.field_x.toUpperCase());
-          qn.field_s = new cr(0L, j.field_q, il.field_j.toUpperCase());
-          ja.field_b = new cr(0L, dj.field_b);
-          po.field_a = new cr(0L, db.field_t, pe.field_u);
-          mn.field_n = new cr(0L, kl.field_Ib, he.field_B);
-          ve.field_f = new cr(0L, kl.field_Ib, uj.field_h);
-          ok.field_b = new cr(0L, kl.field_Ib, fi.field_j);
-          tp.field_Nb = new cr(0L, kl.field_Ib, eq.field_C);
-          sa.field_b = new cr(0L, sa.field_a, fm.field_a);
-          uk.field_v = new od(0L, new cr(0L, (cr) null), ua.field_c, ol.field_H);
-          b.field_h = new cr(0L, fb.field_u, ja.field_c.toUpperCase());
+          vb.field_j = new UiPanel(0L, vc.field_b, sl.field_x.toUpperCase());
+          qn.field_s = new UiPanel(0L, j.field_q, MouseWheelInput.field_j.toUpperCase());
+          ja.field_b = new UiPanel(0L, dj.field_b);
+          po.field_a = new UiPanel(0L, db.field_t, pe.field_u);
+          mn.field_n = new UiPanel(0L, kl.field_Ib, he.field_B);
+          ve.field_f = new UiPanel(0L, kl.field_Ib, MenuSelectionCursor.field_h);
+          ok.field_b = new UiPanel(0L, kl.field_Ib, fi.field_j);
+          tp.field_Nb = new UiPanel(0L, kl.field_Ib, eq.field_C);
+          MouseInputHandler.field_b = new UiPanel(0L, MouseInputHandler.field_a, fm.field_a);
+          uk.field_v = new od(0L, new UiPanel(0L, (UiPanel) null), ua.field_c, ol.field_H);
+          b.field_h = new UiPanel(0L, SpriteState.field_u, ja.field_c.toUpperCase());
           b.field_h.field_lb = db.field_S;
           stackIn_6_0 = null;
           stackIn_6_1 = null;
           stackIn_6_2 = 0L;
-          stackIn_6_3 = fb.field_u;
+          stackIn_6_3 = SpriteState.field_u;
           if (db.field_S) {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
@@ -125,8 +125,8 @@ final class ha {
             stackIn_7_1 = null;
             stackIn_7_4 = jm.field_C;
           }
-          la.field_f = new cr(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
-          ud.field_A = new cr(0L, (cr) null);
+          la.field_f = new UiPanel(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
+          ud.field_A = new UiPanel(0L, (UiPanel) null);
           ud.field_A.b(qn.field_s, 123);
           ud.field_A.b(ja.field_b, 125);
           ja.field_b.b(po.field_a, param9 + 124);
@@ -136,72 +136,72 @@ final class ha {
             ja.field_b.b(ok.field_b, 125);
           }
           ja.field_b.b(tp.field_Nb, 122);
-          ja.field_b.b(sa.field_b, 120);
+          ja.field_b.b(MouseInputHandler.field_b, 120);
           ja.field_b.b(uk.field_v, 123);
           if (db.field_S) {
             ud.field_A.b(b.field_h, 118);
           }
           ud.field_A.b(la.field_f, param9 + 123);
-          rh.field_I = new cr(0L, ee.field_b);
+          rh.field_I = new UiPanel(0L, ee.field_b);
           rh.field_I.field_ab = 0;
           rh.field_I.field_O = 1;
-          gb.field_c = new cr(0L, ub.field_t, bm.field_y.toUpperCase());
-          oc.field_v = new cr(0L, hb.field_D);
+          gb.field_c = new UiPanel(0L, ub.field_t, bm.field_y.toUpperCase());
+          oc.field_v = new UiPanel(0L, hb.field_D);
           oc.field_v.b(rh.field_I, 118);
           oc.field_v.b(gb.field_c, 119);
-          oi.field_a = new cr(0L, ua.field_c);
+          oi.field_a = new UiPanel(0L, ua.field_c);
           oi.field_a.a(ee.field_b, -83);
           var16 = oi.field_a;
           oi.field_a.field_ab = 1;
           var16.field_O = 1;
-          de.field_g = new cr(0L, (cr) null);
-          nb.field_D = new cr(0L, ee.field_b);
+          de.field_g = new UiPanel(0L, (UiPanel) null);
+          nb.field_D = new UiPanel(0L, ee.field_b);
           nb.field_D.field_O = 1;
-          uc.field_a = new cr(0L, db.field_t, kc.field_c);
-          eq.field_z = new cr(0L, sa.field_a, f.field_D);
-          vd.field_d = new od(0L, new cr(0L, (cr) null), ua.field_c, ol.field_H);
+          uc.field_a = new UiPanel(0L, db.field_t, kc.field_c);
+          eq.field_z = new UiPanel(0L, MouseInputHandler.field_a, f.field_D);
+          vd.field_d = new od(0L, new UiPanel(0L, (UiPanel) null), ua.field_c, ol.field_H);
           de.field_g.b(nb.field_D, 118);
           de.field_g.b(uc.field_a, param9 + 125);
           if (db.field_S) {
             de.field_g.b(eq.field_z, 119);
           }
           de.field_g.b(vd.field_d, 124);
-          ne.field_G = new cr(0L, vc.field_b, pb.field_a.toUpperCase());
-          ud.field_x = new cr(0L, j.field_q);
-          fd.field_s = new cr(0L, dj.field_b);
-          pc.field_b = new cr(0L, gn.field_f, me.field_c.toUpperCase());
-          el.field_h = new cr[4 + param7];
+          ne.field_G = new UiPanel(0L, vc.field_b, pb.field_a.toUpperCase());
+          ud.field_x = new UiPanel(0L, j.field_q);
+          fd.field_s = new UiPanel(0L, dj.field_b);
+          pc.field_b = new UiPanel(0L, gn.field_f, me.field_c.toUpperCase());
+          IterableNodeHashTable.field_h = new UiPanel[4 + param7];
           mg.field_S = new nk[param7 + 4][];
-          el.field_h[0] = new cr(0L, fm.field_e, wo.field_b);
+          IterableNodeHashTable.field_h[0] = new UiPanel(0L, fm.field_e, wo.field_b);
           mg.field_S[0] = new nk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            mg.field_S[0][1 + var17_int] = new nk(0L, tr.field_l, (cr) null, ja.field_e, eg.field_r[var17_int], gm.field_c[var17_int]);
+            mg.field_S[0][1 + var17_int] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, eg.field_r[var17_int], gm.field_c[var17_int]);
           }
           if (rc.field_a.length >= 2) {
-            el.field_h[1] = new cr(0L, fm.field_e, rq.field_v);
+            IterableNodeHashTable.field_h[1] = new UiPanel(0L, fm.field_e, rq.field_v);
             array$0 = new nk[rc.field_a.length + 1];
             mg.field_S[1] = array$0;
-            mg.field_S[1][0] = new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) null, pp.field_r);
+            mg.field_S[1][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < rc.field_a.length; var17_intLifetime1++) {
-              mg.field_S[1][var17_intLifetime1 + 1] = new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) null, Integer.toString(rc.field_a[var17_intLifetime1]));
+              mg.field_S[1][var17_intLifetime1 + 1] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, Integer.toString(rc.field_a[var17_intLifetime1]));
             }
           }
-          el.field_h[2] = new cr(0L, fm.field_e, in.field_f);
-          mg.field_S[2] = new nk[]{new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) null, pp.field_r), new nk(0L, tr.field_l, (cr) null, ja.field_e, sf.field_a[0], nf.field_w), new nk(0L, tr.field_l, (cr) null, ja.field_e, sf.field_a[1], rg.field_h)};
+          IterableNodeHashTable.field_h[2] = new UiPanel(0L, fm.field_e, in.field_f);
+          mg.field_S[2] = new nk[]{new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[0], nf.field_w), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[1], rg.field_h)};
           if (sp.field_O > 1) {
-            el.field_h[3] = new cr(0L, fm.field_e, um.field_H);
+            IterableNodeHashTable.field_h[3] = new UiPanel(0L, fm.field_e, um.field_H);
             array$1 = new nk[1 + sp.field_O];
             mg.field_S[3] = array$1;
-            mg.field_S[3][0] = new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) null, pp.field_r);
+            mg.field_S[3][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < sp.field_O; var17_intLifetime2++) {
-              mg.field_S[3][var17_intLifetime2 + 1] = new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) null, gl.field_p[var17_intLifetime2]);
+              mg.field_S[3][var17_intLifetime2 + 1] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, gl.field_p[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; var17_intLifetime3 < param7; var17_intLifetime3++) {
-            el.field_h[var17_intLifetime3 + 4] = new cr(0L, fm.field_e, md.field_C[var17_intLifetime3]);
+            IterableNodeHashTable.field_h[var17_intLifetime3 + 4] = new UiPanel(0L, fm.field_e, md.field_C[var17_intLifetime3]);
             array$2 = new nk[b.a((int) oq.field_G[var17_intLifetime3], 255) + 1];
             mg.field_S[var17_intLifetime3 + 4] = array$2;
-            mg.field_S[4 + var17_intLifetime3][0] = new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) null, pp.field_r);
+            mg.field_S[4 + var17_intLifetime3][0] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r);
             for (var18 = 0; (255 & oq.field_G[var17_intLifetime3]) > var18; var18++) {
               if (kh.field_d != null) {
                 if (kh.field_d[var17_intLifetime3] == null) {
@@ -221,12 +221,12 @@ final class ha {
               } else {
                 var20 = null;
               }
-              mg.field_S[4 + var17_intLifetime3][1 + var18] = new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) (var19_ref), (String) (var20));
+              mg.field_S[4 + var17_intLifetime3][1 + var18] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < param7 + 4; var17_intLifetime4++) {
-            if (el.field_h[var17_intLifetime4] != null) {
-              el.field_h[var17_intLifetime4].field_qb = 11;
+            if (IterableNodeHashTable.field_h[var17_intLifetime4] != null) {
+              IterableNodeHashTable.field_h[var17_intLifetime4].field_qb = 11;
             }
             if (null != mg.field_S[var17_intLifetime4]) {
               for (var18Lifetime1 = 0; var18Lifetime1 < mg.field_S[var17_intLifetime4].length; var18Lifetime1++) {
@@ -237,14 +237,14 @@ final class ha {
               }
             }
           }
-          fo.field_f = new cr(0L, fb.field_u);
-          hd.field_g = new cr(0L, fb.field_u);
-          kk.field_f = new cr(0L, pn.field_N);
+          fo.field_f = new UiPanel(0L, SpriteState.field_u);
+          hd.field_g = new UiPanel(0L, SpriteState.field_u);
+          kk.field_f = new UiPanel(0L, pn.field_N);
           kk.field_f.a(ee.field_b, -86);
           var17 = kk.field_f;
           kk.field_f.field_ab = 1;
           var17.field_O = 1;
-          lb.field_c = new cr(0L, (cr) null);
+          lb.field_c = new UiPanel(0L, (UiPanel) null);
           lb.field_c.b(ud.field_x, 120);
           lb.field_c.b(fd.field_s, 118);
           fd.field_s.b(pc.field_b, 121);
@@ -252,7 +252,7 @@ final class ha {
             if ((1 != var18Lifetime2 ||
               !(rc.field_a.length < 2)) && (var18Lifetime2 != 3 ||
               !(sp.field_O <= 1))) {
-              fd.field_s.b(el.field_h[var18Lifetime2], param9 + 121);
+              fd.field_s.b(IterableNodeHashTable.field_h[var18Lifetime2], param9 + 121);
               for (var19 = 0; mg.field_S[var18Lifetime2].length > var19; var19++) {
                 if (mg.field_S[var18Lifetime2][var19] != null) {
                   fd.field_s.b(mg.field_S[var18Lifetime2][var19], 123);
@@ -263,8 +263,8 @@ final class ha {
           lb.field_c.b(fo.field_f, 119);
           lb.field_c.b(hd.field_g, 123);
           lb.field_c.b(kk.field_f, 118);
-          he.field_x = new cr(0L, ji.field_s, eh.field_g.toUpperCase());
-          Vertigo2.field_M = new cr(0L, ub.field_t, af.field_I.toUpperCase());
+          he.field_x = new UiPanel(0L, TextureOperator.field_s, eh.field_g.toUpperCase());
+          Vertigo2.field_M = new UiPanel(0L, ub.field_t, af.field_I.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -361,7 +361,7 @@ final class ha {
           hq.b(ko.field_P, -128);
         }
         if (param0 <= 72) {
-          field_a = (cr) null;
+          field_a = (UiPanel) null;
         }
         if (mp.field_b > 0) {
           hq.b(mp.field_b, -128);
@@ -407,7 +407,7 @@ final class ha {
         if (this.field_c == null ||
           this.field_c.field_y != param0 &&
           param3 != this.field_c.field_t) {
-          this.field_c = new er(param0, param3);
+          this.field_c = new Sprite(param0, param3);
         }
         param4 = 0;
         this.field_c.d();
@@ -415,7 +415,7 @@ final class ha {
         if (null == this.field_e ||
           this.field_e.field_y != param0 &&
           param3 != this.field_e.field_t) {
-          this.field_e = new er(param0, param3);
+          this.field_e = new Sprite(param0, param3);
         }
         this.field_e.d();
         bi.f(param2 + var7, var7 + param4, -3 + var7, 4027280);

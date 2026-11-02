@@ -7,12 +7,12 @@ final class re {
     static int field_j;
     private int[] field_i;
     static int field_k;
-    static r field_d;
+    static Archive field_d;
     private int field_h;
     static String field_c;
     private int field_b;
     static String field_f;
-    static r field_a;
+    static Archive field_a;
 
     final int a(int param0, int param1) {
         if (param0 != 0) {
@@ -102,9 +102,9 @@ final class re {
         this.field_i[param2] = param1;
     }
 
-    final static cr c(int param0) {
+    final static UiPanel c(int param0) {
         if (param0 != -1087) {
-          return (cr) null;
+          return (UiPanel) null;
         }
         return tf.b((byte) 98);
     }

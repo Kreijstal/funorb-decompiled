@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends sn {
+final class db extends PcmStream {
     private int[] field_v;
     int[] field_B;
     private int field_z;
@@ -16,7 +16,7 @@ final class db extends sn {
     private int[] field_F;
     private int[] field_y;
     private int[] field_Q;
-    static cr field_t;
+    static UiPanel field_t;
     private int[] field_R;
     private int[] field_T;
     private qd field_I;
@@ -204,14 +204,14 @@ final class db extends sn {
             if (var3.field_E < 0) {
               this.field_u[var3.field_q][var3.field_B] = null;
             }
-            var3.c(2);
+            var3.unlink(2);
           }
           var3 = (pe) (this.field_P.field_w.b(29));
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        er var5 = new er(param2, param1);
+        Sprite var5 = new Sprite(param2, param1);
         int[] var6 = bi.field_l;
         int var7 = bi.field_e;
         int var8 = bi.field_j;
@@ -319,7 +319,7 @@ final class db extends sn {
           if (0 <= param1.field_E && (null == param1.field_J ||
             param1.field_J.j())) {
             param1.a(-110);
-            param1.c(2);
+            param1.unlink(2);
             if (param1.field_I > 0) {
               if (param1 != this.field_L[param1.field_q][param1.field_I]) {
                 return true;
@@ -408,7 +408,7 @@ final class db extends sn {
           }
           param1.a(-117);
           if (0 <= param1.field_E) {
-            param1.c(2);
+            param1.unlink(2);
             if (param1.field_I > 0 &&
               param1 == this.field_L[param1.field_q][param1.field_I]) {
               this.field_L[param1.field_q][param1.field_I] = null;
@@ -550,7 +550,7 @@ final class db extends sn {
           if (param1.field_E < 0) {
             return true;
           }
-          param1.c(2);
+          param1.unlink(2);
           if (param1.field_I > 0 &&
             this.field_L[param1.field_q][param1.field_I] == param1) {
             this.field_L[param1.field_q][param1.field_I] = null;
@@ -765,7 +765,7 @@ final class db extends sn {
         boolean stackIn_20_3;
         pe var5;
         int var6_int;
-        ae var6;
+        PcmSample var6;
         pe var7;
         pe var8;
         int var9;
@@ -818,7 +818,7 @@ final class db extends sn {
         var7.field_v = 0;
         var7.field_D = 0;
         if (0 != this.field_H[param0]) {
-          var7.field_J = ra.a(var6, this.a((byte) -81, var7), 0, this.a(var7, 32));
+          var7.field_J = SamplePlaybackStream.a(var6, this.a((byte) -81, var7), 0, this.a(var7, 32));
           stackIn_19_1 = var7;
           stackIn_19_2 = 124;
           if (var11.field_n[param3] >= 0) {
@@ -830,7 +830,7 @@ final class db extends sn {
           }
           this.a(stackIn_19_1, (byte) stackIn_19_2, stackIn_20_3);
         } else {
-          var7.field_J = ra.a(var6, this.a((byte) -127, var7), this.a(var7, (byte) 93), this.a(var7, param1 ^ 31391));
+          var7.field_J = SamplePlaybackStream.a(var6, this.a((byte) -127, var7), this.a(var7, (byte) 93), this.a(var7, param1 ^ 31391));
         }
         if (0 > var11.field_n[param3]) {
           var7.field_J.i(-1);
@@ -844,7 +844,7 @@ final class db extends sn {
           }
           this.field_L[param0][var7.field_I] = var7;
         }
-        this.field_P.field_w.a(var7, false);
+        this.field_P.field_w.addFirst(var7, false);
         this.field_u[param0][param3] = var7;
         return;
     }
@@ -899,7 +899,7 @@ final class db extends sn {
           var3_int = var3_int + ((this.field_W[param1.field_q] - 8192) * this.field_w[param1.field_q] >> 12);
           var4 = param1.field_p;
           if (param0 > -44) {
-            field_t = (cr) null;
+            field_t = (UiPanel) null;
           }
           if (var4.field_b > 0 && (!(var4.field_c <= 0) ||
             this.field_X[param1.field_q] > 0)) {
@@ -1017,8 +1017,8 @@ final class db extends sn {
         }
     }
 
-    final synchronized sn c() {
-        return (sn) ((Object) this.field_P);
+    final synchronized PcmStream c() {
+        return (PcmStream) ((Object) this.field_P);
     }
 
     private final synchronized void a(int param0, int param1, boolean param2, boolean param3, boolean param4, si param5) {
@@ -1052,7 +1052,7 @@ final class db extends sn {
         }
     }
 
-    final synchronized sn a() {
+    final synchronized PcmStream a() {
         return null;
     }
 
@@ -1113,7 +1113,7 @@ final class db extends sn {
           if (param1 < 55) {
             this.field_V = false;
           }
-          var4_int = param0.field_z.field_s.length;
+          var4_int = param0.field_z.samples.length;
           if (param2 &&
             param0.field_z.field_p) {
             var6 = var4_int + (var4_int - param0.field_z.field_o);
@@ -1166,7 +1166,7 @@ final class db extends sn {
         this.b(param0, 8192);
     }
 
-    final synchronized boolean a(int param0, id param1, si param2, r param3, byte param4) {
+    final synchronized boolean a(int param0, id param1, si param2, Archive param3, byte param4) {
         int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -1197,7 +1197,7 @@ final class db extends sn {
           var9 = (ph) (param2.field_o.b(0));
           while (var9 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var10 = (int)var9.field_k;
+            var10 = (int)var9.key;
             var13 = (al) (this.field_G.a((long)var10, (byte) 64));
             if (var13 == null) {
               var14 = ap.a(var10, param3, -125);
