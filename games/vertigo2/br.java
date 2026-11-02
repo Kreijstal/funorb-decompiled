@@ -164,7 +164,7 @@ final class br extends kp implements ik {
             PlatformTaskDispatcher var6 = (PlatformTaskDispatcher) null;
             br.a((java.awt.Frame) null, (PlatformTaskDispatcher) null, -16);
           }
-          this.field_V = -param1 + (-this.field_o + PacketBuffer.field_n);
+          this.field_V = -param1 + (-this.x + PacketBuffer.field_n);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "br.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -187,11 +187,11 @@ final class br extends kp implements ik {
           return null;
         }
         if (!param0) {
-          jn.a(gb.field_d, -4765, PacketBuffer.field_n - (-this.field_n + this.field_V));
+          jn.a(gb.field_d, -4765, PacketBuffer.field_n - (-this.width + this.field_V));
           return this.field_q;
         }
         br.b(-110, (byte) -108);
-        jn.a(gb.field_d, -4765, PacketBuffer.field_n - (-this.field_n + this.field_V));
+        jn.a(gb.field_d, -4765, PacketBuffer.field_n - (-this.width + this.field_V));
         return this.field_q;
     }
 

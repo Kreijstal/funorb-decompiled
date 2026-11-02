@@ -23,8 +23,8 @@ final class ql extends um implements ij {
         if (!param0) {
           field_K = (String) null;
         }
-        this.field_I.a(false, -var2 + this.field_n >> 1, -25 + (20 + this.field_s) >> 1, 25, 140);
-        this.field_J.a(false, 10 + (140 + (this.field_n - var2 >> 1)), (-10 + this.field_s >> 1) + 2, 30, 100);
+        this.field_I.setBounds(false, -var2 + this.width >> 1, -25 + (20 + this.height) >> 1, 25, 140);
+        this.field_J.setBounds(false, 10 + (140 + (this.width - var2 >> 1)), (-10 + this.height >> 1) + 2, 30, 100);
     }
 
     public final void a(int param0, d param1, byte param2, int param3, int param4) {
@@ -45,7 +45,7 @@ final class ql extends um implements ij {
           this.a((byte) 54, -43, -84, (UiWidget) null);
         }
         super.a(param0, param1, param2, param3);
-        bl.field_N.b(jq.field_d, param2 - (-this.field_o - 4), bl.field_N.field_z + (this.field_t + param3 + 4), 16777215, -1);
+        bl.field_N.b(jq.field_d, param2 - (-this.x - 4), bl.field_N.field_z + (this.y + param3 + 4), 16777215, -1);
     }
 
     public static void j(int param0) {
@@ -62,7 +62,7 @@ final class ql extends um implements ij {
         this.field_I.a(-11808, new df());
         this.field_J = new d(vi.field_x, (uf) (this));
         this.field_G = new UiWidget[]{(UiWidget) ((Object) this.field_I), (UiWidget) ((Object) this.field_J)};
-        this.field_J.field_B = (WidgetListener) ((Object) new vo());
+        this.field_J.listener = (WidgetListener) ((Object) new vo());
         this.g(-128);
     }
 

@@ -24,8 +24,8 @@ abstract class um extends UiWidget implements dq {
           return;
         }
         if (param1 == 0 &&
-          this.field_B != null) {
-          stackIn_7_0 = this.field_B;
+          this.listener != null) {
+          stackIn_7_0 = this.listener;
           stackIn_7_1 = true;
           stackIn_7_2 = param2;
           stackIn_8_3 = (param0) ? false : true;
@@ -35,7 +35,7 @@ abstract class um extends UiWidget implements dq {
           for (var5 = -1 + this.field_G.length; var5 >= 0; var5--) {
             var6 = this.field_G[var5];
             if (var6 != null) {
-              var6.a(false, param1, param2 + this.field_o, this.field_t + param3);
+              var6.a(false, param1, param2 + this.x, this.y + param3);
             }
           }
         }
@@ -115,7 +115,7 @@ abstract class um extends UiWidget implements dq {
           while (var13.length > var9) {
             var10 = var13[var9];
             if (var10 != null &&
-              var10.a(param0, param1 + this.field_o, this.field_t + param2, param3, param4, (byte) -128, param6)) {
+              var10.a(param0, param1 + this.x, this.y + param2, param3, param4, (byte) -128, param6)) {
               return true;
             }
             var9++;
@@ -278,8 +278,8 @@ abstract class um extends UiWidget implements dq {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.b(!param0 ? true : false);
     }
 
@@ -498,7 +498,7 @@ abstract class um extends UiWidget implements dq {
           for (var6 = 0; var9.length > var6; var6++) {
             var7 = var9[var6];
             if (var7 != null) {
-              var7.a((byte) 46, this.field_o + param1, this.field_t + param2, param3);
+              var7.a((byte) 46, this.x + param1, this.y + param2, param3);
             }
           }
           return;
@@ -728,7 +728,7 @@ abstract class um extends UiWidget implements dq {
           for (var8 = 0; var8 < var11.length; var8++) {
             var9 = var11[var8];
             if (var9 != null) {
-              var9.a(param0, (byte) 46, param2 + this.field_o, this.field_t + param3, param4, param5);
+              var9.a(param0, (byte) 46, param2 + this.x, this.y + param3, param4, param5);
             }
           }
           if (param1 != 46) {

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class qg extends oh {
+final class qg extends WidgetWrapper {
     private boolean field_M;
     private boolean field_N;
     private int field_H;
@@ -15,10 +15,10 @@ final class qg extends oh {
 
     final void a(byte param0) {
         super.a((byte) 119);
-        this.field_C.a(false, 0, 0, this.field_s, this.field_n);
+        this.field_C.setBounds(false, 0, 0, this.height, this.width);
         if (param0 > 93) {
-          this.field_K = this.field_t;
-          this.field_L = this.field_o;
+          this.field_K = this.y;
+          this.field_L = this.x;
           return;
         }
     }
@@ -56,8 +56,8 @@ final class qg extends oh {
             return true;
           }
           um.field_E = this;
-          this.field_J = -param2 - this.field_t + param6;
-          this.field_H = -param1 + (param0 - this.field_o);
+          this.field_J = -param2 - this.y + param6;
+          this.field_H = -param1 + (param0 - this.x);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,18 +140,18 @@ final class qg extends oh {
             this.field_A == 1) {
             var5_int = -this.field_H + (PacketBuffer.field_n - param1);
             var6 = -this.field_J + (gb.field_d - param2);
-            if (var5_int != this.field_o ||
-              var6 != this.field_t) {
-              this.field_o = var5_int;
-              this.field_t = var6;
+            if (var5_int != this.x ||
+              var6 != this.y) {
+              this.x = var5_int;
+              this.y = var6;
               if (this.field_v instanceof ai) {
                 ((ai) (this.field_v)).a(-17589, param1, this, param2);
               }
             }
           } else if (this.field_N) {
-            if (this.field_L != this.field_o) {
-              var5_int = this.field_L - this.field_o;
-              stackIn_12_1 = this.field_o;
+            if (this.field_L != this.x) {
+              var5_int = this.field_L - this.x;
+              stackIn_12_1 = this.x;
               if (Math.abs(var5_int) <= 2) {
                 if (0 >= var5_int) {
                   stackIn_15_2 = -1;
@@ -161,11 +161,11 @@ final class qg extends oh {
               } else {
                 stackIn_15_2 = var5_int >> 1;
               }
-              this.field_o = stackIn_12_1 + stackIn_15_2;
+              this.x = stackIn_12_1 + stackIn_15_2;
             }
-            if (this.field_t != this.field_K) {
-              var5_int = -this.field_t + this.field_K;
-              stackIn_19_1 = this.field_t;
+            if (this.y != this.field_K) {
+              var5_int = -this.y + this.field_K;
+              stackIn_19_1 = this.y;
               if (Math.abs(var5_int) <= 2) {
                 if (var5_int > 0) {
                   stackIn_22_2 = 1;
@@ -175,7 +175,7 @@ final class qg extends oh {
               } else {
                 stackIn_22_2 = var5_int >> 1;
               }
-              this.field_t = stackIn_19_1 + stackIn_22_2;
+              this.y = stackIn_19_1 + stackIn_22_2;
             }
           }
           super.a((byte) 64, param1, param2, param3);

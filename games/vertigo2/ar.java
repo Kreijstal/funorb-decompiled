@@ -158,7 +158,7 @@ final class ar {
         this.field_i = gh.field_a;
         this.field_h = op.field_c;
         this.field_s.a(param0 ^ 2283, this.field_g, this.field_o);
-        oh.field_F = false;
+        WidgetWrapper.field_F = false;
         if (param0 != 115) {
           this.field_k = -0.6264674663543701f;
           var2 = id.a(0, 0, (byte) 94, this.field_g, gi.field_s, this.field_o);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ac extends oh {
+final class ac extends WidgetWrapper {
     static String field_M;
     static byte[][] field_O;
     static String field_N;

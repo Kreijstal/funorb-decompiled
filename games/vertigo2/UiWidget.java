@@ -5,19 +5,19 @@ import java.util.*;
 
 class UiWidget extends IntrusiveNode {
     uf field_v;
-    int field_t;
-    int field_s;
+    int y;
+    int height;
     int field_A;
     boolean field_p;
     static PacketBuffer field_x;
     String field_q;
     int field_y;
-    int field_o;
-    WidgetListener field_B;
+    int x;
+    WidgetListener listener;
     static String field_z;
-    String field_w;
+    String text;
     int field_u;
-    int field_n;
+    int width;
     ro field_r;
 
     StringBuilder a(Hashtable param0, int param1, byte param2, StringBuilder param3) {
@@ -92,16 +92,16 @@ class UiWidget extends IntrusiveNode {
         if (param0 != 0) {
           return true;
         }
-        if (this.field_o + param2 > param3) {
+        if (this.x + param2 > param3) {
           return false;
         }
-        if (this.field_t + param1 > param4) {
+        if (this.y + param1 > param4) {
           return false;
         }
-        if (this.field_o + param2 + this.field_n <= param3) {
+        if (this.x + param2 + this.width <= param3) {
           return false;
         }
-        if (param4 < this.field_s + this.field_t + param1) {
+        if (param4 < this.height + this.y + param1) {
           return true;
         }
         return false;
@@ -318,14 +318,14 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void a(boolean param0, int param1, int param2, int param3, int param4) {
-        this.field_n = param4;
-        this.field_t = param2;
+    void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
+        this.width = param4;
+        this.y = param2;
         if (param0) {
           return;
         }
-        this.field_o = param1;
-        this.field_s = param3;
+        this.x = param1;
+        this.height = param3;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -374,9 +374,9 @@ class UiWidget extends IntrusiveNode {
           if (!param2) {
             this.a((StringBuilder) null, -88, 38, (Hashtable) null);
           }
-          discarded$0 = param1.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_o).append(",").append(this.field_t).append(" ").append(this.field_n).append("x").append(this.field_s);
-          if (null != this.field_w) {
-            discarded$1 = param1.append(" text=\"").append(this.field_w).append('"');
+          discarded$0 = param1.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.x).append(",").append(this.y).append(" ").append(this.width).append("x").append(this.height);
+          if (null != this.text) {
+            discarded$1 = param1.append(" text=\"").append(this.text).append('"');
           }
           if (this.field_p) {
             discarded$2 = param1.append(" mouseover");
@@ -384,15 +384,15 @@ class UiWidget extends IntrusiveNode {
           if (this.f(87)) {
             discarded$3 = param1.append(" focused");
           }
-          if (this.field_B != null) {
+          if (this.listener != null) {
             discarded$4 = param1.append(" renderer=");
-            if (this.field_B instanceof UiWidget) {
+            if (this.listener instanceof UiWidget) {
               param1 = this.a(param0, param3 + 1, (byte) -79, param1);
               if (var6 != 0) {
-                discarded$5 = param1.append(this.field_B);
+                discarded$5 = param1.append(this.listener);
               }
             } else {
-              discarded$5 = param1.append(this.field_B);
+              discarded$5 = param1.append(this.listener);
             }
           }
           if (null != this.field_v) {
@@ -438,7 +438,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1) {
-            this.field_t = 80;
+            this.y = 80;
           }
           if (param3.containsKey(this)) {
             discarded$1 = param0.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
@@ -467,7 +467,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     final void g(int param0) {
-        this.a(false, this.field_o, this.field_t, this.field_s, this.field_n);
+        this.setBounds(false, this.x, this.y, this.height, this.width);
         if (param0 > -51) {
           this.a(44, 60, -37);
         }
@@ -479,14 +479,14 @@ class UiWidget extends IntrusiveNode {
 
     void a(boolean param0, int param1, int param2, int param3) {
         if (param1 == 0) {
-          if (null == this.field_B) {
+          if (null == this.listener) {
             if (param0) {
               UiWidget.e(-54);
               return;
             }
             return;
           }
-          this.field_B.a(true, param2, true, this, param3);
+          this.listener.a(true, param2, true, this, param3);
         }
         if (!param0) {
           return;
@@ -680,13 +680,13 @@ class UiWidget extends IntrusiveNode {
         this.field_y = 0;
         this.field_u = 0;
         try {
-          this.field_B = param1;
+          this.listener = param1;
           this.field_v = param2;
-          this.field_w = param0;
-          if (this.field_B instanceof qa) {
-            var4 = (qa) ((Object) this.field_B);
-            this.field_n = var4.a(this, (byte) 112);
-            this.field_s = var4.a(this, -1);
+          this.text = param0;
+          if (this.listener instanceof qa) {
+            var4 = (qa) ((Object) this.listener);
+            this.width = var4.a(this, (byte) 112);
+            this.height = var4.a(this, -1);
           }
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "iq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -697,12 +697,12 @@ class UiWidget extends IntrusiveNode {
         this.field_y = 0;
         this.field_u = 0;
         try {
-          this.field_s = param3;
-          this.field_o = param0;
+          this.height = param3;
+          this.x = param0;
           this.field_v = param5;
-          this.field_n = param2;
-          this.field_B = param4;
-          this.field_t = param1;
+          this.width = param2;
+          this.listener = param4;
+          this.y = param1;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "iq.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

@@ -42,12 +42,12 @@ final class kn implements WidgetListener {
             param0 = param0 & var11.field_F;
           }
           var7 = 5592405;
-          bi.b(param1 + param3.field_o, param3.field_t + param4, param3.field_n, param3.field_s, this.field_k);
+          bi.b(param1 + param3.x, param3.y + param4, param3.width, param3.height, this.field_k);
           if (param0) {
             var7 = 16777215;
           }
-          var8 = this.field_i + (param1 + param3.field_o);
-          var9 = this.field_c + (param3.field_t + param4);
+          var8 = this.field_i + (param1 + param3.x);
+          var9 = this.field_c + (param3.y + param4);
           bi.f(var8, var9, this.field_d, this.field_f, 5592405);
           bi.b(var8, var9, this.field_d, this.field_f, var7);
           if (var11.field_G) {
@@ -59,7 +59,7 @@ final class kn implements WidgetListener {
           }
           if (null != this.field_b) {
             var10 = this.field_d + (this.field_i + this.field_n);
-            this.field_b.a(param3.field_w, var10 + (param1 + param3.field_o), this.field_g + param4 + param3.field_t, param3.field_n - (var10 + this.field_n), -(this.field_n << 1) + param3.field_s, this.field_e, this.field_j, this.field_o, this.field_l, 0);
+            this.field_b.a(param3.text, var10 + (param1 + param3.x), this.field_g + param4 + param3.y, param3.width - (var10 + this.field_n), -(this.field_n << 1) + param3.height, this.field_e, this.field_j, this.field_o, this.field_l, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

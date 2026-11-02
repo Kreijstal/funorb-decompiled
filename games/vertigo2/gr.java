@@ -35,13 +35,13 @@ final class gr extends sp implements ij {
             if (sd.field_I != param1) {
               if (IterableNodeHashTable.field_d == param1) {
                 var3 = w.field_D;
-                this.field_s = this.field_s + 30;
+                this.height = this.height + 30;
               }
             } else {
               var3 = lh.field_a;
-              this.field_s = this.field_s + 10;
+              this.height = this.height + 10;
               if (ui.c(-101)) {
-                this.field_s = this.field_s + 20;
+                this.height = this.height + 20;
                 var3 = RasterBuffer.field_c;
               }
             }
@@ -49,11 +49,11 @@ final class gr extends sp implements ij {
             var3 = ko.field_U;
           }
           var4 = new UiWidget((String) (var3), (uf) null);
-          var4.field_n = this.field_n;
-          var4.field_s = 80;
-          var4.field_t = 50;
-          var4.field_o = 0;
-          var4.field_B = (WidgetListener) ((Object) new va(bl.field_N, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.width = this.width;
+          var4.height = 80;
+          var4.y = 50;
+          var4.x = 0;
+          var4.listener = (WidgetListener) ((Object) new va(bl.field_N, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.c((byte) 119, var4);
           this.field_X = this.a(-6, (uf) (this), lr.field_N);
           return;
@@ -145,10 +145,10 @@ final class gr extends sp implements ij {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new d(param2, param1);
-          var4.field_B = (WidgetListener) ((Object) new vo());
-          var5 = param0 + this.field_s;
-          this.field_s = this.field_s + 38;
-          var4.a(false, 15, var5, 30, -16 + (this.field_n - 14));
+          var4.listener = (WidgetListener) ((Object) new vo());
+          var5 = param0 + this.height;
+          this.height = this.height + 38;
+          var4.setBounds(false, 15, var5, 30, -16 + (this.width - 14));
           this.c((byte) -119, var4);
           this.g(param0 - 97);
           stackIn_1_0 = var4;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg extends oh {
+final class mg extends WidgetWrapper {
     private int field_P;
     static int[] field_J;
     private String field_U;
@@ -46,7 +46,7 @@ final class mg extends oh {
           var12_int = this.field_I - this.field_Q;
           var13 = this.field_K.a(param10, var12_int, this.field_K.field_z) + this.field_Q * 2;
           if (param3 < var13) {
-            this.a(false, param0, param1, var13, param2);
+            this.setBounds(false, param0, param1, var13, param2);
           } else {
             var13 = param3;
           }
@@ -56,7 +56,7 @@ final class mg extends oh {
             stackIn_10_0 = this.field_I + this.field_Q * 2;
           }
           var14 = stackIn_10_0;
-          this.field_C.a(false, var14, (-param3 + var13 >> 1) + this.field_Q, -(2 * this.field_Q) + param3, param2 - this.field_I - 3 * this.field_Q);
+          this.field_C.setBounds(false, var14, (-param3 + var13 >> 1) + this.field_Q, -(2 * this.field_Q) + param3, param2 - this.field_I - 3 * this.field_Q);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,14 +85,14 @@ final class mg extends oh {
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        int var5 = param2 + this.field_o;
-        int var6 = param3 + this.field_t;
+        int var5 = param2 + this.x;
+        int var6 = param3 + this.y;
         super.a(param0, param1, param2, param3);
         if (param1 != 0) {
           return;
         }
-        int var7 = this.field_H ? -(2 * this.field_Q) - this.field_I + this.field_n : 0;
-        this.field_K.a(this.field_U, this.field_Q + var7 + var5, var6 + this.field_Q, -this.field_Q + this.field_I, -(2 * this.field_Q) + this.field_s, this.field_P, -1, !this.field_H ? 2 : 0, 1, this.field_K.field_z);
+        int var7 = this.field_H ? -(2 * this.field_Q) - this.field_I + this.width : 0;
+        this.field_K.a(this.field_U, this.field_Q + var7 + var5, var6 + this.field_Q, -this.field_Q + this.field_I, -(2 * this.field_Q) + this.height, this.field_P, -1, !this.field_H ? 2 : 0, 1, this.field_K.field_z);
     }
 
     final static void a(int param0, boolean param1, float param2, String param3) {

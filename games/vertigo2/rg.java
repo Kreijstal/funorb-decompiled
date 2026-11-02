@@ -38,7 +38,7 @@ final class rg extends IOException {
 
     final static void a(byte param0, boolean param1) {
         if (ko.field_S != null) {
-          oh.a(ko.field_S, false);
+          WidgetWrapper.a(ko.field_S, false);
         }
         if (null != un.field_Lb) {
           un.field_Lb.a(param1, -64);

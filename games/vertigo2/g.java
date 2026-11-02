@@ -181,7 +181,7 @@ final class g {
             ml.field_z = 0;
             jq.field_e = 0;
             t.field_l = 0;
-            oh.field_D.clear(0);
+            WidgetWrapper.field_D.clear(0);
             qh.field_f = false;
           }
         } else {
@@ -227,7 +227,7 @@ final class g {
                 ml.field_z = 0;
                 jq.field_e = 0;
                 t.field_l = 0;
-                oh.field_D.clear(0);
+                WidgetWrapper.field_D.clear(0);
                 qh.field_f = false;
               }
               if (sk.field_g) {
@@ -254,7 +254,7 @@ final class g {
                 ml.field_z = 0;
                 jq.field_e = 0;
                 t.field_l = 0;
-                oh.field_D.clear(0);
+                WidgetWrapper.field_D.clear(0);
                 qh.field_f = false;
               }
             } else {
@@ -275,7 +275,7 @@ final class g {
               ml.field_z = 0;
               jq.field_e = 0;
               t.field_l = 0;
-              oh.field_D.clear(0);
+              WidgetWrapper.field_D.clear(0);
               qh.field_f = false;
             }
             if (sk.field_g) {
@@ -316,7 +316,7 @@ final class g {
                 ml.field_z = 0;
                 jq.field_e = 0;
                 t.field_l = 0;
-                oh.field_D.clear(0);
+                WidgetWrapper.field_D.clear(0);
                 qh.field_f = false;
               }
               if (sk.field_g) {
@@ -346,7 +346,7 @@ final class g {
               ml.field_z = 0;
               jq.field_e = 0;
               t.field_l = 0;
-              oh.field_D.clear(0);
+              WidgetWrapper.field_D.clear(0);
               qh.field_f = false;
             }
           } else {
@@ -364,7 +364,7 @@ final class g {
                 ml.field_z = 0;
                 jq.field_e = 0;
                 t.field_l = 0;
-                oh.field_D.clear(0);
+                WidgetWrapper.field_D.clear(0);
                 qh.field_f = false;
               }
               if (!sk.field_g) {
@@ -394,7 +394,7 @@ final class g {
             ml.field_z = 0;
             jq.field_e = 0;
             t.field_l = 0;
-            oh.field_D.clear(0);
+            WidgetWrapper.field_D.clear(0);
             qh.field_f = false;
           }
         }

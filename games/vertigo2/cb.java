@@ -256,7 +256,7 @@ final class cb extends UiPanel {
           this.field_Nb = new UiPanel(0L, (UiPanel) null);
           this.b(this.field_Nb, 120);
           if (param11 != null) {
-            this.field_Lb = new UiPanel(0L, param8, oh.field_E);
+            this.field_Lb = new UiPanel(0L, param8, WidgetWrapper.field_E);
             this.field_Lb.field_A = 11184810;
             this.field_Lb.field_O = 1;
             this.field_Nb.b(this.field_Lb, 118);

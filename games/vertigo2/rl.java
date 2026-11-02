@@ -155,7 +155,7 @@ abstract class rl extends sp {
               return super.j(17);
             }
             this.field_cb = NodeHashTableIterator.field_f;
-            this.a(this.field_X, 12 + this.field_Z.field_n, this.field_W + 12 + this.field_Z.field_s, (byte) 118);
+            this.a(this.field_X, 12 + this.field_Z.width, this.field_W + 12 + this.field_Z.height, (byte) 118);
             this.field_eb = 0;
             this.field_bb.field_J = 0;
             if (param0 != 17) {
@@ -202,7 +202,7 @@ abstract class rl extends sp {
     }
 
     rl(sd param0, UiWidget param1, int param2, int param3, int param4) {
-        super(param0, 12 + param1.field_n, param1.field_s + (param2 + 12));
+        super(param0, 12 + param1.width, param1.height + (param2 + 12));
         try {
           this.field_X = param4;
           this.field_W = param2;
@@ -221,7 +221,7 @@ abstract class rl extends sp {
         if (param1 == null) {
           this.field_bb = new wq();
         } else {
-          param1.a(false, 6, this.field_W + 6, param1.field_s, param1.field_n);
+          param1.setBounds(false, 6, this.field_W + 6, param1.height, param1.width);
           this.field_bb = new wq(param1);
         }
         this.c((byte) -61, this.field_bb);
@@ -247,7 +247,7 @@ abstract class rl extends sp {
           }
           this.field_Z = param1;
           if (NodeHashTableIterator.field_f == this.field_cb) {
-            this.a(this.field_X, 12 + this.field_Z.field_n, this.field_W + 12 + this.field_Z.field_s, (byte) 61);
+            this.a(this.field_X, 12 + this.field_Z.width, this.field_W + 12 + this.field_Z.height, (byte) 61);
             this.field_eb = 0;
             return;
           }
@@ -277,7 +277,7 @@ abstract class rl extends sp {
           return;
         }
         if (id.field_g != this.field_cb) {
-          this.b(-1535749535, this.field_Z.field_n + 12, 12 + this.field_W + this.field_Z.field_s);
+          this.b(-1535749535, this.field_Z.width + 12, 12 + this.field_W + this.field_Z.height);
           this.b(param0 + 13716, this.field_Z);
         } else {
           this.field_bb.field_J = 256;

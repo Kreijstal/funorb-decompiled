@@ -336,7 +336,7 @@ final class mq extends va {
             stackIn_3_0 = null;
           }
           var10 = (d) (stackIn_3_0);
-          jb.a(param3.field_t + param4, param3.field_o + param1 + param3.field_n, param3.field_o + param1, -30486, param3.field_s + (param3.field_t + param4));
+          jb.a(param3.y + param4, param3.x + param1 + param3.width, param3.x + param1, -30486, param3.height + (param3.y + param4));
           if (var10 != null) {
             param0 = param0 & var10.field_F;
           }

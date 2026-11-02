@@ -80,14 +80,14 @@ final class qe extends pn {
         var6 = this.field_J.a(-23996);
         if (var6 == tk.field_n) {
           var17 = lr.field_L;
-          if (!var17.equals(this.field_w)) {
-            this.field_w = var17;
+          if (!var17.equals(this.text)) {
+            this.text = var17;
             this.e((byte) -118);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_J.a(-23996);
-          var34 = (qa) ((Object) this.field_B);
-          var9 = this.field_o + param2;
+          var34 = (qa) ((Object) this.listener);
+          var9 = this.x + param2;
           var10 = var34.a((UiWidget) (this), 1, param3) + (var34.b((UiWidget) (this), 110).b((byte) 91) >> 1);
           if (tk.field_n == var6) {
             var20 = jn.field_b[0];
@@ -147,14 +147,14 @@ final class qe extends pn {
         }
         if (var6 == dj.field_c) {
           var23 = lr.field_L;
-          if (!var23.equals(this.field_w)) {
-            this.field_w = var23;
+          if (!var23.equals(this.text)) {
+            this.text = var23;
             this.e((byte) -118);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_J.a(-23996);
-          var35 = (qa) ((Object) this.field_B);
-          var9Lifetime1 = this.field_o + param2;
+          var35 = (qa) ((Object) this.listener);
+          var9Lifetime1 = this.x + param2;
           var10Lifetime1 = var35.a((UiWidget) (this), 1, param3) + (var35.b((UiWidget) (this), 110).b((byte) 91) >> 1);
           if (tk.field_n == var6) {
             var26 = jn.field_b[0];
@@ -216,14 +216,14 @@ final class qe extends pn {
         if (var5 == null) {
           var5 = this.field_ab;
         }
-        if (!var5.equals(this.field_w)) {
-          this.field_w = var5;
+        if (!var5.equals(this.text)) {
+          this.text = var5;
           this.e((byte) -118);
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime1 = this.field_J.a(-23996);
-        var36 = (qa) ((Object) this.field_B);
-        var9Lifetime2 = this.field_o + param2;
+        var36 = (qa) ((Object) this.listener);
+        var9Lifetime2 = this.x + param2;
         var10Lifetime2 = var36.a((UiWidget) (this), 1, param3) + (var36.b((UiWidget) (this), 110).b((byte) 91) >> 1);
         if (tk.field_n == var6Lifetime1) {
           var31 = jn.field_b[0];
@@ -298,7 +298,7 @@ final class qe extends pn {
         try {
           this.field_ab = param1;
           this.field_J = param0;
-          this.a(false, param2, param3, param5, param4);
+          this.setBounds(false, param2, param3, param5, param4);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "qe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

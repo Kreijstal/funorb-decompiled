@@ -124,7 +124,7 @@ abstract class sp extends nm {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = Vertigo2.field_L ? 1 : 0;
-        bi.e(param1 + 6, param2 + 35, -12 + this.field_n, -40 + this.field_s, 2105376, 0);
+        bi.e(param1 + 6, param2 + 35, -12 + this.width, -40 + this.height, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -135,7 +135,7 @@ abstract class sp extends nm {
             bi.field_c > var8) {
             var9 = (var6 - var5) * var7 / var4 + var5;
             var10 = 0;
-            var11 = this.field_n;
+            var11 = this.width;
             if (var7 <= 20) {
               while (var10 <= 20) {
                 var12 = (-var10 + 20) * (20 - var10) + (20 - var7) * (20 - var7);
@@ -190,14 +190,14 @@ abstract class sp extends nm {
           var9Lifetime1 = (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
           bi.b(param1, var8Lifetime1, 6, var9Lifetime1);
-          bi.b(-6 + this.field_n + param1, var8Lifetime1, 6, var9Lifetime1);
+          bi.b(-6 + this.width + param1, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        qo.field_y.e(-90 + (param1 + this.field_n), 10 + param2);
-        kj.a(1, this.field_n - 10, param1 + 5, bh.field_a, param2 + 35);
-        kj.a(1, this.field_n, param1, ki.field_b, -22 + (this.field_s + param2));
-        var4Lifetime2 = -79 + this.field_s;
+        qo.field_y.e(-90 + (param1 + this.width), 10 + param2);
+        kj.a(1, this.width - 10, param1 + 5, bh.field_a, param2 + 35);
+        kj.a(1, this.width, param1, ki.field_b, -22 + (this.height + param2));
+        var4Lifetime2 = -79 + this.height;
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;
         var7Lifetime2 = 0;
@@ -206,7 +206,7 @@ abstract class sp extends nm {
           var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
           bi.b(param1, var8Lifetime2, 6, var9Lifetime2);
-          bi.b(-6 + (param1 + this.field_n), var8Lifetime2, 6, var9Lifetime2);
+          bi.b(-6 + (param1 + this.width), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }
@@ -269,11 +269,11 @@ abstract class sp extends nm {
         this.field_R = 0;
         this.field_S = param1;
         this.field_T = param2;
-        this.field_M = this.field_n;
+        this.field_M = this.width;
         if (param3 <= 36) {
           this.field_N = 65;
         }
-        this.field_N = this.field_s;
+        this.field_N = this.height;
         this.field_L = param0;
     }
 

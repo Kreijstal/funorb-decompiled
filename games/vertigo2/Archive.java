@@ -19,7 +19,7 @@ final class Archive {
           this.field_d = -46;
         }
         if (!this.field_b) {
-          this.field_e[param0] = oh.a(false, true, this.field_a.a(true, param0));
+          this.field_e[param0] = WidgetWrapper.a(false, true, this.field_a.a(true, param0));
         } else {
           this.field_e[param0] = this.field_a.a(true, param0);
         }
@@ -546,7 +546,7 @@ final class Archive {
                 if (this.field_d != 0) {
                   var7[var18] = var39[var17];
                 } else {
-                  var7[var18] = oh.a(false, true, var39[var17]);
+                  var7[var18] = WidgetWrapper.a(false, true, var39[var17]);
                 }
               }
             }
@@ -560,7 +560,7 @@ final class Archive {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = oh.a(false, true, var43);
+            var7[var11] = WidgetWrapper.a(false, true, var43);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

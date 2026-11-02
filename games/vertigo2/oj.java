@@ -140,7 +140,7 @@ final class oj extends WidgetContainer implements ij {
         int var6 = 0;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
-          this.field_C.clear(0);
+          this.children.clear(0);
           if (param0 != null &&
             0 != param0.length) {
             var3_int = param0.length;
@@ -155,14 +155,14 @@ final class oj extends WidgetContainer implements ij {
             this.field_G = new d[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_G[var5] = new d(this.field_E[var5], (uf) (this));
-              this.field_G[var5].field_B = (WidgetListener) ((Object) var4);
+              this.field_G[var5].listener = (WidgetListener) ((Object) var4);
               this.field_G[var5].field_q = GameApplet.field_k;
-              this.field_G[var5].a(false, 0, 20 + var5 * 16, 15, 80);
+              this.field_G[var5].setBounds(false, 0, 20 + var5 * 16, 15, 80);
               this.c((byte) -29, this.field_G[var5]);
             }
             this.field_G[var3_int] = new d(pl.field_p, (uf) (this));
-            this.field_G[var3_int].field_B = (WidgetListener) ((Object) var4);
-            this.field_G[var3_int].a(false, 0, 20 + (16 * var3_int + 16), 15, 100);
+            this.field_G[var3_int].listener = (WidgetListener) ((Object) var4);
+            this.field_G[var3_int].setBounds(false, 0, 20 + (16 * var3_int + 16), 15, 100);
             this.c((byte) -39, this.field_G[var3_int]);
             return;
           }
@@ -202,7 +202,7 @@ final class oj extends WidgetContainer implements ij {
         }
         BitmapFont var5 = qc.field_x;
         if (null != this.field_E) {
-          var5.a(jd.field_a, this.field_o + param2, param3 + this.field_t, this.field_n, 20, 16777215, -1, 0, 0, var5.field_M + var5.field_z);
+          var5.a(jd.field_a, this.x + param2, param3 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_M + var5.field_z);
         }
     }
 

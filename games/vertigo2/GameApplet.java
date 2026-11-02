@@ -408,7 +408,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           sj.field_b = true;
           MenuSelectionCursor.field_g = true;
           uh.field_sc = true;
-          oh.field_F = false;
+          WidgetWrapper.field_F = false;
           nf.field_x = gk.a(89);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -832,7 +832,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
               }
-              oh.field_F = true;
+              WidgetWrapper.field_F = true;
             }
             return;
           }

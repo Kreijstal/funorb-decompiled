@@ -4,7 +4,7 @@
 import java.util.*;
 
 class WidgetContainer extends UiWidget implements dq {
-    IntrusiveDeque field_C;
+    IntrusiveDeque children;
     static int field_D;
 
     boolean a(char param0, int param1, int param2, UiWidget param3) {
@@ -20,9 +20,9 @@ class WidgetContainer extends UiWidget implements dq {
         RuntimeException decompiledCaughtException = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          var8 = new IntrusiveDequeCursor(this.field_C);
+          var8 = new IntrusiveDequeCursor(this.children);
           if (param1 != 13) {
-            this.field_C = (IntrusiveDeque) null;
+            this.children = (IntrusiveDeque) null;
           }
           var6_ref_iq = (UiWidget) (var8.d(param1 - 9));
           while (var6_ref_iq != null) {
@@ -62,7 +62,7 @@ class WidgetContainer extends UiWidget implements dq {
 
     final void d(byte param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
-        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_C);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         if (param0 != 2) {
           field_D = 47;
         }
@@ -82,7 +82,7 @@ class WidgetContainer extends UiWidget implements dq {
         if (param0) {
           this.b(true);
         }
-        var2 = new IntrusiveDequeCursor(this.field_C);
+        var2 = new IntrusiveDequeCursor(this.children);
         var3 = (UiWidget) (var2.d(4));
         while (var3 != null) {
           var4 = var3.a(false);
@@ -107,14 +107,14 @@ class WidgetContainer extends UiWidget implements dq {
         RuntimeException decompiledCaughtException = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (this.field_C.isEmpty(false)) {
+          if (this.children.isEmpty(false)) {
             return false;
           }
-          var8 = new IntrusiveDequeCursor(this.field_C);
+          var8 = new IntrusiveDequeCursor(this.children);
           var4 = (UiWidget) (var8.d(4));
           while (var4 != null) {
             if (var4.f(34)) {
-              var5 = new IntrusiveDequeCursor(this.field_C);
+              var5 = new IntrusiveDequeCursor(this.children);
               var5.a(-108, var4);
               var6 = (UiWidget) (var5.c(2));
               while (var6 != null) {
@@ -148,9 +148,9 @@ class WidgetContainer extends UiWidget implements dq {
 
     private final void h(int param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
-        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_C);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         if (param0 != -641) {
-          this.field_C = (IntrusiveDeque) null;
+          this.children = (IntrusiveDeque) null;
         }
         UiWidget var3 = (UiWidget) (var2.d(4));
         while (var3 != null) {
@@ -171,7 +171,7 @@ class WidgetContainer extends UiWidget implements dq {
         RuntimeException decompiledCaughtException = null;
         var11 = Vertigo2.field_L ? 1 : 0;
         try {
-          var8 = new IntrusiveDequeCursor(this.field_C);
+          var8 = new IntrusiveDequeCursor(this.children);
           var9 = (UiWidget) (var8.d(4));
           while (var9 != null) {
             if (var9.b(94)) {
@@ -202,7 +202,7 @@ class WidgetContainer extends UiWidget implements dq {
 
     WidgetContainer(int param0, int param1, int param2, int param3, WidgetListener param4) {
         super(param0, param1, param2, param3, param4, (uf) null);
-        this.field_C = new IntrusiveDeque();
+        this.children = new IntrusiveDeque();
     }
 
     final boolean f(int param0) {
@@ -216,7 +216,7 @@ class WidgetContainer extends UiWidget implements dq {
         int var5 = 0;
         int var6 = Vertigo2.field_L ? 1 : 0;
         int var2 = 0;
-        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_C);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
         UiWidget var4 = (UiWidget) (var3.d(4));
         if (param0 > -97) {
           UiWidget var7 = (UiWidget) null;
@@ -248,11 +248,11 @@ class WidgetContainer extends UiWidget implements dq {
             var11 = (UiWidget) null;
             this.a(77, -56, -46, (UiWidget) null, 32, (byte) 26, 97);
           }
-          var12 = new IntrusiveDequeCursor(this.field_C);
+          var12 = new IntrusiveDequeCursor(this.children);
           var9 = (UiWidget) (var12.d(4));
           while (var9 != null) {
             if (var9.b(115)) {
-              if (var9.a(param0, param1 + this.field_o, param2 + this.field_t, param3, param4, (byte) -108, param6)) {
+              if (var9.a(param0, param1 + this.x, param2 + this.y, param3, param4, (byte) -108, param6)) {
                 return true;
               }
               var9 = (UiWidget) (var12.c(2));
@@ -275,8 +275,8 @@ class WidgetContainer extends UiWidget implements dq {
         }
     }
 
-    void a(boolean param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.h(-641);
     }
 
@@ -296,7 +296,7 @@ class WidgetContainer extends UiWidget implements dq {
         RuntimeException var5_ref = null;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
-          var5 = new IntrusiveDequeCursor(this.field_C);
+          var5 = new IntrusiveDequeCursor(this.children);
           if (param1) {
             return;
           }
@@ -344,11 +344,11 @@ class WidgetContainer extends UiWidget implements dq {
           if (param1 != 46) {
             return;
           }
-          var7 = new IntrusiveDequeCursor(this.field_C);
+          var7 = new IntrusiveDequeCursor(this.children);
           var8 = (UiWidget) (var7.d(4));
           while (var8 != null) {
             if (var8.b(125)) {
-              var8.a(param0, (byte) 46, param2 + this.field_o, this.field_t + param3, param4, param5);
+              var8.a(param0, (byte) 46, param2 + this.x, this.y + param3, param4, param5);
               var8 = (UiWidget) (var7.c(param1 - 44));
               continue;
             }
@@ -382,17 +382,17 @@ class WidgetContainer extends UiWidget implements dq {
         RuntimeException decompiledCaughtException = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (this.field_C.isEmpty(false)) {
+          if (this.children.isEmpty(false)) {
             return false;
           }
-          var8 = new IntrusiveDequeCursor(this.field_C);
+          var8 = new IntrusiveDequeCursor(this.children);
           if (param0 != 32345) {
-            this.field_C = (IntrusiveDeque) null;
+            this.children = (IntrusiveDeque) null;
           }
           var4 = (UiWidget) (var8.b(param0 - 32341));
           while (var4 != null) {
             if (var4.f(85)) {
-              var5 = new IntrusiveDequeCursor(this.field_C);
+              var5 = new IntrusiveDequeCursor(this.children);
               var5.a(var4, param0 - 32342);
               var6 = (UiWidget) (var5.a((byte) 76));
               while (var6 != null) {
@@ -423,7 +423,7 @@ class WidgetContainer extends UiWidget implements dq {
     final void c(byte param0, UiWidget param1) {
         try {
           int var3_int = 36 / ((param0 - 35) / 38);
-          this.field_C.addFirst(param1, false);
+          this.children.addFirst(param1, false);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "cj.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -437,7 +437,7 @@ class WidgetContainer extends UiWidget implements dq {
         if (!param0) {
           this.a(false);
         }
-        var2 = new IntrusiveDequeCursor(this.field_C);
+        var2 = new IntrusiveDequeCursor(this.children);
         var3 = (UiWidget) (var2.d(4));
         while (var3 != null) {
           if (var3.f(93)) {
@@ -451,16 +451,16 @@ class WidgetContainer extends UiWidget implements dq {
     void a(boolean param0, int param1, int param2, int param3) {
         int var7 = Vertigo2.field_L ? 1 : 0;
         if (param1 == 0 &&
-          this.field_B != null) {
-          this.field_B.a(true, param2, true, (UiWidget) (this), param3);
+          this.listener != null) {
+          this.listener.a(true, param2, true, (UiWidget) (this), param3);
         }
-        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_C);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.children);
         if (param0) {
           this.a(true, 10, -73, -106);
         }
         UiWidget var6 = (UiWidget) (var5.b(4));
         while (var6 != null) {
-          var6.a(false, param1, param2 + this.field_o, this.field_t + param3);
+          var6.a(false, param1, param2 + this.x, this.y + param3);
           var6 = (UiWidget) (var5.a((byte) 15));
         }
     }
@@ -519,7 +519,7 @@ class WidgetContainer extends UiWidget implements dq {
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
           super.a((byte) 66, param1, param2, param3);
-          var5 = new IntrusiveDequeCursor(this.field_C);
+          var5 = new IntrusiveDequeCursor(this.children);
           if (param0 <= 6) {
             var8 = (UiWidget) null;
             this.b((byte) 25, (UiWidget) null);
@@ -527,7 +527,7 @@ class WidgetContainer extends UiWidget implements dq {
           var6 = (UiWidget) (var5.d(4));
           while (var6 != null) {
             if (var6.b(101)) {
-              var6.a((byte) 73, param1 + this.field_o, this.field_t + param2, param3);
+              var6.a((byte) 73, param1 + this.x, this.y + param2, param3);
               var6 = (UiWidget) (var5.c(2));
               continue;
             }
@@ -592,7 +592,7 @@ class WidgetContainer extends UiWidget implements dq {
           if (param0 != 116) {
             return true;
           }
-          var3 = new IntrusiveDequeCursor(this.field_C);
+          var3 = new IntrusiveDequeCursor(this.children);
           var4 = (UiWidget) (var3.d(param0 - 112));
           while (var4 != null) {
             if (var4.a((byte) 116, param1)) {

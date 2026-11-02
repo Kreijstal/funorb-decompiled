@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends oh {
+final class sd extends WidgetWrapper {
     private IntrusiveDeque field_J;
     static ll field_I;
     static String[] field_M;
@@ -109,8 +109,8 @@ final class sd extends oh {
 
     final void a(boolean param0, int param1, int param2, int param3) {
         int var7 = Vertigo2.field_L ? 1 : 0;
-        if (null != this.field_B) {
-          this.field_B.a(true, param2, true, (UiWidget) (this), param3);
+        if (null != this.listener) {
+          this.listener.a(true, param2, true, (UiWidget) (this), param3);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_J);
         if (param0) {
@@ -118,7 +118,7 @@ final class sd extends oh {
         }
         UiWidget var6 = (UiWidget) (var5.b(4));
         while (var6 != null) {
-          var6.a(false, param1, param2 + this.field_o, this.field_t + param3);
+          var6.a(false, param1, param2 + this.x, this.y + param3);
           var6 = (UiWidget) (var5.a((byte) 50));
         }
     }

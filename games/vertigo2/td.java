@@ -41,9 +41,9 @@ final class td implements WidgetListener {
           var14 = (ao) (stackIn_3_0);
           if (var14 != null) {
           }
-          bi.b(param1 + param3.field_o, param4 + param3.field_t, param3.field_n, param3.field_s, this.field_h);
-          var7 = var14.field_J + param3.field_o + param1;
-          var8 = param3.field_t + param4 + var14.field_M;
+          bi.b(param1 + param3.x, param4 + param3.y, param3.width, param3.height, this.field_h);
+          var7 = var14.field_J + param3.x + param1;
+          var8 = param3.y + param4 + var14.field_M;
           bi.f(var7, var8, var14.field_L, this.field_e);
           if (var14.field_I != -1) {
             var9 = 2.0 * ((double)var14.field_I * 3.141592653589793) / (double)var14.field_S;
@@ -61,7 +61,7 @@ final class td implements WidgetListener {
           }
           if (null != this.field_d) {
             var13 = this.field_f + (var14.field_J + var14.field_L);
-            this.field_d.a(param3.field_w, var13 + (param1 + param3.field_o), param3.field_t + param4 + this.field_b, -var13 - this.field_f + param3.field_n, -(this.field_f << 1) + param3.field_s, this.field_k, this.field_j, 1, 1, 0);
+            this.field_d.a(param3.text, var13 + (param1 + param3.x), param3.y + param4 + this.field_b, -var13 - this.field_f + param3.width, -(this.field_f << 1) + param3.height, this.field_k, this.field_j, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

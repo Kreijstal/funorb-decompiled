@@ -68,7 +68,7 @@ final class rh extends WidgetContainer implements ij {
 
     final void a(boolean param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_M.a(this.field_K, 14 + (param2 + this.field_o), 10 + (param3 + this.field_t), this.field_n - 28, this.field_s, 16777215, -1, 0, 0, this.field_M.field_z);
+        this.field_M.a(this.field_K, 14 + (param2 + this.x), 10 + (param3 + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_M.field_z);
         if (param0) {
           rh.b(81, -4);
         }
@@ -83,7 +83,7 @@ final class rh extends WidgetContainer implements ij {
           this.field_M = param1;
           this.field_K = param2;
           var4_int = this.field_K != null ? this.field_M.a(this.field_K, 260, this.field_M.field_z) : 0;
-          this.a(false, 0, 0, 22 + var4_int, 288);
+          this.setBounds(false, 0, 0, 22 + var4_int, 288);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -209,10 +209,10 @@ final class rh extends WidgetContainer implements ij {
             this.field_N = 47;
           }
           var4 = new d(param0, param1);
-          var4.field_B = (WidgetListener) ((Object) new vo());
-          var5 = -2 + this.field_s;
-          this.a(false, 0, 0, this.field_s + 34, this.field_n);
-          var4.a(false, 7, var5, 30, -14 + this.field_n);
+          var4.listener = (WidgetListener) ((Object) new vo());
+          var5 = -2 + this.height;
+          this.setBounds(false, 0, 0, this.height + 34, this.width);
+          var4.setBounds(false, 7, var5, 30, -14 + this.width);
           this.c((byte) 116, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;

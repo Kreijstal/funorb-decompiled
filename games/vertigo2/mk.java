@@ -86,10 +86,10 @@ final class mk extends WidgetContainer implements cm, ij, nc {
           return false;
         }
         try {
-          var2 = Integer.parseInt(this.field_T.field_w);
+          var2 = Integer.parseInt(this.field_T.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return bg.a(this.field_H.field_w, var2, this.field_F.field_w, this.field_R.field_G, this.field_U.field_w, (byte) 66, this);
+        return bg.a(this.field_H.text, var2, this.field_F.text, this.field_R.field_G, this.field_U.text, (byte) 66, this);
     }
 
     final void a(byte param0, int param1, int param2, UiWidget param3) {
@@ -122,7 +122,7 @@ final class mk extends WidgetContainer implements cm, ij, nc {
           }
           var6 = new mg(20, param4, param3 + 120, 25, param2, false, 120, 3, qc.field_x, 16777215, param0);
           this.c((byte) 107, var6);
-          stackIn_3_0 = var6.field_s;
+          stackIn_3_0 = var6.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -166,8 +166,8 @@ final class mk extends WidgetContainer implements cm, ij, nc {
           this.c((byte) -75, var9);
           var7 = new lr(((ik) ((Object) param2)).a((byte) -5));
           this.c((byte) 79, var7);
-          var7.a(false, var9.field_n + (var9.field_o + 3), var9.field_t + (-15 + var9.field_s >> 1), 15, 15);
-          stackIn_3_0 = var9.field_s;
+          var7.setBounds(false, var9.width + (var9.x + 3), var9.y + (-15 + var9.height >> 1), 15, 15);
+          stackIn_3_0 = var9.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -332,17 +332,17 @@ final class mk extends WidgetContainer implements cm, ij, nc {
         this.field_Q.a(true, new rf(this.field_Q, this.field_U));
         this.field_T.a(true, new na(this.field_T));
         this.field_I.field_F = false;
-        this.field_I.field_B = (WidgetListener) ((Object) new vo());
-        this.field_O.field_B = (WidgetListener) ((Object) new jc());
-        this.field_H.field_B = (WidgetListener) ((Object) new ml(10000536));
+        this.field_I.listener = (WidgetListener) ((Object) new vo());
+        this.field_O.listener = (WidgetListener) ((Object) new jc());
+        this.field_H.listener = (WidgetListener) ((Object) new ml(10000536));
         ml dupTemp$0 = new ml(10000536);
-        this.field_L.field_B = (WidgetListener) ((Object) dupTemp$0);
-        this.field_F.field_B = (WidgetListener) ((Object) dupTemp$0);
-        this.field_T.field_B = (WidgetListener) ((Object) new ml(10000536));
-        this.field_R.field_B = (WidgetListener) ((Object) new kb());
+        this.field_L.listener = (WidgetListener) ((Object) dupTemp$0);
+        this.field_F.listener = (WidgetListener) ((Object) dupTemp$0);
+        this.field_T.listener = (WidgetListener) ((Object) new ml(10000536));
+        this.field_R.listener = (WidgetListener) ((Object) new kb());
         om dupTemp$1 = new om(10000536);
-        this.field_Q.field_B = (WidgetListener) ((Object) dupTemp$1);
-        this.field_U.field_B = (WidgetListener) ((Object) dupTemp$1);
+        this.field_Q.listener = (WidgetListener) ((Object) dupTemp$1);
+        this.field_U.listener = (WidgetListener) ((Object) dupTemp$1);
         String var2 = Vertigo2.a(new String[]{this.i(23559), this.j(10000536)}, k.field_b, -125);
         int var3 = 20;
         var3 = var3 + this.b(le.field_c, 48, this.field_F, 170, var3);
@@ -351,30 +351,30 @@ final class mk extends WidgetContainer implements cm, ij, nc {
         var3 = var3 + (5 + this.a(ag.field_c, this.field_Q, var3, ln.field_a, 0, 170));
         var3 = var3 + (this.a(jg.field_m, this.field_H, var3, GameShell.field_q, 0, 170) + 5);
         var3 = var3 + this.a(po.field_b, 170, this.field_T, var3, 268);
-        mg var4 = new mg(46, var3, this.field_n - 90, 25, this.field_R, true, -120 + this.field_n, 5, bl.field_N, 11579568, ll.field_d);
+        mg var4 = new mg(46, var3, this.width - 90, 25, this.field_R, true, -120 + this.width, 5, bl.field_N, 11579568, ll.field_d);
         this.c((byte) 88, var4);
-        var3 = var3 + var4.field_s;
+        var3 = var3 + var4.height;
         va var5 = new va(qc.field_x, 0, 0, 0, 0, 16777215, -1, 0, 0, qc.field_x.field_z, -1, 2147483647, true);
         this.field_N = new pn(var2, var5);
         this.field_N.field_q = "";
         this.field_N.a(0, 0, fm.field_c);
         this.field_N.a(1, 0, fm.field_c);
         this.field_N.field_v = (uf) (this);
-        this.field_N.b(46, var3, (byte) 119, this.field_n - 90);
-        var3 = var3 + (15 + this.field_N.field_s);
+        this.field_N.b(46, var3, (byte) 119, this.width - 90);
+        var3 = var3 + (15 + this.field_N.height);
         this.c((byte) 94, this.field_N);
         int var6 = 4;
         int var7 = 200;
-        this.field_I.a(false, 496 - var7 >> 1, var3, 40, var7);
-        this.field_O.a(false, 3 + var6, 15 + var3, 40, 60);
+        this.field_I.setBounds(false, 496 - var7 >> 1, var3, 40, var7);
+        this.field_O.setBounds(false, 3 + var6, 15 + var3, 40, 60);
         this.field_O.field_v = (uf) (this);
         this.field_I.field_v = (uf) (this);
         this.c((byte) 119, this.field_I);
         this.c((byte) 110, this.field_O);
         this.field_V = new oj((nc) (this));
-        this.field_V.a(false, 60 + this.field_H.field_n + this.field_H.field_o, 20 + this.field_H.field_t, 150, -this.field_H.field_n - this.field_H.field_o + this.field_n - 60);
+        this.field_V.setBounds(false, 60 + this.field_H.width + this.field_H.x, 20 + this.field_H.y, 150, -this.field_H.width - this.field_H.x + this.width - 60);
         this.c((byte) 116, this.field_V);
-        this.a(false, 0, 0, var6 + (var3 + 55), 496);
+        this.setBounds(false, 0, 0, var6 + (var3 + 55), 496);
     }
 
     final static void b(int param0, int param1) {
@@ -475,13 +475,13 @@ final class mk extends WidgetContainer implements cm, ij, nc {
         try {
           var10 = new mg(20, param1, param5 + 120, 25, param3, false, 120, 3, qc.field_x, 16777215, param6);
           this.c((byte) -30, var10);
-          var9 = new qe(((ik) ((Object) param3)).a((byte) -5), param4, 126, param1 + var10.field_s, param5 + 50, param2);
+          var9 = new qe(((ik) ((Object) param3)).a((byte) -5), param4, 126, param1 + var10.height, param5 + 50, param2);
           var9.field_v = (uf) (this);
           this.c((byte) -110, var9);
           if (param0 != 27557) {
             this.field_R = (ck) null;
           }
-          stackIn_3_0 = var9.field_s + var10.field_s;
+          stackIn_3_0 = var9.height + var10.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

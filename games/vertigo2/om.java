@@ -37,7 +37,7 @@ final class om extends ml {
           if (param0 != -90) {
             field_D = -38;
           }
-          stackIn_3_0 = rh.a((byte) -95, param1.field_w.length(), '*');
+          stackIn_3_0 = rh.a((byte) -95, param1.text.length(), '*');
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

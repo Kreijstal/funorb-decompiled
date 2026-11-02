@@ -20,7 +20,7 @@ class pn extends d {
         if (param1 != 0) {
           return;
         }
-        qa var5 = (qa) ((Object) this.field_B);
+        qa var5 = (qa) ((Object) this.listener);
         pk var6 = this.field_I;
         if (var6 != null) {
           var7 = var5.b((UiWidget) (this), param2, -14323);
@@ -60,7 +60,7 @@ class pn extends d {
     }
 
     final void b(int param0, int param1, byte param2, int param3) {
-        this.a(false, param0, param1, ((qa) ((Object) this.field_B)).a((UiWidget) (this), param2 - 120), param3);
+        this.setBounds(false, param0, param1, ((qa) ((Object) this.listener)).a((UiWidget) (this), param2 - 120), param3);
         if (param2 != 119) {
           field_O = -24;
         }
@@ -70,7 +70,7 @@ class pn extends d {
         super(param0, (uf) null);
         this.field_I = null;
         try {
-          this.field_B = param1;
+          this.listener = param1;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -91,8 +91,8 @@ class pn extends d {
             return;
           }
           if (this.field_p) {
-            var5_int = -param1 + (PacketBuffer.field_n - this.field_o);
-            var6 = gb.field_d - (param2 + this.field_t);
+            var5_int = -param1 + (PacketBuffer.field_n - this.x);
+            var6 = gb.field_d - (param2 + this.y);
             this.field_I = this.b(var6, var5_int, 498);
           }
           return;
@@ -193,21 +193,21 @@ class pn extends d {
         var16 = Vertigo2.field_L ? 1 : 0;
         this.field_P = new IntrusiveDeque();
         var2 = 0;
-        var3 = (qa) ((Object) this.field_B);
+        var3 = (qa) ((Object) this.listener);
         if (param0 > -90) {
           var17 = (String) null;
           this.a(54, -39, (String) null);
         }
         var4 = var3.b((UiWidget) (this), 46);
         while (true) {
-          var5 = this.field_w.indexOf("<hotspot=", var2);
+          var5 = this.text.indexOf("<hotspot=", var2);
           if (-1 == var5) {
             return;
           }
-          var7 = this.field_w.indexOf(">", var5);
-          var6 = this.field_w.substring(9 + var5, var7);
+          var7 = this.text.indexOf(">", var5);
+          var6 = this.text.substring(9 + var5, var7);
           var7Lifetime1 = Integer.parseInt(var6);
-          var2 = this.field_w.indexOf("</hotspot>", var5);
+          var2 = this.text.indexOf("</hotspot>", var5);
           var8 = var4.a(var5, 22413);
           var9 = var4.a(var2, 22413);
           var10 = null;
@@ -239,9 +239,9 @@ class pn extends d {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
         pk discarded$0 = null;
-        super.a(param0, param1, param2, param3, param4);
+        super.setBounds(param0, param1, param2, param3, param4);
         if (param0) {
           discarded$0 = this.b(22, 68, 111);
         }
@@ -303,8 +303,8 @@ class pn extends d {
           UiWidget var8 = (UiWidget) null;
           this.a((byte) -49, -96, 6, (UiWidget) null);
         }
-        int var5 = param0 - this.field_o;
-        int var6 = param3 - this.field_t;
+        int var5 = param0 - this.x;
+        int var6 = param3 - this.y;
         pk var7 = this.b(var6, var5, 498);
         if (var7 != null &&
           null != this.field_v) {

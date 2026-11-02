@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class oh extends UiWidget implements dq {
+abstract class WidgetWrapper extends UiWidget implements dq {
     static String field_E;
     static IntrusiveDeque field_D;
     UiWidget field_C;
@@ -199,12 +199,12 @@ abstract class oh extends UiWidget implements dq {
           super.a((byte) 112, param1, param2, param3);
           if (param0 <= 6) {
             var6 = (String) null;
-            oh.a((String) null, false);
+            WidgetWrapper.a((String) null, false);
           }
           if (null == this.field_C) {
             return;
           }
-          this.field_C.a((byte) 14, this.field_o + param1, this.field_t + param2, param3);
+          this.field_C.a((byte) 14, this.x + param1, this.y + param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -233,7 +233,7 @@ abstract class oh extends UiWidget implements dq {
           if (this.field_C == null) {
             return;
           }
-          this.field_C.a(param0, (byte) 46, param2 + this.field_o, param3 + this.field_t, param4, param5);
+          this.field_C.a(param0, (byte) 46, param2 + this.x, param3 + this.y, param4, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,7 +263,7 @@ abstract class oh extends UiWidget implements dq {
 
     void a(boolean param0, int param1, int param2, int param3) {
         if (param1 == 0) {
-          if (null == this.field_B) {
+          if (null == this.listener) {
             if (this.field_C == null) {
               if (!param0) {
                 return;
@@ -271,17 +271,17 @@ abstract class oh extends UiWidget implements dq {
               field_D = (IntrusiveDeque) null;
               return;
             }
-            this.field_C.a(param0, param1, this.field_o + param2, this.field_t + param3);
+            this.field_C.a(param0, param1, this.x + param2, this.y + param3);
             if (param0) {
               field_D = (IntrusiveDeque) null;
               return;
             }
             return;
           }
-          this.field_B.a(true, param2, true, (UiWidget) (this), param3);
+          this.listener.a(true, param2, true, (UiWidget) (this), param3);
         }
         if (this.field_C != null) {
-          this.field_C.a(param0, param1, this.field_o + param2, this.field_t + param3);
+          this.field_C.a(param0, param1, this.x + param2, this.y + param3);
           if (!param0) {
             return;
           }
@@ -309,8 +309,8 @@ abstract class oh extends UiWidget implements dq {
         this.c((byte) 67);
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a((byte) 96);
     }
 
@@ -376,7 +376,7 @@ abstract class oh extends UiWidget implements dq {
             var9 = (UiWidget) null;
             this.a((byte) -57, -98, -76, (UiWidget) null);
           }
-          stackIn_6_0 = (this.field_C != null) && (this.field_C.a(param0, param1 + this.field_o, this.field_t + param2, param3, param4, (byte) -116, param6));
+          stackIn_6_0 = (this.field_C != null) && (this.field_C.a(param0, param1 + this.x, this.y + param2, param3, param4, (byte) -116, param6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -435,7 +435,7 @@ abstract class oh extends UiWidget implements dq {
         try {
           if (param0 != -39) {
             var6 = (byte[]) null;
-            oh.a(true, true, (byte[]) null);
+            WidgetWrapper.a(true, true, (byte[]) null);
           }
           var4_int = param3.a((byte) 123, param2);
           var5 = param3.a(var4_int, param1, 101);
@@ -467,7 +467,7 @@ abstract class oh extends UiWidget implements dq {
         }
     }
 
-    oh(int param0, int param1, int param2, int param3, WidgetListener param4, uf param5) {
+    WidgetWrapper(int param0, int param1, int param2, int param3, WidgetListener param4, uf param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
@@ -586,7 +586,7 @@ abstract class oh extends UiWidget implements dq {
           return;
         }
         String var2 = (String) null;
-        oh.a((String) null, false);
+        WidgetWrapper.a((String) null, false);
         field_E = null;
         field_D = null;
     }

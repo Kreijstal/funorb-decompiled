@@ -534,7 +534,7 @@ class d extends UiWidget {
         this.field_F = true;
         this.field_E = true;
         try {
-          this.field_B = eb.field_c.field_q;
+          this.listener = eb.field_c.field_q;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "d.<init>()");
         }

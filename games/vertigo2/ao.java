@@ -107,8 +107,8 @@ final class ao extends d {
             }
             return false;
           }
-          var8_int = param0 - param1 - this.field_o - this.field_J;
-          var9 = param6 - this.field_t + (-param2 - this.field_M);
+          var8_int = param0 - param1 - this.x - this.field_J;
+          var9 = param6 - this.y + (-param2 - this.field_M);
           if (this.field_L * this.field_L > var9 * var9 + var8_int * var8_int) {
             var10 = Math.atan2((double)var9, (double)var8_int) - lb.field_g;
             if (0.0 > var10) {

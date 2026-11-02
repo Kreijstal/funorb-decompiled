@@ -16,7 +16,7 @@ class kp extends d {
         qa var5;
         long var6;
         long var6Lifetime1;
-        if (this.field_B == null) {
+        if (this.listener == null) {
           if (!param0) {
             return;
           }
@@ -30,15 +30,15 @@ class kp extends d {
           this.field_K = -119;
           return;
         }
-        this.field_B.a(this.field_F, param2, true, (UiWidget) (this), param3);
-        if (!(this.field_B instanceof qa)) {
+        this.listener.a(this.field_F, param2, true, (UiWidget) (this), param3);
+        if (!(this.listener instanceof qa)) {
           if (!param0) {
             return;
           }
           this.field_K = -119;
           return;
         }
-        var5 = (qa) ((Object) this.field_B);
+        var5 = (qa) ((Object) this.listener);
         if (this.field_K == this.field_L) {
           var6 = gk.a(126);
           if (500L > (var6 - this.field_M) % 1000L) {
@@ -85,7 +85,7 @@ class kp extends d {
             stackIn_7_0 = this.field_K;
           }
           var3 = stackIn_7_0;
-          return this.field_w.substring(var2, var3);
+          return this.text.substring(var2, var3);
         }
         discarded$0 = this.h(36);
         if (this.field_L >= this.field_K) {
@@ -100,7 +100,7 @@ class kp extends d {
           stackIn_14_0 = this.field_K;
         }
         var3Lifetime1 = stackIn_14_0;
-        return this.field_w.substring(var2Lifetime1, var3Lifetime1);
+        return this.text.substring(var2Lifetime1, var3Lifetime1);
     }
 
     private final int k(int param0) {
@@ -112,24 +112,24 @@ class kp extends d {
         int var3Lifetime1;
         var4 = Vertigo2.field_L ? 1 : 0;
         if (param0 == -27539) {
-          var2 = this.field_w.length();
+          var2 = this.text.length();
           if (var2 == this.field_K) {
             return this.field_K;
           }
           for (var3 = 1 + this.field_K; var2 > var3; var3++) {
-            if (this.field_w.charAt(var3 - 1) == 32) {
+            if (this.text.charAt(var3 - 1) == 32) {
               return var3;
             }
           }
           return var3;
         }
         discarded$2 = this.h(-55);
-        var2Lifetime1 = this.field_w.length();
+        var2Lifetime1 = this.text.length();
         if (var2Lifetime1 == this.field_K) {
           return this.field_K;
         }
         for (var3Lifetime1 = 1 + this.field_K; var2Lifetime1 > var3Lifetime1; var3Lifetime1++) {
-          if (this.field_w.charAt(var3Lifetime1 - 1) == 32) {
+          if (this.text.charAt(var3Lifetime1 - 1) == 32) {
             return var3Lifetime1;
           }
         }
@@ -153,10 +153,10 @@ class kp extends d {
         if (!param0) {
           return;
         }
-        if (!(this.field_B instanceof qa)) {
+        if (!(this.listener instanceof qa)) {
           return;
         }
-        var9 = (qa) ((Object) this.field_B);
+        var9 = (qa) ((Object) this.listener);
         var3 = var9.b((UiWidget) (this), 64);
         var4 = var3.a(8783);
         var5 = var9.a(-1, (UiWidget) (this));
@@ -194,7 +194,7 @@ class kp extends d {
           var3 = this.field_L < this.field_K ? this.field_K : this.field_L;
           this.field_L = var2;
           this.field_K = var2;
-          this.field_w = this.field_w.substring(0, var2) + this.field_w.substring(var3, this.field_w.length());
+          this.text = this.text.substring(0, var2) + this.text.substring(var3, this.text.length());
           this.h((byte) 34);
         }
         var2Lifetime1 = 55 / ((-22 - param0) / 32);
@@ -203,16 +203,16 @@ class kp extends d {
     private final void a(String param0, byte param1) {
         int var3_int = 0;
         if (-1 != this.field_N) {
-          var3_int = this.field_N - this.field_w.length();
+          var3_int = this.field_N - this.text.length();
           if (var3_int >= 0) {
             return;
           }
           param0 = param0.substring(0, var3_int);
         }
-        if (this.field_K != this.field_w.length()) {
-          this.field_w = this.field_w.substring(0, this.field_K) + param0 + this.field_w.substring(this.field_K, this.field_w.length());
+        if (this.field_K != this.text.length()) {
+          this.text = this.text.substring(0, this.field_K) + param0 + this.text.substring(this.field_K, this.text.length());
         } else {
-          this.field_w = this.field_w + param0;
+          this.text = this.text + param0;
         }
         if (param1 <= 80) {
           return;
@@ -228,7 +228,7 @@ class kp extends d {
 
     final void j(int param0) {
         this.field_L = 0;
-        this.field_w = "";
+        this.text = "";
         this.field_K = param0;
         this.h((byte) 103);
     }
@@ -280,7 +280,7 @@ class kp extends d {
           if (param0 == null) {
             param0 = "";
           }
-          this.field_w = param0;
+          this.text = param0;
           if (param1 >= -71) {
             var5 = (String) null;
             this.a((String) null, -67, false);
@@ -288,9 +288,9 @@ class kp extends d {
           var4_int = param0.length();
           if (-1 != this.field_N &&
             var4_int > this.field_N) {
-            this.field_w = this.field_w.substring(0, this.field_N);
+            this.text = this.text.substring(0, this.field_N);
           }
-          dupTemp$1 = this.field_w.length();
+          dupTemp$1 = this.text.length();
           this.field_L = dupTemp$1;
           this.field_K = dupTemp$1;
           if (param2) {
@@ -327,8 +327,8 @@ class kp extends d {
             this.field_O = 102;
           }
           if (super.a(param0, param1, param2, param3, param4, (byte) -111, param6) &&
-            this.field_B instanceof qa) {
-            var8_int = ((qa) ((Object) this.field_B)).a(PacketBuffer.field_n, param2, 101, param1, (UiWidget) (this), gb.field_d);
+            this.listener instanceof qa) {
+            var8_int = ((qa) ((Object) this.listener)).a(PacketBuffer.field_n, param2, 101, param1, (UiWidget) (this), gb.field_d);
             if (var8_int == -1) {
               stackIn_7_1 = 0;
             } else {
@@ -342,7 +342,7 @@ class kp extends d {
               this.field_L = this.l(44);
               this.field_K = this.k(-27539);
               if (this.field_K > 0 &&
-                32 == this.field_w.charAt(-1 + this.field_K)) {
+                32 == this.text.charAt(-1 + this.field_K)) {
                 this.field_K = this.field_K - 1;
               }
               this.field_O = this.field_K;
@@ -382,8 +382,8 @@ class kp extends d {
           if (this.field_A != 1) {
             return;
           }
-          if (this.field_B instanceof qa) {
-            var5 = (qa) ((Object) this.field_B);
+          if (this.listener instanceof qa) {
+            var5 = (qa) ((Object) this.listener);
             var6 = var5.a(PacketBuffer.field_n, param2, 106, param1, (UiWidget) (this), gb.field_d);
             if (var6 != -1) {
               if (this.field_I &&
@@ -436,14 +436,14 @@ class kp extends d {
               this.m(-126);
             }
             if (this.field_N == -1 ||
-              !(this.field_w.length() >= this.field_N)) {
-              if (this.field_K < this.field_w.length()) {
-                this.field_w = this.field_w.substring(0, this.field_K) + param0 + this.field_w.substring(this.field_K, this.field_w.length());
+              !(this.text.length() >= this.field_N)) {
+              if (this.field_K < this.text.length()) {
+                this.text = this.text.substring(0, this.field_K) + param0 + this.text.substring(this.field_K, this.text.length());
                 this.field_K = this.field_K + 1;
                 this.field_L = this.field_K;
               } else {
-                this.field_w = this.field_w + param0;
-                dupTemp$0 = this.field_w.length();
+                this.text = this.text + param0;
+                dupTemp$0 = this.text.length();
                 this.field_K = dupTemp$0;
                 this.field_L = dupTemp$0;
               }
@@ -459,7 +459,7 @@ class kp extends d {
               }
               if (param2 != 96) {
                 if (param2 == 97) {
-                  if (this.field_K < this.field_w.length()) {
+                  if (this.field_K < this.text.length()) {
                     if (!UiPanel.field_eb[82]) {
                       stackIn_70_1 = this.field_K + 1;
                     } else {
@@ -474,7 +474,7 @@ class kp extends d {
                     return true;
                   }
                   if (param2 == 103) {
-                    this.a(this.field_w.length(), (byte) -116);
+                    this.a(this.text.length(), (byte) -116);
                     return true;
                   }
                   if (param2 == 84) {
@@ -513,7 +513,7 @@ class kp extends d {
                 this.m(-95);
                 return true;
               }
-              if (this.field_K < this.field_w.length()) {
+              if (this.field_K < this.text.length()) {
                 this.field_L = 1 + this.field_K;
                 this.m(48);
                 return true;
@@ -555,7 +555,7 @@ class kp extends d {
         }
         var2 = 22 % ((-64 - param0) / 62);
         for (var3 = this.field_K - 1; 0 < var3; var3--) {
-          if (this.field_w.charAt(-1 + var3) == 32) {
+          if (this.text.charAt(-1 + var3) == 32) {
             return var3;
           }
         }
@@ -568,7 +568,7 @@ class kp extends d {
         this.field_H = 0L;
         this.field_I = false;
         try {
-          this.field_B = eb.field_c.field_c;
+          this.listener = eb.field_c.field_c;
           this.field_N = param2;
           this.a(param0, -103, true);
           this.field_J = true;

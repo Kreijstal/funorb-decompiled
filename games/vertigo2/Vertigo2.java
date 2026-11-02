@@ -181,7 +181,7 @@ public final class Vertigo2 extends GameShell {
               break;
             }
             while (true) {
-              var15 = (ub) (oh.field_D.removeLast((byte) -43));
+              var15 = (ub) (WidgetWrapper.field_D.removeLast((byte) -43));
               if (var15 == null) {
                 break;
               }
@@ -984,7 +984,7 @@ public final class Vertigo2 extends GameShell {
           jo.a(2);
           IntrusiveDequeCursor.a(-98);
           UiWidget.b((byte) -73);
-          oh.e((byte) -122);
+          WidgetWrapper.e((byte) -122);
           ro.c((byte) 76);
           mg.h(2);
           br.n(-17131);

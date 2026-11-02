@@ -22,18 +22,18 @@ final class kb implements WidgetListener {
           if (!param2) {
             kb.a(10);
           }
-          var6_int = param1 + param3.field_o;
-          var7 = param3.field_t + param4;
-          h.a(var6_int, 1, var7, param3.field_n, param3.field_s);
+          var6_int = param1 + param3.x;
+          var7 = param3.y + param4;
+          h.a(var6_int, 1, var7, param3.width, param3.height);
           var8 = jn.field_b[1];
           if (param3 instanceof d &&
             ((d) (param3)).field_G) {
-            var8.d(var6_int + 1 + (param3.field_n - var8.field_x >> 1), (param3.field_s - var8.field_B >> 1) + (var7 + 1), 256);
+            var8.d(var6_int + 1 + (param3.width - var8.field_x >> 1), (param3.height - var8.field_B >> 1) + (var7 + 1), 256);
           }
           if (!param3.f(86)) {
             return;
           }
-          mr.a(-4 + param3.field_n, var7 + 2, param3.field_s - 4, 0, var6_int + 2);
+          mr.a(-4 + param3.width, var7 + 2, param3.height - 4, 0, var6_int + 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

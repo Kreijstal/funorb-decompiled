@@ -365,7 +365,7 @@ final class ie extends UiPanel {
         }
         e.a(param1, (byte) -128);
         if (null != ko.field_S) {
-          oh.a(ko.field_S, false);
+          WidgetWrapper.a(ko.field_S, false);
         }
     }
 

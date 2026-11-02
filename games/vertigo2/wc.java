@@ -34,7 +34,7 @@ final class wc extends da {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var3 = this.field_p.field_w.toLowerCase();
+          var3 = this.field_p.text.toLowerCase();
           var4 = param1.toLowerCase();
           if (var4.length() == 0) {
             stackIn_5_0 = null;
@@ -102,7 +102,7 @@ final class wc extends da {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_p.field_w.toLowerCase();
+          var3 = this.field_p.text.toLowerCase();
           var4 = param1.toLowerCase();
           if (param0 == ~var4.length()) {
             stackIn_2_0 = ir.field_a;
@@ -1127,7 +1127,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("ra_intro", false);
                 if (null != var2) {
-                  oh.field_E = in.a(0, var2);
+                  WidgetWrapper.field_E = in.a(0, var2);
                 }
                 var2 = tk.a("ra_intro_no_name", false);
                 if (var2 != null) {
@@ -3322,7 +3322,7 @@ final class wc extends da {
           if (param1 != -67) {
             field_m = (UiPanel) null;
           }
-          var3 = this.field_l.field_w.toLowerCase();
+          var3 = this.field_l.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (var3.length() > 0 &&
             var4.length() > 0) {

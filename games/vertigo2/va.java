@@ -251,7 +251,7 @@ class va implements WidgetListener, qa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -94) {
-            stackIn_4_0 = param3 + (param2.field_u + (param2.field_o + param0 + this.field_i));
+            stackIn_4_0 = param3 + (param2.field_u + (param2.x + param0 + this.field_i));
             return stackIn_4_0;
           }
           stackIn_2_0 = 123;
@@ -352,7 +352,7 @@ class va implements WidgetListener, qa {
           if (param1 != 0) {
             field_f = (UiPanel) null;
           }
-          stackIn_3_0 = -this.field_c - this.field_k + param0.field_s;
+          stackIn_3_0 = -this.field_c - this.field_k + param0.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -379,7 +379,7 @@ class va implements WidgetListener, qa {
           if (param1 != 110) {
             this.a((byte) -120);
           }
-          stackIn_3_0 = param0 - (-param3.field_t + (-this.field_k - param3.field_y) - param2);
+          stackIn_3_0 = param0 - (-param3.y + (-this.field_k - param3.field_y) - param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -410,7 +410,7 @@ class va implements WidgetListener, qa {
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          jb.a(param0 + param5.field_t, param5.field_n + (param5.field_o + param3), param5.field_o + param3, -30486, param5.field_s + param5.field_t + param0);
+          jb.a(param0 + param5.y, param5.width + (param5.x + param3), param5.x + param3, -30486, param5.height + param5.y + param0);
           var9_int = this.a(-1, param5);
           var10 = this.c(param5, 0);
           if (!this.field_q) {
@@ -487,7 +487,7 @@ class va implements WidgetListener, qa {
             var10 = this.a(param2, (byte) -94, param3, var9);
             var11 = this.a(param3, 1, param4) + Math.max(0, var8.field_f);
             var12 = this.a(param3, 1, param4) + Math.min(this.c(param3, 0), Math.min(var8.field_d, var14.field_c.length > 1 + var7 ? var13.field_c[1 + var7].field_f : var8.field_d));
-            jb.a(param3.field_t + param4, param3.field_o + param2 + param3.field_n, param2 + param3.field_o, -30486, param4 + (param3.field_t + param3.field_s));
+            jb.a(param3.y + param4, param3.x + param2 + param3.width, param2 + param3.x, -30486, param4 + (param3.y + param3.height));
             eb.field_c.a(var10, var12, this.field_p, var10, var11, 105);
             ln.d(-28558);
           }
@@ -648,7 +648,7 @@ class va implements WidgetListener, qa {
           if (param0 != -1) {
             this.field_p = 47;
           }
-          stackIn_3_0 = -this.field_j + param1.field_n - this.field_i;
+          stackIn_3_0 = -this.field_j + param1.width - this.field_i;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -704,7 +704,7 @@ class va implements WidgetListener, qa {
             }
             var10 = var18.a(var8, 22413);
             var11 = var18.a(var9, 22413);
-            jb.a(param0.field_t + param4, param0.field_n + param0.field_o + param5, param0.field_o + param5, -30486, param0.field_s + (param4 + param0.field_t));
+            jb.a(param0.y + param4, param0.width + param0.x + param5, param0.x + param5, -30486, param0.height + (param4 + param0.y));
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var17.field_c[var12];
               if (var12 != var10) {
@@ -723,7 +723,7 @@ class va implements WidgetListener, qa {
                 stackIn_19_0 = var18.b(var9, 126);
               }
               var15 = stackIn_19_0;
-              eb.field_c.a(var13.field_d, (byte) -101, param4 + param0.field_t + (this.field_k + param0.field_y) + var13.field_f, this.field_a, this.field_a >>> 24, this.a(param5, (byte) -94, param0, var14), var15 - var14);
+              eb.field_c.a(var13.field_d, (byte) -101, param4 + param0.y + (this.field_k + param0.field_y) + var13.field_f, this.field_a, this.field_a >>> 24, this.a(param5, (byte) -94, param0, var14), var15 - var14);
             }
             ln.d(-28558);
           }
@@ -769,7 +769,7 @@ class va implements WidgetListener, qa {
           if (param0 != -90) {
             va.a(-117, 22, 99);
           }
-          stackIn_3_0 = param1.field_w;
+          stackIn_3_0 = param1.text;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

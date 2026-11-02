@@ -109,8 +109,8 @@ final class lr extends d {
         if (param1 != 0) {
           return;
         }
-        int var5 = this.field_o + param2 + (this.field_n >> 1);
-        int var6 = this.field_t + (param3 + (this.field_s >> 1));
+        int var5 = this.x + param2 + (this.width >> 1);
+        int var6 = this.y + (param3 + (this.height >> 1));
         ba var8 = this.field_R.a(-23996);
         if (tk.field_n == var8) {
           var15 = jn.field_b[0];

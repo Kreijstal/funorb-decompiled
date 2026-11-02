@@ -194,24 +194,24 @@ final class e {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          bc.a(param0.field_s, param0.field_t + param3, (byte) 127, this.field_m, param0.field_n, param1 + param0.field_o);
+          bc.a(param0.height, param0.y + param3, (byte) 127, this.field_m, param0.width, param1 + param0.x);
           if (param2 != 1) {
             this.a(-54, -91);
           }
           if (null != this.field_h) {
-            var6_int = param1 + param0.field_o + this.field_i;
+            var6_int = param1 + param0.x + this.field_i;
             if (param4.field_m == 1) {
-              var6_int = var6_int + (-this.field_h.field_x + param0.field_n) / 2;
+              var6_int = var6_int + (-this.field_h.field_x + param0.width) / 2;
             }
-            var7 = param0.field_t + param3 + this.field_d;
+            var7 = param0.y + param3 + this.field_d;
             if (param4.field_m == 2) {
-              var6_int = var6_int + (param0.field_n - this.field_h.field_x);
+              var6_int = var6_int + (param0.width - this.field_h.field_x);
             }
             if (param4.field_d == 1) {
-              var7 = var7 + (-this.field_h.field_B + param0.field_s) / 2;
+              var7 = var7 + (-this.field_h.field_B + param0.height) / 2;
             }
             if (param4.field_d == 2) {
-              var7 = var7 + (-this.field_h.field_B + param0.field_s);
+              var7 = var7 + (-this.field_h.field_B + param0.height);
             }
             this.field_h.e(var6_int, var7);
           }
@@ -223,7 +223,7 @@ final class e {
             }
             stackIn_18_0 = param4.field_l;
             stackIn_18_1 = var6;
-            stackIn_18_2 = param0.field_o + param1;
+            stackIn_18_2 = param0.x + param1;
             stackIn_18_3 = -param4.field_i;
             if (-2147483648 != this.field_i) {
               stackIn_19_4 = this.field_i;
@@ -236,9 +236,9 @@ final class e {
             } else {
               stackIn_22_3 = 0;
             }
-            stackIn_24_3 = stackIn_22_3 + (param4.field_k + param3 + param0.field_t);
-            stackIn_24_4 = -param4.field_j - param4.field_i + param0.field_n;
-            stackIn_24_5 = -param4.field_c + (-param4.field_k + param0.field_s);
+            stackIn_24_3 = stackIn_22_3 + (param4.field_k + param3 + param0.y);
+            stackIn_24_4 = -param4.field_j - param4.field_i + param0.width;
+            stackIn_24_5 = -param4.field_c + (-param4.field_k + param0.height);
             stackIn_24_6 = this.field_k;
             stackIn_24_7 = this.field_f;
             if (this.field_a != -2147483648) {

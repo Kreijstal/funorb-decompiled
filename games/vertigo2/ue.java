@@ -75,7 +75,7 @@ final class ue extends WidgetContainer implements cm, ij {
         try {
           this.field_E = param0;
           this.field_P = new d(vi.field_x, (uf) null);
-          this.field_P.field_B = (WidgetListener) ((Object) new vo());
+          this.field_P.listener = (WidgetListener) ((Object) new vo());
           var7 = Vertigo2.a(new String[]{this.a(0), this.a((byte) -88)}, hi.field_n, -127);
           var3 = 20;
           var4 = new va(qc.field_x, 0, 0, 0, 0, 16777215, -1, 3, 0, qc.field_x.field_z, -1, 2147483647, true);
@@ -84,16 +84,16 @@ final class ue extends WidgetContainer implements cm, ij {
           this.field_L.a(0, 0, fm.field_c);
           this.field_L.a(1, 0, fm.field_c);
           this.field_L.field_v = (uf) (this);
-          this.field_L.field_n = -40 + this.field_n;
-          this.field_L.b(26, var3, (byte) 119, -40 + this.field_n);
-          var3 = var3 + (15 + this.field_L.field_s);
+          this.field_L.width = -40 + this.width;
+          this.field_L.b(26, var3, (byte) 119, -40 + this.width);
+          var3 = var3 + (15 + this.field_L.height);
           this.c((byte) 87, this.field_L);
           var5 = 4;
           var6 = 200;
-          this.field_P.a(false, 300 - var6 >> 1, var3, 40, var6);
+          this.field_P.setBounds(false, 300 - var6 >> 1, var3, 40, var6);
           this.field_P.field_v = (uf) (this);
           this.c((byte) 77, this.field_P);
-          this.a(false, 0, 0, var5 + (55 + var3), 300);
+          this.setBounds(false, 0, 0, var5 + (55 + var3), 300);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "ue.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

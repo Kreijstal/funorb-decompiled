@@ -20,7 +20,7 @@ final class ck extends d {
     private ck(String param0, WidgetListener param1, uf param2) {
         super(param0, param1, param2);
         try {
-          this.field_B = eb.field_c.field_g;
+          this.listener = eb.field_c.field_g;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -47,7 +47,7 @@ final class ck extends d {
     private ck(String param0, uf param1) {
         this(param0, eb.field_c.field_p, param1);
         try {
-          this.field_B = eb.field_c.field_g;
+          this.listener = eb.field_c.field_g;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

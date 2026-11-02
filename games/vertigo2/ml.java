@@ -24,7 +24,7 @@ class ml extends va {
     public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {
         try {
           if (param0) {
-            h.a(param1 + param3.field_o, 1, param3.field_t + param4, param3.field_n, param3.field_s);
+            h.a(param1 + param3.x, 1, param3.y + param4, param3.width, param3.height);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

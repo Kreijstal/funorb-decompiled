@@ -247,7 +247,7 @@ abstract class GameShell extends GameApplet {
           }
         }
         if (!param0 &&
-          oh.field_F) {
+          WidgetWrapper.field_F) {
           Vertigo2.a(ne.field_F, (byte) -35);
           this.a((byte) -57);
           ap.a(ne.field_F, -8228);

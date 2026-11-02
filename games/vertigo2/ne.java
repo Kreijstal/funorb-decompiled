@@ -28,13 +28,13 @@ final class ne extends WidgetContainer implements nc, ij {
           if (!this.k(-76)) {
             return;
           }
-          kr.a(this.field_H.field_w, (byte) -70);
+          kr.a(this.field_H.text, (byte) -70);
           return;
         }
         if (!this.k(-76)) {
           return;
         }
-        kr.a(this.field_H.field_w, (byte) -70);
+        kr.a(this.field_H.text, (byte) -70);
     }
 
     final static void c(boolean param0) {
@@ -106,10 +106,10 @@ final class ne extends WidgetContainer implements nc, ij {
         try {
           var10 = new mg(20, param0, 120 + param1, 25, param6, false, 120, 3, qc.field_x, 16777215, param2);
           this.c((byte) -78, var10);
-          var9 = new qe(((ik) ((Object) param6)).a((byte) -5), param5, 126, param0 + var10.field_s, param1 - param3, param4);
+          var9 = new qe(((ik) ((Object) param6)).a((byte) -5), param5, 126, param0 + var10.height, param1 - param3, param4);
           var9.field_v = (uf) (this);
           this.c((byte) 104, var9);
-          stackIn_1_0 = var10.field_s + var9.field_s;
+          stackIn_1_0 = var10.height + var9.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -237,26 +237,26 @@ final class ne extends WidgetContainer implements nc, ij {
         this.field_H.field_q = ho.field_d;
         this.field_H.a(true, new hk(this.field_H));
         this.field_L.field_F = false;
-        this.field_L.field_B = (WidgetListener) ((Object) new vo());
-        this.field_M.field_B = (WidgetListener) ((Object) new jc());
-        this.field_H.field_B = (WidgetListener) ((Object) new ml(10000536));
+        this.field_L.listener = (WidgetListener) ((Object) new vo());
+        this.field_M.listener = (WidgetListener) ((Object) new jc());
+        this.field_H.listener = (WidgetListener) ((Object) new ml(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(false, 20, var3, 50, 270);
+        var2.setBounds(false, 20, var3, 50, 270);
         var3 += 50;
         this.c((byte) -117, var2);
         var3 = var3 + (this.a(GameShell.field_q, jg.field_m, this.field_H, 170, var3, false) + 5);
-        this.field_L.a(false, -var5 + 496 >> 1, var3, 40, var5);
-        this.field_M.a(false, 3 + var4, var3 + 15, 40, 60);
+        this.field_L.setBounds(false, -var5 + 496 >> 1, var3, 40, var5);
+        this.field_M.setBounds(false, 3 + var4, var3 + 15, 40, 60);
         this.field_M.field_v = (uf) (this);
         this.field_L.field_v = (uf) (this);
         this.c((byte) -31, this.field_L);
         this.c((byte) -71, this.field_M);
         this.field_K = new oj((nc) (this));
-        this.field_K.a(false, this.field_H.field_o + (this.field_H.field_n + 60), 20, 150, -60 + this.field_n - this.field_H.field_o - this.field_H.field_n);
+        this.field_K.setBounds(false, this.field_H.x + (this.field_H.width + 60), 20, 150, -60 + this.width - this.field_H.x - this.field_H.width);
         this.c((byte) 125, this.field_K);
-        this.a(false, 0, 0, var3 + 55 + var4, 496);
+        this.setBounds(false, 0, 0, var3 + 55 + var4, 496);
     }
 
     final boolean a(char param0, int param1, int param2, UiWidget param3) {

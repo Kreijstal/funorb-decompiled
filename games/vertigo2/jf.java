@@ -90,7 +90,7 @@ final class jf extends d {
             return false;
           }
           var8_int = -param1 + (param0 - this.field_K);
-          var9 = this.field_n - this.field_K * 2;
+          var9 = this.width - this.field_K * 2;
           if (var9 < var8_int) {
             var8_int = var9;
           }

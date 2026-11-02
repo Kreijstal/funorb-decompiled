@@ -412,7 +412,7 @@ final class t implements Runnable {
         int var7_intLifetime3;
         var18 = Vertigo2.field_L ? 1 : 0;
         try {
-          var20 = oh.a((byte) -39, "crowns", "lobby", param3);
+          var20 = WidgetWrapper.a((byte) -39, "crowns", "lobby", param3);
           var5 = var20;
           eh.field_e = var20.length;
           if (param0 != null) {
